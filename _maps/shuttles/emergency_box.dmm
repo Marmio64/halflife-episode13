@@ -2,6 +2,13 @@
 "aa" = (
 /turf/template_noop,
 /area/template_noop)
+"ao" = (
+/obj/structure/chair/comfy/halflife/diner{
+	dir = 8
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/grooved,
+/area/shuttle/escape)
 "bi" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -63,8 +70,15 @@
 /turf/open/floor/plating/indoor/grooved,
 /area/shuttle/escape)
 "kO" = (
-/obj/machinery/light/small,
+/obj/structure/halflife/storage/shelf,
 /turf/open/floor/plating/indoor/metal/plate,
+/area/shuttle/escape)
+"lo" = (
+/obj/structure/table/halflife/metal,
+/obj/item/restraints/handcuffs{
+	pixel_y = 3
+	},
+/turf/open/floor/plating/indoor/grooved,
 /area/shuttle/escape)
 "lJ" = (
 /turf/closed/wall/halflife/metal,
@@ -73,8 +87,23 @@
 /obj/structure/closet/crate,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
+"sG" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/table/halflife/metal,
+/obj/item/reagent_containers/pill/patch/medkit/vial,
+/turf/open/floor/plating/indoor/grooved,
+/area/shuttle/escape)
 "tA" = (
 /obj/structure/table/halflife/no_smooth/metal,
+/turf/open/floor/plating/indoor/grooved,
+/area/shuttle/escape)
+"uZ" = (
+/obj/structure/table/halflife/no_smooth/metal,
+/obj/machinery/camera/autoname{
+	dir = 8
+	},
 /turf/open/floor/plating/indoor/grooved,
 /area/shuttle/escape)
 "vx" = (
@@ -83,10 +112,21 @@
 	},
 /turf/open/floor/plating/indoor/grooved,
 /area/shuttle/escape)
+"vT" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/shuttle/escape)
 "yB" = (
 /obj/machinery/computer/crew{
 	dir = 8
 	},
+/turf/open/floor/plating/indoor/grooved,
+/area/shuttle/escape)
+"zZ" = (
+/obj/structure/chair/comfy/halflife/diner{
+	dir = 4
+	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/grooved,
 /area/shuttle/escape)
 "Fx" = (
@@ -115,11 +155,23 @@
 "HH" = (
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
-"Lp" = (
-/obj/machinery/light/small{
+"HR" = (
+/obj/structure/chair/comfy/halflife/captain{
 	dir = 1
 	},
 /turf/open/floor/plating/indoor/grooved,
+/area/shuttle/escape)
+"JH" = (
+/obj/structure/table/halflife/no_smooth/metal,
+/obj/machinery/camera/autoname{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/grooved,
+/area/shuttle/escape)
+"Lp" = (
+/obj/structure/rack,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "Px" = (
 /obj/structure/chair/comfy/halflife/diner{
@@ -156,13 +208,17 @@ lJ
 lJ
 lJ
 lJ
+lJ
+Rn
+lJ
+lJ
+lJ
+lJ
+lJ
 Rn
 lJ
 lJ
 lJ
-lJ
-lJ
-Rn
 lJ
 lJ
 lJ
@@ -175,7 +231,8 @@ aa
 (2,1,1) = {"
 lJ
 lJ
-Hq
+sG
+lo
 lJ
 lJ
 dn
@@ -188,8 +245,11 @@ dn
 Vv
 Fx
 dn
+tA
+zZ
 lJ
 mW
+Lp
 mW
 lJ
 bi
@@ -197,7 +257,8 @@ bk
 "}
 (3,1,1) = {"
 lJ
-tA
+JH
+Vv
 Hg
 lJ
 YE
@@ -211,7 +272,10 @@ HH
 HH
 HH
 HH
+HH
+HH
 lJ
+HH
 HH
 HH
 lJ
@@ -220,7 +284,8 @@ bk
 "}
 (4,1,1) = {"
 cU
-Lp
+Hq
+HR
 Vv
 cY
 HH
@@ -232,11 +297,14 @@ HH
 vx
 YE
 HH
+vx
+YE
 HH
 HH
 Yj
 HH
-kO
+HH
+HH
 lJ
 bi
 bk
@@ -244,6 +312,7 @@ bk
 (5,1,1) = {"
 lJ
 tA
+Vv
 gD
 lJ
 YE
@@ -257,9 +326,12 @@ HH
 HH
 HH
 HH
+HH
+HH
 lJ
+kO
 HH
-HH
+GQ
 lJ
 bi
 bk
@@ -267,21 +339,25 @@ bk
 (6,1,1) = {"
 lJ
 lJ
+gn
 yB
 lJ
 lJ
 fK
 Vv
 ja
-tA
+uZ
 fK
 gn
 fK
 Vv
 gn
 fK
+uZ
+ao
 lJ
-GQ
+kO
+vT
 GQ
 lJ
 bi
@@ -294,13 +370,17 @@ lJ
 lJ
 lJ
 lJ
+lJ
+Rn
+lJ
+lJ
+lJ
+lJ
+lJ
 Rn
 lJ
 lJ
 lJ
-lJ
-lJ
-Rn
 lJ
 lJ
 lJ

@@ -8,7 +8,7 @@
 	slot = ORGAN_SLOT_HEART
 	item_flags = NO_BLOOD_ON_ITEM
 	healing_factor = STANDARD_ORGAN_HEALING
-	decay_factor = 2.5 * STANDARD_ORGAN_DECAY //designed to fail around 6 minutes after death
+	decay_factor = 2 * STANDARD_ORGAN_DECAY //designed to fail around 7 minutes after death
 
 	low_threshold_passed = span_info("Prickles of pain appear then die out from within your chest...")
 	high_threshold_passed = span_warning("Something inside your chest hurts, and the pain isn't subsiding. You notice yourself breathing far faster than before.")

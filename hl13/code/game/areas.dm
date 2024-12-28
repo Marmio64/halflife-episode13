@@ -145,6 +145,18 @@
 	name = "Overwatch Rail Interchange Dispatch"
 	ambient_buzz = 'hl13/sound/ambience/citadel_ambience.ogg'
 
+/area/centcom/halflife/relocation_city
+	name = "Relocation City"
+	ambient_buzz = 'hl13/sound/ambience/town_ambience.ogg'
+
+	static_lighting = TRUE
+	outdoors = TRUE
+	sound_environment = SOUND_ENVIRONMENT_CITY
+	ambient_buzz = 'hl13/sound/ambience/plaza_amb.ogg'
+	ambient_buzz_vol = 20
+
+	base_lighting_alpha = 10
+
 /area/centcom/halflife/rebel
 	name = "Resistance Outpost"
 	ambient_buzz = 'hl13/sound/ambience/town_ambience.ogg'

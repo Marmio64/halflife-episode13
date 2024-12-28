@@ -336,7 +336,7 @@
 	leapsound = 'hl13/sound/creatures/poison/ph_jump.ogg'
 
 	var/poison_type = /datum/reagent/toxin
-	var/poison_per_attack = 7 //one bite is about 22.5 toxin damage, though it takes quite a while for it to run it's course. Not a whole lot, but it goes through armor, and is generally harder to heal than brute damage.
+	var/poison_per_attack = 6
 
 	var/aggro_sound = 'hl13/sound/creatures/poison/ph_rattle.ogg'
 	var/idle_sounds = list('hl13/sound/creatures/poison/ph_talk1.ogg', 'hl13/sound/creatures/poison/ph_talk2.ogg', 'hl13/sound/creatures/poison/ph_talk3.ogg')

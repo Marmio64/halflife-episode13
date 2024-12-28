@@ -191,7 +191,7 @@
 
 /obj/item/storage/lockbox/medal/sec/PopulateContents()
 	for(var/i in 1 to 3)
-		new /obj/item/clothing/accessory/medal/silver/security(src)
+		new /obj/item/clothing/accessory/medal/silver/valor(src)
 
 /obj/item/storage/lockbox/medal/cargo
 	name = "cargo award box"

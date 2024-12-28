@@ -551,7 +551,7 @@
 				launch_status = ENDGAME_LAUNCHED
 				setTimer(SSshuttle.emergency_escape_time * engine_coeff)
 				priority_announce(
-					text = "The transfer train has departed. Estimate [timeLeft(60 SECONDS)] minutes until the shuttle docks at [command_name()].",
+					text = "The transfer train has departed. Estimate [timeLeft(60 SECONDS)] minutes until the train docks at [command_name()].",
 					title = "Transfer Train Departure",
 					sender_override = "Transfer Train Uplink Alert",
 					color_override = "orange",
@@ -617,7 +617,7 @@
 	launch_status = ENDGAME_LAUNCHED
 	setTimer(SSshuttle.emergency_escape_time)
 	priority_announce(
-		text = "The transfer train is preparing for accelerated transit. Estimate [timeLeft(60 SECONDS)] minutes until the shuttle docks at [command_name()].",
+		text = "The transfer train is preparing for accelerated transit. Estimate [timeLeft(60 SECONDS)] minutes until the train docks at [command_name()].",
 		title = "Transfer Train Malfunction",
 		sender_override = "Transfer Train Uplink Alert",
 		color_override = "orange",
