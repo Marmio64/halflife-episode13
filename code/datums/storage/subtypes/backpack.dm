@@ -16,3 +16,7 @@
 	max_total_storage = 60
 	max_slots = 21
 	max_specific_storage = WEIGHT_CLASS_NORMAL
+
+/datum/storage/satchel
+	max_total_storage = 15
+	max_slots = 15

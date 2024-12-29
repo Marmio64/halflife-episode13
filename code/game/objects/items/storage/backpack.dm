@@ -296,6 +296,7 @@
 	desc = "A trendy looking satchel."
 	icon_state = "satchel-norm"
 	inhand_icon_state = "satchel-norm"
+	storage_type = /datum/storage/satchel
 
 /obj/item/storage/backpack/satchel/leather
 	name = "leather satchel"

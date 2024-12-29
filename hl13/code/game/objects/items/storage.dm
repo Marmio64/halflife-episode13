@@ -21,7 +21,7 @@
 
 /obj/item/storage/belt/civilprotection/Initialize(mapload)
 	. = ..()
-	atom_storage.max_slots = 6
+	atom_storage.max_slots = 7
 	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
 	atom_storage.set_holdable(list(
 		/obj/item/ammo_box,
@@ -42,6 +42,7 @@
 		/obj/item/ammo_box/magazine/usp9mm,
 		/obj/item/ammo_box/a357,
 		/obj/item/ammo_box/magazine/ar2,
+		/obj/item/stack/medical/gauze,
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
 	))
 	atom_storage.open_sound = 'sound/items/handling/holster_open.ogg'
@@ -53,15 +54,19 @@
 	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
 	SSwardrobe.provide_type(/obj/item/melee/baton/security/loaded, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
 	update_appearance(UPDATE_ICON)
 
 
 /obj/item/storage/belt/civilprotection/medicfull/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/melee/baton/security/loaded, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
 	update_appearance(UPDATE_ICON)
 
 /obj/item/storage/belt/civilprotection/divisionleadfull/PopulateContents()
@@ -69,7 +74,9 @@
 	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
 	SSwardrobe.provide_type(/obj/item/melee/baton/security/loaded, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
 	update_appearance(UPDATE_ICON)
 
 /obj/item/storage/belt/civilprotection/overwatch

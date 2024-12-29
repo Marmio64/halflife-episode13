@@ -72,6 +72,7 @@
 	new /obj/item/tank/internals/emergency_oxygen/engi(src)
 	new /obj/item/clothing/gloves/color/yellow(src)
 	new /obj/item/clothing/mask/gas/cwuengi(src)
+	new /obj/item/clothing/suit/utility/radiation/engineer(src)
 	new /obj/item/storage/box/emptysandbags(src)
 	new /obj/item/storage/bag/construction(src)
 

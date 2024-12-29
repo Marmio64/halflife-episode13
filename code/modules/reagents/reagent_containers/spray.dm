@@ -223,7 +223,7 @@
 //pepperspray
 /obj/item/reagent_containers/spray/pepper
 	name = "pepperspray"
-	desc = "Manufactured by UhangInc, used to blind and down an opponent quickly."
+	desc = "A can of pepperspray which disorients, blinds, and slows down targets. Additional sprays will also eventually force the target to fall over in pain."
 	icon = 'icons/obj/medical/chemical.dmi'
 	icon_state = "pepperspray"
 	inhand_icon_state = "pepperspray"
