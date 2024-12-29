@@ -712,7 +712,7 @@
 	var/datum/martial_art/cqc/elitecqc = new
 	elitecqc.teach(H)
 
-/datum/outfit/ert/riotpolice
+/datum/outfit/centcom/ert/riotpolice
 	name = "Metropolice Riot Unit"
 
 	id = /obj/item/card/id/advanced/centcom/ert
@@ -732,13 +732,14 @@
 
 	back = /obj/item/shield/riot
 
-/datum/outfit/ert/riotpolice/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/centcom/ert/riotpolice/pre_equip(mob/living/carbon/human/H)
 	H.faction += "combine"
 	H.cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
 	H.set_facial_hairstyle("Shaved", update = FALSE)
 	H.set_hairstyle("Bald") //this will call update_body_parts()
+	H.update_body()
 
-/datum/outfit/ert/riotpolice/pistol
+/datum/outfit/centcom/ert/riotpolice/pistol
 	name = "Metropolice Riot Pistol Unit"
 
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp

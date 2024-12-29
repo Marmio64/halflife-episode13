@@ -113,7 +113,7 @@
 
 /// Trim for generic ERT interns. No universal ID card changing access.
 /datum/id_trim/centcom/ert
-	assignment = "Emergency Response Team Intern"
+	assignment = "Emergency Response Team Unit"
 
 /datum/id_trim/centcom/ert/New()
 	. = ..()

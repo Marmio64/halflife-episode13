@@ -1169,7 +1169,7 @@
 	desc = "An ID straight from Overwatch."
 	icon_state = "card_centcom"
 	assigned_icon_state = "assigned_centcom"
-	registered_name = JOB_CENTCOM
+	//registered_name = JOB_CENTCOM
 	registered_age = null
 	trim = /datum/id_trim/centcom
 	wildcard_slots = WILDCARD_LIMIT_CENTCOM
@@ -1178,10 +1178,10 @@
 	name = "\improper Overwatch ID"
 	desc = "An ERT ID card."
 	registered_age = null
-	registered_name = "Emergency Response Intern"
+	//registered_name = "Emergency Response Intern"
 	trim = /datum/id_trim/centcom/ert
 
-/obj/item/card/id/advanced/centcom/ert
+/obj/item/card/id/advanced/centcom/ert/commander
 	registered_name = JOB_ERT_COMMANDER
 	trim = /datum/id_trim/centcom/ert/commander
 

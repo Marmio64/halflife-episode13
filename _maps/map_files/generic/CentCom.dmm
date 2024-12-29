@@ -1117,22 +1117,6 @@
 "ju" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/pistol/usp{
-	pixel_x = 10;
-	pixel_y = 13
-	},
-/obj/item/gun/ballistic/automatic/pistol/usp{
-	pixel_x = 5;
-	pixel_y = 13
-	},
-/obj/item/gun/ballistic/automatic/pistol/usp{
-	pixel_x = 0;
-	pixel_y = 13
-	},
-/obj/item/gun/ballistic/automatic/pistol/usp{
-	pixel_x = -5;
-	pixel_y = 13
-	},
 /obj/item/ammo_box/magazine/usp9mm{
 	pixel_x = 4;
 	pixel_y = -1
@@ -1151,18 +1135,6 @@
 	},
 /obj/item/ammo_box/magazine/usp9mm{
 	pixel_x = -4;
-	pixel_y = -1
-	},
-/obj/item/ammo_box/magazine/usp9mm{
-	pixel_x = -6;
-	pixel_y = -1
-	},
-/obj/item/ammo_box/magazine/usp9mm{
-	pixel_x = -8;
-	pixel_y = -1
-	},
-/obj/item/ammo_box/magazine/usp9mm{
-	pixel_x = -10;
 	pixel_y = -1
 	},
 /turf/open/floor/plating/indoor/metal/pipe,
@@ -1846,10 +1818,6 @@
 /area/centcom/central_command_areas/evacuation/ship)
 "rW" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/mp7{
-	pixel_x = -2;
-	pixel_y = 12
-	},
 /obj/item/ammo_box/magazine/mp7{
 	pixel_x = 1;
 	pixel_y = 2
@@ -4770,6 +4738,10 @@
 	},
 /turf/open/floor/plating/indoor/concrete,
 /area/centcom/halflife)
+"SQ" = (
+/obj/structure/table/halflife/wood/bar,
+/turf/open/floor/plating/indoor/carpet,
+/area/centcom/halflife)
 "SS" = (
 /obj/effect/turf_decal/tile/brown/anticorner/contrasted{
 	dir = 8
@@ -5220,6 +5192,7 @@
 /area/centcom/central_command_areas/supplypod/loading/one)
 "Xt" = (
 /obj/machinery/light/small/directional/west,
+/obj/structure/chair/halflife/metal/stool,
 /turf/open/floor/plating/indoor/carpet,
 /area/centcom/halflife)
 "Xu" = (
@@ -55294,7 +55267,7 @@ kj
 kj
 kj
 kj
-gA
+kj
 gA
 aa
 aa
@@ -55546,12 +55519,12 @@ uV
 xH
 mV
 kj
-zv
-zv
+eG
+SQ
 Xt
 zv
+eG
 kj
-gA
 gA
 aa
 aa
@@ -55807,8 +55780,8 @@ zv
 zv
 zv
 zv
+SQ
 kj
-gA
 gA
 aa
 aa
@@ -56064,8 +56037,8 @@ eG
 eG
 eG
 zv
+eG
 kj
-gA
 gA
 aa
 aa
@@ -56322,7 +56295,7 @@ XN
 tU
 nC
 kj
-gA
+kj
 gA
 aa
 aa

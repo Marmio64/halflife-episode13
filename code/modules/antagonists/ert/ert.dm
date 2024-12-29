@@ -251,7 +251,7 @@
 
 	to_chat(owner, "<span class='warningplain'><B><font size=3 color=red>You are the [name].</font></B></span>")
 
-	var/missiondesc = "Your squad is being sent on a mission to [station_name()] by Nanotrasen's Security Division."
+	var/missiondesc = "Your squad is being sent on a mission to [station_name()] by Overwatch."
 	if(leader) //If Squad Leader
 		missiondesc += " Lead your squad to ensure the completion of the mission. Board the shuttle when your team is ready."
 	else
@@ -329,11 +329,11 @@
 	name_source = "OTA [rand(111,999)]"
 
 /datum/antagonist/ert/riotpolice
-	outfit = /datum/outfit/ert/riotpolice
+	outfit = /datum/outfit/centcom/ert/riotpolice
 	role = "UNIT-"
 
 /datum/antagonist/ert/riotpolice/pistol
-	outfit = /datum/outfit/ert/riotpolice/pistol
+	outfit = /datum/outfit/centcom/ert/riotpolice/pistol
 
 /datum/antagonist/ert/riotpolice/New()
 	. = ..()
