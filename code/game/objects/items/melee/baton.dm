@@ -432,7 +432,7 @@
 	icon_state = "stunbaton"
 	inhand_icon_state = "baton"
 	worn_icon_state = "baton"
-	force = 14
+	force = 16
 	wound_bonus = 0
 	attack_verb_continuous = list("beats")
 	attack_verb_simple = list("beat")
@@ -859,7 +859,7 @@
 	desc = "A heavy version of the standard civil protection baton. Excels at beating people's skulls in. Pretty good for stunning too."
 	//icon_state = "heavybaton"
 	slot_flags = ITEM_SLOT_BELT
-	force = 20
+	force = 25
 	wound_bonus = 10
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY

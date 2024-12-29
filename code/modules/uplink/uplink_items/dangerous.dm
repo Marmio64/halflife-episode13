@@ -8,19 +8,19 @@
 
 
 /datum/uplink_item/dangerous/pistol
-	name = "Stechkin Pistol"
-	desc = "A small, easily concealable handgun that uses 9mm auto rounds in 18-round magazines and is compatible \
+	name = "USP Match Pistol"
+	desc = "A small, easily concealable handgun that uses 9mm auto rounds in 15-round magazines and is compatible \
 			with suppressors."
 	item = /obj/item/gun/ballistic/automatic/pistol/usp
 	progression_minimum = 10 MINUTES
-	cost = 8
+	cost = 7
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/dangerous/revolver
 	name = "Colt Python Revolver"
 	desc = "A deadly revolver that fires .357 Magnum rounds and has 7 chambers."
 	item = /obj/item/gun/ballistic/revolver/coltpython
-	cost = 13
+	cost = 12
 	progression_minimum = 30 MINUTES
 	surplus = 50
 
@@ -28,7 +28,7 @@
 	name = "MP7 SMG"
 	desc = "A full auto SMG with a 45 round magazine."
 	item = /obj/item/gun/ballistic/automatic/mp7
-	cost = 13
+	cost = 12
 	progression_minimum = 30 MINUTES
 	surplus = 50
 
@@ -38,3 +38,8 @@
 	item = /obj/item/knife/combat
 	cost = 5
 
+/datum/uplink_item/dangerous/tireiron
+	name = "Tire Iron"
+	desc = "A deadly... mechanical tool. Regardless of its banality, it is still a dangerous weapon that isn't too suspcious to have in your hands."
+	item = /obj/item/melee/tireiron
+	cost = 3

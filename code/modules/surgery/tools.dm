@@ -205,7 +205,7 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = SURGICAL_TOOL
-	force = 10
+	force = 14
 	demolition_mod = 0.25
 	w_class = WEIGHT_CLASS_TINY
 	throwforce = 5
@@ -259,7 +259,7 @@
 	mob_throw_hit_sound = 'sound/items/weapons/pierce.ogg'
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = SURGICAL_TOOL
-	force = 15
+	force = 20
 	w_class = WEIGHT_CLASS_NORMAL
 	throwforce = 9
 	throw_speed = 2

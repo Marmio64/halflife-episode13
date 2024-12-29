@@ -33,7 +33,7 @@
 	throwforce = 5
 	throw_speed = 3
 	throw_range = 5
-	force = 5
+	force = 10
 	item_flags = NEEDS_PERMIT
 	attack_verb_continuous = list("strikes", "hits", "bashes")
 	attack_verb_simple = list("strike", "hit", "bash")

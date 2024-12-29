@@ -258,8 +258,7 @@ DEFINE_BITFIELD(turret_flags, list(
 		data["silicon_user"] = TRUE
 		if(!manual_control)
 			var/mob/living/silicon/S = user
-			if(S.hack_software)
-				data["allow_manual_control"] = TRUE
+			data["allow_manual_control"] = TRUE
 	return data
 
 /obj/machinery/porta_turret/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)

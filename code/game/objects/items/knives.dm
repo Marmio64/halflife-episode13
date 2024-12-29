@@ -9,7 +9,7 @@
 	worn_icon_state = "knife"
 	desc = "The original knife, it is said that all other knives are only copies of this one."
 	obj_flags = CONDUCTS_ELECTRICITY
-	force = 10
+	force = 17
 	demolition_mod = 0.75
 	w_class = WEIGHT_CLASS_SMALL
 	throwforce = 10
@@ -94,7 +94,7 @@
 	inhand_icon_state = "butch"
 	desc = "A huge thing used for chopping and chopping up meat. This includes clowns and clown by-products."
 	obj_flags = CONDUCTS_ELECTRICITY
-	force = 15
+	force = 22
 	throwforce = 10
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 6)
 	attack_verb_continuous = list("slices", "dices", "chops", "cubes", "minces", "juliennes", "chiffonades", "batonnets")
@@ -125,7 +125,7 @@
 	worn_icon_state = "buckknife"
 	desc = "A military combat utility survival knife."
 	embed_type = /datum/embed_data/combat_knife
-	force = 22
+	force = 26
 	throwforce = 20
 	attack_verb_continuous = list("slashes", "stabs", "slices", "tears", "lacerates", "rips", "cuts")
 	attack_verb_simple = list("slash", "stab", "slice", "tear", "lacerate", "rip", "cut")
@@ -191,7 +191,7 @@
 	desc = "A sharpened bone. The bare minimum in survival."
 	embed_type = /datum/embed_data/combat_knife/weak
 	obj_flags = parent_type::obj_flags & ~CONDUCTS_ELECTRICITY
-	force = 15
+	force = 18
 	throwforce = 15
 	custom_materials = null
 
