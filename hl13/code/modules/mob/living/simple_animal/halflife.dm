@@ -18,7 +18,7 @@
 	melee_damage_lower = 18
 	melee_damage_upper = 21
 	sharpness = SHARP_EDGED
-	wound_bonus = 5
+	wound_bonus = 0
 	bare_wound_bonus = 5
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	attack_verb_continuous = "claws"
@@ -247,6 +247,7 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 10
 	melee_damage_upper = 10
+	wound_bonus = 0
 	bare_wound_bonus = 10
 	sharpness = SHARP_EDGED
 	attack_vis_effect = ATTACK_EFFECT_BITE
@@ -379,7 +380,8 @@
 	melee_damage_lower = 20
 	melee_damage_upper = 25
 	sharpness = SHARP_EDGED
-	bare_wound_bonus = 10
+	wound_bonus = 0
+	bare_wound_bonus = 5
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "claw"
@@ -488,7 +490,8 @@
 	harm_intent_damage = 5
 	melee_damage_lower = 15
 	melee_damage_upper = 20
-	bare_wound_bonus = 10
+	wound_bonus = -5
+	bare_wound_bonus = 5
 	sharpness = SHARP_EDGED
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	ranged = 1 //for leaping
@@ -593,9 +596,10 @@
 	maxHealth = 50
 	health = 50
 	harm_intent_damage = 5
-	melee_damage_lower = 15
-	melee_damage_upper = 20
-	bare_wound_bonus = 10
+	melee_damage_lower = 12
+	melee_damage_upper = 28
+	wound_bonus = -5
+	bare_wound_bonus = 5
 	sharpness = SHARP_EDGED
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	ranged = 1
