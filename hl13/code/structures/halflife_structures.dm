@@ -288,6 +288,8 @@
 /obj/structure/bed/halflife/bedframe
 	name = "base class bedframe"
 	desc = "Scream at the coders if you see this."
+	build_stack_type = /obj/item/stack/sheet/scrap_metal
+	build_stack_amount = 1
 
 /obj/structure/bed/halflife/bedframe/wire
 	name = "wireframe bed"
@@ -308,12 +310,16 @@
 	name = "wood bed"
 	desc = "A panel bed made from wood."
 	icon_state = "wood_bed"
+	build_stack_type = /obj/item/stack/sheet/mineral/scrap_wood
+	build_stack_amount = 1
 
 //mattress//
 
 /obj/structure/bed/halflife/mattress
 	name = "base class mattress"
 	desc = "Scream at the coders if you see this."
+	build_stack_type = /obj/item/stack/sheet/cloth
+	build_stack_amount = 2
 
 /obj/structure/bed/halflife/mattress/dirty
 	name = "mattress"

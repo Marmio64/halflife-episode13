@@ -257,7 +257,6 @@ DEFINE_BITFIELD(turret_flags, list(
 	if(issilicon(user))
 		data["silicon_user"] = TRUE
 		if(!manual_control)
-			var/mob/living/silicon/S = user
 			data["allow_manual_control"] = TRUE
 	return data
 

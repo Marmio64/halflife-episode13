@@ -73,6 +73,22 @@
 				/obj/item/stack/sheet/mineral/scrap_wood = 2
 				)
 
+//only healing items
+/obj/effect/spawner/random/halflife/loot/heal
+	name = "healing loot"
+	spawn_loot_count = 1
+
+	loot = list(
+				/obj/item/reagent_containers/pill/patch/medkit,
+				/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
+				/obj/item/stack/medical/gauze,
+				/obj/item/stack/medical/suture,
+				/obj/item/stack/medical/bandage = 2,
+				/obj/item/stack/medical/bandage/makeshift,
+				/obj/item/stack/medical/ointment,
+				/obj/item/reagent_containers/syringe/syriniver
+				)
+
 //only consumable loot. Food, drinks, drugs, cigarettes, etc.
 /obj/effect/spawner/random/halflife/loot/consumables
 	name = "consumables loot"

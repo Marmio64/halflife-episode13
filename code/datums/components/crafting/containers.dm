@@ -12,14 +12,6 @@
 	reqs = list(/obj/item/paper = 2)
 	category = CAT_CONTAINERS
 
-/datum/crafting_recipe/pouch
-	name = "Pouch"
-	result = /obj/item/storage/belt/pouch
-	time = 2 SECONDS
-	reqs = list(/obj/item/stack/sheet/cloth = 2)
-	category = CAT_CONTAINERS
-	crafting_interface = CRAFTING_BENCH_ARMTAILOR | CRAFTING_BENCH_GENERAL
-
 /datum/crafting_recipe/underwater_basket
 	name = "Underwater Basket (Bamboo)"
 	reqs = list(

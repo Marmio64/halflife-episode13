@@ -21,6 +21,10 @@
 "aM" = (
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/bunker)
+"aO" = (
+/obj/effect/spawner/random/halflife/loot/heal,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "aZ" = (
 /obj/structure/flora/tree/jungle/small,
 /turf/open/floor/plating/ground/dirt/alt,
@@ -418,6 +422,12 @@
 "oG" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/outdoors/forest)
+"oR" = (
+/obj/structure/railing/halflife/wood/single{
+	dir = 1
+	},
+/turf/open/misc/grass/jungle/station,
+/area/halflife/outdoors/forest)
 "pa" = (
 /obj/structure/railing/halflife/sewer{
 	dir = 8
@@ -589,6 +599,11 @@
 /area/halflife/outdoors/forest)
 "wn" = (
 /obj/structure/flora/bush/grassy/style_random,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
+"ws" = (
+/mob/living/simple_animal/hostile/halflife/headcrab,
+/obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "wv" = (
@@ -1266,6 +1281,11 @@
 /area/halflife/outdoors/forest)
 "Ur" = (
 /obj/item/fishing_hook,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
+"UH" = (
+/obj/structure/flora/bush/sparsegrass/style_random,
+/obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "UT" = (
@@ -2083,7 +2103,7 @@ tN
 tN
 Wx
 tN
-tN
+AR
 tN
 tN
 GX
@@ -2091,9 +2111,9 @@ It
 It
 tN
 tN
-tN
-tN
-tN
+FC
+FC
+EU
 tN
 GX
 GX
@@ -2250,7 +2270,7 @@ tN
 GX
 tN
 tN
-tN
+AR
 Wx
 GX
 GX
@@ -2258,7 +2278,7 @@ Sg
 It
 Kh
 EQ
-tN
+FC
 tN
 tN
 qc
@@ -2417,7 +2437,7 @@ tN
 tN
 tN
 tN
-tN
+AR
 tN
 tN
 EQ
@@ -2429,7 +2449,7 @@ tN
 GX
 GX
 tN
-tN
+ad
 tN
 tN
 tN
@@ -2584,7 +2604,7 @@ Wx
 tN
 tN
 tN
-tN
+AR
 tN
 tN
 NR
@@ -2597,8 +2617,8 @@ GX
 GX
 tN
 tN
-tN
-tN
+aO
+FC
 PT
 PT
 fv
@@ -2751,21 +2771,21 @@ tN
 GX
 GX
 tN
-tN
+AR
 GX
-GX
+oR
 GX
 tN
 tN
 It
 tN
 tN
-tN
+ws
 tN
 It
 sD
 It
-tN
+FC
 PT
 PT
 fv
@@ -2920,15 +2940,15 @@ tN
 tN
 Bo
 GX
-tN
+AR
 tN
 tN
 qc
 It
 tN
 GX
-tN
-EQ
+FC
+UH
 tN
 It
 It
@@ -3087,7 +3107,7 @@ tN
 GX
 QE
 It
-tN
+AR
 GX
 tN
 tN
@@ -3254,7 +3274,7 @@ tN
 GX
 tN
 It
-tN
+FC
 tN
 Wx
 GX
@@ -3421,11 +3441,11 @@ Wx
 tN
 tN
 Kh
-tN
+FC
 GX
 tN
 GX
-tN
+FC
 NR
 GX
 tN
@@ -3588,10 +3608,10 @@ It
 tN
 tN
 It
-tN
+FC
 GX
-tN
-tN
+FC
+FC
 GX
 GX
 GX
@@ -3757,15 +3777,15 @@ qc
 tN
 tN
 tN
-tN
+AR
 tN
 GX
 pH
-tN
-tN
-tN
+FC
+FC
+FC
 It
-tN
+FC
 PT
 PT
 PT
