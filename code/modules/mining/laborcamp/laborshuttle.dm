@@ -36,8 +36,7 @@
 	shuttle_id = "laborcamp_home"
 	roundstart_template = /datum/map_template/shuttle/labour/box //fuck you, we boxstation in this bitch
 	width = 12
-	dwidth = 2
-	height = 5
+	height = 12
 
 /obj/docking_port/stationary/laborcamp_home/kilo
 	roundstart_template = /datum/map_template/shuttle/labour/kilo
