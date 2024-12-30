@@ -11,13 +11,6 @@
 /obj/structure/flora/tree/jungle/style_random,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
-"ax" = (
-/obj/machinery/conveyor_switch/oneway{
-	id = "gulag";
-	name = "smelter conveyor"
-	},
-/turf/open/floor/plating/indoor/concrete,
-/area/mine/laborcamp)
 "az" = (
 /obj/effect/landmark/start/nukeop,
 /obj/machinery/light/small{
@@ -149,13 +142,6 @@
 /obj/structure/flora/bush/fullgrass,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
-"dl" = (
-/obj/machinery/conveyor{
-	dir = 5;
-	id = "gulag"
-	},
-/turf/open/floor/plating/indoor/concrete,
-/area/mine/laborcamp)
 "do" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -200,12 +186,19 @@
 "el" = (
 /turf/closed/indestructible/syndicate,
 /area/halflife/indoors/sewer/outlandscave)
-"en" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "gulag"
-	},
-/obj/structure/plasticflaps/opaque,
+"eo" = (
+/obj/item/storage/box/halflife/badration,
+/obj/item/storage/box/halflife/badration,
+/obj/item/storage/box/halflife/badration,
+/obj/item/storage/box/halflife/badration,
+/obj/item/storage/box/halflife/badration,
+/obj/item/storage/box/halflife/badration,
+/obj/item/storage/box/halflife/badration,
+/obj/item/storage/box/halflife/badration,
+/obj/item/storage/box/halflife/badration,
+/obj/item/storage/box/halflife/badration,
+/obj/item/storage/box/halflife/badration,
+/obj/structure/closet/crate/freezer/food,
 /turf/open/floor/plating/indoor/concrete,
 /area/mine/laborcamp)
 "ev" = (
@@ -215,13 +208,6 @@
 "ex" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
-"fh" = (
-/obj/machinery/conveyor/inverted{
-	id = "gulag";
-	dir = 10
-	},
-/turf/open/floor/plating/indoor/concrete,
-/area/mine/laborcamp)
 "fs" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/gulag_beacon,
@@ -244,6 +230,14 @@
 /obj/structure/halflife/fence/wire,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
+"fE" = (
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "gulag"
+	},
+/obj/structure/plasticflaps/opaque,
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "fK" = (
 /obj/machinery/computer/security,
 /turf/open/floor/plating/indoor/concrete,
@@ -310,6 +304,10 @@
 /obj/structure/halflife/barrel/quadruple/waste/one,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"iB" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "iE" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	keylock = 1;
@@ -395,6 +393,13 @@
 	dir = 1
 	},
 /area/halflife/outdoors/forest)
+"ky" = (
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "gulag"
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "kH" = (
 /obj/structure/bed/halflife/mattress/old,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -403,6 +408,13 @@
 /obj/item/food/bait/worm,
 /turf/open/halflife/water/medium,
 /area/halflife/outdoors/forest)
+"kP" = (
+/obj/machinery/conveyor_switch/oneway{
+	id = "gulag";
+	name = "smelter conveyor"
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "lb" = (
 /obj/structure/halflife/trash/books/pile_alt,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -417,10 +429,6 @@
 	},
 /turf/open/halflife/water/shallow,
 /area/halflife/outdoors/forest)
-"lq" = (
-/obj/machinery/mineral/processing_unit_console,
-/turf/closed/wall/halflife/metal,
-/area/mine/laborcamp)
 "lt" = (
 /obj/structure/rack,
 /obj/item/pickaxe/rusted,
@@ -719,10 +727,6 @@
 "vl" = (
 /turf/open/halflife/water/deep,
 /area/halflife/outdoors/forest)
-"vn" = (
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/plating/indoor/concrete,
-/area/mine/laborcamp)
 "vs" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/sewer/tunnel)
@@ -802,6 +806,13 @@
 /obj/structure/flora/bush/ferny/style_random,
 /turf/open/misc/grass/jungle/station,
 /area/halflife/outdoors/forest)
+"xJ" = (
+/obj/machinery/conveyor/inverted{
+	id = "gulag";
+	dir = 10
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "xQ" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	keylock = 1;
@@ -950,13 +961,6 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
-"CX" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "gulag"
-	},
-/turf/open/floor/plating/indoor/concrete,
-/area/mine/laborcamp)
 "Df" = (
 /obj/structure/railing/halflife/wood/single{
 	dir = 1
@@ -987,6 +991,13 @@
 /obj/effect/landmark/start/nukeop,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"DI" = (
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "gulag"
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/outdoors/forest)
 "DL" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 8
@@ -1066,6 +1077,14 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/outdoors/forest)
+"GA" = (
+/obj/machinery/mineral/processing_unit{
+	dir = 1;
+	input_dir = 2;
+	output_dir = 1
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "GI" = (
 /obj/structure/halflife/barrel/single/flammable/three,
 /turf/open/floor/plating/ground/dirt,
@@ -1135,6 +1154,13 @@
 "It" = (
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
+"Iw" = (
+/obj/machinery/conveyor{
+	dir = 5;
+	id = "gulag"
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "IF" = (
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/ground/dirt,
@@ -1206,6 +1232,10 @@
 /obj/machinery/shower/directional/west,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/bunker)
+"KZ" = (
+/obj/machinery/mineral/processing_unit_console,
+/turf/closed/wall/halflife/metal,
+/area/mine/laborcamp)
 "Lg" = (
 /obj/structure/halflife/tv/tube/tiny{
 	pixel_y = 12
@@ -1406,14 +1436,6 @@
 /obj/structure/flora/tree/jungle/style_random,
 /turf/open/misc/grass/jungle/station,
 /area/halflife/outdoors/forest)
-"QL" = (
-/obj/machinery/mineral/processing_unit{
-	dir = 1;
-	input_dir = 2;
-	output_dir = 1
-	},
-/turf/open/floor/plating/indoor/concrete,
-/area/mine/laborcamp)
 "QP" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors/sewer/tunnel)
@@ -1699,13 +1721,6 @@
 "XA" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/outdoors/forest)
-"XC" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "gulag"
-	},
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/outdoors/forest)
 "XD" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 8
@@ -1715,7 +1730,6 @@
 	},
 /area/halflife/outdoors/forest)
 "XY" = (
-/obj/item/storage/box/halflife/badration,
 /obj/machinery/camera{
 	c_tag = "Labour Camp Canteen"
 	},
@@ -9970,7 +9984,7 @@ bA
 bA
 bA
 cD
-wP
+qh
 TO
 cD
 qh
@@ -10304,8 +10318,8 @@ bA
 bA
 bA
 cD
-wP
-WA
+eo
+xw
 cD
 db
 xw
@@ -10639,9 +10653,9 @@ bA
 bA
 cD
 cD
-dl
-en
-CX
+Iw
+fE
+ky
 xw
 ue
 cD
@@ -10803,12 +10817,12 @@ bA
 bA
 bA
 bA
-XC
-en
-QL
-fh
-lq
-ax
+DI
+fE
+GA
+xJ
+KZ
+kP
 xw
 xw
 cD
@@ -11476,7 +11490,7 @@ iX
 fv
 cD
 Ad
-vn
+iB
 qh
 qh
 cD
