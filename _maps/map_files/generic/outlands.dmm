@@ -189,11 +189,6 @@
 "ex" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
-"eD" = (
-/obj/item/reagent_containers/pill/patch/medkit/vial,
-/obj/structure/table/halflife/metal,
-/turf/open/floor/plating/indoor/concrete,
-/area/mine/laborcamp)
 "fs" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/gulag_beacon,
@@ -364,6 +359,11 @@
 	dir = 1
 	},
 /area/halflife/outdoors/forest)
+"kG" = (
+/obj/item/reagent_containers/pill/patch/medkit/vial,
+/obj/structure/table/halflife/metal,
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "kH" = (
 /obj/structure/bed/halflife/mattress/old,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -452,11 +452,6 @@
 "mE" = (
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/forest)
-"nu" = (
-/obj/structure/bed/halflife/bedframe/cot,
-/obj/structure/bed/halflife/mattress/filthy,
-/turf/open/floor/plating/indoor/concrete,
-/area/mine/laborcamp)
 "nA" = (
 /obj/structure/bed/halflife/mattress/stained,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -516,6 +511,11 @@
 	},
 /turf/open/misc/grass/jungle/station,
 /area/halflife/outdoors/forest)
+"oY" = (
+/obj/structure/bed/halflife/bedframe/cot,
+/obj/structure/bed/halflife/mattress/filthy,
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "pa" = (
 /obj/structure/railing/halflife/sewer{
 	dir = 8
@@ -689,6 +689,10 @@
 "vl" = (
 /turf/open/halflife/water/deep,
 /area/halflife/outdoors/forest)
+"vm" = (
+/obj/machinery/mineral/labor_points_checker,
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "vs" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/sewer/tunnel)
@@ -768,10 +772,6 @@
 /obj/structure/flora/bush/ferny/style_random,
 /turf/open/misc/grass/jungle/station,
 /area/halflife/outdoors/forest)
-"xO" = (
-/obj/machinery/mineral/labor_points_checker,
-/turf/open/floor/plating/indoor/concrete,
-/area/mine/laborcamp)
 "xQ" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	keylock = 1;
@@ -820,6 +820,11 @@
 /obj/machinery/computer/records/security,
 /turf/open/floor/plating/indoor/concrete,
 /area/mine/laborcamp/security)
+"yA" = (
+/obj/structure/bed/halflife/bedframe/cot,
+/obj/structure/bed/halflife/mattress/dirty,
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "yS" = (
 /obj/structure/railing/halflife/wood/single,
 /turf/open/floor/plating/ground/dirt,
@@ -890,10 +895,10 @@
 /area/halflife/indoors/bunker)
 "BP" = (
 /obj/docking_port/stationary{
-	height = 12;
+	height = 13;
 	name = "labor camp";
 	shuttle_id = "laborcamp_away";
-	width = 12;
+	width = 13;
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/concrete,
@@ -1010,11 +1015,6 @@
 /obj/structure/spawner/halflife/antlion,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/indoors/sewer/outlandscave)
-"FZ" = (
-/obj/structure/bed/halflife/bedframe/cot,
-/obj/structure/bed/halflife/mattress/dirty,
-/turf/open/floor/plating/indoor/concrete,
-/area/mine/laborcamp)
 "Gl" = (
 /obj/structure/railing/halflife/wood/single{
 	dir = 1
@@ -1206,13 +1206,13 @@
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/concrete,
 /area/mine/laborcamp)
+"MC" = (
+/turf/closed/wall/halflife/metal,
+/area/halflife/indoors/sewer/outlandscave)
 "MP" = (
 /obj/machinery/light/small,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
-"MR" = (
-/turf/closed/wall/halflife/metal,
-/area/halflife/indoors/sewer/outlandscave)
 "MT" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/bunker)
@@ -10247,7 +10247,7 @@ cD
 wP
 WA
 cD
-xO
+vm
 xw
 xw
 cD
@@ -10577,13 +10577,13 @@ bA
 bA
 bA
 bA
-MR
+MC
 fv
 cD
 hm
 xw
 xw
-FZ
+yA
 cD
 wG
 fv
@@ -10744,13 +10744,13 @@ bA
 bA
 bA
 bA
-MR
+MC
 fv
 cD
-eD
+kG
 xw
 xw
-nu
+oY
 cD
 wG
 fv
@@ -10911,10 +10911,10 @@ bA
 bA
 bA
 bA
-MR
+MC
 fv
 cD
-eD
+kG
 xw
 qh
 qh
@@ -11078,7 +11078,7 @@ bA
 bA
 bA
 bA
-MR
+MC
 fv
 cD
 cD
@@ -11245,7 +11245,7 @@ bA
 bA
 bA
 bA
-MR
+MC
 fv
 fv
 fv
@@ -11412,7 +11412,7 @@ Qg
 Qg
 Qg
 Qg
-MR
+MC
 fv
 fv
 fv
