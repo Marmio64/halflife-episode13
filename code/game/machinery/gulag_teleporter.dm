@@ -8,7 +8,7 @@ The console is located at computer/gulag_teleporter.dm
 //Gulag teleporter
 /obj/machinery/gulag_teleporter
 	name = "labor camp teleporter"
-	desc = "A bluespace teleporter used for teleporting prisoners to the labor camp."
+	desc = "A cost-cutting measure used to rapidly send prisoners to the labor camp without needing to manually set up their equipment or points quota. How it works is unknown, even to the Combine - at least, that's what you think, anyway." //mfw ss13 humanity more advanced than the combine
 	icon = 'icons/obj/machines/implant_chair.dmi'
 	icon_state = "implantchair"
 	base_icon_state = "implantchair"
@@ -186,8 +186,8 @@ The console is located at computer/gulag_teleporter.dm
 
 /*  beacon that receives the teleported prisoner */
 /obj/structure/gulag_beacon
-	name = "labor camp bluespace beacon"
-	desc = "A receiving beacon for bluespace teleportations."
+	name = "labor camp beacon"
+	desc = "How the Combine's local forces managed to acquire a teleporter system, and then chose to use it ONLY to send prisoners to an on-world labour camp, has been a source of mystery for quite some time. The most common belief is that it is based off human designs too unstable for the Combine to trust - hence why they're using it with prisoners."
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "light_on-8"
 	resistance_flags = INDESTRUCTIBLE

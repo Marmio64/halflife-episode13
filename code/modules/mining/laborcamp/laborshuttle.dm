@@ -1,14 +1,18 @@
 /obj/machinery/computer/shuttle/labor
-	name = "labor shuttle console"
-	desc = "Used to call and send the labor camp shuttle."
+	name = "labor helicopter flight controls"
+	desc = "Used to fly, remotely or otherwise, the labour helicopter."
 	circuit = /obj/item/circuitboard/computer/labor_shuttle
 	shuttleId = "laborcamp"
 	possible_destinations = "laborcamp_home;laborcamp_away"
 	req_access = list(ACCESS_BRIG)
+	icon_state = "sr_console"
+	icon_screen = null
+	icon_keyboard = null
+	light_color = LIGHT_COLOR_CYAN
 
 /obj/machinery/computer/shuttle/labor/one_way
-	name = "prisoner shuttle console"
-	desc = "A one-way shuttle console, used to summon the shuttle to the labor camp."
+	name = "labor helicopter recall console"
+	desc = "A one-way autopilot computer, used to recall the labour helicopter."
 	possible_destinations = "laborcamp_away"
 	circuit = /obj/item/circuitboard/computer/labor_shuttle/one_way
 	req_access = list( )
@@ -28,10 +32,10 @@
 	return TRUE
 
 /obj/docking_port/stationary/laborcamp_home
-	name = "SS13: Labor Shuttle Dock"
+	name = "City 13: Town Hall Helipad"
 	shuttle_id = "laborcamp_home"
-	roundstart_template = /datum/map_template/shuttle/labour/delta
-	width = 9
+	roundstart_template = /datum/map_template/shuttle/labour/box //fuck you, we boxstation in this bitch
+	width = 12
 	dwidth = 2
 	height = 5
 

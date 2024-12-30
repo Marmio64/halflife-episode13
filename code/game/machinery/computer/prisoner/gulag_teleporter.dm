@@ -2,8 +2,10 @@
 /obj/machinery/computer/prisoner/gulag_teleporter_computer
 	name = "labor camp teleporter console"
 	desc = "Used to send criminals to the Labor Camp."
-	icon_screen = "explosive"
-	icon_keyboard = "security_key"
+	icon_state = "sr_console"
+	icon_screen = null
+	icon_keyboard = null
+	light_color = LIGHT_COLOR_CYAN
 	req_access = list(ACCESS_BRIG)
 	circuit = /obj/item/circuitboard/computer/gulag_teleporter_console
 	light_color = COLOR_SOFT_RED
