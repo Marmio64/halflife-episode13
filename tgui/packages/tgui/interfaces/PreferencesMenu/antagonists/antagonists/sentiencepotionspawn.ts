@@ -2,18 +2,14 @@ import { Antagonist, Category } from '../base';
 
 const SentientCreature: Antagonist = {
   key: 'sentiencepotionspawn',
-  name: 'Sentient Creature',
+  name: 'Xenian Creature',
   description: [
     `
-		Either by cosmic happenstance, or due to crew's shenanigans, you have been
-		given sentience!
+		By some happen chance, you are now a xenian alien.
 	  `,
 
     `
-		This is a blanket preference. The more benign ones include random human
-		level intelligence events, the cargorilla, and creatures uplifted via sentience
-		potions. The less friendly ones include the regal rat, and the boosted
-		mining elite mobs.
+		This is a blanket preference for all sentient xenian creatures, which includes vortigaunts, antlions, zombies, etc.
 	  `,
   ],
   category: Category.Midround,

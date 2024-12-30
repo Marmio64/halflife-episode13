@@ -5,6 +5,13 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/plaza)
+"ad" = (
+/obj/effect/turf_decal/trimline/yellow/warning{
+	dir = 6
+	},
+/obj/structure/table/halflife/no_smooth/metal,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/hospital)
 "ae" = (
 /obj/structure/table/halflife/no_smooth/wood,
 /obj/structure/halflife/trash/food/glass,
@@ -2523,9 +2530,7 @@
 /area/halflife/indoors/laborunion)
 "lG" = (
 /obj/machinery/chem_heater,
-/obj/effect/turf_decal/trimline/yellow/warning{
-	dir = 6
-	},
+/obj/effect/turf_decal/trimline/yellow/warning,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
 "lH" = (
@@ -2563,6 +2568,7 @@
 /obj/item/food/meat/slab/human,
 /obj/structure/closet/secure_closet/freezer,
 /obj/item/food/meat/slab/human,
+/obj/item/food/meat/slab/synthmeat,
 /turf/open/floor/plating/indoor/showroom,
 /area/halflife/indoors/restaurant)
 "lQ" = (
@@ -2947,10 +2953,10 @@
 /area/halflife/indoors/scienceunion)
 "nA" = (
 /obj/item/reagent_containers/syringe,
-/obj/effect/turf_decal/trimline/yellow/warning{
-	dir = 5
-	},
 /obj/machinery/chem_mass_spec,
+/obj/effect/turf_decal/trimline/yellow/warning{
+	dir = 1
+	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
 "nB" = (
@@ -5999,6 +6005,11 @@
 /obj/item/geiger_counter,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
+"BC" = (
+/obj/effect/landmark/event_spawn,
+/obj/effect/turf_decal/trimline/yellow/warning,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/hospital)
 "BD" = (
 /obj/structure/halflife/trash/wood,
 /turf/open/floor/plating/ground/sidewalk,
@@ -10713,6 +10724,7 @@
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 8
 	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
 "Xp" = (
@@ -11090,9 +11102,12 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
 "YZ" = (
-/obj/machinery/door/unpowered/halflife/seethrough/metal,
-/turf/open/floor/plating/indoor/tile,
-/area/halflife/indoors)
+/obj/effect/turf_decal/trimline/yellow/warning{
+	dir = 5
+	},
+/obj/structure/table/halflife/no_smooth/metal,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/hospital)
 "Za" = (
 /obj/structure/halflife/barrel/single/hazard,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -36190,9 +36205,9 @@ EK
 Ux
 IN
 Iw
-BO
-BO
-BO
+Iw
+Iw
+Iw
 Iw
 Iw
 Iw
@@ -36310,10 +36325,10 @@ Kw
 EK
 Ux
 IN
-YZ
-Rr
-Rr
-pY
+Iw
+Iw
+Iw
+Iw
 Iw
 Iw
 Iw
@@ -36432,9 +36447,9 @@ EK
 Ux
 IN
 Iw
-BO
-BO
-BO
+Iw
+Iw
+Iw
 Iw
 Iw
 Iw
@@ -37960,7 +37975,7 @@ XQ
 XQ
 XQ
 yz
-Cp
+yz
 Cp
 NS
 QV
@@ -38081,7 +38096,7 @@ gA
 Vm
 ew
 yz
-Cp
+yz
 Cp
 NS
 QV
@@ -38202,7 +38217,7 @@ kb
 ra
 XQ
 fL
-Cp
+yz
 JF
 NS
 QV
@@ -38323,7 +38338,7 @@ kb
 kb
 XQ
 oe
-Cp
+yz
 JF
 NS
 QV
@@ -38444,7 +38459,7 @@ Sp
 Sp
 Gw
 yz
-Cp
+yz
 Cp
 NS
 QV
@@ -38565,7 +38580,7 @@ kb
 kb
 XQ
 yz
-Cp
+yz
 JF
 NS
 QV
@@ -38686,7 +38701,7 @@ kb
 kb
 XQ
 fL
-Cp
+yz
 JF
 NS
 QV
@@ -38807,7 +38822,7 @@ Jr
 ns
 ew
 yz
-Cp
+yz
 Cp
 XR
 Vk
@@ -38928,7 +38943,7 @@ XQ
 XQ
 XQ
 yz
-Cp
+yz
 Cp
 XR
 Vk
@@ -39049,7 +39064,7 @@ AD
 XQ
 XQ
 yz
-Cp
+yz
 Cp
 pR
 oX
@@ -39170,7 +39185,7 @@ sz
 XQ
 XQ
 yz
-Cp
+yz
 Cp
 Cp
 Cp
@@ -39684,7 +39699,7 @@ Gx
 hK
 Sr
 bx
-ua
+BC
 VE
 bx
 Bp
@@ -39804,7 +39819,7 @@ Iw
 Gx
 hK
 nA
-oD
+bx
 lG
 hK
 hK
@@ -39924,9 +39939,9 @@ pH
 Iw
 Gx
 hK
-hK
-hK
-hK
+YZ
+oD
+ad
 hK
 aW
 GK
@@ -40044,10 +40059,10 @@ eO
 no
 Iw
 Gx
-Gx
-Gx
-Gx
-Gx
+hK
+hK
+hK
+hK
 hK
 xi
 GK
@@ -40164,10 +40179,10 @@ oI
 no
 no
 Iw
-Iw
-Iw
-Iw
-Iw
+Gx
+Gx
+Gx
+Gx
 Gx
 hK
 bG
@@ -58195,10 +58210,10 @@ Rz
 Rz
 Rz
 DL
-DL
-DL
-DL
-DL
+Rz
+Rz
+Rz
+Rz
 Rz
 Rz
 Rz
@@ -58315,10 +58330,10 @@ Rz
 Rz
 Rz
 Rz
-Rz
-Rz
-Rz
-Rz
+DL
+DL
+DL
+DL
 DL
 Rz
 Rz

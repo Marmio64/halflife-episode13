@@ -20,6 +20,7 @@
 	H.cmode_music = 'hl13/sound/music/combat/vortalcombat.ogg'
 
 /datum/outfit/rebel/uplink
+	name = "Rebel Uplinked"
 	var/tc = 15
 	var/uplink_type = /obj/item/uplink/nuclear
 
@@ -29,7 +30,7 @@
 		H.equip_to_slot_or_del(U, ITEM_SLOT_BACKPACK)
 
 /datum/outfit/refugee
-	name = "Refugee"
+	name = "Refugee with random items"
 
 	uniform = /obj/item/clothing/under/citizen/refugee
 	shoes = /obj/item/clothing/shoes/boots
