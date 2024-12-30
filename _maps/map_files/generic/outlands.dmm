@@ -11,6 +11,13 @@
 /obj/structure/flora/tree/jungle/style_random,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"ax" = (
+/obj/machinery/conveyor_switch/oneway{
+	id = "gulag";
+	name = "smelter conveyor"
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "az" = (
 /obj/effect/landmark/start/nukeop,
 /obj/machinery/light/small{
@@ -142,6 +149,13 @@
 /obj/structure/flora/bush/fullgrass,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
+"dl" = (
+/obj/machinery/conveyor{
+	dir = 5;
+	id = "gulag"
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "do" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -186,6 +200,14 @@
 "el" = (
 /turf/closed/indestructible/syndicate,
 /area/halflife/indoors/sewer/outlandscave)
+"en" = (
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "gulag"
+	},
+/obj/structure/plasticflaps/opaque,
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "ev" = (
 /obj/effect/landmark/start/nukeop,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -193,6 +215,13 @@
 "ex" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
+"fh" = (
+/obj/machinery/conveyor/inverted{
+	id = "gulag";
+	dir = 10
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "fs" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/gulag_beacon,
@@ -388,6 +417,10 @@
 	},
 /turf/open/halflife/water/shallow,
 /area/halflife/outdoors/forest)
+"lq" = (
+/obj/machinery/mineral/processing_unit_console,
+/turf/closed/wall/halflife/metal,
+/area/mine/laborcamp)
 "lt" = (
 /obj/structure/rack,
 /obj/item/pickaxe/rusted,
@@ -686,6 +719,10 @@
 "vl" = (
 /turf/open/halflife/water/deep,
 /area/halflife/outdoors/forest)
+"vn" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "vs" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/sewer/tunnel)
@@ -913,6 +950,13 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
+"CX" = (
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "gulag"
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "Df" = (
 /obj/structure/railing/halflife/wood/single{
 	dir = 1
@@ -1362,6 +1406,14 @@
 /obj/structure/flora/tree/jungle/style_random,
 /turf/open/misc/grass/jungle/station,
 /area/halflife/outdoors/forest)
+"QL" = (
+/obj/machinery/mineral/processing_unit{
+	dir = 1;
+	input_dir = 2;
+	output_dir = 1
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "QP" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors/sewer/tunnel)
@@ -1646,6 +1698,13 @@
 /area/halflife/indoors/bunker)
 "XA" = (
 /turf/closed/wall/halflife/brick,
+/area/halflife/outdoors/forest)
+"XC" = (
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "gulag"
+	},
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
 "XD" = (
 /obj/effect/turf_decal/siding/thinplating{
@@ -7731,7 +7790,7 @@ tN
 dg
 GX
 GX
-Ff
+GX
 GX
 sD
 tN
@@ -9716,7 +9775,7 @@ tN
 tN
 GX
 tN
-GX
+Ff
 GX
 dg
 It
@@ -10415,9 +10474,9 @@ cD
 cD
 cD
 cD
-cD
-yo
-cD
+xw
+xw
+xw
 cD
 wG
 fv
@@ -10578,13 +10637,13 @@ bA
 bA
 bA
 bA
-iX
-fv
 cD
-hm
+cD
+dl
+en
+CX
 xw
-xw
-ZA
+ue
 cD
 wG
 fv
@@ -10744,14 +10803,14 @@ bA
 bA
 bA
 bA
-bA
-iX
-fv
-cD
-Ad
+XC
+en
+QL
+fh
+lq
+ax
 xw
 xw
-Jh
 cD
 wG
 fv
@@ -10912,13 +10971,13 @@ bA
 bA
 bA
 bA
-iX
-fv
 cD
-Ad
-xw
-qh
-qh
+cD
+cD
+cD
+cD
+yo
+cD
 cD
 wG
 fv
@@ -11082,10 +11141,10 @@ bA
 iX
 fv
 cD
-cD
-cD
-cD
-cD
+hm
+xw
+xw
+ZA
 cD
 wG
 fv
@@ -11248,12 +11307,12 @@ bA
 bA
 iX
 fv
-fv
-fv
-fv
-fv
-Ee
-fv
+cD
+Ad
+xw
+xw
+Jh
+cD
 wG
 fv
 fv
@@ -11415,12 +11474,12 @@ Qg
 Qg
 iX
 fv
-fv
-fv
-fv
-fv
-Ee
-fv
+cD
+Ad
+vn
+qh
+qh
+cD
 wG
 fv
 iQ
@@ -11582,12 +11641,12 @@ It
 Wx
 tN
 PT
-fv
-fv
-fv
-fv
-Ee
-iQ
+cD
+cD
+cD
+cD
+cD
+cD
 iQ
 fv
 iQ
