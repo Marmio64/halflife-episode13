@@ -209,6 +209,8 @@
 	icon = 'icons/obj/machines/computer.dmi'
 	icon_state = "sr_console"
 	light_color = LIGHT_COLOR_CYAN
+	density = TRUE
+
 /obj/machinery/mineral/labor_points_checker/attack_hand(mob/user, list/modifiers)
 	. = ..()
 	if(. || user.is_blind())

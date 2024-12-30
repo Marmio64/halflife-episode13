@@ -130,6 +130,10 @@
 	dir = 1
 	},
 /area/halflife/indoors/sewer/tunnel)
+"db" = (
+/obj/machinery/mineral/labor_points_checker,
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "dc" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional,
 /turf/open/floor/plating/indoor/concrete,
@@ -301,6 +305,9 @@
 "iU" = (
 /turf/open/floor/plating/indoor/metal,
 /area/halflife/outdoors/forest)
+"iX" = (
+/turf/closed/wall/halflife/metal,
+/area/halflife/indoors/sewer/outlandscave)
 "ja" = (
 /mob/living/simple_animal/halflife/grub{
 	dir = 4
@@ -359,11 +366,6 @@
 	dir = 1
 	},
 /area/halflife/outdoors/forest)
-"kG" = (
-/obj/item/reagent_containers/pill/patch/medkit/vial,
-/obj/structure/table/halflife/metal,
-/turf/open/floor/plating/indoor/concrete,
-/area/mine/laborcamp)
 "kH" = (
 /obj/structure/bed/halflife/mattress/old,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -511,11 +513,6 @@
 	},
 /turf/open/misc/grass/jungle/station,
 /area/halflife/outdoors/forest)
-"oY" = (
-/obj/structure/bed/halflife/bedframe/cot,
-/obj/structure/bed/halflife/mattress/filthy,
-/turf/open/floor/plating/indoor/concrete,
-/area/mine/laborcamp)
 "pa" = (
 /obj/structure/railing/halflife/sewer{
 	dir = 8
@@ -689,10 +686,6 @@
 "vl" = (
 /turf/open/halflife/water/deep,
 /area/halflife/outdoors/forest)
-"vm" = (
-/obj/machinery/mineral/labor_points_checker,
-/turf/open/floor/plating/indoor/concrete,
-/area/mine/laborcamp)
 "vs" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/sewer/tunnel)
@@ -820,11 +813,6 @@
 /obj/machinery/computer/records/security,
 /turf/open/floor/plating/indoor/concrete,
 /area/mine/laborcamp/security)
-"yA" = (
-/obj/structure/bed/halflife/bedframe/cot,
-/obj/structure/bed/halflife/mattress/dirty,
-/turf/open/floor/plating/indoor/concrete,
-/area/mine/laborcamp)
 "yS" = (
 /obj/structure/railing/halflife/wood/single,
 /turf/open/floor/plating/ground/dirt,
@@ -851,6 +839,11 @@
 "zT" = (
 /turf/open/floor/plating/indoor/metal/grate/border,
 /area/halflife/indoors/sewer/tunnel)
+"Ad" = (
+/obj/item/reagent_containers/pill/patch/medkit/vial,
+/obj/structure/table/halflife/metal,
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "Aq" = (
 /obj/structure/halflife/trash/glass/plate,
 /turf/open/floor/plating/ground/dirt,
@@ -895,11 +888,12 @@
 /area/halflife/indoors/bunker)
 "BP" = (
 /obj/docking_port/stationary{
+	dir = 4;
+	dwidth = 2;
 	height = 13;
 	name = "labor camp";
 	shuttle_id = "laborcamp_away";
-	width = 13;
-	dir = 4
+	width = 5
 	},
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
@@ -1104,6 +1098,11 @@
 "IW" = (
 /turf/closed/indestructible/syndicate,
 /area/halflife/outdoors)
+"Jh" = (
+/obj/structure/bed/halflife/bedframe/cot,
+/obj/structure/bed/halflife/mattress/filthy,
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "Jl" = (
 /obj/structure/flora/bush/pointy/style_random,
 /turf/open/floor/plating/ground/dirt/alt,
@@ -1206,9 +1205,6 @@
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/concrete,
 /area/mine/laborcamp)
-"MC" = (
-/turf/closed/wall/halflife/metal,
-/area/halflife/indoors/sewer/outlandscave)
 "MP" = (
 /obj/machinery/light/small,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -1736,6 +1732,11 @@
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/halflife/water/shallow,
 /area/halflife/outdoors/forest)
+"ZA" = (
+/obj/structure/bed/halflife/bedframe/cot,
+/obj/structure/bed/halflife/mattress/dirty,
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "ZM" = (
 /obj/structure/chair/halflife/metal/folding{
 	dir = 8
@@ -10247,7 +10248,7 @@ cD
 wP
 WA
 cD
-vm
+db
 xw
 xw
 cD
@@ -10577,13 +10578,13 @@ bA
 bA
 bA
 bA
-MC
+iX
 fv
 cD
 hm
 xw
 xw
-yA
+ZA
 cD
 wG
 fv
@@ -10744,13 +10745,13 @@ bA
 bA
 bA
 bA
-MC
+iX
 fv
 cD
-kG
+Ad
 xw
 xw
-oY
+Jh
 cD
 wG
 fv
@@ -10911,10 +10912,10 @@ bA
 bA
 bA
 bA
-MC
+iX
 fv
 cD
-kG
+Ad
 xw
 qh
 qh
@@ -11078,7 +11079,7 @@ bA
 bA
 bA
 bA
-MC
+iX
 fv
 cD
 cD
@@ -11245,7 +11246,7 @@ bA
 bA
 bA
 bA
-MC
+iX
 fv
 fv
 fv
@@ -11412,7 +11413,7 @@ Qg
 Qg
 Qg
 Qg
-MC
+iX
 fv
 fv
 fv

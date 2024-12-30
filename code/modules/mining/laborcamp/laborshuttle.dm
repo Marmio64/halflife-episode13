@@ -35,7 +35,8 @@
 	name = "City 13: Town Hall Helipad"
 	shuttle_id = "laborcamp_home"
 	roundstart_template = /datum/map_template/shuttle/labour/box //fuck you, we boxstation in this bitch
-	width = 13
+	width = 5
+	dheight = 2
 	height = 13
 
 /obj/docking_port/stationary/laborcamp_home/kilo
