@@ -110,4 +110,4 @@
 
 /obj/effect/decal/cleanable/oil/slippery/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/slippery, 80, (NO_SLIP_WHEN_WALKING | SLIDE))
+	AddComponent(/datum/component/slippery, 40, (NO_SLIP_WHEN_WALKING | SLIDE))

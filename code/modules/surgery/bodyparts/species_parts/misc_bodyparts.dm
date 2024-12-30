@@ -641,22 +641,19 @@
 
 /obj/item/bodypart/arm/left/vortigaunt
 	limb_id = SPECIES_VORTIGAUNT
-	unarmed_damage_low = 8
+	unarmed_damage_low = 10
 	unarmed_damage_high = 16
-	unarmed_effectiveness = 15
-	burn_modifier = 1.25
 	should_draw_greyscale = FALSE
 
 /obj/item/bodypart/arm/right/vortigaunt
 	limb_id = SPECIES_VORTIGAUNT
-	unarmed_damage_low = 8
+	unarmed_damage_low = 10
 	unarmed_damage_high = 16
-	unarmed_effectiveness = 15
 	should_draw_greyscale = FALSE
 
 /obj/item/bodypart/leg/left/vortigaunt
 	limb_id = SPECIES_VORTIGAUNT
-	unarmed_damage_low = 9
+	unarmed_damage_low = 11
 	unarmed_damage_high = 18
 	unarmed_effectiveness = 20
 	speed_modifier = 0.33
@@ -665,7 +662,7 @@
 
 /obj/item/bodypart/leg/right/vortigaunt
 	limb_id = SPECIES_VORTIGAUNT
-	unarmed_damage_low = 9
+	unarmed_damage_low = 11
 	unarmed_damage_high = 18
 	unarmed_effectiveness = 20
 	speed_modifier = 0.33
@@ -693,7 +690,6 @@
 	unarmed_damage_low = 4
 	unarmed_damage_high = 8
 	unarmed_effectiveness = 5
-	burn_modifier = 1.25
 	should_draw_greyscale = FALSE
 
 /obj/item/bodypart/arm/right/stalker

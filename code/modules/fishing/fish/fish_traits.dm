@@ -560,7 +560,7 @@ GLOBAL_LIST_INIT(spontaneous_fish_traits, populate_spontaneous_fish_traits())
 
 /datum/fish_trait/lubed/apply_to_fish(obj/item/fish/fish)
 	. = ..()
-	fish.AddComponent(/datum/component/slippery, 8 SECONDS, SLIDE|GALOSHES_DONT_HELP)
+	fish.AddComponent(/datum/component/slippery, 5 SECONDS, SLIDE|GALOSHES_DONT_HELP)
 
 /datum/fish_trait/lubed/apply_to_mob(mob/living/basic/mob)
 	. = ..()

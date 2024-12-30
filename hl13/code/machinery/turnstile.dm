@@ -81,14 +81,17 @@
 		return FALSE
 
 /obj/machinery/turnstile/brig/halflife/forcefield/click_alt(mob/user)
-	if (allowed(user))
-		if(on)
-			on = !on
-			icon_state = "forcefield_off"
-		else
-			on = !on
-			icon_state = "forcefield"
+	if(allowed(user) || HAS_SILICON_ACCESS(user))
+		src.toggle_onoff()
+	return
 
+/obj/machinery/turnstile/brig/halflife/forcefield/proc/toggle_onoff()
+	if(on)
+		on = !on
+		icon_state = "forcefield_off"
+	else
+		on = !on
+		icon_state = "forcefield"
 
 //for semi-secure areas. Labor lead, city admin, metropolice, and perhaps trusted citizens may be allowed in.
 /obj/machinery/turnstile/brig/halflife/forcefield
@@ -97,6 +100,11 @@
 	icon = 'hl13/icons/obj/forcefield.dmi'
 	icon_state = "forcefield_map"
 	forcefield = TRUE
+	interaction_flags_click = ALLOW_SILICON_REACH
+
+/obj/machinery/turnstile/brig/halflife/forcefield/attack_ai(mob/user)
+	click_alt(user)
+	to_chat(user, span_notice("Forcefield succesfully toggled."))
 
 /obj/machinery/turnstile/brig/halflife/forcefield/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if(on)

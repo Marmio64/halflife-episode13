@@ -157,7 +157,7 @@
 
 /obj/item/grown/bananapeel/specialpeel/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/slippery, 40)
+	AddComponent(/datum/component/slippery, 30)
 
 /obj/item/food/grown/banana/bunch
 	name = "banana bunch"

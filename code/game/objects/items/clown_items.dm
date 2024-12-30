@@ -23,8 +23,7 @@
 	w_class = WEIGHT_CLASS_TINY
 	item_flags = NOBLUDGEON
 	throwforce = 0
-	throw_speed = 3
-	throw_range = 7
+	throw_range = 5
 	grind_results = list(/datum/reagent/lye = 10)
 	var/cleanspeed = 3.5 SECONDS //slower than mop
 	force_string = "robust... against germs"
@@ -32,7 +31,7 @@
 
 /obj/item/soap/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/slippery, 80)
+	AddComponent(/datum/component/slippery, 20)
 	AddComponent(/datum/component/cleaner, cleanspeed, 0.1, pre_clean_callback=CALLBACK(src, PROC_REF(should_clean)), on_cleaned_callback=CALLBACK(src, PROC_REF(decreaseUses))) //less scaling for soapies
 
 /obj/item/soap/examine(mob/user)

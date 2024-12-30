@@ -483,10 +483,6 @@
 	crafting_complexity = FOOD_COMPLEXITY_2
 	custom_price = PAYCHECK_CREW
 
-/obj/item/food/butterdog/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/slippery, 8 SECONDS)
-
 /obj/item/food/raw_frenchtoast
 	name = "raw french toast"
 	desc = "A slice of bread soaked in a beaten egg mixture. Put it on a griddle to start cooking!"

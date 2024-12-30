@@ -520,3 +520,5 @@ GLOBAL_LIST_INIT(prototype_language_holders, init_language_holder_prototypes())
 
 /datum/language_holder/stalker
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM))
+
+	selected_language = /datum/language/aphasia

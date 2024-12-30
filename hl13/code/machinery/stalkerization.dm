@@ -121,7 +121,7 @@
 	say("Process complete.")
 	playsound(src, 'sound/machines/microwave/microwave-end.ogg', 100, 0)
 
-	C.fully_heal(TRUE)
+	C.fully_heal(ADMIN_HEAL_ALL) //As a last ditch, I suppose you can stalker the dead and dying to give them another chance?
 
 /obj/machinery/stalker_chamber/screwdriver_act(mob/living/user, obj/item/I)
 	. = TRUE

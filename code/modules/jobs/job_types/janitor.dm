@@ -40,7 +40,7 @@
 
 	id_trim = /datum/id_trim/job/janitor
 	neck = /obj/item/clothing/neck/anti_magic_collar
-	r_pocket = /obj/item/radio/off/halflife/vort //so they can hear orders given to them
+	ears = /obj/item/radio/headset/earpiece //so they can hear orders given to them
 	uniform = null
 	shoes = null
 

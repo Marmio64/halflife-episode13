@@ -38,7 +38,7 @@
 /obj/effect/particle_effect/fluid/foam/Initialize(mapload)
 	. = ..()
 	if(slippery_foam)
-		AddComponent(/datum/component/slippery, 100)
+		AddComponent(/datum/component/slippery, 50)
 	create_reagents(1000, REAGENT_HOLDER_INSTANT_REACT)
 	playsound(src, 'sound/effects/bubbles/bubbles2.ogg', 80, TRUE, -3)
 	AddElement(/datum/element/atmos_sensitive, mapload)

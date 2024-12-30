@@ -54,11 +54,11 @@ Assistant
 	name = JOB_ASSISTANT
 	jobtype = /datum/job/assistant
 	id_trim = /datum/id_trim/job/assistant
+	uniform = /obj/item/clothing/under/citizen
 
 /datum/outfit/job/assistant/pre_equip(mob/living/carbon/human/target)
 	..()
 	give_holiday_hat(target)
-	give_jumpsuit(target)
 
 /datum/outfit/job/assistant/proc/give_holiday_hat(mob/living/carbon/human/target)
 	for(var/holidayname in GLOB.holidays)
@@ -105,7 +105,4 @@ Assistant
 	name = "Assistant - Preview"
 
 /datum/outfit/job/assistant/preview/give_jumpsuit(mob/living/carbon/human/target)
-	if (target.jumpsuit_style == PREF_SUIT)
-		uniform = /obj/item/clothing/under/color/grey
-	else
-		uniform = /obj/item/clothing/under/color/jumpskirt/grey
+	uniform = /obj/item/clothing/under/citizen
