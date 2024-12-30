@@ -15,6 +15,7 @@
 	var/allow_clothing = FALSE
 
 /obj/machinery/stalker_chamber/RefreshParts()
+	..()
 	interval = 0
 	var/max_time = 40
 	for(var/obj/item/stock_parts/micro_laser/L in component_parts)
@@ -33,7 +34,7 @@
 	else
 		icon_state = initial(icon_state)
 
-/obj/machinery/stalker_chamber/open_machine(drop = TRUE)
+/obj/machinery/stalker_chamber/open_machine(drop = TRUE, density_to_set = FALSE)
 	if(panel_open)
 		return
 	. = ..()

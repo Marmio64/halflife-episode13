@@ -9,8 +9,8 @@
 /area/halflife/indoors)
 "g" = (
 /obj/modular_map_connector,
-/turf/closed/wall/halflife/brick,
-/area/halflife/indoors)
+/turf/template_noop,
+/area/template_noop)
 "j" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -21,6 +21,9 @@
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
+"l" = (
+/turf/template_noop,
+/area/template_noop)
 "n" = (
 /obj/structure/window/fulltile,
 /turf/open/floor/plating/indoor/woodc,
@@ -90,18 +93,35 @@
 /area/halflife/indoors)
 
 (1,1,1) = {"
-G
-G
-G
-G
-G
-G
-G
-G
-G
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
 g
 "}
 (2,1,1) = {"
+l
+G
+G
+G
+G
+G
+G
+G
+G
+G
+G
+l
+"}
+(3,1,1) = {"
+l
 G
 Y
 I
@@ -112,8 +132,10 @@ r
 Y
 P
 n
+l
 "}
-(3,1,1) = {"
+(4,1,1) = {"
+l
 G
 Y
 c
@@ -124,8 +146,10 @@ J
 Y
 P
 n
+l
 "}
-(4,1,1) = {"
+(5,1,1) = {"
+l
 G
 Y
 x
@@ -136,8 +160,10 @@ Y
 Y
 P
 G
+l
 "}
-(5,1,1) = {"
+(6,1,1) = {"
+l
 G
 Y
 c
@@ -148,8 +174,10 @@ Y
 Y
 P
 k
+l
 "}
-(6,1,1) = {"
+(7,1,1) = {"
+l
 G
 Y
 x
@@ -160,8 +188,10 @@ Y
 Y
 E
 G
+l
 "}
-(7,1,1) = {"
+(8,1,1) = {"
+l
 G
 b
 p
@@ -172,8 +202,10 @@ P
 P
 E
 G
+l
 "}
-(8,1,1) = {"
+(9,1,1) = {"
+l
 G
 u
 V
@@ -184,8 +216,10 @@ P
 P
 P
 G
+l
 "}
-(9,1,1) = {"
+(10,1,1) = {"
+l
 G
 V
 B
@@ -196,8 +230,10 @@ j
 P
 S
 G
+l
 "}
-(10,1,1) = {"
+(11,1,1) = {"
+l
 G
 G
 G
@@ -208,4 +244,19 @@ G
 G
 G
 G
+l
+"}
+(12,1,1) = {"
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
 "}

@@ -43,6 +43,9 @@
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/indoors)
+"k" = (
+/turf/template_noop,
+/area/template_noop)
 "l" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/plating/indoor/woodc,
@@ -101,8 +104,8 @@
 /area/halflife/indoors)
 "V" = (
 /obj/modular_map_connector,
-/turf/closed/wall/halflife/brick,
-/area/halflife/indoors)
+/turf/template_noop,
+/area/template_noop)
 "W" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -111,18 +114,35 @@
 /area/halflife/indoors)
 
 (1,1,1) = {"
-J
-J
-J
-J
-J
-J
-J
-J
-J
+k
+k
+k
+k
+k
+k
+k
+k
+k
+k
+k
 V
 "}
 (2,1,1) = {"
+k
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
+k
+"}
+(3,1,1) = {"
+k
 J
 I
 b
@@ -133,8 +153,10 @@ S
 d
 b
 J
+k
 "}
-(3,1,1) = {"
+(4,1,1) = {"
+k
 J
 G
 a
@@ -145,8 +167,10 @@ b
 b
 b
 J
+k
 "}
-(4,1,1) = {"
+(5,1,1) = {"
+k
 J
 W
 b
@@ -157,8 +181,10 @@ J
 u
 b
 c
+k
 "}
-(5,1,1) = {"
+(6,1,1) = {"
+k
 J
 b
 b
@@ -169,8 +195,10 @@ J
 b
 b
 J
+k
 "}
-(6,1,1) = {"
+(7,1,1) = {"
+k
 J
 J
 J
@@ -181,8 +209,10 @@ J
 b
 b
 e
+k
 "}
-(7,1,1) = {"
+(8,1,1) = {"
+k
 J
 H
 T
@@ -193,8 +223,10 @@ J
 b
 b
 e
+k
 "}
-(8,1,1) = {"
+(9,1,1) = {"
+k
 J
 L
 T
@@ -205,8 +237,10 @@ g
 b
 b
 e
+k
 "}
-(9,1,1) = {"
+(10,1,1) = {"
+k
 J
 j
 T
@@ -217,8 +251,10 @@ J
 y
 l
 J
+k
 "}
-(10,1,1) = {"
+(11,1,1) = {"
+k
 J
 J
 J
@@ -229,4 +265,19 @@ J
 J
 J
 J
+k
+"}
+(12,1,1) = {"
+k
+k
+k
+k
+k
+k
+k
+k
+k
+k
+k
+k
 "}

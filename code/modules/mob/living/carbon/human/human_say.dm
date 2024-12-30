@@ -45,6 +45,7 @@
 	else
 		return real_name //temporary hl13 edit to fix something
 
+/*
 	if(mind)
 		var/datum/antagonist/changeling/changeling = mind.has_antag_datum(/datum/antagonist/changeling)
 		if(changeling?.mimicing)
@@ -52,6 +53,7 @@
 	if(GetSpecialVoice())
 		return GetSpecialVoice()
 	return real_name
+*/
 
 /mob/living/carbon/human/proc/SetSpecialVoice(new_voice)
 	if(new_voice)

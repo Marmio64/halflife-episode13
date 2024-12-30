@@ -16,8 +16,8 @@
 /area/halflife/indoors)
 "m" = (
 /obj/modular_map_connector,
-/turf/closed/wall/halflife/brick,
-/area/halflife/indoors)
+/turf/template_noop,
+/area/template_noop)
 "n" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -59,6 +59,9 @@
 /obj/structure/halflife/trash/bricks,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors)
+"J" = (
+/turf/template_noop,
+/area/template_noop)
 "L" = (
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -82,18 +85,35 @@
 /area/halflife/indoors)
 
 (1,1,1) = {"
-D
-D
-D
-D
-D
-D
-D
-D
-D
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
 m
 "}
 (2,1,1) = {"
+J
+D
+D
+D
+D
+D
+D
+D
+D
+D
+D
+J
+"}
+(3,1,1) = {"
+J
 D
 u
 D
@@ -104,8 +124,10 @@ s
 u
 G
 D
+J
 "}
-(3,1,1) = {"
+(4,1,1) = {"
+J
 D
 u
 u
@@ -116,20 +138,24 @@ u
 u
 u
 k
-"}
-(4,1,1) = {"
-D
-s
-u
-u
-u
-D
-D
-u
-s
-D
+J
 "}
 (5,1,1) = {"
+J
+D
+s
+u
+u
+u
+D
+D
+u
+s
+D
+J
+"}
+(6,1,1) = {"
+J
 D
 u
 u
@@ -140,8 +166,10 @@ A
 u
 u
 n
+J
 "}
-(6,1,1) = {"
+(7,1,1) = {"
+J
 D
 D
 B
@@ -152,8 +180,10 @@ u
 u
 s
 D
+J
 "}
-(7,1,1) = {"
+(8,1,1) = {"
+J
 D
 o
 Y
@@ -164,8 +194,10 @@ u
 u
 u
 k
+J
 "}
-(8,1,1) = {"
+(9,1,1) = {"
+J
 D
 e
 Y
@@ -176,8 +208,10 @@ u
 u
 D
 D
+J
 "}
-(9,1,1) = {"
+(10,1,1) = {"
+J
 D
 L
 Y
@@ -188,8 +222,10 @@ u
 u
 Q
 D
+J
 "}
-(10,1,1) = {"
+(11,1,1) = {"
+J
 D
 D
 D
@@ -200,4 +236,19 @@ D
 D
 D
 D
+J
+"}
+(12,1,1) = {"
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
 "}

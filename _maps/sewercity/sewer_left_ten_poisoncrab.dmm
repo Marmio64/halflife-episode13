@@ -65,6 +65,9 @@
 "O" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
+"R" = (
+/turf/template_noop,
+/area/template_noop)
 "W" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/sewer)
@@ -77,8 +80,8 @@
 /area/halflife/indoors/sewer)
 "Y" = (
 /obj/modular_map_connector,
-/turf/closed/wall/halflife/metal,
-/area/halflife/indoors/sewer)
+/turf/template_noop,
+/area/template_noop)
 "Z" = (
 /mob/living/simple_animal/hostile/halflife/headcrab/poison,
 /obj/effect/decal/cleanable/blood/splatter,
@@ -86,6 +89,21 @@
 /area/halflife/indoors/sewer)
 
 (1,1,1) = {"
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+Y
+"}
+(2,1,1) = {"
+R
 W
 f
 W
@@ -95,9 +113,11 @@ W
 W
 W
 W
-Y
+W
+R
 "}
-(2,1,1) = {"
+(3,1,1) = {"
+R
 W
 O
 O
@@ -108,8 +128,10 @@ O
 b
 a
 W
+R
 "}
-(3,1,1) = {"
+(4,1,1) = {"
+R
 W
 O
 O
@@ -120,8 +142,10 @@ O
 h
 a
 W
+R
 "}
-(4,1,1) = {"
+(5,1,1) = {"
+R
 W
 I
 O
@@ -132,20 +156,24 @@ O
 O
 j
 W
-"}
-(5,1,1) = {"
-W
-W
-f
-W
-W
-W
-W
-f
-W
-W
+R
 "}
 (6,1,1) = {"
+R
+W
+W
+f
+W
+W
+W
+W
+f
+W
+W
+R
+"}
+(7,1,1) = {"
+R
 W
 a
 O
@@ -156,8 +184,10 @@ w
 O
 O
 W
+R
 "}
-(7,1,1) = {"
+(8,1,1) = {"
+R
 W
 X
 O
@@ -168,8 +198,10 @@ O
 O
 O
 W
+R
 "}
-(8,1,1) = {"
+(9,1,1) = {"
+R
 W
 O
 O
@@ -180,8 +212,10 @@ O
 O
 Z
 W
+R
 "}
-(9,1,1) = {"
+(10,1,1) = {"
+R
 W
 O
 B
@@ -192,8 +226,10 @@ O
 O
 D
 W
+R
 "}
-(10,1,1) = {"
+(11,1,1) = {"
+R
 W
 W
 W
@@ -204,4 +240,19 @@ W
 W
 W
 W
+R
+"}
+(12,1,1) = {"
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
 "}

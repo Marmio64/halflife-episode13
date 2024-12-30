@@ -195,6 +195,7 @@
 	update_icon()
 
 /obj/machinery/power/fusion_engine/power_change()
+	SHOULD_CALL_PARENT(FALSE)
 	return
 
 /obj/machinery/power/fusion_engine/process()

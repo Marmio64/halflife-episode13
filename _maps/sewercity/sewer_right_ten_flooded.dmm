@@ -14,13 +14,16 @@
 "p" = (
 /turf/open/halflife/water/sewer/deep,
 /area/halflife/indoors/sewer)
+"v" = (
+/turf/template_noop,
+/area/template_noop)
 "x" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/sewer)
 "H" = (
 /obj/modular_map_connector,
-/turf/closed/wall/halflife/metal,
-/area/halflife/indoors/sewer)
+/turf/template_noop,
+/area/template_noop)
 "N" = (
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/halflife/water/sewer/deep,
@@ -30,18 +33,35 @@
 /area/halflife/indoors/sewer)
 
 (1,1,1) = {"
-x
-x
-x
-x
-x
-x
-x
-x
-x
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
 H
 "}
 (2,1,1) = {"
+v
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+v
+"}
+(3,1,1) = {"
+v
 x
 W
 W
@@ -52,44 +72,52 @@ p
 p
 N
 x
-"}
-(3,1,1) = {"
-x
-W
-m
-W
-W
-W
-W
-p
-p
-x
+v
 "}
 (4,1,1) = {"
+v
 x
+W
 m
-m
-m
+W
 W
 W
 W
 p
 p
 x
+v
 "}
 (5,1,1) = {"
+v
 x
 m
 m
 m
-W
 W
 W
 W
 p
+p
 x
+v
 "}
 (6,1,1) = {"
+v
+x
+m
+m
+m
+W
+W
+W
+W
+p
+x
+v
+"}
+(7,1,1) = {"
+v
 x
 m
 m
@@ -100,44 +128,52 @@ W
 W
 p
 x
-"}
-(7,1,1) = {"
-x
-m
-m
-m
-m
-m
-W
-W
-W
-x
+v
 "}
 (8,1,1) = {"
+v
 x
 m
 m
-k
+m
 m
 m
 W
 W
 W
 x
+v
 "}
 (9,1,1) = {"
+v
 x
 m
-k
-k
 m
+k
 m
 m
 W
 W
+W
 x
+v
 "}
 (10,1,1) = {"
+v
+x
+m
+k
+k
+m
+m
+m
+W
+W
+x
+v
+"}
+(11,1,1) = {"
+v
 x
 x
 x
@@ -148,4 +184,19 @@ x
 x
 x
 x
+v
+"}
+(12,1,1) = {"
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
 "}

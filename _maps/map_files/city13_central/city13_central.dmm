@@ -349,6 +349,10 @@
 "bx" = (
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
+"bz" = (
+/obj/modular_map_root/sewerright,
+/turf/closed/mineral/random,
+/area/halflife/indoors/sewer/cave)
 "bB" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 8
@@ -364,9 +368,9 @@
 /turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/indoors/distributioncenter)
 "bD" = (
-/obj/modular_map_root/sewerright,
-/turf/template_noop,
-/area/halflife/indoors/sewer)
+/obj/modular_map_root/citynorth,
+/turf/closed/wall/halflife/brick,
+/area/halflife/indoors)
 "bE" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 8
@@ -409,9 +413,9 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/restaurant)
 "bP" = (
-/obj/modular_map_root/sewerright,
-/turf/template_noop,
-/area/halflife/indoors/sewer/cave)
+/obj/modular_map_root/citysouth,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "bQ" = (
 /mob/living/simple_animal/hostile/halflife/zombie/fungal,
 /turf/open/floor/plating/indoor/woodc,
@@ -2294,7 +2298,6 @@
 "kG" = (
 /obj/machinery/mineral/processing_unit_console{
 	input_dir = 8;
-	machinedir = 1;
 	output_dir = 4
 	},
 /turf/closed/wall/halflife/brick,
@@ -2962,7 +2965,6 @@
 "nB" = (
 /obj/structure/table/halflife/wood,
 /obj/machinery/fax{
-	department = "District Administrator";
 	name = "District Administrator's Fax Machine"
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -3538,7 +3540,6 @@
 "qd" = (
 /obj/structure/closet/secure_closet/freezer,
 /obj/machinery/camera{
-	default_camera_icon = "Town Hall Surgery";
 	dir = 8
 	},
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -4791,6 +4792,10 @@
 /obj/machinery/turnstile/brig/halflife/forcefield/botany,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/hydroponics)
+"wi" = (
+/obj/modular_map_root/sewerleft,
+/turf/closed/mineral/random,
+/area/halflife/indoors/sewer/cave)
 "wj" = (
 /obj/structure/halflife/tank/chemical/container,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -4875,6 +4880,10 @@
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
+"wA" = (
+/obj/modular_map_root/citynorth,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors)
 "wC" = (
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/indoors/slums)
@@ -6598,9 +6607,9 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/scienceunion)
 "Em" = (
-/obj/modular_map_root/sewerleft,
-/turf/template_noop,
-/area/halflife/indoors/sewer)
+/obj/modular_map_root/citynorth,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/alley)
 "En" = (
 /obj/structure/table/halflife/wood,
 /obj/machinery/camera{
@@ -6634,6 +6643,10 @@
 /obj/machinery/atm,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
+"Eu" = (
+/obj/modular_map_root/citysouth,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/alley)
 "Ev" = (
 /obj/structure/table/halflife/wood,
 /obj/structure/halflife/trash/food/misc,
@@ -6969,6 +6982,10 @@
 /obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
+"FY" = (
+/obj/modular_map_root/sewerleft,
+/turf/closed/wall/halflife/metal,
+/area/halflife/indoors/sewer)
 "Ga" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/lino,
@@ -9067,9 +9084,9 @@
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
 "PD" = (
-/obj/modular_map_root/citysouth,
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors)
+/obj/modular_map_root/sewerright,
+/turf/closed/mineral/random,
+/area/halflife/indoors/sewer)
 "PE" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 4
@@ -9413,9 +9430,9 @@
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/townhall)
 "Rk" = (
-/obj/modular_map_root/sewerleft,
-/turf/template_noop,
-/area/halflife/indoors/sewer/cave)
+/obj/modular_map_root/sewerright,
+/turf/closed/wall/halflife/metal,
+/area/halflife/indoors/sewer)
 "Rl" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -10612,6 +10629,10 @@
 /obj/effect/turf_decal/siding/thinplating,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors)
+"WF" = (
+/obj/modular_map_root/sewerleft,
+/turf/closed/mineral/random,
+/area/halflife/indoors/sewer)
 "WG" = (
 /obj/machinery/camera{
 	c_tag = "Hospital Patient Cell";
@@ -10908,9 +10929,9 @@
 /turf/open/floor/plating/indoor/grooved,
 /area/halflife/indoors/hospital)
 "Yk" = (
-/obj/modular_map_root/citynorth,
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors)
+/obj/modular_map_root/sewerleft,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "Yl" = (
 /obj/machinery/computer/rdconsole,
 /obj/machinery/light/small/directional/north,
@@ -11916,7 +11937,7 @@ Gi
 Gi
 Gi
 Gi
-Gi
+bz
 Gi
 Gi
 Gi
@@ -12036,7 +12057,7 @@ qS
 qS
 qS
 qS
-bP
+qS
 Gi
 Gi
 Gi
@@ -12452,7 +12473,7 @@ Rd
 Rd
 Rd
 Rd
-Rd
+PD
 fp
 Pe
 xt
@@ -12572,7 +12593,7 @@ gT
 gT
 gT
 gT
-bD
+gT
 Rd
 fp
 Pe
@@ -13685,7 +13706,7 @@ wr
 Gi
 Gi
 Gi
-Gi
+wi
 wr
 wr
 Gi
@@ -13805,7 +13826,7 @@ qS
 qS
 qS
 qS
-Rk
+qS
 Gi
 Gi
 wr
@@ -16263,7 +16284,7 @@ Gi
 Gi
 Gi
 Gi
-Gi
+wi
 Gi
 Gi
 Gi
@@ -16383,7 +16404,7 @@ qS
 qS
 qS
 qS
-Rk
+qS
 Gi
 Gi
 Gi
@@ -16670,7 +16691,7 @@ Qp
 Qp
 Qp
 Qp
-Qp
+Yk
 Qp
 Pe
 xt
@@ -16687,7 +16708,7 @@ Qp
 Qp
 Qp
 Qp
-Qp
+Yk
 Qp
 Pe
 xt
@@ -16790,7 +16811,7 @@ gT
 gT
 gT
 gT
-Em
+gT
 fp
 fp
 Pe
@@ -16807,7 +16828,7 @@ gT
 gT
 gT
 gT
-Em
+gT
 fp
 fp
 Pe
@@ -18611,7 +18632,7 @@ Qp
 Qp
 Qp
 Qp
-fp
+FY
 Rd
 Rd
 Rd
@@ -18731,7 +18752,7 @@ gT
 gT
 gT
 gT
-Em
+gT
 fp
 Rd
 Rd
@@ -18781,7 +18802,7 @@ Qp
 Qp
 Qp
 Qp
-Qp
+Yk
 Qp
 Qp
 Pe
@@ -18901,7 +18922,7 @@ gT
 gT
 gT
 gT
-Em
+gT
 fp
 fp
 fp
@@ -19470,7 +19491,7 @@ Rd
 Rd
 Rd
 Rd
-Rd
+PD
 fp
 Pe
 xt
@@ -19488,7 +19509,7 @@ Rd
 Rd
 Rd
 Rd
-Rd
+PD
 Rd
 Rd
 Rd
@@ -19590,7 +19611,7 @@ gT
 gT
 gT
 gT
-bD
+gT
 Rd
 fp
 Pe
@@ -19608,7 +19629,7 @@ gT
 gT
 gT
 gT
-bD
+gT
 Rd
 Rd
 Rd
@@ -21104,7 +21125,7 @@ Rd
 Rd
 Rd
 Rd
-Rd
+PD
 fp
 Pe
 xt
@@ -21224,7 +21245,7 @@ gT
 gT
 gT
 gT
-bD
+gT
 Rd
 fp
 Pe
@@ -23030,7 +23051,7 @@ Rd
 Rd
 Rd
 Rd
-Rd
+PD
 fp
 Pe
 xt
@@ -23150,7 +23171,7 @@ gT
 gT
 gT
 gT
-bD
+gT
 Rd
 fp
 Pe
@@ -23214,7 +23235,7 @@ Rd
 Rd
 Rd
 Rd
-fp
+Rk
 Pe
 xt
 zW
@@ -23334,7 +23355,7 @@ gT
 gT
 gT
 gT
-bD
+gT
 fp
 Pe
 xt
@@ -24601,7 +24622,7 @@ Qp
 Qp
 Qp
 Qp
-Qp
+Yk
 Qp
 Qp
 Qp
@@ -24721,7 +24742,7 @@ gT
 gT
 gT
 gT
-Em
+gT
 fp
 fp
 fp
@@ -26740,7 +26761,7 @@ Qp
 Qp
 Qp
 Qp
-fp
+FY
 Rd
 Rd
 Rd
@@ -26860,7 +26881,7 @@ gT
 gT
 gT
 gT
-Em
+gT
 fp
 Rd
 Rd
@@ -27044,7 +27065,7 @@ LZ
 LZ
 Qp
 fp
-Rd
+WF
 Rd
 Rd
 xE
@@ -27164,7 +27185,7 @@ gT
 gT
 gT
 gT
-Em
+gT
 Rd
 Rd
 Rd
@@ -27259,7 +27280,7 @@ Qp
 Qp
 Qp
 Qp
-Qp
+Yk
 Qp
 Qp
 Qp
@@ -27379,7 +27400,7 @@ gT
 gT
 gT
 gT
-Em
+gT
 fp
 fp
 fp
@@ -30177,7 +30198,7 @@ Iw
 Iw
 Iw
 Iw
-Gx
+Eu
 Gx
 ty
 ty
@@ -30297,7 +30318,7 @@ NC
 NC
 NC
 NC
-PD
+NC
 Gx
 Gx
 ty
@@ -30378,7 +30399,7 @@ rj
 rj
 rj
 Iw
-Iw
+bD
 Iw
 Iw
 Cj
@@ -30498,7 +30519,7 @@ NC
 NC
 NC
 NC
-Yk
+NC
 LH
 rj
 rj
@@ -43338,7 +43359,7 @@ Gx
 Gx
 Gx
 Gx
-IN
+bP
 Kw
 EK
 Ux
@@ -43458,7 +43479,7 @@ NC
 NC
 NC
 NC
-PD
+NC
 do
 Kw
 EK
@@ -45531,7 +45552,7 @@ Gx
 Gx
 Te
 Gx
-Gx
+Em
 OZ
 OZ
 OZ
@@ -45651,7 +45672,7 @@ NC
 NC
 NC
 NC
-Yk
+NC
 Iw
 OZ
 OZ
@@ -45987,6 +46008,7 @@ fT
 fT
 fT
 fT
+wA
 fT
 fT
 fT
@@ -45999,8 +46021,7 @@ fT
 fT
 fT
 fT
-fT
-IN
+bP
 Kw
 EK
 Ux
@@ -46107,7 +46128,7 @@ NC
 NC
 NC
 NC
-Yk
+NC
 Iw
 Iw
 Iw
@@ -46120,7 +46141,7 @@ NC
 NC
 NC
 NC
-PD
+NC
 IN
 Kw
 EK

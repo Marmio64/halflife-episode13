@@ -69,17 +69,17 @@
 
 	account.ration_voucher = FALSE
 
-	say("Ration reward determined. Please wait for ration to be dispensed.")
+	//say("Ration reward determined. Please wait for ration to be dispensed.")
 
 	playsound(src, 'hl13/sound/machines/combine_button5.ogg', 50, TRUE, extrarange = -3)
 
-	sleep(1 SECONDS)
+	//sleep(1 SECONDS)
 
 	playsound(src, 'hl13/sound/machines/combine_dispense.ogg', 50, TRUE, extrarange = -3)
 
 	flick(icon_state_vend,src)
 
-	sleep(2 SECONDS)
+	//sleep(2 SECONDS)
 
 	dispense(ration_quality, vortigaunt)
 	return

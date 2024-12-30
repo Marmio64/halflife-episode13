@@ -7,8 +7,8 @@
 /area/halflife/indoors/sewer)
 "o" = (
 /obj/modular_map_connector,
-/turf/closed/wall/halflife/metal,
-/area/halflife/indoors/sewer)
+/turf/template_noop,
+/area/template_noop)
 "v" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -18,6 +18,9 @@
 "w" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/sewer)
+"y" = (
+/turf/template_noop,
+/area/template_noop)
 "A" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
@@ -29,54 +32,77 @@
 /area/halflife/indoors/sewer)
 
 (1,1,1) = {"
-w
-w
-w
-w
-w
-w
-w
-w
-w
+y
+y
+y
+y
+y
+y
+y
+y
+y
+y
+y
 o
 "}
 (2,1,1) = {"
+y
 w
-S
-S
-S
-S
-S
-X
-X
-A
 w
+w
+w
+w
+w
+w
+w
+w
+w
+y
 "}
 (3,1,1) = {"
+y
 w
 S
 S
 S
+S
+S
 X
 X
-X
-A
 A
 w
+y
 "}
 (4,1,1) = {"
+y
 w
+S
 S
 S
 X
 X
-A
-A
+X
 A
 A
 w
+y
 "}
 (5,1,1) = {"
+y
+w
+S
+S
+X
+X
+A
+A
+A
+A
+w
+y
+"}
+(6,1,1) = {"
+y
 w
 S
 X
@@ -87,35 +113,27 @@ A
 A
 A
 w
-"}
-(6,1,1) = {"
-w
-X
-X
-X
-A
-A
-A
-A
-A
-w
+y
 "}
 (7,1,1) = {"
+y
 w
 X
 X
-A
+X
 A
 A
 A
 A
 A
 w
+y
 "}
 (8,1,1) = {"
+y
 w
-A
-A
+X
+X
 A
 A
 A
@@ -123,8 +141,24 @@ A
 A
 A
 w
+y
 "}
 (9,1,1) = {"
+y
+w
+A
+A
+A
+A
+A
+A
+A
+A
+w
+y
+"}
+(10,1,1) = {"
+y
 w
 A
 v
@@ -135,8 +169,10 @@ A
 A
 A
 w
+y
 "}
-(10,1,1) = {"
+(11,1,1) = {"
+y
 w
 w
 w
@@ -147,4 +183,19 @@ w
 w
 w
 w
+y
+"}
+(12,1,1) = {"
+y
+y
+y
+y
+y
+y
+y
+y
+y
+y
+y
+y
 "}

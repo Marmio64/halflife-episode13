@@ -48,7 +48,7 @@
 		// calls dropped().
 		addtimer(CALLBACK(src, PROC_REF(empty_if_not_held)), 0.1 SECONDS)
 
-/obj/item/gun/energy/recharge/handle_chamber()
+/obj/item/gun/energy/recharge/handle_chamber(atom/shooter = null)
 	. = ..()
 	attempt_reload()
 

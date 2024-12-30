@@ -120,7 +120,9 @@
 /mob/living
 	var/swimming = FALSE
 
+/*
 /turf/open/halflife/water/MouseDrop(mob/living/M, mob/living/user)
+	..()
 	if(!M.swimming) //can't put yourself up if you are not swimming
 		return
 	switch(depth)
@@ -144,6 +146,7 @@
 			return
 
 /turf/open/halflife/water/MouseDrop(mob/living/M, mob/living/user)
+	..()
 	if(user.stat || user.body_position == LYING_DOWN || !Adjacent(user) || !M.Adjacent(user)|| !iscarbon(M))
 		return
 	if(M.swimming) //can't lower yourself again
@@ -174,6 +177,8 @@
 						return
 			else
 				return
+
+*/
 
 /turf/open/halflife/water/Exited(atom/movable/gone, direction)
 	..()

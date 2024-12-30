@@ -5,8 +5,8 @@
 /area/halflife/indoors/sewer)
 "h" = (
 /obj/modular_map_connector,
-/turf/closed/wall/halflife/metal,
-/area/halflife/indoors/sewer)
+/turf/template_noop,
+/area/template_noop)
 "i" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/sewer)
@@ -51,24 +51,44 @@
 /obj/item/fishing_rod,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
+"V" = (
+/turf/template_noop,
+/area/template_noop)
 "Z" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
 
 (1,1,1) = {"
-i
-i
-i
-i
-i
-i
-i
-i
-i
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
 h
 "}
 (2,1,1) = {"
+V
+i
+i
+i
+i
+i
+i
+i
+i
+i
+i
+V
+"}
+(3,1,1) = {"
+V
 i
 k
 K
@@ -79,8 +99,10 @@ K
 H
 w
 i
+V
 "}
-(3,1,1) = {"
+(4,1,1) = {"
+V
 i
 I
 K
@@ -91,8 +113,10 @@ K
 H
 w
 i
+V
 "}
-(4,1,1) = {"
+(5,1,1) = {"
+V
 i
 k
 K
@@ -103,8 +127,10 @@ K
 H
 w
 i
+V
 "}
-(5,1,1) = {"
+(6,1,1) = {"
+V
 i
 k
 K
@@ -115,8 +141,10 @@ K
 K
 w
 i
+V
 "}
-(6,1,1) = {"
+(7,1,1) = {"
+V
 i
 k
 K
@@ -127,8 +155,10 @@ K
 H
 w
 i
+V
 "}
-(7,1,1) = {"
+(8,1,1) = {"
+V
 i
 k
 K
@@ -139,8 +169,10 @@ K
 H
 w
 i
+V
 "}
-(8,1,1) = {"
+(9,1,1) = {"
+V
 i
 k
 K
@@ -151,8 +183,10 @@ K
 H
 w
 i
+V
 "}
-(9,1,1) = {"
+(10,1,1) = {"
+V
 i
 k
 K
@@ -163,8 +197,10 @@ K
 H
 w
 i
+V
 "}
-(10,1,1) = {"
+(11,1,1) = {"
+V
 i
 i
 r
@@ -175,4 +211,19 @@ i
 i
 i
 i
+V
+"}
+(12,1,1) = {"
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
+V
 "}

@@ -44,13 +44,12 @@
 	max_integrity = 200
 	var/breakmats = null
 
-/obj/structure/flora/xen/deconstruct(disassembled = TRUE)
+/obj/structure/flora/xen/atom_deconstruct(disassembled = TRUE)
 	if(breakmats)
 		new breakmats(loc)
 		for(var/obj/item/I in src)
 			I.forceMove(loc)
 	SSsociostability.modifystability(1) //Clearing infestations is good for city health.
-	qdel(src)
 
 /obj/structure/flora/xen/leafy
 	name = "leafy xen plant"

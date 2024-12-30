@@ -73,6 +73,8 @@
 /atom/movable
 	var/recent_travel = 0
 
+/*
+
 /obj/structure/fluff/traveltile/Crossed(atom/movable/AM)
 	. = ..()
 	var/fou
@@ -105,3 +107,5 @@
 			break
 	if(!fou)
 		to_chat(AM, "<b>It is a dead end.</b>")
+
+*/

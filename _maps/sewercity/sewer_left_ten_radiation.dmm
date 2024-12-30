@@ -52,6 +52,9 @@
 /obj/structure/halflife/barrel/single/toxic/two,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
+"I" = (
+/turf/template_noop,
+/area/template_noop)
 "J" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 8
@@ -67,14 +70,29 @@
 /area/halflife/indoors/sewer)
 "O" = (
 /obj/modular_map_connector,
-/turf/closed/wall/halflife/metal,
-/area/halflife/indoors/sewer)
+/turf/template_noop,
+/area/template_noop)
 "U" = (
 /obj/structure/halflife/barrel/single/toxic/three,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
 
 (1,1,1) = {"
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+O
+"}
+(2,1,1) = {"
+I
 E
 E
 E
@@ -84,9 +102,11 @@ E
 E
 J
 E
-O
+E
+I
 "}
-(2,1,1) = {"
+(3,1,1) = {"
+I
 E
 f
 z
@@ -97,8 +117,10 @@ L
 z
 L
 E
+I
 "}
-(3,1,1) = {"
+(4,1,1) = {"
+I
 E
 c
 z
@@ -109,8 +131,10 @@ L
 z
 L
 E
+I
 "}
-(4,1,1) = {"
+(5,1,1) = {"
+I
 E
 z
 z
@@ -121,8 +145,10 @@ t
 z
 L
 E
+I
 "}
-(5,1,1) = {"
+(6,1,1) = {"
+I
 E
 N
 z
@@ -133,8 +159,10 @@ E
 f
 L
 E
+I
 "}
-(6,1,1) = {"
+(7,1,1) = {"
+I
 E
 f
 z
@@ -145,8 +173,10 @@ E
 z
 w
 E
+I
 "}
-(7,1,1) = {"
+(8,1,1) = {"
+I
 E
 E
 E
@@ -157,8 +187,10 @@ E
 i
 L
 E
+I
 "}
-(8,1,1) = {"
+(9,1,1) = {"
+I
 E
 L
 L
@@ -169,8 +201,10 @@ i
 z
 d
 E
+I
 "}
-(9,1,1) = {"
+(10,1,1) = {"
+I
 E
 d
 u
@@ -181,8 +215,10 @@ E
 L
 U
 E
+I
 "}
-(10,1,1) = {"
+(11,1,1) = {"
+I
 E
 E
 E
@@ -193,4 +229,19 @@ E
 E
 E
 E
+I
+"}
+(12,1,1) = {"
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
 "}

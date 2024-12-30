@@ -741,7 +741,6 @@
 	new /obj/item/storage/fancy/cigarettes/cigpack_syndicate(src)
 	new /obj/item/lighter(src)
 
-#undef KIT_RECON
 #undef KIT_BLOODY_SPAI
 #undef KIT_STEALTHY
 #undef KIT_SCREWED

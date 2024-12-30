@@ -6,6 +6,7 @@
 	taste_mult = 1
 
 /datum/reagent/toxin/cleanupsolution/expose_obj(obj/O, reac_volume)
+	..()
 	if(istype(O, /obj/structure/alien/weeds))
 		var/obj/structure/alien/weeds/alien_weeds = O
 		alien_weeds.take_damage(rand(20,40), BRUTE, 0) // Kills alien weeds pretty fast

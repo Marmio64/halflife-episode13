@@ -6,6 +6,10 @@
 "c" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors)
+"l" = (
+/obj/modular_map_connector,
+/turf/template_noop,
+/area/template_noop)
 "w" = (
 /obj/structure/table/halflife/no_smooth/large/crafting/tinkerbench,
 /turf/open/floor/plating/indoor/concrete,
@@ -42,20 +46,40 @@
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors)
+"W" = (
+/turf/template_noop,
+/area/template_noop)
 
 (1,1,1) = {"
-F
-F
-F
-F
-F
-F
-F
-F
-F
-F
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+l
 "}
 (2,1,1) = {"
+W
+F
+F
+F
+F
+F
+F
+F
+F
+F
+F
+W
+"}
+(3,1,1) = {"
+W
 F
 a
 E
@@ -66,8 +90,10 @@ E
 c
 U
 F
+W
 "}
-(3,1,1) = {"
+(4,1,1) = {"
+W
 F
 a
 T
@@ -78,8 +104,10 @@ T
 T
 c
 F
+W
 "}
-(4,1,1) = {"
+(5,1,1) = {"
+W
 F
 a
 T
@@ -90,20 +118,24 @@ T
 T
 c
 F
-"}
-(5,1,1) = {"
-F
-c
-T
-T
-T
-T
-T
-T
-c
-F
+W
 "}
 (6,1,1) = {"
+W
+F
+c
+T
+T
+T
+T
+T
+T
+c
+F
+W
+"}
+(7,1,1) = {"
+W
 J
 c
 T
@@ -114,8 +146,10 @@ T
 T
 c
 F
+W
 "}
-(7,1,1) = {"
+(8,1,1) = {"
+W
 F
 c
 T
@@ -126,8 +160,10 @@ T
 T
 c
 F
+W
 "}
-(8,1,1) = {"
+(9,1,1) = {"
+W
 F
 a
 T
@@ -138,8 +174,10 @@ T
 T
 U
 F
+W
 "}
-(9,1,1) = {"
+(10,1,1) = {"
+W
 F
 a
 D
@@ -150,8 +188,10 @@ D
 c
 c
 F
+W
 "}
-(10,1,1) = {"
+(11,1,1) = {"
+W
 F
 F
 F
@@ -162,4 +202,19 @@ F
 F
 F
 F
+W
+"}
+(12,1,1) = {"
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
+W
 "}

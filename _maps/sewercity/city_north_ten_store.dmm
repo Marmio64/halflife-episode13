@@ -37,8 +37,8 @@
 /area/halflife/indoors)
 "C" = (
 /obj/modular_map_connector,
-/turf/closed/wall/halflife/brick,
-/area/halflife/indoors)
+/turf/template_noop,
+/area/template_noop)
 "F" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -82,20 +82,40 @@
 "W" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors)
+"X" = (
+/turf/template_noop,
+/area/template_noop)
 
 (1,1,1) = {"
-e
-e
-e
-e
-e
-e
-e
-e
-e
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
 C
 "}
 (2,1,1) = {"
+X
+e
+e
+e
+e
+e
+e
+e
+e
+e
+e
+X
+"}
+(3,1,1) = {"
+X
 e
 W
 R
@@ -106,8 +126,10 @@ W
 W
 R
 e
+X
 "}
-(3,1,1) = {"
+(4,1,1) = {"
+X
 e
 J
 d
@@ -118,8 +140,10 @@ d
 d
 d
 e
+X
 "}
-(4,1,1) = {"
+(5,1,1) = {"
+X
 e
 c
 d
@@ -130,8 +154,10 @@ F
 d
 d
 e
+X
 "}
-(5,1,1) = {"
+(6,1,1) = {"
+X
 N
 d
 W
@@ -142,8 +168,10 @@ e
 e
 I
 e
+X
 "}
-(6,1,1) = {"
+(7,1,1) = {"
+X
 e
 d
 W
@@ -154,8 +182,10 @@ n
 d
 d
 e
+X
 "}
-(7,1,1) = {"
+(8,1,1) = {"
+X
 e
 w
 d
@@ -166,8 +196,10 @@ d
 d
 d
 e
+X
 "}
-(8,1,1) = {"
+(9,1,1) = {"
+X
 e
 d
 d
@@ -178,8 +210,10 @@ e
 y
 p
 e
+X
 "}
-(9,1,1) = {"
+(10,1,1) = {"
+X
 e
 W
 h
@@ -190,8 +224,10 @@ e
 H
 d
 e
+X
 "}
-(10,1,1) = {"
+(11,1,1) = {"
+X
 e
 e
 e
@@ -202,4 +238,19 @@ e
 e
 e
 e
+X
+"}
+(12,1,1) = {"
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
 "}

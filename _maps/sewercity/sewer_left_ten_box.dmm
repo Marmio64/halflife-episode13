@@ -6,6 +6,9 @@
 /obj/item/mop,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
+"v" = (
+/turf/template_noop,
+/area/template_noop)
 "x" = (
 /obj/item/reagent_containers/cup/bucket,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -36,8 +39,8 @@
 /area/halflife/indoors/sewer)
 "S" = (
 /obj/modular_map_connector,
-/turf/closed/wall/halflife/metal,
-/area/halflife/indoors/sewer)
+/turf/template_noop,
+/area/template_noop)
 "W" = (
 /obj/structure/halflife/barrel/quadruple/grey,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -47,6 +50,21 @@
 /area/halflife/indoors/sewer)
 
 (1,1,1) = {"
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+S
+"}
+(2,1,1) = {"
+v
 Z
 Z
 Z
@@ -56,9 +74,11 @@ Z
 Z
 Z
 Z
-S
+Z
+v
 "}
-(2,1,1) = {"
+(3,1,1) = {"
+v
 Z
 t
 z
@@ -69,32 +89,38 @@ z
 W
 z
 Z
-"}
-(3,1,1) = {"
-Z
-z
-z
-z
-z
-z
-z
-z
-z
-Z
+v
 "}
 (4,1,1) = {"
+v
 Z
 z
 z
-Q
-Q
-Q
-Q
+z
+z
+z
+z
 z
 z
 Z
+v
 "}
 (5,1,1) = {"
+v
+Z
+z
+z
+Q
+Q
+Q
+Q
+z
+z
+Z
+v
+"}
+(6,1,1) = {"
+v
 Z
 B
 z
@@ -105,8 +131,10 @@ Q
 z
 z
 Z
+v
 "}
-(6,1,1) = {"
+(7,1,1) = {"
+v
 Z
 z
 x
@@ -117,32 +145,38 @@ Q
 z
 O
 Z
-"}
-(7,1,1) = {"
-Z
-z
-z
-Q
-Q
-Q
-Q
-z
-z
-Z
+v
 "}
 (8,1,1) = {"
+v
 Z
 z
 z
-z
-z
-z
-z
+Q
+Q
+Q
+Q
 z
 z
 Z
+v
 "}
 (9,1,1) = {"
+v
+Z
+z
+z
+z
+z
+z
+z
+z
+z
+Z
+v
+"}
+(10,1,1) = {"
+v
 Z
 z
 z
@@ -153,8 +187,10 @@ z
 z
 y
 Z
+v
 "}
-(10,1,1) = {"
+(11,1,1) = {"
+v
 Z
 Z
 Z
@@ -165,4 +201,19 @@ Z
 Z
 Z
 Z
+v
+"}
+(12,1,1) = {"
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
 "}

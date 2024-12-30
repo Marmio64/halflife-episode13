@@ -350,7 +350,6 @@
 						emote("scream")
 						flash_fullscreen("redflash3")
 						adjust_stutter(8 SECONDS)
-						sleep(1 SECONDS)
 						adjust_confusion(10 SECONDS)
 						if(painpercent >= 150)
 							Paralyze(5 SECONDS)

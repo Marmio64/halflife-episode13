@@ -11,8 +11,8 @@
 /area/halflife/indoors/sewer)
 "k" = (
 /obj/modular_map_connector,
-/turf/closed/wall/halflife/metal,
-/area/halflife/indoors/sewer)
+/turf/template_noop,
+/area/template_noop)
 "m" = (
 /mob/living/simple_animal/hostile/halflife/headcrab/poison,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -25,6 +25,9 @@
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
+"J" = (
+/turf/template_noop,
+/area/template_noop)
 "M" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 4
@@ -51,42 +54,63 @@
 /area/halflife/indoors/sewer)
 
 (1,1,1) = {"
-W
-W
-W
-W
-W
-W
-W
-W
-W
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
 k
 "}
 (2,1,1) = {"
+J
 W
-a
-Y
-a
 W
-a
-Y
-a
-a
 W
+W
+W
+W
+W
+W
+W
+W
+J
 "}
 (3,1,1) = {"
+J
 W
 a
 Y
 a
+W
+a
 Y
 a
-W
-W
 a
 W
+J
 "}
 (4,1,1) = {"
+J
+W
+a
+Y
+a
+Y
+a
+W
+W
+a
+W
+J
+"}
+(5,1,1) = {"
+J
 W
 H
 W
@@ -97,20 +121,24 @@ Y
 W
 a
 W
-"}
-(5,1,1) = {"
-W
-a
-W
-a
-W
-a
-W
-W
-a
-W
+J
 "}
 (6,1,1) = {"
+J
+W
+a
+W
+a
+W
+a
+W
+W
+a
+W
+J
+"}
+(7,1,1) = {"
+J
 W
 a
 Y
@@ -121,8 +149,10 @@ Y
 a
 m
 W
+J
 "}
-(7,1,1) = {"
+(8,1,1) = {"
+J
 W
 a
 Y
@@ -133,8 +163,10 @@ W
 a
 a
 W
+J
 "}
-(8,1,1) = {"
+(9,1,1) = {"
+J
 W
 W
 W
@@ -145,8 +177,10 @@ W
 Q
 W
 W
+J
 "}
-(9,1,1) = {"
+(10,1,1) = {"
+J
 W
 a
 y
@@ -157,8 +191,10 @@ W
 a
 j
 W
+J
 "}
-(10,1,1) = {"
+(11,1,1) = {"
+J
 W
 W
 W
@@ -169,4 +205,19 @@ W
 W
 W
 W
+J
+"}
+(12,1,1) = {"
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
 "}

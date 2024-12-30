@@ -25,6 +25,9 @@
 /obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
+"z" = (
+/turf/template_noop,
+/area/template_noop)
 "A" = (
 /obj/structure/halflife/tank,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -49,8 +52,8 @@
 /area/halflife/indoors/sewer)
 "K" = (
 /obj/modular_map_connector,
-/turf/closed/wall/halflife/metal,
-/area/halflife/indoors/sewer)
+/turf/template_noop,
+/area/template_noop)
 "P" = (
 /mob/living/simple_animal/hostile/halflife/zombie/zombine,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -83,18 +86,35 @@
 /area/halflife/indoors/sewer)
 
 (1,1,1) = {"
-X
-X
-X
-X
-X
-X
-X
-X
-X
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
 K
 "}
 (2,1,1) = {"
+z
+X
+X
+X
+X
+X
+X
+X
+X
+X
+X
+z
+"}
+(3,1,1) = {"
+z
 X
 T
 l
@@ -105,8 +125,10 @@ l
 l
 B
 X
+z
 "}
-(3,1,1) = {"
+(4,1,1) = {"
+z
 X
 D
 j
@@ -117,8 +139,10 @@ S
 e
 l
 X
+z
 "}
-(4,1,1) = {"
+(5,1,1) = {"
+z
 X
 l
 l
@@ -129,8 +153,10 @@ X
 X
 X
 X
+z
 "}
-(5,1,1) = {"
+(6,1,1) = {"
+z
 X
 T
 R
@@ -141,8 +167,10 @@ l
 l
 V
 X
+z
 "}
-(6,1,1) = {"
+(7,1,1) = {"
+z
 X
 X
 X
@@ -153,8 +181,10 @@ S
 e
 l
 X
+z
 "}
-(7,1,1) = {"
+(8,1,1) = {"
+z
 X
 A
 m
@@ -165,8 +195,10 @@ X
 X
 X
 X
+z
 "}
-(8,1,1) = {"
+(9,1,1) = {"
+z
 X
 A
 P
@@ -177,8 +209,10 @@ m
 m
 m
 X
+z
 "}
-(9,1,1) = {"
+(10,1,1) = {"
+z
 X
 A
 m
@@ -189,8 +223,10 @@ m
 m
 m
 X
+z
 "}
-(10,1,1) = {"
+(11,1,1) = {"
+z
 X
 X
 X
@@ -201,4 +237,19 @@ p
 X
 X
 X
+z
+"}
+(12,1,1) = {"
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
 "}
