@@ -1,175 +1,174 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/closed/wall/mineral/titanium,
-/area/shuttle/labor)
-"b" = (
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
-/area/shuttle/labor)
-"c" = (
-/obj/machinery/computer/shuttle/labor{
-	dir = 4
-	},
-/obj/structure/reagent_dispensers/wall/peppertank/directional/west,
-/turf/open/floor/mineral/plastitanium/red,
-/area/shuttle/labor)
-"d" = (
-/obj/structure/chair/office{
+/obj/structure/chair/halflife/metal/red{
 	dir = 1
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/obj/effect/decal/cleanable/blood/old,
+/obj/machinery/light/cold/directional/south,
+/turf/open/floor/plating/indoor/metal,
+/area/shuttle/labor)
+"b" = (
+/obj/structure/fans/tiny/invisible,
+/obj/machinery/door/unpowered/halflife/metal{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/metal,
+/area/shuttle/labor)
+"c" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plating/indoor/metal,
+/area/shuttle/labor)
+"d" = (
+/obj/machinery/door/airlock/highsecurity/combine,
+/obj/structure/fans/tiny/invisible,
+/obj/effect/mapping_helpers/airlock/access/all/security/brig,
+/turf/open/floor/plating/indoor/metal,
 /area/shuttle/labor)
 "e" = (
-/obj/structure/table,
-/obj/item/folder/red,
-/obj/item/restraints/handcuffs,
-/turf/open/floor/mineral/plastitanium/red,
+/obj/machinery/mineral/labor_claim_console{
+	pixel_x = 30
+	},
+/turf/open/floor/plating/indoor/metal,
 /area/shuttle/labor)
 "f" = (
-/turf/open/floor/mineral/plastitanium/red,
+/turf/open/floor/plating/indoor/metal,
 /area/shuttle/labor)
 "g" = (
-/obj/machinery/button/flasher{
-	id = "gulagshuttleflasher";
-	name = "Flash Control";
-	pixel_y = -26;
-	req_access = list("security")
-	},
-/obj/machinery/light/directional/south,
-/turf/open/floor/mineral/plastitanium/red,
+/obj/structure/window/fulltile,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating/indoor/metal,
 /area/shuttle/labor)
 "h" = (
-/obj/machinery/mineral/stacking_unit_console{
-	pixel_x = 30;
-	pixel_y = 30
+/obj/docking_port/mobile{
+	dir = 2;
+	shuttle_id = "laborcamp";
+	name = "labor camp shuttle";
+	port_direction = 2;
+	preferred_direction = 2
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/obj/structure/window/fulltile,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating/indoor/metal,
 /area/shuttle/labor)
 "i" = (
-/obj/machinery/door/airlock/titanium{
-	name = "Labor Shuttle Airlock"
+/obj/structure/fans/tiny/invisible,
+/obj/machinery/door/unpowered/halflife/metal{
+	dir = 8
 	},
-/obj/effect/mapping_helpers/airlock/access/all/security/brig,
-/turf/open/floor/plating,
+/turf/open/floor/plating/indoor/metal,
 /area/shuttle/labor)
 "j" = (
-/obj/machinery/door/airlock/titanium{
-	name = "Labor Shuttle Airlock"
-	},
-/obj/effect/mapping_helpers/airlock/access/all/security/brig,
-/turf/open/floor/mineral/plastitanium/red,
+/obj/machinery/computer/shuttle/labor,
+/turf/open/floor/plating/indoor/metal,
 /area/shuttle/labor)
 "k" = (
+/turf/closed/wall/halflife/metal/weak,
+/area/shuttle/labor)
+"l" = (
+/obj/structure/chair/office/halflife/blue{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal,
+/area/shuttle/labor)
+"n" = (
+/obj/machinery/mineral/stacking_unit_console{
+	pixel_x = -1;
+	pixel_y = -31
+	},
+/obj/machinery/light/cold/directional/south,
+/turf/open/floor/plating/indoor/metal,
+/area/shuttle/labor)
+"p" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional,
+/turf/open/floor/plating/indoor/metal,
+/area/shuttle/labor)
+"q" = (
 /obj/machinery/mineral/stacking_machine/laborstacker{
 	input_dir = 2;
 	output_dir = 1
 	},
-/turf/open/floor/iron/dark,
-/area/shuttle/labor)
-"l" = (
-/turf/open/floor/mineral/titanium,
-/area/shuttle/labor)
-"m" = (
-/obj/machinery/light/directional/north,
-/turf/open/floor/mineral/titanium,
-/area/shuttle/labor)
-"n" = (
-/obj/machinery/mineral/labor_claim_console{
-	pixel_x = 30
-	},
-/turf/open/floor/mineral/titanium,
-/area/shuttle/labor)
-"o" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 8
-	},
-/obj/machinery/flasher/directional/east{
-	id = "gulagshuttleflasher"
-	},
-/turf/open/floor/mineral/titanium,
-/area/shuttle/labor)
-"p" = (
-/obj/structure/closet/crate,
-/turf/open/floor/mineral/titanium,
-/area/shuttle/labor)
-"q" = (
-/obj/docking_port/mobile{
-	dir = 8;
-	shuttle_id = "laborcamp";
-	name = "labor camp shuttle";
-	port_direction = 4
-	},
-/obj/effect/spawner/structure/window/reinforced/shuttle,
-/turf/open/floor/plating,
-/area/shuttle/labor)
-"r" = (
-/obj/machinery/power/shuttle_engine/heater,
-/obj/structure/window/reinforced/spawner/directional/north,
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating/indoor/metal,
 /area/shuttle/labor)
 "s" = (
-/obj/machinery/power/shuttle_engine/propulsion,
-/turf/open/floor/plating/airless,
+/obj/structure/table/halflife/metal,
+/turf/open/floor/plating/indoor/metal,
 /area/shuttle/labor)
 "W" = (
-/obj/machinery/door/airlock/titanium{
-	name = "Labor Shuttle Airlock"
-	},
-/turf/open/floor/mineral/titanium,
-/area/shuttle/labor)
+/turf/template_noop,
+/area/template_noop)
 
 (1,1,1) = {"
-a
-a
-i
-a
-a
-b
 W
-a
-a
+g
+g
+d
+k
+k
+i
+k
+W
+W
+W
+W
+W
 "}
 (2,1,1) = {"
-b
+g
+g
+s
+f
+q
 c
 f
-j
-l
-p
-l
-r
-s
+k
+k
+k
+k
+W
+W
 "}
 (3,1,1) = {"
-b
-d
-g
+h
+j
+l
+n
+k
+f
+f
 a
-m
-l
-l
-r
-s
+k
+k
+k
+k
+k
 "}
 (4,1,1) = {"
-b
-e
-h
-k
-n
-o
-l
-r
+g
+g
 s
+f
+p
+e
+f
+k
+k
+k
+k
+W
+W
 "}
 (5,1,1) = {"
-a
-a
+W
+g
+g
+d
+k
+k
 b
-a
-a
-a
-q
-a
-a
+k
+W
+W
+W
+W
+W
 "}

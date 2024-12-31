@@ -118,15 +118,15 @@
 			switch(SSshuttle.moveShuttle("laborcamp", "laborcamp_home", TRUE))
 				if(1)
 					if(COOLDOWN_FINISHED(src, say_cooldown))
-						say("Shuttle not found.")
+						say("Helicopter missing. Request Overwatch.")
 						COOLDOWN_START(src, say_cooldown, 2 SECONDS)
 				if(2)
 					if(COOLDOWN_FINISHED(src, say_cooldown))
-						say("Shuttle already at station.")
+						say("Helicopter already at city.")
 						COOLDOWN_START(src, say_cooldown, 2 SECONDS)
 				if(3)
 					if(COOLDOWN_FINISHED(src, say_cooldown))
-						say("No permission to dock could be granted.")
+						say("No permission to land could be granted.")
 						COOLDOWN_START(src, say_cooldown, 2 SECONDS)
 				else
 					if(!(obj_flags & EMAGGED))
@@ -134,9 +134,9 @@
 						var/datum/record/crew/target = find_record(user_mob.real_name)
 						target?.wanted_status = WANTED_PAROLE
 
-						security_radio.talk_into(src, "[user_mob.name] returned to the station. Minerals and Prisoner ID card ready for retrieval.", FREQ_SECURITY)
+						security_radio.talk_into(src, "[user_mob.name] returned to the city. Minerals and Prisoner ID card ready for retrieval.", FREQ_SECURITY)
 					user_mob.log_message("has completed their labor points goal and is now sending the gulag shuttle back to the station.", LOG_GAME)
-					say("Labor sentence finished, shuttle returning.")
+					say("Labor sentence finished, safety checks complete. Prepare for takeoff.")
 					initiated_launch = TRUE
 					return TRUE
 
@@ -203,12 +203,13 @@
 
 /**********************Point Lookup Console**************************/
 
-/obj/machinery/mineral/labor_points_checker
+/obj/machinery/mineral/labor_points_checker //i am NOT about to make this a subtype of a computer because FUCK YOU (not really im just lazy lmao)
 	name = "points checking console"
 	desc = "A console used by prisoners to check the progress on their quotas. Simply swipe a prisoner ID."
-	icon = 'icons/obj/machines/mining_machines.dmi'
-	icon_state = "console"
-	density = FALSE
+	icon = 'icons/obj/machines/computer.dmi'
+	icon_state = "sr_console"
+	light_color = LIGHT_COLOR_CYAN
+	density = TRUE
 
 /obj/machinery/mineral/labor_points_checker/attack_hand(mob/user, list/modifiers)
 	. = ..()
@@ -225,6 +226,6 @@
 		return
 	say("ID: [prisoner_id.registered_name].")
 	say("Points Collected: [prisoner_id.points] / [prisoner_id.goal].")
-	say("Collect points by bringing smelted minerals to the Labor Shuttle stacking machine. Reach your quota to earn your release.")
+	say("Collect points by bringing smelted minerals to the helicopter's stacking machine. Reach your quota to earn your release.")
 
 #undef SHEET_POINT_VALUE
