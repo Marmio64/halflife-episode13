@@ -46,7 +46,7 @@
 	icon_state = "[initial(icon_state)][song?.playing ? "_on" : null]"
 
 /obj/item/instrument/piano_synth/headphones/spacepods
-	name = "\improper Nanotrasen space pods"
+	name = "\improper air pods"
 	desc = "Flex your money, AND ignore what everyone else says, all at once!"
 	icon_state = "spacepods"
 	worn_icon = 'icons/mob/clothing/ears.dmi'

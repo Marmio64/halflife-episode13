@@ -23,6 +23,9 @@
 			'sound/mobs/humanoids/human/scream/malescream_4.ogg',
 			'sound/mobs/humanoids/human/scream/malescream_5.ogg',
 			'sound/mobs/humanoids/human/scream/malescream_6.ogg',
+			'sound/mobs/humanoids/human/scream/malescream_7.ogg',
+			'sound/mobs/humanoids/human/scream/malescream_8.ogg',
+			'sound/mobs/humanoids/human/scream/malescream_9.ogg',
 		)
 
 	return pick(
@@ -94,27 +97,17 @@
 	return SFX_SNORE_MALE
 
 /datum/species/human/get_species_description()
-	return "Humans are the dominant species in the known galaxy. \
-		Their kind extend from old Earth to the edges of known space."
+	return "Humans are the dominant species on earth."
 
 /datum/species/human/get_species_lore()
 	return list(
-		"These primate-descended creatures, originating from the mostly harmless Earth, \
-		have long-since outgrown their home and semi-benign designation. \
-		The space age has taken humans out of their solar system and into the galaxy-at-large.",
+		"Sixteen years after the seven hour war, the Vault has been broken into only months ago and the Combine are in a scramble to regain control following their massive failure. \
+		However, they do not yet have the level of control and pressure on the populace as seen in Half Life 2.",
 
-		"In traditional human fashion, this near-record pace from terra firma to the final frontier spat \
-		in the face of other races they now shared a stage with. \
-		This included the lizards - if anyone was offended by these upstarts, it was certainly lizardkind.",
+		"Now, the setting takes place within the poorly maintained eastern-european streets of City 13, within one district of a greater whole \
+		Lack of attention has lead to the proliferation of xenian wildlife such as head crabs and antlions, and tensions rise between the citizenry and the combine as they catch wind of what had happened in City 17.",
 
-		"Humanity never managed to find the kind of peace to fully unite under one banner like other species. \
-		The pencil and paper pushing of the UN bureaucrat lives on in the mosaic that is TerraGov; \
-		a composite of the nation-states that still live on in human society.",
-
-		"The human spirit of opportunity and enterprise continues on in its peak form: \
-		the hypercorporation. Acting outside of TerraGov's influence, literally and figuratively, \
-		hypercorporations buy the senate votes they need and establish territory far past the Earth Government's reach. \
-		In hypercorporation territory company policy is law, giving new meaning to \"employee termination\".",
+		"Will the District Administrator keep a handle of things for the Universal Union, or will the citizenry throw off their shackles as they try to find a better life?",
 	)
 
 /datum/species/human/create_pref_unique_perks()

@@ -123,6 +123,10 @@
 
 	if(!skip_knockdown)
 		Knockdown(levels * 5 SECONDS)
+
+	if(istype(src, /mob/living/carbon/human))
+		playsound(src, 'hl13/sound/halflifeeffects/body_fall.ogg', 75, TRUE)
+
 	return .
 
 /// Modifier for mobs landing on their feet after a fall

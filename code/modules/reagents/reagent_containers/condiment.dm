@@ -111,7 +111,7 @@
 
 /obj/item/reagent_containers/condiment/sugar
 	name = "sugar sack"
-	desc = "Tasty spacey sugar!"
+	desc = "Sweet white speckles of goodness."
 	icon_state = "sugar"
 	inhand_icon_state = "carton"
 	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'
@@ -175,7 +175,7 @@
 	fill_icon_thresholds = null
 
 /obj/item/reagent_containers/condiment/milk
-	name = "space milk"
+	name = "milk"
 	desc = "It's milk. White and nutritious goodness!"
 	icon_state = "milk"
 	inhand_icon_state = "carton"
@@ -267,7 +267,7 @@
 
 /obj/item/reagent_containers/condiment/vinegar
 	name = "vinegar"
-	desc = "Perfect for chips, if you're feeling Space British."
+	desc = "Perfect for chips, if you're feeling British."
 	icon_state = "vinegar"
 	list_reagents = list(/datum/reagent/consumable/vinegar = 50)
 	fill_icon_thresholds = null
@@ -425,7 +425,7 @@
 		/datum/reagent/consumable/salt = list("condi_salt", "Salt Shaker", "Salt. From oceans, presumably"),
 		/datum/reagent/consumable/blackpepper = list("condi_pepper", "Pepper Mill", "Often used to flavor food or make people sneeze"),
 		/datum/reagent/consumable/nutriment/fat/oil = list("condi_cornoil", "Vegetable Oil", "A delicious oil used in cooking."),
-		/datum/reagent/consumable/sugar = list("condi_sugar", "Sugar", "Tasty spacey sugar!"),
+		/datum/reagent/consumable/sugar = list("condi_sugar", "Sugar", "Sweet white speckles of goodness."),
 		/datum/reagent/consumable/astrotame = list("condi_astrotame", "Astrotame", "The sweetness of a thousand sugars but none of the calories."),
 		/datum/reagent/consumable/bbqsauce = list("condi_bbq", "BBQ sauce", "Hand wipes not included."),
 		/datum/reagent/consumable/peanut_butter = list("condi_peanutbutter", "Peanut Butter", "A creamy paste made from ground peanuts."),
