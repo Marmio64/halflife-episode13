@@ -374,7 +374,7 @@
 	var/basetype = /obj/structure/halflife/fence //used for corner debugging
 	var/canpass = FALSE // if projectiles can go through
 	var/cansqueeze = FALSE //turn off for vertical states - for people / doesnt work right now
-	var/breakmats = /obj/item/stack/sheet/iron //not sure this isnt a thing on everything
+	var/breakmats = /obj/item/stack/sheet/scrap_metal //not sure this isnt a thing on everything
 
 /obj/structure/halflife/fence/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))
@@ -600,7 +600,7 @@
 /obj/machinery/door/unpowered/halflife/seethrough/fence/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))
 		playsound(src, 'hl13/sound//halflifeeffects/metal_door_break.ogg', 100, TRUE)
-		new /obj/item/stack/sheet/iron(loc)
+		new /obj/item/stack/sheet/scrap_metal(loc)
 		for(var/obj/item/I in src)
 			I.forceMove(loc)
 	qdel(src)

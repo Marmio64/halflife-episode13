@@ -22,11 +22,11 @@
 	actions_types = list(/datum/action/item_action/startchainsaw)
 	tool_behaviour = TOOL_SAW
 	toolspeed = 1.5 //Turn it on first you dork
-	var/force_on = 28
+	var/force_on = 32
 	/// The looping sound for our chainsaw when running
 	var/datum/looping_sound/chainsaw/chainsaw_loop
 	/// How long it takes to behead someone with this chainsaw.
-	var/behead_time = 15 SECONDS
+	var/behead_time = 10 SECONDS
 
 /obj/item/chainsaw/Initialize(mapload)
 	. = ..()

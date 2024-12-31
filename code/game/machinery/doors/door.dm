@@ -70,6 +70,8 @@
 	var/elevator_status
 	/// What specific lift ID do we link with?
 	var/transport_linked_id
+	/// Make sparks when hit with a high power attack? HL13 EDIT
+	var/do_sparks = TRUE
 
 /datum/armor/machinery_door
 	melee = 30
@@ -398,6 +400,8 @@
 
 /obj/machinery/door/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = 1, attack_dir)
 	. = ..()
+	if(!do_sparks)
+		return
 	if(. && atom_integrity > 0)
 		if(damage_amount >= 10 && prob(30))
 			spark_system.start()

@@ -25,9 +25,10 @@
 	density = TRUE
 	can_crush = FALSE
 	spark_system = null
-	max_integrity = 700
+	max_integrity = 600
 	damage_deflection = 15
 	halflife_flags_1 = LOCKABLE_1
+	do_sparks = FALSE
 	var/door_type = null
 	var/solidity = SOLID
 	var/frametype = "metal"
@@ -338,7 +339,7 @@
 /obj/machinery/door/unpowered/halflife/metal/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))
 		playsound(src, 'hl13/sound//halflifeeffects/metal_door_break.ogg', 100, TRUE)
-		new /obj/item/stack/sheet/iron(loc)
+		new /obj/item/stack/sheet/scrap_metal(loc)
 		for(var/obj/item/I in src)
 			I.forceMove(loc)
 	qdel(src)
@@ -377,7 +378,7 @@
 /obj/machinery/door/unpowered/halflife/wood/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))
 		playsound(src, 'hl13/sound//halflifeeffects/wood_door_break.ogg', 100, TRUE)
-		new /obj/item/stack/sheet/mineral/wood(loc)
+		new /obj/item/stack/sheet/mineral/scrap_wood(loc)
 		for(var/obj/item/I in src)
 			I.forceMove(loc)
 	qdel(src)
@@ -453,7 +454,7 @@
 /obj/machinery/door/unpowered/halflife/seethrough/metal/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))
 		playsound(src, 'hl13/sound//halflifeeffects/metal_door_break.ogg', 100, TRUE)
-		new /obj/item/stack/sheet/iron(loc)
+		new /obj/item/stack/sheet/scrap_metal(loc)
 		for(var/obj/item/I in src)
 			I.forceMove(loc)
 	qdel(src)

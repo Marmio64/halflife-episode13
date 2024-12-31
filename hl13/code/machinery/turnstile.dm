@@ -19,7 +19,7 @@
 	name = "Brig turnstile"
 	//Seccies and brig phys may always pass, either way.
 	req_access = list(ACCESS_SECURITY)
-	max_integrity = 500 /// Made of damn good steel
+	max_integrity = 600 /// Made of damn good steel
 	damage_deflection = 21 /// Same as airlocks!
 
 /obj/machinery/turnstile/Initialize(mapload)
