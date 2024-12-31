@@ -4,6 +4,9 @@
 	baseturfs = /turf/open/floor/plating/ground/dirt
 	icon = 'hl13/icons/turf/floor/floors.dmi'
 	attachment_holes = FALSE
+
+	footstep = FOOTSTEP_FLOOR
+
 	var/has_alternate_states = FALSE //for damage, alts etc.
 	var/alternate_states = 1
 	var/has_base_states = FALSE //for starting variety (mainly wood)
