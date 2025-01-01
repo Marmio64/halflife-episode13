@@ -388,6 +388,9 @@ GLOBAL_PROTECT(tracy_init_reason)
 
 	var/new_status = ""
 	var/hostedby
+
+	features += "Immersive Half Life 2 themed server, open for early access playtesting."
+
 	if(config)
 		var/server_name = CONFIG_GET(string/servername)
 		if (server_name)
