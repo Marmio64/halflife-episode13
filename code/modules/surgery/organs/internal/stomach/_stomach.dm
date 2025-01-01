@@ -185,6 +185,16 @@
 	if(CONFIG_GET(flag/disable_human_mood))
 		handle_hunger_slowdown(human)
 
+	if(nutrition < NUTRITION_LEVEL_DYING) //Actively starving, body is failing
+		if(prob(3))
+			to_chat(human, span_warning("You feel your body wasting away from your hunger..."))
+			playsound(get_turf(human), pick('hl13/sound/effects/hungry1.ogg','hl13/sound/effects/hungry2.ogg','hl13/sound/effects/hungry3.ogg'), 100, TRUE, -1)
+			human.adjust_dizzy(6 SECONDS)
+			human.adjust_confusion(6 SECONDS)
+		for(var/slot in list(ORGAN_SLOT_HEART, ORGAN_SLOT_LUNGS, ORGAN_SLOT_LIVER))
+			var/obj/item/organ/O = human.get_organ_slot(slot)
+			O.apply_organ_damage(0.2)
+
 ///for when mood is disabled and hunger should handle slowdowns
 /obj/item/organ/stomach/proc/handle_hunger_slowdown(mob/living/carbon/human/human)
 	var/hungry = (500 - human.nutrition) / 5 //So overeat would be 100 and default level would be 80
