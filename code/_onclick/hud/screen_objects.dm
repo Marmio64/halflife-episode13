@@ -975,7 +975,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/splash)
 			hungry.clear_alert("thirsty")
 		if(HYDRATION_LEVEL_THIRSTY to HYDRATION_LEVEL_SMALLTHIRST)
 			hungry.throw_alert("thirsty", /atom/movable/screen/alert/thirsty)
-		if(HYDRATION_LEVEL_DEHYDRATED to HYDRATION_LEVEL_THIRSTY)
+		if(0 to HYDRATION_LEVEL_THIRSTY)
 			hungry.throw_alert("thirsty", /atom/movable/screen/alert/dehydrated)
 
 /atom/movable/screen/hunger/update_appearance(updates)

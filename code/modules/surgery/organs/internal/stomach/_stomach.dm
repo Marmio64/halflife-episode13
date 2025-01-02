@@ -155,9 +155,10 @@
 		hunger_rate *= hunger_modifier
 		hunger_rate *= human.physiology.hunger_mod
 		human.adjust_nutrition(-hunger_rate * seconds_per_tick)
-		human.adjust_hydration(-hunger_rate * seconds_per_tick)
+		human.adjust_hydration((-hunger_rate * seconds_per_tick)*2)
 
 	var/nutrition = human.nutrition
+	var/hydration = human.hydration
 	if(nutrition > NUTRITION_LEVEL_FULL && !HAS_TRAIT(human, TRAIT_NOFAT))
 		if(human.overeatduration < 20 MINUTES) //capped so people don't take forever to unfat
 			human.overeatduration = min(human.overeatduration + (1 SECONDS * seconds_per_tick), 20 MINUTES)
@@ -194,6 +195,17 @@
 		for(var/slot in list(ORGAN_SLOT_HEART, ORGAN_SLOT_LUNGS, ORGAN_SLOT_LIVER))
 			var/obj/item/organ/O = human.get_organ_slot(slot)
 			O.apply_organ_damage(0.2)
+
+	if(hydration < HYDRATION_LEVEL_DYING) //So damn thirsty that you are dying
+		if(prob(4))
+			to_chat(human, span_warning("So thirsty, you feel so weak..."))
+			human.adjust_dizzy(6 SECONDS)
+			human.adjust_confusion(6 SECONDS)
+		if(prob(4))
+			to_chat(human, span_warning("So thirsty... just need to lie down..."))
+			human.adjustStaminaLoss(30)
+			human.adjustOxyLoss(20)
+			human.adjust_tiredness(20)
 
 ///for when mood is disabled and hunger should handle slowdowns
 /obj/item/organ/stomach/proc/handle_hunger_slowdown(mob/living/carbon/human/human)
