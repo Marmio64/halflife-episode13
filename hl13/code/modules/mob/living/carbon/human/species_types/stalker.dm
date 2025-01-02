@@ -9,6 +9,13 @@
 							TRAIT_NOBREATH, TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE,
 							TRAIT_NOCRITDAMAGE, TRAIT_GENELESS, TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_NOPAIN, TRAIT_NO_UNDERWEAR)
 	mutanteyes = /obj/item/organ/eyes/robotic
+	mutantappendix = null
+	mutantbrain = /obj/item/organ/brain/cybernetic/ai
+	mutantheart = /obj/item/organ/heart/cybernetic
+	mutantliver = /obj/item/organ/liver/cybernetic
+	mutantlungs = /obj/item/organ/lungs/cybernetic
+	mutantstomach = /obj/item/organ/stomach/cybernetic
+	mutantears = /obj/item/organ/ears/cybernetic
 	species_language_holder = /datum/language_holder/stalker
 	var/info_text = "You are a <span class='danger'>Stalker</span>, a subservient mutant engineered by the combine. \
 			you have an unquestioning loyalty to your masters, and have lost many normal human functions."

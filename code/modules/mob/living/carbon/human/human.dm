@@ -1202,3 +1202,9 @@
 
 /mob/living/carbon/human/species/voidwalker
 	race = /datum/species/voidwalker
+
+/mob/living/carbon/human/species/vortigaunt
+	race = /datum/species/vortigaunt
+
+/mob/living/carbon/human/species/stalker
+	race = /datum/species/stalker
