@@ -289,19 +289,19 @@
 
 /turf/open/floor/plating/ground/rockunder
 	gender = PLURAL
-	name = "dirt"
-	desc = "Upon closer examination, it's still dirt."
-	icon = 'icons/turf/floors.dmi'
-	icon_state = "dirt"
+	name = "stone"
+	desc = "A floor of cold stone."
+	icon = 'hl13/icons/turf/floor/floors.dmi'
+	icon_state = "cave"
 	baseturfs = /turf/open/floor/plating/ground/rockunder
 	planetary_atmos = TRUE
 	attachment_holes = FALSE
-	footstep = FOOTSTEP_SAND
-	barefootstep = FOOTSTEP_SAND
-	clawfootstep = FOOTSTEP_SAND
-	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	footstep = FOOTSTEP_CONCRETE
 	light_power = 0
 	light_range = 0
+	has_base_states = TRUE
+	has_alternate_states = TRUE
+	alternate_states = 7
 
 
 /turf/open/floor/plating/ground/brickroad

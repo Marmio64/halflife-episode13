@@ -9,7 +9,7 @@
 	smoothing_groups = SMOOTH_GROUP_CLOSED_TURFS + SMOOTH_GROUP_MINERAL_WALLS
 	canSmoothWith = SMOOTH_GROUP_MINERAL_WALLS
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
-	baseturfs = /turf/open/floor/plating/ground/dirt
+	baseturfs = /turf/open/floor/plating/ground/rockunder
 	initial_gas_mix = AIRLESS_ATMOS
 	opacity = TRUE
 	density = TRUE
@@ -25,7 +25,7 @@
 	transform = MAP_SWITCH(TRANSLATE_MATRIX(-4, -4), matrix())
 
 	temperature = TCMB
-	var/turf/turf_type = /turf/open/floor/plating/ground/dirt
+	var/turf/turf_type = /turf/open/floor/plating/ground/rockunder
 	/// The path of the ore stack we spawn when we're mined.
 	var/obj/item/stack/ore/mineralType = null
 	/// If we spawn a boulder like on the gulag, we use this in lou of mineralType
