@@ -12,26 +12,21 @@
 	name = "\improper Outdoors"
 	static_lighting = TRUE
 	outdoors = TRUE
-	//uses_daylight = TRUE
-	//daylight_multiplier = 0.25
-	//base_lighting_alpha = 0
 	sound_environment = SOUND_ENVIRONMENT_CITY
-	//light_power = 0.1
-	//light_range = 2
-	//light_color = COLOR_STARLIGHT
 	ambient_buzz = 'hl13/sound/ambience/plaza_amb.ogg'
 	ambient_buzz_vol = 20
 
-	base_lighting_alpha = 10
+	uses_daylight = TRUE
+	daylight_multiplier = 0.1
 
 /area/halflife/outdoors/roofs
 	name = "\improper Rooftops"
-	base_lighting_alpha = 40
+	daylight_multiplier = 0.15
 
 /area/halflife/outdoors/sewage_dump
 	name = "\improper Sewage Dump"
 	ambient_buzz = 'hl13/sound/ambience/toxic_ambience.ogg'
-	//daylight_multiplier = 0.35
+	daylight_multiplier = 0.2
 
 /area/halflife/outdoors/plaza
 	name = "\improper Plaza"
@@ -49,9 +44,8 @@
 	sound_environment = SOUND_ENVIRONMENT_FOREST
 	max_ambience_cooldown = 30 SECONDS
 	min_ambience_cooldown = 10 SECONDS
-	//daylight_multiplier = 0.35
 
-	base_lighting_alpha = 50
+	daylight_multiplier = 0.2
 
 /area/halflife/indoors
 	name = "\improper Indoors"

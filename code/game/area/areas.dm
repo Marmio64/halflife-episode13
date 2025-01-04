@@ -124,6 +124,11 @@
 	/// List of all air scrubbers in the area
 	var/list/obj/machinery/atmospherics/components/unary/vent_scrubber/air_scrubbers = list()
 
+	/// Whether to cycle brightness based on time of day
+	var/uses_daylight = FALSE //hl13 edit
+	/// Daylight brightness
+	var/daylight_multiplier = 1 //hl13 edit
+
 /**
  * A list of teleport locations
  *
@@ -163,6 +168,8 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	if (area_flags & UNIQUE_AREA)
 		GLOB.areas_by_type[type] = src
 	GLOB.areas += src
+	if(uses_daylight) //hl13 edit
+		SSdaylight.add_lit_area(src) //hl13 edit
 	energy_usage = new /list(AREA_USAGE_LEN) // Some atoms would like to use power in Initialize()
 	alarm_manager = new(src) // just in case
 	return ..()
@@ -355,6 +362,9 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	//just for sanity sake cause why not
 	if(!isnull(GLOB.areas))
 		GLOB.areas -= src
+	//daylight cleanup hl13 edit
+	if(uses_daylight) //hl13 edit
+		SSdaylight.remove_lit_area(src) //hl13 edit
 	//machinery cleanup
 	STOP_PROCESSING(SSobj, src)
 	QDEL_NULL(alarm_manager)
