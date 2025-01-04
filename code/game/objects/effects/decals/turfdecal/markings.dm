@@ -381,7 +381,7 @@
 
 /obj/effect/turf_decal/siding/thinplating
 	icon_state = "siding_thinplating"
-	color = "#aaaaaa"
+	color = "#636361"
 
 /obj/effect/turf_decal/siding/thinplating/corner
 	icon_state = "siding_thinplating_corner"
