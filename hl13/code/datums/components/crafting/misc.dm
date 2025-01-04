@@ -13,3 +13,11 @@
 	time = 8 SECONDS
 	category = CAT_MISC
 	crafting_interface = CRAFTING_BENCH_GENERAL
+
+/datum/crafting_recipe/medkit
+	name = "Medkit"
+	result = /obj/item/reagent_containers/pill/patch/medkit/manufactured
+	reqs = list(/obj/item/stack/sheet/iron = 1, /datum/reagent/medicine/biogel = 10)
+	time = 2 SECONDS
+	category = CAT_MISC
+	crafting_interface = CRAFTING_BENCH_GENERAL

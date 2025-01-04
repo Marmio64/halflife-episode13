@@ -655,7 +655,7 @@
 	name = "barbed wire fence"
 	desc = "A menacing wire fence, topped with rusted and deadly barbed wire."
 	icon_state = null //purely for mapping sanity
-	max_integrity = 800
+	max_integrity = 900
 	damage_deflection = 20
 	fencepasschance = 70
 	basetype = /obj/structure/halflife/fence/wire/barb
@@ -671,7 +671,7 @@
 	name = "barbed wire fence"
 	desc = "A menacing wire fence, topped with rusted and deadly barbed wire."
 	icon_state = null
-	max_integrity = 800
+	max_integrity = 900
 	damage_deflection = 20
 	fencepasschance = 70
 	basetype = /obj/structure/halflife/fence/wire/barb
@@ -687,7 +687,7 @@
 	name = "barbed wire fence"
 	desc = "A menacing wire fence, topped with rusted and deadly barbed wire."
 	icon_state = "barbfence_corner"
-	max_integrity = 800
+	max_integrity = 900
 	damage_deflection = 20
 	fencepasschance = 70
 	basetype = /obj/structure/halflife/fence/wire/barb

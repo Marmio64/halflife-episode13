@@ -3,7 +3,7 @@
 	description = "Survive in the outlands, find a way into the city for supplies, help or rob citizens for your own gain."
 	department_head = list("Nobody")
 	total_positions = 0 //so refugees dont arrive by train
-	spawn_positions = 3
+	spawn_positions = 4
 	supervisors = "nobody"
 	exp_granted_type = EXP_TYPE_CREW
 	paycheck = PAYCHECK_ZERO

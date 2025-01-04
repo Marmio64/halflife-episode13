@@ -40,6 +40,9 @@
 
 	cmode_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
+	faction = FACTION_STATION
+	job_flags = STATION_JOB_FLAGS
+
 /datum/outfit/job/atmos
 	name = "Infestation Control"
 	jobtype = /datum/job/atmospheric_technician
