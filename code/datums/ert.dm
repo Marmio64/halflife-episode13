@@ -36,33 +36,6 @@
 	if (!polldesc)
 		polldesc = "a Code [code] Nanotrasen Emergency Response Team"
 
-/datum/ert/blue
-	opendoors = FALSE
-	code = "Blue"
-
-/datum/ert/amber
-	code = "Amber"
-
-/datum/ert/red
-	leader_role = /datum/antagonist/ert/commander/red
-	roles = list(/datum/antagonist/ert/security/red, /datum/antagonist/ert/medic/red, /datum/antagonist/ert/engineer/red)
-	code = "Red"
-
-/datum/ert/deathsquad
-	roles = list(/datum/antagonist/ert/deathsquad)
-	leader_role = /datum/antagonist/ert/deathsquad/leader
-	rename_team = "Deathsquad"
-	code = "Delta"
-	mission = "Leave no witnesses."
-	polldesc = "an elite Nanotrasen Strike Team"
-
-/datum/ert/marine
-	leader_role = /datum/antagonist/ert/marine
-	roles = list(/datum/antagonist/ert/marine/security, /datum/antagonist/ert/marine/engineer, /datum/antagonist/ert/marine/medic)
-	rename_team = "Marine Squad"
-	polldesc = "an 'elite' Nanotrasen Strike Team"
-	opendoors = FALSE
-
 /datum/ert/overwatch
 	leader_role = /datum/antagonist/ert/overwatch/ar2/elite
 	roles = list(/datum/antagonist/ert/overwatch/ar2, /datum/antagonist/ert/overwatch/mp7, /datum/antagonist/ert/overwatch/spas12)
@@ -117,13 +90,6 @@
 /datum/ert/centcom_official/New()
 	mission = "Conduct a routine performance review of [station_name()] and its Captain."
 
-/datum/ert/inquisition
-	roles = list(/datum/antagonist/ert/chaplain/inquisitor, /datum/antagonist/ert/security/inquisitor, /datum/antagonist/ert/medic/inquisitor)
-	leader_role = /datum/antagonist/ert/commander/inquisitor
-	rename_team = "Inquisition"
-	mission = "Destroy any traces of paranormal activity aboard the station."
-	polldesc = "a Nanotrasen paranormal response team"
-
 /datum/ert/janitor
 	roles = list(/datum/antagonist/ert/janitor, /datum/antagonist/ert/janitor/heavy)
 	leader_role = /datum/antagonist/ert/janitor/heavy
@@ -148,15 +114,6 @@
 	leader_role = /datum/antagonist/ert/intern/leader/unarmed
 	rename_team = "Unarmed Horde of Interns"
 
-/datum/ert/erp
-	roles = list(/datum/antagonist/ert/security/party, /datum/antagonist/ert/clown/party, /datum/antagonist/ert/engineer/party, /datum/antagonist/ert/janitor/party)
-	leader_role = /datum/antagonist/ert/commander/party
-	opendoors = FALSE
-	rename_team = "Emergency Response Party"
-	mission = "Create entertainment for the crew."
-	polldesc = "a Code Rainbow Nanotrasen Emergency Response Party"
-	code = "Rainbow"
-
 /datum/ert/bounty_hunters
 	roles = list(/datum/antagonist/ert/bounty_armor, /datum/antagonist/ert/bounty_hook, /datum/antagonist/ert/bounty_synth)
 	leader_role = /datum/antagonist/ert/bounty_armor
@@ -177,14 +134,3 @@
 	mission = "Having heard the station's request for aid, assist the crew in defending themselves."
 	polldesc = "an independent station defense militia"
 	random_names = TRUE
-
-/datum/ert/medical
-	opendoors = FALSE
-	teamsize = 4
-	leader_role = /datum/antagonist/ert/medical_commander
-	enforce_human = FALSE //All the best doctors I know are moths and cats
-	roles = list(/datum/antagonist/ert/medical_technician)
-	rename_team = "EMT Squad"
-	code = "Violet"
-	mission = "Provide emergency medical services to the crew."
-	polldesc = "an emergency medical response team"
