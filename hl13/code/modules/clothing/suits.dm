@@ -116,6 +116,23 @@
 	acid = 40
 	wound = 5
 
+//crafted armor vest
+/obj/item/clothing/suit/armor/armored/upgraded
+	name = "upgraded armored vest"
+	desc = "A handcrafted armored vest made of cloth and metal, enhanced with xenian fungal plates for extra protection."
+	armor_type = /datum/armor/armoredvest_upgraded
+
+/datum/armor/armoredvest_upgraded
+	melee = 25
+	bullet = 20
+	laser = 20
+	energy = 20
+	bomb = 20
+	bio = 20
+	fire = 50
+	acid = 50
+	wound = 5
+
 /obj/item/clothing/suit/armor/browncoat
 	name = "brown overcoat"
 	desc = "A well padded overcoat which offers a small amount of protection."

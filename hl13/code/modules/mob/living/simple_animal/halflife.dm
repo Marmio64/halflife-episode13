@@ -316,6 +316,7 @@
 	icon_dead = "armoredheadcrab_dead"
 	maxHealth = 60
 	health = 60
+	butcher_results = list(/obj/item/food/meat/slab/xen = 1, /obj/item/stack/sheet/sinew = 1, /obj/item/stack/sheet/bone = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1)
 
 /mob/living/simple_animal/hostile/halflife/headcrab/poison
 	name = "Poison Headcrab"

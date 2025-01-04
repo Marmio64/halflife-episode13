@@ -10,6 +10,16 @@
 	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
 	atom_storage.silent = TRUE
 
+/obj/item/storage/belt/pouch/large
+	name = "large pouch"
+	desc = "A larger old world pouch. Holds a small bit more than its smaller counterparts."
+
+/obj/item/storage/belt/pouch/large/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 4
+	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
+	atom_storage.silent = TRUE
+
 /obj/item/storage/belt/civilprotection
 	name = "civil protection belt"
 	desc = "Heavy duty belt for containing metrocop standard gear."

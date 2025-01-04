@@ -215,7 +215,7 @@
 		/obj/item/geiger_counter,
 		/obj/item/tank/internals,
 		)
-	slowdown = 0.5
+	slowdown = 0.25
 	armor_type = /datum/armor/utility_radiation
 	strip_delay = 60
 	equip_delay_other = 60

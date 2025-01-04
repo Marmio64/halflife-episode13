@@ -12,7 +12,7 @@
 		return
 	if(nutrition <= 0 || stat == DEAD)
 		return
-	var/hunger_loss = HUNGER_FACTOR / 10
+	var/hunger_loss = HUNGER_FACTOR / 8
 	if(move_intent == MOVE_INTENT_RUN)
 		hunger_loss *= 2
 		var/staminatolose = 1.2

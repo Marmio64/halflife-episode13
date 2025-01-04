@@ -293,6 +293,12 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/bunker)
+"iq" = (
+/obj/structure/table/halflife/wood/constructed/cobbled,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
 "ix" = (
 /obj/structure/halflife/barrel/quadruple/waste/one,
 /turf/open/floor/plating/ground/dirt,
@@ -441,6 +447,11 @@
 	},
 /turf/open/floor/plating/indoor/concrete,
 /area/mine/laborcamp)
+"lE" = (
+/obj/structure/rack,
+/obj/item/clothing/suit/armor/armored,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
 "lH" = (
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/bunker)
@@ -1366,9 +1377,9 @@
 /turf/open/halflife/water/shallow,
 /area/halflife/outdoors/forest)
 "NB" = (
-/obj/structure/rack,
-/obj/item/clothing/suit/armor/armored,
-/turf/open/floor/plating/indoor/woodc/wide,
+/obj/structure/halflife/fence/wire/end/west/barb,
+/obj/structure/halflife/fence/vertical/wire/west/barb,
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
 "NE" = (
 /obj/structure/chair/office/halflife/blue{
@@ -1399,6 +1410,7 @@
 /area/halflife/outdoors/forest)
 "Ov" = (
 /obj/structure/table/halflife/wood/constructed/cobbled,
+/obj/item/flashlight,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
 "OA" = (
@@ -1733,6 +1745,11 @@
 /mob/living/simple_animal/hostile/halflife/zombie,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"WJ" = (
+/obj/structure/table/halflife/wood/constructed/cobbled,
+/obj/item/storage/belt/pouch,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
 "WK" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "transfer_train_line_interior";
@@ -1875,11 +1892,6 @@
 "Zu" = (
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/halflife/water/shallow,
-/area/halflife/outdoors/forest)
-"Zz" = (
-/obj/structure/halflife/fence/wire/end/west/barb,
-/obj/structure/halflife/fence/vertical/wire/west/barb,
-/turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
 "ZA" = (
 /obj/structure/bed/halflife/bedframe/cot,
@@ -3975,7 +3987,7 @@ It
 yi
 FC
 rF
-NB
+lE
 FC
 tN
 Cq
@@ -4641,7 +4653,7 @@ tN
 tN
 EQ
 dg
-Ov
+iq
 rF
 rF
 rF
@@ -4808,7 +4820,7 @@ tN
 tN
 tN
 rF
-Ov
+WJ
 rF
 rF
 rF
@@ -13231,7 +13243,7 @@ Qg
 Qg
 Qg
 Qg
-Zz
+NB
 oG
 PT
 cD

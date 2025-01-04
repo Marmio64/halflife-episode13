@@ -226,11 +226,11 @@ GLOBAL_LIST_INIT(sinew_recipes, list ( \
 
 /*Plates*/
 /obj/item/stack/sheet/animalhide/goliath_hide
-	name = "goliath hide plates"
-	desc = "Pieces of a goliath's rocky hide, these might be able to make your suit a bit more durable to attack from the local fauna."
+	name = "hardened fungal plates"
+	desc = "Tough as nails sections of hardened fungal, gathered from Xenian Fauna and Flora."
 	icon = 'icons/obj/stack_objects.dmi'
 	icon_state = "goliath_hide"
-	singular_name = "hide plate"
+	singular_name = "hardened fungal plate"
 	max_amount = 6
 	novariants = FALSE
 	item_flags = NOBLUDGEON
