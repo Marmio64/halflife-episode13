@@ -87,6 +87,14 @@
 	mission = "Stabilize the city, detain city officials, kill all citizens who do not comply."
 	polldesc = "an ultra elite Overwatch Strike Team"
 
+/datum/ert/containment_team
+	leader_role = /datum/antagonist/ert/overwatch/grunt
+	roles = list(/datum/antagonist/ert/overwatch/grunt)
+	rename_team = "Overwatch Xen Containment Team"
+	code = "Delta"
+	mission = "Take care of biological threats located inside the city district."
+	polldesc = "an Overwatch Xen Containment Team"
+
 /datum/ert/riotpolice
 	roles = list(/datum/antagonist/ert/riotpolice)
 	leader_role = /datum/antagonist/ert/riotpolice/pistol

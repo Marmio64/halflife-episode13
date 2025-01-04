@@ -712,6 +712,20 @@
 	var/datum/martial_art/cqc/elitecqc = new
 	elitecqc.teach(H)
 
+
+/datum/outfit/centcom/ert/overwatch/grunt
+	name = "OTA SMG Grunt"
+
+	l_hand = /obj/item/gun/ballistic/automatic/mp7
+	belt = /obj/item/storage/belt/civilprotection/overwatch/mp7
+
+	back = /obj/item/tank/internals/oxygen/grunt
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt
+	uniform = /obj/item/clothing/under/combine/grunt
+	suit = null
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	gloves = /obj/item/clothing/gloves/combat/overwatch/grunt
+
 /datum/outfit/centcom/ert/riotpolice
 	name = "Metropolice Riot Unit"
 

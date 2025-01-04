@@ -324,6 +324,9 @@
 /datum/antagonist/ert/overwatch/ar2/elite
 	outfit = /datum/outfit/centcom/ert/overwatch/ar2/elite
 
+/datum/antagonist/ert/overwatch/grunt
+	outfit = /datum/outfit/centcom/ert/overwatch/grunt
+
 /datum/antagonist/ert/overwatch/New()
 	. = ..()
 	name_source = "OTA [rand(111,999)]"

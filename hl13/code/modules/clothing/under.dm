@@ -156,6 +156,27 @@
 	acid = 30
 	wound = 10
 
+/datum/armor/gruntsuit
+	melee = 30
+	bullet = 15
+	laser = 20
+	energy = 20
+	bomb = 20
+	fire = 30
+	acid = 30
+	wound = 10
+	bio = 100
+
+/obj/item/clothing/under/combine/grunt
+	name = "grunt jumpsuit"
+	desc = "Full-body suit white armored suit. Designed to protect against slashes, blunt force trauma, and most of all biohazards. However, does not protect espescially well against bullets."
+	icon_state = "grunt"
+	inhand_icon_state = "syndicate-black"
+	has_sensor = LOCKED_SENSORS
+	max_integrity = 400
+	suit_power = 100
+	armor_type = /datum/armor/gruntsuit
+
 /obj/item/clothing/under/citizen
 	name = "citizen jumpsuit"
 	desc = "Full-body blue suit for the common citizen, worn down and dirtied by time and use. Uses sensors to allow the combine to track you."

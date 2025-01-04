@@ -165,6 +165,23 @@
 	acid = 80
 	wound = 10
 
+/obj/item/clothing/mask/gas/civilprotection/overwatch/grunt
+	name = "grunt mask"
+	desc = "Heavy duty white mask for overwatch units nicknamed 'grunts'. Provides some protection to the face. This one is reinforced against melee and biological threats, though lacks major firearm protection."
+	icon_state = "grunt"
+	armor_type = /datum/armor/gruntmask
+
+/datum/armor/gruntmask
+	melee = 35
+	bullet = 15
+	laser = 10
+	energy = 10
+	bomb = 20
+	fire = 80
+	acid = 80
+	wound = 10
+	bio = 100
+
 /obj/item/clothing/mask/gas/cwuengi
 	name = "gas mask"
 	desc = "An engineering grade gas mask for civil union workers."
