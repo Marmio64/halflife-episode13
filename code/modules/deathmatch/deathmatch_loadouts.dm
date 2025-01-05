@@ -1214,8 +1214,8 @@
 	H.cmode_music = 'hl13/sound/music/combat/guarddown.ogg'
 
 /datum/outfit/deathmatch_loadout/combine/overwatch
-	name = "Deathmatch: Overwatch Soldier"
-	display_name = "Overwatch Soldier"
+	name = "Deathmatch: OTA Soldier"
+	display_name = "OTA Soldier"
 	desc = "Slow but heavily armored, overwatch soldiers serve as the vanguard for attacks. In addition, they carry a medkit to make them extra durable."
 
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
@@ -1229,7 +1229,7 @@
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 /datum/outfit/deathmatch_loadout/combine/overwatch/shotgunner
-	name = "Deathmatch: Overwatch Shotgunner"
+	name = "Deathmatch: OTA Shotgunner"
 	display_name = "Overwatch Shotgunner"
 	desc = "Slow but heavily armored, overwatch shotgunners are premier assault vanguards."
 	suit_store = /obj/item/gun/ballistic/shotgun/spas12
@@ -1237,14 +1237,32 @@
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/red
 	uniform = /obj/item/clothing/under/combine/overwatch/red
 	suit = /obj/item/clothing/suit/armor/overwatch/red/deathmatch
+	r_pocket = null
+
+/datum/outfit/deathmatch_loadout/combine/grunt
+	name = "Deathmatch: OTA Grunt"
+	display_name = "OTA Grunt"
+	desc = "You're similarly equipped compared to an Overwatch Soldier, but forgo much of your armor in exchange for speed and melee resistance!"
+
+	glasses = /obj/item/clothing/glasses/hud/security/night/combine
+	belt = /obj/item/storage/belt/civilprotection/overwatch/mp7
+	l_hand = /obj/item/gun/ballistic/automatic/mp7
+
+	back = /obj/item/tank/internals/oxygen/grunt
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt
+	uniform = /obj/item/clothing/under/combine/grunt
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	gloves = /obj/item/clothing/gloves/combat/overwatch/grunt
+	r_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
 
 /datum/outfit/deathmatch_loadout/civilprotection/pre_equip(mob/living/carbon/human/H)
 	H.faction += "combine"
 	H.cmode_music = 'hl13/sound/music/combat/branescan.ogg'
 
 /datum/outfit/deathmatch_loadout/civilprotection
-	name = "Deathmatch: Civil Protection Officer"
-	display_name = "Civil Protection Officer"
+	name = "Deathmatch: Metrocop"
+	display_name = "Metrocop"
 	desc = "Moderately armored and armed only with a pistol, civil protection rely on the two manhacks they bring with, which are extra powerful and loyal only to civilprotection."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
