@@ -3,8 +3,8 @@
 	description = "Travel underground to the mines. Bring ores back to the factory for processing, loot underground regions."
 	department_head = list(JOB_QUARTERMASTER)
 	faction = FACTION_STATION
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = SUPERVISOR_QM
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "SHAFT_MINER"

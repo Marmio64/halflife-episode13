@@ -73,6 +73,19 @@
 				/obj/item/stack/sheet/mineral/scrap_wood = 2
 				)
 
+//only scrap items, pretty much always needs crafting to be made useful
+/obj/effect/spawner/random/halflife/loot/crafting_bench
+	name = "random crafting bench"
+	spawn_loot_count = 1
+
+	loot = list(
+				/obj/structure/table/halflife/no_smooth/large/crafting/workbench,
+				/obj/structure/table/halflife/no_smooth/large/crafting/ammobench,
+				/obj/structure/table/halflife/no_smooth/large/crafting/armorbench,
+				/obj/structure/table/halflife/no_smooth/large/crafting/weaponbench,
+				/obj/structure/table/halflife/no_smooth/large/crafting/tinkerbench
+				)
+
 //only healing items
 /obj/effect/spawner/random/halflife/loot/heal
 	name = "healing loot"

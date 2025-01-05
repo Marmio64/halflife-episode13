@@ -187,6 +187,17 @@
 "aP" = (
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors)
+"aQ" = (
+/obj/structure/closet/crate,
+/obj/effect/turf_decal/box,
+/obj/item/stack/sheet/glass{
+	amount = 5
+	},
+/obj/item/stack/sheet/glass{
+	amount = 5
+	},
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/productioncenter)
 "aR" = (
 /obj/structure/table/halflife/no_smooth/large/wood/desk,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -2821,6 +2832,11 @@
 /obj/structure/closet/crate/trashcart,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
+"mC" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/obj/item/clothing/glasses/welding,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/productioncenter)
 "mD" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -4721,18 +4737,14 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
 "vk" = (
-/obj/structure/rack,
-/obj/item/circuitboard/machine/deep_fryer,
-/obj/item/circuitboard/machine/fat_sucker,
-/obj/item/circuitboard/machine/gibber,
-/obj/item/circuitboard/machine/griddle,
-/obj/item/circuitboard/machine/microwave,
-/obj/item/circuitboard/machine/coffeemaker/impressa,
-/obj/item/circuitboard/machine/coffeemaker,
-/obj/item/circuitboard/machine/oven,
-/obj/effect/turf_decal/box,
-/turf/open/floor/plating/indoor/metal/plate,
-/area/halflife/indoors/productioncenter)
+/obj/structure/sign/directions/supply/directional/west{
+	pixel_y = 4
+	},
+/obj/structure/sign/directions/engineering/directional/west{
+	pixel_y = -5
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors)
 "vl" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/sewer/cave)
@@ -6869,7 +6881,7 @@
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
 "EF" = (
-/obj/structure/table/halflife/no_smooth/large/crafting/workbench,
+/obj/effect/spawner/random/halflife/loot/crafting_bench,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
 "EG" = (
@@ -7323,8 +7335,8 @@
 /area/halflife/indoors/townhall)
 "GF" = (
 /obj/structure/closet/crate,
-/obj/item/stack/sheet/glass,
 /obj/effect/turf_decal/box,
+/obj/item/stack/cable_coil,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/productioncenter)
 "GG" = (
@@ -7729,6 +7741,16 @@
 /area/halflife/indoors/townhall)
 "IC" = (
 /obj/machinery/light/small/directional/east,
+/obj/structure/rack,
+/obj/item/circuitboard/machine/oven,
+/obj/item/circuitboard/machine/coffeemaker,
+/obj/item/circuitboard/machine/coffeemaker/impressa,
+/obj/item/circuitboard/machine/microwave,
+/obj/item/circuitboard/machine/griddle,
+/obj/item/circuitboard/machine/gibber,
+/obj/item/circuitboard/machine/fat_sucker,
+/obj/item/circuitboard/machine/deep_fryer,
+/obj/effect/turf_decal/box,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/productioncenter)
 "ID" = (
@@ -9625,6 +9647,15 @@
 	dir = 1
 	},
 /area/halflife/outdoors/plaza)
+"QW" = (
+/obj/structure/sign/directions/supply/directional/south{
+	pixel_y = -28
+	},
+/obj/structure/sign/directions/engineering/directional/south{
+	pixel_y = -36
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "QX" = (
 /obj/structure/rack,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -31252,7 +31283,7 @@ LH
 rj
 rj
 rj
-rj
+Qr
 Iw
 rj
 rj
@@ -32248,13 +32279,13 @@ NC
 Iw
 Gx
 Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
+ty
+ty
+ty
+ty
+ty
+ty
+ty
 ty
 ty
 ty
@@ -32370,16 +32401,16 @@ Iw
 Gx
 Gx
 ty
-ty
-ty
-ty
-ty
-ty
-ty
+aQ
+Fx
+ay
+xT
+OP
 ty
 qU
 JX
 kY
+Hu
 Hu
 Hu
 ty
@@ -32492,16 +32523,16 @@ Gx
 Gx
 ty
 GF
-ay
-GF
-ay
-xT
-OP
+Fx
+Fx
+Fx
+Fx
 ty
 UQ
+SA
 UQ
 UQ
-UQ
+SA
 UQ
 ty
 Gx
@@ -32617,8 +32648,8 @@ Fx
 Fx
 Fx
 Fx
-Fx
 hp
+UQ
 UQ
 UQ
 Zx
@@ -32738,8 +32769,8 @@ wd
 yZ
 IC
 tp
-vk
 ty
+mC
 SA
 UQ
 Ip
@@ -34774,7 +34805,7 @@ IN
 Kw
 EK
 Ux
-IN
+QW
 Iw
 Iw
 Iw
@@ -37949,7 +37980,7 @@ fT
 fT
 fT
 Bt
-fT
+vk
 fT
 fT
 fT
