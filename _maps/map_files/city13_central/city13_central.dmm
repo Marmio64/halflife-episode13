@@ -513,10 +513,6 @@
 /obj/machinery/door/unpowered/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors)
-"cn" = (
-/obj/machinery/light/small/directional/east,
-/turf/open/openspace,
-/area/halflife/outdoors/roofs)
 "co" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/halflife/trash/papers/one,
@@ -788,7 +784,7 @@
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/plaza)
 "do" = (
-/obj/machinery/power/halflife/streetlamp,
+/obj/machinery/power/halflife/streetlamphalt,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
 "dp" = (
@@ -2185,7 +2181,7 @@
 /turf/open/halflife/water/sewer/shallow,
 /area/halflife/indoors/sewer)
 "jM" = (
-/obj/machinery/power/halflife/streetlamp{
+/obj/machinery/power/halflife/streetlamphalt{
 	dir = 8
 	},
 /turf/open/floor/plating/ground/sidewalk,
@@ -2202,7 +2198,7 @@
 	c_tag = "South Road Checkpoint";
 	dir = 8
 	},
-/obj/machinery/power/halflife/streetlamp{
+/obj/machinery/power/halflife/streetlamphalt{
 	dir = 8
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -3469,7 +3465,7 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
 "po" = (
-/obj/machinery/power/halflife/streetlamp{
+/obj/machinery/power/halflife/streetlamphalt{
 	dir = 8
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -3742,10 +3738,6 @@
 /obj/structure/alien/weeds/node,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
-"qC" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors)
 "qD" = (
 /obj/structure/chair/halflife/metal/folding{
 	dir = 1
@@ -4820,7 +4812,7 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/trainstation)
 "vI" = (
-/obj/machinery/power/halflife/streetlamp{
+/obj/machinery/power/halflife/streetlamphalt{
 	dir = 1
 	},
 /turf/open/floor/plating/ground/sidewalk,
@@ -5091,7 +5083,9 @@
 	},
 /area/halflife/outdoors)
 "wS" = (
-/obj/structure/flora/bush/fullgrass,
+/obj/machinery/power/halflife/streetlamphalt{
+	dir = 1
+	},
 /turf/open/misc/grass/jungle/station,
 /area/halflife/outdoors)
 "wV" = (
@@ -6128,7 +6122,7 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors)
 "Bt" = (
-/obj/machinery/power/halflife/streetlamp{
+/obj/machinery/power/halflife/streetlamphalt{
 	dir = 4
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -7053,10 +7047,6 @@
 	},
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/distributioncenter)
-"Ft" = (
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors)
 "Fu" = (
 /obj/structure/table/halflife/no_smooth/large/metal{
 	dir = 1
@@ -7236,7 +7226,7 @@
 /turf/closed/mineral/random,
 /area/halflife/indoors/sewer/cave)
 "Gk" = (
-/obj/machinery/power/halflife/streetlamp{
+/obj/machinery/power/halflife/streetlamphalt{
 	dir = 8
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -9042,7 +9032,7 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors)
 "Ox" = (
-/obj/machinery/power/halflife/streetlamp{
+/obj/machinery/power/halflife/streetlamphalt{
 	dir = 4
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -9071,7 +9061,7 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
 "OD" = (
-/obj/machinery/power/halflife/streetlamp{
+/obj/machinery/power/halflife/streetlamphalt{
 	dir = 4
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -9139,7 +9129,7 @@
 	dir = 4;
 	pixel_x = 32
 	},
-/obj/machinery/power/halflife/streetlamp{
+/obj/machinery/power/halflife/streetlamphalt{
 	dir = 8
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -11367,7 +11357,7 @@
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/townhall)
 "YX" = (
-/obj/machinery/power/halflife/streetlamp{
+/obj/machinery/power/halflife/streetlamphalt{
 	dir = 4
 	},
 /turf/open/floor/plating/ground/sidewalk,
@@ -30878,7 +30868,7 @@ Iw
 Iw
 Iw
 fT
-IN
+do
 Kw
 EK
 Ux
@@ -31237,7 +31227,7 @@ NC
 Iw
 Sv
 fT
-qC
+fT
 fT
 fT
 fT
@@ -32205,7 +32195,7 @@ NC
 Es
 fT
 fT
-Ft
+fT
 fT
 fT
 fT
@@ -32693,7 +32683,7 @@ NC
 NC
 Iw
 fT
-IN
+do
 Kw
 EK
 Ux
@@ -34266,7 +34256,7 @@ ul
 Yb
 GB
 fT
-IN
+do
 Kw
 EK
 Ux
@@ -35960,7 +35950,7 @@ no
 no
 Iw
 fT
-IN
+do
 Kw
 EK
 Ux
@@ -37862,13 +37852,13 @@ Bt
 fT
 fT
 fT
+po
 fT
 fT
 fT
 fT
 fT
-Bt
-fT
+po
 fT
 fT
 fT
@@ -37884,9 +37874,9 @@ fT
 fT
 fT
 Bt
+yz
+yz
 cO
-yz
-yz
 Cp
 NS
 QV
@@ -38588,13 +38578,13 @@ po
 fT
 eE
 fT
+po
 fT
 fT
 fT
-fT
+lN
 fT
 po
-lN
 fT
 fT
 fT
@@ -40316,7 +40306,7 @@ kF
 sc
 XQ
 fT
-IN
+do
 Kw
 EK
 Ux
@@ -42252,7 +42242,7 @@ XQ
 kJ
 XQ
 fT
-IN
+do
 Kw
 EK
 Ux
@@ -43345,7 +43335,7 @@ IN
 Kw
 EK
 Ux
-vI
+IN
 fT
 Jz
 Jz
@@ -43462,11 +43452,11 @@ Iw
 Iw
 Iw
 fT
-IN
+do
 Kw
 EK
 Ux
-IN
+vI
 fT
 Jz
 RW
@@ -45398,7 +45388,7 @@ Gx
 Gx
 Gx
 fT
-IN
+do
 Kw
 EK
 Ux
@@ -56987,12 +56977,12 @@ DL
 DL
 DL
 DL
-cn
 DL
 DL
 DL
 DL
-cn
+DL
+DL
 DL
 DL
 DL

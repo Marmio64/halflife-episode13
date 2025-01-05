@@ -120,6 +120,52 @@
 /obj/machinery/power/halflife/trafficlight/alt
 	icon_state = "trafficlightleft"
 
+
+/obj/machinery/power/halflife/streetlamphalt
+	name = "\improper street lamp"
+	desc = "An old street lamp, with a warm yellow glow."
+	icon = 'hl13/icons/obj/streetlamps.dmi'
+	icon_state = "streetlamp"
+	anchored = TRUE
+	density = TRUE
+	layer = ABOVE_ALL_MOB_LAYER
+	plane = ABOVE_GAME_PLANE
+	light_range = 3
+	light_power = 1
+	light_color = "#ddcc9b"
+	max_integrity = 2000
+	resistance_flags = INDESTRUCTIBLE
+
+/obj/machinery/power/halflife/streetlamphalt/CanAllowThrough(atom/movable/mover, turf/target)
+	. = ..()
+	if(locate(/obj/machinery/power/halflife/streetlamphalt) in get_turf(mover))
+		return TRUE
+	else if(istype(mover, /obj/projectile))
+		if(!anchored)
+			return TRUE
+		var/obj/projectile/proj = mover
+		if(proj.firer && Adjacent(proj.firer))
+			return TRUE
+		if(prob(75)) // These things are pretty thin
+			return TRUE
+		return FALSE
+
+/obj/machinery/power/halflife/streetlamphalt/Initialize(mapload)
+	. = ..()
+	if(dir == NORTH)
+		pixel_y = 14
+
+	if(dir == EAST)
+		pixel_y = 12
+		pixel_x = 8
+
+	if(dir == SOUTH)
+		pixel_y = 2
+
+	if(dir == WEST)
+		pixel_y = 12
+		pixel_x = -8
+
 //Ladders
 
 /obj/structure/ladder/halflife
