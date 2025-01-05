@@ -123,7 +123,7 @@
 
 /obj/machinery/power/halflife/streetlamphalt
 	name = "\improper street lamp"
-	desc = "An old street lamp, with a warm yellow glow."
+	desc = "An old street lamp in surpisingly good condition. Through its cob webbed lamp post and swarming moths, a warm yellow light is emanated to brighten the street."
 	icon = 'hl13/icons/obj/streetlamps.dmi'
 	icon_state = "streetlamp"
 	anchored = TRUE

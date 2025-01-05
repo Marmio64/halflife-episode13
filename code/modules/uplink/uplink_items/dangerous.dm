@@ -12,7 +12,7 @@
 	desc = "A small, easily concealable handgun that uses 9mm auto rounds in 15-round magazines and is compatible \
 			with suppressors."
 	item = /obj/item/gun/ballistic/automatic/pistol/usp
-	progression_minimum = 10 MINUTES
+	progression_minimum = 5 MINUTES
 	cost = 7
 	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
@@ -21,7 +21,7 @@
 	desc = "A deadly revolver that fires .357 Magnum rounds and has 7 chambers."
 	item = /obj/item/gun/ballistic/revolver/coltpython
 	cost = 12
-	progression_minimum = 30 MINUTES
+	progression_minimum = 20 MINUTES
 	surplus = 50
 
 /datum/uplink_item/dangerous/mp7
@@ -29,7 +29,7 @@
 	desc = "A full auto SMG with a 45 round magazine."
 	item = /obj/item/gun/ballistic/automatic/mp7
 	cost = 12
-	progression_minimum = 30 MINUTES
+	progression_minimum = 20 MINUTES
 	surplus = 50
 
 /datum/uplink_item/dangerous/knife

@@ -585,14 +585,14 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 
 /obj/item/cane
 	name = "cane"
-	desc = "A cane used by a true gentleman. Or a clown."
+	desc = "A old walking cane. Looks fancy, and is also functional, both for helping you walk and as a makeshift beating stick."
 	icon = 'icons/obj/weapons/staff.dmi'
 	icon_state = "cane"
 	inhand_icon_state = "stick"
 	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	force = 5
-	throwforce = 5
+	force = 9
+	throwforce = 9
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron= SMALL_MATERIAL_AMOUNT * 0.5)
 	attack_verb_continuous = list("bludgeons", "whacks", "disciplines", "thrashes")
@@ -692,7 +692,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	. = ..()
 	AddComponent( \
 		/datum/component/transforming, \
-		force_on = 7, \
+		force_on = 8, \
 		hitsound_on = hitsound, \
 		w_class_on = WEIGHT_CLASS_BULKY, \
 		clumsy_check = FALSE, \

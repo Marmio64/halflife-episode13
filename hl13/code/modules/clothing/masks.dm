@@ -184,16 +184,18 @@
 
 /obj/item/clothing/mask/gas/cwuengi
 	name = "gas mask"
-	desc = "An engineering grade gas mask for civil union workers."
+	desc = "An engineering grade gas mask for civil union workers. Looks like it could muffle your voice well enough to hide it."
 	icon = 'hl13/icons/obj/clothing/masks.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/masks.dmi'
 	icon_state = "cwuengi"
 	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR
+	voice_change = TRUE //Muffles your voice enough it can hide your identity.
 
 /obj/item/clothing/mask/gas/hl2
-	desc = "An old, but still relatively good looking gas mask. Hopefully it's filters hold up still."
+	desc = "An old, but still relatively good looking gas mask. Hopefully it's filters hold up still. Looks like it could muffle your voice well enough to hide it."
 	icon = 'hl13/icons/obj/clothing/masks.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/masks.dmi'
+	voice_change = TRUE //Muffles your voice enough it can hide your identity.
 
 /obj/item/clothing/mask/gas/hl2/modern
 	icon_state = "moderngasmask"

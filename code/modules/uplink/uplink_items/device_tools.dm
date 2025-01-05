@@ -86,3 +86,9 @@
 	item = /obj/item/reagent_containers/pill/patch/medkit
 	cost = 1
 	progression_minimum = 10 MINUTES
+
+/datum/uplink_item/device_tools/gasmask
+	name = "Gasmask"
+	desc = "A standard gas mask. Useful against gas attacks obviously, but also muffles your voice and covers your face enough to hide your identity."
+	item = /obj/item/clothing/mask/gas/hl2/modern
+	cost = 1

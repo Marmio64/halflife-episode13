@@ -23,3 +23,15 @@
 /datum/loadout_item/inhand/cane_white
 	name = "White Cane"
 	item_path = /obj/item/cane/white
+
+/datum/loadout_item/inhand/ration
+	name = "Bottom-grade Ration"
+	item_path = /obj/item/food/rationpack/worstgrade
+
+/datum/loadout_item/inhand/water
+	name = "Low Grade Breen Water"
+	item_path = /obj/item/reagent_containers/cup/soda_cans/breenwater/yellow
+
+/datum/loadout_item/inhand/key
+	name = "Blank Custom Key"
+	item_path = /obj/item/customblank

@@ -20,6 +20,10 @@
 	name = "Beanie (Colorable)"
 	item_path = /obj/item/clothing/head/beanie
 
+/datum/loadout_item/head/beret
+	name = "Beret (Colorable)"
+	item_path = /obj/item/clothing/head/beret
+
 /datum/loadout_item/head/black_cap
 	name = "Cap (Black)"
 	item_path = /obj/item/clothing/head/soft/black

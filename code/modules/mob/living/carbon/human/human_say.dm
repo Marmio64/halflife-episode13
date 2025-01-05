@@ -40,6 +40,8 @@
 				return idcard.registered_name
 			else
 				return real_name
+		else if(wear_mask.voice_change && !wear_id)
+			return ("Unknown")
 		else
 			return real_name
 	else

@@ -383,7 +383,7 @@
 //Mime
 /obj/item/clothing/head/beret
 	name = "beret"
-	desc = "A beret, a mime's favorite headwear."
+	desc = "A old beret, well worn but still comfortable and fashionable on your head."
 	icon_state = "beret"
 	icon_preview = 'icons/obj/clothing/head/beret.dmi'
 	icon_state_preview = "beret"
