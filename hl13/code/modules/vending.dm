@@ -70,3 +70,37 @@
 /obj/item/vending_refill/miner
 	machine_name = "Miner Vendor"
 	icon_state = "refill_cola"
+
+/obj/machinery/vending/combine_wallmed
+	name = "\improper Combine Automated Med Shop"
+	desc = "The CAMS is a wall mounted vendor which sells basic medical supplies for high prices."
+	icon = 'hl13/icons/obj/vending.dmi'
+	icon_state = "wallmed"
+	icon_deny = "wallmed-deny"
+	panel_type = "wallmed-panel"
+	density = FALSE
+	products = list(
+		/obj/item/reagent_containers/syringe = 3,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 5,
+		/obj/item/reagent_containers/pill/multiver = 2,
+		/obj/item/reagent_containers/medigel/sterilizine = 1,
+		/obj/item/healthanalyzer/simple = 2,
+		/obj/item/stack/medical/bone_gel = 2,
+	)
+	contraband = list(
+		/obj/item/reagent_containers/pill/tox = 2,
+		/obj/item/reagent_containers/pill/morphine = 2,
+		/obj/item/storage/box/gum/happiness = 1,
+	)
+	refill_canister = /obj/item/vending_refill/combine_wallmed
+	default_price = PAYCHECK_COMMAND //Double the medical price due to being meant for public consumption, not player specfic
+	extra_price = PAYCHECK_COMMAND * 1.5
+	payment_department = ACCOUNT_MED
+	tiltable = FALSE
+	light_mask = "wallmed-light-mask"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
+
+/obj/item/vending_refill/combine_wallmed
+	machine_name = "Combine Automated Med Shop"
+	icon_state = "refill_medical"
