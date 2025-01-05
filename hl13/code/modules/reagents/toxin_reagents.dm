@@ -32,3 +32,10 @@
 				var/damage = min(round(0.4*reac_volume, 0.1),10)
 				C.adjustToxLoss(damage)
 */
+
+/datum/reagent/toxin/headcrab_venom
+	name = "Headcrab Venom"
+	description = "A toxic venom produced by poison headcrabs."
+	color = "#e9490f" // rgb: 207, 54, 0
+	toxpwr = 1.2
+	liver_damage_multiplier = 0.25

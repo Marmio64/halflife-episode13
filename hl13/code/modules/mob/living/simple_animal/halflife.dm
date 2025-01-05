@@ -336,7 +336,7 @@
 	delaysound = 'hl13/sound/creatures/poison/ph_scream.ogg'
 	leapsound = 'hl13/sound/creatures/poison/ph_jump.ogg'
 
-	var/poison_type = /datum/reagent/toxin
+	var/poison_type = /datum/reagent/toxin/headcrab_venom
 	var/poison_per_attack = 6
 
 	var/aggro_sound = 'hl13/sound/creatures/poison/ph_rattle.ogg'
@@ -374,8 +374,8 @@
 	faction = list(FACTION_COMBINE)
 	mob_biotypes = MOB_ORGANIC
 	stat_attack = UNCONSCIOUS
-	maxHealth = 400
-	health = 400
+	maxHealth = 375
+	health = 375
 	harm_intent_damage = 25
 	melee_damage_lower = 20
 	melee_damage_upper = 25

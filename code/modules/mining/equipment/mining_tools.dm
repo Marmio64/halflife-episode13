@@ -31,8 +31,8 @@
 	desc = "A pickaxe that's been left to rust."
 	attack_verb_continuous = list("ineffectively hits")
 	attack_verb_simple = list("ineffectively hit")
-	force = 1
-	throwforce = 1
+	force = 8
+	throwforce = 8
 
 /obj/item/pickaxe/mini
 	name = "compact pickaxe"
