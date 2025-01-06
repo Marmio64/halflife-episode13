@@ -97,19 +97,20 @@
 	new /obj/item/door_remote/head_of_security(src)
 
 /obj/structure/closet/secure_closet/security
-	name = "security officer's locker"
+	name = "protection officer's locker"
 	icon_state = "sec"
 	req_access = list(ACCESS_BRIG)
 
 /obj/structure/closet/secure_closet/security/PopulateContents()
 	..()
-	new /obj/item/clothing/suit/armor/vest/alt/sec(src)
-	new /obj/item/clothing/head/helmet/sec(src)
-	new /obj/item/radio/headset/headset_sec(src)
-	new /obj/item/radio/headset/headset_sec/alt(src)
-	new /obj/item/clothing/glasses/hud/security/sunglasses(src)
+	new /obj/item/clothing/suit/armor/civilprotection(src)
+	new /obj/item/clothing/mask/gas/civilprotection(src)
+	new /obj/item/clothing/gloves/color/civilprotection(src)
+	new /obj/item/clothing/under/combine/civilprotection(src)
+	new /obj/item/clothing/glasses/hud/security(src)
+	new /obj/item/radio/headset/civilprotection(src)
 	new /obj/item/flashlight/seclite(src)
-	new /obj/item/clothing/gloves/tackler(src)
+	new /obj/item/clothing/shoes/jackboots/civilprotection(src)
 
 /obj/structure/closet/secure_closet/security/sec
 

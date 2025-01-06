@@ -145,12 +145,8 @@
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall)
 "aH" = (
-/obj/item/gps,
-/obj/item/gps,
-/obj/item/gps,
-/obj/item/gps,
-/obj/item/gps,
-/obj/structure/table/halflife/metal,
+/obj/effect/landmark/start/civil_protection_officer,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall)
 "aI" = (
@@ -633,8 +629,10 @@
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
 "cH" = (
-/obj/effect/landmark/start/depsec/engineering,
-/turf/open/floor/plating/indoor/tile/navy,
+/obj/structure/chair/office/halflife/blue{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/townhall)
 "cI" = (
 /obj/item/paper_bin,
@@ -1670,8 +1668,12 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
 "ho" = (
-/obj/machinery/light/small/directional/south,
-/obj/effect/landmark/start/depsec/engineering,
+/obj/structure/table/halflife/metal,
+/obj/item/gps,
+/obj/item/gps,
+/obj/item/gps,
+/obj/item/gps,
+/obj/item/gps,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall)
 "hp" = (
@@ -1689,10 +1691,8 @@
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/indoors/sewer/tunnel)
 "hs" = (
-/obj/machinery/camera{
-	c_tag = "Town Hall Cryogenics";
-	dir = 6
-	},
+/obj/structure/table/halflife/metal,
+/obj/item/reagent_containers/spray/pepper,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall)
 "ht" = (
@@ -2532,6 +2532,11 @@
 /obj/item/reagent_containers/pill/patch/medkit,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
+"ln" = (
+/obj/structure/closet/secure_closet/security/sec,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/tile/navy,
+/area/halflife/indoors/townhall)
 "lo" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -2955,6 +2960,13 @@
 /obj/effect/landmark/carpspawn,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
+"nb" = (
+/obj/structure/table/halflife/metal,
+/obj/machinery/recharger{
+	pixel_y = 6
+	},
+/turf/open/floor/plating/indoor/tile/navy,
+/area/halflife/indoors/townhall)
 "nc" = (
 /obj/structure/table/halflife/no_smooth/wood/stand,
 /turf/open/floor/plating/indoor/carpet,
@@ -3376,10 +3388,7 @@
 	},
 /area/halflife/outdoors)
 "oS" = (
-/obj/machinery/combine_recharger/round_start{
-	pixel_x = -32
-	},
-/obj/effect/landmark/start/civil_protection_officer,
+/obj/structure/closet/secure_closet/security/sec,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall)
 "oV" = (
@@ -4042,6 +4051,11 @@
 /obj/structure/bed/halflife/mattress/stained,
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors)
+"rO" = (
+/obj/structure/table/halflife/metal,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/tile/navy,
+/area/halflife/indoors/townhall)
 "rQ" = (
 /obj/machinery/oven/range,
 /turf/open/floor/plating/indoor/showroom,
@@ -4089,6 +4103,10 @@
 	dir = 1
 	},
 /area/halflife/outdoors)
+"sb" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/tile,
+/area/halflife/indoors/townhall)
 "sc" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/dice/d6,
@@ -4319,8 +4337,6 @@
 /area/halflife/indoors/scienceunion)
 "tb" = (
 /obj/structure/table/halflife/no_smooth/metal,
-/obj/item/lockpick/combine,
-/obj/item/lockpick/combine,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall)
 "tc" = (
@@ -5381,7 +5397,6 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
 "xY" = (
-/obj/effect/landmark/start/civil_protection_officer,
 /obj/structure/chair/office/halflife/blue{
 	dir = 1
 	},
@@ -5874,7 +5889,6 @@
 	c_tag = "Officer Staging Area";
 	dir = 8
 	},
-/obj/effect/landmark/start/civil_protection_officer,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall)
 "An" = (
@@ -6596,8 +6610,6 @@
 "Ds" = (
 /obj/structure/table/halflife/metal,
 /obj/machinery/light/small/directional/east,
-/obj/item/reagent_containers/spray/pepper,
-/obj/item/reagent_containers/spray/pepper,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall)
 "Dt" = (
@@ -7158,6 +7170,12 @@
 /obj/machinery/computer/pandemic,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
+"FU" = (
+/obj/machinery/combine_recharger/round_start{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/tile/navy,
+/area/halflife/indoors/townhall)
 "FV" = (
 /obj/item/storage/box/halflife/loyaltyration,
 /turf/open/floor/plating/indoor/cafeteria,
@@ -8618,6 +8636,12 @@
 	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors)
+"Mt" = (
+/obj/structure/table/halflife/metal,
+/obj/item/lockpick/combine,
+/obj/item/lockpick/combine,
+/turf/open/floor/plating/indoor/tile/navy,
+/area/halflife/indoors/townhall)
 "Mv" = (
 /obj/structure/halflife/barrel/double/red/two,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -10854,7 +10878,6 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/slums)
 "Wu" = (
-/obj/effect/landmark/start/civil_protection_officer,
 /obj/structure/chair/office/halflife/blue{
 	dir = 8
 	},
@@ -10926,6 +10949,11 @@
 /obj/structure/halflife/barrel/triple/grey,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/distributioncenter)
+"WO" = (
+/obj/structure/closet/secure_closet/security/sec,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/tile/navy,
+/area/halflife/indoors/townhall)
 "WQ" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 6
@@ -11267,9 +11295,8 @@
 /turf/open/floor/plating/indoor/carpet/violet,
 /area/halflife/indoors/townhall)
 "Yw" = (
-/obj/structure/table/halflife/metal,
-/obj/item/reagent_containers/spray/pepper,
-/obj/item/reagent_containers/spray/pepper,
+/obj/effect/landmark/start/civil_protection_officer,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall)
 "Yx" = (
@@ -40564,7 +40591,7 @@ jg
 LD
 RF
 rA
-oS
+LD
 hi
 tb
 RV
@@ -40687,8 +40714,8 @@ LD
 JG
 LD
 Wu
-gN
-ho
+LD
+zQ
 XQ
 ZA
 Sf
@@ -40809,7 +40836,7 @@ nx
 nx
 LD
 LD
-cH
+LD
 XQ
 XQ
 XQ
@@ -40924,7 +40951,7 @@ Zz
 eg
 kX
 XQ
-gN
+FU
 LD
 nx
 nx
@@ -41045,13 +41072,13 @@ Zz
 Zz
 Gc
 XQ
-aH
+dF
 LD
 LD
 Am
-gN
 LD
-gN
+LD
+LD
 XQ
 Cs
 XQ
@@ -41166,7 +41193,7 @@ Zz
 Zz
 JK
 XQ
-Yw
+dF
 xY
 LD
 XQ
@@ -41287,7 +41314,7 @@ yw
 Jt
 Se
 XQ
-Yw
+dF
 Ds
 LD
 dO
@@ -41410,7 +41437,7 @@ XQ
 XQ
 XQ
 XQ
-UV
+vT
 XQ
 oM
 Pq
@@ -41520,16 +41547,16 @@ XQ
 XQ
 ME
 XQ
-XQ
-fl
-nx
-nx
-nx
-nx
-nx
-wO
+rO
+ho
+oS
+gN
+ln
+gN
+oS
+Yw
+dO
 LD
-rY
 LD
 LD
 dO
@@ -41641,17 +41668,17 @@ KE
 QI
 ME
 XQ
-XQ
-fl
+Mt
+cH
 nx
 nx
 nx
 nx
 nx
-wO
 LD
-XQ
+UV
 LD
+nx
 LD
 XQ
 XQ
@@ -41762,17 +41789,17 @@ KE
 XQ
 Jo
 XQ
-XQ
-fl
+nb
+cH
 nx
 nx
 nx
 nx
 nx
-wO
 LD
-XQ
+UV
 LD
+nx
 LD
 Tc
 hc
@@ -41883,17 +41910,17 @@ FK
 XQ
 gg
 XQ
-XQ
-HN
+Ds
+hs
+oS
+gN
+WO
+gN
+oS
+aH
+dO
 LD
-LD
-HN
-LD
-LD
-IB
-HN
-XQ
-Cs
+nx
 LD
 XQ
 PN
@@ -42013,8 +42040,8 @@ XQ
 XQ
 XQ
 XQ
-XQ
 LD
+nx
 LD
 jC
 hc
@@ -42124,19 +42151,19 @@ IN
 IN
 IN
 IN
-IN
-IN
-IN
-IN
-IN
-IN
-IN
-Iw
-Iw
 XQ
-XQ
-vT
-XQ
+fl
+nx
+sb
+nx
+nx
+sb
+wO
+LD
+rY
+LD
+nx
+zQ
 XQ
 hc
 hc
@@ -42242,21 +42269,21 @@ Iw
 Iw
 Iw
 IN
-Tp
-nn
-FB
-nn
-FB
-nn
-wq
 IN
 IN
 IN
-Iw
-Iw
 XQ
-hs
+fl
+nx
+nx
+nx
+nx
+nx
+wO
 LD
+XQ
+LD
+nx
 LD
 XQ
 XQ
@@ -42363,21 +42390,21 @@ Iw
 Iw
 Iw
 IN
-NT
-Mw
-VT
-BZ
-VT
-Mw
-WE
 IN
 IN
 IN
-Iw
-Iw
+XQ
+fl
+nx
+nx
+nx
+nx
+nx
+wO
+LD
 XQ
 LD
-HN
+LD
 LD
 XQ
 zo
@@ -42484,18 +42511,18 @@ Iw
 Iw
 Iw
 IN
-NT
-Mw
-VT
-Mw
-VT
-Mw
-WE
 IN
 IN
 IN
-Iw
-Iw
+XQ
+HN
+LD
+LD
+HN
+LD
+LD
+IB
+HN
 XQ
 XQ
 XQ
@@ -42605,19 +42632,19 @@ Iw
 Iw
 Iw
 IN
-NT
-Mw
-VT
-Mw
-VT
-Mw
-WE
 IN
 IN
 IN
-Iw
-Iw
-Iw
+XQ
+XQ
+XQ
+XQ
+XQ
+XQ
+XQ
+XQ
+XQ
+XQ
 Zv
 Gx
 Gx
@@ -42726,13 +42753,13 @@ Iw
 Iw
 Iw
 IN
-NT
-Mw
-VT
-Mw
-VT
-Mw
-WE
+IN
+IN
+IN
+IN
+IN
+IN
+IN
 IN
 IN
 IN
@@ -42847,13 +42874,13 @@ Iw
 Iw
 Iw
 IN
-NT
-Mw
-VT
-Mw
-VT
-Mw
-WE
+Tp
+nn
+FB
+nn
+FB
+nn
+wq
 IN
 IN
 IN
@@ -42971,7 +42998,7 @@ IN
 NT
 Mw
 VT
-Mw
+BZ
 VT
 Mw
 WE
@@ -44299,13 +44326,13 @@ Iw
 Iw
 Iw
 IN
-Wo
-CX
+NT
+Mw
 VT
 Mw
 VT
-US
-WQ
+Mw
+WE
 IN
 IN
 IN
@@ -44420,13 +44447,13 @@ Iw
 Iw
 Iw
 IN
-IN
 NT
+Mw
 VT
 Mw
 VT
+Mw
 WE
-IN
 IN
 IN
 IN
@@ -44540,17 +44567,17 @@ Iw
 Iw
 Iw
 Iw
-Iw
 IN
 NT
+Mw
 VT
 Mw
 VT
+Mw
 WE
 IN
-Iw
-Iw
-Iw
+IN
+IN
 Iw
 Iw
 Iw
@@ -44661,17 +44688,17 @@ Iw
 Iw
 Iw
 Iw
-Iw
 IN
 NT
+Mw
 VT
 Mw
 VT
+Mw
 WE
 IN
-Iw
-Iw
-Iw
+IN
+IN
 Iw
 Iw
 Iw
@@ -44782,17 +44809,17 @@ Iw
 Iw
 Iw
 Iw
-Iw
 IN
 NT
+Mw
 VT
 Mw
 VT
+Mw
 WE
 IN
-Iw
-Iw
-Iw
+IN
+IN
 Iw
 Iw
 Iw
@@ -44903,17 +44930,17 @@ Iw
 Iw
 Iw
 Iw
-Iw
 IN
-NT
+Wo
+CX
 VT
 Mw
 VT
-WE
+US
+WQ
 IN
-Iw
-Iw
-Iw
+IN
+IN
 Iw
 Iw
 Iw
@@ -45024,7 +45051,7 @@ Iw
 Iw
 Iw
 Iw
-Iw
+IN
 IN
 NT
 VT
@@ -45032,9 +45059,9 @@ Mw
 VT
 WE
 IN
-Iw
-Iw
-Iw
+IN
+IN
+IN
 Iw
 Iw
 Iw
