@@ -11,7 +11,9 @@
 ///Paygrade for Prisoners and Assistants.
 #define PAYCHECK_LOWER 3
 ///Paygrade for all regular crew not belonging to PAYGRADE_LOWER or PAYGRADE_COMMAND.
-#define PAYCHECK_CREW 8
+#define PAYCHECK_CREW 7
+///Paygrade for more privledged crew, but are not the top dogs.
+#define PAYCHECK_HIGH 12
 ///Paygrade for Heads of Staff.
 #define PAYCHECK_COMMAND 20
 

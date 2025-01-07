@@ -94,12 +94,13 @@
 
 	//sleep(2 SECONDS)
 
-	rations_stored--
 	dispense(ration_quality, vortigaunt)
 	return
 
 /obj/machinery/ration_vendor/proc/dispense(quality, vortigaunt)
 	SSsociostability.modifystability(1) //Compliance brings stability.
+
+	rations_stored--
 
 	flick(icon_state_vend,src)
 
@@ -123,6 +124,8 @@
 			new /obj/item/storage/box/halflife/loyaltyration(loc)
 		if(6 to 10)
 			new /obj/item/storage/box/halflife/bestration(loc)
+			if(rations_stored > 0)
+				rations_stored-- ///The excess of the upper class is more draining. However, even if it should go into the negatives, we'll let them have their correct ration grade.
 
 /obj/machinery/ration_vendor/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/ration_construction/container))

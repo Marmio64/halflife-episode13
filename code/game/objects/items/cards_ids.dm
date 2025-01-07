@@ -626,7 +626,7 @@
 	SSblackbox.record_feedback("amount", "credits_inserted", cash_money)
 	log_econ("[cash_money] credits were inserted into [src] owned by [src.registered_name]")
 	if(physical_currency)
-		to_chat(user, span_notice("You stuff [money] into [src]. It disappears in a small puff of bluespace smoke, adding [cash_money] credits to the linked account."))
+		to_chat(user, span_notice("You stuff [money] into [src]. It feeds into the card, adding [cash_money] credits to the linked account."))
 	else
 		to_chat(user, span_notice("You insert [money] into [src], adding [cash_money] credits to the linked account."))
 

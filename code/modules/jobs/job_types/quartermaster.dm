@@ -16,7 +16,7 @@
 	outfit = /datum/outfit/job/quartermaster
 	plasmaman_outfit = /datum/outfit/plasmaman/cargo
 
-	paycheck = PAYCHECK_COMMAND
+	paycheck = PAYCHECK_HIGH
 	paycheck_department = ACCOUNT_CAR
 
 	mind_traits = list(HEAD_OF_STAFF_MIND_TRAITS)
@@ -37,12 +37,13 @@
 	voice_of_god_power = 1.4 //Command staff has authority
 	human_authority = JOB_AUTHORITY_NON_HUMANS_ALLOWED
 
-	ration_bonus = 1
+	ration_bonus = 2
 
 /datum/outfit/job/quartermaster
 	name = "Foreman"
 	jobtype = /datum/job/quartermaster
 
+	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/quartermaster
 	ears = /obj/item/radio/headset
 	uniform = /obj/item/clothing/under/citizen

@@ -8,7 +8,7 @@
 /datum/supply_pack/organic/rationsupplies
 	name = "Ration Supplies Crate"
 	desc = "A crate of various ration supplies and containers. The rations must be assembled by hand, and can then be put inside a vending unit to refill it."
-	cost = CARGO_CRATE_VALUE * 1.45
+	cost = CARGO_CRATE_VALUE * 1.5
 	contains = list(/obj/item/ration_construction/packs,
 					/obj/item/ration_construction/boxes,
 					/obj/item/ration_construction/bars,

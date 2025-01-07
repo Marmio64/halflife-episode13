@@ -1128,17 +1128,10 @@
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/plaza)
 "eR" = (
-/obj/structure/closet/crate,
-/obj/item/clothing/accessory/armband/cargo{
-	name = "worker's union armband"
+/obj/effect/turf_decal/box/corners{
+	dir = 4
 	},
-/obj/item/clothing/accessory/armband/cargo{
-	name = "worker's union armband"
-	},
-/obj/item/clothing/accessory/armband/cargo{
-	name = "worker's union armband"
-	},
-/obj/effect/turf_decal/box,
+/obj/effect/turf_decal/box/corners,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "eT" = (
@@ -1739,6 +1732,12 @@
 /mob/living/simple_animal/hostile/halflife/headcrab/armored,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
+"hy" = (
+/obj/machinery/door/poddoor/shutters{
+	id = "factory"
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "hz" = (
 /obj/machinery/status_display/evac{
 	pixel_y = 30
@@ -2982,12 +2981,6 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/plaza)
-"mU" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/open/openspace,
-/area/halflife/outdoors/roofs)
 "mW" = (
 /obj/structure/chair/halflife/metal/broken{
 	dir = 1
@@ -3628,10 +3621,7 @@
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall)
 "pF" = (
-/obj/machinery/camera{
-	c_tag = "Manufacturing Plant";
-	dir = 9
-	},
+/obj/effect/turf_decal/box,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "pG" = (
@@ -5939,6 +5929,14 @@
 "Ah" = (
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/alley)
+"Ai" = (
+/obj/machinery/camera{
+	c_tag = "Manufacturing Plant";
+	dir = 9
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/productioncenter)
 "Aj" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -6117,7 +6115,7 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
 "AU" = (
-/obj/effect/landmark/start/shaft_miner,
+/obj/effect/turf_decal/box,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
 "AV" = (
@@ -6944,6 +6942,24 @@
 /obj/item/clothing/head/utility/hardhat/halflife/mining,
 /obj/item/clothing/head/utility/hardhat/halflife/mining,
 /obj/item/clothing/head/utility/hardhat/halflife/mining,
+/obj/item/clothing/accessory/armband/cargo{
+	name = "worker's union armband"
+	},
+/obj/item/clothing/accessory/armband/cargo{
+	name = "worker's union armband"
+	},
+/obj/item/clothing/accessory/armband/cargo{
+	name = "worker's union armband"
+	},
+/obj/item/clothing/accessory/armband/cargo{
+	name = "worker's union armband"
+	},
+/obj/item/clothing/accessory/armband/cargo{
+	name = "worker's union armband"
+	},
+/obj/item/clothing/accessory/armband/cargo{
+	name = "worker's union armband"
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "Ex" = (
@@ -7506,12 +7522,6 @@
 /obj/item/soap,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
-"GT" = (
-/obj/effect/turf_decal/arrows{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/outdoors/roofs)
 "GU" = (
 /obj/structure/halflife/storage/large/shelf/wood/drawers,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -8087,9 +8097,11 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/restaurant)
 "Jw" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/indoor/metal/industrial,
-/area/halflife/indoors/productioncenter)
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/openspace,
+/area/halflife/outdoors/roofs)
 "Jx" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/tiled10,
@@ -8676,6 +8688,14 @@
 /obj/effect/spawner/random/halflife/loot/consumables,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
+"Mb" = (
+/obj/machinery/light/small/directional/north,
+/obj/machinery/button/door{
+	id = "factory";
+	pixel_y = 27
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/productioncenter)
 "Mc" = (
 /obj/structure/flora/bush/sparsegrass,
 /obj/structure/railing/halflife/solo{
@@ -9816,6 +9836,10 @@
 "QR" = (
 /turf/open/floor/plating/indoor/metal/grate/border,
 /area/halflife/indoors)
+"QS" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "QT" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 4
@@ -10313,6 +10337,12 @@
 "Tn" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/table/halflife/no_smooth/large/crafting/workbench,
+/obj/effect/turf_decal/box/corners{
+	dir = 8
+	},
+/obj/effect/turf_decal/box/corners{
+	dir = 1
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "To" = (
@@ -10602,9 +10632,13 @@
 	},
 /area/halflife/outdoors)
 "Uy" = (
-/obj/structure/halflife/road_barrier/concrete,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors/alley)
+/obj/machinery/conveyor{
+	dir = 6;
+	id = "factory"
+	},
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "Uz" = (
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/townhall)
@@ -11137,6 +11171,11 @@
 /obj/structure/chair/halflife/metal/folding,
 /turf/open/floor/plating/indoor/carpet/shaggy/violet,
 /area/halflife/indoors/bar)
+"WS" = (
+/obj/effect/landmark/start/shaft_miner,
+/obj/effect/turf_decal/box,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/productioncenter)
 "WT" = (
 /obj/item/storage/box/lights/bulbs,
 /obj/item/storage/box/lights/bulbs,
@@ -11198,6 +11237,12 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/cave)
+"Xj" = (
+/obj/effect/turf_decal/arrows{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/outdoors/roofs)
 "Xk" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 8;
@@ -35427,7 +35472,7 @@ zN
 Qg
 UQ
 UQ
-UQ
+eR
 ty
 UQ
 UQ
@@ -35811,7 +35856,7 @@ UQ
 Rt
 ty
 Ew
-eR
+Au
 ps
 ty
 Gx
@@ -35927,7 +35972,7 @@ Iw
 Gx
 Gx
 ty
-Yp
+Uy
 Pa
 Pa
 zN
@@ -36039,7 +36084,7 @@ IN
 Kw
 EK
 Ux
-IN
+QW
 Iw
 Iw
 Iw
@@ -36053,15 +36098,15 @@ Iw
 Iw
 te
 Gx
-ty
-Jw
+hy
 zN
-zN
-zN
+AU
+AU
+AU
 zN
 Qg
 UQ
-nY
+WS
 UQ
 zN
 zN
@@ -36166,31 +36211,31 @@ IN
 Kw
 EK
 Ux
-QW
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
+IN
 Gx
 Gx
-ty
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+hy
 zN
 zN
 zN
 zN
 zN
-AU
+Qg
 UQ
+pF
 UQ
-UQ
-zN
+Qg
 zN
 zN
 nZ
@@ -36294,7 +36339,6 @@ Kw
 EK
 Ux
 IN
-Uy
 Gx
 Gx
 Gx
@@ -36307,17 +36351,18 @@ Gx
 Gx
 Gx
 Gx
-Qk
-UQ
-UQ
-UQ
-UQ
-UQ
-UQ
-UQ
+Gx
+hy
+zN
+AU
+AU
+AU
+eV
+ty
+iL
 pF
 UQ
-zN
+Qg
 zN
 zN
 Av
@@ -36435,19 +36480,19 @@ Gx
 Gx
 Gx
 ty
-ty
-ty
-Kj
-KN
-ty
+Mb
 UQ
-Ph
-ty
+UQ
+UQ
+UQ
+nY
+UQ
+UQ
 UQ
 zN
-ZH
-Gy
-rr
+zN
+zN
+Av
 ty
 Gx
 Gx
@@ -36561,20 +36606,20 @@ Iw
 Iw
 Gx
 Gx
-ty
-kk
-oW
-sr
+Qk
 UQ
 UQ
 UQ
 UQ
-uo
+UQ
+UQ
+UQ
+Ai
 UQ
 zN
 zN
 zN
-gh
+Av
 ty
 Gx
 Gx
@@ -36689,19 +36734,19 @@ Iw
 Gx
 Gx
 ty
-vM
-kG
-Nv
+ty
+ty
+Kj
+KN
+ty
 UQ
+Ph
+ty
 UQ
-UQ
-UQ
-UQ
-nY
 zN
-zN
-zN
-id
+ZH
+Gy
+rr
 ty
 Gx
 Gx
@@ -36816,19 +36861,19 @@ Iw
 Gx
 Gx
 ty
-zp
-bs
-VN
-wK
+kk
+oW
+sr
 UQ
-rq
-lq
-iD
+nY
+UQ
+UQ
+uo
 UQ
 zN
 zN
 zN
-HC
+gh
 ty
 Gx
 Gx
@@ -36943,19 +36988,19 @@ Iw
 Gx
 Gx
 ty
-ty
-ty
-ty
-ty
-ty
-ty
-ty
-ty
-ty
-ty
-ty
-ty
-ty
+vM
+kG
+Nv
+UQ
+UQ
+UQ
+UQ
+UQ
+nY
+zN
+zN
+zN
+id
 ty
 Gx
 Gx
@@ -37069,21 +37114,21 @@ Iw
 Iw
 Gx
 Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
+ty
+zp
+bs
+VN
+wK
+UQ
+rq
+lq
+iD
+UQ
+QS
+zN
+zN
+HC
+ty
 Gx
 Gx
 Iw
@@ -37195,22 +37240,22 @@ NC
 GD
 Iw
 Gx
-NI
 Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
-Gx
+ty
+ty
+ty
+ty
+ty
+ty
+ty
+ty
+ty
+ty
+ty
+ty
+ty
+ty
+ty
 Gx
 Gx
 Iw
@@ -37321,23 +37366,23 @@ DQ
 NC
 ia
 Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
 Gx
 Gx
 Iw
@@ -37448,23 +37493,23 @@ Iw
 NC
 Wd
 Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
+Gx
+NI
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
+Gx
 Gx
 Gx
 Iw
@@ -55472,17 +55517,17 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
 DL
 DL
 Rz
@@ -56374,21 +56419,21 @@ Iw
 Iw
 DL
 DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
 DL
 DL
 Rz
@@ -56501,21 +56546,21 @@ Iw
 Iw
 DL
 DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
 DL
 DL
 Rz
@@ -56626,23 +56671,23 @@ Iw
 Iw
 Iw
 Iw
-Iw
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
 DL
 DL
 Rz
@@ -56753,23 +56798,23 @@ Iw
 Iw
 Iw
 Iw
-Iw
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
 DL
 DL
 DL
@@ -62093,8 +62138,8 @@ DL
 le
 DL
 Rz
-mU
-mU
+Jw
+Jw
 Rz
 Rz
 Rz
@@ -63352,29 +63397,29 @@ DL
 DL
 uN
 TW
-GT
+Xj
 TW
 TW
 TW
 TW
-GT
+Xj
 TW
 TW
 TW
 TW
 Rz
 Tq
-mU
-mU
-mU
-mU
-mU
-mU
-mU
-mU
-mU
-mU
-mU
+Jw
+Jw
+Jw
+Jw
+Jw
+Jw
+Jw
+Jw
+Jw
+Jw
+Jw
 Rz
 Rz
 Rz

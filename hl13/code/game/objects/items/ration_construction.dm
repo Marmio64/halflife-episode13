@@ -44,7 +44,7 @@
 /obj/item/ration_construction/container
 	name = "ration refill container"
 	desc = "A container which has a designated list of items it should contain. Once it has gotten these items, it can be put inside a ration vendor machine to refill it."
-	icon_state = "container"
+	icon_state = "container_empty"
 
 	var/obj/required_item_1 = null
 	var/obj/required_item_2 = null
@@ -82,20 +82,38 @@
 /obj/item/ration_construction/container/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/ration_construction))
 		if(istype(I, required_item_1) && !item_1_fulfilled)
-			qdel(I)
-			item_1_fulfilled = TRUE
-			to_chat(usr, span_notice("Ingredient inserted."))
+			if(do_after(user, 1.5 SECONDS, src))
+				qdel(I)
+				item_1_fulfilled = TRUE
+				to_chat(usr, span_notice("Ingredient inserted."))
+				playsound(src, 'hl13/sound/halflifeeffects/crafting/paperfold1.ogg', 50, TRUE, extrarange = -3)
+			else
+				to_chat(usr, span_notice("Packing Failed."))
+				return
 	if(istype(I, /obj/item/ration_construction))
 		if(istype(I, required_item_2) && !item_2_fulfilled)
-			qdel(I)
-			item_2_fulfilled = TRUE
-			to_chat(usr, span_notice("Ingredient inserted."))
+			if(do_after(user, 1.5 SECONDS, src))
+				qdel(I)
+				item_2_fulfilled = TRUE
+				to_chat(usr, span_notice("Ingredient inserted."))
+				playsound(src, 'hl13/sound/halflifeeffects/crafting/paperfold2.ogg', 50, TRUE, extrarange = -3)
+			else
+				to_chat(usr, span_notice("Packing Failed."))
+				return
 	if(istype(I, /obj/item/ration_construction))
 		if(istype(I, required_item_3) && !item_3_fulfilled)
-			qdel(I)
-			item_3_fulfilled = TRUE
-			to_chat(usr, span_notice("Ingredient inserted."))
+			if(do_after(user, 1.5 SECONDS, src))
+				qdel(I)
+				item_3_fulfilled = TRUE
+				to_chat(usr, span_notice("Ingredient inserted."))
+				playsound(src, 'hl13/sound/halflifeeffects/crafting/paperfold3.ogg', 50, TRUE, extrarange = -3)
+			else
+				to_chat(usr, span_notice("Packing Failed."))
+				return
 
 	if(item_1_fulfilled && item_2_fulfilled && item_3_fulfilled)
-		to_chat(usr, span_notice("Container succesfully completed."))
+		to_chat(usr, span_notice("Container succesfully completed. Reward dispensed."))
+		new /obj/item/stack/spacecash/c1(user.loc, 3)
 		completed = TRUE
+		icon_state = "container"
+		playsound(src, 'hl13/sound/halflifeeffects/crafting/ducttape1.ogg', 50, TRUE, extrarange = -3)
