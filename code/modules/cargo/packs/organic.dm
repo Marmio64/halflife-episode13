@@ -5,10 +5,25 @@
 /datum/supply_pack/organic/hydroponics
 	access_view = ACCESS_HYDROPONICS
 
+/datum/supply_pack/organic/rationsupplies
+	name = "Ration Supplies Crate"
+	desc = "A crate of various ration supplies and containers. The rations must be assembled by hand, and can then be put inside a vending unit to refill it."
+	cost = CARGO_CRATE_VALUE * 1.45
+	contains = list(/obj/item/ration_construction/packs,
+					/obj/item/ration_construction/boxes,
+					/obj/item/ration_construction/bars,
+					/obj/item/ration_construction/bags,
+					/obj/item/ration_construction/blue_cans,
+					/obj/item/ration_construction/yellow_cans,
+					/obj/item/ration_construction/red_cans,
+					/obj/item/ration_construction/container,
+					/obj/item/ration_construction/container)
+	crate_name = "ration supplies crate"
+
 /datum/supply_pack/organic/food
 	name = "Food Crate"
 	desc = "Allow the citizens a treat with this crate filled with specially preserved old world foods."
-	cost = CARGO_CRATE_VALUE * 4
+	cost = CARGO_CRATE_VALUE * 4.5
 	contains = list(/obj/item/reagent_containers/condiment/flour,
 					/obj/item/reagent_containers/condiment/rice,
 					/obj/item/reagent_containers/condiment/milk,
@@ -26,7 +41,7 @@
 /datum/supply_pack/organic/rations
 	name = "Ration Crate"
 	desc = "A crate of five ration packs, made for easy distribution."
-	cost = CARGO_CRATE_VALUE * 1.7
+	cost = CARGO_CRATE_VALUE * 2.5
 	contains = list(/obj/item/storage/box/halflife/ration,
 					/obj/item/storage/box/halflife/ration,
 					/obj/item/storage/box/halflife/ration,
@@ -38,7 +53,7 @@
 /datum/supply_pack/organic/loyaltyrations
 	name = "Loyalty-grade Ration Crate"
 	desc = "A crate of five loyalty-grade ration packs, made for easy distribution."
-	cost = CARGO_CRATE_VALUE * 2.3
+	cost = CARGO_CRATE_VALUE * 3
 	contains = list(/obj/item/storage/box/halflife/loyaltyration,
 					/obj/item/storage/box/halflife/loyaltyration,
 					/obj/item/storage/box/halflife/loyaltyration,
@@ -47,9 +62,9 @@
 	crate_name = "loyalty-grade ration crate"
 
 /datum/supply_pack/organic/badrations
-	name = "Ration Crate"
+	name = "Low-grade Ration Crate"
 	desc = "A crate of five low-grade ration packs, made for easy distribution."
-	cost = CARGO_CRATE_VALUE * 1.75
+	cost = CARGO_CRATE_VALUE * 2.25
 	contains = list(/obj/item/storage/box/halflife/badration,
 					/obj/item/storage/box/halflife/badration,
 					/obj/item/storage/box/halflife/badration,
@@ -60,7 +75,7 @@
 /datum/supply_pack/organic/alcohol
 	name = "Approved Ethanol Crate"
 	desc = "A crate of five Combine Approved Ethanol Beverages, rated for citizen use."
-	cost = CARGO_CRATE_VALUE * 1.6
+	cost = CARGO_CRATE_VALUE * 1.75
 	contains = list(/obj/item/reagent_containers/cup/glass/bottle/beer/light,
 					/obj/item/reagent_containers/cup/glass/bottle/beer/light,
 					/obj/item/reagent_containers/cup/glass/bottle/beer/light,

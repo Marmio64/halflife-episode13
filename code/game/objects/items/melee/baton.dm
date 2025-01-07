@@ -428,7 +428,7 @@
 	name = "stun baton"
 	desc = "A stun baton for incapacitating people with."
 	desc_controls = "Left click to stun, right click to harm."
-	icon = 'hl13/icons/obj/weapons/baton.dmi'
+	icon = 'hl13/icons/obj/baton.dmi'
 	icon_state = "stunbaton"
 	inhand_icon_state = "baton"
 	worn_icon_state = "baton"

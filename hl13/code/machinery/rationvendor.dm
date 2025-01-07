@@ -11,7 +11,7 @@
 	var/obj/item/card/id/C //the account of the person using the vendor unit.
 
 	/// How many rations are in this specific unit? Can be refilled any time, and stops dispensing rations if it runs out.
-	var/rations_stored = 999
+	var/rations_stored = 15
 
 /obj/machinery/ration_vendor/examine(mob/user)
 	. = ..()
@@ -123,3 +123,13 @@
 			new /obj/item/storage/box/halflife/loyaltyration(loc)
 		if(6 to 10)
 			new /obj/item/storage/box/halflife/bestration(loc)
+
+/obj/machinery/ration_vendor/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/ration_construction/container))
+		var/obj/item/ration_construction/container/C = I
+		if(C.completed == TRUE)
+			to_chat(usr, span_notice("Rations succesfully inserted."))
+			rations_stored += 3
+			qdel(I)
+		else
+			to_chat(usr, span_notice("This ration container is not fully refilled."))
