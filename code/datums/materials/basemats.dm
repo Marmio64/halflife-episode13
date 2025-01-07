@@ -196,8 +196,8 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	color = "#2C992C"
 	categories = list(
 		MAT_CATEGORY_SILO = TRUE,
-		MAT_CATEGORY_RIGID=TRUE,
-		MAT_CATEGORY_BASE_RECIPES = TRUE,
+		MAT_CATEGORY_RIGID=FALSE,
+		MAT_CATEGORY_BASE_RECIPES = FALSE,
 		MAT_CATEGORY_ITEM_MATERIAL = TRUE,
 		MAT_CATEGORY_ITEM_MATERIAL_COMPLEMENTARY = TRUE,
 	)

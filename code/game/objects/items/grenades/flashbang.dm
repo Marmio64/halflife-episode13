@@ -53,6 +53,7 @@
 
 /obj/item/grenade/stingbang
 	name = "stingbang"
+	desc = "A hand grenade with an adjustable timer. When detonated, shoots out a cloud of less-lethal rubber pellets to disperse crowds."
 	icon_state = "timeg_locked"
 	inhand_icon_state = "flashbang"
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'

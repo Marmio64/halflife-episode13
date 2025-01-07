@@ -44,10 +44,9 @@
 
 	id_trim = /datum/id_trim/job/scientist
 	uniform = /obj/item/clothing/under/citizen
-	suit = /obj/item/clothing/suit/toggle/labcoat
+	suit = /obj/item/clothing/suit/toggle/labcoat/halflife
 	accessory = /obj/item/clothing/accessory/armband/science
 	ears = /obj/item/radio/headset
-	shoes = /obj/item/clothing/shoes/sneakers/white
 	gloves = /obj/item/clothing/gloves/latex
 
 /datum/outfit/job/scientist/pre_equip(mob/living/carbon/human/H)

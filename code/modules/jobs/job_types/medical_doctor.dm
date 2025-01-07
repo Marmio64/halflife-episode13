@@ -45,10 +45,9 @@
 
 	id_trim = /datum/id_trim/job/medical_doctor
 	uniform = /obj/item/clothing/under/citizen
-	suit = /obj/item/clothing/suit/toggle/labcoat
+	suit = /obj/item/clothing/suit/toggle/labcoat/halflife
 	accessory = /obj/item/clothing/accessory/armband/medblue
 	ears = /obj/item/radio/headset
-	shoes = /obj/item/clothing/shoes/sneakers/white
 	gloves = /obj/item/clothing/gloves/latex/nitrile
 	skillchips = list(/obj/item/skillchip/entrails_reader)
 

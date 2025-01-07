@@ -37,7 +37,7 @@
 	id_trim = /datum/id_trim/job/shaft_miner
 
 	uniform = /obj/item/clothing/under/citizen
-	head = /obj/item/clothing/head/utility/hardhat
+	head = /obj/item/clothing/head/utility/hardhat/halflife/mining
 	r_pocket = /obj/item/hl2key/factory
 
 /datum/outfit/job/miner/equipped

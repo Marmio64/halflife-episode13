@@ -58,8 +58,8 @@
 	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/head_of_personnel
 	ears = /obj/item/radio/headset/heads/hop
-	uniform = /obj/item/clothing/under/citizen
-	head = /obj/item/clothing/head/utility/hardhat/white
+	uniform = /obj/item/clothing/under/halflife/labor_lead
+	head = /obj/item/clothing/head/halflife/blue_hardhat
 	gloves = /obj/item/clothing/gloves/color/yellow
 	belt = /obj/item/melee/baton/telescopic
 

@@ -9,3 +9,9 @@
 	ex_heavy = 2
 	ex_light = 3
 	ex_flame = 1
+
+/obj/item/grenade/stingbang/halflife
+	name = "stinger grenade"
+	desc = "A less-lethal grenade filled with rubber pellets. Useful for dispersing crowds."
+	icon = 'hl13/icons/obj/grenade.dmi'
+	icon_state = "stinger"

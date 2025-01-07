@@ -46,5 +46,5 @@
 	id_trim = /datum/id_trim/job/quartermaster
 	ears = /obj/item/radio/headset
 	uniform = /obj/item/clothing/under/citizen
-	head = /obj/item/clothing/head/utility/hardhat/dblue
+	head = /obj/item/clothing/head/halflife/blue_hardhat
 	r_pocket = /obj/item/hl2key/factory

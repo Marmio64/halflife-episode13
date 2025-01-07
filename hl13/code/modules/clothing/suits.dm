@@ -157,10 +157,18 @@
 	acid = 20
 	wound = 0
 
+/obj/item/clothing/suit/utility/radiation/cleanup
+	name = "cleanup suit"
+	desc = "A suit which provides protection against radiation and hostile xenian fauna attacks."
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+	icon_state = "cleanup"
+
 /obj/item/clothing/suit/utility/radiation/engineer
 	name = "engineer suit"
 	desc = "A suit which offers some protection from hazardous environments."
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 	icon_state = "cwuengi"
 	inhand_icon_state = "bombsuit"
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/geiger_counter)
@@ -185,3 +193,7 @@
 
 /obj/item/clothing/head/bio_hood/boiler
 	icon_state = "bio_boiler"
+
+/obj/item/clothing/suit/toggle/labcoat/halflife
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'

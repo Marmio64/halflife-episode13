@@ -213,6 +213,10 @@
 	acid = 30
 	wound = 5
 
+/obj/item/clothing/under/halflife
+	worn_icon = 'hl13/icons/mob/clothing/uniform.dmi'
+	icon = 'hl13/icons/obj/clothing/uniforms.dmi'
+
 /obj/item/clothing/under/administrator
 	name = "administrator suit"
 	desc = "A well made, though aged, burgundy suit. Specially tailored for the district administrator."
@@ -230,5 +234,14 @@
 	desc = "A well made black suit, specially tailored for the district administrator."
 	icon_state = "formal"
 	inhand_icon_state = "lawyer_black"
+
+/obj/item/clothing/under/halflife/labor_lead
+	name = "old suit"
+	desc = "A pretty good, old and dusty suit. Often given to high ranking citizens."
+	can_adjust = FALSE
+	has_sensor = LOCKED_SENSORS
+	sensor_mode = SENSOR_COORDS
+	random_sensor = FALSE
+	icon_state = "classysuit"
 
 #undef STIMULANT_INJECTION_DELAY
