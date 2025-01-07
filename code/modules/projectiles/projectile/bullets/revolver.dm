@@ -127,6 +127,7 @@
 /obj/projectile/bullet/a357
 	name = ".357 bullet"
 	damage = 40
+	armour_penetration = 15
 	wound_bonus = -30
 
 /obj/projectile/bullet/a357/phasic

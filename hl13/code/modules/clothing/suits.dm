@@ -66,6 +66,7 @@
 	desc = "Reinforced white kevlar weave surrounding a ceramic plated core. Provides incredible chest protection."
 	icon_state = "overwatch_white"
 	armor_type = /datum/armor/eliteoverwatcharmor
+	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 
 /datum/armor/eliteoverwatcharmor
 	melee = 50

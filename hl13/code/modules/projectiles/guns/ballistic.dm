@@ -150,7 +150,7 @@
 	inhand_icon_state = "colt_python"
 	spread = 3 //very little spread
 	recoil = 2 //lots of recoil though
-	fire_delay = 7
+	fire_delay = 8
 	vary_fire_sound = FALSE
 
 /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger

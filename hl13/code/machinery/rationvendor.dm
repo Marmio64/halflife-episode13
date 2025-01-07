@@ -10,10 +10,23 @@
 	var/datum/bank_account/account  //person's account.
 	var/obj/item/card/id/C //the account of the person using the vendor unit.
 
+	/// How many rations are in this specific unit? Can be refilled any time, and stops dispensing rations if it runs out.
+	var/rations_stored = 999
+
+/obj/machinery/ration_vendor/examine(mob/user)
+	. = ..()
+	. += span_notice("The vendor has [rations_stored] rations left to dispense.")
+
 /obj/machinery/ration_vendor/interact(mob/living/carbon/human/user)
 	. = ..()
 	var/ration_quality = 3 //1 is terrible, 2 is lowgrade, 3 is standard, 4 is better/production grade, 5 is loyalty grade, 6 is best grade
 	var/vortigaunt = FALSE //are they a vortigaunt role?
+
+	if(rations_stored < 1)
+		say("Machine out of rations, please refill.") // Refill immediately!
+		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+		flick(icon_state_deny,src)
+		return
 
 	if(.)
 		return
@@ -81,6 +94,7 @@
 
 	//sleep(2 SECONDS)
 
+	rations_stored--
 	dispense(ration_quality, vortigaunt)
 	return
 
