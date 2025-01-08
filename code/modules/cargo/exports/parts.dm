@@ -70,7 +70,7 @@
 	export_types = list(/obj/item/food/rationpack/manufactured)
 
 //recycle delivered ration refill boxes for a small return of credits
-/datum/export/rations
+/datum/export/ration_refill_box
 	cost = CARGO_CRATE_VALUE * 0.15
 	unit_name = "used ration refill boxes"
 	export_types = list(/obj/item/ration_construction/used_container)
