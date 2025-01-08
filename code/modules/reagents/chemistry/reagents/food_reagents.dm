@@ -18,6 +18,9 @@
 	/// affects mood, typically higher for mixed drinks with more complex recipes'
 	var/quality = 0
 
+	/// How much hydration this reagent supplies. Look at get_hydration_factor() for an understanding. HL13 EDIT
+	var/hydration_factor = 1
+
 /datum/reagent/consumable/New()
 	. = ..()
 	// All food reagents function at a fixed rate
@@ -30,6 +33,7 @@
 
 	var/mob/living/carbon/human/affected_human = affected_mob
 	affected_human.adjust_nutrition(get_nutriment_factor(affected_mob) * REM * seconds_per_tick)
+	affected_human.adjust_hydration(get_hydration_factor(affected_mob) * REM * seconds_per_tick)
 
 /datum/reagent/consumable/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume)
 	. = ..()
@@ -57,6 +61,10 @@
 /// Gets just how much nutrition this reagent supplies per server tick to the eater
 /datum/reagent/consumable/proc/get_nutriment_factor(mob/living/carbon/eater)
 	return nutriment_factor * REAGENTS_METABOLISM * purity * 2
+
+/// Gets just how much hydration this reagent supplies per server tick to the eater
+/datum/reagent/consumable/proc/get_hydration_factor(mob/living/carbon/eater)
+	return hydration_factor * REAGENTS_METABOLISM * purity * 2
 
 /datum/reagent/consumable/nutriment
 	name = "Nutriment"

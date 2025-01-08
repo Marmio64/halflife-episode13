@@ -58,7 +58,7 @@
 		else
 			if(!HAS_TRAIT(src, TRAIT_NOSLEEP))
 				adjust_tiredness(1)
-				if(nutrition < NUTRITION_LEVEL_STARVING - 50) //starvation and dehydration both make you feel extra tired and weak.
+				if(nutrition < NUTRITION_LEVEL_STARVING) //starvation and dehydration both make you feel extra tired and weak.
 					adjust_tiredness(1)
 				if(hydration < HYDRATION_LEVEL_DEHYDRATED)
 					adjust_tiredness(1)
@@ -68,6 +68,7 @@
 	tiredness += amount
 	if(tiredness > TIREDNESS_MAXIMUM_THRESHOLD)
 		tiredness = TIREDNESS_MAXIMUM_THRESHOLD
+		add_mood_event("sleepy", /datum/mood_event/sleepy/exhausted)
 	else if(tiredness > TIREDNESS_SLEEPY_THRESHOLD)
 		throw_alert("sleepy", /atom/movable/screen/alert/sleepy)
 		add_mood_event("sleepy", /datum/mood_event/sleepy)

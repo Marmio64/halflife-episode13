@@ -154,9 +154,9 @@
 		if( HYDRATION_LEVEL_SMALLTHIRST to HYDRATION_LEVEL_HYDRATED)
 			add_mood_event(MOOD_CATEGORY_HYDRATION, /datum/mood_event/hydrated)
 		if(HYDRATION_LEVEL_THIRSTY to HYDRATION_LEVEL_SMALLTHIRST)
-			clear_mood_event(MOOD_CATEGORY_HYDRATION)
-		if(HYDRATION_LEVEL_DEHYDRATED to HYDRATION_LEVEL_THIRSTY)
 			add_mood_event(MOOD_CATEGORY_HYDRATION, /datum/mood_event/thirsty)
+		if(HYDRATION_LEVEL_DEHYDRATED to HYDRATION_LEVEL_THIRSTY)
+			add_mood_event(MOOD_CATEGORY_HYDRATION, /datum/mood_event/parched)
 		if(0 to HYDRATION_LEVEL_DEHYDRATED)
 			add_mood_event(MOOD_CATEGORY_HYDRATION, /datum/mood_event/dehydrated)
 

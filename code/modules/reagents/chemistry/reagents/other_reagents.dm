@@ -227,7 +227,7 @@
 	var/cooling_temperature = 2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_CLEANS
 	default_container = /obj/item/reagent_containers/cup/glass/waterbottle
-	var/hydration = 5
+	var/hydration = 4
 	var/toxicity = 0
 	var/disgust = 0
 

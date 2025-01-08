@@ -142,7 +142,7 @@
 	name = "water can"
 	desc = "A can of Breen's private reserve water. Supposedly, it helps improve your memory!"
 	icon_state = "breenwater"
-	list_reagents = list(/datum/reagent/water = 20)
+	list_reagents = list(/datum/reagent/water = 25)
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/yellow
 	name = "yellow water can"
@@ -160,13 +160,13 @@
 	name = "red water can"
 	desc = "A can of Breen's private reserve water. Supposedly, it helps improve your memory! This one is painted red, and seems more filled."
 	icon_state = "breenwaterred"
-	list_reagents = list(/datum/reagent/water = 30)
+	list_reagents = list(/datum/reagent/water = 35)
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/green
 	name = "green water can"
 	desc = "A special can of Breen's private reserve water, for the best of the best. Flavored, and topped off to full."
 	icon_state = "breenwatergreen"
-	list_reagents = list(/datum/reagent/water = 30, /datum/reagent/consumable/tonic = 10, /datum/reagent/consumable/sugar = 10)
+	list_reagents = list(/datum/reagent/water = 35, /datum/reagent/consumable/tonic = 5, /datum/reagent/consumable/sugar = 10)
 
 /obj/item/reagent_containers/cup/glass/mouthwash
 	name = "Mouthwash Bottle"

@@ -14,13 +14,21 @@
 
 /datum/mood_event/thirsty
 	description = "I'm getting pretty thirsty."
-	mood_change = -3
+	mood_change = -2
+
+/datum/mood_event/parched
+	description = "My throat is parched."
+	mood_change = -4
 
 /datum/mood_event/dehydrated
-	description = "I'm dehydrated!"
+	description = "I am so thirsty my mouth feels like cotton..."
 	mood_change = -6
 
 //sleepy
+/datum/mood_event/sleepy/exhausted
+	description = "I'm so exhausted, I feel like I could collapse any second now..."
+	mood_change = -10
+
 /datum/mood_event/sleepy
 	description = "I'm very tired..."
 	mood_change = -8
