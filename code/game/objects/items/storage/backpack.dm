@@ -391,10 +391,6 @@
 	atom_storage.set_holdable(cant_hold_list = /obj/item/storage/backpack/satchel/flat) //muh recursive backpacks
 	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
 
-/obj/item/storage/backpack/satchel/flat/PopulateContents()
-	for(var/items in 1 to 4)
-		new /obj/effect/spawner/random/contraband(src)
-
 /obj/item/storage/backpack/satchel/flat/with_tools/PopulateContents()
 	new /obj/item/stack/tile/iron/base(src)
 	new /obj/item/crowbar(src)

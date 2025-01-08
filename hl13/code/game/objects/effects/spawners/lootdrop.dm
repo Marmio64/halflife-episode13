@@ -15,8 +15,9 @@
 				/obj/item/toy/crayon/spraycan,
 				/obj/item/screwdriver,
 				/obj/item/weldingtool,
-				/obj/item/storage/backpack/satchel/leather,
-				/obj/item/storage/backpack/satchel,
+				/obj/item/storage/backpack/halflife/satchel,
+				/obj/item/storage/backpack/halflife/satchel/military,
+				/obj/item/storage/backpack/halflife,
 				/obj/item/storage/backpack/satchel/flat,
 				/obj/item/storage/belt/fannypack/black,
 				/obj/item/storage/belt/pouch,
@@ -168,6 +169,7 @@
 				/obj/item/clothing/mask/gas/hl2/swat,
 				/obj/item/clothing/mask/gas/hl2/russia,
 				/obj/item/clothing/mask/bandana/black,
+				/obj/item/storage/backpack/halflife/satchel,
 				/obj/item/clothing/suit/bio_suit/boiler,
 				/obj/item/clothing/head/bio_hood/boiler
 				)

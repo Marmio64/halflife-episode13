@@ -128,3 +128,36 @@
 	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
 	update_appearance(UPDATE_ICON)
+
+
+/obj/item/storage/backpack/halflife
+	icon = 'hl13/icons/obj/clothing/backpack.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/back.dmi'
+
+/obj/item/storage/backpack/halflife
+	name = "backpack"
+	desc = "A fine looking, though old leather backpack."
+	icon_state = "leather_backpack"
+	inhand_icon_state = "leather_backpack"
+	storage_type = /datum/storage/backpack/halflife
+
+/obj/item/storage/backpack/halflife/satchel
+	name = "satchel"
+	desc = "A fine looking, though old leather satchel."
+	icon_state = "satchel"
+	inhand_icon_state = "satchel"
+	storage_type = /datum/storage/satchel/halflife
+
+/obj/item/storage/backpack/halflife/satchel/military
+	name = "military satchel"
+	desc = "A satchel that looks like it once belonged to the army."
+	icon_state = "military"
+	inhand_icon_state = "military"
+
+/datum/storage/backpack/halflife
+	max_total_storage = 21
+	max_slots = 21
+
+/datum/storage/satchel/halflife
+	max_total_storage = 15
+	max_slots = 15
