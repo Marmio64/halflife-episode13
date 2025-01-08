@@ -58,7 +58,7 @@
 	icon_state = "mining"
 	panel_type = "panel2"
 	product_ads = "Acquire high grade equipment here.;Improve your work efficiency.;Better serve the combine!;Quit being useless."
-	products = list(/obj/item/storage/box/halflife/loyaltyration = 5, /obj/item/reagent_containers/pill/patch/medkit = 5)
+	products = list(/obj/item/storage/box/halflife/ration = 5, /obj/item/reagent_containers/pill/patch/medkit = 5)
 	premium = list(/obj/item/storage/backpack/satchel/explorer = 3, /obj/item/pickaxe/silver = 3, /obj/item/flashlight/seclite = 3)
 	resistance_flags = FIRE_PROOF
 	refill_canister = /obj/item/vending_refill/miner
