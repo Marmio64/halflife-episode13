@@ -72,3 +72,5 @@
 #define TRAIT_MASOCHIST "masochist"
 
 #define TRAIT_NOSLEEP "nosleep"
+
+#define TRAIT_BAD_AIM	"bad_aim"

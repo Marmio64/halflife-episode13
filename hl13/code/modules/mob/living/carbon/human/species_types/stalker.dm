@@ -40,6 +40,12 @@
 	C.cmode_music = 'hl13/sound/music/combat/crawlyard.ogg'
 	to_chat(C, "[info_text]")
 
+	C.AddComponent( \
+			/datum/component/simple_bodycam, \
+			camera_name = "implanted bodycam", \
+			c_tag = "[C.real_name]", \
+		)
+
 /datum/species/stalker/on_species_loss(mob/living/carbon/C)
 	..()
 	UnregisterSignal(C, COMSIG_MOB_SAY)

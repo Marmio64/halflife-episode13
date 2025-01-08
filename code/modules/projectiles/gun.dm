@@ -475,6 +475,10 @@
 /obj/item/gun/proc/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	var/base_bonus_spread = 0
 	if(user)
+		if(HAS_TRAIT(user, TRAIT_GOOD_AIM))
+			bonus_spread -= 5
+		if(HAS_TRAIT(user, TRAIT_BAD_AIM))
+			bonus_spread += 25
 		var/list/bonus_spread_values = list(base_bonus_spread, bonus_spread)
 		SEND_SIGNAL(user, COMSIG_MOB_FIRED_GUN, src, target, params, zone_override, bonus_spread_values)
 		base_bonus_spread = bonus_spread_values[MIN_BONUS_SPREAD_INDEX]
@@ -496,8 +500,6 @@
 	var/modified_delay = fire_delay
 	if(user && HAS_TRAIT(user, TRAIT_DOUBLE_TAP))
 		modified_delay = ROUND_UP(fire_delay * 0.5)
-	if(user && HAS_TRAIT(user, TRAIT_GOOD_AIM))
-		bonus_spread -= 5
 
 	if(burst_size > 1)
 		firing_burst = TRUE

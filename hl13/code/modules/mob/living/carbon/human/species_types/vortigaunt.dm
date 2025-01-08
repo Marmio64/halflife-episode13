@@ -6,8 +6,8 @@
 	damage_modifier = 35
 	stunmod = 0.8
 	no_equip_flags = ITEM_SLOT_MASK | ITEM_SLOT_OCLOTHING | ITEM_SLOT_GLOVES | ITEM_SLOT_FEET | ITEM_SLOT_ICLOTHING | ITEM_SLOT_SUITSTORE | ITEM_SLOT_HEAD
-	inherent_traits = list(TRAIT_CHUNKYFINGERS_IGNORE_BATON, TRAIT_RESISTCOLD, TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,
-							TRAIT_NOBREATH, TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NODISMEMBER, TRAIT_GENELESS, TRAIT_NO_UNDERWEAR)
+	inherent_traits = list(TRAIT_RESISTCOLD, TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,
+							TRAIT_NOBREATH, TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NODISMEMBER, TRAIT_GENELESS, TRAIT_NO_UNDERWEAR, TRAIT_BAD_AIM)
 	mutanteyes = /obj/item/organ/eyes/night_vision/vort
 	var/datum/action/cooldown/spell/conjure_item/infinite_guns/vort_blast/galunga
 	var/datum/action/cooldown/spell/touch/vort_heal/vortheal
@@ -30,14 +30,6 @@
 		C.mind.name = C.real_name
 	C.dna.real_name = C.real_name
 
-/datum/species/vortigaunt/on_species_loss(mob/living/carbon/C)
-	..()
-	galunga.Remove(C)
-	vortheal.Remove(C)
-	vorttelepathy.Remove(C)
-
-/datum/species/vortigaunt/on_species_gain(mob/living/carbon/C, datum/species/old_species)
-	..()
 	galunga = new(C)
 	galunga.Grant(C)
 
@@ -46,6 +38,12 @@
 
 	vorttelepathy = new(C)
 	vorttelepathy.Grant(C)
+
+/datum/species/vortigaunt/on_species_loss(mob/living/carbon/C)
+	..()
+	galunga.Remove(C)
+	vortheal.Remove(C)
+	vorttelepathy.Remove(C)
 
 /datum/species/vortigaunt/get_scream_sound(mob/living/carbon/human/vortigaunt)
 	return pick(

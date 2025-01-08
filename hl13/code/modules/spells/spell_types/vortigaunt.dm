@@ -1,6 +1,6 @@
 /datum/action/cooldown/spell/conjure_item/infinite_guns/vort_blast
 	name = "Vortal Blast"
-	cooldown_time = 5 SECONDS
+	cooldown_time = 4 SECONDS
 	desc = "Use the vortessence to ready a vortal bolt in your hand."
 	button_icon = 'hl13/icons/mob/actions/actions_vortal.dmi'
 	button_icon_state = "blast"
@@ -37,7 +37,7 @@
 /obj/projectile/magic/vort_blast
 	name = "vortal bolt"
 	icon_state = "xray"
-	damage = 40
+	damage = 35
 	damage_type = BURN
 	armour_penetration = 20
 	hitsound = 'hl13/sound/weapons/attack_shoot.ogg'
@@ -63,8 +63,8 @@
 
 /datum/action/cooldown/spell/touch/vort_heal/cast_on_hand_hit(obj/item/melee/touch_attack/hand, mob/living/victim, mob/living/carbon/caster)
 	playsound(caster, 'hl13/sound/weapons/attack_shoot.ogg', 50, TRUE)
-	victim.adjustBruteLoss(-20)
-	victim.adjustFireLoss(-20)
+	victim.adjustBruteLoss(-25)
+	victim.adjustFireLoss(-25)
 	victim.visible_message(span_bold("[victim] appears to flash colors of green, before seemingly appearing healthier!"))
 	to_chat(victim, span_warning("You feel soothed."))
 	return TRUE
@@ -78,7 +78,9 @@
 /datum/action/cooldown/spell/aoe/repulse/wizard/vort
 	name = "Vortal Repulse"
 	desc = "Clear your surroundings with the power of the vortessence."
+	background_icon_state = "bg_nature"
 	invocation = "TO THE VOID"
 	cooldown_time = 25 SECONDS
 	aoe_radius = 4
 	cooldown_reduction_per_rank = 4 SECONDS
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
