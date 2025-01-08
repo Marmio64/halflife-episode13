@@ -3,7 +3,7 @@
 	icon = 'icons/obj/machines/sec.dmi'
 	icon_state = "recharger"
 	base_icon_state = "recharger"
-	desc = "A charging dock for energy based weaponry, PDAs, and other devices."
+	desc = "A charging dock for certain electrical devices. Primarily used to charge stunsticks."
 	circuit = /obj/item/circuitboard/machine/recharger
 	pass_flags = PASSTABLE
 	var/obj/item/charging = null
