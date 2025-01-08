@@ -45,7 +45,7 @@
 /datum/supply_pack/engineering/water_miner
 	name = "Water Harvester"
 	desc = "A heavy duty water harvester. Can be placed over water and wrenched into place, then activated to automatically package water for reselling."
-	cost = CARGO_CRATE_VALUE * 4
+	cost = CARGO_CRATE_VALUE * 3
 	contains = list(/obj/machinery/water_miner)
 	crate_name = "water harvester crate"
 	crate_type = /obj/structure/closet/crate/large
