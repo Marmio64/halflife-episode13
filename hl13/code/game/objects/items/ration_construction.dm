@@ -117,3 +117,8 @@
 		completed = TRUE
 		icon_state = "container"
 		playsound(src, 'hl13/sound/halflifeeffects/crafting/ducttape1.ogg', 50, TRUE, extrarange = -3)
+
+/obj/item/ration_construction/used_container
+	name = "deposited ration refill container"
+	desc = "An empty ration refill container that has been marked as received by a ration vendor unit. You can send it back on the cargo shuttle for recycling to gain a small amount of credits for the district's cargo budget."
+	icon_state = "container_used"

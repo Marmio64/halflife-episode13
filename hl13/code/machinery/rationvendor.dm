@@ -134,5 +134,6 @@
 			to_chat(usr, span_notice("Rations succesfully inserted."))
 			rations_stored += 3
 			qdel(I)
+			new /obj/item/ration_construction/used_container(user.loc)
 		else
 			to_chat(usr, span_notice("This ration container is not fully refilled."))
