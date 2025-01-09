@@ -1,3 +1,6 @@
+// Cooldown times
+#define PHRASE_COOLDOWN (5 SECONDS)
+
 /obj/item/clothing/mask/gas/civilprotection
 	name = "civil protection mask"
 	desc = "Heavy duty white mask for civil protection units. Provides some protection to the face."
@@ -18,6 +21,10 @@
 	use_radio_beeps_tts = TRUE
 
 	unique_death = 'hl13/sound/voice/cpdeath/die1.ogg'
+
+	actions_types = list(/datum/action/item_action/halt, /datum/action/item_action/help_request)
+
+	COOLDOWN_DECLARE(hailer_cooldown)
 
 	var/overwatch = FALSE
 
@@ -86,6 +93,44 @@
 	)
 
 	armor_type = /datum/armor/cpmask
+
+/obj/item/clothing/mask/gas/civilprotection/ui_action_click(mob/user, action)
+	if(istype(action, /datum/action/item_action/halt))
+		halt()
+	if(istype(action, /datum/action/item_action/help_request))
+		help_request()
+
+/datum/action/item_action/halt
+	name = "HALT!"
+
+/obj/item/clothing/mask/gas/civilprotection/verb/halt()
+	set category = "Object"
+	set name = "HALT"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, hailer_cooldown))
+		return
+
+	COOLDOWN_START(src, hailer_cooldown, PHRASE_COOLDOWN)
+
+	usr.audible_message("[usr]'s Vocoder: <font color='red' size='4'><b>Hold it!</b></font>")
+
+	playsound(src, 'hl13/sound/voice/cpvoicelines/holdit.ogg', 75, FALSE)
+
+/datum/action/item_action/help_request
+	name = "Request Assistance!"
+
+/obj/item/clothing/mask/gas/civilprotection/verb/help_request()
+	set category = "Object"
+	set name = "Request Assistance!"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, hailer_cooldown))
+		return
+
+	COOLDOWN_START(src, hailer_cooldown, PHRASE_COOLDOWN)
+
+	usr.say(".s Requesting assistance on my position!", forced = src.name)
+
+	playsound(src, 'hl13/sound/voice/cpvoicelines/officerneedsassistance.ogg', 75, FALSE)
 
 /datum/armor/cpmask
 	melee = 20
@@ -208,3 +253,5 @@
 
 /obj/item/clothing/mask/gas/hl2/swat
 	icon_state = "swatmask"
+
+#undef PHRASE_COOLDOWN
