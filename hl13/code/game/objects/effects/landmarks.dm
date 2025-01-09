@@ -105,3 +105,36 @@ GLOBAL_LIST_EMPTY(chosen_station_templates)
 	config_file = "strings/modular_maps/sewercity.toml"
 	key = "sewerright";
 	name = "sewerright"
+
+
+
+/////////////////////////////////
+/// NAVIGATE VERBS ///
+/////////////////////////////////
+
+/obj/effect/landmark/navigate_destination/halflife/townhall
+	location = "Townhall"
+
+/obj/effect/landmark/navigate_destination/halflife/hospital
+	location = "Hospital"
+
+/obj/effect/landmark/navigate_destination/halflife/science
+	location = "Science Labs"
+
+/obj/effect/landmark/navigate_destination/halflife/kitchen
+	location = "Kitchen"
+
+/obj/effect/landmark/navigate_destination/halflife/bar
+	location = "Bar"
+
+/obj/effect/landmark/navigate_destination/halflife/trainstation
+	location = "Trainstation"
+
+/obj/effect/landmark/navigate_destination/halflife/factory
+	location = "Factory"
+
+/obj/effect/landmark/navigate_destination/halflife/labor
+	location = "Labor Union"
+
+/obj/effect/landmark/navigate_destination/halflife/dispatch
+	location = "Dispatch Core"

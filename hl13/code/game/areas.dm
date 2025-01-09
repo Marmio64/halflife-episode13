@@ -65,6 +65,9 @@
 /area/halflife/indoors/bar
 	name = "\improper Bar"
 
+/area/halflife/indoors/dispatch
+	name = "\improper Dispatch Core"
+
 /area/halflife/indoors/restaurant
 	name = "\improper Restaurant"
 
@@ -79,6 +82,9 @@
 
 /area/halflife/indoors/scienceunion
 	name = "\improper Science Union"
+
+/area/halflife/indoors/store
+	name = "\improper Store"
 
 /area/halflife/indoors/laborunion
 	name = "\improper Labor Union"
