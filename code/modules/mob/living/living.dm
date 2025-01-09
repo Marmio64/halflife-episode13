@@ -600,6 +600,13 @@
 		to_chat(src, span_warning("You are already sleeping!"))
 		return
 	else
+		if((locate(/obj/structure/bed) in loc))
+			to_chat(src, span_notice("There is a comfy enough bed here, you'll get a good sleep here."))
+		else if(buckled)
+			to_chat(src, span_notice("You are lying or sitting on something somewhat comfortable, you will get an okay sleep."))
+		else
+			to_chat(src, span_notice("This is not a comfortable place to sleep, find a bed to lay on or at least a chair to sit on. You will get a poor quality sleep here."))
+
 		if(tgui_alert(usr, "You sure you want to sleep for a while?", "Sleep", list("Yes", "No")) == "Yes")
 			to_chat(src, span_notice("You start to shut your eyes..."))
 			if(do_after(src, 5 SECONDS, src))
