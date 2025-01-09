@@ -825,6 +825,8 @@
 	name = "Antlion Grub"
 	desc = "A large maggot filled with a green, glowing mass."
 	icon = 'hl13/icons/mob/halflife.dmi'
+	held_lh = 'icons/mob/inhands/animal_item_lefthand.dmi'
+	held_rh = 'icons/mob/inhands/animal_item_righthand.dmi'
 	icon_state = "grub"
 	icon_living = "grub"
 	icon_dead = "grub_dead"
