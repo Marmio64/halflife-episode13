@@ -1,6 +1,6 @@
 /obj/machinery/ration_vendor
 	name = "\improper Ration Vendor"
-	desc = "A machine that will deliver you a suitable ration depending on your status, and if you have a ration voucher loaded on your account."
+	desc = "A machine that will deliver you a suitable ration depending on your status, and if you have a ration voucher loaded on your account. Reminder that rations stored in this machine are independent from other machines."
 	icon_state = "ration_dispenser"
 	icon = 'hl13/icons/obj/machinery.dmi'
 	var/icon_state_vend = "ration_dispenser-vend"

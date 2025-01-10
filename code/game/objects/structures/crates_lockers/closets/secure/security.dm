@@ -116,7 +116,7 @@
 
 /obj/structure/closet/secure_closet/security/sec/PopulateContents()
 	..()
-	new /obj/item/storage/belt/security/full(src)
+	new /obj/item/storage/belt/civilprotection/full(src)
 
 /obj/structure/closet/secure_closet/security/cargo
 

@@ -2,7 +2,7 @@
 	title = JOB_ATMOSPHERIC_TECHNICIAN
 	description = "Remove xenian infestations from hotspots in the city."
 	department_head = list(JOB_QUARTERMASTER)
-	total_positions = 3
+	total_positions = 2
 	spawn_positions = 2
 	supervisors = SUPERVISOR_CE
 	exp_requirements = 60
