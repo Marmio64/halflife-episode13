@@ -15,8 +15,8 @@
 	speak_chance = 1
 	speak = list("G-GOD HELP ME!","OH G-GOD!","K-KILL ME!")
 	harm_intent_damage = 5
-	melee_damage_lower = 18
-	melee_damage_upper = 21
+	melee_damage_lower = 16
+	melee_damage_upper = 19
 	sharpness = SHARP_EDGED
 	wound_bonus = -15
 	attack_vis_effect = ATTACK_EFFECT_CLAW
@@ -89,7 +89,7 @@
 	maxHealth = 80
 	health = 80
 	speak_chance = 0
-	melee_damage_lower = 7
+	melee_damage_lower = 5
 	melee_damage_upper = 9
 	rapid_melee = 4 //attacks quite fast
 	attack_sound = 'hl13/sound/creatures/fastzombieattack.ogg'
@@ -244,7 +244,7 @@
 	maxHealth = 30
 	health = 30
 	harm_intent_damage = 5
-	melee_damage_lower = 10
+	melee_damage_lower = 8
 	melee_damage_upper = 10
 	wound_bonus = 0
 	bare_wound_bonus = 10
@@ -374,11 +374,11 @@
 	faction = list(FACTION_COMBINE)
 	mob_biotypes = MOB_ORGANIC
 	stat_attack = UNCONSCIOUS
-	maxHealth = 375
-	health = 375
+	maxHealth = 350
+	health = 350
 	harm_intent_damage = 25
-	melee_damage_lower = 20
-	melee_damage_upper = 25
+	melee_damage_lower = 18
+	melee_damage_upper = 24
 	sharpness = SHARP_EDGED
 	wound_bonus = 0
 	attack_vis_effect = ATTACK_EFFECT_CLAW
@@ -487,8 +487,8 @@
 	maxHealth = 50
 	health = 50
 	harm_intent_damage = 5
-	melee_damage_lower = 15
-	melee_damage_upper = 20
+	melee_damage_lower = 14
+	melee_damage_upper = 19
 	wound_bonus = -20
 	sharpness = SHARP_EDGED
 	attack_vis_effect = ATTACK_EFFECT_SLASH
@@ -595,7 +595,7 @@
 	health = 50
 	harm_intent_damage = 5
 	melee_damage_lower = 12
-	melee_damage_upper = 28
+	melee_damage_upper = 19
 	wound_bonus = -20
 	sharpness = SHARP_EDGED
 	attack_vis_effect = ATTACK_EFFECT_SLASH
@@ -660,11 +660,11 @@
 	combat_mode = TRUE
 	mob_biotypes = MOB_ROBOTIC
 	loot = list(/obj/item/circuitmaterial)
-	health = 45
-	maxHealth = 45
+	health = 55
+	maxHealth = 55
 	rapid_melee = 2
-	melee_damage_lower = 15
-	melee_damage_upper = 20
+	melee_damage_lower = 14
+	melee_damage_upper = 18
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	wound_bonus = -15
 	bare_wound_bonus = 15
@@ -686,7 +686,7 @@
 	del_on_death = 1
 	death_message = "is smashed into pieces!"
 	var/operating_power = 100
-	var/low_power_melee_damage_lower = 7
+	var/low_power_melee_damage_lower = 6
 	var/low_power_melee_damage_upper = 12
 
 /mob/living/simple_animal/hostile/halflife/viscerator/Initialize(mapload)

@@ -67,8 +67,8 @@
 #define JOB_SECURITY_OFFICER "Civil Protection Officer"
 #define JOB_SECURITY_OFFICER_MEDICAL "Medical Officer"
 #define JOB_SECURITY_OFFICER_ENGINEERING "Engineering Officer"
-#define JOB_SECURITY_OFFICER_SCIENCE "Security Officer (Science)"
-#define JOB_SECURITY_OFFICER_SUPPLY "Security Officer (Cargo)"
+#define JOB_SECURITY_OFFICER_SCIENCE "Civil Protection Officer (Science)"
+#define JOB_SECURITY_OFFICER_SUPPLY "Civil Protection Officer (Cargo)"
 //Engineering
 #define JOB_STATION_ENGINEER "Union Engineer"
 #define JOB_ATMOSPHERIC_TECHNICIAN "Infestation Control"
