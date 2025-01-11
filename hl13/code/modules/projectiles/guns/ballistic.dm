@@ -141,6 +141,26 @@
 	var/obj/item/suppressor/S = new(src)
 	install_suppressor(S)
 
+/obj/item/gun/ballistic/automatic/pistol/makeshift
+	name = "makeshift pistol"
+	desc = "A small and light makeshift 9mm pistol. Much harder to fire and carries half the amount of ammo compared to the USP Match."
+	icon = 'hl13/icons/obj/guns/projectile.dmi'
+	icon_state = "makeshift"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/makeshift9mm
+	can_suppress = TRUE
+	fire_sound = "hl13/sound/weapons/uspfire.ogg"
+	spread = 13
+	recoil = 0.5
+	fire_delay = 6
+	vary_fire_sound = FALSE
+
+/obj/item/gun/ballistic/automatic/pistol/makeshift/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.6 SECONDS)
+
+/obj/item/gun/ballistic/automatic/pistol/makeshift/no_mag
+	spawnwithmagazine = FALSE
+
 /obj/item/gun/ballistic/revolver/coltpython
 	name = "\improper colt python"
 	desc = "An old colt python revolver, accurate but has the kick of a mule. Uses .357 magnum ammo."

@@ -9,6 +9,24 @@
 	category = CAT_WEAPON_RANGED
 	crafting_interface = CRAFTING_BENCH_WEAPONS
 
+/datum/crafting_recipe/makeshiftpistol
+	name = "Makeshift Pistol"
+	result = /obj/item/gun/ballistic/automatic/pistol/makeshift/no_mag
+	reqs = list(/obj/item/stack/sheet/scrap_metal = 6)
+	time = 12 SECONDS
+	category = CAT_WEAPON_RANGED
+	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WRENCH)
+
+/datum/crafting_recipe/makeshiftpistolmag
+	name = "9mm Makeshift Pistol Full Magazine"
+	result = /obj/item/ammo_box/magazine/makeshift9mm
+	reqs = list(/obj/item/stack/sheet/scrap_metal = 5,
+				/obj/item/stack/cable_coil = 2,
+				/datum/reagent/fuel = 10)
+	tool_behaviors = list(TOOL_SCREWDRIVER)
+	time = 6 SECONDS
+	category = CAT_WEAPON_AMMO
+
 /datum/crafting_recipe/pistolbullet
 	name = "9mm Bullet"
 	result = /obj/item/ammo_casing/c9mm

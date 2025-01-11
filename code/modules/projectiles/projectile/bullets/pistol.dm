@@ -15,6 +15,10 @@
 	jostle_pain_mult=6
 	rip_time=10
 
+/obj/projectile/bullet/c9mm/makeshift
+	name = "9mm makeshift bullet"
+	damage = 15
+
 /obj/projectile/bullet/c9mm/ap
 	name = "9mm armor-piercing bullet"
 	damage = 27

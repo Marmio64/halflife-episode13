@@ -11,6 +11,19 @@
 	. = ..()
 	icon_state = "[base_icon_state]-[round(ammo_count(), 5)]"
 
+/obj/item/ammo_box/magazine/makeshift9mm
+	name = "makeshift pistol magazine (9mm)"
+	desc = "A 8-round 9mm magazine made for some sort of makeshift pistol."
+	ammo_type = /obj/item/ammo_casing/c9mm/makeshift
+	caliber = CALIBER_9MM
+	max_ammo = 8
+	icon_state = "45-8"
+	base_icon_state = "45"
+
+/obj/item/ammo_box/magazine/makeshift9mm/update_icon_state()
+	. = ..()
+	icon_state = "[base_icon_state]-[ammo_count()]"
+
 /obj/item/ammo_box/magazine/ar2
 	name = "OSIPR magazine (pulse)"
 	desc = "A 30-round magazine for the OSIPR that contains pulse rounds."

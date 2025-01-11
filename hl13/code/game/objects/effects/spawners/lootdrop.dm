@@ -25,6 +25,7 @@
 				/obj/item/storage/briefcase,
 				/obj/item/lockpick,
 				/obj/item/clothing/under/citizen/refugee,
+				/obj/item/clothing/under/citizen/refugee/green,
 				/obj/item/radio/off/halflife,
 				/obj/item/ammo_casing/rebar,
 				/obj/item/flashlight/seclite,
@@ -152,6 +153,7 @@
 
 	loot = list(
 				/obj/item/clothing/under/citizen/refugee,
+				/obj/item/clothing/under/citizen/refugee/green,
 				/obj/item/clothing/head/beanie/black = 2,
 				/obj/item/clothing/mask/balaclava,
 				/obj/item/clothing/gloves/fingerless = 2,

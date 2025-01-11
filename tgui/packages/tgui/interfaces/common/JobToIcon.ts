@@ -46,7 +46,7 @@ export const JOB2ICON = {
   'Research Director': 'user-graduate',
   Roboticist: 'battery-half',
   'Union Scientist': 'flask',
-  'Security Officer (Cargo)': 'shield-halved',
+  'Civil Protection Officer (Cargo)': 'shield-halved',
   'Engineering Officer': 'shield-halved',
   'Medical Officer': 'shield-halved',
   'Security Officer (Science)': 'shield-halved',

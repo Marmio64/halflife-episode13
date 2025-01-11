@@ -5,7 +5,7 @@
 /datum/skill/fishing
 	name = "Fishing"
 	title = "Angler"
-	desc = "How empty and alone you are on this barren Earth."
+	desc = "Fishing may be easy to learn, but is hard to master."
 	modifiers = list(SKILL_VALUE_MODIFIER = list(1, 0, -1, -3, -5, -7, -10))
 	skill_item_path = /obj/item/clothing/head/soft/fishing_hat
 

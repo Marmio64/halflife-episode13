@@ -477,8 +477,11 @@
 	if(user)
 		if(HAS_TRAIT(user, TRAIT_GOOD_AIM))
 			bonus_spread -= 5
-		if(HAS_TRAIT(user, TRAIT_BAD_AIM))
+		if(HAS_TRAIT(user, TRAIT_BAD_AIM)) //HL13 EDIT, TRAIT TO MAKE SPREAD TERRIBLE
 			bonus_spread += 25
+
+		bonus_spread += user.mind?.get_skill_modifier(/datum/skill/firearms, SKILL_VALUE_MODIFIER) //HL13 EDIT, FIREARMS SKILLS. Better levels are negative values, and reduce spread.
+
 		var/list/bonus_spread_values = list(base_bonus_spread, bonus_spread)
 		SEND_SIGNAL(user, COMSIG_MOB_FIRED_GUN, src, target, params, zone_override, bonus_spread_values)
 		base_bonus_spread = bonus_spread_values[MIN_BONUS_SPREAD_INDEX]

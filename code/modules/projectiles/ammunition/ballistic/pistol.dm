@@ -42,6 +42,11 @@
 	desc = "A 9mm armor-piercing bullet casing."
 	projectile_type =/obj/projectile/bullet/c9mm/ap
 
+/obj/item/ammo_casing/c9mm/makeshift
+	name = "9mm makeshift bullet casing"
+	desc = "A 9mm makeshift bullet casing."
+	projectile_type =/obj/projectile/bullet/c9mm/makeshift
+
 /obj/item/ammo_casing/c9mm/hp
 	name = "9mm hollow-point bullet casing"
 	desc = "A 9mm hollow-point bullet casing."
