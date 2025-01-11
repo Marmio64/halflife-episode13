@@ -88,6 +88,10 @@
 		"Body pack holding" = 'hl13/sound/voice/otavoicelines/bodypackholding.ogg',
 		"Bouncer" = 'hl13/sound/voice/otavoicelines/bouncerbouncer.ogg',
 		"Call contact parasitics" = 'hl13/sound/voice/otavoicelines/callcontactparasitics.ogg',
+		"Heavy resistance" = 'hl13/sound/voice/otavoicelines/heavyresistance.ogg',
+		"Rip Cord" = 'hl13/sound/voice/otavoicelines/ripcord.ogg',
+		"Bouncer" = 'hl13/sound/voice/otavoicelines/bouncerbouncer.ogg',
+		"Contact" = 'hl13/sound/voice/otavoicelines/contact.ogg',
 		"Shit" = 'hl13/sound/voice/cpvoicelines/shit.ogg',
 		"Take cover" = 'hl13/sound/voice/cpvoicelines/takecover.ogg',
 	)
@@ -130,7 +134,10 @@
 
 	usr.say(".s Requesting assistance on my position!", forced = src.name)
 
-	playsound(src, 'hl13/sound/voice/cpvoicelines/officerneedsassistance.ogg', 75, FALSE)
+	if(overwatch)
+		playsound(src, 'hl13/sound/voice/otavoicelines/heavyresistance.ogg', 75, FALSE)
+	else
+		playsound(src, 'hl13/sound/voice/cpvoicelines/officerneedsassistance.ogg', 75, FALSE)
 
 /datum/armor/cpmask
 	melee = 20
@@ -191,6 +198,8 @@
 	inhand_icon_state = "swat"
 	overwatch = TRUE
 	armor_type = /datum/armor/cpmask_upgraded
+
+	unique_death = 'hl13/sound/voice/otavoicelines/die1.ogg'
 
 /obj/item/clothing/mask/gas/civilprotection/overwatch/red
 	icon_state = "overwatch_red"
