@@ -121,13 +121,13 @@
 		return
 
 	if(item_1_fulfilled && item_2_fulfilled && item_3_fulfilled)
-		to_chat(usr, span_notice("Container has been filled correctly. Seal with hands while holding to complete."))
+		to_chat(usr, span_notice("Container has been filled correctly. Seal with hands while holding to complete, or use a sealing machine."))
 		filled = TRUE
 
 /obj/item/ration_construction/container/attack_self(mob/user)
 	if(filled && !completed)
 		to_chat(usr, span_notice("Sealing box..."))
-		if(do_after(user, 3.5 SECONDS, src))
+		if(do_after(user, 4 SECONDS, src))
 			to_chat(usr, span_notice("Container succesfully sealed. Reward dispensed."))
 			seal(user)
 	else if(completed)
