@@ -137,10 +137,10 @@
 		to_chat(usr, span_notice("The box isn't yet fully filled, and can not be sealed."))
 		return
 
-/obj/item/ration_construction/container/proc/seal(mob/user)
+/obj/item/ration_construction/container/proc/seal(mob/user, reward = 2)
 	playsound(src, 'hl13/sound/halflifeeffects/crafting/ducttape1.ogg', 50, TRUE, extrarange = -3)
 	completed = TRUE
-	new /obj/item/stack/spacecash/c1(user.loc, 3)
+	new /obj/item/stack/spacecash/c1(user.loc, reward)
 	icon_state = "container"
 
 /obj/item/ration_construction/used_container

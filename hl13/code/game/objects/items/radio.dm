@@ -1,6 +1,6 @@
 /obj/item/radio/headset/civilprotection
 	name = "civil protection headset"
-	desc = "Protection for ears from loud songs, along with a functioning radio for metropolice forces."
+	desc = "Protection for ears from loud sounds, along with a functioning radio for metropolice forces."
 	icon_state = "sec_headset_alt"
 	inhand_icon_state = "sec_headset_alt"
 	keyslot = new /obj/item/encryptionkey/headset_sec
@@ -16,5 +16,6 @@
 
 /obj/item/radio/headset/civilprotection/divisional/overwatch
 	name = "overwatch headset"
-	desc = "Protection for ears from loud songs, along with a functioning radio for overwatch forces."
+	desc = "Protection for ears from loud sounds, along with a functioning radio for overwatch forces."
 	keyslot = new /obj/item/encryptionkey/headset_cent
+	keyslot2 = new /obj/item/encryptionkey/heads/hos

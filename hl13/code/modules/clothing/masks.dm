@@ -89,7 +89,7 @@
 		"Bouncer" = 'hl13/sound/voice/otavoicelines/bouncerbouncer.ogg',
 		"Call contact parasitics" = 'hl13/sound/voice/otavoicelines/callcontactparasitics.ogg',
 		"Heavy resistance" = 'hl13/sound/voice/otavoicelines/heavyresistance.ogg',
-		"Rip Cord" = 'hl13/sound/voice/otavoicelines/ripcord.ogg',
+		"Ripcord" = 'hl13/sound/voice/otavoicelines/ripcord.ogg',
 		"Bouncer" = 'hl13/sound/voice/otavoicelines/bouncerbouncer.ogg',
 		"Contact" = 'hl13/sound/voice/otavoicelines/contact.ogg',
 		"Shit" = 'hl13/sound/voice/cpvoicelines/shit.ogg',

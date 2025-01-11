@@ -15,7 +15,7 @@
 			to_chat(usr, span_notice("Sealing box..."))
 			if(do_after(user, 1 SECONDS, src))
 				to_chat(usr, span_notice("Container succesfully sealed. Reward dispensed."))
-				C.seal(user)
+				C.seal(user, 3) //Using the sealer gets you bonus money
 		else if(C.completed)
 			to_chat(usr, span_notice("This ration container is already sealed."))
 		else
