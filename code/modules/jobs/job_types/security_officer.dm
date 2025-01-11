@@ -51,16 +51,16 @@
 /datum/job/security_officer/after_spawn(mob/living/carbon/human/H, mob/M)
 	. = ..()
 	H.faction += "combine"
-	var/r = rand(100,900)
+	var/r = rand(10,90)
 	while (used_numbers.Find(r))
-		r = rand(100,900)
+		r = rand(10,90)
 	used_numbers += r
 	if(istype(H.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = H.wear_id
-		ID.registered_name = "CP-[used_numbers[used_numbers.len]]"
+		ID.registered_name = "CP:13-[used_numbers[used_numbers.len]]"
 		ID.update_label()
 
-GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL))
+GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, SEC_DEPT_SUPPLY))
 
 /**
  * The department distribution of the security officers.

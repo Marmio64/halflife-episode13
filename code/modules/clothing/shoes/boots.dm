@@ -148,16 +148,6 @@
 
 	create_storage(storage_type = /datum/storage/pockets/shoes)
 
-/obj/item/clothing/shoes/boots
-	name = "boots"
-	desc = "Old boots, usually given to any and all citizens."
-	icon_state = "explorer"
-	inhand_icon_state = "jackboots"
-	supports_variations_flags = CLOTHING_DIGITIGRADE_MASK
-	strip_delay = 20
-	equip_delay_other = 40
-	lace_time = 8 SECONDS
-
 /obj/item/clothing/shoes/workboots/mining
 	name = "mining boots"
 	desc = "Steel-toed mining boots for mining in hazardous environments. Very good at keeping toes uncrushed."

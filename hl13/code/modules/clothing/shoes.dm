@@ -18,3 +18,14 @@
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, COMBINESUIT_TRAIT)
 	LoadComponent(/datum/component/squeak, squeak_sound, 30, 100, 0)
+
+/obj/item/clothing/shoes/boots
+	name = "boots"
+	desc = "Old boots, usually given to any and all citizens."
+	icon_state = "workboots"
+	inhand_icon_state = "jackboots"
+	worn_icon = 'hl13/icons/mob/clothing/feet.dmi'
+	icon = 'hl13/icons/obj/clothing/shoes.dmi'
+	strip_delay = 20
+	equip_delay_other = 40
+	lace_time = 8 SECONDS

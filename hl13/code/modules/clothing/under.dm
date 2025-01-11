@@ -196,6 +196,11 @@
 	inhand_icon_state = "r_suit"
 	has_sensor = NO_SENSORS
 
+/obj/item/clothing/under/citizen/refugee/green
+	name = "refugee clothes"
+	desc = "Dirty blue jeans with an accompanying green shirt, free of any suit sensors the combine may use to track you."
+	icon_state = "green_refugee"
+
 /obj/item/clothing/under/citizen/rebel
 	name = "citizen jumpsuit"
 	desc = "Full-body blue suit for the common citizen, worn down and dirtied by time and use. The scanners have been removed forcefully, and it has been moderately reinforced."
