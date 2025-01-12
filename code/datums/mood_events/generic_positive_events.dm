@@ -102,6 +102,11 @@
 	mood_change = 3
 	hidden = TRUE
 
+/datum/mood_event/blackmarket
+	description = "I've got a buisness to run, can't let emotions get in the way."
+	mood_change = 4
+	hidden = TRUE
+
 /datum/mood_event/badass_antag
 	description = "I'm a fucking badass and everyone around me knows it. Just look at them; they're all fucking shaking at the mere thought of having me around."
 	mood_change = 7
