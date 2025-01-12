@@ -77,16 +77,6 @@
 	icon_state = "hair_bigafro"
 	natural_spawn = FALSE
 
-/datum/sprite_accessory/hair/afro_huge
-	name = "Afro (Huge)"
-	icon_state = "hair_hugeafro"
-	y_offset = 6
-	natural_spawn = FALSE
-
-/datum/sprite_accessory/hair/allthefuzz
-	name = "All The Fuzz"
-	icon_state = "hair_allthefuzz"
-
 /datum/sprite_accessory/hair/antenna
 	name = "Ahoge"
 	icon_state = "hair_antenna"
@@ -118,11 +108,6 @@
 /datum/sprite_accessory/hair/bedheadlong
 	name = "Long Bedhead"
 	icon_state = "hair_long_bedhead"
-
-/datum/sprite_accessory/hair/bedheadfloorlength
-	name = "Floorlength Bedhead"
-	icon_state = "hair_floorlength_bedhead"
-	natural_spawn = FALSE
 
 /datum/sprite_accessory/hair/badlycut
 	name = "Shorter Long Bedhead"
@@ -168,10 +153,6 @@
 	name = "Bowlcut 2"
 	icon_state = "hair_bowlcut2"
 
-/datum/sprite_accessory/hair/braid
-	name = "Braid (Floorlength)"
-	icon_state = "hair_braid"
-
 /datum/sprite_accessory/hair/braided
 	name = "Braided"
 	icon_state = "hair_braided"
@@ -180,17 +161,9 @@
 	name = "Braided Front"
 	icon_state = "hair_braidfront"
 
-/datum/sprite_accessory/hair/not_floorlength_braid
-	name = "Braid (High)"
-	icon_state = "hair_braid2"
-
 /datum/sprite_accessory/hair/lowbraid
 	name = "Braid (Low)"
 	icon_state = "hair_hbraid"
-
-/datum/sprite_accessory/hair/shortbraid
-	name = "Braid (Short)"
-	icon_state = "hair_shortbraid"
 
 /datum/sprite_accessory/hair/braidtail
 	name = "Braided Tail"
@@ -243,10 +216,6 @@
 /datum/sprite_accessory/hair/chinbob
 	name = "Chin-Length Bob Cut"
 	icon_state = "hair_chinbob"
-
-/datum/sprite_accessory/hair/comet
-	name = "Comet"
-	icon_state = "hair_comet"
 
 /datum/sprite_accessory/hair/cia
 	name = "CIA"
@@ -360,11 +329,6 @@
 	name = "Flair"
 	icon_state = "hair_flair"
 
-/datum/sprite_accessory/hair/bigflattop
-	name = "Flat Top (Big)"
-	icon_state = "hair_bigflattop"
-	natural_spawn = FALSE
-
 /datum/sprite_accessory/hair/flow_hair
 	name = "Flow Hair"
 	icon_state = "hair_f"
@@ -408,10 +372,6 @@
 /datum/sprite_accessory/hair/himeup
 	name = "Hime Updo"
 	icon_state = "hair_himeup"
-
-/datum/sprite_accessory/hair/hitop
-	name = "Hitop"
-	icon_state = "hair_hitop"
 
 /datum/sprite_accessory/hair/jade
 	name = "Jade"
@@ -478,39 +438,9 @@
 	name = "Modern"
 	icon_state = "hair_modern"
 
-/datum/sprite_accessory/hair/mohawk
-	name = "Mohawk"
-	icon_state = "hair_d"
-	natural_spawn = FALSE // sorry little one
-
-/datum/sprite_accessory/hair/nitori
-	name = "Nitori"
-	icon_state = "hair_nitori"
-	natural_spawn = FALSE
-
-/datum/sprite_accessory/hair/reversemohawk
-	name = "Mohawk (Reverse)"
-	icon_state = "hair_reversemohawk"
-	natural_spawn = FALSE
-
-/datum/sprite_accessory/hair/shavedmohawk
-	name = "Mohawk (Shaved)"
-	icon_state = "hair_shavedmohawk"
-	natural_spawn = FALSE
-
-/datum/sprite_accessory/hair/unshavenmohawk
-	name = "Mohawk (Unshaven)"
-	icon_state = "hair_unshaven_mohawk"
-	natural_spawn = FALSE
-
 /datum/sprite_accessory/hair/mulder
 	name = "Mulder"
 	icon_state = "hair_mulder"
-
-/datum/sprite_accessory/hair/odango
-	name = "Odango"
-	icon_state = "hair_odango"
-	natural_spawn = FALSE
 
 /datum/sprite_accessory/hair/ombre
 	name = "Ombre"
@@ -582,10 +512,6 @@
 /datum/sprite_accessory/hair/ponytail4
 	name = "Ponytail 4"
 	icon_state = "hair_ponytail4"
-
-/datum/sprite_accessory/hair/ponytail5
-	name = "Ponytail 5"
-	icon_state = "hair_ponytail5"
 
 /datum/sprite_accessory/hair/ponytail6
 	name = "Ponytail 6"

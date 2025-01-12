@@ -208,24 +208,10 @@
 /obj/item/restraints/handcuffs/cable/Initialize(mapload, new_color)
 	. = ..()
 
-	var/static/list/hovering_item_typechecks = list(
-		/obj/item/stack/sheet/iron = list(
-			SCREENTIP_CONTEXT_LMB = "Craft bola",
-		),
-	)
-
-	AddElement(/datum/element/contextual_screentip_item_typechecks, hovering_item_typechecks)
 	AddElement(/datum/element/update_icon_updates_onmob, ITEM_SLOT_HANDCUFFED)
 
 	if(new_color)
 		set_cable_color(new_color)
-
-	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/bola)
-
-	AddElement(
-		/datum/element/slapcrafting,\
-		slapcraft_recipes = slapcraft_recipe_list,\
-	)
 
 /obj/item/restraints/handcuffs/cable/proc/set_cable_color(new_color)
 	color = GLOB.cable_colors[new_color]

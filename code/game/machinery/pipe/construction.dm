@@ -121,16 +121,6 @@ Buildable meters
 	//Flipping handled manually due to custom handling for trinary pipes
 	AddComponent(/datum/component/simple_rotation, ROTATION_NO_FLIPPING)
 
-	// Only 'normal' pipes
-	if(type != /obj/item/pipe/quaternary)
-		return ..()
-	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/pipegun, /datum/crafting_recipe/improvised_pneumatic_cannon)
-
-	AddElement(
-		/datum/element/slapcrafting,\
-		slapcraft_recipes = slapcraft_recipe_list,\
-	)
-
 	return ..()
 
 /obj/item/pipe/proc/make_from_existing(obj/machinery/atmospherics/make_from)

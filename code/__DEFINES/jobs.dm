@@ -18,7 +18,7 @@
 #define JOB_AUTHORITY_NON_HUMANS_ALLOWED "NON_HUMANS_ALLOWED"
 
 #define DEFAULT_RELIGION "Christianity"
-#define DEFAULT_DEITY "Space Jesus"
+#define DEFAULT_DEITY "Jesus"
 #define DEFAULT_BIBLE "Default Bible Name"
 #define DEFAULT_BIBLE_REPLACE(religion) "The Holy Book of [religion]"
 

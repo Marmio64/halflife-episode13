@@ -41,16 +41,6 @@
 	reqs = list(/obj/item/stack/sheet/bone = 2)
 	category = CAT_WEAPON_MELEE
 
-/datum/crafting_recipe/bonespear
-	name = "Bone Spear"
-	result = /obj/item/spear/bonespear
-	time = 3 SECONDS
-	reqs = list(
-		/obj/item/stack/sheet/bone = 5,
-		/obj/item/stack/sheet/sinew = 2,
-	)
-	category = CAT_WEAPON_MELEE
-
 /datum/crafting_recipe/house_edge
 	name = "House Edge"
 	result = /obj/item/house_edge

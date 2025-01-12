@@ -39,8 +39,7 @@
 	. = ..()
 	if(!ishuman(spawned))
 		return
-	spawned.apply_pref_name(/datum/preference/name/mime, player_client)
-
+//HL13 EDIT, REMOVE NAME PREFERENCE
 
 /datum/outfit/job/mime
 	name = "Mime"

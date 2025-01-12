@@ -1,13 +1,3 @@
-/datum/crafting_recipe/bola
-	name = "Bola"
-	result = /obj/item/restraints/legcuffs/bola
-	reqs = list(
-		/obj/item/restraints/handcuffs/cable = 1,
-		/obj/item/stack/sheet/iron = 6,
-	)
-	time = 2 SECONDS //faster than crafting them by hand!
-	category = CAT_WEAPON_RANGED
-
 /datum/crafting_recipe/receiver
 	name = "Modular Rifle Receiver"
 	tool_behaviors = list(TOOL_WRENCH, TOOL_WELDER, TOOL_SAW)
@@ -30,94 +20,6 @@
 		/obj/item/stack/sticky_tape = 1,
 	)
 	time = 5 SECONDS
-	category = CAT_WEAPON_RANGED
-
-/datum/crafting_recipe/improvised_pneumatic_cannon //Pretty easy to obtain but
-	name = "Pneumatic Cannon"
-	result = /obj/item/pneumatic_cannon/ghetto
-	tool_behaviors = list(TOOL_WELDER, TOOL_WRENCH)
-	reqs = list(
-		/obj/item/stack/sheet/iron = 4,
-		/obj/item/stack/package_wrap = 8,
-		/obj/item/pipe/quaternary = 2,
-	)
-	time = 5 SECONDS
-	category = CAT_WEAPON_RANGED
-
-/datum/crafting_recipe/flamethrower
-	name = "Flamethrower"
-	result = /obj/item/flamethrower
-	reqs = list(
-		/obj/item/weldingtool = 1,
-		/obj/item/assembly/igniter = 1,
-		/obj/item/stack/rods = 1,
-	)
-	parts = list(
-		/obj/item/assembly/igniter = 1,
-		/obj/item/weldingtool = 1,
-	)
-	tool_behaviors = list(TOOL_SCREWDRIVER)
-	time = 1 SECONDS
-	category = CAT_WEAPON_RANGED
-
-/datum/crafting_recipe/pipegun
-	name = "Pipegun"
-	result = /obj/item/gun/ballistic/rifle/boltaction/pipegun
-	reqs = list(
-		/obj/item/weaponcrafting/receiver = 1,
-		/obj/item/pipe = 2,
-		/obj/item/weaponcrafting/stock = 1,
-		/obj/item/storage/toolbox = 1, // for the screws
-		/obj/item/stack/sticky_tape = 1,
-	)
-	tool_behaviors = list(TOOL_SCREWDRIVER)
-	time = 5 SECONDS
-	category = CAT_WEAPON_RANGED
-
-/datum/crafting_recipe/pipepistol
-	name = "Pipe Pistol"
-	result = /obj/item/gun/ballistic/rifle/boltaction/pipegun/pistol
-	reqs = list(
-		/obj/item/weaponcrafting/receiver = 1,
-		/obj/item/pipe = 1,
-		/obj/item/stock_parts/servo = 2,
-		/obj/item/stack/sheet/mineral/wood = 4,
-		/obj/item/storage/toolbox = 1, // for the screws
-		/obj/item/stack/sticky_tape = 1,
-	)
-	tool_paths = list(/obj/item/hatchet)
-	tool_behaviors = list(TOOL_SCREWDRIVER)
-	time = 5 SECONDS
-	category = CAT_WEAPON_RANGED
-
-/datum/crafting_recipe/rebarxbow
-	name = "Heated Rebar Crossbow"
-	result = /obj/item/gun/ballistic/rifle/rebarxbow
-	reqs = list(
-		/obj/item/stack/rods = 6,
-		/obj/item/stack/cable_coil = 12,
-		/obj/item/inducer =  1,
-	)
-	blacklist = list(
-		/obj/item/inducer/sci,
-	)
-	tool_behaviors = list(TOOL_WELDER)
-	time = 5 SECONDS
-	category = CAT_WEAPON_RANGED
-
-/datum/crafting_recipe/rebarxbowforced
-	name = "Forced Rebar Crossbow"
-	desc = "A much quicker reload... for a chance of shooting yourself when you fire it."
-	result = /obj/item/gun/ballistic/rifle/rebarxbow/forced
-	reqs = list(
-		/obj/item/gun/ballistic/rifle/rebarxbow = 1,
-	)
-	blacklist = list(
-	/obj/item/gun/ballistic/rifle/rebarxbow/forced,
-	/obj/item/gun/ballistic/rifle/rebarxbow/syndie,
-	)
-	tool_behaviors = list(TOOL_CROWBAR)
-	time = 1 SECONDS
 	category = CAT_WEAPON_RANGED
 
 /datum/crafting_recipe/pipegun_prime
@@ -184,22 +86,6 @@
 	time = 5 SECONDS
 	category = CAT_WEAPON_RANGED
 	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
-
-/datum/crafting_recipe/pipe_organ_gun
-	name = "Pipe Organ Gun"
-	tool_behaviors = list(TOOL_WELDER, TOOL_SCREWDRIVER)
-	result = /obj/structure/mounted_gun/pipe
-	reqs = list(
-		/obj/item/pipe = 8,
-		/obj/item/stack/sheet/mineral/wood = 15,
-		/obj/item/stack/sheet/iron = 10,
-		/obj/item/storage/toolbox = 1,
-		/obj/item/stack/rods = 10,
-		/obj/item/assembly/igniter = 2,
-	)
-	time = 15 SECONDS
-	category = CAT_WEAPON_RANGED
-	crafting_flags = CRAFT_CHECK_DENSITY
 
 /datum/crafting_recipe/trash_cannon
 	name = "Trash Cannon"

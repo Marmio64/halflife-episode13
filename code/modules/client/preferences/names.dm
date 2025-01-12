@@ -79,26 +79,6 @@
 /datum/preference/name/backup_human/create_informed_default_value(datum/preferences/preferences)
 	return generate_random_name(preferences.read_preference(/datum/preference/choiced/gender))
 
-/datum/preference/name/clown
-	savefile_key = "clown_name"
-
-	explanation = "Clown name"
-	group = "fun"
-	relevant_job = /datum/job/clown
-
-/datum/preference/name/clown/create_default_value()
-	return pick(GLOB.clown_names)
-
-/datum/preference/name/mime
-	savefile_key = "mime_name"
-
-	explanation = "Mime name"
-	group = "fun"
-	relevant_job = /datum/job/mime
-
-/datum/preference/name/mime/create_default_value()
-	return pick(GLOB.mime_names)
-
 /datum/preference/name/cyborg
 	savefile_key = "cyborg_name"
 
@@ -180,27 +160,4 @@
 
 	return FALSE
 
-
-/// The name to use while bitrunning
-/datum/preference/name/hacker_alias
-	explanation = "Hacker alias"
-	group = "bitrunning"
-	savefile_key = "hacker_alias"
-	relevant_job = /datum/job/bitrunner
-
-
-/datum/preference/name/hacker_alias/create_default_value()
-	return pick(GLOB.hacker_aliases)
-
-
-/datum/preference/name/hacker_alias/is_valid(value)
-	return !isnull(permissive_sanitize_name(value))
-
-
-/datum/preference/name/hacker_alias/deserialize(input, datum/preferences/preferences)
-	return permissive_sanitize_name(input)
-
-
-/datum/preference/name/hacker_alias/serialize(input)
-	return permissive_sanitize_name(input)
-
+//HL13 EDIT, REMOVING UN NEEDED ALIASES

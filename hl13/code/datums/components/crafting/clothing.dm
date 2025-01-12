@@ -4,6 +4,11 @@
 	result = /obj/item/clothing/under/citizen/rebel
 	reqs = list(/obj/item/clothing/under/citizen = 1,
 				/obj/item/clothing/under/combine/civilprotection = 1)
+
+	blacklist = list(
+	/obj/item/clothing/under/citizen/rebel,
+	/obj/item/clothing/under/citizen/refugee,
+	)
 	time = 10 SECONDS
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
