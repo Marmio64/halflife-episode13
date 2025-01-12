@@ -11,3 +11,13 @@
 	price_min = CARGO_CRATE_VALUE
 	price_max = CARGO_CRATE_VALUE * 2
 	availability_prob = 50
+
+/datum/market_item/halflife/tool/crowbar
+	name = "Crowbar"
+	desc = "A large crowbar. Useful as a tool for machining, prying open manhole covers, or just plain beating skulls in."
+	item = /obj/item/crowbar/large
+	stock = 3
+
+	price_min = CARGO_CRATE_VALUE/2
+	price_max = CARGO_CRATE_VALUE
+	availability_prob = 90

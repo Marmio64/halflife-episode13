@@ -7,7 +7,7 @@ SUBSYSTEM_DEF(market)
 	var/shipping_method_descriptions = list(
 		SHIPPING_METHOD_LAUNCH = "Launches the item at the station from space, cheap but you might not receive your item at all.",
 		SHIPPING_METHOD_LTSRBT = "Long-To-Short-Range-Bluespace-Transceiver, a machine that receives items outside the station and then teleports them to the location of the uplink.",
-		SHIPPING_METHOD_TELEPORT = "Teleports the item in a random area in the station, you get 60 seconds to get there first though.",
+		SHIPPING_METHOD_TELEPORT = "Teleports the item to you using prototype teleportation technology. Allows the item to reach you even underground or under roofs, but is much more expensive to preform.",
 		SHIPPING_METHOD_SUPPLYPOD = "Launches the item to you inside a stolen combine supply pod. You'll need to be outdoors in a unroofed area to order this way, or you will NOT receive your item or a refund.", //HL13 EDIT, MUST BE OUTDOORS TO RECEIVE POD
 	)
 
@@ -68,18 +68,18 @@ SUBSYSTEM_DEF(market)
 
 				to_chat(buyer, span_notice("[purchase.uplink] flashes a message noting that the order is being processed by [lowest_cd_pad]."))
 
-			// Get random area, throw it somewhere there.
+			// HL13 EDIT ----- TELEPORTATION NOW SIMPLY TELEPORTS THE ITEM DIRECTLY TO YOU
 			if(SHIPPING_METHOD_TELEPORT)
-				var/turf/targetturf = get_safe_random_station_turf()
+				var/turf/targetturf = get_turf(purchase.uplink)
 				// This shouldn't happen.
 				if (!targetturf)
 					continue
 				queued_purchases -= purchase
 
-				to_chat(buyer, span_notice("[purchase.uplink] flashes a message noting that the order is being teleported to [get_area(targetturf)] in 60 seconds."))
+				to_chat(buyer, span_notice("[purchase.uplink] flashes a message noting that the order is being teleported to you in 10 seconds."))
 
 				// do_teleport does not want to teleport items from nullspace, so it just forceMoves and does sparks.
-				addtimer(CALLBACK(src, TYPE_PROC_REF(/datum/controller/subsystem/market, fake_teleport), purchase, targetturf), 60 SECONDS)
+				addtimer(CALLBACK(src, TYPE_PROC_REF(/datum/controller/subsystem/market, fake_teleport), purchase, targetturf), 10 SECONDS)
 
 			// Get the current location of the uplink if it exists, then throws the item from space at the station from a random direction.
 			if(SHIPPING_METHOD_LAUNCH)

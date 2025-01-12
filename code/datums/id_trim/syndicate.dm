@@ -105,3 +105,10 @@
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_SYNDICATE, ACCESS_SYNDICATE_LEADER)
 	big_pointer = TRUE
 	pointer_color = COLOR_SYNDIE_RED
+
+/datum/id_trim/chameleon/blackmarket //HL13 EDIT
+	assignment = "Black Market Dealer"
+	trim_state = "trim_syndicate"
+	department_color = COLOR_SYNDIE_RED
+	subdepartment_color = COLOR_SYNDIE_RED
+	sechud_icon_state = SECHUD_SYNDICATE

@@ -777,7 +777,7 @@
 
 /datum/armor/beret_durathread
 	melee = 15
-	bullet = 5
+	bullet = 10 //HL13 EDIT
 	laser = 15
 	energy = 25
 	bomb = 10
@@ -785,7 +785,7 @@
 	acid = 5
 	wound = 4
 
-/obj/item/clothing/head/beret/durathread/unitednations
+/obj/item/clothing/head/beret/durathread/unitednations //HL13 ADDITION
 	name = "old blue beret"
 	desc = "An old blue beret, moderately armored and adorned with a heavily faded united nations symbol."
 

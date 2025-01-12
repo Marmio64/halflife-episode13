@@ -10,7 +10,37 @@
 	price_min = CARGO_CRATE_VALUE
 	price_max = CARGO_CRATE_VALUE * 2
 	stock_max = 3
-	availability_prob = 60
+	availability_prob = 80
+
+/datum/market_item/halflife/weapon/uspammo
+	name = "USP Match Magazine"
+	desc = "A single magazine for the USP Match pistol."
+	item = /obj/item/ammo_box/magazine/usp9mm
+
+	price_min = CARGO_CRATE_VALUE/3
+	price_max = CARGO_CRATE_VALUE/2
+	stock_max = 5
+	availability_prob = 80
+
+/datum/market_item/halflife/weapon/makeshiftpistol
+	name = "Makeshift Pistol"
+	desc = "A makeshift 9mm pistol. Pretty shit for a gun, but a gun nonetheless, and will serve you well."
+	item = /obj/item/gun/ballistic/automatic/pistol/makeshift
+
+	price_min = CARGO_CRATE_VALUE/2
+	price_max = CARGO_CRATE_VALUE
+	stock_max = 3
+	availability_prob = 100
+
+/datum/market_item/halflife/weapon/makeshiftpistolammo
+	name = "Makeshift Pistol Magazine"
+	desc = "A makeshift 9mm pistol magazine."
+	item = /obj/item/ammo_box/magazine/makeshift9mm
+
+	price_min = CARGO_CRATE_VALUE/5
+	price_max = CARGO_CRATE_VALUE/4
+	stock_max = 6
+	availability_prob = 100
 
 /datum/market_item/halflife/weapon/mp7
 	name = "MP7"
@@ -31,3 +61,23 @@
 	price_max = CARGO_CRATE_VALUE * 3
 	stock_max = 3
 	availability_prob = 60
+
+/datum/market_item/halflife/weapon/rebarxbow
+	name = "Heated Rebar Crossbow"
+	desc = "A crossbow which can heat up and fire high power rebar bolts for extreme damage, all from a safe range."
+	item = /obj/item/gun/ballistic/rifle/rebarxbow
+
+	price_min = CARGO_CRATE_VALUE
+	price_max = CARGO_CRATE_VALUE * 2
+	stock_max = 3
+	availability_prob = 80
+
+/datum/market_item/halflife/weapon/switchblade
+	name = "Switchblade"
+	desc = "An extendable knife for shanking. Deadly, and concealable."
+	item = /obj/item/switchblade
+
+	price_min = CARGO_CRATE_VALUE/2
+	price_max = CARGO_CRATE_VALUE
+	stock_max = 3
+	availability_prob = 80
