@@ -21,3 +21,13 @@
 	price_max = CARGO_CRATE_VALUE
 	stock_max = 3
 	availability_prob = 80
+
+/datum/market_item/halflife/consumable/cigs
+	name = "Cigarette Carton"
+	desc = "A full carton of ciggies. Smokers will do anything to get their fill."
+	item = /obj/item/storage/fancy/cigarettes
+
+	price_min = CARGO_CRATE_VALUE/3
+	price_max = CARGO_CRATE_VALUE/2
+	stock_max = 3
+	availability_prob = 80

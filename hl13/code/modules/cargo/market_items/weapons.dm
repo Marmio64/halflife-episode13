@@ -62,6 +62,26 @@
 	stock_max = 3
 	availability_prob = 60
 
+/datum/market_item/halflife/weapon/coltpython
+	name = "Colt Python"
+	desc = "An old world high power 357 magnum revolver. What a beut'."
+	item = /obj/item/gun/ballistic/revolver/coltpython
+
+	price_min = CARGO_CRATE_VALUE * 2
+	price_max = CARGO_CRATE_VALUE * 3
+	stock_max = 2
+	availability_prob = 60
+
+/datum/market_item/halflife/weapon/m4a1
+	name = "M4A1"
+	desc = "Now this is a real prize. Old world, fully automatic, and high power. This is a killing machine. Good luck finding more ammo for it, however."
+	item = /obj/item/gun/ballistic/automatic/m4a1
+
+	price_min = CARGO_CRATE_VALUE * 3
+	price_max = CARGO_CRATE_VALUE * 4
+	stock_max = 1
+	availability_prob = 50
+
 /datum/market_item/halflife/weapon/rebarxbow
 	name = "Heated Rebar Crossbow"
 	desc = "A crossbow which can heat up and fire high power rebar bolts for extreme damage, all from a safe range."
@@ -80,4 +100,14 @@
 	price_min = CARGO_CRATE_VALUE/2
 	price_max = CARGO_CRATE_VALUE
 	stock_max = 3
+	availability_prob = 80
+
+/datum/market_item/halflife/weapon/c4
+	name = "C4 Explosive"
+	desc = "One C4 Explosive pack. Guaranteed to blow a hole through just about anything."
+	item = /obj/item/grenade/c4
+
+	price_min = CARGO_CRATE_VALUE
+	price_max = CARGO_CRATE_VALUE * 2
+	stock_max = 2
 	availability_prob = 80

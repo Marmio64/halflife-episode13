@@ -18,12 +18,14 @@
 	id = /obj/item/card/id/advanced
 	id_trim = /datum/id_trim/chameleon/blackmarket
 
-	// 125 credits to get you started, incase you want to give some deals, get some stock right away, give change, or just buy stuff for self defense.
+	// 150 credits to get you started, incase you want to give some deals, get some stock right away, give change, or just buy stuff for self defense.
 	backpack_contents = list(
 		/obj/item/stack/spacecash/c50 = 1,
 		/obj/item/stack/spacecash/c20 = 2,
-		/obj/item/stack/spacecash/c10 = 2,
-		/obj/item/stack/spacecash/c1 = 15,
+		/obj/item/stack/spacecash/c10 = 4,
+		/obj/item/stack/spacecash/c1 = 20,
+		/obj/item/reagent_containers/pill/patch/medkit, //You're generally operating in dangerous areas
+		/obj/item/ammo_box/magazine/usp9mm, //ditto
 		/obj/item/clothing/mask/gas/hl2/military, //For covertness, if you wish.
 	)
 
