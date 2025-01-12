@@ -142,6 +142,7 @@
 	completed = TRUE
 	new /obj/item/stack/spacecash/c1(user.loc, reward)
 	icon_state = "container"
+	SSsociostability.modifystability(1) //Working increases stability
 
 /obj/item/ration_construction/used_container
 	name = "deposited ration refill container"

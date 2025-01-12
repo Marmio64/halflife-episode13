@@ -114,6 +114,7 @@
 	if(SSmarket.queue_item(purchase))
 		stock--
 		buyer.log_message("has succesfully purchased [name] using [shipping_method] for shipping.", LOG_ECON)
+		SSsociostability.modifystability(-2) //Buying black market goods decreases sociostability.
 		return TRUE
 	return FALSE
 

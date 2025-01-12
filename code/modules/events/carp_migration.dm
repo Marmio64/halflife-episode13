@@ -1,12 +1,12 @@
 /datum/round_event_control/carp_migration
-	name = "Carp Migration"
+	name = "Zombie Migration"
 	typepath = /datum/round_event/carp_migration
 	weight = 15
 	min_players = 12
 	earliest_start = 10 MINUTES
 	max_occurrences = 6
 	category = EVENT_CATEGORY_ENTITIES
-	description = "Summons a school of space carp."
+	description = "Summons a roving gang of zombies."
 	min_wizard_trigger_potency = 0
 	max_wizard_trigger_potency = 3
 	admin_setup = list(/datum/event_admin_setup/carp_migration)
@@ -28,6 +28,8 @@
 	var/carp_type = /mob/living/simple_animal/hostile/halflife/zombie
 	/// Rarer mob type to spawn, must also be a child of /mob/living/basic/carp. If one of these is created, it will take priority to show ghosts.
 	var/boss_type = /mob/living/simple_animal/hostile/halflife/zombie/poison
+	/// Just a boss type variation
+	var/boss_type_2 = /mob/living/simple_animal/hostile/halflife/zombie/zombine
 	/// What to describe detecting near the station
 	var/fluff_signal = "Unknown biological entities"
 	/// Associated lists of z level to a list of points to travel to, so that grouped fish move to the same places
@@ -37,18 +39,22 @@
 	start_when = rand(40, 60)
 
 /datum/round_event/carp_migration/announce(fake)
-	priority_announce("[fluff_signal] have been detected near [station_name()], please stand-by.", "Lifesign Alert")
+	priority_announce("[fluff_signal] have been detected near [station_name()]. All citizens are instructed to vacate district perimeters, and remain within interior locations.", "Lifesign Alert")
 
 /datum/round_event/carp_migration/start()
 	// Stores the most recent fish we spawn
 	var/mob/living/simple_animal/hostile/zombie/fish
 
 	for(var/obj/effect/landmark/carpspawn/spawn_point in GLOB.landmarks_list)
-		if(prob(95))
+		if(prob(95 - SSsociostability.getloss() / 20)) //HL13: Less sociostability means more dangerous zombies.
 			fish = new carp_type(spawn_point.loc)
 		else
-			fish = new boss_type(spawn_point.loc)
-			fishannounce(fish) //Prefer to announce the megacarps over the regular fishies
+			if(prob(50))
+				fish = new boss_type(spawn_point.loc)
+				fishannounce(fish) //Prefer to announce the megacarps over the regular fishies
+			else
+				fish = new boss_type_2(spawn_point.loc)
+				fishannounce(fish) //Prefer to announce the megacarps over the regular fishies
 
 	fishannounce(fish)
 
