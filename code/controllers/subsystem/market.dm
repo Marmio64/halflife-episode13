@@ -8,7 +8,7 @@ SUBSYSTEM_DEF(market)
 		SHIPPING_METHOD_LAUNCH = "Launches the item at the station from space, cheap but you might not receive your item at all.",
 		SHIPPING_METHOD_LTSRBT = "Long-To-Short-Range-Bluespace-Transceiver, a machine that receives items outside the station and then teleports them to the location of the uplink.",
 		SHIPPING_METHOD_TELEPORT = "Teleports the item in a random area in the station, you get 60 seconds to get there first though.",
-		SHIPPING_METHOD_SUPPLYPOD = "Ships the item inside a supply pod at your exact location. Showy, speedy and expensive.",
+		SHIPPING_METHOD_SUPPLYPOD = "Launches the item to you inside a stolen combine supply pod. You'll need to be outdoors in a unroofed area to order this way, or you will NOT receive your item or a refund.", //HL13 EDIT, MUST BE OUTDOORS TO RECEIVE POD
 	)
 
 	/// List of all existing markets.
@@ -95,14 +95,21 @@ SUBSYSTEM_DEF(market)
 				qdel(purchase)
 
 			if(SHIPPING_METHOD_SUPPLYPOD)
-				var/obj/structure/closet/supplypod/spawned_pod = podspawn(list(
-					"target" = get_turf(purchase.uplink),
-					"path" = /obj/structure/closet/supplypod/back_to_station,
-				))
-				purchase.entry.spawn_item(spawned_pod, purchase)
 
-				to_chat(buyer, span_notice("[purchase.uplink] flashes a message noting the order is being launched at your location. Right here, right now!"))
-				qdel(purchase)
+				var/area/user_area = get_area(get_turf(purchase.uplink)) //HL13 EDIT. You need to be outdoors to receive a supply pod.
+
+				if(user_area.outdoors) //HL13 EDIT. You need to be outdoors to receive a supply pod.
+					var/obj/structure/closet/supplypod/spawned_pod = podspawn(list(
+						"target" = get_turf(purchase.uplink),
+						"path" = /obj/structure/closet/supplypod/back_to_station,
+					))
+					purchase.entry.spawn_item(spawned_pod, purchase)
+
+					to_chat(buyer, span_notice("[purchase.uplink] flashes a message noting the order is being launched at your location. Right here, right now!"))
+					qdel(purchase)
+				else
+					to_chat(buyer, span_notice("[purchase.uplink] flashes an error, as the uplink is not outdoors and can not receive the shipment."))
+
 
 		if(MC_TICK_CHECK)
 			break
