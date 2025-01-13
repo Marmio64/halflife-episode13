@@ -46,10 +46,24 @@
 
 /datum/map_template/shuttle/emergency/box
 	suffix = "box"
-	name = "Box Station Emergency Shuttle"
+	name = "Standard Transfer Train"
 	credit_cost = CARGO_CRATE_VALUE * 4
-	description = "The gold standard in emergency exfiltration, this tried and true design is equipped with everything the crew needs for a safe flight home."
-	occupancy_limit = "45"
+	description = "The gold standard in relocation."
+	occupancy_limit = "30"
+
+/datum/map_template/shuttle/emergency/loyalist
+	suffix = "loyalist"
+	name = "Loyalist Transfer Train"
+	credit_cost = CARGO_CRATE_VALUE * 4
+	description = "Seperated in two sections, this train lets loyalists transfer in comfort while all the undesirables rot."
+	occupancy_limit = "20"
+
+/datum/map_template/shuttle/emergency/razortrain
+	suffix = "razortrain"
+	name = "Razor Transfer Train"
+	credit_cost = CARGO_CRATE_VALUE * 4
+	description = "A borrowed military grade train from the Overwatch Transhuman Arm. Suitable for keeping all citizens seperated from one another, and for onsite stalkerizing."
+	occupancy_limit = "25"
 
 
 #undef EMAG_LOCKED_SHUTTLE_COST
