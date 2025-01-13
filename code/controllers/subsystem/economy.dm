@@ -168,11 +168,11 @@ SUBSYSTEM_DEF(economy)
 /datum/controller/subsystem/economy/proc/price_update()
 	var/fluff_string = ""
 	if(!HAS_TRAIT(SSeconomy, TRAIT_MARKET_CRASHING))
-		fluff_string = ", but company countermeasures protect <b>YOU</b> from being affected!"
+		fluff_string = ", but union countermeasures protect <b>YOU</b> from being affected!"
 	else
-		fluff_string = ", and company countermeasures are failing to protect <b>YOU</b> from being affected. We're all doomed!"
-	earning_report = "<b>Sector Economic Report</b><br><br> Sector vendor prices is currently at <b>[SSeconomy.inflation_value()*100]%</b>[fluff_string]<br><br> The station spending power is currently <b>[station_total] Credits</b>, and the crew's targeted allowance is at <b>[station_target] Credits</b>.<br><br>[SSstock_market.news_string] That's all from the <i>Nanotrasen Economist Division</i>."
-	GLOB.news_network.submit_article(earning_report, "Station Earnings Report", "District Announcements", null, update_alert = FALSE)
+		fluff_string = ", and union countermeasures are failing to protect <b>YOU</b> from being affected. We're all doomed!"
+	earning_report = "<b>District Economic Report</b><br><br> District vendor prices is currently at <b>[SSeconomy.inflation_value()*100]%</b>[fluff_string]<br><br> The district spending power is currently <b>[station_total] Credits</b>, and the district's targeted allowance is at <b>[station_target] Credits</b>.<br><br>[SSstock_market.news_string] That's all from the <i>Civil Worker's Union Economist Division</i>."
+	GLOB.news_network.submit_article(earning_report, "District Earnings Report", "District Announcements", null, update_alert = FALSE)
 	return TRUE
 
 /**

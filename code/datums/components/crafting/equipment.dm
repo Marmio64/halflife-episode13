@@ -50,25 +50,6 @@
 	time = 10 SECONDS
 	category = CAT_EQUIPMENT
 
-/datum/crafting_recipe/motorized_wheelchair
-	name = "Motorized Wheelchair"
-	result = /obj/vehicle/ridden/wheelchair/motorized
-	reqs = list(
-		/obj/item/stack/sheet/iron = 10,
-		/obj/item/stack/rods = 8,
-		/obj/item/stock_parts/servo = 2,
-		/obj/item/stock_parts/capacitor = 1,
-		/obj/item/stock_parts/power_store/cell = 1,
-	)
-	parts = list(
-		/obj/item/stock_parts/servo = 2,
-		/obj/item/stock_parts/capacitor = 1,
-		/obj/item/stock_parts/power_store/cell = 1,
-	)
-	tool_behaviors = list(TOOL_WELDER, TOOL_SCREWDRIVER, TOOL_WRENCH)
-	time = 20 SECONDS
-	category = CAT_EQUIPMENT
-
 /datum/crafting_recipe/secured_freezer_cabinet
 	name = "Secure Freezer Cabinet"
 	result = /obj/structure/closet/secure_closet/freezer/empty
@@ -132,16 +113,6 @@
 	)
 	category = CAT_EQUIPMENT
 
-/datum/crafting_recipe/flashlight_eyes
-	name = "Flashlight Eyes"
-	result = /obj/item/organ/eyes/robotic/flashlight
-	time = 10
-	reqs = list(
-		/obj/item/flashlight = 2,
-		/obj/item/restraints/handcuffs/cable = 1
-	)
-	category = CAT_EQUIPMENT
-
 /datum/crafting_recipe/material_sniffer
 	name = "Material Sniffer"
 	time = 3 SECONDS
@@ -165,14 +136,6 @@
 	)
 	category = CAT_EQUIPMENT
 
-/datum/crafting_recipe/rcl
-	name = "Makeshift Rapid Pipe Cleaner Layer"
-	result = /obj/item/rcl/ghetto
-	time = 4 SECONDS
-	tool_behaviors = list(TOOL_WELDER, TOOL_SCREWDRIVER, TOOL_WRENCH)
-	reqs = list(/obj/item/stack/sheet/iron = 15)
-	category = CAT_EQUIPMENT
-
 /datum/crafting_recipe/gripperoffbrand
 	name = "Improvised Gripper Gloves"
 	reqs = list(
@@ -193,25 +156,3 @@
 	category = CAT_EQUIPMENT
 	tool_behaviors = list(TOOL_WELDER, TOOL_WIRECUTTER)
 
-/datum/crafting_recipe/arrow_quiver
-	name = "Archery Quiver"
-	result = /obj/item/storage/bag/quiver/lesser
-	time = 10
-	reqs = list(
-		/obj/item/stack/sheet/leather = 4,
-		/obj/item/stack/sheet/cardboard = 4
-	)
-	category = CAT_EQUIPMENT
-	tool_behaviors = list(TOOL_WELDER, TOOL_WIRECUTTER)
-
-/datum/crafting_recipe/tether_anchor
-	name = "Tether Anchor"
-	result = /obj/item/tether_anchor
-	reqs = list(
-		/obj/item/stack/sheet/iron = 5,
-		/obj/item/stack/rods = 2,
-		/obj/item/stack/cable_coil = 15
-	)
-	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WRENCH)
-	time = 5 SECONDS
-	category = CAT_EQUIPMENT

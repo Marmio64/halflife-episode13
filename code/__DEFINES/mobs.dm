@@ -279,9 +279,9 @@
 #define SANITY_LEVEL_MAX SANITY_LEVEL_INSANE
 
 //Exhaustion levels for humans
-#define TIREDNESS_MAXIMUM_THRESHOLD 800 //~100 second grace period till movement slowdown sets in
-#define TIREDNESS_SLEEPY_THRESHOLD 750 //sleepy about every 25 minutes
-#define TIREDNESS_TIRED_THRESHOLD 500
+#define TIREDNESS_MAXIMUM_THRESHOLD 900 //~100 second grace period till movement slowdown sets in
+#define TIREDNESS_SLEEPY_THRESHOLD 850 //sleepy about every 28 minutes
+#define TIREDNESS_TIRED_THRESHOLD 600
 #define TIREDNESS_CLEAR_THRESHOLD 350
 
 //Nutrition levels for humans

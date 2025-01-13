@@ -26,7 +26,6 @@ GLOBAL_LIST_INIT(part_choice_transhuman, list(
 	"Left Leg" = /obj/item/bodypart/leg/left/robot,
 	"Right Leg" = /obj/item/bodypart/leg/right/robot,
 	"Robotic Voice Box" = /obj/item/organ/tongue/robot,
-	"Flashlights for Eyes" = /obj/item/organ/eyes/robotic/flashlight,
 ))
 
 ///Hemiplegic Quirk

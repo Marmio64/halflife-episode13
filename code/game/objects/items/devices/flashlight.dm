@@ -42,13 +42,6 @@
 	update_brightness()
 	register_context()
 
-	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/flashlight_eyes)
-
-	AddElement(
-		/datum/element/slapcrafting,\
-		slapcraft_recipes = slapcraft_recipe_list,\
-	)
-
 /obj/item/flashlight/add_context(atom/source, list/context, obj/item/held_item, mob/living/user)
 	// single use lights can be toggled on once
 	if(isnull(held_item) && (toggle_context || !light_on))

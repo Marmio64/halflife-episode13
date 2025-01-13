@@ -6,7 +6,7 @@
 	name = "Synthetic Milk"
 	id = "milk"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 0.4)
+	materials = list(/datum/material/biomass = 0.6)
 	make_reagent = /datum/reagent/consumable/milk
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_FOOD)
 
@@ -14,7 +14,7 @@
 	name = "Synthetic Soy Milk"
 	id = "soymilk"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 0.4)
+	materials = list(/datum/material/biomass = 0.6)
 	make_reagent = /datum/reagent/consumable/soymilk
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_FOOD)
 
@@ -145,14 +145,6 @@
 	materials = list(/datum/material/biomass = 0.6)
 	make_reagent = /datum/reagent/toxin/pestkiller/organic
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_CHEMICALS)
-
-/datum/design/leather
-	name = "Sheet of Leather"
-	id = "leather"
-	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 30)
-	build_path = /obj/item/stack/sheet/leather
-	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
 
 /datum/design/cloth
 	name = "Sheet of Cloth"

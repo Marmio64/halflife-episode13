@@ -37,6 +37,9 @@
 	if(C.mind)
 		C.mind.name = C.real_name
 	C.dna.real_name = C.real_name
+
+	C.get_selected_language()
+
 	C.cmode_music = 'hl13/sound/music/combat/crawlyard.ogg'
 	to_chat(C, "[info_text]")
 

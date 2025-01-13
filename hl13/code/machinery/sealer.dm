@@ -1,12 +1,13 @@
 /obj/machinery/sealer
 	name = "sealing machine"
-	desc = "An industrial piece of machinery for sealing packages and goods easier and quicker than by hand."
+	desc = "An industrial piece of machinery for sealing packages and goods easier and quicker than by hand. In addition, it is able to unseal certain packages as well."
 	icon = 'hl13/icons/obj/machinery.dmi'
 	icon_state = "sealer"
 
 /obj/machinery/sealer/examine(mob/user)
 	. = ..()
 	. += span_notice("You can hit it with something that needs sealing, like a ration refill container, to seal it quickly.")
+	. += span_notice("Certain packages may also be unsealed by using this machine.")
 
 /obj/machinery/sealer/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/ration_construction/container))

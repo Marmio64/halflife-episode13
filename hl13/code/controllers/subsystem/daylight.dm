@@ -66,7 +66,7 @@ SUBSYSTEM_DEF(daylight)
 	if(current_day_time > AFTERNOON_START && current_day_time <= DUSK_START )
 		if(day_cycle_active != DAY_CYCLE_AFTERNOON)
 			day_cycle_active = DAY_CYCLE_AFTERNOON
-			priority_announce("Attention citizens, it is now afternoon. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed.", "Work Notice.")
+			priority_announce("Attention citizens, it is now afternoon. The previous ration cycle has ended. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed.", "Work Notice.")
 		if(light_coefficient < 1)
 			light_coefficient += 0.025
 

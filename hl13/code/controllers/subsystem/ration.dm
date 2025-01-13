@@ -16,7 +16,6 @@ SUBSYSTEM_DEF(ration)
 	if(SSdaylight.day_cycle_active == DAY_CYCLE_AFTERNOON)
 		if(cycle_active)
 			cycle_active = FALSE
-			priority_announce("Attention citizens, the previous ration cycle has ended and vending units have now closed.", "Ration Cycle Notice.")
 	else if (SSdaylight.day_cycle_active == DAY_CYCLE_NIGHT)
 		day_is_distributed = FALSE
 

@@ -1536,6 +1536,16 @@
 /obj/structure/halflife/barrel/single/toxic,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
+"go" = (
+/obj/structure/table/halflife/no_smooth/large/crafting/workbench,
+/obj/effect/turf_decal/box/corners{
+	dir = 8
+	},
+/obj/effect/turf_decal/box/corners{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "gp" = (
 /obj/structure/bed/halflife/bedframe/metal,
 /obj/structure/bed/halflife/mattress/old,
@@ -3730,6 +3740,16 @@
 /obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/townhall)
+"pv" = (
+/obj/structure/table/halflife/no_smooth/large/crafting/tinkerbench,
+/obj/effect/turf_decal/box/corners{
+	dir = 8
+	},
+/obj/effect/turf_decal/box/corners{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "pw" = (
 /obj/machinery/computer/prisoner/gulag_teleporter_computer,
 /obj/machinery/light/small/directional/north,
@@ -8581,6 +8601,13 @@
 /obj/structure/flora/bush/fullgrass,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors)
+"Kf" = (
+/obj/effect/turf_decal/box/corners,
+/obj/effect/turf_decal/box/corners{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "Kg" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/ground/sidewalk,
@@ -9171,6 +9198,8 @@
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/plaza)
 "MA" = (
+/obj/item/reagent_containers/cup/bucket,
+/obj/item/reagent_containers/cup/bucket,
 /obj/item/pushbroom,
 /obj/item/pushbroom,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -35919,7 +35948,7 @@ Iw
 Gx
 Gx
 ty
-zN
+go
 RX
 zN
 zN
@@ -36047,7 +36076,7 @@ Iw
 Gx
 Gx
 ty
-zN
+Kf
 zN
 Fo
 zN
@@ -36303,7 +36332,7 @@ Iw
 Gx
 Gx
 ty
-zN
+pv
 zN
 Qg
 zN
@@ -36431,7 +36460,7 @@ Iw
 Gx
 Gx
 ty
-zN
+Kf
 zN
 zN
 zN
@@ -36824,7 +36853,7 @@ Fo
 UQ
 pF
 UQ
-Qg
+Fo
 zN
 zN
 nZ

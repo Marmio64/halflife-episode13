@@ -30,7 +30,6 @@
 				/obj/item/seeds/pumpkin = 3,
 				/obj/item/seeds/toechtauese = 3,
 				/obj/item/seeds/tomato = 3,
-				/obj/item/seeds/watermelon = 3,
 			),
 		),
 
