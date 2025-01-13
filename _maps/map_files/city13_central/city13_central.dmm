@@ -1754,6 +1754,12 @@
 /obj/item/clothing/suit/caution,
 /obj/item/clothing/suit/caution,
 /obj/item/clothing/suit/caution,
+/obj/item/storage/box/lights/bulbs,
+/obj/item/storage/box/lights/bulbs,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/soap,
+/obj/item/soap,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
 "hg" = (
@@ -4617,6 +4623,10 @@
 /obj/structure/ladder/halflife/manhole,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/townhall)
+"tm" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer)
 "tn" = (
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/slums)
@@ -7803,12 +7813,9 @@
 	},
 /area/halflife/indoors/sewer)
 "GR" = (
-/obj/structure/table/halflife/no_smooth/large/metal{
-	dir = 8
-	},
+/obj/structure/table/halflife/metal/grate,
 /obj/item/storage/box/lights/mixed,
 /obj/item/storage/box/lights/mixed,
-/obj/item/soap,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
 "GU" = (
@@ -7857,6 +7864,10 @@
 "Hh" = (
 /turf/open/floor/plating/indoor/metal/walkway,
 /area/halflife/outdoors/roofs)
+"Hi" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/tile/navy,
+/area/halflife/indoors/dispatch)
 "Hj" = (
 /obj/structure/table/halflife/no_smooth/metal,
 /obj/item/stack/sheet/mineral/sandbags{
@@ -11558,9 +11569,7 @@
 /turf/open/floor/plating/indoor/carpet/shaggy/violet,
 /area/halflife/indoors/bar)
 "WT" = (
-/obj/item/storage/box/lights/bulbs,
-/obj/item/storage/box/lights/bulbs,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
 "WU" = (
@@ -11692,6 +11701,7 @@
 /obj/structure/table/halflife/no_smooth/large/metal{
 	dir = 8
 	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
 "Xx" = (
@@ -26104,7 +26114,7 @@ cD
 cD
 cD
 cD
-cD
+tm
 fp
 Rd
 Rd
@@ -46726,7 +46736,7 @@ Ow
 Bs
 bi
 bi
-BO
+Hi
 BO
 BO
 BO
