@@ -11,7 +11,7 @@
 	var/cumulative_charge = 0
 
 	/// How much cumulative charge will eventually wear down the components and make it require fixing.
-	var/malfunction_point = -1000
+	var/malfunction_point = -500
 
 	var/malfunctioning = FALSE
 
@@ -57,8 +57,17 @@
 
 	playsound(loc, 'sound/items/tools/ratchet.ogg', 25, 1)
 	balloon_alert_to_viewers("Starts repairing [src]'s internals")
+
 	if(!do_after(user, 8 SECONDS, src))
 		return FALSE
+
+	if(!HAS_TRAIT(user, TRAIT_ENGINEER))
+		if(prob(90))
+			to_chat(user, span_notice("That might have fixed it... Wait, no. Hm, it might be better to get a trained technician to handle this..."))
+			return FALSE
+		else
+			to_chat(user, span_notice("Wow, that actually worked?"))
+
 	playsound(loc, 'sound/items/tools/ratchet.ogg', 25, 1)
 	malfunctioning = FALSE
 	return TRUE

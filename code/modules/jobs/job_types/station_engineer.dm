@@ -51,7 +51,7 @@
 	mask = /obj/item/clothing/mask/gas/cwuengi
 	gloves = /obj/item/clothing/gloves/color/yellow
 	r_pocket = /obj/item/hl2key/factory
-	skillchips = list(/obj/item/skillchip/job/engineer)
+	skillchips = list(/obj/item/skillchip/engineer)
 
 /datum/outfit/job/engineer/gloved
 	name = "Station Engineer (Gloves)"

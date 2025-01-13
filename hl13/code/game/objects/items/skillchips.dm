@@ -45,3 +45,12 @@
 	complexity = 3
 	activate_message = span_notice("You feel highly trained in combat functionality.")
 	deactivate_message = span_notice("Your combat functionality seems to dim.")
+
+/obj/item/skillchip/engineer
+	name = "Engineering skillchip"
+	auto_traits = list(TRAIT_ENGINEER)
+	skill_name = "Tool Speed"
+	skill_description = "This chip will implant engineering knowledge, and let you use tools faster."
+	skill_icon = "toolbox"
+	activate_message = span_notice("You feel you know how to use engineering tools.")
+	deactivate_message = span_notice("You lose the knowledge of operating engineering tools correctly.")
