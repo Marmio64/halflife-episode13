@@ -86,12 +86,15 @@
 	return
 
 /obj/machinery/turnstile/brig/halflife/forcefield/proc/toggle_onoff()
-	if(on)
-		on = !on
-		icon_state = "forcefield_off"
+	if(!malfunctioning)
+		if(on)
+			on = !on
+			icon_state = "forcefield_off"
+		else
+			on = !on
+			icon_state = "forcefield"
 	else
-		on = !on
-		icon_state = "forcefield"
+		do_sparks(1, FALSE, src)
 
 //for semi-secure areas. Labor lead, city admin, metropolice, and perhaps trusted citizens may be allowed in.
 /obj/machinery/turnstile/brig/halflife/forcefield
@@ -102,17 +105,45 @@
 	forcefield = TRUE
 	interaction_flags_click = ALLOW_SILICON_REACH
 
+	var/malfunctioning = FALSE
+
+/obj/machinery/turnstile/brig/halflife/forcefield/examine(mob/user)
+	. = ..()
+	if(malfunctioning)
+		. += span_notice("The blue highlights are flickering, indicating a malfunctioning part. You'll have to use a wrench to get it working again.")
+
+/obj/machinery/turnstile/brig/halflife/forcefield/wrench_act(mob/living/user, obj/item/O)
+	. = ..()
+	if(!O.tool_behaviour == TOOL_WRENCH)
+		return FALSE
+
+	if(!malfunctioning)
+		balloon_alert(user, "Doesn't need fixing")
+		return FALSE
+
+	playsound(loc, 'sound/items/tools/ratchet.ogg', 25, 1)
+	balloon_alert_to_viewers("Starts repairing [src]'s internals")
+	if(!do_after(user, 8 SECONDS, src))
+		return FALSE
+	playsound(loc, 'sound/items/tools/ratchet.ogg', 25, 1)
+	malfunctioning = FALSE
+	SSsociostability.modifystability(2) //Refunds lost sociostability from the malfunction
+	return TRUE
+
+/// The forcefield experiences an issue, sparks, toggles, and now requires fixing.
+/obj/machinery/turnstile/brig/halflife/forcefield/proc/malfunction()
+	do_sparks(1, FALSE, src)
+	toggle_onoff()
+	if(!malfunctioning)
+		malfunctioning = TRUE
+		SSsociostability.modifystability(-2) //Sociostability damage until fixed.
+
 /obj/machinery/turnstile/brig/halflife/forcefield/attack_ai(mob/user)
 	click_alt(user)
 	to_chat(user, span_notice("Forcefield succesfully toggled."))
 
 /obj/machinery/turnstile/brig/halflife/forcefield/emag_act(mob/user, obj/item/card/emag/emag_card)
-	if(on)
-		on = !on
-		icon_state = "forcefield_off"
-	else
-		on = !on
-		icon_state = "forcefield"
+	malfunction()
 	return TRUE
 
 /obj/machinery/turnstile/brig/halflife/forcefield/nodirectional
