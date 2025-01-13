@@ -79,7 +79,9 @@
 	initial_gas_mix = LAVALAND_DEFAULT_ATMOS
 
 /turf/open/misc/grass/jungle/station
-	baseturfs = /turf/open/misc/dirt/station
+	baseturfs = /turf/open/floor/plating/ground/dirt
+	light_power = 0.20
+	light_range = 0.35
 
 /turf/closed/mineral/random/jungle
 	baseturfs = /turf/open/misc/dirt/dark/jungle

@@ -17,16 +17,16 @@
 	ambient_buzz_vol = 20
 
 	uses_daylight = TRUE
-	daylight_multiplier = 0.1
+	daylight_multiplier = 0.2
 
 /area/halflife/outdoors/roofs
 	name = "\improper Rooftops"
-	daylight_multiplier = 0.15
+	daylight_multiplier = 0.25
 
 /area/halflife/outdoors/sewage_dump
 	name = "\improper Sewage Dump"
 	ambient_buzz = 'hl13/sound/ambience/toxic_ambience.ogg'
-	daylight_multiplier = 0.2
+	daylight_multiplier = 0.3
 
 /area/halflife/outdoors/plaza
 	name = "\improper Plaza"
@@ -45,7 +45,7 @@
 	max_ambience_cooldown = 30 SECONDS
 	min_ambience_cooldown = 10 SECONDS
 
-	daylight_multiplier = 0.2
+	daylight_multiplier = 0.3
 
 /area/halflife/indoors
 	name = "\improper Indoors"
