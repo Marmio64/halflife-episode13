@@ -23,8 +23,7 @@ SUBSYSTEM_DEF(ration)
 
 /datum/controller/subsystem/ration/proc/distribute()
 	if(!cycle_active)
-		priority_announce("Attention citizens, a new ration cycle will begin shortly. Proceed to an applicable vending unit.", "Ration Cycle Notice.")
-		sleep(25 SECONDS)
+		sleep(20 SECONDS)
 		priority_announce("Attention citizens, a new ration cycle has begun. Applicable vending units will be able to accept your ration voucher until the cycle ends.", "Ration Cycle Notice.")
 		cycle_active = TRUE
 		var/accounts_to_give = flatten_list(SSeconomy.bank_accounts_by_id)

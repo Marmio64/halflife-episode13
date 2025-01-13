@@ -2,13 +2,13 @@
 
 #define DAY_LENGTH 30 MINUTES //With 30 minutes, days are 18000 deciseconds long
 
-#define MORNING_START (DAY_LENGTH / 4) //With 30 minutes, morning is at 4500 deciseconds
+#define MORNING_START (DAY_LENGTH / 8) //With 30 minutes, morning is at 2250 deciseconds
 
 #define AFTERNOON_START (DAY_LENGTH / 2) //With 30 minutes, afternoon is at 9000 deciseconds
 
-#define DUSK_START (DAY_LENGTH * 0.75) //With 30 minutes, dusk is at 13500 deciseconds
+#define DUSK_START (DAY_LENGTH * 0.85) //With 30 minutes, dusk is at 15300 deciseconds
 
-#define NIGHT_START (DAY_LENGTH * 0.9) //With 30 minutes, night is at 16200 deciseconds
+#define NIGHT_START (DAY_LENGTH * 0.95) //With 30 minutes, night is at 17100 deciseconds
 
 #define DAY_CYCLE_MORNING "Morning"
 
@@ -50,17 +50,26 @@ SUBSYSTEM_DEF(daylight)
 		current_day_time = 0
 
 	if(current_day_time >= NIGHT_START || current_day_time <= MORNING_START)
-		day_cycle_active = DAY_CYCLE_NIGHT
+		if(day_cycle_active != DAY_CYCLE_NIGHT)
+			day_cycle_active = DAY_CYCLE_NIGHT
+			priority_announce("Attention citizens, night is now approaching. Citizens are to return to their apartment blocks for curfew.", "Curfew Notice.")
 		if(light_coefficient > 0)
 			light_coefficient -= 0.025
+
 	if(current_day_time > MORNING_START && current_day_time <= AFTERNOON_START)
-		day_cycle_active = DAY_CYCLE_MORNING
+		if(day_cycle_active != DAY_CYCLE_MORNING)
+			day_cycle_active = DAY_CYCLE_MORNING
+			priority_announce("Attention citizens, night has concluded, and Curfew is over. Your morning ration cycle will begin shortly.", "Curfew Notice.")
 		if(light_coefficient < 0.5)
 			light_coefficient += 0.025
+
 	if(current_day_time > AFTERNOON_START && current_day_time <= DUSK_START )
-		day_cycle_active = DAY_CYCLE_AFTERNOON
+		if(day_cycle_active != DAY_CYCLE_AFTERNOON)
+			day_cycle_active = DAY_CYCLE_AFTERNOON
+			priority_announce("Attention citizens, it is now afternoon. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed.", "Work Notice.")
 		if(light_coefficient < 1)
 			light_coefficient += 0.025
+
 	if(current_day_time > DUSK_START  && current_day_time <= NIGHT_START)
 		day_cycle_active = DAY_CYCLE_DUSK
 		if(light_coefficient > 0.5)

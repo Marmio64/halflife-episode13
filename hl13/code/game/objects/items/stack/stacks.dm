@@ -26,3 +26,12 @@
 	pickup_sound = 'sound/items/handling/materials/wood_pick_up.ogg'
 	drop_sound = 'sound/items/handling/materials/wood_drop.ogg'
 
+/obj/item/stack/sheet/halflife/plastic
+	icon = 'hl13/icons/obj/stack_objects.dmi'
+	name = "plastic"
+	desc = "Pieces of plastic. Might be useful for some kind of construction."
+	singular_name = "plastic"
+	icon_state = "plastic"
+	resistance_flags = FIRE_PROOF
+	merge_type = /obj/item/stack/sheet/halflife/plastic
+	grind_results = list(/datum/reagent/plastic_polymers = 10)
