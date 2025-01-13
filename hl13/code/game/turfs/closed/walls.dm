@@ -19,6 +19,13 @@
 	icon_state = "wall-0"
 	base_icon_state = "wall"
 
+/turf/closed/wall/halflife/concrete
+	name = "concrete wall"
+	icon = 'hl13/icons/turf/walls/concrete.dmi'
+	desc = "A dirty wall of old concrete."
+	icon_state = "wall-0"
+	base_icon_state = "wall"
+
 /turf/closed/wall/halflife/metal
 	name = "metal wall"
 	icon = 'hl13/icons/turf/walls/metal.dmi'
