@@ -138,3 +138,12 @@ GLOBAL_LIST_EMPTY(chosen_station_templates)
 
 /obj/effect/landmark/navigate_destination/halflife/dispatch
 	location = "Dispatch Core"
+
+/obj/effect/landmark/navigate_destination/halflife/distributioncenter
+	location = "Ration Distribution Center"
+
+/obj/effect/landmark/navigate_destination/halflife/slums
+	location = "Slums"
+
+/obj/effect/landmark/navigate_destination/halflife/apartments/primary
+	location = "Primary Apartments"
