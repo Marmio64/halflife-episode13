@@ -128,6 +128,8 @@
 	var/uses_daylight = FALSE //hl13 edit
 	/// Daylight brightness
 	var/daylight_multiplier = 1 //hl13 edit
+	/// Text to display upon entering an area for the first time. HL13 edit
+	var/first_time_text = null
 
 /**
  * A list of teleport locations
@@ -184,6 +186,9 @@ GLOBAL_LIST_EMPTY(teleportlocs)
  */
 /area/Initialize(mapload)
 	icon_state = ""
+
+	first_time_text = uppertext(first_time_text) // Standardization. HL13 EDIT
+
 	if(!ambientsounds)
 		ambientsounds = GLOB.ambience_assoc[ambience_index]
 
@@ -553,6 +558,56 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	if(ismob(arrived))
 		var/mob/mob = arrived
 		mob.update_ambience_area(src)
+
+		//HL13 EDIT BEGIN
+		if(!isliving(mob))
+			return
+
+		var/mob/living/L = mob
+		if(!L.ckey || L.stat == DEAD)
+			return
+
+		if(first_time_text)
+			L.intro_area(src)
+		//HL13 EDIT END
+
+//HL13 EDIT START
+
+/mob/living/proc/intro_area(area/A)
+	if(!mind)
+		return
+	if(A.first_time_text in mind.areas_entered)
+		return
+	if(!client)
+		return
+	mind.areas_entered += A.first_time_text
+	var/atom/movable/screen/area_text/T = new()
+	client.screen += T
+	T.maptext = {"<span style='vertical-align:top; text-align:center;
+				color: #477394; font-size: 300%;
+				text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+				font-family: "Courier New", "Courier New";'>[A.first_time_text]</span>"}
+	T.maptext_width = 205
+	T.maptext_height = 209
+	T.maptext_x = 62
+	T.maptext_y = 112
+	playsound_local(src, 'hl13/sound/effects/area.ogg', 100, FALSE)
+	animate(T, alpha = 255, time = 10, easing = EASE_IN)
+	addtimer(CALLBACK(src, PROC_REF(clear_area_text), T), 35)
+
+/mob/living/proc/clear_area_text(atom/movable/screen/A)
+	if(!A)
+		return
+	if(!client)
+		return
+	animate(A, alpha = 0, time = 10, easing = EASE_OUT)
+	sleep(11)
+	if(client)
+		if(client.screen && A)
+			client.screen -= A
+			qdel(A)
+
+//HL13 EDIT END
 
 /**
  * Called when an atom exits an area

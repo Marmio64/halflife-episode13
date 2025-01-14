@@ -19,9 +19,13 @@
 	uses_daylight = TRUE
 	daylight_multiplier = 0.2
 
+	first_time_text = "City Streets"
+
 /area/halflife/outdoors/roofs
 	name = "\improper Rooftops"
 	daylight_multiplier = 0.25
+
+	first_time_text = "City Upper Levels"
 
 /area/halflife/outdoors/sewage_dump
 	name = "\improper Sewage Dump"
@@ -47,6 +51,8 @@
 
 	daylight_multiplier = 0.3
 
+	first_time_text = "The Outlands"
+
 /area/halflife/indoors
 	name = "\improper Indoors"
 	icon_state = "away"
@@ -62,6 +68,8 @@
 	ambient_buzz = 'hl13/sound/ambience/citadel_ambience.ogg'
 	ambient_buzz_vol = 25
 
+	first_time_text = "The Townhall"
+
 /area/halflife/indoors/bar
 	name = "\improper Bar"
 
@@ -76,6 +84,8 @@
 
 /area/halflife/indoors/slums
 	name = "\improper Slums"
+
+	first_time_text = "City Slums"
 
 /area/halflife/indoors/hospital
 	name = "\improper Hospital"
@@ -100,6 +110,8 @@
 	ambient_buzz = 'hl13/sound/ambience/industrial3.ogg'
 	ambient_buzz_vol = 100
 
+	first_time_text = "The Factory"
+
 /area/halflife/indoors/bunker
 	ambient_buzz = 'hl13/sound/ambience/bunker2.ogg'
 	ambient_buzz_vol = 70
@@ -115,13 +127,19 @@
 	mood_bonus = -2
 	mood_message = "<span class='warning'>This place smells terrible.</span>\n"
 
+	first_time_text = "City Sewers"
+
 /area/halflife/indoors/sewer/tunnel
 	name = "\improper Tunnels"
 	ambient_buzz = 'hl13/sound/ambience/bunker1.ogg'
 	ambient_buzz_vol = 80
 
+	first_time_text = null
+
 /area/halflife/indoors/sewer/cave
 	name = "\improper Mining Caves"
+
+	first_time_text = "The Mines"
 
 /area/halflife/indoors/sewer/outlandscave
 	name = "\improper Outlands Caves"
@@ -129,6 +147,8 @@
 	max_ambience_cooldown = 25 SECONDS
 	min_ambience_cooldown = 10 SECONDS
 	ambient_buzz = 'hl13/sound/ambience/antcaves/cave_howl_loop1.ogg'
+
+	first_time_text = "The Antlion Caves"
 
 /area/halflife/indoors/sewer/antlioncave
 	name = "\improper Infested Caves"

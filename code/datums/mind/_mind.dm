@@ -103,6 +103,9 @@
 	/// A list to keep track of which books a person has read (to prevent people from reading the same book again and again for positive mood events)
 	var/list/book_titles_read
 
+	/// HL13 EDIT. Stores what areas you have entered thus far.
+	var/list/areas_entered = list()
+
 /datum/mind/New(_key)
 	key = _key
 	init_known_skills()

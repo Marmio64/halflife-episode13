@@ -149,11 +149,23 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/fullscreen)
 	flick(state,screen)
 	return screen
 
+//HL13 EDIT START
 /atom/movable/screen/fullscreen/grain
 	icon_state = "grain"
 	alpha = 5
 	layer = GRAIN_LAYER
 	plane = FULLSCREEN_PLANE
+
+/atom/movable/screen/area_text
+	icon = null
+	icon_state = ""
+	name = ""
+	screen_loc = "5,5"
+	plane = HUD_PLANE
+	alpha = 0
+	var/reading
+
+//HL13 EDIT END
 
 /atom/movable/screen/fullscreen/ivanov_display
 	icon_state = "ivanov"
