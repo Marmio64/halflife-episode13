@@ -1157,10 +1157,10 @@
 	display_name = "Rebel Marine"
 	desc = "Armed with an M4A1 and a grenade, alongside a USP match as a sidearm, you have a lot of damage output available to you, but have middling armor."
 
-	head = /obj/item/clothing/head/helmet/marine/pmc
+	head = /obj/item/clothing/head/helmet/halflife/military
 	uniform = /obj/item/clothing/under/citizen/rebel
 	gloves = /obj/item/clothing/gloves/fingerless
-	suit = /obj/item/clothing/suit/armor/civilprotection
+	suit = /obj/item/clothing/suit/armor/rebel/light
 	suit_store = /obj/item/gun/ballistic/automatic/m4a1
 	l_pocket = /obj/item/grenade/syndieminibomb/bouncer
 	r_pocket = /obj/item/ammo_box/magazine/m4a1

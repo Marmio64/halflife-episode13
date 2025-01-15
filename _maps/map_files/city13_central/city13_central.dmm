@@ -4531,10 +4531,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/scienceunion)
-"sr" = (
-/obj/machinery/mining_terminal,
-/turf/closed/wall/halflife/concrete,
-/area/halflife/indoors/productioncenter)
 "ss" = (
 /obj/machinery/camera{
 	c_tag = "Plaza West";
@@ -5274,8 +5270,8 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/distributioncenter)
 "vM" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/indoor/woodc/mosaic,
+/obj/machinery/mining_terminal,
+/turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/productioncenter)
 "vO" = (
 /obj/structure/closet/crate/bin,
@@ -5971,12 +5967,6 @@
 "yx" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/laborunion)
-"yy" = (
-/obj/structure/halflife/road_barrier{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors)
 "yz" = (
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/plaza)
@@ -9634,6 +9624,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley)
+"Nv" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/productioncenter)
 "Nw" = (
 /obj/structure/table/halflife/no_smooth/metal,
 /obj/item/storage/pill_bottle,
@@ -11660,6 +11654,11 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
+"VN" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/food/nutripaste,
+/turf/open/floor/plating/indoor/tile/navy,
+/area/halflife/indoors/dispatch)
 "VO" = (
 /obj/structure/sign/block/onefive{
 	pixel_y = 32
@@ -36255,13 +36254,13 @@ tL
 tL
 tL
 tL
-tL
-tL
-tL
-tL
-tL
-tL
-tL
+xr
+xr
+xr
+xr
+xr
+xr
+xr
 Iw
 Iw
 Iw
@@ -36383,13 +36382,13 @@ tL
 tL
 tL
 tL
-tL
-tL
-tL
-tL
-tL
-tL
-tL
+xr
+dN
+Kw
+EK
+Ux
+dN
+xr
 Iw
 Iw
 Iw
@@ -36414,11 +36413,11 @@ Iw
 Iw
 Iw
 uW
-XG
+Fw
 Rb
 Op
 RH
-XG
+Fw
 uW
 Iw
 Iw
@@ -36511,13 +36510,13 @@ tL
 tL
 tL
 tL
-tL
-tL
-tL
-tL
-tL
-tL
-tL
+xr
+IN
+Kw
+EK
+Ux
+IN
+xr
 Iw
 Iw
 Iw
@@ -36640,11 +36639,11 @@ tL
 xr
 xr
 xr
-xr
-xr
-xr
-xr
-xr
+IN
+Kw
+EK
+Ux
+IN
 xr
 Iw
 Iw
@@ -36670,11 +36669,11 @@ Iw
 Iw
 Iw
 uW
-Fw
+XG
 Rb
 Op
 RH
-Fw
+XG
 uW
 Iw
 Iw
@@ -36769,11 +36768,12 @@ xr
 xr
 xr
 xr
+lP
+XU
+kU
 xr
 xr
-xr
-xr
-xr
+Iw
 Iw
 Iw
 Iw
@@ -36784,7 +36784,6 @@ Iw
 Iw
 Iw
 bD
-Iw
 Iw
 Iw
 Iw
@@ -36895,13 +36894,13 @@ tL
 tL
 xr
 xr
-yy
-TU
-lP
-XU
-kU
-TU
-yy
+fT
+IN
+Kw
+EK
+Ux
+IN
+fT
 NC
 NC
 NC
@@ -36911,7 +36910,7 @@ NC
 NC
 NC
 NC
-Iw
+NC
 Iw
 Iw
 Iw
@@ -37039,7 +37038,7 @@ NC
 NC
 NC
 NC
-Iw
+NC
 Iw
 Iw
 Iw
@@ -37167,7 +37166,7 @@ NC
 NC
 NC
 NC
-Iw
+NC
 Iw
 Iw
 Iw
@@ -37295,7 +37294,7 @@ NC
 NC
 NC
 NC
-Iw
+NC
 Iw
 Iw
 Iw
@@ -37423,7 +37422,7 @@ NC
 NC
 NC
 NC
-Iw
+NC
 Iw
 Iw
 Iw
@@ -37551,7 +37550,7 @@ NC
 NC
 NC
 NC
-Iw
+NC
 Iw
 Iw
 Iw
@@ -37679,7 +37678,7 @@ NC
 NC
 NC
 NC
-Iw
+NC
 Iw
 Iw
 Iw
@@ -37807,7 +37806,7 @@ NC
 NC
 NC
 NC
-Iw
+NC
 Iw
 Iw
 Iw
@@ -37935,7 +37934,7 @@ NC
 NC
 NC
 NC
-Iw
+NC
 Iw
 Iw
 Iw
@@ -38063,7 +38062,7 @@ NC
 NC
 NC
 NC
-Iw
+NC
 Iw
 Iw
 Iw
@@ -38864,7 +38863,7 @@ Iw
 Iw
 Iw
 Iw
-Iw
+NC
 NC
 NC
 NC
@@ -38992,7 +38991,7 @@ Iw
 Iw
 Iw
 Iw
-Iw
+NC
 NC
 NC
 NC
@@ -39120,7 +39119,7 @@ Iw
 Iw
 Iw
 Iw
-Iw
+NC
 NC
 NC
 NC
@@ -39248,7 +39247,7 @@ Iw
 Iw
 Iw
 Iw
-Iw
+NC
 NC
 NC
 NC
@@ -39376,7 +39375,7 @@ Iw
 Iw
 Iw
 Iw
-Iw
+NC
 NC
 NC
 NC
@@ -39504,7 +39503,7 @@ Gx
 Gx
 Gx
 Gx
-Gx
+NC
 NC
 NC
 NC
@@ -39632,7 +39631,7 @@ Gx
 Gx
 Gx
 Gx
-Gx
+NC
 NC
 NC
 NC
@@ -39760,7 +39759,7 @@ Iw
 Iw
 Gx
 Gx
-Gx
+NC
 NC
 NC
 NC
@@ -39888,7 +39887,7 @@ NC
 Iw
 Gx
 Gx
-Gx
+NC
 NC
 NC
 NC
@@ -40016,7 +40015,7 @@ NC
 DQ
 Gx
 Gx
-Gx
+NC
 NC
 NC
 NC
@@ -41553,7 +41552,7 @@ Iw
 Gx
 Gx
 fq
-vM
+Nv
 jf
 CR
 fq
@@ -43602,7 +43601,7 @@ Gx
 Gx
 fq
 fq
-sr
+vM
 UQ
 KN
 fq
@@ -46195,8 +46194,8 @@ tL
 tL
 tL
 tL
-tL
-tL
+xr
+xr
 Iw
 Iw
 Iw
@@ -46323,12 +46322,12 @@ tL
 tL
 tL
 tL
-tL
-tL
-Iw
+xr
 xr
 aD
 na
+fT
+fT
 fT
 Bt
 fT
@@ -46451,11 +46450,11 @@ tL
 tL
 tL
 tL
-tL
-tL
-Iw
+xr
 xr
 SL
+IN
+IN
 IN
 IN
 IN
@@ -46579,11 +46578,11 @@ tL
 tL
 tL
 tL
-tL
-tL
-Iw
+xr
 xr
 Ol
+nn
+nn
 nn
 nn
 nn
@@ -46707,11 +46706,11 @@ tL
 tL
 tL
 tL
-tL
-tL
-Iw
+xr
 xr
 vz
+Mw
+Mw
 Mw
 Mw
 Mw
@@ -46835,11 +46834,11 @@ tL
 tL
 tL
 tL
-tL
-tL
-Iw
+xr
 xr
 HD
+wp
+wp
 wp
 wp
 wp
@@ -46963,11 +46962,11 @@ tL
 tL
 tL
 tL
-tL
-tL
-Iw
+xr
 xr
 SL
+IN
+IN
 IN
 IN
 IN
@@ -47091,12 +47090,12 @@ tL
 tL
 tL
 tL
-tL
-tL
-Iw
+xr
 xr
 aD
 na
+fT
+fT
 fT
 po
 fT
@@ -47219,8 +47218,8 @@ tL
 tL
 tL
 tL
-tL
-tL
+xr
+xr
 Iw
 Iw
 Iw
@@ -52754,7 +52753,7 @@ Xc
 Xc
 Xc
 Xc
-BO
+VN
 BO
 BO
 BO
@@ -61905,7 +61904,7 @@ DL
 DL
 DL
 DL
-DL
+Rz
 Rz
 Rz
 Rz
@@ -62033,7 +62032,7 @@ DL
 DL
 DL
 DL
-DL
+Rz
 Rz
 Rz
 Rz
@@ -62161,7 +62160,7 @@ Rz
 Rz
 DL
 DL
-DL
+Rz
 Rz
 Rz
 Rz
@@ -62289,7 +62288,7 @@ Rz
 Rz
 DL
 DL
-DL
+Rz
 Rz
 Rz
 Rz
@@ -62417,7 +62416,7 @@ Rz
 Rz
 DL
 DL
-DL
+Rz
 Rz
 Rz
 Rz
@@ -68597,8 +68596,8 @@ mh
 mh
 mh
 mh
-mh
-mh
+Rz
+Rz
 Rz
 Rz
 Rz
@@ -68725,9 +68724,9 @@ mh
 mh
 mh
 mh
-mh
-mh
 Rz
+DL
+DL
 DL
 DL
 DL
@@ -68853,9 +68852,9 @@ mh
 mh
 mh
 mh
-mh
-mh
 Rz
+DL
+DL
 DL
 DL
 DL
@@ -68981,9 +68980,9 @@ mh
 mh
 mh
 mh
-mh
-mh
 Rz
+DL
+DL
 DL
 DL
 DL
@@ -69109,9 +69108,9 @@ mh
 mh
 mh
 mh
-mh
-mh
 Rz
+DL
+DL
 DL
 DL
 DL
@@ -69237,9 +69236,9 @@ mh
 mh
 mh
 mh
-mh
-mh
 Rz
+DL
+DL
 DL
 DL
 DL
@@ -69365,9 +69364,9 @@ mh
 mh
 mh
 mh
-mh
-mh
 Rz
+DL
+DL
 DL
 DL
 DL
@@ -69493,9 +69492,9 @@ mh
 mh
 mh
 mh
-mh
-mh
 Rz
+DL
+DL
 DL
 DL
 DL
@@ -69621,8 +69620,8 @@ mh
 mh
 mh
 mh
-mh
-mh
+Rz
+Rz
 Rz
 XQ
 XQ

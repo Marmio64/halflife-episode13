@@ -29,3 +29,22 @@
 	resistance_flags = FIRE_PROOF
 	clothing_traits = list(TRAIT_HEAD_INJURY_BLOCKED)
 
+/obj/item/clothing/head/helmet/halflife/military
+	name = "military helmet"
+	desc = "An old world military helmet for protecting your noggin."
+	icon = 'hl13/icons/obj/clothing/hats.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
+	icon_state = "military"
+	base_icon_state = "military"
+	armor_type = /datum/armor/military_helmet
+	flags_cover = EARS_COVERED
+
+/datum/armor/military_helmet
+	melee = 25
+	bullet = 20
+	laser = 20
+	energy = 20
+	bomb = 25
+	fire = 50
+	acid = 50
+	wound = 10

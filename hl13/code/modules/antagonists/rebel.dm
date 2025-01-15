@@ -1,5 +1,5 @@
 /datum/outfit/rebel
-	name = "Rebel"
+	name = "Light Rebel"
 
 	uniform = /obj/item/clothing/under/citizen/rebel
 	//accessory = /obj/item/clothing/accessory/armband/rebel
@@ -16,8 +16,33 @@
 	l_pocket = /obj/item/flashlight/seclite
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/usp9mm = 1,
+	)
+
 /datum/outfit/rebel/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/vortalcombat.ogg'
+
+/datum/outfit/rebel/medium
+	name = "Medium Rebel"
+
+	suit = /obj/item/clothing/suit/armor/rebel/light
+	suit_store = /obj/item/gun/ballistic/automatic/mp7
+
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/mp7 = 1,
+	)
+
+/datum/outfit/rebel/heavy
+	name = "Heavy Rebel"
+
+	suit = /obj/item/clothing/suit/armor/rebel
+	head = /obj/item/clothing/head/helmet/halflife/military
+	suit_store = /obj/item/gun/ballistic/automatic/m4a1
+
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m4a1 = 1,
+	)
 
 /datum/outfit/rebel/uplink
 	name = "Rebel Uplinked"
@@ -42,6 +67,7 @@
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
 		/obj/item/storage/box/halflife/ration,
 		/obj/item/crowbar/large,
+		/obj/item/gun/ballistic/automatic/pistol/makeshift,
 		/obj/item/gun/ballistic/rifle/rebarxbow
 		) //Refugees get a random item from this list
 

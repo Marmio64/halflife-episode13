@@ -75,6 +75,10 @@
 		"Officer needs assistance" = 'hl13/sound/voice/cpvoicelines/officerneedsassistance.ogg',
 		"Cover me" = 'hl13/sound/voice/cpvoicelines/covermegoingin.ogg',
 		"Converging" = 'hl13/sound/voice/cpvoicelines/converging.ogg',
+		"Final warning" = 'hl13/sound/voice/cpvoicelines/finalwarning.ogg',
+		"Officer under fire" = 'hl13/sound/voice/cpvoicelines/officerunderfiretakingcover.ogg',
+		"Running low on verdicts" = 'hl13/sound/voice/cpvoicelines/runninglowonverdicts.ogg',
+		"Viscerator deployed" = 'hl13/sound/voice/cpvoicelines/visceratordeployed.ogg',
 
 	)
 
@@ -90,7 +94,6 @@
 		"Call contact parasitics" = 'hl13/sound/voice/otavoicelines/callcontactparasitics.ogg',
 		"Heavy resistance" = 'hl13/sound/voice/otavoicelines/heavyresistance.ogg',
 		"Ripcord" = 'hl13/sound/voice/otavoicelines/ripcord.ogg',
-		"Bouncer" = 'hl13/sound/voice/otavoicelines/bouncerbouncer.ogg',
 		"Contact" = 'hl13/sound/voice/otavoicelines/contact.ogg',
 		"Shit" = 'hl13/sound/voice/cpvoicelines/shit.ogg',
 		"Take cover" = 'hl13/sound/voice/cpvoicelines/takecover.ogg',
@@ -116,9 +119,9 @@
 
 	COOLDOWN_START(src, hailer_cooldown, PHRASE_COOLDOWN)
 
-	usr.audible_message("[usr]'s Vocoder: <font color='red' size='4'><b>Hold it!</b></font>")
+	usr.audible_message("[usr]'s Vocoder: <font color='red' size='4'><b>Hold it right there!</b></font>")
 
-	playsound(src, 'hl13/sound/voice/cpvoicelines/holdit.ogg', 75, FALSE)
+	playsound(src, 'hl13/sound/voice/cpvoicelines/holditrightthere.ogg', 75, FALSE)
 
 /datum/action/item_action/help_request
 	name = "Request Assistance!"
@@ -152,6 +155,10 @@
 /obj/item/clothing/mask/gas/civilprotection/handle_speech(mob/living/carbon/source, mob/speech_args)
 	if(source.wear_mask == src)
 		var/chosen_sound = file("hl13/sound/voice/cpradio/off[rand(1,4)].ogg")
+
+		if(overwatch)
+			chosen_sound = file("hl13/sound/voice/otaradio/off[rand(1,3)].ogg")
+
 		playsound(source, chosen_sound, 50, FALSE)
 
 	var/full_message = speech_args[SPEECH_MESSAGE]

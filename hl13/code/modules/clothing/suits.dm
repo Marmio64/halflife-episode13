@@ -226,6 +226,7 @@
 	desc = "A Civil Protection chestplate with some basic armour pieces strapped on. I'm gonna stay and hold down this spot."
 	icon_state = "rebelarmor_light"
 	inhand_icon_state = "rebelarmor_light"
+	slowdown = 0
 	armor_type = /datum/armor/rebellight
 
 /datum/armor/rebellight
