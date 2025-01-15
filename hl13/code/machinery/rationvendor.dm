@@ -58,7 +58,7 @@
 
 	playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
 
-	if(!do_after(user, 4 SECONDS, src))
+	if(!do_after(user, 5 SECONDS, src))
 		to_chat(usr, span_warning("The machine did not finish determining your ration reward!"))
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		flick(icon_state_deny,src)
@@ -108,8 +108,6 @@
 		say("Here is your designated meal, biotic.")
 	else
 		say("Enjoy your designated meal.")
-
-	playsound(src, 'hl13/sound/machines/machine_vend.ogg', 50, TRUE, extrarange = -3)
 
 	switch(quality)
 		if(0 to 1)

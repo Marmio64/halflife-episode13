@@ -254,6 +254,7 @@
 			up.icon_state = "manhole_open"
 			up.desc = "An open manhole, it still stinks even after all these years. You could use a crowbar or your hands to slide the cover back on."
 			up.density = FALSE
+			up.obstructed = FALSE
 			density = FALSE
 			to_chat(user, span_notice("You push up on the cover from below, and slide it off."))
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN

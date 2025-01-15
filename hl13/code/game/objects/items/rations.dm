@@ -1,9 +1,9 @@
 /obj/item/storage/box/halflife
-	icon = 'icons/obj/storage/storage.dmi'
+	icon = 'hl13/icons/obj/storage/rationbags.dmi'
 
 /obj/item/storage/box/halflife/Initialize(mapload)
 	. = ..()
-	atom_storage.max_slots = 4
+	atom_storage.max_slots = 2
 
 /obj/item/storage/box/halflife/ration
 	name = "ration pack"
@@ -83,6 +83,9 @@
 	foodtypes = null //Don't ask what went into them. You're better off not knowing.
 	food_reagents = list(/datum/reagent/consumable/nutriment = 8)
 	custom_price = 15
+
+	preserved_food = TRUE
+
 	var/mood_penalty = /datum/mood_event/gross_food
 
 ///Override for checkliked callback
@@ -134,9 +137,33 @@
 	foodtypes = null //Don't ask what went into them. You're better off not knowing.
 	food_reagents = list(/datum/reagent/consumable/astrotame = 1, /datum/reagent/consumable/nutriment = 1)
 
+	preserved_food = TRUE
+
 /obj/item/food/flavorbar/large
 	name = "large flavor bar"
 	food_reagents = list(/datum/reagent/consumable/astrotame = 1, /datum/reagent/consumable/nutriment = 2)
+
+
+/obj/item/food/nutripaste
+	name = "nutripaste"
+	desc = "A tube full of nutripaste. This looks absolutely abhorrent, and makes the standard ration bars taste like a delicacy in comparison. At the least, it is rather nutritious."
+	icon = 'hl13/icons/obj/food.dmi'
+	icon_state = "nutripaste"
+	bite_consumption = 2
+	tastes = list("rancid water" = 3, "depression" = 3)
+	foodtypes = null //Don't ask what went into them. You're better off not knowing.
+	food_reagents = list(/datum/reagent/consumable/nutriment = 10) //Very nutritious at least...
+
+	preserved_food = TRUE
+
+///Override for checkliked callback
+/obj/item/food/nutripaste/make_edible()
+	. = ..()
+	AddComponent(/datum/component/edible, check_liked = CALLBACK(src, PROC_REF(check_liked)))
+
+/obj/item/food/nutripaste/proc/check_liked(mob/mob) //Nutripaste is espescially abhorrent...
+	return FOOD_TOXIC
+
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater
 	name = "water can"

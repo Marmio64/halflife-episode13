@@ -589,8 +589,8 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 				font-family: "Courier New", "Courier New";'>[A.first_time_text]</span>"}
 	T.maptext_width = 205
 	T.maptext_height = 209
-	T.maptext_x = 62
-	T.maptext_y = 112
+	T.maptext_x = 64
+	T.maptext_y = 115
 	playsound_local(src, 'hl13/sound/effects/area.ogg', 100, FALSE)
 	animate(T, alpha = 255, time = 10, easing = EASE_IN)
 	addtimer(CALLBACK(src, PROC_REF(clear_area_text), T), 35)

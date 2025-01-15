@@ -36,6 +36,8 @@
 	name = "\improper Plaza"
 	ambient_buzz_vol = 25
 
+	first_time_text = "Central Plaza"
+
 /area/halflife/outdoors/alley
 	name = "\improper Alley Ways"
 	ambient_buzz = 'hl13/sound/ambience/tone_alley.ogg'
@@ -73,14 +75,20 @@
 /area/halflife/indoors/bar
 	name = "\improper Bar"
 
+	first_time_text = "District Bar"
+
 /area/halflife/indoors/dispatch
 	name = "\improper Dispatch Core"
 
 /area/halflife/indoors/restaurant
 	name = "\improper Restaurant"
 
+	first_time_text = "District Restaurant"
+
 /area/halflife/indoors/trainstation
 	name = "\improper Trainstation"
+
+	first_time_text = "The Trainstation"
 
 /area/halflife/indoors/slums
 	name = "\improper Slums"
@@ -90,20 +98,32 @@
 /area/halflife/indoors/hospital
 	name = "\improper Hospital"
 
+	first_time_text = "The Hospital"
+
 /area/halflife/indoors/scienceunion
 	name = "\improper Science Union"
+
+	first_time_text = "The Science Union"
 
 /area/halflife/indoors/store
 	name = "\improper Store"
 
+	first_time_text = "The Store"
+
 /area/halflife/indoors/laborunion
 	name = "\improper Labor Union"
+
+	first_time_text = "The Labor Union"
 
 /area/halflife/indoors/distributioncenter
 	name = "\improper Distribution Center"
 
+	first_time_text = "The Distribution Center"
+
 /area/halflife/indoors/hydroponics
 	name = "\improper Hydroponics"
+
+	first_time_text = "Hydroponics"
 
 /area/halflife/indoors/productioncenter
 	name = "\improper Production Center"
@@ -161,6 +181,8 @@
 	name = "Overwatch Rail Interchange"
 	ambient_buzz = 'hl13/sound/ambience/town_ambience.ogg'
 
+	first_time_text = "City 13 Nexus"
+
 /area/centcom/halflife/ota
 	name = "Overwatch Rail Interchange Dispatch"
 	ambient_buzz = 'hl13/sound/ambience/citadel_ambience.ogg'
@@ -176,6 +198,8 @@
 	ambient_buzz_vol = 20
 
 	base_lighting_alpha = 10
+
+	first_time_text = "Northwatch District"
 
 /area/centcom/halflife/rebel
 	name = "Resistance Outpost"
