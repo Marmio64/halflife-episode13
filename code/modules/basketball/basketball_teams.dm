@@ -62,7 +62,7 @@
 
 /datum/outfit/basketball/nanotrasen
 	name = "Basketball NT Team"
-	undershirt = /datum/sprite_accessory/undershirt/bluejersey
+	undershirt = /datum/sprite_accessory/undershirt/shirt
 	uniform = /obj/item/clothing/under/shorts/blue
 	suit = /obj/item/clothing/suit/jacket/letterman_nanotrasen
 	shoes = /obj/item/clothing/shoes/sneakers/black

@@ -142,7 +142,7 @@
 		if(MALE)
 			return /datum/sprite_accessory/undershirt/nude::name
 		if(FEMALE)
-			return /datum/sprite_accessory/undershirt/sports_bra::name
+			return /datum/sprite_accessory/undershirt/shirt::name
 
 	return ..()
 
@@ -183,7 +183,7 @@
 	return assoc_to_keys_features(SSaccessories.underwear_list)
 
 /datum/preference/choiced/underwear/create_default_value()
-	return /datum/sprite_accessory/underwear/male_hearts::name
+	return /datum/sprite_accessory/underwear/briefs::name
 
 /datum/preference/choiced/underwear/icon_for(value)
 	var/static/icon/lower_half
