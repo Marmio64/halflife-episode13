@@ -77,7 +77,7 @@
 	name = "uranium ore"
 	icon_state = "uranium"
 	singular_name = "uranium ore chunk"
-	points = 30
+	points = 8
 	material_flags = NONE
 	mats_per_unit = list(/datum/material/uranium=SHEET_MATERIAL_AMOUNT)
 	refined_type = /obj/item/stack/sheet/mineral/uranium
@@ -154,7 +154,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	name = "plasma ore"
 	icon_state = "plasma"
 	singular_name = "plasma ore chunk"
-	points = 15
+	points = 3
 	mats_per_unit = list(/datum/material/plasma=SHEET_MATERIAL_AMOUNT)
 	refined_type = /obj/item/stack/sheet/mineral/plasma
 	mine_experience = 5
@@ -170,7 +170,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	name = "silver ore"
 	icon_state = "silver"
 	singular_name = "silver ore chunk"
-	points = 16
+	points = 4
 	mine_experience = 3
 	mats_per_unit = list(/datum/material/silver=SHEET_MATERIAL_AMOUNT)
 	refined_type = /obj/item/stack/sheet/mineral/silver
@@ -182,7 +182,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	name = "gold ore"
 	icon_state = "gold"
 	singular_name = "gold ore chunk"
-	points = 18
+	points = 6
 	mine_experience = 5
 	mats_per_unit = list(/datum/material/gold=SHEET_MATERIAL_AMOUNT)
 	refined_type = /obj/item/stack/sheet/mineral/gold
@@ -194,7 +194,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	name = "diamond ore"
 	icon_state = "diamond"
 	singular_name = "diamond ore chunk"
-	points = 50
+	points = 12
 	mats_per_unit = list(/datum/material/diamond=SHEET_MATERIAL_AMOUNT)
 	refined_type = /obj/item/stack/sheet/mineral/diamond
 	mine_experience = 10
@@ -208,7 +208,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	name = "bananium ore"
 	icon_state = "bananium"
 	singular_name = "bananium ore chunk"
-	points = 60
+	points = 18
 	mats_per_unit = list(/datum/material/bananium=SHEET_MATERIAL_AMOUNT)
 	refined_type = /obj/item/stack/sheet/mineral/bananium
 	mine_experience = 15
@@ -219,7 +219,7 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	name = "titanium ore"
 	icon_state = "titanium"
 	singular_name = "titanium ore chunk"
-	points = 50
+	points = 6
 	mats_per_unit = list(/datum/material/titanium=SHEET_MATERIAL_AMOUNT)
 	refined_type = /obj/item/stack/sheet/mineral/titanium
 	mine_experience = 3

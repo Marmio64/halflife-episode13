@@ -27,14 +27,14 @@
 	var/static/list/ore_values = list(
 		/datum/material/iron = 1,
 		/datum/material/glass = 1,
-		/datum/material/plasma = 15,
-		/datum/material/silver = 16,
-		/datum/material/gold = 18,
-		/datum/material/titanium = 30,
-		/datum/material/uranium = 30,
-		/datum/material/diamond = 50,
-		/datum/material/bluespace = 50,
-		/datum/material/bananium = 60,
+		/datum/material/plasma = 3,
+		/datum/material/silver = 4,
+		/datum/material/gold = 6,
+		/datum/material/titanium = 8,
+		/datum/material/uranium = 8,
+		/datum/material/diamond = 12,
+		/datum/material/bluespace = 15,
+		/datum/material/bananium = 18,
 	)
 	/// Variable that holds a timer which is used for callbacks to `send_console_message()`. Used for preventing multiple calls to this proc while the ORM is eating a stack of ores.
 	var/console_notify_timer

@@ -99,7 +99,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	tradable_base_quantity = MATERIAL_QUANTITY_UNCOMMON
 	beauty_modifier = 0.075
 	mineral_rarity = MATERIAL_RARITY_SEMIPRECIOUS
-	points_per_unit = 16 / SHEET_MATERIAL_AMOUNT
+	points_per_unit = 4 / SHEET_MATERIAL_AMOUNT
 	texture_layer_icon_state = "shine"
 	fish_weight_modifier = 1.35
 	fishing_difficulty_modifier = -5
@@ -134,7 +134,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	beauty_modifier = 0.15
 	armor_modifiers = list(MELEE = 1.1, BULLET = 1.1, LASER = 1.15, ENERGY = 1.15, BOMB = 1, BIO = 1, FIRE = 0.7, ACID = 1.1)
 	mineral_rarity = MATERIAL_RARITY_PRECIOUS
-	points_per_unit = 18 / SHEET_MATERIAL_AMOUNT
+	points_per_unit = 6 / SHEET_MATERIAL_AMOUNT
 	texture_layer_icon_state = "shine"
 	fish_weight_modifier = 1.5
 	fishing_difficulty_modifier = -8
@@ -174,7 +174,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	beauty_modifier = 0.3
 	armor_modifiers = list(MELEE = 1.3, BULLET = 1.3, LASER = 0.6, ENERGY = 1, BOMB = 1.2, BIO = 1, FIRE = 1, ACID = 1)
 	mineral_rarity = MATERIAL_RARITY_RARE
-	points_per_unit = 50 / SHEET_MATERIAL_AMOUNT
+	points_per_unit = 12 / SHEET_MATERIAL_AMOUNT
 	fish_weight_modifier = 1.4
 	fishing_difficulty_modifier = -12
 	fishing_cast_range = -1
@@ -209,7 +209,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	beauty_modifier = 0.3 //It shines so beautiful
 	armor_modifiers = list(MELEE = 1.5, BULLET = 1.4, LASER = 0.5, ENERGY = 0.5, FIRE = 1, ACID = 1)
 	mineral_rarity = MATERIAL_RARITY_SEMIPRECIOUS
-	points_per_unit = 30 / SHEET_MATERIAL_AMOUNT
+	points_per_unit = 8 / SHEET_MATERIAL_AMOUNT
 	fish_weight_modifier = 2
 	fishing_completion_speed = 0.9
 	fishing_bait_speed_mult = 0.8
@@ -258,7 +258,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	beauty_modifier = 0.15
 	armor_modifiers = list(MELEE = 1.4, BULLET = 0.7, ENERGY = 1.2, BIO = 1.2, ACID = 0.5)
 	mineral_rarity = MATERIAL_RARITY_PRECIOUS
-	points_per_unit = 15 / SHEET_MATERIAL_AMOUNT
+	points_per_unit = 3 / SHEET_MATERIAL_AMOUNT
 	fish_weight_modifier = 1.3
 	fishing_deceleration_mult = 1.3
 	fishing_bounciness_mult = 0.6
@@ -303,7 +303,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	ore_type = /obj/item/stack/ore/bluespace_crystal
 	value_per_unit = 300 / SHEET_MATERIAL_AMOUNT
 	mineral_rarity = MATERIAL_RARITY_RARE
-	points_per_unit = 50 / SHEET_MATERIAL_AMOUNT
+	points_per_unit = 15 / SHEET_MATERIAL_AMOUNT
 	tradable = TRUE
 	tradable_base_quantity = MATERIAL_QUANTITY_EXOTIC
 	texture_layer_icon_state = "shine"
@@ -361,7 +361,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	beauty_modifier = 0.5
 	armor_modifiers = list(BOMB = 100, FIRE = 10) //Clowns cant be blown away.
 	mineral_rarity = MATERIAL_RARITY_UNDISCOVERED
-	points_per_unit = 60 / SHEET_MATERIAL_AMOUNT
+	points_per_unit = 18 / SHEET_MATERIAL_AMOUNT
 	fishing_difficulty_modifier = 20 //can't get a good grip on slipperiness.
 	fishing_cast_range = 3 //long slide
 	fishing_experience_multiplier = 1.6
@@ -591,7 +591,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	beauty_modifier = 0.4
 	armor_modifiers = list(MELEE = 1.5, BULLET = 1.5, LASER = 1.3, ENERGY = 1.3, BOMB = 1, BIO = 1, FIRE = 2.5, ACID = 1)
 	mineral_rarity = MATERIAL_RARITY_UNDISCOVERED //Doesn't naturally spawn on lavaland.
-	points_per_unit = 100 / SHEET_MATERIAL_AMOUNT
+	points_per_unit = 50 / SHEET_MATERIAL_AMOUNT
 	fish_weight_modifier = 1.6
 	fishing_difficulty_modifier = -17
 	fishing_cast_range = 1
@@ -633,7 +633,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	armor_modifiers = list(MELEE = 1.5, BULLET = 1.5, LASER = 1.5, ENERGY = 1.5, BOMB = 1.5, BIO = 1.5, FIRE = 1.5, ACID = 1.5)
 	beauty_modifier = 0.5
 	mineral_rarity = MATERIAL_RARITY_UNDISCOVERED //Doesn't naturally spawn on lavaland.
-	points_per_unit = 100 / SHEET_MATERIAL_AMOUNT
+	points_per_unit = 50 / SHEET_MATERIAL_AMOUNT
 	fish_weight_modifier = 1.4
 	fishing_difficulty_modifier = -20
 	fishing_cast_range = 2

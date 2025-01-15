@@ -12,7 +12,7 @@
 	outfit = /datum/outfit/job/miner
 	plasmaman_outfit = /datum/outfit/plasmaman/mining
 
-	paycheck = PAYCHECK_CREW
+	paycheck = PAYCHECK_LOWER //Because you're supposed to earn money from mining.
 	paycheck_department = ACCOUNT_CAR
 
 	mind_traits = list(TRAIT_DETECT_STORM)
