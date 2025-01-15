@@ -198,3 +198,42 @@
 /obj/item/clothing/suit/toggle/labcoat/halflife
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
+//Resistance Raiders armor, only used in events or adminspawned
+/obj/item/clothing/suit/armor/rebel
+	name = "resistance heavy armour"
+	desc = "An Overwatch chestplate with improvised pieces strapped on for more protection. Don't forget to reload, Dr. Freeman."
+	icon_state = "rebelarmor_heavy"
+	inhand_icon_state = "rebelarmor_heavy"
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+	body_parts_covered = CHEST|GROIN|ARMS
+	slowdown = 0.5
+	armor_type = /datum/armor/rebelheavy
+
+/datum/armor/rebelheavy
+	melee = 35
+	bullet = 50
+	laser = 35
+	energy = 30
+	bomb = 50
+	fire = 55
+	acid = 45
+	wound = 20
+
+/obj/item/clothing/suit/armor/rebel/light
+	name = "resistance light armour"
+	desc = "A Civil Protection chestplate with some basic armour pieces strapped on. I'm gonna stay and hold down this spot."
+	icon_state = "rebelarmor_light"
+	inhand_icon_state = "rebelarmor_light"
+	armor_type = /datum/armor/rebellight
+
+/datum/armor/rebellight
+	melee = 35
+	bullet = 30
+	laser = 35
+	energy = 30
+	bomb = 35
+	fire = 25
+	acid = 25
+	wound = 15
