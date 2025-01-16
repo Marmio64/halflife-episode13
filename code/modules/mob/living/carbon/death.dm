@@ -2,6 +2,9 @@
 	if(stat == DEAD)
 		return
 
+	if(HAS_TRAIT(src, TRAIT_MINDSHIELD))
+		SSsociostability.modifystability(-20) //If they were mindshielded, they were probably somewhat important.
+
 	losebreath = 0
 	breathing_loop.stop() //This would've happened eventually but it's nice to make it stop immediatelly in this case
 	if(!gibbed)

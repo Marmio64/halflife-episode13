@@ -75,6 +75,8 @@
 #define MOB_SLIME (1 << 11)
 /// Mob is fish or water-related.
 #define MOB_AQUATIC (1 << 12)
+/// Mob is xenian in nature. HL13 EDIT
+#define MOB_XENIAN (1 << 13)
 
 //Lung respiration type flags
 #define RESPIRATION_OXYGEN (1 << 0)

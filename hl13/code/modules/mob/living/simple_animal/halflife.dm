@@ -9,7 +9,7 @@
 	icon_living = "zombie"
 	icon_dead = "zombie_dead"
 	faction = list(FACTION_HEADCRAB)
-	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
+	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_XENIAN
 	maxHealth = 120
 	health = 120
 	speak_chance = 1
@@ -239,7 +239,7 @@
 	icon_living = "headcrab"
 	icon_dead = "headcrab_dead"
 	faction = list(FACTION_HEADCRAB)
-	mob_biotypes = MOB_ORGANIC
+	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
 	stat_attack = UNCONSCIOUS //braains
 	maxHealth = 30
 	health = 30
@@ -483,7 +483,7 @@
 	icon_dead = "antlion_dead"
 	icon_gib = "antlion_gib"
 	faction = list(FACTION_ANTLION)
-	mob_biotypes = MOB_ORGANIC
+	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
 	maxHealth = 50
 	health = 50
 	harm_intent_damage = 5
@@ -590,7 +590,7 @@
 	icon_living = "antlionworker"
 	icon_dead = "antlionworker_dead"
 	faction = list(FACTION_ANTLION)
-	mob_biotypes = MOB_ORGANIC
+	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
 	maxHealth = 50
 	health = 50
 	harm_intent_damage = 5
@@ -831,7 +831,7 @@
 	icon_living = "grub"
 	icon_dead = "grub_dead"
 	faction = list(FACTION_ANTLION)
-	mob_biotypes = MOB_ORGANIC
+	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
 	maxHealth = 12
 	health = 12
 	wander = 0
@@ -877,7 +877,7 @@
 	icon_state = "headcrab"
 	icon_living = "headcrab"
 	icon_dead = "headcrab_dead"
-	mob_biotypes = MOB_ORGANIC
+	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
 	maxHealth = 30
 	health = 30
 	attack_sound = 'hl13/sound/creatures/headcrabbite.ogg'
@@ -895,7 +895,7 @@
 	icon_state = "poisonheadcrab"
 	icon_living = "poisonheadcrab"
 	icon_dead = "poisonheadcrab_dead"
-	mob_biotypes = MOB_ORGANIC
+	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
 	maxHealth = 45
 	health = 45
 	attack_sound = 'hl13/sound/creatures/poison/ph_poisonbite.ogg'

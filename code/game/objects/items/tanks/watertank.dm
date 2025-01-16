@@ -478,7 +478,7 @@
 //CWU cleanup tank
 /obj/item/watertank/cleanup
 	name = "backpack cleaner tank"
-	desc = "A cleaner tank that goes on your back, equipped with a nozzle to spray down and remove xenian infestations."
+	desc = "A cleaner tank that goes on your back, equipped with a nozzle to spray down and remove xenian infestations. Mixed in with the cleaning foam is also a dangerous toxin which has high lethality against xenian lifeforms."
 	inhand_icon_state = "waterbackpackatmos"
 	icon_state = "waterbackpackatmos"
 	custom_price = 100

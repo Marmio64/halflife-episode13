@@ -20,6 +20,12 @@
 	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
 	atom_storage.silent = TRUE
 
+/obj/item/storage/belt/pouch/large/cleanup/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/knife/combat/survival, src)
+	SSwardrobe.provide_type(/obj/item/lockpick, src)
+	SSwardrobe.provide_type(/obj/item/flashlight, src)
+	update_appearance(UPDATE_ICON)
+
 /obj/item/storage/belt/civilprotection
 	name = "civil protection belt"
 	desc = "Heavy duty belt for containing metrocop standard gear."

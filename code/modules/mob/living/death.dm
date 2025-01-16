@@ -158,6 +158,12 @@
 		INVOKE_ASYNC(src, TYPE_PROC_REF(/mob, emote), "deathgasp")
 
 	set_stat(DEAD)
+
+	if (client)
+		client.move_delay = initial(client.move_delay)
+		client.player_details.time_of_death = timeofdeath
+		SSambience.kill_droning(client)
+
 	timeofdeath = world.time
 	station_timestamp_timeofdeath = station_time_timestamp()
 	var/turf/death_turf = get_turf(src)
@@ -185,10 +191,5 @@
 
 	SEND_SIGNAL(src, COMSIG_LIVING_DEATH, gibbed)
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOB_DEATH, src, gibbed)
-
-	if (client)
-		client.move_delay = initial(client.move_delay)
-		client.player_details.time_of_death = timeofdeath
-		SSambience.kill_droning(client)
 
 	return TRUE

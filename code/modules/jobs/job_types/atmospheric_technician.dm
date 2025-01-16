@@ -51,7 +51,7 @@
 	ears = /obj/item/radio/headset
 	uniform = /obj/item/clothing/under/citizen
 	r_pocket = /obj/item/hl2key/factory
-	belt = /obj/item/storage/belt/pouch/large
+	belt = /obj/item/storage/belt/pouch/large/cleanup
 
 /datum/outfit/job/atmos/mod
 	name = "Atmospheric Technician (MODsuit)"

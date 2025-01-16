@@ -2,7 +2,8 @@
 	name = "Clean Up Solution"
 	description = "A bright orange, toxic solution which kills xenian growths."
 	color = "#b9830e"
-	toxpwr = 2
+	toxpwr = 0.75
+	liver_damage_multiplier = 0.25
 	taste_mult = 1
 
 /datum/reagent/toxin/cleanupsolution/expose_obj(obj/O, reac_volume)
@@ -20,18 +21,20 @@
 		var/obj/structure/spacevine/SV = O
 		SV.on_chem_effect(src)
 
-/*
-/datum/reagent/toxin/cleanupsolution/expose_mob(mob/living/M, methods=TOUCH, reac_volume, show_message = TRUE, permeability = 1)
-	if(istype(M, /mob/living/basic/venus_human_trap))
-		var/mob/living/basic/venus_human_trap/planty = M
-		planty.weedkiller(reac_volume * 2)
-	if(methods & VAPOR)
-		if(iscarbon(M))
-			var/mob/living/carbon/C = M
-			if(!C.wear_mask) // If not wearing a mask
-				var/damage = min(round(0.4*reac_volume, 0.1),10)
-				C.adjustToxLoss(damage)
-*/
+/datum/reagent/toxin/cleanupsolution/expose_mob(mob/living/exposed_mob, methods = TOUCH, reac_volume)
+	. = ..()
+	var/damage = min(round(0.4 * reac_volume, 0.1), 10)
+	if(exposed_mob.mob_biotypes & MOB_XENIAN)
+		// spray bottle emits 5u so it's dealing ~15 dmg per spray
+		if(exposed_mob.adjustToxLoss(damage * 20, required_biotype = affected_biotype))
+			return
+
+	if(!(methods & VAPOR) || !iscarbon(exposed_mob))
+		return
+
+	var/mob/living/carbon/exposed_carbon = exposed_mob
+	if(!exposed_carbon.wear_mask)
+		exposed_carbon.adjustToxLoss(damage, required_biotype = affected_biotype)
 
 /datum/reagent/toxin/headcrab_venom
 	name = "Headcrab Venom"

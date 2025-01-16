@@ -193,7 +193,7 @@
 	AddComponent(/datum/component/hat_stabilizer, loose_hat = TRUE)
 
 /datum/armor/utility_radiation
-	melee = 50
+	melee = 40
 	bio = 60
 	fire = 30
 	acid = 30
