@@ -173,12 +173,14 @@
 
 	if((obj_flags & EMAGGED) && emag_doses_left < 0)
 		owner.reagents.add_reagent(/datum/reagent/medicine/morphine, 3)
-		owner.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 5)
+		owner.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 2)
+		owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 5)
 		SOUND_BEEP('hl13/sound/voice/hev/beep_3.ogg')
 		add_queue('hl13/sound/voice/hev/morphine.ogg',1 SECONDS)
 	else
 		owner.reagents.add_reagent(/datum/reagent/medicine/stimulants, 5)
-		owner.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 5)
+		owner.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 2)
+		owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 5)
 		SOUND_BEEP('hl13/sound/voice/hev/beep_3.ogg')
 		add_queue('hl13/sound/voice/hev/stimulants.ogg',1 SECONDS)
 		emag_doses_left--

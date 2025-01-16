@@ -10,7 +10,7 @@ Ask Mothblocks if they're around
 #define RAD_MOB_HAIRLOSS_PROB 7.5
 
 /// How much stored radiation to check for mutation
-#define RAD_MOB_MUTATE (2 MINUTES)
+#define RAD_MOB_MUTATE (4 MINUTES)
 /// Chance of randomly mutating every second when over threshold
 #define RAD_MOB_MUTATE_PROB 0.5
 

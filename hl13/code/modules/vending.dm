@@ -17,7 +17,7 @@
 	icon_state = "refill_cola"
 
 /obj/machinery/vending/gifts
-	name = "\improper Gift Vendor"
+	name = "\improper Shop Vendor"
 	desc = "A vending machine for selling general store goods."
 	icon_state = "parts"
 	icon_deny = "parts-deny"
@@ -33,12 +33,13 @@
 					/obj/item/flashlight = 3,
 					/obj/item/clothing/head/beanie/black = 3,
 					/obj/item/clothing/head/flatcap = 3,
-					/obj/item/customlock = 4,
-					/obj/item/customblank = 8,
+					/obj/item/customlock = 8,
+					/obj/item/customblank = 12,
 					/obj/item/storage/wallet = 10,
 					/obj/item/radio/off/halflife = 3,
 					/obj/item/reagent_containers/cup/bottle/welding_fuel = 3,
 					/obj/item/food/rationpack/box = 5,
+					/obj/item/reagent_containers/pill/patch/medkit/vial = 3,
 					/obj/item/clothing/gloves/fingerless = 3)
 
 	contraband = list(/obj/item/lockpick = 1,

@@ -9,7 +9,7 @@
 	///Something's being washed at the moment
 	var/busy = FALSE
 	///What kind of reagent is produced by this sink by default? (We now have actual plumbing, Arcane, August 2020)
-	var/dispensedreagent = /datum/reagent/water
+	var/dispensedreagent = /datum/reagent/water/unpurified
 	///Material to drop when broken or deconstructed.
 	var/buildstacktype = /obj/item/stack/sheet/iron
 	///Number of sheets of material to drop when broken or deconstructed.
@@ -247,6 +247,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 	icon_state = "sink_alt"
 	pixel_z = 4
 	pixel_shift = 16
+	dispensedreagent = /datum/reagent/water
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink/kitchen, (-16))
 

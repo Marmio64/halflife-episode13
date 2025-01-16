@@ -62,9 +62,9 @@
 	crate_type = /obj/structure/closet/crate/secure/weapon
 
 /datum/supply_pack/security/armory/ar2
-	name = "Unbiolocked OSIPR Crate"
-	desc = "Contains two Overwatch Standard Issue Pulse Rifles. These rifles are unbiolocked, and will not be usable until given a biolocked firing pin. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 21
+	name = "OSIPR Crate"
+	desc = "Contains two Overwatch Standard Issue Pulse Rifles. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 23
 	contains = list(/obj/item/gun/ballistic/automatic/ar2/nopin,
 					/obj/item/gun/ballistic/automatic/ar2/nopin)
 	crate_name = "osipr gun crate"

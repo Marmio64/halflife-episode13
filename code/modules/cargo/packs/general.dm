@@ -1,50 +1,6 @@
 /datum/supply_pack/misc
 	group = "Miscellaneous Supplies"
 
-/datum/supply_pack/misc/artsupply
-	name = "Art Supplies"
-	desc = "Make some happy little accidents with a rapid pipe cleaner layer, \
-		three spraycans, and lots of crayons!"
-	cost = CARGO_CRATE_VALUE * 1.8
-	contains = list(/obj/item/rcl,
-					/obj/item/storage/toolbox/artistic,
-					/obj/item/toy/crayon/spraycan = 3,
-					/obj/item/storage/crayons,
-					/obj/item/toy/crayon/white,
-					/obj/item/toy/crayon/rainbow,
-				)
-	crate_name = "art supply crate"
-	crate_type = /obj/structure/closet/crate/wooden
-
-/datum/supply_pack/misc/tattoo_kit
-	name = "Tattoo Kit"
-	desc = "A tattoo kit with some extra starting ink."
-	cost = CARGO_CRATE_VALUE * 1.8
-	contains = list(
-		/obj/item/tattoo_kit,
-		/obj/item/toner = 2)
-	crate_name = "tattoo crate"
-	crate_type = /obj/structure/closet/crate/wooden
-	discountable = SUPPLY_PACK_STD_DISCOUNTABLE
-
-/datum/supply_pack/misc/bigband
-	name = "Big Band Instrument Collection"
-	desc = "Get your sad station movin' and groovin' with this fine collection! \
-		Contains nine different instruments!"
-	cost = CARGO_CRATE_VALUE * 10
-	crate_name = "Big band musical instruments collection"
-	contains = list(/obj/item/instrument/violin,
-					/obj/item/instrument/guitar,
-					/obj/item/instrument/glockenspiel,
-					/obj/item/instrument/accordion,
-					/obj/item/instrument/saxophone,
-					/obj/item/instrument/trombone,
-					/obj/item/instrument/recorder,
-					/obj/item/instrument/harmonica,
-					/obj/structure/musician/piano/unanchored,
-				)
-	crate_type = /obj/structure/closet/crate/wooden
-
 /datum/supply_pack/misc/commandkeys
 	name = "Command Encryption Key Crate"
 	desc = "A pack of encryption keys that give access to the command radio network. \
@@ -113,14 +69,6 @@
 	cost = CARGO_CRATE_VALUE * 6
 	contains = list(/obj/item/toner/large = 6)
 	crate_name = "large toner crate"
-
-/datum/supply_pack/misc/training_toolbox
-	name = "Training Toolbox Crate"
-	desc = "Hone your combat abiltities with two AURUMILL-Brand Training Toolboxes! \
-		Guarenteed to count hits made against living beings!"
-	cost = CARGO_CRATE_VALUE * 2
-	contains = list(/obj/item/training_toolbox = 2)
-	crate_name = "training toolbox crate"
 
 ///Special supply crate that generates random syndicate gear up to a determined TC value
 /datum/supply_pack/misc/syndicate

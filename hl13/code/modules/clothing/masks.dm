@@ -135,12 +135,12 @@
 
 	COOLDOWN_START(src, hailer_cooldown, PHRASE_COOLDOWN)
 
-	usr.say(".s Requesting assistance on my position!", forced = src.name)
-
 	if(overwatch)
 		playsound(src, 'hl13/sound/voice/otavoicelines/heavyresistance.ogg', 75, FALSE)
+		usr.say(".s Overwatch advised, we have heavy resistance. Need units on my 10-20.", forced = src.name)
 	else
 		playsound(src, 'hl13/sound/voice/cpvoicelines/officerneedsassistance.ogg', 75, FALSE)
+		usr.say(".s Requesting assistance on my position!", forced = src.name)
 
 /datum/armor/cpmask
 	melee = 20

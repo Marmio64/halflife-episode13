@@ -130,6 +130,9 @@
 	icon_state = "brass"
 	icon = 'hl13/icons/obj/keys.dmi'
 	w_class = WEIGHT_CLASS_TINY
+
+	custom_price = 12
+
 	var/lockhash = 0
 
 /obj/item/customblank/attackby_secondary(obj/item/I, mob/user, params)
