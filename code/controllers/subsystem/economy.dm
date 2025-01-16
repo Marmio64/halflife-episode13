@@ -140,7 +140,7 @@ SUBSYSTEM_DEF(economy)
 		var/datum/bank_account/dept_account = get_dep_account(cached_processing[i])
 		if(!dept_account)
 			continue
-		dept_account.adjust_money(MAX_GRANT_DPT)
+		dept_account.adjust_money(MAX_GRANT_DPT * (SSsociostability.sociostability/1000)) //HL13 EDIT. Less departmental funds when low on sociostability.
 		if(MC_TICK_CHECK)
 			cached_processing.Cut(1, i + 1)
 			return FALSE

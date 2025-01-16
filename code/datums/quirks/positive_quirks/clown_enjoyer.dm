@@ -1,3 +1,4 @@
+/*
 /datum/quirk/item_quirk/clown_enjoyer
 	name = "Clown Enjoyer"
 	desc = "You enjoy clown antics and get a mood boost from wearing your clown pin."
@@ -29,3 +30,4 @@
 /datum/quirk/item_quirk/clown_enjoyer/add(client/client_source)
 	var/datum/atom_hud/fan = GLOB.huds[DATA_HUD_FAN]
 	fan.show_to(quirk_holder)
+*/

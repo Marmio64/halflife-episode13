@@ -2,7 +2,7 @@
 
 /obj/projectile/bullet/c9mm
 	name = "9mm bullet"
-	damage = 18
+	damage = 17
 	embed_type = /datum/embed_data/bullet_c9mm
 
 /datum/embed_data/bullet_c9mm

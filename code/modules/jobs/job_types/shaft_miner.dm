@@ -23,6 +23,8 @@
 		/datum/job_department/cargo,
 		)
 
+	skills = list(/datum/skill/mining = SKILL_EXP_JOURNEYMAN) //Of course they would know how to mine
+
 	family_heirlooms = list(/obj/item/pickaxe/mini, /obj/item/shovel)
 	rpg_title = "Adventurer"
 	job_flags = STATION_JOB_FLAGS

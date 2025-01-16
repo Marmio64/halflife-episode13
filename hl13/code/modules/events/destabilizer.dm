@@ -5,7 +5,7 @@
 	weight = 8
 	min_players = 8
 	earliest_start = 15 MINUTES
-	max_occurrences = 1
+	max_occurrences = 2
 
 /datum/round_event/destabilizer/start()
 	var/list/possible_spawns = list()

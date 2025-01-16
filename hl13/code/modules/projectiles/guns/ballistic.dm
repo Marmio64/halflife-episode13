@@ -131,7 +131,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/usp/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.45 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.4 SECONDS)
 
 /obj/item/gun/ballistic/automatic/pistol/usp/no_mag
 	spawnwithmagazine = FALSE
@@ -151,12 +151,12 @@
 	fire_sound = "hl13/sound/weapons/uspfire.ogg"
 	spread = 13
 	recoil = 0.5
-	fire_delay = 6
+	fire_delay = 5
 	vary_fire_sound = FALSE
 
 /obj/item/gun/ballistic/automatic/pistol/makeshift/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.6 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS)
 
 /obj/item/gun/ballistic/automatic/pistol/makeshift/no_mag
 	spawnwithmagazine = FALSE

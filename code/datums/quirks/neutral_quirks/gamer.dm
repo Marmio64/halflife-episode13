@@ -1,3 +1,4 @@
+/*
 #define GAMING_WITHDRAWAL_TIME (15 MINUTES)
 /datum/quirk/gamer
 	name = "Gamer"
@@ -88,3 +89,4 @@
 	human_holder.add_mood_event("gamer_withdrawal", /datum/mood_event/gamer_withdrawal)
 
 #undef GAMING_WITHDRAWAL_TIME
+*/

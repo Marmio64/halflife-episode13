@@ -1,6 +1,6 @@
 /datum/quirk/chip_connector
 	name = "Chip Connector"
-	desc = "You had a device installed that lets you manually add and remove skillchips! Just try not to get near any electromagnetic pulses."
+	desc = "You had a device installed by combine scientists that lets you manually add and remove skillchips! Just try not to get near any electromagnetic pulses."
 	icon = FA_ICON_PLUG
 	value = 4
 	gain_text = span_notice("You feel CONNECTED.")
@@ -8,10 +8,6 @@
 	medical_record_text = "Patient has a cybernetic implant on their back of their head that lets them install and remove skillchips at will. Gross."
 	mail_goodies = list()
 	var/obj/item/organ/cyberimp/brain/connector/connector
-
-/datum/quirk/chip_connector/New()
-	. = ..()
-	mail_goodies = assoc_to_keys(GLOB.quirk_chipped_choice) + /datum/quirk/chipped::mail_goodies
 
 /datum/quirk/chip_connector/add_unique(client/client_source)
 	. = ..()

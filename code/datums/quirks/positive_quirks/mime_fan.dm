@@ -1,3 +1,4 @@
+/*
 /datum/quirk/item_quirk/mime_fan
 	name = "Mime Fan"
 	desc = "You're a fan of mime antics and get a mood boost from wearing your mime pin."
@@ -27,3 +28,4 @@
 /datum/quirk/item_quirk/mime_fan/add(client/client_source)
 	var/datum/atom_hud/fan = GLOB.huds[DATA_HUD_FAN]
 	fan.show_to(quirk_holder)
+*/

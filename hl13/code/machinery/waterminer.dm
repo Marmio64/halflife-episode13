@@ -25,6 +25,7 @@
 		to_chat(user, span_notice("You remove the full water canister."))
 		full = FALSE
 		update_icon_state()
+		SSsociostability.modifystability(1) //Production brings stability.
 		return
 	if(mining)
 		to_chat(user, span_warning("You stop the mining cycle."))

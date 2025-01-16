@@ -1,3 +1,4 @@
+/*
 /datum/quirk/item_quirk/borg_ready
 	name = "Cyborg Pre-screened dogtag"
 	desc = "Get pre-approved for NT's experimental Cyborg program, with a dog tag that lets medical staff know."
@@ -12,3 +13,5 @@
 		return FALSE
 	var/obj/item/clothing/accessory/dogtag/borg_ready/borgtag = new(get_turf(quirk_holder))
 	give_item_to_holder(borgtag, list(LOCATION_BACKPACK = ITEM_SLOT_BACKPACK, LOCATION_HANDS = ITEM_SLOT_HANDS))
+
+*/

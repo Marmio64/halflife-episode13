@@ -43,7 +43,7 @@
 		if(!field.loc)
 			CRASH("FORCE FIELD FAILURE: [field] has no loc somehow?")
 
-		if(prob(1 + SSsociostability.getloss() / 40))
+		if(prob(10 + SSsociostability.getloss() / 50))
 			field.malfunction()
 
 		CHECK_TICK

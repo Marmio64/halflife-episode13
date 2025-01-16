@@ -17,14 +17,14 @@
 	var/turf/landing_turf = pick(possible_spawns)
 	new /obj/item/storage/box/syndicate/care_package(landing_turf.loc)
 
-/*
-	for(var/datum/mind/T in  SSticker.mode.traitors)
-		if(!T || !T.current)
+
+	for(var/datum/antagonist/traitor/traitor in GLOB.antagonists)
+		if(!traitor.owner.current)
 			continue
-		if(isliving(T.current) && T.current.stat != DEAD)
-			to_chat(T, span_warning("The district's sociostability has deteoriated enough for outside rebels to sneak in a care package to somewhere hidden in the sewers. Find and claim it before someone else does. You'll recognise it by being a small box with a red label."))
-			T.current.playsound_local(get_turf(T.current), 'hl13/sound/effects/griffin_10.ogg',40,0) //little beeping sound to get your attention
-*/
+		if(isliving(traitor.owner.current))
+			to_chat(traitor, span_warning("The district's sociostability has deteoriated enough for outside rebels to sneak in a care package to somewhere hidden in the sewers. Find and claim it before someone else does. You'll recognise it by being a small box with a red label."))
+			traitor.owner.current.playsound_local(get_turf(traitor.owner.current), 'hl13/sound/effects/griffin_10.ogg',40,0) //little beeping sound to get your attention
+
 
 /obj/item/storage/box/syndicate/care_package
 	icon_state = "syndiebox"

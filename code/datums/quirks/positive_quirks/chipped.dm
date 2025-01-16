@@ -1,3 +1,4 @@
+/*
 /datum/quirk/chipped
 	name = "Chipped"
 	desc = "You got caught up in the skillchip craze a few years back, and had one of the commercially available chips implanted into yourself."
@@ -82,3 +83,4 @@
 	itchy_brain.apply_organ_damage(rand(minimum_damage, maximum_damage), maximum = itchy_brain.maxHealth * 0.3)
 	if(owner.stat == CONSCIOUS && !owner.incapacitated && owner.get_empty_held_indexes())
 		to_chat(owner, span_warning("You scratch the itch in your head."))
+*/

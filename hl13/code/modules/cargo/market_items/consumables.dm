@@ -7,7 +7,7 @@
 	desc = "A stolen nutrient bar. Food has been hard to come by, and we have to charge a premium. Try to procure some on-site instead."
 	item = /obj/item/food/rationpack
 
-	price_min = CARGO_CRATE_VALUE/2
+	price_min = CARGO_CRATE_VALUE/3
 	price_max = CARGO_CRATE_VALUE
 	stock_max = 3
 	availability_prob = 80

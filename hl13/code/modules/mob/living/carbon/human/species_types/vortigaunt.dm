@@ -1,4 +1,4 @@
-/datum/species/vortigaunt //vorts are hardier, stronger, but a bit slower than humans. However, they cant wear most things or use guns asides from vortal blasts.
+/datum/species/vortigaunt //vorts are hardier, stronger, but a bit slower than humans. However, they cant wear most things and have incredibly shit aim when using guns.
 	name = "Vortigaunt"
 	id = SPECIES_VORTIGAUNT
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | ERT_SPAWN

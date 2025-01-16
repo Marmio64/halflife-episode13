@@ -58,7 +58,7 @@
 
 	playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
 
-	if(!do_after(user, 5 SECONDS, src))
+	if(!do_after(user, 6 SECONDS, src))
 		to_chat(usr, span_warning("The machine did not finish determining your ration reward!"))
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		flick(icon_state_deny,src)
@@ -104,10 +104,14 @@
 
 	flick(icon_state_vend,src)
 
-	if(vortigaunt)
-		say("Here is your designated meal, biotic.")
+	if(SSsociostability.sociostability > 200) //Failure to maintain sociostability means punishment time.
+		if(vortigaunt)
+			say("Here is your designated meal, biotic.")
+		else
+			say("Enjoy your designated meal.")
 	else
-		say("Enjoy your designated meal.")
+		say("Low district sociostability detected. Five ration quality units deducted.")
+		quality--
 
 	switch(quality)
 		if(0 to 1)
