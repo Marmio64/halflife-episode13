@@ -67,6 +67,10 @@ SUBSYSTEM_DEF(daylight)
 		if(day_cycle_active != DAY_CYCLE_AFTERNOON)
 			day_cycle_active = DAY_CYCLE_AFTERNOON
 			priority_announce("Attention citizens, it is now afternoon. The previous ration cycle has ended. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed.", "Work Notice.")
+
+			for(var/obj/machinery/box_vendor/vendor as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/box_vendor))
+				vendor.boxes_stored = 15
+
 		if(light_coefficient < 1)
 			light_coefficient += 0.025
 

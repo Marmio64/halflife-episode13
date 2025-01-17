@@ -74,3 +74,9 @@
 	cost = CARGO_CRATE_VALUE * 0.15
 	unit_name = "used ration refill boxes"
 	export_types = list(/obj/item/ration_construction/used_container)
+
+//Sell completed factory goods boxes
+/datum/export/factory_box
+	cost = CARGO_CRATE_VALUE * 0.5
+	unit_name = "completed factory goods boxes"
+	export_types = list(/obj/item/factory_construction/full_container)
