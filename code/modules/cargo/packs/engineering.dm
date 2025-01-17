@@ -41,6 +41,16 @@
 	cost = CARGO_CRATE_VALUE * 5
 	crate_name = "toolbox crate"
 
+/datum/supply_pack/engineering/cleanuptanks
+	name = "Clean-up Spray Tanks Crate"
+	desc = "Two tanks of Clean-up Solution, for dealin with xenian infestations."
+	access_view = ACCESS_ENGINE_EQUIP
+	contains = list(/obj/item/watertank/cleanup = 3,
+					/obj/item/watertank/cleanup = 3,
+				)
+	cost = CARGO_CRATE_VALUE * 6
+	crate_name = "clean-up tanks crate"
+
 
 /datum/supply_pack/engineering/water_miner
 	name = "Water Harvester"

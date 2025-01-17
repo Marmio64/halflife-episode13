@@ -107,6 +107,11 @@
 
 	var/malfunctioning = FALSE
 
+/obj/machinery/turnstile/brig/halflife/forcefield/attackby(obj/item/attacking_item, mob/user, params)
+	. = ..()
+	if(atom_integrity < 100 && !malfunctioning) //At very low health, the field just turns off.
+		malfunctioning = TRUE
+
 /obj/machinery/turnstile/brig/halflife/forcefield/examine(mob/user)
 	. = ..()
 	if(malfunctioning)
@@ -135,6 +140,10 @@
 
 	playsound(loc, 'sound/items/tools/ratchet.ogg', 25, 1)
 	malfunctioning = FALSE
+
+	if(atom_integrity < max_integrity) //Also fixes it up
+		atom_integrity = max_integrity
+
 	SSsociostability.modifystability(2) //Refunds lost sociostability from the malfunction
 	return TRUE
 

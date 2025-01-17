@@ -1,8 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"ab" = (
-/obj/machinery/vending/breenwater,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors)
 "ac" = (
 /obj/structure/railing/halflife/solo{
 	dir = 4
@@ -90,6 +86,11 @@
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/slums)
+"av" = (
+/obj/machinery/shower/directional/east,
+/obj/structure/fluff/shower_drain,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/hospital)
 "aw" = (
 /obj/structure/table/halflife/wood,
 /obj/item/flashlight/lamp,
@@ -528,11 +529,6 @@
 /obj/structure/railing/halflife/solo,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/plaza)
-"cd" = (
-/obj/machinery/shower/directional/east,
-/obj/structure/fluff/shower_drain,
-/turf/open/floor/plating/indoor/sterilesquares,
-/area/halflife/indoors/hospital)
 "ce" = (
 /obj/structure/bookcase/random,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -3246,6 +3242,10 @@
 /obj/effect/landmark/start/citizen,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
+"mZ" = (
+/obj/structure/chair/sofa/hl13bench,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors)
 "na" = (
 /obj/effect/landmark/carpspawn,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -4690,10 +4690,6 @@
 "sS" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/distributioncenter)
-"sT" = (
-/obj/machinery/box_vendor,
-/turf/closed/wall/halflife/concrete,
-/area/halflife/indoors/productioncenter)
 "sU" = (
 /obj/machinery/door/unpowered/halflife/wood{
 	dir = 8
@@ -6898,6 +6894,10 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
+"Ck" = (
+/obj/machinery/box_vendor,
+/turf/closed/wall/halflife/concrete,
+/area/halflife/indoors/productioncenter)
 "Cl" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "transfer_train_line_exterior";
@@ -7486,10 +7486,6 @@
 	},
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/scienceunion)
-"EC" = (
-/obj/structure/chair/sofa/hl13bench,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors)
 "ED" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/tile/navy,
@@ -8238,6 +8234,10 @@
 /obj/structure/halflife/trash/garbage,
 /turf/open/misc/grass/jungle/station,
 /area/halflife/outdoors/alley)
+"HJ" = (
+/obj/machinery/vending/breenwater,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors)
 "HK" = (
 /obj/structure/filingcabinet,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -10036,6 +10036,11 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/productioncenter)
+"OQ" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/hand_labeler,
+/turf/open/floor/plating/indoor/tile,
+/area/halflife/indoors/hydroponics)
 "OR" = (
 /obj/machinery/computer/operating,
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -42736,7 +42741,7 @@ Gx
 fq
 Kf
 zN
-sT
+Ck
 zN
 eV
 fq
@@ -46181,7 +46186,7 @@ kp
 oP
 dP
 dx
-At
+OQ
 aC
 DV
 Wm
@@ -52923,7 +52928,7 @@ Xc
 HV
 HV
 Xc
-EC
+mZ
 fT
 qv
 Kw
@@ -53179,7 +53184,7 @@ Bl
 BO
 pY
 Xc
-ab
+HJ
 fT
 IN
 Kw
@@ -53435,7 +53440,7 @@ BO
 BO
 BO
 Xc
-EC
+mZ
 fT
 IN
 Kw
@@ -71129,7 +71134,7 @@ hK
 hK
 hK
 bx
-cd
+av
 bx
 hK
 DL

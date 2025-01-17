@@ -82,8 +82,8 @@
 #define PLASMA_CUTTER_CHARGE_WELD (0.025 * STANDARD_CELL_CHARGE)
 
 /obj/item/gun/energy/plasmacutter
-	name = "plasma cutter"
-	desc = "A mining tool capable of expelling concentrated plasma bursts. You could use it to cut limbs off xenos! Or, you know, mine stuff."
+	name = "combine plasma cutter"
+	desc = "An advanced mining tool recently discovered by combine scientists. Fires dark energy bolts, often mistakenly called plasma, to mine through rocks with ease."
 	icon_state = "plasmacutter"
 	inhand_icon_state = "plasmacutter"
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma)

@@ -33,6 +33,7 @@
 					/obj/item/flashlight = 3,
 					/obj/item/clothing/head/beanie/black = 3,
 					/obj/item/clothing/head/flatcap = 3,
+					/obj/item/lighter/greyscale = 3,
 					/obj/item/customlock = 8,
 					/obj/item/customblank = 12,
 					/obj/item/storage/wallet = 10,
