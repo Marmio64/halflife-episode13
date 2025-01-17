@@ -441,7 +441,7 @@
 				adjust_plant_health(-rand(1,5) / rating)
 
 			// Harvest code
-			if(age > myseed.production && (age - lastproduce) > myseed.production && plant_status == HYDROTRAY_PLANT_GROWING)
+			if(age > (myseed.production + 3) && (age - lastproduce) > (myseed.production + 3) && plant_status == HYDROTRAY_PLANT_GROWING) // HL13 EDIT, all plants take 3 extra age ticks to produce their goods
 				if(myseed && myseed.yield != -1) // Unharvestable shouldn't be harvested
 					set_plant_status(HYDROTRAY_PLANT_HARVESTABLE)
 				else

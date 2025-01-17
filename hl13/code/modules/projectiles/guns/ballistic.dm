@@ -170,11 +170,11 @@
 	inhand_icon_state = "colt_python"
 	spread = 3 //very little spread
 	recoil = 2 //lots of recoil though
-	fire_delay = 8
+	fire_delay = 10
 	vary_fire_sound = FALSE
 
 /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger
-	fire_delay = 10 //geared towards sniping, not mag dumping
+	fire_delay = 12 //geared towards sniping, not mag dumping
 
 /obj/item/gun/ballistic/shotgun/spas12
 	name = "SPAS 12"

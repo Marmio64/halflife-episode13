@@ -39,10 +39,10 @@
 /datum/ert/overwatch
 	leader_role = /datum/antagonist/ert/overwatch/ar2/elite
 	roles = list(/datum/antagonist/ert/overwatch/ar2, /datum/antagonist/ert/overwatch/mp7, /datum/antagonist/ert/overwatch/spas12)
-	rename_team = "Overwatch Strike Team"
+	rename_team = "Standard Overwatch Strike Team"
 	code = "Delta"
 	mission = "Stabilize the city, detain city officials, kill all citizens who do not comply."
-	polldesc = "an elite Overwatch Strike Team"
+	polldesc = "a standard Overwatch Strike Team"
 
 /datum/ert/overwatch/light
 	roles = list(/datum/antagonist/ert/overwatch/mp7, /datum/antagonist/ert/overwatch/spas12)
@@ -50,7 +50,7 @@
 	rename_team = "Overwatch Light Strike Team"
 	code = "Delta"
 	mission = "Stabilize the city, detain city officials, kill all citizens who do not comply."
-	polldesc = "an elite Overwatch Strike Team"
+	polldesc = "a light Overwatch Strike Team"
 
 /datum/ert/overwatch/elite
 	roles = list(/datum/antagonist/ert/overwatch/ar2/elite)

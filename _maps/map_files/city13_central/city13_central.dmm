@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ab" = (
+/obj/machinery/vending/breenwater,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors)
 "ac" = (
 /obj/structure/railing/halflife/solo{
 	dir = 4
@@ -524,6 +528,11 @@
 /obj/structure/railing/halflife/solo,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/plaza)
+"cd" = (
+/obj/machinery/shower/directional/east,
+/obj/structure/fluff/shower_drain,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/hospital)
 "ce" = (
 /obj/structure/bookcase/random,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -1980,6 +1989,7 @@
 /area/halflife/indoors/townhall)
 "hO" = (
 /obj/structure/closet/emcloset,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
 "hP" = (
@@ -4680,6 +4690,10 @@
 "sS" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/distributioncenter)
+"sT" = (
+/obj/machinery/box_vendor,
+/turf/closed/wall/halflife/concrete,
+/area/halflife/indoors/productioncenter)
 "sU" = (
 /obj/machinery/door/unpowered/halflife/wood{
 	dir = 8
@@ -7472,6 +7486,10 @@
 	},
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/scienceunion)
+"EC" = (
+/obj/structure/chair/sofa/hl13bench,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors)
 "ED" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/tile/navy,
@@ -7691,9 +7709,6 @@
 /area/halflife/indoors/productioncenter)
 "Fy" = (
 /obj/structure/railing,
-/obj/structure/sign/departments/virology{
-	pixel_y = 32
-	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
 "Fz" = (
@@ -11597,10 +11612,6 @@
 /obj/item/kirbyplants/random,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/distributioncenter)
-"Vv" = (
-/obj/machinery/box_vendor,
-/turf/closed/wall/halflife/concrete,
-/area/halflife/indoors/productioncenter)
 "Vw" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
@@ -42725,7 +42736,7 @@ Gx
 fq
 Kf
 zN
-Vv
+sT
 zN
 eV
 fq
@@ -52912,7 +52923,7 @@ Xc
 HV
 HV
 Xc
-fT
+EC
 fT
 qv
 Kw
@@ -53168,7 +53179,7 @@ Bl
 BO
 pY
 Xc
-fT
+ab
 fT
 IN
 Kw
@@ -53424,7 +53435,7 @@ BO
 BO
 BO
 Xc
-fT
+EC
 fT
 IN
 Kw
@@ -71117,9 +71128,9 @@ Zt
 hK
 hK
 hK
-hK
-hK
-hK
+bx
+cd
+bx
 hK
 DL
 DL
@@ -71247,7 +71258,7 @@ hK
 hK
 Bw
 bx
-bx
+Rm
 hK
 DL
 DL
@@ -71503,7 +71514,7 @@ hK
 hK
 bx
 ud
-Rm
+bx
 hK
 DL
 DL
@@ -71754,13 +71765,13 @@ Rz
 Rz
 Rz
 Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+hK
+hK
+hK
+hK
+hK
+hK
+hK
 DL
 DL
 DL

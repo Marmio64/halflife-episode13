@@ -26,11 +26,12 @@
 		CID = W
 		playsound(loc, 'hl13/sound/machines/atm/cardreader_insert.ogg', 50)
 		if(!CID.registered_account.account_pin)
-			var/passchoice = input(user, "Please select a password:", "Password Selection") as null|text
+			var/passchoice = input(user, "Please select a password for your bank account:", "Password Selection") as null|text
 			if(!passchoice)
 				invalid_number()
 				return
 			CID.registered_account.account_pin = passchoice
+			to_chat(user, "<span class='warning'>Your new account password is [passchoice]!</span>")
 			return
 		var/enteredpass = input(user, "Please enter your password:", "Password Entry") as null|text
 		if(!enteredpass)

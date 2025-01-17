@@ -9,6 +9,10 @@
 	abstract_type = /datum/loadout_item/neck
 
 /datum/loadout_item/neck/insert_path_into_outfit(datum/outfit/outfit, mob/living/carbon/human/equipper, visuals_only = FALSE)
+	if(outfit.neck)
+		to_chat(equipper, "Your loadout neck item was not equipped directly due to your job outfit.")
+		return
+
 	outfit.neck = item_path
 
 /datum/loadout_item/neck/necktie

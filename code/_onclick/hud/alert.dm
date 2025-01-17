@@ -210,7 +210,7 @@
 
 /atom/movable/screen/alert/disgusted
 	name = "DISGUSTED"
-	desc = "ABSOLUTELY DISGUSTIN'"
+	desc = "That was fucking disgusting!"
 	icon_state = "gross3"
 
 /atom/movable/screen/alert/hot

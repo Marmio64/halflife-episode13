@@ -8,7 +8,7 @@
 	typepath = /datum/round_event/earthquake
 	category = EVENT_CATEGORY_ENGINEERING
 	min_players = 20
-	max_occurrences = 3
+	max_occurrences = 0
 	earliest_start = 35 MINUTES
 	weight = 3
 	min_wizard_trigger_potency = 3
