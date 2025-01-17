@@ -40,7 +40,10 @@
 	var/list/possible_items = list(/obj/item/stack/sheet/iron,
 									/obj/item/stack/cable_coil,
 									/obj/item/stack/sheet/glass,
+									/obj/item/stack/sheet/mineral/wood,
 									/obj/item/stack/sheet/cloth,
+									/obj/item/stack/sheet/scrap_metal,
+									/obj/item/stack/sheet/mineral/scrap_wood,
 									/obj/item/circuitmaterial,
 									/obj/item/food/xenbranch,
 									/obj/item/food/xenspore,
@@ -107,7 +110,7 @@
 		to_chat(usr, span_notice("The box isn't yet fully filled, and can not be sealed."))
 		return
 
-/obj/item/factory_construction/container/proc/seal(mob/user, reward = 2)
+/obj/item/factory_construction/container/proc/seal(mob/user, reward = 3)
 	playsound(src, 'hl13/sound/halflifeeffects/crafting/ducttape1.ogg', 50, TRUE, extrarange = -3)
 	new /obj/item/factory_construction/full_container(user.loc)
 	new /obj/item/stack/spacecash/c1(user.loc, reward)
