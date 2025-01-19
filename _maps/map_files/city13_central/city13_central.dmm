@@ -530,7 +530,9 @@
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/plaza)
 "ce" = (
-/obj/structure/bookcase/random,
+/obj/structure/halflife/storage/bookshelf{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/laborunion)
 "cg" = (
@@ -5518,7 +5520,7 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "wL" = (
-/obj/structure/filingcabinet,
+/obj/structure/filingcabinet/hl2,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors)
 "wM" = (
@@ -7038,7 +7040,7 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
 "CL" = (
-/obj/structure/filingcabinet,
+/obj/structure/filingcabinet/hl2,
 /obj/item/documents/nanotrasen,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall)
@@ -8239,7 +8241,7 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
 "HK" = (
-/obj/structure/filingcabinet,
+/obj/structure/filingcabinet/hl2,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/townhall)
 "HL" = (
@@ -9260,7 +9262,7 @@
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/plaza)
 "LN" = (
-/obj/structure/filingcabinet,
+/obj/structure/filingcabinet/hl2,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
 "LP" = (
@@ -10441,7 +10443,7 @@
 /area/halflife/outdoors)
 "Qw" = (
 /obj/item/kirbyplants/random,
-/turf/open/floor/plating/indoor/woodc/fancy,
+/turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
 "Qx" = (
 /obj/structure/chair/halflife/metal/red{
@@ -10472,7 +10474,7 @@
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
 "QC" = (
-/obj/structure/filingcabinet,
+/obj/structure/filingcabinet/hl2,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/townhall)
@@ -10531,7 +10533,7 @@
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/dispatch)
 "QO" = (
-/obj/structure/filingcabinet/security,
+/obj/structure/filingcabinet/security/hl2,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/townhall)
@@ -11901,7 +11903,7 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/roofs)
 "WB" = (
-/obj/structure/filingcabinet,
+/obj/structure/filingcabinet/hl2,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/productioncenter)
 "WC" = (
@@ -44345,7 +44347,7 @@ Iw
 Iw
 Iw
 Iw
-no
+wL
 no
 no
 no
@@ -45140,7 +45142,7 @@ yz
 Hb
 Md
 Yi
-Yi
+Qw
 Hb
 Hb
 Hb
@@ -45271,7 +45273,7 @@ Yi
 Yi
 aF
 AA
-Qw
+Rf
 ce
 Wv
 Hb

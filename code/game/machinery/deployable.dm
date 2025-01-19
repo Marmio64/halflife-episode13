@@ -116,7 +116,7 @@
 /obj/structure/barricade/sandbags
 	name = "sandbags"
 	desc = "Bags of sand. Self explanatory."
-	icon = 'icons/obj/smooth_structures/sandbags.dmi'
+	icon = 'hl13/icons/obj/sandbags.dmi'
 	icon_state = "sandbags-0"
 	base_icon_state = "sandbags"
 	max_integrity = 280
