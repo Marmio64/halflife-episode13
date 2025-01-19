@@ -33,7 +33,7 @@
 		obj_to_lock.lock = src
 		obj_to_lock.lock_locked = TRUE
 		to_chat(user, span_notice("You attach the [name] to the [obj_to_lock.name]."))
-		if(istype(obj_to_lock, /obj/machinery/door/unpowered/ms13))
+		if(istype(obj_to_lock, /obj/machinery/door/unpowered/halflife))
 			var/obj/machinery/door/door = obj_to_lock
 			door.locked = TRUE
 			AddElement(/datum/element/lockpickable, lock_difficulty)

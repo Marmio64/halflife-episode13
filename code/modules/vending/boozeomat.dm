@@ -1,6 +1,6 @@
 /obj/machinery/vending/boozeomat
-	name = "\improper Booze-O-Mat"
-	desc = "A technological marvel, supposedly able to mix just the mixture you'd like to drink the moment you ask for one."
+	name = "\improper Drink Dispenser"
+	desc = "A vending machine set up by the combine to dispense only approve ethanol beverages, in order to keep citizens compliant. May or may not have had other drinks added to it without prior authorization."
 	icon_state = "boozeomat"
 	icon_deny = "boozeomat-deny"
 	panel_type = "panel22"
