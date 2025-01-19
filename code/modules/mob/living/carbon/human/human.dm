@@ -35,6 +35,9 @@
 		COMSIG_LIVING_DISARM_COLLIDE = PROC_REF(disarm_collision),
 	)
 	AddElement(/datum/element/connect_loc, loc_connections)
+
+	AddComponent(/datum/component/fixeye) //HL13 EDIT
+
 	GLOB.human_list += src
 
 /mob/living/carbon/human/proc/setup_physiology()

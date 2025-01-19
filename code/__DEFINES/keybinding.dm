@@ -93,3 +93,5 @@
 #define COMSIG_KB_MOVEMENT_EAST_DOWN "keybinding_movement_east_down"
 #define COMSIG_KB_MOVEMENT_ZLEVEL_MOVEUP_DOWN "keybinding_mob_zlevel_moveup_down"
 #define COMSIG_KB_MOVEMENT_ZLEVEL_MOVEDOWN_DOWN "keybinding_mob_zlevel_movedown_down"
+
+#define COMSIG_KB_FIXEYE_DOWN "keybinding_fixeye_down" //HL13 EDIT
