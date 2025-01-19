@@ -85,6 +85,7 @@ Always compile, always use that verb, and always make sure that it works for wha
 #define ZTRAIT_ISOLATED_RUINS "Isolated Ruins" //Placing ruins on z levels with this trait will use turf reservation instead of usual placement.
 
 // boolean - weather types that occur on the level
+#define ZTRAIT_RAINSTORM "Weather_Rainstorm"
 #define ZTRAIT_SNOWSTORM "Weather_Snowstorm"
 #define ZTRAIT_ASHSTORM "Weather_Ashstorm"
 #define ZTRAIT_VOIDSTORM "Weather_Voidstorm"

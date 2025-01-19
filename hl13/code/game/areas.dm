@@ -21,6 +21,8 @@
 
 	first_time_text = "City Streets"
 
+	ambientrain = RAIN_OUT
+
 /area/halflife/outdoors/roofs
 	name = "\improper Rooftops"
 	daylight_multiplier = 0.25
@@ -64,6 +66,8 @@
 	ambience_index = AMBIENCE_HLINSIDE
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 	ambient_buzz = 'hl13/sound/ambience/town_ambience.ogg'
+
+	ambientrain = RAIN_IN
 
 /area/halflife/indoors/townhall
 	name = "\improper Town Hall"
@@ -148,6 +152,8 @@
 	mood_message = "<span class='warning'>This place smells terrible.</span>\n"
 
 	first_time_text = "City Sewers"
+
+	ambientrain = RAIN_SEWER
 
 /area/halflife/indoors/sewer/tunnel
 	name = "\improper Tunnels"

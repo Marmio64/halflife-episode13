@@ -11,9 +11,10 @@
 #define CHANNEL_CHARGED_SPELL 1015
 #define CHANNEL_ELEVATOR 1014
 #define CHANNEL_ESCAPEMENU 1013
+#define CHANNEL_RAIN 2012
 //THIS SHOULD ALWAYS BE THE LOWEST ONE!
 //KEEP IT UPDATED
-#define CHANNEL_HIGHEST_AVAILABLE 1012
+#define CHANNEL_HIGHEST_AVAILABLE 1011
 
 #define MAX_INSTRUMENT_CHANNELS (128 * 6)
 
@@ -223,3 +224,11 @@ GLOBAL_LIST_INIT(announcer_keys, list(
 #define MAX_EMOTE_PITCH 48000
 // ~0.6 - 1.4 at 0.12
 #define EMOTE_TTS_PITCH_MULTIPLIER 0.12
+
+//HL13 EDIT BEGIN
+#define RAIN_IN list('hl13/sound/weather/rain/rainin.ogg')
+
+#define RAIN_SEWER list('hl13/sound/weather/rain/rainsewer.ogg')
+
+#define RAIN_OUT list('hl13/sound/weather/rain/rainout.ogg')
+//HL13 EDIT END

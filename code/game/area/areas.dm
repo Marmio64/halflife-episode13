@@ -131,6 +131,8 @@
 	/// Text to display upon entering an area for the first time. HL13 edit
 	var/first_time_text = null
 
+	var/list/ambientrain = null //HL13 EDIT
+
 /**
  * A list of teleport locations
  *
@@ -566,6 +568,13 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 		var/mob/living/L = mob
 		if(!L.ckey || L.stat == DEAD)
 			return
+
+		var/found = FALSE
+		for(var/datum/weather/rain/R in SSweather.processing)
+			found = TRUE
+		if(found)
+			SSdroning.play_rain(src, L.client)
+
 
 		if(first_time_text)
 			L.intro_area(src)
