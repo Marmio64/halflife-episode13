@@ -4,4 +4,5 @@
 	icon_state = "salem_pack"
 	base_icon_state = "salem_pack"
 	spawn_type = /obj/item/cigarette/halflife
+	spawn_count = 5
 	icon = 'hl13/icons/obj/smokeables/smokeables.dmi'

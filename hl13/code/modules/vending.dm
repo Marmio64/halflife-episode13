@@ -41,6 +41,8 @@
 					/obj/item/reagent_containers/cup/bottle/welding_fuel = 3,
 					/obj/item/food/rationpack/box = 5,
 					/obj/item/reagent_containers/pill/patch/medkit/vial = 3,
+					/obj/item/stack/sticky_tape = 2,
+					/obj/item/storage/fancy/cigarettes/halflife = 5,
 					/obj/item/clothing/gloves/fingerless = 3)
 
 	contraband = list(/obj/item/lockpick = 1,

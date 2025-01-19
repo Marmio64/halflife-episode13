@@ -22,6 +22,16 @@
 	price_max = CARGO_CRATE_VALUE/2
 	availability_prob = 90
 
+/datum/market_item/halflife/tool/toolbox
+	name = "Toolbox"
+	desc = "A full toolbox, useful for taking apart stuff."
+	item = /obj/item/storage/toolbox/mechanical
+	stock = 3
+
+	price_min = CARGO_CRATE_VALUE/3
+	price_max = CARGO_CRATE_VALUE/2
+	availability_prob = 80
+
 /datum/market_item/halflife/tool/lockpick
 	name = "Lockpick"
 	desc = "Locked door that you want open without tearing it down? No problem."
