@@ -5,6 +5,13 @@
 	wound_bonus = -10
 	armour_penetration = 15
 
+/obj/projectile/bullet/pulse/weak
+	name = "pulse round"
+	icon_state = "pulse"
+	damage = 10
+	wound_bonus = -10
+	speed = 1.5
+
 /obj/projectile/bullet/pulse/heavy
 	name = "heavy pulse round"
 	icon_state = "pulse"

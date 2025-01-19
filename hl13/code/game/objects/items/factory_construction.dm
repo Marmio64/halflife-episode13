@@ -39,7 +39,9 @@
 
 	var/list/possible_items = list(/obj/item/stack/sheet/iron,
 									/obj/item/stack/cable_coil,
+									/obj/item/stack/rods,
 									/obj/item/stack/sheet/glass,
+									/obj/item/stack/sheet/mineral/titanium,
 									/obj/item/stack/sheet/mineral/wood,
 									/obj/item/stack/sheet/cloth,
 									/obj/item/stack/sheet/scrap_metal,

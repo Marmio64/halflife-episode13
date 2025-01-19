@@ -13,15 +13,28 @@
 #define TURRET_FLAG_SHOOT_BORGS (1<<6) // checks if it can shoot cyborgs
 #define TURRET_FLAG_SHOOT_HEADS (1<<7) // checks if it can shoot at heads of staff
 
+DEFINE_BITFIELD(turret_flags, list(
+	"TURRET_FLAG_SHOOT_ALL_REACT" = TURRET_FLAG_SHOOT_ALL_REACT,
+	"TURRET_FLAG_AUTH_WEAPONS" = TURRET_FLAG_AUTH_WEAPONS,
+	"TURRET_FLAG_SHOOT_CRIMINALS" = TURRET_FLAG_SHOOT_CRIMINALS,
+	"TURRET_FLAG_SHOOT_ALL" = TURRET_FLAG_SHOOT_ALL,
+	"TURRET_FLAG_SHOOT_ANOMALOUS" = TURRET_FLAG_SHOOT_ANOMALOUS,
+	"TURRET_FLAG_SHOOT_UNSHIELDED" = TURRET_FLAG_SHOOT_UNSHIELDED,
+	"TURRET_FLAG_SHOOT_BORGS" = TURRET_FLAG_SHOOT_BORGS,
+	"TURRET_FLAG_SHOOT_HEADS" = TURRET_FLAG_SHOOT_HEADS,
+))
+
 /obj/machinery/porta_turret
 	///if you can move it regardless if it is raised or not
 	var/alwaysmovable = 0
 
 /obj/machinery/porta_turret/combine
-	name = "turret"
+	name = "combine turret"
 	icon_state = "combine_lethal"
 	base_icon_state = "combine"
-	installation = /obj/item/gun/ballistic/automatic/ar2
+	installation = null
+	stun_projectile = /obj/projectile/bullet/pulse/ar2
+	lethal_projectile = /obj/projectile/bullet/pulse/ar2
 	lethal_projectile_sound = "hl13/sound/weapons/ar2fire.ogg"
 	stun_projectile_sound = "hl13/sound/weapons/ar2fire.ogg"
 	shot_delay = 5
@@ -30,19 +43,26 @@
 	desc = "A combine made turret which shoots at specified targets with a high power pulse gun."
 	req_access = list(ACCESS_SECURITY)
 	faction = list("combine")
-	has_cover = 0
-	always_up = 1
+	has_cover = FALSE
+	always_up = TRUE
 	use_power = NO_POWER_USE
-	turret_flags = TURRET_FLAG_SHOOT_ALL
+	turret_flags = TURRET_FLAG_SHOOT_CRIMINALS | TURRET_FLAG_SHOOT_ANOMALOUS | TURRET_FLAG_SHOOT_BORGS
 	scan_range = 9
 	mode = TURRET_LETHAL
 	anchored = 0
 	raised = 1
 	alwaysmovable = TRUE
 	max_integrity = 180
+	uses_stored = FALSE
 
 /obj/machinery/porta_turret/combine/off
 	on = FALSE
+
+/obj/machinery/porta_turret/combine/setup()
+	return
+
+/obj/machinery/porta_turret/combine/assess_perp(mob/living/carbon/human/perp)
+	return 10 //shoot everything not in their faction
 
 /obj/machinery/porta_turret/combine/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if(obj_flags & EMAGGED)
@@ -57,6 +77,13 @@
 	faction -= "combine"
 	on = TRUE
 	return TRUE
+
+/obj/machinery/porta_turret/combine/old
+	name = "old combine turret"
+	shot_delay = 0
+	stun_projectile = /obj/projectile/bullet/pulse/weak
+	lethal_projectile = /obj/projectile/bullet/pulse/weak
+	max_integrity = 150
 
 #undef TURRET_STUN
 #undef TURRET_LETHAL

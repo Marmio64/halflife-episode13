@@ -162,7 +162,7 @@ DEFINE_BITFIELD(turret_flags, list(
 
 /obj/machinery/porta_turret/proc/check_should_process()
 	if (datum_flags & DF_ISPROCESSING)
-		if (!on || !anchored || (machine_stat & BROKEN) || !powered())
+		if (!on || !anchored && !alwaysmovable || (machine_stat & BROKEN) || !powered())
 			end_processing()
 	else
 		if (on && anchored && !(machine_stat & BROKEN) && powered())
@@ -524,7 +524,7 @@ DEFINE_BITFIELD(turret_flags, list(
 			return 1
 
 /obj/machinery/porta_turret/proc/popUp() //pops the turret up
-	if(!anchored)
+	if(!anchored && !alwaysmovable)
 		return
 	if(raising || raised)
 		return
