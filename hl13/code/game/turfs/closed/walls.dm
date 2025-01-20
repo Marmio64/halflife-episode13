@@ -19,6 +19,9 @@
 	icon_state = "wall-0"
 	base_icon_state = "wall"
 
+/turf/closed/wall/halflife/brick/grey
+	icon = 'hl13/icons/turf/walls/brickgrey.dmi'
+
 /turf/closed/wall/halflife/concrete
 	name = "concrete wall"
 	icon = 'hl13/icons/turf/walls/concrete.dmi'

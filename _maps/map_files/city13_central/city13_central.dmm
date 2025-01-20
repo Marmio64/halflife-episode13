@@ -1693,7 +1693,7 @@
 /area/halflife/indoors/townhall/secondfloor)
 "gy" = (
 /obj/item/kirbyplants/random,
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
 "gz" = (
 /obj/machinery/camera{
@@ -2016,7 +2016,7 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
 "hK" = (
-/turf/closed/wall/halflife/brick,
+/turf/closed/wall/halflife/brick/grey,
 /area/halflife/indoors/hospital)
 "hL" = (
 /obj/structure/bed/halflife/bedframe/wire,
@@ -2108,7 +2108,7 @@
 /obj/structure/stairs/wood{
 	dir = 8
 	},
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/hospital/office)
 "ij" = (
 /obj/machinery/camera{
@@ -4970,7 +4970,10 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/slums)
 "tD" = (
-/obj/machinery/door/unpowered/halflife/wood,
+/obj/machinery/door/unpowered/halflife/wood/white{
+	keylock = 1;
+	lockid = "hospital"
+	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
 "tE" = (
@@ -5465,7 +5468,7 @@
 /obj/structure/table/halflife/no_smooth/large/wood/desk{
 	dir = 1
 	},
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
 "vS" = (
 /obj/structure/closet/crate/bin,
@@ -6050,8 +6053,11 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "yc" = (
-/obj/machinery/door/unpowered/halflife/wood,
-/turf/open/floor/plating/indoor/woodc,
+/obj/machinery/door/unpowered/halflife/wood/white{
+	keylock = 1;
+	lockid = "hospital"
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/hospital/office)
 "yd" = (
 /obj/effect/turf_decal/siding/thinplating/corner{
@@ -6419,7 +6425,7 @@
 /area/halflife/indoors/sewer)
 "zC" = (
 /obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
 "zD" = (
 /turf/open/misc/grass/jungle/station,
@@ -6934,7 +6940,7 @@
 /area/halflife/indoors/sewer)
 "BK" = (
 /obj/structure/chair/office/halflife/blue,
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
 "BL" = (
 /obj/structure/fluff/shower_drain,
@@ -7213,6 +7219,9 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
+"CI" = (
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/hospital/office)
 "CJ" = (
 /obj/structure/table/halflife/no_smooth/large/wood/desk,
 /obj/item/clothing/head/flatcap,
@@ -7257,6 +7266,9 @@
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/apartments/primary)
+"CU" = (
+/turf/closed/wall/halflife/brick/grey,
+/area/halflife/indoors/hospital/virology)
 "CW" = (
 /obj/structure/bed/halflife/bedframe/wood,
 /obj/item/clothing/suit/jacket/straight_jacket,
@@ -8301,6 +8313,10 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/antlioncave)
+"Ha" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/hospital/office)
 "Hb" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/laborunion)
@@ -8555,6 +8571,9 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/productioncenter/upper)
+"Id" = (
+/turf/closed/wall/halflife/brick/grey,
+/area/halflife/outdoors/roofs)
 "Ie" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "arrivals_train_line_external";
@@ -9973,7 +9992,7 @@
 /obj/structure/chair/office/halflife/blue{
 	dir = 1
 	},
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
 "NE" = (
 /obj/structure/chair/office/halflife/blue{
@@ -10159,7 +10178,7 @@
 /area/halflife/outdoors)
 "On" = (
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
 "Oo" = (
 /turf/open/misc/grass/jungle/station,
@@ -10222,10 +10241,12 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/apartments/primary)
 "OB" = (
-/obj/machinery/door/unpowered/halflife/wood{
+/obj/machinery/door/unpowered/halflife/wood/white{
+	keylock = 1;
+	lockid = "hospital";
 	dir = 4
 	},
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
 "OC" = (
 /obj/structure/halflife/barrel/double/grey,
@@ -11269,7 +11290,7 @@
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
 "SO" = (
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
 "SP" = (
 /obj/structure/cable{
@@ -12851,7 +12872,7 @@
 /area/halflife/indoors/hydroponics)
 "Zg" = (
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
 "Zh" = (
 /obj/effect/landmark/destabilizer,
@@ -48331,9 +48352,9 @@ on
 hK
 hK
 hK
-SO
-SO
-SO
+CI
+CI
+CI
 hK
 dk
 Kw
@@ -48459,9 +48480,9 @@ bx
 bx
 bx
 yc
-SO
+CI
 ii
-Zg
+Ha
 hK
 IN
 Kw
@@ -48587,9 +48608,9 @@ An
 eP
 Rm
 hK
-SO
-SO
-SO
+CI
+CI
+CI
 hK
 nr
 Kw
@@ -70081,13 +70102,13 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
+Id
+Id
+Id
 hK
 hK
 hK
@@ -70209,13 +70230,13 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
+Id
+Id
+Id
 hK
 hK
 SO
@@ -70337,13 +70358,13 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
+Id
+Id
+Id
 hK
 hK
 zC
@@ -70465,13 +70486,13 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
+Id
+Id
+Id
 hK
 hK
 gy
@@ -70593,9 +70614,9 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
+Id
+Id
+Id
 hK
 hK
 hK
@@ -70721,9 +70742,9 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
+Id
+Id
+Id
 hK
 XZ
 by
@@ -70849,9 +70870,9 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
+Id
+Id
+Id
 hK
 Hf
 by
@@ -70977,9 +70998,9 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
+Id
+Id
+Id
 hK
 AG
 AG
@@ -71105,9 +71126,9 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
+Id
+Id
+Id
 hK
 EM
 by
@@ -71233,9 +71254,9 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
+Id
+Id
+Id
 hK
 FS
 Xu
@@ -71361,9 +71382,9 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
+Id
+Id
+Id
 hK
 Cd
 by
@@ -71489,9 +71510,9 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
+Id
+Id
+Id
 hK
 by
 RE
@@ -71622,7 +71643,7 @@ DL
 DL
 hK
 by
-UJ
+CU
 sd
 by
 hK
@@ -72004,11 +72025,11 @@ Rz
 Rz
 Rz
 DL
-Rz
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
+Id
 hK
 hK
 hK
@@ -72132,11 +72153,11 @@ Rz
 Rz
 Rz
 DL
-Rz
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
+Id
 hK
 hK
 hK
@@ -72260,18 +72281,18 @@ Rz
 Rz
 Rz
 DL
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
 DL
 DL
 DL
@@ -72388,18 +72409,18 @@ Rz
 Rz
 Rz
 DL
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
 DL
 DL
 DL
@@ -72520,14 +72541,14 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
 DL
 DL
 DL
@@ -72648,14 +72669,14 @@ Rz
 Rz
 Rz
 DL
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
 DL
 DL
 DL
@@ -72776,14 +72797,14 @@ Rz
 Rz
 Rz
 DL
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
 DL
 DL
 DL
@@ -72904,14 +72925,14 @@ Rz
 Rz
 Rz
 DL
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
 DL
 DL
 DL
@@ -73032,14 +73053,14 @@ Rz
 Rz
 Rz
 DL
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
+Id
+Id
+Id
+Id
 DL
 DL
 DL
@@ -73164,10 +73185,10 @@ DL
 DL
 DL
 DL
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
 DL
 DL
 DL
@@ -73292,10 +73313,10 @@ Rz
 Rz
 Rz
 DL
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
 DL
 DL
 DL
@@ -73420,10 +73441,10 @@ Rz
 Rz
 Rz
 DL
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
 DL
 DL
 DL
@@ -73548,10 +73569,10 @@ Rz
 Rz
 Rz
 DL
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
 DL
 DL
 DL
@@ -73676,10 +73697,10 @@ Rz
 Rz
 Rz
 DL
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
 DL
 DL
 DL
@@ -73804,10 +73825,10 @@ Rz
 Rz
 Rz
 DL
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
 DL
 DL
 DL
@@ -73932,10 +73953,10 @@ Rz
 Rz
 Rz
 DL
-Rz
-Rz
-Rz
-Rz
+Id
+Id
+Id
+Id
 DL
 DL
 DL

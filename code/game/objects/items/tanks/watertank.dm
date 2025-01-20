@@ -9,7 +9,7 @@
 	righthand_file = 'icons/mob/inhands/equipment/backpack_righthand.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
-	slowdown = 1
+	slowdown = 0.25
 	actions_types = list(/datum/action/item_action/toggle_mister)
 	max_integrity = 200
 	armor_type = /datum/armor/item_watertank
