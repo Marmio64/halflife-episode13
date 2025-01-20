@@ -96,6 +96,11 @@
 			return
 	else
 		to_chat(usr, span_notice("This is not the correct ingredient."))
+
+		if(item_1_fulfilled && item_2_fulfilled && item_3_fulfilled) //Sanity check
+			to_chat(usr, span_notice("Container has been filled correctly. Seal with hands while holding to complete, or use a sealing machine."))
+			filled = TRUE
+
 		return
 
 	if(item_1_fulfilled && item_2_fulfilled && item_3_fulfilled)

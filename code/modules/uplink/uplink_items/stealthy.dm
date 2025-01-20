@@ -12,6 +12,7 @@
 	item = /obj/item/storage/box/syndie_kit/chemical
 	cost = 8
 	surplus = 50
+	progression_minimum = 2 MINUTES
 
 /datum/uplink_item/stealthy_weapons/suppressor
 	name = "Suppressor"

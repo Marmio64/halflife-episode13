@@ -713,7 +713,7 @@
 /datum/reagent/toxin/fentanyl/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
 	var/need_mob_update
-	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, 3 * REM * normalise_creation_purity() * seconds_per_tick, 150)
+	need_mob_update = affected_mob.adjustOrganLoss(ORGAN_SLOT_BRAIN, 2.5 * REM * normalise_creation_purity() * seconds_per_tick, 150)
 	if(affected_mob.toxloss <= 60)
 		need_mob_update += affected_mob.adjustToxLoss(1 * REM * normalise_creation_purity() * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
 	if(current_cycle > 4)
