@@ -42,6 +42,10 @@
 					/obj/item/food/rationpack/box = 5,
 					/obj/item/reagent_containers/pill/patch/medkit/vial = 3,
 					/obj/item/stack/sticky_tape = 2,
+					/obj/item/storage/toolbox/fishing = 2,
+					/obj/item/storage/box/fishing_hooks = 2,
+					/obj/item/storage/box/fishing_lines = 2,
+					/obj/item/storage/box/fishing_lures = 2,
 					/obj/item/storage/fancy/cigarettes/halflife = 5,
 					/obj/item/clothing/gloves/fingerless = 3)
 

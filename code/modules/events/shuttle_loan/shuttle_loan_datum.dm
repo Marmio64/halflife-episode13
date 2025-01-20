@@ -79,8 +79,6 @@
 	logging_desc = "Syndicate boarding party"
 
 /datum/shuttle_loan_situation/syndiehijacking/spawn_items(list/spawn_list, list/empty_shuttle_turfs, list/blocked_shutte_turfs)
-	var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/imports/specialops]
-	pack.generate(pick_n_take(empty_shuttle_turfs))
 
 	spawn_list.Add(/mob/living/basic/trooper/syndicate/ranged/infiltrator)
 	spawn_list.Add(/mob/living/basic/trooper/syndicate/ranged/infiltrator)
@@ -185,8 +183,6 @@
 	logging_desc = "Shuttle full of spiders"
 
 /datum/shuttle_loan_situation/spider_gift/spawn_items(list/spawn_list, list/empty_shuttle_turfs, list/blocked_shutte_turfs)
-	var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/imports/specialops]
-	pack.generate(pick_n_take(empty_shuttle_turfs))
 
 	spawn_list.Add(/mob/living/basic/spider/giant)
 	spawn_list.Add(/mob/living/basic/spider/giant)

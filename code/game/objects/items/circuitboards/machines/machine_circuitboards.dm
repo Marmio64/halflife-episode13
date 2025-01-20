@@ -1458,7 +1458,7 @@
 	build_path = /obj/machinery/rnd/production/techfab/department/cargo
 
 /obj/item/circuitboard/machine/materials_market
-	name = "Galactic Materials Market"
+	name = "Materials Market"
 	greyscale_colors = CIRCUIT_COLOR_SUPPLY
 	build_path = /obj/machinery/materials_market
 	req_components = list(

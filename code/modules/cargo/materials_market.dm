@@ -4,7 +4,7 @@
 #define GALATIC_MATERIAL_ORDER "Galactic Materials Market"
 
 /obj/machinery/materials_market
-	name = "galactic materials market"
+	name = "materials market"
 	desc = "This machine allows the user to buy and sell sheets of minerals \
 		across the system. Prices are known to fluxuate quite often,\
 		sometimes even within the same minute. All transactions are final."

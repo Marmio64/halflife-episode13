@@ -29,6 +29,12 @@
 
 	first_time_text = "City Upper Levels"
 
+/area/halflife/outdoors/tracks
+	name = "\improper City Train Tracks"
+	daylight_multiplier = 0.25
+
+	first_time_text = "City Train Tracks"
+
 /area/halflife/outdoors/sewage_dump
 	name = "\improper Sewage Dump"
 	ambient_buzz = 'hl13/sound/ambience/toxic_ambience.ogg'
@@ -76,10 +82,43 @@
 
 	first_time_text = "The Townhall"
 
+/area/halflife/indoors/townhall/secondfloor
+	name = "\improper Town Hall Second Floor"
+
+	first_time_text = "Town Hall Second Floor"
+
+/area/halflife/indoors/townhall/infirmary
+	name = "\improper Town Hall Infirmary"
+
+	first_time_text = null
+
+/area/halflife/indoors/townhall/civilprotection
+	first_time_text = null
+
+/area/halflife/indoors/townhall/civilprotection/preproom
+	name = "\improper Town Hall Prep Room"
+
+/area/halflife/indoors/townhall/civilprotection/equipmentroom
+	name = "\improper Town Hall Equipment Room"
+
+/area/halflife/indoors/townhall/civilprotection/prison
+	name = "\improper Town Hall Prison"
+
+/area/halflife/indoors/townhall/civilprotection/range
+	name = "\improper Town Hall Shooting Range"
+
+/area/halflife/indoors/apartments/primary
+	name = "\improper Primary Apartments"
+
 /area/halflife/indoors/bar
 	name = "\improper Bar"
 
 	first_time_text = "District Bar"
+
+/area/halflife/indoors/bar/apartments
+	name = "\improper Bar Apartments"
+
+	first_time_text = null
 
 /area/halflife/indoors/dispatch
 	name = "\improper Dispatch Core"
@@ -104,6 +143,21 @@
 
 	first_time_text = "The Hospital"
 
+/area/halflife/indoors/hospital/virology
+	name = "\improper Hospital Virology"
+
+	first_time_text = null
+
+/area/halflife/indoors/hospital/office
+	name = "\improper Hospital Office"
+
+	first_time_text = null
+
+/area/halflife/indoors/hospital/storage
+	name = "\improper Hospital Storage"
+
+	first_time_text = null
+
 /area/halflife/indoors/scienceunion
 	name = "\improper Science Union"
 
@@ -118,6 +172,8 @@
 	name = "\improper Labor Union"
 
 	first_time_text = "The Labor Union"
+
+////// FACTORY START
 
 /area/halflife/indoors/distributioncenter
 	name = "\improper Distribution Center"
@@ -136,9 +192,42 @@
 
 	first_time_text = "The Factory"
 
+/area/halflife/indoors/productioncenter/infestation
+	name = "\improper Production Center Infestation Control"
+
+	first_time_text = null
+
+/area/halflife/indoors/productioncenter/office
+	name = "\improper Production Center Foreman's Office"
+
+	first_time_text = null
+
+/area/halflife/indoors/productioncenter/upper
+	name = "\improper Production Center Upper Floor"
+
+	first_time_text = null
+
+/////////FACTORY END
+
+
+///////// 'old' abandoned areas that are not in the slums
+
+/area/halflife/indoors/old/chapel
+	name = "\improper Abandoned Chapel"
+
+/area/halflife/indoors/old/offices
+	name = "\improper Abandoned Offices"
+
+
+///////// 'old' areas end
+
 /area/halflife/indoors/bunker
 	ambient_buzz = 'hl13/sound/ambience/bunker2.ogg'
 	ambient_buzz_vol = 70
+
+
+
+
 
 /area/halflife/indoors/sewer
 	name = "\improper Sewers"
