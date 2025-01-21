@@ -1,3 +1,4 @@
+/*
 /datum/quirk/quadruple_amputee
 	name = "Quadruple Amputee"
 	desc = "Oops! All Prosthetics! Due to some truly cruel cosmic punishment, all your limbs have been replaced with surplus prosthetics."
@@ -18,3 +19,4 @@
 /datum/quirk/quadruple_amputee/post_add()
 	to_chat(quirk_holder, span_bolddanger("All your limbs have been replaced with surplus prosthetics. They are fragile and will easily come apart under duress. \
 	Additionally, you need to use a welding tool and cables to repair them, instead of bruise packs and ointment."))
+*/

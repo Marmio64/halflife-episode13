@@ -4,7 +4,6 @@
 	desc = "You are built tough and don't die easily."
 	icon = FA_ICON_SHIELD
 	value = 12
-	medical_record_text = "Patient has a robust physique."
 	medical_record_text = "Patient has an unnaturally robust physique."
 
 /datum/quirk/stalwart/add()

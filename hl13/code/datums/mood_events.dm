@@ -29,9 +29,17 @@
 	description = "I'm so exhausted, I feel like I could collapse any second now..."
 	mood_change = -10
 
+/datum/mood_event/sleepy/exhausted/spartan
+	description = "I'm so exhausted, but sleep is for the weak...!"
+	mood_change = -5
+
 /datum/mood_event/sleepy
 	description = "I'm very tired..."
 	mood_change = -8
+
+/datum/mood_event/sleepy/spartan
+	description = "I tire, but I must go on."
+	mood_change = -3
 
 /datum/mood_event/sleepy/small
 	description = "I'm a bit tired."

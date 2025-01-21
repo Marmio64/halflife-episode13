@@ -68,19 +68,43 @@
 
 /mob/living/carbon/proc/adjust_tiredness(amount)
 	tiredness += amount
+
+	if(!HAS_TRAIT(src, TRAIT_SPARTAN))
+		handle_sleep_slowdown()
+
 	if(tiredness > TIREDNESS_MAXIMUM_THRESHOLD)
 		tiredness = TIREDNESS_MAXIMUM_THRESHOLD
-		add_mood_event("sleepy", /datum/mood_event/sleepy/exhausted)
+		if(!HAS_TRAIT(src, TRAIT_SPARTAN))
+			add_mood_event("sleepy", /datum/mood_event/sleepy/exhausted)
+		else
+			add_mood_event("sleepy", /datum/mood_event/sleepy/exhausted/spartan)
+
 	else if(tiredness > TIREDNESS_SLEEPY_THRESHOLD)
 		throw_alert("sleepy", /atom/movable/screen/alert/sleepy)
-		add_mood_event("sleepy", /datum/mood_event/sleepy)
+		if(!HAS_TRAIT(src, TRAIT_SPARTAN))
+			add_mood_event("sleepy", /datum/mood_event/sleepy)
+		else
+			add_mood_event("sleepy", /datum/mood_event/sleepy/spartan)
+
 	else if(tiredness > TIREDNESS_TIRED_THRESHOLD)
-		add_mood_event("sleepy", /datum/mood_event/sleepy/small)
+		if(!HAS_TRAIT(src, TRAIT_SPARTAN))
+			add_mood_event("sleepy", /datum/mood_event/sleepy/small)
+		else
+			clear_alert("sleepy")
+			clear_mood_event("sleepy")
+
 	else if(tiredness < TIREDNESS_CLEAR_THRESHOLD)
 		clear_alert("sleepy")
 		clear_mood_event("sleepy")
 	else if(tiredness < 0)
 		tiredness = 0
+
+///for when mood is disabled and hunger should handle slowdowns
+/mob/living/carbon/proc/handle_sleep_slowdown()
+	if(tiredness >= TIREDNESS_MAXIMUM_THRESHOLD)
+		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/sleepy, multiplicative_slowdown = 0.5)
+	else
+		remove_movespeed_modifier(/datum/movespeed_modifier/sleepy)
 
 /mob/living/carbon/human/calculate_affecting_pressure(pressure)
 	var/chest_covered = !get_bodypart(BODY_ZONE_CHEST)

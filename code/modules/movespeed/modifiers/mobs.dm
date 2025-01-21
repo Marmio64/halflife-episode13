@@ -15,6 +15,10 @@
 	movetypes = GROUND|FLYING
 	variable = TRUE
 
+/datum/movespeed_modifier/sleepy
+	movetypes = GROUND|FLYING
+	variable = TRUE
+
 /datum/movespeed_modifier/golem_hunger
 	variable = TRUE
 
