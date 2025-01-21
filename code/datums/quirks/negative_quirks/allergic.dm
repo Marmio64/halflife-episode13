@@ -69,7 +69,7 @@
 		if(!instantiated_med)
 			continue
 		instantiated_med.reagent_removal_skip_list -= ALLERGIC_REMOVAL_SKIP
-		carbon_quirk_holder.adjustToxLoss(3 * seconds_per_tick)
+		carbon_quirk_holder.adjustToxLoss(2 * seconds_per_tick)
 		carbon_quirk_holder.reagents.add_reagent(/datum/reagent/toxin/histamine, 3 * seconds_per_tick)
 		if(SPT_PROB(10, seconds_per_tick))
 			carbon_quirk_holder.vomit(VOMIT_CATEGORY_DEFAULT)

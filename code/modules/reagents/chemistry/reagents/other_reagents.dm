@@ -2349,8 +2349,6 @@
 		if(!ishuman(affected_mob))
 			return
 		var/mob/living/carbon/human/human_mob = affected_mob
-		if(creation_purity == 1 && human_mob.has_quirk(/datum/quirk/item_quirk/bald))
-			human_mob.remove_quirk(/datum/quirk/item_quirk/bald)
 		var/obj/item/bodypart/head/head = human_mob.get_bodypart(BODY_ZONE_HEAD)
 		if(!head || (head.head_flags & HEAD_HAIR))
 			return

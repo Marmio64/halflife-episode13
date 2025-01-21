@@ -1,3 +1,4 @@
+/*
 /datum/quirk/item_quirk/poster_boy
 	name = "Poster Boy"
 	desc = "You have some great posters! Hang them up and make everyone have a great time."
@@ -29,3 +30,5 @@
 		if(initial(potential_poster.quirk_poster_department) != department)
 			continue
 		new potential_poster(src)
+
+*/

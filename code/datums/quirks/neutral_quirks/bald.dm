@@ -1,3 +1,4 @@
+/*
 /datum/quirk/item_quirk/bald
 	name = "Smooth-Headed"
 	desc = "You have no hair and are quite insecure about it! Keep your wig on, or at least your head covered up."
@@ -51,3 +52,4 @@
 	SIGNAL_HANDLER
 
 	quirk_holder.add_mood_event("bad_hair_day", /datum/mood_event/bald)
+*/

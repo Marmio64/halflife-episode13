@@ -1,3 +1,4 @@
+/*
 /datum/quirk/snob
 	name = "Snob"
 	desc = "You care about the finer things, if a room doesn't look nice its just not really worth it, is it?"
@@ -8,3 +9,4 @@
 	medical_record_text = "Patient seems to be rather stuck up."
 	mob_trait = TRAIT_SNOB
 	mail_goodies = list(/obj/item/chisel, /obj/item/paint_palette)
+*/

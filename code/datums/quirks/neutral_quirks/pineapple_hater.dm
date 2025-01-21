@@ -1,3 +1,4 @@
+/*
 /datum/quirk/pineapple_hater
 	name = "Ananas Aversion"
 	desc = "You find yourself greatly detesting fruits of the ananas genus. Serious, how the hell can anyone say these things are good? And what kind of madman would even dare putting it on a pizza!?"
@@ -25,3 +26,4 @@
 	if(!tongue)
 		return
 	tongue.disliked_foodtypes = initial(tongue.disliked_foodtypes)
+*/
