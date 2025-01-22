@@ -45,6 +45,10 @@
 	description = "I'm a bit tired."
 	mood_change = -4
 
+/datum/mood_event/energized
+	description = "I don't feel a bit tired, and have energy and focus."
+	mood_change = 2
+
 
 //pain
 /datum/mood_event/seriouspain

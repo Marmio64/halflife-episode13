@@ -285,6 +285,7 @@
 #define TIREDNESS_SLEEPY_THRESHOLD 850 //sleepy about every 28 minutes
 #define TIREDNESS_TIRED_THRESHOLD 600
 #define TIREDNESS_CLEAR_THRESHOLD 350
+#define TIREDNESS_ENERGIZED_THRESHOLD 100 //You feel nice and awake!
 
 //Nutrition levels for humans
 #define NUTRITION_LEVEL_FAT 600
