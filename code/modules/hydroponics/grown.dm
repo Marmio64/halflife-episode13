@@ -80,7 +80,7 @@
 
 	reagents.clear_reagents()
 	seed.prepare_result(src)
-	transform *= TRANSFORM_USING_VARIABLE((seed.potency / 2), 50) + 0.75 //Makes the resulting produce's sprite larger or smaller based on potency!
+	transform *= TRANSFORM_USING_VARIABLE((seed.potency / 2), 50) + 0.5 //Makes the resulting produce's sprite larger or smaller based on potency!
 
 /obj/item/food/grown/Destroy()
 	if(isatom(seed))

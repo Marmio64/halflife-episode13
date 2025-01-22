@@ -13,7 +13,7 @@
 	/// The reagent this plant distill to. If NULL, it uses a generic fruit_wine reagent and adjusts its variables.
 	var/distill_reagent
 
-// This may look like it's doing nothing but it's necessary, we do this to have kwargs work in New (for passing into Initialize)  
+// This may look like it's doing nothing but it's necessary, we do this to have kwargs work in New (for passing into Initialize)
 /obj/item/grown/New(loc, obj/item/seeds/new_seed)
 	return ..()
 
@@ -40,7 +40,7 @@
 
 		if(istype(src, seed.product)) // no adding reagents if it is just a trash item
 			seed.prepare_result(src)
-		transform *= TRANSFORM_USING_VARIABLE(seed.potency, 100) + 0.5
+		transform *= TRANSFORM_USING_VARIABLE((seed.potency / 2), 50) + 0.5
 		add_juice()
 
 /obj/item/grown/Destroy()

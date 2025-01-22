@@ -25,7 +25,7 @@
 	density = TRUE
 	can_crush = FALSE
 	spark_system = null
-	max_integrity = 600
+	max_integrity = 700
 	damage_deflection = 15
 	halflife_flags_1 = LOCKABLE_1
 	do_sparks = FALSE
@@ -330,7 +330,7 @@
 	name = "metal door"
 	icon_state = "metal_closed"
 	door_type = "metal"
-	max_integrity = 850 //its metal
+	max_integrity = 950 //its metal
 	damage_deflection = 25
 	hitted_sound = 'hl13/sound//halflifeeffects/metal_door_hit.ogg'
 	opensound = 'hl13/sound/machines/metaldoor_open.ogg'
@@ -447,7 +447,7 @@
 	icon_state = "metal_window_closed"
 	door_type = "metal_window"
 	passthrough_chance = 40 //Small window!
-	max_integrity = 850 //its metal
+	max_integrity = 950 //its metal
 	damage_deflection = 25
 	hitted_sound = 'hl13/sound//halflifeeffects/metal_door_hit.ogg'
 

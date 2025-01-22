@@ -223,7 +223,7 @@
 					mutated_seed.genes += trait.Copy()
 			t_prod = new t_prod(output_loc, new_seed = mutated_seed)
 			t_prod.transform = initial(t_prod.transform)
-			t_prod.transform *= TRANSFORM_USING_VARIABLE(t_prod.seed.potency, 100) + 0.5
+			t_prod.transform *= TRANSFORM_USING_VARIABLE((t_prod.seed.potency / 2), 50) + 0.5
 			ADD_TRAIT(t_prod, TRAIT_PLANT_WILDMUTATE, INNATE_TRAIT)
 			t_amount++
 			if(t_prod.seed)
@@ -270,7 +270,7 @@
 			if(reagent_max > 1)
 				reagent_overflow_mod = (reagents_add[rid]/ reagent_max)
 			var/edible_vol = grown_edible.reagents ? grown_edible.reagents.maximum_volume : 0
-			var/amount = max(1, round((edible_vol)*(potency/100) * reagent_overflow_mod, 1)) //the plant will always have at least 1u of each of the reagents in its reagent production traits
+			var/amount = max(1, round((edible_vol)*(potency/120) * reagent_overflow_mod, 1)) //the plant will always have at least 1u of each of the reagents in its reagent production traits
 			var/list/data
 			if(rid == /datum/reagent/blood) // Hack to make blood in plants always O-
 				data = list("blood_type" = "O-")
