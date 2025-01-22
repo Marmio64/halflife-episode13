@@ -155,7 +155,7 @@
 		hunger_rate *= hunger_modifier
 		hunger_rate *= human.physiology.hunger_mod
 		human.adjust_nutrition(-hunger_rate * seconds_per_tick)
-		human.adjust_hydration((-hunger_rate * seconds_per_tick)*2)
+		human.adjust_hydration((-hunger_rate * seconds_per_tick)*2) //HL13 EDIT
 
 	var/nutrition = human.nutrition
 	var/hydration = human.hydration
@@ -186,6 +186,7 @@
 	if(CONFIG_GET(flag/disable_human_mood))
 		handle_hunger_slowdown(human)
 
+//HL13 EDIT START
 	if(nutrition < NUTRITION_LEVEL_DYING) //Actively starving, body is failing
 		if(prob(3))
 			to_chat(human, span_warning("You feel your body wasting away from your hunger..."))
@@ -206,6 +207,7 @@
 			human.adjustStaminaLoss(30)
 			human.adjustOxyLoss(20)
 			human.adjust_tiredness(20)
+//HL13 EDIT END
 
 ///for when mood is disabled and hunger should handle slowdowns
 /obj/item/organ/stomach/proc/handle_hunger_slowdown(mob/living/carbon/human/human)

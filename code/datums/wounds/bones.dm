@@ -378,15 +378,15 @@
 
 	severity = WOUND_SEVERITY_SEVERE
 	interaction_efficiency_penalty = 2
-	limp_slowdown = 6
+	limp_slowdown = 5 //hl13 edit
 	limp_chance = 60
 	threshold_penalty = 30
 	treatable_by = list(/obj/item/stack/sticky_tape/surgical, /obj/item/stack/medical/bone_gel)
 	status_effect_type = /datum/status_effect/wound/blunt/bone/severe
 	scar_keyword = "bluntsevere"
 	brain_trauma_group = BRAIN_TRAUMA_MILD
-	trauma_cycle_cooldown = 1.5 MINUTES
-	internal_bleeding_chance = 40
+	trauma_cycle_cooldown = 2 MINUTES //hl13 edit
+	internal_bleeding_chance = 30 //hl13 edit
 	wound_flags = (ACCEPTS_GAUZE | MANGLES_INTERIOR)
 	regen_ticks_needed = 120 // ticks every 2 seconds, 240 seconds, so roughly 4 minutes default
 
@@ -416,7 +416,7 @@
 
 	severity = WOUND_SEVERITY_CRITICAL
 	interaction_efficiency_penalty = 2.5
-	limp_slowdown = 7
+	limp_slowdown = 6 //hl13 edit
 	limp_chance = 70
 	sound_effect = 'sound/effects/wounds/crack2.ogg'
 	threshold_penalty = 50
@@ -425,8 +425,8 @@
 	status_effect_type = /datum/status_effect/wound/blunt/bone/critical
 	scar_keyword = "bluntcritical"
 	brain_trauma_group = BRAIN_TRAUMA_SEVERE
-	trauma_cycle_cooldown = 2.5 MINUTES
-	internal_bleeding_chance = 60
+	trauma_cycle_cooldown = 3 MINUTES //hl13 edit
+	internal_bleeding_chance = 50 //hl13 edit
 	wound_flags = (ACCEPTS_GAUZE | MANGLES_INTERIOR)
 	regen_ticks_needed = 240 // ticks every 2 seconds, 480 seconds, so roughly 8 minutes default
 
