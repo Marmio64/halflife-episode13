@@ -64,8 +64,8 @@
 	projectile_type = /obj/projectile/bullet/rebar
 	newtonian_force = 1.5
 
-	force = 8 //HL13 EDIT. Sharp iron rods tend to hurt.
-	throwforce = 5 //HL13 EDIT.
+	force = 10 //HL13 EDIT. Sharp iron rods tend to hurt.
+	throwforce = 7 //HL13 EDIT.
 
 /obj/item/ammo_casing/rebar/syndie
 	name = "Jagged Iron Rod"

@@ -14,6 +14,7 @@
 	mag_display = TRUE
 	weapon_weight = WEAPON_MEDIUM
 	pin = /obj/item/firing_pin/implant/mindshield
+	slowdown = 0.25
 
 /obj/item/gun/ballistic/automatic/ar2/nopin
 	pin = null
@@ -46,6 +47,7 @@
 	mag_display = TRUE
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
+	slowdown = 0.25
 
 /obj/item/gun/ballistic/automatic/m4a1/no_mag
 	spawnwithmagazine = FALSE
@@ -89,6 +91,7 @@
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 25
 	w_class = WEIGHT_CLASS_BULKY
+	slowdown = 0.25
 
 	accepted_magazine_type = /obj/item/ammo_box/magazine/combine_sniper
 	pin = /obj/item/firing_pin/implant/mindshield

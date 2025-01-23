@@ -15,7 +15,7 @@
 	icon_state = "table-0"
 	base_icon_state = "table"
 	max_integrity = 225
-	frame = /obj/item/stack/sheet/iron
+	frame = /obj/structure/table_frame/halflife
 
 /obj/structure/table/halflife/metal/alt
 	desc = "A rounded piece of metal standing on a set of metal legs. It can not move."
@@ -36,7 +36,7 @@
 	icon = 'hl13/icons/obj/tables/table_metal_heavy.dmi'
 	max_integrity = 300
 	integrity_failure = 0.25
-	frame = /obj/item/stack/sheet/iron
+	frame = /obj/structure/table_frame/halflife
 
 // Wooden Smoothing Tables //
 
@@ -48,7 +48,7 @@
 	base_icon_state = "table"
 	max_integrity = 150
 
-	frame = /obj/item/stack/sheet/mineral/wood
+	frame = /obj/structure/table_frame/halflife/wood
 	framestack = /obj/item/stack/sheet/mineral/wood
 	framestackamount = 2
 

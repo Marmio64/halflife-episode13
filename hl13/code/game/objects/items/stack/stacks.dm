@@ -25,6 +25,7 @@
 	grind_results = list(/datum/reagent/cellulose = 10) //no lignocellulose or lignin reagents yet
 	pickup_sound = 'sound/items/handling/materials/wood_pick_up.ogg'
 	drop_sound = 'sound/items/handling/materials/wood_drop.ogg'
+	tableVariant = /obj/structure/table/halflife/wood/constructed/cobbled
 
 /obj/item/stack/sheet/halflife/plastic
 	icon = 'hl13/icons/obj/stack_objects.dmi'

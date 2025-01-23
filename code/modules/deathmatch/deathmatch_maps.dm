@@ -324,3 +324,29 @@
 	)
 	map_name = "cityalleys_uprising"
 	key = "cityalleys_uprising"
+
+/datum/lazy_template/deathmatch/hl13arena
+	name = "Sewers Arena"
+	desc = "Trapped within a cage, beat your fellow citizens to death with your bare hands."
+	max_players = 4
+	allowed_loadouts = list(
+		/datum/outfit/deathmatch_loadout/citizen,
+	)
+	map_name = "hl13arena"
+	key = "hl13arena"
+
+/datum/lazy_template/deathmatch/outlands
+	name = "Outlands"
+	desc = "A huge open forested outland, with no cover save for the trees."
+	max_players = 14
+	allowed_loadouts = list(
+		/datum/outfit/deathmatch_loadout/rebel/marine,
+		/datum/outfit/deathmatch_loadout/rebel/ranger,
+		/datum/outfit/deathmatch_loadout/combine/overwatch,
+		/datum/outfit/deathmatch_loadout/combine/grunt,
+		/datum/outfit/deathmatch_loadout/combine/overwatch/shotgunner,
+		/datum/outfit/deathmatch_loadout/civilprotection,
+		/datum/outfit/deathmatch_loadout/crowbar,
+	)
+	map_name = "outlands"
+	key = "outlands"

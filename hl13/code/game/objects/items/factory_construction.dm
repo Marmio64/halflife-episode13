@@ -126,5 +126,5 @@
 
 /obj/item/factory_construction/full_container
 	name = "sealed factory container"
-	desc = "A full factory goods container which has been sealed correctly. You can send it back on the cargo shuttle for recycling to gain some credits for the district's cargo budget."
+	desc = "A full factory goods container which has been sealed correctly. You can send it on the cargo shuttle for exporting to gain some credits for the district's cargo budget."
 	icon_state = "container"

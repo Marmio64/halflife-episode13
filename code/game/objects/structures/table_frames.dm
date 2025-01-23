@@ -100,7 +100,7 @@
 		var/toConstruct // stores the table variant
 		var/carpet_type // stores the carpet type used for construction in case of poker tables
 		if(istype(I, /obj/item/stack/sheet/mineral/wood))
-			toConstruct = /obj/structure/table/wood
+			toConstruct = /obj/structure/table/halflife/wood
 		else if(istype(I, /obj/item/stack/tile/carpet))
 			toConstruct = /obj/structure/table/wood/poker
 			carpet_type = I.type

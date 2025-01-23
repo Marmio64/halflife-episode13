@@ -211,8 +211,9 @@
 				/obj/item/switchblade,
 				/obj/item/melee/baton/security/loaded,
 				/obj/item/stack/telecrystal/five,
-				/obj/item/clothing/suit/armor/kevlar = 2,
-				/obj/item/clothing/head/helmet/marine/pmc
+				/obj/item/clothing/suit/armor/kevlar,
+				/obj/item/clothing/suit/armor/rebel/light,
+				/obj/item/clothing/head/helmet/halflife/military
 				)
 
 //guaranteed ready weapon and loot spawns
