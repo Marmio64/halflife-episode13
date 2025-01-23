@@ -232,4 +232,4 @@
 	var/gravity_state = null
 
 	/// How long it takes to return to 0 stam
-	var/stamina_regen_time = 10 SECONDS
+	var/stamina_regen_time = 8 SECONDS //HL13 edit, slightly reduced time

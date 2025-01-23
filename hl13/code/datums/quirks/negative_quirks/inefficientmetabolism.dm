@@ -1,7 +1,7 @@
 
 /datum/quirk/inefficientmetabolism
 	name = "Inefficient Metabolism"
-	desc = "Your natural metabolism does not process liquids and foods efficiently, requiring you to eat more to survive."
+	desc = "Your natural metabolism does not process liquids and foods efficiently, requiring you to eat and drink more to survive."
 	icon = FA_ICON_PLATE_WHEAT
 	value = -4
 	medical_record_text = "Patient has a inefficient metabolism."
