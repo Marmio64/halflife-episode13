@@ -239,6 +239,11 @@
 /obj/machinery/computer/security,
 /turf/open/floor/plating/indoor/metal,
 /area/mine/laborcamp/security)
+"fQ" = (
+/obj/structure/table/halflife/wood/constructed/cobbled,
+/obj/item/melee/tireiron,
+/turf/open/misc/grass/jungle/station,
+/area/halflife/outdoors/forest)
 "gd" = (
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/outdoors/forest)
@@ -296,8 +301,6 @@
 /area/halflife/indoors/bunker)
 "iq" = (
 /obj/structure/table/halflife/wood/constructed/cobbled,
-/obj/item/flashlight,
-/obj/item/flashlight,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
 "ix" = (
@@ -407,6 +410,12 @@
 	dir = 1
 	},
 /area/halflife/outdoors/forest)
+"ku" = (
+/obj/structure/table/halflife/wood/constructed/cobbled,
+/obj/item/flashlight,
+/obj/item/flashlight,
+/turf/open/misc/grass/jungle/station,
+/area/halflife/outdoors/forest)
 "ky" = (
 /obj/machinery/conveyor{
 	dir = 1;
@@ -433,6 +442,10 @@
 /obj/structure/halflife/trash/books/pile_alt,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"lc" = (
+/obj/structure/halflife/trash/cardboard,
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/outlandscave)
 "lf" = (
 /obj/machinery/telecomms/allinone,
 /turf/open/floor/plating/indoor/woodc,
@@ -554,6 +567,7 @@
 "nL" = (
 /obj/structure/table/halflife/metal/alt,
 /obj/structure/halflife/trash/papers,
+/obj/structure/halflife/pipes/horizontal/single/inwall,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "nO" = (
@@ -709,6 +723,10 @@
 	},
 /turf/open/floor/plating/indoor/metal,
 /area/halflife/outdoors/forest)
+"rd" = (
+/obj/structure/halflife/pipes/vent,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/bunker)
 "ry" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "city_surface";
@@ -750,6 +768,7 @@
 /area/halflife/outdoors/forest)
 "sL" = (
 /obj/structure/table/halflife/no_smooth/large/crafting/ammobench,
+/obj/structure/halflife/pipes/horizontal/single/cont,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "sM" = (
@@ -1018,6 +1037,10 @@
 /obj/effect/spawner/random/halflife/loot/scrap,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors)
+"zH" = (
+/obj/structure/halflife/trash/garbage,
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/outlandscave)
 "zI" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	dir = 4
@@ -1126,6 +1149,15 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
+"CL" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 5
+	},
+/obj/effect/turf_decal/weather/dirt{
+	dir = 9
+	},
+/turf/open/halflife/water/shallow,
+/area/halflife/outdoors/forest)
 "CT" = (
 /obj/effect/spawner/random/halflife/loot/crafting_bench,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -1145,6 +1177,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors/sewer/tunnel)
+"Dq" = (
+/obj/structure/halflife/pipes/vent,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "Dr" = (
 /obj/machinery/camera{
 	c_tag = "Labour Camp Security Office"
@@ -1152,6 +1188,7 @@
 /obj/machinery/combine_recharger/round_start{
 	pixel_y = 32
 	},
+/obj/structure/halflife/trash/papers,
 /turf/open/floor/plating/indoor/metal,
 /area/mine/laborcamp/security)
 "Dt" = (
@@ -1455,6 +1492,10 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"KX" = (
+/obj/effect/spawner/random/halflife/loot/ammo,
+/turf/open/floor/plating/ground/dirt/alt,
+/area/halflife/outdoors/forest)
 "KZ" = (
 /obj/machinery/mineral/processing_unit_console,
 /turf/closed/wall/halflife/metal,
@@ -1558,6 +1599,9 @@
 /area/halflife/indoors/bunker)
 "NH" = (
 /obj/structure/table/halflife/no_smooth/large/crafting/weaponbench,
+/obj/structure/halflife/pipes/horizontal/single/inwall{
+	dir = 1
+	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "NN" = (
@@ -1579,6 +1623,7 @@
 /area/halflife/outdoors/forest)
 "Od" = (
 /obj/structure/table/halflife/metal,
+/obj/structure/halflife/trash/food/glass,
 /turf/open/floor/plating/indoor/metal,
 /area/mine/laborcamp/security)
 "Ov" = (
@@ -1598,6 +1643,7 @@
 /area/halflife/indoors/sewer/outlandscave)
 "OI" = (
 /obj/structure/table/halflife/no_smooth/wood,
+/obj/effect/spawner/random/halflife/loot,
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
@@ -1675,6 +1721,10 @@
 /obj/machinery/porta_turret/combine/old,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"QL" = (
+/obj/structure/halflife/trash/garbage,
+/turf/open/misc/grass/jungle/station,
+/area/halflife/outdoors/forest)
 "QP" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors/sewer/tunnel)
@@ -1734,6 +1784,10 @@
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/outdoors/forest)
+"RN" = (
+/obj/structure/halflife/pipes/horizontal/single/valve,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "RZ" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
@@ -1774,7 +1828,7 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors)
 "SV" = (
-/obj/item/melee/tireiron,
+/mob/living/simple_animal/hostile/halflife/zombie,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
 "Tb" = (
@@ -1888,6 +1942,7 @@
 	id = "gulag_expanded_access";
 	name = "Allow Exterior Caves (DANGER!)"
 	},
+/obj/structure/halflife/trash/papers/three,
 /turf/open/floor/plating/indoor/metal,
 /area/mine/laborcamp/security)
 "Vn" = (
@@ -2116,6 +2171,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
+"Zb" = (
+/obj/structure/halflife/pipes/horizontal/single,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "Zd" = (
 /obj/structure/table/halflife/metal,
 /obj/item/stack/sheet/mineral/wood/fifty,
@@ -2162,6 +2221,10 @@
 /obj/structure/halflife/fence/wire,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"ZY" = (
+/obj/structure/halflife/pipes/vent,
+/turf/open/floor/plating/indoor/lino,
+/area/halflife/indoors/bunker)
 
 (1,1,1) = {"
 MZ
@@ -2644,7 +2707,7 @@ GX
 GX
 GX
 GX
-tN
+EU
 XA
 PT
 fv
@@ -2890,9 +2953,9 @@ fv
 fv
 fv
 fv
-fv
-fv
-fv
+OA
+iQ
+Tm
 fv
 fv
 fv
@@ -3075,12 +3138,12 @@ fv
 fv
 fv
 fv
-fv
-fv
-fv
-fv
-fv
-fv
+ja
+iQ
+iQ
+iQ
+iQ
+FJ
 fv
 fv
 fv
@@ -3147,7 +3210,7 @@ zB
 XA
 GX
 LN
-GX
+QL
 GX
 tN
 It
@@ -3262,11 +3325,11 @@ fv
 fv
 fv
 fv
-fv
-fv
-fv
-fv
-fv
+cp
+iQ
+iQ
+iQ
+xx
 fv
 fv
 fv
@@ -3332,7 +3395,7 @@ XA
 XA
 zB
 XA
-GX
+QL
 tN
 GX
 It
@@ -3450,9 +3513,9 @@ PI
 fv
 fv
 fv
-fv
-fv
-fv
+Sj
+iQ
+iQ
 fv
 fv
 fv
@@ -3638,8 +3701,8 @@ fv
 fv
 fv
 fv
-fv
-fv
+iQ
+iQ
 fv
 fv
 fv
@@ -3716,8 +3779,8 @@ FC
 FC
 FC
 GX
-GX
-GX
+fQ
+ku
 GX
 FC
 FC
@@ -3826,7 +3889,7 @@ fv
 fv
 fv
 fv
-fv
+iQ
 fv
 fv
 fv
@@ -3904,7 +3967,7 @@ rF
 FC
 GX
 GX
-SV
+It
 tN
 xY
 FC
@@ -4013,7 +4076,7 @@ fv
 fv
 fv
 fv
-fv
+iQ
 fv
 iQ
 iQ
@@ -5889,7 +5952,7 @@ iQ
 xE
 iQ
 iQ
-iQ
+Yo
 fv
 fv
 fv
@@ -6073,7 +6136,7 @@ fv
 fv
 iQ
 fv
-xx
+iQ
 iQ
 iQ
 fv
@@ -10168,7 +10231,7 @@ tN
 tN
 tN
 It
-It
+bH
 PT
 PT
 CX
@@ -10728,7 +10791,7 @@ tN
 Wx
 tN
 LN
-tN
+IF
 PT
 PT
 PT
@@ -11666,7 +11729,7 @@ tN
 dL
 tN
 It
-tN
+IF
 UA
 Dr
 Lo
@@ -12983,7 +13046,7 @@ Hu
 Ub
 Ub
 cD
-iQ
+lc
 iQ
 iQ
 iQ
@@ -13171,7 +13234,7 @@ Ub
 ue
 cD
 wG
-iQ
+zH
 iQ
 iQ
 iQ
@@ -23913,7 +23976,7 @@ tN
 LN
 tN
 tN
-tN
+It
 cF
 Ym
 WR
@@ -24097,7 +24160,7 @@ tN
 tN
 Wx
 tN
-tN
+It
 tN
 tN
 WC
@@ -24856,8 +24919,8 @@ WR
 Ym
 Ym
 XA
-XA
-XA
+qc
+It
 XA
 XA
 XA
@@ -25042,9 +25105,9 @@ WR
 WR
 Ym
 Ym
-XA
-XA
-XA
+Zu
+tN
+tN
 XA
 XA
 XA
@@ -25222,7 +25285,7 @@ XA
 XA
 tN
 tN
-ES
+CL
 Ym
 WR
 WR
@@ -25230,9 +25293,9 @@ WR
 Ym
 Ym
 XA
-XA
-XA
-XA
+It
+tN
+tN
 XA
 XA
 It
@@ -25418,9 +25481,9 @@ Ym
 Ym
 XA
 XA
-XA
-XA
-XA
+qc
+tN
+It
 XA
 It
 It
@@ -25607,7 +25670,7 @@ XA
 XA
 XA
 XA
-XA
+tN
 XA
 It
 aZ
@@ -25676,7 +25739,7 @@ MT
 ex
 tF
 MT
-ex
+Dq
 tF
 ex
 MT
@@ -25793,8 +25856,8 @@ Ym
 XA
 XA
 XA
-XA
-XA
+SV
+tN
 XA
 tN
 tN
@@ -25979,9 +26042,9 @@ WR
 Ym
 XA
 XA
-XA
-XA
-XA
+It
+tN
+wa
 XA
 XA
 XA
@@ -26166,9 +26229,9 @@ Vy
 VO
 XA
 XA
-XA
-XA
-XA
+KX
+tN
+aO
 XA
 XA
 XA
@@ -26789,7 +26852,7 @@ MZ
 MZ
 GS
 MT
-Nf
+rd
 Nf
 Nf
 Nf
@@ -27537,7 +27600,7 @@ MZ
 MZ
 GS
 MT
-OV
+RN
 OV
 OV
 OV
@@ -27911,7 +27974,7 @@ MZ
 MZ
 GS
 MT
-OV
+Zb
 NE
 OV
 hC
@@ -28483,7 +28546,7 @@ Yf
 QS
 qI
 MT
-Xp
+ZY
 Xp
 Xp
 MT

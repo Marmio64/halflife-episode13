@@ -139,6 +139,18 @@
 	has_alternate_states = TRUE
 	has_base_states = TRUE
 
+/turf/open/floor/plating/indoor/tile/black
+	icon_state = "black"
+	alternate_states = 3
+	has_alternate_states = TRUE
+	has_base_states = TRUE
+
+/turf/open/floor/plating/indoor/tile/green
+	icon_state = "green_large"
+	alternate_states = 3
+	has_alternate_states = TRUE
+	has_base_states = TRUE
+
 /turf/open/floor/plating/indoor/tile/navy/cold
 	initial_gas_mix = TCOMMS_ATMOS
 
