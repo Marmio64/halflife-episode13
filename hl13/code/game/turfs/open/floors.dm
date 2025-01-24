@@ -147,7 +147,7 @@
 
 /turf/open/floor/plating/indoor/tile/green
 	icon_state = "green_large"
-	alternate_states = 3
+	alternate_states = 2
 	has_alternate_states = TRUE
 	has_base_states = TRUE
 

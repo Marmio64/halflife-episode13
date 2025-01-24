@@ -101,6 +101,18 @@
 				continue
 			stack_trace("Conflicting double stacked light [on_turf.type] found at ([our_location.x],[our_location.y],[our_location.z])")
 			qdel(on_turf)
+	switch(dir) //HL13 EDIT, shift lighting about
+		if(SOUTH)
+			pixel_y = -1
+		if(NORTH)
+			pixel_y = 22
+		if(WEST)
+			pixel_x = -2
+			pixel_y = 2
+		if(EAST)
+			pixel_x = 2
+			pixel_y = 2
+
 
 	if(!mapload) //sync up nightshift lighting for player made lights
 		var/area/our_area = get_room_area()
