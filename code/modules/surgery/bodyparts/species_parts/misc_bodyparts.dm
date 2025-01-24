@@ -657,7 +657,7 @@
 	unarmed_damage_high = 18
 	unarmed_effectiveness = 20
 	speed_modifier = 0.33
-	special_footstep_sounds = list(list('hl13/sound/movement/vort/vort_foot1.ogg' = 1, 'hl13/sound/movement/vort/vort_foot2.ogg' = 1, 'hl13/sound/movement/vort/vort_foot3.ogg' = 1, 'hl13/sound/movement/vort/vort_foot4.ogg' = 1), 75, 0)
+	special_footstep_sounds = list(list('hl13/sound/movement/vort/vort_foot1.ogg' = 1, 'hl13/sound/movement/vort/vort_foot2.ogg' = 1, 'hl13/sound/movement/vort/vort_foot3.ogg' = 1, 'hl13/sound/movement/vort/vort_foot4.ogg' = 1), 25, 0)
 	should_draw_greyscale = FALSE
 
 /obj/item/bodypart/leg/right/vortigaunt
@@ -666,7 +666,7 @@
 	unarmed_damage_high = 18
 	unarmed_effectiveness = 20
 	speed_modifier = 0.33
-	special_footstep_sounds = list(list('hl13/sound/movement/vort/vort_foot1.ogg' = 1, 'hl13/sound/movement/vort/vort_foot2.ogg' = 1, 'hl13/sound/movement/vort/vort_foot3.ogg' = 1, 'hl13/sound/movement/vort/vort_foot4.ogg' = 1), 75, 0)
+	special_footstep_sounds = list(list('hl13/sound/movement/vort/vort_foot1.ogg' = 1, 'hl13/sound/movement/vort/vort_foot2.ogg' = 1, 'hl13/sound/movement/vort/vort_foot3.ogg' = 1, 'hl13/sound/movement/vort/vort_foot4.ogg' = 1), 25, 0)
 	should_draw_greyscale = FALSE
 
 ///stalker

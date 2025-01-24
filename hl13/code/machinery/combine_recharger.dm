@@ -29,7 +29,7 @@
 
 	cumulative_charge += change
 
-	if(cumulative_charge >= malfunction_point)
+	if(cumulative_charge <= malfunction_point)
 		malfunction()
 
 /obj/machinery/combine_recharger/proc/malfunction()
@@ -70,6 +70,7 @@
 
 	playsound(loc, 'sound/items/tools/ratchet.ogg', 25, 1)
 	malfunctioning = FALSE
+	cumulative_charge = 0
 	return TRUE
 
 

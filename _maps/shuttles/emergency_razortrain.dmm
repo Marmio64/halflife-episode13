@@ -45,23 +45,25 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/escape)
 "fK" = (
-/obj/machinery/door/window/brigdoor/security/cell{
-	dir = 4
-	},
 /obj/structure/chair/comfy/halflife/captain{
+	dir = 8
+	},
+/obj/effect/decal/remains/xeno,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/shuttle/escape)
+"gi" = (
+/obj/structure/fans/tiny/invisible,
+/obj/structure/railing/halflife/solo{
 	dir = 4
 	},
-/obj/item/bodypart/head/stalker,
-/turf/open/floor/plating/indoor/metal/combine,
+/turf/open/floor/plating/indoor/metal/grate/border{
+	dir = 1
+	},
 /area/shuttle/escape)
 "gn" = (
 /obj/machinery/door/window/brigdoor/security/cell{
 	dir = 4
 	},
-/obj/structure/chair/comfy/halflife/captain{
-	dir = 4
-	},
-/obj/item/bodypart/leg/left/stalker,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/escape)
 "iU" = (
@@ -97,14 +99,23 @@
 	},
 /area/shuttle/escape)
 "mF" = (
-/obj/machinery/door/window/brigdoor/security/cell{
+/obj/machinery/light/small/directional/west,
+/obj/structure/fans/tiny/invisible,
+/obj/structure/railing/halflife/solo{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/metal/grate/border{
+	dir = 1
+	},
+/area/shuttle/escape)
+"mG" = (
+/obj/structure/fans/tiny/invisible,
+/obj/structure/railing/halflife/solo{
 	dir = 8
 	},
-/obj/structure/chair/comfy/halflife/captain{
-	dir = 8
+/turf/open/floor/plating/indoor/metal/grate/border{
+	dir = 1
 	},
-/obj/effect/decal/remains/xeno,
-/turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/escape)
 "mW" = (
 /obj/structure/halflife/barrel/quadruple/waste,
@@ -133,9 +144,6 @@
 /obj/machinery/door/window/brigdoor/security/cell{
 	dir = 8
 	},
-/obj/structure/chair/comfy/halflife/captain{
-	dir = 8
-	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/escape)
 "tP" = (
@@ -153,8 +161,7 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/escape)
 "vx" = (
-/obj/machinery/stasis,
-/obj/machinery/door/window/brigdoor/security/cell{
+/obj/machinery/stasis{
 	dir = 4
 	},
 /obj/effect/decal/remains/xeno,
@@ -183,6 +190,20 @@
 /obj/effect/decal/cleanable/blood/footprints{
 	dir = 4
 	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/shuttle/escape)
+"Fg" = (
+/obj/structure/chair/comfy/halflife/captain{
+	dir = 4
+	},
+/obj/item/bodypart/head/stalker,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/shuttle/escape)
+"Fx" = (
+/obj/structure/chair/comfy/halflife/captain{
+	dir = 4
+	},
+/obj/item/bodypart/leg/left/stalker,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/escape)
 "GQ" = (
@@ -225,6 +246,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/escape)
+"PF" = (
+/obj/machinery/stasis,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/shuttle/escape)
 "QN" = (
 /obj/effect/decal/cleanable/blood/footprints,
 /obj/effect/decal/cleanable/blood/footprints{
@@ -233,11 +258,14 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/escape)
 "TC" = (
-/obj/machinery/door/window/brigdoor/security/cell{
+/obj/machinery/light/small/directional/east,
+/obj/structure/fans/tiny/invisible,
+/obj/structure/railing/halflife/solo{
 	dir = 8
 	},
-/obj/machinery/stasis,
-/turf/open/floor/plating/indoor/metal/combine,
+/turf/open/floor/plating/indoor/metal/grate/border{
+	dir = 1
+	},
 /area/shuttle/escape)
 "Ue" = (
 /obj/machinery/light/small/directional/east,
@@ -276,17 +304,17 @@ Ue
 mb
 mb
 mb
+mG
+mG
+TC
 mb
+mG
+mG
+TC
 mb
-Ue
-mb
-mb
-mb
-Ue
-mb
-mb
-mb
-Ue
+mG
+mG
+TC
 mb
 mb
 mb
@@ -308,13 +336,13 @@ GQ
 lJ
 Px
 lJ
-TC
-lJ
 tA
 lJ
 tA
 lJ
-mF
+tA
+lJ
+tA
 lJ
 tA
 lJ
@@ -339,15 +367,15 @@ aH
 lJ
 lJ
 lJ
+PF
 lJ
+AQ
 lJ
+AQ
 lJ
+fK
 lJ
-lJ
-lJ
-lJ
-lJ
-lJ
+AQ
 lJ
 lJ
 lJ
@@ -401,15 +429,15 @@ aH
 lJ
 lJ
 lJ
+vx
 lJ
+IG
 lJ
+Fg
 lJ
+Fx
 lJ
-lJ
-lJ
-lJ
-lJ
-lJ
+IG
 lJ
 lJ
 lJ
@@ -432,15 +460,15 @@ vL
 lJ
 ja
 lJ
-vx
-lJ
-uZ
-lJ
-fK
+gn
 lJ
 gn
 lJ
-uZ
+gn
+lJ
+gn
+lJ
+gn
 lJ
 uZ
 lJ
@@ -462,17 +490,17 @@ bt
 mb
 mb
 mb
+gi
+gi
+mF
 mb
+gi
+gi
+mF
 mb
-bt
-mb
-mb
-mb
-bt
-mb
-mb
-mb
-bt
+gi
+gi
+mF
 mb
 mb
 mb

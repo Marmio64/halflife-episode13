@@ -162,10 +162,10 @@
 	icon_state = "survivalknife"
 	worn_icon_state = "survivalknife"
 	embed_type = /datum/embed_data/combat_knife/weak
-	desc = "A hunting grade survival knife."
+	desc = "A hunting grade survival knife. It has good penetrating power against xenian carapaces and flesh, and is standard issue for infestation workers."
 	force = 20
 	throwforce = 15
-	wound_bonus = -5 //not for use against players
+	wound_bonus = -10 //not for use against players
 
 /obj/item/knife/combat/root
 	name = "cahn'root dagger"

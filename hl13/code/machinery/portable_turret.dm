@@ -83,7 +83,6 @@ DEFINE_BITFIELD(turret_flags, list(
 	shot_delay = 0
 	stun_projectile = /obj/projectile/bullet/pulse/weak
 	lethal_projectile = /obj/projectile/bullet/pulse/weak
-	max_integrity = 150
 
 #undef TURRET_STUN
 #undef TURRET_LETHAL
