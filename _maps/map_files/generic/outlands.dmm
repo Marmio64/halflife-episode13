@@ -471,6 +471,7 @@
 /area/mine/laborcamp)
 "lE" = (
 /obj/structure/rack,
+/obj/item/clothing/under/citizen/refugee/green,
 /obj/item/clothing/suit/armor/armored,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
@@ -734,6 +735,10 @@
 	},
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/indoors/sewer/tunnel)
+"rE" = (
+/obj/machinery/door/unpowered/halflife/seethrough/bar,
+/turf/open/floor/plating/indoor/grooved2,
+/area/mine/laborcamp)
 "rF" = (
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
@@ -1196,6 +1201,11 @@
 	dir = 1
 	},
 /area/halflife/indoors/sewer/tunnel)
+"Du" = (
+/obj/structure/table/halflife/metal,
+/obj/structure/halflife/trash/books/pile_alt,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/mine/laborcamp)
 "DF" = (
 /obj/effect/landmark/start/nukeop,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -1813,6 +1823,10 @@
 /obj/structure/spawner/halflife/antlion/small/worker,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"Sw" = (
+/obj/machinery/door/unpowered/halflife/seethrough/bar,
+/turf/open/floor/plating/indoor/concrete,
+/area/mine/laborcamp)
 "Sx" = (
 /obj/machinery/door/unpowered/halflife/wood,
 /turf/open/floor/plating/ground/dirt,
@@ -1976,7 +1990,7 @@
 	},
 /area/halflife/outdoors/forest)
 "VI" = (
-/obj/machinery/door/unpowered/halflife/metal,
+/obj/machinery/door/unpowered/halflife/seethrough/bar,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/mine/laborcamp)
 "VM" = (
@@ -12481,7 +12495,7 @@ MB
 xw
 xw
 xw
-MB
+Sw
 Ub
 Ub
 cD
@@ -13042,7 +13056,7 @@ cD
 lN
 TO
 cD
-Hu
+Du
 Ub
 Ub
 cD
@@ -13793,7 +13807,7 @@ fE
 ky
 Ub
 Ub
-fh
+rE
 fh
 IH
 cD
