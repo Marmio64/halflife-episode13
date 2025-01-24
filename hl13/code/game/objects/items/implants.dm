@@ -21,9 +21,9 @@
 	// Name of implant user.
 	var/mobname = imp_in.name
 	// What is to be said.
-	var/message = "TEAM ALERT: [mobname]'s lifesig//N&#@$¤#§>..." // Default message for unexpected causes.
+	var/message = "TEAM ALERT: Biosignal lost for unit [mobname] in//N&#@$¤#§>..." // Default message for unexpected causes.
 	if(turf)
-		message = "TEAM ALERT: [mobname]'s lifesigns ceased in [turf.name]! Dispatch notified, proceed with caution."
+		message = "TEAM ALERT: Biosignal lost for unit [mobname] in [turf.name]."
 
 
 	name = "[mobname]'s Biosignaller"
@@ -41,12 +41,12 @@
 /obj/item/implanter/biosig_ert // Testing/admin purposes; shouldn't be obtainable.
 	imp_type = /obj/item/implant/biosig_ert
 
-/obj/item/implant/chem/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)
+/obj/item/implant/biosig_ert/implant(mob/living/target, mob/user, silent = FALSE, force = FALSE)
 	. = ..()
 	if(.)
 		RegisterSignal(target, COMSIG_LIVING_DEATH, PROC_REF(on_death))
 
-/obj/item/implant/chem/removed(mob/target, silent = FALSE, special = FALSE)
+/obj/item/implant/biosig_ert/removed(mob/target, silent = FALSE, special = FALSE)
 	. = ..()
 	if(.)
 		UnregisterSignal(target, COMSIG_LIVING_DEATH)
