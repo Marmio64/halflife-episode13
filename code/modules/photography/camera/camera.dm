@@ -142,8 +142,8 @@
 
 			disk.record = new
 			var/mob/M = interacting_with
-			disk.record.caller_name = M.name
-			disk.record.set_caller_image(M)
+			disk.record.clicker_name = M.name
+			disk.record.set_clicker_image(M)
 		else
 			to_chat(user, span_warning("Invalid holodisk target."))
 			return ITEM_INTERACT_BLOCKING

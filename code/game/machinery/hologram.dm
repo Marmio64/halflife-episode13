@@ -301,7 +301,7 @@ Possible to do for anyone motivated enough:
 	for(var/I in holo_calls)
 		var/datum/holocall/HC = I
 		var/list/call_data = list(
-			caller = HC.user,
+			clicker = HC.user,
 			connected = HC.connected_holopad == src ? TRUE : FALSE,
 			ref = REF(HC)
 		)
@@ -732,7 +732,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 
 /obj/machinery/holopad/proc/setup_replay_holo(datum/holorecord/record)
 	var/obj/effect/overlay/holo_pad_hologram/hologram = new(loc)//Spawn a blank effect at the location.
-	var/image/work_off = record.caller_image
+	var/image/work_off = record.clicker_image
 	hologram.icon = work_off.icon
 	hologram.icon_state = work_off.icon_state
 	hologram.copy_overlays(work_off, TRUE)
@@ -744,10 +744,10 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	hologram.layer = FLY_LAYER//Above all the other objects/mobs. Or the vast majority of them.
 	SET_PLANE_EXPLICIT(hologram, ABOVE_GAME_PLANE, src)
 	hologram.set_anchored(TRUE)//So space wind cannot drag it.
-	hologram.name = "[record.caller_name] (Hologram)"//If someone decides to right click.
+	hologram.name = "[record.clicker_name] (Hologram)"//If someone decides to right click.
 	set_holo(record, hologram)
 
-	visible_message(span_notice("A holographic image of [record.caller_name] flickers to life before your eyes!"))
+	visible_message(span_notice("A holographic image of [record.clicker_name] flickers to life before your eyes!"))
 	return hologram
 
 /obj/machinery/holopad/proc/replay_start()
@@ -773,14 +773,14 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	set_can_hear_flags(CAN_HEAR_RECORD_MODE)
 	record_start = world.time
 	record_user = user
-	disk.record.set_caller_image(user)
+	disk.record.set_clicker_image(user)
 
 /obj/machinery/holopad/proc/record_message(mob/living/speaker,message,language)
 	if(!record_mode)
 		return
 	//make this command so you can have multiple languages in single record
-	if((!disk.record.caller_name || disk.record.caller_name == "Unknown") && istype(speaker))
-		disk.record.caller_name = speaker.name
+	if((!disk.record.clicker_name || disk.record.clicker_name == "Unknown") && istype(speaker))
+		disk.record.clicker_name = speaker.name
 	if(!disk.record.language)
 		disk.record.language = language
 	else if(language != disk.record.language)

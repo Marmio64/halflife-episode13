@@ -9,20 +9,20 @@ GLOBAL_PROTECT(AdminProcCallHandler)
 	name = "ProcCall Handler"
 	desc = "If you are seeing this, tell a coder."
 
-	var/list/callers = list()
+	var/list/clickers = list()
 
 	invisibility = INVISIBILITY_ABSTRACT
 	density = FALSE
 
-/// Adds a caller.
-/mob/proccall_handler/proc/add_caller(caller_name)
-	callers += caller_name
-	name = "[initial(name)] ([callers.Join(") (")])"
+/// Adds a clicker.
+/mob/proccall_handler/proc/add_clicker(clicker_name)
+	clickers += clicker_name
+	name = "[initial(name)] ([clickers.Join(") (")])"
 
-/// Removes a caller.
-/mob/proccall_handler/proc/remove_caller(caller_name)
-	callers -= caller_name
-	name = "[initial(name)] ([callers.Join(") (")])"
+/// Removes a clicker.
+/mob/proccall_handler/proc/remove_clicker(clicker_name)
+	clickers -= clicker_name
+	name = "[initial(name)] ([clickers.Join(") (")])"
 
 /mob/proccall_handler/Initialize(mapload)
 	. = ..()
@@ -67,12 +67,12 @@ GLOBAL_PROTECT(AdminProcCallHandler)
 	if(IsAdminAdvancedProcCall())
 		return
 	var/mob/proccall_handler/handler = GLOB.AdminProcCallHandler
-	handler.add_caller(user)
+	handler.add_clicker(user)
 	var/lastusr = usr
 	usr = handler
 	. = WrapAdminProcCall(target, procname, arguments)
 	usr = lastusr
-	handler.remove_caller(user)
+	handler.remove_clicker(user)
 
 /**
  * Handles a userless sdql, used by circuits and tgs.
@@ -85,12 +85,12 @@ GLOBAL_PROTECT(AdminProcCallHandler)
 	if(IsAdminAdvancedProcCall())
 		return
 	var/mob/proccall_handler/handler = GLOB.AdminProcCallHandler
-	handler.add_caller(user)
+	handler.add_clicker(user)
 	var/lastusr = usr
 	usr = handler
 	. = world.SDQL2_query(query_text, user, user)
 	usr = lastusr
-	handler.remove_caller(user)
+	handler.remove_clicker(user)
 
 ADMIN_VERB(advanced_proc_call, R_DEBUG, "Advanced ProcCall", "Call a proc on any datum in the server.", ADMIN_CATEGORY_DEBUG)
 	user.callproc_blocking()
@@ -164,8 +164,8 @@ ADMIN_VERB(advanced_proc_call, R_DEBUG, "Advanced ProcCall", "Call a proc on any
 	if(.)
 		to_chat(usr, ., confidential = TRUE)
 
-GLOBAL_VAR(AdminProcCaller)
-GLOBAL_PROTECT(AdminProcCaller)
+GLOBAL_VAR(AdminProcclicker)
+GLOBAL_PROTECT(AdminProcclicker)
 GLOBAL_VAR_INIT(AdminProcCallCount, 0)
 GLOBAL_PROTECT(AdminProcCallCount)
 GLOBAL_VAR(LastAdminCalledTargetRef)
@@ -184,8 +184,8 @@ GLOBAL_PROTECT(LastAdminCalledProc)
 	if(target != GLOBAL_PROC && !target.CanProcCall(procname))
 		to_chat(usr, "Proccall on [target.type]/proc/[procname] is disallowed!", confidential = TRUE)
 		return
-	var/current_caller = GLOB.AdminProcCaller
-	var/user_identifier = usr ? usr.client?.ckey : GLOB.AdminProcCaller
+	var/current_clicker = GLOB.AdminProcclicker
+	var/user_identifier = usr ? usr.client?.ckey : GLOB.AdminProcclicker
 	var/is_remote_handler = usr == GLOB.AdminProcCallHandler
 	if(is_remote_handler)
 		user_identifier = GLOB.AdminProcCallHandler.name
@@ -193,7 +193,7 @@ GLOBAL_PROTECT(LastAdminCalledProc)
 	if(!user_identifier)
 		CRASH("WrapAdminProcCall with no ckey: [target] [procname] [english_list(arguments)]")
 
-	if(!is_remote_handler && current_caller && current_caller != user_identifier)
+	if(!is_remote_handler && current_clicker && current_clicker != user_identifier)
 		to_chat(usr, span_adminnotice("Another set of admin called procs are still running. Try again later."), confidential = TRUE)
 		return
 
@@ -202,12 +202,12 @@ GLOBAL_PROTECT(LastAdminCalledProc)
 		GLOB.LastAdminCalledTargetRef = REF(target)
 
 	if(!is_remote_handler)
-		GLOB.AdminProcCaller = user_identifier //if this runtimes, too bad for you
+		GLOB.AdminProcclicker = user_identifier //if this runtimes, too bad for you
 		++GLOB.AdminProcCallCount
 		. = world.WrapAdminProcCall(target, procname, arguments)
 		GLOB.AdminProcCallCount--
 		if(GLOB.AdminProcCallCount == 0)
-			GLOB.AdminProcCaller = null
+			GLOB.AdminProcclicker = null
 	else
 		. = world.WrapAdminProcCall(target, procname, arguments)
 
@@ -224,7 +224,7 @@ GLOBAL_PROTECT(LastAdminCalledProc)
 #ifdef TESTING
 	return FALSE
 #else
-	return (GLOB.AdminProcCaller && GLOB.AdminProcCaller == usr?.client?.ckey) || (GLOB.AdminProcCallHandler && usr == GLOB.AdminProcCallHandler)
+	return (GLOB.AdminProcclicker && GLOB.AdminProcclicker == usr?.client?.ckey) || (GLOB.AdminProcCallHandler && usr == GLOB.AdminProcCallHandler)
 #endif
 
 ADMIN_VERB_ONLY_CONTEXT_MENU(call_proc_datum, R_DEBUG, "Atom ProcCall", datum/thing as null|area|mob|obj|turf)

@@ -20,7 +20,7 @@
 	results = add_output_port("Result", PORT_TYPE_LIST(PORT_TYPE_STRING))
 
 /obj/item/circuit_component/sdql_operation/input_received(datum/port/input/port)
-	if(GLOB.AdminProcCaller)
+	if(GLOB.AdminProcclicker)
 		return TRUE
 
 	INVOKE_ASYNC(src, PROC_REF(execute_sdql), port)
