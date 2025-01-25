@@ -237,7 +237,7 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	mask = /obj/item/clothing/mask/gas/civilprotection
 	belt = /obj/item/storage/belt/civilprotection/full
 
-	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert)
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
 
 /datum/outfit/job/security/mod
 	name = "Security Officer (MODsuit)"

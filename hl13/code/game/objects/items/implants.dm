@@ -1,9 +1,11 @@
 /obj/item/implant/biosig_ert
-	name = "ert biosignaller implant"
+	name = "biosignaller implant"
 	desc = "Monitors host vital signs and transmits an encrypted radio message upon death."
 	actions_types = null
 	verb_say = "broadcasts"
 	var/obj/item/radio/radio
+
+	var/role = "Unit"
 
 /obj/item/implant/biosig_ert/Initialize(mapload)
 	. = ..()
@@ -21,9 +23,9 @@
 	// Name of implant user.
 	var/mobname = imp_in.name
 	// What is to be said.
-	var/message = "TEAM ALERT: Biosignal lost for unit [mobname] in//N&#@$¤#§>..." // Default message for unexpected causes.
+	var/message = "TEAM ALERT: Biosignal lost for [role] [mobname] in//N&#@$¤#§>..." // Default message for unexpected causes.
 	if(turf)
-		message = "TEAM ALERT: Biosignal lost for unit [mobname] in [turf.name]."
+		message = "TEAM ALERT: Biosignal lost for [role] [mobname] in [turf.name]."
 
 
 	name = "[mobname]'s Biosignaller"
@@ -54,3 +56,9 @@
 /obj/item/implant/biosig_ert/proc/on_death(mob/living/source)
 	SIGNAL_HANDLER
 	INVOKE_ASYNC(src, TYPE_PROC_REF(/obj/item/implant/biosig_ert, activate))
+
+/obj/item/implant/biosig_ert/cp
+	role = "Protection Team Unit"
+
+/obj/item/implant/biosig_ert/ota
+	role = "OTA Unit"

@@ -71,7 +71,7 @@
 	r_pocket = /obj/item/hl2key/townhall
 
 	skillchips = list(/obj/item/skillchip/aiming, /obj/item/skillchip/fitness) //The DvL comes pre-augmented
-	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert)
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
 
 /datum/job/head_of_security/after_spawn(mob/living/carbon/human/H, mob/M)
 	. = ..()

@@ -75,4 +75,4 @@
 	mask = /obj/item/clothing/mask/gas/civilprotection/overseer
 	belt = /obj/item/storage/belt/civilprotection/full
 
-	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert)
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)

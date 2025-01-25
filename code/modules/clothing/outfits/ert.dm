@@ -659,7 +659,7 @@
 	belt = /obj/item/storage/belt/civilprotection/overwatch
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
 	skillchips = list(/obj/item/skillchip/overwatch) //Skilled soldiers
-	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert)
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/ota)
 
 	back = null
 
@@ -740,7 +740,7 @@
 	mask = /obj/item/clothing/mask/gas/civilprotection
 	belt = /obj/item/storage/belt/civilprotection/full
 
-	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert)
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/ota)
 
 	back = /obj/item/shield/riot
 
