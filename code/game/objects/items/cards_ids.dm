@@ -612,8 +612,12 @@
  */
 /obj/item/card/id/proc/insert_money(obj/item/money, mob/user)
 	var/physical_currency
-	if(istype(money, /obj/item/stack/spacecash) || istype(money, /obj/item/coin))
+	if(istype(money, /obj/item/stack/spacecash) || istype(money, /obj/item/coin) || istype(money, /obj/item/stack/credit_voucher)) //HL13 EDIT
 		physical_currency = TRUE
+
+	if(registered_account.account_job.paycheck_department == ACCOUNT_SEC && istype(money, /obj/item/stack/credit_voucher))
+		to_chat(user, span_warning("[src] is not allowed to redeem these vouchers!"))
+		return FALSE
 
 	if(!registered_account)
 		to_chat(user, span_warning("[src] doesn't have a linked account to deposit [money] into!"))

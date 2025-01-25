@@ -19,16 +19,6 @@
 			return TRUE
 		return player_id == registered_id
 
-/obj/structure/closet/secure_closet/personal/PopulateContents()
-	..()
-	if(prob(50))
-		new /obj/item/storage/backpack/duffelbag(src)
-	if(prob(50))
-		new /obj/item/storage/backpack(src)
-	else
-		new /obj/item/storage/backpack/satchel(src)
-	new /obj/item/radio/headset( src )
-
 /obj/structure/closet/secure_closet/personal/patient
 	name = "patient's closet"
 
