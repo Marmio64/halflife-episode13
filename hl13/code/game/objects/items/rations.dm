@@ -37,7 +37,7 @@
 	new /obj/item/food/rationpack/loyalty(src)
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater/red(src)
 	new /obj/item/food/flavorbar(src)
-	new /obj/item/stack/credit_voucher(src, 2)
+	new /obj/item/stack/credit_voucher(src, 4)
 
 /obj/item/storage/box/halflife/bestration
 	name = "priority-grade ration pack"
@@ -49,7 +49,7 @@
 	new /obj/item/food/rationpack/loyalty(src)
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater/green(src)
 	new /obj/item/food/flavorbar/large(src)
-	new /obj/item/stack/credit_voucher(src, 4)
+	new /obj/item/stack/credit_voucher(src, 5)
 
 /obj/item/storage/box/halflife/badration
 	name = "low-grade ration pack"

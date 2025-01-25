@@ -5,7 +5,7 @@
 	icon_state = "voucher"
 	singular_name = "reward voucher"
 	w_class = WEIGHT_CLASS_SMALL
-	max_amount = 5
+	max_amount = 10
 
 	var/value = 5
 
