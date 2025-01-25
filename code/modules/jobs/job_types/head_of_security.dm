@@ -16,7 +16,7 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "HEAD_OF_SECURITY"
 
-	skills = list(/datum/skill/firearms = SKILL_EXP_JOURNEYMAN, /datum/skill/athletics = SKILL_EXP_JOURNEYMAN)
+	skills = list(/datum/skill/firearms = SKILL_EXP_APPRENTICE, /datum/skill/athletics = SKILL_EXP_JOURNEYMAN)
 
 	outfit = /datum/outfit/job/hos
 	plasmaman_outfit = /datum/outfit/plasmaman/head_of_security

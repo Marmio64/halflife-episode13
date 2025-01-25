@@ -1,11 +1,11 @@
-//Care packages are an 'event', but only trigger based on sociostability conditions.
+//Care packages mostly only spawn from low sociostability, but have a very rare chance to occur once anyways
 /datum/round_event_control/care_package
 	name = "Rebel Care Package"
 	typepath = /datum/round_event/care_package
-	weight = 0
+	weight = 1
 	min_players = 2
 	earliest_start = 10 MINUTES
-	max_occurrences = 0
+	max_occurrences = 1
 
 /datum/round_event/care_package/start()
 	var/list/possible_spawns = list()
