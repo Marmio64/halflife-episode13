@@ -3,7 +3,6 @@
 /obj/effect/turf_decal/halflife/covering
 	icon = 'hl13/icons/effects/wallcovering.dmi'
 	plane = WALL_PLANE
-	pixel_y = 32
 
 //Wallpapers
 
