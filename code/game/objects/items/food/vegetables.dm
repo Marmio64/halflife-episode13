@@ -102,7 +102,7 @@
 
 // Fries
 /obj/item/food/fries
-	name = "space fries"
+	name = "fries"
 	desc = "AKA: French Fries, Freedom Fries, etc."
 	icon_state = "fries"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 4)
