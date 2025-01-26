@@ -5,7 +5,7 @@
 	icon_state = "breen_machine"
 	panel_type = "panel2"
 	product_ads = "Stay hydrated.;A thirsty citizen is a inefficient citizen.;Drink Breen's private reserve!;The purest water around."
-	products = list(/obj/item/reagent_containers/cup/soda_cans/breenwater = 20)
+	products = list(/obj/item/reagent_containers/cup/soda_cans/breenwater = 20, /obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 5)
 	resistance_flags = FIRE_PROOF
 	refill_canister = /obj/item/vending_refill/breen
 	default_price = 20
@@ -54,7 +54,7 @@
 
 	premium = list(/obj/item/storage/backpack = 3,
 				   /obj/item/binoculars = 3,
-				   /obj/item/storage/box/halflife/ration = 3)
+				   /obj/item/storage/box/halflife/ration = 5)
 
 	light_mask = "gifts-light-mask"
 	default_price = 20

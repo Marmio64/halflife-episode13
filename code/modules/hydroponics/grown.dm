@@ -18,6 +18,9 @@
 	max_volume = PLANT_REAGENT_VOLUME
 	w_class = WEIGHT_CLASS_SMALL
 	resistance_flags = FLAMMABLE
+
+	eat_time = 2 SECONDS //HL13 EDIT, enjoy your fruits and veggies, eat slower.
+
 	/// type path, gets converted to item on New(). It's safe to assume it's always a seed item.
 	var/obj/item/seeds/seed = null
 	///Name of the plant

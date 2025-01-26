@@ -270,7 +270,7 @@
 			if(reagent_max > 1)
 				reagent_overflow_mod = (reagents_add[rid]/ reagent_max)
 			var/edible_vol = grown_edible.reagents ? grown_edible.reagents.maximum_volume : 0
-			var/amount = max(1, round((edible_vol)*(potency/120) * reagent_overflow_mod, 1)) //the plant will always have at least 1u of each of the reagents in its reagent production traits
+			var/amount = max(1, round((edible_vol)*(potency/150) * reagent_overflow_mod, 1)) //the plant will always have at least 1u of each of the reagents in its reagent production traits. HL13 EDIT FOR MAKING PLANTS LESS POTENT
 			var/list/data
 			if(rid == /datum/reagent/blood) // Hack to make blood in plants always O-
 				data = list("blood_type" = "O-")
