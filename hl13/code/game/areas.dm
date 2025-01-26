@@ -104,6 +104,9 @@
 /area/halflife/indoors/townhall/civilprotection/prison
 	name = "\improper Town Hall Prison"
 
+/area/halflife/indoors/townhall/civilprotection/armory
+	name = "\improper Town Hall Armory"
+
 /area/halflife/indoors/townhall/civilprotection/range
 	name = "\improper Town Hall Shooting Range"
 

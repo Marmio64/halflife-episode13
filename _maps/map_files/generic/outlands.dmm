@@ -31,6 +31,12 @@
 /obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"aR" = (
+/obj/structure/railing/halflife/wood/single{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/forest)
 "aZ" = (
 /obj/structure/flora/tree/jungle/small,
 /turf/open/floor/plating/ground/dirt/alt,
@@ -168,6 +174,10 @@
 /obj/structure/halflife/fence/wire/barb,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"dW" = (
+/obj/effect/landmark/train_dump_spot,
+/turf/open/floor/plating/ground/dirt/alt,
+/area/halflife/outdoors/forest)
 "dX" = (
 /obj/structure/mirror{
 	pixel_x = 24
@@ -280,6 +290,9 @@
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/outdoors/forest)
+"fX" = (
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/forest)
 "gd" = (
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -455,6 +468,12 @@
 	dir = 1
 	},
 /area/halflife/outdoors/forest)
+"kq" = (
+/obj/structure/halflife/street_sign/speed{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/forest)
 "ku" = (
 /obj/structure/table/halflife/wood/constructed/cobbled,
 /obj/item/flashlight,
@@ -555,6 +574,10 @@
 "lT" = (
 /obj/structure/halflife/barrel/quadruple/grey,
 /turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
+"lV" = (
+/obj/effect/turf_decal/siding/thinplating,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
 "lZ" = (
 /mob/living/simple_animal/hostile/halflife/zombie,
@@ -707,6 +730,10 @@
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
+"pA" = (
+/obj/effect/landmark/train_dump_spot,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "pF" = (
 /obj/structure/flora/tree/jungle/small/style_random,
 /turf/open/floor/plating/ground/dirt,
@@ -791,6 +818,10 @@
 /obj/structure/halflife/pipes/vent,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
+"rq" = (
+/obj/structure/halflife/street_sign/parking,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "ry" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "city_surface";
@@ -859,6 +890,12 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer/tunnel)
+"sT" = (
+/obj/machinery/power/halflife/streetlamphalt{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/forest)
 "tb" = (
 /obj/machinery/camera{
 	c_tag = "Labour Camp Gear"
@@ -926,6 +963,10 @@
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/outdoors/forest)
+"uJ" = (
+/obj/effect/landmark/train_dump_spot,
+/turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
 "uN" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -1176,6 +1217,11 @@
 "AB" = (
 /obj/structure/halflife/fence/corner/wire/barb,
 /turf/open/floor/plating/indoor/concrete,
+/area/halflife/outdoors/forest)
+"AJ" = (
+/obj/structure/halflife/street_sign/stop,
+/obj/effect/turf_decal/siding/thinplating,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
 "AK" = (
 /obj/structure/halflife/barrel/single/flammable,
@@ -3380,9 +3426,9 @@ MZ
 MZ
 zB
 zB
-XA
-XA
-XA
+ow
+ow
+ow
 zB
 zB
 XA
@@ -3566,11 +3612,11 @@ MZ
 MZ
 MZ
 zB
-XA
-XA
+ow
+ow
 vl
-XA
-XA
+ow
+ow
 zB
 XA
 QL
@@ -3751,14 +3797,14 @@ MZ
 MZ
 MZ
 MZ
-MZ
 zB
-XA
+zB
+ow
 vl
 vl
 vl
-XA
-XA
+ow
+ow
 XA
 GX
 tN
@@ -3939,8 +3985,8 @@ zB
 zB
 zB
 zB
-XA
-XA
+ow
+ow
 vl
 vl
 vl
@@ -4126,7 +4172,7 @@ XA
 XA
 XA
 XA
-XA
+ow
 vl
 vl
 vl
@@ -4313,7 +4359,7 @@ tN
 tN
 tN
 XA
-XA
+vl
 vl
 vl
 vl
@@ -18596,7 +18642,7 @@ tN
 tN
 qc
 tN
-tN
+by
 tN
 qc
 tN
@@ -18693,21 +18739,21 @@ vs
 vs
 vs
 vs
-tN
-tN
-tN
-It
-It
-It
-It
-tN
+fX
+fX
+sT
+fX
+fX
+fX
+fX
+fX
 oG
 oG
 oG
 oG
 oG
-tN
-tN
+fX
+fX
 tN
 tN
 tN
@@ -18761,10 +18807,10 @@ tN
 GX
 tN
 GX
-tN
-tN
-tN
-tN
+fX
+fX
+fX
+fX
 EQ
 tN
 tN
@@ -18782,12 +18828,12 @@ tN
 tN
 tN
 tN
+fX
+fX
 tN
 tN
-tN
-tN
-tN
-tN
+fX
+fX
 tN
 tN
 Wx
@@ -18925,7 +18971,7 @@ Ym
 Zu
 yS
 tN
-tN
+EQ
 tN
 tN
 tN
@@ -18960,16 +19006,16 @@ Wx
 tN
 tN
 tN
-tN
-tN
-tN
+OO
+OO
+OO
 tN
 tN
 tN
 It
-It
-It
-tN
+Kh
+OO
+OO
 tN
 Kh
 tN
@@ -19115,8 +19161,8 @@ tN
 tN
 tN
 mE
-tN
-dg
+mE
+mE
 tN
 tN
 Wx
@@ -19125,12 +19171,12 @@ mE
 tN
 tN
 It
-tN
-GX
+mE
+mE
 NR
 GX
 GX
-tN
+mE
 GX
 mE
 mE
@@ -19142,11 +19188,11 @@ GX
 GX
 EQ
 EQ
+mE
 tN
-tN
-tN
-tN
-tN
+mE
+mE
+mE
 tN
 tN
 tN
@@ -19299,17 +19345,17 @@ mE
 mE
 mE
 mE
-kn
+mE
+EQ
 tN
-tN
-tN
-It
+mE
+sD
 tN
 tN
 tN
 mE
-tN
-tN
+mE
+mE
 tN
 Wx
 tN
@@ -19318,7 +19364,7 @@ GX
 oz
 GX
 GX
-tN
+mE
 mE
 GX
 Bo
@@ -19485,10 +19531,10 @@ Ym
 Ym
 Zu
 tN
-tN
-tN
-tN
-tN
+mE
+mE
+mE
+mE
 tN
 It
 mE
@@ -19496,15 +19542,15 @@ mE
 tN
 tN
 tN
-tN
-tN
+mE
+mE
 tN
 GX
 tN
 mE
 GX
 GX
-tN
+mE
 GX
 GX
 tN
@@ -19522,8 +19568,8 @@ Sg
 tN
 tN
 tN
-tN
-tN
+mE
+mE
 GX
 GX
 tN
@@ -19671,7 +19717,7 @@ WR
 WR
 Ym
 Zu
-tN
+EQ
 tN
 tN
 tN
@@ -19712,16 +19758,16 @@ tN
 GX
 tN
 tN
-tN
-tN
+OO
+OO
 qc
 kn
 EQ
 It
-tN
+fX
 GX
 GX
-tN
+fX
 Bo
 GX
 GX
@@ -19815,14 +19861,14 @@ vs
 vs
 vs
 vs
-It
-tN
-EQ
-tN
-It
-dg
-tN
-tN
+fX
+fX
+sT
+fX
+fX
+fX
+fX
+fX
 oG
 oG
 oG
@@ -19836,9 +19882,9 @@ tN
 tN
 tN
 tN
-tN
-tN
-tN
+fX
+fX
+fX
 tN
 tN
 LN
@@ -19846,8 +19892,8 @@ tN
 tN
 It
 It
-AR
-tN
+aR
+fX
 tO
 Ym
 Ym
@@ -19859,8 +19905,8 @@ WR
 Ym
 Ym
 Ku
-tN
-It
+kq
+fX
 tN
 It
 It
@@ -19900,12 +19946,12 @@ GX
 tN
 tN
 GX
-tN
+lV
 kn
 EQ
 tN
-tN
-tN
+OO
+fX
 tN
 GX
 tN
@@ -20008,9 +20054,9 @@ tN
 dg
 tN
 tN
-tN
-tN
-tN
+It
+It
+It
 oG
 oG
 oG
@@ -20087,12 +20133,12 @@ tN
 tN
 Wx
 tN
-tN
+AJ
 kn
 tN
 tN
-tN
-tN
+OO
+fX
 qc
 GX
 tN
@@ -20196,8 +20242,8 @@ tN
 tN
 tN
 Wx
-tN
-tN
+It
+It
 oG
 oG
 oG
@@ -20384,7 +20430,7 @@ GX
 It
 tN
 tN
-tN
+It
 oG
 oG
 oG
@@ -20460,7 +20506,7 @@ tN
 tN
 Wx
 tN
-tN
+fX
 tN
 It
 qc
@@ -20647,7 +20693,7 @@ tN
 GX
 GX
 tN
-tN
+fX
 tN
 tN
 tN
@@ -22143,7 +22189,7 @@ XD
 XD
 Cw
 QW
-tN
+fX
 tN
 kn
 tN
@@ -22517,7 +22563,7 @@ XD
 XD
 XD
 QW
-tN
+fX
 tN
 EQ
 tN
@@ -22704,13 +22750,13 @@ XD
 XD
 qi
 QW
-tN
+fX
 tN
 tN
 tN
 tN
 It
-tN
+fX
 It
 Kh
 tN
@@ -23084,7 +23130,7 @@ tN
 kn
 tN
 sD
-tN
+fX
 tN
 tN
 tN
@@ -23458,7 +23504,7 @@ Wx
 It
 tN
 GX
-tN
+fX
 GX
 GX
 GX
@@ -23645,7 +23691,7 @@ tN
 kn
 GX
 GX
-tN
+fX
 It
 It
 It
@@ -24580,7 +24626,7 @@ GX
 GX
 kn
 GX
-tN
+fX
 GX
 It
 GX
@@ -24767,7 +24813,7 @@ It
 It
 kn
 GX
-It
+fX
 GX
 It
 GX
@@ -25323,7 +25369,7 @@ tN
 qc
 tN
 tN
-tN
+rq
 GX
 kn
 kn
@@ -25825,7 +25871,7 @@ tN
 tN
 tN
 tN
-rF
+uJ
 VH
 rF
 VH
@@ -26016,7 +26062,7 @@ It
 VH
 It
 VH
-tN
+pA
 tN
 It
 XA
@@ -26187,11 +26233,11 @@ oG
 tN
 tN
 tN
-rF
+uJ
 VH
 rF
 VH
-rF
+uJ
 tN
 LN
 tN
@@ -26263,7 +26309,7 @@ GX
 kn
 kn
 GX
-It
+fX
 It
 It
 It
@@ -26450,7 +26496,7 @@ It
 kn
 kn
 It
-GX
+fX
 GX
 GX
 GX
@@ -26573,7 +26619,7 @@ Ko
 Ko
 Ko
 tN
-rF
+uJ
 VH
 rF
 VH
@@ -26587,11 +26633,11 @@ LN
 tN
 OM
 XA
-XA
-XA
-XA
-XA
-XA
+Ym
+WR
+WR
+Ym
+Ym
 XA
 XA
 XA
@@ -26748,7 +26794,7 @@ zB
 QW
 QW
 tN
-tN
+pA
 VH
 tN
 VH
@@ -26774,12 +26820,12 @@ XA
 XA
 XA
 XA
-zB
-zB
-zB
-zB
-zB
-zB
+ow
+ow
+ow
+ow
+ow
+XA
 zB
 zB
 zB
@@ -26939,7 +26985,7 @@ rF
 VH
 rF
 VH
-rF
+uJ
 tN
 Ko
 SQ
@@ -26962,12 +27008,12 @@ zB
 zB
 zB
 zB
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
+zB
+zB
+zB
+zB
+zB
+zB
 MZ
 MZ
 MZ
@@ -27147,13 +27193,13 @@ MZ
 MZ
 MZ
 MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
+zB
+zB
+zB
+zB
+zB
+zB
+zB
 MZ
 MZ
 MZ
@@ -27309,7 +27355,7 @@ zB
 QW
 QW
 GX
-tN
+pA
 VH
 tN
 VH
@@ -27325,7 +27371,7 @@ rF
 VH
 rF
 VH
-rF
+uJ
 tN
 QW
 QW
@@ -27508,7 +27554,7 @@ uo
 Un
 Ko
 tN
-tN
+pA
 VH
 tN
 VH
@@ -28057,7 +28103,7 @@ zB
 QW
 QW
 tN
-tN
+pA
 VH
 tN
 VH
@@ -28073,7 +28119,7 @@ rF
 VH
 rF
 VH
-rF
+uJ
 tN
 QW
 QW
@@ -28248,7 +28294,7 @@ tN
 VH
 tN
 VH
-tN
+pA
 tN
 SC
 gd
@@ -28256,7 +28302,7 @@ gd
 gd
 Jd
 tN
-It
+dW
 VH
 tN
 VH
@@ -28447,7 +28493,7 @@ It
 VH
 qc
 VH
-tN
+pA
 tN
 QW
 QW
@@ -28805,7 +28851,7 @@ zB
 QW
 QW
 EQ
-tN
+pA
 VH
 GX
 VH
@@ -28817,7 +28863,7 @@ gd
 gd
 gd
 tN
-rF
+uJ
 VH
 rF
 VH
@@ -29382,7 +29428,7 @@ GX
 VH
 qc
 VH
-tN
+pA
 tN
 QW
 QW
@@ -29740,11 +29786,11 @@ zB
 QW
 QW
 GX
-tN
+pA
 VH
 tN
 VH
-tN
+pA
 qc
 gd
 gd
@@ -29752,7 +29798,7 @@ gd
 gd
 gd
 It
-It
+dW
 VH
 tN
 VH
@@ -30130,7 +30176,7 @@ tN
 VH
 tN
 VH
-tN
+pA
 GX
 QW
 QW
@@ -30488,7 +30534,7 @@ zB
 QW
 QW
 tN
-tN
+pA
 VH
 tN
 VH
@@ -30687,7 +30733,7 @@ gd
 gd
 gd
 It
-It
+dW
 VH
 It
 VH
@@ -30878,7 +30924,7 @@ tN
 VH
 tN
 VH
-It
+dW
 tN
 QW
 QW
@@ -31236,7 +31282,7 @@ zB
 QW
 QW
 It
-It
+dW
 VH
 tN
 VH
@@ -31809,7 +31855,7 @@ uo
 Un
 Ko
 tN
-rF
+uJ
 VH
 rF
 VH
@@ -31984,7 +32030,7 @@ zB
 QW
 QW
 tN
-tN
+pA
 VH
 tN
 VH
@@ -32175,7 +32221,7 @@ rF
 VH
 rF
 VH
-rF
+uJ
 tN
 Ko
 oZ
@@ -32187,7 +32233,7 @@ tN
 VH
 tN
 VH
-tN
+pA
 It
 QW
 QW
@@ -32370,7 +32416,7 @@ uo
 Un
 Ko
 tN
-tN
+pA
 VH
 tN
 VH

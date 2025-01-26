@@ -43,7 +43,7 @@
 	icon_state = "onlydir"
 
 /obj/structure/halflife/street_sign/speed
-	desc = "The combine usually ignore these signs, anyways."
+	desc = "The combine usually ignore these signs, anyways. You recognise it is showing speed in kilometers per hour."
 	icon_state = "speed"
 
 /obj/structure/halflife/street_sign/warnings

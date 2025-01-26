@@ -75,15 +75,14 @@
 			launch_very_hard(parent)
 			should_loop = TRUE
 		if(NOT_HOLDING_ON)
-			hyperloop.set_delay(not_clinging_move_delay)
+			launch_very_hard(parent) //HL13 EDIT TO ALL STATES. You get flung off NO MATTER WHAT
 			should_loop = TRUE
-			hyperloop.direction = direction //we're not close to anything so reset direction if we got diagonalized
 		if(CLINGING)
-			hyperloop.set_delay(clinging_move_delay)
+			launch_very_hard(parent)
 			should_loop = TRUE
-			update_drift_direction(parent)
 		if(ALL_GOOD)
-			should_loop = FALSE
+			launch_very_hard(parent)
+			should_loop = TRUE
 
 	// the hyperloop can get reset to null from the above procs
 	if(!hyperloop)

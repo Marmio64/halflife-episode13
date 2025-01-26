@@ -21,3 +21,11 @@
 	time = 2 SECONDS
 	category = CAT_MISC
 	crafting_interface = CRAFTING_BENCH_GENERAL
+
+/datum/crafting_recipe/makeshiftbandage
+	name = "Makeshift Bandage"
+	reqs = list(
+		/obj/item/stack/sheet/cloth = 3,
+	)
+	result = /obj/item/stack/medical/bandage/makeshift
+	category = CAT_TOOLS

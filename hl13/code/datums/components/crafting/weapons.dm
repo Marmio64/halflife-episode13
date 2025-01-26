@@ -96,9 +96,9 @@
 /datum/crafting_recipe/mp7mag
 	name = "4.6x30mm MP7 Full Magazine"
 	result = /obj/item/ammo_box/magazine/mp7
-	reqs = list(/obj/item/stack/sheet/iron = 40,
-				/obj/item/stack/cable_coil = 40,
-				/datum/reagent/fuel = 40)
+	reqs = list(/obj/item/stack/sheet/iron = 35,
+				/obj/item/stack/cable_coil = 35,
+				/datum/reagent/fuel = 35)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 9 SECONDS
 	category = CAT_WEAPON_AMMO
@@ -129,9 +129,9 @@
 /datum/crafting_recipe/m4a1mag
 	name = "5.56 M4A1 Full Magazine"
 	result = /obj/item/ammo_box/magazine/m4a1
-	reqs = list(/obj/item/stack/sheet/iron = 40,
+	reqs = list(/obj/item/stack/sheet/iron = 35,
 				/obj/item/stack/cable_coil = 30,
-				/datum/reagent/fuel = 60)
+				/datum/reagent/fuel = 45)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 20 SECONDS
 	category = CAT_WEAPON_AMMO

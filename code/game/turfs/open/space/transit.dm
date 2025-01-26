@@ -1,6 +1,6 @@
 /turf/open/space/transit
-	name = "\proper hyperspace"
-	desc = "What is this, light-speed? We need to go to plaid speed!"  // spaceballs was a great movie
+	name = "\proper transit dirt" //HL13 EDIT
+	desc = "It may hurt to hit this at the speed you're going."  //HL13 EDIT
 	icon_state = "dirtmoving"
 	base_icon_state = "dirtmoving"
 	icon = 'icons/turf/floors.dmi'
@@ -68,6 +68,20 @@
 	if(HAS_TRAIT(dumpee, TRAIT_DEL_ON_SPACE_DUMP))
 		qdel(dumpee)
 		return
+
+	//HL13 EDIT BEGIN. This is to dump people off at the train tracks instead of the BLACK VOID OF FUCKING SPACE
+	var/list/spawn_locs = list()
+
+	for(var/X in GLOB.train_dump_spots)
+		spawn_locs += X
+
+	if(!spawn_locs.len)
+		message_admins("No valid train dump spots!") //if no valid spots are found, it has to dump them into space then
+	else
+		dumpee.forceMove(pick(spawn_locs))
+		return //otherwise, it does dump them at an intended spot
+
+	//HL13 EDIT END
 
 	var/max = world.maxx-TRANSITIONEDGE
 	var/min = 1+TRANSITIONEDGE

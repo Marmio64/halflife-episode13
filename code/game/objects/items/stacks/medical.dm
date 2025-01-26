@@ -577,4 +577,5 @@
 	icon_state = "bandage_makeshift"
 	icon_state_preview = "bandage_makeshift"
 	inhand_icon_state = "bandage"
+	heal_brute = 15 //HL13 edit
 	novariants = TRUE

@@ -18,7 +18,7 @@
 	heavyfootstep = FOOTSTEP_WATER
 	plane = FLOOR_PLANE
 	layer = TURF_LAYER_WATER_BASE
-	slowdown = 0.75
+	slowdown = 1
 	light_power = 0.25 //water is reflective, or has glowing contaminants inside of it...
 	light_range = 0.25
 	light_color = "#0486b9"
@@ -217,7 +217,7 @@
 						H.visible_message("<span class='danger'>[H] falls in and takes a drink!</span>",
 											"<span class='userdanger'>You fall in and swallow some water!</span>")
 						playsound(src, 'hl13/sound/halflifeeffects/splash.ogg', 60, 1, 1)
-						H.Knockdown(60)
+						H.Knockdown(40)
 						H.swimming = TRUE
 						//M.adjust_bodytemperature(coldness)
 				else

@@ -14,14 +14,6 @@
 	time = 4 SECONDS
 	category = CAT_ARMOR
 
-/datum/crafting_recipe/fannypack
-	name = "Fannypack"
-	result = /obj/item/storage/belt/fannypack
-	reqs = list(/obj/item/stack/sheet/cloth = 2,
-				/obj/item/stack/sheet/leather = 1)
-	time = 2 SECONDS
-	category = CAT_CONTAINERS
-
 /datum/crafting_recipe/hudsunsec
 	name = "Security HUDsunglasses"
 	result = /obj/item/clothing/glasses/hud/security/sunglasses
@@ -208,19 +200,6 @@
 		/obj/item/food/grown/rainbow_flower = 5,
 		/obj/item/stack/cable_coil = 3,
 	)
-	category = CAT_CLOTHING
-
-/datum/crafting_recipe/sturdy_shako
-	name = "Sturdy Shako"
-	result = /obj/item/clothing/head/hats/hos/shako
-	tool_behaviors = list(TOOL_WELDER, TOOL_KNIFE)
-	time = 5 SECONDS
-	reqs = list(
-		/obj/item/clothing/head/hats/hos/cap = 1,
-		/obj/item/stack/sheet/plasteel = 2, //Stout shako for two refined
-		/obj/item/stack/sheet/mineral/gold = 2,
-	)
-
 	category = CAT_CLOTHING
 
 /datum/crafting_recipe/paper_hat

@@ -405,18 +405,6 @@
 	desc = "The robust standard-issue cap of the Head of Security. For showing the officers who's in charge. Looks a bit stout."
 	icon_state = "hoscap"
 
-/obj/item/clothing/head/hats/hos/cap/Initialize(mapload)
-	. = ..()
-	// Give it a little publicity
-	var/static/list/slapcraft_recipe_list = list(\
-		/datum/crafting_recipe/sturdy_shako,\
-		)
-
-	AddElement(
-		/datum/element/slapcrafting,\
-		slapcraft_recipes = slapcraft_recipe_list,\
-	)
-
 /datum/armor/hats_hos
 	melee = 40
 	bullet = 30

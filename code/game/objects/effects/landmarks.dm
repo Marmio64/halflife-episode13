@@ -333,6 +333,14 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	GLOB.xeno_spawn += loc
 	return INITIALIZE_HINT_QDEL
 
+/obj/effect/landmark/train_dump_spot
+	name = "train dump spot"
+
+/obj/effect/landmark/train_dump_spot/Initialize(mapload)
+	..()
+	GLOB.train_dump_spots += loc
+	return INITIALIZE_HINT_QDEL
+
 //observer start
 /obj/effect/landmark/observer_start
 	name = "Observer-Start"
