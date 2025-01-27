@@ -1,19 +1,3 @@
-/datum/crafting_recipe/durathread_vest
-	name = "Durathread Vest"
-	result = /obj/item/clothing/suit/armor/vest/durathread
-	reqs = list(/obj/item/stack/sheet/durathread = 5,
-				/obj/item/stack/sheet/leather = 4)
-	time = 5 SECONDS
-	category = CAT_ARMOR
-
-/datum/crafting_recipe/durathread_helmet
-	name = "Durathread Helmet"
-	result = /obj/item/clothing/head/helmet/durathread
-	reqs = list(/obj/item/stack/sheet/durathread = 4,
-				/obj/item/stack/sheet/leather = 5)
-	time = 4 SECONDS
-	category = CAT_ARMOR
-
 /datum/crafting_recipe/hudsunsec
 	name = "Security HUDsunglasses"
 	result = /obj/item/clothing/glasses/hud/security/sunglasses
@@ -85,27 +69,6 @@
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
 	reqs = list(/obj/item/clothing/glasses/sunglasses/chemical = 1)
 	category = CAT_EQUIPMENT
-
-/datum/crafting_recipe/prisonsuit
-	name = "Prisoner Uniform (Suit)"
-	result = /obj/item/clothing/under/rank/prisoner
-	reqs = list(/obj/item/stack/sheet/cloth = 3, /obj/item/stack/license_plates = 1)
-	time = 2 SECONDS
-	category = CAT_CLOTHING
-
-/datum/crafting_recipe/prisonskirt
-	name = "Prisoner Uniform (Skirt)"
-	result = /obj/item/clothing/under/rank/prisoner/skirt
-	reqs = list(/obj/item/stack/sheet/cloth = 3, /obj/item/stack/license_plates = 1)
-	time = 2 SECONDS
-	category = CAT_CLOTHING
-
-/datum/crafting_recipe/prisonshoes
-	name = "Orange Prison Shoes"
-	result = /obj/item/clothing/shoes/sneakers/orange
-	reqs = list(/obj/item/stack/sheet/cloth = 2, /obj/item/stack/license_plates = 1)
-	time = 1 SECONDS
-	category = CAT_CLOTHING
 
 /datum/crafting_recipe/bonetalisman
 	name = "Bone Talisman"
@@ -202,15 +165,6 @@
 	)
 	category = CAT_CLOTHING
 
-/datum/crafting_recipe/paper_hat
-	name = "Paper Hat"
-	result = /obj/item/clothing/head/costume/paper_hat
-	time = 5 SECONDS
-	reqs = list(
-		/obj/item/paper = 1,
-	)
-	category = CAT_CLOTHING
-
 /datum/crafting_recipe/biohood_sec
 	name = "security biohood"
 	result = /obj/item/clothing/head/bio_hood/security
@@ -230,43 +184,3 @@
 		/obj/item/clothing/suit/armor/vest = 1,
 	)
 	category = CAT_ARMOR
-
-/datum/crafting_recipe/press_armor
-	name = "press armor vest"
-	result = /obj/item/clothing/suit/armor/vest/press
-	time = 2 SECONDS
-	tool_paths = list(/obj/item/clothing/accessory/press_badge)
-	reqs = list(
-		/obj/item/clothing/suit/armor/vest = 1,
-	)
-	category = CAT_ARMOR
-
-/datum/crafting_recipe/press_helmet
-	name = "press helmet vest"
-	result = /obj/item/clothing/head/helmet/press
-	time = 2 SECONDS
-	tool_paths = list(/obj/item/clothing/accessory/press_badge)
-	reqs = list(
-		/obj/item/clothing/head/helmet/sec = 1,
-	)
-	category = CAT_ARMOR
-
-/datum/crafting_recipe/press_vest
-	name = "press vest"
-	result = /obj/item/clothing/suit/hazardvest/press
-	time = 2 SECONDS
-	tool_paths = list(/obj/item/clothing/accessory/press_badge)
-	reqs = list(
-		/obj/item/clothing/suit/hazardvest = 1,
-	)
-	category = CAT_ARMOR
-
-/datum/crafting_recipe/press_fedora
-	name = "press fedora"
-	result = /obj/item/clothing/head/fedora/beige/press
-	time = 2 SECONDS
-	tool_paths = list(/obj/item/clothing/accessory/press_badge)
-	reqs = list(
-		/obj/item/clothing/head/fedora/beige = 1,
-	)
-	category = CAT_CLOTHING

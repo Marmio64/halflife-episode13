@@ -212,6 +212,13 @@
 
 /////////FACTORY END
 
+/area/halflife/indoors/laborcamp
+	name = "\improper Labor Camp"
+
+	first_time_text = "The Labor Camp"
+
+/area/halflife/indoors/laborcamp/security
+	name = "\improper Labor Camp Security Room"
 
 ///////// 'old' abandoned areas that are not in the slums
 

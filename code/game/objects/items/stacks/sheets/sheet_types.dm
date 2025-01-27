@@ -488,15 +488,6 @@ GLOBAL_LIST_INIT(durathread_recipes, list ( \
 	drop_sound = 'sound/items/handling/cloth_drop.ogg'
 	pickup_sound = 'sound/items/handling/cloth_pickup.ogg'
 
-/obj/item/stack/sheet/durathread/Initialize(mapload)
-	. = ..()
-	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/durathread_helmet, /datum/crafting_recipe/durathread_vest)
-
-	AddElement(
-		/datum/element/slapcrafting,\
-		slapcraft_recipes = slapcraft_recipe_list,\
-	)
-
 /obj/item/stack/sheet/durathread/get_main_recipes()
 	. = ..()
 	. += GLOB.durathread_recipes

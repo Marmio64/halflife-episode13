@@ -98,6 +98,8 @@
 		/obj/item/reagent_containers/syringe = 3,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 5,
 		/obj/item/reagent_containers/pill/multiver = 2,
+		/obj/item/reagent_containers/pill/potassiodide = 3,
+		/obj/item/reagent_containers/pill/iron = 3,
 		/obj/item/reagent_containers/medigel/sterilizine = 1,
 		/obj/item/healthanalyzer/simple = 2,
 		/obj/item/stack/medical/bone_gel = 2,

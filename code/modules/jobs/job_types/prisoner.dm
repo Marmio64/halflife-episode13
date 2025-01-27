@@ -9,7 +9,7 @@
 	paycheck = PAYCHECK_ZERO
 	config_tag = "PRISONER"
 
-	outfit = /datum/outfit/job/prisoner
+	outfit = /datum/outfit/job/refugee/randomitems
 	plasmaman_outfit = /datum/outfit/plasmaman/prisoner
 
 	display_order = JOB_DISPLAY_ORDER_PRISONER
@@ -32,3 +32,26 @@
 
 	id = null
 	uniform = /obj/item/clothing/under/citizen/refugee
+
+/datum/outfit/job/refugee/randomitems
+	name = "Outlands Refugee with a random item"
+	jobtype = /datum/job/prisoner
+
+	id = null
+	uniform = /obj/item/clothing/under/citizen/refugee
+
+	r_pocket = /obj/item/flashlight
+	var/list/rhand_items = list(
+		/obj/item/storage/belt/pouch,
+		/obj/item/reagent_containers/pill/patch/medkit,
+		/obj/item/storage/box/halflife/ration,
+		/obj/item/clothing/suit/armor/armored
+		) //Refugees get a random item from this list
+
+/datum/outfit/job/refugee/randomitems/post_equip(mob/living/carbon/human/H, visualsOnly=FALSE)
+	if(visualsOnly)
+		return
+	var/chosen = pick(rhand_items)
+	var/turf/T = get_turf(H)
+	var/obj/item/I = new chosen(T)
+	H.put_in_hands(I)

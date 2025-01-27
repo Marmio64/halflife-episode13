@@ -34,6 +34,7 @@
 	player_mind.set_assigned_role(SSjob.get_job_type(/datum/job/blackmarket))
 	player_mind.special_role = "Black Market Dealer"
 	S.equipOutfit(/datum/outfit/blackmarket)
+	S.on_job_equipping() //give them a bank account
 	player_mind.add_antag_datum(/datum/antagonist/blackmarket)
 	message_admins("[ADMIN_LOOKUPFLW(S)] has been made into a Black Market Dealer by an event.")
 	S.log_message("was spawned as a Black Market Dealer by an event.", LOG_GAME)
