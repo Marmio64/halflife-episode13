@@ -2,14 +2,14 @@
 /datum/round_event_control/shuttle_loan
 	name = "Shuttle Loan"
 	typepath = /datum/round_event/shuttle_loan
-	max_occurrences = 0
+	max_occurrences = 2 //HL13 EDIT
 	earliest_start = 7 MINUTES
 	category = EVENT_CATEGORY_BUREAUCRATIC
 	description = "If cargo accepts the offer, fills the shuttle with loot and/or enemies."
 	///The types of loan events already run (and to be excluded if the event triggers).
 	admin_setup = list(/datum/event_admin_setup/listed_options/shuttle_loan)
 	///A list of normally unavailable (or already run) situations datums
-	var/list/unavailable_situations = list(/datum/shuttle_loan_situation/mail_strike)
+	var/list/unavailable_situations = list() //HL13 EDIT
 
 /datum/round_event_control/shuttle_loan/can_spawn_event(players_amt, allow_magic = FALSE)
 	. = ..()
@@ -21,7 +21,7 @@
 	announce_when = 1
 	end_when = 500
 	/// what type of shuttle loan situation the station faces.
-	var/datum/shuttle_loan_situation/situation
+	var/datum/shuttle_loan_situation/halflife/situation //HL13 EDIT
 	/// Whether the station has let Centcom commandeer the shuttle yet.
 	var/dispatched = FALSE
 
@@ -29,11 +29,11 @@
 	var/datum/round_event_control/shuttle_loan/loan_control = control
 	//by this point if situation is admin picked, it is a type, not an instance.
 	if(!situation)
-		var/list/valid_situations = subtypesof(/datum/shuttle_loan_situation) - loan_control.unavailable_situations
+		var/list/valid_situations = subtypesof(/datum/shuttle_loan_situation/halflife) - loan_control.unavailable_situations //HL13 EDIT
 		if(!valid_situations.len)
 			//If we somehow run out of loans (fking campbell), they all become available again
 			loan_control.unavailable_situations.Cut()
-			valid_situations = subtypesof(/datum/shuttle_loan_situation)
+			valid_situations = subtypesof(/datum/shuttle_loan_situation/halflife) //HL13 EDIT
 		situation = pick(valid_situations)
 
 	loan_control.unavailable_situations.Add(situation)
@@ -41,7 +41,7 @@
 
 /datum/round_event/shuttle_loan/announce(fake)
 	if(fake)
-		var/datum/shuttle_loan_situation/fake_situation = pick(subtypesof(/datum/shuttle_loan_situation))
+		var/datum/shuttle_loan_situation/halflife/fake_situation = pick(subtypesof(/datum/shuttle_loan_situation/halflife)) //HL13 EDIT
 		situation = new fake_situation
 	else
 		SSshuttle.shuttle_loan = src
@@ -51,7 +51,7 @@
 
 
 /datum/round_event/shuttle_loan/proc/loan_shuttle()
-	priority_announce(situation.thanks_msg, "Cargo shuttle commandeered by [command_name()].")
+	priority_announce(situation.thanks_msg, "Cargo dropship commandeered by Overwatch.") //hl13 edit
 
 	dispatched = TRUE
 	var/datum/bank_account/dep_account = SSeconomy.get_dep_account(ACCOUNT_CAR)
@@ -109,7 +109,7 @@
 
 /datum/event_admin_setup/listed_options/shuttle_loan/get_list()
 	var/datum/round_event_control/shuttle_loan/loan_event = event_control
-	var/list/valid_situations = subtypesof(/datum/shuttle_loan_situation) - loan_event.unavailable_situations
+	var/list/valid_situations = subtypesof(/datum/shuttle_loan_situation/halflife) - loan_event.unavailable_situations //HL13 EDIT
 	return valid_situations
 
 /datum/event_admin_setup/listed_options/shuttle_loan/apply_to_event(datum/round_event/shuttle_loan/event)

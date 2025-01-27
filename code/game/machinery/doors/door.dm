@@ -75,7 +75,7 @@
 
 /datum/armor/machinery_door
 	melee = 30
-	bullet = 30
+	bullet = 0 //HL13 EDIT, since melee is generally a lot stronger and bullets are rarer
 	laser = 20
 	energy = 20
 	bomb = 10

@@ -11,3 +11,9 @@
 
 /obj/item/stack/credit_voucher/get_item_credit_value()
 	return (amount*value)
+
+/obj/item/stack/credit_voucher/a5
+	amount = 5
+
+/obj/item/stack/credit_voucher/a10
+	amount = 10

@@ -7,9 +7,9 @@
 	/// What the shuttle says about it.
 	var/shuttle_transit_text = "Unset transit text"
 	/// Supply points earned for taking the deal.
-	var/bonus_points = CARGO_CRATE_VALUE * 50
+	var/bonus_points = CARGO_CRATE_VALUE * 40
 	/// Response for taking the deal.
-	var/thanks_msg = "The cargo shuttle should return in five minutes. Have some supply points for your trouble."
+	var/thanks_msg = "The cargo dropship should return in five minutes. Your district cargo budget has been increased."
 	/// Small description of the loan for easier log reading.
 	var/logging_desc
 
@@ -49,28 +49,6 @@
 	spawn_list.Add(/obj/structure/closet/crate)
 	spawn_list.Add(/obj/item/reagent_containers/cup/bottle/pierrot_throat)
 	spawn_list.Add(/obj/item/reagent_containers/cup/bottle/magnitis)
-
-/datum/shuttle_loan_situation/department_resupply
-	sender = "CentCom Supply Department"
-	announcement_text = "Seems we've ordered doubles of our department resupply packages this month. Can we send them to you?"
-	shuttle_transit_text = "Department resupply incoming."
-	thanks_msg = "The cargo shuttle should return in five minutes."
-	bonus_points = 0
-	logging_desc = "Resupply packages"
-
-/datum/shuttle_loan_situation/department_resupply/spawn_items(list/spawn_list, list/empty_shuttle_turfs, list/blocked_shutte_turfs)
-	var/list/crate_types = list(
-		/datum/supply_pack/organic/food,
-		/datum/supply_pack/engineering/tools,
-		/datum/supply_pack/medical/supplies
-		)
-	for(var/crate in crate_types)
-		var/datum/supply_pack/pack = SSshuttle.supply_packs[crate]
-		pack.generate(pick_n_take(empty_shuttle_turfs))
-
-	for(var/i in 1 to 5)
-		var/decal = pick(/obj/effect/decal/cleanable/food/flour, /obj/effect/decal/cleanable/robot_debris, /obj/effect/decal/cleanable/oil)
-		new decal(pick_n_take(empty_shuttle_turfs))
 
 /datum/shuttle_loan_situation/syndiehijacking
 	sender = "CentCom Counterintelligence"
