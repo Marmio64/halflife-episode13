@@ -114,7 +114,7 @@
 /obj/machinery/stalker_chamber/proc/end_harvesting()
 	var/mob/living/carbon/C = occupant
 	C.set_species(/datum/species/stalker)
-	SSsociostability.modifystability(-10) //having scary stalkers walking around isn't amazing for stability, but isn't as bad as someone dying.
+	SSsociostability.modifystability(-5) //having scary stalkers walking around isn't amazing for stability, but isn't as bad as someone dying.
 	C.emote("scream")
 
 	harvesting = FALSE

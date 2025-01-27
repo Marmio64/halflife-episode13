@@ -1230,7 +1230,7 @@
 
 /datum/outfit/deathmatch_loadout/combine/overwatch/shotgunner
 	name = "Deathmatch: OTA Shotgunner"
-	display_name = "Overwatch Shotgunner"
+	display_name = "OTA Shotgunner"
 	desc = "Slow but heavily armored, overwatch shotgunners are premier assault vanguards."
 	suit_store = /obj/item/gun/ballistic/shotgun/spas12
 	belt = /obj/item/storage/belt/civilprotection/overwatch/spas12
