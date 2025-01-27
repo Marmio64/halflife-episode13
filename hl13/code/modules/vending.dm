@@ -5,10 +5,10 @@
 	icon_state = "breen_machine"
 	panel_type = "panel2"
 	product_ads = "Stay hydrated.;A thirsty citizen is a inefficient citizen.;Drink Breen's private reserve!;The purest water around."
-	products = list(/obj/item/reagent_containers/cup/soda_cans/breenwater = 20, /obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 5)
+	products = list(/obj/item/reagent_containers/cup/soda_cans/breenwater = 15, /obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 3)
 	resistance_flags = FIRE_PROOF
 	refill_canister = /obj/item/vending_refill/breen
-	default_price = 20
+	default_price = 15
 	extra_price = 1
 	payment_department = NO_FREEBIES
 
@@ -130,9 +130,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	light_mask = "sec-light-mask"
 	products = list(
 		/obj/item/restraints/handcuffs = 8,
-		/obj/item/restraints/handcuffs/cable/zipties = 10,
-		/obj/item/ammo_box/magazine/usp9mm = 8,
-		/obj/item/reagent_containers/pill/patch/medkit/vial = 6,
+		/obj/item/lockpick/combine = 3,
+		/obj/item/gps = 4,
+		/obj/item/flashlight/flare = 6,
+		/obj/item/restraints/handcuffs/cable/zipties = 8,
+		/obj/item/ammo_box/magazine/usp9mm = 6,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 4,
 		/obj/item/reagent_containers/spray/pepper = 6,
 	)
 	contraband = list(
@@ -142,9 +145,9 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/storage/backpack/halflife/satchel = 3,
 		/obj/item/storage/backpack/halflife/satchel/military = 3,
 	)
-	refill_canister = /obj/item/vending_refill/security
+	refill_canister = /obj/item/vending_refill/civpro
 	default_price = PAYCHECK_CREW
-	extra_price = PAYCHECK_COMMAND * 2.5
+	extra_price = PAYCHECK_COMMAND * 3
 	payment_department = NO_FREEBIES
 
 /obj/item/vending_refill/civpro

@@ -6,7 +6,7 @@ SUBSYSTEM_DEF(economy)
 	///How many paychecks should players start out the round with?
 	var/roundstart_paychecks = 5
 	///How many credits does the in-game economy have in circulation at round start? Divided up by 6 of the 7 department budgets evenly, where cargo starts with nothing.
-	var/budget_pool = 35000
+	var/budget_pool = 10000 //HL13 edit, scale the money WAAAY back
 	var/list/department_accounts = list(ACCOUNT_CIV = ACCOUNT_CIV_NAME,
 										ACCOUNT_ENG = ACCOUNT_ENG_NAME,
 										ACCOUNT_SCI = ACCOUNT_SCI_NAME,
@@ -68,12 +68,15 @@ SUBSYSTEM_DEF(economy)
 	var/temporary_total = 0
 
 /datum/controller/subsystem/economy/Initialize()
-	//removes cargo from the split
-	var/budget_to_hand_out = round(budget_pool / department_accounts.len -1)
+	//removes cargo from the split HL13 EDIT REMOVE SECURITY TOO
+	var/budget_to_hand_out = round(budget_pool / department_accounts.len -2)
 	mail_blocked = TRUE
 	for(var/dep_id in department_accounts)
-		if(dep_id == ACCOUNT_CAR) //cargo starts with NOTHING
-			new /datum/bank_account/department(dep_id, 0, player_account = FALSE)
+		if(dep_id == ACCOUNT_CAR) //cargo starts with (almost, hl13 edit) NOTHING
+			new /datum/bank_account/department(dep_id, 100, player_account = FALSE)
+			continue
+		if(dep_id == ACCOUNT_SEC) //HL13 EDIT security starts with very little
+			new /datum/bank_account/department(dep_id, 250, player_account = FALSE)
 			continue
 		new /datum/bank_account/department(dep_id, budget_to_hand_out, player_account = FALSE)
 	return SS_INIT_SUCCESS

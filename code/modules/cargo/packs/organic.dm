@@ -32,7 +32,7 @@
 /datum/supply_pack/organic/food
 	name = "Food Crate"
 	desc = "Allow the citizens a treat with this crate filled with specially preserved old world foods."
-	cost = CARGO_CRATE_VALUE * 4.5
+	cost = CARGO_CRATE_VALUE * 5
 	contains = list(/obj/item/reagent_containers/condiment/flour,
 					/obj/item/reagent_containers/condiment/rice,
 					/obj/item/reagent_containers/condiment/milk,
@@ -50,7 +50,7 @@
 /datum/supply_pack/organic/rations
 	name = "Ration Crate"
 	desc = "A crate of five ration packs, made for easy distribution."
-	cost = CARGO_CRATE_VALUE * 2.5
+	cost = CARGO_CRATE_VALUE * 3
 	contains = list(/obj/item/storage/box/halflife/ration,
 					/obj/item/storage/box/halflife/ration,
 					/obj/item/storage/box/halflife/ration,
@@ -62,7 +62,7 @@
 /datum/supply_pack/organic/loyaltyrations
 	name = "Loyalty-grade Ration Crate"
 	desc = "A crate of five loyalty-grade ration packs, made for easy distribution."
-	cost = CARGO_CRATE_VALUE * 3
+	cost = CARGO_CRATE_VALUE * 3.5
 	contains = list(/obj/item/storage/box/halflife/loyaltyration,
 					/obj/item/storage/box/halflife/loyaltyration,
 					/obj/item/storage/box/halflife/loyaltyration,
@@ -73,7 +73,7 @@
 /datum/supply_pack/organic/badrations
 	name = "Low-grade Ration Crate"
 	desc = "A crate of five low-grade ration packs, made for easy distribution."
-	cost = CARGO_CRATE_VALUE * 2.25
+	cost = CARGO_CRATE_VALUE * 2.5
 	contains = list(/obj/item/storage/box/halflife/badration,
 					/obj/item/storage/box/halflife/badration,
 					/obj/item/storage/box/halflife/badration,

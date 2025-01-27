@@ -51,11 +51,21 @@
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
 
 /datum/crafting_recipe/combineturret
-	name = "Combine Turret"
+	name = "Combine AR2 Turret"
 	result = /obj/machinery/porta_turret/combine/off
 	reqs = list(/obj/item/stack/sheet/iron = 2,
 				/obj/item/circuitmaterial/advanced = 1,
 				/obj/item/gun/ballistic/automatic/ar2 = 1)
+	time = 6 SECONDS
+	category = CAT_ROBOT
+	crafting_interface = CRAFTING_BENCH_ELECTRIC
+
+/datum/crafting_recipe/combineturret
+	name = "Combine MP7 Turret"
+	result = /obj/machinery/porta_turret/combine/mp7/off
+	reqs = list(/obj/item/stack/sheet/iron = 2,
+				/obj/item/circuitmaterial/advanced = 1,
+				/obj/item/gun/ballistic/automatic/mp7 = 1)
 	time = 6 SECONDS
 	category = CAT_ROBOT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC

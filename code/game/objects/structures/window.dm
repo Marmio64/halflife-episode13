@@ -698,12 +698,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/window/reinforced/tinted/frosted/spaw
 /* Full Tile Windows (more atom_integrity) */
 
 /obj/structure/window/fulltile
-	name = "full tile window"
-	desc = "A full tile window."
+	name = "window"
+	desc = "A combine window. Made of tougher materials than standard glass."
 	icon = 'icons/obj/smooth_structures/cmwindow.dmi'
 	icon_state = "cmwindow-0"
 	base_icon_state = "cmwindow"
-	max_integrity = 100
+	max_integrity = 125
+	damage_deflection = 5
 	fulltile = TRUE
 	flags_1 = PREVENT_CLICK_UNDER_1
 	obj_flags = CAN_BE_HIT

@@ -920,7 +920,6 @@
 		if(!B.bank_cards.Find(src))
 			B.bank_cards += src
 		name = "departmental card ([department_name])"
-		desc = "Provides access to the [department_name]."
 	SSeconomy.dep_cards += src
 
 /obj/item/card/id/departmental_budget/Destroy()
@@ -934,6 +933,11 @@
 	department_ID = ACCOUNT_CAR
 	department_name = ACCOUNT_CAR_NAME
 	icon_state = "car_budget" //saving up for a new tesla
+
+/obj/item/card/id/departmental_budget/sec //HL13 EDIT
+	department_ID = ACCOUNT_SEC
+	department_name = ACCOUNT_SEC_NAME
+	icon_state = "sec_budget"
 
 /obj/item/card/id/departmental_budget/click_alt(mob/living/user)
 	registered_account.bank_card_talk(span_warning("Withdrawing is not compatible with this card design."), TRUE) //prevents the vault bank machine being useless and putting money from the budget to your card to go over personal crates

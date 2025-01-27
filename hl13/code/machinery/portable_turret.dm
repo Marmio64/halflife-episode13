@@ -58,6 +58,15 @@ DEFINE_BITFIELD(turret_flags, list(
 /obj/machinery/porta_turret/combine/off
 	on = FALSE
 
+/obj/machinery/porta_turret/combine/mp7
+	stun_projectile = /obj/projectile/bullet/c46x30mm
+	lethal_projectile = /obj/projectile/bullet/c46x30mm
+	lethal_projectile_sound = "hl13/sound/weapons/smgfire.ogg"
+	stun_projectile_sound = "hl13/sound/weapons/smgfire.ogg"
+
+/obj/machinery/porta_turret/combine/mp7/off
+	on = FALSE
+
 /obj/machinery/porta_turret/combine/setup()
 	return
 

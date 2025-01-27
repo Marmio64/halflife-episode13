@@ -2298,7 +2298,7 @@
 	overlays_file = 'icons/obj/doors/airlocks/highsec/overlays.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_highsecurity
 	explosion_block = 2
-	normal_integrity = 500
+	normal_integrity = 800
 	security_level = 1
 	damage_deflection = 30
 
