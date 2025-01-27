@@ -56,6 +56,39 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
 
+//sidegrade to the m4a1. Heavier duty: More spread, damage and recoil and less firing speed.
+/obj/item/gun/ballistic/automatic/ak47
+	name = "\improper AK-47 Rifle"
+	desc = "An old AK-47 without the stock. This thing is going to kick like a mule without that stock... but it should still hit just as hard."
+	icon = 'hl13/icons/obj/guns/projectile.dmi'
+	icon_state = "ak47"
+	inhand_icon_state = "arg"
+	fire_sound = "hl13/sound/weapons/ak47fire.ogg"
+	vary_fire_sound = FALSE
+	load_sound = "sound/items/weapons/gun/rifle/rifleload.ogg"
+	load_empty_sound = "sound/items/weapons/gun/rifle/rifleload.ogg"
+	rack_sound = "sound/items/weapons/gun/rifle/bolt_in.ogg"
+	eject_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
+	eject_empty_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/ak47
+	force = 10
+	fire_delay = 2
+	burst_size = 1
+	spread = 14
+	recoil = 1.2
+	can_suppress = FALSE
+	mag_display = TRUE
+	weapon_weight = WEAPON_MEDIUM
+	w_class = WEIGHT_CLASS_BULKY
+	slowdown = 0.25
+
+/obj/item/gun/ballistic/automatic/ak47/no_mag
+	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/ak47/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.4 SECONDS)
+
 //the crossbow
 /*
 /obj/item/gun/ballistic/bow/crossbow/rebar

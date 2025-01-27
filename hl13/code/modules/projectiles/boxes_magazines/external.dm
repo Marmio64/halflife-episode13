@@ -57,3 +57,13 @@
 	ammo_type = /obj/item/ammo_casing/a556
 	caliber = CALIBER_556NATO
 	max_ammo = 30
+
+//ak47 Rifle
+
+/obj/item/ammo_box/magazine/ak47
+	name = "rifle magazine (7.62mm)"
+	desc = "A standard 30-round magazine for the AK47 Rifle. Filled with 7.62 rounds."
+	icon_state = "m308"
+	ammo_type = /obj/item/ammo_casing/n762
+	caliber = CALIBER_N762
+	max_ammo = 30
