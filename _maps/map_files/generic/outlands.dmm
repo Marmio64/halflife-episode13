@@ -1293,6 +1293,12 @@
 "zT" = (
 /turf/open/floor/plating/indoor/metal/grate/border,
 /area/halflife/indoors/sewer/tunnel)
+"zW" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/indoors/sewer/tunnel)
 "zY" = (
 /obj/structure/bed/halflife/bedframe/cot,
 /obj/structure/bed/halflife/mattress/filthy,
@@ -1329,6 +1335,12 @@
 /obj/structure/halflife/pallet,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"AN" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/indoors/sewer/tunnel)
 "AR" = (
 /obj/structure/railing/halflife/wood/single{
 	dir = 1
@@ -1380,6 +1392,9 @@
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"Cb" = (
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/indoors/sewer/tunnel)
 "Cq" = (
 /obj/structure/flora/bush/fullgrass,
 /turf/open/misc/grass/jungle/station,
@@ -1426,11 +1441,8 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
 "Dn" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/indoors/sewer/tunnel)
+/turf/closed/indestructible/syndicate,
+/area/space)
 "Dp" = (
 /obj/structure/halflife/trash/papers/two{
 	dir = 1
@@ -1542,10 +1554,7 @@
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors)
 "Fk" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/cordon,
 /area/halflife/indoors/sewer/tunnel)
 "Fo" = (
 /obj/structure/flora/bush/grassy/style_random,
@@ -18553,22 +18562,22 @@ el
 MZ
 MZ
 MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
+Dn
+Dn
+Dn
+Dn
+Dn
+Dn
+Dn
+Dn
+Dn
+Dn
 zB
 XA
 XA
 XA
 XA
-tN
+IF
 tN
 LN
 tN
@@ -18740,22 +18749,22 @@ el
 MZ
 MZ
 MZ
-MZ
-zB
-zB
-zB
-zB
-zB
-zB
-zB
-zB
-zB
-zB
-XA
-XA
-XA
-XA
-IF
+Dn
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
 tN
 It
 It
@@ -18927,22 +18936,22 @@ MZ
 MZ
 MZ
 MZ
-MZ
-zB
+Dn
 vs
-vs
-vs
-vs
-vs
-vs
-vs
-vs
-vs
-vs
-vs
-vs
-vs
-vs
+Fk
+Cb
+Cb
+AN
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
 fX
 fX
 Oo
@@ -19114,12 +19123,12 @@ MZ
 MZ
 MZ
 MZ
-MZ
-zB
-vs
-QP
-QP
 Dn
+vs
+Fk
+QP
+QP
+QP
 QP
 QP
 QP
@@ -19301,9 +19310,9 @@ MZ
 MZ
 MZ
 MZ
-MZ
-zB
+Dn
 vs
+Fk
 mp
 DL
 DL
@@ -19488,9 +19497,9 @@ MZ
 MZ
 MZ
 MZ
-MZ
-zB
+Dn
 vs
+Fk
 ry
 HS
 HS
@@ -19675,9 +19684,9 @@ MZ
 MZ
 MZ
 MZ
-MZ
-zB
+Dn
 vs
+Fk
 iK
 sq
 sq
@@ -19862,12 +19871,12 @@ MZ
 MZ
 MZ
 MZ
-MZ
-zB
+Dn
 vs
-QP
-QP
 Fk
+QP
+QP
+QP
 QP
 QP
 QP
@@ -20049,22 +20058,22 @@ MZ
 MZ
 MZ
 MZ
-MZ
-zB
+Dn
 vs
-vs
-vs
-vs
-vs
-vs
-vs
-vs
-vs
-vs
-vs
-vs
-vs
-vs
+Fk
+Cb
+Cb
+zW
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
 fX
 fX
 sT
@@ -20236,22 +20245,22 @@ MZ
 MZ
 MZ
 MZ
-MZ
-zB
-zB
-zB
-zB
-zB
-zB
-zB
-zB
-zB
-zB
-XA
-XA
-XA
-XA
-tN
+Dn
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
 LN
 tN
 tN
@@ -20423,16 +20432,16 @@ MZ
 MZ
 MZ
 MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
+Dn
+Dn
+Dn
+Dn
+Dn
+Dn
+Dn
+Dn
+Dn
+Dn
 zB
 XA
 XA

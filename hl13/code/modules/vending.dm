@@ -52,7 +52,8 @@
 	contraband = list(/obj/item/lockpick = 1,
 	                  /obj/item/clothing/suit/armor/browncoat = 1)
 
-	premium = list(/obj/item/storage/backpack = 3,
+	premium = list(/obj/item/storage/backpack/halflife/satchel = 3,
+				   /obj/item/storage/backpack/halflife = 3,
 				   /obj/item/binoculars = 3,
 				   /obj/item/storage/box/halflife/ration = 5)
 
@@ -118,3 +119,34 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 /obj/item/vending_refill/combine_wallmed
 	machine_name = "Combine Automated Med Shop"
 	icon_state = "refill_medical"
+
+/obj/machinery/vending/civpro
+	name = "\improper Metropolice Supply Vendor"
+	desc = "An equipment vendor for civil protection to spend their hard earned credits on overpriced items."
+	product_ads = "Improve your ability to patrol.;Purchase additional supplies.;Help insure your family cohesion"
+	icon_state = "sec"
+	icon_deny = "sec-deny"
+	panel_type = "panel6"
+	light_mask = "sec-light-mask"
+	products = list(
+		/obj/item/restraints/handcuffs = 8,
+		/obj/item/restraints/handcuffs/cable/zipties = 10,
+		/obj/item/ammo_box/magazine/usp9mm = 8,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 6,
+		/obj/item/reagent_containers/spray/pepper = 6,
+	)
+	contraband = list(
+		/obj/item/clothing/glasses/sunglasses = 2,
+	)
+	premium = list(
+		/obj/item/storage/backpack/halflife/satchel = 3,
+		/obj/item/storage/backpack/halflife/satchel/military = 3,
+	)
+	refill_canister = /obj/item/vending_refill/security
+	default_price = PAYCHECK_CREW
+	extra_price = PAYCHECK_COMMAND * 2.5
+	payment_department = NO_FREEBIES
+
+/obj/item/vending_refill/civpro
+	machine_name = "Metropolice Supply Vendor"
+	icon_state = "refill_sec"

@@ -394,6 +394,7 @@
 "bs" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/food/nutripaste,
+/obj/item/food/nutripaste,
 /obj/item/radio/headset/earpiece,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/dispatch)
@@ -731,11 +732,8 @@
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
 "cH" = (
-/obj/structure/chair/office/halflife/blue{
-	dir = 1
-	},
-/turf/open/floor/plating/indoor/tile,
-/area/halflife/indoors/townhall/civilprotection/equipmentroom)
+/turf/cordon,
+/area/halflife/indoors/sewer/tunnel)
 "cI" = (
 /obj/item/paper_bin,
 /obj/item/pen,
@@ -2022,6 +2020,7 @@
 /obj/item/gps,
 /obj/item/gps,
 /obj/item/gps,
+/obj/structure/halflife/rug,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "hp" = (
@@ -2272,6 +2271,9 @@
 /obj/structure/table/halflife/no_smooth/large/metal,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/bar/apartments)
+"io" = (
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/indoors)
 "iq" = (
 /obj/structure/halflife/trash/wood{
 	dir = 6
@@ -4588,8 +4590,7 @@
 /obj/structure/chair/office/halflife/blue{
 	dir = 1
 	},
-/obj/structure/halflife/rug,
-/turf/open/floor/plating/indoor/tile,
+/turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "qS" = (
 /turf/template_noop,
@@ -4855,6 +4856,12 @@
 	},
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/distributioncenter)
+"rT" = (
+/obj/machinery/power/halflife/streetlamphalt{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/indoors)
 "rU" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -5589,6 +5596,9 @@
 /obj/item/storage/part_replacer,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
+"uE" = (
+/turf/cordon,
+/area/halflife/indoors)
 "uF" = (
 /obj/structure/halflife/trash/food/misc,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -8703,6 +8713,9 @@
 "Gi" = (
 /turf/closed/mineral/random,
 /area/halflife/indoors/sewer/cave)
+"Gj" = (
+/turf/cordon,
+/area/halflife/outdoors)
 "Gk" = (
 /obj/machinery/power/halflife/streetlamphalt{
 	dir = 8
@@ -10112,6 +10125,10 @@
 "Lm" = (
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/scienceunion)
+"Ln" = (
+/obj/machinery/vending/civpro,
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "Lo" = (
 /mob/living/basic/mouse/gray,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -10698,6 +10715,10 @@
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/outdoors/roofs)
+"Nz" = (
+/obj/structure/table/halflife/metal,
+/turf/open/floor/plating/indoor/tile/navy,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "NA" = (
 /obj/effect/turf_decal/siding/thinplating,
 /turf/open/floor/plating/ground/brickroad{
@@ -11975,6 +11996,13 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
+"Sk" = (
+/obj/structure/chair/office/halflife/blue{
+	dir = 1
+	},
+/obj/structure/halflife/rug,
+/turf/open/floor/plating/indoor/tile/navy,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "Sl" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/tile/navy,
@@ -36752,13 +36780,13 @@ tL
 tL
 Iw
 Iw
+uE
+uE
+uE
+uE
+uE
 Iw
 Iw
-Iw
-Iw
-Iw
-Iw
-Iw
 tL
 tL
 tL
@@ -36782,11 +36810,11 @@ tL
 tL
 tL
 Iw
-Iw
-Iw
-Iw
-Iw
-Iw
+uE
+uE
+uE
+uE
+uE
 Iw
 tL
 tL
@@ -38537,9 +38565,9 @@ Iw
 Iw
 Iw
 Iw
-Iw
-Iw
-Iw
+uE
+uE
+uE
 Iw
 Iw
 Iw
@@ -47716,7 +47744,7 @@ tL
 tL
 tL
 xr
-xr
+Gj
 aD
 na
 fT
@@ -47835,7 +47863,7 @@ hu
 pa
 pa
 pa
-uW
+cH
 Zk
 "}
 (90,1,2) = {"
@@ -47844,7 +47872,7 @@ tL
 tL
 tL
 xr
-xr
+Gj
 SL
 IN
 IN
@@ -47963,7 +47991,7 @@ XG
 XG
 XG
 XG
-uW
+cH
 Zk
 "}
 (91,1,2) = {"
@@ -47972,7 +48000,7 @@ tL
 tL
 tL
 xr
-xr
+Gj
 Ol
 nn
 nn
@@ -48091,7 +48119,7 @@ gI
 gI
 gI
 hq
-uW
+cH
 Zk
 "}
 (92,1,2) = {"
@@ -48100,7 +48128,7 @@ tL
 tL
 tL
 xr
-xr
+Gj
 vz
 Mw
 Mw
@@ -48219,7 +48247,7 @@ fc
 fc
 fc
 Ww
-uW
+cH
 Zk
 "}
 (93,1,2) = {"
@@ -48228,7 +48256,7 @@ tL
 tL
 tL
 xr
-xr
+Gj
 HD
 wp
 wp
@@ -48347,7 +48375,7 @@ AB
 AB
 AB
 aY
-uW
+cH
 Zk
 "}
 (94,1,2) = {"
@@ -48356,7 +48384,7 @@ tL
 tL
 tL
 xr
-xr
+Gj
 SL
 IN
 IN
@@ -48475,7 +48503,7 @@ XG
 XG
 XG
 XG
-uW
+cH
 Zk
 "}
 (95,1,2) = {"
@@ -48484,7 +48512,7 @@ tL
 tL
 tL
 xr
-xr
+Gj
 aD
 na
 fT
@@ -48603,7 +48631,7 @@ xM
 XG
 XG
 XG
-uW
+cH
 Zk
 "}
 (96,1,2) = {"
@@ -51956,15 +51984,15 @@ FK
 XQ
 gg
 yq
-nb
-cH
+Nz
 pV
 pV
 pV
+Ln
 pV
 pV
-DH
-UV
+pV
+LO
 sQ
 pP
 sQ
@@ -52084,15 +52112,15 @@ XQ
 XQ
 sP
 yq
-Ly
-hs
-oS
-gN
-WO
-Io
-oS
-aH
-LO
+nb
+Sk
+pV
+pV
+pV
+pV
+pV
+DH
+UV
 sQ
 pP
 sQ
@@ -52212,15 +52240,15 @@ fT
 fT
 IN
 yq
-yq
-yq
-yq
-yq
-yq
-yq
-yq
-yq
-yq
+Ly
+hs
+oS
+gN
+WO
+Io
+oS
+aH
+LO
 sQ
 pP
 Sl
@@ -52339,16 +52367,16 @@ fT
 fT
 fT
 IN
-kg
-fl
-sL
-sb
-sL
-sL
-sb
-wO
-zy
-rY
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
+yq
 sQ
 pP
 sQ
@@ -52470,13 +52498,13 @@ IN
 kg
 fl
 sL
+sb
 sL
 sL
-sL
-sL
+sb
 wO
 zy
-kg
+rY
 sQ
 sQ
 sQ
@@ -52724,14 +52752,14 @@ fT
 fT
 lW
 kg
-HN
+fl
+sL
+sL
+sL
+sL
+sL
+wO
 zy
-zy
-HN
-zy
-zy
-IB
-HN
 kg
 Zv
 Gx
@@ -52852,15 +52880,15 @@ fT
 fT
 IN
 kg
+HN
+zy
+zy
+HN
+zy
+zy
+IB
+HN
 kg
-kg
-kg
-kg
-kg
-kg
-Iw
-Iw
-Iw
 Gx
 QD
 TN
@@ -52975,20 +53003,20 @@ XP
 Jw
 py
 fT
-IN
-IN
-IN
-IN
-IN
-IN
-IN
-IN
-IN
 fT
 fT
-Iw
-Iw
-Iw
+fT
+IN
+kg
+kg
+kg
+kg
+kg
+kg
+kg
+kg
+kg
+kg
 Gx
 Ml
 VZ
@@ -53104,13 +53132,13 @@ Jw
 py
 fT
 IN
-Tp
-nn
-FB
-nn
-FB
-nn
-wq
+IN
+IN
+IN
+IN
+IN
+IN
+IN
 IN
 fT
 fT
@@ -53232,13 +53260,13 @@ Au
 py
 fT
 IN
-NT
-Mw
-VT
-BZ
-VT
-Mw
-WE
+Tp
+nn
+FB
+nn
+FB
+nn
+wq
 IN
 fT
 fT
@@ -53363,7 +53391,7 @@ IN
 NT
 Mw
 VT
-Mw
+BZ
 VT
 Mw
 WE
@@ -54136,7 +54164,7 @@ VT
 Mw
 WE
 IN
-QH
+fT
 fT
 PG
 PG
@@ -54264,7 +54292,7 @@ VT
 Mw
 WE
 IN
-fT
+QH
 fT
 PG
 PG
@@ -54491,7 +54519,7 @@ Gx
 Gx
 Gx
 Cu
-Iw
+uE
 tL
 "}
 (142,1,2) = {"
@@ -54619,7 +54647,7 @@ Gx
 Gx
 Cu
 Ud
-Iw
+uE
 tL
 "}
 (143,1,2) = {"
@@ -55280,13 +55308,13 @@ Jw
 py
 fT
 IN
-Wo
-CX
+NT
+Mw
 VT
 Mw
 VT
-US
-WQ
+Mw
+WE
 IN
 fT
 fT
@@ -55408,15 +55436,15 @@ Au
 py
 fT
 IN
-IN
-NT
+Wo
+CX
 VT
 Mw
 VT
-WE
+US
+WQ
 IN
-IN
-QH
+fT
 fT
 PG
 PG
@@ -55533,9 +55561,9 @@ np
 np
 OO
 np
-xr
-xr
-xr
+py
+fT
+IN
 IN
 NT
 VT
@@ -55543,9 +55571,9 @@ Mw
 VT
 WE
 IN
-PG
-PG
-PG
+sz
+rT
+io
 PG
 PG
 la
@@ -55661,8 +55689,8 @@ np
 zi
 OO
 np
-Jw
-Jw
+xr
+xr
 xr
 IN
 NT
@@ -58542,11 +58570,11 @@ Iw
 Iw
 Iw
 Iw
-Iw
-Iw
-Iw
-Iw
-Iw
+uE
+uE
+uE
+uE
+uE
 Iw
 Iw
 Iw
@@ -58608,13 +58636,13 @@ Iw
 Iw
 Iw
 Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
-Iw
+uE
+uE
+uE
+uE
+uE
+uE
+uE
 PG
 PG
 PG
@@ -58640,11 +58668,11 @@ PG
 PG
 PG
 xr
-xr
-xr
-xr
-xr
-xr
+Gj
+Gj
+Gj
+Gj
+Gj
 xr
 Iw
 Iw
@@ -75380,13 +75408,13 @@ DL
 DL
 DL
 DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
+Rz
 Rz
 Rz
 Rz
