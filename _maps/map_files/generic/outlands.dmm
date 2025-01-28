@@ -115,8 +115,9 @@
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors)
 "cD" = (
-/turf/closed/wall/halflife/metal,
-/area/halflife/indoors/laborcamp)
+/obj/structure/weightmachine/weightlifter,
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/outlandscave)
 "cF" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 9
@@ -362,6 +363,12 @@
 /mob/living/simple_animal/hostile/halflife/zombie/poison,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"hu" = (
+/obj/structure/sign/poster/halflife/combine/two{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/outdoors/forest)
 "hv" = (
 /obj/effect/spawner/random/halflife/loot/ammo,
 /turf/open/floor/plating/ground/dirt,
@@ -575,7 +582,7 @@
 /obj/structure/rack,
 /obj/item/pickaxe/rusted,
 /obj/item/storage/bag/ore,
-/obj/item/flashlight/lantern/heirloom_moth,
+/obj/item/flashlight,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/laborcamp)
 "lz" = (
@@ -810,6 +817,15 @@
 /obj/structure/flora/tree/jungle/small,
 /turf/open/misc/grass/jungle/station,
 /area/halflife/outdoors/forest)
+"pJ" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/light/bulb,
+/obj/item/light/bulb,
+/obj/item/light/bulb,
+/obj/item/light/bulb,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/laborcamp)
 "pU" = (
 /obj/structure/table/halflife/metal,
 /obj/item/reagent_containers/cup/soda_cans/breenwater/red,
@@ -819,6 +835,7 @@
 /obj/structure/halflife/toilet{
 	pixel_y = 8
 	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/laborcamp)
 "pZ" = (
@@ -893,6 +910,12 @@
 /obj/structure/halflife/pipes/vent,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
+"re" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/reagent_containers/cup/bucket,
+/obj/item/mop,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/laborcamp)
 "ri" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/structure/halflife/trash/papers/one{
@@ -928,6 +951,12 @@
 "rU" = (
 /obj/structure/halflife/trash/papers/two,
 /turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
+"sd" = (
+/obj/structure/sign/poster/halflife/combine/three{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
 "se" = (
 /obj/effect/spawner/random/halflife/loot,
@@ -1080,6 +1109,13 @@
 	},
 /turf/open/halflife/water/shallow,
 /area/halflife/outdoors/forest)
+"uO" = (
+/obj/machinery/light/small/directional/east,
+/obj/structure/sign/poster/halflife/combine{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/laborcamp)
 "uU" = (
 /obj/structure/halflife/road_barrier/concrete{
 	dir = 8
@@ -1123,6 +1159,11 @@
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
+"wb" = (
+/obj/machinery/light/small/directional/east,
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/laborcamp)
 "wk" = (
 /obj/machinery/ntnet_relay,
 /turf/open/floor/plating/indoor/woodc,
@@ -1804,6 +1845,13 @@
 	},
 /turf/open/halflife/water/shallow,
 /area/halflife/outdoors/forest)
+"KC" = (
+/obj/machinery/camera{
+	c_tag = "Labour Camp Maintenance Room";
+	dir = 5
+	},
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/laborcamp)
 "KJ" = (
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -2120,6 +2168,10 @@
 "QP" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors/sewer/tunnel)
+"QQ" = (
+/obj/structure/sink/halflife,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/laborcamp)
 "QS" = (
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/bunker)
@@ -2350,6 +2402,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/outdoors/forest)
+"Vi" = (
+/obj/structure/weightmachine,
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/outlandscave)
 "Vj" = (
 /obj/structure/flora/bush/generic/style_random,
 /turf/open/floor/plating/ground/dirt,
@@ -2480,6 +2536,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/outdoors/forest)
+"WL" = (
+/obj/machinery/door/unpowered/halflife/metal,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/laborcamp)
 "WR" = (
 /turf/open/halflife/water/medium,
 /area/halflife/outdoors/forest)
@@ -9041,19 +9101,19 @@ iQ
 iQ
 fv
 fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
 wG
 el
 "}
@@ -9228,7 +9288,7 @@ iQ
 fv
 fv
 fv
-fv
+Ee
 fv
 fv
 fv
@@ -9415,7 +9475,7 @@ iQ
 iQ
 fv
 fv
-fv
+Ee
 fv
 fv
 fv
@@ -9602,7 +9662,7 @@ fv
 iQ
 iQ
 fv
-fv
+Ee
 fv
 fv
 fv
@@ -9789,7 +9849,7 @@ iQ
 iQ
 iQ
 fv
-fv
+Ee
 fv
 fv
 fv
@@ -9976,7 +10036,7 @@ iQ
 iQ
 fv
 fv
-fv
+Ee
 fv
 fv
 fv
@@ -10163,7 +10223,7 @@ iQ
 iQ
 fv
 fv
-fv
+Ee
 fv
 fv
 fv
@@ -10347,10 +10407,10 @@ iQ
 iQ
 iQ
 iQ
+iQ
 fv
 fv
-fv
-fv
+Ee
 fv
 fv
 fv
@@ -10524,20 +10584,20 @@ fv
 fv
 fv
 fv
-fv
-fv
-fv
-fv
-fv
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
-fv
-fv
-fv
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Fw
+Fw
+Fw
+Fw
+Ee
+Ee
+Ee
 fv
 fv
 fv
@@ -10712,31 +10772,31 @@ CX
 CX
 CX
 CX
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Fw
-Fw
-Fw
-Fw
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
-Ee
+fv
+fv
+fv
+fv
+fv
+iQ
+iQ
+iQ
+iQ
+iQ
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
 wG
 el
 "}
@@ -11277,7 +11337,7 @@ fv
 fv
 fv
 fv
-fv
+iQ
 iQ
 iQ
 iQ
@@ -11462,7 +11522,7 @@ JB
 CX
 fv
 fv
-fv
+iQ
 fv
 iQ
 iQ
@@ -11648,9 +11708,9 @@ qu
 CX
 CX
 CX
-fv
-fv
-fv
+iQ
+iQ
+iQ
 iQ
 iQ
 iQ
@@ -11835,10 +11895,10 @@ Lo
 cm
 pZ
 CX
-fv
-wG
-fv
-fv
+cD
+iQ
+iQ
+iQ
 iQ
 iQ
 iQ
@@ -12022,9 +12082,9 @@ Lo
 Lo
 Vm
 CX
-fv
-wG
-fv
+Yd
+iQ
+iQ
 iQ
 iQ
 iQ
@@ -12209,9 +12269,9 @@ Lo
 fK
 yx
 CX
-fv
-wG
-fv
+Vi
+iQ
+iQ
 iQ
 fv
 iQ
@@ -12397,7 +12457,7 @@ CX
 HO
 HO
 HO
-wG
+iQ
 iQ
 iQ
 iQ
@@ -12568,7 +12628,7 @@ tN
 It
 tN
 DN
-bA
+sd
 bA
 bA
 bA
@@ -12584,9 +12644,9 @@ HO
 lt
 lt
 HO
+zH
 iQ
 iQ
-fv
 iQ
 iQ
 fv
@@ -12771,9 +12831,9 @@ HO
 ti
 ue
 HO
+lc
 iQ
 iQ
-fv
 fv
 fv
 fv
@@ -12960,8 +13020,8 @@ Ub
 HO
 Yd
 iQ
-fv
-fv
+iQ
+iQ
 fv
 fv
 fv
@@ -13147,9 +13207,9 @@ Ub
 MB
 iQ
 iQ
-fv
-fv
-fv
+iQ
+iQ
+iQ
 fv
 fv
 fv
@@ -13332,12 +13392,12 @@ Hu
 Ub
 Ub
 HO
+HO
+HO
+HO
 iQ
 iQ
 iQ
-fv
-fv
-fv
 fv
 fv
 iQ
@@ -13518,13 +13578,13 @@ HO
 NS
 Ub
 Ub
+WL
+KC
+pJ
 HO
-lc
 iQ
 iQ
 iQ
-fv
-fv
 fv
 fv
 iQ
@@ -13706,12 +13766,12 @@ Ub
 Ub
 ue
 HO
-wG
-zH
+QQ
+re
+HO
 iQ
 iQ
 iQ
-fv
 fv
 iQ
 iQ
@@ -14452,7 +14512,7 @@ xJ
 KZ
 kP
 Ub
-Ub
+wb
 HO
 Zo
 ZA
@@ -14637,7 +14697,7 @@ HO
 HO
 HO
 HO
-cD
+HO
 yo
 HO
 HO
@@ -15186,7 +15246,7 @@ GX
 GX
 GX
 DN
-bA
+hu
 bA
 bA
 bA
@@ -15198,7 +15258,7 @@ HO
 hm
 jn
 HO
-iB
+uO
 jn
 HO
 iB
@@ -18390,7 +18450,7 @@ rF
 rF
 FC
 DN
-wG
+fv
 fv
 fv
 fv
@@ -18577,20 +18637,20 @@ rF
 rF
 FC
 DN
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
 wG
 el
 "}
@@ -18763,22 +18823,22 @@ Er
 CK
 xS
 FC
-zB
-el
-el
-el
-el
-el
-el
-el
-el
-el
-el
-el
-el
-el
-el
-el
+DN
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+wG
 el
 "}
 (87,1,1) = {"
@@ -18950,23 +19010,23 @@ FC
 FC
 FC
 FC
-zB
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
+DN
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+wG
+el
 "}
 (88,1,1) = {"
 MZ
@@ -19137,23 +19197,23 @@ XA
 XA
 XA
 XA
-zB
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
+DN
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+wG
+el
 "}
 (89,1,1) = {"
 MZ
@@ -19324,23 +19384,23 @@ XA
 XA
 XA
 XA
-zB
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
+DN
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+fv
+wG
+el
 "}
 (90,1,1) = {"
 MZ
@@ -19511,23 +19571,23 @@ XA
 XA
 XA
 XA
-zB
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
+DN
+wG
+wG
+wG
+wG
+wG
+wG
+wG
+wG
+wG
+wG
+wG
+wG
+wG
+wG
+wG
+el
 "}
 (91,1,1) = {"
 MZ
@@ -19699,22 +19759,22 @@ XA
 XA
 XA
 zB
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
-MZ
+el
+el
+el
+el
+el
+el
+el
+el
+el
+el
+el
+el
+el
+el
+el
+el
 "}
 (92,1,1) = {"
 MZ
