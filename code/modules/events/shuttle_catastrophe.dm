@@ -1,8 +1,8 @@
 /datum/round_event_control/shuttle_catastrophe
-	name = "Shuttle Catastrophe"
+	name = "Train Catastrophe"
 	typepath = /datum/round_event/shuttle_catastrophe
-	weight = 10
-	max_occurrences = 0
+	weight = 1  //HL13 EDIT
+	max_occurrences = 1 //HL13 EDIT
 	category = EVENT_CATEGORY_BUREAUCRATIC
 	description = "Replaces the emergency shuttle with a random one."
 	admin_setup = list(/datum/event_admin_setup/warn_admin/shuttle_catastrophe, /datum/event_admin_setup/listed_options/shuttle_catastrophe)
@@ -24,18 +24,17 @@
 	var/datum/map_template/shuttle/new_shuttle
 
 /datum/round_event/shuttle_catastrophe/announce(fake)
-	var/cause = pick("was attacked by [syndicate_name()] Operatives", "mysteriously teleported away", "had its refuelling crew mutiny",
-		"was found with its engines stolen", "\[REDACTED\]", "flew into the sunset, and melted", "learned something from a very wise cow, and left on its own",
-		"had cloning devices on it", "had its shuttle inspector put the shuttle in reverse instead of park, causing the shuttle to crash into the hangar")
-	var/message = "Your emergency shuttle [cause]. "
+	var/cause = pick("was attacked by Rebel Operatives", "derailed during transit", "had a machinery malfunction", //HL13 EDIT
+		"was infested with necrotics") //HL13 EDIT
+	var/message = "Your transfer train [cause]. " //HL13 EDIT
 
 	if(SSshuttle.shuttle_insurance)
-		message += "Luckily, your shuttle insurance has covered the costs of repair!"
+		message += "Luckily, your train insurance has covered the costs of repair!" //HL13 EDIT
 		if(SSeconomy.get_dep_account(ACCOUNT_CAR))
 			message += " You have been awarded a bonus from [command_name()] for smart spending."
 	else
-		message += "Your replacement shuttle will be the [new_shuttle.name] until further notice."
-	priority_announce(message, "[command_name()] Spacecraft Engineering")
+		message += "Your replacement train will be the [new_shuttle.name] until further notice." //HL13 EDIT
+	priority_announce(message, "[command_name()] Engineering Union") //HL13 EDIT
 
 /datum/round_event/shuttle_catastrophe/setup()
 	if(SSshuttle.shuttle_insurance || !isnull(new_shuttle)) //If an admin has overridden it don't re-roll it
@@ -50,7 +49,7 @@
 /datum/round_event/shuttle_catastrophe/start()
 	if(SSshuttle.shuttle_insurance)
 		var/datum/bank_account/station_balance = SSeconomy.get_dep_account(ACCOUNT_CAR)
-		station_balance?.adjust_money(8000)
+		station_balance?.adjust_money(2000)
 		return
 	SSshuttle.shuttle_purchased = SHUTTLEPURCHASE_FORCED
 	SSshuttle.unload_preview()

@@ -3,10 +3,10 @@
 /turf/template_noop,
 /area/template_noop)
 "ao" = (
-/obj/structure/chair/halflife/metal/folding{
+/obj/structure/chair/halflife/overlaypickup/plastic{
 	dir = 8
 	},
-/turf/open/indestructible/plating,
+/turf/open/floor/plating/indoor/grooved,
 /area/shuttle/escape)
 "ar" = (
 /obj/structure/table/halflife/metal,
@@ -35,6 +35,14 @@
 "bk" = (
 /obj/machinery/power/shuttle_engine/propulsion,
 /turf/open/floor/plating/indoor/metal/plate,
+/area/shuttle/escape)
+"bX" = (
+/obj/structure/table/halflife/no_smooth/cable_reel,
+/obj/structure/broken_flooring/plating/directional/east,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/grooved,
 /area/shuttle/escape)
 "cg" = (
 /obj/structure/window/fulltile,
@@ -67,6 +75,13 @@
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
+/area/shuttle/escape)
+"ec" = (
+/obj/structure/chair/halflife/metal/folding{
+	dir = 8
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/indestructible/plating,
 /area/shuttle/escape)
 "fK" = (
 /obj/machinery/scanner_gate/luxury_shuttle{
@@ -157,7 +172,7 @@
 /turf/open/indestructible/plating,
 /area/shuttle/escape)
 "mW" = (
-/obj/structure/halflife/barrel/quadruple/waste,
+/obj/structure/halflife/barrel/quadruple/yellow,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "os" = (
@@ -213,6 +228,11 @@
 	},
 /turf/open/floor/plating/indoor/grooved,
 /area/shuttle/escape)
+"ui" = (
+/obj/machinery/light/small,
+/obj/structure/broken_flooring/plating/directional/west,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/shuttle/escape)
 "uV" = (
 /obj/structure/chair/sofa/corp/left{
 	dir = 4
@@ -247,8 +267,9 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "zZ" = (
-/obj/structure/table/halflife/no_smooth/cable_reel,
-/obj/structure/broken_flooring/plating/directional/east,
+/obj/structure/chair/halflife/overlaypickup/plastic{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/grooved,
 /area/shuttle/escape)
 "BB" = (
@@ -302,8 +323,8 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "Hd" = (
-/obj/machinery/light/small,
-/turf/open/indestructible/plating,
+/obj/structure/halflife/barrel/quadruple/red,
+/turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "Hg" = (
 /turf/open/indestructible/plating,
@@ -341,6 +362,10 @@
 /area/shuttle/escape)
 "Nw" = (
 /turf/open/floor/plating/indoor/metal/pipe,
+/area/shuttle/escape)
+"Ox" = (
+/obj/structure/table_frame/halflife/wood,
+/turf/open/indestructible/plating,
 /area/shuttle/escape)
 "Px" = (
 /obj/machinery/light/small{
@@ -428,6 +453,8 @@ lJ
 lJ
 lJ
 lJ
+lJ
+lJ
 aa
 "}
 (2,1,1) = {"
@@ -448,6 +475,8 @@ Hg
 mF
 tA
 tA
+bX
+zZ
 zZ
 lJ
 mW
@@ -475,7 +504,9 @@ Yj
 BB
 HH
 iU
-DU
+HH
+HH
+ui
 lJ
 HH
 Nw
@@ -499,9 +530,11 @@ uV
 Df
 cg
 HH
+Ox
+Ev
+Ev
+Hd
 oz
-Ev
-Ev
 HH
 HH
 sd
@@ -529,7 +562,9 @@ Hg
 Hg
 HH
 hq
-Hd
+Hg
+Hg
+DU
 lJ
 kO
 QN
@@ -556,6 +591,8 @@ Vv
 gn
 gD
 uZ
+ec
+Vv
 ao
 lJ
 xo
@@ -580,6 +617,8 @@ lJ
 lJ
 lJ
 Rn
+lJ
+lJ
 lJ
 lJ
 lJ

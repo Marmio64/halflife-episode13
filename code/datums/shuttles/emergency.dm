@@ -61,9 +61,20 @@
 /datum/map_template/shuttle/emergency/razortrain
 	suffix = "razortrain"
 	name = "Razor Transfer Train"
-	credit_cost = CARGO_CRATE_VALUE * 4
+	credit_cost = CARGO_CRATE_VALUE * 3
 	description = "A borrowed military grade train from the Overwatch Transhuman Arm. Suitable for keeping all citizens seperated from one another, and for onsite stalkerizing."
 	occupancy_limit = "25"
 
+/datum/map_template/shuttle/emergency/scrapped
+	suffix = "scrapped"
+	name = "Salvaged Transfer Train"
+	credit_cost = CARGO_CRATE_VALUE * -8
+	description = "A salvaged together train. We'll pay into your district budget in exchange for taking this one off our hands, and us taking yours instead."
+	movement_force = list("KNOCKDOWN" = 3, "THROW" = 2)
+	occupancy_limit = "25"
+	prerequisites = "This train is only offered for purchase when the district is low on funds."
+
+/datum/map_template/shuttle/emergency/scrapped/prerequisites_met()
+	return SSshuttle.shuttle_purchase_requirements_met[SHUTTLE_UNLOCK_SCRAPHEAP]
 
 #undef EMAG_LOCKED_SHUTTLE_COST
