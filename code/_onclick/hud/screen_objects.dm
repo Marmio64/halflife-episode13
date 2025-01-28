@@ -136,6 +136,17 @@
 	icon_state = "craft"
 	screen_loc = ui_crafting
 
+/atom/movable/screen/sleepmenu //HL13 EDIT
+	name = "sleep menu"
+	icon = 'icons/hud/screen_midnight.dmi'
+	icon_state = "sleep"
+	screen_loc = ui_crafting
+
+/atom/movable/screen/sleepmenu/Click()
+	if(isliving(usr))
+		var/mob/living/L = usr
+		L.mob_sleep()
+
 /atom/movable/screen/area_creator
 	name = "create new area"
 	icon = 'icons/hud/screen_midnight.dmi'

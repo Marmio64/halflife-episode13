@@ -6,7 +6,7 @@
 
 // The default UI style is the first one in the list
 GLOBAL_LIST_INIT(available_ui_styles, list(
-	"Dark" = 'icons/hud/screen_dark.dmi',
+	"Dark" = 'hl13/icons/hud/screen_dark.dmi',
 	"Midnight" = 'icons/hud/screen_midnight.dmi',
 	"Retro" = 'icons/hud/screen_retro.dmi',
 	"Plasmafire" = 'icons/hud/screen_plasmafire.dmi',
