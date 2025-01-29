@@ -931,9 +931,9 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/splash)
 	/// What state of hunger are we in?
 	VAR_PRIVATE/state = HUNGER_STATE_FINE
 	/// What food icon do we show by the bar
-	var/food_icon = 'icons/obj/food/burgerbread.dmi'
+	var/food_icon = 'hl13/icons/hud/screen_dark.dmi' //HL13 EDIT
 	/// What food icon state do we show by the bar
-	var/food_icon_state = "hburger"
+	var/food_icon_state = "hunger" //HL13 EDIT
 	/// The image shown by the bar.
 	VAR_PRIVATE/image/food_image
 

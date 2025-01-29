@@ -176,7 +176,7 @@
 	desc = "A can of Breen's private reserve water. Supposedly, it helps improve your memory! This one is painted yellow, and smells funny."
 	icon_state = "breenwateryellow"
 	list_reagents = list(/datum/reagent/water/unpurified = 20)
-	custom_price = 15
+	custom_price = PAYCHECK_CREW * 0.65
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/yellow/Initialize(mapload)
 	if(prob(10))
@@ -188,6 +188,7 @@
 	desc = "A can of Breen's private reserve water. Supposedly, it helps improve your memory! This one is painted red, and seems more filled."
 	icon_state = "breenwaterred"
 	list_reagents = list(/datum/reagent/water = 35)
+	custom_price = PAYCHECK_CREW * 1.3
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/green
 	name = "green water can"

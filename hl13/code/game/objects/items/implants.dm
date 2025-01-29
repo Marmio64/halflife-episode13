@@ -33,7 +33,7 @@
 
 	for(var/atom/movable/mask in GLOB.cpmasks)
 		if(mask.loc &&ismob(mask.loc))
-			playsound(mask.loc, "hl13/sound/voice/dispatchradio/lostbiosignalforunit.ogg", 50, FALSE)
+			playsound(mask.loc, "hl13/sound/voice/dispatchradio/lostsignalunitscontain.ogg", 50, FALSE)
 
 /obj/item/implant/biosig_ert/get_data()
 	. = {"<b>Implant Specifications:</b><BR>
