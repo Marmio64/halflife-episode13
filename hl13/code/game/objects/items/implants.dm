@@ -23,13 +23,17 @@
 	// Name of implant user.
 	var/mobname = imp_in.name
 	// What is to be said.
-	var/message = "TEAM ALERT: Biosignal lost for [role] [mobname] in//N&#@$¤#§>..." // Default message for unexpected causes.
+	var/message = "TEAM ALERT: Lost biosignal for [role] [mobname] in//N&#@$¤#§>..." // Default message for unexpected causes.
 	if(turf)
-		message = "TEAM ALERT: Biosignal lost for [role] [mobname] in [turf.name]."
+		message = "TEAM ALERT: Lost biosignal for [role] [mobname] in [turf.name]."
 
 
 	name = "[mobname]'s Biosignaller"
 	radio.talk_into(src, message, RADIO_CHANNEL_SECURITY)
+
+	for(var/atom/movable/mask in GLOB.cpmasks)
+		if(mask.loc &&ismob(mask.loc))
+			playsound(mask.loc, "hl13/sound/voice/dispatchradio/lostbiosignalforunit.ogg", 50, FALSE)
 
 /obj/item/implant/biosig_ert/get_data()
 	. = {"<b>Implant Specifications:</b><BR>

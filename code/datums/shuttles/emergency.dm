@@ -65,6 +65,13 @@
 	description = "A borrowed military grade train from the Overwatch Transhuman Arm. Suitable for keeping all citizens seperated from one another, and for onsite stalkerizing."
 	occupancy_limit = "25"
 
+/datum/map_template/shuttle/emergency/priority
+	suffix = "prioritytrain"
+	name = "Priority-grade Transfer Train"
+	credit_cost = CARGO_CRATE_VALUE * 12
+	description = "A very well equipped and enlarged transfer train. Makes both your and your citizen's transfers more comfortable, but at what price?"
+	occupancy_limit = "35"
+
 /datum/map_template/shuttle/emergency/scrapped
 	suffix = "scrapped"
 	name = "Salvaged Transfer Train"

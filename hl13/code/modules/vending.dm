@@ -36,6 +36,7 @@
 					/obj/item/lighter/greyscale = 3,
 					/obj/item/customlock = 8,
 					/obj/item/customblank = 12,
+					/obj/item/storage/halflife/keyring = 4,
 					/obj/item/storage/wallet = 10,
 					/obj/item/radio/off/halflife = 3,
 					/obj/item/reagent_containers/cup/bottle/welding_fuel = 3,

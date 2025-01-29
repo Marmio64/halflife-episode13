@@ -101,6 +101,14 @@
 
 	armor_type = /datum/armor/cpmask
 
+/obj/item/clothing/mask/gas/civilprotection/Initialize(mapload)
+	. = ..()
+	GLOB.cpmasks += src
+
+/obj/item/clothing/mask/gas/civilprotection/Destroy()
+	GLOB.cpmasks -= src
+	. = ..()
+
 /obj/item/clothing/mask/gas/civilprotection/ui_action_click(mob/user, action)
 	if(istype(action, /datum/action/item_action/halt))
 		halt()

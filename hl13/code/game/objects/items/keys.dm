@@ -20,6 +20,38 @@
 			GLOB.lockhashes += lockhash
 			GLOB.lockids[lockid] = lockhash
 
+/obj/item/storage/halflife/keyring
+	name = "keyring"
+	desc = "A simple ring, so you may carry more keys."
+	icon = 'hl13/icons/obj/keys.dmi'
+	icon_state = "keyring"
+	base_icon_state = "keyring"
+	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/storage/halflife/keyring/PopulateContents()
+	. = ..()
+	update_icon_state()
+
+/obj/item/storage/halflife/keyring/Initialize(mapload)
+	. = ..()
+
+	atom_storage.max_slots = 5
+	atom_storage.set_holdable(list(
+		/obj/item/hl2key,
+	))
+
+/obj/item/storage/halflife/keyring/update_icon_state()
+	var/amount = 0
+	for(var/_key in contents)
+		var/obj/item/hl2key/key = _key
+		if (!istype(key))
+			continue
+		amount++
+
+	icon_state = "[initial(icon_state)]_[amount]"
+	return ..()
+
+
 /obj/item/lockpick
 	name = "lockpick"
 	desc = "A small, sharp piece of metal to aid opening locks in the absence of a key."
