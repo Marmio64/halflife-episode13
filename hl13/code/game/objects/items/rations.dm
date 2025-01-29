@@ -203,6 +203,13 @@
 	list_reagents = list(/datum/reagent/water = 7, /datum/reagent/consumable/nutriment/fat/oil = 20, /datum/reagent/consumable/nutriment = 3)
 	custom_price = PAYCHECK_CREW * 2
 
+/obj/item/reagent_containers/cup/soda_cans/breenwater/fuel
+	name = "breen-fuel can"
+	desc = "A special can of Breen's private reserve energy drinks. It has a strange after taste and makes you feel queezy, but you do at least feel more awake. You wonder if the ingredients might be fit for other uses too..."
+	icon_state = "fuelcan"
+	list_reagents = list(/datum/reagent/consumable/breenfuel = 20, /datum/reagent/fuel/weak = 10)
+	custom_price = PAYCHECK_CREW * 2
+
 /obj/item/reagent_containers/cup/glass/mouthwash
 	name = "Mouthwash Bottle"
 	desc = "A bottle of old mouthwash. There's enough sugar in the thing you wonder how it would ever clean your mouth, let alone with how old it is."

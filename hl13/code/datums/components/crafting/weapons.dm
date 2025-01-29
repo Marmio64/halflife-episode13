@@ -43,7 +43,7 @@
 	result = /obj/item/ammo_box/magazine/usp9mm
 	reqs = list(/obj/item/stack/sheet/iron = 18,
 				/obj/item/stack/cable_coil = 18,
-				/datum/reagent/fuel = 36)
+				/datum/reagent/fuel = 35)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 9 SECONDS
 	category = CAT_WEAPON_AMMO

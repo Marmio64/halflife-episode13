@@ -1374,6 +1374,7 @@
 	burning_volume = 0.2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	addiction_types = list(/datum/addiction/alcohol = 4)
+	var/tox_damage = 0.5 //HL13 EDIT
 
 /datum/glass_style/drinking_glass/fuel
 	required_drink_type = /datum/reagent/fuel
@@ -1391,7 +1392,7 @@
 	var/obj/item/organ/liver/liver = victim.get_organ_slot(ORGAN_SLOT_LIVER)
 	if(liver && HAS_TRAIT(liver, TRAIT_HUMAN_AI_METABOLISM))
 		return
-	if(victim.adjustToxLoss(0.5 * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype))
+	if(victim.adjustToxLoss(tox_damage * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)) //hl13 edit
 		return UPDATE_MOB_HEALTH
 
 /datum/reagent/fuel/expose_turf(turf/exposed_turf, reac_volume)

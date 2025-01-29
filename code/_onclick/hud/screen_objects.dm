@@ -136,6 +136,17 @@
 	icon_state = "craft"
 	screen_loc = ui_crafting
 
+/atom/movable/screen/fixeye //HL13 EDIT
+	name = "fix eye"
+	icon = 'icons/hud/screen_midnight.dmi'
+	icon_state = "fixeye"
+	screen_loc = ui_fixeye
+
+/atom/movable/screen/fixeye/Click()
+	if(isliving(usr))
+		var/mob/living/owner = usr
+		SEND_SIGNAL(owner, COMSIG_FIXEYE_TOGGLE)
+
 /atom/movable/screen/sleepmenu //HL13 EDIT
 	name = "sleep menu"
 	icon = 'icons/hud/screen_midnight.dmi'

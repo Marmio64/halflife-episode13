@@ -380,6 +380,7 @@
 	affected_mob.adjust_drowsiness(-6 SECONDS * REM * seconds_per_tick)
 	affected_mob.AdjustSleeping(-4 SECONDS * REM * seconds_per_tick)
 	affected_mob.adjust_bodytemperature(-5 * REM * TEMPERATURE_DAMAGE_COEFFICIENT * seconds_per_tick, affected_mob.get_body_temp_normal())
+	affected_mob.adjust_tiredness(-1 * REM * seconds_per_tick) //coffee makes you feel awake
 
 /datum/reagent/consumable/hot_ice_coffee
 	name = "Hot Ice Coffee"

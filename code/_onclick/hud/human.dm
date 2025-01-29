@@ -72,6 +72,10 @@
 	using.icon = ui_style
 	static_inventory += using
 
+	using = new /atom/movable/screen/fixeye(null, src) //HL13 EDIT
+	using.icon = ui_style
+	static_inventory += using
+
 	using = new /atom/movable/screen/area_creator(null, src)
 	using.icon = ui_style
 	static_inventory += using
