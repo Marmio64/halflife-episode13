@@ -1,5 +1,5 @@
 /obj/machinery/vending/dinnerware
-	name = "\improper Plasteel Chef's Dinnerware Vendor"
+	name = "\improper Dinnerware Vendor"
 	desc = "A kitchen and restaurant equipment vendor."
 	product_ads = "Mm, food stuffs!;Food and food accessories.;Get your plates!;You like forks?;I like forks.;Woo, utensils.;You don't really need these..."
 	icon_state = "dinnerware"
@@ -48,21 +48,11 @@
 				/obj/item/reagent_containers/condiment/peppermill = 5,
 			),
 		),
-		list(
-			"name" = "Recipes",
-			"icon" = FA_ICON_BOOK_OPEN_READER,
-			"products" = list(
-				/obj/item/book/granter/crafting_recipe/cooking_sweets_101 = 2,
-			),
-		),
 	)
 
 	premium = list(
-		/obj/item/skillchip/chefs_kiss = 2
-	)
-	contraband = list(
 		/obj/item/kitchen/rollingpin/illegal = 2,
-		/obj/item/knife/butcher = 2,
+		/obj/item/knife/butcher = 2
 	)
 	refill_canister = /obj/item/vending_refill/dinnerware
 	default_price = PAYCHECK_CREW * 0.8
@@ -71,5 +61,5 @@
 	light_mask = "dinnerware-light-mask"
 
 /obj/item/vending_refill/dinnerware
-	machine_name = "Plasteel Chef's Dinnerware Vendor"
+	machine_name = "Dinnerware Vendor"
 	icon_state = "refill_smoke"

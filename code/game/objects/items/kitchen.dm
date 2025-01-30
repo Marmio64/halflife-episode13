@@ -152,7 +152,7 @@
 	icon_state = "rolling_pin"
 	worn_icon_state = "rolling_pin"
 	inhand_icon_state = "rolling_pin"
-	force = 8
+	force = 12
 	throwforce = 5
 	throw_speed = 3
 	throw_range = 7
@@ -169,7 +169,7 @@
 	desc = "A heavy metallic rolling pin used to bash in those annoying ingredients."
 	icon_state = "metal_rolling_pin"
 	inhand_icon_state = "metal_rolling_pin"
-	force = 12
+	force = 19
 	obj_flags = CONDUCTS_ELECTRICITY
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 1.5, /datum/material/plastic = SHEET_MATERIAL_AMOUNT * 1.5)
 	custom_price = PAYCHECK_CREW * 2

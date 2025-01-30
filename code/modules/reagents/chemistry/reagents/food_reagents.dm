@@ -1009,8 +1009,8 @@
 		playsound(affected_mob, SFX_SPARKS, 50, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
 
 /datum/reagent/consumable/astrotame
-	name = "Astrotame"
-	description = "A space age artifical sweetener."
+	name = "Aspartame"
+	description = "A artifical sweetener."
 	nutriment_factor = 0
 	metabolization_rate = 2 * REAGENTS_METABOLISM
 	reagent_state = SOLID

@@ -500,7 +500,7 @@
 	minbodytemp = 0
 	speed = -1
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1, /obj/item/stack/sheet/sinew = 1)
-	butcher_difficulty = 25
+	butcher_difficulty = 40
 	footstep_type = FOOTSTEP_MOB_ANTLION
 	death_sound = 'hl13/sound/creatures/antlion/pain2.ogg'
 	var/charging = FALSE
@@ -612,7 +612,7 @@
 	move_to_delay = 4
 	loot = list(/obj/effect/decal/cleanable/insectguts = 1)
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1)
-	butcher_difficulty = 50
+	butcher_difficulty = 75
 	footstep_type = FOOTSTEP_MOB_ANTLION
 	death_sound = 'hl13/sound/creatures/antlion_worker/antlion_burst.ogg'
 	var/soundvary = FALSE

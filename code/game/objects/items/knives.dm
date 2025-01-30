@@ -22,7 +22,7 @@
 	sharpness = SHARP_EDGED
 	armor_type = /datum/armor/item_knife
 	wound_bonus = 5
-	bare_wound_bonus = 15
+	bare_wound_bonus = 10
 	tool_behaviour = TOOL_KNIFE
 
 /datum/armor/item_knife
@@ -94,14 +94,15 @@
 	inhand_icon_state = "butch"
 	desc = "A huge thing used for chopping and chopping up meat. This includes clowns and clown by-products."
 	obj_flags = CONDUCTS_ELECTRICITY
-	force = 22
+	force = 23 //HL13 EDIT
+
 	throwforce = 10
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 6)
 	attack_verb_continuous = list("slices", "dices", "chops", "cubes", "minces", "juliennes", "chiffonades", "batonnets")
 	attack_verb_simple = list("slice", "dice", "chop", "cube", "mince", "julienne", "chiffonade", "batonnet")
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_price = PAYCHECK_CREW * 5
-	wound_bonus = 15
+	wound_bonus = 10 //HL13 EDIT
 
 /obj/item/knife/hunting
 	name = "hunting knife"

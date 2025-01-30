@@ -93,6 +93,11 @@
 	desc = "This key will open doors in the bar."
 	lockid = "bar"
 
+/obj/item/hl2key/barapartments
+	name = "bar apartments key"
+	desc = "This key will open doors in the bar's attached apartment block."
+	lockid = "barapartments"
+
 /obj/item/hl2key/kitchen
 	name = "kitchen key"
 	desc = "This key will open doors in the restaurant."
