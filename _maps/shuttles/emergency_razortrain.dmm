@@ -50,6 +50,13 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/escape)
+"ey" = (
+/obj/structure/fans/tiny/invisible,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/metal/grate/border{
+	dir = 1
+	},
+/area/shuttle/escape)
 "fK" = (
 /obj/structure/chair/comfy/halflife/captain{
 	dir = 8
@@ -152,6 +159,7 @@
 /area/shuttle/escape)
 "sG" = (
 /obj/structure/window/fulltile,
+/obj/structure/fans/tiny/invisible,
 /turf/open/indestructible/plating,
 /area/shuttle/escape)
 "tA" = (
@@ -164,6 +172,13 @@
 /obj/effect/decal/cleanable/glass,
 /obj/effect/decal/cleanable/blood/footprints,
 /turf/open/floor/plating/indoor/metal/combine,
+/area/shuttle/escape)
+"us" = (
+/obj/structure/fans/tiny/invisible,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal/grate/border{
+	dir = 1
+	},
 /area/shuttle/escape)
 "uZ" = (
 /obj/machinery/door/window/brigdoor/security/cell{
@@ -332,9 +347,11 @@ TC
 mb
 mG
 mG
-TC
+us
+mG
+mG
 mb
-mb
+us
 mb
 lJ
 lJ
@@ -354,6 +371,8 @@ lJ
 GQ
 lJ
 Px
+lJ
+tA
 lJ
 tA
 lJ
@@ -397,6 +416,8 @@ fK
 lJ
 AQ
 lJ
+AQ
+lJ
 lJ
 lJ
 aH
@@ -417,6 +438,8 @@ iU
 iU
 aH
 cY
+lJ
+lJ
 lJ
 lJ
 lJ
@@ -461,6 +484,8 @@ Fx
 lJ
 IG
 lJ
+IG
+lJ
 lJ
 lJ
 Ek
@@ -482,6 +507,8 @@ lJ
 vL
 lJ
 ja
+lJ
+gn
 lJ
 gn
 lJ
@@ -524,9 +551,11 @@ mF
 mb
 gi
 gi
-mF
+ey
+gi
+gi
 mb
-mb
+ey
 mb
 lJ
 lJ

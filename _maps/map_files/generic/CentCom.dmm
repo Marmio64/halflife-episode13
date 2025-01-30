@@ -1788,6 +1788,18 @@
 /obj/structure/halflife/fence/wire/barb,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/centcom/halflife)
+"rJ" = (
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 25;
+	height = 50;
+	json_key = "emergency";
+	name = "CentCom Emergency Shuttle Dock";
+	shuttle_id = "emergency_away";
+	width = 50
+	},
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/centcom/halflife)
 "rK" = (
 /obj/machinery/power/halflife/streetlamp{
 	dir = 8
@@ -3159,16 +3171,10 @@
 /turf/open/floor/plating/ground/dirt,
 /area/centcom/halflife/ota)
 "Fr" = (
-/obj/docking_port/stationary{
-	dir = 2;
-	dwidth = 25;
-	height = 50;
-	json_key = "emergency";
-	name = "CentCom Emergency Shuttle Dock";
-	shuttle_id = "emergency_away";
-	width = 50
+/obj/effect/turf_decal/weather/dirt{
+	dir = 4
 	},
-/turf/open/floor/plating/indoor/woodc/wide,
+/turf/open/floor/plating/indoor/concrete,
 /area/centcom/halflife)
 "Fu" = (
 /obj/item/kirbyplants/organic/plant21,
@@ -3292,6 +3298,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/centcom/halflife/ota)
+"Hi" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/plating/indoor/concrete,
+/area/centcom/halflife)
 "Hj" = (
 /obj/structure/closet/crate/bin,
 /obj/effect/turf_decal/tile/green/anticorner/contrasted{
@@ -62414,8 +62424,8 @@ Vi
 Vi
 Vi
 Dm
-Vi
-Vi
+kS
+kS
 kj
 RI
 RI
@@ -62454,7 +62464,7 @@ le
 RI
 RI
 kj
-Vi
+kS
 Vi
 Vi
 Dm
@@ -62671,8 +62681,8 @@ Vi
 fd
 fd
 fd
-fd
-Vi
+kS
+kS
 kj
 RI
 RI
@@ -62711,7 +62721,7 @@ RI
 RI
 RI
 kj
-Vi
+kS
 Vi
 Vi
 Vi
@@ -62929,44 +62939,44 @@ Vi
 Vi
 Vi
 Vi
-Vi
+kS
 kj
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
-RI
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
+Fr
 kj
 Vi
 Vi
@@ -63193,19 +63203,7 @@ Vi
 Vi
 Vi
 Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
-Vi
+fd
 Vi
 Vi
 Vi
@@ -63219,7 +63217,19 @@ Vi
 Vi
 Vi
 Vi
+fd
 Vi
+Vi
+Vi
+fd
+Vi
+Vi
+fd
+Vi
+Vi
+Vi
+Vi
+fd
 Vi
 Vi
 Vi
@@ -63450,7 +63460,7 @@ Vi
 Vi
 Vi
 jN
-Vi
+fd
 Vi
 Vi
 jN
@@ -63460,15 +63470,15 @@ Vi
 jN
 Vi
 Vi
-Vi
+fd
 jN
 Vi
 Vi
-Vi
+fd
 jN
 Vi
 Vi
-Vi
+fd
 jN
 Vi
 Vi
@@ -63960,14 +63970,10 @@ Vi
 Vi
 Vi
 jN
+fd
+fd
 Vi
-Vi
-Vi
-Fr
-Vi
-Vi
-Vi
-jN
+rJ
 Vi
 Vi
 Vi
@@ -63991,6 +63997,10 @@ jN
 Vi
 Vi
 Vi
+jN
+Vi
+Vi
+fd
 jN
 Vi
 Vi
@@ -64483,11 +64493,7 @@ Vi
 Vi
 jN
 Vi
-Vi
-Vi
-jN
-Vi
-Vi
+fd
 Vi
 jN
 Vi
@@ -64500,6 +64506,10 @@ Vi
 jN
 Vi
 Vi
+Vi
+jN
+Vi
+fd
 Vi
 jN
 Vi
@@ -64739,6 +64749,7 @@ Vi
 Vi
 Vi
 Vi
+fd
 Vi
 Vi
 Vi
@@ -64758,8 +64769,7 @@ Vi
 Vi
 Vi
 Vi
-Vi
-Vi
+fd
 Vi
 Vi
 Vi
@@ -65250,12 +65260,9 @@ RI
 RI
 RI
 RI
-RI
-RI
-RI
-RI
-RI
-ld
+dp
+kj
+Hi
 RI
 RI
 ld
@@ -65264,9 +65271,12 @@ RI
 ld
 RI
 RI
+ld
 RI
 RI
-RI
+dp
+kj
+Hi
 RI
 RI
 RI
@@ -65508,6 +65518,7 @@ RI
 RI
 RI
 RI
+kj
 RI
 RI
 RI
@@ -65521,8 +65532,7 @@ RI
 RI
 RI
 RI
-RI
-RI
+kj
 RI
 RI
 RI
