@@ -2,7 +2,7 @@
 	title = JOB_PRISONER
 	description = "Survive in the outlands, find a way into the city for supplies, help or rob citizens for your own gain."
 	department_head = list("Nobody")
-	total_positions = 0 //so refugees dont arrive by train
+	total_positions = 4
 	spawn_positions = 4
 	supervisors = "nobody"
 	exp_granted_type = EXP_TYPE_CREW
@@ -55,3 +55,16 @@
 	var/turf/T = get_turf(H)
 	var/obj/item/I = new chosen(T)
 	H.put_in_hands(I)
+
+/datum/job/prisoner/after_latejoin_spawn(mob/living/spawning)
+	. = ..()
+	if(ishuman(spawning))
+		var/list/spawn_locs = list()
+		for(var/X in GLOB.outlands_latejoin)
+			spawn_locs += X
+
+		if(!spawn_locs.len)
+			message_admins("No valid spawn locations found, aborting...")
+			return MAP_ERROR
+
+		spawning.forceMove(pick(spawn_locs))

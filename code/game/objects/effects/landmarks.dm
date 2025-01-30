@@ -341,6 +341,14 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	GLOB.train_dump_spots += loc
 	return INITIALIZE_HINT_QDEL
 
+/obj/effect/landmark/outlands_latejoin
+	name = "outlands latejoin spot"
+
+/obj/effect/landmark/outlands_latejoin/Initialize(mapload)
+	..()
+	GLOB.outlands_latejoin += loc
+	return INITIALIZE_HINT_QDEL
+
 //observer start
 /obj/effect/landmark/observer_start
 	name = "Observer-Start"

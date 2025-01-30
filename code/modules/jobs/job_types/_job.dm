@@ -466,7 +466,7 @@
 
 
 /datum/job/proc/get_captaincy_announcement(mob/living/captain)
-	return "Due to extreme staffing shortages, newly promoted Acting Captain [captain.real_name] on deck!"
+	return "Due to extreme staffing shortages, newly promoted Acting District Administrator [captain.real_name] will be advising the district."
 
 
 /// Returns an atom where the mob should spawn in.
