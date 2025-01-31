@@ -234,5 +234,5 @@
 				/obj/item/grenade/syndieminibomb/bouncer,
 				/obj/item/knife/combat,
 				/obj/item/melee/baton/security/loaded,
-				/obj/item/clothing/head/helmet/marine/pmc
+				/obj/item/clothing/head/helmet/halflife/military
 				)
