@@ -28,7 +28,7 @@
 	mind_traits = list(HEAD_OF_STAFF_MIND_TRAITS)
 	liver_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM, TRAIT_ROYAL_METABOLISM)
 
-	paycheck = PAYCHECK_COMMAND
+	paycheck = PAYCHECK_HIGH //lower than normal command paycheck since they get an entire budget card just for their department
 	paycheck_department = ACCOUNT_SEC
 
 	display_order = JOB_DISPLAY_ORDER_HEAD_OF_SECURITY

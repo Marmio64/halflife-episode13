@@ -12,7 +12,7 @@
 	if(!human_holder.account_id)
 		return
 	var/datum/bank_account/account = SSeconomy.bank_accounts_by_id["[human_holder.account_id]"]
-	var/debt = PAYCHECK_CREW * rand(275, 325)
+	var/debt = PAYCHECK_CREW * rand(100, 150)
 	account.account_debt += debt
 	RegisterSignal(account, COMSIG_BANK_ACCOUNT_DEBT_PAID, PROC_REF(on_debt_paid))
 	to_chat(client_source.mob, span_warning("You remember, you've a hefty, [debt] credits debt to pay..."))

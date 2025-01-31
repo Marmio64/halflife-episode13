@@ -11,7 +11,7 @@
 	outfit = /datum/outfit/job/curator
 	plasmaman_outfit = /datum/outfit/plasmaman/curator
 
-	paycheck = PAYCHECK_HIGH //hl13, more funding to run the store
+	paycheck = PAYCHECK_CREW
 	paycheck_department = ACCOUNT_SRV
 
 	display_order = JOB_DISPLAY_ORDER_CURATOR
@@ -44,3 +44,8 @@
 	r_pocket = /obj/item/hl2key/clerk
 
 	back = /obj/item/storage/backpack/halflife/satchel //so it cant get stolen if they latejoin to their store
+
+	backpack_contents = list(
+		/obj/item/stack/spacecash/c10 = 7,
+		/obj/item/stack/spacecash/c1 = 15,
+	)
