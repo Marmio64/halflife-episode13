@@ -1,5 +1,6 @@
 /mob/living/simple_animal/hostile/halflife
 	ai_idles = FALSE
+	wander = 0 //Might reduce costs associated with them
 
 /mob/living/simple_animal/hostile/halflife/zombie
 	name = "Zombie"
@@ -14,7 +15,7 @@
 	health = 120
 	speak_chance = 1
 	speak = list("G-GOD HELP ME!","OH G-GOD!","K-KILL ME!")
-	harm_intent_damage = 5
+	harm_intent_damage = 10
 	melee_damage_lower = 16
 	melee_damage_upper = 19
 	sharpness = SHARP_EDGED
@@ -486,7 +487,7 @@
 	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
 	maxHealth = 50
 	health = 50
-	harm_intent_damage = 5
+	harm_intent_damage = 10
 	melee_damage_lower = 14
 	melee_damage_upper = 19
 	wound_bonus = -20
@@ -593,7 +594,7 @@
 	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
 	maxHealth = 50
 	health = 50
-	harm_intent_damage = 5
+	harm_intent_damage = 10
 	melee_damage_lower = 12
 	melee_damage_upper = 19
 	wound_bonus = -20

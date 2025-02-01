@@ -28,10 +28,10 @@
 	var/list/z_migration_paths = list()
 
 /datum/round_event/xen_migration/setup()
-	start_when = rand(40, 60)
+	start_when = rand(30, 50)
 
 /datum/round_event/xen_migration/announce(fake)
-	priority_announce("[fluff_signal] have been detected near [station_name()]. All citizens are instructed to vacate district perimeters, and remain within interior locations.", "Lifesign Alert")
+	priority_announce("Attention, [fluff_signal] have been detected near your district. All citizens are instructed to vacate district perimeters, and remain within interior locations.", "Lifesign Alert")
 
 /datum/round_event/xen_migration/start()
 	// Stores the most recent fish we spawn
