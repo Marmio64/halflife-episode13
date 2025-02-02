@@ -209,6 +209,7 @@
 				/obj/item/machinepiece/multifunctiontool = 2,
 				/obj/item/grenade/syndieminibomb/bouncer,
 				/obj/item/knife/combat = 2,
+				/obj/item/gun/ballistic/automatic/pistol/makeshift,
 				/obj/item/fireaxe,
 				/obj/item/switchblade,
 				/obj/item/melee/baton/security/loaded,

@@ -231,7 +231,12 @@
 					if(prob(2))
 						to_chat(carbon_owner, span_notice("You feel your fitness improving!"))
 
-			if(health_ratio > 0.8) // only heals minor physical damage
+				if(carbon_owner.nutrition < NUTRITION_LEVEL_STARVING || carbon_owner.hydration < HYDRATION_LEVEL_DEHYDRATED)
+					sleep_quality = 0 //HL13 EDIT, you need have some food or water in ya belly or you just wont heal
+				else if(carbon_owner.nutrition > NUTRITION_LEVEL_FED && carbon_owner.hydration > HYDRATION_LEVEL_HYDRATED)
+					sleep_quality += 0.2 //HL13 EDIT, having a good amount of food and water in you will help you heal, however.
+
+			if(health_ratio > 0.8 || health_ratio > -0.4 && health_ratio < 0.2) // only heals minor physical damage, HL13 EDIT: or if you have a lot of damage, you can heal up to a certain point
 				need_mob_update += owner.adjustBruteLoss(-0.4 * sleep_quality * seconds_between_ticks, updating_health = FALSE, required_bodytype = BODYTYPE_ORGANIC)
 				need_mob_update += owner.adjustFireLoss(-0.4 * sleep_quality * seconds_between_ticks, updating_health = FALSE, required_bodytype = BODYTYPE_ORGANIC)
 				need_mob_update += owner.adjustToxLoss(-0.2 * sleep_quality * seconds_between_ticks, updating_health = FALSE, forced = TRUE, required_biotype = MOB_ORGANIC)

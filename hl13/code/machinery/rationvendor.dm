@@ -114,7 +114,9 @@
 		quality--
 
 	switch(quality)
-		if(0 to 1)
+		if(0)
+			new /obj/item/reagent_containers/cup/soda_cans/breenwater/purple(loc) //very sad... Only way to get rn is to be a vort, on suspect status, with low district sociostability
+		if(1)
 			new /obj/item/storage/box/halflife/worstration(loc)
 		if(2)
 			new /obj/item/storage/box/halflife/badration(loc)

@@ -1154,8 +1154,9 @@
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "cft" = (
-/obj/structure/chair/halflife/metal/blue,
-/obj/effect/landmark/start/cleanup_technician,
+/obj/structure/rack,
+/obj/effect/turf_decal/box,
+/obj/item/watertank/cleanup,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
 "cfL" = (
@@ -7952,12 +7953,15 @@
 "nmU" = (
 /obj/structure/rack,
 /obj/item/clothing/head/utility/radiation,
-/obj/item/clothing/head/utility/radiation,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/obj/item/tank/internals/emergency_oxygen/engi,
-/obj/item/tank/internals/emergency_oxygen/engi,
 /obj/effect/turf_decal/box,
+/obj/item/clothing/head/utility/radiation,
+/obj/item/clothing/head/utility/radiation,
+/obj/item/tank/internals/emergency_oxygen/engi,
+/obj/item/tank/internals/emergency_oxygen/engi,
+/obj/item/tank/internals/emergency_oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
 "nna" = (
@@ -12631,6 +12635,7 @@
 /obj/structure/table/halflife/wood/bar,
 /obj/machinery/coffeemaker/impressa,
 /obj/item/storage/box/coffeepack,
+/obj/item/storage/box/coffeepack,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/bar)
 "vji" = (
@@ -13045,7 +13050,18 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
 "vLL" = (
-/obj/machinery/light/small/directional/north,
+/obj/structure/chair/halflife/metal/blue{
+	dir = 4
+	},
+/obj/effect/landmark/start/cleanup_technician,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/productioncenter/infestation)
+"vLU" = (
+/obj/structure/chair/halflife/metal/blue{
+	dir = 4
+	},
+/obj/machinery/light/small/directional/west,
+/obj/effect/landmark/start/cleanup_technician,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
 "vMp" = (
@@ -14238,6 +14254,7 @@
 "xAt" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
+/obj/item/clothing/suit/utility/radiation/cleanup,
 /obj/item/clothing/suit/utility/radiation/cleanup,
 /obj/item/clothing/suit/utility/radiation/cleanup,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -42555,9 +42572,9 @@ uXQ
 uXQ
 gyx
 hHG
-bMK
-bMK
-bMK
+hHG
+lpS
+hHG
 hHG
 hHG
 gyx
@@ -42682,10 +42699,10 @@ frh
 uXQ
 uXQ
 gyx
-hHG
-hHG
-lpS
-hHG
+gyx
+gyx
+gyx
+gyx
 hHG
 hHG
 gyx
@@ -42809,10 +42826,10 @@ bMK
 ihM
 uXQ
 uXQ
-gyx
-gyx
-gyx
-gyx
+uXQ
+uXQ
+uXQ
+uXQ
 gyx
 gyx
 sPS
@@ -43063,10 +43080,10 @@ uby
 lGZ
 lrB
 frh
-uXQ
-uXQ
-uXQ
-uXQ
+bgz
+bgz
+bgz
+bgz
 uXQ
 uXQ
 gyx
@@ -43190,11 +43207,11 @@ bMK
 frh
 frh
 frh
-frh
-frh
-frh
-frh
-frh
+uby
+vLL
+vLU
+vLL
+bgz
 uXQ
 uXQ
 qya
@@ -43320,9 +43337,9 @@ muq
 uby
 xAt
 tJy
-lxX
-hPW
-frh
+tJy
+tJy
+bgz
 uXQ
 uXQ
 gyx
@@ -43448,9 +43465,9 @@ xmE
 uby
 nmU
 tJy
-tJy
+lxX
 hPW
-frh
+bgz
 uXQ
 uXQ
 gyx
@@ -43573,12 +43590,12 @@ bMK
 art
 bMK
 iBK
-frh
-bgz
-vLL
+uby
+tJy
+tJy
 tJy
 uXZ
-frh
+bgz
 uXQ
 uXQ
 gyx
@@ -43704,9 +43721,9 @@ bMK
 xSI
 tJy
 tJy
-tJy
-tJy
-frh
+lxX
+hPW
+bgz
 uXQ
 uXQ
 lli
@@ -43834,7 +43851,7 @@ cft
 tJy
 tJy
 khF
-frh
+bgz
 uXQ
 uXQ
 lli
@@ -43962,7 +43979,7 @@ cft
 kTd
 ojg
 ojg
-frh
+bgz
 uXQ
 uXQ
 lli
@@ -44087,10 +44104,10 @@ frh
 frh
 frh
 frh
-frh
-frh
-frh
-frh
+bgz
+bgz
+bgz
+bgz
 uXQ
 uXQ
 lli
@@ -65210,10 +65227,10 @@ sHX
 sHX
 gdE
 gdE
-mAz
-mAz
-mAz
-mAz
+gdE
+gdE
+gdE
+gdE
 mAz
 mAz
 mAz
@@ -65464,10 +65481,10 @@ sHX
 sHX
 sHX
 sHX
-gdE
-gdE
-gdE
-gdE
+sHX
+sHX
+sHX
+sHX
 gdE
 gdE
 mAz

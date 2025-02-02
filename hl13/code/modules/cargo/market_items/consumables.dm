@@ -8,7 +8,7 @@
 	item = /obj/item/food/rationpack
 
 	price_min = CARGO_CRATE_VALUE/3
-	price_max = CARGO_CRATE_VALUE
+	price_max = CARGO_CRATE_VALUE/2
 	stock_max = 3
 	availability_prob = 80
 
@@ -27,7 +27,7 @@
 	desc = "A full carton of ciggies. Smokers will do anything to get their fill."
 	item = /obj/item/storage/fancy/cigarettes/halflife
 
-	price_min = CARGO_CRATE_VALUE/4
-	price_max = CARGO_CRATE_VALUE/2
+	price_min = CARGO_CRATE_VALUE/5
+	price_max = CARGO_CRATE_VALUE/3
 	stock_max = 3
 	availability_prob = 90

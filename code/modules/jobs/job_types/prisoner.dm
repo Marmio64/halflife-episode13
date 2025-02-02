@@ -26,6 +26,8 @@
 	job_flags = JOB_EQUIP_RANK|JOB_CREW_MEMBER|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS
 	faction = FACTION_STATION
 
+	cmode_music = 'hl13/sound/music/combat/cpviolation.ogg' //cause they're a cp violation
+
 /datum/outfit/job/prisoner
 	name = "Outlands Refugee"
 	jobtype = /datum/job/prisoner
@@ -68,3 +70,17 @@
 			return MAP_ERROR
 
 		spawning.forceMove(pick(spawn_locs))
+
+/datum/outfit/job/refugee/armed
+	name = "Armed Outlands Refugee"
+	jobtype = /datum/job/prisoner
+
+	id = null
+	uniform = /obj/item/clothing/under/citizen/refugee
+	suit = /obj/item/clothing/suit/armor/armored
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/makeshift
+
+	r_pocket = /obj/item/flashlight
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
+
+	belt = /obj/item/storage/belt/pouch

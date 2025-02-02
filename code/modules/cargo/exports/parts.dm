@@ -51,9 +51,9 @@
 	unit_name = "water canister"
 	export_types = list(/obj/item/water_canister)
 
-/datum/export/watercanister
+/datum/export/destabilizerantenna
 	cost = CARGO_CRATE_VALUE*2
-	unit_name = "water canister"
+	unit_name = "destabilizer antenna"
 	export_types = list(/obj/item/halflife/antenna)
 
 //clearing out xen infestations might be profitable... or even farming them?

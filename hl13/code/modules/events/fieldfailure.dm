@@ -1,7 +1,7 @@
 /datum/round_event_control/fieldfailure
 	name = "Force Field Failures"
 	typepath = /datum/round_event/fieldfailure
-	weight = 10
+	weight = 12
 	max_occurrences = 3
 	min_players = 10
 	category = EVENT_CATEGORY_JANITORIAL

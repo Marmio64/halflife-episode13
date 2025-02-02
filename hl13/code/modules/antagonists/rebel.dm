@@ -34,7 +34,7 @@
 	)
 
 /datum/outfit/rebel/heavy
-	name = "Heavy Rebel"
+	name = "Heavy Rebel (M4A1)"
 
 	suit = /obj/item/clothing/suit/armor/rebel
 	head = /obj/item/clothing/head/helmet/halflife/military
@@ -42,6 +42,15 @@
 
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/m4a1 = 1,
+	)
+
+/datum/outfit/rebel/heavy/ak47
+	name = "Heavy Rebel (AK47)"
+
+	suit_store = /obj/item/gun/ballistic/automatic/ak47
+
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/ak47 = 1,
 	)
 
 /datum/outfit/rebel/uplink

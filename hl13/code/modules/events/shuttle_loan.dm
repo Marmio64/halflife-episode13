@@ -23,10 +23,10 @@
 
 /datum/shuttle_loan_situation/halflife/necrotics
 	sender = "Ministry of Infestation Control"
-	announcement_text = "Necrotics have infested one of our supply depots. If you send your shuttle to take some of them away with you, we can reward you well."
+	announcement_text = "Necrotics have infested one of our supply depots. If you send your dropship to take some of them away with you, we can reward you well."
 	shuttle_transit_text = "Necrotics incoming."
 	logging_desc = "Necrotic Infestation"
-	bonus_points = CARGO_CRATE_VALUE * 30
+	bonus_points = CARGO_CRATE_VALUE * 25
 
 /datum/shuttle_loan_situation/halflife/necrotics/spawn_items(list/spawn_list, list/empty_shuttle_turfs, list/blocked_shutte_turfs)
 

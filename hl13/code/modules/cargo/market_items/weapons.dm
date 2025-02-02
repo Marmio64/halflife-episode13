@@ -80,7 +80,17 @@
 	price_min = CARGO_CRATE_VALUE * 3
 	price_max = CARGO_CRATE_VALUE * 4
 	stock_max = 1
-	availability_prob = 50
+	availability_prob = 40
+
+/datum/market_item/halflife/weapon/ak47
+	name = "AK47"
+	desc = "A prize equal in status to the M4A1. This rugged rifle hits hard, though it'll hill you just as hard since we lost the stock for it."
+	item = /obj/item/gun/ballistic/automatic/ak47
+
+	price_min = CARGO_CRATE_VALUE * 3
+	price_max = CARGO_CRATE_VALUE * 4
+	stock_max = 1
+	availability_prob = 40
 
 /datum/market_item/halflife/weapon/rebarxbow
 	name = "Heated Rebar Crossbow"
