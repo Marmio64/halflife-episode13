@@ -149,6 +149,7 @@
 	plane = GAME_PLANE
 	layer = WALL_OBJ_LAYER
 	icon = 'icons/effects/web.dmi'
+	plane = GAME_PLANE_UPPER
 	icon_state = "cobweb1"
 	resistance_flags = FLAMMABLE
 	beauty = -100

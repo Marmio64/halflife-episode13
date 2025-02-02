@@ -77,7 +77,7 @@
 	density = TRUE
 	deconstructible = FALSE
 	layer = EDGED_TURF_LAYER
-
+	plane = GAME_PLANE_UPPER
 /**
  * shower drain placed usually under showers just so it looks like something picks the water up.
  */

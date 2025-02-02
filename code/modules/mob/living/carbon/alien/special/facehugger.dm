@@ -22,6 +22,7 @@
 	tint = 3
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH
 	layer = MOB_LAYER
+	plane = GAME_PLANE_FOV_HIDDEN
 	max_integrity = 100
 	slowdown = 2
 	var/stat = CONSCIOUS //UNCONSCIOUS is the idle state in this case

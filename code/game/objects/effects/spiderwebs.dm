@@ -189,7 +189,7 @@
 	canSmoothWith = SMOOTH_GROUP_SPIDER_WEB_WALL_TOUGH
 	opacity = TRUE
 	max_integrity = 90
-	layer = ABOVE_MOB_LAYER
+	plane = GAME_PLANE_UPPER
 	resistance_flags = FIRE_PROOF | FREEZE_PROOF
 
 /// Web 'door', blocks atmos but not movement
@@ -206,7 +206,7 @@
 	opacity = TRUE
 	max_integrity = 60
 	alpha = 200
-	layer = ABOVE_MOB_LAYER
+	plane = GAME_PLANE_UPPER
 	resistance_flags = FIRE_PROOF | FREEZE_PROOF
 
 /obj/structure/spider/passage/Initialize(mapload)
