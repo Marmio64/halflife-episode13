@@ -157,6 +157,8 @@
 	inhand_icon_state = null //touching it dusts you, so no need for an inhand icon.
 	pulseicon = "supermatter_sliver_pulse"
 	layer = ABOVE_MOB_LAYER
+	plane = GAME_PLANE_UPPER
+
 
 /obj/item/nuke_core/supermatter_sliver/Initialize(mapload)
 	. = ..()

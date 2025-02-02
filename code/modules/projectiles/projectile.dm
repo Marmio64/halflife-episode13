@@ -20,6 +20,7 @@
 	var/hitsound = 'sound/items/weapons/pierce.ogg'
 	/// Sound played when the projectile hits a wall
 	var/hitsound_wall
+	plane = GAME_PLANE_FOV_HIDDEN
 
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	/// Zone at which the projectile is aimed at

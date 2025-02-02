@@ -101,7 +101,7 @@ GLOBAL_LIST_INIT(immerse_ignored_movable, typecacheof(list(
 	SIGNAL_HANDLER
 	if(QDELETED(movable))
 		return
-	if(HAS_TRAIT(movable, TRAIT_IMMERSED) || HAS_TRAIT(movable, TRAIT_WALLMOUNTED))
+	if(movable.layer >= ABOVE_ALL_MOB_LAYER || !ISINRANGE(movable.plane, MUTATE_PLANE(FLOOR_PLANE, source), MUTATE_PLANE(GAME_PLANE_UPPER_FOV_HIDDEN, source)))
 		return
 	if(!ISINRANGE(movable.plane, MUTATE_PLANE(FLOOR_PLANE, source), MUTATE_PLANE(GAME_PLANE, source)))
 		return
