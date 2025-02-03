@@ -196,6 +196,12 @@
 		for(var/slot in list(ORGAN_SLOT_HEART, ORGAN_SLOT_LUNGS, ORGAN_SLOT_LIVER))
 			var/obj/item/organ/O = human.get_organ_slot(slot)
 			O.apply_organ_damage(0.2)
+		if(nutrition < (NUTRITION_LEVEL_DYING/2))
+			if(prob(4))
+				to_chat(human, span_warning("I'm so hungry, I can't take much more of this..."))
+				human.adjustStaminaLoss(30)
+				human.adjustOxyLoss(20)
+				human.adjust_tiredness(20)
 
 	if(hydration < HYDRATION_LEVEL_DYING) //So damn thirsty that you are dying
 		if(prob(4))

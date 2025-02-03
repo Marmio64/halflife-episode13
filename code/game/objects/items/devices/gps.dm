@@ -1,7 +1,7 @@
 
 /obj/item/gps
 	name = "global positioning system"
-	desc = "Helping lost spacemen find their way through the planets since 2016."
+	desc = "A small device which lets you display your location and find noteworthy signals."
 	icon = 'icons/obj/devices/tracker.dmi'
 	icon_state = "gps-c"
 	inhand_icon_state = "electronic"

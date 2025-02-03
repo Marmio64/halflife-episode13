@@ -696,6 +696,14 @@
 "bgz" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/productioncenter/infestation)
+"bgI" = (
+/obj/structure/chair/halflife/metal/blue{
+	dir = 4
+	},
+/obj/machinery/light/small/directional/west,
+/obj/effect/landmark/start/cleanup_technician,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/productioncenter/infestation)
 "bhw" = (
 /obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/trainfloor,
@@ -2758,7 +2766,6 @@
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/hospital/office)
 "eFN" = (
-/obj/structure/halflife/sign/hotel,
 /obj/machinery/camera{
 	c_tag = "Bar Apartment Block East"
 	},
@@ -5873,9 +5880,6 @@
 "jOD" = (
 /obj/machinery/mining_terminal,
 /obj/effect/turf_decal/halflife/covering/paint/white,
-/obj/structure/stairs/stone{
-	dir = 1
-	},
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/productioncenter)
 "jPn" = (
@@ -8407,6 +8411,10 @@
 /obj/effect/landmark/start/vortigaunt_slave,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
+"oax" = (
+/obj/effect/turf_decal/halflife/covering/wallpaper/green,
+/turf/closed/wall/halflife/brick,
+/area/halflife/indoors/bar)
 "oba" = (
 /turf/open/floor/catwalk_floor/iron,
 /area/halflife/outdoors)
@@ -9422,6 +9430,8 @@
 /area/halflife/indoors/sewer)
 "pVr" = (
 /obj/structure/table/halflife/metal/grate,
+/obj/item/reagent_containers/cup/soda_cans/breenwater,
+/obj/item/reagent_containers/cup/soda_cans/breenwater,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/dispatch)
 "pVx" = (
@@ -10920,7 +10930,6 @@
 "sln" = (
 /obj/machinery/light/small/directional/north,
 /obj/machinery/iv_drip,
-/obj/machinery/vending/combine_wallmed/directional/north,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/townhall/infirmary)
 "sma" = (
@@ -11104,9 +11113,8 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
 "sDA" = (
-/obj/structure/chair/halflife/metal/stool,
-/obj/effect/landmark/start/citizen,
-/turf/open/floor/plating/indoor/carpet/shaggy/violet,
+/obj/structure/halflife/sign/hotel,
+/turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/bar/apartments)
 "sDP" = (
 /obj/structure/table/halflife/no_smooth/metal,
@@ -13056,14 +13064,6 @@
 /obj/effect/landmark/start/cleanup_technician,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
-"vLU" = (
-/obj/structure/chair/halflife/metal/blue{
-	dir = 4
-	},
-/obj/machinery/light/small/directional/west,
-/obj/effect/landmark/start/cleanup_technician,
-/turf/open/floor/plating/indoor/concrete/small,
-/area/halflife/indoors/productioncenter/infestation)
 "vMp" = (
 /obj/structure/table/halflife/no_smooth/wood/low,
 /turf/open/floor/plating/indoor/woodc,
@@ -14134,6 +14134,7 @@
 /area/halflife/outdoors/plaza)
 "xpf" = (
 /obj/structure/closet/crate/freezer/blood,
+/obj/machinery/vending/combine_wallmed/directional/north,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/townhall/infirmary)
 "xpC" = (
@@ -42511,7 +42512,7 @@ uZh
 nGg
 dHd
 vjx
-bsA
+glz
 iOd
 iJU
 fDQ
@@ -42639,7 +42640,7 @@ uZh
 nGg
 dHd
 jql
-bsA
+glz
 evL
 evL
 evL
@@ -42648,7 +42649,7 @@ rcr
 cSg
 cSg
 cSg
-bsA
+glz
 lHX
 evL
 evL
@@ -42767,7 +42768,7 @@ uZh
 nGg
 dHd
 vjx
-bsA
+glz
 hmi
 evL
 evL
@@ -42776,7 +42777,7 @@ nkn
 mMs
 cSg
 mBd
-bsA
+glz
 rsf
 hPo
 evL
@@ -42895,7 +42896,7 @@ uZh
 nGg
 iAS
 vjx
-bsA
+glz
 lHX
 evL
 fKv
@@ -42906,7 +42907,7 @@ cpP
 bsA
 bsA
 bsA
-bsA
+glz
 wDZ
 fDQ
 bsA
@@ -43034,7 +43035,7 @@ jvh
 jvh
 jvh
 jvh
-bsA
+glz
 evL
 bnP
 bsA
@@ -43209,7 +43210,7 @@ frh
 frh
 uby
 vLL
-vLU
+bgI
 vLL
 bgz
 uXQ
@@ -43919,7 +43920,7 @@ uZh
 nGg
 dHd
 vjx
-bsA
+glz
 bnP
 rnF
 gKw
@@ -44047,7 +44048,7 @@ uZh
 nGg
 dHd
 vjx
-bsA
+glz
 hwF
 hwF
 hwF
@@ -44175,7 +44176,7 @@ uZh
 nGg
 dHd
 vjx
-bsA
+glz
 wat
 jvh
 vyt
@@ -44185,8 +44186,8 @@ jvh
 oYG
 oYG
 bKG
-sDA
-sDA
+bKG
+bKG
 oYG
 oYG
 bsA
@@ -44303,7 +44304,7 @@ uZh
 nGg
 dHd
 vjx
-bsA
+glz
 gyI
 jvh
 qoi
@@ -44431,7 +44432,7 @@ uZh
 nGg
 vVI
 vjx
-bsA
+glz
 jvh
 jvh
 jvh
@@ -44943,7 +44944,7 @@ uZh
 nGg
 dHd
 vjx
-iaq
+oax
 mOI
 hWc
 uqC
@@ -45071,7 +45072,7 @@ uZh
 nGg
 dHd
 vjx
-iaq
+oax
 ozn
 lNO
 lNO
@@ -45199,7 +45200,7 @@ uZh
 nGg
 dHd
 vjx
-iaq
+oax
 uvn
 cWn
 ryp
@@ -45461,7 +45462,7 @@ rbf
 vjb
 bxi
 iaq
-jvh
+sDA
 jvh
 bsA
 bsA

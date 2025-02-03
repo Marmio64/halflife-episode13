@@ -314,7 +314,7 @@
 	occur_text = "blasts apart, sending chunks of viscera flying in all directions"
 	sound_effect = 'sound/effects/wounds/pierce3.ogg'
 	severity = WOUND_SEVERITY_CRITICAL
-	initial_flow = 2 //HL13 EDIT
+	initial_flow = 1.8 //HL13 EDIT
 	gauzed_clot_rate = 0.4 //HL13 EDIT
 	internal_bleeding_chance = 70 //HL13 EDIT
 	internal_bleeding_coefficient = 1.75

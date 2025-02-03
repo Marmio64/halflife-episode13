@@ -89,6 +89,38 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.4 SECONDS)
 
+//cargo pack service rifle intended for 'conscripts'. Useful against unarmored targets, otherwise not very good. Worse than an MP7, but cheap to get ammo for.
+/obj/item/gun/ballistic/automatic/servicerifle
+	name = "\improper Service Rifle"
+	desc = "A cheaply made rifle which uses equally cheap submachine gun caliber bullets designed to be mostly effective against flesh."
+	icon = 'hl13/icons/obj/guns/projectile.dmi'
+	icon_state = "service"
+	inhand_icon_state = "arg"
+	fire_sound = "sound/items/weapons/gun/rifle/shot.ogg"
+	vary_fire_sound = FALSE
+	load_sound = "sound/items/weapons/gun/rifle/rifleload.ogg"
+	load_empty_sound = "sound/items/weapons/gun/rifle/rifleload.ogg"
+	rack_sound = "sound/items/weapons/gun/rifle/bolt_in.ogg"
+	eject_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
+	eject_empty_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/service
+	force = 10
+	fire_delay = 2
+	burst_size = 1
+	spread = 12
+	recoil = 0.8
+	can_suppress = FALSE
+	mag_display = TRUE
+	weapon_weight = WEAPON_MEDIUM
+	w_class = WEIGHT_CLASS_BULKY
+
+/obj/item/gun/ballistic/automatic/servicerifle/no_mag
+	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/servicerifle/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.25 SECONDS)
+
 //the crossbow
 /*
 /obj/item/gun/ballistic/bow/crossbow/rebar

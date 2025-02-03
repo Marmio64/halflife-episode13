@@ -13,6 +13,21 @@
 					/obj/item/clothing/suit/armor/civilprotection)
 	crate_name = "armor crate"
 
+/datum/supply_pack/security/militarygear
+	name = "Old Military Gear Crate"
+	desc = "Two sets of kevlar, helmets, camo fatigues, and gas masks. Most of this gear is no longer in circulation, and now runs a premium."
+	cost = CARGO_CRATE_VALUE * 8
+	access_view = ACCESS_SECURITY
+	contains = list(/obj/item/clothing/suit/armor/kevlar,
+					/obj/item/clothing/suit/armor/kevlar,
+					/obj/item/clothing/under/syndicate/camo,
+					/obj/item/clothing/under/syndicate/camo,
+					/obj/item/clothing/mask/gas/hl2/military,
+					/obj/item/clothing/mask/gas/hl2/military,
+					/obj/item/clothing/head/helmet/halflife/military/weak,
+					/obj/item/clothing/head/helmet/halflife/military/weak)
+	crate_name = "military gear crate"
+
 /datum/supply_pack/security/riotarmor
 	name = "Riot Armor Crate"
 	desc = "Two sets of riot control armor that excels at stopping blunt force trauma, cuts, and lacerations from close range. Does little against firearms, however."
@@ -79,6 +94,24 @@
 					/obj/item/ammo_box/magazine/ar2)
 	crate_name = "osipr ammo crate"
 
+/datum/supply_pack/security/armory/servicerifle
+	name = "Service Rifle Crate"
+	desc = "Contains two pre-assembled Service rifles. These are cheap rifles which are built to take down unarmored targets, but struggle when facing armored ones."
+	cost = CARGO_CRATE_VALUE * 10 // They're actually worse than MP7s, but come preassembled and their worse quality can be a boon to protect against rebellion
+	contains = list(/obj/item/gun/ballistic/automatic/servicerifle,
+					/obj/item/gun/ballistic/automatic/servicerifle)
+	crate_name = "service rifle crate"
+
+/datum/supply_pack/security/armory/servicerifleammo
+	name = "Service Rifle Ammo Crate"
+	desc = "Contains four service rifle magazines. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 7
+	contains = list(/obj/item/ammo_box/magazine/service,
+					/obj/item/ammo_box/magazine/service,
+					/obj/item/ammo_box/magazine/service,
+					/obj/item/ammo_box/magazine/service)
+	crate_name = "service rifle ammo crate"
+
 /datum/supply_pack/security/armory/mp7
 	name = "MP7 Frame Crate"
 	desc = "Contains two MP7 submachine gun frames that must be assembled. Requires Armory access to open."
@@ -90,7 +123,7 @@
 /datum/supply_pack/security/armory/mp7ammo
 	name = "MP7 Ammo Crate"
 	desc = "Contains four MP7 magazines. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 9
+	cost = CARGO_CRATE_VALUE * 10
 	contains = list(/obj/item/ammo_box/magazine/mp7,
 					/obj/item/ammo_box/magazine/mp7,
 					/obj/item/ammo_box/magazine/mp7,
@@ -108,7 +141,7 @@
 /datum/supply_pack/security/armory/shotgunammo
 	name = "Shotgun Buckshot Ammo Crate"
 	desc = "Contains four boxes of buckshot. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 9
+	cost = CARGO_CRATE_VALUE * 10
 	contains = list(/obj/item/storage/box/lethalshot,
 					/obj/item/storage/box/lethalshot,
 					/obj/item/storage/box/lethalshot,
@@ -126,7 +159,7 @@
 /datum/supply_pack/security/armory/revolverammo
 	name = "Colt Python Ammo Crate"
 	desc = "Contains four Colt Python speed loaders. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 9
+	cost = CARGO_CRATE_VALUE * 11
 	contains = list(/obj/item/ammo_box/a357,
 					/obj/item/ammo_box/a357,
 					/obj/item/ammo_box/a357,

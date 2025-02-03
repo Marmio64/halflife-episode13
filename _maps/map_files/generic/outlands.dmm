@@ -593,10 +593,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
-"iZ" = (
-/obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "ja" = (
 /mob/living/simple_animal/halflife/grub{
 	dir = 4
@@ -1195,10 +1191,10 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
 "qT" = (
-/obj/structure/window/reinforced/fulltile,
 /obj/machinery/door/poddoor/shutters/window{
 	id = "rebelentrance"
 	},
+/obj/structure/window/fulltile,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "rb" = (
@@ -1226,6 +1222,10 @@
 /area/halflife/outdoors/forest)
 "rq" = (
 /obj/structure/halflife/street_sign/parking,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
+"rr" = (
+/obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "ry" = (
@@ -2169,8 +2169,10 @@
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
 "Fr" = (
-/obj/structure/halflife/sign/private,
-/turf/open/floor/plating/ground/dirt/alt,
+/obj/structure/halflife/sign/workers{
+	pixel_y = -7
+	},
+/turf/closed/wall/halflife/sewer,
 /area/halflife/outdoors/forest)
 "Fw" = (
 /obj/machinery/door/poddoor/shutters{
@@ -3134,8 +3136,10 @@
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "Ua" = (
-/obj/structure/halflife/sign/private,
-/turf/open/floor/plating/ground/dirt,
+/obj/structure/halflife/sign/private{
+	pixel_y = 0
+	},
+/turf/closed/wall/halflife/sewer,
 /area/halflife/outdoors/forest)
 "Ub" = (
 /turf/open/floor/plating/indoor/concrete/small,
@@ -44247,7 +44251,7 @@ tN
 tN
 tN
 Aq
-iZ
+rr
 It
 It
 tN
@@ -50269,8 +50273,8 @@ aZ
 tN
 It
 GX
-DN
-Fr
+Ua
+It
 dg
 GX
 It
@@ -51055,7 +51059,7 @@ tN
 It
 tN
 tN
-It
+SV
 It
 jv
 It
@@ -51254,8 +51258,8 @@ tN
 tN
 sD
 GX
-DN
-Ua
+Fr
+tN
 tN
 tN
 NR
@@ -55594,7 +55598,7 @@ LN
 GX
 tN
 tN
-eo
+FC
 tN
 GX
 It

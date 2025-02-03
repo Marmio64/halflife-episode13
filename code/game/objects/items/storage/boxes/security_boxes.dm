@@ -18,7 +18,7 @@
 
 /obj/item/storage/box/stingbangs/PopulateContents()
 	for(var/i in 1 to 5)
-		new /obj/item/grenade/stingbang(src)
+		new /obj/item/grenade/stingbang/halflife(src)
 
 /obj/item/storage/box/flashes
 	name = "box of flashbulbs"

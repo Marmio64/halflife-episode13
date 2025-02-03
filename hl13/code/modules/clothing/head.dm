@@ -48,3 +48,17 @@
 	fire = 50
 	acid = 50
 	wound = 10
+
+/obj/item/clothing/head/helmet/halflife/military/weak
+	name = "cracked military helmet"
+	armor_type = /datum/armor/military_helmet/weak
+
+/datum/armor/military_helmet/weak
+	melee = 15
+	bullet = 10
+	laser = 10
+	energy = 10
+	bomb = 15
+	fire = 50
+	acid = 50
+	wound = 5

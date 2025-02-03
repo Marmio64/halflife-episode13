@@ -7,6 +7,13 @@
 	projectile_type = /obj/projectile/bullet/c46x30mm
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/light
 
+/obj/item/ammo_casing/c46x30mm/service
+	name = "service grade 4.6x30mm bullet casing"
+	desc = "A 4.6x30mm bullet casing."
+	caliber = CALIBER_46X30MM
+	projectile_type = /obj/projectile/bullet/c46x30mm/service
+	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/light
+
 /obj/item/ammo_casing/c46x30mm/ap
 	name = "4.6x30mm armor-piercing bullet casing"
 	desc = "A 4.6x30mm armor-piercing bullet casing."
