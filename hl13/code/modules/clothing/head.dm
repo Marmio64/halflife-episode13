@@ -51,6 +51,7 @@
 
 /obj/item/clothing/head/helmet/halflife/military/weak
 	name = "cracked military helmet"
+	desc = "An old world military helmet. Age and use has left the helmet in a less than ideal condition."
 	armor_type = /datum/armor/military_helmet/weak
 
 /datum/armor/military_helmet/weak

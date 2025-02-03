@@ -252,10 +252,10 @@
 	AddComponent(/datum/component/adjust_fishing_difficulty, 2)
 
 /datum/armor/toggleable_riot
-	melee = 50
-	bullet = 10
-	laser = 10
-	energy = 10
+	melee = 35
+	bullet = 5
+	laser = 5
+	energy = 5
 	fire = 80
 	acid = 80
 	wound = 15

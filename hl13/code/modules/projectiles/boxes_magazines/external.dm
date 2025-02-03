@@ -71,9 +71,9 @@
 //service Rifle
 
 /obj/item/ammo_box/magazine/service
-	name = "rifle magazine (4.6x30mm)"
-	desc = "A standard 30-round magazine for the M4A1 Rifle. Filled with 5.56 rounds."
+	name = "rifle magazine (5.56mm)"
+	desc = "A standard 20-round magazine for the Service Rifle. Filled with 5.56 rounds."
 	icon_state = "m308"
-	ammo_type = /obj/item/ammo_casing/c46x30mm
-	caliber = CALIBER_46X30MM
+	ammo_type = /obj/item/ammo_casing/a556
+	caliber = CALIBER_556NATO
 	max_ammo = 20

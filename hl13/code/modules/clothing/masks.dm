@@ -272,6 +272,22 @@
 /obj/item/clothing/mask/gas/hl2/military
 	icon_state = "military_gasmask"
 
+/obj/item/clothing/mask/gas/hl2/military/hardened
+	name = "hardened gas mask"
+	desc = "An old, hardened gas mask which protects the face against gas and some attacks."
+	icon_state = "military_gasmask"
+	armor_type = /datum/armor/militarygasmask
+
+/datum/armor/militarygasmask
+	melee = 10
+	bullet = 10
+	laser = 10
+	energy = 10
+	bomb = 10
+	fire = 80
+	acid = 80
+	wound = 5
+
 /obj/item/clothing/mask/gas/hl2/russia
 	icon_state = "russiamask"
 

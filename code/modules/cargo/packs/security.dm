@@ -15,15 +15,17 @@
 
 /datum/supply_pack/security/militarygear
 	name = "Old Military Gear Crate"
-	desc = "Two sets of kevlar, helmets, camo fatigues, and gas masks. Most of this gear is no longer in circulation, and now runs a premium."
-	cost = CARGO_CRATE_VALUE * 8
+	desc = "Two sets of kevlar, helmets, camo fatigues, ruck sacks, and gas masks. Most of this gear is no longer in circulation, and now runs a premium."
+	cost = CARGO_CRATE_VALUE * 12
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/clothing/suit/armor/kevlar,
 					/obj/item/clothing/suit/armor/kevlar,
 					/obj/item/clothing/under/syndicate/camo,
 					/obj/item/clothing/under/syndicate/camo,
-					/obj/item/clothing/mask/gas/hl2/military,
-					/obj/item/clothing/mask/gas/hl2/military,
+					/obj/item/clothing/mask/gas/hl2/military/hardened,
+					/obj/item/clothing/mask/gas/hl2/military/hardened,
+					/obj/item/storage/backpack/halflife/satchel/military,
+					/obj/item/storage/backpack/halflife/satchel/military,
 					/obj/item/clothing/head/helmet/halflife/military/weak,
 					/obj/item/clothing/head/helmet/halflife/military/weak)
 	crate_name = "military gear crate"
@@ -96,16 +98,16 @@
 
 /datum/supply_pack/security/armory/servicerifle
 	name = "Service Rifle Crate"
-	desc = "Contains two pre-assembled Service rifles. These are cheap rifles which are built to take down unarmored targets, but struggle when facing armored ones."
-	cost = CARGO_CRATE_VALUE * 10 // They're actually worse than MP7s, but come preassembled and their worse quality can be a boon to protect against rebellion
-	contains = list(/obj/item/gun/ballistic/automatic/servicerifle,
-					/obj/item/gun/ballistic/automatic/servicerifle)
+	desc = "Contains two service rifle gun frames that must be assembled. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 17
+	contains = list(/obj/item/weaponcrafting/frame/service,
+					/obj/item/weaponcrafting/frame/service)
 	crate_name = "service rifle crate"
 
 /datum/supply_pack/security/armory/servicerifleammo
 	name = "Service Rifle Ammo Crate"
 	desc = "Contains four service rifle magazines. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 7
+	cost = CARGO_CRATE_VALUE * 11
 	contains = list(/obj/item/ammo_box/magazine/service,
 					/obj/item/ammo_box/magazine/service,
 					/obj/item/ammo_box/magazine/service,

@@ -53,18 +53,18 @@
 
 /datum/addiction/alcohol/withdrawal_stage_1_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
-	affected_carbon.set_jitter_if_lower(10 SECONDS * seconds_per_tick)
+	affected_carbon.set_jitter_if_lower(5 SECONDS * seconds_per_tick)
 
 /datum/addiction/alcohol/withdrawal_stage_2_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
-	affected_carbon.set_jitter_if_lower(20 SECONDS * seconds_per_tick)
+	affected_carbon.set_jitter_if_lower(10 SECONDS * seconds_per_tick)
 	affected_carbon.set_hallucinations_if_lower(10 SECONDS)
 
 /datum/addiction/alcohol/withdrawal_stage_3_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
-	affected_carbon.set_jitter_if_lower(30 SECONDS * seconds_per_tick)
+	affected_carbon.set_jitter_if_lower(15 SECONDS * seconds_per_tick)
 	affected_carbon.set_hallucinations_if_lower(10 SECONDS)
-	if(SPT_PROB(4, seconds_per_tick) && !HAS_TRAIT(affected_carbon, TRAIT_ANTICONVULSANT))
+	if(SPT_PROB(2, seconds_per_tick) && !HAS_TRAIT(affected_carbon, TRAIT_ANTICONVULSANT))
 		affected_carbon.apply_status_effect(/datum/status_effect/seizure)
 
 /datum/addiction/hallucinogens
@@ -280,16 +280,16 @@
 
 /datum/addiction/nicotine/withdrawal_enters_stage_1(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
-	affected_carbon.set_jitter_if_lower(10 SECONDS * seconds_per_tick)
+	affected_carbon.set_jitter_if_lower(5 SECONDS * seconds_per_tick)
 
 /datum/addiction/nicotine/withdrawal_stage_2_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
-	affected_carbon.set_jitter_if_lower(20 SECONDS * seconds_per_tick)
+	affected_carbon.set_jitter_if_lower(10 SECONDS * seconds_per_tick)
 	if(SPT_PROB(2, seconds_per_tick))
 		affected_carbon.emote("cough")
 
 /datum/addiction/nicotine/withdrawal_stage_3_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
-	affected_carbon.set_jitter_if_lower(30 SECONDS * seconds_per_tick)
+	affected_carbon.set_jitter_if_lower(15 SECONDS * seconds_per_tick)
 	if(SPT_PROB(5, seconds_per_tick))
 		affected_carbon.emote("cough")

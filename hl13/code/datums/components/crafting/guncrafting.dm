@@ -21,6 +21,11 @@
 	desc = "A frame for a M4A1 rifle. At a proper weapons crafting bench, you may be able to craft this into a working one if you have the materials to do so."
 	icon_state = "m4a1"
 
+/obj/item/weaponcrafting/frame/service
+	name = "broken service rifle"
+	desc = "A frame for a service rifle. At a proper weapons crafting bench, you may be able to craft this into a working one if you have the materials to do so."
+	icon_state = "service"
+
 /obj/item/weaponcrafting/frame/spas12
 	name = "broken spas12"
 	desc = "A frame for a SPAS12 shotgun. At a proper weapons crafting bench, you may be able to craft this into a working one if you have the materials to do so."

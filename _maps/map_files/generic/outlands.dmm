@@ -1224,10 +1224,6 @@
 /obj/structure/halflife/street_sign/parking,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
-"rr" = (
-/obj/structure/reagent_dispensers/fueltank,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "ry" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "city_surface";
@@ -1469,6 +1465,13 @@
 "uJ" = (
 /obj/effect/landmark/train_dump_spot,
 /turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
+"uK" = (
+/obj/structure/flora/bush/fullgrass,
+/obj/structure/halflife/road_barrier/concrete{
+	dir = 8
+	},
+/turf/open/misc/grass/jungle/station,
 /area/halflife/outdoors/forest)
 "uN" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -1753,6 +1756,9 @@
 /obj/machinery/computer/records/security,
 /turf/open/floor/plating/indoor/metal,
 /area/halflife/indoors/laborcamp/security)
+"yJ" = (
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/outdoors/forest)
 "yS" = (
 /obj/structure/railing/halflife/wood/single,
 /turf/open/floor/plating/ground/dirt,
@@ -2169,8 +2175,8 @@
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
 "Fr" = (
-/obj/structure/halflife/sign/workers{
-	pixel_y = -7
+/obj/structure/halflife/sign/private{
+	pixel_y = 0
 	},
 /turf/closed/wall/halflife/sewer,
 /area/halflife/outdoors/forest)
@@ -2478,6 +2484,13 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborcamp)
+"KD" = (
+/obj/structure/flora/bush/fullgrass,
+/obj/structure/halflife/road_barrier/concrete{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "KI" = (
 /obj/structure/halflife/pipes/vertical/east,
 /obj/structure/chair/office/halflife/blue{
@@ -2713,6 +2726,10 @@
 /obj/structure/halflife/trash/books/pile_alt,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/laborcamp)
+"NT" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "NU" = (
 /obj/structure/frame/machine,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -2787,6 +2804,12 @@
 /obj/structure/halflife/trash/books,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors)
+"Px" = (
+/obj/structure/halflife/sign/workers{
+	pixel_y = -7
+	},
+/turf/closed/wall/halflife/sewer,
+/area/halflife/outdoors/forest)
 "PF" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/structure/halflife/trash/cardboard{
@@ -3136,10 +3159,10 @@
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "Ua" = (
-/obj/structure/halflife/sign/private{
-	pixel_y = 0
+/obj/structure/halflife/road_barrier/concrete{
+	dir = 8
 	},
-/turf/closed/wall/halflife/sewer,
+/turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "Ub" = (
 /turf/open/floor/plating/indoor/concrete/small,
@@ -44251,7 +44274,7 @@ tN
 tN
 tN
 Aq
-rr
+NT
 It
 It
 tN
@@ -46551,8 +46574,8 @@ fv
 fv
 fv
 fv
-fv
-fv
+iQ
+iQ
 fv
 fv
 fv
@@ -46740,17 +46763,17 @@ fv
 fv
 fv
 fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
+iQ
+iQ
+iQ
+iQ
+iQ
+iQ
+iQ
+iQ
+iQ
+iQ
+iQ
 fv
 fv
 fv
@@ -46936,20 +46959,20 @@ fv
 fv
 fv
 fv
+iQ
+iQ
+iQ
+iQ
+iQ
+iQ
+iQ
+iQ
+iQ
+iQ
 fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
+iQ
+iQ
+iQ
 fv
 fv
 iQ
@@ -47132,6 +47155,11 @@ fv
 fv
 fv
 fv
+iQ
+iQ
+iQ
+iQ
+iQ
 fv
 fv
 fv
@@ -47140,15 +47168,10 @@ fv
 fv
 fv
 fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
-fv
+iQ
+iQ
+iQ
+iQ
 iQ
 iQ
 fv
@@ -47329,7 +47352,7 @@ fv
 fv
 fv
 fv
-fv
+iQ
 fv
 fv
 fv
@@ -47345,8 +47368,8 @@ fv
 fv
 fv
 fv
-fv
-fv
+iQ
+iQ
 iQ
 fv
 fv
@@ -47525,8 +47548,8 @@ PT
 PT
 PT
 PT
-PT
-PT
+yJ
+yJ
 PT
 PT
 PT
@@ -47732,7 +47755,7 @@ PT
 LN
 tN
 It
-tN
+pF
 tN
 LN
 tN
@@ -47921,7 +47944,7 @@ EQ
 It
 It
 It
-aZ
+It
 It
 tN
 tN
@@ -48127,7 +48150,7 @@ GX
 sD
 tN
 tN
-aZ
+It
 It
 tN
 LN
@@ -48320,7 +48343,7 @@ tN
 GX
 dg
 It
-pH
+GX
 It
 It
 tN
@@ -48705,22 +48728,22 @@ PT
 PT
 PT
 PT
-Cq
+uK
 pH
-GX
-LN
+uU
+KD
+Wx
+Ua
+Ua
+oz
+Ua
 tN
-tN
-tN
-GX
-tN
-tN
-It
-It
-tN
-GX
-tN
-It
+qC
+Wv
+Ua
+uU
+pF
+Wv
 PT
 PT
 fv
@@ -48904,16 +48927,16 @@ dg
 GX
 GX
 GX
-tN
+Wx
 tN
 GX
+oz
 GX
-pH
 tN
+qC
 It
 It
-It
-tN
+pF
 GX
 EQ
 It
@@ -49309,7 +49332,7 @@ EQ
 tN
 GX
 GX
-tN
+pF
 sD
 PT
 PT
@@ -49502,7 +49525,7 @@ GX
 Yn
 GX
 GX
-GX
+oz
 tN
 tN
 tN
@@ -50273,7 +50296,7 @@ aZ
 tN
 It
 GX
-Ua
+Fr
 It
 dg
 GX
@@ -51258,7 +51281,7 @@ tN
 tN
 sD
 GX
-Fr
+Px
 tN
 tN
 tN

@@ -3,7 +3,7 @@
 	name = "water harvester"
 	desc = "Automatically harvests water from below, filters it, and packs it into easily carriable canisters which are often exported by combine cities."
 	icon = 'icons/obj/machines/biogenerator.dmi'
-	icon_state = "biogen-empty"
+	icon_state = "biogenerator"
 	density = TRUE
 	anchored = 0
 	var/full = FALSE

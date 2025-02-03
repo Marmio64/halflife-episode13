@@ -115,6 +115,17 @@
 	category = CAT_WEAPON_RANGED
 	crafting_interface = CRAFTING_BENCH_WEAPONS
 
+/datum/crafting_recipe/service
+	name = "Service Rifle"
+	result = /obj/item/gun/ballistic/automatic/servicerifle/no_mag
+	reqs = list(/obj/item/stack/sheet/iron = 7,
+				/obj/item/weaponcrafting/frame/service = 1,
+				/obj/item/weaponcrafting/receiver = 1,
+				/obj/item/stack/sticky_tape = 2)
+	time = 7 SECONDS
+	category = CAT_WEAPON_RANGED
+	crafting_interface = CRAFTING_BENCH_WEAPONS
+
 /datum/crafting_recipe/m4a1bullet
 	name = "5.56 Bullet"
 	result = /obj/item/ammo_casing/a556
@@ -132,6 +143,17 @@
 	reqs = list(/obj/item/stack/sheet/iron = 35,
 				/obj/item/stack/cable_coil = 30,
 				/datum/reagent/fuel = 45)
+	tool_behaviors = list(TOOL_SCREWDRIVER)
+	time = 20 SECONDS
+	category = CAT_WEAPON_AMMO
+	crafting_interface = CRAFTING_BENCH_RELOADING
+
+/datum/crafting_recipe/servicemag
+	name = "5.56 Service Rifle Full Magazine"
+	result = /obj/item/ammo_box/magazine/service
+	reqs = list(/obj/item/stack/sheet/iron = 25,
+				/obj/item/stack/cable_coil = 20,
+				/datum/reagent/fuel = 30)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 20 SECONDS
 	category = CAT_WEAPON_AMMO

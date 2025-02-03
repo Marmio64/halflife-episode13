@@ -7,7 +7,7 @@
 	fire_sound = "hl13/sound/weapons/ar2fire.ogg"
 	vary_fire_sound = FALSE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/ar2
-	force = 10
+	force = 12
 	recoil = 0.6
 	fire_delay = 2
 	burst_size = 1
@@ -38,7 +38,7 @@
 	eject_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
 	eject_empty_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/m4a1
-	force = 10
+	force = 12
 	fire_delay = 2
 	burst_size = 1
 	spread = 12
@@ -71,7 +71,7 @@
 	eject_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
 	eject_empty_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/ak47
-	force = 10
+	force = 12
 	fire_delay = 2
 	burst_size = 1
 	spread = 14
@@ -89,10 +89,10 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.4 SECONDS)
 
-//cargo pack service rifle intended for 'conscripts'. Useful against unarmored targets, otherwise not very good. Worse than an MP7, but cheap to get ammo for.
+//cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30.
 /obj/item/gun/ballistic/automatic/servicerifle
 	name = "\improper Service Rifle"
-	desc = "A cheaply made rifle which uses equally cheap submachine gun caliber bullets designed to be mostly effective against flesh."
+	desc = "An old surplus rifle from decades ago. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "service"
 	inhand_icon_state = "arg"
@@ -104,7 +104,7 @@
 	eject_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
 	eject_empty_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/service
-	force = 10
+	force = 12
 	fire_delay = 2
 	burst_size = 1
 	spread = 12
@@ -119,7 +119,7 @@
 
 /obj/item/gun/ballistic/automatic/servicerifle/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.25 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
 
 //the crossbow
 /*
@@ -255,6 +255,7 @@
 	rack_sound = "hl13/sound/weapons/shotgunpump.ogg"
 	load_sound = "hl13/sound/weapons/shotgunreload.ogg"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/com
+	force = 12
 	recoil = 1.5
 	fire_delay = 7
 	vary_fire_sound = FALSE
