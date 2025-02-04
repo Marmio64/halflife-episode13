@@ -2,8 +2,8 @@
 /obj/machinery/water_miner
 	name = "water harvester"
 	desc = "Automatically harvests water from below, filters it, and packs it into easily carriable canisters which are often exported by combine cities."
-	icon = 'icons/obj/machines/biogenerator.dmi'
-	icon_state = "biogenerator"
+	icon = 'hl13/icons/obj/machinery.dmi'
+	icon_state = "reactor_off"
 	density = TRUE
 	anchored = 0
 	var/full = FALSE
@@ -22,16 +22,22 @@
 		return
 	if(full)
 		new	/obj/item/water_canister(src.loc)
-		to_chat(user, span_notice("You remove the full water canister."))
+		new /obj/item/stack/spacecash/c1(user.loc, 2)
+		to_chat(user, span_notice("You remove the full water canister, along with the dispensed reward."))
+
+		playsound(src, 'hl13/sound/machines/combine_dispense.ogg', 50, TRUE, extrarange = -3)
+
 		full = FALSE
 		update_icon_state()
 		SSsociostability.modifystability(1) //Production brings stability.
 		return
 	if(mining)
 		to_chat(user, span_warning("You stop the mining cycle."))
+		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		mining = FALSE
 		return
 	to_chat(user, span_warning("You start the mining cycle."))
+	playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
 	mining = TRUE
 	update_appearance(UPDATE_ICON)
 
@@ -46,6 +52,9 @@
 			water_gather_progress = 0
 			full = TRUE
 			mining = FALSE
+
+			playsound(src, 'hl13/sound/halflifeeffects/steam_short.ogg', 50, TRUE, extrarange = -3)
+
 			update_icon_state()
 			return PROCESS_KILL
 	else
@@ -62,6 +71,8 @@
 					"[user] sets \the [src] down into the water.", \
 					span_notice("You burrow \the [src] into the water."),
 					span_italics("You hear the splash of water."))
+
+				playsound(src, 'sound/effects/splash.ogg', 50, TRUE, extrarange = -3)
 			else
 				to_chat(user, span_warning("This needs to be anchored over a harvestable source of water!"))
 		else
@@ -74,9 +85,9 @@
 /obj/machinery/water_miner/update_icon_state()
 	. = ..()
 	if(!full)
-		icon_state = "biogen-empty"
+		icon_state = "reactor_off"
 	else
-		icon_state = "biogen-stand"
+		icon_state = "reactor"
 
 /obj/item/water_canister
 	name = "water canister"
