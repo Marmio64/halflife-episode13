@@ -1322,4 +1322,4 @@
 	)
 
 /datum/outfit/deathmatch_loadout/conscript/pre_equip(mob/living/carbon/human/H)
-	H.cmode_music = 'hl13/sound/music/combat/guarddown.ogg'
+	H.cmode_music = 'hl13/sound/music/combat/forgetaboutfreeman.ogg'

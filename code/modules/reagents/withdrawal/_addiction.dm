@@ -122,15 +122,15 @@
 
 /// Called when addiction is in stage 1 every process
 /datum/addiction/proc/withdrawal_stage_1_process(mob/living/carbon/affected_carbon, seconds_per_tick)
-	if(SPT_PROB(5, seconds_per_tick))
+	if(SPT_PROB(4, seconds_per_tick))
 		to_chat(affected_carbon, span_danger("[withdrawal_stage_messages[1]]"))
 
 /// Called when addiction is in stage 2 every process
 /datum/addiction/proc/withdrawal_stage_2_process(mob/living/carbon/affected_carbon, seconds_per_tick)
-	if(SPT_PROB(10, seconds_per_tick) )
+	if(SPT_PROB(8, seconds_per_tick) )
 		to_chat(affected_carbon, span_danger("[withdrawal_stage_messages[2]]"))
 
 /// Called when addiction is in stage 3 every process
 /datum/addiction/proc/withdrawal_stage_3_process(mob/living/carbon/affected_carbon, seconds_per_tick)
-	if(SPT_PROB(15, seconds_per_tick))
+	if(SPT_PROB(12, seconds_per_tick))
 		to_chat(affected_carbon, span_danger("[withdrawal_stage_messages[3]]"))

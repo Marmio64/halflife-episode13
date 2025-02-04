@@ -19,6 +19,7 @@
 	taste_description = "bitter coldness"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	metabolized_traits = list(TRAIT_STIMULATED)
+	metabolization_rate = REAGENTS_METABOLISM * 2 //quick acting
 	hydration_factor = 2
 
 /datum/reagent/consumable/breenfuel/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
@@ -31,8 +32,8 @@
 	affected_mob.adjust_drowsiness(-6 SECONDS * REM * seconds_per_tick)
 	affected_mob.AdjustSleeping(-4 SECONDS * REM * seconds_per_tick)
 	affected_mob.adjust_bodytemperature(-5 * REM * TEMPERATURE_DAMAGE_COEFFICIENT * seconds_per_tick, affected_mob.get_body_temp_normal())
-	affected_mob.adjust_tiredness(-2 * REM * seconds_per_tick) //makes you feel awake
-	affected_mob.adjust_disgust(1 * REM * seconds_per_tick) //kind of gross tasting
+	affected_mob.adjust_tiredness(-4 * REM * seconds_per_tick) //makes you feel awake
+	affected_mob.adjust_disgust(2 * REM * seconds_per_tick) //kind of gross tasting
 
 /datum/reagent/fuel/weak
 	tox_damage = 0.1

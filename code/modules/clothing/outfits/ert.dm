@@ -786,7 +786,7 @@
 
 /datum/outfit/centcom/ert/conscript/pre_equip(mob/living/carbon/human/H)
 	H.faction += "combine"
-	H.cmode_music = 'hl13/sound/music/combat/guarddown.ogg'
+	H.cmode_music = 'hl13/sound/music/combat/forgetaboutfreeman.ogg'
 	H.set_facial_hairstyle("Shaved", update = FALSE)
 	H.set_hairstyle("Crewcut") //this will call update_body_parts()
 	H.update_body()

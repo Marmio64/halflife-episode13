@@ -26,9 +26,9 @@
 /datum/round_event_control/disease_outbreak
 	name = "Disease Outbreak: Classic"
 	typepath = /datum/round_event/disease_outbreak
-	max_occurrences = 0
+	max_occurrences = 1
 	min_players = 10
-	weight = 5
+	weight = 3
 	category = EVENT_CATEGORY_HEALTH
 	description = "A 'classic' virus will infect some members of the crew."
 	min_wizard_trigger_potency = 2
@@ -104,19 +104,7 @@
 /datum/round_event/disease_outbreak/announce(fake)
 	if(!illness_type)
 		var/list/virus_candidates = list(
-			/datum/disease/anxiety,
-			/datum/disease/beesease,
-			/datum/disease/brainrot,
-			/datum/disease/cold9,
-			/datum/disease/flu,
-			/datum/disease/fluspanish,
-			/datum/disease/magnitis,
-			/datum/disease/weightlessness,
-			/// And here are some that will never roll for real, just to mess around.
-			/datum/disease/death_sandwich_poisoning,
-			/datum/disease/dna_retrovirus,
-			/datum/disease/gbs,
-			/datum/disease/rhumba_beat,
+			/datum/disease/fungosis
 		)
 		var/datum/disease/fake_virus = pick(virus_candidates)
 		illness_type = initial(fake_virus.name)
@@ -132,17 +120,8 @@
 	if(!virus_type)
 		var/list/virus_candidates = list()
 
-		//Practically harmless diseases. Mostly just gives medical something to do.
-		virus_candidates += list(/datum/disease/flu, /datum/disease/cold9)
-
-		//The more dangerous ones
-		virus_candidates += list(/datum/disease/beesease, /datum/disease/brainrot, /datum/disease/fluspanish)
-
-		//The wacky ones
-		virus_candidates += list(/datum/disease/magnitis, /datum/disease/anxiety, /datum/disease/weightlessness)
-
-		//The rest of the diseases either aren't conventional "diseases" or are too unique/extreme to be considered for a normal event
-		virus_type = pick(virus_candidates)
+		//HL13 EDIT
+		virus_candidates += list(/datum/disease/fungosis)
 
 	var/datum/disease/new_disease
 	new_disease = new virus_type()
