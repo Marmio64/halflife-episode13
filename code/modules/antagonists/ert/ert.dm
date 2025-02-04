@@ -341,3 +341,11 @@
 /datum/antagonist/ert/riotpolice/New()
 	. = ..()
 	name_source = "VICE [rand(111,999)]"
+
+/datum/antagonist/ert/conscript
+	outfit = /datum/outfit/centcom/ert/conscript
+	role = "CORPORAL-"
+
+/datum/antagonist/ert/conscript/officer
+	outfit = /datum/outfit/centcom/ert/conscript/officer
+	role = "LIEUTENANT-"

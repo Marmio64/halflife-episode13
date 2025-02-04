@@ -756,3 +756,52 @@
 
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
 	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+
+/datum/outfit/centcom/ert/conscript
+	name = "Conscript Soldier"
+
+	id = /obj/item/card/id/advanced/centcom/ert
+	ears = /obj/item/radio/headset/civilprotection
+	uniform = /obj/item/clothing/under/syndicate/camo
+	gloves = /obj/item/clothing/gloves/fingerless
+	suit = /obj/item/clothing/suit/armor/kevlar
+	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	head = /obj/item/clothing/head/helmet/halflife/military/weak
+
+	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
+
+	implants = list(/obj/item/implant/mindshield)
+
+	back = /obj/item/storage/backpack/halflife/satchel/military
+
+	belt = /obj/item/flashlight/seclite
+
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/service = 3,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
+		/obj/item/grenade/syndieminibomb/bouncer = 1,
+		/obj/item/stack/medical/gauze = 1,
+	)
+
+/datum/outfit/centcom/ert/conscript/pre_equip(mob/living/carbon/human/H)
+	H.faction += "combine"
+	H.cmode_music = 'hl13/sound/music/combat/guarddown.ogg'
+	H.set_facial_hairstyle("Shaved", update = FALSE)
+	H.set_hairstyle("Crewcut") //this will call update_body_parts()
+	H.update_body()
+
+/datum/outfit/centcom/ert/conscript/officer
+	name = "Conscript Officer"
+
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython
+	head = /obj/item/clothing/head/beret/durathread/unitednations
+
+	l_pocket = /obj/item/knife/combat
+
+	backpack_contents = list(
+		/obj/item/ammo_box/a357 = 4,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
+		/obj/item/grenade/syndieminibomb/bouncer = 1,
+		/obj/item/stack/medical/gauze = 1,
+	)

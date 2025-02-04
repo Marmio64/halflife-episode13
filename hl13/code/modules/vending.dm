@@ -42,7 +42,7 @@
 					/obj/item/reagent_containers/cup/bottle/welding_fuel = 3,
 					/obj/item/food/rationpack/box = 5,
 					/obj/item/reagent_containers/pill/patch/medkit/vial = 3,
-					/obj/item/stack/sticky_tape = 2,
+					/obj/item/stack/sticky_tape = 4,
 					/obj/item/storage/toolbox/fishing = 2,
 					/obj/item/storage/box/fishing_hooks = 2,
 					/obj/item/storage/box/fishing_lines = 2,
@@ -141,6 +141,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/ammo_box/magazine/usp9mm = 6,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 4,
 		/obj/item/reagent_containers/spray/pepper = 6,
+		/obj/item/stack/credit_voucher = 10,
 	)
 	contraband = list(
 		/obj/item/clothing/glasses/sunglasses = 2,

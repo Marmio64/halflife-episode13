@@ -3,7 +3,7 @@
 	icon_state = "pulse"
 	damage = 20
 	wound_bonus = -10
-	armour_penetration = 15
+	armour_penetration = 20
 
 /obj/projectile/bullet/pulse/weak
 	name = "pulse round"

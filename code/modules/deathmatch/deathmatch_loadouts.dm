@@ -1295,3 +1295,31 @@
 	display_name = "Citizen"
 	desc = "You're unarmed and angry. Find a weapon."
 	uniform = /obj/item/clothing/under/citizen
+
+//actually slightly worse armor and gun compared to a marine, but you get another nade
+/datum/outfit/deathmatch_loadout/conscript
+	name = "Deathmatch: Conscript Soldier"
+
+	display_name = "Conscript Soldier"
+	desc = "Similarly armed to a rebel marine, you have slightly weaker armor and a slightly weaker weapon, but have an additional grenade."
+
+	uniform = /obj/item/clothing/under/syndicate/camo
+	gloves = /obj/item/clothing/gloves/fingerless
+	suit = /obj/item/clothing/suit/armor/kevlar
+	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	head = /obj/item/clothing/head/helmet/halflife/military/weak
+
+	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
+
+	back = /obj/item/storage/backpack/halflife/satchel/military
+
+	belt = /obj/item/flashlight/seclite
+
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/service = 3,
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+	)
+
+/datum/outfit/deathmatch_loadout/conscript/pre_equip(mob/living/carbon/human/H)
+	H.cmode_music = 'hl13/sound/music/combat/guarddown.ogg'

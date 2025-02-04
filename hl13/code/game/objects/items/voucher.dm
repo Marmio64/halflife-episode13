@@ -7,6 +7,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 	max_amount = 10
 
+	custom_price = 5
+
 	var/value = 5
 
 /obj/item/stack/credit_voucher/get_item_credit_value()

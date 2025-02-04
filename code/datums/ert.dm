@@ -60,6 +60,14 @@
 	mission = "Stabilize the city, detain city officials, kill all citizens who do not comply."
 	polldesc = "an ultra elite Overwatch Strike Team"
 
+/datum/ert/conscripts
+	roles = list(/datum/antagonist/ert/conscript)
+	leader_role = /datum/antagonist/ert/conscript/officer
+	rename_team = "Conscript Strike Team"
+	code = "Delta"
+	mission = "Stabilize the city, detain city officials, kill all citizens who do not comply."
+	polldesc = "a Conscript Strike Team"
+
 /datum/ert/containment_team
 	leader_role = /datum/antagonist/ert/overwatch/grunt
 	roles = list(/datum/antagonist/ert/overwatch/grunt)

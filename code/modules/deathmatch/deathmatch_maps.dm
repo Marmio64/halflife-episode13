@@ -263,6 +263,7 @@
 		/datum/outfit/deathmatch_loadout/combine/overwatch/shotgunner,
 		/datum/outfit/deathmatch_loadout/civilprotection,
 		/datum/outfit/deathmatch_loadout/crowbar,
+		/datum/outfit/deathmatch_loadout/conscript,
 	)
 	map_name = "citydistrict"
 	key = "citydistrict"
@@ -279,6 +280,7 @@
 		/datum/outfit/deathmatch_loadout/combine/overwatch/shotgunner,
 		/datum/outfit/deathmatch_loadout/civilprotection,
 		/datum/outfit/deathmatch_loadout/crowbar,
+		/datum/outfit/deathmatch_loadout/conscript,
 	)
 	map_name = "hl13train"
 	key = "hl13train"
@@ -295,6 +297,7 @@
 		/datum/outfit/deathmatch_loadout/combine/overwatch/shotgunner,
 		/datum/outfit/deathmatch_loadout/civilprotection,
 		/datum/outfit/deathmatch_loadout/crowbar,
+		/datum/outfit/deathmatch_loadout/conscript,
 	)
 	map_name = "cityalleys"
 	key = "cityalleys"
@@ -311,6 +314,7 @@
 		/datum/outfit/deathmatch_loadout/combine/overwatch/shotgunner,
 		/datum/outfit/deathmatch_loadout/civilprotection,
 		/datum/outfit/deathmatch_loadout/crowbar,
+		/datum/outfit/deathmatch_loadout/conscript,
 	)
 	map_name = "sandtraps"
 	key = "sandtraps"
@@ -347,6 +351,7 @@
 		/datum/outfit/deathmatch_loadout/combine/overwatch/shotgunner,
 		/datum/outfit/deathmatch_loadout/civilprotection,
 		/datum/outfit/deathmatch_loadout/crowbar,
+		/datum/outfit/deathmatch_loadout/conscript,
 	)
 	map_name = "outlands"
 	key = "outlands"
