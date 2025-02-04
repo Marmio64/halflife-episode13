@@ -138,5 +138,5 @@
 	icon = 'icons/effects/fov/field_of_view.dmi'
 	icon_state = "90_v"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	plane = ABOVE_LIGHTING_PLANE
+	plane = FULLSCREEN_PLANE
 	screen_loc = "BOTTOM,LEFT"
