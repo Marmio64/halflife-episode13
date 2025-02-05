@@ -63,12 +63,12 @@
 
 /datum/mood_event/hygiene/clean
 	description = "I feel rather clean."
-	mood_change = 1
+	mood_change = 2
 
 /datum/mood_event/hygiene/smelly
-	description = "I smell pretty bad."
+	description = "I smell pretty bad. I should take a shower."
 	mood_change = -2
 
 /datum/mood_event/hygiene/filthy
-	description = "I smell and feel like absolute shit."
+	description = "I smell and feel like absolute shit. I desperately need to wash myself."
 	mood_change = -5

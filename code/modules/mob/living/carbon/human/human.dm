@@ -725,6 +725,9 @@
 		set_coretemperature(get_body_temp_normal(apply_change = FALSE))
 		heat_exposure_stacks = 0
 
+	hygiene = HYGIENE_LEVEL_NORMAL //HL13 EDIT
+	hydration = HYDRATION_LEVEL_HYDRATED //HL13 EDIT
+
 	return ..()
 
 /mob/living/carbon/human/vomit(vomit_flags = VOMIT_CATEGORY_DEFAULT, vomit_type = /obj/effect/decal/cleanable/vomit/toxic, lost_nutrition = 10, distance = 1, purge_ratio = 0.1)

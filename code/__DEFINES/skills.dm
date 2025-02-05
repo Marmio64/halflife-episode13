@@ -53,7 +53,7 @@
 #define SKILLCHIP_CATEGORY_GENERAL "general"
 #define SKILLCHIP_CATEGORY_JOB "job"
 
-// Skillchip skills ------
+// HL13 EDIT SKILLS ------
 
 /// This person fires guns with more accuracy
 #define TRAIT_GOOD_AIM	"good_aim"
@@ -72,6 +72,8 @@
 #define TRAIT_MASOCHIST "masochist"
 
 #define TRAIT_SPARTAN "spartan"
+
+#define TRAIT_FILTHBORN "filthborn"
 
 #define TRAIT_NOSLEEP "nosleep"
 

@@ -305,13 +305,13 @@
 #define HYDRATION_LEVEL_START_MAX 600
 
 
-#define HYGIENE_LEVEL_CLEAN 400
-#define HYGIENE_LEVEL_TIDY 300
+#define HYGIENE_LEVEL_CLEAN 300
+#define HYGIENE_LEVEL_TIDY 250
 #define HYGIENE_LEVEL_NORMAL 200
 #define HYGIENE_LEVEL_DIRTY 100
 #define HYGIENE_LEVEL_FILTHY 25
 
-#define HYGIENE_FACTOR 100
+#define HYGIENE_FACTOR 0.1
 
 //Exhaustion levels for humans
 #define TIREDNESS_MAXIMUM_THRESHOLD 900 //~100 second grace period till movement slowdown sets in

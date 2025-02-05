@@ -109,24 +109,58 @@
 		tiredness = 0
 
 /mob/living/carbon/proc/handle_hygiene()
-	if(hygiene > HYGIENE_LEVEL_NORMAL)
-		adjust_hygiene(-1) //you naturally just get a little less clean over time
+
+	var/hygiene_loss = 0
+
+	if(hygiene > HYGIENE_LEVEL_DIRTY) //you naturally get dirty over time, but by default wont get so bad you get visible stink overlays
+		hygiene_loss -= HYGIENE_FACTOR
+
+	//If you're covered in blood, you'll start smelling like shit faster.
+	var/obj/item/head = get_item_by_slot(ITEM_SLOT_HEAD)
+	if(head)
+		if(GET_ATOM_BLOOD_DNA_LENGTH(head))
+			hygiene_loss -= 2 * HYGIENE_FACTOR
+
+	var/obj/item/mask = get_item_by_slot(ITEM_SLOT_HEAD)
+	if(mask)
+		if(GET_ATOM_BLOOD_DNA_LENGTH(mask))
+			hygiene_loss -= 2 * HYGIENE_FACTOR
+
+	var/obj/item/uniform = get_item_by_slot(ITEM_SLOT_ICLOTHING)
+	if(uniform)
+		if(GET_ATOM_BLOOD_DNA_LENGTH(uniform))
+			hygiene_loss -= 4 * HYGIENE_FACTOR
+
+	var/obj/item/suit = get_item_by_slot(ITEM_SLOT_OCLOTHING)
+	if(suit)
+		if(GET_ATOM_BLOOD_DNA_LENGTH(suit))
+			hygiene_loss -= 3 * HYGIENE_FACTOR
+
+	var/obj/item/feet = get_item_by_slot(ITEM_SLOT_FEET)
+	if(feet)
+		if(GET_ATOM_BLOOD_DNA_LENGTH(feet))
+			hygiene_loss -= 2 * HYGIENE_FACTOR
+
+	adjust_hygiene(hygiene_loss)
 
 	/var/image/smell = image('hl13/icons/effects/effects.dmi', "smell")//This is a hack, there has got to be a safer way to do this but I don't know it at the moment.
 	switch(hygiene)
 		if(HYGIENE_LEVEL_TIDY to INFINITY)
-			add_mood_event("hygiene", /datum/mood_event/hygiene/clean)
+			if(!HAS_TRAIT(src, TRAIT_FILTHBORN))
+				add_mood_event("hygiene", /datum/mood_event/hygiene/clean)
 			overlays -= smell
 		if(HYGIENE_LEVEL_DIRTY to HYGIENE_LEVEL_NORMAL)
 			clear_mood_event("hygiene")
 			overlays -= smell
 		if(HYGIENE_LEVEL_FILTHY to HYGIENE_LEVEL_DIRTY)
 			overlays -= smell
-			add_mood_event("hygiene", /datum/mood_event/hygiene/smelly)
+			if(!HAS_TRAIT(src, TRAIT_FILTHBORN))
+				add_mood_event("hygiene", /datum/mood_event/hygiene/smelly)
 		if(0 to HYGIENE_LEVEL_FILTHY)
 			overlays -= smell
 			overlays += smell
-			add_mood_event("hygiene", /datum/mood_event/hygiene/filthy)
+			if(!HAS_TRAIT(src, TRAIT_FILTHBORN))
+				add_mood_event("hygiene", /datum/mood_event/hygiene/filthy)
 
 /mob/living/carbon/proc/adjust_hygiene(var/amount)
 	var/old_hygiene = hygiene

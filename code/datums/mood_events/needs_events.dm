@@ -73,7 +73,7 @@
 //Generic needs events
 /datum/mood_event/shower
 	description = "I have recently had a nice shower."
-	mood_change = 4
+	mood_change = 2 //HL13 EDIT. Being clean is more important than just a shower.
 	timeout = 5 MINUTES
 
 /datum/mood_event/shower/add_effects(shower_reagent)

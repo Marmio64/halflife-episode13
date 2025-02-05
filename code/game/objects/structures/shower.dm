@@ -283,12 +283,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 	check_heat(living_target)
 
 	living_target.apply_status_effect(/datum/status_effect/washing_regen, shower_reagent)
-	living_target.add_mood_event("shower", /datum/mood_event/shower, shower_reagent)
+	if(!HAS_TRAIT(living_target, TRAIT_FILTHBORN)) //HL13 EDIT. Filthborns don't care about nice showers.
+		living_target.add_mood_event("shower", /datum/mood_event/shower, shower_reagent)
 
 	//HL13 EDIT START
 	if(iscarbon(target))
 		var/mob/living/carbon/C = target
-		C.adjust_hygiene(20) //Nice and clean
+		C.adjust_hygiene(10) //Nice and clean
 	//HL13 EDIT END
 
 /**
