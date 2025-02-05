@@ -113,6 +113,10 @@
 				span_notice("Nothing good..."))
 		searched = TRUE
 
+		if(iscarbon(user))
+			var/mob/living/carbon/C = user
+			C.adjust_hygiene(-15) //gross, rummaging through garbage
+
 /obj/structure/halflife/trash/food
 	name = "DO NOT USE ME - base type food trash"
 	desc = "I am a base type and if you see me in the map someone made a mistake."

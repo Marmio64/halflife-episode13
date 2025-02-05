@@ -482,6 +482,8 @@
 
 	playsound(src, 'sound/effects/splat.ogg', 50, TRUE)
 
+	adjust_hygiene(-50) //Vomiting is extremely gross
+
 	var/need_mob_update = FALSE
 	var/turf/location = get_turf(src)
 	if(!blood)

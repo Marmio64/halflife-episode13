@@ -743,16 +743,6 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_CARGO | DEPARTMENT_BITFLAG_ENGINEERING
 
-/datum/design/board/mining_equipment_vendor
-	name = "Mining Rewards Vendor Board"
-	desc = "The circuit board for a Mining Rewards Vendor."
-	id = "mining_equipment_vendor"
-	build_path = /obj/item/circuitboard/computer/order_console/mining
-	category = list(
-		RND_CATEGORY_MACHINE + RND_SUBCATEGORY_MACHINE_CARGO
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_CARGO
-
 /datum/design/board/suit_storage_unit
 	name = "Suit Storage Unit"
 	desc = "The circuit board for a suit storage unit."

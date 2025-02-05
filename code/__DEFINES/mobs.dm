@@ -280,13 +280,6 @@
 /// Equal to the highest sanity level
 #define SANITY_LEVEL_MAX SANITY_LEVEL_INSANE
 
-//Exhaustion levels for humans
-#define TIREDNESS_MAXIMUM_THRESHOLD 900 //~100 second grace period till movement slowdown sets in
-#define TIREDNESS_SLEEPY_THRESHOLD 850 //sleepy about every 28 minutes
-#define TIREDNESS_TIRED_THRESHOLD 600
-#define TIREDNESS_CLEAR_THRESHOLD 350
-#define TIREDNESS_ENERGIZED_THRESHOLD 100 //You feel nice and awake!
-
 //Nutrition levels for humans
 #define NUTRITION_LEVEL_FAT 650
 #define NUTRITION_LEVEL_FULL 600
@@ -299,6 +292,7 @@
 #define NUTRITION_LEVEL_START_MIN 250
 #define NUTRITION_LEVEL_START_MAX 350
 
+//HL13 EDIT START
 //Hydration levels for humans
 #define HYDRATION_LEVEL_FULL 1000
 #define HYDRATION_LEVEL_HYDRATED 650
@@ -309,6 +303,24 @@
 
 #define HYDRATION_LEVEL_START_MIN 500
 #define HYDRATION_LEVEL_START_MAX 600
+
+
+#define HYGIENE_LEVEL_CLEAN 400
+#define HYGIENE_LEVEL_TIDY 300
+#define HYGIENE_LEVEL_NORMAL 200
+#define HYGIENE_LEVEL_DIRTY 100
+#define HYGIENE_LEVEL_FILTHY 25
+
+#define HYGIENE_FACTOR 100
+
+//Exhaustion levels for humans
+#define TIREDNESS_MAXIMUM_THRESHOLD 900 //~100 second grace period till movement slowdown sets in
+#define TIREDNESS_SLEEPY_THRESHOLD 850 //sleepy about every 28 minutes
+#define TIREDNESS_TIRED_THRESHOLD 600
+#define TIREDNESS_CLEAR_THRESHOLD 350
+#define TIREDNESS_ENERGIZED_THRESHOLD 100 //You feel nice and awake!
+
+//HL13 EDIT END
 
 //Disgust levels for humans
 #define DISGUST_LEVEL_MAXEDOUT 150

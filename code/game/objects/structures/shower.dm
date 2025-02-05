@@ -285,6 +285,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 	living_target.apply_status_effect(/datum/status_effect/washing_regen, shower_reagent)
 	living_target.add_mood_event("shower", /datum/mood_event/shower, shower_reagent)
 
+	//HL13 EDIT START
+	if(iscarbon(target))
+		var/mob/living/carbon/C = target
+		C.adjust_hygiene(20) //Nice and clean
+	//HL13 EDIT END
+
 /**
  * Toggle whether shower is actually on and outputting water.
  * May not match what user asked to happen by clicking.

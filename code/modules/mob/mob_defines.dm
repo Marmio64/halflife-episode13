@@ -111,7 +111,8 @@
 
 	/// Hunger level of the mob
 	var/nutrition = NUTRITION_LEVEL_START_MIN // randomised in Initialize
-	var/hydration = HYDRATION_LEVEL_START_MIN
+	var/hydration = HYDRATION_LEVEL_START_MIN //HL13 EDIT
+	var/hygiene = HYGIENE_LEVEL_NORMAL //HL13 EDIT
 	/// Satiation level of the mob
 	var/satiety = 0//Carbon
 

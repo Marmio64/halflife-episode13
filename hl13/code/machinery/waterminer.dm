@@ -65,7 +65,7 @@
 /obj/machinery/water_miner/attackby(obj/item/I, mob/user, params)
 	if(I.tool_behaviour == TOOL_WRENCH && I.use_tool(src, user, 20, volume=50))
 		if(!anchored)
-			if(istype(loc, /turf/open/water)) //turf/open/halflife/water
+			if(istype(loc, /turf/open/halflife/water)) //turf/open/halflife/water
 				anchored = 1
 				user.visible_message( \
 					"[user] sets \the [src] down into the water.", \

@@ -37,8 +37,10 @@
 			handle_heart(seconds_per_tick, times_fired)
 			//handles liver failure effects, if we lack a liver
 			handle_liver(seconds_per_tick, times_fired)
-			//Handles any pain effects
+			//HL13 EDIT Handles any pain effects
 			handle_pain()
+
+			handle_hygiene() //HL13 EDIT
 
 		// for special species interactions
 		dna.species.spec_life(src, seconds_per_tick, times_fired)
@@ -65,6 +67,8 @@
 				if(hydration < HYDRATION_LEVEL_DEHYDRATED)
 					adjust_tiredness(1)
 		return TRUE
+
+//HL13 EDIT START
 
 /mob/living/carbon/proc/adjust_tiredness(amount)
 	tiredness += amount
@@ -103,6 +107,36 @@
 
 	else if(tiredness < 0)
 		tiredness = 0
+
+/mob/living/carbon/proc/handle_hygiene()
+	if(hygiene > HYGIENE_LEVEL_NORMAL)
+		adjust_hygiene(-1) //you naturally just get a little less clean over time
+
+	/var/image/smell = image('hl13/icons/effects/effects.dmi', "smell")//This is a hack, there has got to be a safer way to do this but I don't know it at the moment.
+	switch(hygiene)
+		if(HYGIENE_LEVEL_TIDY to INFINITY)
+			add_mood_event("hygiene", /datum/mood_event/hygiene/clean)
+			overlays -= smell
+		if(HYGIENE_LEVEL_DIRTY to HYGIENE_LEVEL_NORMAL)
+			clear_mood_event("hygiene")
+			overlays -= smell
+		if(HYGIENE_LEVEL_FILTHY to HYGIENE_LEVEL_DIRTY)
+			overlays -= smell
+			add_mood_event("hygiene", /datum/mood_event/hygiene/smelly)
+		if(0 to HYGIENE_LEVEL_FILTHY)
+			overlays -= smell
+			overlays += smell
+			add_mood_event("hygiene", /datum/mood_event/hygiene/filthy)
+
+/mob/living/carbon/proc/adjust_hygiene(var/amount)
+	var/old_hygiene = hygiene
+	if(amount>0)
+		hygiene = min(hygiene+amount, HYGIENE_LEVEL_CLEAN)
+
+	else if(old_hygiene)
+		hygiene = max(hygiene+amount, 0)
+
+//HL13 EDIT END
 
 ///for when mood is disabled and hunger should handle slowdowns
 /mob/living/carbon/proc/handle_sleep_slowdown()

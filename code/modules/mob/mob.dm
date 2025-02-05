@@ -1465,6 +1465,8 @@
 	. = ..()
 	mob_mood?.update_nutrition_moodlets()
 
+//HL13 EDIT BEGIN
+
 /mob/proc/adjust_hydration(change)
 	if(HAS_TRAIT(src, TRAIT_NOHUNGER))
 		hydration = HYDRATION_LEVEL_FULL
@@ -1478,6 +1480,9 @@
 	hydration = max(0, change)
 	if(hydration > HYDRATION_LEVEL_FULL)
 		hydration = HYDRATION_LEVEL_FULL
+
+
+//HL13 EDIT END
 
 ///Apply a proper movespeed modifier based on items we have equipped
 /mob/proc/update_equipment_speed_mods()

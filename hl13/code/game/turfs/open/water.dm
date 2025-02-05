@@ -198,6 +198,13 @@
 		var/mob/living/M = A
 		var/mob/living/carbon/H = M
 		//addtimer(CALLBACK(src, PROC_REF(transfer_mob_layer), M), 0.2 SECONDS)
+
+		if(!sewer)
+			if(H.hygiene < HYGIENE_LEVEL_NORMAL)
+				H.adjust_hygiene(20) //Cleans you up a little if it is clean water
+		else
+			H.adjust_hygiene(-40) //Otherwise, fucking disgusting
+
 		if(!(M.swimming))
 			switch(depth)
 				if(3)

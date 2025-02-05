@@ -58,3 +58,17 @@
 /datum/mood_event/maxpain
 	description = "AGH, FUCK! THE PAIN HURTS SO MUCH!!."
 	mood_change = -12
+
+//hygiene
+
+/datum/mood_event/hygiene/clean
+	description = "I feel rather clean."
+	mood_change = 1
+
+/datum/mood_event/hygiene/smelly
+	description = "I smell pretty bad."
+	mood_change = -2
+
+/datum/mood_event/hygiene/filthy
+	description = "I smell and feel like absolute shit."
+	mood_change = -5
