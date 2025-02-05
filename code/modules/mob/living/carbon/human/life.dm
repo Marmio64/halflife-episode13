@@ -112,7 +112,7 @@
 
 	var/hygiene_loss = 0
 
-	if(hygiene > HYGIENE_LEVEL_DIRTY) //you naturally get dirty over time, but by default wont get so bad you get visible stink overlays
+	if(hygiene > (HYGIENE_LEVEL_DIRTY - 5)) //you naturally get dirty over time, but by default wont get so bad you get visible stink overlays
 		hygiene_loss -= HYGIENE_FACTOR
 
 	//If you're covered in blood, you'll start smelling like shit faster.
@@ -141,6 +141,9 @@
 		if(GET_ATOM_BLOOD_DNA_LENGTH(feet))
 			hygiene_loss -= 2 * HYGIENE_FACTOR
 
+	if(HAS_TRAIT(src, TRAIT_HIGHBORN))
+		hygiene_loss *= 2 //To a highborn person, filth is more scrutinous
+
 	adjust_hygiene(hygiene_loss)
 
 	/var/image/smell = image('hl13/icons/effects/effects.dmi', "smell")//This is a hack, there has got to be a safer way to do this but I don't know it at the moment.
@@ -154,12 +157,16 @@
 			overlays -= smell
 		if(HYGIENE_LEVEL_FILTHY to HYGIENE_LEVEL_DIRTY)
 			overlays -= smell
-			if(!HAS_TRAIT(src, TRAIT_FILTHBORN))
+			if(HAS_TRAIT(src, TRAIT_HIGHBORN))
+				add_mood_event("hygiene", /datum/mood_event/hygiene/smelly/highborn)
+			else if(!HAS_TRAIT(src, TRAIT_FILTHBORN))
 				add_mood_event("hygiene", /datum/mood_event/hygiene/smelly)
 		if(0 to HYGIENE_LEVEL_FILTHY)
 			overlays -= smell
 			overlays += smell
-			if(!HAS_TRAIT(src, TRAIT_FILTHBORN))
+			if(HAS_TRAIT(src, TRAIT_HIGHBORN))
+				add_mood_event("hygiene", /datum/mood_event/hygiene/filthy/highborn)
+			else if(!HAS_TRAIT(src, TRAIT_FILTHBORN))
 				add_mood_event("hygiene", /datum/mood_event/hygiene/filthy)
 
 /mob/living/carbon/proc/adjust_hygiene(var/amount)

@@ -75,6 +75,8 @@
 
 #define TRAIT_FILTHBORN "filthborn"
 
+#define TRAIT_HIGHBORN "highborn"
+
 #define TRAIT_NOSLEEP "nosleep"
 
 #define TRAIT_BAD_AIM	"bad_aim"

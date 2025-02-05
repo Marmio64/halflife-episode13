@@ -72,3 +72,11 @@
 /datum/mood_event/hygiene/filthy
 	description = "I smell and feel like absolute shit. I desperately need to wash myself."
 	mood_change = -5
+
+/datum/mood_event/hygiene/smelly/highborn
+	description = "I smell terrible! This is in no way fit for someone such as myself, I need a washing."
+	mood_change = -5
+
+/datum/mood_event/hygiene/filthy/highborn
+	description = "I smell absolutely disgusting, this is completely unfit for someone of my status! I need a shower right now!!"
+	mood_change = -10
