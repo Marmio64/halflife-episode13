@@ -84,10 +84,12 @@
 
 /obj/machinery/water_miner/update_icon_state()
 	. = ..()
-	if(!full)
-		icon_state = "reactor_off"
+	if(mining)
+		icon_state = "harvester"
+	else if(!full)
+		icon_state = "harvester_off"
 	else
-		icon_state = "reactor"
+		icon_state = "harvester_full"
 
 /obj/item/water_canister
 	name = "water canister"
