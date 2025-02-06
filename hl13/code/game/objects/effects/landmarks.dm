@@ -106,6 +106,10 @@ GLOBAL_LIST_EMPTY(chosen_station_templates)
 	key = "sewerright";
 	name = "sewerright"
 
+/obj/modular_map_root/outlandsbunkerwest
+	config_file = "strings/modular_maps/sewercity.toml"
+	key = "outlandsbunkerwest";
+	name = "outlandsbunkerwest"
 
 
 /////////////////////////////////
