@@ -744,6 +744,7 @@
 	c_tag = "Communications Relay";
 	dir = 4
 	},
+/obj/machinery/telecomms/processor/preset_one/birdstation,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/dispatch)
 "bnK" = (
@@ -5963,7 +5964,7 @@
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/indoors/slums)
 "jMK" = (
-/obj/machinery/telecomms/allinone/indestructible,
+/obj/machinery/telecomms/bus/preset_one/birdstation,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/dispatch)
 "jOr" = (
@@ -9113,6 +9114,10 @@
 "oYG" = (
 /turf/open/floor/plating/indoor/carpet/shaggy/violet,
 /area/halflife/indoors/bar/apartments)
+"oYJ" = (
+/obj/machinery/telecomms/hub/preset,
+/turf/open/floor/plating/indoor/tile/navy,
+/area/halflife/indoors/dispatch)
 "oYS" = (
 /obj/structure/halflife/trash/cardboard{
 	dir = 8
@@ -11793,6 +11798,10 @@
 	dir = 1
 	},
 /area/halflife/indoors/slums)
+"tyz" = (
+/obj/machinery/telecomms/receiver/preset_left/birdstation,
+/turf/open/floor/plating/indoor/tile/navy,
+/area/halflife/indoors/dispatch)
 "tyX" = (
 /obj/structure/table/halflife/no_smooth/wood/stand,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -12879,6 +12888,7 @@
 /area/halflife/indoors)
 "vmc" = (
 /obj/machinery/light/small/directional/east,
+/obj/machinery/telecomms/broadcaster/preset_left/birdstation,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/dispatch)
 "vme" = (
@@ -13198,6 +13208,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
+"vIG" = (
+/obj/machinery/telecomms/server/presets/common/birdstation,
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/dispatch)
 "vIJ" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/effect/turf_decal/trimline/dark_green/filled/line{
@@ -55855,8 +55869,8 @@ lnG
 lDO
 ulM
 cMu
-ctK
-kzg
+oYJ
+jMK
 blv
 ctK
 ulM
@@ -55984,7 +55998,7 @@ ulM
 ulM
 cMu
 kzg
-jMK
+kzg
 kzg
 kzg
 ulM
@@ -56111,8 +56125,8 @@ ulM
 ulM
 ulM
 cMu
-ctK
-kzg
+tyz
+vIG
 vmc
 ctK
 ulM

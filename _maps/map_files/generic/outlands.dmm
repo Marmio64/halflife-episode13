@@ -107,6 +107,34 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"bW" = (
+/obj/structure/table/halflife/metal,
+/obj/item/multitool{
+	pixel_x = -11;
+	pixel_y = 9
+	},
+/obj/item/circuitboard/machine/telecomms/relay{
+	pixel_x = 6;
+	pixel_y = 14
+	},
+/obj/item/stock_parts/servo{
+	pixel_x = 10;
+	pixel_y = -4
+	},
+/obj/item/stock_parts/servo{
+	pixel_x = -6;
+	pixel_y = -1
+	},
+/obj/item/stock_parts/subspace/filter{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/stock_parts/subspace/filter{
+	pixel_x = 9;
+	pixel_y = 2
+	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors)
 "bY" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -675,6 +703,12 @@
 "jn" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/laborcamp)
+"jq" = (
+/obj/machinery/camera{
+	c_tag = "Outlands Communications Amplifier"
+	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors)
 "js" = (
 /mob/living/simple_animal/hostile/halflife/antlion{
 	dir = 8
@@ -825,7 +859,10 @@
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
 "lf" = (
-/obj/machinery/telecomms/allinone,
+/obj/item/food/cheese/wheel{
+	desc = "Sometimes I dream about cheese."
+	},
+/obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors)
 "lg" = (
@@ -916,6 +953,14 @@
 /obj/structure/halflife/barrel/quadruple/grey,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"lU" = (
+/obj/machinery/door/airlock/highsecurity/combine,
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors)
 "lV" = (
 /obj/effect/turf_decal/siding/thinplating,
 /turf/open/floor/plating/ground/sidewalk,
@@ -1005,6 +1050,12 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"np" = (
+/obj/machinery/door/airlock/highsecurity/combine,
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors)
 "nu" = (
 /obj/structure/halflife/trash/glass/cans,
 /turf/open/floor/plating/ground/dirt,
@@ -1365,6 +1416,9 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/forest)
+"sn" = (
+/turf/closed/wall/halflife/metal,
+/area/halflife/indoors)
 "sq" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 4
@@ -3571,6 +3625,11 @@
 /mob/living/simple_animal/halflife/grub,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"Wt" = (
+/obj/machinery/telecomms/relay/preset/mining,
+/obj/machinery/light/blacklight/directional/north,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors)
 "Wu" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -3752,6 +3811,9 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
+"YE" = (
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors)
 "YG" = (
 /obj/structure/chair/office/halflife/blue{
 	dir = 1
@@ -3775,6 +3837,15 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
+"YR" = (
+/obj/structure/table/halflife/metal,
+/obj/item/storage/toolbox/electrical{
+	pixel_x = 0;
+	pixel_y = 9
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors)
 "YT" = (
 /obj/structure/flora/bush/fullgrass/style_random,
 /obj/structure/flora/tree/jungle/small,
@@ -57088,9 +57159,9 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
+zB
+zB
+zB
 zB
 XA
 XA
@@ -57285,13 +57356,13 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
 zB
-XA
-XA
-XA
+sn
+sn
+sn
+sn
+sn
+sn
 XA
 tN
 GX
@@ -57482,14 +57553,14 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
 zB
-XA
-XA
-XA
-XA
+sn
+YE
+YE
+YE
+sn
+sn
+sn
 tN
 pF
 LN
@@ -57679,14 +57750,14 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
 zB
-XA
-XA
-XA
-XA
+sn
+YE
+YE
+YE
+sn
+bW
+sn
 GX
 tN
 LN
@@ -57876,14 +57947,14 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
 zB
-XA
-XA
-XA
-XA
+sn
+Wt
+YE
+YE
+np
+YE
+lU
 GX
 GX
 GX
@@ -58073,14 +58144,14 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
 zB
-XA
-XA
-XA
-XA
+sn
+jq
+YE
+YE
+sn
+YR
+sn
 tN
 tN
 tN
@@ -58270,14 +58341,14 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
 zB
-XA
-XA
-XA
-XA
+sn
+YE
+YE
+YE
+sn
+sn
+sn
 Rs
 tN
 tN
@@ -58467,13 +58538,13 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
 zB
-XA
-XA
-XA
+sn
+sn
+sn
+sn
+sn
+sn
 XA
 Rs
 LN
@@ -58664,9 +58735,9 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
+zB
+zB
+zB
 zB
 XA
 XA
