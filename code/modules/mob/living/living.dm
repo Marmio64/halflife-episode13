@@ -90,7 +90,7 @@
 			)
 			return . | ZIMPACT_NO_MESSAGE
 
-	var/incoming_damage = (levels * 5) ** 1.5
+	var/incoming_damage = (levels * 8) ** 1.5 //HL13 EDIT, falling is more deadly
 	// Smaller mobs with catlike grace can ignore damage (EG: cats)
 	var/small_surface_area = mob_size <= MOB_SIZE_SMALL
 	var/skip_knockdown = FALSE

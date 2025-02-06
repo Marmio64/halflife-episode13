@@ -15,7 +15,7 @@
 
 /datum/supply_pack/security/militarygear
 	name = "Old Military Gear Crate"
-	desc = "Two sets of kevlar, helmets, camo fatigues, ruck sacks, and gas masks. Most of this gear is no longer in circulation, and now runs a premium."
+	desc = "Two sets of kevlar, helmets, camo fatigues, fingerless gloves, ruck sacks, gas masks, and one beret. Most of this gear is no longer in circulation, and now runs a premium."
 	cost = CARGO_CRATE_VALUE * 12
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/clothing/suit/armor/kevlar,
@@ -26,6 +26,9 @@
 					/obj/item/clothing/mask/gas/hl2/military/hardened,
 					/obj/item/storage/backpack/halflife/satchel/military,
 					/obj/item/storage/backpack/halflife/satchel/military,
+					/obj/item/clothing/gloves/fingerless,
+					/obj/item/clothing/gloves/fingerless,
+					/datum/market_item/halflife/clothing/beret,
 					/obj/item/clothing/head/helmet/halflife/military/weak,
 					/obj/item/clothing/head/helmet/halflife/military/weak)
 	crate_name = "military gear crate"

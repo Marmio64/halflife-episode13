@@ -3,7 +3,7 @@
 	name = "water harvester"
 	desc = "Automatically harvests water from below, filters it, and packs it into easily carriable canisters which are often exported by combine cities."
 	icon = 'hl13/icons/obj/machinery.dmi'
-	icon_state = "reactor_off"
+	icon_state = "harvester_off"
 	density = TRUE
 	anchored = 0
 	var/full = FALSE
@@ -36,6 +36,11 @@
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		mining = FALSE
 		return
+
+	if(!istype(loc, /turf/open/halflife/water) || !anchored) //turf/open/halflife/water
+		to_chat(user, span_warning("The harvester needs to be anchored over water to be turned on!"))
+		return
+
 	to_chat(user, span_warning("You start the mining cycle."))
 	playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
 	mining = TRUE

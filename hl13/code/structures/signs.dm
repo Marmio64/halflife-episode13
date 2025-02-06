@@ -3,6 +3,7 @@
 	desc = "A sign declaring which block this area is considered a part of."
 	max_integrity = 500
 	icon_state = "block"
+	icon = 'hl13/icons/obj/signs.dmi'
 
 /obj/structure/sign/block/twothree
 	icon_state = "block23"
