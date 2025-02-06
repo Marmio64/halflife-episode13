@@ -32,10 +32,11 @@
 
 /datum/component/bloody_spreader/proc/spread_yucky_blood(atom/parent, atom/bloody_fool)
 	SIGNAL_HANDLER
-	bloody_fool.add_blood_DNA(blood_dna, diseases)
-	blood_left--
-	if(blood_left <= 0)
-		qdel(src)
+	if(prob(20)) //HL13 EDIT, bloody meat is not guaranteed to gunk you up immediately
+		bloody_fool.add_blood_DNA(blood_dna, diseases)
+		blood_left--
+		if(blood_left <= 0)
+			qdel(src)
 
 /datum/component/bloody_spreader/InheritComponent(/datum/component/new_comp, i_am_original, blood_left = 0)
 

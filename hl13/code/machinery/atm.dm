@@ -41,7 +41,7 @@
 			playsound(loc, 'hl13/sound/machines/atm/cardreader_read.ogg', 50)
 			visible_message("<span class='warning'>Incorrect Password.</span>", null, null, 5, null, null, null, null, TRUE)
 			return
-		var/nextquestion = input(user, "Please select a function:", "Function Selection") as null|anything in list("withdraw", "change password", "direct deposit")
+		var/nextquestion = input(user, "Please select a function:", "Function Selection") as null|anything in list("withdraw", "change password", "direct deposit", "deposit credits")
 		switch(nextquestion)
 			if("withdraw")
 				var/withdrawfund = input(user, "Please select the amount to withdraw:", "Withdraw Money") as null|num
@@ -86,6 +86,10 @@
 						BA.account_balance += totalmoney
 					successful_transaction()
 					break
+			if("deposit credits")
+				to_chat(user, "<span class='warning'>Your account number is [CID.registered_account.account_id]. Enter this number after inserting credits into the ATM in order to deposit into the account.</span>")
+				playsound(loc, 'hl13/sound/machines/atm/cardreader_read.ogg', 50)
+				return
 	if(istype(W, /obj/item/holochip))
 		var/obj/item/holochip/HC = W
 		if(HC.credits <= 0 || !HC.credits)

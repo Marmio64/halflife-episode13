@@ -83,6 +83,17 @@
 	icon_state = "smissile"
 	id = "syndie_missile"
 
+/datum/pod_style/canister
+	name = "canister"
+	ui_name = "Canister"
+	desc = "A large combine canister, which can store various, sometimes unsavory, creatures and items."
+	shape = POD_SHAPE_OTHER
+	icon_state = "canister"
+	has_door = FALSE
+	decal_icon = null
+	glow_color = null
+	id = "canister"
+
 /datum/pod_style/box
 	name = "\improper Aussec supply crate"
 	ui_name = "Supply Box"
