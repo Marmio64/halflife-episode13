@@ -7,7 +7,7 @@
 /obj/machinery/mining_terminal
 	name = "union mining terminal"
 	desc = "A wall mounted terminal. Union Miners can swipe their ID cards here to turn points into credits."
-	icon = 'hl13/icons/obj/terminals.dmi'
+	icon = 'hl13/icons/obj/machines/terminals.dmi'
 	icon_state = "mining_terminal"
 
 /obj/machinery/mining_terminal/attackby(obj/item/item, mob/user, params)

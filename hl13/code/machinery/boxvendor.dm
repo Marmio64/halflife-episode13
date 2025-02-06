@@ -2,7 +2,7 @@
 	name = "\improper Factory Container Vendor"
 	desc = "A machine which deposits containers for factory workers to fill, seal, and sell to the cargo dropship every afternoon."
 	icon_state = "box_dispenser"
-	icon = 'hl13/icons/obj/machinery.dmi'
+	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	resistance_flags = FIRE_PROOF
 	max_integrity = 1500 //Because it is pretty important, and there probably will only be one of them.
 

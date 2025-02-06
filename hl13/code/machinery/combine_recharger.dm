@@ -1,7 +1,7 @@
 /obj/machinery/combine_recharger
 	name = "combine recharger"
 	desc = "A wall mounted recharger unit which can refill the battery capacity of combine suits. It slowly restores power over time."
-	icon = 'hl13/icons/obj/machinery.dmi'
+	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "suitcharger"
 	//circuit = /obj/item/circuitboard/machine/combinerecharger
 	var/capacity = 50

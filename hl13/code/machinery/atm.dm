@@ -1,7 +1,7 @@
 /obj/machinery/atm
 	name = "automated teller machine"
 	desc = "A wall mounted teller machine installed by the combine. You can give it your citizen card or a currency to withdraw or deposit into your account."
-	icon = 'hl13/icons/obj/terminals.dmi'
+	icon = 'hl13/icons/obj/machines/terminals.dmi'
 	icon_state = "atm"
 	base_icon_state = "atm"
 

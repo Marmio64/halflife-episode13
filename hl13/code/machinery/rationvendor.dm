@@ -2,7 +2,7 @@
 	name = "\improper Ration Vendor"
 	desc = "A machine that will deliver you a suitable ration depending on your status, and if you have a ration voucher loaded on your account. Reminder that rations stored in this machine are independent from other machines."
 	icon_state = "ration_dispenser"
-	icon = 'hl13/icons/obj/machinery.dmi'
+	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	var/icon_state_vend = "ration_dispenser-vend"
 	var/icon_state_deny = "ration_dispenser-deny"
 	resistance_flags = FIRE_PROOF

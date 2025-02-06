@@ -1,7 +1,7 @@
 /obj/machinery/vending/breenwater
 	name = "\improper Breen's Private Reserve"
 	desc = "The finest, most pure water around."
-	icon = 'hl13/icons/obj/vending.dmi'
+	icon = 'hl13/icons/obj/machines/vending.dmi'
 	icon_state = "breen_machine"
 	panel_type = "panel2"
 	product_ads = "Stay hydrated.;A thirsty citizen is a inefficient citizen.;Drink Breen's private reserve!;The purest water around."
@@ -90,7 +90,7 @@
 /obj/machinery/vending/combine_wallmed
 	name = "\improper Combine Automated Med Shop"
 	desc = "The CAMS is a wall mounted vendor which sells basic medical supplies for high prices."
-	icon = 'hl13/icons/obj/vending.dmi'
+	icon = 'hl13/icons/obj/machines/vending.dmi'
 	icon_state = "wallmed"
 	icon_deny = "wallmed-deny"
 	panel_type = "wallmed-panel"

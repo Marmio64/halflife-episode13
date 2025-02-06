@@ -1434,10 +1434,12 @@
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/distributioncenter)
 "cyG" = (
-/obj/structure/table/halflife/metal,
 /obj/item/stack/credit_voucher,
 /obj/item/stack/credit_voucher,
 /obj/item/stack/credit_voucher,
+/obj/structure/table/halflife/no_smooth/large/metal/desk/alt{
+	dir = 1
+	},
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall/civilprotection/preproom)
 "cyL" = (
@@ -1480,7 +1482,7 @@
 	c_tag = "Town Hall Overseer Room";
 	dir = 9
 	},
-/obj/structure/table/halflife/metal,
+/obj/structure/closet/halflife,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall/civilprotection/preproom)
 "cEK" = (
@@ -10231,9 +10233,9 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bar/apartments)
 "rcB" = (
-/obj/item/hl13_small_flag/poland,
-/turf/closed/indestructible/syndicate,
-/area/halflife/outdoors)
+/obj/structure/chair/office/halflife/blue,
+/turf/open/floor/plating/indoor/tile/navy,
+/area/halflife/indoors/townhall/civilprotection/preproom)
 "rdC" = (
 /obj/structure/halflife/trash/wood,
 /turf/open/floor/plating/indoor/woodc,
@@ -14595,6 +14597,7 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
+/obj/item/hl13_small_flag/poland,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/secondfloor)
 "xRX" = (
@@ -46088,7 +46091,7 @@ tJI
 (70,1,2) = {"
 tJI
 tJI
-rcB
+tJI
 lli
 lli
 lli
@@ -51218,8 +51221,8 @@ cRd
 cRd
 cRd
 cRd
-cRd
 wWf
+cRd
 cRd
 cRd
 xyL
@@ -51345,11 +51348,11 @@ lli
 lli
 lli
 lli
-cRd
 cYb
 puP
 fHq
 cRd
+xyL
 xyL
 xyL
 xyL
@@ -51473,11 +51476,11 @@ lli
 lli
 lli
 lli
-cRd
 vkR
 xha
 wpZ
 cRd
+xyL
 xyL
 xyL
 xyL
@@ -51601,7 +51604,6 @@ lli
 lli
 lli
 lli
-cRd
 kSb
 vwe
 gph
@@ -51616,6 +51618,7 @@ far
 vMQ
 aBh
 far
+cGb
 cGb
 oSK
 mYB
@@ -51733,7 +51736,6 @@ cRd
 cRd
 cRd
 cRd
-cRd
 bTF
 vMQ
 dbj
@@ -51746,6 +51748,7 @@ hdQ
 nau
 cGb
 gXJ
+mYB
 mYB
 fHh
 fHh
@@ -51861,7 +51864,6 @@ cRd
 cRd
 cRd
 cRd
-cRd
 nFh
 vMQ
 rqP
@@ -51874,6 +51876,7 @@ rNO
 jCg
 cGb
 nuJ
+mYB
 mYB
 mYB
 rkc
@@ -51990,7 +51993,6 @@ qNT
 cRd
 mTW
 xyL
-xyL
 vMQ
 iHx
 rNO
@@ -52004,6 +52006,7 @@ cGb
 cIl
 dzV
 mYB
+cGb
 cGb
 cGb
 fqI
@@ -52118,7 +52121,6 @@ oDD
 wFc
 xyL
 xyL
-xyL
 vMQ
 bHc
 hdQ
@@ -52134,6 +52136,7 @@ gus
 mYB
 ior
 oCt
+mYB
 mYB
 cyG
 gyG
@@ -52245,7 +52248,6 @@ rTT
 rjJ
 cRd
 fKR
-xyL
 hHQ
 vMQ
 iBX
@@ -52263,7 +52265,8 @@ kSQ
 cGb
 iGY
 sxf
-oiR
+rcB
+mYB
 gyG
 nsY
 dXz
@@ -52373,7 +52376,6 @@ cRd
 cRd
 cRd
 cRd
-cRd
 xyL
 orF
 orF
@@ -52384,12 +52386,13 @@ orF
 orF
 orF
 orF
-orF
+cGb
 mYB
 mYB
 mYB
 ior
 lqK
+mYB
 feI
 cDw
 gyG
@@ -52500,7 +52503,6 @@ qhq
 wXS
 gwd
 gwd
-gwd
 qLF
 xyL
 orF
@@ -52516,6 +52518,7 @@ iED
 mYB
 fHh
 mYB
+cGb
 cGb
 cGb
 cGb
@@ -52628,7 +52631,6 @@ ldF
 gwd
 gwd
 gwd
-gwd
 cRd
 nFh
 orF
@@ -52644,11 +52646,12 @@ fVK
 mYB
 fHh
 mYB
+mYB
 qzN
 qzN
 cGb
-wWg
 rIV
+nsY
 nsY
 dXz
 was
@@ -52756,7 +52759,6 @@ fOk
 inW
 aDd
 inW
-inW
 cRd
 bTF
 orF
@@ -52773,10 +52775,11 @@ mYB
 fHh
 mYB
 mYB
+mYB
 sig
 cGb
-wWg
 oYZ
+nsY
 nsY
 dXz
 gjL
@@ -52885,7 +52888,6 @@ cRd
 cRd
 cRd
 cRd
-cRd
 ljd
 orF
 ado
@@ -52902,9 +52904,10 @@ fHh
 mYB
 mYB
 mYB
+mYB
 cGb
-wWg
 gjL
+nsY
 nsY
 ruq
 nsY
@@ -53013,7 +53016,6 @@ fCI
 vjx
 vjx
 vjx
-vjx
 dHd
 orF
 jLl
@@ -53027,6 +53029,7 @@ mSs
 iED
 mYB
 fHh
+mYB
 sig
 cGb
 cGb
@@ -53141,9 +53144,8 @@ fCI
 vjx
 vjx
 vjx
-vjx
 dHd
-orF
+oPp
 orF
 orF
 orF
@@ -53155,6 +53157,7 @@ orF
 orF
 mYB
 fHh
+mYB
 mYB
 cGb
 cGb
@@ -53269,7 +53272,6 @@ fCI
 vjx
 vjx
 vjx
-vjx
 dHd
 oPp
 ihe
@@ -53281,6 +53283,7 @@ bvx
 fwq
 gEq
 dhS
+mYB
 mYB
 mYB
 mYB
@@ -53397,7 +53400,6 @@ fCI
 vjx
 vjx
 oTu
-vjx
 dHd
 oPp
 ihe
@@ -53409,6 +53411,7 @@ jzZ
 fwq
 gEq
 oPp
+cGb
 cGb
 cGb
 cGb
@@ -53525,7 +53528,6 @@ fCI
 vjx
 vjx
 vjx
-vjx
 igO
 oPp
 ihe
@@ -53537,6 +53539,7 @@ jzZ
 fwq
 gEq
 oPp
+cGb
 hNO
 uXQ
 uXQ
@@ -53653,7 +53656,6 @@ fCI
 vjx
 vjx
 vjx
-vjx
 dHd
 oPp
 dDJ
@@ -53665,6 +53667,7 @@ gEq
 fAX
 dDJ
 oPp
+cGb
 uXQ
 kbw
 idI
@@ -53781,7 +53784,6 @@ fCI
 vjx
 vjx
 vjx
-vjx
 dHd
 oPp
 oPp
@@ -53793,6 +53795,7 @@ oPp
 oPp
 oPp
 oPp
+cGb
 uXQ
 nKE
 iaK
@@ -72978,7 +72981,7 @@ avZ
 avZ
 avZ
 aXn
-tHM
+mtq
 sTd
 fGN
 mdu
@@ -73618,7 +73621,7 @@ mAz
 mAz
 avZ
 iyg
-tHM
+mtq
 wLt
 ptj
 knT
@@ -74901,7 +74904,7 @@ pVQ
 pVQ
 pVQ
 pVQ
-pVQ
+mDC
 jLN
 avZ
 sYz
@@ -75029,7 +75032,7 @@ rvl
 rvl
 rvl
 rvl
-rvl
+avZ
 avZ
 avZ
 mDo
@@ -75157,7 +75160,7 @@ rvl
 rvl
 rvl
 rvl
-rvl
+avZ
 avZ
 avZ
 avZ
@@ -75415,7 +75418,7 @@ gdE
 gdE
 gdE
 gdE
-gdE
+mAz
 mAz
 mAz
 mAz
@@ -75543,7 +75546,7 @@ gdE
 gdE
 gdE
 gdE
-gdE
+mAz
 mAz
 mAz
 mAz
@@ -75671,7 +75674,7 @@ gdE
 gdE
 gdE
 gdE
-gdE
+mAz
 mAz
 mAz
 mAz
@@ -75799,7 +75802,7 @@ gdE
 gdE
 gdE
 gdE
-gdE
+mAz
 mAz
 mAz
 mAz
@@ -75927,7 +75930,7 @@ gdE
 gdE
 gdE
 gdE
-gdE
+mAz
 mAz
 mAz
 mAz
@@ -76055,7 +76058,7 @@ gdE
 gdE
 gdE
 gdE
-gdE
+mAz
 mAz
 mAz
 mAz
@@ -76183,7 +76186,7 @@ gdE
 gdE
 gdE
 gdE
-gdE
+mAz
 mAz
 mAz
 mAz

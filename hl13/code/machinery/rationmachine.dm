@@ -3,7 +3,7 @@
 	desc = "High grade, deliciously flavored rations are sold here at an affordable price."
 	icon_state = "ration_dispenser"
 	panel_type = "panel2"
-	icon = 'hl13/icons/obj/machinery.dmi'
+	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	product_ads = "Stay nutritionally satisfied.;A hungry citizen is a inefficient citizen.;Consume delicious rations.;The most flavorful food around."
 	products = list(/obj/item/storage/box/halflife/ration = 10, /obj/item/storage/box/halflife/badration = 10)
 	resistance_flags = FIRE_PROOF

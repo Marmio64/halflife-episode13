@@ -1,7 +1,7 @@
 /obj/machinery/destabilizer
 	name = "destabilizer"
 	desc = "A hacked piece of combine machinery which emits radio signals that disrupt district wide systems and machinery, reducing sociostability over time."
-	icon = 'hl13/icons/obj/machinery.dmi'
+	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "destabilizer"
 	var/destabilization_rate = -1
 

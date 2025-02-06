@@ -3,7 +3,7 @@
 /obj/machinery/newscaster
 	name = "newscaster"
 	desc = "A combine newscaster for announcing bounties, information, and warrants."
-	icon = 'icons/obj/machines/wallmounts.dmi'
+	icon = 'hl13/icons/obj/machines/terminals.dmi'
 	icon_state = "newscaster_off"
 	base_icon_state = "newscaster"
 	verb_say = "beeps"

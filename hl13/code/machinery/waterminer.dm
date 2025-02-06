@@ -2,7 +2,7 @@
 /obj/machinery/water_miner
 	name = "water harvester"
 	desc = "Automatically harvests water from below, filters it, and packs it into easily carriable canisters which are often exported by combine cities."
-	icon = 'hl13/icons/obj/machinery.dmi'
+	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "harvester_off"
 	density = TRUE
 	anchored = 0

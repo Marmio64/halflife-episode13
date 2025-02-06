@@ -1,7 +1,7 @@
 /obj/machinery/sealer
 	name = "sealing machine"
 	desc = "An industrial piece of machinery for sealing packages and goods easier and quicker than by hand. In addition, it is able to unseal certain packages as well."
-	icon = 'hl13/icons/obj/machinery.dmi'
+	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "sealer"
 
 /obj/machinery/sealer/examine(mob/user)
