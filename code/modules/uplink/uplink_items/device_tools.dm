@@ -92,3 +92,10 @@
 	desc = "A standard gas mask. Useful against gas attacks obviously, but also muffles your voice and covers your face enough to hide your identity."
 	item = /obj/item/clothing/mask/gas/hl2/modern
 	cost = 1
+
+/datum/uplink_item/device_tools/blackmarketuplink
+	name = "Blackmarket Uplink"
+	desc = "A phone rigged to connect with various black market outfitters. You can use your bank account to purchase a wide array of illegal goods, though at a high credit cost."
+	item = /obj/item/market_uplink/blackmarket
+	cant_discount = TRUE //Too powerful to be super cheap ever, needs to be a significant investment.
+	cost = 14

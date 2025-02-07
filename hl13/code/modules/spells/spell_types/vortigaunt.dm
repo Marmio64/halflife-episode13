@@ -25,6 +25,8 @@
 	flags_1 = NONE
 	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
 
+	spread = -15
+
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/enchanted/vort_blast
 
 /obj/item/ammo_box/magazine/internal/boltaction/enchanted/vort_blast
@@ -63,8 +65,8 @@
 
 /datum/action/cooldown/spell/touch/vort_heal/cast_on_hand_hit(obj/item/melee/touch_attack/hand, mob/living/victim, mob/living/carbon/caster)
 	playsound(caster, 'hl13/sound/weapons/attack_shoot.ogg', 50, TRUE)
-	victim.adjustBruteLoss(-25)
-	victim.adjustFireLoss(-25)
+	victim.adjustBruteLoss(-30)
+	victim.adjustFireLoss(-30)
 	victim.visible_message(span_bold("[victim] appears to flash colors of green, before seemingly appearing healthier!"))
 	to_chat(victim, span_warning("You feel soothed."))
 	return TRUE

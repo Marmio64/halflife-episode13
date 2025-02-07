@@ -102,3 +102,15 @@
 				/obj/item/reagent_containers/cup/glass/bottle/hooch,
 				/obj/item/reagent_containers/cup/glass/bottle/vodka)
 	crate_name = "exotic alcohol crate"
+
+/datum/supply_pack/organic/stalker
+	name = "Stalker Crate"
+	desc = "A crate with one, empty minded stalker along with an earpiece, food, and water for it."
+	cost = CARGO_CRATE_VALUE * 6
+	contains = list(/mob/living/carbon/human/species/stalker,
+				/obj/item/radio/headset/earpiece,
+				/obj/item/reagent_containers/cup/soda_cans/breenwater,
+				/obj/item/reagent_containers/cup/soda_cans/breenwater,
+				/obj/item/food/nutripaste,
+				/obj/item/food/nutripaste)
+	crate_name = "stalker crate"

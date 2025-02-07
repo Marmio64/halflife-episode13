@@ -129,8 +129,8 @@
 
 /obj/structure/alien/weeds
 	gender = PLURAL
-	name = "resin floor"
-	desc = "A thick resin surface covers the floor."
+	name = "fungus floor"
+	desc = "A thick fungus surface covers the floor."
 	anchored = TRUE
 	density = FALSE
 	layer = MID_TURF_LAYER
@@ -251,12 +251,12 @@
 	take_damage(5, BURN, 0, 0)
 
 /obj/structure/alien/weeds/node
-	name = "glowing resin"
-	desc = "Blue bioluminescence shines from beneath the surface."
+	name = "glowing fungus"
+	desc = "Orangish-brown bioluminescence shines from beneath the surface."
 	icon = 'icons/obj/smooth_structures/alien/weednode.dmi'
 	icon_state = "weednode-0"
 	base_icon_state = "weednode"
-	light_color = LIGHT_COLOR_BLUE
+	light_color = LIGHT_COLOR_ORANGE //HL13 EDIT
 	light_power = 0.5
 	///the range of the light for the node
 	var/lon_range = 4
