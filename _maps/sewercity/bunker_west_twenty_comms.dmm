@@ -38,9 +38,18 @@
 /area/halflife/indoors/bunker)
 "eb" = (
 /obj/structure/halflife/trash/cardboard,
-/obj/item/reagent_containers/cup/glass/mouthwash,
-/obj/item/reagent_containers/cup/glass/mouthwash,
-/obj/item/reagent_containers/cup/glass/mouthwash,
+/obj/item/reagent_containers/cup/glass/mouthwash{
+	pixel_x = 4;
+	pixel_y = 26
+	},
+/obj/item/reagent_containers/cup/glass/mouthwash{
+	pixel_x = 16;
+	pixel_y = 25
+	},
+/obj/item/reagent_containers/cup/glass/mouthwash{
+	pixel_x = -9;
+	pixel_y = 23
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "fo" = (
@@ -316,6 +325,10 @@
 /area/halflife/indoors/bunker)
 "DE" = (
 /obj/structure/table/halflife/metal/grate,
+/obj/item/food/canned/beans{
+	pixel_x = -9;
+	pixel_y = 13
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "DV" = (
@@ -419,7 +432,10 @@
 /area/halflife/indoors/bunker)
 "Nu" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/structure/halflife/trash/glass/cans,
+/obj/structure/halflife/trash/glass/cans{
+	pixel_x = 7;
+	pixel_y = 8
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "NN" = (
@@ -437,7 +453,10 @@
 /area/halflife/indoors/bunker)
 "Ps" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/structure/halflife/trash/glass/plate,
+/obj/structure/halflife/trash/glass/plate{
+	pixel_x = 0;
+	pixel_y = 3
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "Pv" = (
@@ -583,7 +602,10 @@
 /area/halflife/indoors/bunker)
 "Xe" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/food/canned/pine_nuts,
+/obj/item/food/canned/pine_nuts{
+	pixel_x = -5;
+	pixel_y = 9
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "Xr" = (
