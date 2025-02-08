@@ -366,8 +366,8 @@
 			exposed_human.adjust_hygiene(-2 * reac_volume) //Gross. -2 hygiene per unit, so a bucket of sewer water is -100 hygiene. Two buckets is usually enough to stink them up.
 		else
 			exposed_human.adjust_hygiene(1 * reac_volume)
-			if(exposed_human.hygiene > HYGIENE_LEVEL_NORMAL) //splashing yourself with water can only get you so clean, visit a shower for a better washing
-				exposed_human.hygiene = HYGIENE_LEVEL_NORMAL
+			//if(exposed_human.hygiene > HYGIENE_LEVEL_NORMAL) //splashing yourself with water can only get you so clean, visit a shower for a better washing
+				//exposed_human.hygiene = HYGIENE_LEVEL_NORMAL have to disable for now cause it also screws up showers rn, ill fix this later probably
 		//hl13 edit end
 
 	if((methods & INGEST) && HAS_TRAIT(exposed_mob, TRAIT_WATER_ADAPTATION) && reac_volume >= 4)
