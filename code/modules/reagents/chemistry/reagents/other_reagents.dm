@@ -227,9 +227,10 @@
 	var/cooling_temperature = 2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_CLEANS
 	default_container = /obj/item/reagent_containers/cup/glass/waterbottle
-	var/hydration = 4
-	var/toxicity = 0
-	var/disgust = 0
+	var/hydration = 4 //hl13 edit
+	var/toxicity = 0 //hl13 edit
+	var/disgust = 0 //hl13 edit
+	var/filthy = FALSE //hl13 edit
 
 /datum/glass_style/shot_glass/water
 	required_drink_type = /datum/reagent/water
@@ -254,6 +255,7 @@
 	description = "A cocktail of raw sewage. Absolutely disgusting."
 	color = "#705a43"
 	taste_description = "sewer water"
+	filthy = TRUE
 
 /datum/reagent/water/unpurified
 	name = "Unpurified Water"
@@ -354,6 +356,19 @@
 		exposed_mob.AdjustUnconscious(-8 SECONDS)
 		var/drunkness_restored = HAS_TRAIT(exposed_mob, TRAIT_WATER_ADAPTATION) ? -0.5 : -0.25
 		exposed_mob.adjust_drunk_effect(drunkness_restored)
+
+		//hl13 edit start
+		if(!ishuman(exposed_mob))
+			return
+
+		var/mob/living/carbon/human/exposed_human = exposed_mob
+		if(filthy)
+			exposed_human.adjust_hygiene(-2 * reac_volume) //Gross. -2 hygiene per unit, so a bucket of sewer water is -100 hygiene. Two buckets is usually enough to stink them up.
+		else
+			exposed_human.adjust_hygiene(1 * reac_volume)
+			if(exposed_human.hygiene > HYGIENE_LEVEL_NORMAL) //splashing yourself with water can only get you so clean, visit a shower for a better washing
+				exposed_human.hygiene = HYGIENE_LEVEL_NORMAL
+		//hl13 edit end
 
 	if((methods & INGEST) && HAS_TRAIT(exposed_mob, TRAIT_WATER_ADAPTATION) && reac_volume >= 4)
 		exposed_mob.adjust_wet_stacks(0.15 * reac_volume)
