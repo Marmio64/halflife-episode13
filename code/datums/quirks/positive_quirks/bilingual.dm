@@ -1,9 +1,8 @@
-/*
 /datum/quirk/bilingual
 	name = "Bilingual"
-	desc = "Over the years you've picked up an extra language!"
+	desc = "You learned another language at some point, and still remember it enough to speak it fluently."
 	icon = FA_ICON_GLOBE
-	value = 4
+	value = 3
 	gain_text = span_notice("Some of the words of the people around you certainly aren't common. Good thing you studied for this.")
 	lose_text = span_notice("You seem to have forgotten your second language.")
 	medical_record_text = "Patient speaks multiple languages."
@@ -25,6 +24,6 @@
 		if(quirk_holder.has_language(language_type))
 			to_chat(quirk_holder, span_boldnotice("You are already familiar with the quirk in your preferences, so you did not learn one."))
 			return
-		to_chat(quirk_holder, span_boldnotice("You are already familiar with the quirk in your preferences, so you learned Galactic Uncommon instead."))
+		to_chat(quirk_holder, span_boldnotice("You are already familiar with the quirk in your preferences, so you learned English instead."))
 	quirk_holder.grant_language(language_type, source = LANGUAGE_QUIRK)
-*/
+
