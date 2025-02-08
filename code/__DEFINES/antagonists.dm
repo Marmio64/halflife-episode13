@@ -161,47 +161,27 @@
 /// JSON file containing spy objectives
 #define SPY_OBJECTIVE_FILE "antagonist_flavor/spy_objective.json"
 
-///employers that are from the syndicate
+///employers that are from the rebels
 GLOBAL_LIST_INIT(syndicate_employers, list(
-	"Animal Rights Consortium",
-	"Bee Liberation Front",
-	"Cybersun Industries",
-	"Donk Corporation",
-	"Gorlex Marauders",
-	"MI13",
-	"Tiger Cooperative Fanatic",
-	"Waffle Corporation Terrorist",
-	"Waffle Corporation",
+	"Lambda",
+	"Black Market Agent",
+	"Refugee Spy",
 ))
 ///employers that are from Nanotrasen
 GLOBAL_LIST_INIT(nanotrasen_employers, list(
-	"Champions of Evil",
-	"Corporate Climber",
-	"Gone Postal",
 	"Internal Affairs Agent",
-	"Legal Trouble",
 ))
 
 ///employers who hire agents to do the hijack
 GLOBAL_LIST_INIT(hijack_employers, list(
-	"Animal Rights Consortium",
-	"Bee Liberation Front",
-	"Gone Postal",
-	"Tiger Cooperative Fanatic",
-	"Waffle Corporation Terrorist",
+	"Lambda",
 ))
 
 ///employers who hire agents to do a task and escape... or martyrdom. whatever
 GLOBAL_LIST_INIT(normal_employers, list(
-	"Champions of Evil",
-	"Corporate Climber",
-	"Cybersun Industries",
-	"Donk Corporation",
-	"Gorlex Marauders",
+	"Black Market Agent",
+	"Refugee Spy",
 	"Internal Affairs Agent",
-	"Legal Trouble",
-	"MI13",
-	"Waffle Corporation",
 ))
 
 ///employers for malfunctioning ais. they do not have sides, unlike traitors.
@@ -314,7 +294,7 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 /// Chance that the traitor could roll hijack if the pop limit is met.
 #define HIJACK_PROB 10
 /// Hijack is unavailable as a random objective below this player count.
-#define HIJACK_MIN_PLAYERS 30
+#define HIJACK_MIN_PLAYERS 20 //hl13 edit, cause rebel hijackers dont have to kill everyone
 
 /// Chance the traitor gets a martyr objective instead of having to escape alive, as long as all the objectives are martyr compatible.
 #define MARTYR_PROB 20
@@ -324,7 +304,7 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 /// If a kill objective is rolled, chance that it is to destroy the AI.
 #define DESTROY_AI_PROB(denominator) (100 / denominator)
 /// If the destroy AI objective doesn't roll, chance that we'll get a maroon instead. If this prob fails, they will get a generic assassinate objective instead.
-#define MAROON_PROB 30
+#define MAROON_PROB 20
 
 /// How many telecrystals a normal traitor starts with
 #define TELECRYSTALS_DEFAULT 20

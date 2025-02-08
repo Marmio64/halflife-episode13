@@ -187,7 +187,7 @@
 
 /datum/antagonist/traitor/proc/pick_employer()
 	if(!employer)
-		var/faction = prob(75) ? FLAVOR_FACTION_SYNDICATE : FLAVOR_FACTION_NANOTRASEN
+		var/faction = prob(85) ? FLAVOR_FACTION_SYNDICATE : FLAVOR_FACTION_NANOTRASEN //hl13 edit
 		var/list/possible_employers = list()
 
 		possible_employers.Add(GLOB.syndicate_employers, GLOB.nanotrasen_employers)
@@ -263,7 +263,7 @@
 			maroon_objective.find_target()
 			return maroon_objective
 
-		var/datum/objective/assassinate/kill_objective = new()
+		var/datum/objective/assassinate/rebel/kill_objective = new() //hl13 edit, rebel's kill obj
 		kill_objective.owner = owner
 		kill_objective.find_target()
 		return kill_objective

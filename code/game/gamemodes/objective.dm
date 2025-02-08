@@ -237,6 +237,43 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 /datum/objective/assassinate/admin_edit(mob/admin)
 	admin_simple_target_pick(admin)
 
+//HL13 EDIT START, rebel assassination obj that only targets heads of staff and civil protection
+/datum/objective/assassinate/rebel/find_target(dupe_search_range, list/blacklist)
+	var/list/datum/mind/owners = get_owners()
+	if(!dupe_search_range)
+		dupe_search_range = get_owners()
+	var/list/possible_targets = list()
+	var/try_target_late_joiners = FALSE
+	for(var/I in owners)
+		var/datum/mind/O = I
+		if(O.late_joiner)
+			try_target_late_joiners = TRUE
+	for(var/datum/mind/possible_target in get_crewmember_minds())
+		if(possible_target in owners)
+			continue
+		if(!is_unique_objective(possible_target,dupe_search_range))
+			continue
+		if(possible_target in blacklist)
+			continue
+		if(!is_valid_target(possible_target))
+			continue
+		if(!(possible_target.assigned_role.paycheck_department == ACCOUNT_SEC))
+			continue
+		possible_targets += possible_target
+	if(try_target_late_joiners)
+		var/list/all_possible_targets = possible_targets.Copy()
+		for(var/I in all_possible_targets)
+			var/datum/mind/PT = I
+			if(!PT.late_joiner)
+				possible_targets -= PT
+		if(!possible_targets.len)
+			possible_targets = all_possible_targets
+	if(possible_targets.len > 0)
+		target = pick(possible_targets)
+	update_explanation_text()
+	return target
+//HL13 EDIT END
+
 #define DISCONNECT_GRACE_TIME (2 MINUTES)
 #define DISCONNECT_GRACE_WARNING_TIME (1 MINUTES)
 
@@ -406,8 +443,8 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 
 /datum/objective/hijack
 	name = "hijack"
-	explanation_text = "Hijack the emergency shuttle by hacking its navigational protocols through the control console (alt click emergency shuttle console)."
-	team_explanation_text = "Hijack the emergency shuttle by hacking its navigational protocols through the control console (alt click emergency shuttle console). Leave no team member behind."
+	explanation_text = "Hijack the transfer train by hacking its navigational protocols through the control console (alt click emergency shuttle console)."
+	team_explanation_text = "Hijack the transfer train by hacking its navigational protocols through the control console (alt click emergency shuttle console). Leave no team member behind."
 	martyr_compatible = FALSE //Technically you won't get both anyway.
 	/// Overrides the hijack speed of any antagonist datum it is on ONLY, no other datums are impacted.
 	admin_grantable = TRUE
@@ -498,8 +535,8 @@ GLOBAL_LIST(admin_objective_list) //Prefilled admin assignable objective list
 
 /datum/objective/escape
 	name = "escape"
-	explanation_text = "Escape on the shuttle or an escape pod alive and without being in custody."
-	team_explanation_text = "Have all members of your team escape on a shuttle or pod alive, without being in custody."
+	explanation_text = "Escape on the transfer train or an escape pod alive and without being in custody."
+	team_explanation_text = "Have all members of your team escape on a train alive, without being in custody."
 	admin_grantable = TRUE
 
 /datum/objective/escape/check_completion()
