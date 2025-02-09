@@ -66,11 +66,11 @@ GLOBAL_LIST_EMPTY(starlight)
 	plane = PLANE_SPACE
 	layer = SPACE_LAYER
 	light_power = 1
-	light_range = 2
-	light_color = COLOR_STARLIGHT
+	light_range = 1
+	light_color = LIGHT_COLOR_DEFAULT
 	light_height = LIGHTING_HEIGHT_SPACE
 	light_on = FALSE
-	space_lit = TRUE
+	space_lit = FALSE //hl13 edit
 	bullet_bounce_sound = null
 	vis_flags = VIS_INHERIT_ID //when this be added to vis_contents of something it be associated with something on clicking, important for visualisation of turf in openspace and interraction with openspace that show you turf.
 
