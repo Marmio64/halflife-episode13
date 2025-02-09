@@ -215,3 +215,11 @@
 	contains = list(/obj/item/melee/baton/security/heavy,
 					/obj/item/melee/baton/security/heavy)
 	crate_name = "heavy baton crate"
+
+/datum/supply_pack/security/armory/brainwash
+	name = "Brainwashing Disk Crate"
+	desc = "A disk with loaded instruction and technologies to allow you to permanently coerce citizens into better serving the combine. Simply load into a surgical console to be able to start the surgery."
+	cost = CARGO_CRATE_VALUE * 5
+	access_view = ACCESS_SECURITY
+	contains = list(/obj/item/disk/surgery/brainwashing)
+	crate_name = "brainwashing disk crate"

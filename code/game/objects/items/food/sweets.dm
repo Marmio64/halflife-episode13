@@ -66,7 +66,7 @@
 // Chocolates
 /obj/item/food/chocolatebar
 	name = "chocolate bar"
-	desc = "Such, sweet, fattening food."
+	desc = "An old world chocolate bar. With production out of commission, these are worth their weight in gold now, despite their age."
 	icon_state = "chocolatebar"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 2,

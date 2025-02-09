@@ -191,9 +191,8 @@
 /obj/item/clothing/suit/bio_suit/boiler
 	icon_state = "bio_boiler"
 	slowdown = 0
-
-/obj/item/clothing/head/bio_hood/boiler
-	icon_state = "bio_boiler"
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
 
 /obj/item/clothing/suit/toggle/labcoat/halflife
 	icon = 'hl13/icons/obj/clothing/suits.dmi'

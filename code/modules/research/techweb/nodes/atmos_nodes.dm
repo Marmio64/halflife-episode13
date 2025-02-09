@@ -66,28 +66,6 @@
 	discount_experiments = list(/datum/experiment/ordnance/gaseous/plasma = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(RADIO_CHANNEL_ENGINEERING)
 
-/datum/techweb_node/fusion
-	id = TECHWEB_NODE_FUSION
-	display_name = "Fusion"
-	description = "Investigating fusion reactor technology to achieve sustainable and efficient energy production through controlled plasma reactions involving noble gases."
-	prereq_ids = list(TECHWEB_NODE_PLASMA_CONTROL)
-	design_ids = list(
-		"HFR_core",
-		"HFR_corner",
-		"HFR_fuel_input",
-		"HFR_interface",
-		"HFR_moderator_input",
-		"HFR_waste_output",
-		"adv_fire_extinguisher",
-		"bolter_wrench",
-		"rpd_loaded",
-		"engine_goggles",
-		"crystallizer",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
-	discount_experiments = list(/datum/experiment/ordnance/gaseous/nitrous_oxide = TECHWEB_TIER_3_POINTS)
-	announce_channels = list(RADIO_CHANNEL_ENGINEERING)
-
 /datum/techweb_node/exp_tools
 	id = TECHWEB_NODE_EXP_TOOLS
 	display_name = "Experimental Tools"

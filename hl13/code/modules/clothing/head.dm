@@ -63,3 +63,8 @@
 	fire = 50
 	acid = 50
 	wound = 5
+
+/obj/item/clothing/head/bio_hood/boiler
+	icon_state = "bio_boiler"
+	icon = 'hl13/icons/obj/clothing/hats.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/head.dmi'

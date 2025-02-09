@@ -125,11 +125,11 @@
 				/obj/item/cigarette/halflife = 2,
 				/obj/item/food/chips,
 				/obj/item/reagent_containers/cup/glass/bottle/beer = 2,
-				/obj/item/reagent_containers/cup/glass/bottle/gin,
-				/obj/item/reagent_containers/cup/glass/bottle/hooch,
+				/obj/item/reagent_containers/cup/glass/bottle/moonshine,
+				/obj/item/reagent_containers/cup/glass/bottle/absinthe,
 				/obj/item/reagent_containers/cup/glass/bottle/hcider,
-				/obj/item/reagent_containers/cup/glass/bottle/fernet,
-				/obj/item/reagent_containers/cup/glass/bottle/vodka,
+				/obj/item/reagent_containers/cup/glass/bottle/whiskey,
+				/obj/item/reagent_containers/cup/glass/bottle/vodka = 2, // Na Zdrowie!
 				/obj/item/reagent_containers/pill/lsd = 2,
 				/obj/item/reagent_containers/cup/glass/mouthwash,
 				/obj/item/reagent_containers/cup/bottle/welding_fuel,
@@ -141,12 +141,11 @@
 	name = "alcohol loot"
 
 	loot = list(
-				/obj/item/reagent_containers/cup/glass/bottle/beer,
-				/obj/item/reagent_containers/cup/glass/bottle/gin,
-				/obj/item/reagent_containers/cup/glass/bottle/hooch,
-				/obj/item/reagent_containers/cup/glass/bottle/vodka,
-				/obj/item/reagent_containers/cup/glass/bottle/hcider,
-				/obj/item/reagent_containers/cup/glass/bottle/fernet
+				/obj/item/reagent_containers/cup/glass/bottle/beer = 2,
+				/obj/item/reagent_containers/cup/glass/bottle/moonshine,
+				/obj/item/reagent_containers/cup/glass/bottle/absinthe,
+				/obj/item/reagent_containers/cup/glass/bottle/vodka = 2, // Na Zdrowie!
+				/obj/item/reagent_containers/cup/glass/bottle/whiskey
 				)
 
 //only clothing items

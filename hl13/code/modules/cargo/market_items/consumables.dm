@@ -31,3 +31,13 @@
 	price_max = CARGO_CRATE_VALUE/3
 	stock_max = 3
 	availability_prob = 90
+
+/datum/market_item/halflife/consumable/vodka
+	name = "Bottle of Vodka"
+	desc = "A full bottle of old world vodka. It's so good, you might be tempted to just drink it all yourself."
+	item = /obj/item/reagent_containers/cup/glass/bottle/vodka
+
+	price_min = CARGO_CRATE_VALUE/4
+	price_max = CARGO_CRATE_VALUE/3
+	stock_max = 3
+	availability_prob = 90

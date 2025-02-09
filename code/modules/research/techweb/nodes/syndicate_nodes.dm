@@ -36,14 +36,3 @@
 		if(!item.item || !(item.uplink_item_flags & SYNDIE_ILLEGAL_TECH))
 			continue
 		required_items_to_unlock |= item.item //allows deconning to unlock.
-
-/datum/techweb_node/unregulated_bluespace
-	id = TECHWEB_NODE_UNREGULATED_BLUESPACE
-	display_name = "Unregulated Bluespace Research"
-	description = "Bluespace technology using unstable or unbalanced procedures, prone to damaging the fabric of bluespace. Outlawed by galactic conventions."
-	prereq_ids = list(TECHWEB_NODE_PARTS_BLUESPACE, TECHWEB_NODE_SYNDICATE_BASIC)
-	design_ids = list(
-		"desynchronizer",
-		"beamrifle",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)

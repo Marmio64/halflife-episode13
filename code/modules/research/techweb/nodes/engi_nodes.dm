@@ -62,31 +62,10 @@
 	required_experiments = list(/datum/experiment/scanning/points/machinery_tiered_scan/tier2_any)
 	announce_channels = list(RADIO_CHANNEL_ENGINEERING)
 
-
-/datum/techweb_node/parts_bluespace
-	id = TECHWEB_NODE_PARTS_BLUESPACE
-	display_name = "Bluespace Parts"
-	description = "Integrating the latest in bluespace technology, these advanced components not only enhance functionality but also open up new possibilities for the station's technological capabilities."
-	prereq_ids = list(TECHWEB_NODE_PARTS_ADV)
-	design_ids = list(
-		"bs_rped",
-		"quadultra_micro_laser",
-		"quadratic_capacitor",
-		"femto_servo",
-		"bluespace_matter_bin",
-		"triphasic_scanning",
-		"bluespace_battery",
-		"bluespace_cell",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
-	discount_experiments = list(/datum/experiment/scanning/points/machinery_tiered_scan/tier3_any = TECHWEB_TIER_4_POINTS)
-	announce_channels = list(RADIO_CHANNEL_ENGINEERING)
-
 /datum/techweb_node/telecomms
 	id = TECHWEB_NODE_TELECOMS
 	display_name = "Telecommunications Technology"
-	description = "A comprehensive suite of machinery for station-wide communication setups, ensuring seamless connectivity and operational coordination."
-	prereq_ids = list(TECHWEB_NODE_PARTS_BLUESPACE)
+	description = "A comprehensive suite of machinery for district-wide communication setups, ensuring seamless connectivity and operational coordination."
 	design_ids = list(
 		"comm_monitor",
 		"comm_server",
@@ -181,32 +160,6 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(RADIO_CHANNEL_ENGINEERING)
 
-/datum/techweb_node/holographics
-	id = TECHWEB_NODE_HOLOGRAPHICS
-	display_name = "Holographics"
-	description = "Use of holographic technology for signage and barriers."
-	prereq_ids = list(TECHWEB_NODE_ENERGY_MANIPULATION)
-	design_ids = list(
-		"forcefield_projector",
-		"holosign",
-		"holosignsec",
-		"holosignengi",
-		"holosignatmos",
-		"holosignrestaurant",
-		"holosignbar",
-		"holobarrier_jani",
-		"holobarrier_med",
-		"holopad",
-		"vendatray",
-		"holodisk",
-		"modular_shield_generator",
-		"modular_shield_node",
-		"modular_shield_relay",
-		"modular_shield_charger",
-		"modular_shield_well",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
-
 /datum/techweb_node/hud
 	id = TECHWEB_NODE_HUD
 	display_name = "Integrated HUDs"
@@ -229,7 +182,7 @@
 /datum/techweb_node/night_vision
 	id = TECHWEB_NODE_NIGHT_VISION
 	display_name = "Night Vision Technology"
-	description = "There are whispers that Nanotrasen pushed for this technology to extend shift durations, ensuring productivity around the clock."
+	description = "Advanced technology often used by Overwatch Transhuman Arm soldiers for night operations."
 	prereq_ids = list(TECHWEB_NODE_HUD)
 	design_ids = list(
 		"diagnostic_hud_night",

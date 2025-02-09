@@ -90,7 +90,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/newscaster, 30)
 	if(machine_stat & (NOPOWER|BROKEN))
 		set_light(0)
 		return
-	set_light(1.5, 0.7, "#34D352") // green light
+	set_light(1.5, 0.7, "#33ccff") // hl13 edit, is blue now
 
 /obj/machinery/newscaster/update_overlays()
 	. = ..()
