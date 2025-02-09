@@ -68,3 +68,8 @@
 	icon_state = "bio_boiler"
 	icon = 'hl13/icons/obj/clothing/hats.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
+
+/obj/item/clothing/head/beret/durathread/unitednations //HL13 ADDITION
+	name = "old blue beret"
+	desc = "An old blue beret, moderately armored and adorned with a heavily faded united nations symbol."
+	greyscale_colors = "#5f7cb7#8a9ab0"
