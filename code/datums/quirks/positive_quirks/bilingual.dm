@@ -2,7 +2,7 @@
 	name = "Bilingual"
 	desc = "You learned another language at some point, and still remember it enough to speak it fluently."
 	icon = FA_ICON_GLOBE
-	value = 3
+	value = 4
 	gain_text = span_notice("Some of the words of the people around you certainly aren't common. Good thing you studied for this.")
 	lose_text = span_notice("You seem to have forgotten your second language.")
 	medical_record_text = "Patient speaks multiple languages."

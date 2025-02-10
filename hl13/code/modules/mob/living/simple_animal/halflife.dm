@@ -791,6 +791,7 @@
 	ranged_cooldown_time = 50
 	light_power = 0.75
 	light_range = 3
+	initial_language_holder = /datum/language_holder/synthetic //All-knowing scanner...
 	var/idle_sound_chance = 50
 	var/idle_sounds = list('hl13/sound/creatures/cityscanner/scanner_scan_loop1.ogg')
 	var/scan_sounds = list('hl13/sound/creatures/cityscanner/scanner_scan1.ogg', 'hl13/sound/creatures/cityscanner/scanner_scan2.ogg')
