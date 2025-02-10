@@ -521,6 +521,9 @@
 /obj/machinery/light/cold/directional/south,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/centcom/halflife/ota)
+"dE" = (
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/centcom/halflife/relocation_city)
 "dF" = (
 /obj/structure/flora/bush/fullgrass,
 /turf/open/floor/plating/ground/dirt/alt,
@@ -767,6 +770,10 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
 /area/centcom/tdome/administration)
+"fH" = (
+/obj/structure/chair/halflife/metal/blue,
+/turf/open/floor/plating/indoor/tiled9,
+/area/centcom/halflife)
 "fI" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/decal/cleanable/dirt,
@@ -1052,11 +1059,7 @@
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife)
 "iz" = (
-/obj/machinery/door/unpowered/halflife/metal{
-	lockid = "overwatch_exchange";
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/tile,
+/turf/cordon,
 /area/centcom/halflife)
 "iC" = (
 /obj/structure/table/wood,
@@ -1146,6 +1149,10 @@
 	dir = 1
 	},
 /area/centcom/halflife)
+"jF" = (
+/obj/machinery/light/small/red/directional/east,
+/turf/open/floor/plating/ground/dirt,
+/area/centcom/halflife/relocation_city)
 "jN" = (
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/centcom/halflife)
@@ -1258,6 +1265,10 @@
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/evacuation/ship)
+"lm" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/ground/dirt/alt,
+/area/centcom/halflife/relocation_city)
 "lr" = (
 /turf/closed/wall/halflife/metal,
 /area/centcom/halflife)
@@ -1538,6 +1549,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/centcom/halflife/ota)
+"pp" = (
+/obj/item/reagent_containers/pill/patch/medkit,
+/turf/open/floor/plating/indoor/tiled9,
+/area/centcom/halflife)
 "py" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	lockid = "overwatch_exchange";
@@ -1590,6 +1605,12 @@
 	},
 /obj/effect/mapping_helpers/airlock/access/all/admin/general,
 /turf/open/floor/plating/indoor/metal/combine,
+/area/centcom/halflife)
+"pS" = (
+/obj/structure/table/halflife/no_smooth/large/metal{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/tiled9,
 /area/centcom/halflife)
 "pV" = (
 /obj/structure/lattice,
@@ -1704,10 +1725,7 @@
 /turf/open/floor/plating/indoor/trainfloor,
 /area/centcom/halflife)
 "qC" = (
-/obj/machinery/power/halflife/streetlamp{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/cordon,
 /area/centcom/halflife/relocation_city)
 "qJ" = (
 /obj/machinery/door/airlock/highsecurity/combine{
@@ -2070,10 +2088,8 @@
 /turf/open/floor/plating/indoor/trainfloor,
 /area/centcom/halflife)
 "uH" = (
-/obj/machinery/power/halflife/streetlamp{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/sidewalk,
+/obj/machinery/power/halflife/streetlamphalt,
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/centcom/halflife/relocation_city)
 "uI" = (
 /obj/structure/table/halflife/metal,
@@ -2401,6 +2417,12 @@
 	},
 /turf/open/floor/plating/ground/brickroad,
 /area/centcom/halflife/relocation_city)
+"yQ" = (
+/obj/structure/sign/poster/halflife/combine/two{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/trainfloor,
+/area/centcom/halflife)
 "yR" = (
 /obj/machinery/light/small/red/directional/east,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -2453,6 +2475,10 @@
 	planetary_atmos = 0
 	},
 /area/awaymission/errorroom)
+"zo" = (
+/obj/structure/halflife/sign/clinic,
+/turf/open/floor/plating/indoor/tiled9,
+/area/centcom/halflife)
 "zr" = (
 /obj/docking_port/stationary{
 	dir = 4;
@@ -2587,6 +2613,10 @@
 /obj/effect/turf_decal/tile/brown/half/contrasted,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supplypod/loading/three)
+"Ab" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/tiled9,
+/area/centcom/halflife)
 "Ac" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 8
@@ -2621,6 +2651,12 @@
 /obj/machinery/turnstile/brig/halflife/forcefield,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/centcom/halflife)
+"Aj" = (
+/obj/machinery/power/halflife/streetlamphalt{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/centcom/halflife/relocation_city)
 "Ar" = (
 /obj/structure/table/halflife/no_smooth/large/metal/desk{
 	dir = 1
@@ -3197,24 +3233,18 @@
 /turf/open/misc/grass/jungle/station,
 /area/centcom/halflife/relocation_city)
 "FT" = (
-/obj/machinery/door/poddoor/shutters/indestructible{
-	dir = 4
-	},
 /turf/open/floor/plating/indoor/metal/walkway{
 	dir = 1
 	},
-/area/centcom/halflife/ota)
+/area/centcom/halflife/relocation_city)
 "FU" = (
 /turf/closed/indestructible/fakedoor{
 	name = "Thunderdome Admin"
 	},
 /area/centcom/tdome/administration)
 "FY" = (
-/obj/machinery/power/halflife/streetlamp{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/dirt,
-/area/centcom/halflife/relocation_city)
+/turf/closed/wall/halflife/brick/grey,
+/area/centcom/halflife)
 "FZ" = (
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 8
@@ -3225,6 +3255,12 @@
 /obj/effect/light_emitter/thunderdome,
 /turf/closed/indestructible/fakeglass,
 /area/centcom/tdome/observation)
+"Gd" = (
+/obj/structure/chair/halflife/metal/blue{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/tiled9,
+/area/centcom/halflife)
 "Gi" = (
 /obj/structure/window/reinforced/spawner/directional/north,
 /obj/structure/rack,
@@ -3455,6 +3491,13 @@
 	},
 /turf/open/floor/stone,
 /area/centcom/central_command_areas/evacuation/ship)
+"Ix" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/tiled9,
+/area/centcom/halflife)
+"Iz" = (
+/turf/open/floor/plating/indoor/tiled9,
+/area/centcom/halflife)
 "IF" = (
 /obj/structure/table/halflife/metal,
 /obj/item/storage/box/halflife/loyaltyration{
@@ -3492,6 +3535,13 @@
 /obj/effect/turf_decal/tile/green/anticorner/contrasted,
 /turf/open/floor/iron,
 /area/centcom/tdome/observation)
+"Jn" = (
+/obj/machinery/door/unpowered/halflife/seethrough/metal{
+	keylock = 1;
+	lockid = "bar"
+	},
+/turf/open/floor/plating/indoor/tiled9,
+/area/centcom/halflife)
 "Jq" = (
 /obj/machinery/camera/motion/thunderdome{
 	pixel_x = 10
@@ -3757,11 +3807,8 @@
 /turf/open/floor/iron/dark/textured_large,
 /area/centcom/central_command_areas/evacuation/ship)
 "Lv" = (
-/obj/machinery/door/poddoor/shutters/indestructible{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/metal/combine,
-/area/centcom/halflife/ota)
+/turf/closed/indestructible/syndicate,
+/area/centcom/halflife/relocation_city)
 "Lw" = (
 /obj/effect/spawner/structure/window/reinforced/shuttle,
 /turf/open/floor/plating,
@@ -4096,6 +4143,19 @@
 /obj/effect/light_emitter/thunderdome,
 /turf/open/floor/iron,
 /area/centcom/tdome/arena)
+"Od" = (
+/obj/structure/railing/halflife/solo{
+	dir = 4
+	},
+/obj/structure/sign/poster/halflife/combine{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/trainfloor,
+/area/centcom/halflife)
+"Oe" = (
+/obj/machinery/stalker_chamber,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/centcom/central_command_areas/prison)
 "Of" = (
 /obj/item/clipboard,
 /obj/item/stamp/denied{
@@ -4394,6 +4454,10 @@
 "Qe" = (
 /turf/open/ai_visible,
 /area/centcom/ai_multicam_room)
+"Qg" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/ground/dirt,
+/area/centcom/halflife/relocation_city)
 "Qi" = (
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /turf/open/floor/iron,
@@ -4472,6 +4536,12 @@
 "QC" = (
 /turf/closed/indestructible/riveted,
 /area/centcom/tdome/observation)
+"QD" = (
+/obj/structure/chair/office/halflife/blue{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/tiled9,
+/area/centcom/halflife)
 "QH" = (
 /obj/effect/turf_decal/siding/wideplating_new/dark,
 /obj/effect/turf_decal/tile/neutral/full,
@@ -4948,6 +5018,10 @@
 /obj/effect/turf_decal/delivery,
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supplypod/loading/three)
+"Vp" = (
+/obj/machinery/porta_turret/combine,
+/turf/open/floor/plating/ground/dirt,
+/area/centcom/halflife/relocation_city)
 "Vr" = (
 /obj/effect/turf_decal/tile/red{
 	dir = 4
@@ -5020,6 +5094,10 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/centcom/tdome/administration)
+"Wp" = (
+/obj/structure/flora/bush/fullgrass/style_random,
+/turf/open/floor/plating/ground/dirt,
+/area/centcom/halflife/relocation_city)
 "Wt" = (
 /obj/effect/turf_decal/tile/brown/half/contrasted,
 /turf/open/floor/iron,
@@ -5046,19 +5124,11 @@
 	pixel_y = 3
 	},
 /obj/item/grenade/spawnergrenade/manhacks{
-	pixel_x = 0;
-	pixel_y = 4
-	},
-/obj/item/grenade/spawnergrenade/manhacks{
 	pixel_x = 6;
 	pixel_y = 3
 	},
 /obj/item/grenade/spawnergrenade/manhacks{
 	pixel_x = -5;
-	pixel_y = 11
-	},
-/obj/item/grenade/spawnergrenade/manhacks{
-	pixel_x = 0;
 	pixel_y = 11
 	},
 /obj/item/grenade/spawnergrenade/manhacks{
@@ -5430,6 +5500,10 @@
 	},
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supplypod/loading/four)
+"ZX" = (
+/obj/machinery/light/small/red/directional/east,
+/turf/open/misc/grass/jungle/station,
+/area/centcom/halflife/relocation_city)
 
 (1,1,1) = {"
 TJ
@@ -43365,25 +43439,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
+Lv
 aa
 aa
 aa
@@ -43622,25 +43696,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Lv
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+qC
+Lv
 aa
 aa
 aa
@@ -43879,25 +43953,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Lv
+qC
+sO
+sO
+sO
+sO
+sO
+sO
+FT
+sO
+FT
+sO
+sO
+sO
+FS
+Wi
+sO
+qC
+Lv
 aa
 aa
 aa
@@ -44136,25 +44210,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Lv
+qC
+sO
+Wp
+sO
+sO
+sO
+dE
+FT
+dE
+FT
+dE
+sO
+Wi
+FS
+FS
+sO
+qC
+Lv
 aa
 aa
 aa
@@ -44393,25 +44467,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Lv
+qC
+sO
+sO
+sO
+FS
+sO
+Wi
+FT
+sO
+FT
+sO
+Wi
+Wp
+sO
+FS
+sO
+qC
+Lv
 aa
 aa
 aa
@@ -44650,25 +44724,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Lv
+qC
+sO
+sO
+FS
+FS
+sO
+sO
+FT
+sO
+FT
+Wi
+sO
+sO
+Wp
+sO
+sO
+qC
+Lv
 aa
 aa
 aa
@@ -44907,25 +44981,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Lv
+qC
+sO
+sO
+sO
+sO
+sO
+sO
+FT
+sO
+FT
+sO
+sO
+sO
+sO
+sO
+sO
+qC
+Lv
 aa
 aa
 aa
@@ -45164,25 +45238,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Lv
+qC
+sO
+Qg
+Qg
+Qg
+sO
+dE
+FT
+dE
+FT
+dE
+sO
+Qg
+Qg
+Qg
+sO
+qC
+Lv
 aa
 aa
 aa
@@ -45421,25 +45495,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Lv
+qC
+sO
+Qg
+Vp
+Qg
+sO
+sO
+FT
+sO
+FT
+sO
+sO
+Qg
+Vp
+Qg
+sO
+qC
+Lv
 aa
 aa
 aa
@@ -45678,25 +45752,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Lv
+qC
+sO
+Qg
+Qg
+Qg
+sO
+sO
+FT
+Wi
+FT
+sO
+sO
+Qg
+lm
+Qg
+sO
+qC
+Lv
 aa
 aa
 aa
@@ -45935,25 +46009,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Lv
+qC
+sO
+sO
+sO
+sO
+sO
+sO
+FT
+Wi
+FT
+sO
+sO
+sO
+sO
+sO
+sO
+qC
+Lv
 aa
 aa
 aa
@@ -46192,25 +46266,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Lv
+qC
+sO
+FS
+FS
+Wp
+sO
+dE
+FT
+dE
+FT
+dE
+sO
+Wi
+Wp
+sO
+sO
+qC
+Lv
 aa
 aa
 aa
@@ -46449,25 +46523,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+Lv
+qC
+sO
+FS
+FS
+ZX
+sO
+sO
+FT
+sO
+FT
+sO
+sO
+jF
+sO
+sO
+sO
+qC
+Lv
 aa
 aa
 aa
@@ -46706,25 +46780,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-EU
-aa
-aa
-aa
+Lv
+qC
+qC
+iK
+iK
+iK
+Hv
+ML
+BP
+ML
+BP
+ML
+Hv
+iK
+iK
+iK
+qC
+qC
+Lv
 aa
 aa
 aa
@@ -46963,25 +47037,25 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+Lv
+Lv
+Lv
 EU
 iK
-iK
-Lv
-Lv
-FT
-Lv
-FT
-Lv
-Lv
-iK
+Hv
+Hv
+ML
+BP
+ML
+BP
+ML
+Hv
+Hv
 iK
 EU
-aa
-aa
-aa
+Lv
+Lv
+Lv
 aa
 aa
 aa
@@ -51626,10 +51700,10 @@ kj
 iz
 kj
 kj
-kj
-kj
-kj
-kj
+iz
+iz
+iz
+iz
 kj
 kj
 iz
@@ -52663,10 +52737,10 @@ kj
 kj
 kj
 gA
-aa
-aa
-aa
-aa
+gA
+gA
+gA
+gA
 aa
 aa
 aa
@@ -52918,12 +52992,12 @@ xH
 mV
 mV
 hl
-kj
+FY
+FY
+FY
+FY
+FY
 gA
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -53175,12 +53249,12 @@ xH
 mV
 mV
 mV
-kj
+FY
+QD
+Ab
+Iz
+iz
 gA
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -53429,15 +53503,15 @@ xH
 oE
 uV
 xH
+uH
 mV
 mV
-mV
-kj
+FY
+pp
+pS
+FY
+FY
 gA
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -53689,12 +53763,12 @@ xH
 mV
 mV
 mV
-kj
+FY
+zo
+Iz
+Iz
+FY
 gA
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -53946,12 +54020,12 @@ xH
 mV
 mV
 mV
-kj
+Jn
+Iz
+Iz
+Iz
+iz
 gA
-aa
-aa
-aa
-aa
 aa
 aa
 aa
@@ -54203,11 +54277,11 @@ xH
 mV
 mV
 mV
-kj
-gA
-gA
-gA
-gA
+FY
+fH
+Ix
+Gd
+FY
 gA
 aa
 aa
@@ -54460,11 +54534,11 @@ xH
 mV
 mV
 mV
-kj
-gA
-gA
-gA
-gA
+FY
+FY
+FY
+FY
+FY
 gA
 aa
 aa
@@ -54964,7 +55038,7 @@ kj
 qz
 qz
 kj
-xH
+mV
 uH
 mV
 xH
@@ -55223,7 +55297,7 @@ qz
 kj
 xH
 xH
-mV
+xH
 xH
 oE
 uV
@@ -55480,7 +55554,7 @@ qz
 UF
 xH
 xH
-mV
+xH
 xH
 oE
 uV
@@ -55737,7 +55811,7 @@ qz
 kj
 xH
 xH
-mV
+xH
 xH
 oE
 uV
@@ -55994,7 +56068,7 @@ qz
 UF
 xH
 xH
-mV
+xH
 xH
 oE
 uV
@@ -56251,7 +56325,7 @@ qz
 kj
 xH
 xH
-mV
+xH
 xH
 oE
 uV
@@ -56506,8 +56580,8 @@ kj
 qz
 qz
 kj
-xH
-qC
+mV
+uH
 mV
 xH
 oE
@@ -59084,7 +59158,7 @@ oE
 uV
 xH
 mV
-FY
+sO
 sO
 kj
 gA
@@ -59299,7 +59373,7 @@ Jb
 ir
 ir
 up
-up
+Oe
 nS
 Vi
 RI
@@ -59341,7 +59415,7 @@ oE
 uV
 xH
 mV
-mV
+Aj
 mV
 kj
 gA
@@ -59600,7 +59674,7 @@ xH
 xH
 xH
 xH
-kj
+iz
 gA
 gA
 gA
@@ -59857,7 +59931,7 @@ Nv
 Nv
 Nv
 Nv
-kj
+iz
 gA
 gA
 gA
@@ -60114,7 +60188,7 @@ yn
 yn
 yn
 yn
-kj
+iz
 gA
 gA
 gA
@@ -60371,7 +60445,7 @@ xH
 xH
 xH
 xH
-kj
+iz
 gA
 gA
 gA
@@ -60854,7 +60928,7 @@ kj
 kj
 kj
 kj
-tT
+Od
 qz
 kj
 qz
@@ -61375,7 +61449,7 @@ kj
 kj
 kj
 kj
-qz
+yQ
 tT
 kj
 gA
