@@ -304,7 +304,7 @@
 
 	base_lighting_alpha = 10
 
-	first_time_text = "Northwatch District"
+	first_time_text = "Southwatch District"
 
 /area/centcom/halflife/rebel
 	name = "Resistance Outpost"
