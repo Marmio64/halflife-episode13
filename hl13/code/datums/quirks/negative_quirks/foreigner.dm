@@ -1,4 +1,3 @@
-//all hl13 edits
 /datum/quirk/foreigner
 	name = "American Transfer"
 	desc = "You come from the far away united states, and do not know a lick of polish."
