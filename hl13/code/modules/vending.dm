@@ -1,7 +1,7 @@
 /obj/machinery/vending/breenwater
 	name = "\improper Breen's Private Reserve"
 	desc = "The finest, most pure water around."
-	icon = 'hl13/icons/obj/machines/vending.dmi'
+	icon = 'hl13/icons/obj/machines/vending_tall.dmi'
 	icon_state = "breen_machine"
 	panel_type = "panel2"
 	product_ads = "Stay hydrated.;A thirsty citizen is a inefficient citizen.;Drink Breen's private reserve!;The purest water around."
@@ -11,6 +11,8 @@
 	default_price = 15
 	extra_price = 1
 	payment_department = NO_FREEBIES
+	layer = ABOVE_ALL_MOB_LAYER
+	plane = ABOVE_GAME_PLANE
 
 /obj/item/vending_refill/breen
 	machine_name = "Breen's Private Reserve"
