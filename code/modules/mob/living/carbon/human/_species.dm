@@ -218,6 +218,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 				GLOB.uncommon_roundstart_languages |= spoken_language
 
 	GLOB.uncommon_roundstart_languages -= /datum/language/common
+	GLOB.uncommon_roundstart_languages += /datum/language/russian //hl13 edit
 	if(!selectable_species.len)
 		selectable_species += SPECIES_HUMAN
 

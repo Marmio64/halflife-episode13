@@ -53,7 +53,7 @@
 		return PROCESS_KILL
 	if(anchored)
 		water_gather_progress++
-		if(water_gather_progress > 499)
+		if(water_gather_progress > 599)
 			water_gather_progress = 0
 			full = TRUE
 			mining = FALSE

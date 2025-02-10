@@ -96,6 +96,6 @@
 /datum/uplink_item/device_tools/blackmarketuplink
 	name = "Blackmarket Uplink"
 	desc = "A phone rigged to connect with various black market outfitters. You can use your bank account to purchase a wide array of illegal goods, though at a high credit cost."
-	item = /obj/item/market_uplink/blackmarket
+	item = /obj/item/market_uplink/halflife/blackmarket
 	cant_discount = TRUE //Too powerful to be super cheap ever, needs to be a significant investment.
 	cost = 14

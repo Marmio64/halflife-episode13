@@ -2757,6 +2757,11 @@
 /obj/structure/halflife/pipes/horizontal/down,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
+"eEr" = (
+/obj/machinery/light/small/directional/north,
+/obj/item/hl13_small_flag/poland,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/laborunion)
 "eEy" = (
 /obj/structure/table/halflife/no_smooth/large/wood/desk/alt,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -7282,6 +7287,13 @@
 "lPC" = (
 /turf/open/openspace,
 /area/halflife/indoors/slums)
+"lPY" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing/corner,
+/turf/open/openspace,
+/area/halflife/outdoors/roofs)
 "lQa" = (
 /obj/structure/table/optable,
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -7725,6 +7737,15 @@
 "mzw" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete,
+/area/halflife/outdoors/roofs)
+"mzE" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/open/openspace,
 /area/halflife/outdoors/roofs)
 "mAn" = (
 /obj/effect/turf_decal/siding/thinplating{
@@ -9544,6 +9565,13 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/store)
+"pSP" = (
+/obj/machinery/camera{
+	c_tag = "Town Hall Workshop";
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/townhall/secondfloor)
 "pUP" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/halflife/trash/papers/one,
@@ -47311,7 +47339,7 @@ tGh
 enH
 udY
 mQu
-eRM
+eEr
 hjo
 iGO
 urN
@@ -74416,7 +74444,7 @@ avZ
 mAz
 avZ
 gGB
-sDA
+pSP
 oRw
 kWL
 avZ
@@ -75878,8 +75906,8 @@ gdE
 mAz
 gdE
 aob
-jDF
-jDF
+lPY
+mzE
 jDF
 jDF
 jDF

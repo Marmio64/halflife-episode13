@@ -16,7 +16,7 @@
 	 * HL13 EDIT, THIS IS POLISH NOW, KURWA!!!
 	 */
 	syllables = list(
-		"tydzień", "dzień", "gdzie", "jest", "kosztuje", "dwie", "kawy", "na", "drzwi", "pieniądze", "książka",
-		"jesteś", "zdrowie", "kurwa", "cię", "poznać", "przepraszam", "dobranoc", "dziękuję", "proszę",
-		"tak", "nie", "oczywiście", "bardzo", "rozumiem", "smacznego", "warzywo", "cześć", "zgadzam", "pomoc",
+		"tydzień", "dzień", "gdzie", "jest", "kosztuje", "dwie", "kawy", "na", "drzwi", "pieniądze", "książka", "mówisz", "zadzwoń",
+		"jesteś", "zdrowie", "kurwa", "cię", "poznać", "przepraszam", "dobranoc", "dziękuję", "proszę", "poprawiona", "masz",
+		"tak", "nie", "oczywiście", "bardzo", "rozumiem", "smacznego", "warzywo", "cześć", "zgadzam", "pomoc", "trzcinie",
 	)

@@ -202,6 +202,7 @@
 				human.adjustStaminaLoss(30)
 				human.adjustOxyLoss(20)
 				human.adjust_tiredness(20)
+				human.adjust_eye_blur(10 SECONDS)
 
 	if(hydration < HYDRATION_LEVEL_DYING) //So damn thirsty that you are dying
 		if(prob(4))
@@ -213,6 +214,9 @@
 			human.adjustStaminaLoss(30)
 			human.adjustOxyLoss(20)
 			human.adjust_tiredness(20)
+			human.adjust_eye_blur(5 SECONDS)
+		if(nutrition < (NUTRITION_LEVEL_DYING/5))
+			human.adjustToxLoss(0.25) //Buildup of toxins in your body since you dont have enough liquids to piss and filter stuff. It's not hard to stay hydrated, so this shouldn't happen, really.
 //HL13 EDIT END
 
 ///for when mood is disabled and hunger should handle slowdowns

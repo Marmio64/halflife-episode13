@@ -8,7 +8,7 @@
 	ex_dev = 0
 	ex_heavy = 2
 	ex_light = 3
-	ex_flame = 1
+	ex_flame = 0
 
 /obj/item/grenade/stingbang/halflife
 	name = "stinger grenade"

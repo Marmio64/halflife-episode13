@@ -322,6 +322,11 @@
 	if(world.time > (lastcycle + cycledelay))
 		lastcycle = world.time
 		if(myseed && plant_status != HYDROTRAY_PLANT_DEAD)
+
+			if(self_sustaining) //HL13 EDIT. For balancing since power generation is no problem, autogrow is instead slower
+				if(prob(50))
+					return
+
 			// Advance age
 			age++
 			if(age < myseed.maturation)
@@ -667,7 +672,7 @@
 	. += span_info("Water: [waterlevel]/[maxwater].")
 	. += span_info("Nutrient: [reagents.total_volume]/[maxnutri].")
 	if(self_sustaining)
-		. += span_info("The tray's autogrow is active, protecting it from species mutations, weeds, and pests.")
+		. += span_info("The tray's autogrow is active, protecting it from species mutations, weeds, and pests, but making it grow slower.")
 
 	if(weedlevel >= 5)
 		. += span_warning("It's filled with weeds!")
@@ -1095,7 +1100,7 @@
 		return CLICK_ACTION_BLOCKING
 
 	set_self_sustaining(!self_sustaining)
-	to_chat(user, span_notice("You [self_sustaining ? "activate" : "deactivated"] [src]'s autogrow function[self_sustaining ? ", maintaining the tray's health while using high amounts of power" : ""]."))
+	to_chat(user, span_notice("You [self_sustaining ? "activate" : "deactivated"] [src]'s autogrow function[self_sustaining ? ", maintaining the tray's health, though making it grow slower." : ""]."))
 	return CLICK_ACTION_SUCCESS
 
 /obj/machinery/hydroponics/attack_hand_secondary(mob/user, list/modifiers)

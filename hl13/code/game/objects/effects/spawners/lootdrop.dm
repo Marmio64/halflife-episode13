@@ -163,7 +163,6 @@
 				/obj/item/clothing/head/soft/black,
 				/obj/item/clothing/head/flatcap,
 				/obj/item/clothing/glasses/eyepatch,
-				/obj/item/clothing/suit/jacket,
 				/obj/item/clothing/suit/jacket/miljacket,
 				/obj/item/clothing/gloves/fishing,
 				/obj/item/clothing/head/utility/welding,
