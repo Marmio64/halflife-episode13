@@ -231,6 +231,7 @@
 	var/toxicity = 0 //hl13 edit
 	var/disgust = 0 //hl13 edit
 	var/filthy = FALSE //hl13 edit
+	var/treated = FALSE //hl13 edit
 
 /datum/glass_style/shot_glass/water
 	required_drink_type = /datum/reagent/water
@@ -242,6 +243,7 @@
 	desc = "The father of all refreshments."
 	icon_state = "glass_clear"
 
+//hl13 edit start
 /datum/reagent/water/dirty
 	name = "Dirty Water"
 	description = "Contaminated water that is really bad for your health."
@@ -256,6 +258,15 @@
 	color = "#705a43"
 	taste_description = "sewer water"
 	filthy = TRUE
+
+/datum/reagent/water/treated
+	name = "Treated Water"
+	description = "Water filled with a slurry of harsh cleaning chemicals. It does clean you well, but it is absolutely not safe to drink"
+	color = "#90b8b8"
+	taste_description = "chemical filled water"
+	treated = TRUE
+	toxicity = 2
+	disgust = 5
 
 /datum/reagent/water/unpurified
 	name = "Unpurified Water"
@@ -275,6 +286,7 @@
 		if(prob(10))
 			L.ForceContractDisease(new /datum/disease/gutworms(), FALSE, TRUE) //Unclean water causes diseases
 
+//hl13 edit end
 /*
  * Water reaction to turf
  */
@@ -366,8 +378,8 @@
 			exposed_human.adjust_hygiene(-2 * reac_volume) //Gross. -2 hygiene per unit, so a bucket of sewer water is -100 hygiene. Two buckets is usually enough to stink them up.
 		else
 			exposed_human.adjust_hygiene(1 * reac_volume)
-			//if(exposed_human.hygiene > HYGIENE_LEVEL_NORMAL) //splashing yourself with water can only get you so clean, visit a shower for a better washing
-				//exposed_human.hygiene = HYGIENE_LEVEL_NORMAL have to disable for now cause it also screws up showers rn, ill fix this later probably
+			if(exposed_human.hygiene > HYGIENE_LEVEL_TIDY && !treated)
+				exposed_human.hygiene = HYGIENE_LEVEL_TIDY
 		//hl13 edit end
 
 	if((methods & INGEST) && HAS_TRAIT(exposed_mob, TRAIT_WATER_ADAPTATION) && reac_volume >= 4)
