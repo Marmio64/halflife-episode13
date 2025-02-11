@@ -83,7 +83,7 @@
 #define JOB_GENETICIST "Geneticist"
 //Supply
 #define JOB_QUARTERMASTER "Union Foreman"
-#define JOB_CARGO_TECHNICIAN "Cargo Technician"
+#define JOB_CARGO_TECHNICIAN "Union Worker"
 #define JOB_CARGO_GORILLA "Cargo Gorilla"
 #define JOB_SHAFT_MINER "Union Miner"
 #define JOB_BITRUNNER "Bitrunner"

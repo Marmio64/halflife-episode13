@@ -21,15 +21,15 @@ type Department = {
 export const DEPARTMENT2COLOR: Record<string, Department> = {
   cargo: {
     color: 'brown',
-    trims: ['Bitrunner', 'Cargo Technician', 'Shaft Miner', 'Quartermaster'],
+    trims: ['Bitrunner', 'Union Worker', 'Union Miner', 'Union Foreman'],
   },
   command: {
     color: 'blue',
-    trims: ['Captain', 'Head of Personnel'],
+    trims: ['District Administrator', 'Labor Lead'],
   },
   engineering: {
     color: 'orange',
-    trims: ['Atmospheric Technician', 'Chief Engineer', 'Station Engineer'],
+    trims: ['Infestation Control', 'Chief Engineer', 'Union Engineer'],
   },
   medical: {
     color: 'teal',
@@ -37,17 +37,22 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
       'Chemist',
       'Chief Medical Officer',
       'Coroner',
-      'Medical Doctor',
+      'Union Doctor',
       'Paramedic',
     ],
   },
   science: {
     color: 'pink',
-    trims: ['Geneticist', 'Research Director', 'Roboticist', 'Scientist'],
+    trims: ['Geneticist', 'Research Director', 'Roboticist', 'Union Scientist'],
   },
   security: {
     color: 'red',
-    trims: ['Detective', 'Head of Security', 'Security Officer', 'Warden'],
+    trims: [
+      'Detective',
+      'Divisional Lead',
+      'Civil Protection Officer',
+      'Overseer',
+    ],
   },
   service: {
     color: 'green',
@@ -58,8 +63,8 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
       'Chef',
       'Clown',
       'Cook',
-      'Curator',
-      'Janitor',
+      'Clerk',
+      'Vortigaunt Slave',
       'Lawyer',
       'Mime',
       'Psychologist',

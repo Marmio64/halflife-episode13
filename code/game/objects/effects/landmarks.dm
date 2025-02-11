@@ -74,7 +74,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Janitor"
 
 /obj/effect/landmark/start/cargo_technician
-	name = "Cargo Technician"
+	name = JOB_CARGO_TECHNICIAN
 	icon_state = "Cargo Technician"
 
 /obj/effect/landmark/start/bitrunner
