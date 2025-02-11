@@ -283,7 +283,6 @@
 	subdepartment_color = COLOR_CARGO_BROWN
 	sechud_icon_state = SECHUD_CARGO_TECHNICIAN
 	minimal_access = list(
-		ACCESS_CARGO,
 		ACCESS_MAINT_TUNNELS,
 		ACCESS_MECH_MINING,
 		ACCESS_MINERAL_STOREROOM,
@@ -902,6 +901,7 @@
 	department_state = "departmenthead"
 	sechud_icon_state = SECHUD_QUARTERMASTER
 	minimal_access = list(
+		ACCESS_ENGINEERING, //hl13 edit
 		ACCESS_AUX_BASE,
 		ACCESS_BIT_DEN,
 		ACCESS_CARGO,

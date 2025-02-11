@@ -1197,6 +1197,12 @@
 	},
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/plaza)
+"cgH" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/maint/nodirectional{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/productioncenter)
 "che" = (
 /obj/effect/turf_decal/siding/thinplating/corner{
 	dir = 8
@@ -3064,6 +3070,10 @@
 /obj/item/reagent_containers/cup/bucket,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/townhall/secondfloor)
+"fap" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/maint/nodirectional,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/productioncenter)
 "faq" = (
 /obj/structure/halflife/trash/bricks{
 	dir = 4
@@ -3121,6 +3131,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/store)
+"ffp" = (
+/obj/effect/landmark/start/cargo_technician,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "ffv" = (
 /obj/structure/halflife/tank/chemical/container/broken,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -3834,10 +3848,6 @@
 /obj/structure/halflife/pipes/vent,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
-"gmz" = (
-/obj/effect/landmark/start/cargo_technician,
-/turf/open/floor/plating/indoor/metal/industrial,
-/area/halflife/indoors/productioncenter)
 "gmS" = (
 /obj/structure/chair/halflife/metal/blue,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -6313,7 +6323,7 @@
 /area/halflife/indoors/apartments/primary)
 "kqb" = (
 /obj/item/mop,
-/obj/structure/mop_bucket,
+/obj/structure/mop_bucket/janitorialcart,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/townhall/secondfloor)
 "kqs" = (
@@ -14644,11 +14654,7 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors)
 "xSI" = (
-/obj/machinery/door/unpowered/halflife/seethrough/metal{
-	keylock = 1;
-	locked = 1;
-	lockid = "factory"
-	},
+/obj/machinery/turnstile/brig/halflife/forcefield/maint/nodirectional,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
 "xTq" = (
@@ -43037,7 +43043,7 @@ bMK
 tgw
 bMK
 bMK
-ihM
+fap
 uXQ
 uXQ
 uXQ
@@ -43289,7 +43295,7 @@ frh
 frh
 frh
 uby
-quh
+cgH
 uby
 lGZ
 lrB
@@ -44561,9 +44567,9 @@ uXQ
 uXQ
 uby
 oOf
-gmz
+ffp
 hgk
-gmz
+ffp
 cMd
 hgk
 bMK
@@ -44817,9 +44823,9 @@ uXQ
 uXQ
 uby
 iOI
-gmz
+ffp
 jbp
-gmz
+ffp
 cMd
 jbp
 vas
@@ -78603,7 +78609,7 @@ mAz
 mAz
 mAz
 mAz
-mAz
+gdE
 gdE
 gdE
 gdE
@@ -78731,7 +78737,7 @@ mAz
 mAz
 mAz
 mAz
-mAz
+gdE
 gdE
 gdE
 gdE

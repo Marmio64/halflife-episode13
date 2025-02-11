@@ -1,9 +1,11 @@
 /obj/machinery/computer/cargo
 	name = "supply console"
-	desc = "Used to order supplies, approve requests, and control the shuttle."
-	icon_screen = "supply"
+	desc = "Used to order supplies, approve requests, and control the supply dropship."
+	icon_state = "sr_console" //hl13 edit
+	icon_screen = null //hl13 edit
+	icon_keyboard = null //hl13 edit
 	circuit = /obj/item/circuitboard/computer/cargo
-	light_color = COLOR_BRIGHT_ORANGE
+	light_color = LIGHT_COLOR_BLUE //hl13 edit
 
 	///Can the supply console send the shuttle back and forth? Used in the UI backend.
 	var/can_send = TRUE
@@ -13,10 +15,10 @@
 	var/can_approve_requests = TRUE
 	var/contraband = FALSE
 	var/self_paid = FALSE
-	var/safety_warning = "For safety and ethical reasons, the automated supply shuttle cannot transport live organisms, \
+	var/safety_warning = "For safety and ethical reasons, the automated supply dropship cannot transport live organisms, \
 		human remains, classified nuclear weaponry, mail, undelivered departmental order crates, syndicate bombs, \
 		homing beacons, unstable eigenstates, fax machines, or machinery housing any form of artificial intelligence."
-	var/blockade_warning = "Bluespace instability detected. Shuttle movement impossible."
+	var/blockade_warning = "Bluespace instability detected. Dropship movement impossible."
 	/// radio used by the console to send messages on supply channel
 	var/obj/item/radio/headset/radio
 	/// var that tracks message cooldown

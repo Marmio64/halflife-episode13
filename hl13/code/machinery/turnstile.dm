@@ -213,7 +213,7 @@
 
 /obj/machinery/turnstile/brig/halflife/forcefield/maint
 	name = "Combine Work Zone Forcefield"
-	req_access = list(ACCESS_MAINT_TUNNELS)
+	req_access = list(ACCESS_ENGINEERING)
 
 /obj/machinery/turnstile/brig/halflife/forcefield/maint/nodirectional
 	desc = "A forcefield which only allows those to pass who have proper access. You may be able to turn it off with the proper access."
