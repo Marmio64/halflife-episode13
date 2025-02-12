@@ -78,6 +78,8 @@
 		/datum/language/common,
 		/datum/language/uncommon,
 		/datum/language/russian, //hl13 edit
+		/datum/language/ukraine, //hl13 edit
+		/datum/language/czech, //hl13 edit
 		/datum/language/draconic,
 		/datum/language/codespeak,
 		/datum/language/monkey,

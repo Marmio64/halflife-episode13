@@ -362,12 +362,16 @@ GLOBAL_LIST_INIT(prototype_language_holders, init_language_holder_prototypes())
 		/datum/language/common = list(LANGUAGE_ATOM),
 		/datum/language/uncommon = list(LANGUAGE_ATOM),
 		/datum/language/russian = list(LANGUAGE_ATOM), //hl13 edit
+		/datum/language/ukraine = list(LANGUAGE_ATOM), //hl13 edit
+		/datum/language/czech = list(LANGUAGE_ATOM), //hl13 edit
 		/datum/language/machine = list(LANGUAGE_ATOM),
 	)
 	spoken_languages = list(
 		/datum/language/common = list(LANGUAGE_ATOM),
 		/datum/language/uncommon = list(LANGUAGE_ATOM),
 		/datum/language/russian = list(LANGUAGE_ATOM), //hl13 edit
+		/datum/language/ukraine = list(LANGUAGE_ATOM), //hl13 edit
+		/datum/language/czech = list(LANGUAGE_ATOM), //hl13 edit
 		/datum/language/machine = list(LANGUAGE_ATOM),
 	)
 

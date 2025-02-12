@@ -35,6 +35,20 @@ GLOBAL_LIST_EMPTY(dead_players_during_shift)
 	if(client && !HAS_TRAIT(src, TRAIT_SUICIDED) && !(client in GLOB.dead_players_during_shift))
 		GLOB.dead_players_during_shift += client
 
+		//HL13 EDIT START
+		var/area/diedin_area = get_area(src)
+		var/check_player_mob = mind && mind.name && mind.active
+		var/isvalid_area_check = !diedin_area || !(diedin_area.area_flags & NO_DEATH_MESSAGE)
+
+		if(check_player_mob)
+			if(isvalid_area_check)
+				SSsociostability.modifystability(-10) //Sociostability is reduced by 1% for any person's death, on top of the mindshield sociostability loss
+
+			if(HAS_TRAIT(src, TRAIT_MINDSHIELD))
+				SSsociostability.modifystability(-20) //If they were mindshielded, they were probably somewhat important.
+
+	//HL13 EDIT END
+
 	if(SSticker.HasRoundStarted())
 		SSblackbox.ReportDeath(src)
 		log_message("has died (BRUTE: [src.getBruteLoss()], BURN: [src.getFireLoss()], TOX: [src.getToxLoss()], OXY: [src.getOxyLoss()]", LOG_ATTACK)
