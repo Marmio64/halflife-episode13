@@ -183,7 +183,7 @@
 	desc = "Full-body blue suit for the common citizen, worn down and dirtied by time and use. Uses sensors to allow the combine to track you."
 	icon_state = "citizenblue"
 	inhand_icon_state = "r_suit"
-	can_adjust = FALSE
+	can_adjust = TRUE
 	has_sensor = LOCKED_SENSORS
 	sensor_mode = SENSOR_VITALS
 	random_sensor = FALSE
@@ -196,6 +196,7 @@
 	icon_state = "refugee"
 	inhand_icon_state = "r_suit"
 	has_sensor = NO_SENSORS
+	can_adjust = FALSE
 
 /obj/item/clothing/under/citizen/refugee/green
 	name = "refugee clothes"
@@ -208,6 +209,7 @@
 	icon_state = "rebelblue"
 	has_sensor = NO_SENSORS
 	armor_type = /datum/armor/rebelsuit
+	can_adjust = FALSE
 
 /datum/armor/rebelsuit
 	melee = 10

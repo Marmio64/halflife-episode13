@@ -158,6 +158,17 @@
 	acid = 20
 	wound = 0
 
+/obj/item/clothing/suit/bluejacket
+	name = "blue citizen jacket"
+	desc = "A blue jacket for citizens to wear."
+	icon_state = "bluejacket"
+	body_parts_covered = CHEST|GROIN|ARMS
+	cold_protection = CHEST|GROIN|ARMS
+	heat_protection = CHEST|GROIN|ARMS
+	strip_delay = 80
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
 /obj/item/clothing/suit/utility/radiation/cleanup
 	name = "cleanup suit"
 	desc = "A suit which provides protection against radiation and hostile xenian fauna attacks."

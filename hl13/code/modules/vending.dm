@@ -26,6 +26,7 @@
 	product_slogans = "Stimulate the economy!;Sedate resistive thoughts!;Purchase neat belongings!;Buy, Buy, Buy!"
 	vend_reply = "Thank you for using Gift Vendor!"
 	products = list(/obj/item/clothing/under/citizen = 3,
+					/obj/item/clothing/suit/bluejacket = 3,
 					/obj/item/camera_film = 10,
 					/obj/item/camera = 3,
 					/obj/item/hourglass = 2,
