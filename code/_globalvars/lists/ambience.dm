@@ -199,6 +199,7 @@ GLOBAL_LIST_INIT(hloutside_ambience,list(
 	'hl13/sound/ambience/suppressionfield.ogg',
 	'hl13/sound/ambience/vlvx_song3.ogg',
 	'hl13/sound/ambience/hl2_song2.ogg',
+	'hl13/sound/ambience/hl2_song8.ogg',
 	'sound/ambience/ruin/ambiruin6.ogg', ))
 
 GLOBAL_LIST_INIT(hlinside_ambience,list(
@@ -210,6 +211,7 @@ GLOBAL_LIST_INIT(hlinside_ambience,list(
 	'hl13/sound/ambience/suppressionfield.ogg',
 	'hl13/sound/ambience/vlvx_song3.ogg',
 	'hl13/sound/ambience/hl2_song2.ogg',
+	'hl13/sound/ambience/hl2_song8.ogg',
 	'sound/ambience/ruin/ambiruin6.ogg', ))
 
 GLOBAL_LIST_INIT(hlsewers_ambience,list(

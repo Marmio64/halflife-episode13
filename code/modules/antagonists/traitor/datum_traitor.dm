@@ -116,6 +116,8 @@
 
 	owner.teach_crafting_recipe(/datum/crafting_recipe/syndicate_uplink_beacon)
 
+	owner.current.cmode_music = 'hl13/sound/music/combat/cpviolation.ogg' //cause now they're rebels n' stuff...
+
 	return ..()
 
 /datum/antagonist/traitor/on_removal()

@@ -351,7 +351,7 @@ GLOBAL_LIST_EMPTY(antagonists)
 	if(isnull(stinger_sound))
 		return
 
-	owner.current.playsound_local(get_turf(owner.current), stinger_sound, 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
+	owner.current.playsound_local(get_turf(owner.current), stinger_sound, 75, FALSE, pressure_affected = FALSE, use_reverb = FALSE) //hl13 edit volume
 
 /**
  * Proc that sends fluff or instructional messages to the player when they lose this antag datum.
