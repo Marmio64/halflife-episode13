@@ -68,18 +68,19 @@
 	extra_price = 35
 
 /obj/machinery/vending/miningvendor
-	name = "\improper Miner Vendor"
+	name = "\improper Union Vendor"
 	desc = "Acquire useful mining tools and equipment here."
 	icon_state = "mining"
 	panel_type = "panel2"
 	product_ads = "Acquire high grade equipment here.;Improve your work efficiency.;Better serve the combine!;Quit being useless."
-	products = list(/obj/item/pickaxe/mini = 5,
-					/obj/item/food/rationpack/box = 5,
-					/obj/item/reagent_containers/pill/patch/medkit = 5)
+	products = list(/obj/item/pickaxe/mini = 6,
+					/obj/item/food/rationpack/box = 6,
+					/obj/item/reagent_containers/pill/patch/medkit = 6)
 
-	premium = list(/obj/item/storage/belt/pouch = 5,
-				   /obj/item/storage/box/halflife/betterration = 5,
-				   /obj/item/flashlight/seclite = 5)
+	premium = list(/obj/item/storage/belt/pouch = 6,
+				   /obj/item/storage/belt/utility = 5,
+				   /obj/item/storage/box/halflife/betterration = 6,
+				   /obj/item/flashlight/seclite = 6)
 
 	resistance_flags = FIRE_PROOF
 	refill_canister = /obj/item/vending_refill/miner

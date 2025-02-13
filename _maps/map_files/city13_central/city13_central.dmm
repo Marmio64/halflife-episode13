@@ -792,6 +792,7 @@
 /obj/structure/halflife/rug/mat{
 	dir = 4
 	},
+/obj/effect/landmark/navigate_destination/halflife/store,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/plaza)
 "btC" = (
@@ -3046,9 +3047,6 @@
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
 "eXU" = (
-/obj/item/radio/intercom{
-	pixel_y = -30
-	},
 /obj/structure/railing/halflife/solo{
 	dir = 1
 	},
@@ -3849,6 +3847,10 @@
 /obj/effect/turf_decal/halflife/covering/wallpaper/green,
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/bar/apartments)
+"glP" = (
+/obj/item/radio/intercom/directional/north,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/restaurant)
 "glT" = (
 /obj/structure/table/halflife/wood/bar,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -8851,6 +8853,7 @@
 /area/halflife/indoors/scienceunion)
 "oxw" = (
 /obj/machinery/griddle,
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/restaurant)
 "oyH" = (
@@ -10645,9 +10648,6 @@
 /area/halflife/indoors)
 "rwJ" = (
 /obj/effect/landmark/start/cook,
-/obj/item/radio/intercom{
-	pixel_y = -30
-	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/restaurant)
 "rwM" = (
@@ -12226,6 +12226,7 @@
 /obj/structure/railing/halflife/solo{
 	dir = 8
 	},
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/distributioncenter)
 "uhP" = (
@@ -47484,7 +47485,7 @@ qyl
 wlP
 rwJ
 cWU
-hDl
+glP
 nCZ
 tcD
 gUd

@@ -86,12 +86,12 @@
 	custom_price = 25
 
 /obj/item/storage/box/halflife/worstration/PopulateContents()
-	new /obj/item/food/rationpack/worstgrade(src)
+	new /obj/item/food/nutripaste/small(src)
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater/yellow(src)
 
 /obj/item/food/rationpack
 	name = "nutriment bar"
-	desc = "A 'water' flavored ration nutriment bar. Tastes gross, but at least you won't be hungry"
+	desc = "A 'water' flavored ration nutriment bar. It's taste is comparable to viscous, plastic contaminated water with hints of old powdered milk, but at the least you've starte to get used to it."
 	icon = 'hl13/icons/obj/food.dmi'
 	icon_state = "rationpack"
 	bite_consumption = 2
@@ -160,7 +160,7 @@
 
 /obj/item/food/flavorbar
 	name = "flavor bar"
-	desc = "A slightly sweet, and very small bar of... something. It's not nearly as flavorful as the name may suggest, but it is far better than the nutriment dense bars."
+	desc = "A condensed granolla bar sized nutriment bar. Far less filling than the full sized bars, but added artificial sweeteners turn the mush from gross slop into managable paste, which while not appeitizing is not upsetting."
 	icon = 'hl13/icons/obj/food.dmi'
 	icon_state = "flavorbar"
 	bite_consumption = 1
@@ -176,7 +176,7 @@
 
 
 /obj/item/food/nutripaste
-	name = "nutripaste"
+	name = "nutripaste tube"
 	desc = "A tube full of nutripaste. This looks absolutely abhorrent, and makes the standard ration bars taste like a delicacy in comparison. At the least, it is rather nutritious."
 	icon = 'hl13/icons/obj/food.dmi'
 	icon_state = "nutripaste"
@@ -186,6 +186,10 @@
 	food_reagents = list(/datum/reagent/consumable/nutriment = 10) //Very nutritious at least...
 
 	preserved_food = TRUE
+
+/obj/item/food/nutripaste/small
+	name = "small nutripaste tube"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 4)
 
 ///Override for checkliked callback
 /obj/item/food/nutripaste/make_edible()

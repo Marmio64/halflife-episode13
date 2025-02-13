@@ -13,9 +13,20 @@
 	/// How many rations are in this specific unit? Can be refilled any time, and stops dispensing rations if it runs out.
 	var/rations_stored = 15
 
+	/// How many rations have been dispensed so far?
+	var/rations_dispensed = 0
+	/// When does the vendor start to malfunction from excessive use?
+	var/ration_breaklimit = 26
+	/// Is the vendor malfunctioning?
+	var/malfunctioning = FALSE
+
 /obj/machinery/ration_vendor/examine(mob/user)
 	. = ..()
 	. += span_notice("The vendor has [rations_stored] rations left to dispense.")
+	if(malfunctioning)
+		. += span_notice("The vendor appears to require maintenance. You can use a wrench on it to repair it.")
+	else if(rations_dispensed > (ration_breaklimit/2))
+		. += span_notice("The vendor looks like it will be due for maintenance soon. You can use a wrench on it to repair it.")
 
 /obj/machinery/ration_vendor/interact(mob/living/carbon/human/user)
 	. = ..()
@@ -94,6 +105,11 @@
 
 	//sleep(2 SECONDS)
 
+	if(malfunctioning && prob(30)) //if vendor is malfunctioning, it may cancel the ration request and waste your time
+		say("Vendor malfunction detected. Resubmit coupon to try again, and request a repair team.")
+		account.ration_voucher = TRUE
+		return
+
 	dispense(ration_quality, vortigaunt)
 	return
 
@@ -101,6 +117,9 @@
 	SSsociostability.modifystability(1) //Compliance brings stability.
 
 	rations_stored--
+	rations_dispensed++
+	if(rations_dispensed >= ration_breaklimit)
+		malfunctioning = TRUE
 
 	flick(icon_state_vend,src)
 
@@ -141,3 +160,30 @@
 			new /obj/item/ration_construction/used_container(user.loc)
 		else
 			to_chat(usr, span_notice("This ration container is not fully refilled."))
+
+/obj/machinery/ration_vendor/wrench_act(mob/living/user, obj/item/O)
+	. = ..()
+	if(!O.tool_behaviour == TOOL_WRENCH)
+		return FALSE
+
+	if(!malfunctioning && !(rations_dispensed > (ration_breaklimit/2)))
+		balloon_alert(user, "Doesn't need fixing")
+		return FALSE
+
+	playsound(loc, 'sound/items/tools/ratchet.ogg', 25, 1)
+	balloon_alert_to_viewers("Starts repairing [src]'s internals")
+
+	if(!do_after(user, 10 SECONDS, src))
+		return FALSE
+
+	if(!HAS_TRAIT(user, TRAIT_ENGINEER))
+		if(prob(80))
+			to_chat(user, span_notice("That might have fixed it... Wait, no. Hm, it might be better to get a trained technician to handle this..."))
+			return FALSE
+		else
+			to_chat(user, span_notice("Wow, that actually worked?"))
+
+	playsound(loc, 'sound/items/tools/ratchet.ogg', 25, 1)
+	malfunctioning = FALSE
+	rations_dispensed = 0
+	return TRUE

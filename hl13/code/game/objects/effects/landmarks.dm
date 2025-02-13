@@ -151,3 +151,6 @@ GLOBAL_LIST_EMPTY(chosen_station_templates)
 
 /obj/effect/landmark/navigate_destination/halflife/apartments/primary
 	location = "Primary Apartments"
+
+/obj/effect/landmark/navigate_destination/halflife/store
+	location = "Store"
