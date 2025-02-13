@@ -29,7 +29,7 @@
 
 	price_min = CARGO_CRATE_VALUE/5
 	price_max = CARGO_CRATE_VALUE/3
-	stock_max = 3
+	stock_max = 4
 	availability_prob = 90
 
 /datum/market_item/halflife/consumable/vodka
@@ -39,5 +39,5 @@
 
 	price_min = CARGO_CRATE_VALUE/4
 	price_max = CARGO_CRATE_VALUE/3
-	stock_max = 3
-	availability_prob = 90
+	stock_max = 4
+	availability_prob = 100

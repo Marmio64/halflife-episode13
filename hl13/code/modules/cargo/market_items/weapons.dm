@@ -121,3 +121,23 @@
 	price_max = CARGO_CRATE_VALUE * 2
 	stock_max = 2
 	availability_prob = 80
+
+/datum/market_item/halflife/weapon/stinger
+	name = "Stinger Grenade"
+	desc = "A grenade filled with rubber pellets. Can give people and crowds a good scare, and rough em up a bit as well."
+	item = /obj/item/grenade/stingbang/halflife
+
+	price_min = CARGO_CRATE_VALUE/2
+	price_max = CARGO_CRATE_VALUE
+	stock_max = 3
+	availability_prob = 80
+
+/datum/market_item/halflife/weapon/sledgehammer
+	name = "Sledgehammer"
+	desc = "A giant hammer for smashing in the kneecaps of anyone you don't like. What isn't to like?"
+	item = /obj/item/melee/sledgehammer
+
+	price_min = CARGO_CRATE_VALUE
+	price_max = CARGO_CRATE_VALUE * 2
+	stock_max = 1
+	availability_prob = 60

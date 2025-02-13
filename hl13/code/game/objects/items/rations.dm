@@ -12,7 +12,11 @@
 	icon_state = "ration"
 
 /obj/item/storage/box/halflife/ration/PopulateContents()
-	new /obj/item/food/rationpack(src)
+	if(prob(5))
+		new /obj/item/food/pierogi_ration(src)
+	else
+		new /obj/item/food/rationpack(src)
+
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater(src)
 	new /obj/item/stack/spacecash/c1(src, 5)
 
@@ -23,7 +27,11 @@
 	icon_state = "ration-bettergrade"
 
 /obj/item/storage/box/halflife/betterration/PopulateContents()
-	new /obj/item/food/rationpack/box(src)
+	if(prob(5))
+		new /obj/item/food/pierogi_ration(src)
+	else
+		new /obj/item/food/rationpack/box(src)
+
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater/red(src)
 	new /obj/item/stack/spacecash/c10(src)
 
@@ -34,7 +42,11 @@
 	icon_state = "ration-highgrade"
 
 /obj/item/storage/box/halflife/loyaltyration/PopulateContents()
-	new /obj/item/food/rationpack/loyalty(src)
+	if(prob(5))
+		new /obj/item/food/pierogi_ration(src)
+	else
+		new /obj/item/food/rationpack/loyalty(src)
+
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater/red(src)
 	new /obj/item/food/flavorbar(src)
 	new /obj/item/stack/credit_voucher(src, 4)
@@ -46,7 +58,11 @@
 	icon_state = "ration-bestgrade"
 
 /obj/item/storage/box/halflife/bestration/PopulateContents()
-	new /obj/item/food/rationpack/loyalty(src)
+	if(prob(5))
+		new /obj/item/food/pierogi_ration(src)
+	else
+		new /obj/item/food/rationpack/loyalty(src)
+
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater/green(src)
 	new /obj/item/food/flavorbar/large(src)
 	new /obj/item/stack/credit_voucher(src, 5)
@@ -126,6 +142,21 @@
 /obj/item/food/rationpack/manufactured
 	name = "manufactured nutriment bar"
 	desc = "A 'water' flavored ration nutriment bar. Tastes gross, but at least you won't be hungry. This one looks freshly made."
+
+/obj/item/food/pierogi_ration
+	name = "nutriment pierogi"
+	desc = "Nowadays, the only thing that makes you want to get up in the morning to grab a ration and live another day is the mere chance to get one of these in your rations."
+	icon_state = "pierogiration"
+	icon = 'hl13/icons/obj/food.dmi'
+	bite_consumption = 2
+	tastes = list("processed meat" = 3, "old grains" = 3)
+	foodtypes = MEAT | GRAIN
+	food_reagents = list(/datum/reagent/consumable/nutriment = 6, /datum/reagent/consumable/nutriment/vitamin = 3)
+	custom_price = 20
+
+	preserved_food = TRUE
+	w_class = WEIGHT_CLASS_SMALL
+	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/flavorbar
 	name = "flavor bar"

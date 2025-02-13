@@ -494,7 +494,7 @@
 	icon_state = "pierogi"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
-		/datum/reagent/consumable/nutriment/vitamin = 2,
+		/datum/reagent/consumable/nutriment/vitamin = 3, //hl13 edit
 	)
 	tastes = list("potato" = 1, "onions" = 1)
 	foodtypes = GRAIN | VEGETABLES
@@ -644,7 +644,7 @@
 	icon_state = "cheese_pierogi"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
-		/datum/reagent/consumable/nutriment/vitamin = 4,
+		/datum/reagent/consumable/nutriment/vitamin = 5, //hl13 edit
 	)
 	tastes = list("potato" = 1, "cheese" = 1)
 	foodtypes = GRAIN | VEGETABLES | DAIRY
@@ -657,7 +657,7 @@
 	icon_state = "meat_pierogi"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
-		/datum/reagent/consumable/nutriment/vitamin = 2,
+		/datum/reagent/consumable/nutriment/vitamin = 3, //hl13 edit
 		/datum/reagent/consumable/nutriment/protein = 2,
 	)
 	tastes = list("potato" = 1, "cheese" = 1)
