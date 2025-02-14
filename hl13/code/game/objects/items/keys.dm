@@ -67,6 +67,11 @@
 	desc = "A combine-grade lockpick, able to pick locks more easily than your standard lockpick."
 	picklvl = 1.25
 
+/obj/item/lockpick/combine/ic
+	name = "infestation control lockpick"
+	desc = "A combine-grade lockpick, able to pick locks more easily than your standard lockpick."
+	picklvl = 1.25
+
 /obj/item/hl2key/master
 	name = "master key"
 	desc = "The district administrator's master key."

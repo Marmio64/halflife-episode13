@@ -1,7 +1,7 @@
 /turf/open/water
 	name = "water"
 	gender = PLURAL
-	desc = "Shallow water."
+	desc = "Shallow water. Much too shallow to be harvested from."
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "riverwater_motion"
 	baseturfs = /turf/open/water

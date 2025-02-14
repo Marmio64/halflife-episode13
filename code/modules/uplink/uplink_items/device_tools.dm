@@ -99,3 +99,9 @@
 	item = /obj/item/market_uplink/halflife/blackmarket
 	cant_discount = TRUE //Too powerful to be super cheap ever, needs to be a significant investment.
 	cost = 14
+
+/datum/uplink_item/device_tools/antenna
+	name = "Destabilizer Antenna"
+	desc = "An antenna needed for building a sociostability destabilizer. You'll have to procure all the rest of the (difficult to acquire) parts, but at least this one is the hardest one to find."
+	item = /obj/item/halflife/antenna
+	cost = 2

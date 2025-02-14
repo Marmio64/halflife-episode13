@@ -95,7 +95,7 @@
 	*/
 	var/static/list/graffiti = list(
 		"amyjon",
-		"antilizard",
+		//"antilizard", hl13 edit
 		"body",
 		"cyka",
 		"dwarf",
@@ -103,8 +103,11 @@
 		"engie",
 		"face",
 		"guy",
+		"kurwa", //hl13 edit add
 		"matt",
-		"prolizard",
+		//"prolizard", hl13 edit
+		"polska", //hl13 edit add
+		"resistance", //hl13 edit add
 		"revolution",
 		"star",
 		"uboa",
@@ -116,9 +119,10 @@
 		"danger",
 		"electricdanger",
 		"firedanger", // These symbols left intentionally un-alphabetised as they should be next to each other in the menu
-		"evac",
+		//"evac", hl13 edit
 		"food",
 		"heart",
+		"lambda", //hl13 edit add
 		"like",
 		"med",
 		"nay",
@@ -127,39 +131,39 @@
 		"safe",
 		"shop",
 		"skull",
-		"space",
+		//"space",
 		"trade",
 	)
 	/// List of selectable drawing options
 	var/static/list/drawings = list(
-		"beepsky",
+		//"beepsky", hl13 edit
 		"blueprint",
 		"bottle",
 		"brush",
-		"carp",
-		"cat",
-		"clown",
-		"corgi",
-		"disk",
-		"fireaxe",
-		"ghost",
-		"largebrush",
-		"scroll",
+		//"carp", hl13 edit
+		//"cat", hl13 edit
+		//"clown", hl13 edit
+		//"corgi", hl13 edit
+		//"disk", hl13 edit
+		//"fireaxe", hl13 edit
+		//"ghost", hl13 edit
+		//"largebrush", hl13 edit
+		//"scroll", hl13 edit
 		"shotgun",
 		"smallbrush" = CRAYON_COST_SMALL,
 		"snake",
 		"splatter",
-		"stickman",
-		"taser",
-		"toilet",
-		"toolbox",
+		//"stickman", hl13 edit
+		//"taser", hl13 edit
+		//"toilet", hl13 edit cause skibidi toilet
+		//"toolbox", hl13 edit
 	)
 	/// List of selectable orientable options
 	var/static/list/oriented = list(
 		"arrow" = CRAYON_COST_SMALL,
 		"body",
 		"chevron" = CRAYON_COST_SMALL,
-		"clawprint" = CRAYON_COST_SMALL,
+		//"clawprint" = CRAYON_COST_SMALL, hl13 edit
 		"footprint" = CRAYON_COST_SMALL,
 		"line",
 		"pawprint" = CRAYON_COST_SMALL,
@@ -195,7 +199,7 @@
 		"yiffhell" = CRAYON_COST_LARGE,
 	)
 	/// Combined lists
-	var/static/list/all_drawables = graffiti + symbols + drawings + oriented + runes + graffiti_large_h
+	var/static/list/all_drawables = graffiti + symbols + drawings + oriented + runes //hl13 edit, removing large grafittis
 
 /obj/item/toy/crayon/proc/isValidSurface(surface)
 	return isfloorturf(surface)
@@ -326,8 +330,8 @@
 
 	var/list/glh_items = list()
 	. += list(list("name" = "Graffiti Large Horizontal", "items" = glh_items))
-	for(var/glh in graffiti_large_h)
-		glh_items += list(list("item" = glh))
+	//for(var/glh in graffiti_large_h)
+		//h_items += list(list("item" = glh)) hl13 edit, no large grafittis
 
 	var/list/S_items = list()
 	. += list(list("name" = "Symbols", "items" = S_items))

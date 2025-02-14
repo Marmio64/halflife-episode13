@@ -265,6 +265,11 @@
 			maroon_objective.find_target()
 			return maroon_objective
 
+		if(prob(20))
+			var/datum/objective/reduce_sociostability/socio_objective = new() //hl13 edit, reduce sociostability objective
+			socio_objective.owner = owner
+			return socio_objective
+
 		var/datum/objective/assassinate/rebel/kill_objective = new() //hl13 edit, rebel's kill obj
 		kill_objective.owner = owner
 		kill_objective.find_target()

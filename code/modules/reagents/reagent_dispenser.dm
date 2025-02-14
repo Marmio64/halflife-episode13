@@ -183,15 +183,15 @@
 		// As it stands this is a minor nerf in exchange for an easy bombing technique working that has been broken for a while.
 		switch(fuel_amt)
 			if(25 to 150)
-				explosion(src, light_impact_range = 1, flame_range = 2)
+				explosion(src, light_impact_range = 1, flame_range = 0) //hl13 edit to remove all flames for now
 			if(150 to 300)
-				explosion(src, light_impact_range = 2, flame_range = 3)
+				explosion(src, light_impact_range = 2, flame_range = 0)
 			if(300 to 750)
-				explosion(src, heavy_impact_range = 1, light_impact_range = 3, flame_range = 5)
+				explosion(src, heavy_impact_range = 1, light_impact_range = 3, flame_range = 0)
 			if(750 to 1500)
-				explosion(src, heavy_impact_range = 1, light_impact_range = 4, flame_range = 6)
+				explosion(src, heavy_impact_range = 1, light_impact_range = 4, flame_range = 0)
 			if(1500 to INFINITY)
-				explosion(src, devastation_range = 1, heavy_impact_range = 2, light_impact_range = 6, flame_range = 8)
+				explosion(src, devastation_range = 1, heavy_impact_range = 2, light_impact_range = 6, flame_range = 0)
 	qdel(src)
 
 /obj/structure/reagent_dispensers/atom_deconstruct(disassembled = TRUE)

@@ -93,3 +93,14 @@
 	)
 	category = CAT_ROBOT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
+
+/datum/crafting_recipe/destabilizer
+	name = "Destabilizer"
+	result = /obj/machinery/destabilizer/makeshift
+	reqs = list(/obj/item/halflife/antenna = 1,
+				/obj/item/stack/cable_coil = 5,
+				/obj/item/stack/sheet/iron = 2,
+				/obj/item/circuitmaterial/advanced = 1,
+				/obj/item/circuitmaterial = 2)
+	time = 6 SECONDS
+	category = CAT_ROBOT

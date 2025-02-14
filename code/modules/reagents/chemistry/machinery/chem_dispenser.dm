@@ -13,7 +13,7 @@
 	/// The cell used to dispense reagents
 	var/obj/item/stock_parts/power_store/cell
 	/// Efficiency used when converting cell power to reagents. Joule per volume.
-	var/power_cost = 0.1 KILO WATTS
+	var/power_cost = 0.2 KILO WATTS //hl13 edit
 	/// The current amount this machine is dispensing
 	var/amount = 30
 	/// The rate at which this machine recharges the power cell.

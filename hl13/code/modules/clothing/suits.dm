@@ -169,6 +169,17 @@
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 
+/obj/item/clothing/suit/greenjacket
+	name = "green union jacket"
+	desc = "A heavily faded jacket. It was supposedly rather green, but now you can barely tell it from a grey jacket."
+	icon_state = "greenjacket"
+	body_parts_covered = CHEST|GROIN|ARMS
+	cold_protection = CHEST|GROIN|ARMS
+	heat_protection = CHEST|GROIN|ARMS
+	strip_delay = 80
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
 /obj/item/clothing/suit/utility/radiation/cleanup
 	name = "cleanup suit"
 	desc = "A suit which provides protection against radiation and hostile xenian fauna attacks."

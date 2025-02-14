@@ -11,7 +11,9 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	antag_flag = ROLE_TRAITOR
 	antag_datum = /datum/antagonist/traitor
 	minimum_required_age = 0
-	protected_roles = list(
+	restricted_roles = list(
+		JOB_AI,
+		JOB_CYBORG,
 		JOB_CAPTAIN,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_SECURITY,
@@ -21,11 +23,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 		JOB_SECURITY_OFFICER_SCIENCE,
 		JOB_SECURITY_OFFICER_SUPPLY,
 		JOB_WARDEN,
-	)
-	restricted_roles = list(
-		JOB_AI,
-		JOB_CYBORG,
-	)
+	) //hl13 edit, just moving all the protected roles into restricted cause nothing else seems to fix it
 	required_candidates = 1
 	weight = 5
 	cost = 8 // Avoid raising traitor threat above this, as it is the default low cost ruleset.

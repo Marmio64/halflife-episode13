@@ -89,7 +89,7 @@
 /obj/structure/sign/poster
 	name = "poster"
 	var/original_name
-	desc = "A large piece of space-resistant printed paper."
+	desc = "A large piece of printed paper." //hl13 edit
 	icon = 'icons/obj/poster.dmi'
 	anchored = TRUE
 	buildable_sign = FALSE //Cannot be unwrenched from a wall.
@@ -109,7 +109,7 @@
 	var/datum/weakref/trap
 
 	///tearing down some posters may effect sociostability
-	var/socio_modify = FALSE
+	var/socio_modify = FALSE //hl13 edit
 
 /obj/structure/sign/poster/Initialize(mapload)
 	. = ..()
@@ -118,7 +118,7 @@
 	if(!ruined)
 		original_name = name // can't use initial because of random posters
 		name = "poster - [name]"
-		desc = "A large piece of space-resistant printed paper. [desc]"
+		desc = "A large piece of printed paper. [desc]" //hl13 edit
 
 	AddElement(/datum/element/beauty, 300)
 

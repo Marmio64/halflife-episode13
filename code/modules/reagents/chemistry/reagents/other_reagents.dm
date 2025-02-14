@@ -231,7 +231,7 @@
 	var/toxicity = 0 //hl13 edit
 	var/disgust = 0 //hl13 edit
 	var/filthy = FALSE //hl13 edit
-	var/treated = FALSE //hl13 edit
+	var/treated = TRUE //hl13 edit
 
 /datum/glass_style/shot_glass/water
 	required_drink_type = /datum/reagent/water
@@ -251,6 +251,7 @@
 	taste_description = "filthy water"
 	toxicity = 2
 	disgust = 5
+	treated = FALSE
 
 /datum/reagent/water/dirty/sewer
 	name = "Sewer Water"
@@ -275,6 +276,7 @@
 	taste_description = "unpurified water"
 	disgust = 1.25
 	//toxicity = 0.1
+	treated = FALSE
 
 /datum/reagent/water/unpurified/river
 	name = "River Water"

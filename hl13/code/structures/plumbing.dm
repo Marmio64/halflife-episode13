@@ -13,6 +13,7 @@
 	desc = "An old sink, typically dispensing clean water. Hard to really tell if it's the case anymore, though."
 	has_water_reclaimer = TRUE
 	reclaim_rate = 0.1
+	pixel_shift = 0
 
 /obj/structure/sink/halflife/dirty
 	name = "filthy sink"
@@ -25,4 +26,4 @@
 	icon = 'hl13/icons/obj/miscellaneous.dmi'
 	icon_state = "shower"
 	pixel_shift = 0
-	reagent_id = /datum/reagent/water/treated
+	reagent_id = /datum/reagent/water

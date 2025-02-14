@@ -132,3 +132,9 @@
 	suit = /obj/item/clothing/suit/armor/civilprotection
 	head = /obj/item/clothing/head/beanie/black
 	gloves = /obj/item/clothing/gloves/fingerless
+
+/datum/objective/reduce_sociostability
+	explanation_text = "Reduce district sociostability below 20% through sabotaging combine machinery, freeing vortigaunts, killing, and vandalism."
+
+/datum/objective/reduce_sociostability/check_completion()
+	return ..() || SSsociostability.sociostability <= 200
