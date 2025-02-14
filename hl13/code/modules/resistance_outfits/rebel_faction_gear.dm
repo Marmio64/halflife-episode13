@@ -138,7 +138,7 @@
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle //now you're an actual, trusted soldier, so we can give you good weapons
 	uniform = /obj/item/clothing/under/syndicate/camo //actual military shit.
 	l_pocket = /obj/item/knife/combat/survival
-	head = /obj/item/clothing/head/helmet/marine //again: actual military shit. the PRF only send these guys when they WANT to fuck some shit up.
+	head = /obj/item/clothing/head/helmet/halflife/military //again: actual military shit. the PRF only send these guys when they WANT to fuck some shit up.
 	r_pocket = /obj/item/grenade/c4
 
 /datum/outfit/resistance_faction/polish/commander
@@ -181,19 +181,69 @@
 	uniform = /obj/item/clothing/under/syndicate/rus_army //ay blyat.
 	suit = /obj/item/clothing/suit/armor/rebel/light //cheapskate communist fuck. first armor vest they could find.
 	head = /obj/item/clothing/head/helmet/halflife/military/weak
-	r_pocket = /obj/item/gun/ballistic/automatic/pistol/usp //you are expendable. no spare ammo.
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp //you are expendable. no spare ammo.
 
 /datum/outfit/resistance_faction/post_soviet/competent
 	name = "Post-Soviet Rebel Agent"
-	suit = /obj/item/clothing/suit/armor/kevlar
+	suit = /obj/item/clothing/suit/armor/armored
 	head = /obj/item/clothing/head/helmet/halflife/military
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance //shamelessly-recycled assets
-	mask = /obj/item/clothing/mask/gas/hl2/military
+	mask = /obj/item/clothing/mask/balaclava
 
 /datum/outfit/resistance_faction/post_soviet/rifle
 	name = "Post-Soviet Rebel Rifleman"
-	suit = /obj/item/clothing/suit/armor/armored
+	suit = /obj/item/clothing/suit/armor/armored/upgraded
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
 	head = /obj/item/clothing/head/helmet/halflife/military
-	mask = /obj/item/clothing/mask/balaclava
+	mask = /obj/item/clothing/mask/gas/hl2/military
+
+/datum/outfit/resistance_faction/post_soviet/ak
+	name = "Post-Soviet Rebel Kalashnikov Rifleman"
+	suit = /obj/item/clothing/suit/armor/armored/upgraded
+	suit_store = /obj/item/gun/ballistic/automatic/ak47
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
+	head = /obj/item/clothing/head/helmet/halflife/military
+	mask = /obj/item/clothing/mask/gas/hl2/military
+	l_pocket = /obj/item/grenade/c4
+
+//MISC FACTIONS: RADIOHIM, REBEL COPS
+
+/datum/outfit/resistance_faction/radiohim //low-level scout mercenary
+	name = "Radiohim Mercenary Scout"
+	uniform = /obj/item/clothing/under/syndicate/combat
+	mask = /obj/item/clothing/mask/gas/hl2/military
+	suit = /obj/item/clothing/suit/armor/armored/upgraded
+	head = /obj/item/clothing/head/helmet/marine
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
+	back = /obj/item/storage/backpack/halflife/satchel/military
+	backpack_contents = list(
+		/obj/item/grenade/c4 = 1,
+		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/food/canned/beans = 1, //long-range footsoldier, meant to go out and scout things for radiohim
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
+	)
+
+/datum/outfit/resistance_faction/radiohim/commando
+	name = "Radiohim Mercenary Operative"
+	backpack_contents = list(
+		/obj/item/grenade/c4 = 1,
+		/obj/item/ammo_box/magazine/m4a1 = 2,
+		/obj/item/food/canned/beans = 1,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
+		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
+	)
+	suit = /obj/item/clothing/suit/armor/vest/marine
+	suit_store = /obj/item/gun/ballistic/automatic/m4a1
+
+/datum/outfit/job/security/traitor_cop
+	name = "Civil Protection Traitor"
+	implants = list(/obj/item/implant/mindshield) //biosig removed
+	back = /obj/item/storage/backpack/halflife/satchel/military
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/food/canned/beans = 1, //indie gaming
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
+	)
