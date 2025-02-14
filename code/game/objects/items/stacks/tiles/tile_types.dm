@@ -114,7 +114,7 @@
 	desc = "An easy to fit wood floor tile. Use while in your hand to change what pattern you want."
 	icon_state = "tile-wood"
 	inhand_icon_state = "tile-wood"
-	turf_type = /turf/open/floor/wood
+	turf_type = /turf/open/floor/plating/indoor/woodc
 	resistance_flags = FLAMMABLE
 	merge_type = /obj/item/stack/tile/wood
 	tile_reskin_types = list(
@@ -128,21 +128,21 @@
 	name = "parquet wood floor tile"
 	singular_name = "parquet wood floor tile"
 	icon_state = "tile-wood_parquet"
-	turf_type = /turf/open/floor/wood/parquet
+	turf_type = /turf/open/floor/plating/indoor/woodc/mosaic
 	merge_type = /obj/item/stack/tile/wood/parquet
 
 /obj/item/stack/tile/wood/large
 	name = "large wood floor tile"
 	singular_name = "large wood floor tile"
 	icon_state = "tile-wood_large"
-	turf_type = /turf/open/floor/wood/large
+	turf_type = /turf/open/floor/plating/indoor/woodc/wide
 	merge_type = /obj/item/stack/tile/wood/large
 
 /obj/item/stack/tile/wood/tile
 	name = "tiled wood floor tile"
 	singular_name = "tiled wood floor tile"
 	icon_state = "tile-wood_tile"
-	turf_type = /turf/open/floor/wood/tile
+	turf_type = /turf/open/floor/plating/indoor/woodc/fancy
 	merge_type = /obj/item/stack/tile/wood/tile
 
 //Bamboo

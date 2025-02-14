@@ -22,7 +22,7 @@
 
 /obj/item/storage/belt/pouch/large/cleanup/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/knife/combat/survival, src)
-	SSwardrobe.provide_type(/obj/item/lockpick, src)
+	SSwardrobe.provide_type(/obj/item/lockpick/combine/ic, src)
 	SSwardrobe.provide_type(/obj/item/flashlight, src)
 	update_appearance(UPDATE_ICON)
 

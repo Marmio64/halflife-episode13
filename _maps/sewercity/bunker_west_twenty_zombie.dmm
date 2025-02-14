@@ -7,7 +7,10 @@
 /obj/structure/table/halflife/no_smooth/large/metal/desk{
 	dir = 1
 	},
-/obj/structure/halflife/trash/food/glass,
+/obj/structure/halflife/trash/food/glass{
+	pixel_x = 1;
+	pixel_y = 11
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "aM" = (
@@ -24,9 +27,21 @@
 	},
 /obj/structure/table/halflife/no_smooth/large/metal/desk,
 /obj/structure/halflife/trash/cardboard{
-	dir = 8
+	dir = 8;
+	pixel_x = 2;
+	pixel_y = 11
 	},
-/obj/item/light/bulb,
+/obj/item/light/bulb{
+	pixel_x = 16;
+	pixel_y = 15
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"cr" = (
+/obj/structure/halflife/trash/garbage{
+	pixel_x = 6;
+	pixel_y = -3
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "cw" = (
@@ -53,12 +68,60 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
-"eH" = (
-/obj/structure/halflife/pipes/horizontal/random,
+"eE" = (
+/obj/structure/halflife/trash/garbage{
+	pixel_x = -2;
+	pixel_y = -3
+	},
+/obj/structure/halflife/trash/garbage{
+	pixel_x = 7;
+	pixel_y = 3
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
+"eH" = (
+/obj/structure/halflife/pipes/horizontal/random,
+/obj/item/reagent_containers/condiment/sugar{
+	pixel_x = -10;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/condiment/flour{
+	pixel_x = 2;
+	pixel_y = 11
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"gR" = (
+/mob/living/simple_animal/hostile/halflife/headcrab,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"hd" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/restraints/legcuffs/beartrap{
+	pixel_x = 8;
+	pixel_y = 11
+	},
+/obj/item/restraints/legcuffs/beartrap{
+	pixel_x = -5;
+	pixel_y = 8
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "hB" = (
-/obj/structure/halflife/trash/food/misc,
+/obj/structure/halflife/trash/food/misc{
+	pixel_x = -5;
+	pixel_y = 6
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"ik" = (
+/obj/structure/table/halflife/no_smooth/large/metal/desk{
+	dir = 1
+	},
+/obj/item/reagent_containers/cup/glass/waterbottle/large/empty{
+	pixel_x = 7;
+	pixel_y = 15
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "iB" = (
@@ -66,7 +129,18 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "iL" = (
-/obj/item/reagent_containers/cup/glass/waterbottle/large,
+/obj/item/reagent_containers/cup/glass/waterbottle/large{
+	pixel_x = -9;
+	pixel_y = 18
+	},
+/obj/item/reagent_containers/cup/glass/waterbottle/large{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"ky" = (
+/mob/living/simple_animal/hostile/halflife/zombie/zombine,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "kC" = (
@@ -74,7 +148,14 @@
 /turf/template_noop,
 /area/template_noop)
 "ly" = (
-/obj/structure/halflife/trash/garbage,
+/obj/structure/halflife/trash/garbage{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/obj/structure/halflife/trash/garbage{
+	pixel_x = -4;
+	pixel_y = 13
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "mG" = (
@@ -89,8 +170,28 @@
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
+"nr" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/grenade/syndieminibomb/bouncer{
+	name = "modified MK3A2 grenade";
+	desc = "A heavily-modified MK3A2 grenade. You can see most of the electronic timer has been utterly busted, and will go off almost immediately after the pin is pulled. Better to die free.";
+	det_time = 1;
+	possible_fuse_time = list("Instant");
+	pixel_x = 6;
+	pixel_y = 10
+	},
+/obj/item/paper/crumpled{
+	pixel_x = -6;
+	pixel_y = 9;
+	default_raw_text = "I rigged this grenade to go off almost immediately after I pull the pin. Combine can't take me alive now."
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "pR" = (
-/obj/effect/spawner/random/halflife/loot/rare,
+/obj/item/reagent_containers/cup/glass/bottle/vodka{
+	pixel_x = 5;
+	pixel_y = 10
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "pT" = (
@@ -111,16 +212,33 @@
 	dir = 1
 	},
 /obj/structure/halflife/trash/cardboard{
-	dir = 4
+	dir = 4;
+	pixel_x = 2;
+	pixel_y = 12
 	},
-/obj/item/food/canned/peaches,
-/obj/item/food/canned/tomatoes,
+/obj/item/food/canned/peaches{
+	pixel_x = -5;
+	pixel_y = 23
+	},
+/obj/item/food/canned/peaches{
+	pixel_x = 9;
+	pixel_y = 21
+	},
+/obj/item/food/canned/tomatoes{
+	pixel_x = -1;
+	pixel_y = 15
+	},
+/obj/item/food/canned/tomatoes{
+	pixel_x = 11;
+	pixel_y = 13
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "rn" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/old,
 /obj/machinery/light/small/directional/north,
+/obj/effect/mob_spawn/ghost_role/human/bunkeroperator,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "so" = (
@@ -131,6 +249,19 @@
 /area/halflife/indoors/bunker)
 "sp" = (
 /obj/machinery/light/small/directional/south,
+/obj/item/restraints/legcuffs/beartrap{
+	pixel_x = 8;
+	pixel_y = 10
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"sG" = (
+/obj/item/pushbroom{
+	pixel_y = 2
+	},
+/obj/item/reagent_containers/spray/cleaner{
+	pixel_y = 17
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "sP" = (
@@ -142,9 +273,35 @@
 /obj/structure/halflife/trash/food/dinner,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
+"uu" = (
+/obj/machinery/light/small/directional/east,
+/mob/living/simple_animal/hostile/halflife/headcrab/poison,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"uN" = (
+/obj/structure/halflife/trash/garbage{
+	pixel_x = -3;
+	pixel_y = -2
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"uQ" = (
+/obj/effect/spawner/random/halflife/loot/crafting_bench,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"uV" = (
+/obj/item/stack/medical/bandage{
+	pixel_x = -8;
+	pixel_y = 11
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "ws" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/structure/halflife/trash/glass/cans,
+/obj/structure/halflife/trash/glass/cans{
+	pixel_x = 7;
+	pixel_y = 8
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "wz" = (
@@ -153,7 +310,29 @@
 /area/halflife/indoors/bunker)
 "Ai" = (
 /obj/structure/halflife/trash/papers/one{
-	dir = 8
+	dir = 8;
+	pixel_x = -2;
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/cup/glass/waterbottle/large/empty{
+	pixel_x = 8;
+	pixel_y = 12
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"BO" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/reagent_containers/condiment/peanut_butter{
+	pixel_x = -7;
+	pixel_y = 15
+	},
+/obj/item/reagent_containers/condiment/peanut_butter{
+	pixel_x = 8;
+	pixel_y = 18
+	},
+/obj/item/reagent_containers/condiment/protein{
+	pixel_x = 2;
+	pixel_y = 8
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
@@ -167,6 +346,12 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
+"Dz" = (
+/obj/machinery/door/unpowered/halflife/metal/red{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "DB" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/bunker)
@@ -177,12 +362,30 @@
 "Fb" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"Gd" = (
+/obj/machinery/door/unpowered/halflife/metal/red{
+	dir = 8;
+	keylock = 1;
+	locked = 1
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "Gn" = (
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/bunker)
 "Gq" = (
 /obj/structure/halflife/pipes/horizontal/end,
-/obj/effect/spawner/random/halflife/loot,
+/obj/item/stack/sheet/mineral/sandbags{
+	amount = 5
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"Gx" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/food/canned/pine_nuts{
+	pixel_x = -5;
+	pixel_y = 9
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "Hj" = (
@@ -194,6 +397,14 @@
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"IJ" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/reagent_containers/condiment/cherryjelly{
+	pixel_x = 6;
+	pixel_y = 13
+	},
+/turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "Jw" = (
 /obj/structure/halflife/trash/books/pile,
@@ -213,6 +424,17 @@
 "JP" = (
 /turf/template_noop,
 /area/template_noop)
+"Kl" = (
+/obj/structure/halflife/trash/garbage{
+	pixel_x = 2;
+	pixel_y = 17
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"Kq" = (
+/obj/effect/spawner/random/entertainment/arcade,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "Kx" = (
 /obj/machinery/shower/halflife{
 	dir = 8
@@ -220,9 +442,20 @@
 /obj/structure/fluff/shower_drain,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/bunker)
+"KB" = (
+/mob/living/simple_animal/hostile/halflife/zombie/fast,
+/turf/open/halflife/water/medium,
+/area/halflife/indoors/bunker)
 "KT" = (
 /obj/structure/halflife/trash/cardboard{
 	dir = 10
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"Lm" = (
+/obj/item/restraints/legcuffs/beartrap{
+	pixel_x = -6;
+	pixel_y = 6
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
@@ -232,13 +465,20 @@
 /area/halflife/indoors/bunker)
 "My" = (
 /obj/machinery/light/small/broken/directional/east,
+/obj/item/reagent_containers/condiment/vegetable_oil{
+	pixel_x = 4;
+	pixel_y = 8
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "MZ" = (
 /obj/structure/table/halflife/no_smooth/large/metal/desk{
 	dir = 8
 	},
-/obj/structure/halflife/trash/glass/basic,
+/obj/structure/halflife/trash/glass/basic{
+	pixel_x = 0;
+	pixel_y = 10
+	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "Na" = (
@@ -250,6 +490,14 @@
 "ND" = (
 /obj/structure/halflife/pipes/horizontal,
 /obj/structure/table/halflife/no_smooth/large/metal/desk/alt,
+/obj/item/clothing/mask/gas/hl2/military{
+	pixel_x = -2;
+	pixel_y = 12
+	},
+/obj/item/ammo_box/magazine/service{
+	pixel_x = 13;
+	pixel_y = 5
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "NH" = (
@@ -268,12 +516,53 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
+"Ok" = (
+/obj/structure/table/halflife/no_smooth/large/metal/desk{
+	dir = 1
+	},
+/obj/item/storage/fancy/cigarettes/halflife{
+	pixel_x = 15;
+	pixel_y = 12
+	},
+/obj/item/storage/box/matches{
+	pixel_x = -1;
+	pixel_y = 10
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"OM" = (
+/obj/structure/halflife/trash/cardboard,
+/obj/item/reagent_containers/cup/glass/mouthwash{
+	pixel_x = 4;
+	pixel_y = 26
+	},
+/obj/item/reagent_containers/cup/glass/mouthwash{
+	pixel_x = 16;
+	pixel_y = 25
+	},
+/obj/item/reagent_containers/cup/glass/mouthwash{
+	pixel_x = -9;
+	pixel_y = 23
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "PA" = (
 /obj/structure/halflife/pipes/horizontal,
 /turf/open/halflife/water/medium,
 /area/halflife/indoors/bunker)
 "PK" = (
 /obj/structure/table/halflife/metal/grate,
+/obj/item/food/canned/beans{
+	pixel_x = -9;
+	pixel_y = 13
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"PP" = (
+/obj/structure/halflife/trash/garbage{
+	pixel_x = -14;
+	pixel_y = -4
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "Qk" = (
@@ -293,8 +582,19 @@
 /area/halflife/indoors/bunker)
 "Sh" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/structure/halflife/trash/glass/plate,
+/obj/structure/halflife/trash/glass/plate{
+	pixel_x = 0;
+	pixel_y = 3
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"Tc" = (
+/obj/item/reagent_containers/cup/glass/waterbottle/large/empty{
+	pixel_x = 8;
+	pixel_y = 10
+	},
+/obj/structure/table/halflife/metal/grate,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "UL" = (
 /obj/structure/halflife/pipes/vent,
@@ -319,6 +619,15 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
+"Wc" = (
+/obj/structure/halflife/pipes/vent,
+/obj/structure/table/halflife/metal/grate,
+/obj/item/reagent_containers/condiment/honey{
+	pixel_x = 9;
+	pixel_y = -7
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "Wr" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -330,13 +639,26 @@
 /obj/machinery/door/unpowered/halflife/metal/red,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"XU" = (
+/obj/item/reagent_containers/cup/glass/waterbottle/large/empty{
+	pixel_x = -11;
+	pixel_y = 14
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "Yo" = (
-/mob/living/simple_animal/hostile/halflife/zombie,
-/turf/open/halflife/water/medium,
+/obj/structure/halflife/trash/garbage{
+	pixel_x = -16;
+	pixel_y = -4
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "YO" = (
 /obj/machinery/light/small/directional/south,
-/obj/structure/halflife/trash/garbage,
+/obj/structure/halflife/trash/garbage{
+	pixel_x = 8;
+	pixel_y = -5
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "YX" = (
@@ -356,6 +678,13 @@
 /turf/open/halflife/water/medium,
 /area/halflife/indoors/bunker)
 "Zq" = (
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"ZW" = (
+/obj/structure/halflife/trash/garbage{
+	pixel_x = -4;
+	pixel_y = 18
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 
@@ -393,7 +722,7 @@ DB
 DB
 DB
 DB
-pX
+Gd
 DB
 DB
 DB
@@ -415,9 +744,9 @@ DB
 Zq
 Zq
 DB
+Lm
 Zq
-Zq
-ly
+uN
 DB
 bZ
 tI
@@ -463,13 +792,13 @@ Zq
 DB
 Zq
 Zq
-ly
+cr
 DB
 Ze
 QZ
 QZ
 QZ
-Yo
+QZ
 QZ
 DB
 JP
@@ -490,7 +819,7 @@ DB
 DB
 NH
 QZ
-QZ
+KB
 QZ
 QZ
 QZ
@@ -538,7 +867,7 @@ ND
 sP
 QZ
 QZ
-Zq
+XU
 qz
 DB
 JP
@@ -555,7 +884,7 @@ Zq
 DB
 Fb
 Wr
-Fb
+Tc
 DB
 Gq
 Vc
@@ -592,12 +921,12 @@ JP
 (11,1,1) = {"
 JP
 DB
-Qk
-Fb
-Fb
+Wc
+hd
+IJ
 DB
 ab
-Zq
+ky
 Zq
 Zq
 VG
@@ -607,8 +936,8 @@ Zq
 Zq
 VG
 Zq
-ly
-ly
+Zq
+eE
 DB
 JP
 "}
@@ -626,12 +955,12 @@ Zq
 Zq
 Zq
 DB
-ly
+Kl
 Zq
 Zq
 Zq
 Zq
-ly
+Yo
 DB
 JP
 "}
@@ -662,31 +991,31 @@ JP
 JP
 DB
 DB
+Dz
 DB
 DB
-DB
-PK
+BO
 KT
 VG
 Zq
 Zq
-PK
+Gx
 DB
 NM
 Gn
 DB
 Zq
 Zq
-cw
+ik
 DB
 JP
 "}
 (15,1,1) = {"
 JP
-Wu
-Wu
-Wu
-Wu
+DB
+Kq
+Fb
+Fb
 DB
 PK
 Zq
@@ -700,21 +1029,21 @@ Gn
 wz
 Zq
 Zq
-Zq
+sG
 DB
 JP
 "}
 (16,1,1) = {"
 JP
-Wu
-Wu
-Wu
-Wu
 DB
-PK
+DB
+DB
+DB
+DB
+nr
+Zq
 Zq
 aM
-Zq
 CC
 Sh
 DB
@@ -730,9 +1059,9 @@ JP
 (17,1,1) = {"
 JP
 Wu
-Wu
-Wu
-Wu
+DB
+OM
+Zq
 DB
 UL
 Zq
@@ -744,22 +1073,22 @@ DB
 DB
 DB
 DB
-ly
-Zq
-ly
+ZW
+gR
+PP
 DB
 JP
 "}
 (18,1,1) = {"
 JP
 Wu
-Wu
-Wu
-Wu
 DB
+uQ
+Zq
+iB
 Zq
 Zq
-cw
+Ok
 Zq
 Zq
 Zq
@@ -776,9 +1105,9 @@ JP
 (19,1,1) = {"
 JP
 Wu
-Wu
-Wu
-Wu
+DB
+Zq
+uu
 DB
 Zq
 JN
@@ -791,17 +1120,17 @@ Kx
 Gn
 DB
 ly
-ly
 Zq
+uV
 DB
 JP
 "}
 (20,1,1) = {"
 JP
 Wu
-Wu
-Wu
-Wu
+DB
+DB
+DB
 DB
 DB
 DB

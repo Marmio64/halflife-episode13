@@ -38,7 +38,7 @@
 	inhand_icon_state = "utility"
 	worn_icon_state = "utility"
 	content_overlays = TRUE
-	custom_premium_price = PAYCHECK_CREW * 2
+	custom_premium_price = PAYCHECK_COMMAND * 2 //hl13 edit price change
 	drop_sound = 'sound/items/handling/toolbelt_drop.ogg'
 	pickup_sound = 'sound/items/handling/toolbelt_pickup.ogg'
 

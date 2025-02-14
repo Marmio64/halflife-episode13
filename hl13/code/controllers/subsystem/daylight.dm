@@ -8,7 +8,7 @@
 
 #define DUSK_START (DAY_LENGTH * 0.80) //With 30 minutes, dusk is at 14400 deciseconds
 
-#define NIGHT_START (DAY_LENGTH * 0.98) //With 30 minutes, night is at 17640 deciseconds. Night is the shortest at around 5 minutes, because if curfews are enforced, you shouldnt be locked up for a very long time.
+#define NIGHT_START (DAY_LENGTH * 0.95) //With 30 minutes, night is at 17100 deciseconds. Night is the shortest at around 6 minutes, because if curfews are enforced, you shouldnt be locked up for a very long time.
 
 #define DAY_CYCLE_MORNING "Morning"
 

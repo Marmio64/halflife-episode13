@@ -46,7 +46,7 @@
 	var/openingSound //Admin sound to play when the pod opens
 	var/leavingSound //Admin sound to play when the pod leaves
 	var/soundVolume = 80 //Volume to play sounds at. Ignores the cap
-	var/list/explosionSize = list(0,0,2,3)
+	var/list/explosionSize = list(0,0,2,0)//hl13 edit, remove flames
 	var/stay_after_drop = FALSE
 	var/specialised = FALSE // It's not a general use pod for cargo/admin use
 	var/rubble_type //Rubble effect associated with this supplypod

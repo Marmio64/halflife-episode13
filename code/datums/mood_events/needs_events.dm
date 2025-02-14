@@ -85,7 +85,7 @@
 			description = "I have recently had a horrible shower raining blood!"
 			mood_change = -4
 			timeout = 3 MINUTES
-	else if(istype(shower_reagent, /datum/reagent/water))
+	else if(istype(shower_reagent, /datum/reagent/water || /datum/reagent/water/treated)) //hl13 edit
 		if(HAS_TRAIT(owner, TRAIT_WATER_HATER) && !HAS_TRAIT(owner, TRAIT_WATER_ADAPTATION))
 			description = "I hate being wet!"
 			mood_change = -2

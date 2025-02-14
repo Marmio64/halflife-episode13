@@ -172,4 +172,4 @@
 
 /obj/item/storage/wallet/money/PopulateContents()
 	for(var/iteration in 1 to pick(3, 4))
-		new /obj/item/holochip(src, rand(50, 450))
+		new /obj/item/holochip(src, rand(5, 20)) //hl13 edit, 'reel' in the outrageous funds

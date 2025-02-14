@@ -25,4 +25,4 @@
 	icon = 'hl13/icons/obj/miscellaneous.dmi'
 	icon_state = "shower"
 	pixel_shift = 0
-	reagent_id = /datum/reagent/water/treated
+	reagent_id = /datum/reagent/water
