@@ -13,6 +13,7 @@
 	desc = "An old sink, typically dispensing clean water. Hard to really tell if it's the case anymore, though."
 	has_water_reclaimer = TRUE
 	reclaim_rate = 0.1
+	pixel_shift = 0
 
 /obj/structure/sink/halflife/dirty
 	name = "filthy sink"
