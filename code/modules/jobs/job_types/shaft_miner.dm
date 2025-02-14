@@ -42,6 +42,8 @@
 	head = /obj/item/clothing/head/utility/hardhat/halflife/mining
 	r_pocket = /obj/item/hl2key/factory
 
+	suit = /obj/item/clothing/suit/greenjacket
+
 /datum/outfit/job/miner/equipped
 	name = "Shaft Miner (Equipment)"
 

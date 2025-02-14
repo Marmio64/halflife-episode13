@@ -49,3 +49,5 @@
 	uniform = /obj/item/clothing/under/citizen
 	head = /obj/item/clothing/head/halflife/blue_hardhat
 	r_pocket = /obj/item/hl2key/factory
+
+	suit = /obj/item/clothing/suit/greenjacket

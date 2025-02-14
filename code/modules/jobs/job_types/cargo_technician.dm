@@ -35,6 +35,8 @@
 	uniform = /obj/item/clothing/under/citizen
 	r_pocket = /obj/item/hl2key/factory
 
+	suit = /obj/item/clothing/suit/greenjacket
+
 /datum/outfit/job/cargo_tech/mod
 	name = "Cargo Technician (MODsuit)"
 
