@@ -37,6 +37,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
+"aI" = (
+/obj/structure/halflife/pipes/vent,
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/bunker)
 "aM" = (
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/bunker)
@@ -155,6 +159,10 @@
 /obj/structure/halflife/trash/papers/one,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors)
+"ci" = (
+/obj/structure/halflife/pipes/piped,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "cl" = (
 /obj/structure/halflife/barrel/single/flammable/two,
 /turf/open/floor/plating/ground/dirt,
@@ -338,8 +346,14 @@
 /area/halflife/indoors/sewer)
 "ec" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/hl2key/rebel,
-/obj/item/hl2key/rebel,
+/obj/item/hl2key/rebel{
+	pixel_x = -8;
+	pixel_y = 6
+	},
+/obj/item/hl2key/rebel{
+	pixel_x = 4;
+	pixel_y = 19
+	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "ef" = (
@@ -517,6 +531,11 @@
 "gd" = (
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/outdoors/forest)
+"gj" = (
+/turf/open/floor/plating/indoor/metal/pipe/corner{
+	dir = 1
+	},
+/area/halflife/indoors/bunker)
 "gp" = (
 /obj/structure/halflife/street_sign/railroad,
 /turf/open/misc/grass/jungle/station,
@@ -529,6 +548,9 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/forest)
+"gD" = (
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/bunker)
 "gE" = (
 /obj/structure/railing/halflife/sewer{
 	dir = 8
@@ -562,6 +584,14 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
+"ha" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/hl2key/rebel{
+	pixel_x = 0;
+	pixel_y = 5
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "hc" = (
 /obj/structure/halflife/pipes/vertical/east/random,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -627,7 +657,9 @@
 /area/halflife/outdoors/forest)
 "hX" = (
 /obj/structure/table/halflife/metal/grate,
-/turf/open/floor/plating/indoor/concrete/bricks,
+/turf/open/floor/plating/indoor/metal/pipe{
+	dir = 1
+	},
 /area/halflife/indoors/bunker)
 "im" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
@@ -742,6 +774,12 @@
 /obj/effect/spawner/random/halflife/loot/crafting_bench,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors)
+"jS" = (
+/obj/structure/railing/halflife/sewer{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/bunker)
 "jT" = (
 /obj/structure/table/halflife/no_smooth/cable_reel,
 /obj/effect/spawner/random/halflife/loot,
@@ -1060,6 +1098,11 @@
 /obj/structure/halflife/trash/glass/cans,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"ny" = (
+/turf/open/floor/plating/indoor/metal/pipe/intersection{
+	dir = 1
+	},
+/area/halflife/indoors/bunker)
 "nA" = (
 /obj/structure/bed/halflife/mattress/stained,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -1228,10 +1271,22 @@
 /area/halflife/outdoors/forest)
 "pJ" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/light/bulb,
-/obj/item/light/bulb,
-/obj/item/light/bulb,
-/obj/item/light/bulb,
+/obj/item/light/bulb{
+	pixel_x = -9;
+	pixel_y = 12
+	},
+/obj/item/light/bulb{
+	pixel_x = 0;
+	pixel_y = 11
+	},
+/obj/item/light/bulb{
+	pixel_x = 6;
+	pixel_y = 10
+	},
+/obj/item/light/bulb{
+	pixel_x = 11;
+	pixel_y = 9
+	},
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborcamp)
@@ -1241,7 +1296,14 @@
 /area/halflife/indoors/sewer/outlandscave)
 "pU" = (
 /obj/structure/table/halflife/metal,
-/obj/item/reagent_containers/cup/soda_cans/breenwater/red,
+/obj/item/reagent_containers/cup/soda_cans/breenwater/red{
+	pixel_x = -7;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/pill/patch/medkit/vial{
+	pixel_x = 8;
+	pixel_y = 8
+	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/laborcamp/security)
 "pV" = (
@@ -1258,8 +1320,14 @@
 /area/halflife/indoors/laborcamp)
 "pZ" = (
 /obj/structure/table/halflife/metal,
-/obj/item/grenade/stingbang/halflife,
-/obj/item/grenade/stingbang/halflife,
+/obj/item/grenade/stingbang/halflife{
+	pixel_x = -6;
+	pixel_y = 9
+	},
+/obj/item/grenade/stingbang/halflife{
+	pixel_x = 5;
+	pixel_y = 16
+	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/laborcamp/security)
 "qc" = (
@@ -1352,8 +1420,14 @@
 /area/halflife/indoors/bunker)
 "re" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/reagent_containers/cup/bucket,
-/obj/item/mop,
+/obj/item/reagent_containers/cup/bucket{
+	pixel_x = -2;
+	pixel_y = 11
+	},
+/obj/item/mop{
+	pixel_x = 0;
+	pixel_y = 9
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborcamp)
 "ri" = (
@@ -1482,7 +1556,10 @@
 /area/halflife/indoors/bunker)
 "sM" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/hl2key/rebel,
+/obj/item/hl2key/rebel{
+	pixel_x = 5;
+	pixel_y = 14
+	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "sQ" = (
@@ -1681,7 +1758,9 @@
 /area/halflife/outdoors/forest)
 "uX" = (
 /obj/structure/halflife/tank,
-/turf/open/floor/plating/indoor/concrete/bricks,
+/turf/open/floor/plating/indoor/metal/pipe{
+	dir = 1
+	},
 /area/halflife/indoors/bunker)
 "uZ" = (
 /obj/structure/barricade/sandbags,
@@ -1751,6 +1830,9 @@
 /obj/structure/closet/crate/bin,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/laborcamp)
+"wd" = (
+/turf/open/floor/plating/indoor/metal/pipe/corner,
+/area/halflife/indoors/bunker)
 "wi" = (
 /obj/structure/chair/office/halflife/red/broken,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -1849,8 +1931,14 @@
 /area/halflife/indoors/bunker)
 "xt" = (
 /obj/structure/table/halflife/metal/alt,
-/obj/item/wrench,
-/obj/item/screwdriver,
+/obj/item/wrench{
+	pixel_x = 5;
+	pixel_y = 11
+	},
+/obj/item/screwdriver{
+	pixel_x = -2;
+	pixel_y = 7
+	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/laborcamp/security)
 "xw" = (
@@ -2154,7 +2242,10 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/item/hatchet/wooden,
+/obj/item/hatchet/wooden{
+	pixel_x = 1;
+	pixel_y = 10
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
 "BO" = (
@@ -2607,6 +2698,8 @@
 /obj/item/food/nutripaste,
 /obj/item/food/nutripaste,
 /obj/item/food/nutripaste,
+/obj/item/food/nutripaste,
+/obj/item/food/nutripaste,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/laborcamp)
 "IF" = (
@@ -2668,7 +2761,10 @@
 /area/halflife/outdoors/forest)
 "JB" = (
 /obj/structure/table/halflife/metal,
-/obj/item/food/rationpack/box,
+/obj/item/food/rationpack/box{
+	pixel_x = 4;
+	pixel_y = 7
+	},
 /obj/machinery/light/small/cyan/directional/east,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/laborcamp/security)
@@ -2678,8 +2774,14 @@
 /area/halflife/outdoors/forest)
 "JK" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/clothing/under/citizen/rebel,
-/obj/item/clothing/under/citizen/rebel,
+/obj/item/clothing/under/citizen/rebel{
+	pixel_x = -5;
+	pixel_y = 10
+	},
+/obj/item/clothing/under/citizen/rebel{
+	pixel_x = 9;
+	pixel_y = 8
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
 "JN" = (
@@ -2878,11 +2980,18 @@
 /area/halflife/indoors/bunker)
 "MV" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/clothing/under/citizen,
-/obj/item/clothing/under/citizen,
-/obj/item/clothing/under/citizen/refugee,
-/obj/item/clothing/under/citizen/refugee,
-/obj/item/clothing/under/citizen/refugee,
+/obj/item/clothing/under/citizen/refugee{
+	pixel_x = 3;
+	pixel_y = 12
+	},
+/obj/item/clothing/under/citizen/refugee{
+	pixel_x = -7;
+	pixel_y = 7
+	},
+/obj/item/clothing/under/citizen/refugee{
+	pixel_x = 10;
+	pixel_y = 0
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
 "MY" = (
@@ -2958,8 +3067,10 @@
 /area/halflife/outdoors/forest)
 "NP" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/stack/sticky_tape,
-/obj/item/stack/sticky_tape,
+/obj/item/stack/sticky_tape{
+	pixel_x = -5;
+	pixel_y = -10
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
 "NQ" = (
@@ -2979,6 +3090,14 @@
 /obj/structure/frame/machine,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"NX" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/hl2key/rebel{
+	pixel_x = -5;
+	pixel_y = 7
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "NY" = (
 /obj/structure/halflife/barrel/quadruple/yellow/one,
 /turf/open/floor/plating/ground/dirt,
@@ -2989,7 +3108,10 @@
 /area/halflife/outdoors/forest)
 "Od" = (
 /obj/structure/table/halflife/metal,
-/obj/structure/halflife/trash/food/glass,
+/obj/structure/halflife/trash/food/glass{
+	pixel_x = -2;
+	pixel_y = 7
+	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/laborcamp/security)
 "Oo" = (
@@ -3359,8 +3481,14 @@
 /area/halflife/outdoors/forest)
 "Tf" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/reagent_containers/pill/patch/medkit,
-/obj/item/reagent_containers/pill/patch/medkit/vial,
+/obj/item/reagent_containers/pill/patch/medkit{
+	pixel_x = -3;
+	pixel_y = -13
+	},
+/obj/item/reagent_containers/pill/patch/medkit/vial{
+	pixel_x = 10;
+	pixel_y = 4
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
 "Ti" = (
@@ -3493,6 +3621,9 @@
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"UI" = (
+/turf/closed/wall/halflife/sewer,
+/area/halflife/indoors/bunker)
 "UK" = (
 /obj/effect/spawner/random/halflife/loot/crafting_bench,
 /turf/open/floor/plating/ground/dirt,
@@ -3509,7 +3640,10 @@
 	dir = 8
 	},
 /obj/structure/table/halflife/metal/grate,
-/obj/item/storage/box/lights/bulbs,
+/obj/item/storage/box/lights/bulbs{
+	pixel_x = 9;
+	pixel_y = 0
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
 "UV" = (
@@ -3555,8 +3689,14 @@
 /area/halflife/indoors/bunker)
 "Vo" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/ammo_box/magazine/usp9mm,
-/obj/item/ammo_box/magazine/usp9mm,
+/obj/item/ammo_box/magazine/usp9mm{
+	pixel_x = -3;
+	pixel_y = 0
+	},
+/obj/item/ammo_box/magazine/usp9mm{
+	pixel_x = 10;
+	pixel_y = -1
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
 "Vp" = (
@@ -3588,6 +3728,10 @@
 "Vy" = (
 /obj/item/food/bait/worm,
 /turf/open/halflife/water/shallow,
+/area/halflife/outdoors/forest)
+"VE" = (
+/obj/structure/halflife/pipes/vent,
+/turf/open/openspace,
 /area/halflife/outdoors/forest)
 "VH" = (
 /turf/open/floor/plating/indoor/metal/walkway{
@@ -3727,7 +3871,9 @@
 "Xx" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/stack/sheet/mineral/sandbags{
-	amount = 5
+	amount = 5;
+	pixel_x = 2;
+	pixel_y = 10
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
@@ -3739,7 +3885,6 @@
 /area/halflife/outdoors/forest)
 "XH" = (
 /obj/structure/table/halflife/metal,
-/obj/item/reagent_containers/pill/patch/medkit/vial,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/laborcamp/security)
 "XU" = (
@@ -3863,7 +4008,14 @@
 /area/halflife/outdoors/forest)
 "YV" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/weaponcrafting/receiver,
+/obj/item/weaponcrafting/receiver{
+	pixel_x = -3;
+	pixel_y = -11
+	},
+/obj/item/stack/sticky_tape{
+	pixel_x = 4;
+	pixel_y = 6
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
 "YX" = (
@@ -3881,7 +4033,10 @@
 /area/halflife/indoors/bunker)
 "Zd" = (
 /obj/structure/table/halflife/metal,
-/obj/item/stack/sheet/mineral/wood/fifty,
+/obj/item/stack/sheet/mineral/wood/fifty{
+	pixel_x = 1;
+	pixel_y = 7
+	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/laborcamp/security)
 "Zi" = (
@@ -3942,7 +4097,10 @@
 /area/halflife/outdoors/forest)
 "ZQ" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/hl2key/rebel,
+/obj/item/hl2key/rebel{
+	pixel_x = -5;
+	pixel_y = 14
+	},
 /obj/machinery/light/small{
 	dir = 4
 	},
@@ -30487,7 +30645,7 @@ wG
 wG
 MT
 uX
-ex
+wd
 ex
 MT
 wG
@@ -30684,7 +30842,7 @@ wG
 wG
 MT
 Nb
-ex
+lH
 ex
 MT
 wG
@@ -30881,7 +31039,7 @@ wG
 wG
 MT
 hX
-ex
+ny
 ex
 MT
 wG
@@ -31078,7 +31236,7 @@ wG
 wG
 MT
 Nb
-ex
+lH
 ex
 MT
 wG
@@ -31275,7 +31433,7 @@ wG
 wG
 MT
 uX
-ex
+gj
 ex
 MT
 wG
@@ -31461,15 +31619,15 @@ wG
 wG
 wG
 wG
-wG
-wG
-MT
-MT
-MT
-MT
-MT
-MT
-MT
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
 MT
 MT
 sX
@@ -31658,9 +31816,9 @@ wG
 wG
 wG
 wG
-wG
-wG
-MT
+UI
+lH
+RU
 RU
 RU
 RU
@@ -31855,15 +32013,15 @@ wG
 wG
 wG
 wG
-wG
-wG
-MT
+UI
+UI
+aI
 RU
 RU
 RU
 RU
-RU
-ex
+jS
+gD
 sw
 ex
 tM
@@ -32052,15 +32210,15 @@ wG
 wG
 wG
 wG
-wG
-wG
-MT
+UI
+lH
+RU
 RU
 RU
 RU
 xp
-RU
-ex
+jS
+gD
 MT
 ex
 ex
@@ -32249,15 +32407,15 @@ wG
 wG
 wG
 wG
-wG
-wG
-MT
-MT
-MT
-MT
-MT
-MT
-MT
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
 MT
 ex
 ex
@@ -32456,7 +32614,7 @@ wG
 wG
 wG
 MT
-ex
+ci
 ex
 ex
 MT
@@ -68516,8 +68674,8 @@ XA
 XA
 MT
 MT
-sM
-sM
+ha
+NX
 sM
 ZQ
 ec
@@ -68892,15 +69050,15 @@ kn
 tX
 bA
 XA
-zB
-zB
-zB
-zB
-zB
-zB
-QW
-QW
-QW
+DN
+DN
+DN
+DN
+DN
+DN
+DN
+DN
+DN
 QW
 QW
 XD
@@ -69089,14 +69247,14 @@ kn
 tX
 bA
 XA
-zB
-wG
-wG
-wG
-wG
-wG
-QW
+DN
+VE
 eN
+eN
+eN
+eN
+eN
+XD
 XD
 QW
 XD
@@ -69286,14 +69444,14 @@ fo
 tX
 Cx
 XA
-zB
-wG
-wG
-wG
-wG
-wG
-QW
+DN
+XD
 eN
+eN
+eN
+eN
+eN
+XD
 XD
 Tt
 XD
@@ -69483,14 +69641,14 @@ ow
 ow
 ow
 XA
-zB
-wG
-wG
-wG
-wG
-wG
-QW
+DN
+VE
 eN
+eN
+eN
+eN
+eN
+XD
 XD
 QW
 XD
@@ -69680,15 +69838,15 @@ XA
 XA
 XA
 XA
-zB
-wG
-wG
-wG
-wG
-wG
-QW
-QW
-QW
+DN
+DN
+DN
+DN
+DN
+DN
+DN
+DN
+DN
 QW
 QW
 gC

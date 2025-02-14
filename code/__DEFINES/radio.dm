@@ -5,7 +5,7 @@
 #define RADIO_CHANNEL_COMMON "Common"
 #define RADIO_KEY_COMMON ";"
 
-#define RADIO_CHANNEL_SECURITY "Security"
+#define RADIO_CHANNEL_SECURITY "Civil Protection"
 #define RADIO_KEY_SECURITY "s"
 #define RADIO_TOKEN_SECURITY ":s"
 
@@ -33,7 +33,7 @@
 #define RADIO_KEY_SERVICE "v"
 #define RADIO_TOKEN_SERVICE ":v"
 
-#define RADIO_CHANNEL_AI_PRIVATE "AI Private"
+#define RADIO_CHANNEL_AI_PRIVATE "Dispatch Auxiliary"
 #define RADIO_KEY_AI_PRIVATE "o"
 #define RADIO_TOKEN_AI_PRIVATE ":o"
 
@@ -42,11 +42,11 @@
 #define RADIO_TOKEN_ENTERTAINMENT ":p"
 
 
-#define RADIO_CHANNEL_SYNDICATE "Syndicate"
+#define RADIO_CHANNEL_SYNDICATE "Resistance"
 #define RADIO_KEY_SYNDICATE "t"
 #define RADIO_TOKEN_SYNDICATE ":t"
 
-#define RADIO_CHANNEL_CENTCOM "CentCom"
+#define RADIO_CHANNEL_CENTCOM "Overwatch"
 #define RADIO_KEY_CENTCOM "y"
 #define RADIO_TOKEN_CENTCOM ":y"
 
