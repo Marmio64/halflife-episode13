@@ -165,20 +165,35 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military //you are going to fucking die against thesse guys. trust me.
 	ears = /obj/item/radio/headset/syndicate/alt/leader //I AM JOHN POLAND, AND THIS IS MY MESSAGE; THE COMBINE WILL BURN, AND THE BANNER OF POLAND WILL BE RAISED
 	backpack_contents = list(
-		/obj/item/grenade/c4 = 3,
+		/obj/item/grenade/c4 = 1,
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
-		/obj/item/grenade/flashbang = 1,
 		/obj/item/megaphone = 1,
-		/obj/item/binoculars = 1,
-		/obj/item/food/canned/beans = 2, //stay behind enemy lines for as long as possible
+		/obj/item/food/canned/beans = 1, //stay behind enemy lines for as long as possible
 		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
 		/obj/item/crowbar/large = 1, //sometimes C4 is too much
-		/obj/item/hl13_small_flag/poland/telescopic = 1,
+		/obj/item/hl13_small_flag/poland/telescopic = 1, //POLAND POLAND POLAND
 	)
 
 //POST-SOVIET FACTIONS: PEOPLE'S LIBERATION FRONT + EASTERN REVOLUTIONARY FRONT
 
 /datum/outfit/resistance_faction/post_soviet
 	name = "Post-Soviet Rebel"
-	uniform = /obj/item/clothing/under/syndicate/camo //ay blyat.
+	uniform = /obj/item/clothing/under/syndicate/rus_army //ay blyat.
 	suit = /obj/item/clothing/suit/armor/rebel/light //cheapskate communist fuck. first armor vest they could find.
+	head = /obj/item/clothing/head/helmet/halflife/military/weak
+	r_pocket = /obj/item/gun/ballistic/automatic/pistol/usp //you are expendable. no spare ammo.
+
+/datum/outfit/resistance_faction/post_soviet/competent
+	name = "Post-Soviet Rebel Agent"
+	suit = /obj/item/clothing/suit/armor/kevlar
+	head = /obj/item/clothing/head/helmet/halflife/military
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance //shamelessly-recycled assets
+	mask = /obj/item/clothing/mask/gas/hl2/military
+
+/datum/outfit/resistance_faction/post_soviet/rifle
+	name = "Post-Soviet Rebel Rifleman"
+	suit = /obj/item/clothing/suit/armor/armored
+	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
+	head = /obj/item/clothing/head/helmet/halflife/military
+	mask = /obj/item/clothing/mask/balaclava
