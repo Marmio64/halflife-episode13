@@ -95,6 +95,12 @@
 	},
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/bar)
+"akc" = (
+/obj/structure/sign/poster/halflife/rebel{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "akp" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 10
@@ -3382,6 +3388,12 @@
 	dir = 1
 	},
 /area/halflife/outdoors)
+"fvz" = (
+/obj/structure/sign/poster/halflife/rebel{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/alley)
 "fwj" = (
 /obj/structure/table/halflife/no_smooth/large/wood/desk,
 /obj/item/paper,
@@ -3776,6 +3788,12 @@
 "gdE" = (
 /turf/open/openspace,
 /area/halflife/outdoors/roofs)
+"gea" = (
+/obj/structure/sign/poster/halflife/rebel/two{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors)
 "ger" = (
 /obj/machinery/power/halflife/streetlamphalt{
 	dir = 1
@@ -7844,6 +7862,10 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/roofs)
+"mzR" = (
+/obj/effect/spawner/random/trash/graffiti/halflife/rebelspray,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "mAn" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 1
@@ -9303,6 +9325,9 @@
 	pixel_y = 32
 	},
 /obj/machinery/light/small/directional/west,
+/obj/structure/sign/poster/halflife/combine{
+	pixel_y = 32
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
 "pgB" = (
@@ -10195,6 +10220,10 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter)
+"qLD" = (
+/obj/effect/spawner/random/trash/graffiti/halflife/rebelspray,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "qLF" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	keylock = 1;
@@ -12130,6 +12159,10 @@
 /obj/structure/window/fulltile,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/restaurant)
+"tKR" = (
+/obj/effect/spawner/random/trash/graffiti/halflife/rebelspray,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors)
 "tKX" = (
 /obj/structure/window/fulltile{
 	max_integrity = 150
@@ -43504,7 +43537,7 @@ iee
 lnn
 iee
 lli
-iee
+qLD
 iee
 kbK
 lli
@@ -51271,7 +51304,7 @@ ohs
 ohs
 phK
 ohs
-rRJ
+akc
 rRJ
 rRJ
 ohs
@@ -56009,7 +56042,7 @@ rRJ
 rRJ
 apI
 ohs
-uXQ
+fvz
 uXQ
 ohs
 rRJ
@@ -58313,7 +58346,7 @@ rRJ
 apI
 rRJ
 ohs
-rRJ
+mzR
 rRJ
 ohs
 rRJ
@@ -80592,7 +80625,7 @@ axK
 axK
 lli
 axK
-axK
+tKR
 lli
 axK
 axK
@@ -80714,7 +80747,7 @@ mAz
 mAz
 mAz
 lli
-axK
+gea
 axK
 axK
 axK
