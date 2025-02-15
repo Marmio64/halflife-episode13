@@ -183,10 +183,11 @@
 
 /obj/machinery/computer/security/wooden_tv
 	name = "security camera monitor"
-	desc = "An old TV hooked into the station's camera network."
-	icon_state = "television"
+	desc = "An old TV hooked into the Combine's camera network."
+	icon = 'hl13/icons/obj/television.dmi'
+	icon_state = "small_tv"
 	icon_keyboard = null
-	icon_screen = "detective_tv"
+	icon_screen = null
 	pass_flags = PASSTABLE
 
 /obj/machinery/computer/security/mining

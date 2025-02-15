@@ -71,7 +71,7 @@
 
 /obj/item/clothing/suit/armor/vest/marine
 	name = "tactical armor vest"
-	desc = "A set of the finest mass produced, stamped plasteel armor plates, containing an environmental protection unit for all-condition door kicking."
+	desc = "A set of the finest mass produced, stamped steel armor vests. Used almost exclusively by pre-war militaries, they're pretty rare nowadays."
 	icon_state = "marine_command"
 	inhand_icon_state = "armor"
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL

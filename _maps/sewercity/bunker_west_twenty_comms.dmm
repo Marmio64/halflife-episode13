@@ -36,6 +36,17 @@
 /obj/effect/mob_spawn/ghost_role/human/bunkeroperator,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
+"dQ" = (
+/obj/item/screwdriver{
+	pixel_x = 6;
+	pixel_y = 8
+	},
+/obj/item/stack/cable_coil/five{
+	pixel_x = 12;
+	pixel_y = -4
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "eb" = (
 /obj/structure/halflife/trash/cardboard,
 /obj/item/reagent_containers/cup/glass/mouthwash{
@@ -49,6 +60,13 @@
 /obj/item/reagent_containers/cup/glass/mouthwash{
 	pixel_x = -9;
 	pixel_y = 23
+	},
+/obj/item/storage/box/lights/bulbs{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/structure/halflife/pipes/horizontal/end{
+	dir = 1
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
@@ -94,6 +112,11 @@
 /obj/machinery/button/door{
 	id = "commsentrance"
 	},
+/obj/structure/table/halflife/metal,
+/obj/item/pen{
+	pixel_x = 8;
+	pixel_y = 8
+	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "ht" = (
@@ -134,15 +157,26 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
+"kW" = (
+/obj/machinery/light/small/directional/east,
+/obj/item/wrench{
+	pixel_x = -8;
+	pixel_y = 2
+	},
+/obj/item/stack/cable_coil/five{
+	pixel_x = -11;
+	pixel_y = -7
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "lj" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "lq" = (
-/obj/structure/halflife/trash/cardboard{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/concrete/bricks,
+/obj/machinery/light/small/directional/east,
+/obj/structure/filingcabinet/hl2,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "mB" = (
 /obj/machinery/light/small/broken/directional/east,
@@ -186,13 +220,11 @@
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/bunker)
 "pO" = (
-/obj/structure/table/halflife/no_smooth/large/metal/desk{
-	dir = 8
-	},
 /obj/structure/halflife/trash/glass/basic{
 	pixel_x = 0;
 	pixel_y = 10
 	},
+/obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "qU" = (
@@ -312,6 +344,10 @@
 	pixel_y = 10
 	},
 /obj/structure/table/halflife/metal/grate,
+/obj/item/paper_bin{
+	pixel_x = -7;
+	pixel_y = 7
+	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "AL" = (
@@ -348,10 +384,27 @@
 	pixel_x = -9;
 	pixel_y = 13
 	},
+/obj/item/paper/crumpled{
+	pixel_x = 4;
+	pixel_y = 0;
+	default_raw_text = "I rigged this grenade to go off almost immediately after I pull the pin. Combine can't take me alive now."
+	},
+/obj/item/grenade/syndieminibomb/bouncer{
+	name = "modified MK3A2 grenade";
+	desc = "A heavily-modified MK3A2 grenade. You can see most of the electronic timer has been utterly busted, and will go off almost immediately after the pin is pulled. Better to die free.";
+	det_time = 1;
+	possible_fuse_time = list("Instant");
+	pixel_x = 14;
+	pixel_y = 16
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "DV" = (
 /turf/closed/wall/halflife/concrete,
+/area/halflife/indoors/bunker)
+"Fc" = (
+/obj/structure/halflife/pipes/horizontal/end,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "Fg" = (
 /obj/structure/chair/office/halflife/blue,
@@ -374,6 +427,14 @@
 "FT" = (
 /obj/structure/halflife/pipes/horizontal/single,
 /turf/open/halflife/water/medium,
+/area/halflife/indoors/bunker)
+"He" = (
+/obj/structure/halflife/trash/cardboard{
+	dir = 8;
+	pixel_x = 1;
+	pixel_y = -2
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "Hg" = (
 /obj/structure/halflife/toilet{
@@ -415,24 +476,14 @@
 /area/halflife/indoors/bunker)
 "Kj" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/grenade/syndieminibomb/bouncer{
-	name = "modified MK3A2 grenade";
-	desc = "A heavily-modified MK3A2 grenade. You can see most of the electronic timer has been utterly busted, and will go off almost immediately after the pin is pulled. Better to die free.";
-	det_time = 1;
-	possible_fuse_time = list("Instant");
-	pixel_x = 6;
-	pixel_y = 10
-	},
-/obj/item/paper/crumpled{
-	pixel_x = -6;
-	pixel_y = 9;
-	default_raw_text = "I rigged this grenade to go off almost immediately after I pull the pin. Combine can't take me alive now."
-	},
+/obj/machinery/computer/security/wooden_tv,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "KG" = (
 /obj/structure/halflife/trash/cardboard{
-	dir = 10
+	dir = 10;
+	pixel_x = -2;
+	pixel_y = 7
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
@@ -509,8 +560,8 @@
 	pixel_y = 11
 	},
 /obj/item/light/bulb{
-	pixel_x = 16;
-	pixel_y = 15
+	pixel_x = 8;
+	pixel_y = 7
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
@@ -563,8 +614,19 @@
 /obj/structure/halflife/trash/books/pile_alt,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
+"RD" = (
+/obj/item/hl13_small_flag/poland{
+	pixel_x = 7;
+	pixel_y = 26
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "Sg" = (
 /obj/structure/halflife/pipes/vent,
+/obj/machinery/computer/security/wooden_tv{
+	dir = 4
+	},
+/obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "TM" = (
@@ -581,6 +643,7 @@
 /area/halflife/indoors/bunker)
 "UJ" = (
 /obj/effect/spawner/random/halflife/loot/crafting_bench,
+/obj/structure/halflife/pipes/horizontal,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "UP" = (
@@ -624,6 +687,10 @@
 /obj/item/food/canned/pine_nuts{
 	pixel_x = -5;
 	pixel_y = 9
+	},
+/obj/item/reagent_containers/pill/patch/medkit/vial{
+	pixel_x = 8;
+	pixel_y = 8
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
@@ -862,7 +929,7 @@ Bj
 Bj
 DV
 nS
-lj
+lq
 Al
 DV
 Zg
@@ -977,7 +1044,7 @@ uG
 KG
 CZ
 Bj
-Bj
+He
 Xe
 DV
 Hg
@@ -993,7 +1060,7 @@ uD
 uD
 DV
 wk
-nS
+lj
 nS
 DV
 DE
@@ -1023,7 +1090,7 @@ Kj
 Bj
 Bj
 Bj
-lq
+Bj
 Ps
 DV
 pg
@@ -1040,7 +1107,7 @@ uD
 xu
 DV
 eb
-Bj
+dQ
 DV
 Qy
 Bj
@@ -1085,10 +1152,10 @@ uD
 uD
 xu
 DV
-Bj
-UQ
+Fc
+kW
 DV
-Bj
+RD
 Fg
 AL
 Zx
