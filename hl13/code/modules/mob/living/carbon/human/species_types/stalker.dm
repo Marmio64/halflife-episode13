@@ -8,13 +8,13 @@
 	inherent_traits = list(TRAIT_NOGUNS, TRAIT_RESISTCOLD, TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,
 							TRAIT_NOBREATH, TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE,
 							TRAIT_NOCRITDAMAGE, TRAIT_GENELESS, TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_NOPAIN, TRAIT_NO_UNDERWEAR, TRAIT_GRABWEAKNESS, TRAIT_AGEUSIA)
-	mutanteyes = /obj/item/organ/eyes/robotic
+	mutanteyes = /obj/item/organ/eyes/robotic/glow
 	mutantappendix = null
 	mutantbrain = /obj/item/organ/brain/cybernetic/ai
 	mutantheart = /obj/item/organ/heart/cybernetic
 	mutantliver = /obj/item/organ/liver/cybernetic
 	mutantlungs = /obj/item/organ/lungs/cybernetic
-	mutantstomach = /obj/item/organ/stomach/cybernetic
+	mutantstomach = /obj/item/organ/stomach/cybernetic/tier2
 	mutantears = /obj/item/organ/ears/cybernetic
 	species_language_holder = /datum/language_holder/stalker
 	var/info_text = "You are a <span class='danger'>Stalker</span>, a subservient mutant engineered by the combine. \
@@ -43,6 +43,8 @@
 	C.cmode_music = 'hl13/sound/music/combat/crawlyard.ogg'
 	to_chat(C, "[info_text]")
 
+	C.mob_mood?.mood_modifier -= 0.8 //don't care, never did
+
 	C.AddComponent( \
 			/datum/component/simple_bodycam, \
 			camera_name = "implanted bodycam", \
@@ -52,6 +54,7 @@
 /datum/species/stalker/on_species_loss(mob/living/carbon/C)
 	..()
 	UnregisterSignal(C, COMSIG_MOB_SAY)
+	C.mob_mood?.mood_modifier += 0.8
 
 /datum/species/stalker/proc/handle_speech(datum/source, list/speech_args)
 	playsound(source, 'hl13/sound/voice/stalker/stalker_talk.ogg', 50, 1, 1)
@@ -59,4 +62,6 @@
 /datum/species/stalker/get_scream_sound(mob/living/carbon/human/stalker)
 	return pick(
 		'hl13/sound/voice/stalker/stalker_scream.ogg',
+		'hl13/sound/voice/stalker/stalker_scream2.ogg',
+		'hl13/sound/voice/stalker/stalker_scream3.ogg',
 	)

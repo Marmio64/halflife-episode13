@@ -109,8 +109,11 @@
 	. = ..()
 	AddComponent(/datum/component/edible, check_liked = CALLBACK(src, PROC_REF(check_liked)))
 
-/obj/item/food/rationpack/proc/check_liked(mob/mob) //Nobody likes rationpacks. Nobody.
-	return FOOD_DISLIKED
+/obj/item/food/rationpack/proc/check_liked(mob/living/carbon/human/consumer) //Nobody likes rationpacks. Nobody. Unless you can't taste anything. If so, good on you.
+	if(HAS_TRAIT(consumer, TRAIT_AGEUSIA)) //if you can't taste it, it doesn't taste good
+		return 0
+	else
+		return FOOD_DISLIKED
 
 /obj/item/food/rationpack/loyalty
 	name = "loyalty-grade nutriment bar"
@@ -196,8 +199,11 @@
 	. = ..()
 	AddComponent(/datum/component/edible, check_liked = CALLBACK(src, PROC_REF(check_liked)))
 
-/obj/item/food/nutripaste/proc/check_liked(mob/mob) //Nutripaste is espescially abhorrent...
-	return FOOD_TOXIC
+/obj/item/food/nutripaste/proc/check_liked(mob/living/carbon/human/consumer) //Nutripaste is espescially abhorrent...
+	if(HAS_TRAIT(consumer, TRAIT_AGEUSIA)) //if you can't taste it, it doesn't taste good
+		return 0
+	else
+		return FOOD_TOXIC
 
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater
