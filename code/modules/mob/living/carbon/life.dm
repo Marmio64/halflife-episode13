@@ -103,6 +103,16 @@
 				breath = loc_as_obj.handle_internal_lifeform(src, BREATH_VOLUME)
 
 			else if(isturf(loc)) //Breathe from loc as turf
+				//hl13 EDIT START - Vapour
+				var/turf/our_turf = loc
+				if(isopenturf(our_turf))
+					var/turf/open/open_turf = our_turf
+					if(open_turf.vapour)
+						if(next_smell <= world.time)
+							next_smell = world.time + 1 MINUTES //SMELL_COOLDOWN
+							open_turf.vapour.SmellAct(src)
+						open_turf.vapour.BreatheAct(src)
+				//hl13 EDIT END - Vapour
 				var/breath_moles = 0
 				if(environment)
 					breath_moles = environment.total_moles()*BREATH_PERCENTAGE

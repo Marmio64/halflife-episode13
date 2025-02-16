@@ -218,3 +218,14 @@
 	tool_behaviors = list(TOOL_CROWBAR)
 	time = 1 SECONDS
 	category = CAT_WEAPON_RANGED
+
+/datum/crafting_recipe/halflife_molotov
+	name = "Molotov"
+	result = /obj/item/grenade/halflife/molotov
+	reqs = list(
+		/obj/item/stack/sheet/cloth = 1,
+		/obj/item/reagent_containers/cup/glass/bottle = 1,
+		/datum/reagent/consumable/ethanol = 30,
+	)
+	time = 3 SECONDS
+	category = CAT_WEAPON_RANGED

@@ -4,6 +4,11 @@
 	SStgui.on_logout(src)
 	remove_from_player_list()
 	update_ambience_area(null) // Unset ambience vars so it plays again on login
+	//hl13 edit - vapour
+	if(client)
+		client.images.Remove(vapour_alpha_mask)
+	vapour_alpha_mask = null
+	//hl13 EDIT - Vapour
 	..()
 
 	if(loc)

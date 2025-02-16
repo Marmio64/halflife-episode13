@@ -132,7 +132,7 @@
 	adjustFireLoss(rand(5 , burnlevel)) //Including the fire should be way stronger.
 	to_chat(src, "<span class='warning'>You are burned!</span>")
 
-/proc/flame_radius(radius = 1, turf/epicenter, burn_duration = 45, burn_intensity = 25, burn_damage = 12, fire_stacks = 12, int_var = 0.5, dur_var = 0.5, colour = "red") //~Art updated fire.
+/proc/flame_radius(radius = 1, turf/epicenter, burn_duration = 30, burn_intensity = 25, burn_damage = 12, fire_stacks = 3, int_var = 0.5, dur_var = 0.5, colour = "red") //~Art updated fire.
 	if(!isturf(epicenter))
 		CRASH("flame_radius used without a valid turf parameter")
 	for(var/T in filled_turfs(epicenter, radius, "circle", FALSE))
