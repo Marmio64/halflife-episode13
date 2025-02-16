@@ -64,6 +64,27 @@
 	acid = 50
 	wound = 5
 
+/obj/item/clothing/head/helmet/halflife/milhelm
+	name = "military helmet"
+	desc = "An old world military helmet for protecting your noggin."
+	icon = 'hl13/icons/obj/clothing/hats.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
+	icon_state = "milhelm"
+	base_icon_state = "milhelm"
+	armor_type = /datum/armor/milhelm
+	flags_cover = EARS_COVERED
+
+/datum/armor/milhelm
+	melee = 25
+	bullet = 20
+	laser = 20
+	energy = 20
+	bomb = 25
+	fire = 50
+	acid = 50
+	wound = 10
+
+
 /obj/item/clothing/head/bio_hood/boiler
 	icon_state = "bio_boiler"
 	icon = 'hl13/icons/obj/clothing/hats.dmi'

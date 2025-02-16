@@ -19,7 +19,7 @@
 // the veteran is quite literally fucking polish doomguy
 
 /obj/item/hl13_small_flag/poland/telescopic
-	name = "telescoppic polish flag"
+	name = "telescopic polish flag"
 	desc = "A pole defiantly brandishing the colors of the once proud nation of Poland. This one has been modified to fold-up so it can be carried in a bag. 'Poland Protects' is inscribed on the handle."
 	w_class = 3
 	force = 10
@@ -112,7 +112,7 @@
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
 	head = /obj/item/clothing/head/helmet/halflife/military/weak //you get one (1) bargain bin helmet
-	mask = /obj/item/clothing/mask/gas/hl2/military
+	mask = /obj/item/clothing/mask/gas/hl2/swat
 
 /datum/outfit/resistance_faction/polish/medic
 	name = "Polish Revolutionary Front Medic"
@@ -127,23 +127,20 @@
 	suit = /obj/item/clothing/suit/armor/kevlar //now we're talking. actual pre-war armour.
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle //now you're an actual, trusted soldier, so we can give you good weapons
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
-	uniform = /obj/item/clothing/under/syndicate/camo //actual military shit.
 	l_pocket = /obj/item/knife/combat/survival
 	head = /obj/item/clothing/head/helmet/halflife/military //REAL helmet for REAL men.
 
 /datum/outfit/resistance_faction/polish/strong
 	name = "Polish Revolutionary Front Corporal"
-	suit = /obj/item/clothing/suit/armor/vest/marine //NOW we're talking.
+	suit = /obj/item/clothing/suit/armor/halflife/milvest //NOW we're talking.
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle //now you're an actual, trusted soldier, so we can give you good weapons
-	uniform = /obj/item/clothing/under/syndicate/camo //actual military shit.
 	l_pocket = /obj/item/knife/combat/survival
 	head = /obj/item/clothing/head/helmet/halflife/military //again: actual military shit. the PRF only send these guys when they WANT to fuck some shit up.
 	r_pocket = /obj/item/grenade/c4
 
 /datum/outfit/resistance_faction/polish/commander
 	name = "Polish Revolutionary Front Platoon Leader"
-	uniform = /obj/item/clothing/under/syndicate/combat
 	suit = /obj/item/clothing/suit/armor/vest/russian_coat //big man gets big coat. big man DOES NOT go on the frontlines. you STAY IN THE BACK AND TALK TO YOUR SOLDIERS GOD FUCKING DAMNIT.
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/revolver
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
@@ -157,8 +154,8 @@
 
 /datum/outfit/resistance_faction/polish/fuck_your_shit
 	name = "Polish Revolutionary Front Veteran" //these guys are the most most experienced of the polish revolutionary front. if they are in city 13, you duck and cover. they are walking fucking dreadnoughts. do not call on them in vain.
-	head = /obj/item/clothing/head/helmet/marine/security
-	suit = /obj/item/clothing/suit/armor/vest/marine/security //again: walking fucking tank. dont fuck with him.
+	head = /obj/item/clothing/head/helmet/halflife/milhelm
+	suit = /obj/item/clothing/suit/armor/halflife/milvest //again: walking fucking tank. dont fuck with him.
 	uniform = /obj/item/clothing/under/syndicate/camo
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
 	suit_store = /obj/item/gun/ballistic/automatic/ak47
@@ -196,7 +193,7 @@
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
 	head = /obj/item/clothing/head/helmet/halflife/military
-	mask = /obj/item/clothing/mask/gas/hl2/military
+	mask = /obj/item/clothing/mask/gas/hl2/russia
 
 /datum/outfit/resistance_faction/post_soviet/ak
 	name = "Post-Soviet Rebel Kalashnikov Rifleman"
@@ -204,7 +201,7 @@
 	suit_store = /obj/item/gun/ballistic/automatic/ak47
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
 	head = /obj/item/clothing/head/helmet/halflife/military
-	mask = /obj/item/clothing/mask/gas/hl2/military
+	mask = /obj/item/clothing/mask/gas/hl2/russia
 	l_pocket = /obj/item/grenade/c4
 
 //MISC FACTIONS: RADIOHIM, REBEL COPS
@@ -214,7 +211,7 @@
 	uniform = /obj/item/clothing/under/syndicate/combat
 	mask = /obj/item/clothing/mask/gas/hl2/military
 	suit = /obj/item/clothing/suit/armor/armored/upgraded
-	head = /obj/item/clothing/head/helmet/marine
+	head = /obj/item/clothing/head/helmet/halflife/milhelm
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
 	back = /obj/item/storage/backpack/halflife/satchel/military
 	backpack_contents = list(
@@ -234,7 +231,7 @@
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
 		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
 	)
-	suit = /obj/item/clothing/suit/armor/vest/marine
+	suit = /obj/item/clothing/suit/armor/halflife/milvest
 	suit_store = /obj/item/gun/ballistic/automatic/m4a1
 
 /datum/outfit/job/security/traitor_cop
