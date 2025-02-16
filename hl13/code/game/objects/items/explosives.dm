@@ -15,3 +15,64 @@
 	desc = "A less-lethal grenade filled with rubber pellets. Useful for dispersing crowds."
 	icon = 'hl13/icons/obj/grenade.dmi'
 	icon_state = "stinger"
+
+/obj/item/grenade/halflife/molotov
+	name = "molotov cocktail"
+	desc = "The firestarters best friend, a very simple grenade consisting of a rag and a bottle of alcohol. Light those suckers up."
+	icon = 'hl13/icons/obj/throwables/grenades_inventory.dmi'
+	lefthand_file = 'hl13/icons/mob/inhands/grenades_inhand_left.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/grenades_inhand_right.dmi'
+	icon_state = "molotov"
+	throwforce = 10
+	throw_speed = 1.5
+	w_class = WEIGHT_CLASS_NORMAL //Kind of weird but I don't want people running around with pocket molotovs - Hekzder
+	var/extra_POWER // Used for scaling flame power based on alcoholpwr. This number, usually 0-100, will be divided by 75 to get the flame radius.
+	var/arm_sound = 'sound/items/tools/welder.ogg'
+
+/obj/item/grenade/halflife/molotov/Initialize()
+	. = ..()
+	det_time = rand(25,60) //2.5-6 seconds
+
+/obj/item/grenade/halflife/molotov/attackby(obj/item/I, mob/user, params)
+	if(I.get_temperature() && !active)
+		arm_grenade()
+		to_chat(user, "<span class='info'>You light [src] on fire.</span>")
+		return
+
+/obj/item/grenade/halflife/molotov/attack_self(mob/user)
+	return //lighting only
+
+/obj/item/grenade/halflife/molotov/arm_grenade(mob/user, delayoverride, msg = TRUE, volume = 60)
+	var/turf/T = get_turf(src)
+	log_grenade(user, T) //Inbuilt admin procs already handle null users
+	if(user)
+		add_fingerprint(user)
+		if(msg)
+			to_chat(user, "<span class='warning'>You prime [src]! [capitalize(DisplayTimeText(det_time))]!</span>")
+	if(shrapnel_type && shrapnel_radius)
+		shrapnel_initialized = TRUE
+		AddComponent(/datum/component/pellet_cloud, projectile_type=shrapnel_type, magnitude=shrapnel_radius)
+	playsound(src, arm_sound, volume, TRUE)
+	active = TRUE
+	icon_state = icon_state + "_active"
+	inhand_icon_state = icon_state
+	SEND_SIGNAL(src, COMSIG_GRENADE_ARMED, det_time, delayoverride)
+	addtimer(CALLBACK(src, PROC_REF(detonate)), isnull(delayoverride)? det_time : delayoverride)
+	update_icon()
+
+/obj/item/grenade/halflife/molotov/detonate(mob/living/lanced_by)
+	playsound(loc, 'sound/effects/hit_on_shattered_glass.ogg', 35, TRUE, 4)
+	flame_radius(extra_POWER, get_turf(src))
+	playsound(loc, 'hl13/sound/halflifeeffects/explosion_fire_grenade.ogg', 30, TRUE, 4)
+	qdel(src)
+
+/obj/item/grenade/halflife/molotov/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
+	. = ..()
+	if(istype(loc, /turf/open/openspace))
+		return
+	if(!. && active)
+		detonate()
+	else
+		playsound(src, "shatter", 70, TRUE)
+		new /obj/item/shard(src.loc)
+		qdel(src)

@@ -18,6 +18,11 @@
 	/// Are burnt overlays smoothed? if they are we have to change a little bit about how we render them
 	var/smooth_burnt = FALSE
 
+	//hl13 EDIT - Vapour
+	///Vapour of this turf
+	var/datum/vapour/vapour
+	///Reference to the turf fire on the turf
+	var/obj/effect/abstract/turf_fire/turf_fire
 
 /// Returns a list of every turf state considered "broken".
 /// Will be randomly chosen if a turf breaks at runtime.

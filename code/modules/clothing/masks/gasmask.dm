@@ -17,6 +17,7 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	w_class = WEIGHT_CLASS_NORMAL
 	inhand_icon_state = "gas_alt"
 	armor_type = /datum/armor/mask_gas
+	clothing_traits = list(TRAIT_WEARING_GAS_MASK) //hl13 edit
 	flags_cover = MASKCOVERSEYES | MASKCOVERSMOUTH | PEPPERPROOF
 	resistance_flags = NONE
 	voice_filter = "lowpass=f=750,volume=2"

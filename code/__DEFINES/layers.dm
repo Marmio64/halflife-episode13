@@ -12,6 +12,9 @@
 #define PLANE_SPACE -25
 #define PLANE_SPACE_PARALLAX -20
 
+#define VAPOUR_PLANE -14 //HL13 EDIT - Vapour
+#define VAPOUR_PLANE_RENDER_TARGET "MOUSE_TRANSPARENT_PLANE" //HL13 EDIT - Vapour
+
 #define GRAVITY_PULSE_PLANE -13
 #define GRAVITY_PULSE_RENDER_TARGET "*GRAVPULSE_RENDER_TARGET"
 
@@ -248,6 +251,8 @@
 #define ABOVE_TREE_LAYER 5.01
 #define GASFIRE_LAYER 5.05
 #define RIPPLE_LAYER 5.1
+#define VAPOUR_LAYER 5.2 //HL13 EDIT - Vapour
+
 
 /**
  * The layer of the visual overlay used in the submerge element.
