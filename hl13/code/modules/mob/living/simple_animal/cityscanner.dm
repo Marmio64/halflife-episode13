@@ -58,6 +58,11 @@
 	icon_living = "cityscanner"
 	friendly_verb_continuous = "scans"
 	friendly_verb_simple = "scan"
+	melee_damage_lower = 4
+	melee_damage_upper = 4
+	rapid_melee = 0.5 //slow attacks
+	attack_verb_continuous = "rams"
+	attack_verb_simple = "ram"
 	loot = list(/obj/item/circuitmaterial)
 	del_on_death = 1
 	health = 60
@@ -136,6 +141,7 @@
 
 /mob/living/simple_animal/hostile/hl2bot/cityscanner/Destroy()
 	QDEL_NULL(aicamera)
+	return ..()
 
 /mob/living/simple_animal/hostile/hl2bot/cityscanner/proc/GetPhoto(mob/user)
 	if (aicamera)

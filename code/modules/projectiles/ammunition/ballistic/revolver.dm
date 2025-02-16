@@ -30,6 +30,7 @@
 	desc = "A 7.62x38mmR bullet casing."
 	caliber = CALIBER_N762
 	projectile_type = /obj/projectile/bullet/n762
+	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/heavy // hl13 edit
 
 // .38 (Detective's Gun)
 

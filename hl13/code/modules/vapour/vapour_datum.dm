@@ -251,7 +251,7 @@
 	if(!total_thickness || total_thickness < VAPOUR_APPEARANCE_THICKNESS_THRESHOLD)
 		return
 
-	var/mutable_appearance/overlay = mutable_appearance('hl13/icons/effects/smoke.dmi', "smoke", VAPOUR_LAYER, VAPOUR_PLANE, appearance_flags = KEEP_APART|RESET_TRANSFORM|RESET_COLOR)
+	var/mutable_appearance/overlay = mutable_appearance('hl13/icons/effects/smoke.dmi', "smoke", VAPOUR_LAYER, appearance_flags = KEEP_APART|RESET_TRANSFORM|RESET_COLOR)
 	overlay.pixel_x = -8
 	overlay.pixel_y = 6
 	overlay.alpha = FLOOR(vapours.alpha * total_thickness * THICKNESS_ALPHA_COEFFICIENT, 1)

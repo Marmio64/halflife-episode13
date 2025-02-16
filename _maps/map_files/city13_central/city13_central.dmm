@@ -69,6 +69,14 @@
 /obj/effect/landmark/start/scientist,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
+"afB" = (
+/obj/machinery/camera{
+	c_tag = "Store";
+	dir = 8
+	},
+/obj/structure/table/halflife/no_smooth/wood/square,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/store)
 "afW" = (
 /obj/machinery/computer/rdservercontrol{
 	dir = 1
@@ -139,6 +147,7 @@
 /obj/structure/halflife/trash/papers/three{
 	dir = 4
 	},
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
 "ant" = (
@@ -2116,7 +2125,7 @@
 /area/halflife/indoors/hydroponics)
 "dBD" = (
 /obj/structure/table/halflife/no_smooth/large/wood/square,
-/obj/item/clothing/suit/chaplainsuit/holidaypriest,
+/obj/item/clothing/suit/chaplainsuit/habit,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/old/chapel)
 "dBY" = (
@@ -3134,6 +3143,10 @@
 "far" = (
 /turf/closed/wall/halflife/brick/grey,
 /area/halflife/indoors/townhall/infirmary)
+"fas" = (
+/obj/effect/spawner/random/trash/graffiti/halflife/rebelspray,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer)
 "faF" = (
 /obj/machinery/camera{
 	c_tag = "Town Hall Workshop";
@@ -3282,6 +3295,7 @@
 /area/halflife/indoors/old/chapel)
 "foq" = (
 /obj/machinery/light/small/directional/west,
+/obj/effect/mob_spawn/ghost_role/cityscanner,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/dispatch)
 "foR" = (
@@ -4221,6 +4235,12 @@
 /obj/machinery/power/halflife/streetlamphalt,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
+"gJG" = (
+/obj/structure/sign/poster/halflife/rebel{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer)
 "gJI" = (
 /obj/structure/table/halflife/no_smooth/large/wood/desk{
 	dir = 4
@@ -4996,6 +5016,7 @@
 "hXz" = (
 /obj/item/paper_bin,
 /obj/item/pen,
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/laborunion)
 "hYl" = (
@@ -5019,6 +5040,10 @@
 "iaq" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/bar)
+"iay" = (
+/obj/effect/spawner/random/trash/graffiti/halflife/rebelspray,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer)
 "iaK" = (
 /obj/structure/chair/sofa/hl13bench{
 	dir = 4
@@ -7052,12 +7077,9 @@
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/secondfloor)
 "loO" = (
-/obj/machinery/camera{
-	c_tag = "Store";
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/store)
+/obj/item/radio/intercom/directional/south,
+/turf/open/floor/plating/indoor/tiled9,
+/area/halflife/indoors/hospital)
 "loV" = (
 /obj/structure/chair/halflife/wood{
 	dir = 4
@@ -8041,10 +8063,8 @@
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/restaurant)
 "mOm" = (
-/obj/machinery/door/unpowered/halflife/seethrough/metal{
-	dir = 8;
-	keylock = 1;
-	lockid = "lab"
+/obj/machinery/turnstile/brig/halflife/forcefield/science{
+	dir = 4
 	},
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/dispatch)
@@ -8823,6 +8843,12 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/townhall/secondfloor)
+"onE" = (
+/obj/structure/chair/halflife/metal/blue{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/store)
 "oow" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -9458,6 +9484,10 @@
 /obj/item/storage/halflife/keyring,
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/townhall/secondfloor)
+"ptH" = (
+/obj/machinery/vending/custom,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/store)
 "ptP" = (
 /obj/structure/chair/pew/right{
 	dir = 1
@@ -14179,6 +14209,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley)
+"wMK" = (
+/obj/structure/table/halflife/metal/grate,
+/turf/open/floor/plating/indoor/tile/navy,
+/area/halflife/indoors/dispatch)
 "wNy" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/food/nutripaste,
@@ -26603,7 +26637,7 @@ pLi
 gUV
 lyR
 pLi
-dgU
+gJG
 dgU
 eVa
 haG
@@ -26726,7 +26760,7 @@ gyl
 gyl
 pLi
 nJb
-dgU
+fas
 pLi
 kRT
 dgU
@@ -33163,7 +33197,7 @@ gyl
 gyl
 pLi
 psJ
-kiD
+iay
 pLi
 pLi
 kiD
@@ -43452,7 +43486,7 @@ jvh
 jvh
 jvh
 jvh
-jvh
+gyU
 glz
 evL
 bnP
@@ -49983,7 +50017,7 @@ sAs
 vFB
 vFB
 vFB
-vFB
+loO
 vkg
 lQa
 bLc
@@ -51379,11 +51413,11 @@ nGg
 iAS
 vjx
 smv
-nGB
 ujB
 ujB
 ujB
-pQi
+ujB
+ujB
 tqO
 tqO
 tqO
@@ -51507,11 +51541,11 @@ nGg
 dHd
 vjx
 smv
-ujB
+nGB
 spl
 wpq
 spl
-ujB
+pQi
 smv
 qGu
 vHB
@@ -52019,10 +52053,10 @@ nGg
 dHd
 vjx
 smv
-loO
+nGB
 ujB
 ujB
-ntj
+ujB
 ujB
 feZ
 vHB
@@ -52146,12 +52180,12 @@ uZh
 nGg
 dHd
 vjx
-tqO
-tqO
 smv
-lVK
-tqO
-tqO
+afB
+onE
+ujB
+ntj
+ptH
 tqO
 tqO
 jsu
@@ -52275,10 +52309,10 @@ nGg
 dHd
 vjx
 tqO
+tqO
 smv
-wpq
-wpq
-wpq
+lVK
+tqO
 tqO
 jsu
 uKF
@@ -52404,9 +52438,9 @@ dHd
 vjx
 tqO
 smv
-aQm
-pDe
-aQm
+wpq
+wpq
+wpq
 tqO
 jsu
 nyD
@@ -52531,10 +52565,10 @@ nGg
 dHd
 vjx
 tqO
-tqO
-tqO
-tqO
-tqO
+smv
+aQm
+pDe
+aQm
 tqO
 jsu
 vKo
@@ -55966,7 +56000,7 @@ ulM
 ulM
 ulM
 cMu
-ctK
+wMK
 ctK
 ctK
 ctK
