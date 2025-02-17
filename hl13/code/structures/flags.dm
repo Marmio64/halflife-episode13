@@ -12,3 +12,9 @@
 	desc = "A pole brandishing the colors of the once proud nation of Poland."
 	icon_state = "flagpole_poland"
 	inhand_icon_state = "flagpole_poland"
+
+/obj/item/hl13_small_flag/combine
+	name = "combine flag"
+	desc = "A pole brandishing the colors of the occupying Universal Union."
+	icon_state = "flagpole_combine"
+	inhand_icon_state = "flagpole_combine"
