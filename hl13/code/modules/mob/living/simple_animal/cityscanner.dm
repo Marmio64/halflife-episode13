@@ -172,3 +172,18 @@
 		return
 	var/chosen_sound = pick(talk_sounds)
 	playsound(src, chosen_sound, 50, FALSE)
+
+/// Screwdrivering repairs the scanner to full hp
+/mob/living/simple_animal/hostile/hl2bot/cityscanner/screwdriver_act(mob/living/user, obj/item/tool)
+	if(health >= maxHealth)
+		to_chat(user, span_warning("[src]'s screws can't get any tighter!"))
+		return ITEM_INTERACT_SUCCESS
+	to_chat(user, span_notice("You start to tighten loose screws on [src]..."))
+
+	if(!tool.use_tool(src, user, 8 SECONDS, volume=50))
+		to_chat(user, span_warning("You need to remain still to tighten [src]'s screws!"))
+		return ITEM_INTERACT_SUCCESS
+
+	adjustBruteLoss(-getBruteLoss())
+	visible_message(span_notice("[user] tightens [src == user ? "[user.p_their()]" : "[src]'s"] loose screws!"), span_notice("[src == user ? "You tighten" : "[user] tightens"] your loose screws."))
+	return ITEM_INTERACT_SUCCESS
