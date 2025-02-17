@@ -14,6 +14,7 @@
 /obj/item/storage/box/halflife/ration/PopulateContents()
 	if(prob(5))
 		new /obj/item/food/pierogi_ration(src)
+		new /obj/item/reagent_containers/cup/glass/bottle/beer/light(src)
 	else
 		new /obj/item/food/rationpack(src)
 
@@ -29,6 +30,7 @@
 /obj/item/storage/box/halflife/betterration/PopulateContents()
 	if(prob(5))
 		new /obj/item/food/pierogi_ration(src)
+		new /obj/item/reagent_containers/cup/glass/bottle/beer/light(src)
 	else
 		new /obj/item/food/rationpack/box(src)
 
@@ -44,6 +46,7 @@
 /obj/item/storage/box/halflife/loyaltyration/PopulateContents()
 	if(prob(5))
 		new /obj/item/food/pierogi_ration(src)
+		new /obj/item/reagent_containers/cup/glass/bottle/beer/light(src)
 	else
 		new /obj/item/food/rationpack/loyalty(src)
 
@@ -60,6 +63,7 @@
 /obj/item/storage/box/halflife/bestration/PopulateContents()
 	if(prob(5))
 		new /obj/item/food/pierogi_ration(src)
+		new /obj/item/reagent_containers/cup/glass/bottle/beer/light(src)
 	else
 		new /obj/item/food/rationpack/loyalty(src)
 
