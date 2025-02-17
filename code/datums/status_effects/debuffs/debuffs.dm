@@ -1,5 +1,5 @@
 /// The damage healed per tick while sleeping without any modifiers
-#define HEALING_SLEEP_DEFAULT 0.2
+#define HEALING_SLEEP_DEFAULT 0.3 //hl13 edit, increases this
 /// The sleep healing multiplier for organ passive healing (since organs heal slowly)
 #define HEALING_SLEEP_ORGAN_MULTIPLIER 5
 /// The sleep multiplier for fitness xp conversion
@@ -173,7 +173,7 @@
 		if(owner.mob_mood)
 			switch(owner.mob_mood.sanity_level)
 				if(SANITY_LEVEL_GREAT)
-					sleep_quality = 0.2
+					sleep_quality = 0.3 //hl13 edit, mood is more effective
 				if(SANITY_LEVEL_NEUTRAL)
 					sleep_quality = 0.1
 				if(SANITY_LEVEL_DISTURBED)
@@ -198,7 +198,7 @@
 
 		// check for beds
 		if((locate(/obj/structure/bed) in owner.loc))
-			sleep_quality += 0.2
+			sleep_quality += 0.4 //hl13 edit, bed is better for healing
 		else if((locate(/obj/structure/table) in owner.loc))
 			sleep_quality += 0.1
 
@@ -236,7 +236,7 @@
 				else if(carbon_owner.nutrition > NUTRITION_LEVEL_FED && carbon_owner.hydration > HYDRATION_LEVEL_HYDRATED)
 					sleep_quality += 0.2 //HL13 EDIT, having a good amount of food and water in you will help you heal, however.
 
-			if(health_ratio > 0.8 || health_ratio > -0.4 && health_ratio < 0.2) // only heals minor physical damage, HL13 EDIT: or if you have a lot of damage, you can heal up to a certain point
+			if(health_ratio > 0) // HL13 EDIT, sleep can heal you so long as you aren't incredibly hurt (Which needs patching up first)
 				need_mob_update += owner.adjustBruteLoss(-0.4 * sleep_quality * seconds_between_ticks, updating_health = FALSE, required_bodytype = BODYTYPE_ORGANIC)
 				need_mob_update += owner.adjustFireLoss(-0.4 * sleep_quality * seconds_between_ticks, updating_health = FALSE, required_bodytype = BODYTYPE_ORGANIC)
 				need_mob_update += owner.adjustToxLoss(-0.2 * sleep_quality * seconds_between_ticks, updating_health = FALSE, forced = TRUE, required_biotype = MOB_ORGANIC)
