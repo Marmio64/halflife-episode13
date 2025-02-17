@@ -894,12 +894,15 @@ GLOBAL_LIST_EMPTY_TYPED(greenscreen_displays, /obj/effect/abstract/greenscreen_d
 	SIGNAL_HANDLER
 	display.remove_from_display(exited)
 
+/turf/open/floor/plating/indoor/metal/combine/greenscreen
+	name = "broadcast floor"
+	desc = "A modified Combine floor with tiny holoprojectors inside that could theoretically emulate a greenscreen."
 /obj/machinery/greenscreen_camera/proc/find_displayed_turf()
 	var/list/turf/line = get_line(src, get_ranged_target_turf(src, dir, 5))
 	for(var/i in 1 to length(line))
 		var/turf/current = line[i]
 		// found a greenscreen turf
-		if(istype(current, /turf/open/floor/greenscreen))
+		if(istype(current, /turf/open/floor/plating/indoor/metal/combine/greenscreen))
 			return current
 		// found any wall, or something we can't see through
 		if(i != 1)
