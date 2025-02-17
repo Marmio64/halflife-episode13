@@ -120,7 +120,7 @@
 
 // Chasm that doesn't do any z-level nonsense and just kills/stores whoever steps into it.
 /turf/open/chasm/true
-	desc = "There's nothing at the bottom. Absolutely nothing."
+	desc = "You can't see the bottom from here, but you can tell it's a long way down from this floor of the Nexus. Watch your step."
 
 /turf/open/chasm/true/apply_components(mapload)
 	AddComponent(/datum/component/chasm, null, mapload) //Don't pass anything for below_turf.
