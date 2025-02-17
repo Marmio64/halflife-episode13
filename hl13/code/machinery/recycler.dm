@@ -7,7 +7,7 @@
 	max_integrity = 1000
 
 /obj/machinery/recycle_intake/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/storage/box/halflife) || istype(I, /obj/item/reagent_containers/cup/soda_cans/breenwater))
+	if(istype(I, /obj/item/storage/box/halflife) || istype(I, /obj/item/reagent_containers/cup/soda_cans/breenwater) || istype(I, /obj/item/trash/can))
 		playsound(src, 'hl13/sound/machines/combine_button1.ogg', 50, TRUE, extrarange = -3)
 		new /obj/item/stack/spacecash/c1(user.loc, 1)
 		qdel(I)
