@@ -44,6 +44,7 @@
 		/obj/item/spess_knife,
 		/obj/item/stack/medical,
 		/obj/item/stamp,
+		/obj/item/hl2key, //hl13 edit
 		/obj/item/toy/crayon),
 		list(/obj/item/screwdriver/power))
 
