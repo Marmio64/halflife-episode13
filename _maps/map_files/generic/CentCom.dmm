@@ -620,6 +620,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/catwalk_floor,
 /area/centcom/central_command_areas/evacuation/ship)
+"ew" = (
+/obj/structure/sign/poster/halflife/combine{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/centcom/halflife/ota)
 "ex" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -1333,6 +1339,10 @@
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/iron/white,
 /area/centcom/central_command_areas/evacuation/ship)
+"mD" = (
+/obj/machinery/status_display/evac/directional/north,
+/turf/open/floor/plating/ground/dirt,
+/area/centcom/halflife/ota)
 "mE" = (
 /obj/structure/chair/comfy/brown{
 	color = "#66b266";
@@ -1746,6 +1756,10 @@
 /obj/effect/light_emitter/thunderdome,
 /turf/open/floor/iron,
 /area/centcom/tdome/arena)
+"qU" = (
+/obj/machinery/status_display/evac/directional/west,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/centcom/halflife/ota)
 "qW" = (
 /obj/structure/window/fulltile,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -1892,6 +1906,13 @@
 	},
 /turf/open/floor/plating/ground/brickroad,
 /area/centcom/halflife)
+"sr" = (
+/obj/machinery/door/airlock/highsecurity/combine{
+	name = "Broadcasting Studio"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/admin/general,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/centcom/halflife/ota)
 "st" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 8
@@ -1978,6 +1999,12 @@
 /obj/structure/flora/bush/fullgrass,
 /turf/open/misc/grass/jungle/station,
 /area/centcom/halflife/relocation_city)
+"tz" = (
+/obj/machinery/greenscreen_camera{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/centcom/halflife/ota)
 "tF" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Thunderdome Locker Room"
@@ -53466,9 +53493,9 @@ aa
 aa
 aa
 EU
-EU
-EU
-EU
+Io
+Io
+Io
 Io
 Fp
 fY
@@ -53722,10 +53749,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 EU
+iK
+qU
+Hv
 Io
 fY
 fY
@@ -53979,10 +54006,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 EU
+iK
+ew
+tz
 Da
 fY
 fY
@@ -54236,11 +54263,11 @@ gA
 gA
 gA
 gA
-gA
 EU
-EU
-EU
-Io
+iK
+Hv
+Hv
+sr
 fY
 fY
 fY
@@ -54493,12 +54520,12 @@ kj
 kj
 kj
 kj
-kj
 Io
 Io
 Io
 Io
-fY
+Io
+mD
 fY
 Hc
 Io

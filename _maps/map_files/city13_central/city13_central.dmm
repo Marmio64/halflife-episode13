@@ -88,6 +88,12 @@
 /obj/machinery/door/unpowered/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors)
+"ahM" = (
+/obj/machinery/light/combine{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/townhall/secondfloor)
 "ahY" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
 	keylock = 1;
@@ -411,6 +417,14 @@
 	},
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
+"aEH" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	lockid = "townhall";
+	keylock = 1;
+	name = "broadcast studio"
+	},
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/townhall/secondfloor)
 "aFp" = (
 /obj/structure/table/halflife/metal/heavy,
 /obj/machinery/camera{
@@ -937,6 +951,10 @@
 /obj/item/book/bible,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/old/chapel)
+"bGb" = (
+/obj/item/hl13_small_flag/poland,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/townhall/secondfloor)
 "bGw" = (
 /obj/machinery/box_vendor,
 /obj/effect/turf_decal/halflife/covering/paint/white,
@@ -3696,6 +3714,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/apartments/primary)
+"fWp" = (
+/obj/machinery/status_display/evac/directional/west,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/townhall/secondfloor)
 "fWI" = (
 /obj/structure/table/halflife/no_smooth/metal,
 /obj/item/shield/riot,
@@ -6062,6 +6084,10 @@
 /obj/structure/window/fulltile,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/townhall)
+"jJO" = (
+/obj/machinery/status_display/evac/directional/south,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/townhall/secondfloor)
 "jJQ" = (
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/bar)
@@ -6286,6 +6312,12 @@
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer/cave)
+"kfj" = (
+/obj/machinery/greenscreen_camera{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/townhall/secondfloor)
 "kfm" = (
 /obj/structure/table/halflife/wood,
 /obj/item/storage/backpack/halflife/satchel,
@@ -7584,6 +7616,10 @@
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/dispatch)
+"maf" = (
+/obj/machinery/status_display/evac/directional/west,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/townhall/secondfloor)
 "mah" = (
 /obj/machinery/door/unpowered/halflife/wood{
 	keylock = 1;
@@ -8122,6 +8158,12 @@
 	},
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/townhall)
+"mTY" = (
+/obj/structure/chair/halflife/metal/blue{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/townhall/secondfloor)
 "mUs" = (
 /turf/open/floor/plating/indoor/metal/pipe/corner{
 	dir = 4
@@ -8751,6 +8793,10 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
+"oeW" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/townhall/secondfloor)
 "ofE" = (
 /obj/structure/halflife/trash/wood,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -9219,6 +9265,7 @@
 /area/halflife/indoors/townhall/civilprotection/armory)
 "oRw" = (
 /obj/structure/halflife/rug/rubber,
+/obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/townhall/secondfloor)
 "oRR" = (
@@ -10466,6 +10513,9 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
+"ree" = (
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/townhall/secondfloor)
 "ret" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -10654,6 +10704,13 @@
 "roI" = (
 /turf/open/openspace,
 /area/halflife/indoors/productioncenter/upper)
+"roN" = (
+/obj/structure/sign/poster/halflife/combine{
+	pixel_y = 32
+	},
+/obj/structure/chair/halflife/wood/padded,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/townhall/secondfloor)
 "rpv" = (
 /obj/item/kirbyplants/random,
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -11123,6 +11180,10 @@
 /obj/machinery/iv_drip,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/hospital/storage)
+"sbu" = (
+/obj/structure/table/halflife/wood,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/townhall/secondfloor)
 "sbv" = (
 /obj/structure/chair/halflife/wood/padded{
 	dir = 4
@@ -12311,6 +12372,15 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/plaza)
+"tUS" = (
+/obj/machinery/door/unpowered/halflife/wood{
+	keylock = 1;
+	lockid = "townhall";
+	dir = 4;
+	name = "broadcasting studio backroute"
+	},
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/townhall/secondfloor)
 "tVe" = (
 /obj/structure/chair/halflife/metal{
 	dir = 8
@@ -12880,6 +12950,10 @@
 /obj/structure/table/halflife/no_smooth/large/wood/desk,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/hydroponics)
+"uUA" = (
+/obj/machinery/status_display/evac/directional/north,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/townhall/secondfloor)
 "uUS" = (
 /obj/machinery/vending/breenwater,
 /turf/open/floor/plating/indoor/woodc,
@@ -13028,6 +13102,10 @@
 /obj/machinery/atm,
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/distributioncenter)
+"vgo" = (
+/obj/machinery/status_display/evac/directional/south,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/townhall/secondfloor)
 "vgw" = (
 /obj/structure/halflife/trash/bricks{
 	dir = 1
@@ -13738,6 +13816,14 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
+"vZP" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	lockid = "townhall";
+	keylock = 1;
+	name = "broadcast studio"
+	},
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/townhall/secondfloor)
 "wao" = (
 /obj/item/dice/d6,
 /obj/structure/table/halflife/no_smooth/dice/pristine,
@@ -13840,6 +13926,10 @@
 /obj/machinery/atm,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
+"whg" = (
+/obj/machinery/status_display/evac/directional/south,
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/townhall/secondfloor)
 "whr" = (
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
@@ -14070,6 +14160,10 @@
 /obj/structure/railing,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
+"wBF" = (
+/obj/machinery/status_display/evac/directional/east,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/outdoors/roofs)
 "wBU" = (
 /obj/structure/chair/office/halflife/blue{
 	dir = 1
@@ -14220,6 +14314,9 @@
 	dir = 1
 	},
 /area/halflife/indoors/sewer)
+"wLi" = (
+/turf/closed/wall/halflife/metal,
+/area/halflife/indoors/townhall/secondfloor)
 "wLj" = (
 /obj/structure/stairs/wood,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -72509,11 +72606,11 @@ fmY
 fmY
 fmY
 fmY
-fmY
-mAz
 avZ
 avZ
 avZ
+avZ
+tUS
 avZ
 avZ
 bSG
@@ -72637,11 +72734,11 @@ fmY
 fmY
 fmY
 fmY
-fmY
-mAz
 avZ
-avZ
-avZ
+tHM
+tHM
+tHM
+tHM
 avZ
 avZ
 bSG
@@ -72765,8 +72862,8 @@ fmY
 fmY
 fmY
 fmY
-fmY
-mAz
+avZ
+tHM
 avZ
 avZ
 avZ
@@ -72779,7 +72876,7 @@ avZ
 avZ
 avZ
 avZ
-hPi
+uUA
 cPn
 rvl
 rvl
@@ -72893,8 +72990,8 @@ fmY
 fmY
 fmY
 fmY
-fmY
-mAz
+avZ
+oeW
 aXn
 oEO
 nZp
@@ -73021,8 +73118,8 @@ fmY
 fmY
 fmY
 fmY
-fmY
-mAz
+avZ
+tHM
 aXn
 uYH
 tHM
@@ -73149,8 +73246,8 @@ fmY
 fmY
 fmY
 fmY
-fmY
-mAz
+avZ
+tHM
 avZ
 avZ
 avZ
@@ -73170,7 +73267,7 @@ uqq
 cPn
 rvl
 uqq
-hPi
+jJO
 oQT
 bVk
 dyB
@@ -73277,8 +73374,8 @@ fmY
 fmY
 fmY
 fmY
-fmY
-mAz
+avZ
+uYH
 avZ
 avZ
 avZ
@@ -73405,8 +73502,8 @@ fmY
 fmY
 fmY
 fmY
-fmY
-mAz
+avZ
+tHM
 avZ
 avZ
 avZ
@@ -73533,8 +73630,8 @@ fmY
 fmY
 fmY
 fmY
-fmY
-mAz
+avZ
+tHM
 iyg
 oEO
 nZp
@@ -73661,8 +73758,8 @@ fmY
 fmY
 fmY
 fmY
-fmY
-mAz
+avZ
+tHM
 iyg
 uYH
 tHM
@@ -73789,8 +73886,8 @@ fmY
 fmY
 fmY
 fmY
-fmY
-mAz
+avZ
+oeW
 avZ
 avZ
 avZ
@@ -73815,7 +73912,7 @@ wKe
 wKe
 lFP
 tLI
-wKe
+vgo
 avZ
 wKe
 wKe
@@ -73917,13 +74014,13 @@ fmY
 fmY
 fmY
 fmY
-fmY
-mAz
-mAz
-mAz
-mAz
-mAz
 avZ
+tHM
+aEH
+ree
+ree
+mDC
+sbu
 iyg
 mtq
 wLt
@@ -74045,13 +74142,13 @@ fmY
 fmY
 fmY
 fmY
-fmY
-mAz
-mAz
-mAz
-mAz
-mAz
 avZ
+avZ
+wLi
+ahM
+ree
+mDC
+sbu
 avZ
 avZ
 avZ
@@ -74175,18 +74272,18 @@ fmY
 fmY
 fmY
 mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-avZ
+wLi
+roN
+kfj
+mDC
+mDC
+mDC
+mDC
+vZP
+hPi
+maf
+hPi
+vZP
 hPi
 hPi
 qoY
@@ -74303,17 +74400,17 @@ fmY
 fmY
 fmY
 mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-mAz
+wLi
+ahM
+mTY
+mDC
+mDC
+mDC
+sbu
+avZ
+bGb
+fDE
+hPi
 avZ
 kEG
 hPi
@@ -74431,19 +74528,19 @@ fmY
 fmY
 fmY
 mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-mAz
-mAz
+wLi
+ree
+ree
+mDC
+sbu
+sbu
+sbu
 avZ
 avZ
 avZ
 avZ
 avZ
-hPi
+uUA
 hPi
 qoY
 szR
@@ -74559,16 +74656,16 @@ fmY
 fmY
 fmY
 mAz
-mAz
-mAz
-mAz
-mAz
 avZ
 avZ
 avZ
 avZ
 avZ
-mDC
+avZ
+avZ
+avZ
+avZ
+fWp
 mDC
 qqM
 hPi
@@ -74579,7 +74676,7 @@ sYL
 mpA
 uIC
 iVD
-tHM
+whg
 avZ
 mAz
 avZ
@@ -75995,7 +76092,7 @@ mAz
 mAz
 gdE
 gdE
-fEv
+wBF
 fEv
 mAz
 mAz
