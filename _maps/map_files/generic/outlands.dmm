@@ -253,6 +253,7 @@
 /area/halflife/indoors/sewer)
 "db" = (
 /obj/machinery/mineral/labor_points_checker,
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/laborcamp)
 "dc" = (
@@ -1088,6 +1089,10 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"ni" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors)
 "np" = (
 /obj/machinery/door/airlock/highsecurity/combine,
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
@@ -2325,6 +2330,10 @@
 	},
 /turf/open/halflife/water/shallow,
 /area/halflife/outdoors/forest)
+"CM" = (
+/obj/effect/spawner/random/halflife/loot/crafting_bench,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/outdoors/forest)
 "CR" = (
 /turf/open/halflife/water/sewer/shallow,
 /area/halflife/indoors/sewer)
@@ -2598,6 +2607,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/bunker)
+"Hd" = (
+/obj/structure/halflife/trash/garbage,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/outdoors/forest)
 "Hj" = (
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/floor/plating/ground/brickroad,
@@ -2978,6 +2991,12 @@
 "MT" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/bunker)
+"MU" = (
+/obj/structure/chair/office/halflife/blue{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/outdoors/forest)
 "MV" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/clothing/under/citizen/refugee{
@@ -3009,6 +3028,10 @@
 	},
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors)
+"Ne" = (
+/obj/machinery/light/small/red/directional/east,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/outdoors/forest)
 "Nf" = (
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
@@ -3451,6 +3474,10 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/forest)
+"SP" = (
+/obj/structure/table/halflife/metal/grate,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/outdoors/forest)
 "SQ" = (
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -3606,11 +3633,18 @@
 "UA" = (
 /obj/structure/table/halflife/metal,
 /obj/machinery/recharger,
+/obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/laborcamp/security)
 "UB" = (
 /mob/living/simple_animal/hostile/halflife/headcrab,
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/outdoors/forest)
+"UD" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/outdoors/forest)
 "UE" = (
 /mob/living/simple_animal/hostile/halflife/zombie,
@@ -3887,6 +3921,11 @@
 /obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/laborcamp/security)
+"XI" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/effect/spawner/random/halflife/loot/heal,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/outdoors/forest)
 "XU" = (
 /obj/item/stack/sheet/mineral/scrap_wood,
 /turf/open/floor/plating/ground/dirt/alt,
@@ -59509,7 +59548,7 @@ It
 sn
 sn
 sn
-YE
+ni
 YE
 LB
 YE
@@ -61931,14 +61970,14 @@ tN
 qc
 tN
 QW
-GX
 QW
 QW
-GX
-tN
-tN
-EQ
-It
+QW
+QW
+QW
+UD
+QW
+QW
 It
 tN
 tN
@@ -62128,14 +62167,14 @@ tN
 tN
 tN
 QW
-tN
-tN
-GX
-tN
-tN
-pF
-tN
-tN
+Hd
+FR
+FR
+FR
+FR
+FR
+FR
+QW
 GX
 aZ
 tN
@@ -62325,13 +62364,13 @@ GX
 It
 It
 QW
-tN
-EQ
-tN
-tN
-tN
-tN
-tN
+FR
+FR
+FR
+FR
+FR
+FR
+FR
 QW
 GX
 tN
@@ -62522,13 +62561,13 @@ tN
 It
 qc
 QW
-tN
-tN
-GX
-tN
-tN
-GX
-tN
+UD
+QW
+QW
+QW
+FR
+FR
+Hd
 QW
 GX
 GX
@@ -62719,13 +62758,13 @@ tN
 tN
 GX
 QW
-tN
-tN
-GX
-tN
-GX
-Wx
-GX
+FR
+FR
+FR
+QW
+FR
+FR
+XI
 QW
 GX
 GX
@@ -62915,15 +62954,15 @@ GX
 GX
 pF
 GX
-EQ
-NR
-tN
-tN
-tN
-GX
-tN
-tN
-tN
+QW
+CM
+FR
+FR
+QW
+FR
+FR
+SP
+QW
 GX
 GX
 It
@@ -63112,14 +63151,14 @@ Bo
 tN
 tN
 GX
-GX
-tN
-tN
-tN
-GX
-tN
-tN
-tN
+QW
+FR
+FR
+Ne
+QW
+FR
+MU
+SP
 QW
 NR
 tN
@@ -63309,13 +63348,13 @@ GX
 tN
 tN
 tN
-tN
 QW
 QW
 QW
-GX
-GX
-tN
+QW
+QW
+QW
+QW
 QW
 QW
 It

@@ -32,7 +32,7 @@
 	laser = 20
 	energy = 20
 	bomb = 20
-	fire = 30
+	fire = 75
 	acid = 30
 	wound = 5
 

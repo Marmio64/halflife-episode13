@@ -1403,3 +1403,5 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define HUMAN_SENSORS_VISIBLE_WITHOUT_SUIT "hmsensorsvisiblewithoutsuit"
 
 // END TRAIT DEFINES
+
+#define TRAIT_WEARING_GAS_MASK "wearing_gasmask" //If this person is wearing a gas mask hl13 edit

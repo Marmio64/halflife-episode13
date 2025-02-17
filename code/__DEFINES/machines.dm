@@ -152,3 +152,6 @@
 #define SD_MESSAGE 2
 /// Shows an alert picture (e.g. red alert, radiation, etc.)
 #define SD_PICTURE 3
+/// Breencast lmao (hl13 edit but ported from tg pr)
+#define SD_GREENSCREEN 4
+

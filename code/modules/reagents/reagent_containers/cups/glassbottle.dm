@@ -32,8 +32,6 @@
 
 /obj/item/reagent_containers/cup/glass/bottle/Initialize(mapload, vol)
 	. = ..()
-	var/static/list/recipes =  list(/datum/crafting_recipe/molotov)
-	AddElement(/datum/element/slapcrafting, recipes)
 	register_context()
 	register_item_context()
 

@@ -12,21 +12,24 @@
 #define PLANE_SPACE -25
 #define PLANE_SPACE_PARALLAX -20
 
-#define GRAVITY_PULSE_PLANE -13
+#define GRAVITY_PULSE_PLANE -14
 #define GRAVITY_PULSE_RENDER_TARGET "*GRAVPULSE_RENDER_TARGET"
 
-#define RENDER_PLANE_TRANSPARENT -12 //Transparent plane that shows openspace underneath the floor
+#define RENDER_PLANE_TRANSPARENT -13 //Transparent plane that shows openspace underneath the floor
 
-#define TRANSPARENT_FLOOR_PLANE -11
+#define TRANSPARENT_FLOOR_PLANE -12
 
-#define FLOOR_PLANE -10
+#define FLOOR_PLANE -11
 
-#define WALL_PLANE -9
-#define GAME_PLANE -8
-#define GAME_PLANE_FOV_HIDDEN -7
-#define GAME_PLANE_UPPER -6
-#define WALL_PLANE_UPPER -5
-#define GAME_PLANE_UPPER_FOV_HIDDEN -4
+#define WALL_PLANE -10
+#define GAME_PLANE -9
+#define GAME_PLANE_FOV_HIDDEN -8
+#define GAME_PLANE_UPPER -7
+#define WALL_PLANE_UPPER -6
+#define GAME_PLANE_UPPER_FOV_HIDDEN -5
+
+#define VAPOUR_PLANE -4 //HL13 EDIT - Vapour
+#define VAPOUR_PLANE_RENDER_TARGET "MOUSE_TRANSPARENT_PLANE" //HL13 EDIT - Vapour
 
 ///Slightly above the game plane but does not catch mouse clicks. Useful for certain visuals that should be clicked through, like seethrough trees
 #define SEETHROUGH_PLANE -3
@@ -248,6 +251,8 @@
 #define ABOVE_TREE_LAYER 5.01
 #define GASFIRE_LAYER 5.05
 #define RIPPLE_LAYER 5.1
+#define VAPOUR_LAYER 5.2 //HL13 EDIT - Vapour
+
 
 /**
  * The layer of the visual overlay used in the submerge element.

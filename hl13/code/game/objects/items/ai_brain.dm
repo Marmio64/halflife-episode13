@@ -88,6 +88,7 @@
 	lines += "Estimated organic/inorganic integrity: [owner.health]"
 	if(is_sufficiently_augmented())
 		lines += "<a href='byond://?src=[REF(src)];ai_take_control=[REF(user)]'>[span_boldnotice("Take control?")]</a><br>"
+		lines += "Warning, if the body is occupied by someone else, they will be permanently removed and unable to return."
 	else
 		lines += span_warning("Organic organs detected. Robotic organs only, cannot take over.")
 

@@ -155,7 +155,7 @@
 		var/obj/item/ration_construction/container/C = I
 		if(C.completed == TRUE)
 			to_chat(usr, span_notice("Rations succesfully inserted."))
-			rations_stored += 3
+			rations_stored += C.refill_rate
 			qdel(I)
 			new /obj/item/ration_construction/used_container(user.loc)
 		else

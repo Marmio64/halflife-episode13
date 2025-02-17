@@ -53,6 +53,7 @@
 				/obj/item/skillchip/aiming,
 				/obj/item/clothing/head/beret/durathread/unitednations,
 				/obj/item/reagent_containers/cup/bottle/welding_fuel,
+				/obj/item/grenade/halflife/molotov,
 				/obj/item/customblank,
 				/obj/item/customlock,
 				/obj/item/stack/spacecash/c10,

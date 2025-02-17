@@ -7,6 +7,7 @@
 	requires_power = FALSE
 	max_ambience_cooldown = 240 SECONDS
 	min_ambience_cooldown = 180 SECONDS
+	var/dissipation_rate = 3 // higher numbers = quicker dissipation
 
 /area/halflife/outdoors
 	name = "\improper Outdoors"
@@ -74,6 +75,7 @@
 	ambient_buzz = 'hl13/sound/ambience/town_ambience.ogg'
 
 	ambientrain = RAIN_IN
+	dissipation_rate = 2
 
 /area/halflife/indoors/townhall
 	name = "\improper Town Hall"

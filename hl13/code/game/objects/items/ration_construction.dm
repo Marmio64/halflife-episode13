@@ -41,6 +41,16 @@
 	desc = "A handful of unfiltered, sealed water cans. Drinking them right now is out of the question, a machine will have to make them potable."
 	icon_state = "redcans"
 
+/obj/item/ration_construction/purple_cans
+	name = "unfiltered purple nutriment cans"
+	desc = "A handful of unfiltered, sealed nutriment cans. Drinking (Eating?) them right now is out of the question, a machine will have to make them potable."
+	icon_state = "purplecans"
+
+/obj/item/ration_construction/nutripastes
+	name = "unfiltered nutripastes"
+	desc = "A handful of raw, unfiltered nutripaste tubes. Eating them right now is out of the question, a machine will have to make them edible."
+	icon_state = "nutripastes"
+
 /obj/item/ration_construction/container
 	name = "ration refill container"
 	desc = "A container which has a designated list of items it should contain. Once it has gotten these items, it can be put inside a ration vendor machine to refill it."
@@ -58,6 +68,14 @@
 	var/filled = FALSE
 	///Is the box fully packed and sealed?
 	var/completed = FALSE
+
+	///How many rations are filled when this is completed?
+	var/refill_rate = 3
+
+	///How many credits to give when completed
+	var/credit_reward = 2
+
+	var/list/possible_picks = list(/obj/item/ration_construction/packs, /obj/item/ration_construction/boxes, /obj/item/ration_construction/bars, /obj/item/ration_construction/bags, /obj/item/ration_construction/blue_cans, /obj/item/ration_construction/yellow_cans, /obj/item/ration_construction/red_cans)
 
 /obj/item/ration_construction/container/examine(mob/user)
 	. = ..()
@@ -79,14 +97,14 @@
 /obj/item/ration_construction/container/Initialize(mapload)
 	. = ..()
 
-	var/list/possible_items = list(/obj/item/ration_construction/packs, /obj/item/ration_construction/boxes, /obj/item/ration_construction/bars, /obj/item/ration_construction/bags, /obj/item/ration_construction/blue_cans, /obj/item/ration_construction/yellow_cans, /obj/item/ration_construction/red_cans)
+	var/list/possible_items = possible_picks
 
 	required_item_1 = pick_n_take(possible_items)
 	required_item_2 = pick_n_take(possible_items)
 	required_item_3 = pick_n_take(possible_items)
 
 /obj/item/ration_construction/container/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/ration_construction))
+	if(istype(I, /obj/item/ration_construction) || istype(I, /obj/item/food))
 		if(istype(I, required_item_1) && !item_1_fulfilled)
 			if(do_after(user, 1.5 SECONDS, src))
 				qdel(I)
@@ -137,7 +155,8 @@
 		to_chat(usr, span_notice("The box isn't yet fully filled, and can not be sealed."))
 		return
 
-/obj/item/ration_construction/container/proc/seal(mob/user, reward = 2)
+/obj/item/ration_construction/container/proc/seal(mob/user, reward = 0)
+	reward += credit_reward
 	playsound(src, 'hl13/sound/halflifeeffects/crafting/ducttape1.ogg', 50, TRUE, extrarange = -3)
 	completed = TRUE
 	new /obj/item/stack/spacecash/c1(user.loc, reward)
@@ -148,3 +167,12 @@
 	name = "deposited ration refill container"
 	desc = "An empty ration refill container that has been marked as received by a ration vendor unit. You can send it back on the cargo shuttle for recycling to gain a small amount of credits for the district's cargo budget."
 	icon_state = "container_used"
+
+/obj/item/ration_construction/container/exotic
+	name = "exotic ration refill container"
+	desc = "A container which has a designated list of items it should contain. Once it has gotten these items, it can be put inside a ration vendor machine to refill it. This refill container has some exotic requirements."
+
+	refill_rate = 5
+	credit_reward = 5
+
+	possible_picks = list(/obj/item/food/meat/slab/xen, /obj/item/food/grown/mushroom_stem, /obj/item/ration_construction/bags, /obj/item/ration_construction/nutripastes, /obj/item/ration_construction/purple_cans, /obj/item/food/grown/wheat)

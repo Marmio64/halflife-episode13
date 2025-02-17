@@ -29,6 +29,22 @@
 					/obj/item/ration_construction/container)
 	crate_name = "ration supplies crate"
 
+/datum/supply_pack/organic/exoticrationsupplies
+	name = "Exotic Ration Supplies Crate"
+	desc = "A crate of various exotic ration supplies and containers. The rations must be assembled by hand, and can then be put inside a vending unit to refill it. Some ingredients for the rations will need to be sourced locally, but exotic rations fill up the vendors better and generate more revenue."
+	cost = CARGO_CRATE_VALUE * 1.6
+	contains = list(/obj/item/ration_construction/purple_cans,
+					/obj/item/ration_construction/purple_cans,
+					/obj/item/ration_construction/bags,
+					/obj/item/ration_construction/bags,
+					/obj/item/ration_construction/nutripastes,
+					/obj/item/ration_construction/nutripastes,
+					/obj/item/ration_construction/container/exotic,
+					/obj/item/ration_construction/container/exotic,
+					/obj/item/ration_construction/container/exotic,
+					/obj/item/ration_construction/container/exotic)
+	crate_name = "exotic ration supplies crate"
+
 /datum/supply_pack/organic/food
 	name = "Food Crate"
 	desc = "Allow the citizens a treat with this crate filled with specially preserved old world foods."

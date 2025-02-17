@@ -4,6 +4,7 @@
 	icon_state = "civilprotection"
 	inhand_icon_state = "armoralt"
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 
 /obj/item/clothing/suit/armor/civilprotection/medical
 	name = "medical officer vest"
@@ -39,6 +40,7 @@
 	inhand_icon_state = "armoralt"
 	slowdown = 0.25
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 
 	armor_type = /datum/armor/overwatcharmor
 
@@ -78,6 +80,10 @@
 	acid = 50
 	wound = 20
 
+/obj/item/clothing/suit/armor/halflife
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
 //old armor found only as loot
 /obj/item/clothing/suit/armor/kevlar
 	name = "kevlar vest"
@@ -90,6 +96,24 @@
 /datum/armor/kevlararmor
 	melee = 15
 	bullet = 25
+	laser = 10
+	energy = 100
+	bomb = 20
+	fire = 50
+	acid = 50
+	wound = 10
+
+/obj/item/clothing/suit/armor/halflife/milvest
+	name = "military vest"
+	desc = "A heavily armored old military vest. The layers of kevlar have weakened over the years, but it remains a potent defensive piece of equipment."
+	icon_state = "milvest"
+	blood_overlay_type = "armor"
+	slowdown = 0.25
+	armor_type = /datum/armor/milvest
+
+/datum/armor/milvest
+	melee = 25
+	bullet = 40
 	laser = 10
 	energy = 100
 	bomb = 20

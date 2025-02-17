@@ -28,7 +28,7 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/stalker,
 	)
 
-/datum/species/stalker/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+/datum/species/stalker/on_species_gain(mob/living/carbon/human/C, datum/species/old_species)
 	. = ..()
 	RegisterSignal(C, COMSIG_MOB_SAY, PROC_REF(handle_speech))
 	C.real_name = "stalker [rand(111,999)]"
@@ -43,7 +43,9 @@
 	C.cmode_music = 'hl13/sound/music/combat/crawlyard.ogg'
 	to_chat(C, "[info_text]")
 
-	C.mob_mood?.mood_modifier -= 0.8 //don't care, never did
+	C.mob_mood?.mood_modifier -= 1 //don't care, never did
+
+	C.physiology.hunger_mod *= 0.75 //low body mass, less to feed
 
 	C.AddComponent( \
 			/datum/component/simple_bodycam, \
@@ -51,10 +53,11 @@
 			c_tag = "[C.real_name]", \
 		)
 
-/datum/species/stalker/on_species_loss(mob/living/carbon/C)
+/datum/species/stalker/on_species_loss(mob/living/carbon/human/C)
 	..()
 	UnregisterSignal(C, COMSIG_MOB_SAY)
-	C.mob_mood?.mood_modifier += 0.8
+	C.mob_mood?.mood_modifier += 1
+	C.physiology.hunger_mod /= 0.75
 
 /datum/species/stalker/proc/handle_speech(datum/source, list/speech_args)
 	playsound(source, 'hl13/sound/voice/stalker/stalker_talk.ogg', 50, 1, 1)
@@ -64,4 +67,11 @@
 		'hl13/sound/voice/stalker/stalker_scream.ogg',
 		'hl13/sound/voice/stalker/stalker_scream2.ogg',
 		'hl13/sound/voice/stalker/stalker_scream3.ogg',
+	)
+
+/datum/species/stalker/get_cry_sound(mob/living/carbon/human/stalker)
+	return pick(
+		'hl13/sound/voice/stalker/stalker_pain1.ogg',
+		'hl13/sound/voice/stalker/stalker_pain2.ogg',
+		'hl13/sound/voice/stalker/stalker_pain3.ogg',
 	)
