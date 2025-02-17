@@ -14,7 +14,7 @@ GLOBAL_DATUM_INIT(status_font, /datum/font, new /datum/font/tiny_unicode/size_12
 /obj/machinery/status_display
 	name = "status display"
 	desc = null
-	icon = 'icons/obj/machines/status_display.dmi'
+	icon = 'hl13/icons/obj/machines/status_display.dmi'
 	icon_state = "frame"
 	verb_say = "beeps"
 	verb_ask = "beeps"
@@ -295,7 +295,7 @@ GLOBAL_LIST_EMPTY(key_to_status_display)
  * Nice overlay to make text smoothly scroll with no client updates after setup.
  */
 /obj/effect/overlay/status_display_text
-	icon = 'icons/obj/machines/status_display.dmi'
+	icon = 'hl13/icons/obj/machines/status_display.dmi'
 	vis_flags = VIS_INHERIT_LAYER | VIS_INHERIT_PLANE | VIS_INHERIT_ID
 	// physically shift down to render correctly
 	pixel_y = -32
@@ -537,7 +537,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/status_display/ai, 32)
 	var/list/choices = list()
 	for(var/emotion_const in GLOB.ai_status_display_emotes)
 		var/icon_state = GLOB.ai_status_display_emotes[emotion_const]
-		choices[emotion_const] = image(icon = 'icons/obj/machines/status_display.dmi', icon_state = icon_state)
+		choices[emotion_const] = image(icon = 'hl13/icons/obj/machines/status_display.dmi', icon_state = icon_state)
 
 	var/emotion_result = show_radial_menu(user, src, choices, tooltips = TRUE)
 	for(var/_emote in typesof(/datum/emote/ai/emotion_display))
@@ -714,7 +714,7 @@ GLOBAL_LIST_EMPTY_TYPED(greenscreen_displays, /obj/effect/abstract/greenscreen_d
 	. = ..()
 	GLOB.greenscreen_displays += src
 	// crops out the bits that don't fit the screen
-	add_filter("display_mask", 1, alpha_mask_filter(x = -1 * pixel_x, y = -1 * pixel_y, icon = icon('icons/obj/machines/status_display.dmi', "outline")))
+	add_filter("display_mask", 1, alpha_mask_filter(x = -1 * pixel_x, y = -1 * pixel_y, icon = icon('hl13/icons/obj/machines/status_display.dmi', "outline")))
 	// adds some pizzazz (copied from records)
 	underlays += mutable_appearance('icons/effects/effects.dmi', "static_base", alpha = 20)
 	add_overlay(mutable_appearance(generate_icon_alpha_mask('icons/effects/effects.dmi', "scanline"), alpha = 20))

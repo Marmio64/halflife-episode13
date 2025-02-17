@@ -89,9 +89,7 @@
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors)
 "ahM" = (
-/obj/machinery/light/combine{
-	dir = 1
-	},
+/obj/machinery/light/small/cyan/directional/north,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/townhall/secondfloor)
 "ahY" = (
@@ -8782,7 +8780,9 @@
 /turf/open/floor/plating/indoor/metal,
 /area/halflife/indoors/sewer)
 "nUx" = (
-/obj/structure/filingcabinet/hl2,
+/obj/structure/filingcabinet/hl2{
+	dir = 8
+	},
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/townhall/secondfloor)
 "nVt" = (
@@ -9679,6 +9679,7 @@
 	pixel_x = 5;
 	pixel_y = 10
 	},
+/obj/machinery/light/small/cyan/directional/west,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/townhall/secondfloor)
 "pxZ" = (
@@ -13185,6 +13186,7 @@
 /area/halflife/indoors/old/offices)
 "vaq" = (
 /obj/machinery/photocopier/gratis,
+/obj/machinery/light/small/cyan/directional/east,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/townhall/secondfloor)
 "vas" = (
