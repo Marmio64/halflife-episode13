@@ -86,5 +86,5 @@
 /obj/item/grenade/halflife/cs_gas/detonate(mob/living/lanced_by)
 	playsound(loc, 'sound/effects/smoke.ogg', 35, TRUE, 4)
 	var/turf/my_turf = get_turf(src)
-	my_turf.VapourTurf(/datum/vapours/cs_gas, 2000)
+	my_turf.VapourTurf(/datum/vapours/cs_gas, 3000)
 	qdel(src)

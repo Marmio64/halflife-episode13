@@ -124,14 +124,13 @@
 			victim.emote("cough")
 			victim.adjust_eye_blur(1 * (amount))
 			victim.adjust_jitter(10)
-			victim.Stun(25)
+			victim.Stun(20)
 			victim.Knockdown(25)
 
 		if(61 to INFINITY)
-			victim.Knockdown(10)
 			victim.adjust_eye_blur(1 * (amount))
 			victim.adjust_jitter(10)
-			victim.Stun(50)
+			victim.Stun(30)
 			victim.Knockdown(50)
 			if(prob(amount / 20)) // Small chance for a bit of puke action :D At least one person in a crowd should get this maybe.
 				victim.vomit(10, FALSE, TRUE, 1)
