@@ -65,13 +65,23 @@
 	crate_name = "riot shield crate"
 
 /datum/supply_pack/security/stingpack
-	name = "Stingbang Grenade Pack"
-	desc = "Contains five \"stingbang\" grenades, perfect for stopping \
+	name = "Stinger Grenade Pack"
+	desc = "Contains five \"stinger\" grenades which fire out rubber pellets, perfect for stopping \
 		riots and playing morally unthinkable pranks."
 	cost = CARGO_CRATE_VALUE * 6
-	access_view = ACCESS_ARMORY
+	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/storage/box/stingbangs)
-	crate_name = "stingbang grenade pack crate"
+	crate_name = "Stinger grenade pack crate"
+
+/datum/supply_pack/security/cs_gas
+	name = "CS Gas Grenade Pack"
+	desc = "Contains three CS Gas grenades, for dispersing crowds with no real physical harm."
+	cost = CARGO_CRATE_VALUE * 6
+	access_view = ACCESS_SECURITY
+	contains = list(/obj/item/grenade/halflife/cs_gas,
+					/obj/item/grenade/halflife/cs_gas,
+					/obj/item/grenade/halflife/cs_gas)
+	crate_name = "cs gas grenade pack crate"
 
 /// Armory packs
 
@@ -223,3 +233,12 @@
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/disk/surgery/brainwashing)
 	crate_name = "brainwashing disk crate"
+
+/datum/supply_pack/security/armory/mk3a2
+	name = "MK3A2 Grenade Crate"
+	desc = "Contains three standard combine extractor grenades. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 8
+	contains = list(/obj/item/grenade/syndieminibomb/bouncer,
+					/obj/item/grenade/syndieminibomb/bouncer,
+					/obj/item/grenade/syndieminibomb/bouncer)
+	crate_name = "MK3A2 grenade crate"

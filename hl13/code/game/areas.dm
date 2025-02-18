@@ -75,7 +75,7 @@
 	ambient_buzz = 'hl13/sound/ambience/town_ambience.ogg'
 
 	ambientrain = RAIN_IN
-	dissipation_rate = 2
+	dissipation_rate = 1
 
 /area/halflife/indoors/townhall
 	name = "\improper Town Hall"

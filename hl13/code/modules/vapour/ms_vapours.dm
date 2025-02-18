@@ -93,7 +93,7 @@
 	//if(prob(amount / 10)) // Yo longs fuct
 		//victim.ForceContractDisease(new /datum/disease/pocklung)
 
-///CS gas for NCR warcrimes!!
+///CS gas for combine warcrimes!!
 /datum/vapours/cs_gas
 	name = "CS Gas"
 	vapours_flags = VAPOUR_SMELL | VAPOUR_APPEARANCE | VAPOUR_BREATHE_ACT

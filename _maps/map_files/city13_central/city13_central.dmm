@@ -673,14 +673,10 @@
 /area/halflife/indoors/productioncenter)
 "bbG" = (
 /obj/structure/rack,
-/obj/item/grenade/stingbang/halflife,
-/obj/item/grenade/stingbang/halflife,
-/obj/item/grenade/stingbang/halflife,
-/obj/item/grenade/stingbang/halflife,
-/obj/item/grenade/syndieminibomb/bouncer,
-/obj/item/grenade/syndieminibomb/bouncer,
-/obj/item/grenade/syndieminibomb/bouncer,
-/turf/open/floor/plating/indoor/tile/navy,
+/obj/item/grenade/halflife/cs_gas,
+/obj/item/grenade/halflife/cs_gas,
+/obj/item/grenade/halflife/cs_gas,
+/turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "bcO" = (
 /turf/open/floor/plating/indoor/metal/pipe/corner,
@@ -7614,10 +7610,11 @@
 /area/halflife/indoors/townhall/civilprotection/prison)
 "lXk" = (
 /obj/structure/rack,
-/obj/item/grenade/barrier,
-/obj/item/grenade/barrier,
-/obj/item/grenade/barrier,
-/turf/open/floor/plating/indoor/tile/navy,
+/obj/item/grenade/stingbang/halflife,
+/obj/item/grenade/stingbang/halflife,
+/obj/item/grenade/stingbang/halflife,
+/obj/item/grenade/stingbang/halflife,
+/turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "lXV" = (
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -9037,6 +9034,13 @@
 /obj/structure/halflife/trash/papers/three,
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/townhall)
+"otm" = (
+/obj/structure/rack,
+/obj/item/grenade/barrier,
+/obj/item/grenade/barrier,
+/obj/item/grenade/barrier,
+/turf/open/floor/plating/indoor/tile,
+/area/halflife/indoors/townhall/civilprotection/armory)
 "otx" = (
 /obj/modular_map_root/sewerright,
 /turf/closed/mineral/random,
@@ -15200,9 +15204,9 @@
 	c_tag = "Armory";
 	dir = 1
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
+/obj/structure/rack,
+/obj/item/grenade/syndieminibomb/bouncer,
+/obj/item/grenade/syndieminibomb/bouncer,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "xYn" = (
@@ -72669,7 +72673,7 @@ oQT
 oQT
 oQT
 oQT
-mAz
+oQT
 mAz
 gdE
 gdE
@@ -72797,7 +72801,7 @@ fWI
 caC
 nvl
 oQT
-mAz
+oQT
 mAz
 gdE
 gdE
@@ -72924,8 +72928,8 @@ ful
 ful
 oCr
 ful
+lXk
 oQT
-mAz
 mAz
 gdE
 gdE
@@ -73051,9 +73055,9 @@ fOB
 fOB
 fOB
 fOB
+fOB
 bbG
 oQT
-mAz
 mAz
 gdE
 gdE
@@ -73179,9 +73183,9 @@ xwe
 uqZ
 xFj
 fOB
+mlG
 rjt
 oQT
-mAz
 mAz
 gdE
 gdE
@@ -73307,9 +73311,9 @@ fOB
 fOB
 fOB
 fOB
-lXk
+fOB
+otm
 oQT
-mAz
 mAz
 gdE
 gdE
@@ -73435,9 +73439,9 @@ dyB
 bVk
 bVk
 dyB
+bVk
 xYc
 oQT
-mAz
 mAz
 gdE
 gdE
@@ -73565,7 +73569,7 @@ lLF
 uNz
 sTa
 oQT
-mAz
+oQT
 mAz
 gdE
 gdE
@@ -73693,7 +73697,7 @@ oQT
 oQT
 oQT
 oQT
-mAz
+oQT
 mAz
 gdE
 gdE

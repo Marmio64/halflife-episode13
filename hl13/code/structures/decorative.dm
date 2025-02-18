@@ -61,6 +61,23 @@
 	desc = "A bunch of old bricks."
 	icon_state = "brickrubble"
 
+/obj/structure/halflife/trash/bricks/attack_hand_secondary(mob/living/user, list/modifiers)
+	. = ..()
+	if(!user.can_perform_action(src, NEED_DEXTERITY))
+		return
+	user.visible_message(span_notice("[user] begins to sift through the [src] for usable pieces."), \
+		span_notice("You begin to dig through the [src] for some bricks."))
+	if(do_after(user, 5 SECONDS, src))
+		if(prob(90)) // It's... bricks already already.
+			user.visible_message(span_notice("[user] gathers up the [src]."), \
+				span_notice("You gather up all the [src]."))
+			new /obj/item/halflife/brick(loc, rand(1,2))
+			qdel(src)
+		else
+			user.visible_message(span_notice("[user] somehow messes up gathering the [src]. It melts before their very eyes into nothingness."), \
+				span_notice("You somehow manage to mess up gathering the perfectly fine bricks. It melts away before your very eyes..."))
+			qdel(src)
+
 /obj/structure/halflife/trash/wood
 	name = "scrap wood"
 	desc = "A bunch of scrap wood. You could probably get a few loose pieces."

@@ -18,6 +18,8 @@
 	desc = "A sturdy wall made of bricks."
 	icon_state = "wall-0"
 	base_icon_state = "wall"
+	sheet_type = /obj/item/halflife/brick
+	sheet_amount = 1
 
 /turf/closed/wall/halflife/brick/grey
 	icon = 'hl13/icons/turf/walls/brickgrey.dmi'
