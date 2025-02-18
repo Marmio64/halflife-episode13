@@ -199,6 +199,16 @@
 					/obj/item/ammo_box/magazine/usp9mm)
 	crate_name = "usp match ammo crate"
 
+/datum/supply_pack/security/armory/uspammorubber
+	name = "USP Match Rubber Ammo Crate"
+	desc = "Contains four USP Match rubber bullet magazines. These are less-lethal alternatives to standard rounds. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 5
+	contains = list(/obj/item/ammo_box/magazine/usp9mm/rubber,
+					/obj/item/ammo_box/magazine/usp9mm/rubber,
+					/obj/item/ammo_box/magazine/usp9mm/rubber,
+					/obj/item/ammo_box/magazine/usp9mm/rubber)
+	crate_name = "usp match rubber ammo crate"
+
 /datum/supply_pack/security/armory/manhacks
 	name = "Viscerator Crate"
 	desc = "Contains three activatable viscerators. Requires Armory access to open."

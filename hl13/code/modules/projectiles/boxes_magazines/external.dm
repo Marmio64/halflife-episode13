@@ -1,6 +1,6 @@
 /obj/item/ammo_box/magazine/usp9mm
 	name = "pistol magazine (9mm)"
-	desc = "A 18-round 9mm magazine designed for the USP Match pistol."
+	desc = "A 15-round 9mm magazine designed for the USP Match pistol."
 	ammo_type = /obj/item/ammo_casing/c9mm
 	caliber = CALIBER_9MM
 	max_ammo = 15
@@ -10,6 +10,13 @@
 /obj/item/ammo_box/magazine/usp9mm/update_icon_state()
 	. = ..()
 	icon_state = "[base_icon_state]-[round(ammo_count(), 5)]"
+
+/obj/item/ammo_box/magazine/usp9mm/rubber
+	name = "pistol magazine (9mm rubber)"
+	desc = "A 15-round 9mm magazine designed for the USP Match pistol. This one is designed to fill with rubber rounds."
+	ammo_type = /obj/item/ammo_casing/c9mm/rubber
+	icon_state = "9mmapsru-15"
+	base_icon_state = "9mmapsru"
 
 /obj/item/ammo_box/magazine/makeshift9mm
 	name = "makeshift pistol magazine (9mm)"

@@ -672,10 +672,10 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
 "bbG" = (
-/obj/structure/rack,
-/obj/item/grenade/halflife/cs_gas,
-/obj/item/grenade/halflife/cs_gas,
-/obj/item/grenade/halflife/cs_gas,
+/obj/machinery/camera/motion{
+	c_tag = "Armory";
+	dir = 1
+	},
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "bcO" = (
@@ -2297,8 +2297,8 @@
 /area/halflife/indoors/productioncenter/upper)
 "dNi" = (
 /obj/structure/table/halflife/no_smooth/metal,
-/obj/item/melee/baton/security/heavy/loaded,
-/obj/item/melee/baton/security/heavy/loaded,
+/obj/item/ammo_box/magazine/usp9mm/rubber,
+/obj/item/ammo_box/magazine/usp9mm/rubber,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "dNs" = (
@@ -7479,11 +7479,15 @@
 	},
 /area/halflife/indoors/sewer)
 "lLF" = (
-/obj/structure/table/halflife/no_smooth/metal,
-/obj/item/clothing/suit/armor/civilprotection/trenchcoat,
-/obj/item/clothing/suit/armor/civilprotection/trenchcoat,
-/obj/item/clothing/suit/armor/civilprotection,
-/obj/item/clothing/suit/armor/civilprotection,
+/obj/structure/rack,
+/obj/item/grenade/stingbang/halflife,
+/obj/item/grenade/stingbang/halflife,
+/obj/item/grenade/stingbang/halflife,
+/obj/item/grenade/stingbang/halflife,
+/obj/item/grenade/halflife/cs_gas,
+/obj/item/grenade/halflife/cs_gas,
+/obj/item/grenade/halflife/cs_gas,
+/obj/item/grenade/halflife/cs_gas,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "lLP" = (
@@ -7608,14 +7612,6 @@
 	},
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/townhall/civilprotection/prison)
-"lXk" = (
-/obj/structure/rack,
-/obj/item/grenade/stingbang/halflife,
-/obj/item/grenade/stingbang/halflife,
-/obj/item/grenade/stingbang/halflife,
-/obj/item/grenade/stingbang/halflife,
-/turf/open/floor/plating/indoor/tile,
-/area/halflife/indoors/townhall/civilprotection/armory)
 "lXV" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "sewer2"
@@ -8727,11 +8723,9 @@
 /area/halflife/indoors/trainstation)
 "nQn" = (
 /obj/structure/table/halflife/no_smooth/metal,
-/obj/item/gun/ballistic/automatic/pistol/usp,
-/obj/item/ammo_box/magazine/usp9mm,
-/obj/item/ammo_box/magazine/usp9mm,
 /obj/structure/halflife/pipes/vent,
-/obj/item/ammo_box/magazine/usp9mm,
+/obj/item/melee/baton/security/heavy/loaded,
+/obj/item/melee/baton/security/heavy/loaded,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "nQq" = (
@@ -9034,13 +9028,6 @@
 /obj/structure/halflife/trash/papers/three,
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/townhall)
-"otm" = (
-/obj/structure/rack,
-/obj/item/grenade/barrier,
-/obj/item/grenade/barrier,
-/obj/item/grenade/barrier,
-/turf/open/floor/plating/indoor/tile,
-/area/halflife/indoors/townhall/civilprotection/armory)
 "otx" = (
 /obj/modular_map_root/sewerright,
 /turf/closed/mineral/random,
@@ -10663,9 +10650,7 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
 "rjt" = (
-/obj/machinery/light/small,
-/obj/structure/closet/halflife,
-/turf/open/floor/plating/indoor/tile,
+/turf/closed/wall/halflife/brick,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "rjy" = (
 /obj/machinery/camera{
@@ -11893,8 +11878,10 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
 "sTa" = (
-/obj/structure/table/halflife/no_smooth/metal,
-/obj/item/storage/box/lethalshot,
+/obj/structure/rack,
+/obj/item/grenade/barrier,
+/obj/item/grenade/barrier,
+/obj/item/grenade/barrier,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "sTd" = (
@@ -13010,8 +12997,7 @@
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/sewer)
 "uNz" = (
-/obj/structure/table/halflife/no_smooth/metal,
-/obj/item/gun/ballistic/shotgun/spas12,
+/obj/structure/closet/halflife,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "uNR" = (
@@ -15037,10 +15023,8 @@
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
 "xFj" = (
-/obj/structure/rack,
-/obj/item/grenade/spawnergrenade/manhacks,
-/obj/item/grenade/spawnergrenade/manhacks,
-/turf/open/floor/plating/indoor/tile,
+/obj/machinery/vending/armory,
+/turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "xFu" = (
 /obj/effect/turf_decal/arrows/white{
@@ -15200,13 +15184,7 @@
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/virology)
 "xYc" = (
-/obj/machinery/camera/motion{
-	c_tag = "Armory";
-	dir = 1
-	},
-/obj/structure/rack,
-/obj/item/grenade/syndieminibomb/bouncer,
-/obj/item/grenade/syndieminibomb/bouncer,
+/obj/machinery/light/small,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "xYn" = (
@@ -15260,10 +15238,12 @@
 /area/halflife/outdoors/plaza)
 "ybW" = (
 /obj/structure/table/halflife/no_smooth/metal,
-/obj/item/gun/ballistic/automatic/mp7,
-/obj/item/ammo_box/magazine/mp7,
-/obj/item/ammo_box/magazine/mp7,
 /obj/machinery/light/small/directional/east,
+/obj/structure/window/reinforced,
+/obj/item/clothing/suit/armor/civilprotection/trenchcoat,
+/obj/item/clothing/suit/armor/civilprotection/trenchcoat,
+/obj/item/clothing/suit/armor/civilprotection,
+/obj/item/clothing/suit/armor/civilprotection,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "yca" = (
@@ -72673,7 +72653,7 @@ oQT
 oQT
 oQT
 oQT
-oQT
+rjt
 mAz
 gdE
 gdE
@@ -72801,7 +72781,7 @@ fWI
 caC
 nvl
 oQT
-oQT
+rjt
 mAz
 gdE
 gdE
@@ -72928,8 +72908,8 @@ ful
 ful
 oCr
 ful
-lXk
 oQT
+rjt
 mAz
 gdE
 gdE
@@ -73056,8 +73036,8 @@ fOB
 fOB
 fOB
 fOB
-bbG
 oQT
+rjt
 mAz
 gdE
 gdE
@@ -73182,10 +73162,10 @@ mlG
 xwe
 uqZ
 xFj
-fOB
 mlG
-rjt
+xYc
 oQT
+rjt
 mAz
 gdE
 gdE
@@ -73312,8 +73292,8 @@ fOB
 fOB
 fOB
 fOB
-otm
 oQT
+rjt
 mAz
 gdE
 gdE
@@ -73437,11 +73417,11 @@ oQT
 bVk
 dyB
 bVk
-bVk
-dyB
-bVk
-xYc
+mlG
+mlG
+bbG
 oQT
+rjt
 mAz
 gdE
 gdE
@@ -73569,7 +73549,7 @@ lLF
 uNz
 sTa
 oQT
-oQT
+rjt
 mAz
 gdE
 gdE
@@ -73697,7 +73677,7 @@ oQT
 oQT
 oQT
 oQT
-oQT
+rjt
 mAz
 gdE
 gdE

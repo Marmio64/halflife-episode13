@@ -144,7 +144,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/gps = 4,
 		/obj/item/flashlight/flare = 6,
 		/obj/item/restraints/handcuffs/cable/zipties = 8,
-		/obj/item/ammo_box/magazine/usp9mm = 6,
+		/obj/item/ammo_box/magazine/usp9mm/rubber = 8,
+		/obj/item/ammo_box/magazine/usp9mm = 2,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 4,
 		/obj/item/reagent_containers/spray/pepper = 6,
 		/obj/item/stack/credit_voucher = 10,
@@ -164,3 +165,35 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 /obj/item/vending_refill/civpro
 	machine_name = "Metropolice Supply Vendor"
 	icon_state = "refill_sec"
+
+/obj/machinery/vending/armory
+	name = "\improper Armory Vendor"
+	desc = "A machine which holds lethal equipment in an easy to sort manner. Requisitioning from here is a poor mark on the sociostability of your district."
+	product_ads = "Acquire emergency supplies.;Restock and resupply.;Help insure your family cohesion."
+	icon_state = "sec"
+	icon_deny = "sec-deny"
+	panel_type = "panel6"
+	light_mask = "sec-light-mask"
+	products = list(
+		/obj/item/gun/ballistic/automatic/mp7 = 1,
+		/obj/item/ammo_box/magazine/mp7 = 2,
+		/obj/item/gun/ballistic/shotgun/spas12 = 1,
+		/obj/item/storage/box/lethalshot = 2,
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/grenade/spawnergrenade/manhacks = 2,
+		/obj/item/gun/ballistic/automatic/pistol/usp = 1,
+		/obj/item/ammo_box/magazine/usp9mm = 3,
+		/obj/item/ammo_box/a357 = 1,
+	)
+	refill_canister = /obj/item/vending_refill/civpro
+	default_price = PAYCHECK_ZERO
+	extra_price = PAYCHECK_ZERO
+	all_products_free = TRUE
+	scan_id = FALSE
+
+/obj/item/vending_refill/armory
+	machine_name = "Armory Vendor"
+	icon_state = "refill_sec"
+
+/obj/machinery/vending/armory/on_dispense(obj/item/vended_item)
+	SSsociostability.modifystability(-12) //All the equipment in this vendor is lethal. Not having to resort to lethals is a mark of good sociostability. In total if you empty the machine, you lose 180 sociostability aka 18%
