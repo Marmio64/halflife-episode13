@@ -99,7 +99,7 @@
 /obj/item/fish/needlefish
 	name = "needlefish"
 	fish_id = "needlefish"
-	desc = "A tiny, transparent fish which resides in large schools in the oceans of Tizira. A common food for other, larger fish."
+	desc = "A tiny, transparent fish which came from god knows where." //hl13 edit
 	icon_state = "needlefish"
 	sprite_height = 3
 	sprite_width = 7

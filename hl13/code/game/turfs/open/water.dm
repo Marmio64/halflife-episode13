@@ -85,7 +85,7 @@
 	if(sewer)
 		add_lazy_fishing(/datum/fish_source/sewer)
 	else
-		add_lazy_fishing(/datum/fish_source/sewer)
+		add_lazy_fishing(/datum/fish_source/halfliferiver)
 
 /obj/effect/overlay/halflife/water
 	name = "water"
