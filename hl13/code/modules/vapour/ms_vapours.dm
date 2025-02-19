@@ -132,7 +132,10 @@
 			victim.adjust_jitter(10)
 			victim.Stun(30)
 			victim.Knockdown(50)
-			victim.adjustOrganLoss(ORGAN_SLOT_LUNGS, 1) //prolonged breathing can damage your lungs
+			victim.adjustOrganLoss(ORGAN_SLOT_LUNGS, 2) //prolonged breathing can damage your lungs
 			if(prob(amount / 20)) // Small chance for a bit of puke action :D At least one person in a crowd should get this maybe.
 				victim.vomit(10, FALSE, TRUE, 1)
+			if(ishuman(victim))
+				var/mob/living/carbon/human/H = victim
+				H.adjust_temppain(30)
 

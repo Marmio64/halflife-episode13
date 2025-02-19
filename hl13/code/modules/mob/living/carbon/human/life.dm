@@ -2,13 +2,9 @@
 	if(HAS_TRAIT(src, TRAIT_NOPAIN))
 		return
 	if(!stat)
+		adjust_temppain(-2)
+
 		var/painpercent = get_complex_pain()
-		if(temporary_pain > 100)
-			temporary_pain = 100
-		else if(temporary_pain < 0)
-			temporary_pain = 0
-		else
-			temporary_pain -= 5
 
 		if(world.time > last_painstun + painstuncooldown)
 			var/probby = 40
@@ -48,7 +44,7 @@
 			clear_mood_event("pain")
 
 /mob/living/carbon/human/proc/get_complex_pain()
-	var/amt = (temporary_pain/10)
+	var/amt = temporary_pain
 	for(var/I in bodyparts)
 		var/obj/item/bodypart/BP = I
 		if(BP.bodytype == BODYTYPE_ROBOTIC)
@@ -67,3 +63,11 @@
 		if(HAS_TRAIT(src, TRAIT_LESSPAIN)) //lesspain simply reduces pain by an amount
 			amt -= 10
 	return amt
+
+/mob/living/carbon/human/proc/adjust_temppain(amount)
+	temporary_pain += amount
+
+	if(temporary_pain > 100)
+		temporary_pain = 100
+	else if(temporary_pain < 0)
+		temporary_pain = 0
