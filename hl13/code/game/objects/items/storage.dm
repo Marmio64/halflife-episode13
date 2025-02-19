@@ -96,6 +96,27 @@
 	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/riotfullpistol/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm/rubber, src)
+	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	SSwardrobe.provide_type(/obj/item/melee/baton/security/loaded, src)
+	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
+	update_appearance(UPDATE_ICON)
+
+/obj/item/storage/belt/civilprotection/riotfull/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
+	SSwardrobe.provide_type(/obj/item/grenade/stingbang/halflife, src)
+	SSwardrobe.provide_type(/obj/item/grenade/stingbang/halflife, src)
+	update_appearance(UPDATE_ICON)
+
+
 /obj/item/storage/belt/civilprotection/overwatch
 	name = "overwatch belt"
 	desc = "Heavy duty belt for containing overwatch standard gear."

@@ -1436,10 +1436,6 @@
 	pixel_y = 12
 	},
 /obj/item/ammo_box/magazine/mp7{
-	pixel_x = -2;
-	pixel_y = 10
-	},
-/obj/item/ammo_box/magazine/mp7{
 	pixel_x = 3;
 	pixel_y = 11
 	},
@@ -1767,6 +1763,10 @@
 /area/centcom/halflife)
 "rb" = (
 /obj/structure/table/halflife/metal/heavy,
+/obj/item/restraints/handcuffs{
+	pixel_x = -6
+	},
+/obj/item/restraints/handcuffs,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/centcom/halflife/ota)
 "rk" = (
@@ -3623,10 +3623,6 @@
 /obj/item/storage/box/lethalshot/halflife{
 	pixel_x = 2;
 	pixel_y = 6
-	},
-/obj/item/storage/box/lethalshot/halflife{
-	pixel_x = 4;
-	pixel_y = 19
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/centcom/halflife/ota)

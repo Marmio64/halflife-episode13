@@ -206,6 +206,9 @@
 /obj/item/gun/ballistic/automatic/pistol/usp/no_mag
 	spawnwithmagazine = FALSE
 
+/obj/item/gun/ballistic/automatic/pistol/usp/riot
+	spawn_magazine_type = /obj/item/ammo_box/magazine/usp9mm/rubber
+
 /obj/item/gun/ballistic/automatic/pistol/usp/suppressed/Initialize(mapload)
 	. = ..()
 	var/obj/item/suppressor/S = new(src)
