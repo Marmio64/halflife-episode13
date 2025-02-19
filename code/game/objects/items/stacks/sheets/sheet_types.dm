@@ -120,7 +120,7 @@ GLOBAL_LIST_INIT(metal_recipes, list ( \
 	merge_type = /obj/item/stack/sheet/iron
 	grind_results = list(/datum/reagent/iron = 20)
 	gulag_valid = TRUE
-	tableVariant = /obj/structure/table/halflife/metal
+	tableVariant = /obj/structure/table/halflife/metal/constructed
 	material_type = /datum/material/iron
 	matter_amount = 4
 	cost = SHEET_MATERIAL_AMOUNT
@@ -338,6 +338,7 @@ GLOBAL_LIST_INIT(wood_recipes, list ( \
 	grind_results = list(/datum/reagent/cellulose = 20) //no lignocellulose or lignin reagents yet,
 	walltype = /turf/closed/wall/halflife/wood
 	stairs_type = /obj/structure/stairs/wood
+	tableVariant = /obj/structure/table/halflife/wood/constructed //hl13 edit
 	pickup_sound = 'sound/items/handling/materials/wood_pick_up.ogg'
 	drop_sound = 'sound/items/handling/materials/wood_drop.ogg'
 

@@ -71,7 +71,7 @@
 		if(prob(90)) // It's... bricks already already.
 			user.visible_message(span_notice("[user] gathers up the [src]."), \
 				span_notice("You gather up all the [src]."))
-			new /obj/item/halflife/brick(loc, rand(1,2))
+			new /obj/item/stack/sheet/halflife/brick(loc, rand(1,2))
 			qdel(src)
 		else
 			user.visible_message(span_notice("[user] somehow messes up gathering the [src]. It melts before their very eyes into nothingness."), \
