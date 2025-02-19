@@ -172,7 +172,7 @@
 
 /datum/crafting_recipe/buckshotshell
 	name = "Buckshot Shell"
-	result = /obj/item/ammo_casing/shotgun/buckshot
+	result = /obj/item/ammo_casing/shotgun/buckshot/halflife
 	reqs = list(/obj/item/stack/sheet/iron = 3,
 				/obj/item/stack/cable_coil = 1,
 				/datum/reagent/fuel = 5)

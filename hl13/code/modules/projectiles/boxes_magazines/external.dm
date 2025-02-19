@@ -1,11 +1,12 @@
 /obj/item/ammo_box/magazine/usp9mm
 	name = "pistol magazine (9mm)"
 	desc = "A 15-round 9mm magazine designed for the USP Match pistol."
-	ammo_type = /obj/item/ammo_casing/c9mm
+	ammo_type = /obj/item/ammo_casing/c9mm/usp
 	caliber = CALIBER_9MM
 	max_ammo = 15
 	icon_state = "9mmaps-15"
 	base_icon_state = "9mmaps"
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
 
 /obj/item/ammo_box/magazine/usp9mm/update_icon_state()
 	. = ..()
@@ -14,18 +15,19 @@
 /obj/item/ammo_box/magazine/usp9mm/rubber
 	name = "pistol magazine (9mm rubber)"
 	desc = "A 15-round 9mm magazine designed for the USP Match pistol. This one is designed to fill with rubber rounds."
-	ammo_type = /obj/item/ammo_casing/c9mm/rubber
+	ammo_type = /obj/item/ammo_casing/c9mm/usp/rubber
 	icon_state = "9mmapsru-15"
 	base_icon_state = "9mmapsru"
 
 /obj/item/ammo_box/magazine/makeshift9mm
 	name = "makeshift pistol magazine (9mm)"
 	desc = "A 8-round 9mm magazine made for some sort of makeshift pistol."
-	ammo_type = /obj/item/ammo_casing/c9mm/makeshift
+	ammo_type = /obj/item/ammo_casing/c9mm/usp/makeshift
 	caliber = CALIBER_9MM
 	max_ammo = 8
 	icon_state = "45-8"
 	base_icon_state = "45"
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
 
 /obj/item/ammo_box/magazine/makeshift9mm/update_icon_state()
 	. = ..()
@@ -38,6 +40,7 @@
 	ammo_type = /obj/item/ammo_casing/caseless/pulse/ar2
 	caliber = CALIBER_PULSROUND
 	max_ammo = 30
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
 
 /obj/item/ammo_box/magazine/combine_sniper
 	name = "Sniper magazine (pulse)"
@@ -46,14 +49,16 @@
 	ammo_type = /obj/item/ammo_casing/caseless/pulse/combine_sniper
 	caliber = CALIBER_PULSROUND
 	max_ammo = 10
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
 
 /obj/item/ammo_box/magazine/mp7
 	name = "\improper MP7 magazine (4.6x30mm)"
 	desc = "A 45-round 4.6x30mm magazine, designed for the MP7."
 	icon_state = "smg9mm"
-	ammo_type = /obj/item/ammo_casing/c46x30mm
+	ammo_type = /obj/item/ammo_casing/c46x30mm/mp7
 	caliber = CALIBER_46X30MM
 	max_ammo = 40
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
 
 //m4a1 Rifle
 
@@ -64,6 +69,7 @@
 	ammo_type = /obj/item/ammo_casing/a556
 	caliber = CALIBER_556NATO
 	max_ammo = 30
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
 
 //ak47 Rifle
 
@@ -74,6 +80,7 @@
 	ammo_type = /obj/item/ammo_casing/n762
 	caliber = CALIBER_N762
 	max_ammo = 30
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
 
 //service Rifle
 
@@ -84,3 +91,4 @@
 	ammo_type = /obj/item/ammo_casing/a556
 	caliber = CALIBER_556NATO
 	max_ammo = 20
+	icon = 'hl13/icons/obj/guns/ammo.dmi'

@@ -254,11 +254,16 @@
 	fire_sound = "hl13/sound/weapons/shotgunfire.ogg"
 	rack_sound = "hl13/sound/weapons/shotgunpump.ogg"
 	load_sound = "hl13/sound/weapons/shotgunreload.ogg"
-	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/com
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/com/spas12
 	force = 12
 	recoil = 1.5
 	fire_delay = 7
 	vary_fire_sound = FALSE
+
+/obj/item/ammo_box/magazine/internal/shot/com/spas12
+	name = "spas12 internal magazine"
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/halflife
+	max_ammo = 6
 
 /obj/item/gun/ballistic/automatic/mp7
 	name = "\improper MP7 SMG"
