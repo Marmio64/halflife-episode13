@@ -9,6 +9,12 @@
 	min_ambience_cooldown = 180 SECONDS
 	var/dissipation_rate = 1.5 // higher numbers = quicker dissipation
 
+/obj/effect/baseturf_helper/halflife
+	baseturf = /turf/open/floor/plating/ground/dirt
+
+/obj/effect/baseturf_helper/halflife/underground
+	baseturf = /turf/open/floor/plating/ground/rockunder
+
 /area/halflife/outdoors
 	name = "\improper Outdoors"
 	static_lighting = TRUE

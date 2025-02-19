@@ -105,6 +105,7 @@
 	pixel_x = -5;
 	pixel_y = 8
 	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "hB" = (
@@ -354,10 +355,6 @@
 "DB" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/bunker)
-"DY" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/indoor/concrete/small,
-/area/halflife/indoors/bunker)
 "Fb" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
@@ -587,6 +584,10 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
+"SR" = (
+/obj/effect/baseturf_helper/halflife/underground,
+/turf/closed/wall/halflife/concrete,
+/area/halflife/indoors/bunker)
 "Tc" = (
 /obj/item/reagent_containers/cup/glass/waterbottle/large/empty{
 	pixel_x = 8;
@@ -712,7 +713,7 @@ kC
 "}
 (2,1,1) = {"
 JP
-DB
+SR
 DB
 DB
 DB
@@ -942,8 +943,8 @@ JP
 "}
 (12,1,1) = {"
 JP
-DB
-DY
+WQ
+Fb
 Fb
 Fb
 WQ
