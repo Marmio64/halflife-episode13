@@ -1,3 +1,5 @@
+//to do: modularize colt python, m4a1, ak47, and service rifle bullets/ammo casings.
+
 /obj/item/gun/ballistic/automatic/ar2
 	name = "\improper OSIPR"
 	desc = "A pulse rifle often dubbed the 'AR2'. Boasts superior armor piercing capabilities, accuracy, and firepower. Usually biolocked to only be usable by authorised individuals."
@@ -264,6 +266,16 @@
 	name = "spas12 internal magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/halflife
 	max_ammo = 6
+
+/obj/item/storage/box/lethalshot/halflife
+	name = "box of shotgun shells (Lethal)"
+	desc = "A box full of lethal shotgun shells, designed for shotguns."
+	icon_state = "lethalshot_box"
+	illustration = null
+
+/obj/item/storage/box/lethalshot/halflife/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/ammo_casing/shotgun/buckshot/halflife(src)
 
 /obj/item/gun/ballistic/automatic/mp7
 	name = "\improper MP7 SMG"

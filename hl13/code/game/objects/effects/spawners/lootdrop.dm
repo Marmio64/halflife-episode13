@@ -183,7 +183,7 @@
 
 	loot = list(
 				/obj/item/ammo_box/magazine/mp7 = 2,
-				/obj/item/storage/box/lethalshot,
+				/obj/item/storage/box/lethalshot/halflife,
 				/obj/item/ammo_box/magazine/usp9mm = 2,
 				/obj/item/ammo_box/a357,
 				/obj/item/ammo_casing/rebar = 2,

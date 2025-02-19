@@ -157,10 +157,10 @@
 	name = "Shotgun Buckshot Ammo Crate"
 	desc = "Contains four boxes of buckshot. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 10
-	contains = list(/obj/item/storage/box/lethalshot,
-					/obj/item/storage/box/lethalshot,
-					/obj/item/storage/box/lethalshot,
-					/obj/item/storage/box/lethalshot)
+	contains = list(/obj/item/storage/box/lethalshot/halflife,
+					/obj/item/storage/box/lethalshot/halflife,
+					/obj/item/storage/box/lethalshot/halflife,
+					/obj/item/storage/box/lethalshot/halflife)
 	crate_name = "buckshot crate"
 
 /datum/supply_pack/security/armory/coltpython
