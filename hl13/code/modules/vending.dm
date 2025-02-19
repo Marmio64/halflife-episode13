@@ -103,14 +103,14 @@
 	density = FALSE
 	products = list(
 		/obj/item/reagent_containers/syringe = 3,
-		/obj/item/reagent_containers/pill/patch/medkit/vial = 5,
-		/obj/item/reagent_containers/pill/multiver = 2,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 6,
+		/obj/item/reagent_containers/pill/multiver = 3,
 		/obj/item/reagent_containers/pill/potassiodide = 3,
-		/obj/item/reagent_containers/pill/iron = 3,
+		/obj/item/reagent_containers/pill/iron = 4,
 		/obj/item/reagent_containers/medigel/sterilizine = 1,
 		/obj/item/healthanalyzer/simple = 2,
 		/obj/item/stack/medical/bone_gel = 2,
-		/obj/item/reagent_containers/hypospray/medipen = 2,
+		/obj/item/reagent_containers/hypospray/medipen = 3,
 	)
 	contraband = list(
 		/obj/item/reagent_containers/pill/tox = 2,
@@ -168,7 +168,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 
 /obj/machinery/vending/armory
 	name = "\improper Armory Vendor"
-	desc = "A machine which holds lethal equipment in an easy to sort manner. Requisitioning from here is a poor mark on the sociostability of your district."
+	desc = "A machine which holds lethal equipment in an easy to sort manner. Requisitioning from here is a poor mark on the sociostability of your district, and will actively lower it."
 	product_ads = "Acquire emergency supplies.;Restock and resupply.;Help insure your family cohesion."
 	icon_state = "sec"
 	icon_deny = "sec-deny"
@@ -196,4 +196,4 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	icon_state = "refill_sec"
 
 /obj/machinery/vending/armory/on_dispense(obj/item/vended_item)
-	SSsociostability.modifystability(-12) //All the equipment in this vendor is lethal. Not having to resort to lethals is a mark of good sociostability. In total if you empty the machine, you lose 180 sociostability aka 18%
+	SSsociostability.modifystability(-13) //All the equipment in this vendor is lethal. Not having to resort to lethals is a mark of good sociostability. In total if you empty the machine, you lose 195 sociostability aka 19.5%

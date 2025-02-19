@@ -177,11 +177,11 @@
 	pixel_x = -2;
 	pixel_y = 8
 	},
-/obj/item/ammo_box/magazine/usp9mm{
-	pixel_x = 5;
-	pixel_y = 13
-	},
 /obj/machinery/light/small/cyan/directional/west,
+/obj/item/ammo_box/magazine/usp9mm/rubber{
+	pixel_x = 8;
+	pixel_y = 4
+	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/laborcamp/security)
 "cn" = (
@@ -442,6 +442,18 @@
 /turf/open/floor/plating/ground/brickroad{
 	dir = 1
 	},
+/area/halflife/outdoors/forest)
+"eW" = (
+/obj/structure/sign/poster/halflife/combine{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/outlandscave)
+"eX" = (
+/obj/structure/railing/halflife/wood{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "fe" = (
 /obj/structure/railing/halflife/sewer{
@@ -705,6 +717,12 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/bunker)
+"ip" = (
+/obj/structure/railing/halflife/wood{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/dirt/alt,
+/area/halflife/outdoors/forest)
 "iq" = (
 /obj/structure/table/halflife/wood/constructed/cobbled,
 /obj/structure/halflife/trash/glass/basic,
@@ -1391,6 +1409,9 @@
 /obj/item/grenade/stingbang/halflife{
 	pixel_x = 5;
 	pixel_y = 16
+	},
+/obj/item/grenade/halflife/cs_gas{
+	pixel_y = 5
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/laborcamp/security)
@@ -2386,6 +2407,12 @@
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"BX" = (
+/obj/structure/sign/poster/halflife/rebel/two{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "Cb" = (
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors/sewer/tunnel)
@@ -2648,6 +2675,9 @@
 "FW" = (
 /obj/structure/table/halflife/no_smooth/large/metal/desk,
 /obj/effect/spawner/random/halflife/loot,
+/obj/structure/sign/poster/halflife/rebel{
+	pixel_y = 32
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/forest)
 "Gc" = (
@@ -2735,6 +2765,10 @@
 "Hd" = (
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/outdoors/forest)
+"He" = (
+/obj/effect/spawner/random/halflife/loot/heal,
+/turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
 "Hj" = (
 /obj/effect/turf_decal/weather/dirt,
@@ -2871,6 +2905,10 @@
 "Jd" = (
 /obj/structure/railing/halflife/solo,
 /turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/outdoors/forest)
+"Je" = (
+/obj/structure/railing/halflife/wood,
+/turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
 "Jh" = (
 /obj/structure/bed/halflife/bedframe/cot,
@@ -3804,6 +3842,12 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/forest)
+"Uw" = (
+/obj/structure/sign/poster/halflife/rebel{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "UA" = (
 /obj/structure/table/halflife/metal,
 /obj/machinery/recharger,
@@ -3823,6 +3867,15 @@
 "UE" = (
 /mob/living/simple_animal/hostile/halflife/zombie,
 /turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
+"UF" = (
+/obj/structure/railing/halflife/wood/ending{
+	dir = 8
+	},
+/obj/structure/railing/halflife/wood{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
 "UH" = (
 /obj/structure/flora/bush/sparsegrass/style_random,
@@ -53585,7 +53638,7 @@ HO
 HO
 HO
 HO
-iQ
+eW
 iQ
 iQ
 iQ
@@ -56107,7 +56160,7 @@ GX
 GX
 GX
 tN
-tN
+ZW
 FC
 FC
 tN
@@ -58906,7 +58959,7 @@ LN
 tN
 tN
 FC
-rF
+He
 tN
 FC
 DN
@@ -63361,7 +63414,7 @@ Ne
 QW
 FR
 MU
-SP
+XI
 QW
 NR
 tN
@@ -65691,17 +65744,17 @@ GX
 It
 It
 tN
-It
-It
-tN
-tN
+UF
+ip
+eX
+eX
 Jq
 WR
 WR
 Ym
 Ym
 Zu
-tN
+zK
 tN
 It
 tN
@@ -65886,9 +65939,9 @@ Cq
 tN
 tN
 tN
+aZ
 It
-It
-It
+yn
 It
 tN
 tO
@@ -65898,7 +65951,7 @@ WR
 Ym
 Ym
 Zu
-tN
+vR
 tN
 It
 tN
@@ -66084,8 +66137,8 @@ tN
 tN
 tN
 tN
-aZ
 It
+yn
 tN
 tN
 WC
@@ -66095,7 +66148,7 @@ WR
 Ym
 Ym
 Km
-tN
+vR
 It
 Kh
 tN
@@ -66282,7 +66335,7 @@ It
 It
 It
 tN
-tN
+kL
 tN
 tN
 tN
@@ -66292,7 +66345,7 @@ WR
 Ym
 Zu
 tN
-tN
+vR
 It
 tN
 tN
@@ -66479,7 +66532,7 @@ tN
 tN
 tN
 LN
-tN
+kL
 tN
 It
 cF
@@ -66489,7 +66542,7 @@ WR
 Ym
 Zu
 tN
-It
+Je
 It
 tN
 tN
@@ -66676,7 +66729,7 @@ tN
 Wx
 tN
 It
-tN
+kL
 tN
 WC
 Jq
@@ -66686,7 +66739,7 @@ WR
 Ym
 Zu
 tN
-It
+Je
 aZ
 It
 tN
@@ -66873,7 +66926,7 @@ tN
 tN
 tN
 tN
-tN
+kL
 tO
 RZ
 Ym
@@ -66883,7 +66936,7 @@ WR
 Ym
 Zu
 tN
-tN
+vR
 tN
 tN
 tN
@@ -68719,7 +68772,7 @@ XA
 XA
 MT
 MT
-OV
+BX
 ex
 HL
 ev
@@ -70087,7 +70140,7 @@ CR
 UI
 UI
 UI
-Nu
+UI
 UI
 Lj
 QW
@@ -70498,7 +70551,7 @@ OV
 OV
 OV
 MT
-ex
+Uw
 ex
 ex
 ex
@@ -70676,7 +70729,7 @@ UI
 jS
 RU
 WG
-UI
+Nu
 Yy
 WG
 WG
