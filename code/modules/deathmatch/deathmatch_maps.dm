@@ -331,7 +331,7 @@
 
 /datum/lazy_template/deathmatch/hl13arena
 	name = "Sewers Arena"
-	desc = "Trapped within a cage, beat your fellow citizens to death with your bare hands."
+	desc = "Trapped within a cage, beat your fellow citizens to death with bricks and your bare hands."
 	max_players = 4
 	allowed_loadouts = list(
 		/datum/outfit/deathmatch_loadout/citizen,

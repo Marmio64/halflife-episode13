@@ -461,7 +461,10 @@
 			victim.set_eye_blur_if_lower(10 SECONDS)
 			victim.adjust_temp_blindness(6 SECONDS)
 			victim.set_confusion_if_lower(4 SECONDS)
-			victim.adjustStaminaLoss(20)
+			victim.adjustStaminaLoss(15) //hl13 edit
+			if(ishuman(victim)) //hl13 edit
+				var/mob/living/carbon/human/H = victim //hl13 edit
+				H.adjust_temppain(25) //hl13 edit
 			victim.add_movespeed_modifier(/datum/movespeed_modifier/reagent/pepperspray)
 			addtimer(CALLBACK(victim, TYPE_PROC_REF(/mob, remove_movespeed_modifier), /datum/movespeed_modifier/reagent/pepperspray), 10 SECONDS)
 		victim.update_damage_hud()

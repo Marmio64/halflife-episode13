@@ -66,6 +66,15 @@
 	atom_storage.open_sound_vary = TRUE
 	atom_storage.rustle_sound = FALSE
 
+/obj/item/storage/belt/civilprotection/large
+	name = "expanded civil protection belt"
+	desc = "Heavy duty belt for containing metrocop standard gear. Contains an extra pocket or two for additional storage."
+	custom_price = PAYCHECK_CREW * 4
+
+/obj/item/storage/belt/civilprotection/large/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 8
+
 /obj/item/storage/belt/civilprotection/full/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm, src)
 	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)

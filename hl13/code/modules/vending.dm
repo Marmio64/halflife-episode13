@@ -144,10 +144,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/gps = 4,
 		/obj/item/flashlight/flare = 6,
 		/obj/item/restraints/handcuffs/cable/zipties = 8,
-		/obj/item/ammo_box/magazine/usp9mm/rubber = 8,
-		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/ammo_box/magazine/usp9mm/rubber = 10,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 4,
 		/obj/item/reagent_containers/spray/pepper = 6,
+		/obj/item/radio/civpro = 8,
 		/obj/item/stack/credit_voucher = 10,
 	)
 	contraband = list(
