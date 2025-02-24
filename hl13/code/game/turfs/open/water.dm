@@ -29,7 +29,6 @@
 	var/atom/watertop = /obj/effect/overlay/halflife/water/top/medium
 	var/depth = 0
 	var/coldness = -100
-	var/z_to_change = 0 //absolutely terrible, but im desperate
 	var/sewer = FALSE
 
 /turf/open/halflife/water/attackby(obj/item/W, mob/user, params)
@@ -71,14 +70,10 @@
 	watertop = /obj/effect/overlay/halflife/water/top/shallow
 	depth = 1
 
-/*
 /turf/open/halflife/water/Initialize()
 	. = ..()
 	new watereffect(src)
 	new watertop(src)
-	if(z == 2)
-		z_to_change = -100
-*/
 
 /turf/open/halflife/water/Initialize(mapload)
 	. = ..()
@@ -187,7 +182,8 @@
 		if(!iswater(get_step(src, direction)))
 			M.swimming = FALSE
 			M.layer = initial(M.layer)
-			//M.plane = (initial(M.plane) + z_to_change) //absolutely terrible, but im desperate
+			//M.plane =  PLANE_TO_TRUE((initial(M.plane)))
+			SET_PLANE_EXPLICIT(M, PLANE_TO_TRUE((initial(M.plane))), src)
 
 /turf/open/halflife/water/Entered(atom/A, turf/OL)
 	..()
@@ -197,7 +193,7 @@
 	if(isliving(A))
 		var/mob/living/M = A
 		var/mob/living/carbon/H = M
-		//addtimer(CALLBACK(src, PROC_REF(transfer_mob_layer), M), 0.2 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(transfer_mob_layer), M), 0.2 SECONDS)
 
 		if(!sewer)
 			if(H.hygiene < HYGIENE_LEVEL_NORMAL)
@@ -272,7 +268,7 @@
 /turf/open/halflife/water/proc/transfer_mob_layer(var/mob/living/carbon/M)
 	if(iswater(get_turf(M)))
 		M.layer = TURF_LAYER_MOB_WATER
-		M.plane = (FLOOR_PLANE + z_to_change)
+		SET_PLANE_EXPLICIT(M, PLANE_TO_TRUE(FLOOR_PLANE), src)
 		M.update_icon(UPDATE_OVERLAYS)
 	else
 		return
