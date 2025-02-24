@@ -144,7 +144,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/gps = 4,
 		/obj/item/flashlight/flare = 6,
 		/obj/item/restraints/handcuffs/cable/zipties = 8,
-		/obj/item/ammo_box/magazine/usp9mm/rubber = 10,
+		/obj/item/ammo_box/magazine/usp9mm/rubber = 8,
+		/obj/item/ammo_box/magazine/usp9mm = 4,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 4,
 		/obj/item/reagent_containers/spray/pepper = 6,
 		/obj/item/radio/civpro = 8,
@@ -196,4 +197,4 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	icon_state = "refill_sec"
 
 /obj/machinery/vending/armory/on_dispense(obj/item/vended_item)
-	SSsociostability.modifystability(-13) //All the equipment in this vendor is lethal. Not having to resort to lethals is a mark of good sociostability. In total if you empty the machine, you lose 195 sociostability aka 19.5%
+	SSsociostability.modifystability(-15) //All the equipment in this vendor is lethal. Not having to resort to lethals is a mark of good sociostability. In total if you empty the machine, you lose 225 sociostability aka 22.5%

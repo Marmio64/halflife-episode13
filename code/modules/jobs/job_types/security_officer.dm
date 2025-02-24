@@ -230,12 +230,12 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	suit = /obj/item/clothing/suit/armor/civilprotection
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp/riot
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	glasses = /obj/item/clothing/glasses/hud/security
 
 	mask = /obj/item/clothing/mask/gas/civilprotection
-	belt = /obj/item/storage/belt/civilprotection/full
+	belt = /obj/item/storage/belt/civilprotection/riotfullpistol
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
 

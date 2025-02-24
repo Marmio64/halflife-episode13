@@ -48,7 +48,15 @@
 	result = /obj/structure/door_assembly/door_assembly_highsecurity/combine
 	time = 15 SECONDS
 	reqs = list(/obj/item/stack/sheet/iron = 15,
-				/obj/item/circuitmaterial = 1,
+				/obj/item/circuitmaterial = 2,
 		        /obj/item/stack/cable_coil = 5)
+	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
+	category = CAT_STRUCTURE
+
+/datum/crafting_recipe/heavycombinedoor
+	name = "Metal Door"
+	result = /obj/machinery/door/unpowered/halflife/metal
+	time = 12 SECONDS
+	reqs = list(/obj/item/stack/sheet/iron = 15)
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
 	category = CAT_STRUCTURE

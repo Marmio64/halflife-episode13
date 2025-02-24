@@ -44,10 +44,19 @@
 ///Organic waste and garbage makes this
 /datum/vapours/decaying_waste
 	name = "Decaying Waste"
-	vapours_flags = VAPOUR_SMELL
+	vapours_flags = VAPOUR_SMELL | VAPOUR_BREATHE_ACT
 	smell_intensity = 3
 	descriptor = SCENT_DESC_ODOR
 	scent = "decaying waste"
+
+/datum/vapours/decaying_waste/BreatheAct(mob/living/carbon/victim, amount)
+	if(HAS_TRAIT(victim, TRAIT_WEARING_GAS_MASK) || HAS_TRAIT(victim, TRAIT_FILTHBORN) || HAS_TRAIT(victim, TRAIT_ANOSMIA))
+		return
+	if(amount <= 10)
+		return
+	if(prob(10))
+		victim.adjust_eye_blur(4 SECONDS)
+		to_chat(victim, span_warning("Fuck, what is that smell!?"))
 
 ///Splashing blood makes a tiny bit of this
 /datum/vapours/metallic_scent

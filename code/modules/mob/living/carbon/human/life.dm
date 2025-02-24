@@ -146,7 +146,7 @@
 
 	adjust_hygiene(hygiene_loss)
 
-	/var/image/smell = image('hl13/icons/effects/effects.dmi', "smell")//This is a hack, there has got to be a safer way to do this but I don't know it at the moment.
+	var/image/smell = image('hl13/icons/effects/effects.dmi', "smell")//This is a hack, there has got to be a safer way to do this but I don't know it at the moment.
 	switch(hygiene)
 		if(HYGIENE_LEVEL_TIDY to INFINITY)
 			if(!HAS_TRAIT(src, TRAIT_FILTHBORN))
@@ -164,6 +164,9 @@
 		if(0 to HYGIENE_LEVEL_FILTHY)
 			overlays -= smell
 			overlays += smell
+			var/turf/my_turf = get_turf(src)
+			if(prob(10))
+				my_turf.VapourTurf(/datum/vapours/decaying_waste, 500)
 			if(HAS_TRAIT(src, TRAIT_HIGHBORN))
 				add_mood_event("hygiene", /datum/mood_event/hygiene/filthy/highborn)
 			else if(!HAS_TRAIT(src, TRAIT_FILTHBORN))

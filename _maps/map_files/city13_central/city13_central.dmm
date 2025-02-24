@@ -2299,6 +2299,7 @@
 /obj/structure/table/halflife/no_smooth/metal,
 /obj/item/ammo_box/magazine/usp9mm/rubber,
 /obj/item/ammo_box/magazine/usp9mm/rubber,
+/obj/item/gun/ballistic/automatic/pistol/usp/riot,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "dNs" = (
@@ -7143,6 +7144,7 @@
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/dispatch)
 "lnV" = (
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/scienceunion)
 "lnZ" = (
@@ -10436,6 +10438,13 @@
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
+"qNP" = (
+/obj/effect/turf_decal/siding/thinplating{
+	dir = 4
+	},
+/obj/structure/flora/bush/flowers_pp/style_random,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/plaza)
 "qNT" = (
 /obj/effect/turf_decal/trimline/dark_red/warning{
 	dir = 10
@@ -11593,7 +11602,7 @@
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors)
 "swS" = (
-/obj/structure/railing{
+/obj/structure/railing/halflife/solo{
 	dir = 8
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -13001,7 +13010,7 @@
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "uNR" = (
-/obj/structure/railing,
+/obj/structure/railing/halflife/solo,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
 "uOo" = (
@@ -13115,6 +13124,9 @@
 /obj/item/clothing/suit/greenjacket,
 /obj/item/clothing/suit/greenjacket,
 /obj/item/clothing/suit/greenjacket,
+/obj/item/clothing/shoes/boots,
+/obj/item/clothing/shoes/boots,
+/obj/item/clothing/shoes/boots,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "uVS" = (
@@ -13421,7 +13433,11 @@
 	c_tag = "Restaurant Outside";
 	dir = 4
 	},
-/turf/open/floor/plating/ground/sidewalk/inner,
+/obj/effect/turf_decal/siding/thinplating{
+	dir = 4
+	},
+/obj/structure/flora/bush/fullgrass/style_random,
+/turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/plaza)
 "vqi" = (
 /mob/living/basic/mouse/gray,
@@ -13480,7 +13496,7 @@
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
 "vuM" = (
-/obj/structure/railing{
+/obj/structure/railing/halflife/solo{
 	dir = 1
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -13692,6 +13708,14 @@
 /obj/item/reagent_containers/cup/soda_cans/breenwater/red,
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/townhall)
+"vJT" = (
+/obj/structure/railing/halflife/solo,
+/obj/effect/turf_decal/siding/thinplating{
+	dir = 6
+	},
+/obj/structure/flora/bush/lavendergrass/style_random,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/plaza)
 "vJX" = (
 /obj/machinery/skill_station,
 /turf/open/floor/plating/indoor/tile,
@@ -47561,9 +47585,9 @@ ngF
 ngF
 ngF
 lli
-udY
+qNP
 vqe
-eWi
+vJT
 udY
 udY
 udY

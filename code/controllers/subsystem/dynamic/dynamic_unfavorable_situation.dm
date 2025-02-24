@@ -60,10 +60,8 @@
 /// Filter the below list by which events can actually run on this map
 /datum/controller/subsystem/dynamic/proc/generate_unfavourable_events()
 	var/static/list/unfavorable_random_events = list(
-		/datum/round_event_control/earthquake,
-		/datum/round_event_control/immovable_rod,
-		/datum/round_event_control/meteor_wave,
-		/datum/round_event_control/portal_storm_syndicate,
+		/datum/round_event_control/xen,
+		/datum/round_event_control/destabilizer,
 	)
 	var/list/picked_events = list()
 	for(var/type in unfavorable_random_events)
