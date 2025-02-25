@@ -84,6 +84,29 @@
 	acid = 50
 	wound = 10
 
+/obj/item/clothing/head/helmet/halflife/headcrab
+	name = "headcrab helmet"
+	desc = "A hollowed out armored headcrab. Hard to see out of, but is surpsingly good at protecting your head."
+	icon = 'hl13/icons/obj/clothing/hats.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
+	icon_state = "headcrab"
+	base_icon_state = "headcrab"
+	armor_type = /datum/armor/headcrab
+	flags_cover = EARS_COVERED
+
+/datum/armor/headcrab
+	melee = 25
+	bullet = 15
+	laser = 20
+	energy = 20
+	bomb = 25
+	fire = 50
+	acid = 50
+	wound = 10
+
+/obj/item/clothing/head/helmet/halflife/headcrab/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/clothing_fov_visor, FOV_270_DEGREES)
 
 /obj/item/clothing/head/bio_hood/boiler
 	icon_state = "bio_boiler"

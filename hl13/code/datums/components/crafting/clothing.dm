@@ -43,3 +43,14 @@
 	time = 10 SECONDS
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
+
+//my armor is a bit crabby
+/datum/crafting_recipe/headcrab_helmet
+	name = "Headcrab Helmet"
+	result = /obj/item/clothing/head/helmet/halflife/headcrab
+	reqs = list(/obj/item/food/meat/slab/xen = 1,
+				/obj/item/stack/sheet/sinew = 1,
+				/obj/item/stack/sheet/bone = 1,
+				/obj/item/stack/sheet/animalhide/goliath_hide = 1)
+	time = 10 SECONDS
+	category = CAT_ARMOR
