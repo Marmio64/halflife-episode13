@@ -7,25 +7,24 @@
 		var/painpercent = get_complex_pain()
 
 		if(world.time > last_painstun + painstuncooldown)
-			var/probby = 40
+			var/probby = 50
 			if(IsKnockdown())
 				if(prob(3) && (painpercent >= 80) )
 					emote("scream")
 					last_painstun = world.time
 			else
 				if(painpercent >= 100)
+					last_painstun = world.time
 					if(prob(probby))
-						last_painstun = world.time
 						shake_camera(src, 1, 1)
 						Immobilize(2 SECONDS)
 						emote("scream")
 						flash_fullscreen("redflash3")
 						adjust_stutter(8 SECONDS)
 						adjust_confusion(10 SECONDS)
-						if(painpercent >= 150)
+						if(painpercent >= 140)
 							Paralyze(5 SECONDS)
 					else
-						last_painstun = world.time
 						emote("paingroan")
 						adjust_stutter(5 SECONDS)
 						flash_fullscreen("redflash2")

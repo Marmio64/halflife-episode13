@@ -89,6 +89,11 @@
 			ration_quality--
 	if(account?.account_job.title == "Vortigaunt Slave") //Shitty ration bonus handled in job datum, this just lets the ration vendor knows they're a vort
 		vortigaunt = TRUE
+	if(account?.account_job.title == "Refugee") //Refugees don't get rations, of course
+		say("Warning, your civil status is in question by local protection teams. Please apply.")
+		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+		flick(icon_state_deny,src)
+		return
 	ration_quality += account?.account_job.ration_bonus //applies job specific ration bonuses
 
 	account.ration_voucher = FALSE

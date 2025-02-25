@@ -85,8 +85,8 @@ DEFINE_BITFIELD(status_flags, list(
 ))
 
 //Health Defines
-#define HEALTH_THRESHOLD_CRIT -20
-#define HEALTH_THRESHOLD_FULLCRIT -50
+#define HEALTH_THRESHOLD_CRIT -40
+#define HEALTH_THRESHOLD_FULLCRIT -60
 #define HEALTH_THRESHOLD_DEAD -100
 
 #define HEALTH_THRESHOLD_NEARDEATH -90 //Not used mechanically, but to determine if someone is so close to death they hear the other side

@@ -39,7 +39,7 @@
 	name = "Outlands Refugee with a random item"
 	jobtype = /datum/job/prisoner
 
-	id = null
+	id_trim = /datum/id_trim/job/prisoner
 	uniform = /obj/item/clothing/under/citizen/refugee
 
 	r_pocket = /obj/item/flashlight
