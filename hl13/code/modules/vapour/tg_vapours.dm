@@ -54,9 +54,13 @@
 		return
 	if(amount <= 10)
 		return
-	if(prob(10))
-		victim.adjust_eye_blur(4 SECONDS)
+	if(prob(5))
+		victim.adjust_eye_blur(8 SECONDS)
 		to_chat(victim, span_warning("Fuck, what is that smell!?"))
+
+/datum/vapours/decaying_waste/bodyodor
+	name = "Body Odor"
+	scent = "sweat and body odor"
 
 ///Splashing blood makes a tiny bit of this
 /datum/vapours/metallic_scent

@@ -23,7 +23,7 @@
 	)
 	// Start with one weaker roll
 	owner.spin(spintime = actual_interval, speed = actual_interval / 4)
-	owner.adjust_fire_stacks(-0.25)
+	owner.adjust_fire_stacks(-0.5) //hl13 edit, stronger roll
 
 	for (var/obj/item/dropped in owner.loc)
 		dropped.extinguish() // Effectively extinguish your items by rolling on them
@@ -44,7 +44,7 @@
 		return
 
 	owner.spin(spintime = actual_interval, speed = actual_interval / 4)
-	owner.adjust_fire_stacks(-1)
+	owner.adjust_fire_stacks(-1.5) //hl13 edit, stronger roll
 
 	if(owner.fire_stacks > 0)
 		return

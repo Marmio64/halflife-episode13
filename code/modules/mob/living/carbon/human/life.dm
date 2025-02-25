@@ -166,7 +166,7 @@
 			overlays += smell
 			var/turf/my_turf = get_turf(src)
 			if(prob(10))
-				my_turf.VapourTurf(/datum/vapours/decaying_waste, 500)
+				my_turf.VapourTurf(/datum/vapours/decaying_waste/bodyodor, 750)
 			if(HAS_TRAIT(src, TRAIT_HIGHBORN))
 				add_mood_event("hygiene", /datum/mood_event/hygiene/filthy/highborn)
 			else if(!HAS_TRAIT(src, TRAIT_FILTHBORN))
