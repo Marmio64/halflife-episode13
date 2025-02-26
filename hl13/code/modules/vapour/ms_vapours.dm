@@ -139,3 +139,36 @@
 				var/mob/living/carbon/human/H = victim
 				H.adjust_temppain(30)
 
+///CS gas for combine warcrimes!!
+/datum/vapours/fungalspores
+	name = "Fungal Spores"
+	vapours_flags = VAPOUR_SMELL | VAPOUR_APPEARANCE | VAPOUR_BREATHE_ACT
+	color = COLOR_OLIVE
+	alpha = 200
+	smell_intensity = 5
+	descriptor = SCENT_DESC_SMELL
+	scent = "old mushrooms"
+
+/datum/vapours/fungalspores/BreatheAct(mob/living/carbon/victim, amount)
+	if(HAS_TRAIT(victim, TRAIT_WEARING_GAS_MASK) || amount <= 10)
+		return
+
+	switch(amount)
+		if(-INFINITY to 5)
+			return
+
+		if(6 to 20)
+			victim.emote("cough")
+			victim.adjust_eye_blur(1 * (amount))
+			victim.adjustOrganLoss(ORGAN_SLOT_LUNGS, 2) //prolonged breathing can damage your lungs
+			victim.adjust_jitter(5)
+
+		if(21 to INFINITY)
+			victim.emote("cough")
+			victim.adjust_eye_blur(1 * (amount))
+			victim.adjust_jitter(10)
+			victim.adjustOrganLoss(ORGAN_SLOT_LUNGS, 4) //prolonged breathing can damage your lungs
+			if(prob(5))
+				victim.vomit(10, FALSE, TRUE, 1)
+			if(prob(50))
+				victim.ForceContractDisease(new /datum/disease/fungosis)

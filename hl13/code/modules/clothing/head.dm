@@ -4,6 +4,7 @@
 	icon = 'hl13/icons/obj/clothing/hats.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
 	icon_state = "cleanup"
+	clothing_traits = list(TRAIT_WEARING_GAS_MASK)
 
 /obj/item/clothing/head/utility/hardhat/halflife
 	icon = 'hl13/icons/obj/clothing/hats.dmi'
@@ -112,6 +113,7 @@
 	icon_state = "bio_boiler"
 	icon = 'hl13/icons/obj/clothing/hats.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
+	clothing_traits = list(TRAIT_WEARING_GAS_MASK)
 
 /obj/item/clothing/head/beret/durathread/unitednations //HL13 ADDITION
 	name = "old blue beret"

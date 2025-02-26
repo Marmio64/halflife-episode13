@@ -43,6 +43,15 @@
 	icon = 'hl13/icons/obj/xenflora.dmi'
 	max_integrity = 200
 	var/breakmats = null
+	var/hasaltstates = FALSE
+	var/altstates = 0
+
+/obj/structure/flora/xen/Initialize()
+	. = ..()
+	if(!hasaltstates)
+		return
+	if(prob(60))
+		icon_state = "[initial(icon_state)]_[rand(1,(altstates))]"
 
 /obj/structure/flora/xen/atom_deconstruct(disassembled = TRUE)
 	if(breakmats)
@@ -59,6 +68,8 @@
 	light_power = 1.5
 	light_color = "#28533a"
 	breakmats = /obj/item/food/xenbranch
+	hasaltstates = TRUE
+	altstates = 2
 
 /obj/item/food/xenbranch
 	name = "xenian branch"
@@ -78,6 +89,8 @@
 	light_power = 1.5
 	light_color = "#703d68"
 	breakmats = /obj/item/food/xenspore
+	hasaltstates = TRUE
+	altstates = 2
 
 /obj/item/food/xenspore
 	name = "xenian spore"
@@ -109,3 +122,14 @@
 	foodtypes = GROSS
 	icon = 'hl13/icons/obj/xenflora.dmi'
 	icon_state = "slime"
+
+/obj/structure/flora/xen/cougher
+	name = "xen cougher"
+	desc = "A disgusting growth which is coughing up clouds of spores."
+	icon_state = "cougher"
+	density = 1
+	max_integrity = 100
+
+/obj/structure/flora/xen/cougher/Initialize()
+	. = ..()
+	AddElement(/datum/element/vapour_emitter, /datum/vapours/fungalspores, 140)
