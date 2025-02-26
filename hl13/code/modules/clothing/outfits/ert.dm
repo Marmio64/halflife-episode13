@@ -156,7 +156,7 @@
 	l_pocket = /obj/item/knife/combat
 
 	backpack_contents = list(
-		/obj/item/ammo_box/a357 = 4,
+		/obj/item/ammo_box/colta357 = 4,
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
 		/obj/item/stack/medical/gauze = 1,

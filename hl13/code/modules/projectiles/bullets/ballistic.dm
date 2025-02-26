@@ -11,12 +11,13 @@
 	name = "9mm rubber bullet"
 	damage = 10
 	stamina = 15
-	wound_bonus = 0
-	bare_wound_bonus = 10 //oof ouch
+	wound_bonus = 10
+	bare_wound_bonus = 5 //oof ouch
 	sharpness = NONE
 	embed_type = null
 	ricochets_max = 2
 	ricochet_chance = 80
+	icon_state = "rubber"
 
 /obj/projectile/bullet/pellet/shotgun_buckshot/halflife
 	name = "buckshot pellet"

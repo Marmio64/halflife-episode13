@@ -175,10 +175,10 @@
 	name = "Colt Python Ammo Crate"
 	desc = "Contains four Colt Python speed loaders. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 11
-	contains = list(/obj/item/ammo_box/a357,
-					/obj/item/ammo_box/a357,
-					/obj/item/ammo_box/a357,
-					/obj/item/ammo_box/a357)
+	contains = list(/obj/item/ammo_box/colta357,
+					/obj/item/ammo_box/colta357,
+					/obj/item/ammo_box/colta357,
+					/obj/item/ammo_box/colta357)
 	crate_name = "colt python ammo crate"
 
 /datum/supply_pack/security/armory/usp

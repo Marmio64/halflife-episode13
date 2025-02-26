@@ -184,7 +184,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/grenade/spawnergrenade/manhacks = 2,
 		/obj/item/gun/ballistic/automatic/pistol/usp = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 3,
-		/obj/item/ammo_box/a357 = 1,
+		/obj/item/ammo_box/colta357 = 1,
 	)
 	refill_canister = /obj/item/vending_refill/civpro
 	default_price = PAYCHECK_ZERO

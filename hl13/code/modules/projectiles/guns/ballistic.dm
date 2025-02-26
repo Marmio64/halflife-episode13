@@ -237,6 +237,7 @@
 /obj/item/gun/ballistic/revolver/coltpython
 	name = "\improper colt python"
 	desc = "An old colt python revolver, accurate but has the kick of a mule. Uses .357 magnum ammo."
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/coltpython
 	fire_sound = "hl13/sound/weapons/revolverfire.ogg"
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "colt_python"

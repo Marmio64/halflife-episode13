@@ -46,7 +46,7 @@
 		/obj/item/restraints/handcuffs,
 		/obj/item/restraints/legcuffs/bola,
 		/obj/item/ammo_box/magazine/usp9mm,
-		/obj/item/ammo_box/a357,
+		/obj/item/ammo_box/colta357,
 		/obj/item/ammo_box/magazine/ar2,
 		/obj/item/stack/medical/gauze,
 		/obj/item/storage/box/lethalshot,
@@ -83,8 +83,8 @@
 	update_appearance(UPDATE_ICON)
 
 /obj/item/storage/belt/civilprotection/polish_resistance/revolver/PopulateContents()
-	SSwardrobe.provide_type(/obj/item/ammo_box/a357, src)
-	SSwardrobe.provide_type(/obj/item/ammo_box/a357, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/colta357, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/colta357, src)
 	SSwardrobe.provide_type(/obj/item/melee/baton, src)
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit, src)

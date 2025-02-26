@@ -83,6 +83,8 @@
 
 		else if(health <= crit_threshold)
 			losebreath += 0.25 //You're having trouble breathing in soft crit, so you'll miss a breath one in four times
+			if(prob(5)) //hl13 edit. If you're in soft crit, there is a small chance you can pull yourself out of it, assuming you're not totally fucked up.
+				reagents.add_reagent(/datum/reagent/medicine/omnizine, 3) //hl13 edit
 
 	//Suffocate
 	if(losebreath >= 1) //You've missed a breath, take oxy damage
