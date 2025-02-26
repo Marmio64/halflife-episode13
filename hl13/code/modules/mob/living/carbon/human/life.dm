@@ -17,7 +17,7 @@
 					last_painstun = world.time
 					if(prob(probby))
 						shake_camera(src, 1, 1)
-						Immobilize(2 SECONDS)
+						Immobilize(1 SECONDS)
 						emote("scream")
 						flash_fullscreen("redflash3")
 						adjust_stutter(8 SECONDS)
