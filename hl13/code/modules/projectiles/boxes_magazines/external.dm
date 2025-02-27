@@ -4,20 +4,18 @@
 	ammo_type = /obj/item/ammo_casing/c9mm/usp
 	caliber = CALIBER_9MM
 	max_ammo = 15
-	icon_state = "9mmaps-15"
-	base_icon_state = "9mmaps"
+	icon_state = "usp"
+	base_icon_state = "usp"
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
-
-/obj/item/ammo_box/magazine/usp9mm/update_icon_state()
-	. = ..()
-	icon_state = "[base_icon_state]-[round(ammo_count(), 5)]"
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	multiple_sprite_use_base = TRUE
 
 /obj/item/ammo_box/magazine/usp9mm/rubber
 	name = "pistol magazine (9mm rubber)"
 	desc = "A 15-round 9mm magazine designed for the USP Match pistol. This one is designed to fill with rubber rounds."
 	ammo_type = /obj/item/ammo_casing/c9mm/usp/rubber
-	icon_state = "9mmapsru-15"
-	base_icon_state = "9mmapsru"
+	icon_state = "uspru"
+	base_icon_state = "uspru"
 
 /obj/item/ammo_box/magazine/makeshift9mm
 	name = "makeshift pistol magazine (9mm)"
@@ -25,13 +23,11 @@
 	ammo_type = /obj/item/ammo_casing/c9mm/usp/makeshift
 	caliber = CALIBER_9MM
 	max_ammo = 8
-	icon_state = "45-8"
+	icon_state = "45"
 	base_icon_state = "45"
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
-
-/obj/item/ammo_box/magazine/makeshift9mm/update_icon_state()
-	. = ..()
-	icon_state = "[base_icon_state]-[ammo_count()]"
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	multiple_sprite_use_base = TRUE
 
 /obj/item/ammo_box/magazine/ar2
 	name = "OSIPR magazine (pulse)"
@@ -55,10 +51,13 @@
 	name = "\improper MP7 magazine (4.6x30mm)"
 	desc = "A 45-round 4.6x30mm magazine, designed for the MP7."
 	icon_state = "smg9mm"
+	base_icon_state = "smg9mm"
 	ammo_type = /obj/item/ammo_casing/c46x30mm/mp7
 	caliber = CALIBER_46X30MM
 	max_ammo = 40
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	multiple_sprite_use_base = TRUE
 
 //m4a1 Rifle
 
@@ -70,6 +69,8 @@
 	caliber = CALIBER_556NATO
 	max_ammo = 30
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	multiple_sprite_use_base = TRUE
 
 //ak47 Rifle
 
@@ -81,6 +82,8 @@
 	caliber = CALIBER_N762
 	max_ammo = 30
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	multiple_sprite_use_base = TRUE
 
 //service Rifle
 
@@ -92,3 +95,5 @@
 	caliber = CALIBER_556NATO
 	max_ammo = 20
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	multiple_sprite_use_base = TRUE

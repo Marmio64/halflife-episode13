@@ -173,7 +173,7 @@
 		if(owner.mob_mood)
 			switch(owner.mob_mood.sanity_level)
 				if(SANITY_LEVEL_GREAT)
-					sleep_quality = 0.3 //hl13 edit, mood is more effective
+					sleep_quality = 0.4 //hl13 edit, mood is more effective
 				if(SANITY_LEVEL_NEUTRAL)
 					sleep_quality = 0.1
 				if(SANITY_LEVEL_DISTURBED)
@@ -198,7 +198,7 @@
 
 		// check for beds
 		if((locate(/obj/structure/bed) in owner.loc))
-			sleep_quality += 0.4 //hl13 edit, bed is better for healing
+			sleep_quality += 0.5 //hl13 edit, bed is better for healing
 		else if((locate(/obj/structure/table) in owner.loc))
 			sleep_quality += 0.1
 

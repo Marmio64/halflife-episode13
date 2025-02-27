@@ -261,3 +261,58 @@
 	isGlass = FALSE
 	icon_state = "mouthwash"
 	list_reagents = list(/datum/reagent/consumable/sugar = 15, /datum/reagent/consumable/ethanol = 7, /datum/reagent/water = 28)
+
+/obj/item/food/canned/halflife
+	icon = 'hl13/icons/obj/food.dmi'
+
+/obj/item/food/canned/halflife/beans
+	name = "tin of pork beans"
+	desc = "Old world beans with bits of pork floating inside. Better than rations at least."
+	icon_state = "porknbean"
+	trash_type = /obj/item/trash/can/food/halflife/beans
+	food_reagents = list(
+		/datum/reagent/consumable/nutriment = 4,
+		/datum/reagent/consumable/nutriment/protein = 9,
+		/datum/reagent/consumable/ketchup = 4,
+	)
+	tastes = list("beans" = 2, "pork" = 1)
+	foodtypes = VEGETABLES | MEAT
+
+/obj/item/food/canned/halflife/seafood
+	name = "tin of fish"
+	desc = "Some sort of chopped up fish crammed into a tin. It smells terrible, and looks just as bad, but hopefully is edible."
+	icon_state = "seafood"
+	trash_type = /obj/item/trash/can/food/halflife/seafood
+	food_reagents = list(
+		/datum/reagent/consumable/nutriment = 4,
+		/datum/reagent/consumable/nutriment/protein = 9,
+	)
+	tastes = list("fish" = 1)
+	foodtypes = MEAT
+
+/obj/item/food/canned/halflife/crisps
+	name = "tin of crisps"
+	desc = "A tin tube filled with crisps. They're stale, but the salt is good as ever at least."
+	icon_state = "crisps"
+	trash_type = /obj/item/trash/can/food/halflife/crisps
+	food_reagents = list(
+		/datum/reagent/consumable/nutriment = 5,
+		/datum/reagent/consumable/salt = 2,
+	)
+	tastes = list("stale chips" = 1)
+	foodtypes = JUNKFOOD | FRIED
+
+/obj/item/trash/can/food/halflife
+	icon = 'hl13/icons/obj/food.dmi'
+
+/obj/item/trash/can/food/halflife/beans
+	name = "tin of pork beans"
+	icon_state = "porknbean_empty"
+
+/obj/item/trash/can/food/halflife/crisps
+	name = "tin of crisps"
+	icon_state = "crisps_empty"
+
+/obj/item/trash/can/food/halflife/seafood
+	name = "tin of fish"
+	icon_state = "seafood_empty"

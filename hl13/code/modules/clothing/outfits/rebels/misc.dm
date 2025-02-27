@@ -165,7 +165,7 @@
 		/obj/item/grenade/c4 = 1,
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
 		/obj/item/megaphone = 1,
-		/obj/item/food/canned/beans = 1, //stay behind enemy lines for as long as possible
+		/obj/item/food/canned/halflife/beans = 1, //stay behind enemy lines for as long as possible
 		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
 		/obj/item/crowbar/large = 1, //sometimes C4 is too much
 		/obj/item/hl13_small_flag/poland/telescopic = 1, //POLAND POLAND POLAND
@@ -217,7 +217,7 @@
 	backpack_contents = list(
 		/obj/item/grenade/c4 = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
-		/obj/item/food/canned/beans = 1, //long-range footsoldier, meant to go out and scout things for radiohim
+		/obj/item/food/canned/halflife/beans = 1, //long-range footsoldier, meant to go out and scout things for radiohim
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
 	)
@@ -227,7 +227,7 @@
 	backpack_contents = list(
 		/obj/item/grenade/c4 = 1,
 		/obj/item/ammo_box/magazine/m4a1 = 2,
-		/obj/item/food/canned/beans = 1,
+		/obj/item/food/canned/halflife/beans = 1,
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
 		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
 	)
@@ -240,7 +240,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/usp9mm = 2,
-		/obj/item/food/canned/beans = 1, //indie gaming
+		/obj/item/food/canned/halflife/beans = 1, //indie gaming
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
 	)
