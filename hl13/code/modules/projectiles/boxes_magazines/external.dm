@@ -65,6 +65,7 @@
 	name = "rifle magazine (5.56mm)"
 	desc = "A standard 30-round magazine for the M4A1 Rifle. Filled with 5.56 rounds."
 	icon_state = "m308"
+	base_icon_state = "m308"
 	ammo_type = /obj/item/ammo_casing/a556
 	caliber = CALIBER_556NATO
 	max_ammo = 30
@@ -78,6 +79,7 @@
 	name = "rifle magazine (7.62mm)"
 	desc = "A standard 30-round magazine for the AK47 Rifle. Filled with 7.62 rounds."
 	icon_state = "ar762"
+	base_icon_state = "ar762"
 	ammo_type = /obj/item/ammo_casing/n762
 	caliber = CALIBER_N762
 	max_ammo = 30
@@ -91,6 +93,7 @@
 	name = "rifle magazine (5.56mm)"
 	desc = "A standard 20-round magazine for the Service Rifle. Filled with 5.56 rounds."
 	icon_state = "m308small"
+	base_icon_state = "m308small"
 	ammo_type = /obj/item/ammo_casing/a556
 	caliber = CALIBER_556NATO
 	max_ammo = 20

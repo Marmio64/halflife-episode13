@@ -175,7 +175,7 @@
 				if(SANITY_LEVEL_GREAT)
 					sleep_quality = 0.4 //hl13 edit, mood is more effective
 				if(SANITY_LEVEL_NEUTRAL)
-					sleep_quality = 0.1
+					sleep_quality = 0.2 //hl13 edit, slightly upped
 				if(SANITY_LEVEL_DISTURBED)
 					sleep_quality = 0
 				if(SANITY_LEVEL_UNSTABLE)
@@ -232,9 +232,9 @@
 						to_chat(carbon_owner, span_notice("You feel your fitness improving!"))
 
 				if(carbon_owner.nutrition < NUTRITION_LEVEL_STARVING || carbon_owner.hydration < HYDRATION_LEVEL_DEHYDRATED)
-					sleep_quality = 0 //HL13 EDIT, you need have some food or water in ya belly or you just wont heal
+					sleep_quality = 0 //HL13 EDIT, you need to have some food or water in ya belly or you just wont heal
 				else if(carbon_owner.nutrition > NUTRITION_LEVEL_FED && carbon_owner.hydration > HYDRATION_LEVEL_HYDRATED)
-					sleep_quality += 0.2 //HL13 EDIT, having a good amount of food and water in you will help you heal, however.
+					sleep_quality += 0.4 //HL13 EDIT, having a good amount of food and water in you will help you heal, however.
 
 			if(health_ratio > 0) // HL13 EDIT, sleep can heal you so long as you aren't incredibly hurt (Which needs patching up first)
 				need_mob_update += owner.adjustBruteLoss(-0.4 * sleep_quality * seconds_between_ticks, updating_health = FALSE, required_bodytype = BODYTYPE_ORGANIC)

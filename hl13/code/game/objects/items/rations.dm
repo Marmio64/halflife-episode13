@@ -272,7 +272,7 @@
 	trash_type = /obj/item/trash/can/food/halflife/beans
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
-		/datum/reagent/consumable/nutriment/protein = 9,
+		/datum/reagent/consumable/nutriment/protein = 8,
 		/datum/reagent/consumable/ketchup = 4,
 	)
 	tastes = list("beans" = 2, "pork" = 1)
@@ -284,8 +284,8 @@
 	icon_state = "seafood"
 	trash_type = /obj/item/trash/can/food/halflife/seafood
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 4,
-		/datum/reagent/consumable/nutriment/protein = 9,
+		/datum/reagent/consumable/nutriment = 3,
+		/datum/reagent/consumable/nutriment/protein = 8,
 	)
 	tastes = list("fish" = 1)
 	foodtypes = MEAT
