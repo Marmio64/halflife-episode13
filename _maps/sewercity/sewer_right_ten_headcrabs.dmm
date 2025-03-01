@@ -1,8 +1,16 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"b" = (
+/obj/structure/halflife/pallet,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer)
 "d" = (
 /obj/modular_map_connector,
 /turf/template_noop,
 /area/template_noop)
+"n" = (
+/obj/structure/halflife/pallet/stack,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer)
 "o" = (
 /mob/living/simple_animal/hostile/halflife/headcrab,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -11,6 +19,10 @@
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 4
 	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer)
+"w" = (
+/obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
 "B" = (
@@ -79,7 +91,7 @@ N
 U
 U
 U
-U
+b
 N
 Y
 "}
@@ -100,7 +112,7 @@ Y
 (5,1,1) = {"
 Y
 N
-U
+w
 U
 U
 X
@@ -114,7 +126,7 @@ Y
 (6,1,1) = {"
 Y
 N
-U
+w
 U
 U
 X
@@ -128,7 +140,7 @@ Y
 (7,1,1) = {"
 Y
 N
-U
+w
 o
 U
 X
@@ -142,7 +154,7 @@ Y
 (8,1,1) = {"
 Y
 N
-U
+w
 U
 U
 X
@@ -174,7 +186,7 @@ U
 U
 P
 N
-U
+n
 U
 U
 U

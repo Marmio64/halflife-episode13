@@ -2,12 +2,26 @@
 "b" = (
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
+"e" = (
+/obj/structure/halflife/barrel/double/grey/two,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer)
+"f" = (
+/obj/structure/halflife/barrel/triple/grey/two,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer)
 "h" = (
 /obj/modular_map_connector,
 /turf/template_noop,
 /area/template_noop)
 "j" = (
 /mob/living/simple_animal/hostile/halflife/zombie,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer)
+"l" = (
+/obj/structure/chair/halflife/metal/blue{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
 "t" = (
@@ -37,6 +51,15 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
+"F" = (
+/obj/structure/table/halflife/metal/heavy,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer)
+"G" = (
+/obj/structure/halflife/barrel/triple/grey/three,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer)
 "I" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/metal/grate,
@@ -55,6 +78,10 @@
 /area/template_noop)
 "S" = (
 /turf/closed/wall/halflife/sewer,
+/area/halflife/indoors/sewer)
+"Y" = (
+/obj/structure/table/halflife/metal/grate,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
 
 (1,1,1) = {"
@@ -88,9 +115,9 @@ N
 (3,1,1) = {"
 N
 S
+f
 t
-t
-t
+e
 S
 A
 A
@@ -161,11 +188,11 @@ S
 t
 t
 t
-u
+F
 S
 A
 A
-A
+l
 S
 N
 "}
@@ -179,21 +206,21 @@ u
 S
 j
 A
-A
+Y
 S
 N
 "}
 (10,1,1) = {"
 N
 S
-t
+G
 t
 t
 J
 S
-A
-A
-A
+Y
+Y
+Y
 S
 N
 "}
