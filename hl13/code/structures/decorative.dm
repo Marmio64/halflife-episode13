@@ -288,9 +288,9 @@
 		span_notice("You begin to search through [src] for some materials."))
 	if(do_after(user, 5 SECONDS, src))
 		if(prob(35))
-			user.visible_message(span_notice("[user] gathers up materials from [src]."), \
-				span_notice("You gather up some materials from [src]."))
-			new /obj/item/stack/sheet/glass(loc, rand(1,4))
+			user.visible_message(span_notice("[user] finds an intact bottle from [src]."), \
+				span_notice("You find an intact bottle from [src]."))
+			new /obj/item/reagent_containers/cup/glass/bottle/vodka/empty(loc, 1)
 			qdel(src)
 		else
 			user.visible_message(span_notice("[user] fails to gather anything useful from [src]."), \

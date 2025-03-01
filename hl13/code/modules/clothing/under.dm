@@ -122,8 +122,8 @@
 	laser = 25
 	energy = 25
 	bomb = 25
-	fire = 30
-	acid = 30
+	fire = 90
+	acid = 50
 	wound = 10
 
 /obj/item/clothing/under/combine/overwatch
@@ -136,6 +136,9 @@
 	suit_power = 100
 	armor_type = /datum/armor/combinesuit_upgraded
 
+/obj/item/clothing/under/combine/overwatch/Initialize(mapload) //fused to the soldiers, you cant take it off
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
 
 /obj/item/clothing/under/combine/overwatch/red
 	desc = "Red full-body suit which includes kevlar weaving to provide extra protection."
@@ -153,8 +156,8 @@
 	laser = 30
 	energy = 30
 	bomb = 30
-	fire = 40
-	acid = 30
+	fire = 90
+	acid = 50
 	wound = 10
 
 /datum/armor/gruntsuit
@@ -163,8 +166,8 @@
 	laser = 20
 	energy = 20
 	bomb = 20
-	fire = 30
-	acid = 30
+	fire = 90
+	acid = 80
 	wound = 10
 	bio = 100
 
@@ -217,7 +220,7 @@
 	laser = 10
 	energy = 10
 	bomb = 10
-	fire = 30
+	fire = 50
 	acid = 30
 	wound = 5
 

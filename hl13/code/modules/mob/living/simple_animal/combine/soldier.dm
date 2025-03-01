@@ -46,6 +46,7 @@
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
 
+// SHOTGUNER ------------------------------------------------------------------------
 /mob/living/basic/trooper/combine/soldier/shotgunner
 	name = "Overwatch Shotgunner"
 	loot = list(/obj/effect/mob_spawn/corpse/human/combineshotgunner)
@@ -71,6 +72,32 @@
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
 
+// GRUNT ------------------------
+
+/mob/living/basic/trooper/combine/soldier/grunt
+	name = "Overwatch Grunt"
+	loot = list(/obj/effect/mob_spawn/corpse/human/combinegrunt)
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/combinegrunt
+	maxHealth = 125
+	health = 125
+
+/obj/effect/mob_spawn/corpse/human/combinegrunt
+	name = "Overwatch Grunt"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/combinegrunt
+
+/datum/outfit/combinegrunt
+	name = "Overwatch Grunt Corpse"
+
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt
+	uniform = /obj/item/clothing/under/combine/grunt
+	suit = null
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	gloves = /obj/item/clothing/gloves/combat/overwatch/grunt
+	back = /obj/item/tank/internals/oxygen/grunt
+
+// ELITE SOLDIER ------------------------------------
 /mob/living/basic/trooper/combine/soldier/elite
 	name = "Overwatch Elite"
 	loot = list(/obj/effect/mob_spawn/corpse/human/combineelite)
@@ -97,6 +124,8 @@
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
 
+
+// AI STUFF THAT I PUT IN HERE CAUSE IM TOO LAZY TO MAKE ANOTHER FILE FOR IT --------------------------
 /datum/ai_planning_subtree/random_speech/combinesoldier
 	speech_chance = 10
 	sound = list('hl13/sound/voice/otavoicelines/affirmative.ogg', 'hl13/sound/voice/otavoicelines/contact.ogg', 'hl13/sound/voice/otavoicelines/bodypackholding.ogg')

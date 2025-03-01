@@ -18,6 +18,6 @@
 	syllables = list(
 		"tydzień", "dzień", "gdzie", "jest", "kosztuje", "dwie", "kawy", "na", "drzwi", "pieniądze", "książka", "mówisz", "zadzwoń",
 		"jesteś", "zdrowie", "kurwa", "cię", "poznać", "przepraszam", "dobranoc", "dziękuję", "proszę", "poprawiona", "masz",
-		"powinien", "już", "wyśmiać", "dobrym", "twórcy", "najpierw", "umiejętności", "świetny",
+		"powinien", "już", "wyśmiać", "dobrym", "twórcy", "najpierw", "umiejętności", "świetny", "więcej", "rozproszonych",
 		"tak", "nie", "oczywiście", "bardzo", "rozumiem", "smacznego", "warzywo", "cześć", "zgadzam", "pomoc", "trzcinie",
 	)
