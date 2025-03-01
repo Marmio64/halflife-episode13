@@ -1,4 +1,4 @@
-//wall sprites from tgmc
+//metal and wood sprites from tgmc, otherwise ms13
 /turf/closed/wall/halflife
 	name = "wall"
 	desc = "A sturdy wall."
@@ -47,6 +47,10 @@
 	desc = "A strange metal wall with various pipes set into it."
 	icon_state = "urban_wall_regular-0"
 	base_icon_state = "urban_wall_regular"
+
+/turf/closed/wall/halflife/metal/strong
+	max_integrity = 1500
+	explosive_resistance = 2
 
 /turf/closed/wall/halflife/metal/weak
 	max_integrity = 300

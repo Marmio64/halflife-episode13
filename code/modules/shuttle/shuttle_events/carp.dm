@@ -19,7 +19,7 @@
 ///Spawn a bunch of friendly carp to view from inside the shuttle! May occassionally pass through and nibble some windows, but are otherwise pretty harmless
 /datum/shuttle_event/simple_spawner/carp/friendly
 	name = "Passive Carp Nest! (Mostly Harmless!)"
-	event_probability = 3
+	event_probability = 0 //hl13 edit
 	activation_fraction = 0.1
 
 	spawning_list = list(/mob/living/basic/carp/passive = 1)

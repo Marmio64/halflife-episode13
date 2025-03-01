@@ -16,7 +16,7 @@
 ///Very weak meteors, but may very rarely actually hit the shuttle!
 /datum/shuttle_event/simple_spawner/meteor/dust
 	name = "Dust Meteors! (Mostly Safe)"
-	event_probability = 2
+	event_probability = 0 //hl13 edit
 	activation_fraction = 0.1
 
 	spawn_probability_per_process = 100
@@ -32,7 +32,7 @@
 ///Okay this spawns a lot of really bad meteors, but they never hit the shuttle so it's perfectly safe (unless you go outside lol)
 /datum/shuttle_event/simple_spawner/meteor/safe
 	name = "Various Meteors! (Safe)"
-	event_probability = 5
+	event_probability = 0 //hl13 edit
 	activation_fraction = 0.1
 
 	spawn_probability_per_process = 100
@@ -46,7 +46,7 @@
 	spawning_list = list(/obj/effect/meteor/meaty = 1)
 	spawning_flags = SHUTTLE_EVENT_MISS_SHUTTLE | SHUTTLE_EVENT_HIT_SHUTTLE
 
-	event_probability = 0.1
+	event_probability = 0 //hl13 edit
 	activation_fraction = 0.1
 	spawn_probability_per_process = 100
 	spawns_per_spawn = 3

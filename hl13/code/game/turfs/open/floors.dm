@@ -27,6 +27,9 @@
 /turf/open/floor/plating/indoor/burn_tile()
 	return //unburnable
 
+/turf/open/floor/plating/indoor/ex_act(severity, target)
+	return //we're just going to make floors indestructible cause it solves a lot of problems
+
 /turf/open/floor/plating/indoor/MakeSlippery(wet_setting, min_wet_time, wet_time_to_add, max_wet_time, permanent)
 	return
 
@@ -266,6 +269,9 @@
 
 /turf/open/floor/plating/ground/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
 	return
+
+/turf/open/floor/plating/ground/ex_act(severity, target)
+	return //we're just going to make floors indestructible cause it solves a lot of problems
 
 /turf/open/floor/plating/ground/break_tile()
 	return //unbreakable

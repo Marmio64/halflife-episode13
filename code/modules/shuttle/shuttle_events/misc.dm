@@ -1,7 +1,7 @@
 ///thats amoreeeeee
 /datum/shuttle_event/simple_spawner/italian
 	name = "Italian Storm! (Mama Mia!)"
-	event_probability = 0.05
+	event_probability = 0 //hl13 edit
 
 	spawns_per_spawn = 5
 	spawning_flags = SHUTTLE_EVENT_MISS_SHUTTLE | SHUTTLE_EVENT_HIT_SHUTTLE
@@ -12,7 +12,7 @@
 ///We do a little bit of tomfoolery
 /datum/shuttle_event/simple_spawner/fake_ttv
 	name = "Fake TTV (Harmless!)"
-	event_probability = 0.5
+	event_probability = 0 //hl13 edit
 	activation_fraction = 0.1
 
 	spawning_list = list(/obj/item/transfer_valve/fake = 1)
@@ -25,7 +25,7 @@
 ///Just spawn random maint garbage
 /datum/shuttle_event/simple_spawner/maintenance
 	name = "Maintenance Debris (Harmless!)"
-	event_probability = 3
+	event_probability = 0 //hl13 edit
 	activation_fraction = 0.1
 
 	spawning_list = list()

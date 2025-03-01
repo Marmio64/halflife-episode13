@@ -22,8 +22,8 @@
 						flash_fullscreen("redflash3")
 						adjust_stutter(8 SECONDS)
 						adjust_confusion(10 SECONDS)
-						if(painpercent >= 140)
-							Paralyze(5 SECONDS)
+						if(painpercent >= 130)
+							Paralyze(painpercent/3) //min amount is 130, so a third of that is a little over 4 seconds. (This goes in deciseconds)
 					else
 						emote("paingroan")
 						adjust_stutter(5 SECONDS)
