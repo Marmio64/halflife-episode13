@@ -7,8 +7,8 @@
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/combinesoldier
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/combine
 	r_hand = /obj/item/gun/ballistic/automatic/mp7
-	maxHealth = 150
-	health = 150
+	maxHealth = 160
+	health = 160
 	death_sound = 'hl13/sound/voice/otavoicelines/die1.ogg'
 	/// Type of bullet we use
 	var/casingtype = /obj/item/ammo_casing/c46x30mm/mp7
@@ -79,8 +79,8 @@
 	casingtype = /obj/item/ammo_casing/caseless/pulse/ar2
 	projectilesound = "hl13/sound/weapons/ar2fire.ogg"
 	ranged_cooldown = 0.4 SECONDS
-	maxHealth = 200
-	health = 200
+	maxHealth = 220
+	health = 220
 
 /obj/effect/mob_spawn/corpse/human/combineelite
 	name = "Overwatch Elite"
