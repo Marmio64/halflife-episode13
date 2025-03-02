@@ -290,8 +290,8 @@
 	plane = ABOVE_GAME_PLANE
 	drag_slowdown = 1.5
 	product_types = list(/obj/item/grown/log/tree = 1)
-	harvest_amount_low = 6
-	harvest_amount_high = 10
+	harvest_amount_low = 4
+	harvest_amount_high = 8
 	harvest_message_low = "You manage to gather a few logs from the tree."
 	harvest_message_med = "You manage to gather some logs from the tree."
 	harvest_message_high = "You manage to get most of the wood from the tree."

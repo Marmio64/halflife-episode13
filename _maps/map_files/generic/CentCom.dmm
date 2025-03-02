@@ -135,8 +135,7 @@
 	pixel_x = 2;
 	pixel_y = 11
 	},
-/obj/machinery/light/cold/directional/north,
-/obj/machinery/status_display/evac/directional/north,
+/obj/machinery/combine_walllight/directional/south,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/centcom/halflife/ota)
 "bf" = (
@@ -211,7 +210,7 @@
 /turf/open/floor/iron,
 /area/centcom/tdome/arena)
 "bU" = (
-/obj/machinery/light/cold/directional/north,
+/obj/machinery/combine_walllight/directional/south,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/centcom/halflife/ota)
 "bZ" = (
@@ -413,7 +412,7 @@
 /turf/open/floor/plating/indoor/trainfloor,
 /area/centcom/halflife)
 "dD" = (
-/obj/machinery/light/cold/directional/south,
+/obj/machinery/combine_walllight/directional/north,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/centcom/halflife/ota)
 "dE" = (
@@ -760,6 +759,7 @@
 	pixel_x = 2;
 	pixel_y = 13
 	},
+/obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/centcom/halflife/ota)
 "hH" = (
@@ -3292,8 +3292,8 @@
 /area/centcom/halflife/ota)
 "Nn" = (
 /obj/structure/table/halflife/metal/alt,
-/obj/machinery/light/cold/directional/south,
 /obj/item/hl2key/overwatch_exchange,
+/obj/machinery/combine_walllight/directional/north,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/centcom/halflife/ota)
 "Nv" = (
@@ -4163,6 +4163,10 @@
 	},
 /turf/open/floor/iron,
 /area/centcom/tdome/observation)
+"Xa" = (
+/obj/machinery/combine_walllight/directional/east,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/centcom/halflife/ota)
 "Xb" = (
 /obj/structure/railing/halflife/solo{
 	dir = 1
@@ -54209,7 +54213,7 @@ Hv
 Hv
 pn
 Hv
-Sv
+Xa
 Hv
 zl
 iK

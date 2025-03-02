@@ -290,7 +290,10 @@
 		if(prob(35))
 			user.visible_message(span_notice("[user] finds an intact bottle from [src]."), \
 				span_notice("You find an intact bottle from [src]."))
-			new /obj/item/reagent_containers/cup/glass/bottle/vodka/empty(loc, 1)
+			if(prob(90))
+				new /obj/item/reagent_containers/cup/glass/bottle/vodka/empty(loc, 1)
+			else
+				new /obj/item/reagent_containers/cup/glass/bottle/vodka(loc, 1) //a small chance to get a full bottle!
 			qdel(src)
 		else
 			user.visible_message(span_notice("[user] fails to gather anything useful from [src]."), \

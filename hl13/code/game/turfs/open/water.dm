@@ -102,6 +102,9 @@
 
 /obj/effect/overlay/halflife/water/top
 	layer = TURF_LAYER_WATER_UNDER
+	light_power = 0.25 //water is reflective, or has glowing contaminants inside of it...
+	light_range = 0.25
+	light_color = "#0486b9"
 
 /obj/effect/overlay/halflife/water/top/deep
 	icon_state = "water_deep_top"
@@ -324,6 +327,9 @@
 
 /obj/effect/overlay/halflife/sewer/top
 	layer = TURF_LAYER_WATER_UNDER
+	light_power = 0.25 //water is reflective, or has glowing contaminants inside of it...
+	light_range = 0.25
+	light_color = "#013b09"
 
 /obj/effect/overlay/halflife/sewer/top/deep
 	icon_state = "sewer_deep_top"

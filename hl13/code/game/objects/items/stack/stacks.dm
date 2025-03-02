@@ -51,12 +51,11 @@
 	drop_sound = null
 	attack_verb_continuous = list("clonks", "smacks", "clocks", "nails", "bludgeons", "whacks", "bonks", "bricks")
 	attack_verb_simple = list("clonk", "smack", "clock", "nail", "bludgeon", "whack", "bonk", "brick")
-	force = 18
+	force = 17
 	throwforce = 20 //brick
 	throw_speed = 1.5
 	throw_range = 6
-	wound_bonus = 0
-	bare_wound_bonus = 5
+	wound_bonus = 5
 	w_class = WEIGHT_CLASS_SMALL
 	max_integrity = 200
 	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0,  FIRE = 100, ACID = 50)
