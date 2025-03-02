@@ -1037,6 +1037,10 @@
 /obj/item/storage/belt/pouch,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"lK" = (
+/obj/effect/spawner/random/halflife/loot/heal,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer)
 "lN" = (
 /obj/structure/table/halflife/metal,
 /obj/item/reagent_containers/cup/soda_cans/breenwater/yellow{
@@ -1300,7 +1304,8 @@
 /turf/open/misc/grass/jungle/station,
 /area/halflife/outdoors/forest)
 "oB" = (
-/obj/structure/ladder/halflife/manhole/upwards,
+/obj/structure/table/halflife/metal/grate,
+/obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "oG" = (
@@ -38438,7 +38443,7 @@ SZ
 SZ
 SZ
 SZ
-BI
+Wy
 BI
 Lj
 wF
@@ -40201,7 +40206,7 @@ wF
 CR
 IA
 Lj
-Wy
+oB
 ag
 ka
 kT
@@ -40801,7 +40806,7 @@ CR
 CR
 IA
 Lj
-oB
+SZ
 SZ
 SZ
 SZ
@@ -70783,7 +70788,7 @@ wG
 UI
 jS
 RU
-WG
+lK
 Nu
 Yy
 WG
