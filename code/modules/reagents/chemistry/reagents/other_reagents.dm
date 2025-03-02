@@ -284,9 +284,8 @@
 
 /datum/reagent/water/unpurified/river/on_mob_life(mob/living/L, methods=TOUCH, reac_volume, show_message = TRUE, permeability = 1)
 	..()
-	if((methods & (PATCH|INGEST|INJECT)) || ((methods & VAPOR) && prob(min(reac_volume,100)*permeability)))
-		if(prob(10))
-			L.ForceContractDisease(new /datum/disease/gutworms(), FALSE, TRUE) //Unclean water causes diseases
+	if(prob(5))
+		L.ForceContractDisease(new /datum/disease/gutworms)
 
 //hl13 edit end
 /*

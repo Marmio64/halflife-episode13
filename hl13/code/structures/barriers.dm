@@ -35,8 +35,10 @@
 	altstates = 1
 
 /obj/structure/halflife/road_barrier/combine
+	name = "combine barrier"
 	desc = "A combine barricade made of strange metals with a warping, almost liquid-like center. Durable, and good for cover."
+	climbable = TRUE
 	icon_state = "combine"
 	anchored = TRUE
-	max_integrity = 650
+	max_integrity = 600
 	projectile_passchance = 30

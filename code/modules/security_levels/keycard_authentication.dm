@@ -71,9 +71,7 @@ GLOBAL_DATUM_INIT(keycard_events, /datum/events, new)
 				sendEvent(KEYCARD_RED_ALERT)
 				. = TRUE
 		if("emergency_maint")
-			if(!event_source)
-				sendEvent(KEYCARD_EMERGENCY_MAINTENANCE_ACCESS)
-				. = TRUE
+			return //hl13 edit
 		if("auth_swipe")
 			if(event_source)
 				event_source.trigger_event(usr)
@@ -81,9 +79,7 @@ GLOBAL_DATUM_INIT(keycard_events, /datum/events, new)
 				update_appearance()
 				. = TRUE
 		if("bsa_unlock")
-			if(!event_source)
-				sendEvent(KEYCARD_BSA_UNLOCK)
-				. = TRUE
+			return //hl13 edit
 		if("give_janitor_access")
 			var/mob/living/living_user = usr
 			if(!living_user || !istype(living_user))

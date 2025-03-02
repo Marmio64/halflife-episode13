@@ -19,6 +19,11 @@
 	/// Time between taking shots
 	var/ranged_cooldown = 0.2 SECONDS
 
+/mob/living/basic/trooper/combine/soldier/burst
+	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/combine
+	burst_shots = 4
+	ranged_cooldown = 2 SECONDS
+
 /mob/living/basic/trooper/combine/soldier/Initialize(mapload)
 	. = ..()
 	AddComponent(\
@@ -109,6 +114,11 @@
 	maxHealth = 220
 	health = 220
 
+/mob/living/basic/trooper/combine/soldier/elite/burst
+	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/combine
+	burst_shots = 3
+	ranged_cooldown = 2 SECONDS
+
 /obj/effect/mob_spawn/corpse/human/combineelite
 	name = "Overwatch Elite"
 	hairstyle = "Bald"
@@ -129,6 +139,7 @@
 /datum/ai_planning_subtree/random_speech/combinesoldier
 	speech_chance = 10
 	sound = list('hl13/sound/voice/otavoicelines/affirmative.ogg', 'hl13/sound/voice/otavoicelines/contact.ogg', 'hl13/sound/voice/otavoicelines/bodypackholding.ogg')
+	emote_see = list("squares their arm, and gestures to advance.", "holds a finger to their helmet radio.", "checks their firearm magazine.")
 
 /datum/ai_controller/basic_controller/trooper/ranged/combine
 	planning_subtrees = list(
@@ -142,6 +153,14 @@
 	planning_subtrees = list(
 		/datum/ai_planning_subtree/simple_find_target,
 		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trooper_shotgun,
+		/datum/ai_planning_subtree/travel_to_point/and_clear_target/reinforce,
+		/datum/ai_planning_subtree/random_speech/combinesoldier,
+	)
+
+/datum/ai_controller/basic_controller/trooper/ranged/burst/combine
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trooper_burst,
 		/datum/ai_planning_subtree/travel_to_point/and_clear_target/reinforce,
 		/datum/ai_planning_subtree/random_speech/combinesoldier,
 	)

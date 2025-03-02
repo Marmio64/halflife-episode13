@@ -10,11 +10,15 @@
 	viable_mobtypes = list(/mob/living/carbon/human)
 	cure_chance = 6
 	desc = "A dangerous food-borne parasite that infests raw food and will cause severe stomach issues, but will eventually pass on it's own."
-	required_organ = list(/obj/item/organ/stomach)
-	severity = DISEASE_SEVERITY_MEDIUM
+	required_organ = ORGAN_SLOT_STOMACH
+	severity = DISEASE_CYCLES_MINOR
+	disease_flags = CURABLE|CAN_CARRY //you cant build up resistance to gutworms
 
 /datum/disease/gutworms/stage_act()
-	..()
+	. = ..()
+	if(!.)
+		return
+
 	switch(stage)
 		if(2)
 			if(prob(5))
@@ -24,11 +28,11 @@
 				affected_mob.adjust_confusion(3 SECONDS)
 				affected_mob.adjustStaminaLoss(20)
 		if(4)
-			if(prob(2))
+			if(prob(3))
 				to_chat(affected_mob, span_userdanger("You feel terrible, as a deep pain appears in your gut."))
 				affected_mob.adjust_dizzy(3)
 				affected_mob.adjust_confusion(3 SECONDS)
-			if(prob(2))
+			if(prob(3))
 				to_chat(affected_mob, span_danger("Your stomach rumbles violently, prickles of pain emanating from your gut."))
 				affected_mob.adjust_nutrition(-15)
 		if(5)
