@@ -137,9 +137,14 @@
 
 // AI STUFF THAT I PUT IN HERE CAUSE IM TOO LAZY TO MAKE ANOTHER FILE FOR IT --------------------------
 /datum/ai_planning_subtree/random_speech/combinesoldier
-	speech_chance = 10
+	speech_chance = 3
 	sound = list('hl13/sound/voice/otavoicelines/affirmative.ogg', 'hl13/sound/voice/otavoicelines/contact.ogg', 'hl13/sound/voice/otavoicelines/bodypackholding.ogg')
 	emote_see = list("squares their arm, and gestures to advance.", "holds a finger to their helmet radio.", "checks their firearm magazine.")
+	speak = list(
+		"Copy, Echo-1 holding.",
+		"Blip on bioscanner read.",
+		"Bodypack systems holding, confirmed secondary check.",
+	)
 
 /datum/ai_controller/basic_controller/trooper/ranged/combine
 	planning_subtrees = list(

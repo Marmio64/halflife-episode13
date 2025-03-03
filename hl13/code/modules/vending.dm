@@ -26,7 +26,7 @@
 	product_slogans = "Stimulate the economy!;Sedate resistive thoughts!;Purchase neat belongings!;Buy, Buy, Buy!"
 	vend_reply = "Thank you for using Gift Vendor!"
 	products = list(/obj/item/clothing/under/citizen = 3,
-					/obj/item/clothing/suit/bluejacket = 3,
+					/obj/item/clothing/suit/bluejacket = 5,
 					/obj/item/camera_film = 10,
 					/obj/item/camera = 3,
 					/obj/item/hourglass = 2,
@@ -36,7 +36,7 @@
 					/obj/item/flashlight = 3,
 					/obj/item/clothing/head/beanie/black = 3,
 					/obj/item/clothing/head/flatcap = 3,
-					/obj/item/lighter/greyscale = 3,
+					/obj/item/lighter/greyscale = 6,
 					/obj/item/customlock = 8,
 					/obj/item/customblank = 12,
 					/obj/item/storage/halflife/keyring = 4,
@@ -52,7 +52,7 @@
 					/obj/item/storage/box/fishing_lures = 2,
 					/obj/item/tape = 5, //tape recorder stuff
 					/obj/item/taperecorder = 2,
-					/obj/item/storage/fancy/cigarettes/halflife = 5,
+					/obj/item/storage/fancy/cigarettes/halflife = 8,
 					/obj/item/clothing/gloves/fingerless = 3)
 
 	contraband = list(/obj/item/lockpick = 1,

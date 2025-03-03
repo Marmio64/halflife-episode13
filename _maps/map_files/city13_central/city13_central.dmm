@@ -1014,6 +1014,10 @@
 "bLc" = (
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
+"bLO" = (
+/obj/structure/table/halflife/wood,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/laborunion)
 "bLW" = (
 /obj/structure/window/fulltile,
 /turf/open/floor/plating/indoor/tile,
@@ -2474,6 +2478,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
+"dWa" = (
+/obj/machinery/status_display/evac/directional/north,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/productioncenter/infestation)
 "dXd" = (
 /obj/structure/table/halflife/no_smooth/large/wood/square{
 	dir = 8
@@ -4948,6 +4956,7 @@
 /area/halflife/outdoors/alley)
 "hHX" = (
 /obj/structure/table/halflife/no_smooth/metal,
+/obj/machinery/jukebox/radio,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/store)
 "hIs" = (
@@ -5178,11 +5187,6 @@
 /obj/effect/spawner/random/halflife/loot/rare,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/cave)
-"icW" = (
-/obj/machinery/light/small/directional/south,
-/obj/machinery/photocopier,
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/laborunion)
 "idl" = (
 /obj/structure/bed/halflife/bedframe/wood,
 /obj/structure/bed/halflife/mattress/yellowed,
@@ -5581,6 +5585,10 @@
 /obj/machinery/computer/operating,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/townhall/infirmary)
+"iHM" = (
+/obj/machinery/status_display/evac/directional/north,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/productioncenter)
 "iHS" = (
 /obj/structure/flora/bush/sparsegrass/style_random,
 /turf/open/misc/grass/jungle/station,
@@ -6125,9 +6133,9 @@
 	},
 /area/halflife/outdoors)
 "jCS" = (
-/obj/structure/table/halflife/wood,
+/obj/structure/closet/halflife,
 /turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/laborunion)
+/area/halflife/indoors)
 "jCY" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating/indoor/grooved2,
@@ -7089,6 +7097,10 @@
 "lcL" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/trainstation)
+"lcN" = (
+/obj/item/papercutter,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors)
 "ldt" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/roofs)
@@ -7874,14 +7886,6 @@
 /obj/item/reagent_containers/pill/iron,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/townhall/infirmary)
-"mjs" = (
-/obj/structure/table/halflife/wood,
-/obj/machinery/fax{
-	name = "Labor Union's Fax Machine";
-	fax_name = "Labor Union"
-	},
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/laborunion)
 "mjB" = (
 /turf/open/openspace,
 /area/halflife/indoors/hospital/virology)
@@ -12031,6 +12035,11 @@
 /obj/item/clothing/head/halflife/blue_hardhat,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/productioncenter/office)
+"sTY" = (
+/obj/machinery/light/small/directional/south,
+/obj/machinery/photocopier,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/laborunion)
 "sVa" = (
 /obj/structure/railing/halflife/sewer,
 /obj/structure/halflife/pipes/piped,
@@ -14199,6 +14208,14 @@
 /obj/effect/turf_decal/halflife/road/horizontalcrossing,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors)
+"wcU" = (
+/obj/structure/table/halflife/wood,
+/obj/machinery/fax{
+	name = "Labor Union's Fax Machine";
+	fax_name = "Labor Union"
+	},
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/laborunion)
 "weH" = (
 /obj/structure/chair/halflife/wood{
 	dir = 4;
@@ -15193,10 +15210,6 @@
 /obj/structure/chair/halflife/metal/blue,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/hydroponics)
-"xCF" = (
-/obj/item/papercutter,
-/turf/open/floor/plating/indoor/woodc/mosaic,
-/area/halflife/indoors)
 "xCJ" = (
 /obj/modular_map_root/citysouth,
 /turf/open/floor/plating/ground/sidewalk,
@@ -44530,7 +44543,7 @@ art
 bMK
 icw
 uby
-tJy
+dWa
 tJy
 tJy
 uXZ
@@ -44905,7 +44918,7 @@ tkR
 gYX
 tkR
 uby
-bMK
+iHM
 wIr
 bMK
 fTn
@@ -46570,7 +46583,7 @@ jOD
 bMK
 icw
 uby
-bMK
+iHM
 kXA
 uby
 bMK
@@ -47150,7 +47163,7 @@ lli
 hVX
 inP
 hVX
-xCF
+lcN
 nfT
 hVX
 hVX
@@ -47581,7 +47594,7 @@ axK
 lli
 uxS
 uDU
-axK
+jCS
 lli
 axK
 rlF
@@ -48208,7 +48221,7 @@ mQu
 sLL
 hjo
 hjo
-icW
+sTY
 urN
 dHd
 wgh
@@ -48336,7 +48349,7 @@ mQu
 fYw
 cgp
 hjo
-jCS
+bLO
 urN
 dHd
 wgh
@@ -48464,7 +48477,7 @@ mQu
 hjo
 cgp
 hjo
-mjs
+wcU
 urN
 dHd
 wgh
@@ -68686,11 +68699,11 @@ mAz
 mAz
 mAz
 mAz
+mAz
 gdE
-gdE
-gdE
-gdE
-gdE
+mAz
+mAz
+mAz
 gdE
 gdE
 gdE
@@ -69211,7 +69224,7 @@ gdE
 lli
 fqM
 rEF
-axK
+jCS
 lli
 axK
 axK
