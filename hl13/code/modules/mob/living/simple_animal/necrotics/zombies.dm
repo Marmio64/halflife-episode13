@@ -100,7 +100,7 @@
 	sound_vary = FALSE
 	aggro_sound = 'hl13/sound/creatures/fastzombiealert.ogg'
 	idle_sounds = list('hl13/sound/creatures/fastzombie_breath.ogg', 'hl13/sound/creatures/fastzombiesound1.ogg', 'hl13/sound/creatures/fastzombiesound2.ogg', 'hl13/sound/creatures/fastzombiesound3.ogg')
-	butcher_results = list(/obj/item/stack/sheet/sinew = 2)
+	butcher_results = list(/obj/item/stack/sheet/sinew = 2, /obj/item/food/meat/slab/halflife/zombie = 1)
 	var/charging = FALSE
 	var/revving_charge = FALSE
 	var/dash_speed = 1

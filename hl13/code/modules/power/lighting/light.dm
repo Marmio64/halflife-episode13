@@ -27,8 +27,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light/small/cyan, 0)
 	icon = 'hl13/icons/obj/lighting.dmi'
 	icon_state = "combinelight"
 	light_angle = 230
-	light_range = 5
-	light_power = 1.75
+	light_range = 6
+	light_power = 1.5
 	light_color = LIGHT_COLOR_FAINT_CYAN
 	layer = WALL_OBJ_LAYER
 	plane = GAME_PLANE_UPPER
@@ -44,5 +44,4 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/combine_walllight, 0)
 		if(SOUTH)
 			pixel_y = 25
 
-	// Light projects out backwards from the dir of the light.
-	set_light(l_dir = REVERSE_DIR(dir))
+	set_light(l_dir = dir)
