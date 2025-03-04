@@ -74,8 +74,8 @@
 
 
 /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle/PopulateContents()
-	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/service, src)
-	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/service, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1/service, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1/service, src)
 	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit, src)

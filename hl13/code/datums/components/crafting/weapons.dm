@@ -150,7 +150,7 @@
 
 /datum/crafting_recipe/servicemag
 	name = "5.56 Service Rifle Full Magazine"
-	result = /obj/item/ammo_box/magazine/service
+	result = /obj/item/ammo_box/magazine/m4a1/service
 	reqs = list(/obj/item/stack/sheet/iron = 25,
 				/obj/item/stack/cable_coil = 20,
 				/datum/reagent/fuel = 30)

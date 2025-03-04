@@ -89,14 +89,9 @@
 
 //service Rifle
 
-/obj/item/ammo_box/magazine/service
+/obj/item/ammo_box/magazine/m4a1/service
 	name = "rifle magazine (5.56mm)"
 	desc = "A standard 20-round magazine for the Service Rifle. Filled with 5.56 rounds."
 	icon_state = "m308small"
 	base_icon_state = "m308small"
-	ammo_type = /obj/item/ammo_casing/a556
-	caliber = CALIBER_556NATO
 	max_ammo = 20
-	icon = 'hl13/icons/obj/guns/ammo.dmi'
-	multiple_sprites = AMMO_BOX_FULL_EMPTY
-	multiple_sprite_use_base = TRUE

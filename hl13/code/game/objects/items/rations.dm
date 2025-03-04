@@ -225,7 +225,7 @@
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/yellow/Initialize(mapload)
 	if(prob(10))
-		list_reagents = list(/datum/reagent/water/unpurified = 10, /datum/reagent/toxin/mindbreaker = 10) //This smells funny...
+		list_reagents = list(/datum/reagent/water/unpurified/river = 20) //may contain worms
 	. = ..()
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/red

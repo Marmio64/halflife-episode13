@@ -121,10 +121,10 @@
 	name = "Service Rifle Ammo Crate"
 	desc = "Contains four service rifle magazines. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 11
-	contains = list(/obj/item/ammo_box/magazine/service,
-					/obj/item/ammo_box/magazine/service,
-					/obj/item/ammo_box/magazine/service,
-					/obj/item/ammo_box/magazine/service)
+	contains = list(/obj/item/ammo_box/magazine/m4a1/service,
+					/obj/item/ammo_box/magazine/m4a1/service,
+					/obj/item/ammo_box/magazine/m4a1/service,
+					/obj/item/ammo_box/magazine/m4a1/service)
 	crate_name = "service rifle ammo crate"
 
 /datum/supply_pack/security/armory/mp7

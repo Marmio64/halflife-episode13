@@ -105,7 +105,7 @@
 	rack_sound = "sound/items/weapons/gun/rifle/bolt_in.ogg"
 	eject_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
 	eject_empty_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
-	accepted_magazine_type = /obj/item/ammo_box/magazine/service
+	accepted_magazine_type = /obj/item/ammo_box/magazine/m4a1/service
 	force = 12
 	fire_delay = 2
 	burst_size = 1

@@ -138,12 +138,17 @@
 // AI STUFF THAT I PUT IN HERE CAUSE IM TOO LAZY TO MAKE ANOTHER FILE FOR IT --------------------------
 /datum/ai_planning_subtree/random_speech/combinesoldier
 	speech_chance = 3
-	sound = list('hl13/sound/voice/otavoicelines/affirmative.ogg', 'hl13/sound/voice/otavoicelines/contact.ogg', 'hl13/sound/voice/otavoicelines/bodypackholding.ogg')
+	sound = list('hl13/sound/voice/otaradio/off1.ogg', 'hl13/sound/voice/otaradio/off2.ogg', 'hl13/sound/voice/otaradio/off3.ogg')
 	emote_see = list("squares their arm, and gestures to advance.", "holds a finger to their helmet radio.", "checks their firearm magazine.")
 	speak = list(
 		"Copy, Echo-1 holding.",
 		"Blip on bioscanner read.",
 		"Bodypack systems holding, confirmed secondary check.",
+		"Copy, ready to sterilize.",
+		"Stabilization is ago.",
+		"Prepping extractors.",
+		"Verdicts at full.",
+		"Overwatch, may require reserve activation.",
 	)
 
 /datum/ai_controller/basic_controller/trooper/ranged/combine

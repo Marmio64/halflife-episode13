@@ -1317,9 +1317,40 @@
 	belt = /obj/item/flashlight/seclite
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/service = 3,
+		/obj/item/ammo_box/magazine/m4a1/service = 3,
 		/obj/item/grenade/syndieminibomb/bouncer = 2,
 	)
 
 /datum/outfit/deathmatch_loadout/conscript/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/forgetaboutfreeman.ogg'
+
+/datum/outfit/deathmatch_loadout/rioter
+	name = "Deathmatch: Rioter"
+	display_name = "Rioter"
+	desc = "Deceptively underequipped, the rioter actually sports a wide array of improvised equipment which will award patience, but is vulnerable to being rushed down."
+
+	head = /obj/item/clothing/head/helmet/halflife/military
+	uniform = /obj/item/clothing/under/citizen/rebel
+	gloves = /obj/item/clothing/gloves/fingerless
+	suit = /obj/item/clothing/suit/armor/browncoat
+	r_pocket = /obj/item/lighter
+	l_pocket = /obj/item/switchblade
+
+	l_hand = /obj/item/gun/ballistic/automatic/pistol/makeshift
+	r_hand = /obj/item/gun/ballistic/automatic/pistol/makeshift
+
+	back = /obj/item/storage/backpack/halflife
+	backpack_contents = list(
+		/obj/item/grenade/halflife/molotov,
+		/obj/item/grenade/halflife/molotov,
+		/obj/item/grenade/halflife/molotov,
+		/obj/item/reagent_containers/pill/patch/medkit,
+		/obj/item/reagent_containers/pill/patch/medkit/vial,
+		/obj/item/ammo_box/magazine/makeshift9mm,
+		/obj/item/ammo_box/magazine/makeshift9mm,
+		/obj/item/restraints/legcuffs/beartrap,
+		/obj/item/stack/sheet/halflife/brick,
+	)
+
+/datum/outfit/deathmatch_loadout/rioter/pre_equip(mob/living/carbon/human/H)
+	H.cmode_music = 'hl13/sound/music/combat/cpviolation.ogg'

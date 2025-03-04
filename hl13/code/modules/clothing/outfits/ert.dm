@@ -134,7 +134,7 @@
 	belt = /obj/item/flashlight/seclite
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/service = 3,
+		/obj/item/ammo_box/magazine/m4a1/service = 3,
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
 		/obj/item/stack/medical/gauze = 1,
