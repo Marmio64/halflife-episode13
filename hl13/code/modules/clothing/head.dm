@@ -97,7 +97,7 @@
 
 /datum/armor/headcrab
 	melee = 25
-	bullet = 15
+	bullet = 20
 	laser = 20
 	energy = 20
 	bomb = 25

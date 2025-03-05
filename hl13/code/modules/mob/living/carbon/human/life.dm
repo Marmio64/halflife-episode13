@@ -1,5 +1,5 @@
 /mob/living/carbon/human/proc/handle_pain()//BP/WOUND BASED PAIN
-	if(HAS_TRAIT(src, TRAIT_NOPAIN))
+	if(HAS_TRAIT(src, TRAIT_ANALGESIA))
 		return
 	if(!stat)
 		adjust_temppain(-2)
