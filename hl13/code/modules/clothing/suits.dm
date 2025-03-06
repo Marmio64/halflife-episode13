@@ -283,3 +283,12 @@
 	fire = 25
 	acid = 25
 	wound = 15
+
+//Fungal plate armor. Provides the same protection as a civil protection officer vest, but slows you down quite a lot.
+/obj/item/clothing/suit/armor/platearmor
+	name = "fungal plate armor"
+	desc = "Chest armor comprised of fungal plates harvested from xenian lifeforms. Offers decent protection, but is heavy and uncomfortable."
+	icon_state = "platearmor"
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+	slowdown = 0.5

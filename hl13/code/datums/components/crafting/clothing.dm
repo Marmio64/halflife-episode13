@@ -54,3 +54,13 @@
 				/obj/item/stack/sheet/animalhide/goliath_hide = 1)
 	time = 10 SECONDS
 	category = CAT_ARMOR
+
+//my armor is very crabby
+/datum/crafting_recipe/headcrab_helmet
+	name = "Fungal Plate Armor"
+	result = /obj/item/clothing/suit/armor/platearmor
+	reqs = list(/obj/item/stack/sheet/sinew = 3,
+				/obj/item/stack/sheet/bone = 3,
+				/obj/item/stack/sheet/animalhide/goliath_hide = 3)
+	time = 12 SECONDS
+	category = CAT_ARMOR

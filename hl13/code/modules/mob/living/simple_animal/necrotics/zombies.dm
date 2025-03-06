@@ -149,6 +149,7 @@
 	icon_living = "fungalzombie"
 	icon_dead = "fungalzombie_dead"
 	no_crab_state = "fungalzombie_nocrab"
+	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1)
 	maxHealth = 160
 	health = 160
 	fungalheal = TRUE
