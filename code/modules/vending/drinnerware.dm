@@ -46,6 +46,9 @@
 				/obj/item/reagent_containers/condiment/pack/astrotame = 5,
 				/obj/item/reagent_containers/condiment/saltshaker = 5,
 				/obj/item/reagent_containers/condiment/peppermill = 5,
+				/obj/item/reagent_containers/condiment/vinegar = 2,
+				/obj/item/reagent_containers/condiment/olive_oil = 2,
+				/obj/item/reagent_containers/condiment/soysauce = 2,
 			),
 		),
 	)

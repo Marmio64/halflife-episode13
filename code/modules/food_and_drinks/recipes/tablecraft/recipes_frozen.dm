@@ -24,16 +24,6 @@
 	result = /obj/item/food/strawberryicecreamsandwich
 	category = CAT_ICE
 
-/datum/crafting_recipe/food/spacefreezy
-	name ="Space freezy"
-	reqs = list(
-		/datum/reagent/consumable/bluecherryjelly = 5,
-		/datum/reagent/consumable/spacemountainwind = 15,
-		/obj/item/food/icecream = 1
-	)
-	result = /obj/item/food/spacefreezy
-	category = CAT_ICE
-
 /datum/crafting_recipe/food/sundae
 	name ="Sundae"
 	reqs = list(
@@ -183,28 +173,8 @@
 	result = /obj/item/food/snowcones/fruitsalad
 	category = CAT_ICE
 
-/datum/crafting_recipe/food/mime_sc
-	name = "Mime snowcone"
-	reqs = list(
-		/obj/item/reagent_containers/cup/glass/sillycup = 1,
-		/datum/reagent/consumable/ice = 15,
-		/datum/reagent/consumable/nothing = 5
-	)
-	result = /obj/item/food/snowcones/mime
-	category = CAT_ICE
-
-/datum/crafting_recipe/food/clown_sc
-	name = "Clown snowcone"
-	reqs = list(
-		/obj/item/reagent_containers/cup/glass/sillycup = 1,
-		/datum/reagent/consumable/ice = 15,
-		/datum/reagent/consumable/laughter = 5
-	)
-	result = /obj/item/food/snowcones/clown
-	category = CAT_ICE
-
 /datum/crafting_recipe/food/soda_sc
-	name = "Space Cola snowcone"
+	name = "Cola snowcone"
 	reqs = list(
 		/obj/item/reagent_containers/cup/glass/sillycup = 1,
 		/datum/reagent/consumable/ice = 15,
@@ -214,7 +184,7 @@
 	category = CAT_ICE
 
 /datum/crafting_recipe/food/spacemountainwind_sc
-	name = "Space Mountain Wind snowcone"
+	name = "Mountain Wind snowcone"
 	reqs = list(
 		/obj/item/reagent_containers/cup/glass/sillycup = 1,
 		/datum/reagent/consumable/ice = 15,

@@ -9,6 +9,23 @@
 	desc = "Some scattered paper pages. They look mostly ruined."
 	icon_state = "scattered_papers"
 
+/obj/structure/halflife/trash/papers/attack_hand_secondary(mob/living/user, list/modifiers)
+	. = ..()
+	if(!user.can_perform_action(src, NEED_DEXTERITY))
+		return
+	user.visible_message(span_notice("[user] begins to sift through the [src] for usable pieces."), \
+		span_notice("You begin to dig through the [src] for some paper."))
+	if(do_after(user, 5 SECONDS, src))
+		if(prob(60))
+			user.visible_message(span_notice("[user] gathers up the [src]."), \
+				span_notice("You gather up all the [src]."))
+			new /obj/item/paper(loc, rand(1,2))
+			qdel(src)
+		else
+			user.visible_message(span_notice("[user] messes up gathering the [src]. It melts before their very eyes into nothingness."), \
+				span_notice("You don't find any usable paper..."))
+			qdel(src)
+
 /obj/structure/halflife/trash/papers/one
 	name = "scattered papers"
 	desc = "Some scattered papers. All sorts of stuff, from pages to envelopes."

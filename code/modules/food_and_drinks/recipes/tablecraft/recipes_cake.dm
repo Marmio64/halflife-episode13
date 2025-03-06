@@ -162,17 +162,6 @@
 	result = /obj/item/food/cake/pavlova
 	category = CAT_CAKE
 
-/datum/crafting_recipe/food/pavlovakorta
-	name = "Pavlova with korta cream"
-	reqs = list(
-		/datum/reagent/consumable/eggwhite = 12,
-		/datum/reagent/consumable/sugar = 15,
-		/datum/reagent/consumable/korta_milk = 10,
-		/obj/item/food/grown/berries = 5
-	)
-	result = /obj/item/food/cake/pavlova/nuts
-	category = CAT_CAKE
-
 /datum/crafting_recipe/food/berry_vanilla_cake
 	name = "blackberry and strawberry vanilla cake"
 	reqs = list(
@@ -202,18 +191,6 @@
 	result = /obj/item/food/cake/vanilla_cake
 	category = CAT_CAKE
 	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
-
-/datum/crafting_recipe/food/trumpetcake
-	name = "Spaceman's Cake"
-	reqs = list(
-		/obj/item/food/cake/plain = 1,
-		/obj/item/food/grown/trumpet = 2,
-		/datum/reagent/consumable/cream = 5,
-		/datum/reagent/consumable/berryjuice = 5
-	)
-	result = /obj/item/food/cake/trumpet
-	category = CAT_CAKE
-
 
 /datum/crafting_recipe/food/cak
 	name = "Living cat/cake hybrid"
