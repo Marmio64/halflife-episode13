@@ -229,3 +229,25 @@
 	)
 	time = 3 SECONDS
 	category = CAT_WEAPON_RANGED
+
+/datum/crafting_recipe/halflife_spear_taped
+	name = "Spear (Taped)"
+	result = /obj/item/spear/halflife
+	reqs = list(
+		/obj/item/stack/sheet/mineral/wood = 4,
+		/obj/item/stack/sticky_tape = 1,
+		/obj/item/stack/sheet/scrap_metal = 4,
+	)
+	time = 5 SECONDS
+	category = CAT_WEAPON_MELEE
+
+/datum/crafting_recipe/halflife_spear_sinew
+	name = "Spear (Sinew-Held)"
+	result = /obj/item/spear/halflife
+	reqs = list(
+		/obj/item/stack/sheet/mineral/wood = 4,
+		/obj/item/stack/sheet/sinew = 2,
+		/obj/item/stack/sheet/scrap_metal = 4,
+	)
+	time = 5 SECONDS
+	category = CAT_WEAPON_MELEE

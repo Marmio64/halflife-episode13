@@ -64,3 +64,10 @@
 				/obj/item/stack/sheet/animalhide/goliath_hide = 3)
 	time = 12 SECONDS
 	category = CAT_ARMOR
+
+/datum/crafting_recipe/sinewbandana
+	name = "Sinew Bandana"
+	result = /obj/item/clothing/mask/bandana/sinew
+	reqs = list(/obj/item/stack/sheet/sinew = 2)
+	time = 6 SECONDS
+	category = CAT_CLOTHING

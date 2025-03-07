@@ -294,4 +294,10 @@
 /obj/item/clothing/mask/gas/hl2/swat
 	icon_state = "swatmask"
 
+/obj/item/clothing/mask/bandana/sinew
+	name = "sinew bandana"
+	desc = "A bandana made of finely weaved animal sinew."
+	greyscale_colors = "#6d1b1b"
+	flags_1 = NONE
+
 #undef PHRASE_COOLDOWN

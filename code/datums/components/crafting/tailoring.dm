@@ -70,26 +70,6 @@
 	reqs = list(/obj/item/clothing/glasses/sunglasses/chemical = 1)
 	category = CAT_EQUIPMENT
 
-/datum/crafting_recipe/bonetalisman
-	name = "Bone Talisman"
-	result = /obj/item/clothing/accessory/talisman
-	time = 2 SECONDS
-	reqs = list(
-		/obj/item/stack/sheet/bone = 2,
-		/obj/item/stack/sheet/sinew = 1,
-	)
-	category = CAT_ARMOR
-
-/datum/crafting_recipe/bonecodpiece
-	name = "Skull Codpiece"
-	result = /obj/item/clothing/accessory/skullcodpiece
-	time = 2 SECONDS
-	reqs = list(
-		/obj/item/stack/sheet/bone = 2,
-		/obj/item/stack/sheet/animalhide/goliath_hide = 1,
-	)
-	category = CAT_ARMOR
-
 /datum/crafting_recipe/mummy
 	name = "Mummification Bandages (Mask)"
 	result = /obj/item/clothing/mask/mummy
@@ -164,23 +144,3 @@
 		/obj/item/stack/cable_coil = 3,
 	)
 	category = CAT_CLOTHING
-
-/datum/crafting_recipe/biohood_sec
-	name = "security biohood"
-	result = /obj/item/clothing/head/bio_hood/security
-	time = 2 SECONDS
-	reqs = list(
-		/obj/item/clothing/head/bio_hood/general = 1,
-		/obj/item/clothing/head/helmet/sec = 1,
-	)
-	category = CAT_ARMOR
-
-/datum/crafting_recipe/biosuit_sec
-	name = "security biosuit"
-	result = /obj/item/clothing/suit/bio_suit/security
-	time = 2 SECONDS
-	reqs = list(
-		/obj/item/clothing/suit/bio_suit/general = 1,
-		/obj/item/clothing/suit/armor/vest = 1,
-	)
-	category = CAT_ARMOR

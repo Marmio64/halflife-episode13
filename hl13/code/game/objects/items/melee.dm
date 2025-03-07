@@ -57,10 +57,33 @@
 	desc = "Once used for car tires, you can now use it to bash people's heads in."
 	icon = 'hl13/icons/obj/melee.dmi'
 	icon_state = "tireiron"
-	inhand_icon_state = "tireiron"
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
+	inhand_icon_state = "tire_iron"
+	lefthand_file = 'hl13/icons/mob/inhands/melee_inhand_left.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/melee_inhand_right.dmi'
 	force = 23
 	throwforce = 10
 	attack_verb_continuous = list("attacks", "bashes", "strikes", "smashes")
 	attack_verb_simple = list("attack", "bash", "strik", "smash")
+
+//spears
+/obj/item/spear/halflife
+	icon = 'hl13/icons/obj/melee.dmi'
+	icon_state = "spear0"
+	lefthand_file = 'hl13/icons/mob/inhands/melee_inhand_left.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/melee_inhand_right.dmi'
+	name = "improvised spear"
+	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
+	force = 13
+	w_class = WEIGHT_CLASS_BULKY
+	slot_flags = ITEM_SLOT_BACK
+	throwforce = 20
+	throw_speed = 4
+	demolition_mod = 0.75
+	embed_type = /datum/embed_data/spear
+	armour_penetration = 10
+	sharpness = SHARP_POINTY
+	wound_bonus = -15
+	bare_wound_bonus = 15
+	icon_prefix = "spear"
+	force_unwielded = 13
+	force_wielded = 25

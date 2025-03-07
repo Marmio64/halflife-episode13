@@ -22,18 +22,6 @@
 	category = CAT_WEAPON_MELEE
 	crafting_interface = CRAFTING_BENCH_WEAPONS
 
-/datum/crafting_recipe/spear
-	name = "Spear"
-	result = /obj/item/spear
-	reqs = list(
-		/obj/item/restraints/handcuffs/cable = 1,
-		/obj/item/shard = 1,
-		/obj/item/stack/rods = 1,
-	)
-	parts = list(/obj/item/shard = 1)
-	time = 4 SECONDS
-	category = CAT_WEAPON_MELEE
-
 /datum/crafting_recipe/bonedagger
 	name = "Bone Dagger"
 	result = /obj/item/knife/combat/bone

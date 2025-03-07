@@ -7,6 +7,7 @@
 	icon_dead = "zombie_dead"
 	faction = list(FACTION_HEADCRAB)
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_XENIAN
+	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/sheet/cloth = 1)
 	maxHealth = 120
 	health = 120
 	speak_chance = 1
@@ -149,7 +150,7 @@
 	icon_living = "fungalzombie"
 	icon_dead = "fungalzombie_dead"
 	no_crab_state = "fungalzombie_nocrab"
-	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1)
+	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1, /obj/item/stack/sheet/cloth = 1)
 	maxHealth = 160
 	health = 160
 	fungalheal = TRUE
@@ -168,6 +169,7 @@
 	icon_state = "poisonzombie"
 	icon_living = "poisonzombie"
 	icon_dead = "poisonzombie_dead"
+	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 2)
 	maxHealth = 160
 	health = 160
 	move_to_delay = 7

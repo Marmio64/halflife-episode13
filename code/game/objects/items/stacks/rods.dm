@@ -61,13 +61,6 @@ GLOBAL_LIST_INIT(rod_recipes, list ( \
 	)
 	AddElement(/datum/element/contextual_screentip_tools, tool_behaviors)
 
-	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/spear, /datum/crafting_recipe/stunprod) // snatcher prod isn't here as a spoopy secret
-
-	AddElement(
-		/datum/element/slapcrafting,\
-		slapcraft_recipes = slapcraft_recipe_list,\
-	)
-
 /obj/item/stack/rods/handle_openspace_click(turf/target, mob/user, list/modifiers)
 	target.attackby(src, user, list2params(modifiers))
 

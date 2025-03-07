@@ -6,7 +6,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/polearms_righthand.dmi'
 	name = "spear"
 	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
-	force = 12
+	force = 11
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	throwforce = 20
@@ -28,9 +28,9 @@
 	/// The icon prefix for this flavor of spear
 	var/icon_prefix = "spearglass"
 	/// How much damage to do unwielded
-	var/force_unwielded = 12
+	var/force_unwielded = 11
 	/// How much damage to do wielded
-	var/force_wielded = 25
+	var/force_wielded = 22
 
 /datum/embed_data/spear
 	impact_pain_mult = 2
