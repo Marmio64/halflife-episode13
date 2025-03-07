@@ -11,7 +11,8 @@
 	throwforce = 18
 	throw_range = 3 /// Doesn't throw very far
 	demolition_mod = 3 // BREAK THINGS
-	armour_penetration = -20
+	drag_slowdown = 0.5
+	slowdown = 0.5
 	hitsound = 'sound/items/weapons/smash.ogg' /// Hitsound when thrown at someone
 	attack_verb_continuous = list("attacks", "bashes", "strikes", "smashes")
 	attack_verb_simple = list("attack", "bash", "strik", "smash")
@@ -21,7 +22,7 @@
 /obj/item/melee/sledgehammer/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/two_handed, \
-		force_wielded = 32, \
+		force_wielded = 29, \
 		wield_callback = CALLBACK(src, PROC_REF(on_wield)), \
 		unwield_callback = CALLBACK(src, PROC_REF(on_unwield)), \
 		require_twohands = TRUE, \

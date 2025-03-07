@@ -34,6 +34,18 @@ SUBSYSTEM_DEF(sociostability)
 
 	for(var/mob/living/silicon/ai/A in GLOB.ai_list)	//Alert Dispatch of sociostability level
 		to_chat(A, span_warning("Sociostability matrix levels calculated and compiled. Percentage is at [((sociostability / SOCIOSTABILITY_GREAT)*100)]%"))
+		if(sociostability >= SOCIOSTABILITY_GREAT)
+
+		else if(sociostability >= SOCIOSTABILITY_GOOD)
+			to_chat(A, span_warning("Sociostability is at an esteemed level."))
+		else if(sociostability >= SOCIOSTABILITY_OKAY)
+			to_chat(A, span_warning("Sociostability is at an acceptable level."))
+		else if(sociostability >= SOCIOSTABILITY_POOR)
+			to_chat(A, span_warning("Sociostability is at a poor level. Correct immediately."))
+		else if(sociostability >= SOCIOSTABILITY_BAD)
+			to_chat(A, span_warning("Sociostability is very low. Correct immediately."))
+		else if(sociostability >= SOCIOSTABILITY_TERRIBLE)
+			to_chat(A, span_warning("Sociostability is at an unacceptable level. Possible judgement waiver imbound."))
 
 /datum/controller/subsystem/sociostability/proc/drop_package(amount)
 	var/datum/round_event_control/care_package/PackageControl = new /datum/round_event_control/care_package()

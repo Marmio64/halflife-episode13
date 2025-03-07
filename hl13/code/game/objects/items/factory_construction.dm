@@ -120,7 +120,7 @@
 	playsound(src, 'hl13/sound/halflifeeffects/crafting/ducttape1.ogg', 50, TRUE, extrarange = -3)
 	new /obj/item/factory_construction/full_container(user.loc)
 	new /obj/item/stack/spacecash/c1(user.loc, reward)
-	SSsociostability.modifystability(1) //Working increases stability
+	SSsociostability.modifystability(2) //Working increases stability
 	qdel(src)
 
 /obj/item/factory_construction/full_container
