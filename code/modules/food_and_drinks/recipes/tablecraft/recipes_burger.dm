@@ -188,26 +188,6 @@
 	result = /obj/item/food/burger/soylent
 	category = CAT_BURGER
 
-/datum/crafting_recipe/food/ribburger
-	name = "McRib"
-	reqs = list(
-			/obj/item/food/bbqribs = 1,     //The sauce is already included in the ribs
-			/obj/item/food/onion_slice = 1, //feel free to remove if too burdensome.
-			/obj/item/food/bun = 1
-	)
-	result = /obj/item/food/burger/rib
-	category = CAT_BURGER
-
-/datum/crafting_recipe/food/mcguffin
-	name = "McGuffin"
-	reqs = list(
-			/obj/item/food/friedegg = 1,
-			/obj/item/food/meat/bacon = 2,
-			/obj/item/food/bun = 1
-	)
-	result = /obj/item/food/burger/mcguffin
-	category = CAT_BURGER
-
 /datum/crafting_recipe/food/chickenburger
 	name = "Chicken Sandwich"
 	reqs = list(

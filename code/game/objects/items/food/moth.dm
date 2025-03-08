@@ -492,9 +492,7 @@
 //Salads: the bread and butter of mothic cuisine
 /obj/item/food/caprese_salad
 	name = "caprese salad"
-	desc = "While it's far from an original creation of the moths, caprese salad has become a favourite aboard the Fleet \
-		due to how simple it is to prepare yet how tasty it is. To the moths it's known as zaileskenknusksolt: \
-		two tone salad, in GalCom." //zail = two, esken = colour/tone, knuskolt = salad
+	desc = "A wonderfully made salad." //zail = two, esken = colour/tone, knuskolt = salad
 	icon = 'icons/obj/food/moth.dmi'
 	icon_state = "caprese_salad"
 	food_reagents = list(

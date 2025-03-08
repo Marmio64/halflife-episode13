@@ -56,7 +56,7 @@
 /obj/item/crowbar/large
 	name = "large crowbar"
 	desc = "It's a big crowbar. It doesn't fit in your pockets, because it's big."
-	force = 24
+	force = 23 //hl13 edit
 	w_class = WEIGHT_CLASS_NORMAL
 	throw_speed = 3
 	throw_range = 3

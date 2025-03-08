@@ -7,17 +7,6 @@
 
 ///////////////// Booze & Bottles ///////////////////
 
-/datum/crafting_recipe/lizardwine
-	name = "Lizard Wine"
-	time = 40
-	reqs = list(
-		/obj/item/organ/tail/lizard = 1,
-		/datum/reagent/consumable/ethanol = 100
-	)
-	blacklist = list(/obj/item/organ/tail/lizard/fake)
-	result = /obj/item/reagent_containers/cup/glass/bottle/lizardwine
-	category = CAT_DRINK
-
 /datum/crafting_recipe/bottled/moonshinejug
 	name = "Moonshine Jug"
 	time = 30
@@ -102,16 +91,6 @@
 	category = CAT_DRINK
 
 //flask of unholy water is a beaker for some reason, I will try making it a bottle and add it here once the antag freeze is over. t. kryson
-
-/datum/crafting_recipe/bottled/nothingbottle
-	name = "Nothing Bottle"
-	time = 30
-	reqs = list(
-		/obj/item/reagent_containers/cup/glass/bottle = 1,
-		/datum/reagent/consumable/nothing = 100
-	)
-	result = /obj/item/reagent_containers/cup/glass/bottle/bottleofnothing
-	category = CAT_DRINK
 
 /datum/crafting_recipe/smallcarton
 	name = "Small Carton"

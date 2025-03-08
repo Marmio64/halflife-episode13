@@ -13,16 +13,6 @@
 	result = /obj/item/food/bread/meat
 	category = CAT_BREAD
 
-/datum/crafting_recipe/food/xenomeatbread
-	name = "Xenomeat bread"
-	reqs = list(
-		/obj/item/food/bread/plain = 1,
-		/obj/item/food/meat/cutlet/xeno = 3,
-		/obj/item/food/cheese/wedge = 3
-	)
-	result = /obj/item/food/bread/xenomeat
-	category = CAT_BREAD
-
 /datum/crafting_recipe/food/spidermeatbread
 	name = "Spidermeat bread"
 	reqs = list(
@@ -71,17 +61,6 @@
 		/obj/item/food/cheese/wedge = 2
 	)
 	result = /obj/item/food/bread/creamcheese
-	category = CAT_BREAD
-
-/datum/crafting_recipe/food/mimanabread
-	name = "Mimana bread"
-	reqs = list(
-		/datum/reagent/consumable/soymilk = 5,
-		/obj/item/food/bread/plain = 1,
-		/obj/item/food/tofu = 3,
-		/obj/item/food/grown/banana/mime = 1
-	)
-	result = /obj/item/food/bread/mimana
 	category = CAT_BREAD
 
 /datum/crafting_recipe/food/garlicbread
@@ -152,29 +131,7 @@
 	category = CAT_BREAD
 	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
 
-/datum/crafting_recipe/food/breaddog
-	name = "Living dog/bread hybrid"
-	reqs = list(
-		/obj/item/organ/brain = 1,
-		/obj/item/organ/heart = 1,
-		/obj/item/food/bread/plain = 2,
-		/obj/item/food/meat/slab = 3,
-		/datum/reagent/blood = 30,
-		/datum/reagent/teslium = 1 //To shock the whole thing into life
-	)
-	result = /mob/living/basic/pet/dog/breaddog
-	category = CAT_BREAD
-
 ////////////////////////////////////////////////TOAST////////////////////////////////////////////////
-
-/datum/crafting_recipe/food/slimetoast
-	name = "Slime toast"
-	reqs = list(
-		/datum/reagent/toxin/slimejelly = 5,
-		/obj/item/food/breadslice/plain = 1
-	)
-	result = /obj/item/food/jelliedtoast/slime
-	category = CAT_BREAD
 
 /datum/crafting_recipe/food/jelliedyoast
 	name = "Jellied toast"
@@ -210,19 +167,6 @@
 		/obj/item/food/grown/mushroom/amanita = 1
 		)
 	result = /obj/item/food/breadslice/moldy
-	category = CAT_BREAD
-
-/datum/crafting_recipe/food/breadcat
-	name = "Bread cat/bread hybrid"
-	reqs = list(
-		/obj/item/food/bread/plain = 1,
-		/obj/item/organ/ears/cat = 1,
-		/obj/item/organ/tail/cat = 1,
-		/obj/item/food/meat/slab = 3,
-		/datum/reagent/blood = 50,
-		/datum/reagent/medicine/strange_reagent = 5
-	)
-	result = /mob/living/basic/pet/cat/breadcat
 	category = CAT_BREAD
 
 /datum/crafting_recipe/food/frenchtoast

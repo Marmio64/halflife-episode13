@@ -22,17 +22,6 @@
 	result = /obj/item/food/pizza/meat/raw
 	category = CAT_PIZZA
 
-/datum/crafting_recipe/food/arnold
-	reqs = list(
-		/obj/item/food/flatdough = 1,
-		/obj/item/food/meat/rawcutlet = 3,
-		/obj/item/ammo_casing/c9mm = 8,
-		/obj/item/food/cheese/wedge = 1,
-		/obj/item/food/grown/tomato = 1
-	)
-	result = /obj/item/food/pizza/arnold/raw
-	category = CAT_PIZZA
-
 /datum/crafting_recipe/food/mushroompizza
 	reqs = list(
 		/obj/item/food/flatdough = 1,
@@ -50,16 +39,6 @@
 		/obj/item/food/grown/tomato = 1
 	)
 	result = /obj/item/food/pizza/vegetable/raw
-	category = CAT_PIZZA
-
-/datum/crafting_recipe/food/donkpocketpizza
-	reqs = list(
-		/obj/item/food/flatdough = 1,
-		/obj/item/food/donkpocket = 3,
-		/obj/item/food/cheese/wedge = 1,
-		/obj/item/food/grown/tomato = 1
-	)
-	result = /obj/item/food/pizza/donkpocket/raw
 	category = CAT_PIZZA
 
 /datum/crafting_recipe/food/dankpizza

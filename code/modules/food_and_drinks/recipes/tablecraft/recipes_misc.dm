@@ -106,19 +106,6 @@
 	result = /obj/item/food/honeybar
 	category = CAT_MISCFOOD
 
-/datum/crafting_recipe/food/powercrepe
-	name = "Powercrepe"
-	time = 40
-	reqs = list(
-		/obj/item/food/flatdough = 1,
-		/datum/reagent/consumable/milk = 1,
-		/datum/reagent/consumable/cherryjelly = 5,
-		/obj/item/stock_parts/power_store/cell/super =1,
-		/obj/item/melee/sabre = 1
-	)
-	result = /obj/item/food/powercrepe
-	category = CAT_MISCFOOD
-
 /datum/crafting_recipe/food/branrequests
 	name = "Bran Requests Cereal"
 	reqs = list(
@@ -149,19 +136,6 @@
 		/obj/item/food/grown/mushroom/chanterelle = 1
 	)
 	result = /obj/item/food/salad/risotto
-	category = CAT_MISCFOOD
-
-/datum/crafting_recipe/food/butterbear //ITS ALIVEEEEEE!
-	name = "Living bear/butter hybrid"
-	reqs = list(
-		/obj/item/organ/brain = 1,
-		/obj/item/organ/heart = 1,
-		/obj/item/food/butter = 4,
-		/obj/item/food/meat/slab = 5,
-		/datum/reagent/blood = 50,
-		/datum/reagent/teslium = 1 //To shock the whole thing into life
-	)
-	result = /mob/living/basic/bear/butter
 	category = CAT_MISCFOOD
 
 /datum/crafting_recipe/food/crab_rangoon
@@ -319,16 +293,6 @@
 		/datum/reagent/consumable/salt = 3,
 	)
 	result = /obj/item/food/popcorn/salty
-	category = CAT_MISCFOOD
-
-/datum/crafting_recipe/food/spacylibertyduff
-	name = "Spacy liberty duff"
-	reqs = list(
-		/datum/reagent/consumable/ethanol/vodka = 5,
-		/obj/item/reagent_containers/cup/bowl = 1,
-		/obj/item/food/grown/mushroom/libertycap = 3
-	)
-	result = /obj/item/food/bowled/spacylibertyduff
 	category = CAT_MISCFOOD
 
 /datum/crafting_recipe/food/amanitajelly

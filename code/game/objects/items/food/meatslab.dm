@@ -41,11 +41,12 @@
 	foodtypes = MEAT | RAW
 	///Legacy code, handles the coloring of the overlay of the cutlets made from this.
 	var/slab_color = COLOR_RED
+	var/jerky_type = /obj/item/food/sosjerky/healthy
 
 
 /obj/item/food/meat/slab/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/dryable,  /obj/item/food/sosjerky/healthy)
+	AddElement(/datum/element/dryable, jerky_type)
 
 /obj/item/food/meat/slab/make_grillable()
 	AddComponent(/datum/component/grillable, /obj/item/food/meat/steak/plain, rand(30 SECONDS, 90 SECONDS), TRUE, TRUE) //Add medium rare later maybe?

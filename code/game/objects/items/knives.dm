@@ -92,9 +92,9 @@
 	name = "butcher's cleaver"
 	icon_state = "butch"
 	inhand_icon_state = "butch"
-	desc = "A huge thing used for chopping and chopping up meat. This includes clowns and clown by-products."
+	desc = "A huge thing used for chopping and chopping up meat."
 	obj_flags = CONDUCTS_ELECTRICITY
-	force = 23 //HL13 EDIT
+	force = 22 //HL13 EDIT
 
 	throwforce = 10
 	custom_materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 6)
@@ -126,7 +126,7 @@
 	worn_icon_state = "buckknife"
 	desc = "A military combat utility survival knife."
 	embed_type = /datum/embed_data/combat_knife
-	force = 26
+	force = 25 //hl13 edit
 	throwforce = 20
 	attack_verb_continuous = list("slashes", "stabs", "slices", "tears", "lacerates", "rips", "cuts")
 	attack_verb_simple = list("slash", "stab", "slice", "tear", "lacerate", "rip", "cut")

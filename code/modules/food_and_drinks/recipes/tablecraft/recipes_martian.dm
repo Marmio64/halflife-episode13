@@ -194,21 +194,6 @@
 	result = /obj/item/food/salad/yakisoba_katsu
 	category = CAT_MARTIAN
 
-/datum/crafting_recipe/food/martian_fried_noodles
-	name = "Martian fried noodles"
-	reqs = list(
-		/obj/item/food/spaghetti/boilednoodles = 1,
-		/obj/item/food/grown/peanut = 2,
-		/obj/item/food/meat/cutlet = 1,
-		/obj/item/food/onion_slice = 1,
-		/obj/item/food/egg = 1,
-		/datum/reagent/consumable/soysauce = 3,
-		/datum/reagent/consumable/red_bay = 3,
-		/obj/item/reagent_containers/cup/bowl = 1,
-	)
-	result = /obj/item/food/salad/martian_fried_noodles
-	category = CAT_MARTIAN
-
 /datum/crafting_recipe/food/simple_fried_noodles
 	name = "Simple fried noodles"
 	reqs = list(
@@ -237,32 +222,6 @@
 		/obj/item/reagent_containers/cup/bowl = 1,
 	)
 	result = /obj/item/food/salad/setagaya_curry
-	category = CAT_MARTIAN
-
-/datum/crafting_recipe/food/big_blue_burger
-	name = "Big Blue Burger"
-	reqs = list(
-		/obj/item/food/bun = 1,
-		/obj/item/food/patty = 2,
-		/obj/item/food/onion_slice = 1,
-		/obj/item/food/cheese/wedge = 1,
-		/obj/item/food/meat/bacon = 1,
-		/obj/item/food/pineappleslice = 1,
-		/datum/reagent/consumable/nutriment/soup/teriyaki = 4,
-	)
-	result = /obj/item/food/burger/big_blue
-	category = CAT_MARTIAN
-
-/datum/crafting_recipe/food/chappy_patty
-	name = "Chappy Patty"
-	reqs = list(
-		/obj/item/food/bun = 1,
-		/obj/item/food/grilled_chapslice = 2,
-		/obj/item/food/friedegg = 1,
-		/obj/item/food/cheese/wedge = 1,
-		/datum/reagent/consumable/ketchup = 3,
-	)
-	result = /obj/item/food/burger/chappy
 	category = CAT_MARTIAN
 
 /datum/crafting_recipe/food/king_katsu_sandwich

@@ -192,20 +192,6 @@
 	category = CAT_CAKE
 	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
 
-/datum/crafting_recipe/food/cak
-	name = "Living cat/cake hybrid"
-	reqs = list(
-		/obj/item/organ/brain = 1,
-		/obj/item/organ/heart = 1,
-		/obj/item/food/cake/birthday = 1,
-		/obj/item/food/meat/slab = 3,
-		/datum/reagent/blood = 30,
-		/datum/reagent/consumable/sprinkles = 5,
-		/datum/reagent/teslium = 1 //To shock the whole thing into life
-	)
-	result = /mob/living/basic/pet/cat/cak
-	category = CAT_CAKE //Cat! Haha, get it? CAT? GET IT? We get it - Love Felines
-
 /datum/crafting_recipe/food/fruitcake
 	name = "english fruitcake"
 	reqs = list(
