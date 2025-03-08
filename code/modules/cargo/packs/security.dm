@@ -94,7 +94,7 @@
 /datum/supply_pack/security/armory/ar2
 	name = "OSIPR Crate"
 	desc = "Contains two Overwatch Standard Issue Pulse Rifles. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 25
+	cost = CARGO_CRATE_VALUE * 24
 	contains = list(/obj/item/gun/ballistic/automatic/ar2,
 					/obj/item/gun/ballistic/automatic/ar2)
 	crate_name = "osipr gun crate"
@@ -191,7 +191,7 @@
 
 /datum/supply_pack/security/armory/uspammo
 	name = "USP Match Ammo Crate"
-	desc = "Contains four USP Match magazines. Requires Armory access to open."
+	desc = "Contains four lethal USP Match magazines. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 6
 	contains = list(/obj/item/ammo_box/magazine/usp9mm,
 					/obj/item/ammo_box/magazine/usp9mm,
@@ -252,3 +252,12 @@
 					/obj/item/grenade/syndieminibomb/bouncer,
 					/obj/item/grenade/syndieminibomb/bouncer)
 	crate_name = "MK3A2 grenade crate"
+
+/datum/supply_pack/security/armory/grunt
+	name = "Grunt Armor Crate"
+	desc = "Contains one set of overwatch grunt equipment. Perfect for creating your own proto-transhuman force, conscripted arm, or xen fighting team. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 8
+	contains = list(/obj/item/clothing/mask/gas/civilprotection/overwatch/grunt,
+					/obj/item/clothing/under/combine/grunt,
+					/obj/item/tank/internals/oxygen/grunt)
+	crate_name = "grunt armor crate"

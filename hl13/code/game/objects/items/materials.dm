@@ -43,3 +43,11 @@
 	name = "Broken Multifunction Tool"
 	desc = "A broken frame for a multifunction electrical tool. You may be able to craft it into a functioning one."
 	icon_state = "alyxtool"
+
+/obj/item/woodshaft
+	name = "Wooden Shaft"
+	desc = "A sturdy wooden shaft, generally used for making a spear."
+	custom_price = 5
+	icon = 'hl13/icons/obj/misc_items.dmi'
+	icon_state = "shaft"
+	w_class = WEIGHT_CLASS_SMALL

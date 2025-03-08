@@ -47,6 +47,7 @@
 		/obj/item/storage/belt/pouch,
 		/obj/item/reagent_containers/pill/patch/medkit,
 		/obj/item/storage/box/halflife/ration,
+		/obj/item/knife/kitchen,
 		/obj/item/clothing/suit/armor/armored
 		) //Refugees get a random item from this list
 

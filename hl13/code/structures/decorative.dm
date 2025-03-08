@@ -175,7 +175,7 @@
 		if(prob(35))
 			user.visible_message(span_notice("[user] gathers up materials from the [src]."), \
 				span_notice("You gather up some materials from [src]."))
-			new /obj/item/stack/sheet/iron(loc, 1)
+			new /obj/item/stack/sheet/scrap_metal(loc, 1)
 			qdel(src)
 		else
 			user.visible_message(span_notice("[user] fails to gather anything useful from the [src]."), \
@@ -225,7 +225,7 @@
 		if(prob(35))
 			user.visible_message(span_notice("[user] gathers up materials from [src]."), \
 				span_notice("You gather up some materials from [src]."))
-			new /obj/item/stack/sheet/iron(loc, 1)
+			new /obj/item/stack/sheet/scrap_metal(loc, 1)
 			qdel(src)
 		else
 			user.visible_message(span_notice("[user] fails to gather anything useful from the [src]."), \
@@ -332,7 +332,7 @@
 
 /obj/structure/halflife/barrel/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))
-		new /obj/item/stack/sheet/iron(loc, 3)
+		new /obj/item/stack/sheet/scrap_metal(loc, 3)
 	qdel(src)
 
 /obj/structure/halflife/barrel/Initialize()

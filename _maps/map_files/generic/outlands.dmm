@@ -5,10 +5,6 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
-"ac" = (
-/obj/structure/bed/halflife/mattress/old,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "ad" = (
 /mob/living/simple_animal/hostile/halflife/headcrab,
 /turf/open/floor/plating/ground/dirt,
@@ -118,10 +114,6 @@
 /obj/structure/halflife/fence/vertical/wire/west,
 /obj/structure/halflife/fence/wire/end/west,
 /turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
-"bL" = (
-/obj/structure/bed/halflife/mattress/yellowed,
-/turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/outdoors/forest)
 "bM" = (
 /obj/structure/railing/halflife/wood/ending{
@@ -1254,7 +1246,7 @@
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "of" = (
-/obj/structure/shipping_container/kahraman,
+/obj/structure/shipping_container/kahraman/alt,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "og" = (
@@ -1499,6 +1491,10 @@
 /obj/item/radio/intercom/prison/directional/north,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/laborcamp)
+"qO" = (
+/obj/structure/halflife/trash/bricks,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/outdoors/forest)
 "qP" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "transfer_train_line_interior";
@@ -2288,6 +2284,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors/sewer/tunnel)
+"zX" = (
+/obj/structure/bed/halflife/mattress/yellowed,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/outdoors/forest)
 "zY" = (
 /obj/structure/bed/halflife/bedframe/cot,
 /obj/structure/bed/halflife/mattress/filthy,
@@ -2968,6 +2968,12 @@
 /obj/structure/bed/halflife/mattress/stained,
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/laborcamp)
+"Jj" = (
+/obj/structure/halflife/trash/bricks{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/outdoors/forest)
 "Jl" = (
 /obj/structure/flora/bush/pointy/style_random,
 /turf/open/floor/plating/ground/dirt/alt,
@@ -3425,7 +3431,7 @@
 "OI" = (
 /obj/structure/table/halflife/no_smooth/wood,
 /obj/effect/spawner/random/halflife/loot,
-/obj/effect/spawner/random/halflife/loot,
+/obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
 "OM" = (
@@ -4320,6 +4326,10 @@
 "Yy" = (
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/sewer)
+"Yz" = (
+/obj/structure/bed/halflife/mattress/old,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "YA" = (
 /obj/structure/halflife/pipes/horizontal/end,
 /obj/structure/halflife/trash/cardboard{
@@ -56434,7 +56444,7 @@ It
 tN
 LN
 GX
-ac
+Yz
 tN
 FC
 tN
@@ -63085,7 +63095,7 @@ GX
 QW
 FR
 FR
-bL
+zX
 QW
 FR
 FR
@@ -69211,7 +69221,7 @@ XA
 XA
 XA
 XA
-bA
+qO
 sg
 kn
 tX
@@ -76427,7 +76437,7 @@ wG
 wG
 zB
 XA
-It
+Dm
 sD
 tN
 VH
@@ -76637,7 +76647,7 @@ XA
 XA
 XA
 XA
-bA
+Jj
 YX
 VH
 YX

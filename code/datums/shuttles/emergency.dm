@@ -82,7 +82,7 @@
 /datum/map_template/shuttle/emergency/scrapped
 	suffix = "scrapped"
 	name = "Salvaged Transfer Train"
-	credit_cost = CARGO_CRATE_VALUE * -8
+	credit_cost = CARGO_CRATE_VALUE * -10
 	description = "A salvaged together train. We'll pay into your district budget in exchange for taking this one off our hands, and us taking yours instead."
 	movement_force = list("KNOCKDOWN" = 3, "THROW" = 2)
 	occupancy_limit = "25"

@@ -75,7 +75,7 @@
 	desc = "A haphazardly-constructed yet still deadly weapon of ancient design."
 	force = 13
 	w_class = WEIGHT_CLASS_BULKY
-	slot_flags = ITEM_SLOT_BACK
+	slot_flags = 0
 	throwforce = 20
 	throw_speed = 4
 	demolition_mod = 0.75
