@@ -460,7 +460,7 @@
 
 /datum/armor/item_shield/improvised
 	melee = 40
-	bullet = 30
+	bullet = 20 //hl13 edit
 	laser = 30
 
 /obj/item/shield/improvised

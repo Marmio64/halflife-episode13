@@ -56,6 +56,7 @@
 		return
 	if(prob(5))
 		victim.adjust_eye_blur(8 SECONDS)
+		victim.adjust_disgust(rand(5,10))
 		to_chat(victim, span_warning("Fuck, what is that smell!?"))
 
 /datum/vapours/decaying_waste/bodyodor
