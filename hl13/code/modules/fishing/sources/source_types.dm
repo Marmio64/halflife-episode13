@@ -1,15 +1,13 @@
 /datum/fish_source/sewer
 	catalog_description = "Sewers"
 	radial_state = "toilet"
-	duds = list("ewww... nothing", "it was nothing", "it was toilet paper", "it was flushed away", "the hook is empty", "where's the damn money?!")
+	duds = list("ewww... nothing", "it was nothing", "it was toilet paper", "it sunk into the slewage", "the hook is empty", "where's the damn money?!")
 	overlay_state = "portal_river" // placeholder
 	fish_table = list(
-		FISHING_DUD = 18,
-		/obj/item/fish/sludgefish = 20,
+		FISHING_DUD = 38,
 		/obj/item/fish/needlefish = 4,
 		/obj/item/fish/ratfish = 2,
 		/obj/item/storage/wallet/money = 2,
-		/obj/item/fish/goldfish/three_eyes = 1,
 	)
 	fish_counts = list(
 		/obj/item/storage/wallet/money = 1,
@@ -24,14 +22,10 @@
 	fish_table = list(
 		FISHING_DUD = 8,
 		/obj/item/fish/goldfish = 6,
-		/obj/item/fish/guppy = 6,
 		/obj/item/fish/perch = 4,
-		/obj/item/fish/angelfish = 4,
 		/obj/item/fish/catfish = 4,
 		/obj/item/fish/perch = 5,
-		/obj/item/fish/arctic_char = 1,
 		/obj/item/fish/pike = 1,
-		/obj/item/fish/goldfish/three_eyes = 1,
 	)
 	fish_counts = list(
 		/obj/item/fish/pike = 3,

@@ -245,7 +245,7 @@
 	name = "purple nutriment can"
 	desc = "A special can of Breen's private reserve... Actually, this is a special oil-flavored 'nutriment fulfilling' can. It's not an offensive taste, but it isn't great and costs a lot for the calorie content..."
 	icon_state = "breenwaterpurple"
-	list_reagents = list(/datum/reagent/water = 7, /datum/reagent/consumable/nutriment/fat/oil = 20, /datum/reagent/consumable/nutriment = 3)
+	list_reagents = list(/datum/reagent/water = 7, /datum/reagent/consumable/nutriment/fat/oil = 15, /datum/reagent/consumable/nutriment = 3)
 	custom_price = PAYCHECK_CREW * 2
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/fuel

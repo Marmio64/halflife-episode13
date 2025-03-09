@@ -1336,8 +1336,8 @@
 	r_pocket = /obj/item/lighter
 	l_pocket = /obj/item/switchblade
 
-	l_hand = /obj/item/gun/ballistic/automatic/pistol/makeshift
-	r_hand = /obj/item/gun/ballistic/automatic/pistol/makeshift
+	l_hand = /obj/item/gun/ballistic/automatic/pistol/usp
+	r_hand = /obj/item/gun/ballistic/automatic/pistol/usp
 
 	back = /obj/item/storage/backpack/halflife
 	backpack_contents = list(
@@ -1346,8 +1346,8 @@
 		/obj/item/grenade/halflife/molotov,
 		/obj/item/reagent_containers/pill/patch/medkit,
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
-		/obj/item/ammo_box/magazine/makeshift9mm,
-		/obj/item/ammo_box/magazine/makeshift9mm,
+		/obj/item/ammo_box/magazine/usp9mm,
+		/obj/item/ammo_box/magazine/usp9mm,
 		/obj/item/restraints/legcuffs/beartrap,
 		/obj/item/stack/sheet/halflife/brick,
 	)

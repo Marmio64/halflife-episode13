@@ -129,7 +129,6 @@
 		/obj/item/fish/greenchromis = 10,
 		/obj/item/fish/squid = 8,
 		/obj/item/fish/plaice = 8,
-		/obj/item/survivalcapsule/fishing = 1,
 	)
 	fish_counts = list(
 		/obj/item/survivalcapsule/fishing = 1,
