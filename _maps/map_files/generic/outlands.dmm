@@ -228,6 +228,10 @@
 	},
 /turf/open/halflife/water/shallow,
 /area/halflife/outdoors/forest)
+"cH" = (
+/obj/structure/bed/halflife/mattress/old,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "cJ" = (
 /obj/structure/table/halflife/no_smooth/large/metal/desk/alt{
 	dir = 4
@@ -1037,6 +1041,12 @@
 /obj/item/storage/belt/pouch,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"lM" = (
+/obj/structure/halflife/trash/bricks{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/outdoors/forest)
 "lN" = (
 /obj/structure/table/halflife/metal,
 /obj/item/reagent_containers/cup/soda_cans/breenwater/yellow{
@@ -1491,10 +1501,6 @@
 /obj/item/radio/intercom/prison/directional/north,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/laborcamp)
-"qO" = (
-/obj/structure/halflife/trash/bricks,
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/outdoors/forest)
 "qP" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "transfer_train_line_interior";
@@ -2284,10 +2290,6 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors/sewer/tunnel)
-"zX" = (
-/obj/structure/bed/halflife/mattress/yellowed,
-/turf/open/floor/plating/indoor/concrete/small,
-/area/halflife/outdoors/forest)
 "zY" = (
 /obj/structure/bed/halflife/bedframe/cot,
 /obj/structure/bed/halflife/mattress/filthy,
@@ -2784,7 +2786,7 @@
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/laborcamp)
 "GF" = (
-/obj/machinery/combine_walllight/directional/east,
+/obj/machinery/combine_walllight/directional/west,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors)
 "GI" = (
@@ -2969,10 +2971,8 @@
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/laborcamp)
 "Jj" = (
-/obj/structure/halflife/trash/bricks{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/concrete,
+/obj/structure/bed/halflife/mattress/yellowed,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/outdoors/forest)
 "Jl" = (
 /obj/structure/flora/bush/pointy/style_random,
@@ -4064,6 +4064,10 @@
 /obj/structure/halflife/pipes/vent,
 /turf/open/openspace,
 /area/halflife/indoors/sewer)
+"VF" = (
+/obj/structure/halflife/trash/bricks,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/outdoors/forest)
 "VH" = (
 /turf/open/floor/plating/indoor/metal/walkway{
 	dir = 1
@@ -4326,10 +4330,6 @@
 "Yy" = (
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/sewer)
-"Yz" = (
-/obj/structure/bed/halflife/mattress/old,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "YA" = (
 /obj/structure/halflife/pipes/horizontal/end,
 /obj/structure/halflife/trash/cardboard{
@@ -56444,7 +56444,7 @@ It
 tN
 LN
 GX
-Yz
+cH
 tN
 FC
 tN
@@ -63095,7 +63095,7 @@ GX
 QW
 FR
 FR
-zX
+Jj
 QW
 FR
 FR
@@ -69221,7 +69221,7 @@ XA
 XA
 XA
 XA
-qO
+VF
 sg
 kn
 tX
@@ -76647,7 +76647,7 @@ XA
 XA
 XA
 XA
-Jj
+lM
 YX
 VH
 YX

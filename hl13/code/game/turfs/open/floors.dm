@@ -172,6 +172,12 @@
 /turf/open/floor/plating/indoor/metal/combine
 	icon_state = "combine_metal"
 
+/turf/open/floor/plating/indoor/metal/combine/alt2
+	icon_state = "combine_metal_alt2"
+	alternate_states = 2
+	has_alternate_states = TRUE
+	has_base_states = TRUE
+
 /turf/open/floor/plating/indoor/metal/grate
 	icon_state = "steel_grate"
 

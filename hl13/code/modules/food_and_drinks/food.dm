@@ -64,7 +64,7 @@
 	)
 	foodtypes = MEAT | TOXIC | GORE | GROSS
 
-/obj/item/food/meat/slab/xen/make_grillable()
+/obj/item/food/meat/slab/halflife/zombie/make_grillable()
 	return //no grilling. No possible way you want to ever eat this.
 
 /obj/item/food/meat/slab/halflife/zombie/make_processable()
