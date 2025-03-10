@@ -26,7 +26,7 @@
 	/// For adjusted/rolled-down jumpsuits. FALSE = exposes chest and arms, TRUE = exposes arms only
 	var/alt_covers_chest = FALSE
 	/// The variable containing the flags for how the woman uniform cropping is supposed to interact with the sprite.
-	var/female_sprite_flags = FEMALE_UNIFORM_FULL
+	var/female_sprite_flags = NO_FEMALE_UNIFORM //hl13 edit
 
 	// Sensor handling
 	/// Does this undersuit have suit sensors in general
