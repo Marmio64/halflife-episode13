@@ -37,6 +37,18 @@
 	merge_type = /obj/item/stack/sheet/halflife/plastic
 	grind_results = list(/datum/reagent/plastic_polymers = 10)
 
+/obj/item/stack/bulletcasings
+	name = "empty ammo casings"
+	desc = "A pile of empty ammo casings in good condition, for making ammunition from."
+	custom_price = 5
+	icon = 'hl13/icons/obj/materials.dmi'
+	singular_name = "empty ammo casing"
+	merge_type = /obj/item/stack/bulletcasings
+	icon_state = "casings"
+	w_class = WEIGHT_CLASS_TINY
+	obj_flags = CONDUCTS_ELECTRICITY
+	grind_results = list(/datum/reagent/iron = 20)
+
 /obj/item/stack/sheet/halflife/brick
 	name = "brick"
 	singular_name = "brick"

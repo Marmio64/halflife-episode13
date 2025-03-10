@@ -41,11 +41,11 @@
 /datum/crafting_recipe/pistolmag
 	name = "9mm USP Match Full Magazine"
 	result = /obj/item/ammo_box/magazine/usp9mm
-	reqs = list(/obj/item/stack/sheet/iron = 18,
+	reqs = list(/obj/item/stack/bulletcasings = 3,
 				/obj/item/stack/cable_coil = 18,
 				/datum/reagent/fuel = 35)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
-	time = 9 SECONDS
+	time = 6 SECONDS
 	category = CAT_WEAPON_AMMO
 	crafting_interface = CRAFTING_BENCH_RELOADING
 
@@ -96,11 +96,11 @@
 /datum/crafting_recipe/mp7mag
 	name = "4.6x30mm MP7 Full Magazine"
 	result = /obj/item/ammo_box/magazine/mp7
-	reqs = list(/obj/item/stack/sheet/iron = 35,
+	reqs = list(/obj/item/stack/bulletcasings = 7,
 				/obj/item/stack/cable_coil = 35,
 				/datum/reagent/fuel = 35)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
-	time = 9 SECONDS
+	time = 7 SECONDS
 	category = CAT_WEAPON_AMMO
 	crafting_interface = CRAFTING_BENCH_RELOADING
 
@@ -140,22 +140,22 @@
 /datum/crafting_recipe/m4a1mag
 	name = "5.56 M4A1 Full Magazine"
 	result = /obj/item/ammo_box/magazine/m4a1
-	reqs = list(/obj/item/stack/sheet/iron = 35,
+	reqs = list(/obj/item/stack/bulletcasings = 7,
 				/obj/item/stack/cable_coil = 30,
 				/datum/reagent/fuel = 45)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
-	time = 20 SECONDS
+	time = 12 SECONDS
 	category = CAT_WEAPON_AMMO
 	crafting_interface = CRAFTING_BENCH_RELOADING
 
 /datum/crafting_recipe/servicemag
 	name = "5.56 Service Rifle Full Magazine"
 	result = /obj/item/ammo_box/magazine/m4a1/service
-	reqs = list(/obj/item/stack/sheet/iron = 25,
+	reqs = list(/obj/item/stack/bulletcasings = 5,
 				/obj/item/stack/cable_coil = 20,
 				/datum/reagent/fuel = 30)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
-	time = 20 SECONDS
+	time = 10 SECONDS
 	category = CAT_WEAPON_AMMO
 	crafting_interface = CRAFTING_BENCH_RELOADING
 
