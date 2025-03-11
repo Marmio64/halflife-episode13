@@ -125,8 +125,7 @@
 	extra_access = list(
 		ACCESS_ENGINE_EQUIP,
 		ACCESS_MINISAT,
-		ACCESS_TCOMMS,
-		ACCESS_TECH_STORAGE,
+		ACCESS_TCOMMS
 		)
 	template_access = list(
 		ACCESS_CAPTAIN,
@@ -902,6 +901,8 @@
 	sechud_icon_state = SECHUD_QUARTERMASTER
 	minimal_access = list(
 		ACCESS_ENGINEERING, //hl13 edit
+		ACCESS_TECH_STORAGE, //hl13 edit
+		ACCESS_ATMOSPHERICS, //hl13 edit
 		ACCESS_AUX_BASE,
 		ACCESS_BIT_DEN,
 		ACCESS_CARGO,
@@ -1234,9 +1235,6 @@
 		ACCESS_MINISAT,
 		ACCESS_TCOMMS,
 		ACCESS_TECH_STORAGE,
-		)
-	extra_access = list(
-		ACCESS_ATMOSPHERICS,
 		)
 	template_access = list(
 		ACCESS_CAPTAIN,

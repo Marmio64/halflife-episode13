@@ -1257,7 +1257,7 @@
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/plaza)
 "cgH" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/maint/nodirectional{
+/obj/machinery/turnstile/brig/halflife/forcefield/engineering/nodirectional{
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -1560,7 +1560,7 @@
 	c_tag = "Town Hall Overseer Room";
 	dir = 9
 	},
-/obj/structure/closet/halflife,
+/obj/structure/closet/secure_closet/halflife/security,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/preproom)
 "cEK" = (
@@ -3222,7 +3222,7 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/townhall/secondfloor)
 "fap" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/maint/nodirectional,
+/obj/machinery/turnstile/brig/halflife/forcefield/engineering/nodirectional,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "faq" = (
@@ -4453,6 +4453,7 @@
 /obj/structure/table/halflife/no_smooth/large/metal/desk{
 	dir = 1
 	},
+/obj/item/stack/bulletcasings,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/townhall/secondfloor)
 "gRs" = (
@@ -5938,7 +5939,7 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/productioncenter)
 "jjG" = (
-/obj/structure/closet/secure_closet/security/sec,
+/obj/structure/closet/secure_closet/halflife/security,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "jjN" = (
@@ -12251,8 +12252,8 @@
 /turf/open/floor/plating/indoor/grooved,
 /area/halflife/indoors/hospital)
 "tea" = (
-/obj/structure/closet/secure_closet/security/sec,
 /obj/machinery/combine_walllight/directional/west,
+/obj/structure/closet/secure_closet/halflife/security,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "ted" = (
@@ -13022,8 +13023,8 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
 "uvd" = (
-/obj/structure/closet/secure_closet/security/sec,
 /obj/machinery/combine_walllight/directional/east,
+/obj/structure/closet/secure_closet/halflife/security,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "uvn" = (
@@ -13853,6 +13854,7 @@
 	dir = 8;
 	pixel_y = 7
 	},
+/obj/item/stack/bulletcasings,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/townhall/secondfloor)
 "vyt" = (
@@ -15467,7 +15469,7 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors)
 "xSI" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/maint/nodirectional,
+/obj/machinery/turnstile/brig/halflife/forcefield/infestation/nodirectional,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
 "xTq" = (

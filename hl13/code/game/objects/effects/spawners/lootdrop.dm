@@ -47,7 +47,7 @@
 				/obj/item/reagent_containers/syringe,
 				/obj/item/reagent_containers/medigel/sterilizine,
 				/obj/item/reagent_containers/pill/patch/medkit,
-				/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
+				/obj/item/reagent_containers/pill/patch/medkit/vial = 3,
 				/obj/item/circuitboard/machine/skill_station,
 				/obj/item/skillchip/fitness,
 				/obj/item/skillchip/painsuppress,
@@ -55,6 +55,7 @@
 				/obj/item/clothing/head/beret/durathread/unitednations,
 				/obj/item/reagent_containers/cup/bottle/welding_fuel,
 				/obj/item/grenade/halflife/molotov,
+				/obj/item/stack/bulletcasings,
 				/obj/item/customblank,
 				/obj/item/customlock,
 				/obj/item/stack/spacecash/c10,
@@ -75,6 +76,7 @@
 				/obj/item/stack/sheet/cloth,
 				/obj/item/stack/sheet/scrap_metal = 2,
 				/obj/item/stack/sheet/glass,
+				/obj/item/stack/bulletcasings,
 				/obj/item/stack/sheet/mineral/scrap_wood = 2
 				)
 

@@ -138,7 +138,7 @@
 	user.visible_message(span_notice("[user] begins to sift through the [src] for anything useful."), \
 		span_notice("You begin to dig through the [src] for something interesting."))
 	if(do_after(user, 7 SECONDS, src))
-		if(prob(35))
+		if(prob(40))
 			user.visible_message(span_notice("[user] finds something inside the [src]."), \
 				span_notice("You find something interesting inside the [src]."))
 			new /obj/effect/spawner/random/halflife/loot(loc, rand(1,2))

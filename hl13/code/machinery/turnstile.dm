@@ -218,3 +218,19 @@
 /obj/machinery/turnstile/brig/halflife/forcefield/maint/nodirectional
 	desc = "A forcefield which only allows those to pass who have proper access. You may be able to turn it off with the proper access."
 	directional = FALSE
+
+/obj/machinery/turnstile/brig/halflife/forcefield/engineering
+	name = "Combine Engineering Forcefield"
+	req_access = list(ACCESS_TECH_STORAGE)
+
+/obj/machinery/turnstile/brig/halflife/forcefield/engineering/nodirectional
+	desc = "A forcefield which only allows those to pass who have proper access. You may be able to turn it off with the proper access."
+	directional = FALSE
+
+/obj/machinery/turnstile/brig/halflife/forcefield/infestation
+	name = "Combine Infestation Control Forcefield"
+	req_access = list(ACCESS_ATMOSPHERICS)
+
+/obj/machinery/turnstile/brig/halflife/forcefield/infestation/nodirectional
+	desc = "A forcefield which only allows those to pass who have proper access. You may be able to turn it off with the proper access."
+	directional = FALSE
