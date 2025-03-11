@@ -82,6 +82,7 @@ const CATEGORY_ICONS_COOKING = {
   'Mexican Food': 'pepper-hot',
   'Misc. Food': 'shapes',
   'Mothic Food': 'shirt',
+  'Ration Food': 'bowl-food',
   Pastries: 'cookie',
   Pies: 'chart-pie',
   Pizzas: 'pizza-slice',

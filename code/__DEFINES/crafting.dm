@@ -47,6 +47,7 @@
 #define CAT_MISCFOOD "Misc. Food"
 #define CAT_MEXICAN "Mexican Food"
 #define CAT_MOTH "Mothic Food"
+#define CAT_RATION "Ration Food"
 #define CAT_PASTRY "Pastries"
 #define CAT_PIE "Pies"
 #define CAT_PIZZA "Pizzas"
