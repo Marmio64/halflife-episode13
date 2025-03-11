@@ -136,6 +136,12 @@
 	has_alternate_states = TRUE
 	has_base_states = TRUE
 
+/turf/open/floor/plating/indoor/tile/kitchen
+	icon_state = "kitchentile"
+	alternate_states = 1
+	has_alternate_states = FALSE
+	has_base_states = FALSE
+
 /turf/open/floor/plating/indoor/tile/navy
 	icon_state = "navy"
 	alternate_states = 3
