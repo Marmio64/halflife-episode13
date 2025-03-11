@@ -96,7 +96,7 @@
 #define JOB_CLOWN "Clown"
 #define JOB_MIME "Mime"
 #define JOB_CURATOR "Clerk"
-#define JOB_LAWYER "Lawyer"
+#define JOB_LAWYER "District Liaison"
 #define JOB_CHAPLAIN "Chaplain"
 #define JOB_PSYCHOLOGIST "Psychologist"
 #define JOB_PUN_PUN "Pun Pun"

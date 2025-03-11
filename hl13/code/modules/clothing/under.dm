@@ -255,4 +255,13 @@
 	random_sensor = FALSE
 	icon_state = "classysuit"
 
+/obj/item/clothing/under/halflife/brownsuit
+	name = "old suit"
+	desc = "A pretty good, old and dusty brown suit."
+	can_adjust = FALSE
+	has_sensor = LOCKED_SENSORS
+	sensor_mode = SENSOR_COORDS
+	random_sensor = FALSE
+	icon_state = "brownsuit"
+
 #undef STIMULANT_INJECTION_DELAY

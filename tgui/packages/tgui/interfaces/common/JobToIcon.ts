@@ -35,7 +35,7 @@ export const JOB2ICON = {
   'Divisional Lead': 'user-shield',
   'Big Brother': 'eye',
   'Vortigaunt Slave': 'soap',
-  Lawyer: 'gavel',
+  'District Liaison': 'gavel',
   'Union Doctor': 'staff-snake',
   Mime: 'comment-slash',
   Paramedic: 'truck-medical',

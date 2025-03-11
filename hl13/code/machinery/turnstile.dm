@@ -18,7 +18,7 @@
 /obj/machinery/turnstile/brig
 	name = "Brig turnstile"
 	//Seccies and brig phys may always pass, either way.
-	req_access = list(ACCESS_SECURITY)
+	req_access = list(ACCESS_BRIG_ENTRANCE)
 	max_integrity = 600 /// Made of damn good steel
 	damage_deflection = 24 /// Blocks most everything except heavy melee weapons like fireaxes/sledgehammers or dedicated destroying melee weapons like large crowbars.
 
