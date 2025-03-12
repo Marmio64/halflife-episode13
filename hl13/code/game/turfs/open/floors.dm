@@ -184,6 +184,9 @@
 	has_alternate_states = TRUE
 	has_base_states = TRUE
 
+/turf/open/floor/plating/indoor/metal/smooth
+	icon_state = "combine_metal_smooth"
+
 /turf/open/floor/plating/indoor/metal/grate
 	icon_state = "steel_grate"
 

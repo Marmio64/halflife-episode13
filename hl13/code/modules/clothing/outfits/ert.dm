@@ -161,3 +161,29 @@
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
+
+/datum/outfit/centcom/ert/administrative
+	name = "Combine Administrative Represenative"
+
+	id = /obj/item/card/id/advanced/centcom/ert
+	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	uniform = /obj/item/clothing/under/halflife/blacksuit
+	shoes = /obj/item/clothing/shoes/laceup
+	belt = /obj/item/melee/baton/telescopic
+	l_hand = /obj/item/storage/briefcase
+	mask = null
+	gloves = null
+
+	l_pocket = /obj/item/gun/ballistic/revolver/snubnose
+
+	implants = list(/obj/item/implant/mindshield)
+
+/datum/outfit/centcom/ert/administrative/nogun
+	l_pocket = null
+
+/datum/outfit/centcom/ert/administrative/pre_equip(mob/living/carbon/human/H)
+	H.faction += "combine"
+	H.cmode_music = 'hl13/sound/music/combat/branescan.ogg'
+	H.set_facial_hairstyle("Shaved", update = FALSE)
+	H.set_hairstyle("Crewcut") //this will call update_body_parts()
+	H.update_body()

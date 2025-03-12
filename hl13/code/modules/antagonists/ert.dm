@@ -42,3 +42,10 @@
 /datum/antagonist/ert/conscript/officer
 	outfit = /datum/outfit/centcom/ert/conscript/officer
 	role = "LIEUTENANT-"
+
+/datum/antagonist/ert/administrative
+	outfit = /datum/outfit/centcom/ert/administrative
+	role = "Represenative"
+
+/datum/antagonist/ert/administrative/nogun
+	outfit = /datum/outfit/centcom/ert/administrative/nogun

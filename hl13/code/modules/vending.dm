@@ -44,6 +44,7 @@
 					/obj/item/radio/off/halflife = 3,
 					/obj/item/reagent_containers/cup/bottle/welding_fuel = 3,
 					/obj/item/food/rationpack/box = 5,
+					/obj/item/food/flavorbar = 5,
 					/obj/item/reagent_containers/pill/patch/medkit/vial = 3,
 					/obj/item/stack/sticky_tape = 4,
 					/obj/item/storage/toolbox/fishing = 2,
@@ -134,6 +135,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	name = "\improper Metropolice Supply Vendor"
 	desc = "An equipment vendor for civil protection to spend their hard earned credits on overpriced items."
 	product_ads = "Improve your ability to patrol.;Purchase additional supplies.;Help insure your family cohesion"
+	icon = 'hl13/icons/obj/machines/vending.dmi'
 	icon_state = "sec"
 	icon_deny = "sec-deny"
 	panel_type = "panel6"
@@ -171,6 +173,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	name = "\improper Armory Vendor"
 	desc = "A machine which holds lethal equipment in an easy to sort manner. Requisitioning from here is a poor mark on the sociostability of your district, and will actively lower it."
 	product_ads = "Acquire emergency supplies.;Restock and resupply.;Help insure your family cohesion."
+	icon = 'hl13/icons/obj/machines/vending.dmi'
 	icon_state = "sec"
 	icon_deny = "sec-deny"
 	panel_type = "panel6"

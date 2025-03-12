@@ -250,6 +250,19 @@
 /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger
 	fire_delay = 12 //geared towards sniping, not mag dumping
 
+/obj/item/gun/ballistic/revolver/snubnose
+	name = "\improper snubnose revolver"
+	desc = "A well mainted old world .38 snub nosed revolver, good for fitting in your pocket. Often carried as a weapon of last resort by high ranking combine represenatives entering dangerous areas."
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/snubnose
+	fire_sound = "hl13/sound/weapons/revolverfire.ogg"
+	icon = 'hl13/icons/obj/guns/projectile.dmi'
+	icon_state = "snubnose"
+	spread = 12 //snubnosed
+	recoil = 0.5
+	vary_fire_sound = FALSE
+	w_class = WEIGHT_CLASS_SMALL
+
+
 /obj/item/gun/ballistic/shotgun/spas12
 	name = "SPAS 12"
 	desc = "A spectacularly lethal pump action shotgun, for close encounters."

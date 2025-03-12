@@ -39,6 +39,7 @@
 	desc = "A .38 bullet casing."
 	caliber = CALIBER_38
 	projectile_type = /obj/projectile/bullet/c38
+	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/medium
 
 /obj/item/ammo_casing/c38/trac
 	name = ".38 TRAC bullet casing"

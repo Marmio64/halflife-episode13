@@ -46,3 +46,18 @@
 	mission = "Stabilize the city, and detain or kill any malignant citizens."
 	polldesc = "a metropolice riot team"
 	opendoors = FALSE
+
+/datum/ert/administrative
+	roles = list(/datum/antagonist/ert/administrative)
+	leader_role = /datum/antagonist/ert/administrative
+	rename_team = "Administrative Investigation Team"
+	code = "Blue"
+	mission = "Investigate anything that may be happening in the district."
+	polldesc = "a administrative investigation team"
+	opendoors = FALSE
+	teamsize = 1
+
+/datum/ert/administrative/nogun
+	roles = list(/datum/antagonist/ert/administrative/nogun)
+	leader_role = /datum/antagonist/ert/administrative/nogun
+	rename_team = "Unarmed Administrative Investigation Team"
