@@ -45,7 +45,7 @@
 /// Adds the cog to the user, visible by other players
 /datum/cogbar/proc/add_cog_to_user()
 	cog = SSvis_overlays.add_vis_overlay(user,
-		icon = 'icons/effects/progressbar.dmi',
+		icon = 'hl13/icons/effects/progressbar.dmi',
 		iconstate = "cog",
 		plane = HIGH_GAME_PLANE,
 		add_appearance_flags = APPEARANCE_UI_IGNORE_ALPHA,

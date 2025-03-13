@@ -26,9 +26,6 @@
 
 	barometer_predictable = TRUE
 
-/datum/weather/rain/weather_act(mob/living/victim)
-	victim.adjustFireLoss(4, required_bodytype = BODYTYPE_ORGANIC)
-
 /datum/weather/rain/start()
 	. = ..()
 	for(var/M in GLOB.player_list)
