@@ -36,7 +36,7 @@
 /datum/supply_pack/security/kevlar
 	name = "Kevlar Crate"
 	desc = "Ten rolls of kevlar, for making armor repairs or creating makeshift armor."
-	cost = CARGO_CRATE_VALUE * 3
+	cost = CARGO_CRATE_VALUE * 3.5
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/stack/kevlar/five,
 					/obj/item/stack/kevlar/five)

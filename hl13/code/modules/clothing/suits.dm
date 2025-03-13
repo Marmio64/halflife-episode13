@@ -8,7 +8,7 @@
 
 	armor_type = /datum/armor/civpro_vest
 
-	limb_integrity = 200
+	limb_integrity = 225
 	repairable_by = /obj/item/stack/kevlar
 
 /datum/armor/civpro_vest
@@ -111,7 +111,7 @@
 	blood_overlay_type = "armor"
 	armor_type = /datum/armor/kevlararmor
 
-	limb_integrity = 150
+	limb_integrity = 175
 	repairable_by = /obj/item/stack/kevlar
 
 /datum/armor/kevlararmor
@@ -132,7 +132,7 @@
 	slowdown = 0.25
 	armor_type = /datum/armor/milvest
 
-	limb_integrity = 200
+	limb_integrity = 225
 	repairable_by = /obj/item/stack/kevlar
 
 /datum/armor/milvest
@@ -154,7 +154,7 @@
 	blood_overlay_type = "armor"
 	armor_type = /datum/armor/armoredvest
 
-	limb_integrity = 75
+	limb_integrity = 100
 
 /datum/armor/armoredvest
 	melee = 20

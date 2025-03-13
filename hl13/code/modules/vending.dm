@@ -51,6 +51,7 @@
 					/obj/item/storage/box/fishing_hooks = 2,
 					/obj/item/storage/box/fishing_lines = 2,
 					/obj/item/storage/box/fishing_lures = 2,
+					/obj/item/stack/sheet/cloth = 5,
 					/obj/item/tape = 5, //tape recorder stuff
 					/obj/item/taperecorder = 2,
 					/obj/item/storage/fancy/cigarettes/halflife = 8,

@@ -30,7 +30,7 @@
 
 	repairable_by = /obj/item/stack/kevlar
 
-	limb_integrity = 250
+	limb_integrity = 275
 
 	///List of all lines that can be said by the mask, with their respective sound file.
 	var/static/list/cp_voicelines = list(
