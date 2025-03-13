@@ -1166,27 +1166,7 @@
 	r_pocket = /obj/item/ammo_box/magazine/m4a1
 	belt = /obj/item/gun/ballistic/automatic/pistol/usp
 
-/datum/outfit/deathmatch_loadout/rebel/medic
-	name = "Deathmatch: Rebel Medic"
-	display_name = "Rebel Medic"
-	desc = "You haven't much firepower at your disposal with limited ammo and an MP7, but you carry a lot of medical supplies for yourself and your team mates."
-
-	head = /obj/item/clothing/head/beanie/black
-	uniform = /obj/item/clothing/under/citizen/rebel
-	gloves = /obj/item/clothing/gloves/fingerless
-	suit = /obj/item/clothing/suit/armor/civilprotection
-	suit_store = /obj/item/gun/ballistic/automatic/mp7
-	l_pocket = /obj/item/ammo_box/magazine/mp7
-
-	back = /obj/item/storage/backpack/satchel/med
-	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/medkit/vial,
-		/obj/item/reagent_containers/pill/patch/medkit/vial,
-		/obj/item/reagent_containers/pill/patch/medkit/vial,
-		/obj/item/reagent_containers/pill/patch/medkit,
-		/obj/item/reagent_containers/pill/patch/medkit,
-	)
-
+//high damage, but low armor and slow firing weapons makes very vulnerable to rush downs
 /datum/outfit/deathmatch_loadout/rebel/ranger
 	name = "Deathmatch: Rebel Ranger"
 	display_name = "Rebel Ranger"
@@ -1228,6 +1208,7 @@
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
+//sturdy close range powerhouse, though not very quick
 /datum/outfit/deathmatch_loadout/combine/overwatch/shotgunner
 	name = "Deathmatch: OTA Shotgunner"
 	display_name = "OTA Shotgunner"
@@ -1260,6 +1241,7 @@
 	H.faction += "combine"
 	H.cmode_music = 'hl13/sound/music/combat/branescan.ogg'
 
+//vulnerable to being rushed down, but has very deadly manhacks to protect them
 /datum/outfit/deathmatch_loadout/civilprotection
 	name = "Deathmatch: Metrocop"
 	display_name = "Metrocop"
@@ -1281,6 +1263,7 @@
 /datum/outfit/deathmatch_loadout/crowbar/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/notsupposedtobehere.ogg'
 
+//speedy rush down class
 /datum/outfit/deathmatch_loadout/crowbar
 	name = "Deathmatch: A Free Man"
 	display_name = "A Free Man"
@@ -1327,30 +1310,57 @@
 /datum/outfit/deathmatch_loadout/rioter
 	name = "Deathmatch: Rioter"
 	display_name = "Rioter"
-	desc = "Deceptively underequipped, the rioter actually sports a wide array of improvised equipment which will award patience, but is vulnerable to being rushed down."
+	desc = "A hit and run class which uses molotovs to burn their enemies alive. They also move faster than any other class due to their light armor."
 
-	head = /obj/item/clothing/head/helmet/halflife/military
+	head = /obj/item/clothing/head/beanie/black
 	uniform = /obj/item/clothing/under/citizen/rebel
 	gloves = /obj/item/clothing/gloves/fingerless
-	suit = /obj/item/clothing/suit/armor/browncoat
+	suit = /obj/item/clothing/suit/armor/browncoat/deathmatch
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
 	r_pocket = /obj/item/lighter
 	l_pocket = /obj/item/switchblade
-
-	l_hand = /obj/item/gun/ballistic/automatic/pistol/usp
-	r_hand = /obj/item/gun/ballistic/automatic/pistol/usp
 
 	back = /obj/item/storage/backpack/halflife
 	backpack_contents = list(
 		/obj/item/grenade/halflife/molotov,
 		/obj/item/grenade/halflife/molotov,
 		/obj/item/grenade/halflife/molotov,
+		/obj/item/grenade/halflife/molotov,
 		/obj/item/reagent_containers/pill/patch/medkit,
+		/obj/item/reagent_containers/pill/patch/medkit/vial,
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
 		/obj/item/ammo_box/magazine/usp9mm,
 		/obj/item/ammo_box/magazine/usp9mm,
-		/obj/item/restraints/legcuffs/beartrap,
-		/obj/item/stack/sheet/halflife/brick,
 	)
 
 /datum/outfit/deathmatch_loadout/rioter/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/cpviolation.ogg'
+
+//similar to freeman class, but trades speed, vision, and on the fly suit provided healing for beartraps, armor, and bandages
+/datum/outfit/deathmatch_loadout/feral_refugee
+	name = "Deathmatch: Feral Refugee"
+	display_name = "Feral Refugee"
+	desc = "A feral looking and well protected refugee who is capable of ambushing and killing people in close range, but struggles to close the distance."
+
+	head = /obj/item/clothing/head/helmet/halflife/headcrab/deathmatch
+	uniform = /obj/item/clothing/under/citizen/refugee
+	gloves = /obj/item/clothing/gloves/fingerless
+	suit = /obj/item/clothing/suit/armor/platearmor/deathmatch
+	mask = /obj/item/clothing/mask/bandana/sinew
+	l_pocket = /obj/item/knife/combat/bone
+
+	r_hand = /obj/item/spear/halflife
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	backpack_contents = list(
+		/obj/item/restraints/legcuffs/beartrap,
+		/obj/item/restraints/legcuffs/beartrap,
+		/obj/item/restraints/legcuffs/beartrap,
+		/obj/item/stack/medical/bandage,
+		/obj/item/stack/medical/bandage,
+		/obj/item/stack/medical/bandage,
+	)
+
+/datum/outfit/deathmatch_loadout/feral_refugee/pre_equip(mob/living/carbon/human/H)
+	H.cmode_music = 'hl13/sound/music/combat/disrupted.ogg'

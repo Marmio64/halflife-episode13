@@ -26,9 +26,9 @@ GLOBAL_DATUM(bridge_axe, /obj/item/fireaxe)
 	wound_bonus = -15
 	bare_wound_bonus = 15 //hl13 edit
 	/// How much damage to do unwielded
-	var/force_unwielded = 5
+	var/force_unwielded = 10 //hl13 edit
 	/// How much damage to do wielded
-	var/force_wielded = 30 //hl13 edit
+	var/force_wielded = 29 //hl13 edit
 
 /datum/armor/item_fireaxe
 	fire = 100

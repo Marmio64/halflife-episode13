@@ -105,6 +105,19 @@
 	acid = 50
 	wound = 10
 
+/obj/item/clothing/head/helmet/halflife/headcrab/deathmatch
+	armor_type = /datum/armor/headcrab/deathmatch
+
+/datum/armor/headcrab/deathmatch
+	melee = 70
+	bullet = 70
+	laser = 70
+	energy = 70
+	bomb = 70
+	fire = 70
+	acid = 70
+	wound = 15
+
 /obj/item/clothing/head/helmet/halflife/headcrab/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/clothing_fov_visor, FOV_270_DEGREES)

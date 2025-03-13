@@ -265,6 +265,7 @@
 		/datum/outfit/deathmatch_loadout/crowbar,
 		/datum/outfit/deathmatch_loadout/conscript,
 		/datum/outfit/deathmatch_loadout/rioter,
+		/datum/outfit/deathmatch_loadout/feral_refugee,
 	)
 	map_name = "citydistrict"
 	key = "citydistrict"
@@ -283,6 +284,7 @@
 		/datum/outfit/deathmatch_loadout/crowbar,
 		/datum/outfit/deathmatch_loadout/conscript,
 		/datum/outfit/deathmatch_loadout/rioter,
+		/datum/outfit/deathmatch_loadout/feral_refugee,
 	)
 	map_name = "hl13train"
 	key = "hl13train"
@@ -301,6 +303,7 @@
 		/datum/outfit/deathmatch_loadout/crowbar,
 		/datum/outfit/deathmatch_loadout/conscript,
 		/datum/outfit/deathmatch_loadout/rioter,
+		/datum/outfit/deathmatch_loadout/feral_refugee,
 	)
 	map_name = "cityalleys"
 	key = "cityalleys"
@@ -319,6 +322,7 @@
 		/datum/outfit/deathmatch_loadout/crowbar,
 		/datum/outfit/deathmatch_loadout/conscript,
 		/datum/outfit/deathmatch_loadout/rioter,
+		/datum/outfit/deathmatch_loadout/feral_refugee,
 	)
 	map_name = "sandtraps"
 	key = "sandtraps"
@@ -357,6 +361,7 @@
 		/datum/outfit/deathmatch_loadout/crowbar,
 		/datum/outfit/deathmatch_loadout/conscript,
 		/datum/outfit/deathmatch_loadout/rioter,
+		/datum/outfit/deathmatch_loadout/feral_refugee,
 	)
 	map_name = "outlands"
 	key = "outlands"

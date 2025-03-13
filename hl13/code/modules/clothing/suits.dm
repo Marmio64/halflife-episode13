@@ -6,6 +6,18 @@
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 
+	armor_type = /datum/armor/civpro_vest
+
+/datum/armor/civpro_vest
+	melee = 35
+	bullet = 25
+	laser = 30
+	energy = 40
+	bomb = 25
+	fire = 50
+	acid = 50
+	wound = 10
+
 /obj/item/clothing/suit/armor/civilprotection/medical
 	name = "medical officer vest"
 	icon_state = "medicalofficer"
@@ -61,7 +73,7 @@
 	icon_state = "overwatch_red"
 
 /obj/item/clothing/suit/armor/overwatch/red/deathmatch
-	slowdown = 0.33
+	slowdown = 0.5
 
 /obj/item/clothing/suit/armor/overwatch/elite
 	name = "overwatch elite chestpiece"
@@ -94,7 +106,7 @@
 	armor_type = /datum/armor/kevlararmor
 
 /datum/armor/kevlararmor
-	melee = 15
+	melee = 20
 	bullet = 25
 	laser = 10
 	energy = 100
@@ -112,7 +124,7 @@
 	armor_type = /datum/armor/milvest
 
 /datum/armor/milvest
-	melee = 25
+	melee = 30
 	bullet = 40
 	laser = 10
 	energy = 100
@@ -131,7 +143,7 @@
 	armor_type = /datum/armor/armoredvest
 
 /datum/armor/armoredvest
-	melee = 15
+	melee = 20
 	bullet = 10
 	laser = 10
 	energy = 10
@@ -148,7 +160,7 @@
 	armor_type = /datum/armor/armoredvest_upgraded
 
 /datum/armor/armoredvest_upgraded
-	melee = 25
+	melee = 30
 	bullet = 20
 	laser = 20
 	energy = 20
@@ -170,6 +182,9 @@
 	clothing_flags = THICKMATERIAL
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
 	armor_type = /datum/armor/browncoat
+
+/obj/item/clothing/suit/armor/browncoat/deathmatch
+	slowdown = -0.5
 
 /datum/armor/browncoat
 	melee = 10
@@ -223,8 +238,8 @@
 	armor_type = /datum/armor/engineersuit
 
 /datum/armor/engineersuit
-	melee = 5
-	bullet = 5
+	melee = 0
+	bullet = 0
 	laser = 0
 	energy = 0
 	bomb = 5
@@ -257,7 +272,7 @@
 	armor_type = /datum/armor/rebelheavy
 
 /datum/armor/rebelheavy
-	melee = 35
+	melee = 40
 	bullet = 50
 	laser = 35
 	energy = 30
@@ -275,7 +290,7 @@
 	armor_type = /datum/armor/rebellight
 
 /datum/armor/rebellight
-	melee = 35
+	melee = 40
 	bullet = 30
 	laser = 35
 	energy = 30
@@ -292,3 +307,20 @@
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 	slowdown = 0.5
+
+	armor_type = /datum/armor/civpro_vest
+
+/obj/item/clothing/suit/armor/platearmor/deathmatch
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+
+	armor_type = /datum/armor/platearmor_deathmatch
+
+/datum/armor/platearmor_deathmatch
+	melee = 70
+	bullet = 70
+	laser = 70
+	energy = 70
+	bomb = 70
+	fire = 70
+	acid = 70
+	wound = 15
