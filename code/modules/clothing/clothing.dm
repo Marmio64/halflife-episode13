@@ -171,7 +171,7 @@
  * * armour_penetration: If the attack had armour_penetration
  */
 /obj/item/clothing/proc/take_damage_zone(def_zone, damage_amount, damage_type, armour_penetration)
-	if(!def_zone || !limb_integrity || (initial(body_parts_covered) in GLOB.bitflags)) // the second check sees if we only cover one bodypart anyway and don't need to bother with this
+	if(!def_zone || !limb_integrity) // hl13 edit, lets single part covering armors take damage if we want them to
 		return
 	var/list/covered_limbs = cover_flags2body_zones(body_parts_covered) // what do we actually cover?
 	if(!(def_zone in covered_limbs))

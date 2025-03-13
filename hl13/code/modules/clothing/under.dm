@@ -24,6 +24,7 @@
 		COMSIG_MOB_APPLY_DAMAGE = PROC_REF(handle_damage)
 	)
 
+	limb_integrity = 50
 	armor_type = /datum/armor/combinesuit
 
 /datum/armor/combinesuit
@@ -213,6 +214,7 @@
 	has_sensor = NO_SENSORS
 	armor_type = /datum/armor/rebelsuit
 	can_adjust = FALSE
+	limb_integrity = 50
 
 /datum/armor/rebelsuit
 	melee = 10

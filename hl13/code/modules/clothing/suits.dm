@@ -8,6 +8,9 @@
 
 	armor_type = /datum/armor/civpro_vest
 
+	limb_integrity = 200
+	repairable_by = /obj/item/stack/kevlar
+
 /datum/armor/civpro_vest
 	melee = 35
 	bullet = 25
@@ -55,6 +58,9 @@
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 
 	armor_type = /datum/armor/overwatcharmor
+
+	limb_integrity = 400
+	repairable_by = /obj/item/stack/kevlar
 
 /datum/armor/overwatcharmor
 	melee = 40
@@ -105,6 +111,9 @@
 	blood_overlay_type = "armor"
 	armor_type = /datum/armor/kevlararmor
 
+	limb_integrity = 150
+	repairable_by = /obj/item/stack/kevlar
+
 /datum/armor/kevlararmor
 	melee = 20
 	bullet = 25
@@ -122,6 +131,9 @@
 	blood_overlay_type = "armor"
 	slowdown = 0.25
 	armor_type = /datum/armor/milvest
+
+	limb_integrity = 200
+	repairable_by = /obj/item/stack/kevlar
 
 /datum/armor/milvest
 	melee = 30
@@ -142,6 +154,8 @@
 	blood_overlay_type = "armor"
 	armor_type = /datum/armor/armoredvest
 
+	limb_integrity = 75
+
 /datum/armor/armoredvest
 	melee = 20
 	bullet = 10
@@ -158,6 +172,8 @@
 	name = "upgraded armored vest"
 	desc = "A handcrafted armored vest made of cloth and metal, enhanced with xenian fungal plates for extra protection."
 	armor_type = /datum/armor/armoredvest_upgraded
+
+	limb_integrity = 200
 
 /datum/armor/armoredvest_upgraded
 	melee = 30
@@ -182,6 +198,8 @@
 	clothing_flags = THICKMATERIAL
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
 	armor_type = /datum/armor/browncoat
+
+	limb_integrity = 100
 
 /obj/item/clothing/suit/armor/browncoat/deathmatch
 	slowdown = -0.5
@@ -271,6 +289,9 @@
 	slowdown = 0.5
 	armor_type = /datum/armor/rebelheavy
 
+	limb_integrity = 350
+	repairable_by = /obj/item/stack/kevlar
+
 /datum/armor/rebelheavy
 	melee = 40
 	bullet = 50
@@ -288,6 +309,8 @@
 	inhand_icon_state = "rebelarmor_light"
 	slowdown = 0
 	armor_type = /datum/armor/rebellight
+
+	limb_integrity = 250
 
 /datum/armor/rebellight
 	melee = 40
@@ -307,6 +330,9 @@
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 	slowdown = 0.5
+	repairable_by = /obj/item/stack/sheet/animalhide/goliath_hide
+
+	limb_integrity = 350
 
 	armor_type = /datum/armor/civpro_vest
 

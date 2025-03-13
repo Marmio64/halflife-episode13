@@ -33,6 +33,15 @@
 					/obj/item/clothing/head/helmet/halflife/military/weak)
 	crate_name = "military gear crate"
 
+/datum/supply_pack/security/kevlar
+	name = "Kevlar Crate"
+	desc = "Ten rolls of kevlar, for making armor repairs or creating makeshift armor."
+	cost = CARGO_CRATE_VALUE * 3
+	access_view = ACCESS_SECURITY
+	contains = list(/obj/item/stack/kevlar/five,
+					/obj/item/stack/kevlar/five)
+	crate_name = "kevlar crate"
+
 /datum/supply_pack/security/riotarmor
 	name = "Riot Armor Crate"
 	desc = "Two sets of riot control armor that excels at stopping blunt force trauma, cuts, and lacerations from close range. Does little against firearms, however."

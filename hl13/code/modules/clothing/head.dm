@@ -40,6 +40,10 @@
 	armor_type = /datum/armor/military_helmet
 	flags_cover = EARS_COVERED
 
+	repairable_by = /obj/item/stack/kevlar
+
+	limb_integrity = 300
+
 /datum/armor/military_helmet
 	melee = 25
 	bullet = 20
@@ -74,6 +78,10 @@
 	base_icon_state = "milhelm"
 	armor_type = /datum/armor/milhelm
 	flags_cover = EARS_COVERED
+
+	repairable_by = /obj/item/stack/kevlar
+
+	limb_integrity = 300
 
 /datum/armor/milhelm
 	melee = 25

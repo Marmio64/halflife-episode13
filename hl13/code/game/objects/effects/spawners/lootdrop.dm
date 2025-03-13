@@ -58,6 +58,7 @@
 				/obj/item/stack/bulletcasings,
 				/obj/item/customblank,
 				/obj/item/customlock,
+				/obj/item/stack/kevlar,
 				/obj/item/stack/spacecash/c10,
 				/obj/item/stack/spacecash/c20,
 				/obj/item/storage/medkit/toxin
@@ -217,6 +218,7 @@
 				/obj/item/switchblade,
 				/obj/item/melee/baton/security/loaded,
 				/obj/item/stack/telecrystal/five,
+				/obj/item/stack/kevlar/five,
 				/obj/item/clothing/suit/armor/kevlar,
 				/obj/item/clothing/suit/armor/rebel/light,
 				/obj/item/clothing/head/helmet/halflife/military

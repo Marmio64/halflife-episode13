@@ -28,6 +28,10 @@
 
 	var/overwatch = FALSE
 
+	repairable_by = /obj/item/stack/kevlar
+
+	limb_integrity = 250
+
 	///List of all lines that can be said by the mask, with their respective sound file.
 	var/static/list/cp_voicelines = list(
 		"Affirmative" = 'hl13/sound/voice/cpvoicelines/affirmative.ogg',
@@ -213,6 +217,8 @@
 	inhand_icon_state = "swat"
 	overwatch = TRUE
 	armor_type = /datum/armor/cpmask_upgraded
+
+	limb_integrity = 400
 
 	unique_death = 'hl13/sound/voice/otavoicelines/die1.ogg'
 

@@ -82,3 +82,20 @@
 /datum/material/brick
 	name = "brick"
 	desc = "Solid fire dried clay."
+
+/obj/item/stack/kevlar
+	name = "kevlar"
+	desc = "Old world kevlar, fit for some serious armor despite its age."
+	custom_price = 5
+	icon = 'hl13/icons/obj/stack_objects.dmi'
+	singular_name = "kevlar"
+	merge_type = /obj/item/stack/kevlar
+	max_amount = 5
+	icon_state = "kevlar"
+	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/stack/kevlar/two
+	amount = 2
+
+/obj/item/stack/kevlar/five
+	amount = 5

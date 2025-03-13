@@ -69,6 +69,7 @@
 	icon_state = "zombine"
 	icon_living = "zombie"
 	icon_dead = "zombine_dead"
+	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 3)
 	maxHealth = 160
 	health = 160
 	speak = list("S-Sector, nnnot... secur-e-e...","B-Biotics-s...","O-Over...watch... r-r-reserve...")

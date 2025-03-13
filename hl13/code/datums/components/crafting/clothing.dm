@@ -33,6 +33,23 @@
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
 
+//some good stuff
+/datum/crafting_recipe/kevlar_vest
+	name = "Kevlar Vest"
+	result = /obj/item/clothing/suit/armor/kevlar
+	reqs = list(/obj/item/stack/kevlar = 5)
+	time = 10 SECONDS
+	category = CAT_ARMOR
+	crafting_interface = CRAFTING_BENCH_ARMTAILOR
+
+//scavenging some kevlar from a vest if you dont need the vest
+/datum/crafting_recipe/rip_apartkevlar_vest
+	name = "Rip Apart Kevlar Vest"
+	result = /obj/item/stack/kevlar/two
+	reqs = list(/obj/item/clothing/suit/armor/kevlar)
+	time = 10 SECONDS
+	category = CAT_ARMOR
+
 //Strap on some extra random metal and pieces of cloth and boom, your armor is slightly better.
 /datum/crafting_recipe/resistance_light_armor
 	name = "Armored Rebel Vest"
