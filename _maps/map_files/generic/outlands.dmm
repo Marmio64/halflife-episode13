@@ -1161,6 +1161,7 @@
 /area/halflife/indoors/sewer/outlandscave)
 "na" = (
 /obj/structure/table/halflife/wood/constructed,
+/obj/item/weldingtool,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "nh" = (
@@ -1352,6 +1353,10 @@
 /obj/structure/halflife/pipes/horizontal,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/forest)
+"pk" = (
+/obj/structure/stairs/stone,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer)
 "pw" = (
 /obj/structure/closet/halflife,
 /obj/effect/spawner/random/halflife/loot,
@@ -1658,6 +1663,13 @@
 	},
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
+"sI" = (
+/obj/structure/fluff/traveltile{
+	aportalgoesto = "city_underground";
+	aportalid = "outlands_underground"
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer)
 "sJ" = (
 /mob/living/basic/halflife/grub{
 	dir = 4
@@ -2090,6 +2102,7 @@
 	pixel_x = -2;
 	pixel_y = 7
 	},
+/obj/item/weldingtool,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/laborcamp/security)
 "xw" = (
@@ -2634,6 +2647,12 @@
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
+"Es" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer)
 "Et" = (
 /obj/structure/halflife/road_barrier/concrete,
 /turf/open/floor/plating/ground/dirt,
@@ -4423,11 +4442,7 @@
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "Zk" = (
-/obj/structure/fluff/traveltile{
-	aportalgoesto = "city_underground";
-	aportalid = "outlands_underground"
-	},
-/turf/open/floor/plating/indoor/concrete/bricks,
+/turf/open/openspace,
 /area/halflife/indoors/sewer/tunnel)
 "Zn" = (
 /obj/structure/halflife/trash/wood{
@@ -25975,23 +25990,23 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
 wG
 wG
 wG
@@ -26172,23 +26187,23 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+UI
+sI
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+pk
+UI
 wG
 wG
 wG
@@ -26369,23 +26384,23 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+UI
+sI
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+pk
+UI
 wG
 wG
 wG
@@ -26566,23 +26581,23 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+UI
+sI
+WG
+Es
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+WG
+Es
+WG
+pk
+UI
 wG
 wG
 wG
@@ -26763,23 +26778,23 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
+UI
 wG
 wG
 wG
