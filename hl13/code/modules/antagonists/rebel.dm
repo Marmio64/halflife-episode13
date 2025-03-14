@@ -2,7 +2,7 @@
 	name = "Bunker Operator"
 
 	uniform = /obj/item/clothing/under/citizen/refugee/green
-	suit = /obj/item/clothing/suit/armor/kevlar
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	head = /obj/item/clothing/head/beret
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless

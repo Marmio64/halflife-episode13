@@ -18,8 +18,8 @@
 	desc = "Two sets of kevlar, helmets, camo fatigues, fingerless gloves, ruck sacks, gas masks, and one beret. Most of this gear is no longer in circulation, and now runs a premium."
 	cost = CARGO_CRATE_VALUE * 12
 	access_view = ACCESS_SECURITY
-	contains = list(/obj/item/clothing/suit/armor/kevlar,
-					/obj/item/clothing/suit/armor/kevlar,
+	contains = list(/obj/item/clothing/suit/armor/halflife/kevlar,
+					/obj/item/clothing/suit/armor/halflife/kevlar,
 					/obj/item/clothing/under/syndicate/camo,
 					/obj/item/clothing/under/syndicate/camo,
 					/obj/item/clothing/mask/gas/hl2/military/hardened,

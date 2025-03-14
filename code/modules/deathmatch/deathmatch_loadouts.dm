@@ -1288,7 +1288,7 @@
 
 	uniform = /obj/item/clothing/under/syndicate/camo
 	gloves = /obj/item/clothing/gloves/fingerless
-	suit = /obj/item/clothing/suit/armor/kevlar
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	head = /obj/item/clothing/head/helmet/halflife/military/weak

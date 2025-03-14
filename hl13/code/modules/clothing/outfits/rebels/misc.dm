@@ -5,7 +5,7 @@
 	name = "Generic Resistance"
 
 	uniform = /obj/item/clothing/under/citizen/refugee/green
-	suit = /obj/item/clothing/suit/armor/kevlar
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
 
@@ -124,7 +124,7 @@
 
 /datum/outfit/resistance_faction/polish/competent
 	name = "Polish Revolutionary Front Private First Class"
-	suit = /obj/item/clothing/suit/armor/kevlar //now we're talking. actual pre-war armour.
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar //now we're talking. actual pre-war armour.
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle //now you're an actual, trusted soldier, so we can give you good weapons
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
 	l_pocket = /obj/item/knife/combat/survival

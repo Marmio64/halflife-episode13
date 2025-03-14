@@ -103,7 +103,7 @@
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 
 //old armor found only as loot
-/obj/item/clothing/suit/armor/kevlar
+/obj/item/clothing/suit/armor/halflife/kevlar
 	name = "kevlar vest"
 	desc = "A old kevlar vest. While still decently protective against bullets, the kevlar has broken down over time and is much less protective than it once was."
 	icon_state = "bulletproof"
@@ -123,6 +123,25 @@
 	fire = 50
 	acid = 50
 	wound = 10
+
+/obj/item/clothing/suit/armor/halflife/kevlar/heavy
+	name = "heavy kevlar vest"
+	desc = "A heavy mass of kevlar, likely made of several vests stitched together with more kevlar. Unwieldly, but it will definitely help protect you."
+	icon_state = "kevlar_heavy"
+	armor_type = /datum/armor/kevlararmor/heavy
+
+	limb_integrity = 250
+	slowdown = 0.5
+
+/datum/armor/kevlararmor/heavy
+	melee = 25
+	bullet = 40
+	laser = 10
+	energy = 100
+	bomb = 40
+	fire = 50
+	acid = 50
+	wound = 15
 
 /obj/item/clothing/suit/armor/halflife/milvest
 	name = "military vest"

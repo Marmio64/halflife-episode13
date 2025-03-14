@@ -219,7 +219,7 @@
 				/obj/item/melee/baton/security/loaded,
 				/obj/item/stack/telecrystal/five,
 				/obj/item/stack/kevlar/five,
-				/obj/item/clothing/suit/armor/kevlar,
+				/obj/item/clothing/suit/armor/halflife/kevlar,
 				/obj/item/clothing/suit/armor/rebel/light,
 				/obj/item/clothing/head/helmet/halflife/military
 				)

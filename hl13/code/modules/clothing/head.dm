@@ -59,6 +59,10 @@
 	desc = "An old world military helmet. Age and use has left the helmet in a less than ideal condition."
 	armor_type = /datum/armor/military_helmet/weak
 
+/obj/item/clothing/head/helmet/halflife/military/weak/crafted
+	name = "hand-made military helmet"
+	desc = "A hand made helmet formed from scraps and kevlar. It's not very good at protecting you in a meaningful way, but every bit counts."
+
 /datum/armor/military_helmet/weak
 	melee = 15
 	bullet = 10

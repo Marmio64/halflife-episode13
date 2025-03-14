@@ -36,17 +36,37 @@
 //some good stuff
 /datum/crafting_recipe/kevlar_vest
 	name = "Kevlar Vest"
-	result = /obj/item/clothing/suit/armor/kevlar
+	result = /obj/item/clothing/suit/armor/halflife/kevlar
 	reqs = list(/obj/item/stack/kevlar = 5)
 	time = 10 SECONDS
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
 
+//even better, at a cost
+/datum/crafting_recipe/kevlar_vest_heavy
+	name = "Heavy Kevlar Vest"
+	result = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
+	reqs = list(/obj/item/stack/kevlar = 2,
+				/obj/item/clothing/suit/armor/halflife/kevlar = 2)
+	time = 10 SECONDS
+	category = CAT_ARMOR
+	crafting_interface = CRAFTING_BENCH_ARMTAILOR
+
+//pretty bad, but head protection can be hard to find
+/datum/crafting_recipe/handmade_helmet
+	name = "Hand-made helmet"
+	result = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+	reqs = list(/obj/item/stack/kevlar = 1,
+				/obj/item/stack/sheet/iron = 4)
+	time = 10 SECONDS
+	category = CAT_ARMOR
+	crafting_interface = CRAFTING_BENCH_ARMTAILOR
+
 //scavenging some kevlar from a vest if you dont need the vest
-/datum/crafting_recipe/rip_apartkevlar_vest
+/datum/crafting_recipe/rip_apart_vest
 	name = "Rip Apart Kevlar Vest"
 	result = /obj/item/stack/kevlar/two
-	reqs = list(/obj/item/clothing/suit/armor/kevlar)
+	reqs = list(/obj/item/clothing/suit/armor/halflife/kevlar = 1)
 	time = 10 SECONDS
 	category = CAT_ARMOR
 
