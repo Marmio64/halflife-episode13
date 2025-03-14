@@ -1,5 +1,5 @@
 /atom/movable/screen/ghost
-	icon = 'icons/hud/screen_ghost.dmi'
+	icon = 'hl13/icons/hud/screen_ghost.dmi' //hl13 edit
 
 /atom/movable/screen/ghost/MouseEntered(location, control, params)
 	. = ..()
