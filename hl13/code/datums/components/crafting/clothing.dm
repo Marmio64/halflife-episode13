@@ -13,6 +13,21 @@
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
 
+//same as above, but use kevlar instead of a combine suit
+/datum/crafting_recipe/rebel_uniform_kevlar
+	name = "Rebel Jumpsuit (Kevlar)"
+	result = /obj/item/clothing/under/citizen/rebel
+	reqs = list(/obj/item/clothing/under/citizen = 1,
+				/obj/item/stack/kevlar = 3)
+
+	blacklist = list(
+	/obj/item/clothing/under/citizen/rebel,
+	/obj/item/clothing/under/citizen/refugee,
+	)
+	time = 10 SECONDS
+	category = CAT_ARMOR
+	crafting_interface = CRAFTING_BENCH_ARMTAILOR
+
 //very basic armor
 /datum/crafting_recipe/armored_vest
 	name = "Armored Vest"
@@ -65,10 +80,12 @@
 //scavenging some kevlar from a vest if you dont need the vest
 /datum/crafting_recipe/rip_apart_vest
 	name = "Rip Apart Kevlar Vest"
-	result = /obj/item/stack/kevlar/two
+	result = /obj/item/stack/kevlar
+	result_amount = 2
 	reqs = list(/obj/item/clothing/suit/armor/halflife/kevlar = 1)
 	time = 10 SECONDS
 	category = CAT_ARMOR
+	tool_behaviors = list(TOOL_KNIFE)
 
 //Strap on some extra random metal and pieces of cloth and boom, your armor is slightly better.
 /datum/crafting_recipe/resistance_light_armor

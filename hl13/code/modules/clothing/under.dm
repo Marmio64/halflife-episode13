@@ -28,8 +28,8 @@
 	armor_type = /datum/armor/combinesuit
 
 /datum/armor/combinesuit
-	melee = 15
-	bullet = 15
+	melee = 10
+	bullet = 10
 	laser = 20
 	energy = 20
 	bomb = 20
@@ -118,8 +118,8 @@
 	armor_type = /datum/armor/combinesuit_upgraded
 
 /datum/armor/combinesuit_upgraded
-	melee = 20
-	bullet = 20
+	melee = 15
+	bullet = 15
 	laser = 25
 	energy = 25
 	bomb = 25
@@ -152,8 +152,8 @@
 	armor_type = /datum/armor/combinesuit_elite
 
 /datum/armor/combinesuit_elite
-	melee = 25
-	bullet = 25
+	melee = 20
+	bullet = 20
 	laser = 30
 	energy = 30
 	bomb = 30

@@ -155,7 +155,7 @@
 		usr.say(".s Requesting assistance on my position!", forced = src.name)
 
 /datum/armor/cpmask
-	melee = 25
+	melee = 30
 	bullet = 25
 	laser = 10
 	energy = 10
@@ -193,7 +193,7 @@
 	armor_type = /datum/armor/cpmask_upgraded
 
 /datum/armor/cpmask_upgraded
-	melee = 25
+	melee = 30
 	bullet = 35
 	laser = 10
 	energy = 10
@@ -231,7 +231,7 @@
 	armor_type = /datum/armor/eliteoverwatchmask
 
 /datum/armor/eliteoverwatchmask
-	melee = 25
+	melee = 30
 	bullet = 45
 	laser = 10
 	energy = 10
