@@ -1,8 +1,8 @@
 #define ALERT_DELAY (50 SECONDS)
 
 /obj/machinery/newscaster
-	name = "newscaster"
-	desc = "A combine newscaster for announcing bounties, information, and warrants."
+	name = "infocaster" //hl13 edit
+	desc = "A combine broadcasting machine for announcing bounties, information, and warrants." //hl13 edit
 	icon = 'hl13/icons/obj/machines/terminals.dmi'
 	icon_state = "newscaster_off"
 	base_icon_state = "newscaster"
@@ -622,7 +622,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/newscaster, 30)
 /obj/machinery/newscaster/proc/news_alert(channel, update_alert = TRUE)
 	if(channel)
 		if(update_alert)
-			say("Breaking news from [channel]!")
+			say("New information from [channel].")
 			playsound(loc, 'sound/machines/beep/twobeep_high.ogg', 75, TRUE)
 		alert = TRUE
 		update_appearance()
