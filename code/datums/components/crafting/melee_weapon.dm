@@ -1,14 +1,3 @@
-/datum/crafting_recipe/stunprod
-	name = "Stunprod"
-	result = /obj/item/melee/baton/security/cattleprod
-	reqs = list(
-		/obj/item/restraints/handcuffs/cable = 1,
-		/obj/item/stack/rods = 1,
-		/obj/item/assembly/igniter = 1,
-	)
-	time = 4 SECONDS
-	category = CAT_WEAPON_MELEE
-
 /datum/crafting_recipe/chainsaw
 	name = "Chainsaw"
 	result = /obj/item/chainsaw
