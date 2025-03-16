@@ -307,8 +307,8 @@
 	gender = PLURAL
 	name = "dirt"
 	desc = "A floor of soil."
-	icon = 'icons/turf/floors.dmi'
-	icon_state = "dirt"
+	icon = 'hl13/icons/turf/floor/floors.dmi'
+	icon_state = "mud_1"
 	baseturfs = /turf/open/floor/plating/ground/dirt
 	planetary_atmos = TRUE
 	attachment_holes = FALSE
@@ -318,7 +318,7 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 
 /turf/open/floor/plating/ground/dirt/alt
-	icon_state = "greenerdirt"
+	icon_state = "mud_2"
 
 /turf/open/floor/plating/ground/rockunder
 	gender = PLURAL
@@ -369,23 +369,47 @@
 	base_icon_state = "sidewalkinside"
 	alternate_states = 2
 
-/turf/open/floor/plating/dirt
-	gender = PLURAL
-	name = "dirt"
-	desc = "Upon closer examination, it's still dirt."
-	icon = 'icons/turf/floors.dmi'
-	icon_state = "dirt"
-	baseturfs = /turf/open/floor/plating/dirt
-	planetary_atmos = TRUE
-	attachment_holes = FALSE
-	footstep = FOOTSTEP_SAND
-	barefootstep = FOOTSTEP_SAND
-	clawfootstep = FOOTSTEP_SAND
+/turf/open/floor/plating/ground/grass
+	name = "grass"
+	desc = "A patch of grass."
+	icon = 'hl13/icons/turf/floor/floors.dmi'
+	icon_state = "hl_grass"
+	base_icon_state = "hl_grass"
+	baseturfs = /turf/open/floor/plating/ground/grass
+	bullet_bounce_sound = null
+	footstep = FOOTSTEP_GRASS
+	barefootstep = FOOTSTEP_GRASS
+	clawfootstep = FOOTSTEP_GRASS
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
-	tiled_dirt = FALSE
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_FLOOR_GRASS
+	canSmoothWith = SMOOTH_GROUP_FLOOR_GRASS + SMOOTH_GROUP_CLOSED_TURFS
+	smooth_broken = TRUE
+	smooth_burnt = TRUE
+	layer = HIGH_TURF_LAYER
+	rust_resistance = RUST_RESISTANCE_ORGANIC
+	planetary_atmos = TRUE
+	/// The icon used for smoothing.
+	var/smooth_icon = 'hl13/icons/turf/floor/cut/hl_grass.dmi'
 
-/turf/open/floor/plating/dirt/dark
-	icon_state = "greenerdirt"
+/turf/open/floor/plating/ground/grass/Initialize(mapload)
+	. = ..()
+	if(smoothing_flags)
+		var/matrix/translation = new
+		translation.Translate(LARGE_TURF_SMOOTHING_X_OFFSET, LARGE_TURF_SMOOTHING_Y_OFFSET)
+		transform = translation
+		icon = smooth_icon
 
-/turf/open/floor/plating/dirt/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
-	return
+	if(is_station_level(z))
+		GLOB.station_turfs += src
+
+
+/turf/open/floor/plating/ground/grass/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
+	. = ..()
+	if (!.)
+		return
+
+	if(!smoothing_flags)
+		return
+
+	underlay_appearance.transform = transform
