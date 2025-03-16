@@ -1,9 +1,5 @@
 import { filter, sortBy } from 'common/collections';
-import { BooleanLike, classes } from 'common/react';
-import { createSearch } from 'common/string';
 import { useState } from 'react';
-
-import { useBackend } from '../backend';
 import {
   Box,
   Button,
@@ -16,7 +12,11 @@ import {
   Tabs,
   Tooltip,
   VirtualList,
-} from '../components';
+} from 'tgui-core/components';
+import { BooleanLike, classes } from 'tgui-core/react';
+import { createSearch } from 'tgui-core/string';
+
+import { useBackend } from '../backend';
 import { Window } from '../layouts';
 import { Food } from './PreferencesMenu/data';
 
@@ -54,7 +54,6 @@ const CATEGORY_ICONS_CRAFTING = {
   Misc: 'shapes',
   Tribal: 'campground',
   Clothing: 'shirt',
-  Armor: 'shield',
   Drinks: 'wine-bottle',
   Chemistry: 'microscope',
   Atmospherics: 'fan',
@@ -82,7 +81,6 @@ const CATEGORY_ICONS_COOKING = {
   'Mexican Food': 'pepper-hot',
   'Misc. Food': 'shapes',
   'Mothic Food': 'shirt',
-  'Ration Food': 'bowl-food',
   Pastries: 'cookie',
   Pies: 'chart-pie',
   Pizzas: 'pizza-slice',
@@ -266,6 +264,7 @@ export const PersonalCrafting = (props) => {
                 <Stack.Item>
                   <Input
                     autoFocus
+                    expensive
                     placeholder={
                       'Search in ' +
                       data.recipes.length +
@@ -332,8 +331,8 @@ export const PersonalCrafting = (props) => {
                     </Tabs.Tab>
                   </Tabs>
                 </Stack.Item>
-                <Stack.Item grow m={-1}>
-                  <Box height={'100%'} p={1} style={{ overflowY: 'auto' }}>
+                <Stack.Item grow m={-1} style={{ overflowY: 'auto' }}>
+                  <Box height={'100%'} p={1}>
                     <Tabs vertical>
                       {tabMode === TABS.foodtype &&
                         mode === MODE.cooking &&
