@@ -65,7 +65,7 @@
 	. = ..()
 	// Adding an extra break for the sake of presentation
 	if(stamina_damage != 0)
-		offensive_notes = "It takes [span_warning("[CEILING(100 / stamina_damage, 1)] stunning hit\s")] to stun an enemy."
+		offensive_notes = "It takes [span_warning("[CEILING(125 / stamina_damage, 1)] stunning hit\s")] to stun an enemy." //hl13 edit, more stam damage required
 
 	register_item_context()
 
