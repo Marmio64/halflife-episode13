@@ -1,6 +1,6 @@
 /obj/machinery/sealer
 	name = "sealing machine"
-	desc = "An industrial piece of machinery for sealing packages and goods easier and quicker than by hand. In addition, it is able to unseal certain packages as well."
+	desc = "An industrial piece of machinery for sealing packages and goods easier and quicker than by hand. In addition, it is able to unseal certain packages as well. There is a faded label stating that improper use may result in injury."
 	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "sealer"
 
@@ -17,12 +17,18 @@
 		if(C.filled == TRUE && C.completed == FALSE)
 			to_chat(usr, span_notice("Sealing box..."))
 			if(do_after(user, 1 SECONDS, src))
-				to_chat(usr, span_notice("Container succesfully sealed. Reward dispensed."))
+				to_chat(usr, span_notice("Container successfully sealed. Reward dispensed."))
 				C.seal(user, 1) //Using the sealer gets you bonus money
-				if(prob(5))
-					to_chat(user, span_userdanger("The machine seals one of your fingers inside the container!"))
-					arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
-					arm.receive_damage(10)
+				if(user.job == "Union Worker")
+					if(prob(5))
+						to_chat(user, span_userdanger("You lose focus, and the machine seals one of your fingers inside the container!"))
+						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
+						arm.receive_damage(10)
+				else
+					if(prob(15))
+						to_chat(user, span_userdanger("Due to your inexperience, the machine seals one of your fingers inside the container!"))
+						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
+						arm.receive_damage(10)
 		else if(C.completed)
 			to_chat(usr, span_notice("This ration container is already sealed."))
 		else
@@ -32,12 +38,18 @@
 		if(C.filled == TRUE)
 			to_chat(usr, span_notice("Sealing box..."))
 			if(do_after(user, 1 SECONDS, src))
-				to_chat(usr, span_notice("Container succesfully sealed. Reward dispensed."))
+				to_chat(usr, span_notice("Container successfully sealed. Reward dispensed."))
 				C.seal(user, 6) //Using the sealer gets you bonus money
-				if(prob(5))
-					to_chat(user, span_userdanger("The machine seals one of your fingers inside the container!"))
-					arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
-					arm.receive_damage(10)
+				if(user.job == "Union Worker")
+					if(prob(5))
+						to_chat(user, span_userdanger("You lose focus, and the machine seals one of your fingers inside the container!"))
+						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
+						arm.receive_damage(10)
+				else
+					if(prob(15))
+						to_chat(user, span_userdanger("Due to your inexperience, the machine seals one of your fingers inside the container!"))
+						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
+						arm.receive_damage(10)
 		else
 			to_chat(usr, span_notice("This ration container is not yet filled."))
 
