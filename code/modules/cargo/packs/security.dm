@@ -267,6 +267,8 @@
 	desc = "Contains one set of overwatch grunt equipment. Perfect for creating your own proto-transhuman force, conscripted arm, or xen fighting team. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 8
 	contains = list(/obj/item/clothing/mask/gas/civilprotection/overwatch/grunt,
+					/obj/item/clothing/shoes/jackboots/civilprotection,
 					/obj/item/clothing/under/combine/grunt,
+					/obj/item/clothing/gloves/combat/overwatch/grunt,
 					/obj/item/tank/internals/oxygen/grunt)
 	crate_name = "grunt armor crate"

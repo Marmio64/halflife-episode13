@@ -45,7 +45,7 @@
 
 	C.mob_mood?.mood_modifier -= 1 //don't care, never did
 
-	C.physiology.hunger_mod *= 0.75 //low body mass, less to feed
+	C.physiology.hunger_mod *= 0.5 //low body mass, less to feed
 
 	C.AddComponent( \
 			/datum/component/simple_bodycam, \
@@ -57,7 +57,7 @@
 	..()
 	UnregisterSignal(C, COMSIG_MOB_SAY)
 	C.mob_mood?.mood_modifier += 1
-	C.physiology.hunger_mod /= 0.75
+	C.physiology.hunger_mod /= 0.5
 
 /datum/species/stalker/proc/handle_speech(datum/source, list/speech_args)
 	playsound(source, 'hl13/sound/voice/stalker/stalker_talk.ogg', 50, 1, 1)

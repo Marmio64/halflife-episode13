@@ -61,7 +61,7 @@
 	inhand_icon_state = "tire_iron"
 	lefthand_file = 'hl13/icons/mob/inhands/melee_inhand_left.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/melee_inhand_right.dmi'
-	force = 20
+	force = 19
 	armour_penetration = 10
 	throwforce = 10
 	attack_verb_continuous = list("attacks", "bashes", "strikes", "smashes")

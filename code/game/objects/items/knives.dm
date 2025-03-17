@@ -126,7 +126,7 @@
 	worn_icon_state = "buckknife"
 	desc = "A military combat utility survival knife."
 	embed_type = /datum/embed_data/combat_knife
-	force = 25 //hl13 edit
+	force = 24 //hl13 edit
 	throwforce = 20
 	attack_verb_continuous = list("slashes", "stabs", "slices", "tears", "lacerates", "rips", "cuts")
 	attack_verb_simple = list("slash", "stab", "slice", "tear", "lacerate", "rip", "cut")

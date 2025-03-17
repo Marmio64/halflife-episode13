@@ -1,4 +1,4 @@
-GLOBAL_VAR_INIT(nt_fax_department, pick("Overwatch", "City Central Nexus", "Eastwatch", "Westwatch", "Plaza District", "Raven District"))
+GLOBAL_VAR_INIT(nt_fax_department, pick("Overwatch", "Southwatch Central Nexus", "Eastwatch", "Westwatch", "Plaza District", "Raven District"))
 
 /obj/machinery/fax
 	name = "Fax Machine"

@@ -85,7 +85,7 @@ DEFINE_BITFIELD(status_flags, list(
 ))
 
 //Health Defines
-#define HEALTH_THRESHOLD_CRIT -20
+#define HEALTH_THRESHOLD_CRIT -25
 #define HEALTH_THRESHOLD_FULLCRIT -50
 #define HEALTH_THRESHOLD_DEAD -100
 
