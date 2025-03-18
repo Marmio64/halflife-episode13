@@ -313,16 +313,16 @@
 /datum/config_entry/string/banappeals
 
 /datum/config_entry/string/wikiurl
-	default = "http://tgstation13.org/wiki"
+	default = "https://halflifeepisode13.miraheze.org/wiki/Main_Page"
 
 /datum/config_entry/string/forumurl
-	default = "http://tgstation13.org/phpBB/index.php"
+	default = "https://halflifeepisode13.miraheze.org/wiki/Main_Page"
 
 /datum/config_entry/string/rulesurl
-	default = "http://tgstation13.org/wiki/Rules"
+	default = "https://halflifeepisode13.miraheze.org/wiki/Rules"
 
 /datum/config_entry/string/githuburl
-	default = "https://www.github.com/tgstation/tgstation"
+	default = "https://github.com/Marmio64/halflife-episode13"
 
 /datum/config_entry/string/discordbotcommandprefix
 	default = "?"
