@@ -195,6 +195,23 @@
 				/obj/item/ammo_box/magazine/m4a1
 				)
 
+//low tier guns, armor mats, and some rarer items
+/obj/effect/spawner/random/halflife/loot/uncommon
+	name = "uncommon loot"
+
+	loot = list(
+				/obj/item/weaponcrafting/frame/usp,
+				/obj/item/weaponcrafting/receiver,
+				/obj/item/clothing/under/citizen/rebel,
+				/obj/item/grenade/halflife/molotov,
+				/obj/item/gun/ballistic/automatic/pistol/makeshift,
+				/obj/item/switchblade,
+				/obj/item/melee/baton/security/loaded,
+				/obj/item/stack/kevlar/two,
+				/obj/item/clothing/suit/armor/armored,
+				/obj/item/clothing/head/helmet/halflife/military/weak/crafted
+				)
+
 //guns, armor, and some lesser items occasionally
 /obj/effect/spawner/random/halflife/loot/rare
 	name = "rare loot"
@@ -241,4 +258,18 @@
 				/obj/item/knife/combat,
 				/obj/item/melee/baton/security/loaded,
 				/obj/item/clothing/head/helmet/halflife/military
+				)
+
+//guaranteed ready weapon and loot spawns
+/obj/effect/spawner/random/halflife/plant_spawner
+	name = "random grass/bush spawner"
+	icon = 'hl13/icons/effects/random_spawners.dmi'
+	icon_state = "random_plant"
+
+	loot = list(
+				/obj/structure/flora/bush/sparsegrass/style_random = 10,
+				/obj/structure/flora/bush/fullgrass/style_random = 10,
+				/obj/structure/flora/bush/pointy/style_random,
+				/obj/structure/flora/bush/lavendergrass/style_random,
+				/obj/structure/flora/bush/style_random
 				)
