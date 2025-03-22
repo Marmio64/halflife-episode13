@@ -43,7 +43,7 @@
 	force = 12
 	fire_delay = 2
 	burst_size = 1
-	spread = 12
+	spread = 11
 	recoil = 0.8
 	can_suppress = FALSE
 	mag_display = TRUE
@@ -76,7 +76,7 @@
 	force = 12
 	fire_delay = 2
 	burst_size = 1
-	spread = 14
+	spread = 13
 	recoil = 1.2
 	can_suppress = FALSE
 	mag_display = TRUE
@@ -109,7 +109,7 @@
 	force = 12
 	fire_delay = 2
 	burst_size = 1
-	spread = 12
+	spread = 11
 	recoil = 0.8
 	can_suppress = FALSE
 	mag_display = TRUE
@@ -222,7 +222,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/makeshift9mm
 	can_suppress = TRUE
 	fire_sound = "hl13/sound/weapons/uspfire.ogg"
-	spread = 13
+	spread = 12
 	recoil = 0.5
 	fire_delay = 5
 	vary_fire_sound = FALSE
@@ -257,7 +257,7 @@
 	fire_sound = "hl13/sound/weapons/revolverfire.ogg"
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "snubnose"
-	spread = 12 //snubnosed
+	spread = 11 //snubnosed
 	recoil = 0.5
 	vary_fire_sound = FALSE
 	w_class = WEIGHT_CLASS_SMALL
@@ -307,7 +307,7 @@
 	show_bolt_icon = FALSE
 	burst_size = 1
 	fire_delay = 1
-	spread = 14
+	spread = 13
 	recoil = 0.4
 	vary_fire_sound = FALSE
 
