@@ -14,7 +14,7 @@
 	speak = list("G-GOD HELP ME!","OH G-GOD!","K-KILL ME!")
 	harm_intent_damage = 10
 	melee_damage_lower = 16
-	melee_damage_upper = 19
+	melee_damage_upper = 18
 	sharpness = SHARP_EDGED
 	wound_bonus = -15
 	attack_vis_effect = ATTACK_EFFECT_CLAW
