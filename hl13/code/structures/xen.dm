@@ -67,11 +67,11 @@
 	light_range = 1.5
 	light_power = 1.5
 	light_color = "#28533a"
-	breakmats = /obj/item/food/xenbranch
+	breakmats = /obj/item/food/xen/xenbranch
 	hasaltstates = TRUE
 	altstates = 2
 
-/obj/item/food/xenbranch
+/obj/item/food/xen/xenbranch
 	name = "xenian branch"
 	desc = "A branch from some xenian plant. It's green, so that might mean it could be possibly used for medicinal purposes."
 	tastes = list("bitterness" = 1)
@@ -88,11 +88,11 @@
 	light_range = 1.5
 	light_power = 1.5
 	light_color = "#703d68"
-	breakmats = /obj/item/food/xenspore
+	breakmats = /obj/item/food/xen/xenspore
 	hasaltstates = TRUE
 	altstates = 2
 
-/obj/item/food/xenspore
+/obj/item/food/xen/xenspore
 	name = "xenian spore"
 	desc = "A spore from some xenian plant. It smells kind of funky..."
 	tastes = list("dusty mushrooms" = 1)
@@ -109,11 +109,11 @@
 	light_range = 1.5
 	light_power = 1.5
 	light_color = "#1a994f"
-	breakmats = /obj/item/food/xenslime
+	breakmats = /obj/item/food/xen/xenslime
 	density = 1
 	max_integrity = 100
 
-/obj/item/food/xenslime
+/obj/item/food/xen/xenslime
 	name = "xenian slime"
 	desc = "A gross mass of slime. The inner contents look liquid and slosh about, while the outer shell is constantly coagulating. Interesting..."
 	tastes = list("slime" = 1)

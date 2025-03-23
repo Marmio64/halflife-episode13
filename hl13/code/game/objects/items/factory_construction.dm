@@ -48,7 +48,7 @@
 									/obj/item/stack/sheet/mineral/scrap_wood,
 									/obj/item/circuitmaterial,
 									/obj/item/water_canister,
-									/obj/item/food/xenspore)
+									/obj/item/food/xen/xenspore)
 
 	required_item_1 = pick_n_take(possible_items)
 	required_item_2 = pick_n_take(possible_items)

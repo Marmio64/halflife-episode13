@@ -16,9 +16,14 @@
 
 //clearing out xen infestations might be profitable... or even farming them?
 /datum/export/xenshrooms
-	cost = CARGO_CRATE_VALUE * 0.25
+	cost = CARGO_CRATE_VALUE * 0.2
 	unit_name = "xenian mushrooms"
 	export_types = list(/obj/item/food/grown/mushroom_stem)
+
+/datum/export/xenparts
+	cost = CARGO_CRATE_VALUE * 0.2
+	unit_name = "xenian flora parts"
+	export_types = list(/obj/item/food/xen)
 
 //package and sell medkits for a profit
 /datum/export/medkits
