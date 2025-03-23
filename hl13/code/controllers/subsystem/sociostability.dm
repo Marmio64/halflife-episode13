@@ -9,7 +9,12 @@ SUBSYSTEM_DEF(sociostability)
 	var/poor_package_received = FALSE
 	var/bad_package_received = FALSE
 
+	/// Has the administrator made an announcement during this cycle? Stops unlimited sociostability farming.
+	var/announcement_made = FALSE
+
 /datum/controller/subsystem/sociostability/fire(resumed = 0)
+	announcement_made = FALSE
+
 	if(sociostability < SOCIOSTABILITY_GREAT)
 		modifystability(SOCIOSTABILITY_PASSIVE_GAIN)
 

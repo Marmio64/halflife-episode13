@@ -64,8 +64,13 @@
 		if(ANNOUNCEMENT_TYPE_CAPTAIN)
 			header = MAJOR_ANNOUNCEMENT_TITLE("District Administrator's Announcement")
 			GLOB.news_network.submit_article(text, "District Administrator's Announcement", "District Announcements", null)
+			//hl13 edit start. The DA making an announcement slightly increases sociostability, for roleplay purposes.
+			if(SSsociostability.announcement_made == FALSE)
+				SSsociostability.announcement_made = TRUE
+				SSsociostability.modifystability(2)
+			//hl13 edit end
 		if(ANNOUNCEMENT_TYPE_SYNDICATE)
-			header = MAJOR_ANNOUNCEMENT_TITLE("Syndicate Captain's Announcement")
+			header = MAJOR_ANNOUNCEMENT_TITLE("Rebel Announcement")
 		else
 			header += generate_unique_announcement_header(title, sender_override)
 
