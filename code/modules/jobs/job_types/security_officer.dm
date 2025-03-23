@@ -47,6 +47,7 @@
 	job_flags = STATION_JOB_FLAGS
 
 	ration_bonus = 2
+	union_law_notify = TRUE
 	var/static/list/used_numbers = list()
 
 	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'

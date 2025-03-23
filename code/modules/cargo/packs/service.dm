@@ -102,13 +102,3 @@
 	crate_name = "bar sign crate"
 	discountable = SUPPLY_PACK_RARE_DISCOUNTABLE
 
-/datum/supply_pack/organic/vouchers
-	name = "Reward Voucher Crate"
-	desc = "A large crate with 50 reward vouchers, totalling to 250 credits. A useful way for giving out rewards to citizens with less risk of Civil Protection embezzlement."
-	cost = CARGO_CRATE_VALUE * 6.5 //a bit over the return from recycling the crate, stamping the manifest, and giving out the vouchers.
-	contains = list(/obj/item/stack/credit_voucher/a10,
-					/obj/item/stack/credit_voucher/a10,
-					/obj/item/stack/credit_voucher/a10,
-					/obj/item/stack/credit_voucher/a10,
-					/obj/item/stack/credit_voucher/a10)
-	crate_name = "voucher crate"

@@ -27,6 +27,7 @@
 	COOLDOWN_DECLARE(hailer_cooldown)
 
 	var/overwatch = FALSE
+	var/fused = FALSE
 
 	repairable_by = /obj/item/stack/kevlar
 
@@ -99,6 +100,8 @@
 		"Heavy resistance" = 'hl13/sound/voice/otavoicelines/heavyresistance.ogg',
 		"Ripcord" = 'hl13/sound/voice/otavoicelines/ripcord.ogg',
 		"Contact" = 'hl13/sound/voice/otavoicelines/contact.ogg',
+		"Move in" = 'hl13/sound/voice/otavoicelines/movein.ogg',
+		"Go sharp" = 'hl13/sound/voice/otavoicelines/gosharpgosharp.ogg',
 		"Shit" = 'hl13/sound/voice/cpvoicelines/shit.ogg',
 		"Take cover" = 'hl13/sound/voice/cpvoicelines/takecover.ogg',
 	)
@@ -108,6 +111,8 @@
 /obj/item/clothing/mask/gas/civilprotection/Initialize(mapload)
 	. = ..()
 	GLOB.cpmasks += src
+	if(fused)
+		ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
 
 /obj/item/clothing/mask/gas/civilprotection/Destroy()
 	GLOB.cpmasks -= src
@@ -216,6 +221,7 @@
 	icon_state = "overwatch"
 	inhand_icon_state = "swat"
 	overwatch = TRUE
+	fused = TRUE
 	armor_type = /datum/armor/cpmask_upgraded
 
 	limb_integrity = 400
@@ -245,6 +251,7 @@
 	desc = "Heavy duty white mask for overwatch units nicknamed 'grunts'. Provides some protection to the face. This one is reinforced against melee and biological threats, though lacks major firearm protection."
 	icon_state = "grunt"
 	armor_type = /datum/armor/gruntmask
+	fused = FALSE
 
 /datum/armor/gruntmask
 	melee = 40

@@ -51,6 +51,7 @@
 	voice_of_god_power = 1.4 //Command staff has authority
 
 	ration_bonus = 3
+	union_law_notify = TRUE
 
 	cmode_music = 'hl13/sound/music/combat/branescan.ogg'
 

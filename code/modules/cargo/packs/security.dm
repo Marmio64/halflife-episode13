@@ -269,6 +269,6 @@
 	contains = list(/obj/item/clothing/mask/gas/civilprotection/overwatch/grunt,
 					/obj/item/clothing/shoes/jackboots/civilprotection,
 					/obj/item/clothing/under/combine/grunt,
-					/obj/item/clothing/gloves/combat/overwatch/grunt,
+					/obj/item/clothing/gloves/color/civilprotection/grunt,
 					/obj/item/tank/internals/oxygen/grunt)
 	crate_name = "grunt armor crate"

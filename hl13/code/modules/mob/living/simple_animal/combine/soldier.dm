@@ -99,7 +99,7 @@
 	uniform = /obj/item/clothing/under/combine/grunt
 	suit = null
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
-	gloves = /obj/item/clothing/gloves/combat/overwatch/grunt
+	gloves = /obj/item/clothing/gloves/color/civilprotection/grunt
 	back = /obj/item/tank/internals/oxygen/grunt
 
 // ELITE SOLDIER ------------------------------------
@@ -139,16 +139,18 @@
 /datum/ai_planning_subtree/random_speech/combinesoldier
 	speech_chance = 3
 	sound = list('hl13/sound/voice/otaradio/off1.ogg', 'hl13/sound/voice/otaradio/off2.ogg', 'hl13/sound/voice/otaradio/off3.ogg')
-	emote_see = list("squares their arm, and gestures to advance.", "holds a finger to their helmet radio.", "checks their firearm magazine.")
+	emote_see = list("squares their arm, and gestures to advance.", "holds a finger to their helmet radio.", "checks their firearm magazine.", "looks around.")
 	speak = list(
 		"Copy, Echo-1 holding.",
 		"Blip on bioscanner read.",
+		"Checking radials.",
 		"Bodypack systems holding, confirmed secondary check.",
 		"Copy, ready to sterilize.",
 		"Stabilization is ago.",
 		"Prepping extractors.",
 		"Verdicts at full.",
 		"Overwatch, may require reserve activation.",
+		"Prepped for contact.",
 	)
 
 /datum/ai_controller/basic_controller/trooper/ranged/combine

@@ -267,11 +267,11 @@
 	icon_state = "random_plant"
 
 	loot = list(
-				/obj/structure/flora/bush/sparsegrass/style_random = 30,
-				/obj/structure/flora/bush/fullgrass/style_random = 30,
+				/obj/structure/flora/bush/sparsegrass/style_random = 40,
+				/obj/structure/flora/bush/fullgrass/style_random = 40,
 				/obj/structure/flora/root/wild_potato,
 				/obj/structure/flora/root/wild_onion,
-				/obj/structure/flora/bush/pointy/style_random = 3,
-				/obj/structure/flora/bush/lavendergrass/style_random = 3,
-				/obj/structure/flora/bush/style_random = 3,
+				/obj/structure/flora/bush/pointy/style_random = 4,
+				/obj/structure/flora/bush/lavendergrass/style_random = 4,
+				/obj/structure/flora/bush/style_random = 4,
 				)

@@ -591,6 +591,17 @@
 		return ITEM_INTERACT_BLOCKING
 	else if(iscash(tool))
 		return insert_money(tool, user) ? ITEM_INTERACT_SUCCESS : ITEM_INTERACT_BLOCKING
+	//hl13 edit start
+	else if(istype(tool, /obj/item/ration_voucher))
+		if(registered_account.ration_voucher)
+			to_chat(user, span_notice("The account already has a registered ration token, and the card refuses the voucher."))
+			return ITEM_INTERACT_BLOCKING
+		else
+			to_chat(user, span_notice("You feed in the voucher, and the account gains a usable ration token."))
+			registered_account.ration_voucher = TRUE
+			qdel(tool)
+			return ITEM_INTERACT_SUCCESS
+	//hl13 edit end
 	else if(istype(tool, /obj/item/storage/bag/money))
 		var/obj/item/storage/bag/money/money_bag = tool
 		var/list/money_contained = money_bag.contents

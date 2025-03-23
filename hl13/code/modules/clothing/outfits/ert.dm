@@ -75,7 +75,7 @@
 	uniform = /obj/item/clothing/under/combine/grunt
 	suit = null
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
-	gloves = /obj/item/clothing/gloves/combat/overwatch/grunt
+	gloves = /obj/item/clothing/gloves/color/civilprotection/grunt
 
 /datum/outfit/centcom/ert/riotpolice
 	name = "Metropolice Riot Unit"

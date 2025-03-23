@@ -1233,7 +1233,7 @@
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt
 	uniform = /obj/item/clothing/under/combine/grunt
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
-	gloves = /obj/item/clothing/gloves/combat/overwatch/grunt
+	gloves = /obj/item/clothing/gloves/color/civilprotection/grunt
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
 
