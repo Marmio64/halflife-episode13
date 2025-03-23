@@ -18,7 +18,7 @@
 	outfit = /datum/outfit/job/security
 	plasmaman_outfit = /datum/outfit/plasmaman/security
 
-	paycheck = PAYCHECK_CREW
+	paycheck = PAYCHECK_LOWER
 	paycheck_department = ACCOUNT_SEC
 
 	liver_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM)
