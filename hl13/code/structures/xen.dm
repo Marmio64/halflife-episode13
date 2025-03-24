@@ -76,7 +76,7 @@
 	desc = "A branch from some xenian plant. It's green, so that might mean it could be possibly used for medicinal purposes."
 	tastes = list("bitterness" = 1)
 	bite_consumption = 5
-	food_reagents = list(/datum/reagent/medicine/biogel = 20)
+	food_reagents = list(/datum/reagent/medicine/biogel = 25)
 	foodtypes = GROSS
 	icon = 'hl13/icons/obj/xenflora.dmi'
 	icon_state = "branch"
