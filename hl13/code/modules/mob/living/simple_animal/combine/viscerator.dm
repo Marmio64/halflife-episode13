@@ -20,7 +20,7 @@
 	environment_smash = ENVIRONMENT_SMASH_NONE
 	attack_verb_continuous = "cuts"
 	attack_verb_simple = "cut"
-	attack_sound = 'sound/items/weapons/bladeslice.ogg'
+	attack_sound = 'hl13/sound/creatures/viscerator/grind_flesh1.ogg'
 	faction = list(FACTION_COMBINE)
 	minbodytemp = 0
 	mob_size = MOB_SIZE_TINY
@@ -32,6 +32,7 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	del_on_death = 1
 	death_message = "is smashed into pieces!"
+	death_sound = 'hl13/sound/creatures/viscerator/gib.ogg'
 	var/operating_power = 100
 	var/low_power_melee_damage_lower = 6
 	var/low_power_melee_damage_upper = 12

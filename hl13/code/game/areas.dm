@@ -144,6 +144,9 @@
 
 	first_time_text = "The Trainstation"
 
+	ambient_buzz = 'hl13/sound/ambience/trainstation_ambient_loop1.ogg'
+	ambient_buzz_vol = 25
+
 /area/halflife/indoors/slums
 	name = "\improper Slums"
 
@@ -271,6 +274,8 @@
 
 /area/halflife/indoors/sewer/cave
 	name = "\improper Mining Caves"
+
+	ambient_buzz = 'hl13/sound/ambience/corridor.ogg'
 
 	first_time_text = "The Mines"
 
