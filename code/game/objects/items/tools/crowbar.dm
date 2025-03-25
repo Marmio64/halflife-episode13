@@ -71,7 +71,7 @@
 	force = 30
 
 /obj/item/crowbar/large/freeman/extreme
-	force = 40
+	force = 35
 
 /obj/item/crowbar/large/emergency
 	name = "emergency crowbar"

@@ -88,6 +88,9 @@
 	armor_type = /datum/armor/eliteoverwatcharmor
 	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 
+/obj/item/clothing/suit/armor/overwatch/elite/deathmatch
+	slowdown = 0.75
+
 /datum/armor/eliteoverwatcharmor
 	melee = 50
 	bullet = 50

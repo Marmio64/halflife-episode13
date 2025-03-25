@@ -21,6 +21,9 @@
 /obj/item/gun/ballistic/automatic/ar2/nopin
 	pin = null
 
+/obj/item/gun/ballistic/automatic/ar2/standardpin
+	pin = /obj/item/firing_pin
+
 /obj/item/gun/ballistic/automatic/ar2/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.25 SECONDS)
