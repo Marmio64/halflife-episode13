@@ -260,7 +260,6 @@
 				/obj/item/clothing/head/helmet/halflife/military
 				)
 
-//guaranteed ready weapon and loot spawns
 /obj/effect/spawner/random/halflife/plant_spawner
 	name = "random grass/bush spawner"
 	icon = 'hl13/icons/effects/random_spawners.dmi'
@@ -274,4 +273,20 @@
 				/obj/structure/flora/bush/pointy/style_random = 5,
 				/obj/structure/flora/bush/lavendergrass/style_random = 5,
 				/obj/structure/flora/bush/style_random = 5,
+				)
+
+//meds, grenades, ammo
+/obj/effect/spawner/random/halflife/loot/deathmatch/nexus
+	name = "nexus deathmatch loot"
+
+	loot = list(
+				/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
+				/obj/item/reagent_containers/pill/patch/medkit = 2,
+				/obj/item/grenade/syndieminibomb/bouncer,
+				/obj/item/ammo_box/magazine/mp7,
+				/obj/item/storage/box/lethalshot/halflife,
+				/obj/item/ammo_box/magazine/usp9mm,
+				/obj/item/ammo_box/colta357,
+				/obj/item/ammo_casing/rebar,
+				/obj/item/ammo_box/magazine/m4a1
 				)

@@ -308,6 +308,25 @@
 	map_name = "cityalleys"
 	key = "cityalleys"
 
+/datum/lazy_template/deathmatch/nexus
+	name = "Nexus"
+	desc = "A combine nexus with lots of interconnected indoor rooms, cover, and spare supplies."
+	max_players = 10
+	allowed_loadouts = list(
+		/datum/outfit/deathmatch_loadout/rebel/marine,
+		/datum/outfit/deathmatch_loadout/rebel/ranger,
+		/datum/outfit/deathmatch_loadout/combine/overwatch,
+		/datum/outfit/deathmatch_loadout/combine/grunt,
+		/datum/outfit/deathmatch_loadout/combine/overwatch/shotgunner,
+		/datum/outfit/deathmatch_loadout/civilprotection,
+		/datum/outfit/deathmatch_loadout/crowbar,
+		/datum/outfit/deathmatch_loadout/conscript,
+		/datum/outfit/deathmatch_loadout/rioter,
+		/datum/outfit/deathmatch_loadout/feral_refugee,
+	)
+	map_name = "nexus"
+	key = "nexus"
+
 /datum/lazy_template/deathmatch/sandtraps
 	name = "Sandtraps"
 	desc = "An open beach with little cover, and teeming with antlions."

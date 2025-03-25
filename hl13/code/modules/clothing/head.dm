@@ -123,8 +123,8 @@
 	armor_type = /datum/armor/headcrab/deathmatch
 
 /datum/armor/headcrab/deathmatch
-	melee = 70
-	bullet = 70
+	melee = 75
+	bullet = 75
 	laser = 70
 	energy = 70
 	bomb = 70

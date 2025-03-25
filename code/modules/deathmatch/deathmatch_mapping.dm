@@ -3,6 +3,12 @@
 	requires_power = FALSE
 	has_gravity = STANDARD_GRAVITY
 	area_flags = UNIQUE_AREA | NOTELEPORT | EVENT_PROTECTED | QUIET_LOGS | NO_DEATH_MESSAGE | BINARY_JAMMING
+	//hl13 edit start
+	ambience_index = AMBIENCE_HLDEATHMATCH
+	min_ambience_cooldown = 5 SECONDS
+	max_ambience_cooldown = 10 SECONDS
+	ambient_buzz = 'hl13/sound/ambience/deathmatch/deathmatchbuzz.ogg'
+	//hl13 edit end
 
 /area/deathmatch/fullbright
 	static_lighting = FALSE
