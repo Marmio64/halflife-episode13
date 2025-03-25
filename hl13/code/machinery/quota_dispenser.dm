@@ -15,13 +15,13 @@
 	///Amount of time before the next quota starts
 	var/next_quota = 0
 	///The amount of time we have between quotas
-	var/time_between_quotas = 20 MINUTES
+	var/time_between_quotas = 30 MINUTES
 
 	var/quota_complete = TRUE
 
 	var/obj/item/required_item = null
 
-	var/list/possible_picks = list(/obj/item/gun/ballistic/automatic/pistol/makeshift, /obj/item/clothing/under/citizen/refugee)
+	var/list/possible_picks = list(/obj/item/gun/ballistic/automatic/pistol/makeshift, /obj/item/clothing/under/citizen/refugee, /obj/item/grenade/halflife/molotov, /obj/item/toy/crayon/spraycan, /obj/item/gun/ballistic/rifle/rebarxbow, /obj/item/switchblade)
 
 	var/item_quantity_required = 1
 
