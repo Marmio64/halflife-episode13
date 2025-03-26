@@ -176,8 +176,8 @@
 	move_to_delay = 4
 	speak = list()
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 3, /obj/item/stack/sheet/animalhide/goliath_hide = 3)
-	maxHealth = 425
-	health = 425
+	maxHealth = 475
+	health = 475
 	speak = list()
 	crabless_possible = FALSE
 	idle_sound_chance = 50
