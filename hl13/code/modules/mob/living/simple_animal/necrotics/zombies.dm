@@ -164,6 +164,30 @@
 	infest = new(src)
 	infest.Grant(src)
 
+/mob/living/simple_animal/hostile/halflife/zombie/fungal/gonome
+	name = "Fungal Gonome"
+	desc = "A massive, grotesque abomination of flesh and fungas. A horror, which should not be."
+	icon = 'hl13/icons/mob/halflife_large.dmi'
+	icon_state = "gonome"
+	icon_living = "gonome"
+	icon_dead = "gonome_dead"
+	melee_damage_lower = 30
+	melee_damage_upper = 35
+	move_to_delay = 4
+	speak = list()
+	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 3, /obj/item/stack/sheet/animalhide/goliath_hide = 3)
+	maxHealth = 425
+	health = 425
+	speak = list()
+	crabless_possible = FALSE
+	idle_sound_chance = 50
+
+	footstep_type = FOOTSTEP_MOB_GONOME
+	attack_sound = 'hl13/sound/creatures/gonome/attack_player.ogg'
+	death_sound = 'hl13/sound/creatures/gonome/react_minor_scream_03.ogg'
+	aggro_sound = 'hl13/sound/creatures/gonome/react_minor_scream_01.ogg'
+	idle_sounds = list('hl13/sound/creatures/gonome/wander_breath_in_01.ogg', 'hl13/sound/creatures/gonome/wander_breath_in_02.ogg', 'hl13/sound/creatures/gonome/wander_breath_in_03.ogg', 'hl13/sound/creatures/gonome/wander_breath_out_01.ogg', 'hl13/sound/creatures/gonome/wander_breath_out_02.ogg', 'hl13/sound/creatures/gonome/wander_breath_out_03.ogg')
+
 /mob/living/simple_animal/hostile/halflife/zombie/poison
 	name = "Poison Zombie"
 	desc = "A bloated, fleshy human taken over by a parasitic poison headcrab."

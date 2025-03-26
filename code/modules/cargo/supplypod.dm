@@ -43,7 +43,7 @@
 	var/fallingSoundLength = 11
 	var/fallingSound = 'hl13/sound/effects/pod/incoming.ogg'//Admin sound to play before the pod lands hl13 edit
 	var/landingSound = 'hl13/sound/effects/pod/explosion.ogg' //Admin sound to play when the pod lands hl13 edit
-	var/openingSound = //Admin sound to play when the pod opens
+	var/openingSound //Admin sound to play when the pod opens
 	var/leavingSound //Admin sound to play when the pod leaves
 	var/soundVolume = 70 //Volume to play sounds at. Ignores the cap hl13 edit
 	var/list/explosionSize = list(0,0,2,0)//hl13 edit, remove flames
