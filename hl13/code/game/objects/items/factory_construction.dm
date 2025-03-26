@@ -48,7 +48,7 @@
 									/obj/item/stack/sheet/mineral/scrap_wood,
 									/obj/item/circuitmaterial,
 									/obj/item/water_canister,
-									/obj/item/food/xenspore)
+									/obj/item/food/xen/xenspore)
 
 	required_item_1 = pick_n_take(possible_items)
 	required_item_2 = pick_n_take(possible_items)
@@ -109,7 +109,7 @@
 /obj/item/factory_construction/container/attack_self(mob/user)
 	if(filled)
 		to_chat(usr, span_notice("Sealing box..."))
-		if(do_after(user, 4 SECONDS, src))
+		if(do_after(user, 5 SECONDS, src))
 			to_chat(usr, span_notice("Container succesfully sealed. Reward dispensed."))
 			seal(user)
 	else
@@ -120,7 +120,7 @@
 	playsound(src, 'hl13/sound/halflifeeffects/crafting/ducttape1.ogg', 50, TRUE, extrarange = -3)
 	new /obj/item/factory_construction/full_container(user.loc)
 	new /obj/item/stack/spacecash/c1(user.loc, reward)
-	SSsociostability.modifystability(1) //Working increases stability
+	SSsociostability.modifystability(2) //Working increases stability
 	qdel(src)
 
 /obj/item/factory_construction/full_container

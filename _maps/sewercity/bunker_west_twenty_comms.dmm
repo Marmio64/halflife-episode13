@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/baseturf_helper/halflife/underground,
+/turf/closed/wall/halflife/concrete,
+/area/halflife/indoors/bunker)
 "az" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/restraints/legcuffs/beartrap{
@@ -9,6 +13,7 @@
 	pixel_x = -5;
 	pixel_y = 8
 	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "aT" = (
@@ -77,10 +82,6 @@
 /obj/structure/window/fulltile,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
-"fr" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/indoor/concrete/small,
-/area/halflife/indoors/bunker)
 "fG" = (
 /obj/structure/table/halflife/no_smooth/large/metal/desk{
 	dir = 1
@@ -93,6 +94,7 @@
 	pixel_x = -1;
 	pixel_y = 10
 	},
+/obj/machinery/jukebox/radio,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "fW" = (
@@ -258,17 +260,9 @@
 /area/template_noop)
 "uG" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/reagent_containers/condiment/peanut_butter{
-	pixel_x = -7;
-	pixel_y = 15
-	},
-/obj/item/reagent_containers/condiment/peanut_butter{
-	pixel_x = 8;
-	pixel_y = 18
-	},
-/obj/item/reagent_containers/condiment/protein{
-	pixel_x = 2;
-	pixel_y = 8
+/obj/item/food/canned/halflife/beans{
+	pixel_x = -1;
+	pixel_y = 7
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
@@ -298,10 +292,6 @@
 /area/halflife/indoors/bunker)
 "zc" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/reagent_containers/condiment/cherryjelly{
-	pixel_x = 6;
-	pixel_y = 13
-	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "zy" = (
@@ -381,7 +371,7 @@
 /area/halflife/indoors/bunker)
 "DE" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/food/canned/beans{
+/obj/item/food/canned/halflife/beans{
 	pixel_x = -9;
 	pixel_y = 13
 	},
@@ -419,7 +409,7 @@
 	pixel_x = -2;
 	pixel_y = 12
 	},
-/obj/item/ammo_box/magazine/service{
+/obj/item/ammo_box/magazine/m4a1/service{
 	pixel_x = 13;
 	pixel_y = 5
 	},
@@ -457,19 +447,19 @@
 	pixel_x = 2;
 	pixel_y = 12
 	},
-/obj/item/food/canned/peaches{
+/obj/item/food/canned/halflife/crisps{
 	pixel_x = -5;
 	pixel_y = 23
 	},
-/obj/item/food/canned/peaches{
+/obj/item/food/canned/halflife/crisps{
 	pixel_x = 9;
 	pixel_y = 21
 	},
-/obj/item/food/canned/tomatoes{
+/obj/item/food/canned/halflife/seafood{
 	pixel_x = -1;
 	pixel_y = 15
 	},
-/obj/item/food/canned/tomatoes{
+/obj/item/food/canned/halflife/seafood{
 	pixel_x = 11;
 	pixel_y = 13
 	},
@@ -491,9 +481,9 @@
 "Mb" = (
 /obj/structure/halflife/pipes/vent,
 /obj/structure/table/halflife/metal/grate,
-/obj/item/reagent_containers/condiment/honey{
-	pixel_x = 9;
-	pixel_y = -7
+/obj/item/food/canned/halflife/seafood{
+	pixel_x = -1;
+	pixel_y = 15
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
@@ -685,7 +675,7 @@
 /area/halflife/indoors/bunker)
 "Xe" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/food/canned/pine_nuts{
+/obj/item/food/canned/halflife/crisps{
 	pixel_x = -5;
 	pixel_y = 9
 	},
@@ -760,7 +750,7 @@ rz
 "}
 (2,1,1) = {"
 uD
-DV
+aa
 DV
 DV
 DV
@@ -990,8 +980,8 @@ uD
 "}
 (12,1,1) = {"
 uD
-DV
-fr
+Yz
+nS
 nS
 nS
 Yz

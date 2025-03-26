@@ -129,7 +129,6 @@
 		/obj/item/fish/greenchromis = 10,
 		/obj/item/fish/squid = 8,
 		/obj/item/fish/plaice = 8,
-		/obj/item/survivalcapsule/fishing = 1,
 	)
 	fish_counts = list(
 		/obj/item/survivalcapsule/fishing = 1,
@@ -773,21 +772,3 @@
 	)
 	fishing_difficulty = FISHING_DEFAULT_DIFFICULTY + 20
 	fish_source_flags = FISH_SOURCE_FLAG_EXPLOSIVE_MALUS
-
-/datum/fish_source/sewer
-	catalog_description = "Sewers"
-	radial_state = "toilet"
-	duds = list("ewww... nothing", "it was nothing", "it was toilet paper", "it was flushed away", "the hook is empty", "where's the damn money?!")
-	overlay_state = "portal_river" // placeholder
-	fish_table = list(
-		FISHING_DUD = 18,
-		/obj/item/fish/sludgefish = 18,
-		/obj/item/fish/slimefish = 4,
-		/obj/item/storage/wallet/money = 2,
-		/obj/item/survivalcapsule/fishing = 1,
-	)
-	fish_counts = list(
-		/obj/item/storage/wallet/money = 2,
-		/obj/item/survivalcapsule/fishing = 1,
-	)
-	fishing_difficulty = FISHING_EASY_DIFFICULTY + 10

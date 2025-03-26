@@ -4,15 +4,24 @@
 	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "destabilizer"
 	var/destabilization_rate = -1
-	var/destabilization_chance = 100
+	var/destabilization_chance = 80
+	var/cumulative_destabilization = 0
+	var/detonation_limit = 250
+	var/blowing_up = FALSE
 
 /obj/machinery/destabilizer/process(delta_time)
-	if(prob(destabilization_chance))
+	if(prob(destabilization_chance) && (cumulative_destabilization < detonation_limit))// each destabilizer can only eat 25% of sociostability
 		SSsociostability.modifystability(destabilization_rate) //Slowly wittles down stability
+		cumulative_destabilization++
+	if(detonation_limit <= cumulative_destabilization)
+		addtimer(CALLBACK(src, PROC_REF(blow_up)), 10 SECONDS)
+		blowing_up = TRUE
 
 /obj/machinery/destabilizer/examine(mob/user)
 	. = ..()
 	. += span_notice("It's currently disrupting district sociostability. You can destroy it to halt this.")
+	if(blowing_up)
+		. += span_notice("It's shaking rapidly, and getting very hot. You might want to step away from it, quickly.")
 
 /obj/machinery/destabilizer/deconstruct(disassembled = TRUE)
 	SSsociostability.modifystability(10) //Good for stability to break it.
@@ -24,6 +33,9 @@
 /obj/machinery/destabilizer/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/gps, "Disruptive Signal")
+
+/obj/machinery/destabilizer/proc/blow_up()
+	explosion(src, heavy_impact_range = 1, light_impact_range = 3, flash_range = 2)
 
 /obj/machinery/destabilizer/makeshift
 	name = "makeshift destabilizer"

@@ -18,7 +18,7 @@
 	spawning_flags = SHUTTLE_EVENT_HIT_SHUTTLE
 	outfit = /datum/outfit/job/assistant/breath_mask
 
-	event_probability = 0.1
+	event_probability = 0 //hl13 edit
 	spawn_probability_per_process = 5
 	activation_fraction = 0.05
 	spawns_per_spawn = 10
@@ -64,7 +64,7 @@
 	spawning_flags = SHUTTLE_EVENT_HIT_SHUTTLE
 	outfit = /datum/outfit/job/assistant/hitchhiker
 
-	event_probability = 1
+	event_probability = 0 //hl13 edit
 	spawn_probability_per_process = 5
 	activation_fraction = 0.2
 

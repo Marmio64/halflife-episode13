@@ -54,6 +54,16 @@ DEFINE_BITFIELD(turret_flags, list(
 	alwaysmovable = TRUE
 	max_integrity = 180
 	uses_stored = FALSE
+	armor_type = /datum/armor/combine_porta_turret
+
+/datum/armor/combine_porta_turret
+	melee = 50
+	bullet = 40
+	laser = 30
+	energy = 30
+	bomb = 30
+	fire = 90
+	acid = 90
 
 /obj/machinery/porta_turret/combine/off
 	on = FALSE

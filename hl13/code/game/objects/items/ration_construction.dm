@@ -145,7 +145,7 @@
 /obj/item/ration_construction/container/attack_self(mob/user)
 	if(filled && !completed)
 		to_chat(usr, span_notice("Sealing box..."))
-		if(do_after(user, 4 SECONDS, src))
+		if(do_after(user, 5 SECONDS, src))
 			to_chat(usr, span_notice("Container succesfully sealed. Reward dispensed."))
 			seal(user)
 	else if(completed)

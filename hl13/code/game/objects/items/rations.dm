@@ -181,6 +181,25 @@
 	name = "large flavor bar"
 	food_reagents = list(/datum/reagent/consumable/astrotame = 1, /datum/reagent/consumable/nutriment = 2)
 
+/obj/item/food/devilled_flavorbar
+	name = "devilled flavor bar"
+	desc = "A flavor bar mixed with gelatinated egg paste, mayo, and a bit of water. The taste is somewhat reminescent of a devilled egg, though obviously nowhere near as good."
+	icon = 'hl13/icons/obj/food.dmi'
+	icon_state = "devilledbar"
+	bite_consumption = 4
+	tastes = list("egg" = 3, "artificial flavor" = 2)
+	foodtypes = null //Don't ask what went into them. You're better off not knowing.
+	food_reagents = list(/datum/reagent/consumable/astrotame = 1, /datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/nutriment/vitamin = 2, /datum/reagent/consumable/mayonnaise = 10)
+
+	preserved_food = TRUE
+
+/obj/item/reagent_containers/cup/glass/nutrimentmayobox
+	name = "Mayo-eggbox"
+	desc = "A nutriment egg box mixed with oils to create what resembles mayo."
+	isGlass = FALSE
+	icon = 'hl13/icons/obj/food.dmi'
+	icon_state = "mayobox"
+	list_reagents = list(/datum/reagent/consumable/mayonnaise = 50)
 
 /obj/item/food/nutripaste
 	name = "nutripaste tube"
@@ -193,6 +212,11 @@
 	food_reagents = list(/datum/reagent/consumable/nutriment = 10) //Very nutritious at least...
 
 	preserved_food = TRUE
+
+/obj/item/food/nutripaste/handmade
+	name = "handmade nutripaste tube"
+	desc = "Stirred by hand, you're not sure why you made this disgusting slop by your own free will, but it is somehow more nutritious than its base ingredients, even if it tastes horrible. Desperate times call for desperate measures."
+	food_reagents = list(/datum/reagent/consumable/nutriment = 14) //standard ration pack is 8 nutriment, plus 3 from purple can, and a bit extra from the oils, plus crafting bonus
 
 /obj/item/food/nutripaste/small
 	name = "small nutripaste tube"
@@ -225,7 +249,7 @@
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/yellow/Initialize(mapload)
 	if(prob(10))
-		list_reagents = list(/datum/reagent/water/unpurified = 10, /datum/reagent/toxin/mindbreaker = 10) //This smells funny...
+		list_reagents = list(/datum/reagent/water/unpurified/river = 20) //may contain worms
 	. = ..()
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/red
@@ -245,7 +269,7 @@
 	name = "purple nutriment can"
 	desc = "A special can of Breen's private reserve... Actually, this is a special oil-flavored 'nutriment fulfilling' can. It's not an offensive taste, but it isn't great and costs a lot for the calorie content..."
 	icon_state = "breenwaterpurple"
-	list_reagents = list(/datum/reagent/water = 7, /datum/reagent/consumable/nutriment/fat/oil = 20, /datum/reagent/consumable/nutriment = 3)
+	list_reagents = list(/datum/reagent/water = 7, /datum/reagent/consumable/nutriment/fat/oil = 15, /datum/reagent/consumable/nutriment = 3)
 	custom_price = PAYCHECK_CREW * 2
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/fuel
@@ -261,3 +285,58 @@
 	isGlass = FALSE
 	icon_state = "mouthwash"
 	list_reagents = list(/datum/reagent/consumable/sugar = 15, /datum/reagent/consumable/ethanol = 7, /datum/reagent/water = 28)
+
+/obj/item/food/canned/halflife
+	icon = 'hl13/icons/obj/food.dmi'
+
+/obj/item/food/canned/halflife/beans
+	name = "tin of pork beans"
+	desc = "Old world beans with bits of pork floating inside. Better than rations at least."
+	icon_state = "porknbean"
+	trash_type = /obj/item/trash/can/food/halflife/beans
+	food_reagents = list(
+		/datum/reagent/consumable/nutriment = 4,
+		/datum/reagent/consumable/nutriment/protein = 8,
+		/datum/reagent/consumable/ketchup = 4,
+	)
+	tastes = list("beans" = 2, "pork" = 1)
+	foodtypes = VEGETABLES | MEAT
+
+/obj/item/food/canned/halflife/seafood
+	name = "tin of fish"
+	desc = "Some sort of chopped up fish crammed into a tin. It smells terrible, and looks just as bad, but hopefully is edible."
+	icon_state = "seafood"
+	trash_type = /obj/item/trash/can/food/halflife/seafood
+	food_reagents = list(
+		/datum/reagent/consumable/nutriment = 3,
+		/datum/reagent/consumable/nutriment/protein = 8,
+	)
+	tastes = list("fish" = 1)
+	foodtypes = MEAT
+
+/obj/item/food/canned/halflife/crisps
+	name = "tin of crisps"
+	desc = "A tin tube filled with crisps. They're stale, but the salt is good as ever at least."
+	icon_state = "crisps"
+	trash_type = /obj/item/trash/can/food/halflife/crisps
+	food_reagents = list(
+		/datum/reagent/consumable/nutriment = 5,
+		/datum/reagent/consumable/salt = 2,
+	)
+	tastes = list("stale chips" = 1)
+	foodtypes = JUNKFOOD | FRIED
+
+/obj/item/trash/can/food/halflife
+	icon = 'hl13/icons/obj/food.dmi'
+
+/obj/item/trash/can/food/halflife/beans
+	name = "tin of pork beans"
+	icon_state = "porknbean_empty"
+
+/obj/item/trash/can/food/halflife/crisps
+	name = "tin of crisps"
+	icon_state = "crisps_empty"
+
+/obj/item/trash/can/food/halflife/seafood
+	name = "tin of fish"
+	icon_state = "seafood_empty"

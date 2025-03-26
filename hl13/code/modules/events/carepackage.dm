@@ -41,7 +41,7 @@
 		/obj/item/ammo_box/magazine/usp9mm,
 		/obj/item/clothing/under/citizen/rebel,
 		/obj/item/gun/ballistic/rifle/rebarxbow,
-		///obj/item/gun/ballistic/revolver/derringer,
+		/obj/item/halflife/antenna,
 		/obj/item/knife/combat,
 		/obj/item/stack/telecrystal,
 		/obj/item/stack/telecrystal/five,

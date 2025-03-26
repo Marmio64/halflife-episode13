@@ -172,7 +172,7 @@
 
 /obj/item/storage/box/lethalshot/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/ammo_casing/shotgun/buckshot(src)
+		new /obj/item/ammo_casing/shotgun/buckshot/halflife(src)
 
 /obj/item/storage/box/lethalshot/old
 

@@ -90,7 +90,7 @@ GLOBAL_LIST_EMPTY(scanned_fish_by_techweb)
 	description = "An experiment requiring even more fish species to be scanned to unlock the 'Chasm' setting for the fishing portal."
 	points_reward = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS )
 	required_atoms = list(/obj/item/fish = 11)
-	next_experiments = list(/datum/experiment/scanning/fish/fourth, /datum/experiment/scanning/fish/holographic)
+	next_experiments = list(/datum/experiment/scanning/fish/holographic)
 	fish_source_reward = /datum/fish_source/portal/chasm
 
 /datum/experiment/scanning/fish/holographic
@@ -106,11 +106,3 @@ GLOBAL_LIST_EMPTY(scanned_fish_by_techweb)
 ///holo fishes are normally unscannable, but this is an experiment for them, so we don't care for the experisci_scannable variable.
 /datum/experiment/scanning/fish/holographic/final_contributing_index_checks(datum/component/experiment_handler/experiment_handler, obj/item/fish/target, typepath)
 	return TRUE
-
-/datum/experiment/scanning/fish/fourth
-	name = "Fish Scanning Experiment 4"
-	description = "An experiment requiring lotsa fish species to unlock the 'Hyperspace' setting for the fishing portal."
-	points_reward = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS )
-	required_atoms = list(/obj/item/fish = 17)
-	next_experiments = null
-	fish_source_reward = /datum/fish_source/portal/hyperspace

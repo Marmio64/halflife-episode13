@@ -33,6 +33,7 @@
 #define FOOTSTEP_OBJ_ROBOT "footstep_robot"
 #define FOOTSTEP_MOB_HUNTER "footstep_hunter"
 #define FOOTSTEP_MOB_ANTLION "footstep_antlion"
+#define FOOTSTEP_MOB_GONOME "footstep_gonome"
 
 //priority defines for the footstep_override element
 #define STEP_SOUND_NO_PRIORITY 0

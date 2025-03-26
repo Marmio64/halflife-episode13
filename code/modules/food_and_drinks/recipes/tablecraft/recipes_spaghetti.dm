@@ -12,14 +12,6 @@
 	result = /obj/item/food/spaghetti/pastatomato
 	category = CAT_SPAGHETTI
 
-/datum/crafting_recipe/food/copypasta
-	name = "Copypasta"
-	reqs = list(
-		/obj/item/food/spaghetti/pastatomato = 2
-	)
-	result = /obj/item/food/spaghetti/copypasta
-	category = CAT_SPAGHETTI
-
 /datum/crafting_recipe/food/spaghettimeatball
 	name = "Spaghetti meatball"
 	reqs = list(

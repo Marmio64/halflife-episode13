@@ -7,7 +7,13 @@
 	requires_power = FALSE
 	max_ambience_cooldown = 240 SECONDS
 	min_ambience_cooldown = 180 SECONDS
-	var/dissipation_rate = 3 // higher numbers = quicker dissipation
+	var/dissipation_rate = 1.5 // higher numbers = quicker dissipation
+
+/obj/effect/baseturf_helper/halflife
+	baseturf = /turf/open/floor/plating/ground/dirt
+
+/obj/effect/baseturf_helper/halflife/underground
+	baseturf = /turf/open/floor/plating/ground/rockunder
 
 /area/halflife/outdoors
 	name = "\improper Outdoors"
@@ -75,7 +81,7 @@
 	ambient_buzz = 'hl13/sound/ambience/town_ambience.ogg'
 
 	ambientrain = RAIN_IN
-	dissipation_rate = 2
+	dissipation_rate = 0.75
 
 /area/halflife/indoors/townhall
 	name = "\improper Town Hall"
@@ -137,6 +143,9 @@
 	name = "\improper Trainstation"
 
 	first_time_text = "The Trainstation"
+
+	ambient_buzz = 'hl13/sound/ambience/trainstation_ambient_loop1.ogg'
+	ambient_buzz_vol = 25
 
 /area/halflife/indoors/slums
 	name = "\improper Slums"
@@ -261,12 +270,18 @@
 	ambient_buzz = 'hl13/sound/ambience/bunker1.ogg'
 	ambient_buzz_vol = 80
 
+	mood_message = "<span class='warning'>This place is unnerving...</span>\n"
+
 	first_time_text = null
 
 /area/halflife/indoors/sewer/cave
 	name = "\improper Mining Caves"
 
+	ambient_buzz = 'hl13/sound/ambience/corridor.ogg'
+
 	first_time_text = "The Mines"
+
+	mood_message = "<span class='warning'>This place is unnerving...</span>\n"
 
 /area/halflife/indoors/sewer/outlandscave
 	name = "\improper Outlands Caves"
@@ -274,6 +289,8 @@
 	max_ambience_cooldown = 25 SECONDS
 	min_ambience_cooldown = 10 SECONDS
 	ambient_buzz = 'hl13/sound/ambience/antcaves/cave_howl_loop1.ogg'
+
+	mood_message = "<span class='warning'>I can hear the bugs all around me...</span>\n"
 
 	first_time_text = "The Antlion Caves"
 
@@ -283,6 +300,8 @@
 	max_ambience_cooldown = 25 SECONDS
 	min_ambience_cooldown = 10 SECONDS
 	ambient_buzz = 'hl13/sound/ambience/antcaves/cave_howl_loop1.ogg'
+
+	mood_message = "<span class='warning'>I can hear the bugs all around me...</span>\n"
 
 /area/centcom/halflife
 	name = "Overwatch Rail Interchange"

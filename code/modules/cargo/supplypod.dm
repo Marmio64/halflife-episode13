@@ -41,11 +41,11 @@
 	var/list/reverse_dropoff_coords //Turf that the reverse pod will drop off its newly-acquired cargo to
 	var/create_sparks = TRUE // If true, the pod will create sparks before being deleted.
 	var/fallingSoundLength = 11
-	var/fallingSound = 'sound/items/weapons/mortar_long_whistle.ogg'//Admin sound to play before the pod lands
-	var/landingSound //Admin sound to play when the pod lands
+	var/fallingSound = 'hl13/sound/effects/pod/incoming.ogg'//Admin sound to play before the pod lands hl13 edit
+	var/landingSound = 'hl13/sound/effects/pod/explosion.ogg' //Admin sound to play when the pod lands hl13 edit
 	var/openingSound //Admin sound to play when the pod opens
 	var/leavingSound //Admin sound to play when the pod leaves
-	var/soundVolume = 80 //Volume to play sounds at. Ignores the cap
+	var/soundVolume = 70 //Volume to play sounds at. Ignores the cap hl13 edit
 	var/list/explosionSize = list(0,0,2,0)//hl13 edit, remove flames
 	var/stay_after_drop = FALSE
 	var/specialised = FALSE // It's not a general use pod for cargo/admin use

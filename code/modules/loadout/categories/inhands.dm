@@ -35,3 +35,7 @@
 /datum/loadout_item/inhand/key
 	name = "Blank Custom Key"
 	item_path = /obj/item/customblank
+
+/datum/loadout_item/inhand/rewardvoucher
+	name = "Credit Reward Voucher"
+	item_path = /obj/item/stack/credit_voucher

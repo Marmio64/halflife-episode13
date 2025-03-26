@@ -64,7 +64,7 @@
 /obj/projectile/bullet/pellet/stingball
 	name = "stingball pellet"
 	damage = 3
-	stamina = 8
+	stamina = 9 //hl13 edit, slightly more effective
 	ricochets_max = 4
 	ricochet_chance = 66
 	ricochet_decay_chance = 1

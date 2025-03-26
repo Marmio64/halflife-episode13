@@ -22,6 +22,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 		JOB_SECURITY_OFFICER_ENGINEERING,
 		JOB_SECURITY_OFFICER_SCIENCE,
 		JOB_SECURITY_OFFICER_SUPPLY,
+		JOB_LAWYER,
 		JOB_WARDEN,
 	) //hl13 edit, just moving all the protected roles into restricted cause nothing else seems to fix it
 	required_candidates = 1

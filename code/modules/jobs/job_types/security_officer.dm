@@ -18,7 +18,7 @@
 	outfit = /datum/outfit/job/security
 	plasmaman_outfit = /datum/outfit/plasmaman/security
 
-	paycheck = PAYCHECK_CREW
+	paycheck = PAYCHECK_LOWER
 	paycheck_department = ACCOUNT_SEC
 
 	liver_traits = list(TRAIT_LAW_ENFORCEMENT_METABOLISM)
@@ -47,6 +47,7 @@
 	job_flags = STATION_JOB_FLAGS
 
 	ration_bonus = 2
+	union_law_notify = TRUE
 	var/static/list/used_numbers = list()
 
 	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
@@ -230,12 +231,12 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	suit = /obj/item/clothing/suit/armor/civilprotection
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp/riot
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	glasses = /obj/item/clothing/glasses/hud/security
 
 	mask = /obj/item/clothing/mask/gas/civilprotection
-	belt = /obj/item/storage/belt/civilprotection/full
+	belt = /obj/item/storage/belt/civilprotection/riotfullpistol
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
 

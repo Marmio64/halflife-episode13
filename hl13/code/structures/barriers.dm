@@ -33,3 +33,12 @@
 	desc = "A heavy duty concrete road barrier featuring a pattern that to this day is still somewhat vibrant. Used to direct traffic and prevent going off the lane."
 	icon_state = "concrete_barrier_alt"
 	altstates = 1
+
+/obj/structure/halflife/road_barrier/combine
+	name = "combine barrier"
+	desc = "A combine barricade made of strange metals with a warping, almost liquid-like center. Durable, and good for cover."
+	climbable = TRUE
+	icon_state = "combine"
+	anchored = TRUE
+	max_integrity = 600
+	projectile_passchance = 30

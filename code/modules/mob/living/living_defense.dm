@@ -96,6 +96,14 @@
 	if (. != BULLET_ACT_HIT)
 		return .
 
+	//hl13 edit start. Far enough away gunfire has a chance to graze/nearmiss you
+	if((proj.accurate_range - (proj.accuracy_falloff * get_dist(proj.last_impact_turf, proj.starting))) < 65)
+		if(prob(20))
+			visible_message(span_danger("[src] is narrowly missed by \a [proj]!"), \
+					span_userdanger("You're narrowly missed by \a [proj]!"), null, COMBAT_MESSAGE_RANGE)
+			return BULLET_ACT_FORCE_PIERCE
+	//hl13 edit end
+
 	if(blocked >= 100)
 		if(proj.is_hostile_projectile())
 			apply_projectile_effects(proj, def_zone, blocked)

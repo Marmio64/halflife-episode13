@@ -4,6 +4,7 @@
 	icon = 'hl13/icons/obj/clothing/hats.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
 	icon_state = "cleanup"
+	clothing_traits = list(TRAIT_WEARING_GAS_MASK)
 
 /obj/item/clothing/head/utility/hardhat/halflife
 	icon = 'hl13/icons/obj/clothing/hats.dmi'
@@ -39,6 +40,10 @@
 	armor_type = /datum/armor/military_helmet
 	flags_cover = EARS_COVERED
 
+	repairable_by = /obj/item/stack/kevlar
+
+	limb_integrity = 300
+
 /datum/armor/military_helmet
 	melee = 25
 	bullet = 20
@@ -53,6 +58,12 @@
 	name = "cracked military helmet"
 	desc = "An old world military helmet. Age and use has left the helmet in a less than ideal condition."
 	armor_type = /datum/armor/military_helmet/weak
+
+/obj/item/clothing/head/helmet/halflife/military/weak/crafted
+	name = "hand-made military helmet"
+	desc = "A hand made helmet formed from scraps and kevlar. It's not very good at protecting you in a meaningful way, but every bit counts."
+	icon_state = "steel_helmet"
+	base_icon_state = "steel_helmet"
 
 /datum/armor/military_helmet/weak
 	melee = 15
@@ -74,6 +85,10 @@
 	armor_type = /datum/armor/milhelm
 	flags_cover = EARS_COVERED
 
+	repairable_by = /obj/item/stack/kevlar
+
+	limb_integrity = 300
+
 /datum/armor/milhelm
 	melee = 25
 	bullet = 20
@@ -84,11 +99,48 @@
 	acid = 50
 	wound = 10
 
+/obj/item/clothing/head/helmet/halflife/headcrab
+	name = "headcrab helmet"
+	desc = "A hollowed out armored headcrab. Hard to see out of, but is surpsingly good at protecting your head."
+	icon = 'hl13/icons/obj/clothing/hats.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
+	icon_state = "headcrab"
+	base_icon_state = "headcrab"
+	armor_type = /datum/armor/headcrab
+	flags_cover = EARS_COVERED
+
+/datum/armor/headcrab
+	melee = 25
+	bullet = 20
+	laser = 20
+	energy = 20
+	bomb = 25
+	fire = 50
+	acid = 50
+	wound = 10
+
+/obj/item/clothing/head/helmet/halflife/headcrab/deathmatch
+	armor_type = /datum/armor/headcrab/deathmatch
+
+/datum/armor/headcrab/deathmatch
+	melee = 75
+	bullet = 75
+	laser = 70
+	energy = 70
+	bomb = 70
+	fire = 70
+	acid = 70
+	wound = 15
+
+/obj/item/clothing/head/helmet/halflife/headcrab/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/clothing_fov_visor, FOV_270_DEGREES)
 
 /obj/item/clothing/head/bio_hood/boiler
 	icon_state = "bio_boiler"
 	icon = 'hl13/icons/obj/clothing/hats.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
+	clothing_traits = list(TRAIT_WEARING_GAS_MASK)
 
 /obj/item/clothing/head/beret/durathread/unitednations //HL13 ADDITION
 	name = "old blue beret"

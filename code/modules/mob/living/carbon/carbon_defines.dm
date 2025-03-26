@@ -127,7 +127,3 @@
 
 	COOLDOWN_DECLARE(bleeding_message_cd)
 
-	var/last_painstun = 0
-	var/painstuncooldown = 350
-	//how tired they are, for sleepytime
-	var/tiredness = 0

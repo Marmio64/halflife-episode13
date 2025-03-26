@@ -65,15 +65,6 @@
 	)
 	result = /obj/item/food/donut/berry
 
-/datum/crafting_recipe/food/donut/trumpet
-	name = "Spaceman's Donut"
-	reqs = list(
-		/datum/reagent/medicine/polypyr = 3,
-		/obj/item/food/donut/plain = 1
-	)
-
-	result = /obj/item/food/donut/trumpet
-
 /datum/crafting_recipe/food/donut/apple
 	name = "Apple Donut"
 	reqs = list(
@@ -215,15 +206,6 @@
 	)
 	result = /obj/item/food/donut/jelly/slimejelly/berry
 
-/datum/crafting_recipe/food/donut/slimejelly/trumpet
-	name = "Spaceman's Slime Donut"
-	reqs = list(
-		/datum/reagent/medicine/polypyr = 3,
-		/obj/item/food/donut/jelly/slimejelly/plain = 1
-	)
-
-	result = /obj/item/food/donut/jelly/slimejelly/trumpet
-
 /datum/crafting_recipe/food/donut/slimejelly/apple
 	name = "Apple Slime Donut"
 	reqs = list(
@@ -318,129 +300,6 @@
 		/obj/item/food/pastrybase = 2
 	)
 	result = /obj/item/food/rofflewaffles
-	category = CAT_PASTRY
-
-////////////////////////////////////////////////DONKPOCCKETS////////////////////////////////////////////////
-
-/datum/crafting_recipe/food/donkpocket
-	time = 15
-	name = "Donk-pocket"
-	reqs = list(
-		/obj/item/food/pastrybase = 1,
-		/obj/item/food/meatball = 1
-	)
-	result = /obj/item/food/donkpocket
-	category = CAT_PASTRY
-
-/datum/crafting_recipe/food/dankpocket
-	time = 15
-	name = "Dank-pocket"
-	reqs = list(
-		/obj/item/food/pastrybase = 1,
-		/obj/item/food/grown/cannabis = 1
-	)
-	result = /obj/item/food/dankpocket
-	category = CAT_PASTRY
-
-/datum/crafting_recipe/food/donkpocket/spicy
-	time = 15
-	name = "Spicy-pocket"
-	reqs = list(
-		/obj/item/food/pastrybase = 1,
-		/obj/item/food/meatball = 1,
-		/obj/item/food/grown/chili = 1
-	)
-	result = /obj/item/food/donkpocket/spicy
-	category = CAT_PASTRY
-
-/datum/crafting_recipe/food/donkpocket/teriyaki
-	time = 15
-	name = "Teriyaki-pocket"
-	reqs = list(
-		/obj/item/food/pastrybase = 1,
-		/obj/item/food/meatball = 1,
-		/datum/reagent/consumable/soysauce = 3
-	)
-	result = /obj/item/food/donkpocket/teriyaki
-	category = CAT_PASTRY
-
-/datum/crafting_recipe/food/donkpocket/pizza
-	time = 15
-	name = "Pizza-pocket"
-	reqs = list(
-		/obj/item/food/pastrybase = 1,
-		/obj/item/food/meatball = 1,
-		/obj/item/food/grown/tomato = 1
-	)
-	result = /obj/item/food/donkpocket/pizza
-	category = CAT_PASTRY
-
-/datum/crafting_recipe/food/donkpocket/honk
-	time = 15
-	name = "Honk-Pocket"
-	reqs = list(
-		/obj/item/food/pastrybase = 1,
-		/obj/item/food/grown/banana = 1,
-		/datum/reagent/consumable/sugar = 3
-	)
-	result = /obj/item/food/donkpocket/honk
-	category = CAT_PASTRY
-
-/datum/crafting_recipe/food/donkpocket/berry
-	time = 15
-	name = "Berry-pocket"
-	reqs = list(
-		/obj/item/food/pastrybase = 1,
-		/obj/item/food/grown/berries = 1
-	)
-	result = /obj/item/food/donkpocket/berry
-	category = CAT_PASTRY
-
-/datum/crafting_recipe/food/donkpocket/gondola
-	time = 15
-	name = "Gondola-pocket"
-	reqs = list(
-		/obj/item/food/pastrybase = 1,
-		/obj/item/food/meatball = 1,
-		/datum/reagent/gondola_mutation_toxin = 5
-	)
-	result = /obj/item/food/donkpocket/gondola
-	category = CAT_PASTRY
-
-/datum/crafting_recipe/food/donkpocket/deluxe
-	time = 15
-	name = "Deluxe Donk-pocket"
-	reqs = list(
-		/obj/item/food/pastrybase = 1,
-		/obj/item/food/meatball = 1,
-		/obj/item/food/meat/bacon = 1,
-		/obj/item/food/onion_slice/red = 1
-	)
-	result = /obj/item/food/donkpocket/deluxe
-	category = CAT_PASTRY
-
-/datum/crafting_recipe/food/donkpocket/deluxe/nocarb
-	time = 15
-	name = "Deluxe Meat-pocket"
-	reqs = list(
-		/obj/item/organ/heart = 1,
-		/obj/item/food/meatball = 1,
-		/obj/item/food/meat/slab = 1,
-		/obj/item/food/grown/herbs = 1
-	)
-	result = /obj/item/food/donkpocket/deluxe/nocarb
-	category = CAT_PASTRY
-
-/datum/crafting_recipe/food/donkpocket/deluxe/vegan
-	time = 15
-	name = "Deluxe Donk-roll"
-	reqs = list(
-		/obj/item/food/pastrybase = 1,
-		/obj/item/food/boiledrice = 1,
-		/obj/item/food/grown/bell_pepper = 1,
-		/obj/item/food/tofu = 2
-	)
-	result = /obj/item/food/donkpocket/deluxe/vegan
 	category = CAT_PASTRY
 
 ////////////////////////////////////////////////MUFFINS////////////////////////////////////////////////

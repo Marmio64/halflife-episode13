@@ -27,6 +27,17 @@
 					H.w_uniform.adjust_suitpower(1, TRUE)
 					staminatolose -= 0.2
 
+		// having high spirits helps us run longer, poor mood hurts instead
+		if(mob_mood)
+			switch(mob_mood.sanity_level)
+				if(SANITY_LEVEL_GREAT)
+					staminatolose -= 0.1
+				if(SANITY_LEVEL_UNSTABLE)
+					staminatolose += 0.1
+				if(SANITY_LEVEL_CRAZY)
+					staminatolose += 0.1
+				if(SANITY_LEVEL_INSANE)
+					staminatolose += -0.2
 
 		if(HAS_TRAIT(src, TRAIT_ATHLETIC)) //Athletic skillchip lets you run for longer
 			staminatolose -= 0.2
@@ -36,7 +47,7 @@
 			toggle_move_intent()
 
 	adjust_nutrition(-1 * hunger_loss)
-	adjust_hydration(-1 * (hunger_loss * 2))
+	adjust_hydration(-2 * hunger_loss)
 
 /mob/living/carbon/set_usable_legs(new_value)
 	. = ..()

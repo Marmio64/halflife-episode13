@@ -56,7 +56,7 @@
 		/obj/item/restraints/handcuffs,
 		/obj/item/restraints/legcuffs/bola,
 		/obj/item/ammo_box/magazine/usp9mm,
-		/obj/item/ammo_box/a357,
+		/obj/item/ammo_box/colta357,
 		/obj/item/ammo_box/magazine/ar2,
 		/obj/item/stack/medical/gauze,
 		/obj/item/storage/box/lethalshot,
@@ -65,6 +65,15 @@
 	atom_storage.open_sound = 'sound/items/handling/holster_open.ogg'
 	atom_storage.open_sound_vary = TRUE
 	atom_storage.rustle_sound = FALSE
+
+/obj/item/storage/belt/civilprotection/large
+	name = "expanded civil protection belt"
+	desc = "Heavy duty belt for containing metrocop standard gear. Contains an extra pocket or two for additional storage."
+	custom_price = PAYCHECK_CREW * 4
+
+/obj/item/storage/belt/civilprotection/large/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 8
 
 /obj/item/storage/belt/civilprotection/full/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm, src)
@@ -87,7 +96,7 @@
 	update_appearance(UPDATE_ICON)
 
 /obj/item/storage/belt/civilprotection/divisionleadfull/PopulateContents()
-	SSwardrobe.provide_type(/obj/item/ammo_box/a357, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/colta357, src)
 	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
 	SSwardrobe.provide_type(/obj/item/melee/baton/security/loaded, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
@@ -96,12 +105,41 @@
 	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/riotfullpistol/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm/rubber, src)
+	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	SSwardrobe.provide_type(/obj/item/melee/baton/security/loaded, src)
+	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
+	update_appearance(UPDATE_ICON)
+
+/obj/item/storage/belt/civilprotection/riotfull/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
+	SSwardrobe.provide_type(/obj/item/grenade/stingbang/halflife, src)
+	SSwardrobe.provide_type(/obj/item/grenade/stingbang/halflife, src)
+	update_appearance(UPDATE_ICON)
+
+
 /obj/item/storage/belt/civilprotection/overwatch
 	name = "overwatch belt"
 	desc = "Heavy duty belt for containing overwatch standard gear."
 
 /obj/item/storage/belt/civilprotection/overwatch/ar2/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
+	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/ar2, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/ar2, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/ar2, src)
+	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
+	update_appearance(UPDATE_ICON)
+
+/obj/item/storage/belt/civilprotection/overwatch/ar2_nogrenade/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/ar2, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/ar2, src)
@@ -130,9 +168,9 @@
 /obj/item/storage/belt/civilprotection/overwatch/spas12/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
 	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
-	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot, src)
-	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot, src)
-	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot, src)
+	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot/halflife, src)
+	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot/halflife, src)
+	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot/halflife, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
 	update_appearance(UPDATE_ICON)
 

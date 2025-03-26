@@ -146,7 +146,7 @@
 
 	adjust_hygiene(hygiene_loss)
 
-	/var/image/smell = image('hl13/icons/effects/effects.dmi', "smell")//This is a hack, there has got to be a safer way to do this but I don't know it at the moment.
+	var/image/smell = image('hl13/icons/effects/effects.dmi', "smell")//This is a hack, there has got to be a safer way to do this but I don't know it at the moment.
 	switch(hygiene)
 		if(HYGIENE_LEVEL_TIDY to INFINITY)
 			if(!HAS_TRAIT(src, TRAIT_FILTHBORN))
@@ -164,6 +164,9 @@
 		if(0 to HYGIENE_LEVEL_FILTHY)
 			overlays -= smell
 			overlays += smell
+			var/turf/my_turf = get_turf(src)
+			if(prob(10))
+				my_turf.VapourTurf(/datum/vapours/decaying_waste/bodyodor, 750)
 			if(HAS_TRAIT(src, TRAIT_HIGHBORN))
 				add_mood_event("hygiene", /datum/mood_event/hygiene/filthy/highborn)
 			else if(!HAS_TRAIT(src, TRAIT_FILTHBORN))
@@ -435,70 +438,6 @@
 		Unconscious(80)
 	// Tissues die without blood circulation
 	adjustBruteLoss(1 * seconds_per_tick)
-
-/mob/living/carbon/human/proc/handle_pain()//BP/WOUND BASED PAIN
-	if(HAS_TRAIT(src, TRAIT_NOPAIN))
-		return
-	if(!stat)
-		var/painpercent = get_complex_pain()
-
-		if(world.time > last_painstun + painstuncooldown)
-			var/probby = 40
-			if(IsKnockdown())
-				if(prob(3) && (painpercent >= 80) )
-					emote("scream")
-					last_painstun = world.time
-			else
-				if(painpercent >= 100)
-					if(prob(probby))
-						last_painstun = world.time
-						shake_camera(src, 1, 1)
-						Immobilize(1 SECONDS)
-						emote("scream")
-						flash_fullscreen("redflash3")
-						adjust_stutter(8 SECONDS)
-						adjust_confusion(10 SECONDS)
-						if(painpercent >= 150)
-							Paralyze(5 SECONDS)
-					else
-						last_painstun = world.time
-						emote("paingroan")
-						adjust_stutter(5 SECONDS)
-						flash_fullscreen("redflash2")
-				else
-					if(painpercent >= 60)
-						if(prob(probby/4))
-							emote("paingroan")
-							adjust_stutter(3 SECONDS)
-							flash_fullscreen("redflash2")
-
-		if(painpercent >= 100)
-			add_mood_event("pain", /datum/mood_event/maxpain)
-		else if(painpercent >= 60)
-			add_mood_event("pain", /datum/mood_event/seriouspain)
-		else
-			clear_mood_event("pain")
-
-/mob/living/carbon/human/proc/get_complex_pain()
-	var/amt = 0
-	for(var/I in bodyparts)
-		var/obj/item/bodypart/BP = I
-		if(BP.bodytype == BODYTYPE_ROBOTIC)
-			continue
-		var/BPinteg
-		//pain from base damage is amplified based on how much con you have
-		BPinteg = ((BP.brute_dam / BP.max_damage) * 100) + BPinteg
-		BPinteg = ((BP.burn_dam / BP.max_damage) * 100) + BPinteg
-		for(var/W in BP.wounds) //wound damage is added normally and stacks higher than 100
-			var/datum/wound/WO = W
-			if(WO.woundpain > 0)
-				BPinteg += WO.woundpain
-//		BPinteg = min(((totwound / BP.max_damage) * 100) + BPinteg, initial(BP.max_damage))
-//		if(BPinteg > amt) //this is here to ensure that pain doesn't add up, but is rather picked from the worst limb
-		amt += (BPinteg) - (get_drunk_amount()/5) //inebriation reduces percieved pain
-		if(HAS_TRAIT(src, TRAIT_LESSPAIN)) //lesspain simply reduces pain by an amount
-			amt -= 10
-	return amt
 
 #undef THERMAL_PROTECTION_HEAD
 #undef THERMAL_PROTECTION_CHEST

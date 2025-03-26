@@ -259,6 +259,10 @@
 					clothes.take_damage_zone(body_zone, damage, BRUTE)
 				else if(wounding_type == WOUND_BURN)
 					clothes.take_damage_zone(body_zone, damage, BURN)
+				//hl13 edit start
+				else if(wounding_type == WOUND_PIERCE)
+					clothes.take_damage_zone(body_zone, damage/2, BRUTE) //piercing stuff doesn't remove as much material as slashing, but would still hurt clothing and armor
+				//hl13 edit end
 
 		if(!armor_ablation)
 			injury_mod += bare_wound_bonus

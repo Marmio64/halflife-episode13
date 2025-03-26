@@ -11,6 +11,7 @@ GLOBAL_LIST_INIT(crafting_category_food, list(
 	CAT_MISCFOOD,
 	CAT_MEXICAN,
 	CAT_MOTH,
+	CAT_RATION, //hl13 edit
 	CAT_PASTRY,
 	CAT_PIE,
 	CAT_PIZZA,

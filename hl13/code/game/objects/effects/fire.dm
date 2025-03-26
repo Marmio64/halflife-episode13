@@ -63,7 +63,7 @@
 
 // override this proc to give different walking-over-fire effects
 /mob/living/proc/flamer_fire_crossed(burnlevel, firelevel, fire_mod = 1)
-	adjust_fire_stacks(burnlevel) //Make it possible to light them on fire later.
+	adjust_fire_stacks(burnlevel/4 + (clamp(firelevel, 1, 25))/10) //Make it possible to light them on fire later.
 	ignite_mob()
 	to_chat(src, "<span class='danger'>You are burned!</span>")
 
@@ -132,14 +132,14 @@
 	adjustFireLoss(rand(5 , burnlevel)) //Including the fire should be way stronger.
 	to_chat(src, "<span class='warning'>You are burned!</span>")
 
-/proc/flame_radius(radius = 1, turf/epicenter, burn_duration = 30, burn_intensity = 25, burn_damage = 12, fire_stacks = 3, int_var = 0.5, dur_var = 0.5, colour = "red") //~Art updated fire.
+/proc/flame_radius(radius = 1, turf/epicenter, burn_duration = 30, burn_intensity = 25, burn_damage = 9, fire_stacks = 1, int_var = 0.5, dur_var = 0.5, colour = "red") //~Art updated fire.
 	if(!isturf(epicenter))
 		CRASH("flame_radius used without a valid turf parameter")
 	for(var/T in filled_turfs(epicenter, radius, "circle", FALSE))
 		radius = clamp(radius, 1, 50) //Sanitize inputs
 		int_var = clamp(int_var, 0.1,0.5)
 		dur_var = clamp(int_var, 0.1,0.5)
-		fire_stacks = rand(burn_damage*(0.5-int_var),burn_damage*(0.5+int_var) ) + rand(burn_damage*(0.5-int_var),burn_damage*(0.5+int_var) )
+		fire_stacks = rand(fire_stacks/2, fire_stacks*2)
 		burn_damage = rand(burn_damage*(0.5-int_var),burn_damage*(0.5+int_var) ) + rand(burn_damage*(0.5-int_var),burn_damage*(0.5+int_var) )
 		var/turf/turf_to_flame = T
 		turf_to_flame.flame(rand(burn_duration*(0.5-int_var), burn_duration*(0.5+int_var)) + rand(burn_duration*(0.5-int_var), burn_duration*(0.5+int_var)), rand(burn_intensity*(0.5-int_var), burn_intensity*(0.5-int_var)) + rand(burn_intensity*(0.5-int_var), burn_intensity*(0.5-int_var)), colour, burn_damage, fire_stacks)

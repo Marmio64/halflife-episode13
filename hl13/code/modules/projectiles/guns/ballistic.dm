@@ -1,3 +1,5 @@
+//to do: modularize colt python, m4a1, ak47, and service rifle bullets/ammo casings.
+
 /obj/item/gun/ballistic/automatic/ar2
 	name = "\improper OSIPR"
 	desc = "A pulse rifle often dubbed the 'AR2'. Boasts superior armor piercing capabilities, accuracy, and firepower. Usually biolocked to only be usable by authorised individuals."
@@ -18,6 +20,9 @@
 
 /obj/item/gun/ballistic/automatic/ar2/nopin
 	pin = null
+
+/obj/item/gun/ballistic/automatic/ar2/standardpin
+	pin = /obj/item/firing_pin
 
 /obj/item/gun/ballistic/automatic/ar2/Initialize(mapload)
 	. = ..()
@@ -41,7 +46,7 @@
 	force = 12
 	fire_delay = 2
 	burst_size = 1
-	spread = 12
+	spread = 11
 	recoil = 0.8
 	can_suppress = FALSE
 	mag_display = TRUE
@@ -74,7 +79,7 @@
 	force = 12
 	fire_delay = 2
 	burst_size = 1
-	spread = 14
+	spread = 13
 	recoil = 1.2
 	can_suppress = FALSE
 	mag_display = TRUE
@@ -103,11 +108,11 @@
 	rack_sound = "sound/items/weapons/gun/rifle/bolt_in.ogg"
 	eject_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
 	eject_empty_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
-	accepted_magazine_type = /obj/item/ammo_box/magazine/service
+	accepted_magazine_type = /obj/item/ammo_box/magazine/m4a1/service
 	force = 12
 	fire_delay = 2
 	burst_size = 1
-	spread = 12
+	spread = 11
 	recoil = 0.8
 	can_suppress = FALSE
 	mag_display = TRUE
@@ -204,6 +209,9 @@
 /obj/item/gun/ballistic/automatic/pistol/usp/no_mag
 	spawnwithmagazine = FALSE
 
+/obj/item/gun/ballistic/automatic/pistol/usp/riot
+	spawn_magazine_type = /obj/item/ammo_box/magazine/usp9mm/rubber
+
 /obj/item/gun/ballistic/automatic/pistol/usp/suppressed/Initialize(mapload)
 	. = ..()
 	var/obj/item/suppressor/S = new(src)
@@ -217,7 +225,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/makeshift9mm
 	can_suppress = TRUE
 	fire_sound = "hl13/sound/weapons/uspfire.ogg"
-	spread = 13
+	spread = 12
 	recoil = 0.5
 	fire_delay = 5
 	vary_fire_sound = FALSE
@@ -232,6 +240,7 @@
 /obj/item/gun/ballistic/revolver/coltpython
 	name = "\improper colt python"
 	desc = "An old colt python revolver, accurate but has the kick of a mule. Uses .357 magnum ammo."
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/coltpython
 	fire_sound = "hl13/sound/weapons/revolverfire.ogg"
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "colt_python"
@@ -244,6 +253,19 @@
 /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger
 	fire_delay = 12 //geared towards sniping, not mag dumping
 
+/obj/item/gun/ballistic/revolver/snubnose
+	name = "\improper snubnose revolver"
+	desc = "A well mainted old world .38 snub nosed revolver, good for fitting in your pocket. Often carried as a weapon of last resort by high ranking combine represenatives entering dangerous areas."
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/snubnose
+	fire_sound = "hl13/sound/weapons/revolverfire.ogg"
+	icon = 'hl13/icons/obj/guns/projectile.dmi'
+	icon_state = "snubnose"
+	spread = 11 //snubnosed
+	recoil = 0.5
+	vary_fire_sound = FALSE
+	w_class = WEIGHT_CLASS_SMALL
+
+
 /obj/item/gun/ballistic/shotgun/spas12
 	name = "SPAS 12"
 	desc = "A spectacularly lethal pump action shotgun, for close encounters."
@@ -254,11 +276,26 @@
 	fire_sound = "hl13/sound/weapons/shotgunfire.ogg"
 	rack_sound = "hl13/sound/weapons/shotgunpump.ogg"
 	load_sound = "hl13/sound/weapons/shotgunreload.ogg"
-	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/com
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/com/spas12
 	force = 12
 	recoil = 1.5
 	fire_delay = 7
 	vary_fire_sound = FALSE
+
+/obj/item/ammo_box/magazine/internal/shot/com/spas12
+	name = "spas12 internal magazine"
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/halflife
+	max_ammo = 6
+
+/obj/item/storage/box/lethalshot/halflife
+	name = "box of shotgun shells (Lethal)"
+	desc = "A box full of lethal shotgun shells, designed for shotguns."
+	icon_state = "lethalshot_box"
+	illustration = null
+
+/obj/item/storage/box/lethalshot/halflife/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/ammo_casing/shotgun/buckshot/halflife(src)
 
 /obj/item/gun/ballistic/automatic/mp7
 	name = "\improper MP7 SMG"
@@ -273,7 +310,7 @@
 	show_bolt_icon = FALSE
 	burst_size = 1
 	fire_delay = 1
-	spread = 14
+	spread = 13
 	recoil = 0.4
 	vary_fire_sound = FALSE
 

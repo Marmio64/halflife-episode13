@@ -20,7 +20,7 @@
 /obj/item/fish/arctic_char
 	name = "arctic char"
 	fish_id = "arctic_char"
-	desc = "A cold-water anadromous fish widespread around the Northern Hemisphere of Earth, yet it has somehow found a way here."
+	desc = "A cold-water anadromous fish widespread around the Northern Hemisphere of Earth." //hl13 edit
 	icon_state = "arctic_char"
 	sprite_width = 7
 	sprite_height = 4

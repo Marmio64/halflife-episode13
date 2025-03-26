@@ -23,8 +23,8 @@
 		// Make a quick flash
 		var/turf/target_turf = get_turf(src)
 		playsound(target_turf, 'sound/effects/phasein.ogg', 100, TRUE)
-		for(var/mob/living/carbon/target_carbon in viewers(target_turf, null))
-			target_carbon.flash_act()
+		//for(var/mob/living/carbon/target_carbon in viewers(target_turf, null)) hl13 edit, no flash
+			//target_carbon.flash_act() hl13 edit no flash
 
 		// Spawn some hostile syndicate critters and spread them out
 		var/list/spawned = spawn_and_random_walk(spawner_type, target_turf, deliveryamt, walk_chance = 50, admin_spawn = ((flags_1 & ADMIN_SPAWNED_1) ? TRUE : FALSE))
@@ -42,6 +42,7 @@
 	icon_state = "manhack"
 	spawner_type = /mob/living/simple_animal/hostile/halflife/viscerator
 	deliveryamt = 1
+	det_time = 2 SECONDS
 
 /obj/item/grenade/spawnergrenade/manhacks/deathmatch
 	spawner_type = /mob/living/simple_animal/hostile/halflife/viscerator/deathmatch

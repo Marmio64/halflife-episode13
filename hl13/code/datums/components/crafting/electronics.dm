@@ -60,7 +60,7 @@
 	category = CAT_ROBOT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
 
-/datum/crafting_recipe/combineturret
+/datum/crafting_recipe/combineturretmp7
 	name = "Combine MP7 Turret"
 	result = /obj/machinery/porta_turret/combine/mp7/off
 	reqs = list(/obj/item/stack/sheet/iron = 2,

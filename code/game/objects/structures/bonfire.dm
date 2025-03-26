@@ -153,6 +153,11 @@
 			if(grill && isitem(burned_movable))
 				var/obj/item/grilled_item = burned_movable
 				SEND_SIGNAL(grilled_item, COMSIG_ITEM_GRILL_PROCESS, src, seconds_per_tick) //Not a big fan, maybe make this use fire_act() in the future.
+				//hl13 edit start, so bonfires can heat up soup pots for cleaning water
+				if(is_reagent_container(grilled_item))
+					var/obj/item/reagent_containers/container = burned_movable
+					container.reagents.expose_temperature(SOUP_BURN_TEMP + 80, 0.033)
+				//hl13 edit end
 				continue
 			burned_movable.fire_act(1000, 250 * seconds_per_tick)
 

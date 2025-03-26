@@ -119,3 +119,25 @@
 		/obj/item/hatchet/cutterblade = 1,
 	)
 	crate_name = "paper cutters crate"
+
+/datum/supply_pack/misc/vouchers
+	name = "Reward Voucher Crate"
+	desc = "A large crate with 50 reward vouchers, totalling to 250 credits. A useful way for giving out rewards to citizens with less risk of Civil Protection embezzlement."
+	cost = CARGO_CRATE_VALUE * 6.5 //a bit over the return from recycling the crate, stamping the manifest, and giving out the vouchers.
+	contains = list(/obj/item/stack/credit_voucher/a10,
+					/obj/item/stack/credit_voucher/a10,
+					/obj/item/stack/credit_voucher/a10,
+					/obj/item/stack/credit_voucher/a10,
+					/obj/item/stack/credit_voucher/a10)
+	crate_name = "reward voucher crate"
+
+/datum/supply_pack/misc/ration_vouchers
+	name = "Ration Voucher Crate"
+	desc = "A crate with five ration vouchers inside. The vouchers can be inserted into an ID to gain a usuable ration token, useful to give out as a reward perhaps, and is cheaper than buying rations wholesale."
+	cost = CARGO_CRATE_VALUE * 2.5
+	contains = list(/obj/item/ration_voucher,
+					/obj/item/ration_voucher,
+					/obj/item/ration_voucher,
+					/obj/item/ration_voucher,
+					/obj/item/ration_voucher)
+	crate_name = "ration voucher crate"

@@ -43,6 +43,15 @@
 	icon = 'hl13/icons/obj/xenflora.dmi'
 	max_integrity = 200
 	var/breakmats = null
+	var/hasaltstates = FALSE
+	var/altstates = 0
+
+/obj/structure/flora/xen/Initialize()
+	. = ..()
+	if(!hasaltstates)
+		return
+	if(prob(60))
+		icon_state = "[initial(icon_state)]_[rand(1,(altstates))]"
 
 /obj/structure/flora/xen/atom_deconstruct(disassembled = TRUE)
 	if(breakmats)
@@ -58,14 +67,16 @@
 	light_range = 1.5
 	light_power = 1.5
 	light_color = "#28533a"
-	breakmats = /obj/item/food/xenbranch
+	breakmats = /obj/item/food/xen/xenbranch
+	hasaltstates = TRUE
+	altstates = 2
 
-/obj/item/food/xenbranch
+/obj/item/food/xen/xenbranch
 	name = "xenian branch"
 	desc = "A branch from some xenian plant. It's green, so that might mean it could be possibly used for medicinal purposes."
 	tastes = list("bitterness" = 1)
 	bite_consumption = 5
-	food_reagents = list(/datum/reagent/medicine/biogel = 20)
+	food_reagents = list(/datum/reagent/medicine/biogel = 25)
 	foodtypes = GROSS
 	icon = 'hl13/icons/obj/xenflora.dmi'
 	icon_state = "branch"
@@ -77,9 +88,11 @@
 	light_range = 1.5
 	light_power = 1.5
 	light_color = "#703d68"
-	breakmats = /obj/item/food/xenspore
+	breakmats = /obj/item/food/xen/xenspore
+	hasaltstates = TRUE
+	altstates = 2
 
-/obj/item/food/xenspore
+/obj/item/food/xen/xenspore
 	name = "xenian spore"
 	desc = "A spore from some xenian plant. It smells kind of funky..."
 	tastes = list("dusty mushrooms" = 1)
@@ -96,11 +109,11 @@
 	light_range = 1.5
 	light_power = 1.5
 	light_color = "#1a994f"
-	breakmats = /obj/item/food/xenslime
+	breakmats = /obj/item/food/xen/xenslime
 	density = 1
 	max_integrity = 100
 
-/obj/item/food/xenslime
+/obj/item/food/xen/xenslime
 	name = "xenian slime"
 	desc = "A gross mass of slime. The inner contents look liquid and slosh about, while the outer shell is constantly coagulating. Interesting..."
 	tastes = list("slime" = 1)
@@ -109,3 +122,14 @@
 	foodtypes = GROSS
 	icon = 'hl13/icons/obj/xenflora.dmi'
 	icon_state = "slime"
+
+/obj/structure/flora/xen/cougher
+	name = "xen cougher"
+	desc = "A disgusting growth which is coughing up clouds of spores."
+	icon_state = "cougher"
+	density = 1
+	max_integrity = 100
+
+/obj/structure/flora/xen/cougher/Initialize()
+	. = ..()
+	AddElement(/datum/element/vapour_emitter, /datum/vapours/fungalspores, 140)

@@ -1,4 +1,4 @@
-//wall sprites from tgmc
+//metal and wood sprites from tgmc, otherwise ms13
 /turf/closed/wall/halflife
 	name = "wall"
 	desc = "A sturdy wall."
@@ -18,6 +18,11 @@
 	desc = "A sturdy wall made of bricks."
 	icon_state = "wall-0"
 	base_icon_state = "wall"
+	sheet_type = /obj/item/stack/sheet/halflife/brick
+	sheet_amount = 2
+
+/turf/closed/wall/halflife/brick/weak
+	max_integrity = 300
 
 /turf/closed/wall/halflife/brick/grey
 	icon = 'hl13/icons/turf/walls/brickgrey.dmi'
@@ -42,6 +47,10 @@
 	desc = "A strange metal wall with various pipes set into it."
 	icon_state = "urban_wall_regular-0"
 	base_icon_state = "urban_wall_regular"
+
+/turf/closed/wall/halflife/metal/strong
+	max_integrity = 1500
+	explosive_resistance = 2
 
 /turf/closed/wall/halflife/metal/weak
 	max_integrity = 300

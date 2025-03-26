@@ -24,11 +24,12 @@
 		COMSIG_MOB_APPLY_DAMAGE = PROC_REF(handle_damage)
 	)
 
+	limb_integrity = 50
 	armor_type = /datum/armor/combinesuit
 
 /datum/armor/combinesuit
-	melee = 15
-	bullet = 15
+	melee = 10
+	bullet = 10
 	laser = 20
 	energy = 20
 	bomb = 20
@@ -73,7 +74,7 @@
 	if(suit_power > 25)
 		adjust_suitpower(100, TRUE)
 		to_chat(owner, span_warning("Suit detects extreme user damage. Administering Class A-3 Stimulant Medication Supplements."))
-		owner.reagents.add_reagent(/datum/reagent/medicine/morphine, 2)
+		owner.reagents.add_reagent(/datum/reagent/medicine/morphine, 3)
 		owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 3)
 		owner.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 1)
 	else
@@ -117,13 +118,13 @@
 	armor_type = /datum/armor/combinesuit_upgraded
 
 /datum/armor/combinesuit_upgraded
-	melee = 20
-	bullet = 20
+	melee = 15
+	bullet = 15
 	laser = 25
 	energy = 25
 	bomb = 25
-	fire = 30
-	acid = 30
+	fire = 90
+	acid = 50
 	wound = 10
 
 /obj/item/clothing/under/combine/overwatch
@@ -136,6 +137,9 @@
 	suit_power = 100
 	armor_type = /datum/armor/combinesuit_upgraded
 
+/obj/item/clothing/under/combine/overwatch/Initialize(mapload) //fused to the soldiers, you cant take it off
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
 
 /obj/item/clothing/under/combine/overwatch/red
 	desc = "Red full-body suit which includes kevlar weaving to provide extra protection."
@@ -148,13 +152,13 @@
 	armor_type = /datum/armor/combinesuit_elite
 
 /datum/armor/combinesuit_elite
-	melee = 25
-	bullet = 25
+	melee = 20
+	bullet = 20
 	laser = 30
 	energy = 30
 	bomb = 30
-	fire = 40
-	acid = 30
+	fire = 90
+	acid = 50
 	wound = 10
 
 /datum/armor/gruntsuit
@@ -163,8 +167,8 @@
 	laser = 20
 	energy = 20
 	bomb = 20
-	fire = 30
-	acid = 30
+	fire = 90
+	acid = 80
 	wound = 10
 	bio = 100
 
@@ -177,6 +181,9 @@
 	max_integrity = 400
 	suit_power = 100
 	armor_type = /datum/armor/gruntsuit
+
+/obj/item/clothing/under/combine/grunt/deathmatch
+	slowdown = -0.25
 
 /obj/item/clothing/under/citizen
 	name = "citizen jumpsuit"
@@ -210,6 +217,7 @@
 	has_sensor = NO_SENSORS
 	armor_type = /datum/armor/rebelsuit
 	can_adjust = FALSE
+	limb_integrity = 50
 
 /datum/armor/rebelsuit
 	melee = 10
@@ -217,7 +225,7 @@
 	laser = 10
 	energy = 10
 	bomb = 10
-	fire = 30
+	fire = 50
 	acid = 30
 	wound = 5
 
@@ -251,5 +259,23 @@
 	sensor_mode = SENSOR_COORDS
 	random_sensor = FALSE
 	icon_state = "classysuit"
+
+/obj/item/clothing/under/halflife/brownsuit
+	name = "old suit"
+	desc = "A pretty good, old and dusty brown suit."
+	can_adjust = FALSE
+	has_sensor = LOCKED_SENSORS
+	sensor_mode = SENSOR_COORDS
+	random_sensor = FALSE
+	icon_state = "brownsuit"
+
+/obj/item/clothing/under/halflife/blacksuit
+	name = "old suit"
+	desc = "A pretty good, old yet clean black suit."
+	can_adjust = FALSE
+	has_sensor = LOCKED_SENSORS
+	sensor_mode = SENSOR_COORDS
+	random_sensor = FALSE
+	icon_state = "blacksuit"
 
 #undef STIMULANT_INJECTION_DELAY

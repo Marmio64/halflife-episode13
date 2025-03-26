@@ -125,7 +125,7 @@
 #define STANDARD_ORGAN_THRESHOLD 100
 #define STANDARD_ORGAN_HEALING (50 / 100000)
 /// designed to fail organs when left to decay for ~15 minutes
-#define STANDARD_ORGAN_DECAY (111 / 100000)
+#define STANDARD_ORGAN_DECAY (100 / 100000) //hl13 edit, slower organ decay
 
 //used for the can_chromosome var on mutations
 #define CHROMOSOME_NEVER 0

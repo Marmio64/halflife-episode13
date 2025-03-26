@@ -18,8 +18,8 @@
 	desc = "Two sets of kevlar, helmets, camo fatigues, fingerless gloves, ruck sacks, gas masks, and one beret. Most of this gear is no longer in circulation, and now runs a premium."
 	cost = CARGO_CRATE_VALUE * 12
 	access_view = ACCESS_SECURITY
-	contains = list(/obj/item/clothing/suit/armor/kevlar,
-					/obj/item/clothing/suit/armor/kevlar,
+	contains = list(/obj/item/clothing/suit/armor/halflife/kevlar,
+					/obj/item/clothing/suit/armor/halflife/kevlar,
 					/obj/item/clothing/under/syndicate/camo,
 					/obj/item/clothing/under/syndicate/camo,
 					/obj/item/clothing/mask/gas/hl2/military/hardened,
@@ -32,6 +32,15 @@
 					/obj/item/clothing/head/helmet/halflife/military/weak,
 					/obj/item/clothing/head/helmet/halflife/military/weak)
 	crate_name = "military gear crate"
+
+/datum/supply_pack/security/kevlar
+	name = "Kevlar Crate"
+	desc = "Ten rolls of kevlar, for making armor repairs or creating makeshift armor."
+	cost = CARGO_CRATE_VALUE * 3.5
+	access_view = ACCESS_SECURITY
+	contains = list(/obj/item/stack/kevlar/five,
+					/obj/item/stack/kevlar/five)
+	crate_name = "kevlar crate"
 
 /datum/supply_pack/security/riotarmor
 	name = "Riot Armor Crate"
@@ -65,13 +74,23 @@
 	crate_name = "riot shield crate"
 
 /datum/supply_pack/security/stingpack
-	name = "Stingbang Grenade Pack"
-	desc = "Contains five \"stingbang\" grenades, perfect for stopping \
+	name = "Stinger Grenade Pack"
+	desc = "Contains five \"stinger\" grenades which fire out rubber pellets, perfect for stopping \
 		riots and playing morally unthinkable pranks."
 	cost = CARGO_CRATE_VALUE * 6
-	access_view = ACCESS_ARMORY
+	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/storage/box/stingbangs)
-	crate_name = "stingbang grenade pack crate"
+	crate_name = "Stinger grenade pack crate"
+
+/datum/supply_pack/security/cs_gas
+	name = "CS Gas Grenade Pack"
+	desc = "Contains three CS Gas grenades, for dispersing crowds with no real physical harm."
+	cost = CARGO_CRATE_VALUE * 6
+	access_view = ACCESS_SECURITY
+	contains = list(/obj/item/grenade/halflife/cs_gas,
+					/obj/item/grenade/halflife/cs_gas,
+					/obj/item/grenade/halflife/cs_gas)
+	crate_name = "cs gas grenade pack crate"
 
 /// Armory packs
 
@@ -84,7 +103,7 @@
 /datum/supply_pack/security/armory/ar2
 	name = "OSIPR Crate"
 	desc = "Contains two Overwatch Standard Issue Pulse Rifles. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 25
+	cost = CARGO_CRATE_VALUE * 24
 	contains = list(/obj/item/gun/ballistic/automatic/ar2,
 					/obj/item/gun/ballistic/automatic/ar2)
 	crate_name = "osipr gun crate"
@@ -111,10 +130,10 @@
 	name = "Service Rifle Ammo Crate"
 	desc = "Contains four service rifle magazines. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 11
-	contains = list(/obj/item/ammo_box/magazine/service,
-					/obj/item/ammo_box/magazine/service,
-					/obj/item/ammo_box/magazine/service,
-					/obj/item/ammo_box/magazine/service)
+	contains = list(/obj/item/ammo_box/magazine/m4a1/service,
+					/obj/item/ammo_box/magazine/m4a1/service,
+					/obj/item/ammo_box/magazine/m4a1/service,
+					/obj/item/ammo_box/magazine/m4a1/service)
 	crate_name = "service rifle ammo crate"
 
 /datum/supply_pack/security/armory/mp7
@@ -147,10 +166,10 @@
 	name = "Shotgun Buckshot Ammo Crate"
 	desc = "Contains four boxes of buckshot. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 10
-	contains = list(/obj/item/storage/box/lethalshot,
-					/obj/item/storage/box/lethalshot,
-					/obj/item/storage/box/lethalshot,
-					/obj/item/storage/box/lethalshot)
+	contains = list(/obj/item/storage/box/lethalshot/halflife,
+					/obj/item/storage/box/lethalshot/halflife,
+					/obj/item/storage/box/lethalshot/halflife,
+					/obj/item/storage/box/lethalshot/halflife)
 	crate_name = "buckshot crate"
 
 /datum/supply_pack/security/armory/coltpython
@@ -165,10 +184,10 @@
 	name = "Colt Python Ammo Crate"
 	desc = "Contains four Colt Python speed loaders. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 11
-	contains = list(/obj/item/ammo_box/a357,
-					/obj/item/ammo_box/a357,
-					/obj/item/ammo_box/a357,
-					/obj/item/ammo_box/a357)
+	contains = list(/obj/item/ammo_box/colta357,
+					/obj/item/ammo_box/colta357,
+					/obj/item/ammo_box/colta357,
+					/obj/item/ammo_box/colta357)
 	crate_name = "colt python ammo crate"
 
 /datum/supply_pack/security/armory/usp
@@ -181,13 +200,23 @@
 
 /datum/supply_pack/security/armory/uspammo
 	name = "USP Match Ammo Crate"
-	desc = "Contains four USP Match magazines. Requires Armory access to open."
+	desc = "Contains four lethal USP Match magazines. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 6
 	contains = list(/obj/item/ammo_box/magazine/usp9mm,
 					/obj/item/ammo_box/magazine/usp9mm,
 					/obj/item/ammo_box/magazine/usp9mm,
 					/obj/item/ammo_box/magazine/usp9mm)
 	crate_name = "usp match ammo crate"
+
+/datum/supply_pack/security/armory/uspammorubber
+	name = "USP Match Rubber Ammo Crate"
+	desc = "Contains four USP Match rubber bullet magazines. These are less-lethal alternatives to standard rounds. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 5
+	contains = list(/obj/item/ammo_box/magazine/usp9mm/rubber,
+					/obj/item/ammo_box/magazine/usp9mm/rubber,
+					/obj/item/ammo_box/magazine/usp9mm/rubber,
+					/obj/item/ammo_box/magazine/usp9mm/rubber)
+	crate_name = "usp match rubber ammo crate"
 
 /datum/supply_pack/security/armory/manhacks
 	name = "Viscerator Crate"
@@ -223,3 +252,23 @@
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/disk/surgery/brainwashing)
 	crate_name = "brainwashing disk crate"
+
+/datum/supply_pack/security/armory/mk3a2
+	name = "MK3A2 Grenade Crate"
+	desc = "Contains three standard combine extractor grenades. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 8
+	contains = list(/obj/item/grenade/syndieminibomb/bouncer,
+					/obj/item/grenade/syndieminibomb/bouncer,
+					/obj/item/grenade/syndieminibomb/bouncer)
+	crate_name = "MK3A2 grenade crate"
+
+/datum/supply_pack/security/armory/grunt
+	name = "Grunt Armor Crate"
+	desc = "Contains one set of overwatch grunt equipment. Perfect for creating your own proto-transhuman force, conscripted arm, or xen fighting team. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 8
+	contains = list(/obj/item/clothing/mask/gas/civilprotection/overwatch/grunt,
+					/obj/item/clothing/shoes/jackboots/civilprotection,
+					/obj/item/clothing/under/combine/grunt,
+					/obj/item/clothing/gloves/color/civilprotection/grunt,
+					/obj/item/tank/internals/oxygen/grunt)
+	crate_name = "grunt armor crate"

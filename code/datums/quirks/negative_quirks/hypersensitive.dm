@@ -2,7 +2,7 @@
 	name = "Hypersensitive"
 	desc = "For better or worse, everything seems to affect your mood more than it should."
 	icon = FA_ICON_FLUSHED
-	value = -2
+	value = -1 //hl13 edit, reducing how much points this gives
 	gain_text = span_danger("You seem to make a big deal out of everything.")
 	lose_text = span_notice("You don't seem to make a big deal out of everything anymore.")
 	medical_record_text = "Patient demonstrates a high level of emotional volatility."
@@ -11,8 +11,8 @@
 
 /datum/quirk/hypersensitive/add(client/client_source)
 	if (quirk_holder.mob_mood)
-		quirk_holder.mob_mood.mood_modifier += 0.5
+		quirk_holder.mob_mood.mood_modifier += 0.4 //hl13 edit, lower sensitivity
 
 /datum/quirk/hypersensitive/remove()
 	if (quirk_holder.mob_mood)
-		quirk_holder.mob_mood.mood_modifier -= 0.5
+		quirk_holder.mob_mood.mood_modifier -= 0.4 //hl13 edit, lower sensitivity

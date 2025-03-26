@@ -105,6 +105,7 @@
 	pixel_x = -5;
 	pixel_y = 8
 	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "hB" = (
@@ -216,19 +217,19 @@
 	pixel_x = 2;
 	pixel_y = 12
 	},
-/obj/item/food/canned/peaches{
+/obj/item/food/canned/halflife/crisps{
 	pixel_x = -5;
 	pixel_y = 23
 	},
-/obj/item/food/canned/peaches{
+/obj/item/food/canned/halflife/crisps{
 	pixel_x = 9;
 	pixel_y = 21
 	},
-/obj/item/food/canned/tomatoes{
+/obj/item/food/canned/halflife/seafood{
 	pixel_x = -1;
 	pixel_y = 15
 	},
-/obj/item/food/canned/tomatoes{
+/obj/item/food/canned/halflife/seafood{
 	pixel_x = 11;
 	pixel_y = 13
 	},
@@ -354,10 +355,6 @@
 "DB" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/bunker)
-"DY" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/indoor/concrete/small,
-/area/halflife/indoors/bunker)
 "Fb" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
@@ -381,7 +378,7 @@
 /area/halflife/indoors/bunker)
 "Gx" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/food/canned/pine_nuts{
+/obj/item/food/canned/halflife/crisps{
 	pixel_x = -5;
 	pixel_y = 9
 	},
@@ -493,7 +490,7 @@
 	pixel_x = -2;
 	pixel_y = 12
 	},
-/obj/item/ammo_box/magazine/service{
+/obj/item/ammo_box/magazine/m4a1/service{
 	pixel_x = 13;
 	pixel_y = 5
 	},
@@ -551,7 +548,7 @@
 /area/halflife/indoors/bunker)
 "PK" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/food/canned/beans{
+/obj/item/food/canned/halflife/beans{
 	pixel_x = -9;
 	pixel_y = 13
 	},
@@ -586,6 +583,10 @@
 	pixel_y = 3
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"SR" = (
+/obj/effect/baseturf_helper/halflife/underground,
+/turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/bunker)
 "Tc" = (
 /obj/item/reagent_containers/cup/glass/waterbottle/large/empty{
@@ -712,7 +713,7 @@ kC
 "}
 (2,1,1) = {"
 JP
-DB
+SR
 DB
 DB
 DB
@@ -942,8 +943,8 @@ JP
 "}
 (12,1,1) = {"
 JP
-DB
-DY
+WQ
+Fb
 Fb
 Fb
 WQ

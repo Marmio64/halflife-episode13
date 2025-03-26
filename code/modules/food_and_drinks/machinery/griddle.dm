@@ -1,7 +1,7 @@
 /obj/machinery/griddle
 	name = "griddle"
 	desc = "Because using pans is for pansies."
-	icon = 'icons/obj/machines/kitchen.dmi'
+	icon = 'hl13/icons/obj/machines/kitchen.dmi'
 	icon_state = "griddle1_off"
 	density = TRUE
 	pass_flags_self = PASSMACHINE | PASSTABLE| LETPASSTHROW // It's roughly the height of a table.
@@ -26,8 +26,6 @@
 /obj/machinery/griddle/Initialize(mapload)
 	. = ..()
 	grill_loop = new(src, FALSE)
-	if(isnum(variant))
-		variant = rand(1,3)
 	RegisterSignal(src, COMSIG_ATOM_EXPOSE_REAGENT, PROC_REF(on_expose_reagent))
 	RegisterSignal(src, COMSIG_STORAGE_DUMP_CONTENT, PROC_REF(on_storage_dump))
 
@@ -39,7 +37,6 @@
 	. = ..()
 	if(default_deconstruction_crowbar(I, ignore_panel = TRUE))
 		return
-	variant = rand(1,3)
 
 /obj/machinery/griddle/proc/on_expose_reagent(atom/parent_atom, datum/reagent/exposing_reagent, reac_volume)
 	SIGNAL_HANDLER

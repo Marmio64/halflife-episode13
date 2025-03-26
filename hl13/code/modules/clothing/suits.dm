@@ -6,6 +6,21 @@
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 
+	armor_type = /datum/armor/civpro_vest
+
+	limb_integrity = 225
+	repairable_by = /obj/item/stack/kevlar
+
+/datum/armor/civpro_vest
+	melee = 35
+	bullet = 25
+	laser = 30
+	energy = 40
+	bomb = 25
+	fire = 50
+	acid = 50
+	wound = 10
+
 /obj/item/clothing/suit/armor/civilprotection/medical
 	name = "medical officer vest"
 	icon_state = "medicalofficer"
@@ -44,6 +59,9 @@
 
 	armor_type = /datum/armor/overwatcharmor
 
+	limb_integrity = 400
+	repairable_by = /obj/item/stack/kevlar
+
 /datum/armor/overwatcharmor
 	melee = 40
 	bullet = 40
@@ -61,7 +79,7 @@
 	icon_state = "overwatch_red"
 
 /obj/item/clothing/suit/armor/overwatch/red/deathmatch
-	slowdown = 0.33
+	slowdown = 0.5
 
 /obj/item/clothing/suit/armor/overwatch/elite
 	name = "overwatch elite chestpiece"
@@ -69,6 +87,9 @@
 	icon_state = "overwatch_white"
 	armor_type = /datum/armor/eliteoverwatcharmor
 	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
+
+/obj/item/clothing/suit/armor/overwatch/elite/deathmatch
+	slowdown = 0.75
 
 /datum/armor/eliteoverwatcharmor
 	melee = 50
@@ -85,7 +106,7 @@
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 
 //old armor found only as loot
-/obj/item/clothing/suit/armor/kevlar
+/obj/item/clothing/suit/armor/halflife/kevlar
 	name = "kevlar vest"
 	desc = "A old kevlar vest. While still decently protective against bullets, the kevlar has broken down over time and is much less protective than it once was."
 	icon_state = "bulletproof"
@@ -93,8 +114,11 @@
 	blood_overlay_type = "armor"
 	armor_type = /datum/armor/kevlararmor
 
+	limb_integrity = 175
+	repairable_by = /obj/item/stack/kevlar
+
 /datum/armor/kevlararmor
-	melee = 15
+	melee = 20
 	bullet = 25
 	laser = 10
 	energy = 100
@@ -102,6 +126,25 @@
 	fire = 50
 	acid = 50
 	wound = 10
+
+/obj/item/clothing/suit/armor/halflife/kevlar/heavy
+	name = "heavy kevlar vest"
+	desc = "A heavy mass of kevlar, likely made of several vests stitched together with more kevlar. Unwieldly, but it will definitely help protect you."
+	icon_state = "kevlar_heavy"
+	armor_type = /datum/armor/kevlararmor/heavy
+
+	limb_integrity = 250
+	slowdown = 0.5
+
+/datum/armor/kevlararmor/heavy
+	melee = 25
+	bullet = 40
+	laser = 10
+	energy = 100
+	bomb = 40
+	fire = 50
+	acid = 50
+	wound = 15
 
 /obj/item/clothing/suit/armor/halflife/milvest
 	name = "military vest"
@@ -111,8 +154,11 @@
 	slowdown = 0.25
 	armor_type = /datum/armor/milvest
 
+	limb_integrity = 225
+	repairable_by = /obj/item/stack/kevlar
+
 /datum/armor/milvest
-	melee = 25
+	melee = 30
 	bullet = 40
 	laser = 10
 	energy = 100
@@ -130,8 +176,10 @@
 	blood_overlay_type = "armor"
 	armor_type = /datum/armor/armoredvest
 
+	limb_integrity = 100
+
 /datum/armor/armoredvest
-	melee = 15
+	melee = 20
 	bullet = 10
 	laser = 10
 	energy = 10
@@ -147,8 +195,10 @@
 	desc = "A handcrafted armored vest made of cloth and metal, enhanced with xenian fungal plates for extra protection."
 	armor_type = /datum/armor/armoredvest_upgraded
 
+	limb_integrity = 200
+
 /datum/armor/armoredvest_upgraded
-	melee = 25
+	melee = 30
 	bullet = 20
 	laser = 20
 	energy = 20
@@ -170,6 +220,11 @@
 	clothing_flags = THICKMATERIAL
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
 	armor_type = /datum/armor/browncoat
+
+	limb_integrity = 100
+
+/obj/item/clothing/suit/armor/browncoat/deathmatch
+	slowdown = -0.5
 
 /datum/armor/browncoat
 	melee = 10
@@ -223,8 +278,8 @@
 	armor_type = /datum/armor/engineersuit
 
 /datum/armor/engineersuit
-	melee = 5
-	bullet = 5
+	melee = 0
+	bullet = 0
 	laser = 0
 	energy = 0
 	bomb = 5
@@ -256,8 +311,11 @@
 	slowdown = 0.5
 	armor_type = /datum/armor/rebelheavy
 
+	limb_integrity = 350
+	repairable_by = /obj/item/stack/kevlar
+
 /datum/armor/rebelheavy
-	melee = 35
+	melee = 40
 	bullet = 50
 	laser = 35
 	energy = 30
@@ -274,12 +332,43 @@
 	slowdown = 0
 	armor_type = /datum/armor/rebellight
 
+	limb_integrity = 250
+
 /datum/armor/rebellight
-	melee = 35
+	melee = 40
 	bullet = 30
 	laser = 35
 	energy = 30
 	bomb = 35
 	fire = 25
 	acid = 25
+	wound = 15
+
+//Fungal plate armor. Provides the same protection as a civil protection officer vest, but slows you down quite a lot.
+/obj/item/clothing/suit/armor/platearmor
+	name = "fungal plate armor"
+	desc = "Chest armor comprised of fungal plates harvested from xenian lifeforms. Offers decent protection, but is heavy and uncomfortable."
+	icon_state = "platearmor"
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+	slowdown = 0.5
+	repairable_by = /obj/item/stack/sheet/animalhide/goliath_hide
+
+	limb_integrity = 350
+
+	armor_type = /datum/armor/civpro_vest
+
+/obj/item/clothing/suit/armor/platearmor/deathmatch
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+
+	armor_type = /datum/armor/platearmor_deathmatch
+
+/datum/armor/platearmor_deathmatch
+	melee = 75
+	bullet = 75
+	laser = 70
+	energy = 70
+	bomb = 70
+	fire = 70
+	acid = 70
 	wound = 15

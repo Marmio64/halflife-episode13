@@ -9,7 +9,12 @@ SUBSYSTEM_DEF(sociostability)
 	var/poor_package_received = FALSE
 	var/bad_package_received = FALSE
 
+	/// Has the administrator made an announcement during this cycle? Stops unlimited sociostability farming.
+	var/announcement_made = FALSE
+
 /datum/controller/subsystem/sociostability/fire(resumed = 0)
+	announcement_made = FALSE
+
 	if(sociostability < SOCIOSTABILITY_GREAT)
 		modifystability(SOCIOSTABILITY_PASSIVE_GAIN)
 
@@ -19,21 +24,46 @@ SUBSYSTEM_DEF(sociostability)
 	else
 		SSeconomy.pack_price_modifier = 1
 
-	if(sociostability < SOCIOSTABILITY_OKAY && !okay_package_received)
-		drop_package()
-		okay_package_received = TRUE
-		return
-	if(sociostability < SOCIOSTABILITY_POOR && !poor_package_received)
-		drop_package()
-		poor_package_received = TRUE
-		return
-	if(sociostability < SOCIOSTABILITY_BAD && !bad_package_received)
-		drop_package()
-		bad_package_received = TRUE
-		return
 
 	for(var/mob/living/silicon/ai/A in GLOB.ai_list)	//Alert Dispatch of sociostability level
 		to_chat(A, span_warning("Sociostability matrix levels calculated and compiled. Percentage is at [((sociostability / SOCIOSTABILITY_GREAT)*100)]%"))
+		if(sociostability >= SOCIOSTABILITY_GREAT)
+			to_chat(A, span_warning("Sociostability is at an esteemed level."))
+		else if(sociostability >= SOCIOSTABILITY_GOOD)
+			to_chat(A, span_warning("Sociostability is at an esteemed level."))
+		else if(sociostability >= SOCIOSTABILITY_OKAY)
+			to_chat(A, span_warning("Sociostability is at an acceptable level."))
+		else if(sociostability >= SOCIOSTABILITY_POOR)
+			to_chat(A, span_warning("Sociostability is at a poor level. Correct immediately."))
+		else if(sociostability >= SOCIOSTABILITY_BAD)
+			to_chat(A, span_warning("Sociostability is very low. Correct immediately."))
+		else if(sociostability >= SOCIOSTABILITY_TERRIBLE)
+			to_chat(A, span_warning("Sociostability is at an unacceptable level. Possible judgement waiver imbound."))
+
+	//////packages and alert levels///////
+
+	if(sociostability < SOCIOSTABILITY_OKAY && !okay_package_received)
+		drop_package()
+		okay_package_received = TRUE
+
+	if(sociostability < SOCIOSTABILITY_POOR)
+		if(!poor_package_received)
+			drop_package()
+			poor_package_received = TRUE
+		if(SSsecurity_level.get_current_level_as_number() < SEC_LEVEL_BLUE)
+			priority_announce("Socio-fracture in progress, your district's alert level has been raised.", "Overwatch Alert")
+			SSsecurity_level.set_level(SEC_LEVEL_BLUE)
+			return
+
+	if(sociostability < SOCIOSTABILITY_BAD)
+		if(!bad_package_received)
+			drop_package()
+			bad_package_received = TRUE
+		if(SSsecurity_level.get_current_level_as_number() < SEC_LEVEL_RED)
+			priority_announce("Sociocide in progress, your district's alert level has been raised.", "Overwatch Alert")
+			SSsecurity_level.set_level(SEC_LEVEL_RED)
+			return
+
 
 /datum/controller/subsystem/sociostability/proc/drop_package(amount)
 	var/datum/round_event_control/care_package/PackageControl = new /datum/round_event_control/care_package()

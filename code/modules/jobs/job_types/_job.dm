@@ -135,11 +135,16 @@
 	/// If set, look for a policy with this instead of the job title
 	var/policy_override
 
+	//hl13 edit start
 	/// Some jobs have unique combat mode music, because why not?
 	var/cmode_music = 'hl13/sound/music/combat/abandonedinplace.ogg'
 
 	/// Any bonuses to ration quality this job gets.
 	var/ration_bonus = 0
+
+	/// Should they be reminded about following Union Law?
+	var/union_law_notify = FALSE
+	//hl13 edit end
 
 /datum/job/New()
 	. = ..()
@@ -330,7 +335,10 @@
 		info += span_boldnotice("As this station was initially staffed with a \
 			[CONFIG_GET(flag/jobs_have_minimal_access) ? "full crew, only your job's necessities" : "skeleton crew, additional access may"] \
 			have been added to your ID card.")
-
+	//hl13 edit start
+	if(union_law_notify)
+		info += "<b>In order to give a fun experience, you are beholden to Union Law for delivering punishments <a href='https://halflifeepisode13.miraheze.org/wiki/Official:Union_Law'> unless you can justify breaking it with a good in character reason.</b>"
+	//hl13 edit end
 	return info
 
 /// Returns information pertaining to this job's radio.

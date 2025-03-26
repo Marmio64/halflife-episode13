@@ -18,7 +18,7 @@
 /obj/machinery/turnstile/brig
 	name = "Brig turnstile"
 	//Seccies and brig phys may always pass, either way.
-	req_access = list(ACCESS_SECURITY)
+	req_access = list(ACCESS_BRIG_ENTRANCE)
 	max_integrity = 600 /// Made of damn good steel
 	damage_deflection = 24 /// Blocks most everything except heavy melee weapons like fireaxes/sledgehammers or dedicated destroying melee weapons like large crowbars.
 
@@ -216,5 +216,21 @@
 	req_access = list(ACCESS_ENGINEERING)
 
 /obj/machinery/turnstile/brig/halflife/forcefield/maint/nodirectional
+	desc = "A forcefield which only allows those to pass who have proper access. You may be able to turn it off with the proper access."
+	directional = FALSE
+
+/obj/machinery/turnstile/brig/halflife/forcefield/engineering
+	name = "Combine Engineering Forcefield"
+	req_access = list(ACCESS_TECH_STORAGE)
+
+/obj/machinery/turnstile/brig/halflife/forcefield/engineering/nodirectional
+	desc = "A forcefield which only allows those to pass who have proper access. You may be able to turn it off with the proper access."
+	directional = FALSE
+
+/obj/machinery/turnstile/brig/halflife/forcefield/infestation
+	name = "Combine Infestation Control Forcefield"
+	req_access = list(ACCESS_ATMOSPHERICS)
+
+/obj/machinery/turnstile/brig/halflife/forcefield/infestation/nodirectional
 	desc = "A forcefield which only allows those to pass who have proper access. You may be able to turn it off with the proper access."
 	directional = FALSE

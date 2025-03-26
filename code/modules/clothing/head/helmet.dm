@@ -250,6 +250,7 @@
 /obj/item/clothing/head/helmet/toggleable/riot/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/adjust_fishing_difficulty, 2)
+	AddComponent(/datum/component/clothing_fov_visor, FOV_180_DEGREES) //hl13 edit
 
 /datum/armor/toggleable_riot
 	melee = 35

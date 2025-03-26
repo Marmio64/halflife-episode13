@@ -31,7 +31,7 @@
 
 /obj/item/grenade/halflife/molotov/Initialize()
 	. = ..()
-	det_time = rand(25,60) //2.5-6 seconds
+	det_time = rand(30,60) //3-6 seconds
 
 /obj/item/grenade/halflife/molotov/attackby(obj/item/I, mob/user, params)
 	if(I.get_temperature() && !active)
@@ -76,3 +76,15 @@
 		playsound(src, "shatter", 70, TRUE)
 		new /obj/item/shard(src.loc)
 		qdel(src)
+
+/obj/item/grenade/halflife/cs_gas
+	name = "CS Gas Grenade"
+	desc = "A grenade which unleashes a slow spreading cloud of CS gas upon detonation. Works to nonlethally disable targets who aren't wearing a gas mask, but be careful with how long it lingers indoors."
+	icon = 'hl13/icons/obj/grenade.dmi'
+	icon_state = "csgas"
+
+/obj/item/grenade/halflife/cs_gas/detonate(mob/living/lanced_by)
+	playsound(loc, 'sound/effects/smoke.ogg', 35, TRUE, 4)
+	var/turf/my_turf = get_turf(src)
+	my_turf.VapourTurf(/datum/vapours/cs_gas, 3000)
+	qdel(src)

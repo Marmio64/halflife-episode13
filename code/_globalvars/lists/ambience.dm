@@ -238,6 +238,17 @@ GLOBAL_LIST_INIT(hlforest_ambience,list(
 	'hl13/sound/ambience/forest/squeek1.ogg',
 	'hl13/sound/ambience/forest/buzz1.ogg',))
 
+GLOBAL_LIST_INIT(hldeathmatch_ambience,list(
+	'hl13/sound/ambience/deathmatch/apc_distant1.ogg',
+	'hl13/sound/ambience/deathmatch/apc_distant2.ogg',
+	'hl13/sound/ambience/deathmatch/building_rubble1.ogg',
+	'hl13/sound/ambience/deathmatch/building_rubble2.ogg',
+	'hl13/sound/ambience/deathmatch/gunship_distant1.ogg',
+	'hl13/sound/ambience/deathmatch/heli_distant1.ogg',
+	'hl13/sound/ambience/deathmatch/marching_distant1.ogg',
+	'hl13/sound/ambience/deathmatch/strider_distant_walk1.ogg',
+	'hl13/sound/ambience/deathmatch/strider_distant1.ogg',))
+
 GLOBAL_LIST_INIT(hlantcaves_ambience,list(
 	'hl13/sound/ambience/antcaves/dist_growl3.ogg',
 	'hl13/sound/ambience/antcaves/dist_grub1.ogg',
@@ -278,4 +289,5 @@ GLOBAL_LIST_INIT(ambience_assoc,list(
 	AMBIENCE_HLSEWERS = GLOB.hlsewers_ambience,
 	AMBIENCE_HLANTCAVES = GLOB.hlantcaves_ambience,
 	AMBIENCE_HLFOREST = GLOB.hlforest_ambience,
+	AMBIENCE_HLDEATHMATCH = GLOB.hldeathmatch_ambience,
 ))

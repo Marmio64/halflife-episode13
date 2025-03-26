@@ -213,6 +213,10 @@
 		to_chat(user, span_warning("You don't want to harm other living beings!"))
 		return FALSE
 
+	if((target_mob.body_position == STANDING_UP))
+		if(target_mob.checkmiss(user))
+			return
+
 	if(!force && !HAS_TRAIT(src, TRAIT_CUSTOM_TAP_SOUND))
 		playsound(src, 'sound/items/weapons/tap.ogg', get_clamped_volume(), TRUE, -1)
 	else if(hitsound)

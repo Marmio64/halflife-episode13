@@ -17,22 +17,10 @@
 	name = "Improvised Shield"
 	result = /obj/item/shield/improvised
 	reqs = list(
-		/obj/item/stack/sheet/iron = 10,
+		/obj/item/stack/sheet/scrap_metal = 12, //hl13 edit
 		/obj/item/stack/sticky_tape = 2,
 	)
 	time = 4 SECONDS
-	category = CAT_EQUIPMENT
-
-/datum/crafting_recipe/radiogloves
-	name = "Radio Gloves"
-	result = /obj/item/clothing/gloves/radio
-	time = 1.5 SECONDS
-	reqs = list(
-		/obj/item/clothing/gloves/color/black = 1,
-		/obj/item/stack/cable_coil = 2,
-		/obj/item/radio = 1,
-	)
-	tool_behaviors = list(TOOL_WIRECUTTER)
 	category = CAT_EQUIPMENT
 
 /datum/crafting_recipe/radiogloves/New()
@@ -51,15 +39,11 @@
 	category = CAT_EQUIPMENT
 
 /datum/crafting_recipe/secured_freezer_cabinet
-	name = "Secure Freezer Cabinet"
-	result = /obj/structure/closet/secure_closet/freezer/empty
+	name = "Freezer"
+	result = /obj/structure/closet/secure_closet/freezer/halflife
 	reqs = list(
 		/obj/item/stack/sheet/iron = 5,
 		/obj/item/assembly/igniter/condenser = 1,
-		/obj/item/electronics/airlock = 1,
-	)
-	parts = list(
-		/obj/item/electronics/airlock = 1,
 	)
 	time = 5 SECONDS
 	category = CAT_EQUIPMENT
@@ -111,17 +95,6 @@
 		/obj/item/stack/sheet/cardboard = 1,
 		/obj/item/stack/rods = 1,
 	)
-	category = CAT_EQUIPMENT
-
-/datum/crafting_recipe/material_sniffer
-	name = "Material Sniffer"
-	time = 3 SECONDS
-	reqs = list(
-		/obj/item/analyzer = 1,
-		/obj/item/stack/cable_coil = 5,
-	)
-	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WIRECUTTER)
-	result = /obj/item/pinpointer/material_sniffer
 	category = CAT_EQUIPMENT
 
 /datum/crafting_recipe/pressureplate

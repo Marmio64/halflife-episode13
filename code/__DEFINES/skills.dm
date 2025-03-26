@@ -67,7 +67,6 @@
 //Less stamina drain when running
 #define TRAIT_ATHLETIC	"ATHLETIC"
 
-#define TRAIT_NOPAIN "nopain"
 #define TRAIT_LESSPAIN "lesspain"
 #define TRAIT_MASOCHIST "masochist"
 

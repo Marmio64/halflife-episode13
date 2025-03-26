@@ -174,13 +174,13 @@
 	if((obj_flags & EMAGGED) && emag_doses_left < 0)
 		owner.reagents.add_reagent(/datum/reagent/medicine/morphine, 3)
 		owner.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 3)
-		owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 5)
+		owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 6)
 		SOUND_BEEP('hl13/sound/voice/hev/beep_3.ogg')
 		add_queue('hl13/sound/voice/hev/morphine.ogg',1 SECONDS)
 	else
 		owner.reagents.add_reagent(/datum/reagent/medicine/stimulants, 5)
 		owner.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 3)
-		owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 5)
+		owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 6)
 		SOUND_BEEP('hl13/sound/voice/hev/beep_3.ogg')
 		add_queue('hl13/sound/voice/hev/stimulants.ogg',1 SECONDS)
 		emag_doses_left--
@@ -225,6 +225,7 @@
 /obj/item/clothing/suit/armor/hev/deathmatch
 	desc = "An old suit, fully plated and insulated and topped with a tasteful orange coating of paint. This one somehow protects your head too."
 	body_parts_covered = HEAD|CHEST|GROIN|ARMS|LEGS
+	slowdown = -0.25
 
 #undef MORPHINE_INJECTION_DELAY
 #undef SOUND_BEEP

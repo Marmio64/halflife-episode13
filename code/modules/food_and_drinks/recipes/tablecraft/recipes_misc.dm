@@ -12,16 +12,6 @@
 	result = /obj/item/food/candiedapple
 	category = CAT_MISCFOOD
 
-/datum/crafting_recipe/food/spiderlollipop
-	name = "Spider Lollipop"
-	reqs = list(/obj/item/stack/rods = 1,
-		/datum/reagent/consumable/sugar = 5,
-		/datum/reagent/water = 5,
-		/obj/item/food/spiderling = 1
-	)
-	result = /obj/item/food/spiderlollipop
-	category = CAT_MISCFOOD
-
 /datum/crafting_recipe/food/chococoin
 	name = "Choco coin"
 	reqs = list(
@@ -86,17 +76,6 @@
 	result = /obj/item/food/eggplantparm
 	category = CAT_MISCFOOD
 
-/datum/crafting_recipe/food/melonkeg
-	name ="Melon keg"
-	reqs = list(
-		/datum/reagent/consumable/ethanol/vodka = 25,
-		/obj/item/food/grown/holymelon = 1,
-		/obj/item/reagent_containers/cup/glass/bottle/vodka = 1
-	)
-	parts = list(/obj/item/reagent_containers/cup/glass/bottle/vodka = 1)
-	result = /obj/item/food/melonkeg
-	category = CAT_MISCFOOD
-
 /datum/crafting_recipe/food/honeybar
 	name = "Honey nut bar"
 	reqs = list(
@@ -104,19 +83,6 @@
 		/datum/reagent/consumable/honey = 5
 	)
 	result = /obj/item/food/honeybar
-	category = CAT_MISCFOOD
-
-/datum/crafting_recipe/food/powercrepe
-	name = "Powercrepe"
-	time = 40
-	reqs = list(
-		/obj/item/food/flatdough = 1,
-		/datum/reagent/consumable/milk = 1,
-		/datum/reagent/consumable/cherryjelly = 5,
-		/obj/item/stock_parts/power_store/cell/super =1,
-		/obj/item/melee/sabre = 1
-	)
-	result = /obj/item/food/powercrepe
 	category = CAT_MISCFOOD
 
 /datum/crafting_recipe/food/branrequests
@@ -151,19 +117,6 @@
 	result = /obj/item/food/salad/risotto
 	category = CAT_MISCFOOD
 
-/datum/crafting_recipe/food/butterbear //ITS ALIVEEEEEE!
-	name = "Living bear/butter hybrid"
-	reqs = list(
-		/obj/item/organ/brain = 1,
-		/obj/item/organ/heart = 1,
-		/obj/item/food/butter = 4,
-		/obj/item/food/meat/slab = 5,
-		/datum/reagent/blood = 50,
-		/datum/reagent/teslium = 1 //To shock the whole thing into life
-	)
-	result = /mob/living/basic/bear/butter
-	category = CAT_MISCFOOD
-
 /datum/crafting_recipe/food/crab_rangoon
 	name = "Crab Rangoon"
 	reqs = list(
@@ -174,17 +127,6 @@
 	)
 	result = /obj/item/food/crab_rangoon
 	category = CAT_SEAFOOD
-
-/datum/crafting_recipe/food/royalcheese
-	name = "Royal Cheese"
-	reqs = list(
-		/obj/item/food/cheese/wheel = 1,
-		/obj/item/clothing/head/costume/crown = 1,
-		/datum/reagent/medicine/strange_reagent = 5,
-		/datum/reagent/toxin/mutagen = 5
-	)
-	result = /obj/item/food/cheese/royal
-	category = CAT_MISCFOOD
 
 /datum/crafting_recipe/food/ant_candy
 	name = "Ant Candy"
@@ -319,26 +261,6 @@
 		/datum/reagent/consumable/salt = 3,
 	)
 	result = /obj/item/food/popcorn/salty
-	category = CAT_MISCFOOD
-
-/datum/crafting_recipe/food/spacylibertyduff
-	name = "Spacy liberty duff"
-	reqs = list(
-		/datum/reagent/consumable/ethanol/vodka = 5,
-		/obj/item/reagent_containers/cup/bowl = 1,
-		/obj/item/food/grown/mushroom/libertycap = 3
-	)
-	result = /obj/item/food/bowled/spacylibertyduff
-	category = CAT_MISCFOOD
-
-/datum/crafting_recipe/food/amanitajelly
-	name = "Amanita jelly"
-	reqs = list(
-		/datum/reagent/consumable/ethanol/vodka = 5,
-		/obj/item/reagent_containers/cup/bowl = 1,
-		/obj/item/food/grown/mushroom/amanita = 3
-	)
-	result = /obj/item/food/bowled/amanitajelly
 	category = CAT_MISCFOOD
 
 /datum/crafting_recipe/food/buttered_baked_potato

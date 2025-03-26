@@ -74,7 +74,6 @@
 					/obj/item/storage/box/halflife/ration)
 	crate_name = "ration crate"
 
-
 /datum/supply_pack/organic/loyaltyrations
 	name = "Loyalty-grade Ration Crate"
 	desc = "A crate of five loyalty-grade ration packs, made for easy distribution."
@@ -96,6 +95,17 @@
 					/obj/item/storage/box/halflife/badration,
 					/obj/item/storage/box/halflife/badration)
 	crate_name = "low-grade ration crate"
+
+/datum/supply_pack/organic/nutrimentpierogis
+	name = "Nutriment Pierogis Crate"
+	desc = "A crate of five nutriment pierogis. These are handcrafted (by anticitizen forced labor) meals guaranteed to satiate and provoke sensations of taste, and a citizen will kill to get their hands on these."
+	cost = CARGO_CRATE_VALUE * 10
+	contains = list(/obj/item/food/pierogi_ration,
+					/obj/item/food/pierogi_ration,
+					/obj/item/food/pierogi_ration,
+					/obj/item/food/pierogi_ration,
+					/obj/item/food/pierogi_ration)
+	crate_name = "nutriment pierogis crate"
 
 /datum/supply_pack/organic/alcohol
 	name = "Approved Ethanol Crate"
@@ -119,9 +129,19 @@
 				/obj/item/reagent_containers/cup/glass/bottle/vodka)
 	crate_name = "exotic alcohol crate"
 
+/datum/supply_pack/organic/cigs
+	name = "Cigarette Packs Crate"
+	desc = "A crate of four packs of old world cigarettes. A precious commodity nowadays, good for taking advantage of citizens."
+	cost = CARGO_CRATE_VALUE * 3
+	contains = list(/obj/item/storage/fancy/cigarettes/halflife,
+					/obj/item/storage/fancy/cigarettes/halflife,
+					/obj/item/storage/fancy/cigarettes/halflife,
+					/obj/item/storage/fancy/cigarettes/halflife)
+	crate_name = "cigarette packs crate"
+
 /datum/supply_pack/organic/stalker
 	name = "Stalker Crate"
-	desc = "A crate with one, empty minded stalker along with an earpiece, food, and water for it."
+	desc = "A crate with one, empty minded stalker along with an earpiece, food, and water for it. Good for giving Dispatch extra hands to work with."
 	cost = CARGO_CRATE_VALUE * 6
 	contains = list(/mob/living/carbon/human/species/stalker,
 				/obj/item/radio/headset/earpiece,

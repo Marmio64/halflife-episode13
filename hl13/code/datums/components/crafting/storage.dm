@@ -8,7 +8,7 @@
 
 /datum/crafting_recipe/satchel
 	name = "Satchel"
-	result = /obj/item/storage/backpack/satchel
+	result = /obj/item/storage/backpack/halflife/satchel
 	time = 4 SECONDS
 	reqs = list(/obj/item/stack/sheet/cloth = 6)
 	category = CAT_CONTAINERS

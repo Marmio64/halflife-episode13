@@ -768,7 +768,7 @@
 //Misc Dishes
 /obj/item/food/sauerkraut
 	name = "sauerkraut"
-	desc = "Pickled cabbage, as made famous by Germans, and which has become common in lizard cooking, where it is known as Zauerkrat."
+	desc = "Pickled cabbage, as made famous by Germans."
 	icon = 'icons/obj/food/lizard.dmi'
 	icon_state = "sauerkraut"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 4)

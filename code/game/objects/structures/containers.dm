@@ -49,7 +49,7 @@
 
 /obj/structure/shipping_container/kahraman
 	name = "\improper Kahraman Heavy Industry shipping container"
-	desc = "A standard-measure shipping container for bulk transport of goods. This one is from Kahraman, and is reinforced for carrying mining equipment."
+	desc = "A standard-measure shipping container for bulk transport of goods. It has long since been pillaged."
 	icon_state = "kahraman"
 
 /obj/structure/shipping_container/kahraman/alt
@@ -57,7 +57,7 @@
 
 /obj/structure/shipping_container/kosmologistika
 	name = "\improper Kosmologistika shipping container"
-	desc = "A standard-measure shipping container for bulk transport of goods. This one is from Kosmologistika, the state logistics company owned and operated by the SSC."
+	desc = "A standard-measure shipping container for bulk transport of goods. It has long since been pillaged."
 	icon_state = "kosmologistika"
 
 /obj/structure/shipping_container/magenta
@@ -83,8 +83,8 @@
 	icon_state = "ntfid_defaced"
 
 /obj/structure/shipping_container/nthi
-	name = "\improper Nanotrasen Heavy Industries shipping container"
-	desc = "A standard-measure shipping container for bulk transport of common metals and minerals. This one is from NTHI: Nanotrasen's mining and refining subdivision."
+	name = "\improper NilaTech Heavy Industries shipping container"
+	desc = "A standard-measure shipping container for bulk transport of common metals and minerals. It has long since been pillaged."
 	icon_state = "nthi"
 
 /obj/structure/shipping_container/nthi/minor
@@ -155,7 +155,7 @@
 
 /obj/structure/shipping_container/gorlex
 	name = "\improper Gorlex Securities shipping container"
-	desc = "A standard-measure shipping container for bulk transport of goods. This one is from Gorlex Securities, and is probably carrying their primary export: war crimes."
+	desc = "A standard-measure shipping container for bulk transport of goods. It has long since been pillaged."
 	icon_state = "gorlex"
 
 /obj/structure/shipping_container/gorlex/red

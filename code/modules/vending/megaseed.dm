@@ -98,8 +98,8 @@
 	)
 
 	refill_canister = /obj/item/vending_refill/hydroseeds
-	default_price = PAYCHECK_LOWER
-	extra_price = PAYCHECK_CREW
+	default_price = PAYCHECK_CREW
+	extra_price = PAYCHECK_HIGH
 	payment_department = ACCOUNT_SRV
 
 /obj/item/vending_refill/hydroseeds

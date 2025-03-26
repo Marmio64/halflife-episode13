@@ -26,7 +26,7 @@
 	product_slogans = "Stimulate the economy!;Sedate resistive thoughts!;Purchase neat belongings!;Buy, Buy, Buy!"
 	vend_reply = "Thank you for using Gift Vendor!"
 	products = list(/obj/item/clothing/under/citizen = 3,
-					/obj/item/clothing/suit/bluejacket = 3,
+					/obj/item/clothing/suit/bluejacket = 5,
 					/obj/item/camera_film = 10,
 					/obj/item/camera = 3,
 					/obj/item/hourglass = 2,
@@ -36,7 +36,7 @@
 					/obj/item/flashlight = 3,
 					/obj/item/clothing/head/beanie/black = 3,
 					/obj/item/clothing/head/flatcap = 3,
-					/obj/item/lighter/greyscale = 3,
+					/obj/item/lighter/greyscale = 6,
 					/obj/item/customlock = 8,
 					/obj/item/customblank = 12,
 					/obj/item/storage/halflife/keyring = 4,
@@ -44,15 +44,17 @@
 					/obj/item/radio/off/halflife = 3,
 					/obj/item/reagent_containers/cup/bottle/welding_fuel = 3,
 					/obj/item/food/rationpack/box = 5,
+					/obj/item/food/flavorbar = 5,
 					/obj/item/reagent_containers/pill/patch/medkit/vial = 3,
 					/obj/item/stack/sticky_tape = 4,
 					/obj/item/storage/toolbox/fishing = 2,
 					/obj/item/storage/box/fishing_hooks = 2,
 					/obj/item/storage/box/fishing_lines = 2,
 					/obj/item/storage/box/fishing_lures = 2,
+					/obj/item/stack/sheet/cloth = 5,
 					/obj/item/tape = 5, //tape recorder stuff
 					/obj/item/taperecorder = 2,
-					/obj/item/storage/fancy/cigarettes/halflife = 5,
+					/obj/item/storage/fancy/cigarettes/halflife = 8,
 					/obj/item/clothing/gloves/fingerless = 3)
 
 	contraband = list(/obj/item/lockpick = 1,
@@ -103,14 +105,14 @@
 	density = FALSE
 	products = list(
 		/obj/item/reagent_containers/syringe = 3,
-		/obj/item/reagent_containers/pill/patch/medkit/vial = 5,
-		/obj/item/reagent_containers/pill/multiver = 2,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 6,
+		/obj/item/reagent_containers/pill/multiver = 3,
 		/obj/item/reagent_containers/pill/potassiodide = 3,
-		/obj/item/reagent_containers/pill/iron = 3,
+		/obj/item/reagent_containers/pill/iron = 4,
 		/obj/item/reagent_containers/medigel/sterilizine = 1,
 		/obj/item/healthanalyzer/simple = 2,
 		/obj/item/stack/medical/bone_gel = 2,
-		/obj/item/reagent_containers/hypospray/medipen = 2,
+		/obj/item/reagent_containers/hypospray/medipen = 3,
 	)
 	contraband = list(
 		/obj/item/reagent_containers/pill/tox = 2,
@@ -134,6 +136,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	name = "\improper Metropolice Supply Vendor"
 	desc = "An equipment vendor for civil protection to spend their hard earned credits on overpriced items."
 	product_ads = "Improve your ability to patrol.;Purchase additional supplies.;Help insure your family cohesion"
+	icon = 'hl13/icons/obj/machines/vending.dmi'
 	icon_state = "sec"
 	icon_deny = "sec-deny"
 	panel_type = "panel6"
@@ -144,9 +147,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/gps = 4,
 		/obj/item/flashlight/flare = 6,
 		/obj/item/restraints/handcuffs/cable/zipties = 8,
-		/obj/item/ammo_box/magazine/usp9mm = 6,
+		/obj/item/ammo_box/magazine/usp9mm/rubber = 8,
+		/obj/item/ammo_box/magazine/usp9mm = 4,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 4,
 		/obj/item/reagent_containers/spray/pepper = 6,
+		/obj/item/radio/civpro = 8,
 		/obj/item/stack/credit_voucher = 10,
 	)
 	contraband = list(
@@ -164,3 +169,36 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 /obj/item/vending_refill/civpro
 	machine_name = "Metropolice Supply Vendor"
 	icon_state = "refill_sec"
+
+/obj/machinery/vending/armory
+	name = "\improper Armory Vendor"
+	desc = "A machine which holds lethal equipment in an easy to sort manner. Requisitioning from here is a poor mark on the sociostability of your district, and will actively lower it."
+	product_ads = "Acquire emergency supplies.;Restock and resupply.;Help insure your family cohesion."
+	icon = 'hl13/icons/obj/machines/vending.dmi'
+	icon_state = "sec"
+	icon_deny = "sec-deny"
+	panel_type = "panel6"
+	light_mask = "sec-light-mask"
+	products = list(
+		/obj/item/gun/ballistic/automatic/mp7 = 1,
+		/obj/item/ammo_box/magazine/mp7 = 2,
+		/obj/item/gun/ballistic/shotgun/spas12 = 1,
+		/obj/item/storage/box/lethalshot/halflife = 2,
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/grenade/spawnergrenade/manhacks = 2,
+		/obj/item/gun/ballistic/automatic/pistol/usp = 1,
+		/obj/item/ammo_box/magazine/usp9mm = 3,
+		/obj/item/ammo_box/colta357 = 1,
+	)
+	refill_canister = /obj/item/vending_refill/civpro
+	default_price = PAYCHECK_ZERO
+	extra_price = PAYCHECK_ZERO
+	all_products_free = TRUE
+	scan_id = FALSE
+
+/obj/item/vending_refill/armory
+	machine_name = "Armory Vendor"
+	icon_state = "refill_sec"
+
+/obj/machinery/vending/armory/on_dispense(obj/item/vended_item)
+	SSsociostability.modifystability(-20) //All the equipment in this vendor is lethal. Not having to resort to lethals is a mark of good sociostability. In total if you empty the machine, you lose 300 sociostability aka 30%

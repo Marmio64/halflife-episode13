@@ -2,7 +2,7 @@
 	title = JOB_PRISONER
 	description = "Survive in the outlands, find a way into the city for supplies, help or rob citizens for your own gain."
 	department_head = list("Nobody")
-	total_positions = 4
+	total_positions = 6
 	spawn_positions = 4
 	supervisors = "nobody"
 	exp_granted_type = EXP_TYPE_CREW
@@ -39,7 +39,7 @@
 	name = "Outlands Refugee with a random item"
 	jobtype = /datum/job/prisoner
 
-	id = null
+	id_trim = /datum/id_trim/job/prisoner
 	uniform = /obj/item/clothing/under/citizen/refugee
 
 	r_pocket = /obj/item/flashlight
@@ -47,6 +47,7 @@
 		/obj/item/storage/belt/pouch,
 		/obj/item/reagent_containers/pill/patch/medkit,
 		/obj/item/storage/box/halflife/ration,
+		/obj/item/knife/kitchen,
 		/obj/item/clothing/suit/armor/armored
 		) //Refugees get a random item from this list
 

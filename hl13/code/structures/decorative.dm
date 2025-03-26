@@ -9,6 +9,23 @@
 	desc = "Some scattered paper pages. They look mostly ruined."
 	icon_state = "scattered_papers"
 
+/obj/structure/halflife/trash/papers/attack_hand_secondary(mob/living/user, list/modifiers)
+	. = ..()
+	if(!user.can_perform_action(src, NEED_DEXTERITY))
+		return
+	user.visible_message(span_notice("[user] begins to sift through the [src] for usable pieces."), \
+		span_notice("You begin to dig through the [src] for some paper."))
+	if(do_after(user, 5 SECONDS, src))
+		if(prob(60))
+			user.visible_message(span_notice("[user] gathers up the [src]."), \
+				span_notice("You gather up all the [src]."))
+			new /obj/item/paper(loc, rand(1,2))
+			qdel(src)
+		else
+			user.visible_message(span_notice("[user] messes up gathering the [src]. It melts before their very eyes into nothingness."), \
+				span_notice("You don't find any usable paper..."))
+			qdel(src)
+
 /obj/structure/halflife/trash/papers/one
 	name = "scattered papers"
 	desc = "Some scattered papers. All sorts of stuff, from pages to envelopes."
@@ -61,6 +78,23 @@
 	desc = "A bunch of old bricks."
 	icon_state = "brickrubble"
 
+/obj/structure/halflife/trash/bricks/attack_hand_secondary(mob/living/user, list/modifiers)
+	. = ..()
+	if(!user.can_perform_action(src, NEED_DEXTERITY))
+		return
+	user.visible_message(span_notice("[user] begins to sift through the [src] for usable pieces."), \
+		span_notice("You begin to dig through the [src] for some bricks."))
+	if(do_after(user, 5 SECONDS, src))
+		if(prob(90)) // It's... bricks already already.
+			user.visible_message(span_notice("[user] gathers up the [src]."), \
+				span_notice("You gather up all the [src]."))
+			new /obj/item/stack/sheet/halflife/brick(loc, rand(1,2))
+			qdel(src)
+		else
+			user.visible_message(span_notice("[user] somehow messes up gathering the [src]. It melts before their very eyes into nothingness."), \
+				span_notice("You somehow manage to mess up gathering the perfectly fine bricks. It melts away before your very eyes..."))
+			qdel(src)
+
 /obj/structure/halflife/trash/wood
 	name = "scrap wood"
 	desc = "A bunch of scrap wood. You could probably get a few loose pieces."
@@ -104,7 +138,7 @@
 	user.visible_message(span_notice("[user] begins to sift through the [src] for anything useful."), \
 		span_notice("You begin to dig through the [src] for something interesting."))
 	if(do_after(user, 7 SECONDS, src))
-		if(prob(35))
+		if(prob(40))
 			user.visible_message(span_notice("[user] finds something inside the [src]."), \
 				span_notice("You find something interesting inside the [src]."))
 			new /obj/effect/spawner/random/halflife/loot(loc, rand(1,2))
@@ -141,7 +175,7 @@
 		if(prob(35))
 			user.visible_message(span_notice("[user] gathers up materials from the [src]."), \
 				span_notice("You gather up some materials from [src]."))
-			new /obj/item/stack/sheet/iron(loc, 1)
+			new /obj/item/stack/sheet/scrap_metal(loc, 1)
 			qdel(src)
 		else
 			user.visible_message(span_notice("[user] fails to gather anything useful from the [src]."), \
@@ -191,7 +225,7 @@
 		if(prob(35))
 			user.visible_message(span_notice("[user] gathers up materials from [src]."), \
 				span_notice("You gather up some materials from [src]."))
-			new /obj/item/stack/sheet/iron(loc, 1)
+			new /obj/item/stack/sheet/scrap_metal(loc, 1)
 			qdel(src)
 		else
 			user.visible_message(span_notice("[user] fails to gather anything useful from the [src]."), \
@@ -271,9 +305,12 @@
 		span_notice("You begin to search through [src] for some materials."))
 	if(do_after(user, 5 SECONDS, src))
 		if(prob(35))
-			user.visible_message(span_notice("[user] gathers up materials from [src]."), \
-				span_notice("You gather up some materials from [src]."))
-			new /obj/item/stack/sheet/glass(loc, rand(1,4))
+			user.visible_message(span_notice("[user] finds an intact bottle from [src]."), \
+				span_notice("You find an intact bottle from [src]."))
+			if(prob(90))
+				new /obj/item/reagent_containers/cup/glass/bottle/vodka/empty(loc, 1)
+			else
+				new /obj/item/reagent_containers/cup/glass/bottle/vodka(loc, 1) //a small chance to get a full bottle!
 			qdel(src)
 		else
 			user.visible_message(span_notice("[user] fails to gather anything useful from [src]."), \
@@ -295,7 +332,7 @@
 
 /obj/structure/halflife/barrel/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))
-		new /obj/item/stack/sheet/iron(loc, 3)
+		new /obj/item/stack/sheet/scrap_metal(loc, 3)
 	qdel(src)
 
 /obj/structure/halflife/barrel/Initialize()

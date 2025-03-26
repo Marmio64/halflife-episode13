@@ -4,6 +4,8 @@
 	worn_icon = 'hl13/icons/mob/clothing/feet.dmi'
 	icon = 'hl13/icons/obj/clothing/shoes.dmi'
 	var/list/squeak_sound = list('hl13/sound/movement/civilprotection/gear1.ogg'=1,'hl13/sound/movement/civilprotection/gear2.ogg'=1,'hl13/sound/movement/civilprotection/gear3.ogg'=1,'hl13/sound/movement/civilprotection/gear4.ogg'=1,'hl13/sound/movement/civilprotection/gear5.ogg'=1,'hl13/sound/movement/civilprotection/gear6.ogg'=1)
+	armor_type = /datum/armor/combine_gloveshoes
+	body_parts_covered = LEGS|FEET
 
 /obj/item/clothing/shoes/jackboots/civilprotection/Initialize(mapload)
 	. = ..()

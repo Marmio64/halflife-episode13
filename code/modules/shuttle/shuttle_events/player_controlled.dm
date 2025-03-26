@@ -34,7 +34,7 @@
 	spawning_list = list(/mob/living/carbon/alien/adult/royal/queen = 1, /obj/vehicle/sealed/mecha/ripley = 1)
 	spawning_flags = SHUTTLE_EVENT_HIT_SHUTTLE
 
-	event_probability = 0.2
+	event_probability = 0 //hl13 edit
 	spawn_probability_per_process = 10
 	activation_fraction = 0.5
 
@@ -51,7 +51,7 @@
 	spawning_list = list(/mob/living/basic/carp = 10, /mob/living/basic/carp/mega = 2, /mob/living/basic/carp/magic = 2, /mob/living/basic/carp/magic/chaos = 1)
 	spawning_flags = SHUTTLE_EVENT_HIT_SHUTTLE
 
-	event_probability = 1
+	event_probability = 0 //hl13 edit
 	spawn_probability_per_process = 10
 	activation_fraction = 0.4
 

@@ -74,9 +74,9 @@
 
 /obj/item/food/sosjerky/healthy
 	name = "homemade beef jerky"
-	desc = "Homemade beef jerky made from the finest space cows."
+	desc = "Homemade beef jerky made from most likely the finest headcrabs."
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment/protein = 6,
+		/datum/reagent/consumable/nutriment/protein = 5, //hl13 edit, slight decrease in protein
 		/datum/reagent/consumable/nutriment/vitamin = 1,
 	)
 	junkiness = 0

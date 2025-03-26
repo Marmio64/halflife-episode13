@@ -61,6 +61,7 @@
 #define AMBIENCE_HLSEWERS "hlsewers"
 #define AMBIENCE_HLANTCAVES "hlantcaves"
 #define AMBIENCE_HLFOREST "hlforest"
+#define AMBIENCE_HLDEATHMATCH "hldeathmatch"
 #define AMBIENCE_HLMUSIC "hlmusic"
 
 //default byond sound environments

@@ -47,17 +47,11 @@
 /datum/crafting_recipe/food/reaction/soup/nettle
 	reaction = /datum/chemical_reaction/food/soup/nettlesoup
 
-/datum/crafting_recipe/food/reaction/soup/wingfangchu
-	reaction = /datum/chemical_reaction/food/soup/wingfangchu
-
 /datum/crafting_recipe/food/reaction/soup/hotchili
 	reaction = /datum/chemical_reaction/food/soup/hotchili
 
 /datum/crafting_recipe/food/reaction/soup/coldchili
 	reaction = /datum/chemical_reaction/food/soup/coldchili
-
-/datum/crafting_recipe/food/reaction/soup/clownchili
-	reaction = /datum/chemical_reaction/food/soup/clownchili
 
 /datum/crafting_recipe/food/reaction/soup/tomatosoup
 	reaction = /datum/chemical_reaction/food/soup/tomatosoup

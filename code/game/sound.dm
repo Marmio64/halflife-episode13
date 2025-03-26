@@ -202,6 +202,16 @@
 	if((prefs && volume_modifier) && !CONFIG_GET(flag/disallow_title_music))
 		SEND_SOUND(src, sound(SSticker.login_music, repeat = 0, wait = 0, volume = volume_modifier, channel = CHANNEL_LOBBYMUSIC)) // MAD JAMS
 
+//hl13 edit begin
+/client/proc/playendroundmusic(vol = 25)
+	set waitfor = FALSE
+	UNTIL(SSticker.login_music) //wait for SSticker init to set the login music
+
+	var/volume_modifier = prefs.read_preference(/datum/preference/numeric/sound_lobby_volume)
+	if((prefs && volume_modifier) && !CONFIG_GET(flag/disallow_title_music))
+		SEND_SOUND(src, sound('hl13/sound/music/endingtriumph.ogg', repeat = 0, wait = 0, volume = vol*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC)) // MAD JAMS HL13 EDIT ROUNDEND MUSIC CHANGE
+//hl13 edit end
+
 ///get a random frequency.
 /proc/get_rand_frequency()
 	return rand(32000, 55000)

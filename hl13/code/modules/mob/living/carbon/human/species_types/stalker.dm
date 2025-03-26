@@ -7,7 +7,7 @@
 	no_equip_flags = ITEM_SLOT_MASK | ITEM_SLOT_OCLOTHING | ITEM_SLOT_GLOVES | ITEM_SLOT_FEET | ITEM_SLOT_ICLOTHING | ITEM_SLOT_SUITSTORE | ITEM_SLOT_HEAD
 	inherent_traits = list(TRAIT_NOGUNS, TRAIT_RESISTCOLD, TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,
 							TRAIT_NOBREATH, TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE,
-							TRAIT_NOCRITDAMAGE, TRAIT_GENELESS, TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_NOPAIN, TRAIT_NO_UNDERWEAR, TRAIT_GRABWEAKNESS, TRAIT_AGEUSIA)
+							TRAIT_NOCRITDAMAGE, TRAIT_GENELESS, TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_ANALGESIA, TRAIT_NO_UNDERWEAR, TRAIT_GRABWEAKNESS, TRAIT_AGEUSIA)
 	mutanteyes = /obj/item/organ/eyes/robotic/glow
 	mutantappendix = null
 	mutantbrain = /obj/item/organ/brain/cybernetic/ai
@@ -45,7 +45,7 @@
 
 	C.mob_mood?.mood_modifier -= 1 //don't care, never did
 
-	C.physiology.hunger_mod *= 0.75 //low body mass, less to feed
+	C.physiology.hunger_mod *= 0.5 //low body mass, less to feed
 
 	C.AddComponent( \
 			/datum/component/simple_bodycam, \
@@ -57,7 +57,7 @@
 	..()
 	UnregisterSignal(C, COMSIG_MOB_SAY)
 	C.mob_mood?.mood_modifier += 1
-	C.physiology.hunger_mod /= 0.75
+	C.physiology.hunger_mod /= 0.5
 
 /datum/species/stalker/proc/handle_speech(datum/source, list/speech_args)
 	playsound(source, 'hl13/sound/voice/stalker/stalker_talk.ogg', 50, 1, 1)
