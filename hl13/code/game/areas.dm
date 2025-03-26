@@ -270,6 +270,8 @@
 	ambient_buzz = 'hl13/sound/ambience/bunker1.ogg'
 	ambient_buzz_vol = 80
 
+	mood_message = "<span class='warning'>This place is unnerving...</span>\n"
+
 	first_time_text = null
 
 /area/halflife/indoors/sewer/cave
@@ -279,12 +281,16 @@
 
 	first_time_text = "The Mines"
 
+	mood_message = "<span class='warning'>This place is unnerving...</span>\n"
+
 /area/halflife/indoors/sewer/outlandscave
 	name = "\improper Outlands Caves"
 	ambience_index = AMBIENCE_HLANTCAVES
 	max_ambience_cooldown = 25 SECONDS
 	min_ambience_cooldown = 10 SECONDS
 	ambient_buzz = 'hl13/sound/ambience/antcaves/cave_howl_loop1.ogg'
+
+	mood_message = "<span class='warning'>I can hear the bugs all around me...</span>\n"
 
 	first_time_text = "The Antlion Caves"
 
@@ -294,6 +300,8 @@
 	max_ambience_cooldown = 25 SECONDS
 	min_ambience_cooldown = 10 SECONDS
 	ambient_buzz = 'hl13/sound/ambience/antcaves/cave_howl_loop1.ogg'
+
+	mood_message = "<span class='warning'>I can hear the bugs all around me...</span>\n"
 
 /area/centcom/halflife
 	name = "Overwatch Rail Interchange"
