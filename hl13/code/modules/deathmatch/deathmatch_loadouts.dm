@@ -114,8 +114,8 @@
 	desc = "You're similarly equipped compared to an Overwatch Soldier, but forgo much of your armor in exchange for speed and melee resistance!"
 
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
-	belt = /obj/item/storage/belt/civilprotection/overwatch/mp7
-	l_hand = /obj/item/gun/ballistic/automatic/mp7
+	belt = /obj/item/storage/belt/civilprotection/overwatch/pulsesmg
+	l_hand = /obj/item/gun/ballistic/automatic/pulsesmg/standardpin
 
 	back = /obj/item/tank/internals/oxygen/grunt
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt

@@ -38,6 +38,15 @@
 	max_ammo = 30
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
 
+/obj/item/ammo_box/magazine/pulsesmg
+	name = "pulse smg magazine"
+	desc = "A 30-round magazine for the pulse smg that contains pulse rounds."
+	icon_state = "pulsesmg"
+	ammo_type = /obj/item/ammo_casing/caseless/pulse/smg
+	caliber = CALIBER_PULSROUND
+	max_ammo = 30
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
+
 /obj/item/ammo_box/magazine/combine_sniper
 	name = "Sniper magazine (pulse)"
 	desc = "A 10-round magazine for the combine sniper rifle that contains pulse rounds."

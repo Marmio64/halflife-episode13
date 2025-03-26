@@ -320,3 +320,41 @@
 /obj/item/gun/ballistic/automatic/mp7/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
+
+/obj/item/gun/ballistic/automatic/pulsesmg
+	name = "\improper pulse SMG"
+	desc = "A hybrid between the MP7 and AR2, the pulse smg has biolocking features and higher power rounds than the standard MP7, but is not yet as powerful as the AR2."
+	icon = 'hl13/icons/obj/guns/projectile.dmi'
+	icon_state = "pulsesmg"
+	fire_sound = 'hl13/sound/weapons/pulsesmgfire.ogg'
+	vary_fire_sound = FALSE
+	accepted_magazine_type = /obj/item/ammo_box/magazine/pulsesmg
+	spread = 11
+	recoil = 0.4
+	fire_delay = 2
+	burst_size = 1
+	mag_display = FALSE
+	weapon_weight = WEAPON_MEDIUM
+	pin = /obj/item/firing_pin/implant/mindshield
+
+	load_sound = 'hl13/sound/weapons/insert_alyx.ogg'
+	load_empty_sound = 'hl13/sound/weapons/insert_alyx.ogg'
+
+	eject_sound = 'hl13/sound/weapons/eject_alyx.ogg'
+	eject_empty_sound = 'hl13/sound/weapons/eject_alyx.ogg'
+
+	dry_fire_sound = 'hl13/sound/weapons/empty_alyx.ogg'
+
+	rack_sound = 'hl13/sound/weapons/slidelock_alyx.ogg'
+	lock_back_sound = 'hl13/sound/weapons/slidelock_alyx.ogg'
+	bolt_drop_sound = 'hl13/sound/weapons/slidelock_alyx.ogg'
+
+/obj/item/gun/ballistic/automatic/pulsesmg/nopin
+	pin = null
+
+/obj/item/gun/ballistic/automatic/pulsesmg/standardpin
+	pin = /obj/item/firing_pin
+
+/obj/item/gun/ballistic/automatic/pulsesmg/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)

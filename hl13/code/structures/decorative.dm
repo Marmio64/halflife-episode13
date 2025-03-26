@@ -1,3 +1,9 @@
+/obj/structure/halflife/cone
+	name = "Traffic Cone"
+	desc = "An old world traffic cone. Though there isn't really any traffic anymore, so it's really just a cone."
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "cone"
+
 // TRASH.... //
 /obj/structure/halflife/trash
 	name = "Base type halflife TRASH"

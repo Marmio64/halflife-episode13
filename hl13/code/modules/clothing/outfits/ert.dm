@@ -67,8 +67,8 @@
 /datum/outfit/centcom/ert/overwatch/grunt
 	name = "OTA SMG Grunt"
 
-	l_hand = /obj/item/gun/ballistic/automatic/mp7
-	belt = /obj/item/storage/belt/civilprotection/overwatch/mp7
+	belt = /obj/item/storage/belt/civilprotection/overwatch/pulsesmg
+	l_hand = /obj/item/gun/ballistic/automatic/pulsesmg
 
 	back = /obj/item/tank/internals/oxygen/grunt
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt

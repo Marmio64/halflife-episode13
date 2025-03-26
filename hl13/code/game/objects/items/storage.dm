@@ -165,6 +165,15 @@
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/overwatch/pulsesmg/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
+	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/pulsesmg, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/pulsesmg, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/pulsesmg, src)
+	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
+	update_appearance(UPDATE_ICON)
+
 /obj/item/storage/belt/civilprotection/overwatch/spas12/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
 	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
