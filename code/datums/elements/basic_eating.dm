@@ -86,9 +86,9 @@
 	set waitfor = FALSE
 	SEND_SIGNAL(eater, COMSIG_MOB_ATE)
 	if(drinking)
-		playsound(eater.loc,'sound/items/drink.ogg', rand(10,50), TRUE)
+		playsound(eater.loc,'hl13/sound/items/drink.ogg', rand(10,50), TRUE) //hl13 edit sound
 	else
-		playsound(eater.loc,'sound/items/eatfood.ogg', rand(10,50), TRUE)
+		playsound(eater.loc,'hl13/sound/items/eat.ogg', rand(10,50), TRUE) //hl13 edit sound
 	var/atom/final_target = target
 	if(isstack(target)) //if stack, only consume 1
 		var/obj/item/stack/food_stack = target
