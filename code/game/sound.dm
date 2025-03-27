@@ -641,8 +641,7 @@
 			soundin = pick_weight(list(
 				'sound/mobs/humanoids/human/snore/snore_female1.ogg' = 33,
 				'sound/mobs/humanoids/human/snore/snore_female2.ogg' = 33,
-				'sound/mobs/humanoids/human/snore/snore_female3.ogg' = 33,
-				'sound/mobs/humanoids/human/snore/snore_mimimi1.ogg' = 1,
+				'sound/mobs/humanoids/human/snore/snore_female3.ogg' = 34,
 			))
 		if(SFX_SNORE_MALE)
 			soundin = pick_weight(list(
@@ -651,7 +650,6 @@
 				'sound/mobs/humanoids/human/snore/snore_male3.ogg' = 20,
 				'sound/mobs/humanoids/human/snore/snore_male4.ogg' = 20,
 				'sound/mobs/humanoids/human/snore/snore_male5.ogg' = 20,
-				'sound/mobs/humanoids/human/snore/snore_mimimi2.ogg' = 1,
 			))
 		if(SFX_CAT_MEOW)
 			soundin = pick_weight(list(
