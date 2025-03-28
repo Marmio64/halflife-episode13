@@ -17,7 +17,7 @@
 	/// Set to true when we announce something to ghosts, to prevent duplicate announcements
 	var/hasAnnounced = FALSE
 	/// Most common mob type to spawn, must be a child of /mob/living/basic/carp
-	var/carp_type = /mob/living/simple_animal/hostile/halflife/zombie
+	var/carp_type = /mob/living/basic/halflife/zombie
 	/// Rarer mob type to spawn, must also be a child of /mob/living/basic/carp. If one of these is created, it will take priority to show ghosts.
 	var/boss_type = /mob/living/simple_animal/hostile/halflife/zombie/poison
 	/// Just a boss type variation
@@ -103,7 +103,7 @@
 	admin_setup = list(/datum/event_admin_setup/xen_migration)
 
 /datum/round_event/xen_migration/zombies
-	carp_type = /mob/living/simple_animal/hostile/halflife/zombie
+	carp_type = /mob/living/basic/halflife/zombie
 	boss_type = /mob/living/simple_animal/hostile/halflife/zombie/poison
 	boss_type_2 = /mob/living/simple_animal/hostile/halflife/zombie/zombine
 	fluff_signal = "Necrotic Biosignals"
