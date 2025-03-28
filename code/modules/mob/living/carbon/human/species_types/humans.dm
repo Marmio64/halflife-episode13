@@ -7,6 +7,7 @@
 	skinned_type = /obj/item/stack/sheet/animalhide/human
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	payday_modifier = 1.1
+	death_sound = 'hl13/sound/voice/human/deathgurgle.ogg' //hl13 edit
 
 /datum/species/human/prepare_human_for_preview(mob/living/carbon/human/human)
 	human.set_haircolor("#bb9966", update = FALSE) // brown
@@ -23,9 +24,9 @@
 			'sound/mobs/humanoids/human/scream/malescream_4.ogg',
 			'sound/mobs/humanoids/human/scream/malescream_5.ogg',
 			'sound/mobs/humanoids/human/scream/malescream_6.ogg',
-			'sound/mobs/humanoids/human/scream/malescream_7.ogg',
-			'sound/mobs/humanoids/human/scream/malescream_8.ogg',
-			'sound/mobs/humanoids/human/scream/malescream_9.ogg',
+			'hl13/sound/voice/human/scream/malescream_7.ogg',
+			'hl13/sound/voice/human/scream/malescream_8.ogg',
+			'hl13/sound/voice/human/scream/malescream_9.ogg',
 		)
 
 	return pick(
