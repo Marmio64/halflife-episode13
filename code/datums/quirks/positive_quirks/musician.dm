@@ -1,3 +1,4 @@
+/*
 /datum/quirk/item_quirk/musician
 	name = "Musician"
 	desc = "You can tune handheld musical instruments to play melodies that clear certain negative effects and soothe the soul."
@@ -11,3 +12,4 @@
 
 /datum/quirk/item_quirk/musician/add_unique(client/client_source)
 	give_item_to_holder(/obj/item/choice_beacon/music, list(LOCATION_BACKPACK = ITEM_SLOT_BACKPACK, LOCATION_HANDS = ITEM_SLOT_HANDS))
+*/
