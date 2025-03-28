@@ -2,6 +2,7 @@
 /mob/living/basic/trooper/combine/soldier
 	name = "Overwatch Soldier"
 	desc = "Deploy. Cauterize. Extract."
+	blood_volume = BLOOD_VOLUME_NORMAL
 	faction = list(FACTION_COMBINE)
 	loot = list(/obj/effect/mob_spawn/corpse/human/combinesoldier)
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/combinesoldier
@@ -83,6 +84,9 @@
 	name = "Overwatch Grunt"
 	loot = list(/obj/effect/mob_spawn/corpse/human/combinegrunt)
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/combinegrunt
+	r_hand = /obj/item/gun/ballistic/automatic/pulsesmg
+	casingtype = /obj/item/ammo_casing/caseless/pulse/smg
+	projectilesound = 'hl13/sound/weapons/pulsesmgfire.ogg'
 	maxHealth = 125
 	health = 125
 
@@ -101,6 +105,11 @@
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection/grunt
 	back = /obj/item/tank/internals/oxygen/grunt
+
+/mob/living/basic/trooper/combine/soldier/grunt/burst
+	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/combine
+	burst_shots = 3
+	ranged_cooldown = 2 SECONDS
 
 // ELITE SOLDIER ------------------------------------
 /mob/living/basic/trooper/combine/soldier/elite
