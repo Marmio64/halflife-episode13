@@ -200,9 +200,13 @@
 
 		if(!sewer)
 			if(H.hygiene < HYGIENE_LEVEL_NORMAL)
-				H.adjust_hygiene(20) //Cleans you up a little if it is clean water
+				if(iscarbon(H))
+					var/mob/living/carbon/C = H
+					C.adjust_hygiene(20) //Cleans you up a little if it is clean water
 		else
-			H.adjust_hygiene(-40) //Otherwise, fucking disgusting
+			if(iscarbon(H))
+				var/mob/living/carbon/C = H
+				C.adjust_hygiene(-40) //Otherwise, fucking disgusting
 
 		if(!(M.swimming))
 			switch(depth)

@@ -46,6 +46,8 @@
 	caliber = CALIBER_PULSROUND
 	max_ammo = 30
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	multiple_sprite_use_base = TRUE
 
 /obj/item/ammo_box/magazine/combine_sniper
 	name = "Sniper magazine (pulse)"

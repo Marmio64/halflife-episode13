@@ -2,7 +2,7 @@
 /obj/item/gps
 	name = "global positioning system"
 	desc = "A small device which lets you display your location and find noteworthy signals."
-	icon = 'icons/obj/devices/tracker.dmi'
+	icon = 'hl13/icons/obj/devices/tracker.dmi' //hl13 edit
 	icon_state = "gps-c"
 	inhand_icon_state = "electronic"
 	worn_icon_state = "electronic"

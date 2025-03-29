@@ -5,6 +5,8 @@
 	icon_state = "quotaterminal"
 	density = TRUE
 
+	max_integrity = 1500
+
 	///The machine's internal radio, used to broadcast alerts.
 	var/obj/item/radio/radio
 	///The channel we announce a siphon over.
@@ -53,7 +55,7 @@
 
 	if(!quota_complete)
 		radio.talk_into(src, "The previous quota was not completed in time. Sociostability score has been deducted.", radio_channel)
-		SSsociostability.modifystability(-50) //boowomp
+		SSsociostability.modifystability(-75) //boowomp
 
 	quota_complete = FALSE
 
@@ -82,7 +84,7 @@
 		if(item_quanity_received >= item_quantity_required)
 			quota_complete = TRUE
 			radio.talk_into(src, "Quota has been completed.", radio_channel)
-			SSsociostability.modifystability(5)
+			SSsociostability.modifystability(5) //yipee
 		qdel(I)
 	else
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)

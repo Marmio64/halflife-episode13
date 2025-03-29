@@ -20,13 +20,13 @@
 				to_chat(usr, span_notice("Container successfully sealed. Reward dispensed."))
 				C.seal(user, 1) //Using the sealer gets you bonus money
 				if(user.job == "Union Worker")
-					if(prob(3))
+					if(prob(2))
 						to_chat(user, span_userdanger("You lose focus, and the machine seals one of your fingers inside the container!"))
 						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
 						arm.receive_damage(15)
 						user.emote("scream")
 				else
-					if(prob(10))
+					if(prob(8))
 						to_chat(user, span_userdanger("Due to your inexperience, the machine seals one of your fingers inside the container!"))
 						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
 						arm.receive_damage(15)
@@ -43,13 +43,13 @@
 				to_chat(usr, span_notice("Container successfully sealed. Reward dispensed."))
 				C.seal(user, 6) //Using the sealer gets you bonus money
 				if(user.job == "Union Worker")
-					if(prob(3))
+					if(prob(2))
 						to_chat(user, span_userdanger("You lose focus, and the machine seals one of your fingers inside the container!"))
 						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
 						arm.receive_damage(15)
 						user.emote("scream")
 				else
-					if(prob(10))
+					if(prob(8))
 						to_chat(user, span_userdanger("Due to your inexperience, the machine seals one of your fingers inside the container!"))
 						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
 						arm.receive_damage(15)
