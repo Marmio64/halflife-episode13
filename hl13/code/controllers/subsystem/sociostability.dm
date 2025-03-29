@@ -13,6 +13,9 @@ SUBSYSTEM_DEF(sociostability)
 	var/announcement_made = FALSE
 
 /datum/controller/subsystem/sociostability/fire(resumed = 0)
+	if(prob(50))
+		unit_encouragement()
+
 	announcement_made = FALSE
 
 	if(sociostability < SOCIOSTABILITY_GREAT)
@@ -81,3 +84,14 @@ SUBSYSTEM_DEF(sociostability)
 /datum/controller/subsystem/sociostability/proc/getloss()
 	var/loss = abs(sociostability - SOCIOSTABILITY_GREAT) //ex: stability is 700. 700-1000 = -300, then absolute value is 300. 300 stability has been lost.
 	return loss
+
+///A chance to send a message to civil protection masks, giving them some encouragement
+/datum/controller/subsystem/sociostability/proc/unit_encouragement()
+	var/encouragements = list('hl13/sound/voice/dispatchradio/politistablizationmarginal.ogg', 'hl13/sound/voice/dispatchradio/recalibratesocioscan.ogg', 'hl13/sound/voice/dispatchradio/reminder100credits.ogg', 'hl13/sound/voice/dispatchradio/remindermemoryreplacement.ogg', 'hl13/sound/voice/dispatchradio/teamsreportstatus.ogg')
+
+	for(var/atom/movable/mask in GLOB.cpmasks)
+		if(mask.loc &&ismob(mask.loc))
+			if(prob(35))
+				var/chosen_sound = pick(encouragements)
+				playsound(mask.loc, chosen_sound, 40, FALSE)
+	return

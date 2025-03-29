@@ -42,6 +42,7 @@
 	name = "pulse smg magazine"
 	desc = "A 30-round magazine for the pulse smg that contains pulse rounds."
 	icon_state = "pulsesmg"
+	base_icon_state = "pulsesmg"
 	ammo_type = /obj/item/ammo_casing/caseless/pulse/smg
 	caliber = CALIBER_PULSROUND
 	max_ammo = 30
