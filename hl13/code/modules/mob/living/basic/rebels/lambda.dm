@@ -59,15 +59,15 @@
 		"I can't remember the last time I had, well, anything.",
 		"Shouldn't we be doing something?",
 		"If you dare say 'That's gotta hurt,' I'll kill you.",
-		"I've got my little corner and I'm sticking to it."
-		"I don't think this war's ever gonna end."
-		"I can't remember the last time I had a shower."
-		"I'm not a betting man, but the odds are not good."
-		"Looks to me like things are getting worse, not better."
-		"They're never gonna make a stalker out of me."
-		"Finally, change is in the air!"
-		"This is bullshit!"
-		"I think I ate something bad."
+		"I've got my little corner and I'm sticking to it.",
+		"I don't think this war's ever gonna end.",
+		"I can't remember the last time I had a shower.",
+		"I'm not a betting man, but the odds are not good.",
+		"Looks to me like things are getting worse, not better.",
+		"They're never gonna make a stalker out of me.",
+		"Finally, change is in the air!",
+		"This is bullshit!",
+		"I think I ate something bad.",
 		"I'm gonna stay and hold down this spot.",
 	)
 
