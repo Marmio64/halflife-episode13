@@ -31,7 +31,7 @@
 /datum/shuttle_loan_situation/halflife/necrotics/spawn_items(list/spawn_list, list/empty_shuttle_turfs, list/blocked_shutte_turfs)
 
 	spawn_list.Add(/mob/living/basic/halflife/zombie)
-	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/zombie/zombine)
+	spawn_list.Add(/mob/living/basic/halflife/zombie/zombine)
 	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/headcrab)
 	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/headcrab/armored)
 	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/headcrab/poison)

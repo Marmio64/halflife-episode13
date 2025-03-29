@@ -21,7 +21,7 @@
 	/// Rarer mob type to spawn, must also be a child of /mob/living/basic/carp. If one of these is created, it will take priority to show ghosts.
 	var/boss_type = /mob/living/simple_animal/hostile/halflife/zombie/poison
 	/// Just a boss type variation
-	var/boss_type_2 = /mob/living/simple_animal/hostile/halflife/zombie/zombine
+	var/boss_type_2 = /mob/living/basic/halflife/zombie/zombine
 	/// What to describe detecting near the station
 	var/fluff_signal = "Unknown biological entities"
 	/// Associated lists of z level to a list of points to travel to, so that grouped fish move to the same places
@@ -105,7 +105,7 @@
 /datum/round_event/xen_migration/zombies
 	carp_type = /mob/living/basic/halflife/zombie
 	boss_type = /mob/living/simple_animal/hostile/halflife/zombie/poison
-	boss_type_2 = /mob/living/simple_animal/hostile/halflife/zombie/zombine
+	boss_type_2 = /mob/living/basic/halflife/zombie/zombine
 	fluff_signal = "Necrotic Biosignals"
 
 /datum/round_event_control/xen_migration/antlions

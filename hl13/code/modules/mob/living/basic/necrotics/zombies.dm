@@ -55,13 +55,28 @@
 		new headcrabspawn(get_turf(src))
 	..()
 
+/mob/living/basic/halflife/zombie/zombine
+	name = "Zombine"
+	desc = "A shambling combine soldier, taken over by a parasitic head crab."
+	icon_state = "zombine"
+	icon_living = "zombie"
+	icon_dead = "zombine_dead"
+	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 3)
+	maxHealth = 160
+	health = 160
+	attack_sound = 'hl13/sound/creatures/zombineattack.ogg'
+	death_sound = 'hl13/sound/creatures/zombinedeath.ogg'
+	crabless_possible = FALSE
+	idle_sounds = list('hl13/sound/creatures/zombinesound1.ogg', 'hl13/sound/creatures/zombinesound2.ogg', 'hl13/sound/creatures/zombinesound3.ogg', 'hl13/sound/creatures/zombinesound4.ogg')
+	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombine
+
 // AI STUFF THAT I PUT IN HERE CAUSE IM TOO LAZY TO MAKE ANOTHER FILE FOR IT --------------------------
 /datum/ai_planning_subtree/random_speech/halflife/zombie
 	speech_chance = 2
 	speak = list(
-		"OH G-GOD!",
-		"G-GOD HELP ME!",
-		"K-KILL ME!",
+		"S-Sector, nnnot... secur-e-e...",
+		"B-Biotics-s...",
+		"O-Over...watch... r-r-reserve...",
 	)
 
 /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie
@@ -76,4 +91,26 @@
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
 		/datum/ai_planning_subtree/random_speech/halflife/zombie,
+	)
+
+/datum/ai_planning_subtree/random_speech/halflife/zombine
+	speech_chance = 2
+	speak = list(
+		"OH G-GOD!",
+		"G-GOD HELP ME!",
+		"K-KILL ME!",
+	)
+
+/datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombine
+	blackboard = list(
+		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic,
+	)
+
+	ai_movement = /datum/ai_movement/basic_avoidance
+	idle_behavior = /datum/idle_behavior/idle_random_walk
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/attack_obstacle_in_path,
+		/datum/ai_planning_subtree/basic_melee_attack_subtree,
+		/datum/ai_planning_subtree/random_speech/halflife/zombine,
 	)
