@@ -119,6 +119,6 @@
 
 /datum/round_event/xen_migration/antlions
 	carp_type = /mob/living/simple_animal/hostile/halflife/antlion
-	boss_type = /mob/living/simple_animal/hostile/halflife/antlion_worker
-	boss_type_2 = /mob/living/simple_animal/hostile/halflife/antlion_worker
+	boss_type = /mob/living/basic/halflife/antlion_worker
+	boss_type_2 = /mob/living/basic/halflife/antlion_worker
 	fluff_signal = "Exogen Biosignals"

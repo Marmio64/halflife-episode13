@@ -18,7 +18,7 @@
 
 /obj/structure/spawner/halflife/antlion/small/worker
 	mob_types = list(
-		/mob/living/simple_animal/hostile/halflife/antlion_worker,
+		/mob/living/basic/halflife/antlion_worker,
 	)
 
 /obj/structure/spawner/halflife/headcrab

@@ -1,3 +1,5 @@
+//Simple animals are being deprecated slowly, these are on the chopping block
+
 /mob/living/simple_animal/hostile/halflife/zombie
 	name = "Zombie"
 	desc = "A shambling human, taken over by a parasitic head crab."
@@ -62,22 +64,6 @@
 		icon_state = no_crab_state
 		new headcrabspawn(get_turf(src))
 	..()
-
-/mob/living/simple_animal/hostile/halflife/zombie/zombine
-	name = "Zombine"
-	desc = "A shambling combine soldier, taken over by a parasitic head crab."
-	icon_state = "zombine"
-	icon_living = "zombie"
-	icon_dead = "zombine_dead"
-	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 3)
-	maxHealth = 160
-	health = 160
-	speak = list("S-Sector, nnnot... secur-e-e...","B-Biotics-s...","O-Over...watch... r-r-reserve...")
-	attack_sound = 'hl13/sound/creatures/zombineattack.ogg'
-	death_sound = 'hl13/sound/creatures/zombinedeath.ogg'
-	crabless_possible = FALSE
-	aggro_sound = 'hl13/sound/creatures/zombineaggro.ogg'
-	idle_sounds = list('hl13/sound/creatures/zombinesound1.ogg', 'hl13/sound/creatures/zombinesound2.ogg', 'hl13/sound/creatures/zombinesound3.ogg', 'hl13/sound/creatures/zombinesound4.ogg')
 
 /mob/living/simple_animal/hostile/halflife/zombie/fast
 	name = "Fast Zombie"
