@@ -2,7 +2,7 @@
 	name = "Numb"
 	desc = "You can't feel pain at all. Useful for not suffering excruciating pain. Very bad for knowing if you are hurt or not."
 	icon = FA_ICON_STAR_OF_LIFE
-	value = 0
+	value = 1
 	mob_trait = TRAIT_ANALGESIA
 	gain_text = "You feel your body becoming numb."
 	lose_text = "The numbness subsides."
