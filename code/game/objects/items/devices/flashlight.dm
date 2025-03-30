@@ -29,7 +29,7 @@
 	/// Can we toggle this light on and off (used for contexual screentips only)
 	var/toggle_context = TRUE
 	/// The sound the light makes when it's turned on
-	var/sound_on = 'sound/items/weapons/magin.ogg'
+	var/sound_on = 'hl13/sound/items/flashlight.ogg' //hl13 edit
 	/// The sound the light makes when it's turned off
 	var/sound_off = 'sound/items/weapons/magout.ogg'
 	/// Should the flashlight start turned on?
