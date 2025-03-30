@@ -45,6 +45,7 @@
 		/obj/item/clothing/suit/armor/civilprotection = list(PAYCHECK_CREW * 8, 3),
 		/obj/item/clothing/head/helmet/halflife/military/weak/crafted = list(PAYCHECK_CREW * 4, 5),
 		/obj/item/grenade/halflife/molotov = list(PAYCHECK_CREW * 4, 5),
+		/obj/item/reagent_containers/cup/glass/bottle/vodka = list(PAYCHECK_CREW * 3, 5),
 		/obj/item/stack/sticky_tape = list(PAYCHECK_CREW * 4, 5),
 		/obj/item/weaponcrafting/receiver = list(PAYCHECK_CREW * 4, 5),
 		/obj/item/stack/bulletcasings = list(PAYCHECK_CREW * 0.5, 5),
@@ -55,6 +56,10 @@
 		/obj/item/toy/crayon/spraycan = list(PAYCHECK_CREW, 2),
 		/obj/item/cigarette/halflife = list(PAYCHECK_CREW * 0.75, 10),
 		/obj/item/clothing/mask/gas/hl2/military = list(PAYCHECK_CREW * 3, 3),
+		/obj/item/reagent_containers/cup/soup_pot = list(PAYCHECK_CREW, 3),
+		/obj/item/lighter = list(PAYCHECK_CREW, 3),
+		/obj/item/food/canned/halflife/beans = list(PAYCHECK_CREW * 2, 3),
+		/obj/item/reagent_containers/syringe/syriniver = list(PAYCHECK_CREW * 2, 3),
 	)
 
 	initial_wanteds = list(
@@ -79,16 +84,19 @@
 		/obj/item/ration_voucher = list(PAYCHECK_CREW * 2, 10, ""),
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = list(PAYCHECK_CREW * 2, 3, ""),
 		/obj/item/reagent_containers/pill/lsd = list(PAYCHECK_CREW * 0.5, 5, ""),
+		/obj/item/food/xen/xenbranch = list(PAYCHECK_CREW * 0.25, 5, ""),
 	)
 
 	say_phrases = list(
 		ITEM_REJECTED_PHRASE = list(
 			"Sorry pal, this ain't it. Show me somethin' else.",
-			"Not what i'm lookin' for.",,
+			"Not what i'm lookin' for.",
 			"I'm sure someone would want that, just not me.",
+			"I don't think I could flip that right now, lemme see a different item.",
 		),
 		ITEM_SELLING_CANCELED_PHRASE = list(
 			"What a shame, tell me if you changed your mind.",
+			"No? Eh, see me if you change your mind."
 		),
 		ITEM_SELLING_ACCEPTED_PHRASE = list(
 			"Heh, thanks, stranga'.",
@@ -103,12 +111,15 @@
 			"Enjoy it, stranga'.",
 			"Heh, hope you like it, stranga'.",
 			"Knew you'd fine somethin' ya like.",
+			"They always leave a happy customer, heheh.",
 		),
 		NO_CASH_PHRASE = list(
 			"This ain't a charity, pal, come back with some cash.",
 			"I need cold hard cash for this to work, pal.",
 			"No creds, no meds. Or whatever the fuck you want.",
 			"I ain't a bleeding heart rebel gift giver, you've gotta pay for this shit.",
+			"Sorry, I don't give credit.",
+			"I'll need to see the cash in your hand.",
 		),
 		NO_STOCK_PHRASE = list(
 			"Ain't got no more of that right now.",
@@ -118,6 +129,7 @@
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"Not interested in that right now, pal.",
 			"Don't want that, pal.",
+			"No thanks, don't want it.",
 		),
 		ITEM_IS_WORTHLESS_PHRASE = list(
 			"This shit's worthless, I don't want it.",
@@ -130,6 +142,9 @@
 			"My wares are open for all, civil protection, rebel, citizen, don't care.",
 			"I've got contacts in every district, even Southwatch.",
 			"I've got more than just this you know, but I ain't carryin' a truckload of shit everywhere I go.",
+			"Always good to see a customer. There's fewer and fewer every day.",
+			"We've all gotta make a living somehow, heheh...",
+			"Don't bother trying to make it through the tunnel I came from, only I know the safe routes.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm out of creddies right now, cant buy anything.",
@@ -148,9 +163,11 @@
 			"Take that, you fuckin' punk!",
 			"Just like the last one who started shit!",
 			"Back to where you crawled from.",
+			"Rot in hell, bastard.",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
 			"Heh, open for business!",
 			"I've got what you need, stranga'.",
+			"Come over here, pal, i've got the goods.",
 		),
 	)

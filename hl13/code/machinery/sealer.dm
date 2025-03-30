@@ -19,6 +19,7 @@
 			if(do_after(user, 1 SECONDS, src))
 				to_chat(usr, span_notice("Container successfully sealed. Reward dispensed."))
 				C.seal(user, 1) //Using the sealer gets you bonus money
+				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 50, TRUE, extrarange = -1)
 				if(user.job == "Union Worker")
 					if(prob(2))
 						to_chat(user, span_userdanger("You lose focus, and the machine seals one of your fingers inside the container!"))
@@ -42,6 +43,7 @@
 			if(do_after(user, 1 SECONDS, src))
 				to_chat(usr, span_notice("Container successfully sealed. Reward dispensed."))
 				C.seal(user, 6) //Using the sealer gets you bonus money
+				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 50, TRUE, extrarange = -1)
 				if(user.job == "Union Worker")
 					if(prob(2))
 						to_chat(user, span_userdanger("You lose focus, and the machine seals one of your fingers inside the container!"))
