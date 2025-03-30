@@ -70,6 +70,96 @@
 	idle_sounds = list('hl13/sound/creatures/zombinesound1.ogg', 'hl13/sound/creatures/zombinesound2.ogg', 'hl13/sound/creatures/zombinesound3.ogg', 'hl13/sound/creatures/zombinesound4.ogg')
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombine
 
+/mob/living/basic/halflife/zombie/fast
+	name = "Fast Zombie"
+	desc = "A terrifying skinless human, taken over by a parasitic head crab."
+	icon_state = "fastzombie"
+	icon_living = "fastzombie"
+	icon_dead = "fastzombie_dead"
+	no_crab_state = "fastzombie_nocrab"
+	maxHealth = 80
+	health = 80
+	speed = 0
+	sound_vary = FALSE
+	butcher_results = list(/obj/item/stack/sheet/sinew = 2, /obj/item/food/meat/slab/halflife/zombie = 1)
+	attack_sound = 'hl13/sound/creatures/fastzombieattack.ogg'
+	death_sound = 'hl13/sound/creatures/fastzombiedeath.ogg'
+	idle_sound_chance = 100
+	idle_sounds = list('hl13/sound/creatures/fastzombie_breath.ogg', 'hl13/sound/creatures/fastzombiesound1.ogg', 'hl13/sound/creatures/fastzombiesound2.ogg', 'hl13/sound/creatures/fastzombiesound3.ogg')
+	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/fastzombie
+
+/// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
+/mob/living/basic/halflife/zombie/fast/proc/get_innate_abilities()
+	var/static/list/innate_abilities = list(
+		/datum/action/cooldown/mob_cooldown/halflife/jump/fast_zombie = BB_HALFLIFE_JUMP_ABILITY,
+	)
+	return innate_abilities
+
+/mob/living/basic/halflife/zombie/fast/Initialize(mapload)
+	. = ..()
+	grant_actions_by_list(get_innate_abilities())
+
+/datum/action/cooldown/mob_cooldown/halflife/jump
+	name = "Leap"
+	desc = "Leap towards the enemy!"
+	cooldown_time = 7 SECONDS
+	shared_cooldown = NONE
+	///telegraph time before jumping
+	var/wind_up_time = 0.5 SECONDS
+	///intervals between each of our attacks
+	var/attack_interval = 0.4 SECONDS
+	///how many times do we attack if we reach the target?
+	var/times_to_attack = 2
+	///what sound to play as telegraph?
+	var/sound_cue = 'sound/items/weapons/thudswoosh.ogg'
+
+/datum/action/cooldown/mob_cooldown/halflife/jump/fast_zombie
+	sound_cue = 'hl13/sound/creatures/fastzombieleap.ogg'
+
+/datum/action/cooldown/mob_cooldown/halflife/jump/Activate(atom/target)
+	if(owner.CanReach(target))
+		attack_combo(target)
+		StartCooldown()
+		return TRUE
+
+	addtimer(CALLBACK(src, PROC_REF(launch_towards_target), target), wind_up_time)
+	StartCooldown()
+	return TRUE
+
+/datum/action/cooldown/mob_cooldown/halflife/jump/proc/launch_towards_target(atom/target)
+	playsound(owner, sound_cue, 50, FALSE)
+	var/turf/target_turf = get_turf(target)
+
+	if(!target_turf.is_blocked_turf())
+		owner.throw_at(target = target_turf, range = 7, speed = 1, spin = FALSE, callback = CALLBACK(src, PROC_REF(attack_combo), target))
+		return
+
+	var/list/open_turfs = list()
+
+	for(var/turf/possible_turf in get_adjacent_open_turfs(target))
+		if(possible_turf.is_blocked_turf())
+			continue
+		open_turfs += possible_turf
+
+	if(!length(open_turfs))
+		return
+
+	var/turf/final_turf = get_closest_atom(/turf, open_turfs, owner)
+	owner.throw_at(target = final_turf, range = 7, speed = 1, spin = FALSE, callback = CALLBACK(src, PROC_REF(attack_combo), target))
+
+/datum/action/cooldown/mob_cooldown/halflife/jump/proc/attack_combo(atom/target)
+	if(!owner.CanReach(target))
+		return FALSE
+
+	for(var/i in 0 to (times_to_attack - 1))
+		addtimer(CALLBACK(src, PROC_REF(attack_target), target), i * attack_interval)
+
+/datum/action/cooldown/mob_cooldown/halflife/jump/proc/attack_target(atom/target)
+	if(!owner.CanReach(target) || owner.stat == DEAD)
+		return
+	var/mob/living/basic/basic_owner = owner
+	basic_owner.melee_attack(target, ignore_cooldown = TRUE)
+
 // AI STUFF THAT I PUT IN HERE CAUSE IM TOO LAZY TO MAKE ANOTHER FILE FOR IT --------------------------
 /datum/ai_planning_subtree/random_speech/halflife/zombie
 	speech_chance = 2
@@ -114,3 +204,20 @@
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
 		/datum/ai_planning_subtree/random_speech/halflife/zombine,
 	)
+
+/datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/fastzombie
+	blackboard = list(
+		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic,
+	)
+
+	ai_movement = /datum/ai_movement/basic_avoidance
+	idle_behavior = /datum/idle_behavior/idle_random_walk
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/targeted_mob_ability/fastzombie_jump,
+		/datum/ai_planning_subtree/attack_obstacle_in_path,
+		/datum/ai_planning_subtree/basic_melee_attack_subtree,
+	)
+
+/datum/ai_planning_subtree/targeted_mob_ability/fastzombie_jump
+	ability_key = BB_HALFLIFE_JUMP_ABILITY
