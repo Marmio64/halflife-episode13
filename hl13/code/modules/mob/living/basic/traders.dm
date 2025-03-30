@@ -4,6 +4,7 @@
 
 	maxHealth = 300
 	health = 300
+	blood_volume = BLOOD_VOLUME_NORMAL
 
 	spawner_path = /obj/effect/mob_spawn/corpse/human/refugee_smuggler
 	loot = list(/obj/effect/mob_spawn/corpse/human/refugee_smuggler)
@@ -77,6 +78,7 @@
 		/obj/item/halflife/antenna = list(PAYCHECK_CREW * 2, 5, ""),
 		/obj/item/ration_voucher = list(PAYCHECK_CREW * 2, 10, ""),
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = list(PAYCHECK_CREW * 2, 3, ""),
+		/obj/item/reagent_containers/pill/lsd = list(PAYCHECK_CREW * 0.5, 5, ""),
 	)
 
 	say_phrases = list(

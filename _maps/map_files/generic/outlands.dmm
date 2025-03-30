@@ -477,10 +477,6 @@
 	dir = 1
 	},
 /area/halflife/outdoors/forest)
-"fm" = (
-/mob/living/basic/trader/halflife/refugee,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "fn" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/structure/halflife/pipes/horizontal/down/single{
@@ -693,6 +689,10 @@
 /obj/structure/halflife/trash/papers/three,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"hE" = (
+/obj/machinery/atm,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "hG" = (
 /mob/living/simple_animal/hostile/halflife/headcrab,
 /turf/open/floor/plating/ground/rockunder,
@@ -1729,10 +1729,6 @@
 /obj/structure/halflife/trash/glass/basic,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
-"tx" = (
-/obj/machinery/door/unpowered/halflife/wood,
-/turf/open/floor/plating/indoor/woodc/wide,
-/area/halflife/outdoors/forest)
 "ty" = (
 /obj/item/wallframe/newscaster,
 /obj/structure/closet/crate,
@@ -2196,6 +2192,13 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
+"yU" = (
+/obj/machinery/door/unpowered/halflife/wood{
+	locked = 1;
+	keylock = 1
+	},
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
 "za" = (
 /obj/machinery/door/unpowered/halflife/wood{
 	keylock = 1;
@@ -2284,6 +2287,10 @@
 /obj/item/seeds/wheat,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
+"Ac" = (
+/obj/structure/railing/halflife/wood,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/forest)
 "Ad" = (
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -2310,10 +2317,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
-"AA" = (
-/obj/machinery/atm,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "AB" = (
 /obj/structure/halflife/fence/corner/wire/barb,
 /turf/open/floor/plating/indoor/concrete,
@@ -2446,6 +2449,12 @@
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"BZ" = (
+/obj/structure/chair/halflife/metal/folding{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "Cb" = (
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors/sewer/tunnel)
@@ -2504,6 +2513,10 @@
 "CM" = (
 /obj/effect/spawner/random/halflife/loot/crafting_bench,
 /turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/outdoors/forest)
+"CQ" = (
+/obj/structure/halflife/sign/shop,
+/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "CR" = (
 /turf/open/halflife/water/sewer/shallow,
@@ -2593,6 +2606,13 @@
 "DV" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete,
+/area/halflife/outdoors/forest)
+"Ed" = (
+/obj/structure/table/halflife/wood/constructed/cobbled,
+/obj/item/reagent_containers/cup/glass/bottle/vodka{
+	pixel_y = 8
+	},
+/turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
 "Ee" = (
 /turf/closed/wall/halflife/sewer,
@@ -2697,6 +2717,12 @@
 /area/halflife/indoors/sewer/outlandscave)
 "FC" = (
 /turf/closed/wall/halflife/wood,
+/area/halflife/outdoors/forest)
+"FG" = (
+/obj/structure/railing/halflife/wood{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "FJ" = (
 /obj/structure/spawner/halflife/antlion/small,
@@ -2893,6 +2919,11 @@
 /area/halflife/indoors/bunker)
 "It" = (
 /turf/open/floor/plating/ground/dirt/alt,
+/area/halflife/outdoors/forest)
+"Iu" = (
+/obj/structure/table/halflife/wood/constructed/cobbled,
+/obj/structure/halflife/trash/glass/basic,
+/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "Iv" = (
 /obj/structure/halflife/trash/cardboard{
@@ -3408,18 +3439,16 @@
 /obj/effect/spawner/random/halflife/loot/rare,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
-"ON" = (
-/obj/structure/railing/halflife/wood{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors/forest)
 "OO" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
 "OV" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"Pe" = (
+/obj/structure/railing/halflife/wood/ending,
+/turf/open/floor/plating/ground/dirt/alt,
+/area/halflife/outdoors/forest)
 "Pi" = (
 /mob/living/basic/mouse/gray,
 /turf/open/floor/plating/ground/dirt,
@@ -3923,6 +3952,20 @@
 /obj/effect/spawner/random/halflife/loot/crafting_bench,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"UM" = (
+/obj/structure/table/halflife/wood/constructed/cobbled,
+/obj/item/stack/spacecash/c1{
+	amount = 25
+	},
+/obj/item/ammo_casing/a357{
+	pixel_x = -5
+	},
+/obj/item/ammo_casing/a357{
+	pixel_y = 3;
+	pixel_x = -1
+	},
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
 "UN" = (
 /obj/structure/railing/halflife/solo{
 	dir = 8
@@ -4184,6 +4227,10 @@
 /obj/structure/gulag_vent,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"Xw" = (
+/mob/living/basic/trader/halflife/refugee,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "Xx" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/stack/sheet/mineral/sandbags{
@@ -64379,7 +64426,7 @@ ai
 oG
 oG
 tN
-tN
+ad
 tN
 tN
 tN
@@ -67988,6 +68035,7 @@ It
 It
 It
 It
+FC
 It
 It
 It
@@ -67995,8 +68043,7 @@ It
 It
 It
 It
-It
-It
+Pe
 It
 It
 dg
@@ -68187,13 +68234,13 @@ GX
 wa
 FC
 It
+CQ
 GX
 GX
 GX
 GX
 GX
-GX
-GX
+Ac
 It
 It
 eQ
@@ -68328,7 +68375,7 @@ VH
 tN
 tN
 tN
-ad
+tN
 tN
 tN
 tN
@@ -68390,7 +68437,7 @@ GX
 GX
 It
 GX
-GX
+Ac
 RL
 RL
 vH
@@ -68587,7 +68634,7 @@ It
 tN
 tN
 tN
-It
+Je
 It
 It
 vH
@@ -68775,7 +68822,7 @@ GX
 GX
 It
 It
-It
+Je
 tN
 It
 tN
@@ -68972,7 +69019,7 @@ It
 GX
 It
 It
-It
+Je
 tN
 tN
 tN
@@ -68981,7 +69028,7 @@ tN
 tN
 tN
 tN
-It
+Je
 GX
 GX
 It
@@ -69172,7 +69219,7 @@ XA
 XA
 XA
 XA
-ON
+FG
 tN
 tN
 eX
@@ -69365,14 +69412,14 @@ XA
 XA
 xS
 rF
-tx
+yU
 tN
 tN
 GX
 GX
 tN
 tN
-tN
+BZ
 Cq
 XA
 XA
@@ -69560,10 +69607,10 @@ XA
 XA
 XA
 XA
-rF
+Ed
 rF
 XA
-AA
+hE
 tN
 qQ
 tN
@@ -69757,11 +69804,11 @@ XA
 XA
 XA
 XA
-XA
-XA
+UM
+rF
 XA
 GX
-fm
+Xw
 qQ
 tN
 tN
@@ -70156,11 +70203,11 @@ XA
 XA
 VV
 VV
-VV
+Iu
 tN
 tN
 tN
-GX
+ZM
 GX
 XA
 XA
