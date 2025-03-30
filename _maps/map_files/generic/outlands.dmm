@@ -58,10 +58,6 @@
 /obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
-"aP" = (
-/mob/living/basic/trader/halflife/refugee,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "aR" = (
 /obj/structure/railing/halflife/wood/single{
 	dir = 1
@@ -481,6 +477,10 @@
 	dir = 1
 	},
 /area/halflife/outdoors/forest)
+"fm" = (
+/mob/living/basic/trader/halflife/refugee,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "fn" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/structure/halflife/pipes/horizontal/down/single{
@@ -842,10 +842,6 @@
 /obj/structure/bed/halflife/mattress/stale,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/bunker)
-"jK" = (
-/obj/machinery/door/unpowered/halflife/wood,
-/turf/open/floor/plating/indoor/woodc/wide,
-/area/halflife/outdoors/forest)
 "jM" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
@@ -968,12 +964,6 @@
 /obj/structure/halflife/pipes/vertical/east/corner,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
-"kX" = (
-/obj/structure/railing/halflife/wood{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors/forest)
 "lb" = (
 /obj/structure/halflife/trash/books/pile_alt,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -1505,10 +1495,6 @@
 /obj/structure/table/halflife/wood/constructed/cobbled,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
-"qR" = (
-/obj/machinery/atm,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "qT" = (
 /obj/machinery/door/poddoor/shutters/window{
 	id = "rebelentrance"
@@ -1743,6 +1729,10 @@
 /obj/structure/halflife/trash/glass/basic,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"tx" = (
+/obj/machinery/door/unpowered/halflife/wood,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
 "ty" = (
 /obj/item/wallframe/newscaster,
 /obj/structure/closet/crate,
@@ -2320,6 +2310,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
+"AA" = (
+/obj/machinery/atm,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "AB" = (
 /obj/structure/halflife/fence/corner/wire/barb,
 /turf/open/floor/plating/indoor/concrete,
@@ -3413,6 +3407,12 @@
 "OM" = (
 /obj/effect/spawner/random/halflife/loot/rare,
 /turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
+"ON" = (
+/obj/structure/railing/halflife/wood{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "OO" = (
 /turf/open/floor/plating/ground/sidewalk,
@@ -69172,7 +69172,7 @@ XA
 XA
 XA
 XA
-kX
+ON
 tN
 tN
 eX
@@ -69365,7 +69365,7 @@ XA
 XA
 xS
 rF
-jK
+tx
 tN
 tN
 GX
@@ -69563,7 +69563,7 @@ XA
 rF
 rF
 XA
-qR
+AA
 tN
 qQ
 tN
@@ -69761,7 +69761,7 @@ XA
 XA
 XA
 GX
-aP
+fm
 qQ
 tN
 tN
@@ -70154,9 +70154,9 @@ XA
 XA
 XA
 XA
-Cq
-GX
-GX
+VV
+VV
+VV
 tN
 tN
 tN

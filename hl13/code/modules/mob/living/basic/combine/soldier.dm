@@ -8,8 +8,8 @@
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/combinesoldier
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/combine
 	r_hand = /obj/item/gun/ballistic/automatic/mp7
-	maxHealth = 160
-	health = 160
+	maxHealth = 175
+	health = 175
 	death_sound = 'hl13/sound/voice/otavoicelines/die1.ogg'
 	/// Type of bullet we use
 	var/casingtype = /obj/item/ammo_casing/c46x30mm/mp7
@@ -87,8 +87,8 @@
 	r_hand = /obj/item/gun/ballistic/automatic/pulsesmg
 	casingtype = /obj/item/ammo_casing/caseless/pulse/smg
 	projectilesound = 'hl13/sound/weapons/pulsesmgfire.ogg'
-	maxHealth = 125
-	health = 125
+	maxHealth = 135
+	health = 135
 
 /obj/effect/mob_spawn/corpse/human/combinegrunt
 	name = "Overwatch Grunt"
@@ -120,8 +120,8 @@
 	casingtype = /obj/item/ammo_casing/caseless/pulse/ar2
 	projectilesound = "hl13/sound/weapons/ar2fire.ogg"
 	ranged_cooldown = 0.4 SECONDS
-	maxHealth = 220
-	health = 220
+	maxHealth = 225
+	health = 225
 
 /mob/living/basic/trooper/combine/soldier/elite/burst
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/combine

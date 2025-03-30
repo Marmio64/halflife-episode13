@@ -47,7 +47,7 @@
 
 	var/datum/trader_data/trader_data = new trader_data_path
 	AddComponent(/datum/component/trader, trader_data = trader_data)
-	AddComponent(/datum/component/ranged_attacks, casing_type = ranged_attack_casing, projectile_sound = ranged_attack_sound, cooldown_time = 3 SECONDS)
+	AddComponent(/datum/component/ranged_attacks, casing_type = ranged_attack_casing, projectile_sound = ranged_attack_sound, cooldown_time = 2 SECONDS) //hl13 edit, lower attack cooldown
 	AddElement(/datum/element/ai_retaliate)
 	AddElement(/datum/element/ai_swap_combat_mode, BB_BASIC_MOB_CURRENT_TARGET, string_list(trader_data.say_phrases[TRADER_BATTLE_START_PHRASE]), string_list(trader_data.say_phrases[TRADER_BATTLE_END_PHRASE]))
 	if(LAZYLEN(loot))
