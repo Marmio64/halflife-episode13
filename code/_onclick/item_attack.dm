@@ -292,9 +292,11 @@
 
 	var/targeting = check_zone(user.zone_selected)
 	if(user != src)
-		var/zone_hit_chance = 80
+		var/zone_hit_chance = 70 //hl13 edit, less accuracy with melee weapons
 		if(body_position == LYING_DOWN)
 			zone_hit_chance += 10
+		if(buckled)
+			zone_hit_chance += 20 //hl13 edit, you'll be much more likely to hit what you want when they're buckled
 		targeting = get_random_valid_zone(targeting, zone_hit_chance)
 	var/targeting_human_readable = parse_zone_with_bodypart(targeting)
 
@@ -392,7 +394,7 @@
 							span_danger("[src] is knocked senseless!"),
 							span_userdanger("You're knocked senseless!"),
 						)
-						set_confusion_if_lower(20 SECONDS)
+						set_confusion_if_lower(10 SECONDS) //hl13 edit, lower confusion time
 						adjust_eye_blur(20 SECONDS)
 					if(prob(10))
 						gain_trauma(/datum/brain_trauma/mild/concussion)
@@ -420,7 +422,7 @@
 						span_danger("[src] is knocked down!"),
 						span_userdanger("You're knocked down!"),
 					)
-					apply_effect(6 SECONDS, EFFECT_KNOCKDOWN, armor_block)
+					apply_effect(5 SECONDS, EFFECT_KNOCKDOWN, armor_block) //hl13 edit, less knockdown
 
 	// Triggers force say events
 	if(damage_done > 10 || (damage_done >= 5 && prob(33)))

@@ -45,6 +45,8 @@
 		/obj/item/stack/medical,
 		/obj/item/stamp,
 		/obj/item/hl2key, //hl13 edit
+		/obj/item/stack/credit_voucher, //hl13 edit
+		/obj/item/ration_voucher, //hl13 edit
 		/obj/item/toy/crayon),
 		list(/obj/item/screwdriver/power))
 
