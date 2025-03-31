@@ -102,6 +102,7 @@
 	speak = list()
 	crabless_possible = FALSE
 	idle_sound_chance = 50
+	lighting_cutoff_red = 25
 
 	footstep_type = FOOTSTEP_MOB_GONOME
 	attack_sound = 'hl13/sound/creatures/gonome/attack_player.ogg'
