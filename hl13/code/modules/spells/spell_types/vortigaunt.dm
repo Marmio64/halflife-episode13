@@ -82,7 +82,30 @@
 	desc = "Clear your surroundings with the power of the vortessence."
 	background_icon_state = "bg_nature"
 	invocation = "TO THE VOID"
-	cooldown_time = 25 SECONDS
+	cooldown_time = 45 SECONDS
 	aoe_radius = 4
 	cooldown_reduction_per_rank = 4 SECONDS
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
+
+/datum/action/cooldown/spell/forcewall/vort
+	name = "Vortal Wall"
+	desc = "Create a magical barrier that only you can pass through. Be warned, this barrier will not last long."
+	button_icon_state = "shield"
+	background_icon_state = "bg_nature"
+
+	sound = 'hl13/sound/weapons/attack_shoot.ogg'
+	school = SCHOOL_TRANSMUTATION
+	cooldown_time = 40 SECONDS
+	cooldown_reduction_per_rank = 1.25 SECONDS
+
+	invocation = "GHER AHLA GUNG"
+	invocation_type = INVOCATION_SHOUT
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
+
+	wall_type = /obj/effect/forcefield/wizard/vortal
+
+/obj/effect/forcefield/wizard/vortal
+	name = "VORTAL BARRIER"
+	desc = "A solid wall of green, vortal energy that looks rather fleeting."
+	icon_state = "shield-green"
+	initial_duration = 10 SECONDS
