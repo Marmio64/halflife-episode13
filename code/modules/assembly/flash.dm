@@ -2,7 +2,7 @@
 
 /obj/item/assembly/flash
 	name = "flash"
-	desc = "A powerful and versatile flashbulb device, with applications ranging from disorienting attackers to acting as visual receptors in robot production."
+	desc = "Some strange looking flashing mechanism, which takes a few seconds to prime." //hl13 edit
 	icon = 'icons/obj/devices/flash.dmi'
 	icon_state = "flash"
 	inhand_icon_state = "flashtool"
@@ -238,8 +238,10 @@
 
 	. = TRUE
 	if(iscarbon(M))
-		flash_carbon(M, user, confusion_duration = 5 SECONDS, targeted = TRUE)
-		return
+		to_chat(user, span_notice("Priming the flash mechanism...")) //hl13 edit
+		if(do_after(user, 3 SECONDS, src)) //hl13 edit
+			flash_carbon(M, user, confusion_duration = 5 SECONDS, targeted = TRUE)
+			return
 	if(issilicon(M))
 		var/mob/living/silicon/robot/flashed_borgo = M
 		log_combat(user, flashed_borgo, "flashed", src)
