@@ -7,13 +7,11 @@ export const OPERATIVE_MECHANICAL_DESCRIPTION = `
 
 const Operative: Antagonist = {
   key: 'operative',
-  name: 'Nuclear Operative',
+  name: 'Rebel Operative',
   description: [
     `
-      Congratulations, agent. You have been chosen to join the Syndicate
-      Nuclear Operative strike team. Your mission, whether or not you choose
-      to accept it, is to destroy Nanotrasen's most advanced research facility!
-      That's right, you're going to Space Station 13.
+      You've arrived as part of a rebel strike team to assault the city.
+      Complete the mission, or die trying.
     `,
 
     OPERATIVE_MECHANICAL_DESCRIPTION,
