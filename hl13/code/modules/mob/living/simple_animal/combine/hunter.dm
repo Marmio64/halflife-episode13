@@ -37,6 +37,8 @@
 	minimum_distance = 4
 	projectilesound = 'hl13/sound/creatures/hunter/hunter_fire1.ogg'
 	casingtype = /obj/item/ammo_casing/caseless/flechette
+	lighting_cutoff_blue = 25
+	lighting_cutoff = 25
 
 	var/charge_cooldown = 0
 	var/charge_cooldown_time = 10 SECONDS

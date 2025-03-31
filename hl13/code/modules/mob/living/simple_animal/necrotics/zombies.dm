@@ -94,6 +94,8 @@
 	icon_dead = "gonome_dead"
 	melee_damage_lower = 30
 	melee_damage_upper = 35
+	harm_intent_damage = 25
+	wound_bonus = -20
 	move_to_delay = 4
 	speak = list()
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 3, /obj/item/stack/sheet/animalhide/goliath_hide = 3)
@@ -102,7 +104,8 @@
 	speak = list()
 	crabless_possible = FALSE
 	idle_sound_chance = 50
-	lighting_cutoff_red = 25
+	lighting_cutoff_red = 30
+	lighting_cutoff = 10
 
 	footstep_type = FOOTSTEP_MOB_GONOME
 	attack_sound = 'hl13/sound/creatures/gonome/attack_player.ogg'
