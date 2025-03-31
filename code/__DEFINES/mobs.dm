@@ -144,6 +144,7 @@
 #define SPECIES_VORTIGAUNT "vortigaunt"
 #define SPECIES_VORTIGAUNT_ELDER "eldervortigaunt"
 #define SPECIES_STALKER "stalker"
+#define SPECIES_SYNTHHUMAN "synthhuman"
 
 // Like species IDs, but not specifically attached a species.
 #define BODYPART_ID_ALIEN "alien"

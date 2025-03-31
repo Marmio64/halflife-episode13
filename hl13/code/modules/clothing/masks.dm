@@ -307,6 +307,12 @@
 /obj/item/clothing/mask/gas/hl2/swat
 	icon_state = "swatmask"
 
+/obj/item/clothing/mask/gas/hl2/cremator
+	name = "gas mask"
+	desc = "An odd looking, spherical gas mask that covers the whole head."
+	icon_state = "crematormask"
+	armor_type = /datum/armor/militarygasmask
+
 /obj/item/clothing/mask/bandana/sinew
 	name = "sinew bandana"
 	desc = "A bandana made of finely weaved animal sinew."
