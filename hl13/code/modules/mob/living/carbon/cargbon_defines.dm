@@ -7,3 +7,5 @@
 	var/painstuncooldown = 320
 	//how tired they are, for sleepytime
 	var/tiredness = 0
+	canparry = TRUE
+	candodge = TRUE
