@@ -1,3 +1,8 @@
+/obj/item/melee
+	//We are going to assume all melee weapons can be used for parrying as a default
+	can_parry = TRUE
+	wdefense = 2
+
 /obj/item/melee/sledgehammer
 	name = "sledgehammer"
 	desc = "An archaic tool used to drive nails and break down hollow walls."
