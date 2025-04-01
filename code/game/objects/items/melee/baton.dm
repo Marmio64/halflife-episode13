@@ -14,6 +14,8 @@
 	wound_bonus = 15
 	sound_vary = TRUE
 
+	wdefense = 3 //hl13 edit
+
 	/// Whether this baton is active or not
 	var/active = TRUE
 	/// Used interally, you don't want to modify
@@ -21,7 +23,7 @@
 	/// Default wait time until can stun again.
 	var/cooldown = (1.5 SECONDS)
 	/// The length of the knockdown applied to a struck living, non-cyborg mob.
-	var/knockdown_time = (0.5 SECONDS)
+	var/knockdown_time = (0.25 SECONDS) //hl13 edit
 	/// If affect_cyborg is TRUE, this is how long we stun cyborgs for on a hit.
 	var/stun_time_cyborg = (5 SECONDS)
 	/// The length of the knockdown applied to the user on clumsy_check()
@@ -865,6 +867,8 @@
 	w_class = WEIGHT_CLASS_BULKY
 	stamina_damage = 55
 	cooldown = 1.8 SECONDS
+
+	wdefense = 4
 
 /obj/item/melee/baton/security/heavy/loaded //this one starts with a cell pre-installed.
 	preload_cell_type = /obj/item/stock_parts/power_store/cell/high

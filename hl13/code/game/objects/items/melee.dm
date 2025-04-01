@@ -95,6 +95,9 @@
 	force_unwielded = 15
 	force_wielded = 24
 
+	can_parry = TRUE
+	wdefense = 4
+
 /obj/item/spear/halflife/deathmatch
 	force = 30
 	force_unwielded = 30

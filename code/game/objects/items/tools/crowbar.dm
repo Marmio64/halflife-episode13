@@ -66,6 +66,9 @@
 	inhand_icon_state = "crowbar_red"
 	toolspeed = 0.7
 
+	can_parry = TRUE //hl13 edit
+	wdefense = 3 //hl13 edit
+
 /obj/item/crowbar/large/freeman
 	desc = "You might've dropped this in black mesa. Or, er... what the hell is black mesa?"
 	force = 30

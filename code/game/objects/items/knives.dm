@@ -132,6 +132,9 @@
 	attack_verb_simple = list("slash", "stab", "slice", "tear", "lacerate", "rip", "cut")
 	slot_flags = ITEM_SLOT_MASK
 
+	can_parry = TRUE //hl13 edit
+	wdefense = 1 //hl13 edit
+
 /datum/embed_data/combat_knife
 	pain_mult = 4
 	embed_chance = 65
