@@ -28,6 +28,7 @@
 	var/no_crab_state = "zombie_dead_nocrab"
 	var/crabless_possible = TRUE
 	var/headcrabspawn = /mob/living/basic/halflife/headcrab
+	var/headcrabspawn_chance = 25
 	var/idle_sound_chance = 20
 	var/sound_vary = TRUE
 	var/fungalheal = FALSE
@@ -49,7 +50,7 @@
 
 
 /mob/living/basic/halflife/zombie/death(gibbed)
-	if(prob(25) && crabless_possible) //25% chance to spawn a headcrab on death
+	if(prob(headcrabspawn_chance) && crabless_possible) //25% chance to spawn a headcrab on death by default
 		icon_dead = no_crab_state
 		icon_state = no_crab_state
 		new headcrabspawn(get_turf(src))
@@ -160,8 +161,59 @@
 	var/mob/living/basic/basic_owner = owner
 	basic_owner.melee_attack(target, ignore_cooldown = TRUE)
 
+/mob/living/basic/halflife/zombie/freshly_crabbed
+	basic_mob_flags = DEL_ON_DEATH
+	headcrabspawn_chance = 100
+	/// The dead body we have inside
+	var/mob/living/carbon/human/corpse
+
+/mob/living/basic/halflife/zombie/freshly_crabbed/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_PERMANENTLY_MORTAL, INNATE_TRAIT) // This mob doesn't function visually without a corpse and wouldn't respawn with one
+
+/mob/living/basic/halflife/zombie/freshly_crabbed/death(gibbed)
+	corpse?.forceMove(loc)
+	return ..()
+
+/mob/living/basic/halflife/zombie/freshly_crabbed/Exited(atom/movable/gone, direction)
+	. = ..()
+	if (gone != corpse)
+		return
+	corpse = null
+	death()
+
+/mob/living/basic/halflife/zombie/freshly_crabbed/Destroy()
+	QDEL_NULL(corpse)
+	return ..()
+
+//Sets up our appearance
+/mob/living/basic/halflife/zombie/freshly_crabbed/proc/set_up_zombie_appearance()
+	copy_overlays(corpse, TRUE)
+	var/mutable_appearance/blob_head_overlay = mutable_appearance('hl13/icons/mob/halflife.dmi', "headcrabhead")
+	overlays += blob_head_overlay
+
+/// Store a body so that we can drop it on death
+/mob/living/basic/halflife/zombie/freshly_crabbed/proc/consume_corpse(mob/living/carbon/human/new_corpse)
+	new_corpse.death()
+	if(new_corpse.wear_suit)
+		maxHealth += new_corpse.get_armor_rating(MELEE)
+		health = maxHealth
+	new_corpse.set_facial_hairstyle("Shaved", update = FALSE)
+	new_corpse.set_hairstyle("Bald", update = TRUE)
+	new_corpse.forceMove(src)
+	corpse = new_corpse
+	update_appearance(UPDATE_ICON)
+	set_up_zombie_appearance()
+	RegisterSignal(corpse, COMSIG_LIVING_REVIVE, PROC_REF(on_corpse_revived))
+
+/// Dynamic changeling reentry
+/mob/living/basic/halflife/zombie/freshly_crabbed/proc/on_corpse_revived()
+	SIGNAL_HANDLER
+	visible_message(span_boldwarning("[src] bursts from the inside!"))
+	death()
+
 // AI STUFF THAT I PUT IN HERE CAUSE IM TOO LAZY TO MAKE ANOTHER FILE FOR IT --------------------------
-/datum/ai_planning_subtree/random_speech/halflife/zombie
+/datum/ai_planning_subtree/random_speech/halflife/zombine
 	speech_chance = 2
 	speak = list(
 		"S-Sector, nnnot... secur-e-e...",
@@ -183,7 +235,7 @@
 		/datum/ai_planning_subtree/random_speech/halflife/zombie,
 	)
 
-/datum/ai_planning_subtree/random_speech/halflife/zombine
+/datum/ai_planning_subtree/random_speech/halflife/zombie
 	speech_chance = 2
 	speak = list(
 		"OH G-GOD!",

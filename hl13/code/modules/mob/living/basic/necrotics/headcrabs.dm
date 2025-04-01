@@ -29,6 +29,25 @@
 
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/headcrab
 
+	var/mob/living/zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed
+	var/can_zombify = TRUE
+
+/mob/living/basic/halflife/headcrab/melee_attack(mob/living/carbon/human/target, list/modifiers, ignore_cooldown)
+	. = ..()
+	if (!ishuman(target) || target.stat == CONSCIOUS || target.stat == DEAD)
+		return
+	zombify(target)
+
+/// Become a zombie
+/mob/living/basic/halflife/headcrab/proc/zombify(mob/living/carbon/human/target)
+	visible_message(span_warning("The corpse of [target.name] suddenly rises!"))
+	var/mob/living/basic/halflife/zombie/freshly_crabbed/newzombie = change_mob_type(zombie_type, loc, new_name = initial(zombie_type.name))
+	newzombie.faction |= faction //inherit the head crab's faction in case it was spawned with a different one
+	newzombie.set_name()
+	if (istype(newzombie)) // In case of badmin
+		newzombie.consume_corpse(target)
+	qdel(src)
+
 /datum/action/cooldown/mob_cooldown/halflife/jump/headcrab
 	sound_cue = 'hl13/sound/creatures/headcrableap.ogg'
 	times_to_attack = 1
@@ -66,6 +85,8 @@
 	death_sound = 'hl13/sound/creatures/poison/ph_death.ogg'
 	attack_sound = 'hl13/sound/creatures/poison/ph_poisonbite.ogg'
 
+	can_zombify = FALSE
+
 	var/poison_type = /datum/reagent/toxin/headcrab_venom
 	var/poison_per_bite = 5
 
@@ -102,6 +123,7 @@
 /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/headcrab
 	blackboard = list(
 		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic,
+		BB_TARGET_MINIMUM_STAT = HARD_CRIT,
 	)
 
 	ai_movement = /datum/ai_movement/basic_avoidance
