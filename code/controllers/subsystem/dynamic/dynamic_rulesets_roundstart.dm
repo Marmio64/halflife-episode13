@@ -136,7 +136,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 		if(candidates.len < min_team_size || candidates.len < required_candidates)
 			break
 		var/datum/team/brother_team/team = new
-		var/team_size = prob(10) ? min(3, candidates.len) : 2
+		var/team_size = prob(25) ? min(3, candidates.len) : 2
 		for(var/k = 1 to team_size)
 			var/mob/bro = pick_n_take(candidates)
 			assigned += bro.mind

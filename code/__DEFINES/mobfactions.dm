@@ -97,6 +97,7 @@
 #define FACTION_HEADCRAB "headcrab"
 #define FACTION_ANTLION "antlion"
 #define FACTION_COMBINE "combine"
+#define FACTION_REFUGEE "refugee"
 
 /// Generates a mob faction for the passed owner, used by stabilized pink extracts
 #define FACTION_PINK_EXTRACT(owner) "pink_[owner]"
