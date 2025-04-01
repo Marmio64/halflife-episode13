@@ -30,7 +30,7 @@
 	death_sound = 'hl13/sound/creatures/zombiedeath.ogg'
 	var/no_crab_state = "zombie_dead_nocrab"
 	var/crabless_possible = TRUE
-	var/headcrabspawn = /mob/living/simple_animal/hostile/halflife/headcrab
+	var/headcrabspawn = /mob/living/basic/halflife/headcrab
 	var/idle_sound_chance = 20
 	var/sound_vary = TRUE
 	var/fungalheal = FALSE
@@ -77,7 +77,7 @@
 	health = 160
 	fungalheal = TRUE
 	move_to_delay = 6
-	headcrabspawn = /mob/living/simple_animal/hostile/halflife/headcrab/armored
+	headcrabspawn = /mob/living/basic/halflife/headcrab/armored
 	var/datum/action/cooldown/spell/conjure/xenfloor/infest
 
 /mob/living/simple_animal/hostile/halflife/zombie/fungal/Initialize(mapload)
@@ -135,7 +135,7 @@
 	var/crabs_left = 3
 	var/nowthrowing = FALSE
 	var/revving_throw = FALSE
-	var/brood_type = /mob/living/simple_animal/hostile/halflife/headcrab/poison
+	var/brood_type = /mob/living/basic/halflife/headcrab/poison
 
 /mob/living/simple_animal/hostile/halflife/zombie/poison/OpenFire()
 	if(nowthrowing)
@@ -167,8 +167,7 @@
 	SLEEP_CHECK_DEATH(delay, src)
 	revving_throw = FALSE
 	playsound(src, 'hl13/sound/creatures/poison/pz_throw3.ogg', 40, sound_vary)
-	var/mob/living/simple_animal/hostile/halflife/headcrab/poison/P = new brood_type(src.loc)
-	P.charge(T)
+	new brood_type(get_turf(src.loc))
 	SLEEP_CHECK_DEATH(delay, src)
 	nowthrowing = FALSE
 	crabs_left--

@@ -32,8 +32,8 @@
 
 	spawn_list.Add(/mob/living/basic/halflife/zombie)
 	spawn_list.Add(/mob/living/basic/halflife/zombie/zombine)
-	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/headcrab)
-	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/headcrab/armored)
-	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/headcrab/poison)
+	spawn_list.Add(/mob/living/basic/halflife/headcrab)
+	spawn_list.Add(/mob/living/basic/halflife/headcrab/armored)
+	spawn_list.Add(/mob/living/basic/halflife/headcrab/poison)
 	if(prob(50))
 		spawn_list.Add(/mob/living/simple_animal/hostile/halflife/zombie/poison)

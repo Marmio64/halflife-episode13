@@ -27,7 +27,7 @@
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie
 	var/no_crab_state = "zombie_dead_nocrab"
 	var/crabless_possible = TRUE
-	var/headcrabspawn = /mob/living/simple_animal/hostile/halflife/headcrab
+	var/headcrabspawn = /mob/living/basic/halflife/headcrab
 	var/idle_sound_chance = 20
 	var/sound_vary = TRUE
 	var/fungalheal = FALSE

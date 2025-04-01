@@ -30,6 +30,6 @@
 	icon = 'icons/mob/simple/lavaland/nest.dmi'
 	spawn_text = "crawls out of"
 	mob_types = list(
-		/mob/living/simple_animal/hostile/halflife/headcrab,
+		/mob/living/basic/halflife/headcrab,
 	)
 	faction = list(FACTION_HEADCRAB)
