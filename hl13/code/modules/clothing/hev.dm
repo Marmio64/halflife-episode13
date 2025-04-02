@@ -1,10 +1,12 @@
 #define SOUND_BEEP(sound) add_queue(##sound, 20)
 #define MORPHINE_INJECTION_DELAY (30 SECONDS)
 
-/obj/item/clothing/suit/armor/hev
+/obj/item/clothing/suit/hooded/hev
 	name = "Hazardous Environments Suit"
 	desc = "An old suit, fully plated and insulated and topped with a tasteful orange coating of paint."
 	icon_state = "hev"
+	worn_icon_state = "hev"
+	hood_up_affix = ""
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	cold_protection = CHEST|GROIN|LEGS|ARMS
@@ -12,7 +14,10 @@
 	flags_inv = HIDESHOES|HIDEJUMPSUIT|HIDEGLOVES
 	strip_delay = 100
 	clothing_flags = THICKMATERIAL
+	armor_type = /datum/armor/hev
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+	hoodtype = /obj/item/clothing/head/hooded/hevhood
 
 	var/static/list/funny_signals = list(
 		COMSIG_LIVING_DEATH = PROC_REF(handle_death),
@@ -55,18 +60,18 @@
 	wound = 20
 
 
-/obj/item/clothing/suit/armor/hev/Initialize(mapload)
+/obj/item/clothing/suit/hooded/hev/Initialize(mapload)
 	. = ..()
 	GC = new(src)
 	GC.scanning = TRUE
 	update_appearance(UPDATE_ICON)
 
-/obj/item/clothing/suit/armor/hev/Destroy()
+/obj/item/clothing/suit/hooded/hev/Destroy()
 	QDEL_NULL(GC)
 	owner = null
 	return ..()
 
-/obj/item/clothing/suit/armor/hev/proc/process_sound_queue()
+/obj/item/clothing/suit/hooded/hev/proc/process_sound_queue()
 
 	var/list/sound_data = sound_queue[1]
 	var/sound_file = sound_data[1]
@@ -81,7 +86,7 @@
 
 	addtimer(CALLBACK(src, PROC_REF(process_sound_queue)), sound_delay)
 
-/obj/item/clothing/suit/armor/hev/emag_act(mob/user, obj/item/card/emag/emag_card)
+/obj/item/clothing/suit/hooded/hev/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if(obj_flags & EMAGGED)
 		return FALSE
 	if(owner)
@@ -91,7 +96,7 @@
 	do_sparks(8, FALSE, get_turf(src))
 	return TRUE
 
-/obj/item/clothing/suit/armor/hev/proc/add_queue(desired_file, desired_delay, purge_queue=FALSE)
+/obj/item/clothing/suit/hooded/hev/proc/add_queue(desired_file, desired_delay, purge_queue=FALSE)
 
 	var/was_empty_sound_queue = !length(sound_queue)
 
@@ -106,7 +111,7 @@
 	return TRUE
 
 //Signal handling.
-/obj/item/clothing/suit/armor/hev/equipped(mob/M, slot)
+/obj/item/clothing/suit/hooded/hev/equipped(mob/M, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_OCLOTHING && iscarbon(M))
 		for(var/k in funny_signals)
@@ -121,20 +126,20 @@
 		for(var/k in funny_signals)
 			UnregisterSignal(M, k)
 
-/obj/item/clothing/suit/armor/hev/dropped(mob/M)
+/obj/item/clothing/suit/hooded/hev/dropped(mob/M)
 	. = ..()
 	for(var/k in funny_signals)
 		UnregisterSignal(M, k)
 
 //Death
-/obj/item/clothing/suit/armor/hev/proc/handle_death(gibbed)
+/obj/item/clothing/suit/hooded/hev/proc/handle_death(gibbed)
 
 	SIGNAL_HANDLER
 
 	add_queue('hl13/sound/voice/hev/death.ogg', 5 SECONDS, purge_queue=TRUE)
 
 //Fire
-/obj/item/clothing/suit/armor/hev/proc/handle_ignite(mob/living)
+/obj/item/clothing/suit/hooded/hev/proc/handle_ignite(mob/living)
 
 	SIGNAL_HANDLER
 
@@ -142,7 +147,7 @@
 	add_queue('hl13/sound/voice/hev/heat.ogg',1 SECONDS)
 
 //Shock
-/obj/item/clothing/suit/armor/hev/proc/handle_shock(mob/living)
+/obj/item/clothing/suit/hooded/hev/proc/handle_shock(mob/living)
 
 	SIGNAL_HANDLER
 
@@ -150,7 +155,7 @@
 	add_queue('hl13/sound/voice/hev/shock.ogg',1 SECONDS)
 
 //Wounds
-/obj/item/clothing/suit/armor/hev/proc/handle_wound_add(mob/living/carbon/C, datum/wound/W, obj/item/bodypart/L)
+/obj/item/clothing/suit/hooded/hev/proc/handle_wound_add(mob/living/carbon/C, datum/wound/W, obj/item/bodypart/L)
 
 	SIGNAL_HANDLER
 
@@ -164,7 +169,7 @@
 		add_queue('hl13/sound/voice/hev/seek_medical.ogg',1 SECONDS)
 		administer_morphine()
 
-/obj/item/clothing/suit/armor/hev/proc/administer_morphine()
+/obj/item/clothing/suit/hooded/hev/proc/administer_morphine()
 	SIGNAL_HANDLER
 	if(!owner.reagents)
 		return
@@ -191,7 +196,7 @@
 	return TRUE
 
 //General Damage
-/obj/item/clothing/suit/armor/hev/proc/handle_damage(mob/living/carbon/C, damage, damagetype, def_zone)
+/obj/item/clothing/suit/hooded/hev/proc/handle_damage(mob/living/carbon/C, damage, damagetype, def_zone)
 	SIGNAL_HANDLER
 
 	if(!COOLDOWN_FINISHED(src, next_damage_notify))
@@ -221,9 +226,23 @@
 			COOLDOWN_START(src, next_damage_notify, 5 SECONDS)
 			administer_morphine()
 
+/obj/item/clothing/head/hooded/hevhood
+	name = "Hazardous Environments Hood"
+	desc = "An old hood, for protecting your head against things that attack your head."
+	icon = 'hl13/icons/mob/clothing/head.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
+	icon_state = "hev"
+	worn_icon_state = "hev"
+	body_parts_covered = HEAD
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+	flags_inv = HIDEFACIALHAIR|HIDEHAIR|HIDEEARS|HIDEEYES|HIDEFACE
+	cold_protection = HEAD
+	heat_protection = HEAD
+	clothing_traits = list(TRAIT_WEARING_GAS_MASK)
+	armor_type = /datum/armor/hev
 
-/obj/item/clothing/suit/armor/hev/deathmatch
-	desc = "An old suit, fully plated and insulated and topped with a tasteful orange coating of paint. This one somehow protects your head too."
+/obj/item/clothing/suit/hooded/hev/deathmatch
+	desc = "An old suit, fully plated and insulated and topped with a tasteful orange coating of paint. The hood has been removed, but this one somehow protects your head anyways."
 	body_parts_covered = HEAD|CHEST|GROIN|ARMS|LEGS
 	slowdown = -0.25
 
