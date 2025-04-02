@@ -15,15 +15,10 @@
 
 /datum/species/human/get_scream_sound(mob/living/carbon/human/human)
 	if(human.physique == MALE)
-		if(prob(1))
-			return 'sound/mobs/humanoids/human/scream/wilhelm_scream.ogg'
 		return pick(
-			'sound/mobs/humanoids/human/scream/malescream_1.ogg',
-			'sound/mobs/humanoids/human/scream/malescream_2.ogg',
-			'sound/mobs/humanoids/human/scream/malescream_3.ogg',
-			'sound/mobs/humanoids/human/scream/malescream_4.ogg',
-			'sound/mobs/humanoids/human/scream/malescream_5.ogg',
-			'sound/mobs/humanoids/human/scream/malescream_6.ogg',
+			'hl13/sound/voice/human/scream/Screams_Male_1.ogg',
+			'hl13/sound/voice/human/scream/Screams_Male_2.ogg',
+			'hl13/sound/voice/human/scream/Screams_Male_3.ogg',
 			'hl13/sound/voice/human/scream/malescream_7.ogg',
 			'hl13/sound/voice/human/scream/malescream_8.ogg',
 			'hl13/sound/voice/human/scream/malescream_9.ogg',
@@ -31,10 +26,8 @@
 
 	return pick(
 		'sound/mobs/humanoids/human/scream/femalescream_1.ogg',
-		'sound/mobs/humanoids/human/scream/femalescream_2.ogg',
-		'sound/mobs/humanoids/human/scream/femalescream_3.ogg',
-		'sound/mobs/humanoids/human/scream/femalescream_4.ogg',
-		'sound/mobs/humanoids/human/scream/femalescream_5.ogg',
+		'hl13/sound/voice/human/scream/Screams_Woman_1.ogg',
+		'hl13/sound/voice/human/scream/Screams_Woman_2.ogg',
 	)
 
 /datum/species/human/get_cough_sound(mob/living/carbon/human/human)
@@ -76,10 +69,15 @@
 
 /datum/species/human/get_laugh_sound(mob/living/carbon/human/human)
 	if(human.physique == FEMALE)
-		return 'sound/mobs/humanoids/human/laugh/womanlaugh.ogg'
+		return pick(
+			'hl13/sound/voice/human/laugh/female_laugh1.ogg',
+			'hl13/sound/voice/human/laugh/female_laugh2.ogg',
+			'hl13/sound/voice/human/laugh/female_laugh3.ogg',
+		)
 	return pick(
-		'sound/mobs/humanoids/human/laugh/manlaugh1.ogg',
-		'sound/mobs/humanoids/human/laugh/manlaugh2.ogg',
+		'hl13/sound/voice/human/laugh/male_laugh1.ogg',
+		'hl13/sound/voice/human/laugh/male_laugh2.ogg',
+		'hl13/sound/voice/human/laugh/male_laugh3.ogg',
 	)
 
 /datum/species/human/get_sigh_sound(mob/living/carbon/human/human)
