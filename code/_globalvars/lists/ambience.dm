@@ -201,6 +201,7 @@ GLOBAL_LIST_INIT(hloutside_ambience,list(
 	'hl13/sound/ambience/hl2_song2.ogg',
 	'hl13/sound/ambience/hl2_song8.ogg',
 	'hl13/sound/ambience/vlvx_song20.ogg',
+	'hl13/sound/ambience/particlestorm.ogg',
 	'sound/ambience/ruin/ambiruin6.ogg', ))
 
 GLOBAL_LIST_INIT(hlinside_ambience,list(
@@ -214,6 +215,7 @@ GLOBAL_LIST_INIT(hlinside_ambience,list(
 	'hl13/sound/ambience/hl2_song2.ogg',
 	'hl13/sound/ambience/hl2_song8.ogg',
 	'hl13/sound/ambience/vlvx_song20.ogg',
+	'hl13/sound/ambience/particlestorm.ogg', //https://www.youtube.com/watch?v=7TCGv1Jejd0&list=PL80BLZPE6cUJwx-AveOU4sGYJyqN4jJDC&index=50&ab_channel=zeNate
 	'sound/ambience/ruin/ambiruin6.ogg', ))
 
 GLOBAL_LIST_INIT(hlsewers_ambience,list(
@@ -221,7 +223,7 @@ GLOBAL_LIST_INIT(hlsewers_ambience,list(
 	'sound/ambience/maintenance/ambimaint2.ogg',
 	'sound/ambience/maintenance/ambimaint3.ogg',
 	'sound/ambience/maintenance/ambimaint4.ogg',
-	'sound/ambience/maintenance/ambimaint5.ogg',
+	'hl13/sound/ambience/deprecatedcooridors.ogg', //https://www.youtube.com/watch?v=bt3Ms9-bs9o&list=PL80BLZPE6cUJwx-AveOU4sGYJyqN4jJDC&index=35&ab_channel=zeNate
 	'hl13/sound/ambience/probablynotaproblem.ogg',
 	'hl13/sound/ambience/vlvx_song3.ogg',
 	'hl13/sound/ambience/vlvx_song20.ogg',
@@ -266,6 +268,7 @@ GLOBAL_LIST_INIT(halflife_ambient_music,list(
 	'hl13/sound/ambience/vaguevoices.ogg',
 	'hl13/sound/ambience/escapearray.ogg',
 	'hl13/sound/ambience/resurrectedteleport.ogg',
+	'hl13/sound/ambience/particlestorm.ogg',
 	'hl13/sound/ambience/calabiyaumodel.ogg',))
 
 GLOBAL_LIST_INIT(ambience_assoc,list(

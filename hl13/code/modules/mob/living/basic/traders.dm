@@ -2,8 +2,8 @@
 	name = "Refugee Smuggler"
 	desc = "A gruff looking man, with the wares you need, though perhaps not the ones you want. His coat conceals a revolver, and a hefty amount of body armor."
 
-	maxHealth = 300
-	health = 300
+	maxHealth = 250
+	health = 250
 	blood_volume = BLOOD_VOLUME_NORMAL
 
 	spawner_path = /obj/effect/mob_spawn/corpse/human/refugee_smuggler
@@ -14,6 +14,10 @@
 	held_weapon_visual = /obj/item/gun/ballistic/revolver/coltpython
 
 	trader_data_path = /datum/trader_data/halflife/smuggler
+
+	ai_controller = /datum/ai_controller/basic_controller/trader/halflife
+
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
 
 /obj/effect/mob_spawn/corpse/human/refugee_smuggler
 	name = "Refugee Smuggler"
@@ -32,6 +36,49 @@
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/combat
 	mask = /obj/item/clothing/mask/gas/hl2/military
+
+/// refugee guard
+/mob/living/basic/trooper/rebel/mp7/refugee
+	name = "Refugee Guard"
+	desc = "An armed fellow, looking to protect his employer."
+	maxHealth = 150
+	health = 150
+	loot = list(/obj/effect/mob_spawn/corpse/human/refugeeguard)
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/refugeeguard
+	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/rebel/refugeeguard
+	death_sound = 'hl13/sound/voice/human/scream/malescream_8.ogg'
+
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+
+/mob/living/basic/trooper/rebel/mp7/refugee/Initialize(mapload)
+	. = ..()
+	AddComponent(\
+		/datum/component/ranged_attacks,\
+		casing_type = casingtype,\
+		projectile_sound = projectilesound,\
+		cooldown_time = ranged_cooldown,\
+		burst_shots = burst_shots,\
+	)
+	if (ranged_cooldown <= 1 SECONDS)
+		AddComponent(/datum/component/ranged_mob_full_auto)
+
+	AddElement(/datum/element/ai_retaliate)
+
+/obj/effect/mob_spawn/corpse/human/refugeeguard
+	name = "Refugee Guard"
+	hairstyle = "Business Hair 3"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/refugeeguard
+
+/datum/outfit/refugeeguard
+	name = "Refugee Guard Corpse"
+
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+	uniform = /obj/item/clothing/under/citizen/refugee
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
+	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/fingerless
+
 
 /datum/trader_data/halflife/smuggler
 	shop_spot_type = /obj/structure/chair/halflife/overlaypickup/plastic
@@ -170,4 +217,41 @@
 			"I've got what you need, stranga'.",
 			"Come over here, pal, i've got the goods.",
 		),
+	)
+
+/datum/ai_controller/basic_controller/trader/halflife
+	blackboard = list(
+		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic,
+		BB_REINFORCEMENTS_EMOTE = "shouts for help!",
+	)
+
+	ai_movement = /datum/ai_movement/basic_avoidance
+	idle_behavior = /datum/idle_behavior/idle_random_walk/not_while_on_target/trader
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/call_reinforcements,
+		/datum/ai_planning_subtree/target_retaliate,
+		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trader,
+		/datum/ai_planning_subtree/prepare_travel_to_destination/trader,
+		/datum/ai_planning_subtree/travel_to_point/and_clear_target,
+		/datum/ai_planning_subtree/setup_shop,
+	)
+
+/datum/ai_planning_subtree/random_speech/refugeeguard
+	speech_chance = 2
+	emote_see = list("takes a drag from a cigarette.", "yawns.", "scratches their back.", "looks around.")
+	speak = list(
+		"Kolejny dzień, kolejny dolar...",
+		"One day, it'll all be over.",
+		"Just don't try anything.",
+		"I'll see her again one day...",
+	)
+
+/datum/ai_controller/basic_controller/trooper/ranged/burst/rebel/refugeeguard
+	idle_behavior = null
+
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/target_retaliate,
+		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trooper_burst,
+		/datum/ai_planning_subtree/travel_to_point/and_clear_target/reinforce,
+		/datum/ai_planning_subtree/random_speech/refugeeguard,
 	)

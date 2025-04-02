@@ -19,6 +19,9 @@
 	attack_verb_continuous = list("hits", "pierces", "slices", "attacks")
 	attack_verb_simple = list("hit", "pierce", "slice", "attack")
 
+	can_parry = TRUE //hl13 edit
+	wdefense = 1 //hl13 edit
+
 /obj/item/pickaxe/suicide_act(mob/living/user)
 	user.visible_message(span_suicide("[user] begins digging into [user.p_their()] chest! It looks like [user.p_theyre()] trying to commit suicide!"))
 	if(use_tool(user, user, 30, volume=50))
@@ -42,6 +45,8 @@
 	slot_flags = ITEM_SLOT_BELT
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron=HALF_SHEET_MATERIAL_AMOUNT)
+
+	wdefense = 0 //hl13 edit
 
 /obj/item/pickaxe/silver
 	name = "silver-plated pickaxe"

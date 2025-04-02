@@ -87,6 +87,10 @@
 			readout += "It takes about [span_warning("[HITS_TO_CRIT(source.throwforce)] throwing hit\s")] to take down an enemy."
 		else
 			readout += "It does not deal noticeable throwing damage."
+
+		if(source.can_parry) //hl13 edit
+			readout += "It can be used to parry, and has a defense rating of [(source.wdefense)*10]%." //hl13 edit
+
 		if(source.armour_penetration > 0 || source.block_chance > 0)
 			readout += "It has [span_warning("[weapon_tag_convert(source.armour_penetration)]")] armor-piercing capability and [span_warning("[weapon_tag_convert(source.block_chance)]")] blocking capability."
 	// Custom manual notes

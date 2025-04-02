@@ -52,3 +52,24 @@
 
 /datum/species/vortigaunt/get_laugh_sound(mob/living/carbon/human/vortigaunt)
 	return 'hl13/sound/voice/vortigaunt/galunga.ogg'
+
+/datum/species/vortigaunt/elder
+	name = "Elder Vortigaunt"
+	id = SPECIES_VORTIGAUNT_ELDER
+	damage_modifier = 10
+	var/datum/action/cooldown/spell/aoe/repulse/wizard/vort/vortrepulse
+	var/datum/action/cooldown/spell/forcewall/vort/vortwall
+
+/datum/species/vortigaunt/elder/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+	. = ..()
+
+	vortrepulse = new(C)
+	vortrepulse.Grant(C)
+
+	vortwall = new(C)
+	vortwall.Grant(C)
+
+/datum/species/vortigaunt/elder/on_species_loss(mob/living/carbon/C)
+	..()
+	vortrepulse.Remove(C)
+	vortwall.Remove(C)

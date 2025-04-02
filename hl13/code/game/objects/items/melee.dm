@@ -1,3 +1,8 @@
+/obj/item/melee
+	//We are going to assume all melee weapons can be used for parrying as a default
+	can_parry = TRUE
+	wdefense = 2
+
 /obj/item/melee/sledgehammer
 	name = "sledgehammer"
 	desc = "An archaic tool used to drive nails and break down hollow walls."
@@ -19,6 +24,8 @@
 	attack_verb_simple = list("attack", "bash", "strik", "smash")
 	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = ITEM_SLOT_BACK
+
+	wdefense = 1 //too heavy to effectively parry with
 
 /obj/item/melee/sledgehammer/Initialize(mapload)
 	. = ..()
@@ -89,6 +96,9 @@
 	icon_prefix = "spear"
 	force_unwielded = 15
 	force_wielded = 24
+
+	can_parry = TRUE
+	wdefense = 4
 
 /obj/item/spear/halflife/deathmatch
 	force = 30

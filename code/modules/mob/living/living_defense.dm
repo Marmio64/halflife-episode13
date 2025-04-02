@@ -101,6 +101,7 @@
 		if(prob(20))
 			visible_message(span_danger("[src] is narrowly missed by \a [proj]!"), \
 					span_userdanger("You're narrowly missed by \a [proj]!"), null, COMBAT_MESSAGE_RANGE)
+			SEND_SOUND(src, sound('hl13/sound/effects/miss1.ogg', volume = 40))
 			return BULLET_ACT_FORCE_PIERCE
 	//hl13 edit end
 

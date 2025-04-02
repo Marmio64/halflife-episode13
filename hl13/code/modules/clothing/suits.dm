@@ -38,6 +38,12 @@
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 
+/obj/item/clothing/suit/armor/civilprotection/trenchcoat/cremator
+	name = "trench coat"
+	desc = "An armored black trenchcoat."
+	icon_state = "crematorjacket"
+	slowdown = 0.25
+
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/overseer
 	name = "overseer trenchcoat"
 	icon_state = "cp_trenchcoatoverseer"

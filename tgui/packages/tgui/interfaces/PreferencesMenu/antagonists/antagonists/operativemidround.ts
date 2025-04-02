@@ -6,8 +6,8 @@ const OperativeMidround: Antagonist = {
   name: 'Nuclear Assailant',
   description: [
     `
-      A form of nuclear operative that is offered to ghosts in the middle
-      of the shift.
+      You've arrived as part of a rebel strike team to assault the city.
+      Complete the mission, or die trying.
     `,
     OPERATIVE_MECHANICAL_DESCRIPTION,
   ],

@@ -142,7 +142,9 @@
 #define SPECIES_ZOMBIE_KROKODIL "krokodil_zombie"
 #define SPECIES_VOIDWALKER "voidwalker"
 #define SPECIES_VORTIGAUNT "vortigaunt"
+#define SPECIES_VORTIGAUNT_ELDER "eldervortigaunt"
 #define SPECIES_STALKER "stalker"
+#define SPECIES_SYNTHHUMAN "synthhuman"
 
 // Like species IDs, but not specifically attached a species.
 #define BODYPART_ID_ALIEN "alien"

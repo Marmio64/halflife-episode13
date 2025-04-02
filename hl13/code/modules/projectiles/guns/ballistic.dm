@@ -18,6 +18,16 @@
 	pin = /obj/item/firing_pin/implant/mindshield
 	slowdown = 0.25
 
+	load_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
+	load_empty_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
+
+	eject_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
+	eject_empty_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
+
+	rack_sound = 'hl13/sound/weapons/ar2_reload_push.ogg'
+	lock_back_sound = 'hl13/sound/weapons/ar2_reload_push.ogg'
+	bolt_drop_sound = 'hl13/sound/weapons/ar2_reload_push.ogg'
+
 /obj/item/gun/ballistic/automatic/ar2/nopin
 	pin = null
 
