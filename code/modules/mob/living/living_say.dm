@@ -256,6 +256,22 @@ GLOBAL_LIST_INIT(message_modes_stat_limits, list(
 	if(pressure < ONE_ATMOSPHERE * (HAS_TRAIT(src, TRAIT_SPEECH_BOOSTER) ? 0.1 : 0.4)) //Thin air, let's italicise the message unless we have a loud low pressure speech trait and not in vacuum
 		spans |= SPAN_ITALICS
 
+	//hl13 edit start
+	if(!message_mods[WHISPER_MODE])
+		var/ending = copytext(message, length(message))
+		var/sound_key = "m"
+		var/sound_end = ""//Blank string by default
+		if(gender == FEMALE)
+			sound_key = "f"
+		if(gender == NEUTER || gender == PLURAL)
+			sound_key = "n"
+		if(ending=="?")
+			sound_end = "_ask"
+		if(ending=="!")
+			sound_end = "_exclaim"
+		playsound(src, "hl13/sound/voice/human/speech/[sound_key]speak[sound_end].ogg", 100)//Play the talking sound.
+	//hl13 edit end
+
 	send_speech(message, message_range, src, bubble_type, spans, language, message_mods, tts_message = tts_message, tts_filter = tts_filter)//roughly 58% of living/say()'s total cost
 	if(succumbed)
 		succumb(TRUE)

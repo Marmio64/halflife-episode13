@@ -31,7 +31,7 @@
 	/// Whether the smartfridge is welded down to the floor disabling unwrenching
 	var/welded_down = FALSE
 	/// The sound of item retrieval
-	var/vend_sound = 'sound/machines/machine_vend.ogg'
+	var/vend_sound = 'hl13/sound/machines/vending.ogg' //hl13 edit sound
 	/// Whether the UI should be set to list view by default
 	var/default_list_view = FALSE
 

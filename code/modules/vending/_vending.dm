@@ -788,7 +788,7 @@ GLOBAL_LIST_EMPTY(vending_machines_to_restock)
 	visible_message(span_notice("[src] yields [freebies > 1 ? "several free goodies" : "a free goody"][credits_contained > 0 ? " and some credits" : ""]!"))
 
 	for(var/i in 1 to freebies)
-		playsound(src, 'sound/machines/machine_vend.ogg', 50, TRUE, extrarange = -3)
+		playsound(src, 'hl13/sound/machines/vending.ogg', 50, TRUE, extrarange = -3) //hl13 edit sound
 		for(var/datum/data/vending_product/record in shuffle(product_records))
 
 			if(record.amount <= 0) //Try to use a record that actually has something to dump.
@@ -1463,7 +1463,7 @@ GLOBAL_LIST_EMPTY(vending_machines_to_restock)
 	use_energy(active_power_usage)
 	if(icon_vend) //Show the vending animation if needed
 		flick(icon_vend,src)
-	playsound(src, 'sound/machines/machine_vend.ogg', 50, TRUE, extrarange = -3)
+	playsound(src, 'hl13/sound/machines/vending.ogg', 50, TRUE, extrarange = -3) //hl13 edit sound
 	var/obj/item/vended_item
 	if(!LAZYLEN(item_record.returned_products)) //always give out free returned stuff first, e.g. to avoid walling a traitor objective in a bag behind paid items
 		vended_item = new item_record.product_path(get_turf(src))
