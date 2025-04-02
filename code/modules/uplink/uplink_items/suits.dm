@@ -25,6 +25,6 @@
 /datum/uplink_item/suits/copsuit
 	name = "HEV Suit"
 	desc = "A heavily armored suit designed for hazardous environments, with built in medical systems."
-	item = /obj/item/clothing/suit/armor/hev
+	item = /obj/item/clothing/suit/hooded/hev
 	cost = 25
 	progression_minimum = 15 MINUTES

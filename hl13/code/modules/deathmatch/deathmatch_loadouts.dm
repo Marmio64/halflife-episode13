@@ -158,7 +158,7 @@
 	desc = "Crowbar in hand, seek freedom."
 	l_hand = /obj/item/crowbar/large/freeman/extreme
 	uniform = /obj/item/clothing/under/citizen/rebel
-	suit = /obj/item/clothing/suit/armor/hev/deathmatch
+	suit = /obj/item/clothing/suit/hooded/hev/deathmatch
 	glasses = /obj/item/clothing/glasses/regular/thin
 
 /datum/outfit/deathmatch_loadout/citizen
