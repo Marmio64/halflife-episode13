@@ -219,6 +219,10 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 	log_econ("[item_to_buy] has been sold to [customer] (typepath used for product info; [item_to_buy.type]) by [trader] for [product_info[TRADER_PRODUCT_INFO_PRICE]] cash.")
 	product_info[TRADER_PRODUCT_INFO_QUANTITY] -= 1
 	trader.say(trader_data.return_trader_phrase(BUY_PHRASE))
+	//hl13 edit begin
+	if(trader_data.sociostability_loss)
+		SSsociostability.modifystability(trader_data.sociostability_loss)
+	//hl13 edit end
 
 ///Calculates the value of money in the hand of the buyer and spends it if it's sufficient
 /datum/component/trader/proc/spend_buyer_offhand_money(mob/customer, the_cost)
@@ -312,6 +316,10 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 	log_econ("[selling] has been sold to [trader] (typepath used for product info; [typepath_for_product_info]) by [customer] for [cost] cash.")
 	exchange_sold_items(selling, cost, typepath_for_product_info)
 	generate_cash(cost, customer)
+	//hl13 edit begin
+	if(trader_data.sociostability_loss)
+		SSsociostability.modifystability(trader_data.sociostability_loss)
+	//hl13 edit end
 	return TRUE
 
 /**

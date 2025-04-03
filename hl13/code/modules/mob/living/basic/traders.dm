@@ -83,6 +83,7 @@
 /datum/trader_data/halflife/smuggler
 	shop_spot_type = /obj/structure/chair/halflife/overlaypickup/plastic
 	sign_type = /obj/structure/halflife/sign/shop
+	sociostability_loss = -1
 
 	initial_products = list(
 		/obj/item/ammo_box/magazine/makeshift9mm = list(PAYCHECK_CREW * 2, 5),
@@ -159,7 +160,7 @@
 		BUY_PHRASE = list(
 			"Enjoy it, stranga'.",
 			"Heh, hope you like it, stranga'.",
-			"Knew you'd fine somethin' ya like.",
+			"Knew you'd find somethin' ya like.",
 			"They always leave a happy customer, heheh.",
 		),
 		NO_CASH_PHRASE = list(

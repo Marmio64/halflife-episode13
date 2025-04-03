@@ -9,6 +9,8 @@
 	var/sell_sound = 'sound/effects/cashregister.ogg'
 	///The currency name
 	var/currency_name = "credits"
+	///Hl13 edit, does the trader deduct sociostability when bought from or sold to?
+	var/sociostability_loss
 	///The initial products that the trader offers
 	var/list/initial_products = list(
 		/obj/item/food/burger/ghost = list(PAYCHECK_CREW * 4, INFINITY),
