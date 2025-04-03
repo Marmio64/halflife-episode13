@@ -61,7 +61,7 @@
 /mob/living/basic/halflife/headcrab/Initialize(mapload)
 	. = ..()
 	grant_actions_by_list(get_innate_abilities())
-
+	AddElement(/datum/element/footstep, FOOTSTEP_MOB_CLAW)
 
 /mob/living/basic/halflife/headcrab/armored
 	name = "Armored Headcrab"

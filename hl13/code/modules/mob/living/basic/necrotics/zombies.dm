@@ -56,6 +56,10 @@
 		new headcrabspawn(get_turf(src))
 	..()
 
+/mob/living/basic/halflife/zombie/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE)
+
 /mob/living/basic/halflife/zombie/zombine
 	name = "Zombine"
 	desc = "A shambling combine soldier, taken over by a parasitic head crab."
@@ -70,6 +74,27 @@
 	crabless_possible = FALSE
 	idle_sounds = list('hl13/sound/creatures/zombinesound1.ogg', 'hl13/sound/creatures/zombinesound2.ogg', 'hl13/sound/creatures/zombinesound3.ogg', 'hl13/sound/creatures/zombinesound4.ogg')
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombine
+
+/mob/living/basic/halflife/zombie/fungal
+	name = "Fungal Zombie"
+	desc = "A shambling human, taken over by a parasitic head crab. This one is covered in a spreading fungal infection."
+	icon_state = "fungalzombie"
+	icon_living = "fungalzombie"
+	icon_dead = "fungalzombie_dead"
+	no_crab_state = "fungalzombie_nocrab"
+	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1, /obj/item/stack/sheet/cloth = 1)
+	maxHealth = 160
+	health = 160
+	speed = 1.4
+	headcrabspawn = /mob/living/basic/halflife/headcrab/armored
+	fungalheal = TRUE
+	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombine
+	var/datum/action/cooldown/spell/conjure/xenfloor/infest
+
+/mob/living/basic/halflife/zombie/fungal/Initialize(mapload)
+	. = ..()
+	infest = new(src)
+	infest.Grant(src)
 
 /mob/living/basic/halflife/zombie/fast
 	name = "Fast Zombie"
