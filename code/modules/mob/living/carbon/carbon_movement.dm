@@ -47,7 +47,7 @@
 			toggle_move_intent()
 
 	adjust_nutrition(-1 * hunger_loss)
-	adjust_hydration(-2 * hunger_loss)
+	adjust_hydration(-3 * hunger_loss)
 
 /mob/living/carbon/set_usable_legs(new_value)
 	. = ..()

@@ -155,7 +155,7 @@
 		hunger_rate *= hunger_modifier
 		hunger_rate *= human.physiology.hunger_mod
 		human.adjust_nutrition(-hunger_rate * seconds_per_tick)
-		human.adjust_hydration((-hunger_rate * seconds_per_tick)*2) //HL13 EDIT
+		human.adjust_hydration((-hunger_rate * seconds_per_tick)*3) //HL13 EDIT
 
 	var/nutrition = human.nutrition
 	var/hydration = human.hydration

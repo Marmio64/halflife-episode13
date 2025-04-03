@@ -2367,11 +2367,6 @@
 /obj/item/tank/internals/emergency_oxygen/engi,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall/civilprotection/preproom)
-"dNU" = (
-/obj/structure/table/halflife/metal/heavy,
-/obj/machinery/mill,
-/turf/open/floor/plating/indoor/metal/industrial,
-/area/halflife/indoors/productioncenter)
 "dOf" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/effect/spawner/random/halflife/loot/heal,
@@ -3865,6 +3860,11 @@
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/laborunion)
+"fYg" = (
+/obj/structure/table/halflife/metal/heavy,
+/obj/machinery/mill,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "fYw" = (
 /obj/structure/table/halflife/no_smooth/large/wood/square{
 	dir = 1
@@ -4874,6 +4874,7 @@
 /area/halflife/indoors/bar/apartments)
 "hwY" = (
 /obj/structure/halflife/pallet,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "hxO" = (
@@ -9946,6 +9947,10 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/antlioncave)
+"pDb" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/metal/pipe/corner,
+/area/halflife/indoors/sewer)
 "pDe" = (
 /obj/structure/table/halflife/no_smooth/metal,
 /obj/machinery/light/small/directional/east,
@@ -11743,6 +11748,13 @@
 "smi" = (
 /turf/open/openspace,
 /area/halflife/indoors)
+"smo" = (
+/obj/structure/chair/halflife/metal/folding{
+	dir = 8
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer)
 "smv" = (
 /obj/effect/turf_decal/halflife/covering/wallpaper/blue,
 /turf/closed/wall/halflife/brick,
@@ -26660,7 +26672,7 @@ mnc
 pLi
 dgU
 dgU
-dgU
+lyR
 pLi
 gyl
 gyl
@@ -26912,7 +26924,7 @@ sBL
 sBL
 sBL
 sBL
-skI
+pDb
 pLi
 dgU
 dgU
@@ -28059,7 +28071,7 @@ dgU
 dgU
 pLi
 rNt
-eVa
+smo
 cma
 dgU
 dgU
@@ -45969,7 +45981,7 @@ uXQ
 uby
 nba
 cMd
-dNU
+fYg
 cMd
 cMd
 qmJ
@@ -46360,7 +46372,7 @@ uby
 sIK
 ivr
 bMK
-dNU
+fYg
 cMd
 cMd
 xlj

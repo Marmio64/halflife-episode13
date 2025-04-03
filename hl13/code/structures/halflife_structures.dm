@@ -242,6 +242,14 @@
 /obj/structure/ladder/halflife/manhole/upwards
 	icon_state = "ladder10"
 
+/obj/structure/ladder/halflife/use(mob/user, list/modifiers)
+	if(isliving(user))
+		var/mob/living/living_mob = user
+		if(living_mob.mob_size > MOB_SIZE_HUMAN)
+			to_chat(user, span_notice("You're too large to climb this."))
+			return
+	. = ..()
+
 /obj/structure/ladder/halflife/manhole/examine(mob/user)
 	. = ..()
 	. += "<span class='notice'>Use <b>RIGHT-CLICK</b> on [src] to open or close it.</span>"

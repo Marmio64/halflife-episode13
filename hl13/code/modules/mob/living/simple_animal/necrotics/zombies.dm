@@ -107,6 +107,8 @@
 	lighting_cutoff_red = 30
 	lighting_cutoff = 10
 
+	mob_size = MOB_SIZE_LARGE
+
 	footstep_type = FOOTSTEP_MOB_GONOME
 	attack_sound = 'hl13/sound/creatures/gonome/attack_player.ogg'
 	death_sound = 'hl13/sound/creatures/gonome/react_minor_scream_03.ogg'
