@@ -32,7 +32,10 @@
 	player_mind.transfer_to(S)
 	player_mind.set_assigned_role(SSjob.get_job_type(/datum/job/nightmare))
 	player_mind.special_role = "Vortigaunt"
-	S.set_species(/datum/species/vortigaunt)
+	if(prob(25))
+		S.set_species(/datum/species/vortigaunt/elder)
+	else
+		S.set_species(/datum/species/vortigaunt)
 	playsound(S, 'sound/effects/magic/ethereal_exit.ogg', 50, TRUE, -1)
 	message_admins("[ADMIN_LOOKUPFLW(S)] has been made into a Vortigaunt by an event.")
 	S.log_message("was spawned as a Vortigaunt by an event.", LOG_GAME)

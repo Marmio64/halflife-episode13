@@ -38,6 +38,9 @@
 	. = ..()
 
 	var/list/possible_items = list(/obj/item/stack/sheet/iron,
+									/obj/item/stack/sheet/ironpowder,
+									/obj/item/stack/sheet/ironingot,
+									/obj/item/stack/sheet/scrap_parts,
 									/obj/item/stack/cable_coil,
 									/obj/item/stack/rods,
 									/obj/item/stack/sheet/glass,

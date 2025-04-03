@@ -92,7 +92,7 @@
 	singular_name = "iron ore chunk"
 	points = 1
 	mats_per_unit = list(/datum/material/iron=SHEET_MATERIAL_AMOUNT)
-	refined_type = /obj/item/stack/sheet/iron
+	refined_type = /obj/item/stack/sheet/ironingot //hl13 edit
 	mine_experience = 1
 	scan_state = "rock_Iron"
 	spreadChance = 20

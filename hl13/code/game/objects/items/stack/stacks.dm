@@ -13,6 +13,50 @@
 	tableVariant = /obj/structure/table/halflife/metal/constructed/cobbled
 	matter_amount = 2
 
+/obj/item/stack/sheet/ironingot
+	icon = 'hl13/icons/obj/stack_objects.dmi'
+	name = "iron ingots"
+	desc = "Solid chunks of iron. Unusable in this state, it'll have to be pressed out into sheets."
+	singular_name = "iron ingot"
+	icon_state = "ironingot"
+	throwforce = 10
+	obj_flags = CONDUCTS_ELECTRICITY
+	resistance_flags = FIRE_PROOF
+	merge_type = /obj/item/stack/sheet/ironingot
+	grind_results = list(/datum/reagent/iron = 20)
+	tableVariant = /obj/structure/table/halflife/metal/constructed
+	matter_amount = 2
+	novariants = TRUE
+
+/obj/item/stack/sheet/ironpowder
+	icon = 'hl13/icons/obj/stack_objects.dmi'
+	name = "iron powder"
+	desc = "Finely pulverized iron. Might be useful for certain factory goods, but you're not sure what else."
+	singular_name = "iron powder"
+	icon_state = "ironpowder"
+	throwforce = 10
+	obj_flags = CONDUCTS_ELECTRICITY
+	resistance_flags = FIRE_PROOF
+	merge_type = /obj/item/stack/sheet/ironpowder
+	grind_results = list(/datum/reagent/iron = 20)
+	matter_amount = 2
+	novariants = TRUE
+
+/obj/item/stack/sheet/scrap_parts
+	icon = 'hl13/icons/obj/stack_objects.dmi'
+	name = "scrap parts"
+	desc = "Random spare metal parts."
+	singular_name = "scrap parts"
+	icon_state = "sheet-scrapparts"
+	base_icon_state = "sheet-scrapparts"
+	throwforce = 10
+	obj_flags = CONDUCTS_ELECTRICITY
+	resistance_flags = FIRE_PROOF
+	merge_type = /obj/item/stack/sheet/scrap_parts
+	grind_results = list(/datum/reagent/iron = 20)
+	matter_amount = 2
+
+
 /obj/item/stack/sheet/mineral/scrap_wood
 	icon = 'hl13/icons/obj/stack_objects.dmi'
 	name = "scrap wood"

@@ -40,7 +40,7 @@
 
 /// Become a zombie
 /mob/living/basic/halflife/headcrab/proc/zombify(mob/living/carbon/human/target)
-	visible_message(span_warning("The corpse of [target.name] suddenly rises!"))
+	visible_message(span_warning("The body of [target.name] suddenly rises, as a headcrab attaches to it!"))
 	var/mob/living/basic/halflife/zombie/freshly_crabbed/newzombie = change_mob_type(zombie_type, loc, new_name = initial(zombie_type.name))
 	newzombie.faction |= faction //inherit the head crab's faction in case it was spawned with a different one
 	newzombie.set_name()

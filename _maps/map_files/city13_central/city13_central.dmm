@@ -2367,6 +2367,11 @@
 /obj/item/tank/internals/emergency_oxygen/engi,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/townhall/civilprotection/preproom)
+"dNU" = (
+/obj/structure/table/halflife/metal/heavy,
+/obj/machinery/mill,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "dOf" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/effect/spawner/random/halflife/loot/heal,
@@ -10347,6 +10352,11 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/trainstation)
+"qmJ" = (
+/obj/structure/table/halflife/metal/heavy,
+/obj/machinery/press,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "qmV" = (
 /obj/structure/table/halflife/metal/small,
 /obj/item/radio/intercom/prison/directional/north,
@@ -11855,8 +11865,10 @@
 /area/halflife/indoors/townhall/civilprotection/preproom)
 "sxG" = (
 /obj/structure/closet/crate,
-/obj/item/stack/sheet/iron/twenty,
 /obj/effect/turf_decal/box,
+/obj/item/stack/sheet/ironingot{
+	amount = 20
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/productioncenter)
 "sxW" = (
@@ -45701,10 +45713,10 @@ uXQ
 uby
 iOI
 ffp
-jbp
+qmJ
 ffp
 cMd
-jbp
+qmJ
 vas
 bMK
 aDo
@@ -45957,10 +45969,10 @@ uXQ
 uby
 nba
 cMd
+dNU
 cMd
 cMd
-cMd
-jbp
+qmJ
 bMK
 bMK
 icw
@@ -46092,7 +46104,7 @@ jbp
 bMK
 rJi
 bMK
-cMd
+hgk
 cMd
 cuj
 xlj
@@ -46220,7 +46232,7 @@ hgk
 bMK
 ivr
 bMK
-hgk
+jbp
 cMd
 cMd
 lHv
@@ -46348,7 +46360,7 @@ uby
 sIK
 ivr
 bMK
-jbp
+dNU
 cMd
 cMd
 xlj

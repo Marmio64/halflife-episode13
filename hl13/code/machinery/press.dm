@@ -1,0 +1,60 @@
+/obj/machinery/press
+	name = "press machine"
+	desc = "An industrial piece of machinery which can emit enough pressure to compress and form plates out of metal, or pulverize metals."
+	icon = 'hl13/icons/obj/machines/machinery.dmi'
+	icon_state = "press"
+
+/obj/machinery/press/examine(mob/user)
+	. = ..()
+	. += span_notice("You can hit it with metal ingots to work them into plate sheets.")
+	. += span_notice("You can hit it with metal sheets to work them into powder.")
+	. += span_notice("You can hit it with metal scrap to work them into plate sheets.")
+
+/obj/machinery/press/attackby(obj/item/I, mob/living/user, params)
+	var/obj/item/bodypart/arm = user.get_bodypart(user.active_hand_index % 2 ? BODY_ZONE_L_ARM : BODY_ZONE_R_ARM)
+
+	if(istype(I, /obj/item/stack/sheet/ironingot))
+		var/obj/item/stack/sheet/ironingot/C = I
+		to_chat(usr, span_notice("Pressing metal..."))
+		if(do_after(user, 2 SECONDS, src))
+			C.use(1)
+			new /obj/item/stack/sheet/iron(user.loc, 1)
+			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)
+		else if(prob(5))
+			to_chat(user, span_userdanger("You prematurely stop pressing the metal, and your arm gets caught in the press!"))
+			arm.force_wound_upwards(/datum/wound/blunt/bone/moderate)
+			arm.receive_damage(15)
+			user.emote("scream")
+	if(istype(I, /obj/item/stack/sheet/iron))
+		var/obj/item/stack/sheet/iron/C = I
+		to_chat(usr, span_notice("Pulverizing metal..."))
+		if(do_after(user, 3 SECONDS, src))
+			C.use(1)
+			new /obj/item/stack/sheet/ironpowder(user.loc, 1)
+			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)
+		else if(prob(5))
+			to_chat(user, span_userdanger("You prematurely stop pulverizing the metal, and your arm gets caught in the press!"))
+			arm.force_wound_upwards(/datum/wound/blunt/bone/moderate)
+			arm.receive_damage(15)
+			user.emote("scream")
+	if(istype(I, /obj/item/stack/sheet/scrap_metal))
+		var/obj/item/stack/sheet/scrap_metal/C = I
+		to_chat(usr, span_notice("Pressing metal..."))
+		if(do_after(user, 3 SECONDS, src))
+			C.use(1)
+			new /obj/item/stack/sheet/iron(user.loc, 1)
+			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)
+		else if(prob(5))
+			to_chat(user, span_userdanger("You prematurely stop pressing the metal, and your arm gets caught in the press!"))
+			arm.force_wound_upwards(/datum/wound/blunt/bone/moderate)
+			arm.receive_damage(15)
+			user.emote("scream")
+
+/obj/machinery/press/interact(mob/living/carbon/human/user)
+	. = ..()
+	var/obj/item/bodypart/arm = user.get_bodypart(user.active_hand_index % 2 ? BODY_ZONE_L_ARM : BODY_ZONE_R_ARM)
+	if(prob(5))
+		to_chat(user, span_userdanger("You reach out to touch the press, and accidentally set it off on your hand!"))
+		arm.force_wound_upwards(/datum/wound/blunt/bone/moderate)
+		arm.receive_damage(15)
+		user.emote("scream")
