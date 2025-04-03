@@ -473,6 +473,11 @@ GLOBAL_LIST_EMPTY(crematoriums)
 				continue
 			if (M.stat != DEAD)
 				M.emote("scream")
+			//hl13 edit start
+			else
+				if(ishuman(M))
+					SSsociostability.modifystability(2) //getting rid of corpses is at least better than keeping them around for no reason
+			//hl13 edit end
 			if(user)
 				log_combat(user, M, "cremated")
 			else

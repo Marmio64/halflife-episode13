@@ -3860,11 +3860,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/laborunion)
-"fYg" = (
-/obj/structure/table/halflife/metal/heavy,
-/obj/machinery/mill,
-/turf/open/floor/plating/indoor/metal/industrial,
-/area/halflife/indoors/productioncenter)
 "fYw" = (
 /obj/structure/table/halflife/no_smooth/large/wood/square{
 	dir = 1
@@ -4319,6 +4314,10 @@
 "gEq" = (
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/townhall/civilprotection/range)
+"gEU" = (
+/obj/structure/bodycontainer/crematorium,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/productioncenter/infestation)
 "gFa" = (
 /obj/structure/table/halflife/no_smooth/wood,
 /obj/structure/halflife/trash/food/glass,
@@ -6521,6 +6520,10 @@
 /area/halflife/outdoors/plaza)
 "khF" = (
 /obj/machinery/light/small/directional/south,
+/obj/structure/rack,
+/obj/effect/turf_decal/box,
+/obj/item/watertank/cleanup,
+/obj/item/watertank/cleanup,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
 "khV" = (
@@ -6726,6 +6729,12 @@
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bar/apartments)
+"kwc" = (
+/obj/machinery/button/crematorium{
+	pixel_y = 31
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/productioncenter/infestation)
 "kwp" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/desk_bell,
@@ -9947,10 +9956,6 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/antlioncave)
-"pDb" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/indoor/metal/pipe/corner,
-/area/halflife/indoors/sewer)
 "pDe" = (
 /obj/structure/table/halflife/no_smooth/metal,
 /obj/machinery/light/small/directional/east,
@@ -10840,6 +10845,14 @@
 /obj/structure/chair/office/halflife/blue,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/preproom)
+"rcX" = (
+/obj/machinery/light/small/directional/south,
+/obj/machinery/camera{
+	c_tag = "Factory Infestation Control Crematorium";
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/productioncenter/infestation)
 "rdC" = (
 /obj/structure/halflife/trash/wood,
 /turf/open/floor/plating/indoor/woodc,
@@ -11404,6 +11417,13 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
+"rNH" = (
+/obj/structure/chair/halflife/metal/folding{
+	dir = 8
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer)
 "rNO" = (
 /obj/effect/landmark/start/depsec/medical,
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -11748,13 +11768,6 @@
 "smi" = (
 /turf/open/openspace,
 /area/halflife/indoors)
-"smo" = (
-/obj/structure/chair/halflife/metal/folding{
-	dir = 8
-	},
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/plating/indoor/metal/plate,
-/area/halflife/indoors/sewer)
 "smv" = (
 /obj/effect/turf_decal/halflife/covering/wallpaper/blue,
 /turf/closed/wall/halflife/brick,
@@ -12372,6 +12385,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley)
+"thF" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/metal/pipe/corner,
+/area/halflife/indoors/sewer)
 "thW" = (
 /obj/effect/turf_decal/siding/thinplating,
 /turf/open/floor/plating/ground/brickroad,
@@ -14004,6 +14021,11 @@
 /obj/structure/flora/bush/fullgrass,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/alley)
+"vHg" = (
+/obj/structure/table/halflife/metal/heavy,
+/obj/machinery/mill,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "vHz" = (
 /obj/structure/window/fulltile,
 /turf/open/floor/plating/indoor/metal/grate,
@@ -15571,6 +15593,12 @@
 	},
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/indoors/sewer/tunnel)
+"xVj" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/productioncenter/infestation)
 "xWp" = (
 /obj/structure/halflife/trash/papers/one{
 	dir = 8
@@ -26924,7 +26952,7 @@ sBL
 sBL
 sBL
 sBL
-pDb
+thF
 pLi
 dgU
 dgU
@@ -28071,7 +28099,7 @@ dgU
 dgU
 pLi
 rNt
-smo
+rNH
 cma
 dgU
 dgU
@@ -45098,7 +45126,7 @@ fud
 uby
 cft
 kTd
-ojg
+tJy
 ojg
 bgz
 uXQ
@@ -45226,7 +45254,7 @@ frh
 frh
 frh
 bgz
-bgz
+xVj
 bgz
 bgz
 uXQ
@@ -45353,10 +45381,10 @@ kZa
 bMK
 uyC
 frh
-hNO
-uXQ
-uXQ
-uXQ
+kwc
+tJy
+tJy
+bgz
 uXQ
 uXQ
 lli
@@ -45481,10 +45509,10 @@ bMK
 bMK
 bMK
 frh
-uXQ
-uXQ
-uXQ
-uXQ
+gEU
+tJy
+rcX
+bgz
 uXQ
 dOt
 lli
@@ -45609,12 +45637,12 @@ bMK
 maV
 mbd
 frh
+bgz
+bgz
+bgz
+bgz
 uXQ
 uXQ
-lli
-lli
-lli
-lli
 lli
 lli
 lli
@@ -45739,10 +45767,10 @@ bMK
 frh
 uXQ
 uXQ
-lli
-lli
-lli
-lli
+uXQ
+uXQ
+uXQ
+uXQ
 lli
 lli
 lli
@@ -45867,10 +45895,10 @@ rmp
 frh
 uXQ
 uXQ
-lli
-lli
-lli
-lli
+uXQ
+uXQ
+uXQ
+uXQ
 lli
 lli
 lli
@@ -45981,7 +46009,7 @@ uXQ
 uby
 nba
 cMd
-fYg
+vHg
 cMd
 cMd
 qmJ
@@ -46372,7 +46400,7 @@ uby
 sIK
 ivr
 bMK
-fYg
+vHg
 cMd
 cMd
 xlj
@@ -67754,10 +67782,10 @@ roI
 sHX
 sHX
 sHX
-gdE
-gdE
-gdE
-gdE
+sHX
+sHX
+sHX
+sHX
 gdE
 gdE
 mAz
@@ -67882,10 +67910,10 @@ sYM
 sHX
 sHX
 sHX
-gdE
-gdE
-gdE
-gdE
+sHX
+sHX
+sHX
+sHX
 gdE
 gdE
 mAz
@@ -68010,12 +68038,12 @@ lfw
 sHX
 sHX
 sHX
+sHX
+sHX
+sHX
+sHX
 gdE
 gdE
-mAz
-mAz
-mAz
-mAz
 mAz
 mAz
 mAz
@@ -68140,10 +68168,10 @@ sHX
 sHX
 gdE
 gdE
-mAz
-mAz
-mAz
-mAz
+gdE
+gdE
+gdE
+gdE
 mAz
 mAz
 mAz
@@ -68268,10 +68296,10 @@ sHX
 sHX
 gdE
 gdE
-mAz
-mAz
-mAz
-mAz
+gdE
+gdE
+gdE
+gdE
 mAz
 mAz
 mAz
