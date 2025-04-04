@@ -107,7 +107,7 @@
 #define ROLE_SPACE_BAR_PATRON "Space Bar Patron"
 #define ROLE_SPACE_BARTENDER "Space Bartender"
 #define ROLE_SPACE_DOCTOR "Space Doctor"
-#define ROLE_SPACE_PIRATE "Space Pirate"
+#define ROLE_SPACE_PIRATE "Bandit" //hl13 edit
 #define ROLE_SPACE_SYNDICATE "Space Syndicate"
 #define ROLE_SYNDICATE_CYBERSUN "Cybersun Space Syndicate" //Ghost role syndi from Forgottenship ruin
 #define ROLE_SYNDICATE_CYBERSUN_CAPTAIN "Cybersun Space Syndicate Captain" //Forgottenship captain syndie

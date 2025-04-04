@@ -630,14 +630,14 @@
 	radial_state = "fryer"
 	overlay_state = "portal_fry" // literally resprited lava. better than nothing
 	fish_table = list(
-		/obj/item/food/badrecipe = 15,
+		/obj/item/food/badrecipe = 35,
 		/obj/item/food/nugget = 5,
 		/obj/item/fish/fryish = 40,
 		/obj/item/fish/fryish/fritterish = 4,
 		/obj/item/fish/fryish/nessie = 1,
 	)
 	fish_counts = list(
-		/obj/item/fish/fryish = 10,
+		/obj/item/fish/fryish = 5,
 		/obj/item/fish/fryish/fritterish = 4,
 		/obj/item/fish/fryish/nessie = 1,
 	)

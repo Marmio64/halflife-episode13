@@ -330,3 +330,10 @@
 /area/centcom/halflife/rebel
 	name = "Resistance Outpost"
 	ambient_buzz = 'hl13/sound/ambience/town_ambience.ogg'
+
+/area/centcom/halflife/deepwaters
+	name = "Deep Waters"
+	ambient_buzz = 'hl13/sound/ambience/lake_water.wav'
+
+/area/shuttle/pirate
+	ambient_buzz = 'hl13/sound/ambience/lake_water.wav'

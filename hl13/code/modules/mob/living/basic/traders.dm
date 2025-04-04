@@ -109,6 +109,7 @@
 		/obj/item/food/canned/halflife/beans = list(PAYCHECK_CREW * 2, 3),
 		/obj/item/reagent_containers/syringe/syriniver = list(PAYCHECK_CREW * 2, 3),
 		/obj/item/halflife/antenna = list(PAYCHECK_CREW * 8, 1),
+		/obj/item/crowbar/large = list(PAYCHECK_CREW * 4, 1),
 	)
 
 	initial_wanteds = list(

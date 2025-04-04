@@ -187,6 +187,7 @@
 	basic_owner.melee_attack(target, ignore_cooldown = TRUE)
 
 /mob/living/basic/halflife/zombie/freshly_crabbed
+	icon_state = "headcrabhead"
 	basic_mob_flags = DEL_ON_DEATH
 	headcrabspawn_chance = 100
 	/// The dead body we have inside

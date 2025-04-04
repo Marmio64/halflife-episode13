@@ -55,7 +55,7 @@
 		"Move it" = 'hl13/sound/voice/cpvoicelines/moveit2.ogg',
 		"Now get out of here" = 'hl13/sound/voice/cpvoicelines/nowgetoutofhere.ogg',
 		"Pick up that can" = 'hl13/sound/voice/cpvoicelines/pickupthecan1.ogg',
-		"I said pick up the can" = 'hl13/sound/voice/cpvoicelines/pickupthecan3.ogg',
+		"I said pick up" = 'hl13/sound/voice/cpvoicelines/pickupthecan3.ogg',
 		"Prepare to receive civil judgement" = 'hl13/sound/voice/cpvoicelines/prepareforjudgement.ogg',
 		"Put it in the trash" = 'hl13/sound/voice/cpvoicelines/putitinthetrash1.ogg',
 		"Responding" = 'hl13/sound/voice/cpvoicelines/responding2.ogg',
