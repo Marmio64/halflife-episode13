@@ -113,6 +113,11 @@
 	desc = "This key will open doors in the factory."
 	lockid = "factory"
 
+/obj/item/hl2key/foreman
+	name = "foreman key"
+	desc = "This key will open the foreman's office."
+	lockid = "foreman"
+
 /obj/item/hl2key/clerk
 	name = "store key"
 	desc = "This key will open doors in the store."

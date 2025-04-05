@@ -53,11 +53,6 @@
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/pirate/flying_dutchman)
-"t" = (
-/obj/structure/halflife/pallet,
-/obj/item/binoculars,
-/turf/open/floor/plating/indoor/woodc/wide,
-/area/shuttle/pirate/flying_dutchman)
 "u" = (
 /obj/structure/table/halflife/no_smooth/wood,
 /obj/machinery/light/small/directional/east,
@@ -103,6 +98,10 @@
 	pixel_x = -3
 	},
 /obj/item/ammo_box/magazine/makeshift9mm,
+/obj/item/ammo_box/magazine/makeshift9mm{
+	pixel_x = 4
+	},
+/obj/item/grenade/stingbang/halflife,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/pirate/flying_dutchman)
 "I" = (
@@ -137,6 +136,10 @@
 "O" = (
 /turf/template_noop,
 /area/template_noop)
+"P" = (
+/obj/structure/halflife/trash/glass/basic,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/shuttle/pirate/flying_dutchman)
 "Q" = (
 /turf/closed/wall/halflife/wood,
 /area/shuttle/pirate/flying_dutchman)
@@ -151,7 +154,8 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/pirate/flying_dutchman)
 "Y" = (
-/obj/structure/halflife/trash/glass/basic,
+/obj/structure/halflife/pallet,
+/obj/item/binoculars,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/pirate/flying_dutchman)
 
@@ -198,9 +202,9 @@ Q
 G
 v
 o
-t
-a
 Y
+a
+P
 Q
 Q
 Q

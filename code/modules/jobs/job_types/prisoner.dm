@@ -9,7 +9,7 @@
 	paycheck = PAYCHECK_ZERO
 	config_tag = "PRISONER"
 
-	outfit = /datum/outfit/job/refugee/randomitems
+	outfit = /datum/outfit/job/refugee/fixeditems
 	plasmaman_outfit = /datum/outfit/plasmaman/prisoner
 
 	display_order = JOB_DISPLAY_ORDER_PRISONER
@@ -34,6 +34,17 @@
 
 	id = null
 	uniform = /obj/item/clothing/under/citizen/refugee
+
+/datum/outfit/job/refugee/fixeditems
+	name = "Outlands Refugee with items pouch"
+	jobtype = /datum/job/prisoner
+
+	id_trim = /datum/id_trim/job/prisoner
+	uniform = /obj/item/clothing/under/citizen/refugee
+
+	r_pocket = /obj/item/flashlight
+
+	belt = /obj/item/storage/belt/pouch/refugee
 
 /datum/outfit/job/refugee/randomitems
 	name = "Outlands Refugee with a random item"

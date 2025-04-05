@@ -10,6 +10,12 @@
 	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
 	atom_storage.silent = TRUE
 
+/obj/item/storage/belt/pouch/refugee/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/knife/shiv, src) //basic self defense. Almost anything will be better though, including a random brick lying about.
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src) //refugees will get hurt. A lot.
+	SSwardrobe.provide_type(/obj/item/stack/medical/bandage, src)
+	update_appearance(UPDATE_ICON)
+
 /obj/item/storage/belt/pouch/large
 	name = "large pouch"
 	desc = "A larger old world pouch. Holds a small bit more than its smaller counterparts."

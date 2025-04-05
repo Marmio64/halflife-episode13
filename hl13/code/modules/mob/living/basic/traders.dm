@@ -88,6 +88,7 @@
 	initial_products = list(
 		/obj/item/ammo_box/magazine/makeshift9mm = list(PAYCHECK_CREW * 2, 5),
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = list(PAYCHECK_CREW * 5, 5),
+		/obj/item/weaponcrafting/frame/usp = list(PAYCHECK_CREW * 7, 2),
 		/obj/item/gun/ballistic/rifle/rebarxbow = list(PAYCHECK_CREW * 8, 3),
 		/obj/item/reagent_containers/pill/patch/medkit/vial = list(PAYCHECK_CREW * 2, 5),
 		/obj/item/clothing/suit/armor/civilprotection = list(PAYCHECK_CREW * 8, 3),

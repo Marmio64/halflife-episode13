@@ -35,6 +35,8 @@
 	crew = new_team
 
 /datum/antagonist/pirate/on_gain()
+	owner.current.cmode_music = 'hl13/sound/music/combat/cpviolation.ogg' //bandit activities. hl13 edit
+
 	if(crew)
 		objectives |= crew.objectives
 	. = ..()

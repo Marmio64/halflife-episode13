@@ -61,7 +61,7 @@ SUBSYSTEM_DEF(daylight)
 			priority_announce("Attention citizens, night is now approaching. Citizens are to return to their apartment blocks for curfew.", "Curfew Notice.")
 
 			if(factory_containers_filled >= factory_container_goal)
-				SSsociostability.modifystability(20) //full completion
+				SSsociostability.modifystability(10) //full completion. This is in addition to the sociostability bonuses from simply completing containers.
 			else if(factory_containers_filled < factory_container_goal/2) //Failed to meet at least half the goal, disappointing...
 				SSsociostability.modifystability(-75) //-7.5%
 
@@ -77,7 +77,7 @@ SUBSYSTEM_DEF(daylight)
 
 	if(current_day_time > AFTERNOON_START && current_day_time <= DUSK_START )
 		if(day_cycle_active != DAY_CYCLE_AFTERNOON)
-			factory_container_goal = get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE) //The goal is equal to all currently playing players
+			factory_container_goal = (get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)+5) //The goal is equal to all currently playing players, plus five as a baseline.
 
 			day_cycle_active = DAY_CYCLE_AFTERNOON
 			priority_announce("Attention citizens, it is now afternoon. The previous ration cycle has ended. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal].", "Work Notice.")

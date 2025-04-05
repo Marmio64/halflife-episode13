@@ -1082,10 +1082,6 @@
 "lH" = (
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/bunker)
-"lJ" = (
-/obj/item/storage/belt/pouch,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "lM" = (
 /obj/structure/halflife/trash/bricks{
 	dir = 8
@@ -1412,9 +1408,10 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
 "po" = (
-/obj/machinery/atm,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
+/obj/structure/table/halflife/metal/grate,
+/obj/item/stack/spacecash/c1,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "pw" = (
 /obj/structure/closet/halflife,
 /obj/effect/spawner/random/halflife/loot,
@@ -2780,6 +2777,11 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"Fs" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/effect/spawner/random/halflife/loot/heal,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "Fw" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "gulag_expanded_access";
@@ -4292,9 +4294,7 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/laborcamp/security)
 "Xb" = (
-/obj/structure/railing/halflife/wood{
-	dir = 8
-	},
+/obj/machinery/atm,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "Xf" = (
@@ -44253,7 +44253,7 @@ ai
 IF
 FC
 VM
-lJ
+tN
 FC
 vE
 mt
@@ -64400,7 +64400,7 @@ Ko
 GX
 OO
 ai
-tN
+kn
 kn
 tN
 fX
@@ -65188,7 +65188,7 @@ Ko
 fX
 OO
 tN
-tN
+kn
 tN
 It
 fX
@@ -66159,11 +66159,11 @@ GX
 tN
 tN
 Yn
-GX
-GX
-QW
-an
-QW
+Ko
+Ko
+Ko
+Ko
+Ko
 tN
 an
 ai
@@ -66356,12 +66356,12 @@ tN
 It
 tN
 tN
-QW
-GX
-GX
-GX
-QW
-tN
+Ko
+po
+yX
+yX
+Ko
+XD
 tN
 tN
 tN
@@ -66553,11 +66553,11 @@ ai
 dg
 tN
 GX
-QW
-GX
-GX
-GX
-GX
+Ko
+Fs
+yX
+yX
+sx
 GX
 GX
 GX
@@ -66750,13 +66750,13 @@ tN
 It
 tN
 GX
-QW
+Ko
+Ko
+Ko
+Ko
+Ko
 ai
-tN
-tN
-ai
-ai
-tN
+XD
 tN
 tN
 It
@@ -66961,7 +66961,7 @@ tN
 tN
 tN
 Yn
-tN
+kn
 kn
 Cq
 GX
@@ -67355,7 +67355,7 @@ QW
 GX
 GX
 It
-It
+kn
 kn
 GX
 fX
@@ -68144,7 +68144,7 @@ It
 It
 dg
 kn
-It
+kn
 GX
 GX
 GX
@@ -68341,7 +68341,7 @@ It
 It
 eQ
 kn
-It
+kn
 Cq
 GX
 It
@@ -69706,7 +69706,7 @@ XA
 oS
 rF
 XA
-po
+tN
 tN
 qQ
 tN

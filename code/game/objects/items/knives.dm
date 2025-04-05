@@ -219,7 +219,7 @@
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	desc = "A makeshift glass shiv."
 	obj_flags = parent_type::obj_flags & ~CONDUCTS_ELECTRICITY
-	force = 8
+	force = 10 //hl13 edit
 	throwforce = 12
 	attack_verb_continuous = list("shanks", "shivs")
 	attack_verb_simple = list("shank", "shiv")

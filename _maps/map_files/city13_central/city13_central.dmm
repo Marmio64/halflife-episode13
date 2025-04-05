@@ -1000,7 +1000,11 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/bar/apartments)
 "bJm" = (
-/obj/machinery/door/unpowered/halflife/metal,
+/obj/machinery/door/unpowered/halflife/metal/red{
+	keylock = 1;
+	locked = 1;
+	lockid = "foreman"
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter/office)
 "bJu" = (
@@ -5418,6 +5422,7 @@
 /obj/item/hl2key/factory,
 /obj/item/hl2key/kitchen,
 /obj/item/hl2key/clerk,
+/obj/item/hl2key/foreman,
 /obj/item/storage/halflife/keyring,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/secondfloor)
@@ -5971,6 +5976,7 @@
 /obj/item/food/flavorbar{
 	pixel_y = 6
 	},
+/obj/item/storage/halflife/keyring,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/productioncenter/office)
 "jkx" = (
@@ -10778,6 +10784,8 @@
 /obj/structure/rack,
 /obj/item/hl2key/factory,
 /obj/item/hl2key/factory,
+/obj/item/hl2key/factory,
+/obj/item/hl2key/factory,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/productioncenter/office)
 "qTc" = (
@@ -13578,6 +13586,11 @@
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/apartments/primary)
+"vdD" = (
+/obj/structure/rack,
+/obj/item/hl2key/foreman,
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/productioncenter/office)
 "veG" = (
 /obj/machinery/door/unpowered/halflife/wood,
 /turf/open/floor/plating/indoor/woodc,
@@ -13819,6 +13832,11 @@
 /obj/item/surgical_drapes,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/townhall/infirmary)
+"vrt" = (
+/obj/structure/table/halflife/metal/heavy,
+/obj/machinery/sealer,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/productioncenter)
 "vsq" = (
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/indoor/woodc,
@@ -15175,11 +15193,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/apartments/primary)
-"xkz" = (
-/obj/structure/table/halflife/metal/heavy,
-/obj/machinery/sealer,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/productioncenter)
 "xlj" = (
 /obj/machinery/conveyor{
 	dir = 4;
@@ -47178,7 +47191,7 @@ bMK
 bMK
 bMK
 nkK
-xkz
+vrt
 tFP
 jdr
 piW
@@ -67274,7 +67287,7 @@ sHX
 sHX
 owJ
 imF
-qSZ
+vdD
 vFn
 vFn
 owJ
