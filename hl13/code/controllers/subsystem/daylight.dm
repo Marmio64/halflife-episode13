@@ -37,6 +37,12 @@ SUBSYSTEM_DEF(daylight)
 	/// All areas that should update their lighting based on time of day
 	var/list/area/daylight_areas = list()
 
+	/// How many containers were filled during the afternoon
+	var/factory_containers_filled = 0
+
+	/// What was the ideal goal for containers filled. 100% of this means extra sociostability. Failure to get a certain amount subtracts sociostability.
+	var/factory_container_goal = 15
+
 /datum/controller/subsystem/daylight/proc/add_lit_area(area/new_area)
 	daylight_areas.Add(new_area)
 
@@ -53,6 +59,12 @@ SUBSYSTEM_DEF(daylight)
 		if(day_cycle_active != DAY_CYCLE_NIGHT)
 			day_cycle_active = DAY_CYCLE_NIGHT
 			priority_announce("Attention citizens, night is now approaching. Citizens are to return to their apartment blocks for curfew.", "Curfew Notice.")
+
+			if(factory_containers_filled >= factory_container_goal)
+				SSsociostability.modifystability(20) //full completion
+			else if(factory_containers_filled < factory_container_goal/2) //Failed to meet at least half the goal, disappointing...
+				SSsociostability.modifystability(-75) //-7.5%
+
 		if(light_coefficient > 0)
 			light_coefficient -= 0.025
 
@@ -65,11 +77,15 @@ SUBSYSTEM_DEF(daylight)
 
 	if(current_day_time > AFTERNOON_START && current_day_time <= DUSK_START )
 		if(day_cycle_active != DAY_CYCLE_AFTERNOON)
+			factory_container_goal = get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE) //The goal is equal to all currently playing players
+
 			day_cycle_active = DAY_CYCLE_AFTERNOON
-			priority_announce("Attention citizens, it is now afternoon. The previous ration cycle has ended. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed.", "Work Notice.")
+			priority_announce("Attention citizens, it is now afternoon. The previous ration cycle has ended. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal].", "Work Notice.")
+
+			factory_containers_filled = 0
 
 			for(var/obj/machinery/box_vendor/vendor as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/box_vendor))
-				vendor.boxes_stored = 15
+				vendor.boxes_stored = factory_container_goal
 
 		if(light_coefficient < 1)
 			light_coefficient += 0.025

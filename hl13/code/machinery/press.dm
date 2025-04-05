@@ -16,6 +16,7 @@
 	if(istype(I, /obj/item/stack/sheet/ironingot))
 		var/obj/item/stack/sheet/ironingot/C = I
 		to_chat(usr, span_notice("Pressing metal..."))
+		playsound(src, 'hl13/sound/halflifeeffects/furniture/washer_close.ogg', 50, FALSE, extrarange = -1)
 		if(do_after(user, 2 SECONDS, src))
 			C.use(1)
 			new /obj/item/stack/sheet/iron(user.loc, 1)
@@ -28,6 +29,7 @@
 	if(istype(I, /obj/item/stack/sheet/iron))
 		var/obj/item/stack/sheet/iron/C = I
 		to_chat(usr, span_notice("Pulverizing metal..."))
+		playsound(src, 'hl13/sound/halflifeeffects/furniture/washer_close.ogg', 50, FALSE, extrarange = -1)
 		if(do_after(user, 3 SECONDS, src))
 			C.use(1)
 			new /obj/item/stack/sheet/ironpowder(user.loc, 1)
@@ -40,6 +42,7 @@
 	if(istype(I, /obj/item/stack/sheet/scrap_metal))
 		var/obj/item/stack/sheet/scrap_metal/C = I
 		to_chat(usr, span_notice("Pressing metal..."))
+		playsound(src, 'hl13/sound/halflifeeffects/furniture/washer_close.ogg', 50, FALSE, extrarange = -1)
 		if(do_after(user, 3 SECONDS, src))
 			C.use(1)
 			new /obj/item/stack/sheet/iron(user.loc, 1)

@@ -41,17 +41,8 @@
 									/obj/item/stack/sheet/ironpowder,
 									/obj/item/stack/sheet/ironingot,
 									/obj/item/stack/sheet/scrap_parts,
-									/obj/item/stack/cable_coil,
-									/obj/item/stack/rods,
-									/obj/item/stack/sheet/glass,
-									/obj/item/stack/sheet/mineral/titanium,
-									/obj/item/stack/sheet/mineral/wood,
-									/obj/item/stack/sheet/cloth,
 									/obj/item/stack/sheet/scrap_metal,
-									/obj/item/stack/sheet/mineral/scrap_wood,
-									/obj/item/circuitmaterial,
-									/obj/item/water_canister,
-									/obj/item/food/xen/xenspore)
+									/obj/item/stack/rods)
 
 	required_item_1 = pick_n_take(possible_items)
 	required_item_2 = pick_n_take(possible_items)
@@ -119,11 +110,12 @@
 		to_chat(usr, span_notice("The box isn't yet fully filled, and can not be sealed."))
 		return
 
-/obj/item/factory_construction/container/proc/seal(mob/user, reward = 5)
+/obj/item/factory_construction/container/proc/seal(mob/user, reward = 3)
 	playsound(src, 'hl13/sound/halflifeeffects/crafting/ducttape1.ogg', 50, TRUE, extrarange = -3)
 	new /obj/item/factory_construction/full_container(user.loc)
 	new /obj/item/stack/spacecash/c1(user.loc, reward)
 	SSsociostability.modifystability(2) //Working increases stability
+	SSdaylight.factory_containers_filled++ //Work to earn the right to work. To earn the right to work...
 	qdel(src)
 
 /obj/item/factory_construction/full_container
