@@ -13,7 +13,7 @@
 	outfit = /datum/outfit/job/cook
 	plasmaman_outfit = /datum/outfit/plasmaman/chef
 
-	paycheck = PAYCHECK_CREW
+	paycheck = PAYCHECK_LOWER
 	paycheck_department = ACCOUNT_SRV
 
 	liver_traits = list(TRAIT_CULINARY_METABOLISM)

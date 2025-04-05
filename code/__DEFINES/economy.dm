@@ -12,7 +12,7 @@
 #define PAYCHECK_LOWER 5
 ///Paygrade for all regular crew not belonging to PAYGRADE_LOWER or PAYGRADE_COMMAND.
 #define PAYCHECK_CREW 8
-///Paygrade for more privledged crew, but are not the top dogs.
+///Paygrade for more privledged crew, but are not the top dogs. hl13 addition
 #define PAYCHECK_HIGH 12
 ///Paygrade for Heads of Staff.
 #define PAYCHECK_COMMAND 20

@@ -20,7 +20,7 @@
 	radial_state = "river"
 	overlay_state = "portal_river"
 	fish_table = list(
-		FISHING_DUD = 8,
+		FISHING_DUD = 9,
 		/obj/item/fish/goldfish = 6,
 		/obj/item/fish/perch = 4,
 		/obj/item/fish/catfish = 4,
@@ -28,7 +28,7 @@
 		/obj/item/fish/pike = 1,
 	)
 	fish_counts = list(
-		/obj/item/fish/pike = 3,
+		/obj/item/fish/pike = 1,
 	)
 	fish_count_regen = list(
 		/obj/item/fish/pike = 4 MINUTES,

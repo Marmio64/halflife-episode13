@@ -3,8 +3,8 @@
 	description = "Preform work in the factory, and carry out any tasks that the foreman needs you to do."
 	department_head = list(JOB_QUARTERMASTER)
 	faction = FACTION_STATION
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 3
+	spawn_positions = 3
 	supervisors = SUPERVISOR_QM
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "CARGO_TECHNICIAN"
