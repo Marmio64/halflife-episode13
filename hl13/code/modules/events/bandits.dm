@@ -13,7 +13,7 @@
 
 /datum/round_event/bandits/proc/spawn_bandits(datum/comm_message/threat)
 
-	var/list/candidates = SSpolling.poll_ghost_candidates("Do you wish to be considered for a [span_notice("bandit crew?")]", check_jobban = ROLE_TRAITOR, alert_pic = /obj/item/claymore/cutlass, role_name_text = "pirate crew")
+	var/list/candidates = SSpolling.poll_ghost_candidates("Do you wish to be considered for a [span_notice("bandit crew?")]", check_jobban = ROLE_TRAITOR, alert_pic = /obj/item/claymore/cutlass, role_name_text = "bandit crew")
 	shuffle_inplace(candidates)
 
 	var/template_key = "pirate_bandit"

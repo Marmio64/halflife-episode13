@@ -355,6 +355,10 @@
 "dP" = (
 /turf/closed/indestructible/syndicate,
 /area/halflife/indoors/sewer)
+"dR" = (
+/obj/item/stack/spacecash/c1,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
 "dU" = (
 /obj/structure/railing/halflife/wood{
 	dir = 4
@@ -789,6 +793,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
+"iH" = (
+/obj/item/stack/rods/two,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
 "iK" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 4
@@ -1425,6 +1433,13 @@
 /area/halflife/outdoors/forest)
 "pA" = (
 /obj/effect/landmark/train_dump_spot,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
+"pI" = (
+/obj/structure/halflife/trash/cardboard{
+	dir = 8
+	},
+/obj/item/stack/spacecash/c1,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "pJ" = (
@@ -2123,6 +2138,7 @@
 "wT" = (
 /obj/structure/closet/halflife,
 /obj/effect/spawner/random/halflife/loot/ammo,
+/obj/item/hatchet/wooden,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
 "wV" = (
@@ -2855,6 +2871,9 @@
 /area/halflife/indoors/sewer)
 "Gz" = (
 /obj/structure/table/halflife/wood/constructed,
+/obj/item/stack/spacecash/c1{
+	amount = 5
+	},
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
 "GA" = (
@@ -3790,6 +3809,7 @@
 "RX" = (
 /obj/structure/closet/halflife,
 /obj/effect/spawner/random/halflife/loot/heal,
+/obj/item/stack/spacecash/c1,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
 "RZ" = (
@@ -3869,6 +3889,10 @@
 "SV" = (
 /mob/living/basic/halflife/zombie,
 /turf/open/floor/plating/ground/dirt/alt,
+/area/halflife/outdoors/forest)
+"SY" = (
+/obj/item/reagent_containers/cup/soup_pot,
+/turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
 "SZ" = (
 /turf/open/floor/plating/indoor/metal/plate,
@@ -4066,6 +4090,13 @@
 /obj/structure/table/halflife/no_smooth/cable_reel,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors)
+"UR" = (
+/obj/structure/halflife/trash/cardboard,
+/obj/item/stack/spacecash/c1{
+	amount = 5
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "UT" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -4274,6 +4305,9 @@
 /area/halflife/indoors/sewer)
 "WJ" = (
 /obj/structure/table/halflife/wood/constructed/cobbled,
+/obj/item/stack/spacecash/c1{
+	amount = 5
+	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
 "WK" = (
@@ -59934,7 +59968,7 @@ GX
 tj
 rF
 rF
-rF
+SY
 FC
 DN
 wG
@@ -60523,9 +60557,9 @@ GX
 Yn
 GX
 FC
+iH
 rF
-rF
-rF
+dR
 FC
 DN
 fv
@@ -74234,7 +74268,7 @@ tN
 tN
 tN
 FC
-PR
+UR
 It
 tN
 tN
@@ -75798,7 +75832,7 @@ uZ
 tN
 tN
 dg
-gR
+pI
 vR
 Te
 tN
