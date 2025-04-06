@@ -22,15 +22,6 @@
 	if(donut_result.is_decorated)
 		donut_result.reagents.add_reagent(/datum/reagent/consumable/sprinkles, 1)
 
-/datum/crafting_recipe/food/donut/chaos
-	name = "Chaos donut"
-	reqs = list(
-		/datum/reagent/consumable/frostoil = 5,
-		/datum/reagent/consumable/capsaicin = 5,
-		/obj/item/food/pastrybase = 1
-	)
-	result = /obj/item/food/donut/chaos
-
 /datum/crafting_recipe/food/donut/meat
 	time = 15
 	name = "Meat donut"
@@ -47,15 +38,6 @@
 		/obj/item/food/pastrybase = 1
 	)
 	result = /obj/item/food/donut/jelly/plain
-
-/datum/crafting_recipe/food/donut/slimejelly
-	name = "Slime jelly donut"
-	reqs = list(
-		/datum/reagent/toxin/slimejelly = 5,
-		/obj/item/food/pastrybase = 1
-	)
-	result = /obj/item/food/donut/jelly/slimejelly/plain
-
 
 /datum/crafting_recipe/food/donut/berry
 	name = "Berry Donut"
@@ -163,14 +145,6 @@
 		/obj/item/food/donut/jelly/plain = 1
 	)
 	result = /obj/item/food/donut/jelly/choco
-
-/datum/crafting_recipe/food/donut/jelly/blumpkin
-	name = "Blumpkin Jelly Donut"
-	reqs = list(
-		/datum/reagent/consumable/blumpkinjuice = 3,
-		/obj/item/food/donut/jelly/plain = 1
-	)
-	result = /obj/item/food/donut/jelly/blumpkin
 
 /datum/crafting_recipe/food/donut/jelly/bungo
 	name = "Bungo Jelly Donut"

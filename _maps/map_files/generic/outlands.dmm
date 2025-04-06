@@ -867,11 +867,6 @@
 /obj/structure/bed/halflife/mattress/stale,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/bunker)
-"jJ" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/effect/spawner/random/halflife/loot/heal,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors)
 "jM" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
@@ -1364,6 +1359,11 @@
 /obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
+"oF" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/effect/spawner/random/halflife/loot/heal,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "oG" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/outdoors/forest)
@@ -3374,6 +3374,7 @@
 /area/halflife/indoors)
 "Ne" = (
 /obj/machinery/light/small/red/directional/east,
+/obj/item/reagent_containers/cup/soup_pot,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors)
 "Nf" = (
@@ -3999,6 +4000,10 @@
 /obj/item/fishing_hook,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"Uu" = (
+/obj/item/stack/rods/two,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors)
 "Uv" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 9
@@ -63394,7 +63399,7 @@ fX
 Ko
 CM
 Vu
-Vu
+Uu
 Ko
 Vu
 Vu
@@ -66554,7 +66559,7 @@ dg
 tN
 GX
 Ko
-jJ
+oF
 yX
 yX
 sx

@@ -58,7 +58,7 @@ SUBSYSTEM_DEF(daylight)
 	if(current_day_time >= NIGHT_START || current_day_time <= MORNING_START)
 		if(day_cycle_active != DAY_CYCLE_NIGHT)
 			day_cycle_active = DAY_CYCLE_NIGHT
-			priority_announce("Attention citizens, night is now approaching. Citizens are to return to their apartment blocks for curfew.", "Curfew Notice.")
+			priority_announce("Attention citizens, night is now approaching. Citizens are to return to their apartment blocks for curfew.", "Curfew Notice.", sender_override = "District Automated Scheduler")
 
 			if(factory_containers_filled >= factory_container_goal)
 				SSsociostability.modifystability(10) //full completion. This is in addition to the sociostability bonuses from simply completing containers.
@@ -71,7 +71,7 @@ SUBSYSTEM_DEF(daylight)
 	if(current_day_time > MORNING_START && current_day_time <= AFTERNOON_START)
 		if(day_cycle_active != DAY_CYCLE_MORNING)
 			day_cycle_active = DAY_CYCLE_MORNING
-			priority_announce("Attention citizens, night has concluded, and Curfew is over. Your morning ration cycle will begin shortly.", "Curfew Notice.")
+			priority_announce("Attention citizens, night has concluded, and Curfew is over. Your morning ration cycle will begin shortly.", "Curfew Notice.", sender_override = "District Automated Scheduler")
 		if(light_coefficient < 0.5)
 			light_coefficient += 0.025
 
@@ -80,7 +80,7 @@ SUBSYSTEM_DEF(daylight)
 			factory_container_goal = (get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)+5) //The goal is equal to all currently playing players, plus five as a baseline.
 
 			day_cycle_active = DAY_CYCLE_AFTERNOON
-			priority_announce("Attention citizens, it is now afternoon. The previous ration cycle has ended. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal].", "Work Notice.")
+			priority_announce("Attention citizens, it is now afternoon. The previous ration cycle has ended. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal].", "Work Notice.", sender_override = "District Automated Scheduler")
 
 			factory_containers_filled = 0
 
@@ -101,3 +101,6 @@ SUBSYSTEM_DEF(daylight)
 	var/light_color = rgb(255, 130 + 125 * light_coefficient, 130 + 125 * light_coefficient)
 	for(var/area/lit_area as anything in daylight_areas)
 		lit_area.set_base_lighting(light_color, light_alpha * lit_area.daylight_multiplier)
+
+/datum/controller/subsystem/daylight/proc/twentyfourhourstamp()
+	return daylight_time * 48 //a close approximate, assuming the day length is still 30 minutes.

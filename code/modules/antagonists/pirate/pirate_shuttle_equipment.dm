@@ -174,6 +174,7 @@
 //Pad & Pad Terminal
 /obj/machinery/piratepad
 	name = "cargo hold pad"
+	desc = "A pad which weighs goods before dropping them down into the cargo hold below." //hl13 edit
 	icon = 'icons/obj/machines/telepad.dmi'
 	icon_state = "lpad-idle-off"
 	///This is the icon_state that this telepad uses when it's not in use.
@@ -204,6 +205,7 @@
 
 /obj/machinery/computer/piratepad_control
 	name = "cargo hold control terminal"
+	desc = "A massive old terminal that is hobbled together from household computers." //hl13 edit
 	///Message to display on the TGUI window.
 	var/status_report = "Ready for delivery."
 	///Reference to the specific pad that the control computer is linked up to.

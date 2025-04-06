@@ -195,3 +195,14 @@
 	cut_overlays()
 	set_light(0,0,"#000000")
 	QDEL_NULL(soundloop)
+
+/obj/structure/sign/halflfe_clock
+	name = "wall clock"
+	desc = "An old wall mounted clock, that may or may not still be accurate."
+	icon_state = "clock"
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/halflfe_clock, 32)
+
+/obj/structure/sign/halflfe_clock/examine(mob/user)
+	. = ..()
+	. += span_info("The current twenty four hour time is: [SSdaylight.twentyfourhourstamp()].")

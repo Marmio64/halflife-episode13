@@ -41,16 +41,6 @@
 	result = /obj/item/food/pizza/vegetable/raw
 	category = CAT_PIZZA
 
-/datum/crafting_recipe/food/dankpizza
-	reqs = list(
-		/obj/item/food/flatdough = 1,
-		/obj/item/food/grown/ambrosia/vulgaris = 3,
-		/obj/item/food/cheese/wedge = 1,
-		/obj/item/food/grown/tomato = 1
-	)
-	result = /obj/item/food/pizza/dank/raw
-	category = CAT_PIZZA
-
 /datum/crafting_recipe/food/sassysagepizza
 	reqs = list(
 		/obj/item/food/flatdough = 1,
@@ -70,22 +60,6 @@
 		/obj/item/food/grown/tomato = 1
 	)
 	result = /obj/item/food/pizza/pineapple/raw
-	category = CAT_PIZZA
-
-/datum/crafting_recipe/food/antspizza
-	reqs = list(
-		/obj/item/food/pizzaslice/margherita = 1,
-		/datum/reagent/ants = 4
-	)
-	result = /obj/item/food/pizzaslice/ants
-	category = CAT_PIZZA
-
-/datum/crafting_recipe/food/energypizza
-	reqs = list(
-		/obj/item/food/flatdough = 1,
-		/obj/item/stock_parts/power_store/cell = 2,
-	)
-	result = /obj/item/food/pizza/energy/raw
 	category = CAT_PIZZA
 
 /datum/crafting_recipe/food/raw_meat_calzone
