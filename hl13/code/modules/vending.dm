@@ -39,6 +39,7 @@
 					/obj/item/lighter/greyscale = 6,
 					/obj/item/customlock = 8,
 					/obj/item/customblank = 12,
+					/obj/item/screwdriver = 6,
 					/obj/item/storage/halflife/keyring = 4,
 					/obj/item/storage/wallet = 10,
 					/obj/item/radio/off/halflife = 3,
@@ -202,3 +203,29 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 
 /obj/machinery/vending/armory/on_dispense(obj/item/vended_item)
 	SSsociostability.modifystability(-20) //All the equipment in this vendor is lethal. Not having to resort to lethals is a mark of good sociostability. In total if you empty the machine, you lose 300 sociostability aka 30%
+
+/obj/machinery/vending/keyvendor
+	name = "\improper Key Vendor"
+	desc = "A wall mounted vendor which dispenses blank keys, locks, and screwdrivers, for taking ownership of any unowned apartments. More convenient, but more expensive compared to getting these items from the clerk or factory."
+	icon = 'hl13/icons/obj/machines/vending.dmi'
+	icon_state = "key"
+	icon_deny = "key-deny"
+	panel_type = "wallmed-panel"
+	density = FALSE
+	products = list(
+		/obj/item/customlock = 12,
+		/obj/item/customblank = 14,
+		/obj/item/screwdriver = 10,
+	)
+	refill_canister = /obj/item/vending_refill/keyvendor
+	default_price = PAYCHECK_CREW
+	extra_price = PAYCHECK_CREW * 1.5
+	tiltable = FALSE
+	light_mask = "wallmed-light-mask"
+	payment_department = NO_FREEBIES
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/keyvendor, 32)
+
+/obj/item/vending_refill/keyvendor
+	machine_name = "Key Vendor"
+	icon_state = "refill_snack"

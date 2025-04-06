@@ -178,7 +178,7 @@
 	icon = 'hl13/icons/obj/keys.dmi'
 	w_class = WEIGHT_CLASS_TINY
 
-	custom_price = 12
+	custom_price = PAYCHECK_CREW
 
 	var/lockhash = 0
 
@@ -213,6 +213,9 @@
 	icon_state = "brass"
 	icon = 'hl13/icons/obj/locks.dmi'
 	w_class = WEIGHT_CLASS_SMALL
+
+	custom_price = PAYCHECK_CREW * 1.5
+
 	var/lockhash = 0
 
 /obj/item/customlock/attackby(obj/item/I, mob/user, params)
