@@ -103,7 +103,7 @@
 /datum/supply_pack/security/armory/ar2
 	name = "OSIPR Crate"
 	desc = "Contains two Overwatch Standard Issue Pulse Rifles that are ready built and biolocked. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 24
+	cost = CARGO_CRATE_VALUE * 28
 	contains = list(/obj/item/gun/ballistic/automatic/ar2,
 					/obj/item/gun/ballistic/automatic/ar2)
 	crate_name = "osipr gun crate"
@@ -121,7 +121,7 @@
 /datum/supply_pack/security/armory/pulsesmg
 	name = "Pulse SMG Crate"
 	desc = "Contains two Pulse SMGs that are ready built and biolocked. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 18
+	cost = CARGO_CRATE_VALUE * 19
 	contains = list(/obj/item/gun/ballistic/automatic/pulsesmg,
 					/obj/item/gun/ballistic/automatic/pulsesmg)
 	crate_name = "pulse smg crate"
@@ -139,7 +139,7 @@
 /datum/supply_pack/security/armory/servicerifle
 	name = "Service Rifle Crate"
 	desc = "Contains two service rifle gun frames that must be assembled. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 17
+	cost = CARGO_CRATE_VALUE * 18
 	contains = list(/obj/item/weaponcrafting/frame/service,
 					/obj/item/weaponcrafting/frame/service)
 	crate_name = "service rifle crate"

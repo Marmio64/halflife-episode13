@@ -83,8 +83,9 @@
 			playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 			flick(icon_state_deny,src)
 			return
-		if(R.wanted_status == WANTED_PAROLE) //Loyalists get a higher grade of rations
-			ration_quality++
+		if(R.wanted_status == WANTED_PAROLE) //Loyalists are given loyalist grade rations. Any job that already has this grade is of course already a loyalist.
+			if(ration_quality < 5)
+				ration_quality = 5
 		if(R.wanted_status == WANTED_SUSPECT) //Suspected people are given a worse grade of rations
 			ration_quality--
 	if(account?.account_job.title == "Vortigaunt Slave") //Shitty ration bonus handled in job datum, this just lets the ration vendor knows they're a vort
@@ -98,27 +99,24 @@
 
 	account.ration_voucher = FALSE
 
-	//say("Ration reward determined. Please wait for ration to be dispensed.")
-
 	playsound(src, 'hl13/sound/machines/combine_button5.ogg', 50, TRUE, extrarange = -3)
 
-	//sleep(1 SECONDS)
-
-	playsound(src, 'hl13/sound/machines/combine_dispense.ogg', 50, TRUE, extrarange = -3)
-
 	flick(icon_state_vend,src)
-
-	//sleep(2 SECONDS)
 
 	if(malfunctioning && prob(30)) //if vendor is malfunctioning, it may cancel the ration request and waste your time
 		say("Vendor malfunction detected. Resubmit coupon to try again, and request a repair team.")
 		account.ration_voucher = TRUE
 		return
 
-	dispense(ration_quality, vortigaunt)
+	say("Ration reward determined. Please wait for ration to be dispensed.")
+
+	addtimer(CALLBACK(src, PROC_REF(dispense), ration_quality, vortigaunt), 3 SECONDS)
+
 	return
 
 /obj/machinery/ration_vendor/proc/dispense(quality, vortigaunt)
+	playsound(src, 'hl13/sound/machines/combine_dispense.ogg', 50, TRUE, extrarange = -3)
+
 	SSsociostability.modifystability(1) //Compliance brings stability.
 
 	rations_stored--

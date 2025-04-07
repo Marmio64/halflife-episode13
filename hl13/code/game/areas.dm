@@ -70,6 +70,11 @@
 
 	first_time_text = "The Outlands"
 
+/area/halflife/outdoors/forest/water
+	name = "\improper Outlands Waterways"
+	ambient_buzz = 'hl13/sound/ambience/lake_water.wav'
+	ambient_buzz_vol = 35
+
 /area/halflife/indoors
 	name = "\improper Indoors"
 	icon_state = "away"

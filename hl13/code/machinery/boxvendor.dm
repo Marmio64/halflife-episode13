@@ -9,6 +9,10 @@
 	/// How many boxes are in this specific unit?
 	var/boxes_stored = 0
 
+	var/next_reminder = 0
+
+	var/time_between_reminders = 2 MINUTES
+
 /obj/machinery/box_vendor/examine(mob/user)
 	. = ..()
 	. += span_notice("The vendor has [boxes_stored] boxes left to dispense.")
@@ -37,3 +41,9 @@
 	new /obj/item/factory_construction/container(loc)
 
 	return
+
+/obj/machinery/box_vendor/process(delta_time)
+	if(SSdaylight.day_cycle_active == DAY_CYCLE_AFTERNOON || SSdaylight.day_cycle_active == DAY_CYCLE_DUSK)
+		if(next_reminder < world.time)
+			next_reminder = world.time + time_between_reminders
+			say("[SSdaylight.factory_containers_filled] containers out of the [SSdaylight.factory_container_goal] quota have been filled.") // Get to work

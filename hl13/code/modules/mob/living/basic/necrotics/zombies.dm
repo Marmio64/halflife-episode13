@@ -88,7 +88,6 @@
 	speed = 1.4
 	headcrabspawn = /mob/living/basic/halflife/headcrab/armored
 	fungalheal = TRUE
-	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombine
 	var/datum/action/cooldown/spell/conjure/xenfloor/infest
 
 /mob/living/basic/halflife/zombie/fungal/Initialize(mapload)
