@@ -2,7 +2,10 @@
 	if(HAS_TRAIT(src, TRAIT_ANALGESIA))
 		return
 	if(!stat)
-		adjust_temppain(-2)
+		if(temporary_pain > 100)
+			adjust_temppain(-3) //higher levels of temp pain go away faster than lower levels
+		else
+			adjust_temppain(-2)
 
 		var/painpercent = get_complex_pain()
 
@@ -66,7 +69,7 @@
 /mob/living/carbon/human/proc/adjust_temppain(amount)
 	temporary_pain += amount
 
-	if(temporary_pain > 100)
-		temporary_pain = 100
+	if(temporary_pain > 150)
+		temporary_pain = 150
 	else if(temporary_pain < 0)
 		temporary_pain = 0

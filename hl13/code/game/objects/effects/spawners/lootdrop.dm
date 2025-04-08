@@ -289,3 +289,23 @@
 				/obj/item/ammo_casing/rebar,
 				/obj/item/ammo_box/magazine/m4a1
 				)
+
+//melee weapons and makeshift crap
+/obj/effect/spawner/random/halflife/loot/deathmatch/uprising
+	name = "uprising deathmatch loot"
+
+	loot = list(
+				/obj/item/gun/ballistic/automatic/pistol/makeshift,
+				/obj/item/ammo_box/magazine/makeshift9mm,
+				/obj/item/crowbar/large,
+				/obj/item/fireaxe,
+				/obj/item/melee/sledgehammer,
+				/obj/item/spear/halflife,
+				/obj/item/clothing/suit/armor/halflife/kevlar/heavy,
+				/obj/item/gun/ballistic/rifle/rebarxbow,
+				/obj/item/grenade/syndieminibomb/bouncer,
+				/obj/item/switchblade,
+				/obj/item/melee/baton/security/loaded,
+				/obj/item/reagent_containers/pill/patch/medkit,
+				/obj/item/clothing/head/helmet/halflife/military/weak/crafted
+				)

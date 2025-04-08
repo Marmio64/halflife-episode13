@@ -17,23 +17,29 @@
 	r_pocket = /obj/item/ammo_box/magazine/m4a1
 	belt = /obj/item/gun/ballistic/automatic/pistol/usp
 
-//Slow and vulnerable to rush downs, but can blow people out of cover with grenades. Compared to the marine, they basically trade their rifle for 4 extra grenades.
+	back = /obj/item/storage/backpack/halflife/satchel
+
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/m4a1 = 1,
+	)
+
+//Slow and vulnerable to rush downs, but can blow people out of cover with grenades. Compared to the marine, worse primary and less ammo in exchange for 4 grenades. Extreme version of the conscript.
 /datum/outfit/deathmatch_loadout/rebel/bomber
 	name = "Deathmatch: Rebel Bomber"
 	display_name = "Rebel Bomber"
-	desc = "Equipped with an excessive amount of grenades, the bomber is great against entrenched positions, but is vulnerable to being rushed down as they only have a pistol."
+	desc = "Equipped with an excessive amount of grenades, the bomber is great against entrenched positions, but is vulnerable to being rushed down and don't have much ammo."
 
 	head = /obj/item/clothing/head/helmet/halflife/military
 	uniform = /obj/item/clothing/under/citizen/rebel
 	gloves = /obj/item/clothing/gloves/fingerless
 	suit = /obj/item/clothing/suit/armor/rebel
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
-	r_pocket = /obj/item/ammo_box/magazine/usp9mm
+	suit_store = /obj/item/gun/ballistic/automatic/mp7
+	belt = /obj/item/gun/ballistic/automatic/pistol/usp
 
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/grenade/syndieminibomb/bouncer = 5,
+		/obj/item/grenade/syndieminibomb/bouncer = 4,
 	)
 
 //high damage, but low armor and slow firing weapons makes very vulnerable to rush downs
@@ -49,6 +55,8 @@
 	suit_store = /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
 	belt = /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger
 	r_pocket = /obj/item/grenade/smokebomb
+
+	glasses = /obj/item/clothing/glasses/night
 
 	back = /obj/item/storage/bag/rebar_quiver
 	backpack_contents = list(

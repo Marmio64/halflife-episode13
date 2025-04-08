@@ -326,6 +326,12 @@
 			to_chat(target, span_userdanger(pain_message))
 			if(prob(30) && !mechanical_surgery)
 				target.emote("scream")
+			//hl13 edit begin
+			if(!mechanical_surgery)
+				if(ishuman(target))
+					var/mob/living/carbon/human/H = target
+					H.adjust_temppain(75) //doing surgery on a conscious person with no painkillers is brutal
+			//hl13 edit end
 
 #undef SURGERY_SPEED_TRAIT_ANALGESIA
 #undef SURGERY_SPEED_DISSECTION_MODIFIER

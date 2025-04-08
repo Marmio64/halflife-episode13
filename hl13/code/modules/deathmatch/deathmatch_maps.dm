@@ -143,3 +143,13 @@
 	)
 	map_name = "outlands"
 	key = "outlands"
+
+/datum/lazy_template/deathmatch/citysquare_uprising
+	name = "City Square: Uprising"
+	desc = "Start as citizens with nothing and loot the city square for weaponry. A tighter knit, more melee centric version of the alleys uprising."
+	max_players = 13
+	allowed_loadouts = list(
+		/datum/outfit/deathmatch_loadout/citizen,
+	)
+	map_name = "citysquare_uprising"
+	key = "citysquare_uprising"
