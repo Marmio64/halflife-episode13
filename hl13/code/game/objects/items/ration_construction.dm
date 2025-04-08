@@ -75,7 +75,17 @@
 	///How many credits to give when completed
 	var/credit_reward = 2
 
-	var/possiblenutrient = list(/obj/item/ration_construction/ingrediantblock/sweetcarb)
+	var/possiblenutrient = list(
+		/obj/item/ration_construction/ingredientblock/sweetcarb,
+		/obj/item/ration_construction/ingredientblock/sweetfat,
+		/obj/item/ration_construction/ingredientblock/sweetfiber,
+		/obj/item/ration_construction/ingredientblock/bittercarb,
+		/obj/item/ration_construction/ingredientblock/bitterfat,
+		/obj/item/ration_construction/ingredientblock/bitterfiber,
+		/obj/item/ration_construction/ingredientblock/sourcarb,
+		/obj/item/ration_construction/ingredientblock/sourfat,
+		/obj/item/ration_construction/ingredientblock/sourfiber
+	)
 	var/list/possible_picks = list(/obj/item/ration_construction/packs, /obj/item/ration_construction/boxes, /obj/item/ration_construction/bars, /obj/item/ration_construction/bags, /obj/item/ration_construction/blue_cans, /obj/item/ration_construction/yellow_cans, /obj/item/ration_construction/red_cans)
 
 /obj/item/ration_construction/container/examine(mob/user)
@@ -100,7 +110,7 @@
 
 	var/list/possible_items = possible_picks
 
-	required_item_1 = pick_n_take(possible_items)
+	required_item_1 = pick(possiblenutrient)
 	required_item_2 = pick_n_take(possible_items)
 	required_item_3 = pick_n_take(possible_items)
 
@@ -178,90 +188,90 @@
 
 	possible_picks = list(/obj/item/food/meat/slab/xen, /obj/item/food/grown/mushroom_stem, /obj/item/ration_construction/bags, /obj/item/ration_construction/nutripastes, /obj/item/ration_construction/purple_cans, /obj/item/food/grown/wheat)
 
-// Going to put all of the ration making devices/ingrediants here for now. But they can be moved out for conciseness later ~Death
+// Going to put all of the ration making devices/ingredients here for now. But they can be moved out for conciseness later ~Death
 // Flavorings
 /obj/item/ration_construction/flavoring
 	name = "YOU SHOULD NOT SEE THIS"
 	desc = ""
 	icon_state = "nutripastes"
-	var/type
+	var/rtype
 
 /obj/item/ration_construction/flavoring/sweet
 	name = "Sweet Flavoring"
 	desc = ""
-	type = "Sweet"
+	rtype = "Sweet"
 
 /obj/item/ration_construction/flavoring/bitter
 	name = "Bitter Flavoring"
 	desc = ""
-	type = "Bitter"
+	rtype = "Bitter"
 
 /obj/item/ration_construction/flavoring/sour
 	name = "Sour Flavoring"
 	desc = ""
-	type = "Sour"
+	rtype = "Sour"
 
 // Bar Bases
 /obj/item/ration_construction/base
 	name = "YOU SHOULD NOT SEE THIS"
 	desc = ""
 	icon_state = "nutripastes"
-	var/type
+	var/rtype
 
 /obj/item/ration_construction/base/carbohydrate
 	name = "Carbohydrate Base"
 	desc = ""
-	type = "Carbohydrate"
+	rtype = "Carbohydrate"
 
 /obj/item/ration_construction/base/fat
 	name = "Fat Base"
 	desc = ""
-	type = "Fat"
+	rtype = "Fat"
 
 /obj/item/ration_construction/base/fiber
 	name = "Fiber Base"
 	desc = ""
-	type = "Fiber"
+	rtype = "Fiber"
 
 // Crafted Ration Blocks
-/obj/item/ration_construction/ingrediantblock
+/obj/item/ration_construction/ingredientblock
 	name = "YOU SHOULD NOT SEE THIS"
 	desc = ""
 	icon_state = "nutripastes"
 
-/obj/item/ration_construction/ingrediantblock/sweetcarb
+/obj/item/ration_construction/ingredientblock/sweetcarb
 	name = "Sweet+Carbohydrate Block"
 	desc = ""
 
-/obj/item/ration_construction/ingrediantblock/sweetfat
+/obj/item/ration_construction/ingredientblock/sweetfat
 	name = "Sweet+Fat Block"
 	desc = ""
 
-/obj/item/ration_construction/ingrediantblock/sweetfiber
+/obj/item/ration_construction/ingredientblock/sweetfiber
 	name = "Sweet+Fiber Block"
 	desc = ""
 
-/obj/item/ration_construction/ingrediantblock/bittercarb
+/obj/item/ration_construction/ingredientblock/bittercarb
 	name = "Bitter+Carbohydrate Block"
 	desc = ""
 
-/obj/item/ration_construction/ingrediantblock/bitterfat
+/obj/item/ration_construction/ingredientblock/bitterfat
 	name = "Bitter+Fat Block"
 	desc = ""
 
-/obj/item/ration_construction/ingrediantblock/bitterfiber
+/obj/item/ration_construction/ingredientblock/bitterfiber
 	name = "Bitter+Fiber Block"
 	desc = ""
 
-/obj/item/ration_construction/ingrediantblock/sourcarb
+/obj/item/ration_construction/ingredientblock/sourcarb
 	name = "Sour+Carbohydrate Block"
 	desc = ""
 
-/obj/item/ration_construction/ingrediantblock/sourfat
+/obj/item/ration_construction/ingredientblock/sourfat
 	name = "Sour+Fat Block"
 	desc = ""
 
-/obj/item/ration_construction/ingrediantblock/sourfiber
+/obj/item/ration_construction/ingredientblock/sourfiber
 	name = "Sour+Fiber Block"
 	desc = ""
 
@@ -284,12 +294,13 @@
 	. = ..()
 	. += span_notice("You can hit it with Flavourings or Nutrient Bases to fill the device.")
 	. += span_notice("You can use the machine to mix a nutrient block together.")
-	. += span_notice("You can right click to check the ingrediant stocks.")
+	. += span_notice("Supplies")
+	. += span_notice("Sour: [sour], Bitter: [bitter], Sweet: [sweet], Carbohydrate: [carbohydrate], Fat: [fat], Fiber: [fiber]")
 
 /obj/machinery/nutrientmixer/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/ration_construction/flavoring) || istype(I, /obj/item/ration_construction/base))
 		if(do_after(user, 1.5 SECONDS, src))
-			switch(I.type)
+			switch(I.rtype)
 				if("Sour")
 					sour += 1
 				if("Bitter")
@@ -317,21 +328,21 @@
 					if("Sour")
 						if(sour > 0)
 							sour -= 1
-							new /obj/item/ration_construction/ingrediantblock/sourcarb(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/sourcarb(user.loc, 1)
 						else
 							. += span_notice("You don't have any sour flavour.")
 							return
 					if("Bitter")
 						if(bitter > 0)
 							bitter -= 1
-							new /obj/item/ration_construction/ingrediantblock/bittercarb(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/bittercarb(user.loc, 1)
 						else
 							. += span_notice("You don't have any bitter flavour.")
 							return
 					if("Sweet")
 						if(sweet > 0)
 							sweet -= 1
-							new /obj/item/ration_construction/ingrediantblock/sweetcarb(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/sweetcarb(user.loc, 1)
 						else
 							. += span_notice("You don't have any sweet flavour.")
 							return
@@ -345,21 +356,21 @@
 					if("Sour")
 						if(sour > 0)
 							sour -= 1
-							new /obj/item/ration_construction/ingrediantblock/sourfat(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/sourfat(user.loc, 1)
 						else
 							. += span_notice("You don't have any sour flavour.")
 							return
 					if("Bitter")
 						if(bitter > 0)
 							bitter -= 1
-							new /obj/item/ration_construction/ingrediantblock/bitterfat(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/bitterfat(user.loc, 1)
 						else
 							. += span_notice("You don't have any bitter flavour.")
 							return
 					if("Sweet")
 						if(sweet > 0)
 							sweet -= 1
-							new /obj/item/ration_construction/ingrediantblock/sweetfat(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/sweetfat(user.loc, 1)
 						else
 							. += span_notice("You don't have any sweet flavour.")
 							return
@@ -374,21 +385,21 @@
 					if("Sour")
 						if(sour > 0)
 							sour -= 1
-							new /obj/item/ration_construction/ingrediantblock/sourfiber(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/sourfiber(user.loc, 1)
 						else
 							. += span_notice("You don't have any sour flavour.")
 							return
 					if("Bitter")
 						if(bitter > 0)
 							bitter -= 1
-							new /obj/item/ration_construction/ingrediantblock/bitterfiber(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/bitterfiber(user.loc, 1)
 						else
 							. += span_notice("You don't have any bitter flavour.")
 							return
 					if("Sweet")
 						if(sweet > 0)
 							sweet -= 1
-							new /obj/item/ration_construction/ingrediantblock/sweetfiber(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/sweetfiber(user.loc, 1)
 						else
 							. += span_notice("You don't have any sweet flavour.")
 							return
