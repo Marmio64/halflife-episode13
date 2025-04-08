@@ -75,6 +75,7 @@
 	///How many credits to give when completed
 	var/credit_reward = 2
 
+	var/possiblenutrient = list(/obj/item/ration_construction/ingrediantblock/sweetcarb)
 	var/list/possible_picks = list(/obj/item/ration_construction/packs, /obj/item/ration_construction/boxes, /obj/item/ration_construction/bars, /obj/item/ration_construction/bags, /obj/item/ration_construction/blue_cans, /obj/item/ration_construction/yellow_cans, /obj/item/ration_construction/red_cans)
 
 /obj/item/ration_construction/container/examine(mob/user)
@@ -176,3 +177,224 @@
 	credit_reward = 5
 
 	possible_picks = list(/obj/item/food/meat/slab/xen, /obj/item/food/grown/mushroom_stem, /obj/item/ration_construction/bags, /obj/item/ration_construction/nutripastes, /obj/item/ration_construction/purple_cans, /obj/item/food/grown/wheat)
+
+// Going to put all of the ration making devices/ingrediants here for now. But they can be moved out for conciseness later ~Death
+// Flavorings
+/obj/item/ration_construction/flavoring
+	name = "YOU SHOULD NOT SEE THIS"
+	desc = ""
+	icon_state = "nutripastes"
+	var/type
+
+/obj/item/ration_construction/flavoring/sweet
+	name = "Sweet Flavoring"
+	desc = ""
+	type = "Sweet"
+
+/obj/item/ration_construction/flavoring/bitter
+	name = "Bitter Flavoring"
+	desc = ""
+	type = "Bitter"
+
+/obj/item/ration_construction/flavoring/sour
+	name = "Sour Flavoring"
+	desc = ""
+	type = "Sour"
+
+// Bar Bases
+/obj/item/ration_construction/base
+	name = "YOU SHOULD NOT SEE THIS"
+	desc = ""
+	icon_state = "nutripastes"
+	var/type
+
+/obj/item/ration_construction/base/carbohydrate
+	name = "Carbohydrate Base"
+	desc = ""
+	type = "Carbohydrate"
+
+/obj/item/ration_construction/base/fat
+	name = "Fat Base"
+	desc = ""
+	type = "Fat"
+
+/obj/item/ration_construction/base/fiber
+	name = "Fiber Base"
+	desc = ""
+	type = "Fiber"
+
+// Crafted Ration Blocks
+/obj/item/ration_construction/ingrediantblock
+	name = "YOU SHOULD NOT SEE THIS"
+	desc = ""
+	icon_state = "nutripastes"
+
+/obj/item/ration_construction/ingrediantblock/sweetcarb
+	name = "Sweet+Carbohydrate Block"
+	desc = ""
+
+/obj/item/ration_construction/ingrediantblock/sweetfat
+	name = "Sweet+Fat Block"
+	desc = ""
+
+/obj/item/ration_construction/ingrediantblock/sweetfiber
+	name = "Sweet+Fiber Block"
+	desc = ""
+
+/obj/item/ration_construction/ingrediantblock/bittercarb
+	name = "Bitter+Carbohydrate Block"
+	desc = ""
+
+/obj/item/ration_construction/ingrediantblock/bitterfat
+	name = "Bitter+Fat Block"
+	desc = ""
+
+/obj/item/ration_construction/ingrediantblock/bitterfiber
+	name = "Bitter+Fiber Block"
+	desc = ""
+
+/obj/item/ration_construction/ingrediantblock/sourcarb
+	name = "Sour+Carbohydrate Block"
+	desc = ""
+
+/obj/item/ration_construction/ingrediantblock/sourfat
+	name = "Sour+Fat Block"
+	desc = ""
+
+/obj/item/ration_construction/ingrediantblock/sourfiber
+	name = "Sour+Fiber Block"
+	desc = ""
+
+// Bar Maker
+/obj/machinery/nutrientmixer
+	name = "nutrient mixer"
+	desc = "An industrial machine utilized to mix flavour and nutrient bases together into the semi-edible filling of ration packets."
+	icon = 'hl13/icons/obj/machines/machinery.dmi'
+	icon_state = "reactor"
+	var/sour = 0
+	var/bitter = 0
+	var/sweet = 0
+	var/carbohydrate = 0
+	var/fat = 0
+	var/fiber = 0
+	var/list/selection1 = list("Carbohydrate", "Fat", "Fiber")
+	var/list/selection2 = list("Sour", "Bitter", "Sweet")
+
+/obj/machinery/nutrientmixer/examine(mob/user)
+	. = ..()
+	. += span_notice("You can hit it with Flavourings or Nutrient Bases to fill the device.")
+	. += span_notice("You can use the machine to mix a nutrient block together.")
+	. += span_notice("You can right click to check the ingrediant stocks.")
+
+/obj/machinery/nutrientmixer/attackby(obj/item/I, mob/living/user, params)
+	if(istype(I, /obj/item/ration_construction/flavoring) || istype(I, /obj/item/ration_construction/base))
+		if(do_after(user, 1.5 SECONDS, src))
+			switch(I.type)
+				if("Sour")
+					sour += 1
+				if("Bitter")
+					bitter += 1
+				if("Sweet")
+					sweet += 1
+				if("Carbohydrate")
+					carbohydrate += 1
+				if("Fat")
+					fat += 1
+				if("Fiber")
+					fiber += 1
+			qdel(I)
+
+// This can be condensed eventually the switch tree is ugly, but I'm lazy atm. Will revisit later.
+/obj/machinery/nutrientmixer/interact(mob/living/carbon/human/user)
+	. = ..()
+	var/s1 = input(user, "What base to use?", "Choices") as null|anything in selection1
+	var/s2 = input(user, "What flavour to use?", "Choices") as anything in selection2
+	switch(s1)
+		if("Carbohydrate")
+			if(carbohydrate > 0)
+				carbohydrate -= 1
+				switch(s2)
+					if("Sour")
+						if(sour > 0)
+							sour -= 1
+							new /obj/item/ration_construction/ingrediantblock/sourcarb(user.loc, 1)
+						else
+							. += span_notice("You don't have any sour flavour.")
+							return
+					if("Bitter")
+						if(bitter > 0)
+							bitter -= 1
+							new /obj/item/ration_construction/ingrediantblock/bittercarb(user.loc, 1)
+						else
+							. += span_notice("You don't have any bitter flavour.")
+							return
+					if("Sweet")
+						if(sweet > 0)
+							sweet -= 1
+							new /obj/item/ration_construction/ingrediantblock/sweetcarb(user.loc, 1)
+						else
+							. += span_notice("You don't have any sweet flavour.")
+							return
+			else
+				. += span_notice("You don't have any carbohydrate bases.")
+				return
+		if("Fat")
+			if(fat > 0)
+				fat -= 1
+				switch(s2)
+					if("Sour")
+						if(sour > 0)
+							sour -= 1
+							new /obj/item/ration_construction/ingrediantblock/sourfat(user.loc, 1)
+						else
+							. += span_notice("You don't have any sour flavour.")
+							return
+					if("Bitter")
+						if(bitter > 0)
+							bitter -= 1
+							new /obj/item/ration_construction/ingrediantblock/bitterfat(user.loc, 1)
+						else
+							. += span_notice("You don't have any bitter flavour.")
+							return
+					if("Sweet")
+						if(sweet > 0)
+							sweet -= 1
+							new /obj/item/ration_construction/ingrediantblock/sweetfat(user.loc, 1)
+						else
+							. += span_notice("You don't have any sweet flavour.")
+							return
+
+			else
+				. += span_notice("You don't have any fat bases.")
+				return
+		if("Fiber")
+			if(fiber > 0)
+				fiber -= 1
+				switch(s2)
+					if("Sour")
+						if(sour > 0)
+							sour -= 1
+							new /obj/item/ration_construction/ingrediantblock/sourfiber(user.loc, 1)
+						else
+							. += span_notice("You don't have any sour flavour.")
+							return
+					if("Bitter")
+						if(bitter > 0)
+							bitter -= 1
+							new /obj/item/ration_construction/ingrediantblock/bitterfiber(user.loc, 1)
+						else
+							. += span_notice("You don't have any bitter flavour.")
+							return
+					if("Sweet")
+						if(sweet > 0)
+							sweet -= 1
+							new /obj/item/ration_construction/ingrediantblock/sweetfiber(user.loc, 1)
+						else
+							. += span_notice("You don't have any sweet flavour.")
+							return
+
+			else
+				. += span_notice("You don't have any fiber bases.")
+				return
+
+
