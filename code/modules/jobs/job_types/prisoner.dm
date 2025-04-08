@@ -2,7 +2,7 @@
 	title = JOB_PRISONER
 	description = "Survive in the outlands, find a way into the city for supplies, help or rob citizens for your own gain."
 	department_head = list("Nobody")
-	total_positions = 6
+	total_positions = 8
 	spawn_positions = 4
 	supervisors = "nobody"
 	exp_granted_type = EXP_TYPE_CREW

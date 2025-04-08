@@ -5,8 +5,8 @@
 	mood_change = 0
 
 /datum/mood_event/wellhydrated
-	description = "I'm well hydrated!"
-	mood_change = 3
+	description = "I'm well hydrated."
+	mood_change = 2
 
 /datum/mood_event/hydrated
 	description = "I've recently had a beverage."

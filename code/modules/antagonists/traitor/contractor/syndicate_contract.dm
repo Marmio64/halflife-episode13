@@ -194,7 +194,7 @@
 			victim.flash_act()
 			victim.Unconscious(200)
 			to_chat(victim, span_hypnophrase("A million voices echo in your head... <i>\"Your mind held many valuable secrets - \
-				we thank you for providing them. Your value is expended, and you will be ransomed back to your station. We always get paid, \
+				we thank you for providing them. Your value is expended, and you will be ransomed back to your district. We always get paid, \
 				so it's only a matter of time before we ship you back...\"</i>"))
 			victim.adjust_eye_blur(10 SECONDS)
 			victim.adjust_dizzy(1.5 SECONDS)

@@ -389,7 +389,9 @@ GLOBAL_PROTECT(tracy_init_reason)
 	var/new_status = ""
 	var/hostedby
 
-	features += "Immersive Half Life 2 themed server, open for early access playtesting"
+	features += "Immersive Half Life 2 themed server, Medium-High Action/Survival/City RP, open for playtesting"
+
+	features += "https://discord.gg/DtuwX7jxku"
 
 	if(config)
 		var/server_name = CONFIG_GET(string/servername)

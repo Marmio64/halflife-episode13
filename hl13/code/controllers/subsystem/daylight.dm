@@ -74,7 +74,7 @@ SUBSYSTEM_DEF(daylight)
 	if(current_day_time > MORNING_START && current_day_time <= AFTERNOON_START)
 		if(day_cycle_active != DAY_CYCLE_MORNING)
 			day_cycle_active = DAY_CYCLE_MORNING
-			priority_announce("Attention citizens, night has concluded, and Curfew is over. Your morning ration cycle will begin shortly.", "Curfew Notice.", sender_override = "District Automated Scheduler")
+			priority_announce("Attention citizens, night has concluded, and Curfew is over. Your morning ration cycle will begin in thirty seconds.", "Curfew Notice.", sender_override = "District Automated Scheduler")
 		if(light_coefficient < 0.5)
 			light_coefficient += 0.025
 

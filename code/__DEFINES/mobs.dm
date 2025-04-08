@@ -248,7 +248,7 @@
 #define MOOD_HAPPY1 2
 #define MOOD_NEUTRAL 0
 #define MOOD_SAD1 -3
-#define MOOD_SAD2 -7
+#define MOOD_SAD2 -8
 #define MOOD_SAD3 -15
 #define MOOD_SAD4 -20
 

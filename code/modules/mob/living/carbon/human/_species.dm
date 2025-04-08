@@ -1039,13 +1039,23 @@ GLOBAL_LIST_EMPTY(features_by_species)
 
 	SEND_SIGNAL(owner, COMSIG_MOB_ATTACK_HAND, owner, target, attacker_style)
 
+//hl13 edit start, parry and dodge disarms/fist attacks
 	if(LAZYACCESS(modifiers, RIGHT_CLICK))
+		if(target.checkmiss(owner))
+			return
+		if(target.checkdefense(user = owner))
+			return
 		disarm(owner, target, attacker_style)
 		return // dont attack after
 	if(owner.combat_mode)
+		if(target.checkmiss(owner))
+			return
+		if(target.checkdefense(user = owner))
+			return
 		harm(owner, target, attacker_style)
 	else
 		help(owner, target, attacker_style)
+//hl13 edit end
 
 //////////////////////////
 // ENVIRONMENT HANDLERS //
