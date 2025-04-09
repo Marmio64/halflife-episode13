@@ -59,9 +59,9 @@
 				exp_rank = "i1"
 			if(500 to 750)
 				exp_rank = "i2"
-			if(300 to 400)
+			if(300 to 500)
 				exp_rank = "i3"
-			if(50 to 100)
+			if(50 to 300)
 				exp_rank = "i4"
 
 	if(istype(user.wear_id, /obj/item/card/id))
