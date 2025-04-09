@@ -81,6 +81,8 @@
 	mob_type_allowed_typecache = list(/mob/living, /mob/dead/observer, /mob/eye/imaginary_friend)
 	mob_type_ignore_stat_typecache = list(/mob/dead/observer, /mob/living/silicon/ai, /mob/eye/imaginary_friend)
 
+	cooldown = 1.5 SECONDS //hl13 edit
+
 /datum/emote/flip/run_emote(mob/user, params , type_override, intentional)
 	. = ..()
 	user.SpinAnimation(FLIP_EMOTE_DURATION, 1)
@@ -96,7 +98,7 @@
 		if(prob(20))
 			flippy_mcgee.Knockdown(1 SECONDS)
 			flippy_mcgee.visible_message(
-				span_notice("[flippy_mcgee] attempts to do a flip and falls over, what a doofus!"),
+				span_notice("[flippy_mcgee] attempts to do a flip and falls over."), //hl13 edit
 				span_notice("You attempt to do a flip while still off balance from the last flip and fall down!")
 			)
 			if(prob(50))
@@ -113,6 +115,8 @@
 	hands_use_check = TRUE
 	mob_type_allowed_typecache = list(/mob/living, /mob/dead/observer, /mob/eye/imaginary_friend)
 	mob_type_ignore_stat_typecache = list(/mob/dead/observer, /mob/eye/imaginary_friend)
+
+	cooldown = 1.5 SECONDS //hl13 edit
 
 /datum/emote/spin/run_emote(mob/user, params,  type_override, intentional)
 	. = ..()
