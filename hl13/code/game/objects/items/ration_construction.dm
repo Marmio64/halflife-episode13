@@ -408,4 +408,74 @@
 				. += span_notice("You don't have any fiber bases.")
 				return
 
+// Water Refinement
 
+/obj/item/ration_construction/waterbase
+	name = "Unfiltered Water Jug"
+	desc = "A jug of water filled with toxins and pollutants. This would be suicide to try and drink."
+	icon_state = "nutripastes"
+
+/obj/item/ration_construction/watermix
+	name = "YOU SHOULD NOT SEE THIS"
+	desc = ""
+	icon_state = "nutripastes"
+	var/wtype
+
+/obj/item/ration_construction/watermix/blueadditive
+	name = "Blue Water Additive"
+	desc = ""
+	wtype = "Blue"
+
+/obj/item/ration_construction/watermix/yellowadditive
+	name = "Yellow Water Additive"
+	desc = ""
+	wtype = "Yellow"
+
+/obj/item/ration_construction/watermix/redadditive
+	name = "Red Water Additive"
+	desc = ""
+	wtype = "Red"
+
+/obj/item/ration_construction/watermix/purpleadditive
+	name = "Purple Water Additive"
+	desc = ""
+	wtype = "Purple"
+
+/obj/machinery/watermixer
+	name = "Water Mixer"
+	var/wateramt = 0
+	var/cans = 0
+	var/blue = 0
+	var/yellow = 0
+	var/red = 0
+	var/purple = 0
+	var/list/pouroptions = list("Mix Blue Water", "Mix Yellow Water", "Mix Red Water", "Mix Purple Water")
+
+/obj/machinery/watermixer/attackby(obj/item/I, mob/living/user, params)
+	if(istype(I, /obj/item/ration_construction/watermix))
+		if(do_after(user, 1.5 SECONDS, src))
+			switch(I.rtype)
+				if("Red")
+					red += 1
+				if("Blue")
+					blue += 1
+				if("Yellow")
+					yellow += 1
+				if("Purple")
+					purple += 1
+			qdel(I)
+	if(istype(I, /obj/item/ration_construction/waterbase))
+		if(do_after(user, 1.5 SECONDS, src))
+			wateramt += 5
+			qdel(I)
+	if(istype(I, /obj/item/ration_construction/emptycans))
+		if(do_after(user, 1.5 SECONDS, src))
+			cans += 4
+			qdel(I)
+
+// Package Maker \\ The most simplistic of them all
+
+/obj/machinery/packagemaker
+	name = "Package Extruder"
+	desc = "A machine which takes raw plastic and makes them into the outer package."
+	var/plastic = 0
