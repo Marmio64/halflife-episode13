@@ -44,7 +44,6 @@
 
 	ration_bonus = 3
 	union_law_notify = TRUE
-	var/static/list/used_numbers = list()
 
 	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
 
@@ -74,31 +73,26 @@
 	skillchips = list(/obj/item/skillchip/aiming, /obj/item/skillchip/fitness) //The DvL comes pre-augmented
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
 
-/datum/job/head_of_security/after_spawn(mob/living/carbon/human/H, mob/M)
+/datum/outfit/job/hos/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
-	H.faction += "combine"
-	var/r = rand(10,90)
-	while (used_numbers.Find(r))
-		r = rand(10,90)
-	used_numbers += r
+	user.faction += "combine"
 
+	var/exp_rank = "i5"
 
-	var/exp_rank = "05"
-
-	if(H?.client?.prefs)
-		switch(M.client.prefs.exp[EXP_TYPE_SECURITY])
+	if(user?.client?.prefs)
+		switch(user.client.prefs.exp[EXP_TYPE_SECURITY])
 			if(750 to INFINITY)
-				exp_rank = "01"
+				exp_rank = "i1"
 			if(500 to 750)
-				exp_rank = "02"
+				exp_rank = "i2"
 			if(300 to 400)
-				exp_rank = "03"
+				exp_rank = "i3"
 			if(50 to 100)
-				exp_rank = "04"
+				exp_rank = "i4"
 
-	if(istype(H.wear_id, /obj/item/card/id))
-		var/obj/item/card/id/ID = H.wear_id
-		ID.registered_name = "DV:13.[exp_rank]-[used_numbers[used_numbers.len]]"
+	if(istype(user.wear_id, /obj/item/card/id))
+		var/obj/item/card/id/ID = user.wear_id
+		ID.registered_name = "DV:13.[exp_rank]-[rand(10,90)]"
 		ID.update_label()
 
 /datum/outfit/job/hos/mod

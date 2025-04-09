@@ -48,35 +48,8 @@
 
 	ration_bonus = 2
 	union_law_notify = TRUE
-	var/static/list/used_numbers = list()
 
 	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
-
-/datum/job/security_officer/after_spawn(mob/living/carbon/human/H, mob/M)
-	. = ..()
-	H.faction += "combine"
-	var/r = rand(10,90)
-	while (used_numbers.Find(r))
-		r = rand(10,90)
-	used_numbers += r
-
-	var/exp_rank = "05"
-
-	if(H?.client?.prefs)
-		switch(M.client.prefs.exp[EXP_TYPE_SECURITY])
-			if(750 to INFINITY)
-				exp_rank = "01"
-			if(500 to 750)
-				exp_rank = "02"
-			if(300 to 400)
-				exp_rank = "03"
-			if(50 to 100)
-				exp_rank = "04"
-
-	if(istype(H.wear_id, /obj/item/card/id))
-		var/obj/item/card/id/ID = H.wear_id
-		ID.registered_name = "CP:13.[exp_rank]-[used_numbers[used_numbers.len]]"
-		ID.update_label()
 
 GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, SEC_DEPT_SUPPLY))
 
@@ -253,6 +226,28 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	belt = /obj/item/storage/belt/civilprotection/riotfullpistol
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
+
+/datum/outfit/job/security/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+	. = ..()
+	user.faction += "combine"
+
+	var/exp_rank = "i5"
+
+	if(user?.client?.prefs)
+		switch(user.client.prefs.exp[EXP_TYPE_SECURITY])
+			if(750 to INFINITY)
+				exp_rank = "i1"
+			if(500 to 750)
+				exp_rank = "i2"
+			if(300 to 400)
+				exp_rank = "i3"
+			if(50 to 100)
+				exp_rank = "i4"
+
+	if(istype(user.wear_id, /obj/item/card/id))
+		var/obj/item/card/id/ID = user.wear_id
+		ID.registered_name = "CP:13.[exp_rank]-[rand(1,99)]"
+		ID.update_label()
 
 /datum/outfit/job/security/mod
 	name = "Security Officer (MODsuit)"
