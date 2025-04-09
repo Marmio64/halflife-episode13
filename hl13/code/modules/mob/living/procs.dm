@@ -34,13 +34,13 @@
 	if(!(mobility_flags & MOBILITY_MOVE))
 		return FALSE
 
-	var/prob2defend = 25
+	var/prob2defend = 30
 	var/mob/living/H = src
 	var/mob/living/U = user
 	if(H && U)
 		prob2defend = 0
 
-	if(user.dir == src.dir) //facing opposite directions, aka the attacker is behind the victim and out of sight, no way they're going to be parried
+	if(check_behind(user, src)) //If the attacker is on the three tiles behind the defender, there is no chance you're parrying them.
 		return FALSE
 
 	if(move_intent == MOVE_INTENT_RUN)
