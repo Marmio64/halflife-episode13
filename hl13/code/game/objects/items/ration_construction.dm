@@ -413,7 +413,7 @@
 /obj/item/ration_construction/waterbase
 	name = "Unfiltered Water Jug"
 	desc = "A jug of water filled with toxins and pollutants. This would be suicide to try and drink."
-	icon_state = "nutripastes"
+	icon_state = "waterjug"
 
 /obj/item/ration_construction/watermix
 	name = "YOU SHOULD NOT SEE THIS"
@@ -479,3 +479,4 @@
 	name = "Package Extruder"
 	desc = "A machine which takes raw plastic and makes them into the outer package."
 	var/plastic = 0
+
