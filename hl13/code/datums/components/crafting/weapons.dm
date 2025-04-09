@@ -260,3 +260,14 @@
 	tool_behaviors = list(TOOL_KNIFE)
 	time = 5 SECONDS
 	category = CAT_WEAPON_MELEE
+
+//Cheap basic weapon, though needs a crafting bench
+/datum/crafting_recipe/tireiron
+	name = "Tire Iron"
+	result = /obj/item/melee/tireiron
+	reqs = list(
+		/obj/item/stack/sheet/scrap_metal = 8,
+	)
+	time = 8 SECONDS
+	category = CAT_WEAPON_MELEE
+	crafting_interface = CRAFTING_BENCH_WEAPONS | CRAFTING_BENCH_GENERAL

@@ -39,7 +39,7 @@
 					/obj/item/lighter/greyscale = 6,
 					/obj/item/customlock = 8,
 					/obj/item/customblank = 12,
-					/obj/item/screwdriver = 6,
+					/obj/item/screwdriver/halflife = 6,
 					/obj/item/storage/halflife/keyring = 4,
 					/obj/item/storage/wallet = 10,
 					/obj/item/radio/off/halflife = 3,
@@ -215,7 +215,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	products = list(
 		/obj/item/customlock = 12,
 		/obj/item/customblank = 14,
-		/obj/item/screwdriver = 10,
+		/obj/item/screwdriver/halflife = 10,
 	)
 	refill_canister = /obj/item/vending_refill/keyvendor
 	default_price = PAYCHECK_CREW

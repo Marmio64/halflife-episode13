@@ -225,14 +225,14 @@
 	strip_delay = 80
 	clothing_flags = THICKMATERIAL
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
-	armor_type = /datum/armor/browncoat
+	armor_type = /datum/armor/paddedjacket
 
 	limb_integrity = 100
 
 /obj/item/clothing/suit/armor/browncoat/deathmatch
 	slowdown = -0.5
 
-/datum/armor/browncoat
+/datum/armor/paddedjacket
 	melee = 10
 	bullet = 10
 	laser = 10
@@ -254,6 +254,12 @@
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 
+	limb_integrity = 80
+
+/obj/item/clothing/suit/bluejacket/padded
+	desc = "A blue jacket for citizens to wear. This one is padded with extra protective fabric."
+	armor_type = /datum/armor/paddedjacket
+
 /obj/item/clothing/suit/greenjacket
 	name = "green union jacket"
 	desc = "A heavily faded jacket. It was supposedly rather green, but now you can barely tell it from a grey jacket."
@@ -264,6 +270,12 @@
 	strip_delay = 80
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
+	limb_integrity = 80
+
+/obj/item/clothing/suit/greenjacket/padded
+	desc = "A heavily faded jacket. It was supposedly rather green, but now you can barely tell it from a grey jacket. This one is padded with extra protective fabric."
+	armor_type = /datum/armor/paddedjacket
 
 /obj/item/clothing/suit/utility/radiation/cleanup
 	name = "cleanup suit"
