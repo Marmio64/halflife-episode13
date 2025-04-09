@@ -76,13 +76,13 @@
 	var/credit_reward = 2
 
 	var/possiblenutrient = list(
-		/obj/item/ration_construction/ingredientblock/sweetcarb,
+		/obj/item/ration_construction/ingredientblock/sweetprotein,
 		/obj/item/ration_construction/ingredientblock/sweetfat,
 		/obj/item/ration_construction/ingredientblock/sweetfiber,
-		/obj/item/ration_construction/ingredientblock/bittercarb,
+		/obj/item/ration_construction/ingredientblock/bitterprotein,
 		/obj/item/ration_construction/ingredientblock/bitterfat,
 		/obj/item/ration_construction/ingredientblock/bitterfiber,
-		/obj/item/ration_construction/ingredientblock/sourcarb,
+		/obj/item/ration_construction/ingredientblock/sourprotein,
 		/obj/item/ration_construction/ingredientblock/sourfat,
 		/obj/item/ration_construction/ingredientblock/sourfiber
 	)
@@ -199,17 +199,17 @@
 /obj/item/ration_construction/flavoring/sweet
 	name = "Sweet Flavoring"
 	desc = ""
-	rtype = "Sweet"
+	rtype = "sweet"
 
 /obj/item/ration_construction/flavoring/bitter
 	name = "Bitter Flavoring"
 	desc = ""
-	rtype = "Bitter"
+	rtype = "bitter"
 
 /obj/item/ration_construction/flavoring/sour
 	name = "Sour Flavoring"
 	desc = ""
-	rtype = "Sour"
+	rtype = "sour"
 
 // Bar Bases
 /obj/item/ration_construction/base
@@ -218,20 +218,23 @@
 	icon_state = "nutripastes"
 	var/rtype
 
-/obj/item/ration_construction/base/carbohydrate
-	name = "Carbohydrate Base"
+/obj/item/ration_construction/base/protein
+	name = "Protein Base"
 	desc = ""
-	rtype = "Carbohydrate"
+	rtype = "proteinblock"
+	icon_state = "proteinblock"
 
 /obj/item/ration_construction/base/fat
 	name = "Fat Base"
 	desc = ""
 	rtype = "Fat"
+	icon_state = "fatblock"
 
 /obj/item/ration_construction/base/fiber
 	name = "Fiber Base"
 	desc = ""
 	rtype = "Fiber"
+	icon_state = "fiberblock"
 
 // Crafted Ration Blocks
 /obj/item/ration_construction/ingredientblock
@@ -239,41 +242,41 @@
 	desc = ""
 	icon_state = "nutripastes"
 
-/obj/item/ration_construction/ingredientblock/sweetcarb
-	name = "Sweet+Carbohydrate Block"
-	desc = ""
+/obj/item/ration_construction/ingredientblock/sweetprotein
+	name = "Sweet+Protein Block"
+	desc = "A completed ration ingrediant, ready to be added to a container."
 
 /obj/item/ration_construction/ingredientblock/sweetfat
 	name = "Sweet+Fat Block"
-	desc = ""
+	desc = "A completed ration ingrediant, ready to be added to a container."
 
 /obj/item/ration_construction/ingredientblock/sweetfiber
 	name = "Sweet+Fiber Block"
-	desc = ""
+	desc = "A completed ration ingrediant, ready to be added to a container."
 
-/obj/item/ration_construction/ingredientblock/bittercarb
-	name = "Bitter+Carbohydrate Block"
-	desc = ""
+/obj/item/ration_construction/ingredientblock/bitterprotein
+	name = "Bitter+Protein Block"
+	desc = "A completed ration ingrediant, ready to be added to a container."
 
 /obj/item/ration_construction/ingredientblock/bitterfat
 	name = "Bitter+Fat Block"
-	desc = ""
+	desc = "A completed ration ingrediant, ready to be added to a container."
 
 /obj/item/ration_construction/ingredientblock/bitterfiber
 	name = "Bitter+Fiber Block"
-	desc = ""
+	desc = "A completed ration ingrediant, ready to be added to a container."
 
-/obj/item/ration_construction/ingredientblock/sourcarb
-	name = "Sour+Carbohydrate Block"
-	desc = ""
+/obj/item/ration_construction/ingredientblock/sourprotein
+	name = "Sour+Protein Block"
+	desc = "A completed ration ingrediant, ready to be added to a container."
 
 /obj/item/ration_construction/ingredientblock/sourfat
 	name = "Sour+Fat Block"
-	desc = ""
+	desc = "A completed ration ingrediant, ready to be added to a container."
 
 /obj/item/ration_construction/ingredientblock/sourfiber
 	name = "Sour+Fiber Block"
-	desc = ""
+	desc = "A completed ration ingrediant, ready to be added to a container."
 
 // Bar Maker
 /obj/machinery/nutrientmixer
@@ -284,10 +287,10 @@
 	var/sour = 0
 	var/bitter = 0
 	var/sweet = 0
-	var/carbohydrate = 0
+	var/protein = 0
 	var/fat = 0
 	var/fiber = 0
-	var/list/selection1 = list("Carbohydrate", "Fat", "Fiber")
+	var/list/selection1 = list("Protein", "Fat", "Fiber")
 	var/list/selection2 = list("Sour", "Bitter", "Sweet")
 
 /obj/machinery/nutrientmixer/examine(mob/user)
@@ -295,7 +298,7 @@
 	. += span_notice("You can hit it with Flavourings or Nutrient Bases to fill the device.")
 	. += span_notice("You can use the machine to mix a nutrient block together.")
 	. += span_notice("Supplies")
-	. += span_notice("Sour: [sour], Bitter: [bitter], Sweet: [sweet], Carbohydrate: [carbohydrate], Fat: [fat], Fiber: [fiber]")
+	. += span_notice("Sour: [sour], Bitter: [bitter], Sweet: [sweet], Protein: [protein], Fat: [fat], Fiber: [fiber]")
 
 /obj/machinery/nutrientmixer/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/ration_construction/flavoring) || istype(I, /obj/item/ration_construction/base))
@@ -307,8 +310,8 @@
 					bitter += 1
 				if("Sweet")
 					sweet += 1
-				if("Carbohydrate")
-					carbohydrate += 1
+				if("Protein")
+					protein += 1
 				if("Fat")
 					fat += 1
 				if("Fiber")
@@ -316,38 +319,38 @@
 			qdel(I)
 
 // This can be condensed eventually the switch tree is ugly, but I'm lazy atm. Will revisit later.
-/obj/machinery/nutrientmixer/interact(mob/living/carbon/human/user)
+/obj/machinery/nutrientmixer/interact(mob/living/proteinon/human/user)
 	. = ..()
 	var/s1 = input(user, "What base to use?", "Choices") as null|anything in selection1
 	var/s2 = input(user, "What flavour to use?", "Choices") as anything in selection2
 	switch(s1)
-		if("Carbohydrate")
-			if(carbohydrate > 0)
-				carbohydrate -= 1
+		if("Protein")
+			if(protein > 0)
+				protein -= 1
 				switch(s2)
 					if("Sour")
 						if(sour > 0)
 							sour -= 1
-							new /obj/item/ration_construction/ingredientblock/sourcarb(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/sourprotein(user.loc, 1)
 						else
 							. += span_notice("You don't have any sour flavour.")
 							return
 					if("Bitter")
 						if(bitter > 0)
 							bitter -= 1
-							new /obj/item/ration_construction/ingredientblock/bittercarb(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/bitterprotein(user.loc, 1)
 						else
 							. += span_notice("You don't have any bitter flavour.")
 							return
 					if("Sweet")
 						if(sweet > 0)
 							sweet -= 1
-							new /obj/item/ration_construction/ingredientblock/sweetcarb(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/sweetprotein(user.loc, 1)
 						else
 							. += span_notice("You don't have any sweet flavour.")
 							return
 			else
-				. += span_notice("You don't have any carbohydrate bases.")
+				. += span_notice("You don't have any protein bases.")
 				return
 		if("Fat")
 			if(fat > 0)
@@ -424,22 +427,22 @@
 /obj/item/ration_construction/watermix/blueadditive
 	name = "Blue Water Additive"
 	desc = ""
-	wtype = "Blue"
+	wtype = "blueadd"
 
 /obj/item/ration_construction/watermix/yellowadditive
 	name = "Yellow Water Additive"
 	desc = ""
-	wtype = "Yellow"
+	wtype = "yellowadd"
 
 /obj/item/ration_construction/watermix/redadditive
 	name = "Red Water Additive"
 	desc = ""
-	wtype = "Red"
+	wtype = "redadd"
 
 /obj/item/ration_construction/watermix/purpleadditive
 	name = "Purple Water Additive"
 	desc = ""
-	wtype = "Purple"
+	wtype = "purpleadd"
 
 /obj/machinery/watermixer
 	name = "Water Mixer"
@@ -473,10 +476,4 @@
 			cans += 4
 			qdel(I)
 
-// Package Maker \\ The most simplistic of them all
-
-/obj/machinery/packagemaker
-	name = "Package Extruder"
-	desc = "A machine which takes raw plastic and makes them into the outer package."
-	var/plastic = 0
 
