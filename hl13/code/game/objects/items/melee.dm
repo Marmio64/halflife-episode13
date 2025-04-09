@@ -104,3 +104,5 @@
 	force = 30
 	force_unwielded = 30
 	force_wielded = 40
+	wdefense = 5
+	armour_penetration = 15
