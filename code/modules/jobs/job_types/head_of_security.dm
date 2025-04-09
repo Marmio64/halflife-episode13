@@ -81,9 +81,24 @@
 	while (used_numbers.Find(r))
 		r = rand(10,90)
 	used_numbers += r
+
+
+	var/exp_rank = "05"
+
+	if(H?.client?.prefs)
+		switch(M.client.prefs.exp[EXP_TYPE_SECURITY])
+			if(750 to INFINITY)
+				exp_rank = "01"
+			if(500 to 750)
+				exp_rank = "02"
+			if(300 to 400)
+				exp_rank = "03"
+			if(50 to 100)
+				exp_rank = "04"
+
 	if(istype(H.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = H.wear_id
-		ID.registered_name = "DV:13-[used_numbers[used_numbers.len]]"
+		ID.registered_name = "DV:13.[exp_rank]-[used_numbers[used_numbers.len]]"
 		ID.update_label()
 
 /datum/outfit/job/hos/mod
