@@ -86,7 +86,7 @@
 	if(capacity > 19 && H.health < H.maxHealth)
 		playsound(src, 'hl13/sound/effects/medcharge4.ogg', 40, FALSE)
 		if(do_after(H, 0.8 SECONDS, src))
-			H.reagents.add_reagent(/datum/reagent/medicine/concentrated_biogel,5)
+			H.reagents.add_reagent(/datum/reagent/medicine/concentrated_biogel,6)
 			adjust_capacity(-10)
 			playsound(src, 'hl13/sound/effects/largemedkit1.ogg', 40, FALSE)
 			update_icon_state()

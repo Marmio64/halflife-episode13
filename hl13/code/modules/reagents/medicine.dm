@@ -38,7 +38,7 @@
 	reagent_state = LIQUID
 	color = "#0ca507"
 	metabolization_rate = 5 * REAGENTS_METABOLISM
-	var/healing = 5
+	var/healing = 6
 	ph = 2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 

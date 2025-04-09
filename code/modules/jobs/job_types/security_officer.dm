@@ -67,14 +67,14 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	if(ishuman(spawning))
 		setup_department(spawning, player_client)
 
-
+/*
 /datum/job/security_officer/after_latejoin_spawn(mob/living/spawning)
 	. = ..()
 	if(ishuman(spawning))
 		var/department = setup_department(spawning, spawning.client)
 		if(department)
 			announce_latejoin(spawning, department, GLOB.security_officer_distribution)
-
+*/
 
 /// Returns the department this mob was assigned to, if any.
 /datum/job/security_officer/proc/setup_department(mob/living/carbon/human/spawning, client/player_client)
