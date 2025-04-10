@@ -213,6 +213,7 @@
 				human_target.force_say()
 			human_target.adjust_temppain(30) //hl13 edit, batons HURT
 		target.apply_damage(stamina_damage, STAMINA)
+		target.flash_fullscreen("redflash1") //hl13 edit, batons HURT
 		if(!trait_check)
 			target.Knockdown((isnull(stun_override) ? knockdown_time : stun_override))
 		additional_effects_non_cyborg(target, user)

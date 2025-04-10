@@ -50,6 +50,11 @@
 		'hl13/sound/voice/vortigaunt/vort_scream.ogg',
 	)
 
+/datum/species/vortigaunt/get_agony_sound(mob/living/carbon/human/vortigaunt)
+	return pick(
+		'hl13/sound/voice/vortigaunt/vort_scream.ogg',
+	)
+
 /datum/species/vortigaunt/get_laugh_sound(mob/living/carbon/human/vortigaunt)
 	return 'hl13/sound/voice/vortigaunt/galunga.ogg'
 

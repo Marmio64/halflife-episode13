@@ -69,6 +69,13 @@
 		'hl13/sound/voice/stalker/stalker_scream3.ogg',
 	)
 
+/datum/species/stalker/get_agony_sound(mob/living/carbon/human/stalker)
+	return pick(
+		'hl13/sound/voice/stalker/stalker_scream.ogg',
+		'hl13/sound/voice/stalker/stalker_scream2.ogg',
+		'hl13/sound/voice/stalker/stalker_scream3.ogg',
+	)
+
 /datum/species/stalker/get_cry_sound(mob/living/carbon/human/stalker)
 	return pick(
 		'hl13/sound/voice/stalker/stalker_pain1.ogg',
