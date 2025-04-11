@@ -82,6 +82,16 @@
 	map_name = "nexus"
 	key = "nexus"
 
+/datum/lazy_template/deathmatch/nexus_freeman
+	name = "Nexus: Total Freemannity"
+	desc = "The combine nexus, but everyone is Gordon Freeman, with all his signature weapons."
+	max_players = 10
+	allowed_loadouts = list(
+		/datum/outfit/deathmatch_loadout/crowbar/freeman,
+	)
+	map_name = "nexus"
+	key = "nexus_freeman"
+
 /datum/lazy_template/deathmatch/sandtraps
 	name = "Sandtraps"
 	desc = "An open beach with little cover, and teeming with antlions."
@@ -153,3 +163,13 @@
 	)
 	map_name = "citysquare_uprising"
 	key = "citysquare_uprising"
+
+/datum/lazy_template/deathmatch/citysquare_freeman
+	name = "City Square: Total Freemannity"
+	desc = "The city square, but everyone is Gordon Freeman, with all his signature weapons."
+	max_players = 13
+	allowed_loadouts = list(
+		/datum/outfit/deathmatch_loadout/crowbar/freeman,
+	)
+	map_name = "citysquare_uprising"
+	key = "citysquare_freeman"

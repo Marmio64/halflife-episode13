@@ -169,6 +169,35 @@
 	suit = /obj/item/clothing/suit/hooded/hev/deathmatch
 	glasses = /obj/item/clothing/glasses/regular/thin
 
+//the alpha: All the weapons, best equipment.
+/datum/outfit/deathmatch_loadout/crowbar/freeman
+	name = "Deathmatch: The Free Man"
+	display_name = "The Free Man"
+	desc = "Time to fuck up someone's face."
+
+	back = /obj/item/storage/backpack/halflife/satchel/huge
+	suit = /obj/item/clothing/suit/hooded/hev/deathmatch/freeman //extra fast
+
+	l_hand = /obj/item/crowbar/large/freeman //little bit weaker than the standard classes's crowbar, to make using the guns better
+
+	backpack_contents = list(
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/gun/ballistic/automatic/pistol/usp,
+		/obj/item/ammo_box/magazine/usp9mm,
+		/obj/item/gun/ballistic/revolver/coltpython,
+		/obj/item/ammo_box/colta357,
+		/obj/item/gun/ballistic/shotgun/spas12,
+		/obj/item/storage/box/lethalshot/halflife,
+		/obj/item/gun/ballistic/automatic/mp7,
+		/obj/item/ammo_box/magazine/mp7,
+		/obj/item/gun/ballistic/automatic/ar2/standardpin,
+		/obj/item/gun/ballistic/rifle/rebarxbow,
+		/obj/item/ammo_casing/rebar,
+		/obj/item/ammo_casing/rebar,
+		/obj/item/reagent_containers/pill/patch/medkit,
+		/obj/item/reagent_containers/pill/patch/medkit/vial,
+	)
+
 /datum/outfit/deathmatch_loadout/citizen
 	name = "Deathmatch: Citizen"
 	display_name = "Citizen"

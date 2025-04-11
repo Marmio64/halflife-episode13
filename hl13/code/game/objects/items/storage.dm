@@ -214,6 +214,14 @@
 	icon_state = "military"
 	inhand_icon_state = "military"
 
+/obj/item/storage/backpack/halflife/satchel/huge
+	storage_type = /datum/storage/satchel/halflife/huge
+
+/datum/storage/satchel/halflife/huge
+	max_total_storage = 45
+	max_slots = 45
+	max_specific_storage = WEIGHT_CLASS_GIGANTIC
+
 /datum/storage/backpack/halflife
 	max_total_storage = 21
 	max_slots = 21

@@ -4,9 +4,9 @@
 
 #define MORNING_START (DAY_LENGTH / 8) //With 30 minutes, morning is at 2250 deciseconds
 
-#define AFTERNOON_START (DAY_LENGTH / 2) //With 30 minutes, afternoon is at 9000 deciseconds
+#define AFTERNOON_START (DAY_LENGTH * 0.4) //With 30 minutes, afternoon is at 7200 deciseconds
 
-#define DUSK_START (DAY_LENGTH * 0.80) //With 30 minutes, dusk is at 14400 deciseconds
+#define DUSK_START (DAY_LENGTH * 0.90) //With 30 minutes, dusk is at 16200 deciseconds. Dusk is effectively just the night curfew warning state
 
 #define NIGHT_START (DAY_LENGTH * 0.95) //With 30 minutes, night is at 17100 deciseconds. Night is the shortest at around 6 minutes, because if curfews are enforced, you shouldnt be locked up for a very long time.
 
@@ -58,7 +58,7 @@ SUBSYSTEM_DEF(daylight)
 	if(current_day_time >= NIGHT_START || current_day_time <= MORNING_START)
 		if(day_cycle_active != DAY_CYCLE_NIGHT)
 			day_cycle_active = DAY_CYCLE_NIGHT
-			priority_announce("Attention citizens, night is now approaching. Citizens are to return to their apartment blocks for curfew.", "Curfew Notice.", sender_override = "District Automated Scheduler")
+			priority_announce("Attention citizens, it is now night time. Citizens are to return to their apartment blocks for curfew.", "Curfew Notice.", sender_override = "District Automated Scheduler")
 
 			if(factory_containers_filled >= factory_container_goal)
 				SSsociostability.modifystability(10) //full completion. This is in addition to the sociostability bonuses from simply completing containers.
@@ -94,7 +94,9 @@ SUBSYSTEM_DEF(daylight)
 			light_coefficient += 0.025
 
 	if(current_day_time > DUSK_START  && current_day_time <= NIGHT_START)
-		day_cycle_active = DAY_CYCLE_DUSK
+		if(day_cycle_active != DAY_CYCLE_DUSK)
+			day_cycle_active = DAY_CYCLE_DUSK
+			priority_announce("Attention citizens, night will be approaching shortly, and curfew will begin soon. Citizens are to get ready for curfew.", "Curfew Notice.", sender_override = "District Automated Scheduler")
 		if(light_coefficient > 0.5)
 			light_coefficient -= 0.025
 
