@@ -34,4 +34,19 @@
 /datum/emote/living/carbon/human/agony/get_sound(mob/living/carbon/human/user)
 	if(!istype(user))
 		return
+	var/obj/item/clothing/mask/gas/civilprotection/cpmask = user.get_item_by_slot(ITEM_SLOT_MASK)
+	if(cpmask)
+		if(cpmask.overwatch)
+			return pick(
+				'hl13/sound/voice/otavoicelines/pain1.ogg',
+				'hl13/sound/voice/otavoicelines/pain2.ogg',
+				'hl13/sound/voice/otavoicelines/pain3.ogg',
+			)
+		else
+			return pick(
+				'hl13/sound/voice/cpvoicelines/pain1.ogg',
+				'hl13/sound/voice/cpvoicelines/pain2.ogg',
+				'hl13/sound/voice/cpvoicelines/pain3.ogg',
+				'hl13/sound/voice/cpvoicelines/pain4.ogg',
+			)
 	return user.dna.species.get_agony_sound(user)
