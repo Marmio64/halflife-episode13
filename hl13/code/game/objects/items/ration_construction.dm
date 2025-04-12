@@ -558,7 +558,7 @@
 			if(blue < 1)
 				to_chat(usr, span_notice("You don't have any blue additive to mix with."))
 				return
-			playsound(src, 'hl13/sound/machines/canmixer.ogg', 70, FALSE, extrarange = -1)
+			playsound(src, 'hl13/sound/machines/canmixer.ogg', 80, FALSE, extrarange = -1)
 			if(do_after(user, 4 SECONDS, src))
 				blue -= 1
 				wateramt -= 1
@@ -568,7 +568,7 @@
 			if(yellow < 1)
 				to_chat(usr, span_notice("You don't have any yellow additive to mix with."))
 				return
-			playsound(src, 'hl13/sound/machines/canmixer.ogg', 70, FALSE, extrarange = -1)
+			playsound(src, 'hl13/sound/machines/canmixer.ogg', 80, FALSE, extrarange = -1)
 			if(do_after(user, 4 SECONDS, src))
 				yellow -= 1
 				wateramt -= 1
@@ -578,7 +578,7 @@
 			if(red < 1)
 				to_chat(usr, span_notice("You don't have any red additive to mix with."))
 				return
-			playsound(src, 'hl13/sound/machines/canmixer.ogg', 70, FALSE, extrarange = -1)
+			playsound(src, 'hl13/sound/machines/canmixer.ogg', 80, FALSE, extrarange = -1)
 			if(do_after(user, 4 SECONDS, src))
 				red -= 1
 				wateramt -= 1
@@ -588,7 +588,7 @@
 			if(purple < 1)
 				to_chat(usr, span_notice("You don't have any purple additive to mix with."))
 				return
-			playsound(src, 'hl13/sound/machines/canmixer.ogg', 70, FALSE, extrarange = -1)
+			playsound(src, 'hl13/sound/machines/canmixer.ogg', 80, FALSE, extrarange = -1)
 			if(do_after(user, 4 SECONDS, src))
 				purple -= 1
 				wateramt -= 1
