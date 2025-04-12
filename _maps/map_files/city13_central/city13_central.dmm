@@ -7484,6 +7484,17 @@
 /obj/item/pen,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/trainstation)
+"lvu" = (
+/obj/effect/turf_decal/box,
+/obj/structure/closet/crate,
+/obj/item/ration_construction/container,
+/obj/item/ration_construction/container,
+/obj/item/ration_construction/container,
+/obj/item/stack/sheet/halflife/plastic,
+/obj/item/stack/sheet/halflife/plastic,
+/obj/item/stack/sheet/halflife/plastic,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/productioncenter)
 "lwD" = (
 /obj/effect/turf_decal/arrows,
 /turf/open/floor/plating/indoor/trainfloor,
@@ -7907,15 +7918,19 @@
 "maV" = (
 /obj/effect/turf_decal/box,
 /obj/structure/closet/crate,
-/obj/item/ration_construction/bags,
-/obj/item/ration_construction/bars,
-/obj/item/ration_construction/blue_cans,
-/obj/item/ration_construction/boxes,
-/obj/item/ration_construction/packs,
-/obj/item/ration_construction/red_cans,
-/obj/item/ration_construction/yellow_cans,
-/obj/item/ration_construction/container,
-/obj/item/ration_construction/container,
+/obj/item/ration_construction/base/fat,
+/obj/item/ration_construction/base/fiber,
+/obj/item/ration_construction/base/protein,
+/obj/item/ration_construction/waterbase,
+/obj/item/ration_construction/waterbase,
+/obj/item/stack/sheet/ironingot,
+/obj/item/stack/sheet/ironingot,
+/obj/item/ration_construction/watermix/blueadditive,
+/obj/item/ration_construction/watermix/redadditive,
+/obj/item/ration_construction/watermix/yellowadditive,
+/obj/item/ration_construction/flavoring/bitter,
+/obj/item/ration_construction/flavoring/sour,
+/obj/item/ration_construction/flavoring/sweet,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "mbb" = (
@@ -8327,6 +8342,10 @@
 	},
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors)
+"mFI" = (
+/obj/machinery/watermixer,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/productioncenter)
 "mGP" = (
 /obj/structure/halflife/storage/large/shelf/wood{
 	dir = 4
@@ -11836,6 +11855,9 @@
 "sln" = (
 /obj/machinery/light/small/directional/north,
 /obj/machinery/iv_drip,
+/obj/machinery/combine_health_station/round_start{
+	pixel_y = 30
+	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/townhall/infirmary)
 "sma" = (
@@ -11996,6 +12018,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/secondfloor)
+"szS" = (
+/obj/machinery/watermixer,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "sAc" = (
 /obj/structure/flora/bush/stalky/style_random,
 /turf/open/floor/plating/ground/grass,
@@ -13297,6 +13323,10 @@
 	},
 /turf/open/openspace,
 /area/halflife/indoors/productioncenter/upper)
+"uDb" = (
+/obj/machinery/nutrientmixer,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "uDq" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 1
@@ -45979,7 +46009,7 @@ bMK
 uvz
 uby
 uUX
-maV
+lvu
 rmp
 frh
 uXQ
@@ -46233,7 +46263,7 @@ jbp
 bMK
 rJi
 bMK
-hgk
+uDb
 cMd
 cuj
 xlj
@@ -46361,7 +46391,7 @@ hgk
 bMK
 ivr
 bMK
-jbp
+szS
 cMd
 cMd
 lHv
@@ -46872,8 +46902,8 @@ uby
 iHM
 kXA
 uby
-bMK
-cMd
+mFI
+uDb
 hQM
 bkc
 viE

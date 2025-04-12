@@ -8,13 +8,6 @@
 	contains = list(/obj/item/stack/sheet/cardboard/fifty)
 	crate_name = "cardboard sheets crate"
 
-/datum/supply_pack/materials/plastic50
-	name = "50 Plastic Sheets"
-	desc = "Build a limitless amount of toys with fifty plastic sheets!"
-	cost = CARGO_CRATE_VALUE * 2.5
-	contains = list(/obj/item/stack/sheet/plastic/fifty)
-	crate_name = "plastic sheets crate"
-
 /datum/supply_pack/materials/wood50
 	name = "50 Wood Planks"
 	desc = "Contains a bunch of wood for doing... wood stuff?"

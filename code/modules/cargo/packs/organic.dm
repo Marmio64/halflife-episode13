@@ -69,8 +69,9 @@
 /datum/supply_pack/organic/waterjug
 	name = "Unfiltered Water Crate"
 	desc = "A crate of several jugs of unfiltered water, for use in the factory."
-	cost = CARGO_CRATE_VALUE * 1.3
+	cost = CARGO_CRATE_VALUE * 2
 	contains = list(/obj/item/ration_construction/waterbase,
+					/obj/item/ration_construction/waterbase,
 					/obj/item/ration_construction/waterbase,
 					/obj/item/ration_construction/waterbase)
 

@@ -353,98 +353,104 @@
 	switch(s1)
 		if("Protein")
 			if(protein > 0)
-				protein -= 1
 				switch(s2)
 					if("Sour")
 						if(sour > 0)
 							sour -= 1
-							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 50, FALSE, extrarange = -1)
+							protein -= 1
+							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
 							new /obj/item/ration_construction/ingredientblock/sourprotein(user.loc, 1)
 						else
-							. += span_notice("You don't have any sour flavour.")
+							to_chat(usr, span_notice("You don't have any sour flavour."))
 							return
 					if("Bitter")
 						if(bitter > 0)
 							bitter -= 1
-							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 50, FALSE, extrarange = -1)
+							protein -= 1
+							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
 							new /obj/item/ration_construction/ingredientblock/bitterprotein(user.loc, 1)
 						else
-							. += span_notice("You don't have any bitter flavour.")
+							to_chat(usr, span_notice("You don't have any bitter flavour."))
 							return
 					if("Sweet")
 						if(sweet > 0)
 							sweet -= 1
-							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 50, FALSE, extrarange = -1)
+							protein -= 1
+							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
 							new /obj/item/ration_construction/ingredientblock/sweetprotein(user.loc, 1)
 						else
-							. += span_notice("You don't have any sweet flavour.")
+							to_chat(usr, span_notice("You don't have any sweet flavour."))
 							return
 			else
-				. += span_notice("You don't have any protein bases.")
+				to_chat(usr, span_notice("You don't have any protein bases."))
 				return
 		if("Fat")
 			if(fat > 0)
-				fat -= 1
 				switch(s2)
 					if("Sour")
 						if(sour > 0)
 							sour -= 1
-							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 50, FALSE, extrarange = -1)
+							fat -= 1
+							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
 							new /obj/item/ration_construction/ingredientblock/sourfat(user.loc, 1)
 						else
-							. += span_notice("You don't have any sour flavour.")
+							to_chat(usr, span_notice("You don't have any sour flavour."))
 							return
 					if("Bitter")
 						if(bitter > 0)
 							bitter -= 1
-							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 50, FALSE, extrarange = -1)
+							fat -= 1
+							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
 							new /obj/item/ration_construction/ingredientblock/bitterfat(user.loc, 1)
 						else
-							. += span_notice("You don't have any bitter flavour.")
+							to_chat(usr, span_notice("You don't have any bitter flavour."))
 							return
 					if("Sweet")
 						if(sweet > 0)
 							sweet -= 1
-							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 50, FALSE, extrarange = -1)
+							fat -= 1
+							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
 							new /obj/item/ration_construction/ingredientblock/sweetfat(user.loc, 1)
 						else
-							. += span_notice("You don't have any sweet flavour.")
+							to_chat(usr, span_notice("You don't have any sweet flavour."))
 							return
 
 			else
-				. += span_notice("You don't have any fat bases.")
+				to_chat(usr, span_notice("You don't have any fat bases."))
 				return
 		if("Fiber")
 			if(fiber > 0)
-				fiber -= 1
 				switch(s2)
 					if("Sour")
 						if(sour > 0)
 							sour -= 1
-							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 50, FALSE, extrarange = -1)
+							fiber -= 1
+							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
 							new /obj/item/ration_construction/ingredientblock/sourfiber(user.loc, 1)
 						else
-							. += span_notice("You don't have any sour flavour.")
+							to_chat(usr, span_notice("You don't have any sour flavour."))
 							return
 					if("Bitter")
 						if(bitter > 0)
 							bitter -= 1
-							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 50, FALSE, extrarange = -1)
+							fiber -= 1
+							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
 							new /obj/item/ration_construction/ingredientblock/bitterfiber(user.loc, 1)
 						else
-							. += span_notice("You don't have any bitter flavour.")
+							to_chat(usr, span_notice("You don't have any bitter flavour."))
 							return
 					if("Sweet")
 						if(sweet > 0)
 							sweet -= 1
-							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 50, FALSE, extrarange = -1)
+							fiber -= 1
+							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
 							new /obj/item/ration_construction/ingredientblock/sweetfiber(user.loc, 1)
 						else
-							. += span_notice("You don't have any sweet flavour.")
+							to_chat(usr, span_notice("You don't have any sweet flavour."))
 							return
 
 			else
-				. += span_notice("You don't have any fiber bases.")
+				to_chat(usr, span_notice("You don't have any fiber bases."))
 				return
 
 // Water Refinement
@@ -486,7 +492,7 @@
 
 /obj/machinery/watermixer
 	name = "Water Mixer"
-	desc = "A device used to properly mix the Combine's additives to create the only source of potable water."
+	desc = "A massive mixing device which intakes raw, unclean water and chemically treats it using additives to create something slightly better."
 	icon = 'icons/obj/machines/biogenerator.dmi'
 	icon_state = "biogenerator" // placeholder for now. I'm a shit spriter ~Death
 	var/wateramt = 0
@@ -499,7 +505,7 @@
 
 /obj/machinery/watermixer/examine(mob/user)
 	. = ..()
-	. += span_notice("You can hit it with Cans, Additives, or Water Jugs to fill the device.")
+	. += span_notice("You can hit it with Cans, Additives, Water Jugs, or Water Canisters to fill the device.")
 	. += span_notice("You can use the machine to mix Breen Waters together.")
 	. += span_notice("Supplies")
 	. += span_notice("Red: [red], Blue: [blue], Yellow: [yellow], Purple: [purple], Water: [wateramt], Cans: [cans]")
@@ -526,6 +532,12 @@
 			to_chat(usr, span_notice("Added [I]..."))
 			qdel(I)
 
+	if(istype(I, /obj/item/water_canister))
+		if(do_after(user, 2 SECONDS, src))
+			wateramt += 12 //To make it worthwhile instead of simply selling the canister
+			to_chat(usr, span_notice("Added [I]..."))
+			qdel(I)
+
 	if(istype(I, /obj/item/ration_construction/empty_cans))
 		if(do_after(user, 1.5 SECONDS, src))
 			cans += 1
@@ -537,41 +549,48 @@
 	if(wateramt < 1)
 		to_chat(usr, span_notice("You don't have any water to mix with."))
 		return
+	if(cans < 1)
+		to_chat(usr, span_notice("You don't have any cans to pour into."))
+		return
 	var/mix = input(user, "What to mix?", "Choices") as null|anything in pouroptions
 	switch(mix)
 		if("Mix Blue Water")
 			if(blue < 1)
 				to_chat(usr, span_notice("You don't have any blue additive to mix with."))
 				return
-			playsound(src, 'hl13/sound/machines/canmixer.ogg', 50, FALSE, extrarange = -1)
+			playsound(src, 'hl13/sound/machines/canmixer.ogg', 70, FALSE, extrarange = -1)
 			if(do_after(user, 4 SECONDS, src))
 				blue -= 1
 				wateramt -= 1
-			new /obj/item/ration_construction/blue_cans(user.loc, 1)
+				cans -= 1
+				new /obj/item/ration_construction/blue_cans(user.loc, 1)
 		if("Mix Yellow Water")
 			if(yellow < 1)
 				to_chat(usr, span_notice("You don't have any yellow additive to mix with."))
 				return
-			playsound(src, 'hl13/sound/machines/canmixer.ogg', 50, FALSE, extrarange = -1)
+			playsound(src, 'hl13/sound/machines/canmixer.ogg', 70, FALSE, extrarange = -1)
 			if(do_after(user, 4 SECONDS, src))
 				yellow -= 1
 				wateramt -= 1
-			new /obj/item/ration_construction/yellow_cans(user.loc, 1)
+				cans -= 1
+				new /obj/item/ration_construction/yellow_cans(user.loc, 1)
 		if("Mix Red Water")
 			if(red < 1)
 				to_chat(usr, span_notice("You don't have any red additive to mix with."))
 				return
-			playsound(src, 'hl13/sound/machines/canmixer.ogg', 50, FALSE, extrarange = -1)
+			playsound(src, 'hl13/sound/machines/canmixer.ogg', 70, FALSE, extrarange = -1)
 			if(do_after(user, 4 SECONDS, src))
 				red -= 1
 				wateramt -= 1
-			new /obj/item/ration_construction/red_cans(user.loc, 1)
+				cans -= 1
+				new /obj/item/ration_construction/red_cans(user.loc, 1)
 		if("Mix Purple Water")
 			if(purple < 1)
 				to_chat(usr, span_notice("You don't have any purple additive to mix with."))
 				return
-			playsound(src, 'hl13/sound/machines/canmixer.ogg', 50, FALSE, extrarange = -1)
+			playsound(src, 'hl13/sound/machines/canmixer.ogg', 70, FALSE, extrarange = -1)
 			if(do_after(user, 4 SECONDS, src))
 				purple -= 1
 				wateramt -= 1
-			new /obj/item/ration_construction/purple_cans(user.loc, 1)
+				cans -= 1
+				new /obj/item/ration_construction/purple_cans(user.loc, 1)
