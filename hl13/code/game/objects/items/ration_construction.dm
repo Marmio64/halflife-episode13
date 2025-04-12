@@ -259,39 +259,39 @@
 	icon_state = "nutripastes"
 
 /obj/item/ration_construction/ingredientblock/sweetprotein
-	name = "Sweet+Protein Block"
+	name = "Sweet+Protein Paste"
 	desc = "A completed ration ingrediant, ready to be added to a container."
 
 /obj/item/ration_construction/ingredientblock/sweetfat
-	name = "Sweet+Fat Block"
+	name = "Sweet+Fat Paste"
 	desc = "A completed ration ingrediant, ready to be added to a container."
 
 /obj/item/ration_construction/ingredientblock/sweetfiber
-	name = "Sweet+Fiber Block"
+	name = "Sweet+Fiber Paste"
 	desc = "A completed ration ingrediant, ready to be added to a container."
 
 /obj/item/ration_construction/ingredientblock/bitterprotein
-	name = "Bitter+Protein Block"
+	name = "Bitter+Protein Paste"
 	desc = "A completed ration ingrediant, ready to be added to a container."
 
 /obj/item/ration_construction/ingredientblock/bitterfat
-	name = "Bitter+Fat Block"
+	name = "Bitter+Fat Paste"
 	desc = "A completed ration ingrediant, ready to be added to a container."
 
 /obj/item/ration_construction/ingredientblock/bitterfiber
-	name = "Bitter+Fiber Block"
+	name = "Bitter+Fiber Paste"
 	desc = "A completed ration ingrediant, ready to be added to a container."
 
 /obj/item/ration_construction/ingredientblock/sourprotein
-	name = "Sour+Protein Block"
+	name = "Sour+Protein Paste"
 	desc = "A completed ration ingrediant, ready to be added to a container."
 
 /obj/item/ration_construction/ingredientblock/sourfat
-	name = "Sour+Fat Block"
+	name = "Sour+Fat Paste"
 	desc = "A completed ration ingrediant, ready to be added to a container."
 
 /obj/item/ration_construction/ingredientblock/sourfiber
-	name = "Sour+Fiber Block"
+	name = "Sour+Fiber Paste"
 	desc = "A completed ration ingrediant, ready to be added to a container."
 
 // Bar Maker
