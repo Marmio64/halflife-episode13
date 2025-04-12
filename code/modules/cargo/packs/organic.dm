@@ -9,12 +9,13 @@
 	name = "Ration Supplies Crate"
 	desc = "A crate of various ration supplies and containers. The rations must be assembled by hand, and can then be put inside a vending unit to refill it. Contains enough to fill a dispenser by about 12 rations."
 	cost = CARGO_CRATE_VALUE * 1.6
-	contains = list(/obj/item/ration_construction/packs,
-					/obj/item/ration_construction/packs,
-					/obj/item/ration_construction/boxes,
-					/obj/item/ration_construction/boxes,
-					/obj/item/ration_construction/bars,
-					/obj/item/ration_construction/bars,
+	hidden = TRUE // Just a bonus drop for the cargo event now.
+	contains = list(/obj/item/ration_construction/bags,
+					/obj/item/ration_construction/bags,
+					/obj/item/ration_construction/blue_cans,
+					/obj/item/ration_construction/waterbase,
+					/obj/item/ration_construction/waterbase,
+					/obj/item/ration_construction/waterbase,
 					/obj/item/ration_construction/bags,
 					/obj/item/ration_construction/bags,
 					/obj/item/ration_construction/blue_cans,
@@ -28,6 +29,74 @@
 					/obj/item/ration_construction/container,
 					/obj/item/ration_construction/container)
 	crate_name = "ration supplies crate"
+
+/datum/supply_pack/organic/rationflavourings
+	name = "Ration Flavourings Crate"
+	desc = "A crate of various ration flavors for use in the assembly factory."
+	cost = CARGO_CRATE_VALUE * 1.6
+	contains = list(/obj/item/ration_construction/flavoring/sweet,
+					/obj/item/ration_construction/flavoring/sweet,
+					/obj/item/ration_construction/flavoring/sweet,
+					/obj/item/ration_construction/flavoring/sweet,
+					/obj/item/ration_construction/flavoring/bitter,
+					/obj/item/ration_construction/flavoring/bitter,
+					/obj/item/ration_construction/flavoring/bitter,
+					/obj/item/ration_construction/flavoring/bitter,
+					/obj/item/ration_construction/flavoring/sour,
+					/obj/item/ration_construction/flavoring/sour,
+					/obj/item/ration_construction/flavoring/sour,
+					/obj/item/ration_construction/flavoring/sour)
+	crate_name = "ration flavor crate"
+
+/datum/supply_pack/organic/rationbase
+	name = "Ration Base Crate"
+	desc = "A crate of various blocks of flavorless base for use in the assembly factory."
+	cost = CARGO_CRATE_VALUE * 1.6
+	contains = list(/obj/item/ration_construction/base/protein,
+					/obj/item/ration_construction/base/protein,
+					/obj/item/ration_construction/base/protein,
+					/obj/item/ration_construction/base/protein,
+					/obj/item/ration_construction/base/fat,
+					/obj/item/ration_construction/base/fat,
+					/obj/item/ration_construction/base/fat,
+					/obj/item/ration_construction/base/fat,
+					/obj/item/ration_construction/base/fiber,
+					/obj/item/ration_construction/base/fiber,
+					/obj/item/ration_construction/base/fiber,
+					/obj/item/ration_construction/base/fiber)
+	crate_name = "ration base crate"
+
+/datum/supply_pack/organic/waterjug
+	name = "Unfiltered Water Crate"
+	desc = "A crate of several jugs of unfiltered water, for use in the factory."
+	cost = CARGO_CRATE_VALUE * 1.3
+	contains = list(/obj/item/ration_construction/waterbase,
+					/obj/item/ration_construction/waterbase,
+					/obj/item/ration_construction/waterbase)
+
+	crate_name = "ration water crate"
+
+/datum/supply_pack/organic/wateradds
+	name = "Water Addictives Crate"
+	desc = "A crate of water additive tablets, for use in water mixing at the factory."
+	cost = CARGO_CRATE_VALUE * 1.6
+	contains = list(/obj/item/ration_construction/watermix/blueadditive,
+					/obj/item/ration_construction/watermix/blueadditive,
+					/obj/item/ration_construction/watermix/blueadditive,
+					/obj/item/ration_construction/watermix/blueadditive,
+					/obj/item/ration_construction/watermix/yellowadditive,
+					/obj/item/ration_construction/watermix/yellowadditive,
+					/obj/item/ration_construction/watermix/yellowadditive,
+					/obj/item/ration_construction/watermix/yellowadditive,
+					/obj/item/ration_construction/watermix/redadditive,
+					/obj/item/ration_construction/watermix/redadditive,
+					/obj/item/ration_construction/watermix/redadditive,
+					/obj/item/ration_construction/watermix/redadditive,
+					/obj/item/ration_construction/watermix/purpleadditive,
+					/obj/item/ration_construction/watermix/purpleadditive,
+					/obj/item/ration_construction/watermix/purpleadditive,
+					/obj/item/ration_construction/watermix/purpleadditive)
+	crate_name = "water additives crate"
 
 /datum/supply_pack/organic/exoticrationsupplies
 	name = "Exotic Ration Supplies Crate"
