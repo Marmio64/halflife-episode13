@@ -29,3 +29,11 @@
 	)
 	result = /obj/item/stack/medical/bandage/makeshift
 	category = CAT_TOOLS
+
+/datum/crafting_recipe/makeshiftweldingtool
+	name = "Makeshift Welding Tool"
+	result = /obj/item/weldingtool/halflife/makeshift/empty
+	reqs = list(/obj/item/stack/sheet/iron = 3, /obj/item/lighter = 1)
+	time = 6 SECONDS
+	category = CAT_MISC
+	crafting_interface = CRAFTING_BENCH_GENERAL

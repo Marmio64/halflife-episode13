@@ -81,12 +81,12 @@
 	var/has_soul = FALSE
 
 /obj/item/storage/toolbox/mechanical/PopulateContents()
-	new /obj/item/screwdriver(src)
-	new /obj/item/wrench(src)
-	new /obj/item/weldingtool(src)
+	new /obj/item/screwdriver/halflife(src)
+	new /obj/item/wrench/halflife(src)
+	new /obj/item/weldingtool/halflife(src)
 	new /obj/item/crowbar(src)
 	new /obj/item/analyzer(src)
-	new /obj/item/wirecutters(src)
+	new /obj/item/wirecutters/halflife(src)
 
 /obj/item/storage/toolbox/mechanical/old
 	name = "rusty blue toolbox"

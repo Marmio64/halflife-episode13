@@ -48,21 +48,8 @@
 
 	ration_bonus = 2
 	union_law_notify = TRUE
-	var/static/list/used_numbers = list()
 
 	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
-
-/datum/job/security_officer/after_spawn(mob/living/carbon/human/H, mob/M)
-	. = ..()
-	H.faction += "combine"
-	var/r = rand(10,90)
-	while (used_numbers.Find(r))
-		r = rand(10,90)
-	used_numbers += r
-	if(istype(H.wear_id, /obj/item/card/id))
-		var/obj/item/card/id/ID = H.wear_id
-		ID.registered_name = "CP:13-[used_numbers[used_numbers.len]]"
-		ID.update_label()
 
 GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, SEC_DEPT_SUPPLY))
 
@@ -80,14 +67,14 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	if(ishuman(spawning))
 		setup_department(spawning, player_client)
 
-
+/*
 /datum/job/security_officer/after_latejoin_spawn(mob/living/spawning)
 	. = ..()
 	if(ishuman(spawning))
 		var/department = setup_department(spawning, spawning.client)
 		if(department)
 			announce_latejoin(spawning, department, GLOB.security_officer_distribution)
-
+*/
 
 /// Returns the department this mob was assigned to, if any.
 /datum/job/security_officer/proc/setup_department(mob/living/carbon/human/spawning, client/player_client)
@@ -239,6 +226,28 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	belt = /obj/item/storage/belt/civilprotection/riotfullpistol
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
+
+/datum/outfit/job/security/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+	. = ..()
+	user.faction += "combine"
+
+	var/exp_rank = "i5"
+
+	if(user?.client?.prefs)
+		switch(user.client.prefs.exp[EXP_TYPE_SECURITY])
+			if(750 to INFINITY)
+				exp_rank = "i1"
+			if(500 to 750)
+				exp_rank = "i2"
+			if(300 to 500)
+				exp_rank = "i3"
+			if(50 to 300)
+				exp_rank = "i4"
+
+	if(istype(user.wear_id, /obj/item/card/id))
+		var/obj/item/card/id/ID = user.wear_id
+		ID.registered_name = "CP:13.[exp_rank]-[rand(1,99)]"
+		ID.update_label()
 
 /datum/outfit/job/security/mod
 	name = "Security Officer (MODsuit)"

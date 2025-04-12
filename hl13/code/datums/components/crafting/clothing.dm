@@ -34,7 +34,7 @@
 	result = /obj/item/clothing/suit/armor/armored
 	reqs = list(/obj/item/stack/sheet/cloth = 5,
 				/obj/item/stack/sheet/iron = 4)
-	time = 10 SECONDS
+	time = 8 SECONDS
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
 
@@ -125,3 +125,20 @@
 	reqs = list(/obj/item/stack/sheet/sinew = 2)
 	time = 6 SECONDS
 	category = CAT_CLOTHING
+
+//Stuff a jacket with extra cloth. Simple, inconspicuous, and easy. Not as protective as an armored vest though.
+/datum/crafting_recipe/padded_jacket_blue
+	name = "Pad Jacket (Blue)"
+	result = /obj/item/clothing/suit/bluejacket/padded
+	reqs = list(/obj/item/stack/sheet/cloth = 5,
+				/obj/item/clothing/suit/bluejacket = 1)
+	time = 12 SECONDS
+	category = CAT_ARMOR
+
+/datum/crafting_recipe/padded_jacket_green
+	name = "Pad Jacket (Green)"
+	result = /obj/item/clothing/suit/greenjacket/padded
+	reqs = list(/obj/item/stack/sheet/cloth = 5,
+				/obj/item/clothing/suit/greenjacket = 1)
+	time = 12 SECONDS
+	category = CAT_ARMOR

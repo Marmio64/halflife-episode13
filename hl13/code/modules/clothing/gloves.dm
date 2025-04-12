@@ -14,6 +14,8 @@
 	icon = 'hl13/icons/obj/clothing/gloves.dmi'
 	armor_type = /datum/armor/combine_gloveshoes
 
+	clothing_traits = list(TRAIT_FAST_CUFFING)
+
 /datum/armor/combine_gloveshoes
 	melee = 10
 	bullet = 10

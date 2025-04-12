@@ -1044,6 +1044,8 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		if(target.checkmiss(owner))
 			return
 		if(target.checkdefense(user = owner))
+			to_chat(owner, span_warning("You're thrown off balance from being parried!"))
+			owner.Stun(1.25 SECONDS)
 			return
 		disarm(owner, target, attacker_style)
 		return // dont attack after

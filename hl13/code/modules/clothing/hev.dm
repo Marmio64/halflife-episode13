@@ -246,5 +246,8 @@
 	body_parts_covered = HEAD|CHEST|GROIN|ARMS|LEGS
 	slowdown = -0.25
 
+/obj/item/clothing/suit/hooded/hev/deathmatch/freeman
+	slowdown = -0.5
+
 #undef MORPHINE_INJECTION_DELAY
 #undef SOUND_BEEP

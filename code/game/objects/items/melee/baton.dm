@@ -21,7 +21,7 @@
 	/// Used interally, you don't want to modify
 	var/cooldown_check = 0
 	/// Default wait time until can stun again.
-	var/cooldown = (1.5 SECONDS)
+	var/cooldown = (2 SECONDS) //hl13 edit
 	/// The length of the knockdown applied to a struck living, non-cyborg mob.
 	var/knockdown_time = (0.25 SECONDS) //hl13 edit
 	/// If affect_cyborg is TRUE, this is how long we stun cyborgs for on a hit.
@@ -211,7 +211,9 @@
 			var/mob/living/carbon/human/human_target = target
 			if(prob(force_say_chance))
 				human_target.force_say()
+			human_target.adjust_temppain(30) //hl13 edit, batons HURT
 		target.apply_damage(stamina_damage, STAMINA)
+		target.flash_fullscreen("redflash1") //hl13 edit, batons HURT
 		if(!trait_check)
 			target.Knockdown((isnull(stun_override) ? knockdown_time : stun_override))
 		additional_effects_non_cyborg(target, user)
