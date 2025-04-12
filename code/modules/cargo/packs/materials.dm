@@ -37,3 +37,10 @@
 	contains = list(/obj/structure/reagent_dispensers/watertank)
 	crate_name = "water tank crate"
 	crate_type = /obj/structure/closet/crate/large
+
+/datum/supply_pack/materials/hl13plastic
+	name = "Plastic Crate"
+	desc = "Contains a bunch of plastic for use in ration casing construction"
+	cost = CARGO_CRATE_VALUE * 4.5
+	contains = list(/obj/item/stack/sheet/halflife/plastic/twenty)
+	crate_name = "plastic crate"

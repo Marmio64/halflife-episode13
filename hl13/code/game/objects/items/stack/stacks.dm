@@ -81,6 +81,9 @@
 	merge_type = /obj/item/stack/sheet/halflife/plastic
 	grind_results = list(/datum/reagent/plastic_polymers = 10)
 
+/obj/item/stack/sheet/halflife/plastic/twenty
+	amount = 20
+
 /obj/item/stack/bulletcasings
 	name = "empty ammo casings"
 	desc = "A pile of empty ammo casings in good condition, for making ammunition from."
