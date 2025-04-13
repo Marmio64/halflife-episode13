@@ -127,7 +127,7 @@
 	icon = 'hl13/icons/obj/streetlamps.dmi'
 	icon_state = "streetlamp"
 	anchored = TRUE
-	density = TRUE
+	density = FALSE
 	layer = ABOVE_ALL_MOB_LAYER
 	plane = ABOVE_GAME_PLANE
 	light_range = 3

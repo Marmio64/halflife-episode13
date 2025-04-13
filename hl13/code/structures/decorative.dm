@@ -128,10 +128,18 @@
 	desc = "A collection of trash. Incomplete without you."
 	icon_state = "trashbags_1"
 	var/searched = FALSE
+	var/random_appearence = TRUE
+	var/loot_chance = 40
 
 /obj/structure/halflife/trash/garbage/Initialize(mapload)
 	. = ..()
-	icon_state = pick("trashbags_1","trashbags_2","trashbags_3","trashbags_4","trashbags_5","trashbags_6")
+	if(random_appearence)
+		icon_state = pick("trashbags_1","trashbags_2","trashbags_3","trashbags_4","trashbags_5","trashbags_6")
+
+/obj/structure/halflife/trash/garbage(mob/user)
+	. = ..()
+	if(searched)
+		. += span_notice("It's been thoroughly rummaged through, and won't yield anything useful.")
 
 /obj/structure/halflife/trash/garbage/attack_hand_secondary(mob/living/user, list/modifiers)
 	. = ..()
@@ -144,7 +152,7 @@
 	user.visible_message(span_notice("[user] begins to sift through the [src] for anything useful."), \
 		span_notice("You begin to dig through the [src] for something interesting."))
 	if(do_after(user, 7 SECONDS, src))
-		if(prob(40))
+		if(prob(loot_chance))
 			user.visible_message(span_notice("[user] finds something inside the [src]."), \
 				span_notice("You find something interesting inside the [src]."))
 			new /obj/effect/spawner/random/halflife/loot(loc, rand(1,2))
@@ -156,6 +164,18 @@
 		if(iscarbon(user))
 			var/mob/living/carbon/C = user
 			C.adjust_hygiene(-15) //gross, rummaging through garbage
+
+/obj/structure/halflife/trash/garbage/dumpster
+	name = "dumpster"
+	desc = "A collection of trash. Incomplete without you."
+	icon_state = "dumpster"
+	icon = 'hl13/icons/obj/dumpster.dmi'
+	density = TRUE
+	random_appearence = FALSE
+	loot_chance = 100
+	bound_width = 64
+	layer = ABOVE_ALL_MOB_LAYER
+	plane = ABOVE_GAME_PLANE
 
 /obj/structure/halflife/trash/food
 	name = "DO NOT USE ME - base type food trash"
