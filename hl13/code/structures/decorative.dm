@@ -167,7 +167,7 @@
 
 /obj/structure/halflife/trash/garbage/dumpster
 	name = "dumpster"
-	desc = "A collection of trash. Incomplete without you."
+	desc = "A large green dumpster, full of goodies."
 	icon_state = "dumpster"
 	density = TRUE
 	random_appearence = FALSE
