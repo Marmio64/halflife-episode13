@@ -48,6 +48,22 @@
 					/obj/item/ration_construction/flavoring/sour)
 	crate_name = "ration flavor crate"
 
+/datum/supply_pack/organic/rationcontainers
+	name = "Ration Containers Crate"
+	desc = "A crate of ration containers for use at the assembly factory."
+	cost = CARGO_CRATE_VALUE * 1.6
+	contains = list(/obj/item/ration_construction/container,
+					/obj/item/ration_construction/container,
+					/obj/item/ration_construction/container,
+					/obj/item/ration_construction/container,
+					/obj/item/ration_construction/container,
+					/obj/item/ration_construction/container,
+					/obj/item/ration_construction/container,
+					/obj/item/ration_construction/container,
+					/obj/item/ration_construction/container,
+					/obj/item/ration_construction/container)
+	crate_name = "ration container crate"
+
 /datum/supply_pack/organic/rationbase
 	name = "Ration Base Crate"
 	desc = "A crate of various blocks of flavorless base for use in the assembly factory."

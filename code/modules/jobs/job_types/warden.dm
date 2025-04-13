@@ -66,7 +66,7 @@
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id
-		ID.registered_name = "OV:13.[exp_rank]-[rand(10,90)]]"
+		ID.registered_name = "OV:13.[exp_rank]-[rand(10,90)]"
 		ID.update_label()
 
 /datum/outfit/job/warden

@@ -54,6 +54,7 @@ SUBSYSTEM_DEF(daylight)
 
 	if(current_day_time >= DAY_LENGTH)
 		current_day_time = 0
+		day_cycle_active = DAY_CYCLE_NIGHT
 
 	if(current_day_time >= NIGHT_START || current_day_time <= MORNING_START)
 		if(day_cycle_active != DAY_CYCLE_NIGHT)
@@ -94,7 +95,7 @@ SUBSYSTEM_DEF(daylight)
 			light_coefficient += 0.025
 
 	if(current_day_time > DUSK_START  && current_day_time <= NIGHT_START)
-		if(day_cycle_active != DAY_CYCLE_DUSK)
+		if(day_cycle_active != DAY_CYCLE_DUSK && day_cycle_active != DAY_CYCLE_NIGHT)
 			day_cycle_active = DAY_CYCLE_DUSK
 			priority_announce("Attention citizens, night will be approaching shortly, and curfew will begin soon. Citizens are to get ready for curfew.", "Curfew Notice.", sender_override = "District Automated Scheduler")
 		if(light_coefficient > 0.5)
