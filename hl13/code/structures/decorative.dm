@@ -136,7 +136,7 @@
 	if(random_appearence)
 		icon_state = pick("trashbags_1","trashbags_2","trashbags_3","trashbags_4","trashbags_5","trashbags_6")
 
-/obj/structure/halflife/trash/garbage(mob/user)
+/obj/structure/halflife/trash/garbage/examine(mob/user)
 	. = ..()
 	if(searched)
 		. += span_notice("It's been thoroughly rummaged through, and won't yield anything useful.")
@@ -169,13 +169,9 @@
 	name = "dumpster"
 	desc = "A collection of trash. Incomplete without you."
 	icon_state = "dumpster"
-	icon = 'hl13/icons/obj/dumpster.dmi'
 	density = TRUE
 	random_appearence = FALSE
 	loot_chance = 100
-	bound_width = 64
-	layer = ABOVE_ALL_MOB_LAYER
-	plane = ABOVE_GAME_PLANE
 
 /obj/structure/halflife/trash/food
 	name = "DO NOT USE ME - base type food trash"

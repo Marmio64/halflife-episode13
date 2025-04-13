@@ -11,10 +11,13 @@
 		playsound(src, sound_to_play, 40, TRUE)
 
 /obj/effect/turf_decal/siding/street
-	icon_state = "siding_street"
+	icon_state = "border"
+	icon = 'hl13/icons/effects/border.dmi'
 
 /obj/effect/turf_decal/siding/street/corner
-	icon_state = "siding_street_corner"
+	icon_state = "border_corner"
+	icon = 'hl13/icons/effects/border.dmi'
+
 
 /obj/effect/turf_decal/siding/street/end
 	icon_state = "siding_street_end"
