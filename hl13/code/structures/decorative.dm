@@ -871,3 +871,23 @@
 
 /obj/structure/railing/halflife/wood/snow/single
 	icon_state = "wood_snow_solo"
+
+/obj/structure/halflife/pot
+	name = "plant pot"
+	desc = "An old ceramic plant pot. It has faint cracks lining it in random patterns, but it holds strong."
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "pot_1"
+	max_integrity = 50
+	density = FALSE
+	anchored = TRUE
+	projectile_passchance = 100
+
+/obj/structure/halflife/pot/plant
+	name = "plant pot"
+	desc = "An old ceramic plant pot. It has faint cracks lining it in random patterns, but it holds strong. There is a dead plant in it."
+	icon_state = "pot_2"
+
+/obj/structure/halflife/pot/plant/Initialize(mapload)
+	. = ..()
+	if(prob(30))
+		icon_state = "pot_[rand(3,4)]"

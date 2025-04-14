@@ -27,7 +27,7 @@
 						arm.receive_damage(15)
 						user.emote("scream")
 				else
-					if(prob(8))
+					if(prob(6))
 						to_chat(user, span_userdanger("Due to your inexperience, the machine seals one of your fingers inside the container!"))
 						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
 						arm.receive_damage(15)
@@ -51,7 +51,7 @@
 						arm.receive_damage(15)
 						user.emote("scream")
 				else
-					if(prob(8))
+					if(prob(6))
 						to_chat(user, span_userdanger("Due to your inexperience, the machine seals one of your fingers inside the container!"))
 						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
 						arm.receive_damage(15)

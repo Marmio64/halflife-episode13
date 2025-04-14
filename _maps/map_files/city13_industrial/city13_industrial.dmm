@@ -51,7 +51,7 @@
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/hydroponics)
 "aj" = (
-/obj/item/kirbyplants/random,
+/obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
 "ak" = (
@@ -270,7 +270,7 @@
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/restaurant)
 "be" = (
-/obj/item/kirbyplants/random,
+/obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/virology)
 "bg" = (
@@ -338,7 +338,7 @@
 /turf/open/floor/plating/indoor/tiled9,
 /area/halflife/indoors/hospital)
 "bt" = (
-/obj/item/kirbyplants/random,
+/obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/townhall/secondfloor)
 "bu" = (
@@ -633,7 +633,7 @@
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/alley)
 "cV" = (
-/obj/item/kirbyplants/random,
+/obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/townhall/secondfloor)
 "cX" = (
@@ -1631,7 +1631,7 @@
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "hs" = (
-/obj/item/kirbyplants/random,
+/obj/structure/halflife/pot/plant,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors)
@@ -2116,7 +2116,7 @@
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
 "jC" = (
-/obj/item/kirbyplants/random,
+/obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/apartments/primary)
 "jE" = (
@@ -2339,6 +2339,10 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/hydroponics)
+"kz" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "kA" = (
 /obj/structure/halflife/fence/vertical/wire/east,
 /turf/open/floor/plating/indoor/trainfloor,
@@ -3680,7 +3684,7 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "qT" = (
-/obj/item/kirbyplants/random,
+/obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/productioncenter/office)
 "qU" = (
@@ -3841,6 +3845,11 @@
 "rz" = (
 /obj/effect/landmark/start/cargo_technician,
 /turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
+"rA" = (
+/obj/structure/closet/halflife/wall/firstaid,
+/obj/item/stack/medical/gauze,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "rB" = (
 /obj/machinery/hydroponics/constructable{
@@ -4418,6 +4427,10 @@
 /obj/structure/halflife/trash/books,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/slums)
+"tV" = (
+/obj/machinery/light/small/red/directional/west,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "tW" = (
 /obj/structure/railing/halflife/solo,
 /obj/structure/railing/halflife/solo{
@@ -4860,7 +4873,7 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
 "vV" = (
-/obj/item/kirbyplants/random,
+/obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/secondfloor)
 "vW" = (
@@ -5519,7 +5532,7 @@
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/scienceunion)
 "yO" = (
-/obj/item/kirbyplants/random,
+/obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/bar/apartments)
 "yP" = (
@@ -6299,7 +6312,7 @@
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "Cc" = (
 /obj/structure/rack,
-/obj/item/screwdriver,
+/obj/item/screwdriver/halflife,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
 "Cd" = (
@@ -6932,6 +6945,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/hospital)
+"EL" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "EN" = (
 /obj/structure/flora/xen/leafy,
 /turf/open/floor/plating/indoor/woodc,
@@ -8250,7 +8267,7 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "Kk" = (
-/obj/item/kirbyplants/random,
+/obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/apartments/primary)
 "Kl" = (
@@ -8386,7 +8403,7 @@
 /area/halflife/outdoors/roofs)
 "KP" = (
 /obj/machinery/door/unpowered/halflife/metal{
-	dir = 4
+	dir = 8
 	},
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/bar/apartments)
@@ -9420,7 +9437,7 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/alley)
 "Pi" = (
-/obj/item/kirbyplants/random,
+/obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
 "Pj" = (
@@ -10612,7 +10629,7 @@
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
 "Um" = (
-/obj/item/kirbyplants/random,
+/obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
 "Un" = (
@@ -11221,7 +11238,7 @@
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/townhall/civilprotection/range)
 "Xc" = (
-/obj/item/kirbyplants/random,
+/obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/carpet/violet,
 /area/halflife/indoors/townhall/secondfloor)
 "Xe" = (
@@ -11653,7 +11670,7 @@
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/hydroponics)
 "Zb" = (
-/obj/item/kirbyplants/random,
+/obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/productioncenter/upper)
 "Zc" = (
@@ -20160,7 +20177,7 @@ sn
 or
 Aw
 lc
-lc
+EL
 lc
 lc
 Aw
@@ -22201,7 +22218,7 @@ mR
 mR
 lc
 lc
-lc
+kz
 Aw
 HV
 sn
@@ -22599,7 +22616,7 @@ Aw
 qQ
 Aw
 lc
-lc
+tV
 lc
 Aw
 mR
@@ -30733,7 +30750,7 @@ Yf
 AT
 Aa
 Yf
-HM
+jJ
 Vb
 Vb
 HM
@@ -31153,7 +31170,7 @@ ei
 ei
 pE
 Ls
-ei
+rA
 ei
 ei
 oZ
