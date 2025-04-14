@@ -328,6 +328,7 @@
 				if("sweet")
 					sweet += 1
 			to_chat(usr, span_notice("Added [F]..."))
+			playsound(src, SFX_LIQUID_POUR, 40, FALSE, extrarange = -1)
 			qdel(F)
 	if(istype(I, /obj/item/ration_construction/base))
 		var/obj/item/ration_construction/base/B = I
@@ -340,6 +341,7 @@
 				if("Fiber")
 					fiber += 1
 			to_chat(usr, span_notice("Added [B]..."))
+			playsound(src, 'hl13/sound/machines/vending.ogg', 30, FALSE, extrarange = -1)
 			qdel(B)
 
 // This can be condensed eventually the switch tree is ugly, but I'm lazy atm. Will revisit later.
@@ -524,24 +526,28 @@
 				if("purpleadd")
 					purple += 1
 			to_chat(usr, span_notice("Added [I]..."))
+			playsound(src, 'hl13/sound/machines/vending.ogg', 30, FALSE, extrarange = -1)
 			qdel(I)
 
 	if(istype(I, /obj/item/ration_construction/waterbase))
 		if(do_after(user, 1.5 SECONDS, src))
 			wateramt += 3
 			to_chat(usr, span_notice("Added [I]..."))
+			playsound(src, SFX_LIQUID_POUR, 40, FALSE, extrarange = -1)
 			qdel(I)
 
 	if(istype(I, /obj/item/water_canister))
 		if(do_after(user, 2 SECONDS, src))
 			wateramt += 12 //To make it worthwhile instead of simply selling the canister
 			to_chat(usr, span_notice("Added [I]..."))
+			playsound(src, SFX_LIQUID_POUR, 40, FALSE, extrarange = -1)
 			qdel(I)
 
 	if(istype(I, /obj/item/ration_construction/empty_cans))
 		if(do_after(user, 1.5 SECONDS, src))
 			cans += 1
 			to_chat(usr, span_notice("Added [I]..."))
+			playsound(src, 'hl13/sound/machines/vending.ogg', 30, FALSE, extrarange = -1)
 			qdel(I)
 
 /obj/machinery/watermixer/interact(mob/living/carbon/human/user)
@@ -564,6 +570,7 @@
 				wateramt -= 1
 				cans -= 1
 				new /obj/item/ration_construction/blue_cans(user.loc, 1)
+				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 30, FALSE, extrarange = -1)
 		if("Mix Yellow Water")
 			if(yellow < 1)
 				to_chat(usr, span_notice("You don't have any yellow additive to mix with."))
@@ -574,6 +581,7 @@
 				wateramt -= 1
 				cans -= 1
 				new /obj/item/ration_construction/yellow_cans(user.loc, 1)
+				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 30, FALSE, extrarange = -1)
 		if("Mix Red Water")
 			if(red < 1)
 				to_chat(usr, span_notice("You don't have any red additive to mix with."))
@@ -584,6 +592,7 @@
 				wateramt -= 1
 				cans -= 1
 				new /obj/item/ration_construction/red_cans(user.loc, 1)
+				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 30, FALSE, extrarange = -1)
 		if("Mix Purple Water")
 			if(purple < 1)
 				to_chat(usr, span_notice("You don't have any purple additive to mix with."))
@@ -594,3 +603,4 @@
 				wateramt -= 1
 				cans -= 1
 				new /obj/item/ration_construction/purple_cans(user.loc, 1)
+				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 30, FALSE, extrarange = -1)

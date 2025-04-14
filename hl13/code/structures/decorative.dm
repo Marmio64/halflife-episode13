@@ -130,6 +130,7 @@
 	var/searched = FALSE
 	var/random_appearence = TRUE
 	var/loot_chance = 40
+	var/loot_amount = 1
 
 /obj/structure/halflife/trash/garbage/Initialize(mapload)
 	. = ..()
@@ -140,6 +141,8 @@
 	. = ..()
 	if(searched)
 		. += span_notice("It's been thoroughly rummaged through, and won't yield anything useful.")
+	else
+		. += span_notice("You might be able to find something inside by right clicking it, though it will be pretty gross to search inside.")
 
 /obj/structure/halflife/trash/garbage/attack_hand_secondary(mob/living/user, list/modifiers)
 	. = ..()
@@ -155,7 +158,10 @@
 		if(prob(loot_chance))
 			user.visible_message(span_notice("[user] finds something inside the [src]."), \
 				span_notice("You find something interesting inside the [src]."))
-			new /obj/effect/spawner/random/halflife/loot(loc, rand(1,2))
+			if(loot_amount == 1)
+				new /obj/effect/spawner/random/halflife/loot(loc, 1)
+			else
+				new /obj/effect/spawner/random/halflife/loot/two(loc, 1)
 		else
 			user.visible_message(span_notice("[user] finds nothing inside the [src]."), \
 				span_notice("Nothing good..."))
@@ -171,7 +177,8 @@
 	icon_state = "dumpster"
 	density = TRUE
 	random_appearence = FALSE
-	loot_chance = 100
+	loot_chance = 80
+	loot_amount = 2
 
 /obj/structure/halflife/trash/food
 	name = "DO NOT USE ME - base type food trash"
