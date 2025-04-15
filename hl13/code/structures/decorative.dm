@@ -905,6 +905,7 @@
 	icon = 'hl13/icons/obj/miscellaneous.dmi'
 	icon_state = "pole"
 	density = FALSE
+	anchored = TRUE
 	projectile_passchance = 100
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
