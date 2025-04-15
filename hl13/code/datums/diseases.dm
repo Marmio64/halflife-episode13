@@ -85,10 +85,6 @@
 				to_chat(affected_mob, span_danger("Your throat feels sore."))
 			if(SPT_PROB(0.5, seconds_per_tick))
 				to_chat(affected_mob, span_danger("Mucous runs down the back of your throat."))
-			if((affected_mob.body_position == LYING_DOWN && SPT_PROB(23, seconds_per_tick)) || SPT_PROB(0.025, seconds_per_tick))
-				to_chat(affected_mob, span_notice("You feel better."))
-				cure()
-				return FALSE
 		if(3)
 			if(SPT_PROB(0.5, seconds_per_tick))
 				affected_mob.infectious_sneeze(src, TRUE)

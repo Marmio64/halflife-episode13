@@ -25,6 +25,9 @@
 						flash_fullscreen("redflash3")
 						adjust_stutter(8 SECONDS)
 						adjust_confusion(10 SECONDS)
+						adjust_dizzy(4 SECONDS)
+						var/list/usedp = list("F-FUCK, IT HURTS SO BAD!", "I CANT TAKE THIS PAIN MUCH LONGER!", "J-JUST KILL ME ALREADY!", "I N-NEED TO NUMB THIS PAIN!", "THE PAIN IS UNBEARABLE!")
+						to_chat(src, span_userdanger("[pick(usedp)]"))
 						if(painpercent >= 130)
 							Paralyze(painpercent/3) //min amount is 130, so a third of that is a little over 4 seconds. (This goes in deciseconds)
 					else
@@ -32,12 +35,18 @@
 							emote("paingroan")
 							adjust_stutter(5 SECONDS)
 							flash_fullscreen("redflash2")
+							if(prob(25))
+								var/list/usedp = list("I'm in a lot of pain right now...", "I need something to dull the pain...", "The pain is incessant...", "When will the pain end?", "I can't take this pain for much longer...")
+								to_chat(src, span_warning("[pick(usedp)]"))
 				else
 					if(painpercent >= 60)
 						if(prob(probby/3))
 							emote("paingroan")
 							adjust_stutter(3 SECONDS)
 							flash_fullscreen("redflash2")
+							if(prob(25))
+								var/list/usedp = list("I'm in a lot of pain right now...", "I need something to dull the pain...", "The pain is incessant...", "When will the pain end?", "I can't take this pain for much longer...")
+								to_chat(src, span_warning("[pick(usedp)]"))
 
 		if(painpercent >= 100)
 			add_mood_event("pain", /datum/mood_event/maxpain)

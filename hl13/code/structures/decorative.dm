@@ -898,3 +898,13 @@
 	. = ..()
 	if(prob(30))
 		icon_state = "pot_[rand(3,4)]"
+
+/obj/structure/halflife/pole
+	name = "Street Pole"
+	desc = "A pole often placed near crosswalks."
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "pole"
+	density = FALSE
+	projectile_passchance = 100
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)

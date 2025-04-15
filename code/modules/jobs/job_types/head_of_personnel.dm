@@ -23,7 +23,7 @@
 		/datum/job_department/command,
 		)
 
-	paycheck = PAYCHECK_COMMAND
+	paycheck = PAYCHECK_GREAT
 	paycheck_department = ACCOUNT_SRV
 	bounty_types = CIV_JOB_RANDOM
 

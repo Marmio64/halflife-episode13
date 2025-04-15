@@ -12,12 +12,14 @@
 #define PAYCHECK_LOWER 5
 ///Paygrade for all regular crew not belonging to PAYGRADE_LOWER or PAYGRADE_COMMAND.
 #define PAYCHECK_CREW 8
-///Paygrade for more privledged crew, but are not the top dogs. hl13 addition
-#define PAYCHECK_HIGH 12
 ///Paygrade for Heads of Staff.
 #define PAYCHECK_COMMAND 20
 
-
+//hl13 paygrade edits. Using custom ones because paychecks are low, you earn money elsewhere generally, like from your rations even.
+#define PAYCHECK_CITIZEN 4
+#define PAYCHECK_STANDARD 6
+#define PAYCHECK_HIGH 10
+#define PAYCHECK_GREAT 15
 
 #define STATION_TARGET_BUFFER 25
 

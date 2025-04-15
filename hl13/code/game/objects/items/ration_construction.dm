@@ -361,7 +361,7 @@
 							sour -= 1
 							protein -= 1
 							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
-							new /obj/item/ration_construction/ingredientblock/sourprotein(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/sourprotein(src.loc, 1)
 						else
 							to_chat(usr, span_notice("You don't have any sour flavour."))
 							return
@@ -370,7 +370,7 @@
 							bitter -= 1
 							protein -= 1
 							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
-							new /obj/item/ration_construction/ingredientblock/bitterprotein(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/bitterprotein(src.loc, 1)
 						else
 							to_chat(usr, span_notice("You don't have any bitter flavour."))
 							return
@@ -379,7 +379,7 @@
 							sweet -= 1
 							protein -= 1
 							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
-							new /obj/item/ration_construction/ingredientblock/sweetprotein(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/sweetprotein(src.loc, 1)
 						else
 							to_chat(usr, span_notice("You don't have any sweet flavour."))
 							return
@@ -394,7 +394,7 @@
 							sour -= 1
 							fat -= 1
 							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
-							new /obj/item/ration_construction/ingredientblock/sourfat(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/sourfat(src.loc, 1)
 						else
 							to_chat(usr, span_notice("You don't have any sour flavour."))
 							return
@@ -403,7 +403,7 @@
 							bitter -= 1
 							fat -= 1
 							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
-							new /obj/item/ration_construction/ingredientblock/bitterfat(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/bitterfat(src.loc, 1)
 						else
 							to_chat(usr, span_notice("You don't have any bitter flavour."))
 							return
@@ -412,7 +412,7 @@
 							sweet -= 1
 							fat -= 1
 							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
-							new /obj/item/ration_construction/ingredientblock/sweetfat(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/sweetfat(src.loc, 1)
 						else
 							to_chat(usr, span_notice("You don't have any sweet flavour."))
 							return
@@ -428,7 +428,7 @@
 							sour -= 1
 							fiber -= 1
 							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
-							new /obj/item/ration_construction/ingredientblock/sourfiber(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/sourfiber(src.loc, 1)
 						else
 							to_chat(usr, span_notice("You don't have any sour flavour."))
 							return
@@ -437,7 +437,7 @@
 							bitter -= 1
 							fiber -= 1
 							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
-							new /obj/item/ration_construction/ingredientblock/bitterfiber(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/bitterfiber(src.loc, 1)
 						else
 							to_chat(usr, span_notice("You don't have any bitter flavour."))
 							return
@@ -446,7 +446,7 @@
 							sweet -= 1
 							fiber -= 1
 							playsound(src, 'hl13/sound/machines/meatmixer.ogg', 70, FALSE, extrarange = -1)
-							new /obj/item/ration_construction/ingredientblock/sweetfiber(user.loc, 1)
+							new /obj/item/ration_construction/ingredientblock/sweetfiber(src.loc, 1)
 						else
 							to_chat(usr, span_notice("You don't have any sweet flavour."))
 							return
@@ -569,7 +569,7 @@
 				blue -= 1
 				wateramt -= 1
 				cans -= 1
-				new /obj/item/ration_construction/blue_cans(user.loc, 1)
+				new /obj/item/ration_construction/blue_cans(src.loc, 1)
 				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 30, FALSE, extrarange = -1)
 		if("Mix Yellow Water")
 			if(yellow < 1)
@@ -580,7 +580,7 @@
 				yellow -= 1
 				wateramt -= 1
 				cans -= 1
-				new /obj/item/ration_construction/yellow_cans(user.loc, 1)
+				new /obj/item/ration_construction/yellow_cans(src.loc, 1)
 				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 30, FALSE, extrarange = -1)
 		if("Mix Red Water")
 			if(red < 1)
@@ -591,7 +591,7 @@
 				red -= 1
 				wateramt -= 1
 				cans -= 1
-				new /obj/item/ration_construction/red_cans(user.loc, 1)
+				new /obj/item/ration_construction/red_cans(src.loc, 1)
 				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 30, FALSE, extrarange = -1)
 		if("Mix Purple Water")
 			if(purple < 1)
@@ -602,5 +602,5 @@
 				purple -= 1
 				wateramt -= 1
 				cans -= 1
-				new /obj/item/ration_construction/purple_cans(user.loc, 1)
+				new /obj/item/ration_construction/purple_cans(src.loc, 1)
 				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 30, FALSE, extrarange = -1)

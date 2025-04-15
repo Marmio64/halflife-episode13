@@ -27,7 +27,7 @@
 						arm.receive_damage(15)
 						user.emote("scream")
 				else
-					if(prob(6))
+					if(prob(5))
 						to_chat(user, span_userdanger("Due to your inexperience, the machine seals one of your fingers inside the container!"))
 						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
 						arm.receive_damage(15)
@@ -42,7 +42,7 @@
 			to_chat(usr, span_notice("Sealing box..."))
 			if(do_after(user, 1 SECONDS, src))
 				to_chat(usr, span_notice("Container successfully sealed. Reward dispensed."))
-				C.seal(user, 4) //Using the sealer gets you bonus money
+				C.seal(user, 3) //Using the sealer gets you bonus money
 				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 50, FALSE, extrarange = -1)
 				if(user.job == "Union Worker")
 					if(prob(2))
@@ -51,7 +51,7 @@
 						arm.receive_damage(15)
 						user.emote("scream")
 				else
-					if(prob(6))
+					if(prob(5))
 						to_chat(user, span_userdanger("Due to your inexperience, the machine seals one of your fingers inside the container!"))
 						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
 						arm.receive_damage(15)

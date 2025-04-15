@@ -12,7 +12,7 @@
 	outfit = /datum/outfit/job/bartender
 	plasmaman_outfit = /datum/outfit/plasmaman/bar
 
-	paycheck = PAYCHECK_LOWER
+	paycheck = PAYCHECK_CITIZEN
 	paycheck_department = ACCOUNT_SRV
 	display_order = JOB_DISPLAY_ORDER_BARTENDER
 	bounty_types = CIV_JOB_DRINK

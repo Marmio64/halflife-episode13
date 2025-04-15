@@ -12,7 +12,7 @@
 	outfit = /datum/outfit/job/cargo_tech
 	plasmaman_outfit = /datum/outfit/plasmaman/cargo
 
-	paycheck = PAYCHECK_LOWER
+	paycheck = PAYCHECK_CITIZEN
 	paycheck_department = ACCOUNT_CAR
 	display_order = JOB_DISPLAY_ORDER_CARGO_TECHNICIAN
 	bounty_types = CIV_JOB_RANDOM
