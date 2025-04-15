@@ -909,3 +909,13 @@
 	projectile_passchance = 100
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
+
+/obj/structure/halflife/publicphone
+	name = "Public Phone"
+	desc = "A public pay phone. Used to work, now it's just a decorative piece, maybe even a statement of humanity as it is now."
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "publicphone"
+	density = FALSE
+	anchored = TRUE
+	projectile_passchance = 100
+	pixel_y = 22
