@@ -33,7 +33,7 @@
 					/obj/item/instrument/harmonica = 1,
 					/obj/item/instrument/piano_synth = 1,
 					/obj/item/taperecorder = 3,
-					/obj/item/flashlight = 3,
+					/obj/item/flashlight = 5,
 					/obj/item/clothing/head/beanie/black = 3,
 					/obj/item/clothing/head/flatcap = 3,
 					/obj/item/lighter/greyscale = 6,
