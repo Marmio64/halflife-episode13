@@ -184,7 +184,7 @@
 			return
 		cabling.visible_message(span_notice("[user] repairs the suit sensors on [src] with [cabling]."))
 
-	playsound(source = src, soundin = 'sound/effects/sparks/sparks4.ogg', vol = 100, vary = TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
+	playsound(source = src, soundin = 'sound/effects/sparks/sparks3.ogg', vol = 100, vary = TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
 	has_sensor = HAS_SENSORS
 	update_wearer_status()
 

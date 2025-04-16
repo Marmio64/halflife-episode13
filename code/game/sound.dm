@@ -252,7 +252,6 @@
 				'sound/effects/sparks/sparks1.ogg',
 				'sound/effects/sparks/sparks2.ogg',
 				'sound/effects/sparks/sparks3.ogg',
-				'sound/effects/sparks/sparks4.ogg',
 				)
 		if(SFX_RUSTLE)
 			soundin = pick(
