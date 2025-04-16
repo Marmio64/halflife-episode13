@@ -3,7 +3,7 @@
 /datum/tutorial
 	/// If set, any account who started playing before this date will not be given this tutorial.
 	/// Date is in YYYY-MM-DD format.
-	var/grandfather_date
+	var/grandfather_date = "2025-4-14" //hl13 edit
 
 	/// The mob we are giving the tutorial to
 	VAR_PROTECTED/mob/user

@@ -84,7 +84,7 @@
 		if(item_quanity_received >= item_quantity_required)
 			quota_complete = TRUE
 			radio.talk_into(src, "Quota has been completed.", radio_channel)
-			SSsociostability.modifystability(5) //yipee
+			SSsociostability.modifystability(10) //yipee
 		qdel(I)
 	else
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)

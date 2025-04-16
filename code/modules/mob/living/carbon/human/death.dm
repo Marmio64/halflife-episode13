@@ -42,7 +42,7 @@ GLOBAL_LIST_EMPTY(dead_players_during_shift)
 
 		if(check_player_mob)
 			if(isvalid_area_check)
-				SSsociostability.modifystability(-10) //Sociostability is reduced by 1% for any person's death, on top of the mindshield sociostability loss
+				SSsociostability.modifystability(-20) //Sociostability is reduced by 2% for any person's death, on top of the mindshield sociostability loss
 
 			if(HAS_TRAIT(src, TRAIT_MINDSHIELD))
 				SSsociostability.modifystability(-20) //If they were mindshielded, they were probably somewhat important.

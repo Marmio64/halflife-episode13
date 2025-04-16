@@ -20,7 +20,7 @@
 	outfit = /datum/outfit/job/captain
 	plasmaman_outfit = /datum/outfit/plasmaman/captain
 
-	paycheck = PAYCHECK_COMMAND
+	paycheck = PAYCHECK_GREAT
 	paycheck_department = ACCOUNT_SEC
 
 	mind_traits = list(HEAD_OF_STAFF_MIND_TRAITS)

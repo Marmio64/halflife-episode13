@@ -130,6 +130,7 @@
 	var/searched = FALSE
 	var/random_appearence = TRUE
 	var/loot_chance = 40
+	var/loot_amount = 1
 
 /obj/structure/halflife/trash/garbage/Initialize(mapload)
 	. = ..()
@@ -140,6 +141,8 @@
 	. = ..()
 	if(searched)
 		. += span_notice("It's been thoroughly rummaged through, and won't yield anything useful.")
+	else
+		. += span_notice("You might be able to find something inside by right clicking it, though it will be pretty gross to search inside.")
 
 /obj/structure/halflife/trash/garbage/attack_hand_secondary(mob/living/user, list/modifiers)
 	. = ..()
@@ -155,7 +158,10 @@
 		if(prob(loot_chance))
 			user.visible_message(span_notice("[user] finds something inside the [src]."), \
 				span_notice("You find something interesting inside the [src]."))
-			new /obj/effect/spawner/random/halflife/loot(loc, rand(1,2))
+			if(loot_amount == 1)
+				new /obj/effect/spawner/random/halflife/loot(loc, 1)
+			else
+				new /obj/effect/spawner/random/halflife/loot/two(loc, 1)
 		else
 			user.visible_message(span_notice("[user] finds nothing inside the [src]."), \
 				span_notice("Nothing good..."))
@@ -171,7 +177,8 @@
 	icon_state = "dumpster"
 	density = TRUE
 	random_appearence = FALSE
-	loot_chance = 100
+	loot_chance = 80
+	loot_amount = 2
 
 /obj/structure/halflife/trash/food
 	name = "DO NOT USE ME - base type food trash"
@@ -871,3 +878,44 @@
 
 /obj/structure/railing/halflife/wood/snow/single
 	icon_state = "wood_snow_solo"
+
+/obj/structure/halflife/pot
+	name = "plant pot"
+	desc = "An old ceramic plant pot. It has faint cracks lining it in random patterns, but it holds strong."
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "pot_1"
+	max_integrity = 50
+	density = FALSE
+	anchored = TRUE
+	projectile_passchance = 100
+
+/obj/structure/halflife/pot/plant
+	name = "plant pot"
+	desc = "An old ceramic plant pot. It has faint cracks lining it in random patterns, but it holds strong. There is a dead plant in it."
+	icon_state = "pot_2"
+
+/obj/structure/halflife/pot/plant/Initialize(mapload)
+	. = ..()
+	if(prob(30))
+		icon_state = "pot_[rand(3,4)]"
+
+/obj/structure/halflife/pole
+	name = "Street Pole"
+	desc = "A pole often placed near crosswalks."
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "pole"
+	density = FALSE
+	anchored = TRUE
+	projectile_passchance = 100
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
+
+/obj/structure/halflife/publicphone
+	name = "Public Phone"
+	desc = "A public pay phone. Used to work, now it's just a decorative piece, maybe even a statement of humanity as it is now."
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "publicphone"
+	density = FALSE
+	anchored = TRUE
+	projectile_passchance = 100
+	pixel_y = 22

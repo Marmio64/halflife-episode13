@@ -65,6 +65,9 @@
 				/obj/item/storage/medkit/toxin
 				)
 
+/obj/effect/spawner/random/halflife/loot/two
+	spawn_loot_count = 2
+
 //only scrap items, pretty much always needs crafting to be made useful
 /obj/effect/spawner/random/halflife/loot/scrap
 	name = "scrap loot"

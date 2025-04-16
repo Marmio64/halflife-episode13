@@ -208,6 +208,8 @@
 	var/money_to_transfer = round(account_job.paycheck * payday_modifier * amount_of_paychecks)
 	if(amount_of_paychecks == 1)
 		money_to_transfer = clamp(money_to_transfer, 0, PAYCHECK_CREW) //We want to limit single, passive paychecks to regular crew income.
+	if(SSsociostability.sociostability < SOCIOSTABILITY_POOR) //hl13 edit, fuck you
+		money_to_transfer *= 0.5
 	if(free)
 		adjust_money(money_to_transfer, "Credit Stipend")
 		SSblackbox.record_feedback("amount", "free_income", money_to_transfer)

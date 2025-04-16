@@ -3,7 +3,7 @@
 	description = "Operate your minature science station under the supervision of the labor lead, requesting assistants if necessary."
 	department_head = list(JOB_RESEARCH_DIRECTOR)
 	faction = FACTION_STATION
-	total_positions = 3
+	total_positions = 2
 	spawn_positions = 2
 	supervisors = SUPERVISOR_RD
 	exp_requirements = 60
@@ -14,7 +14,7 @@
 	outfit = /datum/outfit/job/scientist
 	plasmaman_outfit = /datum/outfit/plasmaman/science
 
-	paycheck = PAYCHECK_CREW
+	paycheck = PAYCHECK_STANDARD
 	paycheck_department = ACCOUNT_SCI
 
 	liver_traits = list(TRAIT_BALLMER_SCIENTIST)

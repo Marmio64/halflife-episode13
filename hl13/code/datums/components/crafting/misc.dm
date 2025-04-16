@@ -37,3 +37,11 @@
 	time = 6 SECONDS
 	category = CAT_MISC
 	crafting_interface = CRAFTING_BENCH_GENERAL
+
+/datum/crafting_recipe/lockpick
+	name = "Makeshift Lockpick"
+	result = /obj/item/lockpick/makeshift
+	reqs = list(/obj/item/stack/sheet/scrap_metal = 4)
+	time = 8 SECONDS
+	category = CAT_MISC
+	crafting_interface = CRAFTING_BENCH_GENERAL
