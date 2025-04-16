@@ -25,7 +25,7 @@
 	flags_1 = NONE
 	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
 
-	spread = -15
+	spread = -25 //counter acts their terrible aim trait
 
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/enchanted/vort_blast
 

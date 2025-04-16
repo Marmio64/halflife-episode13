@@ -48,7 +48,7 @@
 				/obj/item/reagent_containers/syringe,
 				/obj/item/reagent_containers/medigel/sterilizine,
 				/obj/item/reagent_containers/pill/patch/medkit,
-				/obj/item/reagent_containers/hypospray/medipen/healthpen,
+				/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 				/obj/item/reagent_containers/pill/patch/medkit/vial = 3,
 				/obj/item/circuitboard/machine/skill_station,
 				/obj/item/skillchip/fitness,
@@ -62,8 +62,7 @@
 				/obj/item/customlock,
 				/obj/item/stack/kevlar,
 				/obj/item/stack/spacecash/c10,
-				/obj/item/stack/spacecash/c20,
-				/obj/item/storage/medkit/toxin
+				/obj/item/stack/spacecash/c20
 				)
 
 /obj/effect/spawner/random/halflife/loot/two
@@ -106,14 +105,13 @@
 
 	loot = list(
 				/obj/item/reagent_containers/pill/patch/medkit,
-				/obj/item/reagent_containers/hypospray/medipen/healthpen,
+				/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 				/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
 				/obj/item/stack/medical/gauze,
 				/obj/item/stack/medical/suture,
 				/obj/item/stack/medical/bandage = 2,
 				/obj/item/stack/medical/bandage/makeshift,
-				/obj/item/stack/medical/ointment,
-				/obj/item/reagent_containers/syringe/syriniver
+				/obj/item/stack/medical/ointment
 				)
 
 //only consumable loot. Food, drinks, drugs, cigarettes, etc.
