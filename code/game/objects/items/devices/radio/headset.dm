@@ -139,8 +139,8 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	make_syndie()
 
 /obj/item/radio/headset/syndicate/alt //undisguised bowman with flash protection
-	name = "syndicate headset"
-	desc = "A syndicate headset that can be used to hear all radio frequencies. Protects ears from flashbangs."
+	name = "military headset"
+	desc = "A pre-war military headset that has been upgraded to hear some encrypted radio frequencies. Protects ears from flashbangs."
 	icon_state = "syndie_headset"
 	worn_icon_state = "syndie_headset"
 
@@ -149,7 +149,8 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EARS))
 
 /obj/item/radio/headset/syndicate/alt/leader
-	name = "team leader headset"
+	name = "military command headset"
+	desc = "A pre-war military headset used by field commanders, that has been upgraded to able to decipher encrypted radio frequencies."
 	command = TRUE
 
 /obj/item/radio/headset/binary
