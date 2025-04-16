@@ -2920,8 +2920,9 @@
 /turf/open/floor/iron,
 /area/centcom/tdome/observation)
 "Ii" = (
-/turf/open/space/basic,
-/area/centcom/halflife/relocation_city)
+/obj/machinery/vending/combine_wallmed/directional/west,
+/turf/open/floor/plating/indoor/tiled9,
+/area/centcom/halflife)
 "Im" = (
 /turf/open/floor/plating/indoor/metal/pipe/corner{
 	dir = 8
@@ -3011,6 +3012,13 @@
 /obj/effect/turf_decal/tile/neutral/full,
 /turf/open/floor/iron/dark/textured_large,
 /area/centcom/central_command_areas/evacuation/ship)
+"JF" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	lockid = "overwatch_exchange";
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/tiled9,
+/area/centcom/halflife)
 "JJ" = (
 /obj/structure/table/wood,
 /obj/item/storage/fancy/donut_box,
@@ -3333,6 +3341,14 @@
 	},
 /turf/open/floor/plating/indoor/trainfloor,
 /area/centcom/halflife)
+"MH" = (
+/obj/structure/table/halflife/metal/alt,
+/obj/item/reagent_containers/pill/patch/medkit{
+	pixel_x = 0;
+	pixel_y = -3
+	},
+/turf/open/floor/plating/indoor/tiled9,
+/area/centcom/halflife)
 "MK" = (
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
@@ -3411,6 +3427,14 @@
 /obj/effect/light_emitter/thunderdome,
 /turf/open/floor/iron,
 /area/centcom/tdome/arena)
+"NX" = (
+/obj/structure/table/halflife/metal/alt,
+/obj/item/reagent_containers/pill/patch/medkit{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/indoor/tiled9,
+/area/centcom/halflife)
 "NY" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/effect/light_emitter/thunderdome,
@@ -50495,7 +50519,7 @@ Zp
 Zp
 Qr
 Zp
-Ii
+Lv
 aa
 aa
 aa
@@ -50752,7 +50776,7 @@ Zp
 Qr
 Qr
 Zp
-Ii
+Lv
 aa
 aa
 aa
@@ -51009,7 +51033,7 @@ Zp
 Qr
 Qr
 Zp
-Ii
+Lv
 aa
 aa
 aa
@@ -51266,7 +51290,7 @@ Zp
 Qr
 Qr
 Zp
-Ii
+Lv
 aa
 aa
 aa
@@ -51523,14 +51547,14 @@ Zp
 Qr
 Qr
 Zp
-Ii
+Lv
 aa
 aa
-aa
-aa
-aa
-aa
-aa
+gA
+gA
+iz
+gA
+gA
 aa
 aa
 aa
@@ -51784,10 +51808,10 @@ Lv
 gA
 gA
 gA
+FY
+Iz
+FY
 gA
-aa
-aa
-aa
 aa
 aa
 aa
@@ -52041,10 +52065,10 @@ FY
 FY
 FY
 FY
+FY
+JF
+FY
 gA
-aa
-aa
-aa
 aa
 aa
 aa
@@ -52297,11 +52321,11 @@ FY
 QD
 Ab
 Iz
-iz
+Jn
+Iz
+Iz
+FY
 gA
-aa
-aa
-aa
 aa
 aa
 aa
@@ -52555,10 +52579,10 @@ pp
 pS
 FY
 FY
+Iz
+Iz
+FY
 gA
-aa
-aa
-aa
 aa
 aa
 aa
@@ -52810,12 +52834,12 @@ mV
 FY
 zo
 Iz
+Ii
+FY
+Iz
 Iz
 FY
 gA
-aa
-aa
-aa
 aa
 aa
 aa
@@ -53068,11 +53092,11 @@ Jn
 Iz
 Iz
 Iz
-iz
+Jn
+Iz
+Iz
+FY
 gA
-aa
-aa
-aa
 aa
 aa
 aa
@@ -53326,10 +53350,10 @@ fH
 Ix
 Gd
 FY
+MH
+NX
+FY
 gA
-aa
-aa
-aa
 aa
 aa
 aa
@@ -53583,10 +53607,10 @@ FY
 FY
 FY
 FY
+FY
+FY
+FY
 gA
-aa
-aa
-aa
 aa
 aa
 aa
@@ -53841,9 +53865,9 @@ gA
 gA
 gA
 gA
-aa
-aa
-aa
+gA
+gA
+gA
 aa
 aa
 aa
