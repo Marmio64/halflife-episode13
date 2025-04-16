@@ -1,5 +1,5 @@
 /// Number of paychecks jobs start with at the creation of a new bank account for a player (So at shift-start or game join, but not a blank new account.)
-#define STARTING_PAYCHECKS 5
+#define STARTING_PAYCHECKS 6
 /// How much mail the Economy SS will create per minute, regardless of firing time.
 #define MAX_MAIL_PER_MINUTE 3
 /// Probability of using letters of envelope sprites on all letters.
@@ -12,12 +12,14 @@
 #define PAYCHECK_LOWER 5
 ///Paygrade for all regular crew not belonging to PAYGRADE_LOWER or PAYGRADE_COMMAND.
 #define PAYCHECK_CREW 8
-///Paygrade for more privledged crew, but are not the top dogs. hl13 addition
-#define PAYCHECK_HIGH 12
 ///Paygrade for Heads of Staff.
 #define PAYCHECK_COMMAND 20
 
-
+//hl13 paygrade edits. Using custom ones because paychecks are low, you earn money elsewhere generally, like from your rations even.
+#define PAYCHECK_CITIZEN 2
+#define PAYCHECK_STANDARD 4
+#define PAYCHECK_HIGH 8
+#define PAYCHECK_GREAT 12
 
 #define STATION_TARGET_BUFFER 25
 

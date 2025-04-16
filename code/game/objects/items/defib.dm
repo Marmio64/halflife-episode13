@@ -650,7 +650,7 @@
 					if(defib_result == DEFIB_POSSIBLE)
 						H.grab_ghost()
 					H.revive()
-					SSsociostability.modifystability(10) //hl13 edit, returns the sociostability that was lost from death
+					SSsociostability.modifystability(20) //hl13 edit, returns the sociostability that was lost from death
 					H.emote("gasp")
 					H.set_jitter_if_lower(200 SECONDS)
 					SEND_SIGNAL(H, COMSIG_LIVING_MINOR_SHOCK)

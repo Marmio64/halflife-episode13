@@ -62,6 +62,12 @@
 	max_integrity = 10
 	var/picklvl = 1
 
+/obj/item/lockpick/makeshift
+	name = "makeshift lockpick"
+	desc = "A small, sharp piece of metal to aid opening locks in the absence of a key. This one is shoddily made, and will be less effective and durable."
+	max_integrity = 8
+	picklvl = 0.5
+
 /obj/item/lockpick/combine
 	name = "combine lockpick"
 	desc = "A combine-grade lockpick, able to pick locks more easily than your standard lockpick."

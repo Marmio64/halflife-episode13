@@ -114,3 +114,44 @@
 	desc = "A pyramid of shelving units, ready to display wares to the eager world."
 	icon_state = "showcase"
 	materialtype = /obj/item/stack/sheet/mineral/scrap_wood
+
+/obj/structure/closet/halflife/wall
+	name = "wasteland wall storage"
+	desc = "Holds wastelands, while being attatched to a wall, presumably."
+	pixel_y = 32
+	density = FALSE
+	hitted_sound = 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_2.wav'
+	icon = 'hl13/icons/obj/storage/storage.dmi'
+
+/obj/structure/closet/halflife/wall/Initialize(mapload)
+	. = ..()
+	find_and_hang_on_wall()
+
+/obj/structure/closet/halflife/wall/firstaid
+	name = "emergency aid kit"
+	desc = "A first aid kit, mounted to the wall. Commonly used for emergencies before the war."
+	icon_state = "firstaid"
+	anchored = TRUE
+	anchorable = FALSE
+	wall_mounted = TRUE
+	max_mob_size = MOB_SIZE_TINY
+	mob_storage_capacity = 1
+
+/obj/structure/closet/halflife/wall/firstaid/update_icon()
+	. = ..()
+	layer = ON_EDGED_TURF_LAYER
+
+/obj/structure/halflife/storage/vent
+	name = "vent"
+	desc = "A vent used to move air to and from places."
+	icon = 'hl13/icons/obj/storage/storage.dmi'
+	icon_state = "vent"
+	flags_1 = INDESTRUCTIBLE | ACID_PROOF | FIRE_PROOF
+	pixel_y = 24
+	density = FALSE
+	hitted_sound = 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_2.wav'
+
+/obj/structure/halflife/storage/vent/Initialize()
+	. = ..()
+	if(prob(50))
+		icon_state = "[initial(icon_state)]-damaged"

@@ -33,7 +33,7 @@
 					/obj/item/instrument/harmonica = 1,
 					/obj/item/instrument/piano_synth = 1,
 					/obj/item/taperecorder = 3,
-					/obj/item/flashlight = 3,
+					/obj/item/flashlight = 5,
 					/obj/item/clothing/head/beanie/black = 3,
 					/obj/item/clothing/head/flatcap = 3,
 					/obj/item/lighter/greyscale = 6,
@@ -121,8 +121,8 @@
 		/obj/item/storage/box/gum/happiness = 1,
 	)
 	refill_canister = /obj/item/vending_refill/combine_wallmed
-	default_price = PAYCHECK_COMMAND //Double the medical price due to being meant for public consumption, not player specfic
-	extra_price = PAYCHECK_COMMAND * 1.5
+	default_price = PAYCHECK_CREW * 1.5
+	extra_price = PAYCHECK_COMMAND
 	payment_department = ACCOUNT_MED
 	tiltable = FALSE
 	light_mask = "wallmed-light-mask"
