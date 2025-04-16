@@ -5,6 +5,7 @@
 	icon_state = "bouncer"
 	shrapnel_type = /obj/projectile/bullet/shrapnel
 	shrapnel_radius = 2
+	det_time = 35
 	ex_dev = 0
 	ex_heavy = 2
 	ex_light = 3
