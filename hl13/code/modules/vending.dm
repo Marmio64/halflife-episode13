@@ -107,6 +107,7 @@
 	products = list(
 		/obj/item/reagent_containers/syringe = 3,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 6,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
 		/obj/item/reagent_containers/pill/multiver = 3,
 		/obj/item/reagent_containers/pill/potassiodide = 3,
 		/obj/item/reagent_containers/pill/iron = 4,

@@ -28,3 +28,11 @@
 	icon_state = "grub_nugget"
 	apply_sound = 'hl13/sound/effects/smallmedkit1.ogg'
 
+/obj/item/reagent_containers/hypospray/medipen/healthpen
+	name = "healthpen"
+	desc = "A combine manufactured biogel autoinjector. Heals a small amount over time, and is instant to apply."
+	icon = 'hl13/icons/obj/medkits.dmi'
+	icon_state = "healthpen"
+	base_icon_state = "healthpen"
+	list_reagents = list(/datum/reagent/medicine/concentrated_biogel/slurry = 15)
+	sound_played = 'hl13/sound/effects/healthpen_inject.ogg'

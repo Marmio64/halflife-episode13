@@ -61,3 +61,9 @@
 	need_mob_update += affected_mob.adjustFireLoss(1.5 * REM * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
+
+/datum/reagent/medicine/concentrated_biogel/slurry
+	name = "Concentrated Biogel Slurry"
+	description = "A concentrated amount of biogel with a few other compounds inside. Doesn't heal instantly like normal biogel, but doesn't need to be applied by touch, and will heal all damage types. This is a slurry mixed with filler compounds. Less effective, but cheaper."
+	metabolization_rate = 2 * REAGENTS_METABOLISM
+	healing = 1

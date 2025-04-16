@@ -48,6 +48,7 @@
 				/obj/item/reagent_containers/syringe,
 				/obj/item/reagent_containers/medigel/sterilizine,
 				/obj/item/reagent_containers/pill/patch/medkit,
+				/obj/item/reagent_containers/hypospray/medipen/healthpen,
 				/obj/item/reagent_containers/pill/patch/medkit/vial = 3,
 				/obj/item/circuitboard/machine/skill_station,
 				/obj/item/skillchip/fitness,
@@ -105,6 +106,7 @@
 
 	loot = list(
 				/obj/item/reagent_containers/pill/patch/medkit,
+				/obj/item/reagent_containers/hypospray/medipen/healthpen,
 				/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
 				/obj/item/stack/medical/gauze,
 				/obj/item/stack/medical/suture,

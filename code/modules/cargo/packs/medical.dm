@@ -212,3 +212,15 @@
 					/obj/item/reagent_containers/pill/patch/medkit,
 	)
 	crate_name = "medkit crate"
+
+/datum/supply_pack/medical/healthpen
+	name = "Healthpens"
+	desc = "Contains 5 biogel healthpens, which heal all damage types slowly over time."
+	cost = CARGO_CRATE_VALUE * 2.5
+	contains = list(/obj/item/reagent_containers/hypospray/medipen/healthpen,
+					/obj/item/reagent_containers/hypospray/medipen/healthpen,
+					/obj/item/reagent_containers/hypospray/medipen/healthpen,
+					/obj/item/reagent_containers/hypospray/medipen/healthpen,
+					/obj/item/reagent_containers/hypospray/medipen/healthpen,
+	)
+	crate_name = "healthpen crate"

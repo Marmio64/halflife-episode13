@@ -633,7 +633,7 @@
 	aportalid = "city_surface_left"
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/indoors)
+/area/halflife/indoors/sewer/tunnel)
 "cJ" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -710,6 +710,10 @@
 /area/halflife/indoors/sewer)
 "de" = (
 /turf/open/floor/plating/ground/dirt/alt,
+/area/halflife/outdoors/alley)
+"df" = (
+/obj/structure/halflife/trash/papers/three,
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley)
 "dg" = (
 /obj/structure/table/halflife/no_smooth/metal,
@@ -1663,6 +1667,7 @@
 	},
 /obj/structure/table/halflife/metal/alt,
 /obj/item/reagent_containers/pill/patch/medkit/vial,
+/obj/item/reagent_containers/hypospray/medipen/healthpen,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/hospital/storage)
 "hj" = (
@@ -2438,6 +2443,9 @@
 	},
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/distributioncenter)
+"kv" = (
+/turf/cordon,
+/area/halflife/indoors/sewer/tunnel)
 "kw" = (
 /obj/item/food/chocolatebar,
 /obj/structure/filingcabinet/hl2,
@@ -3523,7 +3531,7 @@
 /turf/open/floor/plating/indoor/metal/grate/border{
 	dir = 1
 	},
-/area/halflife/indoors)
+/area/halflife/indoors/sewer/tunnel)
 "pu" = (
 /obj/structure/railing/halflife/solo{
 	dir = 1
@@ -4676,6 +4684,13 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/alley)
+"uj" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	keylock = 1;
+	locked = 1
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/indoors)
 "ul" = (
 /obj/structure/halflife/fence/wire,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -5049,7 +5064,7 @@
 /turf/open/floor/plating/indoor/metal/grate/border{
 	dir = 1
 	},
-/area/halflife/indoors)
+/area/halflife/indoors/sewer/tunnel)
 "vI" = (
 /obj/machinery/camera{
 	c_tag = "Labor Union Maintenace Room";
@@ -7981,6 +7996,9 @@
 /obj/effect/landmark/start/labor_lead,
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/townhall/secondfloor)
+"HL" = (
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/indoors/sewer/tunnel)
 "HM" = (
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/townhall)
@@ -10187,7 +10205,7 @@
 /turf/open/floor/plating/indoor/metal/grate/border{
 	dir = 1
 	},
-/area/halflife/indoors)
+/area/halflife/indoors/sewer/tunnel)
 "QH" = (
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley)
@@ -11068,6 +11086,9 @@
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/productioncenter)
+"Ut" = (
+/turf/closed/wall/halflife/brick,
+/area/halflife/indoors/sewer/tunnel)
 "Uu" = (
 /obj/structure/halflife/trash/papers/one{
 	dir = 4
@@ -12301,6 +12322,7 @@
 /obj/item/reagent_containers/syringe/penacid,
 /obj/item/reagent_containers/pill/iron,
 /obj/item/reagent_containers/pill/iron,
+/obj/item/reagent_containers/hypospray/medipen/healthpen,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/townhall/infirmary)
 "ZQ" = (
@@ -29911,14 +29933,14 @@ Ff
 Ff
 Ff
 Ff
-hB
+df
 QH
 Db
-Ff
-Ff
-Ff
-Ff
-Ff
+Ut
+Ut
+Ut
+Ut
+Ut
 bK
 "}
 (36,1,2) = {"
@@ -30031,11 +30053,11 @@ Ff
 YJ
 eK
 QH
-Ff
-Mk
-Mk
+Ut
+HL
+HL
 cI
-pb
+kv
 bK
 "}
 (37,1,2) = {"
@@ -30145,14 +30167,14 @@ Ff
 Ff
 Ff
 Ff
-QH
+vL
 QH
 QH
 vH
 QG
 QG
 ps
-pb
+kv
 bK
 "}
 (38,1,2) = {"
@@ -30265,11 +30287,11 @@ Ff
 jf
 QH
 QH
-Ff
-Mk
-Mk
+Ut
+HL
+HL
 cI
-pb
+kv
 bK
 "}
 (39,1,2) = {"
@@ -30379,14 +30401,14 @@ Ff
 Ff
 Ff
 Ff
-hB
+tM
 QH
 QH
-Ff
-Ff
-Ff
-Ff
-Ff
+Ut
+Ut
+Ut
+Ut
+Ut
 bK
 "}
 (40,1,2) = {"
@@ -30612,7 +30634,7 @@ Mk
 Mk
 Mk
 Wz
-Fg
+uj
 QH
 QH
 QH

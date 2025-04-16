@@ -19,6 +19,8 @@
 	var/stealthy = FALSE
 	/// If TRUE, the hypospray will be permanently unusable.
 	var/used_up = FALSE
+	/// hl13 edit, what sound to play when injecting
+	var/sound_played = 'sound/items/hypospray.ogg'
 
 /obj/item/reagent_containers/hypospray/attack_paw(mob/user, list/modifiers)
 	return attack_hand(user, modifiers)
@@ -45,7 +47,7 @@
 		to_chat(affected_mob, span_warning("You feel a tiny prick!"))
 		to_chat(user, span_notice("You inject [affected_mob] with [src]."))
 		if(!stealthy)
-			playsound(affected_mob, 'sound/items/hypospray.ogg', 50, TRUE)
+			playsound(affected_mob, sound_played, 50, TRUE)
 		var/fraction = min(amount_per_transfer_from_this/reagents.total_volume, 1)
 
 

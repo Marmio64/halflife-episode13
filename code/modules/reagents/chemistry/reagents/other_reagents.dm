@@ -227,7 +227,8 @@
 	var/cooling_temperature = 2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_CLEANS
 	default_container = /obj/item/reagent_containers/cup/glass/waterbottle
-	var/hydration = 4 //hl13 edit
+	metabolization_rate = REAGENTS_METABOLISM * 2 //hl13 edit
+	var/hydration = 8 //hl13 edit
 	var/toxicity = 0 //hl13 edit
 	var/disgust = 0 //hl13 edit
 	var/filthy = FALSE //hl13 edit
@@ -249,8 +250,8 @@
 	description = "Contaminated water that is really bad for your health."
 	color = "#22330e"
 	taste_description = "filthy water"
-	toxicity = 2
-	disgust = 5
+	toxicity = 4
+	disgust = 8
 	treated = FALSE
 
 /datum/reagent/water/dirty/sewer
@@ -266,15 +267,15 @@
 	color = "#90b8b8"
 	taste_description = "chemical filled water"
 	treated = TRUE
-	toxicity = 2
-	disgust = 5
+	toxicity = 4
+	disgust = 8
 
 /datum/reagent/water/unpurified
 	name = "Unpurified Water"
 	description = "Water which contains small amounts of harmful particulates."
 	color = "#0497d1"
 	taste_description = "unpurified water"
-	disgust = 1.25
+	disgust = 2
 	//toxicity = 0.1
 	treated = FALSE
 
