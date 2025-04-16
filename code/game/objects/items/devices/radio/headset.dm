@@ -150,7 +150,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 /obj/item/radio/headset/syndicate/alt/leader
 	name = "military command headset"
-	desc = "A pre-war military headset used by field commanders, that has been upgraded to able to decipher encrypted radio frequencies."
+	desc = "A pre-war military headset used by field commanders, that has an onboard voice amplifier and has been upgraded to able to decipher encrypted radio frequencies."
 	command = TRUE
 
 /obj/item/radio/headset/binary
