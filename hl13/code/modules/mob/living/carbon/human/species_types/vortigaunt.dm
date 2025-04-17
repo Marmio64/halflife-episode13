@@ -5,6 +5,8 @@
 	siemens_coeff = 0
 	damage_modifier = 35
 	stunmod = 0.8
+	species_language_holder = /datum/language_holder/vortigaunt
+	sexes = FALSE
 	no_equip_flags = ITEM_SLOT_MASK | ITEM_SLOT_OCLOTHING | ITEM_SLOT_GLOVES | ITEM_SLOT_FEET | ITEM_SLOT_ICLOTHING | ITEM_SLOT_SUITSTORE | ITEM_SLOT_HEAD
 	inherent_traits = list(TRAIT_RESISTCOLD, TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,
 							TRAIT_NOBREATH, TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NODISMEMBER, TRAIT_GENELESS, TRAIT_NO_UNDERWEAR, TRAIT_TERRIBLE_AIM)
@@ -78,3 +80,13 @@
 	..()
 	vortrepulse.Remove(C)
 	vortwall.Remove(C)
+
+/datum/language_holder/vortigaunt
+	understood_languages = list(
+		/datum/language/common = list(LANGUAGE_ATOM),
+		/datum/language/vortigese = list(LANGUAGE_ATOM),
+	)
+	spoken_languages = list(
+		/datum/language/common = list(LANGUAGE_ATOM),
+		/datum/language/vortigese = list(LANGUAGE_ATOM),
+	)

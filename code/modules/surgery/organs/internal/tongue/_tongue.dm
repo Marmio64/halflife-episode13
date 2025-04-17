@@ -81,6 +81,7 @@
 		/datum/language/ukraine, //hl13 edit
 		/datum/language/czech, //hl13 edit
 		/datum/language/italian, //hl13 edit
+		/datum/language/vortigese, //hl13 edit
 		/datum/language/draconic,
 		/datum/language/codespeak,
 		/datum/language/monkey,
