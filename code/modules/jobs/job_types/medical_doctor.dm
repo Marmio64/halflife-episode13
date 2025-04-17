@@ -3,7 +3,7 @@
 	description = "Operate the public hospital, negotiate funding with the labor lead, ask the labor lead to get you nurses and assistants."
 	department_head = list(JOB_CHIEF_MEDICAL_OFFICER)
 	faction = FACTION_STATION
-	total_positions = 4
+	total_positions = 3
 	spawn_positions = 3
 	supervisors = SUPERVISOR_CMO
 	exp_granted_type = EXP_TYPE_CREW

@@ -21,6 +21,9 @@
 	sheet_type = /obj/item/stack/sheet/halflife/brick
 	sheet_amount = 2
 
+/turf/closed/wall/halflife/brick/try_decon() //can't weld through bricks
+	return FALSE
+
 /turf/closed/wall/halflife/brick/weak
 	max_integrity = 300
 
@@ -34,6 +37,9 @@
 	icon_state = "wall-0"
 	base_icon_state = "wall"
 
+/turf/closed/wall/halflife/concrete/try_decon() //can't weld through concrete
+	return FALSE
+
 /turf/closed/wall/halflife/sewer
 	name = "concrete wall"
 	icon = 'hl13/icons/turf/walls/sewer.dmi'
@@ -41,12 +47,16 @@
 	icon_state = "wall-0"
 	base_icon_state = "wall"
 
+/turf/closed/wall/halflife/sewer/try_decon() //can't weld through concrete
+	return FALSE
+
 /turf/closed/wall/halflife/metal
 	name = "metal wall"
 	icon = 'hl13/icons/turf/walls/metal.dmi'
 	desc = "A strange metal wall with various pipes set into it."
 	icon_state = "urban_wall_regular-0"
 	base_icon_state = "urban_wall_regular"
+	slicing_duration = 150
 
 /turf/closed/wall/halflife/metal/strong
 	max_integrity = 1500
@@ -54,3 +64,4 @@
 
 /turf/closed/wall/halflife/metal/weak
 	max_integrity = 300
+	slicing_duration = 100

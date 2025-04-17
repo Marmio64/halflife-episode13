@@ -80,7 +80,7 @@
 	var/exp_rank = "i5"
 
 	if(user?.client?.prefs)
-		switch(user.client.prefs.exp[EXP_TYPE_SECURITY])
+		switch(user.client.prefs.exp[JOB_HEAD_OF_SECURITY])
 			if(750 to INFINITY)
 				exp_rank = "i1"
 			if(500 to 750)

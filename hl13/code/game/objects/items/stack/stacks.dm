@@ -13,6 +13,9 @@
 	tableVariant = /obj/structure/table/halflife/metal/constructed/cobbled
 	matter_amount = 2
 
+/obj/item/stack/sheet/scrap_metal/two
+	amount = 2
+
 /obj/item/stack/sheet/ironingot
 	icon = 'hl13/icons/obj/stack_objects.dmi'
 	name = "iron ingots"
