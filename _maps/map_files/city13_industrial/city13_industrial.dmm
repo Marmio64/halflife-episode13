@@ -123,9 +123,9 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
 "aA" = (
-/obj/structure/window/fulltile,
-/turf/closed/wall/halflife/brick,
-/area/halflife/indoors/bar/apartments)
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/restaurant)
 "aB" = (
 /obj/item/storage/fancy/candle_box,
 /obj/item/hl2key/kitchen,
@@ -672,7 +672,7 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bar/apartments)
 "cS" = (
-/obj/structure/window/fulltile,
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/store)
 "cT" = (
@@ -1641,7 +1641,7 @@
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/bar)
 "gU" = (
-/obj/structure/window/fulltile,
+/obj/structure/window/fulltile/halflife/combine,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection)
 "gV" = (
@@ -1693,9 +1693,7 @@
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
 "hf" = (
-/obj/structure/window/fulltile{
-	max_integrity = 150
-	},
+/obj/structure/window/fulltile/halflife/combine,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/virology)
 "hg" = (
@@ -2849,7 +2847,9 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/productioncenter/infestation)
 "lQ" = (
-/obj/structure/window/fulltile,
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/bar)
 "lS" = (
@@ -4286,9 +4286,7 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
 "sd" = (
-/obj/structure/window/fulltile{
-	max_integrity = 150
-	},
+/obj/structure/window/fulltile/halflife/combine,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/scienceunion)
 "se" = (
@@ -4621,8 +4619,8 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
 "tt" = (
-/obj/structure/window/fulltile,
-/turf/open/floor/plating/indoor/tiled10,
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/bar/apartments)
 "tu" = (
 /obj/machinery/camera{
@@ -5394,7 +5392,7 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors)
 "wz" = (
-/obj/structure/window/fulltile,
+/obj/structure/window/fulltile/halflife/combine,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/townhall)
 "wA" = (
@@ -5428,7 +5426,9 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
 "wG" = (
-/obj/structure/window/fulltile,
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
 "wH" = (
@@ -6365,9 +6365,7 @@
 	id = "misclab";
 	name = "test chamber blast door"
 	},
-/obj/structure/window/fulltile{
-	max_integrity = 150
-	},
+/obj/structure/window/fulltile/halflife/combine,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
 "AA" = (
@@ -7252,7 +7250,7 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/plaza)
 "Eb" = (
-/obj/structure/window/fulltile,
+/obj/structure/window/fulltile/halflife/combine,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/hydroponics)
 "Ec" = (
@@ -7578,8 +7576,10 @@
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/apartments/primary)
 "Fr" = (
-/obj/structure/window/fulltile,
-/turf/open/floor/plating/indoor/tiled10,
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
 "Fs" = (
 /obj/structure/chair/pew{
@@ -8515,7 +8515,7 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
 "IU" = (
-/obj/structure/window/fulltile,
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/distributioncenter)
 "IV" = (
@@ -9853,9 +9853,7 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/plaza)
 "Ow" = (
-/obj/structure/window/fulltile{
-	max_integrity = 150
-	},
+/obj/structure/window/fulltile/halflife/combine,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "aicoredoor";
 	name = "AI Chamber entrance shutters"
@@ -11263,9 +11261,7 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley)
 "Ud" = (
-/obj/structure/window/fulltile{
-	max_integrity = 150
-	},
+/obj/structure/window/fulltile/halflife/combine,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "aicoredoor";
 	name = "AI Chamber entrance shutters"
@@ -11415,9 +11411,11 @@
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/distributioncenter)
 "UM" = (
-/obj/structure/window/fulltile,
-/turf/closed/wall/halflife/brick,
-/area/halflife/indoors/store)
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/indoors/distributioncenter)
 "UN" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 8;
@@ -30237,7 +30235,7 @@ uY
 uY
 aU
 uY
-UM
+cS
 Bl
 Fm
 Oc
@@ -30949,9 +30947,9 @@ pa
 pa
 pa
 wG
+pa
+pa
 wG
-pa
-pa
 pa
 pa
 pa
@@ -31781,7 +31779,7 @@ wa
 Bt
 Bt
 Ot
-IU
+UM
 it
 Ec
 vf
@@ -31898,7 +31896,7 @@ eM
 Bt
 Bt
 Ot
-IU
+UM
 it
 it
 it
@@ -32834,7 +32832,7 @@ eM
 Bt
 Bt
 Ot
-IU
+UM
 it
 ku
 ku
@@ -32951,7 +32949,7 @@ wa
 Bt
 Bt
 Ot
-IU
+UM
 it
 Wo
 NS
@@ -34002,7 +34000,7 @@ EG
 EG
 nI
 iS
-DO
+aA
 Uh
 Uu
 Uh
@@ -42897,7 +42895,7 @@ Rt
 Rt
 Rt
 Rt
-aA
+tt
 CP
 Jt
 Jt
@@ -43365,7 +43363,7 @@ Lg
 Lg
 Rt
 Rt
-aA
+tt
 eW
 Jt
 Jt
