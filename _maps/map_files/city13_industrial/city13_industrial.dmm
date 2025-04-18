@@ -672,9 +672,10 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bar/apartments)
 "cS" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/obj/structure/alien/weeds/node,
+/obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/store)
+/area/halflife/indoors/slums)
 "cT" = (
 /obj/structure/halflife/cone,
 /turf/open/floor/plating/ground/brickroad{
@@ -794,8 +795,8 @@
 	},
 /area/halflife/indoors/sewer)
 "du" = (
-/obj/item/stack/sheet/iron,
 /obj/structure/rack,
+/obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "dv" = (
@@ -2394,6 +2395,10 @@
 /obj/machinery/door/unpowered/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/apartments/primary)
+"jW" = (
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/indoors/distributioncenter)
 "jX" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/chair/office/halflife/blue{
@@ -2608,6 +2613,10 @@
 	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/virology)
+"kN" = (
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/restaurant)
 "kO" = (
 /obj/effect/turf_decal/halflife/covering/wallpaper/green,
 /turf/closed/wall/halflife/brick,
@@ -3493,6 +3502,7 @@
 /obj/structure/halflife/pallet{
 	pixel_y = 6
 	},
+/obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley)
 "oU" = (
@@ -4619,9 +4629,10 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
 "tt" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick,
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/restaurant)
+/obj/structure/table/halflife/metal/grate,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/metal,
+/area/halflife/indoors/sewer)
 "tu" = (
 /obj/machinery/camera{
 	c_tag = "Cargo Dropship Dock North"
@@ -5450,6 +5461,7 @@
 /area/halflife/outdoors/alley)
 "wL" = (
 /obj/structure/closet/secure_closet/freezer/halflife,
+/obj/effect/spawner/random/halflife/loot/consumables,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/apartments/primary)
 "wN" = (
@@ -11415,8 +11427,8 @@
 /area/halflife/indoors/distributioncenter)
 "UM" = (
 /obj/structure/window/fulltile/halflife/nosmooth/brick,
-/turf/open/floor/plating/indoor/tiled10,
-/area/halflife/indoors/distributioncenter)
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/store)
 "UN" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 8;
@@ -21847,7 +21859,7 @@ or
 Aw
 Fd
 fB
-gD
+tt
 Eq
 Aw
 qQ
@@ -27595,7 +27607,7 @@ Pg
 Pg
 jR
 KZ
-LH
+cS
 ji
 Pg
 Pg
@@ -27759,7 +27771,7 @@ Dz
 Dz
 Dz
 XH
-bh
+WK
 Dz
 sU
 pf
@@ -29768,7 +29780,7 @@ vE
 uS
 uY
 uY
-cS
+UM
 Bl
 Fm
 Oc
@@ -30104,7 +30116,7 @@ Ff
 Nn
 fQ
 Dz
-bh
+WK
 uy
 ml
 ml
@@ -30236,7 +30248,7 @@ uY
 uY
 aU
 uY
-cS
+UM
 Bl
 Fm
 Oc
@@ -31789,7 +31801,7 @@ ku
 UK
 ku
 it
-UM
+jW
 eM
 Bt
 Bt
@@ -31906,7 +31918,7 @@ it
 it
 np
 it
-UM
+jW
 eM
 Bt
 Bt
@@ -32842,7 +32854,7 @@ ku
 ku
 tW
 it
-UM
+jW
 eM
 Bt
 Bt
@@ -32959,7 +32971,7 @@ it
 dE
 it
 it
-UM
+jW
 eM
 Bt
 Bt
@@ -34001,7 +34013,7 @@ EG
 EG
 nI
 iS
-tt
+kN
 Uh
 Uu
 Uh
@@ -42956,7 +42968,7 @@ Lg
 Lg
 Lg
 Dz
-bh
+WK
 uy
 dJ
 dJ
@@ -43791,7 +43803,7 @@ dJ
 dJ
 Nt
 Dz
-bh
+WK
 XB
 Dz
 Sp

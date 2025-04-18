@@ -106,7 +106,7 @@
 
 	loot = list(
 				/obj/item/reagent_containers/pill/patch/medkit,
-				/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+				/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
 				/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
 				/obj/item/stack/medical/gauze,
 				/obj/item/stack/medical/suture,
