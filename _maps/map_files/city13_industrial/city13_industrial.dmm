@@ -125,7 +125,7 @@
 "aA" = (
 /obj/structure/window/fulltile/halflife/nosmooth/brick,
 /turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/restaurant)
+/area/halflife/indoors/bar/apartments)
 "aB" = (
 /obj/item/storage/fancy/candle_box,
 /obj/item/hl2key/kitchen,
@@ -4621,7 +4621,7 @@
 "tt" = (
 /obj/structure/window/fulltile/halflife/nosmooth/brick,
 /turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/bar/apartments)
+/area/halflife/indoors/restaurant)
 "tu" = (
 /obj/machinery/camera{
 	c_tag = "Cargo Dropship Dock North"
@@ -5265,6 +5265,7 @@
 /obj/item/ration_construction/watermix/blueadditive,
 /obj/item/ration_construction/watermix/redadditive,
 /obj/item/ration_construction/watermix/yellowadditive,
+/obj/item/ration_construction/watermix/purpleadditive,
 /obj/item/ration_construction/flavoring/bitter,
 /obj/item/ration_construction/flavoring/sour,
 /obj/item/ration_construction/flavoring/sweet,
@@ -8515,7 +8516,9 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
 "IU" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 1
+	},
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/distributioncenter)
 "IV" = (
@@ -11411,9 +11414,7 @@
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/distributioncenter)
 "UM" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick{
-	dir = 1
-	},
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/distributioncenter)
 "UN" = (
@@ -31779,7 +31780,7 @@ wa
 Bt
 Bt
 Ot
-UM
+IU
 it
 Ec
 vf
@@ -31788,7 +31789,7 @@ ku
 UK
 ku
 it
-IU
+UM
 eM
 Bt
 Bt
@@ -31896,7 +31897,7 @@ eM
 Bt
 Bt
 Ot
-UM
+IU
 it
 it
 it
@@ -31905,7 +31906,7 @@ it
 it
 np
 it
-IU
+UM
 eM
 Bt
 Bt
@@ -32832,7 +32833,7 @@ eM
 Bt
 Bt
 Ot
-UM
+IU
 it
 ku
 ku
@@ -32841,7 +32842,7 @@ ku
 ku
 tW
 it
-IU
+UM
 eM
 Bt
 Bt
@@ -32949,7 +32950,7 @@ wa
 Bt
 Bt
 Ot
-UM
+IU
 it
 Wo
 NS
@@ -32958,7 +32959,7 @@ it
 dE
 it
 it
-IU
+UM
 eM
 Bt
 Bt
@@ -34000,7 +34001,7 @@ EG
 EG
 nI
 iS
-aA
+tt
 Uh
 Uu
 Uh
@@ -42895,7 +42896,7 @@ Rt
 Rt
 Rt
 Rt
-tt
+aA
 CP
 Jt
 Jt
@@ -43246,7 +43247,7 @@ Lg
 Lg
 Rt
 Rt
-tt
+aA
 Jt
 Jt
 Jt
@@ -43363,7 +43364,7 @@ Lg
 Lg
 Rt
 Rt
-tt
+aA
 eW
 Jt
 Jt
