@@ -111,8 +111,7 @@
 				/obj/item/stack/medical/gauze,
 				/obj/item/stack/medical/suture,
 				/obj/item/stack/medical/bandage = 2,
-				/obj/item/stack/medical/bandage/makeshift,
-				/obj/item/stack/medical/ointment
+				/obj/item/stack/medical/bandage/makeshift
 				)
 
 //only consumable loot. Food, drinks, drugs, cigarettes, etc.

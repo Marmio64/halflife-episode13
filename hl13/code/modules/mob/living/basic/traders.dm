@@ -91,6 +91,7 @@
 		/obj/item/weaponcrafting/frame/usp = list(PAYCHECK_CREW * 7, 2),
 		/obj/item/gun/ballistic/rifle/rebarxbow = list(PAYCHECK_CREW * 8, 3),
 		/obj/item/reagent_containers/pill/patch/medkit/vial = list(PAYCHECK_CREW * 2, 5),
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = list(PAYCHECK_CREW * 2, 5),
 		/obj/item/clothing/suit/armor/civilprotection = list(PAYCHECK_CREW * 8, 3),
 		/obj/item/clothing/head/helmet/halflife/military/weak/crafted = list(PAYCHECK_CREW * 4, 5),
 		/obj/item/grenade/halflife/molotov = list(PAYCHECK_CREW * 4, 5),
