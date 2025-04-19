@@ -56,6 +56,7 @@
 					/obj/item/tape = 5, //tape recorder stuff
 					/obj/item/taperecorder = 2,
 					/obj/item/storage/fancy/cigarettes/halflife = 8,
+					/obj/item/storage/box/coffeepack = 3, //for coffee makers
 					/obj/item/clothing/gloves/fingerless = 3)
 
 	contraband = list(/obj/item/lockpick = 1,
