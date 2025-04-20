@@ -76,6 +76,9 @@
 	vortwall = new(C)
 	vortwall.Grant(C)
 
+	galunga = new(C) //double the blasting
+	galunga.Grant(C)
+
 /datum/species/vortigaunt/elder/on_species_loss(mob/living/carbon/C)
 	..()
 	vortrepulse.Remove(C)
