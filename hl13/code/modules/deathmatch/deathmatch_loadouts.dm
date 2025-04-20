@@ -290,3 +290,14 @@
 
 /datum/outfit/deathmatch_loadout/feral_refugee/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/disrupted.ogg'
+
+/datum/outfit/deathmatch_loadout/eldervortigaunt
+	name = "Deathmatch: Elder Vortigaunt"
+	display_name = "Elder Vortigaunt"
+	desc = "Unleash vortal energy upon foes. You're a wizard, vorty!"
+	uniform = null
+	shoes = null
+
+/datum/outfit/deathmatch_loadout/eldervortigaunt/pre_equip(mob/living/carbon/human/H)
+	H.cmode_music = 'hl13/sound/music/combat/vortalcombat.ogg'
+	H.set_species(/datum/species/vortigaunt/elder)
