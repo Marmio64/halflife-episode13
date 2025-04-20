@@ -14,6 +14,9 @@
 /area/centcom/halflife/rebel)
 "aK" = (
 /obj/structure/shipping_container/great_northern,
+/obj/effect/turf_decal/box/corners{
+	dir = 8
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
 "bo" = (
@@ -26,6 +29,9 @@
 /area/centcom/halflife/rebel)
 "bs" = (
 /obj/structure/shipping_container/reefer,
+/obj/effect/turf_decal/box/corners{
+	dir = 8
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
 "bC" = (
@@ -45,6 +51,10 @@
 "bT" = (
 /obj/structure/halflife/fence/wire/barb,
 /turf/open/floor/plating/ground/dirt,
+/area/centcom/halflife/rebel)
+"cq" = (
+/obj/structure/halflife/rug/rubber,
+/turf/open/floor/plating/indoor/tile/navy,
 /area/centcom/halflife/rebel)
 "cw" = (
 /obj/structure/chair/office/halflife/blue{
@@ -123,6 +133,7 @@
 /area/centcom/halflife/rebel)
 "fx" = (
 /obj/machinery/light/small/directional/west,
+/obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/grooved2,
 /area/centcom/halflife/rebel)
 "fy" = (
@@ -165,10 +176,14 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
+"hq" = (
+/obj/effect/turf_decal/halflife/covering/wallpaper/green,
+/turf/closed/wall/halflife/brick,
+/area/centcom/halflife/rebel)
 "hE" = (
 /obj/structure/bed/halflife/bedframe/wood,
 /obj/structure/bed/halflife/mattress/stale,
-/turf/open/floor/plating/indoor/carpet/shaggy/blue,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "ij" = (
 /obj/machinery/light/directional/north,
@@ -183,6 +198,14 @@
 	pixel_y = 8
 	},
 /turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
+"io" = (
+/obj/item/hl2key/rebel_outpost{
+	pixel_x = 3;
+	pixel_y = 7
+	},
+/obj/structure/table/halflife/metal/grate,
+/turf/open/floor/plating/indoor/lino,
 /area/centcom/halflife/rebel)
 "jo" = (
 /obj/effect/turf_decal/siding/thinplating{
@@ -276,6 +299,10 @@
 /obj/structure/flora/tree/halflife/pine/style_random,
 /turf/open/floor/plating/ground/grass,
 /area/centcom/halflife/rebel)
+"ms" = (
+/obj/effect/baseturf_helper/halflife,
+/turf/closed/wall/halflife/brick,
+/area/centcom/halflife/rebel)
 "mz" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "rebel_trainstation_depot";
@@ -330,6 +357,9 @@
 /area/centcom/halflife/rebel)
 "nU" = (
 /obj/structure/shipping_container/orange,
+/obj/effect/turf_decal/box/corners{
+	dir = 8
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
 "oe" = (
@@ -340,6 +370,10 @@
 	dir = 1
 	},
 /area/centcom/halflife/rebel)
+"of" = (
+/obj/effect/turf_decal/box/corners,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/centcom/halflife/rebel)
 "oD" = (
 /obj/machinery/door/poddoor/shutters/indestructible{
 	dir = 8
@@ -347,6 +381,10 @@
 /turf/open/floor/plating/ground/brickroad{
 	dir = 1
 	},
+/area/centcom/halflife/rebel)
+"oR" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "pB" = (
 /mob/living/basic/halflife/headcrab/armored,
@@ -439,6 +477,12 @@
 /obj/item/reagent_containers/cup/bowl,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/centcom/halflife/rebel)
+"xr" = (
+/obj/effect/turf_decal/box/corners{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/centcom/halflife/rebel)
 "ye" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 1
@@ -467,6 +511,15 @@
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
+"yC" = (
+/turf/open/floor/plating/indoor/lino,
+/area/centcom/halflife/rebel)
+"zh" = (
+/obj/effect/turf_decal/box/corners{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/centcom/halflife/rebel)
 "zy" = (
 /mob/living/basic/halflife/zombie,
 /turf/open/floor/plating/ground/dirt,
@@ -476,6 +529,14 @@
 	dir = 4
 	},
 /turf/open/halflife/water/shallow,
+/area/centcom/halflife/rebel)
+"Ad" = (
+/obj/machinery/door/unpowered/halflife/metal/red{
+	dir = 1;
+	keylock = 1;
+	lockid = "rebel_trainstation"
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
 "AL" = (
 /obj/item/storage/box/halflife/badration,
@@ -515,8 +576,19 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/centcom/halflife/rebel)
 "FN" = (
-/obj/structure/table/halflife/metal/grate,
-/turf/open/floor/plating/indoor/grooved2,
+/obj/structure/bed/halflife/bedframe/wood,
+/obj/structure/bed/halflife/mattress/yellowed,
+/obj/structure/halflife/rug/yellow,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
+"FO" = (
+/obj/machinery/door/unpowered/halflife/metal/red{
+	dir = 4;
+	keylock = 1;
+	lockid = "rebel_trainstation";
+	locked = 1
+	},
+/turf/open/floor/plating/indoor/lino,
 /area/centcom/halflife/rebel)
 "FP" = (
 /obj/effect/light_emitter/fake_outdoors,
@@ -545,6 +617,10 @@
 /area/centcom/halflife/rebel)
 "HD" = (
 /turf/open/halflife/water/shallow,
+/area/centcom/halflife/rebel)
+"HT" = (
+/obj/effect/light_emitter/fake_outdoors,
+/turf/open/floor/plating/indoor/concrete,
 /area/centcom/halflife/rebel)
 "In" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
@@ -634,12 +710,22 @@
 /area/centcom/halflife/rebel)
 "PD" = (
 /obj/structure/shipping_container/green,
+/obj/effect/turf_decal/box/corners{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/centcom/halflife/rebel)
+"Qz" = (
+/obj/structure/shipping_container/nthi,
+/obj/effect/turf_decal/box/corners{
+	dir = 8
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
 "QM" = (
 /obj/structure/bed/halflife/bedframe/wood,
 /obj/structure/bed/halflife/mattress/yellowed,
-/turf/open/floor/plating/indoor/carpet/shaggy/blue,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "Rs" = (
 /obj/structure/railing/halflife/solo{
@@ -674,8 +760,18 @@
 /turf/open/halflife/water/shallow,
 /area/centcom/halflife/rebel)
 "SL" = (
-/obj/structure/window/fulltile,
-/turf/open/floor/plating/indoor/metal/industrial,
+/obj/item/hl13_small_flag/poland{
+	pixel_x = -11;
+	pixel_y = 17
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/centcom/halflife/rebel)
+"SX" = (
+/obj/structure/shipping_container/kosmologistika,
+/obj/effect/turf_decal/box/corners{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
 "Tf" = (
 /obj/effect/turf_decal/siding/thinplating{
@@ -689,7 +785,8 @@
 	},
 /area/centcom/halflife/rebel)
 "TD" = (
-/turf/open/floor/plating/indoor/carpet/shaggy/blue,
+/obj/structure/halflife/rug/yellow,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "Uq" = (
 /obj/structure/table/halflife/metal,
@@ -705,10 +802,17 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
 "UE" = (
-/obj/structure/table/halflife/metal,
+/obj/structure/table/halflife/metal{
+	pixel_x = 0;
+	pixel_y = 0
+	},
 /obj/item/clothing/head/beret/durathread/unitednations{
 	pixel_x = 3;
 	pixel_y = 11
+	},
+/obj/item/clothing/head/beret/sec/poland{
+	pixel_x = 1;
+	pixel_y = 8
 	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
@@ -727,6 +831,12 @@
 	dir = 1
 	},
 /area/centcom/halflife/rebel)
+"Wj" = (
+/obj/structure/halflife/rug/mat/welcome{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/centcom/halflife/rebel)
 "XC" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -741,6 +851,7 @@
 /area/centcom/halflife/rebel)
 "ZF" = (
 /obj/machinery/deepfryer,
+/obj/structure/halflife/rug/rubber,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/centcom/halflife/rebel)
 "ZO" = (
@@ -749,6 +860,7 @@
 	name = "Cargo Door"
 	},
 /obj/structure/filingcabinet,
+/obj/structure/halflife/rug/red,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
 
@@ -1907,12 +2019,12 @@ qp
 Gl
 sU
 sU
-sU
-sU
-sU
-sU
-sU
-sU
+Gl
+Gl
+Gl
+Gl
+Gl
+Gl
 sU
 sU
 sU
@@ -2009,12 +2121,12 @@ qp
 Gl
 sU
 sU
-sU
-sU
-sU
-sU
-sU
-sU
+Gl
+qp
+qp
+qp
+qp
+Gl
 sU
 sU
 sU
@@ -2111,12 +2223,12 @@ qp
 Gl
 sU
 sU
-sU
-sU
-sU
-sU
-sU
-sU
+Gl
+qp
+yC
+yC
+qp
+Gl
 sU
 sU
 sU
@@ -2213,12 +2325,12 @@ qp
 Gl
 sU
 sU
-sU
-sU
-sU
-sU
-sU
-sU
+Gl
+qp
+yC
+yC
+qp
+Gl
 sU
 sU
 sU
@@ -2316,10 +2428,10 @@ Gl
 Gl
 Gl
 Gl
-Gl
-Gl
-Gl
-Gl
+qp
+yC
+io
+qp
 Gl
 Gl
 Gl
@@ -2419,13 +2531,13 @@ qp
 qp
 qp
 qp
+FO
 qp
 qp
 qp
 qp
 qp
-qp
-qp
+ms
 Gl
 sU
 sU
@@ -2515,14 +2627,14 @@ DO
 HD
 HD
 uN
-qp
+hq
 QM
-qp
+FN
 il
 kG
 qp
 nz
-nz
+oR
 qp
 yB
 rS
@@ -2617,9 +2729,9 @@ DO
 zS
 uN
 Ye
-qp
-TD
-TD
+hq
+nz
+nz
 nz
 hp
 qp
@@ -2719,7 +2831,7 @@ gJ
 Ye
 Ye
 Ye
-qp
+hq
 St
 nz
 nz
@@ -2821,8 +2933,8 @@ Ye
 Ye
 dw
 dw
-qp
-TD
+hq
+nz
 TD
 nz
 hp
@@ -2923,9 +3035,9 @@ Ye
 Ye
 dw
 dw
-qp
+hq
 hE
-qp
+QM
 VN
 hi
 qp
@@ -3128,9 +3240,9 @@ dw
 Ye
 dw
 qp
-gK
+so
 fx
-gK
+cw
 qp
 nz
 nz
@@ -3230,9 +3342,9 @@ Ye
 Ye
 Ye
 qp
-so
-FN
-cw
+gK
+gK
+gK
 In
 nz
 nz
@@ -3342,7 +3454,7 @@ qp
 qp
 qp
 Jc
-GE
+cq
 la
 qp
 Gl
@@ -3434,11 +3546,11 @@ KA
 gJ
 gJ
 qp
-pY
+SL
 pY
 IQ
 pY
-kz
+Ad
 kQ
 wW
 CM
@@ -3738,13 +3850,13 @@ uT
 Ye
 gJ
 gJ
-gJ
+HT
 qp
 pY
 pY
 pY
 pY
-SL
+kQ
 dH
 Ms
 UE
@@ -3846,8 +3958,8 @@ pY
 pY
 pY
 pY
-SL
-SL
+kQ
+kQ
 qp
 qp
 qp
@@ -3942,7 +4054,7 @@ Ye
 Ye
 gJ
 gJ
-gJ
+Wj
 bo
 pY
 pY
@@ -4048,10 +4160,10 @@ gJ
 qp
 pY
 pY
+zh
+SX
 pY
-nU
-pY
-pY
+zh
 aK
 pY
 qp
@@ -4252,11 +4364,11 @@ gJ
 mz
 pY
 pY
+xr
+of
 pY
-pY
-pY
-pY
-pY
+xr
+of
 pY
 qp
 Gl
@@ -4452,7 +4564,7 @@ Ye
 Ye
 gJ
 gJ
-gJ
+HT
 mz
 pY
 pY
@@ -4558,10 +4670,10 @@ gJ
 mz
 pY
 pY
+zh
+Qz
 pY
-nU
-pY
-pY
+zh
 nU
 pY
 qp
@@ -4762,11 +4874,11 @@ gJ
 qp
 ij
 pY
+xr
+of
 pY
-pY
-pY
-pY
-pY
+xr
+of
 XC
 qp
 Gl
@@ -5068,10 +5180,10 @@ gJ
 qp
 pY
 pY
-pY
+zh
 PD
 pY
-pY
+zh
 bs
 pY
 qp
@@ -5166,7 +5278,7 @@ Ye
 Ye
 gJ
 gJ
-gJ
+HT
 qp
 pY
 pY
@@ -5272,11 +5384,11 @@ gJ
 qp
 pY
 pY
+xr
+of
 pY
-pY
-pY
-pY
-pY
+xr
+of
 pY
 qp
 Gl
