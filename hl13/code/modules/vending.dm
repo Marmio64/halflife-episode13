@@ -217,7 +217,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	products = list(
 		/obj/item/customlock = 12,
 		/obj/item/customblank = 14,
-		/obj/item/screwdriver/halflife = 10,
+		/obj/item/storage/halflife/keyring = 6,
 	)
 	refill_canister = /obj/item/vending_refill/keyvendor
 	default_price = PAYCHECK_CREW

@@ -167,19 +167,18 @@
 //custom key
 /obj/item/hl2key/custom
 	name = "custom key"
-	desc = "A custom key."
+	desc = "A custom key. Use it inhand to rename it."
 
-/obj/item/hl2key/custom/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/screwdriver))
-		var/input = (input(user, "What would you name this key?", "", "") as text)
-		if(input)
-			name = name + " key"
-			to_chat(user, "<span class='notice'>You rename the key to [name].</span>")
+/obj/item/hl2key/custom/attack_self(mob/user)
+	var/input = (input(user, "What would you name this key?", "", "") as text)
+	if(input)
+		name = name + " key"
+		to_chat(user, "<span class='notice'>You rename the key to [name].</span>")
 
 //custom key blank
 /obj/item/customblank //i'd prefer not to make a seperate item for this honestly
 	name = "blank custom key"
-	desc = "A key without its teeth carved in. A screwdriver may be able to set the teeth by right clicking it, and then left clicking to finish it."
+	desc = "A key without its teeth carved in. You can click it inhand to set the key ID, then right click to finish the key."
 	icon_state = "brass"
 	icon = 'hl13/icons/obj/keys.dmi'
 	w_class = WEIGHT_CLASS_TINY
@@ -187,15 +186,6 @@
 	custom_price = PAYCHECK_CREW
 
 	var/lockhash = 0
-
-/obj/item/customblank/attackby_secondary(obj/item/I, mob/user, params)
-	. = ..()
-	if(istype(I, /obj/item/screwdriver))
-		var/input = input(user, "What would you like to set the key ID to?", "", 0) as num
-		input = max(0, input)
-		to_chat(user, "<span class='notice'>You set the key ID to [input].</span>")
-		lockhash = 10000 + input //having custom lock ids start at 10000 leaves it outside the range that opens normal doors
-	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/item/customblank/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/hl2key))
@@ -206,7 +196,15 @@
 		var/obj/item/customlock/held = I
 		src.lockhash = held.lockhash
 		to_chat(user, "<span class='notice'>You fine-tune [src] to the lock's internals.</span>")
-	else if(istype(I, /obj/item/screwdriver) && src.lockhash != 0)
+
+/obj/item/customblank/attack_self(mob/user)
+	var/input = input(user, "What would you like to set the key ID to?", "", 0) as num
+	input = max(0, input)
+	to_chat(user, "<span class='notice'>You set the key ID to [input].</span>")
+	lockhash = 10000 + input //having custom lock ids start at 10000 leaves it outside the range that opens normal doors
+
+/obj/item/customblank/attack_self_secondary(mob/user)
+	if(src.lockhash != 0)
 		var/obj/item/hl2key/custom/F = new (get_turf(src))
 		F.lockhash = src.lockhash
 		to_chat(user, "<span class='notice'>You finish [F].</span>")
@@ -215,7 +213,7 @@
 //custom lock unfinished
 /obj/item/customlock
 	name = "unfinished lock"
-	desc = "A lock without its pins set. You may be able to set the pins with a screwdriver by leftclicking the lock, and finishing it by rightclicking."
+	desc = "A lock without its pins set. You can set the pins by left clicking it in hand, and finishing it by right clicking."
 	icon_state = "brass"
 	icon = 'hl13/icons/obj/locks.dmi'
 	w_class = WEIGHT_CLASS_SMALL
@@ -225,12 +223,7 @@
 	var/lockhash = 0
 
 /obj/item/customlock/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/screwdriver))
-		var/input = input(user, "What would you like to set the lock ID to?", "", 0) as num
-		input = max(0, input)
-		to_chat(user, "<span class='notice'>You set the lock ID to [input].</span>")
-		lockhash = 10000 + input //same deal as the customkey
-	else if(istype(I, /obj/item/hl2key))
+	if(istype(I, /obj/item/hl2key))
 		var/obj/item/hl2key/ID = I
 		if(ID.lockhash == src.lockhash)
 			to_chat(user, "<span class='notice'>[I] twists cleanly in [src].</span>")
@@ -253,24 +246,31 @@
 		var/obj/item/customblank/held = I
 		src.lockhash = held.lockhash
 		to_chat(user, "<span class='notice'>You align the lock's internals to [held].</span>")
-	else if(istype(I, /obj/item/screwdriver) && src.lockhash != 0)
+	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+
+/obj/item/customlock/attack_self(mob/user)
+	var/input = input(user, "What would you like to set the lock ID to?", "", 0) as num
+	input = max(0, input)
+	to_chat(user, "<span class='notice'>You set the lock ID to [input].</span>")
+	lockhash = 10000 + input //same deal as the customkey
+
+/obj/item/customlock/attack_self_secondary(mob/user)
+	if(src.lockhash != 0)
 		var/obj/item/customlock/finished/F = new (get_turf(src))
 		F.lockhash = src.lockhash
 		to_chat(user, "<span class='notice'>You finish [F].</span>")
 		qdel(src)
-	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 //finished lock
 /obj/item/customlock/finished
 	name = "lock"
-	desc = "A customized iron lock that is used by keys."
+	desc = "A customized iron lock that is used by keys. Use it inhand to rename it."
 	var/holdname = ""
 
-/obj/item/customlock/finished/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/screwdriver))
-		src.holdname = input(user, "What would you like to name this?", "", "") as text
-		if(holdname)
-			to_chat(user, "<span class='notice'>You label the [name] with [holdname].</span>")
+/obj/item/customlock/finished/attack_self(mob/user)
+	src.holdname = input(user, "What would you like to name this?", "", "") as text
+	if(holdname)
+		to_chat(user, "<span class='notice'>You label the [name] with [holdname].</span>")
 
 /obj/item/customlock/finished/attack_atom(obj/structure/K, mob/living/user)
 	if(istype(K, /obj/machinery/door/unpowered/halflife))
