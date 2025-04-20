@@ -16,10 +16,10 @@
 #define PAYCHECK_COMMAND 20
 
 //hl13 paygrade edits. Using custom ones because paychecks are low, you earn money elsewhere generally, like from your rations even.
-#define PAYCHECK_CITIZEN 2
-#define PAYCHECK_STANDARD 4
-#define PAYCHECK_HIGH 8
-#define PAYCHECK_GREAT 12
+#define PAYCHECK_CITIZEN 1
+#define PAYCHECK_STANDARD 3
+#define PAYCHECK_HIGH 6
+#define PAYCHECK_GREAT 10
 
 #define STATION_TARGET_BUFFER 25
 

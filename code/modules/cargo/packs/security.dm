@@ -121,7 +121,7 @@
 /datum/supply_pack/security/armory/pulsesmg
 	name = "Pulse SMG Crate"
 	desc = "Contains two Pulse SMGs that are ready built and biolocked. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 19
+	cost = CARGO_CRATE_VALUE * 20
 	contains = list(/obj/item/gun/ballistic/automatic/pulsesmg,
 					/obj/item/gun/ballistic/automatic/pulsesmg)
 	crate_name = "pulse smg crate"

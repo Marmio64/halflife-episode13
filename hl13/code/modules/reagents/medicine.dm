@@ -1,6 +1,6 @@
 /datum/reagent/medicine/biogel
 	name = "Biogel"
-	description = "Has a 100% chance of instantly healing brute and burn damage. The chemical will heal up to 90 points of damage at 60 units applied. Touch application only."
+	description = "Has a 100% chance of instantly healing brute and burn damage. The chemical will heal up to 60 points of damage at 60 units applied. Touch application only."
 	reagent_state = LIQUID
 	color = "#14c40e"
 
@@ -15,8 +15,8 @@
 		return
 	var/current_bruteloss = carbies.getBruteLoss() // because this will be changed after calling adjustBruteLoss()
 	var/current_fireloss = carbies.getFireLoss() // because this will be changed after calling adjustFireLoss()
-	var/harmies = clamp(carbies.adjustBruteLoss(-1.5 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype), 0, current_bruteloss)
-	var/burnies = clamp(carbies.adjustFireLoss(-1.5 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype), 0, current_fireloss)
+	var/harmies = clamp(carbies.adjustBruteLoss(-1 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype), 0, current_bruteloss)
+	var/burnies = clamp(carbies.adjustFireLoss(-1 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype), 0, current_fireloss)
 	for(var/i in carbies.all_wounds)
 		var/datum/wound/iter_wound = i
 		iter_wound.on_synthflesh(reac_volume)

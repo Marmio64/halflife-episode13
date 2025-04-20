@@ -73,10 +73,10 @@
 
 /obj/item/food/xen/xenbranch
 	name = "xenian branch"
-	desc = "A branch from some xenian plant. It's green, so that might mean it could be possibly used for medicinal purposes."
+	desc = "A branch from some xenian plant. It's green, like the stuff inside medkits. Maybe you might be able to create one at a crafting bench."
 	tastes = list("bitterness" = 1)
 	bite_consumption = 5
-	food_reagents = list(/datum/reagent/medicine/biogel = 25)
+	food_reagents = list(/datum/reagent/medicine/biogel = 20)
 	foodtypes = GROSS
 	icon = 'hl13/icons/obj/xenflora.dmi'
 	icon_state = "branch"

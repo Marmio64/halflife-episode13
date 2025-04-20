@@ -131,7 +131,7 @@
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection/grunt
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
-	l_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
+	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
 /datum/outfit/deathmatch_loadout/civilprotection/pre_equip(mob/living/carbon/human/H)
 	H.faction += "combine"
@@ -291,6 +291,7 @@
 /datum/outfit/deathmatch_loadout/feral_refugee/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/disrupted.ogg'
 
+// Elder vort has high damage blasts, and can summon up walls as mobile cover, but they're slow and their only defense against melee is a 40 second cooldown repulse spell
 /datum/outfit/deathmatch_loadout/eldervortigaunt
 	name = "Deathmatch: Elder Vortigaunt"
 	display_name = "Elder Vortigaunt"
