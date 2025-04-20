@@ -10,6 +10,7 @@
 	pixel_x = 0;
 	pixel_y = -10
 	},
+/obj/structure/barricade/sandbags,
 /turf/open/floor/plating/ground/dirt,
 /area/centcom/halflife/rebel)
 "aK" = (
@@ -48,9 +49,18 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/centcom/halflife/rebel)
+"bL" = (
+/obj/structure/bed/halflife/mattress/stained,
+/obj/structure/bed/halflife/bedframe/wire,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/centcom/halflife/rebel)
 "bT" = (
 /obj/structure/halflife/fence/wire/barb,
 /turf/open/floor/plating/ground/dirt,
+/area/centcom/halflife/rebel)
+"bY" = (
+/obj/structure/closet/crate/freezer/blood,
+/turf/open/floor/plating/indoor/sterilesquares,
 /area/centcom/halflife/rebel)
 "cq" = (
 /obj/structure/halflife/rug/rubber,
@@ -65,6 +75,13 @@
 "cH" = (
 /mob/living/basic/halflife/headcrab,
 /turf/open/floor/plating/ground/dirt,
+/area/centcom/halflife/rebel)
+"cN" = (
+/obj/item/storage/medkit/regular,
+/obj/structure/halflife/storage/large/medical,
+/obj/item/healthanalyzer,
+/obj/machinery/light/small/cyan/directional/south,
+/turf/open/floor/plating/indoor/sterilesquares,
 /area/centcom/halflife/rebel)
 "cO" = (
 /obj/effect/turf_decal/siding/thinplating{
@@ -185,19 +202,31 @@
 /obj/structure/bed/halflife/mattress/stale,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
+"hS" = (
+/obj/machinery/light/small/directional/north,
+/obj/structure/reagent_dispensers/watertank,
+/obj/effect/turf_decal/bot_white,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
+"if" = (
+/obj/structure/halflife/storage/large/shelf,
+/obj/item/ammo_box/magazine/usp9mm,
+/obj/item/ammo_box/magazine/usp9mm,
+/obj/item/ammo_box/magazine/usp9mm,
+/obj/item/ammo_box/magazine/usp9mm,
+/obj/item/gun/ballistic/automatic/pistol/usp,
+/obj/item/gun/ballistic/automatic/pistol/usp,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
 "ij" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
 "il" = (
-/obj/structure/table/halflife/metal/alt,
-/obj/item/food/sosjerky/healthy{
-	name = "headcrab jerky";
-	desc = "Crudely-packaged crabmeat jerky. You're pretty sure this is just in a washed-out pre-war jerky bag.";
-	pixel_x = -5;
-	pixel_y = 8
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 1
 	},
-/turf/open/floor/plating/indoor/concrete/small,
+/turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
 "io" = (
 /obj/item/hl2key/rebel_outpost{
@@ -245,6 +274,12 @@
 /obj/structure/closet/halflife,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
+"kJ" = (
+/obj/item/gun/ballistic/automatic/mp7,
+/obj/item/ammo_box/magazine/mp7,
+/obj/item/ammo_box/magazine/mp7,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
 "kQ" = (
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
@@ -290,14 +325,34 @@
 	dir = 1
 	},
 /area/centcom/halflife/rebel)
+"ln" = (
+/obj/item/reagent_containers/syringe/penacid,
+/obj/item/reagent_containers/pill/iron,
+/obj/item/reagent_containers/pill/iron,
+/obj/item/reagent_containers/hypospray/medipen/healthpen,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/centcom/halflife/rebel)
 "lB" = (
 /turf/open/floor/plating/indoor/metal/walkway/corner{
 	dir = 8
 	},
 /area/centcom/halflife/rebel)
+"lT" = (
+/obj/machinery/combine_walllight/directional/east,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
 "mb" = (
 /obj/structure/flora/tree/halflife/pine/style_random,
 /turf/open/floor/plating/ground/grass,
+/area/centcom/halflife/rebel)
+"mk" = (
+/obj/item/ammo_box/magazine/usp9mm,
+/obj/item/ammo_box/magazine/usp9mm,
+/obj/item/ammo_box/magazine/usp9mm,
+/obj/item/ammo_box/magazine/usp9mm,
+/obj/item/gun/ballistic/automatic/pistol/usp,
+/obj/item/gun/ballistic/automatic/pistol/usp,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "ms" = (
 /obj/effect/baseturf_helper/halflife,
@@ -383,7 +438,17 @@
 	},
 /area/centcom/halflife/rebel)
 "oR" = (
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 4
+	},
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/centcom/halflife/rebel)
+"pc" = (
 /obj/structure/reagent_dispensers/watertank,
+/obj/effect/turf_decal/bot_white,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "pB" = (
@@ -416,6 +481,9 @@
 /obj/effect/landmark/start/nukeop_overwatch,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
+"qZ" = (
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/centcom/halflife/rebel)
 "rS" = (
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -431,10 +499,23 @@
 "sU" = (
 /turf/open/space/basic,
 /area/space)
+"tf" = (
+/obj/item/gun/ballistic/automatic/pulsesmg/standardpin,
+/obj/item/ammo_box/magazine/pulsesmg,
+/obj/item/ammo_box/magazine/pulsesmg,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
 "tn" = (
 /obj/structure/halflife/trash/glass/cans,
 /obj/structure/table/halflife/wood,
 /obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
+"tM" = (
+/obj/item/gun/ballistic/automatic/mp7,
+/obj/item/ammo_box/magazine/mp7,
+/obj/item/ammo_box/magazine/mp7,
+/obj/structure/halflife/storage/large/shelf,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "um" = (
@@ -571,9 +652,19 @@
 /obj/structure/closet/halflife,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
+"Db" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/ground/dirt/alt,
+/area/centcom/halflife/rebel)
 "DO" = (
 /obj/structure/railing/halflife/solo,
 /turf/open/floor/plating/indoor/concrete,
+/area/centcom/halflife/rebel)
+"EC" = (
+/obj/machinery/combine_health_station/round_start{
+	pixel_y = 30
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
 /area/centcom/halflife/rebel)
 "FN" = (
 /obj/structure/bed/halflife/bedframe/wood,
@@ -622,6 +713,13 @@
 /obj/effect/light_emitter/fake_outdoors,
 /turf/open/floor/plating/indoor/concrete,
 /area/centcom/halflife/rebel)
+"Ic" = (
+/obj/item/gun/ballistic/automatic/ar2/standardpin,
+/obj/item/ammo_box/magazine/ar2,
+/obj/item/ammo_box/magazine/ar2,
+/obj/structure/halflife/storage/large/shelf,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
 "In" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	keylock = 1;
@@ -629,6 +727,13 @@
 	locked = 1
 	},
 /turf/open/floor/plating/indoor/grooved2,
+/area/centcom/halflife/rebel)
+"ID" = (
+/obj/machinery/shower/halflife{
+	dir = 4
+	},
+/obj/structure/fluff/shower_drain,
+/turf/open/floor/plating/indoor/lino,
 /area/centcom/halflife/rebel)
 "IQ" = (
 /obj/machinery/light/directional/west,
@@ -667,6 +772,17 @@
 "KU" = (
 /obj/structure/halflife/combine/powergen/on,
 /turf/open/floor/plating/indoor/metal/industrial,
+/area/centcom/halflife/rebel)
+"Le" = (
+/obj/machinery/vending/combine_wallmed/directional/north{
+	onstation_override = 1;
+	onstation = 0;
+	all_products_free = 1;
+	name = "hijacked combine wall medical vendor";
+	desc = "The CAMS is a wall mounted vendor which freely dispenses basic medical supplies."
+	},
+/obj/machinery/iv_drip,
+/turf/open/floor/plating/indoor/sterilesquares,
 /area/centcom/halflife/rebel)
 "Mb" = (
 /mob/living/basic/halflife/zombie,
@@ -708,6 +824,15 @@
 	dir = 1
 	},
 /area/centcom/halflife/rebel)
+"Pw" = (
+/obj/machinery/door/unpowered/halflife/metal/red{
+	dir = 4;
+	keylock = 1;
+	lockid = "rebel_trainstation";
+	locked = 1
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/centcom/halflife/rebel)
 "PD" = (
 /obj/structure/shipping_container/green,
 /obj/effect/turf_decal/box/corners{
@@ -727,6 +852,17 @@
 /obj/structure/bed/halflife/mattress/yellowed,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
+"Rf" = (
+/obj/machinery/vending/armory{
+	name = "stolen armory vendor";
+	desc = "A stolen Civil Protection armoury vendor. Used more to annoy the sociostability tracker than to actually requisition weapons."
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
+"Rl" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/lino,
+/area/centcom/halflife/rebel)
 "Rs" = (
 /obj/structure/railing/halflife/solo{
 	dir = 1
@@ -736,6 +872,15 @@
 	desc = "An old, outdated water siphon."
 	},
 /turf/open/floor/plating/indoor/concrete,
+/area/centcom/halflife/rebel)
+"RE" = (
+/obj/machinery/porta_turret/combine/mp7{
+	dir = 1;
+	name = "resistance turret";
+	faction = list("neutral");
+	desc = "A combine made turret which shoots at specified targets with a high power pulse gun. You can see shark teeth painted on it."
+	},
+/turf/open/floor/plating/ground/dirt,
 /area/centcom/halflife/rebel)
 "Sc" = (
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -766,6 +911,13 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
+"SO" = (
+/obj/structure/halflife/toilet{
+	pixel_y = 8;
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/lino,
+/area/centcom/halflife/rebel)
 "SX" = (
 /obj/structure/shipping_container/kosmologistika,
 /obj/effect/turf_decal/box/corners{
@@ -787,6 +939,17 @@
 "TD" = (
 /obj/structure/halflife/rug/yellow,
 /turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
+"TX" = (
+/obj/structure/sink/halflife,
+/obj/structure/mirror/halflife{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/lino,
+/area/centcom/halflife/rebel)
+"Uk" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/ground/dirt,
 /area/centcom/halflife/rebel)
 "Uq" = (
 /obj/structure/table/halflife/metal,
@@ -1507,14 +1670,14 @@ NP
 NP
 qp
 Gl
-sU
-sU
-sU
-sU
-sU
-sU
-sU
-sU
+Gl
+Gl
+Gl
+Gl
+Gl
+Gl
+Gl
+Gl
 sU
 sU
 sU
@@ -1608,15 +1771,15 @@ NP
 NP
 NP
 qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
 Gl
-sU
-sU
-sU
-sU
-sU
-sU
-sU
-sU
 sU
 sU
 sU
@@ -1710,15 +1873,15 @@ NP
 NP
 NP
 qp
+Ic
+lT
+Rf
+qp
+bY
+qZ
+bL
+qp
 Gl
-sU
-sU
-sU
-sU
-sU
-sU
-sU
-sU
 sU
 sU
 sU
@@ -1812,15 +1975,15 @@ NP
 NP
 NP
 qp
+tf
+nz
+nz
+Jx
+qZ
+qZ
+cN
+qp
 Gl
-sU
-sU
-sU
-sU
-sU
-sU
-sU
-sU
 sU
 sU
 sU
@@ -1914,15 +2077,15 @@ NP
 NP
 Sv
 qp
+tM
+nz
+if
+qp
+Le
+qZ
+ln
+qp
 Gl
-sU
-sU
-sU
-sU
-sU
-sU
-sU
-sU
 sU
 sU
 sU
@@ -2016,14 +2179,14 @@ NP
 Sv
 Sv
 qp
-Gl
-sU
-sU
-Gl
-Gl
-Gl
-Gl
-Gl
+kJ
+nz
+mk
+qp
+EC
+qZ
+bL
+qp
 Gl
 sU
 sU
@@ -2118,12 +2281,12 @@ Sv
 Sv
 Sv
 qp
-Gl
-sU
-sU
-Gl
 qp
 qp
+qp
+qp
+qp
+Pw
 qp
 qp
 Gl
@@ -2220,13 +2383,13 @@ Sv
 Sv
 Sv
 qp
-Gl
-sU
-sU
-Gl
+SO
+yC
+ID
 qp
-yC
-yC
+pc
+nz
+nz
 qp
 Gl
 sU
@@ -2322,13 +2485,13 @@ Sv
 Sv
 HD
 qp
-Gl
-sU
-sU
-Gl
+Rl
+yC
+io
 qp
-yC
-yC
+hS
+nz
+nz
 qp
 Gl
 sU
@@ -2424,13 +2587,13 @@ HD
 HD
 HD
 qp
-Gl
-Gl
-Gl
-Gl
-qp
+TX
 yC
-io
+yC
+qp
+pc
+nz
+nz
 qp
 Gl
 Gl
@@ -2528,11 +2691,11 @@ HD
 qp
 qp
 qp
-qp
-qp
-qp
 FO
 qp
+qp
+nz
+nz
 qp
 qp
 qp
@@ -2630,11 +2793,11 @@ uN
 hq
 QM
 FN
-il
+nz
 kG
 qp
 nz
-oR
+nz
 qp
 yB
 rS
@@ -3134,8 +3297,8 @@ Ye
 lg
 Ye
 Ye
-Ye
-dw
+Uk
+Db
 dw
 qp
 qp
@@ -3236,8 +3399,8 @@ Ye
 lg
 Ye
 Ye
-dw
-Ye
+Db
+RE
 dw
 qp
 so
@@ -3338,7 +3501,7 @@ mB
 lg
 Ye
 Ye
-Ye
+Uk
 Ye
 Ye
 qp
@@ -3440,7 +3603,7 @@ Sc
 lg
 uT
 Ye
-Ye
+Uk
 as
 qp
 qp
@@ -3652,7 +3815,7 @@ pY
 pY
 pY
 pY
-qp
+il
 Uq
 qO
 ZO
@@ -3754,7 +3917,7 @@ pY
 pY
 pY
 pY
-qp
+il
 nk
 gs
 kQ
@@ -3856,7 +4019,7 @@ pY
 pY
 pY
 pY
-kQ
+il
 dH
 Ms
 UE
@@ -3958,8 +4121,8 @@ pY
 pY
 pY
 pY
-kQ
-kQ
+qp
+oR
 qp
 qp
 qp
@@ -5684,8 +5847,8 @@ Ye
 lg
 Ye
 Ye
-Ye
-Ye
+Uk
+Uk
 qp
 qp
 qp
@@ -5786,7 +5949,7 @@ Ye
 lg
 Ye
 Ye
-Ye
+Uk
 Ye
 Ye
 qp
@@ -5888,8 +6051,8 @@ Sc
 lg
 uT
 Ye
-Ye
-Ye
+Uk
+RE
 Ye
 qp
 Gl
@@ -5990,8 +6153,8 @@ Ye
 lg
 Ye
 Ye
-Ye
-Ye
+Uk
+Uk
 Ye
 qp
 Gl
