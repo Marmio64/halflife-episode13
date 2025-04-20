@@ -1,6 +1,6 @@
 /datum/reagent/medicine/biogel
 	name = "Biogel"
-	description = "Has a 100% chance of instantly healing brute and burn damage. The chemical will heal up to 120 points of damage at 60 units applied. Touch application only."
+	description = "Has a 100% chance of instantly healing brute and burn damage. The chemical will heal up to 90 points of damage at 60 units applied. Touch application only."
 	reagent_state = LIQUID
 	color = "#14c40e"
 
@@ -15,8 +15,8 @@
 		return
 	var/current_bruteloss = carbies.getBruteLoss() // because this will be changed after calling adjustBruteLoss()
 	var/current_fireloss = carbies.getFireLoss() // because this will be changed after calling adjustFireLoss()
-	var/harmies = clamp(carbies.adjustBruteLoss(-1.25 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype), 0, current_bruteloss)
-	var/burnies = clamp(carbies.adjustFireLoss(-1.25 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype), 0, current_fireloss)
+	var/harmies = clamp(carbies.adjustBruteLoss(-1.5 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype), 0, current_bruteloss)
+	var/burnies = clamp(carbies.adjustFireLoss(-1.5 * reac_volume, updating_health = FALSE, required_bodytype = affected_bodytype), 0, current_fireloss)
 	for(var/i in carbies.all_wounds)
 		var/datum/wound/iter_wound = i
 		iter_wound.on_synthflesh(reac_volume)
@@ -41,6 +41,7 @@
 	var/healing = 6
 	ph = 2
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	overdose_threshold = 60 //Pretty hard to get to, you'll have to inject like 5 healthpens in quick succession, standard concentrated biogel will go away too fast to overdose on
 
 /datum/reagent/medicine/concentrated_biogel/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
@@ -65,5 +66,5 @@
 /datum/reagent/medicine/concentrated_biogel/slurry
 	name = "Concentrated Biogel Slurry"
 	description = "A concentrated amount of biogel with a few other compounds inside. Doesn't heal instantly like normal biogel, but doesn't need to be applied by touch, and will heal all damage types. This is a slurry mixed with filler compounds. Less effective, but cheaper."
-	metabolization_rate = 2 * REAGENTS_METABOLISM
+	metabolization_rate = 1.5 * REAGENTS_METABOLISM
 	healing = 1
