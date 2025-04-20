@@ -36,3 +36,4 @@
 	base_icon_state = "healthpen"
 	list_reagents = list(/datum/reagent/medicine/concentrated_biogel/slurry = 15)
 	sound_played = 'hl13/sound/effects/healthpen_inject.ogg'
+	custom_price = null

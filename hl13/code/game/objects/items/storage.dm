@@ -30,6 +30,7 @@
 	SSwardrobe.provide_type(/obj/item/knife/combat/survival, src)
 	SSwardrobe.provide_type(/obj/item/lockpick/combine/ic, src)
 	SSwardrobe.provide_type(/obj/item/flashlight, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	update_appearance(UPDATE_ICON)
 
 /obj/item/storage/belt/civilprotection

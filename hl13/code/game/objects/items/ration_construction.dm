@@ -300,6 +300,7 @@
 	desc = "An industrial machine utilized to mix flavour and nutrient bases together into the semi-edible filling of ration packets."
 	icon = 'icons/obj/machines/manufactorio.dmi'
 	icon_state = "smelter_on"
+	density = TRUE
 	var/sour = 0
 	var/bitter = 0
 	var/sweet = 0
@@ -497,6 +498,7 @@
 	desc = "A massive mixing device which intakes raw, unclean water and chemically treats it using additives to create something slightly better."
 	icon = 'icons/obj/machines/biogenerator.dmi'
 	icon_state = "biogenerator" // placeholder for now. I'm a shit spriter ~Death
+	density = TRUE
 	var/wateramt = 0
 	var/cans = 0
 	var/blue = 0

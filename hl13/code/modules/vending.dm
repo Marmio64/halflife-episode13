@@ -56,6 +56,7 @@
 					/obj/item/tape = 5, //tape recorder stuff
 					/obj/item/taperecorder = 2,
 					/obj/item/storage/fancy/cigarettes/halflife = 8,
+					/obj/item/storage/box/coffeepack = 3, //for coffee makers
 					/obj/item/clothing/gloves/fingerless = 3)
 
 	contraband = list(/obj/item/lockpick = 1,
@@ -107,7 +108,7 @@
 	products = list(
 		/obj/item/reagent_containers/syringe = 3,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 6,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 6,
 		/obj/item/reagent_containers/pill/multiver = 3,
 		/obj/item/reagent_containers/pill/potassiodide = 3,
 		/obj/item/reagent_containers/pill/iron = 4,

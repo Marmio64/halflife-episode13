@@ -318,7 +318,7 @@
 //Exhaustion levels for humans
 #define TIREDNESS_MAXIMUM_THRESHOLD 900 //~100 second grace period till movement slowdown sets in
 #define TIREDNESS_SLEEPY_THRESHOLD 850 //sleepy about every 28 minutes
-#define TIREDNESS_TIRED_THRESHOLD 650
+#define TIREDNESS_TIRED_THRESHOLD 700
 #define TIREDNESS_CLEAR_THRESHOLD 450
 #define TIREDNESS_ENERGIZED_THRESHOLD 100 //You feel nice and awake!
 

@@ -6,6 +6,14 @@
 	tool_paths = list(/obj/item/weldingtool)
 	category = CAT_MISC
 
+/datum/crafting_recipe/breakdown_parts
+	name = "Breakdown Scrap Parts"
+	result = /obj/item/stack/sheet/scrap_metal/two
+	reqs = list(/obj/item/stack/sheet/scrap_parts = 1)
+	time = 2 SECONDS
+	tool_paths = list(/obj/item/weldingtool)
+	category = CAT_MISC
+
 /datum/crafting_recipe/scrap_wood
 	name = "Recombine Scrap Wood"
 	result = /obj/item/stack/sheet/mineral/wood
@@ -27,3 +35,10 @@
 	time = 3 SECONDS
 	category = CAT_WEAPON_AMMO
 	crafting_interface = CRAFTING_BENCH_GENERAL
+
+/datum/crafting_recipe/scrap_can
+	name = "Scrap Liquid Can"
+	result = /obj/item/stack/sheet/scrap_metal
+	reqs = list(/obj/item/trash/can = 1)
+	time = 2 SECONDS
+	category = CAT_MISC

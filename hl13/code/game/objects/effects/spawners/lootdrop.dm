@@ -39,9 +39,9 @@
 				/obj/item/stack/cable_coil = 2,
 				/obj/item/stack/sheet/cloth,
 				/obj/item/stack/sheet/iron/five,
-				/obj/item/stack/sheet/scrap_metal = 3,
+				/obj/item/stack/sheet/scrap_metal = 2,
+				/obj/item/stack/sheet/scrap_parts,
 				/obj/item/stack/sheet/glass = 2,
-				/obj/item/stack/sheet/mineral/uranium,
 				/obj/item/stack/sheet/mineral/scrap_wood = 3,
 				/obj/item/weaponcrafting/receiver = 3,
 				/obj/item/halflife/antenna,
@@ -80,6 +80,7 @@
 				/obj/item/stack/cable_coil,
 				/obj/item/stack/sheet/cloth,
 				/obj/item/stack/sheet/scrap_metal = 2,
+				/obj/item/stack/sheet/scrap_parts,
 				/obj/item/stack/sheet/glass,
 				/obj/item/stack/bulletcasings,
 				/obj/item/stack/sheet/mineral/scrap_wood = 2
@@ -105,13 +106,12 @@
 
 	loot = list(
 				/obj/item/reagent_containers/pill/patch/medkit,
-				/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+				/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
 				/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
 				/obj/item/stack/medical/gauze,
 				/obj/item/stack/medical/suture,
 				/obj/item/stack/medical/bandage = 2,
-				/obj/item/stack/medical/bandage/makeshift,
-				/obj/item/stack/medical/ointment
+				/obj/item/stack/medical/bandage/makeshift
 				)
 
 //only consumable loot. Food, drinks, drugs, cigarettes, etc.

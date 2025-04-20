@@ -36,7 +36,7 @@
 			thou_shall_heal = max(death_is_coming/20, 3)
 			need_mob_update += affected_mob.adjustOxyLoss(2 * REM * seconds_per_tick, TRUE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
 		if(SOFT_CRIT) //meh convert
-			thou_shall_heal = round(death_is_coming/15,0.1) //hl13 edit, slightly lower healing
+			thou_shall_heal = round(death_is_coming/16,0.1) //hl13 edit, slightly lower healing
 			need_mob_update += affected_mob.adjustOxyLoss(1 * REM * seconds_per_tick, TRUE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
 			good_kind_of_healing = TRUE
 		else //no convert
