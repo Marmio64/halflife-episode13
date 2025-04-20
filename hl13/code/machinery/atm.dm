@@ -41,7 +41,7 @@
 			playsound(loc, 'hl13/sound/machines/atm/cardreader_read.ogg', 50)
 			visible_message("<span class='warning'>Incorrect Password.</span>", null, null, 5, null, null, null, null, TRUE)
 			return
-		var/nextquestion = input(user, "Please select a function:", "Function Selection") as null|anything in list("withdraw", "change password", "direct deposit", "deposit credits")
+		var/nextquestion = input(user, "Please select a function:", "Function Selection") as null|anything in list("withdraw", "change password", "direct deposit", "transfer into long term account", "withdraw from longterm account")
 		switch(nextquestion)
 			if("withdraw")
 				var/withdrawfund = input(user, "Please select the amount to withdraw:", "Withdraw Money") as null|num
@@ -65,6 +65,7 @@
 				CID.registered_account.account_pin = passchoicenew
 				return
 			if("direct deposit")
+				to_chat(user, "<span class='warning'>Your account number is [CID.registered_account.account_id]. Enter this number after inserting credits into the ATM in order to deposit into the account.</span>")
 				var/selectaccount = input(user, "Please enter an account number:", "Account Selection") as null|num
 				if(!selectaccount)
 					not_selected_account()
@@ -87,9 +88,49 @@
 						BA.account_balance += totalmoney
 					successful_transaction()
 					break
-			if("deposit credits")
-				to_chat(user, "<span class='warning'>Your account number is [CID.registered_account.account_id]. Enter this number after inserting credits into the ATM in order to deposit into the account.</span>")
-				playsound(loc, 'hl13/sound/machines/atm/cardreader_read.ogg', 50)
+			if("transfer into long term account")
+				to_chat(user, "<span class='warning'>You are transferring credits into your cross-round persistant account.</span>")
+				to_chat(user, "<span class='notice'>There is a 75% tax on deposits, and you can only deposit up to 100 credits pre-tax per round.</span>")
+				to_chat(user, "<span class='notice'>Your current long term account balance is: [user.client.prefs.longterm_credit_account].</span>")
+				var/ddeposit = input(user, "Please select the amount to transfer:", "Transfer Money") as null|num
+				if(!ddeposit)
+					invalid_number()
+					return
+				if(ddeposit <= 0 || ddeposit > CID.registered_account.account_balance)
+					invalid_number()
+					return
+				if((user.client.longterm_credits_deposited + ddeposit) > 100)
+					to_chat(user, "<span class='notice'>This transfer would bring you over the 100 credit limit of transfers.</span>")
+					return
+				CID.registered_account.account_balance -= ddeposit
+				user.client.longterm_credits_deposited += ddeposit
+				totalmoney = ROUND_UP(ddeposit * 0.25)
+				user.client.prefs.longterm_credit_account += totalmoney
+				successful_transaction()
+				user.client.prefs.save_preferences()
+				return
+			if("withdraw from longterm account")
+				to_chat(user, "<span class='warning'>You are withdrawing from your cross-round persistant account.</span>")
+				to_chat(user, "<span class='notice'>You can only withdraw up to 50 credits per round.</span>")
+				to_chat(user, "<span class='notice'>Your current long term account balance is: [user.client.prefs.longterm_credit_account].</span>")
+				var/withdrawfund = input(user, "Please select the amount to withdraw:", "Withdraw Money") as null|num
+				if(!withdrawfund)
+					invalid_number()
+					return
+				if(withdrawfund <= 0 || (withdrawfund + user.client.longterm_credits_withdrawn) > 50)
+					invalid_number()
+					return
+				if(user.client.prefs.longterm_credit_account < withdrawfund)
+					to_chat(user, "<span class='notice'>Your long term account doesn't have enough credits to cover this.</span>")
+					return
+				user.client.longterm_credits_withdrawn += withdrawfund
+				user.client.prefs.longterm_credit_account -= withdrawfund
+				var/obj/item/stack/spacecash/c1/HC = new /obj/item/stack/spacecash/c1(get_turf(src))
+				user.put_in_inactive_hand(HC)
+				successful_transaction()
+				HC.amount = ROUND_UP(withdrawfund)
+				HC.update_icon_state()
+				user.client.prefs.save_preferences()
 				return
 	if(istype(W, /obj/item/holochip))
 		var/obj/item/holochip/HC = W

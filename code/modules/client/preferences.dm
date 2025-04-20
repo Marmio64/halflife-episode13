@@ -88,6 +88,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	/// If set to TRUE, will update character_profiles on the next ui_data tick.
 	var/tainted_character_profiles = FALSE
 
+	/// hl13 edit, each character has a long term credit account which can be deposited into and withdrawn from at an ATM
+	var/longterm_credit_account = 0
+
 /datum/preferences/Destroy(force)
 	QDEL_NULL(character_preview_view)
 	QDEL_LIST(middleware)
