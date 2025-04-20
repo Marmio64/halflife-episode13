@@ -115,6 +115,7 @@
 					/obj/item/ration_construction/watermix/purpleadditive)
 	crate_name = "water additives crate"
 
+/*
 /datum/supply_pack/organic/exoticrationsupplies
 	name = "Exotic Ration Supplies Crate"
 	desc = "A crate of various exotic ration supplies and containers. The rations must be assembled by hand, and can then be put inside a vending unit to refill it. Some ingredients for the rations will need to be sourced locally, but exotic rations fill up the vendors better and generate more revenue."
@@ -130,11 +131,12 @@
 					/obj/item/ration_construction/container/exotic,
 					/obj/item/ration_construction/container/exotic)
 	crate_name = "exotic ration supplies crate"
+*/
 
 /datum/supply_pack/organic/food
 	name = "Food Crate"
 	desc = "Allow the citizens a treat with this crate filled with specially preserved old world foods."
-	cost = CARGO_CRATE_VALUE * 5
+	cost = CARGO_CRATE_VALUE * 6
 	contains = list(/obj/item/reagent_containers/condiment/flour,
 					/obj/item/reagent_containers/condiment/rice,
 					/obj/item/reagent_containers/condiment/milk,
@@ -152,7 +154,7 @@
 /datum/supply_pack/organic/rations
 	name = "Ration Crate"
 	desc = "A crate of five ration packs, made for easy distribution."
-	cost = CARGO_CRATE_VALUE * 3
+	cost = CARGO_CRATE_VALUE * 4
 	contains = list(/obj/item/storage/box/halflife/ration,
 					/obj/item/storage/box/halflife/ration,
 					/obj/item/storage/box/halflife/ration,
@@ -163,7 +165,7 @@
 /datum/supply_pack/organic/loyaltyrations
 	name = "Loyalty-grade Ration Crate"
 	desc = "A crate of five loyalty-grade ration packs, made for easy distribution."
-	cost = CARGO_CRATE_VALUE * 3.5
+	cost = CARGO_CRATE_VALUE * 4.5
 	contains = list(/obj/item/storage/box/halflife/loyaltyration,
 					/obj/item/storage/box/halflife/loyaltyration,
 					/obj/item/storage/box/halflife/loyaltyration,
@@ -174,7 +176,7 @@
 /datum/supply_pack/organic/badrations
 	name = "Low-grade Ration Crate"
 	desc = "A crate of five low-grade ration packs, made for easy distribution."
-	cost = CARGO_CRATE_VALUE * 2.5
+	cost = CARGO_CRATE_VALUE * 3.5
 	contains = list(/obj/item/storage/box/halflife/badration,
 					/obj/item/storage/box/halflife/badration,
 					/obj/item/storage/box/halflife/badration,
@@ -207,7 +209,7 @@
 /datum/supply_pack/organic/fancyalcohol
 	name = "Exotic Alcohol Crate"
 	desc = "A crate of five exotic old world alcoholic beverages. Probably too good for the common citizen to have."
-	cost = CARGO_CRATE_VALUE * 4
+	cost = CARGO_CRATE_VALUE * 5
 	contains = list(/obj/item/reagent_containers/cup/glass/bottle/beer,
 				/obj/item/reagent_containers/cup/glass/bottle/grappa,
 				/obj/item/reagent_containers/cup/glass/bottle/gin,
