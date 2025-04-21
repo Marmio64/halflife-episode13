@@ -41,7 +41,7 @@
 	ration_bonus = 1
 
 /datum/outfit/job/engineer
-	name = "Station Engineer"
+	name = "Union Engineer"
 	jobtype = /datum/job/station_engineer
 
 	id_trim = /datum/id_trim/job/station_engineer

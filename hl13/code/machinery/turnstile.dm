@@ -145,6 +145,8 @@
 		atom_integrity = max_integrity
 
 	SSsociostability.modifystability(2) //Refunds lost sociostability from the malfunction
+	to_chat(user, span_notice("Repair reward dispensed."))
+	new /obj/item/stack/spacecash/c1(user.loc, 5)
 	return TRUE
 
 /// The forcefield experiences an issue, sparks, toggles, and now requires fixing.

@@ -71,6 +71,8 @@
 	playsound(loc, 'sound/items/tools/ratchet.ogg', 25, 1)
 	malfunctioning = FALSE
 	cumulative_charge = 0
+	to_chat(user, span_notice("Repair reward dispensed."))
+	new /obj/item/stack/spacecash/c1(user.loc, 5)
 	return TRUE
 
 
