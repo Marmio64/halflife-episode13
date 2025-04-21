@@ -15,7 +15,6 @@
 	desc = "When the clown takes all the banana seeds. \
 		Contains a NutriMax refill and a MegaSeed Servitor refill."
 	cost = CARGO_CRATE_VALUE * 4
-	crate_type = /obj/structure/closet/crate
 	contains = list(/obj/item/vending_refill/hydroseeds,
 					/obj/item/vending_refill/hydronutrients,
 				)

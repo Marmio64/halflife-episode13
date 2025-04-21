@@ -9,7 +9,6 @@
 /datum/supply_pack/imports
 	group = "Imports"
 	crate_name = "emergency crate"
-	crate_type = /obj/structure/closet/crate/internals
 
 /datum/supply_pack/imports/bamboo50
 	name = "50 Bamboo Cuttings"
@@ -30,4 +29,3 @@
 		/obj/item/stock_parts/card_reader = 1
 	)
 	crate_name = "materials market crate"
-	crate_type = /obj/structure/closet/crate/cargo

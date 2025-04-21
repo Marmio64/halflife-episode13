@@ -24,7 +24,7 @@
 	/// The description shown on the cargo purchasing UI. No desc by default.
 	var/desc = ""
 	/// What typepath of crate do you spawn?
-	var/crate_type = /obj/structure/closet/crate
+	var/crate_type = /obj/structure/closet/crate/halflife
 	/// Should we message admins?
 	var/dangerous = FALSE
 	/// Event/Station Goals/Admin enabled packs

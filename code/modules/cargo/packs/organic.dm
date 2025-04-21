@@ -1,6 +1,5 @@
 /datum/supply_pack/organic
 	group = "Food & Hydroponics"
-	crate_type = /obj/structure/closet/crate/freezer
 
 /datum/supply_pack/organic/hydroponics
 	access_view = ACCESS_HYDROPONICS

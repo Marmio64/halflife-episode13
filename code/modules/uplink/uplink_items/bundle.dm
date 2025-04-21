@@ -65,7 +65,7 @@
 	/// Value of items inside the crate in TC
 	var/crate_tc_value = 30
 	/// crate that will be used for the surplus crate
-	var/crate_type = /obj/structure/closet/crate
+	var/crate_type = /obj/structure/closet/crate/halflife
 
 /// generates items that can go inside crates, edit this proc to change what items could go inside your specialized crate
 /datum/uplink_item/bundles_tc/surplus/proc/generate_possible_items(mob/user, datum/uplink_handler/handler)

@@ -41,4 +41,3 @@
 					/obj/item/tank/internals/oxygen = 3,
 				)
 	crate_name = "internals crate"
-	crate_type = /obj/structure/closet/crate/internals

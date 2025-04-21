@@ -47,7 +47,6 @@
 	cost = CARGO_CRATE_VALUE * 3
 	contains = list(/obj/item/knife/combat/survival = 3)
 	crate_name = "survival knife crate"
-	crate_type = /obj/structure/closet/crate/cargo/mining
 
 /// Box of 7 grey IDs.
 /datum/supply_pack/service/greyidbox
@@ -81,7 +80,6 @@
 		/obj/item/reagent_containers/cup/bottle/syrup_bottle/caramel, //one extra syrup as a treat
 	)
 	crate_name = "coffee equipment crate"
-	crate_type = /obj/structure/closet/crate/robust
 	discountable = SUPPLY_PACK_UNCOMMON_DISCOUNTABLE
 
 /datum/supply_pack/service/coffeemaker

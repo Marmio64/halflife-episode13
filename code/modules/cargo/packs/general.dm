@@ -1,17 +1,6 @@
 /datum/supply_pack/misc
 	group = "Miscellaneous Supplies"
 
-/datum/supply_pack/misc/commandkeys
-	name = "Command Encryption Key Crate"
-	desc = "A pack of encryption keys that give access to the command radio network. \
-		The Combine reminds unauthorized citizens not to eavesdrop in on secure communications channels."
-	access_view = ACCESS_COMMAND
-	access = ACCESS_COMMAND
-	cost = CARGO_CRATE_VALUE * 4
-	contains = list(/obj/item/encryptionkey/headset_com = 3)
-	crate_type = /obj/structure/closet/crate/secure/centcom
-	crate_name = "command encryption key crate"
-
 /datum/supply_pack/misc/paper
 	name = "Bureaucracy Crate"
 	desc = "High stacks of papers on your desk are a big problem - make it pea-sized with \
@@ -38,14 +27,6 @@
 					/obj/item/laser_pointer/purple,
 				)
 	crate_name = "bureaucracy crate"
-
-/datum/supply_pack/misc/fountainpens
-	name = "Calligraphy Crate"
-	desc = "Sign death warrants in style with these seven executive fountain pens."
-	cost = CARGO_CRATE_VALUE * 1.45
-	contains = list(/obj/item/storage/box/fountainpens)
-	crate_type = /obj/structure/closet/crate/wooden
-	crate_name = "calligraphy crate"
 
 /datum/supply_pack/misc/candles_bulk
 	name = "Candle Box Crate"

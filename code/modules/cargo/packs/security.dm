@@ -1,7 +1,7 @@
 /datum/supply_pack/security
 	group = "Security"
 	access = ACCESS_SECURITY
-	crate_type = /obj/structure/closet/crate/secure/gear
+	crate_type = /obj/structure/closet/crate/secure/halflife
 
 /datum/supply_pack/security/armor
 	name = "Armor Crate"
@@ -98,7 +98,7 @@
 	group = "Armory"
 	access = ACCESS_ARMORY
 	access_view = ACCESS_ARMORY
-	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_type = /obj/structure/closet/crate/secure/halflife
 
 /datum/supply_pack/security/armory/ar2
 	name = "OSIPR Crate"

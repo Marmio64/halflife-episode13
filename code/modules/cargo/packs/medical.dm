@@ -1,7 +1,6 @@
 /datum/supply_pack/medical
 	group = "Medical"
 	access_view = ACCESS_MEDICAL
-	crate_type = /obj/structure/closet/crate/medical/department
 
 /datum/supply_pack/medical/bloodpacks
 	name = "Blood Pack Variety Crate"
@@ -16,18 +15,7 @@
 					/obj/item/reagent_containers/blood/o_minus,
 				)
 	crate_name = "blood freezer"
-	crate_type = /obj/structure/closet/crate/freezer
-
-/datum/supply_pack/medical/medipen_variety
-	name = "Medipen Variety-Pak"
-	desc = "Contains eight different medipens in three different varieties, \
-		to assist in quickly treating seriously injured patients."
-	cost = CARGO_CRATE_VALUE * 4
-	contains = list(/obj/item/reagent_containers/hypospray/medipen = 2,
-					/obj/item/reagent_containers/hypospray/medipen/ekit = 3,
-					/obj/item/reagent_containers/hypospray/medipen/blood_loss = 3)
-	crate_name = "medipen crate"
-	crate_type = /obj/structure/closet/crate/deforest
+	crate_type = /obj/structure/closet/crate/freezer/halflife
 
 /datum/supply_pack/medical/coroner_crate
 	name = "Autopsy Kit"
@@ -69,7 +57,6 @@
 	cost = CARGO_CRATE_VALUE * 5
 	contains = list(/obj/item/defibrillator/loaded = 2)
 	crate_name = "defibrillator crate"
-	crate_type = /obj/structure/closet/crate/medical
 
 /datum/supply_pack/medical/iv_drip
 	name = "IV Drip Crate"
@@ -77,7 +64,6 @@
 	cost = CARGO_CRATE_VALUE * 2
 	contains = list(/obj/machinery/iv_drip)
 	crate_name = "iv drip crate"
-	crate_type = /obj/structure/closet/crate/medical
 
 /datum/supply_pack/medical/supplies
 	name = "Medical Supplies Crate"
@@ -109,7 +95,6 @@
 					/obj/item/vending_refill/drugs,
 				)
 	crate_name = "medical supplies crate"
-	crate_type = /obj/structure/closet/crate/medical
 
 /datum/supply_pack/medical/supplies/fill(obj/structure/closet/crate/C)
 	for(var/i in 1 to 10)
@@ -122,7 +107,6 @@
 	cost = CARGO_CRATE_VALUE * 3
 	contains = list(/obj/item/storage/pill_bottle/sansufentanyl = 2)
 	crate_name = "experimental medicine crate"
-	crate_type = /obj/structure/closet/crate/medical
 
 /datum/supply_pack/medical/surgery
 	name = "Surgical Supplies Crate"
@@ -136,7 +120,6 @@
 		/obj/item/emergency_bed,
 	)
 	crate_name = "surgical supplies crate"
-	crate_type = /obj/structure/closet/crate/deforest
 
 /datum/supply_pack/medical/salglucanister
 	name = "Heavy-Duty Saline Canister"
@@ -148,30 +131,6 @@
 	access = ACCESS_MEDICAL
 	contains = list(/obj/machinery/iv_drip/saline)
 	crate_type = /obj/structure/closet/crate/large
-
-/datum/supply_pack/medical/virus
-	name = "Virus Crate"
-	desc = "Contains twelve different bottles of several viral samples for virology \
-		research. Also includes seven beakers and syringes. Balled-up jeans not included."
-	cost = CARGO_CRATE_VALUE * 5
-	access = ACCESS_CMO
-	access_view = ACCESS_VIROLOGY
-	contains = list(/obj/item/reagent_containers/cup/bottle/flu_virion,
-					/obj/item/reagent_containers/cup/bottle/cold,
-					/obj/item/reagent_containers/cup/bottle/random_virus = 4,
-					/obj/item/reagent_containers/cup/bottle/fake_gbs,
-					/obj/item/reagent_containers/cup/bottle/magnitis,
-					/obj/item/reagent_containers/cup/bottle/pierrot_throat,
-					/obj/item/reagent_containers/cup/bottle/brainrot,
-					/obj/item/reagent_containers/cup/bottle/anxiety,
-					/obj/item/reagent_containers/cup/bottle/beesease,
-					/obj/item/storage/box/syringes,
-					/obj/item/storage/box/beakers,
-					/obj/item/reagent_containers/cup/bottle/mutagen,
-				)
-	crate_name = "virus crate"
-	crate_type = /obj/structure/closet/crate/secure/plasma
-	dangerous = TRUE
 
 /datum/supply_pack/medical/arm_implants
 	name = "Strong-Arm Implant Set"

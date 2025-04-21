@@ -1,6 +1,5 @@
 /datum/supply_pack/engineering
 	group = "Engineering"
-	crate_type = /obj/structure/closet/crate/engineering
 
 /datum/supply_pack/engineering/conveyor
 	name = "Conveyor Assembly Crate"
@@ -21,7 +20,6 @@
 	access_view = ACCESS_ENGINE_EQUIP
 	contains = list(/obj/item/clothing/gloves/color/yellow = 3)
 	crate_name = "insulated gloves crate"
-	crate_type = /obj/structure/closet/crate/engineering/electrical
 
 /datum/supply_pack/engineering/power
 	name = "Power Cell Crate"
@@ -29,7 +27,6 @@
 	cost = CARGO_CRATE_VALUE * 3
 	contains = list(/obj/item/stock_parts/power_store/cell/high = 3)
 	crate_name = "power cell crate"
-	crate_type = /obj/structure/closet/crate/engineering/electrical
 
 /datum/supply_pack/engineering/tools
 	name = "Toolbox Crate"
@@ -50,7 +47,6 @@
 				)
 	cost = CARGO_CRATE_VALUE * 6
 	crate_name = "clean-up tanks crate"
-
 
 /datum/supply_pack/engineering/water_miner
 	name = "Water Harvester"
@@ -134,4 +130,3 @@
 /datum/supply_pack/engine
 	group = "Engine Construction"
 	access_view = ACCESS_ENGINEERING
-	crate_type = /obj/structure/closet/crate/engineering
