@@ -281,10 +281,10 @@
 	return list(
 		/obj/item/stack/ore/bananium = check_holidays(APRIL_FOOLS) ? 3 : 0,
 		/obj/item/stack/ore/diamond = 1,
-		/obj/item/stack/ore/gold = 10,
-		/obj/item/stack/ore/iron = 50,
-		/obj/item/stack/ore/plasma = 14,
-		/obj/item/stack/ore/silver = 12,
+		/obj/item/stack/ore/gold = 6,
+		/obj/item/stack/ore/iron = 60,
+		/obj/item/stack/ore/plasma = 10,
+		/obj/item/stack/ore/silver = 10,
 		/obj/item/stack/ore/titanium = 11,
 		/obj/item/stack/ore/uranium = 5,
 	)
