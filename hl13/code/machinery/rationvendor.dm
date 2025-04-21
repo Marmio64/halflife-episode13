@@ -176,11 +176,11 @@
 	playsound(loc, 'sound/items/tools/ratchet.ogg', 25, 1)
 	balloon_alert_to_viewers("Starts repairing [src]'s internals")
 
-	if(!do_after(user, 10 SECONDS, src))
+	if(!do_after(user, 15 SECONDS, src))
 		return FALSE
 
 	if(!HAS_TRAIT(user, TRAIT_ENGINEER))
-		if(prob(80))
+		if(prob(70))
 			to_chat(user, span_notice("That might have fixed it... Wait, no. Hm, it might be better to get a trained technician to handle this..."))
 			return FALSE
 		else

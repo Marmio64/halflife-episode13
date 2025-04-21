@@ -506,12 +506,10 @@
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/laborcamp)
 "fk" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 1
+/obj/effect/turf_decal/siding/street/corner{
+	dir = 8
 	},
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
-	},
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
 "fn" = (
 /obj/structure/table/halflife/metal/grate,
@@ -812,15 +810,11 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
 "iK" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 4
+/obj/effect/turf_decal/siding/street{
+	dir = 1
 	},
-/obj/structure/fluff/traveltile{
-	aportalgoesto = "city_surface";
-	aportalid = "outlands_surface"
-	},
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/indoors/sewer/tunnel)
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/outdoors/forest)
 "iM" = (
 /obj/machinery/porta_turret/combine/off,
 /turf/open/floor/plating/ground/dirt/alt,
@@ -830,6 +824,9 @@
 /area/halflife/indoors/sewer/outlandscave)
 "iS" = (
 /obj/structure/halflife/fence/wire/barb,
+/obj/effect/turf_decal/siding/street{
+	dir = 4
+	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors/sewer/tunnel)
 "iU" = (
@@ -1148,7 +1145,7 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors)
 "lV" = (
-/obj/effect/turf_decal/siding/thinplating,
+/obj/effect/turf_decal/siding/street,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
 "lX" = (
@@ -1185,15 +1182,9 @@
 /turf/open/halflife/water/shallow,
 /area/halflife/outdoors/forest)
 "mp" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 8
-	},
-/obj/structure/fluff/traveltile{
-	aportalgoesto = "city_surface";
-	aportalid = "outlands_surface"
-	},
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/indoors/sewer/tunnel)
+/obj/effect/turf_decal/siding/street/corner,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/forest)
 "mt" = (
 /obj/structure/chair/halflife/overlaypickup/plastic,
 /turf/open/floor/plating/ground/grass,
@@ -1425,6 +1416,9 @@
 "pa" = (
 /obj/structure/railing/halflife/sewer{
 	dir = 8
+	},
+/obj/effect/turf_decal/siding/street{
+	dir = 4
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
@@ -1691,9 +1685,6 @@
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors)
 "sg" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 1
-	},
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
 	},
@@ -1716,11 +1707,12 @@
 	},
 /area/halflife/indoors/sewer)
 "sq" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 4
+/obj/effect/landmark/outlands_latejoin,
+/obj/effect/turf_decal/siding/street{
+	dir = 1
 	},
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/indoors/sewer/tunnel)
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/outdoors/forest)
 "sr" = (
 /obj/structure/halflife/barrel/single/red,
 /turf/open/floor/plating/ground/dirt,
@@ -1868,11 +1860,10 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors)
 "tD" = (
-/obj/effect/turf_decal/siding/thinplating{
+/obj/effect/turf_decal/siding/street{
 	dir = 8
 	},
-/obj/effect/turf_decal/weather/dirt,
-/turf/open/floor/plating/ground/brickroad,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
 "tF" = (
 /obj/machinery/light/small{
@@ -1912,11 +1903,12 @@
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
 "tX" = (
-/obj/effect/turf_decal/siding/thinplating,
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
+/obj/structure/halflife/fence/wire/barb,
+/obj/effect/turf_decal/siding/street{
+	dir = 8
 	},
-/area/halflife/outdoors/forest)
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/indoors/sewer/tunnel)
 "ua" = (
 /turf/open/floor/plating/indoor/metal/pipe/corner{
 	dir = 8
@@ -2470,7 +2462,7 @@
 /area/halflife/outdoors/forest)
 "AJ" = (
 /obj/structure/halflife/street_sign/stop,
-/obj/effect/turf_decal/siding/thinplating,
+/obj/effect/turf_decal/siding/street,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
 "AK" = (
@@ -2506,20 +2498,16 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors)
 "Ba" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 8
+/obj/effect/turf_decal/siding/street{
+	dir = 1
 	},
-/obj/structure/halflife/road_barrier/combine,
-/turf/open/floor/plating/ground/brickroad,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
 "Bd" = (
 /obj/machinery/door/unpowered/halflife/seethrough/fence/wire,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "Bk" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 4
-	},
 /obj/structure/halflife/road_barrier/combine,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/forest)
@@ -2669,6 +2657,9 @@
 /obj/structure/railing/halflife/wood/single{
 	dir = 1
 	},
+/obj/effect/turf_decal/siding/street{
+	dir = 4
+	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
 "Dm" = (
@@ -2726,10 +2717,10 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
 "DL" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 8
+/obj/effect/turf_decal/siding/street{
+	dir = 4
 	},
-/turf/open/floor/plating/ground/brickroad,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors/sewer/tunnel)
 "DN" = (
 /turf/closed/wall/halflife/sewer,
@@ -3045,10 +3036,8 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/forest)
 "Ie" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/brickroad,
+/obj/effect/turf_decal/siding/street,
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
 "If" = (
 /obj/effect/spawner/random/halflife/loot/scrap,
@@ -3336,13 +3325,6 @@
 "Lz" = (
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors)
-"LA" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 8
-	},
-/obj/structure/halflife/fence/wire/barb,
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/indoors/sewer/tunnel)
 "LB" = (
 /obj/machinery/light/small/cyan/directional/west,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
@@ -3549,9 +3531,6 @@
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/laborcamp)
 "NT" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 4
-	},
 /obj/structure/halflife/fence/wire/barb,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/indoors/sewer/tunnel)
@@ -3774,6 +3753,9 @@
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "QP" = (
+/obj/effect/turf_decal/siding/street{
+	dir = 8
+	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors/sewer/tunnel)
 "QQ" = (
@@ -3792,13 +3774,10 @@
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "QY" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 8
+/obj/effect/turf_decal/siding/street{
+	dir = 4
 	},
-/obj/effect/turf_decal/weather/dirt{
-	dir = 1
-	},
-/turf/open/floor/plating/ground/brickroad,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
 "Rc" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/nodirectional{
@@ -3912,13 +3891,9 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors)
 "Si" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 4
-	},
-/obj/effect/turf_decal/weather/dirt{
-	dir = 1
-	},
-/turf/open/floor/plating/ground/brickroad,
+/obj/effect/landmark/outlands_latejoin,
+/obj/effect/turf_decal/siding/street,
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
 "Sj" = (
 /obj/structure/spawner/halflife/antlion/small/worker,
@@ -4247,10 +4222,13 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
 "Vp" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 4
+/obj/structure/railing/halflife/wood/single{
+	dir = 1
 	},
-/turf/open/floor/plating/ground/brickroad,
+/obj/effect/turf_decal/siding/street{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
 "Vq" = (
 /obj/structure/halflife/trash/papers/three{
@@ -4289,6 +4267,7 @@
 /area/halflife/indoors/sewer)
 "VF" = (
 /obj/structure/halflife/trash/bricks,
+/obj/effect/turf_decal/siding/street,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
 "VH" = (
@@ -4433,6 +4412,7 @@
 /obj/item/stack/medical/bandage/makeshift,
 /obj/item/stack/medical/bandage,
 /obj/item/stack/medical/gauze,
+/obj/item/stack/medical/bone_gel,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
 "Xl" = (
@@ -4635,6 +4615,9 @@
 "Za" = (
 /obj/structure/railing/halflife/sewer{
 	dir = 4
+	},
+/obj/effect/turf_decal/siding/street{
+	dir = 8
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
@@ -61278,57 +61261,57 @@ wG
 el
 vs
 Fk
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
-QP
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
+DL
 iS
-OO
-OO
-OO
-OO
-OO
-OO
-OO
-OO
+QY
+QY
+QY
+QY
+QY
+QY
+QY
+QY
 oG
 oG
 oG
 oG
 oG
 IL
-OO
-OO
-OO
-OO
+QY
+QY
+QY
+QY
 tN
-OO
-OO
+QY
+QY
 tN
 ai
 tN
-OO
-OO
+QY
+QY
 Df
-OO
-OO
-OO
-OO
+QY
+QY
+QY
+QY
 Ck
 tN
-OO
+QY
 pa
 pa
 pa
-OO
+QY
 pa
 pa
 WR
@@ -61338,9 +61321,9 @@ yS
 tN
 ai
 tN
-OO
-OO
-OO
+QY
+QY
+QY
 tN
 tN
 tN
@@ -61358,29 +61341,29 @@ tN
 tN
 ai
 tN
-OO
+QY
 tN
 an
 tN
-OO
-OO
-OO
-OO
+QY
+QY
+QY
+QY
 tN
 an
 tN
 tN
 tN
-OO
-OO
-OO
+QY
+QY
+QY
 tN
 tN
-OO
-OO
+QY
+QY
 dg
-OO
-OO
+QY
+QY
 tN
 dg
 tN
@@ -61475,59 +61458,59 @@ wG
 el
 vs
 Fk
-mp
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-DL
-LA
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ba
-Ie
-Ie
+ry
+HS
+HS
+HS
+HS
+HS
+HS
+HS
+HS
+HS
+HS
+HS
+NT
+mE
+mE
+mE
+mE
+mE
+mE
+mE
+Bk
+mE
+mE
 oG
-Ie
-Ie
-Ie
-Ie
+mE
+mE
+mE
+mE
 tN
-QY
-Ie
-Ie
-Ie
-Ie
+Ql
+mE
+mE
+mE
+mE
 tN
 tN
 uv
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
-tD
+mE
+mE
+mE
+mE
+mE
+mE
+mE
+Hj
 tN
 cP
-Ie
-Ie
-Ie
-Ie
-Ie
-Ie
+mE
+mE
+mE
+mE
+mE
+mE
 mE
 Ym
 mE
@@ -61535,9 +61518,9 @@ mE
 tN
 tN
 tN
-Ie
-Ie
-tD
+mE
+mE
+Hj
 tN
 tN
 an
@@ -61869,56 +61852,56 @@ wG
 el
 vs
 Fk
-iK
-sq
-sq
-sq
-sq
-sq
-sq
-sq
-sq
-sq
-sq
-sq
+ry
+HS
+HS
+HS
+HS
+HS
+HS
+HS
+HS
+HS
+HS
+HS
 NT
-Vp
-Vp
-Vp
-Vp
-Vp
-Vp
-Vp
+mE
+mE
+mE
+mE
+mE
+mE
+mE
 Bk
-Vp
-Vp
+mE
+mE
 oG
-Vp
-Vp
-Vp
+mE
+mE
+mE
 Hj
-Si
-Vp
-Vp
-tN
-Vp
+Ql
 mE
 mE
 tN
+mE
+mE
+mE
+tN
 tN
 mE
 tN
 mE
-Vp
-Vp
+mE
+mE
 tN
 tN
-Vp
-Vp
-Vp
-Vp
-Vp
-Vp
+mE
+mE
+mE
+mE
+mE
+mE
 Ym
 WR
 mE
@@ -61935,7 +61918,7 @@ It
 mE
 mE
 tN
-Vp
+mE
 mE
 mE
 mE
@@ -61970,14 +61953,14 @@ GX
 kn
 kn
 kn
-OO
+fk
 It
 tN
 an
-OO
+tD
 ai
-OO
-OO
+tD
+tD
 tN
 GX
 GX
@@ -62078,26 +62061,26 @@ QP
 QP
 QP
 QP
-iS
-OO
-OO
-OO
-OO
-OO
-OO
-OO
-OO
+tX
+tD
+tD
+tD
+tD
+tD
+tD
+tD
+tD
 oG
 oG
 oG
 oG
 oG
-OO
+tD
 ai
-OO
-OO
-OO
-OO
+tD
+tD
+tD
+tD
 Ck
 tN
 tN
@@ -62106,14 +62089,14 @@ tN
 tN
 It
 tN
-OO
-OO
+tD
+tD
 tN
 tN
-Df
-OO
-OO
-OO
+Vp
+tD
+tD
+tD
 Za
 Za
 Ym
@@ -62131,16 +62114,16 @@ It
 It
 tN
 tN
-OO
-OO
+tD
+tD
 ai
-OO
-OO
+tD
+tD
 ai
 kn
 kn
 GX
-OO
+Ba
 ai
 GX
 OO
@@ -62164,7 +62147,7 @@ GX
 tN
 tN
 OO
-OO
+mp
 ai
 kn
 ai
@@ -62333,11 +62316,11 @@ tN
 Wx
 fX
 fX
-OO
+lV
 kn
 GX
 kn
-OO
+Ba
 fX
 tN
 tN
@@ -62365,7 +62348,7 @@ lV
 kn
 ai
 kn
-OO
+Ba
 fX
 tN
 GX
@@ -62530,7 +62513,7 @@ tN
 fX
 OO
 OO
-OO
+lV
 GX
 GX
 kn
@@ -62731,7 +62714,7 @@ kn
 kn
 kn
 kn
-OO
+Ba
 fX
 Ko
 Hd
@@ -62928,7 +62911,7 @@ GX
 GX
 GX
 GX
-OO
+Ba
 fX
 Ko
 Vu
@@ -63513,7 +63496,7 @@ RL
 tN
 tN
 fX
-OO
+lV
 kn
 kn
 GX
@@ -63710,7 +63693,7 @@ It
 tN
 tN
 RL
-OO
+lV
 kn
 kn
 GX
@@ -63907,13 +63890,13 @@ Cq
 tN
 tN
 fX
-OO
+lV
 kn
 GX
 GX
 GX
 kn
-OO
+Ba
 fX
 Ko
 Ko
@@ -64105,12 +64088,12 @@ tN
 tN
 fX
 tN
-kn
+tD
 GX
-OO
+tD
 GX
 GX
-OO
+Ba
 fX
 RL
 dg
@@ -64725,7 +64708,7 @@ yX
 Cw
 Ko
 fX
-OO
+lV
 kn
 tN
 tN
@@ -64922,7 +64905,7 @@ yX
 yX
 sx
 tN
-OO
+lV
 wS
 tN
 tN
@@ -69259,8 +69242,8 @@ GX
 GX
 It
 kn
-tX
-OO
+kn
+Ba
 fX
 GX
 GX
@@ -69456,8 +69439,8 @@ XA
 VF
 sg
 kn
-tX
-bA
+kn
+iK
 XA
 XA
 XA
@@ -69650,11 +69633,11 @@ Cq
 XA
 XA
 XA
-bA
-fk
+Ie
 kn
-tX
-bA
+kn
+kn
+iK
 XA
 UI
 UI
@@ -69847,11 +69830,11 @@ GX
 XA
 XA
 XA
-bA
-fk
+Ie
 kn
-tX
-bA
+kn
+kn
+iK
 XA
 UI
 VE
@@ -70044,11 +70027,11 @@ GX
 XA
 XA
 XA
-Cx
-fk
+Si
+kn
 fo
-tX
-Cx
+kn
+sq
 XA
 UI
 WG
