@@ -173,19 +173,6 @@
 /area/halflife/indoors/bunker)
 "nr" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/grenade/syndieminibomb/bouncer{
-	name = "modified MK3A2 grenade";
-	desc = "A heavily-modified MK3A2 grenade. You can see most of the electronic timer has been utterly busted, and will go off almost immediately after the pin is pulled. Better to die free.";
-	det_time = 1;
-	possible_fuse_time = list("Instant");
-	pixel_x = 6;
-	pixel_y = 10
-	},
-/obj/item/paper/crumpled{
-	pixel_x = -6;
-	pixel_y = 9;
-	default_raw_text = "I rigged this grenade to go off almost immediately after I pull the pin. Combine can't take me alive now."
-	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "pR" = (
@@ -322,17 +309,9 @@
 /area/halflife/indoors/bunker)
 "BO" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/reagent_containers/condiment/peanut_butter{
-	pixel_x = -7;
-	pixel_y = 15
-	},
-/obj/item/reagent_containers/condiment/peanut_butter{
-	pixel_x = 8;
-	pixel_y = 18
-	},
-/obj/item/reagent_containers/condiment/protein{
-	pixel_x = 2;
-	pixel_y = 8
+/obj/item/food/canned/halflife/beans{
+	pixel_x = -1;
+	pixel_y = 7
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
@@ -382,6 +361,7 @@
 	pixel_x = -5;
 	pixel_y = 9
 	},
+/obj/item/stack/medical/suture,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "Hj" = (
@@ -493,6 +473,10 @@
 /obj/item/ammo_box/magazine/m4a1/service{
 	pixel_x = 13;
 	pixel_y = 5
+	},
+/obj/item/weaponcrafting/frame/service{
+	pixel_y = 6;
+	pixel_x = 3
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)

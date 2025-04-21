@@ -7,7 +7,7 @@
 	closingLayer = SHUTTER_LAYER
 	damage_deflection = 20
 	armor_type = /datum/armor/poddoor_shutters
-	max_integrity = 100
+	max_integrity = 250 //hl13 edit
 	recipe_type = /datum/crafting_recipe/shutters
 	animation_sound = 'sound/machines/shutter.ogg'
 

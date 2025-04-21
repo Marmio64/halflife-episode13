@@ -363,6 +363,7 @@
 	pixel_x = -8;
 	pixel_y = 11
 	},
+/obj/item/stack/medical/bandage,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "CZ" = (
@@ -418,6 +419,10 @@
 "FT" = (
 /obj/structure/halflife/pipes/horizontal/single,
 /turf/open/halflife/water/medium,
+/area/halflife/indoors/bunker)
+"FU" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "He" = (
 /obj/structure/halflife/trash/cardboard{
@@ -679,10 +684,7 @@
 	pixel_x = -5;
 	pixel_y = 9
 	},
-/obj/item/reagent_containers/pill/patch/medkit/vial{
-	pixel_x = 8;
-	pixel_y = 8
-	},
+/obj/item/stack/medical/suture,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "Xr" = (
@@ -916,7 +918,7 @@ te
 Bj
 Bj
 DV
-Bj
+FU
 Bj
 DV
 nS
