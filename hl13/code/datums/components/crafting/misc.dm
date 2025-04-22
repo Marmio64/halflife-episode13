@@ -30,6 +30,14 @@
 	category = CAT_MISC
 	crafting_interface = CRAFTING_BENCH_GENERAL
 
+/datum/crafting_recipe/healthpen
+	name = "Healthpen"
+	result = /obj/item/reagent_containers/hypospray/medipen/healthpen
+	reqs = list(/obj/item/stack/sheet/iron = 1, /obj/item/food/xen/xenbranch = 1)
+	time = 3 SECONDS
+	category = CAT_MISC
+	crafting_interface = CRAFTING_BENCH_GENERAL
+
 /datum/crafting_recipe/makeshiftbandage
 	name = "Makeshift Bandage"
 	reqs = list(
