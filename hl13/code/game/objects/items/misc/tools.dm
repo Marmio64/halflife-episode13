@@ -49,3 +49,9 @@
 
 /obj/item/extinguisher/halflife
 	icon = 'hl13/icons/obj/tools/tools_inventory.dmi'
+
+/obj/item/climbing_hook/halflife/makeshift
+	name = "makeshift climbing hook"
+	desc = "A cheap makeshift climbing hook formed out of scrap and cloth. It's unlikely to withstand more than a couple uses."
+	uses = 2
+	climb_time = 4 SECONDS

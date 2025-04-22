@@ -15,6 +15,10 @@
 	reclaim_rate = 0.1
 	pixel_shift = 0
 
+/obj/structure/sink/halflife/clean
+	desc = "An old sink, typically dispensing clean water. This one looks rather clean, suprisingly."
+	dispensedreagent = /datum/reagent/water
+
 /obj/structure/sink/halflife/dirty
 	name = "filthy sink"
 	desc = "There isn't a clean sink left in the world most likely, but this one is espescially filthy. The rusty and mold filled faucet leads you to think twice about drinking from it."

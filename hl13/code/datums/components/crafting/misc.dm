@@ -44,14 +44,14 @@
 		/obj/item/stack/sheet/cloth = 3,
 	)
 	result = /obj/item/stack/medical/bandage/makeshift
-	category = CAT_TOOLS
+	category = CAT_MISC
 
 /datum/crafting_recipe/makeshiftweldingtool
 	name = "Makeshift Welding Tool"
 	result = /obj/item/weldingtool/halflife/makeshift/empty
 	reqs = list(/obj/item/stack/sheet/iron = 3, /obj/item/lighter = 1)
 	time = 6 SECONDS
-	category = CAT_MISC
+	category = CAT_TOOLS
 	crafting_interface = CRAFTING_BENCH_GENERAL
 
 /datum/crafting_recipe/lockpick
@@ -61,3 +61,10 @@
 	time = 8 SECONDS
 	category = CAT_MISC
 	crafting_interface = CRAFTING_BENCH_GENERAL
+
+/datum/crafting_recipe/makeshift_climbinghook
+	name = "Makeshift Climbing Hook"
+	result = /obj/item/climbing_hook/halflife/makeshift
+	reqs = list(/obj/item/stack/sheet/scrap_metal = 4, /obj/item/stack/sheet/cloth = 4)
+	time = 12 SECONDS
+	category = CAT_MISC

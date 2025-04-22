@@ -123,6 +123,12 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"bQ" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 6
+	},
+/turf/open/halflife/water/deep,
+/area/halflife/outdoors/forest)
 "bW" = (
 /obj/structure/table/halflife/metal,
 /obj/item/multitool{
@@ -219,6 +225,10 @@
 "cz" = (
 /obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/ground/dirt/alt,
+/area/halflife/outdoors/forest)
+"cB" = (
+/obj/effect/turf_decal/weather/dirt,
+/turf/open/halflife/water/deep,
 /area/halflife/outdoors/forest)
 "cD" = (
 /obj/structure/weightmachine/weightlifter,
@@ -547,6 +557,12 @@
 "fx" = (
 /obj/item/cultivator/rake,
 /turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
+"fz" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 8
+	},
+/turf/open/halflife/water/deep,
 /area/halflife/outdoors/forest)
 "fA" = (
 /mob/living/basic/halflife/zombie/fungal,
@@ -973,10 +989,22 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/forest)
+"kr" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 5
+	},
+/turf/open/halflife/water/deep,
+/area/halflife/outdoors/forest)
 "ku" = (
 /obj/structure/halflife/pipes/piped,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/laborcamp)
+"kv" = (
+/obj/structure/closet/halflife/wall/firstaid,
+/obj/effect/spawner/random/halflife/loot/heal,
+/obj/effect/spawner/random/halflife/loot/heal,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors)
 "kx" = (
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -1701,6 +1729,12 @@
 "sn" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors)
+"so" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 9
+	},
+/turf/open/halflife/water/deep,
+/area/halflife/outdoors/forest)
 "sp" = (
 /turf/open/floor/plating/indoor/metal/pipe/corner{
 	dir = 1
@@ -1945,6 +1979,15 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
+"uu" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 6
+	},
+/obj/effect/turf_decal/weather/dirt{
+	dir = 8
+	},
+/turf/open/halflife/water/deep,
+/area/halflife/outdoors/forest)
 "uv" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 8
@@ -2889,6 +2932,13 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer/tunnel)
+"Gr" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 8
+	},
+/obj/effect/turf_decal/weather/dirt,
+/turf/open/halflife/water/deep,
+/area/halflife/outdoors/forest)
 "Gu" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
@@ -3620,6 +3670,12 @@
 "OV" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"Pa" = (
+/obj/effect/turf_decal/weather/dirt{
+	dir = 1
+	},
+/turf/open/halflife/water/deep,
+/area/halflife/outdoors/forest)
 "Pi" = (
 /mob/living/basic/mouse/gray,
 /turf/open/floor/plating/ground/dirt,
@@ -4462,7 +4518,7 @@
 /area/halflife/indoors/laborcamp/security)
 "XI" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/effect/spawner/random/halflife/loot/heal,
+/obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors)
 "XU" = (
@@ -43963,7 +44019,7 @@ vl
 vl
 vl
 vl
-vl
+bQ
 ZW
 tN
 tN
@@ -44159,7 +44215,7 @@ vl
 vl
 vl
 vl
-vl
+cB
 tN
 ZW
 ai
@@ -44351,13 +44407,13 @@ Yn
 tN
 tN
 ZW
+Pa
 vl
 vl
 vl
 vl
 vl
-vl
-vl
+Gr
 ZW
 ai
 tN
@@ -44548,13 +44604,13 @@ tN
 ai
 tN
 ZW
+kr
 vl
 vl
 vl
 vl
 vl
-vl
-vl
+bQ
 ZW
 tN
 It
@@ -44746,11 +44802,11 @@ It
 tN
 ZW
 tN
+Pa
 vl
 vl
 vl
-vl
-vl
+cB
 tN
 ZW
 tN
@@ -44942,13 +44998,13 @@ GX
 It
 tN
 ZW
+so
 vl
 vl
 vl
 vl
 vl
-vl
-vl
+uu
 ZW
 tN
 It
@@ -45139,12 +45195,12 @@ tN
 an
 GX
 ZW
+Pa
 vl
 vl
 vl
 vl
-vl
-vl
+cB
 tN
 ZW
 GX
@@ -45336,12 +45392,12 @@ tN
 tN
 tN
 ZW
+Pa
 vl
 vl
 vl
 vl
-vl
-vl
+cB
 tN
 ZW
 ai
@@ -45533,13 +45589,13 @@ GX
 GX
 GX
 ZW
+Pa
 vl
 vl
 vl
 vl
 vl
-vl
-vl
+fz
 XA
 tN
 tN
@@ -45730,7 +45786,7 @@ GX
 Cq
 tN
 ZW
-vl
+Pa
 vl
 vl
 vl
@@ -45927,7 +45983,7 @@ GX
 tN
 tN
 ZW
-vl
+kr
 vl
 vl
 vl
@@ -46125,7 +46181,7 @@ GX
 tN
 ZW
 tN
-vl
+Pa
 vl
 vl
 vl
@@ -63312,9 +63368,9 @@ Vu
 Vu
 Jj
 Ko
+kv
 Vu
-Vu
-XI
+SP
 Ko
 fX
 GX
@@ -68443,8 +68499,8 @@ GX
 wa
 FC
 It
-Nn
 GX
+Nn
 GX
 GX
 GX
@@ -69431,8 +69487,8 @@ XA
 Xb
 tN
 tN
-eX
-eX
+XA
+XA
 XA
 XA
 XA

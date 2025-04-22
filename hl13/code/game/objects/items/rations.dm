@@ -247,11 +247,6 @@
 	list_reagents = list(/datum/reagent/water/unpurified = 20)
 	custom_price = PAYCHECK_CREW * 0.65
 
-/obj/item/reagent_containers/cup/soda_cans/breenwater/yellow/Initialize(mapload)
-	if(prob(10))
-		list_reagents = list(/datum/reagent/water/unpurified/river = 20) //may contain worms
-	. = ..()
-
 /obj/item/reagent_containers/cup/soda_cans/breenwater/red
 	name = "red water can"
 	desc = "A can of Breen's private reserve water. Supposedly, it helps improve your memory! This one is painted red, and seems more filled."

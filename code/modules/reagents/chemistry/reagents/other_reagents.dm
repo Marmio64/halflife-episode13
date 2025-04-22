@@ -272,21 +272,21 @@
 
 /datum/reagent/water/unpurified
 	name = "Unpurified Water"
-	description = "Water which contains small amounts of harmful particulates."
-	color = "#0497d1"
-	taste_description = "unpurified water"
-	disgust = 2
-	//toxicity = 0.1
+	description = "Water which has not gone through any sanitation procedures, and may be contaminated."
+	color = "#8db9a577"
+	taste_description = "moldy water"
 	treated = FALSE
+	var/disease_chance = 0.5
+
+/datum/reagent/water/unpurified/on_mob_life(mob/living/L, methods=TOUCH, reac_volume, show_message = TRUE, permeability = 1)
+	..()
+	if(prob(disease_chance))
+		L.ForceContractDisease(new /datum/disease/gutworms)
 
 /datum/reagent/water/unpurified/river
 	name = "River Water"
 	description = "Unpurified river water. May not be safe to drink."
-
-/datum/reagent/water/unpurified/river/on_mob_life(mob/living/L, methods=TOUCH, reac_volume, show_message = TRUE, permeability = 1)
-	..()
-	if(prob(5))
-		L.ForceContractDisease(new /datum/disease/gutworms)
+	disease_chance = 5
 
 //hl13 edit end
 /*

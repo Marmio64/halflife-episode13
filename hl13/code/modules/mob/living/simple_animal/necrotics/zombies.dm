@@ -169,7 +169,8 @@
 	SLEEP_CHECK_DEATH(delay, src)
 	revving_throw = FALSE
 	playsound(src, 'hl13/sound/creatures/poison/pz_throw3.ogg', 40, sound_vary)
-	new brood_type(get_turf(src.loc))
+	var/mob/living/basic/halflife/headcrab/poison/P = new brood_type(src.loc)
+	P.throw_at(T, 4)
 	SLEEP_CHECK_DEATH(delay, src)
 	nowthrowing = FALSE
 	crabs_left--
