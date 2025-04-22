@@ -56,52 +56,8 @@
 	description = "Experiments with high-pressure gases and electricity resulting in crystallization and controlled plasma reactions."
 	prereq_ids = list(TECHWEB_NODE_GAS_COMPRESSION, TECHWEB_NODE_ENERGY_MANIPULATION)
 	design_ids = list(
-		"electrolyzer",
-		"pipe_scrubber",
-		"pacman",
-		"mech_generator",
 		"plasmacutter",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
 	discount_experiments = list(/datum/experiment/ordnance/gaseous/plasma = TECHWEB_TIER_2_POINTS)
-	announce_channels = list(RADIO_CHANNEL_ENGINEERING)
-
-/datum/techweb_node/exp_tools
-	id = TECHWEB_NODE_EXP_TOOLS
-	display_name = "Experimental Tools"
-	description = "Enhances the functionality and versatility of station tools."
-	prereq_ids = list(TECHWEB_NODE_FUSION)
-	design_ids = list(
-		"flatpacker",
-		"handdrill",
-		"exwelder",
-		"jawsoflife",
-		"rangedanalyzer",
-		"rtd_loaded",
-		"mech_rcd",
-		"rcd_loaded",
-		"rcd_ammo",
-		"weldingmask",
-		"magboots",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
-	discount_experiments = list(/datum/experiment/ordnance/gaseous/bz = TECHWEB_TIER_4_POINTS)
-	announce_channels = list(RADIO_CHANNEL_ENGINEERING)
-
-/datum/techweb_node/rcd_upgrade
-	id = TECHWEB_NODE_RCD_UPGRADE
-	display_name = "Rapid Construction Device Upgrades"
-	description = "New designs and enhancements for RCD and RPD."
-	prereq_ids = list(TECHWEB_NODE_EXP_TOOLS, TECHWEB_NODE_PARTS_BLUESPACE)
-	design_ids = list(
-		"rcd_upgrade_silo_link",
-		"rcd_upgrade_anti_interrupt",
-		"rcd_upgrade_cooling",
-		"rcd_upgrade_frames",
-		"rcd_upgrade_furnishing",
-		"rcd_upgrade_simple_circuits",
-		"rpd_upgrade_unwrench",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
-	discount_experiments = list(/datum/experiment/ordnance/gaseous/noblium = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(RADIO_CHANNEL_ENGINEERING)

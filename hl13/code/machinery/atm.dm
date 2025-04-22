@@ -106,6 +106,8 @@
 				user.client.longterm_credits_deposited += ddeposit
 				totalmoney = ROUND_UP(ddeposit * 0.25)
 				user.client.prefs.longterm_credit_account += totalmoney
+				if(user.client.prefs.longterm_credit_account > 1000) //Hard limit that people are very unlikely to reach, but just in case.
+					user.client.prefs.longterm_credit_account = 1000
 				successful_transaction()
 				user.client.prefs.save_preferences()
 				return

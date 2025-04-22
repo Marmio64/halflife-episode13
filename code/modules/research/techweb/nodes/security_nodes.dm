@@ -49,7 +49,6 @@
 		"tele_shield",
 		"ballistic_shield",
 		"handcuffs_s",
-		"bola_energy",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SECURITY)

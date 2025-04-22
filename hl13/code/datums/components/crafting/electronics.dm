@@ -104,3 +104,14 @@
 				/obj/item/circuitmaterial = 2)
 	time = 6 SECONDS
 	category = CAT_ROBOT
+
+/datum/crafting_recipe/alyxtool
+	name = "Hacking Multitool"
+	result = /obj/item/card/emag/halflife
+	reqs = list(/obj/item/stack/sheet/iron = 2,
+				/obj/item/circuitmaterial = 3,
+				/obj/item/circuitmaterial/advanced = 2,
+				/obj/item/stack/cable_coil = 5)
+	time = 10 SECONDS
+	category = CAT_EQUIPMENT
+	crafting_interface = CRAFTING_BENCH_ELECTRIC

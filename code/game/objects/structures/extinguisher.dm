@@ -17,7 +17,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/extinguisher_cabinet, 29)
 	if(building)
 		opened = TRUE
 	else
-		stored_extinguisher = new /obj/item/extinguisher(src)
+		stored_extinguisher = new /obj/item/extinguisher/halflife(src) //hl13 edit
 	update_appearance(UPDATE_ICON)
 	register_context()
 	find_and_hang_on_wall()

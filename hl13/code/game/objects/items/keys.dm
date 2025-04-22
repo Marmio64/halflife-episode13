@@ -172,7 +172,7 @@
 /obj/item/hl2key/custom/attack_self(mob/user)
 	var/input = (input(user, "What would you name this key?", "", "") as text)
 	if(input)
-		name = name + " key"
+		name = input + " key"
 		to_chat(user, "<span class='notice'>You rename the key to [name].</span>")
 
 //custom key blank

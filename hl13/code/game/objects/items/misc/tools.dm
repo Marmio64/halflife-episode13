@@ -46,3 +46,6 @@
 	righthand_file = 'hl13/icons/mob/inhands/items_righthand.dmi'
 	icon_state = "wirecutter"
 	random_color = FALSE
+
+/obj/item/extinguisher/halflife
+	icon = 'hl13/icons/obj/tools/tools_inventory.dmi'

@@ -50,15 +50,3 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SUPPLY)
 
-/datum/techweb_node/plasma_mining
-	id = TECHWEB_NODE_PLASMA_MINING
-	display_name = "Plasma Beam Mining"
-	description = "Engineers' plasma welders have proven highly effective in mining operations. This led to the development of a mech-mounted variant and an enhanced handheld cutter for miners."
-	prereq_ids = list(TECHWEB_NODE_LOW_PRESSURE_EXCAVATION, TECHWEB_NODE_PLASMA_CONTROL)
-	design_ids = list(
-		"mech_plasma_cutter",
-		"plasmacutter_adv",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
-	announce_channels = list(RADIO_CHANNEL_SUPPLY)
-

@@ -43,6 +43,20 @@
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/clothing/shoes/jackboots/civilprotection(src)
 
+/obj/structure/closet/halflife/engineering_personal
+	name = "engineer's locker"
+
+/obj/structure/closet/halflife/engineering_personal/PopulateContents()
+	..()
+	new /obj/item/storage/toolbox/mechanical(src)
+	new /obj/item/tank/internals/emergency_oxygen/engi(src)
+	new /obj/item/clothing/gloves/color/yellow(src)
+	new /obj/item/clothing/mask/gas/cwuengi(src)
+	new /obj/item/clothing/suit/utility/radiation/engineer(src)
+	new /obj/item/storage/box/emptysandbags(src)
+	new /obj/item/storage/bag/construction(src)
+	new /obj/item/clothing/glasses/welding(src)
+
 /obj/structure/closet/crate/freezer/halflife
 	desc = "A freezer."
 	name = "freezer"

@@ -2,7 +2,7 @@
 	desc = "A handheld tool which can short out combine forcefields and machinery. Can be recharged with uranium."
 	name = "multifunction electrical tool"
 	icon_state = "alyxtool"
-	icon = 'icons/obj/tools.dmi'
+	icon = 'hl13/icons/obj/tools/tools_inventory.dmi'
 	inhand_icon_state = null
 	var/emagging //are we currently emagging something
 	/// How many charges can the emag hold?
