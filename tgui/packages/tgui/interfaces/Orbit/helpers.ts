@@ -177,3 +177,21 @@ export function sortByOrbiters(poiA: Observable, poiB: Observable): number {
   }
   return 0;
 }
+
+/** Checks if a full name or job title matches the search. */
+export function isJobCkeyOrNameMatch(
+  observable: Observable,
+  searchQuery: string,
+): boolean {
+  if (!searchQuery) return true;
+
+  const { full_name, job, name, ckey } = observable;
+
+  return (
+    full_name?.toLowerCase().includes(searchQuery?.toLowerCase()) ||
+    name?.toLowerCase().includes(searchQuery?.toLowerCase()) ||
+    job?.toLowerCase().includes(searchQuery?.toLowerCase()) ||
+    ckey?.toLowerCase().includes(searchQuery?.toLowerCase()) ||
+    false
+  );
+}
