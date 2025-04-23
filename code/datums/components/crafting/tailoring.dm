@@ -70,13 +70,3 @@
 	reqs = list(/obj/item/clothing/glasses/sunglasses/chemical = 1)
 	category = CAT_EQUIPMENT
 
-/datum/crafting_recipe/chaplain_hood
-	name = "Follower Hoodie"
-	result = /obj/item/clothing/suit/hooded/chaplain_hoodie
-	time = 1 SECONDS
-	tool_paths = list(
-		/obj/item/clothing/suit/hooded/chaplain_hoodie,
-		/obj/item/book/bible,
-	)
-	reqs = list(/obj/item/stack/sheet/cloth = 4)
-	category = CAT_CLOTHING

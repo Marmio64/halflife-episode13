@@ -122,11 +122,6 @@
 	icon_state = "construction_kit"
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/aquarium_kit/Initialize(mapload)
-	. = ..()
-	var/static/list/recipes = list(/datum/crafting_recipe/aquarium, /datum/crafting_recipe/fish_tank)
-	AddElement(/datum/element/slapcrafting, recipes)
-
 /obj/item/aquarium_prop
 	name = "generic aquarium prop"
 	desc = "very boring"

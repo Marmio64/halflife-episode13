@@ -28,16 +28,6 @@
 	blacklist |= typesof(/obj/item/radio/headset)
 	blacklist |= typesof(/obj/item/radio/intercom)
 
-/datum/crafting_recipe/wheelchair
-	name = "Wheelchair"
-	result = /obj/vehicle/ridden/wheelchair
-	reqs = list(
-		/obj/item/stack/sheet/iron = 4,
-		/obj/item/stack/rods = 6,
-	)
-	time = 10 SECONDS
-	category = CAT_EQUIPMENT
-
 /datum/crafting_recipe/secured_freezer_cabinet
 	name = "Freezer"
 	result = /obj/structure/closet/secure_closet/freezer/halflife

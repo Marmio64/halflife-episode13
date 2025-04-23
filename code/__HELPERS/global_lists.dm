@@ -36,7 +36,6 @@
 		/obj/item/stack/sheet/glass = GLOB.glass_recipes,
 		/obj/item/stack/sheet/plasmaglass = GLOB.pglass_recipes,
 		/obj/item/stack/sheet/rglass = GLOB.reinforced_glass_recipes,
-		/obj/item/stack/sheet/plasmarglass = GLOB.prglass_recipes,
 		/obj/item/stack/sheet/leather = GLOB.leather_recipes,
 		/obj/item/stack/sheet/sinew = GLOB.sinew_recipes,
 		/obj/item/stack/sheet/animalhide/carp = GLOB.carp_recipes,

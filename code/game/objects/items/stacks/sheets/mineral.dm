@@ -346,8 +346,6 @@ GLOBAL_LIST_INIT(plastitanium_recipes, list ( \
 	material_type = /datum/material/snow
 
 GLOBAL_LIST_INIT(snow_recipes, list ( \
-	new/datum/stack_recipe("snow wall", /turf/closed/wall/mineral/snow, 5, time = 4 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ONE_PER_TURF | CRAFT_ON_SOLID_GROUND, category = CAT_STRUCTURE), \
-	new/datum/stack_recipe("snowman", /obj/structure/statue/snow/snowman, 5, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ONE_PER_TURF | CRAFT_ON_SOLID_GROUND, category = CAT_ENTERTAINMENT), \
 	new/datum/stack_recipe("snow tile", /obj/item/stack/tile/mineral/snow, 1, 4, 20, crafting_flags = NONE, category = CAT_TILES), \
 ))
 

@@ -181,12 +181,6 @@ GLOBAL_LIST_INIT(reinforced_glass_recipes, list ( \
 	. = ..()
 	. += GLOB.reinforced_glass_recipes
 
-GLOBAL_LIST_INIT(prglass_recipes, list ( \
-	new/datum/stack_recipe("directional reinforced window", /obj/structure/window/reinforced/plasma/unanchored, time = 0.5 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ON_SOLID_GROUND | CRAFT_CHECK_DIRECTION, category = CAT_WINDOWS), \
-	new/datum/stack_recipe("fulltile reinforced window", /obj/structure/window/reinforced/plasma/fulltile/unanchored, 2, time = 2 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ON_SOLID_GROUND | CRAFT_IS_FULLTILE, category = CAT_WINDOWS), \
-	new/datum/stack_recipe("reinforced plasma glass tile", /obj/item/stack/tile/rglass/plasma, 1, 4, 20, category = CAT_TILES) \
-))
-
 /obj/item/stack/sheet/plasmarglass
 	name = "reinforced plasma glass"
 	desc = "A glass sheet made out of a plasma-silicate alloy and a rod matrix. It looks hopelessly tough and nearly fire-proof!"
@@ -212,10 +206,6 @@ GLOBAL_LIST_INIT(prglass_recipes, list ( \
 
 /obj/item/stack/sheet/plasmarglass/fifty
 	amount = 50
-
-/obj/item/stack/sheet/plasmarglass/get_main_recipes()
-	. = ..()
-	. += GLOB.prglass_recipes
 
 GLOBAL_LIST_INIT(titaniumglass_recipes, list(
 	new/datum/stack_recipe("shuttle window", /obj/structure/window/reinforced/shuttle/unanchored, 2, time = 0.5 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ON_SOLID_GROUND | CRAFT_CHECK_DIRECTION | CRAFT_IS_FULLTILE, category = CAT_WINDOWS), \

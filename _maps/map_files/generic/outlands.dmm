@@ -1240,6 +1240,17 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"mM" = (
+/obj/machinery/light/small/directional/north,
+/obj/structure/table/halflife/metal/constructed/cobbled,
+/obj/structure/halflife/trash/glass/basic,
+/obj/item/stack/spacecash/c1,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
+"mS" = (
+/obj/structure/halflife/trash/food/misc,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "mZ" = (
 /obj/effect/decal/cleanable/blood/gibs/old,
 /obj/item/clothing/under/combine/civilprotection,
@@ -2182,6 +2193,13 @@
 "wG" = (
 /turf/closed/indestructible/rock,
 /area/halflife/indoors/sewer/outlandscave)
+"wO" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	keylock = 1;
+	locked = 1
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "wP" = (
 /obj/structure/table/halflife/metal,
 /obj/item/reagent_containers/cup/soda_cans/breenwater/purple{
@@ -2344,6 +2362,11 @@
 /obj/structure/bed/halflife/mattress/stained,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors)
+"yP" = (
+/obj/structure/table/halflife/metal/constructed/cobbled,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "yS" = (
 /obj/structure/railing/halflife/wood/single,
 /turf/open/floor/plating/ground/dirt,
@@ -2458,6 +2481,11 @@
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/laborcamp)
+"Ae" = (
+/obj/structure/bed/halflife/mattress/old,
+/mob/living/basic/citizen/brick,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "Af" = (
 /obj/structure/chair/halflife/metal/broken{
 	dir = 1
@@ -2778,6 +2806,14 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
+"Ec" = (
+/obj/structure/table/halflife/metal/constructed/cobbled,
+/obj/structure/halflife/trash/papers/three{
+	dir = 4
+	},
+/obj/effect/spawner/random/halflife/loot/consumables,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "Ee" = (
 /turf/closed/wall/halflife/sewer,
 /area/halflife/indoors/sewer/outlandscave)
@@ -3023,6 +3059,12 @@
 /obj/structure/halflife/trash/glass/plate,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/laborcamp)
+"Hw" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "Hx" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/stack/spacecash/c1,
@@ -3274,6 +3316,10 @@
 	},
 /turf/open/halflife/water/shallow,
 /area/halflife/outdoors/forest)
+"Ky" = (
+/obj/structure/halflife/trash/food/glass,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "KA" = (
 /obj/structure/flora/xen/cougher,
 /turf/open/floor/plating/ground/dirt,
@@ -4600,6 +4646,10 @@
 /obj/structure/halflife/pallet/stack,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"Yw" = (
+/obj/structure/halflife/trash/food/dinner,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "Yy" = (
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/sewer)
@@ -62814,11 +62864,11 @@ QW
 QW
 QW
 QW
-QW
-GX
-tN
-GX
-GX
+Ko
+Ko
+Ko
+Ko
+Ko
 It
 an
 tN
@@ -63011,11 +63061,11 @@ an
 GX
 XD
 XD
-QW
-GX
-tN
-an
-tN
+Ko
+Ec
+yP
+Ky
+Ko
 GX
 tN
 tN
@@ -63208,11 +63258,11 @@ tN
 It
 It
 dg
-QW
-GX
-GX
-It
-It
+wO
+yX
+yX
+yX
+Ko
 ai
 GX
 tN
@@ -63405,11 +63455,11 @@ QW
 tN
 ai
 XD
-QW
-GX
-tN
-It
-RL
+Ko
+Ko
+Ko
+Hw
+Ko
 tN
 GX
 an
@@ -63602,11 +63652,11 @@ QW
 QW
 QW
 GX
-QW
-tN
-GX
-GX
-GX
+Ko
+Ae
+yX
+mS
+Ko
 tN
 GX
 GX
@@ -63799,12 +63849,12 @@ GX
 GX
 It
 GX
-QW
+Ko
+mM
+Yw
+yX
+Ko
 GX
-GX
-It
-GX
-Yn
 It
 GX
 Yn
@@ -63996,11 +64046,11 @@ Cq
 GX
 GX
 Yn
-QW
-GX
-It
-GX
-an
+Ko
+Ko
+Ko
+Ko
+Ko
 GX
 GX
 It

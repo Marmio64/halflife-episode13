@@ -5,11 +5,11 @@
 	icon = 'icons/mob/simple/simple_human.dmi'
 	speed = 0
 	ai_controller = /datum/ai_controller/basic_controller/citizen
-	maxHealth = 100
-	health = 100
+	maxHealth = 120
+	health = 120
 	obj_damage = 5
-	melee_damage_lower = 6
-	melee_damage_upper = 9
+	melee_damage_lower = 8
+	melee_damage_upper = 12
 	death_sound = 'hl13/sound/voice/human/scream/malescream_8.ogg'
 	attack_verb_continuous = "punches"
 	attack_verb_simple = "punch"
@@ -28,8 +28,8 @@
 
 /mob/living/basic/citizen/brick
 	obj_damage = 17
-	melee_damage_lower = 15
-	melee_damage_upper = 18
+	melee_damage_lower = 16
+	melee_damage_upper = 19
 	attack_verb_continuous = "clobbers"
 	attack_verb_simple = "clobber"
 	attack_sound = 'hl13/sound/halflifeweapons/meleesounds/genericblunt_hit.ogg'
