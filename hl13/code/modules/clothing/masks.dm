@@ -273,6 +273,10 @@
 	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR
 	voice_change = TRUE //Muffles your voice enough it can hide your identity.
 
+/obj/item/clothing/mask/gas/cwuengi/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/radiation_protected_clothing)
+
 /obj/item/clothing/mask/gas/hl2
 	desc = "An old, but still relatively good looking gas mask. Hopefully it's filters hold up still. Looks like it could muffle your voice well enough to hide it."
 	icon = 'hl13/icons/obj/clothing/masks.dmi'

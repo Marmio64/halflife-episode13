@@ -132,6 +132,7 @@
 /obj/item/storage/fancy/candle_box,
 /obj/item/hl2key/kitchen,
 /obj/structure/extinguisher_cabinet/directional/north,
+/obj/item/stack/spacecash/c20,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/restaurant)
 "aC" = (
@@ -215,15 +216,10 @@
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/trainstation)
 "aR" = (
-/obj/item/reagent_containers/condiment/soymilk,
-/obj/item/reagent_containers/condiment/flour,
-/obj/item/reagent_containers/condiment/flour,
 /obj/item/reagent_containers/condiment/mayonnaise,
-/obj/item/food/butter,
 /obj/item/storage/fancy/egg_box,
 /obj/structure/closet/secure_closet/freezer/halflife,
 /obj/item/reagent_containers/condiment/milk,
-/obj/item/reagent_containers/condiment/sugar,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/restaurant)
 "aS" = (
@@ -1114,7 +1110,6 @@
 /area/halflife/indoors/scienceunion)
 "eB" = (
 /obj/machinery/door/unpowered/halflife/metal,
-/obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/sewer)
 "eC" = (
@@ -1605,9 +1600,10 @@
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/virology)
 "gz" = (
-/obj/structure/extinguisher_cabinet/directional/north,
-/turf/open/floor/plating/indoor/tile/kitchen,
-/area/halflife/indoors/restaurant)
+/obj/structure/railing/halflife/sewer,
+/obj/machinery/vending/boozeomat,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "gA" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 4
@@ -2230,6 +2226,10 @@
 /obj/modular_map_root/sewerleft,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
+"jc" = (
+/obj/machinery/vending/food_dispensery/directional/north,
+/turf/open/floor/plating/indoor/tile/kitchen,
+/area/halflife/indoors/restaurant)
 "jd" = (
 /obj/structure/table/halflife/no_smooth/metal,
 /obj/item/shield/riot,
@@ -4644,7 +4644,7 @@
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
 "sJ" = (
-/obj/effect/landmark/start/cook,
+/obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/restaurant)
 "sK" = (
@@ -5949,9 +5949,9 @@
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/townhall/civilprotection)
 "xN" = (
-/obj/item/clothing/suit/utility/radiation,
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/remains/human,
+/obj/item/clothing/suit/utility/radiation/cleanup,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
 "xO" = (
@@ -8235,6 +8235,7 @@
 /area/halflife/indoors/laborunion)
 "Gw" = (
 /obj/machinery/processor,
+/obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/restaurant)
 "Gx" = (
@@ -9578,7 +9579,6 @@
 /area/halflife/indoors/slums)
 "LE" = (
 /obj/structure/table/halflife/metal,
-/obj/item/reagent_containers/condiment/rice,
 /obj/item/reagent_containers/cup/bowl,
 /obj/item/reagent_containers/cup/bowl,
 /turf/open/floor/plating/indoor/tile/kitchen,
@@ -11653,6 +11653,11 @@
 /obj/structure/chair/comfy/halflife/armchair,
 /turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/indoors/townhall/secondfloor)
+"TH" = (
+/obj/structure/halflife/rug/rubber,
+/obj/effect/landmark/start/cook,
+/turf/open/floor/plating/indoor/tile/kitchen,
+/area/halflife/indoors/restaurant)
 "TI" = (
 /obj/structure/table/halflife/wood,
 /obj/effect/spawner/random/halflife/loot,
@@ -11834,10 +11839,9 @@
 "Uv" = (
 /obj/item/food/meat/slab/chicken,
 /obj/item/food/meat/slab/chicken,
-/obj/item/food/meat/slab/human,
 /obj/structure/closet/secure_closet/freezer/halflife,
-/obj/item/food/meat/slab/human,
-/obj/item/food/meat/slab/synthmeat,
+/obj/item/food/meat/slab,
+/obj/item/food/meat/slab,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/restaurant)
 "Uw" = (
@@ -21206,7 +21210,7 @@ DO
 DO
 DO
 DO
-gz
+jc
 mS
 DO
 qQ
@@ -22723,7 +22727,7 @@ vc
 vc
 Aw
 Aw
-HV
+gz
 sn
 or
 Aw
@@ -34665,7 +34669,7 @@ qY
 DO
 no
 id
-vJ
+TH
 sJ
 DO
 Qj

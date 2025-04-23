@@ -111,7 +111,7 @@
 
 /obj/item/reagent_containers/condiment/sugar
 	name = "sugar sack"
-	desc = "Sweet white speckles of goodness."
+	desc = "Artificially made sugar. You don't remember what real sugar tastes like anyways, though." //hl13 edit
 	icon_state = "sugar"
 	inhand_icon_state = "carton"
 	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'

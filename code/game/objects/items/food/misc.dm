@@ -358,8 +358,8 @@
 	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/butter
-	name = "stick of butter"
-	desc = "A stick of delicious, golden, fatty goodness."
+	name = "stick of artificial butter" //hl13 edit
+	desc = "A stick of combine-grade artificial butter. You can believe it's not butter!" //hl13 edit
 	icon_state = "butter"
 	food_reagents = list(/datum/reagent/consumable/nutriment/fat = 6)
 	tastes = list("butter" = 1)

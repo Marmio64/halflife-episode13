@@ -3,7 +3,7 @@
 
 /obj/item/clothing/suit/hooded/hev
 	name = "Hazardous Environments Suit"
-	desc = "An old suit, fully plated and insulated and topped with a tasteful orange coating of paint."
+	desc = "An old suit, fully plated, insulated and topped with a tasteful orange coating of paint."
 	icon_state = "hev"
 	worn_icon_state = "hev"
 	hood_up_affix = ""
@@ -59,9 +59,21 @@
 	acid = 100
 	wound = 20
 
+/datum/armor/hev/weak
+	melee = 40
+	bullet = 40
+	laser = 40
+	energy = 40
+	bomb = 40
+	bio = 100
+	fire = 100
+	acid = 100
+	wound = 20
+
 
 /obj/item/clothing/suit/hooded/hev/Initialize(mapload)
 	. = ..()
+	AddElement(/datum/element/radiation_protected_clothing)
 	GC = new(src)
 	GC.scanning = TRUE
 	update_appearance(UPDATE_ICON)
@@ -241,13 +253,18 @@
 	clothing_traits = list(TRAIT_WEARING_GAS_MASK)
 	armor_type = /datum/armor/hev
 
+/obj/item/clothing/head/hooded/hevhood/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/radiation_protected_clothing)
+
 /obj/item/clothing/suit/hooded/hev/deathmatch
 	desc = "An old suit, fully plated and insulated and topped with a tasteful orange coating of paint. The hood has been removed, but this one somehow protects your head anyways."
 	body_parts_covered = HEAD|CHEST|GROIN|ARMS|LEGS
 	slowdown = -0.25
 
 /obj/item/clothing/suit/hooded/hev/deathmatch/freeman
-	slowdown = -0.5
+	slowdown = -0.66
+	armor_type = /datum/armor/hev/weak //Slightly less damage resistance, use speed to dodge!
 
 #undef MORPHINE_INJECTION_DELAY
 #undef SOUND_BEEP

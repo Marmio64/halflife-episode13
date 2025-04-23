@@ -40,6 +40,9 @@
 	 */
 	var/boozepwr = 65
 
+	//hl13 edit
+	var/hydration = 2
+
 /datum/reagent/consumable/ethanol/New(list/data)
 	if(LAZYLEN(data))
 		if(!isnull(data["quality"]))
@@ -52,6 +55,9 @@
 
 /datum/reagent/consumable/ethanol/on_mob_life(mob/living/carbon/drinker, seconds_per_tick, times_fired)
 	. = ..()
+	if(!HAS_TRAIT(drinker, TRAIT_NOHUNGER)) //hl13 edit
+		drinker.adjust_hydration(hydration) //hl13 edit
+
 	if(drinker.get_drunk_amount() < volume * boozepwr * ALCOHOL_THRESHOLD_MODIFIER || boozepwr < 0)
 		var/booze_power = boozepwr
 		if(HAS_TRAIT(drinker, TRAIT_ALCOHOL_TOLERANCE)) // we're an accomplished drinker

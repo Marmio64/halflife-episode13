@@ -231,3 +231,35 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/keyvendor, 32)
 /obj/item/vending_refill/keyvendor
 	machine_name = "Key Vendor"
 	icon_state = "refill_snack"
+
+/obj/machinery/vending/food_dispensery
+	name = "\improper Food Ingredient Dispensery"
+	desc = "The FID is a wall mounted vendor which sells approved food items."
+	icon = 'hl13/icons/obj/machines/vending.dmi'
+	icon_state = "fooddispenser"
+	icon_deny = "fooddispenser-deny"
+	panel_type = "wallmed-panel"
+	density = FALSE
+	products = list(
+		/obj/item/food/meat/slab/synthmeat = 2,
+		/obj/item/food/meat/slab/meatproduct = 2,
+		/obj/item/reagent_containers/condiment/flour = 3,
+		/obj/item/reagent_containers/condiment/sugar = 1,
+		/obj/item/reagent_containers/condiment/rice = 2,
+		/obj/item/reagent_containers/condiment/soymilk = 2,
+		/obj/item/food/butter = 2,
+		/obj/item/food/rationpack = 4,
+		/obj/item/food/rationpack/box = 4,
+		/obj/item/food/flavorbar = 4,
+		/obj/item/reagent_containers/cup/soda_cans/breenwater/green = 4,
+		/obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 2,
+	)
+	refill_canister = /obj/item/vending_refill/food_dispensery
+	default_price = PAYCHECK_CREW
+	extra_price = PAYCHECK_COMMAND
+	tiltable = FALSE
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/food_dispensery, 32)
+
+/obj/item/vending_refill/food_dispensery
+	machine_name = "Food Ingredient Dispensery"

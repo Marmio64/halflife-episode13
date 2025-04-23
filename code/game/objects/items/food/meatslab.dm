@@ -186,7 +186,7 @@
 /obj/item/food/meat/slab/meatproduct
 	name = "meat product"
 	icon_state = "meatproduct"
-	desc = "A slab of station reclaimed and chemically processed meat product."
+	desc = "A slab of district reclaimed and chemically processed meat product." //hl13 edit
 	tastes = list("meat flavoring" = 2, "modified starches" = 2, "natural & artificial dyes" = 1, "butyric acid" = 1)
 	foodtypes = RAW | MEAT
 	starting_reagent_purity = 0.3

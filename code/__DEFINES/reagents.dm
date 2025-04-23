@@ -217,7 +217,7 @@
 #define GOLDSCHLAGER_GOLD_RATIO (GOLDSCHLAGER_GOLD/(GOLDSCHLAGER_VODKA+GOLDSCHLAGER_GOLD))
 
 /// The rate at which alcohol affects the drinker
-#define ALCOHOL_RATE 0.005
+#define ALCOHOL_RATE 0.004 //hl13 edit, you get drunk a little bit slower. This is poland, everyone's got more drinking experience.
 
 #define BLASTOFF_DANCE_MOVE_CHANCE_PER_UNIT 3
 #define BLASTOFF_DANCE_MOVES_PER_SUPER_MOVE 3

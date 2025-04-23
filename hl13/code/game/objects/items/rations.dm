@@ -259,6 +259,7 @@
 	desc = "A special can of Breen's private reserve water, for the best of the best. Flavored, and topped off to full."
 	icon_state = "breenwatergreen"
 	list_reagents = list(/datum/reagent/water = 35, /datum/reagent/consumable/tonic = 5, /datum/reagent/consumable/sugar = 10)
+	custom_price = PAYCHECK_CREW * 1.5
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/purple
 	name = "purple nutriment can"
