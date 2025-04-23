@@ -108,11 +108,21 @@
 
 	armor_type = /datum/armor/cpmask
 
+	var/mask_color = /datum/client_colour/civilprotection
+
+/datum/client_colour/civilprotection
+	colour = list(/*R*/ 1,0,0,0, /*G*/ 0,1,0,0, /*B*/ 0,0,1,0, /*A*/ 0,0,0,1, /*C*/-0.02,-0.02,0,0) // veeery slightly blue
+
+/datum/client_colour/eliteow
+	colour = list(/*R*/ 1.1,0,0,0, /*G*/ 0,1,0,0, /*B*/ 0,0,1,0, /*A*/ 0,0,0,1, /*C*/0,0,0,0) // veeery slightly red
+
 /obj/item/clothing/mask/gas/civilprotection/Initialize(mapload)
 	. = ..()
 	GLOB.cpmasks += src
 	if(fused)
 		ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
+	if(mask_color)
+		AddElement(/datum/element/wearable_client_colour, mask_color, ITEM_SLOT_MASK, forced = TRUE)
 
 /obj/item/clothing/mask/gas/civilprotection/Destroy()
 	GLOB.cpmasks -= src
@@ -235,6 +245,7 @@
 	name = "overwatch elite soldier mask"
 	icon_state = "overwatch_white"
 	armor_type = /datum/armor/eliteoverwatchmask
+	mask_color = /datum/client_colour/eliteow
 
 /datum/armor/eliteoverwatchmask
 	melee = 30
