@@ -68,3 +68,17 @@
 	reqs = list(/obj/item/stack/sheet/scrap_metal = 4, /obj/item/stack/sheet/cloth = 4)
 	time = 12 SECONDS
 	category = CAT_MISC
+
+/datum/crafting_recipe/surgical_tape
+	name = "Surgical Tape"
+	result = /obj/item/stack/sticky_tape/surgical/one
+	reqs = list(/obj/item/stack/sticky_tape = 1, /obj/item/food/xen/xenbranch = 1)
+	time = 2 SECONDS
+	category = CAT_MISC
+
+/datum/crafting_recipe/sticky_tape
+	name = "Sticky Tape"
+	result = /obj/item/stack/sticky_tape/one
+	reqs = list(/obj/item/stack/sheet/cloth = 2, /obj/item/food/xen/xenslime = 1)
+	time = 2 SECONDS
+	category = CAT_MISC

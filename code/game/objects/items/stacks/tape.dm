@@ -20,6 +20,9 @@
 	greyscale_config = /datum/greyscale_config/tape
 	greyscale_colors = "#B2B2B2#BD6A62"
 
+/obj/item/stack/sticky_tape/one
+	amount = 1
+
 /datum/embed_data/sticky_tape
 	pain_mult = 0
 	jostle_pain_mult = 0
@@ -133,6 +136,9 @@
 	merge_type = /obj/item/stack/sticky_tape/surgical
 	greyscale_colors = "#70BAE7#BD6A62"
 	tape_gag = /obj/item/clothing/mask/muzzle/tape/surgical
+
+/obj/item/stack/sticky_tape/surgical/one
+	amount = 1
 
 /datum/embed_data/sticky_tape/surgical
 	embed_chance = 30
