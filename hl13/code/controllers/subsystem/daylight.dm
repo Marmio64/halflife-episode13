@@ -59,15 +59,25 @@ SUBSYSTEM_DEF(daylight)
 	if(current_day_time >= NIGHT_START || current_day_time <= MORNING_START)
 		if(day_cycle_active != DAY_CYCLE_NIGHT)
 			day_cycle_active = DAY_CYCLE_NIGHT
-			priority_announce("Attention citizens, it is now night time. Citizens are to return to their apartment blocks for curfew.", "Curfew Notice.", sender_override = "District Automated Scheduler")
+
+			var/message = "Attention citizens, it is now night time. Citizens are to return to their apartment blocks for curfew."
 
 			if(factory_containers_filled >= factory_container_goal)
 				SSsociostability.modifystability(10) //full completion. This is in addition to the sociostability bonuses from simply completing containers.
+
+				message += " The factory quota was completed entirely, and the foreman may redeem a reward at the box vendor."
+
 			else if(factory_containers_filled < factory_container_goal/2) //Failed to meet at least half the goal, disappointing...
 				SSsociostability.modifystability(-75) //-7.5%
 
+				message += " The factory quota was a failure. Sociostability has been adjusted accordingly."
+
 			for(var/obj/machinery/box_vendor/vendor as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/box_vendor))
 				vendor.boxes_stored = 0
+				if(factory_containers_filled >= factory_container_goal)
+					vendor.cashprize += factory_container_goal
+
+			priority_announce(message, "Curfew Notice.", sender_override = "District Automated Scheduler")
 
 		if(light_coefficient > 0)
 			light_coefficient -= 0.025

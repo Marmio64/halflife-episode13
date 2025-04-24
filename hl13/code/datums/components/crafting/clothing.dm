@@ -110,7 +110,7 @@
 	category = CAT_ARMOR
 
 //my armor is very crabby
-/datum/crafting_recipe/headcrab_helmet
+/datum/crafting_recipe/headcrab_armor
 	name = "Fungal Plate Armor"
 	result = /obj/item/clothing/suit/armor/platearmor
 	reqs = list(/obj/item/stack/sheet/sinew = 3,

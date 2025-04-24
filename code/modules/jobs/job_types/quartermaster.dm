@@ -16,7 +16,7 @@
 	outfit = /datum/outfit/job/quartermaster
 	plasmaman_outfit = /datum/outfit/plasmaman/cargo
 
-	paycheck = PAYCHECK_HIGH
+	paycheck = PAYCHECK_STANDARD
 	paycheck_department = ACCOUNT_CAR
 
 	mind_traits = list(HEAD_OF_STAFF_MIND_TRAITS)

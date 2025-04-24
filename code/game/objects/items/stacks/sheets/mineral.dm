@@ -254,14 +254,6 @@ GLOBAL_LIST_INIT(silver_recipes, list ( \
 	material_type = /datum/material/bananium
 	walltype = /turf/closed/wall/mineral/bananium
 
-GLOBAL_LIST_INIT(bananium_recipes, list ( \
-	new/datum/stack_recipe("bananium tile", /obj/item/stack/tile/mineral/bananium, 1, 4, 20, crafting_flags = NONE, category = CAT_TILES), \
-	))
-
-/obj/item/stack/sheet/mineral/bananium/get_main_recipes()
-	. = ..()
-	. += GLOB.bananium_recipes
-
 /obj/item/stack/sheet/mineral/bananium/five
 	amount = 5
 

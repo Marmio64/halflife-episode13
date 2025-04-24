@@ -1,14 +1,5 @@
 #define PICKUP_RESTRICTION_TIME 3 SECONDS // so other players can pickup the ball after someone scores
 
-/datum/crafting_recipe/basketball_hoop
-	name = "Basketball Hoop"
-	result = /obj/structure/hoop
-	reqs = list(/obj/item/stack/sheet/durathread = 5,
-				/obj/item/stack/sheet/iron = 1, // the backboard
-				/obj/item/stack/rods = 5)
-	time = 10 SECONDS
-	category = CAT_STRUCTURE
-
 /obj/structure/hoop
 	name = "basketball hoop"
 	desc = "Boom, shakalaka!"
