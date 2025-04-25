@@ -55,8 +55,14 @@
 
 /datum/reagent/consumable/ethanol/on_mob_life(mob/living/carbon/drinker, seconds_per_tick, times_fired)
 	. = ..()
-	if(!HAS_TRAIT(drinker, TRAIT_NOHUNGER)) //hl13 edit
-		drinker.adjust_hydration(hydration) //hl13 edit
+	//hl13 edit begin
+	if(!HAS_TRAIT(drinker, TRAIT_NOHUNGER))
+		drinker.adjust_hydration(hydration)
+
+	if(HAS_TRAIT(drinker, TRAIT_IRRADIATED))
+		if(drinker.adjustToxLoss(-0.25 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype))
+			return UPDATE_MOB_HEALTH
+	//hl13 edit end
 
 	if(drinker.get_drunk_amount() < volume * boozepwr * ALCOHOL_THRESHOLD_MODIFIER || boozepwr < 0)
 		var/booze_power = boozepwr

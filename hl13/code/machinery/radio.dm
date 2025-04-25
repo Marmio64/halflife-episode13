@@ -5,4 +5,6 @@
 	icon_state = "recradio"
 	base_icon_state = "recradio"
 	density = FALSE
+	anchored = FALSE
 	req_access = null
+	requires_anchor = FALSE

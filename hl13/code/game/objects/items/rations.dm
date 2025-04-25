@@ -52,7 +52,7 @@
 
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater/red(src)
 	new /obj/item/food/flavorbar(src)
-	new /obj/item/stack/credit_voucher(src, 4)
+	new /obj/item/stack/credit_voucher(src, 3)
 
 /obj/item/storage/box/halflife/bestration
 	name = "priority-grade ration pack"
@@ -69,7 +69,7 @@
 
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater/green(src)
 	new /obj/item/food/flavorbar/large(src)
-	new /obj/item/stack/credit_voucher(src, 5)
+	new /obj/item/stack/credit_voucher(src, 4)
 
 /obj/item/storage/box/halflife/badration
 	name = "low-grade ration pack"
@@ -192,6 +192,7 @@
 	food_reagents = list(/datum/reagent/consumable/astrotame = 1, /datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/nutriment/vitamin = 2, /datum/reagent/consumable/mayonnaise = 10)
 
 	preserved_food = TRUE
+	crafting_complexity = FOOD_COMPLEXITY_1
 
 /obj/item/reagent_containers/cup/glass/nutrimentmayobox
 	name = "Mayo-eggbox"
@@ -216,7 +217,8 @@
 /obj/item/food/nutripaste/handmade
 	name = "handmade nutripaste tube"
 	desc = "Stirred by hand, you're not sure why you made this disgusting slop by your own free will, but it is somehow more nutritious than its base ingredients, even if it tastes horrible. Desperate times call for desperate measures."
-	food_reagents = list(/datum/reagent/consumable/nutriment = 14) //standard ration pack is 8 nutriment, plus 3 from purple can, and a bit extra from the oils, plus crafting bonus
+	food_reagents = list(/datum/reagent/consumable/nutriment = 2) //crafting it will give it extra nutriments, this is just the bonus stuff
+	bite_consumption = 8 //often going to be a lot of stuff in it
 
 /obj/item/food/nutripaste/small
 	name = "small nutripaste tube"
@@ -233,6 +235,19 @@
 	else
 		return FOOD_TOXIC
 
+
+/obj/item/food/xenstew
+	name = "xen stew can"
+	desc = "A can filled with bubbling water thickened by crushed up nutriment bar pieces, with chunks of xenian flesh inside."
+	icon = 'hl13/icons/obj/food.dmi'
+	icon_state = "xenstew"
+	bite_consumption = 5
+	tastes = list("alien flesh" = 3, "still water" = 3)
+	foodtypes = MEAT
+	food_reagents = list(/datum/reagent/consumable/nutriment = 14, /datum/reagent/water = 6)
+
+	preserved_food = TRUE
+	crafting_complexity = FOOD_COMPLEXITY_1
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater
 	name = "water can"

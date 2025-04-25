@@ -467,7 +467,7 @@
 	COOLDOWN_DECLARE(msgcooldown)
 
 /datum/mutation/human/acidflesh/on_life(seconds_per_tick, times_fired)
-	if(SPT_PROB(13, seconds_per_tick))
+	if(SPT_PROB(10, seconds_per_tick))
 		if(COOLDOWN_FINISHED(src, msgcooldown))
 			to_chat(owner, span_danger("Your acid flesh bubbles..."))
 			COOLDOWN_START(src, msgcooldown, 20 SECONDS)

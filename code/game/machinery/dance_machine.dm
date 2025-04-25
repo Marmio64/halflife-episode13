@@ -16,6 +16,8 @@
 	var/song_timerid
 	/// The actual music player datum that handles the music
 	var/datum/jukebox/music_player
+	/// hl13 edit, does the device need to be anchored down to be played
+	var/requires_anchor = TRUE
 
 /obj/machinery/jukebox/Initialize(mapload)
 	. = ..()
@@ -45,7 +47,7 @@
 /obj/machinery/jukebox/ui_status(mob/user, datum/ui_state/state)
 	if(isobserver(user))
 		return ..()
-	if(!anchored)
+	if(!anchored && requires_anchor)
 		to_chat(user,span_warning("This device must be anchored by a wrench!"))
 		return UI_CLOSE
 	if(!allowed(user))

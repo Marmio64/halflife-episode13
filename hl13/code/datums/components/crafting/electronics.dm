@@ -115,3 +115,12 @@
 	time = 10 SECONDS
 	category = CAT_EQUIPMENT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
+
+/datum/crafting_recipe/musicradio
+	name = "Music Radio"
+	result = /obj/machinery/jukebox/radio
+	reqs = list(/obj/item/stack/sheet/iron = 2,
+				/obj/item/circuitmaterial = 2)
+	time = 10 SECONDS
+	category = CAT_MISC
+	crafting_interface = CRAFTING_BENCH_ELECTRIC
