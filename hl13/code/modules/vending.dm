@@ -253,6 +253,9 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/keyvendor, 32)
 		/obj/item/food/flavorbar = 4,
 		/obj/item/reagent_containers/cup/soda_cans/breenwater/green = 4,
 		/obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 2,
+		/obj/item/food/grown/onion = 2,
+		/obj/item/food/grown/potato = 2,
+		/obj/item/food/grown/tomato = 3,
 	)
 	refill_canister = /obj/item/vending_refill/food_dispensery
 	default_price = PAYCHECK_CREW
