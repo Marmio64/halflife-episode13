@@ -6,7 +6,7 @@
 	inhand_icon_state = "pickaxe"
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BELT | ITEM_SLOT_BACK
-	force = 24
+	force = 22
 	throwforce = 10
 	demolition_mod = 1.15
 	lefthand_file = 'icons/mob/inhands/equipment/mining_lefthand.dmi'

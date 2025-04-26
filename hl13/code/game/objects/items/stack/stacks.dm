@@ -76,9 +76,9 @@
 
 /obj/item/stack/sheet/halflife/plastic
 	icon = 'hl13/icons/obj/stack_objects.dmi'
-	name = "plastic"
+	name = "plastic pieces"
 	desc = "Pieces of plastic. Might be useful for some kind of construction."
-	singular_name = "plastic"
+	singular_name = "plastic piece"
 	icon_state = "plastic"
 	resistance_flags = FIRE_PROOF
 	merge_type = /obj/item/stack/sheet/halflife/plastic
