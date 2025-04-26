@@ -60,7 +60,7 @@
 		drinker.adjust_hydration(hydration)
 
 	if(HAS_TRAIT(drinker, TRAIT_IRRADIATED))
-		if(drinker.adjustToxLoss(-0.25 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype))
+		if(drinker.adjustToxLoss(-0.5 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype))
 			return UPDATE_MOB_HEALTH
 	//hl13 edit end
 

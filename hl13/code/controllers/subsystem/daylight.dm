@@ -91,7 +91,7 @@ SUBSYSTEM_DEF(daylight)
 
 	if(current_day_time > AFTERNOON_START && current_day_time <= DUSK_START )
 		if(day_cycle_active != DAY_CYCLE_AFTERNOON)
-			factory_container_goal = (get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)+3) //The goal is equal to all currently playing players, plus three as a baseline.
+			factory_container_goal = (get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)+2) //The goal is equal to all currently playing players, plus two as a baseline.
 
 			day_cycle_active = DAY_CYCLE_AFTERNOON
 			priority_announce("Attention citizens, it is now afternoon. The previous ration cycle has ended. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal], compliance is mandatory.", "Work Notice.", sender_override = "District Automated Scheduler")
