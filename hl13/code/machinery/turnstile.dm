@@ -20,7 +20,7 @@
 	//Seccies and brig phys may always pass, either way.
 	req_access = list(ACCESS_BRIG_ENTRANCE)
 	max_integrity = 600 /// Made of damn good steel
-	damage_deflection = 24 /// Blocks most everything except heavy melee weapons like fireaxes/sledgehammers or dedicated destroying melee weapons like large crowbars.
+	damage_deflection = 23 /// Blocks most everything except heavy melee weapons like fireaxes/sledgehammers or dedicated destroying melee weapons like large crowbars.
 
 /obj/machinery/turnstile/Initialize(mapload)
 	. = ..()

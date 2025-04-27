@@ -30,7 +30,7 @@
 /obj/item/melee/sledgehammer/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/two_handed, \
-		force_wielded = 25, \
+		force_wielded = 24, \
 		wield_callback = CALLBACK(src, PROC_REF(on_wield)), \
 		unwield_callback = CALLBACK(src, PROC_REF(on_unwield)), \
 		require_twohands = TRUE, \
@@ -68,7 +68,7 @@
 	inhand_icon_state = "tire_iron"
 	lefthand_file = 'hl13/icons/mob/inhands/melee_inhand_left.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/melee_inhand_right.dmi'
-	force = 19
+	force = 18
 	armour_penetration = 10
 	throwforce = 10
 	attack_verb_continuous = list("attacks", "bashes", "strikes", "smashes")
@@ -95,7 +95,7 @@
 	bare_wound_bonus = 10
 	icon_prefix = "spear"
 	force_unwielded = 15
-	force_wielded = 23
+	force_wielded = 22
 
 	can_parry = TRUE
 	wdefense = 4

@@ -43,14 +43,6 @@
 	time = 2 SECONDS
 	category = CAT_MISC
 
-/datum/crafting_recipe/cablecoil
-	name = "Cable Coil (30x)"
-	result = /obj/item/stack/cable_coil
-	reqs = list(/obj/item/stack/sheet/iron = 10, /obj/item/stack/sheet/plastic = 5)
-	time = 8 SECONDS
-	category = CAT_MISC
-	crafting_interface = CRAFTING_BENCH_GENERAL | CRAFTING_BENCH_ELECTRIC
-
 /datum/crafting_recipe/plasticpieces
 	name = "Plastic Pieces"
 	result = /obj/item/stack/sheet/halflife/plastic

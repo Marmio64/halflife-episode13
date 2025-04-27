@@ -11,8 +11,8 @@
 	maxHealth = 120
 	health = 120
 	obj_damage = 15
-	melee_damage_lower = 16
-	melee_damage_upper = 18
+	melee_damage_lower = 15
+	melee_damage_upper = 17
 	sharpness = SHARP_EDGED
 	wound_bonus = -15
 	attack_vis_effect = ATTACK_EFFECT_CLAW
@@ -21,7 +21,7 @@
 	attack_sound = 'hl13/sound/creatures/zombieattack.ogg'
 	combat_mode = TRUE
 	status_flags = CANPUSH
-	speed = 1.25
+	speed = 1.35
 	death_sound = 'hl13/sound/creatures/zombiedeath.ogg'
 	blood_volume = BLOOD_VOLUME_NORMAL
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie
@@ -85,7 +85,7 @@
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1, /obj/item/stack/sheet/cloth = 1)
 	maxHealth = 160
 	health = 160
-	speed = 1.4
+	speed = 1.5
 	headcrabspawn = /mob/living/basic/halflife/headcrab/armored
 	fungalheal = TRUE
 	var/datum/action/cooldown/spell/conjure/xenfloor/infest

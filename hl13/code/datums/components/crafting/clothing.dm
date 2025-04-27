@@ -30,13 +30,12 @@
 
 //very basic armor
 /datum/crafting_recipe/armored_vest
-	name = "Armored Vest"
+	name = "Makeshift Armored Vest"
 	result = /obj/item/clothing/suit/armor/armored
 	reqs = list(/obj/item/stack/sheet/cloth = 5,
 				/obj/item/stack/sheet/iron = 4)
 	time = 8 SECONDS
 	category = CAT_ARMOR
-	crafting_interface = CRAFTING_BENCH_ARMTAILOR
 
 //very basic armor
 /datum/crafting_recipe/upgrade_armored_vest

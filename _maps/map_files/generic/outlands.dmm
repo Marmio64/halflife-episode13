@@ -1156,6 +1156,10 @@
 	dir = 4
 	},
 /area/halflife/outdoors/forest)
+"lP" = (
+/mob/living/basic/halflife/zombie/zombine,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/forest)
 "lR" = (
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/halflife/water/medium,
@@ -1823,6 +1827,9 @@
 /area/halflife/indoors/sewer/tunnel)
 "sT" = (
 /obj/machinery/combine_walllight/directional/north,
+/obj/effect/turf_decal/siding/street{
+	dir = 4
+	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/forest)
 "sV" = (
@@ -2137,6 +2144,15 @@
 "wd" = (
 /turf/open/floor/plating/indoor/metal/pipe/corner,
 /area/halflife/indoors/bunker)
+"wh" = (
+/obj/machinery/power/halflife/streetlamphalt{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/street{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/forest)
 "wi" = (
 /obj/structure/chair/office/halflife/red/broken,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -2228,6 +2244,12 @@
 "xb" = (
 /turf/cordon,
 /area/halflife/indoors/sewer)
+"xf" = (
+/obj/effect/turf_decal/siding/street{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/forest)
 "xk" = (
 /obj/structure/chair/office/halflife/blue,
 /turf/open/floor/plating/indoor/grooved2,
@@ -2593,6 +2615,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors)
+"BG" = (
+/mob/living/basic/halflife/zombie,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/forest)
 "BI" = (
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -3301,6 +3327,10 @@
 /obj/structure/halflife/fence/wire/barb,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors/sewer/tunnel)
+"Kh" = (
+/obj/machinery/door/unpowered/halflife/seethrough/fence/wire,
+/turf/open/floor/plating/ground/dirt/alt,
+/area/halflife/outdoors/forest)
 "Km" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
@@ -3661,6 +3691,9 @@
 /area/halflife/indoors/laborcamp/security)
 "Oo" = (
 /obj/machinery/power/halflife/streetlamphalt{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/street{
 	dir = 4
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -4363,6 +4396,12 @@
 /obj/structure/table/halflife/no_smooth/metal,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
+"VA" = (
+/obj/effect/turf_decal/siding/street{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/forest)
 "VE" = (
 /obj/structure/halflife/pipes/vent,
 /turf/open/openspace,
@@ -48770,12 +48809,12 @@ XA
 tN
 tN
 tN
+ZW
 tN
 tN
 tN
 tN
-tN
-tN
+IF
 oG
 oG
 tN
@@ -48967,9 +49006,9 @@ XA
 tN
 tN
 It
-tN
+ZW
 ai
-It
+RL
 tN
 tN
 tN
@@ -49164,7 +49203,7 @@ XA
 tN
 tN
 It
-GX
+jv
 It
 It
 tN
@@ -49361,7 +49400,7 @@ XA
 tN
 an
 tN
-Cq
+jv
 It
 GX
 an
@@ -49558,12 +49597,12 @@ XA
 tN
 tN
 It
-tN
+ZW
 It
 It
 tN
 tN
-tN
+EU
 oG
 oG
 tN
@@ -49754,8 +49793,8 @@ vs
 XA
 ai
 It
-It
-GX
+RL
+jv
 It
 It
 It
@@ -49952,7 +49991,7 @@ XA
 tN
 ai
 tN
-GX
+jv
 tN
 RL
 GX
@@ -50149,10 +50188,10 @@ XA
 tN
 tN
 tN
-GX
+jv
 tN
 tN
-GX
+BG
 ai
 It
 oG
@@ -50346,7 +50385,7 @@ XA
 ai
 tN
 GX
-tN
+ZW
 tN
 tN
 tN
@@ -50543,7 +50582,7 @@ XA
 It
 tN
 GX
-dg
+Kh
 tN
 tN
 It
@@ -50740,7 +50779,7 @@ XA
 It
 RL
 It
-tN
+ZW
 tN
 tN
 It
@@ -50937,7 +50976,7 @@ XA
 It
 tN
 tN
-tN
+ZW
 tN
 tN
 It
@@ -51134,7 +51173,7 @@ XA
 It
 It
 tN
-tN
+ZW
 an
 GX
 tN
@@ -51331,7 +51370,7 @@ XA
 tN
 It
 It
-GX
+jv
 tN
 ai
 tN
@@ -51528,10 +51567,10 @@ XA
 ai
 tN
 It
-It
+fB
 tN
 tN
-tN
+an
 ai
 tN
 oG
@@ -51725,7 +51764,7 @@ XA
 tN
 tN
 GX
-tN
+ZW
 RL
 It
 It
@@ -51922,7 +51961,7 @@ XA
 tN
 It
 It
-tN
+ZW
 tN
 It
 It
@@ -52119,7 +52158,7 @@ XA
 It
 RL
 It
-tN
+ZW
 ai
 tN
 It
@@ -52316,7 +52355,7 @@ XA
 It
 It
 It
-tN
+ZW
 tN
 ai
 It
@@ -61183,11 +61222,11 @@ Cb
 Cb
 Cb
 JY
-fX
-Oo
-fX
-fX
-fX
+xf
+wh
+xf
+xf
+xf
 rl
 Ic
 fX
@@ -61777,7 +61816,7 @@ Rl
 mE
 mE
 mE
-mE
+lP
 mE
 mE
 mE
@@ -62365,13 +62404,13 @@ Cb
 Cb
 Cb
 JY
-fX
+VA
 Oo
-fX
-fX
-fX
-fX
-fX
+VA
+VA
+VA
+VA
+VA
 sT
 oG
 oG
@@ -64741,7 +64780,7 @@ ai
 oG
 oG
 tN
-ad
+tN
 tN
 tN
 tN
@@ -66898,7 +66937,7 @@ vv
 tN
 tN
 RL
-tN
+ad
 It
 It
 It
@@ -69067,7 +69106,7 @@ It
 It
 tN
 It
-It
+Mc
 It
 It
 tN

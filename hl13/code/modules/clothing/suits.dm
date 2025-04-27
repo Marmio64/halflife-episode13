@@ -182,7 +182,7 @@
 	blood_overlay_type = "armor"
 	armor_type = /datum/armor/armoredvest
 
-	limb_integrity = 100
+	limb_integrity = 75
 
 /datum/armor/armoredvest
 	melee = 20
@@ -201,15 +201,15 @@
 	desc = "A handcrafted armored vest made of cloth and metal, enhanced with xenian fungal plates for extra protection."
 	armor_type = /datum/armor/armoredvest_upgraded
 
-	limb_integrity = 200
+	limb_integrity = 150
 
 /datum/armor/armoredvest_upgraded
-	melee = 30
-	bullet = 20
-	laser = 20
-	energy = 20
-	bomb = 20
-	bio = 20
+	melee = 25
+	bullet = 15
+	laser = 15
+	energy = 15
+	bomb = 15
+	bio = 15
 	fire = 50
 	acid = 50
 	wound = 5

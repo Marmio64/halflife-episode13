@@ -11,7 +11,7 @@
 	maxHealth = 30
 	health = 30
 	obj_damage = 5
-	melee_damage_lower = 8
+	melee_damage_lower = 7
 	melee_damage_upper = 9
 	wound_bonus = 0
 	bare_wound_bonus = 10
@@ -21,7 +21,7 @@
 	attack_verb_simple = "bite"
 	attack_sound = 'hl13/sound/creatures/headcrabbite.ogg'
 	combat_mode = TRUE
-	speed = 1.5
+	speed = 1.6
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1, /obj/item/stack/sheet/sinew = 1, /obj/item/stack/sheet/bone = 1)
 	death_sound = 'hl13/sound/creatures/headcrabdeath.ogg'
 

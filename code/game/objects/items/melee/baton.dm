@@ -863,7 +863,7 @@
 	desc = "A heavy version of the standard civil protection baton. Excels at beating people's skulls in. Pretty good for stunning too."
 	//icon_state = "heavybaton"
 	slot_flags = ITEM_SLOT_BELT
-	force = 25
+	force = 20
 	wound_bonus = 10
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY

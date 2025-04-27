@@ -9,7 +9,7 @@
 	worn_icon_state = "knife"
 	desc = "The original knife, it is said that all other knives are only copies of this one."
 	obj_flags = CONDUCTS_ELECTRICITY
-	force = 18 //hl13 edit
+	force = 17 //hl13 edit
 	demolition_mod = 0.75
 	w_class = WEIGHT_CLASS_SMALL
 	throwforce = 15 //hl13 edit

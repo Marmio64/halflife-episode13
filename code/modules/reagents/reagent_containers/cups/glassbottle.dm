@@ -240,7 +240,7 @@
 	force = 17 //hl13 edit
 	bare_wound_bonus = 5 //hl13 edit
 	throwforce = 12 //hl13 edit
-	armour_penetration = -10 //hl13 edit
+	armour_penetration = -15 //hl13 edit
 	throw_speed = 3
 	throw_range = 5
 	demolition_mod = 0.25
