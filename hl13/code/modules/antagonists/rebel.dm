@@ -7,7 +7,7 @@
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
 
-	ears = /obj/item/radio/headset/syndicate
+	ears = /obj/item/radio/headset/syndicate/alt //tacticool military headset
 
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
 

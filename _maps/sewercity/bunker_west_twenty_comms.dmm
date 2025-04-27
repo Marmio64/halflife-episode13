@@ -42,14 +42,11 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "dQ" = (
-/obj/item/screwdriver{
-	pixel_x = 6;
-	pixel_y = 8
-	},
 /obj/item/stack/cable_coil/five{
 	pixel_x = 12;
 	pixel_y = -4
 	},
+/obj/item/screwdriver/halflife,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "eb" = (
@@ -161,14 +158,11 @@
 /area/halflife/indoors/bunker)
 "kW" = (
 /obj/machinery/light/small/directional/east,
-/obj/item/wrench{
-	pixel_x = -8;
-	pixel_y = 2
-	},
 /obj/item/stack/cable_coil/five{
 	pixel_x = -11;
 	pixel_y = -7
 	},
+/obj/item/wrench/halflife,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "lj" = (
@@ -362,6 +356,11 @@
 /obj/item/stack/medical/bandage,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
+"CI" = (
+/obj/structure/halflife/pipes/vent,
+/obj/structure/closet/halflife,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "CZ" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -498,6 +497,10 @@
 	pixel_x = 7;
 	pixel_y = 8
 	},
+/obj/item/knife/hunting{
+	pixel_x = -14;
+	pixel_y = 11
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "NN" = (
@@ -631,7 +634,7 @@
 /area/halflife/indoors/bunker)
 "TX" = (
 /obj/machinery/light/small/broken/directional/east,
-/turf/open/halflife/water/medium,
+/turf/open/halflife/water/shallow,
 /area/halflife/indoors/bunker)
 "Ud" = (
 /obj/structure/closet/halflife/wall/firstaid,
@@ -659,6 +662,9 @@
 	dir = 1
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"Wl" = (
+/turf/open/halflife/water/shallow,
 /area/halflife/indoors/bunker)
 "WP" = (
 /obj/structure/halflife/trash/papers/one{
@@ -777,7 +783,7 @@ uD
 (3,1,1) = {"
 uD
 DV
-BG
+CI
 Bj
 PI
 DV
@@ -790,7 +796,7 @@ wl
 DV
 Qt
 Qp
-Bk
+Wl
 oI
 HJ
 oC
@@ -813,9 +819,9 @@ aT
 DV
 QC
 Bk
-Bk
-Bk
-Bk
+Wl
+Wl
+Wl
 Rf
 DV
 uD
@@ -837,9 +843,9 @@ DV
 gr
 Bk
 Bk
-Bk
-Bk
-Bk
+Wl
+Wl
+Wl
 DV
 uD
 "}
@@ -860,18 +866,18 @@ DV
 FT
 Bk
 Bk
-Bk
-Bk
-Bk
+Wl
+Wl
+Wl
 DV
 uD
 "}
 (7,1,1) = {"
 uD
 DV
-BG
+CI
 Bj
-Bj
+Rz
 DV
 Bj
 Bj
@@ -883,7 +889,7 @@ DV
 yh
 Bk
 Bk
-Bk
+Wl
 fW
 TM
 DV
@@ -905,8 +911,8 @@ nS
 DV
 Fv
 MR
-Bk
-Bk
+Wl
+Wl
 ZJ
 Kf
 DV
