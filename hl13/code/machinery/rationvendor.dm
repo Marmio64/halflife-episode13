@@ -110,7 +110,7 @@
 
 	say("Ration reward determined. Please wait for ration to be dispensed.")
 
-	addtimer(CALLBACK(src, PROC_REF(dispense), ration_quality, vortigaunt), 3 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(dispense), ration_quality, vortigaunt), 4 SECONDS)
 
 	return
 

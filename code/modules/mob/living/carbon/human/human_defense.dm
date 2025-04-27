@@ -600,7 +600,7 @@
 		combined_msg += bleed_text
 
 	if(getStaminaLoss())
-		if(getStaminaLoss() > 30)
+		if(getStaminaLoss() > 40) //hl13 edit
 			combined_msg += span_info("You're completely exhausted.")
 		else
 			combined_msg += span_info("You feel fatigued.")

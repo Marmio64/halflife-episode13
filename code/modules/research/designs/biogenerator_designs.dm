@@ -86,7 +86,7 @@
 	name = "E-Z Nutrient"
 	id = "ez_nut"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 0.1)
+	materials = list(/datum/material/biomass = 0.3)
 	make_reagent = /datum/reagent/plantnutriment/eznutriment
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_CHEMICALS)
 
@@ -94,7 +94,7 @@
 	name = "Robust Harvest"
 	id = "rh_nut"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 0.3)
+	materials = list(/datum/material/biomass = 0.5)
 	make_reagent = /datum/reagent/plantnutriment/robustharvestnutriment
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_CHEMICALS)
 
@@ -102,7 +102,7 @@
 	name = "Enduro Grow"
 	id = "end_gro"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 0.4)
+	materials = list(/datum/material/biomass = 0.6)
 	make_reagent = /datum/reagent/plantnutriment/endurogrow
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_CHEMICALS)
 
@@ -110,7 +110,7 @@
 	name = "Liquid Earthquake"
 	id = "liq_earth"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 0.4)
+	materials = list(/datum/material/biomass = 0.6)
 	make_reagent = /datum/reagent/plantnutriment/liquidearthquake
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_CHEMICALS)
 

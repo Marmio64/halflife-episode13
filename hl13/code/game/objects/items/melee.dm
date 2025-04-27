@@ -95,7 +95,7 @@
 	bare_wound_bonus = 10
 	icon_prefix = "spear"
 	force_unwielded = 15
-	force_wielded = 24
+	force_wielded = 23
 
 	can_parry = TRUE
 	wdefense = 4

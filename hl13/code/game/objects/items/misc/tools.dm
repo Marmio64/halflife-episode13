@@ -22,7 +22,6 @@
 	icon = 'hl13/icons/obj/tools/tools_inventory.dmi'
 	icon_state = "torch"
 	inhand_icon_state = "torch"
-	worn_icon_state = "torch"
 	lefthand_file = 'hl13/icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/items_righthand.dmi'
 	change_icons = FALSE

@@ -18,9 +18,9 @@
 		var/obj/item/card/id/card = living.get_idcard()
 		if(card)
 			if(card.registered_account.mining_points >= 100)
-				to_chat(user, span_notice("100 points has been converted into ten credits on your account."))
+				to_chat(user, span_notice("100 points has been converted into eight credits on your account."))
 				card.registered_account.mining_points -= 100
-				card.registered_account.account_balance += 10
+				card.registered_account.account_balance += 8
 				playsound(loc, 'hl13/sound/machines/atm/cardreader_insert.ogg', 30)
 			else
 				to_chat(user, span_notice("This terminal works in increments of 100 mining points, and you do not have enough yet."))

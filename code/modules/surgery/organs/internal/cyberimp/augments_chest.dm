@@ -19,8 +19,8 @@
 	if(owner.nutrition <= hunger_threshold)
 		synthesizing = TRUE
 		to_chat(owner, span_notice("You feel less hungry..."))
-		owner.adjust_nutrition(25 * seconds_per_tick)
-		addtimer(CALLBACK(src, PROC_REF(synth_cool)), 10 SECONDS)
+		owner.adjust_nutrition(2 * seconds_per_tick) //hl13 edit, pretty much only enough to sustain no movement
+		addtimer(CALLBACK(src, PROC_REF(synth_cool)), 30 SECONDS)
 
 /obj/item/organ/cyberimp/chest/nutriment/proc/synth_cool()
 	synthesizing = FALSE

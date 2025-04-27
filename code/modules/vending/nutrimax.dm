@@ -10,8 +10,8 @@
 	products = list(
 		/obj/item/cultivator = 3,
 		/obj/item/plant_analyzer = 4,
-		/obj/item/reagent_containers/cup/bottle/nutrient/ez = 30,
-		/obj/item/reagent_containers/cup/bottle/nutrient/rh = 10,
+		/obj/item/reagent_containers/cup/bottle/nutrient/ez = 3,
+		/obj/item/reagent_containers/cup/bottle/nutrient/rh = 3,
 		/obj/item/reagent_containers/spray/pestspray = 20,
 		/obj/item/reagent_containers/syringe = 5,
 		/obj/item/secateurs = 3,

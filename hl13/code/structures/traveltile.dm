@@ -48,7 +48,7 @@
 			if(user.pulledby)
 				return
 			to_chat(user, "<b>I begin to travel...</b>")
-			if(do_after(user, 50, target = src))
+			if(do_after(user, 4 SECONDS, target = src))
 				var/mob/living/L = user
 				var/atom/movable/pullingg = L.pulling
 				L.recent_travel = world.time
@@ -66,7 +66,7 @@
 
 /obj/structure/fluff/traveltile/proc/can_go(atom/movable/AM)
 	if(AM.recent_travel)
-		if(world.time < AM.recent_travel + 15 SECONDS)
+		if(world.time < AM.recent_travel + 12 SECONDS)
 			return FALSE
 	return TRUE
 
