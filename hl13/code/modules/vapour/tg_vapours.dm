@@ -17,21 +17,22 @@
 		return
 	victim.emote("cough")
 
-///Dust from mining drills
+///Dust from mining
 /datum/vapours/dust
 	name = "Dust"
 	vapours_flags = VAPOUR_APPEARANCE | VAPOUR_BREATHE_ACT
 	thickness = 2
-	color = "#ffed9c"
+	color = "#fffffe48"
+	alpha = 150
 
 /datum/vapours/dust/BreatheAct(mob/living/carbon/victim, amount)
 	if(HAS_TRAIT(victim, TRAIT_WEARING_GAS_MASK))
 		return
 	if(amount <= 10)
 		return
-	if(prob(40))
-		victim.losebreath += 3 //Get in your lungs real bad
+	if(prob(80))
 		victim.emote("cough")
+		victim.adjustOrganLoss(ORGAN_SLOT_LUNGS, 3) //prolonged breathing can damage your lungs
 
 ///Sulphur coming from igniting matches
 /datum/vapours/sulfur

@@ -228,6 +228,11 @@
 	var/turf/open/mined = ScrapeAway(null, flags)
 	addtimer(CALLBACK(src, PROC_REF(AfterChange), flags, old_type), 1, TIMER_UNIQUE)
 	playsound(src, 'sound/effects/break_stone.ogg', 50, TRUE) //beautiful destruction
+	//hl13 edit start
+	if(prob(50))
+		var/turf/my_turf = get_turf(src)
+		my_turf.VapourTurf(/datum/vapours/dust, 125)
+	//hl13 edit end
 	mined.update_visuals()
 
 /turf/closed/mineral/attack_alien(mob/living/carbon/alien/user, list/modifiers)

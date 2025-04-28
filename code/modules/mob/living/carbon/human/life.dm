@@ -42,6 +42,8 @@
 
 			handle_hygiene() //HL13 EDIT
 
+			handle_tiredness() //HL13 EDIT
+
 		// for special species interactions
 		dna.species.spec_life(src, seconds_per_tick, times_fired)
 	else
@@ -73,11 +75,29 @@
 /mob/living/carbon/proc/adjust_tiredness(amount)
 	tiredness += amount
 
+	if(tiredness > TIREDNESS_MAXIMUM_THRESHOLD)
+		tiredness = TIREDNESS_MAXIMUM_THRESHOLD
+
+	else if(tiredness < 0)
+		tiredness = 0
+
+/mob/living/carbon/proc/handle_tiredness()
+
 	if(!HAS_TRAIT(src, TRAIT_SPARTAN))
 		handle_sleep_slowdown()
 
-	if(tiredness > TIREDNESS_MAXIMUM_THRESHOLD)
-		tiredness = TIREDNESS_MAXIMUM_THRESHOLD
+		if(IsSleeping())
+			return
+
+		if(tiredness >= TIREDNESS_MAXIMUM_THRESHOLD)
+			if(prob(4))
+				var/list/usedp = list("When is the last time I slept...?", "Maybe I could just shut my eyes for a second...", "My eye lids get heavier by the second...", "Man... what... what time is it...?")
+				to_chat(src, span_notice("[pick(usedp)]"))
+				emote("yawn")
+				Immobilize(1 SECONDS)
+
+
+	if(tiredness >= TIREDNESS_MAXIMUM_THRESHOLD)
 		if(!HAS_TRAIT(src, TRAIT_SPARTAN))
 			add_mood_event("sleepy", /datum/mood_event/sleepy/exhausted)
 		else
@@ -105,8 +125,6 @@
 		else
 			clear_mood_event("sleepy")
 
-	else if(tiredness < 0)
-		tiredness = 0
 
 /mob/living/carbon/proc/handle_hygiene()
 

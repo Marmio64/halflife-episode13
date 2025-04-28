@@ -294,8 +294,24 @@
 	worn_icon = 'hl13/icons/mob/clothing/masks.dmi'
 	voice_change = TRUE //Muffles your voice enough it can hide your identity.
 
+/datum/client_colour/hl2gasmask
+	colour = list(/*R*/ 1,0,0,0, /*G*/ 0,1,0,0, /*B*/ 0,0,1,0, /*A*/ 0,0,0,1, /*C*/-0.02,-0.02,-0.02,-0.02) // slight dark tint
+
+/obj/item/clothing/mask/gas/hl2/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/wearable_client_colour, /datum/client_colour/hl2gasmask, ITEM_SLOT_MASK, forced = TRUE)
+
 /obj/item/clothing/mask/gas/hl2/modern
 	icon_state = "moderngasmask"
+
+/obj/item/clothing/mask/gas/hl2/oldmask
+	desc = "An espescially old and barely kept together mask. Should still protect your lungs, but it is very difficult to see out of."
+	icon_state = "oldmask"
+	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/mask/gas/hl2/oldmask/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/clothing_fov_visor, FOV_180_DEGREES)
 
 /obj/item/clothing/mask/gas/hl2/military
 	icon_state = "military_gasmask"

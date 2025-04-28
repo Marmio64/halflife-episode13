@@ -426,7 +426,7 @@
 						span_danger("[src] is knocked down!"),
 						span_userdanger("You're knocked down!"),
 					)
-					apply_effect(5 SECONDS, EFFECT_KNOCKDOWN, armor_block) //hl13 edit, less knockdown
+					apply_effect(4 SECONDS, EFFECT_KNOCKDOWN, armor_block) //hl13 edit, less knockdown
 
 	// Triggers force say events
 	if(damage_done > 10 || (damage_done >= 5 && prob(33)))
