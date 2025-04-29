@@ -2185,6 +2185,12 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
+"iD" = (
+/obj/structure/railing/halflife/sewer{
+	dir = 4
+	},
+/turf/open/halflife/water/sewer/medium,
+/area/halflife/indoors/sewer)
 "iE" = (
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/sewer)
@@ -2921,6 +2927,12 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley)
+"lr" = (
+/obj/structure/railing/halflife/sewer{
+	dir = 8
+	},
+/turf/open/halflife/water/sewer/deep,
+/area/halflife/indoors/sewer)
 "ls" = (
 /obj/structure/halflife/storage/shelf,
 /obj/effect/spawner/random/halflife/loot/ammo,
@@ -3389,6 +3401,11 @@
 "ns" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors)
+"nt" = (
+/obj/effect/turf_decal/siding/street,
+/obj/machinery/light/small/cyan/directional/north,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/alley)
 "nu" = (
 /obj/structure/halflife/rug/mat,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -4908,9 +4925,11 @@
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/alley)
 "tn" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/indoor/concrete/small,
-/area/halflife/indoors/trainstation)
+/obj/structure/railing/halflife/sewer{
+	dir = 4
+	},
+/turf/open/halflife/water/sewer/deep,
+/area/halflife/indoors/sewer)
 "to" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -6470,6 +6489,15 @@
 /obj/structure/sign/warning/biohazard/directional/north,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/virology)
+"zl" = (
+/obj/structure/railing/halflife/sewer{
+	dir = 1
+	},
+/obj/structure/railing/halflife/sewer,
+/turf/open/floor/plating/indoor/metal/walkway{
+	dir = 1
+	},
+/area/halflife/indoors/sewer)
 "zm" = (
 /obj/structure/rack,
 /obj/item/hl2key/factory,
@@ -8110,6 +8138,9 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/carpet/shaggy,
 /area/halflife/indoors/apartments/primary)
+"Fq" = (
+/turf/open/halflife/water/sewer/deep,
+/area/halflife/indoors/sewer)
 "Fr" = (
 /obj/structure/window/fulltile/halflife/nosmooth/brick{
 	dir = 1
@@ -8161,7 +8192,7 @@
 /obj/effect/turf_decal/arrows{
 	dir = 1
 	},
-/turf/open/floor/plating/indoor/concrete/small,
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/trainstation)
 "FB" = (
 /obj/effect/turf_decal/halflife/road/horizontalcrossing,
@@ -8443,7 +8474,7 @@
 /area/halflife/indoors/restaurant)
 "Gx" = (
 /obj/machinery/light/small/directional/west,
-/turf/open/floor/plating/indoor/concrete/small,
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/trainstation)
 "Gy" = (
 /obj/structure/railing,
@@ -9950,6 +9981,15 @@
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection)
+"LZ" = (
+/obj/structure/railing/halflife/sewer,
+/obj/structure/railing/halflife/sewer{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/walkway{
+	dir = 1
+	},
+/area/halflife/indoors/sewer)
 "Ma" = (
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -11666,6 +11706,12 @@
 /obj/structure/railing/halflife/sewer,
 /obj/modular_map_root/sewerright,
 /turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
+"SB" = (
+/obj/structure/railing/halflife/sewer{
+	dir = 8
+	},
+/turf/open/halflife/water/sewer/medium,
 /area/halflife/indoors/sewer)
 "SC" = (
 /obj/structure/sign/poster/halflife/combine{
@@ -23868,14 +23914,14 @@ HV
 sn
 or
 Aw
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
+Aw
+Aw
+Aw
+Aw
+Aw
+Aw
+Aw
+Aw
 qQ
 qQ
 qQ
@@ -23989,16 +24035,16 @@ mR
 HV
 sn
 or
+lc
+lc
+lc
+lc
+lc
+lc
+lc
+lc
 Aw
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
+Aw
 qQ
 qQ
 qQ
@@ -24110,17 +24156,17 @@ mR
 mR
 HV
 sn
-or
+zl
+LI
+LI
+SB
+SB
+SB
+lr
+lr
+lr
+fO
 Aw
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
 qQ
 qQ
 qQ
@@ -24232,17 +24278,17 @@ mR
 mR
 HV
 sn
-or
+LZ
+sn
+sn
+lT
+lT
+lT
+Fq
+Fq
 Aw
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
+Aw
+Aw
 qQ
 qQ
 qQ
@@ -24354,17 +24400,17 @@ mR
 mR
 HV
 sn
-or
+zl
+JV
+JV
+iD
+iD
+iD
+tn
+tn
+tn
+fO
 Aw
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
 qQ
 qQ
 qQ
@@ -24477,16 +24523,16 @@ mR
 HV
 sn
 or
+lc
+lc
+lc
+lc
+lc
+lc
+lc
+lc
 Aw
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
+Aw
 qQ
 qQ
 qQ
@@ -24600,14 +24646,14 @@ HV
 sn
 or
 Aw
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
-qQ
+Aw
+Aw
+Aw
+Aw
+Aw
+Aw
+Aw
+Aw
 qQ
 qQ
 qQ
@@ -35223,7 +35269,7 @@ Ik
 ns
 Ff
 Ff
-Ny
+nt
 WE
 WE
 WE
@@ -35955,7 +36001,7 @@ Ff
 Ff
 Ff
 Ff
-Ny
+nt
 WE
 WE
 WE
@@ -38710,17 +38756,17 @@ EJ
 Ac
 DS
 Gx
-DS
-DS
-DS
-DS
-DS
-DS
+re
+re
+re
+re
+re
+re
 Gx
-DS
-DS
-DS
-DS
+re
+re
+re
+re
 Op
 Ff
 Ff
@@ -38831,7 +38877,7 @@ Op
 EJ
 DS
 DS
-DS
+re
 DS
 DS
 DS
@@ -38953,7 +38999,7 @@ Op
 EJ
 DS
 DS
-DS
+re
 vD
 vD
 vD
@@ -39075,7 +39121,7 @@ Op
 Eu
 Ac
 DS
-tn
+uo
 Op
 Op
 Op
@@ -39197,7 +39243,7 @@ Op
 re
 DS
 DS
-DS
+re
 Op
 Op
 Op
@@ -39319,7 +39365,7 @@ Op
 re
 DS
 DS
-DS
+re
 Op
 Op
 Op
@@ -39441,7 +39487,7 @@ Op
 OL
 Ac
 DS
-DS
+re
 Op
 Op
 Op
@@ -39563,7 +39609,7 @@ Op
 vO
 DS
 DS
-DS
+re
 Op
 Op
 Op
@@ -39685,7 +39731,7 @@ Op
 Tt
 DS
 DS
-DS
+re
 Op
 Op
 Op
@@ -39807,7 +39853,7 @@ Op
 re
 Ac
 DS
-tn
+uo
 Op
 Op
 Op
@@ -39929,18 +39975,18 @@ Op
 Eu
 DS
 DS
-DS
-DS
+re
+re
 FA
 Gx
-DS
-DS
+re
+re
 FA
-DS
-DS
+re
+re
 Gx
 FA
-DS
+re
 Op
 Ff
 Ff
@@ -40051,7 +40097,7 @@ Op
 re
 DS
 DS
-DS
+re
 DS
 DS
 DS
@@ -40173,7 +40219,7 @@ Op
 re
 DS
 DS
-DS
+re
 vD
 vD
 vD

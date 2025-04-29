@@ -231,7 +231,7 @@
 	//hl13 edit start
 	if(prob(50))
 		var/turf/my_turf = get_turf(src)
-		my_turf.VapourTurf(/datum/vapours/dust, 125)
+		my_turf.VapourTurf(/datum/vapours/dust, 115)
 	//hl13 edit end
 	mined.update_visuals()
 

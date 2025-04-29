@@ -90,7 +90,7 @@
 					break
 			if("transfer into long term account")
 				to_chat(user, "<span class='warning'>You are transferring credits into your cross-round persistant account.</span>")
-				to_chat(user, "<span class='notice'>There is a 75% tax on deposits, and you can only deposit up to 100 credits pre-tax per round.</span>")
+				to_chat(user, "<span class='notice'>There is a 50% tax on deposits, and you can only deposit up to 100 credits pre-tax per round.</span>")
 				to_chat(user, "<span class='notice'>Your current long term account balance is: [user.client.prefs.longterm_credit_account].</span>")
 				var/ddeposit = input(user, "Please select the amount to transfer:", "Transfer Money") as null|num
 				if(!ddeposit)
@@ -104,7 +104,7 @@
 					return
 				CID.registered_account.account_balance -= ddeposit
 				user.client.longterm_credits_deposited += ddeposit
-				totalmoney = ROUND_UP(ddeposit * 0.25)
+				totalmoney = ROUND_UP(ddeposit * 0.5)
 				user.client.prefs.longterm_credit_account += totalmoney
 				if(user.client.prefs.longterm_credit_account > 1000) //Hard limit that people are very unlikely to reach, but just in case.
 					user.client.prefs.longterm_credit_account = 1000

@@ -186,6 +186,10 @@
 	dir = 1
 	},
 /area/shuttle/escape)
+"ql" = (
+/obj/structure/extinguisher_cabinet/directional/west,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/shuttle/escape)
 "qq" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
 	dir = 8;
@@ -221,6 +225,7 @@
 "sK" = (
 /obj/effect/turf_decal/delivery/white,
 /obj/structure/closet/crate/freezer/halflife/blood,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "uq" = (
@@ -311,16 +316,17 @@
 	},
 /area/shuttle/escape)
 "Cd" = (
-/obj/machinery/light/small/red/dim/directional/north,
 /obj/item/reagent_containers/cup/bottle/welding_fuel{
 	pixel_x = 4;
 	pixel_y = 24
 	},
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "Ck" = (
 /obj/structure/barricade/wooden/crude,
 /obj/structure/girder,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/grate/border/warning{
 	dir = 1
 	},
@@ -376,6 +382,7 @@
 	pixel_y = 9
 	},
 /obj/structure/table/halflife/no_smooth/wood,
+/obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/escape)
 "Ig" = (
@@ -453,13 +460,13 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "Nk" = (
-/obj/machinery/light/small/red/dim/directional/south,
 /obj/structure/closet/halflife,
 /obj/item/clothing/mask/gas/hl2/military,
 /obj/item/clothing/head/helmet/halflife/military,
 /obj/item/clothing/suit/armor/halflife/kevlar,
 /obj/item/clothing/under/syndicate/camo,
 /obj/item/clothing/shoes/combat,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "Ns" = (
@@ -654,7 +661,7 @@ cK
 cK
 cK
 Im
-EC
+ql
 vJ
 oH
 rj
