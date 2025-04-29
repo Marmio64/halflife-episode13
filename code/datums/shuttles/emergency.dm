@@ -91,4 +91,12 @@
 /datum/map_template/shuttle/emergency/scrapped/prerequisites_met()
 	return SSshuttle.shuttle_purchase_requirements_met[SHUTTLE_UNLOCK_SCRAPHEAP]
 
+/datum/map_template/shuttle/emergency/poland
+	suffix = "poland"
+	name = "Polish Revolutionary Front Armoured Train"
+	credit_cost = CARGO_CRATE_VALUE * 32
+	description = "This is Warsaw Command speaking. For the right sum, we can loan you one of our armoured locomotives. It costs one hell of an amount but it's well-armoured, has a cache of weapons, and plenty of rations. Just - make sure to have someone override the firmware, or it'll still end up in a Combine depot!"
+	emag_only = TRUE
+	occupancy_limit = "25"
+
 #undef EMAG_LOCKED_SHUTTLE_COST
