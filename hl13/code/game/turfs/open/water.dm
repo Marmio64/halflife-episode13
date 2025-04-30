@@ -287,6 +287,7 @@
 	dispensedreagent = /datum/reagent/water/dirty/sewer
 	light_color = "#013b09"
 	sewer = TRUE
+	slowdown = 2 //very thick, disgusting slop, slows you down more than water
 
 /turf/open/halflife/water/sewer/deep
 	name = "deep water"

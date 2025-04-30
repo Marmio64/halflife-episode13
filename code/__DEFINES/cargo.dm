@@ -14,7 +14,7 @@
 #define SUPPLYPOD_X_OFFSET -16
 
 /// The baseline unit for cargo crates. Adjusting this will change the cost of all in-game shuttles, crate export values, bounty rewards, and all supply pack import values, as they use this as their unit of measurement.
-#define CARGO_CRATE_VALUE 40
+#define CARGO_CRATE_VALUE 30
 
 /// The highest amount of orders you can have of one thing at any one time
 #define CARGO_MAX_ORDER 50
