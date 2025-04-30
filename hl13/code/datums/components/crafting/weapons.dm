@@ -12,7 +12,7 @@
 /datum/crafting_recipe/makeshiftpistol
 	name = "Makeshift Pistol"
 	result = /obj/item/gun/ballistic/automatic/pistol/makeshift/no_mag
-	reqs = list(/obj/item/stack/sheet/scrap_metal = 6)
+	reqs = list(/obj/item/stack/sheet/scrap_metal = 7)
 	time = 12 SECONDS
 	category = CAT_WEAPON_RANGED
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WRENCH)
@@ -20,7 +20,7 @@
 /datum/crafting_recipe/makeshiftpistolmag
 	name = "9mm Makeshift Pistol Full Magazine"
 	result = /obj/item/ammo_box/magazine/makeshift9mm
-	reqs = list(/obj/item/stack/sheet/scrap_metal = 5,
+	reqs = list(/obj/item/stack/sheet/scrap_metal = 6,
 				/obj/item/stack/cable_coil = 2,
 				/datum/reagent/fuel = 10)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
@@ -236,7 +236,7 @@
 	reqs = list(
 		/obj/item/woodshaft = 1,
 		/obj/item/stack/sticky_tape = 1,
-		/obj/item/stack/sheet/scrap_metal = 4,
+		/obj/item/stack/sheet/scrap_metal = 5,
 	)
 	time = 5 SECONDS
 	category = CAT_WEAPON_MELEE
@@ -247,7 +247,7 @@
 	reqs = list(
 		/obj/item/woodshaft = 1,
 		/obj/item/stack/sheet/sinew = 2,
-		/obj/item/stack/sheet/scrap_metal = 4,
+		/obj/item/stack/sheet/scrap_metal = 5,
 	)
 	time = 5 SECONDS
 	category = CAT_WEAPON_MELEE
