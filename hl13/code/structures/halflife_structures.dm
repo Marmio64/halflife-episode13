@@ -231,12 +231,10 @@
 					return
 				travel(TRUE, user, is_ghost, up)
 		if("Down")
-			if(user.can_perform_action(src, NEED_DEXTERITY))
-				travel(FALSE, user, is_ghost, down)
-			else
-				var/turf/target = get_turf(ladder)
-				user.zMove(target = target, z_move_flags = ZMOVE_CHECK_PULLEDBY|ZMOVE_ALLOW_BUCKLED|ZMOVE_INCLUDE_PULLED)
-				to_chat(user, span_warning("[src] you fall down the opening, being physically unable to climb!"))
+			if(!user.can_perform_action(src, NEED_DEXTERITY))
+				to_chat(user, span_notice("You don't have the ability to climb this."))
+				return
+			travel(FALSE, user, is_ghost, down)
 		if("Cancel")
 			return
 

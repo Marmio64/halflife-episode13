@@ -96,7 +96,7 @@
 				if(!ddeposit)
 					invalid_number()
 					return
-				round(ddeposit, 1)
+				ddeposit = round(ddeposit, 1)
 				if(ddeposit <= 0 || ddeposit > CID.registered_account.account_balance)
 					invalid_number()
 					return
@@ -120,7 +120,7 @@
 				if(!withdrawfund)
 					invalid_number()
 					return
-				round(withdrawfund, 1)
+				withdrawfund = round(withdrawfund, 1)
 				if(withdrawfund <= 0 || (withdrawfund + user.client.longterm_credits_withdrawn) > 50)
 					invalid_number()
 					return

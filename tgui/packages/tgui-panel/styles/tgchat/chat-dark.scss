@@ -6,6 +6,16 @@
 @use 'sass:map';
 @use 'sass:color';
 
+body {
+  background: #060607;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 13px;
+  line-height: 1.2;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  word-wrap: break-word;
+}
+
 em {
   font-style: normal;
   font-weight: bold;
@@ -201,7 +211,7 @@ a.popt {
 
 .motd {
   color: hsl(213.6, 37.9%, 74.1%);
-  font-family: Verdana, sans-serif;
+  font-family: 'Trebuchet MS', sans-serif;
   white-space: normal;
 }
 
@@ -257,7 +267,7 @@ h4,
 h5,
 h6 {
   color: hsl(213.6, 37.9%, 74.1%);
-  font-family: Georgia, Verdana, sans-serif;
+  font-family: Georgia, 'Trebuchet MS', sans-serif;
 }
 
 h1.alert,

@@ -1,6 +1,6 @@
 //FONTS: Used by Paper, PhotoCopier, PDA's Notekeeper, NewsCaster, NewsPaper, ModularComputers (and PaperBin once a year).
 /// Font used by regular pens
-#define PEN_FONT "Verdana"
+#define PEN_FONT "Trebuchet MS"
 /// Font used by fancy pens
 #define FOUNTAIN_PEN_FONT "Segoe Script"
 /// Font used by crayons
