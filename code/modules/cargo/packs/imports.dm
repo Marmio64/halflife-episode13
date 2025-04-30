@@ -10,13 +10,6 @@
 	group = "Imports"
 	crate_name = "emergency crate"
 
-/datum/supply_pack/imports/bamboo50
-	name = "50 Bamboo Cuttings"
-	desc = "You have no idea how many pandas we had to kill to get this bamboo."
-	cost = CARGO_CRATE_VALUE * 15
-	contains = list(/obj/item/stack/sheet/mineral/bamboo/fifty)
-	crate_name = "bamboo cuttings crate"
-
 /datum/supply_pack/imports/materials_market
 	name = "Materials Market Crate"
 	desc = "A circuit board to build your own materials market for use by certified market traders. Warning: Losses are not covered by insurance."

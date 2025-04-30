@@ -16,20 +16,6 @@
 				)
 	crate_name = "bio suit crate"
 
-/datum/supply_pack/emergency/bomb
-	name = "Explosive Emergency Crate"
-	desc = "Science gone bonkers? Beeping behind the door? Buy now and be the hero the district des... \
-		I mean needs! (time not included). Contains one bomb suit and hood, gas mask, and bomb defusal tools."
-	cost = CARGO_CRATE_VALUE * 2
-	contains = list(/obj/item/clothing/head/utility/bomb_hood,
-					/obj/item/clothing/suit/utility/bomb_suit,
-					/obj/item/clothing/mask/gas,
-					/obj/item/screwdriver,
-					/obj/item/wirecutters,
-					/obj/item/multitool,
-				)
-	crate_name = "bomb suit crate"
-
 /datum/supply_pack/emergency/internals
 	name = "Internals Crate"
 	desc = "Master your life energy and control your breathing with three breath masks, \

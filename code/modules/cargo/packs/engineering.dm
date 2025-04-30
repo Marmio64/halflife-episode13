@@ -30,11 +30,9 @@
 
 /datum/supply_pack/engineering/tools
 	name = "Toolbox Crate"
-	desc = "A set of three useful electrical and mechanical toolboxes."
+	desc = "A set of three useful toolboxes."
 	access_view = ACCESS_ENGINE_EQUIP
-	contains = list(/obj/item/storage/toolbox/electrical = 3,
-					/obj/item/storage/toolbox/mechanical = 3,
-				)
+	contains = list(/obj/item/storage/toolbox/mechanical = 3)
 	cost = CARGO_CRATE_VALUE * 5
 	crate_name = "toolbox crate"
 

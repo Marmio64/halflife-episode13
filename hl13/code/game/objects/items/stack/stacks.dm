@@ -87,6 +87,9 @@
 	merge_type = /obj/item/stack/sheet/halflife/plastic
 	grind_results = list(/datum/reagent/plastic_polymers = 10)
 
+/obj/item/stack/sheet/halflife/plastic/twelve
+	amount = 12
+
 /obj/item/stack/sheet/halflife/plastic/twenty
 	amount = 20
 
