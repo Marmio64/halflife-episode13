@@ -369,6 +369,12 @@
 	base_icon_state = "sidewalkinside"
 	alternate_states = 2
 
+/turf/open/floor/plating/ground/sidewalk/inner/slums
+	baseturfs = /turf/open/floor/plating/ground/sidewalk/inner/slums
+	icon_state = "sidewalkinsideslums"
+	base_icon_state = "sidewalkinsideslums"
+	alternate_states = 4
+
 /turf/open/floor/plating/ground/grass
 	name = "grass"
 	desc = "A patch of grass."

@@ -75,7 +75,7 @@
 	if(!istype(user))
 		return
 	var/obj/item/clothing/mask/gas/civilprotection/cpmask = user.get_item_by_slot(ITEM_SLOT_MASK)
-	if(cpmask)
+	if(istype(cpmask, /obj/item/clothing/mask/gas/civilprotection))
 		if(cpmask.overwatch)
 			return pick(
 				'hl13/sound/voice/otavoicelines/pain1.ogg',
