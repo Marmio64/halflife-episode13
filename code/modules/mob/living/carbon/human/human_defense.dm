@@ -634,6 +634,7 @@
 				combined_msg += span_info("You feel quite hungry.")
 			if(0 to NUTRITION_LEVEL_STARVING)
 				combined_msg += span_danger("You're starving!")
+	//hl13 edit start
 		switch(hydration)
 			if(HYDRATION_LEVEL_FULL to INFINITY)
 				combined_msg += span_info("You're completely hydrated!")
@@ -647,6 +648,25 @@
 				combined_msg += span_info("Your mouth is quite dry.")
 			if(0 to HYDRATION_LEVEL_DEHYDRATED)
 				combined_msg += span_danger("You're dehydrated!")
+
+	switch(tiredness)
+		if(TIREDNESS_SLEEPY_THRESHOLD to INFINITY)
+			combined_msg += span_info("You're very tired.")
+		if(TIREDNESS_TIRED_THRESHOLD to TIREDNESS_SLEEPY_THRESHOLD)
+			combined_msg += span_info("You're a little sleepy.")
+		if(0 to TIREDNESS_TIRED_THRESHOLD)
+			combined_msg += span_info("You're not tired.")
+
+	switch(hygiene)
+		if(HYGIENE_LEVEL_TIDY to INFINITY)
+			combined_msg += span_info("You feel and smell clean.")
+		if(HYGIENE_LEVEL_NORMAL to HYGIENE_LEVEL_TIDY)
+			combined_msg += span_info("You're not too dirty.")
+		if(HYGIENE_LEVEL_DIRTY to HYGIENE_LEVEL_NORMAL)
+			combined_msg += span_info("You smell pretty bad.")
+		if(0 to HYGIENE_LEVEL_FILTHY)
+			combined_msg += span_info("You feel and smell disgusting.")
+	//hl13 edit end
 
 	//Compiles then shows the list of damaged organs and broken organs
 	var/list/broken = list()

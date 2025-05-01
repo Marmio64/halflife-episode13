@@ -191,7 +191,7 @@
 
 	var/turf/target = get_turf(ladder)
 	user.zMove(target = target, z_move_flags = ZMOVE_CHECK_PULLEDBY|ZMOVE_ALLOW_BUCKLED|ZMOVE_INCLUDE_PULLED)
-	ladder.use(user) //reopening ladder radial menu ahead
+	//ladder.use(user) //reopening ladder radial menu ahead
 
 // TG code edit to add a check for blocked ladders //
 
@@ -215,14 +215,25 @@
 	var/result = show_radial_menu(user, src, tool_list, custom_check = CALLBACK(src, PROC_REF(check_menu), user, is_ghost), require_near = !is_ghost, tooltips = TRUE)
 	if (!is_ghost && !in_range(src, user))
 		return  // nice try
+	if(isliving(user))
+		var/mob/living/living_mob = user
+		if(living_mob.mob_size > MOB_SIZE_HUMAN)
+			to_chat(user, span_notice("You're too large to climb this."))
+			return
 	switch(result)
 		if("Up")
 			if(up.obstructed)
 				to_chat(user, span_warning("[src] is obstructed!"))
 				return
 			else
+				if(!user.can_perform_action(src, NEED_DEXTERITY))
+					to_chat(user, span_notice("You don't have the ability to climb this."))
+					return
 				travel(TRUE, user, is_ghost, up)
 		if("Down")
+			if(!user.can_perform_action(src, NEED_DEXTERITY))
+				to_chat(user, span_notice("You don't have the ability to climb this."))
+				return
 			travel(FALSE, user, is_ghost, down)
 		if("Cancel")
 			return
@@ -241,14 +252,6 @@
 
 /obj/structure/ladder/halflife/manhole/upwards
 	icon_state = "ladder10"
-
-/obj/structure/ladder/halflife/use(mob/user, list/modifiers)
-	if(isliving(user))
-		var/mob/living/living_mob = user
-		if(living_mob.mob_size > MOB_SIZE_HUMAN)
-			to_chat(user, span_notice("You're too large to climb this."))
-			return
-	. = ..()
 
 /obj/structure/ladder/halflife/manhole/examine(mob/user)
 	. = ..()

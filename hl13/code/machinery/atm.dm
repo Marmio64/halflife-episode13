@@ -90,12 +90,13 @@
 					break
 			if("transfer into long term account")
 				to_chat(user, "<span class='warning'>You are transferring credits into your cross-round persistant account.</span>")
-				to_chat(user, "<span class='notice'>There is a 75% tax on deposits, and you can only deposit up to 100 credits pre-tax per round.</span>")
+				to_chat(user, "<span class='notice'>There is a 50% tax on deposits, and you can only deposit up to 100 credits pre-tax per round.</span>")
 				to_chat(user, "<span class='notice'>Your current long term account balance is: [user.client.prefs.longterm_credit_account].</span>")
 				var/ddeposit = input(user, "Please select the amount to transfer:", "Transfer Money") as null|num
 				if(!ddeposit)
 					invalid_number()
 					return
+				ddeposit = round(ddeposit, 1)
 				if(ddeposit <= 0 || ddeposit > CID.registered_account.account_balance)
 					invalid_number()
 					return
@@ -104,7 +105,7 @@
 					return
 				CID.registered_account.account_balance -= ddeposit
 				user.client.longterm_credits_deposited += ddeposit
-				totalmoney = ROUND_UP(ddeposit * 0.25)
+				totalmoney = ddeposit * 0.5
 				user.client.prefs.longterm_credit_account += totalmoney
 				if(user.client.prefs.longterm_credit_account > 1000) //Hard limit that people are very unlikely to reach, but just in case.
 					user.client.prefs.longterm_credit_account = 1000
@@ -119,6 +120,7 @@
 				if(!withdrawfund)
 					invalid_number()
 					return
+				withdrawfund = round(withdrawfund, 1)
 				if(withdrawfund <= 0 || (withdrawfund + user.client.longterm_credits_withdrawn) > 50)
 					invalid_number()
 					return
@@ -130,7 +132,7 @@
 				var/obj/item/stack/spacecash/c1/HC = new /obj/item/stack/spacecash/c1(get_turf(src))
 				user.put_in_inactive_hand(HC)
 				successful_transaction()
-				HC.amount = ROUND_UP(withdrawfund)
+				HC.amount = withdrawfund
 				HC.update_icon_state()
 				user.client.prefs.save_preferences()
 				return

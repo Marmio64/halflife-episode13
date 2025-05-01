@@ -89,7 +89,8 @@
 				'hl13/sound/voice/cpvoicelines/pain3.ogg',
 				'hl13/sound/voice/cpvoicelines/pain4.ogg',
 			)
-	return user.dna.species.get_scream_sound(user)
+	else
+		return user.dna.species.get_scream_sound(user)
 
 /datum/emote/living/carbon/human/scream/screech //If a human tries to screech it'll just scream.
 	key = "screech"

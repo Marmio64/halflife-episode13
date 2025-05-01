@@ -57,7 +57,7 @@
 /datum/crafting_recipe/lockpick
 	name = "Makeshift Lockpick"
 	result = /obj/item/lockpick/makeshift
-	reqs = list(/obj/item/stack/sheet/scrap_metal = 4)
+	reqs = list(/obj/item/stack/sheet/scrap_metal = 5)
 	time = 8 SECONDS
 	category = CAT_MISC
 	crafting_interface = CRAFTING_BENCH_GENERAL
@@ -65,7 +65,7 @@
 /datum/crafting_recipe/makeshift_climbinghook
 	name = "Makeshift Climbing Hook"
 	result = /obj/item/climbing_hook/halflife/makeshift
-	reqs = list(/obj/item/stack/sheet/scrap_metal = 4, /obj/item/stack/sheet/cloth = 4)
+	reqs = list(/obj/item/stack/sheet/scrap_metal = 5, /obj/item/stack/sheet/cloth = 4)
 	time = 12 SECONDS
 	category = CAT_MISC
 

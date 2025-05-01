@@ -331,7 +331,7 @@
 	icon_state = "metal_closed"
 	door_type = "metal"
 	max_integrity = 950 //its metal
-	damage_deflection = 25
+	damage_deflection = 23
 	hitted_sound = 'hl13/sound//halflifeeffects/metal_door_hit.ogg'
 	opensound = 'hl13/sound/machines/metaldoor_open.ogg'
 	closesound = 'hl13/sound/machines/metaldoor_close.ogg'

@@ -361,7 +361,7 @@
 
 /obj/structure/halflife/barrel/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))
-		new /obj/item/stack/sheet/scrap_metal(loc, 3)
+		new /obj/item/stack/sheet/scrap_metal(loc, 4)
 	qdel(src)
 
 /obj/structure/halflife/barrel/Initialize()

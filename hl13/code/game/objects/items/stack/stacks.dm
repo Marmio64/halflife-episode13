@@ -16,6 +16,9 @@
 /obj/item/stack/sheet/scrap_metal/two
 	amount = 2
 
+/obj/item/stack/sheet/scrap_metal/three
+	amount = 3
+
 /obj/item/stack/sheet/ironingot
 	icon = 'hl13/icons/obj/stack_objects.dmi'
 	name = "iron ingots"
@@ -83,6 +86,9 @@
 	resistance_flags = FIRE_PROOF
 	merge_type = /obj/item/stack/sheet/halflife/plastic
 	grind_results = list(/datum/reagent/plastic_polymers = 10)
+
+/obj/item/stack/sheet/halflife/plastic/twelve
+	amount = 12
 
 /obj/item/stack/sheet/halflife/plastic/twenty
 	amount = 20

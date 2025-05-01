@@ -1,10 +1,11 @@
 /obj/machinery/computer/accounting
 	name = "account lookup console"
 	desc = "Used to view crew member accounts and purchases."
-	icon_screen = "accounts"
-	icon_keyboard = "id_key"
 	circuit = /obj/item/circuitboard/computer/accounting
-	light_color = LIGHT_COLOR_GREEN
+	icon_state = "sr_console" //hl13 edit
+	icon_screen = null //hl13 edit
+	icon_keyboard = null //hl13 edit
+	light_color = LIGHT_COLOR_BLUE //hl13 edit
 
 /obj/machinery/computer/accounting/ui_interact(mob/user, datum/tgui/ui)
 	. = ..()

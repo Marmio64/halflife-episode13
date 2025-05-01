@@ -231,7 +231,7 @@
 	//hl13 edit start
 	if(prob(50))
 		var/turf/my_turf = get_turf(src)
-		my_turf.VapourTurf(/datum/vapours/dust, 125)
+		my_turf.VapourTurf(/datum/vapours/dust, 115)
 	//hl13 edit end
 	mined.update_visuals()
 
@@ -275,7 +275,7 @@
 
 /turf/closed/mineral/random
 	/// What are the base odds that this turf spawns a mineral in the wall on initialize?
-	var/mineralChance = 13
+	var/mineralChance = 11 //hl13 edit, slightly reduce this
 	/// Does this mineral determine its random chance and mineral contents based on proximity to a vent? Overrides mineralChance and mineralAmt.
 	var/proximity_based = FALSE
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS

@@ -1,7 +1,7 @@
 /datum/crafting_recipe/scrap_metal
 	name = "Recombine Scrap Metal"
 	result = /obj/item/stack/sheet/iron
-	reqs = list(/obj/item/stack/sheet/scrap_metal = 2)
+	reqs = list(/obj/item/stack/sheet/scrap_metal = 3)
 	time = 1 SECONDS
 	tool_paths = list(/obj/item/weldingtool)
 	category = CAT_MISC

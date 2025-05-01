@@ -71,7 +71,6 @@
 	head = /obj/item/clothing/head/utility/chefhat
 	uniform = /obj/item/clothing/under/citizen
 	r_pocket = /obj/item/hl2key/kitchen
-	skillchips = list(/obj/item/skillchip/job/chef)
 
 /datum/outfit/job/cook/pre_equip(mob/living/carbon/human/H, visuals_only = FALSE)
 	..()

@@ -27,7 +27,7 @@ const STATE_MESSAGES = 'messages';
 const SWIPE_NEEDED = 'SWIPE_NEEDED';
 
 const EMAG_SHUTTLE_NOTICE =
-  'This shuttle is deemed significantly dangerous to the crew, and is only supplied by the Syndicate.';
+  'This shuttle is deemed significantly dangerous to the crew, and is only supplied by rebels.';
 
 const sortShuttles = (shuttles) =>
   sortBy(

@@ -42,10 +42,13 @@
 			user.emote("scream")
 	if(istype(I, /obj/item/stack/sheet/scrap_metal))
 		var/obj/item/stack/sheet/scrap_metal/C = I
+		if(C.amount < 3)
+			to_chat(usr, span_notice("You'll need at least three scrap to press metal."))
+			return
 		to_chat(usr, span_notice("Pressing metal..."))
 		playsound(src, 'hl13/sound/halflifeeffects/furniture/washer_close.ogg', 50, FALSE, extrarange = -1)
 		if(do_after(user, 3 SECONDS, src))
-			C.use(1)
+			C.use(3)
 			new /obj/item/stack/sheet/iron(src.loc, 1)
 			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)
 		else if(prob(5))

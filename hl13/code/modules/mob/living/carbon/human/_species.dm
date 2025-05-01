@@ -49,4 +49,5 @@
 				'hl13/sound/voice/cpvoicelines/pain3.ogg',
 				'hl13/sound/voice/cpvoicelines/pain4.ogg',
 			)
-	return user.dna.species.get_agony_sound(user)
+	else
+		return user.dna.species.get_agony_sound(user)

@@ -53,7 +53,7 @@
 		playsound(src, 'hl13/sound/halflifemachines/turret_close.ogg', 50, FALSE, extrarange = -1)
 		if(do_after(user, 3 SECONDS, src))
 			C.use(1)
-			new /obj/item/stack/sheet/scrap_metal(src.loc, 4)
+			new /obj/item/stack/sheet/scrap_metal(src.loc, 6)
 			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)
 		else if(prob(5))
 			to_chat(user, span_userdanger("You prematurely stop milling the metal, and your arm gets caught in the mill!"))
