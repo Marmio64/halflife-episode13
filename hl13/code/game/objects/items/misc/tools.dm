@@ -54,3 +54,25 @@
 	desc = "A cheap makeshift climbing hook formed out of scrap and cloth. It's unlikely to withstand more than a couple uses."
 	uses = 2
 	climb_time = 4 SECONDS
+
+//Comparable to a tire iron as a weapon, though has 2 less weapon defense and 1 less damage in exchange for being small enough to fit in your pocket. Also, can do crowbar stuff too.
+/obj/item/crowbar/halflife_hammer
+	name = "claw hammer"
+	desc = "An old wood shafted hammer with a pry bar on one side of the head. Not as good as a dedicate crowbar, but can do the job. Juuuust small enough to go in your pocket."
+	force = 17
+	w_class = WEIGHT_CLASS_SMALL
+	icon = 'icons/obj/weapons/hammer.dmi'
+	icon_state = "clawhammer"
+	lefthand_file = 'icons/mob/inhands/weapons/hammers_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/hammers_righthand.dmi'
+	inhand_icon_state = "clawhammer"
+	inside_belt_icon_state = "clawhammer"
+	throwforce = 10
+	throw_range = 5
+	throw_speed = 3
+	toolspeed = 2
+	custom_materials = list(/datum/material/wood=SMALL_MATERIAL_AMOUNT*0.5, /datum/material/iron=SMALL_MATERIAL_AMOUNT*0.7)
+	armour_penetration = 10
+
+	can_parry = TRUE
+	wdefense = 1

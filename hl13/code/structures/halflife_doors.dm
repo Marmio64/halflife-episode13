@@ -448,7 +448,7 @@
 	door_type = "metal_window"
 	passthrough_chance = 40 //Small window!
 	max_integrity = 950 //its metal
-	damage_deflection = 25
+	damage_deflection = 23
 	hitted_sound = 'hl13/sound//halflifeeffects/metal_door_hit.ogg'
 
 /obj/machinery/door/unpowered/halflife/seethrough/metal/deconstruct(disassembled = TRUE)

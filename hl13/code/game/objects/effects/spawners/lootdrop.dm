@@ -5,6 +5,7 @@
 
 	loot = list(
 				/obj/item/crowbar/large = 2,
+				/obj/item/crowbar/halflife_hammer,
 				/obj/item/binoculars,
 				/obj/item/seeds/potato,
 				/obj/item/melee/tireiron,
@@ -303,6 +304,7 @@
 				/obj/item/ammo_box/magazine/makeshift9mm,
 				/obj/item/crowbar/large,
 				/obj/item/fireaxe,
+				/obj/item/crowbar/halflife_hammer,
 				/obj/item/melee/sledgehammer,
 				/obj/item/spear/halflife,
 				/obj/item/clothing/suit/armor/halflife/kevlar/heavy,
