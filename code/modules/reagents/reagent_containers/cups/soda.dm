@@ -169,8 +169,8 @@
 #undef SODA_FIZZINESS_SHAKE
 
 /obj/item/reagent_containers/cup/soda_cans/cola
-	name = "Space Cola"
-	desc = "Cola. in space."
+	name = "Cola"
+	desc = "Cola. on earth. Post-apocalyptic combine ruled earth."
 	icon_state = "cola"
 	list_reagents = list(/datum/reagent/consumable/space_cola = 30)
 	drink_type = SUGAR

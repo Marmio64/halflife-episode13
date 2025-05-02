@@ -645,6 +645,8 @@
 "cu" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/pickaxe,
+/obj/item/pickaxe,
+/obj/item/clothing/head/utility/hardhat/halflife/mining,
 /obj/item/clothing/head/utility/hardhat/halflife/mining,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/sewer)
@@ -6269,15 +6271,6 @@
 	},
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/bar)
-"xw" = (
-/obj/effect/turf_decal/siding/street{
-	dir = 1
-	},
-/obj/structure/halflife/road_barrier{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/alley)
 "xx" = (
 /obj/effect/turf_decal/siding/street,
 /obj/structure/halflife/street_sign/stop,
@@ -6744,13 +6737,6 @@
 /obj/structure/sign/warning/biohazard/directional/north,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/virology)
-"zl" = (
-/obj/effect/turf_decal/siding/street,
-/obj/structure/halflife/road_barrier{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/alley)
 "zm" = (
 /obj/structure/rack,
 /obj/item/hl2key/factory,
@@ -9205,9 +9191,7 @@
 /obj/structure/closet/crate/halflife,
 /obj/item/pickaxe,
 /obj/item/pickaxe,
-/obj/item/pickaxe,
 /obj/effect/turf_decal/box,
-/obj/item/clothing/head/utility/hardhat/halflife/mining,
 /obj/item/clothing/head/utility/hardhat/halflife/mining,
 /obj/item/clothing/head/utility/hardhat/halflife/mining,
 /obj/item/clothing/accessory/armband/cargo{
@@ -9903,6 +9887,14 @@
 /obj/structure/halflife/barrel/double/grey/two,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
+"Kv" = (
+/obj/structure/halflife/road_barrier{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/brickroad{
+	dir = 1
+	},
+/area/halflife/outdoors/alley)
 "Kw" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -10023,6 +10015,15 @@
 /obj/structure/chair/sofa/hl13bench,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/plaza)
+"KV" = (
+/obj/effect/turf_decal/siding/street{
+	dir = 1
+	},
+/obj/structure/halflife/road_barrier{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/alley)
 "KW" = (
 /obj/structure/halflife/rug/red,
 /obj/machinery/light/small/directional/west,
@@ -12001,6 +12002,13 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/apartments/primary)
+"Sk" = (
+/obj/effect/turf_decal/siding/street,
+/obj/structure/halflife/road_barrier{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/alley)
 "Sl" = (
 /obj/structure/halflife/trash/books/pile,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -12078,13 +12086,6 @@
 /obj/modular_map_root/sewerright,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
-"SB" = (
-/obj/structure/halflife/trash/garbage{
-	pixel_x = 2;
-	pixel_y = 17
-	},
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/alley)
 "SC" = (
 /obj/structure/sign/poster/halflife/combine{
 	pixel_y = 32
@@ -12277,6 +12278,13 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/townhall/secondfloor)
+"Tk" = (
+/obj/structure/halflife/trash/garbage{
+	pixel_x = 2;
+	pixel_y = 17
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley)
 "Tl" = (
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -13111,6 +13119,12 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
+"Wx" = (
+/obj/effect/landmark/carpspawn,
+/turf/open/floor/plating/ground/brickroad{
+	dir = 1
+	},
+/area/halflife/outdoors/alley)
 "Wy" = (
 /obj/structure/table/halflife/no_smooth/wood,
 /turf/open/floor/plating/indoor/woodc,
@@ -13674,14 +13688,6 @@
 /obj/structure/halflife/road_barrier/combine,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/plaza)
-"YD" = (
-/obj/structure/halflife/road_barrier{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
-	},
-/area/halflife/outdoors/alley)
 "YE" = (
 /obj/structure/halflife/barrel/quadruple/grey,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -13833,12 +13839,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
-"Zj" = (
-/obj/effect/landmark/carpspawn,
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
-	},
-/area/halflife/outdoors/alley)
 "Zk" = (
 /turf/open/floor/plating/indoor/metal/walkway{
 	dir = 1
@@ -30384,7 +30384,7 @@ Nz
 Kc
 ji
 ji
-SB
+Tk
 Nz
 ji
 Mp
@@ -30628,7 +30628,7 @@ Hb
 Nz
 ji
 ji
-SB
+Tk
 Nz
 ji
 ji
@@ -36615,11 +36615,11 @@ Ff
 Ff
 Ff
 Ff
-zl
-YD
-YD
-YD
-xw
+Sk
+Kv
+Kv
+Kv
+KV
 wU
 wU
 wU
@@ -39667,7 +39667,7 @@ Ff
 Ff
 Ny
 WE
-Zj
+Wx
 WE
 iH
 Ff

@@ -818,6 +818,13 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(src, span_notice("Gas scan enabled."))
 		gas_scan = TRUE
 
+/mob/dead/observer/verb/check_sociostability()
+	set name = "Check Sociostability"
+	set desc = "Tells you the current sociostability level"
+	set category = "Ghost"
+
+	to_chat(src, span_notice("Sociostability is at [((SSsociostability.sociostability / SOCIOSTABILITY_GREAT)*100)]%."))
+
 /mob/dead/observer/verb/restore_ghost_appearance()
 	set name = "Restore Ghost Character"
 	set desc = "Sets your deadchat name and ghost appearance to your \

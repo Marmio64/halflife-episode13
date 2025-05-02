@@ -40,6 +40,9 @@
 	if(plastic)
 		new /obj/item/stack/sheet/halflife/plastic(loc, plastic)
 
+	scrap = 0
+	plastic = 0
+
 	return
 
 /obj/machinery/recycle_intake/examine(mob/user)

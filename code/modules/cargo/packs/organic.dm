@@ -93,7 +93,7 @@
 	crate_name = "ration water crate"
 
 /datum/supply_pack/organic/wateradds
-	name = "Water Addictives Crate"
+	name = "Water Additives Crate"
 	desc = "A crate of water additive tablets, for use in water mixing at the factory."
 	cost = CARGO_CRATE_VALUE * 1.6
 	contains = list(/obj/item/ration_construction/watermix/blueadditive,

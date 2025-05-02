@@ -394,6 +394,13 @@
 
 	ai_tracking_tool.track_input(src)
 
+/mob/living/silicon/ai/verb/check_sociostability()
+	set name = "Check Sociostability"
+	set desc = "Tells you the current sociostability level"
+	set category = "AI Commands"
+
+	to_chat(src, span_notice("Sociostability is at [((SSsociostability.sociostability / SOCIOSTABILITY_GREAT)*100)]%."))
+
 ///Called when an AI finds their tracking target.
 /mob/living/silicon/ai/proc/on_track_target(datum/trackable/source, mob/living/target)
 	SIGNAL_HANDLER

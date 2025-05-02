@@ -60,7 +60,7 @@
 					sleep(0.5 SECONDS)
 					H.emote("scream")
 					head.force_wound_upwards(/datum/wound/slash/flesh/critical)
-					H.apply_damage(200, BRUTE, head)
+					H.apply_damage(75, BRUTE, head)
 				else if(prob(50))
 					to_chat(H, span_userdanger("The saw digs deep into the collar, but slips and nicks your neck. You quickly pull away for now, but you can retry."))
 					H.apply_damage(25, BRUTE, head)

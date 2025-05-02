@@ -35,8 +35,3 @@
 /datum/loadout_item/head/flatcap
 	name = "Cap (Flat)"
 	item_path = /obj/item/clothing/head/flatcap
-
-/datum/loadout_item/head/wig
-	name = "Wig"
-	item_path = /obj/item/clothing/head/wig/natural
-	additional_displayed_text = list("Hair Color")

@@ -12,7 +12,6 @@
 			"products" = list(
 				/obj/item/reagent_containers/cup/glass/bottle/curacao = 5,
 				/obj/item/reagent_containers/cup/glass/bottle/applejack = 5,
-				/obj/item/reagent_containers/cup/glass/bottle/wine_voltaic = 5,
 				/obj/item/reagent_containers/cup/glass/bottle/tequila = 5,
 				/obj/item/reagent_containers/cup/glass/bottle/rum = 5,
 				/obj/item/reagent_containers/cup/glass/bottle/cognac = 5,
@@ -29,14 +28,9 @@
 				/obj/item/reagent_containers/cup/glass/bottle/maltliquor = 6,
 				/obj/item/reagent_containers/cup/glass/bottle/kahlua = 5,
 				/obj/item/reagent_containers/cup/glass/bottle/sake = 5,
-				/obj/item/reagent_containers/cup/glass/bottle/beer = 6,
+				/obj/item/reagent_containers/cup/glass/bottle/beer = 10,
 				/obj/item/reagent_containers/cup/glass/bottle/vodka = 5,
 				/obj/item/reagent_containers/cup/glass/bottle/whiskey = 5,
-				/obj/item/reagent_containers/cup/glass/bottle/coconut_rum = 5,
-				/obj/item/reagent_containers/cup/glass/bottle/yuyake = 5,
-				/obj/item/reagent_containers/cup/glass/bottle/shochu = 5,
-				/obj/item/reagent_containers/cup/soda_cans/beer = 10,
-				/obj/item/reagent_containers/cup/soda_cans/beer/rice = 10,
 			),
 		),
 
@@ -54,8 +48,6 @@
 				/obj/item/reagent_containers/cup/soda_cans/sol_dry = 8,
 				/obj/item/reagent_containers/cup/soda_cans/cola = 8,
 				/obj/item/reagent_containers/cup/soda_cans/tonic = 8,
-				/obj/item/reagent_containers/cup/glass/bottle/hakka_mate = 5,
-				/obj/item/reagent_containers/cup/soda_cans/melon_soda = 5,
 			),
 		),
 
