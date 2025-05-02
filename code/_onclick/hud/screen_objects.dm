@@ -158,6 +158,79 @@
 		var/mob/living/L = usr
 		L.mob_sleep()
 
+#define JUMP_DELAY 30
+#define MAX_JUMP_DISTANCE 3
+
+/atom/movable/screen/jump //HL13 EDIT
+	name = "jump forwards"
+	icon = 'icons/hud/screen_midnight.dmi'
+	icon_state = "jump"
+	screen_loc = ui_jump
+
+/atom/movable/screen/jump/Click()
+	if(isliving(usr))
+		var/mob/living/L = usr
+		L.jump() // Call the jump function
+
+/mob/proc/jump(atom/target)
+	SEND_SIGNAL(src, COMSIG_MOB_THROW, target)
+	return
+
+/mob/living/carbon/jump()
+	var/atom/target = get_edge_target_turf(src, src.dir) //gets the user's direction
+	if(!target || !isturf(loc))
+		return
+	if(istype(target, /atom/movable/screen))
+		return
+	if(lying_angle != STANDING_UP)
+		return
+
+	var/mob/living/carbon/H = src
+
+	if(HAS_TRAIT(H, TRAIT_IMMOBILIZED) || H.legcuffed)
+		return
+	if(pulledby && H.pulledby.grab_state >= GRAB_PASSIVE)
+		return
+	if(95 < getStaminaLoss())
+		to_chat(src, "<span class='notice'>You are too tired to jump!")
+		return
+
+	var/current_time = world.time
+	var/adjusted_jump_delay = JUMP_DELAY
+	if(current_time - last_jump_time < adjusted_jump_delay)
+		to_chat(src, "<span class='notice'>You can't jump so soon!")
+		return
+
+	adjustStaminaLoss(25)
+
+	var/adjusted_jump_range = MAX_JUMP_DISTANCE
+
+	var/distance = get_dist(loc, target)
+	var/turf/adjusted_target = target
+	if(distance > adjusted_jump_range)
+		var/dx = target.x - loc.x
+		var/dy = target.y - loc.y
+		var/scale = adjusted_jump_range / distance
+		adjusted_target = locate(loc.x + round(dx * scale), loc.y + round(dy * scale), loc.z)
+	playsound(loc, 'hl13/sound/effects/jump_neutral.ogg', 50, TRUE)
+
+	var/atom/movable/thrown_thing = src
+
+	if(thrown_thing)
+		var/turf/start_T = get_turf(loc) //Get the start and target tile for the descriptors
+		var/turf/end_T = get_turf(target)
+		if(start_T && end_T)
+			log_combat(src, thrown_thing, "jumped", addition="from tile in [AREACOORD(start_T)] towards tile at [AREACOORD(end_T)]")
+		var/power_throw = 0
+		//Move the player towards the target
+
+		newtonian_move(get_dir(adjusted_target, src))
+		thrown_thing.safe_throw_at(adjusted_target, thrown_thing.throw_range, thrown_thing.throw_speed + power_throw, src, null, null, null, move_force, spin = FALSE)
+		visible_message("<span class='danger'>[src] jumps towards [adjusted_target].</span>")
+
+		last_jump_time = current_time
+
+
 /atom/movable/screen/area_creator
 	name = "create new area"
 	icon = 'icons/hud/screen_midnight.dmi'
@@ -1037,3 +1110,5 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/splash)
 #undef HUNGER_STATE_FINE
 #undef HUNGER_STATE_HUNGRY
 #undef HUNGER_STATE_STARVING
+#undef JUMP_DELAY
+#undef MAX_JUMP_DISTANCE

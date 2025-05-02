@@ -9,3 +9,5 @@
 	var/tiredness = 0
 	canparry = TRUE
 	candodge = TRUE
+	var/last_jump_time = 0
+	var/jump_range = 1
