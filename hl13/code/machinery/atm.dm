@@ -91,7 +91,7 @@
 			if("transfer into long term account")
 				to_chat(user, "<span class='warning'>You are transferring credits into your cross-round persistant account.</span>")
 				to_chat(user, "<span class='notice'>There is a 50% tax on deposits, and you can only deposit up to 100 credits pre-tax per round.</span>")
-				to_chat(user, "<span class='notice'>Your current long term account balance is: [user.client.prefs.longterm_credit_account].</span>")
+				to_chat(user, "<span class='notice'>Your current long term account balance is: [user.client.prefs.read_preference(/datum/preference/numeric/longtermaccount)].</span>")
 				var/ddeposit = input(user, "Please select the amount to transfer:", "Transfer Money") as null|num
 				if(!ddeposit)
 					invalid_number()
@@ -106,16 +106,15 @@
 				CID.registered_account.account_balance -= ddeposit
 				user.client.longterm_credits_deposited += ddeposit
 				totalmoney = ddeposit * 0.5
-				user.client.prefs.longterm_credit_account += totalmoney
-				if(user.client.prefs.longterm_credit_account > 1000) //Hard limit that people are very unlikely to reach, but just in case.
-					user.client.prefs.longterm_credit_account = 1000
+				var/longtermbalance = user.client.prefs.read_preference(/datum/preference/numeric/longtermaccount)
+				user.client.prefs.write_preference(GLOB.preference_entries[/datum/preference/numeric/longtermaccount], longtermbalance += totalmoney)
 				successful_transaction()
 				user.client.prefs.save_preferences()
 				return
 			if("withdraw from longterm account")
 				to_chat(user, "<span class='warning'>You are withdrawing from your cross-round persistant account.</span>")
 				to_chat(user, "<span class='notice'>You can only withdraw up to 50 credits per round.</span>")
-				to_chat(user, "<span class='notice'>Your current long term account balance is: [user.client.prefs.longterm_credit_account].</span>")
+				to_chat(user, "<span class='notice'>Your current long term account balance is: [user.client.prefs.read_preference(/datum/preference/numeric/longtermaccount)].</span>")
 				var/withdrawfund = input(user, "Please select the amount to withdraw:", "Withdraw Money") as null|num
 				if(!withdrawfund)
 					invalid_number()
@@ -124,11 +123,12 @@
 				if(withdrawfund <= 0 || (withdrawfund + user.client.longterm_credits_withdrawn) > 50)
 					invalid_number()
 					return
-				if(user.client.prefs.longterm_credit_account < withdrawfund)
+				if(user.client.prefs.read_preference(/datum/preference/numeric/longtermaccount) < withdrawfund)
 					to_chat(user, "<span class='notice'>Your long term account doesn't have enough credits to cover this.</span>")
 					return
 				user.client.longterm_credits_withdrawn += withdrawfund
-				user.client.prefs.longterm_credit_account -= withdrawfund
+				var/longtermbalance = user.client.prefs.read_preference(/datum/preference/numeric/longtermaccount)
+				user.client.prefs.write_preference(GLOB.preference_entries[/datum/preference/numeric/longtermaccount], longtermbalance -= withdrawfund)
 				var/obj/item/stack/spacecash/c1/HC = new /obj/item/stack/spacecash/c1(get_turf(src))
 				user.put_in_inactive_hand(HC)
 				successful_transaction()

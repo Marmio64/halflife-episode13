@@ -198,10 +198,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//favorite outfits
 	favorite_outfits = savefile.get_entry("favorite_outfits", favorite_outfits)
 
-// hl13 edit start
-	longterm_credit_account = savefile.get_entry("longterm_credit_account", longterm_credit_account)
-// hl13 edit end
-
 	var/list/parsed_favs = list()
 	for(var/typetext in favorite_outfits)
 		var/datum/outfit/path = text2path(typetext)
@@ -276,7 +272,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	savefile.set_entry("chat_toggles", chat_toggles)
 	savefile.set_entry("ignoring", ignoring)
 	savefile.set_entry("key_bindings", key_bindings)
-	savefile.set_entry("longterm_credit_account", longterm_credit_account) //hl13 edit
 	savefile.set_entry("hearted_until", (hearted_until > world.realtime ? hearted_until : null))
 	savefile.set_entry("favorite_outfits", favorite_outfits)
 	savefile.save()
