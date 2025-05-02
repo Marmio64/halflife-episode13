@@ -71,13 +71,15 @@
 	hasaltstates = TRUE
 	altstates = 2
 
+/obj/item/food/xen
+	foodtypes = XEN
+
 /obj/item/food/xen/xenbranch
 	name = "xenian branch"
 	desc = "A branch from some xenian plant. It's green, like the stuff inside medkits. Maybe you might be able to create one at a crafting bench."
 	tastes = list("bitterness" = 1)
 	bite_consumption = 5
 	food_reagents = list(/datum/reagent/medicine/biogel = 20)
-	foodtypes = GROSS
 	icon = 'hl13/icons/obj/xenflora.dmi'
 	icon_state = "branch"
 
@@ -98,7 +100,6 @@
 	tastes = list("dusty mushrooms" = 1)
 	bite_consumption = 4
 	food_reagents = list(/datum/reagent/drug/happiness = 4, /datum/reagent/drug/aranesp = 4, /datum/reagent/toxin/spore = 4)
-	foodtypes = GROSS
 	icon = 'hl13/icons/obj/xenflora.dmi'
 	icon_state = "spore"
 
@@ -119,7 +120,6 @@
 	tastes = list("slime" = 1)
 	bite_consumption = 4
 	food_reagents = list(/datum/reagent/medicine/coagulant = 4, /datum/reagent/toxin/staminatoxin = 4, /datum/reagent/consumable/ethanol = 4)
-	foodtypes = GROSS
 	icon = 'hl13/icons/obj/xenflora.dmi'
 	icon_state = "slime"
 

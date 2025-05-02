@@ -106,7 +106,7 @@
 
 	preserved_food = TRUE
 
-	var/mood_penalty = /datum/mood_event/gross_food
+	var/mood_penalty = FOOD_DISLIKED
 
 ///Override for checkliked callback
 /obj/item/food/rationpack/make_edible()
@@ -117,14 +117,14 @@
 	if(HAS_TRAIT(consumer, TRAIT_AGEUSIA)) //if you can't taste it, it doesn't taste good
 		return 0
 	else
-		return FOOD_DISLIKED
+		return mood_penalty
 
 /obj/item/food/rationpack/loyalty
 	name = "loyalty-grade nutriment bar"
-	desc = "A 'water' flavored ration nutriment bar. It is more healthy and filling than standard bars."
+	desc = "A 'water' flavored ration nutriment bar. It is more healthy and filling than standard bars, and is packed with flavor enhancers that make it slightly more edible."
 	icon_state = "loyaltyrationpack"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 3)
-	mood_penalty = /datum/mood_event/displeasing_food
+	mood_penalty = FOOD_UNPLEASANT
 
 /obj/item/food/rationpack/box
 	name = "nutriment box"
@@ -137,14 +137,13 @@
 	desc = "A 'water' flavored ration nutriment bar. Tastes gross, but at least you won't be hungry. This one is less filling than most."
 	icon_state = "lowrationpack"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 6)
-	mood_penalty = /datum/mood_event/disgusting_food
 
 /obj/item/food/rationpack/worstgrade
 	name = "bottom-grade nutriment bar"
-	desc = "A 'water' flavored ration nutriment bar. Tastes gross, but at least you won't be hungry. This one is very unfilling."
+	desc = "A 'water' flavored ration nutriment bar. This is the lowest of the low kinds of nutriment bars: Unfilling, and absolutely disgusting."
 	icon_state = "lowrationpack"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 4)
-	mood_penalty = /datum/mood_event/disgusting_food
+	mood_penalty = FOOD_TOXIC
 
 /obj/item/food/rationpack/manufactured
 	name = "manufactured nutriment bar"

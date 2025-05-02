@@ -10,6 +10,7 @@
 	icon_dead = "grub_dead"
 	faction = list(FACTION_ANTLION)
 	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
+	mob_size = MOB_SIZE_SMALL
 	maxHealth = 12
 	health = 12
 	light_range = 2

@@ -7,6 +7,7 @@
 	icon_living = "headcrab"
 	icon_dead = "headcrab_dead"
 	faction = list(FACTION_HEADCRAB)
+	mob_size = MOB_SIZE_SMALL
 	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
 	maxHealth = 30
 	health = 30

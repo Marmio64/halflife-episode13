@@ -105,6 +105,9 @@
 	maxHealth = 80
 	health = 80
 	speed = 0
+	melee_attack_cooldown = 0.7 SECONDS
+	melee_damage_lower = 5
+	melee_damage_upper = 6
 	sound_vary = FALSE
 	butcher_results = list(/obj/item/stack/sheet/sinew = 2, /obj/item/food/meat/slab/halflife/zombie = 1)
 	attack_sound = 'hl13/sound/creatures/fastzombieattack.ogg'

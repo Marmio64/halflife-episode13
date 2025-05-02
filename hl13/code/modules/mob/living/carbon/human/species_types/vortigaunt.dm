@@ -11,6 +11,7 @@
 	inherent_traits = list(TRAIT_RESISTCOLD, TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,
 							TRAIT_NOBREATH, TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NODISMEMBER, TRAIT_GENELESS, TRAIT_NO_UNDERWEAR, TRAIT_TERRIBLE_AIM)
 	mutanteyes = /obj/item/organ/eyes/night_vision/vort
+	mutanttongue = /obj/item/organ/tongue/vort
 	var/datum/action/cooldown/spell/conjure_item/infinite_guns/vort_blast/galunga
 	var/datum/action/cooldown/spell/touch/vort_heal/vortheal
 	var/datum/action/cooldown/spell/list_target/telepathy/vort/vorttelepathy
@@ -93,3 +94,8 @@
 		/datum/language/common = list(LANGUAGE_ATOM),
 		/datum/language/vortigese = list(LANGUAGE_ATOM),
 	)
+
+/obj/item/organ/tongue/vort
+	liked_foodtypes = MEAT | XEN
+	disliked_foodtypes = CLOTH | GROSS
+	unpleasant_foodtypes = GORE | GRAIN

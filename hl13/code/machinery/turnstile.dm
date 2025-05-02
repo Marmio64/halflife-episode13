@@ -110,7 +110,7 @@
 /obj/machinery/turnstile/brig/halflife/forcefield/attackby(obj/item/attacking_item, mob/user, params)
 	. = ..()
 	if(atom_integrity < 100 && !malfunctioning) //At very low health, the field just turns off.
-		malfunctioning = TRUE
+		malfunction()
 
 /obj/machinery/turnstile/brig/halflife/forcefield/examine(mob/user)
 	. = ..()

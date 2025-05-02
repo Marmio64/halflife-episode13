@@ -6,7 +6,7 @@
 /datum/mood_event/displeasing_food
 	description = "That food wasn't the worst tasting, but it wasn't good tasting either."
 	mood_change = -2
-	timeout = 4 MINUTES
+	timeout = 3 MINUTES
 
 /datum/mood_event/gross_food
 	description = "I really didn't like that food."

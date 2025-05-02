@@ -39,6 +39,8 @@
 	var/liked_foodtypes = JUNKFOOD | FRIED //human tastes are default
 	/// Foodtypes this tongue dislikes
 	var/disliked_foodtypes = GROSS | RAW | CLOTH | BUGS | GORE //human tastes are default
+	/// hl13 edit, foodtypes this tongue kind of dislikes
+	var/unpleasant_foodtypes = XEN
 	/// Foodtypes this tongue HATES
 	var/toxic_foodtypes = TOXIC //human tastes are default
 	/// Whether this tongue modifies speech via signal
@@ -125,6 +127,8 @@
 		food_taste_reaction = FOOD_TOXIC
 	else if(foodtypes & disliked_foodtypes)
 		food_taste_reaction = FOOD_DISLIKED
+	else if(foodtypes & unpleasant_foodtypes) //hl13 edit
+		food_taste_reaction = FOOD_UNPLEASANT //hl13 edit
 	else if(foodtypes & liked_foodtypes)
 		food_taste_reaction = FOOD_LIKED
 	return food_taste_reaction

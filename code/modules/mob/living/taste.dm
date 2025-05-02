@@ -107,6 +107,18 @@
 		return MEAT
 	return NONE
 
+//hl13 edit start
+/mob/living/proc/get_unpleasant_foodtypes()
+	return NONE
+
+/mob/living/carbon/get_unpleasant_foodtypes()
+	if(HAS_TRAIT(src, TRAIT_AGEUSIA))
+		return NONE
+	var/obj/item/organ/tongue/tongue = get_organ_slot(ORGAN_SLOT_TONGUE)
+	. = tongue.disliked_foodtypes
+
+//hl13 edit end
+
 /mob/living/carbon/get_disliked_foodtypes()
 	if(HAS_TRAIT(src, TRAIT_AGEUSIA))
 		return NONE
@@ -172,6 +184,8 @@
 		food_taste_reaction = FOOD_TOXIC
 	else if(foodtypes & get_disliked_foodtypes())
 		food_taste_reaction = FOOD_DISLIKED
+	else if(foodtypes & get_unpleasant_foodtypes())
+		food_taste_reaction = FOOD_UNPLEASANT
 	else if(foodtypes & get_liked_foodtypes())
 		food_taste_reaction = FOOD_LIKED
 	return food_taste_reaction

@@ -233,6 +233,18 @@
 	if(do_after(M, 0.5 SECONDS, interaction_key = DOAFTER_SOURCE_DOORS))
 		try_to_activate_door(M)
 
+/obj/machinery/door/unpowered/halflife/attack_basic_mob(mob/living/M)
+	. = ..()
+	if(M.mob_size >= MOB_SIZE_HUMAN && !locked)
+		if(!density) //closing is instant
+			try_to_activate_door()
+			playsound(src, 'hl13/sound/halflifeeffects/metal_door_break.ogg', 50, FALSE)
+		else
+			playsound(src, 'hl13/sound/halflifeeffects/metal_door_hit.ogg', 50, FALSE)
+			if(do_after(M, 8 SECONDS, interaction_key = DOAFTER_SOURCE_DOORS))
+				try_to_activate_door()
+				playsound(src, 'hl13/sound/halflifeeffects/metal_door_break.ogg', 50, FALSE)
+
 /obj/machinery/door/unpowered/halflife/attackby(obj/item/I, mob/living/M, params)
 	. = ..()
 	if(istype(I, /obj/item/hl2key))
@@ -332,13 +344,13 @@
 	door_type = "metal"
 	max_integrity = 950 //its metal
 	damage_deflection = 23
-	hitted_sound = 'hl13/sound//halflifeeffects/metal_door_hit.ogg'
+	hitted_sound = 'hl13/sound/halflifeeffects/metal_door_hit.ogg'
 	opensound = 'hl13/sound/machines/metaldoor_open.ogg'
 	closesound = 'hl13/sound/machines/metaldoor_close.ogg'
 
 /obj/machinery/door/unpowered/halflife/metal/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))
-		playsound(src, 'hl13/sound//halflifeeffects/metal_door_break.ogg', 100, TRUE)
+		playsound(src, 'hl13/sound/halflifeeffects/metal_door_break.ogg', 100, TRUE)
 		new /obj/item/stack/sheet/scrap_metal(loc)
 		for(var/obj/item/I in src)
 			I.forceMove(loc)

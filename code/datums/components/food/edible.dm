@@ -575,7 +575,15 @@ Behavior that's still missing from this component that original food items had t
 		gourmand.add_mood_event("toxic_food", /datum/mood_event/disgusting_food)
 		return
 
-	if(food_quality < 0)
+	//hl13 edit start
+	if(food_quality == -1)
+		to_chat(gourmand,span_notice("That was an unpleasant taste."))
+		gourmand.adjust_disgust(5 + 10 * fraction)
+		gourmand.add_mood_event("unpleasant_food", /datum/mood_event/displeasing_food)
+		return
+	//hl13 edit end
+
+	if(food_quality < -1)
 		to_chat(gourmand,span_notice("That didn't taste very good..."))
 		gourmand.adjust_disgust(11 + 15 * fraction)
 		gourmand.add_mood_event("gross_food", /datum/mood_event/gross_food)
@@ -625,6 +633,8 @@ Behavior that's still missing from this component that original food items had t
 				return LIKED_FOOD_QUALITY_CHANGE
 			if(FOOD_DISLIKED)
 				return DISLIKED_FOOD_QUALITY_CHANGE
+			if(FOOD_UNPLEASANT) //hl13 edit
+				return UNPLEASANT_FOOD_QUALITY_CHANGE //hl13 edit
 			if(FOOD_TOXIC)
 				return TOXIC_FOOD_QUALITY_THRESHOLD
 			if(FOOD_ALLERGIC)
@@ -638,6 +648,7 @@ Behavior that's still missing from this component that original food items had t
 		if(HAS_TRAIT(eater, TRAIT_AGEUSIA)) //if you can't taste it, it doesn't taste good
 			return 0
 		food_quality += DISLIKED_FOOD_QUALITY_CHANGE * count_matching_foodtypes(foodtypes, eater.get_disliked_foodtypes())
+		food_quality += UNPLEASANT_FOOD_QUALITY_CHANGE * count_matching_foodtypes(foodtypes, eater.get_unpleasant_foodtypes()) //hl13 edit
 		food_quality += LIKED_FOOD_QUALITY_CHANGE * count_matching_foodtypes(foodtypes, eater.get_liked_foodtypes())
 
 	return food_quality

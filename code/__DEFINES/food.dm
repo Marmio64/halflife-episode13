@@ -19,6 +19,7 @@
 #define BUGS (1<<18)
 #define GORE (1<<19)
 #define STONE (1<<20)
+#define XEN (1<<21) //hl13 edit
 
 DEFINE_BITFIELD(foodtypes, list(
 	"MEAT" = MEAT,
@@ -42,6 +43,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"BUGS" = BUGS,
 	"GORE" = GORE,
 	"STONE" = STONE,
+	"XEN" = XEN, //hl13 edit
 ))
 
 /// A list of food type names, in order of their flags
@@ -67,6 +69,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"BUGS", \
 	"GORE", \
 	"STONE", \
+	"XEN", \
 )
 
 /// IC meaning (more or less) for food flags
@@ -92,6 +95,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"Bugs", \
 	"Gore", \
 	"Rocks", \
+	"Xenian food", \
 )
 
 #define DRINK_REVOLTING 1
@@ -159,6 +163,7 @@ GLOBAL_LIST_INIT(food_buffs, list(
 ))
 
 /// Food quality change according to species diet
+#define UNPLEASANT_FOOD_QUALITY_CHANGE -1 //hl13 edit
 #define DISLIKED_FOOD_QUALITY_CHANGE -2
 #define LIKED_FOOD_QUALITY_CHANGE 2
 /// Threshold for food to give a toxic reaction
@@ -199,9 +204,10 @@ DEFINE_BITFIELD(food_flags, list(
 
 ///Food preference enums
 #define FOOD_LIKED 1
-#define FOOD_DISLIKED 2
-#define FOOD_TOXIC 3
-#define FOOD_ALLERGIC 4
+#define FOOD_UNPLEASANT 2 //hl13 edit
+#define FOOD_DISLIKED 3
+#define FOOD_TOXIC 4
+#define FOOD_ALLERGIC 5
 
 ///Venue reagent requirement
 #define VENUE_BAR_MINIMUM_REAGENTS 10

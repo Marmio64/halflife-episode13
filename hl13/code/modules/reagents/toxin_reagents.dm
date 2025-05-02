@@ -13,10 +13,10 @@
 		alien_weeds.take_damage(rand(20,40), BRUTE, 0) // Kills alien weeds pretty fast
 	else if(istype(O, /obj/structure/flora/xen))
 		var/obj/structure/flora/xen/xenflora = O
-		xenflora.take_damage(rand(40,75), BRUTE, 0)
+		xenflora.take_damage(rand(40,50), BRUTE, 0)
 	else if(istype(O, /obj/structure/flora/ash/stem_shroom))
 		var/obj/structure/flora/ash/stem_shroom/xenshroom = O
-		xenshroom.take_damage(rand(40,75), BRUTE, 0)
+		xenshroom.take_damage(rand(40,50), BRUTE, 0)
 	else if(istype(O, /obj/structure/spacevine))
 		var/obj/structure/spacevine/SV = O
 		SV.on_chem_effect(src)
