@@ -44,6 +44,14 @@
 
 	limb_integrity = 300
 
+/obj/item/clothing/head/helmet/halflife/military/poland
+	name = "polish military helmet"
+	desc = "An old world military helmet for protecting your noggin. A band in the colours of the Polish flag has been wrapped around it."
+	icon = 'hl13/icons/obj/clothing/hats.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
+	icon_state = "military_poland"
+	base_icon_state = "military_poland"
+
 /datum/armor/military_helmet
 	melee = 25
 	bullet = 20
@@ -59,11 +67,23 @@
 	desc = "An old world military helmet. Age and use has left the helmet in a less than ideal condition."
 	armor_type = /datum/armor/military_helmet/weak
 
+/obj/item/clothing/head/helmet/halflife/military/weak/poland
+	name = "cracked polish military helmet"
+	desc = "An old world military helmet. Age and use has left the helmet in a less than ideal condition. A band in the colours of the Polish flag has been wrapped around it."
+	icon_state = "military_poland"
+	base_icon_state = "military_poland"
+
 /obj/item/clothing/head/helmet/halflife/military/weak/crafted
 	name = "hand-made military helmet"
 	desc = "A hand made helmet formed from scraps and kevlar. It's not very good at protecting you in a meaningful way, but every bit counts."
 	icon_state = "steel_helmet"
 	base_icon_state = "steel_helmet"
+
+/obj/item/clothing/head/helmet/halflife/military/weak/crafted/poland
+	name = "improvised polish military helmet"
+	desc = "A hand made helmet formed from scraps and kevlar. It's not very good at protecting you in a meaningful way, but every bit counts. A band in the colours of the Polish flag has been wrapped around it."
+	icon_state = "steel_helmet_poland"
+	base_icon_state = "steel_helmet_poland"
 
 /datum/armor/military_helmet/weak
 	melee = 15
@@ -98,6 +118,12 @@
 	fire = 50
 	acid = 50
 	wound = 10
+
+/obj/item/clothing/head/helmet/halflife/milhelm/poland
+	name = "polish military helmet"
+	desc = "An old world military helmet for protecting your noggin. This one has a band in the colours of the Polish flag wrapped around it."
+	icon_state = "milhelm_poland"
+	base_icon_state = "milhelm_poland"
 
 /obj/item/clothing/head/helmet/halflife/headcrab
 	name = "headcrab helmet"
@@ -146,3 +172,13 @@
 	name = "old blue beret"
 	desc = "An old blue beret, moderately armored and adorned with a heavily faded united nations symbol."
 	greyscale_colors = "#5f7cb7#8a9ab0"
+
+/obj/item/clothing/head/helmet/halflife/military/plf_veteran
+	name = "modified altyn helmet"
+	desc = "An old world military helmet for protecting your noggin. A band in the colours of the Polish flag has been wrapped around it."
+	icon = 'hl13/icons/obj/clothing/hats.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
+	armor_type = /datum/armor/plf_veteran
+	icon_state = "poland_heavy"
+	base_icon_state = "poland_heavy"
+	repairable_by = /obj/item/stack/kevlar

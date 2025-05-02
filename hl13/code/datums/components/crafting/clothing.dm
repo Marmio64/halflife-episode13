@@ -141,3 +141,30 @@
 				/obj/item/clothing/suit/greenjacket = 1)
 	time = 12 SECONDS
 	category = CAT_ARMOR
+
+//no practical effects except for HOLY SHIT POLAND
+/datum/crafting_recipe/helmet_polandification
+	name = "Polish Military Helmet"
+	result = /obj/item/clothing/head/helmet/halflife/military/poland
+	reqs = list(/obj/item/stack/sheet/cloth = 2,
+				/obj/item/clothing/head/helmet/halflife/military = 1)
+	time = 5 SECONDS
+	category = CAT_ARMOR
+
+/datum/crafting_recipe/helmet_polandification/handmade
+	name = "Handmade Polish Military Helmet"
+	result = /obj/item/clothing/head/helmet/halflife/military/weak/crafted/poland
+	reqs = list(/obj/item/stack/sheet/cloth = 2,
+				/obj/item/clothing/head/helmet/halflife/military/weak/crafted = 1)
+
+/datum/crafting_recipe/helmet_polandification/cracked
+	name = "Cracked Polish Military Helmet"
+	result = /obj/item/clothing/head/helmet/halflife/milhelm/weak/poland
+	reqs = list(/obj/item/stack/sheet/cloth = 2,
+				/obj/item/clothing/head/helmet/halflife/milhelm/weak = 1)
+
+/datum/crafting_recipe/helmet_polandification/dark
+	name = "Tactical Polish Military Helmet"
+	result = /obj/item/clothing/head/helmet/halflife/milhelm/poland
+	reqs = list(/obj/item/stack/sheet/cloth = 2,
+			/obj/item/clothing/head/helmet/halflife/milhelm = 1)
