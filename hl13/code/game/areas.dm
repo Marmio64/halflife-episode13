@@ -192,6 +192,11 @@
 
 	first_time_text = "The Labor Union"
 
+/area/halflife/indoors/laborunion/dropship
+	name = "\improper Labor Union Dropship Pad"
+
+	first_time_text = "The Labor Union Dropship Pad"
+
 ////// FACTORY START
 
 /area/halflife/indoors/distributioncenter

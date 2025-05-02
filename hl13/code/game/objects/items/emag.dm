@@ -6,9 +6,9 @@
 	inhand_icon_state = null
 	var/emagging //are we currently emagging something
 	/// How many charges can the emag hold?
-	var/max_charges = 5
+	var/max_charges = 4
 	/// How many charges does the emag start with?
-	var/charges = 5
+	var/charges = 4
 
 /obj/item/card/emag/halflife/afterattack(atom/target, mob/user, proximity)
 	if(charges >= 1)
