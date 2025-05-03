@@ -71,10 +71,10 @@
 
 /obj/item/crowbar/large/freeman
 	desc = "You might've dropped this in black mesa. Or, er... what the hell is black mesa?"
-	force = 30
+	force = 25
 
 /obj/item/crowbar/large/freeman/extreme
-	force = 35
+	force = 32
 
 /obj/item/crowbar/large/emergency
 	name = "emergency crowbar"

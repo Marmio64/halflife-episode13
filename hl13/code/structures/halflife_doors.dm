@@ -317,14 +317,14 @@
 		return
 
 /obj/machinery/door/unpowered/halflife/proc/lock_toggle(mob/user)
-	if(open)
-		return
 	if(locked)
 		user.visible_message("<span class='warning'>[user] unlocks [src].</span>", \
 			"<span class='notice'>I unlock [src].</span>")
 		locked = 0
 		playsound(loc, 'hl13/sound//halflifeeffects/door_unlock.ogg', 40, TRUE)
 	else
+		if(open) //cant lock an open door, but you can unlock it
+			return
 		user.visible_message("<span class='warning'>[user] locks [src].</span>", \
 			"<span class='notice'>I lock [src].</span>")
 		locked = 1
