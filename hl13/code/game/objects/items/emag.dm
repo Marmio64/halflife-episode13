@@ -10,25 +10,23 @@
 	/// How many charges does the emag start with?
 	var/charges = 4
 
-/obj/item/card/emag/halflife/afterattack(atom/target, mob/user, proximity)
-	if(charges >= 1)
-		if(emagging)
-			return
-		if(!proximity && prox_check) //left in for badmins
-			return
-		emagging = TRUE
-		if(do_after(user, rand(5, 10) SECONDS, target))
-			charges--
-			if(prob(10))
-				to_chat(user, span_notice("[src] emits a zap, though appears to have failed in it's circumvention attempt."))
-				playsound(src, 'hl13/sound/effects/zap1.ogg', 20, 1)
-				emagging = FALSE
-				return
-			log_combat(user, target, "attempted to emag")
-			if(!target.emag_act(user, src) && !((charges + 1) > max_charges))
-				charges++
-			playsound(src, 'hl13/sound/effects/zap1.ogg', 20, 1)
-		emagging = FALSE
+/obj/item/card/emag/halflife/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
+	if(SHOULD_SKIP_INTERACTION(interacting_with, src, user))
+		return NONE // lets us put things in bags without trying to emag them
+	if(!can_emag(interacting_with, user))
+		return ITEM_INTERACT_BLOCKING
+	if(charges < 1)
+		to_chat(user, span_notice("It's out of charge, try recharging it with uranium."))
+		return
+	if(!do_after(user, rand(5, 10) SECONDS, interacting_with))
+		return
+	playsound(src, 'hl13/sound/effects/zap1.ogg', 20, 1)
+	log_combat(user, interacting_with, "attempted to emag")
+	if(interacting_with.emag_act(user, src))
+		SSblackbox.record_feedback("tally", "atom_emagged", 1, interacting_with.type)
+		charges--
+		return ITEM_INTERACT_SUCCESS
+	return NONE // In a perfect world this would be blocking, but this is not a perfect world
 
 /obj/item/card/emag/halflife/empty
 	charges = 0

@@ -24,6 +24,12 @@
 	item = /obj/item/clothing/glasses/thermal/syndi
 	cost = 5
 
+/datum/uplink_item/device_tools/satchel
+	name = "Satchel"
+	desc = "A plain leather satchel for carrying whatever goods you may need to."
+	item = /obj/item/storage/backpack/halflife/satchel
+	cost = 3
+
 /datum/uplink_item/device_tools/briefcase_launchpad
 	name = "Briefcase Launchpad"
 	desc = "A briefcase containing a launchpad, a device able to teleport items and people to and from targets up to eight tiles away from the briefcase. \

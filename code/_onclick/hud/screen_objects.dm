@@ -170,13 +170,16 @@
 /atom/movable/screen/jump/Click()
 	if(isliving(usr))
 		var/mob/living/L = usr
-		L.jump() // Call the jump function
+		var/tiles_to_clear = input(usr, "How many tiles do you want to clear in your jump? (Up to three)", "Jump Distance") as null|num
+		if(tiles_to_clear < 1) //give them a way to cancel
+			return
+		L.jump(tiles_to_clear+1) // Call the jump function.
 
 /mob/proc/jump(atom/target)
 	SEND_SIGNAL(src, COMSIG_MOB_THROW, target)
 	return
 
-/mob/living/carbon/jump()
+/mob/living/carbon/jump(tiles_to_clear = MAX_JUMP_DISTANCE)
 	var/atom/target = get_edge_target_turf(src, src.dir) //gets the user's direction
 	if(!target || !isturf(loc))
 		return
@@ -203,12 +206,12 @@
 
 	visible_message("<span class='danger'>[src] prepares to jump.</span>")
 
-	if(!do_after(src, 0.5 SECONDS, src))
+	var/adjusted_jump_range = clamp(tiles_to_clear, 2, 4)
+
+	if(!do_after(src, (adjusted_jump_range/4) SECONDS, src))
 		return
 
 	adjustStaminaLoss(25)
-
-	var/adjusted_jump_range = MAX_JUMP_DISTANCE
 
 	var/distance = get_dist(loc, target)
 	var/turf/adjusted_target = target

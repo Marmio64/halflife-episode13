@@ -241,8 +241,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/keyvendor, 32)
 	panel_type = "wallmed-panel"
 	density = FALSE
 	products = list(
-		/obj/item/food/meat/slab/synthmeat = 2,
-		/obj/item/food/meat/slab/meatproduct = 2,
+		/obj/item/food/meat/slab/synthmeat = 3,
+		/obj/item/food/meat/slab/meatproduct = 3,
 		/obj/item/reagent_containers/condiment/flour = 3,
 		/obj/item/reagent_containers/condiment/sugar = 1,
 		/obj/item/reagent_containers/condiment/rice = 2,
@@ -253,11 +253,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/keyvendor, 32)
 		/obj/item/food/flavorbar = 4,
 		/obj/item/reagent_containers/cup/soda_cans/breenwater/green = 4,
 		/obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 2,
-		/obj/item/food/grown/onion = 2,
-		/obj/item/food/grown/potato = 2,
+		/obj/item/food/grown/onion = 3,
+		/obj/item/food/grown/potato = 3,
 		/obj/item/food/grown/tomato = 3,
-		/obj/item/food/grown/corn = 2,
-		/obj/item/food/grown/garlic = 2,
+		/obj/item/food/grown/corn = 3,
+		/obj/item/food/grown/garlic = 3,
 		/obj/item/food/grown/cabbage = 2,
 	)
 	refill_canister = /obj/item/vending_refill/food_dispensery

@@ -172,7 +172,7 @@
 			user.visible_message(span_notice("[user] finds nothing inside the [src]."), \
 				span_notice("Nothing good..."))
 		searched = TRUE
-		user.mind?.adjust_experience(/datum/skill/scavenging, 20)
+		user.mind?.adjust_experience(/datum/skill/scavenging, 25)
 
 		if(iscarbon(user))
 			var/mob/living/carbon/C = user

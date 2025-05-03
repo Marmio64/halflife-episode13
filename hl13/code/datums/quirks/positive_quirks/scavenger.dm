@@ -5,12 +5,12 @@
 	value = 4
 	medical_record_text = "Patient is an adept scavenger."
 
-/datum/quirk/athletic/add()
+/datum/quirk/scavenger/add()
 	if(ishuman(quirk_holder))
 		var/mob/living/carbon/human/subject = quirk_holder
-		subject.mind?.adjust_experience(/datum/skill/scavenging, 750)
+		subject.mind?.adjust_experience(/datum/skill/scavenging, 900)
 
-/datum/quirk/athletic/remove()
+/datum/quirk/scavenger/remove()
 	if(ishuman(quirk_holder))
 		var/mob/living/carbon/human/subject = quirk_holder
-		subject.mind?.adjust_experience(/datum/skill/scavenging, 750)
+		subject.mind?.adjust_experience(/datum/skill/scavenging, 900)
