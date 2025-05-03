@@ -115,7 +115,7 @@
 	)
 
 	initial_wanteds = list(
-		/obj/item/factory_construction/full_container = list(PAYCHECK_CREW * 0.75, 15, ""),
+		/obj/item/factory_construction/full_container = list(PAYCHECK_CREW, 15, ""),
 		/obj/item/food/rationpack = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/food/meat/steak = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/food/pierogi_ration = list(PAYCHECK_CREW * 2.5, 10, ""),

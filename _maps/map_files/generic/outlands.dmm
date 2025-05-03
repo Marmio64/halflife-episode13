@@ -2514,15 +2514,14 @@
 /area/halflife/indoors/sewer)
 "xt" = (
 /obj/structure/table/halflife/metal/alt,
-/obj/item/wrench{
-	pixel_x = 5;
-	pixel_y = 11
+/obj/item/weldingtool/halflife{
+	pixel_y = 9
 	},
-/obj/item/screwdriver{
-	pixel_x = -2;
-	pixel_y = 7
+/obj/item/screwdriver/halflife{
+	pixel_y = 10;
+	pixel_x = -7
 	},
-/obj/item/weldingtool,
+/obj/item/wrench/halflife,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/laborcamp/security)
 "xw" = (
@@ -4436,6 +4435,7 @@
 	pixel_x = -3;
 	pixel_y = 9
 	},
+/obj/item/screwdriver/halflife,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
 "QL" = (

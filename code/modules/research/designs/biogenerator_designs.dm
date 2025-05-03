@@ -66,12 +66,12 @@
 	make_reagent = /datum/reagent/consumable/sugar
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_FOOD)
 
-/datum/design/monkey_cube
-	name = "Monkey Cube"
-	id = "mcube"
+/datum/design/synthmeat
+	name = "Synthetic Meat"
+	id = "synthmeat"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 60)
-	build_path = /obj/item/food/monkeycube
+	materials = list(/datum/material/biomass = 20)
+	build_path = /obj/item/food/meat/slab/synthmeat
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_FOOD)
 
 /datum/design/seaweed_sheet

@@ -155,17 +155,24 @@
 	user.visible_message(span_notice("[user] begins to sift through the [src] for anything useful."), \
 		span_notice("You begin to dig through the [src] for something interesting."))
 	if(do_after(user, 7 SECONDS, src))
-		if(prob(loot_chance))
+		if(prob(loot_chance + (user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER))))
 			user.visible_message(span_notice("[user] finds something inside the [src]."), \
 				span_notice("You find something interesting inside the [src]."))
 			if(loot_amount == 1)
-				new /obj/effect/spawner/random/halflife/loot(loc, 1)
+				if(prob(user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER)))
+					new /obj/effect/spawner/random/halflife/loot/uncommon(loc, 1)
+				else
+					new /obj/effect/spawner/random/halflife/loot(loc, 1)
 			else
-				new /obj/effect/spawner/random/halflife/loot/two(loc, 1)
+				if(prob(user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER)))
+					new /obj/effect/spawner/random/halflife/loot/uncommon/two(loc, 1)
+				else
+					new /obj/effect/spawner/random/halflife/loot/two(loc, 1)
 		else
 			user.visible_message(span_notice("[user] finds nothing inside the [src]."), \
 				span_notice("Nothing good..."))
 		searched = TRUE
+		user.mind?.adjust_experience(/datum/skill/scavenging, 25)
 
 		if(iscarbon(user))
 			var/mob/living/carbon/C = user
