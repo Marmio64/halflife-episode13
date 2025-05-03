@@ -452,7 +452,7 @@
 
 /obj/item/storage/pill_bottle
 	name = "pill bottle"
-	desc = "It's an airtight container for storing medication."
+	desc = "A glass bottle used for putting pills or other things inside."
 	icon_state = "pill_canister"
 	icon = 'icons/obj/medical/chemical.dmi'
 	inhand_icon_state = "contsolid"
