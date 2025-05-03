@@ -202,6 +202,15 @@
 	inhand_icon_state = "leather_backpack"
 	storage_type = /datum/storage/backpack/halflife
 
+/obj/item/storage/backpack/duffelbag/halflife
+	name = "duffel bag"
+	desc = "A large, rugged duffel-bag that looks like it may have once belonged to the armed forces."
+	icon = 'hl13/icons/obj/clothing/backpack.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/back.dmi'
+	icon_state = "military_duffel"
+	inhand_icon_state = "military_duffel"
+	storage_type = /datum/storage/duffel
+
 /obj/item/storage/backpack/halflife/satchel
 	name = "satchel"
 	desc = "A fine looking, though old leather satchel."
@@ -230,3 +239,4 @@
 /datum/storage/satchel/halflife
 	max_total_storage = 15
 	max_slots = 15
+

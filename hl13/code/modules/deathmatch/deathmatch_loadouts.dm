@@ -302,3 +302,55 @@
 /datum/outfit/deathmatch_loadout/eldervortigaunt/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/vortalcombat.ogg'
 	H.set_species(/datum/species/vortigaunt/elder)
+
+//Poland Jumpscare - PLF rebel outfits
+
+/datum/outfit/deathmatch_loadout/polish_veteran
+	name = "Deathmatch: PLF Veteran"
+	display_name = "Polish Liberation Front Veteran"
+	desc = "A heavily-armed, heavily-armoured soldier of the Polish army. Armed with an AK-47, multiple grenades, and immense explosive resistance, the only disadvantage you have is immensely low speed thanks to your duffel-bag."
+	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
+	mask = /obj/item/clothing/mask/gas/hl2/military
+	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran //again: walking fucking tank. dont fuck with him.
+	uniform = /obj/item/clothing/under/syndicate/camo
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
+	gloves = /obj/item/clothing/gloves/combat //DISPATCH, SHOCKING THAT HATCH ISNT GONNA FUCKING STOP THE POOTIS YOU DINGUS
+	suit_store = /obj/item/gun/ballistic/automatic/ak47
+	back = /obj/item/storage/backpack/duffelbag/halflife //you are going to fucking die against these guys. trust me.
+	r_pocket = /obj/item/flashlight/seclite
+	shoes = /obj/item/clothing/shoes/boots
+	backpack_contents = list(
+		/obj/item/grenade/c4 = 1,
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/crowbar/large = 1, //sometimes C4 is too much
+		/obj/item/hl13_small_flag/poland/telescopic = 1, //POLAND POLAND POLAND
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3, //I refuse death by the power of DRUGS!!!
+	)
+
+/datum/outfit/deathmatch_loadout/polish_corporal
+	name = "Deathmatch: PLF Corporal"
+	display_name = "Polish Liberation Front Corporal"
+	desc = "You're in about the same position as a Conscript, but trades the grenade for a good helmet and a survival knife, as well as tankier armour."
+	suit = /obj/item/clothing/suit/armor/halflife/milvest //NOW we're talking.
+	mask = /obj/item/clothing/mask/gas/hl2/military
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
+	suit_store = /obj/item/gun/ballistic/automatic/servicerifle //now you're an actual, trusted soldier, so we can give you good weapons
+	l_pocket = /obj/item/knife/combat/survival
+	head = /obj/item/clothing/head/helmet/halflife/military/poland //again: actual military shit. the PRF only send these guys when they WANT to fuck some shit up.
+	r_pocket = /obj/item/grenade/c4
+	uniform = /obj/item/clothing/under/syndicate/camo
+	shoes = /obj/item/clothing/shoes/boots
+
+/datum/outfit/deathmatch_loadout/polish_medic
+	name = "Deathmatch: PLF Medic"
+	display_name = "Polish Liberation Front Medic"
+	desc = "While you're lightly-armed and lightly-armoured, you have good medical supplies, and therefore good staying power. Just make sure to steal a proper gun when you get the chance."
+	uniform = /obj/item/clothing/under/citizen/refugee
+	suit = /obj/item/clothing/suit/armor/civilprotection/medical //stolen gear pretty much. if you arent competent we dont give you the good shit.
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/medic
+	mask = /obj/item/clothing/mask/gas/hl2/military
+	accessory = /obj/item/clothing/accessory/armband/medblue //DON'T SHOOT I'M A MEDIC
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	r_pocket = /obj/item/flashlight/seclite
+	shoes = /obj/item/clothing/shoes/boots

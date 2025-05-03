@@ -1,5 +1,8 @@
 //Unique Rebel faction gear
 //Everything from the lowest mobilised refugee to the highest Polish commander
+//addust here: for some fucking reason, build.cmd is pretending this file doesnt exist right now.. by the time this comment hits master, this behaviour SHOULD stop. if it recurs;
+//hours wasted wrestling build.cmd: 1
+//CURRENT FIX is delete the dmb (not dme)
 
 /datum/outfit/resistance_faction
 	name = "Generic Resistance"
@@ -69,7 +72,6 @@
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
-	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit, src)
 	update_appearance(UPDATE_ICON)
 
 
@@ -78,7 +80,7 @@
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1/service, src)
 	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
-	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/cup/glass/bottle/vodka, src)
 	update_appearance(UPDATE_ICON)
 
@@ -87,7 +89,7 @@
 	SSwardrobe.provide_type(/obj/item/ammo_box/colta357, src)
 	SSwardrobe.provide_type(/obj/item/melee/baton, src)
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
-	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/cup/glass/bottle/vodka, src)
 	update_appearance(UPDATE_ICON)
 
@@ -97,7 +99,7 @@
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/ak47, src)
 	SSwardrobe.provide_type(/obj/item/melee/baton, src)
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
-	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	update_appearance(UPDATE_ICON) //you may have noticed this doesnt come with vodka. that is because the operator drank it on the way to city 13 and threw it at a passing hunter, killing it instantly
 
 /obj/item/clothing/head/beret/sec/poland
@@ -111,8 +113,9 @@
 	suit = /obj/item/clothing/suit/armor/civilprotection //stolen gear pretty much. if you arent competent we dont give you the good shit.
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
-	head = /obj/item/clothing/head/helmet/halflife/military/weak //you get one (1) bargain bin helmet
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/poland //you get one (1) bargain bin helmet
 	mask = /obj/item/clothing/mask/gas/hl2/swat
+	ears = /obj/item/radio/headset/syndicate/alt //you get a LITTLE military surplus. as a treat.
 
 /datum/outfit/resistance_faction/polish/medic
 	name = "Polish Revolutionary Front Medic"
@@ -121,6 +124,26 @@
 	suit = /obj/item/clothing/suit/armor/civilprotection/medical //stolen gear pretty much. if you arent competent we dont give you the good shit.
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/medic
 	accessory = /obj/item/clothing/accessory/armband/medblue //DON'T SHOOT I'M A MEDIC
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+
+/datum/outfit/resistance_faction/polish/sapper
+	name = "Polish Revolutionary Front Sapper"
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar //now we're talking. actual pre-war armour.
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	belt = /obj/item/storage/belt/utility/full
+	l_pocket = /obj/item/knife/combat/survival
+	head = /obj/item/clothing/head/helmet/halflife/military/poland //REAL helmet for REAL men.
+	gloves = /obj/item/clothing/gloves/combat //military engineer man
+	glasses = /obj/item/clothing/glasses/welding
+	back = /obj/item/storage/backpack/halflife/satchel/military
+	backpack_contents = list(
+		/obj/item/grenade/c4 = 2,
+		/obj/item/lockpick/combine = 1, //stolen lmao
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1, //stay in the fight since important
+		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/card/emag/halflife = 1,
+	)
 
 /datum/outfit/resistance_faction/polish/competent
 	name = "Polish Revolutionary Front Private First Class"
@@ -128,7 +151,8 @@
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle //now you're an actual, trusted soldier, so we can give you good weapons
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
 	l_pocket = /obj/item/knife/combat/survival
-	head = /obj/item/clothing/head/helmet/halflife/military //REAL helmet for REAL men.
+	head = /obj/item/clothing/head/helmet/halflife/military/poland //REAL helmet for REAL men.
+	uniform = /obj/item/clothing/under/syndicate/camo
 
 /datum/outfit/resistance_faction/polish/strong
 	name = "Polish Revolutionary Front Corporal"
@@ -136,17 +160,19 @@
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle //now you're an actual, trusted soldier, so we can give you good weapons
 	l_pocket = /obj/item/knife/combat/survival
-	head = /obj/item/clothing/head/helmet/halflife/military //again: actual military shit. the PRF only send these guys when they WANT to fuck some shit up.
+	head = /obj/item/clothing/head/helmet/halflife/military/poland //again: actual military shit. the PRF only send these guys when they WANT to fuck some shit up.
 	r_pocket = /obj/item/grenade/c4
+	uniform = /obj/item/clothing/under/syndicate/camo
 
 /datum/outfit/resistance_faction/polish/commander
 	name = "Polish Revolutionary Front Platoon Leader"
-	suit = /obj/item/clothing/suit/armor/vest/russian_coat //big man gets big coat. big man DOES NOT go on the frontlines. you STAY IN THE BACK AND TALK TO YOUR SOLDIERS GOD FUCKING DAMNIT.
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy //big man gets big slow vest. big man DOES NOT go on the frontlines. you STAY IN THE BACK AND TALK TO YOUR SOLDIERS GOD FUCKING DAMNIT.
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/revolver
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
 	ears = /obj/item/radio/headset/syndicate/alt/leader //LEADER. BIG MAN. IMPORTANT.
 	head = /obj/item/clothing/head/beret/sec/poland
 	l_pocket = /obj/item/binoculars
+	uniform = /obj/item/clothing/under/syndicate/camo
 
 /datum/outfit/resistance_faction/polish/commander/flagbearer
 	name = "Polish Revolutionary Front Platoon Leader (Flagbearer)"
@@ -154,12 +180,12 @@
 
 /datum/outfit/resistance_faction/polish/fuck_your_shit
 	name = "Polish Revolutionary Front Veteran" //these guys are the most most experienced of the polish revolutionary front. if they are in city 13, you duck and cover. they are walking fucking dreadnoughts. do not call on them in vain.
-	head = /obj/item/clothing/head/helmet/halflife/milhelm
+	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
 	suit = /obj/item/clothing/suit/armor/halflife/milvest //again: walking fucking tank. dont fuck with him.
 	uniform = /obj/item/clothing/under/syndicate/camo
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
 	suit_store = /obj/item/gun/ballistic/automatic/ak47
-	back = /obj/item/storage/backpack/halflife/satchel/military //you are going to fucking die against thesse guys. trust me.
+	back = /obj/item/storage/backpack/halflife/satchel/military //you are going to fucking die against these guys. trust me.
 	ears = /obj/item/radio/headset/syndicate/alt/leader //I AM JOHN POLAND, AND THIS IS MY MESSAGE; THE COMBINE WILL BURN, AND THE BANNER OF POLAND WILL BE RAISED
 	backpack_contents = list(
 		/obj/item/grenade/c4 = 1,
@@ -169,6 +195,27 @@
 		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
 		/obj/item/crowbar/large = 1, //sometimes C4 is too much
 		/obj/item/hl13_small_flag/poland/telescopic = 1, //POLAND POLAND POLAND
+	)
+
+/datum/outfit/resistance_faction/polish/fuck_your_shit/dreadnought
+	name = "Polish Revolutionary Front Veteran Heavy" //JESUS FUCKING CHRIST THESE GUYS HOLY SHIT BAHAHAHAHHAHAHAHAHAHHAHAA. YOU'RE FUCKED LMAO.
+	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
+	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran //again: walking fucking tank. dont fuck with him.
+	uniform = /obj/item/clothing/under/syndicate/camo
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
+	gloves = /obj/item/clothing/gloves/combat //DISPATCH, SHOCKING THAT HATCH ISNT GONNA FUCKING STOP THE POOTIS YOU DINGUS
+	suit_store = /obj/item/gun/ballistic/automatic/ak47
+	back = /obj/item/storage/backpack/duffelbag/halflife //you are going to fucking die against these guys. trust me.
+	ears = /obj/item/radio/headset/syndicate/alt/leader //I AM JOHN POLAND, AND THIS IS MY MESSAGE; THE COMBINE WILL BURN, AND THE BANNER OF POLAND WILL BE RAISED
+	backpack_contents = list(
+		/obj/item/grenade/c4 = 1,
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/megaphone = 1,
+		/obj/item/food/canned/halflife/beans = 2, //stay behind enemy lines for as long as possible
+		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
+		/obj/item/crowbar/large = 1, //sometimes C4 is too much
+		/obj/item/hl13_small_flag/poland/telescopic = 1, //POLAND POLAND POLAND
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3, //I refuse death by the power of DRUGS!!!
 	)
 
 //POST-SOVIET FACTIONS: PEOPLE'S LIBERATION FRONT + EASTERN REVOLUTIONARY FRONT
@@ -214,6 +261,7 @@
 	head = /obj/item/clothing/head/helmet/halflife/milhelm
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
 	back = /obj/item/storage/backpack/halflife/satchel/military
+	ears = /obj/item/radio/headset/syndicate/alt
 	backpack_contents = list(
 		/obj/item/grenade/c4 = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,

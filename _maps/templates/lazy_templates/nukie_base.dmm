@@ -164,8 +164,17 @@
 "fA" = (
 /turf/open/floor/plating/ground/grass,
 /area/centcom/halflife/rebel)
+"fI" = (
+/obj/effect/turf_decal/bot_white,
+/obj/structure/closet/crate/halflife,
+/obj/item/stack/bulletcasings{
+	amount = 50
+	},
+/obj/item/stack/sheet/iron/fifty,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/centcom/halflife/rebel)
 "gf" = (
-/obj/structure/halflife/barrel/single/flammable/one,
+/obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
 "gs" = (
@@ -173,6 +182,12 @@
 	dir = 1
 	},
 /turf/open/floor/plating/indoor/metal/industrial,
+/area/centcom/halflife/rebel)
+"gz" = (
+/obj/structure/halflife/large_pipe/ground{
+	dir = 8
+	},
+/turf/open/halflife/water/medium,
 /area/centcom/halflife/rebel)
 "gJ" = (
 /turf/open/floor/plating/indoor/concrete,
@@ -187,6 +202,8 @@
 /obj/item/clothing/accessory/armband/medblue,
 /obj/item/reagent_containers/pill/patch/medkit,
 /obj/structure/closet/halflife,
+/obj/item/radio/headset/syndicate/alt,
+/obj/item/radio/headset/syndicate/alt,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "hp" = (
@@ -236,6 +253,26 @@
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/lino,
 /area/centcom/halflife/rebel)
+"iv" = (
+/obj/structure/flora/tree/halflife/pine/style_random,
+/obj/effect/spawner/random/halflife/plant_spawner,
+/turf/open/floor/plating/ground/grass,
+/area/centcom/halflife/rebel)
+"jc" = (
+/obj/effect/turf_decal/bot_white,
+/obj/structure/closet/crate/halflife,
+/obj/item/weaponcrafting/receiver,
+/obj/item/weaponcrafting/receiver,
+/obj/item/weaponcrafting/receiver,
+/obj/item/weaponcrafting/receiver,
+/obj/item/stack/sticky_tape,
+/obj/item/stack/sticky_tape,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/centcom/halflife/rebel)
+"ji" = (
+/obj/effect/spawner/random/halflife/plant_spawner,
+/turf/open/floor/plating/ground/dirt,
+/area/centcom/halflife/rebel)
 "jo" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 8
@@ -272,6 +309,12 @@
 /obj/item/clothing/suit/armor/civilprotection,
 /obj/item/clothing/head/beret/durathread/unitednations,
 /obj/structure/closet/halflife,
+/obj/item/radio/headset/syndicate/alt,
+/obj/item/radio/headset/syndicate/alt,
+/obj/item/clothing/under/syndicate/camo,
+/obj/item/clothing/suit/armor/halflife/kevlar,
+/obj/item/clothing/head/helmet/halflife/military/poland,
+/obj/item/clothing/mask/gas/hl2/military,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "kJ" = (
@@ -352,6 +395,10 @@
 /obj/item/ammo_box/magazine/usp9mm,
 /obj/item/gun/ballistic/automatic/pistol/usp,
 /obj/item/gun/ballistic/automatic/pistol/usp,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
+"mq" = (
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "ms" = (
@@ -486,6 +533,14 @@
 /area/centcom/halflife/rebel)
 "rS" = (
 /obj/structure/table/halflife/metal/grate,
+/obj/item/melee/sledgehammer{
+	pixel_x = 5;
+	pixel_y = 11
+	},
+/obj/item/melee/sledgehammer{
+	pixel_x = 0;
+	pixel_y = 13
+	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
 "so" = (
@@ -506,7 +561,10 @@
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "tn" = (
-/obj/structure/halflife/trash/glass/cans,
+/obj/structure/halflife/trash/glass/cans{
+	pixel_x = 5;
+	pixel_y = 9
+	},
 /obj/structure/table/halflife/wood,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -541,6 +599,10 @@
 /obj/effect/light_emitter/fake_outdoors,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/centcom/halflife/rebel)
+"vq" = (
+/obj/structure/table/halflife/no_smooth/large/crafting/workbench,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/centcom/halflife/rebel)
 "vx" = (
 /obj/effect/light_emitter/fake_outdoors,
 /obj/effect/turf_decal/siding/thinplating,
@@ -563,6 +625,11 @@
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/centcom/halflife/rebel)
+"xQ" = (
+/obj/effect/light_emitter/fake_outdoors,
+/obj/effect/spawner/random/halflife/plant_spawner,
+/turf/open/floor/plating/ground/dirt/alt,
 /area/centcom/halflife/rebel)
 "ye" = (
 /obj/effect/turf_decal/siding/thinplating{
@@ -645,16 +712,30 @@
 	},
 /turf/open/floor/plating/indoor/tile/navy,
 /area/centcom/halflife/rebel)
+"Ci" = (
+/obj/effect/spawner/random/halflife/plant_spawner,
+/turf/open/floor/plating/ground/dirt/alt,
+/area/centcom/halflife/rebel)
 "CM" = (
 /obj/item/clothing/under/citizen/refugee,
 /obj/item/clothing/suit/armor/civilprotection,
 /obj/item/clothing/head/beanie/black,
 /obj/structure/closet/halflife,
+/obj/item/clothing/head/helmet/halflife/military/poland,
+/obj/item/clothing/under/syndicate/camo,
+/obj/item/clothing/suit/armor/halflife/kevlar,
+/obj/item/radio/headset/syndicate/alt/leader,
+/obj/item/clothing/mask/gas/hl2/military,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
 "Db" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/ground/dirt/alt,
+/area/centcom/halflife/rebel)
+"DH" = (
+/obj/effect/light_emitter/fake_outdoors,
+/obj/effect/spawner/random/halflife/plant_spawner,
+/turf/open/floor/plating/ground/grass,
 /area/centcom/halflife/rebel)
 "DO" = (
 /obj/structure/railing/halflife/solo,
@@ -665,6 +746,10 @@
 	pixel_y = 30
 	},
 /turf/open/floor/plating/indoor/sterilesquares,
+/area/centcom/halflife/rebel)
+"EP" = (
+/obj/effect/spawner/random/halflife/plant_spawner,
+/turf/open/floor/plating/ground/grass,
 /area/centcom/halflife/rebel)
 "FN" = (
 /obj/structure/bed/halflife/bedframe/wood,
@@ -766,7 +851,7 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
 "KH" = (
-/obj/structure/halflife/barrel/single/flammable/two,
+/obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
 "KU" = (
@@ -783,6 +868,14 @@
 	},
 /obj/machinery/iv_drip,
 /turf/open/floor/plating/indoor/sterilesquares,
+/area/centcom/halflife/rebel)
+"LN" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/centcom/halflife/rebel)
+"LT" = (
+/obj/structure/table/halflife/no_smooth/large/crafting/ammobench,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
 "Mb" = (
 /mob/living/basic/halflife/zombie,
@@ -811,8 +904,20 @@
 	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
+"MX" = (
+/obj/machinery/door/unpowered/halflife/metal/red{
+	keylock = 1;
+	lockid = "rebel_trainstation";
+	locked = 1
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/centcom/halflife/rebel)
 "Ni" = (
 /obj/structure/table/halflife/wood,
+/obj/item/crowbar/large{
+	pixel_x = 9;
+	pixel_y = 12
+	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "NP" = (
@@ -869,7 +974,10 @@
 	},
 /obj/structure/halflife/combine/siphon{
 	name = "outdated water siphon";
-	desc = "An old, outdated water siphon."
+	desc = "An old, outdated water siphon.";
+	layer = 3;
+	pixel_x = -4;
+	pixel_y = 0
 	},
 /turf/open/floor/plating/indoor/concrete,
 /area/centcom/halflife/rebel)
@@ -940,6 +1048,24 @@
 /obj/structure/halflife/rug/yellow,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
+"TK" = (
+/obj/structure/table/halflife/no_smooth/large/crafting/tinkerbench,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/centcom/halflife/rebel)
+"TV" = (
+/obj/structure/table/halflife/no_smooth/large/crafting/armorbench,
+/obj/item/stack/kevlar/five{
+	pixel_x = 2;
+	pixel_y = 14
+	},
+/obj/item/stack/kevlar/five{
+	pixel_x = 9;
+	pixel_y = 11
+	},
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/centcom/halflife/rebel)
 "TX" = (
 /obj/structure/sink/halflife,
 /obj/structure/mirror/halflife{
@@ -1000,6 +1126,14 @@
 	},
 /turf/open/floor/plating/indoor/concrete,
 /area/centcom/halflife/rebel)
+"Xj" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/storage/toolbox/syndicate{
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/centcom/halflife/rebel)
 "XC" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -1011,6 +1145,10 @@
 /turf/open/floor/plating/ground/brickroad{
 	dir = 1
 	},
+/area/centcom/halflife/rebel)
+"Zt" = (
+/obj/structure/table/halflife/no_smooth/large/crafting/weaponbench,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
 "ZF" = (
 /obj/machinery/deepfryer,
@@ -1780,10 +1918,10 @@ qp
 qp
 qp
 Gl
-sU
-sU
-sU
-sU
+Gl
+Gl
+Gl
+Gl
 sU
 sU
 sU
@@ -1881,11 +2019,11 @@ bY
 qZ
 bL
 qp
+qp
+qp
+qp
+qp
 Gl
-sU
-sU
-sU
-sU
 sU
 sU
 sU
@@ -1983,11 +2121,11 @@ qZ
 qZ
 cN
 qp
+Zt
+pY
+fI
+qp
 Gl
-sU
-sU
-sU
-sU
 sU
 sU
 sU
@@ -2066,7 +2204,7 @@ Sv
 Sv
 Sv
 Sv
-Sv
+gz
 Sv
 NP
 NP
@@ -2085,11 +2223,11 @@ Le
 qZ
 ln
 qp
+pY
+pY
+jc
+qp
 Gl
-sU
-sU
-sU
-sU
 sU
 sU
 sU
@@ -2187,11 +2325,11 @@ EC
 qZ
 bL
 qp
+LT
+pY
+TV
+qp
 Gl
-sU
-sU
-sU
-sU
 sU
 sU
 sU
@@ -2289,11 +2427,11 @@ qp
 Pw
 qp
 qp
+pY
+pY
+pY
+qp
 Gl
-sU
-sU
-sU
-sU
 sU
 sU
 sU
@@ -2391,11 +2529,11 @@ pc
 nz
 nz
 qp
+TK
+pY
+vq
+qp
 Gl
-sU
-sU
-sU
-sU
 sU
 sU
 sU
@@ -2493,11 +2631,11 @@ hS
 nz
 nz
 qp
+pY
+pY
+pY
+qp
 Gl
-sU
-sU
-sU
-sU
 sU
 sU
 sU
@@ -2594,11 +2732,11 @@ qp
 pc
 nz
 nz
+MX
+pY
+pY
+LN
 qp
-Gl
-Gl
-Gl
-Gl
 Gl
 sU
 sU
@@ -2800,7 +2938,7 @@ nz
 nz
 qp
 yB
-rS
+Xj
 rS
 qp
 Gl
@@ -2878,7 +3016,7 @@ Ye
 Ye
 Ye
 Ye
-Ye
+ji
 Ye
 qp
 SJ
@@ -2976,7 +3114,7 @@ sU
 Gl
 qp
 Ye
-Ye
+ji
 Ye
 Ye
 Ye
@@ -3182,7 +3320,7 @@ qp
 Ye
 Ye
 eK
-Ye
+ji
 Ye
 Ye
 eK
@@ -3299,7 +3437,7 @@ Ye
 Ye
 Uk
 Db
-dw
+du
 qp
 qp
 qp
@@ -3383,7 +3521,7 @@ sU
 sU
 Gl
 qp
-fA
+EP
 Ye
 Ye
 Ye
@@ -3407,7 +3545,7 @@ so
 fx
 cw
 qp
-nz
+mq
 nz
 nz
 qp
@@ -3590,7 +3728,7 @@ qp
 fA
 fA
 eK
-Ye
+ji
 pB
 Ye
 eK
@@ -3894,7 +4032,7 @@ sU
 Gl
 qp
 fA
-fA
+EP
 fA
 Ye
 Ye
@@ -4000,7 +4138,7 @@ fA
 dV
 Ye
 Ye
-Ye
+ji
 eK
 bT
 dw
@@ -4100,7 +4238,7 @@ qp
 fA
 fA
 Ye
-Ye
+ji
 dw
 Ye
 Ye
@@ -4305,7 +4443,7 @@ fA
 fA
 Ye
 Ye
-dw
+Ci
 Ye
 Ye
 bT
@@ -4403,7 +4541,7 @@ sU
 sU
 Gl
 qp
-fA
+EP
 fA
 eK
 Ye
@@ -4610,7 +4748,7 @@ qp
 fA
 fA
 Ye
-Ye
+ji
 dw
 dw
 Ye
@@ -4709,7 +4847,7 @@ sU
 sU
 Gl
 qp
-mb
+iv
 fA
 Ye
 Ye
@@ -4815,7 +4953,7 @@ fA
 fA
 eK
 Ye
-Ye
+ji
 Ye
 eK
 bT
@@ -4915,7 +5053,7 @@ Gl
 qp
 fA
 fA
-Ye
+ji
 Ye
 Ye
 Sj
@@ -5015,7 +5153,7 @@ sU
 sU
 Gl
 qp
-fA
+EP
 fA
 Ye
 Ye
@@ -5428,7 +5566,7 @@ Ye
 Ye
 Ye
 Ye
-Ye
+ji
 Ye
 bT
 Ye
@@ -5525,7 +5663,7 @@ sU
 sU
 Gl
 qp
-Ye
+ji
 Ye
 Ye
 Ye
@@ -5629,7 +5767,7 @@ Gl
 qp
 Ye
 dw
-du
+xQ
 dw
 dw
 Ye
@@ -6038,7 +6176,7 @@ qp
 Ye
 Ye
 eK
-Ye
+ji
 dw
 Ye
 eK
@@ -6155,7 +6293,7 @@ Ye
 Ye
 Uk
 Uk
-Ye
+eK
 qp
 Gl
 sU
@@ -6342,7 +6480,7 @@ sU
 Gl
 qp
 zy
-Ye
+ji
 Ye
 Ye
 Ye
@@ -6357,7 +6495,7 @@ Ye
 lg
 Ye
 Ye
-Ye
+ji
 Ye
 fA
 qp
@@ -6446,7 +6584,7 @@ qp
 Ye
 Ye
 eK
-Ye
+ji
 Ye
 Ye
 eK
@@ -6563,7 +6701,7 @@ Ye
 Ye
 Ye
 fA
-fA
+EP
 qp
 Gl
 sU
@@ -6651,7 +6789,7 @@ fA
 Ye
 Ye
 Ye
-Ye
+ji
 Ye
 Ye
 bT
@@ -6753,7 +6891,7 @@ fA
 Ye
 Ye
 Ye
-dw
+Ci
 Ye
 Ye
 bT
@@ -6852,7 +6990,7 @@ sU
 Gl
 qp
 fA
-Ye
+ji
 eK
 Ye
 dw
@@ -6867,7 +7005,7 @@ Sc
 lg
 uT
 Ye
-Ye
+ji
 fA
 fA
 qp
@@ -6971,7 +7109,7 @@ Ye
 Ye
 Ye
 fA
-fA
+EP
 qp
 Gl
 sU
@@ -7059,7 +7197,7 @@ fA
 fA
 Ye
 Ye
-Ye
+ji
 Ye
 Ye
 bT
@@ -7173,7 +7311,7 @@ Ye
 lg
 Ye
 Ye
-fA
+EP
 fA
 fA
 qp
@@ -7259,7 +7397,7 @@ sU
 sU
 Gl
 qp
-fA
+EP
 fA
 eK
 Ye
@@ -7466,7 +7604,7 @@ qp
 fA
 fA
 fA
-Ye
+ji
 dw
 dw
 Ye
@@ -7582,7 +7720,7 @@ lg
 Ye
 Ye
 fA
-fA
+EP
 fA
 qp
 Gl
@@ -7673,7 +7811,7 @@ fA
 Ye
 dw
 dw
-dw
+Ci
 Ye
 Ye
 dw
@@ -7770,7 +7908,7 @@ sU
 Gl
 qp
 fA
-fA
+EP
 Ye
 Ye
 Ye
@@ -7978,7 +8116,7 @@ fA
 Ye
 Ye
 Ye
-Ye
+ji
 Ye
 Ye
 dw
@@ -7991,7 +8129,7 @@ Ye
 Ye
 mb
 fA
-fA
+EP
 qp
 Gl
 sU
@@ -8077,7 +8215,7 @@ Gl
 qp
 fA
 mb
-dV
+DH
 Ye
 Ye
 Ye
@@ -8178,9 +8316,9 @@ sU
 Gl
 qp
 fA
+EP
 fA
-fA
-Ye
+ji
 Ye
 Ye
 Ye
@@ -8193,7 +8331,7 @@ Ye
 lg
 Ye
 Ye
-fA
+EP
 fA
 qp
 qp
@@ -8381,13 +8519,13 @@ sU
 sU
 Gl
 qp
-fA
+EP
 fA
 fA
 Ye
 Ye
 dw
-Ye
+ji
 Ye
 Ye
 Ye
@@ -8488,7 +8626,7 @@ fA
 fA
 Ye
 eK
-Ye
+ji
 dw
 Ye
 uT
@@ -8690,7 +8828,7 @@ qp
 fA
 fA
 fA
-Ye
+ji
 Ye
 Ye
 Ye
@@ -8998,7 +9136,7 @@ fA
 fA
 fA
 Ye
-Ye
+ji
 Ye
 Ye
 lg
@@ -9095,7 +9233,7 @@ sU
 sU
 Gl
 qp
-fA
+EP
 fA
 fA
 fA
