@@ -201,6 +201,11 @@
 		to_chat(src, "<span class='notice'>You can't jump so soon!")
 		return
 
+	visible_message("<span class='danger'>[src] prepares to jump.</span>")
+
+	if(!do_after(src, 0.5 SECONDS, src))
+		return
+
 	adjustStaminaLoss(25)
 
 	var/adjusted_jump_range = MAX_JUMP_DISTANCE
