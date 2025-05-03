@@ -151,7 +151,7 @@
 	time = 5 SECONDS
 	category = CAT_ARMOR
 	blacklist = list(
-	/obj/item/clothing/head/helmet/halflife/military/weak
+	/obj/item/clothing/head/helmet/halflife/military/weak, /obj/item/clothing/head/helmet/halflife/military/weak/poland, /obj/item/clothing/head/helmet/halflife/military/weak/crafted, /obj/item/clothing/head/helmet/halflife/military/weak/crafted/poland,
 	)
 
 /datum/crafting_recipe/helmet_polandification/handmade

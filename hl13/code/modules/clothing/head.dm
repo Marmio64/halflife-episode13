@@ -175,7 +175,7 @@
 
 /obj/item/clothing/head/helmet/halflife/military/plf_veteran
 	name = "modified altyn helmet"
-	desc = "An old world military helmet for protecting your noggin. A band in the colours of the Polish flag has been wrapped around it."
+	desc = "A heavily-modified explosives disposal helmet used by the Polish army."
 	icon = 'hl13/icons/obj/clothing/hats.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
 	armor_type = /datum/armor/plf_veteran
