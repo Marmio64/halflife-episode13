@@ -150,18 +150,23 @@
 				/obj/item/clothing/head/helmet/halflife/military = 1)
 	time = 5 SECONDS
 	category = CAT_ARMOR
+	blacklist = list(
+	/obj/item/clothing/head/helmet/halflife/military/weak
+	)
 
 /datum/crafting_recipe/helmet_polandification/handmade
 	name = "Handmade Polish Military Helmet"
 	result = /obj/item/clothing/head/helmet/halflife/military/weak/crafted/poland
 	reqs = list(/obj/item/stack/sheet/cloth = 2,
 				/obj/item/clothing/head/helmet/halflife/military/weak/crafted = 1)
+	blacklist = list() //empty list
 
 /datum/crafting_recipe/helmet_polandification/cracked
 	name = "Cracked Polish Military Helmet"
-	result = /obj/item/clothing/head/helmet/halflife/milhelm/weak/poland
+	result = /obj/item/clothing/head/helmet/halflife/military/weak/poland
 	reqs = list(/obj/item/stack/sheet/cloth = 2,
-				/obj/item/clothing/head/helmet/halflife/milhelm/weak = 1)
+				/obj/item/clothing/head/helmet/halflife/military/weak = 1)
+	blacklist = list() //empty list
 
 /datum/crafting_recipe/helmet_polandification/dark
 	name = "Tactical Polish Military Helmet"

@@ -1,5 +1,8 @@
 //Unique Rebel faction gear
 //Everything from the lowest mobilised refugee to the highest Polish commander
+//addust here: for some fucking reason, build.cmd is pretending this file doesnt exist right now.. by the time this comment hits master, this behaviour SHOULD stop. if it recurs;
+//hours wasted wrestling build.cmd: 1
+//CURRENT FIX is delete the dmb (not dme)
 
 /datum/outfit/resistance_faction
 	name = "Generic Resistance"
@@ -69,7 +72,6 @@
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
-	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit, src)
 	update_appearance(UPDATE_ICON)
 
 
@@ -78,7 +80,7 @@
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1/service, src)
 	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
-	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/cup/glass/bottle/vodka, src)
 	update_appearance(UPDATE_ICON)
 
@@ -87,7 +89,7 @@
 	SSwardrobe.provide_type(/obj/item/ammo_box/colta357, src)
 	SSwardrobe.provide_type(/obj/item/melee/baton, src)
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
-	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/cup/glass/bottle/vodka, src)
 	update_appearance(UPDATE_ICON)
 
@@ -97,7 +99,7 @@
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/ak47, src)
 	SSwardrobe.provide_type(/obj/item/melee/baton, src)
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
-	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	update_appearance(UPDATE_ICON) //you may have noticed this doesnt come with vodka. that is because the operator drank it on the way to city 13 and threw it at a passing hunter, killing it instantly
 
 /obj/item/clothing/head/beret/sec/poland
@@ -122,6 +124,8 @@
 	suit = /obj/item/clothing/suit/armor/civilprotection/medical //stolen gear pretty much. if you arent competent we dont give you the good shit.
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/medic
 	accessory = /obj/item/clothing/accessory/armband/medblue //DON'T SHOOT I'M A MEDIC
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
 
 /datum/outfit/resistance_faction/polish/sapper
 	name = "Polish Revolutionary Front Sapper"
@@ -130,7 +134,6 @@
 	belt = /obj/item/storage/belt/utility/full
 	l_pocket = /obj/item/knife/combat/survival
 	head = /obj/item/clothing/head/helmet/halflife/military/poland //REAL helmet for REAL men.
-	uniform = /obj/item/clothing/under/syndicate/camo
 	gloves = /obj/item/clothing/gloves/combat //military engineer man
 	glasses = /obj/item/clothing/glasses/welding
 	back = /obj/item/storage/backpack/halflife/satchel/military
@@ -139,6 +142,7 @@
 		/obj/item/lockpick/combine = 1, //stolen lmao
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1, //stay in the fight since important
 		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/card/emag/halflife = 1,
 	)
 
 /datum/outfit/resistance_faction/polish/competent
@@ -257,6 +261,7 @@
 	head = /obj/item/clothing/head/helmet/halflife/milhelm
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
 	back = /obj/item/storage/backpack/halflife/satchel/military
+	ears = /obj/item/radio/headset/syndicate/alt
 	backpack_contents = list(
 		/obj/item/grenade/c4 = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
