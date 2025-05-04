@@ -80,7 +80,7 @@
 
 	belt = /obj/item/melee/baton/telescopic
 
-	implants = list(/obj/item/implant/mindshield)
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/administrator)
 	skillchips = list(/obj/item/skillchip/disk_verifier)
 
 	var/special_charter

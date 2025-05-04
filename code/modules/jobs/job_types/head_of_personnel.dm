@@ -68,7 +68,7 @@
 
 	r_pocket = /obj/item/hl2key/townhall
 
-	implants = list(/obj/item/implant/mindshield)
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/laborlead)
 
 //only pet worth reviving
 /datum/job/head_of_personnel/get_mail_goodies(mob/recipient)

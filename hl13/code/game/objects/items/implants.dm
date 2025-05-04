@@ -7,12 +7,18 @@
 
 	var/role = "Unit"
 
+	var/card_to_disable = null
+
 /obj/item/implant/biosig_ert/Initialize(mapload)
 	. = ..()
 	radio = new(src)
 	radio.keyslot = new/obj/item/encryptionkey/headset_sec
 	radio.listening = FALSE
 	radio.recalculateChannels()
+
+/obj/item/implant/biosig_ert/implant(mapload)
+	. = ..()
+	card_to_disable = imp_in.get_idcard()
 
 /obj/item/implant/biosig_ert/activate(cause)
 	if(!imp_in)
@@ -34,6 +40,10 @@
 	for(var/atom/movable/mask in GLOB.cpmasks)
 		if(mask.loc &&ismob(mask.loc))
 			playsound(mask.loc, "hl13/sound/voice/dispatchradio/lostsignalunitscontain.ogg", 50, FALSE)
+
+	if(card_to_disable)
+		var/obj/item/card/id/advanced/idcard = card_to_disable
+		idcard.access = null
 
 /obj/item/implant/biosig_ert/get_data()
 	. = {"<b>Implant Specifications:</b><BR>
@@ -66,3 +76,9 @@
 
 /obj/item/implant/biosig_ert/ota
 	role = "OTA Unit"
+
+/obj/item/implant/biosig_ert/administrator
+	role = "District Administrator"
+
+/obj/item/implant/biosig_ert/laborlead
+	role = "Labor Lead"
