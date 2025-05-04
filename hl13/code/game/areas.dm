@@ -57,6 +57,21 @@
 	name = "\improper Alley Ways"
 	ambient_buzz = 'hl13/sound/ambience/tone_alley.ogg'
 
+/area/halflife/outdoors/alley/dropshippad
+	name = "\improper Labor Union Drop Ship Pad"
+
+	first_time_text = "Dropship Pad"
+
+/area/halflife/outdoors/alley/slums
+	name = "\improper Slums Alleys"
+
+	first_time_text = "Slums Alleys"
+
+/area/halflife/outdoors/alley/restrictedblock
+	name = "\improper Restricted Block Streets"
+
+	first_time_text = "Restricted Block"
+
 /area/halflife/outdoors/forest
 	name = "\improper Forested Outlands"
 	ambient_buzz = 'hl13/sound/ambience/forest/wind_light02_loop.ogg'
