@@ -34,7 +34,7 @@
 	var/list/item_list = list(
 		/obj/item/card/emag/halflife,
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
-		/obj/item/storage/box/halflife/ration,
+		/obj/item/storage/box/halflife/ration/ration,
 		/obj/item/storage/backpack/satchel/flat,
 		/obj/item/lockpick,
 		/obj/item/grenade/syndieminibomb/bouncer,

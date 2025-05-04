@@ -25,8 +25,8 @@
 	item_path = /obj/item/cane/white
 
 /datum/loadout_item/inhand/ration
-	name = "Bottom-grade Ration"
-	item_path = /obj/item/food/rationpack/worstgrade
+	name = "Nutripaste"
+	item_path = /obj/item/food/nutripaste/small
 
 /datum/loadout_item/inhand/water
 	name = "Low Grade Breen Water"

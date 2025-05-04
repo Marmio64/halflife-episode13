@@ -31,12 +31,6 @@
 	unit_name = "medkits"
 	export_types = list(/obj/item/reagent_containers/pill/patch/medkit/manufactured)
 
-//sell manufactured rations for money
-/datum/export/rations
-	cost = CARGO_CRATE_VALUE * 0.5
-	unit_name = "rations"
-	export_types = list(/obj/item/food/rationpack/manufactured)
-
 //recycle delivered ration refill boxes for a small return of credits
 /datum/export/ration_refill_box
 	cost = CARGO_CRATE_VALUE * 0.15

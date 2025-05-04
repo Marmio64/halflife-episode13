@@ -5,7 +5,7 @@
 	icon_state = "breen_machine"
 	panel_type = "panel2"
 	product_ads = "Stay hydrated.;A thirsty citizen is a inefficient citizen.;Drink Breen's private reserve!;The purest water around."
-	products = list(/obj/item/reagent_containers/cup/soda_cans/breenwater/yellow = 8, /obj/item/reagent_containers/cup/soda_cans/breenwater = 8, /obj/item/reagent_containers/cup/soda_cans/breenwater/red = 4, /obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 3, /obj/item/reagent_containers/cup/soda_cans/breenwater/fuel = 3)
+	products = list(/obj/item/reagent_containers/cup/soda_cans/breenwater/yellow = 8, /obj/item/reagent_containers/cup/soda_cans/breenwater = 8, /obj/item/reagent_containers/cup/soda_cans/breenwater/red = 4, /obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 3, /obj/item/reagent_containers/cup/soda_cans/halflife/coffee = 3)
 	resistance_flags = FIRE_PROOF
 	refill_canister = /obj/item/vending_refill/breen
 	default_price = 15
@@ -44,8 +44,8 @@
 					/obj/item/storage/wallet = 10,
 					/obj/item/radio/off/halflife = 3,
 					/obj/item/reagent_containers/cup/bottle/welding_fuel = 3,
-					/obj/item/food/rationpack/box = 5,
-					/obj/item/food/flavorbar = 5,
+					/obj/item/storage/halflife/hand_box/egg = 5,
+					/obj/item/food/halflife/cookie = 5,
 					/obj/item/reagent_containers/pill/patch/medkit/vial = 3,
 					/obj/item/stack/sticky_tape = 4,
 					/obj/item/storage/toolbox/fishing = 2,
@@ -65,7 +65,7 @@
 	premium = list(/obj/item/storage/backpack/halflife/satchel = 3,
 				   /obj/item/storage/backpack/halflife = 3,
 				   /obj/item/binoculars = 3,
-				   /obj/item/storage/box/halflife/ration = 5)
+				   /obj/item/storage/box/halflife/ration/ration = 5)
 
 	light_mask = "gifts-light-mask"
 	default_price = 20
@@ -78,12 +78,12 @@
 	panel_type = "panel2"
 	product_ads = "Acquire high grade equipment here.;Improve your work efficiency.;Better serve the combine!;Quit being useless."
 	products = list(/obj/item/pickaxe/mini = 6,
-					/obj/item/food/rationpack/box = 6,
+					/obj/item/storage/halflife/hand_box/egg = 6,
 					/obj/item/reagent_containers/pill/patch/medkit = 6)
 
 	premium = list(/obj/item/storage/belt/pouch = 6,
 				   /obj/item/storage/belt/utility = 5,
-				   /obj/item/storage/box/halflife/betterration = 6,
+				   /obj/item/storage/box/halflife/ration/betterration = 6,
 				   /obj/item/flashlight/seclite = 6)
 
 	resistance_flags = FIRE_PROOF
@@ -248,9 +248,9 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/keyvendor, 32)
 		/obj/item/reagent_containers/condiment/rice = 2,
 		/obj/item/reagent_containers/condiment/soymilk = 2,
 		/obj/item/food/butter = 2,
-		/obj/item/food/rationpack = 4,
-		/obj/item/food/rationpack/box = 4,
-		/obj/item/food/flavorbar = 4,
+		/obj/item/halflife/nutrient_bar_wrapping/water = 4,
+		/obj/item/storage/halflife/hand_box/egg = 4,
+		/obj/item/food/halflife/cookie = 4,
 		/obj/item/reagent_containers/cup/soda_cans/breenwater/green = 4,
 		/obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 2,
 		/obj/item/food/grown/onion = 3,

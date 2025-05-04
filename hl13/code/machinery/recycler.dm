@@ -10,13 +10,13 @@
 	var/bags = 0
 
 /obj/machinery/recycle_intake/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/item/storage/box/halflife) || istype(I, /obj/item/reagent_containers/cup/soda_cans/breenwater) || istype(I, /obj/item/trash/can) || istype(I, /obj/item/stack/bulletcasings))
+	if(istype(I, /obj/item/storage/box/halflife/ration) || istype(I, /obj/item/reagent_containers/cup) || istype(I, /obj/item/trash/can) || istype(I, /obj/item/stack/bulletcasings) || istype(I, /obj/item/trash/halflife/nutrient_bar_waste) || istype(I, /obj/item/storage/halflife/hand_box))
 		playsound(src, 'hl13/sound/machines/combine_button1.ogg', 50, TRUE, extrarange = -3)
 		new /obj/item/stack/spacecash/c1(user.loc, 1)
 		qdel(I)
 		if(istype(I, /obj/item/reagent_containers/cup/soda_cans/breenwater) || istype(I, /obj/item/trash/can) || istype(I, /obj/item/stack/bulletcasings))
 			scrap++
-		if(istype(I, /obj/item/storage/box/halflife))
+		if(istype(I, /obj/item/storage/box/halflife/ration))
 			bags++
 			if(bags >= 3)
 				bags -= 3

@@ -5,7 +5,7 @@
 /datum/market_item/halflife/consumable/nutrientbar
 	name = "Nutrient Bar"
 	desc = "A stolen nutrient bar. Food has been hard to come by, and we have to charge a premium. Try to procure some on-site instead."
-	item = /obj/item/food/rationpack
+	item = /obj/item/halflife/nutrient_bar_wrapping/water
 
 	price_min = CARGO_CRATE_VALUE/3
 	price_max = CARGO_CRATE_VALUE/2

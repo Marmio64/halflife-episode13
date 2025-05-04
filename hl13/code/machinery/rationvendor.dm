@@ -139,17 +139,17 @@
 		if(0)
 			new /obj/item/reagent_containers/cup/soda_cans/breenwater/purple(loc) //very sad... Only way to get rn is to be a vort, on suspect status, with low district sociostability
 		if(1)
-			new /obj/item/storage/box/halflife/worstration(loc)
+			new /obj/item/storage/box/halflife/ration/worstration(loc)
 		if(2)
-			new /obj/item/storage/box/halflife/badration(loc)
+			new /obj/item/storage/box/halflife/ration/badration(loc)
 		if(3)
-			new /obj/item/storage/box/halflife/ration(loc)
+			new /obj/item/storage/box/halflife/ration/ration(loc)
 		if(4)
-			new /obj/item/storage/box/halflife/betterration(loc)
+			new /obj/item/storage/box/halflife/ration/betterration(loc)
 		if(5)
-			new /obj/item/storage/box/halflife/loyaltyration(loc)
+			new /obj/item/storage/box/halflife/ration/loyaltyration(loc)
 		if(6 to 10)
-			new /obj/item/storage/box/halflife/bestration(loc)
+			new /obj/item/storage/box/halflife/ration/bestration(loc)
 			if(rations_stored > 0)
 				rations_stored-- ///The excess of the upper class is more draining. However, even if it should go into the negatives, we'll let them have their correct ration grade.
 

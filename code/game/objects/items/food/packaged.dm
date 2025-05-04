@@ -316,6 +316,20 @@
 
 	warm_type = /obj/item/food/ready_donk/warm/donkrange_chicken
 
+// Rations
+/obj/item/food/rationpack
+	name = "ration pack"
+	desc = "A square bar that sadly <i>looks</i> like chocolate, packaged in a nondescript grey wrapper. Has saved soldiers' lives before - usually by stopping bullets."
+	icon_state = "rationpack"
+	bite_consumption = 3
+	junkiness = 15
+	tastes = list("cardboard" = 3, "sadness" = 3)
+	foodtypes = null //Don't ask what went into them. You're better off not knowing.
+	food_reagents = list(
+		/datum/reagent/consumable/nutriment/stabilized = 10,
+		/datum/reagent/consumable/nutriment = 2,
+	) //Won't make you fat. Will make you question your sanity.
+
 /obj/item/food/ready_donk/warm/donkrange_chicken
 	name = "warm Ready-Donk: Donk-range Chicken"
 	desc = "A Chinese classic, it's Donk's original spicy orange chicken with stir-fried peppers and onions, all over steamed rice and served hotter than a dragon's breath."

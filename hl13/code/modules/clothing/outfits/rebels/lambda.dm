@@ -74,7 +74,7 @@
 		/obj/item/knife,
 		/obj/item/storage/briefcase,
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
-		/obj/item/storage/box/halflife/ration,
+		/obj/item/storage/box/halflife/ration/ration,
 		/obj/item/crowbar/large,
 		/obj/item/gun/ballistic/automatic/pistol/makeshift,
 		/obj/item/gun/ballistic/rifle/rebarxbow

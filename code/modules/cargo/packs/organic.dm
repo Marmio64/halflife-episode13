@@ -154,33 +154,33 @@
 	name = "Ration Crate"
 	desc = "A crate of five ration packs, made for easy distribution."
 	cost = CARGO_CRATE_VALUE * 4
-	contains = list(/obj/item/storage/box/halflife/ration,
-					/obj/item/storage/box/halflife/ration,
-					/obj/item/storage/box/halflife/ration,
-					/obj/item/storage/box/halflife/ration,
-					/obj/item/storage/box/halflife/ration)
+	contains = list(/obj/item/storage/box/halflife/ration/ration,
+					/obj/item/storage/box/halflife/ration/ration,
+					/obj/item/storage/box/halflife/ration/ration,
+					/obj/item/storage/box/halflife/ration/ration,
+					/obj/item/storage/box/halflife/ration/ration)
 	crate_name = "ration crate"
 
 /datum/supply_pack/organic/loyaltyrations
 	name = "Loyalty-grade Ration Crate"
 	desc = "A crate of five loyalty-grade ration packs, made for easy distribution."
 	cost = CARGO_CRATE_VALUE * 4.5
-	contains = list(/obj/item/storage/box/halflife/loyaltyration,
-					/obj/item/storage/box/halflife/loyaltyration,
-					/obj/item/storage/box/halflife/loyaltyration,
-					/obj/item/storage/box/halflife/loyaltyration,
-					/obj/item/storage/box/halflife/loyaltyration)
+	contains = list(/obj/item/storage/box/halflife/ration/loyaltyration,
+					/obj/item/storage/box/halflife/ration/loyaltyration,
+					/obj/item/storage/box/halflife/ration/loyaltyration,
+					/obj/item/storage/box/halflife/ration/loyaltyration,
+					/obj/item/storage/box/halflife/ration/loyaltyration)
 	crate_name = "loyalty-grade ration crate"
 
 /datum/supply_pack/organic/badrations
 	name = "Low-grade Ration Crate"
 	desc = "A crate of five low-grade ration packs, made for easy distribution."
 	cost = CARGO_CRATE_VALUE * 3.5
-	contains = list(/obj/item/storage/box/halflife/badration,
-					/obj/item/storage/box/halflife/badration,
-					/obj/item/storage/box/halflife/badration,
-					/obj/item/storage/box/halflife/badration,
-					/obj/item/storage/box/halflife/badration)
+	contains = list(/obj/item/storage/box/halflife/ration/badration,
+					/obj/item/storage/box/halflife/ration/badration,
+					/obj/item/storage/box/halflife/ration/badration,
+					/obj/item/storage/box/halflife/ration/badration,
+					/obj/item/storage/box/halflife/ration/badration)
 	crate_name = "low-grade ration crate"
 
 /datum/supply_pack/organic/nutrimentpierogis
