@@ -371,13 +371,6 @@
 
 //CRAFTING
 
-/datum/crafting_recipe/mushroom_bowl
-	name = "Mushroom Bowl"
-	result = /obj/item/reagent_containers/cup/bowl/mushroom_bowl
-	reqs = list(/obj/item/food/grown/ash_flora/shavings = 5)
-	time = 30
-	category = CAT_CONTAINERS
-
 /obj/item/reagent_containers/cup/bowl/mushroom_bowl
 	name = "mushroom bowl"
 	desc = "A bowl made out of mushrooms. Not food, though it might have contained some at some point."

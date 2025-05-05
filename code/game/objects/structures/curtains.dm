@@ -74,7 +74,7 @@
 
 /obj/structure/curtain/atom_deconstruct(disassembled = TRUE)
 	new /obj/item/stack/sheet/cloth (loc, 2)
-	new /obj/item/stack/sheet/plastic (loc, 2)
+	new /obj/item/stack/sheet/halflife/plastic (loc, 2)
 	new /obj/item/stack/rods (loc, 1)
 
 /obj/structure/curtain/play_attack_sound(damage_amount, damage_type = BRUTE, damage_flag = 0)

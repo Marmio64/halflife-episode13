@@ -139,7 +139,7 @@
 	desc = "The most generic chair known to pre-war man."
 	icon_state = "plastic_chair"
 	item_chair = /obj/item/chair/halflife/plastic
-	buildstacktype = /obj/item/stack/sheet/plastic
+	buildstacktype = /obj/item/stack/sheet/halflife/plastic
 	buildstackamount = 1
 	max_integrity = 100
 

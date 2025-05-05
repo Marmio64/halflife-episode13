@@ -31,7 +31,7 @@
 /datum/surgery_step/insert_plastic
 	name = "insert plastic (plastic)"
 	implements = list(
-		/obj/item/stack/sheet/plastic = 100,
+		/obj/item/stack/sheet/halflife/plastic = 100,
 		/obj/item/stack/sheet/meat = 100)
 	time = 3.2 SECONDS
 	preop_sound = 'sound/effects/blob/blobattack.ogg'

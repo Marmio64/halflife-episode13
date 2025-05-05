@@ -493,7 +493,7 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	desc = "Plastic"
 	color = "#BFB9AC"
 	strength_modifier = 0.85
-	sheet_type = /obj/item/stack/sheet/plastic
+	sheet_type = /obj/item/stack/sheet/halflife/plastic //hl13 edit
 	ore_type = /obj/item/stack/ore/slag //No plastic or coal ore, so we use slag.
 	categories = list(
 		MAT_CATEGORY_SILO = TRUE,

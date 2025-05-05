@@ -10,6 +10,8 @@
 	minimal_player_age = 7
 	supervisors = SUPERVISOR_CAPTAIN
 	exp_required_type_department = EXP_TYPE_SUPPLY
+	exp_requirements = 60
+	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "QUARTERMASTER"
 

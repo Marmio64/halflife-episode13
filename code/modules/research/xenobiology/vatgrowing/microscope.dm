@@ -127,6 +127,6 @@
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	reqs = list(
 		/obj/item/stack/sheet/glass = 1,
-		/obj/item/stack/sheet/plastic = 1,
+		/obj/item/stack/sheet/halflife/plastic = 1,
 	)
 	category = CAT_CHEMISTRY

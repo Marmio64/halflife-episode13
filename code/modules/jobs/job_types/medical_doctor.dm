@@ -9,6 +9,9 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "MEDICAL_DOCTOR"
 
+	exp_requirements = 60
+	exp_required_type = EXP_TYPE_CREW
+
 	outfit = /datum/outfit/job/doctor
 	plasmaman_outfit = /datum/outfit/plasmaman/medical
 

@@ -42,10 +42,3 @@
 	reqs = list(/obj/item/trash/can = 1)
 	time = 2 SECONDS
 	category = CAT_MISC
-
-/datum/crafting_recipe/plasticpieces
-	name = "Plastic Pieces"
-	result = /obj/item/stack/sheet/halflife/plastic
-	reqs = list(/obj/item/stack/sheet/plastic = 1)
-	time = 2 SECONDS
-	category = CAT_MISC
