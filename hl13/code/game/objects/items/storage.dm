@@ -67,6 +67,7 @@
 		/obj/item/ammo_box/magazine/ar2,
 		/obj/item/stack/medical/gauze,
 		/obj/item/storage/box/lethalshot,
+		/obj/item/halflife/combine_battery,
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
 	))
 	atom_storage.open_sound = 'sound/items/handling/holster_open.ogg'

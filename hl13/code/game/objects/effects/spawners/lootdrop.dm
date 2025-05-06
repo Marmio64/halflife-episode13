@@ -62,6 +62,7 @@
 				/obj/item/customblank,
 				/obj/item/customlock,
 				/obj/item/stack/kevlar,
+				/obj/item/halflife/combine_battery,
 				/obj/item/stack/spacecash/c10,
 				/obj/item/stack/spacecash/c20
 				)
@@ -244,6 +245,7 @@
 				/obj/item/reagent_containers/cup/bottle/welding_fuel,
 				/obj/item/grenade/halflife/molotov,
 				/obj/item/stack/kevlar/two = 2,
+				/obj/item/halflife/combine_battery,
 				/obj/item/clothing/head/helmet/halflife/military/weak/crafted,
 				/obj/item/switchblade,
 				/obj/item/weaponcrafting/frame/usp,

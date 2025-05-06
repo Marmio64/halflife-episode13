@@ -42,6 +42,18 @@
 					/obj/item/stack/kevlar/five)
 	crate_name = "kevlar crate"
 
+/datum/supply_pack/security/combine_batteries
+	name = "Combine Battery Crate"
+	desc = "Five portable combine batteries, for on the go charging of batons and suits."
+	cost = CARGO_CRATE_VALUE * 3
+	access_view = ACCESS_SECURITY
+	contains = list(/obj/item/halflife/combine_battery,
+					/obj/item/halflife/combine_battery,
+					/obj/item/halflife/combine_battery,
+					/obj/item/halflife/combine_battery,
+					/obj/item/halflife/combine_battery)
+	crate_name = "combine battery crate"
+
 /datum/supply_pack/security/riotarmor
 	name = "Riot Armor Crate"
 	desc = "Two sets of riot control armor that excels at stopping blunt force trauma, cuts, and lacerations from close range. Does little against firearms, however."

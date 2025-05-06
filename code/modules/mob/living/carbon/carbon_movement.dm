@@ -40,6 +40,12 @@
 		if(HAS_TRAIT(src, TRAIT_ATHLETIC)) //Athletic skillchip lets you run for longer
 			staminatolose -= 0.2
 
+		if(TIREDNESS_SLEEPY_THRESHOLD < tiredness)
+			if(!HAS_TRAIT(src, TRAIT_SPARTAN))
+				staminatolose += 0.4
+			else
+				staminatolose += 0.2 //spartan trait holders take less of a run stamina penalty
+
 		adjustStaminaLoss(staminatolose)
 		if(getStaminaLoss() > 60) //automatically stop running once you're very tired.
 			toggle_move_intent()

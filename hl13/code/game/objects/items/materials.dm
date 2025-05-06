@@ -51,3 +51,30 @@
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	icon_state = "shaft"
 	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/halflife/combine_battery
+	name = "Combine Battery"
+	desc = "A combine battery that can charge a suit up with power, or be used as a power cell for certain recipes."
+	icon = 'hl13/icons/obj/misc_items.dmi'
+	icon_state = "battery"
+	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/halflife/combine_battery/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
+	if(istype(interacting_with, /obj/item/clothing))
+		var/obj/item/clothing/suit = interacting_with
+		if(suit.powered_suit)
+			if(suit.suit_power < suit.max_suit_power)
+				if(do_after(user, 1 SECONDS, suit))
+					playsound(src, 'hl13/sound/effects/suitchargeok1.ogg', 40, FALSE)
+					suit.adjust_suitpower(30)
+					qdel(src)
+					return ITEM_INTERACT_SUCCESS
+		else
+			to_chat(user, span_notice("This piece of clothing cannot be charged with this."))
+	if(istype(interacting_with, /obj/item/melee/baton/security))
+		var/obj/item/melee/baton/security/baton = interacting_with
+		if(baton.cell)
+			baton.cell.give(5000) //half of a standard baton cell
+			qdel(src)
+			return ITEM_INTERACT_SUCCESS
+	return NONE

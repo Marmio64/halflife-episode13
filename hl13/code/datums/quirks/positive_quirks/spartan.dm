@@ -1,6 +1,6 @@
 /datum/quirk/spartan
 	name = "Spartan"
-	desc = "Sleep is for the weak. You won't be slowed from exhaustion, and it mentally effects you far less."
+	desc = "Sleep is for the weak. You won't be slowed from exhaustion, gain less of a run stamina penalty from exhaustion, and it mentally effects you far less."
 	icon = FA_ICON_EYE
 	value = 8
 	medical_record_text = "The patient disregards sleep, if only because they believe themselves above it."

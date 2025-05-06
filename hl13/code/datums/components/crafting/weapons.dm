@@ -271,3 +271,15 @@
 	time = 8 SECONDS
 	category = CAT_WEAPON_MELEE
 	crafting_interface = CRAFTING_BENCH_WEAPONS | CRAFTING_BENCH_GENERAL
+
+/datum/crafting_recipe/stunbaton
+	name = "Stun Baton"
+	result = /obj/item/melee/baton/security/loaded
+	reqs = list(
+		/obj/item/stack/sheet/iron = 8,
+		/obj/item/halflife/combine_battery = 1,
+		/obj/item/circuitmaterial/advanced = 1,
+	)
+	time = 8 SECONDS
+	category = CAT_WEAPON_MELEE
+	crafting_interface = CRAFTING_BENCH_WEAPONS
