@@ -32,6 +32,10 @@
 	name = "Low Grade Breen Water"
 	item_path = /obj/item/reagent_containers/cup/soda_cans/breenwater/yellow
 
+/datum/loadout_item/inhand/wallet
+	name = "Wallet"
+	item_path = /obj/item/storage/wallet
+
 /datum/loadout_item/inhand/key
 	name = "Blank Custom Key"
 	item_path = /obj/item/customblank

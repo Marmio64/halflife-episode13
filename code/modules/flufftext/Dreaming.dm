@@ -151,7 +151,7 @@ GLOBAL_LIST_INIT(dreams, populate_dream_list())
 
 /// Dream plays a random sound at you, chosen from all sounds in the folder
 /datum/dream/hear_something
-	weight = 500
+	weight = 25
 
 	var/reserved_sound_channel
 

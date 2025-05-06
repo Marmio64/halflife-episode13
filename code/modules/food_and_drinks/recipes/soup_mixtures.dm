@@ -2241,16 +2241,3 @@
 		/datum/reagent/consumable/nutriment/protein = 6,
 	)
 	percentage_of_nutriment_converted = 0.1
-
-// 24-Volt Fish
-// Simply poach the fish in boiling energy drink, easy as
-/datum/chemical_reaction/food/soup/volt_fish
-	required_reagents = list(
-		/datum/reagent/consumable/volt_energy = 15,
-	)
-	required_ingredients = list(
-		/obj/item/food/fishmeat = 1
-	)
-	resulting_food_path = /obj/item/food/volt_fish
-	ingredient_reagent_multiplier = 0
-	mix_message = "The air fills with a hellish mix of fish and artificial flavouring."

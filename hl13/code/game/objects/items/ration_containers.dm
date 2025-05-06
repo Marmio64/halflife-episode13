@@ -20,7 +20,7 @@
 	else
 		new /obj/item/halflife/nutrient_bar_wrapping/water(src)
 
-	new /obj/item/storage/halflife/hand_box/egg(src)
+	new /obj/item/storage/halflife/hand_box/flour(src)
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater(src)
 	new /obj/item/stack/spacecash/c1(src, 4)
 

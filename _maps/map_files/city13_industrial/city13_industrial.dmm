@@ -814,6 +814,13 @@
 /obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/townhall/secondfloor)
+"cW" = (
+/obj/structure/table/halflife/metal/alt,
+/obj/item/halflife/combine_battery{
+	pixel_y = 9
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection)
 "cX" = (
 /obj/structure/halflife/storage/shelf,
 /obj/effect/spawner/random/halflife/loot/rare,
@@ -3161,7 +3168,9 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
 "lx" = (
-/obj/item/storage/halflife/hand_box/egg,
+/obj/item/halflife/nutrient_bar_wrapping/pork{
+	pixel_y = 4
+	},
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/townhall/civilprotection)
 "ly" = (
@@ -3604,13 +3613,6 @@
 "nf" = (
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/townhall/civilprotection/prison)
-"ng" = (
-/obj/structure/table/halflife/metal/alt,
-/obj/item/halflife/combine_battery{
-	pixel_y = 9
-	},
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/townhall/civilprotection)
 "nh" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc,
@@ -5021,6 +5023,10 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/apartments/primary)
+"st" = (
+/obj/structure/halflife/fence/wire,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "su" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 8;
@@ -5522,7 +5528,10 @@
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
 "uk" = (
-/obj/machinery/door/unpowered/halflife/seethrough/grate,
+/obj/machinery/door/unpowered/halflife/seethrough/grate{
+	locked = 1;
+	keylock = 1
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
 "ul" = (
@@ -7379,6 +7388,7 @@
 "AO" = (
 /obj/structure/closet/halflife/wall/firstaid,
 /obj/effect/spawner/random/halflife/loot/heal,
+/obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
 "AP" = (
@@ -7607,6 +7617,7 @@
 /area/halflife/indoors/hospital)
 "BF" = (
 /obj/machinery/light/small/directional/south,
+/mob/living/basic/halflife/zombie,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
 "BG" = (
@@ -11218,6 +11229,10 @@
 "Ok" = (
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/townhall/secondfloor)
+"Ol" = (
+/obj/machinery/door/unpowered/halflife/seethrough/fence/wire,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "On" = (
 /obj/effect/turf_decal/siding/street{
 	dir = 8
@@ -13462,9 +13477,11 @@
 /turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/indoors/townhall/secondfloor)
 "Ws" = (
-/obj/item/food/halflife/cookie,
 /obj/machinery/camera{
 	c_tag = "Nexus Cafeteria"
+	},
+/obj/item/storage/halflife/hand_box/cookie{
+	pixel_y = 6
 	},
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/townhall/civilprotection)
@@ -38399,7 +38416,7 @@ Jj
 LY
 Fu
 fo
-ng
+cW
 Jj
 Bl
 Fm
@@ -40854,7 +40871,7 @@ WD
 dV
 ma
 dV
-dV
+Ol
 dV
 dV
 os
@@ -40983,10 +41000,10 @@ WE
 WE
 gJ
 jl
-Im
+ao
 dV
 dV
-dV
+st
 dV
 dV
 dV

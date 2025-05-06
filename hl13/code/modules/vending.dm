@@ -68,8 +68,8 @@
 				   /obj/item/storage/box/halflife/ration/ration = 5)
 
 	light_mask = "gifts-light-mask"
-	default_price = 20
-	extra_price = 35
+	default_price = 18
+	extra_price = 30
 
 /obj/machinery/vending/miningvendor
 	name = "\improper Union Vendor"
@@ -249,17 +249,21 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/keyvendor, 32)
 		/obj/item/reagent_containers/condiment/rice = 2,
 		/obj/item/reagent_containers/condiment/soymilk = 2,
 		/obj/item/food/butter = 2,
-		/obj/item/halflife/nutrient_bar_wrapping/water = 4,
-		/obj/item/storage/halflife/hand_box/egg = 4,
-		/obj/item/food/halflife/cookie = 4,
-		/obj/item/reagent_containers/cup/soda_cans/breenwater/green = 4,
-		/obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 2,
 		/obj/item/food/grown/onion = 3,
 		/obj/item/food/grown/potato = 3,
 		/obj/item/food/grown/tomato = 3,
 		/obj/item/food/grown/corn = 3,
 		/obj/item/food/grown/garlic = 3,
 		/obj/item/food/grown/cabbage = 2,
+		/obj/item/halflife/nutrient_bar_wrapping/water = 4,
+		/obj/item/halflife/nutrient_bar_wrapping/pork = 2,
+		/obj/item/halflife/nutrient_bar_wrapping/beef = 1,
+		/obj/item/storage/halflife/hand_box/flour = 4,
+		/obj/item/storage/halflife/hand_box/egg = 3,
+		/obj/item/storage/halflife/hand_box/chicken = 2,
+		/obj/item/storage/halflife/hand_box/cookie = 3,
+		/obj/item/reagent_containers/cup/soda_cans/breenwater/green = 4,
+		/obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 2,
 	)
 	refill_canister = /obj/item/vending_refill/food_dispensery
 	default_price = PAYCHECK_CREW

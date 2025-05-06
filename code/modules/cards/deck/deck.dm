@@ -3,7 +3,7 @@
 
 /obj/item/toy/cards/deck
 	name = "deck of cards"
-	desc = "A deck of space-grade playing cards."
+	desc = "A deck of old playing cards that are in surpsingly good condition."
 	icon = 'icons/obj/toys/playing_cards.dmi'
 	icon_state = "deck_nanotrasen_full"
 	w_class = WEIGHT_CLASS_SMALL

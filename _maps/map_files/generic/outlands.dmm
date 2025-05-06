@@ -1491,10 +1491,9 @@
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
 "nV" = (
-/obj/structure/table/halflife/wood/constructed/cobbled,
-/obj/structure/halflife/trash/glass/basic,
-/turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors/forest)
+/obj/effect/spawner/random/halflife/loot/crafting_bench,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer)
 "nW" = (
 /turf/open/halflife/water/medium,
 /area/halflife/indoors/sewer)
@@ -1539,6 +1538,11 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"on" = (
+/obj/structure/table/halflife/wood/constructed/cobbled,
+/obj/structure/halflife/trash/glass/basic,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "oo" = (
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -3764,6 +3768,10 @@
 	},
 /turf/open/halflife/water/deep,
 /area/halflife/indoors/sewer)
+"Ke" = (
+/obj/effect/spawner/random/halflife/loot/crafting_bench,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/forest)
 "Kf" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/sewer)
@@ -4748,6 +4756,10 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/laborcamp)
+"TP" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer)
 "TS" = (
 /obj/machinery/hydroponics/soil,
 /turf/open/floor/plating/ground/dirt/alt,
@@ -5377,10 +5389,6 @@
 /obj/item/weaponcrafting/receiver{
 	pixel_x = -3;
 	pixel_y = -11
-	},
-/obj/item/stack/sticky_tape{
-	pixel_x = 4;
-	pixel_y = 6
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
@@ -28086,9 +28094,9 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
+UI
+nV
+WG
 UI
 WG
 WG
@@ -28283,10 +28291,10 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
 UI
+TP
+WG
+Tt
 WG
 WG
 UI
@@ -28480,9 +28488,9 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
+UI
+UI
+UI
 UI
 WG
 WG
@@ -71036,9 +71044,9 @@ XA
 XA
 XA
 XA
-GX
-GX
-qQ
+VV
+VV
+on
 tN
 tN
 tN
@@ -71233,9 +71241,9 @@ XA
 XA
 XA
 XA
-VV
-VV
-nV
+Ke
+GX
+GX
 tN
 tN
 tN

@@ -19,7 +19,7 @@
 	name = "Brig turnstile"
 	//Seccies and brig phys may always pass, either way.
 	req_access = list(ACCESS_BRIG_ENTRANCE)
-	max_integrity = 600 /// Made of damn good steel
+	max_integrity = 800 /// Made of damn good steel
 	damage_deflection = 23 /// Blocks most everything except heavy melee weapons like fireaxes/sledgehammers or dedicated destroying melee weapons like large crowbars.
 
 /obj/machinery/turnstile/Initialize(mapload)
@@ -109,7 +109,7 @@
 
 /obj/machinery/turnstile/brig/halflife/forcefield/attackby(obj/item/attacking_item, mob/user, params)
 	. = ..()
-	if(atom_integrity < 100 && !malfunctioning) //At very low health, the field just turns off.
+	if(atom_integrity < 300 && !malfunctioning) //At low health, the field just turns off.
 		malfunction()
 
 /obj/machinery/turnstile/brig/halflife/forcefield/examine(mob/user)

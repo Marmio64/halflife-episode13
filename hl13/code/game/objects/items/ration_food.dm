@@ -128,7 +128,16 @@
 	icon_state = closed_icon_state
 
 //Paste Boxs
-//Goes inside standard and production grade rations
+
+//Goes inside standard rations
+/obj/item/storage/halflife/hand_box/flour
+	name = "Flour paste ration box"
+	desc = "A box used for a flour paste cube."
+	open_icon_state = "food_package_4_open"
+	closed_icon_state = "food_package_4"
+	box_content = /obj/item/food/halflife/flour_paste
+
+//Goes inside production grade rations
 /obj/item/storage/halflife/hand_box/egg
 	name = "Egg paste ration box"
 	desc = "A box used for a egg paste cube."
@@ -153,6 +162,16 @@
 	box_content = /obj/item/food/halflife/cookie
 
 //food paste items
+/obj/item/food/halflife/flour_paste
+	name = "flour paste"
+	desc = "A solid mass of paste which jiggles like jello. It is supposed to somewhat emulate a grain food such as bread, but just tastes like wet, raw flour."
+	icon_state = "egg_paste"
+	food_reagents = list(
+		/datum/reagent/consumable/nutriment = 4,
+	)
+	tastes = list("Soggy flour" = 1)
+	mood_penalty = FOOD_DISLIKED
+
 /obj/item/food/halflife/egg_paste
 	name = "egg paste"
 	desc = "A solid mass of paste which jiggles like jello. It is flavored to taste like boiled eggs, but the consistency has it feeling like raw egg whites."
@@ -247,6 +266,7 @@
 	name = "Pork flavored nutrient bar wrapper"
 	icon_state = "bar_package_2_crumpled"
 	desc = "The discarded wrapping of a Pork flavored nutrient bar."
+
 /obj/item/trash/halflife/nutrient_bar_waste/beef
 	name = "Beef wrapper"
 	icon_state = "bar_package_3_crumpled"

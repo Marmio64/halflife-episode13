@@ -196,7 +196,7 @@
 		for(var/slot in list(ORGAN_SLOT_HEART, ORGAN_SLOT_LUNGS, ORGAN_SLOT_LIVER))
 			if(human.key && human.client) //should stop afk players from starving to death
 				var/obj/item/organ/O = human.get_organ_slot(slot)
-				O.apply_organ_damage(0.25)
+				O.apply_organ_damage(0.3)
 		if(nutrition < (NUTRITION_LEVEL_DYING/2))
 			if(prob(4))
 				to_chat(human, span_warning("I'm so hungry, I can't take much more of this..."))
@@ -218,7 +218,7 @@
 			human.adjust_eye_blur(5 SECONDS)
 		if(hydration < (HYDRATION_LEVEL_DYING/5))
 			if(human.key && human.client)
-				human.adjustToxLoss(0.25) //Buildup of toxins in your body since you dont have enough liquids to piss and filter stuff. It's not hard to stay hydrated, so this shouldn't happen, really.
+				human.adjustToxLoss(0.3) //Buildup of toxins in your body since you dont have enough liquids to piss and filter stuff. It's not hard to stay hydrated, so this shouldn't happen, really.
 //HL13 EDIT END
 
 ///for when mood is disabled and hunger should handle slowdowns

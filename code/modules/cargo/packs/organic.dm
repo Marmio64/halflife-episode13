@@ -135,7 +135,7 @@
 /datum/supply_pack/organic/food
 	name = "Food Crate"
 	desc = "Allow the citizens a treat with this crate filled with specially preserved old world foods."
-	cost = CARGO_CRATE_VALUE * 6
+	cost = CARGO_CRATE_VALUE * 6.5
 	contains = list(/obj/item/reagent_containers/condiment/flour,
 					/obj/item/reagent_containers/condiment/rice,
 					/obj/item/reagent_containers/condiment/milk,
@@ -153,7 +153,7 @@
 /datum/supply_pack/organic/rations
 	name = "Ration Crate"
 	desc = "A crate of five ration packs, made for easy distribution."
-	cost = CARGO_CRATE_VALUE * 4
+	cost = CARGO_CRATE_VALUE * 4.5
 	contains = list(/obj/item/storage/box/halflife/ration/ration,
 					/obj/item/storage/box/halflife/ration/ration,
 					/obj/item/storage/box/halflife/ration/ration,
@@ -164,7 +164,7 @@
 /datum/supply_pack/organic/loyaltyrations
 	name = "Loyalty-grade Ration Crate"
 	desc = "A crate of five loyalty-grade ration packs, made for easy distribution."
-	cost = CARGO_CRATE_VALUE * 4.5
+	cost = CARGO_CRATE_VALUE * 5
 	contains = list(/obj/item/storage/box/halflife/ration/loyaltyration,
 					/obj/item/storage/box/halflife/ration/loyaltyration,
 					/obj/item/storage/box/halflife/ration/loyaltyration,
@@ -175,7 +175,7 @@
 /datum/supply_pack/organic/badrations
 	name = "Low-grade Ration Crate"
 	desc = "A crate of five low-grade ration packs, made for easy distribution."
-	cost = CARGO_CRATE_VALUE * 3.5
+	cost = CARGO_CRATE_VALUE * 4
 	contains = list(/obj/item/storage/box/halflife/ration/badration,
 					/obj/item/storage/box/halflife/ration/badration,
 					/obj/item/storage/box/halflife/ration/badration,
@@ -208,7 +208,7 @@
 /datum/supply_pack/organic/fancyalcohol
 	name = "Exotic Alcohol Crate"
 	desc = "A crate of five exotic old world alcoholic beverages. Probably too good for the common citizen to have."
-	cost = CARGO_CRATE_VALUE * 5
+	cost = CARGO_CRATE_VALUE * 5.5
 	contains = list(/obj/item/reagent_containers/cup/glass/bottle/beer,
 				/obj/item/reagent_containers/cup/glass/bottle/grappa,
 				/obj/item/reagent_containers/cup/glass/bottle/gin,
