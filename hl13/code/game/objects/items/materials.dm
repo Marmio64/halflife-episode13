@@ -74,7 +74,9 @@
 	if(istype(interacting_with, /obj/item/melee/baton/security))
 		var/obj/item/melee/baton/security/baton = interacting_with
 		if(baton.cell)
-			baton.cell.give(5000) //half of a standard baton cell
-			qdel(src)
-			return ITEM_INTERACT_SUCCESS
+			if(do_after(user, 1 SECONDS, baton))
+				playsound(src, 'hl13/sound/effects/suitchargeok1.ogg', 40, FALSE)
+				baton.cell.give(5000) //half of a standard baton cell
+				qdel(src)
+				return ITEM_INTERACT_SUCCESS
 	return NONE

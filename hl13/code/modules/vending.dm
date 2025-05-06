@@ -166,7 +166,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/storage/backpack/halflife/satchel/military = 3,
 	)
 	refill_canister = /obj/item/vending_refill/civpro
-	default_price = PAYCHECK_CREW
+	default_price = PAYCHECK_CREW * 0.75
 	extra_price = PAYCHECK_COMMAND * 3
 	payment_department = NO_FREEBIES
 

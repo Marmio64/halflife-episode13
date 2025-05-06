@@ -51,18 +51,18 @@
 	. = ..()
 	user.faction += "combine"
 
-	var/exp_rank = "i5"
+	var/exp_rank = "0"
 
 	if(user?.client?.prefs)
 		switch(user.client.prefs.exp[JOB_WARDEN])
 			if(750 to INFINITY)
-				exp_rank = "i1"
+				exp_rank = "100"
 			if(500 to 750)
-				exp_rank = "i2"
+				exp_rank = "75"
 			if(300 to 500)
-				exp_rank = "i3"
+				exp_rank = "50"
 			if(50 to 300)
-				exp_rank = "i4"
+				exp_rank = "25"
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id
