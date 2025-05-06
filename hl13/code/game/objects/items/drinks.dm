@@ -10,6 +10,15 @@
 	. = ..()
 	icon_state = "[icon_state]_open"
 
+/obj/item/reagent_containers/cup/soda_cans/breenwater/empty
+	name = "water can"
+	desc = "A can of Breen's private reserve water. Supposedly, it helps improve your memory!"
+	icon_state = "breen_can_open"
+	list_reagents = null
+	reagent_flags = OPENCONTAINER
+	spillable = TRUE
+	throwforce = 0
+
 /obj/item/reagent_containers/cup/soda_cans/breenwater/yellow
 	name = "yellow water can"
 	desc = "A can of Breen's private reserve water. Supposedly, it helps improve your memory! This one is painted yellow, and smells funny."
@@ -55,8 +64,8 @@
 
 /obj/item/reagent_containers/cup/soda_cans/halflife/coffee
 	name = "Combine Coffee"
-	desc = "A dark beverage inside an equally dark metal can. It tastes like day-old burnt coffee."
+	desc = "A dark beverage inside an equally dark metal can. It tastes like day-old burnt coffee. It's good at delaying the onset of tiredness, but isn't very useful if you're already very tired."
 	icon = 'hl13/icons/obj/drinks.dmi'
 	icon_state = "coffee"
-	list_reagents = list(/datum/reagent/consumable/coffee = 25)
+	list_reagents = list(/datum/reagent/consumable/coffee = 30)
 	custom_price = PAYCHECK_CREW * 2

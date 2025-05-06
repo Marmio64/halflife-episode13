@@ -56,6 +56,7 @@
 					/obj/item/tape = 5, //tape recorder stuff
 					/obj/item/taperecorder = 2,
 					/obj/item/storage/fancy/cigarettes/halflife = 8,
+					/obj/item/storage/halflife/pill_bottle/antifatigue = 6,
 					/obj/item/storage/box/coffeepack = 3, //for coffee makers
 					/obj/item/clothing/gloves/fingerless = 3)
 
@@ -156,6 +157,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/reagent_containers/spray/pepper = 6,
 		/obj/item/radio/civpro = 8,
 		/obj/item/halflife/combine_battery = 6,
+		/obj/item/storage/halflife/pill_bottle/antifatigue = 6,
 		/obj/item/stack/credit_voucher = 10,
 	)
 	contraband = list(

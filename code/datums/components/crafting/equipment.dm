@@ -64,27 +64,6 @@
 	)
 	category = CAT_EQUIPMENT
 
-/datum/crafting_recipe/pressureplate
-	name = "Pressure Plate"
-	result = /obj/item/pressure_plate
-	time = 0.5 SECONDS
-	reqs = list(
-		/obj/item/stack/sheet/iron = 1,
-		/obj/item/stack/tile/iron = 1,
-		/obj/item/stack/cable_coil = 2,
-		/obj/item/assembly/igniter = 1,
-	)
-	category = CAT_EQUIPMENT
-
-/datum/crafting_recipe/gripperoffbrand
-	name = "Improvised Gripper Gloves"
-	reqs = list(
-		/obj/item/clothing/gloves/fingerless = 1,
-		/obj/item/stack/sticky_tape = 1,
-	)
-	result = /obj/item/clothing/gloves/tackler/offbrand
-	category = CAT_EQUIPMENT
-
 /datum/crafting_recipe/rebar_quiver
 	name = "Rebar Storage Quiver"
 	result = /obj/item/storage/bag/rebar_quiver

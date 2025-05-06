@@ -136,16 +136,6 @@
 	category = CAT_ENTERTAINMENT
 	time = 10 SECONDS
 
-/datum/crafting_recipe/latexballoon
-	name = "Latex Balloon"
-	result = /obj/item/latexballoon
-	time = 5 SECONDS
-	reqs = list(
-		/obj/item/clothing/gloves/latex = 1,
-		/obj/item/stack/cable_coil = 2,
-	)
-	category = CAT_EQUIPMENT
-
 /datum/crafting_recipe/violin
 	name = "Violin"
 	result = /obj/item/instrument/violin

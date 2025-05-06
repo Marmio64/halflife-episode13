@@ -36,3 +36,24 @@
 
 /datum/reagent/fuel/weak
 	tox_damage = 0.1
+
+/datum/reagent/antifatigue_rations
+	name = "Anti-Fatigue Rations"
+	description = "A powerful, quick acting stimulant for staving off sleep, though it is also a potent diuretic."
+	color = "#5c5149"
+	overdose_threshold = 25 //cant immediately take all pills.
+	taste_description = "bitter chemicals"
+	metabolized_traits = list(TRAIT_STIMULATED)
+	metabolization_rate = REAGENTS_METABOLISM * 2 //quick acting
+
+/datum/reagent/antifatigue_rations/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	affected_mob.set_jitter_if_lower(10 SECONDS * REM * seconds_per_tick)
+
+/datum/reagent/antifatigue_rations/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	affected_mob.adjust_dizzy(-10 SECONDS * REM * seconds_per_tick)
+	affected_mob.adjust_drowsiness(-6 SECONDS * REM * seconds_per_tick)
+	affected_mob.AdjustSleeping(-4 SECONDS * REM * seconds_per_tick)
+	affected_mob.adjust_tiredness(-15 * REM * seconds_per_tick) //makes you feel awake
+	affected_mob.adjust_hydration(-5 * REM * seconds_per_tick) //diuretic

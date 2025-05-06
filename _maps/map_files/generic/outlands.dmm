@@ -89,6 +89,13 @@
 /obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"aP" = (
+/obj/structure/halflife/trash/papers/two{
+	dir = 8
+	},
+/obj/effect/spawner/random/halflife/loot/trash,
+/turf/open/floor/plating/ground/dirt/alt,
+/area/halflife/outdoors/forest)
 "aR" = (
 /obj/structure/railing/halflife/wood/single{
 	dir = 1
@@ -175,6 +182,10 @@
 	dir = 1
 	},
 /turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
+"bP" = (
+/obj/effect/spawner/random/halflife/loot/trash,
+/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "bQ" = (
 /obj/effect/turf_decal/weather/dirt{
@@ -426,6 +437,10 @@
 /obj/item/stack/spacecash/c1,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
+"dS" = (
+/obj/effect/spawner/random/halflife/loot/trash,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "dU" = (
 /obj/structure/railing/halflife/wood{
 	dir = 4
@@ -493,6 +508,7 @@
 /obj/structure/halflife/trash/papers/three{
 	dir = 4
 	},
+/obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "eE" = (
@@ -3180,6 +3196,11 @@
 "DN" = (
 /turf/closed/wall/halflife/sewer,
 /area/halflife/outdoors/forest)
+"DQ" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/effect/spawner/random/halflife/loot/trash,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors)
 "DT" = (
 /obj/structure/halflife/trash/cardboard{
 	dir = 8
@@ -3462,6 +3483,10 @@
 "He" = (
 /obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
+"Hh" = (
+/obj/effect/spawner/random/halflife/loot/trash,
+/turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "Hj" = (
 /obj/effect/turf_decal/weather/dirt,
@@ -4339,6 +4364,7 @@
 /obj/structure/halflife/trash/cardboard{
 	dir = 10
 	},
+/obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
 "PI" = (
@@ -45356,7 +45382,7 @@ tN
 ix
 tN
 It
-Ig
+aP
 tN
 It
 It
@@ -46148,7 +46174,7 @@ Aq
 Um
 It
 It
-tN
+Hh
 ce
 tN
 tN
@@ -46925,7 +46951,7 @@ dp
 Lz
 jR
 WY
-GX
+bP
 It
 tN
 eC
@@ -47518,7 +47544,7 @@ zB
 XA
 tN
 It
-tN
+Hh
 sr
 tN
 tN
@@ -48120,7 +48146,7 @@ IF
 tN
 CA
 tN
-tN
+Hh
 It
 fB
 tN
@@ -64379,7 +64405,7 @@ QW
 GX
 Ko
 Ae
-yX
+dS
 mS
 Ko
 tN
@@ -64577,7 +64603,7 @@ GX
 Ko
 mM
 Yw
-yX
+dS
 Ko
 GX
 It
@@ -70991,7 +71017,7 @@ VH
 tN
 tN
 Ko
-SQ
+DQ
 uo
 Un
 Ko

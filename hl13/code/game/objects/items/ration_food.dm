@@ -203,28 +203,28 @@
 	w_class = WEIGHT_CLASS_SMALL
 	desc = "A small disk resembling an old world cookie...? The combine did a good job faking this one, you can hardly tell if it is real or not, though the barely sweet taste does leave you disappointed."
 
-/obj/item/storage/halflife/pill_bottle
-	name = "AntiSleep Pill bottle"
+/obj/item/storage/halflife/pill_bottle/antifatigue
+	name = "Anti-Fatigue Pill bottle"
 	icon = 'hl13/icons/obj/food.dmi'
-	desc = "Good for late nights"
+	desc = "A pill bottle with anti fatigue pill rations inside. The side reads: WARNING, CONSUME WITH WATER, POTENT DIURETIC."
 	icon_state = "pill_bottle"
 	w_class = WEIGHT_CLASS_SMALL
 
-/obj/item/storage/halflife/pill_bottle/PopulateContents()
-	for(var/i=0,i<10, i++)
-		new /obj/item/reagent_containers/pill/antisleep(src)
+/obj/item/storage/halflife/pill_bottle/antifatigue/PopulateContents()
+	for(var/i=0,i<4, i++)
+		new /obj/item/reagent_containers/pill/antifatigue(src)
 
-/obj/item/reagent_containers/pill/antisleep
-	name = "antisleep pill"
-	desc = "Used to reduce the need for sleep."
-	icon_state = "pill8"
-	list_reagents = list(/datum/reagent/iron = 30) //place holder
-	rename_with_volume = TRUE
+/obj/item/reagent_containers/pill/antifatigue
+	name = "anti-fatigue pill"
+	desc = "A strong stimulant which shakes you awake. It may be wise to not take these in quick succession..."
+	icon_state = "antifatigue"
+	icon = 'hl13/icons/obj/misc_items.dmi'
+	list_reagents = list(/datum/reagent/antifatigue_rations = 10)
 
 //Soup dust
 /obj/item/reagent_containers/cup/halflife/sustenance_dust
 	name = "Desiccated Sustenance Dust"
-	desc = "This packet is found in biotic rations, Can be mixed with water to make a soup"
+	desc = "A packet filled with a dry dust that tastes like absolutely nothing. Can be mixed with water to create a soup to draw out more sustenance. It is incredibly depressing to eat and not that nutritious, but at the least there aren't any gross flavors."
 	var/icon_open = "bar_package_4_open"
 	icon_state = "bar_package_4"
 	icon = 'hl13/icons/obj/food.dmi'
@@ -241,6 +241,7 @@
 	name = "Desiccated Sustenance Dust"
 	color = "#928a86ff"
 	taste_description = "Saw dust"
+	nutriment_factor = 45 // equal to 3 units of nutriment. You can dry scoop this shit, but you'll get less nutrition.
 
 /datum/chemical_reaction/sustenance_dust_to_soup
 	results = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/water = 16)

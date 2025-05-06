@@ -62,6 +62,17 @@
 	grind_results = list(/datum/reagent/iron = 20)
 	matter_amount = 2
 
+/obj/item/stack/sheet/scrap_copper
+	icon = 'hl13/icons/obj/stack_objects.dmi'
+	name = "scrap copper"
+	desc = "Pieces of copper wiring and other things. Might be useful for electronic applications, but is too soft for serious weapons and armor."
+	singular_name = "scrap copper"
+	icon_state = "scrap_copper"
+	obj_flags = CONDUCTS_ELECTRICITY
+	resistance_flags = FIRE_PROOF
+	merge_type = /obj/item/stack/sheet/scrap_copper
+	grind_results = list(/datum/reagent/copper = 20)
+	novariants = TRUE
 
 /obj/item/stack/sheet/mineral/scrap_wood
 	icon = 'hl13/icons/obj/stack_objects.dmi'

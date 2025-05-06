@@ -41,16 +41,6 @@
 	undyeable = TRUE
 	clothing_traits = list(TRAIT_FINGERPRINT_PASSTHROUGH)
 
-/obj/item/clothing/gloves/color/fingerless/Initialize(mapload)
-	. = ..()
-	var/static/list/slapcraft_recipe_list = list(/datum/crafting_recipe/gripperoffbrand)
-	AddComponent(/datum/component/adjust_fishing_difficulty, -4)
-
-	AddElement(
-		/datum/element/slapcrafting,\
-		slapcraft_recipes = slapcraft_recipe_list,\
-	)
-
 /obj/item/clothing/gloves/color/orange
 	name = "orange gloves"
 	desc = "A pair of gloves, they don't look special in any way."

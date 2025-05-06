@@ -129,7 +129,7 @@
 	icon_state = "trashbags_1"
 	var/searched = FALSE
 	var/random_appearence = TRUE
-	var/loot_chance = 40
+	var/loot_chance = 35
 	var/loot_amount = 1
 
 /obj/structure/halflife/trash/garbage/Initialize(mapload)
@@ -169,8 +169,13 @@
 				else
 					new /obj/effect/spawner/random/halflife/loot/two(loc, 1)
 		else
-			user.visible_message(span_notice("[user] finds nothing inside the [src]."), \
-				span_notice("Nothing good..."))
+			if(prob(40))
+				new /obj/effect/spawner/random/halflife/loot/trash(loc, 1)
+				user.visible_message(span_notice("[user] finds something inside the [src]."), \
+				span_notice("Just some scrap, garbage, and other bits."))
+			else
+				user.visible_message(span_notice("[user] finds nothing inside the [src]."), \
+					span_notice("Nothing good..."))
 		searched = TRUE
 		user.mind?.adjust_experience(/datum/skill/scavenging, 25)
 

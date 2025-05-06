@@ -758,6 +758,11 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
+"cK" = (
+/obj/structure/closet/crate/bin,
+/obj/effect/spawner/random/halflife/loot/trash,
+/turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors/trainstation)
 "cL" = (
 /obj/modular_map_root/citynorth,
 /turf/closed/indestructible/syndicate,
@@ -3028,6 +3033,7 @@
 	pixel_y = 17
 	},
 /obj/effect/turf_decal/siding/street,
+/obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/plaza)
 "kT" = (
@@ -3571,6 +3577,7 @@
 /obj/structure/halflife/trash/cardboard{
 	dir = 8
 	},
+/obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
 "mW" = (
@@ -4282,8 +4289,8 @@
 /area/halflife/indoors/scienceunion)
 "pH" = (
 /obj/structure/closet/crate/bin,
-/obj/effect/spawner/random/halflife/loot,
 /obj/effect/turf_decal/siding/street,
+/obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/alley)
 "pI" = (
@@ -4363,6 +4370,10 @@
 /obj/machinery/computer/communications,
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/townhall/secondfloor)
+"pV" = (
+/obj/effect/spawner/random/halflife/loot/trash,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "pW" = (
 /obj/structure/halflife/trash/food/dinner,
 /obj/effect/turf_decal/siding/street,
@@ -5520,6 +5531,7 @@
 	dir = 8;
 	pixel_y = 7
 	},
+/obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/alley)
 "uj" = (
@@ -6337,10 +6349,13 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "xd" = (
-/obj/structure/closet/crate/bin,
-/obj/effect/spawner/random/halflife/loot,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors)
+/obj/structure/halflife/trash/garbage{
+	pixel_x = 3;
+	pixel_y = 14
+	},
+/obj/effect/spawner/random/halflife/loot/trash,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley/restrictedblock)
 "xe" = (
 /obj/machinery/door/unpowered/halflife/wood/white{
 	keylock = 1;
@@ -8211,6 +8226,7 @@
 /obj/structure/halflife/trash/cardboard{
 	dir = 4
 	},
+/obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley)
 "DL" = (
@@ -8482,6 +8498,7 @@
 /area/halflife/indoors/hospital)
 "EL" = (
 /obj/structure/closet/crate/bin,
+/obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
 "EM" = (
@@ -9249,7 +9266,8 @@
 	dir = 1
 	},
 /obj/structure/closet/crate/bin,
-/obj/effect/spawner/random/halflife/loot,
+/obj/effect/spawner/random/halflife/loot/trash,
+/obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley/restrictedblock)
 "Hu" = (
@@ -10782,7 +10800,7 @@
 /area/halflife/indoors/bar/apartments)
 "ME" = (
 /obj/structure/closet/crate/bin,
-/obj/item/reagent_containers/cup/soda_cans/breenwater,
+/obj/item/reagent_containers/cup/soda_cans/breenwater/empty,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
 "MF" = (
@@ -11010,7 +11028,7 @@
 /area/halflife/outdoors/alley/slums)
 "Nw" = (
 /obj/structure/closet/crate/bin,
-/obj/effect/spawner/random/halflife/loot,
+/obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/plaza)
 "Nx" = (
@@ -12642,6 +12660,7 @@
 /area/halflife/indoors)
 "Tl" = (
 /obj/structure/halflife/trash/cardboard,
+/obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/alley/slums)
 "Tm" = (
@@ -30805,7 +30824,7 @@ QH
 ji
 IZ
 sH
-Pg
+pV
 Pg
 ji
 ce
@@ -33534,7 +33553,7 @@ jy
 jy
 jy
 jy
-xd
+EL
 Fm
 Oc
 Oc
@@ -34660,7 +34679,7 @@ ji
 ji
 ji
 ji
-jf
+xd
 Nz
 Nz
 ni
@@ -40802,7 +40821,7 @@ qY
 Op
 qk
 kd
-Ej
+cK
 ho
 kd
 tT

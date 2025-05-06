@@ -43,6 +43,7 @@
 				/obj/item/stack/sheet/cloth,
 				/obj/item/stack/sheet/iron/five,
 				/obj/item/stack/sheet/scrap_metal/two = 2,
+				/obj/item/stack/sheet/scrap_copper,
 				/obj/item/stack/sheet/scrap_parts,
 				/obj/item/stack/sheet/glass = 2,
 				/obj/item/stack/sheet/mineral/scrap_wood = 3,
@@ -85,12 +86,34 @@
 				/obj/item/stack/sheet/cloth,
 				/obj/item/stack/sheet/scrap_metal/two = 2,
 				/obj/item/stack/sheet/scrap_parts,
+				/obj/item/stack/sheet/scrap_copper,
 				/obj/item/stack/sheet/glass,
 				/obj/item/stack/bulletcasings,
 				/obj/item/stack/sheet/mineral/scrap_wood = 2
 				)
 
-//only scrap items, pretty much always needs crafting to be made useful
+//actual garbage, low level loot, and scraps
+/obj/effect/spawner/random/halflife/loot/trash
+	name = "trash loot"
+	spawn_loot_count = 1
+
+	loot = list(
+				/obj/item/circuitmaterial,
+				/obj/item/light/bulb,
+				/obj/item/stack/cable_coil,
+				/obj/item/stack/sheet/cloth,
+				/obj/item/stack/sheet/scrap_metal = 3,
+				/obj/item/stack/sheet/scrap_parts,
+				/obj/item/stack/sheet/scrap_copper,
+				/obj/item/stack/sheet/mineral/scrap_wood = 3,
+				/obj/item/trash/halflife/nutrient_bar_waste/water = 5,
+				/obj/item/reagent_containers/cup/soda_cans/breenwater/empty = 5,
+				/obj/item/trash/halflife/nutrient_bar_waste/pork = 3,
+				/obj/item/trash/halflife/nutrient_bar_waste/beef = 3,
+				/obj/item/stack/spacecash/c1
+				)
+
+//crafting benches
 /obj/effect/spawner/random/halflife/loot/crafting_bench
 	name = "random crafting bench"
 	spawn_loot_count = 1
@@ -146,6 +169,7 @@
 				/obj/item/reagent_containers/cup/glass/bottle/hcider,
 				/obj/item/reagent_containers/cup/glass/bottle/whiskey,
 				/obj/item/reagent_containers/cup/glass/bottle/vodka = 2, // Na Zdrowie!
+				/obj/item/storage/halflife/pill_bottle/antifatigue,
 				/obj/item/reagent_containers/pill/lsd = 2,
 				/obj/item/reagent_containers/cup/glass/mouthwash,
 				/obj/item/reagent_containers/cup/bottle/welding_fuel,

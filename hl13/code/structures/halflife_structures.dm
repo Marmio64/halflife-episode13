@@ -812,10 +812,12 @@
 			new /obj/item/stack/sheet/glass(loc)
 			new /obj/item/circuitmaterial(loc)
 			new /obj/item/circuitmaterial(loc)
+			new /obj/item/stack/sheet/scrap_copper(loc)
 		else
 			new /obj/item/stack/sheet/mineral/scrap_wood(loc)
 			new /obj/item/stack/sheet/glass(loc)
 			new /obj/item/circuitmaterial(loc)
+			new /obj/item/stack/sheet/scrap_copper(loc)
 	qdel(src)
 
 /obj/structure/halflife/tv/examine(mob/user)
@@ -845,10 +847,12 @@
 			new /obj/item/stack/sheet/scrap_parts(loc, 2)
 			new /obj/item/stack/sheet/glass(loc, 3)
 			new /obj/item/circuitmaterial(loc, 3)
+			new /obj/item/stack/sheet/scrap_copper(loc)
 		else
 			new /obj/item/stack/sheet/scrap_parts(loc)
 			new /obj/item/stack/sheet/glass(loc)
 			new /obj/item/circuitmaterial(loc)
+			new /obj/item/stack/sheet/scrap_copper(loc)
 	qdel(src)
 
 /obj/structure/halflife/tv/wooden
@@ -863,10 +867,12 @@
 			new /obj/item/stack/sheet/scrap_parts(loc, 2)
 			new /obj/item/stack/sheet/glass(loc, 3)
 			new /obj/item/circuitmaterial(loc, 3)
+			new /obj/item/stack/sheet/scrap_copper(loc)
 		else
 			new /obj/item/stack/sheet/scrap_parts(loc)
 			new /obj/item/stack/sheet/glass(loc)
 			new /obj/item/circuitmaterial(loc)
+			new /obj/item/stack/sheet/scrap_copper(loc)
 	qdel(src)
 
 /obj/structure/halflife/tv/wooden/red
@@ -889,10 +895,12 @@
 			new /obj/item/stack/sheet/scrap_parts(loc, 2)
 			new /obj/item/stack/sheet/glass(loc, 3)
 			new /obj/item/circuitmaterial(loc, 3)
+			new /obj/item/stack/sheet/scrap_copper(loc)
 		else
 			new /obj/item/stack/sheet/scrap_parts(loc)
 			new /obj/item/stack/sheet/glass(loc)
 			new /obj/item/circuitmaterial(loc)
+			new /obj/item/stack/sheet/scrap_copper(loc)
 	qdel(src)
 
 /obj/structure/halflife/tv/tube/small

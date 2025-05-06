@@ -76,3 +76,13 @@
 
 	can_parry = TRUE
 	wdefense = 1
+
+/obj/item/flashlight/makeshift
+	name = "makeshift flashlight"
+	desc = "A makeshift battery consisting of a lightbulb attached to a battery. It is pretty awful, but some light is better than none."
+	icon_state = "basicflashlight"
+	w_class = WEIGHT_CLASS_SMALL
+	obj_flags = CONDUCTS_ELECTRICITY
+	slot_flags = ITEM_SLOT_BELT
+	light_range = 3
+	light_power = 0.4

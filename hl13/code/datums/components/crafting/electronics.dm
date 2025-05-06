@@ -8,6 +8,16 @@
 	category = CAT_EQUIPMENT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
 
+//Awful, but its quite cheap, and doesn't even need an electrical bench.
+/datum/crafting_recipe/flashlight_makeshift
+	name = "Makeshift Flashlight"
+	result = /obj/item/flashlight/makeshift
+	reqs = list(/obj/item/stack/sheet/scrap_metal = 2,
+				/obj/item/stack/sheet/scrap_copper = 1,
+				/obj/item/light/bulb = 1)
+	time = 4 SECONDS
+	category = CAT_EQUIPMENT
+
 /datum/crafting_recipe/flashlight
 	name = "Flashlight"
 	result = /obj/item/flashlight
@@ -35,7 +45,7 @@
 	result = /obj/item/circuitmaterial
 	reqs = list(/obj/item/stack/sheet/iron = 2,
 				/obj/item/stack/sheet/glass = 1,
-				/obj/item/stack/sheet/mineral/gold = 1,
+				/obj/item/stack/sheet/scrap_copper = 1,
 				/obj/item/stack/cable_coil = 2)
 	time = 4 SECONDS
 	category = CAT_ROBOT
@@ -45,6 +55,8 @@
 	name = "Advanced Circuit Chips"
 	result = /obj/item/circuitmaterial/advanced
 	reqs = list(/obj/item/stack/sheet/mineral/diamond = 2,
+				/obj/item/stack/sheet/scrap_copper = 1,
+				/obj/item/stack/sheet/mineral/gold = 1,
 				/obj/item/circuitmaterial = 2)
 	time = 6 SECONDS
 	category = CAT_ROBOT
