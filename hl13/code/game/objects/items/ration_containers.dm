@@ -20,8 +20,9 @@
 	else
 		new /obj/item/halflife/nutrient_bar_wrapping/water(src)
 
+	new /obj/item/storage/halflife/hand_box/egg(src)
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater(src)
-	new /obj/item/stack/spacecash/c1(src, 5)
+	new /obj/item/stack/spacecash/c1(src, 4)
 
 /obj/item/storage/box/halflife/ration/betterration
 	name = "production-grade ration pack"
@@ -34,10 +35,11 @@
 		new /obj/item/food/pierogi_ration(src)
 		new /obj/item/reagent_containers/cup/glass/bottle/beer/light(src)
 	else
-		new /obj/item/storage/halflife/hand_box/egg(src)
+		new /obj/item/halflife/nutrient_bar_wrapping/pork(src)
 
+	new /obj/item/storage/halflife/hand_box/egg(src)
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater/red(src)
-	new /obj/item/stack/spacecash/c10(src)
+	new /obj/item/stack/spacecash/c1(src, 6)
 
 /obj/item/storage/box/halflife/ration/loyaltyration
 	name = "loyalty-grade ration pack"
@@ -52,13 +54,13 @@
 	else
 		new /obj/item/halflife/nutrient_bar_wrapping/pork(src)
 
+	new /obj/item/storage/halflife/hand_box/chicken(src)
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater/red(src)
-	new /obj/item/food/halflife/cookie(src)
-	new /obj/item/stack/credit_voucher(src, 3)
+	new /obj/item/stack/credit_voucher(src, 2)
 
 /obj/item/storage/box/halflife/ration/bestration
 	name = "priority-grade ration pack"
-	desc = "An extra high grade ration pack. It's pretty good in comparison, though still not incredible."
+	desc = "An extra high grade ration pack. Compared to other rations, the contents are revelled as fine dining."
 	foldable_result = null
 	icon_state = "ration-bestgrade"
 
@@ -70,9 +72,9 @@
 		new /obj/item/halflife/nutrient_bar_wrapping/beef(src)
 
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater/green(src)
-	new /obj/item/food/halflife/cookie(src)
+	new /obj/item/storage/halflife/hand_box/cookie(src)
 	new /obj/item/reagent_containers/cup/soda_cans/halflife/coffee(src)
-	new /obj/item/stack/credit_voucher(src, 4)
+	new /obj/item/stack/credit_voucher(src, 3)
 
 /obj/item/storage/box/halflife/ration/badration
 	name = "low-grade ration pack"

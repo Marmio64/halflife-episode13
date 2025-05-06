@@ -9,7 +9,7 @@
 	var/bar_type = /obj/item/food/halflife/nutrient_bar //used to put the bar objects in hand genarated when unwrapped
 	var/bar_waste = /obj/item/trash/halflife/nutrient_bar_waste //used to put the trash objects in hand genarated when unwrapped
 
-	custom_price = 15
+	custom_price = 10
 
 /obj/item/halflife/nutrient_bar_wrapping/attack_self(mob/user)
 	to_chat(user, span_notice("You start to unwrap the nutrient bar wraping..."))
@@ -44,17 +44,16 @@
 
 ////////////
 /obj/item/food/halflife
+	bite_consumption = 1
 	icon = 'hl13/icons/obj/food.dmi'
-
-/obj/item/food/halflife/nutrient_bar
-	var/mood_penalty = FOOD_DISLIKED
+	var/mood_penalty
 
 ///Override for checkliked callback
-/obj/item/food/halflife/nutrient_bar/make_edible()
+/obj/item/food/halflife/make_edible()
 	. = ..()
 	AddComponent(/datum/component/edible, check_liked = CALLBACK(src, PROC_REF(check_liked)))
 
-/obj/item/food/halflife/nutrient_bar/proc/check_liked(mob/living/carbon/human/consumer) //Nobody likes rationpacks. Nobody. Unless you can't taste anything. If so, good on you.
+/obj/item/food/halflife/proc/check_liked(mob/living/carbon/human/consumer) //Nobody likes rationpacks. Nobody. Unless you can't taste anything. If so, good on you.
 	if(HAS_TRAIT(consumer, TRAIT_AGEUSIA)) //if you can't taste it, it doesn't taste good
 		return 0
 	else
@@ -63,34 +62,40 @@
 		else
 			return 0
 
+/obj/item/food/halflife/nutrient_bar
+	mood_penalty = FOOD_DISLIKED
+
+//Goes in standard rations
 /obj/item/food/halflife/nutrient_bar/water
 	name = "Water flavored nutrient bar"
-	desc = "a combine nutrient bar found in standard rations. this one is water flavored"
+	desc = "A combine nutrient bar found in rations, consisting of solidified vitamins and nutriments in a waxy bar. This one tastes like moldy water that has been in a plastic bottle for too long."
 	icon_state = "water_bar"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 7,
+		/datum/reagent/consumable/nutriment = 3,
 	)
-	tastes = list("Water" = 2, "Cardboard" = 2)
+	tastes = list("Water" = 2, "Cardboard" = 2, "Plastic" = 1)
 
+//Goes in production and loyalty grade rations
 /obj/item/food/halflife/nutrient_bar/pork
 	name = "Pork flavored nutrient bar"
-	desc = "a combine nutrient bar found in higher grade rations. this one is pork flavored"
+	desc = "A combine nutrient bar found in rations, consisting of solidified vitamins and nutriments in a waxy bar. This one tastes like pig lard."
 	icon_state = "pork_bar"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 5,
-		/datum/reagent/consumable/nutriment/vitamin = 3,
+		/datum/reagent/consumable/nutriment = 3,
+		/datum/reagent/consumable/nutriment/vitamin = 1,
 	)
-	tastes = list("Pork"=1)
+	tastes = list("Pork" = 1, "Lard" = 1)
 	mood_penalty = FOOD_UNPLEASANT
 
+//Goes in priority rations.
 /obj/item/food/halflife/nutrient_bar/beef
 	name = "Beef patty"
-	desc = "a combine Beef patty found in higher grade rations. It has a taste that might just remind you of beef."
+	desc = "A solidifed circular formation of nutriments that is painted brown and given drawn on char marks. Regardless of it's fakeness, the slightly beefy taste is not so bad."
 	icon_state = "beef_patty"
 	foodtypes = MEAT
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 5,
-		/datum/reagent/consumable/nutriment/vitamin = 3,
+		/datum/reagent/consumable/nutriment = 4,
+		/datum/reagent/consumable/nutriment/vitamin = 2,
 	)
 	tastes = list("Beef"=1)
 	mood_penalty = null
@@ -104,7 +109,7 @@
 	var/open_icon_state = "cardboardbox_open"
 	var/box_content = null
 
-	custom_price = 18
+	custom_price = 10
 
 /obj/item/storage/halflife/hand_box/PopulateContents()
 	new box_content(src)
@@ -123,23 +128,26 @@
 	icon_state = closed_icon_state
 
 //Paste Boxs
+//Goes inside standard and production grade rations
 /obj/item/storage/halflife/hand_box/egg
 	name = "Egg paste ration box"
-	desc = "A box used for a egg paste cube. Commonly found in standard rations"
+	desc = "A box used for a egg paste cube."
 	open_icon_state = "food_package_open"
 	closed_icon_state = "food_package"
 	box_content = /obj/item/food/halflife/egg_paste
 
+//Goes inside loyalty grade rations
 /obj/item/storage/halflife/hand_box/chicken
 	name = "Chicken paste ration box"
-	desc = "A box used for a chicken paste cube. Commonly found in priority ration"
+	desc = "A box used for a chicken paste cube."
 	open_icon_state = "food_package_2_open"
 	closed_icon_state = "food_package_2"
 	box_content = /obj/item/food/halflife/chicken_paste
 
+//Goes inside priority grade rations
 /obj/item/storage/halflife/hand_box/cookie
-	name = "Cookie paste ration box"
-	desc = "A box used for a cookie. Commonly found in service ration"
+	name = "Cookie ration box"
+	desc = "A box used for a cookie."
 	open_icon_state = "food_package_3_open"
 	closed_icon_state = "food_package_3"
 	box_content = /obj/item/food/halflife/cookie
@@ -147,35 +155,34 @@
 //food paste items
 /obj/item/food/halflife/egg_paste
 	name = "egg paste"
-	desc = "Cube of egg paste, Despite the name it does not really seem like a paste"
+	desc = "A solid mass of paste which jiggles like jello. It is flavored to taste like boiled eggs, but the consistency has it feeling like raw egg whites."
 	icon_state = "egg_paste"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
-		/datum/reagent/consumable/nutriment/vitamin = 3,
 	)
 	tastes = list("Soggy eggs" = 1)
+	mood_penalty = FOOD_DISLIKED
 
 /obj/item/food/halflife/chicken_paste
 	name = "chicken paste"
-	desc = "Cube of chicken paste, Despite the name it does not really seem like a paste"
+	desc = "A solid mass of paste which jiggles like jello. It is flavored to taste like chicken, but the consistency leaves an unpleasant mouth feel."
 	icon_state = "chicken_paste"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 6,
-		/datum/reagent/consumable/nutriment/protein = 3,
+		/datum/reagent/consumable/nutriment = 4,
 	)
 	tastes = list("Chicken" = 1)
+	mood_penalty = FOOD_UNPLEASANT
 
 /obj/item/food/halflife/cookie
 	name = "cookie"
 	icon_state = "cookie"
 	icon = 'hl13/icons/obj/food.dmi'
-	bite_consumption = 1
 	food_reagents = list(/datum/reagent/consumable/nutriment = 2)
 	tastes = list("cookie" = 1)
 	foodtypes = GRAIN | SUGAR
 	food_flags = FOOD_FINGER_FOOD
 	w_class = WEIGHT_CLASS_SMALL
-	desc = "Have a cookie, the combine thanks you for your service"
+	desc = "A small disk resembling an old world cookie...? The combine did a good job faking this one, you can hardly tell if it is real or not, though the barely sweet taste does leave you disappointed."
 
 /obj/item/storage/halflife/pill_bottle
 	name = "AntiSleep Pill bottle"
@@ -260,7 +267,7 @@
 	bite_consumption = 2
 	tastes = list("processed meat" = 3, "old grains" = 3)
 	foodtypes = MEAT | GRAIN
-	food_reagents = list(/datum/reagent/consumable/nutriment = 6, /datum/reagent/consumable/nutriment/vitamin = 3)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 3)
 	custom_price = 20
 
 	preserved_food = TRUE
