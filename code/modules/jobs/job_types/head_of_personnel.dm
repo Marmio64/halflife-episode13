@@ -45,6 +45,8 @@
 
 	voice_of_god_power = 1.4 //Command staff has authority
 
+	gameplay_help = "As the labor lead, you are a high ranking loyalist citizen bound by fear and/or loyalty to the combine. You cannot directly rebel or go rogue without a very good reason."
+
 	ration_bonus = 3
 
 /datum/job/head_of_personnel/get_captaincy_announcement(mob/living/captain)

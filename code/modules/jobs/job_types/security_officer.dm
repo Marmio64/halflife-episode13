@@ -49,6 +49,8 @@
 	ration_bonus = 2
 	union_law_notify = TRUE
 
+	gameplay_help = "As a civil protection officer, you are bound by fear and/or loyalty to the combine. You cannot directly rebel or go rogue without a very good reason."
+
 	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
 
 GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, SEC_DEPT_SUPPLY))

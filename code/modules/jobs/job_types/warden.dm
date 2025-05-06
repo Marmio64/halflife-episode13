@@ -45,6 +45,8 @@
 	ration_bonus = 2
 	union_law_notify = TRUE
 
+	gameplay_help = "As a civil protection officer, you are bound by fear and/or loyalty to the combine. You cannot directly rebel or go rogue without a very good reason."
+
 	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
 
 /datum/outfit/job/warden/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)

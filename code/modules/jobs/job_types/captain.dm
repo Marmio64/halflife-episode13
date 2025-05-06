@@ -53,6 +53,8 @@
 	ration_bonus = 3
 	union_law_notify = TRUE
 
+	gameplay_help = "As the District Administrator, you are the highest ranking citizen in the district and are bound by fear and/or loyalty to the combine, and cannot disobey Overwatch without a very good reason."
+
 	cmode_music = 'hl13/sound/music/combat/branescan.ogg'
 
 /datum/job/captain/get_captaincy_announcement(mob/living/captain)

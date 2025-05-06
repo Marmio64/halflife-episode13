@@ -34,6 +34,8 @@
 
 	job_tone = "slip"
 
+	gameplay_help = "Vortigaunts have particular mannerisms which must be followed, you're not just some random human. In addition, you are bound to never willingly betray or harm your kin."
+
 	ration_bonus = -1
 
 /datum/outfit/job/janitor

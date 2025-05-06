@@ -45,6 +45,8 @@
 	ration_bonus = 3
 	union_law_notify = TRUE
 
+	gameplay_help = "As the divisional lead, you are partially augmented and have had a full memory wipe. There is no chance of you going rogue, but you may have to follow orders from Overwatch which go against those of the District Administrator."
+
 	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
 
 /datum/job/head_of_security/get_captaincy_announcement(mob/living/captain)

@@ -144,6 +144,10 @@
 
 	/// Should they be reminded about following Union Law?
 	var/union_law_notify = FALSE
+
+	/// Additional pertinent information for playing the role you picked
+	var/gameplay_help
+
 	//hl13 edit end
 
 /datum/job/New()
@@ -338,6 +342,8 @@
 	//hl13 edit start
 	if(union_law_notify)
 		info += "<b>In order to give a fun experience, you are beholden to Union Law for delivering punishments <a href='https://halflifeepisode13.miraheze.org/wiki/Official:Union_Law'> unless you can justify breaking it with a good in character reason.</b>"
+	if(gameplay_help)
+		info += "[gameplay_help]"
 	//hl13 edit end
 	return info
 
