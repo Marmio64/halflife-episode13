@@ -591,6 +591,7 @@
 /area/halflife/indoors/sewer)
 "ff" = (
 /obj/structure/table/halflife/metal/grate,
+/obj/effect/spawner/random/halflife/loot/scrap,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/forest)
 "fh" = (
@@ -1978,13 +1979,6 @@
 /obj/machinery/porta_turret/combine/old,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
-"su" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/storage/halflife/suitcase{
-	pixel_y = 5
-	},
-/turf/open/floor/plating/indoor/concrete/small,
-/area/halflife/indoors)
 "sw" = (
 /obj/machinery/door/unpowered/halflife/metal/red,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -1999,6 +1993,13 @@
 	},
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
+"sD" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/storage/halflife/suitcase{
+	pixel_y = 5
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors)
 "sF" = (
 /obj/effect/spawner/random/halflife/plant_spawner,
 /obj/structure/railing/halflife/wood{
@@ -60451,7 +60452,7 @@ tN
 GX
 Ko
 SN
-SN
+kl
 SN
 SN
 SN
@@ -64180,7 +64181,7 @@ Jj
 Ko
 kv
 Vu
-su
+sD
 Ko
 fX
 GX

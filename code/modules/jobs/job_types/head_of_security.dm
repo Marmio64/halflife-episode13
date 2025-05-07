@@ -1,6 +1,6 @@
 /datum/job/head_of_security
 	title = JOB_HEAD_OF_SECURITY
-	description = "Command the civil protection team, and act as Overwatch's ground agent in the city. Should a conflict of interest occur, you are expected to side with Overwatch."
+	description = "Command the civil protection team, and act as Overwatch's ground agent in the city. Should a conflict of interest occur, you have to side with Overwatch."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
 	department_head = list(JOB_CAPTAIN)
 	head_announce = list(RADIO_CHANNEL_SECURITY)
@@ -45,7 +45,7 @@
 	ration_bonus = 3
 	union_law_notify = TRUE
 
-	gameplay_help = "As the divisional lead, you are partially augmented and have had a full memory wipe. There is no chance of you going rogue, but you may have to follow orders from Overwatch which go against those of the District Administrator."
+	gameplay_help = "As the divisional lead, you are partially augmented and have had a full memory wipe. You cannot go rogue and HAVE to follow orders from Overwatch (and thus, often Dispatch). Your CP officers and the District Administrator are not absolutely loyal however, so you'll have to instill loyalty in them to Overwatch."
 
 	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
 
