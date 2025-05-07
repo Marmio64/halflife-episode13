@@ -94,7 +94,7 @@
 					break
 			if("transfer into long term account")
 				to_chat(user, "<span class='warning'>You are transferring credits into your cross-round persistant account.</span>")
-				to_chat(user, "<span class='notice'>There is a 50% tax on deposits, and you can only deposit up to 100 credits pre-tax per round.</span>")
+				to_chat(user, "<span class='notice'>You can only deposit up to 50 credits per round.</span>")
 				to_chat(user, "<span class='notice'>Your current long term account balance is: [user.client.prefs.read_preference(/datum/preference/numeric/longtermaccount)].</span>")
 				var/ddeposit = input(user, "Please select the amount to transfer:", "Transfer Money") as null|num
 				if(!ddeposit)
@@ -104,12 +104,12 @@
 				if(ddeposit <= 0 || ddeposit > CID.registered_account.account_balance)
 					invalid_number()
 					return
-				if((user.client.longterm_credits_deposited + ddeposit) > 100)
-					to_chat(user, "<span class='notice'>This transfer would bring you over the 100 credit limit of transfers.</span>")
+				if((user.client.longterm_credits_deposited + ddeposit) > 50)
+					to_chat(user, "<span class='notice'>This transfer would bring you over the 50 credit limit of transfers.</span>")
 					return
 				CID.registered_account.account_balance -= ddeposit
 				user.client.longterm_credits_deposited += ddeposit
-				totalmoney = ddeposit * 0.5
+				totalmoney = ddeposit
 				var/longtermbalance = user.client.prefs.read_preference(/datum/preference/numeric/longtermaccount)
 				user.client.prefs.write_preference(GLOB.preference_entries[/datum/preference/numeric/longtermaccount], longtermbalance += totalmoney)
 				successful_transaction()
