@@ -14,7 +14,7 @@
 
 	ears = /obj/item/radio/headset/syndicate
 
-	r_pocket = /obj/item/flashlight/seclite
+	r_pocket = /obj/item/flashlight
 
 
 // POLISH RESISTANCE - Polish Revolutionary Front

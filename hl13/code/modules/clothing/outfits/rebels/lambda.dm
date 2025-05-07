@@ -13,7 +13,7 @@
 
 	back = /obj/item/storage/backpack/satchel
 
-	l_pocket = /obj/item/flashlight/seclite
+	l_pocket = /obj/item/flashlight
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	backpack_contents = list(

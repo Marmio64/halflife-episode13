@@ -119,6 +119,7 @@
 /obj/item/clothing/mask/gas/civilprotection/Initialize(mapload)
 	. = ..()
 	GLOB.cpmasks += src
+	AddComponent(/datum/component/speechmod, replacements = strings("combine_replacement.json", "combine"), slots = ITEM_SLOT_MASK)
 	if(fused)
 		ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
 	if(mask_color)

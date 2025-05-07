@@ -12,7 +12,7 @@
 
 	back = /obj/item/storage/backpack/halflife/satchel
 
-	l_pocket = /obj/item/flashlight/seclite
+	l_pocket = /obj/item/flashlight
 	r_pocket = /obj/item/market_uplink/halflife/blackmarket
 
 	id = /obj/item/card/id/advanced

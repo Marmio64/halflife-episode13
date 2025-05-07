@@ -40,6 +40,16 @@
 	category = CAT_EQUIPMENT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
 
+/datum/crafting_recipe/combine_battery
+	name = "Charged Combine Battery"
+	result = /obj/item/halflife/combine_battery
+	reqs = list(/obj/item/stack/sheet/iron = 2,
+				/obj/item/circuitmaterial = 1,
+				/obj/item/stack/sheet/scrap_copper = 1)
+	time = 8 SECONDS
+	category = CAT_EQUIPMENT
+	crafting_interface = CRAFTING_BENCH_ELECTRIC
+
 /datum/crafting_recipe/circuitchips
 	name = "Circuit Chips"
 	result = /obj/item/circuitmaterial
@@ -149,7 +159,7 @@
 /datum/crafting_recipe/cablecoil
 	name = "Cable Coil (30x)"
 	result = /obj/item/stack/cable_coil
-	reqs = list(/obj/item/stack/sheet/iron = 10, /obj/item/stack/sheet/plastic = 5)
+	reqs = list(/obj/item/stack/sheet/scrap_copper = 3, /obj/item/stack/sheet/plastic = 5)
 	time = 8 SECONDS
 	category = CAT_ROBOT
 	crafting_interface = CRAFTING_BENCH_GENERAL | CRAFTING_BENCH_ELECTRIC

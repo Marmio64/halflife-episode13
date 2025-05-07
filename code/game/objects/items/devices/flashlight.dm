@@ -340,12 +340,13 @@
 		visible_message(span_danger("[creator] created a medical hologram!"))
 
 /obj/item/flashlight/seclite
-	name = "maglite"
-	desc = "A heavy and robust flashlight with superior lighting capabilities. Should serve well as a weapon in a pinch as well."
+	name = "combine maglite" //hl13 edit
+	desc = "A heavy and robust combine made flashlight." //hl13 edit
 	dir = EAST
 	icon_state = "seclite"
 	inhand_icon_state = "seclite"
 	worn_icon_state = "seclite"
+	light_color = LIGHT_COLOR_FAINT_CYAN //hl13 edit
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
 	force = 10 // Not as good as a stun baton.
