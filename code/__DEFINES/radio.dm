@@ -81,6 +81,10 @@
 #define FREQ_SECURITY 1359 // Security comms frequency, red
 #define FREQ_ENTERTAINMENT 1415 // Used by entertainment monitors, cyan
 
+//HL13 special freqs
+#define FREQ_BUNKER_COMMS 1413 //used by the comms bunker
+#define FREQ_BUNKER_REBEL 1411 //used by the rarer-used rebel bunker
+
 #define FREQ_HOLOGRID_SOLUTION 1433
 #define FREQ_STATUS_DISPLAYS 1435
 
