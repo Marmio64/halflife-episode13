@@ -243,6 +243,9 @@
 /area/halflife/indoors)
 "ci" = (
 /obj/structure/halflife/pipes/piped,
+/obj/item/radio/intercom/bunker/comms{
+	pixel_x = 32
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "cl" = (
@@ -3221,6 +3224,18 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
+"DY" = (
+/obj/item/radio/intercom/bunker/comms{
+	pixel_x = 32
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/forest)
+"DZ" = (
+/obj/effect/spawner/random/halflife/loot/two,
+/obj/effect/spawner/random/halflife/loot/two,
+/obj/structure/closet/crate/halflife,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "Ec" = (
 /obj/structure/table/halflife/metal/constructed/cobbled,
 /obj/structure/halflife/trash/papers/three{
@@ -3370,6 +3385,13 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/forest)
+"FQ" = (
+/obj/structure/halflife/trash/garbage{
+	pixel_x = 14;
+	pixel_y = -13
+	},
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "FR" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/outdoors/forest)
@@ -3530,6 +3552,12 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate/border,
 /area/halflife/indoors/sewer/tunnel)
+"Ht" = (
+/obj/item/radio/intercom/bunker/rebel{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "Hu" = (
 /obj/structure/table/halflife/metal,
 /obj/structure/halflife/trash/glass/plate,
@@ -3962,6 +3990,12 @@
 /obj/machinery/light/small/cyan/directional/west,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors)
+"LC" = (
+/obj/item/radio/intercom/bunker/rebel{
+	pixel_x = -32
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "LF" = (
 /obj/machinery/door/unpowered/halflife/metal/red,
 /turf/open/floor/plating/indoor/metal/grate,
@@ -4659,6 +4693,12 @@
 /obj/machinery/door/unpowered/halflife/wood,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"SA" = (
+/obj/item/radio/intercom/bunker/rebel{
+	pixel_x = 32
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "SC" = (
 /obj/structure/railing/halflife/solo{
 	dir = 1
@@ -4830,6 +4870,11 @@
 /obj/machinery/light/small/red/directional/north,
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer)
+"Ui" = (
+/obj/machinery/light/small/directional/east,
+/obj/modular_map_root/sewerleft,
+/turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "Uj" = (
 /obj/structure/barricade/wooden,
@@ -5126,6 +5171,11 @@
 	dir = 4
 	},
 /turf/open/halflife/water/sewer/medium,
+/area/halflife/indoors/sewer)
+"Wp" = (
+/obj/machinery/light/small/directional/west,
+/mob/living/basic/halflife/headcrab,
+/turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "Wr" = (
 /turf/open/floor/plating/indoor/concrete,
@@ -29154,7 +29204,7 @@ UI
 UI
 UI
 UI
-UI
+Nu
 UI
 UI
 UI
@@ -29754,7 +29804,7 @@ dw
 dw
 dw
 dw
-vS
+Ui
 dw
 dw
 dw
@@ -29941,16 +29991,16 @@ UI
 UI
 UI
 UI
-UI
-UI
-UI
-Nu
-UI
-UI
-UI
-UI
-UI
-UI
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
 UI
 UI
 UI
@@ -30138,16 +30188,16 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
 wG
 wG
 wG
@@ -30335,16 +30385,16 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
 wG
 wG
 wG
@@ -30532,16 +30582,16 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
 wG
 wG
 wG
@@ -30729,16 +30779,16 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
 wG
 wG
 wG
@@ -30926,16 +30976,16 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
 wG
 wG
 wG
@@ -31123,16 +31173,16 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
 wG
 wG
 wG
@@ -31320,16 +31370,16 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
 wG
 wG
 wG
@@ -31517,16 +31567,16 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
 wG
 wG
 wG
@@ -31714,16 +31764,16 @@ wG
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
-wG
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
+Gb
 wG
 wG
 wG
@@ -32689,7 +32739,7 @@ gD
 IA
 Hl
 GT
-ZR
+Wp
 Aa
 ex
 lH
@@ -32884,9 +32934,9 @@ sp
 RU
 RU
 GT
-UI
-GT
-GT
+xT
+FQ
+DZ
 MT
 uX
 gj
@@ -33080,7 +33130,7 @@ eU
 Nu
 RU
 RU
-UI
+Nu
 UI
 UI
 UI
@@ -68761,7 +68811,7 @@ ai
 tN
 ai
 tN
-tN
+SA
 XA
 XA
 XA
@@ -69942,7 +69992,7 @@ MT
 ex
 ex
 MT
-ex
+Ht
 ex
 ex
 MT
@@ -70124,7 +70174,7 @@ XA
 XA
 fX
 fX
-fX
+DY
 fX
 XA
 XA
@@ -70336,7 +70386,7 @@ MT
 ex
 MP
 MT
-OV
+LC
 kg
 BV
 MT

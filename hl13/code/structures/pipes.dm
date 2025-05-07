@@ -146,21 +146,24 @@
 	desc = "A large pipe. There doesn't seem to be anything flowing through it currently."
 	icon = 'hl13/icons/obj/pipes.dmi'
 	icon_state = "large_pipe_straight"
-	max_integrity = 1000
+	max_integrity = 150 //1000 is ridiculous marmio, even for a fluff structure (namely because its dense)
 	density = TRUE
 	anchored = TRUE
 	plane = ABOVE_GAME_PLANE
 	layer = ABOVE_MOB_LAYER
 
-/* /obj/structure/halflife/large_pipe/Initialize(mapload) // Looks dumb rn... :(
+/* /obj/structure/halflife/large_pipe/Initialize(mapload) // Looks dumb rn... :( (leaving disabled because it decided it wouldnt work on compile)
 	. = ..()
-	AddElement(/datum/element/climbable, climb_time = 3 SECONDS, climb_stun = 0, no_stun = TRUE, jump_over = TRUE, jump_north = 12, jump_south = 17, jump_sides = 12) */
+	AddElement(/datum/element/climbable, climb_time = 3 SECONDS, climb_stun = 0, no_stun = TRUE, jump_over = TRUE, jump_north = 12, jump_south = 17, jump_sides = 12)
+*/
 
 /obj/structure/halflife/large_pipe/corner
 	icon_state = "large_pipe_corner"
 
 /obj/structure/halflife/large_pipe/pump
 	icon_state = "large_pipe_pump"
+	name = "old pump"
+	desc = "A large, old pump. Whatever it once moved has long since left."
 
 /obj/structure/halflife/large_pipe/intersection
 	icon_state = "large_pipe_intersection"

@@ -31,6 +31,19 @@
 	spawner_job_path = /datum/job/bunkeroperator
 	outfit = /datum/outfit/bunkeroperator
 
+/obj/item/radio/intercom/bunker
+	name = "military intercom"
+	desc = "An old, pre-war military intercom used by various resistance groups and outposts. This one seems to be acting as a doorbell to a bunker."
+	freqlock = RADIO_FREQENCY_LOCKED
+	freerange = TRUE
+	broadcasting = TRUE
+
+/obj/item/radio/intercom/bunker/comms
+	frequency = FREQ_BUNKER_COMMS
+
+/obj/item/radio/intercom/bunker/rebel
+	frequency = FREQ_BUNKER_REBEL
+
 /datum/job/bunkeroperator
 	title = ROLE_HERMIT
 	policy_index = ROLE_HERMIT
