@@ -72,7 +72,7 @@
 	var/list/rhand_items = list(
 		/obj/item/lockpick,
 		/obj/item/knife,
-		/obj/item/storage/briefcase,
+		/obj/item/storage/halflife/suitcase,
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
 		/obj/item/storage/box/halflife/ration/ration,
 		/obj/item/crowbar/large,

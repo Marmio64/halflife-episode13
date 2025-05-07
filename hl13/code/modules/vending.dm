@@ -55,6 +55,7 @@
 					/obj/item/stack/sheet/cloth = 5,
 					/obj/item/tape = 5, //tape recorder stuff
 					/obj/item/taperecorder = 2,
+					/obj/item/storage/halflife/suitcase = 6,
 					/obj/item/storage/fancy/cigarettes/halflife = 8,
 					/obj/item/storage/halflife/pill_bottle/antifatigue = 6,
 					/obj/item/storage/box/coffeepack = 3, //for coffee makers

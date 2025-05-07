@@ -36,6 +36,10 @@
 	name = "Wallet"
 	item_path = /obj/item/storage/wallet
 
+/datum/loadout_item/inhand/suitcase
+	name = "Suit Case"
+	item_path = /obj/item/storage/halflife/suitcase
+
 /datum/loadout_item/inhand/key
 	name = "Blank Custom Key"
 	item_path = /obj/item/customblank

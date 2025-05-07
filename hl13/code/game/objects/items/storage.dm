@@ -241,3 +241,25 @@
 	max_total_storage = 15
 	max_slots = 15
 
+/obj/item/storage/halflife/suitcase
+	name = "suitcase"
+	desc = "An old suitcase for holding your meager amount of belongings."
+	icon = 'hl13/icons/obj/storage/storage.dmi'
+	icon_state = "suitcase"
+	inhand_icon_state = "suitcase"
+	lefthand_file = 'hl13/icons/mob/inhands/cases_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/cases_righthand.dmi'
+	force = 8
+	hitsound = SFX_SWING_HIT
+	throw_speed = 2
+	throw_range = 4
+	w_class = WEIGHT_CLASS_BULKY
+	attack_verb_continuous = list("bashes", "batters", "bludgeons", "thrashes", "whacks")
+	attack_verb_simple = list("bash", "batter", "bludgeon", "thrash", "whack")
+	resistance_flags = FLAMMABLE
+	max_integrity = 150
+
+/obj/item/storage/briefcase/Initialize(mapload)
+	. = ..()
+	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
+	atom_storage.max_total_storage = 15

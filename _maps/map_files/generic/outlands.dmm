@@ -1978,6 +1978,13 @@
 /obj/machinery/porta_turret/combine/old,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"su" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/storage/halflife/suitcase{
+	pixel_y = 5
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors)
 "sw" = (
 /obj/machinery/door/unpowered/halflife/metal/red,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -2689,7 +2696,9 @@
 /area/halflife/indoors)
 "yP" = (
 /obj/structure/table/halflife/metal/constructed/cobbled,
-/obj/effect/spawner/random/halflife/loot,
+/obj/item/storage/halflife/suitcase{
+	pixel_y = 5
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
 "yS" = (
@@ -64171,7 +64180,7 @@ Jj
 Ko
 kv
 Vu
-SP
+su
 Ko
 fX
 GX
