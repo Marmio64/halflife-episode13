@@ -68,4 +68,4 @@
 	icon = 'hl13/icons/obj/drinks.dmi'
 	icon_state = "coffee"
 	list_reagents = list(/datum/reagent/consumable/coffee = 30)
-	custom_price = PAYCHECK_CREW * 2
+	custom_price = PAYCHECK_CREW * 1.5
