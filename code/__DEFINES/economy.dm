@@ -19,14 +19,14 @@
 #define PAYCHECK_CITIZEN 1
 #define PAYCHECK_STANDARD 2
 #define PAYCHECK_HIGH 4
-#define PAYCHECK_GREAT 8
+#define PAYCHECK_GREAT 6
 
 #define STATION_TARGET_BUFFER 25
 
 ///The coefficient for the amount of dosh that's collected everytime some is earned or received.
 #define DEBT_COLLECTION_COEFF 0.75
 
-#define MAX_GRANT_DPT 100
+#define MAX_GRANT_DPT 60
 
 //What should vending machines charge when you buy something in-department.
 #define DEPARTMENT_DISCOUNT 0.5

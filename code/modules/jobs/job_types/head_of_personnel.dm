@@ -24,7 +24,7 @@
 		)
 
 	paycheck = PAYCHECK_GREAT
-	paycheck_department = ACCOUNT_SRV
+	paycheck_department = ACCOUNT_SEC
 	bounty_types = CIV_JOB_RANDOM
 
 	mind_traits = list(HEAD_OF_STAFF_MIND_TRAITS)
@@ -65,7 +65,6 @@
 	ears = /obj/item/radio/headset/heads/hop
 	uniform = /obj/item/clothing/under/halflife/labor_lead
 	head = /obj/item/clothing/head/halflife/blue_hardhat
-	gloves = /obj/item/clothing/gloves/color/yellow
 	belt = /obj/item/melee/baton/telescopic
 
 	r_pocket = /obj/item/hl2key/townhall

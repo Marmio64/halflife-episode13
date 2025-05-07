@@ -125,7 +125,7 @@
 		/obj/item/storage/box/gum/happiness = 1,
 	)
 	refill_canister = /obj/item/vending_refill/combine_wallmed
-	default_price = PAYCHECK_CREW * 1.5
+	default_price = PAYCHECK_CREW * 1.25
 	extra_price = PAYCHECK_COMMAND
 	payment_department = ACCOUNT_MED
 	tiltable = FALSE

@@ -627,7 +627,7 @@
 		physical_currency = TRUE
 
 	if(registered_account.account_job.paycheck_department == ACCOUNT_SEC && istype(money, /obj/item/stack/credit_voucher))
-		to_chat(user, span_warning("[src] is not allowed to redeem these vouchers!"))
+		to_chat(user, span_warning("[src] is not allowed to redeem these vouchers! Try bartering with a citizen using them."))
 		return FALSE
 
 	if(!registered_account)
@@ -956,7 +956,7 @@
 
 /obj/item/card/id/advanced
 	name = "identification card"
-	desc = "A card used to provide ID and determine access across the station. Has an integrated digital display and advanced microchips."
+	desc = "A card used to provide ID and determine access across the district. Has an integrated digital display and advanced microchips."
 	icon_state = "card_grey"
 
 	wildcard_slots = WILDCARD_LIMIT_GREY

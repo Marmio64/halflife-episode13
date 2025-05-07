@@ -23,6 +23,10 @@
 /obj/machinery/atm/attackby(obj/item/W, mob/user, params)
 	var/all_accounts = flatten_list(SSeconomy.bank_accounts_by_id)
 	if(istype(W, /obj/item/card/id))
+		if(istype(W, /obj/item/card/id/departmental_budget/car))
+			playsound(loc, 'hl13/sound/machines/atm/cardreader_read.ogg', 50)
+			to_chat(user, "<span class='warning'>Anti-embezzlement measures on this card cause the ATM to reject it. You'll have to figure out another way to get credits out...</span>")
+			return
 		CID = W
 		playsound(loc, 'hl13/sound/machines/atm/cardreader_insert.ogg', 50)
 		if(!CID.registered_account.account_pin)
