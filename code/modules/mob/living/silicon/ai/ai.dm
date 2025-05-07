@@ -74,6 +74,12 @@
 	var/datum/action/innate/choose_modules/modules_action
 	var/chnotify = 0
 
+	//hl13 edit start
+	//var/datum/action/innate/ai/ranged/stimulant_injection/stimject = new
+	//var/datum/action/innate/ai/ranged/med_injection/medject = new
+	var/datum/action/innate/ai/ranged/ration_sanction/sanction = new
+	//hl13 edit end
+
 	var/multicam_on = FALSE
 	var/atom/movable/screen/movable/pic_in_pic/ai/master_multicam
 	var/list/multicam_screens = list()
@@ -161,6 +167,14 @@
 	aicamera = new/obj/item/camera/siliconcam/ai_camera(src)
 
 	deploy_action.Grant(src)
+
+	//hl13 edit start
+	//stimject.Grant(src)
+
+	//medject.Grant(src)
+
+	sanction.Grant(src)
+	//hl13 edit end
 
 	if(isturf(loc))
 		add_verb(src, list(

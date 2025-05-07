@@ -95,6 +95,10 @@
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		flick(icon_state_deny,src)
 		return
+	if(account?.sanctioned)
+		say("Meal sanction applied. Ration quality lowered.")
+		ration_quality--
+		account.sanctioned = FALSE
 	ration_quality += account?.account_job.ration_bonus //applies job specific ration bonuses
 
 	account.ration_voucher = FALSE
@@ -136,8 +140,8 @@
 		quality--
 
 	switch(quality)
-		if(0)
-			new /obj/item/reagent_containers/cup/soda_cans/breenwater/purple(loc) //very sad... Only way to get rn is to be a vort, on suspect status, with low district sociostability
+		if(-INFINITY to 0)
+			new /obj/item/reagent_containers/cup/soda_cans/breenwater/purple(loc) //very sad... Only way to get rn is to be a vort, on suspect status, with low district sociostability, or two of those following with a meal sanction
 		if(1)
 			new /obj/item/storage/box/halflife/ration/worstration(loc)
 		if(2)
