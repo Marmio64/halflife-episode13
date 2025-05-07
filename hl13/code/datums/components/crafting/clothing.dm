@@ -33,7 +33,7 @@
 	name = "Makeshift Armored Vest"
 	result = /obj/item/clothing/suit/armor/armored
 	reqs = list(/obj/item/stack/sheet/cloth = 5,
-				/obj/item/stack/sheet/iron = 4)
+				/obj/item/stack/sheet/scrap_metal = 14)
 	time = 8 SECONDS
 	category = CAT_ARMOR
 
@@ -173,3 +173,14 @@
 	result = /obj/item/clothing/head/helmet/halflife/milhelm/poland
 	reqs = list(/obj/item/stack/sheet/cloth = 2,
 			/obj/item/clothing/head/helmet/halflife/milhelm = 1)
+
+//its a crappy gas mask, but a gas mask none the less.
+/datum/crafting_recipe/old_gasmask
+	name = "Old Gas Mask"
+	result = /obj/item/clothing/mask/gas/hl2/oldmask
+	reqs = list(/obj/item/stack/sheet/halflife/plastic = 6,
+				/obj/item/stack/sheet/scrap_metal = 3,
+				/obj/item/stack/sheet/cloth = 4)
+	time = 10 SECONDS
+	category = CAT_CLOTHING
+	crafting_interface = CRAFTING_BENCH_ARMTAILOR

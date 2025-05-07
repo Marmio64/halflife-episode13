@@ -28,6 +28,9 @@
 		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/stalker,
 	)
 
+/obj/item/implant/radio/stalker
+	radio_key = /obj/item/encryptionkey/ai_with_binary
+
 /datum/species/stalker/on_species_gain(mob/living/carbon/human/C, datum/species/old_species)
 	. = ..()
 	RegisterSignal(C, COMSIG_MOB_SAY, PROC_REF(handle_speech))
@@ -45,7 +48,7 @@
 
 	C.mob_mood?.mood_modifier -= 1 //don't care, never did
 
-	C.physiology.hunger_mod *= 0.5 //low body mass, less to feed
+	C.physiology.hunger_mod *= 0.25 //low body mass, less to feed, and would have their food intake partially supplemented
 
 	C.AddComponent( \
 			/datum/component/simple_bodycam, \
@@ -53,11 +56,14 @@
 			c_tag = "[C.real_name]", \
 		)
 
+	var/obj/item/implant/radio/stalker/imp = new(src)
+	imp.implant(C, null, TRUE, TRUE)
+
 /datum/species/stalker/on_species_loss(mob/living/carbon/human/C)
 	..()
 	UnregisterSignal(C, COMSIG_MOB_SAY)
 	C.mob_mood?.mood_modifier += 1
-	C.physiology.hunger_mod /= 0.5
+	C.physiology.hunger_mod /= 0.25
 
 /datum/species/stalker/proc/handle_speech(datum/source, list/speech_args)
 	playsound(source, 'hl13/sound/voice/stalker/stalker_talk.ogg', 50, 1, 1)

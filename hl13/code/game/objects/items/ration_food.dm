@@ -256,7 +256,7 @@
 	name = "Debug Trash"
 	icon = 'hl13/icons/obj/food.dmi'
 	icon_state = "Debug_bar"
-	desc = "you forgot to download CS:sorce. Make sure to tell a dev that your seeing this."
+	desc = "you forgot to download CS:source. Make sure to tell a dev that your seeing this."
 
 /obj/item/trash/halflife/nutrient_bar_waste/water
 	name = "Water flavored nutrient bar wrapper"
@@ -271,7 +271,7 @@
 /obj/item/trash/halflife/nutrient_bar_waste/beef
 	name = "Beef wrapper"
 	icon_state = "bar_package_3_crumpled"
-
+	desc = "The discarded wrapping of a Beef flavored nutrient patty."
 
 
 

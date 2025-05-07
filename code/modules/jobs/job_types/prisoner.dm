@@ -1,6 +1,6 @@
 /datum/job/prisoner
 	title = JOB_PRISONER
-	description = "Survive in the outlands, find a way into the city for supplies, help or rob citizens for your own gain."
+	description = "Try to survive in the outlands, find a way into the city for supplies, help or rob citizens for your own gain."
 	department_head = list("Nobody")
 	total_positions = 12
 	spawn_positions = 4
@@ -27,6 +27,8 @@
 	faction = FACTION_STATION
 
 	cmode_music = 'hl13/sound/music/combat/cpviolation.ogg' //cause they're a cp violation
+
+	gameplay_help = "As a refugee, expect to die a lot, espescially if you do not stay with allies. The outlands are a harsh, dangerous, and unforgiving place. You'll have to try to scavenge, craft, and loot what you need to survive."
 
 /datum/outfit/job/prisoner
 	name = "Outlands Refugee"
