@@ -82,12 +82,15 @@
 	if (H.get_idcard())
 		var/obj/item/card/id/advanced/idcard = H.get_idcard()
 		if(idcard.registered_account)
-			if(idcard.registered_account.sanctioned == TRUE)
-				to_chat(owner, span_notice("Individual is already sanctioned."))
+			var/sanction_to_apply = input(usr, "How many ration points should they be sanctioned? (Up to three)", "Ration Points to Deduct (0-3)") as null|num
+			sanction_to_apply = clamp(sanction_to_apply, 0, 3)
+			if(!sanction_to_apply)
+				to_chat(owner, span_notice("All sanctions cleared from individual."))
+				idcard.registered_account.sanctioned = 0
 				return FALSE
-			idcard.registered_account.sanctioned = TRUE
-			to_chat(owner, span_notice("You succesfully sanction [H]."))
-			to_chat(H, span_notice("Attention citizen, you have received ONE Ration Sanction. Your next meal quality has been reduced."))
+			idcard.registered_account.sanctioned = sanction_to_apply
+			to_chat(owner, span_notice("You succesfully sanction [H] by [sanction_to_apply] points."))
+			to_chat(H, span_notice("Attention citizen, you have received [sanction_to_apply] Ration Sanction points. Your next meal quality has been reduced."))
 		else
 			to_chat(owner, span_warning("They don't have a citizen account record on their ID!"))
 			return FALSE

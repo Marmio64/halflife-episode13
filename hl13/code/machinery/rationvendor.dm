@@ -96,8 +96,8 @@
 		flick(icon_state_deny,src)
 		return
 	if(account?.sanctioned)
-		say("Meal sanction applied. Ration quality lowered.")
-		ration_quality--
+		say("Meal sanction applied. Ration quality lowered by [account.sanctioned] units.")
+		ration_quality -= account.sanctioned
 		account.sanctioned = FALSE
 	ration_quality += account?.account_job.ration_bonus //applies job specific ration bonuses
 
