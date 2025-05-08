@@ -186,13 +186,15 @@ export class Changelog extends Component {
 
     const header = (
       <Section>
-        <h1>Traditional Games Space Station 13</h1>
+        <h1>Half Life Episode: 13</h1>
         <p>
           <b>Thanks to: </b>
           Baystation 12, /vg/station, NTstation, CDK Station devs,
           FacepunchStation, GoonStation devs, the original Space Station 13
           developers, Invisty for the title image and the countless others who
           have contributed to the game, issue tracker or wiki over the years.
+          THIS IS NOT AN UP TO DATE CHANGELOG, PRETTY MUCH EVERYTHING HERE IS
+          WRONG AT THE MOMENT.
         </p>
         <p>
           {'Current organization members can be found '}

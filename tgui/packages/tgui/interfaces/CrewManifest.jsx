@@ -5,12 +5,12 @@ import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
 const commandJobs = [
-  'Head of Personnel',
-  'Head of Security',
+  'Labor Lead',
+  'Divisional Lead',
   'Chief Engineer',
   'Research Director',
   'Chief Medical Officer',
-  'Quartermaster',
+  'Foreman',
 ];
 
 export const CrewManifest = (props) => {

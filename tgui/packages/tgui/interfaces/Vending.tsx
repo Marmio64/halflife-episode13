@@ -175,7 +175,7 @@ export const UserDetails = (props) => {
   if (!user) {
     return (
       <Section>
-        <NoticeBox>No ID detected! Contact the Head of Personnel.</NoticeBox>
+        <NoticeBox>No ID detected! Contact the Labor Lead.</NoticeBox>
       </Section>
     );
   } else {
