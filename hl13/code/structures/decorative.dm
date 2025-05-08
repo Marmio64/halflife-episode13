@@ -131,6 +131,9 @@
 	var/random_appearence = TRUE
 	var/loot_chance = 35
 	var/loot_amount = 1
+	var/unsanitary = TRUE
+	var/loot_type = /obj/effect/spawner/random/halflife/loot
+	var/good_loot_type = /obj/effect/spawner/random/halflife/loot/uncommon
 
 /obj/structure/halflife/trash/garbage/Initialize(mapload)
 	. = ..()
@@ -142,7 +145,7 @@
 	if(searched)
 		. += span_notice("It's been thoroughly rummaged through, and won't yield anything useful.")
 	else
-		. += span_notice("You might be able to find something inside by right clicking it, though it will be pretty gross to search inside.")
+		. += span_notice("You might be able to find something inside by right clicking it.")
 
 /obj/structure/halflife/trash/garbage/attack_hand_secondary(mob/living/user, list/modifiers)
 	. = ..()
@@ -158,16 +161,10 @@
 		if(prob(loot_chance + (user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER))))
 			user.visible_message(span_notice("[user] finds something inside the [src]."), \
 				span_notice("You find something interesting inside the [src]."))
-			if(loot_amount == 1)
-				if(prob(user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER)))
-					new /obj/effect/spawner/random/halflife/loot/uncommon(loc, 1)
-				else
-					new /obj/effect/spawner/random/halflife/loot(loc, 1)
+			if(prob(user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER)))
+				new good_loot_type(loc, 1)
 			else
-				if(prob(user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER)))
-					new /obj/effect/spawner/random/halflife/loot/uncommon/two(loc, 1)
-				else
-					new /obj/effect/spawner/random/halflife/loot/two(loc, 1)
+				new loot_type(loc, 1)
 		else
 			if(prob(40))
 				new /obj/effect/spawner/random/halflife/loot/trash(loc, 1)
@@ -179,18 +176,39 @@
 		searched = TRUE
 		user.mind?.adjust_experience(/datum/skill/scavenging, 25)
 
-		if(iscarbon(user))
-			var/mob/living/carbon/C = user
-			C.adjust_hygiene(-15) //gross, rummaging through garbage
+		if(unsanitary)
+			if(iscarbon(user))
+				var/mob/living/carbon/C = user
+				C.adjust_hygiene(-20) //gross, rummaging through garbage
 
 /obj/structure/halflife/trash/garbage/dumpster
 	name = "dumpster"
 	desc = "A large green dumpster, full of goodies."
 	icon_state = "dumpster"
 	density = TRUE
+	anchored = TRUE
 	random_appearence = FALSE
 	loot_chance = 80
-	loot_amount = 2
+	loot_type = /obj/effect/spawner/random/halflife/loot/two
+	good_loot_type = /obj/effect/spawner/random/halflife/loot/uncommon/two
+
+/obj/structure/halflife/trash/garbage/dumpster/crate
+	name = "Large Wooden Crate"
+	desc = "A large wooden crate that looks like it should contain some scrap. You may be able to search inside if someone else hasn't already."
+	icon_state = "wood_crate"
+	icon = 'hl13/icons/obj/storage/crates.dmi'
+	unsanitary = FALSE
+	loot_type = /obj/effect/spawner/random/halflife/loot/scrap/three
+	good_loot_type = /obj/effect/spawner/random/halflife/loot/two
+
+/obj/structure/halflife/trash/garbage/dumpster/crate/deconstruct(disassembled = TRUE)
+	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))
+		playsound(src.loc, 'hl13/sound//halflifeeffects/wood_deconstruction.ogg', 50, TRUE)
+		if(disassembled)
+			new /obj/item/stack/sheet/mineral/scrap_wood(loc, 6)
+		else
+			new /obj/item/stack/sheet/mineral/scrap_wood(loc, 4)
+	qdel(src)
 
 /obj/structure/halflife/trash/food
 	name = "DO NOT USE ME - base type food trash"

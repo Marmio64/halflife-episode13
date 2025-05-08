@@ -92,6 +92,9 @@
 				/obj/item/stack/sheet/mineral/scrap_wood = 2
 				)
 
+/obj/effect/spawner/random/halflife/loot/scrap/three
+	spawn_loot_count = 3
+
 //actual garbage, low level loot, and scraps
 /obj/effect/spawner/random/halflife/loot/trash
 	name = "trash loot"

@@ -125,7 +125,7 @@
 	maxHealth = 160
 	health = 160
 	move_to_delay = 7
-	speed = 1.2
+	speed = 1.4
 	speak = list("Mrrrraaaaghhhhh...","ggg-ggrrahhh...","P-p...o...he-l..")
 	death_sound = 'hl13/sound/creatures/poison/pz_die1.ogg'
 	crabless_possible = FALSE
