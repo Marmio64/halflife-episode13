@@ -201,8 +201,8 @@
 			if(prob(4))
 				to_chat(human, span_warning("I'm so hungry, I can't take much more of this..."))
 				human.adjustStaminaLoss(30)
-				human.adjustOxyLoss(20)
-				human.adjust_tiredness(20)
+				human.adjustOxyLoss(10)
+				human.adjust_tiredness(25)
 				human.adjust_eye_blur(10 SECONDS)
 
 	if(hydration < HYDRATION_LEVEL_DYING) //So damn thirsty that you are dying
@@ -213,10 +213,10 @@
 		if(prob(4))
 			to_chat(human, span_warning("So thirsty... just need to lie down..."))
 			human.adjustStaminaLoss(30)
-			human.adjustOxyLoss(20)
-			human.adjust_tiredness(20)
+			human.adjustOxyLoss(10)
+			human.adjust_tiredness(25)
 			human.adjust_eye_blur(5 SECONDS)
-		if(hydration < (HYDRATION_LEVEL_DYING/5))
+		if(hydration < (HYDRATION_LEVEL_DYING/2))
 			if(human.key && human.client)
 				human.adjustToxLoss(0.3) //Buildup of toxins in your body since you dont have enough liquids to piss and filter stuff. It's not hard to stay hydrated, so this shouldn't happen, really.
 //HL13 EDIT END

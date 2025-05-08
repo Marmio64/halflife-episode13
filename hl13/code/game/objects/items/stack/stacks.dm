@@ -33,6 +33,7 @@
 	tableVariant = /obj/structure/table/halflife/metal/constructed
 	matter_amount = 2
 	novariants = TRUE
+	max_amount = 10
 
 /obj/item/stack/sheet/ironpowder
 	icon = 'hl13/icons/obj/stack_objects.dmi'
@@ -61,6 +62,7 @@
 	merge_type = /obj/item/stack/sheet/scrap_parts
 	grind_results = list(/datum/reagent/iron = 20)
 	matter_amount = 2
+	max_amount = 5
 
 /obj/item/stack/sheet/scrap_copper
 	icon = 'hl13/icons/obj/stack_objects.dmi'
@@ -73,6 +75,7 @@
 	merge_type = /obj/item/stack/sheet/scrap_copper
 	grind_results = list(/datum/reagent/copper = 20)
 	novariants = TRUE
+	max_amount = 5
 
 /obj/item/stack/sheet/mineral/scrap_wood
 	icon = 'hl13/icons/obj/stack_objects.dmi'

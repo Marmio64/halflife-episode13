@@ -8,7 +8,7 @@
 
 /datum/shuttle_loan_situation/halflife/department_resupply/spawn_items(list/spawn_list, list/empty_shuttle_turfs, list/blocked_shutte_turfs)
 	var/list/crate_types = list(
-		/datum/supply_pack/organic/rationsupplies,
+		/datum/supply_pack/organic/complete_rationsupplies,
 		/datum/supply_pack/organic/alcohol,
 		/datum/supply_pack/security/armory/uspammo,
 		/datum/supply_pack/medical/medvial
