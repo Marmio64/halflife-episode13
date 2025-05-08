@@ -107,10 +107,11 @@
 		/obj/item/cigarette/halflife = list(PAYCHECK_CREW * 0.75, 10),
 		/obj/item/clothing/mask/gas/hl2/military = list(PAYCHECK_CREW * 3, 3),
 		/obj/item/reagent_containers/cup/soup_pot = list(PAYCHECK_CREW, 3),
-		/obj/item/lighter = list(PAYCHECK_CREW, 3),
+		/obj/item/lighter = list(PAYCHECK_CREW * 0.75, 3),
 		/obj/item/food/canned/halflife/beans = list(PAYCHECK_CREW * 2, 3),
 		/obj/item/reagent_containers/syringe/syriniver = list(PAYCHECK_CREW * 2, 3),
 		/obj/item/halflife/antenna = list(PAYCHECK_CREW * 8, 1),
+		/obj/item/stack/kevlar = list(PAYCHECK_CREW, 5),
 		/obj/item/crowbar/large = list(PAYCHECK_CREW * 4, 1),
 	)
 

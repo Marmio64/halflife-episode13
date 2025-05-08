@@ -11,7 +11,7 @@
 	qdel(src)
 
 /obj/structure/etherealball
-	name = "ethereal disco ball"
+	name = "disco ball"
 	desc = "The ethics of this discoball are questionable."
 	icon = 'icons/obj/machines/floor.dmi'
 	icon_state = "ethdisco_head_0"

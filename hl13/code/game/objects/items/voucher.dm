@@ -1,6 +1,6 @@
 /obj/item/stack/credit_voucher
 	name = "Reward Voucher"
-	desc = "A voucher that citizens can feed into their identification cards for a credit reward. Civil Protection Officers often give these out in exchange for a service done for them, or it may be included in rations."
+	desc = "A voucher that citizens can feed into their identification cards for a reward of 5 credits per voucher. Civil Protection Officers often give these out in exchange for a service done for them, or it may be included in rations."
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	icon_state = "voucher"
 	singular_name = "reward voucher"

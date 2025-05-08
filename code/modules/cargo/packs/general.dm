@@ -101,16 +101,6 @@
 	)
 	crate_name = "paper cutters crate"
 
-/datum/supply_pack/misc/vouchers
-	name = "Reward Voucher Crate"
-	desc = "A large crate with 40 reward vouchers, totalling to 200 credits. A useful way for giving out rewards to citizens with less risk of Civil Protection embezzlement."
-	cost = 200 + CARGO_CRATE_VALUE * 1.4 //No credit or loss or gain
-	contains = list(/obj/item/stack/credit_voucher/a10,
-					/obj/item/stack/credit_voucher/a10,
-					/obj/item/stack/credit_voucher/a10,
-					/obj/item/stack/credit_voucher/a10)
-	crate_name = "reward voucher crate"
-
 /datum/supply_pack/misc/ration_vouchers
 	name = "Ration Voucher Crate"
 	desc = "A crate with five ration vouchers inside. The vouchers can be inserted into an ID to gain a usuable ration token, useful to give out as a reward perhaps, and is cheaper than buying rations wholesale."

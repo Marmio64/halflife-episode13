@@ -21,7 +21,7 @@
 	/// Used interally, you don't want to modify
 	var/cooldown_check = 0
 	/// Default wait time until can stun again.
-	var/cooldown = (2 SECONDS) //hl13 edit
+	var/cooldown = (2.5 SECONDS) //hl13 edit
 	/// The length of the knockdown applied to a struck living, non-cyborg mob.
 	var/knockdown_time = (0.25 SECONDS) //hl13 edit
 	/// If affect_cyborg is TRUE, this is how long we stun cyborgs for on a hit.

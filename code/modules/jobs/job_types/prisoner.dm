@@ -28,7 +28,7 @@
 
 	cmode_music = 'hl13/sound/music/combat/cpviolation.ogg' //cause they're a cp violation
 
-	gameplay_help = "As a refugee, expect to die a lot, espescially if you do not stay with allies. The outlands are a harsh, dangerous, and unforgiving place. You'll have to try to scavenge, craft, and loot what you need to survive."
+	gameplay_help = "As a refugee, expect to die a lot, espescially if you do not stay with allies. The outlands are a harsh, dangerous, and unforgiving place. You'll have to try to scavenge, craft, and loot what you need to survive. Your first priority should be to craft an armored vest from cloth and scrap, and get some food."
 
 /datum/outfit/job/prisoner
 	name = "Outlands Refugee"

@@ -21,7 +21,7 @@
 	attack_sound = 'hl13/sound/creatures/zombieattack.ogg'
 	combat_mode = TRUE
 	status_flags = CANPUSH
-	speed = 1.4
+	speed = 1.6
 	death_sound = 'hl13/sound/creatures/zombiedeath.ogg'
 	blood_volume = BLOOD_VOLUME_NORMAL
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie
@@ -35,6 +35,8 @@
 	var/idle_sounds = list('hl13/sound/creatures/zombiesound.ogg', 'hl13/sound/creatures/zombiesound2.ogg', 'hl13/sound/creatures/zombiesound3.ogg')
 
 	cmode_music = 'hl13/sound/music/combat/disrupted.ogg' //spooky!
+	lighting_cutoff_red = 25
+	lighting_cutoff = 8
 
 /mob/living/basic/halflife/zombie/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()
@@ -85,7 +87,7 @@
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1, /obj/item/stack/sheet/cloth = 1)
 	maxHealth = 160
 	health = 160
-	speed = 1.5
+	speed = 1.7
 	headcrabspawn = /mob/living/basic/halflife/headcrab/armored
 	fungalheal = TRUE
 	var/datum/action/cooldown/spell/conjure/xenfloor/infest

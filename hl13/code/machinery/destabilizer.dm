@@ -41,6 +41,7 @@
 	name = "makeshift destabilizer"
 	desc = "A shoddily made piece of machinery made from spare combine machinery parts. Emits radio signals that disrupt district wide systems and machinery, reducing sociostability over time."
 	destabilization_chance = 50
+	detonation_limit = 300 //can go on for slightly longer to account for it eating less stability
 
 /obj/machinery/destabilizer/makeshift/Initialize(mapload)
 	. = ..()

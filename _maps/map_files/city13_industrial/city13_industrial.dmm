@@ -598,13 +598,13 @@
 "cg" = (
 /obj/structure/table/halflife/wood,
 /obj/machinery/light/small/directional/west,
-/obj/item/food/halflife/cookie{
-	pixel_y = 11
+/obj/item/stack/credit_voucher,
+/obj/item/stack/credit_voucher,
+/obj/item/stack/credit_voucher,
+/obj/item/stack/credit_voucher,
+/obj/item/storage/halflife/hand_box/cookie{
+	pixel_y = 12
 	},
-/obj/item/stack/credit_voucher,
-/obj/item/stack/credit_voucher,
-/obj/item/stack/credit_voucher,
-/obj/item/stack/credit_voucher,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/secondfloor)
 "ch" = (
@@ -1594,10 +1594,6 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/virology)
-"fL" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/indoors/trainstation)
 "fM" = (
 /turf/open/floor/plating/indoor/metal/pipe/intersection{
 	dir = 1
@@ -2387,6 +2383,10 @@
 /obj/structure/halflife/storage/large/shelf,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/store)
+"iB" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/sewer)
 "iC" = (
 /obj/structure/sign/poster/halflife/rebel{
 	pixel_y = 32
@@ -3179,11 +3179,6 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley)
-"lr" = (
-/obj/effect/turf_decal/box,
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors)
 "ls" = (
 /obj/structure/halflife/storage/shelf,
 /obj/effect/spawner/random/halflife/loot/ammo,
@@ -3631,6 +3626,10 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/bar/apartments)
+"na" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/alley)
 "nb" = (
 /obj/machinery/door/unpowered/halflife/seethrough/grate{
 	dir = 1
@@ -3654,6 +3653,10 @@
 "nf" = (
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/townhall/civilprotection/prison)
+"ng" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "nh" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc,
@@ -4636,6 +4639,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/townhall)
+"qN" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "qO" = (
 /obj/machinery/camera{
 	c_tag = "Hospital Operating Room";
@@ -4933,8 +4940,8 @@
 /area/halflife/indoors)
 "rP" = (
 /obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/sewer)
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/trainstation)
 "rQ" = (
 /obj/item/hl13_small_flag/poland,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -5586,10 +5593,6 @@
 /obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/alley)
-"ui" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors/alley)
 "uj" = (
 /obj/structure/alien/weeds,
 /obj/structure/flora/xen/leafy,
@@ -5735,6 +5738,7 @@
 /obj/item/card/id,
 /obj/item/card/id,
 /obj/item/card/id,
+/obj/item/storage/halflife/hand_box/cookie,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/secondfloor)
 "uJ" = (
@@ -6624,6 +6628,7 @@
 	c_tag = "Liaison's Office";
 	dir = 4
 	},
+/obj/item/storage/halflife/hand_box/cookie,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/secondfloor)
 "xR" = (
@@ -7158,9 +7163,7 @@
 /obj/structure/table/halflife/wood,
 /obj/machinery/light/small/directional/west,
 /obj/item/storage/backpack/halflife/satchel,
-/obj/item/food/halflife/cookie{
-	pixel_y = 11
-	},
+/obj/item/storage/halflife/hand_box/cookie,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/secondfloor)
 "zM" = (
@@ -11578,6 +11581,11 @@
 /obj/structure/halflife/tank/chemical/container,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
+"Pe" = (
+/obj/effect/turf_decal/box,
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "Pf" = (
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/tile/green,
@@ -12213,10 +12221,6 @@
 	dir = 1
 	},
 /turf/open/floor/plating/indoor/metal/plate,
-/area/halflife/indoors/sewer)
-"Rm" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/sewer)
 "Rn" = (
 /obj/structure/table/halflife/no_smooth/wood,
@@ -13123,10 +13127,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
-"UE" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors)
 "UF" = (
 /obj/effect/landmark/observer_start,
 /turf/open/floor/plating/ground/grass,
@@ -20114,7 +20114,7 @@ MQ
 cu
 Zg
 NM
-Rm
+iB
 sk
 qQ
 qQ
@@ -24438,7 +24438,7 @@ qQ
 qQ
 Aw
 iE
-rP
+qN
 XO
 jL
 PS
@@ -25902,7 +25902,7 @@ Aw
 Aw
 Aw
 Aw
-rP
+qN
 lc
 lc
 Aw
@@ -26034,7 +26034,7 @@ AI
 fO
 fy
 Aw
-rP
+qN
 lc
 mE
 Aw
@@ -32251,7 +32251,7 @@ oP
 Ng
 Cr
 To
-ui
+na
 QH
 QH
 ji
@@ -32383,7 +32383,7 @@ dU
 Sg
 oP
 To
-ui
+na
 QH
 QH
 ji
@@ -41528,7 +41528,7 @@ WE
 WE
 iH
 jl
-UE
+ng
 dV
 dV
 uk
@@ -41706,7 +41706,7 @@ QH
 Ff
 jl
 Wc
-lr
+Pe
 rO
 cF
 jl
@@ -41971,7 +41971,7 @@ Ff
 jl
 Cx
 rO
-lr
+Pe
 dV
 jl
 dV
@@ -42384,7 +42384,7 @@ Oc
 Oc
 qY
 Op
-fL
+rP
 DS
 DS
 re
@@ -42516,7 +42516,7 @@ Oc
 Oc
 qY
 Op
-fL
+rP
 DS
 DS
 re
@@ -42771,7 +42771,7 @@ Gf
 PQ
 dV
 dV
-UE
+ng
 Cx
 jl
 Bl

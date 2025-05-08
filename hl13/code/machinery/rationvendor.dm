@@ -75,6 +75,8 @@
 		flick(icon_state_deny,src)
 		return
 
+	ration_quality += account?.account_job.ration_bonus //applies job specific ration bonuses
+
 	var/username = user.get_face_name(user.get_id_name())
 	var/datum/record/crew/R = find_record(username)
 	if(R)
@@ -99,7 +101,6 @@
 		say("Meal sanction applied. Ration quality lowered by [account.sanctioned] units.")
 		ration_quality -= account.sanctioned
 		account.sanctioned = FALSE
-	ration_quality += account?.account_job.ration_bonus //applies job specific ration bonuses
 
 	account.ration_voucher = FALSE
 
@@ -107,7 +108,7 @@
 
 	flick(icon_state_vend,src)
 
-	if(malfunctioning && prob(30)) //if vendor is malfunctioning, it may cancel the ration request and waste your time
+	if(malfunctioning && prob(40)) //if vendor is malfunctioning, it may cancel the ration request and waste your time
 		say("Vendor malfunction detected. Resubmit coupon to try again, and request a repair team.")
 		account.ration_voucher = TRUE
 		return

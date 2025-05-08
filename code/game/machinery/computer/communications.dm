@@ -863,7 +863,7 @@
 
 		if(HACK_THREAT) // Force an unfavorable situation on the crew
 			priority_announce(
-				"Attention crew, the Overwatch Department of Intelligence has received intel suggesting increased enemy activity in your sector beyond that initially reported in today's threat advisory.",
+				"Attention citizens, the Overwatch Department of Intelligence has received intel suggesting increased malignant activity in your district beyond initially expected.",
 				"[command_name()] High-Priority Update",
 			)
 

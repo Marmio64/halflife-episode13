@@ -116,27 +116,27 @@
 	first_time_text = "Town Hall Second Floor"
 
 /area/halflife/indoors/townhall/infirmary
-	name = "\improper Town Hall Infirmary"
+	name = "\improper Nexus Infirmary"
 
 	first_time_text = null
 
 /area/halflife/indoors/townhall/civilprotection
-	first_time_text = null
+	first_time_text = "The Nexus"
 
 /area/halflife/indoors/townhall/civilprotection/preproom
-	name = "\improper Town Hall Prep Room"
+	name = "\improper Nexus Prep Room"
 
 /area/halflife/indoors/townhall/civilprotection/equipmentroom
-	name = "\improper Town Hall Equipment Room"
+	name = "\improper Nexus Equipment Room"
 
 /area/halflife/indoors/townhall/civilprotection/prison
-	name = "\improper Town Hall Prison"
+	name = "\improper Nexus Prison"
 
 /area/halflife/indoors/townhall/civilprotection/armory
-	name = "\improper Town Hall Armory"
+	name = "\improper Nexus Armory"
 
 /area/halflife/indoors/townhall/civilprotection/range
-	name = "\improper Town Hall Shooting Range"
+	name = "\improper Nexus Shooting Range"
 
 /area/halflife/indoors/apartments/primary
 	name = "\improper Primary Apartments"

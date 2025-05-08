@@ -45,7 +45,7 @@
 					/obj/item/radio/off/halflife = 3,
 					/obj/item/reagent_containers/cup/bottle/welding_fuel = 3,
 					/obj/item/storage/halflife/hand_box/egg = 5,
-					/obj/item/food/halflife/cookie = 5,
+					/obj/item/storage/halflife/hand_box/cookie = 5,
 					/obj/item/reagent_containers/pill/patch/medkit/vial = 3,
 					/obj/item/stack/sticky_tape = 4,
 					/obj/item/storage/toolbox/fishing = 2,
@@ -70,7 +70,7 @@
 				   /obj/item/storage/box/halflife/ration/ration = 5)
 
 	light_mask = "gifts-light-mask"
-	default_price = 18
+	default_price = 14
 	extra_price = 30
 
 /obj/machinery/vending/miningvendor

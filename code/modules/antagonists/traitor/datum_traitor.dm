@@ -71,6 +71,8 @@
 /datum/antagonist/traitor/on_gain()
 	owner.special_role = job_rank
 
+	to_chat(owner.current, span_boldnotice("Important note, you do not have a free license to just kill people for no reason. You should only kill people you have a good reason to, such as a blatant combine loyalist."))
+
 	if(give_uplink)
 		owner.give_uplink(silent = TRUE, antag_datum = src)
 	generate_replacement_codes()
