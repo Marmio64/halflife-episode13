@@ -79,17 +79,18 @@
 	spawn_loot_count = 1
 
 	loot = list(
-				/obj/item/circuitmaterial = 2,
-				/obj/item/light/bulb,
-				/obj/item/circuitmaterial/advanced,
-				/obj/item/stack/cable_coil,
-				/obj/item/stack/sheet/cloth,
-				/obj/item/stack/sheet/scrap_metal/two = 2,
-				/obj/item/stack/sheet/scrap_parts,
-				/obj/item/stack/sheet/scrap_copper,
-				/obj/item/stack/sheet/glass,
-				/obj/item/stack/bulletcasings,
-				/obj/item/stack/sheet/mineral/scrap_wood = 2
+				/obj/item/circuitmaterial = 4,
+				/obj/item/light/bulb = 2,
+				/obj/item/circuitmaterial/advanced = 2,
+				/obj/item/stack/cable_coil = 2,
+				/obj/item/stack/sheet/cloth = 2,
+				/obj/item/stack/sheet/scrap_metal/two = 4,
+				/obj/item/stack/sheet/scrap_parts = 2,
+				/obj/item/stack/sheet/scrap_copper = 2,
+				/obj/item/stack/sheet/glass = 2,
+				/obj/item/stack/bulletcasings = 2,
+				/obj/item/stack/kevlar, //The rare goodie!
+				/obj/item/stack/sheet/mineral/scrap_wood = 4
 				)
 
 /obj/effect/spawner/random/halflife/loot/scrap/three

@@ -227,6 +227,10 @@
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"cc" = (
+/obj/effect/spawner/random/halflife/loot/crafting_bench,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer)
 "cd" = (
 /obj/structure/railing/halflife/sewer{
 	dir = 8
@@ -289,10 +293,6 @@
 /obj/effect/spawner/random/halflife/loot/clothing,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
-"cx" = (
-/obj/structure/closet/crate/halflife,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors)
 "cz" = (
 /obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/ground/dirt/alt,
@@ -786,11 +786,6 @@
 /obj/machinery/computer/shuttle/labor/one_way,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/laborcamp)
-"gQ" = (
-/obj/structure/railing/halflife/solo,
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/metal/industrial,
-/area/halflife/outdoors/forest)
 "gR" = (
 /obj/structure/halflife/trash/cardboard{
 	dir = 8
@@ -1214,6 +1209,13 @@
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"le" = (
+/obj/structure/railing/halflife/solo{
+	dir = 1
+	},
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/outdoors/forest)
 "lf" = (
 /obj/item/food/cheese/wheel{
 	desc = "Sometimes I dream about cheese."
@@ -1355,6 +1357,10 @@
 	dir = 10
 	},
 /turf/open/floor/plating/indoor/concrete,
+/area/halflife/outdoors/forest)
+"mc" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "mf" = (
 /obj/structure/halflife/road_barrier,
@@ -2358,6 +2364,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/sewer/tunnel)
+"vA" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "vB" = (
 /obj/structure/halflife/trash/bricks,
 /turf/open/floor/plating/ground/dirt,
@@ -2384,6 +2394,10 @@
 	dir = 1
 	},
 /area/halflife/outdoors/forest)
+"vL" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer)
 "vN" = (
 /obj/structure/halflife/pipes/piped,
 /turf/open/floor/plating/indoor/metal/pipe{
@@ -2779,9 +2793,8 @@
 	},
 /area/halflife/indoors/sewer)
 "zG" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/effect/spawner/random/halflife/loot/scrap,
-/turf/open/floor/plating/indoor/metal/plate,
+/obj/structure/closet/crate/halflife,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
 "zH" = (
 /obj/structure/halflife/trash/garbage,
@@ -2863,10 +2876,6 @@
 /obj/structure/railing/halflife/wood/ending,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
-"Ao" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/indoors)
 "Aq" = (
 /obj/structure/halflife/trash/glass/plate,
 /turf/open/floor/plating/ground/dirt,
@@ -3950,10 +3959,6 @@
 /obj/machinery/mineral/processing_unit_console,
 /turf/closed/wall/halflife/sewer,
 /area/halflife/indoors/laborcamp)
-"La" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "Lb" = (
 /obj/machinery/porta_turret/combine,
 /turf/open/floor/plating/ground/grass,
@@ -4203,6 +4208,11 @@
 	dir = 8
 	},
 /turf/open/halflife/water/shallow,
+/area/halflife/outdoors/forest)
+"Nx" = (
+/obj/structure/railing/halflife/solo,
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/outdoors/forest)
 "Nz" = (
 /obj/machinery/door/unpowered/halflife/wood{
@@ -4540,13 +4550,6 @@
 "QL" = (
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors/forest)
-"QN" = (
-/obj/structure/railing/halflife/solo{
-	dir = 1
-	},
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/outdoors/forest)
 "QP" = (
 /obj/effect/turf_decal/siding/street{
@@ -5334,6 +5337,10 @@
 "XD" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/forest)
+"XE" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors)
 "XH" = (
 /obj/structure/table/halflife/metal,
 /obj/item/stack/kevlar{
@@ -30388,7 +30395,7 @@ UI
 uw
 ZC
 WG
-WG
+vL
 UI
 UI
 UI
@@ -32767,7 +32774,7 @@ Wp
 Aa
 ex
 lH
-ex
+vA
 MT
 wG
 wG
@@ -41981,7 +41988,7 @@ CR
 CR
 IA
 Lj
-SZ
+cc
 SZ
 SZ
 SZ
@@ -45464,7 +45471,7 @@ yu
 IF
 tN
 ix
-La
+mc
 It
 aP
 tN
@@ -46295,8 +46302,8 @@ FC
 FC
 FC
 ai
-La
-La
+mc
+mc
 tN
 ai
 dg
@@ -61514,7 +61521,7 @@ Ko
 Ko
 Ko
 Ko
-Ao
+XE
 hr
 hr
 hr
@@ -61711,7 +61718,7 @@ tN
 tN
 tN
 Ko
-Ao
+XE
 hr
 hr
 hr
@@ -66449,8 +66456,8 @@ Vu
 Vu
 Vu
 Ko
-cx
-cx
+zG
+zG
 Ko
 Vz
 xM
@@ -71888,7 +71895,7 @@ tN
 VH
 ai
 tN
-QN
+le
 gd
 gd
 gd
@@ -74847,7 +74854,7 @@ SC
 gd
 gd
 gd
-Jd
+Nx
 It
 tN
 VH
@@ -75044,7 +75051,7 @@ SC
 gd
 gd
 gd
-gQ
+Nx
 tN
 rF
 VH
@@ -75067,7 +75074,7 @@ Ym
 Ym
 XA
 XA
-La
+mc
 tN
 tN
 tN
@@ -75829,7 +75836,7 @@ VH
 tN
 tN
 Ko
-zG
+CT
 uo
 Un
 Ko
@@ -76026,7 +76033,7 @@ VH
 tN
 tN
 Ko
-SQ
+uo
 uo
 Un
 Ko

@@ -34,7 +34,7 @@
 // If you're adding a new material to the stock market, make sure its export type is added here.
 
 /datum/export/material/plasma
-	cost = CARGO_CRATE_VALUE * 0.3
+	cost = CARGO_CRATE_VALUE * 0.25
 	k_elasticity = 0
 	material_id = /datum/material/plasma
 	message = "cm3 of plasma"
@@ -45,7 +45,7 @@
 	message = "cm3 of bananium"
 
 /datum/export/material/diamond
-	cost = CARGO_CRATE_VALUE * 0.75
+	cost = CARGO_CRATE_VALUE * 0.5
 	material_id = /datum/material/adamantine
 	message = "cm3 of adamantine"
 

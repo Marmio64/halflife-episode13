@@ -8,8 +8,16 @@
 
 /datum/crafting_recipe/breakdown_parts
 	name = "Breakdown Scrap Parts"
-	result = /obj/item/stack/sheet/scrap_metal/two
+	result = /obj/item/stack/sheet/scrap_metal/three
 	reqs = list(/obj/item/stack/sheet/scrap_parts = 1)
+	time = 2 SECONDS
+	tool_paths = list(/obj/item/weldingtool)
+	category = CAT_MISC
+
+/datum/crafting_recipe/breakdown_iron
+	name = "Breakdown Iron"
+	result = /obj/item/stack/sheet/scrap_metal/two
+	reqs = list(/obj/item/stack/sheet/iron = 1)
 	time = 2 SECONDS
 	tool_paths = list(/obj/item/weldingtool)
 	category = CAT_MISC

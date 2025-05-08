@@ -1594,6 +1594,10 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/virology)
+"fL" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/trainstation)
 "fM" = (
 /turf/open/floor/plating/indoor/metal/pipe/intersection{
 	dir = 1
@@ -2161,10 +2165,6 @@
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
-"hK" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors)
 "hL" = (
 /obj/structure/chair/pew/left{
 	dir = 1
@@ -2767,11 +2767,6 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
-"jT" = (
-/obj/effect/turf_decal/box,
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors)
 "jU" = (
 /obj/structure/table/halflife/no_smooth/wood,
 /obj/structure/halflife/trash/papers/three{
@@ -3184,6 +3179,11 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley)
+"lr" = (
+/obj/effect/turf_decal/box,
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "ls" = (
 /obj/structure/halflife/storage/shelf,
 /obj/effect/spawner/random/halflife/loot/ammo,
@@ -3654,10 +3654,6 @@
 "nf" = (
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/townhall/civilprotection/prison)
-"ng" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/sewer)
 "nh" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc,
@@ -4640,10 +4636,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/townhall)
-"qN" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/indoors/sewer)
 "qO" = (
 /obj/machinery/camera{
 	c_tag = "Hospital Operating Room";
@@ -4939,6 +4931,10 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
+"rP" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "rQ" = (
 /obj/item/hl13_small_flag/poland,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -5592,8 +5588,8 @@
 /area/halflife/outdoors/alley)
 "ui" = (
 /obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/slums)
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/alley)
 "uj" = (
 /obj/structure/alien/weeds,
 /obj/structure/flora/xen/leafy,
@@ -11345,8 +11341,8 @@
 /area/halflife/indoors)
 "Om" = (
 /obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/indoors/trainstation)
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "On" = (
 /obj/effect/turf_decal/siding/street{
 	dir = 8
@@ -11582,10 +11578,6 @@
 /obj/structure/halflife/tank/chemical/container,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
-"Pe" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors/alley)
 "Pf" = (
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/tile/green,
@@ -12221,6 +12213,10 @@
 	dir = 1
 	},
 /turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer)
+"Rm" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/sewer)
 "Rn" = (
 /obj/structure/table/halflife/no_smooth/wood,
@@ -13127,6 +13123,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
+"UE" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "UF" = (
 /obj/effect/landmark/observer_start,
 /turf/open/floor/plating/ground/grass,
@@ -20114,7 +20114,7 @@ MQ
 cu
 Zg
 NM
-qN
+Rm
 sk
 qQ
 qQ
@@ -24438,7 +24438,7 @@ qQ
 qQ
 Aw
 iE
-ng
+rP
 XO
 jL
 PS
@@ -25902,7 +25902,7 @@ Aw
 Aw
 Aw
 Aw
-ng
+rP
 lc
 lc
 Aw
@@ -26034,7 +26034,7 @@ AI
 fO
 fy
 Aw
-ng
+rP
 lc
 mE
 Aw
@@ -32251,7 +32251,7 @@ oP
 Ng
 Cr
 To
-Pe
+ui
 QH
 QH
 ji
@@ -32383,7 +32383,7 @@ dU
 Sg
 oP
 To
-Pe
+ui
 QH
 QH
 ji
@@ -32522,7 +32522,7 @@ ji
 AC
 vu
 ji
-ui
+Om
 LD
 ji
 iD
@@ -41528,7 +41528,7 @@ WE
 WE
 iH
 jl
-hK
+UE
 dV
 dV
 uk
@@ -41706,7 +41706,7 @@ QH
 Ff
 jl
 Wc
-jT
+lr
 rO
 cF
 jl
@@ -41971,7 +41971,7 @@ Ff
 jl
 Cx
 rO
-jT
+lr
 dV
 jl
 dV
@@ -42384,7 +42384,7 @@ Oc
 Oc
 qY
 Op
-Om
+fL
 DS
 DS
 re
@@ -42516,7 +42516,7 @@ Oc
 Oc
 qY
 Op
-Om
+fL
 DS
 DS
 re
@@ -42771,7 +42771,7 @@ Gf
 PQ
 dV
 dV
-hK
+UE
 Cx
 jl
 Bl
@@ -50020,7 +50020,7 @@ uy
 Wf
 Dz
 Js
-fZ
+iR
 Ff
 Ff
 Ff
