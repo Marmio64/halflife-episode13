@@ -219,6 +219,13 @@
 	inhand_icon_state = "satchel"
 	storage_type = /datum/storage/satchel/halflife
 
+/obj/item/storage/backpack/halflife/satchel/civilprotection
+	name = "civil protection satchel"
+	desc = "A relatively small satchel often issued to civil protection units, for carrying excess gear."
+	icon_state = "civilprotection"
+	inhand_icon_state = "military"
+	storage_type = /datum/storage/satchel/halflife/small
+
 /obj/item/storage/backpack/halflife/satchel/military
 	name = "military satchel"
 	desc = "A satchel that looks like it once belonged to the army."
@@ -240,6 +247,10 @@
 /datum/storage/satchel/halflife
 	max_total_storage = 15
 	max_slots = 15
+
+/datum/storage/satchel/halflife/small
+	max_total_storage = 12
+	max_slots = 12
 
 /obj/item/storage/halflife/suitcase
 	name = "suitcase"

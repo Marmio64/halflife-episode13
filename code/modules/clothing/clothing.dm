@@ -3,6 +3,7 @@
 	resistance_flags = FLAMMABLE
 	max_integrity = 200
 	integrity_failure = 0.4
+	equip_delay_self = 10 //hl13 edit
 	var/damaged_clothes = CLOTHING_PRISTINE //similar to machine's BROKEN stat and structure's broken var
 
 	///What level of bright light protection item has.

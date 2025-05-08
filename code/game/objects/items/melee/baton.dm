@@ -21,15 +21,15 @@
 	/// Used interally, you don't want to modify
 	var/cooldown_check = 0
 	/// Default wait time until can stun again.
-	var/cooldown = (2.5 SECONDS) //hl13 edit
+	var/cooldown = (1.25 SECONDS) //hl13 edit
 	/// The length of the knockdown applied to a struck living, non-cyborg mob.
-	var/knockdown_time = (0.25 SECONDS) //hl13 edit
+	var/knockdown_time = (0 SECONDS) //hl13 edit
 	/// If affect_cyborg is TRUE, this is how long we stun cyborgs for on a hit.
 	var/stun_time_cyborg = (5 SECONDS)
 	/// The length of the knockdown applied to the user on clumsy_check()
 	var/clumsy_knockdown_time = 18 SECONDS
 	/// How much stamina damage we deal on a successful hit against a living, non-cyborg mob.
-	var/stamina_damage = 25
+	var/stamina_damage = 35
 	/// Chance of causing force_say() when stunning a human mob
 	var/force_say_chance = 33
 	/// Can we stun cyborgs?
@@ -228,8 +228,8 @@
 /obj/item/melee/baton/proc/get_stun_description(mob/living/target, mob/living/user)
 	. = list()
 
-	.["visible"] = span_danger("[user] knocks [target] down with [src]!")
-	.["local"] = span_userdanger("[user] knocks you down with [src]!")
+	.["visible"] = span_danger("[user] non-lethally strikes [target] with [src]!")
+	.["local"] = span_userdanger("[user] non-lethally strikes you with [src]!")
 
 	return .
 
@@ -320,7 +320,6 @@
 	w_class = WEIGHT_CLASS_SMALL
 	item_flags = NONE
 	force = 0
-	cooldown = 2.5 SECONDS
 	bare_wound_bonus = 5
 	clumsy_knockdown_time = 15 SECONDS
 	active = FALSE
@@ -443,7 +442,7 @@
 	armor_type = /datum/armor/baton_security
 	throwforce = 7
 	force_say_chance = 50
-	stamina_damage = 30
+	stamina_damage = 35
 	knockdown_time = 5 SECONDS
 	clumsy_knockdown_time = 15 SECONDS
 	cooldown = 1 SECONDS
@@ -867,8 +866,8 @@
 	wound_bonus = 10
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY
-	stamina_damage = 55
-	cooldown = 1.8 SECONDS
+	stamina_damage = 60
+	cooldown = 1.5 SECONDS
 
 	wdefense = 4
 
