@@ -13,13 +13,6 @@
 		flash_fullscreen("blackflash2")
 		playsound(get_turf(src), 'hl13/sound/weapons/woosh.ogg', 100, FALSE, -1)
 		return TRUE
-	if(combat_mode)
-		if(prob(3)) //extra chance to dodge if in combat mode
-			var/list/usedp = list("They dodged the blow! Miss!", "They saw it coming! Miss!", "They must've moved! Miss!")
-			to_chat(user, "<span class='boldwarning'>[pick(usedp)]</span>")
-			flash_fullscreen("blackflash2")
-			playsound(get_turf(src), 'hl13/sound/weapons/woosh.ogg', 100, FALSE, -1)
-			return TRUE
 
 /mob/living/proc/checkdefense(obj/item/masteritem, mob/living/user)
 	testing("begin defense")
@@ -34,7 +27,7 @@
 	if(!(mobility_flags & MOBILITY_MOVE))
 		return FALSE
 
-	var/prob2defend = 30
+	var/prob2defend = 20
 	var/mob/living/H = src
 	var/mob/living/U = user
 	if(H && U)
@@ -42,6 +35,15 @@
 
 	if(check_behind(user, src)) //If the attacker is on the three tiles behind the defender, there is no chance you're parrying them.
 		return FALSE
+
+	if(prob(25) && world.time > last_dodge + dodge_cooldown) //chance to dodge. Dodging is more reliable than parries and increases TTK even for unarmed people, but there is decent cooldown on dodges
+		last_dodge = world.time
+		var/list/usedp = list("They dodged the blow! Miss!", "They saw it coming! Miss!", "They evaded my hit! Miss!")
+		to_chat(user, "<span class='boldwarning'>[pick(usedp)]</span>")
+		flash_fullscreen("blackflash2")
+		to_chat(src, "<span class='warning'>I just barely dodge an attack from [user]!</span>")
+		playsound(get_turf(src), 'hl13/sound/weapons/woosh.ogg', 100, FALSE, -1)
+		return TRUE
 
 	if(move_intent == MOVE_INTENT_RUN)
 		prob2defend = max(prob2defend-15,0)

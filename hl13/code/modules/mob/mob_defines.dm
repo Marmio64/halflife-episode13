@@ -6,3 +6,5 @@
 	var/canparry = FALSE
 	var/candodge = FALSE
 	var/last_parry = 0
+	var/last_dodge = 0
+	var/dodge_cooldown = 50
