@@ -112,24 +112,6 @@
 	access_view = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/halflife
 
-/datum/supply_pack/security/armory/ar2
-	name = "OSIPR Crate"
-	desc = "Contains two Overwatch Standard Issue Pulse Rifles that are ready built and biolocked. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 28
-	contains = list(/obj/item/gun/ballistic/automatic/ar2,
-					/obj/item/gun/ballistic/automatic/ar2)
-	crate_name = "osipr gun crate"
-
-/datum/supply_pack/security/armory/ar2ammo
-	name = "OSIPR Ammo Crate"
-	desc = "Contains four OSIPR magazines. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 12
-	contains = list(/obj/item/ammo_box/magazine/ar2,
-					/obj/item/ammo_box/magazine/ar2,
-					/obj/item/ammo_box/magazine/ar2,
-					/obj/item/ammo_box/magazine/ar2)
-	crate_name = "osipr ammo crate"
-
 /datum/supply_pack/security/armory/pulsesmg
 	name = "Pulse SMG Crate"
 	desc = "Contains two Pulse SMGs that are ready built and biolocked. Requires Armory access to open."
