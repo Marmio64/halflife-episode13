@@ -308,7 +308,7 @@
 /datum/outfit/deathmatch_loadout/polish_veteran
 	name = "Deathmatch: PLF Veteran"
 	display_name = "Polish Liberation Front Veteran"
-	desc = "A heavily-armed, heavily-armoured soldier of the Polish army. Armed with an AK-47, multiple grenades, and immense explosive resistance, the only disadvantage you have is immensely low speed thanks to your duffel-bag."
+	desc = "A heavily-armed, heavily-armoured soldier of the Polish army. Armed with an AK-47, multiple grenades, and immense explosive resistance, at the cost of lower vision and very low speed."
 	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
 	mask = /obj/item/clothing/mask/gas/hl2/military
 	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran //again: walking fucking tank. dont fuck with him.
@@ -324,7 +324,7 @@
 		/obj/item/grenade/syndieminibomb/bouncer = 2,
 		/obj/item/crowbar/large = 1, //sometimes C4 is too much
 		/obj/item/hl13_small_flag/poland/telescopic = 1, //POLAND POLAND POLAND
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3, //I refuse death by the power of DRUGS!!!
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2, //I refuse death by the power of DRUGS!!!
 	)
 
 /datum/outfit/deathmatch_loadout/polish_corporal

@@ -182,3 +182,7 @@
 	icon_state = "poland_heavy"
 	base_icon_state = "poland_heavy"
 	repairable_by = /obj/item/stack/kevlar
+
+/obj/item/clothing/head/helmet/halflife/military/plf_veteran/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/clothing_fov_visor, FOV_180_DEGREES)

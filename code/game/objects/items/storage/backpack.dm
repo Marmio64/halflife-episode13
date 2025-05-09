@@ -408,7 +408,7 @@
 	actions_types = list(/datum/action/item_action/zipper)
 	storage_type = /datum/storage/duffel
 	// How much to slow you down if your bag isn't zipped up
-	var/zip_slowdown = 1
+	var/zip_slowdown = 0.75 //hl13 edit
 	/// If this bag is zipped (contents hidden) up or not
 	/// Starts enabled so you're forced to interact with it to "get" it
 	var/zipped_up = TRUE
