@@ -1,5 +1,5 @@
 /// Number of paychecks jobs start with at the creation of a new bank account for a player (So at shift-start or game join, but not a blank new account.)
-#define STARTING_PAYCHECKS 6
+#define STARTING_PAYCHECKS 0
 /// How much mail the Economy SS will create per minute, regardless of firing time.
 #define MAX_MAIL_PER_MINUTE 3
 /// Probability of using letters of envelope sprites on all letters.
@@ -18,15 +18,15 @@
 //hl13 paygrade edits. Using custom ones because paychecks are low, you earn money elsewhere generally, like from your rations even.
 #define PAYCHECK_CITIZEN 1
 #define PAYCHECK_STANDARD 2
-#define PAYCHECK_HIGH 4
-#define PAYCHECK_GREAT 6
+#define PAYCHECK_HIGH 3
+#define PAYCHECK_GREAT 4
 
 #define STATION_TARGET_BUFFER 25
 
 ///The coefficient for the amount of dosh that's collected everytime some is earned or received.
 #define DEBT_COLLECTION_COEFF 0.75
 
-#define MAX_GRANT_DPT 60
+#define MAX_GRANT_DPT 80
 
 //What should vending machines charge when you buy something in-department.
 #define DEPARTMENT_DISCOUNT 0.5

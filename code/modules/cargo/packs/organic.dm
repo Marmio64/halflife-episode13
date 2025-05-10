@@ -146,38 +146,23 @@
 					/obj/item/food/meat/slab/monkey)
 	crate_name = "food crate"
 
-/datum/supply_pack/organic/rations
-	name = "Ration Crate"
-	desc = "A crate of five ration packs, made for easy distribution."
-	cost = CARGO_CRATE_VALUE * 5
-	contains = list(/obj/item/storage/box/halflife/ration/ration,
-					/obj/item/storage/box/halflife/ration/ration,
-					/obj/item/storage/box/halflife/ration/ration,
-					/obj/item/storage/box/halflife/ration/ration,
-					/obj/item/storage/box/halflife/ration/ration)
-	crate_name = "ration crate"
-
-/datum/supply_pack/organic/loyaltyrations
-	name = "Loyalty-grade Ration Crate"
-	desc = "A crate of five loyalty-grade ration packs, made for easy distribution."
+/datum/supply_pack/organic/ration_foodwater
+	name = "Ration Food and Water Crate"
+	desc = "A crate containing a selection of ration foods for immediate consumption, though it comes at a high price. Roughly equal to four rations worth of food and water."
 	cost = CARGO_CRATE_VALUE * 6
-	contains = list(/obj/item/storage/box/halflife/ration/loyaltyration,
-					/obj/item/storage/box/halflife/ration/loyaltyration,
-					/obj/item/storage/box/halflife/ration/loyaltyration,
-					/obj/item/storage/box/halflife/ration/loyaltyration,
-					/obj/item/storage/box/halflife/ration/loyaltyration)
-	crate_name = "loyalty-grade ration crate"
-
-/datum/supply_pack/organic/badrations
-	name = "Low-grade Ration Crate"
-	desc = "A crate of five low-grade ration packs, made for easy distribution."
-	cost = CARGO_CRATE_VALUE * 4
-	contains = list(/obj/item/storage/box/halflife/ration/badration,
-					/obj/item/storage/box/halflife/ration/badration,
-					/obj/item/storage/box/halflife/ration/badration,
-					/obj/item/storage/box/halflife/ration/badration,
-					/obj/item/storage/box/halflife/ration/badration)
-	crate_name = "low-grade ration crate"
+	contains = list(/obj/item/halflife/nutrient_bar_wrapping/water,
+					/obj/item/halflife/nutrient_bar_wrapping/water,
+					/obj/item/halflife/nutrient_bar_wrapping/pork,
+					/obj/item/halflife/nutrient_bar_wrapping/pork,
+					/obj/item/halflife/nutrient_bar_wrapping/beef,
+					/obj/item/storage/halflife/hand_box/egg,
+					/obj/item/storage/halflife/hand_box/egg,
+					/obj/item/storage/halflife/hand_box/chicken,
+					/obj/item/reagent_containers/cup/soda_cans/breenwater/red,
+					/obj/item/reagent_containers/cup/soda_cans/breenwater/red,
+					/obj/item/reagent_containers/cup/soda_cans/breenwater/red,
+					/obj/item/reagent_containers/cup/soda_cans/breenwater/red)
+	crate_name = "ration crate"
 
 /datum/supply_pack/organic/nutrimentpierogis
 	name = "Nutriment Pierogis Crate"

@@ -274,7 +274,3 @@
 	var/current_ambient_sound
 
 	var/rain_sound = FALSE //HL13 EDIT
-
-	var/longterm_credits_withdrawn = 0 //HL13 EDIT
-
-	var/longterm_credits_deposited = 0 //HL13 EDIT

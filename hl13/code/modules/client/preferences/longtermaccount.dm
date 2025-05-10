@@ -4,7 +4,7 @@
 	savefile_identifier = PREFERENCE_CHARACTER
 
 	minimum = 0
-	maximum = 1000
+	maximum = 255
 
 /datum/preference/numeric/longtermaccount/apply_to_human(mob/living/carbon/human/target, value)
 	return
