@@ -755,6 +755,8 @@
 
 	if(registered_account && !isnull(registered_account.account_id))
 		. += "The account linked to the ID belongs to '[registered_account.account_holder]' and reports a balance of [registered_account.account_balance] cr."
+		if(registered_account.requisition_points)
+			. += "The account has [registered_account.requisition_points] requisition points for use at a civil protection vendor."
 		if(ACCESS_COMMAND in access)
 			var/datum/bank_account/linked_dept = SSeconomy.get_dep_account(registered_account.account_job.paycheck_department)
 			. += "The [linked_dept.account_holder] linked to the ID reports a balance of [linked_dept.account_balance] cr."

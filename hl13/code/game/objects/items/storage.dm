@@ -250,7 +250,7 @@
 
 /datum/storage/satchel/halflife/small
 	max_total_storage = 12
-	max_slots = 12
+	max_slots = 9
 
 /obj/item/storage/halflife/suitcase
 	name = "suitcase"

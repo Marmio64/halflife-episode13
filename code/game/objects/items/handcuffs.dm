@@ -47,7 +47,6 @@
 	custom_materials = list(/datum/material/iron= SMALL_MATERIAL_AMOUNT * 5)
 	breakouttime = 1 MINUTES
 	armor_type = /datum/armor/restraints_handcuffs
-	custom_price = PAYCHECK_COMMAND * 0.35
 	pickup_sound = 'sound/items/handling/handcuffs/handcuffs_pick_up.ogg'
 	drop_sound = 'sound/items/handling/handcuffs/handcuffs_drop.ogg'
 	sound_vary = TRUE

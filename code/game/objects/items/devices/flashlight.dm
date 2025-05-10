@@ -6,7 +6,6 @@
 /obj/item/flashlight
 	name = "flashlight"
 	desc = "A hand-held emergency light."
-	custom_price = PAYCHECK_CREW
 	icon = 'icons/obj/lighting.dmi'
 	dir = WEST
 	icon_state = "flashlight"

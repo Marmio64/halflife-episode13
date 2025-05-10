@@ -139,38 +139,55 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 
 /obj/machinery/vending/civpro
 	name = "\improper Metropolice Supply Vendor"
-	desc = "An equipment vendor for civil protection to spend their hard earned credits on overpriced items."
+	desc = "An equipment vendor for civil protection to spend requisition points on supplies."
 	product_ads = "Improve your ability to patrol.;Purchase additional supplies.;Help insure your family cohesion"
 	icon = 'hl13/icons/obj/machines/vending.dmi'
 	icon_state = "sec"
 	icon_deny = "sec-deny"
 	panel_type = "panel6"
 	light_mask = "sec-light-mask"
+	displayed_currency_name = " requisition points"
 	products = list(
 		/obj/item/restraints/handcuffs = 8,
-		/obj/item/lockpick/combine = 3,
-		/obj/item/gps = 4,
-		/obj/item/flashlight/flare = 6,
+		/obj/item/lockpick/combine = 8,
+		/obj/item/gps = 8,
+		/obj/item/flashlight/flare = 8,
 		/obj/item/restraints/handcuffs/cable/zipties = 8,
 		/obj/item/ammo_box/magazine/usp9mm/rubber = 8,
-		/obj/item/ammo_box/magazine/usp9mm = 4,
-		/obj/item/reagent_containers/pill/patch/medkit/vial = 4,
+		/obj/item/ammo_box/magazine/usp9mm = 8,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 8,
 		/obj/item/reagent_containers/spray/pepper = 6,
 		/obj/item/radio/civpro = 8,
-		/obj/item/halflife/combine_battery = 6,
-		/obj/item/storage/halflife/pill_bottle/antifatigue = 6,
-		/obj/item/stack/credit_voucher = 10,
+		/obj/item/halflife/combine_battery = 8,
+		/obj/item/storage/halflife/pill_bottle/antifatigue = 8,
 	)
 	contraband = list(
 		/obj/item/clothing/glasses/sunglasses = 2,
 	)
 	premium = list(
-		/obj/item/storage/backpack/halflife/satchel/civilprotection = 6,
+		/obj/item/storage/backpack/halflife/satchel/civilprotection = 8,
 	)
 	refill_canister = /obj/item/vending_refill/civpro
-	default_price = PAYCHECK_CREW * 0.75
-	extra_price = PAYCHECK_COMMAND * 1.5
+	default_price = 1
+	extra_price = 3
 	payment_department = NO_FREEBIES
+
+/obj/machinery/vending/civpro/proceed_payment(obj/item/card/id/paying_id_card, mob/living/mob_paying, datum/data/vending_product/product_to_vend, price_to_use)
+	if(coin_records.Find(product_to_vend) || hidden_records.Find(product_to_vend))
+		price_to_use = product_to_vend.custom_premium_price ? product_to_vend.custom_premium_price : extra_price
+	if(LAZYLEN(product_to_vend.returned_products))
+		price_to_use = 0 //returned items are free
+	if(price_to_use && !(paying_id_card.registered_account.requisition_points >= price_to_use)) //not enough points
+		speak("You do not possess enough requisition points to purchase [product_to_vend.name].")
+		flick(icon_deny, src)
+		vend_ready = TRUE
+		return FALSE
+
+	paying_id_card.registered_account.requisition_points -= price_to_use
+	return TRUE
+
+/obj/machinery/vending/civpro/fetch_balance_to_use(obj/item/card/id/passed_id)
+	return passed_id.registered_account.requisition_points
 
 /obj/item/vending_refill/civpro
 	machine_name = "Metropolice Supply Vendor"

@@ -41,8 +41,10 @@
 	var/ration_voucher = FALSE
 	///Do we have a meal sanction in place?
 	var/sanctioned = 0
-	/// A randomly generated 5-digit pin to access the bank account. This is stored as a string!
+	/// The password set at an ATM, stored as a string
 	var/account_pin
+	/// Requisition points for civil protection, is hl13 edit
+	var/requisition_points
 
 /datum/bank_account/proc/rationvoucher()
 	if(ration_voucher)

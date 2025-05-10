@@ -142,6 +142,9 @@
 	/// Any bonuses to ration quality this job gets.
 	var/ration_bonus = 0
 
+	/// Should they get civil protection requisition points to spend?
+	var/requisition_points = 0
+
 	/// Should they be reminded about following Union Law?
 	var/union_law_notify = FALSE
 
@@ -219,6 +222,11 @@
 		account_id = bank_account.account_id
 		bank_account.replaceable = FALSE
 		add_mob_memory(/datum/memory/key/account, remembered_id = account_id)
+
+		//hl13 edit start
+		if(equipping.requisition_points)
+			bank_account.requisition_points += equipping.requisition_points
+		//hl13 edit end
 
 	dress_up_as_job(
 		equipping = equipping,
