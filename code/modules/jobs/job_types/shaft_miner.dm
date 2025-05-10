@@ -2,7 +2,6 @@
 	title = JOB_SHAFT_MINER
 	description = "Travel underground to the mines. Bring ores back to the factory for processing, loot underground regions."
 	department_head = list(JOB_QUARTERMASTER)
-	faction = FACTION_STATION
 	total_positions = 3
 	spawn_positions = 3
 	supervisors = SUPERVISOR_QM
@@ -27,7 +26,6 @@
 
 	family_heirlooms = list(/obj/item/pickaxe/mini, /obj/item/shovel)
 	rpg_title = "Adventurer"
-	job_flags = STATION_JOB_FLAGS
 
 	ration_bonus = 1
 

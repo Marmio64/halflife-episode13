@@ -1,10 +1,10 @@
 /datum/job/cargo_technician
 	title = JOB_CARGO_TECHNICIAN
-	description = "Preform work in the factory, and carry out any tasks that the foreman needs you to do."
+	description = "Preform work in the factory, mine if necessary, and carry out any tasks that the foreman needs you to do."
 	department_head = list(JOB_QUARTERMASTER)
 	faction = FACTION_STATION
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 5
+	spawn_positions = 5
 	supervisors = SUPERVISOR_QM
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "CARGO_TECHNICIAN"
