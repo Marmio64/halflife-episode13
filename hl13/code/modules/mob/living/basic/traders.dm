@@ -113,6 +113,9 @@
 		/obj/item/halflife/antenna = list(PAYCHECK_CREW * 8, 1),
 		/obj/item/stack/kevlar = list(PAYCHECK_CREW, 5),
 		/obj/item/crowbar/large = list(PAYCHECK_CREW * 4, 1),
+		/obj/item/weldingtool/halflife = list(PAYCHECK_CREW * 1.5, 2),
+		/obj/item/wrench/halflife = list(PAYCHECK_CREW * 1.5, 2),
+		/obj/item/screwdriver/halflife = list(PAYCHECK_CREW * 1.5, 2),
 	)
 
 	initial_wanteds = list(

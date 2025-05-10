@@ -6,12 +6,19 @@
 	tool_paths = list(/obj/item/weldingtool)
 	category = CAT_MISC
 
-/datum/crafting_recipe/breakdown_parts
-	name = "Breakdown Scrap Parts"
+/datum/crafting_recipe/scrap_metal_workbench
+	name = "Recombine Scrap Metal (Workbench)"
+	result = /obj/item/stack/sheet/iron
+	reqs = list(/obj/item/stack/sheet/scrap_metal = 4)
+	time = 1 SECONDS
+	category = CAT_MISC
+	crafting_interface = CRAFTING_BENCH_GENERAL
+
+/datum/crafting_recipe/scrounge_parts
+	name = "Scrounge Apart Scrap Parts"
 	result = /obj/item/stack/sheet/scrap_metal/three
 	reqs = list(/obj/item/stack/sheet/scrap_parts = 1)
-	time = 2 SECONDS
-	tool_paths = list(/obj/item/weldingtool)
+	time = 3 SECONDS
 	category = CAT_MISC
 
 /datum/crafting_recipe/breakdown_iron
