@@ -337,17 +337,18 @@
 	alternate_states = 7
 
 
+// Sprites from half life city 13 rebuilt
 /turf/open/floor/plating/ground/brickroad
 	name = "\proper road"
 	desc = "Grey bricks of stone arranged into a stretch of road, the passage of time slowly taking its toll upon them."
 	baseturfs = /turf/open/floor/plating/ground/brickroad
-	icon = 'hl13/icons/turf/floor/stonebrick.dmi'
-	icon_state = "brick"
-	base_icon_state = "brick"
+	icon = 'hl13/icons/turf/floor/road.dmi'
+	icon_state = "road-0"
+	base_icon_state = "road"
 	footstep = FOOTSTEP_CONCRETE
-	has_base_states = TRUE
-	has_alternate_states = TRUE
-	alternate_states = 8
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_TURF_COBBLESTONE_ROAD
+	canSmoothWith = SMOOTH_GROUP_TURF_COBBLESTONE_ROAD
 
 ////Sidewalks////
 
