@@ -360,21 +360,16 @@
 	icon_state = "sidewalk"
 	base_icon_state = "sidewalk"
 	footstep = FOOTSTEP_CONCRETE
-	has_base_states = TRUE
-	has_alternate_states = TRUE
-	alternate_states = 5
 
 /turf/open/floor/plating/ground/sidewalk/inner
 	baseturfs = /turf/open/floor/plating/ground/sidewalk/inner
 	icon_state = "sidewalkinside"
 	base_icon_state = "sidewalkinside"
-	alternate_states = 3
 
 /turf/open/floor/plating/ground/sidewalk/inner/slums
 	baseturfs = /turf/open/floor/plating/ground/sidewalk/inner/slums
 	icon_state = "sidewalkinsideslums"
 	base_icon_state = "sidewalkinsideslums"
-	alternate_states = 4
 
 /turf/open/floor/plating/ground/grass
 	name = "grass"
