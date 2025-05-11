@@ -349,7 +349,7 @@
 			have been added to your ID card.")
 	//hl13 edit start
 	if(union_law_notify)
-		info += "<b>In order to give a fun experience, you are beholden to Union Law for delivering punishments <a href='https://halflifeepisode13.miraheze.org/wiki/Official:Union_Law'> unless you can justify breaking it with a good in character reason.</b>"
+		info += "<b>In order to give a fun experience, you are beholden to Union Law for delivering punishments https://halflifeepisode13.miraheze.org/wiki/Official:Union_Law unless you can justify breaking it with a good in character reason.</b>"
 	if(gameplay_help)
 		info += "[gameplay_help]"
 	//hl13 edit end

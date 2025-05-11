@@ -147,25 +147,28 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	panel_type = "panel6"
 	light_mask = "sec-light-mask"
 	displayed_currency_name = " requisition points"
+	tiltable = FALSE
 	products = list(
-		/obj/item/restraints/handcuffs = 8,
-		/obj/item/lockpick/combine = 8,
-		/obj/item/gps = 8,
-		/obj/item/flashlight/flare = 8,
-		/obj/item/restraints/handcuffs/cable/zipties = 8,
-		/obj/item/ammo_box/magazine/usp9mm/rubber = 8,
-		/obj/item/ammo_box/magazine/usp9mm = 8,
-		/obj/item/reagent_containers/pill/patch/medkit/vial = 8,
-		/obj/item/reagent_containers/spray/pepper = 6,
-		/obj/item/radio/civpro = 8,
-		/obj/item/halflife/combine_battery = 8,
-		/obj/item/storage/halflife/pill_bottle/antifatigue = 8,
+		/obj/item/restraints/handcuffs = 12,
+		/obj/item/lockpick/combine = 12,
+		/obj/item/gps = 12,
+		/obj/item/flashlight/flare = 12,
+		/obj/item/ammo_box/magazine/usp9mm/rubber = 12,
+		/obj/item/ammo_box/magazine/usp9mm = 12,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 12,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 12,
+		/obj/item/reagent_containers/spray/pepper = 12,
+		/obj/item/radio/civpro = 12,
+		/obj/item/halflife/combine_battery = 12,
+		/obj/item/storage/halflife/pill_bottle/antifatigue = 12,
+		/obj/item/grenade/stingbang/halflife = 12,
 	)
 	contraband = list(
 		/obj/item/clothing/glasses/sunglasses = 2,
 	)
 	premium = list(
-		/obj/item/storage/backpack/halflife/satchel/civilprotection = 8,
+		/obj/item/storage/backpack/halflife/satchel/civilprotection = 12,
+		/obj/item/gun/ballistic/automatic/pistol/usp/riot = 12,
 	)
 	refill_canister = /obj/item/vending_refill/civpro
 	default_price = 1

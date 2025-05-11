@@ -43,7 +43,7 @@
 // Potatoes
 /obj/item/food/tatortot
 	name = "tator tot"
-	desc = "A large fried potato nugget that may or may not try to valid you."
+	desc = "A large fried potato nugget."
 	icon_state = "tatortot"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 4)
 	tastes = list("potato" = 3, "valids" = 1)

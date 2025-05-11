@@ -1596,6 +1596,10 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/virology)
+"fL" = (
+/obj/structure/chair/halflife/metal/blue,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/trainstation)
 "fM" = (
 /turf/open/floor/plating/indoor/metal/pipe/intersection{
 	dir = 1
@@ -3352,11 +3356,9 @@
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/dispatch)
 "lZ" = (
-/obj/structure/table/halflife/metal,
-/obj/machinery/light/small/directional/east,
-/obj/item/paper_bin,
-/obj/item/pen,
-/turf/open/floor/plating/indoor/tile/black,
+/obj/machinery/door/airlock/highsecurity/combine,
+/obj/effect/mapping_helpers/airlock/access/all/security/brig,
+/turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/trainstation)
 "ma" = (
 /obj/machinery/light/small/directional/west,
@@ -5593,6 +5595,10 @@
 /obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/alley)
+"ui" = (
+/obj/machinery/vending/civpro,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/trainstation)
 "uj" = (
 /obj/structure/alien/weeds,
 /obj/structure/flora/xen/leafy,
@@ -7046,9 +7052,7 @@
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer)
 "zp" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/nodirectional{
-	dir = 1
-	},
+/obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/trainstation)
 "zq" = (
@@ -7581,6 +7585,9 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
+/obj/structure/table/halflife/metal,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/trainstation)
 "Bf" = (
@@ -8445,8 +8452,7 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors)
 "Ej" = (
-/obj/structure/closet/crate/bin,
-/turf/open/floor/plating/indoor/trainfloor,
+/turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/trainstation)
 "Ek" = (
 /turf/open/openspace,
@@ -12102,6 +12108,10 @@
 /area/halflife/indoors/distributioncenter)
 "QR" = (
 /obj/machinery/status_display/evac/directional/south,
+/obj/machinery/camera{
+	c_tag = "Train Station Checkpoint";
+	dir = 1
+	},
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/trainstation)
 "QS" = (
@@ -14119,8 +14129,8 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors)
 "Yl" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/nodirectional,
-/turf/open/floor/plating/indoor/tile/black,
+/obj/machinery/light/small/cyan/directional/south,
+/turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/trainstation)
 "Ym" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/science/nodirectional{
@@ -14595,11 +14605,8 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/townhall/secondfloor)
 "ZX" = (
-/obj/machinery/camera{
-	c_tag = "Train Station Checkpoint";
-	dir = 1
-	},
-/turf/open/floor/plating/indoor/tile/black,
+/obj/structure/table/halflife/metal,
+/turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/trainstation)
 "ZY" = (
 /obj/item/chair/halflife/metal,
@@ -39618,7 +39625,7 @@ kd
 kd
 kd
 kd
-Yl
+zp
 dB
 dB
 dB
@@ -40286,9 +40293,9 @@ fv
 dB
 EQ
 Op
-Ff
-Ff
-Ff
+Op
+Op
+Op
 Ff
 Ff
 Ff
@@ -40418,9 +40425,9 @@ uN
 dB
 aQ
 Op
-Ff
-Ff
-Ff
+fL
+Ej
+Op
 Ff
 Ff
 Ff
@@ -40550,9 +40557,9 @@ Lp
 dB
 QR
 Op
-Ff
-Ff
-Ff
+ZX
+Yl
+Op
 Ff
 Ff
 Ff
@@ -40680,11 +40687,11 @@ OA
 Op
 pm
 dB
-ZX
+dB
+lZ
+Ej
+Ej
 Op
-Ff
-Ff
-Ff
 Ff
 Ff
 Ff
@@ -40812,11 +40819,11 @@ sI
 Op
 Be
 dB
-dB
+aQ
 Op
-Ff
-Ff
-Ff
+ui
+Ej
+Op
 Ff
 Ff
 Ff
@@ -40943,12 +40950,12 @@ kd
 kd
 Op
 Rg
-lZ
+dB
 gV
 Op
-Ff
-Ff
-Ff
+Op
+Op
+Op
 Ff
 Ff
 Ff
@@ -41075,7 +41082,7 @@ Op
 Op
 Op
 Op
-Op
+vY
 Op
 Op
 Ff
@@ -41204,11 +41211,11 @@ qo
 kd
 kd
 kd
-Ej
-Op
-Op
-Op
-Op
+kd
+zp
+dB
+dB
+dB
 Op
 Ff
 Ff
@@ -41338,9 +41345,9 @@ kd
 lm
 Xu
 Op
-Op
-Op
-Op
+dB
+dB
+dB
 Op
 Ff
 Ff

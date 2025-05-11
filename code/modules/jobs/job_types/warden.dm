@@ -45,9 +45,9 @@
 	ration_bonus = 2
 	union_law_notify = TRUE
 
-	requisition_points = 8
+	requisition_points = 10
 
-	gameplay_help = "As a civil protection officer, you are bound by fear and/or loyalty to the combine. You cannot directly rebel or go rogue without a very good reason."
+	gameplay_help = "As a civil protection officer, you are bound by fear and/or loyalty to the combine. You cannot directly rebel or go rogue without a very good reason. Also, make sure to visit a Metropolice Supply Vendor in the trainstation or nexus to gear up at."
 
 	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
 
@@ -82,7 +82,6 @@
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat/overseer
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	glasses = /obj/item/clothing/glasses/hud/security
 
