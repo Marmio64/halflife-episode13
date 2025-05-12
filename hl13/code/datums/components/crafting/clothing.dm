@@ -142,6 +142,14 @@
 	time = 12 SECONDS
 	category = CAT_ARMOR
 
+/datum/crafting_recipe/padded_jacket_white
+	name = "Pad Jacket (White)"
+	result = /obj/item/clothing/suit/whitejacket/padded
+	reqs = list(/obj/item/stack/sheet/cloth = 5,
+				/obj/item/clothing/suit/whitejacket = 1)
+	time = 12 SECONDS
+	category = CAT_ARMOR
+
 //no practical effects except for HOLY SHIT POLAND
 /datum/crafting_recipe/helmet_polandification
 	name = "Polish Military Helmet"

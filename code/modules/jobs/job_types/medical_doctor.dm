@@ -43,12 +43,12 @@
 	ration_bonus = 1
 
 /datum/outfit/job/doctor
-	name = "Medical Doctor"
+	name = "Union Doctor"
 	jobtype = /datum/job/doctor
 
 	id_trim = /datum/id_trim/job/medical_doctor
 	uniform = /obj/item/clothing/under/citizen
-	suit = /obj/item/clothing/suit/toggle/labcoat/halflife
+	suit =  /obj/item/clothing/suit/whitejacket
 	accessory = /obj/item/clothing/accessory/armband/medblue
 	ears = /obj/item/radio/headset
 	gloves = /obj/item/clothing/gloves/latex/nitrile

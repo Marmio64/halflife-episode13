@@ -78,7 +78,7 @@
 	var/refill_rate = 3
 
 	///How many credits to give when completed
-	var/credit_reward = 2
+	var/credit_reward = 1
 
 	var/possiblenutrient = list(
 		/obj/item/ration_construction/ingredientblock/sweetprotein,

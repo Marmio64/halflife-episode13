@@ -87,10 +87,7 @@
 /area/shuttle/escape)
 "lR" = (
 /obj/structure/fans/tiny/invisible,
-/obj/structure/railing/halflife/solo{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/metal/grate/border{
+/turf/open/floor/plating/indoor/metal/grate/border/warning{
 	dir = 1
 	},
 /area/shuttle/escape)
@@ -154,6 +151,15 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/escape)
+"yN" = (
+/obj/structure/fans/tiny/invisible,
+/obj/structure/railing/halflife/sewer{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/metal/grate/border{
+	dir = 1
+	},
+/area/shuttle/escape)
 "zn" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/civilprotection{
 	dir = 8
@@ -174,6 +180,9 @@
 "Bl" = (
 /obj/machinery/light/small/directional/east,
 /obj/structure/fans/tiny/invisible,
+/obj/structure/railing/halflife/sewer{
+	dir = 8
+	},
 /turf/open/floor/plating/indoor/metal/grate/border{
 	dir = 1
 	},
@@ -192,10 +201,8 @@
 /area/shuttle/escape)
 "ED" = (
 /obj/structure/fans/tiny/invisible,
-/obj/structure/railing/halflife/solo{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/metal/grate/border{
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/metal/grate/border/warning{
 	dir = 1
 	},
 /area/shuttle/escape)
@@ -205,6 +212,9 @@
 "Hn" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/fans/tiny/invisible,
+/obj/structure/railing/halflife/sewer{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/metal/grate/border{
 	dir = 1
 	},
@@ -213,13 +223,20 @@
 /obj/structure/halflife/barrel/double/yellow/one,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
-"Je" = (
-/obj/machinery/light/small/directional/east,
+"IW" = (
 /obj/structure/fans/tiny/invisible,
-/obj/structure/railing/halflife/solo{
+/obj/machinery/light/small/directional/east,
+/obj/structure/railing/halflife/sewer{
 	dir = 8
 	},
 /turf/open/floor/plating/indoor/metal/grate/border{
+	dir = 1
+	},
+/area/shuttle/escape)
+"Je" = (
+/obj/machinery/light/small/directional/east,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating/indoor/metal/grate/border/warning{
 	dir = 1
 	},
 /area/shuttle/escape)
@@ -254,6 +271,9 @@
 "QO" = (
 /obj/structure/fans/tiny/invisible,
 /obj/machinery/light/small/directional/west,
+/obj/structure/railing/halflife/sewer{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/metal/grate/border{
 	dir = 1
 	},
@@ -261,7 +281,7 @@
 "QY" = (
 /obj/structure/fans/tiny/invisible,
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/plating/indoor/metal/grate/border{
+/turf/open/floor/plating/indoor/metal/grate/border/warning{
 	dir = 1
 	},
 /area/shuttle/escape)
@@ -294,6 +314,9 @@
 /area/shuttle/escape)
 "VF" = (
 /obj/structure/fans/tiny/invisible,
+/obj/structure/railing/halflife/sewer{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/metal/grate/border{
 	dir = 1
 	},
@@ -319,10 +342,7 @@
 "Xj" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/fans/tiny/invisible,
-/obj/structure/railing/halflife/solo{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/metal/grate/border{
+/turf/open/floor/plating/indoor/metal/grate/border/warning{
 	dir = 1
 	},
 /area/shuttle/escape)
@@ -363,28 +383,28 @@
 NU
 NU
 YR
-VF
-VF
-VF
-VF
+lR
+lR
+lR
+yN
 Bl
-VF
-VF
-VF
-VF
-VF
+yN
+yN
+yN
+lR
+lR
 lR
 lR
 Je
-VF
+lR
 lR
 lR
 Je
-VF
-lR
-lR
-QY
-lR
+yN
+yN
+yN
+IW
+yN
 lR
 QY
 AH
@@ -579,30 +599,30 @@ WM
 NU
 NU
 YR
-VF
-VF
-VF
+lR
+lR
+lR
 VF
 Hn
 VF
 VF
 VF
-VF
-VF
-ED
-ED
+lR
+lR
+lR
+lR
+Xj
+lR
+lR
+lR
 Xj
 VF
-ED
-ED
-Xj
 VF
-ED
-ED
+VF
 QO
+VF
+lR
 ED
-ED
-QO
 AH
 Eo
 AH

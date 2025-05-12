@@ -1,5 +1,5 @@
 /obj/item/lighter
-	name = "\improper Zippo lighter"
+	name = "\improper Lighter"
 	desc = "The zippo."
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "zippo"

@@ -273,6 +273,23 @@
 	desc = "A heavily faded jacket. It was supposedly rather green, but now you can barely tell it from a grey jacket. This one is padded with extra protective fabric."
 	armor_type = /datum/armor/paddedjacket
 
+/obj/item/clothing/suit/whitejacket
+	name = "white union jacket"
+	desc = "A grungy white jacket often worn by medical and scientific union members."
+	icon_state = "whitejacket"
+	body_parts_covered = CHEST|GROIN|ARMS
+	cold_protection = CHEST|GROIN|ARMS
+	heat_protection = CHEST|GROIN|ARMS
+	strip_delay = 80
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
+	limb_integrity = 80
+
+/obj/item/clothing/suit/whitejacket/padded
+	desc = "A grungy white jacket often worn by medical and scientific union members. This one is padded with extra protective fabric."
+	armor_type = /datum/armor/paddedjacket
+
 /obj/item/clothing/suit/utility/radiation/cleanup
 	name = "cleanup suit"
 	desc = "A suit which provides protection against radiation and hostile xenian fauna attacks."

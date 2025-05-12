@@ -72,7 +72,6 @@
 	. += span_notice("So far [item_quanity_received] quota items have been deposited.")
 
 /obj/machinery/quota_terminal/process(seconds_per_tick)
-	. = ..()
 	if(next_quota < world.time)
 		give_quota()
 		next_quota = world.time + time_between_quotas
