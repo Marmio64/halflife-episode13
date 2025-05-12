@@ -1,6 +1,6 @@
 /obj/effect/decal/cleanable/blood
 	name = "blood"
-	desc = "It's red and gooey. Perhaps it's the chef's cooking?"
+	desc = "A slathering of red mess. Hopefully it's ketchup, but with the state of the world, it is more likely a mess of blood." //hl13 edit
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "floor1"
 	random_icon_states = list("floor1", "floor2", "floor3", "floor4", "floor5", "floor6", "floor7")
@@ -10,7 +10,7 @@
 	clean_type = CLEAN_TYPE_BLOOD
 	var/should_dry = TRUE
 	var/dryname = "dried blood" //when the blood lasts long enough, it becomes dry and gets a new name
-	var/drydesc = "Looks like it's been here a while. Eew." //as above
+	var/drydesc = "A dried slathering of red mess. Probably not ketchup." //as above
 	var/drytime = 0
 	var/footprint_sprite = null
 

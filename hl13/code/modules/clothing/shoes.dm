@@ -9,7 +9,7 @@
 
 /obj/item/clothing/shoes/jackboots/civilprotection/Initialize(mapload)
 	. = ..()
-	LoadComponent(/datum/component/squeak, squeak_sound, 30, 100, 0)
+	LoadComponent(/datum/component/squeak, squeak_sound, 25, 100, 0)
 
 /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	desc = "Snug and secure black boots worn by overwatch forces."
@@ -19,7 +19,7 @@
 /obj/item/clothing/shoes/jackboots/civilprotection/overwatch/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, COMBINESUIT_TRAIT)
-	LoadComponent(/datum/component/squeak, squeak_sound, 30, 100, 0)
+	LoadComponent(/datum/component/squeak, squeak_sound, 25, 100, 0)
 
 /obj/item/clothing/shoes/boots
 	name = "boots"

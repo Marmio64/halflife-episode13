@@ -111,6 +111,9 @@
 	if(HAS_TRAIT(parent_atom, TRAIT_LIGHT_STEP) || (wielder && HAS_TRAIT(wielder, TRAIT_LIGHT_STEP))) //the character is agile enough to don't mess their clothing and hands just from one blood splatter at floor
 		return TRUE
 
+	if(prob(50)) //hl13 edit. Even if you dont have light step, there's a chance you don't track shit everywhere
+		return TRUE //hl13 edit
+
 	parent_atom.add_blood_DNA(GET_ATOM_BLOOD_DNA(pool))
 	update_icon()
 

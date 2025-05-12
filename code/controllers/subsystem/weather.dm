@@ -22,9 +22,10 @@ SUBSYSTEM_DEF(weather)
 	for(var/z in eligible_zlevels)
 		var/possible_weather = eligible_zlevels[z]
 		var/datum/weather/our_event = pick_weight(possible_weather)
-		run_weather(our_event, list(text2num(z)))
+		if(prob(50)) //hl13 edit, weather not guaranteed
+			run_weather(our_event, list(text2num(z)))
 		eligible_zlevels -= z
-		var/randTime = rand(18000, 30000)
+		var/randTime = rand(18000, 30000) //hl13 edit
 		next_hit_by_zlevel["[z]"] = addtimer(CALLBACK(src, PROC_REF(make_eligible), z, possible_weather), randTime + initial(our_event.weather_duration_upper), TIMER_UNIQUE|TIMER_STOPPABLE) //Around 20-40 minutes between weathers
 
 /datum/controller/subsystem/weather/Initialize()

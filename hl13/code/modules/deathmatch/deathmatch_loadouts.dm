@@ -265,9 +265,9 @@
 
 //similar to freeman class, but trades speed, vision, and on the fly suit provided healing for beartraps, armor, and bandages. Very vulnerable to the rioter.
 /datum/outfit/deathmatch_loadout/feral_refugee
-	name = "Deathmatch: Feral Refugee"
-	display_name = "Feral Refugee"
-	desc = "A feral looking and well protected refugee who is capable of ambushing and killing people in close range, but struggles to close the distance."
+	name = "Deathmatch: Crabwalker"
+	display_name = "Crabwalker"
+	desc = "Cannibalistic feral refugees who have incredibly tough fungal plate armor and helmets taken from armored headcrabs, thus earning their name for the crabs they wear. They are masters of ambushing and melee combat, but struggle to close distance."
 
 	head = /obj/item/clothing/head/helmet/halflife/headcrab/deathmatch
 	uniform = /obj/item/clothing/under/citizen/refugee

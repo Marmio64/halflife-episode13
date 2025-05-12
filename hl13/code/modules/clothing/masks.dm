@@ -111,7 +111,7 @@
 	var/mask_color = /datum/client_colour/civilprotection
 
 /datum/client_colour/civilprotection
-	colour = list(/*R*/ 1,0,0,0, /*G*/ 0,1,0,0, /*B*/ 0,0,1,0, /*A*/ 0,0,0,1, /*C*/-0.02,-0.02,0,0) // veeery slightly blue
+	colour = list(/*R*/ 1,0,0,0, /*G*/ 0,1,0,0, /*B*/ 0,0,1,0, /*A*/ 0,0,0,1, /*C*/-0.01,-0.01,0,0) // veeery slightly blue
 
 /datum/client_colour/eliteow
 	colour = list(/*R*/ 1.1,0,0,0, /*G*/ 0,1,0,0, /*B*/ 0,0,1,0, /*A*/ 0,0,0,1, /*C*/0,0,0,0) // veeery slightly red
@@ -168,7 +168,7 @@
 		usr.say(".s Overwatch advised, we have heavy resistance. Need units on my 10-20.", forced = src.name)
 	else
 		playsound(src, 'hl13/sound/voice/cpvoicelines/officerneedsassistance.ogg', 75, FALSE)
-		usr.say(".s Requesting assistance on my position!", forced = src.name)
+		usr.say(".s Officer needs assistance, I am 11-99!", forced = src.name)
 
 /datum/armor/cpmask
 	melee = 30
