@@ -63,7 +63,7 @@
 	var/area/myarea = null
 
 	///The max range (and default range) the camera can see.
-	var/view_range = 7
+	var/view_range = 9 //hl13 edit
 	///The short range the camera can see, if tampered with to be short-sighted.
 	var/short_range = 2
 
