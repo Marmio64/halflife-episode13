@@ -232,8 +232,10 @@
 		var/power_throw = 0
 		//Move the player towards the target
 
+		ADD_TRAIT(src, TRAIT_MOVE_FLOATING, LEAPING_TRAIT)  //Throwing itself doesn't protect mobs against turf stuff
+
 		newtonian_move(get_dir(adjusted_target, src))
-		thrown_thing.safe_throw_at(adjusted_target, thrown_thing.throw_range, thrown_thing.throw_speed + power_throw, src, null, null, null, move_force, spin = FALSE)
+		thrown_thing.safe_throw_at(adjusted_target, thrown_thing.throw_range, thrown_thing.throw_speed + power_throw, src, null, null, null, move_force, spin = FALSE, callback = TRAIT_CALLBACK_REMOVE(src, TRAIT_MOVE_FLOATING, LEAPING_TRAIT))
 		visible_message("<span class='danger'>[src] jumps towards [adjusted_target].</span>")
 
 		last_jump_time = current_time

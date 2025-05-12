@@ -30,6 +30,7 @@
 	var/depth = 0
 	var/coldness = -100
 	var/sewer = FALSE
+	var/toxic = FALSE //is this water completely hazardous to even step in?
 
 /turf/open/halflife/water/attackby(obj/item/W, mob/user, params)
 	. = ..()
@@ -72,8 +73,8 @@
 
 /turf/open/halflife/water/Initialize()
 	. = ..()
-	new watereffect(src)
-	new watertop(src)
+	//new watereffect(src)
+	//new watertop(src)
 
 /turf/open/halflife/water/Initialize(mapload)
 	. = ..()
@@ -195,19 +196,31 @@
 
 	if(isliving(A))
 		var/mob/living/M = A
-		var/mob/living/carbon/H = M
-		addtimer(CALLBACK(src, PROC_REF(transfer_mob_layer), M), 0.2 SECONDS)
+		//addtimer(CALLBACK(src, PROC_REF(transfer_mob_layer), M), 0.2 SECONDS)
+
+		if(!ishuman(M))
+			return
+
+		if(M.movement_type & MOVETYPES_NOT_TOUCHING_GROUND || !M.has_gravity()) //you're flying over it.
+			return
+
+		if(M.throwing) // throw someone or jump to bypass dangerous water safely
+			return
+
+		var/mob/living/carbon/human/H = M
 
 		if(!sewer)
 			if(H.hygiene < HYGIENE_LEVEL_NORMAL)
-				if(iscarbon(H))
-					var/mob/living/carbon/C = H
-					C.adjust_hygiene(20) //Cleans you up a little if it is clean water
+				H.adjust_hygiene(20) //Cleans you up a little if it is clean water
 		else
-			if(iscarbon(H))
-				var/mob/living/carbon/C = H
-				C.adjust_hygiene(-40) //Otherwise, fucking disgusting
+			H.adjust_hygiene(-40) //Otherwise, fucking disgusting
 
+		if(toxic)
+			if(!SSradiation.wearing_rad_protected_clothing(H))
+				H.visible_message("<span class='danger'>[H] is burnt by the sludge!</span>",
+											"<span class='userdanger'>This water is hazardous, your flesh burns!</span>")
+				H.adjustFireLoss(40)
+				H.emote("scream")
 		if(!(M.swimming))
 			switch(depth)
 				if(3)
@@ -345,3 +358,36 @@
 /obj/effect/overlay/halflife/sewer/top/shallow
 	icon_state = "sewer_shallow_top"
 
+
+/turf/open/halflife/water/sludge
+	name = "toxic sludge"
+	desc = "Bubbling, frothy green goo which stings the air, and your flesh."
+	baseturfs = /turf/open/halflife/water/sludge
+	dispensedreagent = /datum/reagent/water/dirty/sludge
+	light_color = "#013b09"
+	sewer = TRUE
+	toxic = TRUE
+	slowdown = 2 //very thick, disgusting slop, slows you down more than water
+
+/turf/open/halflife/water/sludge/deep
+	name = "deep toxic sludge"
+	desc = "Bubbling, frothy green goo which stings the air, and your flesh, it looks pretty deep."
+	icon_state = "sludge_deep"
+	baseturfs = /turf/open/halflife/water/sewer/deep
+	watereffect = /obj/effect/overlay/halflife/sewer/deep
+	watertop = /obj/effect/overlay/halflife/sewer/top/deep
+	depth = 3
+
+/turf/open/halflife/water/sludge/medium
+	icon_state = "sludge_medium"
+	baseturfs = /turf/open/halflife/water/sewer/medium
+	watereffect = /obj/effect/overlay/halflife/sewer/medium
+	watertop = /obj/effect/overlay/halflife/sewer/top/medium
+	depth = 2
+
+/turf/open/halflife/water/sludge/shallow
+	icon_state = "sludge_shallow"
+	baseturfs = /turf/open/halflife/water/sewer/shallow
+	watereffect = /obj/effect/overlay/halflife/sewer/shallow
+	watertop = /obj/effect/overlay/halflife/sewer/top/shallow
+	depth = 1

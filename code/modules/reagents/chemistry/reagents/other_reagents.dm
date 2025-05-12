@@ -261,6 +261,15 @@
 	taste_description = "sewer water"
 	filthy = TRUE
 
+/datum/reagent/water/dirty/sludge
+	name = "Toxic Sludge"
+	description = "A hazardous mixture of who the hell even knows what. You may die if you drink this."
+	color = "#3c4e2d"
+	taste_description = "toxic sludge"
+	filthy = TRUE
+	toxicity = 6
+	disgust = 12
+
 /datum/reagent/water/treated
 	name = "Treated Water"
 	description = "Water filled with a slurry of harsh cleaning chemicals. It does clean you well, but it is absolutely not safe to drink"

@@ -89,7 +89,7 @@
 
 /obj/structure/halflife/sign/clinic
 	name = "clinic sign"
-	desc = "I hear the combine have good health insurance at least..."
+	desc = "A sign reading 'SZPITAL', meaning 'Hospital'. Hopefully the combine have good health insurance."
 	icon_state = "clinic"
 	pixel_y = 32
 	density = FALSE
