@@ -58,8 +58,8 @@
 /datum/outfit/job/hos
 	name = "Divisional Lead"
 	jobtype = /datum/job/head_of_security
+	id = /obj/item/card/id/advanced/halflife/combine/three
 
-	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/head_of_security
 	ears = /obj/item/radio/headset/civilprotection/divisional
 	uniform = /obj/item/clothing/under/combine/civilprotection/divisionallead

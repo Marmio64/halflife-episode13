@@ -41,6 +41,7 @@
 /datum/outfit/job/scientist
 	name = "Scientist"
 	jobtype = /datum/job/scientist
+	id = /obj/item/card/id/advanced/halflife/purple
 
 	id_trim = /datum/id_trim/job/scientist
 	uniform = /obj/item/clothing/under/citizen

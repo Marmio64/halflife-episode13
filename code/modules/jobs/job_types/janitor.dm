@@ -41,6 +41,7 @@
 /datum/outfit/job/janitor
 	name = "Vortigaunt Slave"
 	jobtype = /datum/job/janitor
+	id = /obj/item/card/id/advanced/halflife/vort
 
 	id_trim = /datum/id_trim/job/janitor
 	neck = /obj/item/clothing/neck/anti_magic_collar

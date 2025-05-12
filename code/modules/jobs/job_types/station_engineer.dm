@@ -43,6 +43,7 @@
 /datum/outfit/job/engineer
 	name = "Union Engineer"
 	jobtype = /datum/job/station_engineer
+	id = /obj/item/card/id/advanced/halflife/green
 
 	id_trim = /datum/id_trim/job/station_engineer
 	ears = /obj/item/radio/headset

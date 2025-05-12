@@ -129,7 +129,7 @@
 /// Looks through all possible departments and finds one this ID card "corresponds" to.
 /datum/computer_file/program/department_order/proc/find_department_to_link(obj/item/card/id/id_card)
 	PROTECTED_PROC(TRUE)
-	if(id_card.type != /obj/item/card/id/advanced/silver)
+	if(id_card.type != /obj/item/card/id/advanced/halflife/combine/one || id_card.type != /obj/item/card/id/advanced/halflife/combine/two || id_card.type != /obj/item/card/id/advanced/halflife/combine/three  || id_card.type != /obj/item/card/id/advanced/halflife/combine/four) //hl13 edit
 		// I don't want to introduce weird "access order" behavior with Captain's ID / Chameleon ids / etc, so only silver IDs work
 		return null
 	var/list/access_to_depts = list()

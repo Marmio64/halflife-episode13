@@ -45,6 +45,7 @@
 /datum/outfit/job/doctor
 	name = "Union Doctor"
 	jobtype = /datum/job/doctor
+	id = /obj/item/card/id/advanced/halflife/red
 
 	id_trim = /datum/id_trim/job/medical_doctor
 	uniform = /obj/item/clothing/under/citizen

@@ -1320,9 +1320,11 @@
 
 /obj/item/card/id/advanced/prisoner
 	name = "prisoner ID card"
-	desc = "You are a number, you are not a free man."
-	icon_state = "card_prisoner"
-	inhand_icon_state = "orange-id"
+	desc = "You are a number, you are not a free man. Though, that really has always been the case." //hl13 edit
+	icon_state = "id_orange"
+	icon = 'hl13/icons/obj/ID.dmi' //hl13 edit
+	trim_icon_override = 'hl13/icons/obj/ID.dmi' //hl13 edit
+	inhand_icon_state = "orange-id" //hl13 edit
 	registered_name = "Scum"
 	registered_age = null
 	trim = /datum/id_trim/job/prisoner

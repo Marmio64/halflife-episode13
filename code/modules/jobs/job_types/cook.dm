@@ -65,6 +65,7 @@
 /datum/outfit/job/cook
 	name = "Cook"
 	jobtype = /datum/job/cook
+	id = /obj/item/card/id/advanced/halflife/grey
 
 	id_trim = /datum/id_trim/job/cook/chef
 	suit = /obj/item/clothing/suit/apron/chef

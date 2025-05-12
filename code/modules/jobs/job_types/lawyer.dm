@@ -39,6 +39,7 @@
 /datum/outfit/job/lawyer
 	name = "District Liaison"
 	jobtype = /datum/job/lawyer
+	id = /obj/item/card/id/advanced/halflife/combine/one
 
 	id_trim = /datum/id_trim/job/lawyer
 	uniform = /obj/item/clothing/under/halflife/brownsuit

@@ -30,6 +30,7 @@
 /datum/outfit/job/cargo_tech
 	name = "Union Worker"
 	jobtype = /datum/job/cargo_technician
+	id = /obj/item/card/id/advanced/halflife/green
 
 	id_trim = /datum/id_trim/job/cargo_technician
 	uniform = /obj/item/clothing/under/citizen

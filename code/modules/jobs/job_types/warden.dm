@@ -76,6 +76,7 @@
 /datum/outfit/job/warden
 	name = "Overseer"
 	jobtype = /datum/job/warden
+	id = /obj/item/card/id/advanced/halflife/combine/one
 
 	id_trim = /datum/id_trim/job/warden
 	ears = /obj/item/radio/headset/civilprotection

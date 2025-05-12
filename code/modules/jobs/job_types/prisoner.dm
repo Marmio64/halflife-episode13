@@ -51,6 +51,7 @@
 /datum/outfit/job/refugee/randomitems
 	name = "Outlands Refugee with a random item"
 	jobtype = /datum/job/prisoner
+	id = /obj/item/card/id/advanced/halflife/grey
 
 	id_trim = /datum/id_trim/job/prisoner
 	uniform = /obj/item/clothing/under/citizen/refugee

@@ -54,6 +54,8 @@ Assistant
 
 /datum/outfit/job/assistant
 	name = JOB_ASSISTANT
+
+	id = /obj/item/card/id/advanced/halflife/grey
 	jobtype = /datum/job/assistant
 	id_trim = /datum/id_trim/job/assistant
 	uniform = /obj/item/clothing/under/citizen

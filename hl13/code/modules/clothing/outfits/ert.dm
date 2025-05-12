@@ -1,7 +1,7 @@
 /datum/outfit/centcom/ert/overwatch
 	name = "OTA Unit"
 
-	id = /obj/item/card/id/advanced/centcom/ert
+	id = /obj/item/card/id/advanced/halflife/combine/four
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
 	uniform = /obj/item/clothing/under/combine/overwatch
@@ -80,7 +80,7 @@
 /datum/outfit/centcom/ert/riotpolice
 	name = "Metropolice Riot Unit"
 
-	id = /obj/item/card/id/advanced/centcom/ert
+	id = /obj/item/card/id/advanced/halflife/combine/one
 	ears = /obj/item/radio/headset/civilprotection
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
@@ -116,7 +116,7 @@
 /datum/outfit/centcom/ert/conscript
 	name = "Conscript Soldier"
 
-	id = /obj/item/card/id/advanced/centcom/ert
+	id = /obj/item/card/id/advanced/halflife/combine/one
 	ears = /obj/item/radio/headset/civilprotection
 	uniform = /obj/item/clothing/under/syndicate/camo
 	gloves = /obj/item/clothing/gloves/fingerless
@@ -165,7 +165,7 @@
 /datum/outfit/centcom/ert/administrative
 	name = "Combine Administrative Represenative"
 
-	id = /obj/item/card/id/advanced/centcom/ert
+	id = /obj/item/card/id/advanced/halflife/combine/four
 	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
 	uniform = /obj/item/clothing/under/halflife/blacksuit
 	shoes = /obj/item/clothing/shoes/laceup

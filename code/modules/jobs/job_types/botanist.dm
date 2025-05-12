@@ -42,6 +42,7 @@
 /datum/outfit/job/botanist
 	name = "Botanist"
 	jobtype = /datum/job/botanist
+	id = /obj/item/card/id/advanced/halflife/grey
 
 	id_trim = /datum/id_trim/job/botanist
 	uniform = /obj/item/clothing/under/citizen

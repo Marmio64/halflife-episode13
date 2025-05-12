@@ -216,6 +216,7 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 /datum/outfit/job/security
 	name = "Civil Protection Officer"
 	jobtype = /datum/job/security_officer
+	id = /obj/item/card/id/advanced/halflife/combine/one
 
 	id_trim = /datum/id_trim/job/security_officer
 	ears = /obj/item/radio/headset/civilprotection

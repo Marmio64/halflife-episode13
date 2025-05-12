@@ -44,6 +44,7 @@
 /datum/outfit/job/quartermaster
 	name = "Foreman"
 	jobtype = /datum/job/quartermaster
+	id = /obj/item/card/id/advanced/halflife/combine/one
 
 	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/quartermaster

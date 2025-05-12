@@ -46,6 +46,7 @@
 /datum/outfit/job/atmos
 	name = "Infestation Control"
 	jobtype = /datum/job/atmospheric_technician
+	id = /obj/item/card/id/advanced/halflife/green
 
 	id_trim = /datum/id_trim/job/atmospheric_technician
 	ears = /obj/item/radio/headset

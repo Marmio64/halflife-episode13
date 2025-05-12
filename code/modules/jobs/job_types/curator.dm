@@ -37,6 +37,7 @@
 /datum/outfit/job/curator
 	name = "Clerk"
 	jobtype = /datum/job/curator
+	id = /obj/item/card/id/advanced/halflife/grey
 
 	id_trim = /datum/id_trim/job/curator
 	uniform = /obj/item/clothing/under/citizen

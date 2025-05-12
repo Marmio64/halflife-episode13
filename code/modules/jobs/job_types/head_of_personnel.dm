@@ -60,7 +60,7 @@
 	name = "Labor Lead"
 	jobtype = /datum/job/head_of_personnel
 
-	id = /obj/item/card/id/advanced/silver
+	id = /obj/item/card/id/advanced/halflife/combine/two
 	id_trim = /datum/id_trim/job/head_of_personnel
 	ears = /obj/item/radio/headset/heads/hop
 	uniform = /obj/item/clothing/under/halflife/labor_lead

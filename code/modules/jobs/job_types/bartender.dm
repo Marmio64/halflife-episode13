@@ -46,6 +46,7 @@
 /datum/outfit/job/bartender
 	name = "Bartender"
 	jobtype = /datum/job/bartender
+	id = /obj/item/card/id/advanced/halflife/grey
 
 	id_trim = /datum/id_trim/job/bartender
 	glasses = /obj/item/clothing/glasses/sunglasses/reagent
