@@ -98,7 +98,6 @@
 /obj/machinery/newscaster{
 	pixel_y = 25
 	},
-/obj/structure/halflife/pole/directional/south,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/plaza)
 "au" = (
@@ -1388,6 +1387,10 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
+"fm" = (
+/obj/machinery/light/small/cyan/directional/west,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection)
 "fn" = (
 /obj/structure/chair/halflife/metal/blue{
 	dir = 4
@@ -3263,6 +3266,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors)
+"mp" = (
+/obj/structure/halflife/fence/wire,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/tracks)
 "mq" = (
 /obj/machinery/light/small/cyan/directional/north,
 /turf/open/floor/plating/indoor/concrete,
@@ -3713,6 +3720,12 @@
 /obj/machinery/turnstile/brig/halflife/forcefield/medical,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
+"oi" = (
+/obj/machinery/power/halflife/streetlamphalt{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/plaza)
 "oj" = (
 /obj/effect/spawner/random/halflife/loot/ammo,
 /turf/open/floor/plating/ground/rockunder,
@@ -7654,10 +7667,11 @@
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/townhall/civilprotection/prison)
 "CM" = (
-/obj/machinery/atm,
-/obj/structure/halflife/pole/directional/south,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/plaza)
+/obj/machinery/computer/cryopod{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection)
 "CN" = (
 /obj/structure/halflife/pipes/horizontal/down/single,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -10016,6 +10030,9 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
+"Lu" = (
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/plaza)
 "Lw" = (
 /obj/structure/halflife/trash/garbage{
 	pixel_x = 2;
@@ -10126,6 +10143,10 @@
 /obj/effect/spawner/random/halflife/loot/ammo,
 /turf/open/floor/plating/indoor/metal,
 /area/halflife/indoors/sewer)
+"LR" = (
+/obj/machinery/cryopod,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection)
 "LS" = (
 /obj/machinery/conveyor_switch/oneway{
 	id = "garbage";
@@ -20578,10 +20599,10 @@ qQ
 qQ
 qQ
 qQ
-qQ
-qQ
-qQ
-qQ
+Jj
+Jj
+Jj
+Jj
 qQ
 qQ
 qQ
@@ -20715,10 +20736,10 @@ qQ
 qQ
 qQ
 qQ
-qQ
-qQ
-qQ
-qQ
+Jj
+LR
+fm
+Jj
 qQ
 qQ
 qQ
@@ -20852,10 +20873,10 @@ qQ
 qQ
 qQ
 qQ
-qQ
-qQ
-qQ
-qQ
+Jj
+CM
+lG
+Jj
 qQ
 qQ
 qQ
@@ -20989,10 +21010,10 @@ qQ
 qQ
 qQ
 qQ
-qQ
-qQ
-qQ
-qQ
+Jj
+LR
+lG
+Jj
 qQ
 qQ
 qQ
@@ -21128,7 +21149,7 @@ Xb
 Xb
 Xb
 Xb
-Xb
+Hl
 Xb
 Jj
 Jj
@@ -36367,8 +36388,8 @@ Ch
 Ch
 Of
 Ch
-Bt
-Bt
+Ch
+Ch
 Ch
 pd
 Ch
@@ -36504,9 +36525,9 @@ VA
 VA
 VA
 at
-Bt
-Bt
-Oa
+Lu
+Lu
+Ch
 sM
 sM
 BP
@@ -36641,8 +36662,8 @@ GM
 kG
 VA
 wa
-Bt
-Bt
+GM
+GM
 Ch
 IU
 it
@@ -36778,8 +36799,8 @@ QA
 BD
 ul
 Ch
-Bt
-Bt
+GM
+GM
 Ch
 IU
 it
@@ -36915,8 +36936,8 @@ QA
 GM
 ul
 Ch
-Bt
-Bt
+GM
+GM
 Ch
 sM
 sM
@@ -37052,8 +37073,8 @@ QA
 GM
 HP
 Ch
-Bt
-Bt
+GM
+GM
 Ch
 sM
 aW
@@ -37189,8 +37210,8 @@ YP
 Ch
 GM
 Ch
-Bt
-Bt
+GM
+GM
 Ch
 sM
 og
@@ -37326,8 +37347,8 @@ QA
 Ch
 Ch
 Ch
-Bt
-Bt
+oi
+GM
 oR
 sM
 QQ
@@ -37463,8 +37484,8 @@ QA
 Ch
 GM
 Ch
-Bt
-Bt
+GM
+GM
 Ch
 sM
 FD
@@ -37600,8 +37621,8 @@ Xr
 GM
 Nw
 Al
-Bt
-Bt
+GM
+GM
 Ch
 sM
 Fz
@@ -37737,8 +37758,8 @@ QA
 GM
 ul
 Ch
-Bt
-Bt
+GM
+GM
 Ch
 sM
 sM
@@ -37874,8 +37895,8 @@ QA
 GM
 ul
 Ch
-Bt
-Bt
+GM
+GM
 Ch
 IU
 it
@@ -38011,8 +38032,8 @@ GM
 kG
 VA
 wa
-Bt
-Bt
+GM
+GM
 Ch
 IU
 it
@@ -38147,10 +38168,10 @@ VA
 VA
 VA
 VA
-CM
-Bt
-Bt
-Oa
+yQ
+Lu
+Lu
+Ch
 sM
 sM
 Qp
@@ -38285,8 +38306,8 @@ Ch
 Ch
 zD
 Ch
-Bt
-Bt
+Ch
+Ch
 Ch
 zD
 Ch
@@ -43106,8 +43127,8 @@ Rz
 Rz
 Rz
 Rz
-Rz
-Rz
+NT
+mp
 Rz
 Rz
 Rz
@@ -43213,38 +43234,38 @@ iQ
 iQ
 iQ
 iQ
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
-Rz
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+mp
 Rz
 Rz
 Rz
@@ -43373,15 +43394,15 @@ vD
 vD
 vD
 vD
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
 iQ
 iQ
 iQ
@@ -44195,15 +44216,15 @@ vD
 vD
 vD
 vD
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
 iQ
 iQ
 iQ
@@ -44340,7 +44361,7 @@ Rz
 Rz
 Rz
 Rz
-Rz
+mp
 Rz
 Rz
 Rz
@@ -44470,14 +44491,14 @@ rP
 Rz
 Rz
 Rz
+rP
 Rz
 Rz
 Rz
+rP
 Rz
 Rz
-Rz
-Rz
-Rz
+mp
 Rz
 Rz
 Rz
@@ -44606,15 +44627,15 @@ vD
 vD
 vD
 vD
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
 iQ
 iQ
 iQ
@@ -45428,15 +45449,15 @@ vD
 vD
 vD
 vD
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
-iQ
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
+vD
 iQ
 iQ
 iQ
@@ -45573,7 +45594,7 @@ Rz
 Rz
 Rz
 Rz
-Rz
+mp
 Rz
 Rz
 Rz
@@ -45709,8 +45730,8 @@ Rz
 Rz
 Rz
 Rz
-Rz
-Rz
+bM
+mp
 Rz
 Rz
 Rz
