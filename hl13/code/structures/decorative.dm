@@ -949,3 +949,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 	anchored = TRUE
 	projectile_passchance = 100
 	pixel_y = 22
+
+/obj/structure/halflife/stationclock
+	name = "Clock Stand"
+	desc = "A green standing clock. Many say it's still right twice a day!"
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "stationclock"
+	density = TRUE
+	anchored = TRUE
+	projectile_passchance = 60

@@ -25,7 +25,7 @@
 	var/immerse_overlay_alpha = 180
 
 	/// Fishing element for this specific water tile
-	var/datum/fish_source/fishing_datum = /datum/fish_source/river
+	var/datum/fish_source/fishing_datum = /datum/fish_source/halflifepond //hl13 edit
 
 	/// Whether the immerse element has been added yet or not
 	var/immerse_added = FALSE
