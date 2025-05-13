@@ -52,10 +52,10 @@
 
 /turf/closed/wall/halflife/metal
 	name = "metal wall"
-	icon = 'hl13/icons/turf/walls/metal.dmi'
-	desc = "A strange metal wall with various pipes set into it."
-	icon_state = "urban_wall_regular-0"
-	base_icon_state = "urban_wall_regular"
+	icon = 'hl13/icons/turf/walls/combine.dmi'
+	desc = "A strange metal wall made of the alloy that the combine use."
+	icon_state = "wall-0"
+	base_icon_state = "wall"
 	slicing_duration = 150
 
 /turf/closed/wall/halflife/metal/strong
