@@ -67,4 +67,4 @@
 	name = "Concentrated Biogel Slurry"
 	description = "A concentrated amount of biogel with a few other compounds inside. Doesn't heal instantly like normal biogel, but doesn't need to be applied by touch, and will heal all damage types. This is a slurry mixed with filler compounds. Less effective, but cheaper."
 	metabolization_rate = 1.5 * REAGENTS_METABOLISM
-	healing = 1
+	healing = 1.2

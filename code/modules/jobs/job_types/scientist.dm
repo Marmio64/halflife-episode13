@@ -1,6 +1,6 @@
 /datum/job/scientist
 	title = JOB_SCIENTIST
-	description = "Operate your minature science station under the supervision of the labor lead, requesting assistants if necessary."
+	description = "Operate your miniature science station under the supervision of the labor lead, requesting assistants if necessary."
 	department_head = list(JOB_RESEARCH_DIRECTOR)
 	faction = FACTION_STATION
 	total_positions = 2
@@ -39,7 +39,7 @@
 	ration_bonus = 1
 
 /datum/outfit/job/scientist
-	name = "Scientist"
+	name = "Union Scientist"
 	jobtype = /datum/job/scientist
 	id = /obj/item/card/id/advanced/halflife/purple
 

@@ -69,6 +69,7 @@
 		/obj/item/storage/box/lethalshot,
 		/obj/item/halflife/combine_battery,
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen,
 	))
 	atom_storage.open_sound = 'sound/items/handling/holster_open.ogg'
 	atom_storage.open_sound_vary = TRUE
@@ -89,7 +90,7 @@
 	SSwardrobe.provide_type(/obj/item/melee/baton/security/loaded, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
-	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
 	update_appearance(UPDATE_ICON)
 
@@ -98,8 +99,8 @@
 	SSwardrobe.provide_type(/obj/item/melee/baton/security/loaded, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
-	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
-	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
 	update_appearance(UPDATE_ICON)
 
@@ -109,7 +110,7 @@
 	SSwardrobe.provide_type(/obj/item/melee/baton/security/loaded, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
-	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
 	update_appearance(UPDATE_ICON)
 
@@ -119,7 +120,7 @@
 	SSwardrobe.provide_type(/obj/item/melee/baton/security/loaded, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
-	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
 	update_appearance(UPDATE_ICON)
 
@@ -127,7 +128,7 @@
 	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
-	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
 	SSwardrobe.provide_type(/obj/item/grenade/stingbang/halflife, src)
 	SSwardrobe.provide_type(/obj/item/grenade/stingbang/halflife, src)
