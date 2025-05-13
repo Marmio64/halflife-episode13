@@ -382,7 +382,7 @@
 	icon_state = "platearmor"
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
-	slowdown = 0.5
+	slowdown = 0.4
 	repairable_by = /obj/item/stack/sheet/animalhide/goliath_hide
 
 	limb_integrity = 350

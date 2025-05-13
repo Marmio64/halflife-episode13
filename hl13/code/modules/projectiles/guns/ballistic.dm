@@ -1,6 +1,6 @@
 //to do: modularize colt python, m4a1, ak47, and service rifle bullets/ammo casings.
 
-//about 1.75 seconds TTK, also has good AP
+//about 2.25 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/ar2
 	name = "\improper OSIPR"
 	desc = "A pulse rifle often dubbed the 'AR2'. Boasts superior armor piercing capabilities, accuracy, and firepower. Usually biolocked to only be usable by authorised individuals."
@@ -11,13 +11,12 @@
 	vary_fire_sound = FALSE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/ar2
 	force = 12
-	recoil = 0.6
+	recoil = 0.5
 	fire_delay = 2
 	burst_size = 1
 	mag_display = TRUE
 	weapon_weight = WEAPON_MEDIUM
 	pin = /obj/item/firing_pin/implant/mindshield
-	slowdown = 0.25
 
 	load_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
 	load_empty_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
@@ -40,7 +39,7 @@
 	AddComponent(/datum/component/automatic_fire, 0.25 SECONDS)
 
 //old rifles that are exclusively loot. Similar to the AR2, but slightly less accurate, slightly less AP and slightly slower to fire.
-//about 2.1 seconds TTK, also has good AP
+//about 2.7 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/m4a1
 	name = "\improper M4A1 Rifle"
 	desc = "A old M4A1 pattern rifle. Not as good as the combine's rifles, but still powerful."
@@ -58,13 +57,12 @@
 	force = 12
 	fire_delay = 2
 	burst_size = 1
-	spread = 11
-	recoil = 0.8
+	spread = 10
+	recoil = 0.7
 	can_suppress = FALSE
 	mag_display = TRUE
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
-	slowdown = 0.25
 
 /obj/item/gun/ballistic/automatic/m4a1/no_mag
 	spawnwithmagazine = FALSE
@@ -74,7 +72,7 @@
 	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
 
 //sidegrade to the m4a1. Heavier duty: More spread, damage and recoil and less firing speed.
-//about 2 seconds TTK, and good AP
+//about 2.4 seconds TTK, and good AP
 /obj/item/gun/ballistic/automatic/ak47
 	name = "\improper AK-47 Rifle"
 	desc = "An old AK-47 without the stock. This thing is going to kick like a mule without that stock... but it should still hit just as hard."
@@ -98,17 +96,16 @@
 	mag_display = TRUE
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
-	slowdown = 0.25
 
 /obj/item/gun/ballistic/automatic/ak47/no_mag
 	spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/ak47/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.4 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.39 SECONDS)
 
 //cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30.
-//about 2.1 seconds TTK, also has good AP
+//about 2.7 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/servicerifle
 	name = "\improper Service Rifle"
 	desc = "An old surplus rifle from decades ago. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity."
@@ -126,8 +123,8 @@
 	force = 12
 	fire_delay = 2
 	burst_size = 1
-	spread = 11
-	recoil = 0.8
+	spread = 10
+	recoil = 0.7
 	can_suppress = FALSE
 	mag_display = TRUE
 	weapon_weight = WEAPON_MEDIUM
@@ -204,7 +201,7 @@
 	playsound(user, charge_sound, fire_sound_volume, vary_fire_sound)
 
 
-// about 3.2 seconds TTK (time to knock/crit)
+// about 3.6 seconds TTK (time to knock/crit)
 /obj/item/gun/ballistic/automatic/pistol/usp
 	name = "USP Match"
 	desc = "A small and light 9mm pistol which is often used as a metropolice standard carry."
@@ -252,7 +249,7 @@
 /obj/item/gun/ballistic/automatic/pistol/makeshift/no_mag
 	spawnwithmagazine = FALSE
 
-// about 3 seconds TTK
+// about 3.3 seconds TTK
 /obj/item/gun/ballistic/revolver/coltpython
 	name = "\improper colt python"
 	desc = "An old colt python revolver, accurate but has the kick of a mule. Uses .357 magnum ammo."
@@ -263,13 +260,13 @@
 	inhand_icon_state = "colt_python"
 	spread = 3 //very little spread
 	recoil = 2 //lots of recoil though
-	fire_delay = 10
+	fire_delay = 11
 	vary_fire_sound = FALSE
 
 /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger
 	fire_delay = 12 //geared towards sniping, not mag dumping
 
-// about 2 seconds TTK
+// about 2.5 seconds TTK
 /obj/item/gun/ballistic/revolver/snubnose
 	name = "\improper snubnose revolver"
 	desc = "A well maintained old world .38 snub nosed revolver, good for fitting in your pocket. Often carried as a weapon of last resort by high ranking combine represenatives entering dangerous areas."
@@ -279,10 +276,11 @@
 	icon_state = "snubnose"
 	spread = 11 //snubnosed
 	recoil = 0.5
+	fire_delay = 5
 	vary_fire_sound = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 
-// about 1.4 seconds TTK
+// about 1.8 seconds TTK
 /obj/item/gun/ballistic/shotgun/spas12
 	name = "SPAS 12"
 	desc = "A spectacularly lethal pump action shotgun, for close encounters."
@@ -314,7 +312,7 @@
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun/buckshot/halflife(src)
 
-// About 1.95 seconds TTK
+// About 2.4 seconds TTK
 /obj/item/gun/ballistic/automatic/mp7
 	name = "\improper MP7 SMG"
 	desc = "Despite its small size, this submachine gun packs a punch and has an extended mag to keep opponents suppressed."
@@ -340,7 +338,7 @@
 	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
 
 
-//about 1.8 seconds TTK
+//about 2.2 seconds TTK
 /obj/item/gun/ballistic/automatic/pulsesmg
 	name = "\improper pulse SMG"
 	desc = "A hybrid between the MP7 and AR2, the pulse smg has biolocking features and higher power rounds than the standard MP7, but is not yet as powerful as the AR2."

@@ -1,20 +1,20 @@
 /obj/projectile/bullet/pulse/ar2
 	name = "pulse round"
 	icon_state = "pulse"
-	damage = 20
+	damage = 15
 	wound_bonus = -10
 	armour_penetration = 20
 
 /obj/projectile/bullet/pulse/weak
 	name = "pulse round"
 	icon_state = "pulse"
-	damage = 15
+	damage = 12
 	wound_bonus = -10
 
 /obj/projectile/bullet/pulse/heavy
 	name = "heavy pulse round"
 	icon_state = "pulse"
-	damage = 60
+	damage = 55
 	wound_bonus = -10
 	armour_penetration = 25
 	speed = 2.5

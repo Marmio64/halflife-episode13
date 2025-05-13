@@ -103,6 +103,6 @@
 /obj/item/spear/halflife/deathmatch
 	force = 25
 	force_unwielded = 25
-	force_wielded = 40
+	force_wielded = 35
 	wdefense = 5
-	armour_penetration = 15
+	armour_penetration = 20

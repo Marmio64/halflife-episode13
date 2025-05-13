@@ -231,12 +231,3 @@
 	desc = "doink!"
 	damage_type = BRUTE
 	icon_state = "paperball"
-
-// 5.56mm (m4a1)
-
-/obj/projectile/bullet/a556
-	name = "5.56mm bullet"
-	damage = 20
-	wound_bonus = -10
-	armour_penetration = 15
-	icon_state = "bullet_large"

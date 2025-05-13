@@ -98,7 +98,7 @@
 
 	//hl13 edit start. Far enough away gunfire has a chance to graze/nearmiss you
 	if((proj.accurate_range - (proj.accuracy_falloff * get_dist(proj.last_impact_turf, proj.starting))) < 65)
-		if(prob(20))
+		if(prob(15))
 			visible_message(span_danger("[src] is narrowly missed by \a [proj]!"), \
 					span_userdanger("You're narrowly missed by \a [proj]!"), null, COMBAT_MESSAGE_RANGE)
 			SEND_SOUND(src, sound('hl13/sound/effects/miss1.ogg', volume = 40))
