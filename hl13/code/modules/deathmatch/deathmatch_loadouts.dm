@@ -20,14 +20,14 @@
 	back = /obj/item/storage/backpack/halflife/satchel
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m4a1 = 1,
+		/obj/item/ammo_box/magazine/m4a1 = 2,
 	)
 
 //Slow and vulnerable to rush downs, but can blow people out of cover with grenades. Compared to the marine, worse primary and less ammo in exchange for 4 grenades. Extreme version of the conscript.
 /datum/outfit/deathmatch_loadout/rebel/bomber
 	name = "Deathmatch: Rebel Bomber"
 	display_name = "Rebel Bomber"
-	desc = "Equipped with an excessive amount of grenades, the bomber is great against entrenched positions, but is vulnerable to being rushed down and don't have much ammo."
+	desc = "Equipped with an excessive amount of grenades, the bomber is great against entrenched positions, but is vulnerable to being rushed down and doesn't have much ammo."
 
 	head = /obj/item/clothing/head/helmet/halflife/military
 	uniform = /obj/item/clothing/under/citizen/rebel
@@ -53,7 +53,7 @@
 	gloves = /obj/item/clothing/gloves/fingerless
 	suit = /obj/item/clothing/suit/armor/civilprotection
 	suit_store = /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
-	belt = /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger
+	belt = /obj/item/gun/ballistic/revolver/coltpython
 	r_pocket = /obj/item/grenade/smokebomb
 
 	glasses = /obj/item/clothing/glasses/night
@@ -80,7 +80,7 @@
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
 	uniform = /obj/item/clothing/under/combine/overwatch
-	suit = /obj/item/clothing/suit/armor/overwatch/deathmatch
+	suit = /obj/item/clothing/suit/armor/overwatch
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
 	belt = /obj/item/storage/belt/civilprotection/overwatch/mp7

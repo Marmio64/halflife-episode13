@@ -259,7 +259,7 @@
 ///Shown when the game has started
 /atom/movable/screen/lobby/button/join
 	name = "Join Game"
-	screen_loc = "BOTTOM:175,CENTER:-279"
+	screen_loc = "BOTTOM:175,CENTER:-275"
 	icon = 'icons/hud/lobby/join.dmi'
 	icon_state = "" //Default to not visible
 	base_icon_state = "join_game"

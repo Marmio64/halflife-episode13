@@ -10,6 +10,7 @@
 	icon_state = "pulse"
 	damage = 12
 	wound_bonus = -10
+	armour_penetration = 20
 
 /obj/projectile/bullet/pulse/heavy
 	name = "heavy pulse round"

@@ -16,6 +16,7 @@
 		/datum/outfit/deathmatch_loadout/rioter,
 		/datum/outfit/deathmatch_loadout/feral_refugee,
 		/datum/outfit/deathmatch_loadout/eldervortigaunt,
+		/datum/outfit/deathmatch_loadout/polish_veteran,
 		/datum/outfit/deathmatch_loadout/polish_corporal,
 		/datum/outfit/deathmatch_loadout/polish_medic,
 	)
@@ -65,6 +66,7 @@
 		/datum/outfit/deathmatch_loadout/rioter,
 		/datum/outfit/deathmatch_loadout/feral_refugee,
 		/datum/outfit/deathmatch_loadout/eldervortigaunt,
+		/datum/outfit/deathmatch_loadout/polish_veteran,
 		/datum/outfit/deathmatch_loadout/polish_corporal,
 		/datum/outfit/deathmatch_loadout/polish_medic,
 	)

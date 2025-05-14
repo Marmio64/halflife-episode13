@@ -249,7 +249,7 @@
 /obj/item/gun/ballistic/automatic/pistol/makeshift/no_mag
 	spawnwithmagazine = FALSE
 
-// about 3.3 seconds TTK
+// about 3 seconds TTK assuming you hit your first shot (so no cooldown)
 /obj/item/gun/ballistic/revolver/coltpython
 	name = "\improper colt python"
 	desc = "An old colt python revolver, accurate but has the kick of a mule. Uses .357 magnum ammo."
@@ -260,7 +260,7 @@
 	inhand_icon_state = "colt_python"
 	spread = 3 //very little spread
 	recoil = 2 //lots of recoil though
-	fire_delay = 11
+	fire_delay = 10
 	vary_fire_sound = FALSE
 
 /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger
@@ -280,7 +280,7 @@
 	vary_fire_sound = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 
-// about 1.8 seconds TTK
+// about 1.8 seconds TTK if you hit your first shot (so no cooldown on it)
 /obj/item/gun/ballistic/shotgun/spas12
 	name = "SPAS 12"
 	desc = "A spectacularly lethal pump action shotgun, for close encounters."
@@ -294,7 +294,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/com/spas12
 	force = 12
 	recoil = 1.5
-	fire_delay = 7
+	fire_delay = 9
 	vary_fire_sound = FALSE
 
 /obj/item/ammo_box/magazine/internal/shot/com/spas12
@@ -312,7 +312,7 @@
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun/buckshot/halflife(src)
 
-// About 2.4 seconds TTK
+// About 2.7 seconds TTK
 /obj/item/gun/ballistic/automatic/mp7
 	name = "\improper MP7 SMG"
 	desc = "Despite its small size, this submachine gun packs a punch and has an extended mag to keep opponents suppressed."
@@ -338,7 +338,7 @@
 	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
 
 
-//about 2.2 seconds TTK
+//about 2.4 seconds TTK with AP. While it has a bit higher DPS than the m4a1/service rifle, it is slightly less accurate at range and has to reload more often
 /obj/item/gun/ballistic/automatic/pulsesmg
 	name = "\improper pulse SMG"
 	desc = "A hybrid between the MP7 and AR2, the pulse smg has biolocking features and higher power rounds than the standard MP7, but is not yet as powerful as the AR2."

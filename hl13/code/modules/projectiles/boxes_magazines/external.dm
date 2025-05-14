@@ -66,7 +66,7 @@
 	base_icon_state = "smg9mm"
 	ammo_type = /obj/item/ammo_casing/c46x30mm/mp7
 	caliber = CALIBER_46X30MM
-	max_ammo = 40
+	max_ammo = 45
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	multiple_sprite_use_base = TRUE

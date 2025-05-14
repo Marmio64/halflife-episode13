@@ -127,7 +127,7 @@
 
 /obj/projectile/bullet/a357
 	name = ".357 bullet"
-	damage = 40
+	damage = 35 // hl13 edit
 	armour_penetration = 15
 	wound_bonus = -30
 

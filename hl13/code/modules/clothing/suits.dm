@@ -81,7 +81,7 @@
 	icon_state = "overwatch_red"
 
 /obj/item/clothing/suit/armor/overwatch/red/deathmatch
-	slowdown = 0.5
+	slowdown = 0.4
 
 /obj/item/clothing/suit/armor/overwatch/elite
 	name = "overwatch elite chestpiece"
