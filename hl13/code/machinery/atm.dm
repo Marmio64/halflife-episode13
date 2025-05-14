@@ -37,6 +37,7 @@
 			CID.registered_account.account_pin = passchoice
 			to_chat(user, "<span class='warning'>Your new account password is [passchoice]!</span>")
 			return
+		to_chat(user, "<span class='notice'>If you don't know your password, try checking your Memories in the IC tab in the top right.</span>")
 		var/enteredpass = input(user, "Please enter your password:", "Password Entry") as null|text
 		if(!enteredpass)
 			invalid_number()

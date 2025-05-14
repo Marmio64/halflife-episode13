@@ -19,8 +19,10 @@
 	atom/deuteragonist,
 	atom/antagonist,
 	remembered_id,
+	remembered_pinnum,
 )
 	src.remembered_id = remembered_id
+	src.remembered_pinnum = remembered_pinnum
 	return ..()
 
 /datum/memory/key/account/get_names()
@@ -28,8 +30,7 @@
 
 /datum/memory/key/account/get_starts()
 	return list(
-		"[protagonist_name] flexing their last brain cells, proudly showing their lucky numbers [remembered_id].",
-		"[remembered_id]. The numbers mason, what do they mean!?",
+		"[remembered_id] is your account ID, and your pin is [remembered_pinnum]",
 	)
 
 /// The code to the captain's spare ID, ONLY give to the real captain.
