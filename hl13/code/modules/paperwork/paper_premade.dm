@@ -4,4 +4,4 @@
 
 /obj/item/paper/fluff/jobs/factory/construction
 	name = "paper- 'Factory Goods Construction'"
-	default_raw_text = "To the next foreman for the upcoming transfer cycle: Remember, the box dispensers refill every afternoon. You'll be able to grab boxes and look at them to know what the combine want us making. Just fill em up, and get them sent off on the cargo dropship to keep your job."
+	default_raw_text = "To the next foreman for the upcoming transfer cycle: Remember, the box dispensers refill every afternoon. You'll be able to grab boxes and look at them to know what the combine want us making. Just fill em up, and get them sent off on the cargo train to keep your job."

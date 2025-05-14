@@ -9,7 +9,7 @@
 	/// Supply points earned for taking the deal.
 	var/bonus_points = CARGO_CRATE_VALUE * 40
 	/// Response for taking the deal.
-	var/thanks_msg = "The cargo dropship should return in five minutes. Your district cargo budget has been increased."
+	var/thanks_msg = "The cargo train should return in five minutes. Your district cargo budget has been increased."
 	/// Small description of the loan for easier log reading.
 	var/logging_desc
 

@@ -5,7 +5,7 @@
 
 /obj/item/factory_construction/container
 	name = "factory goods container"
-	desc = "A container which has a designated list of items it should contain. Once it has gotten these items, it can be sealed and sold on the cargo dropship."
+	desc = "A container which has a designated list of items it should contain. Once it has gotten these items, it can be sealed and sold on the cargo train."
 	icon_state = "container_empty"
 
 	var/obj/required_item_1 = null

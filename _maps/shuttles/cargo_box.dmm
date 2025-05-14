@@ -3,129 +3,129 @@
 /turf/closed/wall/halflife/metal,
 /area/shuttle/supply)
 "e" = (
-/turf/open/floor/plating/indoor/metal/combine,
-/area/shuttle/supply)
-"g" = (
-/obj/machinery/door/unpowered/halflife/metal{
-	dir = 8
-	},
-/obj/structure/fans/tiny/invisible,
-/turf/open/floor/plating/indoor/metal/combine,
+/turf/open/floor/plating/indoor/metal/smooth,
 /area/shuttle/supply)
 "i" = (
-/obj/docking_port/mobile/supply,
-/obj/machinery/door/unpowered/halflife/metal{
-	dir = 4
-	},
-/obj/structure/fans/tiny/invisible,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/shuttle/supply)
-"j" = (
-/obj/machinery/light/directional/north,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/shuttle/supply)
-"p" = (
-/obj/structure/window/reinforced/spawner/directional/north,
-/obj/machinery/power/shuttle_engine/heater,
-/turf/open/floor/plating/airless,
+/obj/machinery/combine_walllight/directional/south,
+/turf/open/floor/plating/indoor/metal/smooth,
 /area/shuttle/supply)
 "s" = (
 /turf/template_noop,
 /area/template_noop)
 "t" = (
-/obj/machinery/power/shuttle_engine/propulsion/burst/left,
-/turf/open/floor/plating/airless,
+/obj/docking_port/mobile/supply{
+	train = 1
+	},
+/turf/closed/wall/halflife/metal,
 /area/shuttle/supply)
 "u" = (
-/obj/machinery/power/shuttle_engine/propulsion,
-/turf/open/floor/plating/airless,
-/area/shuttle/supply)
-"v" = (
-/obj/machinery/power/shuttle_engine/propulsion/burst/right,
-/turf/open/floor/plating/airless,
-/area/shuttle/supply)
-"I" = (
-/obj/machinery/door/unpowered/halflife/metal{
-	dir = 4
-	},
+/obj/machinery/door/unpowered/halflife/metal,
 /obj/structure/fans/tiny/invisible,
-/turf/open/floor/plating/indoor/metal/combine,
+/turf/open/floor/plating/indoor/metal/smooth,
 /area/shuttle/supply)
 
 (1,1,1) = {"
 b
-g
-b
-g
 b
 b
 b
 b
-s
 "}
 (2,1,1) = {"
 b
 e
 e
 e
-e
-e
 b
-b
-t
 "}
 (3,1,1) = {"
-b
+u
 e
 e
 e
-e
-e
-e
-p
 u
 "}
 (4,1,1) = {"
 b
-j
+i
 e
 e
-e
-e
-e
-p
-u
+b
 "}
 (5,1,1) = {"
 b
 e
 e
 e
-e
-e
-e
-p
-u
+b
 "}
 (6,1,1) = {"
 b
 e
 e
 e
-e
-e
 b
-b
-v
 "}
 (7,1,1) = {"
 b
-I
+e
+e
+e
+b
+"}
+(8,1,1) = {"
+b
+e
+e
+e
+b
+"}
+(9,1,1) = {"
+b
+e
+e
+e
+b
+"}
+(10,1,1) = {"
+b
+e
+e
+e
+b
+"}
+(11,1,1) = {"
 b
 i
+e
+e
+b
+"}
+(12,1,1) = {"
+u
+e
+e
+e
+u
+"}
+(13,1,1) = {"
+b
+e
+e
+e
+b
+"}
+(14,1,1) = {"
 b
 b
+e
 b
+b
+"}
+(15,1,1) = {"
+s
+b
+t
 b
 s
 "}

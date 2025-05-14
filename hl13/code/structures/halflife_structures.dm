@@ -696,10 +696,10 @@
 
 /obj/structure/halflife/fence/wire/barb
 	name = "barbed wire fence"
-	desc = "A menacing wire fence, topped with rusted and deadly barbed wire."
+	desc = "A menacing wire fence, topped with rusted and deadly barbed wire. It looks very well reinforced, you'll have a lot of trouble breaking it."
 	icon_state = "barbfence"
 	max_integrity = 800 //no difference yet except its stronger
-	damage_deflection = 20
+	damage_deflection = 21
 	fencepasschance = 70
 	basetype = /obj/structure/halflife/fence/wire/barb
 

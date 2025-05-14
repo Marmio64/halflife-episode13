@@ -185,7 +185,7 @@
 ///Prefs menu
 /atom/movable/screen/lobby/button/character_setup
 	name = "View Character Setup"
-	screen_loc = "TOP:-70,CENTER:-54"
+	screen_loc = "BOTTOM:125,CENTER:-275"
 	icon = 'icons/hud/lobby/character_setup.dmi'
 	icon_state = "character_setup"
 	base_icon_state = "character_setup"
@@ -203,7 +203,7 @@
 ///Button that appears before the game has started
 /atom/movable/screen/lobby/button/ready
 	name = "Toggle Readiness"
-	screen_loc = "TOP:-8,CENTER:-65"
+	screen_loc = "BOTTOM:175,CENTER:-275"
 	icon = 'icons/hud/lobby/ready.dmi'
 	icon_state = "not_ready"
 	base_icon_state = "not_ready"
@@ -251,7 +251,7 @@
 ///Shown when the game has started
 /atom/movable/screen/lobby/button/join
 	name = "Join Game"
-	screen_loc = "TOP:-13,CENTER:-58"
+	screen_loc = "BOTTOM:175,CENTER:-279"
 	icon = 'icons/hud/lobby/join.dmi'
 	icon_state = "" //Default to not visible
 	base_icon_state = "join_game"
@@ -322,7 +322,7 @@
 
 /atom/movable/screen/lobby/button/observe
 	name = "Observe"
-	screen_loc = "TOP:-40,CENTER:-54"
+	screen_loc = "BOTTOM:150,CENTER:-275"
 	icon = 'icons/hud/lobby/observe.dmi'
 	icon_state = "observe_disabled"
 	base_icon_state = "observe"
@@ -355,9 +355,10 @@
 
 /atom/movable/screen/lobby/button/bottom/settings
 	name = "View Game Preferences"
+	icon = 'icons/hud/lobby/menus.dmi'
 	icon_state = "settings"
 	base_icon_state = "settings"
-	screen_loc = "TOP:-122,CENTER:+29"
+	screen_loc = "BOTTOM:75,CENTER:-275"
 
 /atom/movable/screen/lobby/button/bottom/settings/Click(location, control, params)
 	. = ..()
@@ -371,19 +372,21 @@
 
 /atom/movable/screen/lobby/button/bottom/changelog_button
 	name = "View Changelog"
+	icon = 'icons/hud/lobby/menus.dmi'
 	icon_state = "changelog"
 	base_icon_state = "changelog"
-	screen_loc ="TOP:-122,CENTER:+57"
+	screen_loc = "BOTTOM:50,CENTER:-275"
 
 /atom/movable/screen/lobby/button/bottom/changelog_button/Click(location, control, params)
 	. = ..()
 	usr.client?.changelog()
 
 /atom/movable/screen/lobby/button/bottom/crew_manifest
-	name = "View Crew Manifest"
-	icon_state = "crew_manifest"
-	base_icon_state = "crew_manifest"
-	screen_loc = "TOP:-122,CENTER:+2"
+	name = "View Citizen Manifest"
+	icon = 'icons/hud/lobby/menus.dmi'
+	icon_state = "citizens"
+	base_icon_state = "citizens"
+	screen_loc = "BOTTOM:100,CENTER:-275"
 
 /atom/movable/screen/lobby/button/bottom/crew_manifest/Click(location, control, params)
 	. = ..()
@@ -392,6 +395,7 @@
 	var/mob/dead/new_player/new_player = hud.mymob
 	new_player.ViewManifest()
 
+/*
 /atom/movable/screen/lobby/button/bottom/poll
 	name = "View Available Polls"
 	icon_state = "poll"
@@ -455,6 +459,8 @@
 		return
 	var/mob/dead/new_player/new_player = hud.mymob
 	new_player.handle_player_polling()
+
+*/
 
 /// A generic "sign up" button used by station traits
 /atom/movable/screen/lobby/button/sign_up

@@ -51,7 +51,7 @@
 
 
 /datum/round_event/shuttle_loan/proc/loan_shuttle()
-	priority_announce(situation.thanks_msg, "Cargo dropship commandeered by Overwatch.") //hl13 edit
+	priority_announce(situation.thanks_msg, "Cargo train commandeered by Overwatch.") //hl13 edit
 
 	dispatched = TRUE
 	var/datum/bank_account/dep_account = SSeconomy.get_dep_account(ACCOUNT_CAR)

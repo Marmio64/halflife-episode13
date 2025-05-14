@@ -60,7 +60,7 @@
 /area/halflife/outdoors/alley/dropshippad
 	name = "\improper Labor Union Drop Ship Pad"
 
-	first_time_text = "Dropship Pad"
+	first_time_text = "Supply Train Depot"
 
 /area/halflife/outdoors/alley/slums
 	name = "\improper Slums Alleys"
@@ -208,9 +208,9 @@
 	first_time_text = "The Labor Union"
 
 /area/halflife/indoors/laborunion/dropship
-	name = "\improper Labor Union Dropship Pad"
+	name = "\improper Labor Union Train Depot"
 
-	first_time_text = "The Labor Union Dropship Pad"
+	first_time_text = "The Labor Union Train Depot"
 
 ////// FACTORY START
 

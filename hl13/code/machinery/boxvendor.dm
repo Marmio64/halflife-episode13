@@ -1,6 +1,6 @@
 /obj/machinery/box_vendor
 	name = "\improper Factory Container Vendor"
-	desc = "A machine which deposits containers for factory workers to fill, seal, and sell to the cargo dropship every afternoon."
+	desc = "A machine which deposits containers for factory workers to fill, seal, and sell to the cargo train every afternoon."
 	icon_state = "box_dispenser"
 	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	resistance_flags = FIRE_PROOF

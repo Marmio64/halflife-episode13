@@ -1,6 +1,6 @@
 /obj/machinery/computer/cargo
 	name = "supply console"
-	desc = "Used to order supplies, approve requests, and control the supply dropship."
+	desc = "Used to order supplies, approve requests, and control the supply train."
 	icon_state = "sr_console" //hl13 edit
 	icon_screen = null //hl13 edit
 	icon_keyboard = null //hl13 edit
@@ -15,10 +15,10 @@
 	var/can_approve_requests = TRUE
 	var/contraband = FALSE
 	var/self_paid = FALSE
-	var/safety_warning = "For safety and ethical reasons, the automated supply dropship cannot transport live organisms, \
+	var/safety_warning = "For safety and ethical reasons, the automated supply train cannot transport live organisms, \
 		human remains, classified nuclear weaponry, mail, undelivered departmental order crates, syndicate bombs, \
 		homing beacons, unstable eigenstates, fax machines, or machinery housing any form of artificial intelligence."
-	var/blockade_warning = "Bluespace instability detected. Dropship movement impossible."
+	var/blockade_warning = "Train track obstruction detected. Train movement impossible."
 	/// radio used by the console to send messages on supply channel
 	var/obj/item/radio/headset/radio
 	/// var that tracks message cooldown
