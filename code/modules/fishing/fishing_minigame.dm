@@ -54,7 +54,7 @@ GLOBAL_LIST_EMPTY(fishing_challenges_by_user)
 	/// Timer for the next phase
 	var/next_phase_timer
 	/// The lower and upper bounds of the waiting phase timer
-	var/list/wait_time_range = list(3 SECONDS, 25 SECONDS)
+	var/list/wait_time_range = list(15 SECONDS, 40 SECONDS) //hl13 edit, so fishing is less OP in food gathering
 	/// The last time we clicked during the baiting phase
 	var/last_baiting_click
 	/// Fishing mob

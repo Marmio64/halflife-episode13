@@ -319,6 +319,10 @@
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
+"cP" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "cT" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "city_surface_left";
@@ -549,7 +553,7 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/bunker)
 "eQ" = (
-/obj/structure/railing/halflife/wood/single,
+/obj/effect/landmark/outlands_latejoin,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
 "eR" = (
@@ -1900,10 +1904,6 @@
 /obj/structure/halflife/trash/papers/one,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors)
-"sg" = (
-/obj/machinery/door/unpowered/halflife/metal,
-/turf/open/floor/plating/ground/grass,
-/area/halflife/indoors)
 "sh" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "outlands_sewer_south"
@@ -2426,10 +2426,6 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/laborcamp)
-"wS" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors)
 "wT" = (
 /obj/structure/closet/halflife,
 /obj/effect/spawner/random/halflife/loot/ammo,
@@ -2958,6 +2954,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors/sewer/tunnel)
+"Ck" = (
+/obj/effect/spawner/random/halflife/loot/crafting_bench,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "Co" = (
 /mob/living/basic/trader/halflife/refugee,
 /turf/open/floor/plating/ground/dirt,
@@ -3902,6 +3902,10 @@
 	},
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors)
+"LJ" = (
+/obj/effect/spawner/random/halflife/loot/ammo,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/sewer)
 "LL" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/ground/dirt,
@@ -4343,9 +4347,9 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
 "Ql" = (
-/obj/effect/landmark/outlands_latejoin,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/forest)
+/obj/machinery/door/unpowered/halflife/metal,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/indoors)
 "Qp" = (
 /obj/item/hatchet/wooden,
 /turf/open/floor/plating/ground/grass,
@@ -4390,9 +4394,9 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/forest)
 "QF" = (
-/obj/effect/spawner/random/halflife/loot/crafting_bench,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors)
+/obj/structure/railing/halflife/wood/single,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/forest)
 "QI" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer/outlandscave)
@@ -27039,7 +27043,7 @@ GT
 UI
 Mf
 LS
-Rx
+LJ
 UI
 GT
 GT
@@ -44645,7 +44649,7 @@ iQ
 iQ
 fv
 iQ
-iQ
+ja
 iQ
 iQ
 iQ
@@ -49191,7 +49195,7 @@ fv
 wG
 fv
 fv
-iQ
+Tm
 iQ
 iQ
 iQ
@@ -62092,7 +62096,7 @@ pa
 OO
 OO
 OO
-eQ
+QF
 OO
 OO
 OO
@@ -68645,7 +68649,7 @@ Ko
 vH
 yX
 Ko
-wS
+cP
 yX
 Ko
 GX
@@ -69035,7 +69039,7 @@ kn
 kn
 OO
 fX
-sg
+Ql
 yX
 yX
 yX
@@ -69430,10 +69434,10 @@ kn
 OO
 GX
 Ko
-QF
+Ck
 yX
 Ko
-wS
+cP
 yX
 Ko
 It
@@ -70802,11 +70806,11 @@ GX
 XA
 XA
 XA
-Ql
+eQ
 kn
 fo
 kn
-Ql
+eQ
 XA
 UI
 WG
