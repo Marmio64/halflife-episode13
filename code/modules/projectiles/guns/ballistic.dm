@@ -583,8 +583,13 @@
 
 /obj/item/gun/ballistic/examine(mob/user)
 	. = ..()
-	var/count_chambered = !(bolt_type == BOLT_TYPE_NO_BOLT || bolt_type == BOLT_TYPE_OPEN)
-	. += "It has [get_ammo(count_chambered)] round\s remaining."
+
+	if(magazine && internal_magazine)
+		var/count_chambered = !(bolt_type == BOLT_TYPE_NO_BOLT || bolt_type == BOLT_TYPE_OPEN)
+		. += "It has [get_ammo(count_chambered)] round\s remaining."
+
+	else if(!internal_magazine)
+		. += "You have no idea how many rounds are in the gun, you'll have to check the magazine."
 
 	if (!chambered && !hidden_chambered)
 		. += "It does not seem to have a round chambered."

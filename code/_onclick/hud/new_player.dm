@@ -185,7 +185,7 @@
 ///Prefs menu
 /atom/movable/screen/lobby/button/character_setup
 	name = "View Character Setup"
-	screen_loc = "BOTTOM:125,CENTER:-275"
+	screen_loc = "BOTTOM:125,CENTER:-245"
 	icon = 'icons/hud/lobby/character_setup.dmi'
 	icon_state = "character_setup"
 	base_icon_state = "character_setup"
@@ -199,6 +199,14 @@
 	preferences.current_window = PREFERENCE_TAB_CHARACTER_PREFERENCES
 	preferences.update_static_data(usr)
 	preferences.ui_interact(usr)
+
+///just title text
+/atom/movable/screen/lobby/title
+	name = "Half Life: Episode 13"
+	screen_loc = "BOTTOM:200,CENTER:-275"
+	icon = 'icons/hud/lobby/title.dmi'
+	icon_state = "title"
+	base_icon_state = "title"
 
 ///Button that appears before the game has started
 /atom/movable/screen/lobby/button/ready
