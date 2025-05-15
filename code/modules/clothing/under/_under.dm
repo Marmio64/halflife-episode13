@@ -15,6 +15,8 @@
 	limb_integrity = 30
 	interaction_flags_click = ALLOW_RESTING
 
+	strip_delay = 50 //hl13 edit, increased
+
 	/// Has this undersuit been freshly laundered and, as such, imparts a mood bonus for wearing
 	var/freshly_laundered = FALSE
 

@@ -54,15 +54,16 @@
 /obj/machinery/destabilizer/super
 	name = "super destabilizer"
 	desc = "A massive abomination of tampered combine machinery that is emanating such a powerful signal, it even hurts your head to be around it. If it isn't broken quick, it might shut down all the combine systems in the entire district, and maybe even the whole city!"
-	icon_state = "superdestabilizer"
+	icon_state = "superdestabilizer_off"
 	destabilization_chance = 100
 	show_timer = TRUE
 	processing_flags = START_PROCESSING_MANUALLY
 	anchored = FALSE
+	density = TRUE
 	var/on = FALSE
 	var/mid_alert = FALSE
 
-/obj/machinery/destabilizer/super/process()
+/obj/machinery/destabilizer/super/process(seconds_per_tick)
 	if(prob(destabilization_chance) && (cumulative_destabilization < detonation_limit))
 		SSsociostability.modifystability(destabilization_rate)
 		cumulative_destabilization++
@@ -72,7 +73,7 @@
 		return PROCESS_KILL
 	else if((detonation_limit < cumulative_destabilization/2) && !mid_alert)
 		mid_alert = TRUE
-		minor_announce("Alert, Alert. Singularity approaching. Overwatch system damage detected. Destabilization halfway complete.", "ERROR ER0RR $R0RRO$!R41.%%!!(%$^^__+ @#F0E4", TRUE)
+		priority_announce("Alert, Alert. Singularity approaching. Overwatch system damage detected. Destabilization halfway complete.", "Overwatch Alert")
 
 /obj/machinery/destabilizer/super/attack_hand(mob/living/carbon/human/H, modifiers)
 	. = ..()
@@ -94,6 +95,29 @@
 /obj/machinery/destabilizer/super/proc/turn_on(mapload)
 	on = TRUE
 	anchored = TRUE
+	icon_state = "superdestabilizer"
 	START_PROCESSING(SSfastprocess, src)
 	priority_announce("Alert, Alert. Priority sociocide-class disruptor detected on systems. All units converge upon Nexus immediately to contain, Code-3. A GPS signal has been assigned to the threat.", "Overwatch Priority Alert")
 	SSsecurity_level.set_level(SEC_LEVEL_DELTA)
+
+// super destabilizer beacon
+/obj/item/super_destabilizer_beacon
+	name = "super destabilizer beacon"
+	icon = 'icons/obj/devices/tracker.dmi'
+	icon_state = "beacon"
+	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	desc = "A beacon that will broadcast coordinates to a far away teleporter, to send in a super destabilizer. The coordinates can only be broadcasted if district sociostability is already low enough. In addition, the destabilizer can only be activated in the nexus."
+	w_class = WEIGHT_CLASS_SMALL
+	var/droptype = /obj/machinery/destabilizer/super
+
+
+/obj/item/super_destabilizer_beacon/attack_self(mob/user)
+	if(user)
+		if(SSsociostability.sociostability <= SOCIOSTABILITY_POOR)
+			to_chat(user, span_notice("Locked In."))
+			new droptype( user.loc )
+			playsound(src, 'sound/effects/pop.ogg', 100, TRUE, TRUE)
+			qdel(src)
+		to_chat(user, span_notice("District sociostability is not yet low enough to call this in. Try building some normal destabilizers, freeing vortigaunts, killing metropolice, destroying the central plaza breen cast, disrupting factory work, tearing down posters, and more."))
+	return

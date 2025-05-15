@@ -18,6 +18,8 @@
 	modifies_speech = TRUE
 	voice_change = TRUE
 
+	strip_delay = 50
+
 	use_radio_beeps_tts = TRUE
 
 	unique_death = 'hl13/sound/voice/cpdeath/die1.ogg'
