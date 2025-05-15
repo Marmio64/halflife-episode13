@@ -1044,10 +1044,11 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		if(target.checkmiss(owner))
 			return
 		if(target.checkdefense(user = owner))
-			to_chat(owner, span_warning("You're thrown off balance from being parried!"))
-			owner.Stun(1.25 SECONDS)
+			to_chat(owner, span_warning("You fail to land the shove, and are thrown off balanced!"))
+			owner.Stun(1 SECONDS)
 			return
 		disarm(owner, target, attacker_style)
+		owner.changeNext_move(CLICK_CD_DISARM) //hl13 edit, higher cooldown for shoving
 		return // dont attack after
 	if(owner.combat_mode)
 		if(target.checkmiss(owner))

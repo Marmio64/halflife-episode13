@@ -107,6 +107,7 @@ DEFINE_BITFIELD(status_flags, list(
 #define CLICK_CD_RESIST 20
 #define CLICK_CD_GRABBING 10
 #define CLICK_CD_LOOK_UP 5
+#define CLICK_CD_DISARM 12 //hl13 edit
 
 //Cuff resist speeds
 #define FAST_CUFFBREAK 1
