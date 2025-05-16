@@ -143,6 +143,7 @@ ADMIN_VERB_ONLY_CONTEXT_MENU(show_player_panel, R_ADMIN, "Show Player Panel", mo
 			body += "<A href='?_src_=holder;[HrefToken()];tdomeadmin=[REF(player)]'>Thunderdome Admin</A> | "
 			body += "<A href='?_src_=holder;[HrefToken()];tdomeobserve=[REF(player)]'>Thunderdome Observer</A> | "
 		body += "<A href='?_src_=holder;[HrefToken()];admincommend=[REF(player)]'>Commend Behavior</A> | "
+		body += "<A href='?_src_=holder;[HrefToken()];adminrankpoints=[REF(player)]'>Increase CPO Rank Points</A> | " //hl13 edit
 
 	body += "<br>"
 	body += "</body></html>"

@@ -55,23 +55,21 @@
 	. = ..()
 	user.faction += "combine"
 
-	var/exp_rank = "0"
+	var/currentrankpoints = 0
 
-	if(user?.client?.prefs)
-		switch(user.client.prefs.exp[JOB_WARDEN])
-			if(750 to INFINITY)
-				exp_rank = "100"
-			if(500 to 750)
-				exp_rank = "75"
-			if(300 to 500)
-				exp_rank = "50"
-			if(50 to 300)
-				exp_rank = "25"
+	if(user.client)
+		currentrankpoints = user.client.prefs.read_preference(/datum/preference/numeric/rankpoints)
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id
-		ID.registered_name = "OV:13.[exp_rank]-[rand(10,90)]"
+		ID.registered_name = "OV:13.[user.client?.prefs.read_preference(/datum/preference/numeric/rankpoints)]-[rand(10,90)]"
 		ID.update_label()
+
+		if(49 < currentrankpoints)
+			ID.registered_account.requisition_points += 1
+
+		if(94 < currentrankpoints)
+			ID.registered_account.requisition_points += 1
 
 /datum/outfit/job/warden
 	name = "Overseer"

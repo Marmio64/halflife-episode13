@@ -235,23 +235,21 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	. = ..()
 	user.faction += "combine"
 
-	var/exp_rank = "0"
+	var/currentrankpoints = 0
 
-	if(user?.client?.prefs)
-		switch(user.client.prefs.exp[JOB_SECURITY_OFFICER])
-			if(750 to INFINITY)
-				exp_rank = "100"
-			if(500 to 750)
-				exp_rank = "75"
-			if(300 to 500)
-				exp_rank = "50"
-			if(50 to 300)
-				exp_rank = "25"
+	if(user.client)
+		currentrankpoints = user.client.prefs.read_preference(/datum/preference/numeric/rankpoints)
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id
-		ID.registered_name = "CP:13.[exp_rank]-[rand(111,999)]"
+		ID.registered_name = "CP:13.[currentrankpoints]-[rand(111,999)]"
 		ID.update_label()
+
+		if(49 < currentrankpoints)
+			ID.registered_account.requisition_points += 1
+
+		if(94 < currentrankpoints)
+			ID.registered_account.requisition_points += 1
 
 /datum/outfit/job/security/mod
 	name = "Security Officer (MODsuit)"

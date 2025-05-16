@@ -1647,6 +1647,41 @@
 				heart_recepient.receive_heart(usr)
 			else
 				return
+	//hl13 edit start
+	else if(href_list["adminrankpoints"])
+		var/mob/rankpoints_recepient = locate(href_list["adminrankpoints"])
+		if(!rankpoints_recepient?.ckey)
+			to_chat(usr, span_warning("This mob either no longer exists or no longer is being controlled by someone!"))
+			return
+
+		if(!rankpoints_recepient.client)
+			to_chat(usr, span_warning("No client to award points to!"))
+			return
+
+		var/currentrankpoints = rankpoints_recepient.client.prefs.read_preference(/datum/preference/numeric/rankpoints)
+
+		to_chat(usr, span_notice("They currently have [currentrankpoints] rank points on their character."))
+		var/points_to_give = input(usr, "How many points should be given or taken?", "Rank Points to Give/Take") as null|num
+		if(points_to_give == 0)
+			to_chat(usr, span_notice("Cancelled."))
+			return
+		if((points_to_give+currentrankpoints) > 100)
+			to_chat(usr, span_warning("The limit of points is 100. Points cancelled."))
+			return
+		if((points_to_give+currentrankpoints) < 0)
+			to_chat(usr, span_warning("They cant have negative rank points. Points cancelled."))
+			return
+		rankpoints_recepient.client.prefs.write_preference(GLOB.preference_entries[/datum/preference/numeric/rankpoints], currentrankpoints += points_to_give)
+
+		if(points_to_give > 0)
+			to_chat(rankpoints_recepient, span_nicegreen("You have been awarded [points_to_give] rank points for this character. These points will show up next time you spawn in."))
+			to_chat(usr, span_notice("Rank points given."))
+		else
+			to_chat(rankpoints_recepient, span_warning("You have been deducted [points_to_give] rank points for this character. This will show up next time you spawn in."))
+			to_chat(usr, span_notice("Rank points taken."))
+
+		rankpoints_recepient.client.prefs.save_preferences()
+	//hl13 edit end
 
 	else if(href_list["force_war"])
 		if(!check_rights(R_ADMIN))
