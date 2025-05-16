@@ -56,6 +56,11 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
+"av" = (
+/obj/structure/table/halflife/wood,
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors)
 "az" = (
 /obj/effect/landmark/start/nukeop,
 /obj/machinery/light/small{
@@ -320,8 +325,7 @@
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
 "cP" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/concrete/bricks,
+/turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors)
 "cT" = (
 /obj/structure/fluff/traveltile{
@@ -553,9 +557,8 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/bunker)
 "eQ" = (
-/obj/effect/landmark/outlands_latejoin,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/forest)
+/turf/closed/wall/halflife/concrete/alt,
+/area/halflife/indoors)
 "eR" = (
 /obj/structure/halflife/pipes/horizontal/valve,
 /turf/open/halflife/water/deep,
@@ -1347,6 +1350,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/walkway,
 /area/halflife/indoors/sewer/tunnel)
+"mm" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors)
 "mo" = (
 /obj/structure/halflife/fence/vertical/wire/east,
 /obj/structure/halflife/fence/wire/end/east,
@@ -1527,6 +1534,10 @@
 /obj/machinery/light/small,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
+"oh" = (
+/obj/effect/spawner/random/halflife/loot/ammo,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/sewer)
 "oi" = (
 /obj/machinery/camera{
 	c_tag = "Labour Camp Medical";
@@ -1904,6 +1915,10 @@
 /obj/structure/halflife/trash/papers/one,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors)
+"sg" = (
+/obj/structure/halflife/tank,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "sh" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "outlands_sewer_south"
@@ -2149,6 +2164,10 @@
 /mob/living/basic/halflife/headcrab/armored,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
+"tW" = (
+/obj/effect/spawner/random/halflife/loot/crafting_bench,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "ua" = (
 /turf/open/floor/plating/indoor/metal/pipe/corner{
 	dir = 8
@@ -2302,8 +2321,8 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
 "vH" = (
-/obj/structure/halflife/tank,
-/turf/open/floor/plating/indoor/concrete/bricks,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
 "vI" = (
 /obj/structure/sign/poster/halflife/rebel{
@@ -2426,6 +2445,9 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/laborcamp)
+"wS" = (
+/turf/open/floor/plating/indoor/carpet/blue,
+/area/halflife/indoors)
 "wT" = (
 /obj/structure/closet/halflife,
 /obj/effect/spawner/random/halflife/loot/ammo,
@@ -2561,6 +2583,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/walkway,
 /area/halflife/indoors/sewer/tunnel)
+"yh" = (
+/obj/structure/railing/halflife/wood/single,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/forest)
 "yi" = (
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/ground/grass,
@@ -2597,6 +2623,10 @@
 /obj/machinery/computer/records/security,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/laborcamp/security)
+"yy" = (
+/obj/structure/chair/halflife/metal/blue,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors)
 "yC" = (
 /turf/open/halflife/water/deep,
 /area/halflife/indoors/sewer)
@@ -2658,6 +2688,9 @@
 /obj/structure/halflife/barrel/single/redalt,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
+"zo" = (
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors)
 "zq" = (
 /obj/machinery/camera{
 	c_tag = "Labour Camp Cell 1";
@@ -2713,6 +2746,11 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"zS" = (
+/obj/structure/halflife/storage/large/showcase,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/carpet/blue,
+/area/halflife/indoors)
 "zT" = (
 /turf/open/floor/plating/indoor/metal/grate/border,
 /area/halflife/indoors/sewer/tunnel)
@@ -2920,6 +2958,12 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
+"BO" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors)
 "BP" = (
 /obj/docking_port/stationary{
 	dir = 4;
@@ -2955,8 +2999,9 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors/sewer/tunnel)
 "Ck" = (
-/obj/effect/spawner/random/halflife/loot/crafting_bench,
-/turf/open/floor/plating/indoor/concrete/bricks,
+/obj/structure/halflife/storage/shelf,
+/obj/item/stack/spacecash/c1,
+/turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors)
 "Co" = (
 /mob/living/basic/trader/halflife/refugee,
@@ -3350,6 +3395,10 @@
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/halflife/water/deep,
 /area/halflife/outdoors/forest)
+"Gu" = (
+/obj/effect/landmark/outlands_latejoin,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/forest)
 "Gv" = (
 /obj/structure/halflife/pipes/vertical/east,
 /obj/structure/halflife/trash/papers/one,
@@ -3419,6 +3468,10 @@
 /obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"Hj" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "Hl" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	keylock = 1;
@@ -3903,9 +3956,9 @@
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors)
 "LJ" = (
-/obj/effect/spawner/random/halflife/loot/ammo,
-/turf/open/floor/plating/indoor/concrete/small,
-/area/halflife/indoors/sewer)
+/obj/structure/table/halflife/wood,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors)
 "LL" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/ground/dirt,
@@ -4112,6 +4165,13 @@
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"NI" = (
+/obj/structure/table/halflife/no_smooth/large/wood/desk{
+	dir = 1
+	},
+/obj/structure/halflife/rug/yellow,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors)
 "NL" = (
 /obj/modular_map_root/sewerright,
 /turf/closed/indestructible/rock,
@@ -4347,8 +4407,8 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
 "Ql" = (
-/obj/machinery/door/unpowered/halflife/metal,
-/turf/open/floor/plating/ground/grass,
+/obj/structure/halflife/storage/large/showcase,
+/turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/indoors)
 "Qp" = (
 /obj/item/hatchet/wooden,
@@ -4394,9 +4454,9 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/forest)
 "QF" = (
-/obj/structure/railing/halflife/wood/single,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/forest)
+/obj/machinery/door/unpowered/halflife/metal,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/indoors)
 "QI" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer/outlandscave)
@@ -4675,6 +4735,12 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/forest)
+"Ts" = (
+/obj/structure/table/halflife/no_smooth/large/wood{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors)
 "Tt" = (
 /obj/machinery/door/unpowered/halflife/metal/red,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -27043,7 +27109,7 @@ GT
 UI
 Mf
 LS
-LJ
+oh
 UI
 GT
 GT
@@ -59711,15 +59777,15 @@ tN
 tN
 tN
 tN
-tN
-tN
-GX
-tN
-tN
-GX
-GX
-GX
-tN
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
 tN
 Jq
 Ym
@@ -59908,15 +59974,15 @@ It
 It
 It
 Yn
-GX
-GX
-It
-GX
-tN
-an
-tN
-tN
-tN
+eQ
+zo
+zo
+zo
+mm
+zo
+zo
+zo
+eQ
 tN
 lk
 Ym
@@ -60101,19 +60167,19 @@ tN
 tN
 GX
 tN
-GX
-tN
-GX
-GX
-GX
-tN
-GX
-GX
-tN
-GX
-GX
-tN
-tN
+eQ
+eQ
+eQ
+eQ
+eQ
+zo
+Ql
+wS
+Ql
+wS
+zS
+zo
+eQ
 tN
 tN
 Jq
@@ -60298,19 +60364,19 @@ tN
 tN
 GX
 It
-GX
-Yn
-GX
-GX
-It
-tN
-It
-GX
-It
-GX
-GX
-GX
-It
+eQ
+Ck
+cP
+cP
+eQ
+zo
+wS
+wS
+wS
+wS
+wS
+zo
+eQ
 tN
 tN
 lk
@@ -60495,19 +60561,19 @@ tN
 ai
 ai
 tN
-It
-tN
-Cq
-GX
-QW
-QW
-RL
-It
-QW
-GX
-It
-Yn
-It
+eQ
+Ck
+cP
+cP
+eQ
+zo
+wS
+wS
+wS
+wS
+wS
+zo
+eQ
 tN
 tN
 tN
@@ -60692,21 +60758,21 @@ tN
 an
 tN
 tN
-tN
-GX
-GX
-ai
-QW
-tN
-tN
-It
-dg
-GX
-tN
-GX
-QW
-QW
-QW
+eQ
+Ck
+cP
+cP
+eQ
+zo
+Ql
+wS
+Ql
+wS
+Ql
+zo
+eQ
+eQ
+eQ
 tN
 Jq
 Ym
@@ -60889,21 +60955,21 @@ tN
 tN
 ai
 tN
-tN
-Yn
-It
-It
-QW
-ai
-tN
-tN
-It
-It
-It
-tN
-GX
-tN
-QW
+eQ
+eQ
+eQ
+BO
+eQ
+zo
+wS
+wS
+wS
+wS
+wS
+zo
+zo
+LJ
+eQ
 It
 Jq
 Ym
@@ -61087,20 +61153,20 @@ tN
 tN
 tN
 tN
-tN
-ai
-It
-QW
-tN
-tN
-tN
-tN
-tN
-It
-It
-dg
-It
-QW
+eQ
+zo
+zo
+zo
+zo
+zo
+zo
+zo
+zo
+zo
+zo
+zo
+av
+eQ
 It
 Jq
 Ym
@@ -61284,20 +61350,20 @@ tN
 tN
 tN
 It
-RL
-It
-It
-QW
-tN
-tN
-an
-tN
-It
-It
-an
-tN
-It
-QW
+eQ
+vH
+zo
+NI
+zo
+zo
+zo
+zo
+zo
+zo
+zo
+zo
+LJ
+eQ
 It
 Jq
 Ym
@@ -61481,20 +61547,20 @@ It
 RL
 It
 It
-tN
-tN
-tN
-tN
-tN
-tN
-It
-It
-It
-It
-tN
-tN
-an
-tN
+eQ
+zo
+yy
+zo
+zo
+zo
+Ts
+zo
+Ts
+zo
+zo
+zo
+LJ
+eQ
 tN
 Jq
 Ym
@@ -61678,20 +61744,20 @@ tN
 It
 It
 It
-It
-It
-It
-It
-GX
-GX
-QW
-It
-dg
-tN
-tN
-tN
-tN
-tN
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+eQ
+BO
+eQ
+eQ
+eQ
 tN
 Jq
 Ym
@@ -62096,7 +62162,7 @@ pa
 OO
 OO
 OO
-QF
+yh
 OO
 OO
 OO
@@ -68449,10 +68515,10 @@ kn
 OO
 tN
 Ko
-vH
+sg
 yX
 Ko
-vH
+sg
 yX
 Ko
 GX
@@ -68646,10 +68712,10 @@ kn
 OO
 It
 Ko
-vH
+sg
 yX
 Ko
-cP
+Hj
 yX
 Ko
 GX
@@ -68843,10 +68909,10 @@ kn
 OO
 fX
 Ko
-vH
+sg
 yX
 Ko
-vH
+sg
 yX
 Ko
 It
@@ -69039,7 +69105,7 @@ kn
 kn
 OO
 fX
-Ql
+QF
 yX
 yX
 yX
@@ -69237,10 +69303,10 @@ kn
 OO
 fX
 Ko
-vH
+sg
 yX
 Ko
-vH
+sg
 yX
 Ko
 It
@@ -69434,10 +69500,10 @@ kn
 OO
 GX
 Ko
-Ck
+tW
 yX
 Ko
-cP
+Hj
 yX
 Ko
 It
@@ -69634,7 +69700,7 @@ Ko
 yX
 yX
 Ko
-vH
+sg
 yX
 Ko
 GX
@@ -70806,11 +70872,11 @@ GX
 XA
 XA
 XA
-eQ
+Gu
 kn
 fo
 kn
-eQ
+Gu
 XA
 UI
 WG
