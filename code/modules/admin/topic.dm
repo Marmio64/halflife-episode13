@@ -1674,11 +1674,11 @@
 		rankpoints_recepient.client.prefs.write_preference(GLOB.preference_entries[/datum/preference/numeric/rankpoints], currentrankpoints += points_to_give)
 
 		if(points_to_give > 0)
-			to_chat(rankpoints_recepient, span_nicegreen("You have been awarded [points_to_give] rank points for this character. These points will show up next time you spawn in."))
-			to_chat(usr, span_notice("Rank points given."))
+			to_chat(rankpoints_recepient, span_nicegreen("You have been awarded [points_to_give] rank points for this character. These points may not show up until next time you spawn in."))
+			to_chat(usr, span_notice("Rank points given. Their ID and req points will not change unless modified manually."))
 		else
-			to_chat(rankpoints_recepient, span_warning("You have been deducted [points_to_give] rank points for this character. This will show up next time you spawn in."))
-			to_chat(usr, span_notice("Rank points taken."))
+			to_chat(rankpoints_recepient, span_warning("You have been deducted [points_to_give] rank points for this character. This may not sohw up until next time you spawn in."))
+			to_chat(usr, span_notice("Rank points taken. Their ID and req points will not change unless modified manually."))
 
 		rankpoints_recepient.client.prefs.save_preferences()
 	//hl13 edit end
