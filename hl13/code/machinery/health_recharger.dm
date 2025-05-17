@@ -4,7 +4,7 @@
 	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "healthcharger"
 	//circuit = /obj/item/circuitboard/machine/combinerecharger
-	var/capacity = 60
+	var/capacity = 100
 	var/capacity_max = 100
 
 	/// The total amount of charge that has been used up over time
@@ -85,7 +85,7 @@
 		playsound(src, 'hl13/sound/effects/medshotno1.ogg', 40, FALSE)
 		return
 
-	if(capacity > 19 && H.health < H.maxHealth)
+	if(capacity > 9 && H.health < H.maxHealth)
 		playsound(src, 'hl13/sound/effects/medcharge4.ogg', 40, FALSE)
 		if(do_after(H, 0.8 SECONDS, src))
 			H.reagents.add_reagent(/datum/reagent/medicine/concentrated_biogel,6)

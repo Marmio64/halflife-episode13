@@ -76,7 +76,6 @@
 		to_chat(owner, span_warning("Suit detects extreme user damage. Administering Class A-3 Stimulant Medication Supplements."))
 		owner.reagents.add_reagent(/datum/reagent/medicine/morphine, 3)
 		owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 3)
-		owner.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 1)
 	else
 		to_chat(owner, span_warning("Suit power insufficient to administer stimulants."))
 

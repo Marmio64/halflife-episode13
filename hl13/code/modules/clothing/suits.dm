@@ -11,6 +11,8 @@
 	limb_integrity = 225
 	repairable_by = /obj/item/stack/kevlar
 
+	blood_overlay_type = "armor"
+
 /datum/armor/civpro_vest
 	melee = 35
 	bullet = 25
@@ -63,6 +65,8 @@
 
 	limb_integrity = 400
 	repairable_by = /obj/item/stack/kevlar
+
+	blood_overlay_type = "armor"
 
 /datum/armor/overwatcharmor
 	melee = 40
@@ -118,6 +122,8 @@
 
 	limb_integrity = 175
 	repairable_by = /obj/item/stack/kevlar
+
+	blood_overlay_type = "armor"
 
 /datum/armor/kevlararmor
 	melee = 20
@@ -252,6 +258,8 @@
 
 	limb_integrity = 80
 
+	blood_overlay_type = "coat"
+
 /obj/item/clothing/suit/bluejacket/padded
 	desc = "A blue jacket for citizens to wear. This one is padded with extra protective fabric."
 	armor_type = /datum/armor/paddedjacket
@@ -269,6 +277,8 @@
 
 	limb_integrity = 80
 
+	blood_overlay_type = "coat"
+
 /obj/item/clothing/suit/greenjacket/padded
 	desc = "A heavily faded jacket. It was supposedly rather green, but now you can barely tell it from a grey jacket. This one is padded with extra protective fabric."
 	armor_type = /datum/armor/paddedjacket
@@ -285,6 +295,8 @@
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 
 	limb_integrity = 80
+
+	blood_overlay_type = "coat"
 
 /obj/item/clothing/suit/whitejacket/padded
 	desc = "A grungy white jacket often worn by medical and scientific union members. This one is padded with extra protective fabric."
@@ -345,6 +357,8 @@
 	limb_integrity = 350
 	repairable_by = /obj/item/stack/kevlar
 
+	blood_overlay_type = "armor"
+
 /datum/armor/rebelheavy
 	melee = 40
 	bullet = 50
@@ -388,6 +402,8 @@
 	limb_integrity = 350
 
 	armor_type = /datum/armor/civpro_vest
+
+	blood_overlay_type = "armor"
 
 /obj/item/clothing/suit/armor/platearmor/deathmatch
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS

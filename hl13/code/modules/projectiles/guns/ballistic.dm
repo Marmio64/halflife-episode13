@@ -280,7 +280,7 @@
 	vary_fire_sound = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 
-// about 1.8 seconds TTK if you hit your first shot (so no cooldown on it)
+// about 1.8 seconds TTK if you hit your first shot (so no cooldown on it) and are point blank
 /obj/item/gun/ballistic/shotgun/spas12
 	name = "SPAS 12"
 	desc = "A spectacularly lethal pump action shotgun, for close encounters."
