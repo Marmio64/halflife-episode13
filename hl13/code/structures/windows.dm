@@ -8,8 +8,12 @@
 	canSmoothWith = null
 
 /obj/structure/window/fulltile/halflife/nosmooth/brick
-	icon_state = "brick"
-	base_icon_state = "brick"
+	icon_state = "generic"
+	base_icon_state = "generic"
+
+/obj/structure/window/fulltile/halflife/nosmooth/generic
+	icon_state = "generic"
+	base_icon_state = "generic"
 
 /obj/structure/window/fulltile/halflife/combine
 	name = "window"

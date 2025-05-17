@@ -596,22 +596,36 @@
 	set name = "Sleep"
 	set category = "IC"
 
+	var/comfiness = 0
+
 	if(IsSleeping())
 		to_chat(src, span_warning("You are already sleeping!"))
 		return
 	else
-		if((locate(/obj/structure/bed) in loc))
-			to_chat(src, span_notice("There is a comfy enough bed here, you'll get a good sleep here."))
+		if((locate(/obj/structure/bed/halflife/bedframe) in loc))
+			to_chat(src, span_notice("There is a bed frame here..."))
+			comfiness++
+		if((locate(/obj/structure/bed/halflife/mattress) in loc))
+			to_chat(src, span_notice("There is a mattress here..."))
+			comfiness += 3
 		else if(buckled)
-			to_chat(src, span_notice("You are lying or sitting on something somewhat comfortable, you will get an okay sleep."))
+			to_chat(src, span_notice("I am sitting or lying on something..."))
+			comfiness++
 		else
-			to_chat(src, span_notice("This is not a comfortable place to sleep, find a bed to lay on or at least a chair to sit on. You will get a poor quality sleep here."))
+			to_chat(src, span_notice("There is nothing to rest on here..."))
+
+		if(comfiness < 1)
+			to_chat(src, span_notice("... All in all, a bad place to sleep. You'll get a poor sleep here."))
+		else if(comfiness < 3)
+			to_chat(src, span_notice("... All in all, a decent place to sleep. You'll get an okay sleep here."))
+		else
+			to_chat(src, span_notice("... All in all, a good place to sleep. You'll get a good sleep here."))
 
 		if(tgui_alert(usr, "You sure you want to sleep for a while?", "Sleep", list("Yes", "No")) == "Yes")
 			to_chat(src, span_notice("You start to shut your eyes..."))
-			if(do_after(src, 5 SECONDS, src))
-				to_chat(src, span_notice("... and drift into a short nap."))
-				SetSleeping(400) //Short nap
+			if(do_after(src, 8 SECONDS - (comfiness * 10), src))
+				to_chat(src, span_notice("... and drift into rest."))
+				SetSleeping(450 - (comfiness * 10)) //Short nap
 			else
 				to_chat(src, span_notice("... but are disturbed from fully falling asleep."))
 
