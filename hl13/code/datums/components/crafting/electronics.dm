@@ -163,3 +163,16 @@
 	time = 8 SECONDS
 	category = CAT_ROBOT
 	crafting_interface = CRAFTING_BENCH_GENERAL | CRAFTING_BENCH_ELECTRIC
+
+/datum/crafting_recipe/super_destabilizer
+	name = "Super Destabilizer Beacon"
+	result = /obj/item/super_destabilizer_beacon
+	reqs = list(/obj/item/halflife/antenna = 1,
+				/obj/item/stack/cable_coil = 15,
+				/obj/item/stack/sheet/iron = 5,
+				/obj/item/circuitmaterial/advanced = 1,
+				/obj/item/circuitmaterial = 4)
+	time = 10 SECONDS
+	category = CAT_ROBOT
+	crafting_interface = CRAFTING_BENCH_ELECTRIC
+	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED

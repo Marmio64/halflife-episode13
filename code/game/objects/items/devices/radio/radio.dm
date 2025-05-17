@@ -419,7 +419,7 @@
 		return TRUE
 	for(var/ch_name in channels)
 		if(channels[ch_name] & FREQ_LISTENING)
-			if(GLOB.radiochannels[ch_name] == text2num(input_frequency) || special_channels & RADIO_SPECIAL_SYNDIE)
+			if(GLOB.radiochannels[ch_name] == text2num(input_frequency) || special_channels & RADIO_SPECIAL_HEARALL) //hl13 edit
 				return TRUE
 	return FALSE
 

@@ -1,4 +1,5 @@
 /obj/item/weaponcrafting/frame
+	name = "broke gun frame"
 	icon = 'hl13/icons/obj/guns/frames.dmi'
 
 /obj/item/weaponcrafting/frame/usp

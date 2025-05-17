@@ -237,8 +237,10 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 
 	var/currentrankpoints = 0
 
-	if(user.client)
-		currentrankpoints = user.client.prefs.read_preference(/datum/preference/numeric/rankpoints)
+	var/client/user_client = GLOB.directory[ckey(user.mind?.key)]
+
+	if(user_client)
+		currentrankpoints = user_client.prefs.read_preference(/datum/preference/numeric/rankpoints)
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id

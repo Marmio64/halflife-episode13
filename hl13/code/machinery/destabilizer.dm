@@ -55,11 +55,11 @@
 	name = "super destabilizer"
 	desc = "A massive abomination of tampered combine machinery that is emanating such a powerful signal, it even hurts your head to be around it. If it isn't broken quick, it might shut down all the combine systems in the entire district, and maybe even the whole city!"
 	icon_state = "superdestabilizer_off"
-	destabilization_chance = 100
 	show_timer = TRUE
 	processing_flags = START_PROCESSING_MANUALLY
 	anchored = FALSE
 	density = TRUE
+	detonation_limit = 150 // defend for five minutes
 	var/on = FALSE
 	var/mid_alert = FALSE
 
@@ -71,7 +71,7 @@
 		to_chat(world, span_bold("The Rebels have completely disabled all District systems, leaving it cutoff and helpless!"))
 		SSticker.force_ending = FORCE_END_ROUND
 		return PROCESS_KILL
-	else if((detonation_limit < cumulative_destabilization/2) && !mid_alert)
+	if((detonation_limit < (cumulative_destabilization/2)) && !mid_alert)
 		mid_alert = TRUE
 		priority_announce("Alert, Alert. Singularity approaching. Overwatch system damage detected. Destabilization halfway complete.", "Overwatch Alert")
 
@@ -83,7 +83,7 @@
 			to_chat(H, span_warning("This will only work if activated in the nexus!"))
 			return
 
-		to_chat(H, span_warning("You begin arming the destabilizer... No going back once it starts, and the entire district will be notified once it is armed."))
+		to_chat(H, span_warning("You begin arming the destabilizer... No going back once it starts, and the entire district will be notified once it is armed. You'll have to defend the destabilizer for five minutes."))
 		if(!do_after(H, 6 SECONDS, src))
 			to_chat(H, span_warning("You did not finish arming the destabilizer!"))
 			playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
@@ -96,7 +96,7 @@
 	on = TRUE
 	anchored = TRUE
 	icon_state = "superdestabilizer"
-	START_PROCESSING(SSfastprocess, src)
+	begin_processing()
 	priority_announce("Alert, Alert. Priority sociocide-class disruptor detected on systems. All units converge upon Nexus immediately to contain, Code-3. A GPS signal has been assigned to the threat.", "Overwatch Priority Alert")
 	SSsecurity_level.set_level(SEC_LEVEL_DELTA)
 
@@ -115,6 +115,11 @@
 /obj/item/super_destabilizer_beacon/attack_self(mob/user)
 	if(user)
 		if(SSsociostability.sociostability <= SOCIOSTABILITY_POOR)
+			to_chat(user, span_warning("Sociostability is low enough to call this in. Preparing to call..."))
+			if(!do_after(user, 5 SECONDS, src))
+				to_chat(user, span_warning("You did not finish calling the destabilizer!"))
+				playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+				return
 			to_chat(user, span_notice("Locked In."))
 			new droptype( user.loc )
 			playsound(src, 'sound/effects/pop.ogg', 100, TRUE, TRUE)

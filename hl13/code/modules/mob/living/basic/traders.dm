@@ -111,7 +111,7 @@
 		/obj/item/food/canned/halflife/beans = list(PAYCHECK_CREW * 2, 3),
 		/obj/item/reagent_containers/syringe/syriniver = list(PAYCHECK_CREW, 3),
 		/obj/item/machinepiece/multifunctiontool = list(PAYCHECK_CREW * 5, 3),
-		/obj/item/halflife/antenna = list(PAYCHECK_CREW * 8, 1),
+		/obj/item/halflife/antenna = list(PAYCHECK_CREW * 6, 3),
 		/obj/item/stack/kevlar = list(PAYCHECK_CREW, 5),
 		/obj/item/crowbar/large = list(PAYCHECK_CREW * 4, 1),
 		/obj/item/weldingtool/halflife = list(PAYCHECK_CREW * 1.5, 2),
@@ -144,6 +144,7 @@
 		/obj/item/reagent_containers/pill/lsd = list(PAYCHECK_CREW * 0.5, 5, ""),
 		/obj/item/food/xen/xenbranch = list(PAYCHECK_CREW * 0.25, 5, ""),
 		/obj/item/clothing/suit/armor/browncoat = list(PAYCHECK_CREW, 3, ""),
+		/obj/item/weaponcrafting/frame = list(PAYCHECK_CREW * 2.5, 3, ""),
 	)
 
 	say_phrases = list(

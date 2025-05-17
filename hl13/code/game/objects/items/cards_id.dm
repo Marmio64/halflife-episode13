@@ -41,4 +41,4 @@
 
 /obj/item/card/id/advanced/halflife/combine/four
 	icon_state = "id_combine4"
-	wildcard_slots = WILDCARD_LIMIT_GOLD
+	wildcard_slots = WILDCARD_LIMIT_CENTCOM

@@ -148,3 +148,5 @@
 #define RADIO_SPECIAL_CENTCOM (1<<1)
 ///Bitflag for if a headset can use the binary radio channel
 #define RADIO_SPECIAL_BINARY (1<<2)
+//hl13 edit, bit flag for hearing all channels
+#define RADIO_SPECIAL_HEARALL (1<<3)

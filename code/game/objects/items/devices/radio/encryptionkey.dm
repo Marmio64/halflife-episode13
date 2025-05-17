@@ -27,10 +27,10 @@
 		. += span_warning("Has no special codes in it. You should probably tell a coder!")
 
 /obj/item/encryptionkey/syndicate
-	name = "syndicate encryption key"
+	name = "rebel encryption key"
 	icon_state = "cypherkey_syndicate"
 	channels = list(RADIO_CHANNEL_SYNDICATE = 1)
-	special_channels = RADIO_SPECIAL_SYNDIE
+	special_channels = RADIO_SPECIAL_SYNDIE | RADIO_SPECIAL_HEARALL //hl13 edit
 	greyscale_config = /datum/greyscale_config/encryptionkey_syndicate
 	greyscale_colors = "#171717#990000"
 

@@ -83,12 +83,14 @@
 
 	var/currentrankpoints = 0
 
-	if(user.client)
-		currentrankpoints = user.client.prefs.read_preference(/datum/preference/numeric/rankpoints)
+	var/client/user_client = GLOB.directory[ckey(user.mind?.key)]
+
+	if(user_client)
+		currentrankpoints = user_client.prefs.read_preference(/datum/preference/numeric/rankpoints)
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id
-		ID.registered_name = "DV:13.[user.client?.prefs.read_preference(/datum/preference/numeric/rankpoints)]-[rand(10,90)]"
+		ID.registered_name = "DV:13.[currentrankpoints]-[rand(10,90)]"
 		ID.update_label()
 
 		if(49 < currentrankpoints)
