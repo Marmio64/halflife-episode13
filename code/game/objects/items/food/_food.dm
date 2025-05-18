@@ -115,8 +115,11 @@
 ///Set decomp_req_handle to TRUE to only make it decompose when someone picks it up.
 ///Requires /datum/component/germ_sensitive to detect exposure
 /obj/item/food/proc/make_germ_sensitive(mapload)
-	if(!isnull(trash_type))
+	if(foodtypes & RAW) //hl13 edit, raw food is dangerous
+		AddComponent(/datum/component/infective, GLOB.floor_diseases.Copy(), weak = TRUE, weak_infection_chance = 30)
+	else if(!isnull(trash_type))
 		return // You don't eat the package and it protects from decomposing
-	AddComponent(/datum/component/germ_sensitive, mapload)
+	else
+		AddComponent(/datum/component/germ_sensitive, mapload)
 	if(!preserved_food)
 		AddComponent(/datum/component/decomposition, mapload, decomp_req_handle, decomp_flags = foodtypes, decomp_result = decomp_type, ant_attracting = ant_attracting, custom_time = decomposition_time, stink_particles = decomposition_particles)

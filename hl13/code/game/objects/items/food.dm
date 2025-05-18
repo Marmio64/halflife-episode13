@@ -32,11 +32,11 @@
 	icon_state = "seafoodexpired"
 	trash_type = /obj/item/trash/can/food/halflife/seafood
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment/raw = 8,
+		/datum/reagent/consumable/nutriment = 7,
 		/datum/reagent/toxin/bad_food = 3,
 	)
 	tastes = list("expired fish" = 1)
-	foodtypes = MEAT | TOXIC
+	foodtypes = MEAT | TOXIC | RAW
 
 
 /obj/item/food/canned/halflife/seafood/expired/open_can(mob/user)

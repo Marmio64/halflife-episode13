@@ -32,8 +32,7 @@
 	icon_state = "meat"
 	bite_consumption = 3
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment/protein = 2,
-		/datum/reagent/consumable/nutriment/raw = 3,
+		/datum/reagent/consumable/nutriment/protein = 4,
 		/datum/reagent/consumable/nutriment/fat = 2,
 		/datum/reagent/consumable/nutriment/vitamin = 1,
 	) //Meat has fats that a food processor can process into cooking oil
