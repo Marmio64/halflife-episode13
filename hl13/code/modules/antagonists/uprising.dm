@@ -41,6 +41,12 @@
 
 	owner.current.cmode_music = 'hl13/sound/music/combat/penultimatum.ogg'
 
+	owner.give_uplink(silent = FALSE, antag_datum = src)
+	var/datum/component/uplink/U = owner.find_syndicate_uplink()
+	if(U)
+		U.uplink_handler.set_telecrystals(8)
+		to_chat(owner, span_danger("You and each of your comrades have been supplied a Lambda teleportation uplink for purchasing a small amount of supplies."))
+
 	return ..()
 
 /datum/objective/uprising

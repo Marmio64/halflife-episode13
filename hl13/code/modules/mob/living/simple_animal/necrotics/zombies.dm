@@ -122,8 +122,8 @@
 	icon_living = "poisonzombie"
 	icon_dead = "poisonzombie_dead"
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 2)
-	maxHealth = 160
-	health = 160
+	maxHealth = 150
+	health = 150
 	move_to_delay = 7
 	speed = 1.6
 	speak = list("Mrrrraaaaghhhhh...","ggg-ggrrahhh...","P-p...o...he-l..")

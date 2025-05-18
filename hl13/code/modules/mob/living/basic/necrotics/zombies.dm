@@ -8,11 +8,11 @@
 	faction = list(FACTION_HEADCRAB)
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_XENIAN
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/sheet/cloth = 1)
-	maxHealth = 120
-	health = 120
+	maxHealth = 100
+	health = 100
 	obj_damage = 15
-	melee_damage_lower = 15
-	melee_damage_upper = 17
+	melee_damage_lower = 16
+	melee_damage_upper = 19
 	sharpness = SHARP_EDGED
 	wound_bonus = -15
 	attack_vis_effect = ATTACK_EFFECT_CLAW
@@ -69,8 +69,8 @@
 	icon_living = "zombie"
 	icon_dead = "zombine_dead"
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 3)
-	maxHealth = 160
-	health = 160
+	maxHealth = 140
+	health = 140
 	attack_sound = 'hl13/sound/creatures/zombineattack.ogg'
 	death_sound = 'hl13/sound/creatures/zombinedeath.ogg'
 	crabless_possible = FALSE
@@ -85,8 +85,8 @@
 	icon_dead = "fungalzombie_dead"
 	no_crab_state = "fungalzombie_nocrab"
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1, /obj/item/stack/sheet/cloth = 1)
-	maxHealth = 160
-	health = 160
+	maxHealth = 140
+	health = 140
 	speed = 1.7
 	headcrabspawn = /mob/living/basic/halflife/headcrab/armored
 	fungalheal = TRUE
@@ -104,8 +104,8 @@
 	icon_living = "fastzombie"
 	icon_dead = "fastzombie_dead"
 	no_crab_state = "fastzombie_nocrab"
-	maxHealth = 80
-	health = 80
+	maxHealth = 75
+	health = 75
 	speed = 0
 	melee_attack_cooldown = 0.7 SECONDS
 	melee_damage_lower = 5

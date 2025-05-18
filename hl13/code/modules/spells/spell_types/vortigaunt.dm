@@ -1,7 +1,7 @@
 /datum/action/cooldown/spell/conjure_item/infinite_guns/vort_blast
 	name = "Vortal Blast"
-	cooldown_time = 4 SECONDS
-	desc = "Use the vortessence to ready a vortal bolt in your hand."
+	cooldown_time = 3.25 SECONDS
+	desc = "Use the vortessence to ready a vortal bolt in your hand, which after a short channel duration will instantly hit a target."
 	button_icon = 'hl13/icons/mob/actions/actions_vortal.dmi'
 	button_icon_state = "blast"
 	background_icon_state = "bg_nature"
@@ -25,9 +25,13 @@
 	flags_1 = NONE
 	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
 
-	spread = -25 //counter acts their terrible aim trait
+	spread = -35 //counter acts their terrible aim trait
 
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/enchanted/vort_blast
+
+/obj/item/gun/ballistic/rifle/enchanted/vort_blast/try_fire_gun(atom/target, mob/living/user, params)
+	if(do_after(user, 0.75 SECONDS, src))
+		return ..()
 
 /obj/item/ammo_box/magazine/internal/boltaction/enchanted/vort_blast
 	max_ammo = 1
@@ -43,6 +47,12 @@
 	damage_type = BURN
 	armour_penetration = 20
 	hitsound = 'hl13/sound/weapons/attack_shoot.ogg'
+	hitscan = TRUE
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
+	light_color = LIGHT_COLOR_GREEN
+	tracer_type = /obj/effect/projectile/tracer/xray
+	muzzle_type = /obj/effect/projectile/muzzle/xray
+	impact_type = /obj/effect/projectile/impact/xray
 
 /datum/action/cooldown/spell/touch/vort_heal
 	name = "Mend"

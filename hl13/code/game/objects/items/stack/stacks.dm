@@ -100,6 +100,8 @@
 	resistance_flags = FIRE_PROOF
 	merge_type = /obj/item/stack/sheet/halflife/plastic
 	grind_results = list(/datum/reagent/plastic_polymers = 10)
+	mats_per_unit = list(/datum/material/plastic=SHEET_MATERIAL_AMOUNT)
+	material_type = /datum/material/plastic
 
 /obj/item/stack/sheet/halflife/plastic/twelve
 	amount = 12

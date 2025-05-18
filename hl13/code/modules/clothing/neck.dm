@@ -50,7 +50,7 @@
 		if (!H)
 			return
 
-		if(tgui_alert(H, "Are you sure you want to try cutting this collar? It may be very dangerous, even deadly.", "Cut Collar", list("Yes", "No")) == "Yes")
+		if(tgui_alert(H, "Are you sure you want to try cutting this collar? It may be very dangerous, even deadly, and the collar will be destroyed if succesful.", "Cut Collar", list("Yes", "No")) == "Yes")
 			to_chat(H, span_userdanger("You start sawing into the collar..."))
 			if(do_after(H, 12 SECONDS, src))
 				playsound(src, 'sound/items/handling/surgery/saw.ogg', 50, TRUE)
@@ -67,9 +67,10 @@
 				else
 					head.force_wound_upwards(/datum/wound/slash/flesh/moderate)
 					H.apply_damage(50, BRUTE, head)
-					to_chat(H, span_userdanger("The saw digs deep into the collar, eventually even reaching the flesh. The pain is unbearable, but you power through and unlock the collar."))
+					to_chat(H, span_userdanger("The saw digs deep into the collar, eventually even reaching the flesh. The pain is unbearable, but you power through and cut the collar in two, unlocking it."))
 					H.emote("scream")
 					unlock()
+					qdel(src)
 			else
 				to_chat(H, span_notice("You stop midway, and fail to cut anything."))
 		else

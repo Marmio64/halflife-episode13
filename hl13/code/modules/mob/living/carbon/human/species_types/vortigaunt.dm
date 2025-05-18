@@ -3,7 +3,7 @@
 	id = SPECIES_VORTIGAUNT
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | ERT_SPAWN
 	siemens_coeff = 0
-	damage_modifier = 35
+	damage_modifier = 40
 	stunmod = 0.8
 	species_language_holder = /datum/language_holder/vortigaunt
 	sexes = FALSE

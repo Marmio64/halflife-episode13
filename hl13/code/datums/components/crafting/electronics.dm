@@ -159,7 +159,7 @@
 /datum/crafting_recipe/cablecoil
 	name = "Cable Coil (30x)"
 	result = /obj/item/stack/cable_coil
-	reqs = list(/obj/item/stack/sheet/scrap_copper = 3, /obj/item/stack/sheet/plastic = 5)
+	reqs = list(/obj/item/stack/sheet/scrap_copper = 3, /obj/item/stack/sheet/halflife/plastic = 5)
 	time = 8 SECONDS
 	category = CAT_ROBOT
 	crafting_interface = CRAFTING_BENCH_GENERAL | CRAFTING_BENCH_ELECTRIC

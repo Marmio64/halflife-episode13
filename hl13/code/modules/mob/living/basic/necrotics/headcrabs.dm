@@ -83,6 +83,8 @@
 	maxHealth = 45
 	health = 45
 
+	melee_attack_cooldown = 3 SECONDS
+
 	death_sound = 'hl13/sound/creatures/poison/ph_death.ogg'
 	attack_sound = 'hl13/sound/creatures/poison/ph_poisonbite.ogg'
 
