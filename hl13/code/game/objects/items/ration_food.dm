@@ -63,7 +63,9 @@
 			return 0
 
 /obj/item/food/halflife/nutrient_bar
+	name = "nutrient bar"
 	mood_penalty = FOOD_DISLIKED
+	icon_state = "water_bar"
 
 //Goes in standard rations
 /obj/item/food/halflife/nutrient_bar/water

@@ -15,7 +15,7 @@
 /datum/crafting_recipe/food/xenstew
 	name = "Xen Stew"
 	reqs = list(
-		/obj/item/food/halflife/nutrient_bar/water = 1,
+		/obj/item/food/halflife/nutrient_bar = 1,
 		/datum/reagent/water = 15,
 		/obj/item/food/meat/cutlet/xen = 2,
 	)

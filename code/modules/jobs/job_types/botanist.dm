@@ -3,7 +3,7 @@
 	description = "Grow combine approved produce substitutes for citizen consumptions and combine biofuel use."
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
 	faction = FACTION_STATION
-	total_positions = 3
+	total_positions = 2
 	spawn_positions = 2
 	supervisors = SUPERVISOR_HOP
 	exp_granted_type = EXP_TYPE_CREW
