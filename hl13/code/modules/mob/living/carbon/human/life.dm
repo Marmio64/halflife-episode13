@@ -76,7 +76,7 @@
 			amt -= 10
 	return amt
 
-/mob/living/carbon/human/proc/adjust_temppain(amount)
+/mob/living/carbon/proc/adjust_temppain(amount)
 	temporary_pain += amount
 
 	if(temporary_pain > 150)

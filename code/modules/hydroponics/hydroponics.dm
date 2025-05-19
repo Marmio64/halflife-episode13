@@ -183,21 +183,8 @@
 
 /obj/machinery/hydroponics/constructable/examine(mob/user)
 	. = ..()
-	. += span_notice("Use <b>Ctrl-Click</b> to activate autogrow. <b>RMB</b> to empty the tray's nutrients.")
 	if(in_range(user, src) || isobserver(user))
 		. += span_notice("The status display reads: Tray efficiency at <b>[rating*100]%</b>.")
-
-/obj/machinery/hydroponics/constructable/add_context(
-	atom/source,
-	list/context,
-	obj/item/held_item,
-	mob/living/user,
-)
-
-	// Constructible trays will always show that you can activate auto-grow with ctrl+click
-	. = ..()
-	context[SCREENTIP_CONTEXT_CTRL_LMB] = "Activate auto-grow"
-	return CONTEXTUAL_SCREENTIP_SET
 
 /obj/machinery/hydroponics/Destroy()
 	if(myseed)
@@ -1087,21 +1074,6 @@
 	else
 		if(user)
 			user.examinate(src)
-
-/obj/machinery/hydroponics/click_ctrl(mob/user)
-	if(!anchored)
-		return NONE
-
-	update_use_power(ACTIVE_POWER_USE)
-
-	if(!powered())
-		to_chat(user, span_warning("[name] has no power."))
-		update_use_power(NO_POWER_USE)
-		return CLICK_ACTION_BLOCKING
-
-	set_self_sustaining(!self_sustaining)
-	to_chat(user, span_notice("You [self_sustaining ? "activate" : "deactivated"] [src]'s autogrow function[self_sustaining ? ", maintaining the tray's health, though making it grow slower." : ""]."))
-	return CLICK_ACTION_SUCCESS
 
 /obj/machinery/hydroponics/attack_hand_secondary(mob/user, list/modifiers)
 	. = ..()

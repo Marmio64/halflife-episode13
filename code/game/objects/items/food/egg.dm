@@ -29,7 +29,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 	decomp_type = /obj/item/food/egg/rotten
 	decomp_req_handle = TRUE //so laid eggs can actually become chickens
 	/// How likely is it that a chicken will come out of here if we throw it?
-	var/chick_throw_prob = 13
+	var/chick_throw_prob = 0
 
 /obj/item/food/egg/make_bakeable()
 	AddComponent(/datum/component/bakeable, /obj/item/food/boiledegg, rand(15 SECONDS, 20 SECONDS), TRUE, TRUE)

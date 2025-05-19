@@ -4,7 +4,7 @@
 	max_stages = 5
 	spread_text = "Foodborne"
 	spread_flags = DISEASE_SPREAD_NON_CONTAGIOUS
-	cure_text = "Spaceacillin, or waiting until it clears up naturally"
+	cure_text = "Penicillin, or waiting until it clears up naturally"
 	cures = list(/datum/reagent/medicine/spaceacillin)
 	agent = "microscopic pathogenic worms"
 	viable_mobtypes = list(/mob/living/carbon/human)
@@ -36,8 +36,8 @@
 				affected_mob.adjust_confusion(3 SECONDS)
 			if(prob(4))
 				to_chat(affected_mob, span_danger("Your stomach rumbles violently, prickles of pain emanating from your gut."))
-				affected_mob.adjust_nutrition(-20)
-				affected_mob.adjust_hydration(-20)
+				affected_mob.adjust_nutrition(-15)
+				affected_mob.adjust_hydration(-15)
 		if(5)
 			if(prob(4))
 				to_chat(affected_mob, span_danger("A deep ache appears in your stomach, as you suddenly hurl!"))
@@ -46,14 +46,68 @@
 				to_chat(affected_mob, span_danger("You feel very weak and dizzy..."))
 				affected_mob.adjust_confusion(3 SECONDS)
 				affected_mob.adjustStaminaLoss(30)
-			if(prob(12))
+			if(prob(10))
 				to_chat(affected_mob, span_danger("Your stomach rumbles violently, prickles of pain emanating from your gut."))
 				affected_mob.adjust_nutrition(-25)
-				affected_mob.adjust_hydration(-25)
-			if(prob(12))
+				affected_mob.adjust_hydration(-15)
+			if(prob(8))
 				to_chat(affected_mob, span_danger("You vomit violently, and you can see worms wriggling inside the expulsion! Maybe it's over now..."))
 				affected_mob.vomit(20)
 				cure()
+	return
+
+/datum/disease/cholera
+	form = "Disease"
+	name = "Cholera"
+	max_stages = 5
+	spread_text = "Foodborne"
+	spread_flags = DISEASE_SPREAD_NON_CONTAGIOUS
+	cure_text = "Penicillin"
+	cures = list(/datum/reagent/medicine/spaceacillin)
+	agent = "bacteria"
+	viable_mobtypes = list(/mob/living/carbon/human)
+	cure_chance = 6
+	desc = "A dangerous pathogen which inhabits raw food and unclean water. Causes severe dehydration, among other issues"
+	required_organ = ORGAN_SLOT_STOMACH
+	severity = DISEASE_CYCLES_MEDIUM
+	disease_flags = CURABLE|CAN_CARRY //you cant build up resistance to cholera
+
+/datum/disease/cholera/stage_act()
+	. = ..()
+	if(!.)
+		return
+
+	switch(stage)
+		if(2)
+			if(prob(5))
+				to_chat(affected_mob, span_danger("Your mouth feels dry."))
+			if(prob(5))
+				to_chat(affected_mob, span_danger("You feel weak and dizzy..."))
+				affected_mob.adjust_confusion(3 SECONDS)
+				affected_mob.adjustStaminaLoss(20)
+		if(4)
+			if(prob(4))
+				to_chat(affected_mob, span_userdanger("You feel terrible, as a deep pain appears in your gut."))
+				affected_mob.adjust_dizzy(4)
+				affected_mob.adjust_confusion(4 SECONDS)
+			if(prob(4))
+				to_chat(affected_mob, span_danger("A deep pain appears in your stomach, as you suddenly hurl!"))
+				affected_mob.vomit(20)
+		if(5)
+			if(prob(4))
+				to_chat(affected_mob, span_danger("A deep pain appears in your stomach, as you suddenly hurl!"))
+				affected_mob.vomit(20)
+			if(prob(8))
+				to_chat(affected_mob, span_danger("You feel very weak and dizzy..."))
+				affected_mob.adjust_confusion(3 SECONDS)
+				affected_mob.adjustStaminaLoss(30)
+				affected_mob.adjust_tiredness(20)
+			if(prob(10))
+				to_chat(affected_mob, span_danger("You feel parched..."))
+				affected_mob.adjust_hydration(-40)
+			if(prob(10))
+				to_chat(affected_mob, span_danger("The pain in your stomach is getting unbearable..."))
+				affected_mob.adjust_temppain(50)
 	return
 
 /datum/disease/fungosis

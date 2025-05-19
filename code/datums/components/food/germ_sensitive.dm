@@ -6,6 +6,7 @@
 /// Possible diseases
 GLOBAL_LIST_INIT(floor_diseases, list(
 	/datum/disease/gutworms = 3,
+	/datum/disease/cholera = 1,
 	/datum/disease/cold = 1,
 ))
 

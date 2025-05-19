@@ -229,6 +229,9 @@ Behavior that's still missing from this component that original food items had t
 		var/list/types = bitfield_to_list(foodtypes, FOOD_FLAGS)
 		examine_list += span_notice("It is [LOWER_TEXT(english_list(types))].")
 
+	if(foodtypes & RAW)
+		examine_list += span_warning("This raw food may harbor pathogens.")
+
 	var/quality = get_perceived_food_quality(user)
 	if(quality > 0)
 		var/quality_label = GLOB.food_quality_description[quality]
