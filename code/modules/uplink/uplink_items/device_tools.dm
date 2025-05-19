@@ -111,3 +111,9 @@
 	desc = "An antenna needed for building a sociostability destabilizer. You'll have to procure all the rest of the (difficult to acquire) parts, but at least this one is the hardest one to find."
 	item = /obj/item/halflife/antenna
 	cost = 2
+
+/datum/uplink_item/device_tools/headset
+	name = "Headset"
+	desc = "Need a headset quick for communication? We've got you covered."
+	item = /obj/item/radio/headset
+	cost = 1

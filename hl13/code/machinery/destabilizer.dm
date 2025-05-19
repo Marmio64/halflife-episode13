@@ -1,3 +1,6 @@
+/// Whether the district has been cutoff with a super destabilizer
+GLOBAL_VAR_INIT(station_was_cutoff, FALSE)
+
 /obj/machinery/destabilizer
 	name = "destabilizer"
 	desc = "A hacked piece of combine machinery which emits radio signals that disrupt district wide systems and machinery, reducing sociostability over time."
@@ -70,6 +73,7 @@
 	if(detonation_limit <= cumulative_destabilization)
 		to_chat(world, span_bold("The Rebels have completely disabled all District systems, leaving it cutoff and helpless!"))
 		SSticker.force_ending = FORCE_END_ROUND
+		GLOB.station_was_cutoff = TRUE
 		return PROCESS_KILL
 	if((detonation_limit < (cumulative_destabilization/2)) && !mid_alert)
 		mid_alert = TRUE

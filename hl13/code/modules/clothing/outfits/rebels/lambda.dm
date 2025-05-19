@@ -17,7 +17,8 @@
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/usp9mm = 1,
+		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)
 
 /datum/outfit/rebel/pre_equip(mob/living/carbon/human/H)
@@ -30,7 +31,8 @@
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/mp7 = 1,
+		/obj/item/ammo_box/magazine/mp7 = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)
 
 /datum/outfit/rebel/heavy
@@ -41,7 +43,8 @@
 	suit_store = /obj/item/gun/ballistic/automatic/m4a1
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m4a1 = 1,
+		/obj/item/ammo_box/magazine/m4a1 = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)
 
 /datum/outfit/rebel/heavy/ak47
@@ -50,7 +53,8 @@
 	suit_store = /obj/item/gun/ballistic/automatic/ak47
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/ak47 = 1,
+		/obj/item/ammo_box/magazine/ak47 = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)
 
 /datum/outfit/rebel/uplink

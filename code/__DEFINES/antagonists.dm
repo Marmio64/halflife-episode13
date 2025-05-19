@@ -419,3 +419,6 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 
 /// Camera net used by battle royale objective
 #define BATTLE_ROYALE_CAMERA_NET "battle_royale_camera_net"
+
+#define UPRISING_RESULT_WIN 0
+#define UPRISING_RESULT_LOSE 1
