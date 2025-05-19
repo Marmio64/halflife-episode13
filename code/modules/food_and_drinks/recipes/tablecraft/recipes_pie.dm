@@ -130,18 +130,6 @@
 	result = /obj/item/food/pie/grapetart
 	category = CAT_PIE
 
-/datum/crafting_recipe/food/mimetart
-	name = "Mime tart"
-	reqs = list(
-		/datum/reagent/consumable/milk = 5,
-		/datum/reagent/consumable/sugar = 5,
-		/obj/item/food/pie/plain = 1,
-		/datum/reagent/consumable/nothing = 5
-	)
-	result = /obj/item/food/pie/mimetart
-	category = CAT_PIE
-	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
-
 /datum/crafting_recipe/food/berrytart
 	name = "Berry tart"
 	reqs = list(

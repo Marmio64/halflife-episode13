@@ -71,15 +71,6 @@
 /datum/crafting_recipe/food/reaction/soup/misosoup
 	reaction = /datum/chemical_reaction/food/soup/misosoup
 
-/datum/crafting_recipe/food/reaction/soup/slimesoup
-	reaction = /datum/chemical_reaction/food/soup/slimesoup
-
-/datum/crafting_recipe/food/reaction/soup/slimesoup_alt
-	reaction = /datum/chemical_reaction/food/soup/slimesoup/alt
-
-/datum/crafting_recipe/food/reaction/soup/clownstears
-	reaction = /datum/chemical_reaction/food/soup/clownstears
-
 /datum/crafting_recipe/food/reaction/soup/mysterysoup
 	reaction = /datum/chemical_reaction/food/soup/mysterysoup
 
@@ -133,14 +124,3 @@
 
 /datum/crafting_recipe/food/reaction/soup/corn_chowder
 	reaction = /datum/chemical_reaction/food/soup/corn_chowder
-
-// Other
-
-/datum/crafting_recipe/food/wishsoup
-	name = "Wish soup"
-	reqs = list(
-		/datum/reagent/water = 20,
-		/obj/item/reagent_containers/cup/bowl = 1
-	)
-	result= /obj/item/food/bowled/wish
-	category = CAT_SOUP

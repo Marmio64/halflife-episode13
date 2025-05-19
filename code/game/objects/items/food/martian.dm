@@ -1251,7 +1251,7 @@
 
 /obj/item/food/ballpark_pretzel
 	name = "ballpark pretzel"
-	desc = "A classic German bread, transformed by the hand of American imperialism into a game-day snack, and then carried to the Red Planet on the backs of Japanese settlers. How multicultural."
+	desc = "A classic German bread, transformed by Americans into a game-day snack."
 	icon = 'icons/obj/food/martian.dmi'
 	icon_state = "ballpark_pretzel"
 	food_reagents = list(

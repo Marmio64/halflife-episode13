@@ -82,15 +82,6 @@
 	result = /obj/item/food/butterbiscuit
 	category = CAT_BREAD
 
-/datum/crafting_recipe/food/butterdog
-	name = "Butterdog"
-	reqs = list(
-		/obj/item/food/bun = 1,
-		/obj/item/food/butter = 1,
-		)
-	result = /obj/item/food/butterdog
-	category = CAT_BREAD
-
 /datum/crafting_recipe/food/baguette
 	name = "Baguette"
 	time = 40
@@ -120,16 +111,6 @@
 	)
 	result = /obj/item/food/raw_croissant
 	category = CAT_BREAD
-
-/datum/crafting_recipe/food/throwing_croissant
-	name = "Throwing croissant"
-	reqs = list(
-		/obj/item/food/croissant = 1,
-		/obj/item/stack/rods = 1,
-	)
-	result = /obj/item/food/croissant/throwing
-	category = CAT_BREAD
-	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
 
 ////////////////////////////////////////////////TOAST////////////////////////////////////////////////
 

@@ -1,9 +1,6 @@
 /obj/item/book/granter/crafting_recipe/combat_baking
 	name = "the anarchist's cookbook"
 	desc = "A widely illegal recipe book, which will teach you how to bake croissants to die for."
-	crafting_recipe_types = list(
-		/datum/crafting_recipe/food/throwing_croissant,
-	)
 	icon_state = "cooking_learing_illegal"
 	remarks = list(
 		"\"Austrian? Not French?\"",
