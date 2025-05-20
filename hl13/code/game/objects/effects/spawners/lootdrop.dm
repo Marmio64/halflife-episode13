@@ -157,7 +157,7 @@
 				/obj/item/reagent_containers/cup/glass/waterbottle/empty = 2,
 				/obj/item/halflife/nutrient_bar_wrapping/water,
 				/obj/item/storage/halflife/hand_box/flour,
-				/obj/item/food/halflife/nutrient_bar/pork,
+				/obj/item/halflife/nutrient_bar_wrapping/pork,
 				/obj/item/reagent_containers/cup/halflife/sustenance_dust,
 				/obj/item/food/canned/halflife/seafood,
 				/obj/item/food/canned/halflife/seafood/expired,

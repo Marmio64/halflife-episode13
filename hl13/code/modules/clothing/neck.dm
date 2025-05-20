@@ -31,6 +31,23 @@
 	if (allowed(user))
 		unlock()
 
+/obj/item/clothing/neck/anti_magic_collar/emag_act(mob/user, obj/item/card/emag/emag_card)
+	if(!lockactive)
+		to_chat(user, span_notice("The collar isn't locked. No point in zapping it."))
+		return
+
+	var/mob/living/carbon/human/H = user
+
+	if (!H)
+		return
+
+	var/obj/item/bodypart/head/head = H.get_bodypart("head")
+	H.apply_damage(40, BURN, head)
+	to_chat(H, span_userdanger("You feel a sharp sensation as electricity jumps from the collar into your skin, frying your flesh. At the least, it seems the collar has unlocked."))
+	H.emote("scream")
+	unlock()
+	return TRUE
+
 /obj/item/clothing/neck/anti_magic_collar/proc/unlock()
 	if(!previously_unlocked)
 		SSsociostability.modifystability(-50) //free vorts are generally not good for stability

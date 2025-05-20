@@ -120,9 +120,6 @@
 			return TRUE
 		if(EXPLODE_HEAVY)
 			dismantle_wall(prob(50), TRUE)
-		if(EXPLODE_LIGHT)
-			if (prob(hardness))
-				dismantle_wall(0,1)
 
 	if(!density)
 		return ..()

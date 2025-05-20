@@ -253,9 +253,10 @@
 
 /obj/structure/reagent_dispensers/fueltank
 	name = "fuel tank"
-	desc = "A dangerous looking red barrel filled with explosive fuel. Do not consume."
+	desc = "A dangerous looking red barrel filled with explosive fuel. Do not consume. It looks like if you're going to use this fuel for something like crafting, you'll first have to get a container and scoop some out..."
 	icon_state = "fuel_fools"
 	reagent_id = /datum/reagent/fuel
+	tank_volume = 250
 	openable = TRUE
 	accepts_rig = TRUE
 	climbable = TRUE

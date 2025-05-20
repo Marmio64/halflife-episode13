@@ -1,7 +1,8 @@
 /datum/round_event_control/fake_virus
 	name = "Fake Virus"
 	typepath = /datum/round_event/fake_virus
-	weight = 20
+	weight = 5
+	max_occurrences = 1
 	category = EVENT_CATEGORY_HEALTH
 	description = "Some crewmembers suffer from temporary hypochondria."
 

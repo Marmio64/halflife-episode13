@@ -64,7 +64,7 @@
 /datum/species/vortigaunt/elder
 	name = "Elder Vortigaunt"
 	id = SPECIES_VORTIGAUNT_ELDER
-	damage_modifier = 20
+	damage_modifier = 25
 	var/datum/action/cooldown/spell/aoe/repulse/wizard/vort/vortrepulse
 	var/datum/action/cooldown/spell/forcewall/vort/vortwall
 

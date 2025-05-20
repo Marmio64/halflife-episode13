@@ -342,7 +342,7 @@
 	threshold_penalty = 40
 	status_effect_type = /datum/status_effect/wound/burn/flesh/severe
 	treatable_by = list(/obj/item/flashlight/pen/paramedic, /obj/item/stack/medical/ointment, /obj/item/stack/medical/mesh)
-	infestation_rate = 0.06 // hl13 edit
+	infestation_rate = 0.04 // hl13 edit
 	flesh_damage = 12.5
 	scar_keyword = "burnsevere"
 
@@ -375,7 +375,7 @@
 	threshold_penalty = 80
 	status_effect_type = /datum/status_effect/wound/burn/flesh/critical
 	treatable_by = list(/obj/item/flashlight/pen/paramedic, /obj/item/stack/medical/ointment, /obj/item/stack/medical/mesh)
-	infestation_rate = 0.07 // HL13 edit
+	infestation_rate = 0.05 // HL13 edit
 	flesh_damage = 20
 	scar_keyword = "burncritical"
 

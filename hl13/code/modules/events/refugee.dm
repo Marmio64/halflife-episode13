@@ -1,9 +1,9 @@
 /datum/round_event_control/refugee
-	name = "Spawn Refugee"
+	name = "Spawn Armed Refugee"
 	typepath = /datum/round_event/ghost_role/refugee
 	max_occurrences = 1
 	min_players = 12
-	weight = 5
+	weight = 8
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns a refugee."
 	min_wizard_trigger_potency = 6
@@ -11,7 +11,7 @@
 
 /datum/round_event/ghost_role/refugee
 	minimum_required = 1
-	role_name = "refugee"
+	role_name = "armed refugee"
 	fakeable = FALSE
 
 /datum/round_event/ghost_role/refugee/spawn_role()
@@ -32,7 +32,7 @@
 	var/mob/living/carbon/human/S = new ((pick(spawn_locs)))
 	player_mind.transfer_to(S)
 	player_mind.set_assigned_role(SSjob.get_job_type(/datum/job/prisoner))
-	player_mind.special_role = "Refugee"
+	player_mind.special_role = "Armed Refugee"
 	S.equipOutfit(/datum/outfit/job/refugee/armed)
 	message_admins("[ADMIN_LOOKUPFLW(S)] has been made into a Refugee by an event.")
 	S.log_message("was spawned as a Refugee by an event.", LOG_GAME)

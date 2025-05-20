@@ -3,7 +3,7 @@
 	typepath = /datum/round_event/ghost_role/blackmarket
 	max_occurrences = 1
 	min_players = 15
-	weight = 8
+	weight = 5
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns a black market dealer."
 	min_wizard_trigger_potency = 6

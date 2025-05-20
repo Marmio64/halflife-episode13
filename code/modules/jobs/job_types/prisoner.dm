@@ -41,6 +41,7 @@
 	name = "Outlands Refugee with items pouch"
 	jobtype = /datum/job/prisoner
 
+	id = /obj/item/card/id/advanced/halflife/orange
 	id_trim = /datum/id_trim/job/prisoner
 	uniform = /obj/item/clothing/under/citizen/refugee
 
@@ -51,7 +52,7 @@
 /datum/outfit/job/refugee/randomitems
 	name = "Outlands Refugee with a random item"
 	jobtype = /datum/job/prisoner
-	id = /obj/item/card/id/advanced/halflife/grey
+	id = /obj/item/card/id/advanced/halflife/orange
 
 	id_trim = /datum/id_trim/job/prisoner
 	uniform = /obj/item/clothing/under/citizen/refugee
@@ -90,12 +91,15 @@
 	name = "Armed Outlands Refugee"
 	jobtype = /datum/job/prisoner
 
-	id = null
+	id = /obj/item/card/id/advanced/halflife/orange
+	id_trim = /datum/id_trim/job/prisoner
 	uniform = /obj/item/clothing/under/citizen/refugee
 	suit = /obj/item/clothing/suit/armor/armored
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/makeshift
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
 
 	r_pocket = /obj/item/flashlight
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
 
-	belt = /obj/item/storage/belt/pouch
+	belt = /obj/item/storage/belt/pouch/refugee

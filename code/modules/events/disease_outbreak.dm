@@ -108,7 +108,6 @@
 		)
 		var/datum/disease/fake_virus = pick(virus_candidates)
 		illness_type = initial(fake_virus.name)
-	priority_announce("Warning, confirmed viral biosigns detected. All citizens must comply with outbreak procedures.", "Viral Alert", ANNOUNCER_OUTBREAK7) //hl13 edit
 
 /datum/round_event/disease_outbreak/setup()
 	announce_when = ADV_ANNOUNCE_DELAY

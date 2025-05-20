@@ -27,23 +27,12 @@
 	time = 6 SECONDS
 	category = CAT_WEAPON_AMMO
 
-/datum/crafting_recipe/pistolbullet
-	name = "9mm Bullet"
-	result = /obj/item/ammo_casing/c9mm
-	reqs = list(/obj/item/stack/sheet/iron = 1,
-				/obj/item/stack/cable_coil = 1,
-				/datum/reagent/fuel = 2)
-	tool_behaviors = list(TOOL_SCREWDRIVER)
-	time = 0.5 SECONDS
-	category = CAT_WEAPON_AMMO
-	crafting_interface = CRAFTING_BENCH_RELOADING
-
 /datum/crafting_recipe/pistolmag
 	name = "9mm USP Match Full Magazine"
 	result = /obj/item/ammo_box/magazine/usp9mm
 	reqs = list(/obj/item/stack/bulletcasings = 3,
-				/obj/item/stack/cable_coil = 18,
-				/datum/reagent/fuel = 35)
+				/obj/item/stack/cable_coil = 15,
+				/datum/reagent/fuel = 30)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 6 SECONDS
 	category = CAT_WEAPON_AMMO
@@ -60,14 +49,14 @@
 	category = CAT_WEAPON_RANGED
 	crafting_interface = CRAFTING_BENCH_WEAPONS
 
-/datum/crafting_recipe/magnumbullet
-	name = "357 Magnum Bullet"
-	result = /obj/item/ammo_casing/a357
-	reqs = list(/obj/item/stack/sheet/iron = 1,
-				/obj/item/stack/cable_coil = 1,
-				/datum/reagent/fuel = 5)
+/datum/crafting_recipe/magnumloader
+	name = "357 Magnum Speed Loader"
+	result = /obj/item/ammo_box/colta357
+	reqs = list(/obj/item/stack/bulletcasings = 2,
+				/obj/item/stack/cable_coil = 6,
+				/datum/reagent/fuel = 25)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
-	time = 0.5 SECONDS
+	time = 10 SECONDS
 	category = CAT_WEAPON_AMMO
 	crafting_interface = CRAFTING_BENCH_RELOADING
 
@@ -82,23 +71,12 @@
 	category = CAT_WEAPON_RANGED
 	crafting_interface = CRAFTING_BENCH_WEAPONS
 
-/datum/crafting_recipe/mp7bullet
-	name = "4.6x30mm Bullet"
-	result = /obj/item/ammo_casing/c46x30mm
-	reqs = list(/obj/item/stack/sheet/iron = 1,
-				/obj/item/stack/cable_coil = 1,
-				/datum/reagent/fuel = 1)
-	tool_behaviors = list(TOOL_SCREWDRIVER)
-	time = 0.3 SECONDS
-	category = CAT_WEAPON_AMMO
-	crafting_interface = CRAFTING_BENCH_RELOADING
-
 /datum/crafting_recipe/mp7mag
 	name = "4.6x30mm MP7 Full Magazine"
 	result = /obj/item/ammo_box/magazine/mp7
 	reqs = list(/obj/item/stack/bulletcasings = 9,
 				/obj/item/stack/cable_coil = 35,
-				/datum/reagent/fuel = 35)
+				/datum/reagent/fuel = 30)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 7 SECONDS
 	category = CAT_WEAPON_AMMO
@@ -126,23 +104,12 @@
 	category = CAT_WEAPON_RANGED
 	crafting_interface = CRAFTING_BENCH_WEAPONS
 
-/datum/crafting_recipe/m4a1bullet
-	name = "5.56 Bullet"
-	result = /obj/item/ammo_casing/a556
-	reqs = list(/obj/item/stack/sheet/iron = 2,
-				/obj/item/stack/cable_coil = 1,
-				/datum/reagent/fuel = 5)
-	tool_behaviors = list(TOOL_SCREWDRIVER)
-	time = 0.5 SECONDS
-	category = CAT_WEAPON_AMMO
-	crafting_interface = CRAFTING_BENCH_RELOADING
-
 /datum/crafting_recipe/m4a1mag
 	name = "5.56 M4A1 Full Magazine"
 	result = /obj/item/ammo_box/magazine/m4a1
 	reqs = list(/obj/item/stack/bulletcasings = 6,
 				/obj/item/stack/cable_coil = 30,
-				/datum/reagent/fuel = 45)
+				/datum/reagent/fuel = 30)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 12 SECONDS
 	category = CAT_WEAPON_AMMO
