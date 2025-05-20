@@ -10,17 +10,6 @@
 "aH" = (
 /turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/escape)
-"bi" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/power/shuttle_engine/heater,
-/turf/open/floor/plating/indoor/metal/plate,
-/area/shuttle/escape)
-"bk" = (
-/obj/machinery/power/shuttle_engine/propulsion,
-/turf/open/floor/plating/indoor/metal/plate,
-/area/shuttle/escape)
 "bu" = (
 /obj/structure/halflife/trash/cardboard{
 	dir = 4
@@ -258,6 +247,7 @@
 "NY" = (
 /obj/effect/turf_decal/box/red,
 /obj/item/storage/halflife/suitcase,
+/obj/machinery/light/small/red/directional/north,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/escape)
 "QN" = (
@@ -373,8 +363,8 @@ aH
 rw
 mW
 lJ
-bi
-bk
+lJ
+lJ
 "}
 (3,1,1) = {"
 HP
@@ -408,9 +398,9 @@ lJ
 Jo
 Mv
 Kv
+sh
 lJ
-bi
-bk
+lJ
 "}
 (4,1,1) = {"
 HP
@@ -443,10 +433,10 @@ NY
 tP
 QN
 aH
+aH
 kq
 lJ
-bi
-bk
+lJ
 "}
 (5,1,1) = {"
 HP
@@ -480,9 +470,9 @@ lJ
 Ek
 bu
 sh
+sh
 lJ
-bi
-bk
+lJ
 "}
 (6,1,1) = {"
 aa
@@ -517,8 +507,8 @@ aH
 ar
 hC
 lJ
-bi
-bk
+lJ
+lJ
 "}
 (7,1,1) = {"
 aa

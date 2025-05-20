@@ -65,6 +65,12 @@
 	max_integrity = 1500
 	explosive_resistance = 2
 
+/turf/closed/wall/halflife/metal/strong/train
+	icon = 'hl13/icons/turf/walls/train.dmi'
+	desc = "A green metal train wall."
+	icon_state = "train1-0"
+	base_icon_state = "train1"
+
 /turf/closed/wall/halflife/metal/weak
 	max_integrity = 300
 	slicing_duration = 100

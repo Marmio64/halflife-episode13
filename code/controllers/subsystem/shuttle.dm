@@ -260,12 +260,12 @@ SUBSYSTEM_DEF(shuttle)
 		return //no players no autoevac
 
 	if(alive / total <= threshold)
-		var/msg = "Automatically dispatching emergency shuttle due to crew death."
+		var/msg = "Automatically dispatching emergency train due to citizen death."
 		message_admins(msg)
 		log_shuttle("[msg] Alive: [alive], Roundstart: [total], Threshold: [threshold]")
 		emergency_no_recall = TRUE
 		priority_announce(
-			text = "Catastrophic casualties detected: crisis shuttle protocols activated - jamming recall signals across all frequencies.",
+			text = "Catastrophic casualties detected: crisis train protocols activated - jamming recall signals across all frequencies.",
 			title = "Emergency Shuttle Dispatched",
 			sound = ANNOUNCER_SHUTTLECALLED,
 			sender_override = "Transfer Train Uplink Alert",
@@ -488,7 +488,7 @@ SUBSYSTEM_DEF(shuttle)
 	if(callShuttle)
 		if(EMERGENCY_IDLE_OR_RECALLED)
 			emergency.request(null, set_coefficient = ALERT_COEFF_AUTOEVAC_NORMAL)
-			log_shuttle("There is no means of calling the emergency shuttle anymore. Shuttle automatically called.")
+			log_shuttle("There is no means of calling the emergency train anymore. Train automatically called.")
 			message_admins("All the communications consoles were destroyed and all AIs are inactive. Shuttle called.")
 
 /datum/controller/subsystem/shuttle/proc/registerHostileEnvironment(datum/bad)

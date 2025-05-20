@@ -17,7 +17,7 @@
 
 /datum/hallucination/station_message/shuttle_dock/start()
 	priority_announce(
-					text = "[SSshuttle.emergency] has docked with the station. You have [DisplayTimeText(SSshuttle.emergency_dock_time)] to board the emergency shuttle.",
+					text = "[SSshuttle.emergency] has arrived at the train station. You have [DisplayTimeText(SSshuttle.emergency_dock_time)] to board the transfer train.",
 					title = "Emergency Shuttle Arrival",
 					sound = ANNOUNCER_SHUTTLEDOCK,
 					sender_override = "Transfer Train Uplink Alert",

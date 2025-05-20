@@ -67,9 +67,6 @@
 /turf/open/floor/plating/indoor/woodc/mosaic
 	icon_state = "wood_mosaic"
 
-/turf/open/floor/plating/indoor/grimy
-	icon_state = "grimy"
-
 /turf/open/floor/plating/indoor/showroom
 	icon_state = "showroomfloor"
 
@@ -78,9 +75,6 @@
 
 /turf/open/floor/plating/indoor/sterilesquares
 	icon_state = "sterilesquares"
-
-/turf/open/floor/plating/indoor/greentile
-	icon_state = "greentile"
 
 /turf/open/floor/plating/indoor/grooved
 	icon_state = "grooved"
@@ -171,6 +165,12 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	icon_state = "steel_tiles"
 	desc = "Metal flooring."
+
+/turf/open/floor/plating/indoor/metal/train
+	icon_state = "train_floor"
+
+/turf/open/floor/plating/indoor/metal/train/inner
+	icon_state = "train_carpet"
 
 /turf/open/floor/plating/indoor/metal/plate
 	icon_state = "steel_solid"

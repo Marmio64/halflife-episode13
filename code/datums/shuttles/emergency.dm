@@ -54,14 +54,14 @@
 /datum/map_template/shuttle/emergency/loyalist
 	suffix = "loyalist"
 	name = "Loyalist Transfer Train"
-	credit_cost = CARGO_CRATE_VALUE * 4
+	credit_cost = CARGO_CRATE_VALUE * 8
 	description = "Seperated in two sections, this train lets loyalists transfer in comfort while all the undesirables rot."
 	occupancy_limit = "20"
 
 /datum/map_template/shuttle/emergency/razortrain
 	suffix = "razortrain"
 	name = "Transport Razor Transfer Train"
-	credit_cost = CARGO_CRATE_VALUE * 3
+	credit_cost = CARGO_CRATE_VALUE * 8
 	description = "A borrowed razor transportation train. More heavy duty than civillian cargo and transport trains. Suitable for keeping all citizens seperated from one another, and for onsite stalkerizing."
 	occupancy_limit = "25"
 
