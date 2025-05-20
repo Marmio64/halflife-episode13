@@ -4,14 +4,14 @@
 #define SCANMODE_COUNT 2 // Update this to be the number of scan modes if you add more
 
 /obj/item/healthanalyzer
-	name = "health analyzer"
+	name = "combine vitals scanner"
 	icon = 'icons/obj/devices/scanner.dmi'
 	icon_state = "health"
 	inhand_icon_state = "healthanalyzer"
 	worn_icon_state = "healthanalyzer"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	desc = "A hand-held body scanner capable of distinguishing vital signs of the subject. Has a side button to scan for chemicals, and can be toggled to scan wounds."
+	desc = "A combine manufactured advanced health analyzing device, which can display tissue damage alongside other advanced functions. Has a side button to scan for chemicals, and can be toggled to scan wounds."
 	obj_flags = CONDUCTS_ELECTRICITY
 	item_flags = NOBLUDGEON
 	slot_flags = ITEM_SLOT_BELT
@@ -62,6 +62,14 @@
 		return NONE
 
 	var/mob/living/M = interacting_with
+
+	//hl13 edit start, you've gotta be smart to operate the scanner effectively
+	if(user.get_stat_level(STATKEY_INT) < 12)
+		to_chat(user, span_notice("You start fumbling with the scanner, not exactly sure how you use it correctly..."))
+		if(!do_after(user, 5 SECONDS, src))
+			to_chat(user, span_warning("You didn't finish scanning."))
+			return
+	//hl13 edit end
 
 	. = ITEM_INTERACT_SUCCESS
 

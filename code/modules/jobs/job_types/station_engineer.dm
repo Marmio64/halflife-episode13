@@ -68,3 +68,7 @@
 	head = null
 	mask = /obj/item/clothing/mask/breath
 	internals_slot = ITEM_SLOT_SUITSTORE
+
+/datum/outfit/job/engineer/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+	. = ..()
+	user.change_stat(STATKEY_INT, 1)

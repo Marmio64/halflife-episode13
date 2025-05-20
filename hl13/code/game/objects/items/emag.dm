@@ -18,7 +18,8 @@
 	if(charges < 1)
 		to_chat(user, span_notice("It's out of charge, try recharging it with uranium."))
 		return
-	if(!do_after(user, rand(5, 10) SECONDS, interacting_with))
+	var/hack_time = (rand(10, 15) SECONDS) - ((user.get_stat_level(STATKEY_INT) - 10) SECONDS) //smart people hack faster, -1 second per INT point. Stupid people will hack slower.
+	if(!do_after(user, hack_time, interacting_with))
 		return
 	playsound(src, 'hl13/sound/effects/zap1.ogg', 20, 1)
 	log_combat(user, interacting_with, "attempted to emag")

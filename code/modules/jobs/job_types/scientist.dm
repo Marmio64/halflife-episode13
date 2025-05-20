@@ -68,3 +68,8 @@
 
 /datum/outfit/job/scientist/consistent/try_giving_horrible_tie()
 	return
+
+/datum/outfit/job/scientist/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+	. = ..()
+	user.change_stat(STATKEY_INT, 3)
+	user.change_stat(STATKEY_STR, -2)

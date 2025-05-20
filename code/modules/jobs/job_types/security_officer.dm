@@ -13,8 +13,6 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "SECURITY_OFFICER"
 
-	skills = list(/datum/skill/firearms = SKILL_EXP_APPRENTICE, /datum/skill/athletics = SKILL_EXP_JOURNEYMAN)
-
 	outfit = /datum/outfit/job/security
 	plasmaman_outfit = /datum/outfit/plasmaman/security
 
@@ -65,11 +63,12 @@ GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, S
  */
 GLOBAL_LIST_EMPTY(security_officer_distribution)
 
-
+/*
 /datum/job/security_officer/after_roundstart_spawn(mob/living/spawning, client/player_client)
 	. = ..()
 	if(ishuman(spawning))
 		setup_department(spawning, player_client)
+*/
 
 /*
 /datum/job/security_officer/after_latejoin_spawn(mob/living/spawning)
@@ -235,12 +234,24 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	. = ..()
 	user.faction += "combine"
 
+	user.change_stat(STATKEY_DEX, 1)
+
 	var/currentrankpoints = 0
 
 	var/client/user_client = GLOB.directory[ckey(user.mind?.key)]
 
+	var/department = null
+
 	if(user_client)
 		currentrankpoints = user_client.prefs.read_preference(/datum/preference/numeric/rankpoints)
+
+		department = user_client.prefs.read_preference(/datum/preference/choiced/security_department)
+
+
+	if(department)
+		if(department == SEC_DEPT_MEDICAL)
+			user.change_stat(STATKEY_INT, 3) //Guarantee they can use an analyzer, at the cost of strength
+			user.change_stat(STATKEY_STR, -2)
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id

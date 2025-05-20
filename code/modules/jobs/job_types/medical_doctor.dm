@@ -66,3 +66,8 @@
 	mask = /obj/item/clothing/mask/breath/medical
 	r_pocket = /obj/item/flashlight/pen
 	internals_slot = ITEM_SLOT_SUITSTORE
+
+/datum/outfit/job/doctor/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+	. = ..()
+	user.change_stat(STATKEY_INT, 3)
+	user.change_stat(STATKEY_STR, -2)

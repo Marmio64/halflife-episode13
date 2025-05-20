@@ -13,8 +13,6 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "WARDEN"
 
-	skills = list(/datum/skill/firearms = SKILL_EXP_APPRENTICE, /datum/skill/athletics = SKILL_EXP_JOURNEYMAN)
-
 	outfit = /datum/outfit/job/warden
 	plasmaman_outfit = /datum/outfit/plasmaman/warden
 
@@ -54,6 +52,8 @@
 /datum/outfit/job/warden/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
 	user.faction += "combine"
+
+	user.change_stat(STATKEY_DEX, 1)
 
 	var/currentrankpoints = 0
 

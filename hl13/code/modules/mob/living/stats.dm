@@ -235,6 +235,50 @@
 	UPDATE_INTELLIGENCE()
 	UPDATE_DEXTERITY()
 
+/mob/living/proc/stat_to_description(statinput = 10)
+	if(18 < statinput)
+		return "Extraordinary"
+
+	else if(14 < statinput)
+		return "Great"
+
+	else if(12 < statinput)
+		return "Honed"
+
+	else if(10 < statinput)
+		return "Higher than Average"
+
+	else if(10 == statinput)
+		return "Average"
+
+	else if(8 < statinput)
+		return "Lower than Average"
+
+	else if(6 < statinput)
+		return "Dwindled"
+
+	else if(4 < statinput)
+		return "Very Poor"
+
+	else if(-INFINITY < statinput)
+		return "Terrible"
+
+	else
+		return "Unknown"
+
+/mob/living/verb/check_stats()
+	set name = "Check Stats"
+	set category = "IC"
+
+	var/strength = get_stat_level(STATKEY_STR)
+	var/intelligence = get_stat_level(STATKEY_INT)
+	var/dexterity = get_stat_level(STATKEY_DEX)
+
+	to_chat(src, span_notice("Your strength is [stat_to_description(strength)]."))
+	to_chat(src, span_notice("Your intelligence is [stat_to_description(intelligence)]"))
+	to_chat(src, span_notice("Your dexterity is [stat_to_description(dexterity)]"))
+
+
 #undef UPDATE_STRENGTH
 #undef UPDATE_INTELLIGENCE
 #undef UPDATE_DEXTERITY

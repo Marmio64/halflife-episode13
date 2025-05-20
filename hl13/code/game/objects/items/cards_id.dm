@@ -42,3 +42,13 @@
 /obj/item/card/id/advanced/halflife/combine/four
 	icon_state = "id_combine4"
 	wildcard_slots = WILDCARD_LIMIT_CENTCOM
+
+/obj/item/card/id/advanced/four/ert
+	name = "\improper Overwatch ID"
+	desc = "An ID straight from Overwatch."
+	icon_state = "card_centcom"
+	assigned_icon_state = "assigned_centcom"
+	//registered_name = JOB_CENTCOM
+	registered_age = null
+	trim = /datum/id_trim/centcom
+	wildcard_slots = WILDCARD_LIMIT_CENTCOM

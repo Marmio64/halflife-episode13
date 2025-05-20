@@ -42,11 +42,17 @@
 	vorttelepathy = new(C)
 	vorttelepathy.Grant(C)
 
+	C.change_stat(STATKEY_INT, 3) //Vorts are naturally very intelligent
+	C.change_stat(STATKEY_DEX, -2) //but not very dextrous
+
 /datum/species/vortigaunt/on_species_loss(mob/living/carbon/C)
 	..()
 	galunga.Remove(C)
 	vortheal.Remove(C)
 	vorttelepathy.Remove(C)
+
+	C.change_stat(STATKEY_INT, -3)
+	C.change_stat(STATKEY_DEX, 2)
 
 /datum/species/vortigaunt/get_scream_sound(mob/living/carbon/human/vortigaunt)
 	return pick(

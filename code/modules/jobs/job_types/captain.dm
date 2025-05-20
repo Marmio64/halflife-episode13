@@ -62,7 +62,6 @@
 
 /datum/job/captain/after_spawn(mob/living/carbon/human/H, mob/M)
 	. = ..()
-	H.faction += "combine"
 	ADD_TRAIT(H, TRAIT_BAD_AIM, JOB_TRAIT)
 
 /datum/job/captain/get_radio_information()
@@ -96,3 +95,10 @@
 	head = null
 	mask = /obj/item/clothing/mask/gas/atmos/captain
 	internals_slot = ITEM_SLOT_SUITSTORE
+
+/datum/outfit/job/captain/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+	. = ..()
+	user.faction += "combine"
+
+	user.change_stat(STATKEY_INT, 2)
+	user.change_stat(STATKEY_STR, -1)

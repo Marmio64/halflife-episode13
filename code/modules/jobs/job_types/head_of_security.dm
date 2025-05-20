@@ -16,8 +16,6 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "HEAD_OF_SECURITY"
 
-	skills = list(/datum/skill/firearms = SKILL_EXP_APPRENTICE, /datum/skill/athletics = SKILL_EXP_JOURNEYMAN)
-
 	outfit = /datum/outfit/job/hos
 	plasmaman_outfit = /datum/outfit/plasmaman/head_of_security
 	departments_list = list(
@@ -74,7 +72,6 @@
 
 	r_pocket = /obj/item/hl2key/townhall
 
-	skillchips = list(/obj/item/skillchip/aiming, /obj/item/skillchip/fitness) //The DvL comes pre-augmented
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
 
 /datum/outfit/job/hos/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
@@ -98,6 +95,9 @@
 
 		if(94 < currentrankpoints)
 			ID.registered_account.requisition_points += 1
+
+	user.change_stat(STATKEY_DEX, 2)
+	user.change_stat(STATKEY_STR, 2)
 
 /datum/outfit/job/hos/mod
 	name = "Head of Security (MODsuit)"

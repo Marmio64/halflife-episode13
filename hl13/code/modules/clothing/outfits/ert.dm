@@ -1,7 +1,7 @@
 /datum/outfit/centcom/ert/overwatch
 	name = "OTA Unit"
 
-	id = /obj/item/card/id/advanced/halflife/combine/four
+	id = /obj/item/card/id/advanced/four/ert
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
 	uniform = /obj/item/clothing/under/combine/overwatch
@@ -26,6 +26,9 @@
 	H.eye_color_right = "#b9b9b9"
 	H.update_body()
 	ADD_TRAIT(H, TRAIT_NOHUNGER, OUTFIT_TRAIT) //OTA dont need to eat or drink
+
+	H.change_stat(STATKEY_DEX, 2)
+	H.change_stat(STATKEY_STR, 3)
 
 /datum/outfit/centcom/ert/overwatch/spas12
 	name = "OTA Shotgun Unit"
@@ -80,7 +83,7 @@
 /datum/outfit/centcom/ert/riotpolice
 	name = "Metropolice Riot Unit"
 
-	id = /obj/item/card/id/advanced/halflife/combine/one
+	id = /obj/item/card/id/advanced/four/ert
 	ears = /obj/item/radio/headset/civilprotection
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
@@ -106,6 +109,8 @@
 	H.set_hairstyle("Bald") //this will call update_body_parts()
 	H.update_body()
 
+	H.change_stat(STATKEY_DEX, 1)
+
 /datum/outfit/centcom/ert/riotpolice/pistol
 	name = "Metropolice Riot Pistol Unit"
 
@@ -116,7 +121,7 @@
 /datum/outfit/centcom/ert/conscript
 	name = "Conscript Soldier"
 
-	id = /obj/item/card/id/advanced/halflife/combine/one
+	id = /obj/item/card/id/advanced/four/ert
 	ears = /obj/item/radio/headset/civilprotection
 	uniform = /obj/item/clothing/under/syndicate/camo
 	gloves = /obj/item/clothing/gloves/fingerless
@@ -147,6 +152,8 @@
 	H.set_hairstyle("Crewcut") //this will call update_body_parts()
 	H.update_body()
 
+	H.change_stat(STATKEY_DEX, 1)
+
 /datum/outfit/centcom/ert/conscript/officer
 	name = "Conscript Officer"
 
@@ -165,7 +172,7 @@
 /datum/outfit/centcom/ert/administrative
 	name = "Combine Administrative Represenative"
 
-	id = /obj/item/card/id/advanced/halflife/combine/four
+	id = /obj/item/card/id/advanced/four/ert
 	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
 	uniform = /obj/item/clothing/under/halflife/blacksuit
 	shoes = /obj/item/clothing/shoes/laceup
@@ -187,3 +194,7 @@
 	H.set_facial_hairstyle("Shaved", update = FALSE)
 	H.set_hairstyle("Crewcut") //this will call update_body_parts()
 	H.update_body()
+
+	H.change_stat(STATKEY_INT, 3)
+
+	H.change_stat(STATKEY_STR, -1)

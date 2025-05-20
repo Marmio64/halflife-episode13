@@ -15,7 +15,7 @@
 	var/hunger_loss = HUNGER_FACTOR / 8
 	if(move_intent == MOVE_INTENT_RUN)
 		hunger_loss *= 2
-		var/staminatolose = 1.1
+		var/staminatolose = 1.3
 		if(ishuman(src))
 			var/mob/living/carbon/human/H = src
 			var/athletics_skill = H.mind?.get_skill_level(/datum/skill/athletics)
@@ -45,6 +45,12 @@
 				staminatolose += 0.4
 			else
 				staminatolose += 0.2 //spartan trait holders take less of a run stamina penalty
+
+		var/dexterity = (get_stat_level(STATKEY_DEX) - 10)
+
+		staminatolose -= dexterity/20 // 11 dexterity = -0.05 staminatolose, 9 = -0.05, etc
+
+		staminatolose = clamp(staminatolose, 0.1, 5)
 
 		adjustStaminaLoss(staminatolose)
 		if(getStaminaLoss() > 60) //automatically stop running once you're very tired.

@@ -52,10 +52,6 @@
 /datum/job/head_of_personnel/get_captaincy_announcement(mob/living/captain)
 	return "Due to staffing shortages, newly promoted Acting District Administrator [captain.real_name] assuming command."
 
-/datum/job/head_of_personnel/after_spawn(mob/living/carbon/human/H, mob/M)
-	. = ..()
-	H.faction += "combine"
-
 /datum/outfit/job/hop
 	name = "Labor Lead"
 	jobtype = /datum/job/head_of_personnel
@@ -78,6 +74,12 @@
 	for(var/mob/living/basic/pet/dog/corgi/ian/staff_pet in GLOB.dead_mob_list)
 		. += list(/datum/reagent/medicine/strange_reagent = 20)
 		break
+
+/datum/outfit/job/head_of_personnel/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+	. = ..()
+	user.faction += "combine"
+
+	user.change_stat(STATKEY_INT, 1)
 
 /obj/item/paper/fluff/ids_for_dummies
 	name = "Memo: New IDs and You"

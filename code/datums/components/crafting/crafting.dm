@@ -251,8 +251,13 @@
 			return ", must be made on a tram!"
 
 	//If we're a mob we'll try a do_after; non mobs will instead instantly construct the item
-	if(ismob(crafter) && !do_after(crafter, recipe.time, target = crafter))
-		return "."
+	//hl13 edit start
+	if(ismob(crafter))
+		var/mob/living/mob = crafter
+		var/crafting_time = ((recipe.time) / (mob.get_stat_level(STATKEY_INT) / 10)) //intelligence changes crafting speed, maxes out at halved crafting speed when at 20 intelligence
+		if(!do_after(crafter, crafting_time, target = crafter))
+			return "."
+	//hl13 edit end
 	contents = get_surroundings(crafter, recipe.blacklist)
 	if(!check_contents(crafter, recipe, contents))
 		return ", missing component."
