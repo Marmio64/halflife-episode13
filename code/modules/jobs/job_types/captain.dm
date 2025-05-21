@@ -60,10 +60,6 @@
 /datum/job/captain/get_captaincy_announcement(mob/living/captain)
 	return "District Administrator [captain.real_name] will be managing this district."
 
-/datum/job/captain/after_spawn(mob/living/carbon/human/H, mob/M)
-	. = ..()
-	ADD_TRAIT(H, TRAIT_BAD_AIM, JOB_TRAIT)
-
 /datum/job/captain/get_radio_information()
 	. = ..()
 	. += "\nYou have access to all radio channels, but they are not automatically tuned. Check your radio for more information."
@@ -102,3 +98,4 @@
 
 	user.change_stat(STATKEY_INT, 2)
 	user.change_stat(STATKEY_STR, -1)
+	user.change_stat(STATKEY_DEX, -1)

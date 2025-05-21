@@ -62,3 +62,7 @@
 	back = /obj/item/mod/control/pre_equipped/atmospheric
 	mask = /obj/item/clothing/mask/gas/atmos
 	internals_slot = ITEM_SLOT_SUITSTORE
+
+/datum/outfit/job/atmos/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+	. = ..()
+	user.change_stat(STATKEY_STR, 1)

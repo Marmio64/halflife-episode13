@@ -18,19 +18,6 @@
 	category = CAT_WEAPON_AMMO
 	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
 
-/datum/crafting_recipe/improvisedslug
-	name = "Junk Shell"
-	result = /obj/effect/spawner/random/junk_shell
-	reqs = list(
-		/obj/item/stack/sheet/iron = 2,
-		/obj/item/stack/cable_coil = 1,
-		/obj/item/shard = 1,
-		/datum/reagent/fuel = 10,
-	)
-	tool_behaviors = list(TOOL_SCREWDRIVER)
-	time = 1.2 SECONDS
-	category = CAT_WEAPON_AMMO
-
 /datum/crafting_recipe/trashball
 	name = "Trashball"
 	result = /obj/item/stack/cannonball/trashball

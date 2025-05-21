@@ -257,6 +257,9 @@
 		var/obj/item/restraints/cuffs = src.get_item_by_slot(ITEM_SLOT_HANDCUFFED)
 		buckle_cd = cuffs.breakouttime
 
+		if(14 < (get_stat_level(STATKEY_STR))) //hl13 edit, 15 and above strength halves breakout time
+			buckle_cd /= 2
+
 	visible_message(span_warning("[src] attempts to unbuckle [p_them()]self!"),
 				span_notice("You attempt to unbuckle yourself... \
 				(This will take around [DisplayTimeText(buckle_cd)] and you must stay still.)"))

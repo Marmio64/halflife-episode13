@@ -121,6 +121,17 @@
 	obj_flags = CONDUCTS_ELECTRICITY
 	grind_results = list(/datum/reagent/iron = 20)
 
+/obj/item/stack/sheet/halflife/bullets
+	icon = 'hl13/icons/obj/stack_objects.dmi'
+	name = "plain bullets"
+	desc = "Handfuls of individual bullets. Useless without casings and propellants."
+	singular_name = "bullet"
+	icon_state = "bullets"
+	resistance_flags = FIRE_PROOF
+	w_class = WEIGHT_CLASS_TINY
+	merge_type = /obj/item/stack/sheet/halflife/bullets
+	grind_results = list(/datum/reagent/iron = 20)
+
 /obj/item/stack/sheet/halflife/brick
 	name = "brick"
 	singular_name = "brick"

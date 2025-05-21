@@ -31,7 +31,7 @@
 	name = "9mm USP Match Full Magazine"
 	result = /obj/item/ammo_box/magazine/usp9mm
 	reqs = list(/obj/item/stack/bulletcasings = 3,
-				/obj/item/stack/cable_coil = 15,
+				/obj/item/stack/sheet/halflife/bullets = 3,
 				/datum/reagent/fuel = 30)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 6 SECONDS
@@ -53,7 +53,7 @@
 	name = "357 Magnum Speed Loader"
 	result = /obj/item/ammo_box/colta357
 	reqs = list(/obj/item/stack/bulletcasings = 2,
-				/obj/item/stack/cable_coil = 6,
+				/obj/item/stack/sheet/halflife/bullets = 1,
 				/datum/reagent/fuel = 25)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 10 SECONDS
@@ -75,7 +75,7 @@
 	name = "4.6x30mm MP7 Full Magazine"
 	result = /obj/item/ammo_box/magazine/mp7
 	reqs = list(/obj/item/stack/bulletcasings = 9,
-				/obj/item/stack/cable_coil = 35,
+				/obj/item/stack/sheet/halflife/bullets = 9,
 				/datum/reagent/fuel = 30)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 7 SECONDS
@@ -108,7 +108,7 @@
 	name = "5.56 M4A1 Full Magazine"
 	result = /obj/item/ammo_box/magazine/m4a1
 	reqs = list(/obj/item/stack/bulletcasings = 6,
-				/obj/item/stack/cable_coil = 30,
+				/obj/item/stack/sheet/halflife/bullets = 6,
 				/datum/reagent/fuel = 30)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 12 SECONDS
@@ -119,7 +119,7 @@
 	name = "5.56 Service Rifle Full Magazine"
 	result = /obj/item/ammo_box/magazine/m4a1/service
 	reqs = list(/obj/item/stack/bulletcasings = 4,
-				/obj/item/stack/cable_coil = 20,
+				/obj/item/stack/sheet/halflife/bullets = 4,
 				/datum/reagent/fuel = 30)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 10 SECONDS
@@ -140,8 +140,7 @@
 /datum/crafting_recipe/buckshotshell
 	name = "Buckshot Shell"
 	result = /obj/item/ammo_casing/shotgun/buckshot/halflife
-	reqs = list(/obj/item/stack/sheet/iron = 3,
-				/obj/item/stack/cable_coil = 1,
+	reqs = list(/obj/item/stack/sheet/halflife/bullets = 1,
 				/datum/reagent/fuel = 5)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 1 SECONDS
@@ -152,7 +151,6 @@
 	name = "Rubbershot Shell"
 	result = /obj/item/ammo_casing/shotgun/rubbershot
 	reqs = list(/obj/item/stack/sheet/iron = 2,
-				/obj/item/stack/cable_coil = 1,
 				/datum/reagent/fuel = 4)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 1 SECONDS

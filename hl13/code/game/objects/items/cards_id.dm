@@ -50,5 +50,5 @@
 	assigned_icon_state = "assigned_centcom"
 	//registered_name = JOB_CENTCOM
 	registered_age = null
-	trim = /datum/id_trim/centcom
+	trim = /datum/id_trim/centcom/ert
 	wildcard_slots = WILDCARD_LIMIT_CENTCOM

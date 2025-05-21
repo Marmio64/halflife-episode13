@@ -256,6 +256,7 @@
 /obj/structure/ladder/halflife/manhole/examine(mob/user)
 	. = ..()
 	. += "<span class='notice'>Use <b>RIGHT-CLICK</b> on [src] to open or close it.</span>"
+	. += "<span class='notice'>Careful, if you're not <b>STRONG</b> enough, you might hurt yourself if you need to lift the cover without a crowbar.</span>"
 
 /obj/structure/ladder/halflife/manhole/attack_hand_secondary(mob/living/user, list/modifiers)
 	var/obj/item/bodypart/arm = user.get_bodypart(user.active_hand_index % 2 ? BODY_ZONE_L_ARM : BODY_ZONE_R_ARM)
@@ -282,16 +283,22 @@
 	else
 		if(obstructed)
 			to_chat(user, span_warning("It's so heavy! Surely there's a better way of doing this."))
+			if(user.get_stat_level(STATKEY_STR) < 13)
+				to_chat(user, span_warning("You aren't strong enough to comfortably lift this without a tool, you might get injured..."))
 			if(do_after(user, 10 SECONDS, target = src, interaction_key = DOAFTER_SOURCE_LADDERBLOCKERS))
 				obstructed = FALSE
 				down.obstructed = FALSE
 				icon_state = "manhole_open"
 				desc = "An open manhole, it still stinks even after all these years. You could use a crowbar or your hands to slide the cover back on."
-				to_chat(user, span_notice("With a lot of effort, you manage to finally get the cover off."))
-				if(prob(15))
-					to_chat(user, span_userdanger("MY ARM! THE PAIN!"))
-					arm.force_wound_upwards(/datum/wound/blunt/bone/moderate)
-					arm.receive_damage(10)
+
+				if(12 < user.get_stat_level(STATKEY_STR))
+					to_chat(user, span_notice("That was heavy, but you're strong, no way you're going to get hurt just from that."))
+				else
+					to_chat(user, span_notice("With a lot of effort, you manage to finally get the cover off."))
+					if(prob(30))
+						to_chat(user, span_userdanger("MY ARM! THE PAIN!"))
+						arm.force_wound_upwards(/datum/wound/blunt/bone/moderate)
+						arm.receive_damage(10)
 		else
 			if(do_after(user, 10 SECONDS, target = src, interaction_key = DOAFTER_SOURCE_LADDERBLOCKERS))
 				obstructed = TRUE

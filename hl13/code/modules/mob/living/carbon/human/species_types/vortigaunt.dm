@@ -43,6 +43,7 @@
 	vorttelepathy.Grant(C)
 
 	C.change_stat(STATKEY_INT, 3) //Vorts are naturally very intelligent
+	C.change_stat(STATKEY_STR, 1) //and a little stronger
 	C.change_stat(STATKEY_DEX, -2) //but not very dextrous
 
 /datum/species/vortigaunt/on_species_loss(mob/living/carbon/C)
@@ -52,6 +53,7 @@
 	vorttelepathy.Remove(C)
 
 	C.change_stat(STATKEY_INT, -3)
+	C.change_stat(STATKEY_STR, -1)
 	C.change_stat(STATKEY_DEX, 2)
 
 /datum/species/vortigaunt/get_scream_sound(mob/living/carbon/human/vortigaunt)

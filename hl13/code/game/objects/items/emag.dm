@@ -26,7 +26,7 @@
 	if(interacting_with.emag_act(user, src))
 		SSblackbox.record_feedback("tally", "atom_emagged", 1, interacting_with.type)
 		if(prob((user.get_stat_level(STATKEY_INT) - 10) * 3)) //Every point above 10 int is a 3% chance to not use a charge
-			to_chat(user, span_notice("You manage to use the device without it draining much power, so it doesn't lose a charge!"))
+			to_chat(user, span_notice("Thanks to your intellect, you manage to use the device without it draining too much power, so it doesn't lose a charge!"))
 			return ITEM_INTERACT_SUCCESS
 		charges--
 		return ITEM_INTERACT_SUCCESS

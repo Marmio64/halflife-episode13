@@ -69,7 +69,7 @@
 /obj/effect/spawner/random/halflife/loot/two
 	spawn_loot_count = 2
 
-//only scrap items, pretty much always needs crafting to be made useful
+//mostly only scrap items, pretty much always needs crafting to be made useful
 /obj/effect/spawner/random/halflife/loot/scrap
 	name = "scrap loot"
 	spawn_loot_count = 1
@@ -81,6 +81,7 @@
 				/obj/item/stack/cable_coil = 2,
 				/obj/item/stack/sheet/cloth = 2,
 				/obj/item/stack/sheet/scrap_metal/two = 4,
+				/obj/item/stack/sheet/iron,
 				/obj/item/stack/sheet/scrap_parts = 2,
 				/obj/item/stack/sheet/scrap_copper = 2,
 				/obj/item/stack/sheet/glass = 2,

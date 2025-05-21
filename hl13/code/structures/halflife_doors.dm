@@ -275,7 +275,7 @@
 		return
 	return
 
-/obj/machinery/door/unpowered/halflife/proc/trypicklock(obj/item/I, mob/user)
+/obj/machinery/door/unpowered/halflife/proc/trypicklock(obj/item/I, mob/living/user)
 	if(open)
 		to_chat(user, "<span class='warning'>This cannot be picked while it is open.</span>")
 		return
@@ -287,8 +287,8 @@
 
 		var/obj/item/lockpick/P = I
 
-		var/picktime = 30
-		var/pickchance = 60
+		var/picktime = 65 - (user.get_stat_level(STATKEY_DEX) * 3)
+		var/pickchance = 30 + (user.get_stat_level(STATKEY_DEX) * 3)
 		var/moveup = 20
 
 		pickchance *= P.picklvl
@@ -311,7 +311,7 @@
 					continue
 			else
 				playsound(loc, 'hl13/sound/items/pickbad.ogg', 40, TRUE)
-				I.take_damage(1, BRUTE, "melee")
+				I.take_damage(1, BRUTE, "melee", sound_effect = FALSE)
 				to_chat(user, "<span class='warning'>Clack.</span>")
 				continue
 		return

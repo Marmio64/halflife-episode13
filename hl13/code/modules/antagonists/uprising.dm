@@ -31,7 +31,7 @@
 	uprising_outfit = /datum/outfit/rebel
 
 /datum/antagonist/uprising/greet()
-	owner.current.playsound_local(get_turf(owner.current), 'hl13/sound/ambience/combineadvisory.ogg',45,0)
+	owner.current.playsound_local(get_turf(owner.current), 'hl13/sound/ambience/combineadvisory.ogg',50,0)
 	to_chat(owner, "<B>Suddenly, your mind flashes as you realize your true mission...</B>")
 	to_chat(owner, span_userdanger("You are a Uprising Ringleader!"))
 	to_chat(owner, span_boldnotice("The time has come for this district to be freed from the tyranny of the combine."))

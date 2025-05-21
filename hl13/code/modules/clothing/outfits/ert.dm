@@ -28,7 +28,7 @@
 	ADD_TRAIT(H, TRAIT_NOHUNGER, OUTFIT_TRAIT) //OTA dont need to eat or drink
 
 	H.change_stat(STATKEY_DEX, 2)
-	H.change_stat(STATKEY_STR, 3)
+	H.change_stat(STATKEY_STR, 4)
 
 /datum/outfit/centcom/ert/overwatch/spas12
 	name = "OTA Shotgun Unit"
@@ -65,6 +65,9 @@
 		return
 	var/datum/martial_art/cqc/elitecqc = new
 	elitecqc.teach(H)
+
+	H.change_stat(STATKEY_DEX, 1) //extra stats
+	H.change_stat(STATKEY_STR, 1) //extra stats
 
 
 /datum/outfit/centcom/ert/overwatch/grunt

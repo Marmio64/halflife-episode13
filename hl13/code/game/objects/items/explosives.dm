@@ -1,6 +1,6 @@
 /obj/item/grenade/syndieminibomb/bouncer
 	name = "MK3A2 Grenade"
-	desc = "Called a 'Bouncer' by Combine teams, these are light explosive grenades without much kick, that do not do much environmental damage."
+	desc = "Called a 'Bouncer' or 'Extractor' by Combine teams, these grenades are designed for flushing out enemy combatants via shrapnel, and a powerful though short ranged explosion."
 	icon = 'hl13/icons/obj/grenade.dmi'
 	icon_state = "bouncer"
 	shrapnel_type = /obj/projectile/bullet/shrapnel

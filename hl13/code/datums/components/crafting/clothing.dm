@@ -80,7 +80,7 @@
 /datum/crafting_recipe/rip_apart_vest
 	name = "Rip Apart Kevlar Vest"
 	result = /obj/item/stack/kevlar
-	result_amount = 2
+	result_amount = 3
 	reqs = list(/obj/item/clothing/suit/armor/halflife/kevlar = 1)
 	time = 10 SECONDS
 	category = CAT_ARMOR

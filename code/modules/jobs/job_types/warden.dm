@@ -53,7 +53,7 @@
 	. = ..()
 	user.faction += "combine"
 
-	user.change_stat(STATKEY_DEX, 1)
+	user.change_stat(STATKEY_DEX, 2)
 
 	var/currentrankpoints = 0
 

@@ -73,7 +73,7 @@
 //		if(BPinteg > amt) //this is here to ensure that pain doesn't add up, but is rather picked from the worst limb
 		amt += (BPinteg) - (get_drunk_amount()/5) //inebriation reduces percieved pain
 
-		amt -= ((get_stat_level(STATKEY_STR))) + 10 //low strength increases perceived pain, high strength decreases it
+		amt -= ((get_stat_level(STATKEY_STR) - 10) * 2) //low strength increases perceived pain, high strength decreases it
 
 		if(HAS_TRAIT(src, TRAIT_LESSPAIN)) //lesspain simply reduces pain by an amount
 			amt -= 10

@@ -32,9 +32,12 @@
 
 	ration_bonus = 2
 
-/datum/job/lawyer/after_spawn(mob/living/carbon/human/H, mob/M)
+/datum/outfit/job/lawyer/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
-	H.faction += "combine"
+	user.faction += "combine"
+
+	user.change_stat(STATKEY_INT, 1)
+	user.change_stat(STATKEY_STR, -1)
 
 /datum/outfit/job/lawyer
 	name = "District Liaison"
