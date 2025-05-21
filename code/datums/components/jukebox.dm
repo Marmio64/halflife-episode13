@@ -398,9 +398,9 @@
 	/// Used to determine time between effects when played
 	var/song_beat = 0
 
-// Default track supplied for testing and also because it's a banger
+// Changed the default to be more fitting
 /datum/track/default
-	song_path = 'sound/music/lobby_music/title3.ogg'
-	song_name = "Tintin on the Moon"
-	song_length = 3 MINUTES + 52 SECONDS
+	song_path = 'hl13/sound/music/radio/37after6.ogg'
+	song_name = "Thirty Seven After Six"
+	song_length = 2 MINUTES + 32 SECONDS
 	song_beat = 1 SECONDS
