@@ -188,6 +188,9 @@
 
 //HL13 EDIT START
 	if(nutrition < NUTRITION_LEVEL_DYING) //Actively starving, body is failing
+		human.set_stat_modifier("hunger", STATKEY_DEX, -3)
+		human.set_stat_modifier("hunger", STATKEY_STR, -3)
+
 		if(prob(3))
 			to_chat(human, span_warning("You feel your body wasting away from your hunger..."))
 			playsound(get_turf(human), pick('hl13/sound/effects/hungry1.ogg','hl13/sound/effects/hungry2.ogg','hl13/sound/effects/hungry3.ogg'), 100, TRUE, -1)
@@ -204,8 +207,15 @@
 				human.adjustOxyLoss(10)
 				human.adjust_tiredness(25)
 				human.adjust_eye_blur(10 SECONDS)
+	else if(NUTRITION_LEVEL_WELL_FED < nutrition)
+		human.set_stat_modifier("hunger", STATKEY_STR, 1)
+	else
+		human.remove_stat_modifier("hunger")
 
 	if(hydration < HYDRATION_LEVEL_DYING) //So damn thirsty that you are dying
+		human.set_stat_modifier("thirst", STATKEY_DEX, -3)
+		human.set_stat_modifier("thirst", STATKEY_STR, -3)
+
 		if(prob(4))
 			to_chat(human, span_warning("So thirsty, you feel so weak..."))
 			human.adjust_dizzy(6 SECONDS)
@@ -219,6 +229,8 @@
 		if(hydration < (HYDRATION_LEVEL_DYING/2))
 			if(human.key && human.client)
 				human.adjustToxLoss(0.3) //Buildup of toxins in your body since you dont have enough liquids to piss and filter stuff. It's not hard to stay hydrated, so this shouldn't happen, really.
+	else
+		human.remove_stat_modifier("thirst")
 //HL13 EDIT END
 
 ///for when mood is disabled and hunger should handle slowdowns

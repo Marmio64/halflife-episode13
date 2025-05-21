@@ -59,11 +59,19 @@
 	var/obj/item/implant/radio/stalker/imp = new(src)
 	imp.implant(C, null, TRUE, TRUE)
 
+	C.change_stat(STATKEY_INT, -4)
+	C.change_stat(STATKEY_DEX, -4)
+	C.change_stat(STATKEY_STR, -4)
+
 /datum/species/stalker/on_species_loss(mob/living/carbon/human/C)
 	..()
 	UnregisterSignal(C, COMSIG_MOB_SAY)
 	C.mob_mood?.mood_modifier += 1
 	C.physiology.hunger_mod /= 0.25
+
+	C.change_stat(STATKEY_INT, 4)
+	C.change_stat(STATKEY_DEX, 4)
+	C.change_stat(STATKEY_STR, 4)
 
 /datum/species/stalker/proc/handle_speech(datum/source, list/speech_args)
 	playsound(source, 'hl13/sound/voice/stalker/stalker_talk.ogg', 50, 1, 1)

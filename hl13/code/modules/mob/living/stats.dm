@@ -239,10 +239,13 @@
 	if(18 < statinput)
 		return "Extraordinary"
 
-	else if(14 < statinput)
-		return "Great"
+	else if(15 < statinput)
+		return "Amazing"
 
-	else if(12 < statinput)
+	else if(13 < statinput)
+		return "Exceptional"
+
+	else if(11 < statinput)
 		return "Honed"
 
 	else if(10 < statinput)
@@ -254,14 +257,17 @@
 	else if(8 < statinput)
 		return "Lower than Average"
 
-	else if(6 < statinput)
+	else if(7 < statinput)
 		return "Dwindled"
 
-	else if(4 < statinput)
+	else if(5 < statinput)
 		return "Very Poor"
 
-	else if(-INFINITY < statinput)
+	else if(3 < statinput)
 		return "Terrible"
+
+	else if(-INFINITY < statinput)
+		return "Non-existant"
 
 	else
 		return "Unknown"

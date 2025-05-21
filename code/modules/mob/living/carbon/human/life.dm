@@ -98,21 +98,25 @@
 				emote("yawn")
 				Immobilize(1 SECONDS)
 
-
 	if(tiredness >= TIREDNESS_MAXIMUM_THRESHOLD)
 		if(!HAS_TRAIT(src, TRAIT_SPARTAN))
 			add_mood_event("sleepy", /datum/mood_event/sleepy/exhausted)
+			set_stat_modifier("sleep", STATKEY_DEX, -3)
+			set_stat_modifier("sleep", STATKEY_STR, -2)
 		else
 			add_mood_event("sleepy", /datum/mood_event/sleepy/exhausted/spartan)
+			set_stat_modifier("sleep", STATKEY_DEX, -2)
 
 	else if(tiredness > TIREDNESS_SLEEPY_THRESHOLD)
 		throw_alert("sleepy", /atom/movable/screen/alert/sleepy)
+		remove_stat_modifier("sleep")
 		if(!HAS_TRAIT(src, TRAIT_SPARTAN))
 			add_mood_event("sleepy", /datum/mood_event/sleepy)
 		else
 			add_mood_event("sleepy", /datum/mood_event/sleepy/spartan)
 
 	else if(tiredness > TIREDNESS_TIRED_THRESHOLD)
+		remove_stat_modifier("sleep")
 		if(!HAS_TRAIT(src, TRAIT_SPARTAN))
 			add_mood_event("sleepy", /datum/mood_event/sleepy/small)
 		else
@@ -120,6 +124,7 @@
 			clear_mood_event("sleepy")
 
 	else if(tiredness < TIREDNESS_CLEAR_THRESHOLD)
+		remove_stat_modifier("sleep")
 		clear_alert("sleepy")
 
 		if(tiredness < TIREDNESS_ENERGIZED_THRESHOLD)

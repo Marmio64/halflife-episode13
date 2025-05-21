@@ -16,6 +16,11 @@
 
 	r_pocket = /obj/item/flashlight
 
+/datum/outfit/resistance_faction/pre_equip(mob/living/carbon/human/H)
+	H.cmode_music = 'hl13/sound/music/combat/vortalcombat.ogg'
+
+	H.change_stat(STATKEY_DEX, 1)
+	H.change_stat(STATKEY_STR, 1)
 
 // POLISH RESISTANCE - Polish Revolutionary Front
 // Lower ranks get stolen metrocop gear pretty much, higher up the chain means access to actual military surplus

@@ -40,12 +40,6 @@
 		if(HAS_TRAIT(src, TRAIT_ATHLETIC)) //Athletic skillchip lets you run for longer
 			staminatolose -= 0.2
 
-		if(TIREDNESS_SLEEPY_THRESHOLD < tiredness)
-			if(!HAS_TRAIT(src, TRAIT_SPARTAN))
-				staminatolose += 0.4
-			else
-				staminatolose += 0.2 //spartan trait holders take less of a run stamina penalty
-
 		var/dexterity = (get_stat_level(STATKEY_DEX) - 10)
 
 		staminatolose -= dexterity/20 // 11 dexterity = -0.05 staminatolose, 9 = -0.05, etc

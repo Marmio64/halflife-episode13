@@ -24,6 +24,9 @@
 /datum/outfit/rebel/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/vortalcombat.ogg'
 
+	H.change_stat(STATKEY_DEX, 1)
+	H.change_stat(STATKEY_STR, 1)
+
 /datum/outfit/rebel/medium
 	name = "Medium Rebel"
 
