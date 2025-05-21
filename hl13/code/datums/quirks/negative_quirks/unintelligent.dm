@@ -1,8 +1,8 @@
 /datum/quirk/unintelligent
 	name = "Unintelligent"
-	desc = "You are not a very intelligent individual. You'll find it harder to craft items, and hack/use technology."
+	desc = "You are not a very intelligent individual. You'll find it harder to craft items, and hack/use technology, among other things."
 	icon = FA_ICON_BRAIN
-	value = 5
+	value = -6
 	medical_record_text = "Patient is rather unintelligent"
 
 /datum/quirk/unintelligent/add()

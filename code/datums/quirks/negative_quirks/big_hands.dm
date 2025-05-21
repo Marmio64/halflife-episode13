@@ -2,7 +2,7 @@
 	name = "Big Hands"
 	desc = "You have big hands, it sure does make it hard to use a lot of things."
 	icon = FA_ICON_HAND_DOTS
-	value = -6
+	value = -4
 	mob_trait = TRAIT_CHUNKYFINGERS
 	gain_text = span_danger("Your hands are huge! You can't use small things anymore!")
 	lose_text = span_notice("Your hands are back to normal.")

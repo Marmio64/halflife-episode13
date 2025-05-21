@@ -27,7 +27,7 @@
 	if(!(mobility_flags & MOBILITY_MOVE))
 		return FALSE
 
-	var/prob2defend = (get_stat_level(STATKEY_STR) * 2)
+	var/prob2defend = ((get_stat_level(STATKEY_STR) * 3) - 10)
 	var/mob/living/H = src
 	var/mob/living/U = user
 	if(H && U)
@@ -38,7 +38,7 @@
 
 	var/dodge_chance = (get_stat_level(STATKEY_DEX) * 2)
 
-	if(prob(dodge_chance) && world.time > last_dodge + dodge_cooldown) //chance to dodge. Dodging is more reliable than parries and increases TTK even for unarmed people, but there is decent cooldown on dodges
+	if(prob(dodge_chance) && world.time > last_dodge + dodge_cooldown) //chance to dodge. Dodging doesn't require a weapon, but there is decent cooldown on dodges
 		last_dodge = world.time
 		var/list/usedp = list("They dodged the blow! Miss!", "They saw it coming! Miss!", "They evaded my hit! Miss!")
 		to_chat(user, "<span class='boldwarning'>[pick(usedp)]</span>")
