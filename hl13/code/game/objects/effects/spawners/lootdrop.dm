@@ -136,6 +136,7 @@
 				/obj/item/reagent_containers/pill/patch/medkit = 2,
 				/obj/item/reagent_containers/hypospray/medipen/healthpen = 4,
 				/obj/item/reagent_containers/pill/patch/medkit/vial = 3,
+				/obj/item/storage/halflife/pill_bottle/antitox,
 				/obj/item/stack/medical/gauze,
 				/obj/item/stack/medical/suture,
 				/obj/item/stack/medical/bandage,

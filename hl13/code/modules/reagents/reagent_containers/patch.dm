@@ -37,3 +37,21 @@
 	list_reagents = list(/datum/reagent/medicine/concentrated_biogel/slurry = 15) //heals 30 hp over like 25 seconds. Thats a long time to heal compared to a vial, but you can pre-inject, and also this heals toxin+oxy damage
 	sound_played = 'hl13/sound/effects/healthpen_inject.ogg'
 	custom_price = null
+
+/obj/item/storage/halflife/pill_bottle/antitox
+	name = "Anti-Sickness Pill bottle"
+	icon = 'hl13/icons/obj/food.dmi'
+	desc = "A pill bottle with antibiotics and activated charcoal pills, which cleanse."
+	icon_state = "pill_bottle"
+	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/storage/halflife/pill_bottle/antitox/PopulateContents()
+	for(var/i=0,i<4, i++)
+		new /obj/item/reagent_containers/pill/antitox(src)
+
+/obj/item/reagent_containers/pill/antitox
+	name = "anti-sickness tablets"
+	desc = "A couple of anti-sickness tablets, that help to purge the body of toxins and disease."
+	icon_state = "antitoxtab"
+	icon = 'hl13/icons/obj/misc_items.dmi'
+	list_reagents = list(/datum/reagent/medicine/c2/musiver = 10, /datum/reagent/medicine/spaceacillin = 10)

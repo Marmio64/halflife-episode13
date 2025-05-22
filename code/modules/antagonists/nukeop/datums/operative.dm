@@ -2,7 +2,6 @@
 	name = ROLE_NUCLEAR_OPERATIVE
 	roundend_category = "syndicate operatives" //just in case
 	antagpanel_category = ANTAG_GROUP_SYNDICATE
-	job_rank = ROLE_OPERATIVE
 	antag_hud_name = "synd"
 	antag_moodlet = /datum/mood_event/focused
 	show_to_ghosts = TRUE
@@ -19,10 +18,10 @@
 	/// The DEFAULT outfit we will give to players granted this datum
 	var/nukeop_outfit = /datum/outfit/syndicate
 
-	preview_outfit = /datum/outfit/nuclear_operative_elite
+	preview_outfit = /datum/outfit/uprising_preview
 
 	/// In the preview icon, the nukies who are behind the leader
-	var/preview_outfit_behind = /datum/outfit/nuclear_operative
+	var/preview_outfit_behind = /datum/outfit/uprising_preview
 	/// In the preview icon, a nuclear fission explosive device, only appearing if there's an icon state for it.
 	var/nuke_icon_state = "nuclearbomb_base"
 

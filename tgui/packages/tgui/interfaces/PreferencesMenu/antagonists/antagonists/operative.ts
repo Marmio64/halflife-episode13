@@ -1,17 +1,17 @@
 import { Antagonist, Category } from '../base';
 
 export const OPERATIVE_MECHANICAL_DESCRIPTION = `
-  Retrieve the nuclear authentication disk, use it to activate the nuclear
-  fission explosive, and destroy the station.
+  Lower the sociostability of the district low enough to deploy a super destabilizer in the nexus.
 `;
 
 const Operative: Antagonist = {
   key: 'operative',
-  name: 'Rebel Operative',
+  name: 'Uprising Ringleader',
   description: [
     `
-      You've arrived as part of a rebel strike team to assault the city.
-      Complete the mission, or die trying.
+      This district has had enough of the combine's tyranny.
+      An uprising has been due for too long, and we shall cut off the district's
+      communication with combine forces and crush all that remain.
     `,
 
     OPERATIVE_MECHANICAL_DESCRIPTION,

@@ -1,6 +1,7 @@
 #define SOUND_BEEP(sound) add_queue(##sound, 20)
 #define MORPHINE_INJECTION_DELAY (30 SECONDS)
 
+//new sprites from #wrotl on discord SS13 spriter server, taken with permission
 /obj/item/clothing/suit/hooded/hev
 	name = "Hazardous Environments Suit"
 	desc = "An old suit, fully plated, insulated and topped with a tasteful orange coating of paint."

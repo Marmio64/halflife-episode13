@@ -67,12 +67,6 @@
 /turf/open/floor/plating/indoor/woodc/mosaic
 	icon_state = "wood_mosaic"
 
-/turf/open/floor/plating/indoor/showroom
-	icon_state = "showroomfloor"
-
-/turf/open/floor/plating/indoor/sterile
-	icon_state = "sterileplate"
-
 /turf/open/floor/plating/indoor/sterilesquares
 	icon_state = "sterilesquares"
 
