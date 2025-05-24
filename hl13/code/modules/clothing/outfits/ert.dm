@@ -77,8 +77,8 @@
 	l_hand = /obj/item/gun/ballistic/automatic/pulsesmg
 
 	back = /obj/item/tank/internals/oxygen/grunt
-	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt
-	uniform = /obj/item/clothing/under/combine/grunt
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt/fused
+	uniform = /obj/item/clothing/under/combine/grunt/fused
 	suit = null
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection/grunt
@@ -112,7 +112,7 @@
 	H.set_hairstyle("Bald") //this will call update_body_parts()
 	H.update_body()
 
-	H.change_stat(STATKEY_DEX, 1)
+	H.change_stat(STATKEY_DEX, 2)
 
 /datum/outfit/centcom/ert/riotpolice/pistol
 	name = "Metropolice Riot Pistol Unit"
@@ -155,7 +155,7 @@
 	H.set_hairstyle("Crewcut") //this will call update_body_parts()
 	H.update_body()
 
-	H.change_stat(STATKEY_DEX, 1)
+	H.change_stat(STATKEY_DEX, 2)
 
 /datum/outfit/centcom/ert/conscript/officer
 	name = "Conscript Officer"
@@ -198,6 +198,4 @@
 	H.set_hairstyle("Crewcut") //this will call update_body_parts()
 	H.update_body()
 
-	H.change_stat(STATKEY_INT, 3)
-
-	H.change_stat(STATKEY_STR, -1)
+	H.change_stat(STATKEY_INT, 2)

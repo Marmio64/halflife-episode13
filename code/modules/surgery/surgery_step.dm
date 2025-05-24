@@ -122,6 +122,9 @@
 	if(HAS_TRAIT(target, TRAIT_ANALGESIA))
 		speed_mod *= SURGERY_SPEED_TRAIT_ANALGESIA
 
+	if(user.get_stat_level(STATKEY_INT) < 13)
+		speed_mod *= 1.5 //dum dums dont do surgery quick
+
 	var/implement_speed_mod = 1
 	if(implement_type) //this means it isn't a require hand or any item step.
 		implement_speed_mod = implements[implement_type] / 100.0

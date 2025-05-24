@@ -280,9 +280,11 @@
 	var/intelligence = get_stat_level(STATKEY_INT)
 	var/dexterity = get_stat_level(STATKEY_DEX)
 
-	to_chat(src, span_notice("Your strength is [stat_to_description(strength)]."))
-	to_chat(src, span_notice("Your intelligence is [stat_to_description(intelligence)]"))
-	to_chat(src, span_notice("Your dexterity is [stat_to_description(dexterity)]"))
+	to_chat(src, span_notice("------------------------------------------------"))
+	to_chat(src, span_notice("Your Strength is [stat_to_description(strength)]."))
+	to_chat(src, span_notice("Your Intelligence is [stat_to_description(intelligence)]"))
+	to_chat(src, span_notice("Your Dexterity is [stat_to_description(dexterity)]"))
+	to_chat(src, span_notice("------------------------------------------------"))
 
 
 #undef UPDATE_STRENGTH

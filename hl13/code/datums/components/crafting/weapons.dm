@@ -150,7 +150,7 @@
 /datum/crafting_recipe/rubbershotshell
 	name = "Rubbershot Shell"
 	result = /obj/item/ammo_casing/shotgun/rubbershot
-	reqs = list(/obj/item/stack/sheet/iron = 2,
+	reqs = list(/obj/item/stack/sheet/halflife/plastic = 1,
 				/datum/reagent/fuel = 4)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 1 SECONDS

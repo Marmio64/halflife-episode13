@@ -97,7 +97,7 @@
 			ID.registered_account.requisition_points += 1
 
 	user.change_stat(STATKEY_DEX, 2)
-	user.change_stat(STATKEY_STR, 2)
+	user.change_stat(STATKEY_STR, 3)
 
 /datum/outfit/job/hos/mod
 	name = "Head of Security (MODsuit)"

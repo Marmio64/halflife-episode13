@@ -55,3 +55,7 @@
 	l_pocket = /obj/item/hl2key/foreman
 
 	suit = /obj/item/clothing/suit/greenjacket
+
+/datum/outfit/job/quartermaster/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+	. = ..()
+	user.change_stat(STATKEY_INT, 1)

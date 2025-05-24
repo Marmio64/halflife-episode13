@@ -14,6 +14,8 @@
 	max_suit_power = 100
 	unpoweredslowdown = 0.25
 
+	var/fused = FALSE //is the suit fused to the user?
+
 	var/mob/living/carbon/owner
 
 	COOLDOWN_DECLARE(next_damage_notify)
@@ -103,6 +105,11 @@
 			COOLDOWN_START(src, next_damage_notify, 30 SECONDS)
 			administer_stimulant()
 
+/obj/item/clothing/under/combine/Initialize(mapload)
+	. = ..()
+	if(fused)
+		ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
+
 /obj/item/clothing/under/combine/civilprotection
 	name = "civil protection jumpsuit"
 	desc = "Full-body suit which includes light kevlar weaving to provide extra protection."
@@ -136,9 +143,7 @@
 	suit_power = 100
 	armor_type = /datum/armor/combinesuit_upgraded
 
-/obj/item/clothing/under/combine/overwatch/Initialize(mapload) //fused to the soldiers, you cant take it off
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
+	fused = TRUE
 
 /obj/item/clothing/under/combine/overwatch/red
 	desc = "Red full-body suit which includes kevlar weaving to provide extra protection."
@@ -180,6 +185,9 @@
 	max_integrity = 400
 	suit_power = 100
 	armor_type = /datum/armor/gruntsuit
+
+/obj/item/clothing/under/combine/grunt/fused
+	fused = TRUE
 
 /obj/item/clothing/under/combine/grunt/deathmatch
 	slowdown = -0.25

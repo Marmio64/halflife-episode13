@@ -39,7 +39,7 @@
 	AddComponent(/datum/component/automatic_fire, 0.25 SECONDS)
 
 //old rifles that are exclusively loot. Similar to the AR2, but slightly less accurate, slightly less AP and slightly slower to fire.
-//about 2.7 seconds TTK, also has good AP
+//about 2.7 seconds TTK, also has good AP. While the MP7 also has this TTK, the m4a1 is more accurate, has to reload less often, and has some armor piercing capabilities.
 /obj/item/gun/ballistic/automatic/m4a1
 	name = "\improper M4A1 Rifle"
 	desc = "A old M4A1 pattern rifle. Not as good as the combine's rifles, but still powerful."

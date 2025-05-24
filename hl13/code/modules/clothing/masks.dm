@@ -267,6 +267,9 @@
 	armor_type = /datum/armor/gruntmask
 	fused = FALSE
 
+/obj/item/clothing/mask/gas/civilprotection/overwatch/grunt/fused
+	fused = TRUE
+
 /datum/armor/gruntmask
 	melee = 40
 	bullet = 15
