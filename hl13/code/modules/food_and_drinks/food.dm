@@ -2,7 +2,7 @@
 	name = "xen flesh"
 	desc = "A slab of alien flesh. May not be entirely safe to eat."
 	icon_state = "xenomeat"
-	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 3, /datum/reagent/toxin = 1)
+	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 3)
 	tastes = list("meat" = 1, "acid" = 1)
 	foodtypes = RAW | MEAT | GROSS | XEN
 	jerky_type = /obj/item/food/sosjerky/healthy/xenian

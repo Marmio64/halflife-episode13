@@ -58,6 +58,7 @@
 				/obj/item/reagent_containers/cup/bottle/welding_fuel,
 				/obj/item/grenade/halflife/molotov,
 				/obj/item/stack/bulletcasings,
+				/obj/item/stack/sheet/halflife/bullets,
 				/obj/item/customblank,
 				/obj/item/customlock,
 				/obj/item/stack/kevlar,
@@ -86,6 +87,7 @@
 				/obj/item/stack/sheet/scrap_copper = 2,
 				/obj/item/stack/sheet/glass = 2,
 				/obj/item/stack/bulletcasings = 2,
+				/obj/item/stack/sheet/halflife/bullets,
 				/obj/item/stack/kevlar, //The rare goodie!
 				/obj/item/stack/sheet/mineral/scrap_wood = 4
 				)
