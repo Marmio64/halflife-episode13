@@ -71,9 +71,9 @@
 	id = "plasmacutter"
 	build_type = PROTOLATHE | AWAY_LATHE
 	materials = list(
-		/datum/material/iron =HALF_SHEET_MATERIAL_AMOUNT * 1.5,
-		/datum/material/glass =SMALL_MATERIAL_AMOUNT*5,
-		/datum/material/plasma = SMALL_MATERIAL_AMOUNT*4,
+		/datum/material/iron = SHEET_MATERIAL_AMOUNT,
+		/datum/material/glass = SHEET_MATERIAL_AMOUNT,
+		/datum/material/plasma = SHEET_MATERIAL_AMOUNT * 2,
 	)
 	build_path = /obj/item/gun/energy/plasmacutter
 	category = list(

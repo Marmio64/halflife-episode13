@@ -32,7 +32,6 @@
 	description = "Offering enhanced capabilities beyond their basic counterparts."
 	prereq_ids = list(TECHWEB_NODE_PARTS, TECHWEB_NODE_ENERGY_MANIPULATION)
 	design_ids = list(
-		"rped",
 		"high_micro_laser",
 		"adv_capacitor",
 		"nano_servo",

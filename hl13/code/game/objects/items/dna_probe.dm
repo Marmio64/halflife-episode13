@@ -76,7 +76,7 @@
 	playsound(target, 'sound/machines/compiler/compiler-stage1.ogg', 50)
 	to_chat(user, span_notice("[uploaded] new datapoints uploaded. Reward dispensed."))
 	new /obj/item/stack/spacecash/c1(user.loc, uploaded)
-	target.stored_research.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = uploaded*10))
+	target.stored_research.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = uploaded*12))
 	return uploaded
 
 /obj/item/halflife/dna_probe/proc/scan_dna(atom/target, mob/user)

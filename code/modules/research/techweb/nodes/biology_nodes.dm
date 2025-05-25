@@ -37,11 +37,8 @@
 	description = "Research into sophisticated DNA manipulation techniques, enabling the modification of human genetic traits to unlock specific abilities and enhancements."
 	prereq_ids = list(TECHWEB_NODE_SELECTION, TECHWEB_NODE_XENOBIOLOGY)
 	design_ids = list(
-		"dnascanner",
-		"scan_console",
-		"dna_disk",
+		"pin_loyalty",
 		"dnainfuser",
-		"mod_dna_lock",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	discount_experiments = list(/datum/experiment/scanning/people/mutant = TECHWEB_TIER_4_POINTS)
@@ -50,9 +47,8 @@
 // Botany root node
 /datum/techweb_node/botany_equip
 	id = TECHWEB_NODE_BOTANY_EQUIP
-	starting_node = TRUE
 	display_name = "Botany Equipment"
-	description = "Essential tools for maintaining onboard gardens, supporting plant growth in the unique environment of the space station."
+	description = "Essential tools for maintaining district food plants."
 	design_ids = list(
 		"seed_extractor",
 		"plant_analyzer",
