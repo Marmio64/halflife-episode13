@@ -1,5 +1,5 @@
 ///How many research points you gain from dissecting a Human.
-#define BASE_HUMAN_REWARD 10
+#define BASE_HUMAN_REWARD 12
 
 /datum/surgery/advanced/experimental_dissection
 	name = "Experimental Dissection"
@@ -75,7 +75,7 @@
 		if(human_target.dna?.species)
 			if(ismonkey(human_target))
 				cost /= 5
-			else if(isabductor(human_target))
+			else if(isabductor(human_target) || isvortigaunt(human_target))
 				cost *= 4
 			else if(isgolem(human_target) || iszombie(human_target))
 				cost *= 3

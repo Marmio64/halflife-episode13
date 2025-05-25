@@ -1276,6 +1276,11 @@
 "eL" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/outdoors/alley/slums)
+"eM" = (
+/obj/structure/table/halflife/metal/alt,
+/obj/machinery/light/small/cyan/directional/south,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/outdoors/roofs)
 "eN" = (
 /obj/machinery/light/small/cyan/directional/south,
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -2768,6 +2773,11 @@
 	},
 /turf/open/floor/plating/indoor/tiled9,
 /area/halflife/indoors/hospital)
+"kj" = (
+/obj/structure/table/halflife/metal/alt,
+/obj/item/halflife/dna_probe,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/outdoors/roofs)
 "kk" = (
 /obj/machinery/camera{
 	c_tag = "Labor Union Break Room";
@@ -4357,6 +4367,9 @@
 /obj/machinery/vending/breenwater,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
+"ql" = (
+/turf/closed/wall/halflife/metal,
+/area/halflife/indoors/scienceunion)
 "qm" = (
 /obj/structure/sink/halflife,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -4568,6 +4581,12 @@
 	},
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/bar/apartments)
+"qY" = (
+/obj/structure/table/halflife/metal/alt,
+/obj/item/halflife/dna_probe,
+/obj/machinery/light/small/cyan/directional/south,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/outdoors/roofs)
 "qZ" = (
 /obj/structure/chair/halflife/wood/padded{
 	dir = 1
@@ -5467,6 +5486,12 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/plaza)
+"ut" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/science/nodirectional{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/scienceunion)
 "uu" = (
 /mob/living/basic/halflife/grub{
 	dir = 8
@@ -6432,6 +6457,9 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley/dropshippad)
+"xU" = (
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/outdoors/roofs)
 "xV" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal,
 /turf/open/floor/plating/indoor/tile/green,
@@ -9126,6 +9154,10 @@
 /obj/machinery/vending/combine_wallmed/directional/west,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors)
+"HO" = (
+/obj/structure/table/halflife/metal/alt,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/outdoors/roofs)
 "HP" = (
 /obj/structure/halflife/stationclock,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -9746,6 +9778,10 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
+"JY" = (
+/obj/machinery/analyzing_server,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/outdoors/roofs)
 "JZ" = (
 /obj/structure/railing/halflife/solo{
 	dir = 8
@@ -58914,11 +58950,11 @@ bA
 bA
 wB
 bA
-bA
-Lg
-Lg
-Lg
-Lg
+ql
+Qu
+Qu
+Qu
+Qu
 Lg
 Lg
 Rt
@@ -59051,11 +59087,11 @@ Ym
 Cu
 Cu
 vw
-bA
-Lg
-Lg
-Lg
-Lg
+ql
+kj
+kj
+eM
+Qu
 Lg
 Lg
 Rt
@@ -59188,11 +59224,11 @@ sd
 Cu
 Cu
 YV
-bA
-Lg
-Lg
-Lg
-Lg
+ql
+xU
+xU
+xU
+Qu
 Lg
 Lg
 Rt
@@ -59324,12 +59360,12 @@ bA
 bA
 sW
 Cu
-VV
-bA
-Lg
-Lg
-Lg
-Lg
+Cu
+ut
+xU
+JY
+xU
+Qu
 Lg
 Lg
 Rt
@@ -59461,12 +59497,12 @@ hH
 bW
 Cu
 Cu
-Cu
-bA
-Lg
-Lg
-Lg
-Lg
+VV
+ql
+xU
+xU
+xU
+Qu
 Lg
 Lg
 Rt
@@ -59599,11 +59635,11 @@ Ay
 Cu
 Cu
 Cu
-bA
-Lg
-Lg
-Lg
-Lg
+ql
+kj
+HO
+qY
+Qu
 Lg
 Lg
 Rt
@@ -59736,11 +59772,11 @@ bA
 bA
 bA
 Yz
-bA
-bA
-Lg
-Lg
-Lg
+ql
+ql
+Qu
+Qu
+Qu
 Lg
 Lg
 Rt
