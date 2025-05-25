@@ -544,7 +544,7 @@ SUBSYSTEM_DEF(shuttle)
 		emergency.mode = SHUTTLE_DOCKED
 		emergency.setTimer(emergency_dock_time)
 		priority_announce(
-			text = "You have [DisplayTimeText(emergency_dock_time)] to board the emergency shuttle.",
+			text = "You have [DisplayTimeText(emergency_dock_time)] to board the transfer train.",
 			title = "Hostile Environment Resolved",
 			sound = 'sound/announcer/announcement/announce_dig.ogg',
 			sender_override = "Transfer Train Uplink Alert",

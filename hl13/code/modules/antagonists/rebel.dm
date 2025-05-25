@@ -16,6 +16,8 @@
 /datum/outfit/bunkeroperator/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/cpviolation.ogg'
 
+	H.change_stat(STATKEY_DEX, 1)
+
 /obj/item/clothing/mask/gas/hl2/military/gps/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/gps, "Bunker Signal")

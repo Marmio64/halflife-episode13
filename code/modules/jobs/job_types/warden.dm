@@ -67,10 +67,13 @@
 		ID.registered_name = "OV:13.[currentrankpoints]-[rand(10,90)]"
 		ID.update_label()
 
+		if(24 < currentrankpoints)
+			ID.registered_account.requisition_points += 1
+
 		if(49 < currentrankpoints)
 			ID.registered_account.requisition_points += 1
 
-		if(94 < currentrankpoints)
+		if(74 < currentrankpoints)
 			ID.registered_account.requisition_points += 1
 
 /datum/outfit/job/warden

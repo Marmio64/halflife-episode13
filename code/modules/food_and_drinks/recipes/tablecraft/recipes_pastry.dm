@@ -22,15 +22,6 @@
 	if(donut_result.is_decorated)
 		donut_result.reagents.add_reagent(/datum/reagent/consumable/sprinkles, 1)
 
-/datum/crafting_recipe/food/donut/meat
-	time = 15
-	name = "Meat donut"
-	reqs = list(
-		/obj/item/food/meat/rawcutlet = 1,
-		/obj/item/food/pastrybase = 1
-	)
-	result = /obj/item/food/donut/meat
-
 /datum/crafting_recipe/food/donut/jelly
 	name = "Jelly donut"
 	reqs = list(
@@ -95,14 +86,6 @@
 	)
 	result = /obj/item/food/donut/matcha
 
-/datum/crafting_recipe/food/donut/laugh
-	name = "Sweet Pea Donut"
-	reqs = list(
-		/datum/reagent/consumable/laughsyrup = 3,
-		/obj/item/food/donut/plain = 1
-	)
-	result = /obj/item/food/donut/laugh
-
 ////////////////////////////////////////////////////JELLY DONUTS///////////////////////////////////////////////////////
 
 /datum/crafting_recipe/food/donut/jelly/berry
@@ -112,15 +95,6 @@
 		/obj/item/food/donut/jelly/plain = 1
 	)
 	result = /obj/item/food/donut/jelly/berry
-
-/datum/crafting_recipe/food/donut/jelly/trumpet
-	name = "Spaceman's Jelly Donut"
-	reqs = list(
-		/datum/reagent/medicine/polypyr = 3,
-		/obj/item/food/donut/jelly/plain = 1
-	)
-
-	result = /obj/item/food/donut/jelly/trumpet
 
 /datum/crafting_recipe/food/donut/jelly/apple
 	name = "Apple Jelly Donut"
@@ -146,14 +120,6 @@
 	)
 	result = /obj/item/food/donut/jelly/choco
 
-/datum/crafting_recipe/food/donut/jelly/bungo
-	name = "Bungo Jelly Donut"
-	reqs = list(
-		/datum/reagent/consumable/bungojuice = 3,
-		/obj/item/food/donut/jelly/plain = 1
-	)
-	result = /obj/item/food/donut/jelly/bungo
-
 /datum/crafting_recipe/food/donut/jelly/matcha
 	name = "Matcha Jelly Donut"
 	reqs = list(
@@ -161,14 +127,6 @@
 		/obj/item/food/donut/jelly/plain = 1
 	)
 	result = /obj/item/food/donut/jelly/matcha
-
-/datum/crafting_recipe/food/donut/jelly/laugh
-	name = "Sweet Pea Jelly Donut"
-	reqs = list(
-		/datum/reagent/consumable/laughsyrup = 3,
-		/obj/item/food/donut/jelly/plain = 1
-	)
-	result = /obj/item/food/donut/jelly/laugh
 
 ////////////////////////////////////////////////WAFFLES////////////////////////////////////////////////
 
@@ -368,16 +326,6 @@
 	result = /obj/item/food/cherrycupcake/blue
 	category = CAT_PASTRY
 
-/datum/crafting_recipe/food/jupitercupcake
-	name = "Jupiter-cup-cake"
-	reqs = list(
-		/obj/item/food/pastrybase = 1,
-		/obj/item/food/grown/mushroom/jupitercup = 1,
-		/datum/reagent/consumable/caramel = 3,
-	)
-	result = /obj/item/food/jupitercupcake
-	category = CAT_PASTRY
-
 /datum/crafting_recipe/food/honeybun
 	name = "Honey bun"
 	reqs = list(
@@ -391,8 +339,8 @@
 	name = "Cannoli"
 	reqs = list(
 		/obj/item/food/pastrybase = 1,
-		/datum/reagent/consumable/milk = 1,
-		/datum/reagent/consumable/sugar = 3
+		/datum/reagent/consumable/milk = 3,
+		/datum/reagent/consumable/sugar = 5
 	)
 	result = /obj/item/food/cannoli
 	category = CAT_PASTRY
@@ -409,10 +357,10 @@
 /datum/crafting_recipe/food/raw_brownie_batter
 	name = "Raw brownie batter"
 	reqs = list(
-		/datum/reagent/consumable/flour = 5,
-		/datum/reagent/consumable/sugar = 5,
+		/datum/reagent/consumable/flour = 15,
+		/datum/reagent/consumable/sugar = 15,
 		/obj/item/food/egg = 2,
-		/datum/reagent/consumable/coco = 5,
+		/datum/reagent/consumable/coco = 10,
 		/obj/item/food/butterslice = 1
 	)
 	result = /obj/item/food/raw_brownie_batter
@@ -421,10 +369,10 @@
 /datum/crafting_recipe/food/peanut_butter_brownie_batter
 	name = "Raw peanut butter brownie batter"
 	reqs = list(
-		/datum/reagent/consumable/flour = 5,
-		/datum/reagent/consumable/sugar = 5,
+		/datum/reagent/consumable/flour = 15,
+		/datum/reagent/consumable/sugar = 15,
 		/obj/item/food/egg = 2,
-		/datum/reagent/consumable/coco = 5,
+		/datum/reagent/consumable/coco = 10,
 		/datum/reagent/consumable/peanut_butter = 5,
 		/obj/item/food/butterslice = 1
 	)

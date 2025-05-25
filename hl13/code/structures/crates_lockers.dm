@@ -84,11 +84,25 @@
 	base_icon_state = "aluminum"
 	paint_jobs = null
 
-/obj/structure/closet/crate/halflife
-	icon = 'hl13/icons/obj/storage/crates.dmi'
-	icon_state = "aluminum"
-	base_icon_state = "aluminum"
-	paint_jobs = null
+/obj/structure/closet/crate/halflife/ration_supplies/PopulateContents()
+	. = ..()
+	new /obj/item/ration_construction/watermix/blueadditive(src)
+	new /obj/item/ration_construction/watermix/yellowadditive(src)
+	new /obj/item/ration_construction/watermix/redadditive(src)
+	new /obj/item/ration_construction/watermix/purpleadditive(src)
+	new /obj/item/ration_construction/flavoring/sweet(src)
+	new /obj/item/ration_construction/flavoring/bitter(src)
+	new /obj/item/ration_construction/flavoring/sour(src)
+	new /obj/item/ration_construction/container(src)
+	new /obj/item/ration_construction/container(src)
+	new /obj/item/stack/sheet/halflife/plastic(src)
+	new /obj/item/stack/sheet/halflife/plastic(src)
+	new /obj/item/ration_construction/waterbase(src)
+	new /obj/item/ration_construction/base/protein(src)
+	new /obj/item/ration_construction/base/fat(src)
+	new /obj/item/ration_construction/base/fiber(src)
+	new /obj/item/stack/sheet/ironingot(src)
+	new /obj/item/stack/sheet/ironingot(src)
 
 /obj/structure/closet/crate/secure/halflife
 	icon_state = "vault_standard_clean"

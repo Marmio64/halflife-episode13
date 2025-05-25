@@ -252,16 +252,28 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 		if(department == SEC_DEPT_MEDICAL)
 			user.change_stat(STATKEY_INT, 3) //Guarantee they can use an analyzer, at the cost of strength
 			user.change_stat(STATKEY_STR, -2)
+		if(department == SEC_DEPT_ENGINEERING)
+			user.change_stat(STATKEY_INT, 3)
+			user.change_stat(STATKEY_STR, -2)
+		if(department == SEC_DEPT_SUPPLY)
+			user.change_stat(STATKEY_DEX, -1)
+			user.change_stat(STATKEY_STR, 1)
+		if(department == SEC_DEPT_SCIENCE)
+			user.change_stat(STATKEY_DEX, 1)
+			user.change_stat(STATKEY_STR, -1)
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id
 		ID.registered_name = "CP:13.[currentrankpoints]-[rand(111,999)]"
 		ID.update_label()
 
+		if(24 < currentrankpoints)
+			ID.registered_account.requisition_points += 1
+
 		if(49 < currentrankpoints)
 			ID.registered_account.requisition_points += 1
 
-		if(94 < currentrankpoints)
+		if(74 < currentrankpoints)
 			ID.registered_account.requisition_points += 1
 
 /datum/outfit/job/security/mod

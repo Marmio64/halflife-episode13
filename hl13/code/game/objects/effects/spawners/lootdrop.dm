@@ -135,13 +135,13 @@
 	spawn_loot_count = 1
 
 	loot = list(
-				/obj/item/reagent_containers/pill/patch/medkit = 2,
-				/obj/item/reagent_containers/hypospray/medipen/healthpen = 4,
-				/obj/item/reagent_containers/pill/patch/medkit/vial = 3,
+				/obj/item/reagent_containers/pill/patch/medkit = 3,
+				/obj/item/reagent_containers/hypospray/medipen/healthpen = 5,
+				/obj/item/reagent_containers/pill/patch/medkit/vial = 4,
 				/obj/item/storage/halflife/pill_bottle/antitox,
 				/obj/item/stack/medical/gauze,
 				/obj/item/stack/medical/suture,
-				/obj/item/stack/medical/bandage,
+				/obj/item/stack/medical/bandage = 2,
 				)
 
 //only consumable loot. Food, drinks, drugs, cigarettes, etc.

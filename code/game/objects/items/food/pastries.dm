@@ -183,8 +183,8 @@
 	desc = "Just like your little sister used to make."
 	icon_state = "sugarcookie"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 4,
-		/datum/reagent/consumable/sugar = 6,
+		/datum/reagent/consumable/nutriment = 3,
+		/datum/reagent/consumable/sugar = 5,
 	)
 	tastes = list("sweetness" = 1)
 	foodtypes = GRAIN | JUNKFOOD | SUGAR
@@ -215,7 +215,7 @@
 	desc = "The best of both cookie and oat."
 	icon_state = "oatmealcookie"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 6,
+		/datum/reagent/consumable/nutriment = 5,
 		/datum/reagent/consumable/nutriment/vitamin = 2,
 	)
 	tastes = list("cookie" = 2, "oat" = 1)
@@ -227,7 +227,7 @@
 	desc = "Why would you put raisins on a cookie?"
 	icon_state = "raisincookie"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 6,
+		/datum/reagent/consumable/nutriment = 5,
 		/datum/reagent/consumable/nutriment/vitamin = 2,
 	)
 	tastes = list("cookie" = 1, "raisins" = 1)
@@ -307,7 +307,7 @@
 	desc = "A sweet cupcake with cherry bits."
 	icon_state = "cherrycupcake"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 6,
+		/datum/reagent/consumable/nutriment = 5,
 		/datum/reagent/consumable/nutriment/vitamin = 2,
 	)
 	tastes = list("cake" = 3, "cherry" = 1)
@@ -328,7 +328,7 @@
 	desc = "A static dessert."
 	icon_state = "jupitercupcake"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 6,
+		/datum/reagent/consumable/nutriment = 5,
 		/datum/reagent/consumable/nutriment/vitamin = 2,
 		/datum/reagent/consumable/caramel = 3,
 		/datum/reagent/consumable/liquidelectricity/enriched = 3,
@@ -342,7 +342,7 @@
 	desc = "A sticky pastry bun glazed with honey."
 	icon_state = "honeybun"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 6,
+		/datum/reagent/consumable/nutriment = 4,
 		/datum/reagent/consumable/honey = 6,
 	)
 	tastes = list("pastry" = 1, "sweetness" = 1)
@@ -355,13 +355,13 @@
 	desc = "A sicilian treat that makes you into a wise guy."
 	icon_state = "cannoli"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 6,
+		/datum/reagent/consumable/nutriment = 4,
 		/datum/reagent/consumable/nutriment/vitamin = 2,
 	)
 	tastes = list("pastry" = 1)
 	foodtypes = GRAIN | DAIRY | SUGAR
 	w_class = WEIGHT_CLASS_TINY
-	venue_value = FOOD_PRICE_CHEAP // Pastry base, 3u of sugar and a single. fucking. unit. of. milk. really?
+	venue_value = FOOD_PRICE_CHEAP
 	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/icecream
@@ -538,7 +538,7 @@
 	icon = 'icons/obj/food/food.dmi'
 	icon_state = "crunchy_peanut_butter_tart"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 8,
+		/datum/reagent/consumable/nutriment = 6,
 		/datum/reagent/consumable/sugar = 6,
 		/datum/reagent/consumable/peanut_butter = 5,
 	)
@@ -551,7 +551,7 @@
 	name = "chocolate chip cookie"
 	desc = "A delightful-smelling chocolate chip cookie. Where's the milk?"
 	icon_state = "COOKIE!!!"
-	food_reagents = list(/datum/reagent/consumable/nutriment = 5)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 4)
 	tastes = list("soft cookie" = 2, "chocolate" = 3)
 	foodtypes = GRAIN | SUGAR | DAIRY
 	food_flags = FOOD_FINGER_FOOD
@@ -562,7 +562,7 @@
 	name = "snickerdoodle"
 	desc = "A soft cookie made from vanilla and cinnamon."
 	icon_state = "snickerdoodle"
-	food_reagents = list(/datum/reagent/consumable/nutriment = 5)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 4)
 	tastes = list("soft cookie" = 2, "vanilla" = 3)
 	foodtypes = GRAIN | SUGAR | DAIRY
 	food_flags = FOOD_FINGER_FOOD
@@ -572,7 +572,7 @@
 /obj/item/food/cookie/macaron
 	name = "macaron"
 	desc = "A sandwich-like confectionary with a soft cookie shell and a creamy meringue center."
-	food_reagents = list(/datum/reagent/consumable/nutriment = 6)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 5)
 	icon_state = "macaron_1"
 	base_icon_state = "macaron"
 	tastes = list("wafer" = 2, "creamy meringue" = 3)
@@ -589,7 +589,7 @@
 	name = "thumbprint cookie"
 	desc = "A cookie with a thumb-sized indent in the middle made for fillings. This one is filled with cherry jelly"
 	icon_state = "thumbprint_cookie"
-	food_reagents = list(/datum/reagent/consumable/nutriment = 6)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 5)
 	tastes = list("cookie" = 2, "cherry jelly" = 3)
 	foodtypes = GRAIN | SUGAR | FRUIT
 	food_flags = FOOD_FINGER_FOOD

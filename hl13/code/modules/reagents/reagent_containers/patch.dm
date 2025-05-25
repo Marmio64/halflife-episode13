@@ -40,13 +40,13 @@
 
 /obj/item/storage/halflife/pill_bottle/antitox
 	name = "Anti-Sickness Pill bottle"
-	icon = 'hl13/icons/obj/food.dmi'
-	desc = "A pill bottle with antibiotics and activated charcoal pills, which cleanse."
-	icon_state = "pill_bottle"
+	desc = "A pill bottle with antibiotics and activated charcoal pills, which cleanse diseases, venoms, and poisons from the body."
 	w_class = WEIGHT_CLASS_SMALL
+	icon_state = "pill_canister"
+	icon = 'icons/obj/medical/chemical.dmi'
 
 /obj/item/storage/halflife/pill_bottle/antitox/PopulateContents()
-	for(var/i=0,i<4, i++)
+	for(var/i=0,i<3, i++)
 		new /obj/item/reagent_containers/pill/antitox(src)
 
 /obj/item/reagent_containers/pill/antitox

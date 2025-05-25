@@ -103,6 +103,12 @@ GLOBAL_VAR_INIT(station_was_cutoff, FALSE)
 	begin_processing()
 	priority_announce("Alert, Alert. Priority sociocide-class disruptor detected on systems. All units converge upon Nexus immediately to contain, Code-3. A GPS signal has been assigned to the threat.", "Overwatch Priority Alert")
 	SSsecurity_level.set_level(SEC_LEVEL_DELTA)
+	SSshuttle.registerHostileEnvironment("SuperDestabilizer")
+
+/obj/machinery/destabilizer/super/deconstruct(disassembled = TRUE)
+	SSshuttle.clearHostileEnvironment("SuperDestabilizer")
+	priority_announce("Priority sociocide-class disruptor signs halted. Attention ground units, your family cohesion is preserved.", "Overwatch Priority Alert")
+	qdel(src)
 
 // super destabilizer beacon
 /obj/item/super_destabilizer_beacon

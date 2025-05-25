@@ -90,10 +90,13 @@
 		ID.registered_name = "DV:13.[currentrankpoints]-[rand(10,90)]"
 		ID.update_label()
 
+		if(24 < currentrankpoints)
+			ID.registered_account.requisition_points += 1
+
 		if(49 < currentrankpoints)
 			ID.registered_account.requisition_points += 1
 
-		if(94 < currentrankpoints)
+		if(74 < currentrankpoints)
 			ID.registered_account.requisition_points += 1
 
 	user.change_stat(STATKEY_DEX, 2)
