@@ -74,11 +74,17 @@
 		target.animal_dna += stored_dna_animal
 		stored_dna_animal.Cut()
 	playsound(target, 'sound/machines/compiler/compiler-stage1.ogg', 50)
-	to_chat(user, span_notice("[uploaded] new datapoints uploaded."))
+	to_chat(user, span_notice("[uploaded] new datapoints uploaded. Reward dispensed."))
+	new /obj/item/stack/spacecash/c1(user.loc, uploaded)
 	target.stored_research.add_point_list(list(TECHWEB_POINT_TYPE_GENERIC = uploaded*10))
 	return uploaded
 
 /obj/item/halflife/dna_probe/proc/scan_dna(atom/target, mob/user)
+	if(isliving(user))
+		var/mob/living/livvy = user
+		if(livvy.get_stat_level(STATKEY_INT) < 12)
+			to_chat(livvy, span_notice("You're not smart enough to know how this gadget works. Best leave it to the scientists."))
+			return
 	var/obj/machinery/analyzing_server/our_vault = dna_vault_ref?.resolve()
 	if(!our_vault)
 		playsound(user, 'sound/machines/buzz/buzz-sigh.ogg', 50)
@@ -102,6 +108,21 @@
 			balloon_alert(user, "sample collection failed")
 			return FALSE
 		stored_dna_plants[hydro_tray.myseed.type] = TRUE
+		playsound(src, 'sound/machines/compiler/compiler-stage2.ogg', 50)
+		balloon_alert(user, "data added")
+		return TRUE
+	else if(istype(target, /obj/structure/flora/xen))
+		if(our_vault.plant_dna[target.type])
+			to_chat(user, span_notice("Xenian data already present in vault storage."))
+			return
+		if(stored_dna_plants[target.type])
+			to_chat(user, span_notice("Xenian data already present in local storage."))
+			return
+		balloon_alert(user, "collecting sample")
+		if(!do_after(user, 5 SECONDS, target))
+			balloon_alert(user, "sample collection failed")
+			return FALSE
+		stored_dna_plants[target.type] = TRUE
 		playsound(src, 'sound/machines/compiler/compiler-stage2.ogg', 50)
 		balloon_alert(user, "data added")
 		return TRUE
@@ -153,6 +174,8 @@
 
 /obj/item/halflife/dna_probe/proc/valid_scan_target(atom/target)
 	if((allowed_scans & DNA_PROBE_SCAN_PLANTS) && istype(target, /obj/machinery/hydroponics))
+		return TRUE
+	if((allowed_scans & DNA_PROBE_SCAN_PLANTS) && istype(target, /obj/structure/flora/xen))
 		return TRUE
 	if((allowed_scans & DNA_PROBE_SCAN_HUMANS) && ishuman(target))
 		return TRUE

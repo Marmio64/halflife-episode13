@@ -1278,9 +1278,9 @@
 /area/halflife/outdoors/alley/slums)
 "eM" = (
 /obj/structure/table/halflife/metal/alt,
-/obj/machinery/light/small/cyan/directional/south,
+/obj/item/clothing/neck/anti_magic_collar,
 /turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/outdoors/roofs)
+/area/halflife/indoors/townhall/civilprotection)
 "eN" = (
 /obj/machinery/light/small/cyan/directional/south,
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -2773,11 +2773,6 @@
 	},
 /turf/open/floor/plating/indoor/tiled9,
 /area/halflife/indoors/hospital)
-"kj" = (
-/obj/structure/table/halflife/metal/alt,
-/obj/item/halflife/dna_probe,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/outdoors/roofs)
 "kk" = (
 /obj/machinery/camera{
 	c_tag = "Labor Union Break Room";
@@ -2985,6 +2980,12 @@
 /obj/structure/halflife/rug/mat/welcome,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/alley)
+"kV" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/science/nodirectional{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/scienceunion)
 "kW" = (
 /obj/structure/chair/halflife/metal{
 	dir = 4
@@ -4581,12 +4582,6 @@
 	},
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/bar/apartments)
-"qY" = (
-/obj/structure/table/halflife/metal/alt,
-/obj/item/halflife/dna_probe,
-/obj/machinery/light/small/cyan/directional/south,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/outdoors/roofs)
 "qZ" = (
 /obj/structure/chair/halflife/wood/padded{
 	dir = 1
@@ -5486,12 +5481,6 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/plaza)
-"ut" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/science/nodirectional{
-	dir = 1
-	},
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/scienceunion)
 "uu" = (
 /mob/living/basic/halflife/grub{
 	dir = 8
@@ -6459,7 +6448,7 @@
 /area/halflife/outdoors/alley/dropshippad)
 "xU" = (
 /turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/outdoors/roofs)
+/area/halflife/indoors/scienceunion)
 "xV" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal,
 /turf/open/floor/plating/indoor/tile/green,
@@ -8464,6 +8453,10 @@
 /obj/structure/halflife/pipes/horizontal/random_alt,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/productioncenter)
+"Fi" = (
+/obj/structure/table/halflife/metal/alt,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/scienceunion)
 "Fj" = (
 /obj/structure/halflife/fence/wire,
 /turf/open/floor/plating/ground/dirt,
@@ -8482,6 +8475,11 @@
 "Fm" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
+"Fn" = (
+/obj/structure/table/halflife/metal/alt,
+/obj/item/halflife/dna_probe,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/scienceunion)
 "Fo" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -9154,10 +9152,6 @@
 /obj/machinery/vending/combine_wallmed/directional/west,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors)
-"HO" = (
-/obj/structure/table/halflife/metal/alt,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/outdoors/roofs)
 "HP" = (
 /obj/structure/halflife/stationclock,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -9778,10 +9772,6 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
-"JY" = (
-/obj/machinery/analyzing_server,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/outdoors/roofs)
 "JZ" = (
 /obj/structure/railing/halflife/solo{
 	dir = 8
@@ -11573,6 +11563,13 @@
 /obj/machinery/computer/cargo,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley/dropshippad)
+"Qx" = (
+/obj/structure/table/halflife/metal/alt,
+/obj/machinery/light/small/cyan/directional/south,
+/obj/item/clothing/suit/utility/radiation/cleanup/scientist,
+/obj/item/clothing/head/utility/radiation/scientist,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/scienceunion)
 "Qy" = (
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/productioncenter/office)
@@ -13932,7 +13929,7 @@
 /area/halflife/outdoors/alley/dropshippad)
 "Zt" = (
 /obj/machinery/rnd/server/master,
-/turf/open/floor/plating/indoor/tile/navy,
+/turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/scienceunion)
 "Zu" = (
 /obj/structure/halflife/trash/garbage,
@@ -14088,6 +14085,10 @@
 	},
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/townhall/secondfloor)
+"ZV" = (
+/obj/machinery/analyzing_server,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/scienceunion)
 "ZW" = (
 /obj/structure/halflife/trash/papers/three{
 	dir = 8
@@ -38663,9 +38664,9 @@ qP
 UX
 fJ
 pI
-fo
+eM
 LY
-fo
+eM
 pI
 Jj
 Jj
@@ -58951,10 +58952,10 @@ bA
 wB
 bA
 ql
-Qu
-Qu
-Qu
-Qu
+ql
+ql
+ql
+ql
 Lg
 Lg
 Rt
@@ -59088,10 +59089,10 @@ Cu
 Cu
 vw
 ql
-kj
-kj
-eM
-Qu
+Fi
+Fn
+Qx
+ql
 Lg
 Lg
 Rt
@@ -59228,7 +59229,7 @@ ql
 xU
 xU
 xU
-Qu
+ql
 Lg
 Lg
 Rt
@@ -59361,11 +59362,11 @@ bA
 sW
 Cu
 Cu
-ut
+kV
 xU
-JY
+ZV
 xU
-Qu
+ql
 Lg
 Lg
 Rt
@@ -59502,7 +59503,7 @@ ql
 xU
 xU
 xU
-Qu
+ql
 Lg
 Lg
 Rt
@@ -59636,10 +59637,10 @@ Cu
 Cu
 Cu
 ql
-kj
-HO
-qY
-Qu
+Fi
+Fn
+Qx
+ql
 Lg
 Lg
 Rt
@@ -59774,9 +59775,9 @@ bA
 Yz
 ql
 ql
-Qu
-Qu
-Qu
+ql
+ql
+ql
 Lg
 Lg
 Rt

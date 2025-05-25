@@ -6,6 +6,10 @@
 	icon_state = "cleanup"
 	clothing_traits = list(TRAIT_WEARING_GAS_MASK)
 
+/obj/item/clothing/head/utility/radiation/scientist
+	name = "scientist hood"
+	icon_state = "scientist"
+
 /obj/item/clothing/head/utility/hardhat/halflife
 	icon = 'hl13/icons/obj/clothing/hats.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
