@@ -39,9 +39,9 @@
 			. += span_notice("[src] is designed for tram usage. Deconstructed with a screwdriver!")
 
 /obj/structure/girder/attackby(obj/item/W, mob/user, params)
-	var/platingmodifier = 1
+	var/platingmodifier = 2 //hl13 edit
 	if(HAS_TRAIT(user, TRAIT_QUICK_BUILD))
-		platingmodifier = 0.7
+		platingmodifier = 1 //hl13 edit
 		if(next_beep <= world.time)
 			next_beep = world.time + 10
 			playsound(src, 'sound/machines/clockcult/integration_cog_install.ogg', 50, TRUE)
