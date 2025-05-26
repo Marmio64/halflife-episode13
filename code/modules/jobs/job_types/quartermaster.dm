@@ -50,11 +50,15 @@
 	id_trim = /datum/id_trim/job/quartermaster
 	ears = /obj/item/radio/headset
 	uniform = /obj/item/clothing/under/citizen
-	head = /obj/item/clothing/head/halflife/blue_hardhat
 	r_pocket = /obj/item/hl2key/factory
 	l_pocket = /obj/item/hl2key/foreman
 
-	suit = /obj/item/clothing/suit/greenjacket
+	belt = /obj/item/melee/baton/telescopic
+
+	shoes = /obj/item/clothing/shoes/halflife/engineer
+	gloves = /obj/item/clothing/gloves/halflife/foreman
+	mask = /obj/item/clothing/mask/gas/cwuengi
+	suit = /obj/item/clothing/suit/utility/radiation/engineer/foreman
 
 /datum/outfit/job/quartermaster/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()

@@ -31,3 +31,17 @@
 	strip_delay = 20
 	equip_delay_other = 40
 	lace_time = 8 SECONDS
+
+/obj/item/clothing/shoes/halflife
+	worn_icon = 'hl13/icons/mob/clothing/feet.dmi'
+	icon = 'hl13/icons/obj/clothing/shoes.dmi'
+
+/obj/item/clothing/shoes/halflife/engineer
+	name = "engineering boots"
+	desc = "Sturdy boots for the engineering workforce."
+	icon_state = "engineer"
+
+/obj/item/clothing/shoes/halflife/cleanup
+	name = "boots"
+	desc = "Sturdy boots with high grip, for treading on xenian scum."
+	icon_state = "cleanup"

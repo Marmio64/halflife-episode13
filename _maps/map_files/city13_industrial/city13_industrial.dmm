@@ -2455,8 +2455,8 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "je" = (
-/obj/structure/sign/poster/halflife/combine{
-	pixel_y = 32
+/obj/machinery/combine_health_station/round_start{
+	pixel_y = 30
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
@@ -2737,8 +2737,8 @@
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
 /obj/item/clothing/suit/utility/radiation/cleanup,
-/obj/item/clothing/suit/utility/radiation/cleanup,
-/obj/item/clothing/suit/utility/radiation/cleanup,
+/obj/item/clothing/mask/gas/cwuengi,
+/obj/item/clothing/head/utility/radiation,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
 "kc" = (
@@ -4724,8 +4724,6 @@
 "rA" = (
 /obj/structure/closet/halflife/wall/firstaid,
 /obj/item/stack/medical/gauze,
-/obj/item/reagent_containers/pill/patch/medkit/vial,
-/obj/item/reagent_containers/hypospray/medipen/healthpen,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "rB" = (
@@ -5061,6 +5059,7 @@
 "sR" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/table/halflife/metal/alt,
+/obj/item/clothing/suit/toggle/labcoat/halflife,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
 "sS" = (
@@ -9624,7 +9623,6 @@
 /obj/structure/table/halflife/no_smooth/metal,
 /obj/structure/halflife/pipes/vent,
 /obj/item/melee/baton/security/heavy/loaded,
-/obj/item/melee/baton/security/heavy/loaded,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "Jw" = (
@@ -10977,6 +10975,11 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/alley/dropshippad)
+"Ot" = (
+/obj/structure/table/halflife/metal/alt,
+/obj/item/clothing/suit/toggle/labcoat/halflife,
+/turf/open/floor/plating/indoor/tile,
+/area/halflife/indoors/scienceunion)
 "Ou" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/effect/spawner/random/halflife/loot,
@@ -11566,8 +11569,6 @@
 "Qx" = (
 /obj/structure/table/halflife/metal/alt,
 /obj/machinery/light/small/cyan/directional/south,
-/obj/item/clothing/suit/utility/radiation/cleanup/scientist,
-/obj/item/clothing/head/utility/radiation/scientist,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/scienceunion)
 "Qy" = (
@@ -12843,6 +12844,8 @@
 /obj/structure/closet/cabinet,
 /obj/item/blueprints,
 /obj/item/clothing/head/halflife/blue_hardhat,
+/obj/item/megaphone/cargo,
+/obj/item/clothing/suit/greenjacket,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/productioncenter/office)
 "Vt" = (
@@ -14048,16 +14051,10 @@
 /area/halflife/indoors/sewer)
 "ZR" = (
 /obj/structure/rack,
-/obj/item/clothing/head/utility/radiation,
 /obj/effect/turf_decal/box,
-/obj/item/clothing/head/utility/radiation,
-/obj/item/clothing/head/utility/radiation,
 /obj/item/tank/internals/emergency_oxygen/engi,
 /obj/item/tank/internals/emergency_oxygen/engi,
 /obj/item/tank/internals/emergency_oxygen/engi,
-/obj/item/clothing/mask/gas/cwuengi,
-/obj/item/clothing/mask/gas/cwuengi,
-/obj/item/clothing/mask/gas/cwuengi,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
 "ZS" = (
@@ -57993,7 +57990,7 @@ Cu
 Fv
 Cu
 CY
-Jo
+Ot
 bA
 Rt
 Rt
@@ -58267,7 +58264,7 @@ Cu
 Cu
 Cu
 Cu
-Jo
+Ot
 bA
 Rt
 Rt

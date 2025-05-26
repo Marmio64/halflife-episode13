@@ -325,6 +325,10 @@
 	slowdown = 0
 	armor_type = /datum/armor/engineersuit
 
+/obj/item/clothing/suit/utility/radiation/engineer/foreman
+	name = "foreman suit"
+	icon_state = "foreman"
+
 /datum/armor/engineersuit
 	melee = 0
 	bullet = 0

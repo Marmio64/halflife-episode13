@@ -170,6 +170,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	premium = list(
 		/obj/item/storage/backpack/halflife/satchel/civilprotection = 12,
 		/obj/item/gun/ballistic/automatic/pistol/usp/riot = 12,
+		/obj/item/melee/baton/security/heavy/loaded = 12,
 	)
 	refill_canister = /obj/item/vending_refill/civpro
 	default_price = 1

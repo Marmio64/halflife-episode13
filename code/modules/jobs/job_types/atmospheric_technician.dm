@@ -3,7 +3,7 @@
 	description = "Remove xenian infestations from hotspots in the city."
 	department_head = list(JOB_QUARTERMASTER)
 	total_positions = 3
-	spawn_positions = 3
+	spawn_positions = 2
 	supervisors = SUPERVISOR_CE
 	exp_requirements = 60
 	exp_required_type = EXP_TYPE_CREW
@@ -53,6 +53,12 @@
 	uniform = /obj/item/clothing/under/citizen
 	r_pocket = /obj/item/hl2key/factory
 	belt = /obj/item/storage/belt/pouch/large/cleanup
+
+	shoes = /obj/item/clothing/shoes/halflife/cleanup
+	gloves = /obj/item/clothing/gloves/halflife/cleanup
+	suit = /obj/item/clothing/suit/utility/radiation/cleanup
+	mask = /obj/item/clothing/mask/gas/cwuengi
+	head = /obj/item/clothing/head/utility/radiation
 
 /datum/outfit/job/atmos/mod
 	name = "Atmospheric Technician (MODsuit)"

@@ -35,3 +35,22 @@
 /obj/item/clothing/gloves/combat/overwatch/Initialize(mapload) //fused to the soldiers, you cant take it off
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
+
+/obj/item/clothing/gloves/halflife
+	worn_icon = 'hl13/icons/mob/clothing/hands.dmi'
+	icon = 'hl13/icons/obj/clothing/gloves.dmi'
+
+/obj/item/clothing/gloves/halflife/engineer
+	name = "engineer gloves"
+	desc = "Well fitting gloves that allow for more dexterity."
+	icon_state = "engineer"
+
+/obj/item/clothing/gloves/halflife/foreman
+	name = "foreman gloves"
+	desc = "Well fitting gloves that allow for more dexterity."
+	icon_state = "foreman"
+
+/obj/item/clothing/gloves/halflife/cleanup
+	name = "cleanup gloves"
+	desc = "Blue gloves to keep your hands free from contaminants."
+	icon_state = "cleanup"

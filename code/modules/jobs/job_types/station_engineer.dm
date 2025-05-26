@@ -50,7 +50,8 @@
 	uniform = /obj/item/clothing/under/citizen
 	suit = /obj/item/clothing/suit/utility/radiation/engineer
 	mask = /obj/item/clothing/mask/gas/cwuengi
-	gloves = /obj/item/clothing/gloves/color/yellow
+	shoes = /obj/item/clothing/shoes/halflife/engineer
+	gloves = /obj/item/clothing/gloves/halflife/engineer
 	r_pocket = /obj/item/hl2key/factory
 	l_pocket = /obj/item/flashlight
 	skillchips = list(/obj/item/skillchip/engineer)

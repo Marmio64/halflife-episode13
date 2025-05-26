@@ -321,7 +321,7 @@
 	item_flags = NONE
 	force = 0
 	bare_wound_bonus = 5
-	clumsy_knockdown_time = 15 SECONDS
+	clumsy_knockdown_time = 10 SECONDS
 	active = FALSE
 	var/folded_drop_sound = 'sound/items/baton/telescopic_baton_folded_drop.ogg'
 	var/folded_pickup_sound = 'sound/items/baton/telescopic_baton_folded_pickup.ogg'
@@ -335,7 +335,7 @@
 	/// The inhand iconstate used when our baton is extended.
 	var/on_inhand_icon_state = "nullrod"
 	/// The force on extension.
-	var/active_force = 10
+	var/active_force = 15
 
 /obj/item/melee/baton/telescopic/Initialize(mapload)
 	. = ..()
