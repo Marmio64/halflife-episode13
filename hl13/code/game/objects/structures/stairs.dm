@@ -1,5 +1,6 @@
 /obj/structure/stairs/halflife
 	icon = 'hl13/icons/obj/stairs.dmi'
+	max_integrity = 1500
 
 /obj/structure/stairs/halflife/concrete
 	icon_state = "concrete"

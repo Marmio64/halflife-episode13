@@ -362,14 +362,7 @@
 /area/halflife/outdoors/alley/restrictedblock)
 "bq" = (
 /obj/effect/turf_decal/box,
-/obj/structure/closet/crate/halflife,
-/obj/item/ration_construction/container,
-/obj/item/ration_construction/container,
-/obj/item/ration_construction/container,
-/obj/item/stack/sheet/halflife/plastic,
-/obj/item/stack/sheet/halflife/plastic,
-/obj/item/stack/sheet/halflife/plastic,
-/obj/item/stack/sheet/halflife/plastic,
+/obj/structure/closet/crate/halflife/ration_supplies,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "br" = (
@@ -2042,12 +2035,6 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley/dropshippad)
-"hz" = (
-/obj/structure/bed/halflife/bedframe/wire,
-/obj/structure/bed/halflife/mattress/stained,
-/obj/machinery/light/small/cyan/directional/west,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/townhall/civilprotection)
 "hA" = (
 /obj/machinery/computer/rdconsole{
 	dir = 4;
@@ -4067,7 +4054,8 @@
 "pe" = (
 /obj/machinery/door/unpowered/halflife/wood{
 	keylock = 1;
-	lockid = "townhall"
+	lockid = "townhall";
+	locked = 1
 	},
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/townhall/secondfloor)
@@ -5904,24 +5892,11 @@
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/secondfloor)
 "vW" = (
-/obj/effect/turf_decal/box,
-/obj/structure/closet/crate/halflife,
-/obj/item/ration_construction/base/fat,
-/obj/item/ration_construction/base/fiber,
-/obj/item/ration_construction/base/protein,
-/obj/item/ration_construction/waterbase,
-/obj/item/ration_construction/waterbase,
-/obj/item/stack/sheet/ironingot,
-/obj/item/stack/sheet/ironingot,
-/obj/item/ration_construction/watermix/blueadditive,
-/obj/item/ration_construction/watermix/redadditive,
-/obj/item/ration_construction/watermix/yellowadditive,
-/obj/item/ration_construction/watermix/purpleadditive,
-/obj/item/ration_construction/flavoring/bitter,
-/obj/item/ration_construction/flavoring/sour,
-/obj/item/ration_construction/flavoring/sweet,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/productioncenter)
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/structure/bed/halflife/mattress/stained,
+/obj/machinery/light/small/cyan/directional/east,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection)
 "vX" = (
 /obj/modular_map_root/sewerright,
 /turf/closed/wall/halflife/sewer,
@@ -6600,12 +6575,6 @@
 /obj/item/clothing/mask/breath/medical,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
-"yx" = (
-/obj/structure/bed/halflife/bedframe/wire,
-/obj/structure/bed/halflife/mattress/stained,
-/obj/machinery/light/small/cyan/directional/east,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/townhall/civilprotection)
 "yy" = (
 /obj/structure/halflife/trash/papers/three{
 	dir = 8
@@ -7721,20 +7690,10 @@
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors)
 "Cy" = (
-/obj/effect/turf_decal/box,
-/obj/structure/closet/crate/halflife,
-/obj/item/ration_construction/base/fat,
-/obj/item/ration_construction/base/fiber,
-/obj/item/ration_construction/base/protein,
-/obj/item/ration_construction/watermix/blueadditive,
-/obj/item/ration_construction/watermix/purpleadditive,
-/obj/item/ration_construction/watermix/redadditive,
-/obj/item/ration_construction/watermix/yellowadditive,
-/obj/item/ration_construction/flavoring/bitter,
-/obj/item/ration_construction/flavoring/sour,
-/obj/item/ration_construction/flavoring/sweet,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/productioncenter)
+/obj/structure/table/halflife/metal/alt,
+/obj/item/clothing/suit/toggle/labcoat/halflife,
+/turf/open/floor/plating/indoor/tile,
+/area/halflife/indoors/scienceunion)
 "Cz" = (
 /obj/effect/turf_decal/arrows/white{
 	dir = 4
@@ -10582,11 +10541,6 @@
 /obj/structure/closet/secure_closet/freezer/halflife,
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/apartments/primary)
-"MN" = (
-/obj/structure/table/halflife/metal/alt,
-/obj/item/clothing/suit/toggle/labcoat/halflife,
-/turf/open/floor/plating/indoor/tile,
-/area/halflife/indoors/scienceunion)
 "MO" = (
 /mob/living/basic/halflife/zombie/zombine,
 /turf/open/floor/plating/indoor/metal,
@@ -11804,6 +11758,12 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
+"Rm" = (
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/structure/bed/halflife/mattress/stained,
+/obj/machinery/light/small/cyan/directional/west,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection)
 "Rn" = (
 /obj/structure/table/halflife/no_smooth/wood,
 /obj/machinery/light/small/directional/east,
@@ -22379,7 +22339,7 @@ lG
 Jj
 xO
 vK
-hz
+Rm
 vK
 xO
 Jj
@@ -22927,7 +22887,7 @@ Jj
 Jj
 xO
 vK
-yx
+vW
 vK
 xO
 Jj
@@ -36687,7 +36647,7 @@ bc
 Ls
 ZL
 Yp
-Cy
+bq
 oZ
 Yc
 lP
@@ -36960,7 +36920,7 @@ ei
 ei
 Is
 ei
-vW
+bq
 UW
 oZ
 oZ
@@ -58002,7 +57962,7 @@ Cu
 Fv
 Cu
 CY
-MN
+Cy
 bA
 Rt
 Rt
@@ -58276,7 +58236,7 @@ Cu
 Cu
 Cu
 Cu
-MN
+Cy
 bA
 Rt
 Rt

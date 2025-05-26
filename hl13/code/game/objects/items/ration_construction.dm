@@ -211,19 +211,19 @@
 
 /obj/item/ration_construction/flavoring/sweet
 	name = "Sweet Flavoring"
-	desc = "A jug of flavoring syrup."
+	desc = "A jug of viscous, dark syrup designed to add a semblence of flavor to food. The top is keyed to a mixing machine, preventing it from being opened unless poured into said machine."
 	rtype = "sweet"
 	icon_state = "sweet"
 
 /obj/item/ration_construction/flavoring/bitter
 	name = "Bitter Flavoring"
-	desc = "A jug of flavoring syrup."
+	desc = "A jug of viscous, dark syrup designed to add a semblence of flavor to food. The top is keyed to a mixing machine, preventing it from being opened unless poured into said machine."
 	rtype = "bitter"
 	icon_state = "bitter"
 
 /obj/item/ration_construction/flavoring/sour
 	name = "Sour Flavoring"
-	desc = "A jug of flavoring syrup."
+	desc = "A jug of viscous, dark syrup designed to add a semblence of flavor to food. The top is keyed to a mixing machine, preventing it from being opened unless poured into said machine."
 	rtype = "sour"
 	icon_state = "sour"
 
@@ -236,19 +236,19 @@
 
 /obj/item/ration_construction/base/protein
 	name = "Protein Base"
-	desc = "A flavorless block of protein."
+	desc = "A flavorless block of protein. A wet flabby membrane covers the surface, completely dissuading you from trying to eat it until it gets processed."
 	rtype = "Protein"
 	icon_state = "proteinblock"
 
 /obj/item/ration_construction/base/fat
 	name = "Fat Base"
-	desc = "A flavorless block of fat."
+	desc = "A flavorless block of fat. The slimey feel and terrible smell makes it impossible for you to stomach the idea of eating this until it gets processed."
 	rtype = "Fat"
 	icon_state = "fatblock"
 
 /obj/item/ration_construction/base/fiber
 	name = "Fiber Base"
-	desc = "A flavorless block of fiber."
+	desc = "A flavorless block of fiber. It's as fibrous and hard as wood, you'd break your teeth trying to eat this until it gets processed."
 	rtype = "Fiber"
 	icon_state = "fiberblock"
 
@@ -477,7 +477,7 @@
 
 /obj/item/ration_construction/watermix/yellowadditive
 	name = "Yellow Water Additive"
-	desc = "A tablet produced by the Combine to purify the water, amongst other things."
+	desc = "A tablet produced by the Combine to purify the water (to a certain extent), amongst other things."
 	wtype = "yellowadd"
 	icon_state = "yellowadd"
 
@@ -489,7 +489,7 @@
 
 /obj/item/ration_construction/watermix/purpleadditive
 	name = "Purple Water Additive"
-	desc = "A tablet produced by the Combine to purify the water, amongst other things."
+	desc = "A tablet of purifying substances and oils to enrich water cans into nutriment cans."
 	wtype = "purpleadd"
 	icon_state = "purpleadd"
 

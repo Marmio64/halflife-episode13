@@ -270,7 +270,7 @@
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
 	var/obj/item/hl2key/K = I
-	if(K.lockhash == lockhash)
+	if(K.lockhash == lockhash || masterkey && K.masterkey)
 		lock_toggle(user)
 		return
 	return

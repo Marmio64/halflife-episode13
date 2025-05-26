@@ -7,6 +7,7 @@
 	throwforce = 0
 	var/lockhash = 0
 	var/lockid = null
+	var/masterkey = FALSE
 
 /obj/item/hl2key/Initialize()
 	. = ..()
@@ -82,17 +83,7 @@
 	name = "master key"
 	desc = "The district administrator's master key."
 	lockid = "administrator"
-
-/obj/item/hl2key/master/pre_attack(target, user, params)
-	. = ..()
-	if(istype(target, /obj/machinery/door/unpowered/halflife))
-		var/obj/machinery/door/unpowered/halflife/D = target
-		if(D.masterkey)
-			lockhash = D.lockhash
-
-/obj/item/hl2key/master/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
-	. = ..()
-	lockhash = GLOB.lockids[lockid]
+	masterkey = TRUE
 
 /obj/item/hl2key/townhall
 	name = "townhall key"

@@ -83,6 +83,7 @@
 	icon_state = "aluminum"
 	base_icon_state = "aluminum"
 	paint_jobs = null
+	projectile_passchance = 25
 
 /obj/structure/closet/crate/halflife/ration_supplies/PopulateContents()
 	. = ..()
