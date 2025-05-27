@@ -28,6 +28,10 @@
 	lock_back_sound = 'hl13/sound/weapons/ar2_reload_push.ogg'
 	bolt_drop_sound = 'hl13/sound/weapons/ar2_reload_push.ogg'
 
+	inhand_icon_state = "ar2"
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
 /obj/item/gun/ballistic/automatic/ar2/nopin
 	pin = null
 
@@ -213,6 +217,10 @@
 	recoil = 0.4
 	vary_fire_sound = FALSE
 
+	inhand_icon_state = "usp"
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
 /obj/item/gun/ballistic/automatic/pistol/usp/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.4 SECONDS)
@@ -241,6 +249,10 @@
 	recoil = 0.5
 	fire_delay = 5
 	vary_fire_sound = FALSE
+
+	inhand_icon_state = "zipgun"
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
 /obj/item/gun/ballistic/automatic/pistol/makeshift/Initialize(mapload)
 	. = ..()
@@ -297,6 +309,10 @@
 	fire_delay = 9
 	vary_fire_sound = FALSE
 
+	inhand_icon_state = "spas12"
+	lefthand_file = 'hl13/icons/mob/inhands/64x_guns_left.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/64x_guns_right.dmi'
+
 /obj/item/ammo_box/magazine/internal/shot/com/spas12
 	name = "spas12 internal magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/halflife
@@ -311,6 +327,32 @@
 /obj/item/storage/box/lethalshot/halflife/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun/buckshot/halflife(src)
+
+// about 3 TTK if you're using stolen buckshot, otherwise far longer if you're using anti-xen slugs against a human
+/obj/item/gun/ballistic/shotgun/antixen
+	name = "Infestation Control Shotgun"
+	desc = "A combine manufactured shotgun designed to fire anti-xen rounds for dealing with infestations. It's fire rate has been artificially limited, to prevent it from being too dangerous against potential non-xenian targets."
+	icon = 'hl13/icons/obj/guns/projectile.dmi'
+	icon_state = "antixenshotgun"
+	slot_flags = ITEM_SLOT_SUITSTORE
+	fire_sound = "hl13/sound/weapons/antixen_fire.ogg"
+	rack_sound = "hl13/sound/weapons/antixen_pump.ogg"
+	load_sound = "hl13/sound/weapons/antixen_reload.ogg"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/antixen
+	force = 12
+	recoil = 1.6
+	fire_delay = 15
+	vary_fire_sound = FALSE
+	inhand_x_dimension = 32
+	inhand_y_dimension = 32
+	inhand_icon_state = "antixenshotgun"
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
+/obj/item/ammo_box/magazine/internal/shot/antixen
+	name = "antixen internal magazine"
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/antixen
+	max_ammo = 4
 
 // About 2.7 seconds TTK
 /obj/item/gun/ballistic/automatic/mp7
@@ -329,6 +371,9 @@
 	spread = 13
 	recoil = 0.4
 	vary_fire_sound = FALSE
+	inhand_icon_state = "mp7"
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
 /obj/item/gun/ballistic/automatic/mp7/no_mag
 	spawnwithmagazine = FALSE

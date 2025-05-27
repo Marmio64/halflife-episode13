@@ -28,3 +28,20 @@
 	bare_wound_bonus = 5
 	armour_penetration = -20
 	hitsound = 'hl13/sound/creatures/hunter/flechette_flesh_impact1.ogg'
+
+
+/obj/projectile/bullet/pellet/shotgun_buckshot/antixen
+	name = "anti-xen pellet"
+	icon_state = "pulsepellet"
+	damage = 5
+	wound_bonus = 0
+	bare_wound_bonus = 0
+	wound_falloff_tile = -2.5 // low damage + additional dropoff will already curb wounding potential anything past point blank
+
+/obj/projectile/bullet/pellet/shotgun_buckshot/antixen/on_hit(atom/target, blocked = 0, pierce_hit)
+	if(isliving(target))
+		var/mob/living/victim = target
+		if(victim.mob_biotypes & MOB_XENIAN)
+			damage *= 4
+
+	return ..()

@@ -309,6 +309,13 @@
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 	icon_state = "cleanup"
 
+	allowed = list(
+		/obj/item/flashlight,
+		/obj/item/geiger_counter,
+		/obj/item/tank/internals,
+		/obj/item/gun/ballistic/shotgun/antixen,
+		)
+
 /obj/item/clothing/suit/utility/radiation/cleanup/scientist
 	name = "scientist suit"
 	desc = "A suit which provides protection against radiation and hostile xenian fauna attacks."
