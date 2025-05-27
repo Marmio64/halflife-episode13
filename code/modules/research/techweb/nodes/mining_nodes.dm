@@ -50,3 +50,27 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SUPPLY)
 
+/datum/techweb_node/mining_adv
+	id = TECHWEB_NODE_MINING_ADV
+	display_name = "Advanced Mining Technology"
+	description = "Printable pulse slug ammunition for the Combine Mining Device."
+	prereq_ids = list(TECHWEB_NODE_MINING)
+	design_ids = list(
+		"miningslug",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
+	announce_channels = list(RADIO_CHANNEL_SUPPLY)
+
+/datum/design/miningslug
+	name = "Mining Slug"
+	desc = "Advanced pulse mining slug technology designed for use with the Combine Mining Device. Tears through rocks with ease."
+	id = "miningslug"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(
+		/datum/material/iron = SMALL_MATERIAL_AMOUNT,
+	)
+	build_path = /obj/item/ammo_casing/shotgun/mining
+	category = list(
+		RND_CATEGORY_TOOLS + RND_SUBCATEGORY_TOOLS_MINING
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_CARGO | DEPARTMENT_BITFLAG_ENGINEERING

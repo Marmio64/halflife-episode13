@@ -152,15 +152,13 @@
 // Fishing root node
 /datum/techweb_node/fishing_equip
 	id = TECHWEB_NODE_FISHING_EQUIP
-	starting_node = TRUE
 	display_name = "Fishing Equipment"
 	description = "Basic fishing gear tailored for post-war city environments, perfect for aquatic pursuits."
 	design_ids = list(
-		"fishing_portal_generator",
 		"fishing_rod",
 		"fish_case",
-		"aquarium_kit",
 	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 
 /datum/techweb_node/fishing_equip_adv
 	id = TECHWEB_NODE_FISHING_EQUIP_ADV
@@ -169,6 +167,7 @@
 	prereq_ids = list(TECHWEB_NODE_FISHING_EQUIP)
 	design_ids = list(
 		"fishing_rod_tech",
+		"fishing_portal_generator",
 		"fishing_gloves",
 		"mod_fishing",
 		"stabilized_hook",

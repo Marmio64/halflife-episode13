@@ -68,6 +68,10 @@
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
 
+	inhand_icon_state = "service"
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
 /obj/item/gun/ballistic/automatic/m4a1/no_mag
 	spawnwithmagazine = FALSE
 
@@ -101,6 +105,10 @@
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
 
+	inhand_icon_state = "ak47"
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
 /obj/item/gun/ballistic/automatic/ak47/no_mag
 	spawnwithmagazine = FALSE
 
@@ -133,6 +141,10 @@
 	mag_display = TRUE
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
+
+	inhand_icon_state = "service"
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
 /obj/item/gun/ballistic/automatic/servicerifle/no_mag
 	spawnwithmagazine = FALSE
@@ -349,8 +361,25 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
+/obj/item/storage/box/lethalshot/halflife/antixen
+	name = "box of shotgun shells (anti-xen)"
+	desc = "A box full of anti-xen rounds, for the CUCD."
+
+/obj/item/storage/box/lethalshot/halflife/antixen/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/ammo_casing/shotgun/buckshot/antixen(src)
+
+/obj/item/storage/box/lethalshot/halflife/mining
+	name = "box of shotgun shells (mining)"
+	desc = "A box full of mining slugs, for the CMD."
+
+/obj/item/storage/box/lethalshot/halflife/mining/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/ammo_casing/shotgun/mining(src)
+
 /obj/item/gun/ballistic/shotgun/antixen/mining
-	name = "Combine Utility Mining Device"
+	name = "Combine Mining Device"
+	pin = /obj/item/firing_pin/mining_gun
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/antixen/mining
 
 /obj/item/ammo_box/magazine/internal/shot/antixen
@@ -361,6 +390,18 @@
 
 /obj/item/ammo_box/magazine/internal/shot/antixen/mining
 	ammo_type = /obj/item/ammo_casing/shotgun/mining
+
+/obj/item/firing_pin/mining_gun
+	name = "mining firing pin"
+	desc = "This safety firing pin only allows weapons to be fired near the mines."
+	fail_message = "mining check failed!"
+
+/obj/item/firing_pin/mining_gun/pin_auth(mob/living/user)
+	if(!istype(user))
+		return FALSE
+	if (istype(get_area(user), /area/halflife/indoors/sewer))
+		return TRUE
+	return FALSE
 
 // About 2.7 seconds TTK
 /obj/item/gun/ballistic/automatic/mp7

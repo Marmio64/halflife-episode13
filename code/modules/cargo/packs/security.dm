@@ -284,3 +284,13 @@
 					/obj/item/clothing/gloves/color/civilprotection/grunt,
 					/obj/item/tank/internals/oxygen/grunt)
 	crate_name = "grunt armor crate"
+
+/datum/supply_pack/security/armory/antixengun
+	name = "Anti-Xen Shotgun Crate"
+	desc = "Contains two anti-xen shotguns, and two accompanying ammo boxes. Designed to be ultra lethal towards xenian creatures, while being moderately safe to hand off to infestation control workers."
+	cost = CARGO_CRATE_VALUE * 8
+	contains = list(/obj/item/gun/ballistic/shotgun/antixen,
+					/obj/item/gun/ballistic/shotgun/antixen,
+					/obj/item/storage/box/lethalshot/halflife/antixen,
+					/obj/item/storage/box/lethalshot/halflife/antixen)
+	crate_name = "anti-xen shotgun crate"

@@ -98,4 +98,3 @@
 
 	user.change_stat(STATKEY_INT, 2)
 	user.change_stat(STATKEY_STR, -1)
-	user.change_stat(STATKEY_DEX, -1)

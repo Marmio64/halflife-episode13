@@ -644,6 +644,10 @@
 /obj/item/clothing/head/utility/hardhat/halflife/mining,
 /obj/item/clothing/head/utility/hardhat/halflife/mining,
 /obj/item/clothing/head/utility/hardhat/halflife/mining,
+/obj/item/clothing/mask/gas/hl2/oldmask,
+/obj/item/clothing/mask/gas/hl2/oldmask,
+/obj/item/clothing/mask/gas/hl2/oldmask,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/sewer)
 "cv" = (
@@ -2295,6 +2299,7 @@
 /area/halflife/indoors/store)
 "iB" = (
 /obj/structure/halflife/trash/garbage/dumpster/crate,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/sewer)
 "iC" = (
@@ -3902,9 +3907,10 @@
 /area/halflife/indoors/hospital)
 "oA" = (
 /obj/structure/rack,
-/obj/item/circuitboard/machine/cell_charger,
-/obj/item/circuitboard/machine/cell_charger,
 /obj/effect/turf_decal/box,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
+/obj/item/storage/toolbox/mechanical,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/productioncenter)
 "oB" = (
@@ -4576,6 +4582,14 @@
 	},
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/bar/apartments)
+"qY" = (
+/obj/structure/halflife/storage/shelf,
+/obj/item/ammo_casing/shotgun/mining,
+/obj/item/ammo_casing/shotgun/mining,
+/obj/item/ammo_casing/shotgun/mining,
+/obj/item/ammo_casing/shotgun/mining,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/sewer)
 "qZ" = (
 /obj/structure/chair/halflife/wood/padded{
 	dir = 1
@@ -5474,6 +5488,15 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/plaza)
+"ut" = (
+/obj/structure/halflife/storage/shelf{
+	dir = 1
+	},
+/obj/item/gun/ballistic/shotgun/antixen/mining{
+	pixel_y = 26
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/sewer)
 "uu" = (
 /mob/living/basic/halflife/grub{
 	dir = 8
@@ -5864,6 +5887,12 @@
 /obj/structure/bed/halflife/mattress/filthy,
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/slums)
+"vO" = (
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/structure/bed/halflife/mattress/stained,
+/obj/machinery/light/small/cyan/directional/west,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection)
 "vP" = (
 /obj/machinery/door/unpowered/halflife/wood{
 	dir = 8
@@ -5892,11 +5921,10 @@
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/secondfloor)
 "vW" = (
-/obj/structure/bed/halflife/bedframe/wire,
-/obj/structure/bed/halflife/mattress/stained,
-/obj/machinery/light/small/cyan/directional/east,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/townhall/civilprotection)
+/obj/structure/table/halflife/metal/alt,
+/obj/item/clothing/suit/toggle/labcoat/halflife,
+/turf/open/floor/plating/indoor/tile,
+/area/halflife/indoors/scienceunion)
 "vX" = (
 /obj/modular_map_root/sewerright,
 /turf/closed/wall/halflife/sewer,
@@ -7690,10 +7718,11 @@
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors)
 "Cy" = (
-/obj/structure/table/halflife/metal/alt,
-/obj/item/clothing/suit/toggle/labcoat/halflife,
-/turf/open/floor/plating/indoor/tile,
-/area/halflife/indoors/scienceunion)
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/structure/bed/halflife/mattress/stained,
+/obj/machinery/light/small/cyan/directional/east,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection)
 "Cz" = (
 /obj/effect/turf_decal/arrows/white{
 	dir = 4
@@ -8688,6 +8717,11 @@
 /obj/structure/closet/halflife/engineering_personal,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
+"Gh" = (
+/obj/machinery/light/small/directional/east,
+/obj/machinery/rnd/production/protolathe/department/cargo,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/productioncenter)
 "Gi" = (
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -9305,6 +9339,8 @@
 /obj/item/circuitboard/machine/chem_heater,
 /obj/item/circuitboard/machine/medical_kiosk,
 /obj/effect/turf_decal/box,
+/obj/item/circuitboard/machine/cell_charger,
+/obj/item/circuitboard/machine/cell_charger,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/productioncenter)
 "Ir" = (
@@ -11758,12 +11794,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
-"Rm" = (
-/obj/structure/bed/halflife/bedframe/wire,
-/obj/structure/bed/halflife/mattress/stained,
-/obj/machinery/light/small/cyan/directional/west,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/townhall/civilprotection)
 "Rn" = (
 /obj/structure/table/halflife/no_smooth/wood,
 /obj/machinery/light/small/directional/east,
@@ -11779,6 +11809,15 @@
 /obj/machinery/sealer,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
+"Rq" = (
+/obj/machinery/door/unpowered/halflife/seethrough/metal{
+	keylock = 1;
+	locked = 1;
+	lockid = "foreman";
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/sewer)
 "Rr" = (
 /obj/machinery/camera{
 	c_tag = "Hospital Patient Cell";
@@ -13833,10 +13872,6 @@
 /area/halflife/indoors)
 "Zg" = (
 /obj/machinery/light/small/directional/west,
-/obj/structure/table/halflife/metal/grate,
-/obj/item/clothing/mask/gas/hl2/oldmask,
-/obj/item/clothing/mask/gas/hl2/oldmask,
-/obj/item/clothing/mask/gas/hl2/oldmask,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/sewer)
 "Zh" = (
@@ -18964,11 +18999,11 @@ qQ
 qQ
 qQ
 qQ
-qQ
-qQ
-qQ
-qQ
-qQ
+sk
+sk
+sk
+sk
+sk
 qQ
 qQ
 qQ
@@ -19101,11 +19136,11 @@ qQ
 qQ
 qQ
 qQ
-qQ
-qQ
-qQ
-qQ
-qQ
+MQ
+ut
+Zg
+qY
+sk
 qQ
 qQ
 qQ
@@ -19238,11 +19273,11 @@ qQ
 qQ
 qQ
 qQ
-qQ
-qQ
-qQ
-qQ
-qQ
+MQ
+ut
+Ri
+qY
+sk
 qQ
 qQ
 qQ
@@ -19377,7 +19412,7 @@ qQ
 qQ
 sk
 sk
-sk
+Rq
 sk
 sk
 sk
@@ -19514,7 +19549,7 @@ VY
 qQ
 MQ
 cu
-Zg
+Ri
 NM
 iB
 sk
@@ -22339,7 +22374,7 @@ lG
 Jj
 xO
 vK
-Rm
+vO
 vK
 xO
 Jj
@@ -22887,7 +22922,7 @@ Jj
 Jj
 xO
 vK
-vW
+Cy
 vK
 xO
 Jj
@@ -36369,7 +36404,7 @@ Pt
 nY
 ei
 VE
-dk
+Gh
 VE
 ei
 Cd
@@ -57962,7 +57997,7 @@ Cu
 Fv
 Cu
 CY
-Cy
+vW
 bA
 Rt
 Rt
@@ -58236,7 +58271,7 @@ Cu
 Cu
 Cu
 Cu
-Cy
+vW
 bA
 Rt
 Rt
