@@ -31,8 +31,8 @@
 	AddElement(/datum/element/caseless)
 
 /obj/item/ammo_casing/shotgun/buckshot/antixen
-	name = "anti-xen slug"
-	desc = "A 12 gauge anti-xen buckshot shell. Somehow designed to tear apart xenian creatures with ease, while causing lesser damage against humans and structures."
+	name = "anti-xen shell"
+	desc = "A 16 gauge anti-xen buckshot shell. Somehow designed to tear apart xenian creatures with ease, while causing lesser damage against humans and structures."
 	icon_state = "xshell"
 	worn_icon_state = "shell"
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_buckshot/antixen
@@ -41,3 +41,17 @@
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse
 
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
+
+	caliber = CALIBER_ANTIXEN
+
+/obj/item/ammo_casing/shotgun/mining
+	name = "mining slug"
+	desc = "A 16 gauge mining slug, which can tear through rocks and armor, although designed purposefully to fare poorly against flesh."
+	icon_state = "mshell"
+	worn_icon_state = "shell"
+	projectile_type = /obj/projectile/bullet/mining_slug
+	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse
+
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
+
+	caliber = CALIBER_ANTIXEN

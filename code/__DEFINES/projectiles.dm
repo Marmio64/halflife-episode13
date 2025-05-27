@@ -66,6 +66,8 @@
 #define CALIBER_556NATO "556nato"
 /// OSIPR pulse rounds
 #define CALIBER_PULSROUND "pulse"
+/// xenshotgun rounds
+#define CALIBER_ANTIXEN "antixen"
 
 /// For gunpoints, how many tiles around the target the shooter can roam without losing their shot
 #define GUNPOINT_SHOOTER_STRAY_RANGE 2

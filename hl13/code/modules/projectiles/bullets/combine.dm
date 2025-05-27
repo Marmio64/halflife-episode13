@@ -45,3 +45,19 @@
 			damage *= 4
 
 	return ..()
+
+/obj/projectile/bullet/mining_slug
+	name = "mining slug"
+	icon_state = "pulse"
+	damage = 25
+	armour_penetration = 20
+	wound_bonus = -25
+	range = 12
+
+/obj/projectile/bullet/mining_slug/on_hit(atom/target, blocked = 0, pierce_hit)
+	. = ..()
+	if(ismineralturf(target))
+		var/turf/closed/mineral/M = target
+		M.gets_drilled(firer, FALSE)
+		if(range > 0)
+			return BULLET_ACT_FORCE_PIERCE
