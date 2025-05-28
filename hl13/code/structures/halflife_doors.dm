@@ -235,12 +235,15 @@
 
 /obj/machinery/door/unpowered/halflife/attack_basic_mob(mob/living/M)
 	. = ..()
-	if(M.mob_size >= MOB_SIZE_HUMAN && !locked)
+	if(M.mob_size >= MOB_SIZE_HUMAN)
 		if(!density) //closing is instant
 			try_to_activate_door()
 			playsound(src, 'hl13/sound/halflifeeffects/metal_door_break.ogg', 50, FALSE)
 		else
 			playsound(src, 'hl13/sound/halflifeeffects/metal_door_hit.ogg', 50, FALSE)
+			var/open_time = 8 SECONDS
+			if(locked)
+				open_time *= 2
 			if(do_after(M, 8 SECONDS, interaction_key = DOAFTER_SOURCE_DOORS))
 				try_to_activate_door()
 				playsound(src, 'hl13/sound/halflifeeffects/metal_door_break.ogg', 50, FALSE)

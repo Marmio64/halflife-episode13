@@ -4,7 +4,7 @@
 //new sprites from #wrotl on discord SS13 spriter server, taken with permission
 /obj/item/clothing/suit/hooded/hev
 	name = "Hazardous Environments Suit"
-	desc = "An old suit, fully plated, insulated and topped with a tasteful orange coating of paint."
+	desc = "A Mark four hazardous environments suit. Protects the user from all manners of dangerous phenomenon, along with more mundane threats such as flying bricks and firearms."
 	icon_state = "hev"
 	worn_icon_state = "hev"
 	hood_up_affix = ""

@@ -21,10 +21,11 @@
 	attack_sound = 'hl13/sound/creatures/zombieattack.ogg'
 	combat_mode = TRUE
 	status_flags = CANPUSH
-	speed = 1.6
+	speed = 1.7
 	death_sound = 'hl13/sound/creatures/zombiedeath.ogg'
 	blood_volume = BLOOD_VOLUME_NORMAL
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie
+	initial_language_holder = /datum/language_holder/zombie
 	var/no_crab_state = "zombie_dead_nocrab"
 	var/crabless_possible = TRUE
 	var/headcrabspawn = /mob/living/basic/halflife/headcrab
@@ -64,13 +65,14 @@
 
 /mob/living/basic/halflife/zombie/zombine
 	name = "Zombine"
-	desc = "A shambling combine soldier, taken over by a parasitic head crab."
+	desc = "A shambling combine soldier, taken over by a parasitic head crab. Capable of running and is heavily armored."
 	icon_state = "zombine"
 	icon_living = "zombie"
 	icon_dead = "zombine_dead"
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 3)
 	maxHealth = 140
 	health = 140
+	speed = 1.5
 	attack_sound = 'hl13/sound/creatures/zombineattack.ogg'
 	death_sound = 'hl13/sound/creatures/zombinedeath.ogg'
 	crabless_possible = FALSE
@@ -87,7 +89,7 @@
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1, /obj/item/stack/sheet/cloth = 1)
 	maxHealth = 140
 	health = 140
-	speed = 1.7
+	speed = 1.85
 	headcrabspawn = /mob/living/basic/halflife/headcrab/armored
 	fungalheal = TRUE
 	var/datum/action/cooldown/spell/conjure/xenfloor/infest

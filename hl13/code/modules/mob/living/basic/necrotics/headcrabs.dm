@@ -30,6 +30,11 @@
 
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/headcrab
 
+	initial_language_holder = /datum/language_holder/zombie
+
+	lighting_cutoff_red = 25
+	lighting_cutoff = 8
+
 	var/mob/living/zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed
 	var/can_zombify = TRUE
 
@@ -73,6 +78,15 @@
 	maxHealth = 60
 	health = 60
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1, /obj/item/stack/sheet/sinew = 1, /obj/item/stack/sheet/bone = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1)
+
+/mob/living/basic/halflife/headcrab/armored/ghost_controlled/Initialize(mapload)
+	. = ..()
+	AddComponent(\
+		/datum/component/ghost_direct_control,\
+		ban_type = ROLE_SENTIENCE,\
+		poll_ignore_key = POLL_IGNORE_BLOB,\
+		poll_candidates = TRUE,\
+	)
 
 /mob/living/basic/halflife/headcrab/poison
 	name = "Poison Headcrab"

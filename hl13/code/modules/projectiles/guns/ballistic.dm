@@ -342,7 +342,7 @@
 
 // really shit TTK if you're using against humans, but antixen rounds can obliterate zombies/antlions
 /obj/item/gun/ballistic/shotgun/antixen
-	name = "Combine Utility Cleanup Device"
+	name = "Combine Cleanup Device"
 	desc = "A combine manufactured device that is designed to work with both anti-xenian infestation control buckshot rounds, and rock mining slugs. In essence, it is a 16-gauge shotgun that only accepts specialty rounds, but it looks bad to give workers something plainly called a gun."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "antixenshotgun"

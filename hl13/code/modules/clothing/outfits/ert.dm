@@ -16,6 +16,9 @@
 
 	back = null
 
+	var/role = "OTA.C13-"
+	var/name_source = list("Blade", "Dagger", "Hammer", "Hunter", "Razor", "Spear", "Striker", "Tracker")
+
 /datum/outfit/centcom/ert/overwatch/pre_equip(mob/living/carbon/human/H)
 	H.faction += "combine"
 	H.cmode_music = 'hl13/sound/music/combat/guarddown.ogg'
@@ -29,6 +32,10 @@
 
 	H.change_stat(STATKEY_DEX, 2)
 	H.change_stat(STATKEY_STR, 4)
+
+/datum/outfit/centcom/ert/overwatch/post_equip(mob/living/carbon/human/equipped, visuals_only)
+	..()
+	equipped.fully_replace_character_name(equipped.real_name,"[role][pick(name_source)] [rand(111,999)]")
 
 /datum/outfit/centcom/ert/overwatch/spas12
 	name = "OTA Shotgun Unit"
@@ -58,6 +65,8 @@
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/elite
 	uniform = /obj/item/clothing/under/combine/overwatch/elite
 	suit = /obj/item/clothing/suit/armor/overwatch/elite
+
+	role = "ELITE.C13-"
 
 /datum/outfit/centcom/ert/overwatch/ar2/elite/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
@@ -114,6 +123,10 @@
 
 	H.change_stat(STATKEY_DEX, 2)
 
+/datum/outfit/centcom/ert/riotpolice/post_equip(mob/living/carbon/human/equipped, visuals_only)
+	..()
+	equipped.fully_replace_character_name(equipped.real_name,"VICE- [rand(111,999)]")
+
 /datum/outfit/centcom/ert/riotpolice/pistol
 	name = "Metropolice Riot Pistol Unit"
 
@@ -157,6 +170,10 @@
 
 	H.change_stat(STATKEY_DEX, 2)
 
+/datum/outfit/centcom/ert/conscript/post_equip(mob/living/carbon/human/equipped, visuals_only)
+	..()
+	equipped.fully_replace_character_name(equipped.real_name,"CONSCRIPT- [rand(111,999)]")
+
 /datum/outfit/centcom/ert/conscript/officer
 	name = "Conscript Officer"
 
@@ -171,6 +188,10 @@
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
+
+/datum/outfit/centcom/ert/conscript/officer/post_equip(mob/living/carbon/human/equipped, visuals_only)
+	..()
+	equipped.fully_replace_character_name(equipped.real_name,"LIEUTENANT- [rand(111,999)]")
 
 /datum/outfit/centcom/ert/administrative
 	name = "Combine Administrative Represenative"
