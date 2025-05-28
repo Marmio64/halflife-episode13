@@ -171,7 +171,7 @@
 				/obj/item/stack/cable_coil = 15,
 				/obj/item/stack/sheet/iron = 5,
 				/obj/item/circuitmaterial/advanced = 1,
-				/obj/item/circuitmaterial = 4)
+				/obj/item/circuitmaterial = 3)
 	time = 10 SECONDS
 	category = CAT_ROBOT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC

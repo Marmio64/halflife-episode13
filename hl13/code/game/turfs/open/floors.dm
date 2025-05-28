@@ -94,6 +94,12 @@
 	desc = "Concrete slabs."
 	footstep = FOOTSTEP_CONCRETE
 
+//for decorative fake stairs
+/turf/open/floor/plating/indoor/concrete/stairs
+	icon = 'hl13/icons/obj/stairs.dmi'
+	icon_state = "concrete"
+	desc = "Concrete stairs."
+
 /turf/open/floor/plating/indoor/concrete/small
 	icon_state = "concrete_small"
 	has_alternate_states = TRUE
