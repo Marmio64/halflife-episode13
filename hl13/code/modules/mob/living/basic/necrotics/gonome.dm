@@ -88,7 +88,7 @@
 
 ///Updates the display that shows the mobs nutrition
 /mob/living/basic/halflife/zombie/gonome/proc/updateNutritionDisplay()
-	if(hud_used) //clientless oozes
+	if(hud_used) //clientless zombies
 		hud_used.alien_plasma_display.maptext = MAPTEXT("<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='green'>[round(fungal_nutrition)]</font></div>")
 
 

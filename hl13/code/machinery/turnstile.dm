@@ -140,6 +140,7 @@
 
 	playsound(loc, 'sound/items/tools/ratchet.ogg', 25, 1)
 	malfunctioning = FALSE
+	toggle_onoff()
 
 	if(atom_integrity < max_integrity) //Also fixes it up
 		atom_integrity = max_integrity

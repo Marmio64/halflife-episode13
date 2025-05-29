@@ -77,6 +77,15 @@
 	novariants = TRUE
 	max_amount = 5
 
+/obj/item/stack/sheet/combine_resin
+	icon = 'hl13/icons/obj/stack_objects.dmi'
+	name = "combine resin"
+	desc = "Cylindrical disks of resin, a material used by the combine for creating various items."
+	singular_name = "combine resin"
+	icon_state = "sheet-resin"
+	resistance_flags = FIRE_PROOF
+	merge_type = /obj/item/stack/sheet/combine_resin
+
 /obj/item/stack/sheet/mineral/scrap_wood
 	icon = 'hl13/icons/obj/stack_objects.dmi'
 	name = "scrap wood"
@@ -154,7 +163,6 @@
 	wound_bonus = 5
 	w_class = WEIGHT_CLASS_SMALL
 	max_integrity = 200
-	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0,  FIRE = 100, ACID = 50)
 	resistance_flags = FIRE_PROOF
 
 	sheettype = "brick"
