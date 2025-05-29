@@ -66,7 +66,7 @@
 			if(suit.suit_power < suit.max_suit_power)
 				if(do_after(user, 1 SECONDS, suit))
 					playsound(src, 'hl13/sound/effects/suitchargeok1.ogg', 40, FALSE)
-					suit.adjust_suitpower(30)
+					suit.adjust_suitpower(40)
 					qdel(src)
 					return ITEM_INTERACT_SUCCESS
 		else

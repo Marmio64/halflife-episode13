@@ -252,7 +252,7 @@
 		printpicture(user, picture)
 
 	if(!silent)
-		playsound(loc, SFX_POLAROID, 75, TRUE, -3)
+		playsound(loc, 'hl13/sound/creatures/cityscanner/scanner_photo1.ogg', 60, FALSE) //hl13 edit
 
 /obj/item/camera/proc/printpicture(mob/user, datum/picture/picture) //Normal camera proc for creating photos
 	pictures_left--

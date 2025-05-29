@@ -20,13 +20,9 @@
 	. = ..()
 
 	if (shell) //AI shell
-		to_chat(src, span_bold("Remember, you are an AI remotely controlling your shell, other AIs can be ignored."))
-	else if (connected_ai)
-		to_chat(src, span_bold("Remember, [connected_ai.name] is your master, other AIs can be ignored."))
+		to_chat(src, span_bold("Remember, you are an AI remotely controlling your shell."))
 	else if (emagged)
 		to_chat(src, span_bold("Remember, you are not required to listen to the AI."))
-	else
-		to_chat(src, span_bold("Remember, you are not bound to any AI, you are not required to listen to them."))
 
 /mob/living/silicon/robot/try_sync_laws()
 	if(QDELETED(connected_ai) || !lawupdate)

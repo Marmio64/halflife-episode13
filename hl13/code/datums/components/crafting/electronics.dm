@@ -46,7 +46,7 @@
 	reqs = list(/obj/item/stack/sheet/iron = 2,
 				/obj/item/circuitmaterial = 1,
 				/obj/item/stack/sheet/scrap_copper = 1)
-	time = 8 SECONDS
+	time = 4 SECONDS
 	category = CAT_EQUIPMENT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
 
@@ -110,7 +110,8 @@
 	time = 5 SECONDS
 	reqs = list(
 		/obj/item/machinepiece/scanner = 1,
-		/obj/item/circuitmaterial = 2,
+		/obj/item/circuitmaterial = 1,
+		/obj/item/halflife/combine_battery = 1,
 		/obj/item/stack/cable_coil = 5
 	)
 	category = CAT_ROBOT

@@ -360,7 +360,7 @@
 	anchored = FALSE
 
 	prompt_name = "city scanner"
-	mob_type = /mob/living/simple_animal/hostile/hl2bot/cityscanner
+	mob_type = /mob/living/silicon/robot/cityscanner
 	mob_name = "city scanner"
 	flavour_text = "Scan the city for possible anti-citizens and report anything you see over the radio. You can prefix your message with '.b' to talk with Dispatch."
 

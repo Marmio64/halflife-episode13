@@ -3,20 +3,9 @@
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
 
-	add_traits(list(TRAIT_CAN_STRIP, TRAIT_FORCED_STANDING, TRAIT_KNOW_ENGI_WIRES), INNATE_TRAIT)
-	AddComponent(/datum/component/tippable, \
-		tip_time = 3 SECONDS, \
-		untip_time = 2 SECONDS, \
-		self_right_time = 60 SECONDS, \
-		post_tipped_callback = CALLBACK(src, PROC_REF(after_tip_over)), \
-		post_untipped_callback = CALLBACK(src, PROC_REF(after_righted)), \
-		roleplay_friendly = TRUE, \
-		roleplay_emotes = list(/datum/emote/silicon/buzz, /datum/emote/silicon/buzz2, /datum/emote/silicon/beep), \
-		roleplay_callback = CALLBACK(src, PROC_REF(untip_roleplay)))
-
+	add_traits(list(TRAIT_FORCED_STANDING, TRAIT_KNOW_ENGI_WIRES), INNATE_TRAIT)
 	set_wires(new /datum/wires/robot(src))
 	AddElement(/datum/element/empprotection, EMP_PROTECT_WIRES)
-	AddElement(/datum/element/ridable, /datum/component/riding/creature/cyborg)
 	RegisterSignal(src, COMSIG_PROCESS_BORGCHARGER_OCCUPANT, PROC_REF(charge))
 	RegisterSignal(src, COMSIG_LIGHT_EATER_ACT, PROC_REF(on_light_eater))
 	RegisterSignal(src, SIGNAL_ADDTRAIT(TRAIT_GOT_DAMPENED), PROC_REF(on_dampen))
@@ -951,18 +940,7 @@
 		return user_buckle_mob(M, user, check_loc = FALSE)
 
 /mob/living/silicon/robot/buckle_mob(mob/living/M, force = FALSE, check_loc = TRUE, buckle_mob_flags= RIDER_NEEDS_ARM)
-	if(!is_type_in_typecache(M, can_ride_typecache))
-		M.visible_message(span_warning("[M] really can't seem to mount [src]..."))
-		return
-
-	if(stat || incapacitated)
-		return
-	if(model && !model.allow_riding)
-		M.visible_message(span_boldwarning("Unfortunately, [M] just can't seem to hold onto [src]!"))
-		return
-
-	buckle_mob_flags= RIDER_NEEDS_ARM // just in case
-	return ..()
+	return //hl13 edit
 
 /mob/living/silicon/robot/post_buckle_mob(mob/living/victim_to_boot)
 	if(HAS_TRAIT(src, TRAIT_GOT_DAMPENED))

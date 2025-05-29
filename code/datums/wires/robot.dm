@@ -100,10 +100,6 @@
 			R.SetLockdown(!mend)
 			R.logevent("Motor Controller fault [mend?"cleared":"detected"]")
 			log_silicon("[key_name(usr)] [!R.lockcharge ? "locked down" : "released"] [key_name(R)] via wire")
-		if(WIRE_RESET_MODEL)
-			if(R.has_model() && !mend)
-				R.ResetModel()
-				log_silicon("[key_name(usr)] reset [key_name(R)]'s module via wire")
 
 /datum/wires/robot/can_reveal_wires(mob/user)
 	if(HAS_TRAIT(user, TRAIT_KNOW_ROBO_WIRES))

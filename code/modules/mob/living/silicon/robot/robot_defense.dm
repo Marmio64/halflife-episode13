@@ -43,20 +43,6 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 			to_chat(user, span_warning("You can't reach the wiring!"))
 		return
 
-	if((W.slot_flags & ITEM_SLOT_HEAD) && hat_offset != INFINITY && !user.combat_mode && !is_type_in_typecache(W, GLOB.blacklisted_borg_hats))
-		if(user == src)
-			to_chat(user,  span_notice("You can't seem to manage to place [W] on your head by yourself!") )
-			return
-		if(hat && HAS_TRAIT(hat, TRAIT_NODROP))
-			to_chat(user, span_warning("You can't seem to remove [src]'s existing headwear!"))
-			return
-		to_chat(user, span_notice("You begin to place [W] on [src]'s head..."))
-		to_chat(src, span_notice("[user] is placing [W] on your head..."))
-		if(do_after(user, 3 SECONDS, target = src))
-			if (user.temporarilyRemoveItemFromInventory(W, TRUE))
-				place_on_head(W)
-		return
-
 	if(istype(W, /obj/item/defibrillator) && !user.combat_mode)
 		if(!opened)
 			to_chat(user, span_warning("You must access the cyborg's internals!"))
