@@ -28,6 +28,15 @@
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
 
+/datum/crafting_recipe/citizen_uniform
+	name = "Citizen Jumpsuit"
+	result = /obj/item/clothing/under/citizen
+	reqs = list(/obj/item/stack/sheet/cloth = 5)
+
+	time = 10 SECONDS
+	category = CAT_CLOTHING
+	crafting_interface = CRAFTING_BENCH_ARMTAILOR | CRAFTING_BENCH_GENERAL
+
 //very basic armor
 /datum/crafting_recipe/armored_vest
 	name = "Makeshift Armored Vest"

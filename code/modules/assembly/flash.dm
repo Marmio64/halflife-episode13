@@ -2,7 +2,7 @@
 
 /obj/item/assembly/flash
 	name = "flash"
-	desc = "Some strange looking flashing mechanism, which takes a few seconds to prime." //hl13 edit
+	desc = "A housing unit for a high power flashbulb which can disorient people who are looking at it as it goes off." //hl13 edit
 	icon = 'icons/obj/devices/flash.dmi'
 	icon_state = "flash"
 	inhand_icon_state = "flashtool"
@@ -24,7 +24,7 @@
 	var/burnt_out = FALSE     //Is the flash burnt out?
 	var/burnout_resistance = 0
 	var/last_used = 0 //last world.time it was used.
-	var/cooldown = 0
+	var/cooldown = 10 //hl13 edit
 	var/last_trigger = 0 //Last time it was successfully triggered.
 
 /obj/item/assembly/flash/suicide_act(mob/living/user)
@@ -136,7 +136,7 @@
  * * targeted - determines if it was aoe or targeted
  * * generic_message - checks if it should display default message.
  */
-/obj/item/assembly/flash/proc/flash_carbon(mob/living/carbon/flashed, mob/user, confusion_duration = 15 SECONDS, targeted = TRUE, generic_message = FALSE)
+/obj/item/assembly/flash/proc/flash_carbon(mob/living/carbon/flashed, mob/user, confusion_duration = 12 SECONDS, targeted = TRUE, generic_message = FALSE)
 	if(!istype(flashed))
 		return
 	if(user)
@@ -170,8 +170,7 @@
 			flashed.set_confusion_if_lower(confusion_duration * CONFUSION_STACK_MAX_MULTIPLIER)
 			visible_message(span_danger("[user] blinds [flashed] with the flash!"), span_userdanger("[user] blinds you with the flash!"))
 			//easy way to make sure that you can only long stun someone who is facing in your direction
-			flashed.adjustStaminaLoss(rand(60, 80) * (1 - (deviation * 0.5)))
-			flashed.Knockdown(rand(20, 40) * (1 - (deviation * 0.5)))
+			flashed.adjustStaminaLoss(rand(30, 50) * (1 - (deviation * 0.5)))
 			SEND_SIGNAL(user, COMSIG_MOB_SUCCESSFUL_FLASHED_CARBON, flashed, src, deviation)
 
 		else if(user)
@@ -238,10 +237,9 @@
 
 	. = TRUE
 	if(iscarbon(M))
-		to_chat(user, span_notice("Priming the flash mechanism...")) //hl13 edit
-		if(do_after(user, 3 SECONDS, src)) //hl13 edit
-			flash_carbon(M, user, confusion_duration = 5 SECONDS, targeted = TRUE)
-			return
+		to_chat(user, span_notice("Priming the flash mechanism..."))
+		flash_carbon(M, user, confusion_duration = 3 SECONDS, targeted = TRUE)
+		return
 	if(issilicon(M))
 		var/mob/living/silicon/robot/flashed_borgo = M
 		log_combat(user, flashed_borgo, "flashed", src)

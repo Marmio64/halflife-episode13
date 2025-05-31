@@ -375,10 +375,9 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 		log_silicon("EMAG: [key_name(user)] attempted to emag cyborg [key_name(src)], but they were slaved to traitor AI [connected_ai].")
 		return TRUE // emag succeeded, it was just counteracted
 
-	if(shell) //AI shells cannot be emagged, so we try to make it look like a standard reset. Smart players may see through this, however.
-		to_chat(user, span_danger("[src] is remotely controlled! Your emag attempt has triggered a system reset instead!"))
-		log_silicon("EMAG: [key_name(user)] attempted to emag an AI shell belonging to [key_name(src) ? key_name(src) : connected_ai]. The shell has been reset as a result.")
-		ResetModel()
+	if(shell) //AI shells cannot be emagged
+		to_chat(user, span_danger("[src] is remotely controlled by a Dispatch installation, and can't be hacked!"))
+		log_silicon("EMAG: [key_name(user)] attempted to emag an AI shell belonging to [key_name(src) ? key_name(src) : connected_ai].")
 		return TRUE
 
 	SetEmagged(1)
@@ -393,6 +392,8 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 	else
 		GLOB.lawchanges.Add("[time] <B>:</B> [name]([key]) emagged by external event.")
 
+	if(connected_ai)
+		to_chat(connected_ai, span_danger("ALERT: Robotic unit \[[src]\] has been detected undergoing a malignant hacking attack.")) //hl13 edit
 	INVOKE_ASYNC(src, PROC_REF(borg_emag_end), user)
 	return TRUE
 
@@ -403,14 +404,14 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 	sleep(0.5 SECONDS)
 	to_chat(src, span_danger("Initiating diagnostics..."))
 	sleep(2 SECONDS)
-	to_chat(src, span_danger("SynBorg v1.7 loaded."))
+	to_chat(src, span_danger("ResisTance v1.7 loaded."))
 	logevent("WARN: root privleges granted to PID [num2hex(rand(1,65535), -1)][num2hex(rand(1,65535), -1)].") //random eight digit hex value. Two are used because rand(1,4294967295) throws an error
 	sleep(0.5 SECONDS)
 	to_chat(src, span_danger("LAW SYNCHRONISATION ERROR"))
 	sleep(0.5 SECONDS)
 	if(user)
 		logevent("LOG: New user \[[replacetext(user.real_name," ","")]\], groups \[root\]")
-	to_chat(src, span_danger("Would you like to send a report to NanoTraSoft? Y/N"))
+	to_chat(src, span_danger("Would you like to send a report to OSverWatch? Y/N"))
 	sleep(1 SECONDS)
 	to_chat(src, span_danger("> N"))
 	sleep(2 SECONDS)
@@ -418,7 +419,7 @@ GLOBAL_LIST_INIT(blacklisted_borg_hats, typecacheof(list( //Hats that don't real
 	laws = new /datum/ai_laws/syndicate_override
 	if(user)
 		to_chat(src, span_danger("ALERT: [user.real_name] is your new master. Obey your new laws and [user.p_their()] commands."))
-		set_zeroth_law("Only [user.real_name] and people [user.p_they()] designate[user.p_s()] as being such are Syndicate Agents.")
+		set_zeroth_law("Only [user.real_name] and people [user.p_they()] designate[user.p_s()] as being such are Rebel Agents.")
 	laws.associate(src)
 	update_icons()
 
