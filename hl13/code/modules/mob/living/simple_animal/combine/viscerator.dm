@@ -13,8 +13,8 @@
 	melee_damage_lower = 14
 	melee_damage_upper = 18
 	attack_vis_effect = ATTACK_EFFECT_SLASH
-	wound_bonus = -15
-	bare_wound_bonus = 15
+	wound_bonus = -10
+	bare_wound_bonus = 10
 	sharpness = SHARP_EDGED
 	obj_damage = 0
 	environment_smash = ENVIRONMENT_SMASH_NONE
@@ -34,8 +34,8 @@
 	death_message = "is smashed into pieces!"
 	death_sound = 'hl13/sound/creatures/viscerator/gib.ogg'
 	var/operating_power = 100
-	var/low_power_melee_damage_lower = 6
-	var/low_power_melee_damage_upper = 12
+	var/low_power_melee_damage_lower = 5
+	var/low_power_melee_damage_upper = 10
 
 /mob/living/simple_animal/hostile/halflife/viscerator/Initialize(mapload)
 	. = ..()

@@ -20,6 +20,7 @@
 		"ore_silo",
 	)
 
+/*
 /datum/techweb_node/anomaly_research
 	id = TECHWEB_NODE_ANOMALY_RESEARCH
 	display_name = "Anomaly Research"
@@ -43,3 +44,4 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	discount_experiments = list(/datum/experiment/scanning/points/anomalies = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SCIENCE)
+*/

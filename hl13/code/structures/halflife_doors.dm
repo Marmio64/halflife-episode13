@@ -29,6 +29,7 @@
 	damage_deflection = 15
 	halflife_flags_1 = LOCKABLE_1
 	do_sparks = FALSE
+	has_access_panel = FALSE
 	var/door_type = null
 	var/solidity = SOLID
 	var/frametype = "metal"

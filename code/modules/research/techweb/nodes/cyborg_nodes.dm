@@ -139,8 +139,6 @@
 	design_ids = list(
 		"ci-gloweyes",
 		"ci-welding",
-		"ci-gloweyes-moth",
-		"ci-welding-moth",
 		"cybernetic_ears_whisper",
 		"cybernetic_lungs_tier3",
 		"cybernetic_stomach_tier3",
@@ -160,8 +158,6 @@
 		"cybernetic_ears_xray",
 		"ci-thermals",
 		"ci-xray",
-		"ci-thermals-moth",
-		"ci-xray-moth",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	discount_experiments = list(/datum/experiment/scanning/people/android = TECHWEB_TIER_5_POINTS)

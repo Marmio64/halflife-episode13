@@ -1,3 +1,21 @@
+/obj/structure/flora/tree/halflife/plain
+	desc = "A tall, plain tree with wiltering, orange leaves.."
+	icon = 'hl13/icons/obj/flora96x96.dmi'
+	icon_state = "tree"
+	pixel_x = -33
+
+/obj/structure/flora/tree/halflife/plain/get_seethrough_map()
+	return SEE_THROUGH_MAP_THREE_X_THREE
+
+/obj/structure/flora/tree/halflife/plain/thin
+	icon_state = "tree2"
+
+/obj/structure/flora/tree/halflife/plain/concrete_large
+	icon_state = "tree_concrete"
+
+/obj/structure/flora/tree/halflife/plain/concrete_thin
+	icon_state = "tree_concrete_2"
+
 /obj/structure/flora/tree/halflife/pine
 	desc = "A large, verdant green tree, seemingly unbothered by the destruction the combine have wrought upon the environment."
 	icon = 'hl13/icons/obj/trees.dmi'

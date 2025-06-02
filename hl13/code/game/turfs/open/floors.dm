@@ -67,6 +67,12 @@
 /turf/open/floor/plating/indoor/woodc/mosaic
 	icon_state = "wood_mosaic"
 
+//for decorative fake stairs
+/turf/open/floor/plating/indoor/woodc/stairs
+	icon = 'hl13/icons/obj/stairs.dmi'
+	icon_state = "wood"
+	desc = "Wood stairs."
+
 /turf/open/floor/plating/indoor/sterilesquares
 	icon_state = "sterilesquares"
 
@@ -370,6 +376,11 @@
 	baseturfs = /turf/open/floor/plating/ground/sidewalk/inner/slums
 	icon_state = "sidewalkinsideslums"
 	base_icon_state = "sidewalkinsideslums"
+
+/turf/open/floor/plating/ground/sidewalk/cobblestone
+	baseturfs = /turf/open/floor/plating/ground/sidewalk/cobblestone
+	icon_state = "cobblestone"
+	desc = "Laid out cobblestone. Forms a path easy enough to walk on."
 
 /turf/open/floor/plating/ground/grass
 	name = "grass"

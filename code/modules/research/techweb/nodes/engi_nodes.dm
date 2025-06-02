@@ -30,7 +30,7 @@
 	id = TECHWEB_NODE_PARTS_UPG
 	display_name = "Upgraded Parts"
 	description = "Offering enhanced capabilities beyond their basic counterparts."
-	prereq_ids = list(TECHWEB_NODE_PARTS, TECHWEB_NODE_ENERGY_MANIPULATION)
+	prereq_ids = list(TECHWEB_NODE_PARTS)
 	design_ids = list(
 		"high_micro_laser",
 		"adv_capacitor",
@@ -126,6 +126,7 @@
 		"manurouter",
 	)
 
+/*
 /datum/techweb_node/energy_manipulation
 	id = TECHWEB_NODE_ENERGY_MANIPULATION
 	display_name = "Energy Manipulation"
@@ -149,19 +150,17 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(RADIO_CHANNEL_ENGINEERING)
+*/
 
 /datum/techweb_node/hud
 	id = TECHWEB_NODE_HUD
 	display_name = "Integrated HUDs"
-	description = "Initially developed for assistants to learn the nuances of different professions through augmented reality."
+	description = "Advanced Heads Up Display devices contained within implants and glasses which improve civic capabilities through better information gathering abilities."
 	prereq_ids = list(TECHWEB_NODE_HOLOGRAPHICS, TECHWEB_NODE_CYBER_IMPLANTS)
 	design_ids = list(
 		"health_hud",
 		"diagnostic_hud",
 		"security_hud",
-		"mod_visor_medhud",
-		"mod_visor_diaghud",
-		"mod_visor_sechud",
 		"ci-medhud",
 		"ci-diaghud",
 		"ci-sechud",

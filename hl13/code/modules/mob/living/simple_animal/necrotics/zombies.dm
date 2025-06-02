@@ -28,6 +28,9 @@
 	status_flags = CANPUSH
 	move_to_delay = 5
 	death_sound = 'hl13/sound/creatures/zombiedeath.ogg'
+
+	initial_language_holder = /datum/language_holder/zombie
+
 	var/no_crab_state = "zombie_dead_nocrab"
 	var/crabless_possible = TRUE
 	var/headcrabspawn = /mob/living/basic/halflife/headcrab
@@ -65,33 +68,12 @@
 		new headcrabspawn(get_turf(src))
 	..()
 
-/mob/living/simple_animal/hostile/halflife/zombie/fungal
-	name = "Fungal Zombie"
-	desc = "A shambling human, taken over by a parasitic head crab. This one is covered in a spreading fungal infection."
-	icon_state = "fungalzombie"
-	icon_living = "fungalzombie"
-	icon_dead = "fungalzombie_dead"
-	no_crab_state = "fungalzombie_nocrab"
-	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1, /obj/item/stack/sheet/cloth = 1)
-	maxHealth = 160
-	health = 160
-	fungalheal = TRUE
-	move_to_delay = 6
-	headcrabspawn = /mob/living/basic/halflife/headcrab/armored
-	var/datum/action/cooldown/spell/conjure/xenfloor/infest
-
-/mob/living/simple_animal/hostile/halflife/zombie/fungal/Initialize(mapload)
-	. = ..()
-	infest = new(src)
-	infest.Grant(src)
-
 /mob/living/simple_animal/hostile/halflife/zombie/poison
 	name = "Poison Zombie"
 	desc = "A bloated, fleshy human taken over by a parasitic poison headcrab."
 	icon_state = "poisonzombie"
 	icon_living = "poisonzombie"
 	icon_dead = "poisonzombie_dead"
-	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 2)
 	maxHealth = 150
 	health = 150
 	move_to_delay = 7

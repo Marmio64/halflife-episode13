@@ -338,13 +338,13 @@
 	icon_state = "random_plant"
 
 	loot = list(
-				/obj/structure/flora/bush/sparsegrass/style_random = 50,
-				/obj/structure/flora/bush/fullgrass/style_random = 50,
+				/obj/structure/flora/bush/sparsegrass/style_random = 60,
+				/obj/structure/flora/bush/fullgrass/style_random = 60,
 				/obj/structure/flora/root/wild_potato,
 				/obj/structure/flora/root/wild_onion,
-				/obj/structure/flora/bush/pointy/style_random = 5,
-				/obj/structure/flora/bush/lavendergrass/style_random = 5,
-				/obj/structure/flora/bush/style_random = 5,
+				/obj/structure/flora/bush/pointy/style_random = 6,
+				/obj/structure/flora/bush/lavendergrass/style_random = 6,
+				/obj/structure/flora/bush/style_random = 6,
 				)
 
 //meds, grenades, ammo

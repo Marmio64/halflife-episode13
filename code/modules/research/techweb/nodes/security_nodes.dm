@@ -2,7 +2,7 @@
 	id = TECHWEB_NODE_BASIC_ARMS
 	starting_node = TRUE
 	display_name = "Basic Arms"
-	description = "Ballistics can be unpredictable in space."
+	description = "Ballistics can be unpredictable here."
 	design_ids = list(
 		"foam_dart",
 		"sec_beanbag_slug",

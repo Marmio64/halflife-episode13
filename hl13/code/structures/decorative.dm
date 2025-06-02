@@ -958,3 +958,19 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 	density = TRUE
 	anchored = TRUE
 	projectile_passchance = 60
+
+/obj/structure/halflife/leaves
+	name = "leaves"
+	desc = "Autumn makes me melancholic."
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "leaves"
+	density = FALSE
+	anchored = TRUE
+
+/obj/structure/halflife/trash_decal
+	name = "trash"
+	desc = "The various rubbish of City 13."
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "trash"
+	density = FALSE
+	anchored = TRUE
