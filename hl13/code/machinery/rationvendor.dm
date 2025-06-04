@@ -20,6 +20,9 @@
 	/// Is the vendor malfunctioning?
 	var/malfunctioning = FALSE
 
+	/// Is someone else using the vendor right now?
+	var/busy = FALSE
+
 /obj/machinery/ration_vendor/examine(mob/user)
 	. = ..()
 	. += span_notice("The vendor has [rations_stored] rations left to dispense.")
@@ -32,6 +35,11 @@
 	. = ..()
 	var/ration_quality = 3 //1 is terrible, 2 is lowgrade, 3 is standard, 4 is better/production grade, 5 is loyalty grade, 6 is best grade
 	var/vortigaunt = FALSE //are they a vortigaunt role?
+
+	if(busy)
+		say("Machine is currently in use.")
+		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+		return
 
 	if(rations_stored < 1)
 		say("Machine out of rations, please refill.") // Refill immediately!
@@ -65,6 +73,7 @@
 		flick(icon_state_deny,src)
 		return
 
+	busy = TRUE
 	say("Citizen Account Record detected. Determining ration reward.")
 
 	playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
@@ -73,6 +82,7 @@
 		to_chat(usr, span_warning("The machine did not finish determining your ration reward!"))
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		flick(icon_state_deny,src)
+		busy = FALSE
 		return
 
 	ration_quality += account?.account_job.ration_bonus //applies job specific ration bonuses
@@ -84,6 +94,7 @@
 			say("Warning, your civil status is in question by local protection teams. Please apply.")
 			playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 			flick(icon_state_deny,src)
+			busy = FALSE
 			return
 		if(R.wanted_status == WANTED_PAROLE) //Loyalists are given loyalist grade rations. Any job that already has this grade is of course already a loyalist.
 			if(ration_quality < 5)
@@ -96,6 +107,7 @@
 		say("Warning, your civil status is in question by local protection teams. Please apply.")
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		flick(icon_state_deny,src)
+		busy = FALSE
 		return
 	if(account?.sanctioned)
 		say("Meal sanction applied. Ration quality lowered by [account.sanctioned] units.")
@@ -111,6 +123,7 @@
 	if(malfunctioning && prob(40)) //if vendor is malfunctioning, it may cancel the ration request and waste your time
 		say("Vendor malfunction detected. Resubmit coupon to try again, and request a repair team.")
 		account.ration_voucher = TRUE
+		busy = FALSE
 		return
 
 	say("Ration reward determined. Please wait for ration to be dispensed.")
@@ -121,6 +134,8 @@
 
 /obj/machinery/ration_vendor/proc/dispense(quality, vortigaunt)
 	playsound(src, 'hl13/sound/machines/combine_dispense.ogg', 50, TRUE, extrarange = -3)
+
+	busy = FALSE
 
 	SSsociostability.modifystability(1) //Compliance brings stability.
 

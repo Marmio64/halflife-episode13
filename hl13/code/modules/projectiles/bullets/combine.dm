@@ -15,7 +15,7 @@
 /obj/projectile/bullet/pulse/heavy
 	name = "heavy pulse round"
 	icon_state = "pulse"
-	damage = 55
+	damage = 50
 	wound_bonus = -10
 	armour_penetration = 25
 	speed = 2.5

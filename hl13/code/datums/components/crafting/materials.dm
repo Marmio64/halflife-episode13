@@ -62,7 +62,7 @@
 /datum/crafting_recipe/create_bullets
 	name = "Create Uncased Bullets"
 	result = /obj/item/stack/sheet/halflife/bullets
-	reqs = list(/obj/item/stack/sheet/iron = 4)
+	reqs = list(/obj/item/stack/sheet/iron = 2)
 	time = 2 SECONDS
 	category = CAT_WEAPON_AMMO
 	mass_craftable = TRUE

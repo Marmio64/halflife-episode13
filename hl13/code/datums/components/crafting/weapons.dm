@@ -38,6 +38,18 @@
 	category = CAT_WEAPON_AMMO
 	crafting_interface = CRAFTING_BENCH_RELOADING
 
+/// Far quicker to make than 3 magazines, and more space efficient.
+/datum/crafting_recipe/pistolbox
+	name = "9mm USP Match Full Ammo Box"
+	result = /obj/item/ammo_box/halflife/c9mm
+	reqs = list(/obj/item/stack/bulletcasings = 9,
+				/obj/item/stack/sheet/halflife/bullets = 9,
+				/datum/reagent/fuel = 90)
+	tool_behaviors = list(TOOL_SCREWDRIVER)
+	time = 5 SECONDS
+	category = CAT_WEAPON_AMMO
+	crafting_interface = CRAFTING_BENCH_RELOADING
+
 /datum/crafting_recipe/revolver
 	name = "Colt Python"
 	result = /obj/item/gun/ballistic/revolver/coltpython
@@ -79,6 +91,18 @@
 				/datum/reagent/fuel = 30)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 7 SECONDS
+	category = CAT_WEAPON_AMMO
+	crafting_interface = CRAFTING_BENCH_RELOADING
+
+/// Far quicker to make than 3 magazines, and more space efficient.
+/datum/crafting_recipe/mp7box
+	name = "4.6x30mm MP7 Full Ammo Box"
+	result = /obj/item/ammo_box/halflife/c46x30mm
+	reqs = list(/obj/item/stack/bulletcasings = 27,
+				/obj/item/stack/sheet/halflife/bullets = 27,
+				/datum/reagent/fuel = 90)
+	tool_behaviors = list(TOOL_SCREWDRIVER)
+	time = 6 SECONDS
 	category = CAT_WEAPON_AMMO
 	crafting_interface = CRAFTING_BENCH_RELOADING
 

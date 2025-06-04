@@ -39,12 +39,21 @@
 	polldesc = "an Overwatch Xen Containment Team"
 
 /datum/ert/riotpolice
-	roles = list(/datum/antagonist/ert/riotpolice)
-	leader_role = /datum/antagonist/ert/riotpolice/pistol
+	roles = list(/datum/antagonist/ert/police/riot)
+	leader_role = /datum/antagonist/ert/police/riot/pistol
 	rename_team = "Metropolice Riot Team"
 	code = "Red"
 	mission = "Stabilize the city, and detain or kill any malignant citizens."
 	polldesc = "a metropolice riot team"
+	opendoors = FALSE
+
+/datum/ert/police
+	roles = list(/datum/antagonist/ert/police)
+	leader_role = /datum/antagonist/ert/police/mp7
+	rename_team = "Metropolice Team"
+	code = "Red"
+	mission = "Stabilize the city, and detain or kill any malignant citizens."
+	polldesc = "an armed metropolice team"
 	opendoors = FALSE
 
 /datum/ert/administrative

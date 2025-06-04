@@ -17,7 +17,7 @@
 	back = null
 
 	var/role = "OTA.C13-"
-	var/name_source = list("Blade", "Dagger", "Hammer", "Hunter", "Razor", "Spear", "Striker", "Tracker")
+	var/name_source = list("Blade", "Dagger", "Hammer", "Hunter", "Razor", "Spear", "Striker", "Tracker", "Echo")
 
 /datum/outfit/centcom/ert/overwatch/pre_equip(mob/living/carbon/human/H)
 	H.faction += "combine"
@@ -92,29 +92,46 @@
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection/grunt
 
-/datum/outfit/centcom/ert/riotpolice
-	name = "Metropolice Riot Unit"
+/datum/outfit/centcom/ert/police
+	name = "Metropolice ERT Unit"
 
 	id = /obj/item/card/id/advanced/four/ert
 	ears = /obj/item/radio/headset/civilprotection
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
-	suit = /obj/item/clothing/suit/armor/riot
-	suit_store = /obj/item/melee/baton/security/heavy/loaded
+	suit = /obj/item/clothing/suit/armor/civilprotection
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	glasses = /obj/item/clothing/glasses/hud/security
-	head = /obj/item/clothing/head/helmet/toggleable/riot
 
 	mask = /obj/item/clothing/mask/gas/civilprotection
+	belt = /obj/item/storage/belt/civilprotection/full
+
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
+
+/datum/outfit/centcom/ert/police/mp7
+	name = "Metropolice MP7 ERT Unit"
+	suit = /obj/item/gun/ballistic/automatic/mp7
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+
+	belt = /obj/item/storage/belt/civilprotection/overwatch/mp7
+
+	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
+
+/datum/outfit/centcom/ert/police/riot
+	name = "Metropolice Riot Unit"
+
+	suit = /obj/item/clothing/suit/armor/riot
+	suit_store = /obj/item/melee/baton/security/heavy/loaded
+	head = /obj/item/clothing/head/helmet/toggleable/riot
+
 	belt = /obj/item/storage/belt/civilprotection/riotfull
 
 	r_pocket = /obj/item/grenade/halflife/cs_gas
 
-	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/ota)
-
 	back = /obj/item/shield/riot
 
-/datum/outfit/centcom/ert/riotpolice/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/centcom/ert/police/pre_equip(mob/living/carbon/human/H)
 	H.faction += "combine"
 	H.cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
 	H.set_facial_hairstyle("Shaved", update = FALSE)
@@ -123,11 +140,11 @@
 
 	H.change_stat(STATKEY_DEX, 2)
 
-/datum/outfit/centcom/ert/riotpolice/post_equip(mob/living/carbon/human/equipped, visuals_only)
+/datum/outfit/centcom/ert/police/post_equip(mob/living/carbon/human/equipped, visuals_only)
 	..()
 	equipped.fully_replace_character_name(equipped.real_name,"VICE- [rand(111,999)]")
 
-/datum/outfit/centcom/ert/riotpolice/pistol
+/datum/outfit/centcom/ert/police/riot/pistol
 	name = "Metropolice Riot Pistol Unit"
 
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp/riot

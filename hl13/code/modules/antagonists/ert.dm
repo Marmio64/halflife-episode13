@@ -24,14 +24,20 @@
 	. = ..()
 	name_source = "OTA [rand(111,999)]"
 
-/datum/antagonist/ert/riotpolice
-	outfit = /datum/outfit/centcom/ert/riotpolice
+/datum/antagonist/ert/police
+	outfit = /datum/outfit/centcom/ert/police
 	role = "UNIT-"
 
-/datum/antagonist/ert/riotpolice/pistol
-	outfit = /datum/outfit/centcom/ert/riotpolice/pistol
+/datum/antagonist/ert/police/mp7
+	outfit = /datum/outfit/centcom/ert/police/mp7
 
-/datum/antagonist/ert/riotpolice/New()
+/datum/antagonist/ert/police/riot
+	outfit = /datum/outfit/centcom/ert/police/riot
+
+/datum/antagonist/ert/police/riot/pistol
+	outfit = /datum/outfit/centcom/ert/police/riot/pistol
+
+/datum/antagonist/ert/police/New()
 	. = ..()
 	name_source = "VICE [rand(111,999)]"
 

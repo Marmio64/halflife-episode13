@@ -280,6 +280,7 @@
 	icon = 'hl13/icons/obj/workbenches.dmi'
 	smoothing_flags = NONE
 	canSmoothWith = null
+	deconstruction_ready = FALSE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/datum/component/personal_crafting/crafting
 	var/crafting_type = CRAFTING_BENCH_GENERAL
