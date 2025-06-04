@@ -26,3 +26,10 @@
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	icon_state = "ration_voucher"
 	w_class = WEIGHT_CLASS_SMALL
+
+/obj/item/labor_certificate
+	name = "Prison Labor Certificate"
+	desc = "A thin piece of paper certifying that a batch of clothes has been cleaned and processed. Deliver on the cargo train for a small credit reward."
+	icon = 'hl13/icons/obj/misc_items.dmi'
+	icon_state = "certificate"
+	w_class = WEIGHT_CLASS_SMALL

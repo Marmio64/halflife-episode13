@@ -1398,8 +1398,7 @@
 /area/halflife/outdoors/roofs)
 "cpC" = (
 /obj/machinery/camera{
-	c_tag = "Prison";
-	dir = 4
+	c_tag = "Prison West"
 	},
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/prison)
@@ -1684,7 +1683,7 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/old/chapel)
 "cPU" = (
-/obj/machinery/seed_extractor,
+/obj/machinery/light/small/cyan/directional/west,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/prison)
 "cQH" = (
@@ -4323,16 +4322,8 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/slums)
 "hhK" = (
-/obj/item/seeds/onion,
-/obj/item/seeds/garlic,
-/obj/item/seeds/potato,
-/obj/item/seeds/tomato,
-/obj/item/seeds/carrot,
-/obj/item/seeds/grass,
-/obj/item/seeds/ambrosia,
-/obj/item/seeds/wheat,
-/obj/item/seeds/pumpkin,
-/obj/structure/closet/crate/halflife,
+/obj/machinery/light/small/cyan/directional/west,
+/obj/structure/table/halflife/metal/small,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/prison)
 "hhQ" = (
@@ -8127,7 +8118,7 @@
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
 "nLp" = (
-/obj/machinery/biogenerator,
+/obj/machinery/washing_machine,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/prison)
 "nLN" = (
@@ -9171,11 +9162,8 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
 "pDO" = (
-/obj/machinery/hydroponics/constructable{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/metal/combine/alt2,
-/area/halflife/indoors/townhall/civilprotection/prison)
+/turf/closed/wall/halflife/metal,
+/area/halflife/indoors/townhall)
 "pDS" = (
 /turf/closed/wall/halflife/brick/grey,
 /area/halflife/outdoors/roofs)
@@ -10756,10 +10744,9 @@
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/restaurant)
 "sgZ" = (
-/obj/machinery/hydroponics/constructable{
-	dir = 4
+/obj/machinery/clothes_vendor{
+	pixel_y = 30
 	},
-/obj/machinery/light/small/cyan/directional/west,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/prison)
 "siJ" = (
@@ -14446,6 +14433,9 @@
 /obj/structure/table/halflife/metal/grate,
 /obj/item/instrument/harmonica,
 /obj/item/toy/cards/deck,
+/obj/machinery/camera{
+	c_tag = "Prison North"
+	},
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/prison)
 "yeX" = (
@@ -40179,13 +40169,13 @@ bDA
 nmK
 bDA
 bDA
-uXQ
-uXQ
-uXQ
-uXQ
-uXQ
-uXQ
-uXQ
+vwP
+vwP
+vwP
+vwP
+pDO
+pDO
+pDO
 vwP
 vwP
 vwP
@@ -40327,9 +40317,9 @@ vwP
 vwP
 vwP
 vwP
-vwP
-vwP
-vwP
+nLp
+hhK
+nLp
 vwP
 uvm
 kZU
@@ -40468,9 +40458,9 @@ oVh
 bDA
 bDA
 vwP
-pDO
-pDO
-sgZ
+vwP
+vwP
+vwP
 cpC
 oAB
 oAB
@@ -40612,10 +40602,10 @@ oVh
 bDA
 bDA
 vwP
-oAB
-oAB
-oAB
-oAB
+vwP
+vwP
+vwP
+sgZ
 oAB
 oAB
 uuW
@@ -40758,8 +40748,8 @@ bDA
 vwP
 vfz
 oAB
+cPU
 oAB
-nnv
 oAB
 lYd
 vwP
@@ -40903,7 +40893,7 @@ vwP
 iUz
 hdq
 oAB
-vaS
+oAB
 oAB
 dxz
 vwP
@@ -41191,9 +41181,9 @@ vwP
 yeM
 oAB
 wbz
-nLp
-hhK
-cPU
+nnv
+dxz
+vaS
 vwP
 wbz
 cxJ

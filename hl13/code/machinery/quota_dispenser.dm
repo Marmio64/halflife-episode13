@@ -48,13 +48,13 @@
 		radio.talk_into(src, "Warning, low socio-level detected, quota postponed.", radio_channel)
 		return
 
-	radio.talk_into(src, "Attention, new quota received. Compliance is mandatory.", radio_channel)
+	radio.talk_into(src, "Attention, new civil protection quota received. Compliance is mandatory.", radio_channel)
 	item_quanity_received = 0
 	item_quantity_required = rand(1,3)
 	required_item = pick_n_take(possible_picks)
 
 	if(!quota_complete)
-		radio.talk_into(src, "The previous quota was not completed in time. Sociostability score has been deducted.", radio_channel)
+		radio.talk_into(src, "The previous civil protection quota was not completed in time. Sociostability score has been deducted.", radio_channel)
 		SSsociostability.modifystability(-75) //boowomp
 
 	quota_complete = FALSE
