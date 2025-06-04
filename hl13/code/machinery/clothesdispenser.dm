@@ -41,7 +41,7 @@
 
 	playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
 
-	if(!do_after(user, 8 SECONDS, src))
+	if(!do_after(user, 10 SECONDS, src))
 		to_chat(usr, span_warning("The machine did not finish depositing dirty clothes."))
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		return
