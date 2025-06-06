@@ -79,6 +79,50 @@
 	idle_sounds = list('hl13/sound/creatures/zombinesound1.ogg', 'hl13/sound/creatures/zombinesound2.ogg', 'hl13/sound/creatures/zombinesound3.ogg', 'hl13/sound/creatures/zombinesound4.ogg')
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombine
 
+/// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
+/mob/living/basic/halflife/zombie/zombine/proc/get_innate_abilities()
+	var/static/list/innate_abilities = list(
+		/datum/action/cooldown/mob_cooldown/halflife/zombine_grenade = BB_HALFLIFE_GRENADE_ABILITY,
+	)
+	return innate_abilities
+
+/mob/living/basic/halflife/zombie/zombine/Initialize(mapload)
+	. = ..()
+	grant_actions_by_list(get_innate_abilities())
+	AddComponent(/datum/component/ai_target_timer)
+
+/datum/action/cooldown/mob_cooldown/halflife/zombine_grenade
+	name = "Arm Grenade"
+	desc = "Take out a grenade arm it, briefly stunning yourself afterwards. The explosion will be fatal to you, and heavily injure all nearby."
+	cooldown_time = 90 SECONDS // you should be dead after using it, but just in case
+	shared_cooldown = NONE
+	///telegraph time before activating
+	var/wind_up_time = 0.75 SECONDS
+	var/detonation_time = 3.5 SECONDS
+	click_to_activate = FALSE
+	///what sound to play as telegraph?
+	var/sound_cue = 'sound/items/weapons/armbomb.ogg'
+	var/user_noise = 'hl13/sound/creatures/zombine_readygrenade1.ogg'
+
+/datum/action/cooldown/mob_cooldown/halflife/zombine_grenade/Activate(atom/target)
+	StartCooldown()
+	target.icon_state = "zombine_grenade"
+	target.visible_message(span_boldwarning("[target] arms a grenade!"))
+	playsound(target, sound_cue, 50, FALSE)
+	playsound(target, user_noise, 50, FALSE)
+
+	if(isliving(target))
+		var/mob/living/M = target
+		M.Stun(wind_up_time, ignore_canstun = TRUE) //give a tiny amount of time for nearby people to run for it
+	addtimer(CALLBACK(src, PROC_REF(grenade_explosion), target), detonation_time)
+	return TRUE
+
+/datum/action/cooldown/mob_cooldown/halflife/zombine_grenade/proc/grenade_explosion(atom/target)
+	explosion(target, 0, 2, 3, 0)
+	if(isliving(target))
+		var/mob/living/M = target
+		M.gib()
+
 /mob/living/basic/halflife/zombie/fungal
 	name = "Fungal Zombie"
 	desc = "A shambling human, taken over by a parasitic head crab. This one is covered in a spreading fungal infection."
@@ -284,10 +328,25 @@
 	idle_behavior = /datum/idle_behavior/idle_random_walk
 	planning_subtrees = list(
 		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/use_mob_ability/zombine_grenade,
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
 		/datum/ai_planning_subtree/random_speech/halflife/zombine,
 	)
+
+/datum/ai_planning_subtree/use_mob_ability/zombine_grenade
+	ability_key = BB_HALFLIFE_GRENADE_ABILITY
+
+/datum/ai_planning_subtree/use_mob_ability/zombine_grenade/SelectBehaviors(datum/ai_controller/controller, seconds_per_tick)
+	var/mob/living/target = controller.blackboard[BB_BASIC_MOB_CURRENT_TARGET]
+	if (!isliving(target))
+		return // Don't do this if there's nothing hostile around for them to blow up on
+	var/time_on_target = controller.blackboard[BB_BASIC_MOB_HAS_TARGET_TIME] || 0
+	if (time_on_target < 4 SECONDS)
+		return // We need to spend some time on a target first
+	if (prob(99)) //makes exploding themself rare
+		return
+	return ..()
 
 /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/fastzombie
 	blackboard = list(
