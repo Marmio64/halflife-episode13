@@ -3,14 +3,10 @@
 	var/name = "Stock Market Event!"
 	/// A list of company names to use for the event and the circumstance.
 	var/static/list/company_name = list(
-		"Nakamura Engineering",
-		"Robust Industries, LLC",
-		"MODular Solutions",
-		"SolGov",
-		"Australicus Industrial Mining",
-		"Vey-Medical",
-		"Aussec Armory",
-		"Dreamland Robotics"
+		"Union Engineering Division",
+		"Heckler & Koch",
+		"Union Science Division",
+		"Union Industrial Division"
 	)
 	/// A list of strings selected from the event that's used to describe the event in the news.
 	var/list/circumstance = list()
@@ -134,8 +130,8 @@
 	trend_value = MARKET_TREND_DOWNWARD
 	trend_duration = 2
 	circumstance = list(
-		"is being investigated by the Galactic Trade Commission, resulting in a halt of trade for ",
-		", in a stunning move, has been embargoed by TerraGov, resulting in a halt of trade of ",
+		"is being investigated by the Union Trade Commission, resulting in a halt of trade for ",
+		", in a stunning move, has been shutdown by the Ministry of Protection, resulting in a halt of trade of ",
 	)
 
 /datum/stock_market_event/lockdown/handle()

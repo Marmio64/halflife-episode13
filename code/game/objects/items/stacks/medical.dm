@@ -557,7 +557,7 @@
 
 /obj/item/stack/medical/bandage
 	name = "cloth bandage"
-	desc = "A pretty clean looking bandage, you're able to use it for basic first aid on blunt-force trauma."
+	desc = "A pretty clean looking bandage, you're able to use it for basic first aid on blunt-force trauma, and for stopping bleeding." //hl13 edit
 	icon_state = "bandage"
 	inhand_icon_state = "bandage"
 	novariants = TRUE
@@ -566,16 +566,14 @@
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	heal_brute = 25
-	stop_bleeding = 0.2
+	stop_bleeding = 0.4  //hl13 edit
 	self_delay = 3 SECONDS
 	other_delay = 1 SECONDS
 	grind_results = list(/datum/reagent/medicine/c2/libital = 2)
 
 /obj/item/stack/medical/bandage/makeshift
 	name = "makeshift bandage"
-	desc = "A hastily constructed bandage designed for basic first aid on blunt-force trauma."
+	desc = "A hastily constructed bandage designed for basic first aid on blunt-force trauma and bleeding wounds." //hl13 edit
 	icon_state = "bandage_makeshift"
 	icon_state_preview = "bandage_makeshift"
-	inhand_icon_state = "bandage"
 	heal_brute = 15 //HL13 edit
-	novariants = TRUE

@@ -63,7 +63,7 @@
 
 /datum/uplink_item/device_tools/emag
 	name = "Multifunction Electrical Tool"
-	desc = "A handheld device which subverts most machinery and devices, although it cannot get through advanced and well protected combine doors."
+	desc = "A handheld device which subverts most machinery and devices, although it cannot get through advanced and well protected combine doors. Note, less intelligent people will find using this device much more difficult."
 	item = /obj/item/card/emag/halflife
 	cost = 4
 

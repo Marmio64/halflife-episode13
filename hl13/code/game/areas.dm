@@ -20,7 +20,7 @@
 	static_lighting = TRUE
 	outdoors = TRUE
 	sound_environment = SOUND_ENVIRONMENT_CITY
-	ambient_buzz = 'hl13/sound/ambience/plaza_amb.ogg'
+	ambient_buzz = 'hl13/sound/ambience/townambience.ogg'
 	ambient_buzz_vol = 30
 
 	uses_daylight = TRUE
@@ -345,8 +345,8 @@
 	static_lighting = TRUE
 	outdoors = TRUE
 	sound_environment = SOUND_ENVIRONMENT_CITY
-	ambient_buzz = 'hl13/sound/ambience/plaza_amb.ogg'
-	ambient_buzz_vol = 20
+	ambient_buzz = 'hl13/sound/ambience/townambience.ogg'
+	ambient_buzz_vol = 25
 
 	base_lighting_alpha = 10
 

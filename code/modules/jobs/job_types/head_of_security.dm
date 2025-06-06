@@ -43,7 +43,7 @@
 	ration_bonus = 3
 	union_law_notify = TRUE
 
-	requisition_points = 8
+	requisition_points = 6
 
 	gameplay_help = "As the divisional lead, you are partially augmented and have had a full memory wipe. You cannot go rogue and HAVE to follow orders from Overwatch (and thus, often Dispatch). Your CP officers and the District Administrator are not absolutely loyal however, so you'll have to instill loyalty in them to Overwatch."
 

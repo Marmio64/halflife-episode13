@@ -87,9 +87,9 @@ export const sound_midi: FeatureToggle = {
 };
 
 export const sound_ship_ambience_volume: Feature<number> = {
-  name: 'Ship ambience volume',
+  name: 'Ambience Buzz',
   category: 'SOUND',
-  description: `Ship ambience refers to the low ambient buzz that plays on loop.`,
+  description: `Raise or lower the sound of the constant background noise that plays depending on the area you are in.`,
   component: FeatureSliderInput,
 };
 

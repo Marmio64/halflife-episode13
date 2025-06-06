@@ -25,6 +25,9 @@
 
 	var/list/possible_picks = list(/obj/item/gun/ballistic/automatic/pistol/makeshift, /obj/item/clothing/under/citizen/refugee, /obj/item/grenade/halflife/molotov, /obj/item/toy/crayon/spraycan, /obj/item/gun/ballistic/rifle/rebarxbow, /obj/item/switchblade)
 
+	/// Items that are easier to acquire, but require you to get more of them
+	var/list/possible_easy_picks = list(/obj/item/food/meat/slab/xen, /obj/item/food/meat/slab/halflife/zombie)
+
 	var/item_quantity_required = 1
 
 	var/item_quanity_received = 0
@@ -50,8 +53,13 @@
 
 	radio.talk_into(src, "Attention, new civil protection quota received. Compliance is mandatory.", radio_channel)
 	item_quanity_received = 0
-	item_quantity_required = rand(1,3)
-	required_item = pick_n_take(possible_picks)
+
+	if(prob(75))
+		item_quantity_required = rand(1,3)
+		required_item = pick_n_take(possible_picks)
+	else
+		item_quantity_required = rand(4,6)
+		required_item = pick_n_take(possible_easy_picks)
 
 	if(!quota_complete)
 		radio.talk_into(src, "The previous civil protection quota was not completed in time. Sociostability score has been deducted.", radio_channel)
@@ -82,13 +90,13 @@
 		item_quanity_received++
 		if(item_quanity_received >= item_quantity_required)
 			quota_complete = TRUE
-			radio.talk_into(src, "Quota has been completed. All officers have been rewarded a requisition point.", radio_channel)
+			radio.talk_into(src, "Quota has been completed. All officers have been rewarded two requisition points.", radio_channel)
 			SSsociostability.modifystability(10) //yipee
 			var/accounts_to_give = flatten_list(SSeconomy.bank_accounts_by_id)
 			for(var/i in accounts_to_give)
 				var/datum/bank_account/B = i
 				if(B.account_job.requisition_points)
-					B.requisition_points++
+					B.requisition_points += 2
 		qdel(I)
 	else
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)

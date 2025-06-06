@@ -453,7 +453,7 @@
 	light_range = 1.5
 	light_system = OVERLAY_LIGHT
 	light_on = FALSE
-	light_color = LIGHT_COLOR_ORANGE
+	light_color = LIGHT_COLOR_ELECTRIC_CYAN //hl13 edit
 	light_power = 0.5
 	var/inactive_drop_sound = 'sound/items/baton/stun_baton_inactive_drop.ogg'
 	var/inactive_pickup_sound = 'sound/items/baton/stun_baton_inactive_pickup.ogg'

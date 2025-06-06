@@ -41,9 +41,18 @@
 /datum/crafting_recipe/makeshiftbandage
 	name = "Makeshift Bandage"
 	reqs = list(
-		/obj/item/stack/sheet/cloth = 3,
+		/obj/item/stack/sheet/cloth = 2,
 	)
 	result = /obj/item/stack/medical/bandage/makeshift
+	category = CAT_MISC
+
+/datum/crafting_recipe/sterilize_bandage
+	name = "Sterile Bandage"
+	reqs = list(
+		/obj/item/stack/medical/bandage/makeshift = 1,
+		/datum/reagent/consumable/ethanol = 15,
+	)
+	result = /obj/item/stack/medical/bandage
 	category = CAT_MISC
 
 /datum/crafting_recipe/makeshiftweldingtool
