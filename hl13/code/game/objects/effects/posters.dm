@@ -36,6 +36,11 @@
 	desc = "A poster in the colours of the Polish Liberation Front, depicting the Combine shattered behind a concrete wall. 'HOLD' is written on it."
 	icon_state = "plf_hold"
 
+/obj/structure/sign/poster/halflife/rebel/vault
+	icon_state = "lambda_vault"
+	name = "Lambda propaganda poster"
+	desc = "A poster from the Lambda Resistance, taking credit for the 'incident' that occured in the City 17 quarantine zone a few months ago, and threatening the Citadel with the bold word 'NEXT'."
+
 /obj/effect/spawner/random/trash/graffiti/halflife/rebelspray
 	graffiti_icons = list(
 		"lambda", "polska", "resistance",
