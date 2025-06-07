@@ -194,6 +194,19 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
+"nv" = (
+/obj/structure/sign/poster/halflife/rebel/plf{
+	pixel_x = 32
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"nI" = (
+/obj/item/wirecutters/halflife{
+	pixel_x = 6;
+	pixel_y = 5
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "nS" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
@@ -282,6 +295,9 @@
 /obj/structure/halflife/trash/garbage{
 	pixel_x = -3;
 	pixel_y = -2
+	},
+/obj/structure/sign/poster/halflife/rebel/plf{
+	pixel_x = -32
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
@@ -652,6 +668,12 @@
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"Sr" = (
+/obj/structure/sign/poster/halflife/rebel/plf/hold{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "TM" = (
 /obj/item/chair/halflife/metal/office/blue,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -956,7 +978,7 @@ DV
 FU
 Bj
 DV
-nS
+Sr
 lq
 Al
 DV
@@ -1023,7 +1045,7 @@ nS
 nS
 Yz
 Bj
-Bj
+nv
 Bj
 Bj
 Bj
@@ -1158,7 +1180,7 @@ uD
 xu
 DV
 UJ
-Bj
+nI
 qU
 Bj
 Bj

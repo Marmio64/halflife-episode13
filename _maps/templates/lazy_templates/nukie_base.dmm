@@ -20,6 +20,14 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
+"aQ" = (
+/mob/living/basic/halflife/zombie/zombine,
+/turf/open/floor/plating/ground/sidewalk,
+/area/centcom/halflife/rebel)
+"ba" = (
+/obj/item/weaponcrafting/frame/service,
+/turf/open/floor/plating/ground/dirt,
+/area/centcom/halflife/rebel)
 "bo" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	dir = 1;
@@ -61,6 +69,12 @@
 "bY" = (
 /obj/structure/closet/crate/freezer/blood,
 /turf/open/floor/plating/indoor/sterilesquares,
+/area/centcom/halflife/rebel)
+"ci" = (
+/obj/structure/sign/poster/halflife/rebel/plf{
+	pixel_y = -32
+	},
+/turf/open/floor/plating/indoor/concrete,
 /area/centcom/halflife/rebel)
 "cq" = (
 /obj/structure/halflife/rug/rubber,
@@ -399,6 +413,10 @@
 /area/centcom/halflife/rebel)
 "mq" = (
 /obj/machinery/light/small/directional/west,
+/obj/item/hl13_small_flag/poland{
+	pixel_x = -11;
+	pixel_y = 17
+	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "ms" = (
@@ -610,6 +628,12 @@
 	dir = 1
 	},
 /area/centcom/halflife/rebel)
+"wS" = (
+/obj/structure/sign/poster/halflife/rebel/plf{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
 "wW" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -694,6 +718,12 @@
 /obj/item/storage/box/halflife/ration/ration,
 /obj/structure/closet/crate/freezer/food,
 /turf/open/floor/plating/indoor/metal/industrial,
+/area/centcom/halflife/rebel)
+"Bc" = (
+/obj/structure/sign/poster/halflife/rebel/plf/hold{
+	pixel_y = -32
+	},
+/turf/open/floor/plating/indoor/concrete,
 /area/centcom/halflife/rebel)
 "Br" = (
 /obj/effect/turf_decal/siding/thinplating/corner{
@@ -854,6 +884,12 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
+"KR" = (
+/obj/structure/sign/poster/halflife/rebel/plf{
+	pixel_y = -32
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/centcom/halflife/rebel)
 "KU" = (
 /obj/structure/halflife/combine/powergen/on,
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -868,6 +904,12 @@
 	},
 /obj/machinery/iv_drip,
 /turf/open/floor/plating/indoor/sterilesquares,
+/area/centcom/halflife/rebel)
+"Ly" = (
+/obj/structure/sign/poster/halflife/rebel/plf/hold{
+	pixel_x = 32
+	},
+/turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "LN" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -923,6 +965,22 @@
 "NP" = (
 /turf/open/halflife/water/deep,
 /area/centcom/halflife/rebel)
+"Oz" = (
+/obj/effect/spawner/random/halflife/plant_spawner,
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/ground/dirt/alt,
+/area/centcom/halflife/rebel)
+"OO" = (
+/obj/item/clothing/suit/armor/halflife/plf_veteran,
+/obj/item/clothing/head/helmet/halflife/military/plf_veteran,
+/obj/structure/closet/crate/halflife,
+/obj/item/gun/ballistic/automatic/ak47,
+/obj/item/ammo_box/magazine/ak47,
+/obj/item/ammo_box/magazine/ak47,
+/obj/item/flashlight/seclite,
+/obj/item/clothing/mask/gas/hl2/military/hardened,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/centcom/halflife/rebel)
 "Pc" = (
 /obj/effect/turf_decal/siding/thinplating,
 /turf/open/floor/plating/ground/brickroad{
@@ -961,6 +1019,9 @@
 /obj/machinery/vending/armory{
 	name = "stolen armory vendor";
 	desc = "A stolen Civil Protection armoury vendor. Used more to annoy the sociostability tracker than to actually requisition weapons."
+	},
+/obj/structure/sign/poster/halflife/rebel/plf/hold{
+	pixel_x = -32
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
@@ -1145,6 +1206,14 @@
 /turf/open/floor/plating/ground/brickroad{
 	dir = 1
 	},
+/area/centcom/halflife/rebel)
+"Zh" = (
+/obj/item/clothing/head/helmet/halflife/military/weak/crafted/poland{
+	pixel_x = 2;
+	pixel_y = 0
+	},
+/obj/effect/decal/remains/human,
+/turf/open/floor/plating/ground/dirt,
 /area/centcom/halflife/rebel)
 "Zt" = (
 /obj/structure/table/halflife/no_smooth/large/crafting/weaponbench,
@@ -3342,7 +3411,7 @@ QM
 VN
 hi
 qp
-nz
+wS
 qw
 qp
 Gs
@@ -3350,8 +3419,8 @@ fy
 AL
 qp
 Gl
-sU
-sU
+Gl
+Gl
 sU
 sU
 sU
@@ -3451,9 +3520,9 @@ kQ
 kQ
 jT
 qp
+qp
+qp
 Gl
-sU
-sU
 sU
 sU
 sU
@@ -3553,9 +3622,9 @@ cT
 cV
 kQ
 qp
+OO
+qp
 Gl
-Gl
-sU
 sU
 sU
 sU
@@ -3647,7 +3716,7 @@ gK
 gK
 gK
 In
-nz
+Ly
 nz
 nz
 qp
@@ -3656,8 +3725,8 @@ qp
 BD
 qp
 qp
+qp
 Gl
-sU
 sU
 sU
 sU
@@ -3759,7 +3828,7 @@ cq
 la
 qp
 Gl
-sU
+Gl
 sU
 sU
 sU
@@ -4058,7 +4127,7 @@ pY
 il
 nk
 gs
-kQ
+KR
 qp
 kh
 xe
@@ -4253,7 +4322,7 @@ Ye
 Ye
 gJ
 gJ
-gJ
+Bc
 qp
 pY
 pY
@@ -5273,7 +5342,7 @@ Ye
 Ye
 gJ
 gJ
-gJ
+ci
 qp
 pY
 pY
@@ -6888,8 +6957,8 @@ sU
 Gl
 qp
 fA
-Ye
-Ye
+Zh
+ba
 Ye
 Ci
 Ye
@@ -7607,9 +7676,9 @@ fA
 ji
 dw
 dw
-Ye
+Uk
 qp
-Ye
+Uk
 Ye
 Ye
 lg
@@ -7709,9 +7778,9 @@ fA
 Ye
 dw
 dw
-Ye
-Ye
-Ye
+Uk
+RE
+Uk
 Ye
 Ye
 lg
@@ -7720,8 +7789,8 @@ lg
 Ye
 Ye
 fA
-EP
-fA
+Uk
+Uk
 qp
 Gl
 sU
@@ -7811,9 +7880,9 @@ fA
 Ye
 dw
 dw
-Ci
-Ye
-Ye
+Oz
+Uk
+Uk
 dw
 uT
 lg
@@ -7822,8 +7891,8 @@ lg
 uT
 Ye
 Ye
-fA
-fA
+Uk
+RE
 qp
 Gl
 sU
@@ -7924,8 +7993,8 @@ lg
 Ye
 Ye
 Ye
-fA
-fA
+Uk
+Uk
 qp
 Gl
 sU
@@ -9449,7 +9518,7 @@ YF
 ld
 lB
 VC
-VC
+aQ
 qp
 Gl
 Gl
