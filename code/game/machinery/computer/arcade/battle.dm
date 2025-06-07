@@ -213,7 +213,7 @@
 	if(obj_flags & EMAGGED)
 		obj_flags &= ~EMAGGED
 		bomb_cooldown = initial(bomb_cooldown)
-		new /obj/effect/spawner/newbomb/plasma(loc, /obj/item/assembly/timer)
+		new /obj/item/grenade/syndieminibomb/bouncer(loc)
 		new /obj/item/clothing/head/collectable/petehat(loc)
 		message_admins("[ADMIN_LOOKUPFLW(usr)] has outbombed Cuban Pete and been awarded a bomb.")
 		usr.log_message("outbombed Cuban Pete and has been awarded a bomb.", LOG_GAME)
