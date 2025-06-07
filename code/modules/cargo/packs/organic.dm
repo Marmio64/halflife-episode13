@@ -167,7 +167,7 @@
 /datum/supply_pack/organic/nutrimentpierogis
 	name = "Nutriment Pierogis Crate"
 	desc = "A crate of five nutriment pierogis. These are handcrafted (by anticitizen forced labor) meals guaranteed to satiate and provoke sensations of taste, and a citizen will kill to get their hands on these."
-	cost = CARGO_CRATE_VALUE * 10
+	cost = CARGO_CRATE_VALUE * 12
 	contains = list(/obj/item/food/pierogi_ration,
 					/obj/item/food/pierogi_ration,
 					/obj/item/food/pierogi_ration,

@@ -110,6 +110,9 @@
 
 	first_time_text = "The Townhall"
 
+/area/halflife/indoors/townhall/courtroom
+	name = "\improper Town Hall Court Room"
+
 /area/halflife/indoors/townhall/secondfloor
 	name = "\improper Town Hall Second Floor"
 
@@ -121,6 +124,8 @@
 	first_time_text = null
 
 /area/halflife/indoors/townhall/civilprotection
+	name = "\improper Nexus"
+
 	first_time_text = "The Nexus"
 
 /area/halflife/indoors/townhall/civilprotection/preproom

@@ -33,7 +33,7 @@
 	var/idle_sound_chance = 20
 	var/sound_vary = TRUE
 	var/fungalheal = FALSE
-	var/idle_sounds = list('hl13/sound/creatures/zombiesound.ogg', 'hl13/sound/creatures/zombiesound2.ogg', 'hl13/sound/creatures/zombiesound3.ogg')
+	var/idle_sounds = list('hl13/sound/creatures/zombiesound.ogg', 'hl13/sound/creatures/zombiesound2.ogg', 'hl13/sound/creatures/zombiesound3.ogg', 'hl13/sound/creatures/zombiesound4.ogg')
 
 	cmode_music = 'hl13/sound/music/combat/disrupted.ogg' //spooky!
 	lighting_cutoff_red = 25

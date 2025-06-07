@@ -24,7 +24,7 @@
 
 	unique_death = 'hl13/sound/voice/cpdeath/die1.ogg'
 
-	actions_types = list(/datum/action/item_action/halt, /datum/action/item_action/help_request)
+	actions_types = list(/datum/action/item_action/halt, /datum/action/item_action/help_request, /datum/action/item_action/suspect_spotted)
 
 	COOLDOWN_DECLARE(hailer_cooldown)
 
@@ -136,6 +136,9 @@
 		halt()
 	if(istype(action, /datum/action/item_action/help_request))
 		help_request()
+	if(istype(action, /datum/action/item_action/suspect_spotted))
+		suspect_spotted()
+
 
 /datum/action/item_action/halt
 	name = "HALT!"
@@ -171,6 +174,23 @@
 	else
 		playsound(src, 'hl13/sound/voice/cpvoicelines/officerneedsassistance.ogg', 75, FALSE)
 		usr.say(".s Officer needs assistance, I am 11-99!", forced = src.name)
+
+/datum/action/item_action/suspect_spotted
+	name = "Suspect Spotted!"
+
+/obj/item/clothing/mask/gas/civilprotection/verb/suspect_spotted()
+	set category = "Object"
+	set name = "Suspect Spotted!"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, hailer_cooldown))
+		return
+
+	COOLDOWN_START(src, hailer_cooldown, PHRASE_COOLDOWN)
+
+	if(overwatch)
+		usr.say(".s Overwatch advised, malignants detected on my 10-20.", forced = src.name)
+	else
+		usr.say(".s Officer has a suspect on 10-20, ready to engage.", forced = src.name)
 
 /datum/armor/cpmask
 	melee = 30
