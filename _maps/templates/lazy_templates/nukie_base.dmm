@@ -164,6 +164,12 @@
 "fA" = (
 /turf/open/floor/plating/ground/grass,
 /area/centcom/halflife/rebel)
+"fG" = (
+/obj/structure/sign/poster/halflife/rebel/plf/hold{
+	pixel_y = -32
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/centcom/halflife/rebel)
 "fI" = (
 /obj/effect/turf_decal/bot_white,
 /obj/structure/closet/crate/halflife,
@@ -295,6 +301,12 @@
 /obj/machinery/oven/range,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/centcom/halflife/rebel)
+"kn" = (
+/obj/structure/sign/poster/halflife/rebel/plf{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
 "kz" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	dir = 1;
@@ -399,6 +411,10 @@
 /area/centcom/halflife/rebel)
 "mq" = (
 /obj/machinery/light/small/directional/west,
+/obj/item/hl13_small_flag/poland{
+	pixel_x = -11;
+	pixel_y = 17
+	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "ms" = (
@@ -547,6 +563,17 @@
 /obj/structure/chair/office/halflife/blue,
 /turf/open/floor/plating/indoor/grooved2,
 /area/centcom/halflife/rebel)
+"sq" = (
+/obj/item/clothing/suit/armor/halflife/plf_veteran,
+/obj/item/clothing/head/helmet/halflife/military/plf_veteran,
+/obj/structure/closet/crate/halflife,
+/obj/item/gun/ballistic/automatic/ak47,
+/obj/item/ammo_box/magazine/ak47,
+/obj/item/ammo_box/magazine/ak47,
+/obj/item/flashlight/seclite,
+/obj/item/clothing/mask/gas/hl2/military/hardened,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/centcom/halflife/rebel)
 "sH" = (
 /obj/effect/baseturf_helper/asteroid/snow,
 /turf/open/space/basic,
@@ -661,6 +688,12 @@
 /area/centcom/halflife/rebel)
 "yC" = (
 /turf/open/floor/plating/indoor/lino,
+/area/centcom/halflife/rebel)
+"yO" = (
+/obj/structure/sign/poster/halflife/rebel/plf{
+	pixel_y = -32
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
 "zh" = (
 /obj/effect/turf_decal/box/corners{
@@ -840,6 +873,12 @@
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
+"Kk" = (
+/obj/structure/sign/poster/halflife/rebel/plf/hold{
+	pixel_x = 32
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife/rebel)
 "KA" = (
 /obj/machinery/power/halflife/streetlamp{
 	dir = 1
@@ -962,6 +1001,9 @@
 	name = "stolen armory vendor";
 	desc = "A stolen Civil Protection armoury vendor. Used more to annoy the sociostability tracker than to actually requisition weapons."
 	},
+/obj/structure/sign/poster/halflife/rebel/plf/hold{
+	pixel_x = -32
+	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "Rl" = (
@@ -1043,6 +1085,12 @@
 /turf/open/floor/plating/ground/brickroad{
 	dir = 1
 	},
+/area/centcom/halflife/rebel)
+"Tr" = (
+/obj/structure/sign/poster/halflife/rebel/plf{
+	pixel_y = -32
+	},
+/turf/open/floor/plating/indoor/concrete,
 /area/centcom/halflife/rebel)
 "TD" = (
 /obj/structure/halflife/rug/yellow,
@@ -3342,7 +3390,7 @@ QM
 VN
 hi
 qp
-nz
+kn
 qw
 qp
 Gs
@@ -3350,8 +3398,8 @@ fy
 AL
 qp
 Gl
-sU
-sU
+Gl
+Gl
 sU
 sU
 sU
@@ -3451,9 +3499,9 @@ kQ
 kQ
 jT
 qp
+qp
+qp
 Gl
-sU
-sU
 sU
 sU
 sU
@@ -3553,9 +3601,9 @@ cT
 cV
 kQ
 qp
+sq
+qp
 Gl
-Gl
-sU
 sU
 sU
 sU
@@ -3647,7 +3695,7 @@ gK
 gK
 gK
 In
-nz
+Kk
 nz
 nz
 qp
@@ -3656,8 +3704,8 @@ qp
 BD
 qp
 qp
+qp
 Gl
-sU
 sU
 sU
 sU
@@ -3759,7 +3807,7 @@ cq
 la
 qp
 Gl
-sU
+Gl
 sU
 sU
 sU
@@ -4058,7 +4106,7 @@ pY
 il
 nk
 gs
-kQ
+yO
 qp
 kh
 xe
@@ -4253,7 +4301,7 @@ Ye
 Ye
 gJ
 gJ
-gJ
+fG
 qp
 pY
 pY
@@ -5273,7 +5321,7 @@ Ye
 Ye
 gJ
 gJ
-gJ
+Tr
 qp
 pY
 pY
