@@ -36,7 +36,7 @@
 	spawn_list.Add(/mob/living/basic/halflife/headcrab/armored)
 	spawn_list.Add(/mob/living/basic/halflife/headcrab/poison)
 	if(prob(50))
-		spawn_list.Add(/mob/living/simple_animal/hostile/halflife/zombie/poison)
+		spawn_list.Add(/mob/living/basic/halflife/zombie/poison)
 
 /datum/shuttle_loan_situation/halflife/heavy_infestation
 	sender = "Ministry of Infestation Control"

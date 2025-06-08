@@ -19,7 +19,7 @@
 	/// Most common mob type to spawn, must be a child of /mob/living/basic/carp
 	var/carp_type = /mob/living/basic/halflife/zombie
 	/// Rarer mob type to spawn, must also be a child of /mob/living/basic/carp. If one of these is created, it will take priority to show ghosts.
-	var/boss_type = /mob/living/simple_animal/hostile/halflife/zombie/poison
+	var/boss_type = /mob/living/basic/halflife/zombie/poison
 	/// Just a boss type variation
 	var/boss_type_2 = /mob/living/basic/halflife/zombie/zombine
 	/// What to describe detecting near the station
@@ -104,7 +104,7 @@
 
 /datum/round_event/xen_migration/zombies
 	carp_type = /mob/living/basic/halflife/zombie
-	boss_type = /mob/living/simple_animal/hostile/halflife/zombie/poison
+	boss_type = /mob/living/basic/halflife/zombie/poison
 	boss_type_2 = /mob/living/basic/halflife/zombie/zombine
 	fluff_signal = "Necrotic Biosignals"
 

@@ -308,3 +308,5 @@
 #define BB_HALFLIFE_JUMP_ABILITY "halflife_jump_ability" //hl13 edit
 
 #define BB_HALFLIFE_GRENADE_ABILITY "halflife_grenade_ability" //hl13 edit
+
+#define BB_HALFLIFE_HEADCRABTHROW_ABILITY "halflife_headcrabthrow_ability" //hl13 edit

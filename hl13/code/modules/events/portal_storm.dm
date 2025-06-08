@@ -8,7 +8,7 @@
 	description = "Zombies and antlions pour out of portals."
 
 /datum/round_event/portal_storm/xen
-	boss_types = list(/mob/living/basic/halflife/zombie/zombine = 2, /mob/living/simple_animal/hostile/halflife/zombie/poison = 1)
+	boss_types = list(/mob/living/basic/halflife/zombie/zombine = 2, /mob/living/basic/halflife/zombie/poison = 1)
 	hostile_types = list(/mob/living/basic/halflife/zombie = 6,\
 						/mob/living/basic/halflife/headcrab/poison = 2,\
 						/mob/living/basic/halflife/zombie/fast = 1,\
