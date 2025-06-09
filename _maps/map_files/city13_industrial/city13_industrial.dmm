@@ -3,6 +3,10 @@
 /obj/structure/halflife/trash/garbage/dumpster/crate,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
+"aaG" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/scienceunion)
 "abT" = (
 /obj/effect/turf_decal/arrows{
 	dir = 1
@@ -496,15 +500,10 @@
 /turf/open/floor/plating/indoor/carpet/violet,
 /area/halflife/indoors/townhall/secondfloor)
 "aQz" = (
-/obj/structure/table/halflife/no_smooth/large/metal{
+/obj/structure/chair/halflife/metal/blue{
 	dir = 8
 	},
-/obj/item/circuitboard/machine/gibber,
-/obj/item/circuitboard/machine/mechfab,
-/obj/item/circuitboard/machine/autolathe,
-/obj/item/circuitboard/machine/reagentgrinder,
-/obj/item/circuitboard/machine/smoke_machine,
-/turf/open/floor/plating/indoor/metal/plate,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/scienceunion)
 "aQJ" = (
 /obj/structure/halflife/trash_decal,
@@ -621,8 +620,10 @@
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/townhall/infirmary)
 "bdR" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/indoor/metal/plate,
+/obj/item/reagent_containers/cup/glass/mug{
+	pixel_x = -7
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/scienceunion)
 "bem" = (
 /obj/structure/table/halflife/metal/grate,
@@ -1740,11 +1741,8 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
 "cWP" = (
-/obj/machinery/camera{
-	c_tag = "Science Union Storage";
-	dir = 1
-	},
-/obj/machinery/light/small/directional/south,
+/obj/item/clothing/accessory/armband/science,
+/obj/item/clothing/accessory/armband/science,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/scienceunion)
 "cXl" = (
@@ -2872,11 +2870,9 @@
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
 "eNr" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/carpet,
-/area/halflife/indoors/bar)
+/obj/structure/bed/halflife/bedframe/cot,
+/turf/closed/wall/halflife/brick,
+/area/halflife/indoors/apartments/primary)
 "eNs" = (
 /obj/structure/halflife/trash/garbage{
 	pixel_x = 2;
@@ -3296,14 +3292,9 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
 "fuG" = (
-/obj/structure/halflife/pallet,
-/obj/machinery/light/small/directional/north,
-/obj/structure/halflife/trash/cardboard{
-	dir = 4
-	},
-/obj/effect/spawner/random/halflife/loot/scrap,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors)
+/obj/structure/halflife/pot/plant,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/scienceunion)
 "fvS" = (
 /obj/machinery/camera{
 	c_tag = "Science Union Upstairs East Wing";
@@ -5053,11 +5044,10 @@
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
 "isR" = (
-/obj/item/circuitboard/machine/recharger,
-/obj/item/circuitboard/machine/recharger,
-/obj/item/circuitboard/machine/recharger,
-/obj/item/circuitboard/machine/recharger,
-/turf/open/floor/plating/indoor/metal/plate,
+/obj/structure/chair/halflife/metal/blue{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/scienceunion)
 "isZ" = (
 /obj/machinery/light/small/cyan/directional/east,
@@ -6687,6 +6677,18 @@
 /obj/structure/halflife/storage/large/clothing,
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/apartments/primary)
+"lgK" = (
+/obj/structure/table/halflife/no_smooth/large/metal,
+/obj/item/clothing/gloves/latex,
+/obj/item/clothing/gloves/latex,
+/obj/item/clothing/gloves/latex,
+/obj/machinery/camera{
+	c_tag = "Science Union Storage";
+	dir = 1
+	},
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/scienceunion)
 "lgS" = (
 /obj/machinery/vending/breenwater,
 /turf/open/floor/plating/indoor/woodc,
@@ -7081,6 +7083,14 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
+"lJw" = (
+/obj/machinery/door/unpowered/halflife/seethrough/metal{
+	keylock = 1;
+	lockid = "lab";
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/scienceunion)
 "lJM" = (
 /obj/machinery/conveyor_switch/oneway{
 	id = "garbage";
@@ -7872,12 +7882,8 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
 "nlc" = (
-/obj/item/clothing/accessory/armband/science,
-/obj/item/clothing/accessory/armband/science,
-/obj/item/anomaly_neutralizer,
-/obj/item/anomaly_neutralizer,
-/obj/item/anomaly_neutralizer,
-/turf/open/floor/plating/indoor/metal/plate,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
 "nlh" = (
 /obj/structure/rack,
@@ -9940,13 +9946,13 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/townhall/secondfloor)
 "qMS" = (
-/obj/structure/table/halflife/no_smooth/large/metal{
-	dir = 8
+/obj/structure/halflife/pallet,
+/obj/structure/halflife/trash/cardboard{
+	dir = 4
 	},
-/obj/item/clothing/gloves/latex,
-/obj/item/clothing/gloves/latex,
-/turf/open/floor/plating/indoor/metal/plate,
-/area/halflife/indoors/scienceunion)
+/obj/effect/spawner/random/halflife/loot/scrap,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "qNd" = (
 /obj/structure/chair/halflife/metal/blue{
 	dir = 4
@@ -10921,6 +10927,14 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/scienceunion)
+"svZ" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	dir = 1;
+	keylock = 1;
+	lockid = "lab"
+	},
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/scienceunion)
 "swS" = (
 /obj/structure/table/halflife/no_smooth/large/wood/square,
 /obj/effect/spawner/random/halflife/loot/ammo,
@@ -11850,6 +11864,14 @@
 "uaQ" = (
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors/sewer/tunnel)
+"uaT" = (
+/obj/machinery/coffeemaker/impressa{
+	pixel_y = 9;
+	pixel_x = 9
+	},
+/obj/structure/table/halflife/no_smooth/large/wood,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/scienceunion)
 "ubc" = (
 /obj/item/reagent_containers/syringe/penacid,
 /obj/item/reagent_containers/pill/iron,
@@ -12748,11 +12770,20 @@
 /turf/open/halflife/water/sewer/deep,
 /area/halflife/indoors/sewer)
 "vpF" = (
-/obj/machinery/door/unpowered/halflife/metal{
-	dir = 8;
-	keylock = 1;
-	lockid = "lab"
+/obj/item/stack/sheet/glass{
+	amount = 5
 	},
+/obj/item/machinepiece/scanner,
+/obj/item/machinepiece/scanner,
+/obj/item/machinepiece/scanner,
+/obj/item/machinepiece/scanner,
+/obj/item/machinepiece/scanner,
+/obj/item/machinepiece/viscerator,
+/obj/item/machinepiece/viscerator,
+/obj/item/machinepiece/viscerator,
+/obj/item/machinepiece/viscerator,
+/obj/item/machinepiece/viscerator,
+/obj/structure/table/halflife/no_smooth/large/metal,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/scienceunion)
 "vqz" = (
@@ -12900,23 +12931,7 @@
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/productioncenter/upper)
 "vGb" = (
-/obj/structure/table/halflife/no_smooth/large/metal{
-	dir = 8
-	},
-/obj/item/stack/sheet/glass{
-	amount = 5
-	},
-/obj/item/machinepiece/scanner,
-/obj/item/machinepiece/scanner,
-/obj/item/machinepiece/scanner,
-/obj/item/machinepiece/scanner,
-/obj/item/machinepiece/scanner,
-/obj/item/machinepiece/viscerator,
-/obj/item/machinepiece/viscerator,
-/obj/item/machinepiece/viscerator,
-/obj/item/machinepiece/viscerator,
-/obj/item/machinepiece/viscerator,
-/turf/open/floor/plating/indoor/metal/plate,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/scienceunion)
 "vGU" = (
 /obj/structure/bed/halflife/bedframe/wood,
@@ -13942,6 +13957,14 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors)
+"xpL" = (
+/obj/structure/table/halflife/no_smooth/wood,
+/obj/machinery/camera{
+	c_tag = "Science Union Upstairs Breakroom";
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/scienceunion)
 "xpN" = (
 /obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -34443,7 +34466,7 @@ oVh
 oVh
 ydT
 ydT
-ydT
+eNr
 xKu
 pZE
 ydT
@@ -37381,7 +37404,7 @@ nvh
 nhG
 ckZ
 nvh
-eNr
+nvh
 nvh
 xzy
 uYu
@@ -62683,9 +62706,9 @@ wKJ
 rAh
 nlT
 tfs
-tfs
-tfs
-vpF
+alO
+alO
+alO
 xvv
 xvv
 xvv
@@ -62828,13 +62851,13 @@ upO
 rAh
 tfs
 nlc
-qMS
+alO
+alO
+svZ
+fIo
 fIo
 svv
 tfs
-qxh
-qxh
-qxh
 qxh
 qxh
 qxh
@@ -62971,14 +62994,14 @@ tfs
 tfs
 tfs
 tfs
-bdR
-fIo
-fIo
-cWP
 tfs
-qxh
-qxh
-qxh
+lJw
+tfs
+tfs
+vpF
+fIo
+lgK
+tfs
 qxh
 qxh
 qxh
@@ -63113,16 +63136,16 @@ ovF
 qxh
 qxh
 qxh
-qxh
 tfs
-upI
+uaT
+vGb
 vGb
 isR
-aQz
 tfs
-qxh
-qxh
-qxh
+upI
+fIo
+cWP
+tfs
 qxh
 qxh
 qxh
@@ -63257,16 +63280,16 @@ qxh
 qxh
 qxh
 qxh
-qxh
+tfs
+bdR
+vGb
+vGb
+xpL
 tfs
 tfs
 tfs
 tfs
 tfs
-tfs
-qxh
-qxh
-qxh
 qxh
 qxh
 qxh
@@ -63401,14 +63424,14 @@ qxh
 qxh
 qxh
 qxh
+tfs
+fuG
+aaG
+vGb
+aQz
+tfs
 qxh
 qxh
-qxh
-fsV
-fsV
-fsV
-fsV
-fsV
 qxh
 qxh
 qxh
@@ -63545,14 +63568,14 @@ qxh
 qxh
 qxh
 qxh
+tfs
+tfs
+tfs
+tfs
+tfs
+tfs
 qxh
 qxh
-qxh
-fsV
-pQb
-kJj
-fDQ
-fsV
 qxh
 qxh
 qxh
@@ -63693,9 +63716,9 @@ qxh
 qxh
 qxh
 fsV
-fuG
-kJj
-kJj
+fsV
+fsV
+fsV
 fsV
 qxh
 qxh
@@ -63832,10 +63855,10 @@ qxh
 qxh
 qxh
 qxh
-qxh
-qxh
-qxh
-qxh
+fsV
+fsV
+fsV
+fsV
 fsV
 fDQ
 kJj
@@ -63976,10 +63999,10 @@ qxh
 qxh
 qxh
 qxh
-qxh
-qxh
-qxh
-qxh
+fsV
+ljj
+ljj
+ljj
 fsV
 ejH
 fii
@@ -64120,14 +64143,14 @@ qxh
 qxh
 qxh
 qxh
-qxh
-qxh
-qxh
-qxh
 fsV
+ejH
 kJj
 kJj
+cPi
 kJj
+kJj
+qMS
 fsV
 qxh
 qxh
@@ -64264,14 +64287,14 @@ qxh
 qxh
 qxh
 qxh
-qxh
-qxh
-qxh
-qxh
 fsV
+ljj
+ljj
+ljj
 fsV
-fsV
-fsV
+pQb
+kJj
+fDQ
 fsV
 qxh
 qxh
@@ -64408,15 +64431,15 @@ qxh
 qxh
 qxh
 qxh
-qxh
-qxh
-qxh
-qxh
-qxh
-qxh
-qxh
-qxh
-qxh
+fsV
+fsV
+fsV
+fsV
+fsV
+fsV
+fsV
+fsV
+fsV
 qxh
 qxh
 qxh

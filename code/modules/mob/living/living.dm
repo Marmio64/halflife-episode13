@@ -607,7 +607,7 @@
 			comfiness++
 		if((locate(/obj/structure/bed/halflife/mattress) in loc))
 			to_chat(src, span_notice("There is a mattress here..."))
-			comfiness += 3
+			comfiness += 5
 		else if(buckled)
 			to_chat(src, span_notice("I am sitting or lying on something..."))
 			comfiness++
@@ -623,9 +623,11 @@
 
 		if(tgui_alert(usr, "You sure you want to sleep for a while?", "Sleep", list("Yes", "No")) == "Yes")
 			to_chat(src, span_notice("You start to shut your eyes..."))
-			if(do_after(src, 8 SECONDS - (comfiness * 10), src))
+			if(do_after(src, 9 SECONDS - (comfiness * 10), src))
 				to_chat(src, span_notice("... and drift into rest."))
 				SetSleeping(450 - (comfiness * 10)) //Short nap
+				if(4 < comfiness)
+					add_mood_event("comfiness", /datum/mood_event/comfy_sleep)
 			else
 				to_chat(src, span_notice("... but are disturbed from fully falling asleep."))
 

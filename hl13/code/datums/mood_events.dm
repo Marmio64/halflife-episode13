@@ -47,8 +47,12 @@
 
 /datum/mood_event/energized
 	description = "I don't feel a bit tired, and have energy and focus."
-	mood_change = 2
+	mood_change = 1
 
+/datum/mood_event/comfy_sleep
+	description = "I slept on something decently comfortable."
+	mood_change = 2
+	timeout = 3 MINUTES
 
 //pain
 /datum/mood_event/seriouspain
