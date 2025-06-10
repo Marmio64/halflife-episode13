@@ -21,7 +21,7 @@
 	attack_sound = 'hl13/sound/creatures/zombieattack.ogg'
 	combat_mode = TRUE
 	status_flags = CANPUSH
-	speed = 1.7
+	speed = 1.75
 	death_sound = 'hl13/sound/creatures/zombiedeath.ogg'
 	blood_volume = BLOOD_VOLUME_NORMAL
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie

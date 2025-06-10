@@ -413,27 +413,37 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 //////////////////////////////////////////////
 
 /datum/dynamic_ruleset/roundstart/nuclear
-	name = "Nuclear Emergency"
+	name = "Rebel Uprising"
 	antag_flag = ROLE_OPERATIVE
 	ruleset_category = parent_type::ruleset_category |  RULESET_CATEGORY_NO_WITTING_CREW_ANTAGONISTS
-	antag_datum = /datum/antagonist/nukeop
-	var/datum/antagonist/antag_leader_datum = /datum/antagonist/nukeop/leader
+	antag_datum = /datum/antagonist/uprising
+	var/datum/antagonist/antag_leader_datum = /datum/antagonist/uprising
 	minimum_required_age = 14
 	restricted_roles = list(
+		JOB_AI,
+		JOB_CYBORG,
 		JOB_CAPTAIN,
+		JOB_DETECTIVE,
 		JOB_HEAD_OF_SECURITY,
-	) // Just to be sure that a nukie getting picked won't ever imply a Captain or HoS not getting drafted
-	required_candidates = 5
+		JOB_SECURITY_OFFICER,
+		JOB_SECURITY_OFFICER_MEDICAL,
+		JOB_SECURITY_OFFICER_ENGINEERING,
+		JOB_SECURITY_OFFICER_SCIENCE,
+		JOB_SECURITY_OFFICER_SUPPLY,
+		JOB_LAWYER,
+		JOB_WARDEN,
+	)
+	required_candidates = 3
 	weight = 0
 	cost = 20
-	requirements = list(90,90,90,80,60,40,30,20,10,10)
+	requirements = list(70,70,60,60,50,40,30,20,10,10)
 	flags = HIGH_IMPACT_RULESET
 	antag_cap = list("denominator" = 18, "offset" = 1)
-	ruleset_lazy_templates = list(LAZY_TEMPLATE_KEY_NUKIEBASE)
-	var/required_role = ROLE_NUCLEAR_OPERATIVE
-	var/datum/team/nuclear/nuke_team
+	//ruleset_lazy_templates = list(LAZY_TEMPLATE_KEY_NUKIEBASE)
+	var/required_role = ROLE_OPERATIVE
+	var/datum/team/uprising/nuke_team
 	///The job type to dress up our nuclear operative as.
-	var/datum/job/job_type = /datum/job/nuclear_operative
+	//var/datum/job/job_type = /datum/job/nuclear_operative
 
 /datum/dynamic_ruleset/roundstart/nuclear/ready(population, forced = FALSE)
 	required_candidates = get_antag_cap(population)
@@ -441,14 +451,14 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 
 /datum/dynamic_ruleset/roundstart/nuclear/pre_execute(population)
 	. = ..()
-	// If ready() did its job, candidates should have 5 or more members in it
+	// If ready() did its job, candidates should have 3 or more members in it
 	var/operatives = get_antag_cap(population)
 	for(var/operatives_number = 1 to operatives)
 		if(candidates.len <= 0)
 			break
 		var/mob/M = pick_n_take(candidates)
 		assigned += M.mind
-		M.mind.set_assigned_role(SSjob.get_job_type(job_type))
+		//M.mind.set_assigned_role(SSjob.get_job_type(job_type))
 		M.mind.special_role = required_role
 	return TRUE
 
@@ -465,6 +475,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 		assigned_player.add_antag_datum(new_op)
 	return TRUE
 
+/*
 /datum/dynamic_ruleset/roundstart/nuclear/round_result()
 	var/result = nuke_team.get_result()
 	switch(result)
@@ -498,6 +509,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 		else
 			SSticker.mode_result = "halfwin - interrupted"
 			SSticker.news_report = OPERATIVE_SKIRMISH
+*/
 
 //////////////////////////////////////////////
 //                                          //
@@ -643,7 +655,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	antag_leader_datum = /datum/antagonist/nukeop/leader/clownop
 	requirements = list(101,101,101,101,101,101,101,101,101,101)
 	required_role = ROLE_CLOWN_OPERATIVE
-	job_type = /datum/job/clown_operative
+	//job_type = /datum/job/clown_operative
 
 /datum/dynamic_ruleset/roundstart/nuclear/clown_ops/pre_execute()
 	. = ..()
