@@ -134,6 +134,15 @@
 	. = ..()
 	AddElement(/datum/element/venomous, poison_type, poison_per_bite, injection_flags = bite_injection_flags)
 
+/mob/living/basic/halflife/headcrab/fast
+	name = "Fast Headcrab"
+	icon_state = "fastcrab"
+	icon_living = "fastcrab"
+	icon_dead = "fastcrab_dead"
+	maxHealth = 25
+	health = 25
+	speed = 0.25
+	zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed/fast
 
 /////////AI STUFF/////////////////////
 

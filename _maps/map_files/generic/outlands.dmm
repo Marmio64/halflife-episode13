@@ -2958,7 +2958,6 @@
 /obj/structure/chair/halflife/metal/blue{
 	dir = 1
 	},
-/mob/living/simple_animal/hostile/halflife/zombie,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "BB" = (
@@ -3915,9 +3914,8 @@
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "KV" = (
-/mob/living/simple_animal/hostile/halflife/zombie,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/sewer)
+/turf/closed/wall/halflife/concrete/alt,
+/area/halflife/outdoors/forest)
 "KW" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/openspace,
@@ -4690,6 +4688,10 @@
 /obj/effect/spawner/random/halflife/loot/consumables,
 /turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/indoors)
+"St" = (
+/mob/living/basic/halflife/zombie,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "Sx" = (
 /obj/machinery/camera{
 	c_tag = "Outlands Rails Entrance West"
@@ -30536,7 +30538,7 @@ wG
 wG
 UI
 sc
-KV
+WG
 WG
 WG
 UI
@@ -31920,7 +31922,7 @@ gD
 RU
 UI
 GT
-GT
+St
 UI
 Hp
 gD
@@ -63365,21 +63367,21 @@ oG
 tN
 tN
 tN
-tN
-tN
-tN
+KV
+KV
+KV
 ai
+KV
+KV
+KV
+KV
+KV
+KV
+KV
+KV
 tN
-It
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-an
+KV
+KV
 It
 fu
 tN
@@ -63562,9 +63564,9 @@ oG
 tN
 ai
 tN
-tN
+KV
 an
-tN
+XD
 It
 It
 It
@@ -63573,10 +63575,10 @@ an
 tN
 tN
 an
-tN
-tN
-tN
-tN
+XD
+XD
+XD
+KV
 It
 It
 tN
@@ -63759,8 +63761,8 @@ oG
 GX
 tN
 ai
-tN
-It
+KV
+XD
 It
 It
 tN
@@ -63771,9 +63773,9 @@ GX
 GX
 GX
 tN
-tN
-tN
-It
+XD
+XD
+KV
 dg
 It
 It
@@ -63956,7 +63958,7 @@ oG
 GX
 tN
 tN
-tN
+KV
 It
 ai
 ai
@@ -63970,7 +63972,7 @@ GX
 GX
 GX
 RL
-It
+KV
 tN
 tN
 dg
@@ -64153,8 +64155,8 @@ oG
 GX
 GX
 tN
-tN
-It
+KV
+XD
 RL
 tN
 ai
@@ -64166,8 +64168,8 @@ RL
 Cq
 It
 GX
-GX
-GX
+XD
+KV
 It
 tN
 tN
@@ -64350,8 +64352,8 @@ oG
 tN
 tN
 an
-It
-It
+KV
+XD
 It
 It
 It
@@ -64362,9 +64364,9 @@ GX
 GX
 GX
 GX
-GX
-It
-GX
+XD
+XD
+KV
 tN
 It
 RL
@@ -64547,15 +64549,15 @@ ai
 tN
 tN
 It
-It
+KV
 Cq
-tN
+XD
 an
 tN
 tN
-It
+XD
 RL
-tN
+XD
 It
 GX
 GX
@@ -64744,21 +64746,21 @@ tN
 tN
 an
 ai
-It
-GX
-tN
+KV
+KV
+KV
 GX
 tN
 an
-tN
-It
-It
+KV
+KV
+KV
 RL
-GX
-tN
-tN
-GX
-GX
+KV
+KV
+KV
+KV
+KV
 tN
 an
 tN

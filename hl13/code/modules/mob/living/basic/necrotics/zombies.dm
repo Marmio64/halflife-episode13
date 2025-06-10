@@ -163,6 +163,7 @@
 	idle_sound_chance = 100
 	idle_sounds = list('hl13/sound/creatures/fastzombie_breath.ogg', 'hl13/sound/creatures/fastzombiesound1.ogg', 'hl13/sound/creatures/fastzombiesound2.ogg', 'hl13/sound/creatures/fastzombiesound3.ogg')
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/fastzombie
+	headcrabspawn = /mob/living/basic/halflife/headcrab/fast
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/fast/proc/get_innate_abilities()
@@ -243,6 +244,10 @@
 	/// The dead body we have inside
 	var/mob/living/carbon/human/corpse
 
+/mob/living/basic/halflife/zombie/freshly_crabbed/fast
+	speed = 1.25
+	headcrabspawn = /mob/living/basic/halflife/headcrab/fast
+
 /mob/living/basic/halflife/zombie/freshly_crabbed/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_PERMANENTLY_MORTAL, INNATE_TRAIT) // This mob doesn't function visually without a corpse and wouldn't respawn with one
@@ -287,27 +292,6 @@
 	SIGNAL_HANDLER
 	visible_message(span_boldwarning("[src] bursts from the inside!"))
 	death()
-
-/mob/living/basic/halflife/zombie/fast
-	name = "Fast Zombie"
-	desc = "A terrifying skinless human, taken over by a parasitic head crab."
-	icon_state = "fastzombie"
-	icon_living = "fastzombie"
-	icon_dead = "fastzombie_dead"
-	no_crab_state = "fastzombie_nocrab"
-	maxHealth = 75
-	health = 75
-	speed = 0
-	melee_attack_cooldown = 0.7 SECONDS
-	melee_damage_lower = 5
-	melee_damage_upper = 6
-	sound_vary = FALSE
-	butcher_results = list(/obj/item/stack/sheet/sinew = 2, /obj/item/food/meat/slab/halflife/zombie = 1)
-	attack_sound = 'hl13/sound/creatures/fastzombieattack.ogg'
-	death_sound = 'hl13/sound/creatures/fastzombiedeath.ogg'
-	idle_sound_chance = 100
-	idle_sounds = list('hl13/sound/creatures/fastzombie_breath.ogg', 'hl13/sound/creatures/fastzombiesound1.ogg', 'hl13/sound/creatures/fastzombiesound2.ogg', 'hl13/sound/creatures/fastzombiesound3.ogg')
-	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/fastzombie
 
 /mob/living/basic/halflife/zombie/poison
 	name = "Poison Zombie"
