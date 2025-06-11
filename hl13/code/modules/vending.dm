@@ -298,3 +298,45 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/food_dispensery, 32)
 
 /obj/item/vending_refill/food_dispensery
 	machine_name = "Food Ingredient Dispensery"
+
+/obj/machinery/vending/goods_dispensery
+	name = "\improper Goods Dispensary"
+	desc = "A wall mounted dispensary that sells general goods at high prices. The clerk tends to have access to cheaper goods, but if there is no clerk, buying from here is an option."
+	icon_state = "fooddispenser"
+	icon_deny = "fooddispenser-deny"
+	panel_type = "wallmed-panel"
+	icon = 'hl13/icons/obj/machines/vending.dmi'
+	density = FALSE
+	tiltable = FALSE
+	product_slogans = "Stimulate the economy!;Sedate resistive thoughts!;Purchase neat belongings!;Buy, Buy, Buy!"
+	vend_reply = "Thank the combine for the ability to enjoy this."
+	products = list(/obj/item/clothing/under/citizen = 3,
+					/obj/item/clothing/suit/bluejacket = 5,
+					/obj/item/camera_film = 3,
+					/obj/item/camera = 3,
+					/obj/item/flashlight = 5,
+					/obj/item/clothing/head/beanie/black = 3,
+					/obj/item/clothing/head/flatcap = 2,
+					/obj/item/lighter/greyscale = 4,
+					/obj/item/storage/halflife/keyring = 4,
+					/obj/item/storage/wallet = 6,
+					/obj/item/radio/off/halflife = 2,
+					/obj/item/reagent_containers/cup/bottle/welding_fuel = 2,
+					/obj/item/storage/halflife/hand_box/cookie = 3,
+					/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
+					/obj/item/stack/sticky_tape = 1,
+					/obj/item/stack/sheet/cloth = 5,
+					/obj/item/storage/halflife/suitcase = 6,
+					/obj/item/storage/fancy/cigarettes/halflife = 8,
+					/obj/item/storage/halflife/pill_bottle/antifatigue = 4,
+					/obj/item/storage/box/coffeepack = 1, //for coffee makers
+					/obj/item/clothing/gloves/fingerless = 3)
+
+	contraband = list(/obj/item/lockpick = 1,
+	                  /obj/item/clothing/suit/armor/browncoat = 1)
+
+	premium = list(/obj/item/storage/backpack/halflife/satchel = 3,
+				   /obj/item/storage/backpack/halflife = 3)
+
+	default_price = 16
+	extra_price = 40

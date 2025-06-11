@@ -974,3 +974,14 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 	icon_state = "trash"
 	density = FALSE
 	anchored = TRUE
+
+/obj/structure/halflife/road
+	icon = 'hl13/icons/effects/road_decals.dmi'
+	density = FALSE
+	anchored = TRUE
+
+/obj/structure/halflife/road/horizontalcrossing
+	icon_state = "horizontal_crossing"
+
+/obj/structure/halflife/road/verticalcrossing
+	icon_state = "vertical_crossing"
