@@ -118,18 +118,15 @@
 		if(6 to 20)
 			victim.emote("cough")
 			victim.adjust_eye_blur(1 * (amount))
-			victim.adjust_jitter(5)
 
 		if(21 to 60)
 			victim.emote("cough")
 			victim.adjust_eye_blur(1 * (amount))
-			victim.adjust_jitter(10)
 			victim.Stun(20)
 			victim.Knockdown(25)
 
 		if(61 to INFINITY)
 			victim.adjust_eye_blur(1 * (amount))
-			victim.adjust_jitter(10)
 			victim.Stun(30)
 			victim.Knockdown(50)
 			victim.adjustOrganLoss(ORGAN_SLOT_LUNGS, 2) //prolonged breathing can damage your lungs

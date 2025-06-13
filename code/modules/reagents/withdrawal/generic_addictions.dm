@@ -53,17 +53,17 @@
 
 /datum/addiction/alcohol/withdrawal_stage_1_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
-	if(SPT_PROB(10, seconds_per_tick))
+	if(SPT_PROB(4, seconds_per_tick))
 		affected_carbon.set_jitter_if_lower(4 SECONDS * seconds_per_tick)
 
 /datum/addiction/alcohol/withdrawal_stage_2_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
-	if(SPT_PROB(15, seconds_per_tick))
+	if(SPT_PROB(6, seconds_per_tick))
 		affected_carbon.set_jitter_if_lower(8 SECONDS * seconds_per_tick)
 
 /datum/addiction/alcohol/withdrawal_stage_3_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
-	if(SPT_PROB(15, seconds_per_tick))
+	if(SPT_PROB(8, seconds_per_tick))
 		affected_carbon.set_jitter_if_lower(12 SECONDS * seconds_per_tick)
 	if(SPT_PROB(4, seconds_per_tick))
 		affected_carbon.adjust_hydration(-15) //HL13 EDIT. Parched for a drink, not having a seizure...
