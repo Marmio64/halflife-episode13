@@ -74,3 +74,10 @@
 /turf/closed/wall/halflife/metal/weak
 	max_integrity = 300
 	slicing_duration = 100
+
+/turf/closed/wall/halflife/metal/weak/old
+	icon = 'hl13/icons/turf/walls/metal.dmi'
+	name = "old metal wall"
+	desc = "A rusty old metal wall."
+	icon_state = "urban_wall_regular-0"
+	base_icon_state = "urban_wall_regular-0"
