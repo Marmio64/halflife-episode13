@@ -52,7 +52,7 @@
 	damage = 25
 	armour_penetration = 20
 	wound_bonus = -25
-	range = 12
+	range = 14
 
 /obj/projectile/bullet/mining_slug/on_hit(atom/target, blocked = 0, pierce_hit)
 	. = ..()

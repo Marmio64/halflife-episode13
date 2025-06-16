@@ -966,6 +966,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 	icon_state = "leaves"
 	density = FALSE
 	anchored = TRUE
+	layer = ABOVE_OPEN_TURF_LAYER
+	plane = FLOOR_PLANE
 
 /obj/structure/halflife/trash_decal
 	name = "trash"
@@ -974,11 +976,15 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 	icon_state = "trash"
 	density = FALSE
 	anchored = TRUE
+	layer = ABOVE_OPEN_TURF_LAYER
+	plane = FLOOR_PLANE
 
 /obj/structure/halflife/road
 	icon = 'hl13/icons/effects/road_decals.dmi'
 	density = FALSE
 	anchored = TRUE
+	layer = ABOVE_OPEN_TURF_LAYER
+	plane = FLOOR_PLANE
 
 /obj/structure/halflife/road/horizontalcrossing
 	icon_state = "horizontal_crossing"
