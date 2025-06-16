@@ -8,7 +8,7 @@
 
 #define DUSK_START (DAY_LENGTH * 0.90) //With 30 minutes, dusk is at 16200 deciseconds. Dusk is effectively just the night curfew warning state
 
-#define NIGHT_START (DAY_LENGTH * 0.95) //With 30 minutes, night is at 17100 deciseconds. Night is the shortest at around 6 minutes, because if curfews are enforced, you shouldnt be locked up for a very long time.
+#define NIGHT_START (DAY_LENGTH * 0.94) //With 30 minutes, night is at 16920 deciseconds. Night is the shortest at around 6 minutes, because if curfews are enforced, you shouldnt be locked up for a very long time.
 
 #define DAY_CYCLE_MORNING "Morning"
 
@@ -79,6 +79,9 @@ SUBSYSTEM_DEF(daylight)
 
 			priority_announce(message, "Curfew Notice.", sender_override = "District Automated Scheduler")
 
+			if(prob(50))
+				curfew_zombies() //spawn 1-4 sentient zombies for curfew, encourages going indoors
+
 		if(light_coefficient > 0)
 			light_coefficient -= 0.025
 
@@ -91,7 +94,7 @@ SUBSYSTEM_DEF(daylight)
 
 	if(current_day_time > AFTERNOON_START && current_day_time <= DUSK_START )
 		if(day_cycle_active != DAY_CYCLE_AFTERNOON)
-			factory_container_goal = (get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)+2) //The goal is equal to all currently playing players, plus two as a baseline.
+			factory_container_goal = (get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)+1) //The goal is equal to all currently playing players, plus one as a baseline.
 
 			day_cycle_active = DAY_CYCLE_AFTERNOON
 			priority_announce("Attention citizens, it is now afternoon. The previous ration cycle has ended. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal], compliance is mandatory.", "Work Notice.", sender_override = "District Automated Scheduler")
@@ -120,3 +123,14 @@ SUBSYSTEM_DEF(daylight)
 
 /datum/controller/subsystem/daylight/proc/twentyfourhourstamp()
 	return daylight_time * 48 //a close approximate, assuming the day length is still 30 minutes.
+
+/datum/controller/subsystem/daylight/proc/curfew_zombies(amount)
+	var/datum/round_event_control/sentient_zombie/ZombieControl = new /datum/round_event_control/sentient_zombie()
+	var/datum/round_event/ghost_role/sentient_zombie/zombie = ZombieControl.run_event()
+	zombie.setup()
+	if(prob(75))
+		zombie.setup()
+	if(prob(50))
+		zombie.setup()
+	if(prob(25))
+		zombie.setup()

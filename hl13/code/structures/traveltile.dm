@@ -64,6 +64,35 @@
 		to_chat(user, "<b>It is a dead end.</b>")
 	. = ..()
 
+/obj/structure/fluff/traveltile/attack_basic_mob(mob/user)
+	var/fou
+	if(!aportalgoesto)
+		return
+	for(var/obj/structure/fluff/traveltile/T in shuffle(GLOB.traveltiles))
+		if(T.aportalid == aportalgoesto)
+			if(T == src)
+				continue
+			if(!can_go(user))
+				return
+			if(user.pulledby)
+				return
+			to_chat(user, "<b>I begin to travel...</b>")
+			if(do_after(user, 4 SECONDS, target = src))
+				var/mob/living/L = user
+				var/atom/movable/pullingg = L.pulling
+				L.recent_travel = world.time
+				if(pullingg)
+					pullingg.forceMove(T.loc)
+					pullingg.recent_travel = world.time
+				L.forceMove(T.loc)
+				if(pullingg)
+					L.start_pulling(pullingg, supress_message = TRUE)
+			fou = TRUE
+			break
+	if(!fou)
+		to_chat(user, "<b>It is a dead end.</b>")
+	. = ..()
+
 /obj/structure/fluff/traveltile/proc/can_go(atom/movable/AM)
 	if(AM.recent_travel)
 		if(world.time < AM.recent_travel + 12 SECONDS)
