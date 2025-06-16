@@ -10,7 +10,7 @@
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/sheet/cloth = 1)
 	maxHealth = 100
 	health = 100
-	obj_damage = 15
+	obj_damage = 14
 	melee_damage_lower = 16
 	melee_damage_upper = 19
 	sharpness = SHARP_EDGED
