@@ -79,8 +79,7 @@ SUBSYSTEM_DEF(daylight)
 
 			priority_announce(message, "Curfew Notice.", sender_override = "District Automated Scheduler")
 
-			if(prob(50))
-				curfew_zombies() //spawn 1-4 sentient zombies for curfew, encourages going indoors
+			curfew_zombies() //spawn 1-4 sentient zombies for curfew, encourages going indoors
 
 		if(light_coefficient > 0)
 			light_coefficient -= 0.025
