@@ -79,7 +79,14 @@ SUBSYSTEM_DEF(daylight)
 
 			priority_announce(message, "Curfew Notice.", sender_override = "District Automated Scheduler")
 
-			curfew_zombies() //spawn 1-4 sentient zombies for curfew, encourages going indoors
+			curfew_zombies() //spawn zombies for curfew, encourages going indoors
+
+			if(prob(75))
+				curfew_zombies()
+			if(prob(50))
+				curfew_zombies()
+			if(prob(25))
+				curfew_zombies()
 
 		if(light_coefficient > 0)
 			light_coefficient -= 0.025
@@ -127,9 +134,3 @@ SUBSYSTEM_DEF(daylight)
 	var/datum/round_event_control/sentient_zombie/ZombieControl = new /datum/round_event_control/sentient_zombie()
 	var/datum/round_event/ghost_role/sentient_zombie/zombie = ZombieControl.run_event()
 	zombie.setup()
-	if(prob(75))
-		zombie.setup()
-	if(prob(50))
-		zombie.setup()
-	if(prob(25))
-		zombie.setup()

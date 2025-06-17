@@ -7,7 +7,7 @@
 	name = "Combine Poster"
 	desc = "A poster celebrating the combine's rule."
 	icon_state = "combine1"
-	socio_modify = TRUE
+	socio_modify = -5
 
 /obj/structure/sign/poster/halflife/combine/two
 	desc = "A poster advertising you to join the ranks of the civil protection."
@@ -23,6 +23,7 @@
 	name = "Rebel Poster"
 	desc = "A poster inciting resistance against the combine."
 	icon_state = "rebel1"
+	socio_modify = 5
 
 /obj/structure/sign/poster/halflife/rebel/two
 	icon_state = "rebel2"

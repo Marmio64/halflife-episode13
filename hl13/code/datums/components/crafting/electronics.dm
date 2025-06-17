@@ -169,7 +169,6 @@
 	name = "Super Destabilizer Beacon"
 	result = /obj/item/super_destabilizer_beacon
 	reqs = list(/obj/item/halflife/antenna = 1,
-				/obj/item/stack/cable_coil = 15,
 				/obj/item/stack/sheet/iron = 5,
 				/obj/item/circuitmaterial/advanced = 1,
 				/obj/item/circuitmaterial = 3)
