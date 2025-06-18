@@ -219,6 +219,16 @@
 	time = 3 SECONDS
 	category = CAT_WEAPON_RANGED
 
+/datum/crafting_recipe/halflife_tinbomb
+	name = "Tinbomb"
+	result = /obj/item/grenade/halflife/tinbomb
+	reqs = list(
+		/obj/item/stack/sheet/scrap_metal = 8,
+		/datum/reagent/fuel = 30,
+	)
+	time = 4 SECONDS
+	category = CAT_WEAPON_RANGED
+
 /datum/crafting_recipe/halflife_spear_taped
 	name = "Spear (Taped)"
 	result = /obj/item/spear/halflife

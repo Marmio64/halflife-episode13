@@ -141,9 +141,9 @@
 /datum/crafting_recipe/alyxtool_frame
 	name = "Broken Hacking Multitool Frame"
 	result = /obj/item/machinepiece/multifunctiontool
-	reqs = list(/obj/item/stack/sheet/iron = 2,
+	reqs = list(/obj/item/stack/sheet/iron = 3,
 				/obj/item/circuitmaterial/advanced = 2,
-				/obj/item/stack/cable_coil = 5)
+				/obj/item/stack/cable_coil = 10)
 	time = 10 SECONDS
 	category = CAT_EQUIPMENT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
