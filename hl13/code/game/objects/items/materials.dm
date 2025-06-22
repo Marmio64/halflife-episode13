@@ -17,7 +17,7 @@
 
 /obj/item/halflife/antenna
 	name = "Destabilizer Antenna"
-	desc = "A smashed antenna from a destabilizer. Can be sold on the cargo shuttle, and is a useful proof for a loyalist to have for a deed well done."
+	desc = "A smashed antenna from a destabilizer. Can be sold on the cargo shuttle, and is a useful proof for a loyalist to have for a deed well done. It can also be a useful component for a rebel..."
 	icon = 'hl13/icons/obj/materials.dmi'
 	icon_state = "antenna"
 	w_class = WEIGHT_CLASS_SMALL
