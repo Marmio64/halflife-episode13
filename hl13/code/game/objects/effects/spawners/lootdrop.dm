@@ -277,6 +277,7 @@
 				/obj/item/stack/kevlar/two = 2,
 				/obj/item/halflife/combine_battery,
 				/obj/item/clothing/head/helmet/halflife/military/weak/crafted,
+				/obj/item/clothing/head/utility/welding,
 				/obj/item/switchblade,
 				/obj/item/weaponcrafting/frame/usp,
 				/obj/item/stack/spacecash/c20 = 2
@@ -300,6 +301,7 @@
 				/obj/item/weaponcrafting/frame/coltpython,
 				/obj/item/gun/ballistic/rifle/rebarxbow = 2,
 				/obj/item/weaponcrafting/frame/m4a1,
+				/obj/item/weaponcrafting/frame/mosin,
 				/obj/item/machinepiece/multifunctiontool = 2,
 				/obj/item/grenade/syndieminibomb/bouncer,
 				/obj/item/gun/ballistic/automatic/pistol/makeshift,

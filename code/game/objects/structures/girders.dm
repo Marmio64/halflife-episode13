@@ -39,7 +39,7 @@
 			. += span_notice("[src] is designed for tram usage. Deconstructed with a screwdriver!")
 
 /obj/structure/girder/attackby(obj/item/W, mob/user, params)
-	var/platingmodifier = 2 //hl13 edit
+	var/platingmodifier = 3 //hl13 edit
 	if(HAS_TRAIT(user, TRAIT_QUICK_BUILD))
 		platingmodifier = 1 //hl13 edit
 		if(next_beep <= world.time)

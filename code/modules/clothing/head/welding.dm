@@ -1,6 +1,6 @@
 /obj/item/clothing/head/utility/welding
 	name = "welding helmet"
-	desc = "A head-mounted face cover designed to protect the wearer completely from space-arc eye."
+	desc = "An old welding helmet. Useful for welding of course, but also functions as a makeshift helmet to provide some protection against injuries." //hl13 edit
 	icon_state = "welding"
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
 	inhand_icon_state = "welding"
@@ -25,6 +25,7 @@
 
 /datum/armor/utility_welding
 	melee = 10
+	bullet = 10 //hl13 edit
 	fire = 100
 	acid = 60
 

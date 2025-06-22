@@ -158,6 +158,11 @@
 		malfunctioning = TRUE
 		SSsociostability.modifystability(-2) //Sociostability damage until fixed.
 
+	// Dispatch gets alerted about broken fields.
+	var/alertstr = span_userdanger("Network Alert: Malfunctioning access field detected[get_area(src)?" in [get_area_name(src, TRUE)]":". Unable to pinpoint location"].")
+	for(var/mob/living/silicon/ai/AI in GLOB.player_list)
+		to_chat(AI, alertstr)
+
 /obj/machinery/turnstile/brig/halflife/forcefield/attack_ai(mob/user)
 	click_alt(user)
 	to_chat(user, span_notice("Forcefield succesfully toggled."))
