@@ -492,7 +492,7 @@
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
 	name = "mosin-nagant rifle"
-	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion."
+	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. Slightly moist."
 	icon = 'hl13/icons/obj/guns/wideguns.dmi'
 	icon_state = "mosin_nagant"
 	inhand_icon_state = "mosin_nagant"
@@ -503,7 +503,7 @@
 	spread = 5 //it has a stock
 	recoil = 0.4 //probably the only gun in the game other than M4A1 and service rifle with a real stock
 	fire_delay = 5 //its already boltaction but to make sure that someone who's really good at pressing Z doesnt just lay down suppressive fire
-	sawn_desc = "A ratty old pre-war rifle that was developed over a century ago. One of the maniacs around the city decided it would be funny to saw off half the barrel and create an Oberez."
+	sawn_desc = "A ratty old pre-war rifle that was developed over a century ago. Someone seems to have taken this prized historical artifact and sawed it in half, creating an Obrez. Still moist, though."
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/start_empty
 	magazine = /obj/item/ammo_box/magazine/internal/boltaction/mosin/start_empty
