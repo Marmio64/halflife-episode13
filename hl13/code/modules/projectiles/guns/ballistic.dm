@@ -153,6 +153,7 @@
 /obj/item/gun/ballistic/automatic/servicerifle/wood
 	desc = "An old wood-furnished surplus rifle from decades ago. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity."
 	icon_state = "service_wood"
+	inhand_icon_state = "service_wood"
 
 /obj/item/gun/ballistic/automatic/servicerifle/wood/no_mag
 	spawnwithmagazine = FALSE
