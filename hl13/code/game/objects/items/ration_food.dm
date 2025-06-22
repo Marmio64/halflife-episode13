@@ -216,6 +216,11 @@
 	for(var/i=0,i<4, i++)
 		new /obj/item/reagent_containers/pill/antifatigue(src)
 
+/obj/item/storage/halflife/pill_bottle/antifatigue/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 8
+	atom_storage.max_specific_storage = WEIGHT_CLASS_TINY
+
 /obj/item/reagent_containers/pill/antifatigue
 	name = "anti-fatigue pill"
 	desc = "A strong stimulant which shakes you awake. It may be wise to not take these in quick succession..."

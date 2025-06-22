@@ -162,7 +162,9 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/radio/civpro = 12,
 		/obj/item/halflife/combine_battery = 12,
 		/obj/item/storage/halflife/pill_bottle/antifatigue = 12,
+		/obj/item/food/nutripaste/small = 12,
 		/obj/item/grenade/stingbang/halflife = 12,
+		/obj/item/stack/kevlar = 12,
 	)
 	contraband = list(
 		/obj/item/clothing/glasses/sunglasses = 2,

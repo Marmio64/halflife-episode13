@@ -1,6 +1,7 @@
 
 /datum/round_event_control/destabilizer
 	name = "Destabilizer"
+	description = "All forcefields experience a chance to malfunction."
 	typepath = /datum/round_event/destabilizer
 	weight = 8
 	min_players = 8
