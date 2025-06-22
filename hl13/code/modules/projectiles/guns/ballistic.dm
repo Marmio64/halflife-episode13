@@ -481,6 +481,7 @@
 
 /obj/item/ammo_box/strilka310/a762 //yay recycled code. recycles sprites because im too lazy to port a proper stripper clip sprite.
 	name = "stripper clip (7.62mm)"
+	caliber = CALIBER_N762
 	ammo_type = /obj/item/ammo_casing/n762
 
 /obj/item/ammo_box/magazine/internal/boltaction/mosin

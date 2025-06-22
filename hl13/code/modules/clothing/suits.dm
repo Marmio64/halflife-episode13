@@ -441,7 +441,7 @@
 	desc = "A heavily-modified explosive ordnance disposal suit used by the remnants of the Polish military. While not conducive to mobility, its immense protective strength is unrivaled."
 	icon_state = "poland_heavy"
 	blood_overlay_type = "armor"
-	slowdown = 0.5
+	slowdown = 1.5
 	armor_type = /datum/armor/plf_veteran
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS //full-body EOD suit
 	limb_integrity = 450
