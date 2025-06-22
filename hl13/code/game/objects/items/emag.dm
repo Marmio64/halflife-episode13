@@ -18,7 +18,7 @@
 	if(charges < 1)
 		to_chat(user, span_notice("It's out of charge, try recharging it with uranium."))
 		return
-	var/hack_time = (rand(12, 16) SECONDS) - ((user.get_stat_level(STATKEY_INT) - 10) SECONDS) //smart people hack faster, -1 second per INT point. Stupid people will hack slower.
+	var/hack_time = (rand(13, 17) SECONDS) - (((user.get_stat_level(STATKEY_INT) - 10) SECONDS) * 1.25) //smart people hack faster, -1.25 second per INT point. Stupid people will hack slower.
 	if(!do_after(user, hack_time, interacting_with))
 		return
 	playsound(src, 'hl13/sound/effects/zap1.ogg', 20, 1)

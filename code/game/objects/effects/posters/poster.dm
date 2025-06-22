@@ -278,7 +278,7 @@
 	torn_poster.add_fingerprint(user)
 
 	if(socio_modify) //tearing down some posters may effect sociostability
-		SSsociostability.modifystability(-5)
+		SSsociostability.modifystability(socio_modify)
 
 	qdel(src)
 

@@ -57,3 +57,12 @@
 	affected_mob.AdjustSleeping(-4 SECONDS * REM * seconds_per_tick)
 	affected_mob.adjust_tiredness(-15 * REM * seconds_per_tick) //makes you feel awake
 	affected_mob.adjust_hydration(-5 * REM * seconds_per_tick) //diuretic
+
+/datum/reagent/consumable/greenflavor
+	name = "Green Flavoring"
+	description = "A specially formulated flavoring designed to evoke true tastes of green."
+	color = "#53c061" // rgb: 70, 43, 21
+	nutriment_factor = 0
+	overdose_threshold = 80
+	taste_description = "pure green taste essence"
+	quality = DRINK_NICE

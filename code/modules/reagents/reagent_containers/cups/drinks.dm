@@ -208,7 +208,7 @@
 
 /obj/item/reagent_containers/cup/glass/waterbottle
 	name = "bottle of water"
-	desc = "A bottle of water filled at an old Earth bottling facility."
+	desc = "An old plastic water-bottle from before the war, most likely filled at a facility that no longer exists."
 	icon = 'icons/obj/drinks/bottles.dmi'
 	icon_state = "smallbottle"
 	inhand_icon_state = null

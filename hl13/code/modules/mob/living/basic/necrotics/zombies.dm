@@ -10,7 +10,7 @@
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/sheet/cloth = 1)
 	maxHealth = 100
 	health = 100
-	obj_damage = 15
+	obj_damage = 14
 	melee_damage_lower = 16
 	melee_damage_upper = 19
 	sharpness = SHARP_EDGED
@@ -122,6 +122,20 @@
 	if(isliving(target))
 		var/mob/living/M = target
 		M.gib()
+
+/mob/living/basic/halflife/zombie/zombie_grunt
+	name = "Zombified Grunt"
+	desc = "A mobile zombie which has speed rivalling that of a fast zombie, without the frailty."
+	icon_state = "grunt"
+	icon_living = "grunt"
+	icon_dead = "grunt_dead"
+	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 1)
+	speed = 1
+	attack_sound = 'hl13/sound/creatures/zombineattack.ogg'
+	death_sound = 'hl13/sound/creatures/zombinedeath.ogg'
+	crabless_possible = FALSE
+	idle_sounds = list('hl13/sound/creatures/zombinesound1.ogg', 'hl13/sound/creatures/zombinesound2.ogg', 'hl13/sound/creatures/zombinesound3.ogg', 'hl13/sound/creatures/zombinesound4.ogg')
+	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie_grunt
 
 /mob/living/basic/halflife/zombie/fungal
 	name = "Fungal Zombie"
@@ -437,6 +451,20 @@
 	if (prob(99)) //makes exploding themself rare
 		return
 	return ..()
+
+/datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie_grunt
+	blackboard = list(
+		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic,
+	)
+
+	ai_movement = /datum/ai_movement/basic_avoidance
+	idle_behavior = /datum/idle_behavior/idle_random_walk
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/attack_obstacle_in_path,
+		/datum/ai_planning_subtree/basic_melee_attack_subtree,
+		/datum/ai_planning_subtree/random_speech/halflife/zombine,
+	)
 
 /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/fastzombie
 	blackboard = list(

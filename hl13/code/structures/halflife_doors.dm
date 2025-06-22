@@ -244,8 +244,8 @@
 			playsound(src, 'hl13/sound/halflifeeffects/metal_door_hit.ogg', 50, FALSE)
 			var/open_time = 8 SECONDS
 			if(locked)
-				open_time *= 2
-			if(do_after(M, 8 SECONDS, interaction_key = DOAFTER_SOURCE_DOORS))
+				open_time *= 3
+			if(do_after(M, open_time, interaction_key = DOAFTER_SOURCE_DOORS))
 				try_to_activate_door()
 				playsound(src, 'hl13/sound/halflifeeffects/metal_door_break.ogg', 50, FALSE)
 

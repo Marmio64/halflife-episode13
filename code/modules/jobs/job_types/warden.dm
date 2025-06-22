@@ -64,7 +64,8 @@
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id
-		ID.registered_name = "OV:13.[currentrankpoints]-[rand(10,90)]"
+		var/name_source = list("Defender", "Hero", "Jury", "King", "Line", "Patrol", "Quick", "Roller")
+		ID.registered_name = "OV:[currentrankpoints].[pick(name_source)]-[rand(10,99)]"
 		ID.update_label()
 
 		if(24 < currentrankpoints)

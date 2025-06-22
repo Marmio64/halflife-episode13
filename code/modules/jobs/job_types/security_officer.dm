@@ -264,7 +264,8 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id
-		ID.registered_name = "CP:13.[currentrankpoints]-[rand(111,999)]"
+		var/name_source = list("Defender", "Hero", "Jury", "King", "Line", "Patrol", "Quick", "Roller")
+		ID.registered_name = "CP:[currentrankpoints].[pick(name_source)]-[rand(111,999)]"
 		ID.update_label()
 
 		if(24 < currentrankpoints)

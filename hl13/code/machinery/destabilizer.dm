@@ -1,6 +1,9 @@
 /// Whether the district has been cutoff with a super destabilizer
 GLOBAL_VAR_INIT(station_was_cutoff, FALSE)
 
+/// If a super destabilizer has been deployed before already?
+GLOBAL_VAR_INIT(super_destabilizer_deployed, FALSE)
+
 /obj/machinery/destabilizer
 	name = "destabilizer"
 	desc = "A hacked piece of combine machinery which emits radio signals that disrupt district wide systems and machinery, reducing sociostability over time."
@@ -87,7 +90,7 @@ GLOBAL_VAR_INIT(station_was_cutoff, FALSE)
 			to_chat(H, span_warning("This will only work if activated in the nexus!"))
 			return
 
-		to_chat(H, span_warning("You begin arming the destabilizer... No going back once it starts, and the entire district will be notified once it is armed. You'll have to defend the destabilizer for five minutes."))
+		to_chat(H, span_warning("You begin arming the destabilizer... No going back once it starts, the entire district will be notified once it is armed, and you won't get a second chance if this one is destroyed. You'll have to defend the destabilizer for five minutes."))
 		if(!do_after(H, 6 SECONDS, src))
 			to_chat(H, span_warning("You did not finish arming the destabilizer!"))
 			playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
@@ -124,6 +127,9 @@ GLOBAL_VAR_INIT(station_was_cutoff, FALSE)
 
 /obj/item/super_destabilizer_beacon/attack_self(mob/user)
 	if(user)
+		if(GLOB.super_destabilizer_deployed)
+			to_chat(user, span_warning("Another super destabilizer was already previously deployed."))
+			return
 		if(SSsociostability.sociostability <= SOCIOSTABILITY_POOR)
 			to_chat(user, span_warning("Sociostability is low enough to call this in. Preparing to call..."))
 			if(!do_after(user, 5 SECONDS, src))
@@ -132,6 +138,7 @@ GLOBAL_VAR_INIT(station_was_cutoff, FALSE)
 				return
 			to_chat(user, span_notice("Locked In."))
 			new droptype( user.loc )
+			GLOB.super_destabilizer_deployed = TRUE
 			playsound(src, 'sound/effects/pop.ogg', 100, TRUE, TRUE)
 			qdel(src)
 		to_chat(user, span_notice("District sociostability is not yet low enough to call this in. Try building some normal destabilizers, freeing vortigaunts, killing metropolice, destroying the central plaza breen cast, disrupting factory work, tearing down posters, and more."))

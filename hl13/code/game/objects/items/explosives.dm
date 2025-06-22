@@ -17,6 +17,29 @@
 	icon = 'hl13/icons/obj/grenade.dmi'
 	icon_state = "stinger"
 
+/obj/item/grenade/halflife/tinbomb
+	name = "Tinbomb"
+	desc = "A scrap metal tin housing an explosive propellant and a bunch of shrapnel. The explosion is weak, but it does send a decent amount of shrapnel flying."
+	icon = 'hl13/icons/obj/throwables/grenades_inventory.dmi'
+	lefthand_file = 'hl13/icons/mob/inhands/grenades_inhand_left.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/grenades_inhand_right.dmi'
+	icon_state = "tinbomb"
+	shrapnel_type = /obj/projectile/bullet/shrapnel
+	shrapnel_radius = 2
+	det_time = 35
+	ex_dev = 0
+	ex_heavy = 0
+	ex_light = 1
+	ex_flame = 0
+
+/obj/item/grenade/halflife/tinbomb/detonate(mob/living/lanced_by)
+	. = ..()
+	if(!.)
+		return
+
+	update_mob()
+	qdel(src)
+
 /obj/item/grenade/halflife/molotov
 	name = "molotov cocktail"
 	desc = "The firestarters best friend, a very simple grenade consisting of a rag and a bottle of alcohol. Light those suckers up."

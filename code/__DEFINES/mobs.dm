@@ -507,7 +507,7 @@
 #define FLASH_PROTECTION_WELDER_HYPER_SENSITIVE 4
 
 // AI Toggles
-#define AI_CAMERA_LUMINOSITY 5
+#define AI_CAMERA_LUMINOSITY 4
 #define AI_VOX // Comment out if you don't want VOX to be enabled and have players download the voice sounds.
 
 #define MAX_REVIVE_FIRE_DAMAGE 180

@@ -31,3 +31,9 @@
 	name = "broken spas12"
 	desc = "A frame for a SPAS12 shotgun. At a proper weapons crafting bench, you may be able to craft this into a working one if you have the materials to do so."
 	icon_state = "spas12"
+
+/obj/item/weaponcrafting/frame/mosin
+	icon = 'hl13/icons/obj/guns/wideframes.dmi'
+	icon_state = "mosin_nagant"
+	name = "broken mosin-nagant"
+	desc = "A frame for a Mosin-Nagant rifle. At a proper weapons crafting bench, you may be able to craft this into a working one if you have the materials to do so."

@@ -76,7 +76,7 @@
 		if(baton.cell)
 			if(do_after(user, 1 SECONDS, baton))
 				playsound(src, 'hl13/sound/effects/suitchargeok1.ogg', 40, FALSE)
-				baton.cell.give(50000) //half of a standard baton cell
+				baton.cell.give(100000) //a standard baton cell
 				qdel(src)
 				return ITEM_INTERACT_SUCCESS
 	return NONE

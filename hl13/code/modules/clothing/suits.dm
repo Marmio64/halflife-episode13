@@ -441,7 +441,7 @@
 	desc = "A heavily-modified explosive ordnance disposal suit used by the remnants of the Polish military. While not conducive to mobility, its immense protective strength is unrivaled."
 	icon_state = "poland_heavy"
 	blood_overlay_type = "armor"
-	slowdown = 0.5
+	slowdown = 1.5
 	armor_type = /datum/armor/plf_veteran
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS //full-body EOD suit
 	limb_integrity = 450
@@ -449,7 +449,7 @@
 
 /datum/armor/plf_veteran
 	melee = 60 //bulky EOD suit
-	bullet = 60 //enough kevlar to kill god
+	bullet = 70 //enough kevlar to kill god
 	laser = 30
 	energy = 100
 	bomb = 90 //gutted EOD suit. missing some of the original plating though.
