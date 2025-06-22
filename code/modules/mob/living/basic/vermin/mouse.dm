@@ -12,6 +12,7 @@
 	pass_flags = PASSTABLE|PASSGRILLE|PASSMOB
 	mob_size = MOB_SIZE_TINY
 	can_be_held = TRUE
+	worn_slot_flags = ITEM_SLOT_HEAD
 	held_w_class = WEIGHT_CLASS_TINY
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	gold_core_spawnable = FRIENDLY_SPAWN
