@@ -498,6 +498,8 @@
 	icon_state = "mosin_nagant"
 	inhand_icon_state = "mosin_nagant"
 	worn_icon_state = "mosin_nagant"
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/mosin
 	can_jam = TRUE
 	projectile_damage_multiplier = 1.3
