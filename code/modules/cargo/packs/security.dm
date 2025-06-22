@@ -156,7 +156,7 @@
 					/obj/item/weaponcrafting/frame/mosin)
 	crate_name = "mosin-nagant crate"
 
-/datum/supply_pack/security/armory/servicerifleammo
+/datum/supply_pack/security/armory/mosinammo
 	name = "Mosin-Nagant Ammo Crate"
 	desc = "Contains four Mosin-Nagant clips. Requires Armory access to open."
 	cost = CARGO_CRATE_VALUE * 7
