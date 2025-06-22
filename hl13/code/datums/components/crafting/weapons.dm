@@ -9,6 +9,18 @@
 	category = CAT_WEAPON_RANGED
 	crafting_interface = CRAFTING_BENCH_WEAPONS
 
+/datum/crafting_recipe/mosin
+	name = "Mosin-Nagant"
+	result = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
+	reqs = list(/obj/item/stack/sheet/iron = 7,
+				/obj/item/weaponcrafting/frame/mosin = 1,
+				/obj/item/weaponcrafting/receiver = 1,
+				/obj/item/stack/sticky_tape = 1)
+	time = 10 SECONDS
+	category = CAT_WEAPON_RANGED
+	crafting_interface = CRAFTING_BENCH_WEAPONS
+
+
 /datum/crafting_recipe/makeshiftpistol
 	name = "Makeshift Pistol"
 	result = /obj/item/gun/ballistic/automatic/pistol/makeshift/no_mag
@@ -35,6 +47,17 @@
 				/datum/reagent/fuel = 30)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 6 SECONDS
+	category = CAT_WEAPON_AMMO
+	crafting_interface = CRAFTING_BENCH_RELOADING
+
+/datum/crafting_recipe/mosinclip
+	name = "7.62mm full Mosin-Nagant clip"
+	result = /obj/item/ammo_box/strilka310/a762
+	reqs = list(/obj/item/stack/bulletcasings = 1,
+				/obj/item/stack/sheet/halflife/bullets = 1,
+				/datum/reagent/fuel = 30)
+	tool_behaviors = list(TOOL_SCREWDRIVER)
+	time = 8 SECONDS
 	category = CAT_WEAPON_AMMO
 	crafting_interface = CRAFTING_BENCH_RELOADING
 
@@ -121,6 +144,18 @@
 	name = "Service Rifle"
 	result = /obj/item/gun/ballistic/automatic/servicerifle/no_mag
 	reqs = list(/obj/item/stack/sheet/iron = 7,
+				/obj/item/weaponcrafting/frame/service = 1,
+				/obj/item/weaponcrafting/receiver = 1,
+				/obj/item/stack/sticky_tape = 2)
+	time = 7 SECONDS
+	category = CAT_WEAPON_RANGED
+	crafting_interface = CRAFTING_BENCH_WEAPONS
+
+/datum/crafting_recipe/service/wooden
+	name = "Service Rifle (Wood-Furnished)"
+	result = /obj/item/gun/ballistic/automatic/servicerifle/wood/no_mag
+	reqs = list(/obj/item/stack/sheet/iron = 6,
+				/obj/item/stack/sheet/mineral/wood = 2,
 				/obj/item/weaponcrafting/frame/service = 1,
 				/obj/item/weaponcrafting/receiver = 1,
 				/obj/item/stack/sticky_tape = 2)
