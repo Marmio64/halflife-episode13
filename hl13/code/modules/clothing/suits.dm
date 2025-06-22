@@ -449,7 +449,7 @@
 
 /datum/armor/plf_veteran
 	melee = 60 //bulky EOD suit
-	bullet = 60 //enough kevlar to kill god
+	bullet = 70 //enough kevlar to kill god
 	laser = 30
 	energy = 100
 	bomb = 90 //gutted EOD suit. missing some of the original plating though.

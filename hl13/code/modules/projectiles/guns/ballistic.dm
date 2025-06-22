@@ -149,6 +149,14 @@
 /obj/item/gun/ballistic/automatic/servicerifle/no_mag
 	spawnwithmagazine = FALSE
 
+//wooden variation cause it looks cool
+/obj/item/gun/ballistic/automatic/servicerifle/wood
+	desc = "An old wood-furnished surplus rifle from decades ago. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity."
+	icon_state = "service_wood"
+
+/obj/item/gun/ballistic/automatic/servicerifle/wood/no_mag
+	spawnwithmagazine = FALSE
+
 /obj/item/gun/ballistic/automatic/servicerifle/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
@@ -470,3 +478,32 @@
 /obj/item/gun/ballistic/automatic/pulsesmg/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
+
+/obj/item/ammo_box/strilka310/a762 //yay recycled code. recycles sprites because im too lazy to port a proper stripper clip sprite.
+	name = "stripper clip (7.62mm)"
+	ammo_type = /obj/item/ammo_casing/n762
+
+/obj/item/ammo_box/magazine/internal/boltaction/mosin
+	caliber = CALIBER_N762
+	ammo_type = /obj/item/ammo_casing/n762
+
+/obj/item/ammo_box/magazine/internal/boltaction/mosin/start_empty
+	start_empty = TRUE
+
+/obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
+	name = "mosin-nagant rifle"
+	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion."
+	icon = 'hl13/icons/obj/guns/wideguns.dmi'
+	icon_state = "mosin_nagant"
+	inhand_icon_state = "mosin_nagant"
+	worn_icon_state = "mosin_nagant"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/mosin
+	can_jam = TRUE
+	projectile_damage_multiplier = 1.3
+	spread = 5 //it has a stock
+	recoil = 0.4 //probably the only gun in the game other than M4A1 and service rifle with a real stock
+	fire_delay = 5 //its already boltaction but to make sure that someone who's really good at pressing Z doesnt just lay down suppressive fire
+	sawn_desc = "A ratty old pre-war rifle that was developed over a century ago. One of the maniacs around the city decided it would be funny to saw off half the barrel and create an Oberez."
+
+/obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/start_empty
+	magazine = /obj/item/ammo_box/magazine/internal/boltaction/mosin/start_empty

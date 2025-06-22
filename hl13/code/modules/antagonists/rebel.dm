@@ -9,7 +9,7 @@
 
 	ears = /obj/item/radio/headset/syndicate/alt //tacticool military headset
 
-	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
+	suit_store = /obj/item/gun/ballistic/automatic/servicerifle/wood //drip
 
 	l_pocket = /obj/item/flashlight/seclite
 

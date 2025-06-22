@@ -148,6 +148,25 @@
 					/obj/item/ammo_box/magazine/m4a1/service)
 	crate_name = "service rifle ammo crate"
 
+/datum/supply_pack/security/armory/mosin //if you spent everything else on pierogis to keep the citizens from butchering you like a fish but still want conscripts
+	name = "Mosin-Nagant Frames"
+	desc = "Contains two severely outdated bolt-action rifle frames that must be assembled. Requires Armory access to open. "
+	cost = CARGO_CRATE_VALUE * 12
+	contains = list(/obj/item/weaponcrafting/frame/mosin,
+					/obj/item/weaponcrafting/frame/mosin)
+	crate_name = "mosin-nagant crate"
+
+/datum/supply_pack/security/armory/servicerifleammo
+	name = "Mosin-Nagant Ammo Crate"
+	desc = "Contains four Mosin-Nagant clips. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 7
+	contains = list(/obj/item/ammo_box/strilka310/a762,
+					/obj/item/ammo_box/strilka310/a762,
+					/obj/item/ammo_box/strilka310/a762,
+					/obj/item/ammo_box/strilka310/a762)
+	crate_name = "surplus rifle ammo crate"
+
+
 /datum/supply_pack/security/armory/mp7
 	name = "MP7 Frame Crate"
 	desc = "Contains two MP7 submachine gun frames that must be assembled. Requires Armory access to open."

@@ -34,3 +34,10 @@
 	desc = "A deadly... mechanical tool. Regardless of its banality, it is still a dangerous weapon that isn't too suspcious to have in your hands."
 	item = /obj/item/melee/tireiron
 	cost = 3
+
+/datum/uplink_item/dangerous/mosin_nagant
+	name = "Surplus Rifle"
+	desc = "An outdated, old bolt-action rifle from long before the war. By some miracle, these things are still prevalent in military surplus stockpiles. Cannot be concealed, but you can fit a bayonet."
+	progression_minimum = 10 MINUTES //if you buy a roundstart mosin to go sport hunting for cops i do quite like you but thats not the best idea
+	item = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
+	cost = 9

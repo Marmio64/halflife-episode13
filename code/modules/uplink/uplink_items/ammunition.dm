@@ -28,3 +28,11 @@
 	cost = 4
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	progression_minimum = 2 MINUTES
+
+/datum/uplink_item/ammo/mosin
+	name = "7.62mm Clip"
+	desc = "A 5-round clip for the Mosin-Nagant rifle."
+	item = /obj/item/ammo_box/strilka310/a762
+	cost = 2
+	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
+	progression_minimum = 3 MINUTES

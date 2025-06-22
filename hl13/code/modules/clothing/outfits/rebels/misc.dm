@@ -89,6 +89,16 @@
 	SSwardrobe.provide_type(/obj/item/reagent_containers/cup/glass/bottle/vodka, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/polish_resistance/mosin/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/ammo_box/strilka310/a762, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/strilka310/a762, src)
+	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/cup/glass/bottle/vodka, src)
+	update_appearance(UPDATE_ICON)
+
+
 /obj/item/storage/belt/civilprotection/polish_resistance/revolver/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/ammo_box/colta357, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/colta357, src)
@@ -115,12 +125,41 @@
 	name = "Polish Revolutionary Front Private"
 
 	uniform = /obj/item/clothing/under/citizen/refugee/green
-	suit = /obj/item/clothing/suit/armor/civilprotection //stolen gear pretty much. if you arent competent we dont give you the good shit.
+	suit = /obj/item/clothing/suit/armor/rebel/light //stolen and improv gear pretty much. if you arent competent we dont give you the good shit.
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/poland //you get one (1) bargain bin helmet
 	mask = /obj/item/clothing/mask/gas/hl2/swat
 	ears = /obj/item/radio/headset/syndicate/alt //you get a LITTLE military surplus. as a treat.
+
+/datum/outfit/resistance_faction/polish/partisan //hastily-armed civilians
+	name = "Polish Revolutionary Front Partisan"
+	suit = /obj/item/clothing/suit/armor/armored/upgraded
+	ears = /obj/item/radio/headset/syndicate
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted/poland
+	belt = null
+	l_pocket = /obj/item/lighter
+	r_pocket = /obj/item/flashlight
+	back = /obj/item/storage/backpack/halflife/satchel
+	backpack_contents = list(
+		/obj/item/grenade/halflife/molotov = 2,
+		/obj/item/lockpick = 1, //stolen lmao
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2, //stay in the fight
+		/obj/item/stack/sheet/halflife/brick = 3,
+	)
+
+/datum/outfit/resistance_faction/polish/partisan/gunner
+	name = "Polish Revolutionary Front Partisan Gunner"
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy //they're the only armed people at the start of any partisan incursion, so they need to be able to take cop bullets
+	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
+	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
+	backpack_contents = list(
+		/obj/item/grenade/halflife/molotov = 2,
+		/obj/item/lockpick = 1, //stolen lmao
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2, //stay in the fight
+		/obj/item/ammo_box/strilka310/a762 = 3,
+		/obj/item/knife/combat/survival = 1, //FIX BAYONET
+	)
 
 /datum/outfit/resistance_faction/polish/medic
 	name = "Polish Revolutionary Front Medic"
@@ -150,6 +189,7 @@
 		/obj/item/card/emag/halflife = 1,
 	)
 
+
 /datum/outfit/resistance_faction/polish/competent
 	name = "Polish Revolutionary Front Private First Class"
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar //now we're talking. actual pre-war armour.
@@ -159,11 +199,17 @@
 	head = /obj/item/clothing/head/helmet/halflife/military/poland //REAL helmet for REAL men.
 	uniform = /obj/item/clothing/under/syndicate/camo
 
+/datum/outfit/resistance_faction/polish/competent/mosin
+	name = "Polish Revolutionary Front Private Second Class"
+	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/mosin
+	l_pocket = /obj/item/knife/combat //FIX BAYONETS YOU SONS OF BITCHES, ITS TIME TO BECOME A MARTYR
+
 /datum/outfit/resistance_faction/polish/strong
 	name = "Polish Revolutionary Front Corporal"
 	suit = /obj/item/clothing/suit/armor/halflife/milvest //NOW we're talking.
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
-	suit_store = /obj/item/gun/ballistic/automatic/servicerifle //now you're an actual, trusted soldier, so we can give you good weapons
+	suit_store = /obj/item/gun/ballistic/automatic/servicerifle/wood //now you're an actual, trusted soldier, so we can give you good weapons
 	l_pocket = /obj/item/knife/combat/survival
 	head = /obj/item/clothing/head/helmet/halflife/military/poland //again: actual military shit. the PRF only send these guys when they WANT to fuck some shit up.
 	r_pocket = /obj/item/grenade/c4
@@ -172,6 +218,7 @@
 /datum/outfit/resistance_faction/polish/commander
 	name = "Polish Revolutionary Front Platoon Leader"
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy //big man gets big slow vest. big man DOES NOT go on the frontlines. you STAY IN THE BACK AND TALK TO YOUR SOLDIERS GOD FUCKING DAMNIT.
+	mask = /obj/item/clothing/mask/gas/hl2/military/hardened //also important
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/revolver
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
 	ears = /obj/item/radio/headset/syndicate/alt/leader //LEADER. BIG MAN. IMPORTANT.
@@ -185,6 +232,7 @@
 
 /datum/outfit/resistance_faction/polish/fuck_your_shit
 	name = "Polish Revolutionary Front Veteran" //these guys are the most most experienced of the polish revolutionary front. if they are in city 13, you duck and cover. they are walking fucking dreadnoughts. do not call on them in vain.
+	mask = /obj/item/clothing/mask/gas/hl2/military/hardened //important
 	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
 	suit = /obj/item/clothing/suit/armor/halflife/milvest //again: walking fucking tank. dont fuck with him.
 	uniform = /obj/item/clothing/under/syndicate/camo
@@ -234,14 +282,14 @@
 
 /datum/outfit/resistance_faction/post_soviet/competent
 	name = "Post-Soviet Rebel Agent"
-	suit = /obj/item/clothing/suit/armor/armored
+	suit = /obj/item/clothing/suit/armor/rebel/light
 	head = /obj/item/clothing/head/helmet/halflife/military
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance //shamelessly-recycled assets
 	mask = /obj/item/clothing/mask/balaclava
 
 /datum/outfit/resistance_faction/post_soviet/rifle
 	name = "Post-Soviet Rebel Rifleman"
-	suit = /obj/item/clothing/suit/armor/armored/upgraded
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
 	head = /obj/item/clothing/head/helmet/halflife/military
@@ -249,7 +297,7 @@
 
 /datum/outfit/resistance_faction/post_soviet/ak
 	name = "Post-Soviet Rebel Kalashnikov Rifleman"
-	suit = /obj/item/clothing/suit/armor/armored/upgraded
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
 	suit_store = /obj/item/gun/ballistic/automatic/ak47
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
 	head = /obj/item/clothing/head/helmet/halflife/military
