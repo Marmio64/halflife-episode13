@@ -13,6 +13,9 @@
 	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
 	maxHealth = 30
 	health = 30
+	can_be_held = TRUE //we're so back
+	worn_slot_flags = ITEM_SLOT_HEAD
+	worn_flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR
 	attack_sound = 'hl13/sound/creatures/headcrabbite.ogg'
 	minbodytemp = 0
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1, /obj/item/stack/sheet/sinew = 1, /obj/item/stack/sheet/bone = 1)
@@ -31,6 +34,9 @@
 	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
 	maxHealth = 45
 	health = 45
+	can_be_held = TRUE //we're so back 2
+	worn_slot_flags = ITEM_SLOT_HEAD
+	worn_flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR
 	attack_sound = 'hl13/sound/creatures/poison/ph_poisonbite.ogg'
 	minbodytemp = 0
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1, /obj/item/stack/sheet/sinew = 1, /obj/item/stack/sheet/bone = 1)
