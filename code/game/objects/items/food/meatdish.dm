@@ -26,7 +26,7 @@
 	icon = 'icons/obj/food/meat.dmi'
 	icon_state = "fishfillet"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment/protein = 4,
+		/datum/reagent/consumable/nutriment/protein = 3,
 		/datum/reagent/consumable/nutriment/vitamin = 2,
 	)
 	bite_consumption = 6
@@ -40,7 +40,7 @@
 	name = "quality fish fillet"
 	desc = "A fillet of some precious fish meat."
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment/protein = 4,
+		/datum/reagent/consumable/nutriment/protein = 3,
 		/datum/reagent/consumable/nutriment/vitamin = 3,
 	)
 	bite_consumption = 7
@@ -55,7 +55,7 @@
 	desc = "A chunky, fatty fillet of salmon meat."
 	icon_state = "salmon"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment/protein = 4,
+		/datum/reagent/consumable/nutriment/protein = 3,
 		/datum/reagent/consumable/nutriment/vitamin = 3,
 		/datum/reagent/consumable/nutriment/fat = 2,
 	)
@@ -68,9 +68,9 @@
 
 /obj/item/food/fishmeat/carp
 	name = "carp fillet"
-	desc = "A fillet of spess carp meat."
+	desc = "A fillet of carp meat."
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment/protein = 4,
+		/datum/reagent/consumable/nutriment/protein = 3,
 		/datum/reagent/toxin/carpotoxin = 2,
 		/datum/reagent/consumable/nutriment/vitamin = 2,
 	)
