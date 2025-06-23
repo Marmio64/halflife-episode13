@@ -24,9 +24,8 @@
 	fish_table = list(
 		FISHING_DUD = 9,
 		/obj/item/fish/goldfish = 6,
-		/obj/item/fish/perch = 4,
 		/obj/item/fish/catfish = 4,
-		/obj/item/fish/perch = 5,
+		/obj/item/fish/perch = 4,
 		/obj/item/fish/pike = 1,
 	)
 	fish_counts = list(
@@ -55,4 +54,16 @@
 		/obj/item/fish/catfish = 4 MINUTES,
 	)
 	fishing_difficulty = FISHING_DEFAULT_DIFFICULTY + 15
+	fish_source_flags = FISH_SOURCE_FLAG_EXPLOSIVE_MALUS
+
+/datum/fish_source/halflifesalt
+	catalog_description = "Salt water"
+	radial_state = "seaboat"
+	overlay_state = "portal_ocean"
+	fish_table = list(
+		FISHING_DUD = 10,
+		/obj/item/fish/catfish = 4,
+		/obj/item/fish/perch = 5,
+	)
+	fishing_difficulty = FISHING_DEFAULT_DIFFICULTY + 20
 	fish_source_flags = FISH_SOURCE_FLAG_EXPLOSIVE_MALUS

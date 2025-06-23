@@ -30,7 +30,9 @@
 	var/depth = 0
 	var/coldness = -100
 	var/sewer = FALSE
+	var/saltwater = FALSE
 	var/toxic = FALSE //is this water completely hazardous to even step in?
+	var/leeches = FALSE //will leeches eat your flesh inside?
 
 /turf/open/halflife/water/attackby(obj/item/W, mob/user, params)
 	. = ..()
@@ -80,6 +82,8 @@
 	. = ..()
 	if(sewer)
 		add_lazy_fishing(/datum/fish_source/sewer)
+	else if(saltwater)
+		add_lazy_fishing(/datum/fish_source/halflifesalt)
 	else
 		add_lazy_fishing(/datum/fish_source/halfliferiver)
 
@@ -221,6 +225,11 @@
 											"<span class='userdanger'>This water is hazardous, your flesh burns!</span>")
 				H.adjustFireLoss(40)
 				H.emote("scream")
+		if(leeches)
+			H.visible_message("<span class='danger'>[H] is bit up by leeches!</span>",
+										"<span class='userdanger'>This water is filled with leeches, get out!</span>")
+			H.adjustBruteLoss(25)
+			H.emote("scream")
 		if(!(M.swimming))
 			switch(depth)
 				if(3)
@@ -390,4 +399,36 @@
 	baseturfs = /turf/open/halflife/water/sewer/shallow
 	watereffect = /obj/effect/overlay/halflife/sewer/shallow
 	watertop = /obj/effect/overlay/halflife/sewer/top/shallow
+	depth = 1
+
+/turf/open/halflife/water/salt
+	name = "salt water"
+	desc = "Salty seawater. Your skin burns a bit when you enter it, you might not want to go too deep."
+	baseturfs = /turf/open/halflife/water/salt
+	saltwater = TRUE
+	dispensedreagent = /datum/reagent/water/dirty/salt
+	slowdown = 1.5 //Heavy, salt filled water?
+
+/turf/open/halflife/water/salt/deep
+	name = "deep water"
+	desc = "Salty seawater. The depths conceal wriggling masses of leeches."
+	icon_state = "water_deep"
+	baseturfs = /turf/open/halflife/water/salt/deep
+	watereffect = /obj/effect/overlay/halflife/water/deep
+	watertop = /obj/effect/overlay/halflife/water/top/deep
+	depth = 3
+	leeches = TRUE
+
+/turf/open/halflife/water/salt/medium
+	icon_state = "water_medium"
+	baseturfs = /turf/open/halflife/water/salt/medium
+	watereffect = /obj/effect/overlay/halflife/water/medium
+	watertop = /obj/effect/overlay/halflife/water/top/medium
+	depth = 2
+
+/turf/open/halflife/water/salt/shallow
+	icon_state = "water_shallow"
+	baseturfs = /turf/open/halflife/water/salt/shallow
+	watereffect = /obj/effect/overlay/halflife/water/shallow
+	watertop = /obj/effect/overlay/halflife/water/top/shallow
 	depth = 1
