@@ -89,6 +89,15 @@
 "apM" = (
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/harbor)
+"aqR" = (
+/obj/structure/alien/weeds,
+/mob/living/basic/halflife/headcrab/armored,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/slums)
+"arS" = (
+/mob/living/basic/halflife/zombie,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "arU" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/metal/grate,
@@ -133,6 +142,10 @@
 	dir = 8
 	},
 /area/halflife/outdoors/harbor)
+"aFI" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "aHf" = (
 /turf/open/openspace,
 /area/halflife/outdoors/harbor)
@@ -283,6 +296,11 @@
 /obj/effect/turf_decal/box/white/corners,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/outdoors/harbor)
+"bGT" = (
+/obj/structure/alien/weeds,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "bHn" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/yellowed,
@@ -297,6 +315,11 @@
 /obj/structure/transport/linear/public,
 /turf/open/floor/plating/elevatorshaft,
 /area/halflife/indoors/slums)
+"bRt" = (
+/obj/structure/alien/weeds,
+/mob/living/basic/halflife/zombie/fast,
+/turf/open/floor/plating/indoor/grooved2,
+/area/halflife/indoors/slums)
 "bSy" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
 	dir = 1
@@ -304,7 +327,9 @@
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/slums)
 "bTb" = (
-/turf/open/halflife/water/shallow,
+/turf/open/halflife/water/shallow{
+	dispensedreagent = /datum/reagent/water/dirty/salt
+	},
 /area/halflife/indoors/abandoned_ship/tugboat)
 "bTN" = (
 /obj/structure/railing/halflife/solo/industrial{
@@ -492,6 +517,10 @@
 /mob/living/basic/halflife/zombie/fast,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
+"cOO" = (
+/obj/effect/turf_decal/halflife/covering/wallpaper/blue/stripes,
+/turf/closed/wall/halflife/brick,
+/area/halflife/indoors/slums)
 "cPU" = (
 /obj/machinery/button/elevator/directional/south{
 	id = "elevator_slums_soviet_flats"
@@ -527,6 +556,11 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/abandoned_ship/cargo)
+"cZk" = (
+/obj/structure/alien/weeds,
+/mob/living/basic/halflife/headcrab/poison,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "dac" = (
 /obj/structure/dresser,
 /turf/open/floor/plating/indoor/woodc,
@@ -537,6 +571,11 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/abandoned_ship/tugboat)
+"ddO" = (
+/obj/machinery/vending/breenwater,
+/obj/effect/mapping_helpers/broken_machine,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley/slums)
 "dgN" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/indoor/metal/walkway/end{
@@ -664,6 +703,7 @@
 /area/halflife/indoors/trainstation)
 "dOT" = (
 /obj/structure/closet/halflife,
+/obj/effect/spawner/random/halflife/loot/rare,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/slums)
 "dOU" = (
@@ -703,7 +743,9 @@
 "dVu" = (
 /obj/item/stack/sheet/scrap_metal,
 /obj/machinery/light/small/directional/north,
-/turf/open/halflife/water/shallow,
+/turf/open/halflife/water/shallow{
+	dispensedreagent = /datum/reagent/water/dirty/salt
+	},
 /area/halflife/indoors/abandoned_ship/tugboat)
 "dWe" = (
 /obj/machinery/door/unpowered/halflife/wood,
@@ -837,6 +879,7 @@
 /obj/structure/railing/halflife/wood{
 	dir = 1
 	},
+/obj/structure/alien/weeds/node,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/slums)
 "eHH" = (
@@ -846,6 +889,10 @@
 	},
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
+"eIc" = (
+/mob/living/basic/halflife/zombie/fungal,
+/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/slums)
 "eJc" = (
 /obj/structure/chair/comfy/halflife/diner{
@@ -892,6 +939,12 @@
 "eQu" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/roofs)
+"eRR" = (
+/obj/structure/alien/weeds,
+/obj/structure/flora/xen/leafy,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "eZW" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc,
@@ -907,6 +960,10 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/metal/grate/border/warning,
 /area/halflife/indoors/abandoned_ship/cargo)
+"ffA" = (
+/obj/structure/stairs/halflife/wood,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "fii" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/roofs)
@@ -1040,6 +1097,11 @@
 /mob/living/basic/halflife/zombie,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/abandoned_ship/cargo)
+"fKr" = (
+/obj/machinery/light/small/directional/south,
+/obj/structure/table/halflife/metal/grate,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/slums)
 "fKz" = (
 /obj/structure/alien/weeds,
 /obj/structure/flora/xen/tinyshrooms,
@@ -1102,6 +1164,13 @@
 "gan" = (
 /turf/open/halflife/water/sludge/shallow,
 /area/halflife/outdoors/harbor)
+"gda" = (
+/obj/structure/halflife/trash/garbage{
+	pixel_x = -8;
+	pixel_y = 17
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley/slums)
 "gdq" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/tracks)
@@ -1248,6 +1317,11 @@
 	},
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/harbor)
+"gYX" = (
+/obj/structure/alien/weeds,
+/obj/structure/flora/xen/mound,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "gZg" = (
 /obj/structure/railing,
 /obj/item/stack/rods,
@@ -1293,7 +1367,9 @@
 /area/halflife/indoors/old_harbor)
 "hjd" = (
 /obj/structure/halflife/fence/wire/end/east/barb,
-/turf/open/halflife/water/shallow,
+/turf/open/halflife/water/shallow{
+	dispensedreagent = /datum/reagent/water/dirty/salt
+	},
 /area/halflife/outdoors/ocean)
 "hmi" = (
 /obj/structure/ladder/halflife,
@@ -1308,6 +1384,11 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/abandoned_ship/cargo)
+"hpP" = (
+/obj/structure/alien/weeds,
+/obj/structure/flora/xen/tinyshrooms,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/slums)
 "hsV" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/openspace,
@@ -1337,8 +1418,14 @@
 /area/halflife/indoors/abandoned_ship/cargo)
 "hxY" = (
 /obj/item/trash/flare,
-/turf/open/halflife/water/deep,
+/turf/open/halflife/water/salt/deep,
 /area/halflife/outdoors/ocean)
+"hzy" = (
+/obj/structure/alien/weeds,
+/obj/structure/flora/xen/tinyshrooms,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/slums)
 "hCb" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/ground/grass,
@@ -1445,6 +1532,10 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/slums)
+"igO" = (
+/obj/structure/frame/machine/secured,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/slums)
 "ikD" = (
 /obj/machinery/door/unpowered/halflife/wood{
 	dir = 1
@@ -1457,6 +1548,11 @@
 /obj/machinery/light/directional/west,
 /turf/open/openspace,
 /area/halflife/indoors/old_harbor)
+"int" = (
+/obj/effect/landmark/destabilizer,
+/obj/structure/alien/weeds,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "iot" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	locked = 1;
@@ -1480,6 +1576,13 @@
 "isR" = (
 /turf/open/openspace,
 /area/halflife/outdoors)
+"itk" = (
+/obj/structure/railing/halflife/wood{
+	dir = 1
+	},
+/obj/structure/alien/weeds,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/slums)
 "itS" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -1808,7 +1911,9 @@
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/slums)
 "jYV" = (
-/turf/open/halflife/water/medium,
+/turf/open/halflife/water/medium{
+	dispensedreagent = /datum/reagent/water/dirty/salt
+	},
 /area/halflife/outdoors/ocean)
 "kcf" = (
 /obj/structure/sink/halflife/dirty{
@@ -1856,6 +1961,12 @@
 /obj/structure/dresser,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
+"kfz" = (
+/obj/structure/halflife/trash/bricks{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley/slums)
 "kkp" = (
 /obj/structure/railing/halflife/solo/industrial,
 /turf/open/floor/plating/indoor/metal/pipe/corner,
@@ -1913,10 +2024,8 @@
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/abandoned_ship/cargo)
 "kAX" = (
-/obj/machinery/light_switch/directional/west,
-/obj/item/storage/toolbox/electrical,
-/obj/structure/alien/weeds/node,
-/turf/open/floor/plating/indoor/grooved2,
+/obj/effect/turf_decal/halflife/covering/paint/gray,
+/turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/slums)
 "kBO" = (
 /obj/effect/turf_decal/box/white/corners,
@@ -2005,6 +2114,12 @@
 /obj/structure/railing/halflife/solo/industrial,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/old_harbor)
+"kTQ" = (
+/obj/machinery/door/unpowered/halflife/wood{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "kTW" = (
 /obj/effect/decal/cleanable/blood/trails{
 	dir = 9
@@ -2124,6 +2239,9 @@
 /obj/effect/turf_decal/box/white/corners,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/harbor)
+"lCv" = (
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/slums)
 "lCO" = (
 /obj/structure/frame/computer{
 	dir = 4
@@ -2132,7 +2250,9 @@
 /area/halflife/indoors/abandoned_ship/cargo)
 "lEo" = (
 /obj/item/stack/rods,
-/turf/open/halflife/water/shallow,
+/turf/open/halflife/water/shallow{
+	dispensedreagent = /datum/reagent/water/dirty/salt
+	},
 /area/halflife/outdoors/ocean)
 "lFn" = (
 /obj/structure/table/halflife/metal,
@@ -2323,6 +2443,7 @@
 /obj/structure/stairs/halflife/wood{
 	dir = 1
 	},
+/obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
 "mQw" = (
@@ -2382,6 +2503,14 @@
 /obj/structure/flora/xen/leafy,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/abandoned_ship/cargo)
+"niQ" = (
+/obj/machinery/light_switch/directional/west{
+	name = "old lighting breaker";
+	desc = "Make dark... for the whole neighbourhood, apparently."
+	},
+/obj/effect/mapping_helpers/turn_off_lights_with_lightswitch,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/slums)
 "njq" = (
 /obj/structure/halflife/cone,
 /obj/effect/turf_decal/halflife/road/verticalcrossing,
@@ -2439,6 +2568,10 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/abandoned_ship/cargo)
+"nGC" = (
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "nGW" = (
 /obj/structure/halflife/trash/garbage/dumpster/crate,
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -2456,6 +2589,7 @@
 /turf/closed/wall/halflife/metal/weak/old,
 /area/halflife/indoors/abandoned_ship/cargo)
 "nNE" = (
+/obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/slums)
 "nNL" = (
@@ -2470,6 +2604,10 @@
 /obj/item/flashlight/flare,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/abandoned_ship/cargo)
+"nQO" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "nQU" = (
 /obj/machinery/light/small/directional/west,
 /obj/structure/table/halflife/metal,
@@ -2534,8 +2672,15 @@
 	},
 /turf/open/floor/plating/indoor/tile/green,
 /area/halflife/indoors/abandoned_ship/cargo)
+"ojR" = (
+/obj/structure/alien/weeds,
+/obj/structure/flora/xen/tinyshrooms,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/slums)
 "omT" = (
 /obj/structure/flora/xen/leafy,
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/slums)
 "onr" = (
@@ -2601,9 +2746,14 @@
 	},
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/abandoned_ship/cargo)
+"ozU" = (
+/obj/item/storage/toolbox/electrical,
+/obj/structure/table/halflife/metal/grate,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/slums)
 "oDo" = (
 /obj/item/stack/sheet/scrap_metal,
-/turf/open/halflife/water/deep,
+/turf/open/halflife/water/salt/deep,
 /area/halflife/outdoors/ocean)
 "oDq" = (
 /obj/effect/landmark/carpspawn,
@@ -2611,7 +2761,9 @@
 /area/halflife/outdoors)
 "oFY" = (
 /obj/machinery/light/directional/north,
-/turf/open/halflife/water/shallow,
+/turf/open/halflife/water/shallow{
+	dispensedreagent = /datum/reagent/water/dirty/salt
+	},
 /area/halflife/indoors/abandoned_ship/cargo)
 "oKl" = (
 /obj/structure/alien/weeds,
@@ -2638,6 +2790,18 @@
 	},
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/old_harbor)
+"oPR" = (
+/obj/structure/halflife/trash/garbage{
+	pixel_x = 1;
+	pixel_y = 17
+	},
+/obj/structure/halflife/trash/garbage{
+	pixel_x = -9;
+	pixel_y = 15
+	},
+/obj/structure/halflife/trash/garbage/dumpster,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley/slums)
 "oQC" = (
 /obj/machinery/light/small/dim/directional/west,
 /obj/structure/chair/comfy/halflife/diner{
@@ -2672,7 +2836,7 @@
 /area/halflife/outdoors/harbor)
 "oUF" = (
 /obj/structure/girder/displaced,
-/turf/open/halflife/water/deep,
+/turf/open/halflife/water/salt/deep,
 /area/halflife/outdoors/ocean)
 "oUK" = (
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -2793,6 +2957,7 @@
 /obj/machinery/door/unpowered/halflife/wood{
 	dir = 4
 	},
+/obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/slums)
 "pLh" = (
@@ -2825,7 +2990,7 @@
 /turf/open/floor/plating/indoor/metal/grate/border,
 /area/halflife/indoors/abandoned_ship/cargo)
 "pQt" = (
-/turf/open/halflife/water/deep,
+/turf/open/halflife/water/salt/deep,
 /area/halflife/outdoors/ocean)
 "pTo" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
@@ -2870,7 +3035,9 @@
 /turf/open/floor/plating/elevatorshaft,
 /area/halflife/indoors/slums)
 "qdI" = (
-/turf/open/halflife/water/shallow,
+/turf/open/halflife/water/shallow{
+	dispensedreagent = /datum/reagent/water/dirty/salt
+	},
 /area/halflife/indoors/abandoned_ship/cargo)
 "qeE" = (
 /turf/open/floor/plating/indoor/metal/walkway{
@@ -2895,6 +3062,11 @@
 /obj/structure/flora/xen/leafy,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/slums)
+"qnU" = (
+/obj/structure/alien/weeds,
+/obj/structure/flora/xen/cougher,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/slums)
 "qob" = (
 /turf/closed/wall/halflife/metal/weak/old,
 /area/halflife/indoors/abandoned_ship/tugboat)
@@ -2907,6 +3079,12 @@
 	},
 /turf/open/floor/plating/indoor/metal/walkway,
 /area/halflife/indoors/abandoned_ship/tugboat)
+"qpQ" = (
+/obj/structure/halflife/trash/bricks{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley/slums)
 "qrM" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/carpet/shaggy/blue,
@@ -2940,6 +3118,11 @@
 "qxh" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/old_harbor)
+"qzz" = (
+/obj/structure/alien/weeds/node,
+/obj/structure/flora/xen/cougher,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/slums)
 "qCf" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/outdoors)
@@ -2964,7 +3147,9 @@
 /area/halflife/indoors/abandoned_ship/cargo)
 "qMS" = (
 /obj/effect/spawner/random/halflife/loot/scrap,
-/turf/open/halflife/water/shallow,
+/turf/open/halflife/water/shallow{
+	dispensedreagent = /datum/reagent/water/dirty/salt
+	},
 /area/halflife/indoors/abandoned_ship/cargo)
 "qNt" = (
 /mob/living/basic/halflife/headcrab/armored,
@@ -3034,6 +3219,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/abandoned_ship/tugboat)
+"qYQ" = (
+/obj/structure/halflife/trash/bricks,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley/slums)
 "rbB" = (
 /obj/structure/halflife/trash/garbage{
 	pixel_x = 2;
@@ -3057,6 +3246,12 @@
 	dir = 4
 	},
 /area/halflife/indoors/abandoned_ship/tugboat)
+"rjU" = (
+/obj/structure/halflife/trash/bricks{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors)
 "rkt" = (
 /obj/structure/table/halflife/metal,
 /obj/structure/halflife/trash/books/pile_alt,
@@ -3078,6 +3273,13 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/old_harbor)
+"rnU" = (
+/obj/structure/alien/weeds,
+/obj/machinery/light/small/directional/north,
+/obj/structure/halflife/storage/large/shelf/wood/alt,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/slums)
 "rpF" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/slums)
@@ -3208,7 +3410,7 @@
 /area/halflife/indoors/old_harbor)
 "rWU" = (
 /obj/item/shard,
-/turf/open/halflife/water/deep,
+/turf/open/halflife/water/salt/deep,
 /area/halflife/outdoors/ocean)
 "rXC" = (
 /obj/structure/chair/office/halflife/red/broken{
@@ -3248,8 +3450,13 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/metal,
 /area/halflife/indoors/abandoned_ship/tugboat)
+"siI" = (
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/outdoors/roofs)
 "siU" = (
-/turf/open/halflife/water/shallow,
+/turf/open/halflife/water/shallow{
+	dispensedreagent = /datum/reagent/water/dirty/salt
+	},
 /area/halflife/outdoors/ocean)
 "sko" = (
 /obj/structure/chair/comfy/halflife/diner{
@@ -3321,6 +3528,12 @@
 "sEm" = (
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/old_harbor)
+"sEM" = (
+/obj/structure/halflife/trash/bricks{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors)
 "sFv" = (
 /mob/living/basic/halflife/zombie,
 /turf/open/floor/plating/indoor/grooved2,
@@ -3528,7 +3741,7 @@
 /area/halflife/indoors/abandoned_ship/cargo)
 "tvW" = (
 /obj/item/stack/marker_beacon,
-/turf/open/halflife/water/deep,
+/turf/open/halflife/water/salt/deep,
 /area/halflife/outdoors/ocean)
 "twg" = (
 /turf/open/openspace,
@@ -3644,7 +3857,9 @@
 	desc = "A high-visibility lifejacket complete with a whistle that seems to have broken and several leaks. Using this might not end well.";
 	name = "emergency lifejacket"
 	},
-/turf/open/halflife/water/shallow,
+/turf/open/halflife/water/shallow{
+	dispensedreagent = /datum/reagent/water/dirty/salt
+	},
 /area/halflife/indoors/abandoned_ship/cargo)
 "uoA" = (
 /obj/machinery/button/door/directional/north{
@@ -3749,6 +3964,9 @@
 "uTK" = (
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/outdoors/tracks)
+"uVK" = (
+/turf/closed/wall/halflife/metal/weak/old,
+/area/halflife/indoors/slums)
 "uWv" = (
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/old_harbor)
@@ -3893,6 +4111,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/outdoors/harbor)
+"vPj" = (
+/obj/effect/turf_decal/halflife/covering/wallpaper/red,
+/turf/closed/wall/halflife/concrete,
+/area/halflife/indoors/slums)
 "vQN" = (
 /obj/structure/halflife/pipes/horizontal/brown,
 /turf/open/floor/plating/indoor/metal/pipe/intersection{
@@ -3923,6 +4145,11 @@
 /obj/structure/alien/weeds,
 /mob/living/basic/halflife/zombie/poison,
 /turf/open/floor/plating/indoor/checkered,
+/area/halflife/indoors/slums)
+"wcj" = (
+/obj/structure/alien/weeds/node,
+/mob/living/basic/halflife/headcrab/armored,
+/turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
 "wja" = (
 /obj/structure/window/fulltile/halflife/nosmooth/generic{
@@ -3955,7 +4182,9 @@
 /area/halflife/outdoors/alley/slums)
 "wuZ" = (
 /obj/item/clothing/mask/gas/hl2/oldmask,
-/turf/open/halflife/water/shallow,
+/turf/open/halflife/water/shallow{
+	dispensedreagent = /datum/reagent/water/dirty/salt
+	},
 /area/halflife/indoors/abandoned_ship/cargo)
 "wvb" = (
 /obj/machinery/door/unpowered/halflife/wood{
@@ -4003,7 +4232,9 @@
 /area/halflife/indoors/slums)
 "wHB" = (
 /obj/item/stack/sheet/scrap_metal,
-/turf/open/halflife/water/shallow,
+/turf/open/halflife/water/shallow{
+	dispensedreagent = /datum/reagent/water/dirty/salt
+	},
 /area/halflife/indoors/abandoned_ship/tugboat)
 "wJl" = (
 /obj/structure/lattice/catwalk,
@@ -4016,6 +4247,11 @@
 	dir = 1
 	},
 /area/halflife/outdoors/harbor)
+"wKQ" = (
+/obj/structure/alien/weeds,
+/obj/structure/flora/xen/leafy,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/slums)
 "wMs" = (
 /obj/machinery/door/poddoor/shutters{
 	id = "abandoned_harbor_cargo_truck_door"
@@ -4026,6 +4262,7 @@
 /obj/structure/railing/halflife/wood{
 	dir = 4
 	},
+/obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/slums)
 "wOU" = (
@@ -4108,6 +4345,14 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/tracks)
+"xiB" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
+"xjn" = (
+/obj/machinery/door/unpowered/halflife/metal,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/slums)
 "xkw" = (
 /obj/machinery/light{
 	dir = 4
@@ -4312,6 +4557,11 @@
 /obj/effect/spawner/random/halflife/loot/scrap/three,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/indoors/old_harbor)
+"xQY" = (
+/obj/structure/alien/weeds,
+/mob/living/basic/halflife/zombie/fungal,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/slums)
 "xRb" = (
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors)
@@ -25024,7 +25274,7 @@ isR
 isR
 isR
 isR
-xRb
+sEM
 xRb
 xRb
 xRb
@@ -25169,7 +25419,7 @@ isR
 isR
 isR
 xRb
-xRb
+rjU
 xRb
 xRb
 xRb
@@ -25312,21 +25562,21 @@ isR
 isR
 isR
 xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
+sWy
+sWy
+sWy
+sWy
+sWy
+sWy
+sWy
+sWy
+sWy
+sWy
+bXA
+sot
+uVK
+uVK
+uVK
 xRb
 xRb
 xRb
@@ -25456,22 +25706,22 @@ isR
 isR
 isR
 xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
+sdJ
+tfp
+tfp
+tfp
+sdJ
+tfp
+tfp
+tfp
+tfp
+sWy
+vTv
+ddO
+uVK
+niQ
+uVK
+uVK
 xRb
 xRb
 xRb
@@ -25600,22 +25850,22 @@ isR
 isR
 isR
 xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
+sdJ
+nQO
+tfp
+tfp
+ubH
+tfp
+tfp
+tfp
+aFI
+sWy
+vTv
+vTv
+uVK
+lCv
+igO
+uVK
 xRb
 xRb
 xRb
@@ -25744,22 +25994,22 @@ isR
 isR
 isR
 xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
+sdJ
+tfp
+tfp
+tfp
+sdJ
+nQO
+tfp
+tfp
+tfp
+ubH
+vTv
+vTv
+xjn
+lCv
+fKr
+uVK
 xRb
 xRb
 xRb
@@ -25888,22 +26138,22 @@ isR
 isR
 isR
 xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
-xRb
+sWy
+kTQ
+sWy
+sWy
+sdJ
+tfp
+tfp
+tfp
+tfp
+sWy
+vTv
+qYQ
+uVK
+lCv
+ozU
+uVK
 xRb
 xRb
 xRb
@@ -26032,10 +26282,10 @@ isR
 isR
 xRb
 xRb
-xRb
-xRb
-xRb
-xRb
+sdJ
+tfp
+tfp
+aFI
 sWy
 sWy
 sWy
@@ -26176,10 +26426,10 @@ isR
 isR
 xRb
 xRb
-xRb
-xRb
-xRb
-xRb
+sdJ
+tfp
+tfp
+tfp
 sWy
 sFB
 jNv
@@ -26320,10 +26570,10 @@ isR
 isR
 xRb
 xRb
-xRb
-xRb
-xRb
-xRb
+sdJ
+tfp
+ffA
+sWy
 sWy
 tfs
 fLD
@@ -26903,7 +27153,7 @@ lmi
 tfs
 uJk
 sWy
-vTv
+oPR
 vTv
 vTv
 vTv
@@ -27047,7 +27297,7 @@ uJk
 nBG
 jPX
 sWy
-vTv
+gda
 vTv
 vTv
 vTv
@@ -27490,7 +27740,7 @@ crg
 crg
 crg
 crg
-crg
+kAX
 gkC
 xVO
 xVO
@@ -27625,16 +27875,16 @@ eon
 sWy
 vTv
 vTv
-crg
+vPj
 kfi
 tfp
-crg
+kAX
 iQJ
 thR
-crg
+vPj
 ryy
 xKF
-crg
+kAX
 gkC
 xVO
 xVO
@@ -27913,16 +28163,16 @@ sko
 sWy
 vTv
 vTv
-crg
+vPj
 pyV
 gzB
-crg
+kAX
 mQw
 thR
-crg
+vPj
 vZg
 sSO
-crg
+kAX
 gkC
 xVO
 xVO
@@ -28060,13 +28310,13 @@ vTv
 crg
 crg
 crg
-crg
+kAX
 sFv
 nri
 crg
 crg
 crg
-crg
+kAX
 gkC
 xVO
 xVO
@@ -28201,16 +28451,16 @@ opa
 iOr
 vTv
 vTv
-crg
+vPj
 xYs
 bmW
-crg
+kAX
 mQw
 mQw
-crg
+vPj
 dac
 acr
-crg
+kAX
 gkC
 xVO
 xVO
@@ -28489,16 +28739,16 @@ gVL
 xye
 vTv
 vTv
-crg
+vPj
 sSO
 vZg
-crg
+kAX
 mQw
 nAH
-crg
+vPj
 gzB
 pTu
-crg
+kAX
 gkC
 xVO
 xVO
@@ -28636,13 +28886,13 @@ vTv
 crg
 crg
 crg
-crg
+kAX
 rSr
 nAH
 crg
 crg
 crg
-crg
+kAX
 gkC
 xVO
 xVO
@@ -28777,16 +29027,16 @@ vGJ
 wlD
 vTv
 vTv
-crg
+kAX
 pqc
 cyR
-crg
+kAX
 thR
 kMX
 eLW
 mst
 crg
-crg
+kAX
 gkC
 xVO
 xVO
@@ -28921,7 +29171,7 @@ wlD
 opa
 vTv
 vTv
-crg
+kAX
 uOE
 rmT
 lZk
@@ -28930,7 +29180,7 @@ thR
 ela
 thR
 thR
-crg
+kAX
 gkC
 xVO
 xVO
@@ -29068,13 +29318,13 @@ vTv
 crg
 crg
 crg
-crg
+kAX
 thR
 thR
 crg
 crg
 crg
-crg
+kAX
 gkC
 xVO
 xVO
@@ -29215,10 +29465,10 @@ thR
 pBL
 thR
 amZ
-crg
+kAX
 xvR
 pZY
-crg
+kAX
 gkC
 xVO
 xVO
@@ -29348,21 +29598,21 @@ dOT
 gvt
 vWj
 tfp
-tfp
+acr
 tfp
 vSW
 vTv
 vTv
-crg
+kAX
 mQw
 ela
-crg
+kAX
 idr
 mQw
 bSy
 bLD
 xvR
-crg
+kAX
 gkC
 xVO
 xVO
@@ -29488,11 +29738,11 @@ isR
 isR
 isR
 tyc
-jJS
+eIc
 amc
 vWj
 tfp
-tfp
+arS
 tfp
 sWy
 vTv
@@ -29506,7 +29756,7 @@ crg
 crg
 crg
 crg
-crg
+kAX
 gkC
 xVO
 xVO
@@ -29790,7 +30040,7 @@ vTv
 vTv
 vTv
 vTv
-vTv
+qpQ
 vTv
 vTv
 vTv
@@ -29923,7 +30173,7 @@ sWy
 sWy
 sWy
 vWj
-tfp
+nQO
 tfp
 tfp
 tfp
@@ -30064,10 +30314,10 @@ isR
 isR
 xRb
 vWj
-tfp
-tfp
-tfp
-tfp
+eRR
+bGT
+tNv
+pTQ
 tfp
 tfp
 tfp
@@ -30210,11 +30460,11 @@ xRb
 sWy
 sWy
 mPa
+tNv
+tNv
+gYX
 tfp
-tfp
-tfp
-tfp
-tfp
+aFI
 sWy
 dqR
 vTv
@@ -30354,8 +30604,8 @@ isR
 sWy
 sWy
 mPa
-tfp
-tfp
+tNv
+tNv
 tfp
 tfp
 tfp
@@ -30496,15 +30746,15 @@ isR
 isR
 isR
 vWj
+tNv
+tNv
+pTQ
+xiB
 tfp
-tfp
-tfp
-tfp
-tfp
-tfp
+nGC
 tfp
 sWy
-vTv
+kfz
 vTv
 oqr
 iMC
@@ -30787,7 +31037,7 @@ qVi
 xRb
 xRb
 xRb
-xRb
+rjU
 uyo
 lnh
 xRb
@@ -33957,7 +34207,7 @@ rlN
 apM
 apM
 rlN
-bob
+fQd
 fuG
 fuG
 rnp
@@ -34101,7 +34351,7 @@ rlN
 apM
 apM
 rlN
-bob
+fQd
 fuG
 xRB
 bob
@@ -42304,22 +42554,22 @@ isR
 isR
 isR
 isR
+sWy
+sWy
+sWy
+sWy
+sWy
+sWy
+sWy
+sWy
+sWy
+sWy
+sWy
 ovF
 ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
+siI
+siI
+siI
 ovF
 ovF
 ovF
@@ -42448,23 +42698,23 @@ isR
 isR
 isR
 isR
+cOO
+nAi
+tNv
+sWy
+gTS
+tNv
+tNv
+sdJ
+vZg
+nAi
+sWy
 ovF
 ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
+siI
+siI
+siI
+siI
 ovF
 ovF
 ovF
@@ -42592,23 +42842,23 @@ isR
 isR
 isR
 isR
+uLH
+gTS
+tNv
+wGo
+tNv
+tNv
+tNv
+wGo
+tNv
+gTS
+sWy
 ovF
 ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
+siI
+siI
+siI
+siI
 ovF
 ovF
 ovF
@@ -42736,23 +42986,23 @@ isR
 isR
 isR
 isR
+cOO
+vZg
+tNv
+sWy
+tNv
+tNv
+gTS
+sdJ
+tNv
+tNv
+uLH
 ovF
 ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
+siI
+siI
+siI
+siI
 ovF
 ovF
 ovF
@@ -42880,23 +43130,23 @@ isR
 isR
 isR
 isR
+sWy
+sWy
+sWy
+sWy
+tNv
+tNv
+tNv
+sdJ
+tNv
+int
+sWy
 ovF
 ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
-ovF
+siI
+siI
+siI
+siI
 ovF
 ovF
 ovF
@@ -43025,16 +43275,16 @@ isR
 isR
 ovF
 ovF
-ovF
-ovF
-ovF
-ovF
-eQu
-eQu
-eQu
-eQu
-eQu
-eQu
+sWy
+tNv
+tNv
+tNv
+sWy
+sWy
+sWy
+sWy
+sWy
+sWy
 ovF
 eQu
 eQu
@@ -43169,11 +43419,11 @@ isR
 isR
 ovF
 ovF
-ovF
-ovF
-ovF
-ovF
-eQu
+sWy
+tNv
+tNv
+tNv
+sWy
 eQu
 eQu
 eQu
@@ -43313,11 +43563,11 @@ isR
 isR
 ovF
 ovF
-ovF
-ovF
-ovF
-ovF
-eQu
+sWy
+gjZ
+gjZ
+tNv
+sWy
 eQu
 eQu
 eQu
@@ -43457,11 +43707,11 @@ isR
 isR
 ovF
 ovF
-eQu
-eQu
-eQu
-eQu
-eQu
+sWy
+sWy
+sWy
+sWy
+sWy
 eQu
 eQu
 eQu
@@ -44483,7 +44733,7 @@ crg
 crg
 crg
 crg
-crg
+kAX
 ovF
 ovF
 ovF
@@ -44618,16 +44868,16 @@ eQu
 eQu
 ovF
 ovF
-crg
+vPj
 xYs
 gTS
-crg
+kAX
 vvi
 thR
-crg
+vPj
 ryy
 eLY
-crg
+kAX
 ovF
 ovF
 ovF
@@ -44770,7 +45020,7 @@ thR
 thR
 leV
 tNv
-tNv
+cZk
 mJq
 ovF
 ovF
@@ -44906,16 +45156,16 @@ eQu
 eQu
 ovF
 ovF
-crg
+vPj
 nAi
 vZg
-crg
+kAX
 thR
 thR
-crg
+vPj
 vZg
 sSO
-crg
+kAX
 ovF
 ovF
 ovF
@@ -45053,13 +45303,13 @@ ovF
 crg
 crg
 crg
-crg
+kAX
 thR
 uJt
 crg
 crg
 crg
-crg
+kAX
 ovF
 ovF
 ovF
@@ -45194,16 +45444,16 @@ ovF
 ovF
 ovF
 ovF
-crg
+vPj
 cOn
 iFU
-crg
+kAX
 thR
 thR
-crg
+vPj
 ryy
 upI
-crg
+kAX
 ovF
 ovF
 ovF
@@ -45482,16 +45732,16 @@ ovF
 ovF
 ovF
 ovF
-crg
+vPj
 uuj
 ryy
-crg
+kAX
 fGz
 thR
-crg
+vPj
 vZg
 sSO
-crg
+kAX
 ovF
 ovF
 ovF
@@ -45629,13 +45879,13 @@ ovF
 crg
 crg
 crg
-crg
+kAX
 sPq
-thR
+bRt
 crg
 crg
 crg
-crg
+kAX
 ovF
 ovF
 ovF
@@ -45770,16 +46020,16 @@ ovF
 ovF
 ovF
 ovF
-crg
+vPj
 xYs
 tNv
-crg
+kAX
 cgr
 thR
 jeB
 hbz
 eld
-crg
+kAX
 ovF
 ovF
 ovF
@@ -45916,14 +46166,14 @@ ovF
 ovF
 mJq
 tNv
-gTS
+wcj
 wGo
 kMX
 xqc
 xqc
 xqc
 iIV
-crg
+kAX
 ovF
 ovF
 ovF
@@ -46058,16 +46308,16 @@ ovF
 ovF
 ovF
 ovF
-crg
+vPj
 sSO
 vZg
-crg
+kAX
 thR
 uJt
 crg
 crg
 crg
-crg
+kAX
 ovF
 ovF
 ovF
@@ -46205,13 +46455,13 @@ ovF
 crg
 crg
 crg
-crg
+kAX
 thR
 cPU
-crg
+kAX
 gjZ
 gjZ
-crg
+kAX
 ovF
 ovF
 ovF
@@ -46348,14 +46598,14 @@ ovF
 ovF
 crg
 xlG
-kAX
+vvi
 iWg
 thR
 thR
 bSy
 gjZ
 gjZ
-crg
+kAX
 ovF
 ovF
 ovF
@@ -46483,9 +46733,9 @@ isR
 qXZ
 hXk
 dWe
+wKQ
 nNE
-nNE
-nNE
+qzz
 nNE
 sWy
 ovF
@@ -46499,7 +46749,7 @@ crg
 crg
 crg
 crg
-crg
+kAX
 ovF
 ovF
 ovF
@@ -46627,9 +46877,9 @@ isR
 qXZ
 gVY
 sdJ
+rnU
 nNE
-nNE
-nNE
+hpP
 nNE
 sWy
 ovF
@@ -46771,8 +47021,8 @@ ovF
 qXZ
 hXk
 tyc
-nNE
-nNE
+ojR
+xQY
 nNE
 nNE
 sWy
@@ -47057,7 +47307,7 @@ isR
 isR
 ovF
 sdJ
-nNE
+aqR
 wNq
 wNq
 wNq
@@ -47201,12 +47451,12 @@ isR
 isR
 ovF
 sdJ
-nNE
+hzy
 gjZ
 gjZ
 gjZ
-eDM
-nNE
+itk
+qnU
 sWy
 eQu
 ovF
@@ -47350,7 +47600,7 @@ gjZ
 gjZ
 gjZ
 eDM
-nNE
+wKQ
 sWy
 eQu
 ovF
