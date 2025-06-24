@@ -349,6 +349,9 @@
 
 /area/halflife/indoors/abandoned_ship
 	name = "Abandoned Ship"
+	area_limited_icon_smoothing = /area/halflife/indoors/abandoned_ship //shouldnt smooth with the docks because that looks ugly and makes no sense
+	mood_bonus = -1 //not too bad but being on a pre-war ship that is either going to be beached (none of these are) or drift out to sea and sink should be spooky
+	mood_message = "<span class='warning'>I can hear the hull groaning constantly...</span>\n"
 
 // the names of the ships are just pseudo-random ones from last.txt and first_male.txt
 
