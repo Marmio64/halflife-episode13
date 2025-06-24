@@ -98,7 +98,7 @@
 
 /obj/item/water_canister
 	name = "water canister"
-	desc = "A reinforced canister containing filtered water. This can be sold to the benefactors via the cargo train."
+	desc = "A reinforced canister containing filtered water. This can be sold to the benefactors via the cargo train, or added into a water mixer for a significantly larger amount of water than an unfiltered jug."
 	force = 10
 	icon = 'icons/obj/canisters.dmi'
 	icon_state = "oxygen"

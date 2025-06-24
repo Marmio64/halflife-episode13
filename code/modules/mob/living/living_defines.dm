@@ -173,7 +173,8 @@
 	var/held_w_class = WEIGHT_CLASS_NORMAL
 	///if it can be held, can it be equipped to any slots? (think pAI's on head)
 	var/worn_slot_flags = NONE
-
+	///flags_inv for mobs!! (just so that i can wear a headcrab)
+	var/worn_flags_inv = NONE
 	var/ventcrawl_layer = PIPING_LAYER_DEFAULT
 	var/losebreath = 0
 

@@ -254,6 +254,13 @@
 	disgust = 8
 	treated = FALSE
 
+/datum/reagent/water/dirty/salt
+	name = "Salt Water"
+	description = "Water mixed with salt. Makes you thirsty, and tastes far too salty."
+	taste_description = "filthy water"
+	disgust = 6
+	hydration = -4
+
 /datum/reagent/water/dirty/sewer
 	name = "Sewer Water"
 	description = "A cocktail of raw sewage. Absolutely disgusting."

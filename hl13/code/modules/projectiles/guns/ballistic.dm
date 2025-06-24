@@ -504,9 +504,9 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/mosin
 	can_jam = TRUE
 	projectile_damage_multiplier = 1.3
-	spread = 5 //it has a stock
-	recoil = 0.4 //probably the only gun in the game other than M4A1 and service rifle with a real stock
-	fire_delay = 5 //its already boltaction but to make sure that someone who's really good at pressing Z doesnt just lay down suppressive fire
+	spread = 6 //it has a stock
+	recoil = 0.5 //probably the only gun in the game other than M4A1 and service rifle with a real stock
+	fire_delay = 6 //its already boltaction but to make sure that someone who's really good at pressing Z doesnt just lay down suppressive fire
 	sawn_desc = "A ratty old pre-war rifle that was developed over a century ago. Someone seems to have taken this prized historical artifact and sawed it in half, creating an Obrez. Still moist, though."
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/start_empty

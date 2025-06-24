@@ -17,7 +17,7 @@
 
 /obj/item/halflife/antenna
 	name = "Destabilizer Antenna"
-	desc = "A smashed antenna from a destabilizer. Can be sold on the cargo shuttle, and is a useful proof for a loyalist to have for a deed well done."
+	desc = "A smashed antenna from a destabilizer. Can be sold on the cargo shuttle, and is a useful proof for a loyalist to have for a deed well done. It can also be a useful component for a rebel..."
 	icon = 'hl13/icons/obj/materials.dmi'
 	icon_state = "antenna"
 	w_class = WEIGHT_CLASS_SMALL
@@ -54,7 +54,7 @@
 
 /obj/item/halflife/combine_battery
 	name = "Combine Battery"
-	desc = "A combine battery that can charge a suit up with power, or be used as a power cell for certain recipes."
+	desc = "A combine battery that can charge their technologies, such as powered suits and stunsticks, or be used as a power cell for certain recipes."
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	icon_state = "battery"
 	w_class = WEIGHT_CLASS_SMALL
