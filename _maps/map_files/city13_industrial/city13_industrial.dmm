@@ -821,6 +821,10 @@
 	},
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/townhall)
+"bsD" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bar/apartments)
 "bsT" = (
 /obj/machinery/door/unpowered/halflife/seethrough/grate{
 	dir = 8
@@ -3216,6 +3220,14 @@
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors)
+"foy" = (
+/obj/structure/table/halflife/no_smooth/dice/pristine,
+/obj/item/dice,
+/obj/item/dice,
+/obj/item/dice,
+/obj/item/dice,
+/turf/open/floor/plating/indoor/carpet/violet,
+/area/halflife/indoors/bar/apartments)
 "foI" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/stale,
@@ -4183,6 +4195,10 @@
 /obj/structure/halflife/barrel/triple/grey/one,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/alley)
+"gPr" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/carpet/violet,
+/area/halflife/indoors/bar/apartments)
 "gPM" = (
 /obj/structure/chair/halflife/metal/folding{
 	dir = 4
@@ -4214,7 +4230,7 @@
 /area/halflife/indoors/hospital/virology)
 "gTa" = (
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/indoor/concrete/bricks,
+/turf/open/floor/plating/indoor/carpet/violet,
 /area/halflife/indoors/bar/apartments)
 "gTQ" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
@@ -4679,6 +4695,11 @@
 /obj/structure/flora/xen/cougher,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
+"hKa" = (
+/obj/structure/table/halflife/no_smooth/large/cards,
+/obj/item/toy/cards/deck,
+/turf/open/floor/plating/indoor/carpet/violet,
+/area/halflife/indoors/bar/apartments)
 "hKk" = (
 /obj/structure/window/fulltile/halflife/nosmooth/brick{
 	dir = 1
@@ -7575,6 +7596,10 @@
 	},
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/townhall/secondfloor)
+"mty" = (
+/obj/item/toy/cards/deck,
+/turf/open/floor/plating/indoor/carpet/violet,
+/area/halflife/indoors/bar/apartments)
 "mtT" = (
 /obj/structure/halflife/trash/papers/two{
 	dir = 8
@@ -7760,6 +7785,10 @@
 "mJh" = (
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/apartments/primary)
+"mJF" = (
+/obj/structure/table/halflife/no_smooth/large/wood,
+/turf/open/floor/plating/indoor/carpet/violet,
+/area/halflife/indoors/bar/apartments)
 "mKT" = (
 /obj/item/clothing/under/citizen,
 /obj/item/clothing/shoes/boots,
@@ -9571,6 +9600,9 @@
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors)
+"pTK" = (
+/turf/open/floor/plating/indoor/carpet/violet,
+/area/halflife/indoors/bar/apartments)
 "pTM" = (
 /obj/structure/closet/secure_closet/halflife/security,
 /obj/item/stack/credit_voucher,
@@ -10281,6 +10313,15 @@
 /obj/structure/halflife/trash/garbage/dumpster,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley/slums)
+"qZS" = (
+/obj/machinery/door/unpowered/halflife/seethrough/metal{
+	keylock = 1;
+	lockid = "barapartments";
+	dir = 1;
+	locked = 1
+	},
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/indoors/bar/apartments)
 "rap" = (
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/indoors/distributioncenter)
@@ -13175,6 +13216,10 @@
 /obj/item/watertank/cleanup,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
+"vED" = (
+/obj/structure/chair/halflife/metal/stool,
+/turf/open/floor/plating/indoor/carpet/violet,
+/area/halflife/indoors/bar/apartments)
 "vFu" = (
 /obj/structure/railing/halflife/sewer,
 /obj/structure/railing/halflife/sewer{
@@ -51806,8 +51851,8 @@ ovF
 ovF
 ovF
 lrZ
-lrZ
-lrZ
+cbn
+nCw
 lrZ
 lrZ
 lrZ
@@ -51950,9 +51995,9 @@ ovF
 ovF
 ovF
 lrZ
-lrZ
-lrZ
-lrZ
+bsD
+cGx
+dFK
 gvy
 gvy
 gvy
@@ -52094,8 +52139,8 @@ ovF
 ovF
 ovF
 lrZ
-lrZ
-lrZ
+kdH
+cXS
 lrZ
 qRK
 hZJ
@@ -52393,9 +52438,9 @@ qrG
 gvy
 gvy
 lrZ
-cbn
-cGx
-nCw
+vED
+foy
+vED
 lrZ
 ovF
 ovF
@@ -52536,9 +52581,9 @@ gvy
 gvy
 gvy
 gvy
-dFK
-cGx
-cGx
+qZS
+pTK
+vED
 gTa
 lrZ
 ovF
@@ -52681,9 +52726,9 @@ lrZ
 lrZ
 lrZ
 lrZ
-kdH
-cGx
-cXS
+pTK
+pTK
+pTK
 lrZ
 ovF
 ovF
@@ -52824,10 +52869,10 @@ sUO
 bUL
 mpF
 lrZ
-lrZ
-lrZ
-lrZ
-lrZ
+mJF
+vED
+hKa
+vED
 lrZ
 ovF
 ovF
@@ -52968,10 +53013,10 @@ sUO
 sUO
 sUO
 lrZ
-lrZ
-lrZ
-lrZ
-lrZ
+gPr
+vED
+mty
+vED
 lrZ
 ovF
 ovF

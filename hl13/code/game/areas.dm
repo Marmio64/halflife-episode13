@@ -217,6 +217,11 @@
 
 	first_time_text = "The Labor Union Train Depot"
 
+/area/halflife/indoors/south_checkpoint
+	name = "\improper South Checkpoint"
+
+	first_time_text = "South Checkpoint"
+
 ////// FACTORY START
 
 /area/halflife/indoors/distributioncenter
@@ -268,6 +273,9 @@
 
 /area/halflife/indoors/old/offices
 	name = "\improper Abandoned Offices"
+
+/area/halflife/indoors/old/factory
+	name = "\improper Abandoned Manufacturing Area"
 
 
 ///////// 'old' areas end
