@@ -11,3 +11,5 @@
 	candodge = TRUE
 	var/last_jump_time = 0
 	var/jump_range = 1
+
+	throw_range = 5
