@@ -80,4 +80,4 @@
 	name = "old metal wall"
 	desc = "A rusty old metal wall."
 	icon_state = "urban_wall_regular-0"
-	base_icon_state = "urban_wall_regular-0"
+	base_icon_state = "urban_wall_regular"
