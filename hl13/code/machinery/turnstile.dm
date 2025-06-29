@@ -89,10 +89,12 @@
 	if(!malfunctioning)
 		if(on)
 			on = !on
+			density = FALSE
 			icon_state = "forcefield_off"
 		else
 			on = !on
 			icon_state = "forcefield"
+			density = TRUE
 	else
 		do_sparks(1, FALSE, src)
 

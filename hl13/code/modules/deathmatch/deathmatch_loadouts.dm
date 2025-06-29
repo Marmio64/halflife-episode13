@@ -66,6 +66,8 @@
 		/obj/item/ammo_casing/rebar,
 		/obj/item/ammo_casing/rebar,
 		/obj/item/ammo_casing/rebar,
+		/obj/item/ammo_casing/rebar,
+		/obj/item/ammo_casing/rebar,
 	)
 
 /datum/outfit/deathmatch_loadout/combine/pre_equip(mob/living/carbon/human/H)
@@ -258,6 +260,7 @@
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
 		/obj/item/ammo_box/magazine/usp9mm,
 		/obj/item/ammo_box/magazine/usp9mm,
+		/obj/item/grenade/halflife/tinbomb,
 	)
 
 /datum/outfit/deathmatch_loadout/rioter/pre_equip(mob/living/carbon/human/H)
@@ -276,7 +279,7 @@
 	mask = /obj/item/clothing/mask/bandana/sinew
 	l_pocket = /obj/item/knife/combat/bone
 
-	r_hand = /obj/item/spear/halflife
+	r_hand = /obj/item/spear/halflife/deathmatch
 
 	back = /obj/item/storage/backpack/halflife/satchel
 	backpack_contents = list(

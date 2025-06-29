@@ -66,10 +66,10 @@
 /obj/projectile/bullet/rebar
 	name = "rebar"
 	icon_state = "rebar"
-	damage = 50
+	damage = 45
 	speed = 2.5
 	dismemberment = 1 //because a 1 in 100 chance to just blow someones arm off is enough to be cool but also not enough to be reliable
-	armour_penetration = 15
+	armour_penetration = 30
 	wound_bonus = -20
 	bare_wound_bonus = 20
 	embed_type = /datum/embed_data/rebar
