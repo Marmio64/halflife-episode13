@@ -111,6 +111,11 @@ GLOBAL_LIST_EMPTY(chosen_station_templates)
 	key = "outlandsbunkerwest";
 	name = "outlandsbunkerwest"
 
+/obj/modular_map_root/miningcaves
+	config_file = "strings/modular_maps/sewercity.toml"
+	key = "miningcaves";
+	name = "miningcaves"
+
 
 /////////////////////////////////
 /// NAVIGATE VERBS ///

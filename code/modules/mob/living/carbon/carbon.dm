@@ -145,8 +145,6 @@
 	var/atom/movable/thrown_thing
 	var/obj/item/held_item = get_active_held_item()
 	var/verb_text = pick("throw", "toss", "hurl", "chuck", "fling")
-	if(prob(0.5))
-		verb_text = "yeet"
 	var/neckgrab_throw = FALSE // we can't check for if it's a neckgrab throw when totaling up power_throw since we've already stopped pulling them by then, so get it early
 	var/frequency_number = 1 //We assign a default frequency number for the sound of the throw.
 	if(!held_item)

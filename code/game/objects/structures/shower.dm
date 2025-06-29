@@ -389,7 +389,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 /obj/structure/showerframe/attackby(obj/item/tool, mob/living/user, params)
 	if(istype(tool, /obj/item/stock_parts/water_recycler))
 		qdel(tool)
-		var/obj/machinery/shower/shower = new(loc, REVERSE_DIR(dir), TRUE)
+		var/obj/machinery/shower/halflife/shower = new(loc, REVERSE_DIR(dir), TRUE)
 		qdel(src)
 		playsound(shower, 'sound/machines/click.ogg', 20, TRUE)
 		return
