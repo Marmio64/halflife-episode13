@@ -89,6 +89,7 @@
 		/obj/item/ammo_box/magazine/makeshift9mm = list(PAYCHECK_CREW * 2, 5),
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = list(PAYCHECK_CREW * 4.5, 5),
 		/obj/item/weaponcrafting/frame/usp = list(PAYCHECK_CREW * 5.5, 2),
+		/obj/item/weaponcrafting/frame/mosin = list(PAYCHECK_CREW * 9, 1),
 		/obj/item/gun/ballistic/rifle/rebarxbow = list(PAYCHECK_CREW * 7.5, 3),
 		/obj/item/reagent_containers/pill/patch/medkit/vial = list(PAYCHECK_CREW * 1.75, 5),
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = list(PAYCHECK_CREW * 1.75, 5),

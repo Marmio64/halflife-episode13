@@ -1009,6 +1009,10 @@
 "bFI" = (
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/apartments/primary)
+"bFY" = (
+/obj/structure/table/halflife/wood,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "bGY" = (
 /obj/machinery/gibber,
 /turf/open/floor/plating/indoor/tile/kitchen,
@@ -3645,9 +3649,11 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
 "fVc" = (
-/obj/modular_map_root/miningcaves,
-/turf/closed/mineral/random,
-/area/halflife/indoors/sewer)
+/obj/machinery/door/unpowered/halflife/wood{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "fVT" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal/grate,
@@ -5312,6 +5318,10 @@
 /obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
+"iJA" = (
+/obj/modular_map_root/miningcaves,
+/turf/closed/mineral/random,
+/area/halflife/indoors/sewer)
 "iJF" = (
 /obj/item/reagent_containers/cup/bucket,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -7370,7 +7380,7 @@
 /turf/open/halflife/water/sewer/shallow,
 /area/halflife/indoors/sewer)
 "mbd" = (
-/turf/closed/wall/halflife/brick,
+/turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/sewer/tunnel)
 "mbp" = (
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -9001,6 +9011,9 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley)
+"oXb" = (
+/turf/closed/wall/halflife/concrete,
+/area/halflife/outdoors/alley/restrictedblock)
 "oXd" = (
 /obj/structure/halflife/storage/shelf,
 /obj/effect/spawner/random/halflife/loot,
@@ -14862,6 +14875,12 @@
 "ykp" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/old/chapel)
+"yky" = (
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "ykD" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/woodc,
@@ -16293,7 +16312,7 @@ sOW
 sOW
 sOW
 sOW
-fVc
+iJA
 sOW
 sOW
 sOW
@@ -16533,7 +16552,7 @@ sOW
 sOW
 sOW
 sOW
-fVc
+iJA
 sOW
 sOW
 sOW
@@ -18575,7 +18594,7 @@ sOW
 sOW
 sOW
 sOW
-fVc
+iJA
 sOW
 jYV
 jYV
@@ -40646,18 +40665,18 @@ yaD
 dma
 dma
 oYd
-hmF
-hmF
-hmF
-hmF
-hmF
-hmF
-hmF
-hmF
-hmF
-hmF
-hmF
-hmF
+oXb
+oXb
+oXb
+oXb
+oXb
+oXb
+oXb
+oXb
+oXb
+oXb
+oXb
+oXb
 ykK
 ykK
 "}
@@ -40790,7 +40809,7 @@ dzf
 dma
 fpY
 hbD
-hmF
+oXb
 pMo
 pMo
 kEt
@@ -41654,7 +41673,7 @@ dzf
 dma
 fpY
 pze
-hmF
+oXb
 gyY
 kEt
 pMo
@@ -41798,18 +41817,18 @@ yjG
 yjG
 yjG
 oYd
-hmF
-hmF
-hmF
-hmF
-hmF
-hmF
-hmF
-hmF
-hmF
-hmF
-hmF
-hmF
+oXb
+oXb
+oXb
+oXb
+oXb
+oXb
+oXb
+oXb
+oXb
+oXb
+oXb
+oXb
 ykK
 ykK
 "}
@@ -54671,7 +54690,7 @@ oVh
 oVh
 oVh
 oVh
-oVh
+fVc
 oVh
 oVh
 oVh
@@ -54814,11 +54833,11 @@ qxh
 qxh
 qxh
 qxh
-qxh
-qxh
-qxh
-qxh
-qxh
+oVh
+kJj
+kJj
+bFY
+oVh
 qxh
 qxh
 qxh
@@ -54958,11 +54977,11 @@ hkK
 qxh
 qxh
 qxh
-qxh
-qxh
-qxh
-qxh
-qxh
+oVh
+kJj
+kJj
+kAf
+oVh
 qxh
 qxh
 qxh
@@ -55102,11 +55121,11 @@ hkK
 vtk
 vtk
 qxh
-qxh
-qxh
-qxh
-qxh
-qxh
+oVh
+kJj
+kJj
+kJj
+oVh
 qxh
 qxh
 qxh
@@ -55246,11 +55265,11 @@ hkK
 vtk
 vtk
 qxh
-qxh
-qxh
-qxh
-qxh
-qxh
+oVh
+yky
+yky
+yky
+oVh
 qxh
 qxh
 qxh

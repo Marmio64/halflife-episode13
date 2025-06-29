@@ -291,7 +291,17 @@
 /datum/emote/living/laugh/get_sound(mob/living/carbon/human/user)
 	if(!istype(user))
 		return
-	return user.dna.species.get_laugh_sound(user)
+	//hl13 edit start
+	var/obj/item/clothing/mask/gas/civilprotection/cpmask = user.get_item_by_slot(ITEM_SLOT_MASK)
+	if(istype(cpmask, /obj/item/clothing/mask/gas/civilprotection))
+		return pick(
+			'hl13/sound/voice/cpvoicelines/_giggle.ogg',
+			'hl13/sound/voice/cpvoicelines/_laugh.ogg',
+			'hl13/sound/voice/cpvoicelines/_chuckle.ogg',
+		)
+	else
+		return user.dna.species.get_laugh_sound(user)
+	//hl13 edit end
 
 /datum/emote/living/look
 	key = "look"

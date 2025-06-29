@@ -300,7 +300,7 @@
 
 	preserved_food = TRUE
 	w_class = WEIGHT_CLASS_SMALL
-	crafting_complexity = FOOD_COMPLEXITY_2
+	crafting_complexity = FOOD_COMPLEXITY_3
 
 /obj/item/food/nutripaste
 	name = "nutripaste tube"
