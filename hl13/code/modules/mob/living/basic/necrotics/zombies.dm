@@ -393,6 +393,7 @@
 
 
 // AI STUFF THAT I PUT IN HERE CAUSE IM TOO LAZY TO MAKE ANOTHER FILE FOR IT --------------------------
+// speech trees are going to be deactivated for now because 1: custom zombie language makes them not do anything and 2. they get spammed in dchat after a player possessing one dies
 /datum/ai_planning_subtree/random_speech/halflife/zombine
 	speech_chance = 2
 	speak = list(
@@ -412,7 +413,7 @@
 		/datum/ai_planning_subtree/simple_find_target,
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
-		/datum/ai_planning_subtree/random_speech/halflife/zombie,
+		//datum/ai_planning_subtree/random_speech/halflife/zombie,
 	)
 
 /datum/ai_planning_subtree/random_speech/halflife/zombie
@@ -435,7 +436,7 @@
 		/datum/ai_planning_subtree/use_mob_ability/zombine_grenade,
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
-		/datum/ai_planning_subtree/random_speech/halflife/zombine,
+		//datum/ai_planning_subtree/random_speech/halflife/zombine,
 	)
 
 /datum/ai_planning_subtree/use_mob_ability/zombine_grenade
@@ -463,7 +464,7 @@
 		/datum/ai_planning_subtree/simple_find_target,
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
-		/datum/ai_planning_subtree/random_speech/halflife/zombine,
+		//datum/ai_planning_subtree/random_speech/halflife/zombine,
 	)
 
 /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/fastzombie
