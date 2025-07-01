@@ -15,7 +15,7 @@
 	fire_delay = 2
 	burst_size = 1
 	mag_display = TRUE
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	pin = /obj/item/firing_pin/implant/mindshield
 
 	load_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
@@ -65,7 +65,7 @@
 	recoil = 0.7
 	can_suppress = FALSE
 	mag_display = TRUE
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 
 	inhand_icon_state = "service"
@@ -102,7 +102,7 @@
 	recoil = 1.2
 	can_suppress = FALSE
 	mag_display = TRUE
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 
 	inhand_icon_state = "ak47"
@@ -139,7 +139,7 @@
 	recoil = 0.7
 	can_suppress = FALSE
 	mag_display = TRUE
-	weapon_weight = WEAPON_MEDIUM
+	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 
 	inhand_icon_state = "service"
@@ -508,6 +508,7 @@
 	recoil = 0.5 //probably the only gun in the game other than M4A1 and service rifle with a real stock
 	fire_delay = 6 //its already boltaction but to make sure that someone who's really good at pressing Z doesnt just lay down suppressive fire
 	sawn_desc = "A ratty old pre-war rifle that was developed over a century ago. Someone seems to have taken this prized historical artifact and sawed it in half, creating an Obrez. Still moist, though."
+	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/start_empty
 	magazine = /obj/item/ammo_box/magazine/internal/boltaction/mosin/start_empty

@@ -167,7 +167,6 @@
 			victim.adjustOrganLoss(ORGAN_SLOT_LUNGS, 4) //prolonged breathing can damage your lungs
 			if(prob(5))
 				victim.vomit(10, FALSE, TRUE, 1)
-			if(prob(60))
-				victim.adjustToxLoss(2)
+			victim.adjustToxLoss(2)
 			if(prob(50))
 				victim.ForceContractDisease(new /datum/disease/fungosis)

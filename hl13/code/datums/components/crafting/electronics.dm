@@ -72,6 +72,14 @@
 	category = CAT_ROBOT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
 
+/datum/crafting_recipe/scrap_advcircuitchips
+	name = "Scrap Advanced Circuit Chips"
+	result = /obj/item/circuitmaterial
+	reqs = list(/obj/item/circuitmaterial/advanced)
+	time = 4 SECONDS
+	category = CAT_ROBOT
+	crafting_interface = CRAFTING_BENCH_ELECTRIC
+
 /datum/crafting_recipe/combineturret
 	name = "Combine AR2 Turret"
 	result = /obj/machinery/porta_turret/combine/off
