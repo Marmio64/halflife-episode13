@@ -2097,7 +2097,9 @@
 /area/halflife/outdoors/plaza)
 "dlE" = (
 /obj/structure/halflife/pipes/horizontal/box,
-/turf/open/floor/plating/indoor/metal/industrial,
+/turf/open/floor/plating/indoor/metal/walkway{
+	dir = 1
+	},
 /area/halflife/indoors/old_harbor)
 "dmi" = (
 /obj/machinery/door/unpowered/halflife/metal{
@@ -2577,7 +2579,9 @@
 /area/halflife/indoors/bar/apartments)
 "eaf" = (
 /obj/structure/halflife/pipes/horizontal,
-/turf/open/floor/plating/indoor/metal/industrial,
+/turf/open/floor/plating/indoor/metal/walkway{
+	dir = 1
+	},
 /area/halflife/indoors/old_harbor)
 "eau" = (
 /obj/structure/halflife/trash/garbage/dumpster,
@@ -4268,7 +4272,10 @@
 /area/halflife/indoors/townhall/civilprotection)
 "guM" = (
 /obj/structure/halflife/sign/bar,
-/turf/open/floor/plating/ground/dirt,
+/obj/structure/railing/halflife/solo/industrial{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors)
 "gve" = (
 /obj/structure/chair/office/halflife/blue,
@@ -6696,6 +6703,13 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
+"kzu" = (
+/obj/structure/ladder/halflife/manhole/upwards,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/metal/pipe{
+	dir = 1
+	},
+/area/halflife/indoors/sewer)
 "kAF" = (
 /obj/structure/railing{
 	dir = 1
@@ -9013,7 +9027,9 @@
 /area/halflife/indoors/abandoned_ship/tugboat)
 "osg" = (
 /obj/structure/halflife/pipes/horizontal/single,
-/turf/open/floor/plating/indoor/metal/industrial,
+/turf/open/floor/plating/indoor/metal/walkway{
+	dir = 1
+	},
 /area/halflife/indoors/old_harbor)
 "osz" = (
 /obj/structure/closet/crate/halflife,
@@ -9958,6 +9974,14 @@
 /obj/structure/bed/halflife/bedframe/wire,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
+"pTx" = (
+/obj/effect/spawner/random/halflife/plant_spawner,
+/obj/structure/railing/halflife/solo/industrial,
+/obj/structure/railing/halflife/solo/industrial{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors)
 "pTD" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors)
@@ -11528,6 +11552,9 @@
 /obj/structure/halflife/road_barrier/combine,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors)
+"spT" = (
+/turf/closed/mineral/random/high_chance,
+/area/halflife/indoors/sewer/cave)
 "sqd" = (
 /obj/machinery/door/unpowered/halflife/wood{
 	keylock = 1;
@@ -12522,6 +12549,11 @@
 	dir = 1
 	},
 /area/halflife/indoors/sewer)
+"tRI" = (
+/turf/open/floor/plating/indoor/metal/walkway/end{
+	dir = 1
+	},
+/area/halflife/indoors/trainstation)
 "tSZ" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -12566,7 +12598,9 @@
 /area/halflife/indoors/bar/apartments)
 "tZC" = (
 /obj/structure/halflife/pipes/horizontal/random_alt,
-/turf/open/floor/plating/indoor/metal/industrial,
+/turf/open/floor/plating/indoor/metal/walkway{
+	dir = 1
+	},
 /area/halflife/indoors/old_harbor)
 "tZU" = (
 /obj/structure/flora/tree/halflife/plain/concrete_large,
@@ -12882,6 +12916,11 @@
 /mob/living/basic/halflife/headcrab/armored,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
+"uyS" = (
+/turf/open/floor/plating/indoor/metal/walkway{
+	dir = 1
+	},
+/area/halflife/indoors/old_harbor)
 "uzn" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/machinery/camera{
@@ -18762,9 +18801,9 @@ gXw
 gXw
 gXw
 oiG
-fNv
-cCD
-fNv
+pre
+kzu
+pre
 oiG
 gXw
 gXw
@@ -19049,11 +19088,11 @@ fNv
 fNv
 fNv
 fNv
-fNv
-fNv
-fNv
-fNv
-fNv
+nUU
+pre
+pre
+pre
+txD
 fNv
 fNv
 fNv
@@ -20604,9 +20643,9 @@ oiG
 oiG
 oiG
 oiG
-fNv
-uSF
-fNv
+pre
+pre
+pre
 oiG
 gXw
 gXw
@@ -20892,9 +20931,9 @@ kFw
 bic
 wiB
 oiG
-fNv
-nZy
-fNv
+pre
+pre
+pre
 oiG
 gXw
 gXw
@@ -21936,21 +21975,21 @@ gXw
 gXw
 gXw
 gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
 gXw
 gXw
 gXw
@@ -22080,21 +22119,21 @@ gXw
 gXw
 gXw
 gXw
+spT
 gXw
 gXw
 gXw
 gXw
 gXw
 gXw
+spT
 gXw
 gXw
 gXw
 gXw
 gXw
 gXw
-gXw
-gXw
-gXw
+spT
 gXw
 gXw
 gXw
@@ -22224,21 +22263,21 @@ gXw
 gXw
 gXw
 gXw
+spT
 gXw
+spT
+spT
+spT
+spT
 gXw
+spT
 gXw
+spT
+spT
+spT
+spT
 gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
+spT
 gXw
 gXw
 gXw
@@ -22368,21 +22407,21 @@ gXw
 gXw
 gXw
 gXw
+spT
 gXw
 gXw
 gXw
 gXw
 gXw
 gXw
+spT
 gXw
 gXw
 gXw
 gXw
 gXw
 gXw
-gXw
-gXw
-gXw
+spT
 gXw
 gXw
 gXw
@@ -22512,21 +22551,21 @@ gXw
 gXw
 gXw
 gXw
+spT
 gXw
+spT
+spT
+spT
+spT
 gXw
+spT
 gXw
+spT
+spT
+spT
+spT
 gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
+spT
 gXw
 gXw
 gXw
@@ -22656,21 +22695,21 @@ gXw
 gXw
 gXw
 gXw
+spT
 gXw
 gXw
 gXw
 gXw
 gXw
 gXw
+spT
 gXw
 gXw
 gXw
 gXw
 gXw
 gXw
-gXw
-gXw
-gXw
+spT
 gXw
 gXw
 gXw
@@ -22800,21 +22839,21 @@ gXw
 gXw
 gXw
 gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
 gXw
 gXw
 gXw
@@ -22944,21 +22983,21 @@ gXw
 gXw
 gXw
 gXw
+spT
 gXw
 gXw
 gXw
 gXw
 gXw
 gXw
+spT
 gXw
 gXw
 gXw
 gXw
 gXw
 gXw
-gXw
-gXw
-gXw
+spT
 gXw
 gXw
 gXw
@@ -23088,21 +23127,21 @@ gXw
 gXw
 gXw
 gXw
+spT
 gXw
+spT
+spT
+spT
+spT
 gXw
+spT
 gXw
+spT
+spT
+spT
+spT
 gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
+spT
 gXw
 gXw
 gXw
@@ -23232,21 +23271,21 @@ gXw
 gXw
 gXw
 gXw
+spT
 gXw
 gXw
 gXw
 gXw
 gXw
 gXw
+spT
 gXw
 gXw
 gXw
 gXw
 gXw
 gXw
-gXw
-gXw
-gXw
+spT
 gXw
 gXw
 gXw
@@ -23376,21 +23415,21 @@ gXw
 gXw
 gXw
 gXw
+spT
+gXw
+gXw
+spT
+spT
+spT
+gXw
+spT
 gXw
 gXw
 gXw
 gXw
+spT
 gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
+spT
 gXw
 gXw
 gXw
@@ -23520,21 +23559,21 @@ gXw
 gXw
 gXw
 gXw
+spT
 gXw
 gXw
 gXw
 gXw
 gXw
 gXw
+spT
 gXw
 gXw
 gXw
 gXw
+spT
 gXw
-gXw
-gXw
-gXw
-gXw
+spT
 gXw
 gXw
 gXw
@@ -23664,21 +23703,21 @@ gXw
 gXw
 gXw
 gXw
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
 gXw
 gXw
 gXw
 gXw
+spT
 gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
+spT
 gXw
 gXw
 gXw
@@ -23815,14 +23854,14 @@ gXw
 gXw
 gXw
 gXw
+spT
 gXw
 gXw
 gXw
 gXw
 gXw
 gXw
-gXw
-gXw
+spT
 gXw
 gXw
 gXw
@@ -23959,14 +23998,14 @@ gXw
 gXw
 gXw
 gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
+spT
+spT
+spT
+spT
+spT
+spT
+spT
+spT
 gXw
 gXw
 gXw
@@ -25695,10 +25734,10 @@ gXw
 gXw
 gXw
 oiG
-fNv
-fNv
-nZy
-fNv
+pre
+pre
+pre
+pre
 oiG
 gXw
 gXw
@@ -25986,7 +26025,7 @@ oiG
 sXY
 fNv
 nZy
-fNv
+djS
 oiG
 gXw
 gXw
@@ -26130,7 +26169,7 @@ iNS
 oiG
 fNv
 nZy
-fNv
+djS
 oiG
 gXw
 gXw
@@ -26274,7 +26313,7 @@ gXw
 oiG
 fNv
 nZy
-fNv
+djS
 oiG
 gXw
 gXw
@@ -26418,7 +26457,7 @@ gXw
 oiG
 fNv
 nZy
-fNv
+djS
 oiG
 gXw
 gXw
@@ -28396,10 +28435,10 @@ oiG
 oiG
 oiG
 oiG
-oiG
-oiG
-oiG
-oiG
+pre
+pre
+pre
+pre
 oiG
 oiG
 oiG
@@ -28506,7 +28545,7 @@ rQB
 ldg
 tED
 hYz
-sEm
+uyS
 ldg
 gXw
 oiG
@@ -28539,12 +28578,12 @@ gXw
 gXw
 gXw
 gXw
-gXw
-gXw
-gXw
-gXw
-gXw
-gXw
+oiG
+xal
+xal
+xal
+xal
+oiG
 gXw
 gXw
 gXw
@@ -28650,7 +28689,7 @@ rQB
 ldg
 krG
 hYz
-sEm
+uyS
 ldg
 oiG
 oiG
@@ -28685,9 +28724,9 @@ oiG
 oiG
 oiG
 oiG
-oiG
-oiG
-oiG
+pre
+pre
+pre
 oiG
 oiG
 oiG
@@ -28793,8 +28832,8 @@ rQB
 rQB
 ldg
 fWD
-sEm
-sEm
+uyS
+uyS
 ldg
 dQZ
 djS
@@ -28937,8 +28976,8 @@ rQB
 rQB
 ldg
 tED
-sEm
-sEm
+uyS
+uyS
 nbF
 kqD
 djS
@@ -29225,8 +29264,8 @@ rQB
 rQB
 ldg
 eaf
-sEm
-sEm
+uyS
+uyS
 gjD
 kqD
 uxI
@@ -29369,8 +29408,8 @@ rQB
 rQB
 ldg
 dlE
-sEm
-sEm
+uyS
+uyS
 ldg
 kqD
 byQ
@@ -29513,8 +29552,8 @@ biR
 rQB
 ldg
 osg
-sEm
-sEm
+uyS
+uyS
 ldg
 kqD
 xeC
@@ -29657,8 +29696,8 @@ rQB
 rQB
 ldg
 tZC
-sEm
-sEm
+uyS
+uyS
 ldg
 kqD
 djS
@@ -43238,8 +43277,8 @@ bzg
 bzg
 bzg
 bzg
-xRb
-xRb
+dcp
+dcp
 dcp
 dcp
 dcp
@@ -43381,9 +43420,9 @@ cKb
 gPJ
 nzB
 guM
-xRb
-xRb
-xRb
+pTx
+dcp
+dcp
 dcp
 dcp
 dcp
@@ -43524,10 +43563,10 @@ cKb
 kQQ
 cKb
 ltR
-xRb
-xRb
-xRb
-xRb
+dcp
+dcp
+dcp
+dcp
 dcp
 dcp
 dcp
@@ -46703,7 +46742,7 @@ xFi
 xza
 uTK
 mXf
-mXf
+tRI
 qHG
 qHG
 qHG
@@ -46991,7 +47030,7 @@ xFi
 xza
 uTK
 mXf
-mXf
+tRI
 qHG
 qHG
 qHG
@@ -47999,7 +48038,7 @@ xFi
 xza
 uTK
 mXf
-mXf
+tRI
 qHG
 qHG
 qHG
@@ -48287,7 +48326,7 @@ xFi
 xza
 uTK
 mXf
-mXf
+tRI
 qHG
 qHG
 qHG
