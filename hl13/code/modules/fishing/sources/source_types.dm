@@ -65,8 +65,8 @@
 	fish_table = list(
 		FISHING_DUD = 10,
 		/obj/item/fish/leech = 6,
-		/obj/item/fish/catfish = 4,
-		/obj/item/fish/perch = 5,
+		/obj/item/fish/catfish = 2,
+		/obj/item/fish/perch = 1,
 	)
 	fishing_difficulty = FISHING_DEFAULT_DIFFICULTY + 20
 	fish_source_flags = FISH_SOURCE_FLAG_EXPLOSIVE_MALUS

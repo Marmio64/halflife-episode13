@@ -16,9 +16,12 @@
 	/// Additional reward that the foreman can take out of the machine for 100% completing quota. To be distributed, or kept entirely for him...
 	var/cashprize = 0
 
+	var/list/vendoptions = list("Dispense standard Container", "Dispense difficult Advanced Container")
+
 /obj/machinery/box_vendor/examine(mob/user)
 	. = ..()
 	. += span_notice("The vendor has [boxes_stored] boxes left to dispense.")
+	. += span_notice("[SSdaylight.factory_containers_filled] containers out of the [SSdaylight.factory_container_goal] quota have been filled.")
 	if(cashprize)
 		. += span_notice("The vendor has a cash prize of [cashprize] credits stored inside for completing the quota. It can be redeemed by swiping a Foreman-level or higher card on it.")
 
@@ -30,20 +33,38 @@
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		return
 
-	playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
+	var/dispensation = input(user, "What container to dispense?", "Choices") as null|anything in vendoptions
+	switch(dispensation)
+		if("Dispense standard Container")
+			playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
 
-	if(!do_after(user, 3 SECONDS, src))
-		to_chat(usr, span_warning("The machine did not finish depositing a box."))
-		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
-		return
+			if(!do_after(user, 3 SECONDS, src))
+				to_chat(usr, span_warning("The machine did not finish depositing a box."))
+				playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+				return
 
-	playsound(src, 'hl13/sound/machines/combine_button5.ogg', 50, TRUE, extrarange = -3)
+			playsound(src, 'hl13/sound/machines/combine_button5.ogg', 50, TRUE, extrarange = -3)
 
-	playsound(src, 'hl13/sound/machines/combine_dispense.ogg', 50, TRUE, extrarange = -3)
+			playsound(src, 'hl13/sound/machines/combine_dispense.ogg', 50, TRUE, extrarange = -3)
 
-	boxes_stored--
+			boxes_stored--
 
-	new /obj/item/factory_construction/container(loc)
+			new /obj/item/factory_construction/container(loc)
+		else
+			playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
+
+			if(!do_after(user, 3 SECONDS, src))
+				to_chat(usr, span_warning("The machine did not finish depositing a box."))
+				playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+				return
+
+			playsound(src, 'hl13/sound/machines/combine_button5.ogg', 50, TRUE, extrarange = -3)
+
+			playsound(src, 'hl13/sound/machines/combine_dispense.ogg', 50, TRUE, extrarange = -3)
+
+			boxes_stored--
+
+			new /obj/item/factory_construction/container/advanced(loc)
 
 	return
 
