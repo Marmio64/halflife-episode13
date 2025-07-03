@@ -341,6 +341,42 @@
 
 	mood_message = "<span class='warning'>I can hear the bugs all around me...</span>\n"
 
+
+// coastal district areas
+
+/area/halflife/indoors/old_harbor
+	name = "Abandoned Harbor Buildings"
+
+/area/halflife/outdoors/harbor
+	name = "Abandoned Harbor"
+	first_time_text = "Abandoned Harbor"
+
+/area/halflife/outdoors/ocean
+	name = "Ocean"
+	first_time_text = "The Baltic Sea"
+
+/area/halflife/indoors/abandoned_ship
+	name = "Abandoned Ship"
+	area_limited_icon_smoothing = /area/halflife/indoors/abandoned_ship //shouldnt smooth with the docks because that looks ugly and makes no sense
+	mood_bonus = -1 //not too bad but being on a pre-war ship that is either going to be beached (none of these are) or drift out to sea and sink should be spooky
+	mood_message = "<span class='warning'>I can hear the hull groaning constantly...</span>\n"
+
+// the names of the ships are just pseudo-random ones from last.txt and first_male.txt
+
+/area/halflife/indoors/abandoned_ship/cargo
+	name = "Abandoned Cargo Ship"
+	first_time_text = "MV Reinhold Trzyński"
+
+/area/halflife/indoors/abandoned_ship/tugboat
+	name = "Abandoned Tugboat"
+	first_time_text = "MV Sokal-5"
+
+/area/halflife/indoors/abandoned_ship/wrecked_ferry
+	name = "Wrecked Ferry"
+	first_time_text = "MV Euzebiusz Weznikaz"
+
+// centcom areas
+
 /area/centcom/halflife
 	name = "Overwatch Rail Interchange"
 	ambient_buzz = 'hl13/sound/ambience/town_ambience.ogg'
@@ -368,6 +404,7 @@
 /area/centcom/halflife/rebel
 	name = "Resistance Outpost"
 	ambient_buzz = 'hl13/sound/ambience/town_ambience.ogg'
+	first_time_text = "Resistance Safehouse"
 
 /area/centcom/halflife/deepwaters
 	name = "Deep Waters"

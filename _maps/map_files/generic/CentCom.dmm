@@ -435,6 +435,9 @@
 /obj/effect/turf_decal/loading_area,
 /turf/open/floor/iron,
 /area/centcom/tdome/observation)
+"dO" = (
+/turf/open/floor/plating/indoor/metal/combine/alt2,
+/area/centcom/halflife/ota)
 "dP" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/indoor/trainfloor,
@@ -863,7 +866,7 @@
 /obj/machinery/ration_vendor{
 	pixel_y = 32
 	},
-/turf/open/floor/plating/indoor/metal/smooth,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/centcom/halflife/ota)
 "js" = (
 /turf/open/floor/plating/ground/brickroad,
@@ -1193,16 +1196,16 @@
 /area/centcom/tdome/observation)
 "on" = (
 /obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 2;
-	height = 8;
-	name = "Backup Shuttle Dock";
+	dir = 2;
+	dwidth = 25;
+	height = 50;
+	name = "Secondary Escape Train Stop";
 	roundstart_template = /datum/map_template/shuttle/emergency/backup;
 	shuttle_id = "backup_away";
-	width = 8
+	width = 50
 	},
-/turf/open/space/basic,
-/area/space)
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/centcom/halflife)
 "op" = (
 /obj/structure/sink/directional/west,
 /obj/structure/mirror/directional/east,
@@ -1272,7 +1275,7 @@
 /obj/machinery/door/poddoor/ert{
 	id = "XCCertstore"
 	},
-/turf/open/floor/plating/indoor/metal/smooth,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/centcom/halflife/ota)
 "pp" = (
 /obj/item/reagent_containers/pill/patch/medkit,
@@ -1421,7 +1424,7 @@
 	name = "Dispatch Bay"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/admin/general,
-/turf/open/floor/plating/indoor/metal/smooth,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/centcom/halflife/ota)
 "qK" = (
 /obj/item/kirbyplants/organic/plant22,
@@ -1489,7 +1492,7 @@
 	dwidth = 25;
 	height = 50;
 	json_key = "emergency";
-	name = "CentCom Emergency Shuttle Dock";
+	name = "Escape Train Stop";
 	shuttle_id = "emergency_away";
 	width = 50
 	},
@@ -2203,7 +2206,7 @@
 	name = "Response Train Shed"
 	},
 /obj/effect/mapping_helpers/airlock/access/all/admin/general,
-/turf/open/floor/plating/indoor/metal/smooth,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/centcom/halflife/ota)
 "zW" = (
 /obj/structure/table,
@@ -3465,10 +3468,6 @@
 /area/centcom/central_command_areas/supplypod/loading/one)
 "OS" = (
 /obj/structure/table/halflife/metal/heavy,
-/obj/item/storage/backpack/satchel{
-	pixel_x = -5;
-	pixel_y = -8
-	},
 /obj/item/ammo_box/magazine/ar2{
 	pixel_x = -10;
 	pixel_y = 12
@@ -3500,6 +3499,10 @@
 /obj/item/grenade/c4{
 	pixel_x = 8;
 	pixel_y = -3
+	},
+/obj/item/storage/backpack/halflife/satchel/military{
+	pixel_x = -9;
+	pixel_y = -10
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/centcom/halflife/ota)
@@ -3846,7 +3849,7 @@
 /area/centcom/halflife/ota)
 "Sw" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/nodirectional,
-/turf/open/floor/plating/indoor/metal/smooth,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/centcom/halflife/ota)
 "Sz" = (
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -4220,7 +4223,7 @@
 /area/centcom/tdome/observation)
 "Xa" = (
 /obj/machinery/combine_walllight/directional/east,
-/turf/open/floor/plating/indoor/metal/smooth,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/centcom/halflife/ota)
 "Xb" = (
 /obj/structure/railing/halflife/solo{
@@ -52806,7 +52809,7 @@ aa
 aa
 aa
 aa
-on
+aa
 aa
 aa
 aa
@@ -54008,7 +54011,7 @@ iK
 DV
 nu
 nu
-nu
+dO
 nu
 iK
 OS
@@ -54263,14 +54266,14 @@ RI
 Io
 iK
 kf
-nu
-nu
-nu
-nu
+dO
+dO
+dO
+dO
 pn
-nu
+dO
 Xa
-nu
+dO
 zl
 iK
 kj
@@ -54520,8 +54523,8 @@ RI
 Io
 iK
 hE
-nu
-nu
+dO
+dO
 rb
 iK
 iK
@@ -54777,8 +54780,8 @@ RI
 Io
 iK
 be
-nu
-nu
+dO
+dO
 Hd
 iK
 tM
@@ -55034,14 +55037,14 @@ RI
 Io
 iK
 Kr
-nu
-nu
+dO
+dO
 SL
 iK
 jp
-nu
-nu
-nu
+dO
+dO
+dO
 iK
 Io
 kj
@@ -55291,11 +55294,11 @@ RI
 Io
 iK
 nI
-nu
-nu
-nu
+dO
+dO
+dO
 Sw
-nu
+dO
 BU
 BU
 Nn
@@ -55548,14 +55551,14 @@ RI
 Io
 iK
 DV
-nu
-nu
+dO
+dO
 fM
 iK
 jp
-nu
-nu
-nu
+dO
+dO
+dO
 iK
 Io
 kj
@@ -65828,7 +65831,7 @@ jN
 Vi
 Vi
 Vi
-jN
+on
 Vi
 Vi
 Vi
