@@ -257,7 +257,7 @@
 /datum/reagent/water/dirty/salt
 	name = "Salt Water"
 	description = "Water mixed with salt. Makes you thirsty, and tastes far too salty."
-	taste_description = "filthy water"
+	taste_description = "salty water"
 	disgust = 6
 	hydration = -4
 

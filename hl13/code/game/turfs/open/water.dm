@@ -228,7 +228,7 @@
 		if(leeches)
 			H.visible_message("<span class='danger'>[H] is bit up by leeches!</span>",
 										"<span class='userdanger'>This water is filled with leeches, get out!</span>")
-			H.adjustBruteLoss(25)
+			H.adjustBruteLoss(15)
 			H.emote("scream")
 		if(!(M.swimming))
 			switch(depth)

@@ -97,6 +97,10 @@
 /obj/structure/bed/halflife/mattress/stained,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/virology)
+"aew" = (
+/obj/structure/halflife/cone,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/alley/restrictedblock)
 "aeD" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "arrivals_train_line_external";
@@ -104,6 +108,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/tracks)
+"aeF" = (
+/obj/machinery/light/small/cyan/directional/south,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors)
 "afh" = (
 /turf/closed/wall/halflife/brick/grey,
 /area/halflife/indoors/scienceunion)
@@ -153,10 +161,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/abandoned_ship/cargo)
-"aic" = (
-/obj/structure/halflife/trash/papers/three,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors)
 "aiK" = (
 /obj/structure/closet/crate/halflife,
 /obj/item/pickaxe,
@@ -229,9 +233,11 @@
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/outdoors/roofs)
 "amb" = (
-/obj/structure/flora/tree/halflife/plain/concrete_large,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors)
+/obj/machinery/door/unpowered/halflife/metal{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "amc" = (
 /obj/structure/halflife/rug/red,
 /obj/structure/alien/weeds/node,
@@ -307,12 +313,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/dispatch)
-"arw" = (
-/obj/structure/railing/corner{
-	dir = 1
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "arC" = (
 /obj/item/target,
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -352,6 +352,12 @@
 	},
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
+"atU" = (
+/obj/structure/halflife/trash/papers/three{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors)
 "auf" = (
 /obj/machinery/power/halflife/streetlamphalt,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -359,6 +365,11 @@
 "auP" = (
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/alley)
+"ava" = (
+/obj/structure/closet/halflife/engineering_personal,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "avf" = (
 /obj/structure/halflife/road_barrier{
 	dir = 8
@@ -366,11 +377,9 @@
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors)
 "avi" = (
-/obj/effect/decal/cleanable/blood/trails{
-	dir = 6
-	},
-/turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/sewer)
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/productioncenter/office)
 "awF" = (
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/checkered,
@@ -382,6 +391,14 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate/border/warning,
 /area/halflife/indoors/old_harbor)
+"awQ" = (
+/obj/structure/halflife/road/verticalcrossing{
+	pixel_y = 15
+	},
+/turf/open/floor/plating/ground/brickroad{
+	dir = 1
+	},
+/area/halflife/outdoors/plaza)
 "awV" = (
 /obj/machinery/greenscreen_camera{
 	dir = 1
@@ -427,12 +444,6 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/bar)
-"azA" = (
-/obj/structure/stairs/halflife/concrete{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/indoors/productioncenter)
 "azJ" = (
 /turf/open/floor/plating/indoor/tile/green,
 /area/halflife/indoors/hydroponics)
@@ -471,6 +482,11 @@
 /obj/machinery/light/small/cyan/directional/east,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/prison)
+"aCp" = (
+/obj/machinery/door/unpowered/halflife/metal,
+/obj/effect/decal/cleanable/blood/trails,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "aCt" = (
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/indoor/metal/walkway,
@@ -515,6 +531,10 @@
 "aGi" = (
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/abandoned_ship/wrecked_ferry)
+"aGR" = (
+/obj/effect/decal/cleanable/blood/trails,
+/turf/open/floor/plating/indoor/metal/grate/border,
+/area/halflife/indoors/sewer)
 "aHf" = (
 /turf/open/openspace,
 /area/halflife/outdoors/harbor)
@@ -681,12 +701,6 @@
 "aUo" = (
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/abandoned_ship/tugboat)
-"aVt" = (
-/obj/structure/railing{
-	dir = 9
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "aVC" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/alien/weeds,
@@ -708,6 +722,10 @@
 /obj/structure/halflife/trash/food/dinner,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
+"aWS" = (
+/obj/structure/flora/tree/halflife/plain/concrete_thin,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors)
 "aWU" = (
 /obj/structure/chair/halflife/metal/blue{
 	dir = 8
@@ -727,6 +745,14 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/antlioncave)
+"aYb" = (
+/mob/living/basic/halflife/zombie,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
+"aYc" = (
+/obj/structure/halflife/cone,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/alley/restrictedblock)
 "aYm" = (
 /obj/machinery/combine_walllight/directional/south{
 	pixel_y = 24
@@ -945,6 +971,13 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
+"bmO" = (
+/obj/machinery/camera{
+	c_tag = "Manufacturing Plant East";
+	dir = 9
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "bmW" = (
 /obj/structure/flora/xen/leafy,
 /obj/structure/alien/weeds,
@@ -963,10 +996,6 @@
 /obj/effect/landmark/start/scientist,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
-"bnV" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/sewer)
 "bob" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/old_harbor)
@@ -1020,9 +1049,6 @@
 /obj/modular_map_root/sewerright,
 /turf/closed/mineral/random,
 /area/halflife/indoors/sewer/cave)
-"bub" = (
-/turf/closed/wall/halflife/concrete,
-/area/halflife/outdoors/tracks)
 "bug" = (
 /obj/machinery/door/unpowered/halflife/metal/mirrored/red{
 	locked = 1;
@@ -1042,6 +1068,13 @@
 /obj/item/autopsy_scanner,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
+"bvk" = (
+/obj/structure/halflife/trash/papers/two{
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "bvx" = (
 /obj/structure/table/halflife/no_smooth/large/metal,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -1151,10 +1184,6 @@
 /obj/machinery/light/small/cyan/directional/south,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/scienceunion)
-"bED" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/maint/nodirectional,
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/indoors/sewer/tunnel)
 "bFq" = (
 /obj/structure/railing{
 	dir = 8
@@ -1253,21 +1282,10 @@
 /obj/effect/turf_decal/halflife/covering/wallpaper/green,
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/indoors/townhall)
-"bND" = (
-/obj/machinery/light/small/cyan/directional/east,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/alley/restrictedblock)
 "bNS" = (
 /obj/machinery/newscaster/directional/east,
 /turf/open/floor/plating/indoor/tiled9,
 /area/halflife/indoors/hospital)
-"bOk" = (
-/obj/machinery/door/unpowered/halflife/seethrough/fence/wire{
-	keylock = 1;
-	lockid = "townhall"
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "bOy" = (
 /obj/machinery/chem_heater,
 /obj/effect/turf_decal/trimline/yellow/warning,
@@ -1389,6 +1407,13 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/roofs)
+"cba" = (
+/obj/machinery/camera{
+	c_tag = "Science Union Desk";
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/tile,
+/area/halflife/indoors/scienceunion)
 "cbm" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/laborunion)
@@ -1434,12 +1459,6 @@
 "cdq" = (
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/townhall/civilprotection)
-"cdW" = (
-/obj/structure/halflife/trash/papers/one{
-	dir = 1
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "ceo" = (
 /obj/structure/sink/halflife,
 /obj/structure/mirror/halflife{
@@ -1486,6 +1505,9 @@
 /obj/item/watertank/cleanup,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
+"cga" = (
+/turf/closed/wall/halflife/brick,
+/area/halflife/outdoors/tracks)
 "cgr" = (
 /obj/structure/alien/weeds,
 /obj/effect/decal/cleanable/blood/trails{
@@ -1515,6 +1537,7 @@
 /obj/machinery/recharger{
 	pixel_y = 6
 	},
+/obj/structure/halflife/rug/rubber,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection)
 "chu" = (
@@ -1533,12 +1556,6 @@
 "chK" = (
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/store)
-"chS" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/alley/restrictedblock)
 "cii" = (
 /obj/machinery/camera/directional/north{
 	c_tag = "Dispatch Building - Roof North"
@@ -1748,10 +1765,6 @@
 	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/storage)
-"cvr" = (
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/plating/indoor/checkered,
-/area/halflife/indoors/townhall/secondfloor)
 "cvt" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors)
@@ -2029,9 +2042,9 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors)
 "cMW" = (
-/obj/structure/flora/tree/halflife/plain/thin,
-/turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors)
+/obj/machinery/door/unpowered/halflife/seethrough/fence/wire,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "cNp" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -2108,12 +2121,6 @@
 /obj/item/mop,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
-"cRp" = (
-/obj/machinery/door/unpowered/halflife/metal{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors)
 "cRD" = (
 /turf/open/floor/plating/indoor/metal/pipe/intersection{
 	dir = 8
@@ -2124,9 +2131,9 @@
 /turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/indoors/townhall/secondfloor)
 "cSf" = (
-/obj/structure/flora/tree/halflife/plain/thin,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors)
+/obj/structure/halflife/sign/workers,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/sewer/tunnel)
 "cSg" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/townhall/civilprotection)
@@ -2267,11 +2274,9 @@
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/apartments/primary)
 "dbX" = (
-/obj/structure/stairs/halflife/concrete{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/indoors/sewer/tunnel)
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/productioncenter/office)
 "dcp" = (
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
@@ -2442,10 +2447,6 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/abandoned_ship/cargo)
-"dnh" = (
-/obj/structure/halflife/fence/wire,
-/turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors/alley)
 "dno" = (
 /obj/machinery/camera{
 	c_tag = "Primary Apartments"
@@ -2477,12 +2478,6 @@
 "dqo" = (
 /turf/open/floor/plating/indoor/metal/pipe/intersection,
 /area/halflife/outdoors/harbor)
-"dqu" = (
-/obj/structure/halflife/rug/red{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/woodc/mosaic,
-/area/halflife/indoors/townhall)
 "dqR" = (
 /obj/structure/halflife/trash/garbage{
 	pixel_x = 4;
@@ -2503,12 +2498,11 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/distributioncenter)
 "drf" = (
-/obj/structure/halflife/leaves,
-/obj/structure/halflife/road_barrier{
-	dir = 8
+/obj/effect/decal/cleanable/blood/trails{
+	dir = 9
 	},
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/alley/restrictedblock)
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "drm" = (
 /obj/structure/halflife/road/verticalcrossing{
 	pixel_y = -15
@@ -2532,6 +2526,10 @@
 "drB" = (
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/productioncenter/office)
+"dsg" = (
+/obj/structure/halflife/trash/bricks,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/plaza)
 "dso" = (
 /obj/structure/railing{
 	dir = 5
@@ -2700,10 +2698,6 @@
 	},
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/townhall/civilprotection)
-"dBh" = (
-/obj/machinery/light/small/cyan/directional/east,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/south_checkpoint)
 "dBj" = (
 /obj/effect/turf_decal/halflife/covering/paint/gray,
 /turf/closed/wall/halflife/concrete,
@@ -2860,6 +2854,11 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/sewer)
+"dPV" = (
+/obj/structure/closet/crate/bin,
+/obj/effect/spawner/random/halflife/loot/trash,
+/turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors/trainstation)
 "dQK" = (
 /obj/effect/landmark/carepackage,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -2876,6 +2875,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/prison)
+"dRG" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors)
 "dRH" = (
 /obj/effect/turf_decal/box/white/corners{
 	dir = 8
@@ -2887,15 +2890,6 @@
 /obj/structure/halflife/barrel/single/toxic/three,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
-"dSE" = (
-/obj/structure/fluff/traveltile{
-	aportalgoesto = "outlands_surface_left";
-	aportalid = "city_surface_left"
-	},
-/turf/open/floor/plating/indoor/metal/grate/border{
-	dir = 1
-	},
-/area/halflife/indoors)
 "dTR" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/indoor/metal/walkway/corner{
@@ -2978,11 +2972,6 @@
 /obj/structure/halflife/trash/garbage/dumpster,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
-"eaN" = (
-/obj/structure/halflife/leaves,
-/obj/structure/halflife/pole/directional/east,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "eaQ" = (
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/grass,
@@ -3042,6 +3031,12 @@
 "eeu" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/bar/apartments)
+"eeR" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley/restrictedblock)
 "efj" = (
 /obj/structure/stairs/halflife/combine{
 	dir = 1
@@ -3185,10 +3180,6 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/carpet/shaggy/blue,
 /area/halflife/indoors/old_harbor)
-"eny" = (
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors)
 "eoe" = (
 /turf/open/floor/plating/indoor/metal/grate/border{
 	dir = 1
@@ -3267,13 +3258,6 @@
 "etb" = (
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/alley/restrictedblock)
-"etg" = (
-/obj/structure/fluff/traveltile{
-	aportalgoesto = "outlands_surface_left";
-	aportalid = "city_surface_left"
-	},
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/indoors)
 "etx" = (
 /obj/structure/railing/halflife/solo{
 	dir = 4
@@ -3341,9 +3325,9 @@
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/trainstation)
 "ewD" = (
-/obj/structure/halflife/trash/bricks,
+/obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors/plaza)
+/area/halflife/outdoors)
 "exK" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/outdoors/harbor)
@@ -3395,7 +3379,7 @@
 /obj/structure/halflife/fence/vertical/wire/east/barb,
 /obj/structure/halflife/fence/wire/end/west/barb,
 /turf/open/misc/beach/sand,
-/area/halflife/outdoors)
+/area/halflife/outdoors/coast)
 "eBP" = (
 /obj/effect/landmark/observer_start,
 /turf/open/floor/plating/ground/grass,
@@ -3594,9 +3578,11 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/alley/restrictedblock)
 "eOG" = (
-/obj/structure/halflife/sign/workers,
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/indoors/sewer/tunnel)
+/obj/machinery/power/halflife/streetlamphalt{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors)
 "eOM" = (
 /obj/structure/halflife/publicphone,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -3614,10 +3600,6 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/tracks)
-"ePt" = (
-/obj/machinery/light/small/cyan/directional/south,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "ePQ" = (
 /obj/structure/alien/weeds,
 /obj/structure/table/halflife/wood,
@@ -3681,12 +3663,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/prison)
-"eUn" = (
-/obj/structure/halflife/trash/papers/three{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "eWP" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/chair/comfy/halflife/armchair{
@@ -3772,13 +3748,19 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/abandoned_ship/tugboat)
 "fac" = (
-/obj/machinery/door/unpowered/halflife/seethrough/fence/wire,
-/turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/sewer)
+/obj/structure/halflife/road_barrier,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors)
 "fbV" = (
 /obj/structure/flora/tree/halflife/plain/concrete_thin,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/alley/slums)
+"fbZ" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors)
 "fcI" = (
 /obj/effect/turf_decal/halflife/covering/paint/gray,
 /turf/closed/wall/halflife/concrete,
@@ -3862,6 +3844,12 @@
 	},
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
+"fhv" = (
+/obj/structure/railing/corner{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "fhT" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 4
@@ -4034,12 +4022,12 @@
 /turf/open/openspace,
 /area/halflife/indoors/old_harbor)
 "ftQ" = (
-/obj/structure/fluff/traveltile{
-	aportalgoesto = "outlands_surface_left";
-	aportalid = "city_surface_left"
+/obj/structure/chair/sofa/hl13bench{
+	dir = 8
 	},
+/obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/indoors)
+/area/halflife/outdoors)
 "ftX" = (
 /obj/effect/turf_decal/halflife/covering/wallpaper/green,
 /turf/closed/wall/halflife/brick/grey,
@@ -4088,11 +4076,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/laborunion)
-"fxP" = (
-/obj/effect/spawner/random/halflife/plant_spawner,
-/obj/structure/halflife/leaves,
-/turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors)
 "fxV" = (
 /obj/machinery/light/small/cyan/directional/west,
 /turf/open/floor/plating/indoor/concrete,
@@ -4167,6 +4150,13 @@
 /obj/structure/dresser,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
+"fCk" = (
+/obj/machinery/camera{
+	c_tag = "Train Station Arrivals Lower East";
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/indoors/trainstation)
 "fCv" = (
 /obj/structure/alien/weeds,
 /obj/structure/flora/xen/tinyshrooms,
@@ -4301,6 +4291,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/hospital/office)
+"fKi" = (
+/obj/structure/halflife/road_barrier/combine,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/alley/restrictedblock)
 "fKv" = (
 /obj/structure/reagent_dispensers/fueltank/large{
 	anchored = 1;
@@ -4449,6 +4443,12 @@
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/slums)
+"fUa" = (
+/obj/machinery/power/halflife/streetlamphalt{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley/restrictedblock)
 "fWv" = (
 /obj/machinery/button/door/directional/west{
 	id = "factory"
@@ -4693,16 +4693,11 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/townhall)
-"giO" = (
-/obj/effect/landmark/carpspawn,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/indoors)
 "giV" = (
-/obj/machinery/power/halflife/streetlamphalt{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/alley/restrictedblock)
+/obj/structure/halflife/cone,
+/obj/structure/halflife/pole/directional/north,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "giY" = (
 /obj/structure/halflife/trash/garbage/dumpster/crate,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -4849,12 +4844,6 @@
 "gsM" = (
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/indoors/townhall/courtroom)
-"gsP" = (
-/obj/structure/halflife/road_barrier{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/alley/restrictedblock)
 "gtd" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/townhall/courtroom)
@@ -4884,6 +4873,12 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection)
+"guI" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/maint/nodirectional{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/productioncenter)
 "guM" = (
 /obj/structure/halflife/sign/bar,
 /obj/structure/railing/halflife/solo/industrial{
@@ -4960,8 +4955,12 @@
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors)
 "gzr" = (
-/turf/closed/wall/halflife/brick,
-/area/halflife/outdoors/tracks)
+/obj/structure/fluff/traveltile{
+	aportalgoesto = "outlands_surface_left";
+	aportalid = "city_surface_left"
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/indoors)
 "gzw" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -5035,10 +5034,6 @@
 	dir = 1
 	},
 /area/halflife/indoors/abandoned_ship/wrecked_ferry)
-"gFv" = (
-/obj/structure/halflife/cone,
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/alley/restrictedblock)
 "gGn" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/townhall)
@@ -5055,6 +5050,10 @@
 /obj/machinery/combine_walllight/directional/east,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
+"gIL" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors/trainstation)
 "gJP" = (
 /obj/effect/landmark/start/cook,
 /obj/machinery/light/small/directional/west,
@@ -5113,12 +5112,6 @@
 /obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/indoors)
-"gOR" = (
-/obj/structure/halflife/trash/papers/one{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "gOU" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 4
@@ -5191,6 +5184,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/restaurant)
+"gTg" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "gTQ" = (
 /turf/closed/wall/halflife/sewer,
 /area/halflife/indoors/townhall)
@@ -5370,6 +5367,11 @@
 	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/storage)
+"hgs" = (
+/obj/structure/railing/halflife/solo/industrial,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/checkered,
+/area/halflife/indoors/townhall/secondfloor)
 "hgA" = (
 /obj/machinery/door/unpowered/halflife/wood{
 	keylock = 1;
@@ -5516,6 +5518,15 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors)
+"hsc" = (
+/obj/structure/tank_holder/anesthetic,
+/obj/item/clothing/mask/breath/medical,
+/obj/machinery/camera{
+	c_tag = "Hospital Operating Room 2";
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/hospital)
 "hsV" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/openspace,
@@ -5565,11 +5576,6 @@
 	dir = 1
 	},
 /area/halflife/indoors/abandoned_ship/cargo)
-"hwq" = (
-/obj/effect/spawner/random/halflife/loot/trash,
-/obj/structure/halflife/leaves,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/alley/restrictedblock)
 "hwI" = (
 /obj/structure/sign/poster/halflife/combine/two{
 	pixel_y = 32
@@ -5581,11 +5587,6 @@
 	dir = 1
 	},
 /area/halflife/indoors/sewer)
-"hxA" = (
-/obj/structure/halflife/leaves,
-/obj/structure/halflife/pole/directional/north,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "hxY" = (
 /obj/item/trash/flare,
 /turf/open/halflife/water/salt/deep,
@@ -5663,6 +5664,10 @@
 /obj/machinery/combine_walllight/directional/east,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection)
+"hBd" = (
+/obj/structure/flora/tree/halflife/plain/concrete_large,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors)
 "hCb" = (
 /turf/closed/wall/halflife/brick/grey,
 /area/halflife/indoors/hospital/storage)
@@ -5732,6 +5737,14 @@
 	dir = 1
 	},
 /area/halflife/indoors/productioncenter)
+"hHQ" = (
+/obj/effect/spawner/random/halflife/plant_spawner,
+/obj/machinery/camera{
+	c_tag = "Train Station Arrivals Far Lower East";
+	dir = 8
+	},
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/tracks)
 "hIO" = (
 /obj/structure/table/halflife/no_smooth/wood/stand,
 /obj/structure/halflife/tv/tube/tiny{
@@ -5781,6 +5794,14 @@
 "hOd" = (
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/townhall/civilprotection/armory)
+"hOj" = (
+/obj/structure/halflife/pole/directional/east,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
+"hOo" = (
+/obj/structure/halflife/road_barrier/combine,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/alley/restrictedblock)
 "hOB" = (
 /obj/effect/turf_decal/trimline/blue/line,
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -5807,10 +5828,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/abandoned_ship/cargo)
-"hPa" = (
-/obj/effect/decal/cleanable/blood/trails,
-/turf/open/floor/plating/indoor/metal/grate/border,
-/area/halflife/indoors/sewer)
 "hPj" = (
 /obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/plating/indoor/tiled10,
@@ -5934,6 +5951,14 @@
 	},
 /turf/open/floor/plating/indoor/metal/walkway/corner,
 /area/halflife/outdoors/harbor)
+"hZj" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors)
+"hZH" = (
+/obj/structure/halflife/fence/wire,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/alley)
 "iac" = (
 /turf/open/halflife/water/sewer/deep,
 /area/halflife/indoors/sewer)
@@ -5975,10 +6000,6 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/alley/dropshippad)
-"iee" = (
-/obj/structure/halflife/pole/directional/east,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "iei" = (
 /obj/structure/table/halflife/no_smooth/large/metal{
 	dir = 8
@@ -6200,6 +6221,13 @@
 /obj/structure/window/fulltile/halflife/nosmooth/brick,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/townhall/courtroom)
+"ixW" = (
+/obj/structure/halflife/leaves,
+/obj/structure/halflife/road_barrier{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley/restrictedblock)
 "iyn" = (
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/metal/grate/border/warning{
@@ -6294,14 +6322,6 @@
 /obj/structure/table/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/courtroom)
-"iFx" = (
-/obj/structure/halflife/road/verticalcrossing{
-	pixel_y = 15
-	},
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
-	},
-/area/halflife/outdoors/plaza)
 "iFU" = (
 /obj/structure/alien/weeds/node,
 /obj/effect/decal/cleanable/blood/gibs/old,
@@ -6333,11 +6353,11 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/distributioncenter)
 "iGS" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick{
-	dir = 4
+/obj/effect/decal/cleanable/blood/trails{
+	dir = 1
 	},
-/turf/open/floor/plating/indoor/woodc/mosaic,
-/area/halflife/indoors/bar)
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "iHl" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/machinery/light/small/directional/west,
@@ -6375,11 +6395,6 @@
 /obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
-"iJw" = (
-/obj/structure/halflife/leaves,
-/obj/machinery/power/halflife/streetlamphalt,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "iKf" = (
 /obj/structure/table/halflife/no_smooth/large/wood/desk,
 /obj/item/modular_computer/laptop/preset/civilian{
@@ -6738,7 +6753,7 @@
 	dir = 1
 	},
 /turf/open/misc/beach/sand,
-/area/halflife/outdoors)
+/area/halflife/outdoors/coast)
 "jge" = (
 /obj/structure/chair/halflife/metal/blue{
 	dir = 4
@@ -6776,11 +6791,6 @@
 /obj/effect/landmark/start/engineer,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
-"jiQ" = (
-/obj/structure/halflife/road_barrier,
-/obj/structure/halflife/pole/directional/east,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "jkc" = (
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -6851,6 +6861,10 @@
 /obj/machinery/vending/combine_wallmed/directional/north,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/hospital/storage)
+"jsa" = (
+/obj/structure/flora/tree/halflife/plain,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors)
 "jsE" = (
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/indoor/woodc,
@@ -6885,10 +6899,10 @@
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors)
 "jun" = (
-/obj/structure/closet/crate/bin,
-/obj/effect/spawner/random/halflife/loot/trash,
-/turf/open/floor/plating/indoor/trainfloor,
-/area/halflife/indoors/trainstation)
+/obj/structure/halflife/leaves,
+/obj/structure/halflife/pole/directional/north,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "jup" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete,
@@ -6931,6 +6945,11 @@
 	},
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/slums)
+"jyx" = (
+/obj/structure/halflife/leaves,
+/obj/machinery/power/halflife/streetlamphalt,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "jzC" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/structure/halflife/tv/tube/tiny{
@@ -6938,6 +6957,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/prison)
+"jzY" = (
+/obj/effect/landmark/carpspawn,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/indoors)
 "jAR" = (
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/distributioncenter)
@@ -6980,6 +7003,10 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
+"jEX" = (
+/obj/structure/halflife/trash_decal,
+/turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors/trainstation)
 "jFW" = (
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/laborunion)
@@ -7004,6 +7031,10 @@
 "jGM" = (
 /obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors)
+"jGT" = (
+/obj/structure/flora/tree/halflife/plain/thin,
+/turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors)
 "jGX" = (
 /obj/structure/halflife/trash/garbage{
@@ -7062,12 +7093,6 @@
 "jJv" = (
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/abandoned_ship/cargo)
-"jJM" = (
-/obj/effect/decal/cleanable/blood/trails{
-	dir = 9
-	},
-/turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/sewer)
 "jJR" = (
 /obj/structure/halflife/barrel/quadruple/grey,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -7111,6 +7136,12 @@
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/apartments/primary)
+"jNO" = (
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/bar)
 "jOB" = (
 /obj/structure/table/halflife/metal,
 /obj/item/knife/kitchen{
@@ -7233,10 +7264,6 @@
 /obj/machinery/turnstile/brig/halflife/forcefield/botany/nodirectional,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/hydroponics)
-"jXu" = (
-/obj/structure/halflife/pole/directional/west,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "jXV" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -7350,6 +7377,10 @@
 /obj/structure/halflife/fence/wire,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/sewer)
+"kgT" = (
+/obj/structure/halflife/road_barrier,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "khk" = (
 /obj/structure/sign/poster/halflife/combine/four{
 	pixel_y = 32
@@ -7461,11 +7492,6 @@
 	},
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/hospital)
-"kos" = (
-/obj/structure/table/halflife/wood/bar,
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/indoor/tiled10,
-/area/halflife/indoors/bar)
 "koX" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/frame/machine/secured,
@@ -7549,13 +7575,17 @@
 "ktG" = (
 /obj/effect/spawner/random/halflife/loot/scrap,
 /turf/open/misc/beach/sand,
-/area/halflife/outdoors)
+/area/halflife/outdoors/coast)
 "ktJ" = (
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 6
 	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
+"kuz" = (
+/obj/structure/flora/tree/halflife/plain/thin,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors)
 "kuY" = (
 /obj/effect/turf_decal/box/white/corners{
 	dir = 1
@@ -7793,6 +7823,11 @@
 /obj/structure/closet/cabinet,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/apartments/primary)
+"kHA" = (
+/obj/structure/table/halflife/wood/bar,
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/indoors/bar)
 "kHO" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -7836,6 +7871,11 @@
 /obj/item/multitool,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
+"kKR" = (
+/obj/effect/spawner/random/halflife/loot/trash,
+/obj/structure/halflife/leaves,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley/restrictedblock)
 "kKT" = (
 /obj/structure/halflife/pipes/vent,
 /obj/machinery/telecomms/server/presets/common/birdstation,
@@ -7903,10 +7943,6 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors/trainstation)
-"kPB" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "kPI" = (
 /turf/open/openspace,
 /area/halflife/indoors/productioncenter/upper)
@@ -7987,6 +8023,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
+"kWD" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/alley/dropshippad)
 "kWO" = (
 /obj/structure/chair/halflife/wood/padded{
 	dir = 4
@@ -8018,6 +8058,15 @@
 /obj/effect/landmark/start/civil_protection_officer,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
+"kXA" = (
+/obj/structure/fluff/traveltile{
+	aportalgoesto = "outlands_surface_left";
+	aportalid = "city_surface_left"
+	},
+/turf/open/floor/plating/indoor/metal/grate/border{
+	dir = 1
+	},
+/area/halflife/indoors)
 "kYe" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/alien/weeds,
@@ -8170,6 +8219,13 @@
 /obj/item/mop,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/hospital)
+"lij" = (
+/obj/structure/halflife/road_barrier,
+/obj/structure/halflife/road/horizontalcrossing{
+	pixel_x = -15
+	},
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors)
 "liQ" = (
 /obj/machinery/newscaster/directional/north,
 /turf/open/floor/plating/ground/sidewalk,
@@ -8383,6 +8439,12 @@
 	dir = 1
 	},
 /area/halflife/indoors/old_harbor)
+"lxI" = (
+/obj/structure/halflife/road_barrier{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley/restrictedblock)
 "lyb" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/engineering/nodirectional{
 	dir = 4
@@ -8407,6 +8469,12 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/harbor)
+"lyS" = (
+/obj/effect/decal/cleanable/blood/trails{
+	dir = 6
+	},
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "lzh" = (
 /obj/machinery/camera/directional/west{
 	c_tag = "Dispatch Building - Main Hall West"
@@ -8634,8 +8702,9 @@
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/plaza)
 "lQE" = (
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/indoors/sewer/tunnel)
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
 "lRT" = (
 /obj/machinery/vending/breenwater,
 /turf/open/floor/plating/indoor/cafeteria,
@@ -9049,6 +9118,10 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection)
+"mws" = (
+/obj/structure/halflife/road_barrier,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors)
 "mwA" = (
 /obj/structure/halflife/trash/garbage{
 	pixel_x = 7;
@@ -9061,7 +9134,7 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/apartments/primary)
 "mwO" = (
-/obj/structure/halflife/pole/directional/south,
+/obj/structure/halflife/pole/directional/north,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
 "mxn" = (
@@ -9097,6 +9170,13 @@
 /obj/structure/extinguisher_cabinet/directional/south,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/slums)
+"mza" = (
+/obj/machinery/camera{
+	c_tag = "Factory Entrance Outside";
+	dir = 9
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/plaza)
 "mzS" = (
 /obj/structure/alien/weeds,
 /obj/machinery/light/small/directional/north,
@@ -9185,10 +9265,6 @@
 /obj/machinery/light/directional/east,
 /turf/open/openspace,
 /area/halflife/indoors/old_harbor)
-"mHM" = (
-/obj/machinery/light/small/cyan/directional/south,
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors)
 "mHS" = (
 /obj/structure/closet/halflife/wall/firstaid,
 /obj/item/stack/medical/gauze,
@@ -9303,8 +9379,10 @@
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
 "mNt" = (
-/obj/machinery/power/halflife/streetlamphalt,
-/turf/open/floor/plating/ground/dirt,
+/obj/structure/railing/corner{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
 "mNV" = (
 /obj/effect/turf_decal/box/white/corners{
@@ -9354,6 +9432,12 @@
 /obj/item/stack/spacecash/c20,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/restaurant)
+"mSw" = (
+/obj/structure/halflife/trash/papers/one{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "mSU" = (
 /obj/structure/halflife/trash/garbage{
 	pixel_x = -10;
@@ -9361,10 +9445,6 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/indoors)
-"mSY" = (
-/obj/structure/flora/tree/halflife/plain,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors)
 "mTm" = (
 /obj/machinery/light/small/cyan/directional/north,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
@@ -9504,10 +9584,6 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
-"neL" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/indoor/woodc/fancy,
-/area/halflife/indoors/productioncenter/office)
 "neY" = (
 /obj/structure/railing{
 	dir = 1
@@ -9516,11 +9592,6 @@
 	dir = 1
 	},
 /area/halflife/outdoors/ocean)
-"nff" = (
-/obj/effect/spawner/random/halflife/plant_spawner,
-/obj/structure/halflife/leaves,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/plaza)
 "nfy" = (
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -9557,6 +9628,13 @@
 /obj/structure/flora/xen/leafy,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/abandoned_ship/cargo)
+"nhO" = (
+/obj/structure/fluff/traveltile{
+	aportalgoesto = "outlands_surface_left";
+	aportalid = "city_surface_left"
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/indoors)
 "nij" = (
 /obj/effect/turf_decal/arrows{
 	dir = 4
@@ -9699,6 +9777,10 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/slums)
+"nrv" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "nrI" = (
 /obj/structure/railing/halflife/solo{
 	dir = 8
@@ -9737,6 +9819,10 @@
 	dir = 1
 	},
 /area/halflife/outdoors/ocean)
+"nsh" = (
+/obj/machinery/light/small/cyan/directional/north,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/alley/restrictedblock)
 "nsP" = (
 /obj/structure/halflife/storage/bookshelf{
 	dir = 4
@@ -9891,12 +9977,6 @@
 /obj/effect/spawner/random/halflife/loot/alcohol,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
-"nCk" = (
-/obj/effect/decal/cleanable/blood/trails{
-	dir = 1
-	},
-/turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/sewer)
 "nDF" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -9917,6 +9997,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
+"nFp" = (
+/obj/structure/chair/office/halflife/blue,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/townhall)
 "nFZ" = (
 /obj/structure/chair/halflife/wood{
 	dir = 1
@@ -10063,6 +10147,11 @@
 /obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/abandoned_ship/cargo)
+"nQV" = (
+/obj/effect/spawner/random/halflife/plant_spawner,
+/obj/structure/halflife/leaves,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors)
 "nRa" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	dir = 4
@@ -10079,6 +10168,10 @@
 /obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/plaza)
+"nUw" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/sewer/tunnel)
 "nUD" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/dispatch)
@@ -10117,6 +10210,10 @@
 /obj/structure/railing/halflife/solo/industrial,
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/townhall)
+"nYv" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/productioncenter/upper)
 "nYy" = (
 /obj/structure/bed/halflife/bedframe/cot,
 /obj/structure/bed/halflife/mattress/stale,
@@ -10185,13 +10282,6 @@
 /obj/structure/halflife/trash/books,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/abandoned_ship/tugboat)
-"obD" = (
-/obj/structure/halflife/road_barrier,
-/obj/structure/halflife/road/horizontalcrossing{
-	pixel_x = -15
-	},
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors)
 "oek" = (
 /obj/structure/chair/sofa/hl13bench,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -10312,10 +10402,6 @@
 /obj/structure/table/halflife/no_smooth/wood/square,
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/apartments/primary)
-"ooR" = (
-/obj/structure/halflife/cone,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/alley/restrictedblock)
 "opa" = (
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/alley/slums)
@@ -10334,6 +10420,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
+"oqp" = (
+/obj/machinery/power/halflife/streetlamphalt,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors)
 "oqq" = (
 /obj/structure/frame/machine/secured,
 /turf/open/floor/plating/indoor/metal/grate,
@@ -10374,10 +10464,6 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
-"osM" = (
-/obj/structure/halflife/road_barrier/combine,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/alley/restrictedblock)
 "otC" = (
 /obj/machinery/cryopod{
 	dir = 4
@@ -10425,6 +10511,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/alley/slums)
+"ovo" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/productioncenter/upper)
 "ovF" = (
 /turf/open/openspace,
 /area/halflife/outdoors/roofs)
@@ -10801,12 +10891,6 @@
 "oUK" = (
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/abandoned_ship)
-"oVD" = (
-/obj/structure/halflife/trash/papers/three{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors)
 "oWQ" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/machinery/light/small/cyan/directional/north,
@@ -10849,12 +10933,6 @@
 /obj/effect/mapping_helpers/turn_off_lights_with_lightswitch,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/abandoned_ship/cargo)
-"oXY" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/maint/nodirectional{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/indoors/productioncenter)
 "oYc" = (
 /turf/open/floor/plating/indoor/concrete/stairs{
 	dir = 8
@@ -11325,6 +11403,10 @@
 "pJX" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/slums)
+"pJZ" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/maint/nodirectional,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/sewer/tunnel)
 "pLf" = (
 /obj/machinery/light{
 	dir = 1
@@ -11369,18 +11451,14 @@
 /obj/structure/ladder/halflife/manhole,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/alley/slums)
-"pNp" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/indoor/woodc/fancy,
-/area/halflife/indoors/productioncenter/office)
 "pNG" = (
 /obj/effect/turf_decal/halflife/covering/wallpaper/blue/stripes,
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/indoors/townhall)
 "pOr" = (
-/obj/structure/halflife/pole/directional/north,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
+/obj/structure/halflife/pot/plant,
+/turf/open/floor/plating/indoor/checkered,
+/area/halflife/indoors/townhall)
 "pPr" = (
 /obj/machinery/oven/range,
 /obj/structure/alien/weeds,
@@ -11395,6 +11473,11 @@
 "pQt" = (
 /turf/open/halflife/water/salt/deep,
 /area/halflife/outdoors/ocean)
+"pQv" = (
+/obj/structure/alien/weeds,
+/mob/living/basic/halflife/zombie,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/slums)
 "pQx" = (
 /turf/closed/wall/halflife/brick/grey,
 /area/halflife/indoors/hospital/office)
@@ -11459,9 +11542,8 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
 "pUe" = (
-/obj/structure/halflife/road_barrier,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/sewer/tunnel)
 "pUt" = (
 /obj/structure/railing{
 	dir = 9
@@ -11736,6 +11818,12 @@
 	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/abandoned_ship/wrecked_ferry)
+"qqB" = (
+/obj/structure/stairs/halflife/concrete{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/productioncenter)
 "qqC" = (
 /obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/indoor/metal/pipe,
@@ -11766,13 +11854,6 @@
 "qsd" = (
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/townhall/secondfloor)
-"qsW" = (
-/obj/structure/halflife/trash/papers/two{
-	pixel_x = 1;
-	pixel_y = 5
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "qte" = (
 /obj/structure/table/halflife/no_smooth/large/wood/desk{
 	dir = 4
@@ -11835,11 +11916,9 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors)
 "qxy" = (
-/obj/structure/alien/weeds/node,
-/mob/living/basic/halflife/zombie,
-/obj/item/ammo_casing/spent,
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/slums)
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/checkered,
+/area/halflife/indoors/townhall/secondfloor)
 "qxE" = (
 /obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/tiled10,
@@ -12076,12 +12155,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
-"qKr" = (
-/obj/structure/railing/corner{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "qLr" = (
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
@@ -12303,11 +12376,6 @@
 /obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
-"qWV" = (
-/obj/structure/halflife/cone,
-/obj/structure/halflife/pole/directional/north,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "qXi" = (
 /obj/structure/flora/tree/halflife/plain/concrete_thin,
 /turf/open/floor/plating/ground/sidewalk,
@@ -12422,9 +12490,6 @@
 /obj/effect/spawner/random/halflife/loot/uncommon,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/sewer)
-"rgQ" = (
-/turf/open/floor/plating/indoor/metal/grate/border,
-/area/halflife/indoors)
 "rgS" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc,
@@ -12476,6 +12541,10 @@
 "rlN" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/harbor)
+"rlV" = (
+/obj/machinery/light/small/cyan/directional/south,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "rlZ" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -12526,12 +12595,11 @@
 "rpF" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/slums)
-"rpG" = (
-/obj/structure/chair/sofa/hl13bench{
-	dir = 4
+"rqB" = (
+/obj/structure/halflife/trash/papers/one{
+	dir = 1
 	},
-/obj/structure/halflife/leaves,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
 "rqY" = (
 /turf/closed/wall/halflife/concrete/alt,
@@ -12645,13 +12713,9 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
 "ryY" = (
-/obj/structure/halflife/trash/bricks{
-	dir = 8
-	},
-/obj/structure/railing/corner/end{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/dirt,
+/obj/structure/halflife/road_barrier,
+/obj/structure/halflife/pole/directional/east,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
 "rzw" = (
 /obj/effect/turf_decal/halflife/covering/paint/white,
@@ -12676,10 +12740,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/walkway/end,
 /area/halflife/indoors/abandoned_ship/cargo)
-"rAh" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors)
 "rAu" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/halflife/trash/cardboard{
@@ -12753,6 +12813,12 @@
 "rEY" = (
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/trainstation)
+"rFf" = (
+/obj/machinery/camera{
+	c_tag = "Plaza North West"
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/plaza)
 "rFh" = (
 /obj/structure/table/halflife/metal,
 /obj/machinery/button/door{
@@ -12833,21 +12899,11 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/abandoned_ship/tugboat)
-"rKs" = (
-/obj/machinery/light/small/directional/north,
-/obj/structure/halflife/trash_decal,
-/turf/open/floor/plating/indoor/trainfloor,
-/area/halflife/indoors/trainstation)
 "rLg" = (
 /obj/structure/halflife/rug/rubber,
 /obj/effect/landmark/start/civil_protection_officer,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
-"rMw" = (
-/obj/structure/closet/halflife/engineering_personal,
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/plating/indoor/metal/industrial,
-/area/halflife/indoors/productioncenter)
 "rMW" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/machinery/camera{
@@ -12897,7 +12953,7 @@
 /area/halflife/indoors)
 "rQB" = (
 /turf/open/misc/beach/sand,
-/area/halflife/outdoors)
+/area/halflife/outdoors/coast)
 "rQT" = (
 /obj/structure/table/optable,
 /obj/machinery/light/small/directional/south,
@@ -12951,14 +13007,15 @@
 /obj/machinery/power/halflife/streetlamphalt,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors/trainstation)
+"rTX" = (
+/obj/effect/landmark/start/overseer,
+/obj/structure/halflife/rug/rubber,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection)
 "rTZ" = (
 /obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/alley/slums)
-"rUk" = (
-/obj/structure/table/halflife/wood,
-/turf/open/floor/plating/indoor/checkered,
-/area/halflife/indoors/townhall)
 "rUo" = (
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = 11
@@ -13042,6 +13099,13 @@
 /obj/structure/halflife/road_barrier/concrete/alt,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
+"rYQ" = (
+/obj/machinery/camera{
+	c_tag = "Townhall Back Entrance";
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "rYW" = (
 /obj/structure/table/halflife/no_smooth/wood/stand,
 /obj/item/flashlight/lamp{
@@ -13077,15 +13141,9 @@
 /obj/structure/table/halflife/no_smooth/large/crafting/weaponbench,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection)
-"sby" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors)
 "sbL" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/open/floor/plating/ground/dirt,
+/obj/structure/halflife/pole/directional/south,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
 "sbP" = (
 /obj/machinery/telecomms/hub/preset,
@@ -13112,11 +13170,6 @@
 /obj/structure/flora/xen/leafy,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/abandoned_ship/cargo)
-"sdb" = (
-/obj/structure/halflife/sign/private,
-/obj/structure/halflife/pole/directional/south,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "sdh" = (
 /obj/effect/turf_decal/weather/dirt,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -13318,14 +13371,16 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/indoors/old_harbor)
+"ssl" = (
+/obj/structure/railing{
+	dir = 9
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "sso" = (
 /obj/item/stack/sheet/scrap_metal,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/outdoors/ocean)
-"ssq" = (
-/obj/structure/halflife/road_barrier/combine,
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/alley/restrictedblock)
 "ssJ" = (
 /obj/structure/table/halflife/wood,
 /obj/machinery/camera{
@@ -13449,6 +13504,10 @@
 /obj/item/tank/internals/emergency_oxygen/engi,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
+"sAF" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/indoors)
 "sAI" = (
 /obj/effect/turf_decal/box/white/corners{
 	dir = 8
@@ -13602,8 +13661,8 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/store)
 "sJr" = (
-/obj/structure/halflife/road_barrier,
-/turf/open/floor/plating/ground/brickroad,
+/obj/structure/halflife/trash/papers/three,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors)
 "sJz" = (
 /obj/machinery/light{
@@ -13849,10 +13908,6 @@
 /obj/structure/flora/xen/tinyshrooms,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/abandoned_ship/cargo)
-"sZK" = (
-/obj/structure/halflife/pot/plant,
-/turf/open/floor/plating/indoor/checkered,
-/area/halflife/indoors/townhall)
 "sZV" = (
 /obj/structure/halflife/stationclock,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -13920,6 +13975,12 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/slums)
+"tfZ" = (
+/obj/structure/stairs/halflife/concrete{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/sewer/tunnel)
 "tgC" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/storage/toolbox/electrical{
@@ -13985,6 +14046,13 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
+"tkv" = (
+/obj/machinery/camera{
+	c_tag = "Nexus Coast Stairs";
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "tky" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/alien/weeds,
@@ -14043,10 +14111,6 @@
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/tracks)
-"tmq" = (
-/obj/effect/decal/cleanable/blood/trails,
-/turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/sewer)
 "tmv" = (
 /obj/effect/turf_decal/box/white/corners{
 	dir = 8
@@ -14054,6 +14118,13 @@
 /obj/structure/shipping_container/kahraman/alt,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/outdoors/harbor)
+"tmA" = (
+/obj/machinery/door/unpowered/halflife/seethrough/fence/wire{
+	keylock = 1;
+	lockid = "townhall"
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "tmZ" = (
 /obj/effect/landmark/destabilizer,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -14144,6 +14215,10 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/abandoned_ship/cargo)
+"tty" = (
+/obj/structure/table/halflife/wood,
+/turf/open/floor/plating/indoor/checkered,
+/area/halflife/indoors/townhall)
 "tub" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
 	keylock = 1;
@@ -14511,6 +14586,11 @@
 /obj/machinery/light/small/cyan/directional/west,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/townhall/civilprotection)
+"tXw" = (
+/obj/structure/halflife/sign/private,
+/obj/structure/halflife/pole/directional/south,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "tYa" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	keylock = 1;
@@ -14589,14 +14669,17 @@
 /obj/effect/turf_decal/halflife/covering/tiles/white,
 /turf/closed/wall/halflife/brick/grey,
 /area/halflife/indoors/hospital/storage)
+"uef" = (
+/obj/machinery/camera{
+	c_tag = "Train Station Arrivals Far Lower West";
+	dir = 4
+	},
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/tracks)
 "uey" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors/trainstation)
-"ufd" = (
-/obj/structure/halflife/pot/plant,
-/turf/open/floor/plating/indoor/tiled10,
-/area/halflife/indoors/townhall)
 "ufo" = (
 /obj/machinery/washing_machine,
 /turf/open/floor/plating/indoor/lino,
@@ -14609,7 +14692,7 @@
 	dir = 1
 	},
 /turf/open/misc/beach/sand,
-/area/halflife/outdoors)
+/area/halflife/outdoors/coast)
 "ufR" = (
 /obj/structure/halflife/trash/food/dinner,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -14670,6 +14753,12 @@
 /obj/structure/closet/halflife,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
+"uma" = (
+/obj/structure/railing{
+	dir = 5
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "umG" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/outdoors/harbor)
@@ -14772,6 +14861,11 @@
 	dir = 1
 	},
 /area/halflife/indoors/sewer)
+"uqM" = (
+/obj/structure/halflife/leaves,
+/obj/structure/halflife/pole/directional/east,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "usR" = (
 /obj/effect/landmark/navigate_destination/halflife/store,
 /turf/open/floor/plating/ground/sidewalk,
@@ -14804,9 +14898,13 @@
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/slums)
 "uuM" = (
-/obj/structure/halflife/trash_decal,
-/turf/open/floor/plating/indoor/trainfloor,
-/area/halflife/indoors/trainstation)
+/obj/structure/halflife/leaves,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley/restrictedblock)
+"uvn" = (
+/obj/structure/halflife/rug/mat/welcome,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "uvC" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/machinery/light/small/directional/south,
@@ -14931,17 +15029,12 @@
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/hospital/office)
 "uAQ" = (
-/obj/structure/halflife/trash/papers/two{
-	dir = 1
-	},
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/obj/structure/halflife/pole/directional/west,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
 "uAV" = (
-/obj/structure/flora/xen/cougher,
-/obj/structure/alien/weeds/node,
-/mob/living/basic/halflife/zombie,
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/slums)
+/turf/closed/wall/halflife/concrete,
+/area/halflife/outdoors/tracks)
 "uAW" = (
 /obj/structure/halflife/trash/cardboard{
 	dir = 8;
@@ -15018,6 +15111,10 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter)
+"uIW" = (
+/obj/structure/halflife/road_barrier,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors)
 "uJk" = (
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/tile/kitchen,
@@ -15329,8 +15426,11 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
 "vgj" = (
+/obj/structure/chair/sofa/hl13bench{
+	dir = 4
+	},
 /obj/structure/halflife/leaves,
-/turf/open/floor/plating/ground/sidewalk/inner,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors)
 "vgl" = (
 /turf/open/floor/plating/indoor/metal/combine/alt2,
@@ -15432,6 +15532,12 @@
 	},
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/bar)
+"vnY" = (
+/obj/structure/halflife/trash/papers/three{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors)
 "von" = (
 /obj/machinery/light/small/cyan/directional/west,
 /obj/machinery/gulag_teleporter,
@@ -15452,12 +15558,16 @@
 "vpF" = (
 /obj/structure/halflife/fence/vertical/wire/east/barb,
 /turf/open/misc/beach/sand,
-/area/halflife/outdoors)
+/area/halflife/outdoors/coast)
 "vpY" = (
 /turf/open/floor/plating/indoor/metal/pipe/intersection{
 	dir = 4
 	},
 /area/halflife/indoors/sewer)
+"vqn" = (
+/obj/structure/halflife/pot/plant,
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/indoors/townhall)
 "vqG" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -15512,11 +15622,17 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors)
 "vtA" = (
-/obj/structure/railing{
-	dir = 5
+/turf/open/floor/plating/indoor/metal/grate/border{
+	dir = 1
+	},
+/area/halflife/indoors)
+"vtD" = (
+/obj/machinery/camera{
+	c_tag = "Train Station Arrivals Lower West";
+	dir = 4
 	},
 /turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
+/area/halflife/indoors/trainstation)
 "vtN" = (
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/indoor/metal/walkway{
@@ -15534,10 +15650,6 @@
 /obj/structure/table/halflife/no_smooth/large/wood,
 /turf/open/floor/plating/indoor/carpet/violet,
 /area/halflife/indoors/bar/apartments)
-"vuD" = (
-/obj/structure/chair/office/halflife/blue,
-/turf/open/floor/plating/indoor/woodc/mosaic,
-/area/halflife/indoors/townhall)
 "vvh" = (
 /obj/structure/chair/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -15602,6 +15714,11 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/townhall)
+"vzx" = (
+/obj/effect/spawner/random/halflife/plant_spawner,
+/obj/structure/halflife/leaves,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/plaza)
 "vzG" = (
 /obj/structure/sink/halflife,
 /obj/structure/mirror/halflife{
@@ -15660,6 +15777,13 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/tile/green,
 /area/halflife/indoors/hydroponics)
+"vCM" = (
+/obj/machinery/camera{
+	c_tag = "Hospital Storage";
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/hospital/storage)
 "vDh" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	dir = 4
@@ -15737,7 +15861,11 @@
 "vKH" = (
 /obj/structure/halflife/trash/wood,
 /turf/open/misc/beach/sand,
-/area/halflife/outdoors)
+/area/halflife/outdoors/coast)
+"vKW" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/sewer/tunnel)
 "vLc" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/table/halflife/metal/alt,
@@ -15805,6 +15933,12 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/plaza)
+"vPa" = (
+/obj/structure/halflife/trash/papers/three{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "vPx" = (
 /obj/machinery/camera/directional/east{
 	c_tag = "Dispatch Building - Core"
@@ -15818,10 +15952,6 @@
 	},
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/trainstation)
-"vQy" = (
-/mob/living/basic/halflife/zombie,
-/turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/sewer)
 "vQN" = (
 /obj/structure/halflife/pipes/horizontal/brown,
 /turf/open/floor/plating/indoor/metal/pipe/intersection{
@@ -15869,16 +15999,14 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
-"vVL" = (
-/obj/structure/halflife/trash/papers/three{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors)
 "vWj" = (
 /obj/effect/turf_decal/halflife/covering/wallpaper/blue,
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/slums)
+"vWq" = (
+/obj/effect/decal/cleanable/blood/trails,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "vXy" = (
 /obj/effect/spawner/random/halflife/loot/trash,
 /obj/effect/spawner/random/halflife/loot/trash,
@@ -15989,11 +16117,6 @@
 /obj/structure/table/halflife/metal/heavy,
 /turf/open/floor/plating/indoor/metal/grate/border/warning,
 /area/halflife/indoors/productioncenter)
-"whF" = (
-/obj/structure/railing/halflife/solo/industrial,
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/indoor/checkered,
-/area/halflife/indoors/townhall/secondfloor)
 "whR" = (
 /obj/structure/chair/halflife/metal/blue{
 	dir = 8
@@ -16119,10 +16242,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/prison)
-"wqw" = (
-/obj/machinery/light/small/cyan/directional/north,
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/alley/restrictedblock)
 "wrG" = (
 /obj/structure/table/halflife/no_smooth/large/metal,
 /obj/item/clothing/gloves/latex,
@@ -16140,6 +16259,13 @@
 /obj/structure/halflife/rug/mat,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
+"wrN" = (
+/obj/machinery/camera{
+	c_tag = "Hospital Operating Room";
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/hospital)
 "wrR" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/effect/spawner/random/halflife/loot/consumables,
@@ -16161,10 +16287,14 @@
 /turf/closed/wall/halflife/metal/weak/old,
 /area/halflife/indoors/slums)
 "wsO" = (
-/turf/open/floor/plating/indoor/metal/grate/border{
-	dir = 1
+/obj/structure/halflife/trash/bricks{
+	dir = 8
 	},
-/area/halflife/indoors)
+/obj/structure/railing/corner/end{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors)
 "wsX" = (
 /obj/machinery/light/small/cyan/directional/west,
 /turf/open/floor/plating/indoor/tile/navy,
@@ -16187,10 +16317,6 @@
 "wtl" = (
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/townhall/infirmary)
-"wtK" = (
-/obj/structure/flora/tree/halflife/plain/concrete_large,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/alley/restrictedblock)
 "wtT" = (
 /obj/structure/railing{
 	dir = 1
@@ -16217,11 +16343,6 @@
 	},
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/old_harbor)
-"wvp" = (
-/obj/machinery/door/unpowered/halflife/metal,
-/obj/effect/decal/cleanable/blood/trails,
-/turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/sewer)
 "wvt" = (
 /obj/structure/halflife/toilet{
 	pixel_y = 8
@@ -16352,16 +16473,18 @@
 /obj/item/dice,
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/sewer)
+"wHu" = (
+/obj/structure/halflife/rug/red{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/townhall)
 "wHB" = (
 /obj/item/stack/sheet/scrap_metal,
 /turf/open/halflife/water/shallow{
 	dispensedreagent = /datum/reagent/water/dirty/salt
 	},
 /area/halflife/indoors/abandoned_ship/tugboat)
-"wHN" = (
-/obj/structure/halflife/road_barrier,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors)
 "wJl" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/light/directional/south,
@@ -16455,6 +16578,12 @@
 "wPU" = (
 /obj/machinery/vending/breenwater,
 /turf/open/floor/plating/indoor/tiled10,
+/area/halflife/indoors/townhall)
+"wPW" = (
+/obj/machinery/camera{
+	c_tag = "Town Hall Hallway A"
+	},
+/turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/townhall)
 "wRc" = (
 /turf/open/floor/plating/ground/grass,
@@ -16617,12 +16746,6 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/bar)
-"wYE" = (
-/obj/machinery/power/halflife/streetlamphalt{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors)
 "wYF" = (
 /obj/item/stack/sheet/mineral/sandbags{
 	amount = 10;
@@ -16766,9 +16889,9 @@
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/bar/apartments)
 "xiP" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/indoors)
+/obj/machinery/light/small/cyan/directional/east,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/south_checkpoint)
 "xjn" = (
 /mob/living/simple_animal/halflife/harry,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -16859,6 +16982,9 @@
 /obj/item/binoculars,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/abandoned_ship)
+"xmY" = (
+/turf/open/floor/plating/indoor/metal/grate/border,
+/area/halflife/indoors)
 "xnB" = (
 /obj/structure/halflife/fence/wire,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -16901,6 +17027,10 @@
 	},
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/slums)
+"xqe" = (
+/obj/machinery/light/small/cyan/directional/east,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/alley/restrictedblock)
 "xqg" = (
 /mob/living/carbon/human/species/monkey,
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -16956,6 +17086,12 @@
 /obj/structure/transport/linear/public,
 /turf/open/floor/plating/elevatorshaft,
 /area/halflife/indoors/slums)
+"xvY" = (
+/obj/structure/halflife/trash/papers/two{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors)
 "xwQ" = (
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/woodc,
@@ -17043,13 +17179,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
-"xEO" = (
-/obj/structure/chair/sofa/hl13bench{
-	dir = 8
-	},
-/obj/structure/halflife/leaves,
+"xEI" = (
+/obj/structure/flora/tree/halflife/plain/concrete_large,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors)
+/area/halflife/outdoors/alley/restrictedblock)
 "xFi" = (
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/indoors/trainstation)
@@ -17188,10 +17321,6 @@
 /obj/item/clothing/head/flatcap,
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/bar/apartments)
-"xMi" = (
-/obj/structure/halflife/road_barrier,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors)
 "xMN" = (
 /obj/effect/turf_decal/box/white/corners{
 	dir = 4
@@ -17273,9 +17402,10 @@
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/bar/apartments)
 "xSO" = (
-/obj/structure/halflife/leaves,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/alley/restrictedblock)
+/obj/machinery/light/small/directional/north,
+/obj/structure/halflife/trash_decal,
+/turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors/trainstation)
 "xSV" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -27329,7 +27459,7 @@ gXw
 gXw
 gXw
 dPf
-azA
+qqB
 vMP
 qgC
 dUf
@@ -27475,7 +27605,7 @@ gXw
 dUf
 dUf
 dPf
-oXY
+guI
 dUf
 dsy
 dsy
@@ -27618,8 +27748,8 @@ gXw
 gXw
 gXw
 vJi
-lQE
-lQE
+nUw
+pUe
 vJi
 oYc
 oYc
@@ -27762,8 +27892,8 @@ gXw
 gXw
 gXw
 vJi
-eOG
-lQE
+cSf
+pUe
 vJi
 xoT
 xoT
@@ -27906,8 +28036,8 @@ gXw
 gXw
 gXw
 vJi
-lQE
-lQE
+pUe
+pUe
 vJi
 mFC
 xoT
@@ -28050,8 +28180,8 @@ gXw
 gXw
 gXw
 vJi
-lQE
-lQE
+pUe
+pUe
 vJi
 khw
 xoT
@@ -28194,8 +28324,8 @@ oiG
 gXw
 gXw
 vJi
-lQE
-lQE
+pUe
+pUe
 vJi
 khw
 khw
@@ -28338,8 +28468,8 @@ oiG
 gXw
 gXw
 vJi
-lQE
-lQE
+pUe
+pUe
 vJi
 khw
 khw
@@ -28482,8 +28612,8 @@ oiG
 gXw
 gXw
 vJi
-lQE
-lQE
+pUe
+pUe
 vJi
 bfe
 bfe
@@ -28626,8 +28756,8 @@ oiG
 gXw
 gXw
 vJi
-lQE
-lQE
+pUe
+pUe
 vJi
 bfe
 bfe
@@ -28770,8 +28900,8 @@ oiG
 gXw
 gXw
 vJi
-lQE
-lQE
+nUw
+pUe
 vJi
 xIu
 xIu
@@ -28914,8 +29044,8 @@ oiG
 gXw
 gXw
 vJi
-lQE
-lQE
+pUe
+pUe
 vJi
 vJi
 vJi
@@ -29058,13 +29188,13 @@ oiG
 gXw
 gXw
 vJi
-eOG
-lQE
-lQE
-lQE
-bED
-lQE
-lQE
+cSf
+pUe
+pUe
+pUe
+pJZ
+pUe
+vKW
 vJi
 gXw
 gXw
@@ -29202,13 +29332,13 @@ oiG
 gXw
 gXw
 vJi
-lQE
-lQE
-lQE
-lQE
+pUe
+pUe
+pUe
+pUe
 vJi
-dbX
-dbX
+tfZ
+tfZ
 vJi
 gXw
 gXw
@@ -30633,7 +30763,7 @@ fNv
 fNv
 fNv
 fNv
-fac
+cMW
 fNv
 fNv
 fNv
@@ -30783,11 +30913,11 @@ fNv
 fNv
 fNv
 fNv
-jJM
-wvp
-hPa
-tmq
-bnV
+drf
+aCp
+aGR
+vWq
+nrv
 fNv
 fNv
 fNv
@@ -30923,11 +31053,11 @@ gXw
 gXw
 oiG
 fNv
-vQy
-nCk
-nCk
-nCk
-avi
+aYb
+iGS
+iGS
+iGS
+lyS
 oiG
 fLh
 fNv
@@ -35168,7 +35298,7 @@ isR
 isR
 isR
 xRb
-sbL
+fbZ
 mfl
 xRb
 xRb
@@ -35313,7 +35443,7 @@ isR
 isR
 isR
 hmd
-bOk
+tmA
 gkC
 gkC
 gkC
@@ -35350,7 +35480,7 @@ lnh
 nUD
 nUD
 nUD
-xEO
+ftQ
 gkC
 gkC
 gkC
@@ -35497,9 +35627,9 @@ nUD
 uNd
 qji
 gkC
-vgj
-amb
-vgj
+ewD
+hBd
+ewD
 gkC
 xVO
 xVO
@@ -35599,8 +35729,8 @@ isR
 isR
 isR
 isR
-aVt
-arw
+ssl
+mNt
 cSg
 xPS
 nmS
@@ -35618,11 +35748,11 @@ wtl
 xKg
 lJg
 cyZ
+sbL
+xVO
+xVO
+xVO
 mwO
-xVO
-xVO
-xVO
-pOr
 nUD
 nUD
 nUD
@@ -35642,7 +35772,7 @@ nUD
 nUD
 gkC
 dcp
-vgj
+ewD
 dcp
 gkC
 xVO
@@ -35888,7 +36018,7 @@ isR
 isR
 hmd
 gkC
-gkC
+tkv
 cSg
 cSg
 cSg
@@ -36032,7 +36162,7 @@ isR
 isR
 hmd
 gkC
-ePt
+rlV
 cSg
 hAc
 kaA
@@ -36050,11 +36180,11 @@ wtl
 wtl
 toG
 cyZ
+sbL
+xVO
+xVO
+xVO
 mwO
-xVO
-xVO
-xVO
-pOr
 gkC
 uyo
 nUD
@@ -36463,8 +36593,8 @@ twg
 isR
 isR
 isR
-vtA
-qKr
+uma
+fhv
 cSg
 kaA
 lbZ
@@ -36674,7 +36804,7 @@ iBW
 cOi
 cOi
 cOi
-sgs
+kWD
 cOi
 tKd
 aTS
@@ -36904,7 +37034,7 @@ fBy
 wtT
 cSg
 ltT
-foN
+rTX
 foN
 ggO
 kaA
@@ -37121,9 +37251,9 @@ iQW
 iQW
 iQW
 gkC
-fxP
+nQV
 xRb
-dnh
+hZH
 jUL
 jUL
 jUL
@@ -37265,9 +37395,9 @@ iQW
 iQW
 iQW
 qrs
-cSf
+jGT
 uVM
-dnh
+hZH
 jUL
 jUL
 jUL
@@ -37411,7 +37541,7 @@ iQW
 gkC
 uVM
 uyo
-dnh
+hZH
 jUL
 jUL
 ucd
@@ -37490,11 +37620,11 @@ cSg
 kaA
 mYA
 cSg
+sbL
+xVO
+xVO
+xVO
 mwO
-xVO
-xVO
-xVO
-pOr
 qrs
 tZU
 nUD
@@ -37514,7 +37644,7 @@ uNd
 qji
 gkC
 dcp
-vgj
+ewD
 dcp
 gkC
 xVO
@@ -37654,12 +37784,12 @@ gkC
 nUD
 nUD
 nUD
-rpG
+vgj
 gkC
 gkC
-vgj
-amb
-vgj
+ewD
+hBd
+ewD
 gkC
 xVO
 xVO
@@ -37784,7 +37914,7 @@ xVO
 gwC
 gkC
 gkC
-iee
+hOj
 gkC
 gkC
 gkC
@@ -37802,9 +37932,9 @@ gkC
 gkC
 gkC
 gkC
-eaN
+uqM
 gkC
-mwO
+sbL
 xVO
 xVO
 xVO
@@ -37922,7 +38052,7 @@ rSI
 cSg
 cSg
 cSg
-mwO
+sbL
 xVO
 xVO
 xVO
@@ -38193,7 +38323,7 @@ isR
 isR
 asq
 hmd
-bOk
+tmA
 gkC
 gkC
 gkC
@@ -38210,7 +38340,7 @@ gkC
 gkC
 gkC
 gkC
-mwO
+sbL
 xVO
 xVO
 xVO
@@ -38268,14 +38398,14 @@ wRP
 uQk
 uQk
 uQk
-mwO
+sbL
 iQW
 iQW
 iQW
-hxA
-cMW
+jun
+kuz
 laV
-dnh
+hZH
 jUL
 jUL
 jUL
@@ -38336,7 +38466,7 @@ isR
 isR
 isR
 xRb
-ryY
+wsO
 mfl
 uyo
 xRb
@@ -38353,14 +38483,14 @@ uyo
 xRb
 xRb
 xRb
-mNt
+oqp
 gkC
 ucq
 xVO
 gwC
 gkC
 gkC
-jXu
+uAQ
 gkC
 gkC
 gkC
@@ -38378,7 +38508,7 @@ gkC
 gkC
 gkC
 gkC
-jXu
+uAQ
 gkC
 dPQ
 drm
@@ -38410,12 +38540,12 @@ uQk
 uQk
 uQk
 uQk
-ewD
+dsg
 bkW
 dPQ
 drm
 qGa
-iFx
+awQ
 dPQ
 qTB
 ako
@@ -38524,7 +38654,7 @@ gsM
 gsM
 gsM
 gsM
-dPQ
+rFf
 drm
 qGa
 bck
@@ -38559,7 +38689,7 @@ dPQ
 dPQ
 tzT
 fNQ
-iFx
+awQ
 dPQ
 hhO
 hhO
@@ -38642,11 +38772,11 @@ wsx
 lnh
 uyo
 laV
+sbL
+xVO
+xVO
+xVO
 mwO
-xVO
-xVO
-xVO
-pOr
 gsM
 cBb
 gtd
@@ -38785,7 +38915,7 @@ fia
 wsx
 uyo
 uVM
-mSY
+jsa
 qrs
 xVO
 xVO
@@ -39346,7 +39476,7 @@ uyo
 sdJ
 pTQ
 tNv
-qxy
+unE
 rzw
 sFB
 jNv
@@ -39488,7 +39618,7 @@ isR
 xRb
 uyo
 sdJ
-tNv
+pQv
 fRT
 sWy
 rzw
@@ -39637,8 +39767,8 @@ sWy
 sWy
 rzw
 twV
-pUY
 dsY
+pUY
 fLD
 gjN
 vTv
@@ -39799,9 +39929,9 @@ xVO
 xVO
 xVO
 gkC
-iJw
+jyx
 erF
-sZK
+pOr
 egZ
 egZ
 egZ
@@ -39943,7 +40073,7 @@ xVO
 xVO
 xVO
 gkC
-gkC
+rYQ
 erF
 vxE
 egZ
@@ -40095,7 +40225,7 @@ egZ
 egZ
 wbd
 ybt
-vuD
+nFp
 xAN
 qaJ
 qaJ
@@ -40210,8 +40340,8 @@ xRb
 rzw
 jOB
 uJk
-uJk
 nBG
+uJk
 jPX
 sWy
 lxc
@@ -40239,7 +40369,7 @@ egZ
 egZ
 erF
 mmu
-dqu
+wHu
 xAN
 qaJ
 qaJ
@@ -40375,7 +40505,7 @@ xVO
 xVO
 xVO
 gkC
-iJw
+jyx
 erF
 egZ
 egZ
@@ -40385,7 +40515,7 @@ erF
 gls
 tUi
 erF
-ufd
+vqn
 aJz
 aJz
 rfd
@@ -40665,7 +40795,7 @@ xVO
 gkC
 qrs
 erF
-sZK
+pOr
 egZ
 egZ
 egZ
@@ -40961,9 +41091,9 @@ hXw
 erF
 egZ
 egZ
-rUk
+tty
 erF
-rUk
+tty
 egZ
 egZ
 tkN
@@ -41103,7 +41233,7 @@ nAx
 grr
 rRp
 erF
-egZ
+wPW
 sfj
 erF
 erF
@@ -41249,9 +41379,9 @@ lgH
 ayB
 egZ
 egZ
-rUk
+tty
 erF
-rUk
+tty
 egZ
 egZ
 erF
@@ -41513,8 +41643,8 @@ vTv
 vTv
 vTv
 iwI
-uAV
-tNv
+xsK
+pQv
 ubH
 mQw
 kTW
@@ -41723,7 +41853,7 @@ dPQ
 dPQ
 mKc
 oLK
-dPQ
+mza
 dPQ
 fNQ
 fNQ
@@ -41987,7 +42117,7 @@ fNQ
 oiR
 mFX
 sDf
-nff
+vzx
 npW
 qRd
 aLv
@@ -42251,7 +42381,7 @@ afh
 xhj
 xhj
 xhj
-xhj
+cba
 afh
 lJT
 hzt
@@ -43110,7 +43240,7 @@ gkC
 xVO
 xVO
 xVO
-gOR
+mSw
 afh
 woj
 bnN
@@ -43138,11 +43268,11 @@ xVO
 xVO
 gkC
 wwA
-jDl
+hsc
 ejR
 fYp
 wwA
-iaU
+wrN
 ejR
 iaU
 wwA
@@ -43564,11 +43694,11 @@ gkC
 gkC
 gkC
 gkC
+sbL
+xVO
+xVO
+xVO
 mwO
-xVO
-xVO
-xVO
-pOr
 pVK
 wwA
 iaU
@@ -43953,7 +44083,7 @@ isR
 qVi
 xRb
 xRb
-wHN
+fac
 wJm
 uyo
 lnh
@@ -43996,11 +44126,11 @@ pfn
 dcp
 fYy
 dcp
+sbL
+xVO
+xVO
+xVO
 mwO
-xVO
-xVO
-xVO
-pOr
 dcp
 uea
 cvh
@@ -44049,11 +44179,11 @@ vJi
 bMn
 bMn
 bMn
-xiP
+sAF
 bMn
 gxZ
 jTz
-ftQ
+nhO
 qXs
 "}
 (67,1,2) = {"
@@ -44097,7 +44227,7 @@ isR
 xRb
 uyo
 xRb
-wHN
+fac
 xRb
 xRb
 xRb
@@ -44172,7 +44302,7 @@ wDE
 vvP
 dUf
 pTo
-pTo
+bmO
 pTo
 epE
 uRR
@@ -44190,14 +44320,14 @@ gco
 oYc
 oYc
 uCo
-wsO
-wsO
-wsO
-wsO
-wsO
-wsO
-wsO
-dSE
+vtA
+vtA
+vtA
+vtA
+vtA
+vtA
+vtA
+kXA
 qXs
 "}
 (68,1,2) = {"
@@ -44241,7 +44371,7 @@ isR
 xRb
 lnh
 uyo
-wHN
+fac
 uyo
 uyo
 uyo
@@ -44258,11 +44388,11 @@ sWy
 sWy
 sWy
 qCf
-sdb
+tXw
 xVO
 xVO
 xVO
-pOr
+mwO
 bbP
 chK
 chK
@@ -44338,10 +44468,10 @@ bMn
 bMn
 bMn
 bMn
-rgQ
+xmY
 bMn
-giO
-etg
+jzY
+gzr
 qXs
 "}
 (69,1,2) = {"
@@ -44396,7 +44526,7 @@ juf
 juf
 juf
 juf
-aic
+sJr
 juf
 juf
 juf
@@ -44545,7 +44675,7 @@ uGY
 gkC
 gkC
 gkC
-jiQ
+ryY
 gkC
 ucq
 xVO
@@ -44583,7 +44713,7 @@ txw
 hft
 kQL
 uea
-uEU
+vCM
 hCb
 uea
 oDR
@@ -44820,9 +44950,9 @@ adB
 juf
 juf
 juf
-xMi
+mws
 juf
-oVD
+atU
 juf
 gkC
 xVO
@@ -44833,7 +44963,7 @@ xVO
 xVO
 xVO
 xVO
-sJr
+uIW
 xVO
 xVO
 xVO
@@ -44964,7 +45094,7 @@ adB
 juf
 juf
 juf
-xMi
+mws
 juf
 juf
 juf
@@ -44977,7 +45107,7 @@ xVO
 xVO
 xVO
 xVO
-obD
+lij
 eYv
 xVO
 xVO
@@ -45265,7 +45395,7 @@ xVO
 xVO
 xVO
 xVO
-sJr
+uIW
 gkC
 ucq
 xVO
@@ -45409,16 +45539,16 @@ xVO
 xVO
 xVO
 xVO
-sJr
+uIW
+sbL
+xVO
+xVO
+xVO
 mwO
-xVO
-xVO
-xVO
-pOr
 gkC
 juf
 iRc
-uAQ
+xvY
 uKe
 sCt
 oku
@@ -45544,7 +45674,7 @@ ldg
 ldg
 ldg
 ldg
-cdW
+rqB
 xVO
 xVO
 xVO
@@ -45553,7 +45683,7 @@ xVO
 xVO
 xVO
 xVO
-sJr
+uIW
 gkC
 xVO
 xVO
@@ -45581,15 +45711,15 @@ bzg
 bzg
 bzg
 dcp
+gkC
+dcp
+dcp
+ewD
 dcp
 dcp
 dcp
 dcp
-dcp
-dcp
-dcp
-dcp
-wYE
+eOG
 dcp
 dcp
 dcp
@@ -45703,7 +45833,7 @@ xVO
 xVO
 xVO
 gkC
-qsW
+bvk
 nzB
 nzB
 nzB
@@ -45725,10 +45855,10 @@ nzB
 guM
 pTx
 dcp
+gkC
 dcp
-dcp
-dcp
-dcp
+ewD
+aWS
 mdx
 mdx
 mdx
@@ -45755,7 +45885,7 @@ mdx
 mdx
 mdx
 dPf
-rMw
+ava
 lVQ
 lVQ
 uRR
@@ -45833,7 +45963,7 @@ uWv
 mUN
 ldg
 dIn
-vVL
+vnY
 xVO
 xVO
 xVO
@@ -45841,7 +45971,7 @@ xVO
 xVO
 xVO
 xVO
-sJr
+uIW
 gkC
 xVO
 xVO
@@ -45866,13 +45996,13 @@ cKb
 kQQ
 cKb
 ltR
-azY
+uvn
+gkC
+gkC
+gkC
 dcp
 dcp
-dcp
-dcp
-dcp
-dcp
+ewD
 mdx
 mdx
 mdx
@@ -45985,7 +46115,7 @@ uGY
 gkC
 gkC
 gkC
-pUe
+kgT
 gkC
 xVO
 xVO
@@ -46008,7 +46138,7 @@ tai
 cKb
 cKb
 cKb
-kos
+kHA
 nzB
 hWp
 hWp
@@ -46129,7 +46259,7 @@ gkC
 gkC
 gkC
 gkC
-pUe
+kgT
 gkC
 xVO
 xVO
@@ -46345,7 +46475,7 @@ iQn
 feK
 pXC
 iYs
-rAh
+lQE
 pXC
 pXC
 ctv
@@ -46459,11 +46589,11 @@ mdx
 mdx
 mdx
 mdx
+sbL
+xVO
+xVO
+xVO
 mwO
-xVO
-xVO
-xVO
-pOr
 mdx
 mdx
 mdx
@@ -46488,7 +46618,7 @@ iQn
 kie
 feK
 pXC
-cRp
+amb
 pXC
 pXC
 pXC
@@ -46574,7 +46704,7 @@ eIn
 xwU
 xwU
 nzB
-iGS
+jNO
 nzB
 nzB
 nzB
@@ -46755,7 +46885,7 @@ gkC
 xfJ
 taR
 taR
-osM
+hOo
 taR
 taR
 taR
@@ -46781,7 +46911,7 @@ taR
 taR
 wLY
 eOg
-ooR
+aYc
 taR
 taR
 phm
@@ -46897,11 +47027,9 @@ xVO
 xVO
 pyN
 xfJ
-wqw
+nsh
 lUt
-ssq
-lUt
-lUt
+fKi
 lUt
 lUt
 lUt
@@ -46918,7 +47046,9 @@ lUt
 lUt
 lUt
 lUt
-gFv
+lUt
+lUt
+aew
 lUt
 lUt
 kdN
@@ -47187,7 +47317,7 @@ eYv
 xfJ
 qJp
 lUt
-ssq
+fKi
 lUt
 lUt
 lUt
@@ -47205,7 +47335,7 @@ lUt
 lUt
 lUt
 lUt
-gFv
+aew
 lUt
 lUt
 lUt
@@ -47214,7 +47344,7 @@ lUt
 luN
 lUt
 lUt
-gFv
+aew
 xpX
 lUt
 lUt
@@ -47304,8 +47434,8 @@ iei
 cuJ
 eeu
 hWp
-jun
-uuM
+dPV
+jEX
 dNX
 dNX
 dNX
@@ -47323,7 +47453,7 @@ gkC
 xVO
 xVO
 xVO
-mwO
+sbL
 xVO
 xVO
 xVO
@@ -47331,13 +47461,10 @@ uGY
 xfJ
 taR
 taR
-osM
+hOo
 taR
 taR
-bND
-taR
-taR
-taR
+xqe
 taR
 taR
 taR
@@ -47346,13 +47473,16 @@ taR
 taR
 taR
 taR
-ooR
+taR
+taR
+taR
+aYc
 taR
 taR
 taR
 taR
 taR
-ooR
+aYc
 taR
 taR
 wLY
@@ -47448,7 +47578,7 @@ cuJ
 cuJ
 eeu
 hWp
-rKs
+xSO
 dNX
 dNX
 dNX
@@ -47483,13 +47613,13 @@ xFL
 etb
 etb
 etb
-giV
+fUa
 etb
 etb
 etb
 etb
 etb
-giV
+fUa
 etb
 etb
 etb
@@ -47497,7 +47627,7 @@ etb
 etb
 etb
 etb
-giV
+fUa
 etb
 pXC
 xDi
@@ -47625,7 +47755,7 @@ rnb
 sVg
 xFL
 xfJ
-chS
+eeR
 nlc
 nlc
 nlc
@@ -47634,12 +47764,12 @@ oTl
 nlc
 nlc
 nlc
-gsP
-drf
+lxI
+ixW
 etb
 etb
-drf
-gsP
+ixW
+lxI
 pXC
 pXC
 pXC
@@ -47778,12 +47908,12 @@ iYs
 iYs
 gpT
 nlc
-xSO
-wtK
-xSO
-xSO
-wtK
-hwq
+uuM
+xEI
+uuM
+uuM
+xEI
+kKR
 pXC
 jGX
 mSU
@@ -47899,13 +48029,13 @@ gkC
 xVO
 xVO
 xVO
-mwO
+sbL
 xVO
 xVO
 xVO
 xFL
 ojD
-dBh
+xiP
 kSp
 xFL
 jmx
@@ -47923,10 +48053,10 @@ meX
 gpT
 nlc
 etb
-xSO
+uuM
 etb
 iZv
-xSO
+uuM
 etb
 fHJ
 vaD
@@ -48046,7 +48176,7 @@ xVO
 gkC
 xVO
 xVO
-mHM
+aeF
 xFL
 xFL
 xFL
@@ -48191,7 +48321,7 @@ gkC
 gkC
 gkC
 gkC
-bOk
+tmA
 vvP
 vvP
 vvP
@@ -48312,7 +48442,7 @@ tum
 gPY
 pXC
 hWp
-dNX
+kid
 dNX
 vbF
 vbF
@@ -48346,20 +48476,20 @@ hWp
 jsG
 jsG
 bif
-bub
-bub
-bub
-bub
-bub
-bub
-bub
-bub
-gzr
-gzr
-gzr
-gzr
-gzr
-gzr
+uAV
+uAV
+uAV
+uAV
+uAV
+uAV
+uAV
+uAV
+cga
+cga
+cga
+cga
+cga
+cga
 pXC
 pXC
 pXC
@@ -48474,7 +48604,7 @@ iCr
 azZ
 mXf
 mXf
-mXf
+vtD
 mXf
 mXf
 azZ
@@ -48511,7 +48641,7 @@ uxw
 eaQ
 uxw
 uxw
-uxw
+uef
 uxw
 uxw
 nlc
@@ -48593,7 +48723,7 @@ pXC
 pXC
 jdn
 gkC
-kPB
+gTg
 gkC
 dcp
 qPP
@@ -48892,7 +49022,7 @@ dNX
 dNX
 vbF
 vbF
-dNX
+gIL
 hWp
 xFi
 xFi
@@ -49592,7 +49722,7 @@ xVO
 xVO
 gkC
 duV
-eUn
+vPa
 xnB
 dcp
 dcp
@@ -49890,7 +50020,7 @@ dcp
 xRb
 xRb
 xRb
-eny
+hZj
 uyo
 dcp
 pXC
@@ -50172,7 +50302,7 @@ fLl
 aMy
 fLl
 fLl
-sby
+dRG
 dcp
 dcp
 aNL
@@ -50450,11 +50580,11 @@ ece
 fDQ
 aEa
 ece
+sbL
+xVO
+xVO
+xVO
 mwO
-xVO
-xVO
-xVO
-pOr
 fLl
 lUv
 hir
@@ -50882,11 +51012,11 @@ ece
 fDQ
 rlN
 ece
-mwO
+sbL
 xVO
 xVO
 wBN
-qWV
+giV
 fLl
 aMy
 fLl
@@ -51210,7 +51340,7 @@ iCr
 xkw
 mXf
 mXf
-mXf
+fCk
 mXf
 mXf
 xkw
@@ -51247,7 +51377,7 @@ uxw
 uxw
 uxw
 uxw
-eaQ
+hHQ
 uxw
 uxw
 nlc
@@ -58104,7 +58234,7 @@ wLm
 wLm
 wLm
 wLm
-whF
+hgs
 tpd
 tpd
 vCc
@@ -58538,7 +58668,7 @@ wLm
 wLm
 qsd
 qsd
-cvr
+qxy
 qsd
 wLm
 ovF
@@ -59003,14 +59133,14 @@ ovF
 ovF
 gRj
 rxD
+nYv
 rxD
 rxD
 rxD
 rxD
 rxD
 rxD
-rxD
-rxD
+nYv
 rxD
 rxD
 gRj
@@ -60299,7 +60429,7 @@ iYp
 iYp
 ovF
 gRj
-rxD
+ovo
 rxD
 lWx
 hve
@@ -60449,7 +60579,7 @@ rxD
 rxD
 rxD
 rxD
-rxD
+ovo
 hTO
 kPI
 kPI
@@ -61598,7 +61728,7 @@ iAD
 vBB
 saY
 jeW
-pNp
+dbX
 iAD
 kPI
 kPI
@@ -61882,7 +62012,7 @@ ovF
 ovF
 ovF
 vBB
-neL
+avi
 jeW
 jeW
 jeW

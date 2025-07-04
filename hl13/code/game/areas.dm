@@ -356,6 +356,11 @@
 	first_time_text = "The Baltic Sea"
 	ambient_buzz = 'hl13/sound/ambience/lake_water.wav'
 
+/area/halflife/outdoors/coast
+	name = "The Coast"
+	first_time_text = "The Coast"
+	ambient_buzz = 'hl13/sound/ambience/lake_water.wav'
+
 /area/halflife/indoors/abandoned_ship
 	name = "Abandoned Ship"
 	area_limited_icon_smoothing = /area/halflife/indoors/abandoned_ship //shouldnt smooth with the docks because that looks ugly and makes no sense

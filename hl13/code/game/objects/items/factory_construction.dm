@@ -69,9 +69,9 @@
 
 	var/list/remaining_items = possible_items //required, since its a pick and take
 
-	required_item_1 = pick_n_take(possible_items)
-	required_item_2 = pick_n_take(possible_items)
-	required_item_3 = pick_n_take(possible_items)
+	required_item_1 = pick_n_take(remaining_items)
+	required_item_2 = pick_n_take(remaining_items)
+	required_item_3 = pick_n_take(remaining_items)
 
 /obj/item/factory_construction/container/attackby(obj/item/I, mob/user, params)
 	if(istype(I, required_item_1) && !item_1_fulfilled)

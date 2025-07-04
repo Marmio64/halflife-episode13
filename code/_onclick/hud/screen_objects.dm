@@ -194,6 +194,9 @@
 		return
 	if(pulledby && H.pulledby.grab_state >= GRAB_PASSIVE)
 		return
+	if(istype(loc, /turf/open/halflife/water))
+		to_chat(src, "<span class='notice'>I can't jump while in water!")
+		return
 	if(95 < getStaminaLoss())
 		to_chat(src, "<span class='notice'>You are too tired to jump!")
 		return
