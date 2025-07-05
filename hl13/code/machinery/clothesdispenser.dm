@@ -62,6 +62,7 @@
 		if(clothes_deposited >= 5)
 			to_chat(usr, span_notice("Labor Certificate dispensed."))
 			new /obj/item/labor_certificate(user.loc)
+			clothes_deposited = 0
 	else if(istype(I, /obj/item/labor_certificate))
 		if(next_alert < world.time)
 			next_alert = world.time + alert_cooldown
