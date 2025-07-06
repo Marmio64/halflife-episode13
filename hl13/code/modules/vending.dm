@@ -70,7 +70,7 @@
 				   /obj/item/storage/box/halflife/ration/ration = 5)
 
 	light_mask = "gifts-light-mask"
-	default_price = 14
+	default_price = 12
 	extra_price = 30
 
 /obj/machinery/vending/miningvendor

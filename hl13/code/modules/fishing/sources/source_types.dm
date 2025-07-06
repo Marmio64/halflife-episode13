@@ -63,8 +63,8 @@
 	radial_state = "seaboat"
 	overlay_state = "portal_ocean"
 	fish_table = list(
-		FISHING_DUD = 10,
-		/obj/item/fish/leech = 6,
+		FISHING_DUD = 12,
+		/obj/item/fish/leech = 8,
 		/obj/item/fish/catfish = 2,
 		/obj/item/fish/perch = 1,
 	)

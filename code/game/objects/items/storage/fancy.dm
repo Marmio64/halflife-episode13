@@ -204,7 +204,6 @@
 	slot_flags = ITEM_SLOT_BELT
 	spawn_type = /obj/item/cigarette
 	spawn_count = 6
-	custom_price = PAYCHECK_CREW
 	age_restricted = TRUE
 	contents_tag = "cigarette"
 	///for cigarette overlay
