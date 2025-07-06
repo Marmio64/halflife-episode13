@@ -155,6 +155,7 @@
 			if(SPT_PROB(0.5, seconds_per_tick))
 				to_chat(affected_mob, span_warning("[pick("You have a coughing fit!", "You can't stop coughing!")]"))
 				affected_mob.Immobilize(20)
+				affected_mob.adjustOrganLoss(ORGAN_SLOT_LUNGS, 4) //lungs hurt hurt ouchy
 				affected_mob.emote("cough")
 				addtimer(CALLBACK(affected_mob, TYPE_PROC_REF(/mob/, emote), "cough"), 0.6 SECONDS)
 				addtimer(CALLBACK(affected_mob, TYPE_PROC_REF(/mob/, emote), "cough"), 1.2 SECONDS)
