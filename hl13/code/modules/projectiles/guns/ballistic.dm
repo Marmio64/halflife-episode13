@@ -512,3 +512,25 @@
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/start_empty
 	magazine = /obj/item/ammo_box/magazine/internal/boltaction/mosin/start_empty
+
+/obj/item/storage/toolbox/halflife_ammobox
+	name = "ammo canister"
+	desc = "A metal canister designed to hold ammunition."
+	icon_state = "ammobox"
+	inhand_icon_state = "ammobox"
+	lefthand_file = 'icons/mob/inhands/equipment/toolbox_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/equipment/toolbox_righthand.dmi'
+	has_latches = FALSE
+	drop_sound = 'sound/items/handling/ammobox_drop.ogg'
+	pickup_sound = 'sound/items/handling/ammobox_pickup.ogg'
+
+
+/obj/item/storage/toolbox/halflife_ammobox/bunker
+	name = "polish surplus ammobox"
+
+/obj/item/storage/toolbox/halflife_ammobox/bunker/PopulateContents()
+	new /obj/item/ammo_box/magazine/m4a1/service(src)
+	new /obj/item/ammo_box/strilka310/a762(src)
+	new /obj/item/ammo_box/strilka310/a762(src)
+	new /obj/item/ammo_box/strilka310/a762(src)
+	new /obj/item/ammo_box/strilka310/a762(src)

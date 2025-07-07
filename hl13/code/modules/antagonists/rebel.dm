@@ -13,10 +13,42 @@
 
 	l_pocket = /obj/item/flashlight/seclite
 
-/datum/outfit/bunkeroperator/pre_equip(mob/living/carbon/human/H)
-	H.cmode_music = 'hl13/sound/music/combat/cpviolation.ogg'
+/datum/outfit/bunkeroperator/pre_equip(mob/living/carbon/human/equip_to)
 
-	H.change_stat(STATKEY_DEX, 1)
+	// randomisation to look cool
+	var/static/list/alt_uniforms = list(
+		/obj/item/clothing/under/citizen/refugee/green,
+		/obj/item/clothing/under/syndicate/camo,
+	)
+	var/static/list/alt_suits = list(
+		/obj/item/clothing/suit/armor/halflife/kevlar/heavy,
+		/obj/item/clothing/suit/armor/halflife/milvest,
+	)
+	var/static/list/alt_helmets = list(
+		/obj/item/clothing/head/helmet/halflife/military/weak,
+		/obj/item/clothing/head/helmet/halflife/military/weak/poland,
+	)
+
+	var/static/list/alt_guns = list(
+		/obj/item/gun/ballistic/automatic/servicerifle,
+		/obj/item/gun/ballistic/rifle/boltaction/mosin_nagant, //moistened
+	)
+
+	if(prob(80))
+		uniform = pick(alt_uniforms)
+	if(prob(40)) //the alternate armour is just plainly better
+		suit = pick(alt_suits)
+	if(prob(50)) //better but no hardened gas mask so not ideal
+		head = pick(alt_helmets)
+	if(prob(50)) //there's another 50/50 of either the rifle is just polymer or curse of mosin
+		suit_store = pick (alt_guns)
+	if(prob(40))
+		shoes = /obj/item/clothing/shoes/jackboots/civilprotection //stolen cop boots lmao
+
+
+	equip_to.cmode_music = 'hl13/sound/music/combat/cpviolation.ogg'
+
+	equip_to.change_stat(STATKEY_DEX, 1)
 
 /obj/item/clothing/mask/gas/hl2/military/gps/Initialize(mapload)
 	. = ..()
