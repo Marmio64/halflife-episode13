@@ -43,34 +43,36 @@
 /area/halflife/indoors/bunker)
 "dQ" = (
 /obj/item/stack/cable_coil/five{
-	pixel_x = 12;
-	pixel_y = -4
+	pixel_x = 0;
+	pixel_y = -3
 	},
 /obj/item/screwdriver/halflife,
+/obj/item/wirecutters/halflife{
+	pixel_x = -2;
+	pixel_y = 6
+	},
+/obj/item/wrench/halflife{
+	pixel_x = 7;
+	pixel_y = -3
+	},
+/obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "eb" = (
-/obj/structure/halflife/trash/cardboard,
+/obj/structure/closet/crate/halflife,
 /obj/item/reagent_containers/cup/glass/mouthwash{
-	pixel_x = 4;
-	pixel_y = 26
-	},
-/obj/item/reagent_containers/cup/glass/mouthwash{
-	pixel_x = 16;
-	pixel_y = 25
+	pixel_x = 1;
+	pixel_y = 7
 	},
 /obj/item/reagent_containers/cup/glass/mouthwash{
-	pixel_x = -9;
-	pixel_y = 23
+	pixel_x = -1;
+	pixel_y = 8
 	},
-/obj/item/storage/box/lights/bulbs{
-	pixel_x = -7;
-	pixel_y = 0
+/obj/item/reagent_containers/cup/glass/mouthwash{
+	pixel_x = -3;
+	pixel_y = 2
 	},
-/obj/structure/halflife/pipes/horizontal/end{
-	dir = 1
-	},
-/turf/open/floor/plating/indoor/concrete/bricks,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "fo" = (
 /obj/machinery/door/poddoor/shutters/window{
@@ -157,12 +159,17 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "kW" = (
-/obj/machinery/light/small/directional/east,
+/obj/structure/table/halflife/metal/grate,
 /obj/item/stack/cable_coil/five{
-	pixel_x = -11;
+	pixel_x = -2;
 	pixel_y = -7
 	},
-/obj/item/wrench/halflife,
+/obj/item/storage/toolbox{
+	icon_state = "blue";
+	inhand_icon_state = "toolbox_blue";
+	pixel_x = -4;
+	pixel_y = 7
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "lj" = (
@@ -201,10 +208,12 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "nI" = (
-/obj/item/wirecutters/halflife{
-	pixel_x = 6;
-	pixel_y = 5
+/obj/structure/halflife/pipes/horizontal/end,
+/obj/item/storage/box/lights/bulbs{
+	pixel_x = -6;
+	pixel_y = 9
 	},
+/obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "nS" = (
@@ -289,6 +298,7 @@
 /area/halflife/indoors/bunker)
 "wk" = (
 /obj/effect/spawner/random/entertainment/arcade,
+/obj/structure/halflife/pipes/vent,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "wl" = (
@@ -302,8 +312,9 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "xu" = (
-/turf/closed/indestructible/rock,
-/area/template_noop)
+/obj/structure/halflife/pipes/horizontal,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "yh" = (
 /obj/structure/halflife/pipes/horizontal,
 /turf/open/halflife/water/medium,
@@ -414,7 +425,14 @@
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/bunker)
 "Fc" = (
-/obj/structure/halflife/pipes/horizontal/end,
+/obj/machinery/light/small/directional/east,
+/obj/effect/turf_decal/bot_white,
+/obj/structure/closet/crate/halflife/wooden,
+/obj/item/stack/sheet/mineral/sandbags{
+	amount = 5;
+	pixel_x = -1;
+	pixel_y = 5
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "Fg" = (
@@ -428,10 +446,6 @@
 /obj/item/clothing/mask/gas/hl2/military{
 	pixel_x = -2;
 	pixel_y = 12
-	},
-/obj/item/ammo_box/magazine/m4a1/service{
-	pixel_x = 13;
-	pixel_y = 5
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
@@ -526,10 +540,6 @@
 /obj/structure/halflife/trash/glass/cans{
 	pixel_x = 7;
 	pixel_y = 8
-	},
-/obj/item/knife/hunting{
-	pixel_x = -14;
-	pixel_y = 11
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
@@ -693,8 +703,10 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "UJ" = (
+/obj/structure/halflife/pipes/horizontal/end{
+	dir = 1
+	},
 /obj/effect/spawner/random/halflife/loot/crafting_bench,
-/obj/structure/halflife/pipes/horizontal,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "UP" = (
@@ -742,6 +754,10 @@
 	pixel_x = -5;
 	pixel_y = 9
 	},
+/obj/item/knife/combat{
+	pixel_x = 16;
+	pixel_y = 7
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "Xr" = (
@@ -764,8 +780,9 @@
 /area/halflife/indoors/bunker)
 "Zg" = (
 /obj/structure/halflife/pipes/horizontal/end,
-/obj/item/stack/sheet/mineral/sandbags{
-	amount = 5
+/obj/item/storage/toolbox/halflife_ammobox/bunker{
+	pixel_x = -7;
+	pixel_y = 8
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
@@ -1111,7 +1128,7 @@ uD
 DV
 wk
 lj
-nS
+eb
 DV
 DE
 Bj
@@ -1154,9 +1171,9 @@ uD
 "}
 (17,1,1) = {"
 uD
-xu
 DV
-eb
+UJ
+Zx
 dQ
 DV
 Qy
@@ -1177,10 +1194,10 @@ uD
 "}
 (18,1,1) = {"
 uD
-xu
 DV
-UJ
-nI
+xu
+Bj
+Bj
 qU
 Bj
 Bj
@@ -1200,8 +1217,8 @@ uD
 "}
 (19,1,1) = {"
 uD
-xu
 DV
+nI
 Fc
 kW
 DV
@@ -1223,7 +1240,7 @@ uD
 "}
 (20,1,1) = {"
 uD
-xu
+DV
 DV
 DV
 DV
