@@ -530,6 +530,7 @@
 
 /obj/item/storage/toolbox/halflife_ammobox/bunker/PopulateContents()
 	new /obj/item/ammo_box/magazine/m4a1/service(src)
-	new /obj/item/ammo_box/magazine/internal/boltaction/mosin(src)
-	new /obj/item/ammo_box/magazine/internal/boltaction/mosin(src)
-	new /obj/item/ammo_box/magazine/internal/boltaction/mosin(src)
+	new /obj/item/ammo_box/strilka310/a762(src)
+	new /obj/item/ammo_box/strilka310/a762(src)
+	new /obj/item/ammo_box/strilka310/a762(src)
+	new /obj/item/ammo_box/strilka310/a762(src)
