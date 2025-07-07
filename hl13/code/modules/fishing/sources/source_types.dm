@@ -65,8 +65,8 @@
 	fish_table = list(
 		FISHING_DUD = 12,
 		/obj/item/fish/leech = 8,
-		/obj/item/fish/catfish = 2,
-		/obj/item/fish/perch = 1,
+		/obj/item/fish/perch = 2,
+		/obj/item/fish/catfish = 1,
 	)
 	fishing_difficulty = FISHING_DEFAULT_DIFFICULTY + 20
 	fish_source_flags = FISH_SOURCE_FLAG_EXPLOSIVE_MALUS
@@ -78,8 +78,18 @@
 	icon_state = "leech"
 	sprite_width = 4
 	sprite_height = 2
-	average_size = 30
-	average_weight = 500
+	average_size = 25
+	average_weight = 300
 	stable_population = 3
 	required_temperature_min = MIN_AQUARIUM_TEMP+20
 	required_temperature_max = MIN_AQUARIUM_TEMP+28
+	fillet_type = /obj/item/food/fishmeat/leech
+
+/obj/item/food/fishmeat/leech
+	name = "leech fillet"
+	desc = "A fillet of some leech meat."
+	food_reagents = list(
+		/datum/reagent/consumable/nutriment/protein = 2,
+		/datum/reagent/consumable/nutriment/vitamin = 2,
+	)
+	bite_consumption = 3

@@ -253,8 +253,9 @@
 
 /datum/reagent/consumable/nutriment/organ_tissue/on_mob_life(mob/living/L, methods=TOUCH, reac_volume, show_message = TRUE, permeability = 1)
 	..()
-	if(prob(10))
-		L.ForceContractDisease(new /datum/disease/gutworms)
+	if(!HAS_TRAIT(L, TRAIT_STRONG_STOMACH))
+		if(prob(10))
+			L.ForceContractDisease(new /datum/disease/gutworms)
 
 /datum/reagent/consumable/nutriment/organ_tissue/stomach_lining
 	name = "Stomach Lining"

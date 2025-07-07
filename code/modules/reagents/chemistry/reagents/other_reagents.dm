@@ -296,8 +296,9 @@
 
 /datum/reagent/water/unpurified/on_mob_life(mob/living/L, methods=TOUCH, reac_volume, show_message = TRUE, permeability = 1)
 	..()
-	if(prob(disease_chance))
-		L.ForceContractDisease(new /datum/disease/gutworms)
+	if(!HAS_TRAIT(L, TRAIT_STRONG_STOMACH))
+		if(prob(disease_chance))
+			L.ForceContractDisease(new /datum/disease/gutworms)
 
 /datum/reagent/water/unpurified/river
 	name = "River Water"
