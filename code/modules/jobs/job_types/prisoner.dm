@@ -103,3 +103,29 @@
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
 
 	belt = /obj/item/storage/belt/pouch/refugee
+
+/datum/outfit/job/refugee/armed/medium
+	name = "Armed Outlands Refugee (Medium)"
+
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar
+	back = /obj/item/storage/backpack/halflife/satchel
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/ammo_box/magazine/usp9mm = 2,
+	)
+
+/datum/outfit/job/refugee/armed/heavy
+	name = "Armed Outlands Refugee (Heavy)"
+
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar
+	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
+
+	head = /obj/item/clothing/head/helmet/halflife/military
+
+	back = /obj/item/storage/backpack/halflife/satchel
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/ammo_box/strilka310/a762 = 2,
+	)

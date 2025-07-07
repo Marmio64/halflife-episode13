@@ -101,4 +101,4 @@
 	wdefense = 4
 
 /obj/item/spear/halflife/deathmatch
-	armour_penetration = 30
+	armour_penetration = 35

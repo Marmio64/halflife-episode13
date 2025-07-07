@@ -232,7 +232,7 @@
 	limb_integrity = 100
 
 /obj/item/clothing/suit/armor/browncoat/deathmatch
-	slowdown = -0.5
+	slowdown = -0.66
 
 /datum/armor/paddedjacket
 	melee = 10

@@ -67,6 +67,8 @@
 
 	quota_complete = FALSE
 
+	radio.talk_into(src, "The current sociostability is now: [((SSsociostability.sociostability / SOCIOSTABILITY_GREAT)*100)]%", radio_channel)
+
 /obj/machinery/quota_terminal/examine(mob/user)
 	. = ..()
 

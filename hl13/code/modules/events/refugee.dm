@@ -33,7 +33,15 @@
 	player_mind.transfer_to(S)
 	player_mind.set_assigned_role(SSjob.get_job_type(/datum/job/prisoner))
 	player_mind.special_role = "Armed Refugee"
-	S.equipOutfit(/datum/outfit/job/refugee/armed)
+
+	//The refugee spawned will be equipped at varying levels depending on sociostability
+	if (SSsociostability.sociostability <= SOCIOSTABILITY_OKAY)
+		S.equipOutfit(/datum/outfit/job/refugee/armed/medium)
+	else if (SSsociostability.sociostability <= SOCIOSTABILITY_BAD)
+		S.equipOutfit(/datum/outfit/job/refugee/armed/heavy)
+	else
+		S.equipOutfit(/datum/outfit/job/refugee/armed)
+
 	message_admins("[ADMIN_LOOKUPFLW(S)] has been made into a Refugee by an event.")
 	S.log_message("was spawned as a Refugee by an event.", LOG_GAME)
 	spawned_mobs += S

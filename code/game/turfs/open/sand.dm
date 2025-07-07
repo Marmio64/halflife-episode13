@@ -16,10 +16,12 @@
 /turf/open/misc/beach/sand
 	gender = PLURAL
 	name = "sand"
-	desc = "Surf's up."
+	desc = "Fine particles of coastal sand. Sopped in memories of higher oceans that once were."
 	icon_state = "sand"
 	base_icon_state = "sand"
 	baseturfs = /turf/open/misc/beach/sand
+	light_power = 0.20 //hl13 edit
+	light_range = 0.35 //hl13 edit
 
 /turf/open/misc/beach/sand/Initialize(mapload)
 	. = ..()

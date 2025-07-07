@@ -325,7 +325,6 @@
 	backpack_contents = list(
 		/obj/item/grenade/c4 = 1,
 		/obj/item/grenade/syndieminibomb/bouncer = 2,
-		/obj/item/crowbar/large = 1, //sometimes C4 is too much
 		/obj/item/hl13_small_flag/poland/telescopic = 1, //POLAND POLAND POLAND
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2, //I refuse death by the power of DRUGS!!!
 	)
