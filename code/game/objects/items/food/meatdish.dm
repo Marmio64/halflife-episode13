@@ -29,7 +29,7 @@
 		/datum/reagent/consumable/nutriment/protein = 3,
 		/datum/reagent/consumable/nutriment/vitamin = 2,
 	)
-	bite_consumption = 6
+	bite_consumption = 4
 	tastes = list("fish" = 1)
 	foodtypes = SEAFOOD
 	eatverbs = list("bite", "chew", "gnaw", "swallow", "chomp")

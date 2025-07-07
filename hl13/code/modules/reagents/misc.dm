@@ -6,8 +6,9 @@
 
 /datum/reagent/consumable/nutriment/raw/on_mob_life(mob/living/L, methods=TOUCH, reac_volume, show_message = TRUE, permeability = 1)
 	..()
-	if(prob(15))
-		L.ForceContractDisease(new /datum/disease/gutworms)
+	if(!HAS_TRAIT(L, TRAIT_STRONG_STOMACH))
+		if(prob(15))
+			L.ForceContractDisease(new /datum/disease/gutworms)
 
 /datum/reagent/consumable/breenfuel
 	name = "Breen Fuel"

@@ -35,10 +35,10 @@
 	player_mind.special_role = "Armed Refugee"
 
 	//The refugee spawned will be equipped at varying levels depending on sociostability
-	if (SSsociostability.sociostability <= SOCIOSTABILITY_OKAY)
-		S.equipOutfit(/datum/outfit/job/refugee/armed/medium)
-	else if (SSsociostability.sociostability <= SOCIOSTABILITY_BAD)
+	if (SSsociostability.sociostability <= SOCIOSTABILITY_BAD)
 		S.equipOutfit(/datum/outfit/job/refugee/armed/heavy)
+	else if (SSsociostability.sociostability <= SOCIOSTABILITY_OKAY)
+		S.equipOutfit(/datum/outfit/job/refugee/armed/medium)
 	else
 		S.equipOutfit(/datum/outfit/job/refugee/armed)
 
