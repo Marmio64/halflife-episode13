@@ -120,7 +120,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	weight = 2
 	cost = 12
 	scaling_cost = 15
-	requirements = list(40,30,30,20,20,15,15,15,10,10)
+	requirements = list(30,30,30,20,20,15,15,15,10,10)
 	antag_cap = 2 // Can pick 3 per team, but rare enough it doesn't matter.
 	var/list/datum/team/brother_team/pre_brother_teams = list()
 	var/const/min_team_size = 2
@@ -434,9 +434,9 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 		JOB_WARDEN,
 	)
 	required_candidates = 3
-	weight = 0
+	weight = 3
 	cost = 20
-	requirements = list(70,70,60,60,50,40,30,20,10,10)
+	requirements = list(50,50,40,40,40,30,30,20,10,10)
 	flags = HIGH_IMPACT_RULESET
 	antag_cap = list("denominator" = 18, "offset" = 1)
 	//ruleset_lazy_templates = list(LAZY_TEMPLATE_KEY_NUKIEBASE)
