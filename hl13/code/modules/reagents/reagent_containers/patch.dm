@@ -28,6 +28,10 @@
 	icon_state = "grub_nugget"
 	apply_sound = 'hl13/sound/effects/smallmedkit1.ogg'
 
+/obj/item/reagent_containers/pill/patch/grubnugget/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_GOOD_QUALITY_BAIT, INNATE_TRAIT)
+
 /obj/item/reagent_containers/hypospray/medipen/healthpen
 	name = "healthpen"
 	desc = "A combine manufactured biogel autoinjector. Heals a small amount over time, and is instant to apply. In addition, it heals oxygen and toxin damage, making it useful for people in critical condition."

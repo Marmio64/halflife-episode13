@@ -33,6 +33,8 @@
 	var/saltwater = FALSE
 	var/toxic = FALSE //is this water completely hazardous to even step in?
 	var/leeches = FALSE //will leeches eat your flesh inside?
+	///Boolean on whether something is currently being washed, preventing multiple people from cleaning at once.
+	var/busy = FALSE
 
 /turf/open/halflife/water/attackby(obj/item/W, mob/user, params)
 	. = ..()
@@ -46,6 +48,50 @@
 				return TRUE
 			to_chat(user, span_notice("\The [container] is full."))
 			return FALSE
+
+/turf/open/halflife/water/attack_hand(mob/living/user, list/modifiers)
+	. = ..()
+	if(.)
+		return
+	if(!iscarbon(user))
+		return
+	if(!Adjacent(user))
+		return
+	if(toxic || sewer || leeches)
+		return
+
+	if(busy)
+		to_chat(user, span_warning("Someone's already washing here!"))
+		return
+	var/selected_area = user.parse_zone_with_bodypart(user.zone_selected)
+	var/washing_face = FALSE
+	if(selected_area in list(BODY_ZONE_HEAD, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_EYES))
+		washing_face = TRUE
+	user.visible_message(
+		span_notice("[user] starts washing [user.p_their()] [washing_face ? "face" : "hands"]..."),
+		span_notice("You start washing your [washing_face ? "face" : "hands"]..."))
+	busy = TRUE
+
+	if(!do_after(user, 4 SECONDS, target = src))
+		busy = FALSE
+		return
+
+	busy = FALSE
+
+	if(washing_face)
+		SEND_SIGNAL(user, COMSIG_COMPONENT_CLEAN_FACE_ACT, CLEAN_WASH)
+	else if(ishuman(user))
+		var/mob/living/carbon/human/human_user = user
+		if(!human_user.wash_hands(CLEAN_WASH))
+			to_chat(user, span_warning("Your hands are covered by something!"))
+			return
+	else
+		user.wash(CLEAN_WASH)
+
+	user.visible_message(
+		span_notice("[user] washes [user.p_their()] [washing_face ? "face" : "hands"] using [src]."),
+		span_notice("You wash your [washing_face ? "face" : "hands"] using [src]."),
+	)
 
 /turf/open/halflife/water/can_have_cabling()
 	return

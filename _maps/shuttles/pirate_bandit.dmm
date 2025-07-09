@@ -43,10 +43,15 @@
 /area/shuttle/pirate/flying_dutchman)
 "p" = (
 /obj/structure/table/halflife/no_smooth/wood,
-/obj/item/gun/ballistic/automatic/pistol/makeshift{
-	pixel_y = 5;
-	pixel_x = -5
+/obj/item/gun/ballistic/automatic/pistol/usp{
+	pixel_y = 8;
+	pixel_x = -4
 	},
+/obj/item/ammo_box/magazine/usp9mm{
+	pixel_x = -7;
+	pixel_y = -1
+	},
+/obj/item/ammo_box/magazine/usp9mm,
 /obj/item/switchblade,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/pirate/flying_dutchman)
@@ -167,6 +172,9 @@
 "Y" = (
 /obj/structure/halflife/pallet,
 /obj/item/binoculars,
+/obj/item/gun/ballistic/rifle/boltaction/mosin_nagant,
+/obj/item/ammo_box/strilka310/a762,
+/obj/item/ammo_box/strilka310/a762,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/pirate/flying_dutchman)
 

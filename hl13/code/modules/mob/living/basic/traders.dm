@@ -37,7 +37,49 @@
 	gloves = /obj/item/clothing/gloves/combat
 	mask = /obj/item/clothing/mask/gas/hl2/military
 
-/// refugee guard
+/// crabwalker /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/mob/living/basic/trader/halflife/crabwalker
+	name = "Crabwalker Trader"
+	desc = "A suspicious looking fellow that almost looks like a zombie at first glance, and definitely smells like one. Looks like he is selling and buying questionable things."
+
+	maxHealth = 250
+	health = 250
+	blood_volume = BLOOD_VOLUME_NORMAL
+	speed = 1
+
+	spawner_path = /obj/effect/mob_spawn/corpse/human/crabwalker
+	loot = list(/obj/effect/mob_spawn/corpse/human/crabwalker)
+
+	ranged_attack_casing = /obj/item/ammo_casing/a357
+	ranged_attack_sound = 'hl13/sound/weapons/revolverfire.ogg'
+	held_weapon_visual = /obj/item/gun/ballistic/revolver/coltpython
+
+	trader_data_path = /datum/trader_data/halflife/crabwalker
+
+	ai_controller = /datum/ai_controller/basic_controller/trader/halflife
+
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE, FACTION_HEADCRAB)
+
+/obj/effect/mob_spawn/corpse/human/crabwalker
+	name = "Crabwalker"
+	hairstyle = "Short Hair"
+	haircolor = COLOR_BLACK
+	facial_hairstyle = "Shaved"
+	skin_tone = "albino"
+	outfit = /datum/outfit/crabwalker
+
+/datum/outfit/crabwalker
+	name = "Crabwalker"
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	suit = /obj/item/clothing/suit/armor/platearmor
+	head = /obj/item/clothing/head/helmet/halflife/headcrab
+	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/combat
+	mask = /obj/item/clothing/mask/bandana/sinew
+
+/// refugee guard /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /mob/living/basic/trooper/rebel/mp7/refugee
 	name = "Refugee Guard"
 	desc = "An armed fellow, looking to protect his employer."
@@ -79,6 +121,8 @@
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
 
+
+///////////////// AI STUFF & TRADER DATA ////////////////////////////////////
 
 /datum/trader_data/halflife/smuggler
 	shop_spot_type = /obj/structure/chair/halflife/overlaypickup/plastic
@@ -123,7 +167,7 @@
 	initial_wanteds = list(
 		/obj/item/factory_construction/full_container = list(PAYCHECK_CREW, 15, ""),
 		/obj/item/halflife/nutrient_bar_wrapping/water = list(PAYCHECK_CREW * 0.75, 10, ""),
-		/obj/item/food/meat/steak = list(PAYCHECK_CREW * 0.75, 10, ""),
+		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/food/pierogi_ration = list(PAYCHECK_CREW * 2.5, 10, ""),
 		/obj/item/stack/sheet/animalhide/goliath_hide = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/stack/bulletcasings = list(PAYCHECK_CREW * 0.25, 15, ""),
@@ -270,4 +314,100 @@
 		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trooper_burst,
 		/datum/ai_planning_subtree/travel_to_point/and_clear_target/reinforce,
 		/datum/ai_planning_subtree/random_speech/refugeeguard,
+	)
+
+/datum/trader_data/halflife/crabwalker
+	shop_spot_type = /obj/structure/chair/halflife/overlaypickup/plastic
+	sign_type = /obj/structure/halflife/sign/shop
+	sociostability_loss = -1
+
+	initial_products = list(
+		/obj/item/clothing/head/helmet/halflife/headcrab = list(PAYCHECK_CREW * 3, 5),
+		/obj/item/clothing/suit/armor/platearmor = list(PAYCHECK_CREW * 5, 5),
+		/obj/item/clothing/mask/bandana/sinew = list(PAYCHECK_CREW * 0.5, 2),
+		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 1.25, 1),
+		/obj/item/knife/combat = list(PAYCHECK_CREW * 6, 3),
+		/obj/item/spear/halflife/deathmatch = list(PAYCHECK_CREW * 6, 3),
+		/obj/item/stack/medical/bandage = list(PAYCHECK_CREW * 0.75, 5),
+	)
+
+	initial_wanteds = list(
+		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW, 10, ""),
+		/obj/item/food/meat/slab/halflife/zombie = list(PAYCHECK_CREW * 0.25, 10, ""),
+		/obj/item/stack/sheet/animalhide/goliath_hide = list(PAYCHECK_CREW, 10, ""),
+		/obj/item/food/meat/steak/plain/human = list(PAYCHECK_CREW * 2, 15, ""),
+		/obj/item/organ/heart = list(PAYCHECK_CREW * 2, 5, ""),
+		/obj/item/reagent_containers/pill/patch/grubnugget = list(PAYCHECK_CREW * 0.25, 15, ""),
+		/obj/item/food/xen/xenbranch = list(PAYCHECK_CREW * 0.25, 5, ""),
+		/obj/item/stack/sheet/leather = list(PAYCHECK_CREW * 0.25, 10, ""),
+	)
+
+	say_phrases = list(
+		ITEM_REJECTED_PHRASE = list(
+			"D-Don't fuckin' need this shit r-right now.",
+			"I don't want that shit.",
+			"Don't f-fuckin' want it.",
+		),
+		ITEM_SELLING_CANCELED_PHRASE = list(
+			"T-Then fuck off.",
+			"F-Fuck off then."
+		),
+		ITEM_SELLING_ACCEPTED_PHRASE = list(
+			"F-Fuckin' finally.",
+			"G-Give it already.",
+		),
+		INTERESTED_PHRASE = list(
+			"I'll buy it. Now.",
+			"I'll fuckin' b-buy it, just give it already.",
+		),
+		BUY_PHRASE = list(
+			"H-Hahaha, come b-back for more.",
+			"All naturally s-sourced...",
+		),
+		NO_CASH_PHRASE = list(
+			"N-Need fuckin' cash.",
+			"N-Not fucking giving it to you f-for free.",
+		),
+		NO_STOCK_PHRASE = list(
+			"I'm out of that.",
+			"F-Fuck off, i'm out of that.",
+		),
+		NOT_WILLING_TO_BUY_PHRASE = list(
+			"Don't f-fucking want that.",
+			"I D-DON'T FUCKING WANT THAT!!!",
+		),
+		ITEM_IS_WORTHLESS_PHRASE = list(
+			"F-Fucking worthless.",
+		),
+		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
+			"G-Got way t-too much of that shit.",
+		),
+		TRADER_LORE_PHRASE = list(
+			"N-Not here to talk. Buy s-something, or g-give me something, or fuck off.",
+			"F-Fresh meat...",
+		),
+		TRADER_NOT_BUYING_ANYTHING = list(
+			"I'm done buying...",
+		),
+		TRADER_NOT_SELLING_ANYTHING = list(
+			"I'm done selling...",
+		),
+		TRADER_BATTLE_START_PHRASE = list(
+			"YOU'RE NEXT ON THE MEATSPIKE!!!",
+			"DINNER TIME!!!",
+			"I'LL TEAR YOUR THROAT OUT!!!",
+			"ANOTHER TROPHY!!!",
+			"I'LL PAINT MYSELF IN YOUR BLOOD!!!",
+		),
+		TRADER_BATTLE_END_PHRASE = list(
+			"Ahhh... A-Ahhhh, b-bloooood... haha...",
+			"The smell of blood is divine...",
+			"Flesh. Blood. Bones.",
+			"You'll look pretty on the spikes.",
+		),
+		TRADER_SHOP_OPENING_PHRASE = list(
+			"Y-You... flesh t-trading here...",
+			"Need to eat?",
+			"I w-won't bite... yet.",
+		),
 	)

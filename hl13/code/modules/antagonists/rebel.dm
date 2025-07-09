@@ -22,6 +22,7 @@
 	)
 	var/static/list/alt_suits = list(
 		/obj/item/clothing/suit/armor/halflife/kevlar/heavy,
+		/obj/item/clothing/suit/armor/armored,
 		/obj/item/clothing/suit/armor/halflife/milvest,
 	)
 	var/static/list/alt_helmets = list(
@@ -36,14 +37,12 @@
 
 	if(prob(80))
 		uniform = pick(alt_uniforms)
-	if(prob(40)) //the alternate armour is just plainly better
+	if(prob(40))
 		suit = pick(alt_suits)
 	if(prob(50)) //better but no hardened gas mask so not ideal
 		head = pick(alt_helmets)
 	if(prob(50)) //there's another 50/50 of either the rifle is just polymer or curse of mosin
 		suit_store = pick (alt_guns)
-	if(prob(40))
-		shoes = /obj/item/clothing/shoes/jackboots/civilprotection //stolen cop boots lmao
 
 
 	equip_to.cmode_music = 'hl13/sound/music/combat/cpviolation.ogg'
