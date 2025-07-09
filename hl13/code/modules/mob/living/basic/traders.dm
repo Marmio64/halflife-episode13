@@ -336,6 +336,7 @@
 		/obj/item/food/meat/slab/halflife/zombie = list(PAYCHECK_CREW * 0.25, 10, ""),
 		/obj/item/stack/sheet/animalhide/goliath_hide = list(PAYCHECK_CREW, 10, ""),
 		/obj/item/food/meat/steak/plain/human = list(PAYCHECK_CREW * 2, 15, ""),
+		/obj/item/food/meat/slab/human = list(PAYCHECK_CREW * 2, 15, ""),
 		/obj/item/organ/heart = list(PAYCHECK_CREW * 2, 5, ""),
 		/obj/item/reagent_containers/pill/patch/grubnugget = list(PAYCHECK_CREW * 0.25, 15, ""),
 		/obj/item/food/xen/xenbranch = list(PAYCHECK_CREW * 0.25, 5, ""),
