@@ -63,7 +63,8 @@
 
 /turf/closed/wall/halflife/metal/strong
 	max_integrity = 1500
-	explosive_resistance = 2
+	explosive_resistance = 4
+	slicing_duration = 200
 
 /turf/closed/wall/halflife/metal/strong/train
 	icon = 'hl13/icons/turf/walls/train.dmi'
@@ -73,7 +74,7 @@
 
 /turf/closed/wall/halflife/metal/weak
 	max_integrity = 300
-	slicing_duration = 100
+	slicing_duration = 80
 
 /turf/closed/wall/halflife/metal/weak/old
 	icon = 'hl13/icons/turf/walls/metal.dmi'

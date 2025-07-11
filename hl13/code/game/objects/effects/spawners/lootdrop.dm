@@ -63,6 +63,7 @@
 				/obj/item/customlock,
 				/obj/item/stack/kevlar,
 				/obj/item/halflife/combine_battery,
+				/obj/item/fishing_hook,
 				/obj/item/stack/spacecash/c10,
 				/obj/item/stack/spacecash/c20
 				)
@@ -113,6 +114,7 @@
 				/obj/item/reagent_containers/cup/soda_cans/breenwater/empty = 5,
 				/obj/item/trash/halflife/nutrient_bar_waste/pork = 3,
 				/obj/item/trash/halflife/nutrient_bar_waste/beef = 3,
+				/obj/item/food/bait/worm,
 				/obj/item/stack/spacecash/c1
 				)
 

@@ -32,21 +32,21 @@
 	name = "Bone Fishing Rod"
 	result = /obj/item/fishing_rod/bone
 	time = 5 SECONDS
-	reqs = list(/obj/item/stack/sheet/mineral/wood = 1,
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 2,
 				/obj/item/stack/sheet/sinew = 2,
-				/obj/item/stack/sheet/bone = 2)
+				/obj/item/stack/sheet/bone = 3)
 	category = CAT_TOOLS
 
 /datum/crafting_recipe/sinew_line
 	name = "Sinew Fishing Line Reel"
 	result = /obj/item/fishing_line/sinew
-	reqs = list(/obj/item/stack/sheet/sinew = 2)
-	time = 2 SECONDS
+	reqs = list(/obj/item/stack/sheet/sinew = 3)
+	time = 3 SECONDS
 	category = CAT_TOOLS
 
 /datum/crafting_recipe/bone_hook
 	name = "Bone Hook"
 	result = /obj/item/fishing_hook/bone
 	reqs = list(/obj/item/stack/sheet/bone = 1)
-	time = 2 SECONDS
+	time = 3 SECONDS
 	category = CAT_TOOLS

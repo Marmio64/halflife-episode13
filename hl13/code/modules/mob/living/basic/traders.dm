@@ -166,6 +166,7 @@
 
 	initial_wanteds = list(
 		/obj/item/factory_construction/full_container = list(PAYCHECK_CREW, 15, ""),
+		/obj/item/factory_construction/full_container/advanced = list(PAYCHECK_CREW * 2, 15, ""),
 		/obj/item/halflife/nutrient_bar_wrapping/water = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/food/pierogi_ration = list(PAYCHECK_CREW * 2.5, 10, ""),
@@ -340,7 +341,7 @@
 		/obj/item/organ/heart = list(PAYCHECK_CREW * 2, 5, ""),
 		/obj/item/reagent_containers/pill/patch/grubnugget = list(PAYCHECK_CREW * 0.25, 15, ""),
 		/obj/item/food/xen/xenbranch = list(PAYCHECK_CREW * 0.25, 5, ""),
-		/obj/item/stack/sheet/leather = list(PAYCHECK_CREW * 0.25, 10, ""),
+		/obj/item/stack/sheet/animalhide/human = list(PAYCHECK_CREW * 0.5, 10, ""),
 	)
 
 	say_phrases = list(
