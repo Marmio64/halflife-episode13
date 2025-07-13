@@ -26,6 +26,7 @@
 	blood_volume = BLOOD_VOLUME_NORMAL
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie
 	initial_language_holder = /datum/language_holder/zombie
+	mobility_flags = MOBILITY_FLAGS_REST_CAPABLE_DEFAULT //allows playing dead
 	var/no_crab_state = "zombie_dead_nocrab"
 	var/crabless_possible = TRUE
 	var/headcrabspawn = /mob/living/basic/halflife/headcrab

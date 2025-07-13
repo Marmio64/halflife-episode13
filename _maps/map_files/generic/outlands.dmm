@@ -516,6 +516,10 @@
 /obj/machinery/light/small/broken/directional/west,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
+"eu" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/forest)
 "ev" = (
 /obj/effect/landmark/start/nukeop,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -1963,6 +1967,10 @@
 "qV" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/sewer/tunnel)
+"qX" = (
+/obj/structure/halflife/sign/workers,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "ra" = (
 /obj/effect/decal/cleanable/blood/trails{
 	dir = 10
@@ -2119,10 +2127,6 @@
 /obj/machinery/door/unpowered/halflife/seethrough/fence/wire{
 	locked = 1
 	},
-/turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors/forest)
-"sA" = (
-/obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "sD" = (
@@ -3017,6 +3021,12 @@
 "Ah" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/bunker)
+"Ai" = (
+/obj/structure/halflife/road_barrier{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "Al" = (
 /obj/structure/railing/halflife/wood/ending,
 /turf/open/floor/plating/ground/dirt/alt,
@@ -4467,6 +4477,12 @@
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"NF" = (
+/obj/structure/halflife/road_barrier{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/dirt/alt,
+/area/halflife/outdoors/forest)
 "NH" = (
 /obj/structure/table/halflife/no_smooth/large/crafting/weaponbench,
 /obj/structure/halflife/pipes/horizontal/single/inwall{
@@ -65864,13 +65880,13 @@ XA
 XA
 tN
 tN
-It
-It
-tN
-tN
-It
-tN
-tN
+NF
+NF
+Ai
+Ai
+NF
+Ai
+Ai
 ai
 oG
 oG
@@ -66059,7 +66075,7 @@ XA
 XA
 XA
 XA
-tN
+qX
 tN
 It
 ai
@@ -71256,7 +71272,7 @@ KV
 eL
 rF
 KV
-sA
+eu
 Co
 qQ
 tN

@@ -1011,7 +1011,6 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
 "bmW" = (
-/obj/structure/flora/xen/leafy,
 /obj/structure/alien/weeds,
 /obj/structure/table/halflife/no_smooth/wood/stand,
 /obj/structure/halflife/tv/tube/tiny{
@@ -1554,6 +1553,11 @@
 /obj/item/watertank/cleanup,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
+"cfS" = (
+/obj/structure/alien/weeds,
+/obj/structure/flora/xen/leafy,
+/turf/open/floor/plating/indoor/grooved2,
+/area/halflife/indoors/slums)
 "cga" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/outdoors/tracks)
@@ -6308,6 +6312,13 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/abandoned_ship/cargo)
+"ivZ" = (
+/obj/machinery/camera{
+	c_tag = "Bar Exterior North";
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "iwI" = (
 /obj/effect/turf_decal/halflife/covering/wallpaper/red,
 /turf/closed/wall/halflife/concrete,
@@ -10155,12 +10166,6 @@
 /obj/structure/chair/office/halflife/blue,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/townhall)
-"nFC" = (
-/obj/machinery/camera{
-	c_tag = "Bar Exterior South"
-	},
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors)
 "nFZ" = (
 /obj/structure/chair/halflife/wood{
 	dir = 1
@@ -10787,6 +10792,12 @@
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/bar)
+"oFG" = (
+/obj/machinery/camera{
+	c_tag = "Bar Exterior South"
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors)
 "oFI" = (
 /obj/machinery/computer/cargo,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -11305,7 +11316,6 @@
 	pixel_y = 32
 	},
 /obj/structure/alien/weeds,
-/obj/structure/flora/xen/leafy,
 /turf/open/floor/plating/indoor/metal,
 /area/halflife/indoors/slums)
 "pqm" = (
@@ -14830,13 +14840,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/bar/apartments)
-"tYl" = (
-/obj/machinery/camera{
-	c_tag = "Bar Exterior North";
-	dir = 1
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "tZC" = (
 /obj/structure/halflife/pipes/horizontal/random_alt,
 /obj/effect/spawner/random/halflife/loot/scrap/three,
@@ -41463,7 +41466,7 @@ pyV
 gzB
 fcI
 mQw
-thR
+cfS
 iwI
 opi
 sSO
@@ -45958,7 +45961,7 @@ bzg
 bzg
 bzg
 bzg
-nFC
+oFG
 gkC
 dcp
 dcp
@@ -47233,7 +47236,7 @@ xVO
 xVO
 xVO
 xVO
-tYl
+ivZ
 eeu
 eeu
 eeu
