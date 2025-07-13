@@ -114,6 +114,7 @@
 				/obj/item/reagent_containers/cup/soda_cans/breenwater/empty = 5,
 				/obj/item/trash/halflife/nutrient_bar_waste/pork = 3,
 				/obj/item/trash/halflife/nutrient_bar_waste/beef = 3,
+				/obj/item/food/canned/halflife/seafood/expired,
 				/obj/item/food/bait/worm,
 				/obj/item/stack/spacecash/c1
 				)

@@ -130,14 +130,6 @@
 	make_reagent = /datum/reagent/toxin/pestkiller
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_CHEMICALS)
 
-/datum/design/org_pest_spray
-	name = "Organic Pest Killer"
-	id = "org_pest_spray"
-	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 0.7)
-	make_reagent = /datum/reagent/toxin/pestkiller/organic
-	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_CHEMICALS)
-
 /datum/design/cloth
 	name = "Sheet of Cloth"
 	id = "cloth"
@@ -177,3 +169,79 @@
 	materials = list(/datum/material/biomass = 4)
 	build_path = /obj/item/flashlight/flare/candle
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
+
+//hl13 edit start
+
+/datum/design/base_protein
+	name = "Protein Base"
+	id = "base_protein"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 6)
+	build_path = /obj/item/ration_construction/base/protein
+	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
+
+/datum/design/base_fat
+	name = "Fat Base"
+	id = "base_fat"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 6)
+	build_path = /obj/item/ration_construction/base/fat
+	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
+
+/datum/design/base_fiber
+	name = "Fiber Base"
+	id = "base_fiber"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 6)
+	build_path = /obj/item/ration_construction/base/fiber
+	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
+
+/datum/design/additive_blue
+	name = "Blue Water Additive"
+	id = "additive_blue"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 6)
+	build_path = /obj/item/ration_construction/watermix/blueadditive
+	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
+
+/datum/design/additive_red
+	name = "Red Water Additive"
+	id = "additive_red"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 6)
+	build_path = /obj/item/ration_construction/watermix/redadditive
+	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
+
+/datum/design/additive_yellow
+	name = "Yellow Water Additive"
+	id = "additive_yellow"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 6)
+	build_path = /obj/item/ration_construction/watermix/yellowadditive
+	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
+
+/datum/design/flavor_sweet
+	name = "Sweet Flavoring Jug"
+	id = "flavor_sweet"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 6)
+	build_path = /obj/item/ration_construction/flavoring/sweet
+	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
+
+/datum/design/flavor_bitter
+	name = "Bitter Flavoring Jug"
+	id = "flavor_bitter"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 6)
+	build_path = /obj/item/ration_construction/flavoring/bitter
+	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
+
+/datum/design/flavor_sour
+	name = "Sour Flavoring Jug"
+	id = "flavor_sour"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 6)
+	build_path = /obj/item/ration_construction/flavoring/sour
+	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
+
+//hl13 edit end

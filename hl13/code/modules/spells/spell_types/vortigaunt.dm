@@ -45,7 +45,7 @@
 	icon_state = "xray"
 	damage = 35
 	damage_type = BURN
-	armour_penetration = 20
+	armour_penetration = 30
 	hitsound = 'hl13/sound/weapons/attack_shoot.ogg'
 	hitscan = TRUE
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser

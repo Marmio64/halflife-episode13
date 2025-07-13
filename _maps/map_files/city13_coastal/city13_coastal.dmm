@@ -358,6 +358,11 @@
 /obj/machinery/rnd/production/protolathe/department/medical,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/hospital/storage)
+"asY" = (
+/obj/machinery/light/small/directional/east,
+/obj/structure/halflife/leaves,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors)
 "ate" = (
 /obj/structure/halflife/barrel/single/toxic/one,
 /turf/open/floor/plating/indoor/concrete,
@@ -385,6 +390,9 @@
 /obj/machinery/power/halflife/streetlamphalt,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/alley/restrictedblock)
+"auh" = (
+/turf/closed/wall/halflife/concrete,
+/area/halflife/outdoors/coast)
 "auP" = (
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/alley)
@@ -1452,6 +1460,13 @@
 /obj/effect/turf_decal/halflife/covering/paint/white,
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/productioncenter/office)
+"bYW" = (
+/obj/machinery/camera{
+	c_tag = "Bar Exterior North";
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "caP" = (
 /obj/structure/railing/halflife/solo{
 	dir = 1
@@ -1553,11 +1568,6 @@
 /obj/item/watertank/cleanup,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
-"cfS" = (
-/obj/structure/alien/weeds,
-/obj/structure/flora/xen/leafy,
-/turf/open/floor/plating/indoor/grooved2,
-/area/halflife/indoors/slums)
 "cga" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/outdoors/tracks)
@@ -5964,6 +5974,11 @@
 /obj/machinery/light/small/cyan/directional/west,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
+"hRs" = (
+/obj/machinery/status_display/evac/directional/west,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/laborunion)
 "hRR" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/dresser,
@@ -6070,7 +6085,6 @@
 /area/halflife/outdoors/harbor)
 "hZj" = (
 /obj/machinery/light/small/directional/east,
-/obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors)
 "hZH" = (
@@ -6312,13 +6326,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/abandoned_ship/cargo)
-"ivZ" = (
-/obj/machinery/camera{
-	c_tag = "Bar Exterior North";
-	dir = 1
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors)
 "iwI" = (
 /obj/effect/turf_decal/halflife/covering/wallpaper/red,
 /turf/closed/wall/halflife/concrete,
@@ -7572,6 +7579,10 @@
 	dir = 4
 	},
 /area/halflife/indoors/productioncenter/upper)
+"kjC" = (
+/obj/effect/spawner/random/halflife/loot/uncommon,
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/antlioncave)
 "kkj" = (
 /obj/machinery/camera{
 	c_tag = "Nexus Helipad South";
@@ -9617,6 +9628,7 @@
 	desc = "An old hat from simpler days, worn by captains at sea."
 	},
 /obj/item/weaponcrafting/frame/coltpython,
+/obj/item/ammo_box/colta357,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/abandoned_ship/cargo)
 "mUI" = (
@@ -10792,12 +10804,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/bar)
-"oFG" = (
-/obj/machinery/camera{
-	c_tag = "Bar Exterior South"
-	},
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors)
 "oFI" = (
 /obj/machinery/computer/cargo,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -11926,6 +11932,7 @@
 "qjW" = (
 /obj/structure/halflife/pipes/horizontal/valve,
 /obj/structure/alien/weeds,
+/obj/effect/spawner/random/halflife/loot/crafting_bench,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "qko" = (
@@ -11939,6 +11946,10 @@
 /obj/effect/landmark/navigate_destination/halflife/trainstation,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
+"qkT" = (
+/obj/item/chair/halflife/plastic,
+/turf/open/misc/beach/sand,
+/area/halflife/outdoors/coast)
 "qlv" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -12263,6 +12274,11 @@
 	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/productioncenter/office)
+"qFm" = (
+/obj/structure/alien/weeds,
+/obj/structure/flora/xen/leafy,
+/turf/open/floor/plating/indoor/grooved2,
+/area/halflife/indoors/slums)
 "qFq" = (
 /obj/machinery/light/small/directional/north,
 /obj/item/hl13_small_flag/combine{
@@ -12920,6 +12936,14 @@
 /obj/structure/halflife/pole/directional/east,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
+"rzh" = (
+/obj/item/chair/halflife/plastic{
+	dir = 1
+	},
+/turf/open/halflife/water/shallow{
+	dispensedreagent = /datum/reagent/water/dirty/salt
+	},
+/area/halflife/outdoors/ocean)
 "rzw" = (
 /obj/effect/turf_decal/halflife/covering/paint/white,
 /turf/closed/wall/halflife/brick,
@@ -13067,6 +13091,10 @@
 /obj/structure/halflife/pallet,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/old_harbor)
+"rIj" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/laborunion)
 "rIk" = (
 /obj/structure/table/halflife/no_smooth/metal,
 /mob/living/simple_animal/halflife/larry,
@@ -16114,6 +16142,12 @@
 /obj/item/hl2key/clerk,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/store)
+"vLH" = (
+/obj/machinery/camera{
+	c_tag = "Bar Exterior South"
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors)
 "vLS" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
@@ -18555,8 +18589,8 @@ rQB
 rQB
 rQB
 rQB
-gXw
-gXw
+xpJ
+xpJ
 gXw
 gXw
 gXw
@@ -18700,7 +18734,7 @@ xkL
 xkL
 xkL
 rnS
-gXw
+xpJ
 gXw
 gXw
 gXw
@@ -18844,7 +18878,7 @@ aXH
 aXH
 bpH
 bpH
-gXw
+xpJ
 gXw
 gXw
 gXw
@@ -19996,7 +20030,7 @@ xkL
 xkL
 bpH
 bpH
-gXw
+xpJ
 gXw
 cSg
 efj
@@ -20139,8 +20173,8 @@ aXH
 aXH
 aXH
 aXH
-aXH
-gXw
+bpH
+xpJ
 gXw
 cSg
 efj
@@ -20283,8 +20317,8 @@ rQB
 rQB
 rQB
 rQB
-rQB
-gXw
+auh
+xpJ
 gXw
 cSg
 efj
@@ -23881,7 +23915,7 @@ rQB
 rQB
 rQB
 rQB
-rQB
+qkT
 gXw
 gXw
 gXw
@@ -26922,7 +26956,7 @@ kQQ
 kQQ
 kQQ
 dlE
-dlE
+kjC
 toM
 gXw
 gXw
@@ -28485,7 +28519,7 @@ jYV
 siU
 siU
 siU
-siU
+rzh
 siU
 siU
 rQB
@@ -37046,7 +37080,7 @@ diK
 lnh
 uyo
 lnh
-uyo
+hZj
 xRb
 lnh
 uyo
@@ -38056,7 +38090,7 @@ qLr
 iWe
 fFa
 jvp
-aSZ
+hRs
 jvp
 jvp
 jvp
@@ -38206,7 +38240,7 @@ jFW
 gPN
 jFW
 jFW
-jvp
+rIj
 sCr
 cOi
 tKd
@@ -41466,7 +41500,7 @@ pyV
 gzB
 fcI
 mQw
-cfS
+qFm
 iwI
 opi
 sSO
@@ -45961,7 +45995,7 @@ bzg
 bzg
 bzg
 bzg
-oFG
+vLH
 gkC
 dcp
 dcp
@@ -47236,7 +47270,7 @@ xVO
 xVO
 xVO
 xVO
-ivZ
+bYW
 eeu
 eeu
 eeu
@@ -50271,7 +50305,7 @@ dcp
 xRb
 laV
 jGT
-hZj
+asY
 uyo
 dcp
 pXC

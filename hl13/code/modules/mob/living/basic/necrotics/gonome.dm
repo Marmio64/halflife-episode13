@@ -99,9 +99,9 @@
 	icon_living = "gonome"
 	melee_damage_lower = 30
 	melee_damage_upper = 35
-	speed = 1.75
-	maxHealth = 475
-	health = 475
+	speed = 1.65
+	maxHealth = 425
+	health = 425
 	fully_grown = TRUE
 
 /mob/living/basic/halflife/zombie/gonome/Login()

@@ -256,6 +256,9 @@
 	icon_state = "headcrabhead"
 	basic_mob_flags = DEL_ON_DEATH
 	headcrabspawn_chance = 100
+	maxHealth = 120 //not decayed, a bit tougher
+	health = 120
+	sharpness = 0 //no claws yet
 	/// The dead body we have inside
 	var/mob/living/carbon/human/corpse
 

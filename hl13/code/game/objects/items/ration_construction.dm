@@ -487,6 +487,7 @@
 	wtype = "redadd"
 	icon_state = "redadd"
 
+///not used ingame for now
 /obj/item/ration_construction/watermix/purpleadditive
 	name = "Purple Water Additive"
 	desc = "A tablet of purifying substances and oils to enrich water cans into nutriment cans."
@@ -505,14 +506,14 @@
 	var/yellow = 0
 	var/red = 0
 	var/purple = 0
-	var/list/pouroptions = list("Mix Blue Water", "Mix Yellow Water", "Mix Red Water", "Mix Purple Water")
+	var/list/pouroptions = list("Mix Blue Water", "Mix Yellow Water", "Mix Red Water")
 
 /obj/machinery/watermixer/examine(mob/user)
 	. = ..()
 	. += span_notice("You can hit it with Cans, Additives, Water Jugs, or Water Canisters to fill the device.")
 	. += span_notice("You can use the machine to mix Breen Waters together.")
 	. += span_notice("Supplies")
-	. += span_notice("Red: [red], Blue: [blue], Yellow: [yellow], Purple: [purple], Water: [wateramt], Cans: [cans]")
+	. += span_notice("Red: [red], Blue: [blue], Yellow: [yellow], Water: [wateramt], Cans: [cans]")
 
 /obj/machinery/watermixer/attackby(obj/item/I, mob/living/user, params)
 	if(istype(I, /obj/item/ration_construction/watermix))
@@ -525,8 +526,6 @@
 					blue += 1
 				if("yellowadd")
 					yellow += 1
-				if("purpleadd")
-					purple += 1
 			to_chat(usr, span_notice("Added [I]..."))
 			playsound(src, 'hl13/sound/machines/vending.ogg', 30, FALSE, extrarange = -1)
 			qdel(I)
@@ -594,15 +593,4 @@
 				wateramt -= 1
 				cans -= 1
 				new /obj/item/ration_construction/red_cans(src.loc, 1)
-				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 30, FALSE, extrarange = -1)
-		if("Mix Purple Water")
-			if(purple < 1)
-				to_chat(usr, span_notice("You don't have any purple additive to mix with."))
-				return
-			playsound(src, 'hl13/sound/machines/canmixer.ogg', 80, FALSE, extrarange = -1)
-			if(do_after(user, 4 SECONDS, src))
-				purple -= 1
-				wateramt -= 1
-				cans -= 1
-				new /obj/item/ration_construction/purple_cans(src.loc, 1)
 				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 30, FALSE, extrarange = -1)

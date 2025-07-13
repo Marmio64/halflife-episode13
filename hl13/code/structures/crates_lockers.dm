@@ -90,7 +90,6 @@
 	new /obj/item/ration_construction/watermix/blueadditive(src)
 	new /obj/item/ration_construction/watermix/yellowadditive(src)
 	new /obj/item/ration_construction/watermix/redadditive(src)
-	new /obj/item/ration_construction/watermix/purpleadditive(src)
 	new /obj/item/ration_construction/flavoring/sweet(src)
 	new /obj/item/ration_construction/flavoring/bitter(src)
 	new /obj/item/ration_construction/flavoring/sour(src)

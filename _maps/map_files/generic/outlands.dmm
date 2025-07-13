@@ -516,10 +516,6 @@
 /obj/machinery/light/small/broken/directional/west,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
-"eu" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors/forest)
 "ev" = (
 /obj/effect/landmark/start/nukeop,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -637,6 +633,12 @@
 "fh" = (
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/laborcamp)
+"fl" = (
+/obj/structure/halflife/road_barrier{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "fn" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/structure/halflife/pipes/horizontal/down/single{
@@ -1102,6 +1104,10 @@
 /obj/structure/bed/halflife/mattress/stale,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/bunker)
+"jA" = (
+/obj/structure/halflife/sign/workers,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "jD" = (
 /obj/effect/spawner/random/halflife/loot/heal,
 /obj/structure/table/halflife/metal/grate,
@@ -1967,10 +1973,6 @@
 "qV" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/sewer/tunnel)
-"qX" = (
-/obj/structure/halflife/sign/workers,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "ra" = (
 /obj/effect/decal/cleanable/blood/trails{
 	dir = 10
@@ -2129,6 +2131,10 @@
 	},
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
+"sA" = (
+/obj/structure/table/halflife/metal/grate,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "sD" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/storage/halflife/suitcase{
@@ -2321,6 +2327,12 @@
 	dir = 5
 	},
 /turf/open/halflife/water/shallow,
+/area/halflife/outdoors/forest)
+"tQ" = (
+/obj/structure/halflife/road_barrier{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
 "tU" = (
 /mob/living/basic/halflife/headcrab/armored,
@@ -3021,12 +3033,6 @@
 "Ah" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/bunker)
-"Ai" = (
-/obj/structure/halflife/road_barrier{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "Al" = (
 /obj/structure/railing/halflife/wood/ending,
 /turf/open/floor/plating/ground/dirt/alt,
@@ -3410,6 +3416,10 @@
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
+"DU" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/forest)
 "DV" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete,
@@ -3550,6 +3560,11 @@
 /obj/effect/spawner/random/halflife/loot/uncommon,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
+"Fo" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/effect/spawner/random/halflife/loot/heal,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "Fr" = (
 /obj/structure/railing/halflife/wood{
 	dir = 4
@@ -4096,6 +4111,12 @@
 /obj/structure/closet/halflife,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
+"Kk" = (
+/obj/machinery/door/unpowered/halflife/metal/red{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "Km" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
@@ -4352,6 +4373,11 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"MG" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "MJ" = (
 /obj/structure/halflife/pipes/horizontal/end,
 /turf/open/floor/plating/indoor/metal/grate,
@@ -4477,12 +4503,6 @@
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
-"NF" = (
-/obj/structure/halflife/road_barrier{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/dirt/alt,
-/area/halflife/outdoors/forest)
 "NH" = (
 /obj/structure/table/halflife/no_smooth/large/crafting/weaponbench,
 /obj/structure/halflife/pipes/horizontal/single/inwall{
@@ -28346,11 +28366,11 @@ Gb
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
+UI
+UI
+UI
+UI
+UI
 wG
 wG
 wG
@@ -28543,11 +28563,11 @@ Gb
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
+UI
+MG
+GT
+sA
+UI
 wG
 wG
 wG
@@ -28740,11 +28760,11 @@ Gb
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
+UI
+sA
+GT
+sA
+UI
 wG
 wG
 wG
@@ -28937,11 +28957,11 @@ Gb
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
+UI
+sA
+GT
+Fo
+UI
 wG
 wG
 wG
@@ -29134,11 +29154,11 @@ Gb
 wG
 wG
 wG
-wG
-wG
-wG
-wG
-wG
+UI
+GT
+GT
+GT
+UI
 wG
 wG
 wG
@@ -29333,7 +29353,7 @@ UI
 Nu
 UI
 UI
-UI
+Kk
 UI
 UI
 wG
@@ -65880,13 +65900,13 @@ XA
 XA
 tN
 tN
-NF
-NF
-Ai
-Ai
-NF
-Ai
-Ai
+tQ
+tQ
+fl
+fl
+tQ
+fl
+fl
 ai
 oG
 oG
@@ -66075,7 +66095,7 @@ XA
 XA
 XA
 XA
-qX
+jA
 tN
 It
 ai
@@ -71272,7 +71292,7 @@ KV
 eL
 rF
 KV
-eu
+DU
 Co
 qQ
 tN

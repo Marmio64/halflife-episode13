@@ -82,11 +82,7 @@
 					/obj/item/ration_construction/watermix/redadditive,
 					/obj/item/ration_construction/watermix/redadditive,
 					/obj/item/ration_construction/watermix/redadditive,
-					/obj/item/ration_construction/watermix/redadditive,
-					/obj/item/ration_construction/watermix/purpleadditive,
-					/obj/item/ration_construction/watermix/purpleadditive,
-					/obj/item/ration_construction/watermix/purpleadditive,
-					/obj/item/ration_construction/watermix/purpleadditive)
+					/obj/item/ration_construction/watermix/redadditive)
 	crate_name = "water additives crate"
 
 /datum/supply_pack/organic/complete_rationsupplies
@@ -96,7 +92,6 @@
 	contains = list(/obj/item/ration_construction/watermix/blueadditive,
 					/obj/item/ration_construction/watermix/yellowadditive,
 					/obj/item/ration_construction/watermix/redadditive,
-					/obj/item/ration_construction/watermix/purpleadditive,
 					/obj/item/ration_construction/flavoring/sweet,
 					/obj/item/ration_construction/flavoring/bitter,
 					/obj/item/ration_construction/flavoring/sour,
