@@ -92,7 +92,6 @@
 		/obj/item/ration_construction/ingredientblock/sourfiber
 	)
 	var/possiblewater = list(
-		/obj/item/ration_construction/purple_cans,
 		/obj/item/ration_construction/yellow_cans,
 		/obj/item/ration_construction/blue_cans,
 		/obj/item/ration_construction/red_cans)
