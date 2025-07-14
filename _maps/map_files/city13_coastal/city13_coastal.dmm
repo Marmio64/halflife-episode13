@@ -603,10 +603,6 @@
 "aJz" = (
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/townhall)
-"aJX" = (
-/obj/machinery/computer/crew,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "aKE" = (
 /obj/machinery/camera/directional/west{
 	c_tag = "Nexus Caves Access"
@@ -11915,6 +11911,10 @@
 /obj/item/reagent_containers/hypospray/medipen/healthpen,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/hospital/storage)
+"qbI" = (
+/obj/machinery/computer/security,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "qbX" = (
 /obj/structure/halflife/large_pipe,
 /obj/structure/railing/halflife/solo/industrial{
@@ -11956,12 +11956,6 @@
 /obj/structure/flora/rock/style_random,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/outdoors/ocean)
-"qfg" = (
-/obj/machinery/combine_health_station/round_start{
-	pixel_y = 30
-	},
-/turf/open/floor/plating/indoor/sterilesquares,
-/area/halflife/indoors/townhall/infirmary)
 "qga" = (
 /obj/structure/table/halflife/wood,
 /obj/structure/halflife/trash/papers/one{
@@ -12539,7 +12533,8 @@
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/slums)
 "qOU" = (
-/obj/machinery/computer/records/security,
+/obj/structure/table/halflife/metal/grate,
+/obj/machinery/validation_terminal,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "qOV" = (
@@ -14198,6 +14193,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/south_checkpoint)
+"sVi" = (
+/obj/machinery/computer/crew,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "sVt" = (
 /obj/structure/stairs/halflife/concrete{
 	icon = 'hl13/icons/turf/floor/floors.dmi';
@@ -14783,6 +14782,10 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/slums)
+"tHL" = (
+/obj/structure/reagent_dispensers/wall/peppertank/directional/east,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "tIt" = (
 /obj/machinery/camera{
 	c_tag = "Train Station Arrivals Lower West";
@@ -16239,6 +16242,12 @@
 /obj/structure/sign/poster/halflife/rebel,
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/slums)
+"vME" = (
+/obj/machinery/combine_health_station/round_start{
+	pixel_y = 30
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/townhall/infirmary)
 "vMP" = (
 /obj/structure/stairs/halflife/concrete{
 	dir = 4
@@ -16324,10 +16333,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
-"vSc" = (
-/obj/machinery/computer/security,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "vSW" = (
 /obj/structure/sign/poster/halflife/rebel/plf,
 /turf/closed/wall/halflife/brick,
@@ -16727,10 +16732,6 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/old_harbor)
-"wxW" = (
-/obj/structure/reagent_dispensers/wall/peppertank/directional/east,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "wzC" = (
 /obj/structure/table/halflife/no_smooth/large/metal/desk,
 /obj/structure/halflife/rug/rubber,
@@ -16991,6 +16992,10 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/townhall)
+"wVs" = (
+/obj/machinery/computer/records/security,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "wVA" = (
 /obj/structure/halflife/trash/garbage{
 	pixel_x = 2;
@@ -17202,7 +17207,6 @@
 "xge" = (
 /obj/machinery/combine_walllight/directional/north,
 /obj/structure/table/halflife/metal/grate,
-/obj/machinery/validation_terminal,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "xgg" = (
@@ -36509,7 +36513,7 @@ sPm
 wtl
 pBv
 cyZ
-qfg
+vME
 xKg
 lJg
 cyZ
@@ -54444,7 +54448,7 @@ oJG
 kqC
 dMO
 oJG
-qOU
+wVs
 eif
 mnm
 mnm
@@ -54877,7 +54881,7 @@ ifz
 ltT
 ltT
 eif
-nzV
+qOU
 aii
 kqC
 oJG
@@ -55032,7 +55036,7 @@ oJG
 kqC
 kqC
 oJG
-vSc
+qbI
 eif
 ovF
 ovF
@@ -55320,13 +55324,13 @@ ltT
 eif
 peI
 oJG
-wxW
+tHL
 oJG
 cyp
 oJG
 oJG
 oJG
-aJX
+sVi
 eif
 ovF
 ovF
