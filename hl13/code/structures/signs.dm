@@ -36,6 +36,24 @@
 	bound_x = 64
 	pixel_y = 24
 
+/obj/structure/halflife/sign/combine
+	name = "combine sign"
+	desc = "A combine sign."
+	icon_state = "emptycombinesign"
+	density = FALSE
+	bound_x = 64
+	pixel_y = 32
+
+/obj/structure/halflife/sign/combine/dispatch
+	name = "combine dispatch sign"
+	desc = "A sign spelling out 'Dispatch' in the combine alphabet."
+	icon_state = "dispatchsign"
+
+/obj/structure/halflife/sign/combine/nexus
+	name = "combine nexus sign"
+	desc = "A sign spelling out 'Nexus' in the combine alphabet."
+	icon_state = "nexussign"
+
 /obj/structure/halflife/sign/bazaar
 	name = "bazaar sign"
 	desc = "A set of signs clearly directing you to the heart of the Town. Obviously there is many things to be gained in this particular direction."

@@ -157,7 +157,7 @@
 	default_raw_text = "GET DAT FUKKEN DISK"
 
 /obj/item/paper/fluff/stations/centcom/broken_evac
-	default_raw_text = "Due to circumstances beyond our control, your Emergency Evacuation Shuttle is out of service.<br><br>We apologize for the inconvenience this may cause you.<br><br>Please enjoy the use of this complementary book.<br><br>Sincerely,<br>CentCom Operations Demolitions Examination Retribution Bugfixing Underlining Services"
+	default_raw_text = "Due to circumstances beyond our control, your Transfer Train is out of service.<br><br>We apologize for the inconvenience this may cause you.<br><br>Please enjoy the use of this complementary paper.<br><br>Sincerely,<br>City13 Operations Demolitions Examination Retribution Bugfixing Underlining Services"
 
 /obj/item/paper/fluff/stations/centcom/bulletin
 	name = "paper- 'Official Bulletin'"
