@@ -184,6 +184,13 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/abandoned_ship/cargo)
+"aii" = (
+/obj/machinery/recharger{
+	pixel_y = 4
+	},
+/obj/structure/table/halflife/metal/grate,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "aiK" = (
 /obj/structure/closet/crate/halflife,
 /obj/item/pickaxe,
@@ -849,6 +856,10 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/laborunion)
+"bcz" = (
+/obj/machinery/computer/records/security,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "bdb" = (
 /obj/structure/closet/crate/bin,
 /obj/item/reagent_containers/cup/soda_cans/breenwater/empty,
@@ -1604,9 +1615,23 @@
 "cgJ" = (
 /obj/structure/table/halflife/metal/alt,
 /obj/machinery/recharger{
-	pixel_y = 6
+	pixel_y = 6;
+	pixel_x = -4
 	},
 /obj/structure/halflife/rug/rubber,
+/obj/machinery/button/door{
+	pixel_x = 8;
+	pixel_y = 8;
+	name = "armory shutter button";
+	id = "overseer_armory";
+	req_access = list("armory")
+	},
+/obj/machinery/button/door{
+	pixel_x = 8;
+	name = "desk shutter button";
+	id = "overseer_desk";
+	req_access = list("security")
+	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection)
 "chu" = (
@@ -3148,6 +3173,7 @@
 /obj/machinery/camera/directional/north{
 	c_tag = "Nexus Prep Central"
 	},
+/obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "eei" = (
@@ -3570,6 +3596,10 @@
 	},
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/townhall)
+"eGE" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/armory/nodirectional,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
+/area/halflife/indoors/townhall/civilprotection)
 "eHa" = (
 /obj/structure/halflife/toilet{
 	pixel_y = 8
@@ -3687,6 +3717,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/courtroom)
+"eLB" = (
+/obj/machinery/computer/crew,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "eLW" = (
 /obj/effect/decal/cleanable/blood/trails,
 /turf/open/floor/plating/indoor/grooved2,
@@ -4794,9 +4828,12 @@
 /area/halflife/indoors/scienceunion)
 "ggO" = (
 /obj/machinery/door/window/brigdoor/right/directional/south{
-	req_access = list("security")
+	req_access = list("armory")
 	},
 /obj/structure/table/halflife/metal/alt,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "overseer_desk"
+	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection)
 "ggU" = (
@@ -6381,6 +6418,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/alley/restrictedblock)
+"iym" = (
+/obj/structure/reagent_dispensers/wall/peppertank/directional/east,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "iyn" = (
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/metal/grate/border/warning{
@@ -6948,6 +6989,10 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/old_harbor)
+"jhQ" = (
+/obj/machinery/computer/security,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "jis" = (
 /obj/effect/landmark/start/engineer,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -10134,6 +10179,10 @@
 "nzB" = (
 /turf/closed/wall/halflife/brick,
 /area/halflife/indoors/bar)
+"nzV" = (
+/obj/structure/table/halflife/metal/grate,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "nAd" = (
 /obj/structure/halflife/trash/garbage{
 	pixel_x = 8;
@@ -10465,9 +10514,12 @@
 "oaT" = (
 /obj/machinery/validation_terminal,
 /obj/machinery/door/window/brigdoor/left/directional/south{
-	req_access = list("security")
+	req_access = list("armory")
 	},
 /obj/structure/table/halflife/metal/alt,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "overseer_desk"
+	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection)
 "oaW" = (
@@ -10886,9 +10938,12 @@
 /area/halflife/outdoors)
 "oKx" = (
 /obj/machinery/door/window/brigdoor/left/directional/south{
-	req_access = list("security")
+	req_access = list("armory")
 	},
 /obj/structure/table/halflife/metal/alt,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "overseer_desk"
+	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection)
 "oLe" = (
@@ -11239,6 +11294,7 @@
 /area/halflife/indoors/productioncenter)
 "peI" = (
 /obj/structure/extinguisher_cabinet/directional/north,
+/obj/structure/reagent_dispensers/wall/peppertank/directional/east,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "peP" = (
@@ -11400,6 +11456,9 @@
 "puM" = (
 /obj/machinery/door/airlock/highsecurity/combine,
 /obj/effect/mapping_helpers/airlock/access/all/security/armory,
+/obj/machinery/door/poddoor/shutters/preopen{
+	id = "overseer_armory"
+	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "pvS" = (
@@ -12486,6 +12545,11 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/slums)
+"qOU" = (
+/obj/machinery/recharger,
+/obj/structure/table/halflife/metal/grate,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "qOV" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	keylock = 1;
@@ -16006,6 +16070,12 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
+"vyo" = (
+/obj/machinery/combine_health_station/round_start{
+	pixel_y = 30
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/townhall/infirmary)
 "vzg" = (
 /obj/machinery/combine_walllight/directional/south{
 	pixel_y = 24
@@ -17137,6 +17207,8 @@
 /area/halflife/outdoors)
 "xge" = (
 /obj/machinery/combine_walllight/directional/north,
+/obj/structure/table/halflife/metal/grate,
+/obj/machinery/validation_terminal,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "xgg" = (
@@ -36443,7 +36515,7 @@ sPm
 wtl
 pBv
 cyZ
-wtl
+vyo
 xKg
 lJg
 cyZ
@@ -37611,7 +37683,7 @@ vzg
 fBy
 fBy
 mIn
-gvt
+eGE
 kaA
 kaA
 ltT
@@ -54378,7 +54450,7 @@ oJG
 kqC
 dMO
 oJG
-oJG
+bcz
 eif
 mnm
 mnm
@@ -54525,7 +54597,7 @@ kqC
 kXv
 kXv
 kqC
-oJG
+nzV
 eif
 mnm
 mnm
@@ -54811,8 +54883,8 @@ ifz
 ltT
 ltT
 eif
-oJG
-oJG
+qOU
+aii
 kqC
 oJG
 kqC
@@ -54966,7 +55038,7 @@ oJG
 kqC
 kqC
 oJG
-oJG
+jhQ
 eif
 ovF
 ovF
@@ -55254,13 +55326,13 @@ ltT
 eif
 peI
 oJG
-oJG
+iym
 oJG
 cyp
 oJG
 oJG
 oJG
-oJG
+eLB
 eif
 ovF
 ovF
