@@ -603,6 +603,10 @@
 "aJz" = (
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/townhall)
+"aJX" = (
+/obj/machinery/computer/crew,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "aKE" = (
 /obj/machinery/camera/directional/west{
 	c_tag = "Nexus Caves Access"
@@ -856,10 +860,6 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/laborunion)
-"bcz" = (
-/obj/machinery/computer/records/security,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "bdb" = (
 /obj/structure/closet/crate/bin,
 /obj/item/reagent_containers/cup/soda_cans/breenwater/empty,
@@ -3717,10 +3717,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/courtroom)
-"eLB" = (
-/obj/machinery/computer/crew,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "eLW" = (
 /obj/effect/decal/cleanable/blood/trails,
 /turf/open/floor/plating/indoor/grooved2,
@@ -6418,10 +6414,6 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/alley/restrictedblock)
-"iym" = (
-/obj/structure/reagent_dispensers/wall/peppertank/directional/east,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "iyn" = (
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/metal/grate/border/warning{
@@ -6989,10 +6981,6 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/old_harbor)
-"jhQ" = (
-/obj/machinery/computer/security,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "jis" = (
 /obj/effect/landmark/start/engineer,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -11294,7 +11282,6 @@
 /area/halflife/indoors/productioncenter)
 "peI" = (
 /obj/structure/extinguisher_cabinet/directional/north,
-/obj/structure/reagent_dispensers/wall/peppertank/directional/east,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "peP" = (
@@ -11969,6 +11956,12 @@
 /obj/structure/flora/rock/style_random,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/outdoors/ocean)
+"qfg" = (
+/obj/machinery/combine_health_station/round_start{
+	pixel_y = 30
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/townhall/infirmary)
 "qga" = (
 /obj/structure/table/halflife/wood,
 /obj/structure/halflife/trash/papers/one{
@@ -12546,8 +12539,7 @@
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/slums)
 "qOU" = (
-/obj/machinery/recharger,
-/obj/structure/table/halflife/metal/grate,
+/obj/machinery/computer/records/security,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "qOV" = (
@@ -16070,12 +16062,6 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
-"vyo" = (
-/obj/machinery/combine_health_station/round_start{
-	pixel_y = 30
-	},
-/turf/open/floor/plating/indoor/sterilesquares,
-/area/halflife/indoors/townhall/infirmary)
 "vzg" = (
 /obj/machinery/combine_walllight/directional/south{
 	pixel_y = 24
@@ -16338,6 +16324,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
+"vSc" = (
+/obj/machinery/computer/security,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "vSW" = (
 /obj/structure/sign/poster/halflife/rebel/plf,
 /turf/closed/wall/halflife/brick,
@@ -16737,6 +16727,10 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/old_harbor)
+"wxW" = (
+/obj/structure/reagent_dispensers/wall/peppertank/directional/east,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "wzC" = (
 /obj/structure/table/halflife/no_smooth/large/metal/desk,
 /obj/structure/halflife/rug/rubber,
@@ -36515,7 +36509,7 @@ sPm
 wtl
 pBv
 cyZ
-vyo
+qfg
 xKg
 lJg
 cyZ
@@ -54450,7 +54444,7 @@ oJG
 kqC
 dMO
 oJG
-bcz
+qOU
 eif
 mnm
 mnm
@@ -54883,7 +54877,7 @@ ifz
 ltT
 ltT
 eif
-qOU
+nzV
 aii
 kqC
 oJG
@@ -55038,7 +55032,7 @@ oJG
 kqC
 kqC
 oJG
-jhQ
+vSc
 eif
 ovF
 ovF
@@ -55326,13 +55320,13 @@ ltT
 eif
 peI
 oJG
-iym
+wxW
 oJG
 cyp
 oJG
 oJG
 oJG
-eLB
+aJX
 eif
 ovF
 ovF
