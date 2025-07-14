@@ -1,5 +1,5 @@
 /datum/mood_event/drunk
-	mood_change = 3
+	mood_change = 4
 	description = "Everything just feels better after a drink or two."
 	/// The blush overlay to display when the owner is drunk
 	var/datum/bodypart_overlay/simple/emote/blush_overlay

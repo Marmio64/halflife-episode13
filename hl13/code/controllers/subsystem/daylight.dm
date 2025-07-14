@@ -18,6 +18,8 @@
 
 #define DAY_CYCLE_NIGHT "Night"
 
+#define MAX_QUOTA_MULTIPLIER 1.2
+
 SUBSYSTEM_DEF(daylight)
 	name = "Daylight"
 	wait = 2 SECONDS
@@ -43,6 +45,9 @@ SUBSYSTEM_DEF(daylight)
 	/// What was the ideal goal for containers filled. 100% of this means extra sociostability. Failure to get a certain amount subtracts sociostability.
 	var/factory_container_goal = 15
 
+	/// Multiplier applied to the goal, to allow for it to scale over time.
+	var/factory_goal_multiplier = 0.8
+
 /datum/controller/subsystem/daylight/proc/add_lit_area(area/new_area)
 	daylight_areas.Add(new_area)
 
@@ -61,6 +66,9 @@ SUBSYSTEM_DEF(daylight)
 			day_cycle_active = DAY_CYCLE_NIGHT
 
 			var/message = "Attention citizens, it is now night time. Citizens are to return to their apartment blocks for curfew."
+
+			if(factory_goal_multiplier < MAX_QUOTA_MULTIPLIER) // The quota multiplier starts at 0.8 to give an easier first day, the second day will be standard, and then further days will be at 1.2 to make it slightly harder.
+				factory_goal_multiplier += 0.2
 
 			if(factory_containers_filled >= factory_container_goal)
 				SSsociostability.modifystability(10) //full completion. This is in addition to the sociostability bonuses from simply completing containers.
@@ -101,6 +109,8 @@ SUBSYSTEM_DEF(daylight)
 	if(current_day_time > AFTERNOON_START && current_day_time <= DUSK_START )
 		if(day_cycle_active != DAY_CYCLE_AFTERNOON)
 			factory_container_goal = (get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)+1) //The goal is equal to all currently playing players, plus one as a baseline.
+			factory_container_goal *= factory_goal_multiplier
+			factory_container_goal = ROUND_UP(factory_container_goal)
 
 			day_cycle_active = DAY_CYCLE_AFTERNOON
 			priority_announce("Attention citizens, it is now afternoon. The previous ration cycle has ended. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal], compliance is mandatory.", "Work Notice.", sender_override = "District Automated Scheduler")
@@ -134,3 +144,5 @@ SUBSYSTEM_DEF(daylight)
 	var/datum/round_event_control/sentient_zombie/ZombieControl = new /datum/round_event_control/sentient_zombie()
 	var/datum/round_event/ghost_role/sentient_zombie/zombie = ZombieControl.run_event()
 	zombie.setup()
+
+#undef MAX_QUOTA_MULTIPLIER

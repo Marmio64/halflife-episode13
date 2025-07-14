@@ -4,7 +4,7 @@
 #define BALLMER_PEAK_WINDOWS_ME 26
 
 /// The threshld which determine if someone is tipsy vs drunk
-#define TIPSY_THRESHOLD 6
+#define TIPSY_THRESHOLD 10
 
 /**
  * The drunk status effect.

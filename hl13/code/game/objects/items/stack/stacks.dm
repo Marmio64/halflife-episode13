@@ -35,6 +35,34 @@
 	novariants = TRUE
 	max_amount = 10
 
+/obj/item/stack/sheet/goldingot
+	icon = 'hl13/icons/obj/stack_objects.dmi'
+	name = "gold ingots"
+	desc = "Solid chunks of gold. Not much good in this state for anything but heavy industrial goods."
+	singular_name = "gold ingot"
+	icon_state = "goldingot"
+	throwforce = 10
+	obj_flags = CONDUCTS_ELECTRICITY
+	resistance_flags = FIRE_PROOF
+	merge_type = /obj/item/stack/sheet/goldingot
+	matter_amount = 2
+	novariants = TRUE
+	max_amount = 10
+
+/obj/item/stack/sheet/silveringot
+	icon = 'hl13/icons/obj/stack_objects.dmi'
+	name = "silver ingots"
+	desc = "Solid chunks of ingot. Not much good in this state for anything but heavy industrial goods."
+	singular_name = "silver ingot"
+	icon_state = "silveringot"
+	throwforce = 10
+	obj_flags = CONDUCTS_ELECTRICITY
+	resistance_flags = FIRE_PROOF
+	merge_type = /obj/item/stack/sheet/silveringot
+	matter_amount = 2
+	novariants = TRUE
+	max_amount = 10
+
 /obj/item/stack/sheet/ironpowder
 	icon = 'hl13/icons/obj/stack_objects.dmi'
 	name = "iron powder"

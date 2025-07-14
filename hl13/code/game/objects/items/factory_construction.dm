@@ -33,7 +33,7 @@
 
 /obj/item/factory_construction/container/advanced
 	name = "advanced factory goods container"
-	desc = "A advanced factory goods container. It is worth three times as much money and quota amount as a regular container, but the ingredients are much harder to procure."
+	desc = "A advanced factory goods container. It is worth three times as much money and quota amount as a regular container, but the ingredients are harder to procure."
 	icon_state = "advanced_container_empty"
 
 	completed_container = /obj/item/factory_construction/full_container/advanced
@@ -44,8 +44,8 @@
 							/obj/item/circuitmaterial,
 							/obj/item/halflife/combine_battery,
 							/obj/item/stack/sheet/scrap_parts,
-							/obj/item/stack/sheet/scrap_copper,
-							/obj/item/reagent_containers/pill/patch/medkit,
+							/obj/item/stack/sheet/goldingot,
+							/obj/item/stack/sheet/silveringot,
 							/obj/item/water_canister,
 							/obj/item/stack/bulletcasings)
 
