@@ -183,7 +183,7 @@
 
 /obj/item/ration_construction/used_container
 	name = "deposited ration refill container"
-	desc = "An empty ration refill container that has been marked as received by a ration vendor unit. You can send it back on the cargo shuttle for recycling to gain a small amount of credits for the district's cargo budget."
+	desc = "An empty ration refill container that has been marked as received by a ration vendor unit. You can send it back on the cargo shuttle for recycling to gain a small amount of credits for the district's cargo budget. It can also be recycled at a factory mill, though no reward will be generated."
 	icon_state = "container_used"
 
 /obj/item/ration_construction/container/exotic
