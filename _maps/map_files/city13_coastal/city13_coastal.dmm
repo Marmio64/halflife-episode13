@@ -740,7 +740,10 @@
 	},
 /area/halflife/outdoors/alley/dropshippad)
 "aTX" = (
-/obj/machinery/light/directional/west,
+/obj/machinery/camera{
+	c_tag = "Manufacturing Plant West";
+	dir = 5
+	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
 "aUb" = (
@@ -2158,8 +2161,8 @@
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "cNp" = (
-/obj/machinery/light/directional/north,
-/turf/open/floor/plating/indoor/concrete/bricks,
+/obj/machinery/light/dim/directional/east,
+/turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
 "cOg" = (
 /obj/machinery/light/small/directional/west,
@@ -4619,10 +4622,7 @@
 /obj/machinery/button/door/directional/west{
 	id = "factory"
 	},
-/obj/machinery/camera{
-	c_tag = "Manufacturing Plant West";
-	dir = 5
-	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
 "fWy" = (
@@ -5137,7 +5137,7 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors)
 "gzw" = (
-/obj/machinery/light/directional/south,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "gzB" = (
@@ -6366,6 +6366,11 @@
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/laborunion)
+"itz" = (
+/obj/structure/table/halflife/metal/heavy,
+/obj/machinery/light/dim/directional/south,
+/turf/open/floor/plating/indoor/metal/grate/border/warning,
+/area/halflife/indoors/productioncenter)
 "itS" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -10233,6 +10238,7 @@
 /obj/effect/turf_decal/box/corners{
 	dir = 1
 	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
 "nFp" = (
@@ -10263,6 +10269,12 @@
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/plaza)
+"nIj" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/metal/grate/border/warning{
+	dir = 1
+	},
+/area/halflife/indoors/productioncenter)
 "nIO" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/light/directional/north,
@@ -11203,7 +11215,6 @@
 	dir = 4;
 	id = "garbage"
 	},
-/obj/machinery/light/directional/north,
 /turf/open/floor/plating/indoor/metal/grate/border/warning,
 /area/halflife/indoors/productioncenter)
 "pae" = (
@@ -14269,10 +14280,10 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bar/apartments)
 "tdh" = (
-/obj/structure/table/halflife/metal/heavy,
-/obj/machinery/mill,
-/obj/machinery/light/directional/south,
-/turf/open/floor/plating/indoor/metal/grate/border/warning,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/metal/grate/border/warning{
+	dir = 1
+	},
 /area/halflife/indoors/productioncenter)
 "teg" = (
 /obj/item/hl13_small_flag/combine{
@@ -15735,6 +15746,14 @@
 /obj/item/clothing/suit/toggle/labcoat/halflife,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
+"vcA" = (
+/obj/effect/turf_decal/box/corners,
+/obj/effect/turf_decal/box/corners{
+	dir = 4
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "vek" = (
 /obj/structure/mop_bucket/janitorialcart,
 /obj/item/mop,
@@ -17421,7 +17440,7 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
 "xsO" = (
-/obj/machinery/light/directional/west,
+/obj/machinery/light/small/directional/west,
 /turf/open/openspace,
 /area/halflife/indoors/productioncenter)
 "xtH" = (
@@ -43190,7 +43209,7 @@ dUf
 uRR
 uRR
 tCY
-qJQ
+vcA
 pTo
 pTo
 pTo
@@ -43491,7 +43510,7 @@ tzq
 pTo
 pJd
 pTo
-wfV
+itz
 dUf
 pXC
 jUL
@@ -43629,7 +43648,7 @@ vvP
 vvP
 dUf
 dUf
-uRR
+qlv
 tCY
 qJQ
 pTo
@@ -43638,7 +43657,7 @@ dic
 uEb
 dic
 uEb
-tdh
+eMz
 dUf
 jUL
 ucd
@@ -43925,13 +43944,13 @@ vvP
 dUf
 uRR
 dUf
-cHs
+tdh
 cHs
 cHs
 hHO
 bBg
 nBr
-cHs
+nIj
 dUf
 dUf
 jUL
@@ -44217,7 +44236,7 @@ izY
 xyL
 vvP
 dUf
-cNp
+uRR
 uRR
 dPf
 stc
@@ -44512,7 +44531,7 @@ xyL
 vvP
 dUf
 dUf
-uRR
+qlv
 uRR
 uRR
 uRR
@@ -45105,7 +45124,7 @@ pTo
 pTo
 jsJ
 uRR
-uRR
+gzw
 dUf
 dUf
 dUf
@@ -45249,7 +45268,7 @@ vvP
 dUf
 pTo
 rkK
-pTo
+cNp
 epE
 uRR
 uRR
@@ -45844,7 +45863,7 @@ uRR
 uRR
 uRR
 uRR
-uRR
+gzw
 dUf
 cJB
 cJB
