@@ -79,6 +79,19 @@
 	gloves = /obj/item/clothing/gloves/combat
 	mask = /obj/item/clothing/mask/bandana/sinew
 
+/datum/outfit/crabwalker/spear
+	name = "Armed Crabwalker"
+
+	r_hand = /obj/item/spear/halflife
+
+/datum/outfit/crabwalker/heavy
+	name = "Heavy Crabwalker"
+
+	suit = /obj/item/clothing/suit/armor/platearmor/heavy
+	head = /obj/item/clothing/head/helmet/halflife/headcrab/gonome
+
+	r_hand = /obj/item/spear/halflife/deathmatch
+
 /// refugee guard /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /mob/living/basic/trooper/rebel/mp7/refugee
 	name = "Refugee Guard"

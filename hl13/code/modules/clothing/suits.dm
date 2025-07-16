@@ -421,6 +421,13 @@
 
 	blood_overlay_type = "armor"
 
+/obj/item/clothing/suit/armor/platearmor/heavy
+	name = "heavy fungal plate armor"
+	desc = "Chest armor comprised of fungal plates harvested from xenian lifeforms fitted atop a partially damaged infestation control uniform. Offers decent protection, but is heavy and uncomfortable."
+	icon_state = "heavyplatearmor"
+	armor_type = /datum/armor/gonomecrab
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+
 /obj/item/clothing/suit/armor/platearmor/deathmatch
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 
