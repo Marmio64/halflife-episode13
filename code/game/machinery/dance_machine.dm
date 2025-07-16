@@ -81,8 +81,8 @@
 					to_chat(usr, span_warning("Error: The device is still resetting from the last activation, \
 						it will be ready again in [DisplayTimeText(COOLDOWN_TIMELEFT(src, jukebox_song_cd))]."))
 					if(COOLDOWN_FINISHED(src, jukebox_error_cd))
-						playsound(src, 'sound/machines/compiler/compiler-failure.ogg', 33, TRUE)
-						COOLDOWN_START(src, jukebox_error_cd, 8 SECONDS)
+						playsound(src, 'sound/machines/compiler/compiler-failure.ogg', 25, TRUE)
+						COOLDOWN_START(src, jukebox_error_cd, 6 SECONDS)
 					return TRUE
 
 				activate_music()

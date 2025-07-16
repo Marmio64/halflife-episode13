@@ -179,7 +179,8 @@
 	desc = "A solid mass of paste which jiggles like jello. It is flavored to taste like boiled eggs, but the consistency has it feeling like raw egg whites."
 	icon_state = "egg_paste"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 4,
+		/datum/reagent/consumable/nutriment = 3,
+		/datum/reagent/consumable/nutriment/vitamin = 1,
 	)
 	tastes = list("Soggy eggs" = 1)
 	mood_penalty = FOOD_DISLIKED
@@ -189,7 +190,8 @@
 	desc = "A solid mass of paste which jiggles like jello. It is flavored to taste like chicken, but the consistency leaves an unpleasant mouth feel."
 	icon_state = "chicken_paste"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 4,
+		/datum/reagent/consumable/nutriment = 3,
+		/datum/reagent/consumable/nutriment/vitamin = 1,
 	)
 	tastes = list("Chicken" = 1)
 	mood_penalty = FOOD_UNPLEASANT
