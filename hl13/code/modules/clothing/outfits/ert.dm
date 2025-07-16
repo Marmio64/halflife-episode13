@@ -237,3 +237,53 @@
 	H.update_body()
 
 	H.change_stat(STATKEY_INT, 2)
+
+/datum/outfit/gman
+	name = "G-Man"
+
+	uniform = /obj/item/clothing/under/halflife/gsuit
+	shoes = /obj/item/clothing/shoes/laceup
+	l_hand = /obj/item/storage/halflife/suitcase
+
+	/// This outfit will grant these spells if applied
+	var/list/spells_to_add = list(/datum/action/cooldown/spell/teleport/area_teleport/wizard/gman)
+
+/datum/action/cooldown/spell/teleport/area_teleport/wizard/gman
+	name = "G-Man Teleport"
+
+	cooldown_time = 5 SECONDS
+	invocation = null
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	smoke_amt = 1
+
+	invocation_says_area = FALSE
+
+/datum/outfit/gman/pre_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+	. = ..()
+	if(isdummy(user))
+		return
+
+	for(var/datum/action/act as anything in spells_to_add)
+		var/datum/action/new_ability = new act(user)
+		if(istype(new_ability, /datum/action/cooldown/spell))
+			var/datum/action/cooldown/spell/new_spell = new_ability
+			new_spell.spell_requirements = NONE
+		new_ability.Grant(user)
+
+	user.skin_tone = "#e9dfd7"
+	user.set_facial_hairstyle("Shaved", update = FALSE)
+	user.set_haircolor("#141414", update = FALSE)
+	user.set_hairstyle("Crewcut")
+	user.eye_color_left = "#3da9f1"
+	user.eye_color_right = "#3da9f1"
+	user.update_body()
+	ADD_TRAIT(user, TRAIT_NOHUNGER, OUTFIT_TRAIT) //gman dont eat
+
+	user.change_stat(STATKEY_DEX, 5)
+	user.change_stat(STATKEY_STR, 5)
+	user.change_stat(STATKEY_INT, 5)
+
+/datum/outfit/gman/post_equip(mob/living/carbon/human/equipped, visuals_only)
+	..()
+	equipped.fully_replace_character_name(equipped.real_name,"Mysterious Man")

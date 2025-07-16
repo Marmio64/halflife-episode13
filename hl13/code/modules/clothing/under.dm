@@ -285,4 +285,17 @@
 	random_sensor = FALSE
 	icon_state = "blacksuit"
 
+/obj/item/clothing/under/halflife/gsuit
+	name = "blue suit"
+	desc = "Time already?"
+	can_adjust = FALSE
+	has_sensor = NO_SENSORS
+	sensor_mode = SENSOR_OFF
+	random_sensor = FALSE
+	icon_state = "gsuit"
+
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS|HEAD
+	armor_type = /datum/armor/space_beret
+	strip_delay = 130
+
 #undef STIMULANT_INJECTION_DELAY
