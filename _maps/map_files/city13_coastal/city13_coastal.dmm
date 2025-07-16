@@ -2161,8 +2161,8 @@
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "cNp" = (
-/obj/machinery/light/dim/directional/east,
-/turf/open/floor/plating/indoor/metal/industrial,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "cOg" = (
 /obj/machinery/light/small/directional/west,
@@ -4923,6 +4923,12 @@
 /obj/machinery/computer/crew,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection)
+"glY" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/metal/grate/border/warning{
+	dir = 1
+	},
+/area/halflife/indoors/productioncenter)
 "gmc" = (
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -6366,11 +6372,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/laborunion)
-"itz" = (
-/obj/structure/table/halflife/metal/heavy,
-/obj/machinery/light/dim/directional/south,
-/turf/open/floor/plating/indoor/metal/grate/border/warning,
-/area/halflife/indoors/productioncenter)
 "itS" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -7043,6 +7044,12 @@
 /obj/item/stack/sheet/scrap_metal,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/outdoors/ocean)
+"jqi" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/metal/grate/border/warning{
+	dir = 1
+	},
+/area/halflife/indoors/productioncenter)
 "jqo" = (
 /obj/machinery/power/halflife/streetlamphalt{
 	dir = 4
@@ -10269,12 +10276,6 @@
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/plaza)
-"nIj" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/indoor/metal/grate/border/warning{
-	dir = 1
-	},
-/area/halflife/indoors/productioncenter)
 "nIO" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/light/directional/north,
@@ -14280,10 +14281,12 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bar/apartments)
 "tdh" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/indoor/metal/grate/border/warning{
-	dir = 1
+/obj/effect/turf_decal/box/corners,
+/obj/effect/turf_decal/box/corners{
+	dir = 4
 	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
 "teg" = (
 /obj/item/hl13_small_flag/combine{
@@ -15746,14 +15749,6 @@
 /obj/item/clothing/suit/toggle/labcoat/halflife,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
-"vcA" = (
-/obj/effect/turf_decal/box/corners,
-/obj/effect/turf_decal/box/corners{
-	dir = 4
-	},
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/plating/indoor/metal/industrial,
-/area/halflife/indoors/productioncenter)
 "vek" = (
 /obj/structure/mop_bucket/janitorialcart,
 /obj/item/mop,
@@ -16583,6 +16578,10 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
+"wok" = (
+/obj/machinery/light/dim/directional/east,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/productioncenter)
 "wom" = (
 /obj/structure/halflife/sign/bar,
 /turf/open/floor/plating/indoor/tiled10,
@@ -17520,6 +17519,11 @@
 	dir = 4
 	},
 /area/halflife/outdoors/harbor)
+"xzK" = (
+/obj/structure/table/halflife/metal/heavy,
+/obj/machinery/light/dim/directional/south,
+/turf/open/floor/plating/indoor/metal/grate/border/warning,
+/area/halflife/indoors/productioncenter)
 "xAN" = (
 /obj/structure/table/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -43209,7 +43213,7 @@ dUf
 uRR
 uRR
 tCY
-vcA
+tdh
 pTo
 pTo
 pTo
@@ -43510,7 +43514,7 @@ tzq
 pTo
 pJd
 pTo
-itz
+xzK
 dUf
 pXC
 jUL
@@ -43944,13 +43948,13 @@ vvP
 dUf
 uRR
 dUf
-tdh
+glY
 cHs
 cHs
 hHO
 bBg
 nBr
-nIj
+jqi
 dUf
 dUf
 jUL
@@ -44094,7 +44098,7 @@ uRR
 uRR
 uRR
 uRR
-uRR
+cNp
 uRR
 uRR
 uRR
@@ -45268,7 +45272,7 @@ vvP
 dUf
 pTo
 rkK
-cNp
+wok
 epE
 uRR
 uRR
