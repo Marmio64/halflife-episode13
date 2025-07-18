@@ -43,6 +43,9 @@
 	density = FALSE
 	bound_x = 64
 	pixel_y = 32
+	light_range = 4
+	light_power = 1
+	light_color = "#658cac"
 
 /obj/structure/halflife/sign/combine/dispatch
 	name = "combine dispatch sign"

@@ -255,7 +255,7 @@
 	invocation = null
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	smoke_amt = 1
+	smoke_amt = 0
 
 	invocation_says_area = FALSE
 

@@ -33,18 +33,13 @@
 		"b_smelter",
 		"b_refinery",
 		"ore_redemption",
-		"mining_equipment_vendor",
 		"mining_scanner",
 		"mech_mscanner",
-		"superresonator",
 		"mech_drill",
 		"mod_drill",
 		"drill",
-		"mod_orebag",
 		"beacon",
 		"telesci_gps",
-		"mod_gps",
-		"mod_visor_meson",
 		"mesons",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)

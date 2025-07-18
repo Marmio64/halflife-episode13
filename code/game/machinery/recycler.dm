@@ -1,8 +1,8 @@
 #define SAFETY_COOLDOWN 100
 
 /obj/machinery/recycler
-	name = "recycler"
-	desc = "A large crushing machine used to recycle small items inefficiently. There are lights on the side."
+	name = "recycle crusher"
+	desc = "A large crushing machine used to recycle small items inefficiently. There are lights on the side. Due to the inefficiency of crushing items to recycle them, there are likely better ways to reuse and recylce most things..."
 	icon = 'icons/obj/machines/recycling.dmi'
 	icon_state = "grinder-o0"
 	layer = ABOVE_ALL_MOB_LAYER // Overhead

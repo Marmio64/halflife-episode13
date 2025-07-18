@@ -284,14 +284,14 @@
 /// Will only run once, and will then be cached.
 /turf/closed/mineral/random/proc/mineral_chances()
 	return list(
-		/obj/item/stack/ore/bananium = check_holidays(APRIL_FOOLS) ? 3 : 0,
 		/obj/item/stack/ore/diamond = 1,
 		/obj/item/stack/ore/gold = 6,
-		/obj/item/stack/ore/iron = 68,
+		/obj/item/stack/ore/iron = 71,
+		/obj/item/stack/ore/copper = 5,
 		/obj/item/stack/ore/plasma = 2,
-		/obj/item/stack/ore/silver = 10,
-		/obj/item/stack/ore/titanium = 11,
-		/obj/item/stack/ore/uranium = 5,
+		/obj/item/stack/ore/silver = 9,
+		/obj/item/stack/ore/titanium = 5,
+		/obj/item/stack/ore/uranium = 4,
 	)
 
 /turf/closed/mineral/random/Initialize(mapload)
