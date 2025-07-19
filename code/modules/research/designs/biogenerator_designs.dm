@@ -176,7 +176,7 @@
 	name = "Protein Base"
 	id = "base_protein"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 6)
+	materials = list(/datum/material/biomass = 5)
 	build_path = /obj/item/ration_construction/base/protein
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
 
@@ -184,7 +184,7 @@
 	name = "Fat Base"
 	id = "base_fat"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 6)
+	materials = list(/datum/material/biomass = 5)
 	build_path = /obj/item/ration_construction/base/fat
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
 
@@ -192,7 +192,7 @@
 	name = "Fiber Base"
 	id = "base_fiber"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 6)
+	materials = list(/datum/material/biomass = 5)
 	build_path = /obj/item/ration_construction/base/fiber
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
 
@@ -200,7 +200,7 @@
 	name = "Blue Water Additive"
 	id = "additive_blue"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 6)
+	materials = list(/datum/material/biomass = 4)
 	build_path = /obj/item/ration_construction/watermix/blueadditive
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
 
@@ -208,7 +208,7 @@
 	name = "Red Water Additive"
 	id = "additive_red"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 6)
+	materials = list(/datum/material/biomass = 4)
 	build_path = /obj/item/ration_construction/watermix/redadditive
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
 
@@ -216,7 +216,7 @@
 	name = "Yellow Water Additive"
 	id = "additive_yellow"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 6)
+	materials = list(/datum/material/biomass = 4)
 	build_path = /obj/item/ration_construction/watermix/yellowadditive
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
 
@@ -224,7 +224,7 @@
 	name = "Sweet Flavoring Jug"
 	id = "flavor_sweet"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 6)
+	materials = list(/datum/material/biomass = 4)
 	build_path = /obj/item/ration_construction/flavoring/sweet
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
 
@@ -232,7 +232,7 @@
 	name = "Bitter Flavoring Jug"
 	id = "flavor_bitter"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 6)
+	materials = list(/datum/material/biomass = 4)
 	build_path = /obj/item/ration_construction/flavoring/bitter
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
 
@@ -240,7 +240,7 @@
 	name = "Sour Flavoring Jug"
 	id = "flavor_sour"
 	build_type = BIOGENERATOR
-	materials = list(/datum/material/biomass = 6)
+	materials = list(/datum/material/biomass = 4)
 	build_path = /obj/item/ration_construction/flavoring/sour
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
 

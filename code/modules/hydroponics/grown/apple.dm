@@ -27,7 +27,7 @@
 	distill_reagent = /datum/reagent/consumable/ethanol/hcider
 
 /obj/item/food/grown/apple/make_processable()
-	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/appleslice, 5, 20, screentip_verb = "Slice")
+	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/appleslice, 4, 20, screentip_verb = "Slice")
 
 // Gold Apple
 /obj/item/seeds/apple/gold
