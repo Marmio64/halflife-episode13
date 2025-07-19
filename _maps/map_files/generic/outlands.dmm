@@ -112,10 +112,10 @@
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
 "aR" = (
-/obj/structure/railing/halflife/wood/single{
+/obj/structure/halflife/road_barrier{
 	dir = 1
 	},
-/turf/open/floor/plating/ground/sidewalk/inner,
+/turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/forest)
 "aX" = (
 /obj/structure/halflife/sign/workers{
@@ -1540,6 +1540,10 @@
 /obj/structure/halflife/trash/food/misc,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
+"mV" = (
+/obj/structure/halflife/road_barrier,
+/turf/open/floor/plating/ground/dirt/alt,
+/area/halflife/outdoors/forest)
 "mZ" = (
 /obj/effect/decal/cleanable/blood/gibs/old,
 /obj/item/clothing/under/combine/civilprotection,
@@ -63367,9 +63371,9 @@ OO
 OO
 OO
 OO
-OO
-OO
 Df
+OO
+OO
 st
 OO
 OO
@@ -63564,9 +63568,9 @@ fX
 ai
 fX
 fX
-It
+fu
 fX
-aR
+fX
 qJ
 tO
 Ym
@@ -63762,8 +63766,8 @@ KV
 tN
 KV
 KV
-It
-fu
+fX
+fX
 tN
 tN
 Jq
@@ -63959,7 +63963,7 @@ XD
 XD
 XD
 KV
-It
+fX
 It
 tN
 tN
@@ -64157,10 +64161,10 @@ XD
 XD
 KV
 dg
-It
+fX
 It
 tN
-tN
+nh
 tN
 It
 Jq
@@ -64353,11 +64357,11 @@ GX
 GX
 RL
 KV
-tN
+fX
 tN
 dg
 It
-tN
+nh
 tN
 tN
 Jq
@@ -64551,7 +64555,7 @@ GX
 XD
 KV
 It
-tN
+fX
 tN
 dg
 It
@@ -64747,9 +64751,9 @@ GX
 XD
 XD
 KV
-tN
+fX
+fX
 It
-RL
 tN
 tN
 tN
@@ -64945,10 +64949,10 @@ Yn
 GX
 ai
 tN
-tN
+fX
 It
 It
-tN
+nh
 tN
 Jq
 Ym
@@ -65142,10 +65146,10 @@ KV
 KV
 KV
 tN
-an
+fX
 tN
 It
-tN
+nh
 tN
 Jq
 Ym
@@ -65339,7 +65343,7 @@ It
 Cq
 GX
 GX
-tN
+fX
 tN
 It
 It
@@ -65736,7 +65740,7 @@ GX
 tN
 GX
 tN
-It
+aR
 It
 tN
 Jq
@@ -65748,7 +65752,7 @@ Ym
 Ku
 tN
 It
-It
+mV
 It
 GX
 GX
@@ -65933,7 +65937,7 @@ tN
 GX
 GX
 an
-It
+aR
 tN
 tN
 Jq
@@ -66130,7 +66134,7 @@ tN
 GX
 ai
 tN
-It
+aR
 tN
 tN
 Jq
@@ -66327,7 +66331,7 @@ It
 Yn
 GX
 tN
-It
+aR
 an
 tN
 lk
@@ -66339,7 +66343,7 @@ Ym
 Ym
 Zu
 tN
-It
+mV
 It
 tN
 It
@@ -66524,7 +66528,7 @@ GX
 GX
 GX
 It
-tN
+nh
 tN
 tN
 tN
@@ -66536,7 +66540,7 @@ WR
 Ym
 Zu
 tN
-tN
+mf
 It
 tN
 RL

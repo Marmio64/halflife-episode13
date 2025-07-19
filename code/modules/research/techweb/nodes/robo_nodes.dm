@@ -6,26 +6,26 @@
 	design_ids = list(
 		"mechfab",
 		"botnavbeacon",
-		"paicard",
 	)
 
 // AI root node
 /datum/techweb_node/ai
 	id = TECHWEB_NODE_AI
 	display_name = "Artificial Intelligence"
-	description = "Exploration of AI systems, more intelligent than the entire crew put together."
+	description = "Explore AI systems used by Dispatch and mechanical drones such as City Scanners and Viscerators."
 	prereq_ids = list(TECHWEB_NODE_ROBOTICS)
 	design_ids = list(
 		"aiupload",
 		"aifixer",
 		"intellicard",
-		"mecha_tracking_ai_control",
 		"borg_ai_control",
 		"aicore",
 		"reset_module",
 		"default_module",
 		"freeform_module",
 		"remove_module",
+		"scannerframe",
+		"visceratorframe",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SCIENCE)

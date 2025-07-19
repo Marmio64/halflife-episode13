@@ -51,6 +51,30 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
+/datum/design/scannerframe
+	name = "City Scanner Frame"
+	desc = "Allows for the construction of a City Scanner frame."
+	id = "scannerframe"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/glass =SMALL_MATERIAL_AMOUNT*5, /datum/material/iron =SMALL_MATERIAL_AMOUNT*5)
+	build_path = /obj/item/machinepiece/scanner
+	category = list(
+		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_MISC
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE
+
+/datum/design/visceratorframe
+	name = "Viscerator Frame"
+	desc = "Allows for the construction of a Viscerator frame."
+	id = "visceratorframe"
+	build_type = PROTOLATHE | AWAY_LATHE
+	materials = list(/datum/material/glass =SMALL_MATERIAL_AMOUNT*5, /datum/material/iron =SMALL_MATERIAL_AMOUNT*5)
+	build_path = /obj/item/machinepiece/viscerator
+	category = list(
+		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_MISC
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE
+
 ////////////////////////////////////////
 //////////Disk Construction Disks///////
 ////////////////////////////////////////

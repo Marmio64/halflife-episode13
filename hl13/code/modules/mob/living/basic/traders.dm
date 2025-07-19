@@ -167,7 +167,7 @@
 		/obj/item/reagent_containers/cup/soup_pot = list(PAYCHECK_CREW, 3),
 		/obj/item/lighter = list(PAYCHECK_CREW * 0.75, 3),
 		/obj/item/food/canned/halflife/beans = list(PAYCHECK_CREW * 2, 3),
-		/obj/item/reagent_containers/syringe/syriniver = list(PAYCHECK_CREW, 3),
+		/obj/item/reagent_containers/pill/antitox = list(PAYCHECK_CREW * 1.25, 3),
 		/obj/item/machinepiece/multifunctiontool = list(PAYCHECK_CREW * 5, 3),
 		/obj/item/halflife/antenna = list(PAYCHECK_CREW * 6, 3),
 		/obj/item/stack/kevlar = list(PAYCHECK_CREW, 5),

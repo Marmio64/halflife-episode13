@@ -2,7 +2,7 @@
 	id = TECHWEB_NODE_OFFICE_EQUIP
 	starting_node = TRUE
 	display_name = "Office Equipment"
-	description = "The Combine's finest in ergonomic office tech, ensuring district admin stays productive and compliant with corporate policies — because even postwar, paperwork never stops."
+	description = "The Combine's finest in ergonomic office tech, ensuring district admin stays productive and compliant with union policies — because even postwar, paperwork never stops."
 	design_ids = list(
 		"fax",
 		"sec_pen",
