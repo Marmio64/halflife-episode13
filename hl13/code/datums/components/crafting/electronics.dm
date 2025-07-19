@@ -75,7 +75,7 @@
 /datum/crafting_recipe/scrap_advcircuitchips
 	name = "Scrap Advanced Circuit Chips"
 	result = /obj/item/circuitmaterial
-	reqs = list(/obj/item/circuitmaterial/advanced)
+	reqs = list(/obj/item/circuitmaterial/advanced = 1)
 	time = 4 SECONDS
 	category = CAT_ROBOT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
