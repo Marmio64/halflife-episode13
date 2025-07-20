@@ -502,12 +502,6 @@
 	dir = 1
 	},
 /area/halflife/indoors)
-"aQs" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/medical/nodirectional{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/sterilesquares,
-/area/halflife/indoors/hospital)
 "aQy" = (
 /obj/structure/chair/comfy/halflife/armchair,
 /obj/effect/landmark/start/city_administrator,
@@ -699,7 +693,7 @@
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection)
 "bje" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/civilprotection,
+/obj/machinery/turnstile/brig/halflife/forcefield/armory/nodirectional,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection)
 "bjp" = (
@@ -802,6 +796,9 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/scienceunion)
+"bqn" = (
+/turf/open/floor/plating/indoor/metal/combine/alt2,
+/area/halflife/indoors/townhall/civilprotection)
 "bqz" = (
 /obj/structure/closet/crate/halflife,
 /obj/item/geiger_counter,
@@ -5348,6 +5345,10 @@
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/tile/green,
 /area/halflife/indoors/hydroponics)
+"iIL" = (
+/obj/structure/halflife/pole/directional/north,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors)
 "iJy" = (
 /obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/plating/indoor/woodc,
@@ -6351,6 +6352,14 @@
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/townhall)
+"kyx" = (
+/obj/structure/halflife/road/verticalcrossing{
+	pixel_y = -15
+	},
+/turf/open/floor/plating/ground/brickroad{
+	dir = 1
+	},
+/area/halflife/outdoors)
 "kyJ" = (
 /turf/open/floor/plating/indoor/metal/walkway{
 	dir = 1
@@ -9014,6 +9023,12 @@
 /obj/structure/flora/tree/halflife/plain/thin,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/plaza)
+"oSf" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/medical/nodirectional{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/hospital)
 "oSr" = (
 /obj/machinery/power/halflife/streetlamphalt,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -11540,6 +11555,12 @@
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/hospital/office)
+"sSP" = (
+/obj/structure/halflife/road/verticalcrossing{
+	pixel_y = 15
+	},
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors)
 "sTp" = (
 /obj/structure/table/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -11844,9 +11865,8 @@
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/bar/apartments)
 "tCu" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/townhall/civilprotection/prison)
+/turf/open/floor/plating/indoor/metal/combine/alt2,
+/area/halflife/indoors/townhall/civilprotection/range)
 "tDd" = (
 /obj/structure/closet/secure_closet/bar,
 /obj/item/clothing/shoes/laceup,
@@ -12804,6 +12824,7 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/store)
 "uPO" = (
+/obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection)
 "uQx" = (
@@ -13069,9 +13090,6 @@
 "vjB" = (
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/bar/apartments)
-"vkN" = (
-/turf/open/floor/plating/indoor/metal/combine/alt2,
-/area/halflife/indoors/townhall/civilprotection/range)
 "vlD" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/dresser,
@@ -14034,10 +14052,6 @@
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/scienceunion)
-"wKR" = (
-/obj/structure/table/halflife/metal/grate,
-/turf/open/floor/plating/indoor/metal/combine/alt2,
-/area/halflife/indoors/townhall/civilprotection)
 "wLu" = (
 /obj/structure/halflife/trash/papers/three{
 	dir = 4
@@ -37910,7 +37924,7 @@ bDA
 jcc
 jcc
 jcc
-jcc
+tQq
 aWX
 aWX
 aWX
@@ -40654,11 +40668,11 @@ wFO
 hne
 ivX
 bQj
-uPO
-uPO
-uPO
+bqn
+bqn
+bqn
 imr
-uPO
+bqn
 hLX
 sou
 xuY
@@ -40789,11 +40803,11 @@ bDA
 bDA
 bQj
 wdI
-vkN
-vkN
-vkN
-vkN
-vkN
+tCu
+tCu
+tCu
+tCu
+tCu
 pUI
 wFO
 wFO
@@ -40933,11 +40947,11 @@ bDA
 bDA
 bQj
 wdI
-vkN
-vkN
-vkN
-vkN
-vkN
+tCu
+tCu
+tCu
+tCu
+tCu
 iLX
 wFO
 wFO
@@ -41077,11 +41091,11 @@ bDA
 bDA
 bQj
 wdI
-vkN
+tCu
 isZ
-vkN
-vkN
-vkN
+tCu
+tCu
+tCu
 gXb
 wFO
 wFO
@@ -41092,9 +41106,9 @@ yeM
 vnG
 vnG
 hKk
-mMz
-mMz
-mMz
+uPO
+uPO
+uPO
 sou
 vnG
 vnG
@@ -41244,7 +41258,7 @@ vnG
 vnG
 vnG
 vnG
-tCu
+wcY
 oAB
 oAB
 vwP
@@ -42094,7 +42108,7 @@ sou
 sou
 sou
 sou
-wKR
+uPO
 bjK
 cpC
 bjK
@@ -42670,7 +42684,7 @@ ixE
 jVO
 aZN
 sou
-wKR
+uPO
 bjK
 wxf
 bjK
@@ -43414,11 +43428,11 @@ dty
 lqO
 pWY
 oLn
-ipK
+ngC
 xxB
 xxB
 xxB
-ipK
+iIL
 pSw
 eKa
 oIZ
@@ -43559,9 +43573,9 @@ wGw
 qmH
 imY
 ipK
+kyx
 xxB
-xxB
-xxB
+sSP
 ipK
 pSw
 eKa
@@ -43591,7 +43605,7 @@ lkB
 lkB
 lkB
 oPk
-aQs
+oSf
 lkB
 lkB
 lkB
@@ -43702,10 +43716,10 @@ ipK
 dwy
 gNJ
 ipK
-ngC
+ipK
+kyx
 xxB
-xxB
-xxB
+sSP
 ipK
 pSw
 eKa
@@ -43850,7 +43864,7 @@ rHp
 xxB
 xxB
 xxB
-ipK
+iIL
 pSw
 eKa
 eKa
@@ -44138,7 +44152,7 @@ bLp
 xxB
 xxB
 xxB
-ipK
+iIL
 pSw
 eKa
 eKa
@@ -44278,10 +44292,10 @@ ipK
 dwy
 awr
 ipK
-ngC
+ipK
+kyx
 xxB
-xxB
-xxB
+sSP
 ipK
 pSw
 jrp
@@ -44423,9 +44437,9 @@ wGw
 qmH
 imY
 ipK
+kyx
 xxB
-xxB
-xxB
+sSP
 ipK
 pSw
 eKa
@@ -44566,11 +44580,11 @@ dty
 lqO
 pWY
 oLn
-ipK
+ngC
 xxB
 xxB
 xxB
-ipK
+iIL
 pSw
 eKa
 eKa
