@@ -32,7 +32,7 @@
 
 	var/fully_grown = FALSE
 
-	var/datum/action/cooldown/spell/conjure/xenfloor/infest
+	var/datum/action/cooldown/spell/conjure/xenfloor/gonome/infest
 
 	/// Our evolve action
 	var/datum/action/innate/gonome/evolve/evolve_action

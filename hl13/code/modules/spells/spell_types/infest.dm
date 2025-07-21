@@ -14,3 +14,7 @@
 
 	summon_radius = 0
 	summon_type = list(/obj/structure/alien/weeds/node)
+
+/datum/action/cooldown/spell/conjure/xenfloor/gonome
+	name = "Improved Infest Floor"
+	cooldown_time = 30 SECONDS
