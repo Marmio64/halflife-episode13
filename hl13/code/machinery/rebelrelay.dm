@@ -20,7 +20,7 @@
 /obj/item/rebel_relay/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/combine_datapod))
 		to_chat(usr, span_notice("Datapod accepted. Dispensing reward."))
-		new /obj/item/stack/telecrystal(user.loc, 8)
+		new /obj/item/stack/telecrystal(user.loc, 10)
 		qdel(I)
 		return
 	..()
