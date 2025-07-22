@@ -15,7 +15,7 @@
 	do_sparks(1, FALSE, src)
 	hacked = TRUE
 	icon_state = "datapodterminal_hacked"
-	SSsociostability.modifystability(-50)
+	SSsociostability.modifystability(-40)
 
 	// Dispatch gets alerted about hacks
 	var/alertstr = span_userdanger("Network Alert: Data pod hack detected[get_area(src)?" in [get_area_name(src, TRUE)]":". Unable to pinpoint location"].")
@@ -45,7 +45,7 @@
 /obj/machinery/combine_datapodterminal/deconstruct(disassembled = TRUE)
 	. = ..()
 	if(!hacked) //cant break a hacked machine for extra socio loss, its useless now
-		SSsociostability.modifystability(-50) //can't cheese rebels by just breaking it
+		SSsociostability.modifystability(-40) //can't cheese rebels by just breaking it
 
 /obj/item/combine_datapod
 	name = "Combine Datapod"

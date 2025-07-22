@@ -2252,6 +2252,10 @@
 /obj/item/mop,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
+"cQU" = (
+/obj/machinery/combine_datapodterminal,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/scienceunion)
 "cRD" = (
 /turf/open/floor/plating/indoor/metal/pipe/intersection{
 	dir = 8
@@ -2438,11 +2442,6 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors)
-"dfb" = (
-/obj/structure/halflife/pipes/vent,
-/obj/machinery/combine_datapodterminal,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/halflife/indoors/dispatch)
 "dfO" = (
 /obj/structure/halflife/toilet{
 	pixel_y = 8
@@ -6474,6 +6473,10 @@
 "izY" = (
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/virology)
+"iAj" = (
+/obj/machinery/combine_datapodterminal,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/townhall/secondfloor)
 "iAD" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/productioncenter/office)
@@ -6672,6 +6675,11 @@
 	dir = 1
 	},
 /area/halflife/indoors/old_harbor)
+"iLy" = (
+/obj/structure/halflife/pipes/vent,
+/obj/machinery/combine_datapodterminal,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/dispatch)
 "iMl" = (
 /obj/item/scalpel,
 /obj/item/hemostat,
@@ -8447,10 +8455,6 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
-"leW" = (
-/obj/machinery/combine_datapodterminal,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/scienceunion)
 "lfj" = (
 /obj/structure/railing/halflife/sewer,
 /obj/structure/railing/halflife/sewer{
@@ -10622,10 +10626,6 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
-"oep" = (
-/obj/machinery/combine_datapodterminal,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/townhall/civilprotection)
 "oeH" = (
 /obj/machinery/door/airlock/highsecurity/combine{
 	name = "Cryogenic Storage Chamber"
@@ -14620,6 +14620,10 @@
 /obj/structure/railing/halflife/sewer,
 /turf/open/halflife/water/sewer/shallow,
 /area/halflife/indoors/sewer)
+"tpB" = (
+/obj/machinery/combine_datapodterminal,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection)
 "tpD" = (
 /obj/machinery/camera{
 	c_tag = "Factory Entrance Outside";
@@ -36835,7 +36839,7 @@ gkC
 nUD
 nUD
 nUD
-dfb
+iLy
 rip
 rip
 rip
@@ -37401,7 +37405,7 @@ gkC
 cSg
 cSg
 cSg
-oep
+tpB
 kaA
 cSg
 cSg
@@ -44048,7 +44052,7 @@ jJp
 pSV
 dGG
 dym
-leW
+cQU
 snJ
 bEC
 dym
@@ -59474,7 +59478,7 @@ ovF
 wLm
 wLm
 kAS
-qLX
+iAj
 qLX
 bjH
 wLm
