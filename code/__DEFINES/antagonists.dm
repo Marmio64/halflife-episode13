@@ -246,6 +246,9 @@ GLOBAL_LIST_INIT(ai_employers, list(
 /// Checks if the given mob is a nuclear operative
 #define IS_NUKE_OP(mob) (mob?.mind?.has_antag_datum(/datum/antagonist/nukeop))
 
+/// Checks if the given mob is a uprising ringleader
+#define IS_RINGLEADER(mob) (mob?.mind?.has_antag_datum(/datum/antagonist/uprising))
+
 //Tells whether or not someone is a space ninja
 #define IS_SPACE_NINJA(mob) (mob?.mind?.has_antag_datum(/datum/antagonist/ninja))
 

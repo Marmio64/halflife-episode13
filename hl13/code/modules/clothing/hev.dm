@@ -20,6 +20,8 @@
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 	hoodtype = /obj/item/clothing/head/hooded/hevhood
 
+	slowdown = -0.25
+
 	var/static/list/funny_signals = list(
 		COMSIG_LIVING_DEATH = PROC_REF(handle_death),
 		COMSIG_LIVING_IGNITED = PROC_REF(handle_ignite),
@@ -192,13 +194,13 @@
 	if((obj_flags & EMAGGED) && emag_doses_left < 0)
 		owner.reagents.add_reagent(/datum/reagent/medicine/morphine, 3)
 		owner.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 3)
-		owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 6)
+		owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 7)
 		SOUND_BEEP('hl13/sound/voice/hev/beep_3.ogg')
 		add_queue('hl13/sound/voice/hev/morphine.ogg',1 SECONDS)
 	else
 		owner.reagents.add_reagent(/datum/reagent/medicine/stimulants, 5)
 		owner.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 3)
-		owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 6)
+		owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 7)
 		SOUND_BEEP('hl13/sound/voice/hev/beep_3.ogg')
 		add_queue('hl13/sound/voice/hev/stimulants.ogg',1 SECONDS)
 		emag_doses_left--
@@ -261,7 +263,6 @@
 /obj/item/clothing/suit/hooded/hev/deathmatch
 	desc = "An old suit, fully plated and insulated and topped with a tasteful orange coating of paint. The hood has been removed, but this one somehow protects your head anyways."
 	body_parts_covered = HEAD|CHEST|GROIN|ARMS|LEGS
-	slowdown = -0.25
 
 /obj/item/clothing/suit/hooded/hev/deathmatch/freeman
 	slowdown = -0.66

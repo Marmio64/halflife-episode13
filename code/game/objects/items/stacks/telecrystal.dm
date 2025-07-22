@@ -1,6 +1,6 @@
 /obj/item/stack/telecrystal
-	name = "telecrystal"
-	desc = "It seems to be pulsing with suspiciously enticing energies."
+	name = "red xenian telecrystal"
+	desc = "Small, red xenian crystals that the Lambda resistance group have managed to collect. Usable as an energy source for powering uplinks that utilize teleportation to retrieve items."
 	singular_name = "telecrystal"
 	icon = 'icons/obj/stack_objects.dmi'
 	icon_state = "telecrystal"

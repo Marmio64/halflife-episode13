@@ -37,29 +37,35 @@
 	to_chat(owner, span_boldnotice("The time has come for this district to be freed from the tyranny of the combine."))
 	to_chat(owner, span_notice("You have to lower the sociostability of the district low enough to allow you to set up a Super Destabilizer within the Nexus, and cut off the city from combine reinforcements."))
 	to_chat(owner, span_notice("You can craft a Super Destabilizer beacon at an Electronics bench, located in the factory and other places in the city, sewers, and outlands."))
-	to_chat(owner, span_boldnotice("Prepare for the final showdown by getting well equipped by looting, scavenging, and more. In addition, you are not alone! You'll recognise other ringleaders by the Lambda symbol near their head. Finding a headset and a custom communication frequency will be useful, or you can purchase a lambda encryption key and a headset in your uplink."))
-	to_chat(owner, span_notice("Hint: If you need destabilizer antennas, buy them from the Refugee Smuggler in the outlands or using your uplink."))
+	to_chat(owner, span_boldnotice("Prepare for the final showdown by getting well equipped by looting, scavenging, and more. In addition, you are not alone! You'll recognise other ringleaders by the Lambda symbol near their head, and can communicate with them through a hidden channel at any time with the button in the top left of your screen."))
+	to_chat(owner, span_notice("To better prepare, you should find a secure and secret location to laydown your uplink relay, and then break into secure locations to hack Combine Data Pod Terminals with a multifunction electrical tool. These datapods can be fed to your uplink relay to be able to purchase useful gear."))
+	to_chat(owner, span_notice("Hint: If you need destabilizer antennas, buy them from the Refugee Smuggler in the outlands or using your uplink relay."))
 	owner.announce_objectives()
+
+/datum/antagonist/uprising/on_removal()
+	for(var/datum/action/cooldown/spell/uprising/buttons in owner.current.actions)
+		qdel(buttons)
+
+	return ..()
 
 /datum/antagonist/uprising/on_gain()
 	//Give uprising Objective
 	var/datum/objective/uprising/uprising_objective = new
 	uprising_objective.owner = owner
 
+	var/mob/living/current = owner.current
+
 	owner.teach_crafting_recipe(/datum/crafting_recipe/super_destabilizer)
 
 	objectives += uprising_objective
 
-	//var/obj/item/implant/radio/syndicate/uprising/imp = new(owner.current)
-	//imp.implant(owner.current, null, TRUE)
+	current.cmode_music = 'hl13/sound/music/combat/penultimatum.ogg'
 
-	owner.current.cmode_music = 'hl13/sound/music/combat/penultimatum.ogg'
+	var/datum/action/cooldown/spell/uprising/calldown_relay/call_relay = new(owner)
+	call_relay.Grant(current)
 
-	owner.give_uplink(silent = FALSE, antag_datum = src)
-	var/datum/component/uplink/U = owner.find_syndicate_uplink()
-	if(U)
-		U.uplink_handler.set_telecrystals(12)
-		to_chat(owner, span_danger("You and each of your comrades have been supplied a Lambda teleportation uplink for purchasing a small amount of supplies."))
+	var/datum/action/cooldown/spell/uprising/comm/communications = new(owner)
+	communications.Grant(current)
 
 	if(send_to_base)
 		owner.current.forceMove(pick(GLOB.nukeop_start))
@@ -200,3 +206,55 @@
 /datum/team/uprising/add_member(datum/mind/new_member)
 	..()
 	SEND_SIGNAL(src, COMSIG_NUKE_TEAM_ADDITION, new_member.current)
+
+/datum/action/cooldown/spell/uprising
+	button_icon = 'hl13/icons/mob/actions/actions_uprising.dmi'
+	background_icon_state = "bg_demon"
+	overlay_icon_state = "bg_demon_border"
+
+/datum/action/cooldown/spell/uprising/comm
+	name = "Hidden Uprising Communications Channel"
+	desc = "Utilize a special communications channel to speak to fellow uprising ringleaders. Has a lengthy cooldown between uses.<br><b>Warning:</b>Nearby people can still hear you."
+	button_icon_state = "comm"
+
+	cooldown_time = 15 SECONDS
+
+	invocation_type = INVOCATION_NONE
+	spell_requirements = SPELL_REQUIRES_MIND
+	antimagic_flags = 0
+	spell_max_level = 1
+
+/datum/action/cooldown/spell/uprising/comm/Activate()
+	var/input = tgui_input_text(usr, "Message to tell to the other ringleaders", "Voice of Freedom", max_length = MAX_MESSAGE_LEN)
+	if(!input || !IsAvailable(feedback = TRUE))
+		return
+
+	var/list/filter_result = CAN_BYPASS_FILTER(usr) ? null : is_ic_filtered(input)
+	if(filter_result)
+		REPORT_CHAT_FILTER_TO_USER(usr, filter_result)
+		return
+
+	var/list/soft_filter_result = CAN_BYPASS_FILTER(usr) ? null : is_soft_ic_filtered(input)
+	if(soft_filter_result)
+		if(tgui_alert(usr,"Your message contains \"[soft_filter_result[CHAT_FILTER_INDEX_WORD]]\". \"[soft_filter_result[CHAT_FILTER_INDEX_REASON]]\", Are you sure you want to say it?", "Soft Blocked Word", list("Yes", "No")) != "Yes")
+			return
+		message_admins("[ADMIN_LOOKUPFLW(usr)] has passed the soft filter for \"[soft_filter_result[CHAT_FILTER_INDEX_WORD]]\" they may be using a disallowed term. Message: \"[html_encode(input)]\"")
+		log_admin_private("[key_name(usr)] has passed the soft filter for \"[soft_filter_result[CHAT_FILTER_INDEX_WORD]]\" they may be using a disallowed term. Message: \"[input]\"")
+	cultist_commune(usr, input)
+	StartCooldown()
+
+/datum/action/cooldown/spell/uprising/comm/proc/cultist_commune(mob/living/user, message)
+	var/my_message
+	if(!message || !user.mind)
+		return
+	user.whisper("Papa Lima Foxtrot...", language = /datum/language/common)
+	user.whisper(html_decode(message), filterproof = TRUE)
+	my_message = "<span class='cult italic'><b>Ringleader [findtextEx(user.name, user.real_name) ? user.name : "[user.real_name] (as [user.name])"]:</b> [message]</span>"
+	for(var/mob/M as anything in GLOB.player_list)
+		if(IS_RINGLEADER(M))
+			to_chat(M, my_message)
+		else if(M in GLOB.dead_mob_list)
+			var/link = FOLLOW_LINK(M, user)
+			to_chat(M, "[link] [my_message]")
+
+	user.log_talk(message, LOG_SAY, tag="uprising")
