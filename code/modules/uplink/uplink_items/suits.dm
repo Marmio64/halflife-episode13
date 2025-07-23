@@ -1,7 +1,7 @@
 // File ordered by progression
 
 /datum/uplink_category/suits
-	name = "Suits"
+	name = "Armor & Clothes"
 	weight = 3
 
 /datum/uplink_item/suits
@@ -19,6 +19,13 @@
 	name = "Civil protection vest"
 	desc = "An armored vest that civil protection like to use, and rebels like to steal."
 	item = /obj/item/clothing/suit/armor/civilprotection
+	cost = 3
+	progression_minimum = 5 MINUTES
+
+/datum/uplink_item/suits/militaryhelmet
+	name = "Military Helmet"
+	desc = "A old world metal and kevlar helmet. Provides good protection for your head."
+	item = /obj/item/clothing/head/helmet/halflife/military
 	cost = 3
 	progression_minimum = 5 MINUTES
 

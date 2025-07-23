@@ -12,7 +12,6 @@
 	desc = "Most comparable to a shitty version of the USP Match, this makeshift pistol fires slower, uses lower velocity rounds, is harder to aim, and holds much less ammo."
 	item = /obj/item/gun/ballistic/automatic/pistol/makeshift
 	cost = 3
-	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/dangerous/pistol
 	name = "USP Match Pistol"
@@ -21,7 +20,6 @@
 	item = /obj/item/gun/ballistic/automatic/pistol/usp
 	progression_minimum = 5 MINUTES
 	cost = 7
-	purchasable_from = ~UPLINK_ALL_SYNDIE_OPS
 
 /datum/uplink_item/dangerous/knife
 	name = "Combat Knife"

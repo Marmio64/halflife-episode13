@@ -5,7 +5,7 @@
 	icon_state = "rebelrelay"
 	w_class = WEIGHT_CLASS_HUGE
 
-/obj/item/rebel_relay/Initialize(mapload, owner, tc_amount = 0, datum/uplink_handler/uplink_handler_override = null)
+/obj/item/rebel_relay/Initialize(mapload, owner, tc_amount = 5, datum/uplink_handler/uplink_handler_override = null)
 	. = ..()
 	AddComponent(\
 		/datum/component/uplink, \
@@ -29,7 +29,7 @@
 	name = "Calldown Rebel Relay"
 	desc = "After a short calling period, teleport a rebel uplink relay to your position. \
 		You can only summon a relay once, and moving relays is very difficult and conspicuous, so make sure you have this relay in a good spot. \
-		This relay is a gateway for using Combine Datapods and Xenian Telecrystals to purchase gear that you require."
+		This relay is a gateway for using Combine Datapods and Xenian Telecrystals to purchase gear that you require. It only comes with a few telecrystals, so you'll need to get more."
 	button_icon_state = "callrelay"
 
 	cooldown_time = 1 SECONDS

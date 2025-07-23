@@ -39,7 +39,7 @@
 	to_chat(owner, span_notice("You can craft a Super Destabilizer beacon at an Electronics bench, located in the factory and other places in the city, sewers, and outlands."))
 	to_chat(owner, span_boldnotice("Prepare for the final showdown by getting well equipped by looting, scavenging, and more. In addition, you are not alone! You'll recognise other ringleaders by the Lambda symbol near their head, and can communicate with them through a hidden channel at any time with the button in the top left of your screen."))
 	to_chat(owner, span_notice("To better prepare, you should find a secure and secret location to laydown your uplink relay, and then break into secure locations to hack Combine Data Pod Terminals with a multifunction electrical tool. These datapods can be fed to your uplink relay to be able to purchase useful gear."))
-	to_chat(owner, span_notice("Hint: If you need destabilizer antennas, buy them from the Refugee Smuggler in the outlands or using your uplink relay."))
+	to_chat(owner, span_notice("For more information, visit the wiki page for this antagonist: https://halflifeepisode13.miraheze.org/wiki/Uprising_Ringleader"))
 	owner.announce_objectives()
 
 /datum/antagonist/uprising/on_removal()

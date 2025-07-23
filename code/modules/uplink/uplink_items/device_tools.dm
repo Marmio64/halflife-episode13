@@ -7,7 +7,7 @@
 
 /datum/uplink_item/device_tools/encryptionkey
 	name = "Lambda Encryption Key"
-	desc = "A key that, when inserted into a radio headset, allows you to listen to all station department channels \
+	desc = "A key that, when inserted into a radio headset, allows you to listen to all district department channels \
 			as well as talk on an encrypted Rebel channel with other agents that have the same key. In addition, this key also protects \
 			your headset from radio jammers."
 	item = /obj/item/encryptionkey/syndicate
@@ -22,7 +22,7 @@
 			emitted as heat and light by objects. Hotter objects, such as warm bodies, cybernetic organisms \
 			and artificial intelligence cores emit more of this light than cooler objects like walls and airlocks."
 	item = /obj/item/clothing/glasses/thermal/syndi
-	cost = 5
+	cost = 6
 
 /datum/uplink_item/device_tools/satchel
 	name = "Satchel"
@@ -65,7 +65,7 @@
 	name = "Multifunction Electrical Tool"
 	desc = "A handheld device which subverts most machinery and devices, although it cannot get through advanced and well protected combine doors. Note, less intelligent people will find using this device much more difficult."
 	item = /obj/item/card/emag/halflife
-	cost = 4
+	cost = 5
 
 /datum/uplink_item/device_tools/syndicate_contacts
 	name = "Polarized Contact Lenses"
@@ -78,7 +78,7 @@
 	name = "Rebel Climbing Hook"
 	desc = "High-tech rope, a refined hook structure, the peak of climbing technology. Only useful for climbing up holes, provided the operation site has any."
 	item = /obj/item/climbing_hook/syndicate
-	cost = 1
+	cost = 2
 
 /datum/uplink_item/device_tools/medvial
 	name = "Medvial"
