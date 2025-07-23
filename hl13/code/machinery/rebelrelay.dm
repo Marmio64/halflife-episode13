@@ -5,6 +5,9 @@
 	icon_state = "rebelrelay"
 	w_class = WEIGHT_CLASS_HUGE
 
+	drag_slowdown = 1
+	slowdown = 1
+
 /obj/item/rebel_relay/Initialize(mapload, owner, tc_amount = 5, datum/uplink_handler/uplink_handler_override = null)
 	. = ..()
 	AddComponent(\
@@ -13,7 +16,7 @@
 		lockable = FALSE, \
 		enabled = TRUE, \
 		uplink_flag = UPLINK_TRAITORS, \
-		starting_tc = 0, \
+		starting_tc = 5, \
 		uplink_handler_override = uplink_handler_override, \
 	)
 

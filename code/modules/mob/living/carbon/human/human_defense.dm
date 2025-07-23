@@ -662,7 +662,7 @@
 			combined_msg += span_info("You feel and smell clean.")
 		if(HYGIENE_LEVEL_NORMAL to HYGIENE_LEVEL_TIDY)
 			combined_msg += span_info("You're not too dirty.")
-		if(HYGIENE_LEVEL_DIRTY to HYGIENE_LEVEL_NORMAL)
+		if(HYGIENE_LEVEL_FILTHY to HYGIENE_LEVEL_DIRTY)
 			combined_msg += span_info("You smell pretty bad.")
 		if(0 to HYGIENE_LEVEL_FILTHY)
 			combined_msg += span_info("You feel and smell disgusting.")
