@@ -48,3 +48,15 @@
 	)
 	color = COLOR_ORANGE
 	random_color = FALSE
+
+/obj/item/poster/halflife/combine
+	name = "random combine poster"
+	poster_type = /obj/structure/sign/poster/halflife/combine/random
+	icon_state = "rolled_traitor"
+	socio_modify = 5 //+5 sociostability for being put up
+
+/obj/structure/sign/poster/halflife/combine/random
+	name = "random combine poster"
+	icon_state = ""
+	never_random = TRUE
+	random_basetype = /obj/structure/sign/poster/halflife/combine

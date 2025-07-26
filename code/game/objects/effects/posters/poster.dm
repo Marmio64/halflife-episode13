@@ -21,6 +21,8 @@
 	var/poster_type
 	var/obj/structure/sign/poster/poster_structure
 
+	var/socio_modify = 0 ///hl13 edit, how much to increase/decrease sociostabilityh when placed
+
 /obj/item/poster/examine(mob/user)
 	. = ..()
 	. += span_notice("You can booby-trap the poster by using a glass shard on it before you put it up.")
@@ -259,6 +261,10 @@
 		return
 
 	placed_poster.on_placed_poster(user)
+
+	if(rolled_poster.socio_modify) //putting up some posters may effect sociostability
+		SSsociostability.modifystability(rolled_poster.socio_modify)
+
 	return TRUE
 
 /obj/structure/sign/poster/proc/snowflake_closed_turf_check(atom/hopefully_still_a_closed_turf) //since turfs never get deleted but instead change type, make sure we're still being placed on a wall.
