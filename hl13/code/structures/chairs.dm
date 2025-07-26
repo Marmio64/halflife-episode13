@@ -17,7 +17,7 @@
 	desc = "An uncomfortable chair."
 	icon_state = "metal_chair"
 	item_chair = /obj/item/chair/halflife/metal
-	buildstacktype = /obj/item/stack/sheet/iron
+	buildstacktype = /obj/item/stack/sheet/scrap_metal
 	buildstackamount = 1
 
 /obj/structure/chair/halflife/metal/broken

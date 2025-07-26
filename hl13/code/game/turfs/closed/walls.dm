@@ -74,7 +74,7 @@
 
 /turf/closed/wall/halflife/metal/weak
 	max_integrity = 300
-	slicing_duration = 80
+	slicing_duration = 60
 
 /turf/closed/wall/halflife/metal/weak/old
 	icon = 'hl13/icons/turf/walls/metal.dmi'

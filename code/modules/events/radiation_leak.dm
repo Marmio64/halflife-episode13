@@ -59,7 +59,7 @@
 		location_descriptor = get_area(the_source_of_our_problems)
 
 	priority_announce("A radiation leak has been detected in [location_descriptor || "an unknown area"]. \
-		All crew are to evacuate the affected area. Our [pick("mechanics", "engineers", "scientists", "interns", "sensors", "readings")] \
+		All citizens are to evacuate the affected area. Our [pick("mechanics", "engineers", "scientists", "sensors", "readings")] \
 		report that a machine within is causing it - repair it quickly to stop the leak.", "Airwatch")
 
 /datum/round_event/radiation_leak/start()
