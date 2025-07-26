@@ -680,6 +680,7 @@
 /obj/machinery/door/poddoor/shutters{
 	id = "outlands_sewer_north"
 	},
+/obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
 "fx" = (
@@ -1679,6 +1680,7 @@
 /area/halflife/outdoors/forest)
 "oh" = (
 /obj/effect/spawner/random/halflife/loot/ammo,
+/mob/living/basic/halflife/headcrab/armored,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
 "oi" = (
@@ -2095,6 +2097,7 @@
 /obj/machinery/door/poddoor/shutters{
 	id = "outlands_sewer_south"
 	},
+/obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
 "sj" = (
@@ -3716,6 +3719,10 @@
 "GT" = (
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
+"GV" = (
+/obj/structure/alien/weeds,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "GX" = (
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
@@ -3890,6 +3897,10 @@
 /obj/structure/halflife/road_barrier,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/forest)
+"Io" = (
+/obj/structure/alien/weeds,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/sewer)
 "Ir" = (
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors)
@@ -4311,6 +4322,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
 "LW" = (
@@ -4322,9 +4334,7 @@
 /area/halflife/indoors/sewer)
 "LX" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
-	dir = 8;
-	keylock = 1;
-	locked = 1
+	dir = 8
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
@@ -4338,6 +4348,7 @@
 	pixel_y = 17
 	},
 /obj/effect/spawner/random/halflife/loot/heal,
+/obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
 "Mg" = (
@@ -27347,13 +27358,13 @@ UI
 kF
 GT
 GT
-GT
+GV
 fw
-Rx
+Io
 ZB
 Rx
 sh
-GT
+GV
 GT
 GT
 GT
@@ -27544,14 +27555,14 @@ UI
 MJ
 GT
 aG
-GT
+GV
 UI
 Mf
 LS
 oh
 UI
-GT
-GT
+GV
+GV
 GT
 aG
 GT
