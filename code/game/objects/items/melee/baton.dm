@@ -863,10 +863,10 @@
 	slot_flags = ITEM_SLOT_BELT
 	force = 20
 	armour_penetration = 15
-	wound_bonus = 10
+	wound_bonus = 5
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY
-	stamina_damage = 60
+	stamina_damage = 55
 	cooldown = 1.5 SECONDS
 
 	wdefense = 4

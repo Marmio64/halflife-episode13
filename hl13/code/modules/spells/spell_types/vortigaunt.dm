@@ -43,9 +43,9 @@
 /obj/projectile/magic/vort_blast
 	name = "vortal bolt"
 	icon_state = "xray"
-	damage = 40
+	damage = 50
 	damage_type = BURN
-	armour_penetration = 30
+	armour_penetration = 25
 	hitsound = 'hl13/sound/weapons/attack_shoot.ogg'
 	hitscan = TRUE
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
