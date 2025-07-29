@@ -73,7 +73,7 @@
 	desc = "A combine nutrient bar found in rations, consisting of solidified vitamins and nutriments in a waxy bar. This one tastes like moldy water that has been in a plastic bottle for too long."
 	icon_state = "water_bar"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 3,
+		/datum/reagent/consumable/nutriment = 4,
 	)
 	tastes = list("Water" = 2, "Cardboard" = 2, "Plastic" = 1)
 
@@ -83,7 +83,7 @@
 	desc = "A combine nutrient bar found in rations, consisting of solidified vitamins and nutriments in a waxy bar. This one tastes like pig lard."
 	icon_state = "pork_bar"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 3,
+		/datum/reagent/consumable/nutriment = 4,
 		/datum/reagent/consumable/nutriment/vitamin = 1,
 	)
 	tastes = list("Pork" = 1, "Lard" = 1)
@@ -96,7 +96,7 @@
 	icon_state = "beef_patty"
 	foodtypes = MEAT
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 4,
+		/datum/reagent/consumable/nutriment = 5,
 		/datum/reagent/consumable/nutriment/vitamin = 2,
 	)
 	tastes = list("Beef"=1)

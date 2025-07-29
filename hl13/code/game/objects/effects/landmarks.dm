@@ -124,6 +124,15 @@ GLOBAL_LIST_EMPTY(chosen_station_templates)
 /obj/effect/landmark/navigate_destination/halflife/townhall
 	location = "Townhall"
 
+/obj/effect/landmark/navigate_destination/halflife/nexus
+	location = "Nexus"
+
+/obj/effect/landmark/navigate_destination/halflife/restrictedblock
+	location = "Restricted Block Checkpoint"
+
+/obj/effect/landmark/navigate_destination/halflife/hydroponics
+	location = "Hydroponics"
+
 /obj/effect/landmark/navigate_destination/halflife/hospital
 	location = "Hospital"
 

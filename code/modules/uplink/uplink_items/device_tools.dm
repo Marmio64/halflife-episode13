@@ -117,3 +117,10 @@
 	desc = "Need a headset quick for communication? We've got you covered."
 	item = /obj/item/radio/headset
 	cost = 1
+
+/datum/uplink_item/device_tools/beans
+	name = "Canned Beans"
+	desc = "Not really a gadget, but an extremely useful item considering how poorly fed citizens often are. Contains more nutrition than just about any ration the combine will give you, \
+			but as these are becoming more and more a rarity, we cannot afford to give them out cheap."
+	item = /obj/item/food/canned/halflife/beans
+	cost = 4

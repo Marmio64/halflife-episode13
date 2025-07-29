@@ -28,8 +28,8 @@
 
 /datum/uplink_item/stealthy_tools/mulligan
 	name = "Mulligan"
-	desc = "Screwed up and have security on your tail? This handy syringe will give you a completely new identity \
-			and appearance."
+	desc = "A unique compound devised by lambda scientists, capable of changing your entire appearence. Somewhat useful if you're a well known anticitizen, \
+			But having no citizen record while being inside a combine city may still pose a large problem."
 	item = /obj/item/reagent_containers/syringe/mulligan
 	cost = 4
 	surplus = 30
