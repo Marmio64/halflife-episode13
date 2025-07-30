@@ -12,6 +12,7 @@
 #define TURRET_FLAG_SHOOT_UNSHIELDED (1<<5) // Checks if it can shoot people that aren't mindshielded and who arent heads
 #define TURRET_FLAG_SHOOT_BORGS (1<<6) // checks if it can shoot cyborgs
 #define TURRET_FLAG_SHOOT_HEADS (1<<7) // checks if it can shoot at heads of staff
+#define TURRET_FLAG_SHOOT_SHIELDED (1<<8) // Checks if it shoots mindshielded people hl13 edit
 
 DEFINE_BITFIELD(turret_flags, list(
 	"TURRET_FLAG_SHOOT_ALL_REACT" = TURRET_FLAG_SHOOT_ALL_REACT,
@@ -22,6 +23,7 @@ DEFINE_BITFIELD(turret_flags, list(
 	"TURRET_FLAG_SHOOT_UNSHIELDED" = TURRET_FLAG_SHOOT_UNSHIELDED,
 	"TURRET_FLAG_SHOOT_BORGS" = TURRET_FLAG_SHOOT_BORGS,
 	"TURRET_FLAG_SHOOT_HEADS" = TURRET_FLAG_SHOOT_HEADS,
+	"TURRET_FLAG_SHOOT_SHIELDED" = TURRET_FLAG_SHOOT_SHIELDED,
 ))
 
 /obj/machinery/porta_turret
@@ -594,6 +596,11 @@ DEFINE_BITFIELD(turret_flags, list(
 
 	if((turret_flags & TURRET_FLAG_SHOOT_UNSHIELDED) && (!HAS_TRAIT(perp, TRAIT_MINDSHIELD)))
 		threatcount += 4
+	if(turret_flags & TURRET_FLAG_SHOOT_SHIELDED) //hl13 edit
+		if (HAS_TRAIT(perp, TRAIT_MINDSHIELD))
+			threatcount += 4
+		else
+			return 0
 
 	return threatcount
 
@@ -1239,3 +1246,4 @@ DEFINE_BITFIELD(turret_flags, list(
 #undef TURRET_FLAG_SHOOT_UNSHIELDED
 #undef TURRET_FLAG_SHOOT_BORGS
 #undef TURRET_FLAG_SHOOT_HEADS
+#undef TURRET_FLAG_SHOOT_SHIELDED

@@ -12,6 +12,7 @@
 #define TURRET_FLAG_SHOOT_UNSHIELDED (1<<5) // Checks if it can shoot people that aren't mindshielded and who arent heads
 #define TURRET_FLAG_SHOOT_BORGS (1<<6) // checks if it can shoot cyborgs
 #define TURRET_FLAG_SHOOT_HEADS (1<<7) // checks if it can shoot at heads of staff
+#define TURRET_FLAG_SHOOT_SHIELDED (1<<8) // Checks if it shoots mindshielded people
 
 DEFINE_BITFIELD(turret_flags, list(
 	"TURRET_FLAG_SHOOT_ALL_REACT" = TURRET_FLAG_SHOOT_ALL_REACT,
@@ -22,6 +23,7 @@ DEFINE_BITFIELD(turret_flags, list(
 	"TURRET_FLAG_SHOOT_UNSHIELDED" = TURRET_FLAG_SHOOT_UNSHIELDED,
 	"TURRET_FLAG_SHOOT_BORGS" = TURRET_FLAG_SHOOT_BORGS,
 	"TURRET_FLAG_SHOOT_HEADS" = TURRET_FLAG_SHOOT_HEADS,
+	"TURRET_FLAG_SHOOT_SHIELDED" = TURRET_FLAG_SHOOT_SHIELDED,
 ))
 
 /obj/machinery/porta_turret
@@ -91,7 +93,7 @@ DEFINE_BITFIELD(turret_flags, list(
 	obj_flags |= EMAGGED
 	locked = FALSE
 	req_access = null
-	turret_flags = TURRET_FLAG_SHOOT_HEADS
+	turret_flags = TURRET_FLAG_SHOOT_HEADS | TURRET_FLAG_SHOOT_SHIELDED
 	faction += ROLE_SYNDICATE
 	faction -= "combine"
 	on = TRUE
@@ -102,6 +104,21 @@ DEFINE_BITFIELD(turret_flags, list(
 	shot_delay = 0
 	stun_projectile = /obj/projectile/bullet/pulse/weak
 	lethal_projectile = /obj/projectile/bullet/pulse/weak
+
+/obj/machinery/porta_turret/combine/rebel
+	name = "rebel turret"
+	icon_state = "cmbpaint1_lethal"
+	base_icon_state = "cmbpaint1"
+	desc = "A hacked combine turret with a fresh coat of paint. Fires at bio signal authorised targets with a high power pulse gun."
+	faction = list("Syndicate")
+	locked = FALSE
+	req_access = null
+
+/obj/machinery/porta_turret/combine/rebel/assess_perp(mob/living/carbon/human/perp) //shoot mindshielded people
+	if (HAS_TRAIT(perp, TRAIT_MINDSHIELD))
+		return 10
+	else
+		return 0
 
 #undef TURRET_STUN
 #undef TURRET_LETHAL
@@ -115,3 +132,4 @@ DEFINE_BITFIELD(turret_flags, list(
 #undef TURRET_FLAG_SHOOT_UNSHIELDED
 #undef TURRET_FLAG_SHOOT_BORGS
 #undef TURRET_FLAG_SHOOT_HEADS
+#undef TURRET_FLAG_SHOOT_SHIELDED // Checks if it shoots mindshielded people

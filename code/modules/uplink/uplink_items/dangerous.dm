@@ -39,3 +39,10 @@
 	progression_minimum = 10 MINUTES //if you buy a roundstart mosin to go sport hunting for cops i do quite like you but thats not the best idea
 	item = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
 	cost = 9
+
+/datum/uplink_item/dangerous/rebel_turret
+	name = "Hacked Combine Turret"
+	desc = "A hacked combine turret which shoots at biosignal authorised combine individuals, which includes civil protection and the District Administrator.."
+	progression_minimum = 10 MINUTES
+	item = /obj/machinery/porta_turret/combine/rebel
+	cost = 9

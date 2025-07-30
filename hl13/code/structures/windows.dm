@@ -15,6 +15,14 @@
 	icon_state = "generic"
 	base_icon_state = "generic"
 
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced
+	icon_state = "reinforced"
+	base_icon_state = "reinforced"
+	name = "reinforced window"
+	desc = "A window reinforced with metal bars, making it rather difficult to break."
+	max_integrity = 250
+	damage_deflection = 20
+
 /obj/structure/window/fulltile/halflife/combine
 	name = "window"
 	desc = "A combine window. Made of tougher materials than standard glass."
