@@ -4114,6 +4114,12 @@
 	},
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/distributioncenter)
+"gEx" = (
+/obj/effect/landmark/navigate_destination/halflife/restrictedblock,
+/turf/open/floor/plating/ground/brickroad{
+	dir = 1
+	},
+/area/halflife/outdoors)
 "gFe" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/box,
@@ -6565,12 +6571,6 @@
 /obj/structure/table/halflife/no_smooth/large/crafting/tinkerbench,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
-"kLu" = (
-/obj/effect/landmark/navigate_destination/halflife/restrictedblock,
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
-	},
-/area/halflife/outdoors)
 "kLH" = (
 /obj/machinery/light/small/cyan/directional/east,
 /obj/structure/bed/halflife/bedframe/wire,
@@ -6606,9 +6606,9 @@
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/slums)
 "kOG" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick,
-/turf/open/floor/plating/indoor/checkered,
-/area/halflife/indoors/apartments/primary)
+/obj/effect/landmark/navigate_destination/halflife/nexus,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/plaza)
 "kOK" = (
 /obj/effect/landmark/carepackage,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -7040,10 +7040,6 @@
 "lkB" = (
 /turf/closed/wall/halflife/brick/grey,
 /area/halflife/indoors/hospital)
-"lkL" = (
-/obj/effect/landmark/navigate_destination/halflife/hydroponics,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors)
 "lkZ" = (
 /obj/structure/halflife/trash/garbage/dumpster,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -8142,10 +8138,6 @@
 /obj/structure/stairs/halflife/concrete,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/indoors/sewer)
-"ndK" = (
-/obj/effect/landmark/navigate_destination/halflife/nexus,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors/plaza)
 "neu" = (
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/scienceunion)
@@ -14447,6 +14439,10 @@
 /obj/structure/table/halflife/metal/alt,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
+"xfu" = (
+/obj/effect/landmark/navigate_destination/halflife/hydroponics,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors)
 "xfx" = (
 /obj/structure/table/halflife/metal,
 /obj/item/stamp/denied{
@@ -34671,7 +34667,7 @@ jnp
 gyo
 gyo
 nUs
-lkL
+xfu
 ipK
 xxB
 xxB
@@ -40995,7 +40991,7 @@ xuY
 xuY
 xuY
 eOo
-ndK
+kOG
 xuY
 xuY
 wpC
@@ -41498,7 +41494,7 @@ xxB
 xxB
 xxB
 xxB
-kLu
+gEx
 tLz
 dma
 dma
@@ -53099,7 +53095,7 @@ gQX
 gMF
 qRr
 bFI
-kOG
+ydT
 qxh
 qxh
 qxh
@@ -53243,7 +53239,7 @@ gQX
 bFI
 bFI
 bFI
-kOG
+ydT
 qxh
 qxh
 qxh
@@ -53387,7 +53383,7 @@ vZW
 mOM
 mOM
 bFI
-kOG
+ydT
 qxh
 qxh
 qxh
