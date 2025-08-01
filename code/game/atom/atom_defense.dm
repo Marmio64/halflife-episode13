@@ -13,6 +13,16 @@
 
 	var/resistance_flags = NONE // INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ON_FIRE | UNACIDABLE | ACID_PROOF
 
+	var/static/list/hl13hit_sounds = list(
+		'sound/items/weapons/smash.ogg',
+		'sound/items/weapons/smash1.ogg',
+		'sound/items/weapons/smash2.ogg',
+		'sound/items/weapons/smash3.ogg',
+		'sound/items/weapons/smash4.ogg',
+		'sound/items/weapons/smash5.ogg',
+		'sound/items/weapons/smash6.ogg',
+	)
+
 /// The essential proc to call when an atom must receive damage of any kind.
 /atom/proc/take_damage(damage_amount, damage_type = BRUTE, damage_flag = "", sound_effect = TRUE, attack_dir, armour_penetration = 0)
 	if(!uses_integrity)
@@ -111,7 +121,7 @@
 		switch(damage_type)
 			if(BRUTE)
 				if(damage_amount)
-					playsound(src, 'sound/items/weapons/smash.ogg', 50, TRUE)
+					playsound(src, pick(hl13hit_sounds), 50, FALSE)
 				else
 					playsound(src, 'sound/items/weapons/tap.ogg', 50, TRUE)
 			if(BURN)
