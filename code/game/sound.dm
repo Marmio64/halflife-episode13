@@ -268,13 +268,6 @@
 				'sound/effects/bodyfall/bodyfall3.ogg',
 				'sound/effects/bodyfall/bodyfall4.ogg',
 				)
-		if(SFX_PUNCH)
-			soundin = pick(
-				'sound/items/weapons/punch1.ogg',
-				'sound/items/weapons/punch2.ogg',
-				'sound/items/weapons/punch3.ogg',
-				'sound/items/weapons/punch4.ogg',
-				)
 		if(SFX_CLOWN_STEP)
 			soundin = pick(
 				'sound/effects/footstep/clownstep1.ogg',
@@ -285,7 +278,7 @@
 			'sound/items/handling/armor_rustle/riot_armor/suitstep1.ogg',
 			'sound/items/handling/armor_rustle/riot_armor/suitstep2.ogg',
 			)
-		if(SFX_SWING_HIT)
+		if(SFX_SWING_HIT || SFX_PUNCH)
 			soundin = pick(
 				'sound/items/weapons/genhit1.ogg',
 				'sound/items/weapons/genhit2.ogg',
