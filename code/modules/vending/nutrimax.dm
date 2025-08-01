@@ -13,14 +13,8 @@
 		/obj/item/reagent_containers/cup/bottle/nutrient/ez = 3,
 		/obj/item/reagent_containers/spray/pestspray = 3,
 		/obj/item/reagent_containers/syringe = 5,
-		/obj/item/secateurs = 3,
 		/obj/item/shovel/spade = 3,
 		/obj/item/storage/bag/plants = 5,
-	)
-	contraband = list(
-		/obj/item/reagent_containers/cup/bottle/ammonia = 5,
-		/obj/item/reagent_containers/cup/bottle/diethylamine = 3,
-		/obj/item/reagent_containers/cup/bottle/saltpetre = 3,
 	)
 	refill_canister = /obj/item/vending_refill/hydronutrients
 	default_price = PAYCHECK_CREW * 0.8

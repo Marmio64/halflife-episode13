@@ -752,6 +752,12 @@
 "bmm" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/roofs)
+"bnB" = (
+/obj/machinery/hydroponics/constructable{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/outdoors)
 "bnR" = (
 /obj/structure/table/halflife/no_smooth/metal,
 /obj/item/storage/lockbox/loyalty,
@@ -9313,6 +9319,8 @@
 /obj/machinery/camera{
 	c_tag = "Botany Backroom"
 	},
+/obj/item/reagent_containers/cup/bottle/nutrient/ez,
+/obj/item/reagent_containers/cup/bottle/nutrient/ez,
 /turf/open/floor/plating/indoor/tile/green,
 /area/halflife/indoors/hydroponics)
 "pjA" = (
@@ -14092,6 +14100,7 @@
 "wCy" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/machinery/status_display/evac/directional/north,
+/obj/machinery/masher,
 /turf/open/floor/plating/indoor/tile/green,
 /area/halflife/indoors/hydroponics)
 "wCA" = (
@@ -33079,7 +33088,7 @@ bxB
 eBX
 pWY
 rwz
-mrd
+bnB
 pWY
 mrd
 upT
@@ -33223,7 +33232,7 @@ rwz
 lqO
 eBX
 bxB
-mrd
+bnB
 eBX
 mrd
 upT
@@ -33367,7 +33376,7 @@ pWY
 bxB
 eBX
 jWi
-mrd
+bnB
 eBX
 mrd
 upT
