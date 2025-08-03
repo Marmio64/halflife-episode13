@@ -33,7 +33,7 @@
 	result = /obj/item/fishing_rod/bone
 	time = 5 SECONDS
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 2,
-				/obj/item/stack/sheet/sinew = 2,
+				/obj/item/stack/sheet/sinew = 3,
 				/obj/item/stack/sheet/bone = 3)
 	category = CAT_TOOLS
 
