@@ -434,11 +434,11 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 		JOB_WARDEN,
 	)
 	required_candidates = 3
-	weight = 3
+	weight = 5
 	cost = 20
 	requirements = list(50,50,40,40,40,30,30,20,10,10)
 	flags = HIGH_IMPACT_RULESET
-	antag_cap = list("denominator" = 28, "offset" = 1)
+	antag_cap = list("denominator" = 34, "offset" = 1)
 	//ruleset_lazy_templates = list(LAZY_TEMPLATE_KEY_NUKIEBASE)
 	var/required_role = ROLE_OPERATIVE
 	var/datum/team/uprising/nuke_team

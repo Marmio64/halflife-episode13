@@ -20,41 +20,32 @@
 
 /obj/machinery/vending/gifts
 	name = "\improper Shop Vendor"
-	desc = "A vending machine for selling general store goods."
+	desc = "A vending machine for selling 'luxury' store goods."
 	icon_state = "parts"
 	icon_deny = "parts-deny"
 	product_slogans = "Stimulate the economy!;Sedate resistive thoughts!;Purchase neat belongings!;Buy, Buy, Buy!"
-	vend_reply = "Thank you for using Gift Vendor!"
+	vend_reply = "Thank you for using Shop Vendor."
 	products = list(/obj/item/clothing/under/citizen = 3,
 					/obj/item/clothing/suit/bluejacket = 5,
 					/obj/item/camera_film = 10,
 					/obj/item/camera = 3,
-					/obj/item/hourglass = 2,
-					/obj/item/instrument/harmonica = 1,
-					/obj/item/instrument/piano_synth = 1,
-					/obj/item/taperecorder = 3,
 					/obj/item/flashlight = 5,
 					/obj/item/clothing/head/beanie/black = 3,
 					/obj/item/clothing/head/flatcap = 3,
 					/obj/item/lighter/greyscale = 6,
-					/obj/item/customlock = 8,
-					/obj/item/customblank = 12,
-					/obj/item/screwdriver/halflife = 6,
 					/obj/item/storage/halflife/keyring = 4,
 					/obj/item/storage/wallet = 10,
-					/obj/item/radio/off/halflife = 3,
+					/obj/item/radio/off/halflife = 5,
 					/obj/item/reagent_containers/cup/bottle/welding_fuel = 3,
-					/obj/item/storage/halflife/hand_box/egg = 5,
 					/obj/item/storage/halflife/hand_box/cookie = 5,
-					/obj/item/reagent_containers/pill/patch/medkit/vial = 3,
+					/obj/item/reagent_containers/pill/patch/medkit/vial = 5,
 					/obj/item/stack/sticky_tape = 4,
 					/obj/item/storage/toolbox/fishing = 2,
 					/obj/item/storage/box/fishing_hooks = 2,
 					/obj/item/storage/box/fishing_lines = 2,
 					/obj/item/storage/box/fishing_lures = 2,
-					/obj/item/stack/sheet/cloth = 5,
 					/obj/item/tape = 5, //tape recorder stuff
-					/obj/item/taperecorder = 2,
+					/obj/item/taperecorder = 3,
 					/obj/item/storage/halflife/suitcase = 6,
 					/obj/item/storage/fancy/cigarettes/halflife = 8,
 					/obj/item/storage/halflife/pill_bottle/antifatigue = 6,
@@ -327,18 +318,15 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/food_dispensery, 32)
 					/obj/item/storage/halflife/hand_box/cookie = 3,
 					/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
 					/obj/item/stack/sticky_tape = 1,
-					/obj/item/stack/sheet/cloth = 5,
+					/obj/item/stack/sheet/cloth = 8,
 					/obj/item/storage/halflife/suitcase = 6,
 					/obj/item/storage/fancy/cigarettes/halflife = 8,
 					/obj/item/storage/halflife/pill_bottle/antifatigue = 4,
 					/obj/item/storage/box/coffeepack = 1, //for coffee makers
 					/obj/item/clothing/gloves/fingerless = 3)
 
-	contraband = list(/obj/item/lockpick = 1,
-	                  /obj/item/clothing/suit/armor/browncoat = 1)
-
 	premium = list(/obj/item/storage/backpack/halflife/satchel = 3,
 				   /obj/item/storage/backpack/halflife = 3)
 
-	default_price = 16
-	extra_price = 40
+	default_price = 15
+	extra_price = 35

@@ -2,8 +2,8 @@
 	title = JOB_CURATOR
 	description = "Operate your store, and try not to get shutdown."
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = SUPERVISOR_HOP
 	config_tag = "CURATOR"
 	exp_granted_type = EXP_TYPE_CREW
@@ -30,9 +30,6 @@
 
 	voice_of_god_silence_power = 3
 	rpg_title = "Veteran Adventurer"
-
-	faction = FACTION_STATION
-	job_flags = STATION_JOB_FLAGS
 
 /datum/outfit/job/curator
 	name = "Clerk"
