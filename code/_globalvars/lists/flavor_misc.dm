@@ -35,11 +35,13 @@ GLOBAL_LIST_INIT(ghost_forms_with_accessories_list, list())
 //stores the ghost forms that support hair and other such things
 
 GLOBAL_LIST_INIT(security_depts_prefs, sort_list(list(
-	SEC_DEPT_ENGINEERING,
-	SEC_DEPT_MEDICAL,
+	SEC_DEPT_XRAY,
+	SEC_DEPT_HELIX,
 	SEC_DEPT_NONE,
-	SEC_DEPT_SUPPLY,
-	SEC_DEPT_SCIENCE,
+	SEC_DEPT_DEFENDER,
+	SEC_DEPT_JURY,
+	SEC_DEPT_RANGER,
+	SEC_DEPT_QUICK,
 )))
 
 	//Backpacks

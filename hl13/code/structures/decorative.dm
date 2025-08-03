@@ -4,6 +4,14 @@
 	icon = 'hl13/icons/obj/miscellaneous.dmi'
 	icon_state = "cone"
 
+/obj/structure/halflife/headcrab_cannister
+	name = "Combine Cannister"
+	desc = "A large cannister that was dropped here long ago. It's payload seems to have dispersed."
+	icon = 'hl13/icons/obj/miscellaneous_large.dmi'
+	icon_state = "cannister"
+	density = TRUE
+	anchored = TRUE
+
 // TRASH.... //
 /obj/structure/halflife/trash
 	name = "Base type halflife TRASH"

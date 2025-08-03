@@ -238,19 +238,19 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start/depsec/supply
 	name = "supply_sec"
-	department = SEC_DEPT_SUPPLY
+	department = SEC_DEPT_DEFENDER
 
 /obj/effect/landmark/start/depsec/medical
 	name = "medical_sec"
-	department = SEC_DEPT_MEDICAL
+	department = SEC_DEPT_HELIX
 
 /obj/effect/landmark/start/depsec/engineering
 	name = "engineering_sec"
-	department = SEC_DEPT_ENGINEERING
+	department = SEC_DEPT_XRAY
 
 /obj/effect/landmark/start/depsec/science
 	name = "science_sec"
-	department = SEC_DEPT_SCIENCE
+	department = SEC_DEPT_RANGER
 
 //Antagonist spawns
 

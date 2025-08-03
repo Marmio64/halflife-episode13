@@ -1,9 +1,9 @@
 #define SECURITY_OFFICER_DEPARTMENTS list("a", "b", "c", "d")
 #define SECURITY_OFFICER_DEPARTMENTS_TO_NAMES (list( \
-	"a" = SEC_DEPT_ENGINEERING, \
-	"b" = SEC_DEPT_MEDICAL, \
-	"c" = SEC_DEPT_SCIENCE, \
-	"d" = SEC_DEPT_SUPPLY, \
+	"a" = SEC_DEPT_XRAY, \
+	"b" = SEC_DEPT_HELIX, \
+	"c" = SEC_DEPT_RANGER, \
+	"d" = SEC_DEPT_DEFENDER, \
 ))
 
 /// Test that security officers with specific distributions get their departments.

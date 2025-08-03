@@ -53,7 +53,7 @@
 
 	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
 
-GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, SEC_DEPT_SUPPLY))
+GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_XRAY, SEC_DEPT_HELIX, SEC_DEPT_DEFENDER))
 
 /**
  * The department distribution of the security officers.
@@ -94,22 +94,22 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	var/destination = null
 
 	switch(department)
-		if(SEC_DEPT_SUPPLY)
+		if(SEC_DEPT_DEFENDER)
 			ears = /obj/item/radio/headset/headset_sec/alt/department/supply
 			dep_trim = /datum/id_trim/job/security_officer/supply
 			destination = /area/station/security/checkpoint/supply
 			accessory = /obj/item/clothing/accessory/armband/cargo
-		if(SEC_DEPT_ENGINEERING)
+		if(SEC_DEPT_XRAY)
 			ears = /obj/item/radio/headset/headset_sec/alt/department/engi
 			dep_trim = /datum/id_trim/job/security_officer/engineering
 			destination = /area/station/security/checkpoint/engineering
 			accessory = /obj/item/clothing/accessory/armband/engine
-		if(SEC_DEPT_MEDICAL)
+		if(SEC_DEPT_HELIX)
 			ears = /obj/item/radio/headset/headset_sec/alt/department/med
 			dep_trim = /datum/id_trim/job/security_officer/medical
 			destination = /area/station/security/checkpoint/medical
 			accessory = /obj/item/clothing/accessory/armband/medblue
-		if(SEC_DEPT_SCIENCE)
+		if(SEC_DEPT_RANGER)
 			ears = /obj/item/radio/headset/headset_sec/alt/department/sci
 			dep_trim = /datum/id_trim/job/security_officer/science
 			destination = /area/station/security/checkpoint/science
@@ -247,24 +247,36 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 
 		department = user_client.prefs.read_preference(/datum/preference/choiced/security_department)
 
+	var/name_source = list("Line", "Patrol", "Roller", "Victor")
 
 	if(department)
-		if(department == SEC_DEPT_MEDICAL)
+		if(department == SEC_DEPT_HELIX)
+			name_source = list ("Helix")
 			user.change_stat(STATKEY_INT, 3) //Guarantee they can use an analyzer, at the cost of strength
 			user.change_stat(STATKEY_STR, -2)
-		if(department == SEC_DEPT_ENGINEERING)
+		if(department == SEC_DEPT_XRAY)
+			name_source = list ("Xray")
 			user.change_stat(STATKEY_INT, 3)
 			user.change_stat(STATKEY_STR, -2)
-		if(department == SEC_DEPT_SUPPLY)
+		if(department == SEC_DEPT_DEFENDER)
+			name_source = list ("Defender")
 			user.change_stat(STATKEY_DEX, -1)
 			user.change_stat(STATKEY_STR, 1)
-		if(department == SEC_DEPT_SCIENCE)
+		if(department == SEC_DEPT_JURY)
+			name_source = list ("Jury")
+			user.change_stat(STATKEY_DEX, -1)
+			user.change_stat(STATKEY_STR, 1)
+		if(department == SEC_DEPT_RANGER)
+			name_source = list ("Ranger")
+			user.change_stat(STATKEY_DEX, 1)
+			user.change_stat(STATKEY_STR, -1)
+		if(department == SEC_DEPT_QUICK)
+			name_source = list ("Quick")
 			user.change_stat(STATKEY_DEX, 1)
 			user.change_stat(STATKEY_STR, -1)
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id
-		var/name_source = list("Defender", "Hero", "Jury", "King", "Line", "Patrol", "Quick", "Roller")
 		ID.registered_name = "CP:[currentrankpoints].[pick(name_source)]-[rand(111,999)]"
 		ID.update_label()
 

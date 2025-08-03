@@ -581,7 +581,7 @@
 	message = "smiles weakly."
 
 /// The base chance for your yawn to propagate to someone else if they're on the same tile as you
-#define YAWN_PROPAGATE_CHANCE_BASE 20
+#define YAWN_PROPAGATE_CHANCE_BASE 16
 /// The amount the base chance to propagate yawns falls for each tile of distance
 #define YAWN_PROPAGATE_CHANCE_DECAY 4
 
@@ -601,7 +601,7 @@
 		return
 
 	if(TIMER_COOLDOWN_FINISHED(user, COOLDOWN_YAWN_PROPAGATION))
-		TIMER_COOLDOWN_START(user, COOLDOWN_YAWN_PROPAGATION, cooldown * 3)
+		TIMER_COOLDOWN_START(user, COOLDOWN_YAWN_PROPAGATION, cooldown * 6)
 
 	var/mob/living/carbon/carbon_user = user
 	if(istype(carbon_user) && ((carbon_user.wear_mask?.flags_inv & HIDEFACE) || carbon_user.head?.flags_inv & HIDEFACE))

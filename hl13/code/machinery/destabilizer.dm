@@ -61,7 +61,7 @@ GLOBAL_VAR_INIT(super_destabilizer_deployed, FALSE)
 	name = "super destabilizer"
 	desc = "A massive abomination of tampered combine machinery that is emanating such a powerful signal, it even hurts your head to be around it. If it isn't broken quick, it might shut down all the combine systems in the entire district, and maybe even the whole city!"
 	icon_state = "superdestabilizer_off"
-	max_integrity = 300
+	max_integrity = 350
 	show_timer = TRUE
 	processing_flags = START_PROCESSING_MANUALLY
 	anchored = FALSE

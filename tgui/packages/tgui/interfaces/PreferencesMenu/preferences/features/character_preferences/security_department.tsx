@@ -2,6 +2,6 @@ import { FeatureChoiced } from '../base';
 import { FeatureDropdownInput } from '../dropdowns';
 
 export const prefered_security_department: FeatureChoiced = {
-  name: 'Civil Protection Specialty',
+  name: 'Civil Protection Specialty and Callsign',
   component: FeatureDropdownInput,
 };

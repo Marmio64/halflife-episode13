@@ -1,6 +1,6 @@
 /datum/job/bartender
 	title = JOB_BARTENDER
-	description = "Operate the city's bar, listen to the labor lead, try not to get shut down. You are also landlord to the attached apartment block and carry keys for it and it's amenities."
+	description = "Operate the city's bar, sell 'luxury' goods, listen to the labor lead, try not to get shut down. You are also landlord to the attached apartment block and carry keys for it and it's amenities."
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
 	faction = FACTION_STATION
 	total_positions = 1

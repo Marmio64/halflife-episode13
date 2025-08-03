@@ -82,12 +82,42 @@
 
 	var/client/user_client = GLOB.directory[ckey(user.mind?.key)]
 
+	var/department = null
+
 	if(user_client)
 		currentrankpoints = user_client.prefs.read_preference(/datum/preference/numeric/rankpoints)
+		department = user_client.prefs.read_preference(/datum/preference/choiced/security_department)
+
+	var/name_source = list("Line", "Patrol", "Roller", "Victor")
+
+	if(department)
+		if(department == SEC_DEPT_HELIX)
+			name_source = list ("Helix")
+			user.change_stat(STATKEY_INT, 3) //Guarantee they can use an analyzer, at the cost of strength
+			user.change_stat(STATKEY_STR, -2)
+		if(department == SEC_DEPT_XRAY)
+			name_source = list ("Xray")
+			user.change_stat(STATKEY_INT, 3)
+			user.change_stat(STATKEY_STR, -2)
+		if(department == SEC_DEPT_DEFENDER)
+			name_source = list ("Defender")
+			user.change_stat(STATKEY_DEX, -1)
+			user.change_stat(STATKEY_STR, 1)
+		if(department == SEC_DEPT_JURY)
+			name_source = list ("Jury")
+			user.change_stat(STATKEY_DEX, -1)
+			user.change_stat(STATKEY_STR, 1)
+		if(department == SEC_DEPT_RANGER)
+			name_source = list ("Ranger")
+			user.change_stat(STATKEY_DEX, 1)
+			user.change_stat(STATKEY_STR, -1)
+		if(department == SEC_DEPT_QUICK)
+			name_source = list ("Quick")
+			user.change_stat(STATKEY_DEX, 1)
+			user.change_stat(STATKEY_STR, -1)
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id
-		var/name_source = list("Defender", "Hero", "Jury", "King", "Line", "Patrol", "Quick", "Roller")
 		ID.registered_name = "DV:[currentrankpoints].[pick(name_source)]-[rand(10,99)]"
 		ID.update_label()
 
