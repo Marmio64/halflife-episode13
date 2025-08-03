@@ -90,6 +90,14 @@
 	ambient_buzz = 'hl13/sound/ambience/lake_water.wav'
 	ambient_buzz_vol = 35
 
+/area/halflife/outdoors/outlands_city
+	name = "\improper City Outskirts"
+	ambient_buzz = 'hl13/sound/ambience/town_abandoned.ogg'
+
+	first_time_text = "The Outlands"
+
+	ambience_index = AMBIENCE_HLSEWERS
+
 /area/halflife/indoors
 	name = "\improper Indoors"
 	icon_state = "away"
@@ -102,6 +110,9 @@
 
 	ambientrain = RAIN_IN
 	dissipation_rate = 0.75
+
+/area/halflife/indoors/outlands
+	name = "\improper Outlands Indoors"
 
 /area/halflife/indoors/townhall
 	name = "\improper Town Hall"
@@ -311,6 +322,9 @@
 	mood_message = "<span class='warning'>This place is unnerving...</span>\n"
 
 	first_time_text = null
+
+/area/halflife/indoors/sewer/tunnel/outlands
+	name = "\improper Outlands Tunnels"
 
 /area/halflife/indoors/sewer/cave
 	name = "\improper Mining Caves"

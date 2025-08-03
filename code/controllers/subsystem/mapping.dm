@@ -444,7 +444,7 @@ Used by the AI doomsday and the self-destruct nuke.
 
 #ifndef LOWMEMORYMODE
 
-	LoadGroup(FailedZs, "Outlands", "map_files/generic", "outlands.dmm", default_traits = ZTRAITS_CENTCOM)
+	LoadGroup(FailedZs, "Outlands", "map_files/generic", "outlands_new.dmm", default_traits = ZTRAITS_CENTCOM)
 
 	if(current_map.minetype == "lavaland")
 		LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland.dmm", default_traits = ZTRAITS_LAVALAND)
