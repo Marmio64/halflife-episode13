@@ -303,7 +303,7 @@
 	idle_behavior = /datum/idle_behavior/idle_random_walk/not_while_on_target/trader
 	planning_subtrees = list(
 		/datum/ai_planning_subtree/call_reinforcements,
-		/datum/ai_planning_subtree/target_retaliate,
+		/datum/ai_planning_subtree/target_retaliate/check_faction,
 		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trader,
 		/datum/ai_planning_subtree/prepare_travel_to_destination/trader,
 		/datum/ai_planning_subtree/travel_to_point/and_clear_target,
@@ -317,6 +317,7 @@
 		"Kolejny dzień, kolejny dolar...",
 		"One day, it'll all be over.",
 		"Just don't try anything.",
+		"Hurry up, then.",
 		"I'll see her again one day...",
 	)
 
@@ -324,7 +325,7 @@
 	idle_behavior = null
 
 	planning_subtrees = list(
-		/datum/ai_planning_subtree/target_retaliate,
+		/datum/ai_planning_subtree/target_retaliate/check_faction,
 		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trooper_burst,
 		/datum/ai_planning_subtree/travel_to_point/and_clear_target/reinforce,
 		/datum/ai_planning_subtree/random_speech/refugeeguard,
