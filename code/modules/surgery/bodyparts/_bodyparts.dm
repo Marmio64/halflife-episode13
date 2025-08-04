@@ -174,7 +174,7 @@
 	/// what visual effect is used when this limb is used to strike someone.
 	var/unarmed_attack_effect = ATTACK_EFFECT_PUNCH
 	/// Sounds when this bodypart is used in an umarmed attack
-	var/sound/unarmed_attack_sound = 'sound/items/weapons/punch1.ogg'
+	var/sound/unarmed_attack_sound = 'sound/items/weapons/genhit1.ogg'
 	var/sound/unarmed_miss_sound = 'sound/items/weapons/punchmiss.ogg'
 	///Lowest possible punch damage this bodypart can give. If this is set to 0, unarmed attacks will always miss.
 	var/unarmed_damage_low = 1

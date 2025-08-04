@@ -13,7 +13,7 @@
 	death_sound = 'hl13/sound/voice/human/scream/malescream_8.ogg'
 	attack_verb_continuous = "punches"
 	attack_verb_simple = "punch"
-	attack_sound = 'sound/items/weapons/punch1.ogg'
+	attack_sound = 'sound/items/weapons/genhit1.ogg'
 
 	basic_mob_flags = DEL_ON_DEATH
 
