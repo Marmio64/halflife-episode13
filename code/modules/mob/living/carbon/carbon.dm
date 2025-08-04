@@ -103,7 +103,7 @@
 		log_combat(src, victim, "crashed into")
 
 	if(oof_noise)
-		playsound(src,'sound/items/weapons/punch1.ogg',50,TRUE)
+		playsound(src,SFX_SWING_HIT,50,TRUE)
 
 //Throwing stuff
 /mob/living/carbon/proc/toggle_throw_mode()
