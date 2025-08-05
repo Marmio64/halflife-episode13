@@ -265,6 +265,7 @@
 			"We've all gotta make a living somehow, heheh...",
 			"Don't bother trying to make it through the tunnel I came from, only I know the safe routes.",
 			"Don't ask where I get this stuff from.",
+			"Looking for a way out of here? Hahaha! Sorry, but my contact isn't currently looking for more clients, you'll have to wait. Besides, it's not so bad here, bahaha!",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm out of creddies right now, cant buy anything.",

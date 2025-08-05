@@ -13,7 +13,7 @@
 
 	var/resistance_flags = NONE // INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ON_FIRE | UNACIDABLE | ACID_PROOF
 
-	var/static/list/hl13hit_sounds = list(
+	var/list/hl13hit_sounds = list(
 		'sound/items/weapons/smash.ogg',
 		'sound/items/weapons/smash1.ogg',
 		'sound/items/weapons/smash2.ogg',

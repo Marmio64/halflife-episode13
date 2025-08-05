@@ -47,6 +47,7 @@
 	icon_state = "table-0"
 	base_icon_state = "table"
 	max_integrity = 150
+	hl13hit_sounds = SFX_WOODIMPACT
 
 	frame = /obj/structure/table_frame/halflife/wood
 	framestack = /obj/item/stack/sheet/mineral/wood
@@ -77,6 +78,7 @@
 	resistance_flags = FLAMMABLE
 	framestack = /obj/item/stack/sheet/mineral/wood
 	framestackamount = 2
+	hl13hit_sounds = SFX_WOODIMPACT
 
 // Player-Made tables //
 
@@ -172,6 +174,7 @@
 	icon_state = "table_wood_round"
 	max_integrity = 150
 	frame = /obj/item/stack/sheet/mineral/wood
+	hl13hit_sounds = SFX_WOODIMPACT
 
 /obj/structure/table/halflife/no_smooth/wood/square
 	name = "wood table"
@@ -201,6 +204,7 @@
 	icon_state = "table_wood_wide_oval"
 	max_integrity = 200
 	frame = /obj/item/stack/sheet/mineral/wood
+	hl13hit_sounds = SFX_WOODIMPACT
 
 /obj/structure/table/halflife/no_smooth/large/wood/square
 	desc = "A large rectangular wood table. Very sturdy."

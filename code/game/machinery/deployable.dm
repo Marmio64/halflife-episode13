@@ -60,6 +60,7 @@
 	icon_state = "woodenbarricade"
 	resistance_flags = FLAMMABLE
 	bar_material = WOOD
+	hl13hit_sounds = SFX_WOODIMPACT
 	var/drop_amount = 3
 
 /obj/structure/barricade/wooden/Initialize(mapload)

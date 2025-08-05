@@ -284,6 +284,15 @@
 				'sound/items/weapons/genhit2.ogg',
 				'sound/items/weapons/genhit3.ogg',
 				)
+		if(SFX_WOODIMPACT) //hl13 edit
+			soundin = pick(
+				'hl13/sound/effects/wood_box_impact_hard1.ogg',
+				'hl13/sound/effects/wood_box_impact_hard2.ogg',
+				'hl13/sound/effects/wood_box_impact_hard3.ogg',
+				'hl13/sound/effects/wood_box_impact_hard4.ogg',
+				'hl13/sound/effects/wood_box_impact_hard5.ogg',
+				'hl13/sound/effects/wood_box_impact_hard6.ogg',
+				)
 		if(SFX_HISS)
 			soundin = pick(
 				'sound/mobs/non-humanoids/hiss/hiss1.ogg',

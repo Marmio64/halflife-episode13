@@ -387,9 +387,10 @@
 	icon_state = "wood_closed"
 	door_type = "wood"
 	frametype = "wood"
-	hitted_sound = 'hl13/sound//halflifeeffects/wood_door_hit.ogg'
+	hitted_sound = 'hl13/sound/halflifeeffects/wood_door_hit.ogg'
 	opensound = 'hl13/sound/machines/wooddoor_open.ogg'
 	closesound = 'hl13/sound/machines/wooddoor_close.ogg'
+	hl13hit_sounds = SFX_WOODIMPACT
 
 /obj/machinery/door/unpowered/halflife/wood/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))

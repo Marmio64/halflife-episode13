@@ -86,6 +86,7 @@
 	item_chair = /obj/item/chair/halflife/wood
 	buildstacktype = /obj/item/stack/sheet/mineral/wood
 	buildstackamount = 1
+	hl13hit_sounds = SFX_WOODIMPACT
 
 /obj/structure/chair/halflife/wood/padded
 	name = "padded wooden chair"

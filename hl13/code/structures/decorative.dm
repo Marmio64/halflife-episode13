@@ -113,6 +113,7 @@
 	name = "scrap wood"
 	desc = "A bunch of scrap wood. You could probably get a few loose pieces."
 	icon_state = "woodscrap"
+	hl13hit_sounds = SFX_WOODIMPACT
 
 /obj/structure/halflife/trash/wood/attack_hand_secondary(mob/living/user, list/modifiers)
 	. = ..()
@@ -208,6 +209,7 @@
 	unsanitary = FALSE
 	loot_type = /obj/effect/spawner/random/halflife/loot/scrap/three
 	good_loot_type = /obj/effect/spawner/random/halflife/loot/two
+	hl13hit_sounds = SFX_WOODIMPACT
 
 /obj/structure/halflife/trash/garbage/dumpster/crate/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))
@@ -782,6 +784,7 @@
 	max_integrity = 100
 	anchored = TRUE
 	density = FALSE
+	hl13hit_sounds = SFX_WOODIMPACT
 
 /obj/structure/halflife/pallet/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))
@@ -868,6 +871,7 @@
 	desc = "A classic wooden fence. It doesn't get more homely than this."
 	icon_state = "wood_full"
 	projectile_passchance = 70
+	hl13hit_sounds = SFX_WOODIMPACT
 
 /obj/structure/railing/halflife/wood/crowbar_act(mob/living/user, obj/item/tool)
 	if(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION)

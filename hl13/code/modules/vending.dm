@@ -13,6 +13,7 @@
 	payment_department = NO_FREEBIES
 	layer = ABOVE_ALL_MOB_LAYER
 	plane = ABOVE_GAME_PLANE
+	all_products_free = FALSE
 
 /obj/item/vending_refill/breen
 	machine_name = "Breen's Private Reserve"
