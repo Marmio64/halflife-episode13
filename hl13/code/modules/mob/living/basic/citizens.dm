@@ -51,10 +51,20 @@
 	name = "Citizen"
 	outfit = /datum/outfit/citizen
 
+/obj/effect/mob_spawn/corpse/human/refugee
+	name = "Refugee"
+	outfit = /datum/outfit/refugee
+
 /datum/outfit/citizen
 	name = "Citizen Corpse"
 
 	uniform = /obj/item/clothing/under/citizen
+	shoes = /obj/item/clothing/shoes/boots
+
+/datum/outfit/refugee
+	name = "Refugee Corpse"
+
+	uniform = /obj/item/clothing/under/citizen/refugee
 	shoes = /obj/item/clothing/shoes/boots
 
 // AI STUFF THAT I PUT IN HERE CAUSE IM TOO LAZY TO MAKE ANOTHER FILE FOR IT --------------------------

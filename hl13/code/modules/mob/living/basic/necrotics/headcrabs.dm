@@ -22,7 +22,7 @@
 	attack_verb_simple = "bite"
 	attack_sound = 'hl13/sound/creatures/headcrabbite.ogg'
 	combat_mode = TRUE
-	speed = 1.6
+	speed = 1.7
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1, /obj/item/stack/sheet/sinew = 1, /obj/item/stack/sheet/bone = 1)
 	death_sound = 'hl13/sound/creatures/headcrabdeath.ogg'
 
