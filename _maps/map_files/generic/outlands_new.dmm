@@ -63,6 +63,11 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"ay" = (
+/obj/structure/table/halflife/no_smooth/cable_reel,
+/obj/structure/halflife/trash/books,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "az" = (
 /obj/machinery/atm,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -210,6 +215,11 @@
 /obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
+"cy" = (
+/turf/open/floor/plating/indoor/metal/pipe/intersection{
+	dir = 1
+	},
+/area/halflife/indoors/outlands)
 "cz" = (
 /obj/machinery/door/airlock/highsecurity/combine,
 /obj/effect/mapping_helpers/airlock/access/all/security/general,
@@ -312,7 +322,7 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/outlands)
 "dx" = (
-/obj/effect/mob_spawn/corpse/human/citizen,
+/obj/effect/mob_spawn/corpse/human/refugee,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/outlands_city)
 "dH" = (
@@ -887,6 +897,12 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
+"jl" = (
+/obj/effect/decal/cleanable/blood/trails{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/outlands_city)
 "jn" = (
 /obj/structure/chair/halflife/metal/folding{
 	dir = 4
@@ -1500,6 +1516,10 @@
 /obj/item/chair/halflife/metal/folding,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/outlands)
+"pq" = (
+/obj/modular_map_root/citysouth,
+/turf/closed/wall/halflife/metal,
+/area/halflife/outdoors/outlands_city)
 "ps" = (
 /obj/effect/spawner/random/halflife/loot/trash,
 /obj/structure/closet/halflife,
@@ -2139,6 +2159,12 @@
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/outlands)
+"wI" = (
+/obj/structure/halflife/tank/pipe,
+/turf/open/floor/plating/indoor/metal/pipe{
+	dir = 1
+	},
+/area/halflife/indoors/outlands)
 "wK" = (
 /obj/structure/halflife/storage/large/shop,
 /obj/effect/spawner/random/halflife/loot,
@@ -2187,6 +2213,10 @@
 /obj/effect/landmark/start/prisoner,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/outlands)
+"xm" = (
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/outlands_city)
 "xr" = (
 /obj/structure/closet/crate/freezer/food,
 /obj/item/food/nutripaste,
@@ -3255,6 +3285,10 @@
 /obj/effect/spawner/random/halflife/loot/scrap,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/outlands)
+"Jb" = (
+/obj/effect/mob_spawn/corpse/human/refugee,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/outlands_city)
 "Jc" = (
 /obj/effect/landmark/train_dump_spot,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -3472,6 +3506,11 @@
 /obj/structure/dresser,
 /turf/open/floor/plating/indoor/carpet/violet,
 /area/halflife/indoors/outlands)
+"Lx" = (
+/turf/open/floor/plating/indoor/metal/pipe/corner{
+	dir = 4
+	},
+/area/halflife/indoors/outlands)
 "Ly" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/outdoors/outlands_city)
@@ -3661,6 +3700,13 @@
 /obj/effect/spawner/random/halflife/loot/alcohol,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/outlands)
+"Nt" = (
+/obj/structure/halflife/leaves,
+/obj/effect/decal/cleanable/blood/trails{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/outlands_city)
 "Nu" = (
 /obj/structure/halflife/barrel/double/grey/two,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -3679,6 +3725,9 @@
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/laborcamp)
+"Nz" = (
+/turf/open/floor/plating/indoor/metal/pipe/intersection,
+/area/halflife/indoors/outlands)
 "NB" = (
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -3937,6 +3986,10 @@
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/outlands)
+"Qd" = (
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/closed/wall/halflife/concrete,
+/area/halflife/indoors/outlands)
 "Qv" = (
 /obj/structure/table/halflife/metal,
 /obj/structure/halflife/trash/food/glass{
@@ -4070,6 +4123,15 @@
 /area/halflife/indoors/outlands)
 "RP" = (
 /turf/closed/wall/halflife/concrete/alt,
+/area/halflife/indoors/outlands)
+"RS" = (
+/obj/structure/table/halflife/no_smooth/cable_reel,
+/obj/structure/halflife/trash/cardboard{
+	dir = 4;
+	pixel_x = 0;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
 "RW" = (
 /obj/structure/table/halflife/metal/grate,
@@ -31085,7 +31147,7 @@ Vk
 Vk
 Vk
 Vk
-Jw
+Jb
 Jw
 Vk
 Vk
@@ -31227,7 +31289,7 @@ Vk
 Vk
 Vk
 Vk
-Jw
+jl
 Jw
 Vk
 Vk
@@ -31369,7 +31431,7 @@ Vk
 Vk
 Vk
 Vk
-Jw
+jl
 Jw
 Vk
 Vk
@@ -31511,7 +31573,7 @@ Vk
 Vk
 Vk
 Vk
-Jw
+jl
 Jw
 Vk
 Vk
@@ -31653,7 +31715,7 @@ Vk
 Vk
 Vk
 Vk
-Jw
+jl
 Jw
 Vk
 Vk
@@ -31795,7 +31857,7 @@ Vk
 Vk
 Vk
 Vk
-Jw
+jl
 Jw
 Vk
 Vk
@@ -31937,7 +31999,7 @@ Vk
 Vk
 Vk
 Vk
-Jw
+jl
 Jw
 Vk
 Vk
@@ -32079,7 +32141,7 @@ Vk
 Vk
 Vk
 Vk
-Jw
+jl
 Jw
 Vk
 Vk
@@ -32221,7 +32283,7 @@ Vk
 Vk
 Vk
 jz
-jz
+TE
 bW
 jz
 Vk
@@ -32361,9 +32423,9 @@ Vk
 Vk
 Vk
 Vk
-Vk
+Qd
 jz
-oH
+Nt
 Uc
 bW
 Vk
@@ -32505,7 +32567,7 @@ Vk
 Vk
 Vk
 jz
-Mr
+xm
 oH
 jz
 rT
@@ -37386,7 +37448,7 @@ td
 td
 td
 do
-do
+pq
 jz
 jz
 rT
@@ -37528,7 +37590,7 @@ eD
 eD
 eD
 eD
-qs
+jz
 jz
 jz
 aa
@@ -37538,9 +37600,9 @@ VZ
 rT
 jz
 Vk
-Vk
-Vk
-Vk
+Tq
+mx
+RS
 Vk
 Vk
 Vk
@@ -37679,10 +37741,10 @@ VZ
 VZ
 rT
 jz
-Vk
-Vk
-Vk
-Vk
+uz
+mx
+mx
+mx
 Vk
 Vk
 Vk
@@ -37822,9 +37884,9 @@ VZ
 rT
 jz
 Vk
-Vk
-Vk
-Vk
+mx
+mx
+ay
 Vk
 Vk
 Vk
@@ -42730,7 +42792,7 @@ Vk
 Vk
 Vk
 Vk
-Vk
+qb
 Vk
 Vk
 Vk
@@ -42870,11 +42932,11 @@ Vk
 Vk
 Vk
 Vk
-Vk
-Vk
-Vk
-Vk
-Vk
+wI
+vJ
+mx
+mx
+Xn
 Vk
 Vk
 Vk
@@ -43012,11 +43074,11 @@ Vk
 Vk
 Vk
 Vk
-Vk
-Vk
-Vk
-Vk
-Vk
+mx
+BG
+mx
+mx
+Zo
 Vk
 Vk
 Vk
@@ -43154,11 +43216,11 @@ Vk
 Vk
 Vk
 Vk
-Vk
-Vk
-Vk
-Vk
-Vk
+Xn
+BG
+mx
+mx
+Lx
 Vk
 Vk
 Vk
@@ -43296,11 +43358,11 @@ Vk
 Vk
 Vk
 Vk
-Vk
-Vk
-Vk
-Vk
-Vk
+Xn
+Nz
+yT
+yT
+cy
 Vk
 Vk
 Vk
@@ -43438,11 +43500,11 @@ Vk
 Vk
 Vk
 Vk
-Vk
-Vk
-Vk
-Vk
-Vk
+Vd
+BG
+mx
+mx
+BG
 Vk
 Vk
 Vk
@@ -43580,11 +43642,11 @@ Vk
 Vk
 Vk
 Vk
-Vk
-Vk
-Vk
-Vk
-Vk
+mx
+BG
+mx
+mx
+BG
 Vk
 Vk
 Vk
@@ -43722,11 +43784,11 @@ Vk
 Vk
 Vk
 Vk
-Vk
-Vk
-Vk
-Vk
-Vk
+wI
+Ga
+mx
+mx
+BG
 Vk
 Vk
 Vk

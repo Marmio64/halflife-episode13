@@ -155,7 +155,7 @@
 		/obj/item/grenade/halflife/molotov = list(PAYCHECK_CREW * 3.5, 5),
 		/obj/item/reagent_containers/cup/glass/bottle/vodka = list(PAYCHECK_CREW * 3, 5),
 		/obj/item/stack/sticky_tape = list(PAYCHECK_CREW * 4, 5),
-		/obj/item/weaponcrafting/receiver = list(PAYCHECK_CREW * 3.5, 5),
+		/obj/item/weaponcrafting/receiver = list(PAYCHECK_CREW * 3, 5),
 		/obj/item/stack/bulletcasings = list(PAYCHECK_CREW * 0.5, 5),
 		/obj/item/clothing/under/citizen/rebel = list(PAYCHECK_CREW * 4.5, 5),
 		/obj/item/storage/backpack/halflife/satchel = list(PAYCHECK_CREW * 8, 3),
