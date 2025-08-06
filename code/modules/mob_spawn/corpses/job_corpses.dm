@@ -77,7 +77,7 @@
 
 /obj/effect/mob_spawn/corpse/human/prisoner
 	name = JOB_PRISONER
-	outfit = /datum/outfit/job/prisoner
+	outfit = /datum/outfit/job/roboticist
 
 /obj/effect/mob_spawn/corpse/human/roboticist
 	name = JOB_ROBOTICIST

@@ -30,19 +30,17 @@
 
 	gameplay_help = "As a refugee, expect to die a lot, espescially if you do not stay with allies. The outlands are a harsh, dangerous, and unforgiving place. You'll have to try to scavenge, craft, and loot what you need to survive. Your first priority should be to craft an armored vest from cloth and scrap, and get some food."
 
-/datum/outfit/job/prisoner
+/datum/outfit/job/refugee
 	name = "Outlands Refugee"
 	jobtype = /datum/job/prisoner
 
-	id = null
+	id = /obj/item/storage/wallet
 	uniform = /obj/item/clothing/under/citizen/refugee
 
 /datum/outfit/job/refugee/fixeditems
 	name = "Outlands Refugee with items pouch"
 	jobtype = /datum/job/prisoner
 
-	id = /obj/item/card/id/advanced/halflife/orange
-	id_trim = /datum/id_trim/job/prisoner
 	uniform = /obj/item/clothing/under/citizen/refugee
 
 	r_pocket = /obj/item/flashlight
@@ -52,9 +50,7 @@
 /datum/outfit/job/refugee/randomitems
 	name = "Outlands Refugee with a random item"
 	jobtype = /datum/job/prisoner
-	id = /obj/item/card/id/advanced/halflife/orange
 
-	id_trim = /datum/id_trim/job/prisoner
 	uniform = /obj/item/clothing/under/citizen/refugee
 
 	r_pocket = /obj/item/flashlight
@@ -91,8 +87,6 @@
 	name = "Armed Outlands Refugee"
 	jobtype = /datum/job/prisoner
 
-	id = /obj/item/card/id/advanced/halflife/orange
-	id_trim = /datum/id_trim/job/prisoner
 	uniform = /obj/item/clothing/under/citizen/refugee
 	suit = /obj/item/clothing/suit/armor/armored
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp

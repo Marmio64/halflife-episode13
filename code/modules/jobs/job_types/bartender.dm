@@ -5,6 +5,8 @@
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
+	exp_requirements = 30
+	exp_required_type = EXP_TYPE_CREW
 	supervisors = SUPERVISOR_HOP
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "BARTENDER"

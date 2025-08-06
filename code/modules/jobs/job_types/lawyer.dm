@@ -9,7 +9,7 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "LAWYER"
 
-	exp_requirements = 120
+	exp_requirements = 160
 	exp_required_type = EXP_TYPE_CREW
 
 	outfit = /datum/outfit/job/lawyer

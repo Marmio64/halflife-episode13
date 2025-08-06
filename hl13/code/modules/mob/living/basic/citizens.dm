@@ -53,7 +53,7 @@
 
 /obj/effect/mob_spawn/corpse/human/refugee
 	name = "Refugee"
-	outfit = /datum/outfit/refugee
+	outfit = /datum/outfit/generic_refugee
 
 /datum/outfit/citizen
 	name = "Citizen Corpse"
@@ -61,7 +61,7 @@
 	uniform = /obj/item/clothing/under/citizen
 	shoes = /obj/item/clothing/shoes/boots
 
-/datum/outfit/refugee
+/datum/outfit/generic_refugee
 	name = "Refugee Corpse"
 
 	uniform = /obj/item/clothing/under/citizen/refugee

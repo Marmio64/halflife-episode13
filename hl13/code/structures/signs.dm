@@ -129,7 +129,6 @@
 	density = FALSE
 	max_integrity = 75
 	integrity_failure = 35
-	//hitted_sound = 'sound/effects/glasshit.ogg'
 
 /obj/structure/halflife/sign/bar/update_overlays()
 	. = ..()
@@ -155,7 +154,6 @@
 	integrity_failure = 35
 	pixel_y = 32
 	density = FALSE
-	//hitted_sound = 'sound/effects/glasshit.ogg'
 	var/datum/looping_sound/halflife/neonsign/busted/soundloop
 
 /obj/structure/halflife/sign/open/update_overlays()

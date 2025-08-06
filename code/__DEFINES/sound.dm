@@ -220,6 +220,8 @@ GLOBAL_LIST_INIT(announcer_keys, list(
 #define SFX_FEMALE_SIGH "female_sigh"
 #define SFX_WRITING_PEN "writing_pen"
 #define SFX_WOODIMPACT "woodimpact" //hl13 edit
+#define SFX_CARDBOARDIMPACT "cardboardimpact" //hl13 edit
+#define SFX_CONCRETEIMPACT "concreteimpact" //hl13 edit
 
 // Standard is 44.1khz
 #define MIN_EMOTE_PITCH 40000

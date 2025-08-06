@@ -28,6 +28,7 @@
 	max_integrity = 550
 	altstates = 5
 	projectile_passchance = 40
+	hl13hit_sounds = SFX_CONCRETEIMPACT
 
 /obj/structure/halflife/road_barrier/concrete/alt
 	desc = "A heavy duty concrete road barrier featuring a pattern that to this day is still somewhat vibrant. Used to direct traffic and prevent going off the lane."

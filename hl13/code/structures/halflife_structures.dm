@@ -385,6 +385,7 @@
 	desc = "Scream at the coders if you see this."
 	build_stack_type = /obj/item/stack/sheet/cloth
 	build_stack_amount = 2
+	hl13hit_sounds = SFX_CARDBOARDIMPACT
 
 /obj/structure/bed/halflife/mattress/dirty
 	name = "mattress"

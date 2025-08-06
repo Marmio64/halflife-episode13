@@ -22,6 +22,7 @@
 	name = "scattered pages"
 	desc = "Some scattered paper pages. They look mostly ruined."
 	icon_state = "scattered_papers"
+	hl13hit_sounds = SFX_CARDBOARDIMPACT
 
 /obj/structure/halflife/trash/papers/attack_hand_secondary(mob/living/user, list/modifiers)
 	. = ..()
@@ -59,6 +60,7 @@
 	name = "ruined stack of books"
 	desc = "A small stack of ruined books. A librarian's worst nightmare."
 	icon_state = "bookstack_1"
+	hl13hit_sounds = SFX_CARDBOARDIMPACT
 
 /obj/structure/halflife/trash/books/Initialize(mapload)
 	. = ..()
@@ -86,6 +88,7 @@
 	name = "scattered cardboard"
 	desc = "Old cardboard boxes... Thrown all over the place. What a mess."
 	icon_state = "cardboard"
+	hl13hit_sounds = SFX_CARDBOARDIMPACT
 
 /obj/structure/halflife/trash/bricks
 	name = "brick rubble"

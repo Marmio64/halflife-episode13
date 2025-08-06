@@ -120,7 +120,6 @@
 	desc = "Holds wastelands, while being attatched to a wall, presumably."
 	pixel_y = 32
 	density = FALSE
-	hitted_sound = 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_2.wav'
 	icon = 'hl13/icons/obj/storage/storage.dmi'
 
 /obj/structure/closet/halflife/wall/Initialize(mapload)
@@ -149,7 +148,6 @@
 	flags_1 = INDESTRUCTIBLE | ACID_PROOF | FIRE_PROOF
 	pixel_y = 24
 	density = FALSE
-	hitted_sound = 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_2.wav'
 
 /obj/structure/halflife/storage/vent/Initialize()
 	. = ..()

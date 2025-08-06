@@ -293,6 +293,20 @@
 				'hl13/sound/effects/wood_box_impact_hard5.ogg',
 				'hl13/sound/effects/wood_box_impact_hard6.ogg',
 				)
+		if(SFX_CARDBOARDIMPACT) //hl13 edit
+			soundin = pick(
+				'hl13/sound/effects/cardboard_box_impact_hard1.ogg',
+				'hl13/sound/effects/cardboard_box_impact_hard2.ogg',
+				'hl13/sound/effects/cardboard_box_impact_hard3.ogg',
+				'hl13/sound/effects/cardboard_box_impact_hard4.ogg',
+				)
+		if(SFX_CONCRETEIMPACT) //hl13 edit
+			soundin = pick(
+				'hl13/sound/effects/concrete_impact_bullet1.ogg',
+				'hl13/sound/effects/concrete_impact_bullet2.ogg',
+				'hl13/sound/effects/concrete_impact_bullet3.ogg',
+				'hl13/sound/effects/concrete_impact_bullet4.ogg',
+				)
 		if(SFX_HISS)
 			soundin = pick(
 				'sound/mobs/non-humanoids/hiss/hiss1.ogg',
