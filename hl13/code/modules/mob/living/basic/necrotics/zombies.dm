@@ -68,7 +68,7 @@
 	name = "Zombine"
 	desc = "A shambling combine soldier, taken over by a parasitic head crab. Capable of running and is heavily armored."
 	icon_state = "zombine"
-	icon_living = "zombie"
+	icon_living = "zombine"
 	icon_dead = "zombine_dead"
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 3)
 	maxHealth = 140
@@ -79,6 +79,15 @@
 	crabless_possible = FALSE
 	idle_sounds = list('hl13/sound/creatures/zombinesound1.ogg', 'hl13/sound/creatures/zombinesound2.ogg', 'hl13/sound/creatures/zombinesound3.ogg', 'hl13/sound/creatures/zombinesound4.ogg')
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombine
+
+/mob/living/basic/halflife/zombie/zombine/elite
+	name = "Elite Zombine"
+	desc = "A shambling combine soldier, taken over by a parasitic head crab. Capable of running and is heavily armored. This one is adorned in heavy elite armor."
+	icon_state = "elite"
+	icon_living = "elite"
+	icon_dead = "elite_dead"
+	maxHealth = 180
+	health = 180
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/zombine/proc/get_innate_abilities()
@@ -107,7 +116,7 @@
 
 /datum/action/cooldown/mob_cooldown/halflife/zombine_grenade/Activate(atom/target)
 	StartCooldown()
-	target.icon_state = "zombine_grenade"
+	target.icon_state = "[initial(target.icon_state)]_grenade"
 	target.visible_message(span_boldwarning("[target] arms a grenade!"))
 	playsound(target, sound_cue, 50, FALSE)
 	playsound(target, user_noise, 50, FALSE)
@@ -319,7 +328,7 @@
 	icon_dead = "poisonzombie_dead"
 	maxHealth = 150
 	health = 150
-	speed = 1.8
+	speed = 1.85
 	death_sound = 'hl13/sound/creatures/poison/pz_die1.ogg'
 	crabless_possible = FALSE
 	idle_sounds = list('hl13/sound/creatures/poison/pz_breathe_loop1.ogg')
