@@ -504,3 +504,10 @@
 
 /datum/ai_planning_subtree/targeted_mob_ability/headcrab_throw
 	ability_key = BB_HALFLIFE_HEADCRABTHROW_ABILITY
+
+
+/// Dead zombie
+/obj/effect/mob_spawn/corpse/zombie
+	mob_type = /mob/living/basic/halflife/zombie
+	icon = 'hl13/icons/mob/halflife.dmi'
+	icon_state = "zombie_dead"

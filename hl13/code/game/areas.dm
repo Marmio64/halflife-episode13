@@ -98,6 +98,8 @@
 
 	ambience_index = AMBIENCE_HLSEWERS
 
+	daylight_multiplier = 0.15
+
 /area/halflife/indoors
 	name = "\improper Indoors"
 	icon_state = "away"
