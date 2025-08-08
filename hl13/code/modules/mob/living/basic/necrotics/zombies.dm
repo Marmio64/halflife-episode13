@@ -1,6 +1,6 @@
 /mob/living/basic/halflife/zombie
 	name = "Zombie"
-	desc = "A shambling human, taken over by a parasitic head crab."
+	desc = "The shambling husk of something that was once human, now parasitized by a headcrab and twisted into a terrible monster."
 	icon = 'hl13/icons/mob/halflife.dmi'
 	icon_state = "zombie"
 	icon_living = "zombie"
@@ -82,12 +82,12 @@
 
 /mob/living/basic/halflife/zombie/zombine/elite
 	name = "Elite Zombine"
-	desc = "A shambling combine soldier, taken over by a parasitic head crab. Capable of running and is heavily armored. This one is adorned in heavy elite armor."
+	desc = "A shambling combine soldier, taken over by a parasitic head crab. Capable of running and is equipped with heavy elite combine armor."
 	icon_state = "elite"
 	icon_living = "elite"
 	icon_dead = "elite_dead"
-	maxHealth = 180
-	health = 180
+	maxHealth = 200
+	health = 200
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/zombine/proc/get_innate_abilities()
@@ -149,7 +149,7 @@
 
 /mob/living/basic/halflife/zombie/fungal
 	name = "Fungal Zombie"
-	desc = "A shambling human, taken over by a parasitic head crab. This one is covered in a spreading fungal infection."
+	desc = "A shambling humanoid figure hosting a colony of fungal growths upon its flesh."
 	icon_state = "fungalzombie"
 	icon_living = "fungalzombie"
 	icon_dead = "fungalzombie_dead"
@@ -169,7 +169,7 @@
 
 /mob/living/basic/halflife/zombie/fast
 	name = "Fast Zombie"
-	desc = "A terrifying skinless human, taken over by a parasitic head crab."
+	desc = "A terrifying skinless creature with visible humans that is puppeted by a headcrab."
 	icon_state = "fastzombie"
 	icon_living = "fastzombie"
 	icon_dead = "fastzombie_dead"
@@ -322,7 +322,7 @@
 
 /mob/living/basic/halflife/zombie/poison
 	name = "Poison Zombie"
-	desc = "A bloated, fleshy human taken over by a parasitic poison headcrab."
+	desc = "A bloated, foul shell of something once human. A colony of parasitic poison headcrabs have taken control of them."
 	icon_state = "poisonzombie"
 	icon_living = "poisonzombie"
 	icon_dead = "poisonzombie_dead"
@@ -394,7 +394,7 @@
 		return
 
 	var/turf/final_turf = get_closest_atom(/turf, open_turfs, owner)
-	P.throw_at(final_turf, range = 7, speed = 1, spin = FALSE, target)
+	P.throw_at(target = final_turf, range = 7, speed = 1, spin = FALSE)
 
 
 
