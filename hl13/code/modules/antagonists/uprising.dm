@@ -67,6 +67,9 @@
 	var/datum/action/cooldown/spell/uprising/comm/communications = new(owner)
 	communications.Grant(current)
 
+	var/datum/action/cooldown/spell/uprising/view_sociostability/view_soc = new(owner)
+	view_soc.Grant(current)
+
 	if(send_to_base)
 		owner.current.forceMove(pick(GLOB.nukeop_start))
 
@@ -258,3 +261,24 @@
 			to_chat(M, "[link] [my_message]")
 
 	user.log_talk(message, LOG_SAY, tag="uprising")
+
+/datum/action/cooldown/spell/uprising/view_sociostability
+	name = "View Sociostability"
+	desc = "Gives you a readout on what the current sociostability is."
+	button_icon_state = "view_soc"
+
+	cooldown_time = 3 SECONDS
+
+	invocation_type = INVOCATION_NONE
+	spell_requirements = SPELL_REQUIRES_MIND
+	antimagic_flags = 0
+	spell_max_level = 1
+
+/datum/action/cooldown/spell/uprising/view_sociostability/cast(mob/living/cast_on)
+	. = ..()
+
+	to_chat(cast_on, span_notice("The current sociostability is [((SSsociostability.sociostability / SOCIOSTABILITY_GREAT)*100)]%"))
+	if(SSsociostability.sociostability <= SOCIOSTABILITY_POOR)
+		to_chat(cast_on, span_green("Sociostability is low enough for the super destabilizer to be deployed."))
+	else
+		to_chat(cast_on, span_warning("Sociostability is not low enough for the super destabilizer to be deployed."))

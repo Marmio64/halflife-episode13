@@ -60,6 +60,7 @@
 /area/halflife/indoors/outlands)
 "ao" = (
 /obj/effect/spawner/random/halflife/loot,
+/obj/structure/closet/halflife,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/outlands)
 "ap" = (
@@ -274,10 +275,6 @@
 	pixel_y = 32
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/outlands)
-"cX" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/outlands)
 "dg" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/civilprotection,
@@ -1051,9 +1048,11 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/laborcamp/security)
 "kl" = (
-/obj/structure/bonfire/prelit,
-/obj/effect/mob_spawn/corpse/zombie,
-/turf/open/floor/plating/ground/sidewalk/inner,
+/obj/structure/railing/halflife/solo{
+	dir = 1
+	},
+/obj/structure/closet/halflife,
+/turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/outdoors/outlands_city)
 "kn" = (
 /obj/structure/table/halflife/metal,
@@ -2075,6 +2074,10 @@
 "uT" = (
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/outlands_city)
+"uU" = (
+/obj/structure/bonfire/prelit,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/outlands_city)
 "uV" = (
 /obj/structure/table/halflife/metal,
 /obj/item/multitool{
@@ -2163,8 +2166,9 @@
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/outlands_city)
 "vE" = (
-/turf/open/halflife/water/shallow,
-/area/halflife/outdoors/outlands_city)
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/outlands)
 "vI" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -3035,6 +3039,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/outlands)
+"EK" = (
+/obj/structure/chair/sofa/hl13bench,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/outlands_city)
 "EM" = (
 /obj/structure/chair/office/halflife/blue{
 	dir = 8
@@ -3675,8 +3683,7 @@
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/outlands)
 "Ln" = (
-/obj/structure/chair/sofa/hl13bench,
-/turf/open/floor/plating/ground/dirt,
+/turf/open/halflife/water/shallow,
 /area/halflife/outdoors/outlands_city)
 "Lq" = (
 /obj/item/paper{
@@ -4044,6 +4051,10 @@
 	dir = 6
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
+"OL" = (
+/obj/structure/closet/halflife,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/outlands)
 "OM" = (
 /obj/machinery/light/small/directional/south,
@@ -6757,7 +6768,7 @@ lT
 lT
 Vk
 sl
-cX
+vE
 sl
 sl
 Vk
@@ -29154,7 +29165,7 @@ mx
 sl
 sl
 sl
-sl
+OL
 Vk
 lT
 lT
@@ -33602,7 +33613,7 @@ Hn
 hX
 hX
 sl
-sl
+OL
 Vk
 Zo
 Xn
@@ -38097,7 +38108,7 @@ VZ
 rT
 jz
 Vk
-mx
+nH
 mx
 su
 Vk
@@ -39530,7 +39541,7 @@ Mr
 Mr
 Zw
 sZ
-vE
+Ln
 sZ
 sZ
 Mr
@@ -39671,8 +39682,8 @@ xL
 sZ
 qZ
 sZ
-vE
-vE
+Ln
+Ln
 xL
 sZ
 Mr
@@ -39813,8 +39824,8 @@ sZ
 sZ
 Zw
 sZ
-vE
-vE
+Ln
+Ln
 xL
 sZ
 Mr
@@ -39956,7 +39967,7 @@ xL
 sZ
 sZ
 xL
-vE
+Ln
 Zw
 sZ
 Mr
@@ -40172,7 +40183,7 @@ VZ
 tj
 BJ
 rT
-jz
+BR
 ZT
 bj
 Sx
@@ -40455,7 +40466,7 @@ jz
 jz
 jz
 jz
-kl
+uU
 jz
 JP
 JP
@@ -41223,7 +41234,7 @@ UK
 Jc
 Mr
 Mr
-rX
+kl
 oQ
 oQ
 oQ
@@ -43231,8 +43242,8 @@ Mr
 xL
 sZ
 sZ
-vE
-vE
+Ln
+Ln
 sZ
 sZ
 Mr
@@ -43370,12 +43381,12 @@ sZ
 sZ
 sZ
 Mr
-Ln
+EK
 sZ
-vE
-vE
-vE
-vE
+Ln
+Ln
+Ln
+Ln
 Mr
 Mr
 sZ
@@ -43514,10 +43525,10 @@ lf
 sZ
 sZ
 sZ
-vE
-vE
-vE
-vE
+Ln
+Ln
+Ln
+Ln
 Mr
 sZ
 sZ
@@ -43657,9 +43668,9 @@ sZ
 sZ
 sZ
 xL
-vE
+Ln
 Zw
-vE
+Ln
 sZ
 xL
 sZ

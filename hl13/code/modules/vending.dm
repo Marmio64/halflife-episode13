@@ -206,7 +206,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/ammo_box/magazine/mp7 = 2,
 		/obj/item/gun/ballistic/shotgun/spas12 = 1,
 		/obj/item/storage/box/lethalshot/halflife = 2,
-		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/grenade/syndieminibomb/bouncer = 3,
 		/obj/item/grenade/spawnergrenade/manhacks = 2,
 		/obj/item/gun/ballistic/automatic/pistol/usp = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 3,
