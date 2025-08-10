@@ -27,6 +27,7 @@
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie
 	initial_language_holder = /datum/language_holder/zombie
 	mobility_flags = MOBILITY_FLAGS_REST_CAPABLE_DEFAULT //allows playing dead
+	basic_mob_flags = FLAMMABLE_MOB
 	var/no_crab_state = "zombie_dead_nocrab"
 	var/crabless_possible = TRUE
 	var/headcrabspawn = /mob/living/basic/halflife/headcrab
@@ -169,7 +170,7 @@
 
 /mob/living/basic/halflife/zombie/fast
 	name = "Fast Zombie"
-	desc = "A terrifying skinless creature with visible humans that is puppeted by a headcrab."
+	desc = "A terrifying skinless creature with visible bones that is puppeted by a headcrab."
 	icon_state = "fastzombie"
 	icon_living = "fastzombie"
 	icon_dead = "fastzombie_dead"
@@ -182,10 +183,10 @@
 	melee_damage_upper = 6
 	sound_vary = FALSE
 	butcher_results = list(/obj/item/stack/sheet/sinew = 2, /obj/item/food/meat/slab/halflife/zombie = 1)
-	attack_sound = 'hl13/sound/creatures/fastzombieattack.ogg'
-	death_sound = 'hl13/sound/creatures/fastzombiedeath.ogg'
+	attack_sound = 'hl13/sound/creatures/fastzombie/fastzombieattack.ogg'
+	death_sound = 'hl13/sound/creatures/fastzombie/fastzombiedeath.ogg'
 	idle_sound_chance = 100
-	idle_sounds = list('hl13/sound/creatures/fastzombie_breath.ogg', 'hl13/sound/creatures/fastzombiesound1.ogg', 'hl13/sound/creatures/fastzombiesound2.ogg', 'hl13/sound/creatures/fastzombiesound3.ogg')
+	idle_sounds = list('hl13/sound/creatures/fastzombie/fastzombie_breath.ogg', 'hl13/sound/creatures/fastzombie/fastzombiesound1.ogg', 'hl13/sound/creatures/fastzombie/fastzombiesound2.ogg', 'hl13/sound/creatures/fastzombie/fastzombiesound3.ogg')
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/fastzombie
 	headcrabspawn = /mob/living/basic/halflife/headcrab/fast
 
@@ -213,9 +214,13 @@
 	var/times_to_attack = 2
 	///what sound to play as telegraph?
 	var/sound_cue = 'sound/items/weapons/thudswoosh.ogg'
+	///what sound to play on a succesful attack?
+	var/attack_sound = null
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/fast_zombie
-	sound_cue = 'hl13/sound/creatures/fastzombieleap.ogg'
+	cooldown_time = 5 SECONDS
+	sound_cue = 'hl13/sound/creatures/fastzombie/fastzombieleap.ogg'
+	attack_sound = 'hl13/sound/creatures/fastzombie/fz_frenzy1.ogg'
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/Activate(atom/target)
 	if(owner.CanReach(target))
@@ -228,7 +233,8 @@
 	return TRUE
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/proc/launch_towards_target(atom/target)
-	playsound(owner, sound_cue, 50, FALSE)
+	if(sound_cue)
+		playsound(owner, sound_cue, 50, FALSE)
 	var/turf/target_turf = get_turf(target)
 
 	if(!target_turf.is_blocked_turf())
@@ -254,6 +260,9 @@
 
 	for(var/i in 0 to (times_to_attack - 1))
 		addtimer(CALLBACK(src, PROC_REF(attack_target), target), i * attack_interval)
+
+	if(attack_sound)
+		playsound(owner, attack_sound, 50, FALSE)
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/proc/attack_target(atom/target)
 	if(!owner.CanReach(target) || owner.stat == DEAD)
