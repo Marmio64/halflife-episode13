@@ -7,9 +7,12 @@
 	telegraph_sound = 'hl13/sound/weather/acidrain/acidrain_telegraph.ogg'
 
 	weather_message = span_warning("Rain pours down around you.")
-	weather_overlay = "rain"
-	weather_color = "#69b6ff"
+	weather_color = "#829aaf"
 	overlay_plane = HIGHEST_EVER_PLANE + 1 //why does this work, it shouldn't work, this is stupid and i hate it, why is this the ONLY thing that works, why won't it just show up normally, it shows up normally on lavaland, but not on jungleland, i don't understand it doesn't make any sense, this is all wrong
+
+	telegraph_overlay = "rain_low"
+	weather_overlay = "rain_high"
+	end_overlay = "rain_low"
 
 	weather_duration_lower = 90 SECONDS
 	weather_duration_upper = 180 SECONDS
@@ -19,7 +22,7 @@
 	end_duration = 20 SECONDS
 	end_message = span_boldannounce("The downpour gradually slows to a light shower.")
 
-	area_type = /area
+	area_type = /area/halflife
 	protect_indoors = TRUE
 
 	probability = 100
