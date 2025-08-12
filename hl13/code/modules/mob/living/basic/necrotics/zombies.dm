@@ -74,7 +74,6 @@
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 3)
 	maxHealth = 140
 	health = 140
-	speed = 1.5
 	attack_sound = 'hl13/sound/creatures/zombineattack.ogg'
 	death_sound = 'hl13/sound/creatures/zombinedeath.ogg'
 	crabless_possible = FALSE
@@ -94,6 +93,7 @@
 /mob/living/basic/halflife/zombie/zombine/proc/get_innate_abilities()
 	var/static/list/innate_abilities = list(
 		/datum/action/cooldown/mob_cooldown/halflife/zombine_grenade = BB_HALFLIFE_GRENADE_ABILITY,
+		/datum/action/cooldown/mob_cooldown/halflife/jump/zombine = BB_HALFLIFE_JUMP_ABILITY,
 	)
 	return innate_abilities
 
@@ -101,14 +101,15 @@
 	. = ..()
 	grant_actions_by_list(get_innate_abilities())
 	AddComponent(/datum/component/ai_target_timer)
+	AddElement(/datum/element/footstep, FOOTSTEP_MOB_ZOMBINE)
 
 /datum/action/cooldown/mob_cooldown/halflife/zombine_grenade
 	name = "Arm Grenade"
 	desc = "Take out a grenade arm it, briefly stunning yourself afterwards. The explosion will be fatal to you, and heavily injure all nearby."
-	cooldown_time = 90 SECONDS // you should be dead after using it, but just in case
+	cooldown_time = 10 SECONDS
 	shared_cooldown = NONE
 	///telegraph time before activating
-	var/wind_up_time = 0.75 SECONDS
+	var/wind_up_time = 0.65 SECONDS
 	var/detonation_time = 3.5 SECONDS
 	click_to_activate = FALSE
 	///what sound to play as telegraph?
@@ -133,6 +134,15 @@
 	if(isliving(target))
 		var/mob/living/M = target
 		M.gib()
+
+/datum/action/cooldown/mob_cooldown/halflife/jump/zombine
+	name = "Charge"
+	desc = "Charge towards the enemy!"
+	shared_cooldown = MOB_SHARED_COOLDOWN_1
+	times_to_attack = 1
+	jump_speed = 0.6
+	cooldown_time = 9 SECONDS
+	sound_cue = 'hl13/sound/creatures/zombine_charge.ogg'
 
 /mob/living/basic/halflife/zombie/zombie_grunt
 	name = "Zombified Grunt"
@@ -216,6 +226,7 @@
 	var/sound_cue = 'sound/items/weapons/thudswoosh.ogg'
 	///what sound to play on a succesful attack?
 	var/attack_sound = null
+	var/jump_speed = 1
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/fast_zombie
 	cooldown_time = 5 SECONDS
@@ -238,7 +249,7 @@
 	var/turf/target_turf = get_turf(target)
 
 	if(!target_turf.is_blocked_turf())
-		owner.throw_at(target = target_turf, range = 7, speed = 1, spin = FALSE, callback = CALLBACK(src, PROC_REF(attack_combo), target))
+		owner.throw_at(target = target_turf, range = 7, speed = jump_speed, spin = FALSE, callback = CALLBACK(src, PROC_REF(attack_combo), target))
 		return
 
 	var/list/open_turfs = list()
@@ -252,7 +263,7 @@
 		return
 
 	var/turf/final_turf = get_closest_atom(/turf, open_turfs, owner)
-	owner.throw_at(target = final_turf, range = 7, speed = 1, spin = FALSE, callback = CALLBACK(src, PROC_REF(attack_combo), target))
+	owner.throw_at(target = final_turf, range = 7, speed = jump_speed, spin = FALSE, callback = CALLBACK(src, PROC_REF(attack_combo), target))
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/proc/attack_combo(atom/target)
 	if(!owner.CanReach(target))
@@ -424,6 +435,9 @@
 		"O-Over...watch... r-r-reserve...",
 	)
 
+/datum/ai_planning_subtree/targeted_mob_ability/zombine_jump
+	ability_key = BB_HALFLIFE_JUMP_ABILITY
+
 /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie
 	blackboard = list(
 		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic,
@@ -455,6 +469,7 @@
 	idle_behavior = /datum/idle_behavior/idle_random_walk
 	planning_subtrees = list(
 		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/targeted_mob_ability/zombine_jump,
 		/datum/ai_planning_subtree/use_mob_ability/zombine_grenade,
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
