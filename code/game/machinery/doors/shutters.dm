@@ -5,9 +5,9 @@
 	icon = 'icons/obj/doors/shutters.dmi'
 	layer = SHUTTER_LAYER
 	closingLayer = SHUTTER_LAYER
-	damage_deflection = 20
+	damage_deflection = 23 //hl13 edit
 	armor_type = /datum/armor/poddoor_shutters
-	max_integrity = 250 //hl13 edit
+	max_integrity = 750 //hl13 edit
 	recipe_type = /datum/crafting_recipe/shutters
 	animation_sound = 'sound/machines/shutter.ogg'
 

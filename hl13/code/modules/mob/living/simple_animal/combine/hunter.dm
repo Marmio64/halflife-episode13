@@ -1,7 +1,7 @@
 /mob/living/simple_animal/hostile/halflife/hunter
 	name = "Hunter"
 	desc = "A large tripod synth. Armored, and deadly."
-	icon = 'hl13/icons/mob/halflife_large.dmi'
+	icon = 'hl13/icons/mob/halflife_tall.dmi'
 	icon_state = "hunter"
 	icon_living = "hunter"
 	icon_dead = "hunter_dead"

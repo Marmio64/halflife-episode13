@@ -1,7 +1,7 @@
 /mob/living/basic/halflife/zombie/gonome
 	name = "Gestating Fungal Gonome"
 	desc = "A rapidly developing abomination of flesh and fungus. New pieces grow on it in real time. It must be stopped before it finishes this process."
-	icon = 'hl13/icons/mob/halflife_large.dmi'
+	icon = 'hl13/icons/mob/halflife_tall.dmi'
 	icon_state = "weakgonome"
 	icon_living = "weakgonome"
 	icon_dead = "gonome_dead"

@@ -183,9 +183,9 @@
 	drop_sound = null
 	attack_verb_continuous = list("clonks", "smacks", "clocks", "nails", "bludgeons", "whacks", "bonks", "bricks")
 	attack_verb_simple = list("clonk", "smack", "clock", "nail", "bludgeon", "whack", "bonk", "brick")
-	force = 15
+	force = 14
 	armour_penetration = 10
-	throwforce = 20 //brick
+	throwforce = 19 //brick
 	throw_speed = 1.5
 	throw_range = 6
 	wound_bonus = 5

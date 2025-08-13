@@ -9,7 +9,7 @@
 	explosion_block = 3
 	heat_proof = TRUE
 	safe = FALSE
-	max_integrity = 600
+	max_integrity = 900 //hl13 edit
 	armor_type = /datum/armor/door_poddoor
 	resistance_flags = FIRE_PROOF
 	damage_deflection = 70

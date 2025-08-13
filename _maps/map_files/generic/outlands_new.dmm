@@ -857,6 +857,7 @@
 /area/halflife/indoors/outlands)
 "iC" = (
 /obj/machinery/combine_walllight/directional/east,
+/obj/item/stack/sheet/scrap_metal,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/outlands)
 "iD" = (
@@ -937,6 +938,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start/prisoner,
+/obj/machinery/light/small/broken/directional/west,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/outlands)
 "jq" = (
@@ -2169,6 +2171,13 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/outlands)
+"vF" = (
+/obj/machinery/button/door{
+	id = "outlands_refugee";
+	pixel_y = 34
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "vI" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -2257,6 +2266,10 @@
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/outlands_city)
+"wp" = (
+/obj/machinery/light/small/red/directional/south,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "wq" = (
 /obj/effect/spawner/random/halflife/loot/scrap,
 /turf/open/floor/plating/ground/dirt,
@@ -2580,6 +2593,10 @@
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
+"zP" = (
+/obj/item/stack/sheet/scrap_metal,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/outlands)
 "zT" = (
 /obj/structure/kitchenspike,
 /turf/open/floor/plating/ground/rockunder,
@@ -2838,6 +2855,15 @@
 /obj/structure/halflife/fence/vertical/wire/west/barb,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/outlands_city)
+"CA" = (
+/obj/machinery/light/small/broken/directional/east,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/outlands)
+"CC" = (
+/obj/structure/table/halflife/no_smooth/cable_reel,
+/obj/structure/halflife/pipes/horizontal,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "CF" = (
 /obj/structure/halflife/pallet,
 /turf/open/floor/plating/ground/dirt,
@@ -3609,6 +3635,10 @@
 /obj/structure/halflife/pipes/vent,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/laborcamp)
+"Kt" = (
+/obj/structure/halflife/headcrab_cannister,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/outlands)
 "Ku" = (
 /obj/structure/window/fulltile/halflife/nosmooth/brick,
 /obj/structure/barricade/wooden/crude,
@@ -3775,6 +3805,12 @@
 "Md" = (
 /obj/machinery/door/unpowered/halflife/wood,
 /turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/outlands)
+"Mh" = (
+/obj/structure/table/halflife/no_smooth/cable_reel,
+/obj/structure/halflife/pipes/horizontal,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
 "Mj" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/nodirectional{
@@ -4082,6 +4118,10 @@
 "OX" = (
 /obj/machinery/light/small/broken/directional/west,
 /turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/outlands)
+"Pc" = (
+/obj/structure/halflife/pipes/horizontal/brown,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
 "Pg" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/nodirectional{
@@ -4710,6 +4750,12 @@
 /obj/structure/halflife/trash/garbage/dumpster/crate,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/outlands)
+"VI" = (
+/obj/machinery/door/poddoor/shutters{
+	id = "outlands_refugee"
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "VK" = (
 /obj/item/storage/pill_bottle,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -4952,6 +4998,10 @@
 	dir = 1
 	},
 /area/halflife/outdoors/outlands_city)
+"Yg" = (
+/obj/structure/halflife/pipes/horizontal/box,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "Yh" = (
 /obj/structure/halflife/pipes/vent,
 /obj/structure/table/halflife/metal/grate,
@@ -6746,7 +6796,7 @@ Vk
 VD
 sl
 NV
-sl
+CA
 sl
 sl
 sl
@@ -6886,7 +6936,7 @@ MP
 MP
 Vk
 Vk
-Vk
+qb
 Vk
 Vk
 Vk
@@ -7026,9 +7076,9 @@ MP
 MP
 MP
 MP
-MP
-MP
-MP
+Vk
+fJ
+mx
 Vk
 oe
 mx
@@ -7168,9 +7218,9 @@ MP
 MP
 MP
 MP
-MP
-MP
-MP
+Vk
+Pc
+mx
 Vk
 WN
 mx
@@ -7310,9 +7360,9 @@ MP
 MP
 MP
 MP
-MP
-MP
-MP
+Vk
+CC
+wp
 Vk
 mx
 DS
@@ -7452,9 +7502,9 @@ MP
 MP
 MP
 MP
-MP
-MP
-MP
+Vk
+CC
+mx
 Vk
 Vk
 Vk
@@ -7594,10 +7644,10 @@ MP
 MP
 MP
 MP
-MP
-MP
-MP
-MP
+Vk
+Yg
+mx
+Vk
 MP
 MP
 MP
@@ -7736,10 +7786,10 @@ MP
 MP
 MP
 MP
-MP
-MP
-MP
-MP
+Vk
+Xs
+mx
+Vk
 MP
 MP
 MP
@@ -7878,10 +7928,10 @@ MP
 MP
 MP
 MP
-MP
-MP
-MP
-MP
+Vk
+Mh
+mx
+Vk
 MP
 MP
 MP
@@ -8020,10 +8070,10 @@ MP
 MP
 MP
 MP
-MP
-MP
-MP
-MP
+Vk
+Jz
+mx
+Vk
 MP
 MP
 MP
@@ -8162,10 +8212,10 @@ MP
 MP
 MP
 MP
-MP
-MP
-MP
-MP
+Vk
+Rw
+mx
+Vk
 MP
 MP
 MP
@@ -8304,6 +8354,10 @@ MP
 MP
 MP
 MP
+Vk
+Jz
+wp
+Vk
 MP
 MP
 MP
@@ -8314,13 +8368,9 @@ MP
 MP
 MP
 MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
+Vk
+Vk
+Vk
 Vk
 lT
 lT
@@ -8446,24 +8496,24 @@ MP
 MP
 MP
 MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
 Vk
+Cc
+mx
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+FU
+mx
+en
 lT
 lT
 ul
@@ -8588,24 +8638,24 @@ MP
 MP
 MP
 MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
 Vk
+vF
+mx
+VI
+mx
+mx
+DS
+mx
+mx
+mx
+mx
+mx
+mx
+mx
+uz
+mx
+mx
+en
 lT
 lT
 ul
@@ -8730,24 +8780,24 @@ MP
 MP
 MP
 MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
-MP
 Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Tq
+DS
+mx
 lT
 lT
 ul
@@ -8886,9 +8936,9 @@ MP
 MP
 MP
 MP
-MP
-MP
-MP
+Vk
+Vk
+Vk
 Vk
 lT
 lT
@@ -34898,15 +34948,15 @@ RP
 RP
 RP
 RP
-jz
+NL
+wS
+iW
+VZ
+VZ
 rT
-VZ
-VZ
-VZ
-rT
 jz
-jz
-jz
+NL
+NL
 Vk
 Vk
 Vk
@@ -37158,7 +37208,7 @@ HO
 BH
 jz
 Mr
-Mr
+BV
 sZ
 sZ
 Ni
@@ -37302,7 +37352,7 @@ jz
 xL
 Mr
 Mr
-sZ
+Zw
 jz
 jz
 jz
@@ -37443,7 +37493,7 @@ BH
 jz
 sZ
 Mr
-Mr
+BV
 Mr
 RP
 RP
@@ -37726,7 +37776,7 @@ HO
 BH
 jz
 Mr
-Mr
+BV
 sZ
 sZ
 RP
@@ -37870,7 +37920,7 @@ jz
 xL
 Mr
 sZ
-Mr
+BV
 RP
 eD
 eD
@@ -38027,8 +38077,8 @@ rT
 VZ
 VZ
 VZ
-rT
-jz
+Pw
+Va
 TL
 TL
 TL
@@ -38169,14 +38219,14 @@ rT
 VZ
 VZ
 VZ
-rT
+Pw
 jz
 TL
 ei
 ei
 iC
 ei
-ei
+Kt
 ei
 TL
 mx
@@ -38296,7 +38346,7 @@ jz
 sZ
 Mr
 qZ
-Mr
+BV
 RP
 hh
 hh
@@ -38311,7 +38361,7 @@ rT
 VZ
 VZ
 VZ
-rT
+Pw
 jz
 dg
 ei
@@ -38319,7 +38369,7 @@ ei
 ei
 ei
 ei
-ei
+zP
 Zr
 mx
 mx
@@ -38453,7 +38503,7 @@ iG
 VZ
 VZ
 VZ
-rT
+Pw
 jz
 TL
 CV
@@ -38595,8 +38645,8 @@ rT
 VZ
 VZ
 VZ
-rT
-jz
+Pw
+Va
 TL
 TL
 TL
@@ -38720,7 +38770,7 @@ HO
 BH
 jz
 sZ
-Mr
+BV
 sZ
 sZ
 RP
