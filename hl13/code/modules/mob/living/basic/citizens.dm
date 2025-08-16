@@ -43,6 +43,7 @@
 	AddElement(/datum/element/ai_flee_while_injured)
 
 	AddElement(/datum/element/ai_retaliate)
+	AddElement(/datum/element/ai_swap_combat_mode, BB_BASIC_MOB_CURRENT_TARGET, battle_start_barks = list("HEEELP!!",), battle_end_barks = list("I think I'm hurt...",))
 	if(LAZYLEN(loot))
 		loot = string_list(loot)
 		AddElement(/datum/element/death_drops, loot)

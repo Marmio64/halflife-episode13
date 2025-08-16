@@ -1,8 +1,8 @@
 /datum/round_event_control/fieldfailure
 	name = "Force Field Failures"
 	typepath = /datum/round_event/fieldfailure
-	weight = 15
-	max_occurrences = 4
+	weight = 20
+	max_occurrences = 5
 	min_players = 10
 	category = EVENT_CATEGORY_JANITORIAL
 	description = "All forcefields experience a chance to malfunction."
@@ -43,7 +43,7 @@
 		if(!field.loc)
 			CRASH("FORCE FIELD FAILURE: [field] has no loc somehow?")
 
-		if(prob(10 + SSsociostability.getloss() / 50))
+		if(prob(5 + SSsociostability.getloss() / 50))
 			field.malfunction()
 
 		CHECK_TICK

@@ -16,6 +16,13 @@ GLOBAL_VAR_INIT(super_destabilizer_deployed, FALSE)
 	var/detonation_limit = 250
 	var/blowing_up = FALSE
 	var/show_timer = FALSE
+	///looping sound datum for engine noise
+	var/datum/looping_sound/enginesound/soundloop
+
+/datum/looping_sound/enginesound
+	mid_sounds = list('hl13/sound/machines/engine1.ogg' = 1)
+	mid_length = 2 SECONDS
+	volume = 15
 
 /obj/machinery/destabilizer/process(delta_time)
 	if(prob(destabilization_chance) && (cumulative_destabilization < detonation_limit))// each destabilizer can only eat 25% of sociostability
@@ -43,6 +50,7 @@ GLOBAL_VAR_INIT(super_destabilizer_deployed, FALSE)
 /obj/machinery/destabilizer/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/gps, "Disruptive Signal")
+	soundloop = new(src, FALSE)
 
 /obj/machinery/destabilizer/proc/blow_up()
 	explosion(src, heavy_impact_range = 1, light_impact_range = 3, flash_range = 2)
@@ -61,7 +69,7 @@ GLOBAL_VAR_INIT(super_destabilizer_deployed, FALSE)
 	name = "super destabilizer"
 	desc = "A massive abomination of tampered combine machinery that is emanating such a powerful signal, it even hurts your head to be around it. If it isn't broken quick, it might shut down all the combine systems in the entire district, and maybe even the whole city!"
 	icon_state = "superdestabilizer_off"
-	max_integrity = 350
+	max_integrity = 375
 	show_timer = TRUE
 	processing_flags = START_PROCESSING_MANUALLY
 	anchored = FALSE
@@ -79,7 +87,7 @@ GLOBAL_VAR_INIT(super_destabilizer_deployed, FALSE)
 		SSticker.force_ending = FORCE_END_ROUND
 		GLOB.station_was_cutoff = TRUE
 		return PROCESS_KILL
-	if((detonation_limit < (cumulative_destabilization/2)) && !mid_alert)
+	if((detonation_limit/2 < (cumulative_destabilization)) && !mid_alert)
 		mid_alert = TRUE
 		priority_announce("Alert, Alert. Singularity approaching. Overwatch system damage detected. Destabilization halfway complete.", "Overwatch Alert")
 
@@ -101,6 +109,7 @@ GLOBAL_VAR_INIT(super_destabilizer_deployed, FALSE)
 		turn_on()
 
 /obj/machinery/destabilizer/super/proc/turn_on(mapload)
+	soundloop.start()
 	on = TRUE
 	anchored = TRUE
 	icon_state = "superdestabilizer"

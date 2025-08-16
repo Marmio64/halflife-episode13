@@ -383,6 +383,11 @@
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/outlands)
+"ee" = (
+/mob/living/basic/citizen/brick,
+/obj/structure/bed/halflife/mattress/old,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "eg" = (
 /obj/docking_port/stationary{
 	dwidth = 11;
@@ -470,6 +475,10 @@
 /obj/effect/spawner/random/halflife/loot/uncommon,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
+"fa" = (
+/obj/effect/spawner/random/trash/graffiti/halflife/rebelspray,
+/turf/closed/wall/halflife/concrete/alt,
+/area/halflife/indoors/outlands)
 "fd" = (
 /obj/structure/mirror/halflife{
 	pixel_y = 32
@@ -513,6 +522,12 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"fq" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/effect/spawner/random/halflife/loot,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "fr" = (
 /obj/structure/sink/halflife,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -801,6 +816,11 @@
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/outlands)
+"hY" = (
+/obj/machinery/light/small/directional/west,
+/obj/structure/halflife/trash/food/misc,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "ib" = (
 /obj/structure/halflife/fence/vertical/wire/west/barb,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -933,6 +953,11 @@
 "jj" = (
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/outlands)
+"jk" = (
+/obj/structure/closet/halflife,
+/obj/effect/spawner/random/halflife/loot/uncommon,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/outlands)
 "jn" = (
 /obj/structure/chair/halflife/metal/folding{
 	dir = 4
@@ -972,6 +997,10 @@
 "jz" = (
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/outlands_city)
+"jB" = (
+/obj/effect/spawner/random/halflife/loot/consumables,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "jC" = (
 /turf/closed/wall/halflife/sewer,
 /area/halflife/indoors/laborcamp)
@@ -1172,6 +1201,10 @@
 "lk" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/outlands)
+"lm" = (
+/obj/effect/spawner/random/halflife/loot/trash,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
 "lr" = (
 /turf/cordon,
@@ -2775,10 +2808,8 @@
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/outlands_city)
 "BK" = (
-/obj/machinery/door/unpowered/halflife/metal{
-	keylock = 1;
-	locked = 1
-	},
+/obj/structure/table/halflife/metal/grate,
+/obj/structure/halflife/trash/food/glass,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
 "BM" = (
@@ -3365,6 +3396,10 @@
 /obj/structure/flora/xen/tinyshrooms,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
+"Hw" = (
+/obj/structure/halflife/rug/rubber,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/outlands)
 "Hx" = (
 /obj/structure/chair/sofa/hl13bench,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -3712,6 +3747,13 @@
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/outlands)
+"Li" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	keylock = 1;
+	locked = 1
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/outlands)
 "Ln" = (
 /turf/open/halflife/water/shallow,
 /area/halflife/outdoors/outlands_city)
@@ -3749,6 +3791,17 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"LG" = (
+/obj/structure/table/halflife/no_smooth/large/metal/desk/alt{
+	dir = 1
+	},
+/obj/structure/halflife/trash/cardboard{
+	dir = 8;
+	pixel_y = 7;
+	pixel_x = 5
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "LH" = (
 /obj/structure/halflife/road_barrier,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -3962,8 +4015,10 @@
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/outlands)
 "NG" = (
-/turf/cordon,
-/area/halflife/indoors/sewer/outlandscave)
+/obj/structure/table/halflife/metal/grate,
+/obj/effect/spawner/random/halflife/loot/consumables,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "NJ" = (
 /obj/structure/sign/poster/halflife/combine/two{
 	pixel_y = 32
@@ -4244,6 +4299,11 @@
 /obj/item/stack/spacecash/c1,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/laborcamp/security)
+"Qx" = (
+/obj/effect/mob_spawn/corpse/zombie,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/outlands_city)
 "Qy" = (
 /obj/machinery/light/small/red/directional/east,
 /obj/item/reagent_containers/cup/soup_pot,
@@ -4934,6 +4994,10 @@
 /obj/effect/spawner/random/halflife/loot/rare,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/outlands)
+"Xu" = (
+/obj/effect/spawner/random/halflife/loot/trash,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/outlands)
 "Xz" = (
 /obj/structure/table/halflife/no_smooth/metal,
 /obj/item/circular_saw,
@@ -5146,6 +5210,11 @@
 "ZD" = (
 /obj/item/stack/sheet/halflife/brick,
 /turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/outlands_city)
+"ZG" = (
+/obj/effect/mob_spawn/corpse/zombie,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/outlands_city)
 "ZP" = (
 /obj/machinery/conveyor{
@@ -25142,28 +25211,28 @@ QA
 QA
 QA
 QA
-lr
-lr
-NG
-NG
-NG
-NG
-NG
-NG
-NG
-NG
-NG
-NG
-NG
-NG
-NG
-NG
-NG
-NG
-NG
-NG
-NG
-NG
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
+Ib
 Ib
 Ib
 Ib
@@ -29215,7 +29284,7 @@ mx
 sl
 sl
 sl
-OL
+jk
 Vk
 lT
 lT
@@ -29358,7 +29427,7 @@ lT
 lT
 mx
 mx
-BK
+uz
 mx
 lT
 lT
@@ -35066,7 +35135,7 @@ ix
 mx
 Vk
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -35208,7 +35277,7 @@ NQ
 mx
 Vk
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -35350,7 +35419,7 @@ ix
 mx
 Vk
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -35492,7 +35561,7 @@ mx
 uq
 Vk
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -35634,7 +35703,7 @@ ix
 mx
 Vk
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -35776,7 +35845,7 @@ NQ
 mx
 Vk
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -35918,7 +35987,7 @@ ix
 mx
 Vk
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -36060,7 +36129,7 @@ Vk
 Vk
 Vk
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -36202,7 +36271,7 @@ Vk
 Vk
 Vk
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -36344,7 +36413,7 @@ OK
 Vk
 Vk
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -36486,7 +36555,7 @@ mx
 mx
 lE
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -36628,7 +36697,7 @@ Vk
 UY
 YM
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -36670,8 +36739,8 @@ Vk
 sl
 vI
 Vk
-Vk
-Vk
+fq
+NG
 Vk
 Vk
 Vk
@@ -36770,7 +36839,7 @@ Vk
 Vk
 UY
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -36809,11 +36878,11 @@ lE
 mx
 mx
 qO
+Hw
 sl
-sl
 Vk
-Vk
-Vk
+WT
+mx
 Vk
 Vk
 Vk
@@ -36912,7 +36981,7 @@ Vk
 UY
 mx
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -36954,8 +37023,8 @@ mx
 Qc
 sl
 Vk
-Vk
-Vk
+tC
+mx
 Vk
 Vk
 Vk
@@ -37054,7 +37123,7 @@ mx
 mx
 UB
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -37097,7 +37166,7 @@ Vk
 zA
 Vk
 Vk
-Vk
+qb
 Vk
 Vk
 Vk
@@ -37196,7 +37265,7 @@ Sn
 mx
 mx
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -37238,11 +37307,11 @@ cN
 sl
 sl
 Vk
-Vk
-Vk
-Vk
-Vk
-Vk
+zC
+mx
+hY
+jB
+ee
 Vk
 Vk
 Vk
@@ -37338,7 +37407,7 @@ Vk
 Vk
 eR
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -37379,12 +37448,12 @@ sl
 sl
 sl
 sl
-Vk
-Vk
-Vk
-Vk
-Vk
-Vk
+Li
+sl
+Xu
+sl
+sl
+LG
 Vk
 Vk
 Vk
@@ -37480,7 +37549,7 @@ mx
 Vk
 Vk
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -37522,11 +37591,11 @@ sl
 Wi
 sl
 Vk
-Vk
-Vk
-Vk
-Vk
-Vk
+BK
+mx
+lm
+BS
+mx
 Vk
 Vk
 Vk
@@ -37622,7 +37691,7 @@ Vk
 Vk
 Vk
 Vk
-jz
+Jw
 jz
 BH
 HO
@@ -37645,7 +37714,7 @@ NM
 eD
 eD
 eD
-RP
+fa
 jz
 rT
 VZ
@@ -37764,7 +37833,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -37906,7 +37975,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -38048,7 +38117,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -38190,7 +38259,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -38332,7 +38401,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -38474,7 +38543,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -38616,7 +38685,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -38758,7 +38827,7 @@ Zw
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -38900,7 +38969,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -39042,7 +39111,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -39184,7 +39253,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -39326,7 +39395,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -39468,7 +39537,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -39610,7 +39679,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -39752,7 +39821,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -39894,7 +39963,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -40036,7 +40105,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -40178,7 +40247,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -40320,7 +40389,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -40462,7 +40531,7 @@ Zw
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -40604,7 +40673,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -40746,7 +40815,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -40888,7 +40957,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -41030,7 +41099,7 @@ Vk
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -41172,7 +41241,7 @@ Vk
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -41314,7 +41383,7 @@ Vk
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -41341,7 +41410,7 @@ Ta
 jz
 rT
 VZ
-VZ
+qP
 VZ
 rT
 jz
@@ -41456,7 +41525,7 @@ Vk
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -41480,7 +41549,7 @@ HO
 HO
 HO
 oZ
-BR
+Qx
 rT
 VZ
 VZ
@@ -41598,7 +41667,7 @@ Vk
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -41740,7 +41809,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -41769,7 +41838,7 @@ rT
 VZ
 VZ
 VZ
-Tv
+ZG
 jz
 jy
 HO
@@ -42021,12 +42090,12 @@ Mr
 Mr
 sZ
 Mr
-jz
-jz
-jz
-jz
-jz
-jz
+rT
+rT
+rT
+rT
+rT
+rT
 Jw
 Jw
 Jw
@@ -42163,12 +42232,12 @@ Mr
 Mr
 Mr
 Mr
-jz
-jz
-jz
-jz
-jz
-jz
+rT
+rT
+rT
+rT
+rT
+rT
 Jw
 Jw
 Jw
@@ -42177,15 +42246,15 @@ Jw
 LH
 jz
 jz
-Vk
-Vk
-Vk
-Vk
-Vk
-Vk
-Vk
-Vk
-Vk
+jz
+jz
+jz
+jz
+jz
+jz
+jz
+jz
+mu
 kJ
 jz
 jz
@@ -42450,7 +42519,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -42592,7 +42661,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -42734,7 +42803,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -42876,7 +42945,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -43018,7 +43087,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -43160,7 +43229,7 @@ Zw
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -43302,7 +43371,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -43444,7 +43513,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -43586,7 +43655,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -43728,7 +43797,7 @@ Zw
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -43870,7 +43939,7 @@ Zw
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -44012,7 +44081,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -44154,7 +44223,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -44296,7 +44365,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -44438,7 +44507,7 @@ Zw
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO
@@ -44580,7 +44649,7 @@ sZ
 Ly
 Ly
 Ly
-jz
+Jw
 jz
 BH
 HO

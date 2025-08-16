@@ -227,6 +227,7 @@ GLOBAL_LIST_INIT(hlsewers_ambience,list(
 	'hl13/sound/ambience/probablynotaproblem.ogg',
 	'hl13/sound/ambience/vlvx_song3.ogg',
 	'hl13/sound/ambience/vlvx_song20.ogg',
+	'hl13/sound/ambience/hl1_song5.ogg',
 	'hl13/sound/ambience/hl2_song2.ogg'))
 
 
