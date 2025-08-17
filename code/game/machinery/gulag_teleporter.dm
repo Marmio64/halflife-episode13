@@ -20,9 +20,9 @@ The console is located at computer/gulag_teleporter.dm
 	var/locked = FALSE
 	var/message_cooldown
 	var/breakout_time = 600
-	var/jumpsuit_type = /obj/item/clothing/under/rank/prisoner
-	var/jumpskirt_type = /obj/item/clothing/under/rank/prisoner/skirt
-	var/shoes_type = /obj/item/clothing/shoes/sneakers/orange
+	var/jumpsuit_type = /obj/item/clothing/under/citizen
+	var/jumpskirt_type = /obj/item/clothing/under/citizen
+	var/shoes_type = /obj/item/clothing/shoes/boots
 	var/emergency_plasglove_type = /obj/item/clothing/gloves/color/plasmaman
 	var/obj/machinery/gulag_item_reclaimer/linked_reclaimer
 	var/static/list/telegulag_required_items = typecacheof(list(
