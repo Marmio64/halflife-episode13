@@ -36,15 +36,13 @@
 
 	id = /obj/item/storage/wallet
 	uniform = /obj/item/clothing/under/citizen/refugee
+	r_pocket = /obj/item/flashlight
 
 /datum/outfit/job/refugee/fixeditems
 	name = "Outlands Refugee with items pouch"
 	jobtype = /datum/job/prisoner
 
 	uniform = /obj/item/clothing/under/citizen/refugee
-
-	r_pocket = /obj/item/flashlight
-
 	belt = /obj/item/storage/belt/pouch/refugee
 
 /datum/outfit/job/refugee/randomitems
@@ -53,7 +51,6 @@
 
 	uniform = /obj/item/clothing/under/citizen/refugee
 
-	r_pocket = /obj/item/flashlight
 	var/list/rhand_items = list(
 		/obj/item/storage/belt/pouch,
 		/obj/item/reagent_containers/pill/patch/medkit,

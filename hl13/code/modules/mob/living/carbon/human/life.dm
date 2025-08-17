@@ -86,3 +86,19 @@
 		temporary_pain = 150
 	else if(temporary_pain < 0)
 		temporary_pain = 0
+
+//Combat deployment things
+
+/client/var/deployment_faction = null
+
+GLOBAL_LIST_EMPTY(deployment_combine_players)
+GLOBAL_LIST_EMPTY(deployment_rebel_players)
+
+/mob/living/carbon/human/proc/setdeploymentfaction(faction)
+	if(client)
+		client.deployment_faction = faction
+		switch(faction)
+			if(COMBINE_DEPLOYMENT_FACTION)
+				GLOB.deployment_combine_players |= client
+			if(REBEL_DEPLOYMENT_FACTION)
+				GLOB.deployment_rebel_players |= client

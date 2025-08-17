@@ -151,6 +151,11 @@
 	/// Additional pertinent information for playing the role you picked
 	var/gameplay_help
 
+	/// Is this a TDM Combat deployment only job?
+	var/combat_deployment_job = FALSE
+
+	var/combat_deployment_faction = null
+
 	//hl13 edit end
 
 /datum/job/New()
@@ -191,8 +196,13 @@
 		for(var/i in roundstart_experience)
 			spawned_human.mind.adjust_experience(i, roundstart_experience[i], TRUE)
 
+	//hl13 edit start
 	if(cmode_music)
 		spawned.cmode_music = cmode_music
+
+	if(combat_deployment_job)
+		spawned_human.setdeploymentfaction(combat_deployment_faction)
+	//hl13 edit end
 
 /// Return the outfit to use
 /datum/job/proc/get_outfit(consistent)

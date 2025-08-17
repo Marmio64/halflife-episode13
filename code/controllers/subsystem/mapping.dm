@@ -444,10 +444,8 @@ Used by the AI doomsday and the self-destruct nuke.
 
 #ifndef LOWMEMORYMODE
 
-	LoadGroup(FailedZs, "Outlands", "map_files/generic", "outlands_new.dmm", default_traits = ZTRAITS_CENTCOM)
-
-	if(current_map.minetype == "lavaland")
-		LoadGroup(FailedZs, "Lavaland", "map_files/Mining", "Lavaland.dmm", default_traits = ZTRAITS_LAVALAND)
+	if(current_map.minetype == "outlands")
+		LoadGroup(FailedZs, "Outlands", "map_files/generic", "outlands_new.dmm", default_traits = ZTRAITS_CENTCOM)
 	else if (!isnull(current_map.minetype) && current_map.minetype != "none")
 		INIT_ANNOUNCE("WARNING: An unknown minetype '[current_map.minetype]' was set! This is being ignored! Update the maploader code!")
 #endif

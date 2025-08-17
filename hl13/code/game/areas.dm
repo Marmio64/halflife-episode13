@@ -100,6 +100,14 @@
 
 	daylight_multiplier = 0.15
 
+/area/halflife/outdoors/deployment_city
+	name = "\improper City 13"
+	ambience_index = AMBIENCE_HLDEATHMATCH
+	min_ambience_cooldown = 5 SECONDS
+	max_ambience_cooldown = 10 SECONDS
+	ambient_buzz = 'hl13/sound/ambience/deathmatch/deathmatchbuzz.ogg'
+	ambient_buzz_vol = 20
+
 /area/halflife/indoors
 	name = "\improper Indoors"
 	icon_state = "away"

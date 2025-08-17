@@ -8,6 +8,8 @@
 #define JOB_UNAVAILABLE_ANTAG_INCOMPAT 6
 /// Checks for character age.
 #define JOB_UNAVAILABLE_AGE 7
+#define JOB_UNAVAILABLE_WRONGTEAM 8 //hl13 edit
+#define JOB_UNAVAILABLE_TEAMFULL 9 //hl13 edit
 
 /// Used when the `get_job_unavailable_error_message` proc can't make sense of a given code.
 #define GENERIC_JOB_UNAVAILABLE_ERROR "Error: Unknown job availability."
@@ -47,6 +49,9 @@
 //No department
 #define JOB_ASSISTANT "Citizen"
 #define JOB_PRISONER "Refugee"
+
+#define JOB_DEPLOYMENT_REFUGEE "Refugee Rebel"
+#define JOB_DEPLOYMENT_METROCOP "Civil Protection"
 //Command
 #define JOB_CAPTAIN "District Administrator"
 #define JOB_HEAD_OF_PERSONNEL "Labor Lead"

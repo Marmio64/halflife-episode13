@@ -85,16 +85,17 @@ SUBSYSTEM_DEF(daylight)
 				if(factory_containers_filled >= factory_container_goal)
 					vendor.cashprize += factory_container_goal
 
-			priority_announce(message, "Curfew Notice.", sender_override = "District Automated Scheduler")
+			if(SSmapping.current_map.minetype != "combat_deployment")
+				priority_announce(message, "Curfew Notice.", sender_override = "District Automated Scheduler")
 
-			curfew_zombies() //spawn zombies for curfew, encourages going indoors
+				curfew_zombies() //spawn zombies for curfew, encourages going indoors
 
-			if(prob(75))
-				curfew_zombies()
-			if(prob(50))
-				curfew_zombies()
-			if(prob(25))
-				curfew_zombies()
+				if(prob(75))
+					curfew_zombies()
+				if(prob(50))
+					curfew_zombies()
+				if(prob(25))
+					curfew_zombies()
 
 		if(light_coefficient > 0)
 			light_coefficient -= 0.025
@@ -102,7 +103,8 @@ SUBSYSTEM_DEF(daylight)
 	if(current_day_time > MORNING_START && current_day_time <= AFTERNOON_START)
 		if(day_cycle_active != DAY_CYCLE_MORNING)
 			day_cycle_active = DAY_CYCLE_MORNING
-			priority_announce("Attention citizens, night has concluded, and Curfew is over. Your morning ration cycle will begin in thirty seconds.", "Curfew Notice.", sender_override = "District Automated Scheduler")
+			if(SSmapping.current_map.minetype != "combat_deployment")
+				priority_announce("Attention citizens, night has concluded, and Curfew is over. Your morning ration cycle will begin in thirty seconds.", "Curfew Notice.", sender_override = "District Automated Scheduler")
 		if(light_coefficient < 0.5)
 			light_coefficient += 0.025
 
@@ -113,7 +115,8 @@ SUBSYSTEM_DEF(daylight)
 			factory_container_goal = ROUND_UP(factory_container_goal)
 
 			day_cycle_active = DAY_CYCLE_AFTERNOON
-			priority_announce("Attention citizens, it is now afternoon. The previous ration cycle has ended. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal], compliance is mandatory.", "Work Notice.", sender_override = "District Automated Scheduler")
+			if(SSmapping.current_map.minetype != "combat_deployment")
+				priority_announce("Attention citizens, it is now afternoon. The previous ration cycle has ended. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal], compliance is mandatory.", "Work Notice.", sender_override = "District Automated Scheduler")
 
 			factory_containers_filled = 0
 
@@ -126,7 +129,8 @@ SUBSYSTEM_DEF(daylight)
 	if(current_day_time > DUSK_START  && current_day_time <= NIGHT_START)
 		if(day_cycle_active != DAY_CYCLE_DUSK && day_cycle_active != DAY_CYCLE_NIGHT)
 			day_cycle_active = DAY_CYCLE_DUSK
-			priority_announce("Attention citizens, night will be approaching shortly, and curfew will begin soon. Citizens are to get ready for curfew.", "Curfew Notice.", sender_override = "District Automated Scheduler")
+			if(SSmapping.current_map.minetype != "combat_deployment")
+				priority_announce("Attention citizens, night will be approaching shortly, and curfew will begin soon. Citizens are to get ready for curfew.", "Curfew Notice.", sender_override = "District Automated Scheduler")
 		if(light_coefficient > 0.5)
 			light_coefficient -= 0.025
 

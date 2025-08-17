@@ -742,8 +742,9 @@
 
 	switch(CONFIG_GET(flag/allow_respawn))
 		if(RESPAWN_FLAG_NEW_CHARACTER)
-			if(tgui_alert(usr, "Note, respawning is only allowed as another character. If you don't have another free slot you may not be able to respawn.", "Respawn", list("Ok", "Nevermind")) != "Ok")
-				return
+			if(SSmapping.current_map.minetype != "combat_deployment")
+				if(tgui_alert(usr, "Note, respawning is only allowed as another character. If you don't have another free slot you may not be able to respawn.", "Respawn", list("Ok", "Nevermind")) != "Ok")
+					return
 
 		if(RESPAWN_FLAG_FREE)
 			pass() // Normal respawn
@@ -791,6 +792,9 @@
 	var/death_time = world.time - client.player_details.time_of_death
 
 	var/required_delay = override_delay || CONFIG_GET(number/respawn_delay)
+
+	if(SSmapping.current_map.minetype == "combat_deployment")
+		required_delay = 30 SECONDS
 
 	if(death_time < required_delay)
 		if(!check_rights_for(usr.client, R_ADMIN))

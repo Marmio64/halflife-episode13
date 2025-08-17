@@ -13,6 +13,9 @@ SUBSYSTEM_DEF(sociostability)
 	var/announcement_made = FALSE
 
 /datum/controller/subsystem/sociostability/fire(resumed = 0)
+	if(SSmapping.current_map.minetype == "combat_deployment")
+		return
+
 	if(prob(50))
 		unit_encouragement()
 

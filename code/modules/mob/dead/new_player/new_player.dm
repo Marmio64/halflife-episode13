@@ -123,6 +123,10 @@
 			return "[jobtitle] is not compatible with some antagonist role assigned to you."
 		if(JOB_UNAVAILABLE_AGE)
 			return "Your character is not old enough for [jobtitle]."
+		if(JOB_UNAVAILABLE_WRONGTEAM)
+			return "You aren't on this team! Try the other team."
+		if(JOB_UNAVAILABLE_TEAMFULL)
+			return "This team is full! Try the other team."
 
 	return GENERIC_JOB_UNAVAILABLE_ERROR
 
@@ -130,6 +134,16 @@
 	var/datum/job/job = SSjob.get_job(rank)
 	if(!(job.job_flags & JOB_NEW_PLAYER_JOINABLE))
 		return JOB_UNAVAILABLE_GENERIC
+	if(job.combat_deployment_job)
+		if(client.deployment_faction)
+			if(client.deployment_faction != job.combat_deployment_faction)
+				return JOB_UNAVAILABLE_WRONGTEAM
+		if(job.combat_deployment_faction == COMBINE_DEPLOYMENT_FACTION  && !client.deployment_faction)
+			if(GLOB.deployment_rebel_players < GLOB.deployment_combine_players && 0 < GLOB.deployment_combine_players)
+				return JOB_UNAVAILABLE_TEAMFULL
+		if(job.combat_deployment_faction == REBEL_DEPLOYMENT_FACTION && !client.deployment_faction)
+			if(GLOB.deployment_combine_players < GLOB.deployment_rebel_players && 0 < GLOB.deployment_rebel_players)
+				return JOB_UNAVAILABLE_TEAMFULL
 	if((job.current_positions >= job.total_positions) && job.total_positions != -1)
 		if(is_assistant_job(job))
 			if(isnum(client.player_age) && client.player_age <= 14) //Newbies can always be assistants
@@ -151,9 +165,10 @@
 /mob/dead/new_player/proc/AttemptLateSpawn(rank)
 	// Check that they're picking someone new for new character respawning
 	if(CONFIG_GET(flag/allow_respawn) == RESPAWN_FLAG_NEW_CHARACTER)
-		if("[client.prefs.default_slot]" in client.player_details.joined_as_slots)
-			tgui_alert(usr, "You already have played this character in this round!")
-			return FALSE
+		if(SSmapping.current_map.minetype != "combat_deployment")
+			if("[client.prefs.default_slot]" in client.player_details.joined_as_slots)
+				tgui_alert(usr, "You already have played this character in this round!")
+				return FALSE
 
 	var/error = IsJobUnavailable(rank)
 	if(error != JOB_AVAILABLE)

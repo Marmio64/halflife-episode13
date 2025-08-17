@@ -349,6 +349,22 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	GLOB.outlands_latejoin += loc
 	return INITIALIZE_HINT_QDEL
 
+/obj/effect/landmark/deployments_refugee
+	name = "refugee spawn point"
+
+/obj/effect/landmark/deployments_refugee/Initialize(mapload)
+	..()
+	GLOB.deployments_refugee += loc
+	return INITIALIZE_HINT_QDEL
+
+/obj/effect/landmark/deployments_metrocop
+	name = "metrocop spawn point"
+
+/obj/effect/landmark/deployments_metrocop/Initialize(mapload)
+	..()
+	GLOB.deployments_metrocop += loc
+	return INITIALIZE_HINT_QDEL
+
 //observer start
 /obj/effect/landmark/observer_start
 	name = "Observer-Start"

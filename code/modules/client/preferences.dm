@@ -173,7 +173,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	data["character_profiles"] = create_character_profiles()
 
 	data["character_preview_view"] = character_preview_view.assigned_map
-	data["overflow_role"] = SSjob.get_job_type(SSjob.overflow_role).title
+	if(SSmapping.current_map.minetype == "combat_deployment")
+		data["overflow_role"] = JOB_DEPLOYMENT_REFUGEE
+	else
+		data["overflow_role"] = SSjob.get_job_type(SSjob.overflow_role).title
 	data["window"] = current_window
 
 	data["content_unlocked"] = unlock_content
