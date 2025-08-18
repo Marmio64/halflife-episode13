@@ -158,7 +158,7 @@
 
 /obj/item/storage/belt/civilprotection/overwatch/sniper/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
-	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/combine_sniper, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/combine_sniper, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/combine_sniper, src)

@@ -108,6 +108,12 @@
 	ambient_buzz = 'hl13/sound/ambience/deathmatch/deathmatchbuzz.ogg'
 	ambient_buzz_vol = 20
 
+/area/halflife/indoors/combat_deployment/combine_base
+	name = "\improper Combine Nexus"
+
+/area/halflife/indoors/combat_deployment/rebel_base
+	name = "\improper Rebel Hideout"
+
 /area/halflife/indoors
 	name = "\improper Indoors"
 	icon_state = "away"

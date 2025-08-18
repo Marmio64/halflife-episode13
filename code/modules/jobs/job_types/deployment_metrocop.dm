@@ -1,6 +1,6 @@
 /datum/job/deployment_metrocop
 	title = JOB_DEPLOYMENT_METROCOP
-	description = "You are part of the combine! You have better starting gear than the resistance and can get very powerful overwatch grade gear later on using resin, but may struggle in the midgame once rebels get powerful!"
+	description = "You are part of the combine! You have better medium-high tier loadouts than rebels, but it takes your faction longer to unlock high tier loadouts compared to the rebels. Early to mid-game may have you struggling, but you are likely to win if you last till late game!"
 	department_head = list("Nobody")
 	total_positions = 99
 	spawn_positions = 99
@@ -9,7 +9,7 @@
 	paycheck = PAYCHECK_ZERO
 	config_tag = "PRISONER"
 
-	outfit = /datum/outfit/job/security
+	outfit = /datum/outfit/job/deployment_metrocop
 
 	display_order = JOB_DISPLAY_ORDER_ASSISTANT
 	department_for_prefs = /datum/job_department/assistant
@@ -23,6 +23,34 @@
 	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
 
 	gameplay_help = "You need to destroy the rebel's communication tower in their base to win, while making sure they don't destroy your communication tower!"
+
+/datum/outfit/job/deployment_metrocop
+	name = "Deployment metrocop"
+	jobtype = /datum/job/deployment_metrocop
+	id = /obj/item/card/id/advanced/halflife/combine/one
+
+	id_trim = /datum/id_trim/job/security_officer
+	ears = /obj/item/radio/headset/civilprotection
+	uniform = /obj/item/clothing/under/combine/civilprotection
+	gloves = /obj/item/clothing/gloves/color/civilprotection
+	suit = /obj/item/clothing/suit/armor/civilprotection
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	glasses = /obj/item/clothing/glasses/hud/security
+
+	mask = /obj/item/clothing/mask/gas/civilprotection
+
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
+
+/datum/outfit/job/deployment_metrocop/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+	. = ..()
+	user.faction += "combine"
+
+	var/name_source = list("Line", "Patrol", "Roller", "Victor", "Jury", "Quick", "Defender")
+
+	if(istype(user.wear_id, /obj/item/card/id))
+		var/obj/item/card/id/ID = user.wear_id
+		ID.registered_name = "CP:0.[pick(name_source)]-[rand(111,999)]"
+		ID.update_label()
 
 /datum/job/deployment_metrocop/after_latejoin_spawn(mob/living/spawning)
 	. = ..()

@@ -20,6 +20,10 @@
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 	hoodtype = /obj/item/clothing/head/hooded/hevhood
 
+	allowed = list(
+		/obj/item/crowbar,
+		)
+
 	slowdown = -0.25
 
 	var/static/list/funny_signals = list(

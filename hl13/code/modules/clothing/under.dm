@@ -192,6 +192,9 @@
 /obj/item/clothing/under/combine/grunt/deathmatch
 	slowdown = -0.25
 
+/obj/item/clothing/under/combine/grunt/fused/deathmatch
+	slowdown = -0.25
+
 /obj/item/clothing/under/citizen
 	name = "citizen jumpsuit"
 	desc = "Full-body blue suit for the common citizen, worn down and dirtied by time and use. Uses sensors to allow the combine to track you."
