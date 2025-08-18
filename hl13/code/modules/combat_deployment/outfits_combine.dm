@@ -56,6 +56,8 @@
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	belt = /obj/item/storage/belt/civilprotection/overwatch/pulsesmg
 
+	r_hand = /obj/item/gun/ballistic/automatic/pulsesmg/standardpin
+
 	back = /obj/item/tank/internals/oxygen/grunt
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt
 	uniform = /obj/item/clothing/under/combine/grunt/fused/deathmatch

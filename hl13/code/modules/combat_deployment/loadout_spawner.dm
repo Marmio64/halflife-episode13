@@ -56,7 +56,7 @@
 		return
 
 	to_chat(user, span_green("Equipping outfit..."))
-	if(!do_after(user, 2 SECONDS))
+	if(!do_after(user, 1 SECONDS))
 		to_chat(user, span_warning("Equip failed."))
 		return
 

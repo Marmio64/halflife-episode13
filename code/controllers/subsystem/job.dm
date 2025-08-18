@@ -160,6 +160,8 @@ SUBSYSTEM_DEF(job)
 			continue
 		if(!job.combat_deployment_job && SSmapping.current_map.minetype == "combat_deployment")
 			continue
+		if(job.combat_deployment_job && SSmapping.current_map.minetype != "combat_deployment")
+			continue
 		new_all_occupations += job
 		name_occupations[job.title] = job
 		for(var/alt_title in job.alternate_titles)

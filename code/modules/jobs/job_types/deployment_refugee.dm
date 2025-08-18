@@ -1,3 +1,5 @@
+GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
+
 /datum/job/deployment_refugee
 	title = JOB_DEPLOYMENT_REFUGEE
 	description = "You are part of the resistance! You have less starting gear than the combine and have a less powerful endgame, but gear can be bought cheaply from your base with cash you can find while scavenging!"
@@ -9,7 +11,7 @@
 	paycheck = PAYCHECK_ZERO
 	config_tag = "PRISONER"
 
-	outfit = /datum/outfit/job/refugee
+	outfit = /datum/outfit/job/refugee/deployment
 
 	display_order = JOB_DISPLAY_ORDER_PRISONER
 	department_for_prefs = /datum/job_department/assistant
@@ -23,6 +25,24 @@
 	cmode_music = 'hl13/sound/music/combat/cpviolation.ogg' //cause they're a cp violation
 
 	gameplay_help = "You need to destroy the combine's communication tower in their base to win, while making sure they don't destroy your communication tower!"
+
+/datum/outfit/job/refugee/deployment/post_equip(mob/living/carbon/human/H, visualsOnly=FALSE)
+	if(visualsOnly)
+		return
+	var/chosen = null
+
+	if(DEPLOYMENT_TIER4_REBELS <= GLOB.deployment_rebels_cash)
+		chosen = /obj/item/hl2/loadout_picker/rebel/tier4
+	else if(DEPLOYMENT_TIER3_REBELS <= GLOB.deployment_rebels_cash)
+		chosen = /obj/item/hl2/loadout_picker/rebel/tier3
+	else if(DEPLOYMENT_TIER2_REBELS <= GLOB.deployment_rebels_cash)
+		chosen = /obj/item/hl2/loadout_picker/rebel/tier2
+	else if(DEPLOYMENT_TIER1_REBELS <= GLOB.deployment_rebels_cash)
+		chosen = /obj/item/hl2/loadout_picker/rebel/tier1
+	if(chosen)
+		var/turf/T = get_turf(H)
+		var/obj/item/I = new chosen(T)
+		H.put_in_hands(I)
 
 /datum/job/deployment_refugee/after_latejoin_spawn(mob/living/spawning)
 	. = ..()

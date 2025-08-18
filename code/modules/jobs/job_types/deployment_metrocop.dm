@@ -1,3 +1,5 @@
+GLOBAL_VAR_INIT(deployment_combine_cash, 0)
+
 /datum/job/deployment_metrocop
 	title = JOB_DEPLOYMENT_METROCOP
 	description = "You are part of the combine! You have better medium-high tier loadouts than rebels, but it takes your faction longer to unlock high tier loadouts compared to the rebels. Early to mid-game may have you struggling, but you are likely to win if you last till late game!"
@@ -51,6 +53,21 @@
 		var/obj/item/card/id/ID = user.wear_id
 		ID.registered_name = "CP:0.[pick(name_source)]-[rand(111,999)]"
 		ID.update_label()
+
+	var/chosen = null
+
+	if(DEPLOYMENT_TIER4_COMBINE <= GLOB.deployment_combine_cash)
+		chosen = /obj/item/hl2/loadout_picker/combine/tier4
+	else if(DEPLOYMENT_TIER3_COMBINE <= GLOB.deployment_combine_cash)
+		chosen = /obj/item/hl2/loadout_picker/combine/tier3
+	else if(DEPLOYMENT_TIER2_COMBINE <= GLOB.deployment_combine_cash)
+		chosen = /obj/item/hl2/loadout_picker/combine/tier2
+	else if(DEPLOYMENT_TIER1_COMBINE <= GLOB.deployment_combine_cash)
+		chosen = /obj/item/hl2/loadout_picker/combine/tier1
+	if(chosen)
+		var/turf/T = get_turf(user)
+		var/obj/item/I = new chosen(T)
+		user.put_in_hands(I)
 
 /datum/job/deployment_metrocop/after_latejoin_spawn(mob/living/spawning)
 	. = ..()
