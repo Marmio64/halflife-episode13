@@ -5,18 +5,22 @@
 	toxpwr = 0.75
 	liver_damage_multiplier = 0.25
 	taste_mult = 1
+	var/damage_mult = 1
+
+/datum/reagent/toxin/cleanupsolution/weak
+	damage_mult = 0.75
 
 /datum/reagent/toxin/cleanupsolution/expose_obj(obj/O, reac_volume)
 	..()
 	if(istype(O, /obj/structure/alien/weeds))
 		var/obj/structure/alien/weeds/alien_weeds = O
-		alien_weeds.take_damage(rand(20,40), BRUTE, 0) // Kills alien weeds pretty fast
+		alien_weeds.take_damage(rand(20*damage_mult,40*damage_mult), BRUTE, 0) // Kills alien weeds pretty fast
 	else if(istype(O, /obj/structure/flora/xen))
 		var/obj/structure/flora/xen/xenflora = O
-		xenflora.take_damage(rand(40,50), BRUTE, 0)
+		xenflora.take_damage(rand(40*damage_mult,50*damage_mult), BRUTE, 0)
 	else if(istype(O, /obj/structure/flora/ash/stem_shroom))
 		var/obj/structure/flora/ash/stem_shroom/xenshroom = O
-		xenshroom.take_damage(rand(40,50), BRUTE, 0)
+		xenshroom.take_damage(rand(40*damage_mult,50*damage_mult), BRUTE, 0)
 	else if(istype(O, /obj/structure/spacevine))
 		var/obj/structure/spacevine/SV = O
 		SV.on_chem_effect(src)
@@ -26,7 +30,7 @@
 	var/damage = min(round(0.4 * reac_volume, 0.1), 10)
 	if(exposed_mob.mob_biotypes & MOB_XENIAN)
 		// spray bottle emits 5u so it's dealing ~15 dmg per spray
-		if(exposed_mob.adjustToxLoss(damage * 20, required_biotype = affected_biotype))
+		if(exposed_mob.adjustToxLoss((damage * 20) * damage_mult, required_biotype = affected_biotype))
 			return
 
 	if(!(methods & VAPOR) || !iscarbon(exposed_mob))

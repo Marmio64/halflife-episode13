@@ -57,3 +57,9 @@
 	maxHealth = 150
 	melee_damage_lower = 25
 	melee_damage_upper = 30
+
+/mob/living/simple_animal/hostile/halflife/viscerator/upgraded
+	health = 80
+	maxHealth = 80
+	melee_damage_lower = 15
+	melee_damage_upper = 20

@@ -125,6 +125,7 @@
 		loadouts = list()
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/rebel/tier4/veteran,
+			/datum/outfit/deployment_loadout/rebel/tier4/corporal,
 			/datum/outfit/deployment_loadout/rebel/tier4/freeman,
 			/datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt,
 			/datum/outfit/deployment_loadout/rebel/tier4/crossbow,
@@ -144,6 +145,7 @@
 		loadouts = list()
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/combine/tier1/baton_cop,
+			/datum/outfit/deployment_loadout/combine/tier1/infestation_control,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -156,6 +158,7 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/combine/tier2/viscerator_cop,
 			/datum/outfit/deployment_loadout/combine/tier2/pistol_cop,
+			/datum/outfit/deployment_loadout/combine/tier2/medic_cop,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -169,6 +172,7 @@
 			/datum/outfit/deployment_loadout/combine/tier3/grunt,
 			/datum/outfit/deployment_loadout/combine/tier3/ota,
 			/datum/outfit/deployment_loadout/combine/tier3/riotcop,
+			/datum/outfit/deployment_loadout/combine/tier3/divisional,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -182,6 +186,7 @@
 			/datum/outfit/deployment_loadout/combine/tier4/elite,
 			/datum/outfit/deployment_loadout/combine/tier4/shotgunner,
 			/datum/outfit/deployment_loadout/combine/tier4/sniper,
+			/datum/outfit/deployment_loadout/combine/tier4/ordinal,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

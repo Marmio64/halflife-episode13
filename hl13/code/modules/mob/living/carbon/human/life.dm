@@ -97,6 +97,7 @@ GLOBAL_LIST_EMPTY(deployment_rebel_players)
 /mob/living/carbon/human/proc/setdeploymentfaction(faction)
 	if(client)
 		client.deployment_faction = faction
+		deployment_faction = faction
 		switch(faction)
 			if(COMBINE_DEPLOYMENT_FACTION)
 				GLOB.deployment_combine_players |= client

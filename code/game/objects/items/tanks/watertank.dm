@@ -487,6 +487,10 @@
 	. = ..()
 	reagents.add_reagent(/datum/reagent/toxin/cleanupsolution, 500)
 
+/obj/item/watertank/cleanup/weak/Initialize(mapload)
+	. = ..()
+	reagents.add_reagent(/datum/reagent/toxin/cleanupsolution/weak, 500)
+
 /obj/item/reagent_containers/spray/mister/cleanup
 	name = "cleanup spray nozzle"
 	desc = "A cleanup spray nozzle attached to a back mounted tank. Spray on Xenian growths to get rid of them."

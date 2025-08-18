@@ -13,3 +13,6 @@
 	var/jump_range = 1
 
 	throw_range = 5
+
+	/// Current combat deployment faction of this very mob
+	var/deployment_faction = NO_FACTION

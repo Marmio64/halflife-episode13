@@ -2,12 +2,16 @@
 /obj/machinery/deployment_comms_tower
 	name = "Comms Tower"
 	desc = "A vital piece of instructure that ensures backup and supplies continues to come to this area."
-	icon = 'hl13/icons/obj/machines/machinery.dmi'
-	icon_state = "destabilizer"
+	icon = 'hl13/icons/obj/port/comm_tower2.dmi'
+	icon_state = "comm_tower_on"
 	max_integrity = 1500
 	anchored = TRUE
 	density = TRUE
 	var/last_scream = 0
+
+	light_range = 5
+	light_power = 1
+	light_color = "#658cac"
 
 /obj/machinery/deployment_comms_tower/combine
 	name = "Combine Comms Tower"
