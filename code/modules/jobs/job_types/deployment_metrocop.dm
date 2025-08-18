@@ -24,7 +24,7 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 
 	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
 
-	gameplay_help = "You need to destroy the rebel's communication tower in their base to win, while making sure they don't destroy your communication tower!"
+	gameplay_help = "You need to destroy the rebel's communication tower in their base to win, while making sure they don't destroy your communication tower! You can sell corpses of the enemy and cash to the cash deposit in your base to upgrade your starting loadouts!"
 
 /datum/outfit/job/deployment_metrocop
 	name = "Deployment metrocop"

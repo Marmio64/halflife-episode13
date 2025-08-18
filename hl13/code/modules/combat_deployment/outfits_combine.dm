@@ -22,7 +22,6 @@
 	uniform = /obj/item/clothing/under/citizen
 	back = /obj/item/watertank/cleanup/weak
 
-	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 	r_pocket = /obj/item/flashlight
 
 	shoes = /obj/item/clothing/shoes/halflife/cleanup
@@ -32,6 +31,31 @@
 	head = /obj/item/clothing/head/utility/radiation
 
 	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+
+/datum/outfit/deployment_loadout/combine/tier1/engineer
+	name = "Deployment: Union Engineer"
+	display_name = "Union Engineer"
+	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however."
+
+	uniform = /obj/item/clothing/under/citizen
+	suit = /obj/item/clothing/suit/utility/radiation/engineer
+	mask = /obj/item/clothing/mask/gas/cwuengi
+	shoes = /obj/item/clothing/shoes/halflife/engineer
+	gloves = /obj/item/clothing/gloves/halflife/engineer
+
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/satchel
+
+	backpack_contents = list(
+		/obj/item/crowbar/large = 1,
+		/obj/item/stack/sheet/mineral/sandbags = 5,
+	)
+
+
+	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
 /// TIER 2 ////////////////////////////////////////////////////////
 
@@ -90,6 +114,32 @@
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/branescan.ogg'
+
+/datum/outfit/deployment_loadout/combine/tier2/engineer
+	name = "Deployment: Upgraded Union Engineer"
+	display_name = "Upgraded Union Engineer"
+	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however."
+
+	uniform = /obj/item/clothing/under/citizen
+	suit = /obj/item/clothing/suit/utility/radiation/engineer
+	mask = /obj/item/clothing/mask/gas/cwuengi
+	shoes = /obj/item/clothing/shoes/halflife/engineer
+	gloves = /obj/item/clothing/gloves/halflife/engineer
+
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/satchel
+
+	backpack_contents = list(
+		/obj/item/crowbar/large = 1,
+		/obj/item/stack/sheet/mineral/sandbags = 7,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+	)
+
+
+	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
 /// TIER 3 ////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier3/grunt
@@ -111,6 +161,7 @@
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
 	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/lgorbifold.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier3/ota
 	name = "Deployment: SMG OTA"
@@ -127,6 +178,7 @@
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier3/riotcop
 	name = "Deployment: Riot Viscerator Cop"
@@ -171,6 +223,35 @@
 	r_pocket = /obj/item/ammo_box/colta357
 
 	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/branescan.ogg'
+
+/datum/outfit/deployment_loadout/combine/tier3/medic_cop
+	name = "Deployment: Upgraded Medical Cop"
+	display_name = "Upgraded Medical Cop"
+	desc = "A pistol wielding cop with extra medical supplies."
+
+	uniform = /obj/item/clothing/under/combine/civilprotection
+	gloves = /obj/item/clothing/gloves/color/civilprotection
+	suit = /obj/item/clothing/suit/armor/civilprotection/medical
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	glasses = /obj/item/clothing/glasses/hud/security
+
+	mask = /obj/item/clothing/mask/gas/civilprotection/medical
+	belt = /obj/item/storage/belt/civilprotection/medicfull
+
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
+	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
+
+	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/branescan.ogg'
+
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/medkit = 2,
+		/obj/item/ammo_box/magazine/usp9mm = 2,
+	)
 
 /// TIER 4 ////////////////////////////////////////////////////////
 
@@ -190,6 +271,7 @@
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier4/shotgunner
 	name = "Deployment: OTA Shotgunner"
@@ -209,6 +291,7 @@
 	suit = /obj/item/clothing/suit/armor/overwatch/red
 
 	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier4/sniper
 	name = "Deployment: Sniper OTA"
@@ -225,6 +308,7 @@
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier4/ordinal
 	name = "Deployment: Combine Ordinal"
@@ -242,3 +326,33 @@
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
+
+/datum/outfit/deployment_loadout/combine/tier4/medic_cop
+	name = "Deployment: Extra Upgraded Medical Cop"
+	display_name = "Extra Upgraded Medical Cop"
+	desc = "A MP7 wielding cop with extra medical supplies."
+
+	uniform = /obj/item/clothing/under/combine/civilprotection
+	gloves = /obj/item/clothing/gloves/color/civilprotection
+	suit = /obj/item/clothing/suit/armor/civilprotection/medical
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	glasses = /obj/item/clothing/glasses/hud/security
+
+	mask = /obj/item/clothing/mask/gas/civilprotection/medical
+	belt = /obj/item/storage/belt/civilprotection/medicfull
+
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
+	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
+
+	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/branescan.ogg'
+
+	suit_store = /obj/item/gun/ballistic/automatic/mp7
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/medkit = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/ammo_box/magazine/mp7 = 2,
+	)

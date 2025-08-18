@@ -8,7 +8,7 @@
 	var/damage_mult = 1
 
 /datum/reagent/toxin/cleanupsolution/weak
-	damage_mult = 0.75
+	damage_mult = 0.5
 
 /datum/reagent/toxin/cleanupsolution/expose_obj(obj/O, reac_volume)
 	..()

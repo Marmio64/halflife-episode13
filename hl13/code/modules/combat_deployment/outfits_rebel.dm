@@ -44,6 +44,24 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+/datum/outfit/deployment_loadout/rebel/tier1/engineer
+	name = "Deployment: Refugee Engineer"
+	display_name = "Refugee Engineer"
+	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building."
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	head = /obj/item/clothing/head/utility/hardhat/halflife/mining
+
+	backpack_contents = list(
+		/obj/item/crowbar/large = 1,
+		/obj/item/stack/sheet/mineral/sandbags = 6,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
 /// TIER 2 ////////////////////////////////////////////////////////
 
 /datum/outfit/deployment_loadout/rebel/tier2/pistol_rebel
@@ -94,6 +112,25 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+/datum/outfit/deployment_loadout/rebel/tier2/engineer
+	name = "Deployment: Upgraded Refugee Engineer"
+	display_name = "Upgraded Refugee Engineer"
+	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building."
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	head = /obj/item/clothing/head/utility/hardhat/halflife/mining
+
+	backpack_contents = list(
+		/obj/item/crowbar/large = 1,
+		/obj/item/stack/sheet/mineral/sandbags = 8,
+	)
+
+	suit = /obj/item/clothing/suit/armor/civilprotection
+
+	ears = /obj/item/radio/headset/rebel_deployment
 
 /// TIER 3 //////////////////////////////////////////////////////////
 
@@ -153,6 +190,7 @@
 	shoes = null
 
 	ears = /obj/item/radio/headset/rebel_deployment
+	combat_music = 'hl13/sound/music/combat/vortalcombat.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier3/vortigaunt/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/vortigaunt)
@@ -239,6 +277,7 @@
 	r_pocket = /obj/item/flashlight/seclite
 
 	ears = /obj/item/radio/headset/rebel_deployment
+	combat_music = 'hl13/sound/music/combat/notsupposedtobehere.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt
 	name = "Deployment: Elder Vortigaunt"
@@ -248,6 +287,7 @@
 	shoes = null
 
 	ears = /obj/item/radio/headset/rebel_deployment
+	combat_music = 'hl13/sound/music/combat/vortalcombat.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/vortigaunt/elder)

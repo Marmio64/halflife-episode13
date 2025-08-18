@@ -88,6 +88,7 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/rebel/tier1/mosin_partisan,
 			/datum/outfit/deployment_loadout/rebel/tier1/molotov_partisan,
+			/datum/outfit/deployment_loadout/rebel/tier1/engineer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -100,6 +101,7 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/rebel/tier2/pistol_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier2/medic_rebel,
+			/datum/outfit/deployment_loadout/rebel/tier2/engineer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -146,6 +148,7 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/combine/tier1/baton_cop,
 			/datum/outfit/deployment_loadout/combine/tier1/infestation_control,
+			/datum/outfit/deployment_loadout/combine/tier1/engineer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -159,6 +162,8 @@
 			/datum/outfit/deployment_loadout/combine/tier2/viscerator_cop,
 			/datum/outfit/deployment_loadout/combine/tier2/pistol_cop,
 			/datum/outfit/deployment_loadout/combine/tier2/medic_cop,
+			/datum/outfit/deployment_loadout/combine/tier1/infestation_control, //already pretty good for being tier 1
+			/datum/outfit/deployment_loadout/combine/tier2/engineer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -173,6 +178,7 @@
 			/datum/outfit/deployment_loadout/combine/tier3/ota,
 			/datum/outfit/deployment_loadout/combine/tier3/riotcop,
 			/datum/outfit/deployment_loadout/combine/tier3/divisional,
+			/datum/outfit/deployment_loadout/combine/tier3/medic_cop,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -187,6 +193,7 @@
 			/datum/outfit/deployment_loadout/combine/tier4/shotgunner,
 			/datum/outfit/deployment_loadout/combine/tier4/sniper,
 			/datum/outfit/deployment_loadout/combine/tier4/ordinal,
+			/datum/outfit/deployment_loadout/combine/tier4/medic_cop,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
