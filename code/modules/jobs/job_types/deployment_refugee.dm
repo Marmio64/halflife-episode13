@@ -2,7 +2,7 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 
 /datum/job/deployment_refugee
 	title = JOB_DEPLOYMENT_REFUGEE
-	description = "You are part of the resistance! You have less starting gear than the combine and have a less powerful endgame, but gear can be bought cheaply from your base with cash you can find while scavenging!"
+	description = "You are part of the resistance! You are able to get access to higher loadout tiers earlier than the combine, but have slightly weaker tier 3 and 4 loadouts."
 	department_head = list("Nobody")
 	total_positions = 99
 	spawn_positions = 99

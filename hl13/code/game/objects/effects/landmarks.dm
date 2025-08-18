@@ -116,6 +116,16 @@ GLOBAL_LIST_EMPTY(chosen_station_templates)
 	key = "miningcaves";
 	name = "miningcaves"
 
+/obj/modular_map_root/deploymentsouth
+	config_file = "strings/modular_maps/sewercity.toml"
+	key = "deploymentsouth";
+	name = "deploymentsouth"
+
+/obj/modular_map_root/deploymentnorth
+	config_file = "strings/modular_maps/sewercity.toml"
+	key = "deploymentnorth";
+	name = "deploymentnorth"
+
 
 /////////////////////////////////
 /// NAVIGATE VERBS ///
