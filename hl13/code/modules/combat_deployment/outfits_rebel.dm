@@ -264,21 +264,6 @@
 	uniform = /obj/item/clothing/under/syndicate/camo
 	shoes = /obj/item/clothing/shoes/boots
 
-/datum/outfit/deployment_loadout/rebel/tier4/freeman
-	name = "Deployment: A Free Man"
-	display_name = "A Free Man"
-	desc = "Well armored and speedy, with a powerful crowbar to boot."
-
-	suit_store = /obj/item/crowbar/large/freeman
-	uniform = /obj/item/clothing/under/citizen/rebel
-	suit = /obj/item/clothing/suit/hooded/hev
-	glasses = /obj/item/clothing/glasses/regular/thin
-	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
-	r_pocket = /obj/item/flashlight/seclite
-
-	ears = /obj/item/radio/headset/rebel_deployment
-	combat_music = 'hl13/sound/music/combat/notsupposedtobehere.ogg'
-
 /datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt
 	name = "Deployment: Elder Vortigaunt"
 	display_name = "Elder Vortigaunt"
@@ -320,3 +305,29 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+///////////// TIER 5 //////////////////////////////////////////
+
+/datum/outfit/deployment_loadout/rebel/tier5/freeman
+	name = "Deployment: A Free Man"
+	display_name = "A Free Man"
+	desc = "Well armored and speedy, with a powerful crowbar to boot alongside a non biolocked AR2."
+
+	uniform = /obj/item/clothing/under/citizen/rebel
+	suit = /obj/item/clothing/suit/hooded/hev/deathmatch/freeman
+	glasses = /obj/item/clothing/glasses/regular/thin
+	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
+	r_pocket = /obj/item/flashlight/seclite
+
+	ears = /obj/item/radio/headset/rebel_deployment
+	combat_music = 'hl13/sound/music/combat/notsupposedtobehere.ogg'
+
+	back = /obj/item/storage/backpack/halflife/satchel
+
+	backpack_contents = list(
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/ammo_box/magazine/ar2 = 4,
+		/obj/item/gun/ballistic/automatic/ar2/standardpin = 1,
+		/obj/item/crowbar/large/freeman = 1,
+	)

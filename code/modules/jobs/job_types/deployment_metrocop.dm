@@ -45,6 +45,7 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 
 /datum/outfit/job/deployment_metrocop/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
+	user.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 5) //Gives you a few seconds of invincibility to prevent spawn camping
 	user.faction += "combine"
 
 	var/name_source = list("Line", "Patrol", "Roller", "Victor", "Jury", "Quick", "Defender")
@@ -64,6 +65,11 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 		chosen = /obj/item/hl2/loadout_picker/combine/tier2
 	else if(DEPLOYMENT_TIER1_COMBINE <= GLOB.deployment_combine_cash)
 		chosen = /obj/item/hl2/loadout_picker/combine/tier1
+
+	if(DEPLOYMENT_TIER5_COMBINE <= GLOB.deployment_combine_cash)
+		if(prob(DEPLOYMENT_TIER5_CHANCE))
+			chosen = /obj/item/hl2/loadout_picker/combine/tier5
+
 	if(chosen)
 		var/turf/T = get_turf(user)
 		var/obj/item/I = new chosen(T)

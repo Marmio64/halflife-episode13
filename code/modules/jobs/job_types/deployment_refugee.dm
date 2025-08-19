@@ -29,6 +29,9 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 /datum/outfit/job/refugee/deployment/post_equip(mob/living/carbon/human/H, visualsOnly=FALSE)
 	if(visualsOnly)
 		return
+
+	H.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 5) //Gives you a few seconds of invincibility to prevent spawn camping
+
 	var/chosen = null
 
 	if(DEPLOYMENT_TIER4_REBELS <= GLOB.deployment_rebels_cash)
@@ -39,6 +42,11 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 		chosen = /obj/item/hl2/loadout_picker/rebel/tier2
 	else if(DEPLOYMENT_TIER1_REBELS <= GLOB.deployment_rebels_cash)
 		chosen = /obj/item/hl2/loadout_picker/rebel/tier1
+
+	if(DEPLOYMENT_TIER5_REBELS <= GLOB.deployment_rebels_cash)
+		if(prob(DEPLOYMENT_TIER5_CHANCE))
+			chosen = /obj/item/hl2/loadout_picker/rebel/tier5
+
 	if(chosen)
 		var/turf/T = get_turf(H)
 		var/obj/item/I = new chosen(T)

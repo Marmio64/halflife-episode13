@@ -356,3 +356,18 @@
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
+
+////////////////////// TIER 5 /////////////////////////////////////
+
+/datum/outfit/deployment_loadout/combine/tier5/hunter
+	name = "Deployment: Hunter"
+	display_name = "Hunter"
+	desc = "An expert on killing, hunters are a force to be reckoned with due to their speed and high firepower."
+	uniform = null
+	shoes = null
+
+/datum/outfit/deployment_loadout/combine/tier5/hunter/post_equip(mob/living/carbon/human/H)
+	var/datum/mind/player_mind = H.mind
+	var/mob/living/simple_animal/hostile/halflife/hunter/S = new (H.loc)
+	player_mind.transfer_to(S)
+	qdel(H)

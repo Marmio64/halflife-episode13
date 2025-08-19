@@ -1,7 +1,7 @@
 
 /obj/machinery/deployment_comms_tower
 	name = "Comms Tower"
-	desc = "A vital piece of instructure that ensures backup and supplies continues to come to this area."
+	desc = "A vital piece of instructure that ensures backup and supplies continues to come to this area. It needs a wide berth to continue sending information, so it cannot be walled off."
 	icon = 'hl13/icons/obj/port/comm_tower2.dmi'
 	icon_state = "comm_tower_on"
 	max_integrity = 1500
@@ -18,6 +18,14 @@
 
 /obj/machinery/deployment_comms_tower/rebel
 	name = "Rebel Comms Tower"
+
+/obj/machinery/deployment_comms_tower/Initialize(mapload)
+	.=..()
+	START_PROCESSING(SSprocessing, src)
+
+/obj/machinery/deployment_comms_tower/process()
+	for(var/turf/closed/wall/W in RANGE_TURFS(3, get_turf(src))) //no walling off the tower
+		W.dismantle_wall()
 
 /obj/machinery/deployment_comms_tower/combine/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = TRUE, attack_dir, armour_penetration = 0)
 	. = ..()
@@ -40,9 +48,25 @@
 /obj/machinery/deployment_comms_tower/combine/deconstruct(disassembled = TRUE)
 	priority_announce("Combine communication tower destroyed! The rebels have won!", "Lambda Priority Alert")
 	SSticker.force_ending = FORCE_END_ROUND
+	for(var/X in GLOB.deployment_rebel_players)
+		var/mob/living/carbon/human/H = X
+		SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
+		to_chat(H, "<span class='greentext big'>We have destroyed the enemy's comms tower, we win!</span>")
+	for(var/X in GLOB.deployment_combine_players)
+		var/mob/living/carbon/human/H = X
+		SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
+		to_chat(H, "<span class='userdanger'>Our tower was destroyed, we have lost...</span>")
 	return PROCESS_KILL
 
 /obj/machinery/deployment_comms_tower/rebel/deconstruct(disassembled = TRUE)
 	priority_announce("Rebel communication tower destroyed. All dissenting individuals will be amputated.", "Overwatch Priority Alert")
 	SSticker.force_ending = FORCE_END_ROUND
+	for(var/X in GLOB.deployment_rebel_players)
+		var/mob/living/carbon/human/H = X
+		SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
+		to_chat(H, "<span class='userdanger'>Our tower was destroyed, we have lost...</span>")
+	for(var/X in GLOB.deployment_combine_players)
+		var/mob/living/carbon/human/H = X
+		SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
+		to_chat(H, "<span class='greentext big'>We have destroyed the enemy's comms tower, we win!</span>")
 	return PROCESS_KILL
