@@ -227,26 +227,27 @@
 
 /// TIER 4 ///////////////////////////////////////////////////////////
 
-/datum/outfit/deployment_loadout/rebel/tier4/veteran
-	name = "Deployment: PLF Veteran"
-	display_name = "PLF Veteran"
-	desc = "Ultra heavily armored with an AK-47 to destroy enemies."
+/datum/outfit/deployment_loadout/rebel/tier4/ar2_rebel
+	name = "Deployment: AR2 Rebel"
+	display_name = "AR2 Rebel"
+	desc = "While less armored than a corporal, you have a better gun and more mobility."
 
-	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
-	mask = /obj/item/clothing/mask/gas/hl2/military
-	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran
-	uniform = /obj/item/clothing/under/syndicate/camo
-	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
-	gloves = /obj/item/clothing/gloves/combat
-	suit_store = /obj/item/gun/ballistic/automatic/ak47
-	back = /obj/item/storage/backpack/duffelbag/halflife
-	r_pocket = /obj/item/flashlight/seclite
+	uniform = /obj/item/clothing/under/citizen/rebel
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
 	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/fingerless
+
+	back = /obj/item/storage/backpack/satchel
+
+	r_pocket = /obj/item/flashlight/seclite
+
+	suit = /obj/item/clothing/suit/armor/rebel/light
+	suit_store = /obj/item/gun/ballistic/automatic/ar2/standardpin
+
 	backpack_contents = list(
-		/obj/item/grenade/c4 = 1,
-		/obj/item/grenade/syndieminibomb/bouncer = 1,
-		/obj/item/hl13_small_flag/poland/telescopic = 1,
+		/obj/item/ammo_box/magazine/ar2 = 3,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/grenade/syndieminibomb/bouncer = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -256,10 +257,11 @@
 	display_name = "PLF Corporal"
 	desc = "Well armored and equipped with a service rifle to pose a sizeable threat."
 	suit = /obj/item/clothing/suit/armor/halflife/milvest
-	mask = /obj/item/clothing/mask/gas/hl2/military
+	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
 	l_pocket = /obj/item/knife/combat/survival
+	r_pocket = /obj/item/flashlight/seclite
 	head = /obj/item/clothing/head/helmet/halflife/military/poland
 	uniform = /obj/item/clothing/under/syndicate/camo
 	shoes = /obj/item/clothing/shoes/boots
@@ -331,3 +333,27 @@
 		/obj/item/gun/ballistic/automatic/ar2/standardpin = 1,
 		/obj/item/crowbar/large/freeman = 1,
 	)
+
+/datum/outfit/deployment_loadout/rebel/tier5/veteran
+	name = "Deployment: PLF Veteran"
+	display_name = "PLF Veteran"
+	desc = "Ultra heavily armored with an AK-47 to destroy enemies."
+
+	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
+	mask = /obj/item/clothing/mask/gas/hl2/military
+	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran
+	uniform = /obj/item/clothing/under/syndicate/camo
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
+	gloves = /obj/item/clothing/gloves/combat
+	suit_store = /obj/item/gun/ballistic/automatic/ak47
+	back = /obj/item/storage/backpack/duffelbag/halflife
+	r_pocket = /obj/item/flashlight/seclite
+	shoes = /obj/item/clothing/shoes/boots
+	backpack_contents = list(
+		/obj/item/grenade/c4 = 1,
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/hl13_small_flag/poland/telescopic = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
