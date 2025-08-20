@@ -108,6 +108,7 @@
 	backpack_contents = list(
 		/obj/item/stack/medical/suture = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -357,3 +358,4 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'

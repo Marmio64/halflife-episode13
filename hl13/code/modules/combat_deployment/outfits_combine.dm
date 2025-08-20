@@ -249,7 +249,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/medkit = 2,
+		/obj/item/reagent_containers/pill/patch/medkit = 3,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 	)
 
@@ -352,7 +352,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/medkit = 2,
+		/obj/item/reagent_containers/pill/patch/medkit = 3,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
