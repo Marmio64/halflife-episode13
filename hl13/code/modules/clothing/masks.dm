@@ -261,6 +261,9 @@
 
 	unique_death = 'hl13/sound/voice/otavoicelines/die1.ogg'
 
+/obj/item/clothing/mask/gas/civilprotection/overwatch/wallhammer
+	armor_type = /datum/armor/eliteoverwatchmask
+
 /obj/item/clothing/mask/gas/civilprotection/overwatch/red
 	icon_state = "overwatch_red"
 
@@ -275,7 +278,7 @@
 	bullet = 45
 	laser = 10
 	energy = 10
-	bomb = 25
+	bomb = 40
 	fire = 80
 	acid = 80
 	wound = 10

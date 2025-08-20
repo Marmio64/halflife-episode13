@@ -386,6 +386,14 @@
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun/mining(src)
 
+/obj/item/storage/box/lethalshot/halflife/pulse
+	name = "box of shotgun shells (pulse)"
+	desc = "A box full of puleshot rounds, for the pulse shotgun."
+
+/obj/item/storage/box/lethalshot/halflife/pulse/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/ammo_casing/shotgun/buckshot/pulse(src)
+
 /obj/item/gun/ballistic/shotgun/antixen/mining
 	name = "Combine Mining Device"
 	pin = /obj/item/firing_pin/mining_gun
@@ -411,6 +419,33 @@
 	if (istype(get_area(user), /area/halflife/indoors/sewer))
 		return TRUE
 	return FALSE
+
+//Super freaking powerful shotgun, will pointblank 2 shot most people, even if they're wearing decent armor
+/obj/item/gun/ballistic/shotgun/pulse
+	name = "Pulse Shotgun"
+	desc = "A high power pulse shotgun that fires incredibly devestating rounds."
+	icon = 'hl13/icons/obj/guns/projectile.dmi'
+	icon_state = "antixenshotgun"
+	slot_flags = ITEM_SLOT_SUITSTORE
+	fire_sound = "hl13/sound/weapons/pulseshotgunfire.ogg"
+	rack_sound = "hl13/sound/weapons/antixen_pump.ogg"
+	load_sound = "hl13/sound/weapons/antixen_reload.ogg"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/pulse
+	force = 20
+	recoil = 1.7
+	fire_delay = 20
+	vary_fire_sound = FALSE
+	inhand_x_dimension = 32
+	inhand_y_dimension = 32
+	inhand_icon_state = "antixenshotgun"
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+	pin = /obj/item/firing_pin/implant/mindshield
+
+/obj/item/ammo_box/magazine/internal/shot/pulse
+	name = "pulseshotgun internal magazine"
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/pulse
+	max_ammo = 8
 
 // About 2.7 seconds TTK
 /obj/item/gun/ballistic/automatic/mp7

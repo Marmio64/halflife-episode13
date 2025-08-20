@@ -100,7 +100,8 @@
 
 /obj/item/shield/atom_destruction(damage_flag)
 	playsound(src, shield_break_sound, 50)
-	new shield_break_leftover(get_turf(src))
+	if(shield_break_leftover)
+		new shield_break_leftover(get_turf(src))
 	if(isliving(loc))
 		loc.balloon_alert(loc, "shield broken!")
 	return ..()

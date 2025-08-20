@@ -50,7 +50,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 5,
+		/obj/item/stack/sheet/mineral/sandbags = 6,
 	)
 
 
@@ -133,7 +133,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 7,
+		/obj/item/stack/sheet/mineral/sandbags = 8,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)
 
@@ -371,3 +371,21 @@
 	var/mob/living/simple_animal/hostile/halflife/hunter/S = new (H.loc)
 	player_mind.transfer_to(S)
 	qdel(H)
+
+/datum/outfit/deployment_loadout/combine/tier5/wallhammer
+	name = "Deployment: Combine Wallhammer"
+	display_name = "Combine Wallhammer"
+	desc = "An extra heavy combine soldier equipped with a deployable shield and pulse shotgun for maximum destruction."
+	glasses = /obj/item/clothing/glasses/hud/security/night/combine
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/wallhammer
+	uniform = /obj/item/clothing/under/combine/overwatch/wallhammer
+	suit = /obj/item/clothing/suit/armor/overwatch/wallhammer
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch/wallhammer
+	gloves = /obj/item/clothing/gloves/combat/overwatch
+	belt = /obj/item/storage/belt/civilprotection/overwatch/wallhammer
+	suit_store = /obj/item/gun/ballistic/shotgun/pulse
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
+
+	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'

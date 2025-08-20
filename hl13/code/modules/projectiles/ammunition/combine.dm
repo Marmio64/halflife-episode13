@@ -44,6 +44,16 @@
 
 	caliber = CALIBER_ANTIXEN
 
+/obj/item/ammo_casing/shotgun/buckshot/pulse
+	name = "pulse shell"
+	desc = "A 12 gauge pulse buckshot shell. Designed to inflict the maximum amount of damage."
+	icon_state = "xshell"
+	worn_icon_state = "shell"
+	projectile_type = /obj/projectile/bullet/pellet/shotgun_buckshot/pulse
+	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse
+
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
+
 /obj/item/ammo_casing/shotgun/mining
 	name = "mining slug"
 	desc = "A 16 gauge mining slug, which can tear through rocks and armor, although designed purposefully to fare poorly against flesh."

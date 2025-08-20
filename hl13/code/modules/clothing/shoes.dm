@@ -21,6 +21,9 @@
 	ADD_TRAIT(src, TRAIT_NODROP, COMBINESUIT_TRAIT)
 	LoadComponent(/datum/component/squeak, squeak_sound, 25, 100, 0)
 
+/obj/item/clothing/shoes/jackboots/civilprotection/overwatch/wallhammer
+	squeak_sound = list('hl13/sound/movement/wallhammer/gear1.ogg'=1,'hl13/sound/movement/wallhammer/gear2.ogg'=1,'hl13/sound/movement/wallhammer/gear3.ogg'=1,'hl13/sound/movement/wallhammer/gear4.ogg'=1)
+
 /obj/item/clothing/shoes/boots
 	name = "boots"
 	desc = "Old boots, usually given to any and all citizens."

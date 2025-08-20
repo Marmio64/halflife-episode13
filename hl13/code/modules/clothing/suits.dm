@@ -81,6 +81,85 @@
 /obj/item/clothing/suit/armor/overwatch/deathmatch
 	slowdown = 0.33
 
+/obj/item/clothing/suit/armor/overwatch/wallhammer
+	name = "overwatch wallhammer chestpiece"
+	desc = "A reinforced version of the standard overwatch chestpiece with heavy pauldrons and thighpads."
+	icon_state = "wallhammer"
+	armor_type = /datum/armor/eliteoverwatcharmor
+	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
+	slowdown = 1.25
+	actions_types = list(/datum/action/item_action/deploy_shield)
+	var/shield_charge = TRUE
+
+/datum/action/item_action/deploy_shield
+	name = "Deploy Shield"
+	desc = "Deploys a wallhammer shield in one of your hands if one is available."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "shield"
+
+/obj/item/clothing/suit/armor/overwatch/wallhammer/ui_action_click(mob/user, action)
+	deploy_shield()
+
+/obj/item/shield/wallhammer
+	name = "energy shield"
+	desc = "A combine energy shield that is incredibly good at blocking attacks from the front."
+	icon = 'hl13/icons/obj/shields.dmi'
+	lefthand_file = 'hl13/icons/mob/inhands/shields_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/shields_righthand.dmi'
+	icon_state = "wallhammer"
+	inhand_icon_state = "wallhammer"
+	block_chance = 100
+	slot_flags = 0
+	max_integrity = 150
+	shield_break_leftover = null
+	item_flags = DROPDEL
+
+/obj/item/shield/wallhammer/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK, damage_type = BRUTE)
+	if(!defense_check(owner, hitby.loc))
+		return FALSE
+	. = ..()
+
+/// check to see if the attack is coming from somewhere defendable against
+/obj/item/shield/wallhammer/proc/defense_check(mob/living/carbon/human/owner, turf/aloc)
+	. = FALSE
+	switch(owner.dir)
+		if (1)
+			if(abs(x - aloc.x) <= (y - aloc.y) * -2)
+				. = TRUE
+		if (2)
+			if(abs(x - aloc.x) <= (y - aloc.y) * 2)
+				. = TRUE
+		if (4)
+			if(abs(y - aloc.y) <= (x - aloc.x) * -2)
+				. = TRUE
+		if (8)
+			if(abs(y - aloc.y) <= (x - aloc.x) * 2)
+				. = TRUE
+	return
+
+/obj/item/clothing/suit/armor/overwatch/wallhammer/verb/deploy_shield()
+	set category = "Object"
+	set name = "Deploy Shield"
+	if(!iscarbon(usr))
+		return
+	if(!shield_charge)
+		to_chat(usr, span_warning("Your shield is not recharged!"))
+		return
+
+	var/mob/living/carbon/human/H = usr
+	var/obj/item/shield/wallhammer/N = new(H)
+	if(H.put_in_hands(N))
+		to_chat(H, "<span class='notice'Shield deployed.</span>")
+	else
+		to_chat(H, "<span class='notice'You need a free hand to deploy your shield.</span>")
+		qdel(N)
+
+	playsound(loc, 'hl13/sound/effects/zap1.ogg', 50, TRUE, TRUE)
+	shield_charge = FALSE
+	sleep(15 SECONDS)
+	shield_charge = TRUE
+	to_chat(usr, span_notice("The suit hums, its shield is ready to deploy once more."))
+
 /obj/item/clothing/suit/armor/overwatch/red
 	icon_state = "overwatch_red"
 

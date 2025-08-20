@@ -29,6 +29,11 @@
 	armour_penetration = -20
 	hitsound = 'hl13/sound/creatures/hunter/flechette_flesh_impact1.ogg'
 
+/obj/projectile/bullet/pellet/shotgun_buckshot/pulse
+	name = "pulseshot pellet"
+	icon_state = "pulsepellet"
+	damage = 19 //114 total damage
+	armour_penetration = 20
 
 /obj/projectile/bullet/pellet/shotgun_buckshot/antixen
 	name = "anti-xen pellet"

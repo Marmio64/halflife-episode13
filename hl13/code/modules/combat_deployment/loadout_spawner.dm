@@ -216,6 +216,7 @@
 		loadouts = list()
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/combine/tier5/hunter,
+			/datum/outfit/deployment_loadout/combine/tier5/wallhammer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

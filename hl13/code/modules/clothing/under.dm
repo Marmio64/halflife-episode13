@@ -145,6 +145,9 @@
 
 	fused = TRUE
 
+/obj/item/clothing/under/combine/overwatch/wallhammer
+	armor_type = /datum/armor/combinesuit_elite
+
 /obj/item/clothing/under/combine/overwatch/red
 	desc = "Red full-body suit which includes kevlar weaving to provide extra protection."
 	icon_state = "overwatch_red"

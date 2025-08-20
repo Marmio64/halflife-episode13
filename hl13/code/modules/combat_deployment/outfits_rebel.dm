@@ -57,7 +57,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 6,
+		/obj/item/stack/sheet/mineral/sandbags = 7,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -126,7 +126,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 8,
+		/obj/item/stack/sheet/mineral/sandbags = 9,
 	)
 
 	suit = /obj/item/clothing/suit/armor/civilprotection
