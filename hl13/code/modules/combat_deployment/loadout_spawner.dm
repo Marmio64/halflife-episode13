@@ -116,6 +116,7 @@
 			/datum/outfit/deployment_loadout/rebel/tier3/bomber_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier3/vortigaunt,
 			/datum/outfit/deployment_loadout/rebel/tier3/crossbow,
+			/datum/outfit/deployment_loadout/rebel/tier3/engineer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -130,6 +131,7 @@
 			/datum/outfit/deployment_loadout/rebel/tier4/corporal,
 			/datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt,
 			/datum/outfit/deployment_loadout/rebel/tier4/crossbow,
+			/datum/outfit/deployment_loadout/rebel/tier4/engineer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -190,6 +192,7 @@
 			/datum/outfit/deployment_loadout/combine/tier3/riotcop,
 			/datum/outfit/deployment_loadout/combine/tier3/divisional,
 			/datum/outfit/deployment_loadout/combine/tier3/medic_cop,
+			/datum/outfit/deployment_loadout/combine/tier2/engineer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -205,6 +208,7 @@
 			/datum/outfit/deployment_loadout/combine/tier4/sniper,
 			/datum/outfit/deployment_loadout/combine/tier4/ordinal,
 			/datum/outfit/deployment_loadout/combine/tier4/medic_cop,
+			/datum/outfit/deployment_loadout/combine/tier4/engineer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

@@ -253,6 +253,32 @@
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 	)
 
+/datum/outfit/deployment_loadout/combine/tier3/engineer
+	name = "Deployment: Upgraded Union Engineer+"
+	display_name = "Upgraded Union Engineer+"
+	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however."
+
+	uniform = /obj/item/clothing/under/citizen
+	suit = /obj/item/clothing/suit/utility/radiation/engineer
+	mask = /obj/item/clothing/mask/gas/cwuengi
+	shoes = /obj/item/clothing/shoes/halflife/engineer
+	gloves = /obj/item/clothing/gloves/halflife/engineer
+
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/satchel
+
+	backpack_contents = list(
+		/obj/item/crowbar/large = 1,
+		/obj/item/stack/sheet/mineral/sandbags = 9,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/sbeacondrop/combine_turret = 1,
+	)
+
+
+	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+
 /// TIER 4 ////////////////////////////////////////////////////////
 
 /datum/outfit/deployment_loadout/combine/tier4/elite
@@ -357,6 +383,37 @@
 		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
 
+/datum/outfit/deployment_loadout/combine/tier4/engineer
+	name = "Deployment: Senior Union Engineer"
+	display_name = "Senior Union Engineer"
+	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however."
+
+	uniform = /obj/item/clothing/under/citizen
+	suit = /obj/item/clothing/suit/utility/radiation/engineer/foreman
+	mask = /obj/item/clothing/mask/gas/cwuengi
+	shoes = /obj/item/clothing/shoes/halflife/engineer
+	gloves = /obj/item/clothing/gloves/halflife/foreman
+
+	r_pocket = /obj/item/flashlight
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
+
+	back = /obj/item/storage/backpack/satchel
+
+	backpack_contents = list(
+		/obj/item/crowbar/large = 1,
+		/obj/item/stack/sheet/mineral/sandbags = 12,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/sbeacondrop/combine_turret = 2,
+	)
+
+
+	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+
+/obj/item/sbeacondrop/combine_turret
+	desc = "A label on it reads: <i>Warning: Activating this device will send a combine turret to your location</i>."
+	droptype = /obj/machinery/porta_turret/combine
 ////////////////////// TIER 5 /////////////////////////////////////
 
 /datum/outfit/deployment_loadout/combine/tier5/hunter

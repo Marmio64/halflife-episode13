@@ -127,6 +127,7 @@
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 9,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 	)
 
 	suit = /obj/item/clothing/suit/armor/civilprotection
@@ -225,6 +226,28 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+/datum/outfit/deployment_loadout/rebel/tier3/engineer
+	name = "Deployment: Upgraded Refugee Engineer+"
+	display_name = "Upgraded Refugee Engineer+"
+	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building."
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	head = /obj/item/clothing/head/utility/hardhat/halflife/mining
+
+	backpack_contents = list(
+		/obj/item/crowbar/large = 1,
+		/obj/item/stack/sheet/mineral/sandbags = 10,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/sbeacondrop/rebel_turret = 1,
+	)
+
+	suit = /obj/item/clothing/suit/armor/civilprotection
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
 
 /// TIER 4 ///////////////////////////////////////////////////////////
 
@@ -308,6 +331,34 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+/datum/outfit/deployment_loadout/rebel/tier4/engineer
+	name = "Deployment: Heavy Refugee Engineer"
+	display_name = "Heavy Refugee Engineer"
+	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building."
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	head = /obj/item/clothing/head/utility/hardhat/halflife/mining
+
+	backpack_contents = list(
+		/obj/item/crowbar/large = 1,
+		/obj/item/stack/sheet/mineral/sandbags = 12,
+		/obj/item/sbeacondrop/rebel_turret = 2,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/ammo_box/magazine/usp9mm = 2,
+	)
+
+	suit = /obj/item/clothing/suit/armor/rebel/light
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+/obj/item/sbeacondrop/rebel_turret
+	desc = "A label on it reads: <i>Warning: Activating this device will send a rebel turret to your location</i>."
+	droptype = /obj/machinery/porta_turret/combine/rebel
 
 ///////////// TIER 5 //////////////////////////////////////////
 

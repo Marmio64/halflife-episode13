@@ -1,7 +1,7 @@
 /datum/crafting_recipe/usp
 	name = "USP Match"
 	result = /obj/item/gun/ballistic/automatic/pistol/usp/no_mag
-	reqs = list(/obj/item/stack/sheet/iron = 5,
+	reqs = list(/obj/item/stack/sheet/iron = 3,
 				/obj/item/weaponcrafting/frame/usp = 1,
 				/obj/item/weaponcrafting/receiver = 1,
 				/obj/item/stack/sticky_tape = 1)
@@ -12,7 +12,7 @@
 /datum/crafting_recipe/mosin
 	name = "Mosin-Nagant"
 	result = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
-	reqs = list(/obj/item/stack/sheet/iron = 7,
+	reqs = list(/obj/item/stack/sheet/iron = 5,
 				/obj/item/weaponcrafting/frame/mosin = 1,
 				/obj/item/weaponcrafting/receiver = 1,
 				/obj/item/stack/sticky_tape = 1)
@@ -76,7 +76,7 @@
 /datum/crafting_recipe/revolver
 	name = "Colt Python"
 	result = /obj/item/gun/ballistic/revolver/coltpython
-	reqs = list(/obj/item/stack/sheet/iron = 5,
+	reqs = list(/obj/item/stack/sheet/iron = 3,
 				/obj/item/weaponcrafting/frame/coltpython = 1,
 				/obj/item/weaponcrafting/receiver = 1,
 				/obj/item/stack/sticky_tape = 1)
@@ -98,7 +98,7 @@
 /datum/crafting_recipe/mp7
 	name = "MP7"
 	result = /obj/item/gun/ballistic/automatic/mp7/no_mag
-	reqs = list(/obj/item/stack/sheet/iron = 5,
+	reqs = list(/obj/item/stack/sheet/iron = 3,
 				/obj/item/weaponcrafting/frame/mp7 = 1,
 				/obj/item/weaponcrafting/receiver = 1,
 				/obj/item/stack/sticky_tape = 1)
@@ -132,7 +132,7 @@
 /datum/crafting_recipe/m4a1
 	name = "M4A1"
 	result = /obj/item/gun/ballistic/automatic/m4a1/no_mag
-	reqs = list(/obj/item/stack/sheet/iron = 7,
+	reqs = list(/obj/item/stack/sheet/iron = 5,
 				/obj/item/weaponcrafting/frame/m4a1 = 1,
 				/obj/item/weaponcrafting/receiver = 1,
 				/obj/item/stack/sticky_tape = 2)
@@ -143,7 +143,7 @@
 /datum/crafting_recipe/service
 	name = "Service Rifle"
 	result = /obj/item/gun/ballistic/automatic/servicerifle/no_mag
-	reqs = list(/obj/item/stack/sheet/iron = 7,
+	reqs = list(/obj/item/stack/sheet/iron = 5,
 				/obj/item/weaponcrafting/frame/service = 1,
 				/obj/item/weaponcrafting/receiver = 1,
 				/obj/item/stack/sticky_tape = 2)
@@ -154,7 +154,7 @@
 /datum/crafting_recipe/service/wooden
 	name = "Service Rifle (Wood-Furnished)"
 	result = /obj/item/gun/ballistic/automatic/servicerifle/wood/no_mag
-	reqs = list(/obj/item/stack/sheet/iron = 6,
+	reqs = list(/obj/item/stack/sheet/iron = 4,
 				/obj/item/stack/sheet/mineral/wood = 2,
 				/obj/item/weaponcrafting/frame/service = 1,
 				/obj/item/weaponcrafting/receiver = 1,
@@ -188,7 +188,7 @@
 /datum/crafting_recipe/spas12
 	name = "SPAS12"
 	result = /obj/item/gun/ballistic/shotgun/spas12
-	reqs = list(/obj/item/stack/sheet/iron = 7,
+	reqs = list(/obj/item/stack/sheet/iron = 5,
 				/obj/item/weaponcrafting/frame/spas12 = 1,
 				/obj/item/weaponcrafting/receiver = 1,
 				/obj/item/stack/sticky_tape = 1)
@@ -310,7 +310,7 @@
 	name = "Stun Baton"
 	result = /obj/item/melee/baton/security/loaded
 	reqs = list(
-		/obj/item/stack/sheet/iron = 8,
+		/obj/item/stack/sheet/iron = 6,
 		/obj/item/halflife/combine_battery = 1,
 		/obj/item/circuitmaterial/advanced = 1,
 	)

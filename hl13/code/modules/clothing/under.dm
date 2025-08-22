@@ -146,7 +146,8 @@
 	fused = TRUE
 
 /obj/item/clothing/under/combine/overwatch/wallhammer
-	armor_type = /datum/armor/combinesuit_elite
+	desc = "Full-body suit which includes kevlar weaving to provide extra protection. This one looks tailored for a wallhammer, and is extra resilient."
+	armor_type = /datum/armor/combinesuit_wallhammer
 
 /obj/item/clothing/under/combine/overwatch/red
 	desc = "Red full-body suit which includes kevlar weaving to provide extra protection."
@@ -164,6 +165,16 @@
 	laser = 30
 	energy = 30
 	bomb = 30
+	fire = 90
+	acid = 50
+	wound = 10
+
+/datum/armor/combinesuit_wallhammer
+	melee = 25
+	bullet = 25
+	laser = 30
+	energy = 30
+	bomb = 40
 	fire = 90
 	acid = 50
 	wound = 10
