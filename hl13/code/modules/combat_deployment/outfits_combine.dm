@@ -355,8 +355,8 @@
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier4/medic_cop
-	name = "Deployment: Extra Upgraded Medical Cop"
-	display_name = "Extra Upgraded Medical Cop"
+	name = "Deployment: Heavy Medical Cop"
+	display_name = "Heavy Medical Cop"
 	desc = "A MP7 wielding cop with extra medical supplies."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection

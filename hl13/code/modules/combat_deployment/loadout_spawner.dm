@@ -129,6 +129,7 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/rebel/tier4/ar2_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier4/corporal,
+			/datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt,
 			/datum/outfit/deployment_loadout/rebel/tier4/crossbow,
 			/datum/outfit/deployment_loadout/rebel/tier4/engineer,
