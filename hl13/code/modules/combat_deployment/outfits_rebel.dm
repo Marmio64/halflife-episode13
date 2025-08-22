@@ -292,6 +292,15 @@
 	uniform = /obj/item/clothing/under/syndicate/camo
 	shoes = /obj/item/clothing/shoes/boots
 
+	back = /obj/item/storage/backpack/halflife/satchel/military
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/ammo_box/magazine/m4a1/service = 2,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
 /datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel
 	name = "Deployment: Heavy Rebel Bomber"
 	display_name = "Heavy Rebel Bomber"
