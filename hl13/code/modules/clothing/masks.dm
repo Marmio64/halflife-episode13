@@ -262,8 +262,18 @@
 	unique_death = 'hl13/sound/voice/otavoicelines/die1.ogg'
 
 /obj/item/clothing/mask/gas/civilprotection/overwatch/wallhammer
-	armor_type = /datum/armor/eliteoverwatchmask
+	armor_type = /datum/armor/wallhammeroverwatchmask
 	icon_state = "wallhammer"
+
+/datum/armor/wallhammeroverwatchmask
+	melee = 30
+	bullet = 50
+	laser = 10
+	energy = 10
+	bomb = 50
+	fire = 80
+	acid = 80
+	wound = 15
 
 /obj/item/clothing/mask/gas/civilprotection/overwatch/red
 	icon_state = "overwatch_red"

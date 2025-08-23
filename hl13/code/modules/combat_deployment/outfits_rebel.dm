@@ -15,7 +15,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel
 
 	backpack_contents = list(
-		/obj/item/ammo_box/strilka310/a762 = 2,
+		/obj/item/ammo_box/strilka310/a762 = 3,
 		/obj/item/stack/medical/bandage = 1,
 	)
 
@@ -24,9 +24,10 @@
 /datum/outfit/deployment_loadout/rebel/tier1/molotov_partisan
 	name = "Deployment: Refugee Molotov Partisan"
 	display_name = "Refugee Molotov Partisan"
-	desc = "Armed with molotovs and tinbombs, they provide useful support to allies, but have no armor at all."
+	desc = "Armed with molotovs and tinbombs, they provide useful support to allies."
 
 	uniform = /obj/item/clothing/under/citizen/refugee
+	suit = /obj/item/clothing/suit/armor/armored
 	l_pocket = /obj/item/stack/sheet/halflife/brick
 	r_pocket = /obj/item/flashlight
 
@@ -106,6 +107,7 @@
 	back = /obj/item/storage/backpack/satchel
 
 	backpack_contents = list(
+		/obj/item/ammo_box/magazine/usp9mm = 1,
 		/obj/item/stack/medical/suture = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
@@ -127,6 +129,7 @@
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 9,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 	)
 
 	suit = /obj/item/clothing/suit/armor/civilprotection
@@ -153,7 +156,7 @@
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/mp7 = 3,
+		/obj/item/ammo_box/magazine/mp7 = 4,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
 	)
@@ -225,6 +228,28 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+/datum/outfit/deployment_loadout/rebel/tier3/engineer
+	name = "Deployment: Upgraded Refugee Engineer+"
+	display_name = "Upgraded Refugee Engineer+"
+	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building."
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	head = /obj/item/clothing/head/utility/hardhat/halflife/mining
+
+	backpack_contents = list(
+		/obj/item/crowbar/large = 1,
+		/obj/item/stack/sheet/mineral/sandbags = 10,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/sbeacondrop/rebel_turret = 1,
+	)
+
+	suit = /obj/item/clothing/suit/armor/civilprotection
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
 
 /// TIER 4 ///////////////////////////////////////////////////////////
 
@@ -267,6 +292,38 @@
 	uniform = /obj/item/clothing/under/syndicate/camo
 	shoes = /obj/item/clothing/shoes/boots
 
+	back = /obj/item/storage/backpack/halflife/satchel/military
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/ammo_box/magazine/m4a1/service = 2,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+/datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel
+	name = "Deployment: Heavy Rebel Bomber"
+	display_name = "Heavy Rebel Bomber"
+	desc = "Well armored and equipped with lots of explosives, and armed with an mp7."
+
+	head = /obj/item/clothing/head/helmet/halflife/military
+	uniform = /obj/item/clothing/under/citizen/rebel
+	gloves = /obj/item/clothing/gloves/fingerless
+	suit = /obj/item/clothing/suit/armor/rebel
+	suit_store = /obj/item/gun/ballistic/automatic/mp7
+
+	back = /obj/item/storage/backpack/halflife/satchel/military
+
+	r_pocket = /obj/item/flashlight/seclite
+
+	backpack_contents = list(
+		/obj/item/grenade/syndieminibomb/bouncer = 4,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/ammo_box/magazine/mp7 = 3,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
 /datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt
 	name = "Deployment: Elder Vortigaunt"
 	display_name = "Elder Vortigaunt"
@@ -308,6 +365,34 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+/datum/outfit/deployment_loadout/rebel/tier4/engineer
+	name = "Deployment: Heavy Refugee Engineer"
+	display_name = "Heavy Refugee Engineer"
+	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building."
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	head = /obj/item/clothing/head/utility/hardhat/halflife/mining
+
+	backpack_contents = list(
+		/obj/item/crowbar/large = 1,
+		/obj/item/stack/sheet/mineral/sandbags = 12,
+		/obj/item/sbeacondrop/rebel_turret = 2,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/ammo_box/magazine/usp9mm = 2,
+	)
+
+	suit = /obj/item/clothing/suit/armor/rebel/light
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+/obj/item/sbeacondrop/rebel_turret
+	desc = "A label on it reads: <i>Warning: Activating this device will send a rebel turret to your location</i>."
+	droptype = /obj/machinery/porta_turret/combine/rebel
 
 ///////////// TIER 5 //////////////////////////////////////////
 

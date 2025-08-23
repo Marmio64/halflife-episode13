@@ -103,40 +103,17 @@
 
 /obj/item/shield/wallhammer
 	name = "energy shield"
-	desc = "A combine energy shield that is incredibly good at blocking attacks from the front."
+	desc = "A combine energy shield that is incredibly good at blocking attacks, but leaves you unable to use your pulse shotgun."
 	icon = 'hl13/icons/obj/shields.dmi'
 	lefthand_file = 'hl13/icons/mob/inhands/shields_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/shields_righthand.dmi'
 	icon_state = "wallhammer"
 	inhand_icon_state = "wallhammer"
-	block_chance = 100
+	block_chance = 90
 	slot_flags = 0
 	max_integrity = 150
 	shield_break_leftover = null
 	item_flags = DROPDEL
-
-/obj/item/shield/wallhammer/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK, damage_type = BRUTE)
-	if(!defense_check(owner, hitby.loc))
-		return FALSE
-	. = ..()
-
-/// check to see if the attack is coming from somewhere defendable against
-/obj/item/shield/wallhammer/proc/defense_check(mob/living/carbon/human/owner, turf/aloc)
-	. = FALSE
-	switch(owner.dir)
-		if (1)
-			if(abs(x - aloc.x) <= (y - aloc.y) * -2)
-				. = TRUE
-		if (2)
-			if(abs(x - aloc.x) <= (y - aloc.y) * 2)
-				. = TRUE
-		if (4)
-			if(abs(y - aloc.y) <= (x - aloc.x) * -2)
-				. = TRUE
-		if (8)
-			if(abs(y - aloc.y) <= (x - aloc.x) * 2)
-				. = TRUE
-	return
 
 /obj/item/clothing/suit/armor/overwatch/wallhammer/verb/deploy_shield()
 	set category = "Object"
