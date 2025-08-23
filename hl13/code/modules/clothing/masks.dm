@@ -263,6 +263,7 @@
 
 /obj/item/clothing/mask/gas/civilprotection/overwatch/wallhammer
 	armor_type = /datum/armor/eliteoverwatchmask
+	icon_state = "wallhammer"
 
 /obj/item/clothing/mask/gas/civilprotection/overwatch/red
 	icon_state = "overwatch_red"
