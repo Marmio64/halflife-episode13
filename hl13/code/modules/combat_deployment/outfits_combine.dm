@@ -294,6 +294,7 @@
 	gloves = /obj/item/clothing/gloves/combat/overwatch
 	belt = /obj/item/storage/belt/civilprotection/overwatch/ar2
 	suit_store = /obj/item/gun/ballistic/automatic/ar2
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	ears = /obj/item/radio/headset/headset_sec
@@ -326,7 +327,7 @@
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
 	uniform = /obj/item/clothing/under/combine/overwatch
-	suit = /obj/item/clothing/suit/armor/overwatch
+	suit = /obj/item/clothing/suit/armor/overwatch/deathmatch
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
 	belt = /obj/item/storage/belt/civilprotection/overwatch/sniper

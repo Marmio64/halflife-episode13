@@ -22,6 +22,7 @@
 
 	allowed = list(
 		/obj/item/crowbar,
+		/obj/item/gun,
 		)
 
 	slowdown = -0.25

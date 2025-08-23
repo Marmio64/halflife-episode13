@@ -399,10 +399,11 @@
 /datum/outfit/deployment_loadout/rebel/tier5/freeman
 	name = "Deployment: A Free Man"
 	display_name = "A Free Man"
-	desc = "Well armored and speedy, with a powerful crowbar to boot alongside a non biolocked AR2."
+	desc = "Well armored and speedy, with a powerful crowbar to boot alongside a shotgun."
 
 	uniform = /obj/item/clothing/under/citizen/rebel
 	suit = /obj/item/clothing/suit/hooded/hev/deathmatch/freeman
+	suit_store = /obj/item/gun/ballistic/shotgun/spas12
 	glasses = /obj/item/clothing/glasses/regular/thin
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 	r_pocket = /obj/item/flashlight/seclite
@@ -410,14 +411,13 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/notsupposedtobehere.ogg'
 
+	belt = /obj/item/crowbar/large/freeman
 	back = /obj/item/storage/backpack/halflife/satchel
 
 	backpack_contents = list(
 		/obj/item/grenade/syndieminibomb/bouncer = 2,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
-		/obj/item/ammo_box/magazine/ar2 = 4,
-		/obj/item/gun/ballistic/automatic/ar2/standardpin = 1,
-		/obj/item/crowbar/large/freeman = 1,
+		/obj/item/storage/box/lethalshot/halflife = 3,
 	)
 
 /datum/outfit/deployment_loadout/rebel/tier5/veteran
@@ -440,6 +440,7 @@
 		/obj/item/grenade/syndieminibomb/bouncer = 2,
 		/obj/item/hl13_small_flag/poland/telescopic = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
+		/obj/item/ammo_box/magazine/ak47 = 2,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
