@@ -44,6 +44,7 @@
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/overseer
 	name = "overseer trenchcoat"
+	desc = "A variant of the modified trenchcoat vest dyed with green highlights to broadcast the authority of its wearer."
 	icon_state = "cp_trenchcoatoverseer"
 
 /obj/item/clothing/suit/armor/civilprotection/divisional

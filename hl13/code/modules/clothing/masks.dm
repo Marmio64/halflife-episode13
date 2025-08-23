@@ -263,6 +263,7 @@
 
 /obj/item/clothing/mask/gas/civilprotection/overwatch/wallhammer
 	armor_type = /datum/armor/wallhammeroverwatchmask
+	icon_state = "wallhammer"
 
 /datum/armor/wallhammeroverwatchmask
 	melee = 30
