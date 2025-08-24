@@ -116,3 +116,11 @@
 		if(70 > capacity) //dont allow it to rip you off too much
 			adjust_capacity(40)
 			qdel(I)
+
+/obj/machinery/combine_health_station/self_recharging
+	desc = "A wall mounted healing station. This one can recharge overtime, or be charged with grub nuggets."
+
+/obj/machinery/combine_health_station/self_recharging/process(delta_time)
+	if(capacity < capacity_max)
+		capacity++
+		update_icon_state()
