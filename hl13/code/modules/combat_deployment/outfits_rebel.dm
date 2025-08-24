@@ -179,7 +179,7 @@
 	r_pocket = /obj/item/flashlight/seclite
 
 	backpack_contents = list(
-		/obj/item/grenade/syndieminibomb/bouncer = 4,
+		/obj/item/grenade/syndieminibomb/bouncer = 3,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 	)
@@ -317,7 +317,7 @@
 	r_pocket = /obj/item/flashlight/seclite
 
 	backpack_contents = list(
-		/obj/item/grenade/syndieminibomb/bouncer = 4,
+		/obj/item/grenade/syndieminibomb/bouncer = 3,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/ammo_box/magazine/mp7 = 3,
 	)
