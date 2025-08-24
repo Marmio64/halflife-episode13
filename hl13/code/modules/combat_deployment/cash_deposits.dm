@@ -4,7 +4,7 @@
 	icon = 'hl13/icons/obj/port/objects.dmi'
 	icon_state = "pad_active"
 	anchored = TRUE
-	max_integrity = 9999
+	resistance_flags = INDESTRUCTIBLE
 	var/deployment_faction = NO_FACTION
 
 /obj/machinery/cash_deposit/combine

@@ -34,7 +34,7 @@
 			var/mob/living/carbon/human/H = X
 			SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
 			to_chat(H, "<span class='userdanger'>Our comms tower is taking damage!</span>")
-		last_scream = world.time + 400
+		last_scream = world.time + 200
 
 /obj/machinery/deployment_comms_tower/rebel/take_damage(damage_amount, damage_type = BRUTE, damage_flag = 0, sound_effect = TRUE, attack_dir, armour_penetration = 0)
 	. = ..()
@@ -43,7 +43,7 @@
 			var/mob/living/carbon/human/H = X
 			SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
 			to_chat(H, "<span class='userdanger'>Our comms tower is taking damage!</span>")
-		last_scream = world.time + 400
+		last_scream = world.time + 200
 
 /obj/machinery/deployment_comms_tower/combine/deconstruct(disassembled = TRUE)
 	priority_announce("Combine communication tower destroyed! The rebels have won!", "Lambda Priority Alert")

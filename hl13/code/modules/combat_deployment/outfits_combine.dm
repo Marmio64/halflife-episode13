@@ -79,9 +79,9 @@
 	ears = /obj/item/radio/headset/headset_sec
 
 /datum/outfit/deployment_loadout/combine/tier2/pistol_cop
-	name = "Deployment: Riot Pistol Cop"
+	name = "Deployment: Pistol Cop"
 	display_name = "Riot Pistol Cop"
-	desc = "A riot pistol equipped cop, who can dish out a moderate amount of damage from range."
+	desc = "A pistol equipped cop, who can dish out a moderate amount of damage from range."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
@@ -90,9 +90,9 @@
 	glasses = /obj/item/clothing/glasses/hud/security
 
 	mask = /obj/item/clothing/mask/gas/civilprotection
-	belt = /obj/item/storage/belt/civilprotection/riotfullpistol
+	belt = /obj/item/storage/belt/civilprotection/full
 
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp/riot
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
 
 	ears = /obj/item/radio/headset/headset_sec
 
@@ -150,7 +150,7 @@
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	belt = /obj/item/storage/belt/civilprotection/overwatch/pulsesmg
 
-	r_hand = /obj/item/gun/ballistic/automatic/pulsesmg/standardpin
+	r_hand = /obj/item/gun/ballistic/automatic/pulsesmg
 
 	back = /obj/item/tank/internals/oxygen/grunt
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt
@@ -340,15 +340,15 @@
 /datum/outfit/deployment_loadout/combine/tier4/ordinal
 	name = "Deployment: Combine Ordinal"
 	display_name = "Combine Ordinal"
-	desc = "An OTA soldier upgraded to have an AR2 and an upgraded manhack deployer."
+	desc = "An OTA soldier upgraded to have a pulse SMG and an upgraded manhack deployer."
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
 	uniform = /obj/item/clothing/under/combine/overwatch
 	suit = /obj/item/clothing/suit/armor/overwatch/deathmatch
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
-	belt = /obj/item/storage/belt/civilprotection/overwatch/ar2
-	suit_store = /obj/item/gun/ballistic/automatic/ar2
+	belt = /obj/item/storage/belt/civilprotection/overwatch/pulsesmg
+	suit_store = /obj/item/gun/ballistic/automatic/pulsesmg
 	l_pocket = /obj/item/grenade/spawnergrenade/manhacks/upgraded
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
@@ -358,7 +358,7 @@
 /datum/outfit/deployment_loadout/combine/tier4/medic_cop
 	name = "Deployment: Heavy Medical Cop"
 	display_name = "Heavy Medical Cop"
-	desc = "A MP7 wielding cop with extra medical supplies."
+	desc = "A MP7 wielding cop with plenty of extra medical supplies."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
@@ -380,7 +380,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/medkit = 3,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
 		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
 
