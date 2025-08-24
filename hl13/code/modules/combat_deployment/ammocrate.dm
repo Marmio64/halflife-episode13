@@ -6,7 +6,7 @@
 	anchored = TRUE
 	density = TRUE
 	resistance_flags = INDESTRUCTIBLE
-	var/ammo_amount = 0
+	var/ammo_amount = 3
 	var/ammo_max = 10
 	var/list/vendoptions = list("USP Match", "Mosin", "MP7", "SPAS12", "Colt Python", "Service Rifle", "Pulse SMG", "AK-47", "AR2")
 
