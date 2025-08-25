@@ -38,7 +38,7 @@
 	desc = "An outdated, old bolt-action rifle from long before the war. By some miracle, these things are still prevalent in military surplus stockpiles. Cannot be concealed, but you can fit a bayonet."
 	progression_minimum = 10 MINUTES //if you buy a roundstart mosin to go sport hunting for cops i do quite like you but thats not the best idea
 	item = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
-	cost = 9
+	cost = 8
 
 /datum/uplink_item/dangerous/rebel_turret
 	name = "Hacked Combine Turret"

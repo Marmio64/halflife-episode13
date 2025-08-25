@@ -8,7 +8,7 @@
 	drag_slowdown = 1
 	slowdown = 1
 
-/obj/item/rebel_relay/Initialize(mapload, owner, tc_amount = 5, datum/uplink_handler/uplink_handler_override = null)
+/obj/item/rebel_relay/Initialize(mapload, owner, tc_amount = 10, datum/uplink_handler/uplink_handler_override = null)
 	. = ..()
 	AddComponent(\
 		/datum/component/uplink, \
@@ -16,7 +16,7 @@
 		lockable = FALSE, \
 		enabled = TRUE, \
 		uplink_flag = UPLINK_TRAITORS, \
-		starting_tc = 5, \
+		starting_tc = 10, \
 		uplink_handler_override = uplink_handler_override, \
 	)
 

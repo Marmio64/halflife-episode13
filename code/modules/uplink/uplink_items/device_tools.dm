@@ -124,3 +124,15 @@
 			but as these are becoming more and more a rarity, we cannot afford to give them out cheap."
 	item = /obj/item/food/canned/halflife/beans
 	cost = 4
+
+/datum/uplink_item/device_tools/receiver
+	name = "Firearm Receiver"
+	desc = "Need a receiver for making a firearm, but can't find one? This'll solve your problem, at a cost."
+	item = /obj/item/weaponcrafting/receiver
+	cost = 2
+
+/datum/uplink_item/device_tools/sticky_tape
+	name = "Sticky Tape Roll"
+	desc = "A roll of sticky tape for crafting with, for if you can't find any yourself."
+	item = /obj/item/stack/sticky_tape
+	cost = 3

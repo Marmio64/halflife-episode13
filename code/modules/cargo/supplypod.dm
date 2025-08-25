@@ -81,7 +81,7 @@
 	return ..()
 
 /obj/structure/closet/supplypod/extractionpod
-	name = "LAmbda Extraction Pod"
+	name = "Lambda Extraction Pod"
 	desc = "A specalised, blood-red styled pod for extracting high-value targets out of active mission areas. <b>Targets must be manually stuffed inside the pod for proper delivery.</b>"
 	specialised = TRUE
 	style = /datum/pod_style/syndicate
