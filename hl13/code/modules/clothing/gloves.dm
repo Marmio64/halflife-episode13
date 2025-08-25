@@ -19,6 +19,7 @@
 /datum/armor/combine_gloveshoes
 	melee = 10
 	bullet = 10
+	bomb = 10
 
 /obj/item/clothing/gloves/color/civilprotection/grunt
 	icon_state = "grunt"

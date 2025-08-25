@@ -148,6 +148,7 @@
 /obj/item/clothing/under/combine/overwatch/wallhammer
 	desc = "Full-body suit which includes kevlar weaving to provide extra protection. This one looks tailored for a wallhammer, and is extra resilient."
 	armor_type = /datum/armor/combinesuit_wallhammer
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 
 /obj/item/clothing/under/combine/overwatch/red
 	desc = "Red full-body suit which includes kevlar weaving to provide extra protection."
@@ -178,7 +179,7 @@
 	bullet = 25
 	laser = 30
 	energy = 30
-	bomb = 50
+	bomb = 60
 	fire = 90
 	acid = 50
 	wound = 10

@@ -415,6 +415,20 @@
 /obj/item/sbeacondrop/combine_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a combine turret to your location</i>."
 	droptype = /obj/machinery/porta_turret/combine
+
+/datum/outfit/deployment_loadout/combine/tier4/scanner
+	name = "Deployment: Cannister Targeter City Scanner"
+	display_name = "Cannister Targeter City Scanner"
+	desc = "A city scanner that is capable of directing head crab cannister strikes past enemy fortifications."
+	uniform = null
+	shoes = null
+
+/datum/outfit/deployment_loadout/combine/tier4/scanner/post_equip(mob/living/carbon/human/H)
+	var/datum/mind/player_mind = H.mind
+	var/mob/living/silicon/robot/cityscanner/cannister_targeter/S = new (H.loc)
+	player_mind.transfer_to(S)
+	qdel(H)
+
 ////////////////////// TIER 5 /////////////////////////////////////
 
 /datum/outfit/deployment_loadout/combine/tier5/hunter

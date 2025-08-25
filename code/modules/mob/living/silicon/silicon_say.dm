@@ -1,7 +1,7 @@
 /mob/living/proc/robot_talk(message)
 	log_talk(message, LOG_SAY, tag="binary")
 
-	var/designation = "Default Cyborg"
+	var/designation = "Scanner"
 	var/spans = list(SPAN_ROBOT)
 
 	if(issilicon(src))
