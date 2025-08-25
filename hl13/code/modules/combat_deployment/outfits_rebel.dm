@@ -58,7 +58,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 7,
+		/obj/item/stack/sheet/mineral/sandbags = 9,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -128,7 +128,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 9,
+		/obj/item/stack/sheet/mineral/sandbags = 11,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 	)
 
@@ -241,7 +241,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 10,
+		/obj/item/stack/sheet/mineral/sandbags = 12,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 		/obj/item/sbeacondrop/rebel_turret = 1,
 	)
@@ -441,6 +441,32 @@
 		/obj/item/hl13_small_flag/poland/telescopic = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
 		/obj/item/ammo_box/magazine/ak47 = 2,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
+
+///downgrades from an ak47 to a service rifle with 2 less mags and 1 less healthpen, in exchange for two extra grenades and another C4.
+/datum/outfit/deployment_loadout/rebel/tier5/super_bomber
+	name = "Deployment: Super Heavy Bomber"
+	display_name = "Super Heavy Bomber"
+	desc = "Ultra heavily armored with a ton of explosive weaponry."
+
+	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
+	mask = /obj/item/clothing/mask/gas/hl2/military
+	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran
+	uniform = /obj/item/clothing/under/syndicate/camo
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
+	gloves = /obj/item/clothing/gloves/combat
+	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
+	back = /obj/item/storage/backpack/duffelbag/halflife
+	r_pocket = /obj/item/flashlight/seclite
+	shoes = /obj/item/clothing/shoes/boots
+	backpack_contents = list(
+		/obj/item/grenade/c4 = 2,
+		/obj/item/grenade/syndieminibomb/bouncer = 4,
+		/obj/item/hl13_small_flag/poland/telescopic = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment

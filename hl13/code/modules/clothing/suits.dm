@@ -82,6 +82,12 @@
 /obj/item/clothing/suit/armor/overwatch/deathmatch
 	slowdown = 0.33
 
+/obj/item/clothing/suit/armor/overwatch/assassin
+	name = "assassin chestpiece"
+	desc = "An extremely advanced piece of chest protection that is very lightweight and very protective. Often issued to elite combine assassins."
+	icon_state = "assassin"
+	slowdown = -0.5
+
 /obj/item/clothing/suit/armor/overwatch/wallhammer
 	name = "overwatch wallhammer chestpiece"
 	desc = "A reinforced version of the standard overwatch chestpiece with heavy pauldrons and thighpads."

@@ -67,8 +67,12 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 		chosen = /obj/item/hl2/loadout_picker/combine/tier1
 
 	if(DEPLOYMENT_TIER5_COMBINE <= GLOB.deployment_combine_cash)
-		if(prob(DEPLOYMENT_TIER5_CHANCE))
-			chosen = /obj/item/hl2/loadout_picker/combine/tier5
+		if(DEPLOYMENT_TIER5_EXTRA_CHANCE_COMBINE <= GLOB.deployment_combine_cash)
+			if(prob(DEPLOYMENT_TIER5_CHANCE))
+				chosen = /obj/item/hl2/loadout_picker/combine/tier5
+		else
+			if(prob(DEPLOYMENT_TIER5_EXTRA_CHANCE))
+				chosen = /obj/item/hl2/loadout_picker/combine/tier5
 
 	if(chosen)
 		var/turf/T = get_turf(user)

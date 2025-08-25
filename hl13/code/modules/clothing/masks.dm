@@ -270,7 +270,7 @@
 	bullet = 50
 	laser = 10
 	energy = 10
-	bomb = 50
+	bomb = 60
 	fire = 80
 	acid = 80
 	wound = 15

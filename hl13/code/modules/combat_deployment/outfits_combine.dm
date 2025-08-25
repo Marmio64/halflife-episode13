@@ -50,7 +50,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 6,
+		/obj/item/stack/sheet/mineral/sandbags = 8,
 	)
 
 
@@ -133,7 +133,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 8,
+		/obj/item/stack/sheet/mineral/sandbags = 10,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)
 
@@ -270,7 +270,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 9,
+		/obj/item/stack/sheet/mineral/sandbags = 11,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 		/obj/item/sbeacondrop/combine_turret = 1,
 	)
@@ -447,3 +447,25 @@
 
 	ears = /obj/item/radio/headset/headset_sec
 	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
+
+/datum/outfit/deployment_loadout/combine/tier5/assassin
+	name = "Deployment: Combine Assassin"
+	display_name = "Combine Assassin"
+	desc = "A highly mobile expert on stealth, who can partially conceal themselves and carries a very deadly knife alongside two extended mag USP Matches and a sniper rifle."
+	glasses = /obj/item/clothing/glasses/hud/security/night/combine
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/elite
+	uniform = /obj/item/clothing/under/combine/overwatch/assassin
+	suit = /obj/item/clothing/suit/armor/overwatch/assassin
+	suit_store = /obj/item/gun/ballistic/combine_sniper
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/assassin
+	gloves = /obj/item/clothing/gloves/combat/overwatch
+	belt = /obj/item/storage/belt/civilprotection/overwatch/assassin
+
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp/extended
+	r_pocket = /obj/item/gun/ballistic/automatic/pistol/usp/extended
+
+	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/lgorbifold.ogg'
+
+/datum/outfit/deployment_loadout/combine/tier5/assassin/post_equip(mob/living/carbon/human/H)
+	H.alpha = 135 //moderate amount of transparency

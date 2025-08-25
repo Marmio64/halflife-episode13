@@ -153,6 +153,10 @@
 	desc = "Red full-body suit which includes kevlar weaving to provide extra protection."
 	icon_state = "overwatch_red"
 
+/obj/item/clothing/under/combine/overwatch/assassin
+	desc = "White and grey full-body suit which includes kevlar weaving to provide extra protection."
+	icon_state = "assassin"
+
 /obj/item/clothing/under/combine/overwatch/elite
 	name = "overwatch jumpsuit"
 	desc = "Full-body reinforced suit which includes kevlar weaving to provide extra protection."
@@ -174,7 +178,7 @@
 	bullet = 25
 	laser = 30
 	energy = 30
-	bomb = 40
+	bomb = 50
 	fire = 90
 	acid = 50
 	wound = 10

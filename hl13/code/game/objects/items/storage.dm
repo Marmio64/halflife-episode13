@@ -201,6 +201,16 @@
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/overwatch/assassin/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm/extended, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm/extended, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/combine_sniper, src)
+	SSwardrobe.provide_type(/obj/item/knife/combat/deployment, src)
+	update_appearance(UPDATE_ICON)
+
 
 /obj/item/storage/backpack/halflife
 	icon = 'hl13/icons/obj/clothing/backpack.dmi'

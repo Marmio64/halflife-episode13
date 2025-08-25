@@ -44,8 +44,12 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 		chosen = /obj/item/hl2/loadout_picker/rebel/tier1
 
 	if(DEPLOYMENT_TIER5_REBELS <= GLOB.deployment_rebels_cash)
-		if(prob(DEPLOYMENT_TIER5_CHANCE))
-			chosen = /obj/item/hl2/loadout_picker/rebel/tier5
+		if(DEPLOYMENT_TIER5_EXTRA_CHANCE_REBELS <= GLOB.deployment_rebels_cash)
+			if(prob(DEPLOYMENT_TIER5_CHANCE))
+				chosen = /obj/item/hl2/loadout_picker/rebel/tier5
+		else
+			if(prob(DEPLOYMENT_TIER5_EXTRA_CHANCE))
+				chosen = /obj/item/hl2/loadout_picker/rebel/tier5
 
 	if(chosen)
 		var/turf/T = get_turf(H)

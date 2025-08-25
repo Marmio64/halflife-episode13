@@ -191,7 +191,7 @@
 
 	fire_sound_volume = 60
 	vary_fire_sound = FALSE
-	spread = 5 //very accurate
+	spread = 0 //very accurate
 	force = 15
 	recoil = 4
 	weapon_weight = WEAPON_HEAVY
@@ -248,6 +248,9 @@
 
 /obj/item/gun/ballistic/automatic/pistol/usp/no_mag
 	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/pistol/usp/extended
+	spawn_magazine_type = /obj/item/ammo_box/magazine/usp9mm/extended
 
 /obj/item/gun/ballistic/automatic/pistol/usp/riot
 	spawn_magazine_type = /obj/item/ammo_box/magazine/usp9mm/rubber
@@ -538,6 +541,8 @@
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/mosin
 	can_jam = TRUE
+	jamming_chance = 10
+	unjam_chance = 15
 	projectile_damage_multiplier = 1.3
 	spread = 5 //it has a stock
 	recoil = 0.5 //probably the only gun in the game other than M4A1 and service rifle with a real stock

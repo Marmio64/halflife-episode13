@@ -135,6 +135,11 @@
 	can_parry = TRUE //hl13 edit
 	wdefense = 1 //hl13 edit
 
+/obj/item/knife/combat/deployment
+	force = 30
+	armour_penetration = 40
+	wdefense = 3
+
 /datum/embed_data/combat_knife
 	pain_mult = 4
 	embed_chance = 65

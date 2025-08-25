@@ -10,6 +10,11 @@
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	multiple_sprite_use_base = TRUE
 
+/obj/item/ammo_box/magazine/usp9mm/extended
+	name = "extended pistol magazine (9mm)"
+	desc = "A 25-round 9mm magazine designed for the USP Match pistol."
+	max_ammo = 25
+
 /obj/item/ammo_box/magazine/usp9mm/rubber
 	name = "pistol magazine (9mm rubber)"
 	desc = "A 15-round 9mm magazine designed for the USP Match pistol. This one is designed to fill with rubber rounds."
