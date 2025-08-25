@@ -410,7 +410,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/notsupposedtobehere.ogg'
 
-	belt = /obj/item/crowbar/large/freeman
+	belt = /obj/item/crowbar/large/freeman/extreme
 	back = /obj/item/storage/backpack/halflife/satchel
 
 	backpack_contents = list(

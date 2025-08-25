@@ -59,6 +59,12 @@
 /obj/structure/halflife/road_barrier,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city)
+"dl" = (
+/obj/structure/halflife/road_barrier{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "eP" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/outdoors/deployment_city)
@@ -67,11 +73,9 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "fa" = (
-/obj/structure/halflife/road_barrier{
-	dir = 1
-	},
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city)
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "ff" = (
 /obj/machinery/door/airlock/highsecurity/combine,
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -164,10 +168,6 @@
 /obj/item/reagent_containers/pill/patch/grubnugget,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
-"jJ" = (
-/obj/structure/extinguisher_cabinet/directional/north,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/combat_deployment/rebel_base)
 "jR" = (
 /obj/machinery/telecomms/broadcaster/preset_left/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
@@ -175,14 +175,6 @@
 "kb" = (
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city)
-"kh" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/halflife/combine_battery,
-/obj/item/halflife/combine_battery,
-/obj/item/halflife/combine_battery,
-/obj/item/halflife/combine_battery,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/halflife/indoors/combat_deployment/combine_base)
 "kj" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/reagent_containers/pill/patch/grubnugget,
@@ -234,12 +226,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
-"mg" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/storage/box/rxglasses,
-/obj/item/storage/box/rxglasses,
-/turf/open/floor/plating/indoor/concrete/small,
-/area/halflife/indoors/combat_deployment/rebel_base)
 "mj" = (
 /obj/structure/spawner/halflife/antlion/small/worker,
 /turf/open/floor/plating/ground/brickroad,
@@ -268,10 +254,6 @@
 /obj/effect/landmark/observer_start,
 /obj/machinery/turnstile/brig/halflife/forcefield/armory/nodirectional,
 /turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/deployment_city)
-"nc" = (
-/obj/structure/halflife/road_barrier,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
 "no" = (
 /turf/open/floor/plating/indoor/concrete/small,
@@ -353,12 +335,6 @@
 /obj/structure/halflife/cone,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city)
-"rj" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/storage/box/rxglasses,
-/obj/item/storage/box/rxglasses,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/halflife/indoors/combat_deployment/combine_base)
 "rn" = (
 /obj/structure/table/halflife/no_smooth/large/metal,
 /obj/item/halflife/nutrient_bar_wrapping/beef,
@@ -437,9 +413,6 @@
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
-"uP" = (
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/indoors/combat_deployment/rebel_base)
 "vt" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/stack/bulletcasings{
@@ -506,6 +479,10 @@
 /obj/machinery/ammo_crate,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"zC" = (
+/obj/structure/halflife/road_barrier,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "zJ" = (
 /obj/structure/chair/sofa/hl13bench{
 	dir = 1
@@ -572,10 +549,6 @@
 /obj/effect/landmark/deployments_refugee,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"CC" = (
-/obj/structure/extinguisher_cabinet/directional/north,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
 "Du" = (
 /obj/structure/sign/poster/halflife/combine/four{
 	pixel_y = 32
@@ -636,9 +609,19 @@
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city)
+"GD" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/storage/box/rxglasses,
+/obj/item/storage/box/rxglasses,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "GQ" = (
 /obj/machinery/cash_deposit/rebel,
 /turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/combat_deployment/rebel_base)
+"GT" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "GW" = (
 /obj/structure/table/halflife/no_smooth/large/metal,
@@ -663,9 +646,6 @@
 	pixel_y = 30
 	},
 /turf/open/floor/plating/indoor/metal/combine,
-/area/halflife/indoors/combat_deployment/combine_base)
-"Hq" = (
-/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors/combat_deployment/combine_base)
 "Ii" = (
 /obj/structure/bed/halflife/bedframe/wire,
@@ -880,6 +860,20 @@
 /obj/item/reagent_containers/cup/glass/waterbottle/large,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"Ql" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/halflife/combine_battery,
+/obj/item/halflife/combine_battery,
+/obj/item/halflife/combine_battery,
+/obj/item/halflife/combine_battery,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/combat_deployment/combine_base)
+"Qn" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/storage/box/rxglasses,
+/obj/item/storage/box/rxglasses,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/combat_deployment/combine_base)
 "Qo" = (
 /obj/modular_map_root/deploymentnorth,
 /obj/machinery/power/halflife/streetlamphalt,
@@ -7445,7 +7439,7 @@ nv
 nv
 nv
 nv
-Hq
+Cp
 Cp
 Cp
 Cp
@@ -7539,7 +7533,7 @@ Cp
 Cp
 Cp
 Cp
-uP
+Cp
 rv
 rv
 rv
@@ -8292,7 +8286,7 @@ tS
 tS
 tS
 tS
-fa
+dl
 tS
 tS
 tS
@@ -8315,7 +8309,7 @@ tS
 tS
 tS
 tS
-nc
+zC
 tS
 tS
 tS
@@ -8514,7 +8508,7 @@ Li
 UI
 vO
 nv
-CC
+fa
 tq
 tq
 tq
@@ -8522,8 +8516,8 @@ nv
 yX
 FQ
 rz
-rj
-kh
+Qn
+Ql
 nv
 nv
 Cp
@@ -8626,9 +8620,9 @@ Mp
 om
 EN
 ax
-mg
+GD
 rv
-jJ
+GT
 ns
 ns
 rv
@@ -9864,7 +9858,7 @@ UI
 Iu
 Ii
 nv
-CC
+fa
 tq
 tq
 tq
@@ -9978,7 +9972,7 @@ no
 BS
 GZ
 rv
-jJ
+GT
 ns
 ns
 rv
@@ -10182,7 +10176,7 @@ tS
 tS
 tS
 tS
-fa
+dl
 tS
 tS
 tS
@@ -10205,7 +10199,7 @@ tS
 tS
 tS
 tS
-nc
+zC
 tS
 tS
 tS
