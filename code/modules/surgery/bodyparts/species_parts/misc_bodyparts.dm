@@ -669,6 +669,27 @@
 	special_footstep_sounds = list(list('hl13/sound/movement/vort/vort_foot1.ogg' = 1, 'hl13/sound/movement/vort/vort_foot2.ogg' = 1, 'hl13/sound/movement/vort/vort_foot3.ogg' = 1, 'hl13/sound/movement/vort/vort_foot4.ogg' = 1), 25, 0)
 	should_draw_greyscale = FALSE
 
+///vortigaunt
+/obj/item/bodypart/head/vortigaunt/extract
+	limb_id = SPECIES_VORTIGAUNT_EXTRACT
+	icon_state = "vortigaunt_purple_head"
+
+/obj/item/bodypart/chest/vortigaunt/extract
+	limb_id = SPECIES_VORTIGAUNT_EXTRACT
+	icon_state = "vortigaunt_purple_chest"
+
+/obj/item/bodypart/arm/left/vortigaunt/extract
+	limb_id = SPECIES_VORTIGAUNT_EXTRACT
+
+/obj/item/bodypart/arm/right/vortigaunt/extract
+	limb_id = SPECIES_VORTIGAUNT_EXTRACT
+
+/obj/item/bodypart/leg/left/vortigaunt/extract
+	limb_id = SPECIES_VORTIGAUNT_EXTRACT
+
+/obj/item/bodypart/leg/right/vortigaunt/extract
+	limb_id = SPECIES_VORTIGAUNT_EXTRACT
+
 ///stalker
 /obj/item/bodypart/head/stalker
 	limb_id = SPECIES_STALKER

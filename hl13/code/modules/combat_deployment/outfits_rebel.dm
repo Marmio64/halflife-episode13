@@ -9,7 +9,6 @@
 	uniform = /obj/item/clothing/under/citizen/refugee
 	suit = /obj/item/clothing/suit/armor/armored
 	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
-	l_pocket = /obj/item/stack/sheet/halflife/brick
 	r_pocket = /obj/item/flashlight
 
 	back = /obj/item/storage/backpack/halflife/satchel
@@ -463,7 +462,7 @@
 	r_pocket = /obj/item/flashlight/seclite
 	shoes = /obj/item/clothing/shoes/boots
 	backpack_contents = list(
-		/obj/item/grenade/c4 = 2,
+		/obj/item/grenade/c4 = 3,
 		/obj/item/grenade/syndieminibomb/bouncer = 4,
 		/obj/item/hl13_small_flag/poland/telescopic = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
@@ -471,3 +470,16 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
+
+/datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt
+	name = "Deployment: Extract Empowered Vortigaunt"
+	display_name = "Extract Empowered Vortigaunt"
+	desc = "Unleash vortal energy upon foes. You're a wizard, vorty!"
+	uniform = null
+	shoes = null
+
+	ears = /obj/item/radio/headset/rebel_deployment
+	combat_music = 'hl13/sound/music/combat/vortalcombat.ogg'
+
+/datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt/pre_equip(mob/living/carbon/human/H)
+	H.set_species(/datum/species/vortigaunt/extract)

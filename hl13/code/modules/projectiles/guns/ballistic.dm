@@ -530,6 +530,7 @@
 /obj/item/ammo_box/magazine/internal/boltaction/mosin/start_empty
 	start_empty = TRUE
 
+/// Aprox 32 damage a shot, 4 shots to crit, can crit in as fast as ~1.8 seconds assuming it doesn't jam (though it is statistically likely to do so)
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
 	name = "mosin-nagant rifle"
 	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. Slightly moist."
@@ -541,8 +542,8 @@
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/mosin
 	can_jam = TRUE
-	jamming_chance = 10
-	unjam_chance = 15
+	jamming_increment = 0
+	jamming_chance = 25
 	projectile_damage_multiplier = 1.3
 	spread = 5 //it has a stock
 	recoil = 0.5 //probably the only gun in the game other than M4A1 and service rifle with a real stock

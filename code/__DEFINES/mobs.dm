@@ -143,6 +143,7 @@
 #define SPECIES_VOIDWALKER "voidwalker"
 #define SPECIES_VORTIGAUNT "vortigaunt"
 #define SPECIES_VORTIGAUNT_ELDER "eldervortigaunt"
+#define SPECIES_VORTIGAUNT_EXTRACT "vortigaunt_purple"
 #define SPECIES_STALKER "stalker"
 #define SPECIES_SYNTHHUMAN "synthhuman"
 

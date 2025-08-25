@@ -146,6 +146,7 @@
 			/datum/outfit/deployment_loadout/rebel/tier5/freeman,
 			/datum/outfit/deployment_loadout/rebel/tier5/veteran,
 			/datum/outfit/deployment_loadout/rebel/tier5/super_bomber,
+			/datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

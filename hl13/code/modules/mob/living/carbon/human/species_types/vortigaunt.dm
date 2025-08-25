@@ -107,3 +107,44 @@
 	liked_foodtypes = MEAT | XEN
 	disliked_foodtypes = CLOTH | GROSS
 	unpleasant_foodtypes = GORE | GRAIN
+
+/datum/species/vortigaunt/extract
+	name = "Extract Empowered Vortigaunt"
+	id = SPECIES_VORTIGAUNT_ELDER
+	damage_modifier = 50
+
+	bodypart_overrides = list(
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/vortigaunt/extract,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/vortigaunt/extract,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/vortigaunt/extract,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/vortigaunt/extract,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/vortigaunt/extract,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/vortigaunt/extract,
+	)
+
+	var/datum/action/cooldown/spell/aoe/repulse/wizard/vort/vortrepulse
+	var/datum/action/cooldown/spell/forcewall/vort/vortwall
+	var/datum/action/cooldown/spell/touch/vort_heal/empowered/super_vortheal
+
+/datum/species/vortigaunt/extract/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+	. = ..()
+
+	vortrepulse = new(C)
+	vortrepulse.Grant(C)
+
+	vortwall = new(C)
+	vortwall.Grant(C)
+
+	galunga = new(C) //double the blasting
+	galunga.Grant(C)
+
+	vortheal.Remove(C) //you get an upgraded one
+
+	super_vortheal = new(C) //lots of healing!
+	super_vortheal.Grant(C)
+
+/datum/species/vortigaunt/extract/on_species_loss(mob/living/carbon/C)
+	..()
+	vortrepulse.Remove(C)
+	vortwall.Remove(C)
+	super_vortheal.Remove(C)

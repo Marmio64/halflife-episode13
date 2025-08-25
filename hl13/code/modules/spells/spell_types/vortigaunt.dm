@@ -68,6 +68,12 @@
 	hand_path = /obj/item/melee/touch_attack/vort_heal
 
 	can_cast_on_self = TRUE
+	var/heal_rate = -30
+
+/datum/action/cooldown/spell/touch/vort_heal/empowered
+	name = "Empowered Mend"
+
+	heal_rate = -50
 
 /obj/item/melee/touch_attack/vort_heal
 	name = "Mending Hand"
@@ -76,7 +82,7 @@
 	inhand_icon_state = "vort"
 
 /datum/action/cooldown/spell/touch/vort_heal/cast_on_hand_hit(obj/item/melee/touch_attack/hand, mob/living/victim, mob/living/carbon/caster)
-	var/healing_amount = -30
+	var/healing_amount = heal_rate
 	playsound(caster, 'hl13/sound/weapons/attack_shoot.ogg', 50, TRUE)
 	if(victim == caster)
 		healing_amount *= 0.5 //you heal yourself half as fast
