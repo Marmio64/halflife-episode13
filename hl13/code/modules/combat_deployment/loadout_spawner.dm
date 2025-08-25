@@ -89,6 +89,7 @@
 			/datum/outfit/deployment_loadout/rebel/tier1/mosin_partisan,
 			/datum/outfit/deployment_loadout/rebel/tier1/molotov_partisan,
 			/datum/outfit/deployment_loadout/rebel/tier1/engineer,
+			/datum/outfit/deployment_loadout/rebel/tier1/smuggler,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -102,6 +103,7 @@
 			/datum/outfit/deployment_loadout/rebel/tier2/pistol_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier2/medic_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier2/engineer,
+			/datum/outfit/deployment_loadout/rebel/tier2/smuggler,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

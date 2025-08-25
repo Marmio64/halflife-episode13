@@ -62,6 +62,26 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+/datum/outfit/deployment_loadout/rebel/tier1/smuggler
+	name = "Deployment: Refugee Smuggler"
+	display_name = "Refugee Smuggler"
+	desc = "You move faster, but actually take increased damage from all sources, and only have a measly makeshift pistol to defend yourself with."
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	r_pocket = /obj/item/flashlight
+
+	suit = /obj/item/clothing/suit/armor/browncoat/deployment
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	head = /obj/item/clothing/head/beanie/black
+
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/makeshift = 1,
+		/obj/item/ammo_box/magazine/makeshift9mm = 1,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
 /// TIER 2 ////////////////////////////////////////////////////////
 
 /datum/outfit/deployment_loadout/rebel/tier2/pistol_rebel
@@ -135,6 +155,27 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+/datum/outfit/deployment_loadout/rebel/tier2/smuggler
+	name = "Deployment: Upgraded Smuggler"
+	display_name = "Upgraded Smuggler"
+	desc = "You move faster, but actually take increased damage from all sources, and only have a measly makeshift pistol to defend yourself with."
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	r_pocket = /obj/item/flashlight
+
+	suit = /obj/item/clothing/suit/armor/browncoat/deployment
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	head = /obj/item/clothing/head/beanie/black
+
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/makeshift = 1,
+		/obj/item/ammo_box/magazine/makeshift9mm = 2,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
 /// TIER 3 //////////////////////////////////////////////////////////
 
 /datum/outfit/deployment_loadout/rebel/tier3/mp7_rebel
@@ -197,6 +238,7 @@
 
 /datum/outfit/deployment_loadout/rebel/tier3/vortigaunt/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/vortigaunt)
+	H.cmode_music = combat_music
 
 /datum/outfit/deployment_loadout/rebel/tier3/crossbow
 	name = "Deployment: Crossbow Rebel"
@@ -317,7 +359,7 @@
 
 	backpack_contents = list(
 		/obj/item/grenade/syndieminibomb/bouncer = 3,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 		/obj/item/ammo_box/magazine/mp7 = 3,
 	)
 
@@ -335,6 +377,7 @@
 
 /datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/vortigaunt/elder)
+	H.cmode_music = combat_music
 
 /datum/outfit/deployment_loadout/rebel/tier4/crossbow
 	name = "Deployment: Heavy Crossbow Rebel"
@@ -426,7 +469,7 @@
 
 	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
 	mask = /obj/item/clothing/mask/gas/hl2/military
-	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran
+	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran/deployment
 	uniform = /obj/item/clothing/under/syndicate/camo
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
 	gloves = /obj/item/clothing/gloves/combat
@@ -453,7 +496,7 @@
 
 	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
 	mask = /obj/item/clothing/mask/gas/hl2/military
-	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran
+	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran/deployment
 	uniform = /obj/item/clothing/under/syndicate/camo
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
 	gloves = /obj/item/clothing/gloves/combat
@@ -465,7 +508,7 @@
 		/obj/item/grenade/c4 = 3,
 		/obj/item/grenade/syndieminibomb/bouncer = 4,
 		/obj/item/hl13_small_flag/poland/telescopic = 1,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -483,3 +526,4 @@
 
 /datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/vortigaunt/extract)
+	H.cmode_music = combat_music

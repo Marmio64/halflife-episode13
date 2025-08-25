@@ -297,6 +297,11 @@
 /obj/item/clothing/suit/armor/browncoat/deathmatch
 	slowdown = -0.66
 
+/obj/item/clothing/suit/armor/browncoat/deployment
+	slowdown = -0.5
+	armor_type = /datum/armor/paddedjacket/weak
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS|HEAD
+
 /datum/armor/paddedjacket
 	melee = 10
 	bullet = 10
@@ -307,6 +312,13 @@
 	fire = 20
 	acid = 20
 	wound = 0
+
+/datum/armor/paddedjacket/weak
+	melee = -30
+	bullet = -30
+	laser = -30
+	energy = -30
+	bomb = -30
 
 /obj/item/clothing/suit/bluejacket
 	name = "blue citizen jacket"
@@ -516,6 +528,9 @@
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS //full-body EOD suit
 	limb_integrity = 450
 	repairable_by = /obj/item/stack/kevlar
+
+/obj/item/clothing/suit/armor/halflife/plf_veteran/deployment
+	slowdown = 1 //to be slightly faster than a wallhammer so long as dufflebag is zipped up
 
 /datum/armor/plf_veteran
 	melee = 60 //bulky EOD suit
