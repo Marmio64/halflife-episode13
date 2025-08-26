@@ -507,7 +507,7 @@
 	display_name = "PLF Radio Operator"
 	desc = "You are not a particularly well armed or armored soldier, but your greatest strength is the targeter inside your radio pack. You can use it to send up to two missiles which while slow to send, are excellent bunker busters."
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
-	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
+	mask = /obj/item/clothing/mask/gas/hl2/military
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/revolver
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
 	l_pocket = /obj/item/knife/combat/survival
