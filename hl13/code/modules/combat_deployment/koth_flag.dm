@@ -13,8 +13,8 @@ GLOBAL_VAR_INIT(deployment_combine_flag_time_left, 5 MINUTES)
 	pixel_x = -32
 	plane = -2
 
-	light_range = 5
-	light_power = 1
+	light_range = 7
+	light_power = 1.1
 	light_color = "#658cac"
 	var/current_faction_holder = NO_FACTION
 

@@ -12,6 +12,11 @@
 	light_range = 5
 	light_power = 1
 	light_color = "#658cac"
+	armor_type = /datum/armor/deployment_comms_tower
+
+/datum/armor/deployment_comms_tower
+	melee = -20 //the tower is generally surrounded by sandbags, so slight reward for being able to get so close.
+	bomb = 30 //bombings are just slightly too strong
 
 /obj/machinery/deployment_comms_tower/combine
 	name = "Combine Comms Tower"
