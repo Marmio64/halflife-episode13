@@ -80,6 +80,9 @@
 	idle_sounds = list('hl13/sound/creatures/zombinesound1.ogg', 'hl13/sound/creatures/zombinesound2.ogg', 'hl13/sound/creatures/zombinesound3.ogg', 'hl13/sound/creatures/zombinesound4.ogg')
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombine
 
+/mob/living/basic/halflife/zombie/zombine/slow
+	speed = 2
+
 /mob/living/basic/halflife/zombie/zombine/elite
 	name = "Elite Zombine"
 	desc = "A shambling combine soldier, taken over by a parasitic head crab. Capable of running and is equipped with heavy elite combine armor."
@@ -354,6 +357,9 @@
 	idle_sounds = list('hl13/sound/creatures/poison/pz_breathe_loop1.ogg')
 	sound_vary = FALSE
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/poisonzombie
+
+/mob/living/basic/halflife/zombie/poison/slow
+	speed = 2
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/poison/proc/get_innate_abilities()

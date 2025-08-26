@@ -341,7 +341,7 @@
 
 /// Returns a list of strings that correspond to chat messages sent to this mob when they join the round.
 /datum/job/proc/get_spawn_message_information()
-	SHOULD_CALL_PARENT(TRUE)
+	//SHOULD_CALL_PARENT(TRUE)
 	var/list/info = list()
 	info += "<b>You are the [title].</b>\n"
 	var/related_policy = get_policy(policy_override || title)

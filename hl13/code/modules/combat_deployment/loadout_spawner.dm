@@ -232,3 +232,57 @@
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
+
+///////////////////////////// ZOMBIE LOADOUT PICKERS //////////////////////////////////////////////////////
+
+/obj/item/hl2/loadout_picker/zombie
+	faction_belonging = ZOMBIE_DEPLOYMENT_FACTION
+
+/obj/item/hl2/loadout_picker/zombie/tier1/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/outfit/deployment_loadout/zombie/tier1/headcrab,
+			/datum/outfit/deployment_loadout/zombie/tier1/fast_headcrab,
+		)
+		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.display_name)] = loadout
+	return loadouts
+
+/obj/item/hl2/loadout_picker/zombie/tier2/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/outfit/deployment_loadout/zombie/tier2/poison_headcrab,
+			/datum/outfit/deployment_loadout/zombie/tier2/zombie,
+		)
+		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.display_name)] = loadout
+	return loadouts
+
+/obj/item/hl2/loadout_picker/zombie/tier3/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/outfit/deployment_loadout/zombie/tier3/fast_zombie,
+			/datum/outfit/deployment_loadout/zombie/tier3/poison_zombie,
+			/datum/outfit/deployment_loadout/zombie/tier3/fungal_zombie,
+			/datum/outfit/deployment_loadout/zombie/tier3/zombine,
+		)
+		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.display_name)] = loadout
+	return loadouts
+
+/obj/item/hl2/loadout_picker/zombie/tier4/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/outfit/deployment_loadout/zombie/tier4/gonome,
+		)
+		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.display_name)] = loadout
+	return loadouts

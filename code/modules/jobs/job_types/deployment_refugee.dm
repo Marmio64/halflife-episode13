@@ -26,6 +26,15 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 
 	gameplay_help = "You need to destroy the combine's communication tower in their base to win, while making sure they don't destroy your communication tower! You can sell corpses of the enemy and cash to the cash deposit in your base to upgrade your starting loadouts!"
 
+/datum/job/deployment_refugee/get_spawn_message_information()
+	var/list/info = list()
+	if(SSmapping.current_map.combat_deployment_gamemode == "towers")
+		info += "You are playing for the Rebel Side in the Communication Towers TDM game mode! Destroy the combine's comms tower while protecting your own! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
+	if(SSmapping.current_map.combat_deployment_gamemode == "koth")
+		info += "You are playing for the Rebel Side in the King of The Hill TDM game mode! Capture the central flag and keep it under your faction's control for a total of five minutes to win! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
+
+	return info
+
 /datum/outfit/job/refugee/deployment/post_equip(mob/living/carbon/human/H, visualsOnly=FALSE)
 	if(visualsOnly)
 		return

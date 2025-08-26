@@ -113,6 +113,10 @@
 	var/aggro_sound = 'hl13/sound/creatures/poison/ph_rattle.ogg'
 	var/idle_sounds = list('hl13/sound/creatures/poison/ph_talk1.ogg', 'hl13/sound/creatures/poison/ph_talk2.ogg', 'hl13/sound/creatures/poison/ph_talk3.ogg')
 
+
+/mob/living/basic/halflife/headcrab/poison/deadly
+	poison_per_bite = 10
+
 /datum/action/cooldown/mob_cooldown/halflife/jump/headcrab/poison
 	sound_cue = 'hl13/sound/creatures/poison/ph_scream.ogg'
 

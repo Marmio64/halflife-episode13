@@ -1,0 +1,26 @@
+{
+	"version": 1,
+	"map_name": "City 13 City at War (King of the Hill)",
+	"map_path": "map_files/deployment_city_koth",
+	"map_file": "deployment_city_koth.dmm",
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
+	"planetary": 1,
+	"shuttles": {
+		"cargo": "cargo_box",
+		"ferry": "ferry_fancy",
+		"whiteship": "whiteship_meta",
+		"emergency": "emergency_box"
+	},
+	"traits": [
+		{
+			"Baseturf": "/turf/open/floor/plating/ground/rockunder",
+			"Gravity": true,
+			"No Parallax": true,
+			"Linkage": null
+
+		}
+	],
+	"minetype": "combat_deployment",
+	"combat_deployment_gamemode": "koth"
+}
