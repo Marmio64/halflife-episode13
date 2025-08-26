@@ -239,6 +239,13 @@
 	inhand_icon_state = "satchel"
 	storage_type = /datum/storage/satchel/halflife
 
+/obj/item/storage/backpack/halflife/satchel/radio
+	name = "radio pack"
+	desc = "A old world radio pack for transmitting signals with."
+	icon_state = "radiopack"
+	inhand_icon_state = "radiopack"
+	storage_type = /datum/storage/satchel/halflife/small
+
 /obj/item/storage/backpack/halflife/satchel/civilprotection
 	name = "civil protection satchel"
 	desc = "A relatively small satchel often issued to civil protection units, for carrying excess gear."

@@ -329,7 +329,7 @@
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/flashlight/seclite
-	head = /obj/item/clothing/head/helmet/halflife/military/poland
+	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
 	uniform = /obj/item/clothing/under/syndicate/camo
 	shoes = /obj/item/clothing/shoes/boots
 
@@ -488,32 +488,6 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
 
-///downgrades from an ak47 to a service rifle with 2 less mags and 1 less healthpen, in exchange for two extra grenades and another C4.
-/datum/outfit/deployment_loadout/rebel/tier5/super_bomber
-	name = "Deployment: Super Heavy Bomber"
-	display_name = "Super Heavy Bomber"
-	desc = "Ultra heavily armored with a ton of explosive weaponry."
-
-	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
-	mask = /obj/item/clothing/mask/gas/hl2/military
-	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran/deployment
-	uniform = /obj/item/clothing/under/syndicate/camo
-	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
-	gloves = /obj/item/clothing/gloves/combat
-	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
-	back = /obj/item/storage/backpack/duffelbag/halflife
-	r_pocket = /obj/item/flashlight/seclite
-	shoes = /obj/item/clothing/shoes/boots
-	backpack_contents = list(
-		/obj/item/grenade/c4 = 3,
-		/obj/item/grenade/syndieminibomb/bouncer = 4,
-		/obj/item/hl13_small_flag/poland/telescopic = 1,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
-	)
-
-	ears = /obj/item/radio/headset/rebel_deployment
-	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
-
 /datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt
 	name = "Deployment: Extract Empowered Vortigaunt"
 	display_name = "Extract Empowered Vortigaunt"
@@ -527,3 +501,27 @@
 /datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/vortigaunt/extract)
 	H.cmode_music = combat_music
+
+/datum/outfit/deployment_loadout/rebel/tier5/radio_operator
+	name = "Deployment: PLF Radio Operator"
+	display_name = "PLF Radio Operator"
+	desc = "You are not a particularly well armed or armored soldier, but your greatest strength is the targeter inside your radio pack. You can use it to send up to two missiles which while slow to send, are excellent bunker busters."
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
+	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/revolver
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython
+	l_pocket = /obj/item/knife/combat/survival
+	r_pocket = /obj/item/flashlight/seclite
+	head = /obj/item/clothing/head/beret/sec/poland
+	uniform = /obj/item/clothing/under/syndicate/camo
+	shoes = /obj/item/clothing/shoes/boots
+
+	back = /obj/item/storage/backpack/halflife/satchel/radio
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/halflife/missile_targeter = 1,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'

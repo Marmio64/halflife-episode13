@@ -127,7 +127,7 @@
 
 /obj/structure/closet/supplypod/deadmatch_missile
 	name = "cruise missile"
-	desc = "A big ass missile, likely launched from some far-off deep space missile silo."
+	desc = "A big ass missile, likely launched from some far-off missile silo."
 	style = /datum/pod_style/missile/syndicate
 	explosionSize = list(0,1,2,2)
 	effectShrapnel = TRUE
