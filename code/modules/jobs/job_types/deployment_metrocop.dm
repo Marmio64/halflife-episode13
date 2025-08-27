@@ -16,7 +16,7 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 	display_order = JOB_DISPLAY_ORDER_ASSISTANT
 	department_for_prefs = /datum/job_department/assistant
 
-	job_flags = JOB_EQUIP_RANK|JOB_CREW_MEMBER|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS
+	job_flags = JOB_EQUIP_RANK|JOB_CREW_MEMBER|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS
 	faction = FACTION_STATION
 
 	combat_deployment_job = TRUE
@@ -36,9 +36,7 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 /datum/outfit/job/deployment_metrocop
 	name = "Deployment metrocop"
 	jobtype = /datum/job/deployment_metrocop
-	id = /obj/item/card/id/advanced/halflife/combine/one
 
-	id_trim = /datum/id_trim/job/security_officer
 	ears = /obj/item/radio/headset/civilprotection
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
@@ -54,13 +52,6 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 	. = ..()
 	user.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 5) //Gives you a few seconds of invincibility to prevent spawn camping
 	user.faction += "combine"
-
-	var/name_source = list("Line", "Patrol", "Roller", "Victor", "Jury", "Quick", "Defender")
-
-	if(istype(user.wear_id, /obj/item/card/id))
-		var/obj/item/card/id/ID = user.wear_id
-		ID.registered_name = "CP:0.[pick(name_source)]-[rand(111,999)]"
-		ID.update_label()
 
 	var/chosen = null
 

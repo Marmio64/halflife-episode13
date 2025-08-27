@@ -16,7 +16,7 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 	display_order = JOB_DISPLAY_ORDER_PRISONER
 	department_for_prefs = /datum/job_department/assistant
 
-	job_flags = JOB_EQUIP_RANK|JOB_CREW_MEMBER|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS
+	job_flags = JOB_EQUIP_RANK|JOB_CREW_MEMBER|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS
 	faction = FACTION_STATION
 
 	combat_deployment_job = TRUE

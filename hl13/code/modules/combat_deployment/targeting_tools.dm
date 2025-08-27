@@ -1,6 +1,6 @@
 /obj/item/halflife/cannister_targeter
 	name = "canister targeting tool"
-	desc = "A tool that feeds coordinates to an offsite location, prompting them to send a headcrab canister at the target. Click a visible tile to send a canister. Recharges uses overtime."
+	desc = "A tool that feeds coordinates to an offsite location, prompting them to send a headcrab canister at the target. Each canister does not deal damage on impact and carries a random headcrab type. Click a visible tile to send a canister. Recharges uses overtime."
 	icon = 'hl13/icons/obj/radio.dmi'
 	icon_state = "walkietalkie"
 	var/charges = 3
