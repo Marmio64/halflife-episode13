@@ -44,6 +44,8 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	glasses = /obj/item/clothing/glasses/hud/security
 
+	id = /obj/item/storage/wallet
+
 	mask = /obj/item/clothing/mask/gas/civilprotection
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
