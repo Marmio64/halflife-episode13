@@ -139,10 +139,10 @@
 			if(client.deployment_faction != job.combat_deployment_faction)
 				return JOB_UNAVAILABLE_WRONGTEAM
 		if(job.combat_deployment_faction == COMBINE_DEPLOYMENT_FACTION  && !client.deployment_faction)
-			if(GLOB.deployment_rebel_players < GLOB.deployment_combine_players && 0 < GLOB.deployment_combine_players)
+			if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players))
 				return JOB_UNAVAILABLE_TEAMFULL
 		if(job.combat_deployment_faction == REBEL_DEPLOYMENT_FACTION && !client.deployment_faction)
-			if(GLOB.deployment_combine_players < GLOB.deployment_rebel_players && 0 < GLOB.deployment_rebel_players)
+			if(length(GLOB.deployment_combine_players) < length(GLOB.deployment_rebel_players))
 				return JOB_UNAVAILABLE_TEAMFULL
 	if((job.current_positions >= job.total_positions) && job.total_positions != -1)
 		if(is_assistant_job(job))
