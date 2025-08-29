@@ -43,7 +43,7 @@
 	var/charge_cooldown = 0
 	var/charge_cooldown_time = 10 SECONDS
 
-	var/playstyle_string = span_notice("You are a Hunter, a large synth designed for protecting striders and hunting down malignants in a swift manner. You can fire bursts of flechettes by clicking, and can Alt-Click to charge at an enemy to send them flying.")
+	var/playstyle_string = span_danger("You are a Hunter, a large synth designed for protecting striders and hunting down malignants in a swift manner. You can fire bursts of flechettes by clicking, and can Alt-Click to charge at an enemy to send them flying.")
 
 	cmode_music = 'hl13/sound/music/combat/huntingparty.ogg' //practically a requirement
 

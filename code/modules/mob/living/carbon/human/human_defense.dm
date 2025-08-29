@@ -333,8 +333,8 @@
 				max_limb_loss = 1
 				probability = 20
 			if(EXPLODE_LIGHT)
-				max_limb_loss = 1 //hl13 edit
-				probability = 25 //hl13 edit
+				max_limb_loss = 0 //hl13 edit
+				probability = 0 //hl13 edit
 			if(EXPLODE_HEAVY)
 				max_limb_loss = 1 //hl13 edit
 				probability = 35 //hl13 edit

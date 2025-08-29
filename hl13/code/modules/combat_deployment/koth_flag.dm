@@ -1,11 +1,12 @@
 GLOBAL_VAR_INIT(deployment_rebels_flag_time_left, 5 MINUTES)
 GLOBAL_VAR_INIT(deployment_combine_flag_time_left, 5 MINUTES)
+GLOBAL_VAR_INIT(deployment_flag_grace_period, 3 MINUTES)
 
 /obj/machinery/deployment_koth_flag
 	name = "Central Flag"
 	desc = "A towering flag which must be held by one side of the conflict for a total of 5 minutes to win. Click on it to start changing the flag to your side."
 	icon = 'hl13/icons/obj/koth_flag.dmi'
-	icon_state = "empty"
+	icon_state = "uncapturable"
 	resistance_flags = INDESTRUCTIBLE
 	anchored = TRUE
 	density = TRUE
@@ -17,6 +18,7 @@ GLOBAL_VAR_INIT(deployment_combine_flag_time_left, 5 MINUTES)
 	light_power = 1.1
 	light_color = "#658cac"
 	var/current_faction_holder = NO_FACTION
+	var/capturable
 
 /obj/machinery/deployment_koth_flag/Initialize(mapload)
 	.=..()
@@ -25,6 +27,21 @@ GLOBAL_VAR_INIT(deployment_combine_flag_time_left, 5 MINUTES)
 /obj/machinery/deployment_koth_flag/process()
 	for(var/turf/closed/wall/W in RANGE_TURFS(3, get_turf(src))) //no walling off the flag
 		W.dismantle_wall()
+
+	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
+		if(!capturable)
+			capturable = TRUE
+			icon_state = "empty"
+			for(var/X in GLOB.deployment_rebel_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+				to_chat(H, "<span class='greentext big'>The flag grace period is up, and it is now capturable!</span>")
+			for(var/X in GLOB.deployment_combine_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+				to_chat(H, "<span class='greentext big'>The flag grace period is up, and it is now capturable!</span>")
+	else
+		GLOB.deployment_flag_grace_period -= 1 SECONDS
 
 	if(current_faction_holder == COMBINE_DEPLOYMENT_FACTION)
 		icon_state = "combine"
@@ -67,6 +84,9 @@ GLOBAL_VAR_INIT(deployment_combine_flag_time_left, 5 MINUTES)
 	add_fingerprint(H)
 
 	if(H.deployment_faction != current_faction_holder)
+		if(!capturable)
+			to_chat(H, span_userdanger("The flag grace period is still on for another [(GLOB.deployment_flag_grace_period)/10] seconds, and cant be captured!"))
+			return
 		to_chat(H, span_green("Raising your team's flag!"))
 		if(do_after(H, 5 SECONDS, src))
 			to_chat(H, span_green("Flag raised!"))

@@ -273,5 +273,9 @@
 	slowdown = -0.66
 	armor_type = /datum/armor/hev/weak //Slightly less damage resistance, use speed to dodge!
 
+/obj/item/clothing/suit/hooded/hev/deathmatch/deployment
+	slowdown = -0.5
+	armor_type = /datum/armor/hev/weak
+
 #undef MORPHINE_INJECTION_DELAY
 #undef SOUND_BEEP

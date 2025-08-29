@@ -41,9 +41,13 @@
 
 	podspawn(list(
 		"target" = location,
-		"style" = /datum/pod_style/canister,
+		"path" = /obj/structure/closet/supplypod/light_exp_canister,
 		"spawn" = headcrab_choice,
 	))
+
+/obj/structure/closet/supplypod/light_exp_canister
+	style = /datum/pod_style/canister
+	explosionSize = list(0,0,1,0)
 
 /obj/item/halflife/missile_targeter
 	name = "missile targeting tool"
@@ -73,7 +77,7 @@
 	name = "old missile"
 	desc = "An old world missile that has been maintained just enough to still work. It has far less explosive power than it used to have, but its enough to blow open some fortifications."
 	style = /datum/pod_style/missile/syndicate
-	explosionSize = list(0,3,5,0)
+	explosionSize = list(0,4,6,0)
 	effectShrapnel = TRUE
 	specialised = TRUE
 	delays = list(POD_TRANSIT = 5 SECONDS, POD_FALLING = 0.4 SECONDS)

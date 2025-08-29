@@ -444,7 +444,7 @@
 	desc = "Well armored and speedy, with a powerful crowbar to boot alongside a shotgun."
 
 	uniform = /obj/item/clothing/under/citizen/rebel
-	suit = /obj/item/clothing/suit/hooded/hev/deathmatch/freeman
+	suit = /obj/item/clothing/suit/hooded/hev/deathmatch/deployment
 	suit_store = /obj/item/gun/ballistic/shotgun/spas12
 	glasses = /obj/item/clothing/glasses/regular/thin
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
@@ -519,7 +519,6 @@
 	back = /obj/item/storage/backpack/halflife/satchel/radio
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/halflife/missile_targeter = 1,
 	)
 

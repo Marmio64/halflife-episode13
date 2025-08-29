@@ -26,7 +26,6 @@
 	damage = 20
 	wound_bonus = -10
 	bare_wound_bonus = 5
-	armour_penetration = -20
 	hitsound = 'hl13/sound/creatures/hunter/flechette_flesh_impact1.ogg'
 
 /obj/projectile/bullet/pellet/shotgun_buckshot/pulse

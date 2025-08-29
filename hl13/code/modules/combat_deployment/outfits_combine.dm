@@ -459,6 +459,12 @@
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
+
+	backpack_contents = list(
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+	)
+
 	ears = /obj/item/radio/headset/headset_sec
 	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
 
@@ -483,3 +489,4 @@
 
 /datum/outfit/deployment_loadout/combine/tier5/assassin/post_equip(mob/living/carbon/human/H)
 	H.alpha = 135 //moderate amount of transparency
+	H.change_stat(STATKEY_DEX, 4)
