@@ -520,6 +520,7 @@
 
 	backpack_contents = list(
 		/obj/item/halflife/missile_targeter = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
