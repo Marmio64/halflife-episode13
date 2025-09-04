@@ -150,6 +150,13 @@
 /obj/item/clothing/suit/armor/overwatch/red/deathmatch
 	slowdown = 0.4
 
+/obj/item/clothing/suit/armor/overwatch/suppressor
+	name = "overwatch suppressor chestpiece"
+	icon_state = "suppressor"
+	slowdown = 1
+	armor_type = /datum/armor/eliteoverwatcharmor
+	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
+
 /obj/item/clothing/suit/armor/overwatch/elite
 	name = "overwatch elite chestpiece"
 	desc = "Reinforced white kevlar weave surrounding a ceramic plated core. Provides incredible chest protection."

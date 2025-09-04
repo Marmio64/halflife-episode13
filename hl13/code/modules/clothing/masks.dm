@@ -284,6 +284,11 @@
 	armor_type = /datum/armor/eliteoverwatchmask
 	mask_color = /datum/client_colour/eliteow
 
+/obj/item/clothing/mask/gas/civilprotection/overwatch/suppressor
+	name = "overwatch suppressor soldier mask"
+	icon_state = "suppressor"
+	armor_type = /datum/armor/eliteoverwatchmask
+
 /datum/armor/eliteoverwatchmask
 	melee = 30
 	bullet = 45

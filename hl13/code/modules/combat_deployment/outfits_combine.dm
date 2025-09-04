@@ -490,3 +490,27 @@
 /datum/outfit/deployment_loadout/combine/tier5/assassin/post_equip(mob/living/carbon/human/H)
 	H.alpha = 135 //moderate amount of transparency
 	H.change_stat(STATKEY_DEX, 4)
+
+/datum/outfit/deployment_loadout/combine/tier5/suppressor
+	name = "Deployment: Combine Suppressor"
+	display_name = "Combine Suppressor"
+	desc = "An extra heavy combine soldier equipped with a heavy pulse machine gun which is great for laying down cover fire."
+	glasses = /obj/item/clothing/glasses/hud/security/night/combine
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/suppressor
+	uniform = /obj/item/clothing/under/combine/overwatch/suppressor
+	suit = /obj/item/clothing/suit/armor/overwatch/suppressor
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
+	gloves = /obj/item/clothing/gloves/combat/overwatch
+	belt = /obj/item/storage/belt/civilprotection/overwatch/pulselmg
+	suit_store = /obj/item/gun/ballistic/automatic/pulselmg
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
+
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
+
+	backpack_contents = list(
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+	)
+
+	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'

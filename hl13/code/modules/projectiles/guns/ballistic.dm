@@ -575,3 +575,48 @@
 	new /obj/item/ammo_box/strilka310/a762(src)
 	new /obj/item/ammo_box/strilka310/a762(src)
 	new /obj/item/ammo_box/strilka310/a762(src)
+
+//slow to fire for about the first second, but ramps up to have a rate of fire around that of the MP7, but with deadlier rounds and a huge mag capacity. It's inaccuracy however makes it best at laying down cover fire
+/obj/item/gun/ballistic/automatic/pulselmg
+	name = "\improper Pulse LMG"
+	desc = "A pulse machine gun which fires heavy duty rounds that while inaccurate, are very numerous. Fire rate increases as the trigger is held down."
+	icon = 'hl13/icons/obj/guns/projectile.dmi'
+	icon_state = "suppressor"
+	inhand_icon_state = "suppressor"
+	fire_sound = "hl13/sound/weapons/pulselmg_fire.ogg"
+	vary_fire_sound = FALSE
+	accepted_magazine_type = /obj/item/ammo_box/magazine/pulselmg
+	force = 12
+	spread = 25
+	recoil = 0.3
+	fire_delay = 2
+	burst_size = 1
+	mag_display = TRUE
+	weapon_weight = WEAPON_HEAVY
+	w_class = WEIGHT_CLASS_BULKY
+	pin = /obj/item/firing_pin/implant/mindshield
+
+	load_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
+	load_empty_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
+
+	eject_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
+	eject_empty_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
+
+	rack_sound = 'hl13/sound/weapons/ar2_reload_push.ogg'
+	lock_back_sound = 'hl13/sound/weapons/ar2_reload_push.ogg'
+	bolt_drop_sound = 'hl13/sound/weapons/ar2_reload_push.ogg'
+
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
+/obj/item/gun/ballistic/automatic/pulselmg/nopin
+	pin = null
+
+/obj/item/gun/ballistic/automatic/pulselmg/standardpin
+	pin = /obj/item/firing_pin
+
+/obj/item/gun/ballistic/automatic/pulselmg/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS, TRUE, 0.3, 0.4, 0.8 SECONDS)
+
+//(autofire_shot_delay, windup_autofire, windup_autofire_reduction_multiplier, windup_autofire_cap, windup_spindown, allow_akimbo = TRUE)

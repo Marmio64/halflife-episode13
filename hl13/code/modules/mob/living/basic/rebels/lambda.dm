@@ -10,6 +10,7 @@
 	maxHealth = 120
 	health = 120
 	death_sound = 'hl13/sound/voice/human/scream/malescream_8.ogg'
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
 	/// Type of bullet we use
 	var/casingtype = /obj/item/ammo_casing/c46x30mm/mp7
 	/// Sound to play when firing weapon
@@ -45,6 +46,20 @@
 	suit = /obj/item/clothing/suit/armor/civilprotection
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
+
+/mob/living/basic/trooper/rebel/mp7/follower
+	name = "Rebel Soldier Follower"
+	desc = "The symbol of resistance. Follows orders from his superiors."
+	var/list/pet_commands = list(
+		/datum/pet_command/idle,
+		/datum/pet_command/free,
+		/datum/pet_command/follow,
+		/datum/pet_command/scatter,
+	)
+
+/mob/living/basic/trooper/rebel/mp7/follower/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/obeys_commands, pet_commands)
 
 // AI STUFF THAT I PUT IN HERE CAUSE IM TOO LAZY TO MAKE ANOTHER FILE FOR IT --------------------------
 /datum/ai_planning_subtree/random_speech/rebelsoldier
