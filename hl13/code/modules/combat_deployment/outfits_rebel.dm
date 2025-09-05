@@ -525,3 +525,31 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+
+/datum/outfit/deployment_loadout/rebel/tier5/sniper
+	name = "Deployment: PLF Sniper"
+	display_name = "PLF Sniper"
+	desc = "While not too well armored, you have access to one of the few surviving dragunovs around. Use it well to snipe your opponents with devestating accuracy and power."
+	suit = /obj/item/clothing/suit/armor/rebel/light/speedy
+	mask = /obj/item/clothing/mask/gas/hl2/swat/hardened
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/svd
+	suit_store = /obj/item/gun/ballistic/automatic/svd
+	gloves = /obj/item/clothing/gloves/fingerless
+	l_pocket = /obj/item/knife/combat/survival
+	r_pocket = /obj/item/grenade/smokebomb
+	head = /obj/item/clothing/head/helmet/halflife/military/poland
+	uniform = /obj/item/clothing/under/syndicate/camo
+	shoes = /obj/item/clothing/shoes/boots
+	glasses = /obj/item/clothing/glasses/night
+
+	back = /obj/item/storage/backpack/halflife/satchel
+
+	backpack_contents = list(
+		/obj/item/gun/ballistic/revolver/coltpython = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/ammo_box/colta357 = 1,
+		/obj/item/ammo_box/magazine/svd = 1,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'

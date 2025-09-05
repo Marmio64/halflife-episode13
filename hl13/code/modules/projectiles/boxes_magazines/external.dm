@@ -45,11 +45,11 @@
 
 /obj/item/ammo_box/magazine/pulselmg
 	name = "LMG magazine (pulse)"
-	desc = "A 150-round magazine for the pulse LMG that contains pulse rounds."
+	desc = "A 120-round magazine for the pulse LMG that contains pulse rounds."
 	icon_state = "ar2"
 	ammo_type = /obj/item/ammo_casing/caseless/pulse/ar2
 	caliber = CALIBER_PULSROUND
-	max_ammo = 150
+	max_ammo = 120
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
 
 /obj/item/ammo_box/magazine/pulsesmg
@@ -121,3 +121,17 @@
 	icon_state = "m308small"
 	base_icon_state = "m308small"
 	max_ammo = 20
+
+//svd Rifle
+
+/obj/item/ammo_box/magazine/svd
+	name = "rifle magazine (7.62mm)"
+	desc = "A standard 10-round magazine for the Dragunov Rifle. Filled with 7.62 rounds."
+	icon_state = "m308small"
+	base_icon_state = "m308small"
+	ammo_type = /obj/item/ammo_casing/n762
+	caliber = CALIBER_N762
+	max_ammo = 10
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	multiple_sprite_use_base = TRUE

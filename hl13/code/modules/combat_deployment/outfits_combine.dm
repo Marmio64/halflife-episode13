@@ -494,7 +494,7 @@
 /datum/outfit/deployment_loadout/combine/tier5/suppressor
 	name = "Deployment: Combine Suppressor"
 	display_name = "Combine Suppressor"
-	desc = "An extra heavy combine soldier equipped with a heavy pulse machine gun which is great for laying down cover fire."
+	desc = "An extra heavy combine soldier equipped with a pulse light machine gun which is great for laying down cover fire."
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/suppressor
 	uniform = /obj/item/clothing/under/combine/overwatch/suppressor
@@ -509,7 +509,8 @@
 	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
 
 	backpack_contents = list(
-		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/grenade/syndieminibomb/bouncer = 1,
+		/obj/item/ammo_box/magazine/pulselmg = 2,
 	)
 
 	ears = /obj/item/radio/headset/headset_sec

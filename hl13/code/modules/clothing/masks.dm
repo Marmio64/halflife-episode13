@@ -380,8 +380,18 @@
 /obj/item/clothing/mask/gas/hl2/russia
 	icon_state = "russiamask"
 
+/obj/item/clothing/mask/gas/hl2/russia/hardened
+	name = "hardened gas mask"
+	desc = "An old, hardened gas mask which protects the face against gas and some attacks."
+	armor_type = /datum/armor/militarygasmask
+
 /obj/item/clothing/mask/gas/hl2/swat
 	icon_state = "swatmask"
+
+/obj/item/clothing/mask/gas/hl2/swat/hardened
+	name = "hardened gas mask"
+	desc = "An old, hardened gas mask which protects the face against gas and some attacks."
+	armor_type = /datum/armor/militarygasmask
 
 /obj/item/clothing/mask/gas/hl2/cremator
 	name = "gas mask"

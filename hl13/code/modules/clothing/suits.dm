@@ -477,6 +477,9 @@
 
 	limb_integrity = 250
 
+/obj/item/clothing/suit/armor/rebel/light/speedy
+	slowdown = -0.25
+
 /datum/armor/rebellight
 	melee = 40
 	bullet = 30

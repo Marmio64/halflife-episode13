@@ -86,7 +86,6 @@
 	desc = "An old AK-47 without the stock. This thing is going to kick like a mule without that stock... but it should still hit just as hard."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "ak47"
-	inhand_icon_state = "arg"
 	fire_sound = "hl13/sound/weapons/ak47fire.ogg"
 	vary_fire_sound = FALSE
 	load_sound = "sound/items/weapons/gun/rifle/rifleload.ogg"
@@ -592,6 +591,7 @@
 	fire_delay = 2
 	burst_size = 1
 	mag_display = TRUE
+	vary_fire_sound = TRUE
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 	pin = /obj/item/firing_pin/implant/mindshield
@@ -620,3 +620,43 @@
 	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS, TRUE, 0.3, 0.4, 0.8 SECONDS)
 
 //(autofire_shot_delay, windup_autofire, windup_autofire_reduction_multiplier, windup_autofire_cap, windup_spindown, allow_akimbo = TRUE)
+
+//Small upgrade to the ak47. Has a very slight increase in DPS, alongside having far better recoil and spread control and a scope, but runs through ammo pretty quickly with its 10 round mags.
+//about 2.4 seconds TTK, and good AP
+/obj/item/gun/ballistic/automatic/svd
+	name = "\improper SVD Rifle"
+	desc = "A rare beautiful thing, this semi-automatic designated marksman rifle will take the hat off an elite at two thousand yards, and they ain't cheap."
+	icon = 'hl13/icons/obj/guns/wideguns.dmi'
+	icon_state = "svd"
+	inhand_icon_state = "svd"
+	fire_sound = "hl13/sound/weapons/ak47fire.ogg"
+	vary_fire_sound = FALSE
+	load_sound = "sound/items/weapons/gun/rifle/rifleload.ogg"
+	load_empty_sound = "sound/items/weapons/gun/rifle/rifleload.ogg"
+	rack_sound = "sound/items/weapons/gun/rifle/bolt_in.ogg"
+	eject_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
+	eject_empty_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/svd
+	force = 12
+	fire_delay = 5
+	burst_size = 1
+	spread = 3
+	recoil = 0.7
+	projectile_damage_multiplier = 1.5
+	can_suppress = FALSE
+	mag_display = TRUE
+	weapon_weight = WEAPON_HEAVY
+	w_class = WEIGHT_CLASS_BULKY
+
+	inhand_x_dimension = 64
+
+	lefthand_file = 'hl13/icons/mob/inhands/64x_guns_left.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/64x_guns_right.dmi'
+
+/obj/item/gun/ballistic/automatic/svd/no_mag
+	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.55 SECONDS)
+	AddComponent(/datum/component/scope, range_modifier = 3)
