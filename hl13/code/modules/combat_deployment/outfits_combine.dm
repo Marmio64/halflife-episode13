@@ -463,6 +463,7 @@
 
 	backpack_contents = list(
 		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 	)
 
 	ears = /obj/item/radio/headset/headset_sec
@@ -511,6 +512,7 @@
 	backpack_contents = list(
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
 		/obj/item/ammo_box/magazine/pulselmg = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 	)
 
 	ears = /obj/item/radio/headset/headset_sec
