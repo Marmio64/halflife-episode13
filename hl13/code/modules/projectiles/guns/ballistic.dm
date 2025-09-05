@@ -617,7 +617,7 @@
 
 /obj/item/gun/ballistic/automatic/pulselmg/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS, TRUE, 0.3, 0.4, 0.8 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS, TRUE, 0.3, 0.4, 0.7 SECONDS)
 
 //(autofire_shot_delay, windup_autofire, windup_autofire_reduction_multiplier, windup_autofire_cap, windup_spindown, allow_akimbo = TRUE)
 
