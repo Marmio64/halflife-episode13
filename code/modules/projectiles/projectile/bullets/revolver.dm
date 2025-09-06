@@ -5,6 +5,9 @@
 	damage = 24 //HL13 EDIT
 	armour_penetration = 20 //HL13 EDIT
 
+/obj/projectile/bullet/n762/high_veloc
+	speed = 3
+
 // .50AE (Desert Eagle)
 
 /obj/projectile/bullet/a50ae

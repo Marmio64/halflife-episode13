@@ -129,7 +129,7 @@
 	desc = "A standard 10-round magazine for the Dragunov Rifle. Filled with 7.62 rounds."
 	icon_state = "m308small"
 	base_icon_state = "m308small"
-	ammo_type = /obj/item/ammo_casing/n762
+	ammo_type = /obj/item/ammo_casing/n762/high_veloc
 	caliber = CALIBER_N762
 	max_ammo = 10
 	icon = 'hl13/icons/obj/guns/ammo.dmi'

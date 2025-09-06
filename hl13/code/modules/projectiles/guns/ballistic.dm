@@ -194,7 +194,7 @@
 	force = 15
 	recoil = 4
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 25
+	fire_delay = 20
 	w_class = WEIGHT_CLASS_BULKY
 	slowdown = 0.25
 

@@ -67,7 +67,7 @@
 	name = "rebar"
 	icon_state = "rebar"
 	damage = 45
-	speed = 2.5
+	speed = 3
 	dismemberment = 1 //because a 1 in 100 chance to just blow someones arm off is enough to be cool but also not enough to be reliable
 	armour_penetration = 30
 	wound_bonus = -20
