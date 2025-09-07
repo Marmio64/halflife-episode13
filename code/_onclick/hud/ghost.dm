@@ -53,6 +53,14 @@
 	var/mob/dead/observer/observer = usr
 	observer.open_minigames_menu()
 
+/atom/movable/screen/ghost/respawn
+	name = "Respawn"
+	icon_state = "respawn"
+
+/atom/movable/screen/ghost/respawn/Click()
+	var/mob/dead/observer/G = usr
+	G.abandon_mob()
+
 /datum/hud/ghost/New(mob/owner)
 	..()
 	var/atom/movable/screen/using
@@ -79,6 +87,10 @@
 
 	using = new /atom/movable/screen/ghost/minigames_menu(null, src)
 	using.screen_loc = ui_ghost_minigames
+	static_inventory += using
+
+	using = new /atom/movable/screen/ghost/respawn(null, src)
+	using.screen_loc = ui_ghost_respawn
 	static_inventory += using
 
 	using = new /atom/movable/screen/language_menu(null, src)

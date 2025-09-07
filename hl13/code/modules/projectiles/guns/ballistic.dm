@@ -221,7 +221,7 @@
 
 /obj/item/gun/ballistic/combine_sniper/shoot_live_shot(mob/living/user, pointblank = 0, atom/pbtarget = null, message = 1)
 	. = ..()
-	sleep(1.25 SECONDS)
+	sleep(1 SECONDS)
 	playsound(user, charge_sound, fire_sound_volume, vary_fire_sound)
 
 
@@ -456,6 +456,8 @@
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "mp7"
 	fire_sound = "hl13/sound/weapons/smgfire.ogg"
+	load_sound = "hl13/sound/weapons/smgload.ogg"
+	load_empty_sound = "hl13/sound/weapons/smgload.ogg"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/mp7
 	bolt_type = BOLT_TYPE_LOCKING
 	mag_display = TRUE

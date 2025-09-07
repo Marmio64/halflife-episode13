@@ -51,6 +51,7 @@
 			ammo_to_dispense = /obj/item/ammo_box/magazine/ar2
 
 	if(ammo_to_dispense)
-		if(do_after(user, 5 SECONDS, src))
+		if(do_after(user, 4 SECONDS, src))
 			ammo_amount--
 			new ammo_to_dispense(loc)
+			playsound(src, 'hl13/sound/effects/ammo_pickup.ogg', 50, TRUE, extrarange = -3)

@@ -105,7 +105,7 @@
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	suit = /obj/item/clothing/suit/armor/civilprotection/medical
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
-	glasses = /obj/item/clothing/glasses/hud/security
+	glasses = /obj/item/clothing/glasses/hud/health
 
 	mask = /obj/item/clothing/mask/gas/civilprotection/medical
 	belt = /obj/item/storage/belt/civilprotection/medicfull
@@ -234,7 +234,7 @@
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	suit = /obj/item/clothing/suit/armor/civilprotection/medical
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
-	glasses = /obj/item/clothing/glasses/hud/security
+	glasses = /obj/item/clothing/glasses/hud/health
 
 	mask = /obj/item/clothing/mask/gas/civilprotection/medical
 	belt = /obj/item/storage/belt/civilprotection/medicfull
@@ -364,7 +364,7 @@
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	suit = /obj/item/clothing/suit/armor/civilprotection/medical
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
-	glasses = /obj/item/clothing/glasses/hud/security
+	glasses = /obj/item/clothing/glasses/hud/health
 
 	mask = /obj/item/clothing/mask/gas/civilprotection/medical
 	belt = /obj/item/storage/belt/civilprotection/medicfull

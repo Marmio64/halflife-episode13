@@ -389,7 +389,7 @@ GLOBAL_PROTECT(tracy_init_reason)
 	var/new_status = ""
 	var/hostedby
 
-	features += "Immersive HL2 themed server, MRP/HRP Action/Survival/City RP, playtesting, semi-persistence"
+	features += "Immersive HL2 themed server, MRP/HRP Action/Survival/City RP, playtesting, semi-persistence, RP & TDM gamemodes"
 
 	features += "https://discord.gg/DtuwX7jxku"
 
@@ -397,14 +397,14 @@ GLOBAL_PROTECT(tracy_init_reason)
 		var/server_name = CONFIG_GET(string/servername)
 		if (server_name)
 			new_status += "<b>[server_name]</b> "
-		if(CONFIG_GET(flag/allow_respawn))
-			features += "respawn" // show "respawn" regardless of "respawn as char" or "free respawn"
+		//if(CONFIG_GET(flag/allow_respawn))
+			//features += "respawn" // show "respawn" regardless of "respawn as char" or "free respawn"
 		if(!CONFIG_GET(flag/allow_ai))
 			features += "AI disabled"
 		hostedby = CONFIG_GET(string/hostedby)
 
-	if (CONFIG_GET(flag/station_name_in_hub_entry))
-		new_status += " &#8212; <b>[station_name()]</b>"
+	//if (CONFIG_GET(flag/station_name_in_hub_entry))
+		//new_status += " &#8212; <b>[station_name()]</b>"
 
 	var/players = GLOB.clients.len
 

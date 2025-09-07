@@ -178,6 +178,7 @@
 #define ui_pai_navigate_menu "SOUTH+1:8,WEST+12:31"
 
 //Ghosts
+#define ui_ghost_respawn "SOUTH:6,CENTER-4:24"
 #define ui_ghost_spawners_menu "SOUTH:6,CENTER-3:24"
 #define ui_ghost_orbit "SOUTH:6,CENTER-2:24"
 #define ui_ghost_reenter_corpse "SOUTH:6,CENTER-1:24"

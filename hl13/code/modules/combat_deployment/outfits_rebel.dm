@@ -124,6 +124,7 @@
 	shoes = /obj/item/clothing/shoes/boots
 
 	back = /obj/item/storage/backpack/satchel
+	glasses = /obj/item/clothing/glasses/hud/health
 
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/usp9mm = 1,
