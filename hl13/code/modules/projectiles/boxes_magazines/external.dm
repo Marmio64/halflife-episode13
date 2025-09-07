@@ -47,7 +47,7 @@
 	name = "LMG magazine (pulse)"
 	desc = "A 120-round magazine for the pulse LMG that contains pulse rounds."
 	icon_state = "ar2"
-	ammo_type = /obj/item/ammo_casing/caseless/pulse/ar2
+	ammo_type = /obj/item/ammo_casing/caseless/pulse/lmg
 	caliber = CALIBER_PULSROUND
 	max_ammo = 120
 	icon = 'hl13/icons/obj/guns/ammo.dmi'

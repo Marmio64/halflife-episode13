@@ -5,6 +5,13 @@
 	projectile_type = /obj/projectile/bullet/pulse/ar2
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse
 
+/obj/item/ammo_casing/caseless/pulse/lmg
+	name = "LMG pulse round"
+	desc = "A LMG grade pulse round."
+	caliber = CALIBER_PULSROUND
+	projectile_type = /obj/projectile/bullet/pulse/lmg
+	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse
+
 /obj/item/ammo_casing/caseless/pulse/combine_sniper
 	name = "Sniper pulse round"
 	desc = "A sniper pulse round."
