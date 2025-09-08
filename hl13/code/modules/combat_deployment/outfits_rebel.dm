@@ -172,7 +172,7 @@
 
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = 1,
-		/obj/item/ammo_box/magazine/makeshift9mm = 2,
+		/obj/item/ammo_box/magazine/makeshift9mm = 3,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 	)
 
