@@ -12,7 +12,7 @@
 
 /obj/item/halflife/cannister_targeter/process(seconds_per_tick)
 	if(charges < max_charges)
-		charges += 0.25 //about 8 seconds to restore a headcrab charge
+		charges += 0.2 //about 10 seconds to restore a headcrab charge
 
 /obj/item/halflife/cannister_targeter/Destroy()
 	STOP_PROCESSING(SSobj, src)

@@ -46,6 +46,8 @@
 	/// When fuel was last removed.
 	var/burned_fuel_for = 0
 
+	var/force_while_on = 15
+
 	var/activation_sound = 'sound/items/tools/welderactivate.ogg'
 	var/deactivation_sound = 'sound/items/tools/welderdeactivate.ogg'
 
@@ -84,7 +86,7 @@
 
 /obj/item/weldingtool/process(seconds_per_tick)
 	if(welding)
-		force = 15
+		force = force_while_on
 		damtype = BURN
 		burned_fuel_for += seconds_per_tick
 		if(burned_fuel_for >= TOOL_FUEL_BURN_INTERVAL)

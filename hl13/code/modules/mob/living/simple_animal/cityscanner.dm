@@ -69,6 +69,8 @@
 	icon = 'icons/obj/tools.dmi'
 	icon_state = "miniwelder"
 	toolspeed = 0.5
+	max_fuel = 25
+	force_while_on = 20
 
 /obj/item/weldingtool/halflife/scanner/cyborg_unequip(mob/user)
 	if(!isOn())

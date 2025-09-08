@@ -136,7 +136,7 @@
 	wdefense = 1 //hl13 edit
 
 /obj/item/knife/combat/deployment
-	force = 30
+	force = 40
 	armour_penetration = 40
 	wdefense = 3
 

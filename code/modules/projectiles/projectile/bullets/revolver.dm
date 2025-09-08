@@ -7,6 +7,7 @@
 
 /obj/projectile/bullet/n762/high_veloc
 	speed = 3
+	armour_penetration = 35
 
 // .50AE (Desert Eagle)
 

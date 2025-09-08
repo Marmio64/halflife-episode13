@@ -87,6 +87,38 @@
 	desc = "An extremely advanced piece of chest protection that is very lightweight and very protective. Often issued to elite combine assassins."
 	icon_state = "assassin"
 	slowdown = -0.5
+	actions_types = list(/datum/action/item_action/assassin_invis)
+	var/invis_ready = TRUE
+
+/obj/item/clothing/suit/armor/overwatch/assassin/ui_action_click(mob/user, action)
+	assassin_invis()
+
+/datum/action/item_action/assassin_invis
+	name = "Cloak Self"
+	desc = "Partially cloak yourself for a short duration."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "cloak"
+
+/obj/item/clothing/suit/armor/overwatch/assassin/verb/assassin_invis()
+	set category = "Object"
+	set name = "Cloak Self"
+	if(!iscarbon(usr))
+		return
+	if(!invis_ready)
+		to_chat(usr, span_warning("Cloak is not ready!"))
+		return
+
+	var/mob/living/carbon/human/H = usr
+	to_chat(H, "<span class='notice'Cloak deployed.</span>")
+
+	playsound(loc, 'hl13/sound/effects/zap1.ogg', 50, TRUE, TRUE)
+	invis_ready = FALSE
+	H.alpha = 25
+	sleep(15 SECONDS)
+	H.alpha = 255
+	sleep(20 SECONDS)
+	invis_ready = TRUE
+	to_chat(usr, span_notice("The suit hums, its cloak is ready to deploy once more."))
 
 /obj/item/clothing/suit/armor/overwatch/wallhammer
 	name = "overwatch wallhammer chestpiece"

@@ -489,7 +489,6 @@
 	combat_music = 'hl13/sound/music/combat/lgorbifold.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier5/assassin/post_equip(mob/living/carbon/human/H)
-	H.alpha = 135 //moderate amount of transparency
 	H.change_stat(STATKEY_DEX, 4)
 
 /datum/outfit/deployment_loadout/combine/tier5/suppressor
