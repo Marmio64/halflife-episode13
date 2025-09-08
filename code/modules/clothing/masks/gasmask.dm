@@ -40,9 +40,6 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 /obj/item/clothing/mask/gas/Initialize(mapload)
 	. = ..()
 
-	if((flags_cover & PEPPERPROOF) && pepper_tint)
-		AddComponent(/datum/component/clothing_dirt)
-
 	if(fishing_modifier)
 		AddComponent(/datum/component/adjust_fishing_difficulty, fishing_modifier)
 

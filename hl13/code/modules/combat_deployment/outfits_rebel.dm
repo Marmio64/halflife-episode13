@@ -15,7 +15,7 @@
 
 	backpack_contents = list(
 		/obj/item/ammo_box/strilka310/a762 = 3,
-		/obj/item/stack/medical/bandage = 1,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -39,7 +39,7 @@
 		/obj/item/lighter,
 		/obj/item/grenade/halflife/tinbomb,
 		/obj/item/grenade/halflife/tinbomb,
-		/obj/item/stack/medical/bandage = 1,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -78,6 +78,7 @@
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = 1,
 		/obj/item/ammo_box/magazine/makeshift9mm = 1,
+		/obj/item/stack/medical/bandage/makeshift = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
