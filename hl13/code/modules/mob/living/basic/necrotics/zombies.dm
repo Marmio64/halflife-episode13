@@ -230,6 +230,7 @@
 	///what sound to play on a succesful attack?
 	var/attack_sound = null
 	var/jump_speed = 1
+	var/jump_range = 7
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/fast_zombie
 	cooldown_time = 5 SECONDS
@@ -252,7 +253,7 @@
 	var/turf/target_turf = get_turf(target)
 
 	if(!target_turf.is_blocked_turf())
-		owner.throw_at(target = target_turf, range = 7, speed = jump_speed, spin = FALSE, callback = CALLBACK(src, PROC_REF(attack_combo), target))
+		owner.throw_at(target = target_turf, range = jump_range, speed = jump_speed, spin = FALSE, callback = CALLBACK(src, PROC_REF(attack_combo), target))
 		return
 
 	var/list/open_turfs = list()
