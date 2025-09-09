@@ -794,7 +794,14 @@
 	var/required_delay = override_delay || CONFIG_GET(number/respawn_delay)
 
 	if(SSmapping.current_map.minetype == "combat_deployment")
-		required_delay = 20 SECONDS
+		if(client.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+			required_delay = GLOB.deployment_respawn_rate_combine
+		else if(client.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			required_delay = GLOB.deployment_respawn_rate_rebels
+		else
+			required_delay = 20 SECONDS
+
+
 
 	if(death_time < required_delay)
 		if(!check_rights_for(usr.client, R_ADMIN))

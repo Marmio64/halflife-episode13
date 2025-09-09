@@ -27,7 +27,7 @@
 	climbable = TRUE
 	max_integrity = 550
 	altstates = 5
-	projectile_passchance = 40
+	projectile_passchance = 30
 	hl13hit_sounds = SFX_CONCRETEIMPACT
 
 /obj/structure/halflife/road_barrier/concrete/alt
@@ -42,4 +42,4 @@
 	icon_state = "combine"
 	anchored = TRUE
 	max_integrity = 600
-	projectile_passchance = 30
+	projectile_passchance = 25

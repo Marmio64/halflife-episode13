@@ -39,7 +39,7 @@ DEFINE_BITFIELD(turret_flags, list(
 	lethal_projectile = /obj/projectile/bullet/pulse/ar2
 	lethal_projectile_sound = "hl13/sound/weapons/ar2fire.ogg"
 	stun_projectile_sound = "hl13/sound/weapons/ar2fire.ogg"
-	shot_delay = 5
+	shot_delay = 10
 	invisibility = 0
 	density = TRUE
 	desc = "A combine made turret which shoots at specified targets with a high power pulse gun."
@@ -69,6 +69,10 @@ DEFINE_BITFIELD(turret_flags, list(
 
 /obj/machinery/porta_turret/combine/off
 	on = FALSE
+
+/obj/machinery/porta_turret/combine/fast
+	stun_projectile = /obj/projectile/bullet/pulse/ar2/fast
+	lethal_projectile = /obj/projectile/bullet/pulse/ar2/fast
 
 /obj/machinery/porta_turret/combine/mp7
 	stun_projectile = /obj/projectile/bullet/c46x30mm
@@ -101,7 +105,7 @@ DEFINE_BITFIELD(turret_flags, list(
 
 /obj/machinery/porta_turret/combine/old
 	name = "old combine turret"
-	shot_delay = 0
+	shot_delay = 10
 	stun_projectile = /obj/projectile/bullet/pulse/weak
 	lethal_projectile = /obj/projectile/bullet/pulse/weak
 
@@ -113,6 +117,10 @@ DEFINE_BITFIELD(turret_flags, list(
 	faction = list("Syndicate")
 	locked = FALSE
 	req_access = null
+
+/obj/machinery/porta_turret/combine/rebel/fast
+	stun_projectile = /obj/projectile/bullet/pulse/ar2/fast
+	lethal_projectile = /obj/projectile/bullet/pulse/ar2/fast
 
 /obj/machinery/porta_turret/combine/rebel/assess_perp(mob/living/carbon/human/perp) //shoot mindshielded people
 	if (HAS_TRAIT(perp, TRAIT_MINDSHIELD))

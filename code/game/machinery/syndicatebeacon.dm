@@ -210,10 +210,16 @@
 	desc = "A label on it reads: <i>Warning: Activating this device will send a special beacon to your location</i>."
 	w_class = WEIGHT_CLASS_SMALL
 	var/droptype = /obj/machinery/power/singularity_beacon/syndicate
+	var/call_period = null
 
 
 /obj/item/sbeacondrop/attack_self(mob/user)
 	if(user)
+		if(call_period)
+			if(!do_after(user, call_period, src))
+				to_chat(user, span_warning("You did not finish activating the device!"))
+				playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+				return
 		to_chat(user, span_notice("Locked In."))
 		new droptype( user.loc )
 		playsound(src, 'sound/effects/pop.ogg', 100, TRUE, TRUE)

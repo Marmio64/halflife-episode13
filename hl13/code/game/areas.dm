@@ -108,6 +108,9 @@
 	ambient_buzz = 'hl13/sound/ambience/deathmatch/deathmatchbuzz.ogg'
 	ambient_buzz_vol = 20
 
+/area/halflife/outdoors/deployment_city/forest
+	daylight_multiplier = 0.35
+
 /area/halflife/indoors/combat_deployment/combine_base
 	name = "\improper Combine Nexus"
 

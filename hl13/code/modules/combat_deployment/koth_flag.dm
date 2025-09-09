@@ -1,10 +1,12 @@
 GLOBAL_VAR_INIT(deployment_rebels_flag_time_left, 5 MINUTES)
 GLOBAL_VAR_INIT(deployment_combine_flag_time_left, 5 MINUTES)
 GLOBAL_VAR_INIT(deployment_flag_grace_period, 3 MINUTES)
+GLOBAL_VAR_INIT(deployment_respawn_rate_rebels, 20 SECONDS)
+GLOBAL_VAR_INIT(deployment_respawn_rate_combine, 20 SECONDS)
 
 /obj/machinery/deployment_koth_flag
 	name = "Central Flag"
-	desc = "A towering flag which must be held by one side of the conflict for a total of 5 minutes to win. Click on it to start changing the flag to your side."
+	desc = "A towering flag which must be held by one side of the conflict for a certain amount of time to win. Click on it to start changing the flag to your side."
 	icon = 'hl13/icons/obj/koth_flag.dmi'
 	icon_state = "uncapturable"
 	resistance_flags = INDESTRUCTIBLE
@@ -20,9 +22,25 @@ GLOBAL_VAR_INIT(deployment_flag_grace_period, 3 MINUTES)
 	var/current_faction_holder = NO_FACTION
 	var/capturable
 
+	var/starting_faction = null
+
+	var/rebel_time = 5 MINUTES
+	var/combine_time = 5 MINUTES
+	var/grace_time = 3 MINUTES
+
+	/// Should the current holder of the flag have a different respawn speed, as perhaps say a handicap of sorts?
+	var/alter_holder_respawn = FALSE
+
+	/// Alternate respawn timer if above is enabled ^
+	var/altered_respawn_speed = 30 SECONDS
+	var/normal_respawn_speed = 20 SECONDS
+
 /obj/machinery/deployment_koth_flag/Initialize(mapload)
 	.=..()
 	START_PROCESSING(SSprocessing, src)
+	GLOB.deployment_combine_flag_time_left = combine_time
+	GLOB.deployment_rebels_flag_time_left = rebel_time
+	GLOB.deployment_flag_grace_period = grace_time
 
 /obj/machinery/deployment_koth_flag/process()
 	for(var/turf/closed/wall/W in RANGE_TURFS(3, get_turf(src))) //no walling off the flag
@@ -32,20 +50,26 @@ GLOBAL_VAR_INIT(deployment_flag_grace_period, 3 MINUTES)
 		if(!capturable)
 			capturable = TRUE
 			icon_state = "empty"
-			for(var/X in GLOB.deployment_rebel_players)
-				var/mob/living/carbon/human/H = X
-				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
-				to_chat(H, "<span class='greentext big'>The flag grace period is up, and it is now capturable!</span>")
-			for(var/X in GLOB.deployment_combine_players)
-				var/mob/living/carbon/human/H = X
-				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
-				to_chat(H, "<span class='greentext big'>The flag grace period is up, and it is now capturable!</span>")
+			if(!starting_faction)
+				for(var/X in GLOB.deployment_rebel_players)
+					var/mob/living/carbon/human/H = X
+					SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+					to_chat(H, "<span class='greentext big'>The flag grace period is up, and it is now capturable!</span>")
+				for(var/X in GLOB.deployment_combine_players)
+					var/mob/living/carbon/human/H = X
+					SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+					to_chat(H, "<span class='greentext big'>The flag grace period is up, and it is now capturable!</span>")
+			if(starting_faction)
+				current_faction_holder = starting_faction
 	else
 		GLOB.deployment_flag_grace_period -= 1 SECONDS
 
 	if(current_faction_holder == COMBINE_DEPLOYMENT_FACTION)
 		icon_state = "combine"
 		GLOB.deployment_combine_flag_time_left -= 1 SECONDS
+		if(alter_holder_respawn)
+			GLOB.deployment_respawn_rate_combine = altered_respawn_speed
+			GLOB.deployment_respawn_rate_rebels = normal_respawn_speed
 
 		if(GLOB.deployment_combine_flag_time_left <= 0)
 			priority_announce("Central flag under Overwatch Control. Amputate all dissenters.", "Overwatch Priority Alert")
@@ -63,6 +87,9 @@ GLOBAL_VAR_INIT(deployment_flag_grace_period, 3 MINUTES)
 	if(current_faction_holder == REBEL_DEPLOYMENT_FACTION)
 		icon_state = "rebel"
 		GLOB.deployment_rebels_flag_time_left -= 1 SECONDS
+		if(alter_holder_respawn)
+			GLOB.deployment_respawn_rate_combine = normal_respawn_speed
+			GLOB.deployment_respawn_rate_rebels = altered_respawn_speed
 
 		if(GLOB.deployment_rebels_flag_time_left <= 0)
 			priority_announce("The flag is under control of Lambda now, long live the resistance!", "Lambda Priority Alert")
@@ -119,3 +146,10 @@ GLOBAL_VAR_INIT(deployment_flag_grace_period, 3 MINUTES)
 	. = ..()
 	. += span_notice("The rebels need to hold the flag for [(GLOB.deployment_rebels_flag_time_left)/10] seconds more in order to win.")
 	. += span_notice("The combine need to hold the flag for [(GLOB.deployment_combine_flag_time_left)/10] seconds more in order to win.")
+
+/obj/machinery/deployment_koth_flag/rebel_defend
+	rebel_time = 7 MINUTES
+	combine_time = 30 SECONDS
+	grace_time = 5 SECONDS
+	starting_faction = REBEL_DEPLOYMENT_FACTION
+	alter_holder_respawn = TRUE
