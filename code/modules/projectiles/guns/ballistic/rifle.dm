@@ -280,7 +280,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/rebarxbow/force
 
 /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
-	draw_time = 1.4 SECONDS
+	draw_time = 1.25 SECONDS
 
 /obj/item/gun/ballistic/rifle/rebarxbow/syndie
 	name = "syndicate rebar crossbow"

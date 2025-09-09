@@ -27,6 +27,9 @@
 	name = "medical officer vest"
 	icon_state = "medicalofficer"
 
+/obj/item/clothing/suit/armor/civilprotection/speedy
+	slowdown = -0.33
+
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat
 	name = "civil protection trench coat"
 	desc = "A modified standard vest with a partial trenchcoat. Provides protection for your arms and legs, but will slightly slow you down."

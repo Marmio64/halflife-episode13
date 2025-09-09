@@ -211,13 +211,13 @@
 	update_appearance(UPDATE_ICON)
 
 /obj/item/storage/belt/civilprotection/overwatch/assassin/PopulateContents()
-	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
+	SSwardrobe.provide_type(/obj/item/grenade/c4, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm/extended, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm/extended, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/combine_sniper, src)
-	SSwardrobe.provide_type(/obj/item/knife/combat/deployment, src)
+	SSwardrobe.provide_type(/obj/item/knife/combat/backstab, src)
 	update_appearance(UPDATE_ICON)
 
 

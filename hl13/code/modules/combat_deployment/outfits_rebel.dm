@@ -253,6 +253,7 @@
 	suit = /obj/item/clothing/suit/armor/civilprotection
 	suit_store = /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
 	belt = /obj/item/gun/ballistic/automatic/pistol/usp
+	l_pocket = /obj/item/ammo_box/magazine/usp9mm
 	r_pocket = /obj/item/grenade/smokebomb
 
 	glasses = /obj/item/clothing/glasses/night
@@ -392,6 +393,7 @@
 	suit = /obj/item/clothing/suit/armor/rebel/light
 	suit_store = /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
 	belt = /obj/item/gun/ballistic/revolver/coltpython
+	l_pocket = /obj/item/ammo_box/colta357
 	r_pocket = /obj/item/grenade/smokebomb
 
 	glasses = /obj/item/clothing/glasses/night
@@ -438,6 +440,38 @@
 	desc = "A label on it reads: <i>Warning: Activating this device will send a rebel turret to your location</i>."
 	droptype = /obj/machinery/porta_turret/combine/rebel
 	call_period = 1 SECONDS
+
+/datum/outfit/deployment_loadout/rebel/tier4/spy
+	name = "Deployment: Rebel Spy"
+	display_name = "Rebel Spy"
+	desc = "While not very effective in direct combat, you have a powerful knife that is espescially effective when backstabbing opponents, smoke bombs, a revolver, and C4 for sabotage."
+
+	uniform = /obj/item/clothing/under/citizen/rebel
+	head = /obj/item/clothing/head/beret/sec/poland
+	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/fingerless
+
+	back = /obj/item/storage/backpack/satchel
+
+	l_pocket = /obj/item/knife/combat/backstab
+	r_pocket = /obj/item/grenade/smokebomb
+
+	suit = /obj/item/clothing/suit/armor/civilprotection/speedy
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython
+
+	mask = /obj/item/clothing/mask/gas/hl2/swat
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/grenade/c4 = 2,
+		/obj/item/grenade/smokebomb = 1,
+		/obj/item/ammo_box/colta357 = 1,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+	glasses = /obj/item/clothing/glasses/night
+
+	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
 
 ///////////// TIER 5 //////////////////////////////////////////
 

@@ -135,10 +135,27 @@
 	can_parry = TRUE //hl13 edit
 	wdefense = 1 //hl13 edit
 
-/obj/item/knife/combat/deployment
-	force = 40
-	armour_penetration = 40
+/obj/item/knife/combat/backstab
+	name = "assassin's combat knife"
+	desc = "A military combat utility survival knife. Deals far more damage on backstabs."
+	force = 25
+	armour_penetration = 30
 	wdefense = 3
+
+/obj/item/knife/combat/backstab/weak
+	force = 20
+
+/obj/item/knife/combat/backstab/afterattack(atom/target, mob/user, click_parameters)
+	. = ..()
+	if(target == user || !isliving(target))
+		return
+	var/mob/living/living_target = target
+	if(!check_behind(user, living_target))
+		return
+	// We're officially behind them, apply effects
+	living_target.apply_damage(35, BRUTE, wound_bonus = CANT_WOUND)
+	living_target.balloon_alert(user, "backstab!")
+	playsound(living_target, 'sound/items/weapons/guillotine.ogg', 100, TRUE)
 
 /datum/embed_data/combat_knife
 	pain_mult = 4
