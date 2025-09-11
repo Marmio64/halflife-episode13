@@ -1006,3 +1006,12 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 
 /obj/structure/halflife/road/verticalcrossing
 	icon_state = "vertical_crossing"
+
+/obj/structure/barricade/wooden/solid
+	name = "solid wooden barricade"
+	desc = "This space is blocked off by a wooden barricade, which also obstructs vision."
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "woodenbarricade"
+	opacity = TRUE
+	max_integrity = 140
+	proj_pass_rate = 0
