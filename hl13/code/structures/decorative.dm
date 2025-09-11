@@ -1013,5 +1013,5 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 	icon = 'hl13/icons/obj/miscellaneous.dmi'
 	icon_state = "woodenbarricade"
 	opacity = TRUE
-	max_integrity = 140
+	max_integrity = 150
 	proj_pass_rate = 0
