@@ -63,7 +63,7 @@
 	consume_use(display_names[choice], user)
 
 /// Consumes a use of the beacon, sending the user a message and creating their item in the process
-/obj/item/hl2/loadout_picker/proc/consume_use(datum/outfit/outfit_choice, mob/living/user)
+/obj/item/hl2/loadout_picker/proc/consume_use(datum/outfit/deployment_loadout/outfit_choice, mob/living/user)
 	to_chat(user, span_hear("Loadout selected."))
 
 	if(ishuman(user))
@@ -74,6 +74,8 @@
 
 		human_user.equipOutfit(outfit_choice) // Loadout
 		human_user.regenerate_icons()
+		to_chat(human_user, span_notice("You are the [outfit_choice.display_name]!"))
+		to_chat(human_user, span_notice("[outfit_choice.desc]"))
 
 	do_sparks(3, source = src)
 	qdel(src)

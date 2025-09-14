@@ -325,7 +325,7 @@
 /datum/outfit/deployment_loadout/rebel/tier4/corporal
 	name = "Deployment: PLF Corporal"
 	display_name = "PLF Corporal"
-	desc = "Well armored and equipped with a service rifle to pose a sizeable threat."
+	desc = "You are better armored and supplied compared to AR2 rebels, but move a bit slower and have slightly less firepower."
 	suit = /obj/item/clothing/suit/armor/halflife/milvest
 	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
@@ -333,7 +333,7 @@
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/flashlight/seclite
 	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	shoes = /obj/item/clothing/shoes/boots
 
 	back = /obj/item/storage/backpack/halflife/satchel/military
@@ -363,7 +363,7 @@
 	backpack_contents = list(
 		/obj/item/grenade/syndieminibomb/bouncer = 3,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
-		/obj/item/ammo_box/magazine/mp7 = 3,
+		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -371,7 +371,7 @@
 /datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt
 	name = "Deployment: Elder Vortigaunt"
 	display_name = "Elder Vortigaunt"
-	desc = "Unleash vortal energy upon foes. You're a wizard, vorty!"
+	desc = "Keep enemies at bay with your vortal repulse, forcewall, and beams while using mend to heal yourself and allies."
 	uniform = null
 	shoes = null
 
@@ -415,7 +415,7 @@
 /datum/outfit/deployment_loadout/rebel/tier4/engineer
 	name = "Deployment: Heavy Refugee Engineer"
 	display_name = "Heavy Refugee Engineer"
-	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building."
+	desc = "Equipped with a crowbar, satchel, a pistol, two sentry beacons, and sandbags, you can do melee combat and a bit of building."
 
 	uniform = /obj/item/clothing/under/citizen/refugee
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
@@ -478,7 +478,7 @@
 /datum/outfit/deployment_loadout/rebel/tier5/freeman
 	name = "Deployment: A Free Man"
 	display_name = "A Free Man"
-	desc = "Well armored and speedy, with a powerful crowbar to boot alongside a shotgun."
+	desc = "Well armored and speedy, with a powerful crowbar to boot alongside a shotgun. You excel at hit and run attacks thanks to your suit's automated healing and speed, but your armor isn't good enough to sustain too much firepower yet."
 
 	uniform = /obj/item/clothing/under/citizen/rebel
 	suit = /obj/item/clothing/suit/hooded/hev/deathmatch/deployment
@@ -502,7 +502,7 @@
 /datum/outfit/deployment_loadout/rebel/tier5/veteran
 	name = "Deployment: PLF Veteran"
 	display_name = "PLF Veteran"
-	desc = "Ultra heavily armored with an AK-47 to destroy enemies."
+	desc = "You have the heaviest armor available to the resistance, which is comparable to Combine Wallhammers, and have a dangerous AK-47. Your lack of speed and your weapon's inaccuracy leaves you vulnerable to snipers however."
 
 	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
 	mask = /obj/item/clothing/mask/gas/hl2/military
@@ -528,7 +528,7 @@
 /datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt
 	name = "Deployment: Extract Empowered Vortigaunt"
 	display_name = "Extract Empowered Vortigaunt"
-	desc = "Unleash vortal energy upon foes. You're a wizard, vorty!"
+	desc = "You have all the powers of an elder vortigaunt, but with increased damage resistance and a mending ability which is twice as powerful, making you very good at healing people."
 	uniform = null
 	shoes = null
 

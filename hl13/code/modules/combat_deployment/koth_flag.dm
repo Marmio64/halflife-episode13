@@ -1,8 +1,8 @@
 GLOBAL_VAR_INIT(deployment_rebels_flag_time_left, 5 MINUTES)
 GLOBAL_VAR_INIT(deployment_combine_flag_time_left, 5 MINUTES)
 GLOBAL_VAR_INIT(deployment_flag_grace_period, 3 MINUTES)
-GLOBAL_VAR_INIT(deployment_respawn_rate_rebels, 20 SECONDS)
-GLOBAL_VAR_INIT(deployment_respawn_rate_combine, 20 SECONDS)
+GLOBAL_VAR_INIT(deployment_respawn_rate_rebels, 24 SECONDS)
+GLOBAL_VAR_INIT(deployment_respawn_rate_combine, 24 SECONDS)
 
 /obj/machinery/deployment_koth_flag
 	name = "Central Flag"
@@ -32,8 +32,8 @@ GLOBAL_VAR_INIT(deployment_respawn_rate_combine, 20 SECONDS)
 	var/alter_holder_respawn = FALSE
 
 	/// Alternate respawn timer if above is enabled ^
-	var/altered_respawn_speed = 30 SECONDS
-	var/normal_respawn_speed = 20 SECONDS
+	var/altered_respawn_speed = 34 SECONDS
+	var/normal_respawn_speed = 24 SECONDS
 
 /obj/machinery/deployment_koth_flag/Initialize(mapload)
 	.=..()

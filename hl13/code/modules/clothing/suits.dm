@@ -586,3 +586,15 @@
 	fire = 70 //pretty well-insulated
 	acid = 50
 	wound = 40
+
+/obj/item/clothing/suit/halflife/invis_grunt_harness
+	name = "Grunt Harness"
+	desc = "A tiny, practically invisible harness for securing a weapon to."
+	icon_state = "invis_grunt_harness"
+	worn_icon_state = "invis_grunt_harness"
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
+/obj/item/clothing/suit/halflife/invis_grunt_harness/Initialize(mapload)
+	. = ..()
+	allowed = GLOB.security_vest_allowed
