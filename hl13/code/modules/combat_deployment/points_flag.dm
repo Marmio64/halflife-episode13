@@ -16,6 +16,9 @@
 
 	var/cash_increase = 0.6 //assuming this is bunker mode, rebels have to keep the flag for 420 seconds, and so this flag would generate a total of $252
 
+/obj/machinery/deployment_points_flag/low_cash
+	cash_increase = 0.2
+
 /obj/machinery/deployment_points_flag/Initialize(mapload)
 	.=..()
 	START_PROCESSING(SSprocessing, src)
@@ -57,9 +60,15 @@
 /obj/machinery/deployment_points_flag/poland/high_cash
 	cash_increase = 3
 
+/obj/machinery/deployment_points_flag/poland/low_cash
+	cash_increase = 0.2
+
 /obj/machinery/deployment_points_flag/combine
 	icon_state = "flagpole_combine"
 	starting_faction = COMBINE_DEPLOYMENT_FACTION
 
 /obj/machinery/deployment_points_flag/combine/high_cash
 	cash_increase = 3
+
+/obj/machinery/deployment_points_flag/combine/low_cash
+	cash_increase = 0.2

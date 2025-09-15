@@ -35,6 +35,9 @@ GLOBAL_VAR_INIT(deployment_respawn_rate_combine, 24 SECONDS)
 	var/altered_respawn_speed = 34 SECONDS
 	var/normal_respawn_speed = 24 SECONDS
 
+	var/grace_period_up_text = "<span class='greentext big'>The flag grace period is up, and it is now capturable!</span>"
+	var/grace_period_text = TRUE
+
 /obj/machinery/deployment_koth_flag/Initialize(mapload)
 	.=..()
 	START_PROCESSING(SSprocessing, src)
@@ -50,15 +53,15 @@ GLOBAL_VAR_INIT(deployment_respawn_rate_combine, 24 SECONDS)
 		if(!capturable)
 			capturable = TRUE
 			icon_state = "empty"
-			if(!starting_faction)
+			if(grace_period_text)
 				for(var/X in GLOB.deployment_rebel_players)
 					var/mob/living/carbon/human/H = X
 					SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
-					to_chat(H, "<span class='greentext big'>The flag grace period is up, and it is now capturable!</span>")
+					to_chat(H, grace_period_up_text)
 				for(var/X in GLOB.deployment_combine_players)
 					var/mob/living/carbon/human/H = X
 					SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
-					to_chat(H, "<span class='greentext big'>The flag grace period is up, and it is now capturable!</span>")
+					to_chat(H, grace_period_up_text)
 			if(starting_faction)
 				current_faction_holder = starting_faction
 	else
@@ -150,6 +153,26 @@ GLOBAL_VAR_INIT(deployment_respawn_rate_combine, 24 SECONDS)
 /obj/machinery/deployment_koth_flag/rebel_defend
 	rebel_time = 7 MINUTES
 	combine_time = 30 SECONDS
-	grace_time = 5 SECONDS
+	grace_time = 45 SECONDS
 	starting_faction = REBEL_DEPLOYMENT_FACTION
 	alter_holder_respawn = TRUE
+	grace_period_up_text = "<span class='reallybig'>The initial setup grace period is up, and the rebel flag is now capturable by the Combine.</span>"
+
+/obj/effect/koth_grace_field
+	name = "Grace Period Field"
+	desc = "A strange field which stops anything from passing until a grace period has finished."
+	icon_state = "m_shield"
+	anchored = TRUE
+	opacity = FALSE
+	density = TRUE
+	can_atmos_pass = ATMOS_PASS_DENSITY
+
+/obj/effect/koth_grace_field/Initialize(mapload)
+	. = ..()
+	START_PROCESSING(SSprocessing, src)
+
+/obj/effect/koth_grace_field/process()
+	if(SSticker.HasRoundStarted())
+		if(GLOB.deployment_flag_grace_period < 1 SECONDS)
+			STOP_PROCESSING(SSprocessing, src)
+			qdel(src)
