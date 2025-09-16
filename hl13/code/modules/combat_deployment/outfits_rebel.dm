@@ -335,6 +335,7 @@
 	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/fingerless
 
 	back = /obj/item/storage/backpack/halflife/satchel/military
 

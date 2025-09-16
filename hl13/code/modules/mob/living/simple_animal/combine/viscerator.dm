@@ -65,6 +65,7 @@
 	melee_damage_upper = 20
 
 /mob/living/simple_animal/hostile/halflife/viscerator/weak
-	health = 30
-	maxHealth = 30
-	loot = null
+	health = 25
+	maxHealth = 25
+	operating_power = 15 //30 seconds till low power
+	loot = list()

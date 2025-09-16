@@ -59,6 +59,10 @@
 	fov_view = highest_fov
 	if(HAS_TRAIT(src, TRAIT_EXPANDED_FOV))
 		fov_view += 30
+	if(HAS_TRAIT(src, TRAIT_TOTAL_FOV))
+		fov_view += 360
+	if(HAS_TRAIT(src, TRAIT_USER_SCOPED))
+		fov_view += 360
 	update_fov_client()
 
 /// Updates the FOV for the client.

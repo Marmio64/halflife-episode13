@@ -182,6 +182,9 @@
 		RegisterSignals(user, capacity_signals, PROC_REF(on_incapacitated))
 	START_PROCESSING(SSprojectiles, src)
 	ADD_TRAIT(user, TRAIT_USER_SCOPED, REF(src))
+	if(isliving(user))
+		var/mob/living/liver = user
+		liver.update_fov()
 	return TRUE
 
 ///Stop scoping if the `newloc` we move to is not a turf
@@ -219,6 +222,9 @@
 		COMSIG_ATOM_ENTERING,
 	))
 	REMOVE_TRAIT(user, TRAIT_USER_SCOPED, REF(src))
+	if(isliving(user))
+		var/mob/living/liver = user
+		liver.update_fov()
 
 	user.playsound_local(parent, 'sound/items/weapons/scope.ogg', 75, TRUE, frequency = -1)
 	user.clear_fullscreen("scope")

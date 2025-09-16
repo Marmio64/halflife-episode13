@@ -52,6 +52,7 @@
 
 /obj/item/grenade/spawnergrenade/manhacks/weak
 	det_time = 1 SECONDS
+	deliveryamt = 2
 	spawner_type = /mob/living/simple_animal/hostile/halflife/viscerator/weak
 
 /obj/item/grenade/spawnergrenade/spesscarp

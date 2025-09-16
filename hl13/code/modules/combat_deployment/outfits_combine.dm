@@ -455,7 +455,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
 
 	backpack_contents = list(
-		/obj/item/grenade/spawnergrenade/manhacks/weak = 5,
+		/obj/item/grenade/spawnergrenade/manhacks/weak = 2,
 		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
 

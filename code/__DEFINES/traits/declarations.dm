@@ -30,6 +30,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_GODMODE "godmode"
 /// Expands our FOV by 30 degrees if restricted
 #define TRAIT_EXPANDED_FOV "expanded_fov"
+/// Gives us total FOV if restricted hl13 edit
+#define TRAIT_TOTAL_FOV "total_fov"
 /// Doesn't miss attacks
 #define TRAIT_PERFECT_ATTACKER "perfect_attacker"
 ///Recolored by item/greentext

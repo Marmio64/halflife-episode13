@@ -149,4 +149,30 @@
 		if(W)
 			playsound(get_turf(src), pick(W.parrysound), 100, FALSE)
 		return TRUE
+/*
+/mob/living/proc/look_further(turf/T)
+	if(client.perspective != MOB_PERSPECTIVE)
+		stop_looking()
+		return
+	if(client.pixel_x || client.pixel_y)
+		stop_looking()
+		return
+	if(!can_look_up())
+		return
+	if(!istype(T))
+		return
+	changeNext_move(CLICK_CD_MELEE)
 
+	var/_x = T.x-loc.x
+	var/_y = T.y-loc.y
+	if(_x > 7 || _x < -7)
+		return
+	if(_y > 7 || _y < -7)
+		return
+	hide_cone()
+	var/ttime = 8
+	visible_message("<span class='info'>[src] looks into the distance.</span>")
+	animate(client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, ttime)
+//	RegisterSignal(src, COMSIG_MOVABLE_PRE_MOVE, PROC_REF(stop_looking))
+	ADD_TRAIT(L, TRAIT_TOTAL_FOV, INNATE_TRAIT)
+*/

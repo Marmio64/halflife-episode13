@@ -467,5 +467,27 @@
 
 	return FALSE
 
+/*
+/mob/proc/ShiftRightClickOn(atom/A, params)
+//	A.ShiftRightClick(src)
+	return
+
+/mob/living/ShiftRightClickOn(atom/A, params)
+	var/turf/T = get_turf(A)
+//	var/turf/MT = get_turf(src)
+	if(stat)
+		return
+	if(A.Adjacent(src))
+		if(T == loc)
+			look_up()
+		else
+			if(istransparentturf(T))
+				look_down(T)
+			else
+				look_further(T)
+	else
+		look_further(T)
+*/
+
 #undef MAX_SAFE_BYOND_ICON_SCALE_TILES
 #undef MAX_SAFE_BYOND_ICON_SCALE_PX
