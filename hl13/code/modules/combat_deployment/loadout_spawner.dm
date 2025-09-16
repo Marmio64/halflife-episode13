@@ -219,6 +219,7 @@
 			/datum/outfit/deployment_loadout/combine/tier4/medic_cop,
 			/datum/outfit/deployment_loadout/combine/tier4/engineer,
 			/datum/outfit/deployment_loadout/combine/tier4/scanner,
+			/datum/outfit/deployment_loadout/combine/tier4/overseer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

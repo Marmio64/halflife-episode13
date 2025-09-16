@@ -63,7 +63,7 @@ DEFINE_BITFIELD(turret_flags, list(
 	bullet = 40
 	laser = 30
 	energy = 30
-	bomb = 30
+	bomb = 20
 	fire = 90
 	acid = 90
 

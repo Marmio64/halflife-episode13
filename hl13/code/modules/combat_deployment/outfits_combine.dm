@@ -251,6 +251,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/medkit = 3,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 	)
 
@@ -430,6 +431,33 @@
 	var/mob/living/silicon/robot/cityscanner/cannister_targeter/S = new (H.loc)
 	player_mind.transfer_to(S)
 	qdel(H)
+
+/datum/outfit/deployment_loadout/combine/tier4/overseer
+	name = "Deployment: Overseer"
+	display_name = "Viscerator Overseer Cop"
+	desc = "You are a MP7 equipped cop that specializes in supporting allies with your large amount of viscerators, but aren't too powerful by yourself. Your viscerators have rather low health but are quick to deploy. They're best used for swarming slower firing attackers."
+
+	uniform = /obj/item/clothing/under/combine/civilprotection
+	gloves = /obj/item/clothing/gloves/color/civilprotection
+	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat/overseer
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+
+	mask = /obj/item/clothing/mask/gas/civilprotection/overseer
+	belt = /obj/item/storage/belt/civilprotection/full
+
+	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
+	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
+
+	ears = /obj/item/radio/headset/headset_sec
+	combat_music = 'hl13/sound/music/combat/branescan.ogg'
+
+	suit_store = /obj/item/gun/ballistic/automatic/mp7
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
+
+	backpack_contents = list(
+		/obj/item/grenade/spawnergrenade/manhacks/weak = 5,
+		/obj/item/ammo_box/magazine/mp7 = 2,
+	)
 
 ////////////////////// TIER 5 /////////////////////////////////////
 

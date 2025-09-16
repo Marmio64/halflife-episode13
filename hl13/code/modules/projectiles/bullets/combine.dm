@@ -7,6 +7,7 @@
 
 /obj/projectile/bullet/pulse/ar2/fast
 	speed = 4
+	armour_penetration = 30
 
 /obj/projectile/bullet/pulse/lmg
 	name = "pulse round"
@@ -34,7 +35,7 @@
 	icon_state = "pulse"
 	damage = 50
 	wound_bonus = -10
-	armour_penetration = 25
+	armour_penetration = 35
 	speed = 3
 
 /obj/projectile/bullet/flechette

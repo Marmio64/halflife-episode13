@@ -63,3 +63,8 @@
 	maxHealth = 80
 	melee_damage_lower = 15
 	melee_damage_upper = 20
+
+/mob/living/simple_animal/hostile/halflife/viscerator/weak
+	health = 30
+	maxHealth = 30
+	loot = null

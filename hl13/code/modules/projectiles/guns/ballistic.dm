@@ -202,6 +202,9 @@
 	pin = /obj/item/firing_pin/implant/mindshield
 	//var/obj/item/attachment/laser_sight/combine/laser
 
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
 /obj/item/gun/ballistic/combine_sniper/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/scope, range_modifier = 3)
