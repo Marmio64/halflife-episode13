@@ -314,7 +314,7 @@
 	l_pocket = /obj/item/grenade/syndieminibomb/bouncer
 
 	suit_store = /obj/item/gun/ballistic/shotgun/spas12
-	belt = /obj/item/storage/belt/civilprotection/overwatch/spas12
+	belt = /obj/item/storage/belt/civilprotection/overwatch/spas12_extrapen
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/red
 	uniform = /obj/item/clothing/under/combine/overwatch/red
 	suit = /obj/item/clothing/suit/armor/overwatch/red

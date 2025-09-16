@@ -42,6 +42,9 @@
 	sound_played = 'hl13/sound/effects/healthpen_inject.ogg'
 	custom_price = null
 
+/obj/item/reagent_containers/hypospray/medipen/healthpen/high_capacity
+	list_reagents = list(/datum/reagent/medicine/concentrated_biogel/slurry = 25) //heals 50 hp total instead of 30
+
 /obj/item/storage/halflife/pill_bottle/antitox
 	name = "Anti-Sickness Pill bottle"
 	desc = "A pill bottle with antibiotics and activated charcoal pills, which cleanse diseases, venoms, and poisons from the body."
