@@ -42,6 +42,9 @@
 /mob/living/simple_animal/hostile/halflife/antlion/digsound
 	spawn_sound = 'hl13/sound/creatures/antlion/digup1.ogg'
 
+/mob/living/simple_animal/hostile/halflife/antlion/digsound/zombie_faction
+	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
+
 /mob/living/simple_animal/hostile/halflife/antlion/OpenFire()
 	if(charging)
 		return

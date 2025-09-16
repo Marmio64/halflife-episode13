@@ -3,6 +3,7 @@ GLOBAL_VAR_INIT(deployment_combine_flag_time_left, 5 MINUTES)
 GLOBAL_VAR_INIT(deployment_flag_grace_period, 3 MINUTES)
 GLOBAL_VAR_INIT(deployment_respawn_rate_rebels, 24 SECONDS)
 GLOBAL_VAR_INIT(deployment_respawn_rate_combine, 24 SECONDS)
+GLOBAL_VAR_INIT(deployment_respawn_rate_xen, 12 SECONDS)
 
 /obj/machinery/deployment_koth_flag
 	name = "Central Flag"

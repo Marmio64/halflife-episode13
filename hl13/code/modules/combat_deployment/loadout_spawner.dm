@@ -1,11 +1,8 @@
 /obj/item/hl2/loadout_picker
 	name = "loadout beacon"
-	desc = "Allows you to instantly equip yourself in a new loadout."
-	icon = 'icons/obj/devices/remote.dmi'
-	icon_state = "generic_delivery"
-	inhand_icon_state = "generic_delivery"
-	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
+	desc = "A radio attuned to a logistics center, which near instantly gets you equipped in a loadout of your choice so long as you are in range of your base."
+	icon = 'hl13/icons/obj/misc_items.dmi'
+	icon_state = "loadout_picker"
 	var/faction_belonging = NO_FACTION
 
 /obj/item/hl2/loadout_picker/interact(mob/user)
@@ -239,55 +236,58 @@
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
 
-///////////////////////////// ZOMBIE LOADOUT PICKERS //////////////////////////////////////////////////////
+///////////////////////////// XEN (ZOMBIE/ANTLION) LOADOUT PICKERS //////////////////////////////////////////////////////
 
-/obj/item/hl2/loadout_picker/zombie
-	faction_belonging = ZOMBIE_DEPLOYMENT_FACTION
+/obj/item/hl2/loadout_picker/xen
+	faction_belonging = XEN_DEPLOYMENT_FACTION
 
-/obj/item/hl2/loadout_picker/zombie/tier1/generate_display_names()
+/obj/item/hl2/loadout_picker/xen/tier1/generate_display_names()
 	var/static/list/loadouts
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/outfit/deployment_loadout/zombie/tier1/headcrab,
-			/datum/outfit/deployment_loadout/zombie/tier1/fast_headcrab,
+			/datum/outfit/deployment_loadout/xen/tier1/headcrab,
+			/datum/outfit/deployment_loadout/xen/tier1/fast_headcrab,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
 
-/obj/item/hl2/loadout_picker/zombie/tier2/generate_display_names()
+/obj/item/hl2/loadout_picker/xen/tier2/generate_display_names()
 	var/static/list/loadouts
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/outfit/deployment_loadout/zombie/tier2/poison_headcrab,
-			/datum/outfit/deployment_loadout/zombie/tier2/zombie,
+			/datum/outfit/deployment_loadout/xen/tier2/poison_headcrab,
+			/datum/outfit/deployment_loadout/xen/tier2/zombie,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
 
-/obj/item/hl2/loadout_picker/zombie/tier3/generate_display_names()
+/obj/item/hl2/loadout_picker/xen/tier3/generate_display_names()
 	var/static/list/loadouts
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/outfit/deployment_loadout/zombie/tier3/fast_zombie,
-			/datum/outfit/deployment_loadout/zombie/tier3/poison_zombie,
-			/datum/outfit/deployment_loadout/zombie/tier3/fungal_zombie,
-			/datum/outfit/deployment_loadout/zombie/tier3/zombine,
+			/datum/outfit/deployment_loadout/xen/tier3/fast_zombie,
+			/datum/outfit/deployment_loadout/xen/tier3/poison_zombie,
+			/datum/outfit/deployment_loadout/xen/tier3/fungal_zombie,
+			/datum/outfit/deployment_loadout/xen/tier3/zombine,
+			/datum/outfit/deployment_loadout/xen/tier3/antlion_worker,
+			/datum/outfit/deployment_loadout/xen/tier3/antlion_grub,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
 
-/obj/item/hl2/loadout_picker/zombie/tier4/generate_display_names()
+/obj/item/hl2/loadout_picker/xen/tier4/generate_display_names()
 	var/static/list/loadouts
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/outfit/deployment_loadout/zombie/tier4/gonome,
+			/datum/outfit/deployment_loadout/xen/tier4/gonome,
+			/datum/outfit/deployment_loadout/xen/tier4/antlion_guard,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

@@ -143,8 +143,8 @@
 	icon_state = "fastcrab"
 	icon_living = "fastcrab"
 	icon_dead = "fastcrab_dead"
-	maxHealth = 25
-	health = 25
+	maxHealth = 20
+	health = 20
 	speed = 0.25
 	zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed/fast
 

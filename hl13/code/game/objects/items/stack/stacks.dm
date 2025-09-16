@@ -158,6 +158,9 @@
 	obj_flags = CONDUCTS_ELECTRICITY
 	grind_results = list(/datum/reagent/iron = 20)
 
+/obj/item/stack/bulletcasings/three
+	amount = 3
+
 /obj/item/stack/sheet/halflife/bullets
 	icon = 'hl13/icons/obj/stack_objects.dmi'
 	name = "plain bullets"
@@ -168,6 +171,9 @@
 	w_class = WEIGHT_CLASS_TINY
 	merge_type = /obj/item/stack/sheet/halflife/bullets
 	grind_results = list(/datum/reagent/iron = 20)
+
+/obj/item/stack/sheet/halflife/bullets/three
+	amount = 3
 
 /obj/item/stack/sheet/halflife/brick
 	name = "brick"

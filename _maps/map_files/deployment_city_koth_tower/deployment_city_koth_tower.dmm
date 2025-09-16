@@ -979,6 +979,10 @@
 /obj/effect/landmark/deployments_refugee,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"Oy" = (
+/obj/machinery/combine_walllight/directional/north,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/outdoors/deployment_city)
 "Oz" = (
 /obj/structure/barricade/sandbags,
 /obj/machinery/combine_walllight/directional/east,
@@ -1000,10 +1004,6 @@
 /area/halflife/outdoors/deployment_city)
 "PE" = (
 /obj/effect/spawner/random/halflife/loot/heal,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/halflife/outdoors/deployment_city)
-"PF" = (
-/obj/machinery/combine_walllight/directional/north,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/outdoors/deployment_city)
 "PG" = (
@@ -9322,18 +9322,10 @@ Cp
 qM
 hp
 sW
-sW
-sW
-sW
-qM
-sW
+Ju
 sW
 sW
 qM
-hp
-sW
-sW
-sW
 sW
 sW
 sW
@@ -9342,12 +9334,20 @@ hp
 sW
 sW
 sW
+Ju
+sW
+sW
 qM
 hp
 sW
 sW
 sW
+qM
+hp
 sW
+sW
+sW
+Ju
 sW
 sW
 sW
@@ -10132,7 +10132,7 @@ Cp
 qM
 LJ
 sW
-sW
+is
 sW
 sW
 qM
@@ -10144,7 +10144,7 @@ LJ
 sW
 sW
 sW
-sW
+is
 sW
 sW
 qM
@@ -10157,7 +10157,7 @@ uU
 sW
 sW
 sW
-sW
+is
 sW
 sW
 sW
@@ -25402,7 +25402,7 @@ sW
 sW
 VC
 sW
-sW
+PG
 qM
 mi
 sW
@@ -25686,7 +25686,7 @@ sW
 sW
 sW
 sW
-sW
+PG
 qM
 je
 je
@@ -27697,7 +27697,7 @@ sW
 sW
 ih
 sW
-sW
+PG
 qM
 sW
 sW
@@ -27711,7 +27711,7 @@ sW
 sW
 sW
 sW
-sW
+PG
 qM
 je
 je
@@ -42803,7 +42803,7 @@ je
 je
 Wf
 kI
-PF
+Oy
 qM
 mi
 sW

@@ -65,6 +65,9 @@
 	damage_type = BURN
 	hitsound = 'hl13/sound/creatures/antlion_worker/antlion_shoot.ogg'
 
+/mob/living/basic/halflife/antlion_worker/zombie_faction
+	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
+
 //antlions
 /mob/living/basic/halflife/antlion_guard
 	name = "Antlion Guard"
@@ -99,6 +102,9 @@
 
 	var/soundvary = FALSE
 	var/idle_sounds = list('hl13/sound/creatures/antlion_guard/growl_idle.ogg')
+
+/mob/living/basic/halflife/antlion_guard/zombie_faction
+	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
 
 ///Every hit throws people back
 /mob/living/basic/halflife/antlion_guard/melee_attack(atom/target, list/modifiers, ignore_cooldown = FALSE)

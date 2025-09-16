@@ -798,6 +798,8 @@
 			required_delay = GLOB.deployment_respawn_rate_combine
 		else if(client.deployment_faction == REBEL_DEPLOYMENT_FACTION)
 			required_delay = GLOB.deployment_respawn_rate_rebels
+		else if(client.deployment_faction == XEN_DEPLOYMENT_FACTION)
+			required_delay = GLOB.deployment_respawn_rate_xen
 		else
 			required_delay = 24 SECONDS
 

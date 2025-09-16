@@ -51,3 +51,28 @@
 		squash_flags = SQUASHED_ALWAYS_IF_DEAD|SQUASHED_DONT_SQUASH_IN_CONTENTS, \
 	)
 */
+
+/mob/living/basic/halflife/grub/deployment
+	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
+	var/datum/action/cooldown/spell/conjure/antlions/deployment/antlions
+
+/mob/living/basic/halflife/grub/deployment/Initialize(mapload)
+	. = ..()
+	antlions = new(src)
+	antlions.Grant(src)
+
+/datum/action/cooldown/spell/conjure/antlions/deployment
+	name = "Call upon Antlions"
+	desc = "Calls to Antlions deep in the ground, causing them to surface to protect you for a short while, or until they die."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "antlion"
+
+	school = SCHOOL_CONJURATION
+	cooldown_time = 10 SECONDS
+
+	invocation_type = INVOCATION_NONE
+	spell_requirements = NONE
+
+	summon_lifespan = 30 SECONDS
+	summon_radius = 3
+	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/zombie_faction)
