@@ -12,7 +12,7 @@
 /obj/projectile/bullet/pulse/lmg
 	name = "pulse round"
 	icon_state = "pulse"
-	damage = 18
+	damage = 19
 	wound_bonus = -10
 	armour_penetration = 20
 

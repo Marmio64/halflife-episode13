@@ -432,10 +432,11 @@
 	player_mind.transfer_to(S)
 	qdel(H)
 
+//not in use for now since their shielded viscerators arent working right
 /datum/outfit/deployment_loadout/combine/tier4/overseer
 	name = "Deployment: Overseer"
 	display_name = "Viscerator Overseer Cop"
-	desc = "You are a MP7 equipped cop that specializes in supporting allies with your large amount of viscerators, but aren't too powerful by yourself. Your viscerators have rather low health but are quick to deploy. They're best used for swarming slower firing attackers."
+	desc = "You are a MP7 equipped cop that specializes in supporting allies with your large amount of viscerators, but aren't too powerful by yourself. Your viscerators are quick to deploy and have a shield which can take one shot for them, but have low health otherwise, making them best used against slow firing targets."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
@@ -455,8 +456,8 @@
 	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
 
 	backpack_contents = list(
-		/obj/item/grenade/spawnergrenade/manhacks/weak = 2,
-		/obj/item/ammo_box/magazine/mp7 = 2,
+		/obj/item/grenade/spawnergrenade/manhacks/shielded = 3,
+		/obj/item/ammo_box/magazine/mp7 = 3,
 	)
 
 ////////////////////// TIER 5 /////////////////////////////////////

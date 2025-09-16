@@ -58,7 +58,7 @@
 
 /datum/armor/military_helmet
 	melee = 25
-	bullet = 20
+	bullet = 25
 	laser = 20
 	energy = 20
 	bomb = 25
@@ -91,7 +91,7 @@
 
 /datum/armor/military_helmet/weak
 	melee = 15
-	bullet = 10
+	bullet = 15
 	laser = 10
 	energy = 10
 	bomb = 15
@@ -115,7 +115,7 @@
 
 /datum/armor/milhelm
 	melee = 25
-	bullet = 20
+	bullet = 25
 	laser = 20
 	energy = 20
 	bomb = 25

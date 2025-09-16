@@ -64,8 +64,12 @@
 	melee_damage_lower = 15
 	melee_damage_upper = 20
 
-/mob/living/simple_animal/hostile/halflife/viscerator/weak
+/mob/living/simple_animal/hostile/halflife/viscerator/shielded
 	health = 25
 	maxHealth = 25
 	operating_power = 15 //30 seconds till low power
 	loot = list()
+
+/mob/living/simple_animal/hostile/halflife/viscerator/shielded/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/regenerative_shield, number_of_hits = 1, damage_threshold = 80)

@@ -219,7 +219,7 @@
 	fire_sound = 'hl13/sound/weapons/crossbowfire.ogg'
 	can_be_sawn_off = FALSE
 	tac_reloads = FALSE
-	var/draw_time = 2.5 SECONDS
+	var/draw_time = 2.3 SECONDS
 	SET_BASE_PIXEL(0, 0)
 
 /obj/item/gun/ballistic/rifle/rebarxbow/Initialize(mapload)
@@ -280,7 +280,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/rebarxbow/force
 
 /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
-	draw_time = 1.25 SECONDS
+	draw_time = 1.2 SECONDS
 
 /obj/item/gun/ballistic/rifle/rebarxbow/syndie
 	name = "syndicate rebar crossbow"

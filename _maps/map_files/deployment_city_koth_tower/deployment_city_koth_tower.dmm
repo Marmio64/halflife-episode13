@@ -327,6 +327,10 @@
 /obj/item/storage/wallet,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"nJ" = (
+/obj/machinery/combine_walllight/directional/south,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
+/area/halflife/outdoors/deployment_city)
 "nW" = (
 /mob/living/basic/halflife/zombie,
 /obj/machinery/combine_walllight/directional/west,
@@ -552,8 +556,8 @@
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/outdoors/deployment_city)
 "xx" = (
-/obj/structure/barricade/wooden/solid,
-/turf/open/floor/plating/ground/sidewalk/inner,
+/obj/machinery/combine_walllight/directional/north,
+/turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/outdoors/deployment_city)
 "xQ" = (
 /obj/structure/table/halflife/no_smooth/large/metal/desk,
@@ -652,6 +656,10 @@
 /obj/structure/chair/halflife/metal/folding,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"BU" = (
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city)
 "Cm" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -932,8 +940,8 @@
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "MA" = (
-/obj/structure/barricade/wooden/solid,
-/turf/open/floor/plating/ground/sidewalk,
+/obj/machinery/combine_walllight/directional/north,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/outdoors/deployment_city)
 "MI" = (
 /turf/open/floor/plating/indoor/concrete/stairs{
@@ -979,10 +987,6 @@
 /obj/effect/landmark/deployments_refugee,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"Oy" = (
-/obj/machinery/combine_walllight/directional/north,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/halflife/outdoors/deployment_city)
 "Oz" = (
 /obj/structure/barricade/sandbags,
 /obj/machinery/combine_walllight/directional/east,
@@ -1005,6 +1009,10 @@
 "PE" = (
 /obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/outdoors/deployment_city)
+"PF" = (
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
 "PG" = (
 /obj/machinery/combine_walllight/directional/north,
@@ -6486,7 +6494,7 @@ FR
 Cp
 kb
 qM
-No
+nJ
 sW
 sW
 mj
@@ -6514,7 +6522,7 @@ sW
 sW
 sW
 sW
-No
+MA
 qM
 kb
 Cp
@@ -6891,7 +6899,7 @@ fM
 yF
 kb
 qM
-No
+nJ
 sW
 sW
 sW
@@ -6919,7 +6927,7 @@ sW
 sW
 mj
 sW
-No
+MA
 qM
 kb
 yF
@@ -7700,7 +7708,7 @@ FR
 FR
 Cp
 kb
-xx
+BU
 kb
 kb
 kb
@@ -7730,7 +7738,7 @@ kb
 kb
 kb
 kb
-xx
+BU
 kb
 Cp
 FR
@@ -7835,7 +7843,7 @@ FR
 JX
 Cp
 Cp
-MA
+PF
 Cp
 Cp
 Yp
@@ -7865,7 +7873,7 @@ Yp
 Cp
 Cp
 Cp
-MA
+PF
 Cp
 Cp
 rp
@@ -7970,7 +7978,7 @@ FR
 JX
 Cp
 kb
-xx
+BU
 kb
 Xl
 rX
@@ -8000,7 +8008,7 @@ rX
 Xl
 kb
 kb
-xx
+BU
 kb
 Cp
 rp
@@ -9453,7 +9461,7 @@ Cp
 rp
 FR
 JX
-MA
+PF
 qM
 qM
 qM
@@ -9487,7 +9495,7 @@ qM
 qM
 qM
 qM
-MA
+PF
 rp
 FR
 JX
@@ -9588,7 +9596,7 @@ tb
 FR
 FR
 FR
-MA
+PF
 dl
 sW
 sW
@@ -9622,7 +9630,7 @@ is
 sW
 sW
 dl
-MA
+PF
 FR
 FR
 FR
@@ -9723,7 +9731,7 @@ FR
 FR
 FR
 FR
-MA
+PF
 dl
 sW
 sW
@@ -9757,7 +9765,7 @@ sW
 sW
 sW
 dl
-MA
+PF
 FR
 FR
 FR
@@ -9858,7 +9866,7 @@ wK
 FR
 FR
 FR
-MA
+PF
 dl
 sW
 sW
@@ -9892,7 +9900,7 @@ sW
 sW
 sW
 dl
-MA
+PF
 FR
 FR
 FR
@@ -9993,7 +10001,7 @@ Cp
 rp
 FR
 JX
-MA
+PF
 qM
 qM
 qM
@@ -10027,7 +10035,7 @@ qM
 qM
 qM
 qM
-MA
+PF
 rp
 FR
 JX
@@ -11480,7 +11488,7 @@ FR
 JX
 Cp
 kb
-xx
+BU
 kb
 Xl
 rX
@@ -11510,7 +11518,7 @@ rX
 Xl
 kb
 kb
-xx
+BU
 kb
 Cp
 rp
@@ -11615,7 +11623,7 @@ FR
 JX
 Cp
 Cp
-MA
+PF
 Cp
 Cp
 Yp
@@ -11645,7 +11653,7 @@ Yp
 Cp
 Cp
 Cp
-MA
+PF
 Cp
 Cp
 rp
@@ -11750,7 +11758,7 @@ FR
 FR
 Cp
 kb
-xx
+BU
 kb
 kb
 kb
@@ -11780,7 +11788,7 @@ kb
 kb
 kb
 kb
-xx
+BU
 kb
 Cp
 FR
@@ -12561,7 +12569,7 @@ fM
 yF
 kb
 eP
-No
+nJ
 sW
 sW
 sW
@@ -12589,7 +12597,7 @@ sW
 sW
 sW
 sW
-No
+MA
 eP
 kb
 yF
@@ -12966,7 +12974,7 @@ FR
 Cp
 kb
 eP
-No
+nJ
 sW
 sW
 sW
@@ -12994,7 +13002,7 @@ sW
 sW
 sW
 sW
-No
+MA
 eP
 kb
 Cp
@@ -42803,7 +42811,7 @@ je
 je
 Wf
 kI
-Oy
+xx
 qM
 mi
 sW

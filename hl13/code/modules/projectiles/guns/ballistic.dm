@@ -1,6 +1,6 @@
 //to do: modularize colt python, m4a1, ak47, and service rifle bullets/ammo casings.
 
-//about 2.25 seconds TTK, also has good AP
+//about 2.07 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/ar2
 	name = "\improper OSIPR"
 	desc = "A pulse rifle often dubbed the 'AR2'. Boasts superior armor piercing capabilities, accuracy, and firepower. Usually biolocked to only be usable by authorised individuals."
@@ -40,10 +40,10 @@
 
 /obj/item/gun/ballistic/automatic/ar2/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.25 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.23 SECONDS)
 
 //old rifles that are exclusively loot. Similar to the AR2, but slightly less accurate, slightly less AP and slightly slower to fire.
-//about 2.7 seconds TTK, also has good AP. While the MP7 also has this TTK, the m4a1 is more accurate, has to reload less often, and has some armor piercing capabilities.
+//about 2.52 seconds TTK, also has good AP. While the MP7 also has this TTK, the m4a1 is more accurate, has to reload less often, and has some armor piercing capabilities.
 /obj/item/gun/ballistic/automatic/m4a1
 	name = "\improper M4A1 Rifle"
 	desc = "A old M4A1 pattern rifle. Not as good as the combine's rifles, but still powerful."
@@ -77,7 +77,7 @@
 
 /obj/item/gun/ballistic/automatic/m4a1/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.28 SECONDS)
 
 //sidegrade to the m4a1. Heavier duty: More spread, damage and recoil and less firing speed.
 //about 2.4 seconds TTK, and good AP
@@ -113,10 +113,10 @@
 
 /obj/item/gun/ballistic/automatic/ak47/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.39 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.37 SECONDS)
 
 //cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30.
-//about 2.7 seconds TTK, also has good AP
+//about 2.52 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/servicerifle
 	name = "\improper Service Rifle"
 	desc = "An old surplus rifle from decades ago. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity."
@@ -159,7 +159,7 @@
 
 /obj/item/gun/ballistic/automatic/servicerifle/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.28 SECONDS)
 
 //the crossbow
 /*
@@ -194,7 +194,7 @@
 	force = 15
 	recoil = 4
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 20
+	fire_delay = 19
 	w_class = WEIGHT_CLASS_BULKY
 	slowdown = 0.25
 
@@ -228,7 +228,7 @@
 	playsound(user, charge_sound, fire_sound_volume, vary_fire_sound)
 
 
-// about 3.6 seconds TTK (time to knock/crit)
+// about 3.33 seconds TTK (time to knock/crit)
 /obj/item/gun/ballistic/automatic/pistol/usp
 	name = "USP Match"
 	desc = "A small and light 9mm pistol which is often used as a metropolice standard carry."
@@ -246,7 +246,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/usp/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.4 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.37 SECONDS)
 
 /obj/item/gun/ballistic/automatic/pistol/usp/no_mag
 	spawnwithmagazine = FALSE
@@ -262,7 +262,7 @@
 	var/obj/item/suppressor/S = new(src)
 	install_suppressor(S)
 
-// about 4 seconds TTK
+// about 4.23 seconds TTK
 /obj/item/gun/ballistic/automatic/pistol/makeshift
 	name = "makeshift pistol"
 	desc = "A small and light makeshift 9mm pistol. Much harder to fire and carries half the amount of ammo compared to the USP Match."
@@ -282,12 +282,12 @@
 
 /obj/item/gun/ballistic/automatic/pistol/makeshift/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.47 SECONDS)
 
 /obj/item/gun/ballistic/automatic/pistol/makeshift/no_mag
 	spawnwithmagazine = FALSE
 
-// about 3 seconds TTK assuming you hit your first shot (so no cooldown)
+// about 2.7 seconds TTK assuming you hit your first shot (so no cooldown)
 /obj/item/gun/ballistic/revolver/coltpython
 	name = "\improper colt python"
 	desc = "An old colt python revolver, accurate but has the kick of a mule. Uses .357 magnum ammo."
@@ -298,7 +298,7 @@
 	inhand_icon_state = "colt_python"
 	spread = 3 //very little spread
 	recoil = 2 //lots of recoil though
-	fire_delay = 10
+	fire_delay = 9
 	vary_fire_sound = FALSE
 
 /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger
@@ -452,7 +452,7 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/pulse
 	max_ammo = 8
 
-// About 2.7 seconds TTK
+// About 2.52 seconds TTK
 /obj/item/gun/ballistic/automatic/mp7
 	name = "\improper MP7 SMG"
 	desc = "Despite its small size, this submachine gun packs a punch and has an extended mag to keep opponents suppressed."
@@ -480,10 +480,10 @@
 
 /obj/item/gun/ballistic/automatic/mp7/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
 
 
-//about 2.4 seconds TTK with AP. While it has a bit higher DPS than the m4a1/service rifle, it is slightly less accurate at range and has to reload more often
+//about 2.28 seconds TTK with AP. While it has a bit higher DPS than the m4a1/service rifle, it is slightly less accurate at range and has to reload more often
 /obj/item/gun/ballistic/automatic/pulsesmg
 	name = "\improper pulse SMG"
 	desc = "A hybrid between the MP7 and AR2, the pulse smg has biolocking features and higher power rounds than the standard MP7, but is not yet as powerful as the AR2."
@@ -520,7 +520,7 @@
 
 /obj/item/gun/ballistic/automatic/pulsesmg/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.19 SECONDS)
 
 /obj/item/ammo_box/strilka310/a762 //yay recycled code. recycles sprites because im too lazy to port a proper stripper clip sprite.
 	name = "stripper clip (7.62mm)"
@@ -547,7 +547,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/mosin
 	can_jam = TRUE
 	jamming_increment = 0
-	jamming_chance = 25
+	jamming_chance = 20
 	projectile_damage_multiplier = 1.3
 	spread = 5 //it has a stock
 	recoil = 0.5 //probably the only gun in the game other than M4A1 and service rifle with a real stock
@@ -626,7 +626,7 @@
 
 //(autofire_shot_delay, windup_autofire, windup_autofire_reduction_multiplier, windup_autofire_cap, windup_spindown, allow_akimbo = TRUE)
 
-//Small upgrade to the ak47. Has a very slight increase in DPS, alongside having far better recoil and spread control and a scope, but runs through ammo pretty quickly with its 10 round mags.
+//Small upgrade to the ak47. Has around the same DPS but has far better recoil and spread control and a scope, but runs through ammo pretty quickly with its 10 round mags.
 //about 2.4 seconds TTK, and good AP
 /obj/item/gun/ballistic/automatic/svd
 	name = "\improper SVD Rifle"

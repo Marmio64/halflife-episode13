@@ -325,10 +325,10 @@
 /datum/outfit/deployment_loadout/rebel/tier4/corporal
 	name = "Deployment: PLF Corporal"
 	display_name = "PLF Corporal"
-	desc = "You are better armored and supplied compared to AR2 rebels, but move a bit slower and have slightly less firepower."
+	desc = "Compared to an AR2 rebel, you have more ammunition, armor, and medical supplies, but move slower, lack a grenade, and have a less powerful gun. You're best suited on defense where you can use suppressing fire and protect allies by taking shots for them."
 	suit = /obj/item/clothing/suit/armor/halflife/milvest
 	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
-	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle_nonade
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/flashlight/seclite
@@ -341,6 +341,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
 		/obj/item/ammo_box/magazine/m4a1/service = 2,
 	)
 

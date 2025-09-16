@@ -1,7 +1,7 @@
 
 /obj/machinery/deployment_comms_tower
 	name = "Comms Tower"
-	desc = "A vital piece of instructure that ensures backup and supplies continues to come to this area. It needs a wide berth to continue sending information, so it cannot be walled off."
+	desc = "A vital piece of instructure that ensures backup and supplies continues to come to this area. It needs a wide berth to continue sending information, so it cannot be walled off. It appears to be particularly weak against melee attacks."
 	icon = 'hl13/icons/obj/port/comm_tower2.dmi'
 	icon_state = "comm_tower_on"
 	max_integrity = 1500
@@ -15,8 +15,8 @@
 	armor_type = /datum/armor/deployment_comms_tower
 
 /datum/armor/deployment_comms_tower
-	melee = -20 //the tower is generally surrounded by sandbags, so slight reward for being able to get so close.
-	bomb = 30 //bombings are just slightly too strong
+	melee = -30 //the tower is generally surrounded by sandbags, so slight reward for being able to get so close.
+	bomb = 40 //bombings are just slightly too strong
 
 /obj/machinery/deployment_comms_tower/combine
 	name = "Combine Comms Tower"

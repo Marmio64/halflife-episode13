@@ -50,10 +50,10 @@
 /obj/item/grenade/spawnergrenade/manhacks/upgraded
 	spawner_type = /mob/living/simple_animal/hostile/halflife/viscerator/upgraded
 
-/obj/item/grenade/spawnergrenade/manhacks/weak
+/obj/item/grenade/spawnergrenade/manhacks/shielded
 	det_time = 1 SECONDS
-	deliveryamt = 2
-	spawner_type = /mob/living/simple_animal/hostile/halflife/viscerator/weak
+	deliveryamt = 1
+	spawner_type = /mob/living/simple_animal/hostile/halflife/viscerator/shielded
 
 /obj/item/grenade/spawnergrenade/spesscarp
 	name = "carp delivery grenade"
