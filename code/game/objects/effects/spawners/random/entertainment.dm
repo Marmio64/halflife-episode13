@@ -71,8 +71,8 @@
 	spawn_loot_split = TRUE
 	loot = list(
 		/obj/item/stack/spacecash/c1 = 5,
-		/obj/item/stack/spacecash/c10 = 3,
-		/obj/item/stack/spacecash/c20 = 2,
+		/obj/item/stack/spacecash/c10 = 2,
+		/obj/item/stack/spacecash/c20 = 1,
 	)
 
 /obj/effect/spawner/random/entertainment/money

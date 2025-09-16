@@ -327,11 +327,6 @@
 /obj/item/storage/wallet,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"nJ" = (
-/obj/effect/spawner/random/halflife/loot/heal,
-/obj/effect/spawner/random/halflife/loot/heal,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/halflife/outdoors/deployment_city)
 "nW" = (
 /mob/living/basic/halflife/zombie,
 /obj/machinery/combine_walllight/directional/west,
@@ -557,7 +552,7 @@
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/outdoors/deployment_city)
 "xx" = (
-/obj/structure/halflife/road_barrier,
+/obj/structure/barricade/wooden/solid,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city)
 "xQ" = (
@@ -657,12 +652,6 @@
 /obj/structure/chair/halflife/metal/folding,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"BU" = (
-/obj/structure/halflife/road_barrier{
-	dir = 1
-	},
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors/deployment_city)
 "Cm" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -943,7 +932,7 @@
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "MA" = (
-/obj/structure/halflife/road_barrier,
+/obj/structure/barricade/wooden/solid,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
 "MI" = (
@@ -990,10 +979,6 @@
 /obj/effect/landmark/deployments_refugee,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"Oy" = (
-/obj/machinery/combine_walllight/directional/north,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/halflife/outdoors/deployment_city)
 "Oz" = (
 /obj/structure/barricade/sandbags,
 /obj/machinery/combine_walllight/directional/east,
@@ -1018,10 +1003,8 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/outdoors/deployment_city)
 "PF" = (
-/obj/structure/halflife/road_barrier{
-	dir = 1
-	},
-/turf/open/floor/plating/ground/sidewalk,
+/obj/machinery/combine_walllight/directional/north,
+/turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/outdoors/deployment_city)
 "PG" = (
 /obj/machinery/combine_walllight/directional/north,
@@ -1306,11 +1289,6 @@
 /area/halflife/outdoors/deployment_city)
 "Zm" = (
 /turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors/deployment_city)
-"Zp" = (
-/obj/structure/table/halflife/no_smooth/large/metal/desk,
-/obj/effect/spawner/random/entertainment/money_medium,
-/turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/outdoors/deployment_city)
 "ZJ" = (
 /obj/structure/table/halflife/metal/grate,
@@ -7722,7 +7700,7 @@ FR
 FR
 Cp
 kb
-BU
+xx
 kb
 kb
 kb
@@ -7857,7 +7835,7 @@ FR
 JX
 Cp
 Cp
-PF
+MA
 Cp
 Cp
 Yp
@@ -7992,7 +7970,7 @@ FR
 JX
 Cp
 kb
-BU
+xx
 kb
 Xl
 rX
@@ -9475,7 +9453,7 @@ Cp
 rp
 FR
 JX
-PF
+MA
 qM
 qM
 qM
@@ -9610,7 +9588,7 @@ tb
 FR
 FR
 FR
-PF
+MA
 dl
 sW
 sW
@@ -9745,7 +9723,7 @@ FR
 FR
 FR
 FR
-PF
+MA
 dl
 sW
 sW
@@ -9880,7 +9858,7 @@ wK
 FR
 FR
 FR
-PF
+MA
 dl
 sW
 sW
@@ -10015,7 +9993,7 @@ Cp
 rp
 FR
 JX
-PF
+MA
 qM
 qM
 qM
@@ -10692,7 +10670,7 @@ FR
 FR
 Cp
 qM
-nJ
+PE
 sW
 sW
 bp
@@ -11502,7 +11480,7 @@ FR
 JX
 Cp
 kb
-BU
+xx
 kb
 Xl
 rX
@@ -11637,7 +11615,7 @@ FR
 JX
 Cp
 Cp
-PF
+MA
 Cp
 Cp
 Yp
@@ -11772,7 +11750,7 @@ FR
 FR
 Cp
 kb
-BU
+xx
 kb
 kb
 kb
@@ -25566,7 +25544,7 @@ sW
 sW
 sW
 qM
-Zp
+xQ
 sW
 sW
 sW
@@ -27433,7 +27411,7 @@ je
 je
 je
 qM
-Zp
+xQ
 sW
 sW
 sW
@@ -42825,7 +42803,7 @@ je
 je
 Wf
 kI
-Oy
+PF
 qM
 mi
 sW
