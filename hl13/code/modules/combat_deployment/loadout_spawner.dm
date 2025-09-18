@@ -136,6 +136,7 @@
 			/datum/outfit/deployment_loadout/rebel/tier4/crossbow,
 			/datum/outfit/deployment_loadout/rebel/tier4/engineer,
 			/datum/outfit/deployment_loadout/rebel/tier4/spy,
+			/datum/outfit/deployment_loadout/rebel/tier4/scout,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

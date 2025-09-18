@@ -495,6 +495,27 @@
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
 
+/datum/outfit/deployment_loadout/rebel/tier4/scout
+	name = "Deployment: Upgraded Rebel Scout"
+	display_name = "Upgraded Rebel Scout"
+	desc = "You are a speedy glass cannon that uses a shotgun for high upclose damage, but lack much of any armor. You specialize best in taking out more vulnerable backliners who can't effectively fight back. As an upgraded variant, you move far faster and get an extra healthpen."
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	r_pocket = /obj/item/flashlight/seclite
+
+	suit = /obj/item/clothing/suit/armor/browncoat/deathmatch
+	suit_store = /obj/item/gun/ballistic/shotgun/spas12
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+
+	backpack_contents = list(
+		/obj/item/storage/box/lethalshot/halflife = 3,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
 ///////////// TIER 5 //////////////////////////////////////////
 
 /datum/outfit/deployment_loadout/rebel/tier5/freeman
