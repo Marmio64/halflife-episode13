@@ -498,12 +498,12 @@
 /datum/outfit/deployment_loadout/rebel/tier4/scout
 	name = "Deployment: Upgraded Rebel Scout"
 	display_name = "Upgraded Rebel Scout"
-	desc = "You are a speedy glass cannon that uses a shotgun for high upclose damage, but lack much of any armor. You specialize best in taking out more vulnerable backliners who can't effectively fight back. As an upgraded variant, you move far faster and get an extra healthpen."
+	desc = "You are a speedy glass cannon that uses a shotgun for high upclose damage, but lack much of any armor. You specialize best in taking out more vulnerable backliners who can't effectively fight back. As an upgraded variant, you move faster and get an extra healthpen."
 
 	uniform = /obj/item/clothing/under/citizen/refugee
 	r_pocket = /obj/item/flashlight/seclite
 
-	suit = /obj/item/clothing/suit/armor/browncoat/deathmatch
+	suit = /obj/item/clothing/suit/armor/browncoat/scout/upgraded
 	suit_store = /obj/item/gun/ballistic/shotgun/spas12
 
 	back = /obj/item/storage/backpack/halflife/satchel
