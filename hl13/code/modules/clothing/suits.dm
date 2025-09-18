@@ -339,6 +339,9 @@
 /obj/item/clothing/suit/armor/browncoat/deathmatch
 	slowdown = -0.66
 
+/obj/item/clothing/suit/armor/browncoat/scout
+	slowdown = -0.33
+
 /obj/item/clothing/suit/armor/browncoat/deployment
 	slowdown = -0.5
 	armor_type = /datum/armor/paddedjacket/weak

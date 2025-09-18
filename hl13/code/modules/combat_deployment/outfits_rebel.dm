@@ -294,6 +294,26 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+/datum/outfit/deployment_loadout/rebel/tier3/scout
+	name = "Deployment: Rebel Scout"
+	display_name = "Rebel Scout"
+	desc = "You are a speedy glass cannon that uses a shotgun for high upclose damage, but lack much of any armor. You specialize best in taking out more vulnerable backliners who can't effectively fight back."
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	r_pocket = /obj/item/flashlight/seclite
+
+	suit = /obj/item/clothing/suit/armor/browncoat/scout
+	suit_store = /obj/item/gun/ballistic/shotgun/spas12
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+
+	backpack_contents = list(
+		/obj/item/storage/box/lethalshot/halflife = 3,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
 
 /// TIER 4 ///////////////////////////////////////////////////////////
 

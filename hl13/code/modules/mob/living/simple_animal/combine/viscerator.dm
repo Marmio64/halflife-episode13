@@ -65,11 +65,23 @@
 	melee_damage_upper = 20
 
 /mob/living/simple_animal/hostile/halflife/viscerator/shielded
-	health = 25
-	maxHealth = 25
+	name = "shielded viscerator"
+	desc = "A small, twin-bladed machine capable of inflicting very deadly lacerations. This one has less armor plating and uses much of its battery reserves to power a one time pulse shield to deflect up to two projectiles, no matter how strong they are."
+	health = 26
+	maxHealth = 26
 	operating_power = 15 //30 seconds till low power
 	loot = list()
+	var/shield_hits = 2
 
-/mob/living/simple_animal/hostile/halflife/viscerator/shielded/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/regenerative_shield, number_of_hits = 1, damage_threshold = 80)
+/mob/living/simple_animal/hostile/halflife/viscerator/shielded/bullet_act(obj/projectile/bullet)
+	if(shield_hits <= 0) // shield hits are gone
+		return ..()
+
+	shield_hits--
+
+	visible_message(
+		span_danger("The [bullet.name] is deflected by [src]'s shield!"),
+		span_userdanger("The [bullet.name] is deflected by your shield!"),
+	)
+
+	return BULLET_ACT_BLOCK

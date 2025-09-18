@@ -432,11 +432,10 @@
 	player_mind.transfer_to(S)
 	qdel(H)
 
-//not in use for now since their shielded viscerators arent working right
 /datum/outfit/deployment_loadout/combine/tier4/overseer
 	name = "Deployment: Overseer"
 	display_name = "Viscerator Overseer Cop"
-	desc = "You are a MP7 equipped cop that specializes in supporting allies with your large amount of viscerators, but aren't too powerful by yourself. Your viscerators are quick to deploy and have a shield which can take one shot for them, but have low health otherwise, making them best used against slow firing targets."
+	desc = "You are a MP7 equipped cop that specializes in supporting allies with your large amount of viscerators, but aren't too powerful by yourself. Your viscerators are quick to deploy and have a shield which can take two shots for them, but have low health otherwise, making them best used against slow firing targets."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
@@ -446,7 +445,6 @@
 	mask = /obj/item/clothing/mask/gas/civilprotection/overseer
 	belt = /obj/item/storage/belt/civilprotection/full
 
-	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
 	ears = /obj/item/radio/headset/headset_sec
