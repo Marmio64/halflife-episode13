@@ -43,7 +43,9 @@
 	if(marked_datum && istype(marked_datum, /atom))
 		dat += "<A href='byond://?src=[REF(src)];[HrefToken()];dupe_marked_datum=1'>Duplicate Marked Datum</A><br>"
 
-	usr << browse(dat, "window=admin2;size=240x280")
+	var/datum/browser/browser = new(usr, "admin2", "Game Panel", 240, 280)
+	browser.set_content(dat)
+	browser.open()
 	return
 
 ////////////////////////////////////////////////////////////////////////////////////////////////ADMIN HELPER PROCS
@@ -124,7 +126,9 @@ ADMIN_VERB(spawn_cargo, R_SPAWN, "Spawn Cargo", "Spawn a cargo crate.", ADMIN_CA
 		<br/>The threshold at which "round-ender" rulesets will stack. A value higher than 100 ensure this never happens. <br/>
 		"}
 
-	user << browse(dat, "window=dyn_mode_options;size=900x650")
+	var/datum/browser/browser = new(usr, "dyn_mode_options", "Dynamic Mode Options", 900, 650)
+	browser.set_content(dat)
+	browser.open()
 
 /datum/admins/proc/dynamic_ruleset_manager(mob/user)
 	var/dat = "<center><B><h2>Dynamic Ruleset Management</h2></B></center><hr>\
@@ -146,14 +150,18 @@ ADMIN_VERB(spawn_cargo, R_SPAWN, "Spawn Cargo", "Spawn a cargo crate.", ADMIN_CA
 		dat += dynamic_ruleset_category_pre_start_display("Roundstart", rulesets_by_context[ROUNDSTART_RULESET])
 		dat += dynamic_ruleset_category_pre_start_display("Latejoin", rulesets_by_context[LATEJOIN_RULESET])
 		dat += dynamic_ruleset_category_pre_start_display("Midround", rulesets_by_context[MIDROUND_RULESET])
-		user << browse(dat, "window=dyn_mode_options;size=900x650")
+		var/datum/browser/browser = new(usr, "dyn_mode_options", "Dynamic Mode Options", 900, 650)
+		browser.set_content(dat)
+		browser.open()
 		return
 
 	var/pop_count = length(GLOB.alive_player_list)
 	var/threat_level = SSdynamic.threat_level
 	dat += dynamic_ruleset_category_during_round_display("Latejoin", SSdynamic.latejoin_rules, pop_count, threat_level)
 	dat += dynamic_ruleset_category_during_round_display("Midround", SSdynamic.midround_rules, pop_count, threat_level)
-	user << browse(dat, "window=dyn_mode_options;size=900x650")
+	var/datum/browser/browser = new(usr, "dyn_mode_options", "Dynamic Mode Options", 900, 650)
+	browser.set_content(dat)
+	browser.open()
 
 /datum/admins/proc/dynamic_ruleset_category_pre_start_display(title, list/rules)
 	var/dat = "<B><h3>[title]</h3></B><table class='ml-2'>"
