@@ -67,7 +67,7 @@
 /obj/effect/spawner/random/entertainment/money_small
 	name = "small money spawner"
 	icon_state = "cash"
-	spawn_loot_count = 3
+	spawn_loot_count = 1
 	spawn_loot_split = TRUE
 	loot = list(
 		/obj/item/stack/spacecash/c1 = 5,
@@ -78,7 +78,7 @@
 /obj/effect/spawner/random/entertainment/money
 	name = "money spawner"
 	icon_state = "cash"
-	spawn_loot_count = 3
+	spawn_loot_count = 1
 	spawn_loot_split = TRUE
 	loot = list(
 		/obj/item/stack/spacecash/c1 = 10,
@@ -102,7 +102,7 @@
 /obj/effect/spawner/random/entertainment/money_large
 	name = "large money spawner"
 	icon_state = "cash"
-	spawn_loot_count = 5
+	spawn_loot_count = 1
 	spawn_loot_split = TRUE
 	loot = list(
 		/obj/item/stack/spacecash/c1 = 100,
