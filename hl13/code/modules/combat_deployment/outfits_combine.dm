@@ -250,7 +250,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/medkit = 3,
+		/obj/item/reagent_containers/pill/patch/medkit = 2,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 		/obj/item/stack/medical/suture = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
@@ -275,7 +275,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 11,
+		/obj/item/stack/sheet/mineral/sandbags = 10,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 		/obj/item/sbeacondrop/combine_turret = 1,
 	)
@@ -386,7 +386,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/medkit = 3,
+		/obj/item/reagent_containers/pill/patch/medkit = 2,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
 		/obj/item/stack/medical/suture = 1,
 		/obj/item/ammo_box/magazine/mp7 = 2,
@@ -412,7 +412,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 12,
+		/obj/item/stack/sheet/mineral/sandbags = 11,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 		/obj/item/sbeacondrop/combine_turret = 2,

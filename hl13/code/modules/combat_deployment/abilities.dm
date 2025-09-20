@@ -6,7 +6,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 24 SECONDS
+	cooldown_time = 25 SECONDS
 	item_type = /obj/item/reagent_containers/pill/patch/medkit
 	requires_hands = TRUE
 	delete_old = FALSE
@@ -19,7 +19,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 18 SECONDS
+	cooldown_time = 15 SECONDS
 	item_type = /obj/item/stack/sheet/mineral/sandbags
 	requires_hands = TRUE
 	delete_old = FALSE
