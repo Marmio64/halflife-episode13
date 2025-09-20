@@ -80,7 +80,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier2/pistol_cop
 	name = "Deployment: Pistol Cop"
-	display_name = "Riot Pistol Cop"
+	display_name = "Pistol Cop"
 	desc = "A pistol equipped cop, who can dish out a moderate amount of damage from range."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
@@ -110,7 +110,7 @@
 	mask = /obj/item/clothing/mask/gas/civilprotection/medical
 	belt = /obj/item/storage/belt/civilprotection/medicfull
 
-	l_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
+	l_pocket = /obj/item/stack/medical/suture
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	ears = /obj/item/radio/headset/headset_sec
@@ -252,6 +252,7 @@
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/medkit = 3,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/stack/medical/suture = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 	)
 
@@ -383,6 +384,7 @@
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/medkit = 3,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
+		/obj/item/stack/medical/suture = 1,
 		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
 

@@ -79,6 +79,16 @@
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/polish_resistance/medic_plus/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm, src)
+	SSwardrobe.provide_type(/obj/item/melee/baton, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	update_appearance(UPDATE_ICON)
+
 
 /obj/item/storage/belt/civilprotection/polish_resistance/svd/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/svd, src)

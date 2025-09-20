@@ -27,6 +27,9 @@
 	name = "medical officer vest"
 	icon_state = "medicalofficer"
 
+/obj/item/clothing/suit/armor/civilprotection/medical/speedy
+	slowdown = -0.25
+
 /obj/item/clothing/suit/armor/civilprotection/speedy
 	slowdown = -0.33
 

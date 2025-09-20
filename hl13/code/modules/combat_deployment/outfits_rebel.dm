@@ -315,6 +315,32 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+/datum/outfit/deployment_loadout/rebel/tier3/medic_rebel
+	name = "Deployment: Upgraded Medic Rebel"
+	display_name = "Upgraded Medic Rebel"
+	desc = "Compared to your unupgraded version, you have a slight increase in ammo and speed."
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	suit = /obj/item/clothing/suit/armor/civilprotection/medical/speedy
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/medic_plus
+	accessory = /obj/item/clothing/accessory/armband/medblue
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	r_pocket = /obj/item/flashlight/seclite
+	shoes = /obj/item/clothing/shoes/boots
+
+	back = /obj/item/storage/backpack/satchel
+	glasses = /obj/item/clothing/glasses/hud/health
+
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/usp9mm = 1,
+		/obj/item/stack/medical/suture = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
 /// TIER 4 ///////////////////////////////////////////////////////////
 
 /datum/outfit/deployment_loadout/rebel/tier4/ar2_rebel
@@ -512,6 +538,33 @@
 	backpack_contents = list(
 		/obj/item/storage/box/lethalshot/halflife = 3,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+/datum/outfit/deployment_loadout/rebel/tier4/medic_rebel
+	name = "Deployment: Upgraded Medic Rebel+"
+	display_name = "Upgraded Medic Rebel+"
+	desc = "Just like the previous tiers of rebel medics, you are mostly a non combatant who has a large amount of medical supplies, but gain an additional amount of said supplies."
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	suit = /obj/item/clothing/suit/armor/civilprotection/medical/speedy
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/medic_plus
+	accessory = /obj/item/clothing/accessory/armband/medblue
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	r_pocket = /obj/item/flashlight/seclite
+	shoes = /obj/item/clothing/shoes/boots
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+
+	back = /obj/item/storage/backpack/halflife
+	glasses = /obj/item/clothing/glasses/hud/health
+
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/stack/medical/suture = 3,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
