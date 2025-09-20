@@ -294,6 +294,8 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
+
 /datum/outfit/deployment_loadout/rebel/tier3/scout
 	name = "Deployment: Rebel Scout"
 	display_name = "Rebel Scout"
@@ -340,6 +342,8 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
 
 /// TIER 4 ///////////////////////////////////////////////////////////
 
@@ -484,6 +488,8 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
+
 /obj/item/sbeacondrop/rebel_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a rebel turret to your location</i>."
 	droptype = /obj/machinery/porta_turret/combine/rebel
@@ -568,6 +574,8 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
 
 ///////////// TIER 5 //////////////////////////////////////////
 

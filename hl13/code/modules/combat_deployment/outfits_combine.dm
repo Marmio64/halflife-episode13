@@ -256,6 +256,8 @@
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 	)
 
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
+
 /datum/outfit/deployment_loadout/combine/tier3/engineer
 	name = "Deployment: Upgraded Union Engineer+"
 	display_name = "Upgraded Union Engineer+"
@@ -281,6 +283,8 @@
 
 	ears = /obj/item/radio/headset/headset_sec
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
 
 /// TIER 4 ////////////////////////////////////////////////////////
 
@@ -388,6 +392,8 @@
 		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
 
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
+
 /datum/outfit/deployment_loadout/combine/tier4/engineer
 	name = "Deployment: Senior Union Engineer"
 	display_name = "Senior Union Engineer"
@@ -415,6 +421,8 @@
 
 	ears = /obj/item/radio/headset/headset_sec
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
 
 /obj/item/sbeacondrop/combine_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a combine turret to your location</i>."
