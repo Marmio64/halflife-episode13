@@ -103,7 +103,7 @@
 	desc = "Clear your surroundings with the power of the vortessence."
 	background_icon_state = "bg_nature"
 	invocation = "TO THE VOID"
-	cooldown_time = 45 SECONDS
+	cooldown_time = 40 SECONDS
 	aoe_radius = 4
 	cooldown_reduction_per_rank = 4 SECONDS
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
