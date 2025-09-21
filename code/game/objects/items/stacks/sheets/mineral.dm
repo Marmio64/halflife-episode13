@@ -71,6 +71,9 @@ GLOBAL_LIST_INIT(sandbag_recipes, list ( \
 	. = ..()
 	. += GLOB.sandbag_recipes
 
+/obj/item/stack/sheet/mineral/sandbags/three
+	amount = 3
+
 /obj/item/emptysandbag
 	name = "empty sandbag"
 	desc = "A bag to be filled with sand."

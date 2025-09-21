@@ -254,7 +254,7 @@
 	suit_store = /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
 	belt = /obj/item/gun/ballistic/automatic/pistol/usp
 	l_pocket = /obj/item/ammo_box/magazine/usp9mm
-	r_pocket = /obj/item/grenade/smokebomb
+	r_pocket = /obj/item/storage/belt/pouch/smoke_meds
 
 	glasses = /obj/item/clothing/glasses/night
 
@@ -445,7 +445,7 @@
 	suit_store = /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
 	belt = /obj/item/gun/ballistic/revolver/coltpython
 	l_pocket = /obj/item/ammo_box/colta357
-	r_pocket = /obj/item/grenade/smokebomb
+	r_pocket = /obj/item/storage/belt/pouch/smoke_meds
 
 	glasses = /obj/item/clothing/glasses/night
 

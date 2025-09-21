@@ -16,6 +16,11 @@
 	SSwardrobe.provide_type(/obj/item/stack/medical/bandage, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/pouch/smoke_meds/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/grenade/smokebomb, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
+	update_appearance(UPDATE_ICON)
+
 /obj/item/storage/belt/pouch/large
 	name = "large pouch"
 	desc = "A larger old world pouch. Holds a small bit more than its smaller counterparts."

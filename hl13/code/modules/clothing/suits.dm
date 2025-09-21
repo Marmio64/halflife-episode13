@@ -155,7 +155,7 @@
 	inhand_icon_state = "wallhammer"
 	block_chance = 90
 	slot_flags = 0
-	max_integrity = 150
+	max_integrity = 135
 	shield_break_leftover = null
 	item_flags = DROPDEL
 

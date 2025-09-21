@@ -155,7 +155,7 @@
 
 	back = /obj/item/tank/internals/oxygen/grunt
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt
-	uniform = /obj/item/clothing/under/combine/grunt/fused/deathmatch
+	uniform = /obj/item/clothing/under/combine/grunt/fused/deployment
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection/grunt
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
@@ -503,6 +503,7 @@
 	backpack_contents = list(
 		/obj/item/grenade/syndieminibomb/bouncer = 2,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/melee/baton/security/loaded = 1,
 	)
 
 	ears = /obj/item/radio/headset/headset_sec

@@ -154,7 +154,7 @@ GLOBAL_VAR_INIT(deployment_respawn_rate_xen, 12 SECONDS)
 /obj/machinery/deployment_koth_flag/rebel_defend
 	rebel_time = 7 MINUTES
 	combine_time = 30 SECONDS
-	grace_time = 45 SECONDS
+	grace_time = 1 MINUTES
 	starting_faction = REBEL_DEPLOYMENT_FACTION
 	alter_holder_respawn = TRUE
 	grace_period_up_text = "<span class='reallybig'>The initial setup grace period is up, and the rebel flag is now capturable by the Combine.</span>"

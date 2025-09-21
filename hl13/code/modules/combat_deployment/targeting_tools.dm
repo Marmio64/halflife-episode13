@@ -25,8 +25,11 @@
 /obj/item/halflife/cannister_targeter/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	. = ..()
 	if(1 <= charges)
-		launch_cannister(get_turf(interacting_with))
-		charges--
+		if(!istype(interacting_with, /turf/open/openspace))
+			launch_cannister(get_turf(interacting_with))
+			charges--
+		else
+			to_chat(user, span_warning("Targeting failed, target is out of reach due to being at a different altitude level."))
 
 /obj/item/halflife/cannister_targeter/proc/launch_cannister(turf/location)
 	var/headcrab_choice = /mob/living/basic/halflife/headcrab
