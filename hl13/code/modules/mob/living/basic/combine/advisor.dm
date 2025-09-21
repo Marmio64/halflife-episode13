@@ -10,8 +10,8 @@
 	maxHealth = 250
 	health = 250
 	obj_damage = 14
-	melee_damage_lower = 15
-	melee_damage_upper = 20
+	melee_damage_lower = 18
+	melee_damage_upper = 24
 	sharpness = SHARP_EDGED
 	wound_bonus = -15
 	attack_vis_effect = ATTACK_EFFECT_CLAW
@@ -26,7 +26,7 @@
 	initial_language_holder = /datum/language_holder/advisor
 
 	cmode_music = 'hl13/sound/music/combat/disrupted.ogg' //spooky!
-	lighting_cutoff_red = 25
+	lighting_cutoff_blue = 25
 	lighting_cutoff = 8
 	var/datum/action/cooldown/spell/list_target/telepathy/advisor/telepathy
 	var/datum/action/cooldown/spell/aoe/repulse/wizard/advisor/repulse
