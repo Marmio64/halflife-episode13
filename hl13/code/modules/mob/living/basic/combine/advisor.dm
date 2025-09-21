@@ -7,8 +7,8 @@
 	icon_dead = "advisor_dead"
 	faction = list(FACTION_COMBINE)
 	movement_type = FLOATING
-	maxHealth = 250
-	health = 250
+	maxHealth = 275
+	health = 275
 	obj_damage = 14
 	melee_damage_lower = 18
 	melee_damage_upper = 24
@@ -87,7 +87,7 @@
 	/// The amount of blurriness to apply
 	var/eye_blur_duration = 10 SECONDS
 	/// The amount of pain to apply
-	var/temp_pain_amount = 100
+	var/temp_pain_amount = 150
 	/// The amount of confusion to apply
 	var/confusion_duration = 10 SECONDS
 	/// The amount of stamina loss to apply
