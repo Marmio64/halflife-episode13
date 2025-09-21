@@ -235,6 +235,7 @@
 			/datum/outfit/deployment_loadout/combine/tier5/wallhammer,
 			/datum/outfit/deployment_loadout/combine/tier5/assassin,
 			/datum/outfit/deployment_loadout/combine/tier5/suppressor,
+			/datum/outfit/deployment_loadout/combine/tier5/advisor,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

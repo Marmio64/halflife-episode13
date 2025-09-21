@@ -16,7 +16,6 @@
 	light_range = 2
 	light_power = 1
 	light_color = "#67ac65"
-	speed = -1
 	/// Loot this mob drops on death.
 	var/list/loot = list(/obj/item/reagent_containers/pill/patch/grubnugget = 1, /obj/effect/decal/cleanable/insectguts = 1)
 	can_be_held = TRUE
@@ -53,6 +52,8 @@
 */
 
 /mob/living/basic/halflife/grub/deployment
+	maxHealth = 20
+	health = 20
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
 	var/datum/action/cooldown/spell/conjure/antlions/deployment/antlions
 
@@ -73,6 +74,7 @@
 	invocation_type = INVOCATION_NONE
 	spell_requirements = NONE
 
+	summon_amount = 2
 	summon_lifespan = 30 SECONDS
-	summon_radius = 3
+	summon_radius = 2
 	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/zombie_faction)

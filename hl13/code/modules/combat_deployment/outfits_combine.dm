@@ -556,3 +556,16 @@
 
 	ears = /obj/item/radio/headset/headset_sec
 	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
+
+/datum/outfit/deployment_loadout/combine/tier5/advisor
+	name = "Deployment: Advisor"
+	display_name = "Advisor"
+	desc = "You are a mysterious Combine Advisor. You have various psionic abilities at your disposal for supporting your team and punishing the enemies, but are not good at killing nor are you particularly durable and quick."
+	uniform = null
+	shoes = null
+
+/datum/outfit/deployment_loadout/combine/tier5/advisor/post_equip(mob/living/carbon/human/H)
+	var/datum/mind/player_mind = H.mind
+	var/mob/living/basic/halflife/advisor/S = new (H.loc)
+	player_mind.transfer_to(S)
+	qdel(H)
