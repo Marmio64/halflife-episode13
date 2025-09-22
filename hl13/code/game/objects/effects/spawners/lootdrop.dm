@@ -388,3 +388,20 @@
 				/obj/item/reagent_containers/pill/patch/medkit,
 				/obj/item/clothing/head/helmet/halflife/military/weak/crafted
 				)
+
+/obj/effect/spawner/random/halflife/random_headcrab
+	name = "random headcrab"
+	spawn_loot_count = 1
+
+	loot = list(
+				/mob/living/basic/halflife/headcrab = 1,
+				/mob/living/basic/halflife/headcrab/armored = 1,
+				/mob/living/basic/halflife/headcrab/fast = 1,
+				/mob/living/basic/halflife/headcrab/poison = 1,
+				)
+
+/obj/effect/spawner/random/halflife/random_headcrab/two
+	spawn_loot_count = 2
+
+/obj/effect/spawner/random/halflife/random_headcrab/three
+	spawn_loot_count = 3

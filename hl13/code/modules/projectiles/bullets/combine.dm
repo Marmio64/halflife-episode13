@@ -36,7 +36,7 @@
 	damage = 50
 	wound_bonus = -10
 	armour_penetration = 35
-	speed = 3
+	speed = 4
 
 /obj/projectile/bullet/flechette
 	name = "flechette"

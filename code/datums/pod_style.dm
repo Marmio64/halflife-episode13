@@ -95,9 +95,9 @@
 	id = "canister"
 
 /datum/pod_style/box
-	name = "\improper Aussec supply crate"
+	name = "\improper supply crate"
 	ui_name = "Supply Box"
-	desc = "An incredibly sturdy supply crate, designed to withstand orbital re-entry. Has 'Aussec Armory - 2532' engraved on the side."
+	desc = "An incredibly sturdy supply crate, designed to withstand orbital re-entry."
 	shape = POD_SHAPE_OTHER
 	icon_state = "box"
 	decal_icon = null

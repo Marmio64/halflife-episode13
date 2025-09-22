@@ -1,6 +1,6 @@
 /obj/item/halflife/cannister_targeter
 	name = "canister targeting tool"
-	desc = "A tool that feeds coordinates to an offsite location, prompting them to send a headcrab canister at the target. Each canister does not deal damage on impact and carries a random headcrab type. Click a visible tile to send a canister. Recharges uses overtime."
+	desc = "A tool that feeds coordinates to an offsite location, prompting them to send a headcrab canister at the target. Each canister deals a small amount of damage on impact and carries two headcrabs of random types. Click a visible tile to send a canister after a 2 second delay. Recharges uses overtime."
 	icon = 'hl13/icons/obj/radio.dmi'
 	icon_state = "walkietalkie"
 	var/charges = 3
@@ -12,7 +12,7 @@
 
 /obj/item/halflife/cannister_targeter/process(seconds_per_tick)
 	if(charges < max_charges)
-		charges += 0.2 //about 10 seconds to restore a headcrab charge
+		charges += 0.15 //about 12 seconds to restore a headcrab charge
 
 /obj/item/halflife/cannister_targeter/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -26,26 +26,19 @@
 	. = ..()
 	if(1 <= charges)
 		if(!istype(interacting_with, /turf/open/openspace))
-			launch_cannister(get_turf(interacting_with))
-			charges--
+			if(do_after(user, 2 SECONDS, src))
+				launch_cannister(get_turf(interacting_with))
+				charges--
+			else
+				to_chat(user, span_warning("Insufficient time given to calculate coordinates."))
 		else
 			to_chat(user, span_warning("Targeting failed, target is out of reach due to being at a different altitude level."))
 
 /obj/item/halflife/cannister_targeter/proc/launch_cannister(turf/location)
-	var/headcrab_choice = /mob/living/basic/halflife/headcrab
-
-	//Each of the four headcrabs have an equal random weight to being chosen!
-	if(prob(25))
-		headcrab_choice = /mob/living/basic/halflife/headcrab/armored
-	if(prob(25))
-		headcrab_choice = /mob/living/basic/halflife/headcrab/fast
-	if(prob(25))
-		headcrab_choice = /mob/living/basic/halflife/headcrab/poison
-
 	podspawn(list(
 		"target" = location,
 		"path" = /obj/structure/closet/supplypod/light_exp_canister,
-		"spawn" = headcrab_choice,
+		"spawn" = /obj/effect/spawner/random/halflife/random_headcrab/two,
 	))
 
 /obj/structure/closet/supplypod/light_exp_canister
