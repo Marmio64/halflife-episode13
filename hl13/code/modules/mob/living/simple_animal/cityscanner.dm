@@ -58,9 +58,10 @@
 			chosen_sound = pick(scan_sounds)
 			playsound(src, chosen_sound, 50, FALSE)
 
-/mob/living/silicon/robot/death(gibbed)
+/mob/living/silicon/robot/cityscanner/death(gibbed)
 	..()
 	new /obj/item/halflife/combine_battery(src.loc)
+	explosion(src, light_impact_range = 2, adminlog = FALSE)
 	gib()
 
 /obj/item/weldingtool/halflife/scanner

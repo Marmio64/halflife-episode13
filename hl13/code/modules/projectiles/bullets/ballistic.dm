@@ -28,7 +28,7 @@
 
 /obj/projectile/bullet/c46x30mm/mp7
 	name = "4.6x30mm bullet"
-	damage = 7
+	damage = 8
 	wound_bonus = 15
 	bare_wound_bonus = 10
 	embed_falloff_tile = -4
@@ -38,7 +38,7 @@
 
 /obj/projectile/bullet/a556
 	name = "5.56mm bullet"
-	damage = 15
+	damage = 17
 	wound_bonus = -10
 	armour_penetration = 15
 	icon_state = "bullet_large"

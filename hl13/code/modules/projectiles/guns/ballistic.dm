@@ -1,6 +1,6 @@
 //to do: modularize colt python, m4a1, ak47, and service rifle bullets/ammo casings.
 
-//about 2.07 seconds TTK, also has good AP
+//about 1.84 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/ar2
 	name = "\improper OSIPR"
 	desc = "A pulse rifle often dubbed the 'AR2'. Boasts superior armor piercing capabilities, accuracy, and firepower. Usually biolocked to only be usable by authorised individuals."
@@ -11,7 +11,7 @@
 	vary_fire_sound = FALSE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/ar2
 	force = 12
-	recoil = 0.5
+	recoil = 0.3
 	fire_delay = 2
 	burst_size = 1
 	mag_display = TRUE
@@ -43,7 +43,7 @@
 	AddComponent(/datum/component/automatic_fire, 0.23 SECONDS)
 
 //old rifles that are exclusively loot. Similar to the AR2, but slightly less accurate, slightly less AP and slightly slower to fire.
-//about 2.52 seconds TTK, also has good AP. While the MP7 also has this TTK, the m4a1 is more accurate, has to reload less often, and has some armor piercing capabilities.
+//about 2.24 seconds TTK, also has good AP. While the MP7 also has this TTK, the m4a1 is more accurate, has to reload less often, and has some armor piercing capabilities.
 /obj/item/gun/ballistic/automatic/m4a1
 	name = "\improper M4A1 Rifle"
 	desc = "A old M4A1 pattern rifle. Not as good as the combine's rifles, but still powerful."
@@ -61,8 +61,8 @@
 	force = 12
 	fire_delay = 2
 	burst_size = 1
-	spread = 10
-	recoil = 0.7
+	spread = 5
+	recoil = 0.5
 	can_suppress = FALSE
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY
@@ -80,7 +80,7 @@
 	AddComponent(/datum/component/automatic_fire, 0.28 SECONDS)
 
 //sidegrade to the m4a1. Heavier duty: More spread, damage and recoil and less firing speed.
-//about 2.4 seconds TTK, and good AP
+//about 1.85 seconds TTK, and good AP
 /obj/item/gun/ballistic/automatic/ak47
 	name = "\improper AK-47 Rifle"
 	desc = "An old AK-47 without the stock. This thing is going to kick like a mule without that stock... but it should still hit just as hard."
@@ -97,8 +97,8 @@
 	force = 12
 	fire_delay = 2
 	burst_size = 1
-	spread = 13
-	recoil = 1.2
+	spread = 8
+	recoil = 1
 	can_suppress = FALSE
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY
@@ -116,7 +116,7 @@
 	AddComponent(/datum/component/automatic_fire, 0.37 SECONDS)
 
 //cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30.
-//about 2.52 seconds TTK, also has good AP
+//about 2.24 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/servicerifle
 	name = "\improper Service Rifle"
 	desc = "An old surplus rifle from decades ago. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity."
@@ -134,8 +134,8 @@
 	force = 12
 	fire_delay = 2
 	burst_size = 1
-	spread = 10
-	recoil = 0.7
+	spread = 5
+	recoil = 0.5
 	can_suppress = FALSE
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY
@@ -228,7 +228,7 @@
 	playsound(user, charge_sound, fire_sound_volume, vary_fire_sound)
 
 
-// about 3.33 seconds TTK (time to knock/crit)
+// about 2.97 seconds TTK (time to knock/crit)
 /obj/item/gun/ballistic/automatic/pistol/usp
 	name = "USP Match"
 	desc = "A small and light 9mm pistol which is often used as a metropolice standard carry."
@@ -237,7 +237,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/usp9mm
 	can_suppress = TRUE
 	fire_sound = "hl13/sound/weapons/uspfire.ogg"
-	recoil = 0.4
+	recoil = 0.2
 	vary_fire_sound = FALSE
 
 	inhand_icon_state = "usp"
@@ -246,7 +246,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/usp/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.37 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.33 SECONDS, overtime_penalty_increase = 0.8)
 
 /obj/item/gun/ballistic/automatic/pistol/usp/no_mag
 	spawnwithmagazine = FALSE
@@ -262,7 +262,7 @@
 	var/obj/item/suppressor/S = new(src)
 	install_suppressor(S)
 
-// about 4.23 seconds TTK
+// about 3.33 seconds TTK
 /obj/item/gun/ballistic/automatic/pistol/makeshift
 	name = "makeshift pistol"
 	desc = "A small and light makeshift 9mm pistol. Much harder to fire and carries half the amount of ammo compared to the USP Match."
@@ -271,8 +271,8 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/makeshift9mm
 	can_suppress = TRUE
 	fire_sound = "hl13/sound/weapons/uspfire.ogg"
-	spread = 12
-	recoil = 0.5
+	spread = 8
+	recoil = 0.3
 	fire_delay = 5
 	vary_fire_sound = FALSE
 
@@ -282,12 +282,12 @@
 
 /obj/item/gun/ballistic/automatic/pistol/makeshift/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.47 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.37 SECONDS)
 
 /obj/item/gun/ballistic/automatic/pistol/makeshift/no_mag
 	spawnwithmagazine = FALSE
 
-// about 2.7 seconds TTK assuming you hit your first shot (so no cooldown)
+// about 2.4 seconds TTK assuming you hit your first shot (so no cooldown)
 /obj/item/gun/ballistic/revolver/coltpython
 	name = "\improper colt python"
 	desc = "An old colt python revolver, accurate but has the kick of a mule. Uses .357 magnum ammo."
@@ -298,7 +298,7 @@
 	inhand_icon_state = "colt_python"
 	spread = 3 //very little spread
 	recoil = 2 //lots of recoil though
-	fire_delay = 9
+	fire_delay = 8
 	vary_fire_sound = FALSE
 
 /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger
@@ -318,7 +318,7 @@
 	vary_fire_sound = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 
-// about 1.8 seconds TTK if you hit your first shot (so no cooldown on it) and are point blank
+// about 1.6 seconds TTK if you hit your first shot (so no cooldown on it) and are point blank
 /obj/item/gun/ballistic/shotgun/spas12
 	name = "SPAS 12"
 	desc = "A spectacularly lethal pump action shotgun, for close encounters."
@@ -332,7 +332,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/com/spas12
 	force = 12
 	recoil = 1.5
-	fire_delay = 9
+	fire_delay = 8
 	vary_fire_sound = FALSE
 
 	inhand_icon_state = "spas12"
@@ -452,7 +452,7 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/pulse
 	max_ammo = 8
 
-// About 2.52 seconds TTK
+// About 2.24 seconds TTK
 /obj/item/gun/ballistic/automatic/mp7
 	name = "\improper MP7 SMG"
 	desc = "Despite its small size, this submachine gun packs a punch and has an extended mag to keep opponents suppressed."
@@ -468,8 +468,8 @@
 	show_bolt_icon = FALSE
 	burst_size = 1
 	fire_delay = 1
-	spread = 13
-	recoil = 0.4
+	spread = 8
+	recoil = 0.1
 	vary_fire_sound = FALSE
 	inhand_icon_state = "mp7"
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
@@ -480,10 +480,10 @@
 
 /obj/item/gun/ballistic/automatic/mp7/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS, overtime_penalty_increase = 0.8)
 
 
-//about 2.28 seconds TTK with AP. While it has a bit higher DPS than the m4a1/service rifle, it is slightly less accurate at range and has to reload more often
+//about 2.04 seconds TTK with AP. While it has a bit higher DPS than the m4a1/service rifle, it is slightly less accurate at range and has to reload more often
 /obj/item/gun/ballistic/automatic/pulsesmg
 	name = "\improper pulse SMG"
 	desc = "A hybrid between the MP7 and AR2, the pulse smg has biolocking features and higher power rounds than the standard MP7, but is not yet as powerful as the AR2."
@@ -492,8 +492,8 @@
 	fire_sound = 'hl13/sound/weapons/pulsesmgfire.ogg'
 	vary_fire_sound = FALSE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/pulsesmg
-	spread = 11
-	recoil = 0.4
+	spread = 6
+	recoil = 0.1
 	fire_delay = 2
 	burst_size = 1
 	mag_display = FALSE
@@ -520,7 +520,7 @@
 
 /obj/item/gun/ballistic/automatic/pulsesmg/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.19 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.17 SECONDS, overtime_penalty_increase = 0.9)
 
 /obj/item/ammo_box/strilka310/a762 //yay recycled code. recycles sprites because im too lazy to port a proper stripper clip sprite.
 	name = "stripper clip (7.62mm)"
@@ -534,7 +534,7 @@
 /obj/item/ammo_box/magazine/internal/boltaction/mosin/start_empty
 	start_empty = TRUE
 
-/// Aprox 32 damage a shot, 4 shots to crit, can crit in as fast as ~1.8 seconds assuming it doesn't jam (though it is statistically likely to do so)
+/// Aprox 34 damage a shot, 4 shots to crit, can crit in as fast as ~1.8 seconds assuming it doesn't jam (though it is statistically likely to do so)
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
 	name = "mosin-nagant rifle"
 	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. Slightly moist."
@@ -549,7 +549,7 @@
 	jamming_increment = 0
 	jamming_chance = 20
 	projectile_damage_multiplier = 1.3
-	spread = 5 //it has a stock
+	spread = 4 //it has a stock
 	recoil = 0.5 //probably the only gun in the game other than M4A1 and service rifle with a real stock
 	fire_delay = 6 //its already boltaction but to make sure that someone who's really good at pressing Z doesnt just lay down suppressive fire
 	sawn_desc = "A ratty old pre-war rifle that was developed over a century ago. Someone seems to have taken this prized historical artifact and sawed it in half, creating an Obrez. Still moist, though."
@@ -591,7 +591,7 @@
 	vary_fire_sound = FALSE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/pulselmg
 	force = 12
-	spread = 25
+	spread = 20
 	recoil = 0.3
 	fire_delay = 2
 	burst_size = 1
@@ -622,12 +622,12 @@
 
 /obj/item/gun/ballistic/automatic/pulselmg/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS, TRUE, 0.3, 0.4, 0.7 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS, TRUE, 0.3, 0.4, 0.7 SECONDS, overtime_penalty_cap = 5)
 
 //(autofire_shot_delay, windup_autofire, windup_autofire_reduction_multiplier, windup_autofire_cap, windup_spindown, allow_akimbo = TRUE)
 
 //Small upgrade to the ak47. Has around the same DPS but has far better recoil and spread control and a scope, but runs through ammo pretty quickly with its 10 round mags.
-//about 2.4 seconds TTK, and good AP
+//about 2.2 seconds TTK, and good AP
 /obj/item/gun/ballistic/automatic/svd
 	name = "\improper SVD Rifle"
 	desc = "A rare beautiful thing, this semi-automatic designated marksman rifle will take the hat off an elite at two thousand yards, and they ain't cheap."
@@ -645,8 +645,8 @@
 	force = 12
 	fire_delay = 5
 	burst_size = 1
-	spread = 3
-	recoil = 0.7
+	spread = 2
+	recoil = 0.5
 	projectile_damage_multiplier = 1.5
 	can_suppress = FALSE
 	mag_display = TRUE

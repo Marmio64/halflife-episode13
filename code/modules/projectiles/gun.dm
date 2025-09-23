@@ -70,7 +70,7 @@
 	/// Even snowflakier way to modify projectile wounding bonus/potential for projectiles fired from this gun.
 	var/projectile_wound_bonus = 0
 
-	var/spread = 9 //Spread induced by the gun itself. hl13 edit
+	var/spread = 8 //Spread induced by the gun itself. hl13 edit
 	var/randomspread = 1 //Set to 0 for shotguns. This is used for weapons that don't fire all their bullets at once.
 
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
