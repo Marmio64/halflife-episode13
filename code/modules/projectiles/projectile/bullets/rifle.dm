@@ -76,6 +76,7 @@
 	embed_falloff_tile = -5
 	wound_falloff_tile = -2
 	shrapnel_type = /obj/item/ammo_casing/rebar
+	accurate_range = 150
 
 /datum/embed_data/rebar
 	embed_chance = 60

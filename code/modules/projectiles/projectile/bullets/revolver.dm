@@ -8,6 +8,7 @@
 /obj/projectile/bullet/n762/high_veloc
 	speed = 3
 	armour_penetration = 35
+	accurate_range = 150
 
 // .50AE (Desert Eagle)
 
@@ -134,6 +135,7 @@
 	damage = 35 // hl13 edit
 	armour_penetration = 15
 	wound_bonus = -30
+	accurate_range = 125
 
 /obj/projectile/bullet/a357/phasic
 	name = ".357 phasic bullet"

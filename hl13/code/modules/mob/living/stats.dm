@@ -22,6 +22,8 @@
 
 	var/has_rolled_for_stats = FALSE
 
+	var/zoomed = FALSE
+
 ///Rolls random stats base 10, +-1, and applies age stats.
 /mob/living/proc/roll_mob_stats()
 	if(has_rolled_for_stats)

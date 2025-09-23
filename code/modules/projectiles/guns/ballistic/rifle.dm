@@ -222,10 +222,6 @@
 	var/draw_time = 2.3 SECONDS
 	SET_BASE_PIXEL(0, 0)
 
-/obj/item/gun/ballistic/rifle/rebarxbow/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/scope, range_modifier = 2) //enough range to at least be useful for stealth
-
 /obj/item/gun/ballistic/rifle/rebarxbow/rack(mob/user = null)
 	if (bolt_locked)
 		drop_bolt(user)

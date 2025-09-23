@@ -39,6 +39,7 @@
 	wound_bonus = -10
 	armour_penetration = 35
 	speed = 4
+	accurate_range = 150
 
 /obj/projectile/bullet/flechette
 	name = "flechette"
