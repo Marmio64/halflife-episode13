@@ -35,11 +35,11 @@ DEFINE_BITFIELD(turret_flags, list(
 	icon_state = "combine_lethal"
 	base_icon_state = "combine"
 	installation = null
-	stun_projectile = /obj/projectile/bullet/pulse/ar2
-	lethal_projectile = /obj/projectile/bullet/pulse/ar2
+	stun_projectile = /obj/projectile/bullet/pulse/weak
+	lethal_projectile = /obj/projectile/bullet/pulse/weak
 	lethal_projectile_sound = "hl13/sound/weapons/ar2fire.ogg"
 	stun_projectile_sound = "hl13/sound/weapons/ar2fire.ogg"
-	shot_delay = 10
+	shot_delay = 5
 	invisibility = 0
 	density = TRUE
 	desc = "A combine made turret which shoots at specified targets with a high power pulse gun."
@@ -54,7 +54,7 @@ DEFINE_BITFIELD(turret_flags, list(
 	anchored = 0
 	raised = 1
 	alwaysmovable = TRUE
-	max_integrity = 180
+	max_integrity = 160
 	uses_stored = FALSE
 	armor_type = /datum/armor/combine_porta_turret
 
@@ -71,8 +71,8 @@ DEFINE_BITFIELD(turret_flags, list(
 	on = FALSE
 
 /obj/machinery/porta_turret/combine/fast
-	stun_projectile = /obj/projectile/bullet/pulse/ar2/fast
-	lethal_projectile = /obj/projectile/bullet/pulse/ar2/fast
+	stun_projectile = /obj/projectile/bullet/pulse/weak/fast
+	lethal_projectile = /obj/projectile/bullet/pulse/weak/fast
 
 /obj/machinery/porta_turret/combine/mp7
 	stun_projectile = /obj/projectile/bullet/c46x30mm
@@ -82,6 +82,15 @@ DEFINE_BITFIELD(turret_flags, list(
 
 /obj/machinery/porta_turret/combine/mp7/off
 	on = FALSE
+
+/obj/machinery/porta_turret/combine/target(atom/movable/target)
+	if(target)
+		setDir(get_dir(base, target))//even if you can't shoot, follow the target
+		shootAt(target)
+		addtimer(CALLBACK(src, PROC_REF(shootAt), target), 0.5 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(shootAt), target), 1 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(shootAt), target), 1.5 SECONDS)
+		return TRUE
 
 /obj/machinery/porta_turret/combine/setup()
 	return
@@ -119,8 +128,8 @@ DEFINE_BITFIELD(turret_flags, list(
 	req_access = null
 
 /obj/machinery/porta_turret/combine/rebel/fast
-	stun_projectile = /obj/projectile/bullet/pulse/ar2/fast
-	lethal_projectile = /obj/projectile/bullet/pulse/ar2/fast
+	stun_projectile = /obj/projectile/bullet/pulse/weak/fast
+	lethal_projectile = /obj/projectile/bullet/pulse/weak/fast
 
 /obj/machinery/porta_turret/combine/rebel/assess_perp(mob/living/carbon/human/perp) //shoot mindshielded people
 	if (HAS_TRAIT(perp, TRAIT_MINDSHIELD))
