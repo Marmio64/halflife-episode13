@@ -17,6 +17,8 @@
 
 	var/round_start = FALSE
 
+	var/can_malfunction = TRUE
+
 /obj/machinery/combine_health_station/round_start
 	round_start = TRUE //so that it deducts sociostability when destroyed
 
@@ -30,7 +32,7 @@
 	if(change < 0)
 		cumulative_charge += change
 
-	if(cumulative_charge <= malfunction_point)
+	if(cumulative_charge <= malfunction_point && can_malfunction)
 		malfunction()
 
 	update_icon_state()
@@ -119,6 +121,7 @@
 
 /obj/machinery/combine_health_station/self_recharging
 	desc = "A wall mounted healing station. This one can recharge overtime, or be charged with grub nuggets."
+	can_malfunction = FALSE
 
 /obj/machinery/combine_health_station/self_recharging/process(delta_time)
 	if(capacity < capacity_max)

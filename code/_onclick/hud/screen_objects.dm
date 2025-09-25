@@ -211,7 +211,7 @@
 
 	var/adjusted_jump_range = clamp(tiles_to_clear, 2, 4)
 
-	if(!do_after(src, (adjusted_jump_range/4) SECONDS, src))
+	if(!do_after(src, (adjusted_jump_range/3) SECONDS, src))
 		return
 
 	adjustStaminaLoss(25)

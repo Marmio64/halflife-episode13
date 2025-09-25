@@ -50,6 +50,7 @@
 	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building."
 
 	uniform = /obj/item/clothing/under/citizen/refugee
+	l_pocket = /obj/item/wirecutters/halflife
 	r_pocket = /obj/item/flashlight
 
 	back = /obj/item/storage/backpack/halflife/satchel
@@ -142,6 +143,7 @@
 	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building."
 
 	uniform = /obj/item/clothing/under/citizen/refugee
+	l_pocket = /obj/item/wirecutters/halflife
 	r_pocket = /obj/item/flashlight
 
 	back = /obj/item/storage/backpack/halflife/satchel
@@ -278,6 +280,7 @@
 	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building."
 
 	uniform = /obj/item/clothing/under/citizen/refugee
+	l_pocket = /obj/item/wirecutters/halflife
 	r_pocket = /obj/item/flashlight
 
 	back = /obj/item/storage/backpack/halflife/satchel
@@ -481,6 +484,7 @@
 		/obj/item/sbeacondrop/rebel_turret = 2,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/wirecutters/halflife = 1,
 	)
 
 	suit = /obj/item/clothing/suit/armor/rebel/light

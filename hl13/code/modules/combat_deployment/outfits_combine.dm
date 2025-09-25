@@ -44,6 +44,7 @@
 	shoes = /obj/item/clothing/shoes/halflife/engineer
 	gloves = /obj/item/clothing/gloves/halflife/engineer
 
+	l_pocket = /obj/item/wirecutters/halflife
 	r_pocket = /obj/item/flashlight
 
 	back = /obj/item/storage/backpack/satchel
@@ -127,6 +128,7 @@
 	shoes = /obj/item/clothing/shoes/halflife/engineer
 	gloves = /obj/item/clothing/gloves/halflife/engineer
 
+	l_pocket = /obj/item/wirecutters/halflife
 	r_pocket = /obj/item/flashlight
 
 	back = /obj/item/storage/backpack/satchel
@@ -269,6 +271,7 @@
 	shoes = /obj/item/clothing/shoes/halflife/engineer
 	gloves = /obj/item/clothing/gloves/halflife/engineer
 
+	l_pocket = /obj/item/wirecutters/halflife
 	r_pocket = /obj/item/flashlight
 
 	back = /obj/item/storage/backpack/satchel
@@ -416,6 +419,7 @@
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 		/obj/item/sbeacondrop/combine_turret = 2,
+		/obj/item/wirecutters/halflife = 1,
 	)
 
 
