@@ -234,6 +234,7 @@
 	can_suppress = TRUE
 	fire_sound = "hl13/sound/weapons/uspfire.ogg"
 	recoil = 0.2
+	spread = 6
 	vary_fire_sound = FALSE
 
 	inhand_icon_state = "usp"
@@ -464,7 +465,7 @@
 	show_bolt_icon = FALSE
 	burst_size = 1
 	fire_delay = 1
-	spread = 8
+	spread = 9
 	recoil = 0.1
 	vary_fire_sound = FALSE
 	inhand_icon_state = "mp7"
@@ -476,7 +477,7 @@
 
 /obj/item/gun/ballistic/automatic/mp7/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS, overtime_penalty_increase = 0.8)
+	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS, overtime_penalty_increase = 0.8, overtime_penalty_cap = 12)
 
 
 //about 2.04 seconds TTK with AP. While it has a bit higher DPS than the m4a1/service rifle, it is slightly less accurate at range and has to reload more often

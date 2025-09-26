@@ -41,6 +41,9 @@
 	lighting_cutoff_red = 25
 	lighting_cutoff = 8
 
+	fire_stack_decay_rate = -1
+	damage_coeff = list(BRUTE = 1, BURN = 2, TOX = 1, STAMINA = 1, OXY = 1)
+
 /mob/living/basic/halflife/zombie/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()
 	if(stat)
@@ -52,7 +55,6 @@
 	if(fungalheal)
 		if(locate(/obj/structure/alien/weeds) in src.loc)
 			adjust_health(-maxHealth*0.05)
-
 
 /mob/living/basic/halflife/zombie/death(gibbed)
 	if(prob(headcrabspawn_chance) && crabless_possible) //25% chance to spawn a headcrab on death by default
