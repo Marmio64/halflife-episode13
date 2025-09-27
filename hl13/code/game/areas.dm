@@ -91,7 +91,7 @@
 	ambient_buzz_vol = 35
 
 /area/halflife/outdoors/outlands_city
-	name = "\improper City Outskirts"
+	name = "\improper Condemned City"
 	ambient_buzz = 'hl13/sound/ambience/town_abandoned.ogg'
 
 	first_time_text = "The Outlands"
