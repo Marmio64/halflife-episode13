@@ -8,8 +8,8 @@
 	faction = list(FACTION_COMBINE)
 	mob_biotypes = MOB_ORGANIC
 	stat_attack = UNCONSCIOUS
-	maxHealth = 350
-	health = 350
+	maxHealth = 325
+	health = 325
 	harm_intent_damage = 25
 	melee_damage_lower = 18
 	melee_damage_upper = 24

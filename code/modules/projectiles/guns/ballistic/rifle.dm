@@ -219,6 +219,7 @@
 	fire_sound = 'hl13/sound/weapons/crossbowfire.ogg'
 	can_be_sawn_off = FALSE
 	tac_reloads = FALSE
+	spread = 1 //sniper weapon
 	var/draw_time = 2.3 SECONDS
 	SET_BASE_PIXEL(0, 0)
 
