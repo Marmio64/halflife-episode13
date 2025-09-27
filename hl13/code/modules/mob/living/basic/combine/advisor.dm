@@ -7,8 +7,8 @@
 	icon_dead = "advisor_dead"
 	faction = list(FACTION_COMBINE)
 	movement_type = FLOATING
-	maxHealth = 275
-	health = 275
+	maxHealth = 250
+	health = 250
 	obj_damage = 14
 	melee_damage_lower = 18
 	melee_damage_upper = 24
