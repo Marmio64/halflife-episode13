@@ -59,7 +59,7 @@ DEFINE_BITFIELD(turret_flags, list(
 	armor_type = /datum/armor/combine_porta_turret
 
 /datum/armor/combine_porta_turret
-	melee = 50
+	melee = 30
 	bullet = 40
 	laser = 30
 	energy = 30
@@ -89,7 +89,6 @@ DEFINE_BITFIELD(turret_flags, list(
 		shootAt(target)
 		addtimer(CALLBACK(src, PROC_REF(shootAt), target), 0.5 SECONDS)
 		addtimer(CALLBACK(src, PROC_REF(shootAt), target), 1 SECONDS)
-		addtimer(CALLBACK(src, PROC_REF(shootAt), target), 1.5 SECONDS)
 		return TRUE
 
 /obj/machinery/porta_turret/combine/setup()
