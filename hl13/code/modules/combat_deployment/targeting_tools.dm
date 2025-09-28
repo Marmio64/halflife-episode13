@@ -25,14 +25,14 @@
 /obj/item/halflife/cannister_targeter/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	. = ..()
 	if(1 <= charges)
-		if(!istype(interacting_with, /turf/open/openspace))
+		if(!istype(interacting_with, /turf/open/openspace) && !istype(interacting_with, /turf/closed))
 			if(do_after(user, 2 SECONDS, src))
 				launch_cannister(get_turf(interacting_with))
 				charges--
 			else
 				to_chat(user, span_warning("Insufficient time given to calculate coordinates."))
 		else
-			to_chat(user, span_warning("Targeting failed, target is out of reach due to being at a different altitude level."))
+			to_chat(user, span_warning("Targeting failed, target is out of reach due to being at a different altitude level or is obstructed."))
 
 /obj/item/halflife/cannister_targeter/proc/launch_cannister(turf/location)
 	podspawn(list(
