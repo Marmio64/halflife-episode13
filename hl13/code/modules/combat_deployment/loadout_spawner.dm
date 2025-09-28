@@ -61,7 +61,13 @@
 
 /// Consumes a use of the beacon, sending the user a message and creating their item in the process
 /obj/item/hl2/loadout_picker/proc/consume_use(datum/outfit/deployment_loadout/outfit_choice, mob/living/user)
-	to_chat(user, span_hear("Loadout selected."))
+	var/datum/outfit/deployment_loadout/new_loadout = outfit_choice
+
+	if(new_loadout.infinite_slots || new_loadout.slots_taken < new_loadout.max_slots)
+		to_chat(user, span_hear("Loadout selected."))
+	else
+		to_chat(user, span_big("This loadout is currently full. Try picking another loadout."))
+		return FALSE
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_user = user
@@ -69,10 +75,10 @@
 		for(var/obj/item/item in human_user.get_equipped_items(INCLUDE_POCKETS))
 			qdel(item)
 
-		human_user.equipOutfit(outfit_choice) // Loadout
+		human_user.equipOutfit(new_loadout) // Loadout
 		human_user.regenerate_icons()
-		to_chat(human_user, span_notice("You are the [outfit_choice.display_name]!"))
-		to_chat(human_user, span_notice("[outfit_choice.desc]"))
+		to_chat(human_user, span_notice("You are the [new_loadout.display_name]!"))
+		to_chat(human_user, span_notice("[new_loadout.desc]"))
 
 	do_sparks(3, source = src)
 	qdel(src)

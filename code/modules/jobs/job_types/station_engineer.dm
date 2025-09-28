@@ -3,7 +3,7 @@
 	description = "Maintain and construct new structures, electronics, and machines."
 	department_head = list(JOB_QUARTERMASTER)
 	faction = FACTION_STATION
-	total_positions = 3
+	total_positions = 2
 	spawn_positions = 2
 	supervisors = SUPERVISOR_CE
 	exp_requirements = 60

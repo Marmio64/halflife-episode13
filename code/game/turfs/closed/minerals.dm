@@ -284,13 +284,10 @@
 /// Will only run once, and will then be cached.
 /turf/closed/mineral/random/proc/mineral_chances()
 	return list(
-		/obj/item/stack/ore/diamond = 1,
 		/obj/item/stack/ore/gold = 6,
 		/obj/item/stack/ore/iron = 71,
 		/obj/item/stack/ore/copper = 5,
-		/obj/item/stack/ore/plasma = 2,
 		/obj/item/stack/ore/silver = 9,
-		/obj/item/stack/ore/titanium = 5,
 		/obj/item/stack/ore/uranium = 4,
 	)
 
@@ -338,12 +335,11 @@
 
 /turf/closed/mineral/random/high_chance/mineral_chances()
 	return list(
-		/obj/item/stack/ore/diamond = 30,
-		/obj/item/stack/ore/gold = 45,
-		/obj/item/stack/ore/plasma = 50,
-		/obj/item/stack/ore/silver = 50,
-		/obj/item/stack/ore/titanium = 45,
-		/obj/item/stack/ore/uranium = 35,
+		/obj/item/stack/ore/gold = 12,
+		/obj/item/stack/ore/iron = 64,
+		/obj/item/stack/ore/copper = 10,
+		/obj/item/stack/ore/silver = 9,
+		/obj/item/stack/ore/uranium = 4,
 	)
 
 /turf/closed/mineral/random/high_chance/volcanic

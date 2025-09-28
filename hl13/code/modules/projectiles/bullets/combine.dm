@@ -22,6 +22,9 @@
 	wound_bonus = -10
 	armour_penetration = 20
 
+/obj/projectile/bullet/pulse/weak/extra_weak
+	damage = 6
+
 /obj/projectile/bullet/pulse/weak/fast
 	speed = 4
 

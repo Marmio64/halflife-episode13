@@ -113,9 +113,8 @@ DEFINE_BITFIELD(turret_flags, list(
 
 /obj/machinery/porta_turret/combine/old
 	name = "old combine turret"
-	shot_delay = 10
-	stun_projectile = /obj/projectile/bullet/pulse/weak
-	lethal_projectile = /obj/projectile/bullet/pulse/weak
+	stun_projectile = /obj/projectile/bullet/pulse/weak/extra_weak
+	lethal_projectile = /obj/projectile/bullet/pulse/weak/extra_weak
 
 /obj/machinery/porta_turret/combine/rebel
 	name = "rebel turret"
