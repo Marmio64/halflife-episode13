@@ -8,13 +8,13 @@
 			var/_y = 0
 			switch(dir)
 				if (NORTH)
-					_y = 7
+					_y = 4
 				if (EAST)
-					_x = 7
+					_x = 4
 				if (SOUTH)
-					_y = -7
+					_y = -4
 				if (WEST)
-					_x = -7
+					_x = -4
 			ADD_TRAIT(src, TRAIT_TOTAL_FOV, "peeper")
 			zoomed = TRUE
 			animate(client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, time = 5, easing = SINE_EASING)

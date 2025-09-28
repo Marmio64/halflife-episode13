@@ -3,8 +3,8 @@
 	description = "Operate your miniature science station under the supervision of the labor lead, requesting assistants if necessary."
 	department_head = list(JOB_RESEARCH_DIRECTOR)
 	faction = FACTION_STATION
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = SUPERVISOR_RD
 	exp_requirements = 60
 	exp_required_type = EXP_TYPE_CREW
@@ -32,7 +32,7 @@
 		/obj/item/disk/design_disk/bepis = 2,
 	)
 	rpg_title = "Thaumaturgist"
-	job_flags = STATION_JOB_FLAGS
+	//job_flags = STATION_JOB_FLAGS
 
 	job_tone = "boom"
 

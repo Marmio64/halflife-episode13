@@ -3,8 +3,8 @@
 	description = "Act as a foreign district represenative of your choice, such as Eastwatch or Raven district. Act in their best interests by messing with this one legally, such as by reporting union law infractions or lack of sociostability."
 	department_head = list(JOB_CAPTAIN)
 	faction = FACTION_STATION
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = "your home district"
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "LAWYER"
@@ -28,7 +28,7 @@
 	family_heirlooms = list(/obj/item/gavelhammer)
 
 
-	job_flags = STATION_JOB_FLAGS
+	//job_flags = STATION_JOB_FLAGS
 
 	ration_bonus = 2
 
