@@ -295,7 +295,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/food_dispensery, 32)
 
 /obj/machinery/vending/goods_dispensery
 	name = "\improper Goods Dispensary"
-	desc = "A wall mounted dispensary that sells general goods at high prices. The clerk tends to have access to cheaper goods, but if there is no clerk, buying from here is an option."
+	desc = "A wall mounted dispensary that sells general goods at high prices. The bartender tends to have access to cheaper goods, but if there is no bartender, buying from here is an option."
 	icon_state = "fooddispenser"
 	icon_deny = "fooddispenser-deny"
 	panel_type = "wallmed-panel"

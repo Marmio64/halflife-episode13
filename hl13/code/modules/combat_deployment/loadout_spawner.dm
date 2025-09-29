@@ -63,11 +63,7 @@
 /obj/item/hl2/loadout_picker/proc/consume_use(datum/outfit/deployment_loadout/outfit_choice, mob/living/user)
 	var/datum/outfit/deployment_loadout/new_loadout = outfit_choice
 
-	if(new_loadout.infinite_slots || new_loadout.slots_taken < new_loadout.max_slots)
-		to_chat(user, span_hear("Loadout selected."))
-	else
-		to_chat(user, span_big("This loadout is currently full. Try picking another loadout."))
-		return FALSE
+	to_chat(user, span_hear("Loadout selected."))
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_user = user

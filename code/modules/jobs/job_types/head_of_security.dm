@@ -1,6 +1,6 @@
 /datum/job/head_of_security
 	title = JOB_HEAD_OF_SECURITY
-	description = "Command the civil protection team, and act as Overwatch's ground agent in the city. Should a conflict of interest occur, you have to side with Overwatch."
+	description = "Guard the District Administrator at all costs, except whereby doing so it would conflict with the orders of Overwatch. Command over local Metropolice and Conscript forces when necessary."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
 	department_head = list(JOB_CAPTAIN)
 	head_announce = list(RADIO_CHANNEL_SECURITY)
@@ -45,9 +45,50 @@
 
 	requisition_points = 6
 
-	gameplay_help = "As the divisional lead, you are partially augmented and have had a full memory wipe. You cannot go rogue and HAVE to follow orders from Overwatch (and thus, often Dispatch). Your CP officers and the District Administrator are not absolutely loyal however, so you'll have to instill loyalty in them to Overwatch."
+	gameplay_help = "As the Overwatch Soldier, you are the very best combatant stationed in the area by combine forces, and you have been given the task of protecting the District Administrator and advising them on security details."
 
-	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
+	cmode_music = 'hl13/sound/music/combat/guarddown.ogg'
+
+/datum/outfit/job/overwatch
+	name = "OTA Unit"
+
+	id = /obj/item/card/id/advanced/four/ert
+	glasses = /obj/item/clothing/glasses/hud/security/night/combine
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
+	uniform = /obj/item/clothing/under/combine/overwatch
+	suit = /obj/item/clothing/suit/armor/overwatch
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
+	gloves = /obj/item/clothing/gloves/combat/overwatch
+	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	belt = /obj/item/storage/belt/civilprotection/overwatch
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	skillchips = list(/obj/item/skillchip/overwatch) //Skilled soldiers
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/ota)
+
+	suit_store = /obj/item/gun/ballistic/automatic/ar2
+	belt = /obj/item/storage/belt/civilprotection/overwatch/ar2
+
+	back = null
+
+	var/role = "OTA.C13-"
+	var/name_source = list("Blade", "Dagger", "Hammer", "Hunter", "Razor", "Spear", "Striker", "Tracker", "Echo")
+
+/datum/outfit/job/overwatch/pre_equip(mob/living/carbon/human/H)
+	H.faction += "combine"
+	H.skin_tone = "#e9dfd7"
+	H.set_facial_hairstyle("Shaved", update = FALSE)
+	H.set_hairstyle("Bald") //this will call update_body_parts()
+	H.eye_color_left = "#b9b9b9"
+	H.eye_color_right = "#b9b9b9"
+	H.update_body()
+	ADD_TRAIT(H, TRAIT_NOHUNGER, OUTFIT_TRAIT) //OTA dont need to eat or drink
+
+	H.change_stat(STATKEY_DEX, 2)
+	H.change_stat(STATKEY_STR, 4)
+
+/datum/outfit/job/overwatch/post_equip(mob/living/carbon/human/equipped, visuals_only)
+	..()
+	equipped.fully_replace_character_name(equipped.real_name,"[role][pick(name_source)] [rand(111,999)]")
 
 /datum/job/head_of_security/get_captaincy_announcement(mob/living/captain)
 	return "Due to staffing shortages, newly promoted Acting District Administrator [captain.real_name] assuming command."
@@ -73,65 +114,6 @@
 	r_pocket = /obj/item/hl2key/townhall
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
-
-/datum/outfit/job/hos/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
-	. = ..()
-	user.faction += "combine"
-
-	var/currentrankpoints = 0
-
-	var/client/user_client = GLOB.directory[ckey(user.mind?.key)]
-
-	var/department = null
-
-	if(user_client)
-		currentrankpoints = user_client.prefs.read_preference(/datum/preference/numeric/rankpoints)
-		department = user_client.prefs.read_preference(/datum/preference/choiced/security_department)
-
-	var/name_source = list("Line", "Patrol", "Roller", "Victor")
-
-	if(department)
-		if(department == SEC_DEPT_HELIX)
-			name_source = list ("Helix")
-			user.change_stat(STATKEY_INT, 3) //Guarantee they can use an analyzer, at the cost of strength
-			user.change_stat(STATKEY_STR, -2)
-		if(department == SEC_DEPT_XRAY)
-			name_source = list ("Xray")
-			user.change_stat(STATKEY_INT, 3)
-			user.change_stat(STATKEY_STR, -2)
-		if(department == SEC_DEPT_DEFENDER)
-			name_source = list ("Defender")
-			user.change_stat(STATKEY_DEX, -1)
-			user.change_stat(STATKEY_STR, 1)
-		if(department == SEC_DEPT_JURY)
-			name_source = list ("Jury")
-			user.change_stat(STATKEY_DEX, -1)
-			user.change_stat(STATKEY_STR, 1)
-		if(department == SEC_DEPT_RANGER)
-			name_source = list ("Ranger")
-			user.change_stat(STATKEY_DEX, 1)
-			user.change_stat(STATKEY_STR, -1)
-		if(department == SEC_DEPT_QUICK)
-			name_source = list ("Quick")
-			user.change_stat(STATKEY_DEX, 1)
-			user.change_stat(STATKEY_STR, -1)
-
-	if(istype(user.wear_id, /obj/item/card/id))
-		var/obj/item/card/id/ID = user.wear_id
-		ID.registered_name = "DV:[currentrankpoints].[pick(name_source)]-[rand(10,99)]"
-		ID.update_label()
-
-		if(24 < currentrankpoints)
-			ID.registered_account.requisition_points += 1
-
-		if(49 < currentrankpoints)
-			ID.registered_account.requisition_points += 1
-
-		if(74 < currentrankpoints)
-			ID.registered_account.requisition_points += 1
-
-	user.change_stat(STATKEY_DEX, 2)
-	user.change_stat(STATKEY_STR, 3)
 
 /datum/outfit/job/hos/mod
 	name = "Head of Security (MODsuit)"

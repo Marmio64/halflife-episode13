@@ -1,24 +1,19 @@
 /datum/job/prisoner
 	title = JOB_PRISONER
-	description = "Try to survive in the outlands, find a way into the city for supplies, help or rob citizens for your own gain."
+	description = "Inhabit an abandoned, hidden bunker and stealthily work to overthrow the combine regime. Smuggle out citizens from the city and convince them to join your cause while avoiding combine assaults."
 	department_head = list("Nobody")
-	total_positions = 12
+	total_positions = 4
 	spawn_positions = 4
 	supervisors = "nobody"
 	exp_granted_type = EXP_TYPE_CREW
 	paycheck = PAYCHECK_ZERO
 	config_tag = "PRISONER"
 
-	outfit = /datum/outfit/job/refugee/fixeditems
+	outfit = /datum/outfit/job/rebel
 	plasmaman_outfit = /datum/outfit/plasmaman/prisoner
 
 	display_order = JOB_DISPLAY_ORDER_PRISONER
 	department_for_prefs = /datum/job_department/assistant
-
-	exclusive_mail_goodies = TRUE
-	mail_goodies = list (
-		/obj/effect/spawner/random/contraband/prison = 1
-	)
 
 	family_heirlooms = list(/obj/item/pen/blue)
 	rpg_title = "Defeated Miniboss"
@@ -28,7 +23,33 @@
 
 	cmode_music = 'hl13/sound/music/combat/cpviolation.ogg' //cause they're a cp violation
 
-	gameplay_help = "As a refugee, expect to die a lot, espescially if you do not stay with allies. The outlands are a harsh, dangerous, and unforgiving place. You'll have to try to scavenge, craft, and loot what you need to survive. Your first priority should be to craft an armored vest from cloth and scrap, and get some food."
+	gameplay_help = "Your task is of a herculean effort, and the road ahead will see you losing many of your comrades and most likely your own life as well. Take things slowly, wittle down the combine, loot to find better gear, and recruit more volunteers in your ranks to have the best chance."
+
+/datum/outfit/job/rebel
+	name = "Outlands Rebel"
+	jobtype = /datum/job/prisoner
+
+	id = /obj/item/storage/wallet
+	uniform = /obj/item/clothing/under/citizen/rebel
+
+	suit = /obj/item/clothing/suit/armor/civilprotection
+	head = /obj/item/clothing/head/beanie/black
+	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/fingerless
+
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	belt = /obj/item/storage/belt/civilprotection
+
+	back = /obj/item/storage/backpack/satchel
+
+	l_pocket = /obj/item/flashlight
+
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/usp9mm = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/hl2key/rebel = 1,
+	)
+
 
 /datum/outfit/job/refugee
 	name = "Outlands Refugee"

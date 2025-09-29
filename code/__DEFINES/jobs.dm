@@ -48,14 +48,14 @@
 
 //No department
 #define JOB_ASSISTANT "Citizen"
-#define JOB_PRISONER "Refugee"
+#define JOB_PRISONER "Rebel"
 
 #define JOB_DEPLOYMENT_REFUGEE "Refugee Rebel"
 #define JOB_DEPLOYMENT_METROCOP "Civil Protection"
 //Command
 #define JOB_CAPTAIN "District Administrator"
 #define JOB_HEAD_OF_PERSONNEL "Labor Lead"
-#define JOB_HEAD_OF_SECURITY "Divisional Lead"
+#define JOB_HEAD_OF_SECURITY "Overwatch Soldier"
 #define JOB_RESEARCH_DIRECTOR "Research Director"
 #define JOB_CHIEF_ENGINEER "Chief Engineer"
 #define JOB_CHIEF_MEDICAL_OFFICER "Chief Medical Officer"
