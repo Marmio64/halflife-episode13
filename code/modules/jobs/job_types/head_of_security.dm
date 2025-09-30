@@ -52,7 +52,7 @@
 /datum/outfit/job/overwatch
 	name = "Overwatch Soldier"
 
-	id = /obj/item/card/id/advanced/four
+	id = /obj/item/card/id/advanced/halflife/combine/three
 	id_trim = /datum/id_trim/job/head_of_security
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
