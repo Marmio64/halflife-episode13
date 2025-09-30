@@ -10,7 +10,7 @@
 	supervisors = SUPERVISOR_CAPTAIN
 	req_admin_notify = 1
 	minimal_player_age = 14
-	exp_requirements = 280
+	exp_requirements = 600 //10 hours of gameplay, about 5 rounds. Ensures they're pretty good.
 	exp_required_type = EXP_TYPE_CREW
 	exp_required_type_department = EXP_TYPE_SECURITY
 	exp_granted_type = EXP_TYPE_CREW
@@ -83,6 +83,7 @@
 	H.eye_color_right = "#b9b9b9"
 	H.update_body()
 	ADD_TRAIT(H, TRAIT_NOHUNGER, OUTFIT_TRAIT) //OTA dont need to eat or drink
+	ADD_TRAIT(H, TRAIT_NOSLEEP, OUTFIT_TRAIT) //OTA dont need to sleep
 
 	H.change_stat(STATKEY_DEX, 2)
 	H.change_stat(STATKEY_STR, 4)
