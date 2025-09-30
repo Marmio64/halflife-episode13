@@ -29,7 +29,7 @@ export const JOB2ICON = {
   Clerk: 'dollar-sign',
   'Cyber Police': 'qrcode',
   Cyborg: 'robot',
-  Detective: 'user-secret',
+  Conscript: 'shield-halved',
   Geneticist: 'dna',
   'Labor Lead': 'briefcase',
   'Overwatch Soldier': 'user-shield',

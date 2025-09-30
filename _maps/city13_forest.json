@@ -1,0 +1,33 @@
+{
+	"version": 1,
+	"map_name": "City 13 Forest District",
+	"map_path": "map_files/city13_forest",
+	"map_file": "city13_forest.dmm",
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
+	"planetary": 1,
+	"shuttles": {
+		"cargo": "cargo_box",
+		"ferry": "ferry_fancy",
+		"whiteship": "whiteship_meta",
+		"emergency": "emergency_box"
+	},
+	"traits": [
+		{
+			"Baseturf": "/turf/open/floor/plating/ground/rockunder",
+			"Gravity": true,
+			"No Parallax": true,
+			"Weather_Rainstorm": true,
+			"Linkage": null
+
+		},
+		{
+			"Baseturf": "/turf/open/openspace",
+			"Gravity": true,
+			"No Parallax": true,
+			"Weather_Rainstorm": true,
+			"Linkage": null
+		}
+	],
+	"minetype": "none"
+}

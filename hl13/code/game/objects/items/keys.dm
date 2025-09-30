@@ -125,6 +125,11 @@
 	desc = "This key seems to open some kind of bunker."
 	lockid = "rebel"
 
+/obj/item/hl2key/conscript
+	name = "conscript key"
+	desc = "This key opens doors in the conscript base."
+	lockid = "conscript"
+
 /obj/item/hl2key/labor
 	name = "labor union key"
 	desc = "This key will open doors in the labor union."

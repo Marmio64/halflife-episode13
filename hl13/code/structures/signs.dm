@@ -119,6 +119,7 @@
 	name = "shop sign"
 	desc = "I think this shop may be pointing us to a sign... Wait, no... the sign is pointing us to a shop!"
 	icon_state = "shop"
+	density = FALSE
 	pixel_x = -15
 
 /obj/structure/halflife/sign/bar

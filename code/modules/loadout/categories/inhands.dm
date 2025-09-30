@@ -23,27 +23,3 @@
 /datum/loadout_item/inhand/cane_white
 	name = "White Cane"
 	item_path = /obj/item/cane/white
-
-/datum/loadout_item/inhand/ration
-	name = "Nutripaste"
-	item_path = /obj/item/food/nutripaste/small
-
-/datum/loadout_item/inhand/water
-	name = "Low Grade Breen Water"
-	item_path = /obj/item/reagent_containers/cup/soda_cans/breenwater/yellow
-
-/datum/loadout_item/inhand/wallet
-	name = "Wallet"
-	item_path = /obj/item/storage/wallet
-
-/datum/loadout_item/inhand/suitcase
-	name = "Suit Case"
-	item_path = /obj/item/storage/halflife/suitcase
-
-/datum/loadout_item/inhand/key
-	name = "Blank Custom Key"
-	item_path = /obj/item/customblank
-
-/datum/loadout_item/inhand/rewardvoucher
-	name = "Credit Reward Voucher"
-	item_path = /obj/item/stack/credit_voucher

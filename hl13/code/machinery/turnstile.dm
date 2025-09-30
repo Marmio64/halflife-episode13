@@ -179,7 +179,7 @@
 
 //for high access areas, only civil protection and the city admin should access
 /obj/machinery/turnstile/brig/halflife/forcefield/civilprotection
-	req_access = list(ACCESS_SECURITY)
+	req_access = list(ACCESS_BRIG)
 
 /obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional
 	desc = "A forcefield which only allows those to pass who have proper access. You may be able to turn it off with the proper access."

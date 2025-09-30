@@ -45,10 +45,13 @@
 	l_pocket = /obj/item/flashlight
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/usp9mm = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 		/obj/item/hl2key/rebel = 1,
 	)
+
+/datum/outfit/job/rebel/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+	. = ..()
+	user.change_stat(STATKEY_DEX, 1)
 
 
 /datum/outfit/job/refugee

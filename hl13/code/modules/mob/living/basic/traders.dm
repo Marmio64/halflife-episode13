@@ -165,10 +165,10 @@
 	outfit = /datum/outfit/blackmarket_npc
 
 /datum/outfit/blackmarket_npc
-	name = "Refugee Smuggler"
+	name = "Black Market Operator"
 
 	uniform = /obj/item/clothing/under/citizen/refugee
-	suit = /obj/item/clothing/suit/armor/browncoat
+	suit = /obj/item/clothing/suit/armor/halflife/milvest
 	head = /obj/item/clothing/head/beanie/black
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/combat
@@ -179,8 +179,8 @@
 	name = "Refugee Tradesmen"
 	desc = "An older looking gentlemen, who looks like they've been in the outlands for a long time. They seem to be selling useful supplies."
 
-	maxHealth = 250
-	health = 250
+	maxHealth = 150
+	health = 150
 	blood_volume = BLOOD_VOLUME_NORMAL
 
 	spawner_path = /obj/effect/mob_spawn/corpse/human/refugee_tradesmen
@@ -197,22 +197,22 @@
 	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
 
 /obj/effect/mob_spawn/corpse/human/refugee_tradesmen
-	name = "Refugee Smuggler"
+	name = "Refugee Tradesmen"
 	hairstyle = "Short Hair"
 	haircolor = COLOR_BLACK
-	facial_hairstyle = "Shaved"
+	facial_hairstyle = "Beard (Full)"
 	skin_tone = "caucasian1"
 	outfit = /datum/outfit/refugee_tradesmen
 
 /datum/outfit/refugee_tradesmen
-	name = "Refugee Smuggler"
+	name = "Refugee Tradesmen"
 
 	uniform = /obj/item/clothing/under/citizen/refugee
 	suit = /obj/item/clothing/suit/armor/browncoat
 	head = /obj/item/clothing/head/beanie/black
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/combat
-	mask = /obj/item/clothing/mask/gas/hl2/military
+	mask = /obj/item/cigarette/halflife
 
 ///////////////// AI STUFF & TRADER DATA ////////////////////////////////////
 

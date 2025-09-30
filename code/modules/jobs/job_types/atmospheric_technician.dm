@@ -1,6 +1,6 @@
 /datum/job/atmospheric_technician
 	title = JOB_ATMOSPHERIC_TECHNICIAN
-	description = "Remove xenian infestations from hotspots in the city."
+	description = "Remove any xenian infestations from hotspots in the city, and travel with conscripts and metropolice beyond the city for additional harvesting of xenian resources."
 	department_head = list(JOB_QUARTERMASTER)
 	total_positions = 2
 	spawn_positions = 2

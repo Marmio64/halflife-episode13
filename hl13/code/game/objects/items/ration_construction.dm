@@ -496,8 +496,8 @@
 /obj/machinery/watermixer
 	name = "Water Mixer"
 	desc = "A massive mixing device which intakes raw, unclean water and chemically treats it using additives to create something slightly better."
-	icon = 'icons/obj/machines/biogenerator.dmi'
-	icon_state = "biogenerator" // placeholder for now. I'm a shit spriter ~Death
+	icon = 'hl13/icons/obj/port/objects.dmi'
+	icon_state = "psiphon:0" // placeholder for now. I'm a shit spriter ~Death
 	density = TRUE
 	var/wateramt = 0
 	var/cans = 0
@@ -593,3 +593,65 @@
 				cans -= 1
 				new /obj/item/ration_construction/red_cans(src.loc, 1)
 				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 30, FALSE, extrarange = -1)
+
+/obj/machinery/bio_processor
+	name = "Bio-Processor"
+	desc = "A strange looking machine which intakes bio-products and processes it into the base supplies necessary for packing rations."
+	icon = 'icons/obj/machines/biogenerator.dmi'
+	icon_state = "biogenerator"
+	density = TRUE
+	var/nutrientamt = 0
+	var/list/pouroptions = list("Dispense Ration Flavors", "Dispense Ration Bases", "Dispense Water Additives")
+
+/obj/machinery/bio_processor/examine(mob/user)
+	. = ..()
+	. += span_notice("You can hit it with different types of food to process them.")
+	. += span_notice("You can use the machine to dispense ration supplies.")
+	. += span_notice("Bio-Nutrients Stored: [nutrientamt]")
+	. += span_notice("10 Bio-Nutrients are required to use the machine once.")
+
+/obj/machinery/bio_processor/attackby(obj/item/I, mob/living/user, params)
+	if(istype(I, /obj/item/food))
+		if(do_after(user, 1.5 SECONDS, src))
+			var/obj/item/food/food_to_convert = I
+			convert_to_biomass(food_to_convert)
+			to_chat(usr, span_notice("Added [food_to_convert]..."))
+			playsound(src, SFX_LIQUID_POUR, 40, FALSE, extrarange = -1)
+			qdel(food_to_convert)
+
+/obj/machinery/bio_processor/interact(mob/living/carbon/human/user)
+	. = ..()
+	if(nutrientamt < 10)
+		to_chat(usr, span_notice("You don't have at least 10 Bio-Nutrients."))
+		return
+	var/mix = input(user, "What to dispense?", "Choices") as null|anything in pouroptions
+	switch(mix)
+		if("Dispense Ration Flavors")
+			playsound(src, 'hl13/sound/machines/canmixer.ogg', 80, FALSE, extrarange = -1)
+			if(do_after(user, 4 SECONDS, src))
+				nutrientamt -= 10
+				new /obj/item/ration_construction/flavoring/bitter(src.loc, 1)
+				new /obj/item/ration_construction/flavoring/sour(src.loc, 1)
+				new /obj/item/ration_construction/flavoring/sweet(src.loc, 1)
+				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 30, FALSE, extrarange = -1)
+		if("Dispense Ration Bases")
+			playsound(src, 'hl13/sound/machines/canmixer.ogg', 80, FALSE, extrarange = -1)
+			if(do_after(user, 4 SECONDS, src))
+				nutrientamt -= 10
+				new /obj/item/ration_construction/base/fat(src.loc, 1)
+				new /obj/item/ration_construction/base/fiber(src.loc, 1)
+				new /obj/item/ration_construction/base/protein(src.loc, 1)
+				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 30, FALSE, extrarange = -1)
+		if("Dispense Water Additives")
+			playsound(src, 'hl13/sound/machines/canmixer.ogg', 80, FALSE, extrarange = -1)
+			if(do_after(user, 4 SECONDS, src))
+				nutrientamt -= 10
+				new /obj/item/ration_construction/watermix/blueadditive(src.loc, 1)
+				new /obj/item/ration_construction/watermix/yellowadditive(src.loc, 1)
+				new /obj/item/ration_construction/watermix/redadditive(src.loc, 1)
+				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 30, FALSE, extrarange = -1)
+
+/obj/machinery/bio_processor/proc/convert_to_biomass(obj/item/food/food_to_convert)
+	var/nutriments = ROUND_UP(food_to_convert.reagents.get_reagent_amount(/datum/reagent/consumable/nutriment, type_check = REAGENT_PARENT_TYPE))
+	qdel(food_to_convert)
+	nutrientamt += nutriments * 2

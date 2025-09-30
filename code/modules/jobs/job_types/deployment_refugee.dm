@@ -37,6 +37,7 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 	if(visualsOnly)
 		return
 
+	ADD_TRAIT(H, TRAIT_VIRUSIMMUNE, JOB_TRAIT)
 	H.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 5) //Gives you a few seconds of invincibility to prevent spawn camping
 
 	var/chosen = null

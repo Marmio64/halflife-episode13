@@ -6,7 +6,7 @@
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/shuttle/supply)
 "i" = (
-/obj/machinery/combine_walllight/directional/south,
+/obj/machinery/light/small/cyan/directional/north,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/shuttle/supply)
 "s" = (
@@ -19,8 +19,12 @@
 /turf/closed/wall/halflife/metal,
 /area/shuttle/supply)
 "u" = (
-/obj/machinery/door/unpowered/halflife/metal,
 /obj/structure/fans/tiny/invisible,
+/obj/machinery/door/airlock/highsecurity/combine,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/shuttle/supply)
+"O" = (
+/obj/machinery/light/small/cyan/directional/south,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/shuttle/supply)
 
@@ -49,7 +53,7 @@ u
 b
 i
 e
-e
+O
 b
 "}
 (5,1,1) = {"
@@ -98,7 +102,7 @@ b
 b
 i
 e
-e
+O
 b
 "}
 (12,1,1) = {"

@@ -16,7 +16,7 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "HEAD_OF_SECURITY"
 
-	outfit = /datum/outfit/job/hos
+	outfit = /datum/outfit/job/overwatch
 	plasmaman_outfit = /datum/outfit/plasmaman/head_of_security
 	departments_list = list(
 		/datum/job_department/security,
@@ -45,14 +45,15 @@
 
 	requisition_points = 6
 
-	gameplay_help = "As the Overwatch Soldier, you are the very best combatant stationed in the area by combine forces, and you have been given the task of protecting the District Administrator and advising them on security details."
+	gameplay_help = "As the Overwatch Soldier, you are the very best combatant stationed in the area by combine forces, and you have been given the task of protecting the District Administrator and advising them on security details. Note, while your AR2 is very powerful, there is no way to get extra ammunition for it, use it sparingly!"
 
 	cmode_music = 'hl13/sound/music/combat/guarddown.ogg'
 
 /datum/outfit/job/overwatch
-	name = "OTA Unit"
+	name = "Overwatch Soldier"
 
-	id = /obj/item/card/id/advanced/four/ert
+	id = /obj/item/card/id/advanced/four
+	id_trim = /datum/id_trim/job/head_of_security
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
 	uniform = /obj/item/clothing/under/combine/overwatch

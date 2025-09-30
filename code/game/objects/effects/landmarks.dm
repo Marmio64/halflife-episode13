@@ -126,7 +126,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "Captain"
 
 /obj/effect/landmark/start/detective
-	name = "Detective"
+	name = JOB_DETECTIVE
 	icon_state = "Detective"
 
 /obj/effect/landmark/start/warden

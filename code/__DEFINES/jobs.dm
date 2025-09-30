@@ -68,7 +68,7 @@
 #define JOB_HUMAN_AI "Big Brother"
 //Security
 #define JOB_WARDEN "Overseer"
-#define JOB_DETECTIVE "Detective"
+#define JOB_DETECTIVE "Conscript"
 #define JOB_SECURITY_OFFICER "Civil Protection Officer"
 #define JOB_SECURITY_OFFICER_MEDICAL "Medical Officer"
 #define JOB_SECURITY_OFFICER_ENGINEERING "Engineering Officer"

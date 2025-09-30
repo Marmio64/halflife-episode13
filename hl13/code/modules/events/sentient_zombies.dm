@@ -28,7 +28,6 @@
 	if(!spawn_locs.len)
 		message_admins("No valid spawn locations found, aborting...")
 		return MAP_ERROR
-
 	var/mob/living/basic/halflife/zombie/S = new ((pick(spawn_locs)))
 	S.key = chosen_one.key
 	message_admins("[ADMIN_LOOKUPFLW(S)] has been made into a Zombie by an event.")

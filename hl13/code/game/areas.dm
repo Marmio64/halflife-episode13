@@ -348,7 +348,8 @@
 /area/halflife/indoors/sewer/cave
 	name = "\improper Mining Caves"
 
-	ambient_buzz = 'hl13/sound/ambience/corridor.ogg'
+	ambient_buzz = 'hl13/sound/ambience/cave_ambience.ogg'
+	ambient_buzz_vol = 55
 
 	first_time_text = "The Mines"
 
