@@ -51,6 +51,7 @@
 					/obj/item/storage/fancy/cigarettes/halflife = 8,
 					/obj/item/storage/halflife/pill_bottle/antifatigue = 6,
 					/obj/item/storage/box/coffeepack = 3, //for coffee makers
+					/obj/item/reagent_containers/cup/glass/bottle/beer/light = 10,
 					/obj/item/clothing/gloves/fingerless = 3)
 
 	contraband = list(/obj/item/lockpick = 1,
@@ -163,7 +164,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	)
 	premium = list(
 		/obj/item/storage/backpack/halflife/satchel/civilprotection = 12,
-		/obj/item/gun/ballistic/automatic/pistol/usp/riot = 12,
+		/obj/item/gun/ballistic/automatic/pistol/usp/riot/civ_pro_vendor = 12,
 		/obj/item/melee/baton/security/heavy/loaded = 12,
 	)
 	refill_canister = /obj/item/vending_refill/civpro
@@ -266,6 +267,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/keyvendor, 32)
 		/obj/item/reagent_containers/condiment/sugar = 1,
 		/obj/item/reagent_containers/condiment/rice = 2,
 		/obj/item/reagent_containers/condiment/soymilk = 2,
+		/obj/item/reagent_containers/condiment/milk = 1,
 		/obj/item/food/butter = 2,
 		/obj/item/food/grown/onion = 3,
 		/obj/item/food/grown/potato = 4,

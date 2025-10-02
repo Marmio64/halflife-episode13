@@ -67,3 +67,14 @@
 	overdose_threshold = 80
 	taste_description = "pure green taste essence"
 	quality = DRINK_NICE
+
+/datum/reagent/consumable/ethanol/fake
+	name = "Combine Approved Ethanol Substitute"
+	description = "A 100% Combine approved beverage designed to provoke feelings of drinking alcohol while being so low of a proof that citizens will stay focused on their hard work. Also designed to not be usable in molotovs."
+	color = "#f8f0c7"
+	nutriment_factor = 1
+	boozepwr = 5
+	taste_description = "ethanol substitute"
+	ph = 4
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	glass_price = DRINK_PRICE_STOCK

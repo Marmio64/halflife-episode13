@@ -17,7 +17,7 @@
 
 	ai_controller = /datum/ai_controller/basic_controller/trader/halflife
 
-	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+	faction = list(FACTION_REFUGEE)
 
 /obj/effect/mob_spawn/corpse/human/refugee_smuggler
 	name = "Refugee Smuggler"
@@ -59,7 +59,7 @@
 
 	ai_controller = /datum/ai_controller/basic_controller/trader/halflife
 
-	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE, FACTION_HEADCRAB)
+	faction = list(FACTION_REFUGEE, FACTION_HEADCRAB)
 
 /obj/effect/mob_spawn/corpse/human/crabwalker
 	name = "Crabwalker"
@@ -103,7 +103,7 @@
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/rebel/refugeeguard
 	death_sound = 'hl13/sound/voice/human/scream/malescream_8.ogg'
 
-	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+	faction = list(FACTION_REFUGEE)
 
 /mob/living/basic/trooper/rebel/mp7/refugee/Initialize(mapload)
 	. = ..()
@@ -154,7 +154,7 @@
 
 	ai_controller = /datum/ai_controller/basic_controller/trader/halflife
 
-	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+	faction = list(FACTION_REFUGEE)
 
 /obj/effect/mob_spawn/corpse/human/blackmarket
 	name = "Refugee Smuggler"
@@ -194,7 +194,7 @@
 
 	ai_controller = /datum/ai_controller/basic_controller/trader/halflife
 
-	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+	faction = list(FACTION_REFUGEE)
 
 /obj/effect/mob_spawn/corpse/human/refugee_tradesmen
 	name = "Refugee Tradesmen"
@@ -515,12 +515,14 @@
 
 	initial_products = list(
 		/obj/item/ammo_box/magazine/makeshift9mm = list(PAYCHECK_CREW * 2, 5),
+		/obj/item/ammo_box/magazine/usp9mm = list(PAYCHECK_CREW * 4, 5),
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = list(PAYCHECK_CREW * 4.5, 5),
-		/obj/item/weaponcrafting/frame/usp = list(PAYCHECK_CREW * 5.5, 2),
-		/obj/item/weaponcrafting/frame/mosin = list(PAYCHECK_CREW * 9, 1),
+		/obj/item/gun/ballistic/automatic/pistol/usp = list(PAYCHECK_CREW * 9, 2),
+		/obj/item/gun/ballistic/rifle/boltaction/mosin_nagant = list(PAYCHECK_CREW * 12, 1),
 		/obj/item/gun/ballistic/rifle/rebarxbow = list(PAYCHECK_CREW * 7.5, 3),
 		/obj/item/clothing/suit/armor/civilprotection = list(PAYCHECK_CREW * 6, 3),
 		/obj/item/clothing/head/helmet/halflife/military/weak/crafted = list(PAYCHECK_CREW * 2.5, 5),
+		/obj/item/clothing/head/helmet/halflife/military = list(PAYCHECK_CREW * 8, 5),
 		/obj/item/grenade/halflife/molotov = list(PAYCHECK_CREW * 3.5, 5),
 		/obj/item/weaponcrafting/receiver = list(PAYCHECK_CREW * 3, 5),
 		/obj/item/stack/bulletcasings = list(PAYCHECK_CREW * 0.5, 5),

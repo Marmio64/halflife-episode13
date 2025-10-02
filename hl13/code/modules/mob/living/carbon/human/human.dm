@@ -8,13 +8,13 @@
 			var/_y = 0
 			switch(dir)
 				if (NORTH)
-					_y = 4
+					_y = 7
 				if (EAST)
-					_x = 4
+					_x = 7
 				if (SOUTH)
-					_y = -4
+					_y = -7
 				if (WEST)
-					_x = -4
+					_x = -7
 			ADD_TRAIT(src, TRAIT_TOTAL_FOV, "peeper")
 			zoomed = TRUE
 			animate(client, pixel_x = world.icon_size*_x, pixel_y = world.icon_size*_y, time = 5, easing = SINE_EASING)
@@ -36,4 +36,4 @@
 	zoomed = FALSE
 
 /datum/movespeed_modifier/hl13/peeper
-	multiplicative_slowdown = 1
+	multiplicative_slowdown = 1.5

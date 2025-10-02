@@ -126,7 +126,7 @@
 /datum/supply_pack/organic/food
 	name = "Food Crate"
 	desc = "Allow the citizens a treat with this crate filled with specially preserved old world foods."
-	cost = CARGO_CRATE_VALUE * 6.5
+	cost = CARGO_CRATE_VALUE * 7
 	contains = list(/obj/item/reagent_containers/condiment/flour,
 					/obj/item/reagent_containers/condiment/rice,
 					/obj/item/reagent_containers/condiment/milk,
@@ -144,7 +144,7 @@
 /datum/supply_pack/organic/ration_foodwater
 	name = "Ration Food and Water Crate"
 	desc = "A crate containing a selection of ration foods for immediate consumption, though it comes at a high price. Roughly equal to four rations worth of food and water."
-	cost = CARGO_CRATE_VALUE * 6
+	cost = CARGO_CRATE_VALUE * 6.5
 	contains = list(/obj/item/halflife/nutrient_bar_wrapping/water,
 					/obj/item/halflife/nutrient_bar_wrapping/water,
 					/obj/item/halflife/nutrient_bar_wrapping/pork,
@@ -184,7 +184,7 @@
 /datum/supply_pack/organic/fancyalcohol
 	name = "Exotic Alcohol Crate"
 	desc = "A crate of five exotic old world alcoholic beverages. Probably too good for the common citizen to have."
-	cost = CARGO_CRATE_VALUE * 5.5
+	cost = CARGO_CRATE_VALUE * 8
 	contains = list(/obj/item/reagent_containers/cup/glass/bottle/beer,
 				/obj/item/reagent_containers/cup/glass/bottle/grappa,
 				/obj/item/reagent_containers/cup/glass/bottle/gin,

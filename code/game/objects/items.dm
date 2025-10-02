@@ -1174,6 +1174,8 @@
 				outline_color = COLOR_THEME_MIDNIGHT
 			if("dark")
 				outline_color = COLOR_THEME_DARK
+			if("combine")
+				outline_color = COLOR_THEME_MIDNIGHT
 			if("plasmafire")
 				outline_color = COLOR_THEME_PLASMAFIRE
 			if("retro")

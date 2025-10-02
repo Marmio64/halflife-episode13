@@ -290,8 +290,8 @@
 	inhand_icon_state = "lawyer_black"
 
 /obj/item/clothing/under/halflife/labor_lead
-	name = "old suit"
-	desc = "A pretty good, old and dusty suit. Often given to high ranking citizens."
+	name = "old administrative suit"
+	desc = "A pretty good, old and dusty suit. Not specially tailored for the district administrator, but still looks fancy."
 	can_adjust = FALSE
 	has_sensor = LOCKED_SENSORS
 	sensor_mode = SENSOR_COORDS
@@ -299,8 +299,8 @@
 	icon_state = "classysuit"
 
 /obj/item/clothing/under/halflife/brownsuit
-	name = "old suit"
-	desc = "A pretty good, old and dusty brown suit."
+	name = "old administrative suit"
+	desc = "A pretty good, old and dusty suit. Not specially tailored for the district administrator, but still looks fancy."
 	can_adjust = FALSE
 	has_sensor = LOCKED_SENSORS
 	sensor_mode = SENSOR_COORDS

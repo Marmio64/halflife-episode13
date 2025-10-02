@@ -115,7 +115,7 @@
 /datum/supply_pack/security/armory/pulsesmg
 	name = "Pulse SMG Crate"
 	desc = "Contains two Pulse SMGs that are ready built and biolocked. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 20
+	cost = CARGO_CRATE_VALUE * 21
 	contains = list(/obj/item/gun/ballistic/automatic/pulsesmg,
 					/obj/item/gun/ballistic/automatic/pulsesmg)
 	crate_name = "pulse smg crate"
@@ -133,7 +133,7 @@
 /datum/supply_pack/security/armory/servicerifle
 	name = "Service Rifle Crate"
 	desc = "Contains two service rifle gun frames that must be assembled. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 18
+	cost = CARGO_CRATE_VALUE * 19
 	contains = list(/obj/item/weaponcrafting/frame/service,
 					/obj/item/weaponcrafting/frame/service)
 	crate_name = "service rifle crate"
@@ -151,7 +151,7 @@
 /datum/supply_pack/security/armory/mosin //if you spent everything else on pierogis to keep the citizens from butchering you like a fish but still want conscripts
 	name = "Mosin-Nagant Frames"
 	desc = "Contains two severely outdated bolt-action rifle frames that must be assembled. Requires Armory access to open. "
-	cost = CARGO_CRATE_VALUE * 12
+	cost = CARGO_CRATE_VALUE * 13
 	contains = list(/obj/item/weaponcrafting/frame/mosin,
 					/obj/item/weaponcrafting/frame/mosin)
 	crate_name = "mosin-nagant crate"
@@ -170,7 +170,7 @@
 /datum/supply_pack/security/armory/mp7
 	name = "MP7 Frame Crate"
 	desc = "Contains two MP7 submachine gun frames that must be assembled. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 10
+	cost = CARGO_CRATE_VALUE * 11
 	contains = list(/obj/item/weaponcrafting/frame/mp7,
 					/obj/item/weaponcrafting/frame/mp7)
 	crate_name = "mp7 gun crate"
@@ -188,7 +188,7 @@
 /datum/supply_pack/security/armory/spas12
 	name = "SPAS-12 Frame Crate"
 	desc = "Contains two SPAS-12 shotgun frames that must be assembled. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 10
+	cost = CARGO_CRATE_VALUE * 11
 	contains = list(/obj/item/weaponcrafting/frame/spas12,
 					/obj/item/weaponcrafting/frame/spas12)
 	crate_name = "spas-12 gun crate"
@@ -206,7 +206,7 @@
 /datum/supply_pack/security/armory/coltpython
 	name = "Colt Python Frame Crate"
 	desc = "Contains two Colt Python revolver frames that must be assembled. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 11
+	cost = CARGO_CRATE_VALUE * 12
 	contains = list(/obj/item/weaponcrafting/frame/coltpython,
 					/obj/item/weaponcrafting/frame/coltpython)
 	crate_name = "colt python gun crate"
@@ -224,7 +224,7 @@
 /datum/supply_pack/security/armory/usp
 	name = "USP Match Crate"
 	desc = "Contains two USP Match pistol frames that must be assembled. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 6
+	cost = CARGO_CRATE_VALUE * 7
 	contains = list(/obj/item/weaponcrafting/frame/usp,
 					/obj/item/weaponcrafting/frame/usp)
 	crate_name = "usp match gun crate"
@@ -278,8 +278,8 @@
 
 /datum/supply_pack/security/armory/brainwash
 	name = "Brainwashing Disk Crate"
-	desc = "A disk with loaded instruction and technologies to allow you to permanently coerce citizens into better serving the combine. Simply load into a surgical console to be able to start the surgery."
-	cost = CARGO_CRATE_VALUE * 5
+	desc = "A disk with loaded instruction and technologies to allow you to permanently coerce citizens into better serving the combine. Simply load into a surgical console to be able to start the surgery. Recent events have caused prices to skyrocket, are you sure this is worth it?"
+	cost = CARGO_CRATE_VALUE * 25
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/disk/surgery/brainwashing)
 	crate_name = "brainwashing disk crate"

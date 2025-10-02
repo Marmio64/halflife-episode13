@@ -560,6 +560,8 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	Master.UpdateTickRate()
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_CLIENT_CONNECT, src)
 	fully_created = TRUE
+	if(!fullscreen)
+		toggle_fullscreen() //hl13 edit
 
 //////////////
 //DISCONNECT//
@@ -1194,18 +1196,18 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	fullscreen = !fullscreen
 
 	if (fullscreen)
-		winset(usr, "mainwindow", "on-size=")
-		winset(usr, "mainwindow", "titlebar=false")
-		winset(usr, "mainwindow", "can-resize=false")
-		winset(usr, "mainwindow", "menu=")
-		winset(usr, "mainwindow", "is-maximized=false")
-		winset(usr, "mainwindow", "is-maximized=true")
+		winset(mob, "mainwindow", "on-size=")
+		winset(mob, "mainwindow", "titlebar=false")
+		winset(mob, "mainwindow", "can-resize=false")
+		winset(mob, "mainwindow", "menu=")
+		winset(mob, "mainwindow", "is-maximized=false")
+		winset(mob, "mainwindow", "is-maximized=true")
 	else
-		winset(usr, "mainwindow", "menu=menu")
-		winset(usr, "mainwindow", "titlebar=true")
-		winset(usr, "mainwindow", "can-resize=true")
-		winset(usr, "mainwindow", "is-maximized=false")
-		winset(usr, "mainwindow", "on-size=attempt_auto_fit_viewport")
+		winset(mob, "mainwindow", "menu=menu")
+		winset(mob, "mainwindow", "titlebar=true")
+		winset(mob, "mainwindow", "can-resize=true")
+		winset(mob, "mainwindow", "is-maximized=false")
+		winset(mob, "mainwindow", "on-size=attempt_auto_fit_viewport")
 	attempt_auto_fit_viewport()
 
 /client/verb/toggle_status_bar()
@@ -1215,9 +1217,9 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	show_status_bar = !show_status_bar
 
 	if (show_status_bar)
-		winset(usr, "mapwindow.status_bar", "is-visible=true")
+		winset(src, "mapwindow.status_bar", "is-visible=true")
 	else
-		winset(usr, "mapwindow.status_bar", "is-visible=false")
+		winset(src, "mapwindow.status_bar", "is-visible=false")
 
 /// Clears the client's screen, aside from ones that opt out
 /client/proc/clear_screen()

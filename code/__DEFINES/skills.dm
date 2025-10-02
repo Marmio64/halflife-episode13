@@ -78,6 +78,8 @@
 
 #define TRAIT_NOSLEEP "nosleep"
 
+#define TRAIT_EAGLE_EYED "eagle_eyed"
+
 #define TRAIT_BAD_AIM	"bad_aim"
 
 #define TRAIT_TERRIBLE_AIM	"terrible_aim"

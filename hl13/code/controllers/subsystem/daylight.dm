@@ -18,7 +18,7 @@
 
 #define DAY_CYCLE_NIGHT "Night"
 
-#define MAX_QUOTA_MULTIPLIER 1.2
+#define MAX_QUOTA_MULTIPLIER 1
 
 SUBSYSTEM_DEF(daylight)
 	name = "Daylight"
@@ -46,7 +46,7 @@ SUBSYSTEM_DEF(daylight)
 	var/factory_container_goal = 15
 
 	/// Multiplier applied to the goal, to allow for it to scale over time.
-	var/factory_goal_multiplier = 0.8
+	var/factory_goal_multiplier = 0.6
 
 /datum/controller/subsystem/daylight/proc/add_lit_area(area/new_area)
 	daylight_areas.Add(new_area)
@@ -67,7 +67,7 @@ SUBSYSTEM_DEF(daylight)
 
 			var/message = "Attention citizens, it is now night time. Citizens are to return to their apartment blocks for curfew."
 
-			if(factory_goal_multiplier < MAX_QUOTA_MULTIPLIER) // The quota multiplier starts at 0.8 to give an easier first day, the second day will be standard, and then further days will be at 1.2 to make it slightly harder.
+			if(factory_goal_multiplier < MAX_QUOTA_MULTIPLIER) // easier first day, standard second day, max value third day and on
 				factory_goal_multiplier += 0.2
 
 			if(factory_containers_filled >= factory_container_goal)

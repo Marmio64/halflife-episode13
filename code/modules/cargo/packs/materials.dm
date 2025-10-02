@@ -4,7 +4,7 @@
 /datum/supply_pack/materials/fueltank
 	name = "Fuel Tank Crate"
 	desc = "Contains a welding fuel tank. Caution, highly flammable."
-	cost = CARGO_CRATE_VALUE * 1.8
+	cost = CARGO_CRATE_VALUE * 2
 	contains = list(/obj/structure/reagent_dispensers/fueltank)
 	crate_name = "fuel tank crate"
 	crate_type = /obj/structure/closet/crate/large

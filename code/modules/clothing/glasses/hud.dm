@@ -135,8 +135,8 @@
 	)
 
 /obj/item/clothing/glasses/hud/security
-	name = "security HUD"
-	desc = "A heads-up display that scans the humanoids in view and provides accurate data about their ID status and security records."
+	name = "combine HUD"
+	desc = "A heads-up display that scans the humanoids in view and provides accurate data about their ID status and citizen records."
 	icon_state = "securityhud"
 	clothing_traits = list(TRAIT_SECURITY_HUD)
 	glass_colour_type = /datum/client_colour/glass_colour/red

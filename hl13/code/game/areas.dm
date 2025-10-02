@@ -81,8 +81,6 @@
 	max_ambience_cooldown = 30 SECONDS
 	min_ambience_cooldown = 10 SECONDS
 
-	daylight_multiplier = 0.3
-
 	first_time_text = "The Outlands"
 
 /area/halflife/outdoors/forest/water
@@ -251,6 +249,14 @@
 	name = "\improper South Checkpoint"
 
 	first_time_text = "South Checkpoint"
+
+/area/halflife/indoors/conscript_bunker
+	name = "\improper Conscript Bunker"
+
+	first_time_text = "Conscript Bunker"
+
+	ambient_buzz = 'hl13/sound/ambience/bunker2.ogg'
+	ambient_buzz_vol = 70
 
 ////// FACTORY START
 

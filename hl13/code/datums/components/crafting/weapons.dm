@@ -251,6 +251,9 @@
 		/obj/item/reagent_containers/cup/glass/bottle = 1,
 		/datum/reagent/consumable/ethanol = 30,
 	)
+	blacklist = list(
+	/datum/reagent/consumable/ethanol/fake,
+	)
 	time = 3 SECONDS
 	category = CAT_WEAPON_RANGED
 

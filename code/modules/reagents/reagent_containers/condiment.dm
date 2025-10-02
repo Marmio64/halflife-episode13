@@ -145,7 +145,7 @@
 	name = "[user.name]"
 	user.name = newname
 	user.real_name = newname
-	desc = "Salt. From dead crew, presumably."
+	desc = "Salt. From dead citizens, presumably."
 	return TOXLOSS
 
 /obj/item/reagent_containers/condiment/saltshaker/interact_with_atom(atom/target, mob/living/user, list/modifiers)
@@ -176,7 +176,7 @@
 
 /obj/item/reagent_containers/condiment/milk
 	name = "milk"
-	desc = "It's milk. White and nutritious goodness!"
+	desc = "It's milk. Or, atleast that is what the label says. There's no cows left, and no fresh pre-war milk, so there is no telling what this actually is."
 	icon_state = "milk"
 	inhand_icon_state = "carton"
 	lefthand_file = 'icons/mob/inhands/items/drinks_lefthand.dmi'

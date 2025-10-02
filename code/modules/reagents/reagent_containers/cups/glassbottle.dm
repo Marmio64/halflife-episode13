@@ -306,9 +306,9 @@
 
 /obj/item/reagent_containers/cup/glass/bottle/beer/light
 	name = "Combine Approved Ethanol Beverage"
-	desc = "A very low proof and very gross beer, allowed to be served to all citizens."
+	desc = "A very low proof, non-flammable, and very gross beer substitute, allowed to be served to all citizens."
 	icon_state = "beer_white"
-	list_reagents = list(/datum/reagent/consumable/ethanol/beer/light = 30)
+	list_reagents = list(/datum/reagent/consumable/ethanol/fake = 30)
 
 /obj/item/reagent_containers/cup/glass/bottle/rootbeer
 	name = "Two-Time root beer"

@@ -10,7 +10,7 @@
 	minimal_player_age = 7
 	supervisors = SUPERVISOR_CAPTAIN
 	exp_required_type_department = EXP_TYPE_SUPPLY
-	exp_requirements = 80
+	exp_requirements = 120
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "QUARTERMASTER"
@@ -40,6 +40,8 @@
 	human_authority = JOB_AUTHORITY_NON_HUMANS_ALLOWED
 
 	ration_bonus = 2
+
+	gameplay_help = "As the Foreman, you are the citizen with the most power, outside the Administrator of course, and you're tasked with enriching the district as best you can. Work with Civil Protection and Conscripts to send out Infestation Control, Engineers, and Miners outside the town to valuable deposits, as resources inside the town are poor."
 
 /datum/outfit/job/quartermaster
 	name = "Foreman"
