@@ -222,6 +222,7 @@ GLOBAL_LIST_INIT(announcer_keys, list(
 #define SFX_WOODIMPACT "woodimpact" //hl13 edit
 #define SFX_CARDBOARDIMPACT "cardboardimpact" //hl13 edit
 #define SFX_CONCRETEIMPACT "concreteimpact" //hl13 edit
+#define SFX_BLOOD_DRIP "blood_drip" //hl13 edit
 
 // Standard is 44.1khz
 #define MIN_EMOTE_PITCH 40000

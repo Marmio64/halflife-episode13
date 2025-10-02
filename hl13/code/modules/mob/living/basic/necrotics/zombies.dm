@@ -39,7 +39,7 @@
 
 	cmode_music = 'hl13/sound/music/combat/disrupted.ogg' //spooky!
 	lighting_cutoff_red = 25
-	lighting_cutoff = 8
+	lighting_cutoff = 25
 
 	fire_stack_decay_rate = -1
 	damage_coeff = list(BRUTE = 1, BURN = 2, TOX = 1, STAMINA = 1, OXY = 1)

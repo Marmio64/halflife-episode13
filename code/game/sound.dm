@@ -786,4 +786,13 @@
 				'sound/effects/writing_pen/writing_pen6.ogg',
 				'sound/effects/writing_pen/writing_pen7.ogg',
 			)
+		if(SFX_BLOOD_DRIP) //hl13 edit
+			soundin = pick(
+				'hl13/sound/effects/injury/blood1.ogg',
+				'hl13/sound/effects/injury/blood2.ogg',
+				'hl13/sound/effects/injury/blood3.ogg',
+				'hl13/sound/effects/injury/blood4.ogg',
+				'hl13/sound/effects/injury/blood5.ogg',
+				'hl13/sound/effects/injury/blood6.ogg',
+			)
 	return soundin

@@ -288,7 +288,6 @@
 		/obj/item/stack/ore/iron = 71,
 		/obj/item/stack/ore/copper = 5,
 		/obj/item/stack/ore/silver = 9,
-		/obj/item/stack/ore/uranium = 4,
 	)
 
 /turf/closed/mineral/random/Initialize(mapload)
@@ -339,7 +338,6 @@
 		/obj/item/stack/ore/iron = 64,
 		/obj/item/stack/ore/copper = 10,
 		/obj/item/stack/ore/silver = 9,
-		/obj/item/stack/ore/uranium = 4,
 	)
 
 /turf/closed/mineral/random/high_chance/volcanic

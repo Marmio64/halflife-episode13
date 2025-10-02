@@ -150,11 +150,13 @@
 	name = "\improper Nexus Infirmary"
 
 	first_time_text = null
+	ambient_buzz = 'hl13/sound/ambience/citadel_hub_ambience1.ogg'
 
 /area/halflife/indoors/townhall/civilprotection
 	name = "\improper Nexus"
 
 	first_time_text = "The Nexus"
+	ambient_buzz = 'hl13/sound/ambience/citadel_hub_ambience1.ogg'
 
 /area/halflife/indoors/townhall/civilprotection/preproom
 	name = "\improper Nexus Prep Room"
