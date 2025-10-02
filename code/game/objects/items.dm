@@ -1120,15 +1120,15 @@
 		if(4 to 7)
 			force_string = "low"
 		if(7 to 10)
-			force_string = "medium"
+			force_string = "minor"
 		if(10 to 11)
-			force_string = "high"
+			force_string = "moderate"
 		if(11 to 20) //12 is the force of a toolbox
-			force_string = "robust"
+			force_string = "high"
 		if(20 to 25)
-			force_string = "very robust"
+			force_string = "deadly"
 		else
-			force_string = "exceptionally robust"
+			force_string = "very lethal"
 	last_force_string_check = force
 
 /obj/item/proc/openTip(location, control, params, user)
