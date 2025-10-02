@@ -496,7 +496,7 @@
 /obj/item/sbeacondrop/rebel_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a rebel turret to your location</i>."
 	droptype = /obj/machinery/porta_turret/combine/rebel
-	call_period = 1 SECONDS
+	call_period = 4 SECONDS
 
 /datum/outfit/deployment_loadout/rebel/tier4/spy
 	name = "Deployment: Rebel Spy"

@@ -431,7 +431,7 @@
 /obj/item/sbeacondrop/combine_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a combine turret to your location</i>."
 	droptype = /obj/machinery/porta_turret/combine
-	call_period = 1 SECONDS
+	call_period = 4 SECONDS
 
 /datum/outfit/deployment_loadout/combine/tier4/scanner
 	name = "Deployment: Cannister Targeter City Scanner"
