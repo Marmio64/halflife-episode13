@@ -21,6 +21,8 @@ SUBSYSTEM_DEF(ration)
 
 
 /datum/controller/subsystem/ration/proc/distribute()
+	if(SSmapping.current_map.minetype == "combat_deployment")
+		return
 	if(!cycle_active)
 		sleep(30 SECONDS)
 		priority_announce("Attention citizens, a new ration cycle has begun. Applicable vending units will be able to accept your ration voucher until the cycle ends.", "Ration Cycle Notice.")
