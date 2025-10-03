@@ -622,6 +622,9 @@ DEFINE_BITFIELD(turret_flags, list(
 	if(!raised) //the turret has to be raised in order to fire - makes sense, right?
 		return
 
+	if(atom_integrity <= (max_integrity * integrity_failure)) //hl13 edit, if its broken, stop freaking shooting!
+		return
+
 	if(!(obj_flags & EMAGGED)) //if it hasn't been emagged, cooldown before shooting again
 		if(last_fired + shot_delay > world.time)
 			return

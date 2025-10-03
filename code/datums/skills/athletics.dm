@@ -34,8 +34,12 @@
 	. = ..()
 	if(new_level >= SKILL_LEVEL_NOVICE && old_level < SKILL_LEVEL_NOVICE)
 		ADD_TRAIT(mind, TRAIT_EXAMINE_FITNESS, SKILL_TRAIT)
+	if(new_level = SKILL_LEVEL_LEGENDARY)
+		mind.current.change_stat(STATKEY_STR, 1)
 
 /datum/skill/athletics/level_lost(datum/mind/mind, new_level, old_level, silent)
 	. = ..()
 	if(old_level >= SKILL_LEVEL_NOVICE && new_level < SKILL_LEVEL_NOVICE)
 		REMOVE_TRAIT(mind, TRAIT_EXAMINE_FITNESS, SKILL_TRAIT)
+	if(old_level = SKILL_LEVEL_LEGENDARY)
+		mind.current.change_stat(STATKEY_STR, -1)

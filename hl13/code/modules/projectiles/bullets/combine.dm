@@ -22,7 +22,14 @@
 	wound_bonus = -10
 	armour_penetration = 20
 
-/obj/projectile/bullet/pulse/weak/extra_weak
+/obj/projectile/bullet/pulse/turret
+	name = "pulse round"
+	icon_state = "pulse"
+	damage = 10
+	wound_bonus = -10
+	armour_penetration = 20
+
+/obj/projectile/bullet/pulse/turret/weak
 	damage = 6
 
 /obj/projectile/bullet/pulse/weak/fast

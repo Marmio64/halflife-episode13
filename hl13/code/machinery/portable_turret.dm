@@ -35,10 +35,10 @@ DEFINE_BITFIELD(turret_flags, list(
 	icon_state = "combine_lethal"
 	base_icon_state = "combine"
 	installation = null
-	stun_projectile = /obj/projectile/bullet/pulse/weak
-	lethal_projectile = /obj/projectile/bullet/pulse/weak
-	lethal_projectile_sound = "hl13/sound/weapons/ar2fire.ogg"
-	stun_projectile_sound = "hl13/sound/weapons/ar2fire.ogg"
+	stun_projectile = /obj/projectile/bullet/pulse/turret
+	lethal_projectile = /obj/projectile/bullet/pulse/turret
+	lethal_projectile_sound = "hl13/sound/weapons/turret_shoot.ogg"
+	stun_projectile_sound = "hl13/sound/weapons/turret_shoot.ogg"
 	shot_delay = 5
 	invisibility = 0
 	density = TRUE
@@ -67,6 +67,10 @@ DEFINE_BITFIELD(turret_flags, list(
 	fire = 90
 	acid = 90
 
+/obj/machinery/porta_turret/combine/atom_break(damage_flag)
+	. = ..()
+	playsound(src, 'hl13/sound/machines/turret_die.ogg', 50, FALSE)
+
 /obj/machinery/porta_turret/combine/off
 	on = FALSE
 
@@ -89,6 +93,7 @@ DEFINE_BITFIELD(turret_flags, list(
 		shootAt(target)
 		addtimer(CALLBACK(src, PROC_REF(shootAt), target), 0.5 SECONDS)
 		addtimer(CALLBACK(src, PROC_REF(shootAt), target), 1 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(shootAt), target), 1.5 SECONDS)
 		return TRUE
 
 /obj/machinery/porta_turret/combine/setup()
@@ -113,8 +118,8 @@ DEFINE_BITFIELD(turret_flags, list(
 
 /obj/machinery/porta_turret/combine/old
 	name = "old combine turret"
-	stun_projectile = /obj/projectile/bullet/pulse/weak/extra_weak
-	lethal_projectile = /obj/projectile/bullet/pulse/weak/extra_weak
+	stun_projectile = /obj/projectile/bullet/pulse/turret/weak
+	lethal_projectile = /obj/projectile/bullet/pulse/turret/weak
 
 /obj/machinery/porta_turret/combine/rebel
 	name = "rebel turret"

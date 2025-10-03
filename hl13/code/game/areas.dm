@@ -332,8 +332,8 @@
 	icon_state = "away"
 	ambience_index = AMBIENCE_HLSEWERS
 	sound_environment = SOUND_ENVIRONMENT_STONE_CORRIDOR
-	ambient_buzz = 'hl13/sound/ambience/corridor.ogg'
-	ambient_buzz_vol = 7
+	ambient_buzz = 'hl13/sound/ambience/sewer1.ogg'
+	ambient_buzz_vol = 100
 	mood_bonus = -2
 	mood_message = "<span class='warning'>This place smells terrible.</span>\n"
 
@@ -370,6 +370,8 @@
 	min_ambience_cooldown = 10 SECONDS
 	ambient_buzz = 'hl13/sound/ambience/antcaves/cave_howl_loop1.ogg'
 
+	ambient_buzz_vol = 7
+
 	mood_message = "<span class='warning'>I can hear the bugs all around me...</span>\n"
 
 	first_time_text = "The Antlion Caves"
@@ -380,6 +382,8 @@
 	max_ambience_cooldown = 25 SECONDS
 	min_ambience_cooldown = 10 SECONDS
 	ambient_buzz = 'hl13/sound/ambience/antcaves/cave_howl_loop1.ogg'
+
+	ambient_buzz_vol = 7
 
 	mood_message = "<span class='warning'>I can hear the bugs all around me...</span>\n"
 
