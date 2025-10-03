@@ -218,6 +218,7 @@ GLOBAL_LIST_INIT(security_vest_allowed, list(
 	/obj/item/gun/ballistic,
 	/obj/item/gun/energy,
 	/obj/item/knife/combat,
+	/obj/item/switchblade,
 	/obj/item/melee/baton,
 	/obj/item/reagent_containers/spray/pepper,
 	/obj/item/restraints/handcuffs,

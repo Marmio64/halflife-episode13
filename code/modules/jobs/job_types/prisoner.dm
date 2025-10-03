@@ -46,8 +46,28 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/ammo_box/magazine/usp9mm = 1,
 		/obj/item/hl2key/rebel = 1,
 	)
+
+/datum/outfit/job/rebel/pre_equip(mob/living/carbon/human/equip_to)
+	if(prob(25))
+		suit = /obj/item/clothing/suit/armor/rebel/light
+		suit_store = /obj/item/gun/ballistic/automatic/pistol/makeshift
+		head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+		backpack_contents = list(
+			/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+			/obj/item/ammo_box/magazine/makeshift9mm = 1,
+			/obj/item/hl2key/rebel = 1,
+		)
+	else if(prob(25))
+		suit_store = /obj/item/switchblade
+		equip_to.change_stat(STATKEY_STR, 2)
+		equip_to.change_stat(STATKEY_DEX, -1)
+		backpack_contents = list(
+			/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+			/obj/item/hl2key/rebel = 1,
+		)
 
 /datum/outfit/job/rebel/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()

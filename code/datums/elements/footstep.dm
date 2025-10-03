@@ -51,19 +51,19 @@
 			RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(play_simplestep_machine))
 			return
 		if(FOOTSTEP_MOB_HUNTER)
-			footstep_sounds ='hl13/sound/creatures/hunter/hunter_footstep1.ogg'
+			footstep_sounds = list('hl13/sound/creatures/hunter/hunter_footstep1.ogg', 'hl13/sound/creatures/hunter/hunter_footstep2.ogg', 'hl13/sound/creatures/hunter/hunter_footstep3.ogg', 'hl13/sound/creatures/hunter/hunter_footstep4.ogg', 'hl13/sound/creatures/hunter/hunter_footstep5.ogg', )
 			RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(play_simplestep_machine))
 			return
 		if(FOOTSTEP_MOB_ANTLION)
-			footstep_sounds = 'hl13/sound/creatures/antlion/foot1.ogg'
+			footstep_sounds = list('hl13/sound/creatures/antlion/foot1.ogg', 'hl13/sound/creatures/antlion/foot2.ogg', 'hl13/sound/creatures/antlion/foot3.ogg', 'hl13/sound/creatures/antlion/foot4.ogg', )
 			RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(play_simplestep_machine))
 			return
 		if(FOOTSTEP_MOB_GONOME)
-			footstep_sounds = 'hl13/sound/creatures/gonome/step_heavy_02.ogg'
+			footstep_sounds = list('hl13/sound/creatures/gonome/step_heavy_01.ogg', 'hl13/sound/creatures/gonome/step_heavy_02.ogg', 'hl13/sound/creatures/gonome/step_heavy_03.ogg', 'hl13/sound/creatures/gonome/step_heavy_04.ogg', )
 			RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(play_simplestep_machine))
 			return
 		if(FOOTSTEP_MOB_ZOMBINE)
-			footstep_sounds = 'hl13/sound/creatures/gear1.ogg'
+			footstep_sounds = list('hl13/sound/creatures/gear1.ogg', 'hl13/sound/creatures/gear2.ogg', 'hl13/sound/creatures/gear3.ogg', )
 			RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(play_simplestep_machine))
 			return
 	RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(play_simplestep))
@@ -241,4 +241,5 @@
 	if(CHECK_MOVE_LOOP_FLAGS(source, MOVEMENT_LOOP_OUTSIDE_CONTROL))
 		return
 
-	playsound(source_loc, footstep_sounds, 50, falloff_distance = 1, vary = sound_vary)
+	var/picked_sound = pick(footstep_sounds)
+	playsound(source_loc, picked_sound, 50, falloff_distance = 1, vary = sound_vary)
