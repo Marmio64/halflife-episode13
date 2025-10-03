@@ -14,9 +14,24 @@
 	light_color = "#658cac"
 	armor_type = /datum/armor/deployment_comms_tower
 
+/obj/machinery/deployment_comms_tower/ex_act(severity, target)
+	if(QDELETED(src))
+		return TRUE
+	if(target == src)
+		take_damage(rand(120, 240), BRUTE, BOMB, 0)
+		return TRUE
+	switch(severity)
+		if(EXPLODE_DEVASTATE)
+			take_damage(rand(120, 240), BRUTE, BOMB, 0)
+		if(EXPLODE_HEAVY)
+			take_damage(rand(60, 120), BRUTE, BOMB, 0)
+		if(EXPLODE_LIGHT)
+			take_damage(rand(10, 60), BRUTE, BOMB, 0)
+
+	return TRUE
+
 /datum/armor/deployment_comms_tower
 	melee = -30 //the tower is generally surrounded by sandbags, so slight reward for being able to get so close.
-	bomb = 40 //bombings are just slightly too strong
 
 /obj/machinery/deployment_comms_tower/combine
 	name = "Combine Comms Tower"

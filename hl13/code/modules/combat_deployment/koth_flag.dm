@@ -34,7 +34,7 @@ GLOBAL_VAR_INIT(deployment_respawn_rate_xen, 12 SECONDS)
 
 	/// Alternate respawn timer if above is enabled ^
 	var/altered_respawn_speed = 35 SECONDS
-	var/normal_respawn_speed = 25 SECONDS
+	var/normal_respawn_speed = 20 SECONDS
 
 	var/grace_period_up_text = "<span class='greentext big'>The flag grace period is up, and it is now capturable!</span>"
 	var/grace_period_text = TRUE
