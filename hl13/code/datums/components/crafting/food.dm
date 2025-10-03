@@ -21,3 +21,12 @@
 	)
 	result = /obj/item/food/xenstew
 	category = CAT_RATION
+
+/datum/crafting_recipe/food/nutripaste_factory_ingredients
+	name = "Cured Small Nutripaste"
+	reqs = list(
+		/obj/item/ration_construction/ingredientblock = 1,
+		/obj/item/reagent_containers/pill/antitox = 1,
+	)
+	result = /obj/item/food/nutripaste/small
+	category = CAT_RATION

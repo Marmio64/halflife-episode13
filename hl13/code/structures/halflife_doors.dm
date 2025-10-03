@@ -291,7 +291,7 @@
 
 		var/obj/item/lockpick/P = I
 
-		var/picktime = 85 - (user.get_stat_level(STATKEY_DEX) * 4)
+		var/picktime = 95 - (user.get_stat_level(STATKEY_DEX) * 5)
 		var/pickchance = 30 + (user.get_stat_level(STATKEY_DEX) * 3)
 		var/moveup = 20
 

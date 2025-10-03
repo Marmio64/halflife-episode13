@@ -31,7 +31,7 @@
 	ADD_TRAIT(H, TRAIT_NOHUNGER, OUTFIT_TRAIT) //OTA dont need to eat or drink
 
 	H.change_stat(STATKEY_DEX, 2)
-	H.change_stat(STATKEY_STR, 4)
+	H.change_stat(STATKEY_STR, 5)
 
 /datum/outfit/centcom/ert/overwatch/post_equip(mob/living/carbon/human/equipped, visuals_only)
 	..()

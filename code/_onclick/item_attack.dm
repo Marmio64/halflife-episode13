@@ -310,6 +310,10 @@
 		), ARMOR_MAX_BLOCK)
 
 	var/damage = attacking_item.force
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		damage += (H.get_stat_level(STATKEY_STR) - 10) //higher strength = more damage, lower strength = less damage
+
 	if(mob_biotypes & MOB_ROBOTIC)
 		damage *= attacking_item.demolition_mod
 

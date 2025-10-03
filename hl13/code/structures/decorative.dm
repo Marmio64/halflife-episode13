@@ -979,6 +979,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 	desc = "Autumn makes me melancholic."
 	icon = 'hl13/icons/obj/miscellaneous.dmi'
 	icon_state = "leaves"
+	max_integrity = 50
 	density = FALSE
 	anchored = TRUE
 	layer = ABOVE_OPEN_TURF_LAYER
@@ -989,6 +990,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 	desc = "The various rubbish of City 13."
 	icon = 'hl13/icons/obj/miscellaneous.dmi'
 	icon_state = "trash"
+	max_integrity = 50
 	density = FALSE
 	anchored = TRUE
 	layer = ABOVE_OPEN_TURF_LAYER

@@ -253,8 +253,8 @@
 
 // Crafted Ration Blocks
 /obj/item/ration_construction/ingredientblock
-	name = "YOU SHOULD NOT SEE THIS"
-	desc = ""
+	name = "Ration Ingredient Paste"
+	desc = "Any ration ingredient combination."
 	icon_state = "nutripastes"
 
 /obj/item/ration_construction/ingredientblock/sweetprotein

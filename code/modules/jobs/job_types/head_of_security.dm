@@ -86,7 +86,7 @@
 	ADD_TRAIT(H, TRAIT_NOSLEEP, OUTFIT_TRAIT) //OTA dont need to sleep
 
 	H.change_stat(STATKEY_DEX, 2)
-	H.change_stat(STATKEY_STR, 4)
+	H.change_stat(STATKEY_STR, 5)
 
 /datum/outfit/job/overwatch/post_equip(mob/living/carbon/human/equipped, visuals_only)
 	..()

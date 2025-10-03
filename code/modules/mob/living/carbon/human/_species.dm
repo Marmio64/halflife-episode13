@@ -871,7 +871,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	if(target.pulledby && target.pulledby.grab_state >= GRAB_AGGRESSIVE)
 		grappled = TRUE
 
-	var/damage = ((rand(attacking_bodypart.unarmed_damage_low, attacking_bodypart.unarmed_damage_high)) + ((user.get_stat_level(STATKEY_STR) - 10) / 2)) //hl13 edit, strength increases punch damage
+	var/damage = ((rand(attacking_bodypart.unarmed_damage_low, attacking_bodypart.unarmed_damage_high)) + ((user.get_stat_level(STATKEY_STR) - 10))) //hl13 edit, strength increases punch damage
 	var/limb_accuracy = ((attacking_bodypart.unarmed_effectiveness) + (user.get_stat_level(STATKEY_STR) - 10)) //hl13 edit, strength slightly ups limb accuracy
 
 	// In a brawl, drunkenness can make you swing more wildly and with more force, and thus catch your opponent off guard, but it could also totally throw you off if you're too intoxicated
