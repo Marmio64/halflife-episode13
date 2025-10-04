@@ -6,7 +6,7 @@
 	icon_living = "weakgonome"
 	icon_dead = "gonome_dead"
 	melee_damage_lower = 25
-	melee_damage_upper = 30
+	melee_damage_upper = 35
 	maxHealth = 350
 	health = 350
 	obj_damage = 25

@@ -218,6 +218,12 @@
 /mob/living/basic/proc/melee_attack(atom/target, list/modifiers, ignore_cooldown = FALSE)
 	if(!early_melee_attack(target, modifiers, ignore_cooldown))
 		return FALSE
+	if(isliving(target))
+		var/mob/living/L = target
+		if(L.checkmiss(src))
+			return FALSE
+		if(L.checkdefense(user = src))
+			return FALSE
 	var/result = target.attack_basic_mob(src, modifiers)
 	SEND_SIGNAL(src, COMSIG_HOSTILE_POST_ATTACKINGTARGET, target, result)
 	return result

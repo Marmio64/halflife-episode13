@@ -14,7 +14,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel
 
 	backpack_contents = list(
-		/obj/item/ammo_box/strilka310/a762 = 3,
+		/obj/item/ammo_box/strilka310/a762 = 4,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 	)
 
