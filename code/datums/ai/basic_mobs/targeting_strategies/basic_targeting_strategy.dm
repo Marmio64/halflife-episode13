@@ -97,7 +97,7 @@
 	if (!length(required_traits))
 		return TRUE
 
-	for (var/trait as anything in required_traits)
+	for (var/trait in required_traits)
 		if (HAS_TRAIT(the_target, trait))
 			return TRUE
 	return FALSE
@@ -145,4 +145,12 @@
 /datum/targeting_strategy/basic/allow_turfs/can_attack(mob/living/living_mob, atom/the_target, vision_range)
 	if(isturf(the_target))
 		return TRUE
+	return ..()
+
+/// Subtype which searches for mobs that havent been gutted by megafauna
+/datum/targeting_strategy/basic/no_gutted_mobs
+
+/datum/targeting_strategy/basic/no_gutted_mobs/can_attack(mob/living/owner, mob/living/target, vision_range)
+	if(!istype(target) || target.has_status_effect(/datum/status_effect/gutted))
+		return FALSE
 	return ..()
