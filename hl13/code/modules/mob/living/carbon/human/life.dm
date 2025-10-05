@@ -77,6 +77,9 @@
 
 		if(HAS_TRAIT(src, TRAIT_LESSPAIN)) //lesspain simply reduces pain by an amount
 			amt -= 10
+		if(HAS_TRAIT(src, TRAIT_LESSPAIN_MINOR))
+			amt -= 5
+
 	return amt
 
 /mob/living/carbon/proc/adjust_temppain(amount)

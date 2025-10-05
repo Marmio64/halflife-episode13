@@ -318,7 +318,7 @@
 	simple_treat_text = "Ointment will speed up recovery, as will regenerative mesh. Risk of infection is negligible."
 	homemade_treat_text = "Healthy tea will speed up recovery. Salt, or preferably a salt-water mixture, will sanitize the wound, but the former will cause skin irritation, increasing the risk of infection."
 
-	woundpain = 20
+	woundpain = 30
 
 /datum/wound_pregen_data/flesh_burn/second_degree
 	abstract = FALSE
@@ -350,7 +350,7 @@
 	simple_treat_text = "<b>Bandages will speed up recovery</b>, as will <b>ointment or regenerative mesh</b>. <b>Spaceacilin, sterilizine, and 'Miner's Salve'</b> will help with infection."
 	homemade_treat_text = "<b>Healthy tea</b> will speed up recovery. <b>Salt</b>, or preferably a <b>salt-water</b> mixture, will sanitize the wound, but the former especially will cause skin irritation and dehydration, speeding up infection. <b>Space Cleaner</b> can be used as disinfectant in a pinch."
 
-	woundpain = 30
+	woundpain = 40
 
 /datum/wound_pregen_data/flesh_burn/third_degree
 	abstract = FALSE
@@ -383,7 +383,7 @@
 	simple_treat_text = "Immediately <b>bandage</b> the wound and treat it with <b>ointment or regenerative mesh</b>. <b>Spaceacilin, sterilizine, or 'Miner's Salve'</b> will stave off infection. Seek professional care <b>immediately</b>, before sepsis sets in and the wound becomes untreatable."
 	homemade_treat_text = "<b>Healthy tea</b> will help with recovery. A <b>salt-water mixture</b>, topically applied, might help stave off infection in the short term, but pure table salt is NOT recommended. <b>Space Cleaner</b> can be used as disinfectant in a pinch."
 
-	woundpain = 40
+	woundpain = 50
 
 /datum/wound_pregen_data/flesh_burn/fourth_degree
 	abstract = FALSE

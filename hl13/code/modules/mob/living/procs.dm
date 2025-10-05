@@ -140,7 +140,7 @@
 					src.visible_message("<span class='boldwarning'><b>\The [W] is about to break!</b></span>")
 			else
 				src.visible_message("<span class='boldwarning'><b>[src]</b> parries [user] with [W]!</span>")
-			H.adjustStaminaLoss(5)
+			H.adjustStaminaLoss(6)
 			return TRUE
 		else
 			to_chat(src, "<span class='warning'>I'm too tired to parry!</span>")

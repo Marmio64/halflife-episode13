@@ -359,9 +359,9 @@
 		if(SANITY_DISTURBED to SANITY_NEUTRAL)
 			msg += "[span_nicegreen("I have felt quite decent lately.")]\n"
 		if(SANITY_UNSTABLE to SANITY_DISTURBED)
-			msg += "[span_warning("I'm feeling a little bit unhinged...")]\n"
+			msg += "[span_warning("My sanity is slipping a bit...")]\n"
 		if(SANITY_CRAZY to SANITY_UNSTABLE)
-			msg += "[span_warning("I'm freaking out!!")]\n"
+			msg += "[span_warning("My mind is barely holding on...")]\n"
 		if(SANITY_INSANE to SANITY_CRAZY)
 			msg += "[span_boldwarning("AHAHAHAHAHAHAHAHAHAH!!")]\n"
 
@@ -372,7 +372,7 @@
 		if(MOOD_LEVEL_SAD3)
 			msg += "[span_boldwarning("I feel terrible...")]\n"
 		if(MOOD_LEVEL_SAD2)
-			msg += "[span_boldwarning("I feel very upset.")]\n"
+			msg += "[span_boldwarning("I feel rather upset.")]\n"
 		if(MOOD_LEVEL_SAD1)
 			msg += "[span_warning("I'm a bit sad.")]\n"
 		if(MOOD_LEVEL_NEUTRAL)

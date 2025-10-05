@@ -71,7 +71,7 @@
 
 /datum/outfit/job/rebel/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
-	user.change_stat(STATKEY_DEX, 1)
+	user.change_stat(STATKEY_DEX, 2)
 
 
 /datum/outfit/job/refugee

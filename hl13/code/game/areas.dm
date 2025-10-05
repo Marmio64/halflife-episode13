@@ -5,8 +5,8 @@
 	ambience_index = AMBIENCE_HLOUTSIDE
 	flags_1 = CAN_BE_DIRTY_1
 	requires_power = FALSE
-	max_ambience_cooldown = 240 SECONDS
-	min_ambience_cooldown = 180 SECONDS
+	max_ambience_cooldown = 340 SECONDS
+	min_ambience_cooldown = 280 SECONDS
 	var/dissipation_rate = 1.5 // higher numbers = quicker dissipation
 
 /obj/effect/baseturf_helper/halflife

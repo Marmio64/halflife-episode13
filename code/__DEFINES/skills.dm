@@ -68,6 +68,7 @@
 #define TRAIT_ATHLETIC	"ATHLETIC"
 
 #define TRAIT_LESSPAIN "lesspain"
+#define TRAIT_LESSPAIN_MINOR "lesspain_minor"
 #define TRAIT_MASOCHIST "masochist"
 
 #define TRAIT_SPARTAN "spartan"

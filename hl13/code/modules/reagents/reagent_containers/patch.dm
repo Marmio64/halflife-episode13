@@ -62,3 +62,21 @@
 	icon_state = "antitoxtab"
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	list_reagents = list(/datum/reagent/medicine/c2/musiver = 10, /datum/reagent/medicine/spaceacillin = 10)
+
+/obj/item/storage/halflife/pill_bottle/paracetamol
+	name = "Paracetamol Pill bottle"
+	desc = "A pill bottle with paracetamol tablets, for relieving minor pains."
+	w_class = WEIGHT_CLASS_SMALL
+	icon_state = "pill_canister"
+	icon = 'icons/obj/medical/chemical.dmi'
+
+/obj/item/storage/halflife/pill_bottle/paracetamol/PopulateContents()
+	for(var/i=0,i<3, i++)
+		new /obj/item/reagent_containers/pill/paracetamol(src)
+
+/obj/item/reagent_containers/pill/paracetamol
+	name = "paracetamol tablets"
+	desc = "A couple of paracetamol tablets, which can help with reducing pain by a slight amount."
+	icon_state = "paracetamol"
+	icon = 'hl13/icons/obj/misc_items.dmi'
+	list_reagents = list(/datum/reagent/medicine/paracetamol = 15)

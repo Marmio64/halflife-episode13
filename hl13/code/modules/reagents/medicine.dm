@@ -68,3 +68,21 @@
 	description = "A concentrated amount of biogel with a few other compounds inside. Doesn't heal instantly like normal biogel, but doesn't need to be applied by touch, and will heal all damage types. This is a slurry mixed with filler compounds. Less effective, but cheaper."
 	metabolization_rate = 1.5 * REAGENTS_METABOLISM
 	healing = 1.2
+
+/datum/reagent/medicine/paracetamol
+	name = "Paracetamol"
+	description = "A light painkiller that can help with mild pains and fevers."
+	reagent_state = LIQUID
+	color = "#cef3f3"
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+	overdose_threshold = 35
+	ph = 8.96
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	metabolized_traits = list(TRAIT_LESSPAIN_MINOR)
+
+/datum/reagent/medicine/paracetamol/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	if(SPT_PROB(18, seconds_per_tick))
+		affected_mob.drop_all_held_items()
+		affected_mob.set_dizzy_if_lower(4 SECONDS)
+		affected_mob.set_jitter_if_lower(4 SECONDS)
