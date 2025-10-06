@@ -4,8 +4,9 @@
 
 /turf/closed/mineral //wall piece
 	name = "rock"
-	icon = MAP_SWITCH('icons/turf/smoothrocks.dmi', 'icons/turf/mining.dmi')
-	icon_state = "rock"
+	icon = 'hl13/icons/turf/walls/stone.dmi'
+	icon_state = "black_stone_walls-0"
+	base_icon_state = "black_stone_walls"
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
 	baseturfs = /turf/open/floor/plating/ground/rockunder
 	initial_gas_mix = AIRLESS_ATMOS
@@ -13,12 +14,6 @@
 	density = TRUE
 	layer = EDGED_TURF_LAYER
 	plane = WALL_PLANE_UPPER
-	base_icon_state = "smoothrocks"
-
-	// This is static
-	// Done like this to avoid needing to make it dynamic and save cpu time
-	// 4 to the left, 4 down
-	transform = MAP_SWITCH(TRANSLATE_MATRIX(-4, -4), matrix())
 
 	temperature = TCMB
 	var/turf/turf_type = /turf/open/floor/plating/ground/rockunder
@@ -328,7 +323,6 @@
 			GLOB.post_ore_manual["[mineralAmt]"] += 1
 
 /turf/closed/mineral/random/high_chance
-	icon_state = "rock_highchance"
 	mineralChance = 25
 	proximity_based = FALSE
 

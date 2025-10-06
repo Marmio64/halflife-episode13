@@ -1,3 +1,4 @@
+
 /// Station home gateway
 GLOBAL_DATUM(the_gateway, /obj/machinery/gateway/centerstation)
 /// List of possible gateway destinations.
@@ -341,8 +342,8 @@ GLOBAL_LIST_EMPTY(gateway_destinations)
 	. = ..()
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		G.portal_visuals.display_to(user)
 		ui = new(user, src, "Gateway", name)
+		G.portal_visuals.display_to(user, ui.window)
 		ui.open()
 
 /obj/machinery/computer/gateway_control/ui_data(mob/user)
@@ -418,7 +419,7 @@ GLOBAL_LIST_EMPTY(gateway_destinations)
 	QDEL_NULL(cam_background)
 	return ..()
 
-/atom/movable/screen/map_view/gateway_port/display_to(mob/show_to)
+/atom/movable/screen/map_view/gateway_port/display_on_ui_visible(mob/show_to)
 	. = ..()
 	show_to.client.register_map_obj(cam_background)
 

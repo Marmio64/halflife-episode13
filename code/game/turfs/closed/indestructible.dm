@@ -253,8 +253,8 @@ INITIALIZE_IMMEDIATE(/turf/closed/indestructible/splashscreen)
 /turf/closed/indestructible/rock
 	name = "dense rock"
 	desc = "An extremely densely-packed rock, most mining tools or explosives would never get through this."
-	icon = 'icons/turf/mining.dmi'
-	icon_state = "rock"
+	icon = 'hl13/icons/turf/walls/stone.dmi'
+	icon_state = "black_stone_walls-0"
 
 /turf/closed/indestructible/rock/snow
 	name = "mountainside"

@@ -476,12 +476,14 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 	icon_state = "switchblade"
 	base_icon_state = "switchblade"
 	worn_icon_state = "none"
+	worn_icon = "none"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 	desc = "A sharp, concealable, spring-loaded knife."
 	obj_flags = CONDUCTS_ELECTRICITY
 	force = 3
 	wdefense = 1
+	can_parry = TRUE
 	w_class = WEIGHT_CLASS_SMALL
 	throwforce = 5
 	throw_speed = 3
