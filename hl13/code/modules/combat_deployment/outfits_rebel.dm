@@ -1,6 +1,9 @@
 /obj/item/radio/headset/rebel_deployment
 	keyslot = /obj/item/encryptionkey/syndicate/uprising
 
+/datum/outfit/deployment_loadout/rebel/tier1
+	loadout_tier = 1
+
 /datum/outfit/deployment_loadout/rebel/tier1/mosin_partisan
 	name = "Deployment: Refugee Mosin Partisan"
 	display_name = "Refugee Mosin Partisan"
@@ -85,6 +88,8 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 /// TIER 2 ////////////////////////////////////////////////////////
+/datum/outfit/deployment_loadout/rebel/tier2
+	loadout_tier = 2
 
 /datum/outfit/deployment_loadout/rebel/tier2/pistol_rebel
 	name = "Deployment: Pistol Rebel"
@@ -181,6 +186,8 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 /// TIER 3 //////////////////////////////////////////////////////////
+/datum/outfit/deployment_loadout/rebel/tier3
+	loadout_tier = 3
 
 /datum/outfit/deployment_loadout/rebel/tier3/mp7_rebel
 	name = "Deployment: MP7 Rebel"
@@ -348,6 +355,8 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
 
 /// TIER 4 ///////////////////////////////////////////////////////////
+/datum/outfit/deployment_loadout/rebel/tier4
+	loadout_tier = 4
 
 /datum/outfit/deployment_loadout/rebel/tier4/ar2_rebel
 	name = "Deployment: AR2 Rebel"
@@ -580,6 +589,8 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
 
 ///////////// TIER 5 //////////////////////////////////////////
+/datum/outfit/deployment_loadout/rebel/tier5
+	loadout_tier = 5
 
 /datum/outfit/deployment_loadout/rebel/tier5/freeman
 	name = "Deployment: A Free Man"

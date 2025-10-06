@@ -4,8 +4,8 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 	title = JOB_DEPLOYMENT_REFUGEE
 	description = "You are part of the resistance! You are able to get access to higher loadout tiers earlier than the combine, but have slightly weaker tier 3 and 4 loadouts."
 	department_head = list("Nobody")
-	total_positions = 99
-	spawn_positions = 99
+	total_positions = 80
+	spawn_positions = 80
 	supervisors = "nobody"
 	exp_granted_type = EXP_TYPE_CREW
 	paycheck = PAYCHECK_ZERO

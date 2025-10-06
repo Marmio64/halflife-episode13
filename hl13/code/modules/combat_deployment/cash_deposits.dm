@@ -84,3 +84,46 @@
 					GLOB.deployment_rebels_cash += (10)
 
 				return
+
+/obj/machinery/cash_deposit/attack_hand(mob/living/carbon/human/H, modifiers)
+	. = ..()
+	if(.)
+		return
+	add_fingerprint(H)
+
+	var/chosen = null
+
+	if(H.combat_deployment_loadout_tier != 5 && H.deployment_faction == deployment_faction && H.loadout_upgrade_available)
+
+		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			if(DEPLOYMENT_TIER4_REBELS <= GLOB.deployment_rebels_cash && H.combat_deployment_loadout_tier < 4)
+				chosen = /obj/item/hl2/loadout_picker/rebel/tier4
+			else if(DEPLOYMENT_TIER3_REBELS <= GLOB.deployment_rebels_cash && H.combat_deployment_loadout_tier < 3)
+				chosen = /obj/item/hl2/loadout_picker/rebel/tier3
+			else if(DEPLOYMENT_TIER2_REBELS <= GLOB.deployment_rebels_cash && H.combat_deployment_loadout_tier < 2)
+				chosen = /obj/item/hl2/loadout_picker/rebel/tier2
+
+		else if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+			if(DEPLOYMENT_TIER4_COMBINE <= GLOB.deployment_combine_cash && H.combat_deployment_loadout_tier < 4)
+				chosen = /obj/item/hl2/loadout_picker/combine/tier4
+			else if(DEPLOYMENT_TIER3_COMBINE <= GLOB.deployment_combine_cash && H.combat_deployment_loadout_tier < 3)
+				chosen = /obj/item/hl2/loadout_picker/combine/tier3
+			else if(DEPLOYMENT_TIER2_COMBINE <= GLOB.deployment_combine_cash && H.combat_deployment_loadout_tier < 2)
+				chosen = /obj/item/hl2/loadout_picker/combine/tier2
+
+		if(isnull(chosen))
+			to_chat(H, span_notice("No loadout upgrades available."))
+			return FALSE
+
+		to_chat(H, span_green("Upgrading loadout to next tier."))
+		if(!do_after(H, 5 SECONDS, src))
+			to_chat(H, span_warning("Upgrade failed"))
+			return FALSE
+
+		if(chosen)
+			var/turf/T = get_turf(H)
+			var/obj/item/I = new chosen(T)
+			H.put_in_hands(I)
+			H.loadout_upgrade_available = FALSE
+	else
+		to_chat(H, span_notice("No loadout upgrades available."))

@@ -1,3 +1,6 @@
+/datum/outfit/deployment_loadout/combine/tier1
+	loadout_tier = 1
+
 /datum/outfit/deployment_loadout/combine/tier1/baton_cop
 	name = "Deployment: Baton Cop"
 	display_name = "Baton Cop"
@@ -59,6 +62,9 @@
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
 /// TIER 2 ////////////////////////////////////////////////////////
+
+/datum/outfit/deployment_loadout/combine/tier2
+	loadout_tier = 2
 
 /datum/outfit/deployment_loadout/combine/tier2/viscerator_cop
 	name = "Deployment: Viscerator Cop"
@@ -144,6 +150,9 @@
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
 /// TIER 3 ////////////////////////////////////////////////////////
+/datum/outfit/deployment_loadout/combine/tier3
+	loadout_tier = 3
+
 /datum/outfit/deployment_loadout/combine/tier3/grunt
 	name = "Deployment: OTA Grunt"
 	display_name = "OTA Grunt"
@@ -290,6 +299,8 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
 
 /// TIER 4 ////////////////////////////////////////////////////////
+/datum/outfit/deployment_loadout/combine/tier4
+	loadout_tier = 4
 
 /datum/outfit/deployment_loadout/combine/tier4/elite
 	name = "Deployment: Elite OTA"
@@ -473,6 +484,8 @@
 	)
 
 ////////////////////// TIER 5 /////////////////////////////////////
+/datum/outfit/deployment_loadout/combine/tier5
+	loadout_tier = 5
 
 /datum/outfit/deployment_loadout/combine/tier5/hunter
 	name = "Deployment: Hunter"

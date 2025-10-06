@@ -5,6 +5,10 @@
 	icon_state = "loadout_picker"
 	var/faction_belonging = NO_FACTION
 
+/obj/item/hl2/loadout_picker/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, HELD_ITEM_TRAIT) //you really shouldnt be dropping these
+
 /obj/item/hl2/loadout_picker/interact(mob/user)
 	. = ..()
 	if(!can_use_beacon(user))
@@ -72,6 +76,8 @@
 			qdel(item)
 
 		human_user.equipOutfit(new_loadout) // Loadout
+		human_user.combat_deployment_loadout_tier = new_loadout.loadout_tier
+		human_user.loadout_upgrade_available = TRUE
 		human_user.regenerate_icons()
 		to_chat(human_user, span_notice("You are the [new_loadout.display_name]!"))
 		to_chat(human_user, span_notice("[new_loadout.desc]"))
