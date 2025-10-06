@@ -12,7 +12,7 @@
 	health = 100
 	obj_damage = 14
 	melee_damage_lower = 18
-	melee_damage_upper = 23
+	melee_damage_upper = 24
 	sharpness = SHARP_EDGED
 	wound_bonus = -15
 	attack_vis_effect = ATTACK_EFFECT_CLAW
@@ -195,7 +195,7 @@
 	speed = 0
 	melee_attack_cooldown = 0.7 SECONDS
 	melee_damage_lower = 7
-	melee_damage_upper = 8
+	melee_damage_upper = 9
 	sound_vary = FALSE
 	butcher_results = list(/obj/item/stack/sheet/sinew = 2, /obj/item/food/meat/slab/halflife/zombie = 1)
 	attack_sound = 'hl13/sound/creatures/fastzombie/fastzombieattack.ogg'

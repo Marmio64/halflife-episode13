@@ -36,6 +36,22 @@
 	w_class = WEIGHT_CLASS_SMALL
 	starting_reagent_purity = 1.0
 
+/obj/item/food/fishmeat/make_grillable() //hl13 edit
+	AddComponent(/datum/component/grillable, /obj/item/food/grilled_fish, rand(15 SECONDS, 25 SECONDS), TRUE, TRUE)
+
+/obj/item/food/grilled_fish
+	name = "grilled fish fillet"
+	desc = "A simple grilled fillet of fish."
+	icon = 'hl13/icons/obj/food.dmi'
+	icon_state = "grilledfish"
+	food_reagents = list(
+		/datum/reagent/consumable/nutriment/protein = 3,
+		/datum/reagent/consumable/nutriment/vitamin = 2,
+	)
+	tastes = list("fish" = 1)
+	foodtypes = SEAFOOD
+	w_class = WEIGHT_CLASS_SMALL
+
 /obj/item/food/fishmeat/quality
 	name = "quality fish fillet"
 	desc = "A fillet of some precious fish meat."

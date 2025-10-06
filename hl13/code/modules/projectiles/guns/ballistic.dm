@@ -278,7 +278,7 @@
 	fire_sound = "hl13/sound/weapons/uspfire.ogg"
 	spread = 8
 	recoil = 0.3
-	fire_delay = 5
+	fire_delay = 3
 	vary_fire_sound = FALSE
 
 	inhand_icon_state = "zipgun"

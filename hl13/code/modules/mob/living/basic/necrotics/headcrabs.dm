@@ -13,7 +13,7 @@
 	health = 30
 	obj_damage = 5
 	melee_damage_lower = 7
-	melee_damage_upper = 10
+	melee_damage_upper = 11
 	wound_bonus = 0
 	bare_wound_bonus = 10
 	sharpness = SHARP_EDGED

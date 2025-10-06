@@ -27,6 +27,7 @@ GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 	w_class = WEIGHT_CLASS_TINY
 	ant_attracting = FALSE
 	decomp_type = /obj/item/food/egg/rotten
+	preserved_food = TRUE //hl13 edit, its runtiming otherwise for some reason...
 	decomp_req_handle = TRUE //so laid eggs can actually become chickens
 	/// How likely is it that a chicken will come out of here if we throw it?
 	var/chick_throw_prob = 0

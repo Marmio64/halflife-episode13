@@ -77,7 +77,7 @@
 
 		if(HAS_TRAIT(src, TRAIT_LESSPAIN)) //lesspain simply reduces pain by an amount
 			amt -= 10
-		if(HAS_TRAIT(src, TRAIT_LESSPAIN_MINOR))
+		if(HAS_TRAIT(src, TRAIT_LESSPAIN_MINOR)) //-30 pain felt, about as much as one wound
 			amt -= 5
 
 	return amt

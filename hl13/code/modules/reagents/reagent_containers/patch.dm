@@ -80,3 +80,41 @@
 	icon_state = "paracetamol"
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	list_reagents = list(/datum/reagent/medicine/paracetamol = 15)
+
+/obj/item/storage/medkit/halflife
+	icon_state = "first aid kit"
+	icon = 'hl13/icons/obj/medkits.dmi'
+	icon_state = "medicalkit"
+	desc = "A basic first aid kit often filled with pain relievers, gauzes, ointments, sutures, and more."
+
+/obj/item/storage/medkit/halflife/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/stack/medical/gauze = 1,
+		/obj/item/stack/medical/ointment = 1,
+		/obj/item/stack/medical/suture = 2,
+		/obj/item/reagent_containers/hypospray/medipen = 1,
+		/obj/item/storage/halflife/pill_bottle/paracetamol = 1,
+	)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/halflife_combine
+	icon_state = "combine first aid kit"
+	icon = 'hl13/icons/obj/medkits.dmi'
+	icon_state = "medicalkit"
+	desc = "A first aid kit equipped with advanced combine medical supplies."
+
+/obj/item/storage/medkit/halflife_combine/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/stack/medical/gauze = 1,
+		/obj/item/stack/medical/ointment = 1,
+		/obj/item/stack/medical/suture = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/hypospray/medipen = 1,
+		/obj/item/storage/halflife/pill_bottle/paracetamol = 1,
+		/obj/item/healthanalyzer = 1,
+	)
+	generate_items_inside(items_inside,src)

@@ -77,6 +77,7 @@
 		/obj/item/pinpointer/crew,
 		/obj/item/holosign_creator/medical,
 		/obj/item/stack/sticky_tape,
+		/obj/item/storage/halflife/pill_bottle,
 	)
 
 /obj/item/storage/medkit/Initialize(mapload)
