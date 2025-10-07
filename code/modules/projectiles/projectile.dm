@@ -103,7 +103,10 @@
 	var/hit_threshhold = PROJECTILE_HIT_THRESHHOLD_LAYER
 
 	/// How many tiles we pass in a single SSprojectiles tick
-	var/speed = 2.25
+	var/speed = 2.75
+
+	/// hl13 edit, Any additional accuracy bonuses for hitting a targeted limb/not grazing?
+	var/accuracy_bonus = 0
 
 	/// The current angle of the projectile. Initially null, so if the arg is missing from [/fire()], we can calculate it from firer and target as fallback.
 	var/angle
@@ -486,7 +489,7 @@
 
 	last_impact_turf = get_turf(target)
 	// Lower accurancy/longer range tradeoff. 7 is a balanced number to use.
-	def_zone = ran_zone(def_zone, clamp(accurate_range - (accuracy_falloff * get_dist(last_impact_turf, starting)), 5, 100))
+	def_zone = ran_zone(def_zone, clamp((accurate_range - (accuracy_falloff * get_dist(last_impact_turf, starting)) + accuracy_bonus), 5, 100))
 	var/impact_result = process_hit_loop(select_target(last_impact_turf, target))
 	if (impact_result == PROJECTILE_IMPACT_PASSED)
 		return
@@ -642,6 +645,7 @@
 	else
 		var/mob/living/living_target = target
 		if(direct_target)
+			accuracy_bonus = 25 //bonus accuracy for direct hits
 			return TRUE
 		if(living_target.stat == DEAD)
 			return FALSE

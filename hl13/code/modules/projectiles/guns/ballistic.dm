@@ -207,7 +207,7 @@
 
 /obj/item/gun/ballistic/combine_sniper/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/scope, range_modifier = 2)
+	AddComponent(/datum/component/scope, range_modifier = 3)
 
 /*
 /obj/item/gun/ballistic/combine_sniper/Initialize(mapload)
@@ -672,4 +672,4 @@
 
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/scope, range_modifier = 2)
+	AddComponent(/datum/component/scope, range_modifier = 3)

@@ -6,7 +6,7 @@
 	armour_penetration = 20 //HL13 EDIT
 
 /obj/projectile/bullet/n762/high_veloc
-	speed = 3
+	speed = 5
 	armour_penetration = 35
 	accurate_range = 150
 

@@ -225,7 +225,7 @@
 
 /obj/item/gun/ballistic/rifle/rebarxbow/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/scope, range_modifier = 2)
+	AddComponent(/datum/component/scope, range_modifier = 3)
 
 /obj/item/gun/ballistic/rifle/rebarxbow/rack(mob/user = null)
 	if (bolt_locked)

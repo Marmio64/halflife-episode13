@@ -97,7 +97,7 @@
 		return .
 
 	//hl13 edit start. Far enough away gunfire has a chance to graze/nearmiss you
-	var/distance_penalty_accuracy = clamp((proj.accurate_range - (proj.accuracy_falloff * get_dist(proj.last_impact_turf, proj.starting))), 0, 100)
+	var/distance_penalty_accuracy = clamp((proj.accurate_range - (proj.accuracy_falloff * get_dist(proj.last_impact_turf, proj.starting))) + proj.accuracy_bonus, 0, 100)
 	if(distance_penalty_accuracy < 65)
 		if(prob(25 - distance_penalty_accuracy/5))
 			visible_message(span_danger("[src] is narrowly missed by \a [proj]!"), \

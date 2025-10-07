@@ -4,6 +4,7 @@
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	icon_state = "loadout_picker"
 	var/faction_belonging = NO_FACTION
+	var/current_tier = 1
 
 /obj/item/hl2/loadout_picker/Initialize(mapload)
 	. = ..()
@@ -50,7 +51,7 @@
 	var/list/display_names = generate_display_names()
 	if(!length(display_names))
 		return
-	var/choice = tgui_input_list(user, "Which loadout would you like?", "Select a Loadout", display_names)
+	var/choice = tgui_input_list(user, "CURRENT LOADOUT TIER: [current_tier]", "Select a Loadout", display_names)
 	if(isnull(choice) || isnull(display_names[choice]))
 		return
 	if(!can_use_beacon(user))
@@ -60,6 +61,17 @@
 	if(!do_after(user, 1 SECONDS))
 		to_chat(user, span_warning("Equip failed."))
 		return
+
+	var/area/place = get_area(src)
+	if(faction_belonging == COMBINE_DEPLOYMENT_FACTION)
+		if(!(istype(place, /area/halflife/indoors/combat_deployment/combine_base)))
+			to_chat(user, span_warning("You need to use this in your spawn building."))
+			return
+
+	if(faction_belonging == REBEL_DEPLOYMENT_FACTION)
+		if(!(istype(place, /area/halflife/indoors/combat_deployment/rebel_base)))
+			to_chat(user, span_warning("You need to use this in your spawn building."))
+			return
 
 	consume_use(display_names[choice], user)
 
@@ -102,6 +114,9 @@
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
 
+/obj/item/hl2/loadout_picker/rebel/tier2
+	current_tier = 2
+
 /obj/item/hl2/loadout_picker/rebel/tier2/generate_display_names()
 	var/static/list/loadouts
 	if(!loadouts)
@@ -115,6 +130,9 @@
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
+
+/obj/item/hl2/loadout_picker/rebel/tier3
+	current_tier = 3
 
 /obj/item/hl2/loadout_picker/rebel/tier3/generate_display_names()
 	var/static/list/loadouts
@@ -132,6 +150,9 @@
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
+
+/obj/item/hl2/loadout_picker/rebel/tier4
+	current_tier = 4
 
 /obj/item/hl2/loadout_picker/rebel/tier4/generate_display_names()
 	var/static/list/loadouts
@@ -151,6 +172,9 @@
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
+
+/obj/item/hl2/loadout_picker/rebel/tier5
+	current_tier = 5
 
 /obj/item/hl2/loadout_picker/rebel/tier5/generate_display_names()
 	var/static/list/loadouts
@@ -185,6 +209,9 @@
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
 
+/obj/item/hl2/loadout_picker/combine/tier2
+	current_tier = 2
+
 /obj/item/hl2/loadout_picker/combine/tier2/generate_display_names()
 	var/static/list/loadouts
 	if(!loadouts)
@@ -199,6 +226,9 @@
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
+
+/obj/item/hl2/loadout_picker/combine/tier3
+	current_tier = 3
 
 /obj/item/hl2/loadout_picker/combine/tier3/generate_display_names()
 	var/static/list/loadouts
@@ -215,6 +245,9 @@
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
+
+/obj/item/hl2/loadout_picker/combine/tier4
+	current_tier = 4
 
 /obj/item/hl2/loadout_picker/combine/tier4/generate_display_names()
 	var/static/list/loadouts
@@ -233,6 +266,9 @@
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
+
+/obj/item/hl2/loadout_picker/combine/tier5
+	current_tier = 5
 
 /obj/item/hl2/loadout_picker/combine/tier5/generate_display_names()
 	var/static/list/loadouts
@@ -266,6 +302,9 @@
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
 
+/obj/item/hl2/loadout_picker/xen/tier2
+	current_tier = 2
+
 /obj/item/hl2/loadout_picker/xen/tier2/generate_display_names()
 	var/static/list/loadouts
 	if(!loadouts)
@@ -277,6 +316,9 @@
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
+
+/obj/item/hl2/loadout_picker/xen/tier3
+	current_tier = 3
 
 /obj/item/hl2/loadout_picker/xen/tier3/generate_display_names()
 	var/static/list/loadouts
@@ -293,6 +335,9 @@
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
+
+/obj/item/hl2/loadout_picker/xen/tier4
+	current_tier = 4
 
 /obj/item/hl2/loadout_picker/xen/tier4/generate_display_names()
 	var/static/list/loadouts

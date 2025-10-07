@@ -48,7 +48,7 @@
 	damage = 50
 	wound_bonus = -10
 	armour_penetration = 35
-	speed = 4
+	speed = 6
 	accurate_range = 150
 
 /obj/projectile/bullet/flechette
