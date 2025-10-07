@@ -2908,8 +2908,8 @@
 
 // "Second wind" reagent generated when someone suffers a wound. Epinephrine, adrenaline, and stimulants are all already taken so here we are
 /datum/reagent/determination
-	name = "Determination"
-	description = "For when you need to push on a little more. Do NOT allow near plants."
+	name = "Noprenephaine"
+	description = "For when you need to push on a little more."
 	reagent_state = LIQUID
 	color = "#D2FFFA"
 	metabolization_rate = 0.75 * REAGENTS_METABOLISM // 5u (WOUND_DETERMINATION_CRITICAL) will last for ~34 seconds

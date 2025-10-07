@@ -346,8 +346,8 @@
 
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/usp9mm = 1,
-		/obj/item/stack/medical/suture = 2,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/storage/medkit/halflife = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -580,7 +580,7 @@
 
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/usp9mm = 2,
-		/obj/item/stack/medical/suture = 3,
+		/obj/item/storage/medkit/halflife = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 	)
 

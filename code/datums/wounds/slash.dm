@@ -240,7 +240,7 @@
 
 /datum/wound/slash/flesh/on_synthflesh(reac_volume)
 	. = ..()
-	adjust_blood_flow(-0.075 * reac_volume) // 20u * 0.075 = -1.5 blood flow, pretty good for how little effort it is
+	adjust_blood_flow(-0.05 * reac_volume) // 20u * 0.05 = -1 blood flow, pretty good for how little effort it is
 
 /// If someone's putting a laser gun up to our cut to cauterize it
 /datum/wound/slash/flesh/proc/las_cauterize(obj/item/gun/energy/laser/lasgun, mob/user)

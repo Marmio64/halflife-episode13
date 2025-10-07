@@ -22,6 +22,29 @@
 /obj/machinery/combine_health_station/round_start
 	round_start = TRUE //so that it deducts sociostability when destroyed
 
+/obj/machinery/combine_health_station/mouse_drop_receive(mob/target, mob/user, params)
+	if(!ishuman(target))
+		return
+
+	var/mob/living/carbon/human/H = target
+
+	if(malfunctioning)
+		to_chat(H, span_warning("Warning. Excessive wear upon machine detected. Please contact a technician to repair components."))
+		playsound(src, 'hl13/sound/effects/medshotno1.ogg', 40, FALSE)
+		return
+
+	if(capacity > 9 && H.health < H.maxHealth)
+		playsound(src, 'hl13/sound/effects/medcharge4.ogg', 40, FALSE)
+		if(do_after(H, 0.8 SECONDS, src))
+			H.reagents.add_reagent(/datum/reagent/medicine/concentrated_biogel,6)
+			adjust_capacity(-10)
+			playsound(src, 'hl13/sound/effects/largemedkit1.ogg', 40, FALSE)
+			update_icon_state()
+			return
+	else
+		playsound(src, 'hl13/sound/effects/medshotno1.ogg', 40, FALSE)
+	return
+
 /obj/machinery/combine_health_station/proc/adjust_capacity(change)
 	capacity += change
 	if(capacity > capacity_max)

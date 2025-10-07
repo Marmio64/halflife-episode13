@@ -286,7 +286,7 @@
 		infestation = max(infestation - (0.1 * WOUND_BURN_SANITIZATION_RATE * seconds_per_tick), 0)
 
 /datum/wound/burn/flesh/on_synthflesh(reac_volume)
-	flesh_healing += reac_volume * 0.5 // 20u patch will heal 10 flesh standard
+	flesh_healing += reac_volume * 0.25 // 20u patch will heal 5 flesh standard
 
 /datum/wound_pregen_data/flesh_burn
 	abstract = TRUE

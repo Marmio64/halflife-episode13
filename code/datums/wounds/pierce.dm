@@ -121,7 +121,7 @@
 
 /datum/wound/pierce/bleed/on_synthflesh(reac_volume)
 	. = ..()
-	adjust_blood_flow(-0.025 * reac_volume) // 20u * 0.05 = -1 blood flow, less than with slashes but still good considering smaller bleed rates
+	adjust_blood_flow(-0.025 * reac_volume) // 20u * 0.025 = -0.5 blood flow, less than with slashes but still good considering smaller bleed rates
 
 /// If someone is using a suture to close this puncture
 /datum/wound/pierce/bleed/proc/suture(obj/item/stack/medical/suture/I, mob/user)

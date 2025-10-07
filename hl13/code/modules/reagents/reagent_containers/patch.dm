@@ -110,9 +110,8 @@
 		return
 	var/static/items_inside = list(
 		/obj/item/stack/medical/gauze = 1,
-		/obj/item/stack/medical/ointment = 1,
 		/obj/item/stack/medical/suture = 2,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen/high_capacity = 1,
 		/obj/item/reagent_containers/hypospray/medipen = 1,
 		/obj/item/storage/halflife/pill_bottle/paracetamol = 1,
 		/obj/item/healthanalyzer = 1,
