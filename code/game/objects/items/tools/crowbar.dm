@@ -7,6 +7,7 @@
 	lefthand_file = 'icons/mob/inhands/equipment/tools_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/tools_righthand.dmi'
 	usesound = 'sound/items/tools/crowbar.ogg'
+	hitsound = 'hl13/sound/halflifeweapons/meleesounds/baton_hit.ogg'
 	operating_sound = 'sound/items/tools/crowbar_prying.ogg'
 	obj_flags = CONDUCTS_ELECTRICITY
 	slot_flags = ITEM_SLOT_BELT

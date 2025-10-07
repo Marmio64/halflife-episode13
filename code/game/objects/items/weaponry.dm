@@ -514,7 +514,7 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		throwforce_on = 23, \
 		throw_speed_on = throw_speed, \
 		sharpness_on = SHARP_EDGED, \
-		hitsound_on = 'sound/items/weapons/bladeslice.ogg', \
+		hitsound_on = 'hl13/sound/halflifeweapons/meleesounds/knife_hit1.ogg', \
 		w_class_on = WEIGHT_CLASS_NORMAL, \
 		attack_verb_continuous_on = list("slashes", "stabs", "slices", "tears", "lacerates", "rips", "dices", "cuts"), \
 		attack_verb_simple_on = list("slash", "stab", "slice", "tear", "lacerate", "rip", "dice", "cut"), \

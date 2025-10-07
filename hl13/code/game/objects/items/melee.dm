@@ -11,6 +11,7 @@
 	inhand_icon_state = "sledgehammer"
 	lefthand_file = 'icons/mob/inhands/weapons/hammers_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/hammers_righthand.dmi'
+	pickup_sound = 'hl13/sound/halflifeweapons/meleesounds/heavy_pickup.ogg'
 	force = 10 /// The weapon requires two hands
 	armour_penetration = 30 //Takes a lot of armor to defend against a sledgehammer
 	wound_bonus = 5
@@ -19,7 +20,7 @@
 	demolition_mod = 3 // BREAK THINGS
 	drag_slowdown = 0.5
 	slowdown = 0.5
-	hitsound = 'sound/items/weapons/smash.ogg' /// Hitsound when thrown at someone
+	hitsound = 'hl13/sound/halflifeweapons/meleesounds/heavyblunt_hit1.ogg'
 	attack_verb_continuous = list("attacks", "bashes", "strikes", "smashes")
 	attack_verb_simple = list("attack", "bash", "strik", "smash")
 	w_class = WEIGHT_CLASS_HUGE
@@ -31,16 +32,8 @@
 	. = ..()
 	AddComponent(/datum/component/two_handed, \
 		force_wielded = 24, \
-		wield_callback = CALLBACK(src, PROC_REF(on_wield)), \
-		unwield_callback = CALLBACK(src, PROC_REF(on_unwield)), \
 		require_twohands = TRUE, \
 	)
-
-/obj/item/melee/sledgehammer/proc/on_wield(atom/source, mob/living/user)
-	hitsound = "swing_hit"
-
-/obj/item/melee/sledgehammer/proc/on_unwield(atom/source, mob/living/user)
-	hitsound = initial(hitsound)
 
 /obj/item/melee/sledgehammer/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()
@@ -68,6 +61,8 @@
 	inhand_icon_state = "tire_iron"
 	lefthand_file = 'hl13/icons/mob/inhands/melee_inhand_left.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/melee_inhand_right.dmi'
+	hitsound = 'hl13/sound/halflifeweapons/meleesounds/baton_hit.ogg'
+	pickup_sound = 'hl13/sound/halflifeweapons/meleesounds/heavy_pickup.ogg'
 	force = 18
 	armour_penetration = 10
 	throwforce = 10
@@ -80,6 +75,7 @@
 	icon_state = "spear0"
 	lefthand_file = 'hl13/icons/mob/inhands/melee_inhand_left.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/melee_inhand_right.dmi'
+	hitsound = 'hl13/sound/halflifeweapons/meleesounds/stab_hit.ogg'
 	name = "improvised spear"
 	desc = "A haphazardly-constructed yet still deadly weapon of ancient design that is adept at spearing through flesh and thin armor alike."
 	force = 15

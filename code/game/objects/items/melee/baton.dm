@@ -6,6 +6,7 @@
 	icon_state = "classic_baton"
 	inhand_icon_state = "classic_baton"
 	worn_icon_state = "classic_baton"
+	hitsound = 'hl13/sound/halflifeweapons/meleesounds/baton_hit.ogg'
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
 	slot_flags = ITEM_SLOT_BELT

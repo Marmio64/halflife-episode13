@@ -17,7 +17,7 @@
 	blocks_emissive = EMISSIVE_BLOCK_GENERIC
 	layer = MOB_LAYER
 	/// The sound this plays on impact.
-	var/hitsound = 'sound/items/weapons/pierce.ogg'
+	var/hitsound = 'hl13/sound/effects/flesh_impact_bullet1.ogg'
 	/// Sound played when the projectile hits a wall
 	var/hitsound_wall
 	plane = GAME_PLANE_FOV_HIDDEN
