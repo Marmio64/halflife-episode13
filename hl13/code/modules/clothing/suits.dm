@@ -333,7 +333,6 @@
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 	strip_delay = 80
-	clothing_flags = THICKMATERIAL
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
 	armor_type = /datum/armor/paddedjacket
 
