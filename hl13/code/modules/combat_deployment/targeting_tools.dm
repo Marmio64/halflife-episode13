@@ -5,13 +5,23 @@
 	icon_state = "walkietalkie"
 	var/charges = 3
 	var/max_charges = 3
+	var/recharges = TRUE
+	var/use_time = 2 SECONDS
+
+/obj/item/halflife/cannister_targeter/modified
+	name = "modified canister targeting tool"
+	desc = "A tool that feeds coordinates to an offsite location, prompting them to send a headcrab canister at the target. Each canister deals a small amount of damage on impact and carries three headcrabs of random types. Click a visible tile to send a canister after a 2 second delay. Does not recharge uses overtime"
+	recharges = FALSE
+	charges = 5
+	max_charges = 5
+	use_time = 1 SECONDS
 
 /obj/item/halflife/cannister_targeter/Initialize(mapload, obj/item/seeds/newseed)
 	. = ..()
 	START_PROCESSING(SSobj, src)
 
 /obj/item/halflife/cannister_targeter/process(seconds_per_tick)
-	if(charges < max_charges)
+	if(charges < max_charges && recharges)
 		charges += 0.15 //about 12 seconds to restore a headcrab charge
 
 /obj/item/halflife/cannister_targeter/Destroy()
@@ -26,7 +36,7 @@
 	. = ..()
 	if(1 <= charges)
 		if(!istype(interacting_with, /turf/open/openspace) && !istype(interacting_with, /turf/closed))
-			if(do_after(user, 2 SECONDS, src))
+			if(do_after(user, use_time, src))
 				launch_cannister(get_turf(interacting_with))
 				charges--
 			else
@@ -41,6 +51,13 @@
 		"spawn" = /obj/effect/spawner/random/halflife/random_headcrab/two,
 	))
 
+/obj/item/halflife/cannister_targeter/modified/launch_cannister(turf/location)
+	podspawn(list(
+		"target" = location,
+		"path" = /obj/structure/closet/supplypod/light_exp_canister,
+		"spawn" = /obj/effect/spawner/random/halflife/random_headcrab/three,
+	))
+
 /obj/structure/closet/supplypod/light_exp_canister
 	style = /datum/pod_style/canister
 	explosionSize = list(0,0,1,0)
@@ -51,6 +68,9 @@
 	icon = 'hl13/icons/obj/radio.dmi'
 	icon_state = "walkietalkie"
 	var/charges = 2
+
+/obj/item/halflife/missile_targeter/one_use
+	charges = 1
 
 /obj/item/halflife/missile_targeter/examine(mob/user)
 	. = ..()

@@ -15,7 +15,7 @@
 	mask = /obj/item/clothing/mask/gas/civilprotection
 	belt = /obj/item/storage/belt/civilprotection/riotfullpistol
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 
 /datum/outfit/deployment_loadout/combine/tier1/infestation_control
 	name = "Deployment: Infestation Control"
@@ -33,7 +33,7 @@
 	mask = /obj/item/clothing/mask/gas/cwuengi
 	head = /obj/item/clothing/head/utility/radiation
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier1/engineer
@@ -58,7 +58,7 @@
 	)
 
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
 /// TIER 2 ////////////////////////////////////////////////////////
@@ -83,7 +83,7 @@
 	l_pocket = /obj/item/grenade/spawnergrenade/manhacks
 	r_pocket = /obj/item/grenade/spawnergrenade/manhacks
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 
 /datum/outfit/deployment_loadout/combine/tier2/pistol_cop
 	name = "Deployment: Pistol Cop"
@@ -101,7 +101,7 @@
 
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 
 /datum/outfit/deployment_loadout/combine/tier2/medic_cop
 	name = "Deployment: Medical Cop"
@@ -120,7 +120,7 @@
 	l_pocket = /obj/item/stack/medical/suture
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/branescan.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier2/engineer
@@ -146,7 +146,7 @@
 	)
 
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
 /// TIER 3 ////////////////////////////////////////////////////////
@@ -172,7 +172,7 @@
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/lgorbifold.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier3/ota
@@ -189,7 +189,7 @@
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier3/riotcop
@@ -214,7 +214,7 @@
 
 	back = /obj/item/shield/riot
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 
 /datum/outfit/deployment_loadout/combine/tier3/divisional
 	name = "Deployment: Divisional Lead"
@@ -234,7 +234,7 @@
 	l_pocket = /obj/item/ammo_box/colta357
 	r_pocket = /obj/item/ammo_box/colta357
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/branescan.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier3/medic_cop
@@ -254,7 +254,7 @@
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/branescan.ogg'
 
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
@@ -292,7 +292,7 @@
 	)
 
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
@@ -317,7 +317,7 @@
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier4/shotgunner
@@ -337,7 +337,7 @@
 	uniform = /obj/item/clothing/under/combine/overwatch/red
 	suit = /obj/item/clothing/suit/armor/overwatch/red
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier4/sniper
@@ -354,7 +354,7 @@
 	suit_store = /obj/item/gun/ballistic/combine_sniper
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier4/ordinal
@@ -372,7 +372,7 @@
 	l_pocket = /obj/item/grenade/spawnergrenade/manhacks/upgraded
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier4/medic_cop
@@ -392,7 +392,7 @@
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/branescan.ogg'
 
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
@@ -432,7 +432,7 @@
 	)
 
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
@@ -470,7 +470,7 @@
 
 	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/branescan.ogg'
 
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
@@ -521,7 +521,7 @@
 		/obj/item/melee/baton/security/loaded = 1,
 	)
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier5/assassin
@@ -540,7 +540,7 @@
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp/extended
 	r_pocket = /obj/item/gun/ballistic/automatic/pistol/usp/extended
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/lgorbifold.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier5/assassin/post_equip(mob/living/carbon/human/H)
@@ -569,7 +569,7 @@
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 	)
 
-	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier5/advisor

@@ -93,6 +93,10 @@
 
 	var/chosen = null
 
+	if(HAS_TRAIT(H, TRAIT_TDMCAPTAIN))
+		to_chat(H, span_warning("Team captains cant upgrade their loadout."))
+		return FALSE
+
 	if(H.combat_deployment_loadout_tier != 5 && H.deployment_faction == deployment_faction && H.loadout_upgrade_available)
 
 		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)

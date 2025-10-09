@@ -292,6 +292,10 @@
 	pixel_x = 11;
 	pixel_y = 9
 	},
+/obj/item/grenade/syndieminibomb/bouncer{
+	pixel_x = -9;
+	pixel_y = 3
+	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "pY" = (
@@ -356,6 +360,10 @@
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/forest)
+"ul" = (
+/obj/machinery/repairpod,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/combat_deployment/combine_base)
 "um" = (
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/grass,
@@ -876,6 +884,10 @@
 /obj/effect/landmark/deployments_metrocop,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/combine_base)
+"PW" = (
+/obj/machinery/repairpod,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "Qq" = (
 /obj/item/reagent_containers/cup/glass/waterbottle/large,
 /obj/item/reagent_containers/cup/glass/waterbottle/large,
@@ -958,6 +970,10 @@
 /obj/item/halflife/combine_battery,
 /obj/item/halflife/combine_battery,
 /obj/item/halflife/combine_battery,
+/obj/item/stack/medical/gauze/twelve{
+	pixel_x = 12;
+	pixel_y = 11
+	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "Tx" = (
@@ -1087,6 +1103,7 @@
 /obj/structure/table/halflife/metal/grate,
 /obj/item/stack/medical/bandage/makeshift,
 /obj/item/stack/medical/bandage/makeshift,
+/obj/item/stack/medical/gauze/twelve,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "ZK" = (
@@ -4757,7 +4774,7 @@ GT
 GT
 yE
 yE
-gj
+PW
 oY
 oY
 oY
@@ -4872,11 +4889,11 @@ hQ
 hQ
 HZ
 HZ
-dX
-HZ
-HZ
-HZ
-HZ
+zK
+zK
+zK
+zK
+Fb
 HZ
 hQ
 hQ
@@ -5019,10 +5036,10 @@ wW
 aJ
 ni
 zK
-zK
-zK
-zK
-Fb
+ul
+Sl
+HZ
+HZ
 HZ
 HZ
 hQ

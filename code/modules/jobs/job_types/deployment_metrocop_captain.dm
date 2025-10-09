@@ -1,17 +1,16 @@
-GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 
-/datum/job/deployment_metrocop
-	title = JOB_DEPLOYMENT_METROCOP
-	description = "You are part of the combine! You have better medium-high tier loadouts than rebels, but it takes your faction longer to unlock high tier loadouts compared to the rebels. Early to mid-game may have you struggling, but you are likely to win if you last till late game!"
+/datum/job/deployment_metrocop_captain
+	title = JOB_DEPLOYMENT_METROCOP_CAPTAIN
+	description = "You are the leader of the combine deployment in this sector. Coordinate your troops to victory, and don't get yourself killed. Use your supply radio to call in unique stratagems."
 	department_head = list("Nobody")
-	total_positions = 80
-	spawn_positions = 80
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = "nobody"
 	exp_granted_type = EXP_TYPE_CREW
 	paycheck = PAYCHECK_ZERO
 	config_tag = "PRISONER"
 
-	outfit = /datum/outfit/job/deployment_metrocop
+	outfit = /datum/outfit/job/deployment_metrocop_captain
 
 	display_order = JOB_DISPLAY_ORDER_ASSISTANT
 	department_for_prefs = /datum/job_department/assistant
@@ -22,9 +21,9 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 	combat_deployment_job = TRUE
 	combat_deployment_faction = COMBINE_DEPLOYMENT_FACTION
 
-	cmode_music = 'hl13/sound/music/combat/apprehensionandevasion.ogg'
+	cmode_music = 'hl13/sound/music/combat/branescan.ogg'
 
-/datum/job/deployment_metrocop/get_spawn_message_information()
+/datum/job/deployment_metrocop_captain/get_spawn_message_information()
 	var/list/info = list()
 	if(SSmapping.current_map.combat_deployment_gamemode == "towers")
 		info += "You are playing for the Combine Side in the Communication Towers TDM game mode! Destroy the rebel's comms tower while protecting your own! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
@@ -33,55 +32,49 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 
 	return info
 
-/datum/outfit/job/deployment_metrocop
-	name = "Deployment metrocop"
-	jobtype = /datum/job/deployment_metrocop
+/datum/outfit/job/deployment_metrocop_captain
+	name = "Deployment metrocop captain"
+	jobtype = /datum/job/deployment_metrocop_captain
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
-	suit = /obj/item/clothing/suit/armor/civilprotection
+	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat
+	suit_store = /obj/item/melee/baton/security/loaded
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	glasses = /obj/item/clothing/glasses/hud/security
+	neck = /obj/item/clothing/neck/sectorial_cloak
+	head = /obj/item/clothing/head/hats/halflife/sectorial
+	back = /obj/item/storage/backpack/halflife/satchel/radio
+	id = /obj/item/card/id/advanced/halflife/combine/four/sectoral
 
-	id = /obj/item/storage/wallet
+	backpack_contents = list(
+		/obj/item/megaphone = 1,
+		/obj/item/binoculars = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/hl2/supply_radio/combine = 1,
+	)
 
-	mask = /obj/item/clothing/mask/gas/civilprotection
+	mask = /obj/item/clothing/mask/gas/civilprotection/divisional
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
 
-/datum/outfit/job/deployment_metrocop/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+/datum/outfit/job/deployment_metrocop_captain/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
 	user.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 5) //Gives you a few seconds of invincibility to prevent spawn camping
 	ADD_TRAIT(user, TRAIT_VIRUSIMMUNE, JOB_TRAIT)
+	ADD_TRAIT(user, TRAIT_TDMCAPTAIN, JOB_TRAIT)
 	user.faction += "combine"
 	user.faction -= "neutral"
 
-	var/chosen = null
+	user.change_stat(STATKEY_DEX, 4)
+	user.change_stat(STATKEY_STR, 4)
 
-	if(DEPLOYMENT_TIER4_COMBINE <= GLOB.deployment_combine_cash)
-		chosen = /obj/item/hl2/loadout_picker/combine/tier4
-	else if(DEPLOYMENT_TIER3_COMBINE <= GLOB.deployment_combine_cash)
-		chosen = /obj/item/hl2/loadout_picker/combine/tier3
-	else if(DEPLOYMENT_TIER2_COMBINE <= GLOB.deployment_combine_cash)
-		chosen = /obj/item/hl2/loadout_picker/combine/tier2
-	else if(DEPLOYMENT_TIER1_COMBINE <= GLOB.deployment_combine_cash)
-		chosen = /obj/item/hl2/loadout_picker/combine/tier1
+	var/obj/item/card/id/outfit_id = user.wear_id
+	if(outfit_id)
+		outfit_id.registered_name = "Sectoral Commander"
 
-	if(DEPLOYMENT_TIER5_COMBINE <= GLOB.deployment_combine_cash)
-		if(DEPLOYMENT_TIER5_EXTRA_CHANCE_COMBINE <= GLOB.deployment_combine_cash)
-			if(prob(DEPLOYMENT_TIER5_CHANCE))
-				chosen = /obj/item/hl2/loadout_picker/combine/tier5
-		else
-			if(prob(DEPLOYMENT_TIER5_EXTRA_CHANCE))
-				chosen = /obj/item/hl2/loadout_picker/combine/tier5
-
-	if(chosen)
-		var/turf/T = get_turf(user)
-		var/obj/item/I = new chosen(T)
-		user.put_in_hands(I)
-
-/datum/job/deployment_metrocop/after_latejoin_spawn(mob/living/spawning)
+/datum/job/deployment_metrocop_captain/after_latejoin_spawn(mob/living/spawning)
 	. = ..()
 	if(ishuman(spawning))
 		var/list/spawn_locs = list()
@@ -94,7 +87,7 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 
 		spawning.forceMove(pick(spawn_locs))
 
-/datum/job/deployment_metrocop/after_roundstart_spawn(mob/living/spawning)
+/datum/job/deployment_metrocop_captain/after_roundstart_spawn(mob/living/spawning)
 	. = ..()
 	if(ishuman(spawning))
 		var/list/spawn_locs = list()

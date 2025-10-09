@@ -53,6 +53,11 @@
 	desc = "A variant of the modified trenchcoat vest dyed with green highlights to broadcast the authority of its wearer."
 	icon_state = "cp_trenchcoatoverseer"
 
+/obj/item/clothing/suit/armor/civilprotection/trenchcoat/sectorial
+	name = "sectorial trenchcoat"
+	desc = "A variant of the modified trenchcoat vest dyed with blue highlights to broadcast the authority of its wearer."
+	icon_state = "sectorial"
+
 /obj/item/clothing/suit/armor/civilprotection/divisional
 	name = "divisional lead vest"
 	desc = "A variant of the standard officer's vest dyed with red highlights to broadcast the authority of its wearer."
@@ -499,6 +504,9 @@
 	repairable_by = /obj/item/stack/kevlar
 
 	blood_overlay_type = "armor"
+
+/obj/item/clothing/suit/armor/rebel/faster
+	slowdown = 0.25
 
 /datum/armor/rebelheavy
 	melee = 40

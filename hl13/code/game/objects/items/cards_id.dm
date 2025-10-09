@@ -52,3 +52,7 @@
 	registered_age = null
 	trim = /datum/id_trim/centcom/ert
 	wildcard_slots = WILDCARD_LIMIT_CENTCOM
+
+/obj/item/card/id/advanced/halflife/combine/four/sectoral
+	name = "\improper Sectoral Commander ID"
+	registered_name = "Sectoral Commander"

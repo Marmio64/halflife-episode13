@@ -19,3 +19,8 @@
 	desc = "Protection for ears from loud sounds, along with a functioning radio for overwatch forces."
 	keyslot = new /obj/item/encryptionkey/headset_cent
 	keyslot2 = new /obj/item/encryptionkey/heads/hos
+
+/obj/item/radio/headset/civilprotection/deployment
+	name = "overwatch headset"
+	desc = "Protection for ears from loud sounds, along with a functioning radio for overwatch forces."
+	keyslot = new /obj/item/encryptionkey/headset_cent

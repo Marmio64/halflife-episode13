@@ -71,6 +71,8 @@
 #define TRAIT_LESSPAIN_MINOR "lesspain_minor"
 #define TRAIT_MASOCHIST "masochist"
 
+#define TRAIT_TDMCAPTAIN "tdmcaptain"
+
 #define TRAIT_SPARTAN "spartan"
 
 #define TRAIT_FILTHBORN "filthborn"

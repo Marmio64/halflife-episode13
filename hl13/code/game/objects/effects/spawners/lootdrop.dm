@@ -405,3 +405,6 @@
 
 /obj/effect/spawner/random/halflife/random_headcrab/three
 	spawn_loot_count = 3
+
+/obj/effect/spawner/random/halflife/random_headcrab/five
+	spawn_loot_count = 5

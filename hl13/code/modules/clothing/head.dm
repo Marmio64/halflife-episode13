@@ -210,3 +210,13 @@
 /obj/item/clothing/head/helmet/halflife/military/plf_veteran/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/clothing_fov_visor, FOV_180_DEGREES)
+
+/obj/item/clothing/head/hats/halflife/sectorial
+	name = "commander's beret"
+	desc = "A well armored beret for the commander of local combine ground operations."
+	icon_state = "beret_badge"
+	greyscale_config = /datum/greyscale_config/beret_badge
+	greyscale_config_worn = /datum/greyscale_config/beret_badge/worn
+	greyscale_colors = "#158691#f0cc8f"
+	armor_type = /datum/armor/hats_hos
+	strip_delay = 8 SECONDS

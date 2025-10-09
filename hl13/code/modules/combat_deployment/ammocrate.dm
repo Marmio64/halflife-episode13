@@ -5,10 +5,13 @@
 	icon_state = "ammocrate"
 	anchored = TRUE
 	density = TRUE
-	resistance_flags = INDESTRUCTIBLE
+	max_integrity = 400
 	var/ammo_amount = 3
 	var/ammo_max = 10
 	var/list/vendoptions = list("USP Match", "Mosin", "MP7", "SPAS12", "Colt Python", "Service Rifle", "Pulse SMG", "AK-47", "AR2")
+
+/obj/machinery/ammo_crate/low_health
+	max_integrity = 150 //no body blocking crap with ammo crates
 
 /obj/machinery/ammo_crate/process(delta_time)
 	if(ammo_amount < ammo_max)

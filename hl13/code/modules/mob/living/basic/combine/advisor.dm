@@ -119,7 +119,7 @@
 
 /datum/action/cooldown/spell/pointed/advisor_sooth
 	name = "Advisorial Sooth"
-	desc = "Sooth a subjects mind through the power of psionic domination. Forces their brain and body to produce various chemicals to allow them to push through pain and injury, while also restoring a small amount of health over time."
+	desc = "Sooth a subjects mind through the power of psionic domination. Forces their brain and body to produce various chemicals to allow them to push through pain and injury, while also restoring a small amount of health."
 	button_icon = 'hl13/icons/mob/actions/actions_advisor.dmi'
 	button_icon_state = "sooth"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
@@ -134,18 +134,20 @@
 	active_msg = "You prepare to sooth a target..."
 
 /datum/action/cooldown/spell/pointed/advisor_sooth/is_valid_target(atom/cast_on)
-	. = ..()
 	if(!.)
 		return FALSE
-	if(!ishuman(cast_on))
+	if(!isliving(cast_on))
 		return FALSE
 
 	return TRUE
 
-/datum/action/cooldown/spell/pointed/advisor_sooth/cast(mob/living/carbon/human/cast_on)
+/datum/action/cooldown/spell/pointed/advisor_sooth/cast(mob/living/cast_on)
 	. = ..()
 
 	to_chat(cast_on, span_boldnicegreen("An alien wave of psionic interference covers you, easing your pain!"))
-	cast_on.reagents.add_reagent(/datum/reagent/medicine/muscle_stimulant, 5)
-	cast_on.reagents.add_reagent(/datum/reagent/medicine/omnizine, 4)
+	if(ishuman(cast_on))
+		var/mob/living/carbon/human/H = cast_on
+		H.reagents.add_reagent(/datum/reagent/medicine/muscle_stimulant, 5)
+	cast_on.adjustBruteLoss(-25)
+	cast_on.adjustFireLoss(-25)
 	return TRUE

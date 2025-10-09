@@ -5,10 +5,12 @@
 	icon_state = "loadout_picker"
 	var/faction_belonging = NO_FACTION
 	var/current_tier = 1
+	var/stick_to_hands = TRUE
 
 /obj/item/hl2/loadout_picker/Initialize(mapload)
 	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, HELD_ITEM_TRAIT) //you really shouldnt be dropping these
+	if(stick_to_hands)
+		ADD_TRAIT(src, TRAIT_NODROP, HELD_ITEM_TRAIT) //you really shouldnt be dropping these
 
 /obj/item/hl2/loadout_picker/interact(mob/user)
 	. = ..()
@@ -19,6 +21,10 @@
 		if(user.client.deployment_faction != faction_belonging)
 			to_chat(user, span_warning("Your faction cannot use this."))
 			return
+
+	if(HAS_TRAIT(user, TRAIT_TDMCAPTAIN))
+		to_chat(user, span_warning("Team captains cant use loadout beacons."))
+		return FALSE
 
 	var/area/place = get_area(src)
 	if(faction_belonging == COMBINE_DEPLOYMENT_FACTION)
@@ -176,6 +182,9 @@
 /obj/item/hl2/loadout_picker/rebel/tier5
 	current_tier = 5
 
+/obj/item/hl2/loadout_picker/rebel/tier5/nonstick
+	stick_to_hands = FALSE
+
 /obj/item/hl2/loadout_picker/rebel/tier5/generate_display_names()
 	var/static/list/loadouts
 	if(!loadouts)
@@ -269,6 +278,9 @@
 
 /obj/item/hl2/loadout_picker/combine/tier5
 	current_tier = 5
+
+/obj/item/hl2/loadout_picker/combine/tier5/nonstick
+	stick_to_hands = FALSE
 
 /obj/item/hl2/loadout_picker/combine/tier5/generate_display_names()
 	var/static/list/loadouts
