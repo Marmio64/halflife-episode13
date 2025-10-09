@@ -12,6 +12,9 @@
 	icon_state = "woodwall-0"
 	base_icon_state = "woodwall"
 
+/turf/closed/wall/halflife/wood/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -15, 8, 1)
+
 /turf/closed/wall/halflife/brick
 	name = "brick wall"
 	icon = 'hl13/icons/turf/walls/brick.dmi'
@@ -20,6 +23,9 @@
 	base_icon_state = "wall"
 	sheet_type = /obj/item/stack/sheet/halflife/brick
 	sheet_amount = 2
+
+/turf/closed/wall/halflife/brick/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_BRICK, -15, 8, 1)
 
 /turf/closed/wall/halflife/brick/try_decon() //can't weld through bricks
 	return FALSE
@@ -37,6 +43,9 @@
 	icon_state = "wall-0"
 	base_icon_state = "wall"
 
+/turf/closed/wall/halflife/concrete/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -15, 8, 1)
+
 /turf/closed/wall/halflife/concrete/try_decon() //can't weld through concrete
 	return FALSE
 
@@ -49,6 +58,9 @@
 	desc = "A dirty wall of old concrete."
 	icon_state = "wall-0"
 	base_icon_state = "wall"
+
+/turf/closed/wall/halflife/sewer/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -15, 8, 1)
 
 /turf/closed/wall/halflife/sewer/try_decon() //can't weld through concrete
 	return FALSE

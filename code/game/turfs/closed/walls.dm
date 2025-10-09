@@ -50,6 +50,10 @@
 		fixed_underlay = string_assoc_list(fixed_underlay)
 		underlays += underlay_appearance
 
+//Mojave Edit
+/turf/closed/wall/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_SPARKS, -15, 8, 1)
+
 /turf/closed/wall/mouse_drop_receive(atom/dropping, mob/user, params)
 	. = ..()
 	if (added_leaning)

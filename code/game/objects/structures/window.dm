@@ -45,6 +45,11 @@
 	fire = 80
 	acid = 100
 
+
+//hl13 Edit
+/obj/structure/window/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_GLASS, -10, 5)
+
 /obj/structure/window/Initialize(mapload, direct)
 	AddElement(/datum/element/blocks_explosives)
 	. = ..()

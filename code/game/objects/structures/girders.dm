@@ -525,3 +525,7 @@
 
 	else
 		return ..()
+
+//hl13 Edit
+/obj/structure/girder/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_SPARKS, -15, 8, 1)
