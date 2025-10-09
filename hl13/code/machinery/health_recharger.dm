@@ -35,7 +35,7 @@
 
 	if(capacity > 9 && H.health < H.maxHealth)
 		playsound(src, 'hl13/sound/effects/medcharge4.ogg', 40, FALSE)
-		if(do_after(H, 0.8 SECONDS, src))
+		if(do_after(user, 0.8 SECONDS, src))
 			H.reagents.add_reagent(/datum/reagent/medicine/concentrated_biogel,6)
 			adjust_capacity(-10)
 			playsound(src, 'hl13/sound/effects/largemedkit1.ogg', 40, FALSE)
@@ -148,5 +148,5 @@
 
 /obj/machinery/combine_health_station/self_recharging/process(delta_time)
 	if(capacity < capacity_max)
-		capacity++
+		capacity += 2
 		update_icon_state()
