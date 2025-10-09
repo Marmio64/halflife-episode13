@@ -12,6 +12,7 @@
 
 /obj/machinery/ammo_crate/low_health
 	max_integrity = 150 //no body blocking crap with ammo crates
+	ammo_max = 4
 
 /obj/machinery/ammo_crate/process(delta_time)
 	if(ammo_amount < ammo_max)

@@ -24,6 +24,9 @@
 
 	var/zoomed = FALSE
 
+	/// Current combat deployment faction of this very mob
+	var/deployment_faction = NO_FACTION
+
 ///Rolls random stats base 10, +-1, and applies age stats.
 /mob/living/proc/roll_mob_stats()
 	if(has_rolled_for_stats)

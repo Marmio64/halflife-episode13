@@ -25,6 +25,8 @@
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles
 	initial_language_holder = /datum/language_holder/advisor
 
+	deployment_faction = COMBINE_DEPLOYMENT_FACTION
+
 	cmode_music = 'hl13/sound/music/combat/disrupted.ogg' //spooky!
 	lighting_cutoff_blue = 25
 	lighting_cutoff = 8

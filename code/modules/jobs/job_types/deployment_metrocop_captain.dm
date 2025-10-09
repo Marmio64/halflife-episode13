@@ -40,12 +40,13 @@
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat
-	suit_store = /obj/item/melee/baton/security/loaded
+	suit_store = /obj/item/gun/ballistic/revolver/snubnose
+	belt = /obj/item/melee/baton/security/loaded
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	glasses = /obj/item/clothing/glasses/hud/security
 	neck = /obj/item/clothing/neck/sectorial_cloak
 	head = /obj/item/clothing/head/hats/halflife/sectorial
-	back = /obj/item/storage/backpack/halflife/satchel/radio
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
 	id = /obj/item/card/id/advanced/halflife/combine/four/sectoral
 
 	backpack_contents = list(

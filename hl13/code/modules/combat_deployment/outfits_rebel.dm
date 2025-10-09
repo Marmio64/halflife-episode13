@@ -478,7 +478,7 @@
 /datum/outfit/deployment_loadout/rebel/tier4/engineer
 	name = "Deployment: Heavy Refugee Engineer"
 	display_name = "Heavy Refugee Engineer"
-	desc = "Equipped with a crowbar, satchel, a pistol, two sentry beacons, and sandbags, you can do melee combat and a bit of building."
+	desc = "Equipped with a crowbar, satchel, a pistol, a sentry beacon, and sandbags, you can do melee combat and a bit of building."
 
 	uniform = /obj/item/clothing/under/citizen/refugee
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
@@ -490,7 +490,8 @@
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 11,
-		/obj/item/sbeacondrop/rebel_turret = 2,
+		/obj/item/sbeacondrop/rebel_turret = 1,
+		/obj/item/stack/razorwire/small_stack = 1,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 		/obj/item/wirecutters/halflife = 1,

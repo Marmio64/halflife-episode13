@@ -164,6 +164,13 @@
 		client.player_details.time_of_death = timeofdeath
 		SSambience.kill_droning(client)
 
+		if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+			SSticker.tdm_combine_deaths++
+			SSticker.tdm_total_deaths++
+		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			SSticker.tdm_rebel_deaths++
+			SSticker.tdm_total_deaths++
+
 	timeofdeath = world.time
 	station_timestamp_timeofdeath = station_time_timestamp()
 	var/turf/death_turf = get_turf(src)

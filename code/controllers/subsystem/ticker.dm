@@ -67,6 +67,10 @@ SUBSYSTEM_DEF(ticker)
 	/// Why an emergency shuttle was called
 	var/emergency_reason
 
+	var/tdm_combine_deaths = 0
+	var/tdm_rebel_deaths = 0
+	var/tdm_total_deaths = 0
+
 /datum/controller/subsystem/ticker/Initialize()
 	var/list/byond_sound_formats = list(
 		"mid" = TRUE,

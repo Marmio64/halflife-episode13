@@ -28,7 +28,8 @@
 
 	suit = /obj/item/clothing/suit/armor/rebel/faster
 	mask = /obj/item/cigarette/halflife
-	suit_store = /obj/item/melee/baton
+	suit_store = /obj/item/gun/ballistic/revolver/snubnose
+	belt = /obj/item/melee/baton
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/flashlight/seclite
 	head = /obj/item/clothing/head/beret/sec/poland

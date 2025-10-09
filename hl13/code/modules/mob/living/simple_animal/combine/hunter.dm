@@ -39,6 +39,7 @@
 	casingtype = /obj/item/ammo_casing/caseless/flechette
 	lighting_cutoff_blue = 25
 	lighting_cutoff = 25
+	deployment_faction = COMBINE_DEPLOYMENT_FACTION
 
 	var/charge_cooldown = 0
 	var/charge_cooldown_time = 10 SECONDS

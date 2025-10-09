@@ -425,9 +425,10 @@
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 11,
+		/obj/item/stack/razorwire/small_stack = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
-		/obj/item/sbeacondrop/combine_turret = 2,
+		/obj/item/sbeacondrop/combine_turret = 1,
 		/obj/item/wirecutters/halflife = 1,
 	)
 

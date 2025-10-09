@@ -14,9 +14,6 @@
 
 	throw_range = 5
 
-	/// Current combat deployment faction of this very mob
-	var/deployment_faction = NO_FACTION
-
 	/// Current combat deployment loadout tier for this mob
 	var/combat_deployment_loadout_tier = 1
 

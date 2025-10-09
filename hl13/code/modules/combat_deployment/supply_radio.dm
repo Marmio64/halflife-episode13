@@ -108,10 +108,10 @@
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/supply_beacon_option/colt_python,
+			/datum/supply_beacon_option/medkit,
 			/datum/supply_beacon_option/grenade,
-			/datum/supply_beacon_option/medkits,
 			/datum/supply_beacon_option/ammocrate,
+			/datum/supply_beacon_option/combine_turret,
 			/datum/supply_beacon_option/canister_targeter,
 			/datum/supply_beacon_option/combine_tier5,
 		)
@@ -124,10 +124,10 @@
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/supply_beacon_option/colt_python,
+			/datum/supply_beacon_option/medkit,
 			/datum/supply_beacon_option/grenade,
-			/datum/supply_beacon_option/medkits,
 			/datum/supply_beacon_option/ammocrate,
+			/datum/supply_beacon_option/rebel_turret,
 			/datum/supply_beacon_option/missile_targeter,
 			/datum/supply_beacon_option/rebel_tier5,
 		)
@@ -141,26 +141,30 @@
 	var/spawn_path
 	var/amount = 1
 
-/datum/supply_beacon_option/colt_python
-	option_name = "Colt Python (40 Points)"
-	cost = 40
-	spawn_path = /obj/item/gun/ballistic/revolver/coltpython
+/datum/supply_beacon_option/medkit
+	option_name = "Medkit (35 Points)"
+	cost = 35
+	spawn_path = /obj/item/reagent_containers/pill/patch/medkit
 
 /datum/supply_beacon_option/grenade
 	option_name = "MK3A2 Grenade (60 Points)"
 	cost = 60
 	spawn_path = /obj/item/grenade/syndieminibomb/bouncer
 
-/datum/supply_beacon_option/medkits
-	option_name = "Three Medkits (100 Points)"
-	cost = 100
-	spawn_path = /obj/item/reagent_containers/pill/patch/medkit
-	amount = 3
-
 /datum/supply_beacon_option/ammocrate
 	option_name = "Stationary Ammo Crate (125 Points)"
 	cost = 125
 	spawn_path = /obj/machinery/ammo_crate/low_health
+
+/datum/supply_beacon_option/combine_turret
+	option_name = "Turret Beacon (125 Points)"
+	cost = 125
+	spawn_path = /obj/item/sbeacondrop/combine_turret
+
+/datum/supply_beacon_option/rebel_turret
+	option_name = "Turret Beacon (125 Points)"
+	cost = 125
+	spawn_path = /obj/item/sbeacondrop/rebel_turret
 
 /datum/supply_beacon_option/missile_targeter
 	option_name = "One-use Missile Targeter (225 Points)"

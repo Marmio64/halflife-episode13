@@ -8,6 +8,8 @@
 	faction = list("neutral","silicon","combine")
 	death_sound = 'hl13/sound/creatures/cityscanner/cbot_energyexplosion1.ogg'
 
+	deployment_faction = COMBINE_DEPLOYMENT_FACTION
+
 	movement_type = FLYING
 
 	var/idle_sound_chance = 50
