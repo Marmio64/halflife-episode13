@@ -67,6 +67,7 @@
 
 /obj/machinery/deployment_comms_tower/combine/deconstruct(disassembled = TRUE)
 	priority_announce("Combine communication tower destroyed! The rebels have won!", "Lambda Priority Alert")
+	GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
 	SSticker.force_ending = FORCE_END_ROUND
 	for(var/X in GLOB.deployment_rebel_players)
 		var/mob/living/carbon/human/H = X
@@ -80,6 +81,7 @@
 
 /obj/machinery/deployment_comms_tower/rebel/deconstruct(disassembled = TRUE)
 	priority_announce("Rebel communication tower destroyed. All dissenting individuals will be amputated.", "Overwatch Priority Alert")
+	GLOB.deployment_win_team = COMBINE_DEPLOYMENT_FACTION
 	SSticker.force_ending = FORCE_END_ROUND
 	for(var/X in GLOB.deployment_rebel_players)
 		var/mob/living/carbon/human/H = X

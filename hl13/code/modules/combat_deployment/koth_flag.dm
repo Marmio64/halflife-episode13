@@ -4,6 +4,7 @@ GLOBAL_VAR_INIT(deployment_flag_grace_period, 3 MINUTES)
 GLOBAL_VAR_INIT(deployment_respawn_rate_rebels, 25 SECONDS)
 GLOBAL_VAR_INIT(deployment_respawn_rate_combine, 25 SECONDS)
 GLOBAL_VAR_INIT(deployment_respawn_rate_xen, 12 SECONDS)
+GLOBAL_VAR_INIT(deployment_win_team, null)
 
 /obj/machinery/deployment_koth_flag
 	name = "Central Flag"
@@ -77,6 +78,7 @@ GLOBAL_VAR_INIT(deployment_respawn_rate_xen, 12 SECONDS)
 
 		if(GLOB.deployment_combine_flag_time_left <= 0)
 			priority_announce("Central flag under Overwatch Control. Amputate all dissenters.", "Overwatch Priority Alert")
+			GLOB.deployment_win_team = COMBINE_DEPLOYMENT_FACTION
 			SSticker.force_ending = FORCE_END_ROUND
 			for(var/X in GLOB.deployment_rebel_players)
 				var/mob/living/carbon/human/H = X
@@ -97,6 +99,7 @@ GLOBAL_VAR_INIT(deployment_respawn_rate_xen, 12 SECONDS)
 
 		if(GLOB.deployment_rebels_flag_time_left <= 0)
 			priority_announce("The flag is under control of Lambda now, long live the resistance!", "Lambda Priority Alert")
+			GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
 			SSticker.force_ending = FORCE_END_ROUND
 			for(var/X in GLOB.deployment_combine_players)
 				var/mob/living/carbon/human/H = X

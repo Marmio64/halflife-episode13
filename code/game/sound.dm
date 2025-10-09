@@ -209,7 +209,27 @@
 
 	var/volume_modifier = prefs.read_preference(/datum/preference/numeric/sound_lobby_volume)
 	if((prefs && volume_modifier) && !CONFIG_GET(flag/disallow_title_music))
-		SEND_SOUND(src, sound('hl13/sound/music/endingtriumph.ogg', repeat = 0, wait = 0, volume = vol*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC)) // MAD JAMS HL13 EDIT ROUNDEND MUSIC CHANGE
+		if(SSmapping.current_map.minetype == "combat_deployment")
+			if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
+				if(GLOB.deployment_win_team == REBEL_DEPLOYMENT_FACTION)
+					SEND_SOUND(src, sound('hl13/sound/music/rebel_win.ogg', repeat = 0, wait = 0, volume = vol*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+					return
+				else if(GLOB.deployment_win_team == COMBINE_DEPLOYMENT_FACTION)
+					SEND_SOUND(src, sound('hl13/sound/music/rebel_loss.ogg', repeat = 0, wait = 0, volume = vol*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+					return
+			else if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+				if(GLOB.deployment_win_team == REBEL_DEPLOYMENT_FACTION)
+					SEND_SOUND(src, sound('hl13/sound/music/combine_loss.ogg', repeat = 0, wait = 0, volume = vol*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+					return
+				else if(GLOB.deployment_win_team == COMBINE_DEPLOYMENT_FACTION)
+					SEND_SOUND(src, sound('hl13/sound/music/combine_win.ogg', repeat = 0, wait = 0, volume = vol*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+					return
+			else
+				SEND_SOUND(src, sound('hl13/sound/music/endingtriumph.ogg', repeat = 0, wait = 0, volume = vol*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+				return
+		else
+			SEND_SOUND(src, sound('hl13/sound/music/endingtriumph.ogg', repeat = 0, wait = 0, volume = vol*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC)) // MAD JAMS HL13 EDIT ROUNDEND MUSIC CHANGE
+			return
 //hl13 edit end
 
 ///get a random frequency.
@@ -794,5 +814,11 @@
 				'hl13/sound/effects/injury/blood4.ogg',
 				'hl13/sound/effects/injury/blood5.ogg',
 				'hl13/sound/effects/injury/blood6.ogg',
+			)
+		if(SFX_BULLET_HIT) //hl13 edit
+			soundin = pick(
+				'hl13/sound/effects/injury/bullethit1.ogg',
+				'hl13/sound/effects/injury/bullethit2.ogg',
+				'hl13/sound/effects/injury/bullethit3.ogg',
 			)
 	return soundin
