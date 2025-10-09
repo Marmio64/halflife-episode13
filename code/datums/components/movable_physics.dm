@@ -59,7 +59,7 @@
 	angle_of_movement += rand(-3000, 3000) / 100
 	var/turf/a_turf = get_turf(moving_atom)
 	if(istype(moving_atom, /obj/item/ammo_casing))
-		playsound(moving_atom, a_turf.bullet_bounce_sound, 40, TRUE)
+		playsound(moving_atom, a_turf.bullet_bounce_sound, 30, TRUE)
 	else
 		playsound(moving_atom, bounce_sound, 50, TRUE)
 	moving_atom.SpinAnimation(speed = 1.5 SECONDS, loops = 1)
