@@ -10,10 +10,8 @@
 
 /obj/item/halflife/cannister_targeter/modified
 	name = "modified canister targeting tool"
-	desc = "A tool that feeds coordinates to an offsite location, prompting them to send a headcrab canister at the target. Each canister deals a small amount of damage on impact and carries three headcrabs of random types. Click a visible tile to send a canister after a 2 second delay. Does not recharge uses overtime"
+	desc = "A tool that feeds coordinates to an offsite location, prompting them to send a headcrab canister at the target. Each canister deals a large amount of damage on impact and carries three headcrabs of random types. Click a visible tile to send a canister after a 2 second delay. Does not recharge uses overtime"
 	recharges = FALSE
-	charges = 5
-	max_charges = 5
 	use_time = 1 SECONDS
 
 /obj/item/halflife/cannister_targeter/Initialize(mapload, obj/item/seeds/newseed)
@@ -54,13 +52,17 @@
 /obj/item/halflife/cannister_targeter/modified/launch_cannister(turf/location)
 	podspawn(list(
 		"target" = location,
-		"path" = /obj/structure/closet/supplypod/light_exp_canister,
+		"path" = /obj/structure/closet/supplypod/med_exp_canister,
 		"spawn" = /obj/effect/spawner/random/halflife/random_headcrab/three,
 	))
 
 /obj/structure/closet/supplypod/light_exp_canister
 	style = /datum/pod_style/canister
 	explosionSize = list(0,0,1,0)
+
+/obj/structure/closet/supplypod/med_exp_canister
+	style = /datum/pod_style/canister
+	explosionSize = list(0,1,2,0)
 
 /obj/item/halflife/missile_targeter
 	name = "missile targeting tool"
