@@ -30,6 +30,8 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 		info += "You are playing for the Rebel Side in the Communication Towers TDM game mode! Destroy the combine's comms tower while protecting your own! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
 	if(SSmapping.current_map.combat_deployment_gamemode == "koth")
 		info += "You are playing for the Rebel Side in the King of The Hill TDM game mode! Capture the central flag and keep it under your faction's control for a total of five minutes to win! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
+	if(SSmapping.current_map.combat_deployment_gamemode == "payload")
+		info += "You are playing for the Rebel Side in the Payload gamemode! Move the cart to the combine base within 5 minutes to win! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
 
 	return info
 
