@@ -69,6 +69,8 @@
 	consume()
 
 /obj/machinery/cash_deposit/proc/consume()
+	var/money_amount = 10
+
 	for(var/mob/living/carbon/human/offeredmob in view(src, 1)) //Only for corpse right next to/on same tile
 		if(offeredmob.stat)
 
@@ -78,10 +80,13 @@
 				offeredmob.dust(just_ash = TRUE, force = TRUE)
 				playsound(get_turf(src),'sound/effects/cashregister.ogg', 75, TRUE)
 
+				if(HAS_TRAIT(offeredmob, TRAIT_TDMCAPTAIN))
+					money_amount = 25
+
 				if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
-					GLOB.deployment_combine_cash += (10)
+					GLOB.deployment_combine_cash += (money_amount)
 				if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
-					GLOB.deployment_rebels_cash += (10)
+					GLOB.deployment_rebels_cash += (money_amount)
 
 				return
 

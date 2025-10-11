@@ -32,6 +32,18 @@ GLOBAL_LIST_EMPTY(dead_players_during_shift)
 
 	. = ..()
 
+	if(HAS_TRAIT(src, TRAIT_TDMCAPTAIN))
+		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			for(var/X in GLOB.deployment_rebel_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+				to_chat(H, "<span class='userdanger'>Our Cell Leader died, recover their body and revive them at a repair pod before their corpse is destroyed!</span>")
+		if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+			for(var/X in GLOB.deployment_combine_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+				to_chat(H, "<span class='userdanger'>Our Sectoral Commander died, recover their body and revive them at a repair pod before their corpse is destroyed!</span>")
+
 	if(client && !HAS_TRAIT(src, TRAIT_SUICIDED) && !(client in GLOB.dead_players_during_shift))
 		GLOB.dead_players_during_shift += client
 

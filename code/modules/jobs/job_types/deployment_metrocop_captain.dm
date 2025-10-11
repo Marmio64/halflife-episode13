@@ -30,7 +30,7 @@
 	if(SSmapping.current_map.combat_deployment_gamemode == "koth")
 		info += "You are playing for the Combine Side in the King of The Hill TDM game mode! Capture the central flag and keep it under your faction's control for a total of five minutes to win! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
 	if(SSmapping.current_map.combat_deployment_gamemode == "payload")
-		info += "You are playing for the Combine Side in the Payload gamemode! Defend the cart for 5 minutes to win! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
+		info += "You are playing for the Combine Side in the Payload gamemode! Defend the cart for 7 minutes to win! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
 
 	return info
 
@@ -50,6 +50,8 @@
 	head = /obj/item/clothing/head/hats/halflife/sectorial
 	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
 	id = /obj/item/card/id/advanced/halflife/combine/four/sectoral
+	l_pocket = /obj/item/knife/combat/survival
+	r_pocket = /obj/item/flashlight/seclite
 
 	backpack_contents = list(
 		/obj/item/megaphone = 1,

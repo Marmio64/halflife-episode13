@@ -7,26 +7,44 @@
 	anchored = TRUE
 	density = TRUE
 
+	var/projectile_passchance = 50
+
 	light_range = 3
 	light_power = 1.1
 	light_color = "#658cac"
 	var/movable
 
-	var/combine_time = 5 MINUTES
-	var/grace_time = 3 MINUTES
+	var/combine_time = 7 MINUTES
+	var/grace_time = 1 MINUTES
 
 	var/blocked = FALSE
 	var/moving = TRUE
 
+	var/last_scream = 0
+
 	/// Should the defender get a respawn change?
-	var/alter_holder_respawn = FALSE
+	var/alter_holder_respawn = TRUE
 
 	/// Alternate respawn timer if above is enabled ^
-	var/altered_respawn_speed = 35 SECONDS
+	var/altered_respawn_speed = 30 SECONDS
 	var/normal_respawn_speed = 20 SECONDS
 
 	var/grace_period_up_text = "<span class='greentext big'>The grace period is up, the cart is now movable!</span>"
 	var/grace_period_text = TRUE
+
+/obj/machinery/deployment_payload/CanAllowThrough(atom/movable/mover, turf/target)
+	. = ..()
+	if(istype(mover, /obj/projectile))
+		if(!projectile_passchance)
+			return
+		if(!anchored)
+			return TRUE
+		var/obj/projectile/proj = mover
+		if(proj.firer && Adjacent(proj.firer))
+			return TRUE
+		if(prob((projectile_passchance)))
+			return TRUE
+		return FALSE
 
 /obj/machinery/deployment_payload/Initialize(mapload)
 	.=..()
@@ -45,11 +63,11 @@
 				for(var/X in GLOB.deployment_rebel_players)
 					var/mob/living/carbon/human/H = X
 					SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
-					to_chat(H, grace_period_up_text)
+					to_chat(H, "<span class='greentext big'>The grace period is up, the cart is now movable!</span>")
 				for(var/X in GLOB.deployment_combine_players)
 					var/mob/living/carbon/human/H = X
 					SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
-					to_chat(H, grace_period_up_text)
+					to_chat(H, "<span class='userdanger'>The grace period is up, the cart is now movable!</span>")
 	else
 		GLOB.deployment_flag_grace_period -= 1 SECONDS
 		return
@@ -66,16 +84,16 @@
 		for(var/X in GLOB.deployment_rebel_players)
 			var/mob/living/carbon/human/H = X
 			SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
-			to_chat(H, "<span class='userdanger'>The combine have captured the flag...</span>")
+			to_chat(H, "<span class='userdanger'>The combine have stopped the cart...</span>")
 		for(var/X in GLOB.deployment_combine_players)
 			var/mob/living/carbon/human/H = X
 			SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
-			to_chat(H, "<span class='greentext big'>We have captured and held the flag!</span>")
+			to_chat(H, "<span class='greentext big'>We have stopped the cart from detonating!</span>")
 		return PROCESS_KILL
 
 	blocked = FALSE
 	moving = FALSE
-	for(var/mob/living/hooman in orange(1, src))
+	for(var/mob/living/hooman in orange(2, src))
 		if(hooman.stat != CONSCIOUS)
 			return
 		if(hooman.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
@@ -88,7 +106,14 @@
 
 /obj/machinery/deployment_payload/proc/move_cart()
 	for(var/obj/effect/payload_path/P in range(1, src))
+		if(last_scream < world.time)
+			for(var/X in GLOB.deployment_combine_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+				to_chat(H, "<span class='userdanger'>The payload cart is being pushed, stop it!</span>")
+			last_scream = world.time + 200
 		forceMove(get_turf(P))
+		playsound(src, 'hl13/sound/effects/cartmove.ogg', 25, TRUE, extrarange = -1)
 		if(istype(P, /obj/effect/payload_path/final_point))
 			blow_up()
 
@@ -118,6 +143,7 @@
 
 /obj/effect/payload_path
 	name = "payload path"
+	icon = 'icons/effects/landmarks_static.dmi'
 	icon_state = "x"
 	anchored = TRUE
 	layer = OBJ_LAYER
