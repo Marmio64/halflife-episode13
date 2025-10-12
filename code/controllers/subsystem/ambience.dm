@@ -53,6 +53,9 @@ SUBSYSTEM_DEF(ambience)
 
 ///Attempts to play an ambient sound to a mob, returning the cooldown in deciseconds
 /area/proc/play_ambience(mob/M, sound/override_sound, volume = 27)
+	if(ambience_index == "none")
+		return rand(min_ambience_cooldown, max_ambience_cooldown)
+
 	var/sound/new_sound = override_sound || pick(ambientsounds)
 	/// volume modifier for ambience as set by the player in preferences.
 	var/volume_modifier = (M.client?.prefs.read_preference(/datum/preference/numeric/sound_ambience_volume))/100
@@ -133,6 +136,24 @@ SUBSYSTEM_DEF(ambience)
 	client.current_ambient_sound = sound_to_use
 	SEND_SOUND(src, sound(my_area.ambient_buzz, repeat = 1, wait = 0, volume = my_area.ambient_buzz_vol, channel = CHANNEL_BUZZ))
 
+	sound_to_use = my_area.ambient_music
+
+	if(!sound_to_use || !(client.prefs.read_preference(/datum/preference/numeric/sound_ship_ambience_volume)))
+		SEND_SOUND(src, sound(null, repeat = 0, volume = volume_modifier, wait = 0, channel = CHANNEL_BGM_MUSIC))
+		client.current_ambient_music = null
+		return
+
+	if(sound_to_use == client.current_ambient_music) // Don't reset current loops
+		return
+
+	if(isliving(client.mob))
+		var/mob/living/L = client.mob
+		if(L.combat_mode == TRUE)
+			return
+
+	client.current_ambient_music = sound_to_use
+	SEND_SOUND(src, sound(my_area.ambient_music, repeat = 1, wait = 0, volume = my_area.ambient_music_vol, channel = CHANNEL_BGM_MUSIC))
+
 /datum/controller/subsystem/ambience/proc/play_combat_music(music = null, client/dreamer)
 	if(!music || !dreamer)
 		return
@@ -140,6 +161,8 @@ SUBSYSTEM_DEF(ambience)
 	var/sound/combat_music = sound(pick(music), repeat = TRUE, wait = 0, channel = CHANNEL_BOSS_MUSIC, volume = 30)
 	var/sound/sound_killer = sound()
 	sound_killer.channel = CHANNEL_AMBIENCE
+	SEND_SOUND(dreamer, sound_killer) //first clears the sound channel from ambient music
+	sound_killer.channel = CHANNEL_BGM_MUSIC
 	SEND_SOUND(dreamer, sound_killer) //first clears the sound channel from ambient music
 	SEND_SOUND(dreamer, combat_music) //then starts playing music
 	dreamer.droning_sound = combat_music

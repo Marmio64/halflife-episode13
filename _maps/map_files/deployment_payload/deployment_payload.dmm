@@ -39,6 +39,10 @@
 /obj/item/halflife/nutrient_bar_wrapping/beef,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/combine_base)
+"cV" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "db" = (
 /obj/machinery/repairpod,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -92,6 +96,10 @@
 /area/halflife/indoors/combat_deployment/rebel_base)
 "eL" = (
 /turf/open/floor/plating/indoor/concrete/stairs,
+/area/halflife/outdoors/deployment_city)
+"eU" = (
+/obj/structure/halflife/road_barrier,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
 "fh" = (
 /obj/structure/table/halflife/metal/grate,
@@ -191,10 +199,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/combine_base)
-"jw" = (
-/obj/structure/halflife/leaves,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city)
 "jE" = (
 /obj/machinery/porta_turret/combine,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -734,6 +738,10 @@
 /obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city)
+"Ke" = (
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city)
 "Kh" = (
 /obj/structure/halflife/tank/chemical/huge,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -797,10 +805,6 @@
 /obj/machinery/combine_walllight/directional/south,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
-"Me" = (
-/obj/structure/halflife/road_barrier,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city)
 "Mp" = (
 /obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/grass,
@@ -989,6 +993,10 @@
 "US" = (
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
+"UX" = (
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city)
 "Va" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/stack/sticky_tape,
@@ -1030,6 +1038,10 @@
 "VM" = (
 /obj/machinery/telecomms/bus/preset_one/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city)
+"VQ" = (
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
 "VU" = (
 /obj/structure/table/halflife/no_smooth/large/crafting/armorbench,
@@ -1082,10 +1094,6 @@
 	dir = 8
 	},
 /area/halflife/outdoors/deployment_city)
-"Xl" = (
-/obj/structure/barricade/sandbags,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city)
 "Xm" = (
 /obj/machinery/telecomms/receiver/preset_left/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
@@ -1125,6 +1133,10 @@
 /area/halflife/indoors/combat_deployment/combine_base)
 "YU" = (
 /turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/deployment_city)
+"YV" = (
+/obj/structure/halflife/leaves,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
 "YY" = (
 /obj/structure/table/halflife/no_smooth/large/metal,
@@ -7827,7 +7839,7 @@ Ag
 RM
 YU
 YU
-Ag
+sb
 US
 Zx
 Zx
@@ -7964,7 +7976,7 @@ Ag
 YU
 YU
 YU
-sb
+gd
 US
 Zx
 Zx
@@ -8238,7 +8250,7 @@ Ag
 YU
 YU
 YU
-gd
+lV
 US
 Zx
 Zx
@@ -8375,7 +8387,7 @@ Ag
 YU
 xB
 YU
-lV
+Ag
 US
 Zx
 Zx
@@ -8923,7 +8935,7 @@ YU
 Ag
 Mp
 YU
-Ag
+sb
 US
 Zx
 Zx
@@ -9060,7 +9072,7 @@ YU
 xB
 YU
 YU
-Ag
+gd
 US
 Zx
 Zx
@@ -9197,7 +9209,7 @@ YU
 YU
 YU
 YU
-xB
+gd
 US
 Zx
 Zx
@@ -9334,7 +9346,7 @@ YU
 RM
 Ag
 YU
-YU
+lV
 US
 Zx
 Zx
@@ -11816,7 +11828,7 @@ Vj
 Vj
 Vj
 Vj
-Xl
+cV
 CF
 dY
 dY
@@ -12892,6 +12904,7 @@ Vj
 US
 US
 US
+VQ
 US
 US
 US
@@ -12908,8 +12921,7 @@ US
 US
 US
 US
-US
-US
+VQ
 US
 US
 Vj
@@ -13046,7 +13058,7 @@ dY
 dY
 dY
 dY
-dY
+OZ
 dY
 dY
 dY
@@ -13172,7 +13184,7 @@ dY
 dY
 dY
 dY
-dY
+OZ
 dY
 dY
 dY
@@ -13302,6 +13314,14 @@ jT
 jT
 jT
 jT
+Ke
+jT
+jT
+jT
+jT
+jT
+jT
+Ke
 jT
 jT
 jT
@@ -13310,15 +13330,7 @@ jT
 jT
 jT
 jT
-jT
-jT
-jT
-jT
-jT
-jT
-jT
-jT
-jT
+Ke
 jT
 jT
 jT
@@ -13572,7 +13584,7 @@ jT
 jT
 jT
 jT
-jT
+Ke
 jT
 jT
 jT
@@ -13726,7 +13738,7 @@ dY
 dY
 dY
 dY
-dY
+OZ
 dY
 Yr
 dY
@@ -13736,7 +13748,7 @@ dY
 dY
 dY
 dY
-dY
+OZ
 dY
 dY
 dY
@@ -13849,6 +13861,7 @@ dY
 dY
 dY
 dY
+OZ
 dY
 dY
 dY
@@ -13862,8 +13875,7 @@ dY
 dY
 dY
 dY
-dY
-dY
+OZ
 dY
 dY
 dY
@@ -13873,7 +13885,7 @@ dY
 dY
 dY
 Zx
-Zx
+UX
 Zx
 Dv
 Zx
@@ -13997,7 +14009,7 @@ US
 US
 US
 US
-US
+VQ
 US
 US
 US
@@ -14012,7 +14024,7 @@ Vj
 US
 US
 US
-Me
+eU
 US
 US
 US
@@ -15620,11 +15632,11 @@ US
 US
 US
 US
-jw
+YV
 US
 US
 US
-jw
+YV
 US
 US
 US

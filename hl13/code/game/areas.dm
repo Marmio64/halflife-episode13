@@ -2,7 +2,7 @@
 	name = "\improper Unexplored Location"
 	icon_state = "away"
 	has_gravity = TRUE
-	ambience_index = AMBIENCE_HLOUTSIDE
+	ambience_index = "none"
 	flags_1 = CAN_BE_DIRTY_1
 	requires_power = FALSE
 	max_ambience_cooldown = 340 SECONDS
@@ -94,7 +94,7 @@
 
 	first_time_text = "The Outlands"
 
-	ambience_index = AMBIENCE_HLSEWERS
+	//ambience_index = AMBIENCE_HLSEWERS
 
 	daylight_multiplier = 0.15
 
@@ -121,9 +121,11 @@
 	base_lighting_alpha = 15
 	light_power = 0.1
 	light_range = 2
-	ambience_index = AMBIENCE_HLINSIDE
+	//ambience_index = AMBIENCE_HLINSIDE
 	sound_environment = SOUND_ENVIRONMENT_ROOM
 	ambient_buzz = 'hl13/sound/ambience/town_ambience.ogg'
+
+	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_03.ogg'
 
 	ambientrain = RAIN_IN
 	dissipation_rate = 0.75
@@ -330,10 +332,11 @@
 	name = "\improper Sewers"
 	base_lighting_alpha = 5
 	icon_state = "away"
-	ambience_index = AMBIENCE_HLSEWERS
+	//ambience_index = AMBIENCE_HLSEWERS
 	sound_environment = SOUND_ENVIRONMENT_STONE_CORRIDOR
 	ambient_buzz = 'hl13/sound/ambience/sewer1.ogg'
 	ambient_buzz_vol = 100
+	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_02.ogg'
 	mood_bonus = -2
 	mood_message = "<span class='warning'>This place smells terrible.</span>\n"
 

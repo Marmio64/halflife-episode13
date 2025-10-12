@@ -42,7 +42,7 @@
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat
-	suit_store = /obj/item/gun/ballistic/revolver/snubnose
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython
 	belt = /obj/item/melee/baton/security/loaded
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	glasses = /obj/item/clothing/glasses/hud/security
@@ -63,6 +63,8 @@
 	mask = /obj/item/clothing/mask/gas/civilprotection/divisional
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
+
+	var/list/nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_MASK)
 
 /datum/outfit/job/deployment_metrocop_captain/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
@@ -87,6 +89,17 @@
 			var/datum/action/cooldown/spell/new_spell = new_ability
 			new_spell.spell_requirements = NONE
 		new_ability.Grant(user)
+
+	var/list/no_drops = list()
+
+	// Make clothing in the specified slots NODROP
+	for(var/slot in nodrop_slots)
+		no_drops += user.get_item_by_slot(slot)
+	list_clear_nulls(no_drops) // For any slots we didn't have filled
+	// Apply TRAIT_NODROP to everything
+	for(var/obj/item/item_to_nodrop as anything in no_drops)
+		ADD_TRAIT(item_to_nodrop, TRAIT_NODROP, CAPTURE_THE_FLAG_TRAIT)
+
 
 /datum/job/deployment_metrocop_captain/after_latejoin_spawn(mob/living/spawning)
 	. = ..()

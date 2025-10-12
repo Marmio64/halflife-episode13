@@ -28,7 +28,7 @@
 
 	suit = /obj/item/clothing/suit/armor/rebel/faster
 	mask = /obj/item/cigarette/halflife
-	suit_store = /obj/item/gun/ballistic/revolver/snubnose
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython
 	belt = /obj/item/melee/baton
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/flashlight/seclite
@@ -51,6 +51,8 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+	var/list/nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_EYES)
 
 /datum/job/deployment_refugee_captain/get_spawn_message_information()
 	var/list/info = list()
@@ -86,6 +88,17 @@
 			var/datum/action/cooldown/spell/new_spell = new_ability
 			new_spell.spell_requirements = NONE
 		new_ability.Grant(H)
+
+	var/list/no_drops = list()
+
+	// Make clothing in the specified slots NODROP
+	for(var/slot in nodrop_slots)
+		no_drops += H.get_item_by_slot(slot)
+	list_clear_nulls(no_drops) // For any slots we didn't have filled
+	// Apply TRAIT_NODROP to everything
+	for(var/obj/item/item_to_nodrop as anything in no_drops)
+		ADD_TRAIT(item_to_nodrop, TRAIT_NODROP, CAPTURE_THE_FLAG_TRAIT)
+
 
 /datum/job/deployment_refugee_captain/after_latejoin_spawn(mob/living/spawning)
 	. = ..()

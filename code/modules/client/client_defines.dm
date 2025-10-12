@@ -273,4 +273,7 @@
 	///Which ambient sound this client is currently being provided.
 	var/current_ambient_sound
 
+	///Which ambient music this client is currently being provided.
+	var/current_ambient_music
+
 	var/rain_sound = FALSE //HL13 EDIT

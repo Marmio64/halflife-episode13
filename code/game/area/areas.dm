@@ -99,6 +99,9 @@
 	///Used to decide what the maximum time between ambience is
 	var/max_ambience_cooldown = 60 SECONDS
 
+	var/ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_01.ogg'
+	var/ambient_music_vol = 5
+
 	flags_1 = CAN_BE_DIRTY_1
 
 	var/list/cameras
@@ -191,7 +194,7 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 
 	first_time_text = uppertext(first_time_text) // Standardization. HL13 EDIT
 
-	if(!ambientsounds)
+	if(!ambientsounds && ambience_index != "none")
 		ambientsounds = GLOB.ambience_assoc[ambience_index]
 
 	if(requires_power)
