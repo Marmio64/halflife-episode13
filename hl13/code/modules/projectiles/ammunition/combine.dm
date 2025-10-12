@@ -23,7 +23,7 @@
 	name = "SMG pulse round"
 	desc = "A SMG grade pulse round."
 	caliber = CALIBER_PULSROUND
-	projectile_type = /obj/projectile/bullet/pulse/weak
+	projectile_type = /obj/projectile/bullet/pulse/smg
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse
 
 /obj/item/ammo_casing/caseless/flechette

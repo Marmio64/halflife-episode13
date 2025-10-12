@@ -13,19 +13,21 @@
 	spin = generator(GEN_NUM, -20, 20)
 
 /particles/impact_smoke
-	icon = 'icons/effects/effects.dmi'
-	icon_state = "smoke"
+	icon = 'hl13/icons/effects/96x96.dmi'
+	icon_state = "smoke5"
 	width = 500
 	height = 500
-	count = 20
-	spawning = 20
+	count = 5
+	spawning = 15
 	lifespan = 0.7 SECONDS
-	fade = 8 SECONDS
-	grow = 0.1
-	scale = 0.2
+	fade = 3.3 SECONDS
+	grow = 0.065
+	drift = generator(GEN_CIRCLE, 8, 8)
+	scale = 0.1
 	spin = generator(GEN_NUM, -20, 20)
 	velocity = list(50, 0)
-	friction = generator(GEN_NUM, 0.1, 0.5)
+	friction = generator(GEN_NUM, 0.3, 0.6)
+
 
 /datum/element/debris
 	element_flags = ELEMENT_BESPOKE
@@ -46,7 +48,7 @@
 	debris_velocity = _debris_velocity
 	debris_amount = _debris_amount
 	debris_scale = _debris_scale
-	RegisterSignal(target, COMSIG_ATOM_BULLET_ACT, .proc/register_for_impact)
+	RegisterSignal(target, COMSIG_ATOM_BULLET_ACT, PROC_REF(register_for_impact), TRUE) //override because the element gets overriden
 
 /datum/element/debris/Detach(datum/source, force)
 	. = ..()
@@ -54,7 +56,7 @@
 
 /datum/element/debris/proc/register_for_impact(datum/source, obj/projectile/proj)
 	SIGNAL_HANDLER
-	INVOKE_ASYNC(src, .proc/on_impact, source, proj)
+	INVOKE_ASYNC(src, PROC_REF(on_impact), source, proj)
 
 /datum/element/debris/proc/on_impact(datum/source, obj/projectile/P)
 	//if(!P.ammo.ping)
@@ -87,7 +89,7 @@
 			pitch = 55000
 		playsound(source, P.ammo.sound_bounce, 50, 1, frequency = pitch)
 	*/
-	addtimer(CALLBACK(src, .proc/remove_ping, src, smoke_visuals, debris_visuals), 0.7 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(remove_ping), src, smoke_visuals, debris_visuals), 0.7 SECONDS)
 
 /datum/element/debris/proc/remove_ping(hit, obj/effect/abstract/particle_holder/smoke_visuals, obj/effect/abstract/particle_holder/debris_visuals)
 	QDEL_NULL(smoke_visuals)

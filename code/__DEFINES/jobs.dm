@@ -54,7 +54,7 @@
 #define JOB_DEPLOYMENT_METROCOP "Civil Protection"
 
 #define JOB_DEPLOYMENT_REFUGEE_CAPTAIN "Rebel Cell Leader"
-#define JOB_DEPLOYMENT_METROCOP_CAPTAIN "Combine Sectorial Commander"
+#define JOB_DEPLOYMENT_METROCOP_CAPTAIN "Combine Sectoral Commander"
 //Command
 #define JOB_CAPTAIN "District Administrator"
 #define JOB_HEAD_OF_PERSONNEL "Labor Lead"

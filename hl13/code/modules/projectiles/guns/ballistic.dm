@@ -1,6 +1,6 @@
 //to do: modularize colt python, m4a1, ak47, and service rifle bullets/ammo casings.
 
-//about 1.84 seconds TTK, also has good AP
+//about 1.61 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/ar2
 	name = "\improper OSIPR"
 	desc = "A pulse rifle often dubbed the 'AR2'. Boasts superior armor piercing capabilities, accuracy, and firepower. Usually biolocked to only be usable by authorised individuals."
@@ -43,7 +43,7 @@
 	AddComponent(/datum/component/automatic_fire, 0.23 SECONDS)
 
 //old rifles that are exclusively loot. Similar to the AR2, but slightly less accurate, slightly less AP and slightly slower to fire.
-//about 2.24 seconds TTK, also has good AP. While the MP7 also has this TTK, the m4a1 is more accurate, has to reload less often, and has some armor piercing capabilities.
+//about 1.96 seconds TTK, also has good AP. While the MP7 also has this TTK, the m4a1 is more accurate, has to reload less often, and has some armor piercing capabilities.
 /obj/item/gun/ballistic/automatic/m4a1
 	name = "\improper M4A1 Rifle"
 	desc = "A old M4A1 pattern rifle. Not as good as the combine's rifles, but still powerful."
@@ -116,7 +116,7 @@
 	AddComponent(/datum/component/automatic_fire, 0.37 SECONDS)
 
 //cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30.
-//about 2.24 seconds TTK, also has good AP
+//about 1.96 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/servicerifle
 	name = "\improper Service Rifle"
 	desc = "An old surplus rifle from decades ago. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity."
@@ -488,7 +488,7 @@
 	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS, overtime_penalty_increase = 0.8, overtime_penalty_cap = 12)
 
 
-//about 2.04 seconds TTK with AP. While it has a bit higher DPS than the m4a1/service rifle, it is slightly less accurate at range and has to reload more often
+//about 1.87 seconds TTK with AP. While it has a bit higher DPS than the m4a1/service rifle, it is slightly less accurate at range and has to reload more often
 /obj/item/gun/ballistic/automatic/pulsesmg
 	name = "\improper pulse SMG"
 	desc = "A hybrid between the MP7 and AR2, the pulse smg has biolocking features and higher power rounds than the standard MP7, but is not yet as powerful as the AR2."
@@ -539,7 +539,7 @@
 /obj/item/ammo_box/magazine/internal/boltaction/mosin/start_empty
 	start_empty = TRUE
 
-/// Aprox 34 damage a shot, 4 shots to crit, can crit in as fast as ~1.8 seconds assuming it doesn't jam (though it is statistically likely to do so)
+/// Aprox 36 damage a shot, 4 shots to crit, can crit in as fast as ~1.8 seconds assuming it doesn't jam (though it is statistically likely to do so)
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
 	name = "mosin-nagant rifle"
 	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. Slightly moist."
@@ -597,7 +597,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/pulselmg
 	force = 12
 	spread = 20
-	recoil = 0.3
+	recoil = 0.1
 	fire_delay = 2
 	burst_size = 1
 	mag_display = TRUE

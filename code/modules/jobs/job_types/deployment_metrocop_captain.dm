@@ -79,6 +79,15 @@
 	if(outfit_id)
 		outfit_id.registered_name = "Sectoral Commander"
 
+	var/list/spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/combine)
+
+	for(var/datum/action/act as anything in spells_to_add)
+		var/datum/action/new_ability = new act(user)
+		if(istype(new_ability, /datum/action/cooldown/spell))
+			var/datum/action/cooldown/spell/new_spell = new_ability
+			new_spell.spell_requirements = NONE
+		new_ability.Grant(user)
+
 /datum/job/deployment_metrocop_captain/after_latejoin_spawn(mob/living/spawning)
 	. = ..()
 	if(ishuman(spawning))

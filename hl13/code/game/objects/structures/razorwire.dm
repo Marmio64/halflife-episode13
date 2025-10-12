@@ -54,7 +54,7 @@
 		return
 	playsound(src, 'hl13/sound/effects/barbed_wire_movement.ogg', 25, 1)
 	var/def_zone = ran_zone()
-	M.apply_damage(15, BRUTE, def_zone)
+	M.apply_damage(15, BRUTE, def_zone, sharpness = SHARP_EDGED)
 	razorwire_tangle(M)
 
 /obj/structure/razorwire/proc/razorwire_tangle(mob/living/entangled)

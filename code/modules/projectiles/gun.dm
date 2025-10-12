@@ -243,11 +243,6 @@
 
 	if(barrel_smoke_on_shoot)
 
-		//var/obj/effect/abstract/particle_holder/big_smoke = new(src.loc, /particles/smoke/cig/big)
-		//update_particle_position(big_smoke, smoker.dir)
-		//QDEL_IN(big_smoke, big_smoke.particles.lifespan)
-
-
 		var/x_component = sin(get_angle(user, pbtarget)) * 40
 		var/y_component = cos(get_angle(user, pbtarget)) * 40
 		var/obj/effect/abstract/particle_holder/gun_smoke = new(src.loc, /particles/firing_smoke)

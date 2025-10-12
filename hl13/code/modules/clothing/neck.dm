@@ -94,8 +94,8 @@
 			to_chat(H, span_notice("You decide to not risk cutting off your head."))
 
 /obj/item/clothing/neck/sectorial_cloak
-	name = "sectorial cloak"
-	desc = "A sectorial commander's black tactical cloak."
+	name = "sectoral cloak"
+	desc = "A sectoral commander's black tactical cloak."
 	icon = 'hl13/icons/obj/clothing/neck.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/neck.dmi'
 	icon_state = "black_cape"

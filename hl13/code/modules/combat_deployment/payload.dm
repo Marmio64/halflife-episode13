@@ -113,7 +113,7 @@
 				to_chat(H, "<span class='userdanger'>The payload cart is being pushed, stop it!</span>")
 			last_scream = world.time + 200
 		forceMove(get_turf(P))
-		playsound(src, 'hl13/sound/effects/cartmove.ogg', 25, TRUE, extrarange = -1)
+		playsound(src, 'hl13/sound/effects/cartmove.ogg', 15, TRUE, extrarange = -1)
 		if(istype(P, /obj/effect/payload_path/final_point))
 			blow_up()
 
@@ -124,7 +124,7 @@
 	priority_announce("The payload has been delivered! Long live the resistance!", "Lambda Priority Alert")
 	GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
 	SSticker.force_ending = FORCE_END_ROUND
-	explosion(src, 0, 10, 15, 5)
+	explosion(src, 0, 20, 30, 5)
 	for(var/X in GLOB.deployment_combine_players)
 		var/mob/living/carbon/human/H = X
 		SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')

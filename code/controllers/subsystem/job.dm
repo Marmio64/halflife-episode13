@@ -763,7 +763,8 @@ SUBSYSTEM_DEF(job)
 		if(length(available_turfs))
 			return pick(available_turfs)
 
-	stack_trace("Unable to find last resort spawn point.")
+	if(SSmapping.current_map.minetype != "combat_deployment")
+		stack_trace("Unable to find last resort spawn point.")
 	return GET_ERROR_ROOM
 
 /// Returns a list of minds of all heads of staff who are alive

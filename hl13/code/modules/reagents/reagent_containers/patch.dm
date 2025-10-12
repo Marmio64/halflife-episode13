@@ -1,7 +1,7 @@
 /obj/item/reagent_containers/pill/patch/medkit
 	name = "medkit"
 	desc = "A metal frame encasing a large vial of biogel. Includes useful automatic injection probes and tools for managing the application of the gel."
-	list_reagents = list(/datum/reagent/medicine/biogel = 50) //biogel is 1hp per unit, so 50
+	list_reagents = list(/datum/reagent/medicine/biogel = 60) //biogel is 1hp per unit, so 60
 	self_delay = 3.5 SECONDS
 	icon = 'hl13/icons/obj/medkits.dmi'
 	icon_state = "medkit"
@@ -15,7 +15,7 @@
 	name = "medvial"
 	desc = "The standalone vials found inside biogel medkits. Quicker to apply since it lacks the advanced features of medkits, but does not heal as much due to inefficient application of the gel."
 	list_reagents = list(/datum/reagent/medicine/biogel = 30)
-	self_delay = 2 SECONDS
+	self_delay = 1.5 SECONDS
 	icon_state = "medvial"
 	apply_sound = 'hl13/sound/effects/smallmedkit1.ogg'
 
@@ -115,5 +115,18 @@
 		/obj/item/reagent_containers/hypospray/medipen = 1,
 		/obj/item/storage/halflife/pill_bottle/paracetamol = 1,
 		/obj/item/healthanalyzer = 1,
+	)
+	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/halflife_combine/no_req/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/stack/medical/gauze = 1,
+		/obj/item/stack/medical/suture = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen/high_capacity = 1,
+		/obj/item/reagent_containers/hypospray/medipen = 1,
+		/obj/item/storage/halflife/pill_bottle/paracetamol = 1,
+		/obj/item/healthanalyzer/no_req = 1,
 	)
 	generate_items_inside(items_inside,src)

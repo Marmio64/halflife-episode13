@@ -262,7 +262,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
-		/obj/item/storage/medkit/halflife_combine = 1,
+		/obj/item/storage/medkit/halflife_combine/no_req = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 	)
 
@@ -400,7 +400,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/medkit = 2,
-		/obj/item/storage/medkit/halflife_combine = 1,
+		/obj/item/storage/medkit/halflife_combine/no_req = 1,
 		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
 

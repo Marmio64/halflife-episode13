@@ -2,7 +2,7 @@
 
 /obj/projectile/bullet/n762
 	name = "7.62x38mmR bullet"
-	damage = 26 //HL13 EDIT
+	damage = 28 //HL13 EDIT
 	armour_penetration = 20 //HL13 EDIT
 
 /obj/projectile/bullet/n762/high_veloc
@@ -133,7 +133,7 @@
 /obj/projectile/bullet/a357
 	name = ".357 bullet"
 	damage = 35 // hl13 edit
-	armour_penetration = 15
+	armour_penetration = 20
 	wound_bonus = -30
 	accurate_range = 125
 

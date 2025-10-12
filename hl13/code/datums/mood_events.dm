@@ -84,3 +84,8 @@
 /datum/mood_event/hygiene/filthy/highborn
 	description = "I smell absolutely disgusting, this is completely unfit for someone of my status! I need a shower right now!!"
 	mood_change = -10
+
+/datum/mood_event/rallied
+	description = "I feel rallied towards a cause!"
+	mood_change = 10
+	timeout = 45 SECONDS

@@ -54,7 +54,7 @@
 	icon_state = "cp_trenchcoatoverseer"
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/sectorial
-	name = "sectorial trenchcoat"
+	name = "sectoral trenchcoat"
 	desc = "A variant of the modified trenchcoat vest dyed with blue highlights to broadcast the authority of its wearer."
 	icon_state = "sectorial"
 

@@ -1,7 +1,9 @@
-/obj/projectile/bullet/pulse/ar2
+/obj/projectile/bullet/pulse
 	name = "pulse round"
 	icon_state = "pulse"
-	damage = 17
+
+/obj/projectile/bullet/pulse/ar2
+	damage = 18
 	wound_bonus = -10
 	armour_penetration = 20
 
@@ -9,22 +11,21 @@
 	speed = 4
 
 /obj/projectile/bullet/pulse/lmg
-	name = "pulse round"
-	icon_state = "pulse"
-	damage = 20
+	damage = 21
 	wound_bonus = -10
 	armour_penetration = 20
 
 /obj/projectile/bullet/pulse/weak
-	name = "pulse round"
-	icon_state = "pulse"
+	damage = 12
+	wound_bonus = -10
+	armour_penetration = 20
+
+/obj/projectile/bullet/pulse/smg
 	damage = 12
 	wound_bonus = -10
 	armour_penetration = 20
 
 /obj/projectile/bullet/pulse/turret
-	name = "pulse round"
-	icon_state = "pulse"
 	damage = 10
 	wound_bonus = -10
 	armour_penetration = 20
@@ -36,15 +37,12 @@
 	speed = 4
 
 /obj/projectile/bullet/pulse/very_weak
-	name = "pulse round"
-	icon_state = "pulse"
 	damage = 8
 	wound_bonus = -10
 	armour_penetration = 0
 
 /obj/projectile/bullet/pulse/heavy
 	name = "heavy pulse round"
-	icon_state = "pulse"
 	damage = 50
 	wound_bonus = -10
 	armour_penetration = 35

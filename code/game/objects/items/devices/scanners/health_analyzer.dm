@@ -32,6 +32,11 @@
 	var/give_wound_treatment_bonus = FALSE
 	var/last_scan_text
 	var/scanner_busy = FALSE
+	/// should the int check be ignored?
+	var/no_req = FALSE
+
+/obj/item/healthanalyzer/no_req
+	no_req = TRUE
 
 /obj/item/healthanalyzer/Initialize(mapload)
 	. = ..()
@@ -64,7 +69,7 @@
 	var/mob/living/M = interacting_with
 
 	//hl13 edit start, you've gotta be smart to operate the scanner effectively
-	if(user.get_stat_level(STATKEY_INT) < 12)
+	if(user.get_stat_level(STATKEY_INT) < 12 && !no_req)
 		to_chat(user, span_notice("You start fumbling with the scanner, not exactly sure how you use it correctly..."))
 		if(!do_after(user, 5 SECONDS, src))
 			to_chat(user, span_warning("You didn't finish scanning."))

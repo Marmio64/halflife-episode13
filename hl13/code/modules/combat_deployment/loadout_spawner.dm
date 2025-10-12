@@ -193,7 +193,6 @@
 			/datum/outfit/deployment_loadout/rebel/tier5/freeman,
 			/datum/outfit/deployment_loadout/rebel/tier5/veteran,
 			/datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt,
-			/datum/outfit/deployment_loadout/rebel/tier5/radio_operator,
 			/datum/outfit/deployment_loadout/rebel/tier5/sniper,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
@@ -269,7 +268,6 @@
 			/datum/outfit/deployment_loadout/combine/tier4/ordinal,
 			/datum/outfit/deployment_loadout/combine/tier4/medic_cop,
 			/datum/outfit/deployment_loadout/combine/tier4/engineer,
-			/datum/outfit/deployment_loadout/combine/tier4/scanner,
 			/datum/outfit/deployment_loadout/combine/tier4/overseer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
