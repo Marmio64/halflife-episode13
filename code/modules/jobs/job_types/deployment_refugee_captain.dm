@@ -20,7 +20,7 @@
 	combat_deployment_job = TRUE
 	combat_deployment_faction = REBEL_DEPLOYMENT_FACTION
 
-	cmode_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+	cmode_music = 'hl13/sound/music/combat/darkstalker.ogg'
 
 /datum/outfit/job/deployment_refugee_captain
 	name = "Deployment Refugee Captain"

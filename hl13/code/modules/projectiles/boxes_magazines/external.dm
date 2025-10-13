@@ -75,12 +75,12 @@
 
 /obj/item/ammo_box/magazine/mp7
 	name = "\improper MP7 magazine (4.6x30mm)"
-	desc = "A 45-round 4.6x30mm magazine, designed for the MP7."
+	desc = "A 40-round 4.6x30mm magazine, designed for the MP7."
 	icon_state = "smg9mm"
 	base_icon_state = "smg9mm"
 	ammo_type = /obj/item/ammo_casing/c46x30mm/mp7
 	caliber = CALIBER_46X30MM
-	max_ammo = 45
+	max_ammo = 40
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	multiple_sprite_use_base = TRUE

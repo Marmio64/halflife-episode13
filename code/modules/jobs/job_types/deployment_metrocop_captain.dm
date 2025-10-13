@@ -21,7 +21,7 @@
 	combat_deployment_job = TRUE
 	combat_deployment_faction = COMBINE_DEPLOYMENT_FACTION
 
-	cmode_music = 'hl13/sound/music/combat/branescan.ogg'
+	cmode_music = 'hl13/sound/music/combat/confrontation.ogg'
 
 /datum/job/deployment_metrocop_captain/get_spawn_message_information()
 	var/list/info = list()

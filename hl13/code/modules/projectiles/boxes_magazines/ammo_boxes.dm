@@ -23,4 +23,4 @@
 /obj/item/ammo_box/halflife/c46x30mm
 	name = "ammo box (4.6x30mm)"
 	ammo_type = /obj/item/ammo_casing/c46x30mm/mp7
-	max_ammo = 135
+	max_ammo = 120

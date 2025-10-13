@@ -21,7 +21,7 @@
 	outdoors = TRUE
 	sound_environment = SOUND_ENVIRONMENT_CITY
 	ambient_buzz = 'hl13/sound/ambience/townambience.ogg'
-	ambient_buzz_vol = 30
+	ambient_buzz_vol = 25
 
 	uses_daylight = TRUE
 	daylight_multiplier = 0.2
@@ -49,7 +49,7 @@
 
 /area/halflife/outdoors/plaza
 	name = "\improper Plaza"
-	ambient_buzz_vol = 35
+	ambient_buzz_vol = 30
 
 	first_time_text = "Central Plaza"
 
@@ -86,7 +86,7 @@
 /area/halflife/outdoors/forest/water
 	name = "\improper Outlands Waterways"
 	ambient_buzz = 'hl13/sound/ambience/lake_water.wav'
-	ambient_buzz_vol = 35
+	ambient_buzz_vol = 30
 
 /area/halflife/outdoors/outlands_city
 	name = "\improper Condemned City"
@@ -104,7 +104,9 @@
 	min_ambience_cooldown = 5 SECONDS
 	max_ambience_cooldown = 10 SECONDS
 	ambient_buzz = 'hl13/sound/ambience/deathmatch/deathmatchbuzz.ogg'
-	ambient_buzz_vol = 20
+	ambient_buzz_vol = 15
+
+	ambient_music_vol = 30
 
 /area/halflife/outdoors/deployment_city/forest
 	daylight_multiplier = 0.35
@@ -126,6 +128,7 @@
 	ambient_buzz = 'hl13/sound/ambience/town_ambience.ogg'
 
 	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_03.ogg'
+	ambient_music_vol = 28
 
 	ambientrain = RAIN_IN
 	dissipation_rate = 0.75
@@ -335,7 +338,7 @@
 	//ambience_index = AMBIENCE_HLSEWERS
 	sound_environment = SOUND_ENVIRONMENT_STONE_CORRIDOR
 	ambient_buzz = 'hl13/sound/ambience/sewer1.ogg'
-	ambient_buzz_vol = 100
+	ambient_buzz_vol = 60
 	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_02.ogg'
 	mood_bonus = -2
 	mood_message = "<span class='warning'>This place smells terrible.</span>\n"
@@ -347,7 +350,7 @@
 /area/halflife/indoors/sewer/tunnel
 	name = "\improper Tunnels"
 	ambient_buzz = 'hl13/sound/ambience/bunker1.ogg'
-	ambient_buzz_vol = 80
+	ambient_buzz_vol = 70
 
 	mood_message = "<span class='warning'>This place is unnerving...</span>\n"
 

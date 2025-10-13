@@ -147,8 +147,8 @@
 	spawn_path = /obj/item/reagent_containers/pill/patch/medkit
 
 /datum/supply_beacon_option/grenade
-	option_name = "MK3A2 Grenade (60 Points)"
-	cost = 60
+	option_name = "MK3A2 Grenade (75 Points)"
+	cost = 75
 	spawn_path = /obj/item/grenade/syndieminibomb/bouncer
 
 /datum/supply_beacon_option/ammocrate
@@ -167,8 +167,8 @@
 	spawn_path = /obj/item/sbeacondrop/rebel_turret
 
 /datum/supply_beacon_option/missile_targeter
-	option_name = "One-use Missile Targeter (225 Points)"
-	cost = 225
+	option_name = "One-use Missile Targeter (275 Points)"
+	cost = 275
 	spawn_path = /obj/item/halflife/missile_targeter/one_use
 
 /datum/supply_beacon_option/canister_targeter

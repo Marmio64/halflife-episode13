@@ -16,6 +16,7 @@
 	burst_size = 1
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY
+	w_class = WEIGHT_CLASS_BULKY
 	pin = /obj/item/firing_pin/implant/mindshield
 
 	load_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
@@ -43,7 +44,7 @@
 	AddComponent(/datum/component/automatic_fire, 0.23 SECONDS)
 
 //old rifles that are exclusively loot. Similar to the AR2, but slightly less accurate, slightly less AP and slightly slower to fire.
-//about 1.96 seconds TTK, also has good AP. While the MP7 also has this TTK, the m4a1 is more accurate, has to reload less often, and has some armor piercing capabilities.
+//about 1.96 seconds TTK
 /obj/item/gun/ballistic/automatic/m4a1
 	name = "\improper M4A1 Rifle"
 	desc = "A old M4A1 pattern rifle. Not as good as the combine's rifles, but still powerful."
@@ -457,7 +458,7 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/pulse
 	max_ammo = 8
 
-// About 2.24 seconds TTK
+// About 2.1 seconds TTK
 /obj/item/gun/ballistic/automatic/mp7
 	name = "\improper MP7 SMG"
 	desc = "Despite its small size, this submachine gun packs a punch and has an extended mag to keep opponents suppressed."
@@ -485,7 +486,7 @@
 
 /obj/item/gun/ballistic/automatic/mp7/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.14 SECONDS, overtime_penalty_increase = 0.8, overtime_penalty_cap = 12)
+	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS, overtime_penalty_increase = 0.8, overtime_penalty_cap = 12)
 
 
 //about 1.87 seconds TTK with AP. While it has a bit higher DPS than the m4a1/service rifle, it is slightly less accurate at range and has to reload more often

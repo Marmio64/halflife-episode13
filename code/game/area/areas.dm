@@ -93,14 +93,14 @@
 	///The background droning loop that plays 24/7
 	var/ambient_buzz = 'sound/ambience/general/shipambience.ogg'
 	///The volume of the ambient buzz
-	var/ambient_buzz_vol = 35
+	var/ambient_buzz_vol = 20
 	///Used to decide what the minimum time between ambience is
 	var/min_ambience_cooldown = 30 SECONDS
 	///Used to decide what the maximum time between ambience is
 	var/max_ambience_cooldown = 60 SECONDS
 
 	var/ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_01.ogg'
-	var/ambient_music_vol = 5
+	var/ambient_music_vol = 22
 
 	flags_1 = CAN_BE_DIRTY_1
 

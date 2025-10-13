@@ -124,7 +124,7 @@
 	priority_announce("The payload has been delivered! Long live the resistance!", "Lambda Priority Alert")
 	GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
 	SSticker.force_ending = FORCE_END_ROUND
-	explosion(src, 0, 20, 30, 5)
+	explosion(src, 1, 20, 30, 5)
 	for(var/X in GLOB.deployment_combine_players)
 		var/mob/living/carbon/human/H = X
 		SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')

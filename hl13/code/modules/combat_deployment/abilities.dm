@@ -35,7 +35,7 @@
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 
 	school = SCHOOL_EVOCATION
-	cooldown_time = 120 SECONDS
+	cooldown_time = 150 SECONDS
 
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
@@ -67,7 +67,7 @@
 
 	if(ishuman(victim))
 		var/mob/living/carbon/human/H = victim
-		H.reagents.add_reagent(/datum/reagent/medicine/muscle_stimulant, 6)
+		H.reagents.add_reagent(/datum/reagent/medicine/muscle_stimulant, 8)
 
 /datum/action/cooldown/spell/aoe/rally/combine
 	button_icon_state = "rally_combine"

@@ -472,7 +472,7 @@
 	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = 'hl13/sound/music/combat/branescan.ogg'
+	combat_music = 'hl13/sound/music/combat/lgorbifold.ogg'
 
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
 	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
@@ -542,7 +542,7 @@
 	r_pocket = /obj/item/gun/ballistic/automatic/pistol/usp/extended
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = 'hl13/sound/music/combat/lgorbifold.ogg'
+	combat_music = 'hl13/sound/music/combat/infiltrate.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier5/assassin/post_equip(mob/living/carbon/human/H)
 	H.change_stat(STATKEY_DEX, 4)

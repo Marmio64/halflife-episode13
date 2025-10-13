@@ -37,6 +37,8 @@
 			if(do_after(user, use_time, src))
 				launch_cannister(get_turf(interacting_with))
 				charges--
+				if(charges < 1 && !recharges)
+					qdel(src)
 			else
 				to_chat(user, span_warning("Insufficient time given to calculate coordinates."))
 		else
@@ -70,7 +72,7 @@
 	icon = 'hl13/icons/obj/radio.dmi'
 	icon_state = "walkietalkie"
 	var/charges = 2
-	var/use_time = 1 SECONDS
+	var/use_time = 2 SECONDS
 
 /obj/item/halflife/missile_targeter/one_use
 	charges = 1
@@ -85,6 +87,8 @@
 		if(do_after(user, use_time, src))
 			launch_missile(get_turf(interacting_with))
 			charges--
+			if(charges < 1)
+				qdel(src)
 		else
 			to_chat(user, span_warning("Insufficient time given to calculate coordinates."))
 
