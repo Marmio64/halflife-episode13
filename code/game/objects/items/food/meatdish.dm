@@ -45,8 +45,8 @@
 	icon = 'hl13/icons/obj/food.dmi'
 	icon_state = "grilledfish"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment/protein = 3,
-		/datum/reagent/consumable/nutriment/vitamin = 2,
+		/datum/reagent/consumable/nutriment/protein = 4,
+		/datum/reagent/consumable/nutriment/vitamin = 3,
 	)
 	tastes = list("fish" = 1)
 	foodtypes = SEAFOOD
