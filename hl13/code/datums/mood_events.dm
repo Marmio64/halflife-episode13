@@ -85,6 +85,28 @@
 	description = "I smell absolutely disgusting, this is completely unfit for someone of my status! I need a shower right now!!"
 	mood_change = -10
 
+//tv
+
+/datum/mood_event/tvbad
+	description = "Watching that program was demoralizing, it made me feel worse."
+	mood_change = -3
+	timeout = 4 MINUTES //can only watch once per day
+
+/datum/mood_event/tvboring
+	description = "Watching that program wasn't interesting, it felt like a waste of time."
+	mood_change = -1
+	timeout = 4 MINUTES
+
+/datum/mood_event/tvok
+	description = "Watching that program was somewhat interesting, it made me feel okay."
+	mood_change = 1
+	timeout = 4 MINUTES
+
+/datum/mood_event/tvgood
+	description = "Watching that program was moralizing, it made me feel better."
+	mood_change = 3
+	timeout = 4 MINUTES
+
 /datum/mood_event/rallied
 	description = "I feel rallied towards a cause!"
 	mood_change = 10
