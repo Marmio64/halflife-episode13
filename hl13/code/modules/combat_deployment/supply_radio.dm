@@ -69,7 +69,7 @@
 	var/list/display_names = generate_display_names()
 	if(!length(display_names))
 		return
-	var/choice = tgui_input_list(user, "POINTS AVAILABLE: [current_cash] MAX POINTS STORABLE: [max_cash]", "Select an item to purchase", display_names)
+	var/choice = tgui_input_list(user, "POINTS AVAILABLE: [current_cash] MAX POINTS: [max_cash]", "Select an item to purchase", display_names)
 	if(isnull(choice) || isnull(display_names[choice]))
 		return
 	if(!can_use_beacon(user))

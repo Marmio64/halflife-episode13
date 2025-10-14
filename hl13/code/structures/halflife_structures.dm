@@ -806,6 +806,22 @@
 
 	var/busy = FALSE
 
+	var/list/tv_start = list(
+	"Thank you for writing, Concerned. Of course, your question touches on one of the most basic biological impulses, with all its associated hopes and fears for the future of the species.",
+	"Allow me to address the anxieties underlying your concerns, rather than try to answer every possible question you might have left unvoiced.",
+	"Welcome back to another episode of Truth and Unity.",
+	"In this episode, we will discuss the various benefits of factory work!",
+	"Welcome back to another episode of chanting that we love the Combine!",
+	"Would we model ourselves on the Trilobite?")
+
+	var/list/tv_end = list(
+	"Be wise. Be safe. Be aware.",
+	"Therefore I say, yes, I am a collaborator. We must all collaborate, willingly, eagerly, if we expect to reap the benefits of unification. And reap we shall.",
+	"Let me assure you that the suppressing field will be shut off on the day that we have mastered ourselves...the day we can prove we no longer need it. And that day of transformation, I have it on good authority, is close at hand.",
+	"And that concludes this episode of Truth and Unity.",
+	"Stay tuned for more tips on how you can continue to serve your Benefactors!",
+	"Remember, the Combine know what is best for you!")
+
 /obj/structure/halflife/tv/Initialize()
 	. = ..()
 	register_context()
@@ -832,19 +848,25 @@
 	busy = TRUE
 	to_chat(usr, span_notice("You flip through static before finding a remaining Combine-approved broadcast. It's mostly propaganda, but something in there might make you feel better."))
 
-	if(!do_after(user, 30 SECONDS, src))
+	say("[pick(tv_start)]")
+
+	playsound(src, 'hl13/sound/effects/short_radio.ogg', 50, TRUE, extrarange = -3)
+
+	if(!do_after(user, rand(20 SECONDS, 30 SECONDS), src))
 		user.add_mood_event("tv", /datum/mood_event/tvboring)
 		to_chat(usr, span_warning("You turn the TV off mid-program. You felt like you wasted your time."))
 		busy = FALSE
 		return
 
+	say("[pick(tv_end)]")
+
 	if(prob(15))
 		user.add_mood_event("tv", /datum/mood_event/tvbad)
 		to_chat(usr, span_warning("You felt worse after watching that."))
-	else if(prob(40))
+	else if(prob(25))
 		user.add_mood_event("tv", /datum/mood_event/tvboring)
 		to_chat(usr, span_warning("You felt like you wasted your time watching that."))
-	else if(prob(35))
+	else if(prob(50))
 		user.add_mood_event("tv", /datum/mood_event/tvok)
 		to_chat(usr, span_notice("You felt okay after watching that."))
 	else

@@ -107,11 +107,9 @@
 	moving = FALSE
 	friendlies_present = 0
 	for(var/mob/living/hooman in orange(2, src))
-		if(hooman.stat != CONSCIOUS)
-			return
-		if(hooman.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+		if(hooman.deployment_faction == COMBINE_DEPLOYMENT_FACTION && hooman.stat == CONSCIOUS)
 			blocked = TRUE //STOP DAT CART
-		if(hooman.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+		if(hooman.deployment_faction == REBEL_DEPLOYMENT_FACTION && hooman.stat == CONSCIOUS)
 			moving = TRUE //move dat cart
 			friendlies_present++
 

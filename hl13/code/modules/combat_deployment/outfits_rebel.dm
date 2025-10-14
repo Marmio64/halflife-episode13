@@ -269,14 +269,7 @@
 
 	back = /obj/item/storage/bag/rebar_quiver
 	backpack_contents = list(
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
+		/obj/item/ammo_casing/rebar = 10,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -463,14 +456,7 @@
 
 	back = /obj/item/storage/bag/rebar_quiver
 	backpack_contents = list(
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
+		/obj/item/ammo_casing/rebar = 10,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
