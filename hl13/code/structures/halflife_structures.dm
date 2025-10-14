@@ -804,9 +804,55 @@
 	density = TRUE
 	anchored = TRUE
 
+	var/busy = FALSE
+
 /obj/structure/halflife/tv/Initialize()
 	. = ..()
 	register_context()
+
+/obj/structure/halflife/tv/interact(mob/living/carbon/human/user)
+	. = ..()
+
+	if(user.mob_mood.has_mood_of_category("tv"))
+		to_chat(usr, span_notice("There isn't anything else on that interests you."))
+		return
+
+	if(busy)
+		to_chat(usr, span_notice("The TV is already in use by someone else."))
+		return
+
+	if(SSdaylight.day_cycle_active == DAY_CYCLE_AFTERNOON || SSdaylight.day_cycle_active == DAY_CYCLE_DUSK)
+		to_chat(usr, span_notice("There's nothing on TV during working hours."))
+		return
+
+	if(SSdaylight.day_cycle_active == DAY_CYCLE_NIGHT)
+		to_chat(usr, span_notice("There's nothing on TV during curfew."))
+		return
+
+	busy = TRUE
+	to_chat(usr, span_notice("You flip through static before finding a remaining Combine-approved broadcast. It's mostly propaganda, but something in there might make you feel better."))
+
+	if(!do_after(user, 30 SECONDS, src))
+		user.add_mood_event("tv", /datum/mood_event/tvboring)
+		to_chat(usr, span_warning("You turn the TV off mid-program. You felt like you wasted your time."))
+		busy = FALSE
+		return
+
+	if(prob(15))
+		user.add_mood_event("tv", /datum/mood_event/tvbad)
+		to_chat(usr, span_warning("You felt worse after watching that."))
+	else if(prob(40))
+		user.add_mood_event("tv", /datum/mood_event/tvboring)
+		to_chat(usr, span_warning("You felt like you wasted your time watching that."))
+	else if(prob(35))
+		user.add_mood_event("tv", /datum/mood_event/tvok)
+		to_chat(usr, span_notice("You felt okay after watching that."))
+	else
+		user.add_mood_event("tv", /datum/mood_event/tvgood)
+		to_chat(usr, span_notice("You felt better after watching that."))
+	busy = FALSE
+
+	return
 
 /obj/structure/halflife/tv/screwdriver_act_secondary(mob/living/user, obj/item/weapon)
 	if(flags_1&NO_DEBRIS_AFTER_DECONSTRUCTION)
@@ -870,7 +916,7 @@
 
 /obj/structure/halflife/tv/wooden
 	name = "wood television console"
-	desc = "A television console made of wood. This was probably an antique long before the bombs dropped."
+	desc = "A television console made of wood. This was probably an antique long before the war."
 	icon_state = "wood_tv"
 
 /obj/structure/halflife/tv/wooden/deconstruct(disassembled = TRUE)
