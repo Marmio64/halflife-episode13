@@ -1,6 +1,6 @@
 /obj/projectile/bullet/c9mm/usp
 	name = "9mm bullet"
-	damage = 15
+	damage = 17
 	embed_type = /datum/embed_data/bullet_c9mm
 
 /obj/projectile/bullet/c9mm/usp/makeshift
@@ -21,7 +21,7 @@
 
 /obj/projectile/bullet/pellet/shotgun_buckshot/halflife
 	name = "buckshot pellet"
-	damage = 9
+	damage = 11
 	wound_bonus = 5
 	bare_wound_bonus = 5
 	wound_falloff_tile = -2.5 // low damage + additional dropoff will already curb wounding potential anything past point blank

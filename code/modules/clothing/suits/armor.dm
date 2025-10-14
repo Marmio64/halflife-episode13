@@ -307,8 +307,8 @@
 	AddComponent(/datum/component/item_equipped_movement_rustle)
 
 /datum/armor/armor_riot
-	melee = 50
-	bullet = 10
+	melee = 60
+	bullet = 15
 	laser = 10
 	energy = 10
 	fire = 80

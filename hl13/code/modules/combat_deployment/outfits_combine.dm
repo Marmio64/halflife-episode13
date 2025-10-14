@@ -234,6 +234,13 @@
 	l_pocket = /obj/item/ammo_box/colta357
 	r_pocket = /obj/item/ammo_box/colta357
 
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
+
+	backpack_contents = list(
+		/obj/item/ammo_box/colta357 = 1,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+	)
+
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/branescan.ogg'
 

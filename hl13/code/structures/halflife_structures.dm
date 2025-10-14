@@ -184,10 +184,10 @@
 		ladder.add_fingerprint(user)
 		if(!do_after(user, travel_time, target = src))
 			return
-		playsound(user, pick('hl13/sound//halflifeeffects/ladder1.ogg',
-							'hl13/sound//halflifeeffects/ladder2.ogg',
-							'hl13/sound//halflifeeffects/ladder3.ogg',
-							'hl13/sound//halflifeeffects/ladder4.ogg'), 60)
+		playsound(user, pick('hl13/sound/halflifeeffects/ladder1.ogg',
+							'hl13/sound/halflifeeffects/ladder2.ogg',
+							'hl13/sound/halflifeeffects/ladder3.ogg',
+							'hl13/sound/halflifeeffects/ladder4.ogg'), 60)
 
 	var/turf/target = get_turf(ladder)
 	user.zMove(target = target, z_move_flags = ZMOVE_CHECK_PULLEDBY|ZMOVE_ALLOW_BUCKLED|ZMOVE_INCLUDE_PULLED)
@@ -269,6 +269,7 @@
 			up.obstructed = FALSE
 			density = FALSE
 			to_chat(user, span_notice("You push up on the cover from below, and slide it off."))
+			playsound(src.loc, 'hl13/sound/effects/manhole.ogg', 50, TRUE)
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	if(!down && !up.obstructed)
@@ -278,6 +279,7 @@
 			up.obstructed = TRUE
 			obstructed = TRUE
 			to_chat(user, span_notice("You carefully drag and slide the cover back on from below."))
+			playsound(src.loc, 'hl13/sound/effects/manhole.ogg', 50, TRUE)
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	else
@@ -290,7 +292,7 @@
 				down.obstructed = FALSE
 				icon_state = "manhole_open"
 				desc = "An open manhole, it still stinks even after all these years. You could use a crowbar or your hands to slide the cover back on."
-
+				playsound(src.loc, 'hl13/sound/effects/manhole.ogg', 50, TRUE)
 				if(12 < user.get_stat_level(STATKEY_STR))
 					to_chat(user, span_notice("That was heavy, but you're strong, no way you're going to get hurt just from that."))
 				else
@@ -306,6 +308,7 @@
 				icon_state = "manhole_closed"
 				desc = "A heavy stamped manhole. You could probably pry it up with a crowbar to access the lower town systems. Or, try using your hands..."
 				to_chat(user, span_notice("You carefully slide the cover back on the manhole."))
+				playsound(src.loc, 'hl13/sound/effects/manhole.ogg', 50, TRUE)
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 
@@ -317,6 +320,7 @@
 			icon_state = "manhole_open"
 			desc = "An open manhole. You could use a crowbar or your hands to slide the cover back on."
 			to_chat(user, span_notice("You wedge the crowbar in and pull the cover off the manhole."))
+			playsound(src.loc, 'hl13/sound/effects/manhole.ogg', 50, TRUE)
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 	if(down && !obstructed)
@@ -326,6 +330,7 @@
 			icon_state = "manhole_closed"
 			desc = "A heavy stamped manhole. You could probably pry it up with a crowbar to access the lower town systems. Or, try using your hands..."
 			to_chat(user, span_notice("You hook the edge of the manhole cover with your crowbar and slide it back on."))
+			playsound(src.loc, 'hl13/sound/effects/manhole.ogg', 50, TRUE)
 			return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
 
 /obj/structure/ladder/halflife/manhole/update_icon_state()
@@ -340,7 +345,7 @@
 		icon_state = "ladder10"
 
 /obj/structure/bed/halflife
-	name = "base class Mojave Sun bed"
+	name = "base class hl13 bed"
 	desc = "Scream at the coders if you see this."
 	icon = 'hl13/icons/obj/beds.dmi'
 	can_deconstruct = FALSE
@@ -435,7 +440,7 @@
 	damage_deflection = 15
 	can_atmos_pass = ATMOS_PASS_YES
 	flags_1 = ON_BORDER_1
-	hitted_sound = 'hl13/sound//halflifeeffects/impact/chain fence/chainfence.ogg'
+	hitted_sound = 'hl13/sound/halflifeeffects/impact/chain fence/chainfence.ogg'
 	var/fencepasschance = 90
 	var/basetype = /obj/structure/halflife/fence //used for corner debugging
 	var/canpass = FALSE // if projectiles can go through

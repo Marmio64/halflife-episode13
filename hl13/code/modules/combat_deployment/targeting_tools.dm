@@ -37,6 +37,7 @@
 			if(do_after(user, use_time, src))
 				launch_cannister(get_turf(interacting_with))
 				charges--
+				playsound(src, 'hl13/sound/effects/short_radio.ogg', 50, TRUE, extrarange = -3)
 				if(charges < 1 && !recharges)
 					qdel(src)
 			else
@@ -87,6 +88,7 @@
 		if(do_after(user, use_time, src))
 			launch_missile(get_turf(interacting_with))
 			charges--
+			playsound(src, 'hl13/sound/effects/short_radio.ogg', 50, TRUE, extrarange = -3)
 			if(charges < 1)
 				qdel(src)
 		else

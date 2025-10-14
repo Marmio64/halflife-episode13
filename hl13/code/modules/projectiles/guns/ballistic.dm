@@ -229,7 +229,7 @@
 	playsound(user, charge_sound, fire_sound_volume, vary_fire_sound)
 
 
-// about 2.97 seconds TTK (time to knock/crit)
+// about 2.8 seconds TTK (time to knock/crit)
 /obj/item/gun/ballistic/automatic/pistol/usp
 	name = "USP Match"
 	desc = "A small and light 9mm pistol which is often used as a metropolice standard carry."
@@ -248,7 +248,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/usp/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.33 SECONDS, overtime_penalty_increase = 0.8)
+	AddComponent(/datum/component/automatic_fire, 0.35 SECONDS, overtime_penalty_increase = 0.8)
 
 /obj/item/gun/ballistic/automatic/pistol/usp/no_mag
 	spawnwithmagazine = FALSE
@@ -324,7 +324,7 @@
 	vary_fire_sound = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 
-// about 1.6 seconds TTK if you hit your first shot (so no cooldown on it) and are point blank
+// Can technically down someone in about a second if you hit all pellets point blank in two shots, but unlikely.
 /obj/item/gun/ballistic/shotgun/spas12
 	name = "SPAS 12"
 	desc = "A spectacularly lethal pump action shotgun, for close encounters."
@@ -338,7 +338,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/com/spas12
 	force = 12
 	recoil = 1.5
-	fire_delay = 8
+	fire_delay = 9
 	vary_fire_sound = FALSE
 
 	inhand_icon_state = "spas12"

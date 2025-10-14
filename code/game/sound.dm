@@ -200,7 +200,7 @@
 
 	var/volume_modifier = prefs.read_preference(/datum/preference/numeric/sound_lobby_volume)
 	if((prefs && volume_modifier) && !CONFIG_GET(flag/disallow_title_music))
-		SEND_SOUND(src, sound(SSticker.login_music, repeat = 0, wait = 0, volume = volume_modifier, channel = CHANNEL_LOBBYMUSIC)) // MAD JAMS
+		SEND_SOUND(src, sound(SSticker.login_music, repeat = 0, wait = 0, volume = volume_modifier/5, channel = CHANNEL_LOBBYMUSIC)) // MAD JAMS
 
 //hl13 edit begin
 /client/proc/playendroundmusic(vol = 25)
