@@ -302,7 +302,7 @@
 /datum/outfit/deployment_loadout/rebel/tier3/scout
 	name = "Deployment: Rebel Scout"
 	display_name = "Rebel Scout"
-	desc = "You are a speedy glass cannon that uses a shotgun for high upclose damage, but lack much of any armor. You specialize best in taking out more vulnerable backliners who can't effectively fight back."
+	desc = "You are a speedy glass cannon that uses a shotgun for high upclose damage, but lack armor completely. You specialize best in taking out more vulnerable backliners who can't effectively fight back."
 
 	uniform = /obj/item/clothing/under/citizen/refugee
 	r_pocket = /obj/item/flashlight/seclite
@@ -311,7 +311,7 @@
 	suit_store = /obj/item/gun/ballistic/shotgun/spas12
 
 	back = /obj/item/storage/backpack/halflife/satchel
-	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+	head = /obj/item/clothing/head/halflife/scout_hat
 
 	backpack_contents = list(
 		/obj/item/storage/box/lethalshot/halflife = 3,
@@ -319,6 +319,11 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+/datum/outfit/deployment_loadout/rebel/tier3/scout/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	if(prob(25))
+		H.cmode_music = 'hl13/sound/music/combat/fasterthanaspeedingbullet.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier3/medic_rebel
 	name = "Deployment: Upgraded Medic Rebel"
@@ -526,10 +531,15 @@
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
 
+/datum/outfit/deployment_loadout/rebel/tier4/spy/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	if(prob(25))
+		H.cmode_music = 'hl13/sound/music/combat/rightbehindyou.ogg'
+
 /datum/outfit/deployment_loadout/rebel/tier4/scout
 	name = "Deployment: Upgraded Rebel Scout"
 	display_name = "Upgraded Rebel Scout"
-	desc = "You are a speedy glass cannon that uses a shotgun for high upclose damage, but lack much of any armor. You specialize best in taking out more vulnerable backliners who can't effectively fight back. As an upgraded variant, you move faster and get an extra healthpen."
+	desc = "You are a speedy glass cannon that uses a shotgun for high upclose damage, but lack armor completely. You specialize best in taking out more vulnerable backliners who can't effectively fight back. As an upgraded variant, you move faster and get an extra healthpen."
 
 	uniform = /obj/item/clothing/under/citizen/refugee
 	r_pocket = /obj/item/flashlight/seclite
@@ -538,7 +548,7 @@
 	suit_store = /obj/item/gun/ballistic/shotgun/spas12
 
 	back = /obj/item/storage/backpack/halflife/satchel
-	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+	head = /obj/item/clothing/head/halflife/scout_hat
 
 	backpack_contents = list(
 		/obj/item/storage/box/lethalshot/halflife = 3,
@@ -546,6 +556,11 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+/datum/outfit/deployment_loadout/rebel/tier4/scout/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	if(prob(25))
+		H.cmode_music = 'hl13/sound/music/combat/fasterthanaspeedingbullet.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier4/medic_rebel
 	name = "Deployment: Upgraded Medic Rebel+"

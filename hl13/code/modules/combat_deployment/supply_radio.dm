@@ -95,6 +95,8 @@
 
 	to_chat(user, span_hear("Item purchased."))
 
+	playsound(src, 'hl13/sound/effects/short_radio.ogg', 50, TRUE, extrarange = -3)
+
 	new item_to_spawn(user.loc, item_amount)
 
 	current_cash -= new_option.cost

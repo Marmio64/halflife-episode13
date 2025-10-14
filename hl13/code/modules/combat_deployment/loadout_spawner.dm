@@ -92,7 +92,9 @@
 
 		for(var/obj/item/item in human_user.get_equipped_items(INCLUDE_POCKETS))
 			qdel(item)
-
+		human_user.STASTR = 10
+		human_user.STAINT = 10
+		human_user.STADEX = 10
 		human_user.equipOutfit(new_loadout) // Loadout
 		human_user.combat_deployment_loadout_tier = new_loadout.loadout_tier
 		human_user.loadout_upgrade_available = TRUE

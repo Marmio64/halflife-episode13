@@ -19,6 +19,9 @@
 	name = "\improper Outdoors"
 	static_lighting = TRUE
 	outdoors = TRUE
+	ambience_index = AMBIENCE_HLOUTSIDE
+	max_ambience_cooldown = 30 SECONDS
+	min_ambience_cooldown = 15 SECONDS
 	sound_environment = SOUND_ENVIRONMENT_CITY
 	ambient_buzz = 'hl13/sound/ambience/townambience.ogg'
 	ambient_buzz_vol = 25
@@ -332,8 +335,10 @@
 	name = "\improper Sewers"
 	base_lighting_alpha = 5
 	icon_state = "away"
-	//ambience_index = AMBIENCE_HLSEWERS
+	ambience_index = AMBIENCE_HLSEWERS
 	sound_environment = SOUND_ENVIRONMENT_STONE_CORRIDOR
+	max_ambience_cooldown = 40 SECONDS
+	min_ambience_cooldown = 20 SECONDS
 	ambient_buzz = 'hl13/sound/ambience/sewer1.ogg'
 	ambient_buzz_vol = 60
 	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_02.ogg'

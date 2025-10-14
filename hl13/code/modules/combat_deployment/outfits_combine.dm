@@ -367,7 +367,7 @@
 /datum/outfit/deployment_loadout/combine/tier4/ordinal
 	name = "Deployment: Combine Ordinal"
 	display_name = "Combine Ordinal"
-	desc = "You are an OTA soldier upgraded to have a pulse SMG and an upgraded manhack deployer."
+	desc = "You are an OTA soldier upgraded to have a pulse SMG and an improved manhack deployer."
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
 	uniform = /obj/item/clothing/under/combine/overwatch
@@ -552,6 +552,7 @@
 	combat_music = 'hl13/sound/music/combat/infiltrate.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier5/assassin/post_equip(mob/living/carbon/human/H)
+	. = ..()
 	H.change_stat(STATKEY_DEX, 4)
 
 /datum/outfit/deployment_loadout/combine/tier5/suppressor

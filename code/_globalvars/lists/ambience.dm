@@ -191,18 +191,31 @@ GLOBAL_LIST_INIT(creepy_ambience,list(
 ))
 
 GLOBAL_LIST_INIT(hloutside_ambience,list(
-	'hl13/sound/ambience/trainstation.ogg',
-	'hl13/sound/ambience/vaguevoices.ogg',
-	'hl13/sound/ambience/escapearray.ogg',
-	'hl13/sound/ambience/resurrectedteleport.ogg',
-	'hl13/sound/ambience/calabiyaumodel.ogg',
-	'hl13/sound/ambience/suppressionfield.ogg',
-	'hl13/sound/ambience/vlvx_song3.ogg',
-	'hl13/sound/ambience/hl2_song2.ogg',
-	'hl13/sound/ambience/hl2_song8.ogg',
-	'hl13/sound/ambience/vlvx_song20.ogg',
-	'hl13/sound/ambience/particlestorm.ogg',
-	'sound/ambience/ruin/ambiruin6.ogg', ))
+	'hl13/sound/ambience/wind/wind4.ogg',
+	'hl13/sound/ambience/wind/wind5.ogg',
+	'hl13/sound/ambience/wind/wind6.ogg',
+	'hl13/sound/ambience/wind/wind7.ogg',
+	'hl13/sound/ambience/wind/wind8.ogg',
+	'hl13/sound/ambience/wind/wind9.ogg',
+	'hl13/sound/ambience/wind/wind10.ogg',
+	'hl13/sound/ambience/wind/wind11.ogg',
+	'hl13/sound/ambience/wind/wind12.ogg',
+	'hl13/sound/ambience/wind/wind13.ogg',
+	'hl13/sound/ambience/wind/wind14.ogg',
+	'hl13/sound/ambience/wind/wind15.ogg',
+	'hl13/sound/ambience/wind/wind16.ogg',
+	'hl13/sound/ambience/wind/wind17.ogg',
+	'hl13/sound/ambience/wind/wind18.ogg',
+	'hl13/sound/ambience/wind/wind19.ogg',
+	'hl13/sound/ambience/wind/wind20.ogg',
+	'hl13/sound/ambience/wind/wind21.ogg',
+	'hl13/sound/ambience/wind/wind22.ogg',
+	'hl13/sound/ambience/wind/wind23.ogg',
+	'hl13/sound/ambience/wind/wind24.ogg',
+	'hl13/sound/ambience/wind/wind25.ogg',
+	'hl13/sound/ambience/wind/wind26.ogg',
+	'hl13/sound/ambience/wind/wind27.ogg',
+	'hl13/sound/ambience/wind/wind28.ogg', ))
 
 GLOBAL_LIST_INIT(hlinside_ambience,list(
 	'hl13/sound/ambience/trainstation.ogg',
@@ -219,16 +232,12 @@ GLOBAL_LIST_INIT(hlinside_ambience,list(
 	'sound/ambience/ruin/ambiruin6.ogg', ))
 
 GLOBAL_LIST_INIT(hlsewers_ambience,list(
-	'sound/ambience/maintenance/ambimaint1.ogg',
-	'sound/ambience/maintenance/ambimaint2.ogg',
-	'sound/ambience/maintenance/ambimaint3.ogg',
-	'sound/ambience/maintenance/ambimaint4.ogg',
-	'hl13/sound/ambience/deprecatedcooridors.ogg', //https://www.youtube.com/watch?v=bt3Ms9-bs9o&list=PL80BLZPE6cUJwx-AveOU4sGYJyqN4jJDC&index=35&ab_channel=zeNate
-	'hl13/sound/ambience/probablynotaproblem.ogg',
-	'hl13/sound/ambience/vlvx_song3.ogg',
-	'hl13/sound/ambience/vlvx_song20.ogg',
-	'hl13/sound/ambience/hl1_song5.ogg',
-	'hl13/sound/ambience/hl2_song2.ogg'))
+	'hl13/sound/ambience/wind/wind_5_1.ogg',
+	'hl13/sound/ambience/wind/wind_2_1.ogg',
+	'hl13/sound/ambience/wind/wind_2_2.ogg',
+	'hl13/sound/ambience/wind/wind_3_1.ogg',
+	'hl13/sound/ambience/wind/wind_4_1.ogg',
+	'hl13/sound/ambience/wind/wind_4_2.ogg', ))
 
 
 GLOBAL_LIST_INIT(hlforest_ambience,list(

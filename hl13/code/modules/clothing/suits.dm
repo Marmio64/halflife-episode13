@@ -347,10 +347,11 @@
 	slowdown = -0.66
 
 /obj/item/clothing/suit/armor/browncoat/scout
-	slowdown = -0.33
+	slowdown = -0.45
+	armor_type = /datum/armor/none
 
 /obj/item/clothing/suit/armor/browncoat/scout/upgraded
-	slowdown = -0.5
+	slowdown = -0.6
 
 /obj/item/clothing/suit/armor/browncoat/deployment
 	slowdown = -0.5
