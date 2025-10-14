@@ -13,6 +13,7 @@
 	elevation = 17
 	elevation_open = 17
 	can_weld_shut = FALSE
+	projectile_passchance = 50
 
 /obj/structure/closet/crate/bin/LateInitialize()
 	. = ..()

@@ -11,6 +11,8 @@
 	icon_state = "cannister"
 	density = TRUE
 	anchored = TRUE
+	projectile_passchance = 50
+	pixel_x = -16
 
 // TRASH.... //
 /obj/structure/halflife/trash
