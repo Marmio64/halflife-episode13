@@ -31,7 +31,7 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 	if(SSmapping.current_map.combat_deployment_gamemode == "koth")
 		info += "You are playing for the Combine Side in the King of The Hill TDM game mode! Capture the central flag and keep it under your faction's control for a total of five minutes to win! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
 	if(SSmapping.current_map.combat_deployment_gamemode == "payload")
-		info += "You are playing for the Combine Side in the Payload gamemode! Defend the cart for 7 minutes to win! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
+		info += "You are playing for the Combine Side in the Payload gamemode! Defend the cart to win! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
 
 	return info
 

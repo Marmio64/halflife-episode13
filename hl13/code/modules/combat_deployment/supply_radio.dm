@@ -15,19 +15,25 @@
 /obj/item/hl2/supply_radio/process()
 	if(faction_belonging == COMBINE_DEPLOYMENT_FACTION)
 		max_cash = GLOB.deployment_combine_cash
+		max_cash = ROUND_UP(max_cash)
 		cash_regeneration = ROUND_UP(GLOB.deployment_combine_cash / 50)
 		if(5 < cash_regeneration)
 			cash_regeneration = 5
 		if(current_cash < max_cash)
 			current_cash += cash_regeneration
+		if(max_cash < current_cash)
+			current_cash = max_cash
 
 	else if(faction_belonging == REBEL_DEPLOYMENT_FACTION)
 		max_cash = GLOB.deployment_rebels_cash
+		max_cash = ROUND_UP(max_cash)
 		cash_regeneration = ROUND_UP(GLOB.deployment_rebels_cash / 50)
 		if(5 < cash_regeneration)
 			cash_regeneration = 5
 		if(current_cash < max_cash)
 			current_cash += cash_regeneration
+		if(max_cash < current_cash)
+			current_cash = max_cash
 
 /obj/item/hl2/supply_radio/interact(mob/user)
 	. = ..()
@@ -63,7 +69,7 @@
 	var/list/display_names = generate_display_names()
 	if(!length(display_names))
 		return
-	var/choice = tgui_input_list(user, "CURRENT NUMBER OF SUPPLY POINTS: [current_cash]", "Select an item to purchase", display_names)
+	var/choice = tgui_input_list(user, "POINTS AVAILABLE: [current_cash] MAX POINTS STORABLE: [max_cash]", "Select an item to purchase", display_names)
 	if(isnull(choice) || isnull(display_names[choice]))
 		return
 	if(!can_use_beacon(user))
@@ -108,7 +114,6 @@
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/supply_beacon_option/medkit,
 			/datum/supply_beacon_option/grenade,
 			/datum/supply_beacon_option/ammocrate,
 			/datum/supply_beacon_option/combine_turret,
@@ -124,7 +129,6 @@
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/supply_beacon_option/medkit,
 			/datum/supply_beacon_option/grenade,
 			/datum/supply_beacon_option/ammocrate,
 			/datum/supply_beacon_option/rebel_turret,
@@ -141,47 +145,42 @@
 	var/spawn_path
 	var/amount = 1
 
-/datum/supply_beacon_option/medkit
-	option_name = "Medkit (35 Points)"
-	cost = 35
-	spawn_path = /obj/item/reagent_containers/pill/patch/medkit
-
 /datum/supply_beacon_option/grenade
-	option_name = "MK3A2 Grenade (75 Points)"
-	cost = 75
+	option_name = "MK3A2 Grenade (100 Points)"
+	cost = 100
 	spawn_path = /obj/item/grenade/syndieminibomb/bouncer
 
 /datum/supply_beacon_option/ammocrate
-	option_name = "Stationary Ammo Crate (125 Points)"
-	cost = 125
+	option_name = "Stationary Ammo Crate (150 Points)"
+	cost = 150
 	spawn_path = /obj/machinery/ammo_crate/low_health
 
 /datum/supply_beacon_option/combine_turret
-	option_name = "Turret Beacon (125 Points)"
-	cost = 125
+	option_name = "Turret Beacon (150 Points)"
+	cost = 150
 	spawn_path = /obj/item/sbeacondrop/combine_turret
 
 /datum/supply_beacon_option/rebel_turret
-	option_name = "Turret Beacon (125 Points)"
-	cost = 125
+	option_name = "Turret Beacon (150 Points)"
+	cost = 150
 	spawn_path = /obj/item/sbeacondrop/rebel_turret
 
 /datum/supply_beacon_option/missile_targeter
-	option_name = "One-use Missile Targeter (275 Points)"
-	cost = 275
+	option_name = "One-use Missile Targeter (300 Points)"
+	cost = 300
 	spawn_path = /obj/item/halflife/missile_targeter/one_use
 
 /datum/supply_beacon_option/canister_targeter
-	option_name = "Modified Canister Targeter (225 Points)"
-	cost = 225
+	option_name = "Modified Canister Targeter (250 Points)"
+	cost = 250
 	spawn_path = /obj/item/halflife/cannister_targeter/modified
 
 /datum/supply_beacon_option/rebel_tier5
-	option_name = "Tier 5 Loadout Beacon (450 Points)"
-	cost = 450
+	option_name = "Tier 5 Loadout Beacon (500 Points)"
+	cost = 500
 	spawn_path = /obj/item/hl2/loadout_picker/rebel/tier5/nonstick
 
 /datum/supply_beacon_option/combine_tier5
-	option_name = "Tier 5 Loadout Beacon (450 Points)"
-	cost = 450
+	option_name = "Tier 5 Loadout Beacon (500 Points)"
+	cost = 500
 	spawn_path = /obj/item/hl2/loadout_picker/combine/tier5/nonstick

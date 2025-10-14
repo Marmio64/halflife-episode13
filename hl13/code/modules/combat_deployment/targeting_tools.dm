@@ -12,7 +12,6 @@
 	name = "modified canister targeting tool"
 	desc = "A tool that feeds coordinates to an offsite location, prompting them to send a headcrab canister at the target. Each canister deals a large amount of damage on impact and carries three headcrabs of random types. Click a visible tile to send a canister after a 2 second delay. Does not recharge uses overtime"
 	recharges = FALSE
-	use_time = 1 SECONDS
 
 /obj/item/halflife/cannister_targeter/Initialize(mapload, obj/item/seeds/newseed)
 	. = ..()
@@ -34,6 +33,7 @@
 	. = ..()
 	if(1 <= charges)
 		if(!istype(interacting_with, /turf/open/openspace) && !istype(interacting_with, /turf/closed))
+			to_chat(user, span_notice("Radioing coordinates..."))
 			if(do_after(user, use_time, src))
 				launch_cannister(get_turf(interacting_with))
 				charges--
@@ -73,7 +73,7 @@
 	icon = 'hl13/icons/obj/radio.dmi'
 	icon_state = "walkietalkie"
 	var/charges = 2
-	var/use_time = 2 SECONDS
+	var/use_time = 3 SECONDS
 
 /obj/item/halflife/missile_targeter/one_use
 	charges = 1
@@ -85,6 +85,7 @@
 /obj/item/halflife/missile_targeter/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	. = ..()
 	if(1 <= charges)
+		to_chat(user, span_notice("Radioing coordinates..."))
 		if(do_after(user, use_time, src))
 			launch_missile(get_turf(interacting_with))
 			charges--

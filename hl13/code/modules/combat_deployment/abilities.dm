@@ -21,7 +21,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 45 SECONDS
+	cooldown_time = 40 SECONDS
 	item_type = /obj/item/stack/sheet/mineral/sandbags/three
 	requires_hands = TRUE
 	delete_old = FALSE
