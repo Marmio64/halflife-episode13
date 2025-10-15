@@ -10,7 +10,7 @@
 /datum/wound_pregen_data/flesh_slash
 	abstract = TRUE
 
-	required_wounding_types = list(WOUND_SLASH)
+	required_wounding_type = WOUND_SLASH
 	required_limb_biostate = BIO_FLESH
 
 	wound_series = WOUND_SERIES_FLESH_SLASH_BLEED
@@ -380,7 +380,7 @@
 
 	wound_path_to_generate = /datum/wound/slash/flesh/severe
 
-	threshold_minimum = 50
+	threshold_minimum = 60
 
 /datum/wound/slash/flesh/severe/update_descriptions()
 	if(!limb.can_bleed())
@@ -418,7 +418,7 @@
 	abstract = FALSE
 
 	wound_path_to_generate = /datum/wound/slash/flesh/critical
-	threshold_minimum = 80
+	threshold_minimum = 90
 
 /datum/wound/slash/flesh/moderate/many_cuts
 	name = "Numerous Small Slashes"

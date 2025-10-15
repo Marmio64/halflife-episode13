@@ -182,7 +182,7 @@
 	abstract = TRUE
 
 	required_limb_biostate = (BIO_FLESH)
-	required_wounding_types = list(WOUND_PIERCE)
+	required_wounding_type = WOUND_PIERCE
 
 	wound_series = WOUND_SERIES_FLESH_PUNCTURE_BLEED
 
@@ -254,7 +254,7 @@
 
 	wound_path_to_generate = /datum/wound/pierce/bleed/severe
 
-	threshold_minimum = 50
+	threshold_minimum = 60
 
 /datum/wound/pierce/bleed/severe/update_descriptions()
 	if(!limb.can_bleed())
@@ -333,4 +333,4 @@
 
 	wound_path_to_generate = /datum/wound/pierce/bleed/critical
 
-	threshold_minimum = 100
+	threshold_minimum = 110

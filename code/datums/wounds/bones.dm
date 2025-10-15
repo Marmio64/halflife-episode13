@@ -8,7 +8,7 @@
 	abstract = TRUE
 	required_limb_biostate = BIO_BONE
 
-	required_wounding_types = list(WOUND_BLUNT)
+	required_wounding_type = WOUND_BLUNT
 
 	wound_series = WOUND_SERIES_BONE_BLUNT_BASIC
 
@@ -257,7 +257,7 @@
 
 	required_limb_biostate = BIO_JOINTED
 
-	threshold_minimum = 35
+	threshold_minimum = 40
 
 /datum/wound/blunt/bone/moderate/Destroy()
 	if(victim)
@@ -401,7 +401,7 @@
 
 	wound_path_to_generate = /datum/wound/blunt/bone/severe
 
-	threshold_minimum = 60
+	threshold_minimum = 65
 
 /// Compound Fracture (Critical Blunt)
 /datum/wound/blunt/bone/critical
@@ -441,7 +441,7 @@
 
 	wound_path_to_generate = /datum/wound/blunt/bone/critical
 
-	threshold_minimum = 115
+	threshold_minimum = 120
 
 // doesn't make much sense for "a" bone to stick out of your head
 /datum/wound/blunt/bone/critical/apply_wound(obj/item/bodypart/L, silent = FALSE, datum/wound/old_wound = null, smited = FALSE, attack_direction = null, wound_source = "Unknown", replacing = FALSE)
