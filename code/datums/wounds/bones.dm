@@ -257,7 +257,7 @@
 
 	required_limb_biostate = BIO_JOINTED
 
-	threshold_minimum = 40
+	threshold_minimum = 115
 
 /datum/wound/blunt/bone/moderate/Destroy()
 	if(victim)
@@ -384,8 +384,6 @@
 	treatable_by = list(/obj/item/stack/sticky_tape/surgical, /obj/item/stack/medical/bone_gel)
 	status_effect_type = /datum/status_effect/wound/blunt/bone/severe
 	scar_keyword = "bluntsevere"
-	brain_trauma_group = BRAIN_TRAUMA_MILD
-	trauma_cycle_cooldown = 2 MINUTES //hl13 edit
 	internal_bleeding_chance = 30 //hl13 edit
 	wound_flags = (ACCEPTS_GAUZE | MANGLES_INTERIOR)
 	regen_ticks_needed = 90 // ticks every 2 seconds, 180 seconds, so roughly 3 minutes by default
@@ -401,7 +399,7 @@
 
 	wound_path_to_generate = /datum/wound/blunt/bone/severe
 
-	threshold_minimum = 65
+	threshold_minimum = 140
 
 /// Compound Fracture (Critical Blunt)
 /datum/wound/blunt/bone/critical
@@ -424,7 +422,7 @@
 	treatable_by = list(/obj/item/stack/sticky_tape/surgical, /obj/item/stack/medical/bone_gel)
 	status_effect_type = /datum/status_effect/wound/blunt/bone/critical
 	scar_keyword = "bluntcritical"
-	brain_trauma_group = BRAIN_TRAUMA_SEVERE
+	brain_trauma_group = BRAIN_TRAUMA_MILD
 	trauma_cycle_cooldown = 3 MINUTES //hl13 edit
 	internal_bleeding_chance = 50 //hl13 edit
 	wound_flags = (ACCEPTS_GAUZE | MANGLES_INTERIOR)
@@ -441,7 +439,7 @@
 
 	wound_path_to_generate = /datum/wound/blunt/bone/critical
 
-	threshold_minimum = 120
+	threshold_minimum = 200
 
 // doesn't make much sense for "a" bone to stick out of your head
 /datum/wound/blunt/bone/critical/apply_wound(obj/item/bodypart/L, silent = FALSE, datum/wound/old_wound = null, smited = FALSE, attack_direction = null, wound_source = "Unknown", replacing = FALSE)

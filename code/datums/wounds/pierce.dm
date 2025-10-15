@@ -218,7 +218,7 @@
 
 	wound_path_to_generate = /datum/wound/pierce/bleed/moderate
 
-	threshold_minimum = 30
+	threshold_minimum = 25
 
 /datum/wound/pierce/bleed/moderate/update_descriptions()
 	if(!limb.can_bleed())
@@ -333,4 +333,4 @@
 
 	wound_path_to_generate = /datum/wound/pierce/bleed/critical
 
-	threshold_minimum = 110
+	threshold_minimum = 165

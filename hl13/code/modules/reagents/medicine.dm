@@ -50,6 +50,9 @@
 	need_mob_update += affected_mob.adjustOxyLoss(-healing * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
 	need_mob_update += affected_mob.adjustBruteLoss(-healing * REM * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjustFireLoss(-healing * REM * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+	for(var/i in affected_mob.all_wounds)
+		var/datum/wound/iter_wound = i
+		iter_wound.on_synthflesh(healing/6) //slightly helps with wounds
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
 

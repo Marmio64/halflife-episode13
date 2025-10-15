@@ -79,8 +79,13 @@
 	if(HAS_TRAIT(owner, TRAIT_EASYBLEED) && !HAS_TRAIT(owner, TRAIT_HUSK) && !HAS_TRAIT(owner, TRAIT_NOBLOOD) && ((woundtype == WOUND_PIERCE) || (woundtype == WOUND_SLASH)))
 		damage *= 1.5
 
-	var/base_roll = rand(1, round(damage ** WOUND_DAMAGE_EXPONENT))
+	if(prob(20)) //Feeling lucky?
+		damage *= 0.8
+
+	var/base_roll = round(damage ** WOUND_DAMAGE_EXPONENT)
+
 	var/injury_roll = base_roll
+
 	injury_roll = check_woundings_mods(woundtype, injury_roll, damage, wound_bonus, exposed_wound_bonus, wound_clothing)
 	var/list/series_wounding_mods = check_series_wounding_mods()
 
@@ -252,6 +257,8 @@
 		injury_mod += exposed_wound_bonus
 	else
 		injury_mod *= ((100 - armor_ablation) /100)
+
+	injury_mod += (brute_dam + burn_dam)*0.75 //hl13 edit, a bodypart's current damage ALSO contributes to wound chance, so its not just wounds that do it
 
 	return injury_mod
 

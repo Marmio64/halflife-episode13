@@ -555,6 +555,7 @@
 	jamming_increment = 0
 	jamming_chance = 20
 	projectile_damage_multiplier = 1.3
+	projectile_wound_bonus = -45
 	spread = 4 //it has a stock
 	recoil = 0.5 //probably the only gun in the game other than M4A1 and service rifle with a real stock
 	fire_delay = 6 //its already boltaction but to make sure that someone who's really good at pressing Z doesnt just lay down suppressive fire

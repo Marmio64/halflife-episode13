@@ -44,6 +44,7 @@
 	name = "vortal bolt"
 	icon_state = "xray"
 	damage = 50
+	wound_bonus = -100
 	damage_type = BURN
 	armour_penetration = 25
 	hitsound = 'hl13/sound/weapons/attack_shoot.ogg'

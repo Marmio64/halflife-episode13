@@ -3,6 +3,7 @@
 /obj/projectile/bullet/n762
 	name = "7.62x38mmR bullet"
 	damage = 28 //HL13 EDIT
+	wound_bonus = -50 //hl13 edit
 	armour_penetration = 20 //HL13 EDIT
 
 /obj/projectile/bullet/n762/high_veloc
@@ -134,7 +135,7 @@
 	name = ".357 bullet"
 	damage = 35 // hl13 edit
 	armour_penetration = 20
-	wound_bonus = -30
+	wound_bonus = -75 //insane how much is needed to make it not insta crit wound
 	accurate_range = 125
 
 /obj/projectile/bullet/a357/phasic

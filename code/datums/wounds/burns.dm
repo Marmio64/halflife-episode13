@@ -325,7 +325,7 @@
 
 	wound_path_to_generate = /datum/wound/burn/flesh/moderate
 
-	threshold_minimum = 40
+	threshold_minimum = 60
 
 /datum/wound/burn/flesh/severe
 	name = "Third Degree Burns"
@@ -357,7 +357,7 @@
 
 	wound_path_to_generate = /datum/wound/burn/flesh/severe
 
-	threshold_minimum = 80
+	threshold_minimum = 100
 
 /datum/wound/burn/flesh/critical
 	name = "Catastrophic Burns"
@@ -390,7 +390,7 @@
 
 	wound_path_to_generate = /datum/wound/burn/flesh/critical
 
-	threshold_minimum = 140
+	threshold_minimum = 200
 
 ///special severe wound caused by sparring interference or other god related punishments.
 /datum/wound/burn/flesh/severe/brand

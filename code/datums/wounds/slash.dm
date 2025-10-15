@@ -380,7 +380,7 @@
 
 	wound_path_to_generate = /datum/wound/slash/flesh/severe
 
-	threshold_minimum = 60
+	threshold_minimum = 65
 
 /datum/wound/slash/flesh/severe/update_descriptions()
 	if(!limb.can_bleed())
@@ -418,7 +418,7 @@
 	abstract = FALSE
 
 	wound_path_to_generate = /datum/wound/slash/flesh/critical
-	threshold_minimum = 90
+	threshold_minimum = 170
 
 /datum/wound/slash/flesh/moderate/many_cuts
 	name = "Numerous Small Slashes"

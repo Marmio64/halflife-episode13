@@ -127,7 +127,7 @@
 	. = ..()
 	new /obj/item/reagent_containers/hypospray/medipen/healthpen(src)
 	new /obj/item/reagent_containers/hypospray/medipen/healthpen(src)
-	new /obj/item/stack/medical/gauze(src)
+	new /obj/item/stack/medical/gauze/twelve(src)
 	new /obj/item/reagent_containers/pill/patch/medkit(src)
 	new /obj/item/reagent_containers/pill/patch/medkit(src)
 	new /obj/item/stack/medical/suture(src)
