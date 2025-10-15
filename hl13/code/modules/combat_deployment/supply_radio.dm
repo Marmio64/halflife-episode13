@@ -14,7 +14,7 @@
 
 /obj/item/hl2/supply_radio/process()
 	if(faction_belonging == COMBINE_DEPLOYMENT_FACTION)
-		max_cash = GLOB.deployment_combine_cash
+		max_cash = (GLOB.deployment_combine_cash + 25)
 		max_cash = ROUND_UP(max_cash)
 		cash_regeneration = ROUND_UP(GLOB.deployment_combine_cash / 50)
 		if(5 < cash_regeneration)
@@ -25,7 +25,7 @@
 			current_cash = max_cash
 
 	else if(faction_belonging == REBEL_DEPLOYMENT_FACTION)
-		max_cash = GLOB.deployment_rebels_cash
+		max_cash = (GLOB.deployment_rebels_cash + 25)
 		max_cash = ROUND_UP(max_cash)
 		cash_regeneration = ROUND_UP(GLOB.deployment_rebels_cash / 50)
 		if(5 < cash_regeneration)
@@ -116,9 +116,9 @@
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/supply_beacon_option/grenade,
 			/datum/supply_beacon_option/ammocrate,
 			/datum/supply_beacon_option/combine_turret,
+			/datum/supply_beacon_option/medcrate,
 			/datum/supply_beacon_option/canister_targeter,
 			/datum/supply_beacon_option/combine_tier5,
 		)
@@ -131,9 +131,9 @@
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/supply_beacon_option/grenade,
 			/datum/supply_beacon_option/ammocrate,
 			/datum/supply_beacon_option/rebel_turret,
+			/datum/supply_beacon_option/medcrate,
 			/datum/supply_beacon_option/missile_targeter,
 			/datum/supply_beacon_option/rebel_tier5,
 		)
@@ -147,34 +147,34 @@
 	var/spawn_path
 	var/amount = 1
 
-/datum/supply_beacon_option/grenade
-	option_name = "MK3A2 Grenade (100 Points)"
-	cost = 100
-	spawn_path = /obj/item/grenade/syndieminibomb/bouncer
-
 /datum/supply_beacon_option/ammocrate
 	option_name = "Stationary Ammo Crate (150 Points)"
 	cost = 150
 	spawn_path = /obj/machinery/ammo_crate/low_health
 
 /datum/supply_beacon_option/combine_turret
-	option_name = "Turret Beacon (150 Points)"
-	cost = 150
+	option_name = "Turret Beacon (200 Points)"
+	cost = 200
 	spawn_path = /obj/item/sbeacondrop/combine_turret
 
 /datum/supply_beacon_option/rebel_turret
-	option_name = "Turret Beacon (150 Points)"
-	cost = 150
+	option_name = "Turret Beacon (200 Points)"
+	cost = 200
 	spawn_path = /obj/item/sbeacondrop/rebel_turret
 
+/datum/supply_beacon_option/medcrate
+	option_name = "Medical Supplies Crate (200 Points)"
+	cost = 200
+	spawn_path = /obj/structure/closet/crate/halflife/wooden/med_supplies
+
 /datum/supply_beacon_option/missile_targeter
-	option_name = "One-use Missile Targeter (300 Points)"
-	cost = 300
+	option_name = "One-use Missile Targeter (350 Points)"
+	cost = 350
 	spawn_path = /obj/item/halflife/missile_targeter/one_use
 
 /datum/supply_beacon_option/canister_targeter
-	option_name = "Modified Canister Targeter (250 Points)"
-	cost = 250
+	option_name = "Modified Canister Targeter (300 Points)"
+	cost = 300
 	spawn_path = /obj/item/halflife/cannister_targeter/modified
 
 /datum/supply_beacon_option/rebel_tier5

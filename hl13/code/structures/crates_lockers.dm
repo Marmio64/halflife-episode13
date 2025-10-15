@@ -122,3 +122,14 @@
 	close_sound_volume = 50
 	paint_jobs = null
 	cutting_tool = /obj/item/crowbar
+
+/obj/structure/closet/crate/halflife/wooden/med_supplies/PopulateContents()
+	. = ..()
+	new /obj/item/reagent_containers/hypospray/medipen/healthpen(src)
+	new /obj/item/reagent_containers/hypospray/medipen/healthpen(src)
+	new /obj/item/stack/medical/gauze(src)
+	new /obj/item/reagent_containers/pill/patch/medkit(src)
+	new /obj/item/reagent_containers/pill/patch/medkit(src)
+	new /obj/item/stack/medical/suture(src)
+	new /obj/item/stack/medical/suture(src)
+	new /obj/item/healthanalyzer/no_req(src)

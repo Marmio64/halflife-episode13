@@ -18,11 +18,11 @@
 	if(QDELETED(src))
 		return TRUE
 	if(target == src)
-		take_damage(rand(150, 250), BRUTE, BOMB, 0)
+		take_damage(rand(150, 240), BRUTE, BOMB, 0)
 		return TRUE
 	switch(severity)
 		if(EXPLODE_DEVASTATE)
-			take_damage(rand(150, 250), BRUTE, BOMB, 0)
+			take_damage(rand(150, 240), BRUTE, BOMB, 0)
 		if(EXPLODE_HEAVY)
 			take_damage(rand(60, 100), BRUTE, BOMB, 0)
 		if(EXPLODE_LIGHT)

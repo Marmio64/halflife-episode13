@@ -122,7 +122,7 @@
 	name = "old missile"
 	desc = "An old world missile that has been maintained just enough to still work. It has far less explosive power than it used to have, but its enough to blow open some fortifications."
 	style = /datum/pod_style/missile/syndicate
-	explosionSize = list(0,4,6,0)
+	explosionSize = list(1,4,6,0)
 	effectShrapnel = TRUE
 	specialised = TRUE
 	delays = list(POD_TRANSIT = 5 SECONDS, POD_FALLING = 0.4 SECONDS)
