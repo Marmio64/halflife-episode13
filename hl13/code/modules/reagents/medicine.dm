@@ -86,3 +86,22 @@
 		affected_mob.drop_all_held_items()
 		affected_mob.set_dizzy_if_lower(4 SECONDS)
 		affected_mob.set_jitter_if_lower(4 SECONDS)
+
+/datum/reagent/medicine/oxycodone
+	name = "Oxycodone"
+	description = "A medium-high painkiller that can help with injuries and pains."
+	reagent_state = LIQUID
+	color = "#cef3f3"
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	overdose_threshold = 35
+	addiction_types = list(/datum/addiction/opioids = 25)
+	ph = 8.96
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+	metabolized_traits = list(TRAIT_LESSPAIN_MAJOR)
+
+/datum/reagent/medicine/oxycodone/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	if(SPT_PROB(18, seconds_per_tick))
+		affected_mob.drop_all_held_items()
+		affected_mob.set_dizzy_if_lower(4 SECONDS)
+		affected_mob.set_jitter_if_lower(4 SECONDS)

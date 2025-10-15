@@ -75,7 +75,9 @@
 
 		amt -= ((get_stat_level(STATKEY_STR) - 10) * 2) //low strength increases perceived pain, high strength decreases it
 
-		if(HAS_TRAIT(src, TRAIT_LESSPAIN)) //lesspain simply reduces pain by an amount
+		if(HAS_TRAIT(src, TRAIT_LESSPAIN_MAJOR)) //about -90 pain
+			amt -= 15
+		if(HAS_TRAIT(src, TRAIT_LESSPAIN)) //lesspain simply reduces pain by an amount, about -60
 			amt -= 10
 		if(HAS_TRAIT(src, TRAIT_LESSPAIN_MINOR)) //-30 pain felt, about as much as one wound
 			amt -= 5

@@ -139,8 +139,14 @@
 /area/halflife/outdoors/outlands_city)
 "akI" = (
 /obj/structure/table/halflife/metal/alt,
-/obj/item/storage/medkit/halflife_combine,
-/obj/item/storage/medkit/halflife_combine,
+/obj/item/storage/medkit/halflife_combine{
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/obj/item/storage/medkit/halflife_combine{
+	pixel_x = 1;
+	pixel_y = 6
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/hospital)
 "akX" = (
@@ -12111,6 +12117,10 @@
 /obj/item/reagent_containers/pill/patch/medkit/vial,
 /obj/item/reagent_containers/hypospray/medipen/healthpen,
 /obj/item/reagent_containers/hypospray/medipen/healthpen,
+/obj/item/storage/halflife/pill_bottle/paracetamol{
+	pixel_x = -9;
+	pixel_y = 16
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/hospital)
 "tBK" = (
@@ -12805,13 +12815,23 @@
 /area/halflife/indoors/apartments/primary)
 "uNk" = (
 /obj/item/clothing/accessory/armband/medblue{
-	name = "medical union armband"
+	name = "medical union armband";
+	pixel_x = 0;
+	pixel_y = 2
 	},
 /obj/item/clothing/accessory/armband/medblue{
-	name = "medical union armband"
+	name = "medical union armband";
+	pixel_x = 4;
+	pixel_y = 0
 	},
-/obj/item/clothing/glasses/hud/health,
-/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health{
+	pixel_x = 7;
+	pixel_y = 12
+	},
+/obj/item/clothing/glasses/hud/health{
+	pixel_x = 7;
+	pixel_y = 9
+	},
 /obj/structure/table/halflife/metal/alt,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/hospital)
@@ -14359,8 +14379,6 @@
 /obj/item/clothing/neck/stethoscope,
 /obj/item/clothing/neck/stethoscope,
 /obj/item/clothing/neck/stethoscope,
-/obj/item/healthanalyzer,
-/obj/item/healthanalyzer,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/hospital)
 "xhB" = (

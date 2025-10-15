@@ -55,9 +55,9 @@ GLOBAL_LIST_INIT(wound_severities_chronological, list(
 // ~determination second wind defines
 // How much determination reagent to add each time someone gains a new wound in [/datum/wound/proc/second_wind]
 #define WOUND_DETERMINATION_MODERATE 1
-#define WOUND_DETERMINATION_SEVERE 2.5
-#define WOUND_DETERMINATION_CRITICAL 5
-#define WOUND_DETERMINATION_LOSS 7.5
+#define WOUND_DETERMINATION_SEVERE 2
+#define WOUND_DETERMINATION_CRITICAL 4
+#define WOUND_DETERMINATION_LOSS 6
 /// the max amount of determination you can have
 #define WOUND_DETERMINATION_MAX 10
 

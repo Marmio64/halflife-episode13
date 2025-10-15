@@ -329,19 +329,27 @@
 
 /obj/item/stack/medical/suture
 	name = "suture"
-	desc = "Basic sterile sutures used to seal up cuts and lacerations and stop bleeding."
+	desc = "Relatively clean looking sutures, good for sealing up cuts and fixing your injuries."
 	gender = PLURAL
 	singular_name = "suture"
 	icon_state = "suture"
-	self_delay = 3 SECONDS
-	other_delay = 1 SECONDS
+	self_delay = 4 SECONDS
+	other_delay = 1.5 SECONDS
 	amount = 10
 	max_amount = 10
 	repeating = TRUE
-	heal_brute = 10
+	heal_brute = 15
 	stop_bleeding = 0.6
 	grind_results = list(/datum/reagent/medicine/spaceacillin = 2)
 	merge_type = /obj/item/stack/medical/suture
+
+/obj/item/stack/medical/suture/post_heal_effects(amount_healed, mob/living/carbon/healed_mob, mob/user)
+	if(ishuman(healed_mob))
+		var/mob/living/carbon/human/human_target = healed_mob
+		human_target.adjust_temppain(20) //yeouch suture
+		human_target.flash_fullscreen("redflash1") //hl13 edit, sutures HURT
+	playsound(src, 'hl13/sound/effects/sewflesh.ogg', 20, TRUE)
+	return
 
 /obj/item/stack/medical/suture/emergency
 	name = "emergency suture"

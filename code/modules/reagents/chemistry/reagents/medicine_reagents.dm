@@ -665,20 +665,20 @@
 		affected_mob.adjust_disgust(1.5 * REM * seconds_per_tick)
 
 	switch(current_cycle)
-		if(16) //~3u
+		if(20) //~4u
 			to_chat(affected_mob, span_warning("You start to feel tired..."))
 			affected_mob.adjust_eye_blur(2 SECONDS * REM * seconds_per_tick)
 			if(SPT_PROB(66, seconds_per_tick))
 				affected_mob.emote("yawn")
 
-		if(24 to 36) // 5u to 7.5u
+		if(26 to 40) // 5u to 7.5u
 			if(SPT_PROB(66 * (2 - creation_purity), seconds_per_tick))
 				affected_mob.adjust_drowsiness_up_to(2 SECONDS * REM * seconds_per_tick, 12 SECONDS)
 
-		if(36 to 48) // 7.5u to 10u
+		if(40 to 50) // 7.5u to 10u
 			affected_mob.adjust_drowsiness_up_to(2 SECONDS * REM * seconds_per_tick, 12 SECONDS)
 
-		if(48 to INFINITY) //10u onward
+		if(50 to INFINITY) //10u onward
 			affected_mob.adjust_drowsiness_up_to(3 SECONDS * REM * seconds_per_tick, 20 SECONDS)
 			// doesn't scale from purity - at this point it tries to guarantee sleep
 			if(SPT_PROB(30 * (48 - current_cycle), seconds_per_tick))

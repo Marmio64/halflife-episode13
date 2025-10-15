@@ -111,6 +111,7 @@
 		/obj/item/healthanalyzer/simple = 2,
 		/obj/item/stack/medical/bone_gel = 2,
 		/obj/item/reagent_containers/hypospray/medipen = 3,
+		/obj/item/storage/halflife/pill_bottle/paracetamol = 3,
 	)
 	contraband = list(
 		/obj/item/reagent_containers/pill/tox = 2,
