@@ -107,9 +107,9 @@
 	min_ambience_cooldown = 5 SECONDS
 	max_ambience_cooldown = 10 SECONDS
 	ambient_buzz = 'hl13/sound/ambience/deathmatch/deathmatchbuzz.ogg'
-	ambient_buzz_vol = 15
+	ambient_buzz_vol = 12
 
-	ambient_music_vol = 30
+	ambient_music_vol = 20
 
 /area/halflife/outdoors/deployment_city/forest
 	daylight_multiplier = 0.35

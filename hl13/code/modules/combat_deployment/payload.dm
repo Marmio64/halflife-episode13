@@ -155,11 +155,11 @@
 	GLOB.deployment_combine_flag_time_left += 90 SECONDS
 	for(var/X in GLOB.deployment_combine_players)
 		var/mob/living/carbon/human/H = X
-		SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+		SEND_SOUND(H, 'hl13/sound/effects/scored.ogg')
 		to_chat(H, "<span class='userdanger'>The payload has reached a checkpoint, granting the rebels additional time!</span>")
 	for(var/X in GLOB.deployment_rebel_players)
 		var/mob/living/carbon/human/H = X
-		SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+		SEND_SOUND(H, 'hl13/sound/effects/scored.ogg')
 		to_chat(H, "<span class='greentext big'>The payload has reached a checkpoint, granting us additional time!</span>")
 		return PROCESS_KILL
 
