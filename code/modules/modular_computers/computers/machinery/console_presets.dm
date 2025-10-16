@@ -60,7 +60,7 @@
 	starting_programs = list(
 		/datum/computer_file/program/chatclient,
 		/datum/computer_file/program/card_mod,
-		/datum/computer_file/program/job_management,
+		//datum/computer_file/program/job_management, hl13 edit to see if this is good or nah
 		/datum/computer_file/program/crew_manifest,
 	)
 

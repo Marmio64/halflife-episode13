@@ -67,57 +67,30 @@
 
 /datum/supply_pack/medical/supplies
 	name = "Medical Supplies Crate"
-	desc = "Contains a random assortment of medical supplies. German doctor not included."
+	desc = "Contains an assortment of medical supplies for extensive healthcare."
 	cost = CARGO_CRATE_VALUE * 4.5
-	contains = list(/obj/item/reagent_containers/cup/bottle/multiver,
-					/obj/item/reagent_containers/cup/bottle/epinephrine,
-					/obj/item/reagent_containers/cup/bottle/morphine,
-					/obj/item/reagent_containers/cup/bottle/toxin,
-					/obj/item/reagent_containers/cup/beaker/large,
-					/obj/item/reagent_containers/pill/insulin,
-					/obj/item/stack/medical/gauze,
-					/obj/item/storage/box/bandages,
-					/obj/item/storage/box/beakers,
-					/obj/item/storage/box/medigels,
-					/obj/item/storage/box/syringes,
-					/obj/item/storage/box/bodybags,
-					/obj/item/storage/medkit/regular,
-					/obj/item/storage/medkit/o2,
-					/obj/item/storage/medkit/toxin,
-					/obj/item/storage/medkit/brute,
-					/obj/item/storage/medkit/fire,
-					/obj/item/defibrillator/loaded,
+	contains = list(/obj/item/storage/medkit/halflife_combine,
+					/obj/item/storage/medkit/halflife_combine,
+					/obj/item/stack/medical/gauze/twelve,
 					/obj/item/reagent_containers/blood/o_minus,
-					/obj/item/storage/pill_bottle/mining,
+					/obj/item/reagent_containers/pill/insulin,
 					/obj/item/reagent_containers/pill/neurine,
+					/obj/item/vending_refill/combine_wallmed = 1,
 					/obj/item/stack/medical/bone_gel = 2,
-					/obj/item/vending_refill/medical,
-					/obj/item/vending_refill/drugs,
+					/obj/item/stack/sticky_tape/surgical,
 				)
 	crate_name = "medical supplies crate"
-
-/datum/supply_pack/medical/supplies/fill(obj/structure/closet/crate/C)
-	for(var/i in 1 to 10)
-		var/item = pick(contains)
-		new item(C)
-
-/datum/supply_pack/medical/experimentalmedicine
-	name = "Experimental Medicine Crate"
-	desc = "A crate containing the medication required for living with Hereditary Manifold Sickness, Sansufentanyl."
-	cost = CARGO_CRATE_VALUE * 3
-	contains = list(/obj/item/storage/pill_bottle/sansufentanyl = 2)
-	crate_name = "experimental medicine crate"
 
 /datum/supply_pack/medical/surgery
 	name = "Surgical Supplies Crate"
 	desc = "Do you want to perform surgery, but don't have one of those fancy \
 		shmancy degrees? Just get started with this crate containing a DeForest surgery tray, \
-		Sterilizine spray and collapsible roller bed."
+		Sterilizine spray and roller bed."
 	cost = CARGO_CRATE_VALUE * 6
 	contains = list(
 		/obj/item/surgery_tray/full,
 		/obj/item/reagent_containers/medigel/sterilizine,
-		/obj/item/emergency_bed,
+		/obj/structure/bed/medical,
 	)
 	crate_name = "surgical supplies crate"
 

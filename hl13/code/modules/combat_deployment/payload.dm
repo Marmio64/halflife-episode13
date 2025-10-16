@@ -14,8 +14,8 @@
 	light_color = "#658cac"
 	var/movable
 
-	var/combine_time = 5 MINUTES // each checkpoint is plus 1.5 minutes, so totals to 8 minutes if both checkpoints are reached
-	var/grace_time = 1 MINUTES
+	var/combine_time = 5 MINUTES // each checkpoint is plus 105 seconds, so totals to 8 minutes and 30 seconds if both checkpoints are reached
+	var/grace_time = 90 SECONDS
 
 	var/blocked = FALSE
 	var/moving = TRUE
@@ -152,7 +152,7 @@
 		return PROCESS_KILL
 
 /obj/machinery/deployment_payload/proc/checkpoint_reached()
-	GLOB.deployment_combine_flag_time_left += 90 SECONDS
+	GLOB.deployment_combine_flag_time_left += 105 SECONDS
 	for(var/X in GLOB.deployment_combine_players)
 		var/mob/living/carbon/human/H = X
 		SEND_SOUND(H, 'hl13/sound/effects/scored.ogg')

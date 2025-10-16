@@ -132,4 +132,6 @@
 	new /obj/item/reagent_containers/pill/patch/medkit(src)
 	new /obj/item/stack/medical/suture(src)
 	new /obj/item/stack/medical/suture(src)
+	new /obj/item/reagent_containers/hypospray/medipen/oxycodone(src)
+	new /obj/item/reagent_containers/hypospray/medipen/oxycodone(src)
 	new /obj/item/healthanalyzer/no_req(src)
