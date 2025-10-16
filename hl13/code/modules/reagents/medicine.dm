@@ -95,9 +95,9 @@
 	description = "A medium-high painkiller that can help with injuries and pains."
 	reagent_state = LIQUID
 	color = "#cef3f3"
-	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	overdose_threshold = 35
-	addiction_types = list(/datum/addiction/opioids = 25)
+	addiction_types = list(/datum/addiction/opioids = 12)
 	ph = 8.96
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	metabolized_traits = list(TRAIT_LESSPAIN_MAJOR)
