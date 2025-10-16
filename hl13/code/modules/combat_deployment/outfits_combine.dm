@@ -413,6 +413,11 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
 
+/datum/outfit/deployment_loadout/combine/tier4/medic_cop/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	if(prob(20))
+		H.cmode_music = 'hl13/sound/music/combat/medic.ogg'
+
 /datum/outfit/deployment_loadout/combine/tier4/engineer
 	name = "Deployment: Senior Union Engineer"
 	display_name = "Senior Union Engineer"

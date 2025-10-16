@@ -68,11 +68,11 @@
 			if(grace_period_text)
 				for(var/X in GLOB.deployment_rebel_players)
 					var/mob/living/carbon/human/H = X
-					SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+					SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
 					to_chat(H, "<span class='greentext big'>The grace period is up, the cart is now movable!</span>")
 				for(var/X in GLOB.deployment_combine_players)
 					var/mob/living/carbon/human/H = X
-					SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+					SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
 					to_chat(H, "<span class='userdanger'>The grace period is up, the cart is now movable!</span>")
 	else
 		GLOB.deployment_flag_grace_period -= 1 SECONDS

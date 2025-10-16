@@ -322,7 +322,7 @@
 
 /datum/outfit/deployment_loadout/rebel/tier3/scout/post_equip(mob/living/carbon/human/H)
 	. = ..()
-	if(prob(25))
+	if(prob(20))
 		H.cmode_music = 'hl13/sound/music/combat/fasterthanaspeedingbullet.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier3/medic_rebel
@@ -533,7 +533,7 @@
 
 /datum/outfit/deployment_loadout/rebel/tier4/spy/post_equip(mob/living/carbon/human/H)
 	. = ..()
-	if(prob(25))
+	if(prob(20))
 		H.cmode_music = 'hl13/sound/music/combat/rightbehindyou.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier4/scout
@@ -559,7 +559,7 @@
 
 /datum/outfit/deployment_loadout/rebel/tier4/scout/post_equip(mob/living/carbon/human/H)
 	. = ..()
-	if(prob(25))
+	if(prob(20))
 		H.cmode_music = 'hl13/sound/music/combat/fasterthanaspeedingbullet.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier4/medic_rebel
@@ -589,6 +589,11 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
+
+/datum/outfit/deployment_loadout/rebel/tier4/medic_rebel/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	if(prob(20))
+		H.cmode_music = 'hl13/sound/music/combat/medic.ogg'
 
 ///////////// TIER 5 //////////////////////////////////////////
 /datum/outfit/deployment_loadout/rebel/tier5
