@@ -56,7 +56,7 @@
 		return FALSE
 	harvesting = TRUE
 	visible_message(span_notice("The [name] begins warming up!"))
-	say("Initializing conversion protocol.")
+	say("Initializing healing protocol.")
 	warming_up = TRUE
 	update_appearance(UPDATE_ICON)
 	addtimer(CALLBACK(src, PROC_REF(harvest)), interval)

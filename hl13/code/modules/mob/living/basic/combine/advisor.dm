@@ -136,6 +136,7 @@
 	active_msg = "You prepare to sooth a target..."
 
 /datum/action/cooldown/spell/pointed/advisor_sooth/is_valid_target(atom/cast_on)
+	. = ..()
 	if(!.)
 		return FALSE
 	if(!isliving(cast_on))

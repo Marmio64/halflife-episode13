@@ -61,6 +61,10 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
+/datum/outfit/deployment_loadout/combine/tier1/engineer/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.change_stat(STATKEY_STR, 3)
+
 /// TIER 2 ////////////////////////////////////////////////////////
 
 /datum/outfit/deployment_loadout/combine/tier2
@@ -149,6 +153,10 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
+/datum/outfit/deployment_loadout/combine/tier2/engineer/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.change_stat(STATKEY_STR, 3)
+
 /// TIER 3 ////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier3
 	loadout_tier = 3
@@ -215,6 +223,10 @@
 	back = /obj/item/shield/riot
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
+
+/datum/outfit/deployment_loadout/combine/tier3/riotcop/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.change_stat(STATKEY_STR, 4)
 
 /datum/outfit/deployment_loadout/combine/tier3/divisional
 	name = "Deployment: Divisional Lead"
@@ -303,6 +315,10 @@
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
+
+/datum/outfit/deployment_loadout/combine/tier3/engineer/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.change_stat(STATKEY_STR, 4)
 
 /// TIER 4 ////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier4
@@ -449,6 +465,10 @@
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
+
+/datum/outfit/deployment_loadout/combine/tier4/engineer/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.change_stat(STATKEY_STR, 4)
 
 /obj/item/sbeacondrop/combine_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a combine turret to your location</i>."

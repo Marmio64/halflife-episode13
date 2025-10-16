@@ -66,6 +66,10 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+/datum/outfit/deployment_loadout/rebel/tier1/engineer/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.change_stat(STATKEY_STR, 3)
+
 /datum/outfit/deployment_loadout/rebel/tier1/smuggler
 	name = "Deployment: Refugee Smuggler"
 	display_name = "Refugee Smuggler"
@@ -163,6 +167,10 @@
 	suit = /obj/item/clothing/suit/armor/civilprotection
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+/datum/outfit/deployment_loadout/rebel/tier2/engineer/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.change_stat(STATKEY_STR, 3)
 
 /datum/outfit/deployment_loadout/rebel/tier2/smuggler
 	name = "Deployment: Upgraded Smuggler"
@@ -298,6 +306,10 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
+
+/datum/outfit/deployment_loadout/rebel/tier3/engineer/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.change_stat(STATKEY_STR, 4)
 
 /datum/outfit/deployment_loadout/rebel/tier3/scout
 	name = "Deployment: Rebel Scout"
@@ -493,6 +505,10 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
+
+/datum/outfit/deployment_loadout/rebel/tier4/engineer/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.change_stat(STATKEY_STR, 4)
 
 /obj/item/sbeacondrop/rebel_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a rebel turret to your location</i>."

@@ -42,6 +42,7 @@ DEFINE_BITFIELD(turret_flags, list(
 	shot_delay = 5
 	invisibility = 0
 	density = TRUE
+	drag_slowdown = 1
 	desc = "A combine made turret which shoots at specified targets with a high power pulse gun."
 	req_access = list(ACCESS_SECURITY)
 	faction = list("combine")

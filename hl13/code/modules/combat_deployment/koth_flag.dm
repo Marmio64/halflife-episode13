@@ -155,7 +155,7 @@ GLOBAL_VAR_INIT(deployment_win_team, null)
 	. += span_notice("The combine need to hold the flag for [(GLOB.deployment_combine_flag_time_left)/10] seconds more in order to win.")
 
 /obj/machinery/deployment_koth_flag/rebel_defend
-	rebel_time = 7 MINUTES
+	rebel_time = 7.5 MINUTES
 	combine_time = 30 SECONDS
 	grace_time = 1 MINUTES
 	starting_faction = REBEL_DEPLOYMENT_FACTION
