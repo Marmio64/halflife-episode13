@@ -987,6 +987,17 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 	layer = ABOVE_OPEN_TURF_LAYER
 	plane = FLOOR_PLANE
 
+/obj/structure/halflife/rails
+	name = "rails"
+	desc = "Simple wood and metal rails."
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "rail"
+	max_integrity = 500
+	density = FALSE
+	anchored = TRUE
+	layer = ABOVE_OPEN_TURF_LAYER
+	plane = FLOOR_PLANE
+
 /obj/structure/halflife/trash_decal
 	name = "trash"
 	desc = "The various rubbish of City 13."

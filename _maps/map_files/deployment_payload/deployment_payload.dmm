@@ -1,11 +1,15 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "an" = (
 /obj/effect/payload_path,
+/obj/structure/halflife/rails{
+	dir = 1
+	},
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city)
 "aM" = (
 /obj/effect/payload_path/checkpoint,
 /obj/machinery/deployment_points_flag/combine/low_cash,
+/obj/structure/halflife/rails,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city)
 "aZ" = (
@@ -13,6 +17,7 @@
 /area/halflife/indoors/combat_deployment/rebel_base)
 "bb" = (
 /obj/machinery/deployment_points_flag/combine/low_cash,
+/obj/structure/halflife/rails,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city)
 "bc" = (
@@ -66,6 +71,7 @@
 /area/halflife/outdoors/deployment_city)
 "cY" = (
 /obj/effect/payload_path/checkpoint,
+/obj/structure/halflife/rails,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city)
 "db" = (
@@ -115,6 +121,12 @@
 /obj/structure/halflife/leaves,
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city)
+"eB" = (
+/obj/structure/halflife/rails{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city)
 "eC" = (
 /obj/structure/table/halflife/metal/grate,
@@ -530,6 +542,9 @@
 /area/halflife/indoors/combat_deployment/combine_base)
 "xk" = (
 /obj/machinery/deployment_payload,
+/obj/structure/halflife/rails{
+	dir = 1
+	},
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city)
 "xs" = (
@@ -685,11 +700,17 @@
 /area/halflife/outdoors/deployment_city)
 "Ci" = (
 /obj/effect/payload_path/final_point,
+/obj/structure/halflife/rails{
+	dir = 1
+	},
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city)
 "CE" = (
 /obj/effect/payload_path,
 /obj/effect/koth_grace_field,
+/obj/structure/halflife/rails{
+	dir = 1
+	},
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city)
 "CF" = (
@@ -1032,6 +1053,11 @@
 /obj/item/storage/wallet,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/combine_base)
+"QY" = (
+/obj/effect/payload_path,
+/obj/structure/halflife/rails,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city)
 "Rs" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/stack/bulletcasings{
@@ -1047,6 +1073,10 @@
 /obj/structure/table/halflife/no_smooth/large/crafting/armorbench,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"RK" = (
+/obj/structure/halflife/rails,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city)
 "RM" = (
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/grass,
@@ -6798,7 +6828,7 @@ Zx
 Zx
 dY
 jT
-jT
+RK
 an
 an
 an
@@ -6935,7 +6965,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 jT
 jT
@@ -7072,7 +7102,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -7209,7 +7239,7 @@ Zx
 Zx
 Yr
 jT
-an
+QY
 jT
 dY
 Zx
@@ -7346,7 +7376,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 Zx
@@ -7483,7 +7513,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 Zx
@@ -7620,7 +7650,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 Zx
@@ -7757,7 +7787,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 Zx
@@ -7894,7 +7924,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 Zx
@@ -8031,7 +8061,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 Zx
@@ -8168,7 +8198,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 Zx
@@ -8305,7 +8335,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 Zx
@@ -8442,7 +8472,7 @@ Zx
 Zx
 Yr
 jT
-an
+QY
 jT
 dY
 Zx
@@ -8553,7 +8583,7 @@ an
 an
 an
 an
-jT
+eB
 jT
 Zx
 Zx
@@ -8579,7 +8609,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 Zx
@@ -8690,7 +8720,7 @@ jT
 jT
 jT
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -8716,7 +8746,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 Zx
@@ -8827,7 +8857,7 @@ yH
 dY
 dY
 jT
-an
+QY
 jT
 qd
 Zx
@@ -8853,7 +8883,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 Zx
@@ -8964,7 +8994,7 @@ Lh
 yH
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -8990,7 +9020,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 Zx
@@ -9101,7 +9131,7 @@ VF
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -9127,7 +9157,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 Zx
@@ -9238,7 +9268,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -9264,7 +9294,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -9375,7 +9405,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -9401,7 +9431,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 jT
 jT
@@ -9512,7 +9542,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -9538,7 +9568,7 @@ Zx
 Zx
 dY
 jT
-jT
+eB
 an
 an
 an
@@ -9557,7 +9587,7 @@ an
 an
 an
 an
-jT
+RK
 jT
 dY
 dY
@@ -9649,7 +9679,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -9694,7 +9724,7 @@ jT
 jT
 jT
 jT
-an
+QY
 jT
 dY
 dY
@@ -9786,7 +9816,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -9831,7 +9861,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -9923,7 +9953,7 @@ Zx
 dY
 Yr
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -9968,7 +9998,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -10060,7 +10090,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -10105,7 +10135,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -10197,7 +10227,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -10242,7 +10272,7 @@ Zx
 Zx
 dY
 jT
-an
+QY
 jT
 Yr
 dY
@@ -10334,7 +10364,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -10379,7 +10409,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -10471,7 +10501,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -10516,7 +10546,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -10608,7 +10638,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -10653,7 +10683,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -10745,7 +10775,7 @@ Zx
 Ov
 Ov
 jT
-an
+QY
 jT
 Lx
 Lx
@@ -10790,7 +10820,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -10882,7 +10912,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -10927,7 +10957,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -11019,7 +11049,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -11064,7 +11094,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -11156,7 +11186,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -11201,7 +11231,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -11293,7 +11323,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 qd
 Zx
@@ -11338,7 +11368,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -11430,7 +11460,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -11475,7 +11505,7 @@ dY
 dY
 dY
 jT
-an
+QY
 YH
 dY
 dY
@@ -11567,7 +11597,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -11612,7 +11642,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 Yr
 dY
@@ -11704,7 +11734,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -11749,7 +11779,7 @@ dY
 dY
 Mb
 jT
-an
+QY
 jT
 dY
 dY
@@ -11841,7 +11871,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 Zx
@@ -11886,7 +11916,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 Mb
@@ -11978,7 +12008,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 Zx
 VF
@@ -12023,7 +12053,7 @@ Mb
 CF
 CF
 mS
-an
+QY
 mS
 CF
 CF
@@ -12115,7 +12145,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 dY
 yH
@@ -12160,7 +12190,7 @@ dY
 CF
 dY
 jT
-an
+QY
 jT
 dY
 CF
@@ -12252,7 +12282,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 yH
 Lh
@@ -12297,7 +12327,7 @@ dY
 CF
 dY
 jT
-an
+QY
 jT
 dY
 CF
@@ -12389,7 +12419,7 @@ Zx
 dY
 Yr
 jT
-an
+QY
 jT
 dY
 yH
@@ -12434,7 +12464,7 @@ dY
 kG
 dY
 jT
-an
+QY
 jT
 dY
 kG
@@ -12526,7 +12556,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 yH
 Lh
@@ -12571,7 +12601,7 @@ yn
 yn
 yn
 jT
-an
+QY
 jT
 yn
 yn
@@ -12663,7 +12693,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 dY
 yH
@@ -12708,7 +12738,7 @@ yn
 Zp
 TU
 jT
-an
+QY
 jT
 TU
 FF
@@ -12800,7 +12830,7 @@ Zx
 dY
 dY
 jT
-an
+QY
 jT
 yH
 Lh
@@ -12845,7 +12875,7 @@ TU
 TU
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -12937,7 +12967,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 yH
@@ -12982,7 +13012,7 @@ TU
 dY
 pr
 jT
-an
+QY
 jT
 dY
 dY
@@ -13074,7 +13104,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 yH
 Lh
@@ -13211,7 +13241,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 yH
@@ -13256,7 +13286,7 @@ TU
 dY
 Vk
 jT
-an
+QY
 jT
 dY
 dY
@@ -13348,7 +13378,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 yH
 Lh
@@ -13393,7 +13423,7 @@ TU
 TU
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -13485,7 +13515,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 yH
@@ -13530,7 +13560,7 @@ yn
 wG
 TU
 jT
-an
+QY
 jT
 TU
 eU
@@ -13622,7 +13652,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -13667,7 +13697,7 @@ yn
 yn
 yn
 jT
-an
+QY
 jT
 yn
 yn
@@ -13759,7 +13789,7 @@ dY
 dY
 dY
 jT
-an
+QY
 jT
 dY
 dY
@@ -13804,7 +13834,7 @@ dY
 bc
 dY
 jT
-an
+QY
 jT
 dY
 bc
@@ -13941,7 +13971,7 @@ jT
 jT
 jT
 jT
-an
+QY
 jT
 Yr
 dY
@@ -14078,7 +14108,7 @@ an
 an
 an
 an
-jT
+eB
 jT
 dY
 dY

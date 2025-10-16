@@ -95,6 +95,8 @@
 		human_user.STASTR = 10
 		human_user.STAINT = 10
 		human_user.STADEX = 10
+		for(var/datum/action/cooldown/buttons in human_user.actions)
+			qdel(buttons)
 		human_user.equipOutfit(new_loadout) // Loadout
 		human_user.combat_deployment_loadout_tier = new_loadout.loadout_tier
 		human_user.loadout_upgrade_available = TRUE
