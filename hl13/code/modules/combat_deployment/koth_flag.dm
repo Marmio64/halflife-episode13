@@ -58,11 +58,11 @@ GLOBAL_VAR_INIT(deployment_win_team, null)
 			if(grace_period_text)
 				for(var/X in GLOB.deployment_rebel_players)
 					var/mob/living/carbon/human/H = X
-					SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+					SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
 					to_chat(H, grace_period_up_text)
 				for(var/X in GLOB.deployment_combine_players)
 					var/mob/living/carbon/human/H = X
-					SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+					SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
 					to_chat(H, grace_period_up_text)
 			if(starting_faction)
 				current_faction_holder = starting_faction

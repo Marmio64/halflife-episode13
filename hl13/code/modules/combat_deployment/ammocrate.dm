@@ -8,6 +8,8 @@
 	max_integrity = 400
 	var/ammo_amount = 3
 	var/ammo_max = 10
+	var/recharges = TRUE
+	var/in_use = FALSE
 	var/list/vendoptions = list("USP Match", "Mosin", "MP7", "SPAS12", "Colt Python", "Service Rifle", "Pulse SMG", "AK-47", "AR2")
 
 /obj/machinery/ammo_crate/low_health
@@ -15,8 +17,11 @@
 	ammo_max = 3
 
 /obj/machinery/ammo_crate/process(delta_time)
-	if(ammo_amount < ammo_max)
+	if(ammo_amount < ammo_max && recharges)
 		ammo_amount += 0.05
+
+	if(!recharges && ammo_amount < 1 && !in_use)
+		qdel(src)
 
 /obj/machinery/ammo_crate/examine(mob/user)
 	. = ..()
@@ -30,8 +35,12 @@
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		return
 
+	ammo_amount-- //no duping
+	in_use = TRUE
 	var/choice = tgui_input_list(user, "Which ammo type would you like?", "Ammo Type", vendoptions)
 	if(isnull(choice))
+		ammo_amount++
+		in_use = FALSE
 		return
 	var/ammo_to_dispense = null
 	switch(choice)
@@ -53,10 +62,30 @@
 			ammo_to_dispense = /obj/item/ammo_box/magazine/ak47
 		if("AR2")
 			ammo_to_dispense = /obj/item/ammo_box/magazine/ar2
+		if("MK3A2 Grenade")
+			ammo_to_dispense = /obj/item/grenade/syndieminibomb/bouncer
 
 	if(ammo_to_dispense)
 		playsound(src, 'hl13/sound/effects/ammocrate_open.ogg', 50, TRUE, extrarange = -3)
 		if(do_after(user, 3 SECONDS, src))
-			ammo_amount--
 			new ammo_to_dispense(loc)
 			playsound(src, 'hl13/sound/effects/ammo_pickup.ogg', 50, TRUE, extrarange = -3)
+			in_use = FALSE
+		else
+			ammo_amount++
+			in_use = FALSE
+	else
+		ammo_amount++
+		in_use = FALSE
+
+/obj/machinery/ammo_crate/grenade_crate
+	name = "Grenade Crate"
+	desc = "A large grenade crate. You can pull out a grenade after a short delay. It does not recharge grenades."
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "grenadecrate"
+	anchored = TRUE
+	density = TRUE
+	max_integrity = 150
+	ammo_amount = 4
+	recharges = FALSE
+	vendoptions = list("MK3A2 Grenade")

@@ -238,12 +238,14 @@
 	r_pocket = /obj/item/flashlight/seclite
 
 	backpack_contents = list(
-		/obj/item/grenade/syndieminibomb/bouncer = 3,
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/tinbomb)
 
 /datum/outfit/deployment_loadout/rebel/tier3/vortigaunt
 	name = "Deployment: Vortigaunt"
@@ -434,12 +436,14 @@
 	r_pocket = /obj/item/flashlight/seclite
 
 	backpack_contents = list(
-		/obj/item/grenade/syndieminibomb/bouncer = 3,
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/tinbomb)
 
 /datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt
 	name = "Deployment: Elder Vortigaunt"

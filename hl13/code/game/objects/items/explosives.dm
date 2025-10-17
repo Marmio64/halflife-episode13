@@ -19,7 +19,7 @@
 
 /obj/item/grenade/halflife/tinbomb
 	name = "Tinbomb"
-	desc = "A scrap metal tin housing an explosive propellant and a bunch of shrapnel. The explosion is weak, but it does send a decent amount of shrapnel flying."
+	desc = "A scrap metal tin housing an explosive propellant and a bunch of shrapnel. The explosion isn't too strong, but it does send a decent amount of shrapnel flying."
 	icon = 'hl13/icons/obj/throwables/grenades_inventory.dmi'
 	lefthand_file = 'hl13/icons/mob/inhands/grenades_inhand_left.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/grenades_inhand_right.dmi'
@@ -29,7 +29,7 @@
 	det_time = 35
 	ex_dev = 0
 	ex_heavy = 0
-	ex_light = 1
+	ex_light = 2
 	ex_flame = 0
 
 /obj/item/grenade/halflife/tinbomb/detonate(mob/living/lanced_by)

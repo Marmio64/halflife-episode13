@@ -327,7 +327,7 @@
 /datum/outfit/deployment_loadout/combine/tier4/elite
 	name = "Deployment: Elite OTA"
 	display_name = "Elite OTA"
-	desc = "You are the pinnacle of combine technology. Elites use AR2s and incredibly heavy armor to bulldoze the competition, though are pretty slow."
+	desc = "You are the pinnacle of combine technology. Elites have powerful AR2s and heavy armor, but their sluggish movement makes them best suited for defending positions than attacking them."
 
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/elite
@@ -335,7 +335,7 @@
 	suit = /obj/item/clothing/suit/armor/overwatch/elite/deathmatch
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
-	belt = /obj/item/storage/belt/civilprotection/overwatch/ar2
+	belt = /obj/item/storage/belt/civilprotection/overwatch/ar2_deployment_elite
 	suit_store = /obj/item/gun/ballistic/automatic/ar2
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
@@ -373,7 +373,7 @@
 	suit = /obj/item/clothing/suit/armor/overwatch/deathmatch
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
-	belt = /obj/item/storage/belt/civilprotection/overwatch/sniper
+	belt = /obj/item/storage/belt/civilprotection/overwatch/sniper_deployment
 	suit_store = /obj/item/gun/ballistic/combine_sniper
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 

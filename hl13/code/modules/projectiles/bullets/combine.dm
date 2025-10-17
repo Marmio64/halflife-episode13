@@ -45,7 +45,7 @@
 	name = "heavy pulse round"
 	damage = 50
 	wound_bonus = -10
-	armour_penetration = 35
+	armour_penetration = 40
 	speed = 6
 	accurate_range = 150
 

@@ -264,7 +264,7 @@
 		/obj/item/stack/sheet/scrap_metal = 8,
 		/datum/reagent/fuel = 30,
 	)
-	time = 4 SECONDS
+	time = 5 SECONDS
 	category = CAT_WEAPON_RANGED
 
 /datum/crafting_recipe/halflife_spear_taped
