@@ -100,6 +100,16 @@
 	desc = "Concrete slabs."
 	footstep = FOOTSTEP_CONCRETE
 
+/turf/open/floor/plating/indoor/concrete/sewer
+	desc = "Hard concrete sewer flooring, built to last."
+	baseturfs = /turf/open/floor/plating/indoor/concrete/sewer
+	icon = 'hl13/icons/turf/floor/sewer_floor.dmi'
+	icon_state = "floor-255"
+	base_icon_state = "floor"
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_TURF_SEWER
+	canSmoothWith = SMOOTH_GROUP_TURF_SEWER + SMOOTH_GROUP_CATWALK + SMOOTH_GROUP_WALLS
+
 //for decorative fake stairs
 /turf/open/floor/plating/indoor/concrete/stairs
 	icon = 'hl13/icons/obj/stairs.dmi'

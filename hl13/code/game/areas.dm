@@ -114,6 +114,9 @@
 /area/halflife/outdoors/deployment_city/forest
 	daylight_multiplier = 0.35
 
+/area/halflife/indoors/combat_deployment
+	ambient_music_vol = 20
+
 /area/halflife/indoors/combat_deployment/combine_base
 	name = "\improper Combine Nexus"
 
@@ -341,8 +344,8 @@
 	min_ambience_cooldown = 20 SECONDS
 	ambient_buzz = 'hl13/sound/ambience/sewer1.ogg'
 	ambient_buzz_vol = 60
-	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_02.ogg'
-	ambient_music_vol = 22
+	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_03.ogg'
+	ambient_music_vol = 15
 	mood_bonus = -2
 	mood_message = "<span class='warning'>This place smells terrible.</span>\n"
 
