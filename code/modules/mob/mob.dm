@@ -801,7 +801,7 @@
 		else if(client.deployment_faction == XEN_DEPLOYMENT_FACTION)
 			required_delay = GLOB.deployment_respawn_rate_xen
 		else
-			required_delay = 25 SECONDS
+			required_delay = 30 SECONDS
 
 
 

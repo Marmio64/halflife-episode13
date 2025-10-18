@@ -38,7 +38,7 @@
 	name = "Deployment metrocop captain"
 	jobtype = /datum/job/deployment_metrocop_captain
 
-	ears = /obj/item/radio/headset/civilprotection/deployment
+	ears = /obj/item/radio/headset/civilprotection/deployment/loud
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat

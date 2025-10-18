@@ -11,7 +11,7 @@
 	icon_state = "cannister"
 	density = TRUE
 	anchored = TRUE
-	projectile_passchance = 50
+	projectile_passchance = 35
 	pixel_x = -16
 
 // TRASH.... //

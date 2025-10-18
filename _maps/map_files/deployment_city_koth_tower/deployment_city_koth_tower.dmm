@@ -1133,6 +1133,10 @@
 	dir = 5
 	},
 /area/halflife/outdoors/deployment_city)
+"RY" = (
+/obj/machinery/deployment_points_flag,
+/turf/open/openspace,
+/area/halflife/outdoors/deployment_city)
 "Sa" = (
 /obj/structure/halflife/road_barrier/concrete,
 /turf/open/floor/plating/ground/brickroad,
@@ -1188,7 +1192,9 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/combine_base)
 "Ue" = (
-/obj/machinery/deployment_points_flag,
+/obj/machinery/deployment_points_flag{
+	cash_increase = 0.5
+	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/outdoors/deployment_city)
 "Un" = (
@@ -31096,7 +31102,7 @@ je
 je
 je
 je
-je
+RY
 je
 je
 je

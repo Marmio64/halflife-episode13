@@ -1,6 +1,10 @@
 /obj/item/radio/headset/rebel_deployment
 	keyslot = /obj/item/encryptionkey/syndicate/uprising
 
+/obj/item/radio/headset/rebel_deployment/loud
+	command = TRUE
+	use_command = TRUE
+
 /datum/outfit/deployment_loadout/rebel/tier1
 	loadout_tier = 1
 

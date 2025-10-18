@@ -40,7 +40,7 @@
 	severity = WOUND_SEVERITY_CRITICAL
 	sound_effect = 'sound/effects/dismember.ogg'
 
-	woundpain = 120 //your head is split open
+	woundpain = 200 //your head is split open, its a wonder if you're alive with this active
 
 #define CRANIAL_FISSURE_FILTER_DISPLACEMENT "cranial_fissure_displacement"
 

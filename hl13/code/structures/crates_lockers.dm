@@ -83,7 +83,7 @@
 	icon_state = "aluminum"
 	base_icon_state = "aluminum"
 	paint_jobs = null
-	projectile_passchance = 25
+	projectile_passchance = 50
 
 /obj/structure/closet/crate/halflife/ration_supplies/PopulateContents()
 	. = ..()
@@ -136,9 +136,9 @@
 	new /obj/item/reagent_containers/hypospray/medipen/oxycodone(src)
 	new /obj/item/healthanalyzer/no_req(src)
 
-/obj/structure/closet/crate/halflife/wooden/grenades/PopulateContents()
+/obj/structure/closet/crate/halflife/wooden/fortifications/PopulateContents()
 	. = ..()
-	new /obj/item/grenade/syndieminibomb/bouncer(src)
-	new /obj/item/grenade/syndieminibomb/bouncer(src)
-	new /obj/item/grenade/syndieminibomb/bouncer(src)
-	new /obj/item/grenade/syndieminibomb/bouncer(src)
+	new /obj/item/stack/razorwire/half_stack(src)
+	new /obj/item/stack/razorwire/small_stack(src)
+	new /obj/item/stack/sheet/mineral/sandbags/twelve(src)
+	new /obj/item/stack/sheet/mineral/wood/twentyfive(src)

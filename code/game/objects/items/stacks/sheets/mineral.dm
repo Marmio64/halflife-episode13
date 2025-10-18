@@ -74,6 +74,12 @@ GLOBAL_LIST_INIT(sandbag_recipes, list ( \
 /obj/item/stack/sheet/mineral/sandbags/three
 	amount = 3
 
+/obj/item/stack/sheet/mineral/sandbags/twelve
+	amount = 12
+
+/obj/item/stack/sheet/mineral/sandbags/fifteen
+	amount = 15
+
 /obj/item/emptysandbag
 	name = "empty sandbag"
 	desc = "A bag to be filled with sand."

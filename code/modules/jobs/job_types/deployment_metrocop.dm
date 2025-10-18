@@ -4,8 +4,8 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 	title = JOB_DEPLOYMENT_METROCOP
 	description = "You are part of the combine! You have better medium-high tier loadouts than rebels, but it takes your faction longer to unlock high tier loadouts compared to the rebels. Early to mid-game may have you struggling, but you are likely to win if you last till late game!"
 	department_head = list("Nobody")
-	total_positions = 80
-	spawn_positions = 80
+	total_positions = 65
+	spawn_positions = 65
 	supervisors = "nobody"
 	exp_granted_type = EXP_TYPE_CREW
 	paycheck = PAYCHECK_ZERO

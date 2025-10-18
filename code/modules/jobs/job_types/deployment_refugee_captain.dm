@@ -50,7 +50,7 @@
 		/obj/item/lighter = 1,
 	)
 
-	ears = /obj/item/radio/headset/rebel_deployment
+	ears = /obj/item/radio/headset/rebel_deployment/loud
 
 	var/list/nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_EYES)
 

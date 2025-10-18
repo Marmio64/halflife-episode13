@@ -71,8 +71,8 @@
 
 	victim.add_mood_event("rally", /datum/mood_event/rallied)
 	victim.adjustStaminaLoss(-60)
-	victim.adjustBruteLoss(-15)
-	victim.adjustFireLoss(-15)
+	victim.adjustBruteLoss(-20)
+	victim.adjustFireLoss(-20)
 
 	if(victim != caster)
 		to_chat(victim, span_boldnicegreen("You feel inspired to fight!"))

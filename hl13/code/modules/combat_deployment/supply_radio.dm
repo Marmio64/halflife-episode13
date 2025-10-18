@@ -119,6 +119,7 @@
 			/datum/supply_beacon_option/ammocrate,
 			/datum/supply_beacon_option/medcrate,
 			/datum/supply_beacon_option/combine_turret,
+			/datum/supply_beacon_option/fortifications_crate,
 			/datum/supply_beacon_option/grenade_crate,
 			/datum/supply_beacon_option/canister_targeter,
 			/datum/supply_beacon_option/combine_tier5,
@@ -135,6 +136,7 @@
 			/datum/supply_beacon_option/ammocrate,
 			/datum/supply_beacon_option/medcrate,
 			/datum/supply_beacon_option/rebel_turret,
+			/datum/supply_beacon_option/fortifications_crate,
 			/datum/supply_beacon_option/grenade_crate,
 			/datum/supply_beacon_option/missile_targeter,
 			/datum/supply_beacon_option/rebel_tier5,
@@ -168,6 +170,11 @@
 	option_name = "Turret Beacon (225 Points)"
 	cost = 225
 	spawn_path = /obj/item/sbeacondrop/rebel_turret
+
+/datum/supply_beacon_option/fortifications_crate
+	option_name = "Fortifications Crate (275 Points)"
+	cost = 275
+	spawn_path = /obj/structure/closet/crate/halflife/wooden/fortifications
 
 /datum/supply_beacon_option/grenade_crate
 	option_name = "Grenade Crate (300 Points)"

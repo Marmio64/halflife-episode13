@@ -88,8 +88,6 @@
 	else if(istype(mover, /obj/projectile))
 		if(!projectile_passchance)
 			return
-		if(!anchored)
-			return TRUE
 		var/obj/projectile/proj = mover
 		if(proj.firer && Adjacent(proj.firer))
 			return TRUE
