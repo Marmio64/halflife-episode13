@@ -24,8 +24,8 @@
 /datum/ai_behavior/interact_with_target/eat_food
 	///default list of actions we take after eating
 	var/list/food_actions = list(
-		"eats up happily!",
-		"chomps with glee!",
+		"devours with gnashing teeth!",
+		"consumes eagerly!",
 	)
 
 /datum/ai_behavior/interact_with_target/eat_food/perform(seconds_per_tick, datum/ai_controller/controller, target_key, emotes_blackboard_list)

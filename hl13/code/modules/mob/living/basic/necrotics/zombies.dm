@@ -44,6 +44,13 @@
 	fire_stack_decay_rate = -1
 	damage_coeff = list(BRUTE = 1, BURN = 2, TOX = 1, STAMINA = 1, OXY = 1)
 
+	/// List of stuff that the zombie would eat
+	var/static/list/edibles = list(
+		/obj/item/food/meat,
+		/obj/item/food/fishmeat,
+		/obj/item/food/raw_meatball,
+	)
+
 /mob/living/basic/halflife/zombie/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()
 	if(stat)
@@ -66,6 +73,8 @@
 /mob/living/basic/halflife/zombie/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE)
+	AddElement(/datum/element/basic_eating, heal_amt = 5, food_types = edibles)
+	ai_controller.set_blackboard_key(BB_BASIC_FOODS, typecacheof(edibles))
 
 /mob/living/basic/halflife/zombie/zombine
 	name = "Zombine"
@@ -458,6 +467,7 @@
 		/datum/ai_planning_subtree/simple_find_target,
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
+		/datum/ai_planning_subtree/find_food,
 		//datum/ai_planning_subtree/random_speech/halflife/zombie,
 	)
 
@@ -482,6 +492,7 @@
 		/datum/ai_planning_subtree/use_mob_ability/zombine_grenade,
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
+		/datum/ai_planning_subtree/find_food,
 		//datum/ai_planning_subtree/random_speech/halflife/zombine,
 	)
 
@@ -510,6 +521,7 @@
 		/datum/ai_planning_subtree/simple_find_target,
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
+		/datum/ai_planning_subtree/find_food,
 		//datum/ai_planning_subtree/random_speech/halflife/zombine,
 	)
 
@@ -525,6 +537,7 @@
 		/datum/ai_planning_subtree/targeted_mob_ability/fastzombie_jump,
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
+		/datum/ai_planning_subtree/find_food,
 	)
 
 /datum/ai_planning_subtree/targeted_mob_ability/fastzombie_jump
@@ -542,6 +555,7 @@
 		/datum/ai_planning_subtree/targeted_mob_ability/headcrab_throw,
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
+		/datum/ai_planning_subtree/find_food,
 	)
 
 /datum/ai_planning_subtree/targeted_mob_ability/headcrab_throw

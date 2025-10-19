@@ -494,10 +494,6 @@
 /obj/structure/table/halflife/no_smooth/large/crafting/workbench,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/outlands)
-"aJb" = (
-/obj/machinery/status_display/evac/directional/south,
-/turf/open/floor/plating/indoor/tiled10,
-/area/halflife/indoors/distributioncenter)
 "aJh" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 8
@@ -640,12 +636,6 @@
 	},
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/outlands)
-"aUP" = (
-/obj/effect/turf_decal/arrows{
-	dir = 1
-	},
-/turf/open/floor/plating/indoor/tiled10,
-/area/halflife/indoors/distributioncenter)
 "aVx" = (
 /obj/machinery/light/small/directional/east,
 /obj/structure/table/halflife/no_smooth/large/wood/desk{
@@ -2494,10 +2484,8 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "eaQ" = (
-/obj/structure/closet/halflife,
-/obj/effect/spawner/random/halflife/loot/ammo,
-/obj/effect/spawner/random/halflife/loot/ammo,
-/turf/open/floor/plating/indoor/metal/industrial,
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
 "eco" = (
 /obj/machinery/door/unpowered/halflife/seethrough/bar{
@@ -3267,6 +3255,12 @@
 "fjN" = (
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/alley/dropshippad)
+"fjQ" = (
+/obj/structure/closet/halflife,
+/obj/effect/spawner/random/halflife/loot/ammo,
+/obj/effect/spawner/random/halflife/loot/ammo,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/outlands)
 "fjW" = (
 /obj/structure/halflife/headcrab_cannister,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -3286,9 +3280,11 @@
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/outlands_city)
 "flZ" = (
-/obj/modular_map_root/miningcaves,
-/turf/closed/wall/halflife/sewer,
-/area/halflife/indoors/sewer)
+/obj/effect/turf_decal/arrows{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/indoors/distributioncenter)
 "fmd" = (
 /obj/modular_map_root/miningcaves,
 /turf/closed/mineral/random/high_chance,
@@ -3804,10 +3800,6 @@
 "gaC" = (
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/outdoors/tracks)
-"gbf" = (
-/obj/structure/extinguisher_cabinet/directional/north,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/outlands)
 "gbs" = (
 /obj/structure/table/halflife/wood/bar,
 /obj/item/stack/spacecash/c10,
@@ -4097,6 +4089,7 @@
 /area/halflife/indoors/townhall/civilprotection)
 "gwi" = (
 /obj/structure/table/halflife/metal/grate,
+/obj/item/pushbroom,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/conscript_bunker)
 "gwp" = (
@@ -5629,6 +5622,10 @@
 /obj/machinery/vending/breenwater,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
+"jhR" = (
+/obj/modular_map_root/miningcaves,
+/turf/closed/wall/halflife/sewer,
+/area/halflife/indoors/sewer)
 "jhV" = (
 /obj/machinery/camera{
 	c_tag = "Nexus Shooting Range";
@@ -8816,6 +8813,11 @@
 /obj/structure/halflife/trash/books,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
+"osL" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/light/bulb,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/conscript_bunker)
 "osQ" = (
 /obj/structure/table/halflife/wood,
 /obj/effect/spawner/random/halflife/loot/uncommon,
@@ -14044,6 +14046,10 @@
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/outlands)
+"wpx" = (
+/obj/machinery/status_display/evac/directional/south,
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/indoors/distributioncenter)
 "wqW" = (
 /mob/living/basic/halflife/grub,
 /turf/open/floor/plating/ground/rockunder,
@@ -14190,6 +14196,10 @@
 /obj/structure/table/halflife/metal/grate,
 /obj/item/reagent_containers/cup/beaker,
 /obj/machinery/light/small/directional/east,
+/obj/item/knife/combat/survival{
+	pixel_x = -5;
+	pixel_y = 15
+	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/conscript_bunker)
 "wBG" = (
@@ -44966,7 +44976,7 @@ xwY
 xwY
 xwY
 xwY
-flZ
+jhR
 xtI
 xtI
 xtI
@@ -83758,7 +83768,7 @@ xcH
 uOu
 miW
 miW
-eaQ
+fjQ
 eGo
 eGo
 eGo
@@ -90210,7 +90220,7 @@ bTR
 dwe
 sgI
 heD
-gwi
+osL
 uSR
 vzy
 heD
@@ -91715,10 +91725,10 @@ gMn
 tPC
 uRo
 wen
-aUP
+flZ
 uRo
 uRo
-aUP
+flZ
 oGX
 uRo
 sed
@@ -92479,7 +92489,7 @@ eBx
 wDB
 uRo
 oGX
-aJb
+wpx
 sed
 cRJ
 dGL
@@ -105003,7 +105013,7 @@ mif
 yas
 cHK
 eGo
-gbf
+eaQ
 tVy
 tVy
 tVy

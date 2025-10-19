@@ -38,6 +38,13 @@
 	var/mob/living/zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed
 	var/can_zombify = TRUE
 
+	/// List of stuff that the headcrab would eat
+	var/static/list/edibles = list(
+		/obj/item/food/meat,
+		/obj/item/food/fishmeat,
+		/obj/item/food/raw_meatball,
+	)
+
 /mob/living/basic/halflife/headcrab/melee_attack(mob/living/carbon/human/target, list/modifiers, ignore_cooldown)
 	. = ..()
 	if (!ishuman(target) || target.stat == CONSCIOUS || target.stat == DEAD)
@@ -68,6 +75,8 @@
 	. = ..()
 	grant_actions_by_list(get_innate_abilities())
 	AddElement(/datum/element/footstep, FOOTSTEP_MOB_CLAW)
+	AddElement(/datum/element/basic_eating, heal_amt = 5, food_types = edibles)
+	ai_controller.set_blackboard_key(BB_BASIC_FOODS, typecacheof(edibles))
 
 /mob/living/basic/halflife/headcrab/armored
 	name = "Armored Headcrab"
@@ -163,6 +172,7 @@
 		/datum/ai_planning_subtree/targeted_mob_ability/headcrab_jump,
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
+		/datum/ai_planning_subtree/find_food,
 	)
 
 /datum/ai_planning_subtree/targeted_mob_ability/headcrab_jump
