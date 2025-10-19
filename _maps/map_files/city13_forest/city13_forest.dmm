@@ -1014,6 +1014,14 @@
 /obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/alley)
+"bEo" = (
+/obj/machinery/door/unpowered/halflife/wood{
+	keylock = 1;
+	lockid = "townhall";
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/lino,
+/area/halflife/indoors/townhall)
 "bEp" = (
 /obj/structure/railing/halflife/solo/industrial,
 /turf/open/floor/plating/indoor/concrete,
@@ -1159,6 +1167,11 @@
 /obj/item/food/meat/slab/human,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"bNC" = (
+/obj/machinery/light/small/directional/west,
+/obj/structure/table/halflife/wood,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/townhall)
 "bOg" = (
 /obj/structure/halflife/storage/large/shelf,
 /obj/effect/spawner/random/halflife/loot,
@@ -2457,6 +2470,12 @@
 /obj/item/clothing/head/utility/radiation,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/productioncenter/infestation)
+"dXQ" = (
+/obj/structure/closet/halflife,
+/obj/effect/spawner/random/halflife/loot/ammo,
+/obj/effect/spawner/random/halflife/loot/ammo,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/outlands)
 "dYd" = (
 /obj/machinery/greenscreen_camera{
 	dir = 1
@@ -2484,9 +2503,12 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "eaQ" = (
-/obj/structure/extinguisher_cabinet/directional/north,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/outlands)
+/obj/structure/closet/halflife,
+/obj/item/clothing/suit/utility/radiation/cleanup/scientist,
+/obj/item/clothing/head/utility/radiation/scientist,
+/obj/item/clothing/mask/gas/cwuengi,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/hospital/virology)
 "eco" = (
 /obj/machinery/door/unpowered/halflife/seethrough/bar{
 	keylock = 1;
@@ -3255,12 +3277,6 @@
 "fjN" = (
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/alley/dropshippad)
-"fjQ" = (
-/obj/structure/closet/halflife,
-/obj/effect/spawner/random/halflife/loot/ammo,
-/obj/effect/spawner/random/halflife/loot/ammo,
-/turf/open/floor/plating/indoor/metal/industrial,
-/area/halflife/indoors/outlands)
 "fjW" = (
 /obj/structure/halflife/headcrab_cannister,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -4089,7 +4105,7 @@
 /area/halflife/indoors/townhall/civilprotection)
 "gwi" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/pushbroom,
+/obj/item/light/bulb,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/conscript_bunker)
 "gwp" = (
@@ -4146,6 +4162,12 @@
 /obj/structure/shipping_container/kosmologistika,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/outlands_city)
+"gAi" = (
+/obj/structure/halflife/toilet{
+	pixel_y = 8
+	},
+/turf/open/floor/plating/indoor/lino,
+/area/halflife/indoors/townhall)
 "gAR" = (
 /obj/structure/razorwire,
 /turf/open/floor/plating/ground/grass,
@@ -5622,10 +5644,6 @@
 /obj/machinery/vending/breenwater,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/trainstation)
-"jhR" = (
-/obj/modular_map_root/miningcaves,
-/turf/closed/wall/halflife/sewer,
-/area/halflife/indoors/sewer)
 "jhV" = (
 /obj/machinery/camera{
 	c_tag = "Nexus Shooting Range";
@@ -7003,6 +7021,12 @@
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/outlands_city)
+"lBW" = (
+/obj/machinery/shower/halflife{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/lino,
+/area/halflife/indoors/townhall)
 "lCa" = (
 /obj/item/stack/sheet/animalhide/human,
 /turf/open/floor/plating/ground/rockunder,
@@ -7720,6 +7744,11 @@
 /obj/machinery/light/small/cyan/directional/east,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection)
+"mFJ" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/pushbroom,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/conscript_bunker)
 "mGh" = (
 /obj/structure/table/halflife/metal/alt,
 /obj/machinery/validation_terminal,
@@ -8813,11 +8842,6 @@
 /obj/structure/halflife/trash/books,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
-"osL" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/light/bulb,
-/turf/open/floor/plating/indoor/metal/plate,
-/area/halflife/indoors/conscript_bunker)
 "osQ" = (
 /obj/structure/table/halflife/wood,
 /obj/effect/spawner/random/halflife/loot/uncommon,
@@ -8853,6 +8877,9 @@
 /obj/item/chair/halflife/metal,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/slums)
+"owc" = (
+/turf/open/floor/plating/indoor/lino,
+/area/halflife/indoors/townhall)
 "oww" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/lino,
@@ -9102,6 +9129,10 @@
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/outdoors/outlands_city)
+"oOi" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/lino,
+/area/halflife/indoors/townhall)
 "oOy" = (
 /obj/item/storage/halflife/keyring,
 /turf/open/floor/plating/indoor/woodc,
@@ -9882,6 +9913,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
+"pWa" = (
+/obj/machinery/status_display/evac/directional/south,
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/indoors/distributioncenter)
 "pWo" = (
 /obj/machinery/light/small/cyan/directional/south,
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -11686,12 +11721,9 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors)
 "sOW" = (
-/obj/structure/closet/halflife,
-/obj/item/clothing/suit/utility/radiation/cleanup/scientist,
-/obj/item/clothing/head/utility/radiation/scientist,
-/obj/item/clothing/mask/gas/cwuengi,
-/turf/open/floor/plating/indoor/sterilesquares,
-/area/halflife/indoors/hospital/virology)
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "sPd" = (
 /obj/structure/halflife/trash/papers/three{
 	dir = 4
@@ -13653,6 +13685,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
+"vMM" = (
+/obj/modular_map_root/miningcaves,
+/turf/closed/wall/halflife/sewer,
+/area/halflife/indoors/sewer)
 "vMO" = (
 /obj/structure/halflife/toilet{
 	pixel_y = 8;
@@ -14046,10 +14082,6 @@
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/outlands)
-"wpx" = (
-/obj/machinery/status_display/evac/directional/south,
-/turf/open/floor/plating/indoor/tiled10,
-/area/halflife/indoors/distributioncenter)
 "wqW" = (
 /mob/living/basic/halflife/grub,
 /turf/open/floor/plating/ground/rockunder,
@@ -14433,6 +14465,13 @@
 	dir = 1
 	},
 /area/halflife/indoors/productioncenter)
+"xbo" = (
+/obj/structure/sink/halflife,
+/obj/structure/mirror/halflife{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/lino,
+/area/halflife/indoors/townhall)
 "xbT" = (
 /obj/machinery/combine_recharger/round_start{
 	pixel_y = 32
@@ -44976,7 +45015,7 @@ xwY
 xwY
 xwY
 xwY
-jhR
+vMM
 xtI
 xtI
 xtI
@@ -49729,7 +49768,7 @@ gFL
 xjC
 qvj
 egR
-sOW
+eaQ
 ray
 xwY
 xwY
@@ -49987,7 +50026,7 @@ ray
 ray
 ray
 gFL
-sOW
+eaQ
 qPl
 cKw
 ray
@@ -83768,7 +83807,7 @@ xcH
 uOu
 miW
 miW
-fjQ
+dXQ
 eGo
 eGo
 eGo
@@ -89967,7 +90006,7 @@ sgI
 sgI
 sgI
 heD
-gwi
+mFJ
 vzy
 vzy
 mTy
@@ -90220,7 +90259,7 @@ bTR
 dwe
 sgI
 heD
-osL
+gwi
 uSR
 vzy
 heD
@@ -92489,7 +92528,7 @@ eBx
 wDB
 uRo
 oGX
-wpx
+pWa
 sed
 cRJ
 dGL
@@ -99785,11 +99824,11 @@ mTk
 fHU
 fHU
 fHU
-jMW
+htd
+akc
+akc
+bNC
 mXS
-akc
-ddm
-akc
 akc
 mhG
 alw
@@ -100035,10 +100074,10 @@ mCp
 mCp
 jZL
 jMW
-fHU
-fHU
-fHU
-htd
+jMW
+bEo
+jMW
+jMW
 akc
 akc
 akc
@@ -100288,9 +100327,9 @@ dHh
 woe
 tmt
 jMW
-fHU
-fHU
-vNU
+xbo
+owc
+oOi
 jMW
 cTE
 akc
@@ -100541,9 +100580,9 @@ jMW
 jMW
 jMW
 jMW
-fHU
-fHU
-fHU
+gAi
+owc
+lBW
 jMW
 bPO
 akc
@@ -105013,7 +105052,7 @@ mif
 yas
 cHK
 eGo
-eaQ
+sOW
 tVy
 tVy
 tVy

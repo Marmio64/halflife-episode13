@@ -44,6 +44,12 @@ GLOBAL_LIST_INIT(security_depts_prefs, sort_list(list(
 	SEC_DEPT_QUICK,
 )))
 
+GLOBAL_LIST_INIT(rebel_loadout_prefs, sort_list(list(
+	REBEL_LOADOUT_SCOUT,
+	REBEL_LOADOUT_BRUISER,
+	REBEL_LOADOUT_MEDIC,
+)))
+
 	//Backpacks
 #define DBACKPACK "Department Backpack"
 #define DDUFFELBAG "Department Duffel Bag"

@@ -50,29 +50,40 @@
 		/obj/item/hl2key/rebel = 1,
 	)
 
-/datum/outfit/job/rebel/pre_equip(mob/living/carbon/human/equip_to)
-	if(prob(25))
-		suit = /obj/item/clothing/suit/armor/rebel/light
-		suit_store = /obj/item/gun/ballistic/automatic/pistol/makeshift
-		head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
-		backpack_contents = list(
-			/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
-			/obj/item/ammo_box/magazine/makeshift9mm = 1,
-			/obj/item/hl2key/rebel = 1,
-		)
-	else if(prob(25))
-		suit_store = /obj/item/switchblade
-		equip_to.change_stat(STATKEY_STR, 2)
-		equip_to.change_stat(STATKEY_DEX, -1)
-		backpack_contents = list(
-			/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
-			/obj/item/hl2key/rebel = 1,
-		)
+/datum/outfit/job/rebel/pre_equip(mob/living/carbon/human/user)
+	var/client/user_client = GLOB.directory[ckey(user.mind?.key)]
 
-/datum/outfit/job/rebel/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
-	. = ..()
-	user.change_stat(STATKEY_DEX, 2)
+	var/loadout = null
 
+	if(user_client)
+		loadout = user_client.prefs.read_preference(/datum/preference/choiced/rebel_loadout)
+
+
+	if(loadout)
+		if(loadout == REBEL_LOADOUT_MEDIC)
+			user.change_stat(STATKEY_INT, 3)
+			suit = /obj/item/clothing/suit/armor/civilprotection/medical
+			suit_store = null
+			backpack_contents = list(
+				/obj/item/storage/medkit/halflife = 1,
+				/obj/item/healthanalyzer = 1,
+				/obj/item/hl2key/rebel = 1,
+			)
+
+		if(loadout == REBEL_LOADOUT_SCOUT)
+			user.change_stat(STATKEY_DEX, 2)
+
+		if(loadout == REBEL_LOADOUT_BRUISER)
+			user.change_stat(STATKEY_STR, 2)
+			suit_store = /obj/item/switchblade
+			suit = /obj/item/clothing/suit/armor/rebel/light
+			head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+			backpack_contents = list(
+				/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+				/obj/item/hl2key/rebel = 1,
+			)
+	else
+		user.change_stat(STATKEY_DEX, 2)
 
 /datum/outfit/job/refugee
 	name = "Outlands Refugee"

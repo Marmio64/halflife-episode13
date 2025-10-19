@@ -60,6 +60,10 @@
 #define SEC_DEPT_RANGER "Ranger (+Dexterity)"
 #define SEC_DEPT_QUICK "Quick (+Dexterity)"
 
+#define REBEL_LOADOUT_SCOUT "Scout (Pistol, Light)"
+#define REBEL_LOADOUT_BRUISER "Bruiser (Melee, Heavy)"
+#define REBEL_LOADOUT_MEDIC "Medic (Intelligent Doctor)"
+
 // Playtime tracking system, see jobs_exp.dm
 #define EXP_TYPE_LIVING "Living"
 #define EXP_TYPE_CREW "Crew"
