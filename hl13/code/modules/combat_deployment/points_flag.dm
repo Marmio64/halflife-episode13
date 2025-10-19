@@ -29,6 +29,9 @@
 	for(var/turf/closed/wall/W in RANGE_TURFS(1, get_turf(src))) //no walling off the flag
 		W.dismantle_wall()
 
+	if(GLOB.deployment_flag_grace_period > 0) //dont generate cash while a grace period is active
+		return
+
 	if(current_faction_holder == COMBINE_DEPLOYMENT_FACTION)
 		icon_state = "flagpole_combine"
 		GLOB.deployment_combine_cash += cash_increase

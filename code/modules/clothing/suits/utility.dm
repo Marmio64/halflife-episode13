@@ -194,7 +194,7 @@
 
 /datum/armor/utility_radiation
 	melee = 40
-	bio = 60
+	bio = 100
 	fire = 30
 	acid = 30
 

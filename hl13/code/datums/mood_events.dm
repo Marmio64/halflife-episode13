@@ -52,7 +52,7 @@
 /datum/mood_event/comfy_sleep
 	description = "I slept on something decently comfortable."
 	mood_change = 2
-	timeout = 3 MINUTES
+	timeout = 5 MINUTES
 
 //pain
 /datum/mood_event/seriouspain

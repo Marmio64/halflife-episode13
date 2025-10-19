@@ -106,6 +106,12 @@
 /mob/living/basic/halflife/antlion_guard/zombie_faction
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
 
+/mob/living/basic/halflife/antlion_guard/weak
+	maxHealth = 500
+	health = 500
+	melee_damage_lower = 25
+	melee_damage_upper = 30
+
 ///Every hit throws people back
 /mob/living/basic/halflife/antlion_guard/melee_attack(atom/target, list/modifiers, ignore_cooldown = FALSE)
 	. = ..()

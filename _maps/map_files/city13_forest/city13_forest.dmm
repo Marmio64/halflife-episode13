@@ -182,8 +182,12 @@
 	dir = 1
 	},
 /obj/item/food/nutripaste/small{
-	pixel_x = 6;
+	pixel_x = 8;
 	pixel_y = 0
+	},
+/obj/item/food/nutripaste/small{
+	pixel_x = -8;
+	pixel_y = 4
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/conscript_bunker)
@@ -490,6 +494,10 @@
 /obj/structure/table/halflife/no_smooth/large/crafting/workbench,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/outlands)
+"aJb" = (
+/obj/machinery/status_display/evac/directional/south,
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/indoors/distributioncenter)
 "aJh" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 8
@@ -536,6 +544,8 @@
 /area/halflife/indoors/slums)
 "aNy" = (
 /obj/structure/closet/crate/halflife,
+/obj/item/halflife/nutrient_bar_wrapping/water,
+/obj/item/halflife/nutrient_bar_wrapping/water,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "aNI" = (
@@ -630,6 +640,12 @@
 	},
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/outlands)
+"aUP" = (
+/obj/effect/turf_decal/arrows{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/indoors/distributioncenter)
 "aVx" = (
 /obj/machinery/light/small/directional/east,
 /obj/structure/table/halflife/no_smooth/large/wood/desk{
@@ -2478,9 +2494,11 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "eaQ" = (
-/obj/structure/closet/l3closet/virology,
-/turf/open/floor/plating/indoor/sterilesquares,
-/area/halflife/indoors/hospital/virology)
+/obj/structure/closet/halflife,
+/obj/effect/spawner/random/halflife/loot/ammo,
+/obj/effect/spawner/random/halflife/loot/ammo,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/outlands)
 "eco" = (
 /obj/machinery/door/unpowered/halflife/seethrough/bar{
 	keylock = 1;
@@ -3268,9 +3286,9 @@
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/outlands_city)
 "flZ" = (
-/obj/structure/halflife/road_barrier/combine,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors/forest)
+/obj/modular_map_root/miningcaves,
+/turf/closed/wall/halflife/sewer,
+/area/halflife/indoors/sewer)
 "fmd" = (
 /obj/modular_map_root/miningcaves,
 /turf/closed/mineral/random/high_chance,
@@ -3786,6 +3804,10 @@
 "gaC" = (
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/outdoors/tracks)
+"gbf" = (
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "gbs" = (
 /obj/structure/table/halflife/wood/bar,
 /obj/item/stack/spacecash/c10,
@@ -4291,6 +4313,10 @@
 	pixel_y = 9
 	},
 /obj/structure/table/halflife/metal/grate,
+/obj/item/stack/sheet/iron/ten{
+	pixel_x = 8;
+	pixel_y = 3
+	},
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/bunker)
 "gNA" = (
@@ -11658,7 +11684,10 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors)
 "sOW" = (
-/obj/structure/closet/l3closet,
+/obj/structure/closet/halflife,
+/obj/item/clothing/suit/utility/radiation/cleanup/scientist,
+/obj/item/clothing/head/utility/radiation/scientist,
+/obj/item/clothing/mask/gas/cwuengi,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital/virology)
 "sPd" = (
@@ -11890,6 +11919,14 @@
 /obj/item/food/canned/halflife/seafood{
 	pixel_x = -1;
 	pixel_y = 15
+	},
+/obj/item/radio/off/halflife{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/radio/off/halflife{
+	pixel_x = 12;
+	pixel_y = 3
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
@@ -13063,8 +13100,8 @@
 	pixel_y = 14
 	},
 /obj/item/food/canned/halflife/seafood{
-	pixel_x = 12;
-	pixel_y = 2
+	pixel_x = 6;
+	pixel_y = 6
 	},
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/bunker)
@@ -44929,7 +44966,7 @@ xwY
 xwY
 xwY
 xwY
-xtI
+flZ
 xtI
 xtI
 xtI
@@ -49682,7 +49719,7 @@ gFL
 xjC
 qvj
 egR
-eaQ
+sOW
 ray
 xwY
 xwY
@@ -83719,9 +83756,9 @@ bJb
 xcH
 xcH
 uOu
-jIb
 miW
-jIb
+miW
+eaQ
 eGo
 eGo
 eGo
@@ -85863,7 +85900,7 @@ sUe
 sUe
 sUe
 sUe
-hdS
+sUe
 hdS
 xco
 xco
@@ -86116,8 +86153,8 @@ hdS
 hdS
 hdS
 hdS
-mPY
 hdS
+mPY
 xco
 xco
 xco
@@ -86369,7 +86406,7 @@ sUe
 sUe
 sUe
 sUe
-hdS
+sUe
 hdS
 xco
 xco
@@ -91678,10 +91715,10 @@ gMn
 tPC
 uRo
 wen
+aUP
 uRo
 uRo
-uRo
-uRo
+aUP
 oGX
 uRo
 sed
@@ -92442,7 +92479,7 @@ eBx
 wDB
 uRo
 oGX
-uRo
+aJb
 sed
 cRJ
 dGL
@@ -97529,7 +97566,7 @@ qqt
 qqt
 oQy
 oQy
-sCz
+vIZ
 wMr
 wMr
 wMr
@@ -97780,9 +97817,9 @@ mNk
 pgd
 pgd
 pgd
+pgd
 dQT
-flZ
-sCz
+vIZ
 eMG
 wMr
 oyU
@@ -98034,8 +98071,8 @@ cXQ
 sCz
 sCz
 sCz
-vIZ
 sCz
+vIZ
 eMG
 wMr
 oyU
@@ -99046,8 +99083,8 @@ sCz
 sCz
 sCz
 sCz
-vIZ
 sCz
+vIZ
 eMG
 wMr
 oyU
@@ -99298,9 +99335,9 @@ mNk
 sQJ
 pgd
 pgd
+pgd
 dQT
-flZ
-sCz
+vIZ
 eMG
 wMr
 oyU
@@ -99553,7 +99590,7 @@ pgd
 oQy
 oQy
 oQy
-sCz
+vIZ
 wMr
 wMr
 wMr
@@ -104966,7 +105003,7 @@ mif
 yas
 cHK
 eGo
-tVy
+gbf
 tVy
 tVy
 tVy

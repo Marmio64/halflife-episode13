@@ -19,7 +19,7 @@
 	name = "\improper Outdoors"
 	static_lighting = TRUE
 	outdoors = TRUE
-	ambience_index = AMBIENCE_HLOUTSIDE
+	//ambience_index = AMBIENCE_HLOUTSIDE
 	max_ambience_cooldown = 30 SECONDS
 	min_ambience_cooldown = 15 SECONDS
 	sound_environment = SOUND_ENVIRONMENT_CITY
