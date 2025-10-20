@@ -20,7 +20,7 @@
 	base_icon_state = "reinforced"
 	name = "reinforced window"
 	desc = "A window reinforced with metal bars, making it rather difficult to break."
-	max_integrity = 250
+	max_integrity = 350
 	damage_deflection = 20
 
 /obj/structure/window/fulltile/halflife/combine

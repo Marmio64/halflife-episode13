@@ -3,7 +3,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier1/baton_cop
 	name = "Deployment: Baton Cop"
-	display_name = "Baton Cop"
+	display_name = "Baton Cop (Offense)"
 	desc = "Armed with a full belt which contains a baton and meds, you can met out some damage if you can get up close and personal."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
@@ -19,7 +19,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier1/infestation_control
 	name = "Deployment: Infestation Control"
-	display_name = "Infestation Control"
+	display_name = "Infestation Control (Offense)"
 	desc = "Your spraygun is amazing at taking out zombies, but your slow speed and lack of bullet resistance can leave you helpless against rebels."
 
 	uniform = /obj/item/clothing/under/citizen
@@ -38,7 +38,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier1/engineer
 	name = "Deployment: Union Engineer"
-	display_name = "Union Engineer"
+	display_name = "Union Engineer (Support)"
 	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however."
 
 	uniform = /obj/item/clothing/under/citizen
@@ -70,7 +70,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier2/viscerator_cop
 	name = "Deployment: Viscerator Cop"
-	display_name = "Viscerator Cop"
+	display_name = "Viscerator Cop (Offense)"
 	desc = "A baton cop equipped with manhacks, for bringing support to the field."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
@@ -89,7 +89,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier2/pistol_cop
 	name = "Deployment: Pistol Cop"
-	display_name = "Pistol Cop"
+	display_name = "Pistol Cop (Offense)"
 	desc = "A pistol equipped cop, who can dish out a moderate amount of damage from range."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
@@ -107,7 +107,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier2/medic_cop
 	name = "Deployment: Medical Cop"
-	display_name = "Medical Cop"
+	display_name = "Medical Cop (Support)"
 	desc = "A baton cop equipped with extra medical supplies for tending to the wounds of allies."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
@@ -131,7 +131,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier2/engineer
 	name = "Deployment: Upgraded Union Engineer"
-	display_name = "Upgraded Union Engineer"
+	display_name = "Upgraded Union Engineer (Support)"
 	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however."
 
 	uniform = /obj/item/clothing/under/citizen
@@ -163,7 +163,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier3/grunt
 	name = "Deployment: OTA Grunt"
-	display_name = "OTA Grunt"
+	display_name = "OTA Grunt (Offense)"
 	desc = "While you have little bullet resistance, grunts have good firepower and speed."
 
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
@@ -185,7 +185,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier3/ota
 	name = "Deployment: SMG OTA"
-	display_name = "SMG OTA"
+	display_name = "SMG OTA (Defense)"
 	desc = "You have a large amount of armor and are equipped with a standard MP7, letting you dish out a moderate amount of damage, but lack speed."
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
@@ -196,13 +196,14 @@
 	belt = /obj/item/storage/belt/civilprotection/overwatch/mp7
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier3/riotcop
 	name = "Deployment: Riot Viscerator Cop"
-	display_name = "Riot Viscerator Cop"
+	display_name = "Riot Viscerator Cop (Offense)"
 	desc = "You are equipped with a dangerous heavy stun baton and a riot shield, alongside a viscerator for support and a riot pistol as a ranged option."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
@@ -228,7 +229,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier3/divisional
 	name = "Deployment: Divisional Lead"
-	display_name = "Divisional Lead"
+	display_name = "Divisional Lead (Offense)"
 	desc = "You are a sharpshooter cop equipped with a colt python, who has upgraded armor that does not impair mobility."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection/divisionallead
@@ -256,7 +257,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier3/medic_cop
 	name = "Deployment: Upgraded Medical Cop"
-	display_name = "Upgraded Medical Cop"
+	display_name = "Upgraded Medical Cop (Support)"
 	desc = "You are a pistol wielding cop with extra medical supplies."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
@@ -289,7 +290,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier3/engineer
 	name = "Deployment: Upgraded Union Engineer+"
-	display_name = "Upgraded Union Engineer+"
+	display_name = "Upgraded Union Engineer+ (Support)"
 	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however."
 
 	uniform = /obj/item/clothing/under/citizen
@@ -318,13 +319,30 @@
 
 	extra_str = 4
 
+/datum/outfit/deployment_loadout/combine/tier3/sniper
+	name = "Deployment: Sniper OTA"
+	display_name = "Sniper OTA (Pick)"
+	desc = "You are well armored and have a high power sniper rifle that can wreck havoc on enemies from incredibly far distances."
+	glasses = /obj/item/clothing/glasses/hud/security/night/combine
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
+	uniform = /obj/item/clothing/under/combine/overwatch
+	suit = /obj/item/clothing/suit/armor/overwatch/slow
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
+	gloves = /obj/item/clothing/gloves/combat/overwatch
+	belt = /obj/item/storage/belt/civilprotection/overwatch/sniper_deployment
+	suit_store = /obj/item/gun/ballistic/combine_sniper/slow
+	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
+
+	ears = /obj/item/radio/headset/civilprotection/deployment
+	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
+
 /// TIER 4 ////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier4
 	loadout_tier = 4
 
 /datum/outfit/deployment_loadout/combine/tier4/elite
 	name = "Deployment: Elite OTA"
-	display_name = "Elite OTA"
+	display_name = "Elite OTA (Defense)"
 	desc = "You are the pinnacle of combine technology. Elites have powerful AR2s and heavy armor, but their sluggish movement makes them best suited for defending positions than attacking them."
 
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
@@ -343,7 +361,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier4/shotgunner
 	name = "Deployment: OTA Shotgunner"
-	display_name = "OTA Shotgunner"
+	display_name = "OTA Shotgunner (Offense)"
 	desc = "You are suprisingly fast for your armor level, shotgunners use grenades to clear house before rushing in with their shotgun."
 
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
@@ -363,8 +381,8 @@
 
 /datum/outfit/deployment_loadout/combine/tier4/sniper
 	name = "Deployment: Sniper OTA"
-	display_name = "Sniper OTA"
-	desc = "You are well armored and have a high power sniper rifle that can wreck havoc on enemies from incredibly far distances."
+	display_name = "Sniper OTA (Pick)"
+	desc = "You are well armored and have a high power sniper rifle that can wreck havoc on enemies from incredibly far distances. You move faster and have a faster firing rifle compared to your tier 3 variant."
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
 	uniform = /obj/item/clothing/under/combine/overwatch
@@ -380,7 +398,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier4/ordinal
 	name = "Deployment: Combine Ordinal"
-	display_name = "Combine Ordinal"
+	display_name = "Combine Ordinal (Offense)"
 	desc = "You are an OTA soldier upgraded to have a pulse SMG and an improved manhack deployer."
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
@@ -398,7 +416,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier4/medic_cop
 	name = "Deployment: Heavy Medical Cop"
-	display_name = "Heavy Medical Cop"
+	display_name = "Heavy Medical Cop (Support)"
 	desc = "You are a MP7 wielding cop with plenty of extra medical supplies."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
@@ -436,7 +454,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier4/engineer
 	name = "Deployment: Senior Union Engineer"
-	display_name = "Senior Union Engineer"
+	display_name = "Senior Union Engineer (Support)"
 	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however."
 
 	uniform = /obj/item/clothing/under/citizen
@@ -488,7 +506,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier4/overseer
 	name = "Deployment: Overseer"
-	display_name = "Viscerator Overseer Cop"
+	display_name = "Viscerator Overseer Cop (Offense)"
 	desc = "You are a MP7 equipped cop that specializes in supporting allies with your large amount of viscerators, but aren't too powerful by yourself. Your viscerators are quick to deploy and have a shield which can take two shots for them, but have low health otherwise, making them best used against slow firing targets."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
@@ -518,7 +536,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier5/hunter
 	name = "Deployment: Hunter"
-	display_name = "Hunter"
+	display_name = "Hunter (Offense)"
 	desc = "You are an expert on killing, as hunters are a force to be reckoned with due to their speed and high firepower."
 	uniform = null
 	shoes = null
@@ -531,7 +549,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier5/wallhammer
 	name = "Deployment: Combine Wallhammer"
-	display_name = "Combine Wallhammer"
+	display_name = "Combine Wallhammer (Defense)"
 	desc = "You are an extra heavy combine soldier equipped with a deployable shield and pulse shotgun for maximum destruction."
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/wallhammer
@@ -557,10 +575,10 @@
 
 /datum/outfit/deployment_loadout/combine/tier5/assassin
 	name = "Deployment: Combine Assassin"
-	display_name = "Combine Assassin"
-	desc = "You are a highly mobile expert on stealth, who can partially conceal themselves and carries a very deadly knife alongside two extended mag USP Matches and a sniper rifle."
+	display_name = "Combine Assassin (Pick)"
+	desc = "You are the premier pick class and stealth expert. You excel at assassinating high value targets whether its from afar with your sniper rifle, or going invisible to sneak up behind targets with your backstab knife."
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
-	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/elite
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/assassin
 	uniform = /obj/item/clothing/under/combine/overwatch/assassin
 	suit = /obj/item/clothing/suit/armor/overwatch/assassin
 	suit_store = /obj/item/gun/ballistic/combine_sniper
@@ -578,7 +596,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier5/suppressor
 	name = "Deployment: Combine Suppressor"
-	display_name = "Combine Suppressor"
+	display_name = "Combine Suppressor (Defense)"
 	desc = "You are an extra heavy combine soldier equipped with a pulse light machine gun which is great for laying down cover fire."
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/suppressor
@@ -604,7 +622,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier5/advisor
 	name = "Deployment: Advisor"
-	display_name = "Advisor"
+	display_name = "Advisor (Support)"
 	desc = "You are a mysterious Combine Advisor. You have various psionic abilities at your disposal for supporting your team and punishing the enemies, but are not good at killing nor are you particularly durable and quick."
 	uniform = null
 	shoes = null

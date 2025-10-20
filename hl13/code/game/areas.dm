@@ -268,7 +268,7 @@
 
 	first_time_text = "Conscript Bunker"
 
-	ambient_buzz = 'hl13/sound/ambience/bunker2.ogg'
+	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'
 	ambient_buzz_vol = 70
 
 ////// FACTORY START
@@ -330,7 +330,7 @@
 ///////// 'old' areas end
 
 /area/halflife/indoors/bunker
-	ambient_buzz = 'hl13/sound/ambience/bunker2.ogg'
+	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'
 	ambient_buzz_vol = 70
 
 /area/halflife/indoors/bunker/unpowered
@@ -358,7 +358,7 @@
 
 /area/halflife/indoors/sewer/tunnel
 	name = "\improper Tunnels"
-	ambient_buzz = 'hl13/sound/ambience/bunker1.ogg'
+	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'
 	ambient_buzz_vol = 70
 
 	mood_message = "<span class='warning'>This place is unnerving...</span>\n"

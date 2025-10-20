@@ -101,13 +101,27 @@
 /obj/item/clothing/suit/armor/overwatch/deathmatch
 	slowdown = 0.33
 
+/obj/item/clothing/suit/armor/overwatch/slow
+	slowdown = 0.5
+
 /obj/item/clothing/suit/armor/overwatch/assassin
 	name = "assassin chestpiece"
-	desc = "An extremely advanced piece of chest protection that is very lightweight and very protective. Often issued to elite combine assassins."
+	desc = "An extremely advanced piece of chest protection that is very lightweight and protective. Often issued to elite combine assassins."
 	icon_state = "assassin"
+	armor_type = /datum/armor/overwatch_assassin_armor
 	slowdown = -0.5
 	actions_types = list(/datum/action/item_action/assassin_invis)
 	var/invis_ready = TRUE
+
+/datum/armor/overwatch_assassin_armor
+	melee = 35
+	bullet = 35
+	laser = 40
+	energy = 30
+	bomb = 45
+	fire = 50
+	acid = 50
+	wound = 20
 
 /obj/item/clothing/suit/armor/overwatch/assassin/ui_action_click(mob/user, action)
 	assassin_invis()
@@ -204,7 +218,7 @@
 /obj/item/clothing/suit/armor/overwatch/suppressor
 	name = "overwatch suppressor chestpiece"
 	icon_state = "suppressor"
-	slowdown = 1
+	slowdown = 0.75
 	armor_type = /datum/armor/eliteoverwatcharmor
 	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 
@@ -286,15 +300,18 @@
 	limb_integrity = 225
 	repairable_by = /obj/item/stack/kevlar
 
+/obj/item/clothing/suit/armor/halflife/milvest/slow
+	slowdown = 0.5
+
 /datum/armor/milvest
-	melee = 30
+	melee = 35
 	bullet = 40
 	laser = 10
 	energy = 100
-	bomb = 20
+	bomb = 40
 	fire = 50
 	acid = 50
-	wound = 10
+	wound = 15
 
 //crafted armor vest
 /obj/item/clothing/suit/armor/armored

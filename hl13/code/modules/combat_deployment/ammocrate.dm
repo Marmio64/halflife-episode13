@@ -10,7 +10,7 @@
 	var/ammo_max = 10
 	var/recharges = TRUE
 	var/in_use = FALSE
-	var/list/vendoptions = list("USP Match", "Mosin", "MP7", "SPAS12", "Colt Python", "Service Rifle", "Pulse SMG", "AK-47", "AR2")
+	var/list/vendoptions = list("USP Match", "Mosin", "MP7", "SPAS12", "Colt Python", "M4A1", "Pulse SMG", "AK-47", "AR2")
 
 /obj/machinery/ammo_crate/low_health
 	max_integrity = 150 //no body blocking crap with ammo crates
@@ -54,8 +54,8 @@
 			ammo_to_dispense = /obj/item/storage/box/lethalshot/halflife
 		if("Colt Python")
 			ammo_to_dispense = /obj/item/ammo_box/colta357
-		if("Service Rifle")
-			ammo_to_dispense = /obj/item/ammo_box/magazine/m4a1/service
+		if("M4A1")
+			ammo_to_dispense = /obj/item/ammo_box/magazine/m4a1
 		if("Pulse SMG")
 			ammo_to_dispense = /obj/item/ammo_box/magazine/pulsesmg
 		if("AK-47")

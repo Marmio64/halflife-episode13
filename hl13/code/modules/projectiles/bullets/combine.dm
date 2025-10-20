@@ -11,7 +11,7 @@
 	speed = 4
 
 /obj/projectile/bullet/pulse/lmg
-	damage = 21
+	damage = 22
 	wound_bonus = -10
 	armour_penetration = 20
 
@@ -43,11 +43,19 @@
 
 /obj/projectile/bullet/pulse/heavy
 	name = "heavy pulse round"
-	damage = 50
+	damage = 32
 	wound_bonus = -10
-	armour_penetration = 40
+	armour_penetration = 80 //will get you through practically anything
 	speed = 6
 	accurate_range = 150
+
+	var/max_distance_damage = 50
+	var/damage_increase_per_tile = 2
+
+/obj/projectile/bullet/pulse/heavy/reduce_range()
+	..()
+	if(damage < max_distance_damage)
+		damage += damage_increase_per_tile
 
 /obj/projectile/bullet/flechette
 	name = "flechette"

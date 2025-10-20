@@ -225,7 +225,7 @@
 		/obj/item/lighter =  1,
 	)
 	tool_behaviors = list(TOOL_WELDER, TOOL_WRENCH)
-	time = 8 SECONDS
+	time = 10 SECONDS
 	category = CAT_WEAPON_RANGED
 
 /datum/crafting_recipe/rebarxbowforced

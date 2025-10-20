@@ -68,8 +68,7 @@
 	icon_state = "rebar"
 	damage = 45
 	speed = 6
-	dismemberment = 1 //because a 1 in 100 chance to just blow someones arm off is enough to be cool but also not enough to be reliable
-	armour_penetration = 35
+	armour_penetration = 50
 	wound_bonus = -20
 	bare_wound_bonus = 20
 	embed_type = /datum/embed_data/rebar

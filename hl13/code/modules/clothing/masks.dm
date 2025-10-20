@@ -278,6 +278,11 @@
 /obj/item/clothing/mask/gas/civilprotection/overwatch/red
 	icon_state = "overwatch_red"
 
+/obj/item/clothing/mask/gas/civilprotection/overwatch/assassin
+	name = "overwatch assassin mask"
+	icon_state = "overwatch_white"
+	mask_color = /datum/client_colour/eliteow
+
 /obj/item/clothing/mask/gas/civilprotection/overwatch/elite
 	name = "overwatch elite soldier mask"
 	icon_state = "overwatch_white"

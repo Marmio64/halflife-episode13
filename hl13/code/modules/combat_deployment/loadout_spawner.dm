@@ -57,6 +57,11 @@
 	var/list/display_names = generate_display_names()
 	if(!length(display_names))
 		return
+	to_chat(user, span_notice("Try to pick a loadout according to the team's needs!"))
+	to_chat(user, span_notice("OFFENSE Classes either have high mobility or the ability to get through enemy fortifications."))
+	to_chat(user, span_notice("DEFENSE Classes typically have high armor and low mobility and excel at holding down positions."))
+	to_chat(user, span_notice("SUPPORT Classes generally have poor direct combat skills and instead improve their team's ability to fight through healing, building, and buffs."))
+	to_chat(user, span_notice("PICK Classes uniquely focus on being able to take out high value targets, typically through the use of assassination or sniping."))
 	var/choice = tgui_input_list(user, "CURRENT LOADOUT TIER: [current_tier]", "Select a Loadout", display_names)
 	if(isnull(choice) || isnull(display_names[choice]))
 		return
@@ -117,8 +122,8 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/rebel/tier1/mosin_partisan,
 			/datum/outfit/deployment_loadout/rebel/tier1/molotov_partisan,
-			/datum/outfit/deployment_loadout/rebel/tier1/engineer,
 			/datum/outfit/deployment_loadout/rebel/tier1/smuggler,
+			/datum/outfit/deployment_loadout/rebel/tier1/engineer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -133,9 +138,9 @@
 		loadouts = list()
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/rebel/tier2/pistol_rebel,
+			/datum/outfit/deployment_loadout/rebel/tier2/smuggler,
 			/datum/outfit/deployment_loadout/rebel/tier2/medic_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier2/engineer,
-			/datum/outfit/deployment_loadout/rebel/tier2/smuggler,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -151,11 +156,11 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/rebel/tier3/mp7_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier3/bomber_rebel,
-			/datum/outfit/deployment_loadout/rebel/tier3/vortigaunt,
-			/datum/outfit/deployment_loadout/rebel/tier3/crossbow,
-			/datum/outfit/deployment_loadout/rebel/tier3/engineer,
 			/datum/outfit/deployment_loadout/rebel/tier3/scout,
+			/datum/outfit/deployment_loadout/rebel/tier3/vortigaunt,
+			/datum/outfit/deployment_loadout/rebel/tier3/engineer,
 			/datum/outfit/deployment_loadout/rebel/tier3/medic_rebel,
+			/datum/outfit/deployment_loadout/rebel/tier3/crossbow,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -170,14 +175,14 @@
 		loadouts = list()
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/rebel/tier4/ar2_rebel,
-			/datum/outfit/deployment_loadout/rebel/tier4/corporal,
 			/datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel,
+			/datum/outfit/deployment_loadout/rebel/tier4/scout,
+			/datum/outfit/deployment_loadout/rebel/tier4/corporal,
+			/datum/outfit/deployment_loadout/rebel/tier4/medic_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt,
-			/datum/outfit/deployment_loadout/rebel/tier4/crossbow,
 			/datum/outfit/deployment_loadout/rebel/tier4/engineer,
 			/datum/outfit/deployment_loadout/rebel/tier4/spy,
-			/datum/outfit/deployment_loadout/rebel/tier4/scout,
-			/datum/outfit/deployment_loadout/rebel/tier4/medic_rebel,
+			/datum/outfit/deployment_loadout/rebel/tier4/crossbow,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -231,8 +236,8 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/combine/tier2/viscerator_cop,
 			/datum/outfit/deployment_loadout/combine/tier2/pistol_cop,
-			/datum/outfit/deployment_loadout/combine/tier2/medic_cop,
 			/datum/outfit/deployment_loadout/combine/tier1/infestation_control, //already pretty good for being tier 1
+			/datum/outfit/deployment_loadout/combine/tier2/medic_cop,
 			/datum/outfit/deployment_loadout/combine/tier2/engineer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
@@ -248,11 +253,12 @@
 		loadouts = list()
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/combine/tier3/grunt,
-			/datum/outfit/deployment_loadout/combine/tier3/ota,
 			/datum/outfit/deployment_loadout/combine/tier3/riotcop,
 			/datum/outfit/deployment_loadout/combine/tier3/divisional,
+			/datum/outfit/deployment_loadout/combine/tier3/ota,
 			/datum/outfit/deployment_loadout/combine/tier3/medic_cop,
 			/datum/outfit/deployment_loadout/combine/tier3/engineer,
+			/datum/outfit/deployment_loadout/combine/tier3/sniper,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -266,13 +272,13 @@
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/outfit/deployment_loadout/combine/tier4/elite,
 			/datum/outfit/deployment_loadout/combine/tier4/shotgunner,
-			/datum/outfit/deployment_loadout/combine/tier4/sniper,
 			/datum/outfit/deployment_loadout/combine/tier4/ordinal,
+			/datum/outfit/deployment_loadout/combine/tier4/overseer,
+			/datum/outfit/deployment_loadout/combine/tier4/elite,
 			/datum/outfit/deployment_loadout/combine/tier4/medic_cop,
 			/datum/outfit/deployment_loadout/combine/tier4/engineer,
-			/datum/outfit/deployment_loadout/combine/tier4/overseer,
+			/datum/outfit/deployment_loadout/combine/tier4/sniper,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -291,9 +297,9 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/combine/tier5/hunter,
 			/datum/outfit/deployment_loadout/combine/tier5/wallhammer,
-			/datum/outfit/deployment_loadout/combine/tier5/assassin,
 			/datum/outfit/deployment_loadout/combine/tier5/suppressor,
 			/datum/outfit/deployment_loadout/combine/tier5/advisor,
+			/datum/outfit/deployment_loadout/combine/tier5/assassin,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

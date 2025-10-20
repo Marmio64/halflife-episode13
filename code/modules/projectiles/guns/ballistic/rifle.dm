@@ -196,7 +196,7 @@
 /obj/item/gun/ballistic/rifle/rebarxbow
 	name = "heated rebar crossbow"
 	desc = "A handcrafted crossbow. \
-		   Can fire sharpened iron rods and pieces of rebar at high velocities. \
+		   Can fire sharpened iron rods and pieces of rebar at high velocities with large amounts of armor piercing capability. \
 		   Very slow to reload - you can craft the crossbow with a crowbar to loosen the crossbar, but risk a misfire, or worse..."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "rebarxbow"

@@ -50,7 +50,6 @@
 	desc = "A old M4A1 pattern rifle. Not as good as the combine's rifles, but still powerful."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "m4a1"
-	inhand_icon_state = "arg"
 	fire_sound = "sound/items/weapons/gun/rifle/shot.ogg"
 	vary_fire_sound = FALSE
 	load_sound = "sound/items/weapons/gun/rifle/rifleload.ogg"
@@ -123,7 +122,6 @@
 	desc = "An old surplus rifle from decades ago. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "service"
-	inhand_icon_state = "arg"
 	fire_sound = "sound/items/weapons/gun/rifle/shot.ogg"
 	vary_fire_sound = FALSE
 	load_sound = "sound/items/weapons/gun/rifle/rifleload.ogg"
@@ -181,7 +179,7 @@
 
 /obj/item/gun/ballistic/combine_sniper
 	name = "combine sniper rifle"
-	desc = "A pulse based marksmen rifle which fires high velocity, devestating rounds."
+	desc = "A pulse based marksmen rifle which fires high velocity, devestating rounds. It's unique pulse rounds gain velocity and stopping power the further they travel, use at long distance for maximum effect."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "combine_sniper"
 	inhand_icon_state = "combine_sniper"
@@ -199,12 +197,18 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slowdown = 0.25
 
+	var/after_shot_delay = 1 SECONDS
+
 	accepted_magazine_type = /obj/item/ammo_box/magazine/combine_sniper
 	pin = /obj/item/firing_pin/implant/mindshield
 	//var/obj/item/attachment/laser_sight/combine/laser
 
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
+/obj/item/gun/ballistic/combine_sniper/slow
+	after_shot_delay = 1.25 SECONDS
+	fire_delay = 25
 
 /obj/item/gun/ballistic/combine_sniper/Initialize(mapload)
 	. = ..()
@@ -225,7 +229,7 @@
 
 /obj/item/gun/ballistic/combine_sniper/shoot_live_shot(mob/living/user, pointblank = 0, atom/pbtarget = null, message = 1)
 	. = ..()
-	sleep(1 SECONDS)
+	sleep(after_shot_delay)
 	playsound(user, charge_sound, fire_sound_volume, vary_fire_sound)
 
 
@@ -590,7 +594,7 @@
 //slow to fire for about the first second, but ramps up to have a rate of fire around that of the MP7, but with deadlier rounds and a huge mag capacity. It's inaccuracy however makes it best at laying down cover fire
 /obj/item/gun/ballistic/automatic/pulselmg
 	name = "\improper Pulse LMG"
-	desc = "A pulse machine gun which fires heavy duty rounds that while inaccurate, are very numerous. Fire rate increases as the trigger is held down."
+	desc = "A pulse machine gun which fires heavy duty rounds that while inaccurate, are very numerous. Fire rate increases as the trigger is held down. It's large heft makes carrying it quite difficult."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "suppressor"
 	inhand_icon_state = "suppressor"
@@ -606,7 +610,11 @@
 	vary_fire_sound = TRUE
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
+	item_flags = SLOWS_WHILE_IN_HAND | NEEDS_PERMIT
 	pin = /obj/item/firing_pin/implant/mindshield
+
+	slowdown = 0.5
+	drag_slowdown = 0.5
 
 	load_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
 	load_empty_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
