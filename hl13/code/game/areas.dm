@@ -333,8 +333,8 @@
 	ambient_buzz = 'hl13/sound/ambience/bunker2.ogg'
 	ambient_buzz_vol = 70
 
-
-
+/area/halflife/indoors/bunker/unpowered
+	requires_power = TRUE
 
 
 /area/halflife/indoors/sewer

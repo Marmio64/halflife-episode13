@@ -655,6 +655,7 @@
 		/obj/item/weldingtool/halflife = list(PAYCHECK_CREW * 1.5, 2),
 		/obj/item/wrench/halflife = list(PAYCHECK_CREW * 1.5, 2),
 		/obj/item/screwdriver/halflife = list(PAYCHECK_CREW * 1.5, 2),
+		/obj/item/fuel_cell/full = list(PAYCHECK_CREW * 5, 2),
 	)
 
 	initial_wanteds = list(

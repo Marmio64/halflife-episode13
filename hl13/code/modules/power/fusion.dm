@@ -152,7 +152,7 @@
 	name = "\improper S-52 fusion reactor"
 	icon = 'hl13/icons/obj/fusion_engine.dmi'
 	icon_state = "off"
-	desc = "A Combine Fusion Reactor put together with both human and combine made materials.  Takes fuels cells and converts them to power.  Also produces a large amount of heat."
+	desc = "A modified generator converted with advanced combine blueprints to preform a relatively safe fusion power extraction through the use of fuel cells."
 	resistance_flags = UNACIDABLE
 	anchored = TRUE
 	density = TRUE
@@ -426,7 +426,7 @@
 		. += span_info("The power gauge reads: [power_gen_percent]%")
 	if(fusion_cell)
 		. += span_info("You can see a fuel cell in the receptacle.")
-		if(!HAS_TRAIT(user, TRAIT_ENGINEER))
+		if(HAS_TRAIT(user, TRAIT_ENGINEER))
 			switch(fusion_cell.fuel_amount)
 				if(0 to 10)
 					. += span_danger("The fuel cell is critically low.")
@@ -438,6 +438,18 @@
 					. += span_info("The fuel cell is a little above halfway.")
 				if(76 to 99)
 					. += span_info("The fuel cell is nearly full.")
+				if(100)
+					. += span_info("The fuel cell is full.")
+		else
+			switch(fusion_cell.fuel_amount)
+				if(0 to 20)
+					. += span_danger("The fuel cell looks very low.")
+				if(21 to 50)
+					. += span_warning("The fuel cell is running low.")
+				if(51 to 70)
+					. += span_info("The fuel cell is moderately filled.")
+				if(71 to 99)
+					. += span_info("The fuel cell looks pretty full.")
 				if(100)
 					. += span_info("The fuel cell is full.")
 	else
@@ -482,7 +494,7 @@
 	name = "\improper WL-6 universal fuel cell"
 	icon = 'hl13/icons/obj/fuel_cell.dmi'
 	icon_state = "cell-empty"
-	desc = "A rechargable fuel cell designed to work as a power source for S-52 Reactors."
+	desc = "A combine manufactured fuel cell designed for S-52 reactors. It is rechargable if you can manage to get your hands on their recharging station."
 	/// The amount of fuel currently in the cell
 	var/fuel_amount = 0
 	/// The maximum amount of fuel the cell holds
