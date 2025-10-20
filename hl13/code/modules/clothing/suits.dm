@@ -1,3 +1,11 @@
+/obj/item/clothing/suit/armor/halflife
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
+/obj/item/clothing/suit/halflife
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
 /obj/item/clothing/suit/armor/civilprotection
 	name = "civil protection vest"
 	desc = "A one size fits all type of vest, made with kevlar. Encases your upper chest to provide good protection."
@@ -615,3 +623,26 @@
 /obj/item/clothing/suit/halflife/invis_grunt_harness/Initialize(mapload)
 	. = ..()
 	allowed = GLOB.security_vest_allowed
+
+/obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket
+	name = "reinforced brown winter jacket"
+	desc = "A well maintained old world winter jacket reinforced with whatever armor you could get your hands on. It screams authority."
+	icon_state = "reinforcedwinterbrown"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	cold_protection = CHEST|GROIN|LEGS|ARMS
+	heat_protection = CHEST|GROIN|LEGS|ARMS
+	strip_delay = 80
+	armor_type = /datum/armor/reinforced_brown_jacket
+
+	limb_integrity = 250
+
+/datum/armor/reinforced_brown_jacket
+	melee = 25
+	bullet = 25
+	laser = 25
+	energy = 25
+	bomb = 25
+	bio = 20
+	fire = 40
+	acid = 20
+	wound = 5

@@ -70,9 +70,7 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-/datum/outfit/deployment_loadout/rebel/tier1/engineer/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	H.change_stat(STATKEY_STR, 3)
+	extra_str = 3
 
 /datum/outfit/deployment_loadout/rebel/tier1/smuggler
 	name = "Deployment: Refugee Smuggler"
@@ -150,6 +148,10 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit/slow)
+
+	extra_int = 4
+
 /datum/outfit/deployment_loadout/rebel/tier2/engineer
 	name = "Deployment: Upgraded Refugee Engineer"
 	display_name = "Upgraded Refugee Engineer"
@@ -172,9 +174,7 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-/datum/outfit/deployment_loadout/rebel/tier2/engineer/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	H.change_stat(STATKEY_STR, 3)
+	extra_str = 3
 
 /datum/outfit/deployment_loadout/rebel/tier2/smuggler
 	name = "Deployment: Upgraded Smuggler"
@@ -313,9 +313,7 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
 
-/datum/outfit/deployment_loadout/rebel/tier3/engineer/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	H.change_stat(STATKEY_STR, 4)
+	extra_str = 4
 
 /datum/outfit/deployment_loadout/rebel/tier3/scout
 	name = "Deployment: Rebel Scout"
@@ -364,11 +362,14 @@
 		/obj/item/ammo_box/magazine/usp9mm = 1,
 		/obj/item/storage/medkit/halflife = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/healthanalyzer = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
+
+	extra_int = 4
 
 /// TIER 4 ///////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/rebel/tier4
@@ -514,9 +515,7 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
 
-/datum/outfit/deployment_loadout/rebel/tier4/engineer/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	H.change_stat(STATKEY_STR, 4)
+	extra_str = 4
 
 /obj/item/sbeacondrop/rebel_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a rebel turret to your location</i>."
@@ -608,11 +607,14 @@
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 		/obj/item/storage/medkit/halflife = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/healthanalyzer = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
+
+	extra_int = 4
 
 /datum/outfit/deployment_loadout/rebel/tier4/medic_rebel/post_equip(mob/living/carbon/human/H)
 	. = ..()

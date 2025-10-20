@@ -12,6 +12,9 @@
 	requires_hands = TRUE
 	delete_old = FALSE
 
+/datum/action/cooldown/spell/conjure_item/medkit/slow
+	cooldown_time = 35 SECONDS
+
 /datum/action/cooldown/spell/conjure_item/sandbag
 	name = "Procure Sandbag"
 	desc = "Procures a sandbag to use for building defenses."

@@ -61,9 +61,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
-/datum/outfit/deployment_loadout/combine/tier1/engineer/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	H.change_stat(STATKEY_STR, 3)
+	extra_str = 3
 
 /// TIER 2 ////////////////////////////////////////////////////////
 
@@ -127,6 +125,10 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/branescan.ogg'
 
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit/slow)
+
+	extra_int = 4
+
 /datum/outfit/deployment_loadout/combine/tier2/engineer
 	name = "Deployment: Upgraded Union Engineer"
 	display_name = "Upgraded Union Engineer"
@@ -153,9 +155,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
-/datum/outfit/deployment_loadout/combine/tier2/engineer/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	H.change_stat(STATKEY_STR, 3)
+	extra_str = 3
 
 /// TIER 3 ////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier3
@@ -224,9 +224,7 @@
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 
-/datum/outfit/deployment_loadout/combine/tier3/riotcop/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	H.change_stat(STATKEY_STR, 4)
+	extra_str = 4
 
 /datum/outfit/deployment_loadout/combine/tier3/divisional
 	name = "Deployment: Divisional Lead"
@@ -281,11 +279,13 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
-		/obj/item/storage/medkit/halflife_combine/no_req = 1,
+		/obj/item/storage/medkit/halflife_combine = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 	)
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
+
+	extra_int = 4
 
 /datum/outfit/deployment_loadout/combine/tier3/engineer
 	name = "Deployment: Upgraded Union Engineer+"
@@ -316,9 +316,7 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
 
-/datum/outfit/deployment_loadout/combine/tier3/engineer/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	H.change_stat(STATKEY_STR, 4)
+	extra_str = 4
 
 /// TIER 4 ////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier4
@@ -423,11 +421,13 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/pill/patch/medkit = 2,
-		/obj/item/storage/medkit/halflife_combine/no_req = 1,
+		/obj/item/storage/medkit/halflife_combine = 1,
 		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
+
+	extra_int = 4
 
 /datum/outfit/deployment_loadout/combine/tier4/medic_cop/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -466,9 +466,7 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
 
-/datum/outfit/deployment_loadout/combine/tier4/engineer/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	H.change_stat(STATKEY_STR, 4)
+	extra_str = 4
 
 /obj/item/sbeacondrop/combine_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a combine turret to your location</i>."
@@ -576,9 +574,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/infiltrate.ogg'
 
-/datum/outfit/deployment_loadout/combine/tier5/assassin/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	H.change_stat(STATKEY_DEX, 4)
+	extra_dex = 4
 
 /datum/outfit/deployment_loadout/combine/tier5/suppressor
 	name = "Deployment: Combine Suppressor"

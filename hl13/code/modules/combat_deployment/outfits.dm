@@ -17,6 +17,10 @@
 	var/combat_music = null
 	var/loadout_tier = 1
 
+	var/extra_str
+	var/extra_dex
+	var/extra_int
+
 /datum/outfit/deployment_loadout/pre_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
 	if(isdummy(user))
@@ -51,3 +55,10 @@
 	// Apply TRAIT_NODROP to everything
 	for(var/obj/item/item_to_nodrop as anything in no_drops)
 		ADD_TRAIT(item_to_nodrop, TRAIT_NODROP, CAPTURE_THE_FLAG_TRAIT)
+
+	if(extra_str)
+		human_to_equip.change_stat(STATKEY_STR, extra_str)
+	if(extra_dex)
+		human_to_equip.change_stat(STATKEY_DEX, extra_dex)
+	if(extra_int)
+		human_to_equip.change_stat(STATKEY_INT, extra_int)

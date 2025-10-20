@@ -12,7 +12,7 @@ GLOBAL_DATUM_INIT(status_font, /datum/font, new /datum/font/tiny_unicode/size_12
 
 /// Status display which can show images and scrolling text.
 /obj/machinery/status_display
-	name = "status display"
+	name = "combine display terminal"
 	desc = null
 	icon = 'hl13/icons/obj/machines/status_display.dmi'
 	icon_state = "frame"

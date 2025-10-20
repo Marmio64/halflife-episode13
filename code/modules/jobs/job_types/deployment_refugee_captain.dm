@@ -26,7 +26,7 @@
 	name = "Deployment Refugee Captain"
 	jobtype = /datum/job/deployment_refugee_captain
 
-	suit = /obj/item/clothing/suit/armor/rebel/faster
+	suit = /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket
 	mask = /obj/item/cigarette/halflife
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
 	belt = /obj/item/melee/baton
