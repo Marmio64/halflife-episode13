@@ -12,6 +12,10 @@
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
 
+/obj/item/hl2/loadout_picker/hidden/combine/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	ADD_TRAIT(H, TRAIT_NO_FOV_EFFECT, OUTFIT_TRAIT)
+
 //The defender, shotgunners specialize in demolishing the hidden if they dare get close to them.
 //While their armor won't help to stop the hidden's knife, it does help a little bit against their grenades.
 /datum/outfit/deployment_loadout/hidden/combine/shotgunner
