@@ -43,6 +43,20 @@
 	requires_hands = TRUE
 	delete_old = TRUE
 
+/datum/action/cooldown/spell/conjure_item/grenade
+	name = "Procure Grenade"
+	desc = "Procures a MK3A2 grenade for tossing."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "grenade"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 60 SECONDS
+	item_type = /obj/item/grenade/syndieminibomb/bouncer
+	requires_hands = TRUE
+	delete_old = TRUE
+
 /datum/action/cooldown/spell/aoe/rally
 	name = "Rally the Troops"
 	desc = "Inspire your nearby allies and self to rally for battle! Increases their morale and pain resistance temporarily, while recovering most of their stamina and a small amount of health. Has a lengthy cooldown."

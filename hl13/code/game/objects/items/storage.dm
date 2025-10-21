@@ -243,6 +243,11 @@
 	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/overwatch/spas12_hidden/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot/halflife, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
+	update_appearance(UPDATE_ICON)
+
 /obj/item/storage/belt/civilprotection/overwatch/assassin/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/grenade/c4, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)

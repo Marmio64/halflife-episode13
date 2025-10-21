@@ -32,6 +32,8 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 		info += "You are playing for the Rebel Side in the King of The Hill TDM game mode! Capture the central flag and keep it under your faction's control for a total of five minutes to win! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
 	if(SSmapping.current_map.combat_deployment_gamemode == "payload")
 		info += "You are playing for the Rebel Side in the Payload gamemode! Move the cart to the combine base to win! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
+	if(SSmapping.current_map.combat_deployment_gamemode == "the_hidden")
+		info += "You are part of a team hunting down an anomalous test subject known as The Hidden. Stick together with your squad, and try to put this merciless beast down."
 
 	return info
 
@@ -60,6 +62,9 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 		else
 			if(prob(DEPLOYMENT_TIER5_EXTRA_CHANCE))
 				chosen = /obj/item/hl2/loadout_picker/rebel/tier5
+
+	if(SSmapping.current_map.combat_deployment_gamemode == "the_hidden")
+		chosen = /obj/item/hl2/loadout_picker/hidden/combine
 
 	if(chosen)
 		var/turf/T = get_turf(H)

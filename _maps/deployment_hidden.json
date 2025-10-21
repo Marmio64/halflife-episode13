@@ -1,0 +1,44 @@
+{
+	"version": 1,
+	"map_name": "City 13 The Hidden",
+	"map_path": "map_files/deployment_hidden",
+	"map_file": "deployment_hidden.dmm",
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
+	"planetary": 1,
+	"shuttles": {
+		"cargo": "cargo_box",
+		"ferry": "ferry_fancy",
+		"whiteship": "whiteship_meta",
+		"emergency": "emergency_box"
+	},
+	"traits": [
+		{
+			"Baseturf": "/turf/open/floor/plating/ground/rockunder",
+			"Gravity": true,
+			"No Parallax": true,
+			"Linkage": null
+
+		}
+	],
+	"minetype": "combat_deployment",
+	"combat_deployment_gamemode": "the_hidden",
+	"job_changes": {
+		"Combine Sectoral Commander": {
+			"total_positions": 0,
+			"spawn_positions": 0
+		},
+		"Rebel Cell Leader": {
+			"total_positions": 0,
+			"spawn_positions": 0
+		},
+		"Refugee Rebel": {
+			"total_positions": 8,
+			"spawn_positions": 8
+		},
+		"Civil Protection": {
+			"total_positions": 8,
+			"spawn_positions": 8
+		}
+	}
+}

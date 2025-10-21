@@ -141,6 +141,7 @@
 	force = 25
 	armour_penetration = 30
 	wdefense = 3
+	var/backstab_bonus = 35
 
 /obj/item/knife/combat/backstab/weak
 	force = 20
@@ -153,7 +154,7 @@
 	if(!check_behind(user, living_target))
 		return
 	// We're officially behind them, apply effects
-	living_target.apply_damage(35, BRUTE, wound_bonus = CANT_WOUND)
+	living_target.apply_damage(backstab_bonus, BRUTE, wound_bonus = CANT_WOUND)
 	living_target.balloon_alert(user, "backstab!")
 	playsound(living_target, 'sound/items/weapons/guillotine.ogg', 100, TRUE)
 

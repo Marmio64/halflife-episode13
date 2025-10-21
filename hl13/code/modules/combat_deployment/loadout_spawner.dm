@@ -18,7 +18,7 @@
 		return
 
 	if(user.client)
-		if(user.client.deployment_faction != faction_belonging)
+		if(user.client.deployment_faction != faction_belonging && faction_belonging != NO_FACTION)
 			to_chat(user, span_warning("Your faction cannot use this."))
 			return
 

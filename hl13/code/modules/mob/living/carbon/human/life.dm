@@ -99,6 +99,7 @@
 GLOBAL_LIST_EMPTY(deployment_combine_players)
 GLOBAL_LIST_EMPTY(deployment_rebel_players)
 GLOBAL_LIST_EMPTY(deployment_xen_players)
+GLOBAL_LIST_EMPTY(deployment_hidden_players)
 
 /mob/living/carbon/human/proc/setdeploymentfaction(faction)
 	if(client)
@@ -111,3 +112,5 @@ GLOBAL_LIST_EMPTY(deployment_xen_players)
 				GLOB.deployment_rebel_players |= client
 			if(XEN_DEPLOYMENT_FACTION)
 				GLOB.deployment_xen_players |= client
+			if(HIDDEN_DEPLOYMENT_FACTION)
+				GLOB.deployment_hidden_players |= client

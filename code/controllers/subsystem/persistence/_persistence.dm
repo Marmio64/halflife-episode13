@@ -81,7 +81,8 @@ SUBSYSTEM_DEF(persistence)
 	collect_maps()
 	save_randomized_recipes()
 	save_scars()
-	save_money() //hl13 edit
+	if(SSmapping.current_map.minetype != "combat_deployment")
+		save_money() //hl13 edit
 	save_custom_outfits()
 	save_delamination_counter()
 	save_queued_message_bottles()

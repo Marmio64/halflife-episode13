@@ -356,6 +356,11 @@
 
 	ambientrain = RAIN_SEWER
 
+/area/halflife/indoors/sewer/hidden
+	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
+	ambient_music_vol = 12
+	ambientrain = RAIN_IN
+
 /area/halflife/indoors/sewer/tunnel
 	name = "\improper Tunnels"
 	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'

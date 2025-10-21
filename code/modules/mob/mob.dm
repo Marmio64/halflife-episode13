@@ -803,6 +803,8 @@
 		else
 			required_delay = 30 SECONDS
 
+		if(SSmapping.current_map.combat_deployment_gamemode == "the_hidden")
+			required_delay = 60 MINUTES //functionally disabled
 
 
 	if(death_time < required_delay)
