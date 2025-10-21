@@ -44,6 +44,8 @@
 
 	if(combat_music)
 		user.cmode_music = combat_music
+	if(combat_music == "none")
+		user.cmode_music = null
 
 /datum/outfit/deployment_loadout/post_equip(mob/living/carbon/human/human_to_equip, visuals_only=FALSE)
 	var/list/no_drops = list()

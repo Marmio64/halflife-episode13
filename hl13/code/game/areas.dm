@@ -358,7 +358,7 @@
 
 /area/halflife/indoors/sewer/hidden
 	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
-	ambient_music_vol = 12
+	ambient_music_vol = 25
 	ambientrain = RAIN_IN
 
 /area/halflife/indoors/sewer/tunnel

@@ -58,6 +58,7 @@
 		/obj/item/clothing/glasses,
 		/obj/item/clothing/gloves,
 		/obj/item/flashlight/seclite,
+		/obj/item/flashlight/flare,
 		/obj/item/food/donut,
 		/obj/item/grenade,
 		/obj/item/holosign_creator/security,
@@ -245,6 +246,7 @@
 
 /obj/item/storage/belt/civilprotection/overwatch/spas12_hidden/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot/halflife, src)
+	SSwardrobe.provide_type(/obj/item/flashlight/flare, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	update_appearance(UPDATE_ICON)
 
