@@ -57,7 +57,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 70 SECONDS
+	cooldown_time = 60 SECONDS
 	item_type = /obj/item/grenade/syndieminibomb/bouncer
 	requires_hands = TRUE
 	delete_old = TRUE

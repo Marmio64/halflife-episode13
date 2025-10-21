@@ -165,7 +165,7 @@
 
 	extra_dex = 10
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_taunt)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/hidden_taunt)
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/pre_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -278,3 +278,19 @@
 	var/chosen_sound = pick(taunt_sounds)
 	playsound(owner.loc, chosen_sound, 50, FALSE)
 
+/datum/action/cooldown/spell/hidden_heal
+	name = "Adrenal Burst"
+	desc = "Unleash an adrenaline burst to regain all your stamina and part of your health."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "medkit"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	cooldown_time = 90 SECONDS
+	spell_requirements = NONE
+	antimagic_flags = NONE
+
+/datum/action/cooldown/spell/hidden_heal/cast(mob/living/cast_on)
+	. = ..()
+	living_user.adjustStaminaLoss(-100)
+	living_user.adjustBruteLoss(-25)
+	living_user.adjustFireLoss(-25)
