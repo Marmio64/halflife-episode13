@@ -12,7 +12,7 @@
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
 
-/obj/item/hl2/loadout_picker/hidden/combine/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/deployment_loadout/hidden/combine/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	ADD_TRAIT(H, TRAIT_NO_FOV_EFFECT, OUTFIT_TRAIT)
 
