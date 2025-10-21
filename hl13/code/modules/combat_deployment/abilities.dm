@@ -15,6 +15,11 @@
 /datum/action/cooldown/spell/conjure_item/medkit/slow
 	cooldown_time = 35 SECONDS
 
+/datum/action/cooldown/spell/conjure_item/medkit/the_hidden
+	desc = "Procures a medkit to heal someone or yourself with. Deletes the last one summoned if it is still available."
+	cooldown_time = 12 SECONDS //you can only have one at a time, and also most times the hidden kills people rather than just leaving them injured.
+	delete_old = TRUE
+
 /datum/action/cooldown/spell/conjure_item/sandbag
 	name = "Procure Sandbag"
 	desc = "Procures a sandbag to use for building defenses."
@@ -52,7 +57,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 60 SECONDS
+	cooldown_time = 80 SECONDS
 	item_type = /obj/item/grenade/syndieminibomb/bouncer
 	requires_hands = TRUE
 	delete_old = TRUE

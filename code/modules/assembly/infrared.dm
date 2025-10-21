@@ -21,6 +21,8 @@
 	var/hearing_range = 3
 	/// Pass flags the beam uses to determine what it can pass through
 	var/beam_pass_flags = PASSTABLE|PASSGLASS|PASSGRILLE
+	/// Can it be made invisible/visible?
+	var/visibility_changeable = TRUE
 	/// The current active beam datum
 	VAR_FINAL/datum/beam/active_beam
 	/// A reference to the turf at the END of our active beam
@@ -186,9 +188,10 @@
 
 /// Toggles the visibility of the beam.
 /obj/item/assembly/infra/proc/toggle_visible()
-	visible = !visible
-	update_visible()
-	update_appearance()
+	if(visibility_changeable)
+		visible = !visible
+		update_visible()
+		update_appearance()
 
 /// Updates the visibility of the beam (if active).
 /obj/item/assembly/infra/proc/update_visible()

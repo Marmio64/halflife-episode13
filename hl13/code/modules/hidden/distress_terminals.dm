@@ -6,6 +6,9 @@ GLOBAL_VAR_INIT(distress_terminals, 5)
 	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "datapodterminal_hacked"
 
+	light_range = 2
+	light_power = 1.1
+	light_color = "#658cac"
 	resistance_flags = INDESTRUCTIBLE
 
 	var/completed = FALSE

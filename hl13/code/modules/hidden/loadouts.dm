@@ -12,15 +12,17 @@
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
 
+//The defender, shotgunners specialize in demolishing the hidden if they dare get close to them.
+//While their armor won't help to stop the hidden's knife, it does help a little bit against their grenades.
 /datum/outfit/deployment_loadout/hidden/combine/shotgunner
 	name = "Hidden: Shotgunner"
-	display_name = "ASSAULT: Shotgunner"
+	display_name = "DEFENSE: Shotgunner"
 	desc = "Use your high power shotgun to keep the Hidden away from you and your team. All you need to put them down are two clean bursts."
 
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
-	r_pocket = /obj/item/flashlight/seclite
+	r_pocket = /obj/item/flashlight
 
 	suit_store = /obj/item/gun/ballistic/shotgun/spas12
 	belt = /obj/item/storage/belt/civilprotection/overwatch/spas12_hidden
@@ -31,16 +33,18 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = "none"
 
+//The attacker, conscripts move a bit faster than their comrades and have the best medium to long range weapon.
+//They excel at giving chase to the hidden, just don't get cocky.
 /datum/outfit/deployment_loadout/hidden/combine/conscript
 	name = "Hidden: Conscript"
 	display_name = "ASSAULT: Conscript"
-	desc = "Utilize your high power M4A1 to keep pressure on the Hidden from far distances."
+	desc = "Utilize your high power M4A1 and extra speed to keep pressure on the Hidden from close and long range."
 
-	suit = /obj/item/clothing/suit/armor/halflife/kevlar
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/fast
 	mask = /obj/item/clothing/mask/gas/hl2/military
 	suit_store = /obj/item/gun/ballistic/automatic/m4a1
 	l_pocket = /obj/item/knife/combat/survival
-	r_pocket = /obj/item/flashlight/seclite
+	r_pocket = /obj/item/flashlight
 	belt = /obj/item/gun/ballistic/automatic/pistol/usp
 	head = /obj/item/clothing/head/helmet/halflife/military/weak
 	uniform = /obj/item/clothing/under/syndicate/camo
@@ -50,17 +54,21 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/stack/medical/gauze = 1,
 		/obj/item/ammo_box/magazine/m4a1 = 1,
-		/obj/item/flashlight/flare = 1,
+		/obj/item/flashlight/flare/the_hidden = 1,
 	)
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = "none"
 
+	extra_dex = 3
+
+//The healer, excels at recovering allies from nonfatal injuries.
+//The Hidden tends to finish off prey they have started to hunt, but in the case they don't, you are extremely useful at getting them back to tip top shape!
 /datum/outfit/deployment_loadout/hidden/combine/medic_cop
 	name = "Hidden: Medical Cop"
-	display_name = "SUPPORT: Medical Cop"
+	display_name = "HEALER: Medical Cop"
 	desc = "Keep your allies healed whenever they get hurt by the Hidden but not killed."
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
@@ -71,7 +79,7 @@
 
 	mask = /obj/item/clothing/mask/gas/civilprotection/medical
 
-	l_pocket = /obj/item/flashlight/seclite
+	l_pocket = /obj/item/flashlight
 	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
@@ -83,17 +91,21 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 3,
+		/obj/item/stack/medical/gauze = 1,
 		/obj/item/ammo_box/magazine/mp7 = 1,
-		/obj/item/flashlight/flare = 1,
+		/obj/item/flashlight/flare/the_hidden = 1,
 	)
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit/the_hidden)
 	extra_int = 4
 
+//The trapper, you specialize in setting up trip beams at room entrances in order to get a heads up on Hidden activity.
+//In addition, you get two more flares than everyone else, which is great for increasing the dismal visiblity your team tends to have!
+//The downside is that you only have a sidearm and are thus extremely vulnerable, unless you manage to get a real gun off a dead teammate.
 /datum/outfit/deployment_loadout/hidden/combine/engineer
 	name = "Hidden: Engineer"
-	display_name = "SUPPORT: Engineer"
-	desc = "Supply allies with extra ammo, drop extra flares, and use suppressing fire from your MP7 to protect allies."
+	display_name = "TRAPPER: Engineer"
+	desc = "Use trip alarm beams and flares to get extra information on where the enemy is."
 
 	uniform = /obj/item/clothing/under/citizen
 	suit = /obj/item/clothing/suit/utility/radiation/engineer
@@ -103,6 +115,7 @@
 
 	belt = /obj/item/gun/ballistic/automatic/pistol/usp
 
+	l_pocket = /obj/item/stack/medical/gauze
 	r_pocket = /obj/item/flashlight
 
 	back = /obj/item/storage/backpack/halflife
@@ -111,17 +124,25 @@
 	combat_music = "none"
 
 	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/mp7 = 1,
-		/obj/item/flashlight/flare = 2,
-		/obj/item/ammo_box/magazine/mp7 = 2,
-		/obj/item/ammo_box/magazine/m4a1 = 2,
-		/obj/item/storage/box/lethalshot/halflife = 2,
+		/obj/item/ammo_box/magazine/usp9mm = 1,
+		/obj/item/flashlight/flare/the_hidden = 3,
+		/obj/item/assembly/infra/the_hidden = 2,
 	)
 
 
+/obj/item/assembly/infra/the_hidden
+	name = "sonic trip alarm"
+	desc = "Emits a visible beam and is triggered when the beam is interrupted, sending out a noise. use in hand to activate. Note, it does not activate for movement on the last tile of it's beam or on the first tile, position it carefully."
 
+	visible = TRUE
+	hearing_range = 9
+	visibility_changeable = FALSE
 
-
+/obj/item/flashlight/flare/the_hidden
+	name = "short-burst flare"
+	desc = "A red flare. There are instructions on the side, it reads 'pull cord, make light'. This one has a very limited lifetime, only use when necessary."
+	randomize_fuel = FALSE
+	fuel = 90 SECONDS
 
 
 
@@ -135,7 +156,7 @@
 	desc = "The monster itself. Utilize stealth and mobility to slaughter your opponents when they don't expect it."
 
 	glasses = /obj/item/clothing/glasses/hidden_blindfold
-	shoes = /obj/item/clothing/shoes/boots
+	shoes = null
 
 	suit_store = /obj/item/gun/ballistic/shotgun/spas12
 	uniform = /obj/item/clothing/under/pants/the_hidden
@@ -151,7 +172,7 @@
 	H.skin_tone = "#e9dfd7"
 	H.alpha = 25
 	H.set_hairstyle("Bald", update = TRUE)
-	H.set_facial_hairstyle("Shaved", update = FALSE)
+	H.set_facial_hairstyle("Shaved", update = TRUE)
 	H.eye_color_left = "#b9b9b9"
 	H.eye_color_right = "#b9b9b9"
 	H.update_body()
@@ -160,6 +181,8 @@
 	ADD_TRAIT(H, TRAIT_FILTHBORN, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_ANALGESIA, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOHUNGER, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_PIERCEIMMUNE, OUTFIT_TRAIT) //so you dont get fucked from stepping on a glass shard
+	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 	H.setdeploymentfaction(HIDDEN_DEPLOYMENT_FACTION)
 
 /obj/item/clothing/under/pants/the_hidden
@@ -176,14 +199,15 @@
 	vision_flags = SEE_MOBS
 	color_cutoffs = list(40, 40, 40)
 
-//Will three shot everyone, and will insta-down with a backstab so long as you don't hit a limb
+//Will three shot everyone. Backstabs always instadown.
 /obj/item/knife/combat/the_hidden
-	desc = "An obscenely sharp and dangerous knife. A single backstab is enough to instantly down an enemy."
+	desc = "An obscenely sharp and dangerous knife. A single backstab is enough to instantly down an enemy. Stab a dead body to gib it and heal."
 
-	force = 60
-	armour_penetration = 20
+	force = 50
+	armour_penetration = 50
 	wdefense = 0
 	slot_flags = 0
+	item_flags = DROPDEL //so the combine cant steal the absurdly powerful knife. The hidden can just summon a new one too.
 
 	attack_speed = CLICK_CD_SLOW
 	var/backstab_bonus = 125
@@ -196,16 +220,16 @@
 	var/mob/living/living_user = user
 
 	if(living_target.stat == DEAD) //heal up from gibbing the dead
-		living_user.adjustStaminaLoss(-35)
-		living_user.adjustBruteLoss(-35)
-		living_user.adjustFireLoss(-35)
+		living_user.adjustStaminaLoss(-50)
+		living_user.adjustBruteLoss(-25)
+		living_user.adjustFireLoss(-25)
 		living_target.gib()
 		return
 
 	if(!check_behind(user, living_target))
 		return
 	// We're officially behind them, apply effects
-	living_target.apply_damage(backstab_bonus, BRUTE, wound_bonus = CANT_WOUND)
+	living_target.apply_damage(backstab_bonus, BRUTE, BODY_ZONE_CHEST, wound_bonus = CANT_WOUND)
 	living_target.balloon_alert(user, "backstab!")
 	playsound(living_target, 'sound/items/weapons/guillotine.ogg', 100, TRUE)
 
