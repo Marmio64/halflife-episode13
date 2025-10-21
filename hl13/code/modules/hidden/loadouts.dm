@@ -291,6 +291,6 @@
 
 /datum/action/cooldown/spell/hidden_heal/cast(mob/living/cast_on)
 	. = ..()
-	living_user.adjustStaminaLoss(-100)
-	living_user.adjustBruteLoss(-25)
-	living_user.adjustFireLoss(-25)
+	cast_on.adjustStaminaLoss(-100)
+	cast_on.adjustBruteLoss(-25)
+	cast_on.adjustFireLoss(-25)
