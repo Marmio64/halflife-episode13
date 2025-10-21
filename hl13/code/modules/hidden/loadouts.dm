@@ -199,18 +199,18 @@
 	vision_flags = SEE_MOBS
 	color_cutoffs = list(40, 40, 40)
 
-//Will three shot everyone. Backstabs always instadown.
+//Will four shot everyone.
 /obj/item/knife/combat/the_hidden
-	desc = "An obscenely sharp and dangerous knife. A single backstab is enough to instantly down an enemy. Stab a dead body to gib it and heal."
+	desc = "An obscenely sharp and dangerous knife. Backstabs deal considerably more damage. Stab a dead body to gib it and heal."
 
-	force = 50
+	force = 40
 	armour_penetration = 50
 	wdefense = 0
 	slot_flags = 0
 	item_flags = DROPDEL //so the combine cant steal the absurdly powerful knife. The hidden can just summon a new one too.
 
 	attack_speed = CLICK_CD_SLOW
-	var/backstab_bonus = 125
+	var/backstab_bonus = 60
 
 /obj/item/knife/combat/the_hidden/afterattack(atom/target, mob/user, click_parameters)
 	. = ..()
