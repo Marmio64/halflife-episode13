@@ -28,7 +28,7 @@
 	belt = /obj/item/storage/belt/civilprotection/overwatch/spas12_hidden
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/red
 	uniform = /obj/item/clothing/under/combine/overwatch/red
-	suit = /obj/item/clothing/suit/armor/overwatch/red
+	suit = /obj/item/clothing/suit/armor/overwatch/red/deathmatch
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = "none"
@@ -124,7 +124,7 @@
 	combat_music = "none"
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/usp9mm = 1,
+		/obj/item/ammo_box/magazine/usp9mm = 2,
 		/obj/item/flashlight/flare/the_hidden = 3,
 		/obj/item/assembly/infra/the_hidden = 2,
 	)
@@ -199,18 +199,18 @@
 	vision_flags = SEE_MOBS
 	color_cutoffs = list(40, 40, 40)
 
-//Will four shot everyone.
+//Will three shot everyone, one shot with backstabs
 /obj/item/knife/combat/the_hidden
-	desc = "An obscenely sharp and dangerous knife. Backstabs deal considerably more damage. Stab a dead body to gib it and heal."
+	desc = "An obscenely sharp and dangerous knife. Backstabs will instantly down. Stab a dead body to gib it and heal."
 
-	force = 40
+	force = 50
 	armour_penetration = 50
 	wdefense = 0
 	slot_flags = 0
 	item_flags = DROPDEL //so the combine cant steal the absurdly powerful knife. The hidden can just summon a new one too.
 
 	attack_speed = CLICK_CD_SLOW
-	var/backstab_bonus = 60
+	var/backstab_bonus = 125
 
 /obj/item/knife/combat/the_hidden/afterattack(atom/target, mob/user, click_parameters)
 	. = ..()
