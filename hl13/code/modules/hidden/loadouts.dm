@@ -221,8 +221,8 @@
 
 	if(living_target.stat == DEAD) //heal up from gibbing the dead
 		living_user.adjustStaminaLoss(-50)
-		living_user.adjustBruteLoss(-25)
-		living_user.adjustFireLoss(-25)
+		living_user.adjustBruteLoss(-35)
+		living_user.adjustFireLoss(-35)
 		living_target.gib()
 		return
 
