@@ -11,6 +11,14 @@
 	ex_light = 3
 	ex_flame = 0
 
+/obj/item/grenade/syndieminibomb/bouncer/random_timer
+	desc = "Called a 'Bouncer' or 'Extractor' by Combine teams, these grenades are designed for flushing out enemy combatants via shrapnel, and a powerful though short ranged explosion. This one has a randomized timer, don't hold onto it!"
+	display_timer = FALSE
+
+/obj/item/grenade/syndieminibomb/bouncer/random_timer/Initialize()
+	. = ..()
+	det_time = rand(30,60) //3-6 seconds
+
 /obj/item/grenade/stingbang/halflife
 	name = "stinger grenade"
 	desc = "A less-lethal grenade filled with rubber pellets. Useful for dispersing crowds."
@@ -49,6 +57,7 @@
 	icon_state = "molotov"
 	throwforce = 10
 	throw_speed = 1.5
+	display_timer = FALSE
 	w_class = WEIGHT_CLASS_NORMAL //Kind of weird but I don't want people running around with pocket molotovs - Hekzder
 	var/extra_POWER // Used for scaling flame power based on alcoholpwr. This number, usually 0-100, will be divided by 75 to get the flame radius.
 	var/arm_sound = 'sound/items/tools/welder.ogg'

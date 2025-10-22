@@ -19,7 +19,7 @@
 	throw_range = 3 /// Doesn't throw very far
 	demolition_mod = 3 // BREAK THINGS
 	drag_slowdown = 0.5
-	slowdown = 0.5
+	slowdown = 0.25
 	hitsound = 'hl13/sound/halflifeweapons/meleesounds/heavyblunt_hit1.ogg'
 	attack_verb_continuous = list("attacks", "bashes", "strikes", "smashes")
 	attack_verb_simple = list("attack", "bash", "strik", "smash")
@@ -27,6 +27,9 @@
 	slot_flags = ITEM_SLOT_BACK
 
 	wdefense = 1 //too heavy to effectively parry with
+
+	item_flags = SLOWS_WHILE_IN_HAND | NEEDS_PERMIT
+
 
 /obj/item/melee/sledgehammer/Initialize(mapload)
 	. = ..()

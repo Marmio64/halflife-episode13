@@ -4,6 +4,7 @@
 		loadouts = list()
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/hidden/combine/shotgunner,
+			/datum/outfit/deployment_loadout/hidden/combine/riot_cop,
 			/datum/outfit/deployment_loadout/hidden/combine/conscript,
 			/datum/outfit/deployment_loadout/hidden/combine/medic_cop,
 			/datum/outfit/deployment_loadout/hidden/combine/engineer,
@@ -15,6 +16,7 @@
 /datum/outfit/deployment_loadout/hidden/combine/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	ADD_TRAIT(H, TRAIT_NO_FOV_EFFECT, OUTFIT_TRAIT)
+	H.deployment_faction = COMBINE_DEPLOYMENT_FACTION
 
 //The defender, shotgunners specialize in demolishing the hidden if they dare get close to them.
 //While their armor won't help to stop the hidden's knife, it does help a little bit against their grenades.
@@ -36,6 +38,32 @@
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = "none"
+
+//The second defender, riot cop. They're pretty good at holding positions since they have a good chance to parry the Hidden
+//They can't aim for shit or run for very long though and if they do get hit they're still weak to damage.
+/datum/outfit/deployment_loadout/hidden/combine/riot_cop
+	name = "Hidden: Riot Cop"
+	display_name = "DEFENSE: Riot Cop"
+	desc = "Hold off the Hidden with your sledgehammer. You don't have any better chances of surviving getting stabbed than your comrades, but have a high chance to parry hits with your melee weapon."
+
+	uniform = /obj/item/clothing/under/combine/civilprotection
+	gloves = /obj/item/clothing/gloves/color/civilprotection
+	suit = /obj/item/clothing/suit/armor/riot
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	head = /obj/item/clothing/head/helmet/toggleable/riot
+
+	mask = /obj/item/clothing/mask/gas/civilprotection
+
+	l_pocket = /obj/item/flashlight
+	r_pocket = /obj/item/flashlight/flare/the_hidden
+
+	ears = /obj/item/radio/headset/civilprotection/deployment
+	combat_music = "none"
+
+	back = /obj/item/melee/sledgehammer
+
+	extra_str = 6
+	extra_dex = -4
 
 //The attacker, conscripts move a bit faster than their comrades and have the best medium to long range weapon.
 //They excel at giving chase to the hidden, just don't get cocky.
@@ -129,6 +157,7 @@
 
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/stack/sheet/mineral/sandbags = 2,
 		/obj/item/flashlight/flare/the_hidden = 3,
 		/obj/item/assembly/infra/the_hidden = 2,
 	)
@@ -155,7 +184,7 @@
 /// THE MONSTER /// --------------------------------------
 
 /datum/outfit/deployment_loadout/hidden/the_hidden
-	name = "Hidden: The Hidden"
+	name = "Hidden: The Hidden (4-9 Players)"
 	display_name = "The Hidden"
 	desc = "The monster itself. Utilize stealth and mobility to slaughter your opponents when they don't expect it."
 
@@ -169,7 +198,20 @@
 
 	extra_dex = 10
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/hidden_taunt)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/hidden_taunt)
+
+/datum/outfit/deployment_loadout/hidden/the_hidden/downgraded
+	name = "Hidden: Downgraded The Hidden (1-4 Players)"
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife/weak, /datum/action/cooldown/spell/hidden_taunt)
+
+/datum/outfit/deployment_loadout/hidden/the_hidden/upgraded
+	name = "Hidden: Upgraded The Hidden (10-14 Players)"
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer/short_cooldown, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/hidden_taunt)
+
+/datum/outfit/deployment_loadout/hidden/the_hidden/upgraded/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	ADD_TRAIT(H, TRAIT_NOHARDCRIT, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_NOSOFTCRIT, OUTFIT_TRAIT)
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/pre_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -208,13 +250,17 @@
 	desc = "An obscenely sharp and dangerous knife. Backstabs will instantly down. Stab a dead body to gib it and heal."
 
 	force = 50
-	armour_penetration = 50
+	armour_penetration = 70
 	wdefense = 0
 	slot_flags = 0
 	item_flags = DROPDEL //so the combine cant steal the absurdly powerful knife. The hidden can just summon a new one too.
 
 	attack_speed = CLICK_CD_SLOW
 	var/backstab_bonus = 125
+
+/obj/item/knife/combat/the_hidden/weak
+	desc = "An obscenely sharp and dangerous knife. Backstabs will deal double damage. Stab a dead body to gib it and heal."
+	backstab_bonus = 59
 
 /obj/item/knife/combat/the_hidden/afterattack(atom/target, mob/user, click_parameters)
 	. = ..()
@@ -251,6 +297,9 @@
 	requires_hands = TRUE
 	delete_old = TRUE
 
+/datum/action/cooldown/spell/conjure_item/hidden_knife/weak
+	item_type = /obj/item/knife/combat/the_hidden/weak
+
 /datum/action/cooldown/spell/hidden_taunt
 	name = "Taunt"
 	desc = "Taunt your enemy with a voiceline that is sure to instill terror."
@@ -284,7 +333,7 @@
 
 /datum/action/cooldown/spell/hidden_heal
 	name = "Adrenal Burst"
-	desc = "Unleash an adrenaline burst to regain all your stamina and part of your health."
+	desc = "Unleash an adrenaline burst to regain all your stamina and part of your health. Will produce a sound when used."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "medkit"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
@@ -293,8 +342,16 @@
 	spell_requirements = NONE
 	antimagic_flags = NONE
 
+	var/taunt_sounds = list(
+	'sound/effects/hallucinations/wail.ogg',
+	'sound/effects/hallucinations/far_noise.ogg',
+	'sound/effects/hallucinations/veryfar_noise.ogg',
+)
+
 /datum/action/cooldown/spell/hidden_heal/cast(mob/living/cast_on)
 	. = ..()
 	cast_on.adjustStaminaLoss(-100)
 	cast_on.adjustBruteLoss(-25)
 	cast_on.adjustFireLoss(-25)
+	var/chosen_sound = pick(taunt_sounds)
+	playsound(owner.loc, chosen_sound, 50, FALSE)

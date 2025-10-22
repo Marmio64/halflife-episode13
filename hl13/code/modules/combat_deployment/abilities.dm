@@ -62,6 +62,15 @@
 	requires_hands = TRUE
 	delete_old = TRUE
 
+/datum/action/cooldown/spell/conjure_item/grenade/random_timer
+	name = "Procure Grenade"
+	desc = "Procures a MK3A2 grenade for tossing. The timer is randomized, throw it right away!"
+
+	item_type = /obj/item/grenade/syndieminibomb/bouncer/random_timer
+
+/datum/action/cooldown/spell/conjure_item/grenade/random_timer/short_cooldown
+	cooldown_time = 60 SECONDS
+
 /datum/action/cooldown/spell/aoe/rally
 	name = "Rally the Troops"
 	desc = "Inspire your nearby allies and self to rally for battle! Increases their morale and pain resistance temporarily, while recovering most of their stamina and a small amount of health. Has a lengthy cooldown."

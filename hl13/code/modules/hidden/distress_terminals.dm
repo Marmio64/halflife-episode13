@@ -12,7 +12,11 @@ GLOBAL_VAR_INIT(distress_terminals, 5)
 	resistance_flags = INDESTRUCTIBLE
 
 	var/completed = FALSE
-	var/busy = FALSE
+	var/activating
+
+	var/time_to_complete = 30 SECONDS
+	var/last_scream = 0
+	var/last_hidden_warning = 0
 
 	density = TRUE
 
@@ -41,24 +45,29 @@ GLOBAL_VAR_INIT(distress_terminals, 5)
 	else
 		. += span_notice("It could be activated to have it send it's part of a distress signal.")
 
-/obj/machinery/combine_distressterminal/interact(mob/living/carbon/human/user)
-	. = ..()
+/obj/machinery/combine_distressterminal/Initialize(mapload)
+	.=..()
+	START_PROCESSING(SSprocessing, src)
 
-	if(completed)
-		say("Terminal already activated.")
-		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
-		return
+/obj/machinery/combine_distressterminal/process()
 
-	if(busy)
-		say("Terminal is currently in use.")
-		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
-		return
+	activating = FALSE
+	for(var/mob/living/hooman in orange(1, src))
+		if(hooman.deployment_faction == COMBINE_DEPLOYMENT_FACTION && hooman.stat == CONSCIOUS)
+			activating = TRUE
 
-	busy = TRUE
-	if(!do_after(user, 20 SECONDS, src))
-		to_chat(usr, span_warning("The terminal failed to send a signal."))
-		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
-		busy = FALSE
-		return
+	if(activating && !completed)
+		time_to_complete -= 1 SECONDS
+		if(last_scream < world.time)
+			say("Terminal activating. [time_to_complete/10] seconds left till completion.")
+			last_scream = world.time + 6 SECONDS
 
-	completed()
+		if(last_hidden_warning < world.time)
+			for(var/X in GLOB.deployment_hidden_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+				to_chat(H, "<span class='userdanger'>A distress terminal is being activated somewhere.</span>")
+			last_hidden_warning = world.time + 45 SECONDS
+
+	if(time_to_complete < 1 SECONDS)
+		completed()
