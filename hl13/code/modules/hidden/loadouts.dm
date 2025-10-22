@@ -289,7 +289,7 @@
 	button_icon_state = "medkit"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 
-	cooldown_time = 90 SECONDS
+	cooldown_time = 120 SECONDS
 	spell_requirements = NONE
 	antimagic_flags = NONE
 

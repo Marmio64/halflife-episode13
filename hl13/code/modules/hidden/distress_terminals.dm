@@ -55,7 +55,7 @@ GLOBAL_VAR_INIT(distress_terminals, 5)
 		return
 
 	busy = TRUE
-	if(!do_after(user, 30 SECONDS, src))
+	if(!do_after(user, 20 SECONDS, src))
 		to_chat(usr, span_warning("The terminal failed to send a signal."))
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		busy = FALSE
