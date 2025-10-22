@@ -222,6 +222,7 @@
 	H.eye_color_left = "#b9b9b9"
 	H.eye_color_right = "#b9b9b9"
 	H.update_body()
+	H.slowed_by_drag = FALSE
 	ADD_TRAIT(H, TRAIT_NEVER_WOUNDED, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOGUNS, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_FILTHBORN, OUTFIT_TRAIT)
@@ -230,6 +231,18 @@
 	ADD_TRAIT(H, TRAIT_PIERCEIMMUNE, OUTFIT_TRAIT) //so you dont get fucked from stepping on a glass shard
 	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 	H.setdeploymentfaction(HIDDEN_DEPLOYMENT_FACTION)
+
+/datum/outfit/deployment_loadout/hidden/the_hidden/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	var/list/spawn_locs = list()
+	for(var/X in GLOB.the_hidden)
+		spawn_locs += X
+
+	if(!spawn_locs.len)
+		message_admins("No valid spawn locations found, aborting...")
+		return MAP_ERROR
+
+	H.forceMove(pick(spawn_locs))
 
 /obj/item/clothing/under/pants/the_hidden
 	name = "pants"
@@ -270,10 +283,11 @@
 	var/mob/living/living_user = user
 
 	if(living_target.stat == DEAD) //heal up from gibbing the dead
-		living_user.adjustStaminaLoss(-25)
-		living_user.adjustBruteLoss(-25)
-		living_user.adjustFireLoss(-25)
-		living_target.gib()
+		if(do_after(user, 1 SECONDS, src))
+			living_user.adjustStaminaLoss(-25)
+			living_user.adjustBruteLoss(-25)
+			living_user.adjustFireLoss(-25)
+			living_target.gib()
 		return
 
 	if(!check_behind(user, living_target))
@@ -333,7 +347,7 @@
 
 /datum/action/cooldown/spell/hidden_heal
 	name = "Adrenal Burst"
-	desc = "Unleash an adrenaline burst to regain all your stamina and part of your health. Will produce a sound when used."
+	desc = "Unleash an adrenaline burst to regain all your stamina and part of your health. Will make you scream and thus reveal your location on use"
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "medkit"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
@@ -343,9 +357,9 @@
 	antimagic_flags = NONE
 
 	var/taunt_sounds = list(
-	'sound/effects/hallucinations/wail.ogg',
-	'sound/effects/hallucinations/far_noise.ogg',
-	'sound/effects/hallucinations/veryfar_noise.ogg',
+	'hl13/sound/voice/stalker/stalker_scream.ogg',
+	'hl13/sound/voice/stalker/stalker_scream2.ogg',
+	'hl13/sound/voice/stalker/stalker_scream3.ogg',
 )
 
 /datum/action/cooldown/spell/hidden_heal/cast(mob/living/cast_on)

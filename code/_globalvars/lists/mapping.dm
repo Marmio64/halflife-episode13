@@ -125,6 +125,7 @@ GLOBAL_LIST_EMPTY(train_dump_spots) //HL13 EDIT
 GLOBAL_LIST_EMPTY(outlands_latejoin) //HL13 EDIT
 GLOBAL_LIST_EMPTY(deployments_refugee) //HL13 EDIT
 GLOBAL_LIST_EMPTY(deployments_metrocop) //HL13 EDIT
+GLOBAL_LIST_EMPTY(the_hidden) //HL13 EDIT
 GLOBAL_LIST_EMPTY(prisonwarp) //admin prisoners go to these
 GLOBAL_LIST_EMPTY(holdingfacility) //captured people go here (ninja energy net)
 GLOBAL_LIST_EMPTY(generic_maintenance_landmarks)//generic spawn areas in maintenance, used for some ghostroles
