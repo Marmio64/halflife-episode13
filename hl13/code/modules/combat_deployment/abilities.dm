@@ -68,6 +68,10 @@
 
 	item_type = /obj/item/grenade/syndieminibomb/bouncer/random_timer
 
+/datum/action/cooldown/spell/conjure_item/grenade/New(Target, original = TRUE) //starts on cooldown
+	. = ..()
+	StartCooldown()
+
 /datum/action/cooldown/spell/conjure_item/grenade/random_timer/short_cooldown
 	cooldown_time = 60 SECONDS
 

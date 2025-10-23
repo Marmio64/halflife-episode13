@@ -12,13 +12,13 @@
 	if(stick_to_hands)
 		ADD_TRAIT(src, TRAIT_NODROP, HELD_ITEM_TRAIT) //you really shouldnt be dropping these
 
-/obj/item/hl2/loadout_picker/interact(mob/user)
+/obj/item/hl2/loadout_picker/interact(mob/living/user)
 	. = ..()
 	if(!can_use_beacon(user))
 		return
 
-	if(user.client)
-		if(user.client.deployment_faction != faction_belonging && faction_belonging != NO_FACTION)
+	if(isliving(user))
+		if(user.deployment_faction != faction_belonging && faction_belonging != NO_FACTION)
 			to_chat(user, span_warning("Your faction cannot use this."))
 			return
 

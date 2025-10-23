@@ -22,6 +22,9 @@
 		iter_wound.on_synthflesh(reac_volume)
 	var/need_mob_update = harmies + burnies
 
+	if(carbies.blood_volume < BLOOD_VOLUME_OKAY) //Only good for keeping you from dying, not topping off blood.
+		carbies.blood_volume += reac_volume/2 //medkit has 30 units, so 15 units of blood restored, which is about 3% blood volume.
+
 	if(need_mob_update)
 		carbies.updatehealth()
 	if(show_message)
@@ -50,6 +53,10 @@
 	need_mob_update += affected_mob.adjustOxyLoss(-healing * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype, required_respiration_type = affected_respiration_type)
 	need_mob_update += affected_mob.adjustBruteLoss(-healing * REM * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 	need_mob_update += affected_mob.adjustFireLoss(-healing * REM * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
+
+	if(affected_mob.blood_volume < BLOOD_VOLUME_OKAY) //Only good for keeping you from dying, not topping off blood.
+		affected_mob.blood_volume += healing/20 * seconds_per_tick //iron gives 0.25 * seconds_per tick, concentrated give 0.3.
+
 	for(var/i in affected_mob.all_wounds)
 		var/datum/wound/iter_wound = i
 		iter_wound.on_synthflesh(healing/6) //slightly helps with wounds
