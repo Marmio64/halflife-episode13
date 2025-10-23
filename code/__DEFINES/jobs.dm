@@ -55,6 +55,8 @@
 
 #define JOB_DEPLOYMENT_REFUGEE_CAPTAIN "Rebel Cell Leader"
 #define JOB_DEPLOYMENT_METROCOP_CAPTAIN "Combine Sectoral Commander"
+
+#define JOB_DEPLOYMENT_THE_HIDDEN "The Hidden"
 //Command
 #define JOB_CAPTAIN "District Administrator"
 #define JOB_HEAD_OF_PERSONNEL "Labor Lead"

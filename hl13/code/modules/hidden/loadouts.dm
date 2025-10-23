@@ -248,7 +248,7 @@
 	name = "pants"
 	desc = "A pair of plain pants"
 	icon_state = "trackpants"
-	slowdown = -1.35
+	slowdown = -1.3
 
 /obj/item/clothing/glasses/hidden_blindfold
 	name = "blindfold"

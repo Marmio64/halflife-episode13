@@ -113,3 +113,9 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 			return MAP_ERROR
 
 		spawning.forceMove(pick(spawn_locs))
+
+/datum/job/deployment_metrocop/get_roundstart_spawn_point()
+	return pick(GLOB.deployments_metrocop)
+
+/datum/job/deployment_metrocop/get_latejoin_spawn_point()
+	return pick(GLOB.deployments_metrocop)

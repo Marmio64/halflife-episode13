@@ -1,8 +1,8 @@
 {
 	"version": 1,
-	"map_name": "City 13 The Hidden",
-	"map_path": "map_files/deployment_hidden",
-	"map_file": "deployment_hidden.dmm",
+	"map_name": "City 13 The Hidden Bunker",
+	"map_path": "map_files/deployment_hidden_bunker",
+	"map_file": "deployment_hidden_bunker.dmm",
 	"space_ruin_levels": 0,
 	"space_empty_levels": 0,
 	"planetary": 1,
@@ -19,6 +19,12 @@
 			"No Parallax": true,
 			"Linkage": null
 
+		},
+		{
+			"Baseturf": "/turf/open/openspace",
+			"Gravity": true,
+			"No Parallax": true,
+			"Linkage": null
 		}
 	],
 	"minetype": "combat_deployment",
@@ -37,8 +43,8 @@
 			"spawn_positions": 0
 		},
 		"Civil Protection": {
-			"total_positions": 13,
-			"spawn_positions": 13
+			"total_positions": 26,
+			"spawn_positions": 26
 		}
 	}
 }

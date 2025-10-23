@@ -154,6 +154,10 @@
 /obj/structure/halflife/pipes/vent,
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/sewer/hidden)
+"uG" = (
+/obj/effect/landmark/hidden_spawnpoint,
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer/hidden)
 "va" = (
 /obj/structure/railing/halflife/sewer,
 /turf/open/floor/plating/indoor/metal/grate/border/warning{
@@ -170,7 +174,7 @@
 	},
 /area/halflife/indoors/sewer/hidden)
 "xt" = (
-/obj/effect/landmark/deployments_refugee,
+/obj/effect/landmark/deployments_metrocop,
 /obj/structure/chair/halflife/metal/folding,
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete/sewer,
@@ -189,11 +193,8 @@
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
 "xM" = (
-/obj/effect/landmark/deployments_refugee,
-/obj/structure/chair/halflife/metal/folding{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/concrete/sewer,
+/obj/effect/landmark/observer_start,
+/turf/closed/wall/halflife/sewer,
 /area/halflife/indoors/sewer/hidden)
 "yc" = (
 /obj/structure/halflife/pipes/piped,
@@ -250,6 +251,10 @@
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
+"Bj" = (
+/obj/machinery/the_hidden_time_counter,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/indoors/sewer/hidden)
 "BC" = (
 /obj/structure/halflife/pipes/horizontal/end{
 	dir = 1
@@ -293,7 +298,7 @@
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
 "Ig" = (
-/obj/effect/landmark/deployments_refugee,
+/obj/effect/landmark/deployments_metrocop,
 /obj/structure/chair/halflife/metal/folding,
 /obj/structure/halflife/pipes/piped,
 /turf/open/floor/plating/indoor/concrete/sewer,
@@ -324,7 +329,7 @@
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/sewer/hidden)
 "LI" = (
-/obj/effect/landmark/deployments_refugee,
+/obj/effect/landmark/deployments_metrocop,
 /obj/structure/chair/halflife/metal/folding,
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
@@ -349,6 +354,10 @@
 "NG" = (
 /obj/structure/halflife/pipes/piped,
 /turf/open/floor/plating/indoor/metal/pipe,
+/area/halflife/indoors/sewer/hidden)
+"NT" = (
+/obj/effect/koth_grace_field,
+/turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
 "Pg" = (
 /obj/machinery/light/small/directional/south,
@@ -964,8 +973,8 @@ hq
 hq
 hq
 hq
-xM
-xM
+zk
+zk
 Ns
 zk
 zk
@@ -1039,7 +1048,7 @@ Ns
 Ns
 Ns
 Ns
-Ns
+NT
 VI
 Ns
 Ns
@@ -1116,7 +1125,7 @@ ob
 AN
 ob
 ob
-Ns
+NT
 Yi
 Ns
 Ns
@@ -1659,7 +1668,7 @@ Ns
 hq
 JT
 Ns
-Ns
+NT
 Ns
 JT
 hq
@@ -3404,7 +3413,7 @@ Ns
 Ns
 Ns
 Ko
-hq
+xM
 DB
 Ns
 Ns
@@ -4392,7 +4401,7 @@ Ns
 Ns
 Ns
 Ns
-Ns
+NT
 Ns
 Ns
 Ns
@@ -4777,11 +4786,11 @@ pq
 hq
 DB
 Ns
-Ns
+uG
 Ns
 Ns
 VI
-Ns
+NT
 ob
 ob
 AN
@@ -5984,7 +5993,7 @@ pq
 (73,1,1) = {"
 pq
 CC
-CC
+Bj
 CC
 pq
 pq

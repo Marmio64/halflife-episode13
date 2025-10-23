@@ -139,7 +139,7 @@
 			if(client.deployment_faction != job.combat_deployment_faction)
 				return JOB_UNAVAILABLE_WRONGTEAM
 		if(job.combat_deployment_faction == COMBINE_DEPLOYMENT_FACTION  && !client.deployment_faction)
-			if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players))
+			if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players) && SSmapping.current_map.combat_deployment_gamemode != "the_hidden")
 				return JOB_UNAVAILABLE_TEAMFULL
 		if(job.combat_deployment_faction == REBEL_DEPLOYMENT_FACTION && !client.deployment_faction)
 			if(length(GLOB.deployment_combine_players) < length(GLOB.deployment_rebel_players))

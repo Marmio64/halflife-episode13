@@ -102,28 +102,8 @@
 		ADD_TRAIT(item_to_nodrop, TRAIT_NODROP, CAPTURE_THE_FLAG_TRAIT)
 
 
-/datum/job/deployment_refugee_captain/after_latejoin_spawn(mob/living/spawning)
-	. = ..()
-	if(ishuman(spawning))
-		var/list/spawn_locs = list()
-		for(var/X in GLOB.deployments_refugee)
-			spawn_locs += X
+/datum/job/deployment_refugee_captain/get_roundstart_spawn_point()
+	return pick(GLOB.deployments_refugee)
 
-		if(!spawn_locs.len)
-			message_admins("No valid spawn locations found, aborting...")
-			return MAP_ERROR
-
-		spawning.forceMove(pick(spawn_locs))
-
-/datum/job/deployment_refugee_captain/after_roundstart_spawn(mob/living/spawning)
-	. = ..()
-	if(ishuman(spawning))
-		var/list/spawn_locs = list()
-		for(var/X in GLOB.deployments_refugee)
-			spawn_locs += X
-
-		if(!spawn_locs.len)
-			message_admins("No valid spawn locations found, aborting...")
-			return MAP_ERROR
-
-		spawning.forceMove(pick(spawn_locs))
+/datum/job/deployment_refugee_captain/get_latejoin_spawn_point()
+	return pick(GLOB.deployments_refugee)
