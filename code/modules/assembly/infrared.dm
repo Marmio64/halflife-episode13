@@ -19,6 +19,8 @@
 	var/max_beam_length = 8
 	/// The radius of which people can hear triggers
 	var/hearing_range = 3
+	/// hl13 edit, any extra volume to add to the trigger sound?
+	var/extra_volume = 0
 	/// Pass flags the beam uses to determine what it can pass through
 	var/beam_pass_flags = PASSTABLE|PASSGLASS|PASSGRILLE
 	/// Can it be made invisible/visible?
@@ -166,7 +168,7 @@
 		message = span_infoplain("[icon2html(src, hearers(holder || src))] *beep* *beep* *beep*"),
 		hearing_distance = hearing_range,
 	)
-	playsound(src, 'sound/machines/beep/triple_beep.ogg', ASSEMBLY_BEEP_VOLUME, TRUE, extrarange = hearing_range - SOUND_RANGE + 1, falloff_distance = hearing_range)
+	playsound(src, 'sound/machines/beep/triple_beep.ogg', ASSEMBLY_BEEP_VOLUME + extra_volume, TRUE, extrarange = hearing_range - SOUND_RANGE + 1, falloff_distance = hearing_range)
 	COOLDOWN_START(src, next_activate, 3 SECONDS)
 
 /obj/item/assembly/infra/activate()

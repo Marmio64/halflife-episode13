@@ -156,10 +156,10 @@
 	combat_music = "none"
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/ammo_box/magazine/usp9mm = 3,
 		/obj/item/stack/sheet/mineral/sandbags = 2,
 		/obj/item/flashlight/flare/the_hidden = 3,
-		/obj/item/assembly/infra/the_hidden = 2,
+		/obj/item/assembly/infra/the_hidden = 3,
 	)
 
 
@@ -169,6 +169,7 @@
 
 	visible = TRUE
 	hearing_range = 9
+	extra_volume = 10
 	visibility_changeable = FALSE
 
 /obj/item/flashlight/flare/the_hidden
@@ -218,7 +219,7 @@
 
 /obj/item/flashlight/hand_crank/attack_self(mob/user)
 	user.visible_message(span_notice("[user] starts cranking \the [src]."), span_notice("You start cranking the [initial(src.name)]!"))
-	playsound(src, 'hl13/sound/effects/flashlight_crank.ogg', 20, TRUE, extrarange = -3)
+	playsound(src, 'hl13/sound/effects/flashlight_crank.ogg', 15, TRUE, extrarange = -3)
 	if(do_after(user, 1.5 SECONDS, src, IGNORE_USER_LOC_CHANGE))
 		if(fuel == 0)
 			set_light_on(TRUE)
@@ -411,7 +412,7 @@
 
 /datum/action/cooldown/spell/hidden_heal/cast(mob/living/cast_on)
 	. = ..()
-	cast_on.adjustStaminaLoss(-100)
+	cast_on.adjustStaminaLoss(-125)
 	cast_on.adjustBruteLoss(-25)
 	cast_on.adjustFireLoss(-25)
 	var/chosen_sound = pick(taunt_sounds)
