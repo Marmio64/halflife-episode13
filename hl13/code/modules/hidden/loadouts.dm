@@ -28,7 +28,7 @@
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
-	r_pocket = /obj/item/flashlight
+	r_pocket = /obj/item/flashlight/hand_crank
 
 	suit_store = /obj/item/gun/ballistic/shotgun/spas12
 	belt = /obj/item/storage/belt/civilprotection/overwatch/spas12_hidden
@@ -54,7 +54,7 @@
 
 	mask = /obj/item/clothing/mask/gas/civilprotection
 
-	l_pocket = /obj/item/flashlight
+	l_pocket = /obj/item/flashlight/hand_crank
 	r_pocket = /obj/item/flashlight/flare/the_hidden
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
@@ -76,7 +76,7 @@
 	mask = /obj/item/clothing/mask/gas/hl2/military
 	suit_store = /obj/item/gun/ballistic/automatic/m4a1
 	l_pocket = /obj/item/knife/combat/survival
-	r_pocket = /obj/item/flashlight
+	r_pocket = /obj/item/flashlight/hand_crank
 	belt = /obj/item/gun/ballistic/automatic/pistol/usp
 	head = /obj/item/clothing/head/helmet/halflife/military/weak
 	uniform = /obj/item/clothing/under/syndicate/camo
@@ -111,7 +111,7 @@
 
 	mask = /obj/item/clothing/mask/gas/civilprotection/medical
 
-	l_pocket = /obj/item/flashlight
+	l_pocket = /obj/item/flashlight/hand_crank
 	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
@@ -148,7 +148,7 @@
 	belt = /obj/item/gun/ballistic/automatic/pistol/usp
 
 	l_pocket = /obj/item/stack/medical/gauze
-	r_pocket = /obj/item/flashlight
+	r_pocket = /obj/item/flashlight/hand_crank
 
 	back = /obj/item/storage/backpack/halflife
 	ears = /obj/item/radio/headset/civilprotection/deployment
@@ -177,14 +177,61 @@
 	randomize_fuel = FALSE
 	fuel = 90 SECONDS
 
+/obj/item/flashlight/hand_crank
+	name = "hand-crank flashlight"
+	desc = "A hand-held emergency light powered by a hand crank, which can be used in hand to charge it up."
 
+	var/fuel = 0
+	var/max_fuel = 60 SECONDS
 
+/obj/item/flashlight/hand_crank/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	return ..()
 
+/obj/item/flashlight/hand_crank/process(seconds_per_tick)
+	fuel -= 1 SECONDS
+	check_fuel()
+
+/obj/item/flashlight/hand_crank/proc/check_fuel(seconds_per_tick)
+	if(45 SECONDS < fuel)
+		set_light_range(4)
+		set_light_power(0.55)
+		update_brightness()
+	else if(30 SECONDS < fuel)
+		set_light_range(4)
+		set_light_power(0.5)
+		update_brightness()
+	else if(15 SECONDS < fuel)
+		set_light_range(3)
+		set_light_power(0.4)
+		update_brightness()
+	else if(0 < fuel)
+		set_light_range(2)
+		set_light_power(0.3)
+		update_brightness()
+
+	if(!fuel || !light_on)
+		set_light_range(0)
+		set_light_power(0)
+		set_light_on(FALSE)
+		STOP_PROCESSING(SSobj, src)
+
+/obj/item/flashlight/hand_crank/attack_self(mob/user)
+	user.visible_message(span_notice("[user] starts cranking \the [src]."), span_notice("You start cranking the [initial(src.name)]!"))
+	playsound(src, 'hl13/sound/effects/flashlight_crank.ogg', 20, TRUE, extrarange = -3)
+	if(do_after(user, 1.5 SECONDS, src, IGNORE_USER_LOC_CHANGE))
+		if(fuel == 0)
+			set_light_on(TRUE)
+
+		fuel += 15 SECONDS
+		fuel = clamp(fuel, 0, max_fuel)
+		check_fuel()
+		START_PROCESSING(SSobj, src)
 
 /// THE MONSTER /// --------------------------------------
 
 /datum/outfit/deployment_loadout/hidden/the_hidden
-	name = "Hidden: The Hidden (4-9 Players)"
+	name = "Hidden: The Hidden (4-12 Players)"
 	display_name = "The Hidden"
 	desc = "The monster itself. Utilize stealth and mobility to slaughter your opponents when they don't expect it."
 
@@ -205,7 +252,7 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife/weak, /datum/action/cooldown/spell/hidden_taunt)
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/upgraded
-	name = "Hidden: Upgraded The Hidden (10-14 Players)"
+	name = "Hidden: Upgraded The Hidden (12-18 Players)"
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer/short_cooldown, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/hidden_taunt)
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/upgraded/pre_equip(mob/living/carbon/human/H)

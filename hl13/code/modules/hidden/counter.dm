@@ -15,11 +15,16 @@
 
 	var/pick_retries = 0
 
+	var/candidates_left = 0
+
 /obj/machinery/the_hidden_time_counter/Initialize(mapload)
 	..()
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/the_hidden_time_counter/LateInitialize()
+	while(!SSticker.HasRoundStarted())
+		sleep(1 SECONDS)
+	candidates_left = number_of_hidden
 	sleep(12 SECONDS)
 	to_chat(world, span_danger(span_slightly_larger(span_bold("The Hidden will be selected in 10 Seconds."))))
 	sleep(10 SECONDS)
@@ -30,7 +35,7 @@
 	GLOB.deployment_flag_grace_period = grace_time
 	START_PROCESSING(SSprocessing, src)
 
-/obj/machinery/the_hidden_time_counter/proc/attempt_pick_hidden(candidates_left)
+/obj/machinery/the_hidden_time_counter/proc/attempt_pick_hidden()
 	if(candidates_left == 0 || 99 < pick_retries)
 		start_countdown()
 		return
@@ -57,7 +62,7 @@
 		start_countdown()
 		return
 	else
-		attempt_pick_hidden(1)
+		attempt_pick_hidden()
 
 /obj/machinery/the_hidden_time_counter/process()
 
