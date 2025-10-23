@@ -38,3 +38,8 @@
 	name = "medical guard armband"
 	desc = "An armband, worn by the station's security forces to display which department they're assigned to. This one is white and blue."
 	icon_state = "medblueband"
+
+/obj/item/clothing/accessory/armband/plf
+	name = "polish armband"
+	desc = "An armband in the colour of the Polish flag, frequently worn by troops and supporters of the Polish Liberation Front."
+	icon_state = "plfband"

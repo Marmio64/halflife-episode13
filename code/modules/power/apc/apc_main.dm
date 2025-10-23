@@ -15,8 +15,8 @@
 #define APC_CHANNEL_ALARM_TRESHOLD 75
 
 /obj/machinery/power/apc
-	name = "area power controller"
-	desc = "A control terminal for the area's electrical systems."
+	name = "breaker box"
+	desc = "A smart breaker box fitted with a reserve power cell to act as an uninterruptible power supply."
 	icon = 'icons/obj/machines/wallmounts.dmi'
 	icon_state = "apc0"
 	use_power = NO_POWER_USE

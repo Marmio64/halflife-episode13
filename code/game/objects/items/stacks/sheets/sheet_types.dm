@@ -399,6 +399,7 @@ GLOBAL_LIST_INIT(bamboo_recipes, list ( \
  */
 GLOBAL_LIST_INIT(cloth_recipes, list ( \
 	new/datum/stack_recipe("white bandana", /obj/item/clothing/mask/bandana/white, 2, crafting_flags = NONE, category = CAT_CLOTHING), \
+	new/datum/stack_recipe("polish armband", /obj/item/clothing/accessory/armband/plf, 2, crafting_flags = NONE, category = CAT_CLOTHING), \
 	null, \
 	new/datum/stack_recipe("improvised gauze", /obj/item/stack/medical/gauze/improvised, 1, 2, 6, crafting_flags = NONE, category = CAT_TOOLS), \
 	new/datum/stack_recipe("rag", /obj/item/reagent_containers/cup/rag, 1, crafting_flags = NONE, category = CAT_CHEMISTRY), \
