@@ -369,8 +369,12 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer/hidden)
 "tC" = (
-/obj/effect/decal/cleanable/blood/hitsplatter,
-/turf/open/floor/plating/indoor/concrete/bricks,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/plating/indoor/cafeteria,
+/area/halflife/indoors/sewer/hidden)
+"uG" = (
+/obj/effect/decal/cleanable/blood/gibs,
+/turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/sewer/hidden)
 "uO" = (
 /obj/effect/decal/cleanable/blood/gibs/body,
@@ -435,9 +439,7 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer/hidden)
 "zo" = (
-/obj/effect/decal/cleanable/blood/hitsplatter{
-	dir = 8
-	},
+/obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/sewer/hidden)
 "zz" = (
@@ -593,10 +595,10 @@
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/sewer/hidden)
 "IA" = (
-/obj/effect/decal/cleanable/blood/hitsplatter{
-	dir = 4
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/plating/indoor/metal/pipe{
+	dir = 1
 	},
-/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer/hidden)
 "IK" = (
 /obj/structure/halflife/fence/vertical/wire/east,
@@ -861,6 +863,11 @@
 "XE" = (
 /obj/structure/halflife/tank/chemical/container,
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer/hidden)
+"XJ" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/blood/splatter,
+/turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/hidden)
 "Ya" = (
 /obj/machinery/door/airlock/highsecurity/combine,
@@ -4973,7 +4980,7 @@ Ta
 mJ
 mJ
 mJ
-mJ
+FF
 mJ
 mJ
 mJ
@@ -5621,7 +5628,7 @@ mJ
 tu
 tu
 mJ
-mJ
+FF
 mJ
 wr
 tu
@@ -5980,7 +5987,7 @@ lO
 bC
 bC
 bC
-bC
+IA
 bC
 bC
 Tx
@@ -11069,7 +11076,7 @@ qy
 qy
 PH
 yV
-tC
+Cq
 PX
 PX
 PX
@@ -13184,7 +13191,7 @@ GH
 of
 mC
 mC
-mC
+tC
 mC
 mC
 PX
@@ -13549,7 +13556,7 @@ sW
 Kj
 qa
 mC
-mC
+tC
 sW
 Kj
 qa
@@ -13604,7 +13611,7 @@ qy
 qy
 qy
 PH
-IA
+Cq
 PX
 PX
 PX
@@ -13730,7 +13737,7 @@ PX
 mC
 mC
 mC
-mC
+uG
 mC
 rV
 rV
@@ -14925,7 +14932,7 @@ PX
 PX
 PX
 PX
-PX
+Cq
 PX
 PX
 PX
@@ -15097,7 +15104,7 @@ oT
 PX
 PX
 PX
-PX
+aO
 PX
 PX
 PX
@@ -15107,7 +15114,7 @@ PH
 PH
 PX
 PX
-PX
+aO
 PX
 PX
 PX
@@ -15560,7 +15567,7 @@ PX
 PX
 PX
 PX
-PX
+Cq
 PX
 PX
 PX
@@ -16212,7 +16219,7 @@ bo
 PX
 Po
 PH
-Fu
+XJ
 Fu
 cL
 qy
@@ -16299,7 +16306,7 @@ PX
 PX
 PX
 PX
-PX
+aO
 PX
 PX
 PX
