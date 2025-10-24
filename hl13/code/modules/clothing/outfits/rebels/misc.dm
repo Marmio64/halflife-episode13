@@ -171,6 +171,7 @@
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/poland //you get one (1) bargain bin helmet
 	mask = /obj/item/clothing/mask/gas/hl2/swat
 	ears = /obj/item/radio/headset/syndicate/alt //you get a LITTLE military surplus. as a treat.
+	accessory = /obj/item/clothing/accessory/armband/plf //polan!!!!
 
 /datum/outfit/resistance_faction/polish/partisan //hastily-armed civilians
 	name = "Polish Liberation Front Partisan"
@@ -257,11 +258,12 @@
 
 /datum/outfit/resistance_faction/polish/commander
 	name = "Polish Liberation Front Platoon Leader"
-	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy //big man gets big slow vest. big man DOES NOT go on the frontlines. you STAY IN THE BACK AND TALK TO YOUR SOLDIERS GOD FUCKING DAMNIT.
+	suit = /obj/item/clothing/suit/armor/halflife/milvest //stay in the backline. no improvised mask though
 	mask = /obj/item/clothing/mask/gas/hl2/military/hardened //also important
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/revolver
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
 	ears = /obj/item/radio/headset/syndicate/alt/leader //LEADER. BIG MAN. IMPORTANT.
+	accessory = /obj/item/clothing/accessory/medal/gold/plf_captain //high-ranking officer
 	head = /obj/item/clothing/head/beret/sec/poland
 	l_pocket = /obj/item/binoculars
 	uniform = /obj/item/clothing/under/syndicate/camo
@@ -280,6 +282,7 @@
 	suit_store = /obj/item/gun/ballistic/automatic/ak47
 	back = /obj/item/storage/backpack/halflife/satchel/military //you are going to fucking die against these guys. trust me.
 	ears = /obj/item/radio/headset/syndicate/alt/leader //I AM JOHN POLAND, AND THIS IS MY MESSAGE; THE COMBINE WILL BURN, AND THE BANNER OF POLAND WILL BE RAISED
+	accessory = /obj/item/clothing/accessory/medal/silver/plf_veteran
 	backpack_contents = list(
 		/obj/item/grenade/c4 = 1,
 		/obj/item/grenade/syndieminibomb/bouncer = 1,

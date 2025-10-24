@@ -47,7 +47,7 @@
 
 /obj/item/clothing/accessory/medal/conduct
 	name = "distinguished conduct medal"
-	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is the most basic award given by Nanotrasen. It is often awarded by a captain to a member of his crew."
+	desc = "An old, pre-war bronze medal of some variety. Award for distinguished conduct."
 
 /obj/item/clothing/accessory/medal/bronze_heart
 	name = "bronze heart medal"
@@ -65,10 +65,14 @@
 
 /obj/item/clothing/accessory/medal/silver
 	name = "silver medal"
-	desc = "A silver medal."
+	desc = "A tarnished old silver medal, presumably dating back to before the Seven Hour War."
 	icon_state = "silver"
 	medaltype = "medal-silver"
 	custom_materials = list(/datum/material/silver = HALF_SHEET_MATERIAL_AMOUNT)
+
+/obj/item/clothing/accessory/medal/silver/plf_veteran
+	name = "long service medal"
+	desc = "A lower-grade of the long service medal, issued by the Polish army before the war. The Polish Free State has taken to issuing them to veteran troops."
 
 /obj/item/clothing/accessory/medal/silver/valor
 	name = "medal of valor"
@@ -107,6 +111,11 @@
 	name = "medal of captaincy"
 	desc = "A golden medal awarded exclusively to those promoted to the rank of captain. It signifies the codified responsibilities of a captain to Nanotrasen, and their undisputable authority over their crew."
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+
+
+/obj/item/clothing/accessory/medal/gold/plf_captain
+	name = "gold long service medal"
+	desc = "A pre-war golden medal issued for long service by the Polish army. The Polish Free State has taken to issuing these to their officers as a mark of rank."
 
 /obj/item/clothing/accessory/medal/gold/heroism
 	name = "medal of exceptional heroism"

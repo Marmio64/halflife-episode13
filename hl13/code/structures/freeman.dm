@@ -49,6 +49,7 @@
 	icon_state = "pscrubber:0"
 
 /obj/structure/halflife/processor
+	anchored = TRUE //marmio youre better than this
 	name = "mysterious machine"
 	desc = "..."
 	icon = 'hl13/icons/obj/port/objects.dmi'
