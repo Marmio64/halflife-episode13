@@ -70,7 +70,7 @@
 
 /datum/outfit/job/deployment_metrocop_captain/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
-	user.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 5) //Gives you a few seconds of invincibility to prevent spawn camping
+	user.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 6) //Gives you a few seconds of invincibility to prevent spawn camping
 	ADD_TRAIT(user, TRAIT_VIRUSIMMUNE, JOB_TRAIT)
 	ADD_TRAIT(user, TRAIT_TDMCAPTAIN, JOB_TRAIT)
 	user.faction += "combine"

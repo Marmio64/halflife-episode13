@@ -44,8 +44,9 @@
 		to_chat(user, span_warning("This supply radio is only accessible to faction captains."))
 		return FALSE
 
-	if(user.client)
-		if(user.client.deployment_faction != faction_belonging)
+	if(isliving(user))
+		var/mob/living/livie = user
+		if(livie.deployment_faction != faction_belonging)
 			to_chat(user, span_warning("Your faction cannot use this."))
 			return
 

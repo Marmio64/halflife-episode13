@@ -54,6 +54,7 @@
 	icon = 'hl13/icons/obj/port/objects.dmi'
 	icon_state = "processor_off"
 	density = TRUE
+	anchored = TRUE
 
 /obj/structure/halflife/processor/substrate
 	icon_state = "substrate_off"

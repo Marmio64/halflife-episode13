@@ -1,3 +1,5 @@
+GLOBAL_VAR_INIT(number_of_hidden, 0)
+
 /obj/machinery/the_hidden_time_counter
 	name = "time counter"
 	desc = "it be countin' and stuff"
@@ -16,6 +18,12 @@
 	var/pick_retries = 0
 
 	var/candidates_left = 0
+
+	var/combine_players = 12
+
+/obj/machinery/the_hidden_time_counter/double_players
+	number_of_hidden = 2
+	combine_players = 24
 
 /obj/machinery/the_hidden_time_counter/Initialize(mapload)
 	..()
@@ -46,6 +54,10 @@
 	if(ishuman(candidate_client.mob))
 		var/mob/living/carbon/human/human_user = candidate_client.mob
 
+		if(human_user.deployment_faction == HIDDEN_DEPLOYMENT_FACTION)
+			attempt_pick_hidden()
+			return
+
 		for(var/obj/item/item in human_user.get_all_gear())
 			qdel(item)
 		human_user.STASTR = 10
@@ -70,6 +82,22 @@
 		if(!time_ticking)
 			time_ticking = TRUE
 			to_chat(world, span_danger(span_slightly_larger(span_bold("Grace period up, let the hunt begin."))))
+
+		if(combine_players <= SSticker.tdm_combine_deaths && SSticker.IsRoundInProgress())
+			priority_announce("All delegate biosignals lost. Mission failure detected.", "Overwatch Priority Alert")
+			GLOB.deployment_win_team = HIDDEN_DEPLOYMENT_FACTION
+			SSticker.force_ending = FORCE_END_ROUND
+			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All Combine are dead, the Hidden win."))))
+			STOP_PROCESSING(SSprocessing, src)
+
+		if(GLOB.number_of_hidden < 1 && SSticker.IsRoundInProgress())
+			priority_announce("All priority subjects amputated. Mission complete.", "Overwatch Priority Alert")
+			GLOB.deployment_win_team = COMBINE_DEPLOYMENT_FACTION
+			SSticker.force_ending = FORCE_END_ROUND
+			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All Hidden were killed, the Combine win."))))
+			STOP_PROCESSING(SSprocessing, src)
+
+
 	else
 		GLOB.deployment_flag_grace_period -= 1 SECONDS
 		return

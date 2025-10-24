@@ -41,7 +41,7 @@
 	color = "#E0BB00" //golden for the gods
 	taste_description = "badmins"
 	chemical_flags = REAGENT_DEAD_PROCESS
-	metabolized_traits = list(TRAIT_ANALGESIA)
+	metabolized_traits = list(TRAIT_ANALGESIA, TRAIT_NOHARDCRIT, TRAIT_NOSOFTCRIT)
 	/// Flags to fullheal every metabolism tick
 	var/full_heal_flags = ~(HEAL_BRUTE|HEAL_BURN|HEAL_TOX|HEAL_RESTRAINTS|HEAL_REFRESH_ORGANS)
 

@@ -77,7 +77,7 @@
 	H.change_stat(STATKEY_DEX, 4)
 	H.change_stat(STATKEY_STR, 4)
 
-	H.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 5) //Gives you a few seconds of invincibility to prevent spawn camping
+	H.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 6) //Gives you a few seconds of invincibility to prevent spawn camping
 
 	H.fully_replace_character_name(H.real_name,"Cell Leader [H.real_name]")
 

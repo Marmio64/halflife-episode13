@@ -171,6 +171,9 @@
 			SSticker.tdm_rebel_deaths++
 			SSticker.tdm_total_deaths++
 
+	if(deployment_faction == HIDDEN_DEPLOYMENT_FACTION)
+		GLOB.number_of_hidden--
+
 	timeofdeath = world.time
 	station_timestamp_timeofdeath = station_time_timestamp()
 	var/turf/death_turf = get_turf(src)

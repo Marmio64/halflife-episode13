@@ -38,6 +38,9 @@ GLOBAL_VAR_INIT(distress_terminals, 5)
 		SSticker.force_ending = FORCE_END_ROUND
 		to_chat(world, span_infoplain(span_slightly_larger(span_bold("All distress terminals activated, the Combine win."))))
 
+
+	STOP_PROCESSING(SSprocessing, src)
+
 /obj/machinery/combine_distressterminal/examine(mob/user)
 	. = ..()
 	if(completed)

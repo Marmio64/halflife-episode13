@@ -56,7 +56,7 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 
 /datum/outfit/job/deployment_metrocop/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
-	user.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 5) //Gives you a few seconds of invincibility to prevent spawn camping
+	user.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 6) //Gives you a few seconds of invincibility to prevent spawn camping
 	ADD_TRAIT(user, TRAIT_VIRUSIMMUNE, JOB_TRAIT)
 	user.faction += "combine"
 	user.faction -= "neutral"

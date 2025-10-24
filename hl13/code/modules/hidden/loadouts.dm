@@ -23,7 +23,7 @@
 /datum/outfit/deployment_loadout/hidden/combine/shotgunner
 	name = "Hidden: Shotgunner"
 	display_name = "DEFENSE: Shotgunner"
-	desc = "Use your high power shotgun to keep the Hidden away from you and your team. All you need to put them down are two clean bursts."
+	desc = "Use your high power shotgun to keep the Hidden away from you and your team."
 
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
@@ -219,7 +219,7 @@
 
 /obj/item/flashlight/hand_crank/attack_self(mob/user)
 	user.visible_message(span_notice("[user] starts cranking \the [src]."), span_notice("You start cranking the [initial(src.name)]!"))
-	playsound(src, 'hl13/sound/effects/flashlight_crank.ogg', 15, TRUE, extrarange = -3)
+	playsound(src, 'hl13/sound/effects/flashlight_crank.ogg', 10, TRUE, extrarange = -3)
 	if(do_after(user, 1.5 SECONDS, src, IGNORE_USER_LOC_CHANGE))
 		if(fuel == 0)
 			set_light_on(TRUE)
@@ -256,11 +256,6 @@
 	name = "Hidden: Upgraded The Hidden (12-18 Players)"
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer/short_cooldown, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/hidden_taunt)
 
-/datum/outfit/deployment_loadout/hidden/the_hidden/upgraded/pre_equip(mob/living/carbon/human/H)
-	. = ..()
-	ADD_TRAIT(H, TRAIT_NOHARDCRIT, OUTFIT_TRAIT)
-	ADD_TRAIT(H, TRAIT_NOSOFTCRIT, OUTFIT_TRAIT)
-
 /datum/outfit/deployment_loadout/hidden/the_hidden/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	H.skin_tone = "#e9dfd7"
@@ -277,8 +272,14 @@
 	ADD_TRAIT(H, TRAIT_ANALGESIA, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOHUNGER, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_PIERCEIMMUNE, OUTFIT_TRAIT) //so you dont get fucked from stepping on a glass shard
+	ADD_TRAIT(H, TRAIT_NOHARDCRIT, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_NOSOFTCRIT, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_NOCRITDAMAGE, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_NOCRITOVERLAY, OUTFIT_TRAIT)
+	H.maxHealth = 25
 	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 	H.setdeploymentfaction(HIDDEN_DEPLOYMENT_FACTION)
+	GLOB.number_of_hidden++
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -320,7 +321,7 @@
 	var/backstab_bonus = 125
 
 /obj/item/knife/combat/the_hidden/weak
-	desc = "An obscenely sharp and dangerous knife. Backstabs will deal double damage. Stab a dead body to gib it and heal."
+	desc = "An obscenely sharp and dangerous knife. Backstabs will deal double damage. Stab a dead body to gib it and heal a little bit."
 	backstab_bonus = 59
 
 /obj/item/knife/combat/the_hidden/afterattack(atom/target, mob/user, click_parameters)
@@ -333,8 +334,8 @@
 	if(living_target.stat == DEAD) //heal up from gibbing the dead
 		if(do_after(user, 1 SECONDS, src))
 			living_user.adjustStaminaLoss(-25)
-			living_user.adjustBruteLoss(-25)
-			living_user.adjustFireLoss(-25)
+			living_user.adjustBruteLoss(-15)
+			living_user.adjustFireLoss(-15)
 			living_target.gib()
 		return
 
