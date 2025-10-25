@@ -105,7 +105,7 @@
 	id = TECHWEB_NODE_INTERGRATED_TOOLSETS
 	display_name = "Integrated Toolsets"
 	description = "Decades of contraband smuggling by citizens have led to the development of a full toolbox that fits seamlessly into your arm."
-	prereq_ids = list(TECHWEB_NODE_COMBAT_IMPLANTS, TECHWEB_NODE_EXP_TOOLS)
+	prereq_ids = list(TECHWEB_NODE_COMBAT_IMPLANTS)
 	design_ids = list(
 		"ci-nutrimentplus",
 		"ci-toolset",

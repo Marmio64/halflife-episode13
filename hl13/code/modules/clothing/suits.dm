@@ -473,6 +473,7 @@
 		/obj/item/geiger_counter,
 		/obj/item/tank/internals,
 		/obj/item/gun/ballistic/shotgun/antixen,
+		/obj/item/gun/syringe,
 		)
 
 /obj/item/clothing/suit/utility/radiation/cleanup/scientist

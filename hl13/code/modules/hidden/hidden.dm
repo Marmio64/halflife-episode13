@@ -52,7 +52,6 @@
 	ADD_TRAIT(H, TRAIT_FILTHBORN, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_ANALGESIA, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOHUNGER, OUTFIT_TRAIT)
-	ADD_TRAIT(H, TRAIT_PIERCEIMMUNE, OUTFIT_TRAIT) //so you dont get fucked from stepping on a glass shard
 	ADD_TRAIT(H, TRAIT_NOHARDCRIT, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOSOFTCRIT, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOCRITDAMAGE, OUTFIT_TRAIT)
@@ -84,8 +83,12 @@
 	desc = "A pair of plain pants"
 	icon_state = "trackpants"
 	slowdown = -1.3
+	body_parts_covered = GROIN|LEGS|FEET
 
-/obj/item/clothing/under/pants/the_hidden/slow
+/obj/item/clothing/under/pants/the_hidden/trapper
+	slowdown = -1
+
+/obj/item/clothing/under/pants/the_hidden/brute
 	slowdown = -1
 
 /obj/item/clothing/glasses/hidden_blindfold
@@ -327,7 +330,7 @@
 	display_name = "TRAPPER: The Hunter"
 	desc = "You exchange some of your speed for the ability to lay down near-invisible mantraps to immobilize your prey while you swoop in for the kill."
 
-	uniform = /obj/item/clothing/under/pants/the_hidden/slow
+	uniform = /obj/item/clothing/under/pants/the_hidden/trapper
 
 	extra_dex = 10
 
@@ -338,7 +341,7 @@
 	display_name = "ASSAULT: The Brute"
 	desc = "You have a higher max health and a unique area of effect ability to forcefully punch everyone nearby away, but are more visible and slower."
 
-	uniform = /obj/item/clothing/under/pants/the_hidden/slow
+	uniform = /obj/item/clothing/under/pants/the_hidden/brute
 
 	extra_dex = 10
 
@@ -347,4 +350,4 @@
 /datum/outfit/deployment_loadout/hidden/the_hidden/brute/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	H.alpha = 40
-	H.physiology.damage_resistance += 20
+	H.physiology.damage_resistance += 25

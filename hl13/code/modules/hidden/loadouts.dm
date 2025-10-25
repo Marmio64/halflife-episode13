@@ -11,6 +11,7 @@
 			/datum/outfit/deployment_loadout/hidden/combine/conscript,
 			/datum/outfit/deployment_loadout/hidden/combine/medic_cop,
 			/datum/outfit/deployment_loadout/hidden/combine/engineer,
+			/datum/outfit/deployment_loadout/hidden/combine/scientist,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -57,15 +58,17 @@
 
 	mask = /obj/item/clothing/mask/gas/civilprotection
 
-	l_pocket = /obj/item/flashlight/hand_crank
-	r_pocket = /obj/item/flashlight/flare/the_hidden
+	l_pocket = /obj/item/knife/combat/survival
+	r_pocket = /obj/item/flashlight/hand_crank
+
+	belt = /obj/item/flashlight/flare/the_hidden
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = "none"
 
 	back = /obj/item/melee/sledgehammer
 
-	extra_str = 6
+	extra_str = 8
 	extra_dex = -4
 
 //The attacker, conscripts move a bit faster than their comrades and have the best medium to long range weapon.
@@ -231,3 +234,39 @@
 		fuel = max_fuel
 		check_fuel()
 		START_PROCESSING(SSobj, src)
+
+//The second tracker, you specialize in revealing and slowing the Hidden via your unique syringe dart gun.
+//The downside is that you suck at actually doing any real harm to the Hidden.
+/datum/outfit/deployment_loadout/hidden/combine/scientist
+	name = "Hidden: Scientist"
+	display_name = "TRACKER: Scientist"
+	desc = "Use a special syringe gun which can fire chemicals into the Hidden in order to slow them and make them glow for a while."
+
+	uniform = /obj/item/clothing/under/citizen
+	suit = /obj/item/clothing/suit/utility/radiation/cleanup/scientist
+	head = /obj/item/clothing/head/utility/radiation/scientist
+	mask = /obj/item/clothing/mask/gas/cwuengi
+	shoes = /obj/item/clothing/shoes/halflife/cleanup
+	gloves = /obj/item/clothing/gloves/halflife/cleanup
+
+	suit_store =  /obj/item/gun/syringe
+
+	belt = /obj/item/gun/ballistic/automatic/pistol/usp
+	l_pocket = /obj/item/ammo_box/magazine/usp9mm
+	r_pocket = /obj/item/flashlight/hand_crank
+
+	back = /obj/item/storage/backpack/halflife
+	ears = /obj/item/radio/headset/civilprotection/deployment
+
+	combat_music = "none"
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/syringe/piercing/hidden_scientist = 6,
+		/obj/item/flashlight/flare/the_hidden = 2,
+		/obj/item/stack/medical/gauze = 1,
+	)
+
+/obj/item/reagent_containers/syringe/piercing/hidden_scientist
+	name = "syringe (scientist mix)"
+	desc = "Contains glowing compounds and harmful muscle blockers."
+	list_reagents = list(/datum/reagent/consumable/tinlux = 5, /datum/reagent/slowing_compound = 3)

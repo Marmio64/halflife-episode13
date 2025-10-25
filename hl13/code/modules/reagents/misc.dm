@@ -78,3 +78,20 @@
 	ph = 4
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 	glass_price = DRINK_PRICE_STOCK
+
+/datum/reagent/slowing_compound
+	name = "Slowing Compound"
+	description = "Slows the victim down temporarily."
+	color = "#78008C"
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+
+/datum/reagent/slowing_compound/on_mob_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.add_movespeed_modifier(/datum/movespeed_modifier/reagent/slowing_compound)
+
+/datum/reagent/slowing_compound/on_mob_end_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/slowing_compound)
+
+/datum/movespeed_modifier/reagent/slowing_compound
+	multiplicative_slowdown = 0.5

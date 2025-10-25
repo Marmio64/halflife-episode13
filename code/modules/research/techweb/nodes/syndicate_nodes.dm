@@ -2,7 +2,6 @@
 	id = TECHWEB_NODE_SYNDICATE_BASIC
 	display_name = "Illegal Technology"
 	description = "Dangerous research used to create dangerous objects."
-	prereq_ids = list(TECHWEB_NODE_EXP_TOOLS)
 	design_ids = list(
 		"advanced_camera",
 		"ai_cam_upgrade",

@@ -44,7 +44,7 @@ ABDUCTOR_SUBTYPE_UNLOCKS(/datum/techweb_node/alientech)
 	id = TECHWEB_NODE_ALIEN_ENGI
 	display_name = "Alien Engineering"
 	description = "Alien engineering tools"
-	prereq_ids = list(TECHWEB_NODE_ALIENTECH, TECHWEB_NODE_EXP_TOOLS)
+	prereq_ids = list(TECHWEB_NODE_ALIENTECH)
 	design_ids = list(
 		"alien_crowbar",
 		"alien_multitool",

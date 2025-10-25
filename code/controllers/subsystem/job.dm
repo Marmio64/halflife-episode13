@@ -421,7 +421,8 @@ SUBSYSTEM_DEF(job)
 	job_debug("DO: Player count to assign roles to: [initial_players_to_assign]")
 
 	//Scale number of open security officer slots to population
-	setup_officer_positions()
+	if(SSmapping.current_map.minetype != "combat_deployment")
+		setup_officer_positions()
 
 	//Jobs will have fewer access permissions if the number of players exceeds the threshold defined in game_options.txt
 	var/min_access_threshold = CONFIG_GET(number/minimal_access_threshold)
