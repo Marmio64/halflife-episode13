@@ -230,6 +230,9 @@
 	inhand_icon_state = "swat"
 	armor_type = /datum/armor/cpmask_upgraded
 
+/obj/item/clothing/mask/gas/civilprotection/divisional/sectoral
+	icon_state = "sectoral_mask"
+
 /datum/armor/cpmask_upgraded
 	melee = 30
 	bullet = 35

@@ -429,7 +429,7 @@
 /obj/item/restraints/legcuffs/beartrap/proc/close_trap()
 	armed = FALSE
 	update_appearance()
-	playsound(src, 'sound/effects/snap.ogg', 50, TRUE)
+	playsound(src, 'hl13/sound/effects/beartrap.ogg', 50, TRUE)
 
 /obj/item/restraints/legcuffs/beartrap/proc/trap_stepped_on(datum/source, atom/movable/entering, ...)
 	SIGNAL_HANDLER
@@ -463,6 +463,7 @@
 		return
 
 	close_trap()
+
 	if(ignore_movetypes)
 		victim.visible_message(span_danger("\The [src] ensnares [victim]!"), \
 				span_userdanger("\The [src] ensnares you!"))
@@ -476,6 +477,10 @@
 		if(!carbon_victim.legcuffed && carbon_victim.num_legs >= 2) //beartrap can't cuff your leg if there's already a beartrap or legcuffs, or you don't have two legs.
 			INVOKE_ASYNC(carbon_victim, TYPE_PROC_REF(/mob/living/carbon, equip_to_slot), src, ITEM_SLOT_LEGCUFFED)
 			SSblackbox.record_feedback("tally", "handcuffs", 1, type)
+
+	if(ishuman(victim))
+		var/mob/living/carbon/human/human_victim = victim
+		human_victim.adjust_temppain(100)
 
 	victim.apply_damage(trap_damage, BRUTE, def_zone)
 

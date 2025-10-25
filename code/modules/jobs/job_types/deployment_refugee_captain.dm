@@ -33,7 +33,7 @@
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/flashlight/seclite
 	head = /obj/item/clothing/head/beret/sec/poland
-	uniform = /obj/item/clothing/under/citizen/rebel
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
 	glasses = /obj/item/clothing/glasses/eyepatch

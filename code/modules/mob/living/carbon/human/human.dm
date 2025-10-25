@@ -1012,6 +1012,8 @@
 /mob/living/carbon/human/updatehealth()
 	. = ..()
 	var/health_deficiency = max((maxHealth - health), (staminaloss * 0.8)) //HL13 EDIT, stamina damage slows you down slightly less
+	if(HAS_TRAIT(src, TRAIT_THE_HIDDEN))
+		health_deficiency = max((100 - health), (staminaloss * 0.8))
 	if(health_deficiency >= 65) //HL13 EDIT, more damage required to set in damage slowdown, about half health starts slowdown
 		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown, TRUE, multiplicative_slowdown = health_deficiency / 120) //HL13 EDIT, less slowdown
 		add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/damage_slowdown_flying, TRUE, multiplicative_slowdown = health_deficiency / 25)

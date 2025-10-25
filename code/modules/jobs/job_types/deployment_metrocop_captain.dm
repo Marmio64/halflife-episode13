@@ -62,7 +62,7 @@
 		/obj/item/hl2/supply_radio/combine = 1,
 	)
 
-	mask = /obj/item/clothing/mask/gas/civilprotection/divisional
+	mask = /obj/item/clothing/mask/gas/civilprotection/divisional/sectoral
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
 

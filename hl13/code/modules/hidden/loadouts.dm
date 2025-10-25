@@ -1,3 +1,6 @@
+/obj/item/hl2/loadout_picker/hidden
+	display_help_text = FALSE
+
 /obj/item/hl2/loadout_picker/hidden/combine/generate_display_names()
 	var/static/list/loadouts
 	if(!loadouts)
@@ -131,13 +134,13 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit/the_hidden)
 	extra_int = 4
 
-//The trapper, you specialize in setting up trip beams at room entrances in order to get a heads up on Hidden activity.
+//The tracker, you specialize in setting up trip beams at room entrances in order to get a heads up on Hidden activity.
 //In addition, you get two more flares than everyone else, which is great for increasing the dismal visiblity your team tends to have!
 //The downside is that you only have a sidearm and are thus extremely vulnerable, unless you manage to get a real gun off a dead teammate.
 /datum/outfit/deployment_loadout/hidden/combine/engineer
 	name = "Hidden: Engineer"
-	display_name = "TRAPPER: Engineer"
-	desc = "Use trip alarm beams and flares to get extra information on where the enemy is."
+	display_name = "TRACKER: Engineer"
+	desc = "Use trip alarm beams and flares to get extra information on where the enemy is. In addition, wisely use your sandbags to help protect the team during terminal activations."
 
 	uniform = /obj/item/clothing/under/citizen
 	suit = /obj/item/clothing/suit/utility/radiation/engineer
@@ -181,6 +184,7 @@
 /obj/item/flashlight/hand_crank
 	name = "hand-crank flashlight"
 	desc = "A hand-held emergency light powered by a hand crank, which can be used in hand to charge it up."
+	actions_types = list()
 
 	var/fuel = 0
 	var/max_fuel = 60 SECONDS
@@ -220,201 +224,10 @@
 /obj/item/flashlight/hand_crank/attack_self(mob/user)
 	user.visible_message(span_notice("[user] starts cranking \the [src]."), span_notice("You start cranking the [initial(src.name)]!"))
 	playsound(src, 'hl13/sound/effects/flashlight_crank.ogg', 10, TRUE, extrarange = -3)
-	if(do_after(user, 1.5 SECONDS, src, IGNORE_USER_LOC_CHANGE))
+	if(do_after(user, 2 SECONDS, src))
 		if(fuel == 0)
 			set_light_on(TRUE)
 
-		fuel += 15 SECONDS
-		fuel = clamp(fuel, 0, max_fuel)
+		fuel = max_fuel
 		check_fuel()
 		START_PROCESSING(SSobj, src)
-
-/// THE MONSTER /// --------------------------------------
-
-/datum/outfit/deployment_loadout/hidden/the_hidden
-	name = "Hidden: The Hidden (4-12 Players)"
-	display_name = "The Hidden"
-	desc = "The monster itself. Utilize stealth and mobility to slaughter your opponents when they don't expect it."
-
-	glasses = /obj/item/clothing/glasses/hidden_blindfold
-	shoes = null
-
-	suit_store = /obj/item/gun/ballistic/shotgun/spas12
-	uniform = /obj/item/clothing/under/pants/the_hidden
-
-	combat_music = "none"
-
-	extra_dex = 10
-
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/hidden_taunt)
-
-/datum/outfit/deployment_loadout/hidden/the_hidden/downgraded
-	name = "Hidden: Downgraded The Hidden (1-4 Players)"
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife/weak, /datum/action/cooldown/spell/hidden_taunt)
-
-/datum/outfit/deployment_loadout/hidden/the_hidden/upgraded
-	name = "Hidden: Upgraded The Hidden (12-18 Players)"
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer/short_cooldown, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/hidden_taunt)
-
-/datum/outfit/deployment_loadout/hidden/the_hidden/pre_equip(mob/living/carbon/human/H)
-	. = ..()
-	H.skin_tone = "#e9dfd7"
-	H.alpha = 25
-	H.set_hairstyle("Bald", update = TRUE)
-	H.set_facial_hairstyle("Shaved", update = TRUE)
-	H.eye_color_left = "#b9b9b9"
-	H.eye_color_right = "#b9b9b9"
-	H.update_body()
-	H.slowed_by_drag = FALSE
-	ADD_TRAIT(H, TRAIT_NEVER_WOUNDED, OUTFIT_TRAIT)
-	ADD_TRAIT(H, TRAIT_NOGUNS, OUTFIT_TRAIT)
-	ADD_TRAIT(H, TRAIT_FILTHBORN, OUTFIT_TRAIT)
-	ADD_TRAIT(H, TRAIT_ANALGESIA, OUTFIT_TRAIT)
-	ADD_TRAIT(H, TRAIT_NOHUNGER, OUTFIT_TRAIT)
-	ADD_TRAIT(H, TRAIT_PIERCEIMMUNE, OUTFIT_TRAIT) //so you dont get fucked from stepping on a glass shard
-	ADD_TRAIT(H, TRAIT_NOHARDCRIT, OUTFIT_TRAIT)
-	ADD_TRAIT(H, TRAIT_NOSOFTCRIT, OUTFIT_TRAIT)
-	ADD_TRAIT(H, TRAIT_NOCRITDAMAGE, OUTFIT_TRAIT)
-	ADD_TRAIT(H, TRAIT_NOCRITOVERLAY, OUTFIT_TRAIT)
-	H.maxHealth = 25
-	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
-	H.setdeploymentfaction(HIDDEN_DEPLOYMENT_FACTION)
-	GLOB.number_of_hidden++
-
-/datum/outfit/deployment_loadout/hidden/the_hidden/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	var/list/spawn_locs = list()
-	for(var/X in GLOB.the_hidden)
-		spawn_locs += X
-
-	if(!spawn_locs.len)
-		message_admins("No valid spawn locations found, aborting...")
-		return MAP_ERROR
-
-	H.forceMove(pick(spawn_locs))
-
-/obj/item/clothing/under/pants/the_hidden
-	name = "pants"
-	desc = "A pair of plain pants"
-	icon_state = "trackpants"
-	slowdown = -1.3
-
-/obj/item/clothing/glasses/hidden_blindfold
-	name = "blindfold"
-	desc = "A simple white blindfold."
-	icon_state = "blindfoldwhite"
-	inhand_icon_state = null
-	vision_flags = SEE_MOBS
-	color_cutoffs = list(40, 40, 40)
-
-//Will three shot everyone, one shot with backstabs
-/obj/item/knife/combat/the_hidden
-	desc = "An obscenely sharp and dangerous knife. Backstabs will instantly down. Stab a dead body to gib it and heal."
-
-	force = 50
-	armour_penetration = 70
-	wdefense = 0
-	slot_flags = 0
-	item_flags = DROPDEL //so the combine cant steal the absurdly powerful knife. The hidden can just summon a new one too.
-
-	attack_speed = CLICK_CD_SLOW
-	var/backstab_bonus = 125
-
-/obj/item/knife/combat/the_hidden/weak
-	desc = "An obscenely sharp and dangerous knife. Backstabs will deal double damage. Stab a dead body to gib it and heal a little bit."
-	backstab_bonus = 59
-
-/obj/item/knife/combat/the_hidden/afterattack(atom/target, mob/user, click_parameters)
-	. = ..()
-	if(target == user || !isliving(target) || !isliving(user))
-		return
-	var/mob/living/living_target = target
-	var/mob/living/living_user = user
-
-	if(living_target.stat == DEAD) //heal up from gibbing the dead
-		if(do_after(user, 1 SECONDS, src))
-			living_user.adjustStaminaLoss(-25)
-			living_user.adjustBruteLoss(-15)
-			living_user.adjustFireLoss(-15)
-			living_target.gib()
-		return
-
-	if(!check_behind(user, living_target))
-		return
-	// We're officially behind them, apply effects
-	living_target.apply_damage(backstab_bonus, BRUTE, BODY_ZONE_CHEST, wound_bonus = CANT_WOUND)
-	living_target.balloon_alert(user, "backstab!")
-	playsound(living_target, 'sound/items/weapons/guillotine.ogg', 100, TRUE)
-
-/datum/action/cooldown/spell/conjure_item/hidden_knife
-	name = "Summon Knife"
-	desc = "Summons your favorite and deadliest little buddy. Gets rid of the previous one if it exists."
-	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
-	button_icon_state = "knife"
-	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
-
-	spell_requirements = NONE
-	antimagic_flags = NONE
-	cooldown_time = 3 SECONDS
-	item_type = /obj/item/knife/combat/the_hidden
-	requires_hands = TRUE
-	delete_old = TRUE
-
-/datum/action/cooldown/spell/conjure_item/hidden_knife/weak
-	item_type = /obj/item/knife/combat/the_hidden/weak
-
-/datum/action/cooldown/spell/hidden_taunt
-	name = "Taunt"
-	desc = "Taunt your enemy with a voiceline that is sure to instill terror."
-	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
-	button_icon_state = "cloak"
-	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
-
-	cooldown_time = 10 SECONDS
-	spell_requirements = NONE
-	antimagic_flags = NONE
-	var/taunt_sounds = list(
-	'sound/effects/hallucinations/behind_you1.ogg',
-	'sound/effects/hallucinations/behind_you2.ogg',
-	'sound/effects/hallucinations/i_see_you1.ogg',
-	'sound/effects/hallucinations/i_see_you2.ogg',
-	'sound/effects/hallucinations/im_here1.ogg',
-	'sound/effects/hallucinations/im_here2.ogg',
-	'sound/effects/hallucinations/look_up1.ogg',
-	'sound/effects/hallucinations/look_up2.ogg',
-	'sound/effects/hallucinations/over_here1.ogg',
-	'sound/effects/hallucinations/over_here2.ogg',
-	'sound/effects/hallucinations/over_here3.ogg',
-	'sound/effects/hallucinations/turn_around1.ogg',
-	'sound/effects/hallucinations/turn_around2.ogg',
-)
-
-/datum/action/cooldown/spell/hidden_taunt/cast(mob/living/cast_on)
-	. = ..()
-	var/chosen_sound = pick(taunt_sounds)
-	playsound(owner.loc, chosen_sound, 50, FALSE)
-
-/datum/action/cooldown/spell/hidden_heal
-	name = "Adrenal Burst"
-	desc = "Unleash an adrenaline burst to regain all your stamina and part of your health. Will make you scream and thus reveal your location on use"
-	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
-	button_icon_state = "medkit"
-	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
-
-	cooldown_time = 120 SECONDS
-	spell_requirements = NONE
-	antimagic_flags = NONE
-
-	var/taunt_sounds = list(
-	'hl13/sound/voice/stalker/stalker_scream.ogg',
-	'hl13/sound/voice/stalker/stalker_scream2.ogg',
-	'hl13/sound/voice/stalker/stalker_scream3.ogg',
-)
-
-/datum/action/cooldown/spell/hidden_heal/cast(mob/living/cast_on)
-	. = ..()
-	cast_on.adjustStaminaLoss(-125)
-	cast_on.adjustBruteLoss(-25)
-	cast_on.adjustFireLoss(-25)
-	var/chosen_sound = pick(taunt_sounds)
-	playsound(owner.loc, chosen_sound, 50, FALSE)

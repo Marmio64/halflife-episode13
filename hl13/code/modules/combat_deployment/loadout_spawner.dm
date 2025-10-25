@@ -6,6 +6,7 @@
 	var/faction_belonging = NO_FACTION
 	var/current_tier = 1
 	var/stick_to_hands = TRUE
+	var/display_help_text = TRUE
 
 /obj/item/hl2/loadout_picker/Initialize(mapload)
 	. = ..()
@@ -23,7 +24,7 @@
 			return
 
 	if(HAS_TRAIT(user, TRAIT_TDMCAPTAIN))
-		to_chat(user, span_warning("Team captains cant use loadout beacons."))
+		to_chat(user, span_warning("Team leadership cant use loadout beacons."))
 		return FALSE
 
 	var/area/place = get_area(src)
@@ -57,11 +58,13 @@
 	var/list/display_names = generate_display_names()
 	if(!length(display_names))
 		return
-	to_chat(user, span_notice("Try to pick a loadout according to the team's needs!"))
-	to_chat(user, span_notice("OFFENSE Classes either have high mobility or the ability to get through enemy fortifications."))
-	to_chat(user, span_notice("DEFENSE Classes typically have high armor and low mobility and excel at holding down positions."))
-	to_chat(user, span_notice("SUPPORT Classes generally have poor direct combat skills and instead improve their team's ability to fight through healing, building, and buffs."))
-	to_chat(user, span_notice("PICK Classes uniquely focus on being able to take out high value targets, typically through the use of assassination or sniping."))
+
+	if(display_help_text)
+		to_chat(user, span_notice("Try to pick a loadout according to the team's needs!"))
+		to_chat(user, span_notice("OFFENSE Classes either have high mobility or the ability to get through enemy fortifications."))
+		to_chat(user, span_notice("DEFENSE Classes typically have high armor and low mobility and excel at holding down positions."))
+		to_chat(user, span_notice("SUPPORT Classes generally have poor direct combat skills and instead improve their team's ability to fight through healing, building, and buffs."))
+		to_chat(user, span_notice("PICK Classes uniquely focus on being able to take out high value targets, typically through the use of assassination or sniping."))
 	var/choice = tgui_input_list(user, "CURRENT LOADOUT TIER: [current_tier]", "Select a Loadout", display_names)
 	if(isnull(choice) || isnull(display_names[choice]))
 		return

@@ -65,7 +65,7 @@ GLOBAL_VAR_INIT(number_of_hidden, 0)
 		human_user.STADEX = 10
 		for(var/datum/action/cooldown/buttons in human_user.actions)
 			qdel(buttons)
-		human_user.equipOutfit(/datum/outfit/deployment_loadout/hidden/the_hidden)
+		human_user.equipOutfit(/datum/outfit/deployment_loadout/hidden/the_hidden/blank)
 		human_user.regenerate_icons()
 		to_chat(human_user, span_notice("You were chosen to be The Hidden!"))
 		candidates_left--

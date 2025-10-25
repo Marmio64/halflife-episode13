@@ -807,6 +807,10 @@
 		return
 
 	var/stam_crit_threshold = maxHealth - crit_threshold
+	var/effective_maxHealth = maxHealth
+	if(HAS_TRAIT(src, TRAIT_THE_HIDDEN))
+		stam_crit_threshold = 125
+		effective_maxHealth = 100
 
 	if(stat == DEAD)
 		hud_used.stamina.icon_state = "stamina_dead"
@@ -817,13 +821,13 @@
 
 		if(shown_stamina_loss >= stam_crit_threshold)
 			hud_used.stamina.icon_state = "stamina_crit"
-		else if(shown_stamina_loss > maxHealth*0.8)
+		else if(shown_stamina_loss > effective_maxHealth*0.8)
 			hud_used.stamina.icon_state = "stamina_5"
-		else if(shown_stamina_loss > maxHealth*0.6)
+		else if(shown_stamina_loss > effective_maxHealth*0.6)
 			hud_used.stamina.icon_state = "stamina_4"
-		else if(shown_stamina_loss > maxHealth*0.4)
+		else if(shown_stamina_loss > effective_maxHealth*0.4)
 			hud_used.stamina.icon_state = "stamina_3"
-		else if(shown_stamina_loss > maxHealth*0.2)
+		else if(shown_stamina_loss > effective_maxHealth*0.2)
 			hud_used.stamina.icon_state = "stamina_2"
 		else if(shown_stamina_loss > 0)
 			hud_used.stamina.icon_state = "stamina_1"

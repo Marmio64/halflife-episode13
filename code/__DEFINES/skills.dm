@@ -74,6 +74,8 @@
 
 #define TRAIT_TDMCAPTAIN "tdmcaptain"
 
+#define TRAIT_THE_HIDDEN "the_hidden"
+
 #define TRAIT_SPARTAN "spartan"
 
 #define TRAIT_FILTHBORN "filthborn"
