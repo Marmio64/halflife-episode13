@@ -1,4 +1,7 @@
 /// THE MONSTER /// --------------------------------------
+/obj/item/hl2/loadout_picker/hidden/the_hidden
+	help_text_type = "hidden_hidden"
+
 /obj/item/hl2/loadout_picker/hidden/the_hidden/generate_display_names()
 	var/static/list/loadouts
 	if(!loadouts)
@@ -29,6 +32,8 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/hidden_taunt)
 
+	var/update_globals = TRUE
+
 /datum/outfit/deployment_loadout/hidden/the_hidden/blank
 	name = "BLANK HIDDEN"
 
@@ -36,6 +41,7 @@
 
 	l_hand = /obj/item/hl2/loadout_picker/hidden/the_hidden
 
+	update_globals = FALSE
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/pre_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -62,7 +68,8 @@
 	H.hardcrit_threshold = -124
 	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 	H.setdeploymentfaction(HIDDEN_DEPLOYMENT_FACTION)
-	GLOB.number_of_hidden++
+	if(update_globals)
+		GLOB.number_of_hidden++
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -89,7 +96,7 @@
 	slowdown = -1
 
 /obj/item/clothing/under/pants/the_hidden/brute
-	slowdown = -1
+	slowdown = -0.8
 
 /obj/item/clothing/glasses/hidden_blindfold
 	name = "blindfold"
@@ -98,6 +105,14 @@
 	inhand_icon_state = null
 	vision_flags = SEE_MOBS
 	color_cutoffs = list(40, 40, 40)
+
+/obj/item/clothing/glasses/hidden_blindfold_brute
+	name = "blindfold"
+	desc = "A simple white blindfold."
+	icon_state = "blindfoldwhite"
+	inhand_icon_state = null
+	color_cutoffs = list(40, 40, 40)
+
 
 //Will three shot everyone, one shot with backstabs
 /obj/item/knife/combat/the_hidden
@@ -283,7 +298,7 @@
 	aoe_radius = 1
 	max_throw = 3
 
-	cooldown_time = 40 SECONDS
+	cooldown_time = 30 SECONDS
 
 	sparkle_path = null
 
@@ -298,7 +313,7 @@
 		if(isliving(victim))
 			var/mob/living/victim_living = victim
 			victim_living.Paralyze(3 SECONDS)
-			victim_living.adjustBruteLoss(35)
+			victim_living.adjustBruteLoss(50)
 			to_chat(victim, span_userdanger("You're slammed into the floor by [caster]!"))
 			playsound(get_turf(caster), 'hl13/sound/effects/injury/trauma1.ogg', 80, TRUE, TRUE)
 	else
@@ -310,7 +325,7 @@
 			var/mob/living/victim_living = victim
 			victim_living.Immobilize(1 SECONDS)
 			to_chat(victim, span_userdanger("You're punched back by [caster]!"))
-			victim_living.adjustBruteLoss(35)
+			victim_living.adjustBruteLoss(50)
 			playsound(get_turf(caster), 'hl13/sound/effects/injury/trauma1.ogg', 80, TRUE, TRUE)
 
 		// So stuff gets tossed around at the same time.
@@ -339,9 +354,11 @@
 /datum/outfit/deployment_loadout/hidden/the_hidden/brute
 	name = "Hidden: The Hidden (Brute)"
 	display_name = "ASSAULT: The Brute"
-	desc = "You have a higher max health and a unique area of effect ability to forcefully punch everyone nearby away, but are more visible and slower."
+	desc = "You take less damage and have a unique area of effect ability to forcefully punch everyone nearby away, but are more visible, slower, and lack heat vision."
 
 	uniform = /obj/item/clothing/under/pants/the_hidden/brute
+
+	glasses = /obj/item/clothing/glasses/hidden_blindfold_brute
 
 	extra_dex = 10
 
@@ -349,5 +366,5 @@
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/brute/pre_equip(mob/living/carbon/human/H)
 	. = ..()
-	H.alpha = 40
-	H.physiology.damage_resistance += 25
+	H.alpha = 50
+	H.physiology.damage_resistance += 30

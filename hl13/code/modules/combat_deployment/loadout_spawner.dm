@@ -6,7 +6,7 @@
 	var/faction_belonging = NO_FACTION
 	var/current_tier = 1
 	var/stick_to_hands = TRUE
-	var/display_help_text = TRUE
+	var/help_text_type = "default"
 
 /obj/item/hl2/loadout_picker/Initialize(mapload)
 	. = ..()
@@ -59,12 +59,26 @@
 	if(!length(display_names))
 		return
 
-	if(display_help_text)
+	if(help_text_type == "default")
 		to_chat(user, span_notice("Try to pick a loadout according to the team's needs!"))
 		to_chat(user, span_notice("OFFENSE Classes either have high mobility or the ability to get through enemy fortifications."))
 		to_chat(user, span_notice("DEFENSE Classes typically have high armor and low mobility and excel at holding down positions."))
 		to_chat(user, span_notice("SUPPORT Classes generally have poor direct combat skills and instead improve their team's ability to fight through healing, building, and buffs."))
 		to_chat(user, span_notice("PICK Classes uniquely focus on being able to take out high value targets, typically through the use of assassination or sniping."))
+
+	if(help_text_type == "hidden_human")
+		to_chat(user, span_notice("Try to pick a loadout according to the team's needs!"))
+		to_chat(user, span_notice("DEFENSE Classes are slow moving but can hold down chokepoints either through sheer damage or survivability."))
+		to_chat(user, span_notice("ASSAULT Classes are quick and have higher-quality weapons."))
+		to_chat(user, span_notice("HEALER Classes sustain teammates and prevent attrition via medical supplies."))
+		to_chat(user, span_notice("TRACKER Classes use various methods to help reveal The Hidden and/or prevent their movement."))
+
+	if(help_text_type == "hidden_hidden")
+		to_chat(user, span_notice("Pick a hidden type."))
+		to_chat(user, span_notice("The default hidden has high speed and is hard to detect."))
+		to_chat(user, span_notice("The Hunter is slower but can deploy hidden mantraps to ensnare victims."))
+		to_chat(user, span_notice("The Brute is slower, lacks heat vision, and is more visible, but has high damage resistance and can punch away nearby people."))
+
 	var/choice = tgui_input_list(user, "CURRENT LOADOUT TIER: [current_tier]", "Select a Loadout", display_names)
 	if(isnull(choice) || isnull(display_names[choice]))
 		return

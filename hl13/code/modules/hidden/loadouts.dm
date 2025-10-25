@@ -1,5 +1,5 @@
 /obj/item/hl2/loadout_picker/hidden
-	display_help_text = FALSE
+	help_text_type = "hidden_human"
 
 /obj/item/hl2/loadout_picker/hidden/combine/generate_display_names()
 	var/static/list/loadouts
