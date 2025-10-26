@@ -366,6 +366,11 @@
 	. = ..()
 	AddComponent(/datum/component/clothing_fov_visor, FOV_180_DEGREES)
 
+/obj/item/clothing/mask/gas/hl2/oldmask_hidden
+	desc = "An espescially old and barely kept together mask."
+	icon_state = "oldmask"
+	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR
+
 /obj/item/clothing/mask/gas/hl2/military
 	icon_state = "military_gasmask"
 

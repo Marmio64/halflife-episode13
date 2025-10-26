@@ -19,6 +19,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer/hidden)
+"aA" = (
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/sewer/hidden)
 "aB" = (
 /obj/item/weaponcrafting/frame/spas12,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
@@ -147,6 +151,10 @@
 /obj/structure/bed/halflife/mattress/stained,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/sewer/hidden)
+"fd" = (
+/obj/structure/halflife/barrel/triple/red,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer/hidden)
 "fp" = (
 /obj/machinery/door/unpowered/halflife/seethrough/grate{
 	dir = 8
@@ -156,6 +164,11 @@
 "fC" = (
 /obj/structure/halflife/fence/vertical/wire/east,
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer/hidden)
+"fM" = (
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/effect/decal/cleanable/blood/gibs,
+/turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/sewer/hidden)
 "go" = (
 /obj/structure/halflife/trash/garbage{
@@ -247,6 +260,13 @@
 /obj/effect/decal/cleanable/blood/gibs/down,
 /turf/open/floor/plating/indoor/metal/grate/border,
 /area/halflife/indoors/sewer/hidden)
+"kw" = (
+/obj/structure/halflife/pallet/stack{
+	pixel_x = 0;
+	pixel_y = 7
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/sewer/hidden)
 "kM" = (
 /obj/structure/lattice/catwalk/hl13,
 /obj/structure/railing/halflife/sewer{
@@ -284,6 +304,11 @@
 /area/halflife/indoors/sewer/hidden)
 "mC" = (
 /turf/open/floor/plating/indoor/cafeteria,
+/area/halflife/indoors/sewer/hidden)
+"mG" = (
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/structure/bed/halflife/mattress/stained,
+/turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/sewer/hidden)
 "mJ" = (
 /turf/open/floor/plating/indoor/concrete/sewer,
@@ -434,7 +459,9 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/sewer/hidden)
 "qo" = (
-/obj/machinery/combine_distressterminal,
+/obj/machinery/combine_distressterminal{
+	terminal_name = "Basement Lab"
+	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/sewer/hidden)
 "qq" = (
@@ -488,9 +515,8 @@
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/sewer/hidden)
 "ry" = (
-/obj/structure/bed/halflife/bedframe/wire,
-/obj/structure/bed/halflife/mattress/stained,
-/turf/open/floor/plating/indoor/sterilesquares,
+/obj/structure/halflife/barrel/quadruple/grey/one,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer/hidden)
 "rL" = (
 /obj/structure/lattice/catwalk/hl13,
@@ -564,7 +590,9 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/sewer/hidden)
 "tY" = (
-/obj/machinery/combine_distressterminal,
+/obj/machinery/combine_distressterminal{
+	terminal_name = "Center Cafeteria"
+	},
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/sewer/hidden)
 "uj" = (
@@ -697,7 +725,9 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/sewer/hidden)
 "AN" = (
-/obj/machinery/combine_distressterminal,
+/obj/machinery/combine_distressterminal{
+	terminal_name = "East Storage"
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer/hidden)
 "AT" = (
@@ -724,11 +754,6 @@
 	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/sewer/hidden)
-"Bw" = (
-/obj/structure/bed/halflife/bedframe/wire,
-/obj/effect/decal/cleanable/blood/gibs,
-/turf/open/floor/plating/indoor/sterilesquares,
-/area/halflife/indoors/sewer/hidden)
 "BM" = (
 /obj/structure/railing/halflife/solo/industrial{
 	dir = 4
@@ -740,7 +765,9 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/sewer/hidden)
 "BZ" = (
-/obj/machinery/combine_distressterminal,
+/obj/machinery/combine_distressterminal{
+	terminal_name = "West Clinic"
+	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/sewer/hidden)
 "Cb" = (
@@ -833,7 +860,9 @@
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
 "Ge" = (
-/obj/machinery/combine_distressterminal,
+/obj/machinery/combine_distressterminal{
+	terminal_name = "North Storage"
+	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/sewer/hidden)
 "Gj" = (
@@ -936,6 +965,10 @@
 "JA" = (
 /obj/structure/halflife/trash/papers/two,
 /turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer/hidden)
+"JO" = (
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer/hidden)
 "JZ" = (
 /obj/structure/lattice/catwalk/hl13,
@@ -1342,6 +1375,10 @@
 "Zo" = (
 /obj/effect/koth_grace_field,
 /turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/sewer/hidden)
+"Zt" = (
+/obj/structure/halflife/barrel/triple/red,
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/sewer/hidden)
 "Zz" = (
 /obj/structure/halflife/tank/chemical/container,
@@ -10799,8 +10836,8 @@ PH
 yM
 pm
 pm
-Bw
-ry
+fM
+mG
 pm
 pm
 pm
@@ -11268,19 +11305,19 @@ PH
 PH
 PH
 PH
+PH
+PH
+PH
+PH
+PH
+PH
+PH
+PH
 qy
 qy
 qy
 qy
-PH
-PH
-PH
-PH
-PH
-PH
-PH
-PH
-PH
+qy
 qy
 qy
 qy
@@ -11360,11 +11397,6 @@ oT
 oT
 oT
 PH
-qy
-qy
-qy
-qy
-PH
 Gq
 Jy
 qY
@@ -11372,6 +11404,11 @@ ni
 QM
 Jy
 KF
+PH
+PH
+PH
+PH
+PH
 PH
 PH
 PH
@@ -11452,19 +11489,19 @@ PX
 PX
 rV
 PH
-qy
-qy
-qy
-qy
-PH
 vO
 tx
 tx
 tx
 tx
 tx
-tx
+vO
 PH
+Zt
+oT
+oT
+oT
+oT
 oT
 oT
 oT
@@ -11544,19 +11581,19 @@ PX
 PX
 oT
 PH
-qy
-qy
-qy
-qy
-PH
 kk
 Ng
 tx
 tx
 tx
 nn
-tx
-AT
+vO
+PH
+PX
+PX
+PX
+OP
+PX
 PX
 PX
 PX
@@ -11635,22 +11672,22 @@ PX
 PX
 PX
 oT
-PH
-qy
-qy
-qy
-qy
-PH
-vO
+AT
+tx
 tx
 jC
 eT
 tx
 tx
 tx
-sC
+AT
 PX
 PX
+PX
+PX
+PX
+PX
+ry
 PX
 PX
 PX
@@ -11727,21 +11764,21 @@ PX
 PX
 PX
 oT
-PH
-qy
-qy
-qy
-qy
-PH
-vO
+sC
+tx
 tx
 tx
 tx
 MM
 tx
-vO
-PH
-yk
+tx
+sC
+PX
+PX
+PX
+PX
+PX
+PX
 PX
 PX
 PX
@@ -11820,11 +11857,6 @@ PX
 PX
 oT
 PH
-qy
-qy
-qy
-qy
-PH
 PT
 tx
 WM
@@ -11834,8 +11866,13 @@ tx
 sr
 PH
 PX
+OP
 PX
 PX
+PX
+PX
+PX
+fd
 PX
 PX
 PX
@@ -11912,11 +11949,6 @@ PX
 PX
 rV
 PH
-qy
-qy
-qy
-qy
-PH
 PL
 tx
 tx
@@ -11925,6 +11957,11 @@ MM
 tx
 PL
 PH
+oT
+oT
+oT
+oT
+oT
 oT
 oT
 oT
@@ -12004,11 +12041,6 @@ PX
 PX
 oT
 PH
-PH
-PH
-PH
-PH
-PH
 sr
 tx
 tx
@@ -12020,6 +12052,11 @@ PH
 PH
 PH
 PH
+PH
+PH
+PH
+kw
+sg
 PH
 PH
 PH
@@ -12096,11 +12133,6 @@ PX
 PX
 oT
 PH
-bC
-bC
-bC
-bC
-PH
 PH
 PH
 pY
@@ -12110,8 +12142,13 @@ PH
 PH
 PH
 PH
-qy
-qy
+PH
+PH
+PH
+PH
+PH
+PH
+PH
 PH
 OK
 it
@@ -12193,7 +12230,7 @@ oT
 oT
 oT
 oT
-oT
+aA
 oT
 oT
 oT
@@ -12285,7 +12322,7 @@ PX
 PX
 PX
 PX
-PX
+JO
 PX
 PX
 PX
@@ -12377,7 +12414,7 @@ PX
 PX
 PX
 PX
-PX
+JO
 PX
 PX
 PX
@@ -12469,7 +12506,7 @@ PX
 PX
 PX
 PX
-PX
+JO
 PX
 PX
 PX
@@ -12561,7 +12598,7 @@ If
 oT
 oT
 oT
-oT
+aA
 oT
 Cq
 PX
@@ -15229,7 +15266,7 @@ oT
 oT
 oT
 oT
-oT
+aA
 oT
 PX
 PX
@@ -15321,7 +15358,7 @@ PX
 PX
 PX
 PX
-PX
+JO
 PX
 PX
 PX
@@ -15413,7 +15450,7 @@ PX
 PX
 PX
 PX
-PX
+JO
 PX
 PX
 PX
@@ -15505,7 +15542,7 @@ PX
 PX
 PX
 PX
-PX
+JO
 PX
 PX
 PX
@@ -15597,7 +15634,7 @@ If
 pM
 oT
 oT
-oT
+aA
 oT
 oT
 oT
@@ -15684,16 +15721,16 @@ PX
 PX
 oT
 PH
-bC
-bC
-bC
-bC
-PH
 PH
 PH
 tx
 tx
 tx
+PH
+PH
+PH
+PH
+PH
 PH
 PH
 PH
@@ -15776,11 +15813,6 @@ PX
 PX
 rV
 PH
-PH
-PH
-PH
-PH
-PH
 vO
 tx
 tx
@@ -15788,6 +15820,11 @@ tx
 tx
 ni
 vO
+PH
+PH
+PH
+PH
+PH
 PH
 PH
 PH
@@ -15868,11 +15905,6 @@ PX
 PX
 oT
 PH
-qy
-qy
-qy
-qy
-PH
 vO
 tx
 tx
@@ -15886,6 +15918,11 @@ oT
 ab
 oT
 ab
+oT
+oT
+oT
+oT
+oT
 oT
 oT
 oT
@@ -15960,11 +15997,6 @@ PX
 PX
 oT
 PH
-qy
-qy
-qy
-qy
-PH
 vO
 aJ
 tx
@@ -15974,6 +16006,11 @@ tx
 Ad
 PH
 oT
+PX
+PX
+PX
+PX
+PX
 PX
 PX
 PX
@@ -16052,11 +16089,6 @@ PX
 PX
 oT
 PH
-qy
-qy
-qy
-qy
-PH
 uj
 Sn
 tx
@@ -16070,6 +16102,11 @@ PX
 KD
 PX
 KD
+PX
+PX
+PX
+PX
+PX
 PX
 PX
 PX
@@ -16144,11 +16181,6 @@ PX
 PX
 oT
 PH
-qy
-qy
-qy
-qy
-PH
 vO
 tx
 tx
@@ -16158,6 +16190,11 @@ uk
 UZ
 bW
 Sr
+PX
+PX
+PX
+PX
+PX
 PX
 PX
 PX
@@ -16236,11 +16273,6 @@ PX
 PX
 VK
 PH
-qy
-qy
-qy
-qy
-PH
 vO
 bM
 tx
@@ -16250,6 +16282,11 @@ uE
 vO
 Fu
 oT
+PX
+PX
+PX
+PX
+PX
 PX
 PX
 PX
@@ -16328,11 +16365,6 @@ PX
 PX
 oT
 PH
-qy
-qy
-qy
-qy
-PH
 vO
 Sn
 tx
@@ -16346,6 +16378,11 @@ oT
 ab
 oT
 ab
+oT
+oT
+oT
+oT
+oT
 oT
 oT
 oT
@@ -16419,19 +16456,19 @@ oT
 Sr
 oT
 Sr
-PH
-qy
-qy
-qy
-qy
-PH
-vO
+cL
+UZ
 ni
 ni
 IF
 ni
 ni
 MG
+PH
+PH
+PH
+PH
+PH
 PH
 PH
 PH
@@ -16511,20 +16548,20 @@ PH
 PH
 cL
 Fu
+Fu
+PH
+PH
+PH
+PH
+PH
+PH
+PH
 PH
 qy
 qy
 qy
 qy
-PH
-PH
-PH
-PH
-PH
-PH
-PH
-PH
-PH
+qy
 qy
 qy
 qy

@@ -69,7 +69,7 @@
 	if(help_text_type == "hidden_human")
 		to_chat(user, span_notice("Try to pick a loadout according to the team's needs!"))
 		to_chat(user, span_notice("DEFENSE Classes are slow moving but can hold down chokepoints either through sheer damage or survivability."))
-		to_chat(user, span_notice("ASSAULT Classes are quick and have higher-quality weapons."))
+		to_chat(user, span_notice("ASSAULT Classes are quick and have higher-quality weapons, but have lower quality armor."))
 		to_chat(user, span_notice("HEALER Classes sustain teammates and prevent attrition via medical supplies."))
 		to_chat(user, span_notice("TRACKER Classes use various methods to help reveal The Hidden and/or prevent their movement."))
 

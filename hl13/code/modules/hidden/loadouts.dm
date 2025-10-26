@@ -9,7 +9,9 @@
 			/datum/outfit/deployment_loadout/hidden/combine/shotgunner,
 			/datum/outfit/deployment_loadout/hidden/combine/riot_cop,
 			/datum/outfit/deployment_loadout/hidden/combine/conscript,
+			/datum/outfit/deployment_loadout/hidden/combine/grunt,
 			/datum/outfit/deployment_loadout/hidden/combine/medic_cop,
+			/datum/outfit/deployment_loadout/hidden/combine/doctor,
 			/datum/outfit/deployment_loadout/hidden/combine/engineer,
 			/datum/outfit/deployment_loadout/hidden/combine/scientist,
 		)
@@ -102,6 +104,32 @@
 
 	extra_dex = 3
 
+//The other attacker. Mostly an aesthetic difference.
+//They have slightly higher close range DPS compared to the conscript, but less long range accuracy and don't have a backup knife.
+/datum/outfit/deployment_loadout/hidden/combine/grunt
+	name = "Hidden: Grunt"
+	display_name = "ASSAULT: Grunt"
+	desc = "You have a slightly higher close range damage firearm compared to the conscript but lack their backup knife and longer range accuracy."
+
+	belt = /obj/item/storage/belt/civilprotection/overwatch/pulsesmg_hidden
+
+	suit = /obj/item/clothing/suit/halflife/invis_grunt_harness
+	suit_store = /obj/item/gun/ballistic/automatic/pulsesmg
+
+	back = /obj/item/tank/internals/oxygen/grunt
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt
+	uniform = /obj/item/clothing/under/combine/grunt/fused/deathmatch
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	gloves = /obj/item/clothing/gloves/color/civilprotection/grunt
+
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
+	r_pocket = /obj/item/flashlight/hand_crank
+
+	ears = /obj/item/radio/headset/civilprotection/deployment
+	combat_music = "none"
+
+	extra_dex = 3
+
 //The healer, excels at recovering allies from nonfatal injuries.
 //The Hidden tends to finish off prey they have started to hunt, but in the case they don't, you are extremely useful at getting them back to tip top shape!
 /datum/outfit/deployment_loadout/hidden/combine/medic_cop
@@ -136,6 +164,47 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit/the_hidden)
 	extra_int = 4
+
+//The second healer, excels at recovering allies from nonfatal injuries.
+//You have no business fighting, but were brought in to help with healing any survivors. Good luck.
+/datum/outfit/deployment_loadout/hidden/combine/doctor
+	name = "Hidden: Citizen Doctor"
+	display_name = "HEALER: Unarmed Citizen Doctor"
+	desc = "You're a knowledgable doctor forcefully taken from a nearby city to help on what looks like a suicide mission. You're light on your feet and packed with medical supples, but are armed with but a scalpel and have zero firearm experience!"
+
+	uniform = /obj/item/clothing/under/citizen
+	gloves = /obj/item/clothing/gloves/latex/nitrile
+	suit = /obj/item/clothing/suit/whitejacket/fast
+	glasses = /obj/item/clothing/glasses/hud/health
+	head = /obj/item/clothing/head/soft/paramedic
+	mask = /obj/item/clothing/mask/gas/hl2/oldmask_hidden
+
+	l_pocket = /obj/item/flashlight/hand_crank
+	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
+
+	ears = /obj/item/radio/headset/civilprotection/deployment
+	combat_music = "none"
+
+	belt = /obj/item/defibrillator/compact/loaded
+
+	back = /obj/item/storage/backpack/halflife/satchel
+
+	backpack_contents = list(
+		/obj/item/storage/medkit/halflife_combine = 1,
+		/obj/item/scalpel/hidden_doctor = 1,
+		/obj/item/flashlight/flare/the_hidden = 1,
+	)
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit/the_hidden/faster)
+
+	extra_int = 6
+
+/datum/outfit/deployment_loadout/hidden/combine/doctor/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	ADD_TRAIT(H, TRAIT_TERRIBLE_AIM, OUTFIT_TRAIT)
+
+/obj/item/scalpel/hidden_doctor
+	force = 20
 
 //The tracker, you specialize in setting up trip beams at room entrances in order to get a heads up on Hidden activity.
 //In addition, you get two more flares than everyone else, which is great for increasing the dismal visiblity your team tends to have!

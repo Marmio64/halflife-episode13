@@ -32,7 +32,7 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/hidden_taunt)
 
-	var/update_globals = TRUE
+	var/update_globals = FALSE
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/blank
 	name = "BLANK HIDDEN"
@@ -41,7 +41,7 @@
 
 	l_hand = /obj/item/hl2/loadout_picker/hidden/the_hidden
 
-	update_globals = FALSE
+	update_globals = TRUE
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/pre_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -54,6 +54,7 @@
 	H.update_body()
 	H.slowed_by_drag = FALSE
 	ADD_TRAIT(H, TRAIT_NEVER_WOUNDED, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_NODISMEMBER, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOGUNS, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_FILTHBORN, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_ANALGESIA, OUTFIT_TRAIT)
@@ -119,6 +120,7 @@
 	desc = "An obscenely sharp and dangerous knife. Backstabs will instantly down. Stab a dead body to gib it and heal."
 
 	force = 50
+	demolition_mod = 1.5
 	armour_penetration = 70
 	wdefense = 0
 	slot_flags = 0

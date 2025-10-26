@@ -457,6 +457,9 @@
 
 	blood_overlay_type = "coat"
 
+/obj/item/clothing/suit/whitejacket/fast
+	slowdown = -0.25
+
 /obj/item/clothing/suit/whitejacket/padded
 	desc = "A grungy white jacket often worn by medical and scientific union members. This one is padded with extra protective fabric."
 	armor_type = /datum/armor/paddedjacket

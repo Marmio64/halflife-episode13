@@ -36,6 +36,12 @@
 /obj/structure/halflife/tank,
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
+"en" = (
+/obj/machinery/combine_distressterminal{
+	terminal_name = "North East"
+	},
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer/hidden)
 "gC" = (
 /obj/structure/table/halflife/no_smooth/cable_reel,
 /turf/open/floor/plating/indoor/concrete/sewer,
@@ -105,6 +111,12 @@
 	slowdown = 0.5
 	},
 /area/halflife/indoors/sewer/hidden)
+"oo" = (
+/obj/machinery/combine_distressterminal{
+	terminal_name = "Middle Room North"
+	},
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer/hidden)
 "pq" = (
 /turf/closed/indestructible/rock,
 /area/halflife/indoors/sewer/hidden)
@@ -133,7 +145,9 @@
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
 "sG" = (
-/obj/machinery/combine_distressterminal,
+/obj/machinery/combine_distressterminal{
+	terminal_name = "South East"
+	},
 /obj/structure/halflife/pipes/horizontal,
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
@@ -276,8 +290,16 @@
 "CC" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors/sewer/hidden)
+"CW" = (
+/obj/machinery/combine_distressterminal{
+	terminal_name = "North West"
+	},
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer/hidden)
 "DB" = (
-/obj/machinery/combine_distressterminal,
+/obj/machinery/combine_distressterminal{
+	terminal_name = "Middle Room South"
+	},
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
 "Fm" = (
@@ -1706,7 +1728,7 @@ pq
 hq
 BK
 Ko
-DB
+CW
 Ns
 Ns
 rj
@@ -3489,7 +3511,7 @@ Ns
 Ns
 Ns
 Al
-DB
+oo
 hq
 Ko
 Ns
@@ -4784,7 +4806,7 @@ pq
 pq
 pq
 hq
-DB
+en
 Ns
 uG
 Ns

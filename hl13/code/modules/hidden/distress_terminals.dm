@@ -14,6 +14,9 @@ GLOBAL_VAR_INIT(distress_terminals, 5)
 	var/completed = FALSE
 	var/activating
 
+	/// The name that will show up to the hidden when being activated
+	var/terminal_name = "Unknown"
+
 	var/time_to_complete = 30 SECONDS
 	var/last_scream = 0
 	var/last_hidden_warning = 0
@@ -64,12 +67,13 @@ GLOBAL_VAR_INIT(distress_terminals, 5)
 		if(last_scream < world.time)
 			say("Terminal activating. [time_to_complete/10] seconds left till completion.")
 			last_scream = world.time + 6 SECONDS
+			playsound(src, 'hl13/sound/effects/radio2.ogg', 15, TRUE, extrarange = 3)
 
 		if(last_hidden_warning < world.time)
 			for(var/X in GLOB.deployment_hidden_players)
 				var/mob/living/carbon/human/H = X
 				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
-				to_chat(H, "<span class='userdanger'>A distress terminal is being activated somewhere.</span>")
+				to_chat(H, "<span class='userdanger'>The [terminal_name] terminal is currently being activated.</span>")
 			last_hidden_warning = world.time + 45 SECONDS
 
 	if(time_to_complete < 1 SECONDS)

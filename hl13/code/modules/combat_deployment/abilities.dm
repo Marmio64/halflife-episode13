@@ -20,6 +20,9 @@
 	cooldown_time = 20 SECONDS
 	delete_old = TRUE
 
+/datum/action/cooldown/spell/conjure_item/medkit/the_hidden/faster
+	cooldown_time = 15 SECONDS
+
 /datum/action/cooldown/spell/conjure_item/sandbag
 	name = "Procure Sandbag"
 	desc = "Procures a sandbag to use for building defenses."
