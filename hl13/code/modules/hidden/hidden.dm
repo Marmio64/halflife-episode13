@@ -10,6 +10,7 @@
 			/datum/outfit/deployment_loadout/hidden/the_hidden,
 			/datum/outfit/deployment_loadout/hidden/the_hidden/trapper,
 			/datum/outfit/deployment_loadout/hidden/the_hidden/brute,
+			/datum/outfit/deployment_loadout/hidden/the_hidden/necrotic,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -68,6 +69,7 @@
 	H.crit_threshold = -123
 	H.hardcrit_threshold = -124
 	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
+	H.faction = list(FACTION_HEADCRAB)
 	H.setdeploymentfaction(HIDDEN_DEPLOYMENT_FACTION)
 	if(update_globals)
 		GLOB.number_of_hidden++
@@ -136,7 +138,7 @@
 	var/mob/living/living_target = target
 	var/mob/living/living_user = user
 
-	if(living_target.stat == DEAD) //heal up from gibbing the dead
+	if(living_target.stat == DEAD && ishuman(living_target)) //heal up from gibbing the dead
 		if(do_after(user, 1 SECONDS, src))
 			living_user.adjustStaminaLoss(-25)
 			living_user.adjustBruteLoss(-15)
@@ -339,6 +341,59 @@
 			force = repulse_force,
 		)
 
+/datum/action/cooldown/spell/conjure/hidden_headcrab
+	name = "Summon Headcrabs"
+	desc = "Summons a few armored headcrabs to fight for you."
+	button_icon = 'hl13/icons/mob/actions/actions_gonome.dmi'
+	button_icon_state = "headcrab"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	sound = 'hl13/sound/creatures/headcrableap.ogg'
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 90 SECONDS
+	summon_radius = 1
+	summon_type = list(/mob/living/basic/halflife/headcrab/armored)
+	summon_amount = 3
+
+/datum/action/cooldown/spell/conjure_item/hidden_necro_knife
+	name = "Summon Knife"
+	desc = "Summons your favorite and deadliest little buddy. Gets rid of the previous one if it exists."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "knife"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 3 SECONDS
+	item_type = /obj/item/knife/combat/the_hidden/necrotic
+	requires_hands = TRUE
+	delete_old = TRUE
+
+/obj/item/knife/combat/the_hidden/necrotic
+	desc = "An obscenely sharp and dangerous knife. Backstabs will instantly down. Stab a dead body to reanimate them into a headcrab zombie."
+
+/obj/item/knife/combat/the_hidden/necrotic/afterattack(atom/target, mob/user, click_parameters)
+	. = ..()
+	if(target == user || !isliving(target) || !isliving(user))
+		return
+	var/mob/living/living_target = target
+	var/mob/living/living_user = user
+
+	if(living_target.stat == DEAD && ishuman(living_target)) //reanimate the dead
+		if(do_after(user, 1 SECONDS, src))
+			new /mob/living/basic/halflife/zombie(get_turf(src))
+			living_target.gib()
+		return
+
+	if(!check_behind(user, living_target))
+		return
+	// We're officially behind them, apply effects
+	living_target.apply_damage(backstab_bonus, BRUTE, BODY_ZONE_CHEST, wound_bonus = CANT_WOUND)
+	living_target.balloon_alert(user, "backstab!")
+	playsound(living_target, 'sound/items/weapons/guillotine.ogg', 100, TRUE)
+
 
 ////// ACTUAL OTHER OUTFITS /////////////////////////////////////////
 
@@ -370,3 +425,19 @@
 	. = ..()
 	H.alpha = 50
 	H.physiology.damage_resistance += 30
+
+/datum/outfit/deployment_loadout/hidden/the_hidden/necrotic
+	name = "Hidden: The Hidden (Necrotic)"
+	display_name = "SUPPORT: The Necrotic"
+	desc = "You take more damage and lose your ability to heal from destroying corpses, but gain the ability to summon armored headcrabs and convert bodies to headcrab zombies"
+
+	head = /mob/living/simple_animal/halflife/larry //apparently you can't do this, oh well...
+	uniform = /obj/item/clothing/under/pants/the_hidden/trapper
+
+	extra_dex = 10
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_necro_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure/hidden_headcrab, /datum/action/cooldown/spell/hidden_taunt)
+
+/datum/outfit/deployment_loadout/hidden/the_hidden/necrotic/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.physiology.damage_resistance -= 20
