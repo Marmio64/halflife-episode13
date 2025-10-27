@@ -151,6 +151,6 @@
 	if(ishuman(cast_on))
 		var/mob/living/carbon/human/H = cast_on
 		H.reagents.add_reagent(/datum/reagent/medicine/muscle_stimulant, 5)
-	cast_on.adjustBruteLoss(-25)
-	cast_on.adjustFireLoss(-25)
+	cast_on.adjustBruteLoss(-35)
+	cast_on.adjustFireLoss(-35)
 	return TRUE
