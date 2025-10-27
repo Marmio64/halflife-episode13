@@ -406,11 +406,24 @@
 	desc = "An old, hardened gas mask which protects the face against gas and some attacks."
 	armor_type = /datum/armor/militarygasmask
 
-/obj/item/clothing/mask/gas/hl2/cremator
+/obj/item/clothing/mask/gas/civilprotection/overwatch/cremator
 	name = "gas mask"
 	desc = "An odd looking, spherical gas mask that covers the whole head."
 	icon_state = "crematormask"
-	armor_type = /datum/armor/militarygasmask
+	resistance_flags = FIRE_PROOF
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+
+	armor_type = /datum/armor/cremator_mask
+
+/datum/armor/cremator_mask
+	melee = 30
+	bullet = 35
+	laser = 10
+	energy = 10
+	bomb = 20
+	fire = 100
+	acid = 80
+	wound = 10
 
 /obj/item/clothing/mask/bandana/sinew
 	name = "sinew bandana"

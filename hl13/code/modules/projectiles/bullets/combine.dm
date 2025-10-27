@@ -102,3 +102,17 @@
 		M.gets_drilled(firer, FALSE)
 		if(range > 0)
 			return BULLET_ACT_FORCE_PIERCE
+
+/obj/projectile/bullet/immolator_plasma
+	name = "plasma arc"
+	icon_state = "xray"
+	damage = 19
+	wound_bonus = -15
+	damage_type = BURN
+	range = 5 //close range
+	hitscan = TRUE
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
+	light_color = LIGHT_COLOR_GREEN
+	tracer_type = /obj/effect/projectile/tracer/xray
+	muzzle_type = /obj/effect/projectile/muzzle/xray
+	impact_type = /obj/effect/projectile/impact/xray

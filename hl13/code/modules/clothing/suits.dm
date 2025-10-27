@@ -52,9 +52,29 @@
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/cremator
 	name = "trench coat"
-	desc = "An armored black trenchcoat."
+	desc = "An armored black trenchcoat which has a coating of fire retardant sprayed on top."
 	icon_state = "crematorjacket"
 	slowdown = 0.25
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	strip_delay = 60
+	equip_delay_other = 60
+	resistance_flags = FIRE_PROOF
+
+	armor_type = /datum/armor/cremator_coat
+
+/datum/armor/cremator_coat
+	melee = 35
+	bullet = 35
+	laser = 30
+	energy = 40
+	bomb = 25
+	fire = 100
+	acid = 50
+	wound = 10
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/overseer
 	name = "overseer trenchcoat"

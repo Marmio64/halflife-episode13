@@ -737,3 +737,27 @@
 	speed_modifier = 0.66
 	special_footstep_sounds = list(list('hl13/sound/movement/stalker/stalker_footstep1.ogg', 'hl13/sound/movement/stalker/stalker_footstep2.ogg', 'hl13/sound/movement/stalker/stalker_footstep3.ogg', 'hl13/sound/movement/stalker/stalker_footstep4.ogg' ), 75, 0)
 	should_draw_greyscale = FALSE
+
+///cremator
+/obj/item/bodypart/head/cremator
+	limb_id = SPECIES_CREMATOR
+	icon_state = "cremator_head"
+	head_flags = NONE
+	is_dimorphic = FALSE
+
+/obj/item/bodypart/chest/cremator
+	limb_id = SPECIES_CREMATOR
+	icon_state = "cremator_chest"
+	is_dimorphic = FALSE
+
+/obj/item/bodypart/arm/left/cremator
+	limb_id = SPECIES_CREMATOR
+
+/obj/item/bodypart/arm/right/cremator
+	limb_id = SPECIES_CREMATOR
+
+/obj/item/bodypart/leg/left/cremator
+	limb_id = SPECIES_CREMATOR
+
+/obj/item/bodypart/leg/right/cremator
+	limb_id = SPECIES_CREMATOR

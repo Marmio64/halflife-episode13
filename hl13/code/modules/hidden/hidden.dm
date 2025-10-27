@@ -379,7 +379,6 @@
 	if(target == user || !isliving(target) || !isliving(user))
 		return
 	var/mob/living/living_target = target
-	var/mob/living/living_user = user
 
 	if(living_target.stat == DEAD && ishuman(living_target)) //reanimate the dead
 		if(do_after(user, 1 SECONDS, src))

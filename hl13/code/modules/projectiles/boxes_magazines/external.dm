@@ -135,3 +135,14 @@
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	multiple_sprite_use_base = TRUE
+
+//immolator
+
+/obj/item/ammo_box/magazine/immolator
+	name = "Immolator magazine (plasma)"
+	desc = "An odd box with green tubes sticking out of it, containing some sort of strange plasma.."
+	icon_state = "immolator"
+	ammo_type = /obj/item/ammo_casing/caseless/pulse/ar2
+	caliber = CALIBER_PLASMAROUND
+	max_ammo = 100
+	icon = 'hl13/icons/obj/guns/ammo.dmi'

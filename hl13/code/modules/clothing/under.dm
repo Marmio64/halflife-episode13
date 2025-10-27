@@ -235,6 +235,8 @@
 	worn_icon = 'hl13/icons/mob/clothing/uniform.dmi'
 	icon = 'hl13/icons/obj/clothing/uniforms.dmi'
 
+/obj/item/clothing/under/citizen/fireproof
+
 /obj/item/clothing/under/citizen/refugee
 	name = "refugee clothes"
 	desc = "Dirty blue jeans with an accompanying light colored shirt, free of any suit sensors the combine may use to track you."

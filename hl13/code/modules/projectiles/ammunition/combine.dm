@@ -72,3 +72,10 @@
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
 
 	caliber = CALIBER_ANTIXEN
+
+/obj/item/ammo_casing/caseless/pulse/ar2
+	name = "plasma round"
+	desc = "A handy piece of plasma stored in a reinforced bullet casing structure."
+	caliber = CALIBER_PLASMAROUND
+	projectile_type = /obj/projectile/bullet/immolator_plasma
+	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse

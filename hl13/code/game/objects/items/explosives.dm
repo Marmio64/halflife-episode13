@@ -19,6 +19,18 @@
 	. = ..()
 	det_time = rand(30,60) //3-6 seconds
 
+/obj/item/grenade/incendiary_grenade
+	name = "MK4A1 Incendiary Grenade"
+	desc = "A later modification of the MK3A2 grenade, fitted instead to cause a large amount of fire instead of an explosion."
+	icon = 'hl13/icons/obj/grenade.dmi'
+	icon_state = "bouncer"
+	det_time = 35
+
+/obj/item/grenade/incendiary_grenade/detonate(mob/living/lanced_by)
+	flame_radius(2, get_turf(src))
+	playsound(loc, 'hl13/sound/halflifeeffects/explosion_fire_grenade.ogg', 30, TRUE, 4)
+	qdel(src)
+
 /obj/item/grenade/stingbang/halflife
 	name = "stinger grenade"
 	desc = "A less-lethal grenade filled with rubber pellets. Useful for dispersing crowds."
