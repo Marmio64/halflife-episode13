@@ -78,6 +78,7 @@
 		to_chat(user, span_notice("The default hidden has high speed and is hard to detect."))
 		to_chat(user, span_notice("The Hunter is slower but can deploy hidden mantraps to ensnare victims."))
 		to_chat(user, span_notice("The Brute is slower, lacks heat vision, and is more visible, but has high damage resistance and can punch away nearby people."))
+		to_chat(user, span_notice("The Necrotic is slower, less damage resistant, and loses the ability to heal from corpses, but can reanimate them into headcrab zombies and summon armored headcrabs to distract and attack people."))
 
 	var/choice = tgui_input_list(user, "CURRENT LOADOUT TIER: [current_tier]", "Select a Loadout", display_names)
 	if(isnull(choice) || isnull(display_names[choice]))
