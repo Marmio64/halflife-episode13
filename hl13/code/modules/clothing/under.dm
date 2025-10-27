@@ -265,7 +265,7 @@
 	laser = 10
 	energy = 10
 	bomb = 10
-	fire = 50
+	fire = 75
 	acid = 30
 	wound = 5
 

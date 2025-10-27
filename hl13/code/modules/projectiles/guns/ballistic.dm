@@ -684,10 +684,10 @@
 	. = ..()
 	AddComponent(/datum/component/scope, range_modifier = 3)
 
-//1.26 second down time, but very close range
+//1.4 second down time, but very close range
 /obj/item/gun/ballistic/automatic/immolator
 	name = "\improper Immolator"
-	desc = "An alien looking plasma thrower which burns it's victims alive."
+	desc = "An alien looking plasma thrower which burns it's victims alive. It has short range, but can output a lot of damage."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "immolator"
 	inhand_icon_state = "immolator"
@@ -726,4 +726,4 @@
 
 /obj/item/gun/ballistic/automatic/immolator/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.18 SECONDS, overtime_penalty_cap = 3)
+	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS, overtime_penalty_cap = 3)

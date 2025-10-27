@@ -294,6 +294,7 @@
 			/datum/outfit/deployment_loadout/combine/tier4/ordinal,
 			/datum/outfit/deployment_loadout/combine/tier4/overseer,
 			/datum/outfit/deployment_loadout/combine/tier4/elite,
+			/datum/outfit/deployment_loadout/combine/tier4/cremator,
 			/datum/outfit/deployment_loadout/combine/tier4/medic_cop,
 			/datum/outfit/deployment_loadout/combine/tier4/engineer,
 			/datum/outfit/deployment_loadout/combine/tier4/sniper,

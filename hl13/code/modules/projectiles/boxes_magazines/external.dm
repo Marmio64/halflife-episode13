@@ -142,7 +142,7 @@
 	name = "Immolator magazine (plasma)"
 	desc = "An odd box with green tubes sticking out of it, containing some sort of strange plasma.."
 	icon_state = "immolator"
-	ammo_type = /obj/item/ammo_casing/caseless/pulse/ar2
+	ammo_type = /obj/item/ammo_casing/caseless/pulse/immolator
 	caliber = CALIBER_PLASMAROUND
-	max_ammo = 100
+	max_ammo = 200
 	icon = 'hl13/icons/obj/guns/ammo.dmi'

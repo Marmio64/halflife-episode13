@@ -73,7 +73,7 @@
 
 	caliber = CALIBER_ANTIXEN
 
-/obj/item/ammo_casing/caseless/pulse/ar2
+/obj/item/ammo_casing/caseless/pulse/immolator
 	name = "plasma round"
 	desc = "A handy piece of plasma stored in a reinforced bullet casing structure."
 	caliber = CALIBER_PLASMAROUND

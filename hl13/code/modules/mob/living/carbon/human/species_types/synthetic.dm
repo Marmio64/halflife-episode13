@@ -27,6 +27,12 @@
 /datum/species/human/synth/cremator
 	name = "\improper Cremator"
 	id = SPECIES_CREMATOR
+	inherent_traits = list(
+		TRAIT_USES_SKINTONES,
+		TRAIT_NOFIRE,
+		TRAIT_NOFIRE_SPREAD,
+		TRAIT_LESSPAIN_MINOR,
+	)
 
 /datum/outfit/cremator_test
 	name = "Cremator Test"
