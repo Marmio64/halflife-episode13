@@ -96,7 +96,7 @@
 	body_parts_covered = GROIN|LEGS|FEET
 
 /obj/item/clothing/under/pants/the_hidden/trapper
-	slowdown = -1
+	slowdown = -0.9
 
 /obj/item/clothing/under/pants/the_hidden/brute
 	slowdown = -0.75
@@ -246,6 +246,7 @@
 	icon_state = "beartrap"
 	desc = "A terrible looking trap that is barely visible when armed. Watch your step."
 	breakouttime = 10 SECONDS
+	trap_damage = 25
 
 /obj/item/restraints/legcuffs/beartrap/the_hidden/attack_self(mob/user)
 	. = ..()
@@ -289,7 +290,8 @@
 	if(ishuman(victim))
 		var/mob/living/carbon/human/human_victim = victim
 		human_victim.adjust_temppain(100)
-		human_victim.Immobilize(3 SECONDS)
+		human_victim.Immobilize(5 SECONDS)
+		human_victim.Stun(1 SECONDS)
 
 	victim.apply_damage(trap_damage, BRUTE, def_zone)
 	qdel(src)

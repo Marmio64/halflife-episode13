@@ -99,8 +99,8 @@
 /datum/outfit/combinegrunt
 	name = "Overwatch Grunt Corpse"
 
-	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt
-	uniform = /obj/item/clothing/under/combine/grunt
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt/fused
+	uniform = /obj/item/clothing/under/combine/grunt/fused
 	suit = null
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection/grunt
