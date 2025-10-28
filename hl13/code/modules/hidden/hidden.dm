@@ -99,7 +99,7 @@
 	slowdown = -1
 
 /obj/item/clothing/under/pants/the_hidden/brute
-	slowdown = -0.8
+	slowdown = -0.75
 
 /obj/item/clothing/glasses/hidden_blindfold
 	name = "blindfold"
@@ -140,10 +140,7 @@
 
 	if(living_target.stat == DEAD && ishuman(living_target)) //heal up from gibbing the dead
 		if(do_after(user, 1 SECONDS, src))
-			living_user.adjustStaminaLoss(-25)
-			living_user.adjustBruteLoss(-15)
-			living_user.adjustFireLoss(-15)
-			living_target.gib()
+			dead_effect(living_target, living_user)
 		return
 
 	if(!check_behind(user, living_target))
@@ -152,6 +149,12 @@
 	living_target.apply_damage(backstab_bonus, BRUTE, BODY_ZONE_CHEST, wound_bonus = CANT_WOUND)
 	living_target.balloon_alert(user, "backstab!")
 	playsound(living_target, 'sound/items/weapons/guillotine.ogg', 100, TRUE)
+
+/obj/item/knife/combat/the_hidden/proc/dead_effect(mob/living/target, mob/living/user)
+	user.adjustStaminaLoss(-25)
+	user.adjustBruteLoss(-15)
+	user.adjustFireLoss(-15)
+	target.gib()
 
 /datum/action/cooldown/spell/conjure_item/hidden_knife
 	name = "Summon Knife"
@@ -302,7 +305,7 @@
 	aoe_radius = 1
 	max_throw = 3
 
-	cooldown_time = 30 SECONDS
+	cooldown_time = 25 SECONDS
 
 	sparkle_path = null
 
@@ -374,24 +377,12 @@
 /obj/item/knife/combat/the_hidden/necrotic
 	desc = "An obscenely sharp and dangerous knife. Backstabs will instantly down. Stab a dead body to reanimate them into a headcrab zombie."
 
-/obj/item/knife/combat/the_hidden/necrotic/afterattack(atom/target, mob/user, click_parameters)
-	. = ..()
-	if(target == user || !isliving(target) || !isliving(user))
-		return
-	var/mob/living/living_target = target
-
-	if(living_target.stat == DEAD && ishuman(living_target)) //reanimate the dead
-		if(do_after(user, 1 SECONDS, src))
-			new /mob/living/basic/halflife/zombie(get_turf(src))
-			living_target.gib()
-		return
-
-	if(!check_behind(user, living_target))
-		return
-	// We're officially behind them, apply effects
-	living_target.apply_damage(backstab_bonus, BRUTE, BODY_ZONE_CHEST, wound_bonus = CANT_WOUND)
-	living_target.balloon_alert(user, "backstab!")
-	playsound(living_target, 'sound/items/weapons/guillotine.ogg', 100, TRUE)
+/obj/item/knife/combat/the_hidden/necrotic/dead_effect(mob/living/target, mob/living/user)
+	new /mob/living/basic/halflife/zombie(get_turf(target))
+	user.adjustStaminaLoss(-25)
+	user.adjustBruteLoss(-15)
+	user.adjustFireLoss(-15)
+	target.gib()
 
 
 ////// ACTUAL OTHER OUTFITS /////////////////////////////////////////
@@ -428,9 +419,9 @@
 /datum/outfit/deployment_loadout/hidden/the_hidden/necrotic
 	name = "Hidden: The Hidden (Necrotic)"
 	display_name = "SUPPORT: The Necrotic"
-	desc = "You take more damage and lose your ability to heal from destroying corpses, but gain the ability to summon armored headcrabs and convert bodies to headcrab zombies"
+	desc = "You take more damage and move slower, but gain the ability to summon armored headcrabs and convert bodies to headcrab zombies"
 
-	head = /mob/living/simple_animal/halflife/larry //apparently you can't do this, oh well...
+	head = /obj/item/clothing/head/halflife/cosmetic_headcrab
 	uniform = /obj/item/clothing/under/pants/the_hidden/trapper
 
 	extra_dex = 10

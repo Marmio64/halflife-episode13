@@ -82,6 +82,12 @@ GLOBAL_VAR_INIT(number_of_hidden, 0)
 		if(!time_ticking)
 			time_ticking = TRUE
 			to_chat(world, span_danger(span_slightly_larger(span_bold("Grace period up, let the hunt begin."))))
+			for(var/X in GLOB.deployment_hidden_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/hidden_start_round.ogg')
+			for(var/X in GLOB.deployment_combine_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/hidden_start_round.ogg')
 
 		if(combine_players <= SSticker.tdm_combine_deaths && SSticker.IsRoundInProgress())
 			priority_announce("All delegate biosignals lost. Mission failure detected.", "Overwatch Priority Alert")

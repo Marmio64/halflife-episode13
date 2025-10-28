@@ -52,6 +52,9 @@
 /turf/closed/wall/halflife/concrete/alt
 	icon = 'hl13/icons/turf/walls/concretealt.dmi'
 
+/turf/closed/wall/halflife/concrete/bunker
+	icon = 'hl13/icons/turf/walls/bunker.dmi'
+
 /turf/closed/wall/halflife/sewer
 	name = "concrete wall"
 	icon = 'hl13/icons/turf/walls/sewer.dmi'

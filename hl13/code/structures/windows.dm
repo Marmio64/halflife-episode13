@@ -23,6 +23,11 @@
 	max_integrity = 350
 	damage_deflection = 20
 
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced/indestructible
+	name = "highly reinforced window"
+	desc = "A window reinforced with metal bars, making it rather difficult to break. This one looks incredibly durable, and near unbreakable."
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+
 /obj/structure/window/fulltile/halflife/combine
 	name = "window"
 	desc = "A combine window. Made of tougher materials than standard glass."

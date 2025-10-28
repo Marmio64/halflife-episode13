@@ -139,6 +139,14 @@
 	armor_type = /datum/armor/headcrab
 	flags_cover = EARS_COVERED
 
+/obj/item/clothing/head/halflife/cosmetic_headcrab
+	name = "headcrab helmet"
+	desc = "A hollowed out armored headcrab."
+	icon = 'hl13/icons/obj/clothing/hats.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
+	icon_state = "headcrab"
+	base_icon_state = "headcrab"
+
 /obj/item/clothing/head/helmet/halflife/headcrab/gonome
 	name = "gonome headcrab helmet"
 	desc = "A huge, hollowed out armored headcrab. Hard to see out of, but is surpsingly good at protecting your head."

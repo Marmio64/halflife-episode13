@@ -357,18 +357,18 @@
 	ambientrain = RAIN_SEWER
 
 /area/halflife/indoors/sewer/hidden
-	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
-	ambient_music_vol = 25
+	ambient_music = 'hl13/sound/ambience/bgm/silentheaven.ogg'
+	//ambient_music_vol = 25
+	ambient_buzz_vol = 80
 	ambientrain = RAIN_IN
+
+	mood_message = "<span class='warning'>Somethng is not right here...</span>\n"
 
 /area/halflife/indoors/sewer/hidden/bunker
 	first_time_text = "The Bunker"
 
-	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
-	ambient_music_vol = 25
-
 	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'
-	ambient_buzz_vol = 70
+	ambient_buzz_vol = 80
 
 /area/halflife/indoors/sewer/tunnel
 	name = "\improper Tunnels"
