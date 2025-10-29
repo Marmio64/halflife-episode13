@@ -27,7 +27,7 @@
 	suit_store = /obj/item/gun/ballistic/shotgun/spas12
 	uniform = /obj/item/clothing/under/pants/the_hidden
 
-	combat_music = "none"
+	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm10.ogg'
 
 	extra_dex = 10
 

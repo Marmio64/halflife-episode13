@@ -59,24 +59,24 @@ GLOBAL_LIST_INIT(footstep, list(
 		'hl13/sound/effects/footstep/woodpanel1.ogg',
 		'hl13/sound/effects/footstep/woodpanel2.ogg',
 		'hl13/sound/effects/footstep/woodpanel3.ogg',
-		'hl13/sound/effects/footstep/woodpanel4.ogg'), 80, 0),
+		'hl13/sound/effects/footstep/woodpanel4.ogg'), 75, 0),
 	FOOTSTEP_FLOOR = list(list(
 		'hl13/sound/effects/footstep/tile1.ogg',
 		'hl13/sound/effects/footstep/tile2.ogg',
 		'hl13/sound/effects/footstep/tile3.ogg',
-		'hl13/sound/effects/footstep/tile4.ogg'), 70, -1),
+		'hl13/sound/effects/footstep/tile4.ogg'), 60, -1),
 	FOOTSTEP_PLATING = list(list(
 		'hl13/sound/effects/footstep/metal1.ogg',
 		'hl13/sound/effects/footstep/metal2.ogg',
 		'hl13/sound/effects/footstep/metal3.ogg',
-		'hl13/sound/effects/footstep/metal4.ogg'), 70, 1),
+		'hl13/sound/effects/footstep/metal4.ogg'), 60, 1),
 	FOOTSTEP_CONCRETE = list(list(
 		'hl13/sound/effects/footstep/concrete1.ogg',
 		'hl13/sound/effects/footstep/concrete2.ogg',
 		'hl13/sound/effects/footstep/concrete3.ogg',
 		'hl13/sound/effects/footstep/concrete4.ogg',
 		'hl13/sound/effects/footstep/concrete5.ogg',
-		'hl13/sound/effects/footstep/concrete6.ogg'), 70, 1),
+		'hl13/sound/effects/footstep/concrete6.ogg'), 60, 1),
 	FOOTSTEP_CARPET = list(list(
 		'sound/effects/footstep/carpet1.ogg',
 		'sound/effects/footstep/carpet2.ogg',
@@ -110,7 +110,7 @@ GLOBAL_LIST_INIT(footstep, list(
 		'sound/effects/footstep/catwalk2.ogg',
 		'sound/effects/footstep/catwalk3.ogg',
 		'sound/effects/footstep/catwalk4.ogg',
-		'sound/effects/footstep/catwalk5.ogg'), 100, 1),
+		'sound/effects/footstep/catwalk5.ogg'), 95, 1),
 ))
 
 //bare footsteps lists

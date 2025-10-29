@@ -43,7 +43,7 @@
 	suit = /obj/item/clothing/suit/armor/overwatch/red/deathmatch
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = "none"
+	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm10.ogg'
 
 //The second defender, riot cop. They're pretty good at holding positions since they have a good chance to parry the Hidden
 //They can't aim for shit or run for very long though and if they do get hit they're still weak to damage.
@@ -66,7 +66,7 @@
 	belt = /obj/item/flashlight/flare/the_hidden
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = "none"
+	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm10.ogg'
 
 	back = /obj/item/melee/sledgehammer
 
@@ -100,7 +100,7 @@
 	)
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = "none"
+	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm10.ogg'
 
 	extra_dex = 3
 
@@ -126,7 +126,7 @@
 	r_pocket = /obj/item/flashlight/hand_crank
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = "none"
+	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm10.ogg'
 
 	extra_dex = 3
 
@@ -149,7 +149,7 @@
 	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = "none"
+	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm10.ogg'
 
 	belt = /obj/item/gun/ballistic/automatic/pistol/usp
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
@@ -183,7 +183,7 @@
 	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = "none"
+	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm10.ogg'
 
 	belt = /obj/item/defibrillator/compact/loaded
 
@@ -228,7 +228,7 @@
 	back = /obj/item/storage/backpack/halflife
 	ears = /obj/item/radio/headset/civilprotection/deployment
 
-	combat_music = "none"
+	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm10.ogg'
 
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/usp9mm = 3,
@@ -327,7 +327,7 @@
 	back = /obj/item/storage/backpack/halflife
 	ears = /obj/item/radio/headset/civilprotection/deployment
 
-	combat_music = "none"
+	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm10.ogg'
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/syringe/piercing/hidden_scientist = 6,
