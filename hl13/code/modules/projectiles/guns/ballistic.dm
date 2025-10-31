@@ -708,8 +708,8 @@
 
 	item_flags = SLOWS_WHILE_IN_HAND | NEEDS_PERMIT
 
-	slowdown = 0.5
-	drag_slowdown = 0.5
+	slowdown = 0.66
+	drag_slowdown = 0.66
 
 	load_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
 	load_empty_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'

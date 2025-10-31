@@ -251,6 +251,31 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/tinbomb)
 
+/datum/outfit/deployment_loadout/rebel/tier3/mosin_soldier
+	name = "Deployment: Mosin Soldier"
+	display_name = "Mosin Soldier (Defense)"
+	desc = "You are armed with a Mosin-nagant for long range attacks while defending bunkers, and a knife bayonet to attach to your rifle when things get close quarters."
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
+	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
+	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
+
+	l_pocket = /obj/item/knife/combat/weak
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/halflife/satchel
+
+	backpack_contents = list(
+		/obj/item/ammo_box/strilka310/a762 = 5,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+	extra_str = 2
+
 /datum/outfit/deployment_loadout/rebel/tier3/vortigaunt
 	name = "Deployment: Vortigaunt"
 	display_name = "Vortigaunt (Support)"
@@ -335,6 +360,8 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+	extra_dex = 2
 
 /datum/outfit/deployment_loadout/rebel/tier3/scout/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -424,6 +451,32 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+/datum/outfit/deployment_loadout/rebel/tier4/mosin_soldier
+	name = "Deployment: Upgraded Mosin Soldier"
+	display_name = "Upgraded Mosin Soldier (Defense)"
+	desc = "You are armed with a Mosin-nagant for long range attacks while defending bunkers, and a knife bayonet to attach to your rifle when things get close quarters."
+
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
+	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
+	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
+
+	l_pocket = /obj/item/knife/combat/weak
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/halflife/satchel
+
+	backpack_contents = list(
+		/obj/item/ammo_box/strilka310/a762 = 5,
+		/obj/item/reagent_containers/pill/patch/medkit = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+	extra_str = 4
+
 
 /datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel
 	name = "Deployment: Heavy Rebel Bomber"
@@ -579,6 +632,8 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+	extra_dex = 2
 
 /datum/outfit/deployment_loadout/rebel/tier4/scout/post_equip(mob/living/carbon/human/H)
 	. = ..()

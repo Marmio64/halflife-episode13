@@ -135,6 +135,9 @@
 	can_parry = TRUE //hl13 edit
 	wdefense = 1 //hl13 edit
 
+/obj/item/knife/combat/weak
+	force = 20
+
 /obj/item/knife/combat/backstab
 	name = "assassin's combat knife"
 	desc = "A military combat utility survival knife. Deals far more damage on backstabs."

@@ -152,8 +152,8 @@
 
 /obj/item/knife/combat/the_hidden/proc/dead_effect(mob/living/target, mob/living/user)
 	user.adjustStaminaLoss(-25)
-	user.adjustBruteLoss(-15)
-	user.adjustFireLoss(-15)
+	user.adjustBruteLoss(-25)
+	user.adjustFireLoss(-25)
 	target.gib()
 
 /datum/action/cooldown/spell/conjure_item/hidden_knife
