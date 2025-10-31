@@ -1,9 +1,9 @@
 GLOBAL_VAR_INIT(deployment_rebels_flag_time_left, 5 MINUTES)
 GLOBAL_VAR_INIT(deployment_combine_flag_time_left, 5 MINUTES)
 GLOBAL_VAR_INIT(deployment_flag_grace_period, 3 MINUTES)
-GLOBAL_VAR_INIT(deployment_respawn_rate_rebels, 30 SECONDS)
-GLOBAL_VAR_INIT(deployment_respawn_rate_combine, 30 SECONDS)
-GLOBAL_VAR_INIT(deployment_respawn_rate_xen, 12 SECONDS)
+GLOBAL_VAR_INIT(deployment_respawn_rate_rebels, 35 SECONDS)
+GLOBAL_VAR_INIT(deployment_respawn_rate_combine, 35 SECONDS)
+GLOBAL_VAR_INIT(deployment_respawn_rate_xen, 15 SECONDS)
 GLOBAL_VAR_INIT(deployment_win_team, null)
 
 /obj/machinery/deployment_koth_flag
@@ -34,8 +34,8 @@ GLOBAL_VAR_INIT(deployment_win_team, null)
 	var/alter_holder_respawn = FALSE
 
 	/// Alternate respawn timer if above is enabled ^
-	var/altered_respawn_speed = 40 SECONDS
-	var/normal_respawn_speed = 20 SECONDS
+	var/altered_respawn_speed = 45 SECONDS
+	var/normal_respawn_speed = 25 SECONDS
 
 	var/grace_period_up_text = "<span class='greentext big'>The flag grace period is up, and it is now capturable!</span>"
 	var/grace_period_text = TRUE

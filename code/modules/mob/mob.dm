@@ -795,16 +795,16 @@
 
 	if(SSmapping.current_map.minetype == "combat_deployment")
 		if(client.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
-			required_delay = GLOB.deployment_respawn_rate_combine
+			required_delay = SSrespawns.combine_wave_timer
 		else if(client.deployment_faction == REBEL_DEPLOYMENT_FACTION)
-			required_delay = GLOB.deployment_respawn_rate_rebels
+			required_delay = SSrespawns.rebel_wave_timer
 		else if(client.deployment_faction == XEN_DEPLOYMENT_FACTION)
-			required_delay = GLOB.deployment_respawn_rate_xen
+			required_delay = SSrespawns.xen_wave_timer
 		else
 			required_delay = 30 SECONDS
 
-		if(SSmapping.current_map.combat_deployment_gamemode == "the_hidden")
-			required_delay = 10 SECONDS
+		//if(SSmapping.current_map.combat_deployment_gamemode == "the_hidden")
+			//required_delay = 10 SECONDS
 
 
 	if(death_time < required_delay)
