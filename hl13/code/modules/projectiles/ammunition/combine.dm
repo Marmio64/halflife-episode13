@@ -73,9 +73,17 @@
 
 	caliber = CALIBER_ANTIXEN
 
-/obj/item/ammo_casing/caseless/pulse/immolator
-	name = "plasma round"
-	desc = "A handy piece of plasma stored in a reinforced bullet casing structure."
-	caliber = CALIBER_PLASMAROUND
+/obj/item/ammo_casing/energy/immolator
 	projectile_type = /obj/projectile/bullet/immolator_plasma
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse
+	e_cost = LASER_SHOTS(40, STANDARD_CELL_CHARGE)
+	select_name = "plasma"
+	fire_sound = "hl13/sound/weapons/immolator_fire.ogg"
+
+/obj/item/ammo_casing/energy/immolator_flame
+	projectile_type = /obj/projectile/bullet/incendiary/fire
+	firing_effect_type = null
+	e_cost = LASER_SHOTS(5, STANDARD_CELL_CHARGE)
+	select_name = "flame"
+	fire_sound = "hl13/sound/weapons/flamethrower1.ogg"
+	delay = 1 SECONDS

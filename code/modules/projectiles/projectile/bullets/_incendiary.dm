@@ -19,13 +19,12 @@
 		return
 	var/turf/location = get_turf(src)
 	if(location)
-		new /obj/effect/hotspot(location)
-		location.hotspot_expose(700, 50, 1)
+		flame_radius(0, location, burn_duration = 10, burn_intensity = 10)
 
 /// Incendiary bullet that more closely resembles a real flamethrower sorta deal, no visible bullet, just flames.
 /obj/projectile/bullet/incendiary/fire
 	damage = 15
-	range = 6
+	range = 5
 	alpha = 0
 	pass_flags = PASSTABLE | PASSMOB
 	sharpness = NONE
@@ -45,8 +44,7 @@
 	. = ..()
 	var/turf/location = get_turf(target)
 	if(isopenturf(location))
-		new /obj/effect/hotspot(location)
-		location.hotspot_expose(700, 50, 1)
+		flame_radius(0, location, burn_duration = 10, burn_intensity = 10)
 
 /// Used in [the backblast element][/datum/element/backblast]
 /obj/projectile/bullet/incendiary/fire/backblast

@@ -684,22 +684,28 @@
 	. = ..()
 	AddComponent(/datum/component/scope, range_modifier = 3)
 
-//1.4 second down time, but very close range
-/obj/item/gun/ballistic/automatic/immolator
+//1.5 second down time, but very close range
+/obj/item/gun/energy/immolator
+
+	selfcharge = 1
+	shaded_charge = FALSE
+	charge_delay = 5
+	ammo_type = list(/obj/item/ammo_casing/energy/immolator, /obj/item/ammo_casing/energy/immolator_flame)
+
+	self_charge_amount = (STANDARD_ENERGY_GUN_SELF_CHARGE_RATE * 2)
+
 	name = "\improper Immolator"
-	desc = "An alien looking plasma thrower which burns it's victims alive. It has short range, but can output a lot of damage."
+	desc = "An alien looking plasma thrower which burns it's victims alive. It has short range, but can output a lot of damage. It can be toggled between flamer and plasma settings. After firing for an extended duration, you must wait for it to recharge."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "immolator"
 	inhand_icon_state = "immolator"
 	fire_sound = "hl13/sound/weapons/immolator_fire.ogg"
 	//vary_fire_sound = FALSE
 	fire_sound_volume = 25
-	accepted_magazine_type = /obj/item/ammo_box/magazine/immolator
 	force = 15
 	recoil = 0
 	fire_delay = 2
 	burst_size = 1
-	mag_display = FALSE
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 	pin = /obj/item/firing_pin/implant/mindshield
@@ -711,19 +717,16 @@
 	slowdown = 0.66
 	drag_slowdown = 0.66
 
-	load_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
-	load_empty_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
-
-	eject_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
-	eject_empty_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
-
-	rack_sound = 'hl13/sound/weapons/ar2_reload_push.ogg'
-	lock_back_sound = 'hl13/sound/weapons/ar2_reload_push.ogg'
-	bolt_drop_sound = 'hl13/sound/weapons/ar2_reload_push.ogg'
-
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
-/obj/item/gun/ballistic/automatic/immolator/Initialize(mapload)
+/obj/item/gun/energy/immolator/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS, overtime_penalty_cap = 3)
+	AddComponent(/datum/component/automatic_fire, 0.25 SECONDS, overtime_penalty_cap = 3)
+
+/obj/item/gun/energy/immolator/shoot_live_shot(mob/living/user, pointblank = 0, atom/pbtarget = null, message = 1)
+	. = ..()
+	if(!HAS_TRAIT(user, TRAIT_NOFIRE))
+		if(prob(50))
+			to_chat(user, "<span class='warning'>The Immolator burns your hand from its heat!</span>")
+			user.adjustFireLoss(15)

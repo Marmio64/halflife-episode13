@@ -362,28 +362,20 @@
 /datum/outfit/deployment_loadout/combine/tier4/cremator
 	name = "Deployment: Cremator"
 	display_name = "Cremator (Defense)"
-	desc = "You're a pyromaniac monster clad in black, that excels at area denial and close quarters combat. However, your immolator is very short range, and you have little armor to speak of."
+	desc = "You're a pyromaniac monster clad in black, that excels at area denial and close quarters combat. However, your immolator is very short range, and you have little armor to speak of. You can toggle your immolator between a high damage plasma mode or a flamethrower mode."
 
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/cremator
 	uniform = /obj/item/clothing/under/citizen
 	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat/cremator
-	suit_store = /obj/item/gun/ballistic/automatic/immolator
+	suit_store = /obj/item/gun/energy/immolator
 
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
 
-	l_pocket = /obj/item/grenade/incendiary_grenade
-	r_pocket = /obj/item/grenade/incendiary_grenade
-
-	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
-
-	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/medkit = 1,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
-		/obj/item/ammo_box/magazine/immolator = 2,
-	)
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
 	combat_music = 'hl13/sound/music/combat/notyouraveragecop.ogg'
 

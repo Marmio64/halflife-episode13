@@ -116,7 +116,7 @@
 			continue
 		A.flamer_fire_act(burnlevel, firelevel)
 
-	T.VapourListTurf(list(/datum/vapours/smoke = (1 * firelevel), /datum/vapours/carbon_air_vapour = (1 * firelevel)), VAPOUR_ACTIVE_EMITTER_CAP)
+	T.VapourListTurf(list(/datum/vapours/smoke = (0.75 * firelevel), /datum/vapours/carbon_air_vapour = (0.75 * firelevel)), VAPOUR_ACTIVE_EMITTER_CAP)
 	firelevel -= 2 //reduce the intensity by 2 per tick
 	return
 

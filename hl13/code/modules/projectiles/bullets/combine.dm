@@ -106,7 +106,7 @@
 /obj/projectile/bullet/immolator_plasma
 	name = "plasma arc"
 	icon_state = "xray"
-	damage = 20
+	damage = 24
 	wound_bonus = -20
 	damage_type = BURN
 	range = 5 //close range
