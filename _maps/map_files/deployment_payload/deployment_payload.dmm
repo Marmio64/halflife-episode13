@@ -287,6 +287,13 @@
 /obj/structure/table/halflife/no_smooth/large/crafting/tinkerbench,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/combine_base)
+"kV" = (
+/obj/structure/halflife/rails{
+	dir = 1
+	},
+/obj/effect/payload_path,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city)
 "lf" = (
 /obj/machinery/door/airlock/highsecurity/combine,
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -486,6 +493,7 @@
 "ui" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/stack/razorwire/half_stack,
+/obj/item/stack/sheet/mineral/wood/twentyfive,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
 "uv" = (
@@ -1113,6 +1121,17 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"ST" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/stack/razorwire/full,
+/obj/item/stack/sheet/mineral/sandbags{
+	pixel_x = 0;
+	pixel_y = 6;
+	amount = 10
+	},
+/obj/item/stack/sheet/mineral/wood/fifty,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city)
 "Tn" = (
 /obj/machinery/combine_walllight/directional/north,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -1183,13 +1202,10 @@
 /area/halflife/outdoors/deployment_city)
 "UV" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/stack/razorwire/full,
-/obj/item/stack/sheet/mineral/sandbags{
-	pixel_x = 0;
-	pixel_y = 6;
-	amount = 10
+/obj/machinery/combine_health_station/self_recharging{
+	pixel_y = 30
 	},
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city)
 "UX" = (
 /obj/effect/koth_grace_field,
@@ -1244,8 +1260,8 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/combine_base)
 "VC" = (
-/obj/machinery/light/directional/south,
-/turf/open/floor/plating/ground/sidewalk,
+/obj/machinery/ammo_crate,
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city)
 "VF" = (
 /obj/structure/halflife/leaves,
@@ -5230,10 +5246,10 @@ Vj
 Vj
 Vj
 Vj
+Vj
 Fv
 Fv
 dY
-Fv
 Fv
 wr
 wr
@@ -5363,14 +5379,14 @@ Vj
 Sr
 PG
 Zx
-Zx
+VC
 gt
+Zx
 Zx
 Zx
 CF
 CF
 dY
-CF
 CF
 wr
 wr
@@ -5771,7 +5787,7 @@ Zx
 Zx
 Zx
 Vj
-rI
+UV
 dY
 dY
 dY
@@ -6191,9 +6207,9 @@ dY
 dY
 dY
 dY
-CF
-CF
 dY
+CF
+CF
 wr
 wr
 eC
@@ -6328,9 +6344,9 @@ dY
 dY
 dY
 dY
+dY
 CF
 Nj
-VC
 wr
 wr
 wr
@@ -6465,9 +6481,9 @@ Zx
 Zx
 Zx
 dY
-CF
-CF
 dY
+CF
+CF
 wr
 WQ
 TS
@@ -7287,9 +7303,9 @@ Zx
 Zx
 Zx
 dY
-CF
-CF
 dY
+CF
+CF
 wr
 WQ
 TS
@@ -7424,9 +7440,9 @@ dY
 dY
 dY
 dY
+dY
 CF
 Nj
-VC
 wr
 wr
 wr
@@ -7561,9 +7577,9 @@ dY
 dY
 dY
 dY
-CF
-CF
 dY
+CF
+CF
 wr
 wr
 Qn
@@ -7963,14 +7979,14 @@ Zx
 dY
 dY
 Vj
-rI
+UV
 dY
 dY
 dY
 dY
 dY
 dY
-Zx
+dY
 Zx
 Zx
 Zx
@@ -8107,11 +8123,11 @@ dY
 dY
 dY
 dY
+dY
 Zx
 US
 US
 US
-Zx
 wr
 wr
 Gu
@@ -8244,11 +8260,11 @@ dY
 dY
 dY
 dY
+dY
 Zx
 US
 US
 US
-Zx
 wr
 wr
 Bf
@@ -8377,15 +8393,15 @@ Vj
 Sr
 PG
 Zx
-Zx
+VC
 bY
+Zx
 Zx
 Zx
 PG
 UC
 US
 UC
-PG
 wr
 wr
 gM
@@ -8518,11 +8534,11 @@ Vj
 Vj
 Vj
 Vj
+Vj
 WY
 mW
 US
 mW
-WY
 wr
 wr
 wr
@@ -8655,12 +8671,12 @@ dY
 dY
 dY
 dY
-Zx
-US
-US
-US
-Zx
 dY
+Zx
+US
+US
+US
+Zx
 Vj
 Vj
 Vj
@@ -8792,12 +8808,12 @@ Ca
 Ca
 Ca
 Ca
-Om
-UX
-UX
-UX
-Om
 Ca
+Om
+UX
+UX
+UX
+Om
 Ca
 Ca
 Vj
@@ -8929,12 +8945,12 @@ dY
 dY
 dY
 dY
-Zx
-US
-US
-US
-Zx
 dY
+Zx
+US
+US
+US
+Zx
 dY
 dY
 Vj
@@ -9066,12 +9082,12 @@ dY
 dY
 dY
 dY
-Zx
-US
-US
-US
-Zx
 dY
+Zx
+US
+US
+US
+Zx
 dY
 dY
 Vj
@@ -9188,6 +9204,7 @@ Zx
 Zx
 Zx
 Zx
+Zx
 Om
 Om
 Om
@@ -9211,7 +9228,6 @@ Zx
 dY
 dY
 dY
-Vj
 Vj
 Vj
 Vj
@@ -9331,6 +9347,7 @@ dY
 dY
 dY
 dY
+dY
 Ca
 dY
 dY
@@ -9348,7 +9365,6 @@ Zx
 dY
 dY
 dY
-Vj
 Vj
 Vj
 Vj
@@ -9466,6 +9482,7 @@ jT
 jT
 jT
 jT
+jT
 dY
 dY
 Om
@@ -9485,7 +9502,6 @@ qd
 dY
 dY
 dY
-Vj
 Vj
 Vj
 Vj
@@ -9601,6 +9617,7 @@ an
 an
 an
 an
+an
 RK
 jT
 dY
@@ -9622,7 +9639,6 @@ Om
 Ca
 Ca
 Ca
-Vj
 Vj
 Vj
 Vj
@@ -9738,6 +9754,7 @@ jT
 jT
 jT
 jT
+jT
 QY
 jT
 dY
@@ -9759,7 +9776,6 @@ US
 US
 US
 US
-Vj
 Vj
 Vj
 Vj
@@ -9870,6 +9886,7 @@ dY
 dY
 dY
 dY
+dY
 Yr
 dY
 dY
@@ -9891,7 +9908,6 @@ Vj
 Vj
 Vj
 uv
-Vj
 Vj
 Vj
 Vj
@@ -10010,6 +10026,7 @@ Zx
 Zx
 Zx
 Zx
+Zx
 dY
 jT
 QY
@@ -10030,7 +10047,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -10147,6 +10163,7 @@ Zx
 Zx
 Zx
 Zx
+Zx
 dY
 jT
 QY
@@ -10167,7 +10184,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -10284,6 +10300,7 @@ Zx
 Zx
 Zx
 Zx
+Zx
 dY
 jT
 QY
@@ -10304,7 +10321,6 @@ Un
 BS
 Un
 SC
-Vj
 Vj
 Vj
 Vj
@@ -10422,6 +10438,7 @@ dY
 dY
 dY
 dY
+dY
 jT
 QY
 jT
@@ -10441,7 +10458,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -10559,6 +10575,7 @@ dY
 dY
 dY
 dY
+dY
 jT
 QY
 jT
@@ -10578,7 +10595,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -10696,6 +10712,7 @@ dY
 dY
 dY
 dY
+dY
 jT
 QY
 jT
@@ -10715,7 +10732,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -10833,6 +10849,7 @@ dY
 dY
 dY
 dY
+dY
 jT
 QY
 jT
@@ -10852,7 +10869,6 @@ Un
 BS
 Un
 dZ
-Vj
 Vj
 Vj
 Vj
@@ -10970,6 +10986,7 @@ dY
 dY
 dY
 dY
+dY
 jT
 QY
 jT
@@ -10989,7 +11006,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -11107,6 +11123,7 @@ dY
 dY
 dY
 dY
+dY
 jT
 QY
 jT
@@ -11126,7 +11143,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -11244,6 +11260,7 @@ dY
 dY
 dY
 dY
+dY
 jT
 QY
 jT
@@ -11269,7 +11286,6 @@ nb
 Wt
 Wt
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -11381,6 +11397,7 @@ dY
 dY
 dY
 dY
+dY
 jT
 QY
 jT
@@ -11406,7 +11423,6 @@ Un
 Un
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -11518,6 +11534,7 @@ dY
 dY
 dY
 dY
+dY
 jT
 QY
 YH
@@ -11543,7 +11560,6 @@ id
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -11655,6 +11671,7 @@ dY
 dY
 dY
 dY
+dY
 jT
 QY
 jT
@@ -11680,7 +11697,6 @@ Un
 BS
 Un
 SC
-Vj
 Vj
 Vj
 Vj
@@ -11791,6 +11807,7 @@ dY
 dY
 dY
 dY
+dY
 Mb
 jT
 QY
@@ -11817,7 +11834,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -11929,6 +11945,7 @@ dY
 dY
 dY
 dY
+dY
 jT
 QY
 jT
@@ -11954,7 +11971,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -12063,6 +12079,7 @@ US
 US
 US
 dY
+dY
 Mb
 CF
 CF
@@ -12091,7 +12108,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -12201,6 +12217,7 @@ US
 US
 dY
 dY
+dY
 CF
 dY
 jT
@@ -12228,7 +12245,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -12338,6 +12354,7 @@ dY
 dY
 dY
 dY
+dY
 CF
 dY
 jT
@@ -12365,7 +12382,6 @@ Un
 BS
 Un
 dZ
-Vj
 Vj
 Vj
 Vj
@@ -12475,6 +12491,7 @@ dY
 dY
 dY
 dY
+dY
 kG
 dY
 jT
@@ -12502,7 +12519,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -12611,6 +12627,7 @@ dY
 dY
 dY
 dY
+dY
 yn
 yn
 yn
@@ -12639,7 +12656,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -12748,6 +12764,7 @@ dY
 dY
 dY
 dY
+dY
 yn
 Zp
 TU
@@ -12776,7 +12793,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -12885,6 +12901,7 @@ dY
 dY
 dY
 dY
+dY
 TU
 TU
 dY
@@ -12913,7 +12930,6 @@ Un
 BS
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -13022,6 +13038,7 @@ dY
 dY
 dY
 dY
+dY
 TU
 dY
 pr
@@ -13050,7 +13067,6 @@ Un
 BS
 Un
 SC
-Vj
 Vj
 Vj
 Vj
@@ -13160,8 +13176,9 @@ dY
 dY
 dY
 dY
+dY
 nn
-UV
+ST
 jT
 aM
 jT
@@ -13187,7 +13204,6 @@ id
 id
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -13292,7 +13308,8 @@ Vj
 Vj
 Vj
 Vj
-Vj
+dY
+dY
 dY
 dY
 dY
@@ -13324,7 +13341,6 @@ Un
 Un
 Un
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -13428,8 +13444,9 @@ US
 US
 US
 US
-US
 Vj
+dY
+dY
 dY
 dY
 dY
@@ -13461,7 +13478,6 @@ Wt
 SC
 Wt
 Wt
-Vj
 Vj
 Vj
 Vj
@@ -13565,8 +13581,9 @@ Zx
 Zx
 Zx
 Zx
-Zx
 Vj
+dY
+dY
 dY
 dY
 dY
@@ -13584,7 +13601,6 @@ Zx
 Zx
 Zx
 US
-Vj
 Vj
 Vj
 Vj
@@ -13702,10 +13718,11 @@ dY
 Yr
 dY
 dY
-dY
 Wi
 dY
+dY
 Mb
+dY
 dY
 yn
 yn
@@ -13721,7 +13738,6 @@ Zx
 Zx
 Zx
 US
-Vj
 Vj
 Vj
 Vj
@@ -13839,8 +13855,9 @@ dY
 dY
 dY
 dY
-dY
 Wi
+dY
+dY
 dY
 dY
 dY
@@ -13858,7 +13875,6 @@ Zx
 Zx
 Zx
 US
-Vj
 Vj
 Vj
 Vj
@@ -13985,6 +14001,7 @@ jT
 jT
 jT
 jT
+jT
 QY
 jT
 Yr
@@ -13995,7 +14012,6 @@ Zx
 Zx
 Zx
 US
-Vj
 Vj
 Vj
 Vj
@@ -14117,6 +14133,7 @@ an
 an
 an
 an
+kV
 an
 an
 an
@@ -14132,7 +14149,6 @@ Zx
 Zx
 Zx
 US
-Vj
 Vj
 Vj
 Vj
@@ -14257,6 +14273,7 @@ jT
 jT
 jT
 jT
+jT
 YH
 jT
 jT
@@ -14269,7 +14286,6 @@ Zx
 Zx
 Zx
 US
-Vj
 Vj
 Vj
 Vj
@@ -14387,8 +14403,9 @@ dY
 dY
 dY
 dY
-dY
 Wi
+dY
+dY
 dY
 dY
 dY
@@ -14406,7 +14423,6 @@ Zx
 Zx
 Zx
 US
-Vj
 Vj
 Vj
 Vj
@@ -14524,8 +14540,9 @@ dY
 Yr
 dY
 dY
-dY
 Wi
+dY
+dY
 dY
 dY
 dY
@@ -14543,7 +14560,6 @@ Zx
 Zx
 Zx
 US
-Vj
 Vj
 Vj
 Vj
@@ -14661,8 +14677,9 @@ Zx
 Zx
 Zx
 Zx
-Zx
 Vj
+Zx
+Zx
 Zx
 Zx
 Zx
@@ -14680,7 +14697,6 @@ Zx
 Zx
 Zx
 US
-Vj
 Vj
 Vj
 Vj
@@ -14798,7 +14814,6 @@ US
 US
 US
 US
-US
 Vj
 US
 US
@@ -14817,7 +14832,8 @@ US
 US
 US
 US
-Vj
+US
+US
 Vj
 Vj
 Vj

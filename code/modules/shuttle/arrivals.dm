@@ -7,7 +7,6 @@
 
 	callTime = INFINITY
 	ignitionTime = 50
-	callTime = 120
 
 	train = TRUE
 

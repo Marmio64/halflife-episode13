@@ -38,6 +38,8 @@
 
 	var/time_left_match = 0
 
+	var/time_per_checkpoint = 90 SECONDS
+
 /obj/machinery/deployment_payload/CanAllowThrough(atom/movable/mover, turf/target)
 	. = ..()
 	if(istype(mover, /obj/projectile))
@@ -152,7 +154,7 @@
 		return PROCESS_KILL
 
 /obj/machinery/deployment_payload/proc/checkpoint_reached()
-	GLOB.deployment_combine_flag_time_left += 90 SECONDS
+	GLOB.deployment_combine_flag_time_left += time_per_checkpoint
 
 	for(var/obj/machinery/deployment_points_flag/F in range(1, src)) //auto-capture any points flags on the checkpoint
 		F.current_faction_holder = REBEL_DEPLOYMENT_FACTION
@@ -171,6 +173,11 @@
 	. = ..()
 	. += span_notice("Rebels can stand near the cart to push it along its path.")
 	. += span_notice("The combine need to defend the cart for [(GLOB.deployment_combine_flag_time_left)/10] more seconds in order to win.")
+
+/obj/machinery/deployment_payload/coast
+	altered_respawn_speed = 40 SECONDS
+	normal_respawn_speed = 20 SECONDS
+	time_per_checkpoint = 120 SECONDS
 
 /obj/effect/payload_path
 	name = "payload path"
