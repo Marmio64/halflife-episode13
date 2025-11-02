@@ -107,7 +107,7 @@
 	setDir(SOUTH)
 	playsound(src,'sound/vehicles/mecha/mechmove01.ogg', 50, TRUE)
 	set_anchored(TRUE)
-	if(M.client)
+	if(M.client && view_range)
 		M.client.view_size.setTo(view_range)
 	START_PROCESSING(SSfastprocess, src)
 
