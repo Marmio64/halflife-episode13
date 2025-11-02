@@ -7,6 +7,10 @@
 	wound_bonus = -10
 	armour_penetration = 20
 
+/obj/projectile/bullet/pulse/ar2/emplacement
+	accuracy_falloff = 9 //accuracy drops off faster
+	spread = 10
+
 /obj/projectile/bullet/pulse/ar2/fast
 	speed = 4
 

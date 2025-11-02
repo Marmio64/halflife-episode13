@@ -123,6 +123,7 @@
 			/datum/supply_beacon_option/fortifications_crate,
 			/datum/supply_beacon_option/grenade_crate,
 			/datum/supply_beacon_option/canister_targeter,
+			/datum/supply_beacon_option/emplacement_gun,
 			/datum/supply_beacon_option/combine_tier5,
 		)
 		for(var/datum/supply_beacon_option/loadout as anything in possible_loadouts)
@@ -140,6 +141,7 @@
 			/datum/supply_beacon_option/fortifications_crate,
 			/datum/supply_beacon_option/grenade_crate,
 			/datum/supply_beacon_option/missile_targeter,
+			/datum/supply_beacon_option/emplacement_gun,
 			/datum/supply_beacon_option/rebel_tier5,
 		)
 		for(var/datum/supply_beacon_option/loadout as anything in possible_loadouts)
@@ -191,6 +193,11 @@
 	option_name = "Modified Canister Targeter (300 Points)"
 	cost = 300
 	spawn_path = /obj/item/halflife/cannister_targeter/modified
+
+/datum/supply_beacon_option/emplacement_gun
+	option_name = "AR2 Emplacement Turret (450 Points)"
+	cost = 450
+	spawn_path = /obj/machinery/deployable_turret/combine
 
 /datum/supply_beacon_option/rebel_tier5
 	option_name = "Tier 5 Loadout Beacon (500 Points)"
