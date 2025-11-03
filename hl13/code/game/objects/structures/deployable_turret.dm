@@ -7,12 +7,12 @@
 	projectile_type = /obj/projectile/bullet/pulse/ar2/emplacement
 	anchored = TRUE
 	number_of_shots = 8
-	cooldown_duration = 2.25 SECONDS
-	rate_of_fire = 2
+	cooldown_duration = 2 SECONDS
+	rate_of_fire = 1.75
 	firesound = 'hl13/sound/weapons/ar2fire.ogg'
 	overheatsound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
 	always_anchored = TRUE
-	view_range = 0
+	view_range = 5
 	var/projectile_passchance = 25
 
 	armor_type = /datum/armor/combine_emplacement_turret

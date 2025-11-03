@@ -78,6 +78,7 @@
 	if(istype(buckled_mob))
 		buckled_mob.pixel_x = buckled_mob.base_pixel_x
 		buckled_mob.pixel_y = buckled_mob.base_pixel_y
+		REMOVE_TRAIT(buckled_mob, TRAIT_TOTAL_FOV, "emplacement")
 		if(buckled_mob.client)
 			buckled_mob.client.view_size.resetToDefault()
 	if(!always_anchored)
@@ -109,6 +110,7 @@
 	set_anchored(TRUE)
 	if(M.client && view_range)
 		M.client.view_size.setTo(view_range)
+		ADD_TRAIT(M, TRAIT_TOTAL_FOV, "emplacement")
 	START_PROCESSING(SSfastprocess, src)
 
 /obj/machinery/deployable_turret/process()
