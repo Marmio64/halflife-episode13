@@ -6,7 +6,7 @@
 
 /obj/structure/halflife/cargotruck
 	name = "Hauler"
-	desc = "An old cargo hauler of russian design."
+	desc = "Some kind of cargo truck."
 	icon = 'hl13/icons/obj/port/van.dmi'
 	icon_state = "van_base"
 

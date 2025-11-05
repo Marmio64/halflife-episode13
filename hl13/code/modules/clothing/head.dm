@@ -36,7 +36,7 @@
 
 /obj/item/clothing/head/helmet/halflife/military
 	name = "military helmet"
-	desc = "An old world military helmet for protecting your noggin."
+	desc = "A green old world military helmet for protecting your noggin."
 	icon = 'hl13/icons/obj/clothing/hats.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
 	icon_state = "military"
@@ -50,7 +50,7 @@
 
 /obj/item/clothing/head/helmet/halflife/military/poland
 	name = "polish military helmet"
-	desc = "An old world military helmet for protecting your noggin. A band in the colours of the Polish flag has been wrapped around it."
+	desc = "A green old world military helmet for protecting your noggin. A band in the colours of the Polish flag has been wrapped around it."
 	icon = 'hl13/icons/obj/clothing/hats.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
 	icon_state = "military_poland"
@@ -78,7 +78,7 @@
 	base_icon_state = "military_poland"
 
 /obj/item/clothing/head/helmet/halflife/military/weak/crafted
-	name = "hand-made military helmet"
+	name = "hand-made metal helmet"
 	desc = "A hand made helmet formed from scraps and kevlar. It's not very good at protecting you in a meaningful way, but every bit counts."
 	icon_state = "steel_helmet"
 	base_icon_state = "steel_helmet"
@@ -101,7 +101,7 @@
 
 /obj/item/clothing/head/helmet/halflife/milhelm
 	name = "military helmet"
-	desc = "An old world military helmet for protecting your noggin."
+	desc = "A black old world military helmet for protecting your noggin."
 	icon = 'hl13/icons/obj/clothing/hats.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
 	icon_state = "milhelm"
@@ -125,7 +125,7 @@
 
 /obj/item/clothing/head/helmet/halflife/milhelm/poland
 	name = "polish military helmet"
-	desc = "An old world military helmet for protecting your noggin. This one has a band in the colours of the Polish flag wrapped around it."
+	desc = "A black old world military helmet for protecting your noggin. This one has a band in the colours of the Polish flag wrapped around it."
 	icon_state = "milhelm_poland"
 	base_icon_state = "milhelm_poland"
 
@@ -150,12 +150,9 @@
 /obj/item/clothing/head/helmet/halflife/headcrab/gonome
 	name = "gonome headcrab helmet"
 	desc = "A huge, hollowed out armored headcrab. Hard to see out of, but is surpsingly good at protecting your head."
-	icon = 'hl13/icons/obj/clothing/hats.dmi'
-	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
 	icon_state = "gonomecrab"
 	base_icon_state = "gonomecrab"
 	armor_type = /datum/armor/gonomecrab
-	flags_cover = EARS_COVERED
 
 /datum/armor/headcrab
 	melee = 25
