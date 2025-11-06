@@ -644,6 +644,10 @@
 	limb_integrity = 450
 	repairable_by = /obj/item/stack/kevlar
 
+/obj/item/clothing/suit/armor/halflife/plf_veteran/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_ARMOR_STEP)
+
 /obj/item/clothing/suit/armor/halflife/plf_veteran/deployment
 	slowdown = 1 //to be slightly faster than a wallhammer so long as dufflebag is zipped up
 

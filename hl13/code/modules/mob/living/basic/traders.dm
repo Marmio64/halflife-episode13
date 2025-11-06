@@ -424,6 +424,7 @@
 		/obj/item/knife/combat = list(PAYCHECK_CREW * 6, 3),
 		/obj/item/spear/halflife/deathmatch = list(PAYCHECK_CREW * 6, 3),
 		/obj/item/stack/medical/bandage = list(PAYCHECK_CREW * 0.75, 5),
+		/obj/item/stack/sheet/leather = list(PAYCHECK_CREW * 1.25, 5),
 	)
 
 	initial_wanteds = list(

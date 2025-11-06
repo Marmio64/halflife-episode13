@@ -21,6 +21,21 @@
 	bullet = 10
 	bomb = 10
 
+/obj/item/clothing/gloves/halflife/leather
+	name = "leather gloves"
+	desc = "These leather gloves offer some protection against prickly things and scrapes."
+	icon_state = "leather"
+	inhand_icon_state = null
+	greyscale_colors = null
+	cold_protection = HANDS
+	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+	resistance_flags = NONE
+	body_parts_covered = ARMS|HANDS
+	clothing_traits = list(TRAIT_PLANT_SAFE)
+	armor_type = /datum/armor/gloves_botanic_leather
+
 /obj/item/clothing/gloves/color/civilprotection/grunt
 	icon_state = "grunt"
 

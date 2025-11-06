@@ -4543,6 +4543,13 @@
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/outlands)
+"gWy" = (
+/obj/structure/lattice/catwalk/hl13,
+/obj/structure/railing/halflife/sewer{
+	dir = 8
+	},
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/sewer)
 "gWG" = (
 /obj/machinery/camera{
 	c_tag = "Labour Camp Canteen"
@@ -10140,9 +10147,6 @@
 /area/halflife/outdoors/outlands_city)
 "pPs" = (
 /obj/structure/railing/halflife/sewer{
-	dir = 4
-	},
-/obj/structure/railing/halflife/sewer{
 	dir = 8
 	},
 /obj/structure/lattice/catwalk/hl13,
@@ -12841,6 +12845,12 @@
 /obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
+"tIY" = (
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/indoor/metal/pipe{
+	dir = 1
+	},
+/area/halflife/indoors/sewer)
 "tJb" = (
 /obj/machinery/camera{
 	c_tag = "Conscript Bunker Entrance Outside";
@@ -13802,6 +13812,13 @@
 /obj/structure/weightmachine,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/prison)
+"veu" = (
+/obj/structure/lattice/catwalk/hl13,
+/obj/structure/railing/halflife/sewer{
+	dir = 4
+	},
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/sewer)
 "vfd" = (
 /obj/structure/halflife/trash/papers/one{
 	pixel_x = -8;
@@ -14379,6 +14396,10 @@
 /obj/item/stack/sheet/halflife/brick,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/outlands_city)
+"vUZ" = (
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer)
 "vVI" = (
 /obj/structure/halflife/pipes/horizontal/single/inwall{
 	dir = 1
@@ -37622,7 +37643,7 @@ aAY
 mGX
 xtI
 ctV
-lfA
+wfr
 mcu
 fzw
 ctV
@@ -37878,8 +37899,8 @@ ePB
 lfA
 lfA
 lfA
-wfr
 lfA
+wfr
 xtI
 lfA
 lfA
@@ -38129,7 +38150,7 @@ mGX
 xtI
 vYG
 lfA
-wfr
+lfA
 lfA
 lfA
 lfA
@@ -39132,7 +39153,7 @@ xwY
 xwY
 xwY
 xwY
-xwY
+xtI
 xtI
 mGX
 agv
@@ -39385,8 +39406,8 @@ xwY
 xwY
 xwY
 xwY
-xwY
 xtI
+nCE
 mGX
 agv
 aAY
@@ -39638,14 +39659,14 @@ xwY
 xwY
 xwY
 xwY
-xwY
 xtI
+nCE
 mGX
 pPs
-ekz
+gWy
 mGX
 mcT
-mGX
+vUZ
 mGX
 mGX
 xtI
@@ -39892,13 +39913,13 @@ xwY
 xwY
 xwY
 xtI
-xtI
+nCE
 mGX
-agv
-aAY
+veu
+veu
 mGX
 mcT
-mGX
+vUZ
 mGX
 mGX
 xtI
@@ -40151,7 +40172,7 @@ agv
 aAY
 frC
 lSr
-frC
+tIY
 frC
 frC
 xtI

@@ -649,7 +649,8 @@
 	icon = 'hl13/icons/obj/guns/wideguns.dmi'
 	icon_state = "svd"
 	inhand_icon_state = "svd"
-	fire_sound = "hl13/sound/weapons/ak47fire.ogg"
+	fire_sound = "hl13/sound/weapons/svdfire.ogg"
+	fire_sound_volume = 75
 	vary_fire_sound = FALSE
 	load_sound = "sound/items/weapons/gun/rifle/rifleload.ogg"
 	load_empty_sound = "sound/items/weapons/gun/rifle/rifleload.ogg"

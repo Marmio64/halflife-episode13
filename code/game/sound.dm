@@ -298,6 +298,13 @@
 			'sound/items/handling/armor_rustle/riot_armor/suitstep1.ogg',
 			'sound/items/handling/armor_rustle/riot_armor/suitstep2.ogg',
 			)
+		if(SFX_ARMOR_STEP)
+			soundin = pick(
+			'hl13/sound/movement/armor/step_armor.ogg',
+			'hl13/sound/movement/armor/step_armor2.ogg',
+			'hl13/sound/movement/armor/step_armor3.ogg',
+			'hl13/sound/movement/armor/step_armor4.ogg',
+			)
 		if(SFX_SWING_HIT || SFX_PUNCH)
 			soundin = pick(
 				'sound/items/weapons/genhit1.ogg',

@@ -175,6 +175,7 @@ GLOBAL_LIST_INIT(announcer_keys, list(
 #define SFX_SM_DELAM "sm_delam"
 #define SFX_SPARKS "sparks"
 #define SFX_SUIT_STEP "suit_step"
+#define SFX_ARMOR_STEP "armor_step"
 #define SFX_SWING_HIT "swing_hit"
 #define SFX_TERMINAL_TYPE "terminal_type"
 #define SFX_WARPSPEED "warpspeed"

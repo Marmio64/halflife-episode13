@@ -1,6 +1,6 @@
 /obj/item/clothing/gloves/botanic_leather
-	name = "botanist's leather gloves"
-	desc = "These leather gloves protect against thorns, barbs, prickles, spikes and other harmful objects of floral origin.  They're also quite warm."
+	name = "leather gloves"
+	desc = "These leather gloves offer some protection against prickly things."
 	icon_state = "leather"
 	inhand_icon_state = null
 	greyscale_colors = null
@@ -20,3 +20,4 @@
 	bio = 50
 	fire = 70
 	acid = 30
+	melee = 5

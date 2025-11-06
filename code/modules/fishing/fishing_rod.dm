@@ -669,7 +669,7 @@
 /obj/item/fishing_rod/bone
 	name = "bone fishing rod"
 	desc = "A humble rod, made with whatever happened to be on hand."
-	ui_description = "A fishing rod crafted with leather, sinew and bones."
+	ui_description = "A fishing rod crafted with animal sinew and bones."
 	icon_state = "fishing_rod_bone"
 	reel_overlay = "reel_bone"
 	default_line_color = "red"

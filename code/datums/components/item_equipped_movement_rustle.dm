@@ -6,7 +6,7 @@
 	///what move are we on.
 	var/move_counter = 0
 	///how many moves to take before playing the sound.
-	var/move_delay = 4
+	var/move_delay = 2
 
 	///volume at which the sound plays.
 	var/volume = 20

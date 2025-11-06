@@ -147,7 +147,7 @@ GLOBAL_LIST_INIT(carp_recipes, list ( \
  */
 /obj/item/stack/sheet/leather
 	name = "leather"
-	desc = "Tough hide taken from some creature."
+	desc = "Durable, dried out hide from some manner of animal."
 	singular_name = "leather piece"
 	icon_state = "sheet-leather"
 	inhand_icon_state = null
@@ -156,20 +156,9 @@ GLOBAL_LIST_INIT(carp_recipes, list ( \
 	drop_sound = 'sound/items/handling/materials/skin_drop.ogg'
 
 GLOBAL_LIST_INIT(leather_recipes, list ( \
-	new/datum/stack_recipe("wallet", /obj/item/storage/wallet, 1, crafting_flags = NONE, category = CAT_CONTAINERS), \
+	new/datum/stack_recipe("wallet", /obj/item/storage/wallet, 2, crafting_flags = NONE, category = CAT_CONTAINERS), \
 	new/datum/stack_recipe("muzzle", /obj/item/clothing/mask/muzzle, 2, crafting_flags = NONE, category = CAT_ENTERTAINMENT), \
-	new/datum/stack_recipe("leather shoes", /obj/item/clothing/shoes/laceup, 2, crafting_flags = NONE, category = CAT_CLOTHING), \
-	new/datum/stack_recipe("botany gloves", /obj/item/clothing/gloves/botanic_leather, 3, crafting_flags = NONE, category = CAT_CLOTHING), \
-	new/datum/stack_recipe("leather jacket", /obj/item/clothing/suit/jacket/leather, 7, crafting_flags = NONE, category = CAT_CLOTHING), \
-	new/datum/stack_recipe_list("belts", list( \
-		new/datum/stack_recipe("tool belt", /obj/item/storage/belt/utility, 4, crafting_flags = NONE, category = CAT_CONTAINERS), \
-		new/datum/stack_recipe("medical belt", /obj/item/storage/belt/medical, 2, crafting_flags = NONE, category = CAT_CONTAINERS), \
-		new/datum/stack_recipe("shoulder holster", /obj/item/storage/belt/holster, 3, crafting_flags = NONE, category = CAT_CONTAINERS), \
-		new/datum/stack_recipe("bandolier", /obj/item/storage/belt/bandolier, 5, crafting_flags = NONE, category = CAT_CONTAINERS), \
-	)),
-	new/datum/stack_recipe_list("cowboy hats", list( \
-		new/datum/stack_recipe("desperado hat", /obj/item/clothing/head/cowboy/black, 2, crafting_flags = NONE, category = CAT_CLOTHING), \
-	)),
+	new/datum/stack_recipe("leather gloves", /obj/item/clothing/gloves/halflife/leather, 3, crafting_flags = NONE, category = CAT_CLOTHING), \
 ))
 
 /obj/item/stack/sheet/leather/get_main_recipes()

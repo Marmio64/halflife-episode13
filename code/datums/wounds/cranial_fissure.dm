@@ -38,7 +38,7 @@
 	threshold_penalty = 40
 
 	severity = WOUND_SEVERITY_CRITICAL
-	sound_effect = 'sound/effects/dismember.ogg'
+	sound_effect = 'hl13/sound/effects/injury/head_explodie_01.ogg'
 
 	woundpain = 200 //your head is split open, its a wonder if you're alive with this active
 
