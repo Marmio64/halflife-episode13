@@ -15,6 +15,10 @@
 /obj/structure/halflife/trash/food/misc,
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/outdoors/deployment_city/forest)
+"aV" = (
+/obj/structure/halflife/leaves,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
 "bb" = (
 /obj/effect/koth_grace_field,
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -50,11 +54,6 @@
 /obj/machinery/combine_walllight/directional/south,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
-"bO" = (
-/obj/structure/table/halflife/wood/bar,
-/obj/structure/halflife/trash/glass/basic,
-/turf/open/floor/plating/indoor/woodc/mosaic,
-/area/halflife/outdoors/deployment_city/forest)
 "bP" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/old,
@@ -67,21 +66,23 @@
 /obj/effect/landmark/deployments_refugee,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"cg" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/indoor/woodc/fancy,
-/area/halflife/outdoors/deployment_city/forest)
 "ci" = (
 /turf/open/floor/plating/indoor/carpet/violet,
 /area/halflife/outdoors/deployment_city/forest)
-"co" = (
-/obj/structure/halflife/leaves,
-/turf/open/floor/plating/ground/sidewalk,
+"cl" = (
+/obj/structure/table/halflife/wood,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
 "cw" = (
 /obj/structure/table/halflife/no_smooth/wood/stand,
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/carpet,
+/area/halflife/outdoors/deployment_city/forest)
+"cy" = (
+/obj/structure/halflife/cargotruck{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
 "cD" = (
 /obj/structure/table/halflife/metal/grate,
@@ -117,12 +118,6 @@
 "cX" = (
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/outdoors/deployment_city/forest)
-"dg" = (
-/obj/structure/chair/halflife/wood{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/woodc/mosaic,
-/area/halflife/outdoors/deployment_city/forest)
 "dr" = (
 /obj/item/chair/halflife/wood/padded,
 /turf/open/floor/plating/indoor/carpet,
@@ -131,6 +126,10 @@
 /obj/machinery/repairpod,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"dU" = (
+/obj/effect/turf_decal/halflife/covering/wallpaper/red,
+/turf/closed/wall/halflife/concrete/alt,
+/area/halflife/outdoors/deployment_city/forest)
 "dW" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/tile/kitchen,
@@ -197,12 +196,6 @@
 "eN" = (
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
-"eO" = (
-/obj/structure/halflife/road_barrier{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/deployment_city/forest)
 "eQ" = (
 /obj/structure/razorwire{
 	dir = 4
@@ -239,6 +232,10 @@
 /obj/effect/koth_grace_field,
 /turf/open/halflife/water/salt/deep,
 /area/halflife/outdoors/deployment_city/forest)
+"fe" = (
+/obj/structure/halflife/trash/wood,
+/turf/open/misc/beach/sand,
+/area/halflife/outdoors/deployment_city/forest)
 "fl" = (
 /obj/structure/barricade/wooden/solid,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -246,27 +243,6 @@
 "fm" = (
 /obj/effect/mine/explosive,
 /turf/open/misc/beach/sand,
-/area/halflife/outdoors/deployment_city/forest)
-"fn" = (
-/obj/structure/table/halflife/wood,
-/obj/item/storage/halflife/hand_box/egg{
-	pixel_x = -7;
-	pixel_y = 12
-	},
-/obj/item/halflife/nutrient_bar_wrapping/beef{
-	pixel_x = 6;
-	pixel_y = 2
-	},
-/turf/open/floor/plating/indoor/checkered,
-/area/halflife/outdoors/deployment_city/forest)
-"fp" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/stack/sheet/mineral/sandbags{
-	pixel_x = 0;
-	pixel_y = 6;
-	amount = 10
-	},
-/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
 "fB" = (
 /obj/structure/bed/halflife/bedframe/wire,
@@ -300,20 +276,26 @@
 /turf/closed/mineral/random,
 /area/halflife/outdoors/deployment_city/forest)
 "gb" = (
-/obj/structure/barricade/sandbags,
-/turf/open/floor/plating/indoor/metal/smooth,
+/obj/structure/halflife/trash/glass/basic,
+/turf/open/misc/beach/sand,
 /area/halflife/outdoors/deployment_city/forest)
 "gc" = (
 /obj/machinery/combine_walllight/directional/east,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "gg" = (
-/obj/effect/turf_decal/halflife/covering/wallpaper/red,
-/turf/closed/wall/halflife/concrete/alt,
+/obj/structure/halflife/storage/shelf/wood,
+/turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/deployment_city/forest)
 "gp" = (
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city/forest)
+"gq" = (
+/obj/structure/closet/secure_closet/freezer/halflife,
+/obj/item/food/meat/slab/synthmeat,
+/obj/item/food/meat/slab/chicken,
+/turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/outdoors/deployment_city/forest)
 "gs" = (
 /obj/machinery/cash_deposit/rebel/tier3,
@@ -323,20 +305,10 @@
 /obj/structure/halflife/cone,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/forest)
-"gH" = (
-/obj/structure/halflife/road_barrier,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors/deployment_city/forest)
 "gK" = (
 /obj/structure/halflife/rails,
 /obj/machinery/deployment_points_flag/combine/low_cash,
 /turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/deployment_city/forest)
-"gM" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/stack/razorwire/full,
-/obj/item/stack/sheet/mineral/wood/fifty,
-/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
 "gO" = (
 /obj/structure/table/halflife/metal/grate,
@@ -390,6 +362,21 @@
 /obj/machinery/combine_walllight/directional/west,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/outdoors/deployment_city/forest)
+"hk" = (
+/obj/item/food/pierogi{
+	pixel_x = -10;
+	pixel_y = 10
+	},
+/obj/item/food/pierogi{
+	pixel_x = 2;
+	pixel_y = 1
+	},
+/turf/open/floor/plating/indoor/tile/kitchen,
+/area/halflife/outdoors/deployment_city/forest)
+"hl" = (
+/obj/structure/flora/tree/halflife/plain/concrete_thin,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city/forest)
 "hq" = (
 /obj/structure/chair/halflife/wood/padded{
 	dir = 1
@@ -401,10 +388,6 @@
 	pixel_y = 30
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/outdoors/deployment_city/forest)
-"hs" = (
-/obj/structure/table/halflife/no_smooth/large/wood/desk,
-/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
 "hu" = (
 /obj/machinery/combine_walllight/directional/south,
@@ -496,14 +479,17 @@
 /obj/structure/girder/displaced,
 /turf/open/halflife/water/salt/medium,
 /area/halflife/outdoors/deployment_city/forest)
+"jv" = (
+/obj/structure/halflife/cone,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city/forest)
 "jK" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/deployment_city/forest)
 "jU" = (
-/obj/structure/table/halflife/metal/small,
-/obj/item/kitchen/rollingpin,
-/turf/open/floor/plating/indoor/tile/kitchen,
+/obj/machinery/door/unpowered/halflife/wood,
+/turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/deployment_city/forest)
 "ke" = (
 /obj/structure/window/fulltile/halflife/nosmooth/generic,
@@ -549,16 +535,16 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/outdoors/deployment_city/forest)
+"kB" = (
+/obj/structure/halflife/pot/plant,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/outdoors/deployment_city/forest)
 "kC" = (
 /obj/structure/chair/halflife/overlaypickup/plastic{
 	dir = 4
 	},
 /mob/living/basic/citizen,
 /turf/open/misc/beach/sand,
-/area/halflife/outdoors/deployment_city/forest)
-"kF" = (
-/obj/structure/halflife/rug/fancy,
-/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
 "kJ" = (
 /obj/structure/table/halflife/no_smooth/large/metal,
@@ -611,10 +597,6 @@
 /obj/structure/ladder/halflife/upwards,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/outdoors/deployment_city/forest)
-"lG" = (
-/obj/machinery/power/halflife/streetlamphalt,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city/forest)
 "lJ" = (
 /turf/open/floor/plating/indoor/metal/grate/border/warning{
 	dir = 1
@@ -632,6 +614,11 @@
 /obj/structure/halflife/cone,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
+"md" = (
+/obj/machinery/jukebox/radio,
+/obj/structure/table/halflife/wood/bar,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/outdoors/deployment_city/forest)
 "me" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/checkered,
@@ -645,13 +632,12 @@
 	dir = 1
 	},
 /area/halflife/outdoors/deployment_city/forest)
-"mI" = (
-/obj/structure/table/halflife/no_smooth/large/metal,
-/obj/item/storage/halflife/hand_box/chicken{
-	pixel_x = -2;
-	pixel_y = 8
+"mE" = (
+/obj/structure/table/halflife/no_smooth/large/wood/square{
+	dir = 4
 	},
-/turf/open/floor/plating/indoor/tile/kitchen,
+/obj/item/trash/halflife/nutrient_bar_waste/beef,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
 "mN" = (
 /obj/structure/bed/halflife/bedframe/wire,
@@ -660,7 +646,10 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/combine_base)
 "mQ" = (
-/turf/open/floor/plating/indoor/woodc/wide,
+/obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
 "mT" = (
 /obj/item/reagent_containers/cup/glass/waterbottle/large{
@@ -701,10 +690,23 @@
 /obj/item/trash/flare,
 /turf/open/halflife/water/salt/medium,
 /area/halflife/outdoors/deployment_city/forest)
+"nT" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/deployment_city/forest)
 "nW" = (
 /obj/structure/halflife/pallet/stack,
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/outdoors/deployment_city/forest)
+"nX" = (
+/obj/structure/halflife/headcrab_cannister,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city/forest)
+"oe" = (
+/obj/structure/table/halflife/wood,
+/obj/structure/halflife/trash/glass/cans,
+/turf/open/floor/plating/indoor/checkered,
 /area/halflife/outdoors/deployment_city/forest)
 "oj" = (
 /obj/structure/reagent_dispensers/fueltank,
@@ -717,9 +719,16 @@
 /obj/structure/chair/office/halflife/blue,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/deployment_city/forest)
-"oC" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/plating/indoor/woodc/mosaic,
+"oJ" = (
+/obj/item/reagent_containers/cup/soda_cans/breenwater/empty{
+	pixel_x = -6;
+	pixel_y = 1
+	},
+/obj/item/reagent_containers/cup/soda_cans/breenwater/empty{
+	pixel_x = 7;
+	pixel_y = 10
+	},
+/turf/open/misc/beach/sand,
 /area/halflife/outdoors/deployment_city/forest)
 "oK" = (
 /obj/item/food/canned/halflife/beans{
@@ -730,6 +739,10 @@
 	dir = 1
 	},
 /area/halflife/indoors/combat_deployment/rebel_base)
+"oN" = (
+/obj/structure/halflife/rug,
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/outdoors/deployment_city/forest)
 "oO" = (
 /obj/structure/table/halflife/no_smooth/large/metal{
 	dir = 8
@@ -750,10 +763,9 @@
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/combat_deployment/combine_base)
 "pc" = (
-/obj/structure/halflife/road_barrier/concrete/alt{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/sidewalk/inner,
+/obj/structure/table/halflife/wood,
+/obj/item/storage/halflife/hand_box/cookie,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
 "pi" = (
 /obj/item/chair/halflife/wood/padded{
@@ -837,10 +849,9 @@
 /obj/machinery/door/airlock/highsecurity/combine,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
-"rz" = (
-/obj/structure/table/halflife/wood,
-/obj/item/food/pierogi,
-/turf/open/floor/plating/indoor/carpet,
+"rt" = (
+/obj/structure/halflife/rug/fancy,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
 "rB" = (
 /obj/structure/table/halflife/wood,
@@ -856,12 +867,6 @@
 /obj/effect/landmark/deployments_refugee,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"rN" = (
-/obj/structure/halflife/road_barrier/concrete/alt{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city/forest)
 "sd" = (
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
@@ -885,10 +890,6 @@
 	dir = 1
 	},
 /area/halflife/indoors/combat_deployment/rebel_base)
-"sH" = (
-/obj/structure/halflife/road_barrier,
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/deployment_city/forest)
 "sI" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/stack/bulletcasings{
@@ -896,6 +897,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"sJ" = (
+/obj/machinery/door/unpowered/halflife/wood,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/outdoors/deployment_city/forest)
 "sL" = (
 /obj/structure/table/halflife/no_smooth/large/crafting/armorbench,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
@@ -946,6 +951,18 @@
 /area/halflife/outdoors/deployment_city/forest)
 "tP" = (
 /obj/machinery/griddle,
+/turf/open/floor/plating/indoor/checkered,
+/area/halflife/outdoors/deployment_city/forest)
+"tS" = (
+/obj/structure/table/halflife/wood,
+/obj/item/storage/halflife/hand_box/egg{
+	pixel_x = -7;
+	pixel_y = 12
+	},
+/obj/item/halflife/nutrient_bar_wrapping/beef{
+	pixel_x = 6;
+	pixel_y = 2
+	},
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/outdoors/deployment_city/forest)
 "tU" = (
@@ -1006,9 +1023,8 @@
 /obj/machinery/ammo_crate,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
-"vV" = (
-/obj/machinery/jukebox/radio,
-/obj/structure/table/halflife/wood/bar,
+"vX" = (
+/obj/structure/halflife/trash/food/dinner,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
 "vZ" = (
@@ -1016,24 +1032,26 @@
 /obj/structure/bed/halflife/mattress/yellowed,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/deployment_city/forest)
-"wc" = (
-/obj/structure/chair/halflife/wood{
-	dir = 1
-	},
-/turf/open/floor/plating/indoor/woodc/fancy,
-/area/halflife/outdoors/deployment_city/forest)
 "wd" = (
 /obj/structure/barricade/wooden/solid,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/forest)
-"wB" = (
+"wl" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/stained,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/outdoors/deployment_city/forest)
+"wC" = (
+/obj/structure/halflife/road_barrier{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
 "wH" = (
-/obj/machinery/door/unpowered/halflife/wood,
-/turf/open/floor/plating/indoor/woodc/wide,
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/structure/bed/halflife/mattress/stained,
+/obj/machinery/light/small/cyan/directional/north,
+/turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/outdoors/deployment_city/forest)
 "xb" = (
 /obj/effect/decal/cleanable/blood/gibs/down,
@@ -1064,14 +1082,14 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"xv" = (
+/obj/structure/railing/halflife/wood,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/deployment_city/forest)
 "xC" = (
 /obj/item/stack/sheet/scrap_metal,
 /turf/open/floor/plating/indoor/metal/grate/border,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"xD" = (
-/obj/structure/halflife/pot/plant,
-/turf/open/floor/plating/indoor/woodc/mosaic,
-/area/halflife/outdoors/deployment_city/forest)
 "xK" = (
 /obj/structure/chair/halflife/metal/folding,
 /turf/open/floor/plating/indoor/metal/grate,
@@ -1082,20 +1100,12 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"xR" = (
-/obj/structure/halflife/trash/food/dinner,
-/turf/open/floor/plating/indoor/woodc/mosaic,
-/area/halflife/outdoors/deployment_city/forest)
 "xZ" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/reagent_containers/cup/beaker,
 /obj/item/reagent_containers/cup/beaker,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
-"yf" = (
-/obj/structure/halflife/trash/glass/basic,
-/turf/open/misc/beach/sand,
-/area/halflife/outdoors/deployment_city/forest)
 "yp" = (
 /obj/structure/halflife/road_barrier/concrete{
 	dir = 8
@@ -1149,10 +1159,18 @@
 /obj/structure/halflife/barrel/double/grey,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/deployment_city/forest)
+"zA" = (
+/obj/structure/halflife/street_sign/speed,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
 "zC" = (
 /obj/structure/table/halflife/no_smooth/wood/stand,
 /obj/structure/halflife/trash/books,
 /turf/open/floor/plating/indoor/woodc,
+/area/halflife/outdoors/deployment_city/forest)
+"zD" = (
+/obj/structure/halflife/road_barrier,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
 "zN" = (
 /obj/structure/barricade/sandbags,
@@ -1168,6 +1186,14 @@
 /obj/machinery/combine_walllight/directional/south,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
+"Ah" = (
+/obj/structure/table/halflife/wood/bar,
+/obj/item/reagent_containers/cup/glass/bottle/beer/light{
+	pixel_x = -5;
+	pixel_y = 10
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/outdoors/deployment_city/forest)
 "Ai" = (
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
@@ -1191,21 +1217,15 @@
 	},
 /area/halflife/outdoors/deployment_city/forest)
 "AD" = (
-/obj/structure/halflife/leaves,
-/turf/open/floor/plating/ground/sidewalk/inner,
+/obj/structure/halflife/road_barrier,
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
 "AN" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/outdoors/deployment_city/forest)
 "AT" = (
-/obj/item/food/pierogi{
-	pixel_x = -10;
-	pixel_y = 10
-	},
-/obj/item/food/pierogi{
-	pixel_x = 2;
-	pixel_y = 1
-	},
+/obj/structure/table/halflife/metal/small,
+/obj/item/kitchen/rollingpin,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/outdoors/deployment_city/forest)
 "AV" = (
@@ -1225,11 +1245,11 @@
 /obj/effect/spawner/random/halflife/loot/consumables,
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/outdoors/deployment_city/forest)
-"Bk" = (
-/obj/structure/halflife/road_barrier{
-	dir = 8
+"Bt" = (
+/obj/structure/halflife/trash/wood{
+	dir = 1
 	},
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/turf/open/misc/beach/sand,
 /area/halflife/outdoors/deployment_city/forest)
 "Bw" = (
 /obj/structure/table/halflife/wood,
@@ -1244,10 +1264,35 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/deployment_city/forest)
+"Cl" = (
+/obj/item/reagent_containers/cup/soda_cans/breenwater/empty{
+	pixel_x = 13;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/cup/soda_cans/breenwater/empty{
+	pixel_x = -1;
+	pixel_y = -3
+	},
+/turf/open/misc/beach/sand,
+/area/halflife/outdoors/deployment_city/forest)
+"Cr" = (
+/obj/machinery/light/small/cyan/directional/west,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/outdoors/deployment_city/forest)
 "Cs" = (
 /obj/machinery/combine_walllight/directional/south,
 /obj/structure/halflife/processor/cpu,
 /turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/outdoors/deployment_city/forest)
+"Cu" = (
+/obj/structure/table/halflife/no_smooth/large/wood/desk,
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/outdoors/deployment_city/forest)
+"Cz" = (
+/obj/structure/halflife/road_barrier/concrete/alt{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
 "CC" = (
 /obj/machinery/combine_walllight/directional/south,
@@ -1257,12 +1302,6 @@
 /obj/machinery/door/unpowered/halflife/metal/red,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"CK" = (
-/obj/structure/chair/halflife/wood{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/woodc/mosaic,
-/area/halflife/outdoors/deployment_city/forest)
 "CL" = (
 /obj/structure/halflife/trash/garbage{
 	pixel_x = 14;
@@ -1298,8 +1337,10 @@
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/outdoors/deployment_city/forest)
 "CX" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/indoor/woodc/wide,
+/obj/structure/halflife/road_barrier/concrete/alt{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
 "Da" = (
 /turf/open/floor/plating/indoor/carpet,
@@ -1320,6 +1361,11 @@
 /obj/item/reagent_containers/cup/soda_cans/breenwater/purple,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/combine_base)
+"Dj" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/reagent_containers/pill/patch/medkit,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/outdoors/deployment_city/forest)
 "Dk" = (
 /obj/structure/chair/halflife/wood/padded,
 /turf/open/floor/plating/indoor/carpet,
@@ -1390,6 +1436,14 @@
 	dir = 5
 	},
 /area/halflife/outdoors/deployment_city/forest)
+"Eq" = (
+/obj/structure/table/halflife/no_smooth/large/metal,
+/obj/item/storage/halflife/hand_box/chicken{
+	pixel_x = -2;
+	pixel_y = 8
+	},
+/turf/open/floor/plating/indoor/tile/kitchen,
+/area/halflife/outdoors/deployment_city/forest)
 "Es" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/old,
@@ -1406,12 +1460,6 @@
 "EF" = (
 /obj/structure/table/halflife/wood,
 /turf/open/floor/plating/indoor/carpet,
-/area/halflife/outdoors/deployment_city/forest)
-"EG" = (
-/obj/structure/bed/halflife/bedframe/wire,
-/obj/structure/bed/halflife/mattress/stained,
-/obj/machinery/light/small/cyan/directional/north,
-/turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/outdoors/deployment_city/forest)
 "EM" = (
 /obj/machinery/door/unpowered/halflife/wood{
@@ -1477,6 +1525,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate/border/warning,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"Gf" = (
+/obj/structure/table/halflife/metal/small,
+/turf/open/floor/plating/indoor/tile/kitchen,
+/area/halflife/outdoors/deployment_city/forest)
 "Gp" = (
 /obj/structure/table/halflife/metal,
 /obj/machinery/light/small/broken/directional/north,
@@ -1486,13 +1538,25 @@
 /obj/structure/halflife/road_barrier/combine,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/forest)
+"Gx" = (
+/obj/structure/halflife/trash/wood{
+	dir = 6
+	},
+/turf/open/misc/beach/sand,
+/area/halflife/outdoors/deployment_city/forest)
 "GG" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/deployment_city/forest)
-"GK" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional{
+"GN" = (
+/obj/structure/halflife/road_barrier{
 	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city/forest)
+"GO" = (
+/obj/structure/halflife/cargotruck{
+	dir = 1
 	},
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
@@ -1520,22 +1584,12 @@
 /obj/structure/halflife/road_barrier/combine,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/outdoors/deployment_city/forest)
-"Hc" = (
-/obj/structure/halflife/road_barrier{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/deployment_city/forest)
 "He" = (
 /obj/item/reagent_containers/cup/glass/bottle/beer{
 	pixel_x = 11;
 	pixel_y = 15
 	},
 /turf/open/misc/beach/sand,
-/area/halflife/outdoors/deployment_city/forest)
-"Hf" = (
-/obj/structure/flora/tree/halflife/plain/concrete_thin,
-/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/forest)
 "Hk" = (
 /obj/structure/halflife/rails,
@@ -1547,12 +1601,9 @@
 /obj/machinery/combine_walllight/directional/west,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/combat_deployment/combine_base)
-"Hy" = (
-/obj/structure/table/halflife/no_smooth/large/wood/square{
-	dir = 4
-	},
-/obj/item/trash/halflife/nutrient_bar_waste/beef,
-/turf/open/floor/plating/indoor/woodc/mosaic,
+"HB" = (
+/obj/structure/halflife/headcrab_cannister,
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
 "HJ" = (
 /obj/machinery/door/unpowered/halflife/metal,
@@ -1592,21 +1643,16 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
-"Iq" = (
-/obj/structure/halflife/cone,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city/forest)
 "IJ" = (
 /obj/structure/dresser,
 /turf/open/floor/plating/indoor/carpet/violet,
 /area/halflife/outdoors/deployment_city/forest)
-"IM" = (
-/obj/structure/table/halflife/wood/bar,
-/obj/item/reagent_containers/cup/glass/bottle/beer/light{
-	pixel_x = -5;
+"IK" = (
+/obj/item/reagent_containers/cup/soda_cans/breenwater/empty{
+	pixel_x = -7;
 	pixel_y = 10
 	},
-/turf/open/floor/plating/indoor/woodc/mosaic,
+/turf/open/misc/beach/sand,
 /area/halflife/outdoors/deployment_city/forest)
 "IZ" = (
 /obj/structure/chair/comfy/halflife/diner{
@@ -1627,11 +1673,9 @@
 	dispensedreagent = /datum/reagent/water/dirty/salt
 	},
 /area/halflife/outdoors/deployment_city/forest)
-"Ji" = (
-/obj/structure/halflife/road_barrier/concrete/alt{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/sidewalk,
+"Jj" = (
+/mob/living/basic/halflife/headcrab,
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
 "Jo" = (
 /obj/item/food/canned/halflife/crisps{
@@ -1645,24 +1689,12 @@
 /obj/structure/railing/halflife/solo/industrial,
 /turf/open/misc/beach/sand,
 /area/halflife/outdoors/deployment_city/forest)
-"Jr" = (
-/obj/structure/halflife/cargotruck{
-	dir = 1
-	},
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/deployment_city/forest)
 "Js" = (
 /obj/machinery/deployable_turret/combine{
 	dir = 8
 	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"JA" = (
-/obj/structure/halflife/cargotruck{
-	dir = 1
-	},
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/deployment_city/forest)
 "JE" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	dir = 8
@@ -1692,6 +1724,10 @@
 	dir = 4
 	},
 /turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
+"Kj" = (
+/obj/structure/table/halflife/no_smooth/large/wood/desk,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
 "Kk" = (
 /obj/structure/table/halflife/metal/grate,
@@ -1742,6 +1778,10 @@
 "Lh" = (
 /turf/open/halflife/water/salt/shallow,
 /area/halflife/outdoors/deployment_city/forest)
+"Lj" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/outdoors/deployment_city/forest)
 "Lv" = (
 /obj/item/stack/sheet/scrap_metal,
 /turf/open/halflife/water/salt/medium,
@@ -1776,13 +1816,19 @@
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/plating/indoor/metal/grate/border,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"Mh" = (
+/obj/structure/halflife/road_barrier,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city/forest)
 "Mm" = (
 /obj/structure/table/halflife/wood,
 /obj/structure/halflife/trash/glass/basic,
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/outdoors/deployment_city/forest)
 "Mn" = (
-/obj/structure/railing/halflife/wood,
+/obj/structure/railing/halflife/wood{
+	dir = 1
+	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/deployment_city/forest)
 "Mo" = (
@@ -1790,8 +1836,10 @@
 /turf/open/halflife/water/salt/medium,
 /area/halflife/outdoors/deployment_city/forest)
 "MA" = (
-/obj/structure/table/halflife/wood/bar,
-/turf/open/floor/plating/indoor/woodc/mosaic,
+/obj/structure/halflife/road_barrier/concrete/alt{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
 "MZ" = (
 /obj/machinery/combine_walllight/directional/west,
@@ -1810,6 +1858,10 @@
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Ns" = (
 /turf/open/floor/plating/indoor/carpet/green,
+/area/halflife/outdoors/deployment_city/forest)
+"Nt" = (
+/obj/structure/table/halflife/wood/bar,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
 "NF" = (
 /obj/structure/halflife/road_barrier,
@@ -1843,6 +1895,12 @@
 /obj/item/reagent_containers/cup/soda_cans/breenwater/green,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/combine_base)
+"NY" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/stack/razorwire/full,
+/obj/item/stack/sheet/mineral/wood/fifty,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
 "NZ" = (
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/combat_deployment/rebel_base)
@@ -1865,17 +1923,28 @@
 /obj/structure/halflife/rug/rubber,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/combine_base)
+"OG" = (
+/obj/structure/halflife/road_barrier{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city/forest)
 "OK" = (
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/forest)
 "OL" = (
 /obj/structure/table/halflife/wood,
-/obj/item/storage/halflife/hand_box/cookie,
-/turf/open/floor/plating/indoor/woodc/mosaic,
+/obj/item/food/pierogi,
+/turf/open/floor/plating/indoor/carpet,
 /area/halflife/outdoors/deployment_city/forest)
 "Pa" = (
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
+"Pb" = (
+/obj/structure/table/halflife/wood,
+/obj/item/reagent_containers/condiment/saltshaker,
+/turf/open/floor/plating/indoor/carpet,
 /area/halflife/outdoors/deployment_city/forest)
 "Pe" = (
 /obj/structure/halflife/road_barrier/concrete{
@@ -1891,9 +1960,9 @@
 	dir = 10
 	},
 /area/halflife/outdoors/deployment_city/forest)
-"Pl" = (
-/obj/structure/table/halflife/no_smooth/large/wood/desk,
-/turf/open/floor/plating/indoor/woodc/fancy,
+"Pn" = (
+/obj/structure/halflife/leaves,
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/forest)
 "Po" = (
 /obj/structure/halflife/storage/large/clothing,
@@ -1944,6 +2013,12 @@
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
+"Qf" = (
+/obj/structure/halflife/road_barrier/concrete/alt{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city/forest)
 "Qm" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/machinery/combine_health_station/self_recharging{
@@ -1959,15 +2034,6 @@
 "Qq" = (
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/outdoors/deployment_city/forest)
-"QB" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/indoor/woodc/mosaic,
-/area/halflife/outdoors/deployment_city/forest)
-"QG" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/reagent_containers/pill/patch/medkit,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/outdoors/deployment_city/forest)
 "QV" = (
 /obj/structure/halflife/storage/large/showcase,
 /turf/open/floor/plating/indoor/carpet/green,
@@ -1982,43 +2048,32 @@
 /obj/effect/landmark/deployments_metrocop,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/combine_base)
-"Rq" = (
-/obj/structure/table/halflife/wood,
-/obj/item/reagent_containers/condiment/saltshaker,
-/turf/open/floor/plating/indoor/carpet,
-/area/halflife/outdoors/deployment_city/forest)
 "Rt" = (
 /obj/structure/flora/tree/halflife/plain,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/forest)
 "Rv" = (
-/obj/structure/halflife/road_barrier/concrete/alt{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/deployment_city/forest)
-"RB" = (
-/obj/structure/halflife/trash/wood{
-	dir = 1
-	},
-/turf/open/misc/beach/sand,
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/outdoors/deployment_city/forest)
 "RE" = (
 /obj/structure/barricade/wooden/solid,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/forest)
 "RH" = (
-/obj/structure/halflife/trash/wood,
-/turf/open/misc/beach/sand,
+/obj/structure/chair/halflife/metal/blue{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/outdoors/deployment_city/forest)
+"RK" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
 "RN" = (
 /obj/effect/payload_path,
 /obj/structure/halflife/rails,
 /turf/open/misc/beach/sand,
-/area/halflife/outdoors/deployment_city/forest)
-"RP" = (
-/obj/machinery/door/unpowered/halflife/wood,
-/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
 "RT" = (
 /turf/open/floor/plating/indoor/concrete/stairs{
@@ -2038,18 +2093,18 @@
 /turf/open/misc/beach/sand,
 /area/halflife/outdoors/deployment_city/forest)
 "Sv" = (
-/obj/structure/halflife/storage/shelf/wood,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/deployment_city/forest)
-"SK" = (
-/obj/structure/halflife/trash/wood{
-	dir = 6
+"SC" = (
+/obj/item/reagent_containers/cup/soda_cans/breenwater/empty{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/reagent_containers/cup/soda_cans/breenwater/empty{
+	pixel_x = -8;
+	pixel_y = 11
 	},
 /turf/open/misc/beach/sand,
-/area/halflife/outdoors/deployment_city/forest)
-"SO" = (
-/obj/structure/table/halflife/wood,
-/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
 "Tb" = (
 /obj/structure/girder/displaced,
@@ -2059,11 +2114,22 @@
 /obj/structure/girder/displaced,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/outdoors/deployment_city/forest)
+"Ti" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/outdoors/deployment_city/forest)
 "Tj" = (
 /obj/item/stack/sheet/scrap_metal,
 /turf/open/halflife/water/shallow{
 	dispensedreagent = /datum/reagent/water/dirty/salt
 	},
+/area/halflife/outdoors/deployment_city/forest)
+"Tw" = (
+/obj/item/reagent_containers/cup/soda_cans/breenwater/empty{
+	pixel_x = -9;
+	pixel_y = -2
+	},
+/turf/open/misc/beach/sand,
 /area/halflife/outdoors/deployment_city/forest)
 "TA" = (
 /obj/structure/halflife/headcrab_cannister,
@@ -2082,14 +2148,23 @@
 /obj/structure/halflife/road_barrier/combine,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
-"TO" = (
-/obj/machinery/light/small/cyan/directional/west,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/outdoors/deployment_city/forest)
 "Ub" = (
 /mob/living/basic/halflife/headcrab,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/outdoors/deployment_city/forest)
+"Ud" = (
+/obj/structure/halflife/headcrab_cannister,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
+"Uo" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/stack/sheet/mineral/sandbags{
+	pixel_x = 0;
+	pixel_y = 6;
+	amount = 10
+	},
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
 "Ut" = (
 /obj/structure/flora/tree/halflife/plain/thin,
@@ -2110,12 +2185,6 @@
 "UB" = (
 /turf/open/floor/plating/indoor/metal/grate/border/warning,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"UG" = (
-/obj/structure/chair/halflife/metal/blue{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/woodc/mosaic,
-/area/halflife/outdoors/deployment_city/forest)
 "UM" = (
 /obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/checkered,
@@ -2138,9 +2207,19 @@
 /obj/structure/halflife/trash/wood,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
+"VH" = (
+/obj/structure/halflife/tv/tube/small{
+	pixel_y = 12
+	},
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/outdoors/deployment_city/forest)
 "VM" = (
 /obj/structure/halflife/cone,
 /turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/forest)
+"VR" = (
+/mob/living/basic/halflife/headcrab,
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/forest)
 "VU" = (
 /obj/structure/table/halflife/metal/grate,
@@ -2150,23 +2229,15 @@
 	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"VW" = (
+/obj/machinery/power/halflife/streetlamphalt,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city/forest)
 "VZ" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/woodc,
-/area/halflife/outdoors/deployment_city/forest)
-"Wr" = (
-/obj/structure/closet/secure_closet/freezer/halflife,
-/obj/item/food/meat/slab/synthmeat,
-/obj/item/food/meat/slab/chicken,
-/turf/open/floor/plating/indoor/tile/kitchen,
-/area/halflife/outdoors/deployment_city/forest)
-"WA" = (
-/obj/structure/railing/halflife/wood{
-	dir = 1
-	},
-/turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/deployment_city/forest)
 "WS" = (
 /obj/machinery/door/unpowered/halflife/metal,
@@ -2187,6 +2258,12 @@
 /obj/structure/halflife/trash/glass/plate,
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/outdoors/deployment_city/forest)
+"Xx" = (
+/obj/structure/chair/halflife/wood{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/outdoors/deployment_city/forest)
 "XH" = (
 /turf/open/floor/plating/indoor/metal/grate/border,
 /area/halflife/indoors/combat_deployment/rebel_base)
@@ -2200,6 +2277,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
+"XT" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/outdoors/deployment_city/forest)
 "Ya" = (
 /obj/structure/halflife/rails{
 	dir = 1
@@ -2207,15 +2288,13 @@
 /obj/effect/payload_path/final_point,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
-"Yc" = (
-/obj/structure/halflife/road_barrier,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city/forest)
-"Yf" = (
-/obj/structure/halflife/tv/tube/small{
-	pixel_y = 12
+"Yg" = (
+/obj/item/reagent_containers/cup/soda_cans/breenwater/empty,
+/obj/item/reagent_containers/cup/soda_cans/breenwater/empty{
+	pixel_x = -5;
+	pixel_y = -5
 	},
-/turf/open/floor/plating/indoor/woodc/fancy,
+/turf/open/misc/beach/sand,
 /area/halflife/outdoors/deployment_city/forest)
 "Yh" = (
 /obj/structure/halflife/toilet{
@@ -2253,13 +2332,18 @@
 /obj/structure/halflife/road_barrier{
 	dir = 8
 	},
-/turf/open/floor/plating/ground/sidewalk/inner,
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
 "YF" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional{
 	dir = 1
 	},
 /turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
+"YG" = (
+/obj/structure/table/halflife/wood/bar,
+/obj/structure/halflife/trash/glass/basic,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
 "YH" = (
 /obj/structure/fluff/beach_umbrella{
@@ -2274,10 +2358,6 @@
 /obj/structure/halflife/rails,
 /obj/effect/payload_path,
 /turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/deployment_city/forest)
-"YO" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
 "YP" = (
 /obj/structure/sign/poster/halflife/combine{
@@ -2302,6 +2382,18 @@
 	},
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/outdoors/deployment_city/forest)
+"Zi" = (
+/obj/structure/chair/halflife/wood{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/outdoors/deployment_city/forest)
+"Zm" = (
+/obj/structure/chair/halflife/wood{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/outdoors/deployment_city/forest)
 "Zq" = (
 /obj/structure/halflife/rails,
 /obj/effect/payload_path,
@@ -2313,21 +2405,12 @@
 	},
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
-"ZF" = (
-/obj/structure/table/halflife/metal/small,
-/turf/open/floor/plating/indoor/tile/kitchen,
-/area/halflife/outdoors/deployment_city/forest)
 "ZG" = (
 /obj/machinery/deployment_points_flag/poland,
 /turf/open/floor/plating/indoor/metal/grate/border/warning,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "ZH" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/outdoors/deployment_city/forest)
-"ZI" = (
-/obj/structure/table/halflife/wood,
-/obj/structure/halflife/trash/glass/cans,
-/turf/open/floor/plating/indoor/checkered,
 /area/halflife/outdoors/deployment_city/forest)
 "ZJ" = (
 /obj/machinery/deployable_turret/combine{
@@ -2749,11 +2832,11 @@ qb
 Ai
 sB
 ov
-sd
+Jj
 sd
 sd
 ov
-sB
+nX
 Ai
 qb
 qb
@@ -2905,7 +2988,7 @@ sB
 ov
 sd
 sd
-sd
+Jj
 ov
 sB
 Ai
@@ -3056,12 +3139,12 @@ qb
 qb
 Ai
 sB
-ov
+Ud
 sd
 sd
 sd
 ov
-sB
+VR
 Ai
 qb
 qb
@@ -3209,7 +3292,7 @@ qb
 qb
 qb
 Ai
-sB
+VR
 ov
 sd
 sd
@@ -3829,7 +3912,7 @@ sB
 ov
 sd
 sd
-sd
+Jj
 ov
 gC
 Ai
@@ -3978,7 +4061,7 @@ qb
 qb
 qb
 qb
-Iq
+jv
 sB
 ov
 sd
@@ -4135,9 +4218,9 @@ qb
 Ai
 sB
 ov
+Jj
 sd
-sd
-sd
+HB
 ov
 sB
 Ai
@@ -5169,7 +5252,7 @@ Ai
 Ai
 Ai
 Ai
-Ai
+LO
 Ai
 qb
 qb
@@ -5194,7 +5277,7 @@ ZN
 Az
 yJ
 Az
-jU
+AT
 qb
 qb
 qb
@@ -5322,9 +5405,9 @@ sB
 sB
 sB
 sB
-sB
-sB
-Ai
+Pn
+hl
+LO
 qb
 qb
 qb
@@ -5348,11 +5431,11 @@ kk
 Az
 Az
 Az
-ZF
-gg
-vV
+Gf
+dU
+md
 DL
-MA
+Nt
 Aj
 PF
 bf
@@ -5477,7 +5560,7 @@ ov
 ov
 ov
 ov
-sB
+Pn
 Ai
 qb
 qb
@@ -5506,7 +5589,7 @@ Az
 qU
 DL
 DL
-IM
+Ah
 Aj
 Aj
 Da
@@ -5514,19 +5597,19 @@ aG
 EF
 Da
 Mm
-Rq
+Pb
 Aj
 qb
 qb
-Bk
+OG
+GN
+wC
 YC
-Hc
-eO
-eO
-eO
-Hc
 YC
-Bk
+YC
+wC
+GN
+OG
 qb
 qb
 qb
@@ -5652,15 +5735,15 @@ qb
 qb
 qb
 qb
-mI
+Eq
 Az
 yJ
 Az
-Wr
-gg
+gq
+dU
 DL
 DL
-MA
+Nt
 Aj
 Aj
 Da
@@ -5806,15 +5889,15 @@ qb
 qb
 qb
 qb
-AT
+hk
 Az
 Az
 Az
 br
-gg
-YO
-bO
-MA
+dU
+RK
+YG
+Nt
 Aj
 Aj
 Aj
@@ -5826,15 +5909,15 @@ Aj
 Aj
 EF
 qb
-rN
-pc
-Ji
+MA
+Qf
+Cz
 sd
 sd
 sd
-Ji
-pc
-rN
+Cz
+Qf
+MA
 qb
 qb
 qb
@@ -5965,7 +6048,7 @@ qb
 qb
 qb
 qb
-gg
+dU
 Aj
 Aj
 Aj
@@ -5983,9 +6066,9 @@ qb
 Ai
 sB
 ov
-Rv
-Rv
-Rv
+CX
+CX
+CX
 ov
 sB
 Ai
@@ -6119,7 +6202,7 @@ tN
 qb
 qb
 qb
-gg
+dU
 Aj
 Aj
 Aj
@@ -6273,7 +6356,7 @@ tN
 qb
 qb
 qb
-gg
+dU
 Aj
 Aj
 Aj
@@ -6281,7 +6364,7 @@ Aj
 Aj
 Dk
 Bw
-rz
+OL
 Xn
 hq
 Aj
@@ -6291,9 +6374,9 @@ qb
 AN
 AN
 AN
-GK
-GK
-GK
+mQ
+mQ
+mQ
 AN
 AN
 AN
@@ -6427,7 +6510,7 @@ kU
 qb
 qb
 qb
-gg
+dU
 Aj
 xh
 rB
@@ -6757,7 +6840,7 @@ sd
 sd
 sd
 ov
-AD
+Pn
 Ai
 qb
 qb
@@ -6910,8 +6993,8 @@ ov
 sd
 sd
 sd
-co
-Hf
+aV
+hl
 LO
 qb
 cG
@@ -7065,7 +7148,7 @@ sd
 sd
 VM
 ov
-AD
+Pn
 Ai
 qb
 ZH
@@ -7935,7 +8018,7 @@ iw
 OK
 tN
 Ai
-AD
+Pn
 ov
 sd
 sd
@@ -8089,8 +8172,8 @@ tN
 fc
 tN
 LO
-Hf
-co
+hl
+aV
 sd
 sd
 sd
@@ -8146,9 +8229,9 @@ ov
 Ds
 Ai
 qb
+gg
 Sv
-mQ
-mQ
+Sv
 qb
 Aj
 Aj
@@ -8243,7 +8326,7 @@ tN
 tN
 tN
 Ai
-AD
+Pn
 ov
 sd
 sd
@@ -8275,17 +8358,17 @@ BZ
 Yq
 qb
 DL
-CK
-CK
-oC
-OL
+Xx
+Xx
+XT
+pc
 qb
 sT
 cw
 Da
 qb
-Pl
-ul
+Cu
+oN
 ul
 qb
 qb
@@ -8300,10 +8383,10 @@ ov
 sB
 Ai
 qb
-CX
-mQ
-mQ
-wH
+nT
+Sv
+Sv
+jU
 Aj
 bH
 bH
@@ -8429,18 +8512,18 @@ sB
 fa
 qb
 DL
-xR
-Hy
+vX
+mE
 DL
-SO
+cl
 qb
-mQ
-mQ
-mQ
+Sv
+Sv
+Sv
 qb
-Yf
+VH
 ul
-wc
+Zm
 qb
 qb
 qb
@@ -8454,9 +8537,9 @@ ov
 sB
 Ai
 qb
+gg
 Sv
-mQ
-mQ
+Sv
 qb
 Aj
 bH
@@ -8583,10 +8666,10 @@ sB
 Ai
 qb
 DL
-dg
-dg
+Zi
+Zi
 DL
-xD
+kB
 qb
 qb
 qb
@@ -8594,7 +8677,7 @@ YZ
 qb
 ul
 ul
-cg
+Ti
 qb
 qb
 qb
@@ -8762,9 +8845,9 @@ ov
 yp
 Pe
 qb
+gg
 Sv
-mQ
-mQ
+Sv
 qb
 Aj
 bH
@@ -8916,10 +8999,10 @@ ov
 sB
 Ai
 qb
-CX
-mQ
-mQ
-wH
+nT
+Sv
+Sv
+jU
 Aj
 bH
 bH
@@ -9003,7 +9086,7 @@ OK
 AN
 tq
 ia
-gb
+Rv
 ov
 ov
 ov
@@ -9070,9 +9153,9 @@ ov
 sB
 Ai
 qb
+gg
 Sv
-mQ
-mQ
+Sv
 qb
 Aj
 bH
@@ -9155,9 +9238,9 @@ OK
 tN
 tN
 AN
-EG
+wH
 ia
-gb
+Rv
 ov
 eH
 ov
@@ -9311,7 +9394,7 @@ tN
 AN
 hr
 ia
-gb
+Rv
 ov
 ov
 ov
@@ -9352,8 +9435,8 @@ ov
 sB
 Ai
 ke
-ZI
-fn
+oe
+tS
 tP
 me
 Bd
@@ -9378,9 +9461,9 @@ ov
 sB
 Ai
 qb
+gg
 Sv
-mQ
-mQ
+Sv
 qb
 Aj
 bH
@@ -9532,10 +9615,10 @@ ov
 sB
 Ai
 qb
-CX
-mQ
-mQ
-wH
+nT
+Sv
+Sv
+jU
 Aj
 bH
 bH
@@ -9686,9 +9769,9 @@ ov
 sB
 Ai
 qb
+gg
 Sv
-mQ
-mQ
+Sv
 qb
 Aj
 bH
@@ -9848,7 +9931,7 @@ Aj
 bH
 bH
 Aj
-RP
+sJ
 DL
 DL
 DL
@@ -9923,7 +10006,7 @@ Kx
 AN
 bK
 Ai
-Yc
+zD
 Ai
 Ai
 Ai
@@ -9994,9 +10077,9 @@ ov
 sB
 Ai
 qb
+gg
 Sv
-mQ
-mQ
+Sv
 qb
 uF
 bH
@@ -10005,7 +10088,7 @@ Aj
 qb
 DL
 DL
-QB
+Lj
 qb
 Ai
 Ai
@@ -10077,7 +10160,7 @@ ia
 AN
 sB
 sB
-gH
+Mh
 sB
 sB
 gC
@@ -10148,16 +10231,16 @@ ov
 Ds
 Ai
 qb
-CX
-mQ
-mQ
-wH
+nT
+Sv
+Sv
+jU
 Aj
 bH
 bH
 Aj
-hs
-kF
+Kj
+rt
 DL
 DL
 qb
@@ -10302,16 +10385,16 @@ ov
 sB
 Ai
 qb
+gg
 Sv
-mQ
-mQ
+Sv
 qb
 Aj
 bH
 bH
 Aj
 DL
-UG
+RH
 DL
 DL
 qb
@@ -10483,13 +10566,13 @@ tN
 tN
 tN
 AN
-wB
-TO
+wl
+Cr
 ia
 ia
 ia
-TO
-wB
+Cr
+wl
 AN
 OK
 OK
@@ -10637,13 +10720,13 @@ tN
 tN
 OK
 AN
-QG
+Dj
 ia
 ia
 ia
 ia
 ia
-QG
+Dj
 AN
 OK
 fc
@@ -10886,7 +10969,7 @@ ov
 ov
 ov
 ov
-co
+aV
 ov
 ov
 sB
@@ -11001,7 +11084,7 @@ Kx
 AN
 sB
 sB
-gH
+Mh
 gC
 sB
 sB
@@ -11039,9 +11122,9 @@ sB
 sB
 sB
 sB
-AD
-Hf
-AD
+Pn
+hl
+Pn
 sB
 sB
 Ai
@@ -11155,7 +11238,7 @@ ia
 AN
 bK
 Ai
-Yc
+zD
 Ai
 Ai
 Ai
@@ -11254,7 +11337,7 @@ tN
 tN
 ia
 ov
-gM
+NY
 ov
 ov
 ov
@@ -11408,7 +11491,7 @@ tN
 tN
 ov
 eH
-fp
+Uo
 ov
 ov
 ov
@@ -11775,7 +11858,7 @@ tN
 AN
 tq
 ia
-gb
+Rv
 ov
 ov
 ov
@@ -11927,9 +12010,9 @@ fc
 OK
 tN
 AN
-EG
+wH
 ia
-gb
+Rv
 ov
 eH
 ov
@@ -12083,7 +12166,7 @@ tN
 AN
 hr
 ia
-gb
+Rv
 ov
 ov
 ov
@@ -12618,9 +12701,9 @@ sB
 Ds
 sB
 sB
-AD
-Hf
-AD
+Pn
+hl
+Pn
 sB
 sB
 sB
@@ -12773,7 +12856,7 @@ ov
 ov
 ov
 ov
-co
+aV
 ov
 ov
 ov
@@ -12808,7 +12891,7 @@ ov
 ov
 ov
 ov
-ov
+zA
 NF
 ov
 ov
@@ -12820,7 +12903,7 @@ ov
 ov
 ov
 ov
-JA
+cy
 eC
 "}
 (69,1,1) = {"
@@ -12965,7 +13048,7 @@ sd
 sd
 sd
 sd
-sH
+AD
 sd
 ZA
 sd
@@ -13119,13 +13202,13 @@ sd
 sd
 sd
 sd
-sH
+AD
 sd
 ZA
 sd
 sd
 sd
-Jr
+GO
 sd
 sd
 sd
@@ -13273,7 +13356,7 @@ sd
 sd
 sd
 VM
-sH
+AD
 sd
 ZA
 sd
@@ -14141,7 +14224,7 @@ tN
 tN
 tN
 fc
-lG
+VW
 Ai
 ov
 sB
@@ -14450,8 +14533,8 @@ cO
 cO
 cO
 cO
-WA
 Mn
+xv
 cO
 cO
 tN
@@ -14604,8 +14687,8 @@ tN
 cO
 cO
 tN
-WA
 Mn
+xv
 cO
 tN
 cO
@@ -14613,7 +14696,7 @@ cO
 cO
 cO
 cO
-yf
+gb
 cO
 cO
 cO
@@ -14659,7 +14742,7 @@ cO
 cO
 fm
 cO
-yf
+gb
 ga
 ga
 ga
@@ -14744,7 +14827,7 @@ cO
 cO
 cO
 eQ
-SK
+Gx
 cO
 cO
 cO
@@ -14758,8 +14841,8 @@ cO
 eQ
 cO
 cO
-WA
 Mn
+xv
 cO
 cO
 eQ
@@ -14912,8 +14995,8 @@ eQ
 cO
 cO
 cO
-WA
 Mn
+xv
 cO
 cO
 cO
@@ -15066,8 +15149,8 @@ cO
 cO
 cO
 cO
-WA
 Mn
+xv
 cO
 cO
 cO
@@ -15098,7 +15181,7 @@ eQ
 cO
 cO
 cO
-RH
+fe
 cO
 cO
 cO
@@ -15220,8 +15303,8 @@ cO
 cO
 cO
 cO
-WA
 Mn
+xv
 eQ
 cO
 cO
@@ -15374,8 +15457,8 @@ cO
 fm
 cO
 cO
-WA
 Mn
+xv
 cO
 cO
 cO
@@ -15528,8 +15611,8 @@ cO
 cO
 cO
 cO
-WA
 Mn
+xv
 cO
 cO
 cO
@@ -15625,8 +15708,8 @@ ga
 ga
 ga
 cO
-cO
-cO
+Yg
+Cl
 ga
 ga
 ga
@@ -15665,7 +15748,7 @@ Lh
 cO
 fm
 cO
-yf
+gb
 cO
 fm
 cO
@@ -15682,8 +15765,8 @@ cO
 cO
 cO
 cO
-WA
 Mn
+xv
 cO
 cO
 cO
@@ -15779,9 +15862,9 @@ ga
 ga
 cO
 cO
-cO
-cO
-cO
+Tw
+oJ
+SC
 ga
 ga
 ga
@@ -15935,7 +16018,7 @@ cO
 YH
 kC
 He
-cO
+IK
 ga
 ga
 ga
@@ -16148,7 +16231,7 @@ cO
 cO
 cO
 cO
-RB
+Bt
 cO
 cO
 cO
@@ -16335,7 +16418,7 @@ cO
 cO
 cO
 cO
-RB
+Bt
 cO
 cO
 Jq

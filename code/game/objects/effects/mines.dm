@@ -148,13 +148,13 @@
 	/// The devastation range of the resulting explosion.
 	var/range_devastation = 0
 	/// The heavy impact range of the resulting explosion.
-	var/range_heavy = 1
+	var/range_heavy = 2
 	/// The light impact range of the resulting explosion.
-	var/range_light = 2
+	var/range_light = 3
 	/// The flame range of the resulting explosion.
 	var/range_flame = 0
 	/// The flash range of the resulting explosion.
-	var/range_flash = 3
+	var/range_flash = 0
 
 /obj/effect/mine/explosive/mineEffect(mob/victim)
 	explosion(src, range_devastation, range_heavy, range_light, range_flame, range_flash)

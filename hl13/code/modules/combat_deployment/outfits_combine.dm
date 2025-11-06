@@ -366,11 +366,10 @@
 
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/cremator
-	uniform = /obj/item/clothing/under/citizen
 	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat/cremator
 	suit_store = /obj/item/gun/energy/immolator
 
-	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch/cremator
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
 
