@@ -611,7 +611,7 @@
 
 	semicd = TRUE
 
-	if(!bypass_timer && (!do_after(user, 12 SECONDS, target) || user.zone_selected != BODY_ZONE_PRECISE_MOUTH))
+	if(!bypass_timer && (!do_after(user, 10 SECONDS, target) || user.zone_selected != BODY_ZONE_PRECISE_MOUTH))
 		if(user)
 			if(user == target)
 				user.visible_message(span_notice("[user] decided not to shoot."))
@@ -625,13 +625,13 @@
 	target.visible_message(span_warning("[user] pulls the trigger!"), span_userdanger("[(user == target) ? "You pull" : "[user] pulls"] the trigger!"))
 
 	if(chambered?.loaded_projectile)
-		chambered.loaded_projectile.damage *= 5
+		chambered.loaded_projectile.damage *= 8
 		if(chambered.loaded_projectile.wound_bonus != CANT_WOUND)
 			chambered.loaded_projectile.wound_bonus += 5 // much more dramatic on multiple pellet'd projectiles really
 
 	var/fired = process_fire(target, user, TRUE, params, BODY_ZONE_HEAD)
 	if(!fired && chambered?.loaded_projectile)
-		chambered.loaded_projectile.damage /= 5
+		chambered.loaded_projectile.damage /= 8
 		if(chambered.loaded_projectile.wound_bonus != CANT_WOUND)
 			chambered.loaded_projectile.wound_bonus -= 5
 
