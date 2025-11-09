@@ -177,7 +177,7 @@
 /obj/machinery/deployment_payload/coast
 	altered_respawn_speed = 40 SECONDS
 	normal_respawn_speed = 20 SECONDS
-	time_per_checkpoint = 120 SECONDS
+	time_per_checkpoint = 180 SECONDS
 
 /obj/effect/payload_path
 	name = "payload path"
