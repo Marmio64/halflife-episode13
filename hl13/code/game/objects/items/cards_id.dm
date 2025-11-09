@@ -56,3 +56,13 @@
 /obj/item/card/id/advanced/halflife/combine/four/sectoral
 	name = "\improper Sectoral Commander ID"
 	registered_name = "Sectoral Commander"
+
+/obj/item/card/id/combine_tdm
+	name = "\improper Combine ID"
+	icon_state = "id_combine"
+	icon = 'hl13/icons/obj/ID.dmi'
+
+/obj/item/card/id/rebel_tdm
+	name = "\improper Rebel ID"
+	icon_state = "id_grey"
+	icon = 'hl13/icons/obj/ID.dmi'

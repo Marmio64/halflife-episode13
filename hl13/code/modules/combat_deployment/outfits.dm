@@ -16,6 +16,10 @@
 	/// Is there a unique combat music for this class?
 	var/combat_music = null
 	var/loadout_tier = 1
+	var/faction = null
+
+	/// Job name to put on the ID so you know their class
+	var/id_name
 
 	var/extra_str
 	var/extra_dex
@@ -64,3 +68,12 @@
 		human_to_equip.change_stat(STATKEY_DEX, extra_dex)
 	if(extra_int)
 		human_to_equip.change_stat(STATKEY_INT, extra_int)
+
+	var/obj/item/card/id/W = human_to_equip.wear_id
+	if(W)
+		if(faction == REBEL_DEPLOYMENT_FACTION)
+			W.assignment = id_name
+			W.registered_name = "[id_name] [human_to_equip.real_name]"
+		else if(faction == COMBINE_DEPLOYMENT_FACTION)
+			W.assignment = id_name
+			W.registered_name = "[id_name]-[rand(111,999)]"

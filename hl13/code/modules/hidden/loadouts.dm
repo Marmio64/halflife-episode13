@@ -24,12 +24,17 @@
 	ADD_TRAIT(H, TRAIT_NO_FOV_EFFECT, OUTFIT_TRAIT)
 	H.deployment_faction = COMBINE_DEPLOYMENT_FACTION
 
+/datum/outfit/deployment_loadout/hidden/combine
+	faction = COMBINE_DEPLOYMENT_FACTION
+	id = /obj/item/card/id/combine_tdm
+
 //The defender, shotgunners specialize in demolishing the hidden if they dare get close to them.
 //While their armor won't help to stop the hidden's knife, it does help a little bit against their grenades.
 /datum/outfit/deployment_loadout/hidden/combine/shotgunner
 	name = "Hidden: Shotgunner"
 	display_name = "DEFENSE: Shotgunner"
 	desc = "Use your high power shotgun to keep the Hidden away from you and your team."
+	id_name = "Shotgunner"
 
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
@@ -51,6 +56,7 @@
 	name = "Hidden: Riot Cop"
 	display_name = "DEFENSE: Riot Cop"
 	desc = "Hold off the Hidden with your sledgehammer. You don't have any better chances of surviving getting stabbed than your comrades, but have a high chance to parry hits with your melee weapon."
+	id_name = "Riotcop"
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
@@ -79,6 +85,7 @@
 	name = "Hidden: Conscript"
 	display_name = "ASSAULT: Conscript"
 	desc = "Utilize your high power M4A1 and extra speed to keep pressure on the Hidden from close and long range."
+	id_name = "Conscript"
 
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar/fast
 	mask = /obj/item/clothing/mask/gas/hl2/military
@@ -110,6 +117,7 @@
 	name = "Hidden: Grunt"
 	display_name = "ASSAULT: Grunt"
 	desc = "You have a slightly higher close range damage firearm compared to the conscript but lack their backup knife and longer range accuracy."
+	id_name = "Grunt"
 
 	belt = /obj/item/storage/belt/civilprotection/overwatch/pulsesmg_hidden
 
@@ -136,6 +144,7 @@
 	name = "Hidden: Medical Cop"
 	display_name = "HEALER: Medical Cop"
 	desc = "Keep your allies healed whenever they get hurt by the Hidden but not killed."
+	id_name = "Medic"
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
@@ -171,6 +180,7 @@
 	name = "Hidden: Citizen Doctor"
 	display_name = "HEALER: Unarmed Citizen Doctor"
 	desc = "You're a knowledgable doctor forcefully taken from a nearby city to help on what looks like a suicide mission. You're light on your feet and packed with medical supples, but are armed with but a scalpel and have zero firearm experience!"
+	id_name = "Doctor"
 
 	uniform = /obj/item/clothing/under/citizen
 	gloves = /obj/item/clothing/gloves/latex/nitrile
@@ -213,6 +223,7 @@
 	name = "Hidden: Engineer"
 	display_name = "TRACKER: Engineer"
 	desc = "Use trip alarm beams and flares to get extra information on where the enemy is. In addition, wisely use your sandbags to help protect the team during terminal activations."
+	id_name = "Engineer"
 
 	uniform = /obj/item/clothing/under/citizen
 	suit = /obj/item/clothing/suit/utility/radiation/engineer
@@ -310,6 +321,7 @@
 	name = "Hidden: Scientist"
 	display_name = "TRACKER: Scientist"
 	desc = "Use a special syringe gun which can fire chemicals into the Hidden in order to slow them and make them glow for a while."
+	id_name = "Scientist"
 
 	uniform = /obj/item/clothing/under/citizen
 	suit = /obj/item/clothing/suit/utility/radiation/cleanup/scientist

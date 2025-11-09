@@ -1409,3 +1409,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_WEARING_GAS_MASK "wearing_gasmask" //If this person is wearing a gas mask hl13 edit
 
 #define TRAIT_NO_FOV_EFFECT "no_fov_effect"
+
+/// The person with this trait always shows their ID's name
+#define TRAIT_ALWAYS_ID_NAME "always_id_name"

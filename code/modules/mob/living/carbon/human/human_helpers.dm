@@ -59,6 +59,9 @@
 		return "[real_name][fake_name ? " (as [fake_name])" : ""]"
 	if(HAS_TRAIT(src, TRAIT_UNKNOWN) || HAS_TRAIT(src, TRAIT_INVISIBLE_MAN))
 		return "Unknown"
+	if(HAS_TRAIT(src, TRAIT_ALWAYS_ID_NAME))
+		if(id_name)
+			return id_name
 	if(face_name)
 		if(add_id_name && id_name && (id_name != face_name))
 			return "[face_name] (as [id_name])"

@@ -33,6 +33,13 @@
 	if(HAS_TRAIT(src, TRAIT_UNKNOWN))
 		return ("Unknown")
 
+	if(HAS_TRAIT(src, TRAIT_ALWAYS_ID_NAME) && wear_id)
+		var/obj/item/card/id/idcard = wear_id.GetID()
+		if(istype(idcard))
+			return idcard.registered_name
+		else
+			return real_name
+
 	if(istype(wear_mask, /obj/item/clothing/mask))
 		if(wear_mask.voice_change && wear_id)
 			var/obj/item/card/id/idcard = wear_id.GetID()
