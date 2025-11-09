@@ -12,7 +12,7 @@
 	/// This outfit will grant these mutations if applied
 	var/list/mutations_to_add = list()
 	/// Slots to apply nodrop to
-	var/list/nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_EYES, ITEM_SLOT_MASK)
+	var/list/nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_EYES, ITEM_SLOT_MASK, ITEM_SLOT_ID)
 	/// Is there a unique combat music for this class?
 	var/combat_music = null
 	var/loadout_tier = 1
