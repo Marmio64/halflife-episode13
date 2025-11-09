@@ -81,7 +81,7 @@
 
 	var/obj/item/card/id/outfit_id = user.wear_id
 	if(outfit_id)
-		outfit_id.registered_name = "Sectoral Commander"
+		outfit_id.registered_name = "Sectoral Commander-[rand(111,999)]"
 
 	var/list/spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/combine)
 

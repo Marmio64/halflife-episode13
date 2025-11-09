@@ -566,6 +566,9 @@
 	sawn_desc = "A ratty old pre-war rifle that was developed over a century ago. Someone seems to have taken this prized historical artifact and sawed it in half, creating an Obrez. Still moist, though."
 	weapon_weight = WEAPON_HEAVY
 
+/obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
+	jamming_chance = 10
+
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/start_empty
 	magazine = /obj/item/ammo_box/magazine/internal/boltaction/mosin/start_empty
 

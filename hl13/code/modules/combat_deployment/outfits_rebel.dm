@@ -274,7 +274,7 @@
 	uniform = /obj/item/clothing/under/citizen/refugee
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
 	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
-	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
+	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
 
 	l_pocket = /obj/item/knife/combat/weak
 	r_pocket = /obj/item/flashlight
@@ -485,7 +485,7 @@
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
 	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
-	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
+	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
 
 	l_pocket = /obj/item/knife/combat/weak
 	r_pocket = /obj/item/flashlight
