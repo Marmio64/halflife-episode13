@@ -67,6 +67,12 @@
 
 /obj/machinery/cash_deposit/process()
 	consume()
+	if(deployment_faction == COMBINE_DEPLOYMENT_FACTION) //This is roll protection. If the enemy team has a cash advantage greater than 100, your team gets cashflow equal to that of a points flag.
+		if(GLOB.deployment_combine_cash < (GLOB.deployment_rebels_cash - 100))
+			GLOB.deployment_combine_cash += 0.6
+	if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
+		if(GLOB.deployment_rebels_cash < (GLOB.deployment_combine_cash - 100))
+			GLOB.deployment_rebels_cash += 0.6
 
 /obj/machinery/cash_deposit/proc/consume()
 	var/money_amount = 10
