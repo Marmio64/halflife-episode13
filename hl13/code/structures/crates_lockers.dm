@@ -138,7 +138,6 @@
 
 /obj/structure/closet/crate/halflife/wooden/fortifications/PopulateContents()
 	. = ..()
-	new /obj/item/stack/razorwire/half_stack(src)
-	new /obj/item/stack/razorwire/small_stack(src)
+	new /obj/item/stack/razorwire/full(src)
 	new /obj/item/stack/sheet/mineral/sandbags/twelve(src)
 	new /obj/item/stack/sheet/mineral/wood/twentyfive(src)

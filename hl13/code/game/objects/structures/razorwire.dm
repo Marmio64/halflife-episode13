@@ -204,7 +204,7 @@
 	amount = 20
 
 GLOBAL_LIST_INIT(razorwire_recipes, list ( \
-	new/datum/stack_recipe("razorwire", /obj/structure/razorwire, 1, time = 2.5 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ONE_PER_TURF | CRAFT_ON_SOLID_GROUND, category = CAT_STRUCTURE), \
+	new/datum/stack_recipe("razorwire", /obj/structure/razorwire, 1, time = 2 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ONE_PER_TURF | CRAFT_ON_SOLID_GROUND, category = CAT_STRUCTURE), \
 	))
 
 /obj/item/stack/razorwire/get_main_recipes()

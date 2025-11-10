@@ -25,7 +25,7 @@
 
 /datum/action/cooldown/spell/conjure_item/sandbag
 	name = "Procure Sandbag"
-	desc = "Procures a sandbag to use for building defenses."
+	desc = "Procures some sandbags to use for building defenses."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "sandbag"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
@@ -36,6 +36,23 @@
 	item_type = /obj/item/stack/sheet/mineral/sandbags/three
 	requires_hands = TRUE
 	delete_old = FALSE
+
+/datum/action/cooldown/spell/conjure_item/razor_wire
+	name = "Procure Razor Wire"
+	desc = "Procures some razor wire to use for building defenses."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "razorwire"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 60 SECONDS
+	item_type = /obj/item/stack/razorwire/small_stack
+	requires_hands = TRUE
+	delete_old = FALSE
+
+/datum/action/cooldown/spell/conjure_item/razor_wire/slow
+	cooldown_time = 90 SECONDS
 
 /datum/action/cooldown/spell/conjure_item/tinbomb
 	name = "Procure Tinbomb"

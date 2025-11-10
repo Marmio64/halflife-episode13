@@ -333,7 +333,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag, /datum/action/cooldown/spell/conjure_item/razor_wire/slow)
 
 	extra_str = 4
 
@@ -493,7 +493,7 @@
 		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit, /datum/action/cooldown/spell/conjure_item/razor_wire/slow)
 
 	extra_int = 4
 
@@ -522,7 +522,6 @@
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 11,
-		/obj/item/stack/razorwire/small_stack = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 		/obj/item/sbeacondrop/combine_turret = 1,
@@ -533,7 +532,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag, /datum/action/cooldown/spell/conjure_item/razor_wire)
 
 	extra_str = 4
 

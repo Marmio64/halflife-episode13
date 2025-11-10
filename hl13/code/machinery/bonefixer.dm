@@ -2,11 +2,10 @@
 	name = "combine repair pod"
 	desc = "A pod which can mend bodily injures of patients with a full biogel bath, healing all conditions including bone fractures and major hemmoraging. Incapable of reviving most people from death, unless they are very important. Alt-click to begin the process."
 	density = TRUE
-	icon = 'icons/obj/machines/harvester.dmi'
+	icon = 'hl13/icons/obj/repairpod.dmi'
 	icon_state = "harvester"
 	state_open = FALSE
 	idle_power_usage = 50
-	circuit = /obj/item/circuitboard/machine/harvester
 	light_color = LIGHT_COLOR_BLUE
 	var/warming_up
 	var/interval = 20
@@ -66,11 +65,11 @@
 	update_appearance(UPDATE_ICON)
 	if(!harvesting || state_open || !powered(AREA_USAGE_EQUIP) || !occupant || !isliving(occupant))
 		return
-	playsound(src, 'sound/machines/juicer.ogg', 20, 1)
+	playsound(src, 'hl13/sound/halflifemachines/terminals/startup.ogg', 40, 1)
 	sleep(5 SECONDS)
-	playsound(src, 'sound/machines/juicer.ogg', 20, 1)
+	playsound(src, 'hl13/sound/effects/sewflesh.ogg', 40, 1)
 	sleep(5 SECONDS)
-	playsound(src, 'sound/machines/juicer.ogg', 20, 1)
+	playsound(src, 'hl13/sound/effects/largemedkit1.ogg', 40, 0)
 	sleep(5 SECONDS)
 	end_harvesting()
 
@@ -80,7 +79,7 @@
 	harvesting = FALSE
 	open_machine()
 	say("Process complete.")
-	playsound(src, 'sound/machines/microwave/microwave-end.ogg', 100, 0)
+	playsound(src, 'hl13/sound/machines/combine_dispense.ogg', 100, 0)
 
 	C.fully_heal(ADMIN_HEAL_ALL)
 	C.revive()

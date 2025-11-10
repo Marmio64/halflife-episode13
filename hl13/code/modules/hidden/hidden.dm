@@ -223,8 +223,8 @@
 /datum/action/cooldown/spell/hidden_heal/cast(mob/living/cast_on)
 	. = ..()
 	cast_on.adjustStaminaLoss(-125)
-	cast_on.adjustBruteLoss(-25)
-	cast_on.adjustFireLoss(-25)
+	cast_on.adjustBruteLoss(-35)
+	cast_on.adjustFireLoss(-35)
 	var/chosen_sound = pick(taunt_sounds)
 	playsound(owner.loc, chosen_sound, 50, FALSE)
 
@@ -384,8 +384,8 @@
 /obj/item/knife/combat/the_hidden/necrotic/dead_effect(mob/living/target, mob/living/user)
 	new /mob/living/basic/halflife/zombie(get_turf(target))
 	user.adjustStaminaLoss(-25)
-	user.adjustBruteLoss(-15)
-	user.adjustFireLoss(-15)
+	user.adjustBruteLoss(-25)
+	user.adjustFireLoss(-25)
 	target.gib()
 
 
@@ -418,7 +418,7 @@
 /datum/outfit/deployment_loadout/hidden/the_hidden/brute/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	H.alpha = 50
-	H.physiology.damage_resistance += 30
+	H.physiology.damage_resistance += 35
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/necrotic
 	name = "Hidden: The Hidden (Necrotic)"

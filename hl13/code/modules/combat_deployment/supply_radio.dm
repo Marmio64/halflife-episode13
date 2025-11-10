@@ -185,8 +185,8 @@
 	spawn_path = /obj/machinery/ammo_crate/grenade_crate
 
 /datum/supply_beacon_option/missile_targeter
-	option_name = "One-use Missile Targeter (350 Points)"
-	cost = 350
+	option_name = "One-use Missile Targeter (400 Points)"
+	cost = 400
 	spawn_path = /obj/item/halflife/missile_targeter/one_use
 
 /datum/supply_beacon_option/canister_targeter
@@ -195,8 +195,8 @@
 	spawn_path = /obj/item/halflife/cannister_targeter/modified
 
 /datum/supply_beacon_option/emplacement_gun
-	option_name = "AR2 Emplacement Turret (450 Points)"
-	cost = 450
+	option_name = "AR2 Emplacement Turret (425 Points)"
+	cost = 425
 	spawn_path = /obj/machinery/deployable_turret/combine
 
 /datum/supply_beacon_option/rebel_tier5

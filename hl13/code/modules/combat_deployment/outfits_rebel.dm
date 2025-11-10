@@ -355,7 +355,7 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag, /datum/action/cooldown/spell/conjure_item/razor_wire/slow)
 
 	extra_str = 4
 
@@ -586,7 +586,6 @@
 		/obj/item/crowbar/large = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 11,
 		/obj/item/sbeacondrop/rebel_turret = 1,
-		/obj/item/stack/razorwire/small_stack = 1,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 		/obj/item/wirecutters/halflife = 1,
@@ -596,7 +595,7 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag, /datum/action/cooldown/spell/conjure_item/razor_wire)
 
 	extra_str = 4
 
