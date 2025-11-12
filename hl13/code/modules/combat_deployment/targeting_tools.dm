@@ -13,6 +13,10 @@
 	desc = "A tool that feeds coordinates to an offsite location, prompting them to send a headcrab canister at the target. Each canister deals a large amount of damage on impact and carries three headcrabs of random types. Click a visible tile to send a canister after a 2 second delay. Does not recharge uses overtime"
 	recharges = FALSE
 
+/obj/item/halflife/cannister_targeter/modified/infestation
+	name = "infestation canister targeting tool"
+	desc = "A tool that feeds coordinates to an offsite location, prompting them to send a headcrab canister at the target. Each canister deals a large amount of damage on impact and carries two zombies of random types. Click a visible tile to send a canister after a 2 second delay. Does not recharge uses overtime"
+
 /obj/item/halflife/cannister_targeter/Initialize(mapload, obj/item/seeds/newseed)
 	. = ..()
 	START_PROCESSING(SSobj, src)
@@ -59,6 +63,13 @@
 		"spawn" = /obj/effect/spawner/random/halflife/random_headcrab/three,
 	))
 
+/obj/item/halflife/cannister_targeter/modified/infestation/launch_cannister(turf/location)
+	podspawn(list(
+		"target" = location,
+		"path" = /obj/structure/closet/supplypod/med_exp_canister,
+		"spawn" = /obj/effect/spawner/random/halflife/random_zombie/two,
+	))
+
 /obj/structure/closet/supplypod/light_exp_canister
 	style = /datum/pod_style/canister
 	explosionSize = list(0,0,1,0)
@@ -77,6 +88,12 @@
 
 /obj/item/halflife/missile_targeter/one_use
 	charges = 1
+
+/obj/item/halflife/missile_targeter/one_use/barrage
+	name = "barrage missile targeting tool"
+	desc = "A tool that feeds coordinates to an offsite location, prompting them to send a missile at the target. Click a visible tile to send a missile. Does not recharge over time, and takes a while for the missile to land. This one can fire faster, and multiple times, but each individual missile is far weaker."
+	charges = 3
+	use_time = 2.5 SECONDS
 
 /obj/item/halflife/missile_targeter/examine(mob/user)
 	. = ..()
@@ -107,6 +124,12 @@
 		"path" = /obj/structure/closet/supplypod/plf_missile/dangerous,
 	))
 
+/obj/item/halflife/missile_targeter/one_use/barrage/launch_missile(turf/location)
+	podspawn(list(
+		"target" = location,
+		"path" = /obj/structure/closet/supplypod/plf_missile/barrage,
+	))
+
 /obj/structure/closet/supplypod/plf_missile
 	name = "old missile"
 	desc = "An old world missile that has been maintained just enough to still work. It has far less explosive power than it used to have, but its enough to blow open some fortifications."
@@ -119,12 +142,9 @@
 	shrapnel_type = /obj/projectile/bullet/shrapnel/short_range
 
 /obj/structure/closet/supplypod/plf_missile/dangerous
-	name = "old missile"
-	desc = "An old world missile that has been maintained just enough to still work. It has far less explosive power than it used to have, but its enough to blow open some fortifications."
-	style = /datum/pod_style/missile/syndicate
 	explosionSize = list(1,4,6,0)
-	effectShrapnel = TRUE
-	specialised = TRUE
-	delays = list(POD_TRANSIT = 5 SECONDS, POD_FALLING = 0.4 SECONDS)
-	effectMissile = TRUE
-	shrapnel_type = /obj/projectile/bullet/shrapnel
+
+/obj/structure/closet/supplypod/plf_missile/barrage
+	explosionSize = list(0,2,3,0)
+	shrapnel_magnitude = 2
+	delays = list(POD_TRANSIT = 4 SECONDS, POD_FALLING = 0.4 SECONDS)

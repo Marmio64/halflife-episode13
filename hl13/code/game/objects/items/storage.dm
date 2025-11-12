@@ -100,6 +100,13 @@
 	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/deployment_metrocop_captain/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	SSwardrobe.provide_type(/obj/item/melee/baton/security/loaded, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
+	update_appearance(UPDATE_ICON)
 
 /obj/item/storage/belt/civilprotection/medicfull/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/melee/baton/security/loaded, src)

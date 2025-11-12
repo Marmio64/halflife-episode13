@@ -408,3 +408,23 @@
 
 /obj/effect/spawner/random/halflife/random_headcrab/five
 	spawn_loot_count = 5
+
+/obj/effect/spawner/random/halflife/random_zombie
+	name = "random zombie"
+	spawn_loot_count = 1
+
+	loot = list(
+				/mob/living/basic/halflife/zombie = 1,
+				/mob/living/basic/halflife/zombie/fast = 1,
+				/mob/living/basic/halflife/zombie/poison = 1,
+				/mob/living/basic/halflife/zombie/zombine = 1,
+				)
+
+/obj/effect/spawner/random/halflife/random_zombie/two
+	spawn_loot_count = 2
+
+/obj/effect/spawner/random/halflife/random_zombie/three
+	spawn_loot_count = 3
+
+/obj/effect/spawner/random/halflife/random_zombie/five
+	spawn_loot_count = 5

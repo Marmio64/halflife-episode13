@@ -45,7 +45,7 @@
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
-	belt = /obj/item/melee/baton/security/loaded
+	belt = /obj/item/storage/belt/civilprotection/deployment_metrocop_captain
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	glasses = /obj/item/clothing/glasses/hud/security
 	neck = /obj/item/clothing/neck/sectorial_cloak
@@ -58,7 +58,6 @@
 	backpack_contents = list(
 		/obj/item/megaphone = 1,
 		/obj/item/binoculars = 1,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/hl2/supply_radio/combine = 1,
 	)
 
@@ -70,7 +69,7 @@
 
 /datum/outfit/job/deployment_metrocop_captain/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
-	user.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 6) //Gives you a few seconds of invincibility to prevent spawn camping
+	user.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 3) //Gives you a few seconds of invincibility to prevent spawn camping
 	ADD_TRAIT(user, TRAIT_VIRUSIMMUNE, JOB_TRAIT)
 	ADD_TRAIT(user, TRAIT_TDMCAPTAIN, JOB_TRAIT)
 	user.faction += "combine"

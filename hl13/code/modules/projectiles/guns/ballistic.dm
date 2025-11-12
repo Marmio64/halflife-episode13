@@ -193,7 +193,7 @@
 	force = 15
 	recoil = 4
 	weapon_weight = WEAPON_HEAVY
-	fire_delay = 19
+	fire_delay = 18
 	w_class = WEIGHT_CLASS_BULKY
 	slowdown = 0.25
 
@@ -208,7 +208,7 @@
 
 /obj/item/gun/ballistic/combine_sniper/slow
 	after_shot_delay = 1.25 SECONDS
-	fire_delay = 25
+	fire_delay = 24
 
 /obj/item/gun/ballistic/combine_sniper/Initialize(mapload)
 	. = ..()
