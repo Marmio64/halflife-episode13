@@ -62,6 +62,7 @@
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 8,
+		/obj/item/stack/razorwire/small_stack = 1,
 	)
 
 
@@ -159,6 +160,7 @@
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 10,
+		/obj/item/stack/razorwire/small_stack = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)
 

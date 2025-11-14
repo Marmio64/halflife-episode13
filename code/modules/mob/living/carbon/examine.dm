@@ -577,6 +577,21 @@
 		if(101 to INFINITY)
 			age_text = "withering away"
 	. += list(span_notice("[p_They()] appear[p_s()] to be [age_text]."))
+	var/str_text
+	switch(get_stat_level(STATKEY_STR))
+		if(-INFINITY to 3)
+			str_text = "very weak"
+		if(4 to 8)
+			str_text = "weak"
+		if(9 to 11)
+			str_text = "to be of average build"
+		if(12 to 15)
+			str_text = "strong"
+		if(16 to 19)
+			str_text = "very strong"
+		if(20 to INFINITY)
+			str_text = "inhumanely strong"
+	. += list(span_notice("[p_They()] appear[p_s()] [str_text]."))
 
 	if(istype(w_uniform, /obj/item/clothing/under))
 		var/obj/item/clothing/under/undershirt = w_uniform

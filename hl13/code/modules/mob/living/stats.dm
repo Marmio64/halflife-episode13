@@ -27,7 +27,7 @@
 	/// Current combat deployment faction of this very mob
 	var/deployment_faction = NO_FACTION
 
-///Rolls random stats base 10, +-1, and applies age stats.
+///Rolls random stats base 10, +-1
 /mob/living/proc/roll_mob_stats()
 	if(has_rolled_for_stats)
 		return FALSE
@@ -36,6 +36,7 @@
 	base_intelligence += (prob(33) && pick(-1, 1))
 	base_dexterity += (prob(33) && pick(-1, 1))
 
+/*
 	if(ishuman(src))
 		var/mob/living/carbon/human/H = src
 
@@ -49,6 +50,8 @@
 				set_stat_modifier("innate_age", STATKEY_STR, -1)
 				set_stat_modifier("innate_age", STATKEY_INT, 2)
 				set_stat_modifier("innate_age", STATKEY_DEX, -1)
+*/
+
 
 	has_rolled_for_stats = TRUE
 	return TRUE
