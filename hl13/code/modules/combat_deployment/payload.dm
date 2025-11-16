@@ -1,6 +1,6 @@
 /obj/machinery/deployment_payload
 	name = "Payload Cart"
-	desc = "An old world nuke mounted atop a movable cart. Deliver it to the combine as a little farewell gift to them. Moves faster the more people are pushing it."
+	desc = "An old world, heavy poundage bomb mounted atop a movable cart. As it has lost remote detonation, timer, and fuse capabilites, it'll be a one way trip to hand deliver it to the combine as a little farewell gift to them. Moves faster the more people are pushing it."
 	icon = 'hl13/icons/obj/nuke.dmi'
 	icon_state = "idle"
 	resistance_flags = INDESTRUCTIBLE

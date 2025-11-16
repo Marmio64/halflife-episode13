@@ -38,7 +38,7 @@
 	///how much spread increase is added per shot
 	var/overtime_penalty_increase = 1
 	///How far can spread increase go
-	var/overtime_penalty_cap = 15
+	var/overtime_penalty_cap = 12
 	///How long of not firing till spread goes back to normal
 	var/overtime_penalty_spindown = 0.6 SECONDS
 	///Timer for tracking the spindown reset timings

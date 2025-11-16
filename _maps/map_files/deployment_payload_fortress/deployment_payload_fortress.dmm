@@ -467,6 +467,10 @@
 /obj/machinery/griddle,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/outdoors/deployment_city)
+"oA" = (
+/obj/structure/halflife/trash/bricks,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "oC" = (
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -564,6 +568,18 @@
 /obj/structure/window/fulltile/halflife/nosmooth/reinforced,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"sT" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/reagent_containers/hypospray/medipen/healthpen{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/hypospray/medipen/healthpen{
+	pixel_x = 4;
+	pixel_y = 1
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "tp" = (
 /obj/structure/halflife/rails{
 	dir = 1
@@ -747,10 +763,6 @@
 /area/halflife/outdoors/deployment_city)
 "zy" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/grenade/syndieminibomb/bouncer{
-	pixel_x = 4;
-	pixel_y = 11
-	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "zF" = (
@@ -805,6 +817,12 @@
 /obj/structure/barricade/wooden/solid,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
+"Bi" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/reagent_containers/pill/patch/grubnugget,
+/obj/item/reagent_containers/pill/patch/grubnugget,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "Br" = (
 /obj/machinery/door/unpowered/halflife/wood,
 /turf/open/floor/plating/indoor/woodc,
@@ -930,6 +948,10 @@
 /obj/machinery/telecomms/processor/preset_one/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
+"Ed" = (
+/obj/structure/halflife/trash/wood,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "Ei" = (
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/combat_deployment/rebel_base)
@@ -980,6 +1002,12 @@
 /obj/item/gun/ballistic/combine_sniper/slow{
 	pixel_x = 0;
 	pixel_y = 10
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
+"Fj" = (
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 4
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
@@ -1071,6 +1099,10 @@
 /obj/effect/koth_grace_field,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
+"Iy" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "IE" = (
 /obj/structure/stairs/halflife/concrete{
 	pixel_y = 1
@@ -1101,6 +1133,7 @@
 /area/halflife/outdoors/deployment_city)
 "Jo" = (
 /obj/structure/table/halflife/metal/grate,
+/obj/item/reagent_containers/pill/patch/grubnugget,
 /obj/item/reagent_containers/pill/patch/grubnugget,
 /obj/item/reagent_containers/pill/patch/grubnugget,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -1234,6 +1267,7 @@
 /obj/structure/table/halflife/metal/grate,
 /obj/item/stack/medical/bandage/makeshift,
 /obj/item/stack/medical/bandage/makeshift,
+/obj/item/stack/medical/gauze/twelve,
 /obj/item/stack/medical/gauze/twelve,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
@@ -1607,6 +1641,12 @@
 /obj/structure/halflife/trash/glass/basic,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city)
+"XV" = (
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "Yb" = (
 /obj/structure/halflife/road_barrier{
 	dir = 1
@@ -23101,9 +23141,9 @@ cx
 cx
 cx
 cx
-cx
-cx
-cx
+yB
+iT
+Iy
 cx
 cx
 iT
@@ -24465,14 +24505,14 @@ fz
 fz
 gR
 zM
-WA
+Bi
 wA
 wA
 Qd
 wA
 wA
 ki
-WA
+sT
 gR
 qW
 WL
@@ -25319,9 +25359,9 @@ gR
 gR
 MN
 gR
+Fj
 gR
-gR
-gR
+Fj
 gR
 MN
 gR
@@ -27023,9 +27063,9 @@ gR
 gR
 MN
 gR
+XV
 gR
-gR
-gR
+XV
 gR
 MN
 gR
@@ -27738,7 +27778,7 @@ wA
 wA
 wA
 wA
-WA
+sT
 gR
 qW
 wA
@@ -27873,7 +27913,7 @@ fz
 fz
 gR
 WA
-WA
+Bi
 wA
 wA
 Ds
@@ -29224,7 +29264,7 @@ cx
 cx
 cx
 cx
-iT
+Ed
 iT
 cx
 cx
@@ -29349,9 +29389,9 @@ cx
 cx
 cx
 cx
-cx
-cx
-cx
+oA
+Iy
+iT
 cx
 cx
 cx
