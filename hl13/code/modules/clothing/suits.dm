@@ -24,7 +24,7 @@
 /datum/armor/civpro_vest
 	melee = 35
 	bullet = 25
-	laser = 30
+	laser = 25
 	energy = 40
 	bomb = 25
 	fire = 50
@@ -70,7 +70,7 @@
 /datum/armor/cremator_coat
 	melee = 15
 	bullet = 15
-	laser = 30
+	laser = 40
 	energy = 40
 	bomb = 25
 	fire = 100
@@ -112,7 +112,7 @@
 /datum/armor/overwatcharmor
 	melee = 40
 	bullet = 40
-	laser = 40
+	laser = 30
 	energy = 30
 	bomb = 50
 	fire = 50
@@ -137,7 +137,7 @@
 /datum/armor/overwatch_assassin_armor
 	melee = 35
 	bullet = 35
-	laser = 40
+	laser = 30
 	energy = 30
 	bomb = 45
 	fire = 50
@@ -256,7 +256,7 @@
 /datum/armor/eliteoverwatcharmor
 	melee = 50
 	bullet = 50
-	laser = 50
+	laser = 40
 	energy = 40
 	bomb = 50
 	fire = 50
@@ -306,7 +306,7 @@
 /datum/armor/kevlararmor/heavy
 	melee = 25
 	bullet = 40
-	laser = 10
+	laser = 25
 	energy = 100
 	bomb = 40
 	fire = 50
@@ -330,7 +330,7 @@
 /datum/armor/milvest
 	melee = 35
 	bullet = 40
-	laser = 10
+	laser = 25
 	energy = 100
 	bomb = 40
 	fire = 50
@@ -397,7 +397,11 @@
 
 /obj/item/clothing/suit/armor/browncoat/scout
 	slowdown = -0.45
-	armor_type = /datum/armor/none
+	armor_type = /datum/armor/scout_armor
+
+/datum/armor/scout_armor
+	fire = 75
+	laser = 40
 
 /obj/item/clothing/suit/armor/browncoat/scout/upgraded
 	slowdown = -0.6
@@ -588,7 +592,7 @@
 /datum/armor/rebellight
 	melee = 40
 	bullet = 30
-	laser = 35
+	laser = 25
 	energy = 30
 	bomb = 35
 	fire = 25
@@ -654,7 +658,7 @@
 /datum/armor/plf_veteran
 	melee = 60 //bulky EOD suit
 	bullet = 70 //enough kevlar to kill god
-	laser = 30
+	laser = 50
 	energy = 100
 	bomb = 90 //gutted EOD suit. missing some of the original plating though.
 	fire = 70 //pretty well-insulated

@@ -86,4 +86,4 @@
 	e_cost = LASER_SHOTS(5, STANDARD_CELL_CHARGE)
 	select_name = "flame"
 	fire_sound = "hl13/sound/weapons/flamethrower1.ogg"
-	delay = 1 SECONDS
+	delay = 1.25 SECONDS

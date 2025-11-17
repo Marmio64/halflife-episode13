@@ -230,3 +230,4 @@
 	name = "headset cap"
 	desc = "A cap with a nonfunctional headset attached to it. Was once good for scouting things, now it's just a decoration."
 	icon_state = "scouthat"
+	armor_type = /datum/armor/scout_armor

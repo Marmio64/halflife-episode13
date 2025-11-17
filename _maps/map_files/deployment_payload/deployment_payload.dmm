@@ -92,6 +92,10 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/outdoors/deployment_city)
+"ds" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/combat_deployment/combine_base)
 "dL" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/dirty,
@@ -733,6 +737,11 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
+"CP" = (
+/obj/machinery/light/small/directional/west,
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "CV" = (
 /obj/structure/halflife/road_barrier{
 	dir = 4
@@ -5393,7 +5402,7 @@ wr
 Rs
 WO
 sx
-gW
+CP
 xV
 Zu
 wr
@@ -7621,7 +7630,7 @@ bg
 Qp
 Qp
 Qp
-Qw
+ds
 gh
 gh
 dY

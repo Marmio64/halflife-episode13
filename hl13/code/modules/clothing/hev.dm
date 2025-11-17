@@ -20,6 +20,9 @@
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
 	hoodtype = /obj/item/clothing/head/hooded/hevhood
 
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+
 	allowed = list(
 		/obj/item/crowbar,
 		/obj/item/gun,
@@ -260,6 +263,9 @@
 	heat_protection = HEAD
 	clothing_traits = list(TRAIT_WEARING_GAS_MASK)
 	armor_type = /datum/armor/hev
+
+	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 
 /obj/item/clothing/head/hooded/hevhood/Initialize(mapload)
 	. = ..()

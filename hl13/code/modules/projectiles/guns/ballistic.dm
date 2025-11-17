@@ -706,13 +706,15 @@
 	fire_sound = "hl13/sound/weapons/immolator_fire.ogg"
 	//vary_fire_sound = FALSE
 	fire_sound_volume = 25
-	force = 15
+	force = 16
 	recoil = 0
 	fire_delay = 2
 	burst_size = 1
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 	pin = /obj/item/firing_pin/implant/mindshield
+
+	trigger_guard = TRIGGER_GUARD_ALLOW_ALL
 
 	slot_flags = 0
 

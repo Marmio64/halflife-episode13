@@ -33,4 +33,13 @@
 		TRAIT_NOFIRE_SPREAD,
 		TRAIT_LESSPAIN_MINOR,
 		TRAIT_NO_JUMPSUIT,
+		TRAIT_CHUNKYFINGERS,
 	)
+
+/datum/species/human/synth/cremator/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+	. = ..()
+	C.change_stat(STATKEY_STR, 5)
+
+/datum/species/human/synth/cremator/on_species_loss(mob/living/carbon/C)
+	..()
+	C.change_stat(STATKEY_STR, 5)

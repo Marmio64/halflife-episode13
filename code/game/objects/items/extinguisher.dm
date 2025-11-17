@@ -81,7 +81,7 @@
 
 /obj/item/extinguisher/mini
 	name = "pocket fire extinguisher"
-	desc = "A light and compact fibreglass-framed model fire extinguisher."
+	desc = "An old world pocket fire extinguisher, capable of setting out a couple small fires before running out of foam."
 	icon_state = "miniFE0"
 	worn_icon_state = "miniFE"
 	inhand_icon_state = "miniFE"
@@ -91,7 +91,8 @@
 	w_class = WEIGHT_CLASS_SMALL
 	force = 3
 	custom_materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT* 0.5, /datum/material/glass = SMALL_MATERIAL_AMOUNT * 0.4)
-	max_water = 30
+	max_water = 20
+	power = 2
 	sprite_name = "miniFE"
 	dog_fashion = null
 

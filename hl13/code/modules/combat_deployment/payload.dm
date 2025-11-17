@@ -179,6 +179,11 @@
 	normal_respawn_speed = 20 SECONDS
 	time_per_checkpoint = 180 SECONDS
 
+/obj/machinery/deployment_payload/fortress
+	altered_respawn_speed = 45 SECONDS
+	normal_respawn_speed = 20 SECONDS
+	time_per_checkpoint = 210 SECONDS
+
 /obj/effect/payload_path
 	name = "payload path"
 	icon = 'icons/effects/landmarks_static.dmi'

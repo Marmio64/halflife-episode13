@@ -695,6 +695,7 @@
 		/obj/item/storage/medkit/halflife = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/healthanalyzer = 1,
+		/obj/item/extinguisher/mini = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -729,7 +730,7 @@
 	combat_music = 'hl13/sound/music/combat/notsupposedtobehere.ogg'
 
 	belt = /obj/item/crowbar/large/freeman/extreme
-	back = /obj/item/storage/backpack/halflife/satchel
+	back = /obj/item/storage/backpack/halflife/satchel/larger
 
 	backpack_contents = list(
 		/obj/item/grenade/syndieminibomb/bouncer = 2,

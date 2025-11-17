@@ -114,6 +114,7 @@
 	armour_penetration = 25
 	wound_bonus = -20
 	damage_type = BURN
+	armor_flag = LASER
 	range = 5 //close range
 	hitscan = TRUE
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser

@@ -752,12 +752,24 @@
 
 /obj/item/bodypart/arm/left/cremator
 	limb_id = SPECIES_CREMATOR
+	unarmed_damage_low = 10
+	unarmed_damage_high = 15
+	unarmed_effectiveness = 15
 
 /obj/item/bodypart/arm/right/cremator
 	limb_id = SPECIES_CREMATOR
+	unarmed_damage_low = 10
+	unarmed_damage_high = 15
+	unarmed_effectiveness = 15
 
 /obj/item/bodypart/leg/left/cremator
 	limb_id = SPECIES_CREMATOR
+	unarmed_damage_low = 10
+	unarmed_damage_high = 16
+	unarmed_effectiveness = 20
 
 /obj/item/bodypart/leg/right/cremator
 	limb_id = SPECIES_CREMATOR
+	unarmed_damage_low = 10
+	unarmed_damage_high = 16
+	unarmed_effectiveness = 20

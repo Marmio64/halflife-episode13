@@ -493,9 +493,10 @@
 		/obj/item/reagent_containers/pill/patch/medkit = 2,
 		/obj/item/storage/medkit/halflife_combine = 1,
 		/obj/item/ammo_box/magazine/mp7 = 2,
+		/obj/item/extinguisher/mini = 1,
 	)
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit, /datum/action/cooldown/spell/conjure_item/razor_wire/slow)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
 
 	extra_int = 4
 

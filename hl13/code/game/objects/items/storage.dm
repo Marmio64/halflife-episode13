@@ -300,6 +300,9 @@
 	inhand_icon_state = "satchel"
 	storage_type = /datum/storage/satchel/halflife
 
+/obj/item/storage/backpack/halflife/satchel/larger
+	storage_type = /datum/storage/backpack/halflife
+
 /obj/item/storage/backpack/halflife/satchel/radio
 	name = "radio pack"
 	desc = "A old world radio pack for transmitting signals with."
