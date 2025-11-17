@@ -52,15 +52,6 @@
 	playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
 	push_over()
 
-/obj/item/cardboard_cutout/equipped(mob/living/user, slot)
-	. = ..()
-	//Because of the tactical element, the user won't tilt left and right, but it'll still hop.
-	user.AddElementTrait(TRAIT_WADDLING, REF(src), /datum/element/waddling)
-
-/obj/item/cardboard_cutout/dropped(mob/living/user)
-	. = ..()
-	REMOVE_TRAIT(user, TRAIT_WADDLING, REF(src))
-
 /obj/item/cardboard_cutout/proc/push_over()
 	appearance = initial(appearance)
 	desc = "[initial(desc)] It's been pushed over."
@@ -221,40 +212,13 @@
 	cutouts.update_appearance() //forces an update on the tactical comp's appearance.
 
 /datum/cardboard_cutout/assistant
-	name = "Assistant"
-	applied_name = "John Greytide"
-	applied_desc = "A cardboard cutout of an assistant."
+	name = "Citizen"
+	applied_name = "John Citizen"
+	applied_desc = "A cardboard cutout of an Citizen."
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/generic_assistant
 
 /datum/cardboard_cutout/assistant/get_name()
 	return "[pick(GLOB.first_names_male)] [pick(GLOB.last_names)]"
-
-/datum/cardboard_cutout/clown
-	name = "Clown"
-	applied_name = "HONK"
-	applied_desc = "A cardboard cutout of a clown. You get the feeling that it should be in a corner."
-	outfit = /datum/outfit/job/clown
-
-/datum/cardboard_cutout/clown/get_name()
-	return pick(GLOB.clown_names)
-
-/datum/cardboard_cutout/mime
-	name = "Mime"
-	applied_name = "..."
-	applied_desc = "...(A cardboard cutout of a mime.)"
-	outfit = /datum/outfit/job/mime
-
-/datum/cardboard_cutout/mime/get_name()
-	return pick(GLOB.mime_names)
-
-/datum/cardboard_cutout/traitor
-	name = "Traitor"
-	applied_name = "Unknown"
-	applied_desc = "A cardboard cutout of a traitor."
-	outfit = /datum/outfit/traitor_cutout
-
-/datum/cardboard_cutout/traitor/get_name()
-	return pick("Unknown", "Captain")
 
 /datum/cardboard_cutout/nuclear_operative
 	name = "Nuclear Operative"
@@ -264,36 +228,6 @@
 
 /datum/cardboard_cutout/nuclear_operative/get_name()
 	return pick("Unknown", "COMMS", "Telecomms", "AI", "stealthy op", "STEALTH", "sneakybeaky", "MEDIC", "Medic")
-
-/datum/cardboard_cutout/cultist
-	name = "Cultist"
-	applied_name = "Unknown"
-	applied_desc = "A cardboard cutout of a cultist."
-	outfit = /datum/outfit/cult_cutout
-
-/datum/cardboard_cutout/revolutionary
-	name = "Revolutionary"
-	applied_name = "Unknown"
-	applied_desc = "A cardboard cutout of a revolutionary."
-	outfit = /datum/outfit/rev_cutout
-
-/datum/cardboard_cutout/wizard
-	name = "Wizard"
-	applied_name = "wizard"
-	applied_desc = "A cardboard cutout of a wizard."
-	outfit = /datum/outfit/wizard/bookless
-
-/datum/cardboard_cutout/wizard/get_name()
-	return "[pick(GLOB.wizard_first)] [pick(GLOB.wizard_second)]"
-
-/datum/cardboard_cutout/nightmare
-	name = "Nightmare"
-	applied_name = "nightmare"
-	applied_desc = "A cardboard cutout of a nightmare."
-	species = /datum/species/shadow/nightmare
-
-/datum/cardboard_cutout/nightmare/get_name()
-	return pick(GLOB.nightmare_names)
 
 /datum/cardboard_cutout/xenomorph
 	name = "Xenomorph"
@@ -315,79 +249,32 @@
 /datum/cardboard_cutout/xenomorph_maid/get_name()
 	return applied_name + " ([rand(1, 999)])"
 
-/datum/cardboard_cutout/ash_walker
-	name = "Ash Walker"
-	applied_name = "lizard"
-	applied_desc = "A cardboard cutout of an ash walker."
-	species = /datum/species/lizard/ashwalker
-	outfit = /datum/outfit/ashwalker/spear
+/datum/cardboard_cutout/overwatch
+	name = "Overwatch Soldier"
+	applied_name = "OTA-133"
+	applied_desc = "A masterful disguise outfit of a OTA Soldier."
+	outfit = /datum/outfit/combinesoldier_cutout
 
-/datum/cardboard_cutout/ash_walker/get_name()
-	return generate_random_name_species_based(species_type = /datum/species/lizard)
+/datum/cardboard_cutout/overwatch/get_name()
+	return "OTA-[rand(111,999)]"
 
-/datum/cardboard_cutout/death_squad
-	name = "Deathsquad Officer"
-	applied_name = "deathsquad officer"
-	applied_desc = "A cardboard cutout of a death commando."
-	outfit = /datum/outfit/centcom/death_commando
+/datum/outfit/combinesoldier_cutout
+	name = "Overwatch Soldier Cardboard cutout"
 
-/datum/cardboard_cutout/death_squad/get_name()
-	return pick(GLOB.commando_names)
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
+	uniform = /obj/item/clothing/under/combine/overwatch
+	suit = /obj/item/clothing/suit/armor/overwatch
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
+	gloves = /obj/item/clothing/gloves/combat/overwatch
+	r_hand = /obj/item/gun/ballistic/automatic/mp7
 
-/datum/cardboard_cutout/ian
-	name = "Ian"
-	applied_name = "Ian"
-	applied_desc = "A cardboard cutout of the HoP's beloved corgi."
-	direct_icon = 'icons/mob/simple/pets.dmi'
-	direct_icon_state = "corgi"
+/obj/item/cardboard_cutout/spy_disguise
+	starting_cutout = "Overwatch Soldier"
+	w_class = WEIGHT_CLASS_BULKY
+	item_flags = SLOWS_WHILE_IN_HAND | DROPDEL
+	slowdown = 0.58
+	drag_slowdown = 0.58
 
-/datum/cardboard_cutout/slaughter_demon
-	name = "Slaughter Demon"
-	applied_name = "slaughter demon"
-	applied_desc = "A cardboard cutout of a slaughter demon."
-	direct_icon = 'icons/mob/simple/demon.dmi'
-	direct_icon_state = "slaughter_demon"
-
-/datum/cardboard_cutout/laughter_demon
-	name = "Laughter Demon"
-	applied_name = "laughter demon"
-	applied_desc = "A cardboard cutout of a laughter demon."
-	direct_icon = 'icons/mob/simple/demon.dmi'
-	direct_icon_state = "bow_demon"
-
-/datum/cardboard_cutout/security_officer
-	name = "Private Security Officer"
-	applied_name = "Private Security Officer"
-	applied_desc = "A cardboard cutout of a private security officer."
-	mob_spawner = /obj/effect/mob_spawn/corpse/human/nanotrasensoldier
-
-/datum/cardboard_cutout/heretic
-	name = "Heretic"
-	applied_name = "Unknown"
-	applied_desc = "A cardboard cutout of a Heretic."
-	outfit = /datum/outfit/heretic_hallucination
-
-/datum/cardboard_cutout/changeling
-	name = "Changeling"
-	applied_name = "Unknown"
-	applied_desc = "A cardboard cutout of a Changeling."
-	outfit = /datum/outfit/changeling
-
-/datum/cardboard_cutout/pirate
-	name = "Pirate"
-	applied_name = "Unknown"
-	applied_desc = "A cardboard cutout of a space pirate."
-	outfit = /datum/outfit/pirate/space/captain/cardboard
-
-/datum/cardboard_cutout/ninja
-	name = "Space Ninja"
-	applied_name = "Unknown"
-	applied_desc = "A cardboard cutout of a space ninja."
-	outfit = /datum/outfit/ninja
-
-/datum/cardboard_cutout/abductor
-	name = "Abductor Agent"
-	applied_name = "Unknown"
-	applied_desc = "A cardboard cutout of an abductor agent."
-	species = /datum/species/abductor
-	outfit = /datum/outfit/abductor/agent/cardboard
+/obj/item/cardboard_cutout/spy_disguise/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/two_handed, require_twohands=TRUE, display_wielded=FALSE)

@@ -324,10 +324,7 @@
 
 	glasses = /obj/item/clothing/glasses/night
 
-	back = /obj/item/storage/bag/rebar_quiver
-	backpack_contents = list(
-		/obj/item/ammo_casing/rebar = 10,
-	)
+	neck = /obj/item/storage/bag/rebar_quiver/syndicate
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
@@ -560,6 +557,8 @@
 	l_pocket = /obj/item/ammo_box/colta357
 	r_pocket = /obj/item/storage/belt/pouch/smoke_meds
 
+	neck = /obj/item/storage/bag/rebar_quiver/syndicate
+
 	glasses = /obj/item/clothing/glasses/night
 
 	back = /obj/item/storage/bag/rebar_quiver
@@ -607,7 +606,7 @@
 /datum/outfit/deployment_loadout/rebel/tier4/spy
 	name = "Deployment: Rebel Spy"
 	display_name = "Rebel Spy (Pick Class)"
-	desc = "While not very effective in direct combat, you have a powerful knife that is espescially effective when backstabbing opponents, smoke bombs, a revolver, and C4 for sabotage."
+	desc = "While not very effective in direct combat, you have a powerful knife that is espescially effective when backstabbing opponents, smoke bombs, disguises, a revolver, and C4 for sabotage."
 	id_name = "Spy"
 
 	uniform = /obj/item/clothing/under/citizen/rebel
@@ -620,7 +619,7 @@
 	l_pocket = /obj/item/knife/combat/backstab
 	r_pocket = /obj/item/grenade/smokebomb
 
-	suit = /obj/item/clothing/suit/armor/civilprotection/speedy
+	suit = /obj/item/clothing/suit/armor/civilprotection/spy
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
 
 	mask = /obj/item/clothing/mask/gas/hl2/swat
@@ -628,14 +627,16 @@
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 		/obj/item/grenade/c4 = 2,
-		/obj/item/grenade/smokebomb = 1,
 		/obj/item/ammo_box/colta357 = 1,
+		/obj/item/grenade/smokebomb = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
 	glasses = /obj/item/clothing/glasses/night
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+
+	extra_str = 5
 
 /datum/outfit/deployment_loadout/rebel/tier4/spy/post_equip(mob/living/carbon/human/H)
 	. = ..()

@@ -39,7 +39,44 @@
 	slowdown = -0.25
 
 /obj/item/clothing/suit/armor/civilprotection/speedy
-	slowdown = -0.33
+	slowdown = -0.35
+
+/obj/item/clothing/suit/armor/civilprotection/spy
+	slowdown = -0.25
+	actions_types = list(/datum/action/item_action/disguise_self)
+	var/disguise_charge = TRUE
+
+/datum/action/item_action/disguise_self
+	name = "Disguise Self"
+	desc = "Disguise yourself with a rudimentary overwatch soldier disguise if you have both your hands free. Warning, it is unable to fool turrets, and slows you down."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "cloak"
+
+/obj/item/clothing/suit/armor/civilprotection/spy/ui_action_click(mob/user, action)
+	disguise_self()
+
+/obj/item/clothing/suit/armor/civilprotection/spy/verb/disguise_self()
+	set category = "Object"
+	set name = "Disguise Self"
+	if(!iscarbon(usr))
+		return
+	if(!disguise_charge)
+		to_chat(usr, span_warning("Your disguise is not yet ready!"))
+		return
+
+	var/mob/living/carbon/human/H = usr
+	var/obj/item/cardboard_cutout/spy_disguise/N = new(H)
+	if(H.put_in_hands(N))
+		to_chat(H, "<span class='notice'Disguise enabled.</span>")
+	else
+		to_chat(H, "<span class='notice'You need both your hands free to put on your diguise.</span>")
+		qdel(N)
+
+	playsound(loc, 'hl13/sound/effects/zap1.ogg', 50, TRUE, TRUE)
+	disguise_charge = FALSE
+	sleep(5 SECONDS)
+	disguise_charge = TRUE
+	to_chat(usr, span_notice("A new disguise is available."))
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat
 	name = "civil protection trench coat"

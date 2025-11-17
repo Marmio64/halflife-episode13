@@ -32,6 +32,8 @@
 	var/datum/callback/wield_callback
 	/// A callback on the parent to be called when the item is unwielded
 	var/datum/callback/unwield_callback
+	/// Should the name change if its wielded?
+	var/display_wielded = TRUE
 
 /**
 
@@ -58,6 +60,7 @@
 	icon_wielded = FALSE,
 	datum/callback/wield_callback,
 	datum/callback/unwield_callback,
+	display_wielded = TRUE,
 )
 	if(!isitem(parent))
 		return COMPONENT_INCOMPATIBLE
@@ -72,6 +75,7 @@
 	src.icon_wielded = icon_wielded
 	src.wield_callback = wield_callback
 	src.unwield_callback = unwield_callback
+	src.display_wielded = display_wielded
 
 	if(require_twohands)
 		ADD_TRAIT(parent, TRAIT_NEEDS_TWO_HANDS, ABSTRACT_ITEM_TRAIT)
@@ -96,6 +100,7 @@
 	icon_wielded,
 	datum/callback/wield_callback,
 	datum/callback/unwield_callback,
+	display_wielded,
 )
 	if(!original)
 		return
@@ -231,7 +236,8 @@
 		parent_item.force = force_wielded
 	if(sharpened_increase)
 		parent_item.force += sharpened_increase
-	parent_item.name = "[parent_item.name] (Wielded)"
+	if(display_wielded)
+		parent_item.name = "[parent_item.name] (Wielded)"
 	parent_item.update_appearance()
 
 	if(iscyborg(user))
@@ -280,12 +286,13 @@
 	else if(force_unwielded)
 		parent_item.force = force_unwielded
 
-	// update the items name to remove the wielded status
-	var/sf = findtext(parent_item.name, " (Wielded)", -10) // 10 == length(" (Wielded)")
-	if(sf)
-		parent_item.name = copytext(parent_item.name, 1, sf)
-	else
-		parent_item.name = "[initial(parent_item.name)]"
+	if(display_wielded)
+		// update the items name to remove the wielded status
+		var/sf = findtext(parent_item.name, " (Wielded)", -10) // 10 == length(" (Wielded)")
+		if(sf)
+			parent_item.name = copytext(parent_item.name, 1, sf)
+		else
+			parent_item.name = "[initial(parent_item.name)]"
 
 	// Update icons
 	parent_item.update_appearance()

@@ -281,6 +281,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/rebarxbow/force
 
 /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
+	desc = "A handcrafted crossbow. Can fire sharpened iron rods and pieces of rebar at high velocities with large amounts of armor piercing capability."
 	draw_time = 1.2 SECONDS
 
 /obj/item/gun/ballistic/rifle/rebarxbow/syndie

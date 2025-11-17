@@ -605,8 +605,7 @@
 	icon_state = "syndie_quiver_0"
 	worn_icon_state = "syndie_quiver_0"
 	inhand_icon_state = "holyquiver"
-	desc = "A specialized quiver meant to hold any kind of bolts intended for use with the rebar crossbow. \
-		Clearly a better design than a cut up oxygen tank..."
+	desc = "An old world quiver now used for holding rebar bolts."
 	slot_flags = ITEM_SLOT_NECK
 	w_class = WEIGHT_CLASS_NORMAL
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
@@ -620,7 +619,7 @@
 
 /obj/item/storage/bag/rebar_quiver/syndicate/PopulateContents()
 	for(var/to_fill in 1 to 20)
-		new /obj/item/ammo_casing/rebar/syndie(src)
+		new /obj/item/ammo_casing/rebar(src)
 
 /obj/item/storage/bag/rebar_quiver/syndicate/update_icon_state()
 	. = ..()
@@ -650,7 +649,7 @@
 	if(held_crossbow.magazine.contents.len >= held_crossbow.magazine.max_ammo)
 		user.balloon_alert(user, "no more room!")
 		return
-	if(!do_after(user, 1.2 SECONDS, user))
+	if(!do_after(user, 1.35 SECONDS, user))
 		return
 
 	var/obj/item/ammo_casing/rebar/ammo_to_load = contents[1]

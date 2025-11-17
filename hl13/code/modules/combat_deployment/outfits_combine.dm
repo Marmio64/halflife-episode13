@@ -652,6 +652,7 @@
 	combat_music = 'hl13/sound/music/combat/infiltrate.ogg'
 
 	extra_dex = 4
+	extra_str = 5
 
 /datum/outfit/deployment_loadout/combine/tier5/suppressor
 	name = "Deployment: Combine Suppressor"

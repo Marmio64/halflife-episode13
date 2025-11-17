@@ -141,13 +141,10 @@
 /obj/item/knife/combat/backstab
 	name = "assassin's combat knife"
 	desc = "A military combat utility survival knife. Deals far more damage on backstabs."
-	force = 25
+	force = 20
 	armour_penetration = 30
 	wdefense = 3
 	var/backstab_bonus = 35
-
-/obj/item/knife/combat/backstab/weak
-	force = 20
 
 /obj/item/knife/combat/backstab/afterattack(atom/target, mob/user, click_parameters)
 	. = ..()

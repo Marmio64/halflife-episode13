@@ -292,6 +292,13 @@
 /obj/structure/railing/halflife/full,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
+"kp" = (
+/obj/structure/halflife/rails{
+	dir = 1
+	},
+/obj/machinery/deployment_payload/fortress,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city)
 "kr" = (
 /obj/item/knife/combat,
 /obj/effect/decal/cleanable/blood/trails,
@@ -929,11 +936,8 @@
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
 "Do" = (
-/obj/structure/halflife/rails{
-	dir = 1
-	},
-/obj/machinery/deployment_payload/fortress,
-/turf/open/floor/plating/ground/brickroad,
+/obj/structure/halflife/cone,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
 "Ds" = (
 /obj/structure/halflife/storage/shelf,
@@ -1074,6 +1078,10 @@
 "Hj" = (
 /obj/item/stack/sheet/scrap_metal,
 /turf/open/halflife/water/deep,
+/area/halflife/outdoors/deployment_city)
+"Hk" = (
+/obj/structure/halflife/road_barrier/concrete,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
 "HW" = (
 /obj/machinery/ammo_crate,
@@ -1356,7 +1364,7 @@
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Rs" = (
 /obj/structure/barricade/sandbags,
-/turf/open/floor/plating/ground/brickroad,
+/turf/open/floor/plating/ground/sidewalk/cobblestone,
 /area/halflife/outdoors/deployment_city)
 "Rw" = (
 /obj/structure/bed/halflife/bedframe/wire,
@@ -1570,6 +1578,10 @@
 /obj/item/halflife/nutrient_bar_wrapping/beef,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"VZ" = (
+/obj/structure/halflife/road_barrier/concrete,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city)
 "Wd" = (
 /obj/effect/decal/cleanable/blood/trails{
 	dir = 1
@@ -1641,7 +1653,7 @@
 /obj/structure/halflife/rails{
 	dir = 1
 	},
-/obj/structure/barricade/sandbags,
+/obj/structure/halflife/road_barrier/concrete,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city)
 "Xg" = (
@@ -24322,7 +24334,7 @@ Yk
 Wi
 lZ
 eb
-iT
+Do
 Io
 iT
 iT
@@ -24606,14 +24618,14 @@ aj
 Wi
 iT
 eb
-iT
+Do
 Io
 bt
 iT
 eb
 iT
-qo
 iT
+qo
 cx
 cx
 PY
@@ -24753,9 +24765,9 @@ nY
 cx
 iT
 eb
+iT
 qo
 wk
-qo
 cx
 cx
 DX
@@ -24896,8 +24908,8 @@ cx
 iT
 eb
 iT
-qo
 iT
+qo
 iT
 iT
 iT
@@ -25181,8 +25193,8 @@ iT
 iT
 iT
 iT
-iT
 qo
+iT
 iT
 eb
 iT
@@ -25323,9 +25335,9 @@ cx
 cx
 cx
 cx
-qo
 wk
 qo
+iT
 eb
 iT
 mG
@@ -25465,11 +25477,11 @@ cx
 cx
 cx
 cx
-iT
 qo
 iT
-eb
 iT
+Rs
+jO
 mG
 Gz
 Df
@@ -25608,10 +25620,10 @@ cx
 cx
 cx
 cx
-cx
 iT
 iT
-iT
+jO
+Jf
 mG
 mG
 mG
@@ -25742,7 +25754,7 @@ iT
 iT
 iT
 iT
-iT
+Do
 Bc
 iT
 iT
@@ -25752,10 +25764,10 @@ iT
 iT
 iT
 iT
-iT
-iT
 jO
-Jf
+jO
+jO
+iT
 iT
 iT
 iT
@@ -25896,11 +25908,11 @@ UD
 UD
 UD
 UD
-DX
-DX
 UD
 UD
 UD
+UD
+cG
 UD
 oO
 UD
@@ -26026,7 +26038,7 @@ Vm
 Vm
 Vm
 Vm
-Vm
+yc
 eX
 Vm
 Vm
@@ -26042,7 +26054,7 @@ Vm
 Vm
 Vm
 Vm
-Vm
+Hk
 Vm
 Vm
 Vm
@@ -26179,13 +26191,13 @@ fo
 fo
 fo
 fo
+VZ
 fo
 fo
 fo
 fo
 fo
 fo
-Rs
 fo
 fo
 fo
@@ -26319,15 +26331,15 @@ ly
 ly
 ly
 ly
-ly
-ly
-ly
-Do
-tp
-tp
-tp
+kp
 tp
 Xf
+tp
+tp
+tp
+tp
+tp
+tp
 tp
 tp
 tp
@@ -26463,13 +26475,13 @@ fo
 fo
 fo
 fo
+VZ
 fo
 fo
 fo
 fo
 fo
 fo
-Rs
 fo
 fo
 fo
@@ -26594,7 +26606,7 @@ Vm
 Vm
 Vm
 Vm
-Vm
+yc
 eX
 Vm
 Vm
@@ -26610,7 +26622,7 @@ Vm
 Vm
 Vm
 Vm
-Vm
+Hk
 Vm
 Vm
 Vm
@@ -26748,11 +26760,11 @@ UD
 UD
 UD
 UD
-DX
-DX
 UD
 UD
 UD
+UD
+cG
 UD
 oO
 UD
@@ -26878,7 +26890,7 @@ iT
 iT
 iT
 iT
-iT
+Do
 Bc
 iT
 iT
@@ -26888,10 +26900,10 @@ iT
 iT
 iT
 iT
-iT
-iT
 jO
-Jf
+jO
+jO
+iT
 iT
 iT
 iT
@@ -27028,10 +27040,10 @@ cx
 cx
 cx
 cx
-cx
 iT
 iT
-iT
+jO
+Jf
 mG
 mG
 mG
@@ -27169,11 +27181,11 @@ cx
 cx
 cx
 cx
-iT
 qo
 iT
-eb
 iT
+Rs
+jO
 sj
 Ei
 ce
@@ -27311,9 +27323,9 @@ cx
 cx
 cx
 cx
-qo
 wk
 qo
+iT
 eb
 iT
 sj
@@ -27453,8 +27465,8 @@ iT
 iT
 iT
 iT
-iT
 qo
+iT
 iT
 eb
 iT
@@ -27736,8 +27748,8 @@ cx
 iT
 eb
 iT
-qo
 iT
+qo
 iT
 iT
 iT
@@ -27877,9 +27889,9 @@ nY
 cx
 iT
 eb
+iT
 qo
 wk
-qo
 cx
 cx
 DX
@@ -28014,14 +28026,14 @@ ht
 aj
 iT
 eb
-iT
+Do
 Io
 bt
 iT
 eb
 iT
-qo
 iT
+qo
 cx
 cx
 PY
@@ -28298,7 +28310,7 @@ aj
 FV
 lZ
 eb
-iT
+Do
 Io
 iT
 iT
