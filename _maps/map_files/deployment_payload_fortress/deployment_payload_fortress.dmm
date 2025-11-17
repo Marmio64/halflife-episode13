@@ -467,10 +467,6 @@
 /obj/machinery/griddle,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/outdoors/deployment_city)
-"oA" = (
-/obj/structure/halflife/trash/bricks,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city)
 "oC" = (
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -568,18 +564,6 @@
 /obj/structure/window/fulltile/halflife/nosmooth/reinforced,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"sT" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/reagent_containers/hypospray/medipen/healthpen{
-	pixel_x = -4;
-	pixel_y = 7
-	},
-/obj/item/reagent_containers/hypospray/medipen/healthpen{
-	pixel_x = 4;
-	pixel_y = 1
-	},
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
 "tp" = (
 /obj/structure/halflife/rails{
 	dir = 1
@@ -763,6 +747,14 @@
 /area/halflife/outdoors/deployment_city)
 "zy" = (
 /obj/structure/table/halflife/metal/grate,
+/obj/item/grenade/syndieminibomb/bouncer{
+	pixel_x = 6;
+	pixel_y = 11
+	},
+/obj/item/grenade/syndieminibomb/bouncer{
+	pixel_x = -7;
+	pixel_y = 6
+	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "zF" = (
@@ -817,12 +809,6 @@
 /obj/structure/barricade/wooden/solid,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
-"Bi" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/reagent_containers/pill/patch/grubnugget,
-/obj/item/reagent_containers/pill/patch/grubnugget,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
 "Br" = (
 /obj/machinery/door/unpowered/halflife/wood,
 /turf/open/floor/plating/indoor/woodc,
@@ -904,6 +890,12 @@
 	},
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/outdoors/deployment_city)
+"Dd" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/reagent_containers/pill/patch/grubnugget,
+/obj/item/reagent_containers/pill/patch/grubnugget,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "Df" = (
 /obj/structure/chair/halflife/wood{
 	dir = 1
@@ -948,10 +940,6 @@
 /obj/machinery/telecomms/processor/preset_one/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
-"Ed" = (
-/obj/structure/halflife/trash/wood,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city)
 "Ei" = (
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/combat_deployment/rebel_base)
@@ -963,6 +951,12 @@
 /obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city)
+"EI" = (
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "EQ" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/gun/ballistic/automatic/ar2/nopin{
@@ -1002,12 +996,6 @@
 /obj/item/gun/ballistic/combine_sniper/slow{
 	pixel_x = 0;
 	pixel_y = 10
-	},
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
-"Fj" = (
-/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
-	dir = 4
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
@@ -1099,10 +1087,6 @@
 /obj/effect/koth_grace_field,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
-"Iy" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city)
 "IE" = (
 /obj/structure/stairs/halflife/concrete{
 	pixel_y = 1
@@ -1143,6 +1127,10 @@
 /obj/effect/landmark/deployments_refugee,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"JJ" = (
+/obj/structure/halflife/trash/bricks,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "Kn" = (
 /obj/machinery/telecomms/server/presets/common/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
@@ -1243,6 +1231,12 @@
 /obj/structure/flora/tree/halflife/plain,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city)
+"NZ" = (
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "Ok" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/tile/kitchen,
@@ -1270,6 +1264,18 @@
 /obj/item/stack/medical/gauze/twelve,
 /obj/item/stack/medical/gauze/twelve,
 /turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/combat_deployment/combine_base)
+"OS" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/reagent_containers/hypospray/medipen/healthpen{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/hypospray/medipen/healthpen{
+	pixel_x = 4;
+	pixel_y = 1
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
 "Pe" = (
 /obj/machinery/combine_walllight/directional/east,
@@ -1338,6 +1344,10 @@
 	},
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
+"QZ" = (
+/obj/structure/halflife/trash/wood,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "Rc" = (
 /obj/machinery/cash_deposit/rebel/tier3,
 /turf/open/floor/plating/indoor/woodc,
@@ -1500,6 +1510,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"UN" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "UU" = (
 /obj/structure/halflife/fence,
 /obj/effect/koth_grace_field,
@@ -1641,12 +1655,6 @@
 /obj/structure/halflife/trash/glass/basic,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city)
-"XV" = (
-/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
 "Yb" = (
 /obj/structure/halflife/road_barrier{
 	dir = 1
@@ -23143,7 +23151,7 @@ cx
 cx
 yB
 iT
-Iy
+UN
 cx
 cx
 iT
@@ -23264,7 +23272,7 @@ rW
 js
 js
 js
-js
+Um
 rW
 rW
 Um
@@ -23405,7 +23413,7 @@ Um
 Um
 js
 js
-js
+Um
 Um
 Um
 Um
@@ -24505,14 +24513,14 @@ fz
 fz
 gR
 zM
-Bi
+Dd
 wA
 wA
 Qd
 wA
 wA
 ki
-sT
+OS
 gR
 qW
 WL
@@ -25359,9 +25367,9 @@ gR
 gR
 MN
 gR
-Fj
+EI
 gR
-Fj
+EI
 gR
 MN
 gR
@@ -27063,9 +27071,9 @@ gR
 gR
 MN
 gR
-XV
+NZ
 gR
-XV
+NZ
 gR
 MN
 gR
@@ -27778,7 +27786,7 @@ wA
 wA
 wA
 wA
-sT
+OS
 gR
 qW
 wA
@@ -27913,7 +27921,7 @@ fz
 fz
 gR
 WA
-Bi
+Dd
 wA
 wA
 Ds
@@ -28943,10 +28951,10 @@ rW
 rW
 js
 js
-js
 rW
-js
-js
+rW
+rW
+rW
 Um
 Um
 Um
@@ -29228,7 +29236,7 @@ iE
 js
 js
 js
-iE
+js
 iE
 iE
 Um
@@ -29264,7 +29272,7 @@ cx
 cx
 cx
 cx
-Ed
+QZ
 iT
 cx
 cx
@@ -29389,8 +29397,8 @@ cx
 cx
 cx
 cx
-oA
-Iy
+JJ
+UN
 iT
 cx
 cx
