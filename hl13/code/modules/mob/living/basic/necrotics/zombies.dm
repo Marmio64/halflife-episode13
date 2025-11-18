@@ -28,6 +28,9 @@
 	initial_language_holder = /datum/language_holder/zombie
 	mobility_flags = MOBILITY_FLAGS_REST_CAPABLE_DEFAULT //allows playing dead
 	basic_mob_flags = FLAMMABLE_MOB
+
+	death_message = "lets out a pained scream as it falls limp..."
+
 	var/no_crab_state = "zombie_dead_nocrab"
 	var/crabless_possible = TRUE
 	var/headcrabspawn = /mob/living/basic/halflife/headcrab

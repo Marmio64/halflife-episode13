@@ -143,16 +143,20 @@
 	desc = "A military combat utility survival knife. Deals far more damage on backstabs."
 	force = 20
 	armour_penetration = 30
-	wdefense = 3
-	var/backstab_bonus = 35
+	attack_speed = CLICK_CD_SLOW //Will two shot people if you have the backstabber trait from being a spy/assassin, so this balances it out more
+	var/backstab_bonus = 30
 
-/obj/item/knife/combat/backstab/afterattack(atom/target, mob/user, click_parameters)
+/obj/item/knife/combat/backstab/afterattack(atom/target, mob/living/user, click_parameters)
 	. = ..()
 	if(target == user || !isliving(target))
 		return
 	var/mob/living/living_target = target
 	if(!check_behind(user, living_target))
 		return
+
+	if(HAS_TRAIT(user, TRAIT_BACKSTABBER))
+		backstab_bonus *= 2
+
 	// We're officially behind them, apply effects
 	living_target.apply_damage(backstab_bonus, BRUTE, wound_bonus = CANT_WOUND)
 	living_target.balloon_alert(user, "backstab!")

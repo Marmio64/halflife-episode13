@@ -278,3 +278,75 @@
 /obj/item/cardboard_cutout/spy_disguise/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE, display_wielded=FALSE)
+
+/////////// Sniper
+
+/obj/item/cardboard_cutout/spy_disguise/sniper
+	starting_cutout = "Overwatch Sniper"
+
+/datum/cardboard_cutout/sniper
+	name = "Overwatch Sniper"
+	applied_name = "Sniper-133"
+	applied_desc = "A masterful disguise outfit of a OTA Sniper."
+	outfit = /datum/outfit/combinesniper_cutout
+
+/datum/cardboard_cutout/sniper/get_name()
+	return "Sniper-[rand(111,999)]"
+
+/datum/outfit/combinesniper_cutout
+	name = "Overwatch Sniper Cardboard cutout"
+
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
+	uniform = /obj/item/clothing/under/combine/overwatch
+	suit = /obj/item/clothing/suit/armor/overwatch
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
+	gloves = /obj/item/clothing/gloves/combat/overwatch
+	r_hand = /obj/item/gun/ballistic/combine_sniper
+
+//////////// Elite
+
+/obj/item/cardboard_cutout/spy_disguise/elite
+	starting_cutout = "Overwatch Elite"
+
+/datum/cardboard_cutout/elite
+	name = "Overwatch Elite"
+	applied_name = "Elite-133"
+	applied_desc = "A masterful disguise outfit of a OTA Elite."
+	outfit = /datum/outfit/combineelite_cutout
+
+/datum/cardboard_cutout/elite/get_name()
+	return "Elite-[rand(111,999)]"
+
+/datum/outfit/combineelite_cutout
+	name = "Overwatch Elite Cardboard cutout"
+
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/elite
+	uniform = /obj/item/clothing/under/combine/overwatch/elite
+	suit = /obj/item/clothing/suit/armor/overwatch/elite
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
+	gloves = /obj/item/clothing/gloves/combat/overwatch
+	r_hand = /obj/item/gun/ballistic/automatic/ar2
+
+////////// Medcop
+
+/obj/item/cardboard_cutout/spy_disguise/med_cop
+	starting_cutout = "Medical Cop"
+
+/datum/cardboard_cutout/med_cop
+	name = "Medical Cop"
+	applied_name = "Medic-133"
+	applied_desc = "A masterful disguise outfit of a Medical Cop."
+	outfit = /datum/outfit/med_cop_cutout
+
+/datum/cardboard_cutout/med_cop/get_name()
+	return "Medic-[rand(111,999)]"
+
+/datum/outfit/med_cop_cutout
+	name = "Medical Cop Cardboard cutout"
+
+	uniform = /obj/item/clothing/under/combine/civilprotection
+	gloves = /obj/item/clothing/gloves/color/civilprotection
+	suit = /obj/item/clothing/suit/armor/civilprotection/medical
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	mask = /obj/item/clothing/mask/gas/civilprotection/medical
+	r_hand = /obj/item/gun/ballistic/automatic/mp7

@@ -73,6 +73,9 @@
 #define TRAIT_MASOCHIST "masochist"
 
 #define TRAIT_TDMCAPTAIN "tdmcaptain"
+#define TRAIT_TDMPLAYER "tdmplayer"
+
+#define TRAIT_BACKSTABBER "backstabber"
 
 #define TRAIT_THE_HIDDEN "the_hidden"
 

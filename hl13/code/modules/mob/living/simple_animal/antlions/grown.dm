@@ -28,6 +28,9 @@
 	butcher_difficulty = 40
 	footstep_type = FOOTSTEP_MOB_ANTLION
 	death_sound = 'hl13/sound/creatures/antlion/pain2.ogg'
+
+	death_message = "chitters as it ceases movement..."
+
 	var/charging = FALSE
 	var/revving_charge = FALSE
 	var/dash_speed = 1

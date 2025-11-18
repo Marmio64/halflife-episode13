@@ -44,11 +44,13 @@
 /obj/item/clothing/suit/armor/civilprotection/spy
 	slowdown = -0.25
 	actions_types = list(/datum/action/item_action/disguise_self)
+	clothing_traits = list(TRAIT_BACKSTABBER)
 	var/disguise_charge = TRUE
+	var/list/outfitoptions = list("OTA Soldier", "OTA Sniper", "OTA Elite", "Medical Cop")
 
 /datum/action/item_action/disguise_self
 	name = "Disguise Self"
-	desc = "Disguise yourself with a rudimentary overwatch soldier disguise if you have both your hands free. Warning, it is unable to fool turrets, and slows you down."
+	desc = "Disguise yourself with a rudimentary combine disguise if you have both your hands free. Warning, it is unable to fool turrets, and slows you down."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "cloak"
 
@@ -65,12 +67,25 @@
 		return
 
 	var/mob/living/carbon/human/H = usr
-	var/obj/item/cardboard_cutout/spy_disguise/N = new(H)
-	if(H.put_in_hands(N))
+	var/obj/item/disguise_chosen
+	var/outfit_chosen = input(H, "What disguise will you don?", "Choices") as null|anything in outfitoptions
+	switch(outfit_chosen)
+		if("OTA Soldier")
+			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise
+		if("OTA Sniper")
+			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/sniper
+		if("OTA Elite")
+			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/elite
+		if("Medical Cop")
+			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/med_cop
+		else
+			return
+	var/obj/item/cardboard_cutout/D = new disguise_chosen(H)
+	if(H.put_in_hands(D))
 		to_chat(H, "<span class='notice'Disguise enabled.</span>")
 	else
 		to_chat(H, "<span class='notice'You need both your hands free to put on your diguise.</span>")
-		qdel(N)
+		qdel(D)
 
 	playsound(loc, 'hl13/sound/effects/zap1.ogg', 50, TRUE, TRUE)
 	disguise_charge = FALSE
@@ -169,6 +184,7 @@
 	armor_type = /datum/armor/overwatch_assassin_armor
 	slowdown = -0.5
 	actions_types = list(/datum/action/item_action/assassin_invis)
+	clothing_traits = list(TRAIT_BACKSTABBER)
 	var/invis_ready = TRUE
 
 /datum/armor/overwatch_assassin_armor
@@ -204,7 +220,7 @@
 
 	playsound(loc, 'hl13/sound/effects/zap1.ogg', 50, TRUE, TRUE)
 	invis_ready = FALSE
-	H.alpha = 25
+	H.alpha = 35
 	sleep(15 SECONDS)
 	H.alpha = 255
 	sleep(20 SECONDS)

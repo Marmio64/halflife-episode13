@@ -54,6 +54,18 @@
 	list_reagents = list(/datum/reagent/medicine/oxycodone = 10)
 	custom_price = null
 
+/obj/item/reagent_containers/hypospray/medipen/blood
+	name = "bloodloss shot"
+	desc = "A rapid injection syringe for quickly stabilizing and recovering loss of blood."
+	icon = 'hl13/icons/obj/medkits.dmi'
+	icon_state = "blood"
+	base_icon_state = "blood"
+	custom_price = null
+
+	volume = 30
+	amount_per_transfer_from_this = 30
+	list_reagents = list(/datum/reagent/medicine/epinephrine = 10, /datum/reagent/medicine/coagulant = 1, /datum/reagent/iron = 9, /datum/reagent/medicine/salglu_solution = 10)
+
 /obj/item/storage/halflife/pill_bottle/antitox
 	name = "Anti-Sickness Pill bottle"
 	desc = "A pill bottle with antibiotics and activated charcoal pills, which cleanse diseases, venoms, and poisons from the body."
@@ -99,6 +111,7 @@
 /obj/item/storage/medkit/halflife/Initialize(mapload)
 	. = ..()
 	atom_storage.max_slots = 10
+	atom_storage.max_total_storage = 20
 
 /obj/item/storage/medkit/halflife/PopulateContents()
 	if(empty)
@@ -107,10 +120,15 @@
 		/obj/item/stack/medical/gauze = 1,
 		/obj/item/stack/medical/ointment = 1,
 		/obj/item/stack/medical/suture = 2,
-		/obj/item/reagent_containers/hypospray/medipen = 1,
+		/obj/item/reagent_containers/hypospray/medipen/blood = 1,
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 3,
 	)
 	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/halflife_combine/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 10
+	atom_storage.max_total_storage = 20
 
 /obj/item/storage/medkit/halflife_combine
 	icon_state = "combine first aid kit"
@@ -125,6 +143,7 @@
 		/obj/item/stack/medical/gauze = 1,
 		/obj/item/stack/medical/suture = 2,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen/high_capacity = 2,
+		/obj/item/reagent_containers/hypospray/medipen/blood = 1,
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 3,
 		/obj/item/healthanalyzer = 1,
 	)
@@ -137,6 +156,7 @@
 		/obj/item/stack/medical/gauze = 1,
 		/obj/item/stack/medical/suture = 2,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen/high_capacity = 2,
+		/obj/item/reagent_containers/hypospray/medipen/blood = 1,
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 3,
 		/obj/item/healthanalyzer/no_req = 1,
 	)

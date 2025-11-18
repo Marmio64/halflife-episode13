@@ -58,6 +58,7 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 	. = ..()
 	user.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 3) //Gives you a few seconds of invincibility to prevent spawn camping
 	ADD_TRAIT(user, TRAIT_VIRUSIMMUNE, JOB_TRAIT)
+	ADD_TRAIT(user, TRAIT_TDMPLAYER, JOB_TRAIT)
 	user.faction += "combine"
 	user.faction -= "neutral"
 

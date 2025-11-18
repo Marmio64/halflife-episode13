@@ -181,6 +181,8 @@
 	if(!iscarbon(eater))
 		return FALSE
 	var/mob/living/carbon/C = eater
+	if(HAS_TRAIT(eater, TRAIT_TDMPLAYER)) //TDM players cant remove their mask, so this lets them eat shit and what not
+		return TRUE
 	var/covered = ""
 	if(C.is_mouth_covered(ITEM_SLOT_HEAD))
 		covered = "headgear"
