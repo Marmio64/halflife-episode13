@@ -307,7 +307,7 @@
 			switch(depth)
 				if(3)
 					H.visible_message("<span class='danger'>[H] flails in the water!</span>",
-										"<span class='userdanger'>You're drowning!</span>")
+										"<span class='userdanger'>You're drowning, stop and try to get up!</span>")
 					H.Knockdown(20)
 					//M.adjust_bodytemperature(coldness)
 					M.adjustStaminaLoss(16)
@@ -316,7 +316,7 @@
 					playsound(src, 'hl13/sound/halflifeeffects/drown.ogg', 30, 1, 1)
 				if(2)
 					H.visible_message("<span class='danger'>[H] flails in the shallow water!</span>",
-										"<span class='userdanger'>You're drowning!</span>")
+										"<span class='userdanger'>You're drowning, stop and try to get up!</span>")
 					H.Knockdown(10)
 					//M.adjust_bodytemperature(coldness)
 					M.adjustStaminaLoss(8)

@@ -101,7 +101,7 @@
 	slowdown = -0.9
 
 /obj/item/clothing/under/pants/the_hidden/brute
-	slowdown = -0.75
+	slowdown = -0.66
 
 /obj/item/clothing/glasses/hidden_blindfold
 	name = "blindfold"
@@ -132,6 +132,20 @@
 
 	attack_speed = CLICK_CD_SLOW
 	var/backstab_bonus = 125
+	var/gib_time = 1 SECONDS
+
+/obj/item/knife/combat/the_hidden/brute
+	name = "brutish machete"
+	desc = "A monstrous looking machete. Deals more frontal damage than the standard hidden knife, but cannot instantly down someone through backstabs. Is capable of quickly hacking apart dead bodies to gib and heal from them."
+	icon = 'hl13/icons/obj/melee.dmi'
+	icon_state = "machete_scrap"
+	inhand_icon_state = "machete_scrap"
+	lefthand_file = 'hl13/icons/mob/inhands/melee_inhand_left.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/melee_inhand_right.dmi'
+	hitsound = 'hl13/sound/halflifeweapons/meleesounds/hatchet_hit.ogg'
+	force = 60
+	backstab_bonus = 30
+	gib_time = 0.5 SECONDS
 
 /obj/item/knife/combat/the_hidden/afterattack(atom/target, mob/user, click_parameters)
 	. = ..()
@@ -141,7 +155,7 @@
 	var/mob/living/living_user = user
 
 	if(living_target.stat == DEAD && ishuman(living_target)) //heal up from gibbing the dead
-		if(do_after(user, 1 SECONDS, src))
+		if(do_after(user, gib_time, src))
 			dead_effect(living_target, living_user)
 		return
 
@@ -171,6 +185,11 @@
 	item_type = /obj/item/knife/combat/the_hidden
 	requires_hands = TRUE
 	delete_old = TRUE
+
+/datum/action/cooldown/spell/conjure_item/hidden_knife/brute
+	name = "Summon Machete"
+	item_type = /obj/item/knife/combat/the_hidden/brute
+
 
 /datum/action/cooldown/spell/hidden_taunt
 	name = "Taunt"
@@ -405,20 +424,21 @@
 /datum/outfit/deployment_loadout/hidden/the_hidden/brute
 	name = "Hidden: The Hidden (Brute)"
 	display_name = "ASSAULT: The Brute"
-	desc = "You take less damage and have a unique area of effect ability to forcefully punch everyone nearby away, but are more visible, slower, and lack heat vision."
+	desc = "You take much less damage and have a unique area of effect ability to forcefully punch everyone nearby away. However, you are more visible, slower, and lack heat vision."
 
 	uniform = /obj/item/clothing/under/pants/the_hidden/brute
 
 	glasses = /obj/item/clothing/glasses/hidden_blindfold_brute
 
-	extra_dex = 10
+	extra_dex = 0
+	extra_str = 10
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/aoe/repulse/hidden_brute, /datum/action/cooldown/spell/hidden_taunt)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife/brute, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/aoe/repulse/hidden_brute, /datum/action/cooldown/spell/hidden_taunt)
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/brute/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	H.alpha = 50
-	H.physiology.damage_resistance += 35
+	H.physiology.damage_resistance += 40
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/necrotic
 	name = "Hidden: The Hidden (Necrotic)"

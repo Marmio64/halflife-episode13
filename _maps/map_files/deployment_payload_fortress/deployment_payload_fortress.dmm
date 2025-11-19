@@ -35,6 +35,13 @@
 "bf" = (
 /turf/cordon,
 /area/halflife/outdoors/deployment_city)
+"bh" = (
+/obj/structure/halflife/rails{
+	dir = 1
+	},
+/obj/machinery/deployment_payload/fortress,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city)
 "bj" = (
 /obj/structure/halflife/trash/garbage/dumpster,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -191,6 +198,10 @@
 "gR" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/combat_deployment/combine_base)
+"hs" = (
+/obj/machinery/vending/breenwater,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city)
 "ht" = (
 /obj/structure/flora/tree/halflife/plain,
 /turf/open/floor/plating/ground/grass,
@@ -242,7 +253,7 @@
 /obj/structure/railing/halflife/solo{
 	dir = 4
 	},
-/turf/open/floor/plating/indoor/metal/smooth,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/outdoors/deployment_city)
 "iK" = (
 /obj/structure/table/halflife/wood,
@@ -291,13 +302,6 @@
 "kl" = (
 /obj/structure/railing/halflife/full,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city)
-"kp" = (
-/obj/structure/halflife/rails{
-	dir = 1
-	},
-/obj/machinery/deployment_payload/fortress,
-/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city)
 "kr" = (
 /obj/item/knife/combat,
@@ -390,6 +394,10 @@
 "lG" = (
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"lI" = (
+/obj/structure/lattice,
+/turf/open/openspace,
+/area/halflife/outdoors/deployment_city)
 "lT" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/gun/ballistic/automatic/pulsesmg/nopin{
@@ -518,9 +526,20 @@
 /obj/effect/koth_grace_field,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city)
+"pQ" = (
+/obj/structure/halflife/road_barrier/concrete,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city)
 "qe" = (
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city)
+"qj" = (
+/obj/structure/railing/halflife/solo{
+	dir = 8
+	},
+/obj/item/stack/rods/two,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/outdoors/deployment_city)
 "qo" = (
 /obj/structure/halflife/leaves,
@@ -533,6 +552,9 @@
 "qL" = (
 /obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/woodc,
+/area/halflife/outdoors/deployment_city)
+"qO" = (
+/turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/outdoors/deployment_city)
 "qR" = (
 /obj/machinery/combine_recharger/round_start{
@@ -559,7 +581,7 @@
 /obj/structure/railing/halflife/solo{
 	dir = 8
 	},
-/turf/open/floor/plating/indoor/metal/smooth,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/outdoors/deployment_city)
 "sh" = (
 /obj/structure/table/halflife/no_smooth/large/wood/desk{
@@ -936,8 +958,8 @@
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
 "Do" = (
-/obj/structure/halflife/cone,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/obj/structure/halflife/road_barrier/concrete,
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city)
 "Ds" = (
 /obj/structure/halflife/storage/shelf,
@@ -1079,10 +1101,6 @@
 /obj/item/stack/sheet/scrap_metal,
 /turf/open/halflife/water/deep,
 /area/halflife/outdoors/deployment_city)
-"Hk" = (
-/obj/structure/halflife/road_barrier/concrete,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/deployment_city)
 "HW" = (
 /obj/machinery/ammo_crate,
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -1149,6 +1167,10 @@
 /obj/effect/landmark/deployments_refugee,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"JP" = (
+/obj/structure/halflife/publicphone,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city)
 "Kn" = (
 /obj/machinery/telecomms/server/presets/common/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
@@ -1287,6 +1309,10 @@
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/deployment_city)
+"PE" = (
+/obj/item/stack/rods/two,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
+/area/halflife/outdoors/deployment_city)
 "PQ" = (
 /obj/structure/halflife/toilet{
 	pixel_y = 8;
@@ -1363,8 +1389,11 @@
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Rs" = (
-/obj/structure/barricade/sandbags,
-/turf/open/floor/plating/ground/sidewalk/cobblestone,
+/obj/structure/halflife/rails{
+	dir = 1
+	},
+/obj/structure/halflife/road_barrier/concrete,
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city)
 "Rw" = (
 /obj/structure/bed/halflife/bedframe/wire,
@@ -1392,6 +1421,10 @@
 /obj/item/reagent_containers/cup/beaker,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"RU" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/ground/sidewalk/cobblestone,
+/area/halflife/outdoors/deployment_city)
 "Sa" = (
 /turf/closed/wall/halflife/sewer,
 /area/halflife/outdoors/deployment_city)
@@ -1550,6 +1583,10 @@
 "Vm" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
+"Vq" = (
+/obj/structure/halflife/cone,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "Vv" = (
 /obj/machinery/door/unpowered/halflife/seethrough/fence/wire{
 	locked = 1;
@@ -1578,10 +1615,6 @@
 /obj/item/halflife/nutrient_bar_wrapping/beef,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
-"VZ" = (
-/obj/structure/halflife/road_barrier/concrete,
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/deployment_city)
 "Wd" = (
 /obj/effect/decal/cleanable/blood/trails{
 	dir = 1
@@ -1650,11 +1683,10 @@
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/outdoors/deployment_city)
 "Xf" = (
-/obj/structure/halflife/rails{
-	dir = 1
+/obj/structure/halflife/road_barrier/concrete{
+	dir = 8
 	},
-/obj/structure/halflife/road_barrier/concrete,
-/turf/open/floor/plating/ground/brickroad,
+/turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/outdoors/deployment_city)
 "Xg" = (
 /turf/closed/wall/halflife/sewer,
@@ -22188,8 +22220,8 @@ cx
 cx
 cx
 cx
-cx
-cx
+JP
+Vm
 cx
 cx
 cx
@@ -22322,19 +22354,19 @@ cx
 cx
 cx
 cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
+iT
+iT
+iT
+ji
+iT
+iT
+iT
+iT
+iT
+iT
+iT
+iT
+yB
 cx
 cx
 cx
@@ -22464,19 +22496,19 @@ cx
 cx
 cx
 cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
+iT
+iT
+iT
+iT
+iT
+iT
+iT
+iT
+iT
+iT
+iT
+iT
+iT
 cx
 cx
 cx
@@ -22585,7 +22617,7 @@ UD
 UD
 UD
 UD
-iT
+QD
 kl
 js
 js
@@ -22597,9 +22629,16 @@ js
 js
 js
 si
+QD
 iT
 iT
 iT
+cx
+cx
+cx
+cx
+cx
+iT
 iT
 cx
 cx
@@ -22607,18 +22646,11 @@ cx
 cx
 cx
 cx
+hs
+Vm
 cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
-cx
+iT
+iT
 cx
 cx
 cx
@@ -22759,8 +22791,8 @@ cx
 cx
 cx
 cx
-cx
-cx
+iT
+iT
 cx
 cx
 cx
@@ -22868,7 +22900,7 @@ UD
 UD
 UD
 UD
-Um
+Xf
 Jg
 Jg
 js
@@ -22882,7 +22914,7 @@ js
 js
 Jg
 Jg
-Um
+Xf
 UD
 UD
 UD
@@ -23158,10 +23190,10 @@ Um
 rW
 rW
 rW
+lI
 js
 js
-js
-Um
+PE
 rW
 rW
 Um
@@ -23297,15 +23329,15 @@ fo
 Um
 Um
 Um
-Um
-Um
-Um
+qO
+qO
+qO
 js
 js
-Um
-Um
-Um
-Um
+qO
+qO
+qO
+qO
 Um
 Um
 Um
@@ -23441,10 +23473,10 @@ Um
 Um
 iE
 iE
+lI
 js
-js
-js
-js
+lI
+lI
 iE
 iE
 iE
@@ -23720,7 +23752,7 @@ Vm
 fo
 fo
 IJ
-Um
+Xf
 Jg
 Jg
 js
@@ -23734,7 +23766,7 @@ js
 js
 Jg
 Jg
-Um
+Xf
 UD
 dv
 Vm
@@ -24005,7 +24037,7 @@ fo
 fo
 fo
 Vm
-UD
+cG
 kl
 js
 js
@@ -24017,7 +24049,7 @@ js
 js
 js
 si
-iT
+QD
 UD
 UD
 UD
@@ -24334,7 +24366,7 @@ Yk
 Wi
 lZ
 eb
-Do
+Vq
 Io
 iT
 iT
@@ -24618,7 +24650,7 @@ aj
 Wi
 iT
 eb
-Do
+Vq
 Io
 bt
 iT
@@ -25480,7 +25512,7 @@ cx
 qo
 iT
 iT
-Rs
+RU
 jO
 mG
 Gz
@@ -25754,7 +25786,7 @@ iT
 iT
 iT
 iT
-Do
+Vq
 Bc
 iT
 iT
@@ -26054,7 +26086,7 @@ Vm
 Vm
 Vm
 Vm
-Hk
+pQ
 Vm
 Vm
 Vm
@@ -26190,8 +26222,8 @@ fo
 fo
 fo
 fo
+Do
 fo
-VZ
 fo
 fo
 fo
@@ -26331,9 +26363,9 @@ ly
 ly
 ly
 ly
-kp
+bh
+Rs
 tp
-Xf
 tp
 tp
 tp
@@ -26474,8 +26506,8 @@ fo
 fo
 fo
 fo
+Do
 fo
-VZ
 fo
 fo
 fo
@@ -26622,7 +26654,7 @@ Vm
 Vm
 Vm
 Vm
-Hk
+pQ
 Vm
 Vm
 Vm
@@ -26890,7 +26922,7 @@ iT
 iT
 iT
 iT
-Do
+Vq
 Bc
 iT
 iT
@@ -27184,7 +27216,7 @@ cx
 qo
 iT
 iT
-Rs
+RU
 jO
 sj
 Ei
@@ -28026,7 +28058,7 @@ ht
 aj
 iT
 eb
-Do
+Vq
 Io
 bt
 iT
@@ -28310,7 +28342,7 @@ aj
 FV
 lZ
 eb
-Do
+Vq
 Io
 iT
 iT
@@ -28549,7 +28581,7 @@ fo
 fo
 fo
 Vm
-UD
+cG
 kl
 js
 js
@@ -28561,7 +28593,7 @@ js
 js
 js
 si
-iT
+QD
 UD
 UD
 UD
@@ -28832,7 +28864,7 @@ Vm
 fo
 fo
 fo
-Um
+Xf
 Jg
 Jg
 js
@@ -28846,7 +28878,7 @@ js
 js
 Jg
 Jg
-Um
+Xf
 UD
 dv
 Vm
@@ -29123,8 +29155,8 @@ rW
 rW
 rW
 js
-js
-rW
+lI
+qj
 rW
 rW
 rW
@@ -29261,15 +29293,15 @@ fo
 Um
 Um
 Um
-Um
-Um
-Um
+qO
+qO
+qO
 js
 js
 js
-Um
-Um
-Um
+qO
+qO
+qO
 Um
 Um
 Um
@@ -29406,10 +29438,10 @@ Um
 iE
 js
 iE
+lI
 js
 js
-js
-js
+lI
 iE
 iE
 Um
@@ -29684,7 +29716,7 @@ UD
 UD
 UD
 UD
-Um
+Xf
 Jg
 Jg
 js
@@ -29698,7 +29730,7 @@ js
 js
 Jg
 Jg
-Um
+Xf
 UD
 UD
 dv
@@ -29969,7 +30001,7 @@ UD
 UD
 UD
 UD
-iT
+QD
 kl
 js
 js
@@ -29981,7 +30013,7 @@ js
 js
 js
 si
-iT
+QD
 iT
 iT
 iT

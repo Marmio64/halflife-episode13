@@ -46,7 +46,8 @@
 	damage = 50
 	wound_bonus = -100
 	damage_type = BURN
-	armour_penetration = 25
+	armor_flag = LASER
+	armour_penetration = 15
 	hitsound = 'hl13/sound/weapons/attack_shoot.ogg'
 	hitscan = TRUE
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser

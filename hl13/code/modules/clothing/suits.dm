@@ -87,7 +87,7 @@
 		to_chat(H, "<span class='notice'You need both your hands free to put on your diguise.</span>")
 		qdel(D)
 
-	playsound(loc, 'hl13/sound/effects/zap1.ogg', 50, TRUE, TRUE)
+	playsound(loc, 'hl13/sound/effects/spy_disguise.ogg', 50, TRUE, TRUE)
 	disguise_charge = FALSE
 	sleep(5 SECONDS)
 	disguise_charge = TRUE

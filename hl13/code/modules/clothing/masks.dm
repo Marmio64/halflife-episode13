@@ -419,8 +419,8 @@
 /datum/armor/cremator_mask
 	melee = 15
 	bullet = 15
-	laser = 10
-	energy = 10
+	laser = 40
+	energy = 15
 	bomb = 20
 	fire = 100
 	acid = 80
