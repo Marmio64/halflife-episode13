@@ -335,7 +335,7 @@
 	blood_overlay_type = "armor"
 
 /obj/item/clothing/suit/armor/halflife/kevlar/fast
-	slowdown = -0.25
+	slowdown = -0.35
 
 /datum/armor/kevlararmor
 	melee = 20

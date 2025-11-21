@@ -90,7 +90,7 @@
 			)
 			return . | ZIMPACT_NO_MESSAGE
 
-	var/incoming_damage = (levels * 8) ** 2 //HL13 EDIT, falling is more deadly
+	var/incoming_damage = (levels * 8) ** 1.75 //HL13 EDIT, falling is more deadly
 
 	if(iswaterturf(impacted_turf)) //hl13 edit, falling into water is a lot less damaging
 		incoming_damage *= 0.25

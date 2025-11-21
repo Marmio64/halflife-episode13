@@ -76,7 +76,7 @@
 /obj/item/ammo_casing/energy/immolator
 	projectile_type = /obj/projectile/bullet/immolator_plasma
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse
-	e_cost = LASER_SHOTS(40, STANDARD_CELL_CHARGE)
+	e_cost = LASER_SHOTS(30, STANDARD_CELL_CHARGE)
 	select_name = "plasma"
 	fire_sound = "hl13/sound/weapons/immolator_fire.ogg"
 

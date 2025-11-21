@@ -30,7 +30,7 @@
 	empty = TRUE
 
 /obj/item/stock_parts/power_store/cell/crap
-	name = "\improper Nanotrasen brand rechargeable AA cell"
+	name = "\improper Rechargeable AA cell"
 	desc = "You can't top the plasma top." //TOTALLY TRADEMARK INFRINGEMENT
 	icon_state = "aa_cell"
 	maxcharge = STANDARD_CELL_CHARGE * 0.5

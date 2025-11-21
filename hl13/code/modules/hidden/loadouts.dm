@@ -8,12 +8,14 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/hidden/combine/shotgunner,
 			/datum/outfit/deployment_loadout/hidden/combine/riot_cop,
+			/datum/outfit/deployment_loadout/hidden/combine/cremator,
 			/datum/outfit/deployment_loadout/hidden/combine/conscript,
 			/datum/outfit/deployment_loadout/hidden/combine/grunt,
 			/datum/outfit/deployment_loadout/hidden/combine/medic_cop,
 			/datum/outfit/deployment_loadout/hidden/combine/doctor,
 			/datum/outfit/deployment_loadout/hidden/combine/engineer,
 			/datum/outfit/deployment_loadout/hidden/combine/scientist,
+			/datum/outfit/deployment_loadout/hidden/combine/overseer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -79,6 +81,31 @@
 	extra_str = 8
 	extra_dex = -4
 
+//The third defender, cremator. They're very good at holding locations thanks to high damage output and the ability to lay down flame trails.
+//However, they're slow, their gun runs out of juice quick, and you need to be careful not to set team mates on fire either...
+//They also don't get a flare, since their flame trails can show light.
+/datum/outfit/deployment_loadout/hidden/combine/cremator
+	name = "Hidden: Cremator"
+	display_name = "DEFENSE: Cremator"
+	desc = "Keep the Hidden at bay both with flame trails and high power plasma blasts from your immolator, which can self recharge but has a low ammo capacity. Take care not to ignite your team mates."
+	id_name = "Cremator"
+
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/cremator
+	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat/cremator
+	suit_store = /obj/item/gun/energy/immolator/low_capacity
+
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch/cremator
+	gloves = /obj/item/clothing/gloves/color/civilprotection
+	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+
+	l_pocket = /obj/item/stack/medical/gauze
+	r_pocket = /obj/item/flashlight/hand_crank
+
+	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
+
+/datum/outfit/deployment_loadout/hidden/combine/cremator/pre_equip(mob/living/carbon/human/H)
+	H.set_species(/datum/species/human/synth/cremator)
+
 //The attacker, conscripts move a bit faster than their comrades and have the best medium to long range weapon.
 //They excel at giving chase to the hidden, just don't get cocky.
 /datum/outfit/deployment_loadout/hidden/combine/conscript
@@ -126,7 +153,7 @@
 
 	back = /obj/item/tank/internals/oxygen/grunt
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt
-	uniform = /obj/item/clothing/under/combine/grunt/fused/deathmatch
+	uniform = /obj/item/clothing/under/combine/grunt/fused/hidden
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection/grunt
 
@@ -243,7 +270,7 @@
 
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/usp9mm = 3,
-		/obj/item/stack/sheet/mineral/sandbags = 2,
+		/obj/item/stack/sheet/mineral/sandbags = 3,
 		/obj/item/flashlight/flare/the_hidden = 3,
 		/obj/item/assembly/infra/the_hidden = 3,
 	)
@@ -351,3 +378,33 @@
 	name = "syringe (scientist mix)"
 	desc = "Contains glowing compounds and harmful muscle blockers."
 	list_reagents = list(/datum/reagent/consumable/tinlux = 5, /datum/reagent/slowing_compound = 3)
+
+//The third tracker, you specialize in deploying manhacks that will follow and attack The Hidden.
+//You don't get a sidearm however, and your viscerators deal very low damage, and are better at tracking and soaking up a knife hit or two than actually attacking.
+/datum/outfit/deployment_loadout/hidden/combine/overseer
+	name = "Hidden: Overseer"
+	display_name = "TRACKER: Viscerator Overseer"
+	desc = "Deploy viscerators that deal low damage, but can distract and track the Hidden."
+	id_name = "Overseer"
+
+	uniform = /obj/item/clothing/under/combine/civilprotection
+	gloves = /obj/item/clothing/gloves/color/civilprotection
+	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat/overseer
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	mask = /obj/item/clothing/mask/gas/civilprotection/overseer
+	ears = /obj/item/radio/headset/civilprotection/deployment
+
+	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
+
+	suit_store = /obj/item/gun/ballistic/automatic/mp7
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
+
+	l_pocket = /obj/item/grenade/spawnergrenade/manhacks/hidden
+	r_pocket = /obj/item/flashlight/hand_crank
+
+	backpack_contents = list(
+		/obj/item/grenade/spawnergrenade/manhacks/hidden = 3,
+		/obj/item/flashlight/flare/the_hidden = 2,
+		/obj/item/stack/medical/gauze = 1,
+		/obj/item/ammo_box/magazine/mp7 = 1,
+	)

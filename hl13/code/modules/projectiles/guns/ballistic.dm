@@ -736,3 +736,6 @@
 		if(prob(50))
 			to_chat(user, "<span class='warning'>The Immolator burns your hand from its heat!</span>")
 			user.adjustFireLoss(15)
+
+/obj/item/gun/energy/immolator/low_capacity
+	cell_type = /obj/item/stock_parts/power_store/cell/mini_egun

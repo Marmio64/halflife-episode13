@@ -50,6 +50,9 @@
 /obj/item/grenade/spawnergrenade/manhacks/upgraded
 	spawner_type = /mob/living/simple_animal/hostile/halflife/viscerator/upgraded
 
+/obj/item/grenade/spawnergrenade/manhacks/hidden
+	spawner_type = /mob/living/simple_animal/hostile/halflife/viscerator/hidden
+
 /obj/item/grenade/spawnergrenade/manhacks/shielded
 	det_time = 1 SECONDS
 	deliveryamt = 1

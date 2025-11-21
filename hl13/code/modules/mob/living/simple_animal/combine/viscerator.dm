@@ -64,6 +64,12 @@
 	melee_damage_lower = 15
 	melee_damage_upper = 20
 
+/mob/living/simple_animal/hostile/halflife/viscerator/hidden
+	melee_damage_lower = 2
+	melee_damage_upper = 3
+	low_power_melee_damage_lower = 1
+	low_power_melee_damage_upper = 2
+
 /mob/living/simple_animal/hostile/halflife/viscerator/shielded
 	name = "shielded viscerator"
 	desc = "A small, twin-bladed machine capable of inflicting very deadly lacerations. This one has less armor plating and uses much of its battery reserves to power a one time pulse shield to deflect up to two projectiles, no matter how strong they are."

@@ -11,6 +11,7 @@
 			/datum/outfit/deployment_loadout/hidden/the_hidden/trapper,
 			/datum/outfit/deployment_loadout/hidden/the_hidden/brute,
 			/datum/outfit/deployment_loadout/hidden/the_hidden/necrotic,
+			/datum/outfit/deployment_loadout/hidden/the_hidden/spitter,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -48,6 +49,7 @@
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/pre_equip(mob/living/carbon/human/H)
 	. = ..()
+	H.set_species(/datum/species/human)
 	H.skin_tone = "#e9dfd7"
 	H.alpha = 25
 	H.set_hairstyle("Bald", update = TRUE)
@@ -70,6 +72,7 @@
 	H.maxHealth = 25
 	H.crit_threshold = -123
 	H.hardcrit_threshold = -124
+	H.fire_stack_decay_rate = -1 //otherwise fire is insane against them. Max stack size is 12, and this removes 2 stacks every 2 seconds
 	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 	H.faction = list(FACTION_HEADCRAB)
 	H.setdeploymentfaction(HIDDEN_DEPLOYMENT_FACTION)
@@ -96,12 +99,13 @@
 	icon_state = "trackpants"
 	slowdown = -1.3
 	body_parts_covered = GROIN|LEGS|FEET
+	resistance_flags = INDESTRUCTIBLE
 
 /obj/item/clothing/under/pants/the_hidden/trapper
 	slowdown = -0.9
 
 /obj/item/clothing/under/pants/the_hidden/brute
-	slowdown = -0.66
+	slowdown = -0.75
 
 /obj/item/clothing/glasses/hidden_blindfold
 	name = "blindfold"
@@ -110,6 +114,7 @@
 	inhand_icon_state = null
 	vision_flags = SEE_MOBS
 	color_cutoffs = list(40, 40, 40)
+	resistance_flags = INDESTRUCTIBLE
 
 /obj/item/clothing/glasses/hidden_blindfold_brute
 	name = "blindfold"
@@ -136,7 +141,7 @@
 
 /obj/item/knife/combat/the_hidden/brute
 	name = "brutish machete"
-	desc = "A monstrous looking machete. Deals more frontal damage than the standard hidden knife, but cannot instantly down someone through backstabs. Is capable of quickly hacking apart dead bodies to gib and heal from them."
+	desc = "A monstrous looking machete. Deals more frontal damage than the standard hidden knife, but cannot instantly down someone through backstabs, alongside weighing you down. Is capable of quickly hacking apart dead bodies to gib and heal from them."
 	icon = 'hl13/icons/obj/melee.dmi'
 	icon_state = "machete_scrap"
 	inhand_icon_state = "machete_scrap"
@@ -146,6 +151,12 @@
 	force = 60
 	backstab_bonus = 30
 	gib_time = 0.5 SECONDS
+
+	item_flags = SLOWS_WHILE_IN_HAND
+
+	//while your machete is out, you'll move at the same pace as assault classes.
+	slowdown = 0.4
+	drag_slowdown = 0.4
 
 /obj/item/knife/combat/the_hidden/afterattack(atom/target, mob/user, click_parameters)
 	. = ..()
@@ -169,7 +180,7 @@
 /obj/item/knife/combat/the_hidden/proc/dead_effect(mob/living/target, mob/living/user)
 	user.adjustStaminaLoss(-25)
 	user.adjustBruteLoss(-25)
-	user.adjustFireLoss(-25)
+	user.adjustFireLoss(-35)
 	target.gib()
 
 /datum/action/cooldown/spell/conjure_item/hidden_knife
@@ -188,6 +199,7 @@
 
 /datum/action/cooldown/spell/conjure_item/hidden_knife/brute
 	name = "Summon Machete"
+	desc = "Summons your favorite and deadliest friend. Gets rid of the previous one if it exists."
 	item_type = /obj/item/knife/combat/the_hidden/brute
 
 
@@ -224,12 +236,12 @@
 
 /datum/action/cooldown/spell/hidden_heal
 	name = "Adrenal Burst"
-	desc = "Unleash an adrenaline burst to regain all your stamina and part of your health. Will make you scream and thus reveal your location on use"
+	desc = "Unleash an adrenaline burst to regain all your stamina and part of your health, while also extinguishing any flames present on you. Will make you scream and thus reveal your location on use."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "medkit"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 
-	cooldown_time = 120 SECONDS
+	cooldown_time = 90 SECONDS
 	spell_requirements = NONE
 	antimagic_flags = NONE
 
@@ -243,7 +255,8 @@
 	. = ..()
 	cast_on.adjustStaminaLoss(-125)
 	cast_on.adjustBruteLoss(-35)
-	cast_on.adjustFireLoss(-35)
+	cast_on.adjustFireLoss(-45)
+	cast_on.extinguish_mob()
 	var/chosen_sound = pick(taunt_sounds)
 	playsound(owner.loc, chosen_sound, 50, FALSE)
 
@@ -330,8 +343,6 @@
 
 	cooldown_time = 25 SECONDS
 
-	sparkle_path = null
-
 /datum/action/cooldown/spell/aoe/repulse/hidden_brute/cast_on_thing_in_aoe(atom/movable/victim, atom/caster)
 	var/turf/throwtarget = get_edge_target_turf(caster, get_dir(caster, get_step_away(victim, caster)))
 	var/dist_from_caster = get_dist(victim, caster)
@@ -347,9 +358,6 @@
 			to_chat(victim, span_userdanger("You're slammed into the floor by [caster]!"))
 			playsound(get_turf(caster), 'hl13/sound/effects/injury/trauma1.ogg', 80, TRUE, TRUE)
 	else
-		if(sparkle_path)
-			// Created sparkles will disappear on their own
-			new sparkle_path(get_turf(victim), get_dir(caster, victim))
 
 		if(isliving(victim))
 			var/mob/living/victim_living = victim
@@ -404,8 +412,37 @@
 	new /mob/living/basic/halflife/zombie(get_turf(target))
 	user.adjustStaminaLoss(-25)
 	user.adjustBruteLoss(-25)
-	user.adjustFireLoss(-25)
+	user.adjustFireLoss(-35)
 	target.gib()
+
+/datum/action/cooldown/spell/pointed/projectile/hidden_spit
+	name = "Acidic Spit"
+	desc = "Ready yourself to fire an acidic projectile forward. Deals high damage, but moves relatively slowly."
+
+	sound = 'hl13/sound/effects/acidspit.ogg'
+
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "spit"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 8 SECONDS
+
+	active_msg = "You prepare to spit!"
+	deactive_msg = "You stop trying to spit."
+	cast_range = 9
+	projectile_type = /obj/projectile/hidden_spit
+
+/obj/projectile/hidden_spit
+	name = "acidic bile"
+	icon_state = "neurotoxin"
+	hitsound = 'hl13/sound/creatures/antlion_worker/antlion_shoot.ogg'
+	damage = 50
+	wound_bonus = -60
+	speed = 1.25
+	range = 10
+	damage_type = BURN
 
 
 ////// ACTUAL OTHER OUTFITS /////////////////////////////////////////
@@ -421,10 +458,11 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure_item/hidden_beartrap, /datum/action/cooldown/spell/hidden_taunt)
 
+/// Monstrously strong, but slow. They excel at demolishing humans who refuse to backdown, but their slow speed can allow them to be kited by assault classes, and scientist syringes are extra hazardous.
 /datum/outfit/deployment_loadout/hidden/the_hidden/brute
 	name = "Hidden: The Hidden (Brute)"
 	display_name = "ASSAULT: The Brute"
-	desc = "You take much less damage and have a unique area of effect ability to forcefully punch everyone nearby away. However, you are more visible, slower, and lack heat vision."
+	desc = "You take much less damage, have a unique machete, and have a unique area of effect ability to forcefully punch everyone nearby away. However, you are more visible, slower, and lack heat vision."
 
 	uniform = /obj/item/clothing/under/pants/the_hidden/brute
 
@@ -438,7 +476,7 @@
 /datum/outfit/deployment_loadout/hidden/the_hidden/brute/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	H.alpha = 50
-	H.physiology.damage_resistance += 40
+	H.physiology.damage_resistance += 50
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/necrotic
 	name = "Hidden: The Hidden (Necrotic)"
@@ -453,5 +491,20 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_necro_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure/hidden_headcrab, /datum/action/cooldown/spell/hidden_taunt)
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/necrotic/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.physiology.damage_resistance -= 20
+
+/datum/outfit/deployment_loadout/hidden/the_hidden/spitter
+	name = "Hidden: The Hidden (Spitter)"
+	display_name = "SUPPORT: The Spitter"
+	desc = "You take more damage and move slower, but are able to spit acid at your enemies to wear them down through attrition."
+
+	uniform = /obj/item/clothing/under/pants/the_hidden/trapper
+
+	extra_dex = 10
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/pointed/projectile/hidden_spit, /datum/action/cooldown/spell/hidden_taunt)
+
+/datum/outfit/deployment_loadout/hidden/the_hidden/spitter/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	H.physiology.damage_resistance -= 20

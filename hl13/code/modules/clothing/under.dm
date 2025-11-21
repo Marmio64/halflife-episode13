@@ -220,6 +220,9 @@
 /obj/item/clothing/under/combine/grunt/fused/deathmatch
 	slowdown = -0.25
 
+/obj/item/clothing/under/combine/grunt/fused/hidden
+	slowdown = -0.35
+
 /obj/item/clothing/under/combine/grunt/fused/deployment
 	slowdown = -0.1
 
