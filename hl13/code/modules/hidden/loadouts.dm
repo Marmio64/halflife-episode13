@@ -399,7 +399,6 @@
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
 	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
 
-	l_pocket = /obj/item/grenade/spawnergrenade/manhacks/hidden
 	r_pocket = /obj/item/flashlight/hand_crank
 
 	backpack_contents = list(
