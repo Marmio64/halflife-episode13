@@ -19,6 +19,10 @@
 	. = ..()
 	det_time = rand(30,60) //3-6 seconds
 
+/obj/item/grenade/syndieminibomb/bouncer/random_timer/hidden
+	desc = "Called a 'Bouncer' or 'Extractor' by Combine teams, these grenades are designed for flushing out enemy combatants via shrapnel, and a powerful though short ranged explosion. This one has a randomized timer, don't hold onto it!"
+	ex_light = 4
+
 /obj/item/grenade/incendiary_grenade
 	name = "MK4A1 Incendiary Grenade"
 	desc = "A later modification of the MK3A2 grenade, fitted instead to cause a large amount of fire instead of an explosion."

@@ -285,6 +285,35 @@
 	extra_volume = 10
 	visibility_changeable = FALSE
 
+/obj/item/assembly/infra/the_hidden/atom_blocks_beam(atom/movable/beam_atom)
+	if(isnull(beam_atom))
+		return FALSE
+	if(beam_atom == src || beam_atom == holder)
+		return FALSE
+	// Blocks beams from triggering themselves, important to avoid infinite loops
+	if(istype(beam_atom, /obj/effect/ebeam))
+		return FALSE
+	// Anti-revenant / anti-ghost guard
+	if(beam_atom.invisibility)
+		return FALSE
+	// In general non-dense items should not block beams, but make special cases for things being thrown
+	if(!beam_atom.density && !beam_atom.throwing)
+		return FALSE
+	// The actually important check. Ensures stuff like mobs trip it but stuff like laser projectiles don't
+	if(beam_atom.pass_flags_self & beam_pass_flags)
+		return FALSE
+	if(isitem(beam_atom))
+		var/obj/item/beam_item = beam_atom
+		if(beam_item.item_flags & ABSTRACT)
+			return FALSE
+	if(ishuman(beam_atom))
+		var/mob/living/carbon/human/H = beam_atom
+		if(H.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+			return FALSE
+
+	return TRUE
+
+
 /obj/item/flashlight/flare/the_hidden
 	name = "short-burst flare"
 	desc = "A red flare. There are instructions on the side, it reads 'pull cord, make light'. This one has a very limited lifetime, only use when necessary."
@@ -378,13 +407,14 @@
 	name = "syringe (scientist mix)"
 	desc = "Contains glowing compounds and harmful muscle blockers."
 	list_reagents = list(/datum/reagent/consumable/tinlux = 5, /datum/reagent/slowing_compound = 3)
+	inject_flags = INJECT_CHECK_IGNORE_PIERCEIMMUNITY | INJECT_CHECK_PENETRATE_THICK
 
 //The third tracker, you specialize in deploying manhacks that will follow and attack The Hidden.
-//You don't get a sidearm however, and your viscerators deal very low damage, and are better at tracking and soaking up a knife hit or two than actually attacking.
+//You don't get a primary weapon however, and your viscerators deal very low damage, and are better at tracking and soaking up a knife hit or two than actually attacking.
 /datum/outfit/deployment_loadout/hidden/combine/overseer
 	name = "Hidden: Overseer"
 	display_name = "TRACKER: Viscerator Overseer"
-	desc = "Deploy viscerators that deal low damage, but can distract and track the Hidden."
+	desc = "Deploy viscerators that deal low damage, but can distract and track the Hidden, while keeping areas lit up with flares."
 	id_name = "Overseer"
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
@@ -396,14 +426,14 @@
 
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 
-	suit_store = /obj/item/gun/ballistic/automatic/mp7
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
 	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
 
 	r_pocket = /obj/item/flashlight/hand_crank
 
 	backpack_contents = list(
-		/obj/item/grenade/spawnergrenade/manhacks/hidden = 3,
-		/obj/item/flashlight/flare/the_hidden = 2,
+		/obj/item/grenade/spawnergrenade/manhacks/hidden = 2,
+		/obj/item/flashlight/flare/the_hidden = 3,
 		/obj/item/stack/medical/gauze = 1,
-		/obj/item/ammo_box/magazine/mp7 = 1,
+		/obj/item/ammo_box/magazine/usp9mm = 1,
 	)

@@ -65,8 +65,8 @@
 	melee_damage_upper = 20
 
 /mob/living/simple_animal/hostile/halflife/viscerator/hidden
-	melee_damage_lower = 2
-	melee_damage_upper = 3
+	melee_damage_lower = 3
+	melee_damage_upper = 5
 	low_power_melee_damage_lower = 1
 	low_power_melee_damage_upper = 2
 

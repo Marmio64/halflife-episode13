@@ -6,3 +6,6 @@
 
 /// When trying this injection, show an error message if it fails.
 #define INJECT_TRY_SHOW_ERROR_MESSAGE (1 << 2)
+
+/// This injection bypasses pierce immunity completely
+#define INJECT_CHECK_IGNORE_PIERCEIMMUNITY (1 << 3)

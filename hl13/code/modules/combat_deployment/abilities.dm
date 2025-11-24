@@ -86,14 +86,11 @@
 	name = "Procure Grenade"
 	desc = "Procures a MK3A2 grenade for tossing. The timer is randomized, throw it right away!"
 
-	item_type = /obj/item/grenade/syndieminibomb/bouncer/random_timer
+	item_type = /obj/item/grenade/syndieminibomb/bouncer/random_timer/hidden
 
 /datum/action/cooldown/spell/conjure_item/grenade/New(Target, original = TRUE) //starts on cooldown
 	. = ..()
 	StartCooldown()
-
-/datum/action/cooldown/spell/conjure_item/grenade/random_timer/short_cooldown
-	cooldown_time = 60 SECONDS
 
 /datum/action/cooldown/spell/aoe/rally
 	name = "Rally the Troops"

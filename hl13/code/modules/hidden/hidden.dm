@@ -409,7 +409,12 @@
 	desc = "An obscenely sharp and dangerous knife. Backstabs will instantly down. Stab a dead body to reanimate them into a headcrab zombie."
 
 /obj/item/knife/combat/the_hidden/necrotic/dead_effect(mob/living/target, mob/living/user)
-	new /mob/living/basic/halflife/zombie(get_turf(target))
+	if(prob(25))
+		new /mob/living/basic/halflife/zombie/zombine(get_turf(target))
+	else if(prob(25))
+		new /mob/living/basic/halflife/zombie/poison(get_turf(target))
+	else
+		new /mob/living/basic/halflife/zombie(get_turf(target))
 	user.adjustStaminaLoss(-25)
 	user.adjustBruteLoss(-25)
 	user.adjustFireLoss(-35)
@@ -427,7 +432,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 8 SECONDS
+	cooldown_time = 7 SECONDS
 
 	active_msg = "You prepare to spit!"
 	deactive_msg = "You stop trying to spit."
@@ -438,7 +443,8 @@
 	name = "acidic bile"
 	icon_state = "neurotoxin"
 	hitsound = 'hl13/sound/creatures/antlion_worker/antlion_shoot.ogg'
-	damage = 50
+	damage = 40
+	armour_penetration = 50
 	wound_bonus = -60
 	speed = 1.25
 	range = 10
