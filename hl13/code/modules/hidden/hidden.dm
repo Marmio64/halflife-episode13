@@ -12,6 +12,7 @@
 			/datum/outfit/deployment_loadout/hidden/the_hidden/brute,
 			/datum/outfit/deployment_loadout/hidden/the_hidden/necrotic,
 			/datum/outfit/deployment_loadout/hidden/the_hidden/spitter,
+			/datum/outfit/deployment_loadout/hidden/the_hidden/fleshstealer,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -158,9 +159,18 @@
 	slowdown = 0.4
 	drag_slowdown = 0.4
 
+/obj/item/knife/combat/the_hidden/attack(mob/living/target_mob, mob/living/user, params)
+	if(target_mob == user) //self stab protection, i feel bad for the hidden
+		user.balloon_alert(user, "don't stab yourself!")
+		return
+	if(target_mob.deployment_faction == HIDDEN_DEPLOYMENT_FACTION)
+		user.balloon_alert(user, "don't attack fellow hidden!") //so you dont accidentally stab fleshstealer team mates
+		return
+	. = ..()
+
 /obj/item/knife/combat/the_hidden/afterattack(atom/target, mob/user, click_parameters)
 	. = ..()
-	if(target == user || !isliving(target) || !isliving(user))
+	if(!isliving(target) || !isliving(user))
 		return
 	var/mob/living/living_target = target
 	var/mob/living/living_user = user
@@ -514,3 +524,86 @@
 /datum/outfit/deployment_loadout/hidden/the_hidden/spitter/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	H.physiology.damage_resistance -= 20
+
+/datum/outfit/deployment_loadout/hidden/the_hidden/fleshstealer
+	name = "Hidden: The Hidden (Flesh Stealer)"
+	display_name = "SUPPORT: The Flesh Stealer"
+	desc = "Upon gibbing enemies, you'll lose your near-invisiblity and instead steal their appearence as a disguise. You can change your speed from human-like to true speed as well. Beware, speaking will reveal your true nature, even while disguised."
+
+	uniform = /obj/item/clothing/under/pants/the_hidden/fleshstealer
+
+	extra_dex = 10
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife/fleshstealer, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/hidden_taunt)
+
+/datum/outfit/deployment_loadout/hidden/the_hidden/fleshstealer/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.physiology.damage_resistance += 25 //you're USUALLY easier to spot in spite of your disguises, so this gives you breathing room to make plays. This is balanced out by lower healing from gibbing.
+
+/obj/item/clothing/under/pants/the_hidden/fleshstealer
+	actions_types = list(/datum/action/item_action/change_speed)
+	slowdown = -1
+
+/datum/action/item_action/change_speed
+	name = "Vary Self Speed"
+
+/obj/item/clothing/under/pants/the_hidden/fleshstealer/ui_action_click(mob/user, action)
+	if(istype(action, /datum/action/item_action/change_speed))
+		change_speed()
+
+/obj/item/clothing/under/pants/the_hidden/fleshstealer/verb/change_speed()
+	set category = "Object"
+	set name = "Vary Self Speed"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr))
+		return
+
+	var/mob/living/L = usr
+
+	if(slowdown == -1)
+		slowdown = 0
+		L.balloon_alert(L, "faking human speed")
+	else
+		slowdown = -1
+		L.balloon_alert(L, "using true speed")
+
+	L.update_equipment_speed_mods()
+
+/datum/action/cooldown/spell/conjure_item/hidden_knife/fleshstealer
+	item_type = /obj/item/knife/combat/the_hidden/fleshstealer
+
+/obj/item/knife/combat/the_hidden/fleshstealer
+	desc = "An obscenely sharp and dangerous knife. Backstabs will instantly down. Stab a dead body to gib it, healing you while stealing their appearence."
+	var/stolen_name
+	var/stolen_icon
+	var/stolen_icon_state
+	var/list/stolen_overlays
+
+/obj/item/knife/combat/the_hidden/fleshstealer/dead_effect(mob/living/target, mob/living/user)
+	user.adjustStaminaLoss(-25)
+	user.adjustBruteLoss(-15)
+	user.adjustFireLoss(-25)
+
+	if(ishuman(target))
+		var/mob/living/carbon/human/H = target
+		stolen_name = target.name
+		stolen_icon = target.icon
+		stolen_icon_state = target.icon_state
+		stolen_overlays = H.get_overlays_copy(list(HANDS_LAYER)) //ugh
+	else
+		target.gib()
+		return
+
+	if(ishuman(user))
+		var/mob/living/carbon/human/wearer = user
+		wearer.real_name = stolen_name
+		wearer.icon = stolen_icon
+		wearer.icon_state = stolen_icon_state
+		wearer.cut_overlays()
+		wearer.add_overlay(stolen_overlays)
+		wearer.update_held_items()
+		wearer.alpha = 255
+		wearer.faction |= FACTION_COMBINE //manhack protection
+
+
+	target.gib()
