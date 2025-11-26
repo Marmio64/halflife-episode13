@@ -89,3 +89,9 @@
 	ammo_amount = 4
 	recharges = FALSE
 	vendoptions = list("MK3A2 Grenade")
+
+/obj/machinery/ammo_crate/no_recharge
+	desc = "A large ammo crate. It's somewhat slow to grab out of, and has a limited amount of ammo it can give."
+	max_integrity = 150
+	ammo_amount = 3
+	recharges = FALSE

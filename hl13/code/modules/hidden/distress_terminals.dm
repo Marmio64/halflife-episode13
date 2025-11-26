@@ -1,8 +1,8 @@
-GLOBAL_VAR_INIT(distress_terminals, 5)
+GLOBAL_VAR_INIT(distress_terminals, 0)
 
 /obj/machinery/combine_distressterminal
 	name = "combine distress terminal"
-	desc = "A server terminal which is capable of sending out a distress signal when activated. Activating all five of the terminals in the location will win the game for the Combine."
+	desc = "A server terminal which is capable of sending out a distress signal when activated. Activating all of the terminals in the location will win the game for the Combine."
 	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "datapodterminal_hacked"
 
@@ -54,6 +54,7 @@ GLOBAL_VAR_INIT(distress_terminals, 5)
 /obj/machinery/combine_distressterminal/Initialize(mapload)
 	.=..()
 	START_PROCESSING(SSprocessing, src)
+	GLOB.distress_terminals += 1
 
 /obj/machinery/combine_distressterminal/process()
 

@@ -360,12 +360,30 @@
 	ambientrain = RAIN_SEWER
 
 /area/halflife/indoors/sewer/hidden
-	ambient_music = 'hl13/sound/ambience/bgm/silentheaven.ogg'
 	ambient_music_vol = 0
 	ambient_buzz_vol = 80
 	ambientrain = RAIN_IN
 
 	mood_message = "<span class='warning'>Something is not right here...</span>\n"
+
+/area/halflife/indoors/sewer/hidden/indoors_generic
+	first_time_text = "Indoors"
+
+	//ambient_music = 'hl13/sound/ambience/bgm/silentheaven.ogg'
+	//ambient_music_vol = 10
+	//ambient_buzz = 'hl13/sound/ambience/town_ambience.ogg'
+	//ambient_buzz_vol = 25
+
+	ambient_buzz_vol = 100
+	ambient_buzz = 'hl13/sound/ambience/scaryforest.ogg'
+	sound_environment = SOUND_ENVIRONMENT_ROOM
+
+/area/halflife/indoors/sewer/hidden/outside_forest
+	first_time_text = "Outside"
+
+	ambient_buzz_vol = 100
+	ambient_buzz = 'hl13/sound/ambience/scaryforest.ogg'
+	sound_environment = SOUND_ENVIRONMENT_FOREST
 
 /area/halflife/indoors/sewer/hidden/bunker
 	first_time_text = "The Bunker"

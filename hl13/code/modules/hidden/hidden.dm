@@ -35,7 +35,7 @@
 	faction = HIDDEN_DEPLOYMENT_FACTION
 
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/hidden_taunt)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
 
 	var/update_globals = FALSE
 
@@ -70,6 +70,8 @@
 	ADD_TRAIT(H, TRAIT_NOCRITDAMAGE, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOCRITOVERLAY, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_THE_HIDDEN, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_FREERUNNING, OUTFIT_TRAIT)
+
 	H.maxHealth = 25
 	H.crit_threshold = -123
 	H.hardcrit_threshold = -124
@@ -130,7 +132,7 @@
 	desc = "An obscenely sharp and dangerous knife. Backstabs will instantly down. Stab a dead body to gib it and heal."
 
 	force = 50
-	demolition_mod = 1.5
+	demolition_mod = 2
 	armour_penetration = 70
 	wdefense = 0
 	slot_flags = 0
@@ -206,6 +208,27 @@
 	item_type = /obj/item/knife/combat/the_hidden
 	requires_hands = TRUE
 	delete_old = TRUE
+
+/datum/action/cooldown/spell/conjure_item/hidden_climbing_hook
+	name = "Summon Climbing Hook"
+	desc = "Summons a climbing hook to scale walls with. 'Look Up' to find somewhere you can scale. Gets rid of the previous one if it exists."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "climbinghook"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 3 SECONDS
+	item_type = /obj/item/climbing_hook/halflife/hidden
+	requires_hands = TRUE
+	delete_old = TRUE
+
+/obj/item/climbing_hook/halflife/hidden
+	name = "climbing hook"
+	desc = "A hook and rope for scaling walls with."
+	uses = 1
+	climb_time = 2 SECONDS
+	item_flags = DROPDEL
 
 /datum/action/cooldown/spell/conjure_item/hidden_knife/brute
 	name = "Summon Machete"
@@ -292,6 +315,10 @@
 	breakouttime = 10 SECONDS
 	trap_damage = 25
 
+/obj/item/restraints/legcuffs/beartrap/the_hidden/prearmed
+	armed = TRUE
+	alpha = 60
+
 /obj/item/restraints/legcuffs/beartrap/the_hidden/attack_self(mob/user)
 	. = ..()
 	if(armed)
@@ -334,8 +361,8 @@
 	if(ishuman(victim))
 		var/mob/living/carbon/human/human_victim = victim
 		human_victim.adjust_temppain(100)
-		human_victim.Immobilize(5 SECONDS)
-		human_victim.Stun(1 SECONDS)
+		human_victim.Immobilize(6 SECONDS)
+		human_victim.Stun(2 SECONDS)
 
 	victim.apply_damage(trap_damage, BRUTE, def_zone)
 	qdel(src)
@@ -453,9 +480,9 @@
 	name = "acidic bile"
 	icon_state = "neurotoxin"
 	hitsound = 'hl13/sound/creatures/antlion_worker/antlion_shoot.ogg'
-	damage = 40
+	damage = 50
 	armour_penetration = 50
-	wound_bonus = -60
+	wound_bonus = -70
 	speed = 1.25
 	range = 10
 	damage_type = BURN
@@ -472,7 +499,7 @@
 
 	extra_dex = 10
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure_item/hidden_beartrap, /datum/action/cooldown/spell/hidden_taunt)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure_item/hidden_beartrap, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
 
 /// Monstrously strong, but slow. They excel at demolishing humans who refuse to backdown, but their slow speed can allow them to be kited by assault classes, and scientist syringes are extra hazardous.
 /datum/outfit/deployment_loadout/hidden/the_hidden/brute
@@ -487,7 +514,7 @@
 	extra_dex = 0
 	extra_str = 10
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife/brute, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/aoe/repulse/hidden_brute, /datum/action/cooldown/spell/hidden_taunt)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife/brute, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/aoe/repulse/hidden_brute, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/brute/pre_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -504,7 +531,7 @@
 
 	extra_dex = 10
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_necro_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure/hidden_headcrab, /datum/action/cooldown/spell/hidden_taunt)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_necro_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure/hidden_headcrab, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/necrotic/pre_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -519,7 +546,7 @@
 
 	extra_dex = 10
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/pointed/projectile/hidden_spit, /datum/action/cooldown/spell/hidden_taunt)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/pointed/projectile/hidden_spit, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/spitter/pre_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -534,7 +561,7 @@
 
 	extra_dex = 10
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife/fleshstealer, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/hidden_taunt)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife/fleshstealer, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/fleshstealer/pre_equip(mob/living/carbon/human/H)
 	. = ..()

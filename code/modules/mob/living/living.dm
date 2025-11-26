@@ -81,7 +81,7 @@
 				add_movespeed_modifier(/datum/movespeed_modifier/landed_on_feet)
 				addtimer(CALLBACK(src, TYPE_PROC_REF(/mob, remove_movespeed_modifier), /datum/movespeed_modifier/landed_on_feet), levels * 3 SECONDS)
 			else
-				Knockdown(levels * 4 SECONDS)
+				Knockdown(levels * 3 SECONDS)
 				emote("spin")
 
 			visible_message(
@@ -94,6 +94,9 @@
 
 	if(iswaterturf(impacted_turf)) //hl13 edit, falling into water is a lot less damaging
 		incoming_damage *= 0.25
+
+	if(HAS_TRAIT(src, TRAIT_FREERUNNING)) //hl13 edit, even if falling larger distances, parkour will help a bit
+		incoming_damage *= 0.5
 
 	// Smaller mobs with catlike grace can ignore damage (EG: cats)
 	var/small_surface_area = mob_size <= MOB_SIZE_SMALL
@@ -109,7 +112,7 @@
 			new /obj/effect/temp_visual/mook_dust/small(impacted_turf)
 			return .
 
-		incoming_damage *= 1.66
+		incoming_damage *= 1.5
 		add_movespeed_modifier(/datum/movespeed_modifier/landed_on_feet)
 		addtimer(CALLBACK(src, TYPE_PROC_REF(/mob, remove_movespeed_modifier), /datum/movespeed_modifier/landed_on_feet), levels * 2 SECONDS)
 		visible_message(
