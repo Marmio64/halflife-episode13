@@ -392,6 +392,17 @@
 	ambient_buzz_vol = 80
 	sound_environment = SOUND_ENVIRONMENT_CAVE
 
+/area/halflife/indoors/sewer/hidden/spawn_room
+	first_time_text = null
+
+	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'
+	ambient_buzz_vol = 20
+
+	ambient_music = 'hl13/sound/ambience/bgm/spawnroom.ogg'
+	ambient_music_vol = 20
+
+	sound_environment = SOUND_ENVIRONMENT_CAVE
+
 /area/halflife/indoors/sewer/tunnel
 	name = "\improper Tunnels"
 	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'

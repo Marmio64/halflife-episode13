@@ -71,7 +71,7 @@
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/flashlight/hand_crank
 
-	belt = /obj/item/flashlight/flare/the_hidden
+	belt = /obj/item/storage/belt/civilprotection/riotcop_hidden
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
@@ -98,7 +98,7 @@
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
 
-	l_pocket = /obj/item/stack/medical/gauze
+	l_pocket = /obj/item/stack/medical/gauze/quik_gauze
 	r_pocket = /obj/item/flashlight/hand_crank
 
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
@@ -128,7 +128,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/stack/medical/gauze = 1,
+		/obj/item/stack/medical/gauze/quik_gauze = 1,
 		/obj/item/ammo_box/magazine/m4a1 = 1,
 		/obj/item/flashlight/flare/the_hidden = 1,
 	)
@@ -193,7 +193,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 3,
-		/obj/item/stack/medical/gauze = 1,
+		/obj/item/stack/medical/gauze/quik_gauze = 1,
 		/obj/item/ammo_box/magazine/mp7 = 1,
 		/obj/item/flashlight/flare/the_hidden = 1,
 	)
@@ -260,7 +260,7 @@
 
 	belt = /obj/item/gun/ballistic/automatic/pistol/usp
 
-	l_pocket = /obj/item/stack/medical/gauze
+	l_pocket = /obj/item/stack/medical/gauze/quik_gauze
 	r_pocket = /obj/item/flashlight/hand_crank
 
 	back = /obj/item/storage/backpack/halflife
@@ -318,7 +318,7 @@
 	name = "short-burst flare"
 	desc = "A red flare. There are instructions on the side, it reads 'pull cord, make light'. This one has a very limited lifetime, only use when necessary."
 	randomize_fuel = FALSE
-	fuel = 90 SECONDS
+	fuel = 60 SECONDS
 
 /obj/item/flashlight/hand_crank
 	name = "hand-crank flashlight"
@@ -399,8 +399,8 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/syringe/piercing/hidden_scientist = 6,
-		/obj/item/flashlight/flare/the_hidden = 2,
-		/obj/item/stack/medical/gauze = 1,
+		/obj/item/flashlight/flare/the_hidden = 3,
+		/obj/item/stack/medical/gauze/quik_gauze = 1,
 	)
 
 /obj/item/reagent_containers/syringe/piercing/hidden_scientist
@@ -434,6 +434,6 @@
 	backpack_contents = list(
 		/obj/item/grenade/spawnergrenade/manhacks/hidden = 2,
 		/obj/item/flashlight/flare/the_hidden = 3,
-		/obj/item/stack/medical/gauze = 1,
-		/obj/item/ammo_box/magazine/usp9mm = 1,
+		/obj/item/stack/medical/gauze/quik_gauze = 1,
+		/obj/item/ammo_box/magazine/usp9mm = 2,
 	)

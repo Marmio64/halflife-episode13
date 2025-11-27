@@ -259,7 +259,7 @@
 /obj/item/storage/belt/civilprotection/overwatch/spas12_hidden/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot/halflife, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/flare/the_hidden, src)
-	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze/quik_gauze, src)
 	update_appearance(UPDATE_ICON)
 
 /obj/item/storage/belt/civilprotection/overwatch/assassin/PopulateContents()
@@ -272,6 +272,10 @@
 	SSwardrobe.provide_type(/obj/item/knife/combat/backstab, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/riotcop_hidden/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/flashlight/flare/the_hidden, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze/quik_gauze, src)
+	update_appearance(UPDATE_ICON)
 
 /obj/item/storage/backpack/halflife
 	icon = 'hl13/icons/obj/clothing/backpack.dmi'

@@ -214,7 +214,7 @@
 
 /obj/item/stack/medical/gauze
 	name = "medical gauze"
-	desc = "A roll of elastic cloth, perfect for stabilizing all kinds of wounds, from cuts and burns, to broken bones. "
+	desc = "A roll of elastic cloth, perfect for stabilizing all kinds of wounds, from cuts and burns, to broken bones."
 	gender = PLURAL
 	singular_name = "medical gauze"
 	icon_state = "gauze"
@@ -230,6 +230,12 @@
 	burn_cleanliness_bonus = 0.35
 	merge_type = /obj/item/stack/medical/gauze
 	var/obj/item/bodypart/gauzed_bodypart
+
+/obj/item/stack/medical/gauze/quik_gauze
+	name = "medical Quik-Gauze"
+	desc = "A roll of elastic cloth, perfect for stabilizing all kinds of wounds, from cuts and burns, to broken bones. This is a specialized, easy to apply gauze often given as part of IFAKS that is less effective but easier to apply."
+	self_delay = 3 SECONDS
+	absorption_capacity = 4
 
 /obj/item/stack/medical/gauze/Destroy(force)
 	. = ..()

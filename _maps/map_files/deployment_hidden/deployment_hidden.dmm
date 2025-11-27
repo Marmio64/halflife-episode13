@@ -7,6 +7,9 @@
 /obj/structure/halflife/barrel/double/grey,
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
+"aH" = (
+/turf/closed/wall/halflife/sewer,
+/area/halflife/indoors/sewer/hidden/spawn_room)
 "bb" = (
 /obj/structure/halflife/road_barrier,
 /turf/open/floor/plating/indoor/concrete/sewer,
@@ -69,6 +72,16 @@
 /obj/structure/halflife/pipes/horizontal,
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
+"jP" = (
+/obj/machinery/door/unpowered/halflife/seethrough/grate{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer/hidden/spawn_room)
+"jT" = (
+/obj/machinery/door/unpowered/halflife/seethrough/grate,
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer/hidden/spawn_room)
 "kz" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/structure/halflife/pipes/horizontal/end{
@@ -140,6 +153,9 @@
 /obj/structure/halflife/trash/glass/basic,
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
+"rE" = (
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer/hidden/spawn_room)
 "sr" = (
 /obj/structure/halflife/barrel/quadruple/grey,
 /turf/open/floor/plating/indoor/concrete/sewer,
@@ -192,7 +208,7 @@
 /obj/structure/chair/halflife/metal/folding,
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer/hidden)
+/area/halflife/indoors/sewer/hidden/spawn_room)
 "xx" = (
 /obj/structure/halflife/pipes/horizontal/end,
 /turf/open/floor/plating/indoor/metal/pipe,
@@ -234,7 +250,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer/hidden)
+/area/halflife/indoors/sewer/hidden/spawn_room)
 "zm" = (
 /obj/machinery/telecomms/hub/preset,
 /turf/open/floor/plating/ground/sidewalk,
@@ -305,7 +321,7 @@
 "Fm" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer/hidden)
+/area/halflife/indoors/sewer/hidden/spawn_room)
 "FZ" = (
 /obj/machinery/telecomms/processor/preset_one/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
@@ -324,7 +340,7 @@
 /obj/structure/chair/halflife/metal/folding,
 /obj/structure/halflife/pipes/piped,
 /turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer/hidden)
+/area/halflife/indoors/sewer/hidden/spawn_room)
 "JT" = (
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/sewer/hidden)
@@ -354,7 +370,7 @@
 /obj/effect/landmark/deployments_metrocop,
 /obj/structure/chair/halflife/metal/folding,
 /turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer/hidden)
+/area/halflife/indoors/sewer/hidden/spawn_room)
 "Mf" = (
 /obj/structure/halflife/pipes/horizontal/random,
 /turf/open/floor/plating/indoor/concrete/sewer,
@@ -369,7 +385,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer/hidden)
+/area/halflife/indoors/sewer/hidden/spawn_room)
 "Ns" = (
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer/hidden)
@@ -384,7 +400,7 @@
 "Pg" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer/hidden)
+/area/halflife/indoors/sewer/hidden/spawn_room)
 "Pp" = (
 /obj/structure/halflife/barrel/triple/grey,
 /turf/open/floor/plating/indoor/concrete/sewer,
@@ -462,7 +478,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer/hidden)
+/area/halflife/indoors/sewer/hidden/spawn_room)
 "ZP" = (
 /obj/machinery/telecomms/broadcaster/preset_left/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
@@ -917,13 +933,13 @@ pq
 pq
 pq
 pq
-hq
-hq
-hq
-hq
-hq
-hq
-hq
+aH
+aH
+aH
+aH
+aH
+aH
+aH
 pq
 pq
 pq
@@ -994,13 +1010,13 @@ hq
 hq
 hq
 hq
-hq
+aH
 zk
 zk
-Ns
+rE
 zk
 zk
-hq
+aH
 pq
 pq
 pq
@@ -1071,13 +1087,13 @@ Ns
 Ns
 Ns
 NT
-VI
-Ns
-Ns
-Ns
-Ns
+jT
+rE
+rE
+rE
+rE
 Pg
-hq
+aH
 pq
 pq
 pq
@@ -1149,12 +1165,12 @@ ob
 ob
 NT
 Yi
-Ns
-Ns
-Ns
-Ns
-Ns
-hq
+rE
+rE
+rE
+rE
+rE
+aH
 pq
 pq
 pq
@@ -1225,13 +1241,13 @@ AN
 ob
 ob
 Ns
-hq
+aH
 Ig
-Ns
-Ns
-Ns
+rE
+rE
+rE
 Nr
-hq
+aH
 pq
 pq
 pq
@@ -1302,13 +1318,13 @@ Ns
 pu
 gL
 Ns
-hq
+aH
 xt
-Ns
-Ns
-Ns
+rE
+rE
+rE
 Nr
-hq
+aH
 pq
 pq
 pq
@@ -1379,13 +1395,13 @@ Ns
 ob
 ob
 Ns
-hq
+aH
 LI
-Ns
-Ns
-Ns
+rE
+rE
+rE
 Nr
-hq
+aH
 pq
 pq
 pq
@@ -1456,13 +1472,13 @@ Ns
 ob
 ob
 Ns
-hq
+aH
 LI
-Ns
-Ns
-Ns
+rE
+rE
+rE
 Nr
-hq
+aH
 pq
 pq
 pq
@@ -1533,13 +1549,13 @@ Ns
 ob
 ob
 Ns
-hq
+aH
 LI
-Ns
-Ns
+rE
+rE
 Fm
 Nr
-hq
+aH
 pq
 pq
 pq
@@ -1610,13 +1626,13 @@ Ns
 ob
 ob
 Ns
-hq
-hq
-hq
-Xt
-hq
-hq
-hq
+aH
+aH
+aH
+jP
+aH
+aH
+aH
 pq
 pq
 pq
