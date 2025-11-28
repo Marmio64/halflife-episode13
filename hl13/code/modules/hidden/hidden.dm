@@ -556,7 +556,7 @@
 /datum/outfit/deployment_loadout/hidden/the_hidden/fleshstealer
 	name = "Hidden: The Hidden (Flesh Stealer)"
 	display_name = "SUPPORT: The Flesh Stealer"
-	desc = "Upon gibbing enemies, you'll lose your near-invisiblity and instead steal their appearence as a disguise. You can change your speed from human-like to true speed as well. Beware, speaking will reveal your true nature, even while disguised."
+	desc = "Upon gibbing enemies, you'll lose your near-invisiblity and instead steal their appearence as a disguise. You can change your speed from human-like to true speed as well. Beware, you can still set off trip alarms, and humans can examine you to find out your true nature."
 
 	uniform = /obj/item/clothing/under/pants/the_hidden/fleshstealer
 
