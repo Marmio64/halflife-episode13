@@ -17,11 +17,47 @@
 
 /obj/item/grenade/syndieminibomb/bouncer/random_timer/Initialize()
 	. = ..()
-	det_time = rand(30,60) //3-6 seconds
+	det_time = rand(30,50) //3-5 seconds
 
 /obj/item/grenade/syndieminibomb/bouncer/random_timer/hidden
 	desc = "Called a 'Bouncer' or 'Extractor' by Combine teams, these grenades are designed for flushing out enemy combatants via shrapnel, and a powerful though short ranged explosion. This one has a randomized timer, don't hold onto it!"
-	ex_light = 4
+
+/obj/item/grenade/syndieminibomb/bouncer/random_timer/hidden/detonate(mob/living/lanced_by)
+	if (dud_flags)
+		active = FALSE
+		update_appearance()
+		return FALSE
+
+	dud_flags |= GRENADE_USED // Don't detonate if we have already detonated.
+	if(shrapnel_type && shrapnel_radius && !shrapnel_initialized) // add a second check for adding the component in case whatever triggered the grenade went straight to prime (badminnery for example)
+		shrapnel_initialized = TRUE
+		AddComponent(/datum/component/pellet_cloud, projectile_type = shrapnel_type, magnitude = shrapnel_radius)
+
+	SEND_SIGNAL(src, COMSIG_GRENADE_DETONATE, lanced_by)
+
+	var/enemies = 0 //how many combine are in approximate viewing range of the grenade when it goes off. Used to punish extreme grouping up of combine players
+
+	for(var/mob/living/hooman in orange(6, src))
+		if(hooman.deployment_faction == COMBINE_DEPLOYMENT_FACTION && hooman.stat == CONSCIOUS)
+			enemies++
+
+	if(9 < enemies) //Grouping up WAAAY too much, 10 players within viewing range??
+		ex_heavy = 3
+		ex_light = 6
+		ex_flame = 0
+	else if(6 < enemies) ///Too much grouping up, 7-9 players is excessive but not craaazy
+		ex_heavy = 2
+		ex_light = 5
+		ex_flame = 0
+	else //Good amount of grouping up
+		ex_heavy = 2
+		ex_light = 3
+		ex_flame = 0
+
+	if(ex_dev || ex_heavy || ex_light || ex_flame)
+		explosion(src, ex_dev, ex_heavy, ex_light, ex_flame)
+
+	return TRUE
 
 /obj/item/grenade/incendiary_grenade
 	name = "MK4A1 Incendiary Grenade"

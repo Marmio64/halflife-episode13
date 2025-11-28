@@ -71,6 +71,7 @@
 	ADD_TRAIT(H, TRAIT_NOCRITOVERLAY, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_THE_HIDDEN, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_FREERUNNING, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_PIERCEIMMUNE, OUTFIT_TRAIT)
 
 	H.maxHealth = 25
 	H.crit_threshold = -123
@@ -600,7 +601,8 @@
 	item_type = /obj/item/knife/combat/the_hidden/fleshstealer
 
 /obj/item/knife/combat/the_hidden/fleshstealer
-	desc = "An obscenely sharp and dangerous knife. Backstabs will instantly down. Stab a dead body to gib it, healing you while stealing their appearence."
+	desc = "An obscenely sharp and dangerous knife. Backstabs will instantly down. Stab a dead body to gib it, healing you while stealing their appearence. Takes longer to strip flesh than other knives."
+	gib_time = 1.5 SECONDS
 	var/stolen_name
 	var/stolen_icon
 	var/stolen_icon_state
@@ -608,8 +610,8 @@
 
 /obj/item/knife/combat/the_hidden/fleshstealer/dead_effect(mob/living/target, mob/living/user)
 	user.adjustStaminaLoss(-25)
-	user.adjustBruteLoss(-15)
-	user.adjustFireLoss(-25)
+	user.adjustBruteLoss(-25)
+	user.adjustFireLoss(-35)
 
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
