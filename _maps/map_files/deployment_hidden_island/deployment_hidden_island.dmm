@@ -399,9 +399,7 @@
 /turf/open/floor/plating/ground/grass,
 /area/halflife/indoors/sewer/hidden/outside_forest)
 "om" = (
-/obj/structure/railing/halflife/solo{
-	dir = 8
-	},
+/obj/structure/halflife/barrel/quadruple/grey,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/sewer/hidden/indoors_generic)
 "oq" = (
@@ -1257,6 +1255,13 @@
 /area/halflife/indoors/sewer/hidden/indoors_generic)
 "OV" = (
 /obj/structure/stairs/halflife/combine,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/sewer/hidden/indoors_generic)
+"Pp" = (
+/obj/item/stack/sheet/scrap_metal{
+	pixel_x = 7;
+	pixel_y = -5
+	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/sewer/hidden/indoors_generic)
 "PA" = (
@@ -6765,8 +6770,8 @@ km
 Nd
 Nd
 Nd
-Nd
 km
+om
 km
 km
 km
@@ -6867,8 +6872,8 @@ bH
 Nd
 Nd
 Nd
-Nd
 km
+is
 is
 is
 is
@@ -6969,7 +6974,7 @@ km
 Nd
 Nd
 Nd
-Nd
+km
 km
 km
 km
@@ -7005,7 +7010,7 @@ fA
 fA
 fA
 fA
-dy
+fA
 fA
 fA
 fA
@@ -7106,8 +7111,8 @@ fA
 fA
 fA
 fA
-fA
-fA
+Jd
+Jd
 fA
 fA
 fA
@@ -7209,7 +7214,7 @@ fA
 fA
 fA
 fA
-dy
+fA
 fA
 fA
 fA
@@ -7266,7 +7271,7 @@ Vu
 dT
 sJ
 dT
-is
+wk
 km
 km
 km
@@ -7877,7 +7882,7 @@ Vu
 Vu
 Rb
 Rb
-KP
+wj
 is
 km
 km
@@ -9524,7 +9529,7 @@ Rb
 Rb
 Rb
 Rb
-KP
+wj
 Rb
 dT
 dT
@@ -16958,7 +16963,7 @@ jx
 jx
 jx
 is
-km
+Nd
 Nd
 Nd
 Nd
@@ -17060,26 +17065,26 @@ jx
 jx
 jx
 is
+Nd
 is
 is
+Nd
+Nd
+Nd
 is
-Nd
-Nd
-Nd
-Nd
-Nd
+is
 is
 km
 km
 is
-Nd
-Nd
+is
+is
 Nd
 Nd
 Nd
 is
 is
-xB
+Tb
 jx
 jx
 jx
@@ -17161,8 +17166,8 @@ jx
 jx
 jx
 jx
-jx
-jx
+is
+Nd
 is
 uc
 km
@@ -17181,7 +17186,7 @@ Nd
 km
 uc
 is
-jx
+Tb
 jx
 jx
 jx
@@ -17263,8 +17268,8 @@ jx
 jx
 jx
 jx
-jx
-jx
+is
+Nd
 is
 uc
 km
@@ -17283,7 +17288,7 @@ Nd
 km
 uc
 is
-jx
+Tb
 jx
 jx
 jx
@@ -17365,8 +17370,8 @@ jx
 jx
 jx
 jx
-jx
-jx
+is
+Nd
 is
 zf
 km
@@ -17385,8 +17390,8 @@ Nd
 km
 zf
 is
-jx
-jx
+kG
+is
 jx
 jx
 jx
@@ -17468,7 +17473,7 @@ jx
 jx
 jx
 is
-is
+Nd
 is
 fH
 km
@@ -17486,8 +17491,8 @@ Nd
 Nd
 km
 Nd
-is
-is
+Nd
+Nd
 is
 jx
 jx
@@ -18080,7 +18085,7 @@ jx
 jx
 jx
 is
-is
+Nd
 is
 fH
 km
@@ -18098,8 +18103,8 @@ Nd
 Nd
 km
 Nd
-is
-is
+Nd
+Nd
 is
 jx
 jx
@@ -18181,8 +18186,8 @@ jx
 jx
 jx
 jx
-jx
-jx
+is
+Nd
 is
 zf
 km
@@ -18201,8 +18206,8 @@ Nd
 km
 zf
 is
-jx
-jx
+kG
+is
 jx
 jx
 jx
@@ -18284,7 +18289,7 @@ jx
 is
 is
 is
-is
+Nd
 is
 uc
 km
@@ -18303,7 +18308,7 @@ Nd
 km
 uc
 is
-jx
+Tb
 jx
 jx
 jx
@@ -18386,7 +18391,7 @@ jx
 is
 km
 km
-km
+Nd
 is
 uc
 km
@@ -18405,7 +18410,7 @@ Nd
 km
 uc
 is
-jx
+Tb
 jx
 jx
 jx
@@ -18494,20 +18499,20 @@ is
 Nd
 Nd
 vu
-Nd
-Nd
+is
+is
 is
 km
 km
 is
-Nd
-Nd
+is
+is
 Nd
 Nd
 Nd
 is
 is
-om
+km
 DG
 jx
 jx
@@ -18916,7 +18921,7 @@ Nd
 Nd
 km
 km
-Tb
+Pp
 jx
 jx
 jx
@@ -19018,7 +19023,7 @@ is
 is
 is
 km
-Tb
+km
 jx
 jx
 jx
