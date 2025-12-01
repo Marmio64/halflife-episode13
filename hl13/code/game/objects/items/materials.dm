@@ -54,10 +54,13 @@
 
 /obj/item/halflife/combine_battery
 	name = "Combine Battery"
-	desc = "A combine battery that can charge their technologies, such as powered suits and stunsticks, or be used as a power cell for certain recipes."
+	desc = "A combine battery that can charge their technologies, such as powered suits, certainand stunsticks, or be used as a power cell for certain recipes."
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	icon_state = "battery"
+
 	w_class = WEIGHT_CLASS_SMALL
+
+	slot_flags = ITEM_SLOT_BELT
 
 /obj/item/halflife/combine_battery/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	if(istype(interacting_with, /obj/item/clothing))
@@ -77,6 +80,14 @@
 			if(do_after(user, 1 SECONDS, baton))
 				playsound(src, 'hl13/sound/effects/suitchargeok1.ogg', 40, FALSE)
 				baton.cell.give(100000) //a standard baton cell
+				qdel(src)
+				return ITEM_INTERACT_SUCCESS
+	if(istype(interacting_with, /obj/item/gun/energy))
+		var/obj/item/gun/energy/gun = interacting_with
+		if(gun.cell)
+			if(do_after(user, 2 SECONDS, gun))
+				playsound(src, 'hl13/sound/effects/suitchargeok1.ogg', 40, FALSE)
+				gun.cell.give(STANDARD_CELL_CHARGE)
 				qdel(src)
 				return ITEM_INTERACT_SUCCESS
 	return NONE

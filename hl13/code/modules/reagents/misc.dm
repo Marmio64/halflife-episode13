@@ -94,4 +94,4 @@
 	affected_mob.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/slowing_compound)
 
 /datum/movespeed_modifier/reagent/slowing_compound
-	multiplicative_slowdown = 0.5
+	multiplicative_slowdown = 0.35

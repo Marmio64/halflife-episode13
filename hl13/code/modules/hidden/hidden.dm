@@ -73,10 +73,10 @@
 	ADD_TRAIT(H, TRAIT_FREERUNNING, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_PIERCEIMMUNE, OUTFIT_TRAIT)
 
-	H.maxHealth = 25
+	H.maxHealth = 50
 	H.crit_threshold = -123
 	H.hardcrit_threshold = -124
-	H.fire_stack_decay_rate = -1 //otherwise fire is insane against them. Max stack size is 12, and this removes 2 stacks every 2 seconds
+	H.fire_stack_decay_rate = -2 //otherwise fire is insane against them. Max stack size is 12, and this removes 4 stacks every 2 seconds
 	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 	H.faction = list(FACTION_HEADCRAB)
 	H.setdeploymentfaction(HIDDEN_DEPLOYMENT_FACTION)
@@ -566,7 +566,7 @@
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/fleshstealer/pre_equip(mob/living/carbon/human/H)
 	. = ..()
-	H.physiology.damage_resistance += 25 //you're USUALLY easier to spot in spite of your disguises, so this gives you breathing room to make plays. This is balanced out by lower healing from gibbing.
+	H.physiology.damage_resistance += 20 //you're USUALLY easier to spot in spite of your disguises, so this gives you breathing room to make plays. This is balanced out by lower healing from gibbing.
 
 /obj/item/clothing/under/pants/the_hidden/fleshstealer
 	actions_types = list(/datum/action/item_action/change_speed)

@@ -737,5 +737,6 @@
 			to_chat(user, "<span class='warning'>The Immolator burns your hand from its heat!</span>")
 			user.adjustFireLoss(15)
 
-/obj/item/gun/energy/immolator/low_capacity
-	cell_type = /obj/item/stock_parts/power_store/cell/mini_egun
+/obj/item/gun/energy/immolator/hidden
+	desc = "An alien looking plasma thrower which burns it's victims alive. It has short range, but can output a lot of damage. It can be toggled between flamer and plasma settings. This variant cannot self recharge, and must be recharged with combine batteries."
+	selfcharge = 0

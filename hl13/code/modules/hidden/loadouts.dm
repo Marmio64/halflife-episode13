@@ -87,16 +87,18 @@
 /datum/outfit/deployment_loadout/hidden/combine/cremator
 	name = "Hidden: Cremator"
 	display_name = "DEFENSE: Cremator"
-	desc = "Keep the Hidden at bay both with flame trails and high power plasma blasts from your immolator, which can self recharge but has a low ammo capacity. Take care not to ignite your team mates."
+	desc = "Keep the Hidden at bay both with flame trails and high power plasma blasts from your immolator. Take care not to ignite your team mates."
 	id_name = "Cremator"
 
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/cremator
 	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat/cremator
-	suit_store = /obj/item/gun/energy/immolator/low_capacity
+	suit_store = /obj/item/gun/energy/immolator/hidden
 
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch/cremator
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+
+	belt = /obj/item/halflife/combine_battery
 
 	l_pocket = /obj/item/stack/medical/gauze/quik_gauze
 	r_pocket = /obj/item/flashlight/hand_crank
@@ -270,9 +272,9 @@
 
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/usp9mm = 3,
-		/obj/item/stack/sheet/mineral/sandbags = 3,
+		/obj/item/stack/sheet/mineral/sandbags = 4,
 		/obj/item/flashlight/flare/the_hidden = 3,
-		/obj/item/assembly/infra/the_hidden = 3,
+		/obj/item/assembly/infra/the_hidden = 4,
 	)
 
 
@@ -386,7 +388,7 @@
 	shoes = /obj/item/clothing/shoes/halflife/cleanup
 	gloves = /obj/item/clothing/gloves/halflife/cleanup
 
-	suit_store =  /obj/item/gun/syringe
+	suit_store =  /obj/item/gun/syringe/two_capacity
 
 	belt = /obj/item/gun/ballistic/automatic/pistol/usp
 	l_pocket = /obj/item/ammo_box/magazine/usp9mm
@@ -398,9 +400,10 @@
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/syringe/piercing/hidden_scientist = 6,
+		/obj/item/reagent_containers/syringe/piercing/hidden_scientist = 10,
 		/obj/item/flashlight/flare/the_hidden = 3,
 		/obj/item/stack/medical/gauze/quik_gauze = 1,
+		/obj/item/ammo_box/magazine/usp9mm = 1,
 	)
 
 /obj/item/reagent_containers/syringe/piercing/hidden_scientist
