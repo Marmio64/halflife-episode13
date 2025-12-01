@@ -72,6 +72,7 @@
 	id_trim = /datum/id_trim/job/captain
 	ears = /obj/item/radio/headset/heads/captain/alt
 	uniform =  /obj/item/clothing/under/administrator
+	suit = /obj/item/clothing/suit/jacket/trenchcoat //dont forget to comment this one out after winter as well
 	shoes = /obj/item/clothing/shoes/laceup
 	r_pocket = /obj/item/hl2key/master
 

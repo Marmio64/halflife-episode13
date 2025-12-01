@@ -64,6 +64,15 @@ Assistant
 	..()
 	give_holiday_hat(target)
 
+	var/static/list/winter_jackets = list(
+		/obj/item/clothing/suit/jacket/bomber,
+		/obj/item/clothing/suit/jacket/miljacket,
+		/obj/item/clothing/suit/jacket/leather,
+	)
+
+	if(prob(25))
+		suit = pick(winter_jackets)
+
 /datum/outfit/job/assistant/proc/give_holiday_hat(mob/living/carbon/human/target)
 	for(var/holidayname in GLOB.holidays)
 		var/datum/holiday/holiday_today = GLOB.holidays[holidayname]
