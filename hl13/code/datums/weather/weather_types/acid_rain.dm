@@ -25,7 +25,7 @@
 	area_type = /area/halflife
 	protect_indoors = TRUE
 
-	probability = 100
+	probability = 0
 
 	barometer_predictable = TRUE
 

@@ -393,16 +393,16 @@
 	desc = "Laid out cobblestone. Forms a path easy enough to walk on."
 
 /turf/open/floor/plating/ground/grass
-	name = "grass"
-	desc = "A patch of grass."
+	name = "snowy grass"
+	desc = "A patch of grass, covered in snow."
 	icon = 'hl13/icons/turf/floor/floors.dmi'
-	icon_state = "hl_grass"
-	base_icon_state = "hl_grass"
+	icon_state = "hl_snow"
+	base_icon_state = "hl_snow"
 	baseturfs = /turf/open/floor/plating/ground/grass
 	bullet_bounce_sound = null
-	footstep = FOOTSTEP_GRASS
-	barefootstep = FOOTSTEP_GRASS
-	clawfootstep = FOOTSTEP_GRASS
+	footstep = FOOTSTEP_SAND
+	barefootstep = FOOTSTEP_SAND
+	clawfootstep = FOOTSTEP_SAND
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = SMOOTH_GROUP_TURF_OPEN + SMOOTH_GROUP_FLOOR_GRASS
@@ -413,7 +413,7 @@
 	rust_resistance = RUST_RESISTANCE_ORGANIC
 	planetary_atmos = TRUE
 	/// The icon used for smoothing.
-	var/smooth_icon = 'hl13/icons/turf/floor/cut/hl_grass.dmi'
+	var/smooth_icon = 'hl13/icons/turf/floor/cut/hl_snow.dmi'
 
 /turf/open/floor/plating/ground/grass/Initialize(mapload)
 	. = ..()
