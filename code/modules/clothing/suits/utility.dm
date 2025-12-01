@@ -208,7 +208,6 @@
 	icon_state = "rad"
 	inhand_icon_state = "rad_suit"
 	w_class = WEIGHT_CLASS_BULKY
-	clothing_flags = THICKMATERIAL
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	allowed = list(
 		/obj/item/flashlight,

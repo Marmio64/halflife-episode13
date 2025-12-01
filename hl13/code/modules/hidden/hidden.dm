@@ -76,7 +76,7 @@
 	H.maxHealth = 50
 	H.crit_threshold = -123
 	H.hardcrit_threshold = -124
-	H.fire_stack_decay_rate = -1 //otherwise fire is insane against them. Max stack size is 12, and this removes 2 stacks every 2 seconds
+	H.fire_stack_decay_rate = -2 //otherwise fire is insane against them. Max stack size is 12, and this removes 4 stacks every 2 seconds
 	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 	H.faction = list(FACTION_HEADCRAB)
 	H.setdeploymentfaction(HIDDEN_DEPLOYMENT_FACTION)
@@ -602,7 +602,7 @@
 
 /obj/item/knife/combat/the_hidden/fleshstealer
 	desc = "An obscenely sharp and dangerous knife. Backstabs will instantly down. Stab a dead body to gib it, healing you while stealing their appearence. Takes longer to strip flesh than other knives."
-	gib_time = 1.75 SECONDS
+	gib_time = 1.5 SECONDS
 	var/stolen_name
 	var/stolen_icon
 	var/stolen_icon_state

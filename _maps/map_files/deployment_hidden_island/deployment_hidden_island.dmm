@@ -87,6 +87,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/sewer/hidden/indoors_generic)
+"cT" = (
+/obj/structure/halflife/trash_decal,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/indoors/sewer/hidden/outside_forest)
 "cW" = (
 /obj/machinery/door/unpowered/halflife/wood{
 	dir = 1
@@ -133,6 +137,10 @@
 	},
 /turf/open/openspace,
 /area/halflife/indoors/sewer/hidden/indoors_generic)
+"ee" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/indoors/sewer/hidden/outside_forest)
 "eh" = (
 /obj/structure/railing/halflife/solo{
 	dir = 8
@@ -324,6 +332,10 @@
 /obj/structure/halflife/rug/red,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/sewer/hidden/indoors_generic)
+"ks" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/sewer/hidden/indoors_generic)
 "kD" = (
 /obj/effect/landmark/deployments_metrocop,
 /obj/structure/chair/halflife/metal/folding,
@@ -399,9 +411,9 @@
 /turf/open/floor/plating/ground/grass,
 /area/halflife/indoors/sewer/hidden/outside_forest)
 "om" = (
-/obj/structure/halflife/barrel/quadruple/grey,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/halflife/indoors/sewer/hidden/indoors_generic)
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/indoors/sewer/hidden/outside_forest)
 "oq" = (
 /obj/structure/table/halflife/no_smooth/wood,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -559,7 +571,7 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors/sewer/hidden/outside_forest)
 "uI" = (
-/obj/structure/halflife/road_barrier/concrete,
+/obj/structure/barricade/wooden/solid,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/indoors/sewer/hidden/outside_forest)
 "uM" = (
@@ -992,6 +1004,10 @@
 /obj/effect/decal/cleanable/blood/trails,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/sewer/hidden/indoors_generic)
+"FS" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/sewer/hidden/indoors_generic)
 "FU" = (
 /obj/structure/stairs/halflife/wood,
 /turf/open/floor/plating/indoor/woodc,
@@ -1052,6 +1068,10 @@
 /obj/structure/halflife/rug/fancy,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/sewer/hidden/indoors_generic)
+"HX" = (
+/obj/structure/halflife/barrel/quadruple/grey,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/sewer/hidden/indoors_generic)
 "HZ" = (
 /obj/structure/railing/halflife/solo{
 	dir = 1
@@ -1064,6 +1084,10 @@
 "If" = (
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer/hidden/spawn_room)
+"Ih" = (
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/indoors/sewer/hidden/outside_forest)
 "It" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/yellowed,
@@ -1257,6 +1281,10 @@
 /obj/structure/stairs/halflife/combine,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/sewer/hidden/indoors_generic)
+"Pc" = (
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/indoors/sewer/hidden/outside_forest)
 "PA" = (
 /obj/effect/spawner/random/halflife/plant_spawner,
 /obj/item/restraints/legcuffs/beartrap/the_hidden/prearmed,
@@ -1468,6 +1496,13 @@
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/sewer/hidden/indoors_generic)
+"Xf" = (
+/obj/item/stack/sheet/scrap_metal{
+	pixel_x = 7;
+	pixel_y = -5
+	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/sewer/hidden/indoors_generic)
 "XD" = (
 /obj/structure/halflife/trash/cardboard,
 /obj/item/halflife/nutrient_bar_wrapping/water,
@@ -1513,13 +1548,6 @@
 	},
 /obj/structure/halflife/rug/fancy,
 /turf/open/floor/plating/indoor/woodc/wide,
-/area/halflife/indoors/sewer/hidden/indoors_generic)
-"ZG" = (
-/obj/item/stack/sheet/scrap_metal{
-	pixel_x = 7;
-	pixel_y = -5
-	},
-/turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/sewer/hidden/indoors_generic)
 "ZM" = (
 /obj/machinery/telecomms/receiver/preset_left/birdstation,
@@ -4032,7 +4060,7 @@ dT
 dT
 Rb
 Rb
-Rb
+om
 Rb
 dT
 dT
@@ -4134,7 +4162,7 @@ Rb
 Rb
 Rb
 KP
-dT
+Ih
 Rb
 sJ
 dT
@@ -4236,7 +4264,7 @@ dT
 dT
 oj
 Rb
-Rb
+om
 dT
 dT
 dT
@@ -4829,7 +4857,7 @@ TS
 fA
 fA
 fA
-fA
+ks
 fA
 Cz
 fA
@@ -4842,7 +4870,7 @@ dT
 Rb
 Rb
 Rb
-Rb
+om
 xx
 xx
 yf
@@ -4952,7 +4980,7 @@ WE
 WE
 WE
 yf
-dT
+Ih
 Rb
 KP
 oj
@@ -5048,7 +5076,7 @@ Vx
 dT
 dT
 Rb
-dT
+Ih
 yf
 WE
 WE
@@ -5558,7 +5586,7 @@ yf
 yf
 yf
 yf
-yf
+Pc
 yf
 WE
 WE
@@ -5666,7 +5694,7 @@ WE
 WE
 WE
 yf
-Rb
+om
 Rb
 oj
 Rb
@@ -6068,7 +6096,7 @@ dT
 dT
 dT
 dT
-dT
+Ih
 yf
 WE
 WE
@@ -6170,7 +6198,7 @@ dT
 dT
 dT
 sJ
-dT
+Ih
 yf
 WE
 WE
@@ -6271,8 +6299,8 @@ is
 is
 is
 is
-Rb
-dT
+om
+Ih
 yf
 WE
 WE
@@ -6771,7 +6799,7 @@ Nd
 Nd
 Nd
 km
-om
+HX
 km
 km
 km
@@ -6898,8 +6926,8 @@ yf
 yf
 yf
 yf
-yf
-yf
+cT
+ee
 Jd
 Jd
 Jd
@@ -7001,7 +7029,7 @@ WE
 WE
 WE
 WE
-yf
+cT
 si
 Jd
 fA
@@ -7219,7 +7247,7 @@ fA
 fA
 fA
 fA
-fA
+ks
 Jd
 wN
 wN
@@ -7395,11 +7423,11 @@ Nd
 Nd
 km
 is
-yf
+Pc
 WE
 WE
 WE
-yf
+Pc
 xx
 xx
 xx
@@ -7702,9 +7730,9 @@ Nd
 km
 is
 yf
-WE
-WE
-WE
+uI
+uI
+uI
 yf
 Rb
 Rb
@@ -8711,7 +8739,7 @@ Nd
 Nd
 km
 km
-km
+FS
 km
 km
 Nd
@@ -17822,7 +17850,7 @@ sB
 zP
 fA
 fA
-fA
+ks
 fA
 fA
 fA
@@ -18921,7 +18949,7 @@ Nd
 Nd
 km
 km
-ZG
+Xf
 jx
 jx
 jx
