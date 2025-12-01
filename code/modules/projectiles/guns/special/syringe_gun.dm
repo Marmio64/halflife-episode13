@@ -25,6 +25,10 @@
 	var/has_syringe_overlay = TRUE ///If it has an overlay for inserted syringes. If true, the overlay is determined by the number of syringes inserted into it.
 	gun_flags = NOT_A_REAL_GUN
 
+/obj/item/gun/syringe/two_capacity
+	max_syringes = 2
+	fire_delay = 6
+
 /obj/item/gun/syringe/Initialize(mapload)
 	. = ..()
 	chambered = new /obj/item/ammo_casing/syringegun(src)
