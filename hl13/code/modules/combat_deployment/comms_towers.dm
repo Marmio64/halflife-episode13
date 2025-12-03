@@ -1,7 +1,7 @@
 
 /obj/machinery/deployment_comms_tower
 	name = "Comms Tower"
-	desc = "A vital piece of instructure that ensures backup and supplies continues to come to this area. It needs a wide berth to continue sending information, so it cannot be walled off. It appears to be particularly weak against melee attacks."
+	desc = "A vital piece of infrastructure that ensures backup and supplies continues to come to this area. It needs a wide berth to continue sending information, so it cannot be walled off. It appears to be particularly weak against melee attacks."
 	icon = 'hl13/icons/obj/port/comm_tower2.dmi'
 	icon_state = "comm_tower_on"
 	max_integrity = 1500
@@ -92,3 +92,68 @@
 		SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
 		to_chat(H, "<span class='greentext big'>We have destroyed the enemy's comms tower, we win!</span>")
 	return PROCESS_KILL
+
+/obj/machinery/deployment_comms_tower/rebel/xen_defense/deconstruct(disassembled = TRUE)
+	if(GLOB.deployment_win_team != REBEL_DEPLOYMENT_FACTION)
+		priority_announce("Rebel communication tower destroyed... Let the feast begin.", "#!?@SDz..(% Priority Alert")
+		GLOB.deployment_win_team = XEN_DEPLOYMENT_FACTION
+		SSticker.force_ending = FORCE_END_ROUND
+		for(var/X in GLOB.deployment_rebel_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
+			to_chat(H, "<span class='userdanger'>Our tower was destroyed, we have lost...</span>")
+		for(var/X in GLOB.deployment_xen_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
+			to_chat(H, "<span class='greentext big'>We have destroyed the enemy's comms tower, we win!</span>")
+	return PROCESS_KILL
+
+/obj/machinery/deployment_comms_tower/rebel/xen_defense
+	var/rebel_time = 10 MINUTES
+	var/grace_time = 60 SECONDS
+
+	var/grace_period_text = TRUE
+	var/capturable = FALSE
+
+/obj/machinery/deployment_comms_tower/rebel/xen_defense/Initialize(mapload)
+	. = ..()
+	GLOB.deployment_rebels_flag_time_left = rebel_time
+	GLOB.deployment_flag_grace_period = grace_time
+
+/obj/machinery/deployment_comms_tower/rebel/xen_defense/process()
+	. = ..()
+	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
+		if(!capturable)
+			capturable = TRUE
+			if(grace_period_text)
+				for(var/X in GLOB.deployment_rebel_players)
+					var/mob/living/carbon/human/H = X
+					SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+					to_chat(H, "<span class='greentext big'>The grace period is up, fight for your life and protect the Communications Tower!</span>")
+				for(var/X in GLOB.deployment_xen_players)
+					var/mob/living/carbon/human/H = X
+					SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+					to_chat(H, "<span class='greentext big'>The grace period is up, kill the humans and destroy their Communications Tower!</span>")
+	else
+		GLOB.deployment_flag_grace_period -= 1 SECONDS
+
+	if(capturable)
+		GLOB.deployment_rebels_flag_time_left -= 1 SECONDS
+
+	if(GLOB.deployment_rebels_flag_time_left <= 0 && GLOB.deployment_win_team != XEN_DEPLOYMENT_FACTION)
+		priority_announce("Reinforcements have arrived, long live the resistance!", "Lambda Priority Alert")
+		GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
+		SSticker.force_ending = FORCE_END_ROUND
+		for(var/X in GLOB.deployment_xen_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
+			to_chat(H, "<span class='userdanger'>The rebels have survived long enough for reinforcements...</span>")
+		for(var/X in GLOB.deployment_rebel_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
+			to_chat(H, "<span class='greentext big'>We have survived long enough for reinforcements to arrive!</span>")
+		return PROCESS_KILL
+
+/obj/machinery/deployment_comms_tower/rebel/xen_defense/examine(mob/user)
+	. = ..()
+	. += span_notice("The rebels need to defend the tower for [(GLOB.deployment_rebels_flag_time_left)/10] more seconds in order to win.")

@@ -72,6 +72,8 @@
 #define TRAIT_LESSPAIN_MINOR "lesspain_minor"
 #define TRAIT_MASOCHIST "masochist"
 
+#define TRAIT_SLUDGE_PROTECTION "sludge_protection"
+
 #define TRAIT_TDMCAPTAIN "tdmcaptain"
 #define TRAIT_TDMPLAYER "tdmplayer"
 

@@ -7,7 +7,7 @@ SUBSYSTEM_DEF(respawns)
 
 	var/combine_wave_timer = 35 SECONDS
 	var/rebel_wave_timer = 35 SECONDS
-	var/xen_wave_timer = 15 SECONDS
+	var/xen_wave_timer = 20 SECONDS
 
 /datum/controller/subsystem/respawns/fire(resumed = 0)
 	combine_wave_timer -= 2 SECONDS

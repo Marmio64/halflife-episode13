@@ -52,8 +52,13 @@
 */
 
 /mob/living/basic/halflife/grub/deployment
-	maxHealth = 20
-	health = 20
+	maxHealth = 25
+	health = 25
+	melee_damage_lower = 3
+	melee_damage_upper = 5
+	attack_verb_continuous = "bites"
+	attack_verb_simple = "bite"
+	attack_sound = 'hl13/sound/creatures/headcrabbite.ogg'
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
 	var/datum/action/cooldown/spell/conjure/antlions/deployment/antlions
 

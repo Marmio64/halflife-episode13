@@ -64,7 +64,8 @@
 /obj/projectile/bullet/flechette
 	name = "flechette"
 	icon_state = "flechette"
-	damage = 20
+	damage = 24
+	armour_penetration = 20
 	wound_bonus = -10
 	bare_wound_bonus = 5
 	hitsound = 'hl13/sound/creatures/hunter/flechette_flesh_impact1.ogg'

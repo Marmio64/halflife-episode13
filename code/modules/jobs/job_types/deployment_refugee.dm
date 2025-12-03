@@ -34,6 +34,8 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 		info += "You are playing for the Rebel Side in the Payload gamemode! Move the cart to the combine base to win! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
 	if(SSmapping.current_map.combat_deployment_gamemode == "the_hidden")
 		info += "You are part of a team hunting down an anomalous test subject known as The Hidden. Stick together with your squad, and try to put this invisible, merciless beast down. Alternatively, try to active all five combine distress terminals to win."
+	if(SSmapping.current_map.combat_deployment_gamemode == "xen_defense")
+		info += "You are playing for the Rebel Side in the Xen Defense gamemode! Protect your comms tower, gather cash, and keep incoming zombies and antlions at bay long enough for reinforcements to arrive."
 
 	return info
 

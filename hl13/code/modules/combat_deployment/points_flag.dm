@@ -40,6 +40,10 @@
 		icon_state = "flagpole_poland"
 		GLOB.deployment_rebels_cash += cash_increase
 
+	if(current_faction_holder == XEN_DEPLOYMENT_FACTION)
+		icon_state = "flagpole_xen"
+		GLOB.deployment_xen_cash += cash_increase
+
 /obj/machinery/deployment_points_flag/attack_hand(mob/living/carbon/human/H, modifiers)
 	. = ..()
 	if(.)
@@ -55,6 +59,21 @@
 			to_chat(H, span_notice("The flag was not succesfully raised."))
 	else
 		to_chat(H, span_notice("Your team's flag is already raised."))
+
+/obj/machinery/deployment_points_flag/attack_basic_mob(mob/living/user, list/modifiers)
+	. = ..()
+	if(.)
+		return
+
+	if(user.deployment_faction != current_faction_holder)
+		to_chat(user, span_green("Raising your team's flag!"))
+		if(do_after(user, 5 SECONDS, src))
+			to_chat(user, span_green("Flag raised!"))
+			current_faction_holder = user.deployment_faction
+		else
+			to_chat(user, span_notice("The flag was not succesfully raised."))
+	else
+		to_chat(user, span_notice("Your team's flag is already raised."))
 
 /obj/machinery/deployment_points_flag/poland
 	icon_state = "flagpole_poland"
@@ -74,4 +93,14 @@
 	cash_increase = 3
 
 /obj/machinery/deployment_points_flag/combine/low_cash
+	cash_increase = 0.2
+
+/obj/machinery/deployment_points_flag/xen
+	icon_state = "flagpole_xen"
+	starting_faction = XEN_DEPLOYMENT_FACTION
+
+/obj/machinery/deployment_points_flag/xen/high_cash
+	cash_increase = 3
+
+/obj/machinery/deployment_points_flag/xen/low_cash
 	cash_increase = 0.2

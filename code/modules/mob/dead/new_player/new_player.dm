@@ -138,12 +138,20 @@
 		if(client.deployment_faction)
 			if(client.deployment_faction != job.combat_deployment_faction)
 				return JOB_UNAVAILABLE_WRONGTEAM
-		if(job.combat_deployment_faction == COMBINE_DEPLOYMENT_FACTION  && !client.deployment_faction)
-			if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players) && SSmapping.current_map.combat_deployment_gamemode != "the_hidden")
-				return JOB_UNAVAILABLE_TEAMFULL
-		if(job.combat_deployment_faction == REBEL_DEPLOYMENT_FACTION && !client.deployment_faction)
-			if(length(GLOB.deployment_combine_players) < length(GLOB.deployment_rebel_players))
-				return JOB_UNAVAILABLE_TEAMFULL
+		if(SSmapping.current_map.combat_deployment_gamemode != "xen_defense")
+			if(job.combat_deployment_faction == COMBINE_DEPLOYMENT_FACTION  && !client.deployment_faction)
+				if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players) && SSmapping.current_map.combat_deployment_gamemode != "the_hidden")
+					return JOB_UNAVAILABLE_TEAMFULL
+			if(job.combat_deployment_faction == REBEL_DEPLOYMENT_FACTION && !client.deployment_faction)
+				if(length(GLOB.deployment_combine_players) < length(GLOB.deployment_rebel_players))
+					return JOB_UNAVAILABLE_TEAMFULL
+		else
+			if(job.combat_deployment_faction == XEN_DEPLOYMENT_FACTION  && !client.deployment_faction)
+				if((length(GLOB.deployment_rebel_players)*1.5) < length(GLOB.deployment_xen_players)) //the multiplication means the zombie faction will always have more players than rebels
+					return JOB_UNAVAILABLE_TEAMFULL
+			if(job.combat_deployment_faction == REBEL_DEPLOYMENT_FACTION && !client.deployment_faction)
+				if(length(GLOB.deployment_xen_players) < (length(GLOB.deployment_rebel_players)*1.5))
+					return JOB_UNAVAILABLE_TEAMFULL
 	if((job.current_positions >= job.total_positions) && job.total_positions != -1)
 		if(is_assistant_job(job))
 			if(isnum(client.player_age) && client.player_age <= 14) //Newbies can always be assistants

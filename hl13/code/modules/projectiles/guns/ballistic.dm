@@ -739,4 +739,9 @@
 
 /obj/item/gun/energy/immolator/hidden
 	desc = "An alien looking plasma thrower which burns it's victims alive. It has short range, but can output a lot of damage. It can be toggled between flamer and plasma settings. This variant cannot self recharge, and must be recharged with combine batteries."
+	cell_type = /obj/item/stock_parts/power_store/cell/hidden_immolator
 	selfcharge = 0
+
+/obj/item/stock_parts/power_store/cell/hidden_immolator
+	name = "immolator power cell"
+	maxcharge = STANDARD_CELL_CHARGE * 1.4

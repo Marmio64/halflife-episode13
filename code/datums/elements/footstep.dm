@@ -66,6 +66,10 @@
 			footstep_sounds = list('hl13/sound/creatures/gear1.ogg', 'hl13/sound/creatures/gear2.ogg', 'hl13/sound/creatures/gear3.ogg', )
 			RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(play_simplestep_machine))
 			return
+		if(FOOTSTEP_MOB_CREMATOR)
+			footstep_sounds = list('hl13/sound/movement/cremator/footstep1.ogg','hl13/sound/movement/cremator/footstep2.ogg','hl13/sound/movement/cremator/footstep3.ogg', )
+			RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(play_simplestep_machine))
+			return
 	RegisterSignal(target, COMSIG_MOVABLE_MOVED, PROC_REF(play_simplestep))
 	steps_for_living[target] = 0
 

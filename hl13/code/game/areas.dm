@@ -113,6 +113,14 @@
 
 	ambient_music_vol = 20
 
+/area/halflife/outdoors/deployment_city/zombies
+
+	ambient_buzz = 'hl13/sound/ambience/town_abandoned.ogg'
+	ambient_buzz_vol = 25
+
+	ambient_music_vol = 20
+	daylight_multiplier = 0.15
+
 /area/halflife/outdoors/deployment_city/forest
 	daylight_multiplier = 0.35
 

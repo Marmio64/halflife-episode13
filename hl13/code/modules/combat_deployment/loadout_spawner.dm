@@ -338,6 +338,7 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/xen/tier1/headcrab,
 			/datum/outfit/deployment_loadout/xen/tier1/fast_headcrab,
+			/datum/outfit/deployment_loadout/xen/tier1/armored_headcrab,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -353,6 +354,7 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/xen/tier2/poison_headcrab,
 			/datum/outfit/deployment_loadout/xen/tier2/zombie,
+			/datum/outfit/deployment_loadout/xen/tier2/fast_headcrab,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -367,10 +369,11 @@
 		loadouts = list()
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/xen/tier3/fast_zombie,
-			/datum/outfit/deployment_loadout/xen/tier3/poison_zombie,
-			/datum/outfit/deployment_loadout/xen/tier3/fungal_zombie,
+			/datum/outfit/deployment_loadout/xen/tier3/cremator,
 			/datum/outfit/deployment_loadout/xen/tier3/zombine,
+			/datum/outfit/deployment_loadout/xen/tier3/fungal_zombie,
 			/datum/outfit/deployment_loadout/xen/tier3/antlion_worker,
+			/datum/outfit/deployment_loadout/xen/tier3/poison_zombie,
 			/datum/outfit/deployment_loadout/xen/tier3/antlion_grub,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
@@ -385,8 +388,9 @@
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/outfit/deployment_loadout/xen/tier4/gonome,
 			/datum/outfit/deployment_loadout/xen/tier4/antlion_guard,
+			/datum/outfit/deployment_loadout/xen/tier4/heavy_crab_walker,
+			/datum/outfit/deployment_loadout/xen/tier4/gonome,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

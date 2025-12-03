@@ -147,6 +147,7 @@
 #define SPECIES_STALKER "stalker"
 #define SPECIES_SYNTHHUMAN "synthhuman"
 #define SPECIES_CREMATOR "cremator"
+#define SPECIES_CRABWALKERHUMAN "crabwalkerhuman"
 
 // Like species IDs, but not specifically attached a species.
 #define BODYPART_ID_ALIEN "alien"
