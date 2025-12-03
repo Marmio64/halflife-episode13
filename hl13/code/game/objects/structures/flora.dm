@@ -19,7 +19,7 @@
 /obj/structure/flora/tree/halflife/pine
 	desc = "A large, verdant green tree, seemingly unbothered by the destruction the combine have wrought upon the environment."
 	icon = 'hl13/icons/obj/trees.dmi'
-	icon_state = "pine_1_snow"
+	icon_state = "pine_1"
 	pixel_x = -16
 	pixel_y = 6
 
@@ -28,7 +28,7 @@
 
 /obj/structure/flora/tree/halflife/pine/style_random/Initialize(mapload)
 	. = ..()
-	icon_state = "pine_[rand(1, 2)]_snow"
+	icon_state = "pine_[rand(1, 4)]"
 	update_appearance()
 
 /obj/structure/flora/tree/halflife/pine/dead
