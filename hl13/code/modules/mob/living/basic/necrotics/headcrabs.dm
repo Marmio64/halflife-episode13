@@ -78,6 +78,10 @@
 	AddElement(/datum/element/basic_eating, heal_amt = 5, food_types = edibles)
 	ai_controller.set_blackboard_key(BB_BASIC_FOODS, typecacheof(edibles))
 
+/mob/living/basic/halflife/headcrab/deployment
+	melee_damage_lower = 8
+	melee_damage_upper = 13
+
 /mob/living/basic/halflife/headcrab/armored
 	name = "Armored Headcrab"
 	desc = "A parasitic headcrab with a hardened fungal carapace."
@@ -87,6 +91,9 @@
 	maxHealth = 60
 	health = 60
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1, /obj/item/stack/sheet/sinew = 1, /obj/item/stack/sheet/bone = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1)
+
+/mob/living/basic/halflife/headcrab/armored/deployment
+	speed = 2
 
 /mob/living/basic/halflife/headcrab/armored/ghost_controlled/Initialize(mapload)
 	. = ..()
@@ -156,6 +163,9 @@
 	health = 20
 	speed = 0.25
 	zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed/fast
+
+/mob/living/basic/halflife/headcrab/fast/upgraded
+	speed = -0.2
 
 /////////AI STUFF/////////////////////
 

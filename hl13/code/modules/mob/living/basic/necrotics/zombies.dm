@@ -38,6 +38,8 @@
 	var/idle_sound_chance = 18
 	var/sound_vary = FALSE
 	var/fungalheal = FALSE
+	///percentage of max health to heal while standing on a fungal node
+	var/fungalheal_amt = 0.05
 	var/idle_sounds = list('hl13/sound/creatures/zombiesound.ogg', 'hl13/sound/creatures/zombiesound2.ogg', 'hl13/sound/creatures/zombiesound3.ogg', 'hl13/sound/creatures/zombiesound4.ogg')
 
 	cmode_music = 'hl13/sound/music/combat/disrupted.ogg' //spooky!
@@ -64,7 +66,7 @@
 	//If there is fungal infestation on the ground, and the zombie can heal off of it, do so
 	if(fungalheal)
 		if(locate(/obj/structure/alien/weeds) in src.loc)
-			adjust_health(-maxHealth*0.05)
+			adjust_health(-maxHealth*fungalheal_amt)
 
 /mob/living/basic/halflife/zombie/death(gibbed)
 	if(prob(headcrabspawn_chance) && crabless_possible) //25% chance to spawn a headcrab on death by default
@@ -93,9 +95,6 @@
 	crabless_possible = FALSE
 	idle_sounds = list('hl13/sound/creatures/zombinesound1.ogg', 'hl13/sound/creatures/zombinesound2.ogg', 'hl13/sound/creatures/zombinesound3.ogg', 'hl13/sound/creatures/zombinesound4.ogg')
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombine
-
-/mob/living/basic/halflife/zombie/zombine/slow
-	speed = 2
 
 /mob/living/basic/halflife/zombie/zombine/elite
 	name = "Elite Zombine"
@@ -168,12 +167,17 @@
 	icon_living = "grunt"
 	icon_dead = "grunt_dead"
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 1)
-	speed = 1
+	speed = 0.8
 	attack_sound = 'hl13/sound/creatures/zombineattack.ogg'
 	death_sound = 'hl13/sound/creatures/zombinedeath.ogg'
 	crabless_possible = FALSE
 	idle_sounds = list('hl13/sound/creatures/zombinesound1.ogg', 'hl13/sound/creatures/zombinesound2.ogg', 'hl13/sound/creatures/zombinesound3.ogg', 'hl13/sound/creatures/zombinesound4.ogg')
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie_grunt
+
+/mob/living/basic/halflife/zombie/zombie_grunt/deployment
+	speed = 0.5
+	maxHealth = 120
+	health = 120
 
 /mob/living/basic/halflife/zombie/fungal
 	name = "Fungal Zombie"
@@ -188,6 +192,7 @@
 	speed = 1.85
 	headcrabspawn = /mob/living/basic/halflife/headcrab/armored
 	fungalheal = TRUE
+	fungalheal_amt = 0.1
 	var/datum/action/cooldown/spell/conjure/xenfloor/infest
 
 /mob/living/basic/halflife/zombie/fungal/Initialize(mapload)
@@ -202,9 +207,9 @@
 	icon_living = "fastzombie"
 	icon_dead = "fastzombie_dead"
 	no_crab_state = "fastzombie_nocrab"
-	maxHealth = 75
-	health = 75
-	speed = 0
+	maxHealth = 64 //just low enough that its possible to one shot with a point blank shotgun
+	health = 64
+	speed = -0.2
 	melee_attack_cooldown = 0.7 SECONDS
 	melee_damage_lower = 7
 	melee_damage_upper = 9
@@ -216,6 +221,10 @@
 	idle_sounds = list('hl13/sound/creatures/fastzombie/fastzombie_breath.ogg', 'hl13/sound/creatures/fastzombie/fastzombiesound1.ogg', 'hl13/sound/creatures/fastzombie/fastzombiesound2.ogg', 'hl13/sound/creatures/fastzombie/fastzombiesound3.ogg')
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/fastzombie
 	headcrabspawn = /mob/living/basic/halflife/headcrab/fast
+
+/mob/living/basic/halflife/zombie/fast/deployment
+	melee_damage_lower = 9
+	melee_damage_upper = 12
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/fast/proc/get_innate_abilities()
@@ -234,7 +243,7 @@
 	cooldown_time = 7 SECONDS
 	shared_cooldown = NONE
 	///telegraph time before jumping
-	var/wind_up_time = 0.5 SECONDS
+	var/wind_up_time = 0.4 SECONDS
 	///intervals between each of our attacks
 	var/attack_interval = 0.4 SECONDS
 	///how many times do we attack if we reach the target?
@@ -243,7 +252,7 @@
 	var/sound_cue = 'sound/items/weapons/thudswoosh.ogg'
 	///what sound to play on a succesful attack?
 	var/attack_sound = null
-	var/jump_speed = 1
+	var/jump_speed = 1.2
 	var/jump_range = 7
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/fast_zombie
@@ -373,8 +382,10 @@
 	sound_vary = FALSE
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/poisonzombie
 
-/mob/living/basic/halflife/zombie/poison/slow
+/mob/living/basic/halflife/zombie/poison/deployment
 	speed = 2
+	maxHealth = 175
+	health = 175
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/poison/proc/get_innate_abilities()
@@ -437,7 +448,35 @@
 	var/turf/final_turf = get_closest_atom(/turf, open_turfs, owner)
 	P.throw_at(target = final_turf, range = 7, speed = 1, spin = FALSE)
 
+/mob/living/basic/halflife/zombie/cremator
+	name = "Cremator Zombie"
+	desc = "A shambling cremator that has been overtaken by a poison headcrab. The fuel canister it is carrying on its back looks highly volatile, be careful where and how you kill this beast..."
+	icon_state = "crematorzombie"
+	icon_living = "crematorzombie"
+	icon_dead = "crematorzombie_dead"
+	icon = 'hl13/icons/mob/halflife_tall.dmi'
+	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 1)
+	maxHealth = 100
+	health = 100
+	melee_attack_cooldown = 2.5 SECONDS //slower attack
+	speed = 2.25
+	basic_mob_flags = NONE
+	attack_sound = 'hl13/sound/creatures/zombineattack.ogg'
+	death_sound = 'hl13/sound/creatures/zombinedeath.ogg'
+	crabless_possible = FALSE
+	idle_sounds = list('hl13/sound/creatures/zombinesound1.ogg', 'hl13/sound/creatures/zombinesound2.ogg', 'hl13/sound/creatures/zombinesound3.ogg', 'hl13/sound/creatures/zombinesound4.ogg')
+	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie_grunt
 
+/mob/living/basic/halflife/zombie/cremator/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/footstep, FOOTSTEP_MOB_CREMATOR)
+
+/mob/living/basic/halflife/zombie/cremator/death(gibbed)
+	..()
+	explosion(src, heavy_impact_range = 3, light_impact_range = 5, adminlog = FALSE)
+	flame_radius(3, get_turf(src))
+	playsound(loc, 'hl13/sound/halflifeeffects/explosion_fire_grenade.ogg', 30, TRUE, 4)
+	gib()
 
 
 

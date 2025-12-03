@@ -365,6 +365,14 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	GLOB.deployments_metrocop += loc
 	return INITIALIZE_HINT_QDEL
 
+/obj/effect/landmark/deployments_xen
+	name = "xen spawn point"
+
+/obj/effect/landmark/deployments_xen/Initialize(mapload)
+	..()
+	GLOB.deployments_xen += loc
+	return INITIALIZE_HINT_QDEL
+
 /obj/effect/landmark/hidden_spawnpoint
 	name = "the hidden spawn point"
 

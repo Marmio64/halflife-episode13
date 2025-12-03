@@ -35,6 +35,7 @@
 #define FOOTSTEP_MOB_ANTLION "footstep_antlion"
 #define FOOTSTEP_MOB_GONOME "footstep_gonome"
 #define FOOTSTEP_MOB_ZOMBINE "footstep_zombine"
+#define FOOTSTEP_MOB_CREMATOR "footstep_cremator"
 
 //priority defines for the footstep_override element
 #define STEP_SOUND_NO_PRIORITY 0

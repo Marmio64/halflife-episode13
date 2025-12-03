@@ -141,6 +141,32 @@ DEFINE_BITFIELD(turret_flags, list(
 	else
 		return 0
 
+/obj/machinery/porta_turret/antlion_worker
+	name = "stationary antlion worker"
+	desc = "A stoic and unmoving antlion worker, which defends its hive with ranged acid blasts."
+	icon_state = "worker_lethal"
+	base_icon_state = "worker"
+	installation = null
+	stun_projectile = /obj/projectile/acidspray
+	lethal_projectile = /obj/projectile/acidspray
+	lethal_projectile_sound = 'hl13/sound/creatures/antlion_worker/antlion_prefire.ogg'
+	stun_projectile_sound = 'hl13/sound/creatures/antlion_worker/antlion_prefire.ogg'
+	invisibility = 0
+	density = TRUE
+	req_access = list(ACCESS_SECURITY)
+	faction = list(FACTION_HEADCRAB)
+	has_cover = FALSE
+	always_up = TRUE
+	use_power = NO_POWER_USE
+	scan_range = 9
+	integrity_failure = 0
+	mode = TURRET_LETHAL
+	raised = 1
+	uses_stored = FALSE
+
+/obj/machinery/porta_turret/antlion_worker/assess_perp(mob/living/carbon/human/perp)
+	return 10 //shoot everything not in their faction
+
 #undef TURRET_STUN
 #undef TURRET_LETHAL
 #undef POPUP_ANIM_TIME

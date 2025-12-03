@@ -23,7 +23,7 @@
 	minbodytemp = 0
 	status_flags = CANPUSH
 	footstep_type = FOOTSTEP_MOB_HUNTER
-	speed = -1
+	speed = -0.75
 	death_sound = 'hl13/sound/creatures/hunter/hunter_die3.ogg'
 	var/aggro_sound = list('hl13/sound/creatures/hunter/hunter_foundenemy1.ogg', 'hl13/sound/creatures/hunter/hunter_foundenemy2.ogg', 'hl13/sound/creatures/hunter/hunter_foundenemy3.ogg', 'hl13/sound/creatures/hunter/hunter_pain.ogg')
 	var/idle_sounds = list('hl13/sound/creatures/hunter/hunter_idle1.ogg', 'hl13/sound/creatures/hunter/hunter_idle2.ogg', 'hl13/sound/creatures/hunter/hunter_idle3.ogg', 'hl13/sound/creatures/hunter/hunter_scan.ogg')
@@ -47,6 +47,9 @@
 	var/playstyle_string = span_danger("You are a Hunter, a large synth designed for protecting striders and hunting down malignants in a swift manner. You can fire bursts of flechettes by clicking, and can Alt-Click to charge at an enemy to send them flying.")
 
 	cmode_music = 'hl13/sound/music/combat/huntingparty.ogg' //practically a requirement
+
+/mob/living/simple_animal/hostile/halflife/hunter/deployment
+	speed = -0.5
 
 /mob/living/simple_animal/hostile/halflife/hunter/Aggro()
 	. = ..()

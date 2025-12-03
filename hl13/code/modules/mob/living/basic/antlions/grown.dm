@@ -81,7 +81,7 @@
 	maxHealth = 600
 	health = 600
 	speed = 0.8
-	obj_damage = 60
+	obj_damage = 75
 	pixel_x = -8
 	melee_damage_lower = 35
 	melee_damage_upper = 40

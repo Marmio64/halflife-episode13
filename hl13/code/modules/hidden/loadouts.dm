@@ -53,7 +53,7 @@
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 
 //The second defender, riot cop. They're pretty good at holding positions since they have a good chance to parry the Hidden
-//They can't aim for shit or run for very long though and if they do get hit they're still weak to damage.
+//They can't aim for shit though and if they do get hit they're still weak to damage.
 /datum/outfit/deployment_loadout/hidden/combine/riot_cop
 	name = "Hidden: Riot Cop"
 	display_name = "DEFENSE: Riot Cop"
@@ -79,7 +79,10 @@
 	back = /obj/item/melee/sledgehammer
 
 	extra_str = 8
-	extra_dex = -4
+
+/datum/outfit/deployment_loadout/hidden/combine/riot_cop/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	ADD_TRAIT(H, TRAIT_TERRIBLE_AIM, OUTFIT_TRAIT)
 
 //The third defender, cremator. They're very good at holding locations thanks to high damage output and the ability to lay down flame trails.
 //However, they're slow, their gun runs out of juice quick, and you need to be careful not to set team mates on fire either...
@@ -195,6 +198,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 3,
+		/obj/item/reagent_containers/hypospray/medipen/blood = 1,
 		/obj/item/stack/medical/gauze/quik_gauze = 1,
 		/obj/item/ammo_box/magazine/mp7 = 1,
 		/obj/item/flashlight/flare/the_hidden = 1,
@@ -243,7 +247,8 @@
 	ADD_TRAIT(H, TRAIT_TERRIBLE_AIM, OUTFIT_TRAIT)
 
 /obj/item/scalpel/hidden_doctor
-	force = 20
+	desc = "A particularly sharp scalpel. While useful for surgery, you have a feeling it'll be even better for stabbing people instead."
+	force = 22
 
 //The tracker, you specialize in setting up trip beams at room entrances in order to get a heads up on Hidden activity.
 //In addition, you get two more flares than everyone else, which is great for increasing the dismal visiblity your team tends to have!

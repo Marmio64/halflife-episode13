@@ -266,7 +266,7 @@
 			H.adjust_hygiene(-40) //Otherwise, fucking disgusting
 
 		if(toxic)
-			if(!SSradiation.wearing_rad_protected_clothing(H))
+			if(!SSradiation.wearing_rad_protected_clothing(H) && !HAS_TRAIT(H, TRAIT_SLUDGE_PROTECTION))
 				H.visible_message("<span class='danger'>[H] is burnt by the sludge!</span>",
 											"<span class='userdanger'>This water is hazardous, your flesh burns!</span>")
 				H.adjustFireLoss(40)
@@ -422,7 +422,7 @@
 	light_color = "#013b09"
 	sewer = TRUE
 	toxic = TRUE
-	slowdown = 2 //very thick, disgusting slop, slows you down more than water
+	slowdown = 1.25 //very thick, disgusting slop, slows you down more than water
 
 /turf/open/halflife/water/sludge/deep
 	name = "deep toxic sludge"
@@ -453,7 +453,7 @@
 	baseturfs = /turf/open/halflife/water/salt
 	saltwater = TRUE
 	dispensedreagent = /datum/reagent/water/dirty/salt
-	slowdown = 1.5 //Heavy, salt filled water?
+	slowdown = 1.25 //Heavy, salt filled water?
 
 /turf/open/halflife/water/salt/deep
 	name = "deep water"

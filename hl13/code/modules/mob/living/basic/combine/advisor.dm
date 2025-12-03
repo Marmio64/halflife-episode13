@@ -95,7 +95,7 @@
 	/// The amount of stamina loss to apply
 	var/stamina_damage = 40
 	/// How long the stun duration should be
-	var/stun_duration = 2 SECONDS
+	var/stun_duration = 1.5 SECONDS
 
 /datum/action/cooldown/spell/pointed/advisorial_punish/is_valid_target(atom/cast_on)
 	. = ..()
