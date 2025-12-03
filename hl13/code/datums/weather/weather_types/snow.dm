@@ -1,7 +1,7 @@
 /datum/weather/rain_snow
 	name = "snow"
 	desc = "There is a possibility of snow."
-	probability = 100
+	probability = 0
 
 	telegraph_message = span_warning("Drifting particles of snow begin to dust the surrounding area.")
 	telegraph_duration = 30 SECONDS
