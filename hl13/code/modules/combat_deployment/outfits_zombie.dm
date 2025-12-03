@@ -132,7 +132,7 @@
 /datum/outfit/deployment_loadout/xen/tier4/heavy_crab_walker
 	name = "Deployment: Heavy Crabwalker"
 	display_name = "Heavy Crabwalker (Defense)"
-	desc = "You are a human that has undergone severe transformations following years of living in toxic sludge, eating humans, and wearing rotting xenian flesh. Now feral, you fight on the side of Xen and are unique in being able to use your hands to heal yourself and set up traps."
+	desc = "You are a human that has undergone severe transformations following years of living in toxic sludge, eating humans, and wearing rotting xenian flesh. Now feral, you fight on the side of Xen and are unique in being able to use your hands to heal yourself, set up traps, and even use human firearms (though you aren't very good with them)."
 	id_name = "Crabwalker"
 
 	uniform = /obj/item/clothing/under/citizen/refugee
