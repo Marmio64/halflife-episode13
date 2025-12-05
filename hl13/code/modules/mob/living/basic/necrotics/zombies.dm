@@ -210,6 +210,7 @@
 	maxHealth = 64 //just low enough that its possible to one shot with a point blank shotgun
 	health = 64
 	speed = -0.2
+	obj_damage = 10 //too frail to be breaking shit
 	melee_attack_cooldown = 0.7 SECONDS
 	melee_damage_lower = 7
 	melee_damage_upper = 9
