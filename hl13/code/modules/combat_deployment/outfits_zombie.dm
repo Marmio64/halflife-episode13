@@ -155,6 +155,7 @@
 		/obj/item/spear/halflife/deathmatch/deployment = 1,
 		/obj/item/restraints/legcuffs/beartrap = 3,
 		/obj/item/stack/medical/bandage = 3,
+		/obj/item/reagent_containers/pill/patch/grubnugget = 2,
 	)
 
 	extra_str = 5
