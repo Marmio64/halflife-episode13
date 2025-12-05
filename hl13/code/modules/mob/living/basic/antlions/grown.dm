@@ -93,7 +93,7 @@
 	attack_verb_simple = "smash"
 	attack_sound = 'hl13/sound/creatures/antlion_guard/shove1.ogg'
 	combat_mode = TRUE
-	butcher_results = list(/obj/item/food/meat/slab/xen = 3)
+	butcher_results = list(/obj/item/food/meat/slab/xen = 3, /obj/item/bugbait = 1)
 	death_sound = 'hl13/sound/creatures/antlion_guard/antlion_guard_die1.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/antlion_guard
 
@@ -152,6 +152,35 @@
 	sound_cue = 'hl13/sound/creatures/antlion_guard/angry3.ogg'
 	times_to_attack = 1
 	jump_range = 9
+
+/obj/item/bugbait
+	name = "Antlion Pheropod"
+	desc = "A pheropod extracted from an antlion guard, more commonly known in resistance groups as \"bugbait\". When crushed, you'll be able to walk among and summon antlions."
+	icon = 'hl13/icons/mob/halflife.dmi'
+	icon_state = "bugbait"
+	var/datum/action/cooldown/spell/conjure/antlion/pheropod
+
+/obj/item/bugbait/attack_self(mob/user)
+	if(do_after(user, 1 SECONDS, src))
+		playsound(src, 'hl13/sound/items/bugbait_squeeze.ogg', 50, TRUE, extrarange = -3)
+		user.faction += list(FACTION_ANTLION)
+		pheropod = new(user)
+		pheropod.Grant(user)
+		qdel(src)
+
+/datum/action/cooldown/spell/conjure/antlion
+	name = "Summon Antlions"
+	desc = "Summons a few antlions to fight for you."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "antlion"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 90 SECONDS
+	summon_radius = 1
+	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound)
+	summon_amount = 3
 
 //---------------------- AI STUFF -------------------
 
