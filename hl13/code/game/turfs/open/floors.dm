@@ -417,6 +417,17 @@
 
 /turf/open/floor/plating/ground/grass/Initialize(mapload)
 	. = ..()
+	var/holiday_name = length(GLOB.holidays) && pick(GLOB.holidays)
+	if(holiday_name)
+		var/datum/holiday/holiday = GLOB.holidays[holiday_name]
+		if(istype(holiday, /datum/holiday/xmas) && prob(50))
+			name = "snowy grass"
+			desc = "A patch of grass, covered in snow."
+			icon_state = "hl_snow"
+			base_icon_state = "hl_snow"
+			smooth_icon = 'hl13/icons/turf/floor/cut/hl_snow.dmi'
+			update_appearance()
+
 	if(smoothing_flags)
 		var/matrix/translation = new
 		translation.Translate(LARGE_TURF_SMOOTHING_X_OFFSET, LARGE_TURF_SMOOTHING_Y_OFFSET)
@@ -425,7 +436,6 @@
 
 	if(is_station_level(z))
 		GLOB.station_turfs += src
-
 
 /turf/open/floor/plating/ground/grass/get_smooth_underlay_icon(mutable_appearance/underlay_appearance, turf/asking_turf, adjacency_dir)
 	. = ..()

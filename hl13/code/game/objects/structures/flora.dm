@@ -31,6 +31,17 @@
 	icon_state = "pine_[rand(1, 4)]"
 	update_appearance()
 
+	if(!length(GLOB.holidays))
+		return
+
+	var/holiday_name = length(GLOB.holidays) && pick(GLOB.holidays)
+	if(holiday_name)
+		var/datum/holiday/holiday = GLOB.holidays[holiday_name]
+		if(istype(holiday, /datum/holiday/xmas))
+			icon_state = "pine_[rand(1, 2)]_snow"
+
+		update_appearance()
+
 /obj/structure/flora/tree/halflife/pine/dead
 	desc = "Another casualty in the combine's war on Earth."
 	icon_state = "pine_5"

@@ -3,6 +3,15 @@
 /obj/structure/window/fulltile/halflife/nosmooth/generic,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/deployment_city/zombies)
+"am" = (
+/obj/effect/koth_grace_field,
+/obj/structure/flora/tree/halflife/pine/style_random,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city/zombies)
+"ar" = (
+/obj/machinery/cash_deposit/rebel,
+/turf/open/floor/plating/indoor/carpet,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "aI" = (
 /obj/structure/halflife/road_barrier,
 /turf/open/floor/plating/ground/brickroad,
@@ -40,13 +49,17 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/outdoors/deployment_city/zombies)
+"cv" = (
+/obj/machinery/porta_turret/antlion_worker,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/zombies)
 "cN" = (
 /obj/structure/window/fulltile/halflife/nosmooth/generic,
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/outdoors/deployment_city/zombies)
 "dh" = (
-/obj/machinery/porta_turret/antlion_worker,
-/turf/open/floor/plating/ground/brickroad,
+/obj/structure/flora/tree/halflife/pine/style_random,
+/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/zombies)
 "dD" = (
 /obj/effect/koth_grace_field,
@@ -80,8 +93,12 @@
 /obj/structure/chair/comfy/halflife/armchair,
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"eR" = (
+/obj/structure/chair/halflife/metal,
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/outdoors/deployment_city/zombies)
 "eT" = (
-/turf/open/floor/plating/indoor/woodc/fancy,
+/turf/open/floor/plating/indoor/tile/green,
 /area/halflife/outdoors/deployment_city/zombies)
 "eZ" = (
 /obj/structure/flora/tree/halflife/plain/concrete_thin,
@@ -177,18 +194,19 @@
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/deployment_city/zombies)
-"ja" = (
-/obj/structure/halflife/cone,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/deployment_city/zombies)
 "jr" = (
 /obj/structure/table/halflife/wood,
 /turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/outdoors/deployment_city/zombies)
 "jw" = (
-/obj/item/hl13_small_flag/poland,
-/turf/open/floor/plating/indoor/tiled10,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"jK" = (
+/obj/effect/spawner/random/halflife/plant_spawner,
+/obj/structure/halflife/leaves,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/deployment_city/zombies)
 "kd" = (
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/zombies)
@@ -224,10 +242,6 @@
 /obj/structure/flora/tree/halflife/plain/thin,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/zombies)
-"mO" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/plating/indoor/woodc/fancy,
-/area/halflife/indoors/combat_deployment/rebel_base)
 "nj" = (
 /obj/structure/halflife/headcrab_cannister,
 /turf/open/floor/plating/ground/sidewalk,
@@ -245,22 +259,16 @@
 /obj/effect/landmark/deployments_refugee,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"oD" = (
-/obj/structure/halflife/storage/shelf,
-/turf/open/floor/plating/indoor/metal/plate,
-/area/halflife/outdoors/deployment_city/zombies)
 "oF" = (
 /turf/open/floor/plating/indoor/tiled10,
-/area/halflife/indoors/combat_deployment/rebel_base)
-"oH" = (
-/obj/structure/chair/office/halflife/blue{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "pb" = (
 /obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city/zombies)
+"pe" = (
+/obj/structure/halflife/road_barrier/concrete,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/zombies)
 "pu" = (
 /obj/structure/halflife/leaves,
@@ -279,6 +287,12 @@
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/zombies)
+"pR" = (
+/obj/structure/chair/office/halflife/blue{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "pW" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
@@ -288,6 +302,12 @@
 /area/halflife/indoors/combat_deployment/rebel_base)
 "qx" = (
 /obj/structure/railing/halflife/solo,
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/outdoors/deployment_city/zombies)
+"qZ" = (
+/obj/structure/chair/halflife/metal{
+	dir = 1
+	},
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/outdoors/deployment_city/zombies)
 "rj" = (
@@ -328,15 +348,21 @@
 	},
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/zombies)
+"sA" = (
+/obj/structure/table/halflife/no_smooth/large/wood/desk{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "sH" = (
 /obj/structure/chair/sofa/hl13bench{
 	dir = 8
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/zombies)
-"sR" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/plating/indoor/woodc/mosaic,
+"tj" = (
+/obj/structure/chair/office/halflife/blue,
+/turf/open/floor/plating/indoor/carpet/violet,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "tk" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
@@ -374,45 +400,17 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
-"ve" = (
-/obj/machinery/door/unpowered/halflife/seethrough/metal{
-	keylock = 1;
-	lockid = "townhall";
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/woodc/fancy,
-/area/halflife/indoors/combat_deployment/rebel_base)
 "vj" = (
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
+"vk" = (
+/obj/structure/table/halflife/wood,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "vJ" = (
 /turf/open/floor/plating/indoor/lino,
-/area/halflife/indoors/combat_deployment/rebel_base)
-"vU" = (
-/obj/machinery/light/small/directional/east,
-/obj/structure/table/halflife/wood/constructed/cobbled,
-/obj/item/weaponcrafting/receiver{
-	pixel_x = -7;
-	pixel_y = 0
-	},
-/obj/item/weaponcrafting/receiver{
-	pixel_x = -7;
-	pixel_y = 5
-	},
-/obj/item/weaponcrafting/receiver{
-	pixel_x = -7;
-	pixel_y = 10
-	},
-/obj/item/stack/sheet/iron/five{
-	pixel_x = 8;
-	pixel_y = 10
-	},
-/obj/item/stack/sticky_tape{
-	pixel_x = 7;
-	pixel_y = -1
-	},
-/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "wc" = (
 /obj/structure/halflife/road_barrier{
@@ -453,6 +451,17 @@
 /obj/structure/halflife/rug/red,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"xV" = (
+/obj/structure/table/halflife/no_smooth/large/crafting/ammobench{
+	pixel_x = 0;
+	pixel_y = -5
+	},
+/turf/open/floor/plating/indoor/carpet/violet,
+/area/halflife/indoors/combat_deployment/rebel_base)
+"yj" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "ym" = (
 /obj/item/stack/sheet/scrap_metal,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -468,24 +477,12 @@
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"yY" = (
-/obj/structure/table/halflife/wood/constructed/cobbled,
-/obj/item/stack/sheet/halflife/bullets/three{
-	pixel_x = -6;
-	pixel_y = 6
-	},
-/obj/item/stack/bulletcasings/three{
-	pixel_x = 5;
-	pixel_y = 4
-	},
-/turf/open/floor/plating/indoor/woodc/fancy,
-/area/halflife/indoors/combat_deployment/rebel_base)
-"zl" = (
-/obj/structure/chair/halflife/metal,
-/turf/open/floor/plating/indoor/tiled10,
-/area/halflife/outdoors/deployment_city/zombies)
 "zA" = (
 /turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/deployment_city/zombies)
+"Ab" = (
+/obj/structure/halflife/rug/red,
+/turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/deployment_city/zombies)
 "Ak" = (
 /obj/machinery/light/small/directional/south,
@@ -501,6 +498,36 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/zombies)
+"Aw" = (
+/obj/machinery/light/small/directional/east,
+/obj/structure/table/halflife/wood/constructed/cobbled,
+/obj/item/weaponcrafting/receiver{
+	pixel_x = -7;
+	pixel_y = 0
+	},
+/obj/item/weaponcrafting/receiver{
+	pixel_x = -7;
+	pixel_y = 5
+	},
+/obj/item/weaponcrafting/receiver{
+	pixel_x = -7;
+	pixel_y = 10
+	},
+/obj/item/stack/sheet/iron/five{
+	pixel_x = 8;
+	pixel_y = 10
+	},
+/obj/item/stack/sticky_tape{
+	pixel_x = 7;
+	pixel_y = -1
+	},
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/combat_deployment/rebel_base)
+"AG" = (
+/obj/machinery/light/small/directional/west,
+/obj/structure/table/halflife/no_smooth/metal,
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/outdoors/deployment_city/zombies)
 "AN" = (
 /obj/structure/sink/halflife,
 /obj/structure/mirror/halflife{
@@ -512,6 +539,10 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"Bi" = (
+/obj/structure/halflife/cone,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/zombies)
 "Br" = (
 /turf/open/floor/plating/indoor/concrete/stairs{
 	dir = 6
@@ -541,6 +572,18 @@
 "Cw" = (
 /turf/open/floor/plating/indoor/concrete/stairs,
 /area/halflife/outdoors/deployment_city/zombies)
+"CJ" = (
+/obj/structure/halflife/storage/shelf,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/outdoors/deployment_city/zombies)
+"CP" = (
+/obj/machinery/door/unpowered/halflife/seethrough/metal{
+	keylock = 1;
+	lockid = "townhall";
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "CV" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -639,10 +682,6 @@
 "HV" = (
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"HW" = (
-/obj/structure/halflife/rug/red,
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/outdoors/deployment_city/zombies)
 "IG" = (
 /obj/structure/halflife/headcrab_cannister,
 /turf/open/floor/plating/ground/brickroad,
@@ -673,10 +712,6 @@
 /obj/machinery/ammo_crate,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"JR" = (
-/obj/machinery/cash_deposit/rebel,
-/turf/open/floor/plating/indoor/carpet,
-/area/halflife/indoors/combat_deployment/rebel_base)
 "JT" = (
 /obj/structure/chair/halflife/wood{
 	dir = 8
@@ -687,14 +722,12 @@
 "JX" = (
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/zombies)
-"Kn" = (
-/obj/machinery/light/small/directional/east,
-/obj/structure/table/halflife/no_smooth/metal,
-/turf/open/floor/plating/indoor/tiled10,
-/area/halflife/outdoors/deployment_city/zombies)
 "Me" = (
 /obj/structure/flora/tree/halflife/plain,
 /turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/deployment_city/zombies)
+"Mr" = (
+/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/outdoors/deployment_city/zombies)
 "MA" = (
 /obj/machinery/porta_turret/combine/rebel/fast{
@@ -719,16 +752,6 @@
 /area/halflife/indoors/combat_deployment/rebel_base)
 "NP" = (
 /turf/open/floor/plating/indoor/tiled10,
-/area/halflife/outdoors/deployment_city/zombies)
-"Or" = (
-/obj/structure/table/halflife/wood,
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/plating/indoor/tiled10,
-/area/halflife/indoors/combat_deployment/rebel_base)
-"Pc" = (
-/obj/effect/spawner/random/halflife/plant_spawner,
-/obj/structure/halflife/leaves,
-/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/zombies)
 "Pq" = (
 /turf/open/floor/plating/indoor/concrete/stairs{
@@ -763,7 +786,8 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/deployment_city/zombies)
 "Qo" = (
-/turf/open/floor/plating/indoor/tile/green,
+/obj/structure/halflife/cone,
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/zombies)
 "QG" = (
 /obj/effect/spawner/random/halflife/plant_spawner,
@@ -777,9 +801,6 @@
 /obj/structure/halflife/road_barrier/concrete/alt,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/zombies)
-"Rc" = (
-/turf/open/floor/plating/indoor/carpet/violet,
-/area/halflife/indoors/combat_deployment/rebel_base)
 "Re" = (
 /turf/open/floor/plating/indoor/concrete/stairs{
 	dir = 1
@@ -811,23 +832,15 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"SF" = (
-/obj/structure/table/halflife/no_smooth/large/wood/desk{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/woodc/mosaic,
-/area/halflife/indoors/combat_deployment/rebel_base)
-"SG" = (
-/obj/machinery/light/small/directional/west,
-/obj/structure/table/halflife/no_smooth/metal,
-/turf/open/floor/plating/indoor/tiled10,
-/area/halflife/outdoors/deployment_city/zombies)
 "SJ" = (
 /obj/structure/halflife/road_barrier/concrete/alt,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
 "SR" = (
-/obj/structure/chair/office/halflife/blue,
+/obj/structure/table/halflife/no_smooth/large/crafting/weaponbench{
+	pixel_x = 0;
+	pixel_y = -8
+	},
 /turf/open/floor/plating/indoor/carpet/violet,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "SW" = (
@@ -845,13 +858,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"TB" = (
-/obj/structure/table/halflife/no_smooth/large/crafting/ammobench{
-	pixel_x = 0;
-	pixel_y = -5
-	},
-/turf/open/floor/plating/indoor/carpet/violet,
-/area/halflife/indoors/combat_deployment/rebel_base)
 "TE" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/outdoors/deployment_city/zombies)
@@ -859,10 +865,19 @@
 /obj/machinery/vending/breenwater,
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"TU" = (
+/obj/machinery/light/small/directional/east,
+/obj/structure/table/halflife/no_smooth/metal,
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/outdoors/deployment_city/zombies)
 "Uo" = (
 /obj/structure/table/halflife/wood,
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"Uq" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/zombies)
 "Uy" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -877,14 +892,8 @@
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/zombies)
 "UC" = (
-/obj/structure/halflife/publicphone,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city/zombies)
-"UF" = (
-/obj/structure/chair/halflife/metal{
-	dir = 1
-	},
-/turf/open/floor/plating/indoor/tiled10,
+/obj/structure/flora/tree/halflife/pine/style_random,
+/turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/zombies)
 "UK" = (
 /obj/structure/chair/halflife/wood{
@@ -897,6 +906,10 @@
 /obj/structure/halflife/trash_decal,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
+"Vf" = (
+/obj/structure/halflife/publicphone,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city/zombies)
 "Vh" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
 	keylock = 1;
@@ -906,9 +919,8 @@
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/outdoors/deployment_city/zombies)
 "Vi" = (
-/obj/structure/barricade/sandbags,
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/deployment_city/zombies)
+/turf/open/floor/plating/indoor/carpet/violet,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "VC" = (
 /obj/structure/barricade/wooden/solid,
 /turf/open/floor/plating/ground/sidewalk/cobblestone,
@@ -949,17 +961,6 @@
 "WG" = (
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/zombies)
-"XB" = (
-/obj/structure/table/halflife/no_smooth/large/crafting/weaponbench{
-	pixel_x = 0;
-	pixel_y = -8
-	},
-/turf/open/floor/plating/indoor/carpet/violet,
-/area/halflife/indoors/combat_deployment/rebel_base)
-"XD" = (
-/obj/structure/halflife/cone,
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/deployment_city/zombies)
 "XJ" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/zombies)
@@ -986,6 +987,18 @@
 /obj/structure/halflife/rug/red,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/deployment_city/zombies)
+"YY" = (
+/obj/structure/table/halflife/wood/constructed/cobbled,
+/obj/item/stack/sheet/halflife/bullets/three{
+	pixel_x = -6;
+	pixel_y = 6
+	},
+/obj/item/stack/bulletcasings/three{
+	pixel_x = 5;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "Zj" = (
 /obj/structure/chair/sofa/hl13bench,
 /turf/open/floor/plating/ground/grass,
@@ -5612,8 +5625,8 @@ hS
 HG
 XJ
 kd
-Vi
-Vi
+Uq
+Uq
 XJ
 HG
 WB
@@ -5761,8 +5774,8 @@ HG
 ym
 XJ
 kd
-Vi
-dh
+Uq
+cv
 XJ
 HG
 WB
@@ -5910,8 +5923,8 @@ HG
 HG
 XJ
 kd
-Vi
-Vi
+Uq
+Uq
 XJ
 HG
 WB
@@ -7817,7 +7830,7 @@ WG
 WB
 WB
 WB
-UC
+Vf
 WG
 WG
 WG
@@ -7943,6 +7956,7 @@ WG
 WG
 WG
 WG
+pe
 WG
 WG
 WG
@@ -7953,8 +7967,7 @@ WG
 WG
 WG
 WG
-WG
-WG
+pe
 WG
 WG
 WG
@@ -7966,7 +7979,7 @@ WG
 WG
 bc
 WB
-UC
+Vf
 WG
 WG
 WG
@@ -8094,6 +8107,7 @@ HG
 HG
 HG
 HG
+sh
 HG
 HG
 HG
@@ -8104,8 +8118,7 @@ HG
 HG
 HG
 HG
-HG
-HG
+sh
 HG
 HG
 HG
@@ -8478,10 +8491,10 @@ WB
 WB
 WB
 VJ
+tj
 SR
-XB
-TB
-mO
+xV
+jw
 pY
 VJ
 WB
@@ -8627,9 +8640,9 @@ WB
 WB
 WB
 VJ
-Rc
-Rc
-Rc
+Vi
+Vi
+Vi
 pY
 pY
 VJ
@@ -8925,11 +8938,11 @@ VJ
 VJ
 VJ
 VJ
-yY
-vU
+YY
+Aw
 pY
 pY
-oH
+pR
 VJ
 fM
 pY
@@ -8963,7 +8976,7 @@ zA
 HG
 HG
 HG
-HG
+WB
 WB
 WB
 XJ
@@ -8975,7 +8988,7 @@ sh
 HG
 HG
 HG
-HG
+ZB
 HG
 HG
 HG
@@ -9010,7 +9023,7 @@ HG
 SX
 HG
 HG
-HG
+sh
 HG
 HG
 HG
@@ -9077,7 +9090,7 @@ VJ
 VJ
 VJ
 VJ
-ve
+CP
 VJ
 VJ
 pY
@@ -9122,10 +9135,10 @@ kd
 XJ
 HG
 HG
+HG
 ZB
-HG
-HG
-HG
+SW
+ZB
 HG
 WG
 WG
@@ -9162,7 +9175,7 @@ HG
 HG
 HG
 HG
-HG
+ZB
 HG
 HG
 XJ
@@ -9263,7 +9276,7 @@ HG
 HG
 HG
 HG
-HG
+WB
 XJ
 kd
 kd
@@ -9271,9 +9284,9 @@ kd
 XJ
 HG
 ZB
-SW
-ZB
 HG
+HG
+ZB
 HG
 WG
 WG
@@ -9310,9 +9323,9 @@ WG
 WG
 HG
 HG
-HG
-HG
-HG
+ZB
+SW
+ZB
 HG
 XJ
 kd
@@ -9412,14 +9425,14 @@ HG
 HG
 HG
 HG
-HG
+WB
 XJ
 kd
 kd
 kd
 XJ
-HG
-HG
+ZB
+SW
 ZB
 HG
 HG
@@ -9452,15 +9465,15 @@ NP
 WB
 WG
 zA
-Pc
+jK
 JX
-ZD
+am
 WB
 WG
 WG
 HG
 HG
-HG
+ZB
 HG
 VT
 XJ
@@ -9568,7 +9581,7 @@ kd
 kd
 XJ
 HG
-HG
+ZB
 HG
 HG
 WG
@@ -9893,9 +9906,9 @@ Ch
 NP
 NP
 NP
-zl
-Kn
-UF
+eR
+TU
+qZ
 WB
 Ry
 tM
@@ -10014,7 +10027,7 @@ kd
 kd
 kd
 XJ
-HG
+sh
 WG
 WG
 JX
@@ -10022,7 +10035,7 @@ pb
 zA
 pu
 JX
-zA
+dh
 JX
 ZT
 zA
@@ -10054,7 +10067,7 @@ dU
 pu
 Jm
 pb
-JX
+UC
 JX
 WG
 WG
@@ -10062,7 +10075,7 @@ HG
 XJ
 kd
 kd
-XD
+Qo
 XJ
 HG
 HG
@@ -10192,13 +10205,13 @@ NP
 NP
 NP
 WB
-oD
+CJ
 bR
 WB
 WG
 JX
 zA
-zA
+dh
 ZD
 zA
 pu
@@ -10231,7 +10244,7 @@ mi
 mi
 XJ
 QT
-dh
+cv
 kd
 XJ
 HG
@@ -10421,7 +10434,7 @@ XX
 XX
 XX
 VJ
-sR
+yj
 ev
 aZ
 pA
@@ -10465,7 +10478,7 @@ UW
 WG
 JX
 pu
-zA
+dh
 zA
 pb
 JX
@@ -10484,8 +10497,8 @@ bM
 NP
 NP
 NP
-Qo
-Qo
+eT
+eT
 NP
 NP
 NP
@@ -10575,7 +10588,7 @@ xJ
 HV
 pA
 gW
-JR
+ar
 gW
 gW
 gW
@@ -10620,7 +10633,7 @@ zA
 zA
 pu
 zA
-zA
+dh
 ZT
 WG
 WB
@@ -10634,7 +10647,7 @@ RN
 NP
 NP
 wS
-Qo
+eT
 NP
 NP
 NP
@@ -10657,7 +10670,7 @@ Hv
 Eq
 si
 kd
-XD
+Qo
 kd
 iw
 iw
@@ -10720,9 +10733,9 @@ XX
 XX
 VJ
 HV
-SF
+sA
 aZ
-Or
+vk
 gW
 gW
 oF
@@ -10782,8 +10795,8 @@ Pr
 NP
 NP
 NP
-Qo
-Qo
+eT
+eT
 NP
 NP
 rj
@@ -10794,10 +10807,10 @@ WB
 WG
 JX
 JX
-zA
+dh
 dU
 pu
-JX
+UC
 zA
 pu
 zA
@@ -11064,7 +11077,7 @@ zA
 pu
 JX
 pb
-zA
+dh
 JX
 pb
 tM
@@ -11072,7 +11085,7 @@ pu
 WG
 WB
 DJ
-HW
+Ab
 VD
 WB
 qx
@@ -11086,7 +11099,7 @@ NP
 NP
 NP
 WB
-oD
+CJ
 bR
 WB
 WG
@@ -11103,7 +11116,7 @@ pb
 WG
 HG
 XJ
-XD
+Qo
 kd
 kd
 XJ
@@ -11125,7 +11138,7 @@ mi
 HG
 XJ
 QT
-dh
+cv
 kd
 XJ
 HG
@@ -11171,7 +11184,7 @@ XX
 XX
 xr
 oF
-jw
+oF
 JT
 Jt
 TI
@@ -11206,7 +11219,7 @@ kd
 kd
 kd
 XJ
-HG
+sh
 WG
 WG
 JX
@@ -11220,7 +11233,7 @@ pu
 pu
 WG
 WB
-eT
+Mr
 Js
 Js
 iM
@@ -11255,7 +11268,7 @@ XJ
 kd
 kd
 kd
-ja
+Bi
 HG
 WB
 WB
@@ -11383,9 +11396,9 @@ nQ
 NP
 NP
 NP
-zl
-SG
-UF
+eR
+AG
+qZ
 WB
 WG
 pu
@@ -11654,7 +11667,7 @@ kd
 kd
 XJ
 HG
-HG
+ZB
 HG
 HG
 WG
@@ -11688,7 +11701,7 @@ cN
 WG
 zA
 ZT
-JX
+UC
 dU
 WB
 WB
@@ -11802,8 +11815,8 @@ kd
 kd
 kd
 XJ
-HG
-HG
+ZB
+SW
 ZB
 HG
 HG
@@ -11844,7 +11857,7 @@ WG
 WG
 HG
 HG
-HG
+ZB
 HG
 HG
 XJ
@@ -11945,7 +11958,7 @@ HG
 HG
 HG
 HG
-HG
+WB
 XJ
 kd
 kd
@@ -11953,9 +11966,9 @@ kd
 XJ
 HG
 ZB
-SW
-ZB
 HG
+HG
+ZB
 HG
 WG
 WG
@@ -11992,9 +12005,9 @@ WG
 WG
 HG
 HG
-HG
-HG
-HG
+ZB
+SW
+ZB
 HG
 XJ
 kd
@@ -12102,10 +12115,10 @@ kd
 XJ
 HG
 HG
+HG
 ZB
-HG
-HG
-HG
+SW
+ZB
 HG
 WG
 WG
@@ -12142,7 +12155,7 @@ HG
 HG
 HG
 HG
-HG
+ZB
 HG
 HG
 XJ
@@ -12241,7 +12254,7 @@ JX
 HG
 HG
 HG
-HG
+WB
 WB
 WB
 XJ
@@ -12253,7 +12266,7 @@ sh
 HG
 HG
 HG
-HG
+ZB
 HG
 HG
 HG
@@ -12288,7 +12301,7 @@ HG
 SX
 HG
 HG
-HG
+sh
 HG
 HG
 HG
@@ -13160,7 +13173,7 @@ HG
 HG
 HG
 HG
-HG
+sh
 HG
 HG
 HG
@@ -13171,7 +13184,7 @@ HG
 HG
 HG
 HG
-HG
+sh
 HG
 HG
 HG
@@ -13307,6 +13320,7 @@ WG
 be
 WG
 WG
+pe
 WG
 WG
 WG
@@ -13317,8 +13331,7 @@ WG
 WG
 WG
 WG
-WG
-WG
+pe
 WG
 WG
 WG
@@ -13330,7 +13343,7 @@ WG
 WG
 bc
 WB
-UC
+Vf
 WG
 WG
 WG
@@ -13479,7 +13492,7 @@ WG
 WB
 WB
 WB
-UC
+Vf
 WG
 WG
 WG
@@ -15446,8 +15459,8 @@ HG
 HG
 XJ
 kd
-Vi
-Vi
+Uq
+Uq
 XJ
 HG
 WB
@@ -15595,8 +15608,8 @@ HG
 ym
 XJ
 kd
-Vi
-dh
+Uq
+cv
 XJ
 HG
 WB
@@ -15744,8 +15757,8 @@ hS
 HG
 XJ
 kd
-Vi
-Vi
+Uq
+Uq
 XJ
 HG
 WB
