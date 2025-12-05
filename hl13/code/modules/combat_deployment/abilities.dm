@@ -142,3 +142,46 @@
 /datum/action/cooldown/spell/aoe/rally/rebel
 	button_icon_state = "rally_rebel"
 	faction_buff = REBEL_DEPLOYMENT_FACTION
+
+/datum/action/cooldown/mob_cooldown/talk_xen
+	name = "Xen Communication"
+	desc = "Speak with all fellow xenian creatures remotely."
+	button_icon = 'icons/mob/actions/actions_revenant.dmi'
+	button_icon_state = "discordant_whisper"
+	background_icon_state = "bg_alien"
+	overlay_icon_state = "bg_alien_border"
+	check_flags = AB_CHECK_CONSCIOUS
+	cooldown_time = 0
+	melee_cooldown_time = 0
+	shared_cooldown = NONE
+	click_to_activate = FALSE
+
+/datum/action/cooldown/mob_cooldown/talk_xen/Activate(trigger_flags)
+	var/input = tgui_input_text(owner, "Input a message to send to fellow Xenians.", "Command", max_length = MAX_MESSAGE_LEN)
+	if(!input || QDELETED(src) || QDELETED(owner) || !IsAvailable(feedback = TRUE))
+		return
+	xen_communication(owner, input)
+	StartCooldown()
+
+/**
+ * Sends a big message to all spiders from the target.
+ *
+ * Allows the user to send a message to all spiders that exist.  Ghosts will also see the message.
+ * Arguments:
+ * * user - The spider sending the message
+ * * message - The message to be sent
+ */
+/datum/action/cooldown/mob_cooldown/talk_xen/proc/xen_communication(mob/living/user, message)
+	var/my_message = format_message(user,message)
+	for(var/X as anything in GLOB.deployment_xen_players)
+		to_chat(X, my_message)
+	for(var/ghost in GLOB.dead_mob_list)
+		var/link = FOLLOW_LINK(ghost, user)
+		to_chat(ghost, "[link] [my_message]")
+	user.log_talk(message, LOG_SAY, tag = "xen communication")
+
+/**
+ * Formats the string to have an appropiate size and text color
+ */
+/datum/action/cooldown/mob_cooldown/talk_xen/proc/format_message(mob/living/user, message)
+	return span_changeling("<b>Communication from [user]:</b> [message]")

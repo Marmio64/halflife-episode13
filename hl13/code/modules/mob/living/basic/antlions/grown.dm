@@ -11,8 +11,8 @@
 	maxHealth = 50
 	health = 50
 	obj_damage = 10
-	melee_damage_lower = 13
-	melee_damage_upper = 18
+	melee_damage_lower = 11
+	melee_damage_upper = 14
 	wound_bonus = -20
 	sharpness = SHARP_EDGED
 	attack_vis_effect = ATTACK_EFFECT_SLASH
@@ -87,7 +87,7 @@
 	melee_damage_upper = 40
 	melee_attack_cooldown = 3 SECONDS
 	wound_bonus = -20
-	armour_penetration = 25
+	armour_penetration = 40
 	attack_vis_effect = ATTACK_EFFECT_SMASH
 	attack_verb_continuous = "smashes"
 	attack_verb_simple = "smash"

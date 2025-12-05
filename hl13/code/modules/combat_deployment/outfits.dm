@@ -77,3 +77,6 @@
 		else if(faction == COMBINE_DEPLOYMENT_FACTION)
 			W.assignment = id_name
 			W.registered_name = "[id_name]-[rand(111,999)]"
+		else if(faction == XEN_DEPLOYMENT_FACTION)
+			W.assignment = id_name
+			W.registered_name = "[id_name]-[rand(111,999)]"

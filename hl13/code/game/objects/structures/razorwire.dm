@@ -52,9 +52,12 @@
 		return
 	if(M.throwing) // throw someone or jump to bypass safely
 		return
+	var/razor_damage = 15
+	if(isanimal_or_basicmob(M)) //these guys dont get tangled up, so instead they just take bonus damage from razor wire
+		razor_damage = 25
 	playsound(src, 'hl13/sound/effects/barbed_wire_movement.ogg', 25, 1)
 	var/def_zone = ran_zone()
-	M.apply_damage(15, BRUTE, def_zone, sharpness = SHARP_EDGED)
+	M.apply_damage(razor_damage, BRUTE, def_zone, sharpness = SHARP_EDGED)
 	razorwire_tangle(M)
 
 /obj/structure/razorwire/proc/razorwire_tangle(mob/living/entangled)

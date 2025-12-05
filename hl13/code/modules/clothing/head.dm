@@ -172,7 +172,7 @@
 	bomb = 35
 	fire = 50
 	acid = 50
-	wound = 10
+	wound = 15
 
 /obj/item/clothing/head/helmet/halflife/headcrab/deathmatch
 	armor_type = /datum/armor/headcrab/deathmatch

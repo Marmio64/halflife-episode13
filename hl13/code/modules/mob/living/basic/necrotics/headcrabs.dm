@@ -79,7 +79,7 @@
 	ai_controller.set_blackboard_key(BB_BASIC_FOODS, typecacheof(edibles))
 
 /mob/living/basic/halflife/headcrab/deployment
-	melee_damage_lower = 8
+	melee_damage_lower = 9
 	melee_damage_upper = 13
 
 /mob/living/basic/halflife/headcrab/armored
@@ -93,7 +93,7 @@
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1, /obj/item/stack/sheet/sinew = 1, /obj/item/stack/sheet/bone = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1)
 
 /mob/living/basic/halflife/headcrab/armored/deployment
-	speed = 2
+	speed = 1.85
 
 /mob/living/basic/halflife/headcrab/armored/ghost_controlled/Initialize(mapload)
 	. = ..()

@@ -8,8 +8,12 @@
 		var/datum/mind/player_mind = H.mind
 		var/mob/living/basic/halflife/S = new mob_to_be(H.loc)
 		player_mind.transfer_to(S)
+		var/datum/action/new_action = new /datum/action/cooldown/mob_cooldown/talk_xen(S.mind || S)
+		new_action.Grant(S)
 		S.deployment_faction = XEN_DEPLOYMENT_FACTION
 		qdel(H)
+	else
+		. = ..()
 
 /datum/outfit/deployment_loadout/xen/tier1/headcrab
 	name = "Deployment: Headcrab"
@@ -158,3 +162,5 @@
 
 /datum/outfit/deployment_loadout/xen/tier4/heavy_crab_walker/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/human/crabwalker)
+	var/datum/action/new_action = new /datum/action/cooldown/mob_cooldown/talk_xen(H.mind || H)
+	new_action.Grant(H)

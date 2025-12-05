@@ -6,7 +6,8 @@
 	icon_living = "weakgonome"
 	icon_dead = "gonome_dead"
 	melee_damage_lower = 25
-	melee_damage_upper = 40
+	melee_damage_upper = 35
+	armour_penetration = 20
 	maxHealth = 350
 	health = 350
 	obj_damage = 25
@@ -99,7 +100,7 @@
 	icon_living = "gonome"
 	melee_damage_lower = 30
 	melee_damage_upper = 35
-	speed = 1.65
+	speed = 1.6
 	maxHealth = 425
 	health = 425
 	fully_grown = TRUE
@@ -165,7 +166,7 @@
 		slime_owner.melee_damage_upper = 35
 		slime_owner.maxHealth = 475
 		slime_owner.fully_grown = TRUE
-		slime_owner.speed = 1.75
+		slime_owner.speed = 1.6
 
 /datum/action/innate/gonome/headcrab
 	name = "Create Headcrab"
