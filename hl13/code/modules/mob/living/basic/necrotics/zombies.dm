@@ -457,10 +457,10 @@
 	icon_dead = "crematorzombie_dead"
 	icon = 'hl13/icons/mob/halflife_tall.dmi'
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 1)
-	maxHealth = 90
-	health = 90
+	maxHealth = 64
+	health = 64
 	melee_attack_cooldown = 2.5 SECONDS //slower attack
-	speed = 2.25
+	speed = 2.5
 	basic_mob_flags = NONE
 	attack_sound = 'hl13/sound/creatures/zombineattack.ogg'
 	death_sound = 'hl13/sound/creatures/zombinedeath.ogg'
@@ -475,7 +475,7 @@
 /mob/living/basic/halflife/zombie/cremator/death(gibbed)
 	..()
 	explosion(src, heavy_impact_range = 3, light_impact_range = 4, adminlog = FALSE)
-	flame_radius(3, get_turf(src))
+	flame_radius(2, get_turf(src))
 	playsound(loc, 'hl13/sound/halflifeeffects/explosion_fire_grenade.ogg', 30, TRUE, 4)
 	gib()
 
