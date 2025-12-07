@@ -31,6 +31,8 @@
 	var/aggro_sound = list('hl13/sound/creatures/antlion/pain1.ogg', 'hl13/sound/creatures/antlion/pain2.ogg')
 	var/idle_sounds = list('hl13/sound/creatures/antlion/idle1.ogg','hl13/sound/creatures/antlion/idle2.ogg', ,'hl13/sound/creatures/antlion/idle3.ogg', ,'hl13/sound/creatures/antlion/idle4.ogg', ,'hl13/sound/creatures/antlion/idle5.ogg' )
 
+	initial_language_holder = /datum/language_holder/zombie
+
 /mob/living/basic/halflife/antlion_worker/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()
 	if(stat)
@@ -100,10 +102,15 @@
 	lighting_cutoff_green = 35
 	lighting_cutoff = 35
 
+	initial_language_holder = /datum/language_holder/zombie
+
 	var/soundvary = FALSE
 	var/idle_sounds = list('hl13/sound/creatures/antlion_guard/growl_idle.ogg')
 
-/mob/living/basic/halflife/antlion_guard/zombie_faction
+/mob/living/basic/halflife/antlion_guard/deployment
+	speed = 0.75
+	maxHealth = 625
+	health = 625
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
 
 /mob/living/basic/halflife/antlion_guard/weak

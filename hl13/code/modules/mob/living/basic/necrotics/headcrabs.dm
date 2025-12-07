@@ -49,6 +49,9 @@
 	. = ..()
 	if (!ishuman(target) || target.stat == CONSCIOUS || target.stat == DEAD)
 		return
+	if(target.deployment_faction == XEN_DEPLOYMENT_FACTION)
+		to_chat(src, span_warning("Their biology does not support zombification."))
+		return
 	zombify(target)
 
 /// Become a zombie
@@ -81,6 +84,7 @@
 /mob/living/basic/halflife/headcrab/deployment
 	melee_damage_lower = 9
 	melee_damage_upper = 13
+	obj_damage = 10
 
 /mob/living/basic/halflife/headcrab/armored
 	name = "Armored Headcrab"
@@ -91,9 +95,6 @@
 	maxHealth = 60
 	health = 60
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1, /obj/item/stack/sheet/sinew = 1, /obj/item/stack/sheet/bone = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1)
-
-/mob/living/basic/halflife/headcrab/armored/deployment
-	speed = 1.85
 
 /mob/living/basic/halflife/headcrab/armored/ghost_controlled/Initialize(mapload)
 	. = ..()

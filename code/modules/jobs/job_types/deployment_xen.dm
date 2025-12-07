@@ -28,8 +28,10 @@ GLOBAL_VAR_INIT(deployment_xen_cash, 0)
 	name = "Xen TDM"
 	jobtype = /datum/job/deployment_xen
 
-	uniform = /obj/item/clothing/under/citizen/refugee/green
+	uniform = /obj/item/clothing/under/citizen/refugee/green/slowing
+	head = /obj/item/clothing/head/halflife/cosmetic_headcrab
 	implants = list(/obj/item/implant/mindshield) //snowflake and bad but... this makes rebel turrets shoot crabwalkers
+	var/list/nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_EYES)
 
 /datum/job/deployment_xen/get_spawn_message_information()
 	var/list/info = list()
@@ -73,6 +75,16 @@ GLOBAL_VAR_INIT(deployment_xen_cash, 0)
 		var/turf/T = get_turf(H)
 		var/obj/item/I = new chosen(T)
 		H.put_in_hands(I)
+
+	var/list/no_drops = list()
+
+	// Make clothing in the specified slots NODROP
+	for(var/slot in nodrop_slots)
+		no_drops += H.get_item_by_slot(slot)
+	list_clear_nulls(no_drops) // For any slots we didn't have filled
+	// Apply TRAIT_NODROP to everything
+	for(var/obj/item/item_to_nodrop as anything in no_drops)
+		ADD_TRAIT(item_to_nodrop, TRAIT_NODROP, CAPTURE_THE_FLAG_TRAIT)
 
 /datum/job/deployment_xen/get_roundstart_spawn_point()
 	return pick(GLOB.deployments_xen)

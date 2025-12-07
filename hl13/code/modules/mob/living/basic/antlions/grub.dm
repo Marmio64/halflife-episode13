@@ -28,6 +28,8 @@
 	lighting_cutoff_green = 35
 	lighting_cutoff = 35
 
+	initial_language_holder = /datum/language_holder/zombie
+
 /mob/living/basic/halflife/grub/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()
 	if(stat)

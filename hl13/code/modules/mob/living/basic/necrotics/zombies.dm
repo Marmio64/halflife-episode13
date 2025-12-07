@@ -195,6 +195,9 @@
 	fungalheal_amt = 0.1
 	var/datum/action/cooldown/spell/conjure/xenfloor/infest
 
+/mob/living/basic/halflife/zombie/fungal/deployment
+	fungalheal_amt = 0.2
+
 /mob/living/basic/halflife/zombie/fungal/Initialize(mapload)
 	. = ..()
 	infest = new(src)
@@ -225,7 +228,7 @@
 
 /mob/living/basic/halflife/zombie/fast/deployment
 	melee_damage_lower = 9
-	melee_damage_upper = 12
+	melee_damage_upper = 13
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/fast/proc/get_innate_abilities()
@@ -384,7 +387,6 @@
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/poisonzombie
 
 /mob/living/basic/halflife/zombie/poison/deployment
-	speed = 2
 	maxHealth = 175
 	health = 175
 
@@ -459,7 +461,6 @@
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 1)
 	maxHealth = 64
 	health = 64
-	melee_attack_cooldown = 2.5 SECONDS //slower attack
 	speed = 2.5
 	basic_mob_flags = NONE
 	attack_sound = 'hl13/sound/creatures/zombineattack.ogg'

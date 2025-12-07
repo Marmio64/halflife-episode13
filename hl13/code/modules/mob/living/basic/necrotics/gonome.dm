@@ -105,6 +105,9 @@
 	health = 425
 	fully_grown = TRUE
 
+/mob/living/basic/halflife/zombie/gonome/complete/deployment
+	speed = 1.4
+
 /mob/living/basic/halflife/zombie/gonome/Login()
 	..()
 	to_chat(src, playstyle_string)

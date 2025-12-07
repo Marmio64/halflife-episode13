@@ -25,16 +25,16 @@
 /datum/outfit/deployment_loadout/xen/tier1/fast_headcrab
 	name = "Deployment: Fast Headcrab"
 	display_name = "Fast Headcrab (Offense)"
-	desc = "A fast headcrab. Speedier but less durable than the standard headcrab."
+	desc = "A fast headcrab. Speedier but less durable, and deals less damage than the standard headcrab."
 
 	mob_to_be = /mob/living/basic/halflife/headcrab/fast
 
 /datum/outfit/deployment_loadout/xen/tier1/armored_headcrab
 	name = "Deployment: Armored Headcrab"
 	display_name = "Armored Headcrab (Defense)"
-	desc = "An armored headcrab. Slower but more durable than the standard headcrab."
+	desc = "An armored headcrab. Deals less damage than the standard headcrab, but is more durable."
 
-	mob_to_be = /mob/living/basic/halflife/headcrab/armored/deployment
+	mob_to_be = /mob/living/basic/halflife/headcrab/armored
 
 //// TIER 2 //////////////
 
@@ -87,7 +87,7 @@
 	display_name = "Fungal Zombie (Defense)"
 	desc = "A slightly slower zombie which has higher health, the ability to plant fungus flooring, and the ability to heal on said flooring. You specialize in absorbing damage and healing it off."
 
-	mob_to_be = /mob/living/basic/halflife/zombie/fungal
+	mob_to_be = /mob/living/basic/halflife/zombie/fungal/deployment
 
 /datum/outfit/deployment_loadout/xen/tier3/zombine
 	name = "Deployment: Zombine"
@@ -113,7 +113,7 @@
 /datum/outfit/deployment_loadout/xen/tier3/cremator
 	name = "Deployment: Cremator Zombie"
 	display_name = "Cremator Zombie (Offense)"
-	desc = "You are slow, don't do great damage, and only have as much health as normal zombies, but are flameproof and create a large, fiery explosion when you die. You specialize in blowing up enemy fortifications."
+	desc = "You are slow and have low health, but are flameproof and create a large, fiery explosion when you die. You specialize in blowing up enemy fortifications."
 
 	mob_to_be = /mob/living/basic/halflife/zombie/cremator
 
@@ -124,14 +124,14 @@
 	display_name = "Fungal Gonome (Support)"
 	desc = "You aren't as powerful in direct combat as antlion guards, but can sustain yourself through healing off fungal flooring you can plant, and can create headcrabs for extra pressure."
 
-	mob_to_be = /mob/living/basic/halflife/zombie/gonome/complete
+	mob_to_be = /mob/living/basic/halflife/zombie/gonome/complete/deployment
 
 /datum/outfit/deployment_loadout/xen/tier4/antlion_guard
 	name = "Deployment: Antlion Guard"
 	display_name = "Antlion Guard (Offense)"
 	desc = "A heavyweight antlion guard, you have the highest damage output and health of any antlion or zombie, and excel at smashing through enemy fortifications."
 
-	mob_to_be = /mob/living/basic/halflife/antlion_guard/zombie_faction
+	mob_to_be = /mob/living/basic/halflife/antlion_guard/deployment
 
 /datum/outfit/deployment_loadout/xen/tier4/heavy_crab_walker
 	name = "Deployment: Heavy Crabwalker"
