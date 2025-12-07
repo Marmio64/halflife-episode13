@@ -43,8 +43,8 @@
 	var/idle_sounds = list('hl13/sound/creatures/zombiesound.ogg', 'hl13/sound/creatures/zombiesound2.ogg', 'hl13/sound/creatures/zombiesound3.ogg', 'hl13/sound/creatures/zombiesound4.ogg')
 
 	cmode_music = 'hl13/sound/music/combat/disrupted.ogg' //spooky!
-	lighting_cutoff_red = 25
-	lighting_cutoff = 25
+	lighting_cutoff_red = 35
+	lighting_cutoff = 35
 
 	fire_stack_decay_rate = -1
 	damage_coeff = list(BRUTE = 1, BURN = 2, TOX = 1, STAMINA = 1, OXY = 1)

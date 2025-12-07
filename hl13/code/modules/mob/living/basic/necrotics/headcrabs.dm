@@ -32,8 +32,8 @@
 
 	initial_language_holder = /datum/language_holder/zombie
 
-	lighting_cutoff_red = 25
-	lighting_cutoff = 8
+	lighting_cutoff_red = 35
+	lighting_cutoff = 35
 
 	var/mob/living/zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed
 	var/can_zombify = TRUE

@@ -25,6 +25,9 @@
 	//var/squish_chance = 50
 	var/idle_sounds = list('hl13/sound/creatures/grub/idle1.ogg','hl13/sound/creatures/grub/idle2.ogg', ,'hl13/sound/creatures/grub/idle3.ogg', ,'hl13/sound/creatures/grub/idle4.ogg')
 
+	lighting_cutoff_green = 35
+	lighting_cutoff = 35
+
 /mob/living/basic/halflife/grub/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()
 	if(stat)

@@ -97,8 +97,8 @@
 	death_sound = 'hl13/sound/creatures/antlion_guard/antlion_guard_die1.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/antlion_guard
 
-	lighting_cutoff_green = 25
-	lighting_cutoff = 25
+	lighting_cutoff_green = 35
+	lighting_cutoff = 35
 
 	var/soundvary = FALSE
 	var/idle_sounds = list('hl13/sound/creatures/antlion_guard/growl_idle.ogg')
