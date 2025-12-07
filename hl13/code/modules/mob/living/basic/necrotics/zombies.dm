@@ -474,7 +474,7 @@
 
 /mob/living/basic/halflife/zombie/cremator/death(gibbed)
 	..()
-	explosion(src, heavy_impact_range = 3, light_impact_range = 5, adminlog = FALSE)
+	explosion(src, heavy_impact_range = 3, light_impact_range = 4, adminlog = FALSE)
 	flame_radius(3, get_turf(src))
 	playsound(loc, 'hl13/sound/halflifeeffects/explosion_fire_grenade.ogg', 30, TRUE, 4)
 	gib()
