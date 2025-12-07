@@ -457,8 +457,8 @@
 	icon_dead = "crematorzombie_dead"
 	icon = 'hl13/icons/mob/halflife_tall.dmi'
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 1)
-	maxHealth = 100
-	health = 100
+	maxHealth = 90
+	health = 90
 	melee_attack_cooldown = 2.5 SECONDS //slower attack
 	speed = 2.25
 	basic_mob_flags = NONE

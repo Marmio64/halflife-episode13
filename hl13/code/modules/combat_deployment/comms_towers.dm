@@ -110,7 +110,7 @@
 
 /obj/machinery/deployment_comms_tower/rebel/xen_defense
 	var/rebel_time = 10 MINUTES
-	var/grace_time = 75 SECONDS
+	var/grace_time = 90 SECONDS
 
 	var/grace_period_text = TRUE
 	var/capturable = FALSE

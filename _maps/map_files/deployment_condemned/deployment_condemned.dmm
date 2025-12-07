@@ -441,7 +441,7 @@
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "wS" = (
-/obj/machinery/deployment_points_flag,
+/obj/machinery/deployment_points_flag/poland,
 /turf/open/floor/plating/indoor/tile/green,
 /area/halflife/outdoors/deployment_city/zombies)
 "xp" = (
@@ -529,6 +529,7 @@
 	pixel_x = 7;
 	pixel_y = -1
 	},
+/obj/structure/table/halflife/wood/constructed/cobbled,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "AG" = (
@@ -550,6 +551,12 @@
 "Bi" = (
 /obj/structure/halflife/cone,
 /turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/zombies)
+"Bo" = (
+/obj/structure/table/halflife/wood/constructed/cobbled,
+/obj/item/stack/sheet/mineral/sandbags/three,
+/obj/item/stack/razorwire/small_stack,
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
 "Br" = (
 /turf/open/floor/plating/indoor/concrete/stairs{
@@ -825,6 +832,11 @@
 "Ry" = (
 /obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city/zombies)
+"RB" = (
+/obj/structure/table/halflife/wood/constructed/cobbled,
+/obj/item/stack/sheet/mineral/wood/twentyfive,
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
 "RN" = (
 /obj/structure/railing/halflife/solo{
@@ -9150,7 +9162,7 @@ HG
 HG
 HG
 HG
-HG
+RB
 WB
 XJ
 kd
@@ -11833,7 +11845,7 @@ HG
 HG
 HG
 HG
-HG
+WB
 XJ
 kd
 kd
@@ -12130,7 +12142,7 @@ HG
 HG
 HG
 HG
-HG
+Bo
 WB
 XJ
 kd
