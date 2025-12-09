@@ -32,7 +32,7 @@
 
 	initial_language_holder = /datum/language_holder/zombie
 
-	lighting_cutoff_red = 35
+	lighting_cutoff_red = 15
 	lighting_cutoff = 35
 
 	var/mob/living/zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed
@@ -82,7 +82,7 @@
 	ai_controller.set_blackboard_key(BB_BASIC_FOODS, typecacheof(edibles))
 
 /mob/living/basic/halflife/headcrab/deployment
-	melee_damage_lower = 9
+	melee_damage_lower = 10
 	melee_damage_upper = 13
 	obj_damage = 10
 
@@ -132,7 +132,7 @@
 
 
 /mob/living/basic/halflife/headcrab/poison/deadly
-	poison_per_bite = 10
+	poison_type = /datum/reagent/toxin/headcrab_venom/deadly
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/headcrab/poison
 	sound_cue = 'hl13/sound/creatures/poison/ph_scream.ogg'

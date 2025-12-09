@@ -280,7 +280,7 @@
 	baseturfs = /turf/open/floor/plating/ground/dirt
 	turf_flags = NO_RUST
 	tiled_dirt = FALSE
-	light_power = 0.20
+	light_power = 0.15
 	light_range = 0.35
 	var/border_icon
 	var/has_alternate_states = FALSE //for damage, alts etc.

@@ -25,7 +25,7 @@
 	//var/squish_chance = 50
 	var/idle_sounds = list('hl13/sound/creatures/grub/idle1.ogg','hl13/sound/creatures/grub/idle2.ogg', ,'hl13/sound/creatures/grub/idle3.ogg', ,'hl13/sound/creatures/grub/idle4.ogg')
 
-	lighting_cutoff_green = 35
+	lighting_cutoff_green = 15
 	lighting_cutoff = 35
 
 	initial_language_holder = /datum/language_holder/zombie
@@ -59,8 +59,8 @@
 /mob/living/basic/halflife/grub/deployment
 	maxHealth = 25
 	health = 25
-	melee_damage_lower = 3
-	melee_damage_upper = 5
+	melee_damage_lower = 4
+	melee_damage_upper = 8
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
 	attack_sound = 'hl13/sound/creatures/headcrabbite.ogg'

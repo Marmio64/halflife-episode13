@@ -47,3 +47,8 @@
 	toxpwr = 0.25
 	metabolization_rate = REAGENTS_METABOLISM * 0.5
 	liver_damage_multiplier = 0.25
+
+/datum/reagent/toxin/headcrab_venom/deadly
+	name = "Deadly Headcrab Venom"
+	toxpwr = 0.5
+	liver_damage_multiplier = 0.15

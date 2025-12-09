@@ -32,6 +32,8 @@
 	var/idle_sounds = list('hl13/sound/creatures/antlion/idle1.ogg','hl13/sound/creatures/antlion/idle2.ogg', ,'hl13/sound/creatures/antlion/idle3.ogg', ,'hl13/sound/creatures/antlion/idle4.ogg', ,'hl13/sound/creatures/antlion/idle5.ogg' )
 
 	initial_language_holder = /datum/language_holder/zombie
+	lighting_cutoff_green = 15
+	lighting_cutoff = 35
 
 /mob/living/basic/halflife/antlion_worker/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()
@@ -64,6 +66,7 @@
 	icon_state = "acidspray"
 	damage = 30
 	speed = 1.5
+	armour_penetration = 20
 	damage_type = BURN
 	hitsound = 'hl13/sound/creatures/antlion_worker/antlion_shoot.ogg'
 
@@ -95,11 +98,11 @@
 	attack_verb_simple = "smash"
 	attack_sound = 'hl13/sound/creatures/antlion_guard/shove1.ogg'
 	combat_mode = TRUE
-	butcher_results = list(/obj/item/food/meat/slab/xen = 3, /obj/item/bugbait = 1)
+	guaranteed_butcher_results = list(/obj/item/food/meat/slab/xen = 3, /obj/item/bugbait = 1)
 	death_sound = 'hl13/sound/creatures/antlion_guard/antlion_guard_die1.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/antlion_guard
 
-	lighting_cutoff_green = 35
+	lighting_cutoff_green = 15
 	lighting_cutoff = 35
 
 	initial_language_holder = /datum/language_holder/zombie
@@ -108,9 +111,7 @@
 	var/idle_sounds = list('hl13/sound/creatures/antlion_guard/growl_idle.ogg')
 
 /mob/living/basic/halflife/antlion_guard/deployment
-	speed = 0.75
-	maxHealth = 625
-	health = 625
+	speed = 0.65
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
 
 /mob/living/basic/halflife/antlion_guard/weak
@@ -182,6 +183,7 @@
 	button_icon_state = "antlion"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 
+	sound = 'hl13/sound/items/bugbait_squeeze.ogg'
 	spell_requirements = NONE
 	antimagic_flags = NONE
 	cooldown_time = 90 SECONDS

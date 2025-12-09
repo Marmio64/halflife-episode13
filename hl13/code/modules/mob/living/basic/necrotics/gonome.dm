@@ -14,10 +14,11 @@
 	wound_bonus = -20
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 3, /obj/item/stack/sheet/animalhide/goliath_hide = 3)
 	crabless_possible = FALSE
-	lighting_cutoff_red = 30
-	lighting_cutoff = 10
+	lighting_cutoff_red = 15
+	lighting_cutoff = 35
 	speed = 1.85
 	fungalheal = TRUE
+	fungalheal_amt = 0.05
 
 	mob_size = MOB_SIZE_LARGE
 
@@ -30,6 +31,9 @@
 
 	hud_type = /datum/hud/ooze
 	var/fungal_nutrition = 50
+
+	///How long does it take to create a headcrab?
+	var/headcrab_delay = 4 SECONDS
 
 	var/fully_grown = FALSE
 
@@ -107,6 +111,7 @@
 
 /mob/living/basic/halflife/zombie/gonome/complete/deployment
 	speed = 1.4
+	headcrab_delay = 3 SECONDS
 
 /mob/living/basic/halflife/zombie/gonome/Login()
 	..()
@@ -186,6 +191,6 @@
 		return
 
 	slime_owner.balloon_alert(slime_owner, "creating headcrab...")
-	if (do_after(slime_owner, 4 SECONDS, slime_owner))
+	if (do_after(slime_owner, slime_owner.headcrab_delay, slime_owner))
 		slime_owner.adjust_fungal_nutrition(-nutrition_cost)
 		new /mob/living/basic/halflife/headcrab/armored/ghost_controlled(slime_owner.loc)

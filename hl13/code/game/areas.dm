@@ -97,6 +97,9 @@
 
 	first_time_text = "The Outlands"
 
+	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_03.ogg'
+	ambient_music_vol = 20
+
 	//ambience_index = AMBIENCE_HLSEWERS
 
 	daylight_multiplier = 0.15
@@ -118,8 +121,13 @@
 	ambient_buzz = 'hl13/sound/ambience/town_abandoned.ogg'
 	ambient_buzz_vol = 25
 
+	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_03.ogg'
+
 	ambient_music_vol = 20
 	daylight_multiplier = 0.15
+
+/area/halflife/outdoors/deployment_city/zombies/xen_base
+	name = "\improper Infested Zone"
 
 /area/halflife/outdoors/deployment_city/forest
 	daylight_multiplier = 0.35

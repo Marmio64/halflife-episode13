@@ -7,10 +7,12 @@
 	if(mob_to_be)
 		var/datum/mind/player_mind = H.mind
 		var/mob/living/basic/halflife/S = new mob_to_be(H.loc)
-		player_mind.transfer_to(S)
+		if(player_mind)
+			player_mind.transfer_to(S)
 		var/datum/action/new_action = new /datum/action/cooldown/mob_cooldown/talk_xen(S.mind || S)
 		new_action.Grant(S)
 		S.deployment_faction = XEN_DEPLOYMENT_FACTION
+		to_chat(S, span_notice("[desc]"))
 		qdel(H)
 	else
 		. = ..()
@@ -55,7 +57,7 @@
 /datum/outfit/deployment_loadout/xen/tier2/fast_headcrab
 	name = "Deployment: Upgraded Fast Headcrab"
 	display_name = "Upgraded Fast Headcrab (Offense)"
-	desc = "A fast headcrab. Speedier but less durable than the standard headcrab."
+	desc = "A fast headcrab. You're good at moving quick, but not much else."
 
 	mob_to_be = /mob/living/basic/halflife/headcrab/fast/upgraded
 
@@ -85,7 +87,7 @@
 /datum/outfit/deployment_loadout/xen/tier3/fungal_zombie
 	name = "Deployment: Fungal Zombie"
 	display_name = "Fungal Zombie (Defense)"
-	desc = "A slightly slower zombie which has higher health, the ability to plant fungus flooring, and the ability to heal on said flooring. You specialize in absorbing damage and healing it off."
+	desc = "A slightly slower zombie which has higher health, the ability to plant fungus flooring, and the ability to quickly heal on said flooring. You specialize in absorbing damage and healing it off."
 
 	mob_to_be = /mob/living/basic/halflife/zombie/fungal/deployment
 
@@ -106,14 +108,14 @@
 /datum/outfit/deployment_loadout/xen/tier3/antlion_grub
 	name = "Deployment: Antlion Grub"
 	display_name = "Antlion Grub (Support)"
-	desc = "You have almost no health and terrible damage, but can call upon and summon antlions from deep underground to protect you!"
+	desc = "You have almost no health and deal very low damage, but can call upon and summon antlions from deep underground to protect you!"
 
 	mob_to_be = /mob/living/basic/halflife/grub/deployment
 
 /datum/outfit/deployment_loadout/xen/tier3/cremator
 	name = "Deployment: Cremator Zombie"
 	display_name = "Cremator Zombie (Offense)"
-	desc = "You are slow and have low health, but are flameproof and create a large, fiery explosion when you die. You specialize in blowing up enemy fortifications."
+	desc = "You are slow and have low health, but are flameproof and create a large, fiery explosion when you die, in addition to being strong enough to inflict extra damage in melee. You specialize in blowing up enemy fortifications."
 
 	mob_to_be = /mob/living/basic/halflife/zombie/cremator
 
@@ -158,7 +160,7 @@
 		/obj/item/reagent_containers/pill/patch/grubnugget = 2,
 	)
 
-	extra_str = 5
+	extra_str = 6
 	mob_to_be = null
 
 /datum/outfit/deployment_loadout/xen/tier4/heavy_crab_walker/pre_equip(mob/living/carbon/human/H)

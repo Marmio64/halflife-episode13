@@ -217,6 +217,9 @@
 				else if(GLOB.deployment_win_team == COMBINE_DEPLOYMENT_FACTION)
 					SEND_SOUND(src, sound('hl13/sound/music/rebel_loss.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
 					return
+				else if(GLOB.deployment_win_team == XEN_DEPLOYMENT_FACTION)
+					SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_xen.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+					return
 			else if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
 				if(GLOB.deployment_win_team == REBEL_DEPLOYMENT_FACTION)
 					SEND_SOUND(src, sound('hl13/sound/music/combine_loss.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))

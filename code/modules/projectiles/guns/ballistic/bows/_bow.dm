@@ -4,7 +4,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/bows_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/bows_righthand.dmi'
 	name = "bow"
-	desc = "Seems out-of-place in this day and age, but at least it's reliable."
+	desc = "A primitive, yet well crafted projectile weapon of ancient age. Though not as performant as modern firearms, it is tried and true."
 	icon_state = "bow"
 	inhand_icon_state = "bow"
 	base_icon_state = "bow"

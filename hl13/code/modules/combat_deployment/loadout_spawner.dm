@@ -21,6 +21,7 @@
 	if(isliving(user))
 		if(user.deployment_faction != faction_belonging && faction_belonging != NO_FACTION)
 			to_chat(user, span_warning("Your faction cannot use this."))
+			REMOVE_TRAIT(src, TRAIT_NODROP, HELD_ITEM_TRAIT) //incase you manage to pick up another faction's loadout beacon and are stuck with it
 			return
 
 	if(HAS_TRAIT(user, TRAIT_TDMCAPTAIN))

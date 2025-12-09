@@ -37,13 +37,13 @@
 	var/headcrabspawn_chance = 25
 	var/idle_sound_chance = 18
 	var/sound_vary = FALSE
-	var/fungalheal = FALSE
+	var/fungalheal = TRUE
 	///percentage of max health to heal while standing on a fungal node
-	var/fungalheal_amt = 0.05
+	var/fungalheal_amt = 0.01
 	var/idle_sounds = list('hl13/sound/creatures/zombiesound.ogg', 'hl13/sound/creatures/zombiesound2.ogg', 'hl13/sound/creatures/zombiesound3.ogg', 'hl13/sound/creatures/zombiesound4.ogg')
 
 	cmode_music = 'hl13/sound/music/combat/disrupted.ogg' //spooky!
-	lighting_cutoff_red = 35
+	lighting_cutoff_red = 15
 	lighting_cutoff = 35
 
 	fire_stack_decay_rate = -1
@@ -216,7 +216,7 @@
 	obj_damage = 10 //too frail to be breaking shit
 	melee_attack_cooldown = 0.7 SECONDS
 	melee_damage_lower = 7
-	melee_damage_upper = 9
+	melee_damage_upper = 10
 	sound_vary = FALSE
 	butcher_results = list(/obj/item/stack/sheet/sinew = 2, /obj/item/food/meat/slab/halflife/zombie = 1)
 	attack_sound = 'hl13/sound/creatures/fastzombie/fastzombieattack.ogg'
@@ -227,7 +227,7 @@
 	headcrabspawn = /mob/living/basic/halflife/headcrab/fast
 
 /mob/living/basic/halflife/zombie/fast/deployment
-	melee_damage_lower = 9
+	melee_damage_lower = 10
 	melee_damage_upper = 13
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
@@ -387,8 +387,8 @@
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/poisonzombie
 
 /mob/living/basic/halflife/zombie/poison/deployment
-	maxHealth = 175
-	health = 175
+	maxHealth = 185
+	health = 185
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/poison/proc/get_innate_abilities()
@@ -461,6 +461,10 @@
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 1)
 	maxHealth = 64
 	health = 64
+	melee_damage_lower = 20
+	melee_damage_upper = 26
+	armour_penetration = 15
+	obj_damage = 20
 	speed = 2.5
 	basic_mob_flags = NONE
 	attack_sound = 'hl13/sound/creatures/zombineattack.ogg'
