@@ -353,9 +353,10 @@
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/outfit/deployment_loadout/xen/tier2/poison_headcrab,
 			/datum/outfit/deployment_loadout/xen/tier2/zombie,
 			/datum/outfit/deployment_loadout/xen/tier2/fast_headcrab,
+			/datum/outfit/deployment_loadout/xen/tier2/zombie_engineer,
+			/datum/outfit/deployment_loadout/xen/tier2/poison_headcrab,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

@@ -54,6 +54,13 @@
 
 	mob_to_be = /mob/living/basic/halflife/zombie
 
+/datum/outfit/deployment_loadout/xen/tier2/zombie_engineer
+	name = "Deployment: Zombified Engineer"
+	display_name = "Zombified Engineer (Defense)"
+	desc = "You are incredibly slow, but have powerful attacks and bit of extra health. You specialize in ambushing targets in close quarters."
+
+	mob_to_be = /mob/living/basic/halflife/zombie/engineer
+
 /datum/outfit/deployment_loadout/xen/tier2/fast_headcrab
 	name = "Deployment: Upgraded Fast Headcrab"
 	display_name = "Upgraded Fast Headcrab (Offense)"

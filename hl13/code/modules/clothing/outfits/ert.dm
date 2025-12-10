@@ -287,3 +287,50 @@
 /datum/outfit/gman/post_equip(mob/living/carbon/human/equipped, visuals_only)
 	..()
 	equipped.fully_replace_character_name(equipped.real_name,"Mysterious Man")
+
+/datum/outfit/centcom/ert/overwatch/wallhammer
+	name = "Wallhammer OTA Unit"
+
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/wallhammer
+	uniform = /obj/item/clothing/under/combine/overwatch/wallhammer
+	suit = /obj/item/clothing/suit/armor/overwatch/wallhammer
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch/wallhammer
+	gloves = /obj/item/clothing/gloves/combat/overwatch
+	belt = /obj/item/storage/belt/civilprotection/overwatch/wallhammer
+	suit_store = /obj/item/gun/ballistic/shotgun/pulse
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
+
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
+
+	backpack_contents = list(
+		/obj/item/grenade/syndieminibomb/bouncer = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/melee/baton/security/loaded = 1,
+	)
+
+	name_source = list("Wallhammer")
+
+/datum/outfit/centcom/ert/overwatch/suppressor
+	name = "Suppressor OTA Unit"
+
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/suppressor
+	uniform = /obj/item/clothing/under/combine/overwatch/suppressor
+	suit = /obj/item/clothing/suit/armor/overwatch/suppressor
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
+	gloves = /obj/item/clothing/gloves/combat/overwatch
+	belt = /obj/item/storage/belt/civilprotection/overwatch/pulselmg
+	suit_store = /obj/item/gun/ballistic/automatic/pulselmg
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
+
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
+
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/pulselmg = 3,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+	)
+
+
+	role = "APF.C13-"
+	name_source = list("Blade", "Dagger", "Hammer", "Hunter", "Razor", "Spear", "Striker", "Tracker", "Echo")

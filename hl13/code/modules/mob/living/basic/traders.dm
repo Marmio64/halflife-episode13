@@ -418,7 +418,9 @@
 
 	initial_products = list(
 		/obj/item/clothing/head/helmet/halflife/headcrab = list(PAYCHECK_CREW * 3, 5),
-		/obj/item/clothing/suit/armor/platearmor = list(PAYCHECK_CREW * 5, 5),
+		/obj/item/clothing/suit/armor/platearmor = list(PAYCHECK_CREW * 4, 5),
+		/obj/item/clothing/head/helmet/halflife/headcrab/gonome = list(PAYCHECK_CREW * 5, 1),
+		/obj/item/clothing/suit/armor/platearmor/heavy = list(PAYCHECK_CREW * 8, 1),
 		/obj/item/clothing/mask/bandana/sinew = list(PAYCHECK_CREW * 0.5, 2),
 		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 1.25, 1),
 		/obj/item/knife/combat = list(PAYCHECK_CREW * 6, 3),
@@ -520,6 +522,8 @@
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = list(PAYCHECK_CREW * 4.5, 5),
 		/obj/item/gun/ballistic/automatic/pistol/usp = list(PAYCHECK_CREW * 9, 2),
 		/obj/item/gun/ballistic/rifle/boltaction/mosin_nagant = list(PAYCHECK_CREW * 12, 1),
+		/obj/item/gun/ballistic/automatic/mp7 = list(PAYCHECK_CREW * 15, 1),
+		/obj/item/gun/ballistic/rifle/boltaction/mosin_nagant = list(PAYCHECK_CREW * 12, 1),
 		/obj/item/gun/ballistic/rifle/rebarxbow = list(PAYCHECK_CREW * 7.5, 3),
 		/obj/item/clothing/suit/armor/civilprotection = list(PAYCHECK_CREW * 6, 3),
 		/obj/item/clothing/head/helmet/halflife/military/weak/crafted = list(PAYCHECK_CREW * 2.5, 5),
@@ -542,6 +546,9 @@
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = list(PAYCHECK_CREW * 2, 3, ""),
 		/obj/item/clothing/suit/armor/browncoat = list(PAYCHECK_CREW, 3, ""),
 		/obj/item/weaponcrafting/frame = list(PAYCHECK_CREW * 2.5, 3, ""),
+		/obj/item/gun/ballistic/automatic/ar2 = list(PAYCHECK_CREW * 12, 3, ""),
+		/obj/item/gun/ballistic/automatic/pulsesmg = list(PAYCHECK_CREW * 10, 3, ""),
+		/obj/item/gun/ballistic/combine_sniper = list(PAYCHECK_CREW * 14, 3, ""),
 	)
 
 	say_phrases = list(

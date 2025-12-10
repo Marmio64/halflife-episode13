@@ -83,6 +83,7 @@
 	icon_dead = "guard_dead"
 	faction = list(FACTION_ANTLION)
 	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
+	layer = LARGE_MOB_LAYER
 	maxHealth = 600
 	health = 600
 	speed = 0.8
@@ -110,6 +111,10 @@
 	var/soundvary = FALSE
 	var/idle_sounds = list('hl13/sound/creatures/antlion_guard/growl_idle.ogg')
 
+/mob/living/basic/halflife/antlion_guard/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/seethrough_mob)
+
 /mob/living/basic/halflife/antlion_guard/deployment
 	speed = 0.65
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
@@ -119,6 +124,7 @@
 	health = 500
 	melee_damage_lower = 25
 	melee_damage_upper = 30
+	guaranteed_butcher_results = list(/obj/item/food/meat/slab/xen = 3, /obj/item/bugbait = 1, /obj/item/lockpick/ingested = 1)
 
 ///Every hit throws people back
 /mob/living/basic/halflife/antlion_guard/melee_attack(atom/target, list/modifiers, ignore_cooldown = FALSE)

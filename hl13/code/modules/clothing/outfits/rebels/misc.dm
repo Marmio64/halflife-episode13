@@ -274,7 +274,7 @@
 
 /datum/outfit/resistance_faction/polish/fuck_your_shit
 	name = "Polish Liberation Front Veteran" //these guys are the most most experienced of the polish liberation front. if they are in city 13, you duck and cover. they are walking fucking dreadnoughts. do not call on them in vain.
-	mask = /obj/item/clothing/mask/gas/hl2/military/hardened //important
+	mask = /obj/item/clothing/mask/gas/hl2/military
 	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
 	suit = /obj/item/clothing/suit/armor/halflife/milvest //again: walking fucking tank. dont fuck with him.
 	uniform = /obj/item/clothing/under/syndicate/camo

@@ -279,6 +279,11 @@
 
 	first_time_text = "South Checkpoint"
 
+/area/halflife/indoors/slums_checkpoint
+	name = "\improper Slums Checkpoint"
+
+	first_time_text = "Slums Checkpoint"
+
 /area/halflife/indoors/conscript_bunker
 	name = "\improper Conscript Bunker"
 

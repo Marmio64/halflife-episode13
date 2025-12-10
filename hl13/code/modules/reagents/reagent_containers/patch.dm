@@ -38,11 +38,12 @@
 	icon = 'hl13/icons/obj/medkits.dmi'
 	icon_state = "healthpen"
 	base_icon_state = "healthpen"
-	list_reagents = list(/datum/reagent/medicine/concentrated_biogel/slurry = 15) //heals 30 hp over like 25 seconds. Thats a long time to heal compared to a vial, but you can pre-inject, and also this heals toxin+oxy damage
+	list_reagents = list(/datum/reagent/medicine/concentrated_biogel/slurry = 15) //heals 30 hp over like 17 seconds. Thats a long time to heal compared to a vial, but you can pre-inject, and also this heals toxin+oxy damage
 	sound_played = 'hl13/sound/effects/healthpen_inject.ogg'
 	custom_price = null
 
 /obj/item/reagent_containers/hypospray/medipen/healthpen/high_capacity
+	name = "large healthpen"
 	list_reagents = list(/datum/reagent/medicine/concentrated_biogel/slurry = 25) //heals 50 hp total instead of 30
 
 /obj/item/reagent_containers/hypospray/medipen/oxycodone

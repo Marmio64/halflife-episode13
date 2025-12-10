@@ -453,7 +453,7 @@
 	id_name = "Corporal"
 
 	suit = /obj/item/clothing/suit/armor/halflife/milvest/slow
-	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
+	mask = /obj/item/clothing/mask/gas/hl2/military
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/m4a1_nonade
 	suit_store = /obj/item/gun/ballistic/automatic/m4a1
 	l_pocket = /obj/item/knife/combat/survival

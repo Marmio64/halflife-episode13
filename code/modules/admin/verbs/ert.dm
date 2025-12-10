@@ -75,7 +75,7 @@
 	if (ertemplate)
 		ertemplate = new ertemplate
 	else
-		ertemplate = new /datum/ert/centcom_official
+		ertemplate = new /datum/ert/administrative
 
 	var/human_authority_setting = CONFIG_GET(string/human_authority)
 

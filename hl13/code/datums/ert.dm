@@ -22,6 +22,15 @@
 	mission = "Stabilize the city, detain city officials, kill all citizens who do not comply."
 	polldesc = "an ultra elite Overwatch Strike Team"
 
+///with default squad size of 5, this is 2 grunts, a wallhammer, a suppressor, and an elite
+/datum/ert/overwatch/specialty_commandos
+	roles = list(/datum/antagonist/ert/overwatch/wallhammer, /datum/antagonist/ert/overwatch/grunt, /datum/antagonist/ert/overwatch/suppressor, /datum/antagonist/ert/overwatch/grunt)
+	leader_role = /datum/antagonist/ert/overwatch/ar2/elite
+	rename_team = "Overwatch Specialty Commando Strike Team"
+	code = "Delta"
+	mission = "Stabilize the city, detain city officials, kill all citizens who do not comply."
+	polldesc = "an ultra elite Overwatch Commando Strike Team"
+
 /datum/ert/conscripts
 	roles = list(/datum/antagonist/ert/conscript)
 	leader_role = /datum/antagonist/ert/conscript/officer

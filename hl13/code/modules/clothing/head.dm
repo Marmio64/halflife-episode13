@@ -101,7 +101,7 @@
 
 /obj/item/clothing/head/helmet/halflife/milhelm
 	name = "military helmet"
-	desc = "A black old world military helmet for protecting your noggin."
+	desc = "A black old world military helmet for protecting your noggin. It looks sturdier than it's green cousins."
 	icon = 'hl13/icons/obj/clothing/hats.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
 	icon_state = "milhelm"
@@ -114,8 +114,8 @@
 	limb_integrity = 300
 
 /datum/armor/milhelm
-	melee = 25
-	bullet = 25
+	melee = 30
+	bullet = 35
 	laser = 20
 	energy = 20
 	bomb = 25

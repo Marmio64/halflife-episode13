@@ -262,7 +262,6 @@
 				/obj/item/clothing/under/citizen/refugee,
 				/obj/item/radio/off/halflife,
 				/obj/item/flashlight/seclite,
-				/obj/item/knife/kitchen,
 				/obj/item/lighter/greyscale = 2,
 				/obj/item/stack/sticky_tape = 3,
 				/obj/item/camera,
@@ -281,8 +280,9 @@
 				/obj/item/halflife/combine_battery,
 				/obj/item/clothing/head/helmet/halflife/military/weak/crafted,
 				/obj/item/clothing/head/utility/welding,
-				/obj/item/switchblade,
+				/obj/item/switchblade = 2,
 				/obj/item/weaponcrafting/frame/usp,
+				/obj/item/gun/ballistic/automatic/pistol/makeshift,
 				/obj/item/stack/spacecash/c20 = 2
 				)
 
@@ -296,7 +296,7 @@
 	loot = list(
 				/obj/item/gun/ballistic/automatic/pistol/usp,
 				/obj/item/gun/ballistic/automatic/pistol/usp/no_mag,
-				/obj/item/weaponcrafting/frame/usp = 2,
+				/obj/item/weaponcrafting/frame/usp,
 				/obj/item/weaponcrafting/frame/mp7 = 3,
 				/obj/item/clothing/suit/armor/civilprotection = 3,
 				/obj/item/clothing/under/citizen/rebel,
@@ -307,7 +307,6 @@
 				/obj/item/weaponcrafting/frame/mosin,
 				/obj/item/machinepiece/multifunctiontool = 2,
 				/obj/item/grenade/syndieminibomb/bouncer,
-				/obj/item/gun/ballistic/automatic/pistol/makeshift,
 				/obj/item/fireaxe,
 				/obj/item/switchblade = 3,
 				/obj/item/melee/baton/security/loaded,
@@ -318,23 +317,17 @@
 				/obj/item/clothing/head/helmet/halflife/military
 				)
 
-//guaranteed ready weapon and loot spawns
+//the very best shit, these loot spawns are very rare but have some otherwise unobtainable stuff and ready built weapons
 /obj/effect/spawner/random/halflife/loot/legendary
 	name = "legendary loot"
 
 	loot = list(
-				/obj/item/gun/ballistic/automatic/pistol/usp,
-				/obj/item/crowbar/large,
-				/obj/item/fireaxe,
-				/obj/item/melee/sledgehammer,
-				/obj/item/chainsaw,
-				/obj/item/gun/ballistic/automatic/mp7,
-				/obj/item/clothing/suit/armor/civilprotection,
-				/obj/item/gun/ballistic/rifle/rebarxbow,
-				/obj/item/grenade/syndieminibomb/bouncer,
-				/obj/item/knife/combat,
-				/obj/item/melee/baton/security/loaded,
-				/obj/item/clothing/head/helmet/halflife/military
+				/obj/item/gun/ballistic/automatic/m4a1,
+				/obj/item/gun/ballistic/automatic/ak47,
+				/obj/item/clothing/suit/armor/rebel,
+				/obj/item/clothing/suit/armor/halflife/milvest,
+				/obj/item/clothing/head/helmet/halflife/milhelm,
+				/obj/item/clothing/head/helmet/halflife/military/plf_veteran,
 				)
 
 /obj/effect/spawner/random/halflife/plant_spawner
@@ -366,6 +359,25 @@
 				/obj/item/ammo_box/colta357,
 				/obj/item/ammo_casing/rebar,
 				/obj/item/ammo_box/magazine/m4a1
+				)
+
+//guaranteed ready weapon and loot spawns
+/obj/effect/spawner/random/halflife/loot/deathmatch/alleys_uprising
+	name = "alleys uprising deathmatch loot"
+
+	loot = list(
+				/obj/item/gun/ballistic/automatic/pistol/usp,
+				/obj/item/crowbar/large,
+				/obj/item/fireaxe,
+				/obj/item/melee/sledgehammer,
+				/obj/item/chainsaw,
+				/obj/item/gun/ballistic/automatic/mp7,
+				/obj/item/clothing/suit/armor/civilprotection,
+				/obj/item/gun/ballistic/rifle/rebarxbow,
+				/obj/item/grenade/syndieminibomb/bouncer,
+				/obj/item/knife/combat,
+				/obj/item/melee/baton/security/loaded,
+				/obj/item/clothing/head/helmet/halflife/military
 				)
 
 //melee weapons and makeshift crap

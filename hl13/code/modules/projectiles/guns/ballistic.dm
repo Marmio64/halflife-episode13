@@ -14,6 +14,7 @@
 	recoil = 0.3
 	fire_delay = 2
 	burst_size = 1
+	spread = 4
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY

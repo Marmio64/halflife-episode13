@@ -179,6 +179,21 @@
 	maxHealth = 120
 	health = 120
 
+///Meant to be avoided rather than fought head on. Very slow, but dangerous in melee.
+/mob/living/basic/halflife/zombie/engineer
+	name = "Zombified Engineer"
+	desc = "An espescially slow moving husk, draped in CWU Engineer garb. While it is weighed down, it looks more dangerous than it's kin, perhaps it is best outran instead?"
+	icon_state = "engineer"
+	icon_living = "engineer"
+	icon_dead = "engineer_dead"
+	speed = 2.75
+	melee_damage_lower = 21
+	melee_damage_upper = 26
+	obj_damage = 18
+	armour_penetration = 15
+	maxHealth = 120
+	health = 120
+
 /mob/living/basic/halflife/zombie/fungal
 	name = "Fungal Zombie"
 	desc = "A shambling humanoid figure hosting a colony of fungal growths upon its flesh."
