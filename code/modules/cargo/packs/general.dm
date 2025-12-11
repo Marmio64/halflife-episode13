@@ -50,3 +50,11 @@
 					/obj/item/ration_voucher,
 					/obj/item/ration_voucher)
 	crate_name = "ration voucher crate"
+
+/datum/supply_pack/misc/cloth
+	name = "Cloth Crate"
+	desc = "A crate filled with cloth, for making clothing repairs or as parts in certain factory goods containers."
+	cost = CARGO_CRATE_VALUE * 5
+	contains = list(/obj/item/stack/sheet/cloth/ten,
+					/obj/item/stack/sheet/cloth/ten)
+	crate_name = "cloth crate"

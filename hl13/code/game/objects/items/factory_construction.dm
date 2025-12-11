@@ -19,7 +19,7 @@
 	///Are all ingredients inside?
 	var/filled = FALSE
 
-	var/completed_container = /obj/item/factory_construction/full_container
+	var/completed_container = /obj/item/factory_construction/full_container/standard
 
 	var/bonus_cash = 0 //any extra cash earned from completing it
 	var/container_worth = 1 //how many containers it counts as for quota
@@ -31,22 +31,43 @@
 									/obj/item/stack/sheet/scrap_metal,
 									/obj/item/stack/rods)
 
+///basic form, dont use this please
 /obj/item/factory_construction/container/advanced
 	name = "advanced factory goods container"
-	desc = "A advanced factory goods container. It is worth three times as much money and quota amount as a regular container, but the ingredients are harder to procure."
+	desc = "A very generic advanced factory goods container. It is worth three times as much money and quota amount as a regular container, but the ingredients are harder to procure."
 	icon_state = "advanced_container_empty"
 
 	completed_container = /obj/item/factory_construction/full_container/advanced
 	bonus_cash = 4 //default amount from a sealer is 2, so +4 is now triple that
 	container_worth = 3
 
+/obj/item/factory_construction/container/advanced/electronics
+	name = "advanced electronics goods container"
+	desc = "An advanced factory goods container. It is worth three times as much money and quota amount as a regular container, but the ingredients are harder to procure."
+
+	completed_container = /obj/item/factory_construction/full_container/advanced/electronics
+
 	possible_items = list(/obj/item/circuitmaterial/advanced,
 							/obj/item/circuitmaterial,
 							/obj/item/halflife/combine_battery,
 							/obj/item/stack/sheet/scrap_parts,
 							/obj/item/stack/sheet/goldingot,
-							/obj/item/stack/sheet/silveringot,
-							/obj/item/water_canister,
+							/obj/item/stack/sheet/scrap_copper,
+							/obj/item/stack/sheet/silveringot)
+
+/obj/item/factory_construction/container/advanced/military
+	name = "advanced military goods container"
+	desc = "An advanced factory goods container. It is worth five times as much money and quota amount as a regular container, but the ingredients are harder and more dangerous to procure. In addition, when sold on the cargo train, it will generate extra sociostability."
+
+	completed_container = /obj/item/factory_construction/full_container/advanced/military
+
+	possible_items = list(/obj/item/stack/sheet/halflife/bullets,
+							/obj/item/stack/kevlar,
+							/obj/item/stack/sheet/cloth,
+							/obj/item/clothing/suit/armor/halflife/kevlar,
+							/obj/item/clothing/head/helmet/halflife/military/weak/crafted,
+							/obj/item/gun/ballistic/automatic/pistol/makeshift,
+							/obj/item/weaponcrafting/receiver,
 							/obj/item/stack/bulletcasings)
 
 /obj/item/factory_construction/container/examine(mob/user)
@@ -148,7 +169,18 @@
 	desc = "A full factory goods container which has been sealed correctly. You can send it on the cargo shuttle for exporting to gain some credits for the district's cargo budget."
 	icon_state = "container"
 
+/obj/item/factory_construction/full_container/standard
+	name = "sealed standard factory container"
+
 /obj/item/factory_construction/full_container/advanced
 	name = "sealed advanced factory container"
 	desc = "A full advanced factory goods container which has been sealed correctly. You can send it on the cargo shuttle for exporting to gain some credits for the district's cargo budget."
+	icon_state = "advanced_container"
+
+/obj/item/factory_construction/full_container/advanced/electronics
+	name = "sealed electronics factory container"
+
+/obj/item/factory_construction/full_container/advanced/military
+	name = "sealed military factory container"
+	desc = "A full advanced factory goods container which has been sealed correctly. You can send it on the cargo shuttle for exporting to gain some credits for the district's cargo budget. This one has military grade materials which will increase sociostability when sold."
 	icon_state = "advanced_container"

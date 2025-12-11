@@ -132,9 +132,21 @@
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/stack/sheet/iron = 2,
 				/obj/item/circuitmaterial/advanced = 1,
-				/obj/item/circuitmaterial = 2)
+				/obj/item/circuitmaterial = 1)
 	time = 6 SECONDS
 	category = CAT_ROBOT
+
+/datum/crafting_recipe/destabilizer_antenna
+	name = "Destabilizer Antenna"
+	result = /obj/item/halflife/antenna
+	reqs = list(/obj/item/factory_construction/full_container/advanced/electronics = 1,
+				/obj/item/stack/cable_coil = 5,
+				/obj/item/stack/sheet/iron = 1,
+				/obj/item/circuitmaterial/advanced = 1,
+				/obj/item/circuitmaterial = 1)
+	time = 12 SECONDS
+	category = CAT_ROBOT
+	crafting_interface = CRAFTING_BENCH_ELECTRIC
 
 /datum/crafting_recipe/alyxtool
 	name = "Hacking Multitool"

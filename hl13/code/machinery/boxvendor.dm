@@ -16,7 +16,7 @@
 	/// Additional reward that the foreman can take out of the machine for 100% completing quota. To be distributed, or kept entirely for him...
 	var/cashprize = 0
 
-	var/list/vendoptions = list("Dispense standard Container", "Dispense difficult Advanced Container")
+	var/list/vendoptions = list("Dispense standard Container", "Dispense difficult advanced electronics Container", "Dispense difficult advanced military Container",)
 
 /obj/machinery/box_vendor/examine(mob/user)
 	. = ..()
@@ -50,7 +50,7 @@
 			boxes_stored--
 
 			new /obj/item/factory_construction/container(loc)
-		else
+		else if("Dispense advanced electronics Container")
 			playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
 
 			if(!do_after(user, 3 SECONDS, src))
@@ -64,7 +64,22 @@
 
 			boxes_stored--
 
-			new /obj/item/factory_construction/container/advanced(loc)
+			new /obj/item/factory_construction/container/advanced/electronics(loc)
+		else if("Dispense difficult advanced military Container")
+			playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
+
+			if(!do_after(user, 3 SECONDS, src))
+				to_chat(usr, span_warning("The machine did not finish depositing a box."))
+				playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+				return
+
+			playsound(src, 'hl13/sound/machines/combine_button5.ogg', 50, TRUE, extrarange = -3)
+
+			playsound(src, 'hl13/sound/machines/combine_dispense.ogg', 50, TRUE, extrarange = -3)
+
+			boxes_stored--
+
+			new /obj/item/factory_construction/container/advanced/military(loc)
 
 	return
 

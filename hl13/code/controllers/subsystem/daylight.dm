@@ -18,7 +18,7 @@
 
 #define DAY_CYCLE_NIGHT "Night"
 
-#define MAX_QUOTA_MULTIPLIER 1
+#define MAX_QUOTA_MULTIPLIER 1.2
 
 SUBSYSTEM_DEF(daylight)
 	name = "Daylight"
@@ -67,7 +67,7 @@ SUBSYSTEM_DEF(daylight)
 
 			var/message = "Attention citizens, it is now night time. Citizens are to return to their apartment blocks for curfew."
 
-			if(factory_goal_multiplier < MAX_QUOTA_MULTIPLIER) // easier first day, standard second day, max value third day and on
+			if(factory_goal_multiplier < MAX_QUOTA_MULTIPLIER) // easier first day, standard second day, max value fourth day and on
 				factory_goal_multiplier += 0.2
 
 			if(factory_containers_filled >= factory_container_goal)

@@ -1109,6 +1109,7 @@
 /obj/structure/halflife/trash/papers/three{
 	dir = 4
 	},
+/obj/item/hl13_small_flag/poland,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
 "bUq" = (
@@ -2407,10 +2408,6 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/productioncenter)
-"dXz" = (
-/obj/machinery/computer/cargo,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors/alley/dropshippad)
 "dXG" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/lino,
@@ -6424,10 +6421,8 @@
 /turf/cordon,
 /area/halflife/outdoors)
 "kxy" = (
-/obj/machinery/door/unpowered/halflife/metal{
-	dir = 4;
-	keylock = 1;
-	lockid = "laborunion"
+/obj/machinery/turnstile/brig/halflife/forcefield/cargo/nodirectional{
+	dir = 8
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/laborunion)
@@ -6982,7 +6977,7 @@
 /area/halflife/indoors)
 "lir" = (
 /obj/machinery/light/small/directional/north,
-/obj/item/hl13_small_flag/poland,
+/obj/machinery/computer/cargo,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
 "liG" = (
@@ -10344,7 +10339,7 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/dispatch)
 "qMl" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/cargo/nodirectional{
+/obj/machinery/turnstile/brig/halflife/forcefield/cargo/nodirectional/startoff{
 	dir = 4
 	},
 /turf/open/floor/plating/ground/brickroad{
@@ -14155,12 +14150,14 @@
 /area/halflife/indoors/hospital)
 "wIR" = (
 /obj/machinery/light/small/directional/west,
-/obj/structure/table/halflife/no_smooth/large/crafting/workbench,
 /obj/effect/turf_decal/box/corners{
 	dir = 8
 	},
 /obj/effect/turf_decal/box/corners{
 	dir = 1
+	},
+/obj/structure/table/halflife/no_smooth/large/crafting/armorbench{
+	pixel_y = -6
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
@@ -35821,7 +35818,7 @@ xxB
 xxB
 ipK
 oVh
-dXz
+rxv
 rxv
 mfS
 rxv

@@ -25,7 +25,10 @@
 /obj/machinery/turnstile/Initialize(mapload)
 	. = ..()
 	if(forcefield)
-		icon_state = "forcefield"
+		if(on)
+			icon_state = "forcefield"
+		else
+			icon_state = "forcefield_off"
 	else
 		icon_state = "turnstile"
 
@@ -202,6 +205,11 @@
 
 /obj/machinery/turnstile/brig/halflife/forcefield/cargo
 	req_access = list(ACCESS_CARGO)
+
+/obj/machinery/turnstile/brig/halflife/forcefield/cargo/nodirectional/startoff
+	on = FALSE
+	density = FALSE
+	icon_state = "forcefield_off"
 
 /obj/machinery/turnstile/brig/halflife/forcefield/cargo/nodirectional
 	desc = "A forcefield which only allows those to pass who have proper access. You may be able to turn it off with the proper access."

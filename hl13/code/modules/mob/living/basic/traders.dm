@@ -257,7 +257,7 @@
 	)
 
 	initial_wanteds = list(
-		/obj/item/factory_construction/full_container = list(PAYCHECK_CREW, 15, ""),
+		/obj/item/factory_construction/full_container/standard = list(PAYCHECK_CREW, 15, ""),
 		/obj/item/factory_construction/full_container/advanced = list(PAYCHECK_CREW * 2, 15, ""),
 		/obj/item/halflife/nutrient_bar_wrapping/water = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 0.75, 10, ""),
@@ -540,6 +540,7 @@
 
 	initial_wanteds = list(
 		/obj/item/stack/bulletcasings = list(PAYCHECK_CREW * 0.25, 15, ""),
+		/obj/item/factory_construction/full_container/advanced/military = list(PAYCHECK_CREW * 3, 15, ""),
 		/obj/item/grenade/halflife/molotov = list(PAYCHECK_CREW, 5, ""),
 		/obj/item/clothing/under/combine/civilprotection = list(PAYCHECK_CREW * 2.5, 5, ""),
 		/obj/item/clothing/suit/armor/civilprotection = list(PAYCHECK_CREW * 2.5, 5, ""),
@@ -667,7 +668,7 @@
 	)
 
 	initial_wanteds = list(
-		/obj/item/factory_construction/full_container = list(PAYCHECK_CREW, 15, ""),
+		/obj/item/factory_construction/full_container/standard = list(PAYCHECK_CREW, 15, ""),
 		/obj/item/factory_construction/full_container/advanced = list(PAYCHECK_CREW * 2, 15, ""),
 		/obj/item/halflife/nutrient_bar_wrapping/water = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 0.75, 10, ""),

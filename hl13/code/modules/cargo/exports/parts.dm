@@ -46,9 +46,15 @@
 /datum/export/factory_box
 	cost = CARGO_CRATE_VALUE
 	unit_name = "completed factory goods boxes"
-	export_types = list(/obj/item/factory_construction/full_container)
+	export_types = list(/obj/item/factory_construction/full_container/standard)
 
 /datum/export/factory_box/advanced
 	cost = CARGO_CRATE_VALUE * 3
 	unit_name = "completed advanced factory goods boxes"
 	export_types = list(/obj/item/factory_construction/full_container/advanced)
+
+/datum/export/factory_box/advanced/military
+	cost = CARGO_CRATE_VALUE * 5
+	unit_name = "completed advanced military goods boxes"
+	export_types = list(/obj/item/factory_construction/full_container/advanced/military)
+	socio_value = 5

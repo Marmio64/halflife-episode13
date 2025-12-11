@@ -73,3 +73,4 @@
 /datum/outfit/job/engineer/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
 	user.change_stat(STATKEY_INT, 1)
+	user.change_stat(STATKEY_STR, 1)

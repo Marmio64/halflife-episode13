@@ -120,6 +120,8 @@ Then the player gets the profit from selling his own wasted time.
 	/// cost includes elasticity, this does not.
 	var/init_cost
 
+	///hl13 edit, how much sociostability does this export generate?
+	var/socio_value = 0
 
 
 /datum/export/New()
@@ -199,6 +201,7 @@ Then the player gets the profit from selling his own wasted time.
 		if(apply_elastic)
 			cost *= NUM_E**(-1 * k_elasticity * export_amount) //marginal cost modifier
 		SSblackbox.record_feedback("nested tally", "export_sold_cost", 1, list("[sold_item.type]", "[export_value]"))
+		SSsociostability.modifystability(socio_value)
 	return EXPORT_SOLD
 
 /*

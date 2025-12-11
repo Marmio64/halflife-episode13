@@ -63,7 +63,7 @@
 		if(loadout == REBEL_LOADOUT_MEDIC)
 			user.change_stat(STATKEY_INT, 3)
 			suit = /obj/item/clothing/suit/armor/civilprotection/medical
-			suit_store = null
+			suit_store = /obj/item/gun/ballistic/automatic/pistol/makeshift
 			backpack_contents = list(
 				/obj/item/storage/medkit/halflife = 1,
 				/obj/item/healthanalyzer = 1,
