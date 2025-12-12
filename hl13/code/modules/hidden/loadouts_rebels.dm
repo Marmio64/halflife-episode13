@@ -85,9 +85,6 @@
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/tinbomb)
 
-/datum/outfit/deployment_loadout/hidden/rebel/cremator/pre_equip(mob/living/carbon/human/H)
-	H.set_species(/datum/species/human/synth/cremator)
-
 //The attacker, conscripts move a bit faster than their comrades and have the best medium to long range weapon.
 //They excel at giving chase to the hidden, just don't get cocky.
 /datum/outfit/deployment_loadout/hidden/rebel/ar2_rebel
@@ -267,6 +264,6 @@
 /datum/outfit/deployment_loadout/rebel/tier3/vortigaunt/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	H.faction += list(FACTION_ANTLION)
-	H.set_species(/datum/species/vortigaunt)
+	H.set_species(/datum/species/vortigaunt/hidden)
 	H.cmode_music = combat_music
 
