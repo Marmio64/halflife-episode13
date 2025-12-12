@@ -42,6 +42,11 @@
 	var/fungalheal_amt = 0.01
 	var/idle_sounds = list('hl13/sound/creatures/zombiesound.ogg', 'hl13/sound/creatures/zombiesound2.ogg', 'hl13/sound/creatures/zombiesound3.ogg', 'hl13/sound/creatures/zombiesound4.ogg')
 
+	var/datum/action/cooldown/spell/play_dead/play_dead
+	var/can_play_dead = TRUE
+
+	var/play_idle_sounds = TRUE
+
 	cmode_music = 'hl13/sound/music/combat/disrupted.ogg' //spooky!
 	lighting_cutoff_red = 15
 	lighting_cutoff = 35
@@ -60,7 +65,7 @@
 	..()
 	if(stat)
 		return
-	if(prob(idle_sound_chance))
+	if(prob(idle_sound_chance) && play_idle_sounds)
 		var/chosen_sound = pick(idle_sounds)
 		playsound(src, chosen_sound, 50, sound_vary, -3)
 	//If there is fungal infestation on the ground, and the zombie can heal off of it, do so
@@ -80,6 +85,9 @@
 	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE)
 	AddElement(/datum/element/basic_eating, heal_amt = 5, food_types = edibles)
 	ai_controller.set_blackboard_key(BB_BASIC_FOODS, typecacheof(edibles))
+	if(can_play_dead)
+		play_dead = new(src)
+		play_dead.Grant(src)
 
 /mob/living/basic/halflife/zombie/zombine
 	name = "Zombine"
@@ -204,7 +212,7 @@
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1, /obj/item/stack/sheet/cloth = 1)
 	maxHealth = 140
 	health = 140
-	speed = 1.85
+	speed = 2
 	headcrabspawn = /mob/living/basic/halflife/headcrab/armored
 	fungalheal = TRUE
 	fungalheal_amt = 0.1
@@ -212,6 +220,7 @@
 
 /mob/living/basic/halflife/zombie/fungal/deployment
 	fungalheal_amt = 0.2
+	speed = 1.85
 
 /mob/living/basic/halflife/zombie/fungal/Initialize(mapload)
 	. = ..()
@@ -450,7 +459,7 @@
 	var/turf/target_turf = get_turf(target)
 
 	if(!target_turf.is_blocked_turf())
-		P.throw_at(target_turf, range = 7, speed = 1, spin = FALSE, target)
+		P.throw_at(target_turf, range = 7, speed = 1, spin = FALSE)
 		return
 
 	var/list/open_turfs = list()
@@ -504,7 +513,46 @@
 
 
 
+/datum/action/cooldown/spell/play_dead
+	name = "Play Dead/Get up"
+	desc = "Pretend to be dead, or get up if you already are pretending. Useful for setting up ambushes."
+	button_icon_state = "play_dead"
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	background_icon_state = "bg_alien"
+	overlay_icon_state = "bg_alien_border"
 
+	cooldown_time = 2 SECONDS
+
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
+
+	var/playing_dead = FALSE
+
+/datum/action/cooldown/spell/play_dead/is_valid_target(atom/cast_on)
+	return istype(cast_on, /mob/living/basic/halflife/zombie)
+
+/datum/action/cooldown/spell/play_dead/cast(mob/living/basic/halflife/zombie/cast_on)
+	. = ..()
+
+	if(!do_after(cast_on, 1.25 SECONDS, timed_action_flags = IGNORE_INCAPACITATED))
+		return . | SPELL_CANCEL_CAST
+
+	if(playing_dead)
+		playing_dead = FALSE
+		playsound(cast_on, 'hl13/sound/effects/struggle.ogg', 40, FALSE)
+		cast_on.look_alive()
+		cast_on.play_idle_sounds = TRUE
+		sleep(0.75 SECONDS) //so you have some time to react to them getting up before you get mauled
+		REMOVE_TRAIT(cast_on, TRAIT_PACIFISM, "play_dead")
+		REMOVE_TRAIT(cast_on, TRAIT_IMMOBILIZED, "play_dead")
+		REMOVE_TRAIT(cast_on, TRAIT_INCAPACITATED, "play_dead")
+	else
+		playing_dead = TRUE
+		playsound(cast_on, 'hl13/sound/effects/bodyfall.ogg', 40, FALSE)
+		cast_on.look_dead()
+		cast_on.play_idle_sounds = FALSE
+		ADD_TRAIT(cast_on, TRAIT_PACIFISM, "play_dead")
+		ADD_TRAIT(cast_on, TRAIT_IMMOBILIZED, "play_dead")
+		ADD_TRAIT(cast_on, TRAIT_INCAPACITATED, "play_dead")
 
 // AI STUFF THAT I PUT IN HERE CAUSE IM TOO LAZY TO MAKE ANOTHER FILE FOR IT --------------------------
 // speech trees are going to be deactivated for now because 1: custom zombie language makes them not do anything and 2. they get spammed in dchat after a player possessing one dies

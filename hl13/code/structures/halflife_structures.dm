@@ -812,6 +812,7 @@
 	"Welcome back to another episode of Truth and Unity.",
 	"In this episode, we will discuss the various benefits of factory work!",
 	"Welcome back to another episode of chanting that we love the Combine!",
+	"Now playing... The Juggler!",
 	"Would we model ourselves on the Trilobite?")
 
 	var/list/tv_end = list(
@@ -819,6 +820,7 @@
 	"Therefore I say, yes, I am a collaborator. We must all collaborate, willingly, eagerly, if we expect to reap the benefits of unification. And reap we shall.",
 	"Let me assure you that the suppressing field will be shut off on the day that we have mastered ourselves...the day we can prove we no longer need it. And that day of transformation, I have it on good authority, is close at hand.",
 	"And that concludes this episode of Truth and Unity.",
+	"That concludes today's scheduled broadcasting. Stay safe, stay aware.",
 	"Stay tuned for more tips on how you can continue to serve your Benefactors!",
 	"Remember, the Combine know what is best for you!")
 

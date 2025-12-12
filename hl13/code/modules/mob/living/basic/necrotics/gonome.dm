@@ -22,6 +22,8 @@
 
 	mob_size = MOB_SIZE_LARGE
 
+	can_play_dead = FALSE
+
 	attack_sound = 'hl13/sound/creatures/gonome/attack_player.ogg'
 	death_sound = 'hl13/sound/creatures/gonome/react_minor_scream_03.ogg'
 	//aggro_sound = 'hl13/sound/creatures/gonome/react_minor_scream_01.ogg'
