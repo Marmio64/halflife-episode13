@@ -48,7 +48,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel
 
 	backpack_contents = list(
-		/obj/item/ammo_casing/rebar/hidden = 4,
+		/obj/item/ammo_casing/rebar = 4,
 		/obj/item/stack/medical/gauze/quik_gauze = 1,
 		/obj/item/flashlight/flare/the_hidden = 1,
 	)
