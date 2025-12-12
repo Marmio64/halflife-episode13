@@ -67,6 +67,9 @@
 	force = 10 //HL13 EDIT. Sharp iron rods tend to hurt.
 	throwforce = 7 //HL13 EDIT.
 
+/obj/item/ammo_casing/rebar/hidden
+	desc = "Feels sharper than usual... perfect for hunting."
+
 /obj/item/ammo_casing/rebar/syndie
 	name = "Jagged Iron Rod"
 	desc = "An Iron rod, with notches cut into it. You really dont want this stuck in you."

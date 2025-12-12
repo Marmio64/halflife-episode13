@@ -42,3 +42,8 @@
 	wound_bonus = -10
 	armour_penetration = 15
 	icon_state = "bullet_large"
+
+// hidden rebar
+
+/obj/projectile/bullet/rebar/hidden
+	damage = 75
