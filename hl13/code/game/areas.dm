@@ -372,7 +372,7 @@
 	ambient_buzz = 'hl13/sound/ambience/sewer1.ogg'
 	ambient_buzz_vol = 60
 	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_03.ogg'
-	ambient_music_vol = 15
+	ambient_music_vol = 20
 	mood_bonus = -2
 	mood_message = "<span class='warning'>This place smells terrible.</span>\n"
 

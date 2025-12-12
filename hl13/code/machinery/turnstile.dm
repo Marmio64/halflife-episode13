@@ -112,6 +112,19 @@
 
 	var/malfunctioning = FALSE
 
+/*
+/obj/machinery/turnstile/brig/halflife/forcefield/attack_basic_mob(mob/living/M)
+	. = ..()
+	if(M.mob_size >= MOB_SIZE_HUMAN)
+		if(on)
+			var/open_time = 180 SECONDS //its... an option
+			to_chat(M, span_notice("You begin slowly ripping apart the forcefield. This is going to take a long time."))
+			playsound(src,'hl13/sound/halflifeeffects/forcefieldbuzz.ogg',50,0,3)
+			if(do_after(M, open_time, interaction_key = DOAFTER_SOURCE_DOORS))
+				malfunction()
+				playsound(src,'hl13/sound/halflifeeffects/forcefieldbuzz.ogg',50,0,3)
+*/
+
 /obj/machinery/turnstile/brig/halflife/forcefield/attackby(obj/item/attacking_item, mob/user, params)
 	. = ..()
 	if(atom_integrity < 300 && !malfunctioning) //At low health, the field just turns off.
