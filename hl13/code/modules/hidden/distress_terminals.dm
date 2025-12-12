@@ -23,23 +23,32 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 
 	density = TRUE
 
-/obj/machinery/combine_distressterminal/proc/completed()
+/obj/machinery/combine_distressterminal/proc/completed(faction_complete = 0) //0 = combine, 1 = rebel
 	if(completed)
 		return
 
 	do_sparks(1, FALSE, src)
 	completed = TRUE
-	icon_state = "datapodterminal"
+	if(faction_complete == 0)
+		icon_state = "datapodterminal"
+	else if(faction_complete == 1)
+		icon_state = "datapodterminal_l"
 
 	GLOB.distress_terminals--
 
 	to_chat(world, span_infoplain(span_slightly_larger(span_bold("A distress terminal has been activated. [GLOB.distress_terminals] terminals remain."))))
 
 	if(GLOB.distress_terminals < 1)
-		priority_announce("Distress signal received, additional delegates incoming.", "Overwatch Priority Alert")
-		GLOB.deployment_win_team = COMBINE_DEPLOYMENT_FACTION
-		SSticker.force_ending = FORCE_END_ROUND
-		to_chat(world, span_infoplain(span_slightly_larger(span_bold("All distress terminals activated, the Combine win."))))
+		if(faction_complete == 0)
+			priority_announce("Distress signal received, additional delegates incoming.", "Overwatch Priority Alert")
+			GLOB.deployment_win_team = COMBINE_DEPLOYMENT_FACTION
+			SSticker.force_ending = FORCE_END_ROUND
+			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All distress terminals activated, the Combine win."))))
+		else if(faction_complete == 1)
+			priority_announce("We've received your distress signal, reinforcements are inbound.", "Lambda Priority Alert")
+			GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
+			SSticker.force_ending = FORCE_END_ROUND
+			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All distress terminals activated, the Rebels win."))))
 
 
 	STOP_PROCESSING(SSprocessing, src)
@@ -60,7 +69,7 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 
 	activating = FALSE
 	for(var/mob/living/hooman in orange(1, src))
-		if(hooman.deployment_faction == COMBINE_DEPLOYMENT_FACTION && hooman.stat == CONSCIOUS)
+		if(hooman.deployment_faction == COMBINE_DEPLOYMENT_FACTION || hooman.deployment_faction == REBEL_DEPLOYMENT_FACTION && hooman.stat == CONSCIOUS)
 			activating = TRUE
 
 	if(activating && !completed)
@@ -78,4 +87,13 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 			last_hidden_warning = world.time + 45 SECONDS
 
 	if(time_to_complete < 1 SECONDS)
-		completed()
+		for(var/mob/living/hooman in orange(1, src))
+			if(hooman.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+				completed(0)
+			if(hooman.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+				completed(1)
+
+/obj/machinery/combine_distressterminal/lambda
+	name = "rebel distress terminal"
+	desc = "A repurposed combine server terminal which is capable of sending out a distress signal when activated. Activating all of the terminals in the location will win the game for the Rebels."
+	icon_state = "datapodterminal_hacked_l"
