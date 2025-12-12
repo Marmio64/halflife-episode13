@@ -151,6 +151,7 @@
 
 /datum/species/vortigaunt/hidden
 	name = "Hidden Vortigaunt"
+	id = SPECIES_VORTIGAUNT_HIDDEN
 
 /datum/species/vortigaunt/hidden/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
