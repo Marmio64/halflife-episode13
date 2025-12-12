@@ -152,7 +152,17 @@
 /datum/species/vortigaunt/hidden
 	name = "Hidden Vortigaunt"
 
+	var/datum/action/cooldown/spell/conjure/antlion/vortbugbait
+
 /datum/species/vortigaunt/hidden/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
 
 	vortheal.Remove(C)
+
+	vortbugbait = new(C)
+	vortbugbait.Grant(C)
+
+/datum/species/vortigaunt/hidden/on_species_loss(mob/living/carbon/C)
+	..()
+	vortbugbait.Remove(C)
+

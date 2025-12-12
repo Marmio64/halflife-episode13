@@ -261,7 +261,7 @@
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 	spells_to_add = list(/datum/action/cooldown/spell/conjure/antlion)
 
-/datum/outfit/deployment_loadout/rebel/tier3/vortigaunt/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/deployment_loadout/hidden/rebel/vortigaunt/pre_equip(mob/living/carbon/human/H)
 	H.faction += list(FACTION_ANTLION)
 	H.set_species(/datum/species/vortigaunt/hidden)
 	H.cmode_music = combat_music
