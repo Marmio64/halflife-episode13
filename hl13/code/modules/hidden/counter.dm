@@ -21,9 +21,19 @@ GLOBAL_VAR_INIT(number_of_hidden, 0)
 
 	var/combine_players = 12
 
+	var/rebel_players = 0
+
+/obj/machinery/the_hidden_time_counter/rebels
+	combine_players = 0
+	rebel_players = 12
+
 /obj/machinery/the_hidden_time_counter/double_players
 	number_of_hidden = 2
 	combine_players = 24
+
+/obj/machinery/the_hidden_time_counter/rebels/double_players
+	number_of_hidden = 2
+	rebel_players = 24
 
 /obj/machinery/the_hidden_time_counter/Initialize(mapload)
 	..()
@@ -49,7 +59,11 @@ GLOBAL_VAR_INIT(number_of_hidden, 0)
 		return
 
 	pick_retries++
-	var/chosen_candidate = pick(GLOB.deployment_combine_players)
+	var/chosen_candidate = null
+	if(combine_players > 0)
+		chosen_candidate = pick(GLOB.deployment_combine_players)
+	else if(rebel_players > 0)
+		chosen_candidate = pick(GLOB.deployment_rebel_players)
 	var/client/candidate_client = chosen_candidate
 	if(ishuman(candidate_client.mob))
 		var/mob/living/carbon/human/human_user = candidate_client.mob
@@ -108,3 +122,34 @@ GLOBAL_VAR_INIT(number_of_hidden, 0)
 		GLOB.deployment_flag_grace_period -= 1 SECONDS
 		return
 
+/obj/machinery/the_hidden_time_counter/rebels/process()
+
+	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
+		if(!time_ticking)
+			time_ticking = TRUE
+			to_chat(world, span_danger(span_slightly_larger(span_bold("Grace period up, let the hunt begin."))))
+			for(var/X in GLOB.deployment_hidden_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/hidden_start_round.ogg')
+			for(var/X in GLOB.deployment_rebel_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/hidden_start_round.ogg')
+
+		if(rebel_players <= SSticker.tdm_rebel_deaths && SSticker.IsRoundInProgress())
+			priority_announce("We're no longer detecting your team's biosignals. God have mercy on your souls.", "Lambda Priority Alert")
+			GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
+			SSticker.force_ending = FORCE_END_ROUND
+			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All Rebels are dead, the Hidden win."))))
+			STOP_PROCESSING(SSprocessing, src)
+
+		if(GLOB.number_of_hidden < 1 && SSticker.IsRoundInProgress())
+			priority_announce("We're no longer detecting any unidentified forces. Mission complete.", "Lambda Priority Alert")
+			GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
+			SSticker.force_ending = FORCE_END_ROUND
+			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All Hidden were killed, the Rebels win."))))
+			STOP_PROCESSING(SSprocessing, src)
+
+
+	else
+		GLOB.deployment_flag_grace_period -= 1 SECONDS
+		return

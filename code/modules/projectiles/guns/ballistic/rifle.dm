@@ -221,11 +221,13 @@
 	tac_reloads = FALSE
 	spread = 1 //sniper weapon
 	var/draw_time = 2.3 SECONDS
+	var/scoped = TRUE
 	SET_BASE_PIXEL(0, 0)
 
 /obj/item/gun/ballistic/rifle/rebarxbow/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/scope, range_modifier = 3)
+	if (scoped)
+		AddComponent(/datum/component/scope, range_modifier = 3)
 
 /obj/item/gun/ballistic/rifle/rebarxbow/rack(mob/user = null)
 	if (bolt_locked)
@@ -283,6 +285,12 @@
 /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
 	desc = "A handcrafted crossbow. Can fire sharpened iron rods and pieces of rebar at high velocities with large amounts of armor piercing capability."
 	draw_time = 1.2 SECONDS
+
+/obj/item/gun/ballistic/rifle/rebarxbow/hidden
+	desc = "A handcrafted crossbow. Can fire sharpened iron rods and pieces of rebar at high velocities with large amounts of armor piercing capability. The scope is cracked and useless."
+	draw_time = 1.2 SECONDS
+	scoped = FALSE
+	projectile_damage_multiplier = 1.67 //67
 
 /obj/item/gun/ballistic/rifle/rebarxbow/syndie
 	name = "syndicate rebar crossbow"

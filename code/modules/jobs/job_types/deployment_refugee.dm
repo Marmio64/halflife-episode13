@@ -68,7 +68,7 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 				chosen = /obj/item/hl2/loadout_picker/rebel/tier5
 
 	if(SSmapping.current_map.combat_deployment_gamemode == "the_hidden")
-		chosen = /obj/item/hl2/loadout_picker/hidden/combine
+		chosen = /obj/item/hl2/loadout_picker/hidden/rebel
 
 	if(chosen)
 		var/turf/T = get_turf(H)
