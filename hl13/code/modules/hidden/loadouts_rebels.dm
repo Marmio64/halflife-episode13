@@ -5,6 +5,7 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/hidden/rebel/crossbow_rebel,
 			/datum/outfit/deployment_loadout/hidden/rebel/molotov_partisan,
+			/datum/outfit/deployment_loadout/hidden/rebel/slugger,
 			/datum/outfit/deployment_loadout/hidden/rebel/ar2_rebel,
 			/datum/outfit/deployment_loadout/hidden/rebel/scout,
 			/datum/outfit/deployment_loadout/hidden/rebel/medic_rebel,
@@ -48,42 +49,61 @@
 	back = /obj/item/storage/backpack/halflife/satchel
 
 	backpack_contents = list(
-		/obj/item/ammo_casing/rebar = 4,
+		/obj/item/ammo_casing/rebar = 5,
 		/obj/item/stack/medical/gauze/quik_gauze = 1,
 		/obj/item/flashlight/flare/the_hidden = 1,
 	)
 
-//The third defender, cremator. They're very good at holding locations thanks to high damage output and the ability to lay down flame trails.
-//However, they're slow, their gun runs out of juice quick, and you need to be careful not to set team mates on fire either...
-//They also don't get a flare, since their flame trails can show light.
+//Use molotovs to keep the hidden at bay
 /datum/outfit/deployment_loadout/hidden/rebel/molotov_partisan
 	name = "Hidden: Refugee Molotov Partisan"
 	display_name = "DEFENSE: Refugee Molotov Partisan"
-	desc = "Keep the Hidden at bay both with molotovs and tinbombs, which you can regenerate every once in a while. Take care not to ignite your team mates."
+	desc = "Keep the Hidden at bay both with molotovs, and your SMG. Take care not to ignite your team mates."
 	id_name = "Partisan"
 
 	uniform = /obj/item/clothing/under/citizen/refugee
-	mask = /obj/item/clothing/mask/gas/hl2/military
-	suit = /obj/item/clothing/suit/armor/armored
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
+	suit_store = /obj/item/gun/ballistic/automatic/mp7
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	l_pocket = /obj/item/stack/medical/gauze/quik_gauze
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
 	r_pocket = /obj/item/flashlight/hand_crank
 
-	back = /obj/item/storage/backpack/halflife/satchel
+	back = /obj/item/storage/backpack/halflife/satchel/larger
 
 	backpack_contents = list(
-		/obj/item/grenade/halflife/molotov,
-		/obj/item/grenade/halflife/molotov,
+		/obj/item/stack/medical/gauze/quik_gauze = 1,
+		/obj/item/grenade/halflife/molotov = 4,
+		/obj/item/ammo_box/magazine/mp7 = 1,
 		/obj/item/lighter,
-		/obj/item/grenade/halflife/tinbomb,
-		/obj/item/grenade/halflife/tinbomb,
 	)
 
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/tinbomb)
+
+/datum/outfit/deployment_loadout/hidden/rebel/slugger
+	name = "Hidden: Rebel Slugger"
+	display_name = "DEFENSE: Rebel Slugger"
+	desc = "Utilize high strength and a sledgehammer to keep the Hidden away from team mates."
+	id_name = "Slugger"
+
+	uniform = /obj/item/clothing/under/citizen/rebel
+	gloves = /obj/item/clothing/gloves/fingerless
+	suit = /obj/item/clothing/suit/armor/rebel
+	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
+
+	l_pocket = /obj/item/knife/combat/survival
+	r_pocket = /obj/item/flashlight/hand_crank
+
+	belt = /obj/item/storage/belt/civilprotection/riotcop_hidden
+
+	ears = /obj/item/radio/headset/rebel_deployment
+	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
+
+	back = /obj/item/melee/sledgehammer
+
+	extra_str = 8
 
 //The attacker, conscripts move a bit faster than their comrades and have the best medium to long range weapon.
 //They excel at giving chase to the hidden, just don't get cocky.
@@ -93,7 +113,7 @@
 	desc = "Utilize your high power M4A1 to keep pressure on the Hidden from close and long range."
 	id_name = "Rebel"
 
-	suit = /obj/item/clothing/suit/armor/rebel/light
+	suit = /obj/item/clothing/suit/armor/rebel/light/speedy
 	suit_store = /obj/item/gun/ballistic/automatic/m4a1
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/flashlight/hand_crank
