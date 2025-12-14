@@ -67,8 +67,19 @@
 	damage = 30
 	speed = 1.5
 	armour_penetration = 20
+	range = 25
 	damage_type = BURN
 	hitsound = 'hl13/sound/creatures/antlion_worker/antlion_shoot.ogg'
+	///bonus damage done to objects
+	var/object_damage = 60
+
+/obj/projectile/acidspray/on_hit(atom/target, blocked = 0, pierce_hit)
+	if(blocked == 100)
+		return ..()
+	if(isobj(target))
+		var/obj/hit_object = target
+		hit_object.take_damage(object_damage, BRUTE, BULLET, FALSE)
+	return ..()
 
 /mob/living/basic/halflife/antlion_worker/zombie_faction
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)

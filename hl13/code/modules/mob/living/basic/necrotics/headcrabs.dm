@@ -84,7 +84,7 @@
 /mob/living/basic/halflife/headcrab/deployment
 	melee_damage_lower = 10
 	melee_damage_upper = 13
-	obj_damage = 10
+	obj_damage = 12
 
 /mob/living/basic/halflife/headcrab/armored
 	name = "Armored Headcrab"

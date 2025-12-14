@@ -108,14 +108,14 @@
 /datum/outfit/deployment_loadout/xen/tier3/antlion_worker
 	name = "Deployment: Antlion Worker"
 	display_name = "Antlion Worker (Support)"
-	desc = "Despite your very low durability, you have powerful acid spray attacks for putting pressure on enemies from afar. You specialize in wearing down enemies from afar."
+	desc = "Despite your very low durability, you have powerful acid spray attacks for putting pressure on enemies from afar, which also deal triple damage against structures. You specialize in wearing down enemies and buildings from afar."
 
 	mob_to_be = /mob/living/basic/halflife/antlion_worker/zombie_faction
 
 /datum/outfit/deployment_loadout/xen/tier3/antlion_grub
 	name = "Deployment: Antlion Grub"
 	display_name = "Antlion Grub (Support)"
-	desc = "You have almost no health and deal very low damage, but can call upon and summon antlions from deep underground to protect you!"
+	desc = "You have almost no health and deal low damage, but can call upon and summon antlions from deep underground to protect you!"
 
 	mob_to_be = /mob/living/basic/halflife/grub/deployment
 

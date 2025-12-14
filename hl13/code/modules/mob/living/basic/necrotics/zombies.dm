@@ -184,8 +184,8 @@
 
 /mob/living/basic/halflife/zombie/zombie_grunt/deployment
 	speed = 0.5
-	maxHealth = 120
-	health = 120
+	maxHealth = 125
+	health = 125
 
 ///Meant to be avoided rather than fought head on. Very slow, but dangerous in melee.
 /mob/living/basic/halflife/zombie/engineer
@@ -220,6 +220,8 @@
 
 /mob/living/basic/halflife/zombie/fungal/deployment
 	fungalheal_amt = 0.2
+	maxHealth = 150
+	health = 150
 	speed = 1.85
 
 /mob/living/basic/halflife/zombie/fungal/Initialize(mapload)
@@ -411,8 +413,8 @@
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/poisonzombie
 
 /mob/living/basic/halflife/zombie/poison/deployment
-	maxHealth = 185
-	health = 185
+	maxHealth = 200
+	health = 200
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/poison/proc/get_innate_abilities()

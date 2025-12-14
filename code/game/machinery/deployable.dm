@@ -102,7 +102,7 @@
 	desc = "This space is blocked off by a crude assortment of planks."
 	icon_state = "plankbarricade"
 	drop_amount = 1
-	max_integrity = 50
+	max_integrity = 90
 	proj_pass_rate = 65
 	layer = SIGN_LAYER
 
