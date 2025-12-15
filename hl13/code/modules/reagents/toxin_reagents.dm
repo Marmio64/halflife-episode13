@@ -50,5 +50,5 @@
 
 /datum/reagent/toxin/headcrab_venom/deadly
 	name = "Deadly Headcrab Venom"
-	toxpwr = 0.5
+	toxpwr = 0.75
 	liver_damage_multiplier = 0.15

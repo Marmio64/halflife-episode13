@@ -56,20 +56,24 @@ GLOBAL_VAR_INIT(deployment_xen_cash, 0)
 		chosen = /obj/item/hl2/loadout_picker/xen/tier3
 	else if(DEPLOYMENT_TIER2_XEN <= GLOB.deployment_xen_cash)
 		chosen = /obj/item/hl2/loadout_picker/xen/tier2
-		if(prob(10)) //10% chance to get the next tier instead, for increased variety
+		if(prob(15)) //15% chance to get the next tier instead, for increased variety
 			chosen = /obj/item/hl2/loadout_picker/xen/tier3
 	else if(DEPLOYMENT_TIER1_XEN <= GLOB.deployment_xen_cash)
 		chosen = /obj/item/hl2/loadout_picker/xen/tier1
-		if(prob(10))
+		if(prob(15))
 			chosen = /obj/item/hl2/loadout_picker/xen/tier2
 
 	if(DEPLOYMENT_TIER4_XEN <= GLOB.deployment_xen_cash)
-		if(DEPLOYMENT_TIER4_EXTRA_CHANCE_XEN <= GLOB.deployment_xen_cash)
+		if(prob(DEPLOYMENT_TIER5_HIGH_XEN_CHANCE))
+			chosen = /obj/item/hl2/loadout_picker/xen/tier4
+
+	if(DEPLOYMENT_TIER5_XEN <= GLOB.deployment_xen_cash)
+		if(DEPLOYMENT_TIER5_EXTRA_CHANCE_XEN <= GLOB.deployment_xen_cash)
 			if(prob(DEPLOYMENT_TIER5_XEN_CHANCE))
-				chosen = /obj/item/hl2/loadout_picker/xen/tier4
+				chosen = /obj/item/hl2/loadout_picker/xen/tier5
 		else
 			if(prob(DEPLOYMENT_TIER5_HIGH_XEN_CHANCE))
-				chosen = /obj/item/hl2/loadout_picker/xen/tier4
+				chosen = /obj/item/hl2/loadout_picker/xen/tier5
 
 	if(chosen)
 		var/turf/T = get_turf(H)

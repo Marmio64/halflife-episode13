@@ -89,6 +89,9 @@
 		play_dead = new(src)
 		play_dead.Grant(src)
 
+/mob/living/basic/halflife/zombie/deployment
+	speed = 1.5
+
 /mob/living/basic/halflife/zombie/zombine
 	name = "Zombine"
 	desc = "A shambling combine soldier, taken over by a parasitic head crab. Capable of running and is heavily armored."
@@ -255,6 +258,11 @@
 /mob/living/basic/halflife/zombie/fast/deployment
 	melee_damage_lower = 10
 	melee_damage_upper = 13
+
+/mob/living/basic/halflife/zombie/fast/deployment/upgraded
+	melee_attack_cooldown = 0.5 SECONDS
+	maxHealth = 75
+	health = 75
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/fast/proc/get_innate_abilities()
@@ -491,7 +499,7 @@
 	melee_damage_upper = 26
 	armour_penetration = 15
 	obj_damage = 20
-	speed = 2.5
+	speed = 2.35
 	basic_mob_flags = NONE
 	attack_sound = 'hl13/sound/creatures/zombineattack.ogg'
 	death_sound = 'hl13/sound/creatures/zombinedeath.ogg'
@@ -505,7 +513,7 @@
 
 /mob/living/basic/halflife/zombie/cremator/death(gibbed)
 	..()
-	explosion(src, heavy_impact_range = 3, light_impact_range = 4, adminlog = FALSE)
+	explosion(src, heavy_impact_range = 3, light_impact_range = 5, adminlog = FALSE)
 	flame_radius(2, get_turf(src))
 	playsound(loc, 'hl13/sound/halflifeeffects/explosion_fire_grenade.ogg', 30, TRUE, 4)
 	gib()
@@ -535,7 +543,7 @@
 /datum/action/cooldown/spell/play_dead/cast(mob/living/basic/halflife/zombie/cast_on)
 	. = ..()
 
-	if(!do_after(cast_on, 1.25 SECONDS, timed_action_flags = IGNORE_INCAPACITATED))
+	if(!do_after(cast_on, 1 SECONDS, timed_action_flags = IGNORE_INCAPACITATED))
 		return . | SPELL_CANCEL_CAST
 
 	if(playing_dead)

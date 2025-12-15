@@ -52,7 +52,7 @@
 	display_name = "Zombie (Offense)"
 	desc = "A standard zombie. Very plain!"
 
-	mob_to_be = /mob/living/basic/halflife/zombie
+	mob_to_be = /mob/living/basic/halflife/zombie/deployment
 
 /datum/outfit/deployment_loadout/xen/tier2/zombie_engineer
 	name = "Deployment: Zombified Engineer"
@@ -119,30 +119,101 @@
 
 	mob_to_be = /mob/living/basic/halflife/grub/deployment
 
-/datum/outfit/deployment_loadout/xen/tier3/cremator
+
+//// TIER 4 //////////////
+
+/datum/outfit/deployment_loadout/xen/tier4/elite_zombine
+	name = "Deployment: Elite Zombine"
+	display_name = "Elite Zombine (Offense)"
+	desc = "A heavyweight zombie with good health reserves, a charge ability, and a deployable grenade. You specialize in blowing up enemy fortifications."
+
+	mob_to_be = /mob/living/basic/halflife/zombie/zombine/elite
+
+/datum/outfit/deployment_loadout/xen/tier4/cremator
 	name = "Deployment: Cremator Zombie"
 	display_name = "Cremator Zombie (Offense)"
 	desc = "You are slow and have low health, but are flameproof and create a large, fiery explosion when you die, in addition to being strong enough to inflict extra damage in melee. You specialize in blowing up enemy fortifications."
 
 	mob_to_be = /mob/living/basic/halflife/zombie/cremator
 
-//// TIER 4 //////////////
+/datum/outfit/deployment_loadout/xen/tier4/fast_zombie
+	name = "Deployment: Upgraded Fast Zombie"
+	display_name = "Upgraded Fast Zombie (Offense)"
+	desc = "Although sporting very low health, the fast zombie is fast enough to be able to run down humans and can deal a lot of damage quickly. You specialize in chasing down lone humans."
+
+	mob_to_be = /mob/living/basic/halflife/zombie/fast/deployment/upgraded
+
+/datum/outfit/deployment_loadout/xen/tier4/light_crab_walker
+	name = "Deployment: Light Crabwalker"
+	display_name = "Light Crabwalker (Defense)"
+	desc = "You are a human that has undergone severe transformations following years of living in toxic sludge, eating humans, and wearing rotting xenian flesh. Now feral, you fight on the side of Xen and are unique in being able to use your hands to heal yourself, set up traps, and even use human firearms (though you aren't very good with them)."
+	id_name = "Crabwalker"
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	suit = /obj/item/clothing/suit/armor/platearmor/deployment
+
+	l_pocket = /obj/item/knife/combat/bone
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	head = /obj/item/clothing/head/helmet/halflife/headcrab
+	gloves = /obj/item/clothing/gloves/fingerless
+	mask = /obj/item/clothing/mask/bandana/sinew
+
+	shoes = /obj/item/clothing/shoes/boots
+
+	backpack_contents = list(
+		/obj/item/spear/halflife/deathmatch/deployment = 1,
+		/obj/item/restraints/legcuffs/beartrap = 1,
+		/obj/item/stack/medical/bandage = 1,
+	)
+
+	extra_str = -2 //emaciated
+	extra_dex = -2
+	mob_to_be = null
+
+/datum/outfit/deployment_loadout/xen/tier4/light_crab_walker/pre_equip(mob/living/carbon/human/H)
+	H.set_species(/datum/species/human/crabwalker)
+	var/datum/action/new_action = new /datum/action/cooldown/mob_cooldown/talk_xen(H.mind || H)
+	new_action.Grant(H)
 
 /datum/outfit/deployment_loadout/xen/tier4/gonome
+	name = "Deployment: Infantile Fungal Gonome"
+	display_name = "Infantile Fungal Gonome (Defense)"
+	desc = "You are an incomplete fungal gonome. While not as powerful as a fullborn, you're still tanky and dangerous, and retain the ability to spit out headcrabs and lay down xen flooring to heal off of."
+
+	mob_to_be = /mob/living/basic/halflife/zombie/gonome/deployment
+
+/datum/outfit/deployment_loadout/xen/tier4/antlion_worker
+	name = "Deployment: Upgraded Antlion Worker"
+	display_name = "Upgraded Antlion Worker (Support)"
+	desc = "Despite your very low durability, you have powerful acid spray attacks for putting pressure on enemies from afar, which also deal triple damage against structures. You specialize in wearing down enemies and buildings from afar."
+
+	mob_to_be = /mob/living/basic/halflife/antlion_worker/zombie_faction/upgraded
+
+/datum/outfit/deployment_loadout/xen/tier4/antlion_grub
+	name = "Deployment: Upgraded Antlion Grub"
+	display_name = "Upgraded Antlion Grub (Support)"
+	desc = "You have almost no health and deal low damage, but can call upon and summon antlions from deep underground to protect you!"
+
+	mob_to_be = /mob/living/basic/halflife/grub/deployment/upgraded
+
+//// TIER 5 //////////////
+
+/datum/outfit/deployment_loadout/xen/tier5/gonome
 	name = "Deployment: Fungal Gonome"
 	display_name = "Fungal Gonome (Support)"
 	desc = "You aren't as powerful in direct combat as antlion guards, but can sustain yourself through healing off fungal flooring you can plant, and can create headcrabs for extra pressure."
 
 	mob_to_be = /mob/living/basic/halflife/zombie/gonome/complete/deployment
 
-/datum/outfit/deployment_loadout/xen/tier4/antlion_guard
+/datum/outfit/deployment_loadout/xen/tier5/antlion_guard
 	name = "Deployment: Antlion Guard"
 	display_name = "Antlion Guard (Offense)"
 	desc = "A heavyweight antlion guard, you have the highest damage output and health of any antlion or zombie, and excel at smashing through enemy fortifications."
 
 	mob_to_be = /mob/living/basic/halflife/antlion_guard/deployment
 
-/datum/outfit/deployment_loadout/xen/tier4/heavy_crab_walker
+/datum/outfit/deployment_loadout/xen/tier5/heavy_crab_walker
 	name = "Deployment: Heavy Crabwalker"
 	display_name = "Heavy Crabwalker (Defense)"
 	desc = "You are a human that has undergone severe transformations following years of living in toxic sludge, eating humans, and wearing rotting xenian flesh. Now feral, you fight on the side of Xen and are unique in being able to use your hands to heal yourself, set up traps, and even use human firearms (though you aren't very good with them)."
@@ -153,7 +224,7 @@
 
 	l_pocket = /obj/item/knife/combat/bone
 
-	back = /obj/item/storage/backpack/halflife/satchel
+	back = /obj/item/storage/backpack/halflife/satchel/larger
 	head = /obj/item/clothing/head/helmet/halflife/headcrab/gonome
 	gloves = /obj/item/clothing/gloves/fingerless
 	mask = /obj/item/clothing/mask/bandana/sinew
@@ -170,7 +241,7 @@
 	extra_str = 6
 	mob_to_be = null
 
-/datum/outfit/deployment_loadout/xen/tier4/heavy_crab_walker/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/deployment_loadout/xen/tier5/heavy_crab_walker/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/human/crabwalker)
 	var/datum/action/new_action = new /datum/action/cooldown/mob_cooldown/talk_xen(H.mind || H)
 	new_action.Grant(H)

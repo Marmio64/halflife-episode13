@@ -362,6 +362,12 @@
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"rt" = (
+/obj/structure/halflife/road_barrier/concrete/alt{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/zombies)
 "rP" = (
 /obj/structure/halflife/headcrab_cannister,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -690,6 +696,10 @@
 "DJ" = (
 /obj/structure/table/halflife/no_smooth/large/wood/square,
 /obj/machinery/light/small/directional/north,
+/obj/item/ammo_box/strilka310/a762{
+	pixel_x = 6;
+	pixel_y = 2
+	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/outdoors/deployment_city/zombies)
 "Eq" = (
@@ -820,6 +830,10 @@
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/zombies)
 "Mr" = (
+/obj/item/ammo_box/magazine/makeshift9mm{
+	pixel_x = -6;
+	pixel_y = 7
+	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/outdoors/deployment_city/zombies)
 "Mu" = (
@@ -935,6 +949,10 @@
 /area/halflife/outdoors/deployment_city/zombies)
 "Se" = (
 /obj/structure/table/halflife/no_smooth/large/wood/square,
+/obj/item/stack/medical/bandage{
+	pixel_x = 6;
+	pixel_y = 4
+	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/outdoors/deployment_city/zombies)
 "Sg" = (
@@ -997,6 +1015,14 @@
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Uo" = (
 /obj/structure/table/halflife/wood,
+/obj/item/reagent_containers/hypospray/medipen/blood{
+	pixel_x = -4;
+	pixel_y = 9
+	},
+/obj/item/reagent_containers/hypospray/medipen/blood{
+	pixel_x = 4;
+	pixel_y = 3
+	},
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Uq" = (
@@ -6526,7 +6552,7 @@ mi
 mi
 mi
 hS
-SJ
+HG
 XJ
 kd
 kd
@@ -9804,7 +9830,7 @@ HG
 mi
 mi
 hS
-SJ
+HG
 XJ
 kd
 kd
@@ -9953,7 +9979,7 @@ mi
 mi
 mi
 hS
-SJ
+HG
 XJ
 kd
 kd
@@ -10254,7 +10280,7 @@ mi
 HG
 XJ
 QT
-kd
+rt
 kd
 XJ
 HG
@@ -10552,7 +10578,7 @@ mi
 XJ
 XJ
 QT
-kd
+rt
 kd
 XJ
 XJ
@@ -11148,7 +11174,7 @@ mi
 mi
 XJ
 QT
-kd
+rt
 kd
 XJ
 XJ
@@ -11446,7 +11472,7 @@ mi
 HG
 XJ
 QT
-kd
+rt
 kd
 XJ
 HG
@@ -11741,7 +11767,7 @@ mi
 mi
 mi
 hS
-SJ
+HG
 XJ
 kd
 kd
@@ -11890,7 +11916,7 @@ VT
 mi
 mi
 hS
-SJ
+HG
 XJ
 kd
 kd
@@ -15168,7 +15194,7 @@ mi
 mi
 mi
 hS
-SJ
+HG
 XJ
 kd
 kd

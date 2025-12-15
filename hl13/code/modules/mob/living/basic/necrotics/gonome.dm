@@ -98,6 +98,16 @@
 	if(hud_used) //clientless zombies
 		hud_used.alien_plasma_display.maptext = MAPTEXT("<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='green'>[round(fungal_nutrition)]</font></div>")
 
+/mob/living/basic/halflife/zombie/gonome/deployment
+	melee_damage_lower = 22
+	melee_damage_upper = 26
+	armour_penetration = 0
+	maxHealth = 200
+	health = 200
+	obj_damage = 18
+	speed = 2.5
+	fungalheal_amt = 0.1
+	fully_grown = TRUE //cannot grow fully
 
 /mob/living/basic/halflife/zombie/gonome/complete
 	name = "Fungal Gonome"

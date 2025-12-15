@@ -115,10 +115,13 @@
 	var/grace_period_text = TRUE
 	var/capturable = FALSE
 
+	var/human_respawn_speed = 40 SECONDS
+
 /obj/machinery/deployment_comms_tower/rebel/xen_defense/Initialize(mapload)
 	. = ..()
 	GLOB.deployment_rebels_flag_time_left = rebel_time
 	GLOB.deployment_flag_grace_period = grace_time
+	GLOB.deployment_respawn_rate_rebels = human_respawn_speed
 
 /obj/machinery/deployment_comms_tower/rebel/xen_defense/process()
 	. = ..()

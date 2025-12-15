@@ -371,7 +371,6 @@
 		loadouts = list()
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/xen/tier3/fast_zombie,
-			/datum/outfit/deployment_loadout/xen/tier3/cremator,
 			/datum/outfit/deployment_loadout/xen/tier3/zombine,
 			/datum/outfit/deployment_loadout/xen/tier3/fungal_zombie,
 			/datum/outfit/deployment_loadout/xen/tier3/antlion_worker,
@@ -390,9 +389,29 @@
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/outfit/deployment_loadout/xen/tier4/antlion_guard,
-			/datum/outfit/deployment_loadout/xen/tier4/heavy_crab_walker,
+			/datum/outfit/deployment_loadout/xen/tier4/elite_zombine,
+			/datum/outfit/deployment_loadout/xen/tier4/cremator,
+			/datum/outfit/deployment_loadout/xen/tier4/fast_zombie,
+			/datum/outfit/deployment_loadout/xen/tier4/light_crab_walker,
 			/datum/outfit/deployment_loadout/xen/tier4/gonome,
+			/datum/outfit/deployment_loadout/xen/tier4/antlion_worker,
+			/datum/outfit/deployment_loadout/xen/tier4/antlion_grub,
+		)
+		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.display_name)] = loadout
+	return loadouts
+
+/obj/item/hl2/loadout_picker/xen/tier5
+	current_tier = 5
+
+/obj/item/hl2/loadout_picker/xen/tier5/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/outfit/deployment_loadout/xen/tier5/antlion_guard,
+			/datum/outfit/deployment_loadout/xen/tier5/heavy_crab_walker,
+			/datum/outfit/deployment_loadout/xen/tier5/gonome,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

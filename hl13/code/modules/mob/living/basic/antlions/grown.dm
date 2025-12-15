@@ -30,6 +30,7 @@
 	var/fire_delay = 10
 	var/aggro_sound = list('hl13/sound/creatures/antlion/pain1.ogg', 'hl13/sound/creatures/antlion/pain2.ogg')
 	var/idle_sounds = list('hl13/sound/creatures/antlion/idle1.ogg','hl13/sound/creatures/antlion/idle2.ogg', ,'hl13/sound/creatures/antlion/idle3.ogg', ,'hl13/sound/creatures/antlion/idle4.ogg', ,'hl13/sound/creatures/antlion/idle5.ogg' )
+	var/spray_cooldown = 3 SECONDS
 
 	initial_language_holder = /datum/language_holder/zombie
 	lighting_cutoff_green = 15
@@ -52,7 +53,7 @@
 		/datum/component/ranged_attacks,\
 		projectile_type = /obj/projectile/acidspray,\
 		projectile_sound = 'hl13/sound/creatures/antlion_worker/antlion_prefire.ogg',\
-		cooldown_time = 3 SECONDS,\
+		cooldown_time = spray_cooldown,\
 	)
 
 	if(LAZYLEN(loot))
@@ -83,6 +84,11 @@
 
 /mob/living/basic/halflife/antlion_worker/zombie_faction
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
+
+/mob/living/basic/halflife/antlion_worker/zombie_faction/upgraded
+	spray_cooldown = 2 SECONDS
+	maxHealth = 64
+	health = 64
 
 //antlions
 /mob/living/basic/halflife/antlion_guard
