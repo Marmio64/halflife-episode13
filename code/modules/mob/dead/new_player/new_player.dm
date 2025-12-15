@@ -98,6 +98,17 @@
 		observer.name = observer.real_name
 		observer.client.init_verbs()
 		observer.client.player_details.time_of_death = world.time
+		//hl13 tdm edit
+		if(SSmapping.current_map.minetype == "combat_deployment")
+			if(observer.client.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+				observer.client.player_details.respawn_wave_time = SSrespawns.combine_wave_timer
+			else if(observer.client.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+				observer.client.player_details.respawn_wave_time = SSrespawns.rebel_wave_timer
+			else if(observer.client.deployment_faction == XEN_DEPLOYMENT_FACTION)
+				observer.client.player_details.respawn_wave_time = SSrespawns.xen_wave_timer
+			else
+				observer.client.player_details.respawn_wave_time = 30 SECONDS
+	//hl13 tdm edit end
 	observer.update_appearance()
 	observer.stop_sound_channel(CHANNEL_LOBBYMUSIC)
 	deadchat_broadcast(" has observed.", "<b>[observer.real_name]</b>", follow_target = observer, turf_target = get_turf(observer), message_type = DEADCHAT_DEATHRATTLE)

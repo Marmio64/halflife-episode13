@@ -26,6 +26,8 @@ GLOBAL_LIST_EMPTY_TYPED(player_details, /datum/player_details)
 	var/datum/achievement_data/achievements
 	/// World.time this player last died
 	var/time_of_death = 0
+	/// What respawn wave time was assigned at death time, for hl13 tdm
+	var/respawn_wave_time = 0
 
 /datum/player_details/New(key)
 	achievements = new(key)

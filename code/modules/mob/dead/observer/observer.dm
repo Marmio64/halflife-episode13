@@ -294,6 +294,17 @@ Works together with spawning an observer, noted above.
 		recordable_time = former_mob.timeofdeath
 
 	ghost.client?.player_details.time_of_death = recordable_time
+	//hl13 tdm edit
+	if(SSmapping.current_map.minetype == "combat_deployment")
+		if(ghost.client?.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+			ghost.client?.player_details.respawn_wave_time = SSrespawns.combine_wave_timer
+		else if(ghost.client?.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			ghost.client?.player_details.respawn_wave_time = SSrespawns.rebel_wave_timer
+		else if(ghost.client?.deployment_faction == XEN_DEPLOYMENT_FACTION)
+			ghost.client?.player_details.respawn_wave_time = SSrespawns.xen_wave_timer
+		else
+			ghost.client?.player_details.respawn_wave_time = 30 SECONDS
+	//hl13 tdm edit end
 	SEND_SIGNAL(src, COMSIG_MOB_GHOSTIZED)
 	return ghost
 

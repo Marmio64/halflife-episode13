@@ -162,6 +162,17 @@
 	if (client)
 		client.move_delay = initial(client.move_delay)
 		client.player_details.time_of_death = timeofdeath
+		//hl13 tdm edit
+		if(SSmapping.current_map.minetype == "combat_deployment")
+			if(client.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+				client.player_details.respawn_wave_time = SSrespawns.combine_wave_timer
+			else if(client.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+				client.player_details.respawn_wave_time = SSrespawns.rebel_wave_timer
+			else if(client.deployment_faction == XEN_DEPLOYMENT_FACTION)
+				client.player_details.respawn_wave_time = SSrespawns.xen_wave_timer
+			else
+				client.player_details.respawn_wave_time = 30 SECONDS
+	//hl13 tdm edit end
 		SSambience.kill_droning(client)
 
 		if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
