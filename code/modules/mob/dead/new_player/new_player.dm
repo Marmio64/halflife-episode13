@@ -100,11 +100,11 @@
 		observer.client.player_details.time_of_death = world.time
 		//hl13 tdm edit
 		if(SSmapping.current_map.minetype == "combat_deployment")
-			if(observer.client.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+			if(observer.client.player_details.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
 				observer.client.player_details.respawn_wave_time = SSrespawns.combine_wave_timer
-			else if(observer.client.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			else if(observer.client.player_details.deployment_faction == REBEL_DEPLOYMENT_FACTION)
 				observer.client.player_details.respawn_wave_time = SSrespawns.rebel_wave_timer
-			else if(observer.client.deployment_faction == XEN_DEPLOYMENT_FACTION)
+			else if(observer.client.player_details.deployment_faction == XEN_DEPLOYMENT_FACTION)
 				observer.client.player_details.respawn_wave_time = SSrespawns.xen_wave_timer
 			else
 				observer.client.player_details.respawn_wave_time = 30 SECONDS
@@ -146,21 +146,21 @@
 	if(!(job.job_flags & JOB_NEW_PLAYER_JOINABLE))
 		return JOB_UNAVAILABLE_GENERIC
 	if(job.combat_deployment_job)
-		if(client.deployment_faction)
-			if(client.deployment_faction != job.combat_deployment_faction)
+		if(client.player_details.deployment_faction)
+			if(client.player_details.deployment_faction != job.combat_deployment_faction)
 				return JOB_UNAVAILABLE_WRONGTEAM
 		if(SSmapping.current_map.combat_deployment_gamemode != "xen_defense")
-			if(job.combat_deployment_faction == COMBINE_DEPLOYMENT_FACTION  && !client.deployment_faction)
+			if(job.combat_deployment_faction == COMBINE_DEPLOYMENT_FACTION  && !client.player_details.deployment_faction)
 				if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players) && SSmapping.current_map.combat_deployment_gamemode != "the_hidden")
 					return JOB_UNAVAILABLE_TEAMFULL
-			if(job.combat_deployment_faction == REBEL_DEPLOYMENT_FACTION && !client.deployment_faction)
+			if(job.combat_deployment_faction == REBEL_DEPLOYMENT_FACTION && !client.player_details.deployment_faction)
 				if(length(GLOB.deployment_combine_players) < length(GLOB.deployment_rebel_players))
 					return JOB_UNAVAILABLE_TEAMFULL
 		else
-			if(job.combat_deployment_faction == XEN_DEPLOYMENT_FACTION  && !client.deployment_faction)
+			if(job.combat_deployment_faction == XEN_DEPLOYMENT_FACTION  && !client.player_details.deployment_faction)
 				if((length(GLOB.deployment_rebel_players)*1.5) < length(GLOB.deployment_xen_players)) //the multiplication means the zombie faction will always have more players than rebels
 					return JOB_UNAVAILABLE_TEAMFULL
-			if(job.combat_deployment_faction == REBEL_DEPLOYMENT_FACTION && !client.deployment_faction)
+			if(job.combat_deployment_faction == REBEL_DEPLOYMENT_FACTION && !client.player_details.deployment_faction)
 				if(length(GLOB.deployment_xen_players) < (length(GLOB.deployment_rebel_players)*1.5))
 					return JOB_UNAVAILABLE_TEAMFULL
 	if((job.current_positions >= job.total_positions) && job.total_positions != -1)

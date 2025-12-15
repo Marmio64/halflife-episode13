@@ -94,8 +94,6 @@
 
 //Combat deployment things
 
-/client/var/deployment_faction = null
-
 GLOBAL_LIST_EMPTY(deployment_combine_players)
 GLOBAL_LIST_EMPTY(deployment_rebel_players)
 GLOBAL_LIST_EMPTY(deployment_xen_players)
@@ -103,7 +101,7 @@ GLOBAL_LIST_EMPTY(deployment_hidden_players)
 
 /mob/living/carbon/human/proc/setdeploymentfaction(faction)
 	if(client)
-		client.deployment_faction = faction
+		client.player_details.deployment_faction = faction //this should make it persistent across logouts
 		deployment_faction = faction
 		switch(faction)
 			if(COMBINE_DEPLOYMENT_FACTION)

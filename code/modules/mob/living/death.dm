@@ -164,11 +164,11 @@
 		client.player_details.time_of_death = timeofdeath
 		//hl13 tdm edit
 		if(SSmapping.current_map.minetype == "combat_deployment")
-			if(client.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+			if(client.player_details.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
 				client.player_details.respawn_wave_time = SSrespawns.combine_wave_timer
-			else if(client.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			else if(client.player_details.deployment_faction == REBEL_DEPLOYMENT_FACTION)
 				client.player_details.respawn_wave_time = SSrespawns.rebel_wave_timer
-			else if(client.deployment_faction == XEN_DEPLOYMENT_FACTION)
+			else if(client.player_details.deployment_faction == XEN_DEPLOYMENT_FACTION)
 				client.player_details.respawn_wave_time = SSrespawns.xen_wave_timer
 			else
 				client.player_details.respawn_wave_time = 30 SECONDS

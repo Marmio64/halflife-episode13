@@ -44,13 +44,13 @@
 
 /obj/machinery/cash_deposit/examine(mob/user)
 	. = ..()
-	if(deployment_faction == COMBINE_DEPLOYMENT_FACTION && user.client.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+	if(deployment_faction == COMBINE_DEPLOYMENT_FACTION && user.client.player_details.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
 		. += span_notice("Your faction has [FLOOR(GLOB.deployment_combine_cash, 1)] dollars.")
 		. += span_notice("Unlock Tier 2 loadouts at $[DEPLOYMENT_TIER2_COMBINE], Tier 3 at $[DEPLOYMENT_TIER3_COMBINE], and Tier 4 at $[DEPLOYMENT_TIER4_COMBINE].")
 		. += span_notice("At $[DEPLOYMENT_TIER5_COMBINE], players will have a [DEPLOYMENT_TIER5_CHANCE]% chance to spawn with a Tier 5 loadout.")
 		. += span_notice("At $[DEPLOYMENT_TIER5_EXTRA_CHANCE_COMBINE], players will instead have a [DEPLOYMENT_TIER5_EXTRA_CHANCE]% chance to spawn with a Tier 5 loadout.")
 
-	if(deployment_faction == REBEL_DEPLOYMENT_FACTION && user.client.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+	if(deployment_faction == REBEL_DEPLOYMENT_FACTION && user.client.player_details.deployment_faction == REBEL_DEPLOYMENT_FACTION)
 		. += span_notice("Your faction has [FLOOR(GLOB.deployment_rebels_cash, 1)] dollars.")
 		. += span_notice("Unlock Tier 2 loadouts at $[DEPLOYMENT_TIER2_REBELS], Tier 3 at $[DEPLOYMENT_TIER3_REBELS], and Tier 4 at $[DEPLOYMENT_TIER4_REBELS].")
 		. += span_notice("At $[DEPLOYMENT_TIER5_REBELS], players will have a [DEPLOYMENT_TIER5_CHANCE]% chance to spawn with a Tier 5 loadout.")
