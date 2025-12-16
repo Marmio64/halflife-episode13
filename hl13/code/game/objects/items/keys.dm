@@ -81,7 +81,6 @@
 /obj/item/lockpick/combine/ic
 	name = "infestation control lockpick"
 	desc = "A combine-grade lockpick, able to pick locks more easily than your standard lockpick."
-	picklvl = 1.25
 
 /obj/item/hl2key/master
 	name = "master key"
@@ -93,6 +92,11 @@
 	name = "townhall key"
 	desc = "This key will open doors in the townhall."
 	lockid = "townhall"
+
+/obj/item/hl2key/prisoner_cells
+	name = "prison cell keys"
+	desc = "This key will open prisoner cell keys."
+	lockid = "prison_cell"
 
 /obj/item/hl2key/bar
 	name = "bar key"

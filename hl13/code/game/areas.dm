@@ -548,3 +548,83 @@
 
 /area/shuttle/pirate
 	ambient_buzz = 'hl13/sound/ambience/lake_water.wav'
+
+///prison stuff
+
+/area/halflife/indoors/prison
+	name = "\improper Prison Indoors"
+
+	first_time_text = "Nowy Jutro Prison"
+
+/area/halflife/indoors/prison/cells
+	name = "\improper Prison Cells"
+
+/area/halflife/indoors/prison/infirmary
+	name = "\improper Prison Infirmary"
+
+	first_time_text = "Infirmary"
+
+/area/halflife/indoors/prison/infirmary
+	name = "\improper Prison Cafeteria"
+
+	first_time_text = "Cafeteria"
+
+/area/halflife/indoors/prison/factory
+	name = "\improper Prison Factory"
+
+	first_time_text = "Factory"
+
+/area/halflife/indoors/prison/gym
+	name = "\improper Prison Gym"
+
+	first_time_text = "Gym"
+
+/area/halflife/indoors/prison/rec_room
+	name = "\improper Prison Recreation Room"
+
+	first_time_text = "Recreation Room"
+
+/area/halflife/indoors/prison/mining
+	name = "\improper Prison Mining Entrance"
+
+	first_time_text = "Mining Area"
+
+/area/halflife/indoors/prison/intake
+	name = "\improper Prison Intake"
+
+	first_time_text = "Nowy Jutro Prison Intake"
+
+/area/halflife/indoors/prison/security
+	name = "\improper Prison Security Area"
+
+	first_time_text = "Security Area"
+
+/area/halflife/indoors/prison/rehabilitation
+	name = "\improper Prison Rehabilitation Room"
+
+	first_time_text = "Rehabilitation Room"
+
+/area/halflife/indoors/prison/solitary
+	name = "\improper Solitary Confinement"
+
+	first_time_text = "Solitary Confinement"
+
+/area/halflife/indoors/prison/armory
+	name = "\improper Prison Armory"
+
+	first_time_text = "Armory"
+
+/area/halflife/indoors/prison/warden
+	name = "\improper Warden's Office"
+
+	first_time_text = "Warden's Office"
+
+/area/halflife/indoors/prison/entrance
+	name = "\improper Prison Entrance"
+
+	first_time_text = "Nowy Jutro Prison Entrance"
+
+/area/halflife/outdoors/forest/prison_yard
+	name = "\improper Prison Yard"
+
+	first_time_text = "Prison Yard"

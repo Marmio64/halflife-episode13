@@ -106,7 +106,7 @@
 	resistance_flags = INDESTRUCTIBLE
 
 /obj/item/clothing/under/pants/the_hidden/trapper
-	slowdown = -0.9
+	slowdown = -1
 
 /obj/item/clothing/under/pants/the_hidden/brute
 	slowdown = -0.75
