@@ -1,9 +1,21 @@
 //to do: modularize colt python, m4a1, ak47, and service rifle bullets/ammo casings.
 
+//OSIPR altfire
+/obj/item/gun/ballistic/revolver/grenadelauncher/ballslauncher
+	desc = "An dark energy ball launcher."
+	name = "energy ball launcher"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/grenadelauncher/ballslauncher
+	fire_sound = "hl13/sound/weapons/ar2_altfire.ogg"
+	pin = /obj/item/firing_pin/implant/mindshield
+
+/obj/item/gun/ballistic/revolver/grenadelauncher/ballslauncher/standardpin
+	pin = /obj/item/firing_pin
+
 //about 1.61 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/ar2
 	name = "\improper OSIPR"
 	desc = "A pulse rifle often dubbed the 'AR2'. Boasts superior armor piercing capabilities, accuracy, and firepower. Usually biolocked to only be usable by authorised individuals."
+	desc_controls = "Right-click to activate the alternative fire."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "ar2"
 	inhand_icon_state = "arg"
@@ -19,6 +31,7 @@
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
 	pin = /obj/item/firing_pin/implant/mindshield
+	var/obj/item/gun/ballistic/revolver/grenadelauncher/ballslauncher/underbarrel
 
 	load_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
 	load_empty_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
@@ -37,12 +50,37 @@
 /obj/item/gun/ballistic/automatic/ar2/nopin
 	pin = null
 
-/obj/item/gun/ballistic/automatic/ar2/standardpin
-	pin = /obj/item/firing_pin
-
 /obj/item/gun/ballistic/automatic/ar2/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.23 SECONDS)
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/ballslauncher(src)
+	update_appearance()
+
+/obj/item/gun/ballistic/automatic/ar2/Destroy()
+	QDEL_NULL(underbarrel)
+	return ..()
+
+/obj/item/gun/ballistic/automatic/ar2/standardpin
+	pin = /obj/item/firing_pin
+
+/obj/item/gun/ballistic/automatic/ar2/standardpin/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.23 SECONDS)
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/ballslauncher/standardpin(src)
+	update_appearance()
+
+/obj/item/gun/ballistic/automatic/ar2/try_fire_gun(atom/target, mob/living/user, params)
+	if(LAZYACCESS(params2list(params), RIGHT_CLICK))
+		return underbarrel.try_fire_gun(target, user, params)
+	return ..()
+
+/obj/item/gun/ballistic/automatic/ar2/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
+	if(isammocasing(tool))
+		if(istype(tool, underbarrel.magazine.ammo_type))
+			underbarrel.attack_self(user)
+			underbarrel.attackby(tool, user, list2params(modifiers))
+		return ITEM_INTERACT_BLOCKING
+	return ..()
 
 //old rifles that are exclusively loot. Similar to the AR2, but slightly less accurate, slightly less AP and slightly slower to fire.
 //about 1.96 seconds TTK
@@ -463,10 +501,18 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/pulse
 	max_ammo = 8
 
+/obj/item/gun/ballistic/revolver/grenadelauncher/mp7launcher
+	desc = "A 20mm underbarrel grenade launcher."
+	name = "20mm grenade launcher"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/grenadelauncher/mp7launcher
+	fire_sound = "hl13/sound/weapons/grenade_launcher.ogg"
+	pin = /obj/item/firing_pin
+
 // About 2.1 seconds TTK
 /obj/item/gun/ballistic/automatic/mp7
 	name = "\improper MP7 SMG"
 	desc = "Despite its small size, this submachine gun packs a punch and has an extended mag to keep opponents suppressed."
+	desc_controls = "Right-click to activate the alternative fire."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "mp7"
 	fire_sound = "hl13/sound/weapons/smgfire.ogg"
@@ -485,6 +531,7 @@
 	inhand_icon_state = "mp7"
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+	var/obj/item/gun/ballistic/revolver/grenadelauncher/underbarrel
 
 /obj/item/gun/ballistic/automatic/mp7/no_mag
 	spawnwithmagazine = FALSE
@@ -492,7 +539,25 @@
 /obj/item/gun/ballistic/automatic/mp7/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS, overtime_penalty_increase = 0.8, overtime_penalty_cap = 12)
+	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/mp7launcher(src)
+	update_appearance()
 
+/obj/item/gun/ballistic/automatic/mp7/Destroy()
+	QDEL_NULL(underbarrel)
+	return ..()
+
+/obj/item/gun/ballistic/automatic/mp7/try_fire_gun(atom/target, mob/living/user, params)
+	if(LAZYACCESS(params2list(params), RIGHT_CLICK))
+		return underbarrel.try_fire_gun(target, user, params)
+	return ..()
+
+/obj/item/gun/ballistic/automatic/mp7/item_interaction(mob/living/user, obj/item/tool, list/modifiers)
+	if(isammocasing(tool))
+		if(istype(tool, underbarrel.magazine.ammo_type))
+			underbarrel.attack_self(user)
+			underbarrel.attackby(tool, user, list2params(modifiers))
+		return ITEM_INTERACT_BLOCKING
+	return ..()
 
 //about 1.87 seconds TTK with AP. While it has a bit higher DPS than the m4a1/service rifle, it is slightly less accurate at range and has to reload more often
 /obj/item/gun/ballistic/automatic/pulsesmg

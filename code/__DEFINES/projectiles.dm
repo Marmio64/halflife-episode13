@@ -9,7 +9,7 @@
 // Delete self without hitting
 #define PROJECTILE_DELETE_WITHOUT_HITTING 3
 
-// Caliber defines: (current count stands at 24)
+// Caliber defines: (current count stands at 31)
 /// The caliber used by the [L6 SAW][/obj/item/gun/ballistic/automatic/l6_saw].
 #define CALIBER_A7MM "a7mm"
 /// The caliber used by the [security auto-rifle][/obj/item/gun/ballistic/automatic/wt550].
@@ -42,6 +42,8 @@
 #define CALIBER_SHOTGUN "shotgun"
 /// The caliber used by grenade launchers.
 #define CALIBER_40MM "40mm"
+/// The caliber used by the MP7's altfire.
+#define CALIBER_20MM "20mm"
 /// The caliber used by rocket launchers.
 #define CALIBER_84MM "84mm"
 /// The caliber used by laser guns.

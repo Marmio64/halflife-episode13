@@ -34,6 +34,18 @@
 	embed_falloff_tile = -4
 	icon_state = "bullet_small"
 
+/obj/projectile/bullet/a20mm
+	name = "20mm grenade"
+	icon_state = "bolter"
+	damage = 30
+	embed_type = null
+	shrapnel_type = null
+
+/obj/projectile/bullet/a20mm/on_hit(atom/target, blocked = 0, pierce_hit)
+	..()
+	explosion(target, devastation_range = 0, light_impact_range = 2, flame_range = 0, adminlog = FALSE, explosion_cause = src)
+	return BULLET_ACT_HIT
+
 // 5.56mm (m4a1)
 
 /obj/projectile/bullet/a556

@@ -40,3 +40,15 @@
 	caliber = CALIBER_46X30MM
 	projectile_type = /obj/projectile/bullet/c46x30mm/mp7
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/light
+
+/obj/item/ammo_casing/a20mm
+	name = "20mm grenade"
+	desc = "A 20mm grenade. Can't be activated on it's own."
+	icon_state = "20mm"
+	caliber = CALIBER_20MM
+	projectile_type = /obj/projectile/bullet/a20mm
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
+
+/obj/item/ammo_casing/a20mm/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/caseless)

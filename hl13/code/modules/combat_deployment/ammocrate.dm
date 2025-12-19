@@ -64,6 +64,10 @@
 			ammo_to_dispense = /obj/item/ammo_box/magazine/ar2
 		if("MK3A2 Grenade")
 			ammo_to_dispense = /obj/item/grenade/syndieminibomb/bouncer
+		if("Dark Energy Ball")
+			ammo_to_dispense = /obj/item/ammo_casing/pulse/energyball
+		if("20mm Grenade")
+			ammo_to_dispense = /obj/item/ammo_casing/a20mm
 
 	if(ammo_to_dispense)
 		playsound(src, 'hl13/sound/effects/ammocrate_open.ogg', 50, TRUE, extrarange = -3)
@@ -89,6 +93,16 @@
 	ammo_amount = 4
 	recharges = FALSE
 	vendoptions = list("MK3A2 Grenade")
+
+/obj/machinery/ammo_crate/heavy
+	name = "Heavy Ammo Crate"
+	desc = "A large ammo crate. Contains special ammo types that you can pull out after a short delay. It does not recharge."
+	anchored = TRUE
+	density = TRUE
+	max_integrity = 150
+	ammo_amount = 4
+	recharges = FALSE
+	vendoptions = list("Dark Energy Ball", "20mm Grenade")
 
 /obj/machinery/ammo_crate/no_recharge
 	desc = "A large ammo crate. It's somewhat slow to grab out of, and has a limited amount of ammo it can give."

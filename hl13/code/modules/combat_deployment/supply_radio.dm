@@ -122,6 +122,7 @@
 			/datum/supply_beacon_option/combine_turret,
 			/datum/supply_beacon_option/fortifications_crate,
 			/datum/supply_beacon_option/grenade_crate,
+			/datum/supply_beacon_option/heavyammocrate,
 			/datum/supply_beacon_option/canister_targeter,
 			/datum/supply_beacon_option/emplacement_gun,
 			/datum/supply_beacon_option/combine_tier5,
@@ -140,6 +141,7 @@
 			/datum/supply_beacon_option/rebel_turret,
 			/datum/supply_beacon_option/fortifications_crate,
 			/datum/supply_beacon_option/grenade_crate,
+			/datum/supply_beacon_option/heavyammocrate,
 			/datum/supply_beacon_option/missile_targeter,
 			/datum/supply_beacon_option/emplacement_gun,
 			/datum/supply_beacon_option/rebel_tier5,
@@ -183,6 +185,11 @@
 	option_name = "Grenade Crate (300 Points)"
 	cost = 300
 	spawn_path = /obj/machinery/ammo_crate/grenade_crate
+
+/datum/supply_beacon_option/heavyammocrate
+	option_name = "Heavy Ammo Crate (300 Points)"
+	cost = 300 //feel free to change this, but they're basically all semi-grenades anyways.
+	spawn_path = /obj/machinery/ammo_crate/heavy
 
 /datum/supply_beacon_option/missile_targeter
 	option_name = "One-use Missile Targeter (400 Points)"
