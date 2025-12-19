@@ -14,6 +14,24 @@
 /obj/projectile/bullet/pulse/ar2/fast
 	speed = 4
 
+/obj/projectile/bullet/pulse/energyball
+	hitsound = 'hl13/sound/weapons/energy_sing_flyby.ogg'
+	hitsound_wall = 'hl13/sound/weapons/energy_sing_explosion.ogg'
+	damage = 42
+	wound_bonus = -10
+	armour_penetration = 80
+	ricochets_max = 8
+	min_ricochets = 6
+	ricochet_chance = 80
+	ricochet_incidence_leeway = 0
+	projectile_piercing = PASSMOB
+	max_pierces = 5
+	icon_state = "blue_laser" //placeholder
+
+/obj/projectile/bullet/pulse/energyball/on_ricochet()
+	. = ..()
+	playsound(src, 'hl13/sound/weapons/energy_bounce.ogg', clamp(vol_by_damage() + (suppressed ? 0 : 20), 0, 100), TRUE, -1)
+
 /obj/projectile/bullet/pulse/lmg
 	damage = 22
 	wound_bonus = -10

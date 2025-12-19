@@ -5,6 +5,16 @@
 	projectile_type = /obj/projectile/bullet/pulse/ar2
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse
 
+/obj/item/ammo_casing/pulse/energyball
+	name = "dark energy ball"
+	desc = "A dark energy ball."
+	icon_state = "darkenergy"
+	caliber = CALIBER_PULSROUND
+	projectile_type = /obj/projectile/bullet/pulse/energyball
+	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse
+
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
+
 /obj/item/ammo_casing/caseless/pulse/lmg
 	name = "LMG pulse round"
 	desc = "A LMG grade pulse round."
