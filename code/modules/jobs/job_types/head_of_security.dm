@@ -1,6 +1,6 @@
 /datum/job/head_of_security
 	title = JOB_HEAD_OF_SECURITY
-	description = "Guard the District Administrator at all costs, except whereby doing so it would conflict with the orders of Overwatch. Command over local Metropolice and Conscript forces when necessary."
+	description = "Guard the Warden at all costs, except whereby doing so it would conflict with the orders of Overwatch. Command over local Metropolice and Conscript forces when necessary."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
 	department_head = list(JOB_CAPTAIN)
 	head_announce = list(RADIO_CHANNEL_SECURITY)
@@ -45,7 +45,7 @@
 
 	requisition_points = 6
 
-	gameplay_help = "As the Overwatch Soldier, you are the very best combatant stationed in the area by combine forces, and you have been given the task of protecting the District Administrator and advising them on security details. Note, while your AR2 is very powerful, there is no way to get extra ammunition for it, use it sparingly!"
+	gameplay_help = "As the Overwatch Soldier, you are the very best combatant stationed in the area by combine forces, and you have been given the task of protecting the Warden and advising them on security details. Note, while your AR2 is very powerful, there is no way to get extra ammunition for it, use it sparingly!"
 
 	cmode_music = 'hl13/sound/music/combat/guarddown.ogg'
 
@@ -93,7 +93,7 @@
 	equipped.fully_replace_character_name(equipped.real_name,"[role][pick(name_source)] [rand(111,999)]")
 
 /datum/job/head_of_security/get_captaincy_announcement(mob/living/captain)
-	return "Due to staffing shortages, newly promoted Acting District Administrator [captain.real_name] assuming command."
+	return "Due to staffing shortages, newly promoted Acting Warden [captain.real_name] assuming command."
 
 
 /datum/outfit/job/hos

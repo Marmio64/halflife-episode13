@@ -59,7 +59,7 @@
 #define JOB_DEPLOYMENT_THE_HIDDEN "The Hidden"
 #define JOB_DEPLOYMENT_XEN "Xenian Creature"
 //Command
-#define JOB_CAPTAIN "District Administrator"
+#define JOB_CAPTAIN "Warden"
 #define JOB_HEAD_OF_PERSONNEL "Labor Lead"
 #define JOB_HEAD_OF_SECURITY "Overwatch Soldier"
 #define JOB_RESEARCH_DIRECTOR "Research Director"
@@ -280,11 +280,11 @@ DEFINE_BITFIELD(job_flags, list(
 #define FACTION_STATION "Station"
 
 // Variable macros used to declare who is the supervisor for a given job, announced to the player when they join as any given job.
-#define SUPERVISOR_CAPTAIN "the District Administrator"
+#define SUPERVISOR_CAPTAIN "the Warden"
 #define SUPERVISOR_CE "the Labor Lead"
 #define SUPERVISOR_CMO "the Labor Lead"
 #define SUPERVISOR_HOP "the Labor Lead"
-#define SUPERVISOR_HOS "the Divisional Lead"
+#define SUPERVISOR_HOS "the OTA Soldiers"
 #define SUPERVISOR_QM "the Foreman"
 #define SUPERVISOR_RD "the Labor Lead"
 

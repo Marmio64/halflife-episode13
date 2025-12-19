@@ -1,7 +1,7 @@
 /datum/job/captain
 	title = JOB_CAPTAIN
-	description = "Be responsible for the city, manage your underlings, \
-		keep the city functioning, be prepared to do anything and everything or die \
+	description = "Be responsible for the prison, manage your underlings, \
+		keep the prison functioning, be prepared to do anything and everything or die \
 		horribly trying."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
 	department_head = list("CentCom")
@@ -53,19 +53,19 @@
 	ration_bonus = 3
 	union_law_notify = TRUE
 
-	gameplay_help = "As the District Administrator, you are the highest ranking citizen in the district and are bound by fear and/or loyalty to the combine, and cannot disobey Overwatch without a very good reason."
+	gameplay_help = "As the Warden, you are the highest ranking citizen in the district and are bound by fear and/or loyalty to the combine, and cannot disobey Overwatch without a very good reason."
 
 	cmode_music = 'hl13/sound/music/combat/branescan.ogg'
 
 /datum/job/captain/get_captaincy_announcement(mob/living/captain)
-	return "District Administrator [captain.real_name] will be managing this district."
+	return "Warden [captain.real_name] will be managing this district."
 
 /datum/job/captain/get_radio_information()
 	. = ..()
 	. += "\nYou have access to all radio channels, but they are not automatically tuned. Check your radio for more information."
 
 /datum/outfit/job/captain
-	name = "District Administrator"
+	name = "Warden"
 	jobtype = /datum/job/captain
 
 	id = /obj/item/card/id/advanced/halflife/combine/four

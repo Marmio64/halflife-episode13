@@ -214,6 +214,10 @@
 	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound)
 	summon_amount = 3
 
+/datum/action/cooldown/spell/conjure/antlion/hidden_vort
+	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/human_faction)
+
+
 //---------------------- AI STUFF -------------------
 
 /datum/ai_controller/basic_controller/antlion_worker

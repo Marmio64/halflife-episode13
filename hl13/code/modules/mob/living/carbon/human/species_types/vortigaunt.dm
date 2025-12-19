@@ -152,7 +152,7 @@
 /datum/species/vortigaunt/hidden
 	name = "Hidden Vortigaunt"
 
-	var/datum/action/cooldown/spell/conjure/antlion/vortbugbait
+	var/datum/action/cooldown/spell/conjure/antlion/hidden_vort/vortbugbait
 
 /datum/species/vortigaunt/hidden/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()

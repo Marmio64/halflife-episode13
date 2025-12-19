@@ -10,7 +10,7 @@ export const JOB2ICON = {
   Bitrunner: 'gamepad',
   Botanist: 'seedling',
   'Bridge Assistant': 'building-shield',
-  'District Administrator': 'crown',
+  Warden: 'crown',
   'Cargo Gorilla': 'paw',
   'Union Worker': 'box',
   'CentCom Commander': 'star',

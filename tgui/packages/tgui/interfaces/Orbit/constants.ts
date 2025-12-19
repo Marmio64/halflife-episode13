@@ -25,7 +25,7 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
   },
   command: {
     color: 'blue',
-    trims: ['District Administrator', 'Labor Lead'],
+    trims: ['Warden', 'Labor Lead'],
   },
   engineering: {
     color: 'orange',

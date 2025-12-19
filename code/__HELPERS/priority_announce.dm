@@ -62,8 +62,8 @@
 			if(length(title) > 0)
 				header += SUBHEADER_ANNOUNCEMENT_TITLE(title)
 		if(ANNOUNCEMENT_TYPE_CAPTAIN)
-			header = MAJOR_ANNOUNCEMENT_TITLE("District Administrator's Announcement")
-			GLOB.news_network.submit_article(text, "District Administrator's Announcement", "District Announcements", null)
+			header = MAJOR_ANNOUNCEMENT_TITLE("Warden's Announcement")
+			GLOB.news_network.submit_article(text, "Warden's Announcement", "District Announcements", null)
 			//hl13 edit start. The DA making an announcement slightly increases sociostability, for roleplay purposes.
 			if(SSsociostability.announcement_made == FALSE)
 				SSsociostability.announcement_made = TRUE

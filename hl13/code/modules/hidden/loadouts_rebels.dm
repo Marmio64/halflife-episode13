@@ -61,6 +61,7 @@
 	desc = "Keep the Hidden at bay both with molotovs, and your SMG. Take care not to ignite your team mates."
 	id_name = "Partisan"
 
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
 	uniform = /obj/item/clothing/under/citizen/refugee
 	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
@@ -148,7 +149,7 @@
 	suit_store = /obj/item/gun/ballistic/shotgun/spas12
 
 	back = /obj/item/storage/backpack/halflife/satchel
-	head = /obj/item/clothing/head/halflife/scout_hat
+	head = /obj/item/clothing/head/halflife/scout_hat/weak
 	uniform = /obj/item/clothing/under/citizen/refugee
 
 	backpack_contents = list(
@@ -285,4 +286,3 @@
 	H.faction += list(FACTION_ANTLION)
 	H.set_species(/datum/species/vortigaunt/hidden)
 	H.cmode_music = combat_music
-

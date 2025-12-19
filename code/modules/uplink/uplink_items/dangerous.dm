@@ -42,7 +42,7 @@
 
 /datum/uplink_item/dangerous/rebel_turret
 	name = "Hacked Combine Turret"
-	desc = "A hacked combine turret which shoots at biosignal authorised combine individuals, which includes civil protection and the District Administrator.."
+	desc = "A hacked combine turret which shoots at biosignal authorised combine individuals, which includes civil protection and the Warden."
 	progression_minimum = 10 MINUTES
 	item = /obj/machinery/porta_turret/combine/rebel
 	cost = 9

@@ -84,7 +84,7 @@
 
 /obj/item/hl2key/master
 	name = "master key"
-	desc = "The district administrator's master key."
+	desc = "The warden's master key."
 	lockid = "administrator"
 	masterkey = TRUE
 
@@ -95,7 +95,7 @@
 
 /obj/item/hl2key/prisoner_cells
 	name = "prison cell keys"
-	desc = "This key will open prisoner cell keys."
+	desc = "This key will open prisoner cell doors."
 	lockid = "prison_cell"
 
 /obj/item/hl2key/bar
@@ -115,7 +115,7 @@
 
 /obj/item/hl2key/factory
 	name = "factory key"
-	desc = "This key will open doors in the factory."
+	desc = "This key will open doors in the factory and mines."
 	lockid = "factory"
 
 /obj/item/hl2key/foreman

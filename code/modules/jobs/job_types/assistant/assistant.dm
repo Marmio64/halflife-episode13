@@ -5,7 +5,7 @@ Assistant
 */
 /datum/job/assistant
 	title = JOB_ASSISTANT
-	description = "Try to survive in the city, and maybe even find a better life."
+	description = "Try to survive in this prison. Who knows, maybe you'll get out one day."
 	faction = FACTION_STATION
 	total_positions = 25
 	spawn_positions = 25

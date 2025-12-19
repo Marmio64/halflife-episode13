@@ -1,8 +1,8 @@
 {
 	"version": 1,
-	"map_name": "City 13 Southwatch District Nexus",
-	"map_path": "map_files/city13_nexus",
-	"map_file": "city13_nexus.dmm",
+	"map_name": "City 13 Nowy Jutro Prison",
+	"map_path": "map_files/city13_prison",
+	"map_file": "city13_prison.dmm",
 	"space_ruin_levels": 0,
 	"space_empty_levels": 0,
 	"planetary": 1,
@@ -14,7 +14,7 @@
 	},
 	"traits": [
 		{
-			"Baseturf": "/turf/open/floor/plating/ground/dirt",
+			"Baseturf": "/turf/open/floor/plating/ground/rockunder",
 			"Gravity": true,
 			"No Parallax": true,
 			"Weather_Rainstorm": true,
@@ -36,13 +36,10 @@
 			"Linkage": null
 		}
 	],
-	"minetype": "outlands",
+	"minetype": "none",
 	"job_changes": {
-		"District Administrator": {
-			"title": "City Administrator"
-		},
 		"Citizen": {
-			"title": "Loyalist"
+			"title": "Prisoner"
 		}
 	}
 }

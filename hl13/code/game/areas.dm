@@ -589,6 +589,11 @@
 
 	first_time_text = "Mining Area"
 
+/area/halflife/indoors/prison/commissary
+	name = "\improper Prison Commissary"
+
+	first_time_text = "Mining Area"
+
 /area/halflife/indoors/prison/intake
 	name = "\improper Prison Intake"
 

@@ -156,7 +156,7 @@
 	exists_on_map = TRUE
 	difficulty = 3
 	steal_hint = "A set of papers belonging to a megaconglomerate. \
-		Combine documents can easily be found in the district administrator's office. \
+		Combine documents can easily be found in the warden's office. \
 		For other factions, you may find them in strange and distant places. \
 		A photocopy may also suffice."
 

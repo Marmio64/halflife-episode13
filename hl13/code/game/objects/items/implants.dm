@@ -78,7 +78,7 @@
 	role = "OTA Unit"
 
 /obj/item/implant/biosig_ert/administrator
-	role = "District Administrator"
+	role = "Warden"
 
 /obj/item/implant/biosig_ert/laborlead
 	role = "Labor Lead"

@@ -106,7 +106,7 @@
 		"Now, the setting takes place within the poorly maintained eastern-european streets of City 13, within one district of a greater whole \
 		Lack of attention has lead to the proliferation of xenian wildlife such as head crabs and antlions, and tensions rise between the citizenry and the combine as they catch wind of what had happened in City 17.",
 
-		"Will the District Administrator keep a handle of things for the Universal Union, or will the citizenry throw off their shackles as they try to find a better life?",
+		"Will the Warden keep a handle of things for the Universal Union, or will the prisoners throw off their shackles as they try to find a better life?",
 	)
 
 /datum/species/human/create_pref_unique_perks()
