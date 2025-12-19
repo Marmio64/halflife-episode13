@@ -26,7 +26,7 @@
 	ricochet_incidence_leeway = 0
 	projectile_piercing = PASSMOB
 	max_pierces = 5
-	icon_state = "blue_laser" //placeholder
+	icon_state = "darkenergy"
 
 /obj/projectile/bullet/pulse/energyball/on_ricochet()
 	. = ..()
