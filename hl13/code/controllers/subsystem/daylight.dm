@@ -65,7 +65,7 @@ SUBSYSTEM_DEF(daylight)
 		if(day_cycle_active != DAY_CYCLE_NIGHT)
 			day_cycle_active = DAY_CYCLE_NIGHT
 
-			var/message = "Attention citizens, it is now night time. Citizens are to return to their apartment blocks for curfew."
+			var/message = "Attention inmates, it is now night time. Inmates are to return to their cells for the nightly lockup."
 
 			if(factory_goal_multiplier < MAX_QUOTA_MULTIPLIER) // easier first day, standard second day, max value fourth day and on
 				factory_goal_multiplier += 0.2
@@ -73,7 +73,7 @@ SUBSYSTEM_DEF(daylight)
 			if(factory_containers_filled >= factory_container_goal)
 				SSsociostability.modifystability(10) //full completion. This is in addition to the sociostability bonuses from simply completing containers.
 
-				message += " The factory quota was completed entirely, and the foreman may redeem a reward at the box vendor."
+				message += " The factory quota was completed entirely, and the warden may redeem a reward at the box vendor."
 
 			else if(factory_containers_filled < factory_container_goal/2) //Failed to meet at least half the goal, disappointing...
 				SSsociostability.modifystability(-75) //-7.5%
@@ -86,7 +86,7 @@ SUBSYSTEM_DEF(daylight)
 					vendor.cashprize += factory_container_goal
 
 			if(SSmapping.current_map.minetype != "combat_deployment")
-				priority_announce(message, "Curfew Notice.", sender_override = "District Automated Scheduler")
+				priority_announce(message, "Lockup Notice.", sender_override = "Prison Automated Scheduler")
 
 				curfew_zombies() //spawn zombies for curfew, encourages going indoors
 
@@ -104,7 +104,7 @@ SUBSYSTEM_DEF(daylight)
 		if(day_cycle_active != DAY_CYCLE_MORNING)
 			day_cycle_active = DAY_CYCLE_MORNING
 			if(SSmapping.current_map.minetype != "combat_deployment")
-				priority_announce("Attention citizens, night has concluded, and Curfew is over. Your morning ration cycle will begin in thirty seconds.", "Curfew Notice.", sender_override = "District Automated Scheduler")
+				priority_announce("Attention occupants, night has concluded, and Curfew is over. Your morning ration cycle will begin in thirty seconds.", "Curfew Notice.", sender_override = "Prison Automated Scheduler")
 		if(light_coefficient < 0.5)
 			light_coefficient += 0.025
 
@@ -116,7 +116,7 @@ SUBSYSTEM_DEF(daylight)
 
 			day_cycle_active = DAY_CYCLE_AFTERNOON
 			if(SSmapping.current_map.minetype != "combat_deployment")
-				priority_announce("Attention citizens, it is now afternoon. The previous ration cycle has ended. All citizens are to begin productive efforts, and to inquire union personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal], compliance is mandatory.", "Work Notice.", sender_override = "District Automated Scheduler")
+				priority_announce("Attention occupants, it is now afternoon. The previous ration cycle has ended. All inmates are to begin productive efforts, and to inquire union personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal], compliance is mandatory.", "Work Notice.", sender_override = "Prison Automated Scheduler")
 
 			factory_containers_filled = 0
 
@@ -130,7 +130,7 @@ SUBSYSTEM_DEF(daylight)
 		if(day_cycle_active != DAY_CYCLE_DUSK && day_cycle_active != DAY_CYCLE_NIGHT)
 			day_cycle_active = DAY_CYCLE_DUSK
 			if(SSmapping.current_map.minetype != "combat_deployment")
-				priority_announce("Attention citizens, night will be approaching shortly, and curfew will begin soon. Citizens are to get ready for curfew.", "Curfew Notice.", sender_override = "District Automated Scheduler")
+				priority_announce("Attention occupants, night will be approaching shortly, and lockup will begin soon. Inmates are to get ready for lockup.", "Curfew Notice.", sender_override = "Prison Automated Scheduler")
 		if(light_coefficient > 0.5)
 			light_coefficient -= 0.025
 

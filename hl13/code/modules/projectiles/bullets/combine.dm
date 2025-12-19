@@ -18,7 +18,9 @@
 	hitsound = 'hl13/sound/weapons/energy_sing_flyby.ogg'
 	hitsound_wall = 'hl13/sound/weapons/energy_sing_explosion.ogg'
 	damage = 42
-	wound_bonus = -10
+	wound_bonus = -40
+	damage_type = BURN
+	armor_flag = LASER
 	armour_penetration = 80
 	ricochets_max = 8
 	min_ricochets = 6

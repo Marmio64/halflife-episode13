@@ -811,3 +811,25 @@
 /obj/item/stock_parts/power_store/cell/hidden_immolator
 	name = "immolator power cell"
 	maxcharge = STANDARD_CELL_CHARGE * 1.4
+
+/obj/item/gun/ballistic/rocketlauncher/halflife
+	name = "\improper Rocket Launcher"
+	desc = "A reusable rocket propelled grenade launcher. An arrow pointing toward the front of the launcher \
+		alongside the words \"Front Toward Enemy\" are printed on the tube. A sticker near the back of the launcher warns \
+		to \"CHECK BACKBLAST CLEAR BEFORE FIRING\", whatever that means."
+	icon = 'hl13/icons/obj/guns/projectile.dmi'
+	SET_BASE_PIXEL(0, 0)
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/rocketlauncher_halflife
+	fire_sound = 'sound/items/weapons/gun/general/rocket_launch.ogg'
+	slot_flags = 0
+	pin = /obj/item/firing_pin
+	empty_indicator = TRUE
+
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
+/obj/item/ammo_box/magazine/internal/rocketlauncher_halflife
+	name = "rocket launcher internal magazine"
+	ammo_type = /obj/item/ammo_casing/rocket
+	caliber = CALIBER_84MM
+	max_ammo = 1

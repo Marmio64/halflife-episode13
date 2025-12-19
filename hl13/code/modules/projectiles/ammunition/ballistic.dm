@@ -43,7 +43,7 @@
 
 /obj/item/ammo_casing/a20mm
 	name = "20mm grenade"
-	desc = "A 20mm grenade. Can't be activated on it's own."
+	desc = "A 20mm grenade. Can't be activated on it's own, and can only be inserted into an MP7's launcher."
 	icon_state = "20mm"
 	caliber = CALIBER_20MM
 	projectile_type = /obj/projectile/bullet/a20mm

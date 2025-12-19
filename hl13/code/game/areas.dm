@@ -592,7 +592,7 @@
 /area/halflife/indoors/prison/commissary
 	name = "\improper Prison Commissary"
 
-	first_time_text = "Mining Area"
+	first_time_text = "Commissary"
 
 /area/halflife/indoors/prison/intake
 	name = "\improper Prison Intake"
@@ -603,26 +603,36 @@
 	name = "\improper Prison Security Area"
 
 	first_time_text = "Security Area"
+	ambient_buzz = 'hl13/sound/ambience/citadel_ambience.ogg'
+	ambient_buzz_vol = 25
 
 /area/halflife/indoors/prison/rehabilitation
 	name = "\improper Prison Rehabilitation Room"
 
 	first_time_text = "Rehabilitation Room"
+	ambient_buzz = 'hl13/sound/ambience/citadel_ambience.ogg'
+	ambient_buzz_vol = 25
 
 /area/halflife/indoors/prison/solitary
 	name = "\improper Solitary Confinement"
 
 	first_time_text = "Solitary Confinement"
+	ambient_buzz = 'hl13/sound/ambience/citadel_ambience.ogg'
+	ambient_buzz_vol = 25
 
 /area/halflife/indoors/prison/armory
 	name = "\improper Prison Armory"
 
 	first_time_text = "Armory"
+	ambient_buzz = 'hl13/sound/ambience/citadel_ambience.ogg'
+	ambient_buzz_vol = 25
 
 /area/halflife/indoors/prison/warden
 	name = "\improper Warden's Office"
 
 	first_time_text = "Warden's Office"
+	ambient_buzz = 'hl13/sound/ambience/citadel_ambience.ogg'
+	ambient_buzz_vol = 25
 
 /area/halflife/indoors/prison/entrance
 	name = "\improper Prison Entrance"

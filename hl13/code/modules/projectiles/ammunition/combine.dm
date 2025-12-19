@@ -7,7 +7,7 @@
 
 /obj/item/ammo_casing/pulse/energyball
 	name = "dark energy ball"
-	desc = "A dark energy ball."
+	desc = "A strange container built to house a small ball of dark energy. Can be loaded into an AR2 and fired as it's alternate function."
 	icon_state = "darkenergy"
 	caliber = CALIBER_PULSROUND
 	projectile_type = /obj/projectile/bullet/pulse/energyball
