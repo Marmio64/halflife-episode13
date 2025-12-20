@@ -34,6 +34,11 @@
 	. = ..()
 	playsound(src, 'hl13/sound/weapons/energy_bounce.ogg', clamp(vol_by_damage() + (suppressed ? 0 : 20), 0, 100), TRUE, -1)
 
+/obj/projectile/bullet/pulse/energyball/check_ricochet_flag(atom/target)
+	if((target.flags_ricochet))
+		return TRUE
+	return FALSE
+
 /obj/projectile/bullet/pulse/lmg
 	damage = 22
 	wound_bonus = -10
