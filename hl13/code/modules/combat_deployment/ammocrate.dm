@@ -69,7 +69,7 @@
 		if("20mm Grenade")
 			ammo_to_dispense = /obj/item/ammo_casing/a20mm
 		if("Rocket")
-			ammo_to_dispense = /obj/item/ammo_casing/rocket_hl13
+			ammo_to_dispense = /obj/item/ammo_casing/rocket/hl13
 
 	if(ammo_to_dispense)
 		playsound(src, 'hl13/sound/effects/ammocrate_open.ogg', 50, TRUE, extrarange = -3)
@@ -87,10 +87,7 @@
 /obj/machinery/ammo_crate/grenade_crate
 	name = "Grenade Crate"
 	desc = "A large grenade crate. You can pull out a grenade after a short delay. It does not recharge grenades."
-	icon = 'hl13/icons/obj/miscellaneous.dmi'
 	icon_state = "grenadecrate"
-	anchored = TRUE
-	density = TRUE
 	max_integrity = 150
 	ammo_amount = 4
 	recharges = FALSE
@@ -99,8 +96,6 @@
 /obj/machinery/ammo_crate/heavy
 	name = "Heavy Ammo Crate"
 	desc = "A large ammo crate. Contains special ammo types that you can pull out after a short delay. It does not recharge."
-	anchored = TRUE
-	density = TRUE
 	max_integrity = 150
 	ammo_amount = 4
 	recharges = FALSE

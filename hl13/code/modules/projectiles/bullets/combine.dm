@@ -17,7 +17,7 @@
 /obj/projectile/bullet/pulse/energyball
 	hitsound = 'hl13/sound/weapons/energy_sing_flyby.ogg'
 	hitsound_wall = 'hl13/sound/weapons/energy_sing_explosion.ogg'
-	damage = 42
+	damage = 45
 	wound_bonus = -40
 	damage_type = BURN
 	armor_flag = LASER

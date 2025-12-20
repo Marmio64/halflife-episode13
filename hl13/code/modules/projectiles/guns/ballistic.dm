@@ -816,12 +816,13 @@
 	name = "\improper Rocket Launcher"
 	desc = "A reusable rocket propelled grenade launcher. An arrow pointing toward the front of the launcher \
 		alongside the words \"Front Toward Enemy\" are printed on the tube. A sticker near the back of the launcher warns \
-		to \"CHECK BACKBLAST CLEAR BEFORE FIRING\", whatever that means."
+		to \"CHECK BACKBLAST CLEAR BEFORE FIRING\", whatever that means. It's weight and heft prevent you from stowing it, and significantly slows you down."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	SET_BASE_PIXEL(0, 0)
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/rocketlauncher_halflife
-	fire_sound = 'sound/items/weapons/gun/general/rocket_launch.ogg'
+	fire_sound = "hl13/sound/weapons/rocketfire1.ogg"
 	slot_flags = 0
+	vary_fire_sound = FALSE
 	pin = /obj/item/firing_pin
 	empty_indicator = TRUE
 
@@ -829,8 +830,8 @@
 
 	w_class = WEIGHT_CLASS_GIGANTIC
 
-	slowdown = 0.66
-	drag_slowdown = 0.66
+	slowdown = 1
+	drag_slowdown = 1
 
 	spread = 0
 	recoil = 0
