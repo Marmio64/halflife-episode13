@@ -68,6 +68,8 @@
 			ammo_to_dispense = /obj/item/ammo_casing/pulse/energyball
 		if("20mm Grenade")
 			ammo_to_dispense = /obj/item/ammo_casing/a20mm
+		if("Rocket")
+			ammo_to_dispense = /obj/item/ammo_casing/rocket_hl13
 
 	if(ammo_to_dispense)
 		playsound(src, 'hl13/sound/effects/ammocrate_open.ogg', 50, TRUE, extrarange = -3)
@@ -102,7 +104,7 @@
 	max_integrity = 150
 	ammo_amount = 4
 	recharges = FALSE
-	vendoptions = list("Dark Energy Ball", "20mm Grenade")
+	vendoptions = list("Dark Energy Ball", "20mm Grenade", "Rocket")
 
 /obj/machinery/ammo_crate/no_recharge
 	desc = "A large ammo crate. It's somewhat slow to grab out of, and has a limited amount of ammo it can give."

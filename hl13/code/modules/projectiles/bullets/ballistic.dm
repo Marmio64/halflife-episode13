@@ -37,7 +37,7 @@
 /obj/projectile/bullet/a20mm
 	name = "20mm grenade"
 	icon_state = "bolter"
-	damage = 30
+	damage = 35
 	armor_flag = BOMB
 	wound_bonus = -100
 	embed_type = null
@@ -56,3 +56,13 @@
 	wound_bonus = -10
 	armour_penetration = 15
 	icon_state = "bullet_large"
+
+/obj/projectile/bullet/rocket/hl13
+	speed = 1.5
+	var/max_speed = 3
+	var/speed_increase_per_tile = 0.25
+
+/obj/projectile/bullet/rocket/hl13/reduce_range()
+	..()
+	if(speed < max_speed)
+		speed += speed_increase_per_tile

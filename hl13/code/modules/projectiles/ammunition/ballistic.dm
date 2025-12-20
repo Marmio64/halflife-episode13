@@ -52,3 +52,9 @@
 /obj/item/ammo_casing/a20mm/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/caseless)
+
+/obj/item/ammo_casing/rocket/hl13
+	name = "\improper HE rocket"
+	desc = "An 84mm High Explosive rocket. Fire at people and pray."
+	projectile_type = /obj/projectile/bullet/rocket/hl13
+	icon = 'hl13/icons/obj/guns/ammo.dmi'

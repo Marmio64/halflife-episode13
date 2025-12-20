@@ -825,11 +825,21 @@
 	pin = /obj/item/firing_pin
 	empty_indicator = TRUE
 
+	item_flags = SLOWS_WHILE_IN_HAND | NEEDS_PERMIT
+
+	w_class = WEIGHT_CLASS_GIGANTIC
+
+	slowdown = 0.66
+	drag_slowdown = 0.66
+
+	spread = 0
+	recoil = 0
+
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
 /obj/item/ammo_box/magazine/internal/rocketlauncher_halflife
 	name = "rocket launcher internal magazine"
-	ammo_type = /obj/item/ammo_casing/rocket
+	ammo_type = /obj/item/ammo_casing/rocket/hl13
 	caliber = CALIBER_84MM
 	max_ammo = 1
