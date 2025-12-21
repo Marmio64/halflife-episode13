@@ -26,7 +26,7 @@
 	recoil = 0.3
 	fire_delay = 2
 	burst_size = 1
-	spread = 4
+	spread = 3
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
@@ -100,7 +100,7 @@
 	force = 12
 	fire_delay = 2
 	burst_size = 1
-	spread = 5
+	spread = 4
 	recoil = 0.5
 	can_suppress = FALSE
 	mag_display = TRUE
@@ -282,7 +282,7 @@
 	can_suppress = TRUE
 	fire_sound = "hl13/sound/weapons/uspfire.ogg"
 	recoil = 0.2
-	spread = 6
+	spread = 5
 	vary_fire_sound = FALSE
 
 	inhand_icon_state = "usp"
@@ -345,7 +345,7 @@
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "colt_python"
 	inhand_icon_state = "colt_python"
-	spread = 3 //very little spread
+	spread = 2 //very little spread
 	recoil = 2 //lots of recoil though
 	fire_delay = 8
 	vary_fire_sound = FALSE
@@ -658,7 +658,7 @@
 	jamming_chance = 20
 	projectile_damage_multiplier = 1.3
 	projectile_wound_bonus = -45
-	spread = 4 //it has a stock
+	spread = 3 //it has a stock
 	recoil = 0.5 //probably the only gun in the game other than M4A1 and service rifle with a real stock
 	fire_delay = 6 //its already boltaction but to make sure that someone who's really good at pressing Z doesnt just lay down suppressive fire
 	sawn_desc = "A ratty old pre-war rifle that was developed over a century ago. Someone seems to have taken this prized historical artifact and sawed it in half, creating an Obrez. Still moist, though."

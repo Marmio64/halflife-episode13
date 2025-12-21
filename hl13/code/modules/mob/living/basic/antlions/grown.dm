@@ -133,6 +133,8 @@
 	AddComponent(/datum/component/seethrough_mob)
 
 /mob/living/basic/halflife/antlion_guard/deployment
+	melee_attack_cooldown = 2 SECONDS
+	obj_damage = 50
 	speed = 0.65
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
 

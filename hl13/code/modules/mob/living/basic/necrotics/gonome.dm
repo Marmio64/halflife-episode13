@@ -123,7 +123,7 @@
 
 /mob/living/basic/halflife/zombie/gonome/complete/deployment
 	speed = 1.4
-	headcrab_delay = 3 SECONDS
+	headcrab_delay = 2.5 SECONDS
 
 /mob/living/basic/halflife/zombie/gonome/Login()
 	..()
