@@ -383,10 +383,42 @@
 	recoil = 1.5
 	fire_delay = 9
 	vary_fire_sound = FALSE
+	desc_controls = "Right-click to activate the alternative fire."
+	var/altfire = FALSE
+	///Tracks which shell of the altfire is loaded. TRUE means this is the second shell.
+	var/onefreebullet = FALSE
 
 	inhand_icon_state = "spas12"
 	lefthand_file = 'hl13/icons/mob/inhands/64x_guns_left.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/64x_guns_right.dmi'
+
+/obj/item/gun/ballistic/shotgun/spas12/try_fire_gun(atom/target, mob/living/user, params)
+	if(LAZYACCESS(params2list(params), RIGHT_CLICK))
+		altfire = TRUE
+		burst_size = 2
+		fire_delay = 1
+	else if(LAZYACCESS(params2list(params), LEFT_CLICK))
+		altfire = FALSE
+		burst_size = 1
+	onefreebullet = FALSE
+	return ..()
+
+/obj/item/gun/ballistic/shotgun/spas12/shoot_live_shot(mob/living/user)
+	..()
+	if(altfire && !onefreebullet)
+		onefreebullet = TRUE
+		rack_delay = 8
+		recent_rack = world.time + rack_delay
+		rack(user)
+		projectile_damage_multiplier = 0.5
+	else if(onefreebullet)
+		onefreebullet = FALSE
+		projectile_damage_multiplier = 1
+
+/obj/item/gun/ballistic/shotgun/spas12/rack()
+	..()
+	if(!onefreebullet)
+		rack_delay = 5
 
 /obj/item/ammo_box/magazine/internal/shot/com/spas12
 	name = "spas12 internal magazine"
