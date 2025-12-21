@@ -18,7 +18,7 @@
 	/// What angle do we want the backblast to cover
 	var/blast_angle
 
-/datum/element/backblast/Attach(datum/target, dev_range = 0, heavy_range = 0, light_range = 6, flame_range = 6, blast_angle = 60)
+/datum/element/backblast/Attach(datum/target, dev_range = 0, heavy_range = 0, light_range = 0, flame_range = 6, blast_angle = 60)
 	. = ..()
 	if(!isgun(target) || dev_range < 0 || heavy_range < 0 || light_range < 0 || flame_range < 0 || blast_angle < 1)
 		return ELEMENT_INCOMPATIBLE

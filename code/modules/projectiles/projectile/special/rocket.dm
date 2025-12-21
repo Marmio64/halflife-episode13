@@ -16,7 +16,6 @@
 	desc = "Boom."
 	icon_state= "missile"
 	damage = 60
-	armour_penetration = 30
 	sharpness = NONE
 	embed_type = null
 	shrapnel_type = null

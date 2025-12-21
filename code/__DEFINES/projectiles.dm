@@ -74,7 +74,7 @@
 #define CALIBER_PLASMAROUND "plasma"
 
 /// For gunpoints, how many tiles around the target the shooter can roam without losing their shot
-#define GUNPOINT_SHOOTER_STRAY_RANGE 2
+#define GUNPOINT_SHOOTER_STRAY_RANGE 1
 
 /// A spark will be generated for each THIS amount of damage dealt to a robotic limb by a projectile.
 #define PROJECTILE_DAMAGE_PER_ROBOTIC_SPARK 20

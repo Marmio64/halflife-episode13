@@ -72,7 +72,7 @@
 	if(!isliving(target)) //if the target isn't alive, so is a wall or something
 		explosion(target, heavy_impact_range = 2, light_impact_range = 3, flame_range = 0, flash_range = 0, explosion_cause = src)
 	else
-		explosion(target, heavy_impact_range = 1, light_impact_range = 3, flame_range = 0, flash_range = 0,  explosion_cause = src)
+		explosion(target, heavy_impact_range = 2, light_impact_range = 3, flame_range = 0, flash_range = 0,  explosion_cause = src)
 		if(random_crit_gib)
 			var/mob/living/gibbed_dude = target
 			new /obj/effect/temp_visual/crit(get_turf(gibbed_dude))
