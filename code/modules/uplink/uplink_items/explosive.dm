@@ -27,3 +27,9 @@
 	cost = 5
 	purchasable_from = ~UPLINK_CLOWN_OPS
 
+/datum/uplink_item/explosives/rocket_launcher
+	name = "Rocket Launcher"
+	desc = "Devestating power does not come cheap, nor is it carried easily."
+	item = /obj/item/gun/ballistic/rocketlauncher/halflife
+	progression_minimum = 30 MINUTES
+	cost = 20

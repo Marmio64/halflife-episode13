@@ -24,9 +24,12 @@
 	/// Outfit they should be equipped with, if they're loud
 	var/uprising_outfit
 
+	var/loud = FALSE
+
 /datum/antagonist/uprising/loud
 	name = "Uprising Ringleader (Loud)"
 	send_to_base = TRUE
+	loud = TRUE
 
 	uprising_outfit = /datum/outfit/rebel
 
@@ -61,8 +64,13 @@
 
 	current.cmode_music = 'hl13/sound/music/combat/penultimatum.ogg'
 
-	var/datum/action/cooldown/spell/uprising/calldown_relay/call_relay = new(owner)
-	call_relay.Grant(current)
+	if(!loud)
+		var/datum/action/cooldown/spell/uprising/calldown_relay/call_relay = new(owner)
+		call_relay.Grant(current)
+	else
+		var/datum/action/cooldown/spell/uprising/calldown_relay/loud/call_relay = new(owner)
+		call_relay.Grant(current)
+
 
 	var/datum/action/cooldown/spell/uprising/comm/communications = new(owner)
 	communications.Grant(current)
@@ -71,8 +79,8 @@
 	view_soc.Grant(current)
 
 	if(send_to_base)
-		owner.current.forceMove(pick(GLOB.nukeop_start))
-
+		//owner.current.forceMove(pick(GLOB.nukeop_start))
+		move_to_spawnpoint()
 
 	equip_op()
 
@@ -95,6 +103,25 @@
 	operative.equip_species_outfit(uprising_outfit)
 
 	return TRUE
+
+/// Actually moves our nukie to where they should be
+/datum/antagonist/uprising/proc/move_to_spawnpoint()
+	// Ensure that the nukiebase is loaded, and wait for it if required
+	SSmapping.lazy_load_template(LAZY_TEMPLATE_KEY_NUKIEBASE)
+	var/turf/destination = get_spawnpoint()
+	owner.current.forceMove(destination)
+	if(!owner.current.onSyndieBase())
+		message_admins("[ADMIN_LOOKUPFLW(owner.current)] is a NUKE OP and move_to_spawnpoint put them somewhere that isn't the syndie base, help please.")
+		stack_trace("Nuke op move_to_spawnpoint resulted in a location not on the syndicate base. (Was moved to: [destination])")
+
+/// Gets the position we spawn at
+/datum/antagonist/uprising/proc/get_spawnpoint()
+	var/team_number = 1
+	if(uprising_team)
+		team_number = uprising_team.members.Find(owner)
+
+	return GLOB.nukeop_start[((team_number - 1) % GLOB.nukeop_start.len) + 1]
+
 
 /datum/objective/uprising
 	explanation_text = "Turn on a super destabilizer in the nexus, and defend it until it completes."

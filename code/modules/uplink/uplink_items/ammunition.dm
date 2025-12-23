@@ -36,3 +36,18 @@
 	cost = 2
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 	progression_minimum = 3 MINUTES
+
+/datum/uplink_item/ammo/ammo_crate
+	name = "Ammo Crate"
+	desc = "A crate that can dispense three magazines from a wide selection of ammunition."
+	progression_minimum = 10 MINUTES
+	item = /obj/machinery/ammo_crate/no_recharge
+	cost = 10
+
+/datum/uplink_item/ammo/heavy_ammo_crate
+	name = "Heavy Ammo Crate"
+	desc = "A crate that can dispense four unique, heavy ammunition types. Includes dark energy cells for the AR2, 20mm MP7 grenades, and RPG rockets."
+	progression_minimum = 15 MINUTES
+	item = /obj/machinery/ammo_crate/heavy
+	cost = 20
+

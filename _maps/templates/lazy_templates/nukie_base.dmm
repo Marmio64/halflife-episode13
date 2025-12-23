@@ -91,19 +91,12 @@
 /turf/open/floor/plating/ground/dirt,
 /area/centcom/halflife/rebel)
 "cN" = (
-/obj/item/storage/medkit/regular,
 /obj/structure/halflife/storage/large/medical,
-/obj/item/healthanalyzer,
 /obj/machinery/light/small/cyan/directional/south,
+/obj/item/storage/medkit/halflife,
+/obj/item/stack/medical/bone_gel,
+/obj/item/healthanalyzer,
 /turf/open/floor/plating/indoor/sterilesquares,
-/area/centcom/halflife/rebel)
-"cO" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
-	},
 /area/centcom/halflife/rebel)
 "cQ" = (
 /obj/effect/light_emitter/fake_outdoors,
@@ -144,15 +137,6 @@
 	pixel_y = 7
 	},
 /turf/open/floor/plating/indoor/metal/industrial,
-/area/centcom/halflife/rebel)
-"dO" = (
-/obj/effect/light_emitter/fake_outdoors,
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 1
-	},
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
-	},
 /area/centcom/halflife/rebel)
 "dV" = (
 /obj/effect/light_emitter/fake_outdoors,
@@ -197,12 +181,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
-"gz" = (
-/obj/structure/halflife/large_pipe/ground{
-	dir = 8
-	},
-/turf/open/halflife/water/medium,
-/area/centcom/halflife/rebel)
 "gJ" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/centcom/halflife/rebel)
@@ -214,7 +192,6 @@
 /obj/item/clothing/head/beanie/black,
 /obj/item/clothing/suit/armor/civilprotection/medical,
 /obj/item/clothing/accessory/armband/medblue,
-/obj/item/reagent_containers/pill/patch/medkit,
 /obj/structure/closet/halflife,
 /obj/item/radio/headset/syndicate/alt,
 /obj/item/radio/headset/syndicate/alt,
@@ -231,6 +208,7 @@
 "hE" = (
 /obj/structure/bed/halflife/bedframe/wood,
 /obj/structure/bed/halflife/mattress/stale,
+/obj/effect/landmark/start/nukeop,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "hS" = (
@@ -242,11 +220,6 @@
 "if" = (
 /obj/structure/halflife/storage/large/shelf,
 /obj/item/ammo_box/magazine/usp9mm,
-/obj/item/ammo_box/magazine/usp9mm,
-/obj/item/ammo_box/magazine/usp9mm,
-/obj/item/ammo_box/magazine/usp9mm,
-/obj/item/gun/ballistic/automatic/pistol/usp,
-/obj/item/gun/ballistic/automatic/pistol/usp,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "ij" = (
@@ -319,34 +292,21 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
 "kG" = (
-/obj/item/clothing/under/citizen/refugee,
-/obj/item/clothing/suit/armor/civilprotection,
 /obj/item/clothing/head/beret/durathread/unitednations,
 /obj/structure/closet/halflife,
 /obj/item/radio/headset/syndicate/alt,
 /obj/item/radio/headset/syndicate/alt,
 /obj/item/clothing/under/syndicate/camo,
 /obj/item/clothing/suit/armor/halflife/kevlar,
-/obj/item/clothing/head/helmet/halflife/military/poland,
 /obj/item/clothing/mask/gas/hl2/military,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "kJ" = (
-/obj/item/gun/ballistic/automatic/mp7,
-/obj/item/ammo_box/magazine/mp7,
-/obj/item/ammo_box/magazine/mp7,
+/obj/item/gun/ballistic/automatic/pistol/usp,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "kQ" = (
 /turf/open/floor/plating/indoor/metal/industrial,
-/area/centcom/halflife/rebel)
-"kU" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 5
-	},
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
-	},
 /area/centcom/halflife/rebel)
 "kW" = (
 /obj/machinery/light/directional/east,
@@ -404,11 +364,6 @@
 /area/centcom/halflife/rebel)
 "mk" = (
 /obj/item/ammo_box/magazine/usp9mm,
-/obj/item/ammo_box/magazine/usp9mm,
-/obj/item/ammo_box/magazine/usp9mm,
-/obj/item/ammo_box/magazine/usp9mm,
-/obj/item/gun/ballistic/automatic/pistol/usp,
-/obj/item/gun/ballistic/automatic/pistol/usp,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "mq" = (
@@ -521,12 +476,9 @@
 /turf/open/floor/plating/ground/dirt,
 /area/centcom/halflife/rebel)
 "pS" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 6
-	},
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
-	},
+/obj/machinery/light/small/directional/south,
+/obj/effect/landmark/start/nukeop_leader,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "pY" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -536,10 +488,6 @@
 /area/centcom/halflife/rebel)
 "qw" = (
 /obj/structure/table/halflife/wood,
-/obj/item/lockpick{
-	pixel_x = -6;
-	pixel_y = 10
-	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "qO" = (
@@ -551,14 +499,6 @@
 /area/centcom/halflife/rebel)
 "rS" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/melee/sledgehammer{
-	pixel_x = 5;
-	pixel_y = 11
-	},
-/obj/item/melee/sledgehammer{
-	pixel_x = 0;
-	pixel_y = 13
-	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
 "so" = (
@@ -573,10 +513,8 @@
 /turf/open/space/basic,
 /area/space)
 "tf" = (
-/obj/item/gun/ballistic/automatic/pulsesmg/standardpin,
-/obj/item/ammo_box/magazine/pulsesmg,
-/obj/item/ammo_box/magazine/pulsesmg,
-/turf/open/floor/plating/indoor/concrete/small,
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
 "tn" = (
 /obj/structure/halflife/trash/glass/cans{
@@ -588,20 +526,13 @@
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "tM" = (
-/obj/item/gun/ballistic/automatic/mp7,
-/obj/item/ammo_box/magazine/mp7,
-/obj/item/ammo_box/magazine/mp7,
 /obj/structure/halflife/storage/large/shelf,
+/obj/item/gun/ballistic/automatic/pistol/usp,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "um" = (
-/obj/effect/turf_decal/siding/thinplating,
-/obj/structure/halflife/road_barrier/concrete{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
-	},
+/obj/structure/extinguisher_cabinet/directional/north,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "uo" = (
 /obj/structure/halflife/fence/wire/barb,
@@ -623,7 +554,6 @@
 /area/centcom/halflife/rebel)
 "vx" = (
 /obj/effect/light_emitter/fake_outdoors,
-/obj/effect/turf_decal/siding/thinplating,
 /turf/open/floor/plating/ground/brickroad{
 	dir = 1
 	},
@@ -654,14 +584,6 @@
 /obj/effect/light_emitter/fake_outdoors,
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/dirt/alt,
-/area/centcom/halflife/rebel)
-"ye" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 1
-	},
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
-	},
 /area/centcom/halflife/rebel)
 "yp" = (
 /obj/structure/halflife/road_barrier/concrete/alt{
@@ -785,6 +707,7 @@
 /obj/structure/bed/halflife/bedframe/wood,
 /obj/structure/bed/halflife/mattress/yellowed,
 /obj/structure/halflife/rug/yellow,
+/obj/effect/landmark/start/nukeop,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "FO" = (
@@ -829,10 +752,11 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/centcom/halflife/rebel)
 "Ic" = (
-/obj/item/gun/ballistic/automatic/ar2/standardpin,
-/obj/item/ammo_box/magazine/ar2,
-/obj/item/ammo_box/magazine/ar2,
 /obj/structure/halflife/storage/large/shelf,
+/obj/item/crowbar/large{
+	pixel_x = 9;
+	pixel_y = 12
+	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "In" = (
@@ -895,13 +819,6 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
 "Le" = (
-/obj/machinery/vending/combine_wallmed/directional/north{
-	onstation_override = 1;
-	onstation = 0;
-	all_products_free = 1;
-	name = "hijacked combine wall medical vendor";
-	desc = "The CAMS is a wall mounted vendor which freely dispenses basic medical supplies."
-	},
 /obj/machinery/iv_drip,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/centcom/halflife/rebel)
@@ -954,14 +871,6 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
-"Ni" = (
-/obj/structure/table/halflife/wood,
-/obj/item/crowbar/large{
-	pixel_x = 9;
-	pixel_y = 12
-	},
-/turf/open/floor/plating/indoor/concrete/small,
-/area/centcom/halflife/rebel)
 "NP" = (
 /turf/open/halflife/water/deep,
 /area/centcom/halflife/rebel)
@@ -969,17 +878,6 @@
 /obj/effect/spawner/random/halflife/plant_spawner,
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/ground/dirt/alt,
-/area/centcom/halflife/rebel)
-"OO" = (
-/obj/item/clothing/suit/armor/halflife/plf_veteran,
-/obj/item/clothing/head/helmet/halflife/military/plf_veteran,
-/obj/structure/closet/crate/halflife,
-/obj/item/gun/ballistic/automatic/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/ammo_box/magazine/ak47,
-/obj/item/flashlight/seclite,
-/obj/item/clothing/mask/gas/hl2/military/hardened,
-/turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
 "Pc" = (
 /obj/effect/turf_decal/siding/thinplating,
@@ -1013,41 +911,24 @@
 "QM" = (
 /obj/structure/bed/halflife/bedframe/wood,
 /obj/structure/bed/halflife/mattress/yellowed,
+/obj/effect/landmark/start/nukeop,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "Rf" = (
-/obj/machinery/vending/armory{
-	name = "stolen armory vendor";
-	desc = "A stolen Civil Protection armoury vendor. Used more to annoy the sociostability tracker than to actually requisition weapons."
-	},
 /obj/structure/sign/poster/halflife/rebel/plf/hold{
 	pixel_x = -32
 	},
+/obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "Rl" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/lino,
 /area/centcom/halflife/rebel)
-"Rs" = (
-/obj/structure/railing/halflife/solo{
-	dir = 1
-	},
-/obj/structure/halflife/combine/siphon{
-	name = "outdated water siphon";
-	desc = "An old, outdated water siphon.";
-	layer = 3;
-	pixel_x = -4;
-	pixel_y = 0
-	},
-/turf/open/floor/plating/indoor/concrete,
-/area/centcom/halflife/rebel)
 "RE" = (
-/obj/machinery/porta_turret/combine/mp7{
+/obj/machinery/porta_turret/combine/rebel{
 	dir = 1;
-	name = "resistance turret";
-	faction = list("neutral");
-	desc = "A combine made turret which shoots at specified targets with a high power pulse gun. You can see shark teeth painted on it."
+	anchored = 1
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/centcom/halflife/rebel)
@@ -1093,17 +974,6 @@
 	dir = 8
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
-/area/centcom/halflife/rebel)
-"Tf" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 1
-	},
-/obj/structure/halflife/road_barrier/concrete{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
-	},
 /area/centcom/halflife/rebel)
 "TD" = (
 /obj/structure/halflife/rug/yellow,
@@ -1188,12 +1058,16 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/centcom/halflife/rebel)
 "Xj" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/storage/toolbox/syndicate{
-	pixel_x = 4;
-	pixel_y = 7
+/obj/docking_port/stationary{
+	dwidth = 12;
+	height = 17;
+	name = "lambda recon outpost";
+	shuttle_id = "syndicate_away";
+	width = 23;
+	dir = 8;
+	roundstart_template = /datum/map_template/shuttle/infiltrator/basic
 	},
-/turf/open/floor/plating/indoor/metal/industrial,
+/turf/open/halflife/water/medium,
 /area/centcom/halflife/rebel)
 "XC" = (
 /obj/machinery/light/directional/south,
@@ -2182,7 +2056,7 @@ NP
 NP
 NP
 qp
-tf
+nz
 nz
 nz
 Jx
@@ -2273,7 +2147,7 @@ Sv
 Sv
 Sv
 Sv
-gz
+Sv
 Sv
 NP
 NP
@@ -2375,10 +2249,10 @@ Sv
 Sv
 Sv
 Sv
-Rs
 Sv
 Sv
 Sv
+Xj
 Sv
 Sv
 NP
@@ -2478,12 +2352,12 @@ Sv
 Sv
 Sv
 ad
-ye
+YF
 lg
-Sv
+YF
 lg
-Sv
-Sv
+YF
+gJ
 Sv
 Sv
 Sv
@@ -2580,9 +2454,9 @@ cQ
 Sv
 Sv
 ad
-dO
+vx
 lg
-Sv
+YF
 lg
 vx
 DO
@@ -2682,11 +2556,11 @@ HD
 Sv
 Sv
 ad
-ye
+YF
 lg
 YF
 lg
-Pc
+YF
 DO
 Sv
 Sv
@@ -2784,11 +2658,11 @@ HD
 HD
 HD
 ad
-ye
+YF
 lg
 YF
 lg
-Pc
+YF
 DO
 HD
 HD
@@ -2886,11 +2760,11 @@ HD
 HD
 HD
 ad
-Tf
+oe
 yp
 oe
 yp
-um
+oe
 DO
 HD
 HD
@@ -2988,7 +2862,7 @@ Gr
 zS
 HD
 ad
-dO
+vx
 lg
 YF
 lg
@@ -3003,11 +2877,11 @@ FN
 nz
 kG
 qp
-nz
+um
 nz
 qp
 yB
-Xj
+rS
 rS
 qp
 Gl
@@ -3090,11 +2964,11 @@ Ye
 qp
 SJ
 ad
-ye
+YF
 lg
 YF
 lg
-Pc
+YF
 DO
 zS
 uN
@@ -3103,7 +2977,7 @@ hq
 nz
 nz
 nz
-hp
+pS
 qp
 St
 nz
@@ -3192,11 +3066,11 @@ Ye
 bT
 Ye
 gJ
-kU
+YF
 lg
-cO
+YF
 lg
-pS
+YF
 gJ
 Ye
 Ye
@@ -3208,7 +3082,7 @@ nz
 nz
 Jx
 nz
-Ni
+qw
 qp
 KH
 gf
@@ -3622,7 +3496,7 @@ cT
 cV
 kQ
 qp
-OO
+qp
 qp
 Gl
 sU
@@ -5650,7 +5524,7 @@ gJ
 gJ
 HT
 qp
-pY
+tf
 pY
 pY
 pY

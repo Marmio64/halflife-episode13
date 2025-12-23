@@ -7,18 +7,33 @@
 
 	drag_slowdown = 1
 	slowdown = 1
+	var/loud = FALSE
+
+/obj/item/rebel_relay/loud
+	loud = TRUE
 
 /obj/item/rebel_relay/Initialize(mapload, owner, tc_amount = 10, datum/uplink_handler/uplink_handler_override = null)
 	. = ..()
-	AddComponent(\
-		/datum/component/uplink, \
-		owner = owner, \
-		lockable = FALSE, \
-		enabled = TRUE, \
-		uplink_flag = UPLINK_TRAITORS, \
-		starting_tc = 10, \
-		uplink_handler_override = uplink_handler_override, \
-	)
+	if(!loud)
+		AddComponent(\
+			/datum/component/uplink, \
+			owner = owner, \
+			lockable = FALSE, \
+			enabled = TRUE, \
+			uplink_flag = UPLINK_TRAITORS, \
+			starting_tc = 10, \
+			uplink_handler_override = uplink_handler_override, \
+		)
+	else
+		AddComponent(\
+			/datum/component/uplink, \
+			owner = owner, \
+			lockable = FALSE, \
+			enabled = TRUE, \
+			uplink_flag = UPLINK_TRAITORS, \
+			starting_tc = rand(40,50), \
+			uplink_handler_override = uplink_handler_override, \
+		)
 
 /obj/item/rebel_relay/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/combine_datapod))
@@ -41,6 +56,10 @@
 	spell_requirements = SPELL_REQUIRES_MIND
 	antimagic_flags = 0
 	spell_max_level = 1
+	var/loud = FALSE
+
+/datum/action/cooldown/spell/uprising/calldown_relay/loud
+	loud = TRUE
 
 /datum/action/cooldown/spell/uprising/calldown_relay/cast(mob/living/cast_on)
 	. = ..()
@@ -50,5 +69,8 @@
 		to_chat(cast_on, span_warning("You halt the call."))
 		return
 
-	new /obj/item/rebel_relay(cast_on.loc)
+	if(!loud)
+		new /obj/item/rebel_relay(cast_on.loc)
+	else
+		new /obj/item/rebel_relay/loud(cast_on.loc)
 	qdel(src)

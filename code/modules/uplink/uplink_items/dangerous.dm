@@ -21,6 +21,41 @@
 	progression_minimum = 5 MINUTES
 	cost = 7
 
+/datum/uplink_item/dangerous/mp7
+	name = "MP7"
+	desc = "A compact submachine gun which can shred lightly armored targets in close to medium range."
+	item = /obj/item/gun/ballistic/automatic/mp7
+	progression_minimum = 15 MINUTES
+	cost = 10
+
+/datum/uplink_item/dangerous/spas12
+	name = "SPAS-12"
+	desc = "A high power pump action shotgun which ensures anyone who steps into close range with you does not get to leave it alive."
+	item = /obj/item/gun/ballistic/shotgun/spas12
+	progression_minimum = 15 MINUTES
+	cost = 11
+
+/datum/uplink_item/dangerous/colt
+	name = "Colt Python Revolver"
+	desc = "A timeless revolver which is good at any range, but is most notable as a handheld sniping implement for accurate, high power shots."
+	item = /obj/item/gun/ballistic/revolver/coltpython
+	progression_minimum = 15 MINUTES
+	cost = 11
+
+/datum/uplink_item/dangerous/m4a1
+	name = "M4A1"
+	desc = "High power in a beautiful design that has withstood the passing of time well. This firearm from the far west of America combines precision and stopping power."
+	item = /obj/item/gun/ballistic/automatic/m4a1
+	progression_minimum = 20 MINUTES
+	cost = 15
+
+/datum/uplink_item/dangerous/ar2
+	name = "AR2"
+	desc = "One of the combine's rifles, issued only to high ranking soldiers in the Overwatch arm. We've acquired and modified one at great cost to us in order to make it usable by anyone."
+	item = /obj/item/gun/ballistic/automatic/ar2/standardpin
+	progression_minimum = 25 MINUTES
+	cost = 20
+
 /datum/uplink_item/dangerous/knife
 	name = "Combat Knife"
 	desc = "A deadly knife that can be easily concealed and drawn for melee combat."

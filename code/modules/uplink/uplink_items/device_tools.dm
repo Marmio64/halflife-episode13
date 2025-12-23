@@ -38,27 +38,12 @@
 	item = /obj/item/storage/briefcase/launchpad
 	cost = 6
 
-/datum/uplink_item/device_tools/syndicate_teleporter
-	name = "Experimental Rebel Teleporter"
-	desc = "A handheld device that teleports the user 4-8 meters forward. \
-			Beware, teleporting into a wall will trigger a parallel emergency teleport; \
-			however if that fails, you may need to be stitched back together. \
-			Comes with 4 charges, recharges randomly. Warranty null and void if exposed to an electromagnetic pulse."
-	item = /obj/item/storage/box/syndie_kit/syndicate_teleporter
-	cost = 8
-
-/datum/uplink_item/device_tools/military_belt
-	name = "Chest Rig"
-	desc = "A robust seven-slot set of webbing that is capable of holding all manner of tactical equipment."
-	item = /obj/item/storage/belt/military
-	cost = 2
-
 /datum/uplink_item/device_tools/toolbox
 	name = "Full Rebel Toolbox"
 	desc = "The Rebel toolbox is a suspicious black and red. It comes loaded with a full tool set including a \
 			multitool and combat gloves that are resistant to shocks and heat."
 	item = /obj/item/storage/toolbox/syndicate
-	cost = 1
+	cost = 2
 	uplink_item_flags = SYNDIE_TRIPS_CONTRABAND
 
 /datum/uplink_item/device_tools/emag
@@ -92,6 +77,13 @@
 	item = /obj/item/reagent_containers/pill/patch/medkit
 	cost = 1
 	progression_minimum = 10 MINUTES
+
+/datum/uplink_item/device_tools/medicalkit
+	name = "Oldworld Medical Kit"
+	desc = "Fully equipped with all kinds of medical supplies, these old world style kits require a bit more finesse and effort than biogel medkits, but give you more healing power for the price."
+	item = /obj/item/storage/medkit/halflife
+	cost = 4
+	progression_minimum = 5 MINUTES
 
 /datum/uplink_item/device_tools/gasmask
 	name = "Gasmask"
