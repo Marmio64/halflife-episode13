@@ -180,7 +180,7 @@
 	time_per_checkpoint = 180 SECONDS
 
 /obj/machinery/deployment_payload/fortress
-	altered_respawn_speed = 45 SECONDS
+	altered_respawn_speed = 50 SECONDS
 	normal_respawn_speed = 20 SECONDS
 	time_per_checkpoint = 210 SECONDS
 

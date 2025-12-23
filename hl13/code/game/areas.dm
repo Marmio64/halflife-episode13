@@ -555,6 +555,8 @@
 	name = "\improper Prison Indoors"
 
 	first_time_text = "Nowy Jutro Prison"
+	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'
+	ambient_buzz_vol = 40
 
 /area/halflife/indoors/prison/cells
 	name = "\improper Prison Cells"

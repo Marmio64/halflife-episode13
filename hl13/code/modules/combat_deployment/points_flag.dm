@@ -80,7 +80,7 @@
 	starting_faction = REBEL_DEPLOYMENT_FACTION
 
 /obj/machinery/deployment_points_flag/poland/high_cash
-	cash_increase = 3
+	cash_increase = 1
 
 /obj/machinery/deployment_points_flag/poland/low_cash
 	cash_increase = 0.2
@@ -90,7 +90,7 @@
 	starting_faction = COMBINE_DEPLOYMENT_FACTION
 
 /obj/machinery/deployment_points_flag/combine/high_cash
-	cash_increase = 3
+	cash_increase = 1
 
 /obj/machinery/deployment_points_flag/combine/low_cash
 	cash_increase = 0.2

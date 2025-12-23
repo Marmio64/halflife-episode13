@@ -142,8 +142,8 @@
 			/datum/supply_beacon_option/fortifications_crate,
 			/datum/supply_beacon_option/grenade_crate,
 			/datum/supply_beacon_option/heavyammocrate,
-			/datum/supply_beacon_option/missile_targeter,
 			/datum/supply_beacon_option/rocket_launcher,
+			/datum/supply_beacon_option/missile_targeter,
 			/datum/supply_beacon_option/emplacement_gun,
 			/datum/supply_beacon_option/rebel_tier5,
 		)
@@ -192,15 +192,15 @@
 	cost = 325
 	spawn_path = /obj/machinery/ammo_crate/heavy
 
+/datum/supply_beacon_option/rocket_launcher
+	option_name = "Rocket Launcher (350 Points)"
+	cost = 350
+	spawn_path = /obj/item/gun/ballistic/rocketlauncher/halflife
+
 /datum/supply_beacon_option/missile_targeter
 	option_name = "One-use Missile Targeter (400 Points)"
 	cost = 400
 	spawn_path = /obj/item/halflife/missile_targeter/one_use
-
-/datum/supply_beacon_option/rocket_launcher
-	option_name = "Rocket Launcher (400 Points)"
-	cost = 400
-	spawn_path = /obj/item/gun/ballistic/rocketlauncher/halflife
 
 /datum/supply_beacon_option/canister_targeter
 	option_name = "Modified Canister Targeter (300 Points)"

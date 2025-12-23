@@ -78,6 +78,8 @@
 	user.faction += "combine"
 	user.faction -= "neutral"
 
+	user.fire_stack_decay_rate = -2 //So their corpses don't stay perma on fire, and can be rediscovered. Max stack size is 12, and this removes 4 stacks every 2 seconds
+
 	user.change_stat(STATKEY_DEX, 4)
 	user.change_stat(STATKEY_STR, 4)
 

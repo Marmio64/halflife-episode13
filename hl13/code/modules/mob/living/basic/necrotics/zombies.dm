@@ -91,6 +91,7 @@
 
 /mob/living/basic/halflife/zombie/deployment
 	speed = 1.5
+	melee_attack_cooldown = 1.75 SECONDS
 
 /mob/living/basic/halflife/zombie/zombine
 	name = "Zombine"
@@ -189,6 +190,7 @@
 	speed = 0.5
 	maxHealth = 125
 	health = 125
+	melee_attack_cooldown = 1.75 SECONDS
 
 ///Meant to be avoided rather than fought head on. Very slow, but dangerous in melee.
 /mob/living/basic/halflife/zombie/engineer
