@@ -228,6 +228,7 @@
 
 	backpack_contents = list(
 		/obj/item/storage/medkit/halflife_combine = 1,
+		/obj/item/reagent_containers/hypospray/medipen/blood = 2,
 		/obj/item/scalpel/hidden_doctor = 1,
 		/obj/item/flashlight/flare/the_hidden = 1,
 	)

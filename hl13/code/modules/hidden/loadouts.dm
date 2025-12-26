@@ -78,7 +78,7 @@
 
 	back = /obj/item/melee/sledgehammer
 
-	extra_str = 8
+	extra_str = 9
 
 /datum/outfit/deployment_loadout/hidden/combine/riot_cop/pre_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -234,6 +234,7 @@
 
 	backpack_contents = list(
 		/obj/item/storage/medkit/halflife_combine = 1,
+		/obj/item/reagent_containers/hypospray/medipen/blood = 2,
 		/obj/item/scalpel/hidden_doctor = 1,
 		/obj/item/flashlight/flare/the_hidden = 1,
 	)

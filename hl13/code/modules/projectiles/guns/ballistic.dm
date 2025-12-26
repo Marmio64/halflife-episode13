@@ -842,7 +842,7 @@
 
 /obj/item/stock_parts/power_store/cell/hidden_immolator
 	name = "immolator power cell"
-	maxcharge = STANDARD_CELL_CHARGE * 1.4
+	maxcharge = STANDARD_CELL_CHARGE * 1.6
 
 /obj/item/gun/ballistic/rocketlauncher/halflife
 	name = "\improper Rocket Launcher"

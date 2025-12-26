@@ -2,10 +2,6 @@
 "aa" = (
 /turf/template_noop,
 /area/template_noop)
-"ab" = (
-/obj/structure/table/halflife/no_smooth/wood,
-/turf/open/floor/plating/indoor/woodc/wide,
-/area/shuttle/syndicate/hallway)
 "ad" = (
 /obj/structure/table/halflife/no_smooth/cable_reel,
 /obj/item/reagent_containers/cup/glass/bottle/vodka{
@@ -37,34 +33,7 @@
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/syndicate/hallway)
-"aw" = (
-/obj/structure/railing/halflife/solo,
-/obj/structure/railing/halflife/solo{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/woodc/wide,
-/area/shuttle/syndicate/hallway)
-"aB" = (
-/obj/structure/bed/halflife/bedframe/wood,
-/obj/structure/bed/halflife/mattress/stale,
-/turf/open/floor/plating/indoor/woodc/wide,
-/area/shuttle/syndicate/hallway)
-"bn" = (
-/obj/structure/table/halflife/no_smooth/wood,
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/plating/indoor/woodc/wide,
-/area/shuttle/syndicate/hallway)
-"bx" = (
-/obj/structure/bed/halflife/bedframe/wood,
-/obj/structure/bed/halflife/mattress/stained,
-/turf/open/floor/plating/indoor/woodc/wide,
-/area/shuttle/syndicate/hallway)
-"by" = (
-/obj/machinery/computer/shuttle/syndicate,
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/indoor/woodc/wide,
-/area/shuttle/syndicate/hallway)
-"iE" = (
+"ax" = (
 /obj/machinery/porta_turret/combine/rebel{
 	dir = 4;
 	anchored = 1
@@ -77,20 +46,45 @@
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/syndicate/hallway)
+"aB" = (
+/obj/structure/bed/halflife/bedframe/wood,
+/obj/structure/bed/halflife/mattress/stale,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/shuttle/syndicate/hallway)
+"bc" = (
+/turf/closed/wall/halflife/wood,
+/area/shuttle/syndicate/hallway)
+"bn" = (
+/obj/structure/railing/halflife/solo,
+/obj/structure/railing/halflife/solo{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/shuttle/syndicate/hallway)
+"bx" = (
+/obj/structure/bed/halflife/bedframe/wood,
+/obj/structure/bed/halflife/mattress/stained,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/shuttle/syndicate/hallway)
 "nN" = (
 /obj/docking_port/mobile/infiltrator,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/syndicate/hallway)
-"zd" = (
-/turf/closed/wall/halflife/wood,
+"pQ" = (
+/obj/machinery/computer/shuttle/syndicate,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/shuttle/syndicate/hallway)
+"st" = (
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/shuttle/syndicate/hallway)
+"ye" = (
+/obj/structure/table/halflife/no_smooth/wood,
+/turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/syndicate/hallway)
 "AZ" = (
 /obj/structure/table/halflife/no_smooth/wood,
 /obj/machinery/jukebox/radio,
-/turf/open/floor/plating/indoor/woodc/wide,
-/area/shuttle/syndicate/hallway)
-"Cu" = (
-/obj/machinery/door/unpowered/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/syndicate/hallway)
 "Fd" = (
@@ -118,7 +112,13 @@
 /obj/structure/bed/halflife/mattress/yellowed,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/syndicate/hallway)
-"RO" = (
+"QX" = (
+/obj/structure/table/halflife/no_smooth/wood,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/shuttle/syndicate/hallway)
+"UN" = (
+/obj/machinery/door/unpowered/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/syndicate/hallway)
 "VW" = (
@@ -287,11 +287,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
+ax
+st
+st
+st
+bn
 aa
 aa
 aa
@@ -308,16 +308,16 @@ aa
 aa
 aa
 aa
-zd
-zd
-zd
-zd
-zd
-zd
+bc
+bc
+bc
+bc
+bc
+bc
 as
-zd
-zd
-zd
+bc
+bc
+bc
 aa
 aa
 aa
@@ -332,19 +332,19 @@ aa
 aa
 aa
 aa
-zd
-zd
+bc
+bc
 ak
-ab
+ye
 ak
 Fd
-RO
-RO
-zd
+st
+st
+bc
 VW
-zd
-zd
-zd
+bc
+bc
+bc
 aa
 aa
 aa
@@ -357,19 +357,19 @@ aa
 aa
 aa
 aa
-zd
+bc
 AZ
-RO
-RO
-RO
-RO
-RO
-RO
-Cu
-RO
+st
+st
+st
+st
+st
+st
+UN
+st
 Qx
-zd
-zd
+bc
+bc
 aa
 aa
 aa
@@ -382,19 +382,19 @@ aa
 aa
 aa
 aa
-zd
-by
+bc
+pQ
 af
-RO
-RO
-RO
-RO
-RO
-zd
-zd
-zd
-zd
-zd
+st
+st
+st
+st
+st
+bc
+bc
+bc
+bc
+bc
 aa
 aa
 aa
@@ -407,19 +407,19 @@ aa
 aa
 aa
 aa
-zd
+bc
 In
-RO
-RO
-RO
-RO
-RO
-RO
-Cu
-RO
+st
+st
+st
+st
+st
+st
+UN
+st
 bx
-zd
-zd
+bc
+bc
 aa
 aa
 aa
@@ -432,19 +432,19 @@ aa
 aa
 aa
 aa
-zd
-zd
+bc
+bc
 ad
 aB
 Nr
 KB
-RO
-RO
-zd
-bn
-zd
-zd
-zd
+st
+st
+bc
+QX
+bc
+bc
+bc
 aa
 aa
 aa
@@ -458,16 +458,16 @@ aa
 aa
 aa
 aa
-zd
-zd
-zd
-zd
-zd
-zd
+bc
+bc
+bc
+bc
+bc
+bc
 as
-zd
-zd
-zd
+bc
+bc
+bc
 aa
 aa
 aa
@@ -487,11 +487,11 @@ aa
 aa
 aa
 aa
-iE
-RO
+ax
+st
 nN
-RO
-aw
+st
+bn
 aa
 aa
 aa

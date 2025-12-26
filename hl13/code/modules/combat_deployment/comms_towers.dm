@@ -160,3 +160,56 @@
 /obj/machinery/deployment_comms_tower/rebel/xen_defense/examine(mob/user)
 	. = ..()
 	. += span_notice("The rebels need to defend the tower for [(GLOB.deployment_rebels_flag_time_left)/10] more seconds in order to win.")
+
+/obj/machinery/deployment_comms_tower/combine/xen_defense
+	var/combine_time = 10 MINUTES
+	var/grace_time = 90 SECONDS
+
+	var/grace_period_text = TRUE
+	var/capturable = FALSE
+
+	var/human_respawn_speed = 45 SECONDS
+
+/obj/machinery/deployment_comms_tower/combine/xen_defense/Initialize(mapload)
+	. = ..()
+	GLOB.deployment_combine_flag_time_left = combine_time
+	GLOB.deployment_flag_grace_period = grace_time
+	GLOB.deployment_respawn_rate_combine = human_respawn_speed
+
+/obj/machinery/deployment_comms_tower/combine/xen_defense/process()
+	. = ..()
+	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
+		if(!capturable)
+			capturable = TRUE
+			if(grace_period_text)
+				for(var/X in GLOB.deployment_combine_players)
+					var/mob/living/carbon/human/H = X
+					SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+					to_chat(H, "<span class='greentext big'>The grace period is up, fight for your life and protect the Communications Tower!</span>")
+				for(var/X in GLOB.deployment_xen_players)
+					var/mob/living/carbon/human/H = X
+					SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+					to_chat(H, "<span class='greentext big'>The grace period is up, kill the humans and destroy their Communications Tower!</span>")
+	else
+		GLOB.deployment_flag_grace_period -= 1 SECONDS
+
+	if(capturable)
+		GLOB.deployment_combine_flag_time_left -= 1 SECONDS
+
+	if(GLOB.deployment_combine_flag_time_left <= 0 && GLOB.deployment_win_team != XEN_DEPLOYMENT_FACTION)
+		priority_announce("Additional delegates deployed. Clamp, Contain, Sterilize.", "Overwatch Priority Alert")
+		GLOB.deployment_win_team = COMBINE_DEPLOYMENT_FACTION
+		SSticker.force_ending = FORCE_END_ROUND
+		for(var/X in GLOB.deployment_xen_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
+			to_chat(H, "<span class='userdanger'>The combine have survived long enough for reinforcements...</span>")
+		for(var/X in GLOB.deployment_combine_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
+			to_chat(H, "<span class='greentext big'>We have survived long enough for reinforcements to arrive!</span>")
+		return PROCESS_KILL
+
+/obj/machinery/deployment_comms_tower/combine/xen_defense/examine(mob/user)
+	. = ..()
+	. += span_notice("The combine need to defend the tower for [(GLOB.deployment_combine_flag_time_left)/10] more seconds in order to win.")
