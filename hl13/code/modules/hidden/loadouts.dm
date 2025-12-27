@@ -198,7 +198,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 3,
-		/obj/item/reagent_containers/hypospray/medipen/blood = 1,
+		/obj/item/reagent_containers/hypospray/medipen/blood = 2,
 		/obj/item/stack/medical/gauze/quik_gauze = 1,
 		/obj/item/ammo_box/magazine/mp7 = 1,
 		/obj/item/flashlight/flare/the_hidden = 1,

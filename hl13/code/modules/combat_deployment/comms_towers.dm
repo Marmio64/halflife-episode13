@@ -163,12 +163,12 @@
 
 /obj/machinery/deployment_comms_tower/combine/xen_defense
 	var/combine_time = 10 MINUTES
-	var/grace_time = 90 SECONDS
+	var/grace_time = 60 SECONDS
 
 	var/grace_period_text = TRUE
 	var/capturable = FALSE
 
-	var/human_respawn_speed = 45 SECONDS
+	var/human_respawn_speed = 50 SECONDS
 
 /obj/machinery/deployment_comms_tower/combine/xen_defense/Initialize(mapload)
 	. = ..()

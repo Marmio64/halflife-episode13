@@ -1,0 +1,44 @@
+{
+	"version": 1,
+	"map_name": "City 13 Condemned Combine Defense",
+	"map_path": "map_files/deployment_condemned_combine",
+	"map_file": "deployment_condemned_combine.dmm",
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
+	"planetary": 1,
+	"shuttles": {
+		"cargo": "cargo_box",
+		"ferry": "ferry_fancy",
+		"whiteship": "whiteship_meta",
+		"emergency": "emergency_box"
+	},
+	"traits": [
+		{
+			"Baseturf": "/turf/open/floor/plating/ground/rockunder",
+			"Gravity": true,
+			"No Parallax": true,
+			"Linkage": null
+
+		}
+	],
+	"minetype": "combat_deployment",
+	"combat_deployment_gamemode": "xen_defense",
+	"job_changes": {
+		"Rebel Cell Leader": {
+			"total_positions": 0,
+			"spawn_positions": 0
+		},
+		"Xenian Creature": {
+			"total_positions": 999,
+			"spawn_positions": 999
+		},
+		"Refugee Rebel": {
+			"total_positions": 0,
+			"spawn_positions": 0
+		},
+		"Civil Protection": {
+			"total_positions": 25,
+			"spawn_positions": 25
+		}
+	}
+}

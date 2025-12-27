@@ -156,11 +156,11 @@
 	backstab_bonus = 30
 	gib_time = 0.5 SECONDS
 
-	item_flags = SLOWS_WHILE_IN_HAND
+	item_flags = SLOWS_WHILE_IN_HAND | DROPDEL
 
-	//while your machete is out, you'll move at the same pace as assault classes.
-	slowdown = 0.4
-	drag_slowdown = 0.4
+	//while your machete is out, you'll move at roughly the same pace as assault classes.
+	slowdown = 0.45
+	drag_slowdown = 0.45
 
 /obj/item/knife/combat/the_hidden/attack(mob/living/target_mob, mob/living/user, params)
 	if(target_mob == user) //self stab protection, i feel bad for the hidden
@@ -515,12 +515,14 @@
 	extra_dex = 0
 	extra_str = 10
 
+	combat_music = 'hl13/sound/music/combat/pyramidhead.ogg'
+
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife/brute, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/aoe/repulse/hidden_brute, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/brute/pre_equip(mob/living/carbon/human/H)
 	. = ..()
-	H.alpha = 50
-	H.physiology.damage_resistance += 50
+	H.alpha = 60
+	H.physiology.damage_resistance += 60
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/necrotic
 	name = "Hidden: The Hidden (Necrotic)"

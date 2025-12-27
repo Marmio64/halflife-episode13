@@ -64,8 +64,12 @@ GLOBAL_VAR_INIT(deployment_xen_cash, 0)
 			chosen = /obj/item/hl2/loadout_picker/xen/tier2
 
 	if(DEPLOYMENT_TIER4_XEN <= GLOB.deployment_xen_cash)
-		if(prob(DEPLOYMENT_TIER5_HIGH_XEN_CHANCE))
-			chosen = /obj/item/hl2/loadout_picker/xen/tier4
+		if(DEPLOYMENT_TIER4_EXTRA_CHANCE_XEN <= GLOB.deployment_xen_cash)
+			if(prob(DEPLOYMENT_TIER4_XEN_CHANCE))
+				chosen = /obj/item/hl2/loadout_picker/xen/tier4
+		else
+			if(prob(DEPLOYMENT_TIER4_HIGH_XEN_CHANCE))
+				chosen = /obj/item/hl2/loadout_picker/xen/tier4
 
 	if(DEPLOYMENT_TIER5_XEN <= GLOB.deployment_xen_cash)
 		if(DEPLOYMENT_TIER5_EXTRA_CHANCE_XEN <= GLOB.deployment_xen_cash)
