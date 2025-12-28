@@ -100,7 +100,7 @@
 	starting_faction = XEN_DEPLOYMENT_FACTION
 
 /obj/machinery/deployment_points_flag/xen/high_cash
-	cash_increase = 3
+	cash_increase = 1
 
 /obj/machinery/deployment_points_flag/xen/low_cash
 	cash_increase = 0.2

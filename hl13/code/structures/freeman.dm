@@ -8,6 +8,12 @@
 	name = "Hauler"
 	desc = "Some kind of cargo truck."
 	icon = 'hl13/icons/obj/port/van.dmi'
+	max_integrity = 1500
+	pixel_x = -12
+	bound_width = 64
+	bound_height = 96
+	density = TRUE
+	anchored = TRUE
 	icon_state = "van_base"
 
 /obj/structure/halflife/vehicle/tau
