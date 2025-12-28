@@ -158,15 +158,13 @@
 					return JOB_UNAVAILABLE_TEAMFULL
 		else
 			if(job.combat_deployment_faction == XEN_DEPLOYMENT_FACTION  && !client.player_details.deployment_faction)
-				if((length(GLOB.deployment_rebel_players)*1.5) < length(GLOB.deployment_xen_players)) //the multiplication means the zombie faction will always have more players than rebels
-					return JOB_UNAVAILABLE_TEAMFULL
-				if((length(GLOB.deployment_combine_players)*2) < length(GLOB.deployment_xen_players)) //the multiplication means the zombie faction will always have more players than rebels
+				if((length(GLOB.deployment_rebel_players + GLOB.deployment_combine_players)*1.5) < length(GLOB.deployment_xen_players)) //the multiplication means the zombie faction will always have more players than rebels
 					return JOB_UNAVAILABLE_TEAMFULL
 			if(job.combat_deployment_faction == REBEL_DEPLOYMENT_FACTION && !client.player_details.deployment_faction)
-				if(length(GLOB.deployment_xen_players) < (length(GLOB.deployment_rebel_players)*1.5))
+				if(length(GLOB.deployment_xen_players) < (length(GLOB.deployment_rebel_players + GLOB.deployment_combine_players)*1.5))
 					return JOB_UNAVAILABLE_TEAMFULL
 			if(job.combat_deployment_faction == COMBINE_DEPLOYMENT_FACTION && !client.player_details.deployment_faction)
-				if(length(GLOB.deployment_xen_players) < (length(GLOB.deployment_combine_players)*2))
+				if(length(GLOB.deployment_xen_players) < (length(GLOB.deployment_rebel_players + GLOB.deployment_combine_players)*1.5))
 					return JOB_UNAVAILABLE_TEAMFULL
 	if((job.current_positions >= job.total_positions) && job.total_positions != -1)
 		if(is_assistant_job(job))
