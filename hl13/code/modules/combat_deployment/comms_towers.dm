@@ -162,13 +162,13 @@
 	. += span_notice("The rebels need to defend the tower for [(GLOB.deployment_rebels_flag_time_left)/10] more seconds in order to win.")
 
 /obj/machinery/deployment_comms_tower/combine/xen_defense
-	var/combine_time = 10 MINUTES
+	var/combine_time = 9 MINUTES
 	var/grace_time = 60 SECONDS
 
 	var/grace_period_text = TRUE
 	var/capturable = FALSE
 
-	var/human_respawn_speed = 50 SECONDS
+	var/human_respawn_speed = 45 SECONDS
 
 /obj/machinery/deployment_comms_tower/combine/xen_defense/Initialize(mapload)
 	. = ..()
