@@ -2,9 +2,9 @@
 	title = JOB_COOK
 	description = "Operate the city's restaurant, listen to the labor lead, and try not to get shut down."
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
-	faction = FACTION_STATION
-	total_positions = 1
-	spawn_positions = 1
+	//faction = FACTION_STATION
+	total_positions = 0
+	spawn_positions = 0
 	exp_requirements = 30
 	exp_required_type = EXP_TYPE_CREW
 	supervisors = SUPERVISOR_HOP
@@ -51,7 +51,7 @@
 	alternate_titles = list(
 		JOB_CHEF,
 	)
-	job_flags = STATION_JOB_FLAGS
+	//job_flags = STATION_JOB_FLAGS
 
 /datum/job/cook/award_service(client/winner, award)
 	winner.give_award(award, winner.mob)

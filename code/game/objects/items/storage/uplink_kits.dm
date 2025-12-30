@@ -1,28 +1,10 @@
 #define KIT_REBEL "rebel"
-#define KIT_BLOODY_SPAI "bloodyspai"
 #define KIT_STEALTHY "stealth"
-#define KIT_SCREWED "screwed"
 #define KIT_SABOTAGE "sabotage"
-#define KIT_GUN "guns"
-#define KIT_MURDER "murder"
-#define KIT_IMPLANTS "implant"
-#define KIT_HACKER "hacker"
-#define KIT_SNIPER "sniper"
-#define KIT_NUKEOPS_METAGAME "metaops"
-#define KIT_LORD_SINGULOTH "lordsingulo"
-#define KIT_REVOLUTIONARY "revolutionary"
 
-#define KIT_JAMES_BOND "bond"
-#define KIT_NINJA "ninja"
-#define KIT_DARK_LORD "darklord"
-#define KIT_WHITE_WHALE_HOLY_GRAIL "white_whale_holy_grail"
-#define KIT_MAD_SCIENTIST "mad_scientist"
-#define KIT_BEES "bee"
-#define KIT_MR_FREEZE "mr_freeze"
-#define KIT_TRAITOR_2006 "ancient"
-#define KIT_DEAD_MONEY "dead_money"
-#define KIT_SAM_FISHER "sam_fisher"
-#define KIT_PROP_HUNT "prop_hunt"
+#define KIT_ASSAULT "assault"
+#define KIT_SNIPER "sniper"
+#define KIT_MEDIC "medic"
 
 /// last audited december 2022
 /obj/item/storage/box/syndicate
@@ -66,154 +48,49 @@
 
 /obj/item/storage/box/syndicate/bundle_b/PopulateContents()
 	switch (pick_weight(list(
-		KIT_JAMES_BOND = 2,
-		KIT_NINJA = 1,
-		KIT_DARK_LORD = 1,
-		KIT_WHITE_WHALE_HOLY_GRAIL = 2,
-		KIT_MAD_SCIENTIST = 2,
-		KIT_BEES = 1,
-		KIT_MR_FREEZE = 2,
-		KIT_DEAD_MONEY = 2,
-		KIT_TRAITOR_2006 = 1,
-		KIT_SAM_FISHER = 1,
-		KIT_PROP_HUNT = 1
+		KIT_ASSAULT = 1,
+		KIT_SNIPER = 1,
+		KIT_MEDIC = 1,
 		)))
-		if(KIT_JAMES_BOND)
-			new /obj/item/gun/ballistic/automatic/pistol(src) // 7 tc
-			new /obj/item/suppressor(src) // 3 tc
-			new /obj/item/ammo_box/magazine/m9mm(src) // 1 tc
-			new /obj/item/ammo_box/magazine/m9mm(src)
-			new /obj/item/card/id/advanced/chameleon(src) // 2 tc
-			new /obj/item/clothing/under/chameleon(src) // 1 tc
-			new /obj/item/reagent_containers/hypospray/medipen/stimulants(src) // 5 tc
-			new /obj/item/reagent_containers/cup/rag(src)
-			new /obj/item/implanter/freedom(src) // 5 tc
-			new /obj/item/flashlight/emp(src) // 2 tc
-			new /obj/item/grenade/c4/x4(src) // 1ish tc
-			new /obj/item/reagent_containers/pill/cyanide(src)
-			new /obj/item/toy/cards/deck/syndicate(src) // 1 tc, for poker
+		if(KIT_ASSAULT) //50 tc
+			new /obj/item/gun/ballistic/automatic/m4a1(src) // 15 tc
+			new /obj/item/ammo_box/magazine/m4a1(src) // ~5 tc
+			new /obj/item/ammo_box/magazine/m4a1(src) // ~5 tc
+			new /obj/item/ammo_box/magazine/m4a1(src) // ~5 tc
+			new /obj/item/clothing/head/helmet/halflife/military(src) // 3 TC
+			new /obj/item/clothing/suit/armor/rebel/light(src) // 4 tc
+			new /obj/item/grenade/syndieminibomb/bouncer(src) // 5 tc
+			new /obj/item/grenade/syndieminibomb/bouncer(src) // 5 tc
+			new /obj/item/reagent_containers/hypospray/medipen/healthpen(src) //like 1 TC
 
-		if(KIT_NINJA)
-			new /obj/item/katana(src) // Unique , hard to tell how much tc this is worth. 8 tc?
-			new /obj/item/reagent_containers/hypospray/medipen/stimulants(src) // 5 tc
-			for(var/i in 1 to 6)
-				new /obj/item/throwing_star(src) // 1 tc
-			new /obj/item/storage/belt/chameleon(src) // worth some fraction of a tc
-			new /obj/item/chameleon(src) // 7 tc
-			new /obj/item/card/id/advanced/chameleon(src) // 2 tc
-			new /obj/item/card/emag/doorjack(src) // 3 tc
-			new /obj/item/book/granter/action/spell/smoke(src) // ninja smoke bomb. 1 tc
-			new /obj/item/clothing/shoes/bhop(src) // mining item, lets you jump at people, at least 2 tc
+		if(KIT_SNIPER) //45 tc
+			new /obj/item/gun/ballistic/rifle/rebarxbow(src) // like 8 TC probably
+			new /obj/item/storage/bag/rebar_quiver/syndicate(src) // like 5 TC cause its a lot of rebar and good storage for it
+			new /obj/item/clothing/glasses/night(src) // probably like 4 tc
+			new /obj/item/gun/ballistic/revolver/coltpython(src) // 11 tc
+			new /obj/item/ammo_box/colta357(src) // 4 tc
+			new /obj/item/ammo_box/colta357(src) // 4 tc
+			new /obj/item/card/emag/halflife(src) // 5 tc
+			new /obj/item/clothing/head/helmet/halflife/military/weak/crafted(src) //like 1 TC
+			new /obj/item/grenade/smokebomb(src) //like 1 TC
+			new /obj/item/grenade/smokebomb(src) //like 1 TC
+			new /obj/item/reagent_containers/hypospray/medipen/healthpen(src) //like 1 TC
 
-		if(KIT_DARK_LORD)
-			new /obj/item/dualsaber/red(src) // 16 tc
-			new /obj/item/dnainjector/telemut/darkbundle(src) // ~ 4 tc for tk
-			new /obj/item/clothing/suit/hooded/chaplain_hoodie(src)
-			new /obj/item/card/id/advanced/chameleon(src) // 2 tc
-			new /obj/item/clothing/shoes/chameleon/noslip(src) //2 tc ,because slipping while being a dark lord sucks
-			new /obj/item/book/granter/action/spell/summonitem(src) // ~2 tc
-			new /obj/item/book/granter/action/spell/lightningbolt(src) // 4 tc
-
-		if(KIT_WHITE_WHALE_HOLY_GRAIL) //Unique items that don't appear anywhere else
-			new /obj/item/gun/ballistic/rifle/boltaction/harpoon(src)
-			new /obj/item/storage/bag/harpoon_quiver(src)
-			new /obj/item/clothing/suit/hooded/carp_costume/spaceproof(src)
-			new /obj/item/clothing/mask/gas/carp(src)
-			new /obj/item/grenade/spawnergrenade/spesscarp(src)
-			new /obj/item/toy/plush/carpplushie/dehy_carp(src) // 1 tc, for use as a personal mount
-
-		if(KIT_MAD_SCIENTIST)
-			new /obj/item/clothing/suit/toggle/labcoat/mad(src) // 0 tc
-			new /obj/item/clothing/shoes/jackboots(src) // 0 tc
-			new /obj/item/megaphone(src) // 0 tc
-			new /obj/item/grenade/clusterbuster/random(src) // 10 tc?
-			new /obj/item/grenade/clusterbuster/random(src) // 10 tc?
-			new /obj/item/grenade/chem_grenade/bioterrorfoam(src) // 5 tc
-			new /obj/item/assembly/signaler(src) // 0 tc
-			new /obj/item/assembly/signaler(src) // 0 tc
-			new /obj/item/assembly/signaler(src) // 0 tc
-			new /obj/item/assembly/signaler(src) // 0 tc
-			new /obj/item/storage/toolbox/syndicate(src) // 1 tc
-			new /obj/item/pen/edagger(src) // 2 tc
-			new /obj/item/gun/energy/wormhole_projector/core_inserted(src) // 5 tc easily
-
-		if(KIT_BEES)
-			new /obj/item/paper/fluff/bee_objectives(src) // 0 tc (motivation)
-			new /obj/item/clothing/suit/hooded/bee_costume(src) // 0 tc
-			new /obj/item/clothing/mask/animal/small/bee(src) // 0 tc
-			new /obj/item/storage/belt/fannypack/yellow(src) // 0 tc
-			new /obj/item/grenade/spawnergrenade/buzzkill(src) // these are the random super bees this is definitely all of the tc budget for this one
-			new /obj/item/grenade/spawnergrenade/buzzkill(src) // 10 tc per grenade
-			new /obj/item/reagent_containers/cup/bottle/beesease(src) // 10 tc?
-			new /obj/item/melee/beesword(src) //priceless
-
-		if(KIT_MR_FREEZE)
-			new /obj/item/clothing/glasses/cold(src)
-			new /obj/item/clothing/gloves/color/black/security/blu(src)
-			new /obj/item/clothing/mask/chameleon(src)
-			new /obj/item/clothing/suit/hooded/wintercoat(src)
-			new /obj/item/clothing/shoes/winterboots(src)
-			new /obj/item/grenade/gluon(src) // whole belt is 22 and gluon is weight 4 so lets just go with like 7 total
-			new /obj/item/grenade/gluon(src)
-			new /obj/item/grenade/gluon(src)
-			new /obj/item/grenade/gluon(src)
-			new /obj/item/dnainjector/geladikinesis(src) // both abilities are probably 3 tc total
-			new /obj/item/dnainjector/cryokinesis(src)
-			new /obj/item/gun/energy/temperature/freeze(src) // ~6 tc
-			new /obj/item/gun/energy/laser/thermal/cryo(src) // ~6 tc
-			new /obj/item/melee/energy/sword/saber/blue(src) //see see it fits the theme bc its blue and ice is blue, 8 tc
-
-		if(KIT_TRAITOR_2006) //A kit so old, it's probably older than you. //This bundle is filled with the entire uplink contents traitors had access to in 2006, from OpenSS13. Notably the esword was not a choice but existed in code.
-			new /obj/item/storage/toolbox/emergency/old/ancientbundle(src) //Items fit neatly into a classic toolbox just to remind you what the theme is.
-
-		if(KIT_DEAD_MONEY)
-			for(var/i in 1 to 4)
-				new /obj/item/clothing/neck/collar_bomb(src) // These let you remotely kill people with a signaler, though you have to get them first.
-			new /obj/item/storage/box/syndie_kit/signaler(src)
-			new /obj/item/mod/control/pre_equipped/responsory/inquisitory/syndie(src) // basically a snowflake yet better elite modsuit, so like, 8 + 5 tc.
-			new /obj/item/card/id/advanced/chameleon(src) // 2 tc
-			new /obj/item/clothing/mask/chameleon(src)
-			new /obj/item/melee/baton/telescopic/contractor_baton(src) // 7 tc
-			new /obj/item/jammer(src) // 5 tc
-			new /obj/item/pinpointer/crew(src) //priceless
-
-		if(KIT_SAM_FISHER)
-			new /obj/item/clothing/under/syndicate/combat(src)
-			new /obj/item/clothing/suit/armor/vest/marine/pmc(src) //The armor kit is comparable to the infiltrator, 6 TC
-			new /obj/item/clothing/head/helmet/marine/pmc(src)
-			new /obj/item/clothing/mask/gas/sechailer(src)
-			new /obj/item/clothing/glasses/night/colorless(src) // 3~ TC
-			new /obj/item/clothing/gloves/krav_maga/combatglovesplus(src) //5TC
-			new /obj/item/clothing/shoes/jackboots(src)
-			new /obj/item/storage/belt/military/assault/fisher(src) //items in this belt easily costs 18 TC
-
-		if(KIT_PROP_HUNT)
-			new /obj/item/chameleon(src) // 7 TC
-			new /obj/item/card/emag/doorjack(src) // 3 TC
-			new /obj/item/storage/box/syndie_kit/imp_stealth(src) //8 TC
-			new /obj/item/gun/ballistic/automatic/pistol(src) // 7 TC
-			new /obj/item/clothing/glasses/thermal(src) // 4 TC
-
-/obj/item/storage/toolbox/emergency/old/ancientbundle/ //So the subtype works
-
-/obj/item/storage/toolbox/emergency/old/ancientbundle/PopulateContents()
-	new /obj/item/card/emag(src) // 4 tc
-	new /obj/item/card/emag/doorjack(src) //emag used to do both. 3 tc
-	new /obj/item/pen/sleepy(src) // 4 tc
-	new /obj/item/reagent_containers/pill/cyanide(src)
-	new /obj/item/chameleon(src) //its not the original cloaking device, but it will do. 8 tc
-	new /obj/item/gun/ballistic/revolver(src) // 13 tc old one stays in the old box
-	new /obj/item/implanter/freedom(src) // 5 tc
-	new /obj/item/stack/telecrystal(src) //The failsafe/self destruct isn't an item we can physically include in the kit, but 1 TC is technically enough to buy the equivalent.
-
-/obj/item/storage/belt/military/assault/fisher
-
-/obj/item/storage/belt/military/assault/fisher/PopulateContents()
-	new /obj/item/gun/ballistic/automatic/pistol/clandestine/fisher(src) // 11 TC: 7 (pistol) + 3 (suppressor) + lightbreaker (1 TC, black market meme/util item)
-	new /obj/item/ammo_box/magazine/m10mm(src) // 1 TC
-	new /obj/item/ammo_box/magazine/m10mm(src)
-	new /obj/item/card/emag/doorjack(src) // 3 TC
-	new /obj/item/knife/combat(src) //comparable to the e-dagger, 2 TC
+		if(KIT_MEDIC) //45 TC
+			new /obj/item/clothing/suit/armor/civilprotection/medical(src) // 3 tc. Even if you already start with a vest most likely, we'll count it
+			new /obj/item/clothing/head/helmet/halflife/military/weak/crafted(src) //like 1 TC
+			new /obj/item/storage/medkit/halflife(src) // 4 tc
+			new /obj/item/reagent_containers/pill/patch/medkit(src) // 1 tc
+			new /obj/item/reagent_containers/pill/patch/medkit(src) // 1 tc
+			new /obj/item/reagent_containers/hypospray/medipen/healthpen(src) //like 1 TC
+			new /obj/item/gun/ballistic/automatic/mp7(src) //10 tc
+			new /obj/item/ammo_box/magazine/mp7(src) // 4 tc
+			new /obj/item/ammo_box/magazine/mp7(src) // 4 tc
+			new /obj/item/ammo_box/magazine/mp7(src) // 4 tc
+			new /obj/item/ammo_box/magazine/mp7(src) // 4 tc
+			new /obj/item/healthanalyzer/no_req(src) // like 2 TC
+			new /obj/item/clothing/glasses/hud/health(src) // like 1 TC
+			new /obj/item/grenade/syndieminibomb/bouncer(src) // 5 tc
 
 /obj/item/storage/box/syndie_kit
 	name = "box"
@@ -741,27 +618,10 @@
 	new /obj/item/storage/fancy/cigarettes/cigpack_syndicate(src)
 	new /obj/item/lighter(src)
 
-#undef KIT_BLOODY_SPAI
 #undef KIT_STEALTHY
-#undef KIT_SCREWED
 #undef KIT_SABOTAGE
-#undef KIT_GUN
-#undef KIT_MURDER
-#undef KIT_IMPLANTS
-#undef KIT_HACKER
-#undef KIT_SNIPER
-#undef KIT_NUKEOPS_METAGAME
-#undef KIT_LORD_SINGULOTH
-#undef KIT_REVOLUTIONARY
+#undef KIT_REBEL
 
-#undef KIT_JAMES_BOND
-#undef KIT_NINJA
-#undef KIT_DARK_LORD
-#undef KIT_WHITE_WHALE_HOLY_GRAIL
-#undef KIT_MAD_SCIENTIST
-#undef KIT_BEES
-#undef KIT_MR_FREEZE
-#undef KIT_TRAITOR_2006
-#undef KIT_DEAD_MONEY
-#undef KIT_SAM_FISHER
-#undef KIT_PROP_HUNT
+#undef KIT_ASSAULT
+#undef KIT_SNIPER
+#undef KIT_MEDIC

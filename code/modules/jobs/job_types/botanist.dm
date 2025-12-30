@@ -2,7 +2,7 @@
 	title = JOB_BOTANIST
 	description = "Grow combine approved produce substitutes for citizen consumptions and combine biofuel use."
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
-	faction = FACTION_STATION
+	//faction = FACTION_STATION
 	total_positions = 0
 	spawn_positions = 0
 	supervisors = SUPERVISOR_HOP

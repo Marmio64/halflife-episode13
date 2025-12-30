@@ -440,7 +440,7 @@
 	name = "military PDA"
 	greyscale_colors = "#891417#80FF80"
 	saved_identification = "John Doe"
-	saved_job = "Citizen"
+	saved_job = "Prisoner"
 	device_theme = PDA_THEME_SYNDICATE
 
 /obj/item/modular_computer/pda/syndicate/Initialize(mapload)

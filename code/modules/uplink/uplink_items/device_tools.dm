@@ -5,16 +5,6 @@
 /datum/uplink_item/device_tools
 	category = /datum/uplink_category/device_tools
 
-/datum/uplink_item/device_tools/encryptionkey
-	name = "Lambda Encryption Key"
-	desc = "A key that, when inserted into a radio headset, allows you to listen to all district department channels \
-			as well as talk on an encrypted Rebel channel with other agents that have the same key. In addition, this key also protects \
-			your headset from radio jammers."
-	item = /obj/item/encryptionkey/syndicate
-	cost = 4
-	surplus = 75
-	restricted = TRUE
-
 /datum/uplink_item/device_tools/thermal
 	name = "Thermal Imaging Glasses"
 	desc = "These goggles can be turned to resemble common eyewear found throughout the station. \
@@ -29,14 +19,6 @@
 	desc = "A plain leather satchel for carrying whatever goods you may need to."
 	item = /obj/item/storage/backpack/halflife/satchel
 	cost = 3
-
-/datum/uplink_item/device_tools/briefcase_launchpad
-	name = "Briefcase Launchpad"
-	desc = "A briefcase containing a launchpad, a device able to teleport items and people to and from targets up to eight tiles away from the briefcase. \
-			Also includes a remote control, disguised as an ordinary folder. Touch the briefcase with the remote to link it."
-	surplus = 0
-	item = /obj/item/storage/briefcase/launchpad
-	cost = 6
 
 /datum/uplink_item/device_tools/toolbox
 	name = "Full Rebel Toolbox"

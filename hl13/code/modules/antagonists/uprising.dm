@@ -79,7 +79,6 @@
 	view_soc.Grant(current)
 
 	if(send_to_base)
-		//owner.current.forceMove(pick(GLOB.nukeop_start))
 		move_to_spawnpoint()
 
 	equip_op()
@@ -108,11 +107,10 @@
 /datum/antagonist/uprising/proc/move_to_spawnpoint()
 	// Ensure that the nukiebase is loaded, and wait for it if required
 	SSmapping.lazy_load_template(LAZY_TEMPLATE_KEY_NUKIEBASE)
-	var/turf/destination = get_spawnpoint()
-	owner.current.forceMove(destination)
+	owner.current.forceMove(pick(GLOB.nukeop_start))
 	if(!owner.current.onSyndieBase())
 		message_admins("[ADMIN_LOOKUPFLW(owner.current)] is a NUKE OP and move_to_spawnpoint put them somewhere that isn't the syndie base, help please.")
-		stack_trace("Nuke op move_to_spawnpoint resulted in a location not on the syndicate base. (Was moved to: [destination])")
+		stack_trace("Nuke op move_to_spawnpoint resulted in a location not on the syndicate base.")
 
 /// Gets the position we spawn at
 /datum/antagonist/uprising/proc/get_spawnpoint()

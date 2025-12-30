@@ -36,6 +36,7 @@
 	var/no_req = FALSE
 
 /obj/item/healthanalyzer/no_req
+	desc = "A combine manufactured advanced health analyzing device, which can display tissue damage alongside other advanced functions. Has a side button to scan for chemicals, and can be toggled to scan wounds. This one is simplified to be usable by anyone without training."
 	no_req = TRUE
 
 /obj/item/healthanalyzer/Initialize(mapload)

@@ -291,6 +291,7 @@
 		/area/centcom/syndicate_mothership, // syndicate base itself
 		/area/shuttle/assault_pod, // steel rain
 		/area/shuttle/syndicate, // infiltrator
+		/area/centcom/halflife/rebel,
 	))
 
 	if(is_type_in_typecache(current_turf.loc, syndie_typecache))

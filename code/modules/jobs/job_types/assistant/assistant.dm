@@ -37,7 +37,7 @@ Assistant
 	rpg_title = "Lout"
 	config_tag = "ASSISTANT"
 
-	gameplay_help = "As a Citizen, you are among the least loyal people in the district, as you have near nothing. You can try to suck up, become a loyalist, and save up money at an ATM over the course of transfers and such, or even try staging a rebellion..."
+	gameplay_help = "As a Prisoner, you have no reason to suck up to the combine, unless you're looking to brown nose your way to loyalty status and get some better food. You are free to stir trouble, stage riots, work as you are told, or even snitch on comrades for a reward."
 
 /datum/job/assistant/get_outfit(consistent)
 	if(consistent)

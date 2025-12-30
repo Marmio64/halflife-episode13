@@ -2,9 +2,9 @@
 	title = JOB_CARGO_TECHNICIAN
 	description = "Preform work in the factory, mine if necessary, and carry out any tasks that the foreman needs you to do."
 	department_head = list(JOB_QUARTERMASTER)
-	faction = FACTION_STATION
-	total_positions = 3
-	spawn_positions = 3
+	//faction = FACTION_STATION
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = SUPERVISOR_QM
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "CARGO_TECHNICIAN"
@@ -23,7 +23,7 @@
 	family_heirlooms = list(/obj/item/clipboard)
 
 	rpg_title = "Merchantman"
-	job_flags = STATION_JOB_FLAGS
+	//job_flags = STATION_JOB_FLAGS
 
 	ration_bonus = 1
 

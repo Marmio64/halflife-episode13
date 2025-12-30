@@ -2,8 +2,8 @@
 	title = JOB_ATMOSPHERIC_TECHNICIAN
 	description = "Remove any xenian infestations from hotspots in the city, and travel with conscripts and metropolice beyond the city for additional harvesting of xenian resources."
 	department_head = list(JOB_QUARTERMASTER)
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = SUPERVISOR_CE
 	exp_requirements = 60
 	exp_required_type = EXP_TYPE_CREW
@@ -40,8 +40,8 @@
 
 	cmode_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
-	faction = FACTION_STATION
-	job_flags = STATION_JOB_FLAGS
+	//faction = FACTION_STATION
+	//job_flags = STATION_JOB_FLAGS
 
 /datum/outfit/job/atmos
 	name = "Infestation Control"

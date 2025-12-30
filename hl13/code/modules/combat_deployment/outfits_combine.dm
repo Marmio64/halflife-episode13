@@ -168,7 +168,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
-	extra_str = 3
+	extra_str = 4 // all combine engis get extra strength over rebel engis since rebel engis get some armor
 
 /// TIER 3 ////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier3
@@ -319,7 +319,7 @@
 	shoes = /obj/item/clothing/shoes/halflife/engineer
 	gloves = /obj/item/clothing/gloves/halflife/engineer
 
-	l_pocket = /obj/item/wirecutters/halflife
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
 	r_pocket = /obj/item/flashlight
 
 	back = /obj/item/storage/backpack/satchel
@@ -329,6 +329,8 @@
 		/obj/item/stack/sheet/mineral/sandbags = 10,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 		/obj/item/sbeacondrop/combine_turret = 1,
+		/obj/item/wirecutters/halflife = 1,
+		/obj/item/ammo_box/magazine/usp9mm = 1,
 	)
 
 
@@ -337,7 +339,7 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag, /datum/action/cooldown/spell/conjure_item/razor_wire/slow)
 
-	extra_str = 4
+	extra_str = 5
 
 /datum/outfit/deployment_loadout/combine/tier3/sniper
 	name = "Deployment: Sniper OTA"
@@ -537,7 +539,7 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag, /datum/action/cooldown/spell/conjure_item/razor_wire)
 
-	extra_str = 4
+	extra_str = 5
 
 /obj/item/sbeacondrop/combine_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a combine turret to your location</i>."

@@ -31,7 +31,7 @@
 
 /datum/uplink_item/suits/heavy_rebel_vest
 	name = "Heavy Rebel Vest"
-	desc = "A stolen and modified Overwatch soldier vest."
+	desc = "A stolen and modified Overwatch soldier vest. Slows you down a decent bit, but is relatively cheap and provides a high level of protection."
 	item = /obj/item/clothing/suit/armor/rebel
 	cost = 7
 	progression_minimum = 10 MINUTES

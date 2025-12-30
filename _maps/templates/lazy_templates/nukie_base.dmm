@@ -24,10 +24,6 @@
 /mob/living/basic/halflife/zombie/zombine,
 /turf/open/floor/plating/ground/sidewalk,
 /area/centcom/halflife/rebel)
-"ba" = (
-/obj/item/weaponcrafting/frame/service,
-/turf/open/floor/plating/ground/dirt,
-/area/centcom/halflife/rebel)
 "bo" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	dir = 1;
@@ -44,12 +40,8 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
 "bC" = (
-/obj/effect/decal/remains/human,
-/obj/item/clothing/head/beret/durathread/unitednations{
-	pixel_x = 0;
-	pixel_y = 9
-	},
-/turf/open/floor/plating/ground/dirt,
+/mob/living/basic/halflife/headcrab,
+/turf/open/floor/plating/ground/grass,
 /area/centcom/halflife/rebel)
 "bD" = (
 /obj/machinery/door/unpowered/halflife/seethrough/fence/wire/barb{
@@ -87,14 +79,18 @@
 /turf/open/floor/plating/indoor/grooved2,
 /area/centcom/halflife/rebel)
 "cH" = (
-/mob/living/basic/halflife/headcrab,
-/turf/open/floor/plating/ground/dirt,
+/obj/structure/table/halflife/wood,
+/obj/item/super_destabilizer_beacon{
+	pixel_x = 0;
+	pixel_y = 6
+	},
+/turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "cN" = (
 /obj/structure/halflife/storage/large/medical,
 /obj/machinery/light/small/cyan/directional/south,
-/obj/item/storage/medkit/halflife,
 /obj/item/stack/medical/bone_gel,
+/obj/item/stack/medical/suture,
 /obj/item/healthanalyzer,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/centcom/halflife/rebel)
@@ -128,10 +124,6 @@
 /area/centcom/halflife/rebel)
 "dH" = (
 /obj/structure/table/halflife/metal,
-/obj/item/card/emag/halflife{
-	pixel_x = -6;
-	pixel_y = -3
-	},
 /obj/item/hl2key/rebel_outpost{
 	pixel_x = 3;
 	pixel_y = 7
@@ -193,8 +185,6 @@
 /obj/item/clothing/suit/armor/civilprotection/medical,
 /obj/item/clothing/accessory/armband/medblue,
 /obj/structure/closet/halflife,
-/obj/item/radio/headset/syndicate/alt,
-/obj/item/radio/headset/syndicate/alt,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "hp" = (
@@ -261,12 +251,11 @@
 /turf/open/floor/plating/ground/dirt,
 /area/centcom/halflife/rebel)
 "jo" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 8
+/obj/machinery/door/unpowered/halflife/metal/red{
+	keylock = 1;
+	lockid = "rebel_trainstation"
 	},
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
-	},
+/turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "jT" = (
 /obj/machinery/light/small/directional/south,
@@ -294,8 +283,6 @@
 "kG" = (
 /obj/item/clothing/head/beret/durathread/unitednations,
 /obj/structure/closet/halflife,
-/obj/item/radio/headset/syndicate/alt,
-/obj/item/radio/headset/syndicate/alt,
 /obj/item/clothing/under/syndicate/camo,
 /obj/item/clothing/suit/armor/halflife/kevlar,
 /obj/item/clothing/mask/gas/hl2/military,
@@ -319,7 +306,6 @@
 /obj/item/reagent_containers/condiment/mayonnaise,
 /obj/item/food/butter,
 /obj/item/storage/fancy/egg_box,
-/obj/structure/closet/secure_closet/freezer,
 /obj/item/reagent_containers/condiment/milk,
 /obj/item/reagent_containers/condiment/sugar,
 /obj/item/food/meat/slab/rawcrab,
@@ -332,6 +318,7 @@
 /obj/item/food/meat/slab/xen,
 /obj/item/food/meat/slab/xen,
 /obj/item/food/meat/slab/xen,
+/obj/structure/closet/secure_closet/freezer/halflife,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/centcom/halflife/rebel)
 "ld" = (
@@ -438,8 +425,8 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/rebel)
 "oe" = (
-/obj/structure/halflife/road_barrier/concrete{
-	dir = 4
+/obj/structure/halflife/road_barrier/concrete/alt{
+	dir = 8
 	},
 /turf/open/floor/plating/ground/brickroad{
 	dir = 1
@@ -471,10 +458,6 @@
 /obj/effect/turf_decal/bot_white,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
-"pB" = (
-/mob/living/basic/halflife/headcrab/armored,
-/turf/open/floor/plating/ground/dirt,
-/area/centcom/halflife/rebel)
 "pS" = (
 /obj/machinery/light/small/directional/south,
 /obj/effect/landmark/start/nukeop_leader,
@@ -488,6 +471,26 @@
 /area/centcom/halflife/rebel)
 "qw" = (
 /obj/structure/table/halflife/wood,
+/obj/item/hl2key/rebel_outpost{
+	pixel_x = -5;
+	pixel_y = 0
+	},
+/obj/item/hl2key/rebel_outpost{
+	pixel_x = -2;
+	pixel_y = 0
+	},
+/obj/item/hl2key/rebel_outpost{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/hl2key/rebel_outpost{
+	pixel_x = 8;
+	pixel_y = 0
+	},
+/obj/item/hl2key/rebel_outpost{
+	pixel_x = 13;
+	pixel_y = 1
+	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife/rebel)
 "qO" = (
@@ -585,14 +588,6 @@
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/dirt/alt,
 /area/centcom/halflife/rebel)
-"yp" = (
-/obj/structure/halflife/road_barrier/concrete/alt{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
-	},
-/area/centcom/halflife/rebel)
 "yB" = (
 /obj/item/water_canister{
 	pixel_x = 3;
@@ -673,11 +668,8 @@
 /obj/item/clothing/suit/armor/civilprotection,
 /obj/item/clothing/head/beanie/black,
 /obj/structure/closet/halflife,
-/obj/item/clothing/head/helmet/halflife/military/poland,
 /obj/item/clothing/under/syndicate/camo,
-/obj/item/radio/headset/syndicate/alt/leader,
 /obj/item/clothing/mask/gas/hl2/military,
-/obj/item/clothing/suit/armor/halflife/milvest,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/centcom/halflife/rebel)
 "Db" = (
@@ -714,8 +706,7 @@
 /obj/machinery/door/unpowered/halflife/metal/red{
 	dir = 4;
 	keylock = 1;
-	lockid = "rebel_trainstation";
-	locked = 1
+	lockid = "rebel_trainstation"
 	},
 /turf/open/floor/plating/indoor/lino,
 /area/centcom/halflife/rebel)
@@ -875,9 +866,7 @@
 /turf/open/halflife/water/deep,
 /area/centcom/halflife/rebel)
 "Oz" = (
-/obj/effect/spawner/random/halflife/plant_spawner,
-/obj/structure/barricade/sandbags,
-/turf/open/floor/plating/ground/dirt/alt,
+/turf/cordon,
 /area/centcom/halflife/rebel)
 "Pc" = (
 /obj/effect/turf_decal/siding/thinplating,
@@ -1065,7 +1054,8 @@
 	shuttle_id = "syndicate_away";
 	width = 23;
 	dir = 8;
-	roundstart_template = /datum/map_template/shuttle/infiltrator/basic
+	roundstart_template = /datum/map_template/shuttle/infiltrator/basic;
+	dheight = 1
 	},
 /turf/open/halflife/water/medium,
 /area/centcom/halflife/rebel)
@@ -1082,11 +1072,8 @@
 	},
 /area/centcom/halflife/rebel)
 "Zh" = (
-/obj/item/clothing/head/helmet/halflife/military/weak/crafted/poland{
-	pixel_x = 2;
-	pixel_y = 0
-	},
 /obj/effect/decal/remains/human,
+/obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/ground/dirt,
 /area/centcom/halflife/rebel)
 "Zt" = (
@@ -1322,25 +1309,25 @@ sU
 sU
 Gl
 qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
 qp
 Gl
 sU
@@ -2761,9 +2748,9 @@ HD
 HD
 ad
 oe
-yp
-oe
-yp
+lg
+YF
+lg
 oe
 DO
 HD
@@ -3080,7 +3067,7 @@ St
 nz
 nz
 nz
-Jx
+jo
 nz
 qw
 qp
@@ -3286,7 +3273,7 @@ VN
 hi
 qp
 wS
-qw
+cH
 qp
 Gs
 fy
@@ -3366,7 +3353,7 @@ fA
 Ye
 Ye
 Ye
-cH
+Ye
 Ye
 Ye
 bT
@@ -3469,7 +3456,7 @@ Ye
 Ye
 Ye
 Ye
-cH
+Ye
 Ye
 bT
 Ye
@@ -3569,7 +3556,7 @@ qp
 Mb
 fA
 Ye
-cH
+Ye
 Ye
 Ye
 Ye
@@ -3672,7 +3659,7 @@ fA
 fA
 eK
 ji
-pB
+Ye
 Ye
 eK
 bT
@@ -4589,7 +4576,7 @@ qp
 fA
 fA
 Ye
-bC
+Zh
 dw
 Ye
 Ye
@@ -4689,7 +4676,7 @@ sU
 Gl
 qp
 fA
-fA
+bC
 Ye
 ji
 dw
@@ -6832,7 +6819,7 @@ Gl
 qp
 fA
 Zh
-ba
+Ye
 Ye
 Ci
 Ye
@@ -7754,7 +7741,7 @@ fA
 Ye
 dw
 dw
-Oz
+Db
 Uk
 Uk
 dw
@@ -9284,10 +9271,10 @@ qp
 qp
 qp
 qp
-jo
+YF
 lg
-jo
-jo
+YF
+YF
 lg
 VC
 qp

@@ -1,10 +1,10 @@
 /datum/job/doctor
 	title = JOB_MEDICAL_DOCTOR
-	description = "Operate the public hospital, negotiate funding with the labor lead, ask the labor lead to get you nurses and assistants."
+	description = "Operate the infirmary and heal injured prisoners and others as they come in."
 	department_head = list(JOB_CHIEF_MEDICAL_OFFICER)
 	faction = FACTION_STATION
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = SUPERVISOR_CMO
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "MEDICAL_DOCTOR"
@@ -43,7 +43,7 @@
 	ration_bonus = 1
 
 /datum/outfit/job/doctor
-	name = "Union Doctor"
+	name = "Correctional Physician"
 	jobtype = /datum/job/doctor
 	id = /obj/item/card/id/advanced/halflife/red
 

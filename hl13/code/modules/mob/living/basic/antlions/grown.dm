@@ -1,7 +1,7 @@
 //antlions
 /mob/living/basic/halflife/antlion_worker
 	name = "Antlion Worker"
-	desc = "A large green bug filled to the brim with razer sharp armaments."
+	desc = "A large, fluorescent green antlion. Surrounding it is a foul stench of acid."
 	icon = 'hl13/icons/mob/halflife.dmi'
 	icon_state = "antlionworker"
 	icon_living = "antlionworker"
@@ -11,8 +11,8 @@
 	maxHealth = 50
 	health = 50
 	obj_damage = 10
-	melee_damage_lower = 11
-	melee_damage_upper = 14
+	melee_damage_lower = 8
+	melee_damage_upper = 12
 	wound_bonus = -20
 	sharpness = SHARP_EDGED
 	attack_vis_effect = ATTACK_EFFECT_SLASH
@@ -20,7 +20,7 @@
 	attack_verb_simple = "slash"
 	attack_sound = 'hl13/sound/creatures/antlion/attack_single1.ogg'
 	combat_mode = TRUE
-	speed = 0.8
+	speed = 0.6
 	var/list/loot = list(/obj/effect/decal/cleanable/insectguts = 1)
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1)
 	butcher_difficulty = 75

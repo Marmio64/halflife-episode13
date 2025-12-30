@@ -335,7 +335,7 @@
 	id_name = "Engineer"
 
 	uniform = /obj/item/clothing/under/citizen/refugee
-	l_pocket = /obj/item/wirecutters/halflife
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
 	r_pocket = /obj/item/flashlight
 
 	back = /obj/item/storage/backpack/halflife/satchel
@@ -346,6 +346,8 @@
 		/obj/item/stack/sheet/mineral/sandbags = 11,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 		/obj/item/sbeacondrop/rebel_turret = 1,
+		/obj/item/wirecutters/halflife = 1,
+		/obj/item/ammo_box/magazine/usp9mm = 1,
 	)
 
 	suit = /obj/item/clothing/suit/armor/civilprotection

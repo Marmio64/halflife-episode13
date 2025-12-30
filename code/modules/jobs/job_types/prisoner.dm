@@ -2,8 +2,8 @@
 	title = JOB_PRISONER
 	description = "Inhabit an abandoned, hidden bunker and stealthily work to overthrow the combine regime. Smuggle out citizens from the city and convince them to join your cause while avoiding combine assaults."
 	department_head = list("Nobody")
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = "nobody"
 	exp_granted_type = EXP_TYPE_CREW
 	paycheck = PAYCHECK_ZERO
@@ -18,8 +18,8 @@
 	family_heirlooms = list(/obj/item/pen/blue)
 	rpg_title = "Defeated Miniboss"
 
-	job_flags = JOB_EQUIP_RANK|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS
-	faction = FACTION_STATION
+	//job_flags = JOB_EQUIP_RANK|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS
+	//faction = FACTION_STATION
 
 	cmode_music = 'hl13/sound/music/combat/cpviolation.ogg' //cause they're a cp violation
 

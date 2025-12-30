@@ -3,8 +3,8 @@
 	description = "Patrol the forests and condemned city with your squad and protect the town, while avoiding entering it. Avoid getting rebellious, unless you want an Overwatch strike on your base."
 	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
 	department_head = list(JOB_HEAD_OF_SECURITY)
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 0
+	spawn_positions = 0
 	supervisors = SUPERVISOR_HOS
 	minimal_player_age = 7
 	exp_requirements = 180
@@ -39,8 +39,8 @@
 
 	ration_bonus = 1
 
-	faction = FACTION_STATION
-	job_flags = STATION_JOB_FLAGS
+	//faction = FACTION_STATION
+	//job_flags = STATION_JOB_FLAGS
 
 	family_heirlooms = list(/obj/item/reagent_containers/cup/glass/bottle/whiskey)
 

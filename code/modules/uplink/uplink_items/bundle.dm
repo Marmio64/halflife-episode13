@@ -43,9 +43,9 @@
 	purchasable_from = NONE
 
 /datum/uplink_item/bundles_tc/bundle_a
-	name = "Rebel Supply Kit"
+	name = "Rebel Basic Supply Bundle"
 	desc = "Lambda Bundles are specialized groups of items that arrive in a plain box. \
-			These items are collectively worth more than 25 telecrystals, but you do not know which specialization \
+			These items are collectively worth more than 20 telecrystals, but you do not know which specialization \
 			you will receive. May contain discontinued and/or exotic items. \
 			Lambda will only provide one supply kit per agent."
 	item = /obj/item/storage/box/syndicate/bundle_a
@@ -53,6 +53,18 @@
 	stock_key = UPLINK_SHARED_STOCK_KITS
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
+/datum/uplink_item/bundles_tc/bundle_b
+	name = "Rebel Advanced Supply Bundle"
+	desc = "Lambda Bundles are specialized groups of items that arrive in a plain box. \
+			These items are collectively worth more than 40 telecrystals, but you do not know which specialization \
+			you will receive. May contain discontinued and/or exotic items. \
+			Lambda will only provide one supply kit per agent."
+	item = /obj/item/storage/box/syndicate/bundle_b
+	cost = 40
+	stock_key = UPLINK_SHARED_STOCK_KITS
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+
+/*
 /datum/uplink_item/bundles_tc/surplus
 	name = "Lambda Surplus Crate"
 	desc = "A dusty crate from the back of the Lambda warehouse delivered directly to you via Supply Pod. \
@@ -117,3 +129,4 @@
 		"spawn" = surplus_crate,
 	))
 	return source //For log icon
+*/

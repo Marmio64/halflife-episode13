@@ -988,10 +988,10 @@
 
 /obj/structure/halflife/tv/tube/small
 	name = "small tube television"
-	desc = "A small tube television. You're not exactly sure why it's called a tube television."
+	desc = "A small tube television. It looks barely maintained, and the only signals available are from combine approved stations."
 	icon_state = "small_tv"
 
 /obj/structure/halflife/tv/tube/tiny
 	name = "tiny television"
-	desc = "A very small TV. Perhaps made for a very small person."
+	desc = "A very small TV. Perhaps made for a very small person. It looks barely maintained, and the only signals available are from combine approved stations."
 	icon_state = "tiny_tv"
