@@ -102,6 +102,7 @@
 			else
 				qdel(I)
 			item_1_fulfilled = TRUE
+			work_effect(user)
 			to_chat(usr, span_notice("Ingredient inserted."))
 			playsound(src, 'hl13/sound/halflifeeffects/crafting/paperfold1.ogg', 50, TRUE, extrarange = -3)
 		else
@@ -115,6 +116,7 @@
 			else
 				qdel(I)
 			item_2_fulfilled = TRUE
+			work_effect(user)
 			to_chat(usr, span_notice("Ingredient inserted."))
 			playsound(src, 'hl13/sound/halflifeeffects/crafting/paperfold2.ogg', 50, TRUE, extrarange = -3)
 		else
@@ -128,6 +130,7 @@
 			else
 				qdel(I)
 			item_3_fulfilled = TRUE
+			work_effect(user)
 			to_chat(usr, span_notice("Ingredient inserted."))
 			playsound(src, 'hl13/sound/halflifeeffects/crafting/paperfold3.ogg', 50, TRUE, extrarange = -3)
 		else
@@ -146,6 +149,12 @@
 		to_chat(usr, span_notice("Container has been filled correctly. Seal with hands while holding to complete, or use a sealing machine."))
 		filled = TRUE
 
+/obj/item/factory_construction/container/proc/work_effect(mob/user)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(HAS_TRAIT(H, TRAIT_ABOVE_LABOR))
+			H.add_mood_event("labor", /datum/mood_event/had_to_work)
+
 /obj/item/factory_construction/container/attack_self(mob/user)
 	if(filled)
 		to_chat(usr, span_notice("Sealing box..."))
@@ -158,6 +167,7 @@
 
 /obj/item/factory_construction/container/proc/seal(mob/user, reward = 1)
 	playsound(src, 'hl13/sound/halflifeeffects/crafting/ducttape1.ogg', 50, TRUE, extrarange = -3)
+	work_effect(user)
 	new completed_container(user.loc)
 	new /obj/item/stack/spacecash/c1(user.loc, reward + bonus_cash)
 	SSsociostability.modifystability(1) //Working increases stability

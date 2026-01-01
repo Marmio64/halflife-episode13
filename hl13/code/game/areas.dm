@@ -566,7 +566,7 @@
 
 	first_time_text = "Infirmary"
 
-/area/halflife/indoors/prison/infirmary
+/area/halflife/indoors/prison/cafeteria
 	name = "\improper Prison Cafeteria"
 
 	first_time_text = "Cafeteria"

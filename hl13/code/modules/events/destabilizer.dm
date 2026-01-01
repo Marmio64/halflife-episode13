@@ -1,7 +1,7 @@
 
 /datum/round_event_control/destabilizer
 	name = "Destabilizer"
-	description = "All forcefields experience a chance to malfunction."
+	description = "Spawns a sociostability destabilizer in a random location."
 	typepath = /datum/round_event/destabilizer
 	weight = 8
 	min_players = 8

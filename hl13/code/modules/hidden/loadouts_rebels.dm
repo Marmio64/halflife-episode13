@@ -104,7 +104,7 @@
 
 	back = /obj/item/melee/sledgehammer
 
-	extra_str = 8
+	extra_str = 10
 
 //The attacker, conscripts move a bit faster than their comrades and have the best medium to long range weapon.
 //They excel at giving chase to the hidden, just don't get cocky.

@@ -17,6 +17,8 @@
 	paycheck = PAYCHECK_STANDARD
 	paycheck_department = ACCOUNT_ENG
 
+	skills = list(/datum/skill/factorywork = SKILL_EXP_JOURNEYMAN) //HL13 edit, they know how machines work
+
 	liver_traits = list(TRAIT_ENGINEER_METABOLISM)
 
 	display_order = JOB_DISPLAY_ORDER_STATION_ENGINEER

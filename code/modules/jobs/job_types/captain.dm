@@ -96,5 +96,7 @@
 	. = ..()
 	user.faction += "combine"
 
+	ADD_TRAIT(user, TRAIT_ABOVE_LABOR, JOB_TRAIT)
+
 	user.change_stat(STATKEY_INT, 2)
 	user.change_stat(STATKEY_STR, -1)

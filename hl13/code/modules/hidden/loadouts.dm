@@ -78,7 +78,7 @@
 
 	back = /obj/item/melee/sledgehammer
 
-	extra_str = 9
+	extra_str = 10
 
 /datum/outfit/deployment_loadout/hidden/combine/riot_cop/pre_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -252,7 +252,7 @@
 	force = 22
 
 //The tracker, you specialize in setting up trip beams at room entrances in order to get a heads up on Hidden activity.
-//In addition, you get two more flares than everyone else, which is great for increasing the dismal visiblity your team tends to have!
+//In addition, you get two more flares than everyone else, which is great for increasing the dismal visiblity your team tends to have! Also, sandbags for defending terminal sites.
 //The downside is that you only have a sidearm and are thus extremely vulnerable, unless you manage to get a real gun off a dead teammate.
 /datum/outfit/deployment_loadout/hidden/combine/engineer
 	name = "Hidden: Engineer"
@@ -278,7 +278,7 @@
 
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/usp9mm = 3,
-		/obj/item/stack/sheet/mineral/sandbags = 4,
+		/obj/item/stack/sheet/mineral/sandbags = 5,
 		/obj/item/flashlight/flare/the_hidden = 3,
 		/obj/item/assembly/infra/the_hidden = 4,
 	)
@@ -388,7 +388,7 @@
 	id_name = "Scientist"
 
 	uniform = /obj/item/clothing/under/citizen
-	suit = /obj/item/clothing/suit/utility/radiation/cleanup/scientist
+	suit = /obj/item/clothing/suit/utility/radiation/cleanup/scientist/no_slow
 	head = /obj/item/clothing/head/utility/radiation/scientist
 	mask = /obj/item/clothing/mask/gas/cwuengi
 	shoes = /obj/item/clothing/shoes/halflife/cleanup
@@ -441,7 +441,7 @@
 	r_pocket = /obj/item/flashlight/hand_crank
 
 	backpack_contents = list(
-		/obj/item/grenade/spawnergrenade/manhacks/hidden = 2,
+		/obj/item/grenade/spawnergrenade/manhacks/hidden = 3,
 		/obj/item/flashlight/flare/the_hidden = 3,
 		/obj/item/stack/medical/gauze/quik_gauze = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,

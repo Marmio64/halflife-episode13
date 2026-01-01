@@ -1412,3 +1412,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// The person with this trait always shows their ID's name
 #define TRAIT_ALWAYS_ID_NAME "always_id_name"
+
+/// They are snobby and are above doing menial labor
+#define TRAIT_ABOVE_LABOR "above_labor"

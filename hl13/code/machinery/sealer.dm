@@ -57,22 +57,15 @@
 				to_chat(usr, span_notice("Container successfully sealed. Reward dispensed."))
 				C.seal(user, 2) //Using the sealer gets you bonus money
 				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 50, FALSE, extrarange = -1)
-				if(user.job == "Union Worker")
-					if(prob(2))
-						to_chat(user, span_userdanger("You lose focus, and the machine seals one of your fingers inside the container!"))
-						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
-						arm.receive_damage(15)
-						user.emote("scream")
-						malfunctioning = TRUE
-						to_chat(user, span_userdanger("The machine shudders as it gets gummed up from blood, before shutting off."))
+				if(prob(user.mind?.get_skill_modifier(/datum/skill/factorywork, SKILL_VALUE_MODIFIER)))
+					to_chat(user, span_userdanger("You lose focus, and the machine seals one of your fingers inside the container!"))
+					arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
+					arm.receive_damage(15)
+					user.emote("scream")
+					malfunctioning = TRUE
+					to_chat(user, span_userdanger("The machine shudders as it gets gummed up from blood, before shutting off."))
 				else
-					if(prob(5))
-						to_chat(user, span_userdanger("Due to your inexperience, the machine seals one of your fingers inside the container!"))
-						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
-						arm.receive_damage(15)
-						user.emote("scream")
-						malfunctioning = TRUE
-						to_chat(user, span_userdanger("The machine shudders as it gets gummed up from blood, before shutting off."))
+					user.mind?.adjust_experience(/datum/skill/factorywork, 25)
 		else
 			to_chat(usr, span_notice("This ration container is not yet filled."))
 

@@ -28,7 +28,9 @@
 /area/shuttle/syndicate/hallway)
 "as" = (
 /obj/machinery/door/unpowered/halflife/wood{
-	dir = 8
+	dir = 8;
+	lockid = "rebel_trainstation";
+	keylock = 1
 	},
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -44,6 +46,7 @@
 /obj/structure/railing/halflife/solo{
 	dir = 4
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/syndicate/hallway)
 "aB" = (
@@ -59,6 +62,7 @@
 /obj/structure/railing/halflife/solo{
 	dir = 4
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/syndicate/hallway)
 "bx" = (
@@ -67,12 +71,17 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/syndicate/hallway)
 "nN" = (
-/obj/docking_port/mobile/infiltrator,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/syndicate/hallway)
 "pQ" = (
 /obj/machinery/computer/shuttle/syndicate,
 /obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/shuttle/syndicate/hallway)
+"qO" = (
+/obj/machinery/light/small/directional/west,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/syndicate/hallway)
 "st" = (
@@ -89,7 +98,14 @@
 /obj/structure/railing/halflife/solo{
 	dir = 4
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/woodc/wide,
+/area/shuttle/syndicate/hallway)
+"vH" = (
+/obj/docking_port/mobile/infiltrator{
+	dir = 2
+	},
+/turf/closed/wall/halflife/wood,
 /area/shuttle/syndicate/hallway)
 "ye" = (
 /obj/structure/table/halflife/no_smooth/wood,
@@ -130,6 +146,11 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/syndicate/hallway)
+"Rx" = (
+/obj/machinery/light/small/directional/east,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/shuttle/syndicate/hallway)
 "UN" = (
 /obj/machinery/door/unpowered/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -147,9 +168,9 @@ aa
 aa
 aa
 uS
-st
-st
-st
+Rx
+nN
+nN
 bn
 aa
 aa
@@ -201,7 +222,7 @@ bc
 bc
 "}
 (5,1,1) = {"
-bc
+vH
 pQ
 af
 st
@@ -267,9 +288,9 @@ aa
 aa
 aa
 ax
-st
+qO
 nN
-st
+nN
 bn
 aa
 aa

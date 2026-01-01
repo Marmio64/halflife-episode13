@@ -198,6 +198,15 @@
 			log_combat(user, target, "stun attacked", src)
 	if(baton_effect(target, user, modifiers) && user)
 		set_batoned(target, user, cooldown)
+		if(ishuman(target))
+			var/mob/living/carbon/human/H = target
+			var/datum/mind/M = H.mind
+			if(M && (M.assigned_role == JOB_ASSISTANT || M.assigned_role == JOB_PRISONER || isvortigaunt(M)))
+				var/quota_to_give = 1
+				if(user.combat_mode)
+					quota_to_give = 5
+				GLOB.beating_quota -= quota_to_give
+
 
 /obj/item/melee/baton/proc/baton_effect(mob/living/target, mob/living/user, modifiers, stun_override)
 	var/trait_check = HAS_TRAIT(target, TRAIT_BATON_RESISTANCE)

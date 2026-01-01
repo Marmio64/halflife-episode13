@@ -31,7 +31,7 @@
 	start_when = rand(30, 50)
 
 /datum/round_event/xen_migration/announce(fake)
-	priority_announce("Attention, [fluff_signal] have been detected near your district. All citizens are instructed to vacate district perimeters, and remain within interior locations.", "Lifesign Alert")
+	priority_announce("Attention, [fluff_signal] have been detected near your district. Remain within interior locations.", "Lifesign Alert")
 
 /datum/round_event/xen_migration/start()
 	// Stores the most recent fish we spawn

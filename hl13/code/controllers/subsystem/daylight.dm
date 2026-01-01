@@ -48,6 +48,9 @@ SUBSYSTEM_DEF(daylight)
 	/// Multiplier applied to the goal, to allow for it to scale over time.
 	var/factory_goal_multiplier = 0.6
 
+	/// What is the day's tax the prison will face
+	var/daily_tax = 0
+
 /datum/controller/subsystem/daylight/proc/add_lit_area(area/new_area)
 	daylight_areas.Add(new_area)
 
@@ -86,8 +89,18 @@ SUBSYSTEM_DEF(daylight)
 					vendor.cashprize += factory_container_goal
 
 			if(SSmapping.current_map.minetype != "combat_deployment")
+				var/datum/bank_account/bank_account = SSeconomy.get_dep_account(ACCOUNT_CAR)
+				if (bank_account.account_balance < daily_tax)
+					message += " The daily tax was failed. Sociostability has been adjusted accordingly."
+					SSsociostability.modifystability(-50) //-5%. Smallish, cause cargo also onloads debt now
+					bank_account.account_debt += daily_tax
+				else
+					bank_account.adjust_money(-daily_tax)
+
 				priority_announce(message, "Lockup Notice.", sender_override = "Prison Automated Scheduler")
 
+			//curfew zombies dont really make enough sense for the prison
+			/*
 				curfew_zombies() //spawn zombies for curfew, encourages going indoors
 
 				if(prob(75))
@@ -96,6 +109,7 @@ SUBSYSTEM_DEF(daylight)
 					curfew_zombies()
 				if(prob(25))
 					curfew_zombies()
+			*/
 
 		if(light_coefficient > 0)
 			light_coefficient -= 0.025
@@ -103,16 +117,15 @@ SUBSYSTEM_DEF(daylight)
 	if(current_day_time > MORNING_START && current_day_time <= AFTERNOON_START)
 		if(day_cycle_active != DAY_CYCLE_MORNING)
 			day_cycle_active = DAY_CYCLE_MORNING
+			daily_tax = (get_factory_goal() * 30) //10 people would be 330 credits with standard multiplier
 			if(SSmapping.current_map.minetype != "combat_deployment")
-				priority_announce("Attention occupants, night has concluded, and Curfew is over. Your morning ration cycle will begin in thirty seconds.", "Curfew Notice.", sender_override = "Prison Automated Scheduler")
+				priority_announce("Attention occupants, night has concluded, and Curfew is over. Your morning ration cycle will begin in thirty seconds. The daily tax is set at [daily_tax] credits.", "Curfew Notice.", sender_override = "Prison Automated Scheduler")
 		if(light_coefficient < 0.5)
 			light_coefficient += 0.025
 
 	if(current_day_time > AFTERNOON_START && current_day_time <= DUSK_START )
 		if(day_cycle_active != DAY_CYCLE_AFTERNOON)
-			factory_container_goal = (get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)+1) //The goal is equal to all currently playing players, plus one as a baseline.
-			factory_container_goal *= factory_goal_multiplier
-			factory_container_goal = ROUND_UP(factory_container_goal)
+			factory_container_goal = get_factory_goal()
 
 			day_cycle_active = DAY_CYCLE_AFTERNOON
 			if(SSmapping.current_map.minetype != "combat_deployment")
@@ -143,6 +156,13 @@ SUBSYSTEM_DEF(daylight)
 
 /datum/controller/subsystem/daylight/proc/twentyfourhourstamp()
 	return daylight_time * 48 //a close approximate, assuming the day length is still 30 minutes.
+
+/datum/controller/subsystem/daylight/proc/get_factory_goal()
+	var/goal_amount = 0
+	goal_amount = (get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)+1) //The goal is equal to all currently playing players, plus one as a baseline.
+	goal_amount *= factory_goal_multiplier
+	goal_amount = ROUND_UP(goal_amount)
+	return goal_amount
 
 /datum/controller/subsystem/daylight/proc/curfew_zombies(amount)
 	var/datum/round_event_control/sentient_zombie/ZombieControl = new /datum/round_event_control/sentient_zombie()

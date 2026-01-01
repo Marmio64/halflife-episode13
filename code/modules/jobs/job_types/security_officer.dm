@@ -234,6 +234,8 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	. = ..()
 	user.faction += "combine"
 
+	ADD_TRAIT(user, TRAIT_ABOVE_LABOR, JOB_TRAIT)
+
 	user.change_stat(STATKEY_DEX, 2)
 
 	var/currentrankpoints = 0

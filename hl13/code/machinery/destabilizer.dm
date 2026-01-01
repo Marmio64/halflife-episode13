@@ -95,8 +95,8 @@ GLOBAL_VAR_INIT(super_destabilizer_deployed, FALSE)
 	. = ..()
 	if(!on)
 		var/area/place = get_area(src)
-		if(!(istype(place, /area/halflife/indoors/townhall/civilprotection)))
-			to_chat(H, span_warning("This will only work if activated in the nexus!"))
+		if(!(istype(place, /area/halflife/indoors/prison/security)))
+			to_chat(H, span_warning("This will only work if activated in the main prison security area!"))
 			return
 
 		to_chat(H, span_warning("You begin arming the destabilizer... No going back once it starts, the entire district will be notified once it is armed, and you won't get a second chance if this one is destroyed. You'll have to defend the destabilizer for five minutes."))

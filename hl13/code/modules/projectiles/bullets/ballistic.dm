@@ -77,3 +77,15 @@
 			var/mob/living/gibbed_dude = target
 			new /obj/effect/temp_visual/crit(get_turf(gibbed_dude))
 			gibbed_dude.gib(DROP_ALL_REMAINS)
+
+/obj/projectile/bullet/shotgun_beanbag_halflife
+	name = "beanbag slug"
+	damage = 28 //beanbags still fucking hurt
+	stamina = 50
+	wound_bonus = -30
+	bare_wound_bonus = 5 //oof ouch
+	sharpness = NONE
+	embed_type = null
+	ricochets_max = 2
+	ricochet_chance = 80
+	icon_state = "rubber"

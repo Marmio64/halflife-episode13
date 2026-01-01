@@ -34,6 +34,13 @@
 	variance = 25
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
 
+/obj/item/ammo_casing/shotgun/halflife/beanbag
+	name = "beanbag shell"
+	desc = "A 12 gauge less-lethal beanbag shell."
+	icon_state = "bshell"
+	projectile_type = /obj/projectile/bullet/shotgun_beanbag_halflife
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
+
 /obj/item/ammo_casing/c46x30mm/mp7
 	name = "4.6x30mm bullet casing"
 	desc = "A 4.6x30mm bullet casing."

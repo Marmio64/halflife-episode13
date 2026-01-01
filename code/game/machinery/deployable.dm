@@ -135,7 +135,7 @@
 
 /obj/structure/barricade/security
 	name = "security barrier"
-	desc = "A deployable barrier. Provides good cover in fire fights."
+	desc = "A rapidly deployable inflatable barrier. Directional hardpoints provide great cover and bullet resistance, but melee weapons can work their way into the soft parts."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "barrier0"
 	density = FALSE

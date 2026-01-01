@@ -37,20 +37,14 @@
 					/obj/item/storage/halflife/keyring = 4,
 					/obj/item/storage/wallet = 10,
 					/obj/item/radio/off/halflife = 5,
-					/obj/item/reagent_containers/cup/bottle/welding_fuel = 3,
 					/obj/item/storage/halflife/hand_box/cookie = 5,
 					/obj/item/reagent_containers/pill/patch/medkit/vial = 5,
 					/obj/item/stack/sticky_tape = 4,
-					/obj/item/storage/toolbox/fishing = 2,
-					/obj/item/storage/box/fishing_hooks = 2,
-					/obj/item/storage/box/fishing_lines = 2,
-					/obj/item/storage/box/fishing_lures = 2,
 					/obj/item/tape = 5, //tape recorder stuff
 					/obj/item/taperecorder = 3,
 					/obj/item/storage/halflife/suitcase = 6,
 					/obj/item/storage/fancy/cigarettes/halflife = 8,
 					/obj/item/storage/halflife/pill_bottle/antifatigue = 6,
-					/obj/item/storage/box/coffeepack = 3, //for coffee makers
 					/obj/item/reagent_containers/cup/glass/bottle/beer/light = 10,
 					/obj/item/clothing/gloves/fingerless = 3)
 
@@ -59,7 +53,6 @@
 
 	premium = list(/obj/item/storage/backpack/halflife/satchel = 3,
 				   /obj/item/storage/backpack/halflife = 3,
-				   /obj/item/binoculars = 3,
 				   /obj/item/storage/box/halflife/ration/ration = 5)
 
 	light_mask = "gifts-light-mask"
@@ -208,6 +201,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/ammo_box/magazine/mp7 = 2,
 		/obj/item/gun/ballistic/shotgun/spas12 = 1,
 		/obj/item/storage/box/lethalshot/halflife = 2,
+		/obj/item/storage/box/lethalshot/halflife/beanbag = 2,
 		/obj/item/grenade/syndieminibomb/bouncer = 3,
 		/obj/item/grenade/spawnergrenade/manhacks = 2,
 		/obj/item/gun/ballistic/automatic/pistol/usp = 1,

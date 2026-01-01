@@ -111,3 +111,8 @@
 	description = "I feel rallied towards a cause!"
 	mood_change = 10
 	timeout = 45 SECONDS
+
+/datum/mood_event/had_to_work
+	description = "I had to do menial labor. This is below my paygrade, I am above this!"
+	mood_change = -5
+	timeout = 4 MINUTES

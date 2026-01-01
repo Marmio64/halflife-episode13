@@ -562,6 +562,9 @@
 	desc = "A suit which provides protection against radiation and hostile xenian fauna attacks."
 	icon_state = "scientist"
 
+/obj/item/clothing/suit/utility/radiation/cleanup/scientist/no_slow
+	slowdown = 0
+
 /obj/item/clothing/suit/utility/radiation/engineer
 	name = "engineer suit"
 	desc = "A suit which offers some protection from hazardous environments."

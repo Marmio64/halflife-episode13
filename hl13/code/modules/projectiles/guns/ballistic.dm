@@ -435,6 +435,14 @@
 	for(var/i in 1 to 7)
 		new /obj/item/ammo_casing/shotgun/buckshot/halflife(src)
 
+/obj/item/storage/box/lethalshot/halflife/beanbag
+	name = "box of shotgun shells (Beanbag)"
+	desc = "A box full of less-lethal beanbag shells, designed for shotguns."
+
+/obj/item/storage/box/lethalshot/halflife/beanbag/PopulateContents()
+	for(var/i in 1 to 7)
+		new /obj/item/ammo_casing/shotgun/halflife/beanbag(src)
+
 // really shit TTK if you're using against humans, but antixen rounds can obliterate zombies/antlions
 /obj/item/gun/ballistic/shotgun/antixen
 	name = "Combine Cleanup Device"
