@@ -201,7 +201,7 @@
 		if(ishuman(target))
 			var/mob/living/carbon/human/H = target
 			var/datum/mind/M = H.mind
-			if(M && (M.assigned_role == JOB_ASSISTANT || M.assigned_role == JOB_PRISONER || isvortigaunt(M)))
+			if(M && (M.assigned_role?.title == JOB_ASSISTANT || M.assigned_role?.title == JOB_PRISONER || isvortigaunt(H)))
 				var/quota_to_give = 1
 				if(user.combat_mode)
 					quota_to_give = 5

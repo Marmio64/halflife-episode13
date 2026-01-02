@@ -558,8 +558,18 @@
 	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'
 	ambient_buzz_vol = 40
 
+/area/halflife/indoors/prison/cargo
+	name = "\improper Prison Cargo Bay"
+
+	first_time_text = "Cargo Bay"
+
 /area/halflife/indoors/prison/cells
 	name = "\improper Prison Cells"
+
+/area/halflife/indoors/prison/engineering
+	name = "\improper Prison Engineering"
+
+	first_time_text = "Engineering Area"
 
 /area/halflife/indoors/prison/infirmary
 	name = "\improper Prison Infirmary"

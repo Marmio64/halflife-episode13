@@ -277,7 +277,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/keyvendor, 32)
 		/obj/item/storage/halflife/hand_box/egg = 3,
 		/obj/item/storage/halflife/hand_box/chicken = 2,
 		/obj/item/storage/halflife/hand_box/cookie = 3,
-		/obj/item/reagent_containers/cup/soda_cans/breenwater/green = 4,
+		/obj/item/reagent_containers/cup/soda_cans/halflife/coffee = 6,
+		/obj/item/reagent_containers/cup/soda_cans/breenwater/green = 6,
 		/obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 2,
 	)
 	refill_canister = /obj/item/vending_refill/food_dispensery

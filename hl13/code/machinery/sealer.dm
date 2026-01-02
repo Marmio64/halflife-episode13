@@ -58,10 +58,16 @@
 				C.seal(user, 2) //Using the sealer gets you bonus money
 				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 50, FALSE, extrarange = -1)
 				if(prob(user.mind?.get_skill_modifier(/datum/skill/factorywork, SKILL_VALUE_MODIFIER)))
-					to_chat(user, span_userdanger("You lose focus, and the machine seals one of your fingers inside the container!"))
-					arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
-					arm.receive_damage(15)
-					user.emote("scream")
+					if(HAS_TRAIT(user, TRAIT_CURSED))
+						to_chat(user, span_userdanger("You lose focus, and the machine slices off a large strip of flesh from your arm, holy fuck!"))
+						arm.force_wound_upwards(/datum/wound/slash/flesh/severe)
+						arm.receive_damage(25)
+						user.emote("scream")
+					else
+						to_chat(user, span_userdanger("You lose focus, and the machine seals one of your fingers inside the container!"))
+						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
+						arm.receive_damage(15)
+						user.emote("scream")
 					malfunctioning = TRUE
 					to_chat(user, span_userdanger("The machine shudders as it gets gummed up from blood, before shutting off."))
 				else

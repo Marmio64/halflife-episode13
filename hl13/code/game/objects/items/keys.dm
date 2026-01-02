@@ -60,7 +60,7 @@
 	icon = 'hl13/icons/obj/keys.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	throwforce = 0
-	max_integrity = 10
+	max_integrity = 12
 	var/picklvl = 1
 
 /obj/item/lockpick/ingested
@@ -71,7 +71,7 @@
 	name = "makeshift lockpick"
 	desc = "A small, sharp piece of metal to aid opening locks in the absence of a key. This one is shoddily made, and will be less effective and durable."
 	max_integrity = 8
-	picklvl = 0.5
+	picklvl = 0.75
 
 /obj/item/lockpick/combine
 	name = "combine lockpick"
