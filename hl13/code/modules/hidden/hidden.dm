@@ -193,7 +193,7 @@
 /obj/item/knife/combat/the_hidden/proc/dead_effect(mob/living/target, mob/living/user)
 	user.adjustStaminaLoss(-25)
 	user.adjustBruteLoss(-25)
-	user.adjustFireLoss(-35)
+	user.adjustFireLoss(-25)
 	target.gib()
 
 /datum/action/cooldown/spell/conjure_item/hidden_knife
@@ -288,8 +288,8 @@
 /datum/action/cooldown/spell/hidden_heal/cast(mob/living/cast_on)
 	. = ..()
 	cast_on.adjustStaminaLoss(-125)
-	cast_on.adjustBruteLoss(-50)
-	cast_on.adjustFireLoss(-60)
+	cast_on.adjustBruteLoss(-30)
+	cast_on.adjustFireLoss(-30)
 	cast_on.extinguish_mob()
 	var/chosen_sound = pick(taunt_sounds)
 	playsound(owner.loc, chosen_sound, 50, FALSE)
@@ -455,7 +455,7 @@
 		new /mob/living/basic/halflife/zombie(get_turf(target))
 	user.adjustStaminaLoss(-25)
 	user.adjustBruteLoss(-25)
-	user.adjustFireLoss(-35)
+	user.adjustFireLoss(-25)
 	target.gib()
 
 /datum/action/cooldown/spell/pointed/projectile/hidden_spit
@@ -613,7 +613,7 @@
 /obj/item/knife/combat/the_hidden/fleshstealer/dead_effect(mob/living/target, mob/living/user)
 	user.adjustStaminaLoss(-25)
 	user.adjustBruteLoss(-25)
-	user.adjustFireLoss(-35)
+	user.adjustFireLoss(-25)
 
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target

@@ -52,6 +52,11 @@
 	desc = "A sign spelling out 'Dispatch' in the combine alphabet."
 	icon_state = "dispatchsign"
 
+/obj/structure/halflife/sign/combine/prison
+	name = "combine 'Nowy Jutro' sign"
+	desc = "A sign spelling out 'Nowy Jutro' in the polish alphabet. A New Tomorrow awaits you here, though it's unlikely a good one."
+	icon_state = "prisonsign"
+
 /obj/structure/halflife/sign/combine/nexus
 	name = "combine nexus sign"
 	desc = "A sign spelling out 'Nexus' in the combine alphabet."
