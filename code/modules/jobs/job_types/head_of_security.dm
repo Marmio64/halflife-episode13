@@ -10,7 +10,7 @@
 	supervisors = SUPERVISOR_CAPTAIN
 	req_admin_notify = 1
 	minimal_player_age = 14
-	exp_requirements = 600 //10 hours of gameplay, about 5 rounds. Ensures they're pretty good.
+	exp_requirements = 720 //12 hours of gameplay, about 5 rounds. Ensures they're pretty good.
 	exp_required_type = EXP_TYPE_CREW
 	exp_required_type_department = EXP_TYPE_SECURITY
 	exp_granted_type = EXP_TYPE_CREW

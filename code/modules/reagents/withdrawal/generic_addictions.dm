@@ -54,17 +54,15 @@
 /datum/addiction/alcohol/withdrawal_stage_1_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
 	if(SPT_PROB(4, seconds_per_tick))
-		affected_carbon.set_jitter_if_lower(4 SECONDS * seconds_per_tick)
+		affected_carbon.adjust_hydration(-2)
 
 /datum/addiction/alcohol/withdrawal_stage_2_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
 	if(SPT_PROB(6, seconds_per_tick))
-		affected_carbon.set_jitter_if_lower(8 SECONDS * seconds_per_tick)
+		affected_carbon.adjust_hydration(-5)
 
 /datum/addiction/alcohol/withdrawal_stage_3_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
-	if(SPT_PROB(8, seconds_per_tick))
-		affected_carbon.set_jitter_if_lower(12 SECONDS * seconds_per_tick)
 	if(SPT_PROB(4, seconds_per_tick))
 		affected_carbon.adjust_hydration(-15) //HL13 EDIT. Parched for a drink, not having a seizure...
 
@@ -281,19 +279,15 @@
 
 /datum/addiction/nicotine/withdrawal_enters_stage_1(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
-	if(SPT_PROB(4, seconds_per_tick))
-		affected_carbon.set_jitter_if_lower(4 SECONDS * seconds_per_tick)
+	if(SPT_PROB(1, seconds_per_tick))
+		affected_carbon.emote("cough")
 
 /datum/addiction/nicotine/withdrawal_stage_2_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
-	if(SPT_PROB(6, seconds_per_tick))
-		affected_carbon.set_jitter_if_lower(8 SECONDS * seconds_per_tick)
 	if(SPT_PROB(2, seconds_per_tick))
 		affected_carbon.emote("cough")
 
 /datum/addiction/nicotine/withdrawal_stage_3_process(mob/living/carbon/affected_carbon, seconds_per_tick)
 	. = ..()
-	if(SPT_PROB(8, seconds_per_tick))
-		affected_carbon.set_jitter_if_lower(12 SECONDS * seconds_per_tick)
 	if(SPT_PROB(4, seconds_per_tick))
 		affected_carbon.emote("cough")

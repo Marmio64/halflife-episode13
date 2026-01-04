@@ -253,7 +253,7 @@
 
 /datum/reagent/consumable/nutriment/organ_tissue/on_mob_life(mob/living/L, methods=TOUCH, reac_volume, show_message = TRUE, permeability = 1)
 	..()
-	if(!HAS_TRAIT(L, TRAIT_STRONG_STOMACH))
+	if(!HAS_TRAIT(L, TRAIT_STRONG_STOMACH) && !HAS_TRAIT(L, TRAIT_CANNIBAL))
 		if(prob(10))
 			L.ForceContractDisease(new /datum/disease/gutworms)
 

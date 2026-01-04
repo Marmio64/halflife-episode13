@@ -127,6 +127,10 @@
 	density = FALSE
 	pixel_x = -15
 
+/obj/structure/halflife/sign/shop/wall
+	icon_state = "shop_wall"
+	pixel_y = 32
+
 /obj/structure/halflife/sign/bar
 	name = "bar sign"
 	desc = "Light blocks forming the word 'BAR'. Throat be dry no more!"

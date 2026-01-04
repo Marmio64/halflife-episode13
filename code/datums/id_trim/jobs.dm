@@ -1078,6 +1078,9 @@
 		ACCESS_MAINT_TUNNELS,
 		ACCESS_MORGUE,
 		)
+	minimal_wildcard_access = list(
+		ACCESS_HOP,
+	)
 	template_access = list(
 		ACCESS_CAPTAIN,
 		ACCESS_CHANGE_IDS,

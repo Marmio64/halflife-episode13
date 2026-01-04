@@ -16,7 +16,7 @@
 	/// Additional reward that the foreman can take out of the machine for 100% completing quota. To be distributed, or kept entirely for him...
 	var/cashprize = 0
 
-	var/list/vendoptions = list("Dispense standard Container", "Dispense difficult advanced electronics Container", "Dispense difficult advanced military Container",)
+	var/list/vendoptions = list("Dispense standard Container", "Dispense difficult advanced electronics Container")
 
 /obj/machinery/box_vendor/examine(mob/user)
 	. = ..()

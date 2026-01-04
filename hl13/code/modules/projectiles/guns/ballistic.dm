@@ -136,8 +136,8 @@
 	force = 12
 	fire_delay = 2
 	burst_size = 1
-	spread = 8
-	recoil = 1
+	spread = 7
+	recoil = 0.75
 	can_suppress = FALSE
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY

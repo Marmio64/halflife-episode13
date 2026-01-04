@@ -92,7 +92,7 @@
 /datum/component/infective/proc/try_infect_eat(datum/source, mob/living/eater, mob/living/feeder)
 	SIGNAL_HANDLER
 
-	if(HAS_TRAIT(eater, TRAIT_STRONG_STOMACH))
+	if(HAS_TRAIT(eater, TRAIT_STRONG_STOMACH) || HAS_TRAIT(eater, TRAIT_CANNIBAL))
 		return
 
 	eater.add_mood_event("disgust", /datum/mood_event/disgust/dirty_food)
