@@ -630,6 +630,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/forest)
+"fF" = (
+/obj/effect/landmark/destabilizer,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/prison/cells)
 "fH" = (
 /obj/structure/railing/halflife/solo{
 	dir = 4
@@ -1557,6 +1561,14 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/prison/infirmary)
 "og" = (
+/obj/structure/table/halflife/no_smooth/large/metal/desk{
+	dir = 8
+	},
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/pen,
 /obj/machinery/light/small/cyan/directional/west,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/prison/mining)
@@ -2532,6 +2544,10 @@
 /obj/structure/halflife/trash/glass/cans,
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/prison/cafeteria)
+"ww" = (
+/obj/machinery/computer/records/security,
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/prison/intake)
 "wx" = (
 /obj/machinery/camera{
 	c_tag = "Manufacturing Plant East";
@@ -3468,6 +3484,10 @@
 	},
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/prison/intake)
+"Er" = (
+/obj/effect/landmark/destabilizer,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "Es" = (
 /obj/structure/chair/halflife/metal/folding{
 	dir = 8
@@ -3530,6 +3550,10 @@
 /obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/prison/infirmary)
+"EU" = (
+/obj/machinery/computer/records/security,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/prison/security)
 "EV" = (
 /mob/living/basic/halflife/headcrab/poison,
 /obj/structure/alien/weeds,
@@ -3795,6 +3819,7 @@
 	c_tag = "Train Station Checkpoint";
 	dir = 8
 	},
+/obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/prison/intake)
 "GL" = (
@@ -4757,6 +4782,7 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/prison/mining)
 "Ot" = (
+/obj/machinery/recharger,
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/prison/mining)
@@ -4864,6 +4890,10 @@
 /obj/structure/halflife/trash/garbage/dumpster/crate,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"Pq" = (
+/obj/machinery/recharger,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/prison/factory)
 "Pr" = (
 /obj/structure/railing/halflife/solo,
 /turf/open/floor/plating/indoor/cafeteria,
@@ -5639,6 +5669,10 @@
 /obj/effect/mapping_helpers/airlock/access/all/security/armory,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/dispatch)
+"VE" = (
+/obj/effect/landmark/destabilizer,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/prison)
 "VI" = (
 /obj/item/surgicaldrill,
 /obj/item/cautery,
@@ -5884,7 +5918,7 @@
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "XM" = (
-/obj/structure/table/halflife/no_smooth/large/metal/desk,
+/obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/prison/intake)
 "XO" = (
@@ -34795,7 +34829,7 @@ UZ
 UZ
 UZ
 tV
-RO
+ww
 xP
 RM
 GI
@@ -34871,7 +34905,7 @@ NU
 WC
 Ct
 Ct
-Ct
+Er
 Ct
 Ct
 Ct
@@ -39122,7 +39156,7 @@ RE
 nD
 EP
 ZI
-oj
+VE
 fm
 nD
 Ct
@@ -41346,7 +41380,7 @@ qG
 ou
 Te
 mJ
-mJ
+fF
 HQ
 HQ
 HQ
@@ -58505,7 +58539,7 @@ hu
 tE
 lF
 kD
-lF
+EU
 lF
 tE
 tE
@@ -59001,7 +59035,7 @@ EP
 EP
 EP
 rQ
-PB
+Pq
 QF
 rQ
 KP
