@@ -17,8 +17,7 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 	/// The name that will show up to the hidden when being activated
 	var/terminal_name = "Unknown"
 
-	var/time_to_complete = 30 SECONDS
-	var/last_scream = 0
+	var/attempts_to_complete = 6 //attempts last 5 seconds, so it amounts to 30 seconds
 	var/last_hidden_warning = 0
 
 	density = TRUE
@@ -65,33 +64,43 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 	START_PROCESSING(SSprocessing, src)
 	GLOB.distress_terminals += 1
 
-/obj/machinery/combine_distressterminal/process()
+//a mix of the old and new, progress is saved but hidden has a chance to interrupt. also, no chance someone (who will remain anonymous) makes a mistake and a dead/dying person is able to activate the terminal
+/obj/machinery/combine_distressterminal/interact(mob/living/carbon/human/user)
+	. = ..()
 
-	activating = FALSE
-	for(var/mob/living/hooman in orange(1, src))
-		if(hooman.deployment_faction == COMBINE_DEPLOYMENT_FACTION || hooman.deployment_faction == REBEL_DEPLOYMENT_FACTION && hooman.stat == CONSCIOUS)
-			activating = TRUE
+	if(completed)
+		say("Terminal already activated.")
+		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+		return
 
-	if(activating && !completed)
-		time_to_complete -= 1 SECONDS
-		if(last_scream < world.time)
-			say("Terminal activating. [time_to_complete/10] seconds left till completion.")
-			last_scream = world.time + 6 SECONDS
-			playsound(src, 'hl13/sound/effects/radio2.ogg', 15, TRUE, extrarange = 3)
+	if(activating)
+		say("Terminal is currently in use.")
+		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+		return
 
-		if(last_hidden_warning < world.time)
+	activating = TRUE
+	if(last_hidden_warning < world.time)
 			for(var/X in GLOB.deployment_hidden_players)
 				var/mob/living/carbon/human/H = X
 				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
 				to_chat(H, "<span class='userdanger'>The [terminal_name] terminal is currently being activated.</span>")
 			last_hidden_warning = world.time + 45 SECONDS
-
-	if(time_to_complete < 1 SECONDS)
-		for(var/mob/living/hooman in orange(1, src))
-			if(hooman.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+	if(do_after(user, 5 SECONDS, src))
+		attempts_to_complete -= 1
+		if(attempts_to_complete == 0)
+			say("All activation codes accepted. Activating terminal.")
+			playsound(src, 'hl13/sound/effects/radio2.ogg', 15, TRUE, extrarange = 3)
+			if(user.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
 				completed(0)
-			if(hooman.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			if(user.deployment_faction == REBEL_DEPLOYMENT_FACTION)
 				completed(1)
+		else
+			say("Activation code accepted. [attempts_to_complete] activation codes needed until terminal activation.") //i dont know, sounds computery enough
+			playsound(src, 'hl13/sound/effects/radio2.ogg', 15, TRUE, extrarange = 3)
+	else
+		say("Invalid activation code received. [attempts_to_complete] activation codes needed until terminal activation.")
+		playsound(src, 'hl13/sound/effects/radio2.ogg', 15, TRUE, extrarange = 3)
+	activating = FALSE
 
 /obj/machinery/combine_distressterminal/lambda
 	name = "rebel distress terminal"
