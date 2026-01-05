@@ -1,6 +1,6 @@
 /datum/quirk/foreigner
 	name = "American Transfer"
-	desc = "You come from the far away united states, and do not know a lick of polish."
+	desc = "You come from the far away united states, and do not know a lick of polish. Warning, you won't understand almost everyone who speaks!"
 	icon = FA_ICON_LANGUAGE
 	value = -3
 	gain_text = span_notice("The words being spoken around you don't make any sense.")
@@ -20,7 +20,7 @@
 
 /datum/quirk/russian_foreigner
 	name = "Russian Transfer"
-	desc = "You come from far away Russia, and do not know a lick of polish."
+	desc = "You come from far away Russia, and do not know a lick of polish. Warning, you won't understand almost everyone who speaks!"
 	icon = FA_ICON_LANGUAGE
 	value = -3
 	gain_text = span_notice("The words being spoken around you don't make any sense.")
@@ -40,7 +40,7 @@
 
 /datum/quirk/italian_foreigner
 	name = "Italian Transfer"
-	desc = "You come from far away Italy, and do not know a lick of polish."
+	desc = "You come from far away Italy, and do not know a lick of polish. Warning, you won't understand almost everyone who speaks!"
 	icon = FA_ICON_LANGUAGE
 	value = -3
 	gain_text = span_notice("The words being spoken around you don't make any sense.")

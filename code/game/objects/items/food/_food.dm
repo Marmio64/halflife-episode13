@@ -119,7 +119,6 @@
 		AddComponent(/datum/component/infective, GLOB.floor_diseases.Copy(), weak = TRUE, weak_infection_chance = 30)
 	else if(!isnull(trash_type))
 		return // You don't eat the package and it protects from decomposing
-	else
-		AddComponent(/datum/component/germ_sensitive, mapload)
+	AddComponent(/datum/component/germ_sensitive, mapload)
 	if(!preserved_food)
 		AddComponent(/datum/component/decomposition, mapload, decomp_req_handle, decomp_flags = foodtypes, decomp_result = decomp_type, ant_attracting = ant_attracting, custom_time = decomposition_time, stink_particles = decomposition_particles)

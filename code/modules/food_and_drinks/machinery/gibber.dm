@@ -187,6 +187,7 @@
 	var/list/datum/disease/diseases = mob_occupant.get_static_viruses()
 
 	if(ishuman(occupant))
+		SSsociostability.modifystability(-2) //i dont think its good for sociostability to stuff people into a meat grinder and eat them
 		var/mob/living/carbon/human/gibee = occupant
 		if(prob(40) && (sourcejob in list(JOB_SECURITY_OFFICER,JOB_WARDEN,JOB_HEAD_OF_SECURITY)))
 			typeofmeat = /obj/item/food/meat/slab/pig

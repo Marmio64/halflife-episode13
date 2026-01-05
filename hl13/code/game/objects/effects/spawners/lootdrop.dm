@@ -11,6 +11,7 @@
 				/obj/item/binoculars,
 				/obj/item/seeds/potato,
 				/obj/item/melee/tireiron,
+				/obj/item/melee/brass_knuckles,
 				/obj/item/melee/baton,
 				/obj/item/circuitmaterial = 3,
 				/obj/item/light/bulb = 2,
@@ -242,6 +243,7 @@
 	loot = list(
 				/obj/item/crowbar/large = 2,
 				/obj/item/crowbar/halflife_hammer,
+				/obj/item/melee/brass_knuckles,
 				/obj/item/binoculars,
 				/obj/item/melee/baton,
 				/obj/item/circuitmaterial = 3,

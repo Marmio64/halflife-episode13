@@ -106,3 +106,16 @@
 
 /obj/item/spear/halflife/deathmatch/deployment
 	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/melee/brass_knuckles
+	name = "brass knuckles"
+	desc = "Easily concealable, yet very dangerous. Fits on the knuckles to augment your fists to be far more deadly."
+	w_class = WEIGHT_CLASS_TINY
+	icon = 'hl13/icons/obj/melee.dmi'
+	icon_state = "knuckles"
+	inhand_icon_state = "knuckles"
+	lefthand_file = 'hl13/icons/mob/inhands/melee_inhand_left.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/melee_inhand_right.dmi'
+	hitsound = 'hl13/sound/halflifeweapons/meleesounds/genericblunt_hit.ogg'
+	force = 16
+	throwforce = 6

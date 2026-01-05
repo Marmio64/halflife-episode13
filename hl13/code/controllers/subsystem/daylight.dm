@@ -129,7 +129,7 @@ SUBSYSTEM_DEF(daylight)
 
 			day_cycle_active = DAY_CYCLE_AFTERNOON
 			if(SSmapping.current_map.minetype != "combat_deployment")
-				priority_announce("Attention occupants, it is now afternoon. The previous ration cycle has ended. All inmates are to begin productive efforts, and to inquire union personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal], compliance is mandatory.", "Work Notice.", sender_override = "Prison Automated Scheduler")
+				priority_announce("Attention occupants, it is now afternoon. The previous ration cycle has ended. All inmates are to begin productive efforts, and to inquire security personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal], compliance is mandatory.", "Work Notice.", sender_override = "Prison Automated Scheduler")
 
 			factory_containers_filled = 0
 
