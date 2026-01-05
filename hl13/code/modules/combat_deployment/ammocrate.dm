@@ -96,6 +96,7 @@
 /obj/machinery/ammo_crate/heavy
 	name = "Heavy Ammo Crate"
 	desc = "A large ammo crate. Contains special ammo types that you can pull out after a short delay. It does not recharge."
+	icon_state = "hammocrate"
 	max_integrity = 150
 	ammo_amount = 4
 	recharges = FALSE
