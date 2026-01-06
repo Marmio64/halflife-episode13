@@ -1,6 +1,6 @@
 /datum/quirk/tin_man
 	name = "Tin Man"
-	desc = "Oops! All Prosthetics! Due to some truly cruel cosmic punishment, most of your internal organs have been replaced with surplus prosthetics."
+	desc = "By some terrible accident, and some amazing luck that the combine didn't stalkerize you instead, you had to have all your internal organs replaced with cheap, barely working surplus cybernetics."
 	icon = FA_ICON_USER_GEAR
 	value = -6
 	medical_record_text = "During physical examination, patient was found to have numerous low-budget prosthetic internal organs. \

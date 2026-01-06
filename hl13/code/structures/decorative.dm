@@ -976,6 +976,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 	anchored = TRUE
 	projectile_passchance = 60
 
+/obj/structure/halflife/stationclock/examine(mob/user)
+	. = ..()
+	. += span_info("You take a look at the time and think on it... [SSdaylight.return_time_of_day_message()].")
+
 /obj/structure/halflife/leaves
 	name = "leaves"
 	desc = "Autumn makes me melancholic."

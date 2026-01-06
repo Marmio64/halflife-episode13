@@ -46,6 +46,8 @@
 					/obj/item/storage/fancy/cigarettes/halflife = 8,
 					/obj/item/storage/halflife/pill_bottle/antifatigue = 6,
 					/obj/item/reagent_containers/cup/glass/bottle/beer/light = 10,
+					/obj/item/storage/belt/pouch = 6,
+					/obj/item/storage/pill_bottle/mannitol/braintumor = 5,
 					/obj/item/clothing/gloves/fingerless = 3)
 
 	contraband = list(/obj/item/lockpick = 1,

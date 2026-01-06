@@ -58,7 +58,8 @@
 	icon_state = "bullet_large"
 
 /obj/projectile/bullet/rocket/hl13
-	damage = 20 //the damage will come from the heavy explosion
+	damage = 25 //the damage will come from the heavy explosion
+	wound_bonus = -10
 	speed = 0.25
 	var/max_speed = 3
 	var/speed_increase_per_tile = 0.5

@@ -137,7 +137,7 @@
 	fire_delay = 2
 	burst_size = 1
 	spread = 7
-	recoil = 0.75
+	recoil = 0.7
 	can_suppress = FALSE
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY
@@ -663,17 +663,17 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/mosin
 	can_jam = TRUE
 	jamming_increment = 0
-	jamming_chance = 20
+	jamming_chance = 15
 	projectile_damage_multiplier = 1.3
 	projectile_wound_bonus = -45
-	spread = 3 //it has a stock
+	spread = 2 //it has a stock
 	recoil = 0.5 //probably the only gun in the game other than M4A1 and service rifle with a real stock
 	fire_delay = 6 //its already boltaction but to make sure that someone who's really good at pressing Z doesnt just lay down suppressive fire
 	sawn_desc = "A ratty old pre-war rifle that was developed over a century ago. Someone seems to have taken this prized historical artifact and sawed it in half, creating an Obrez. Still moist, though."
 	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
-	jamming_chance = 10
+	jamming_chance = 5
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/start_empty
 	magazine = /obj/item/ammo_box/magazine/internal/boltaction/mosin/start_empty

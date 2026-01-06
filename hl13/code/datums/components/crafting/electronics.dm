@@ -185,6 +185,14 @@
 	category = CAT_ROBOT
 	crafting_interface = CRAFTING_BENCH_GENERAL | CRAFTING_BENCH_ELECTRIC
 
+/datum/crafting_recipe/strip_cablecoil
+	name = "Strip Copper From Cables"
+	result = /obj/item/stack/sheet/scrap_copper/three
+	reqs = list(/obj/item/stack/cable_coil = 30)
+	time = 5 SECONDS
+	category = CAT_ROBOT
+	tool_behaviors = list(TOOL_KNIFE)
+
 /datum/crafting_recipe/super_destabilizer
 	name = "Super Destabilizer Beacon"
 	result = /obj/item/super_destabilizer_beacon

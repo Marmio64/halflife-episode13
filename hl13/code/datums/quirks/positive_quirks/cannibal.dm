@@ -1,6 +1,6 @@
 /datum/quirk/cannibal
 	name = "Cannibal"
-	desc = "You can't get enough of the taste of raw flesh. Humans are what you first think of when thinking of a nice meal, but raw meat of any kind can do. In addition, the practice has made you a bit more resistant to diseases from eating raw meats."
+	desc = "You can't get enough of the taste of raw flesh. Humans are what you first think of when thinking of a nice meal, but raw meat of any kind can do. In addition, the practice has made you much more resistant to diseases from eating raw meats."
 	icon = FA_ICON_TEETH_OPEN
 	value = 8
 	mob_trait = TRAIT_CANNIBAL
