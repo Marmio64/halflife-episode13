@@ -80,11 +80,11 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 
 	activating = TRUE
 	if(last_hidden_warning < world.time)
-			for(var/X in GLOB.deployment_hidden_players)
-				var/mob/living/carbon/human/H = X
-				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
-				to_chat(H, "<span class='userdanger'>The [terminal_name] terminal is currently being activated.</span>")
-			last_hidden_warning = world.time + 45 SECONDS
+		for(var/X in GLOB.deployment_hidden_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+			to_chat(H, "<span class='userdanger'>The [terminal_name] terminal is currently being activated.</span>")
+		last_hidden_warning = world.time + 45 SECONDS
 	if(do_after(user, 5 SECONDS, src))
 		attempts_to_complete -= 1
 		if(attempts_to_complete == 0)
