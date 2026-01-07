@@ -54,8 +54,48 @@
 
 /obj/structure/halflife/sign/combine/prison
 	name = "combine 'Nowy Jutro' sign"
-	desc = "A sign spelling out 'Nowy Jutro' in the polish alphabet. A New Tomorrow awaits you here, though it's unlikely a good one."
+	desc = "A sign that's supposed to spell out 'Nowy Jutro' in the combine alphabet. A New Tomorrow awaits you here, though it's unlikely a good one."
 	icon_state = "prisonsign"
+	flags_1 = UNPAINTABLE_1
+	var/vandalized = FALSE
+
+/obj/structure/halflife/sign/combine/prison/examine(mob/user)
+	. = ..()
+
+	if(!user.has_language(/datum/language/common))
+		if(!vandalized)
+			. += span_notice("You don't notice anything wrong with this sign.")
+		else
+			. += span_notice("You notice that someone seems to have vandalized this sign. Weird.")
+	else
+		if(!vandalized)
+			. += span_notice("You're fairly certain that's not how that's spelled. A rebellious type might want to fix it.")
+		else
+			. += span_notice("You feel that looks much more accurate.")
+
+/obj/structure/halflife/sign/combine/prison/attackby(obj/item/I, mob/user, atom/target, params)
+	if(istype(I, /obj/item/toy/crayon/spraycan))
+		var/obj/item/toy/crayon/spraycan/can = I
+		if(can.is_capped || can.check_empty())
+			return
+		if(vandalized)
+			to_chat(user, span_notice("This sign is already vandalized."))
+			return
+		if(!user.has_language(/datum/language/common))
+			to_chat(user, span_notice("You aren't sure what to put here."))
+			return
+		to_chat(user, span_notice("You begin to vandalize the sign..."))
+		if(can.pre_noise)
+			playsound(src, 'sound/effects/spray.ogg', 5, TRUE, 5)
+		if(!do_after(user, 5 SECONDS, src))
+			to_chat(user, span_warning("You fail to vandalize the sign."))
+			return
+		vandalized = TRUE
+		icon_state = "prisonsign_vandalized"
+		SSsociostability.modifystability(-1)
+		can.use_charges()
+		if(can.pre_noise)
+			playsound(src, 'sound/effects/spray.ogg', 5, TRUE, 5)
 
 /obj/structure/halflife/sign/combine/nexus
 	name = "combine nexus sign"
