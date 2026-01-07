@@ -3,6 +3,7 @@
 	name = "Suitcase and Wallet"
 	desc = "You have your old suitcase, wallet, and a bit of cash from your prior transfer. Useful for carrying extra things around."
 	icon = FA_ICON_SUITCASE
+	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_HIDE_FROM_SCAN
 	value = 3
 
 /datum/quirk/item_quirk/suitcase/add_unique(client/client_source)

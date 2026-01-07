@@ -131,6 +131,14 @@
 	icon_state = "shop_wall"
 	pixel_y = 32
 
+/obj/structure/halflife/sign/factory
+	name = "factory sign"
+	desc = "Looks like the factory should be nearby."
+	icon_state = "factory"
+	pixel_y = 32
+	density = FALSE
+	pixel_x = -15
+
 /obj/structure/halflife/sign/bar
 	name = "bar sign"
 	desc = "Light blocks forming the word 'BAR'. Throat be dry no more!"
@@ -234,4 +242,4 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/halflfe_clock, 32)
 
 /obj/structure/sign/halflfe_clock/examine(mob/user)
 	. = ..()
-	. += span_info("The current twenty four hour time is: [SSdaylight.twentyfourhourstamp()].")
+	. += span_info("You take a look at the time and think on it... [SSdaylight.return_time_of_day_message()].")

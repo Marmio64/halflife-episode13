@@ -150,7 +150,7 @@
 
 /datum/mood_event/nyctophobia
 	description = "It sure is dark around here..."
-	mood_change = -3
+	mood_change = -5
 
 /datum/mood_event/claustrophobia
 	description = "Why do I feel trapped?!  Let me out!!!"

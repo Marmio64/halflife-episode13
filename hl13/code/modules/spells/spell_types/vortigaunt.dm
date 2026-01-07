@@ -75,6 +75,7 @@
 /datum/action/cooldown/spell/touch/vort_heal/empowered
 	name = "Empowered Mend"
 
+	cooldown_time = 7 SECONDS
 	heal_rate = -60
 
 /obj/item/melee/touch_attack/vort_heal

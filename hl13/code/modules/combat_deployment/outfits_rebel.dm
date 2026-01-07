@@ -95,7 +95,7 @@
 
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = 1,
-		/obj/item/ammo_box/magazine/makeshift9mm = 1,
+		/obj/item/ammo_box/magazine/makeshift9mm = 2,
 		/obj/item/stack/medical/bandage/makeshift = 1,
 	)
 
@@ -203,7 +203,7 @@
 
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = 1,
-		/obj/item/ammo_box/magazine/makeshift9mm = 3,
+		/obj/item/ammo_box/magazine/makeshift9mm = 4,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 	)
 
@@ -741,6 +741,9 @@
 		/obj/item/storage/box/lethalshot/halflife = 3,
 	)
 
+	extra_dex = 2
+	extra_str = 2
+
 /datum/outfit/deployment_loadout/rebel/tier5/veteran
 	name = "Deployment: PLF Veteran"
 	display_name = "PLF Veteran (Defense)"
@@ -771,7 +774,7 @@
 /datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt
 	name = "Deployment: Extract Empowered Vortigaunt"
 	display_name = "Extract Empowered Vortigaunt (Support)"
-	desc = "You have all the powers of an elder vortigaunt, but with increased damage resistance and a mending ability which is twice as powerful, making you very good at healing people."
+	desc = "You have all the powers of an elder vortigaunt, but with drastically increased damage resistance and a mending ability which is twice as powerful, making you very good at healing people."
 
 	uniform = null
 	shoes = null
@@ -798,7 +801,7 @@
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/grenade/smokebomb
 	head = /obj/item/clothing/head/helmet/halflife/military/poland
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	shoes = /obj/item/clothing/shoes/boots
 	glasses = /obj/item/clothing/glasses/night
 
@@ -809,7 +812,10 @@
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/ammo_box/colta357 = 1,
 		/obj/item/ammo_box/magazine/svd = 1,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+
+	extra_dex = 2

@@ -157,6 +157,16 @@ SUBSYSTEM_DEF(daylight)
 /datum/controller/subsystem/daylight/proc/twentyfourhourstamp()
 	return daylight_time * 48 //a close approximate, assuming the day length is still 30 minutes.
 
+/datum/controller/subsystem/daylight/proc/return_time_of_day_message()
+	if(day_cycle_active == DAY_CYCLE_MORNING)
+		return "It is morning time."
+	if(day_cycle_active == DAY_CYCLE_AFTERNOON)
+		return "It is the afternoon."
+	if(day_cycle_active == DAY_CYCLE_DUSK)
+		return "It is dusk. Night and its curfew will be fast approaching."
+	if(day_cycle_active == DAY_CYCLE_NIGHT)
+		return "It is night time, and curfew is active."
+
 /datum/controller/subsystem/daylight/proc/get_factory_goal()
 	var/goal_amount = 0
 	goal_amount = (get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)+1) //The goal is equal to all currently playing players, plus one as a baseline.

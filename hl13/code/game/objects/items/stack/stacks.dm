@@ -105,6 +105,9 @@
 	novariants = TRUE
 	max_amount = 5
 
+/obj/item/stack/sheet/scrap_copper/three
+	amount = 3
+
 /obj/item/stack/sheet/combine_resin
 	icon = 'hl13/icons/obj/stack_objects.dmi'
 	name = "combine resin"

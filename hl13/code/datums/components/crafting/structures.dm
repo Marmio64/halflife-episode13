@@ -53,10 +53,18 @@
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
 	category = CAT_STRUCTURE
 
-/datum/crafting_recipe/heavycombinedoor
+/datum/crafting_recipe/metaldoor
 	name = "Metal Door"
 	result = /obj/machinery/door/unpowered/halflife/metal
 	time = 12 SECONDS
 	reqs = list(/obj/item/stack/sheet/iron = 15)
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
+	category = CAT_STRUCTURE
+
+/datum/crafting_recipe/wooddoor
+	name = "Wood Door"
+	result = /obj/machinery/door/unpowered/halflife/wood
+	time = 12 SECONDS
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 35)
+	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WRENCH)
 	category = CAT_STRUCTURE

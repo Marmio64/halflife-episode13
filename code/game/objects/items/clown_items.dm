@@ -31,7 +31,7 @@
 
 /obj/item/soap/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/slippery, 20)
+	AddComponent(/datum/component/slippery, 10)
 	AddComponent(/datum/component/cleaner, cleanspeed, 0.1, pre_clean_callback=CALLBACK(src, PROC_REF(should_clean)), on_cleaned_callback=CALLBACK(src, PROC_REF(decreaseUses))) //less scaling for soapies
 
 /obj/item/soap/examine(mob/user)
