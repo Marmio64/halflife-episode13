@@ -5,7 +5,7 @@
 
 /obj/machinery/biogenerator
 	name = "biogenerator"
-	desc = "Converts plants into biomass, which can be used to construct useful items."
+	desc = "Converts plants into raw biomass, allowing the construction of plant nutriment bases and fibers. A bio-processor in the factory is needed for ration ingredient construction."
 	icon = 'icons/obj/machines/biogenerator.dmi'
 	icon_state = "biogenerator"
 	density = TRUE

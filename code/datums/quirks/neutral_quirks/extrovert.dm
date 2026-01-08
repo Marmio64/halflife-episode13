@@ -1,3 +1,4 @@
+/*
 /datum/quirk/extrovert
 	name = "Extrovert"
 	desc = "You are energized by talking to others, and enjoy spending your free time in the bar."
@@ -8,3 +9,4 @@
 	lose_text = span_danger("You feel like you're over the bar scene.")
 	medical_record_text = "Patient will not shut the hell up."
 	mail_goodies = list(/obj/item/reagent_containers/cup/glass/flask)
+*/

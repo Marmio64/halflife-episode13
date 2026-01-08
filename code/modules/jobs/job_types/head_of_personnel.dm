@@ -1,12 +1,12 @@
 /datum/job/head_of_personnel
 	title = JOB_HEAD_OF_PERSONNEL
-	description = "Organize work tasks for the citizens, and order any necessary materials you see fit."
+	description = "Organize work tasks for the prisoners, and order any necessary materials you see fit. Listen to the Warden when they boss you around."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	department_head = list(JOB_CAPTAIN)
 	head_announce = list(RADIO_CHANNEL_SERVICE)
 	faction = FACTION_STATION
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = SUPERVISOR_CAPTAIN
 	req_admin_notify = 1
 	minimal_player_age = 10
@@ -39,7 +39,7 @@
 
 	family_heirlooms = list(/obj/item/reagent_containers/cup/glass/trophy/silver_cup)
 	rpg_title = "Guild Questgiver"
-	//job_flags = STATION_JOB_FLAGS | HEAD_OF_STAFF_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS | HEAD_OF_STAFF_JOB_FLAGS
 
 	human_authority = JOB_AUTHORITY_HUMANS_ONLY
 
@@ -63,7 +63,7 @@
 	head = /obj/item/clothing/head/halflife/blue_hardhat
 	belt = /obj/item/melee/baton/telescopic
 
-	r_pocket = /obj/item/hl2key/townhall
+	r_pocket = /obj/item/hl2key/labor
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/laborlead)
 

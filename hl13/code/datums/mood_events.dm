@@ -116,3 +116,8 @@
 	description = "I had to do menial labor. This is below my paygrade, I am above this!"
 	mood_change = -5
 	timeout = 4 MINUTES
+
+/datum/mood_event/painful_eat
+	description = "Eating food hurts my teeth so much! Drinking something instead would be much more pleasent..."
+	mood_change = -8
+	timeout = 2 MINUTES

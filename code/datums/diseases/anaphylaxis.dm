@@ -14,7 +14,7 @@
 	spread_text = "None"
 	visibility_flags = HIDDEN_PANDEMIC
 	bypasses_immunity = TRUE
-	stage_prob = 5
+	stage_prob = 4
 
 /datum/disease/anaphylaxis/stage_act(seconds_per_tick, times_fired)
 	. = ..()
@@ -78,6 +78,6 @@
 
 		// "you are too late" symptoms: death.
 		if(3)
-			affected_mob.apply_damage(3 * seconds_per_tick, TOX, spread_damage = TRUE)
+			affected_mob.apply_damage(2 * seconds_per_tick, TOX, spread_damage = TRUE)
 			affected_mob.apply_damage(1 * seconds_per_tick, OXY)
 			affected_mob.Unconscious(3 SECONDS * seconds_per_tick)

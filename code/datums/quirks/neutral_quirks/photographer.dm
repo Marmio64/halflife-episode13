@@ -1,3 +1,4 @@
+/*
 /datum/quirk/item_quirk/photographer
 	name = "Photographer"
 	desc = "You carry your camera and personal photo album everywhere you go.."
@@ -27,3 +28,4 @@
 			LOCATION_HANDS = ITEM_SLOT_HANDS
 		)
 	)
+*/

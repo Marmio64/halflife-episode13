@@ -60,7 +60,7 @@
 
 /datum/mood_event/depression
 	description = "I feel sad for no particular reason."
-	mood_change = -12
+	mood_change = -10
 	timeout = 2 MINUTES
 
 /datum/mood_event/shameful_suicide //suicide_acts that return SHAME, like sord

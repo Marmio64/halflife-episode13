@@ -476,6 +476,8 @@ Behavior that's still missing from this component that original food items had t
 	if(eater.satiety > -200)
 		eater.satiety -= junkiness
 	playsound(eater.loc,'hl13/sound/items/eat.ogg', rand(10,50), TRUE) //hl13 edit sound
+	if(HAS_TRAIT(eater, TRAIT_PAINFUL_EAT))
+		eater.add_mood_event("painful_eat", /datum/mood_event/painful_eat)
 	if(!owner.reagents.total_volume)
 		return
 	var/sig_return = SEND_SIGNAL(parent, COMSIG_FOOD_EATEN, eater, feeder, bitecount, bite_consumption)
