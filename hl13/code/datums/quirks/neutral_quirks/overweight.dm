@@ -1,10 +1,9 @@
 //being fat decreases mood, mobility, and dex, but you get a point of strength and don't have to worry about food
 /datum/quirk/overweight
 	name = "Overweight"
-	desc = "You are very overweight. You'll feel bad about this, move slow, and have lower dexterity until you drop some pounds, but at the least you won't have to worry about food for a long time."
+	desc = "You are very overweight (must've been stealing everyone's rations). You'll feel bad about this, move slow, and have lower dexterity until you drop some pounds, but at the least you won't have to worry about food for a long time."
 	icon = FA_ICON_PLATE_WHEAT
 	value = 0
-	medical_record_text = "Patient has a efficient metabolism."
 
 /datum/quirk/overweight/add()
 	if(iscarbon (quirk_holder))

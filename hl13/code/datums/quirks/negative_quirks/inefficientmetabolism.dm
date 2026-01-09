@@ -9,9 +9,9 @@
 /datum/quirk/inefficientmetabolism/add()
 	if(iscarbon (quirk_holder))
 		var/mob/living/carbon/human/human = quirk_holder
-		human.physiology.hunger_mod *= 1.25
+		human.physiology.hunger_mod *= 1.2
 
 /datum/quirk/inefficientmetabolism/remove()
 	if(iscarbon(quirk_holder))
 		var/mob/living/carbon/human/human = quirk_holder
-		human.physiology.hunger_mod /= 1.25
+		human.physiology.hunger_mod /= 1.2
