@@ -297,6 +297,12 @@
 	icon_state = "formal"
 	inhand_icon_state = "lawyer_black"
 
+/obj/item/clothing/under/administrator/warden
+	name = "warden uniform"
+	desc = "A uniform issued to wardens, similar to the jumpsuits worn by protection teams. Establishes unity with one's baton wielding lackeys. Doesn't provide any more protection than the warden's tailored suits, though."
+	icon_state = "warden"
+	inhand_icon_state = "syndicate-black"
+
 /obj/item/clothing/under/halflife/labor_lead
 	name = "old administrative suit"
 	desc = "A pretty good, old and dusty suit. Not specially tailored for the warden, but still looks fancy."

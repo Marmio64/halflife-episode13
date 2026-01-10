@@ -54,6 +54,8 @@
 
 	var/obj/item/geiger_counter/GC
 
+	var/powered = TRUE
+
 	COOLDOWN_DECLARE(next_damage_notify)
 	COOLDOWN_DECLARE(next_morphine)
 
@@ -110,6 +112,8 @@
 	addtimer(CALLBACK(src, PROC_REF(process_sound_queue)), sound_delay)
 
 /obj/item/clothing/suit/hooded/hev/emag_act(mob/user, obj/item/card/emag/emag_card)
+	if(!powered)
+		return FALSE
 	if(obj_flags & EMAGGED)
 		return FALSE
 	if(owner)
@@ -136,7 +140,7 @@
 //Signal handling.
 /obj/item/clothing/suit/hooded/hev/equipped(mob/M, slot)
 	. = ..()
-	if(slot == ITEM_SLOT_OCLOTHING && iscarbon(M))
+	if(slot == ITEM_SLOT_OCLOTHING && iscarbon(M) && powered)
 		for(var/k in funny_signals)
 			RegisterSignal(M, k, funny_signals[k])
 		add_queue('hl13/sound/voice/hev/bell.ogg',2 SECONDS,purge_queue=TRUE)
@@ -158,6 +162,8 @@
 /obj/item/clothing/suit/hooded/hev/proc/handle_death(gibbed)
 
 	SIGNAL_HANDLER
+	if(!powered)
+		return
 
 	add_queue('hl13/sound/voice/hev/death.ogg', 5 SECONDS, purge_queue=TRUE)
 
@@ -165,6 +171,8 @@
 /obj/item/clothing/suit/hooded/hev/proc/handle_ignite(mob/living)
 
 	SIGNAL_HANDLER
+	if(!powered)
+		return
 
 	SOUND_BEEP('hl13/sound/voice/hev/beep_3.ogg')
 	add_queue('hl13/sound/voice/hev/heat.ogg',1 SECONDS)
@@ -173,6 +181,8 @@
 /obj/item/clothing/suit/hooded/hev/proc/handle_shock(mob/living)
 
 	SIGNAL_HANDLER
+	if(!powered)
+		return
 
 	SOUND_BEEP('hl13/sound/voice/hev/beep_3.ogg')
 	add_queue('hl13/sound/voice/hev/shock.ogg',1 SECONDS)
@@ -181,6 +191,8 @@
 /obj/item/clothing/suit/hooded/hev/proc/handle_wound_add(mob/living/carbon/C, datum/wound/W, obj/item/bodypart/L)
 
 	SIGNAL_HANDLER
+	if(!powered)
+		return
 
 	var/found_sound = wound_to_sound[W.type]
 	if(found_sound)
@@ -194,6 +206,8 @@
 
 /obj/item/clothing/suit/hooded/hev/proc/administer_morphine()
 	SIGNAL_HANDLER
+	if(!powered)
+		return
 	if(!owner.reagents)
 		return
 	if(!COOLDOWN_FINISHED(src, next_morphine))
@@ -221,6 +235,9 @@
 //General Damage
 /obj/item/clothing/suit/hooded/hev/proc/handle_damage(mob/living/carbon/C, damage, damagetype, def_zone)
 	SIGNAL_HANDLER
+
+	if(!powered)
+		return
 
 	if(!COOLDOWN_FINISHED(src, next_damage_notify))
 		return
@@ -282,6 +299,32 @@
 /obj/item/clothing/suit/hooded/hev/deathmatch/deployment
 	slowdown = -0.5
 	armor_type = /datum/armor/hev/weak
+
+/obj/item/clothing/suit/hooded/hev/makeshift_hazsuit
+	name = "makeshift hazard suit"
+	desc = "A bulky handmade suit which provides protection from hazardous environments. Its creator likely built it in a cave with a box of scraps. Doesn't seem to have any morphine."
+	icon_state = "hazsuit"
+	worn_icon_state = "hazsuit"
+	armor_type = /datum/armor/armoredvest/hazsuit
+	inhand_icon_state = "bombsuit"
+	hoodtype = /obj/item/clothing/head/hooded/hevhood/hazsuit
+	slowdown = 0.35 //pretty slow (even slower than what IC wore) because you handmade it from scrap, also its not a powered suit.
+
+	powered = FALSE //prevents it from doing the voicelines and healing
+
+/datum/armor/armoredvest/hazsuit
+	bio = 100
+	fire = 30
+	acid = 30
+
+/obj/item/clothing/head/hooded/hevhood/hazsuit
+	name = "makeshift hazard hood"
+	desc = "A handmade hood which provides just as much protection from hazardous environments. Doesn't seem to have a headsup display."
+	icon = 'hl13/icons/mob/clothing/masks.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/masks.dmi'
+	icon_state = "cwuengi" //placeholder
+	worn_icon_state = "cwuengi"
+	armor_type = /datum/armor/armoredvest/hazsuit
 
 #undef MORPHINE_INJECTION_DELAY
 #undef SOUND_BEEP
