@@ -48,6 +48,11 @@
 	projectile_type = /obj/projectile/bullet/c46x30mm/mp7
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/light
 
+/obj/item/ammo_casing/c46x30mm/mp7/rubber
+	name = "4.6x30mm rubber bullet casing"
+	desc = "A 4.6x30mm rubber bullet casing."
+	projectile_type = /obj/projectile/bullet/c46x30mm/mp7/rubber
+
 /obj/item/ammo_casing/a20mm
 	name = "20mm grenade"
 	desc = "A 20mm grenade. Can't be activated on it's own, and can only be inserted into an MP7's launcher."

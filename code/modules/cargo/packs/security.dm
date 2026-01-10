@@ -160,7 +160,7 @@
 /datum/supply_pack/security/armory/mosin //if you spent everything else on pierogis to keep the citizens from butchering you like a fish but still want conscripts
 	name = "Mosin-Nagant Frames"
 	desc = "Contains two severely outdated bolt-action rifle frames that must be assembled. Requires Armory access to open. "
-	cost = CARGO_CRATE_VALUE * 13
+	cost = CARGO_CRATE_VALUE * 12
 	contains = list(/obj/item/weaponcrafting/frame/mosin,
 					/obj/item/weaponcrafting/frame/mosin)
 	crate_name = "mosin-nagant crate"
@@ -322,3 +322,15 @@
 					/obj/item/storage/box/lethalshot/halflife/antixen,
 					/obj/item/storage/box/lethalshot/halflife/antixen)
 	crate_name = "anti-xen shotgun crate"
+
+/datum/supply_pack/security/armory/gun_selection
+	name = "Prebuilt Firearms Crate"
+	desc = "Did something extremely bad happen? Do you somehow still have a lot of money to spare? No worries then, this a prebuilt firearm crate containg one MP7, SPAS-12, and a Colt Python, alongside a spare magazine for each. Costs extra for the inconvenience of assembly. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 34
+	contains = list(/obj/item/gun/ballistic/automatic/mp7,
+					/obj/item/ammo_box/magazine/mp7,
+					/obj/item/gun/ballistic/shotgun/spas12,
+					/obj/item/storage/box/lethalshot/halflife,
+					/obj/item/gun/ballistic/revolver/coltpython,
+					/obj/item/ammo_box/colta357)
+	crate_name = "spas-12 gun crate"

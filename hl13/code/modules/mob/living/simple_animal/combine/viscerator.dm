@@ -74,8 +74,8 @@
 /mob/living/simple_animal/hostile/halflife/viscerator/shielded
 	name = "shielded viscerator"
 	desc = "A small, twin-bladed machine capable of inflicting very deadly lacerations. This one has less armor plating and uses much of its battery reserves to power a one time pulse shield to deflect up to two projectiles, no matter how strong they are."
-	health = 26
-	maxHealth = 26
+	health = 30
+	maxHealth = 30
 	operating_power = 15 //30 seconds till low power
 	loot = list()
 	var/shield_hits = 2

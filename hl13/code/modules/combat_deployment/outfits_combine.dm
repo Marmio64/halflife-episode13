@@ -367,7 +367,7 @@
 /datum/outfit/deployment_loadout/combine/tier4/elite
 	name = "Deployment: Elite OTA"
 	display_name = "Elite OTA (Defense)"
-	desc = "You are the pinnacle of combine technology. Elites have powerful AR2s and heavy armor, but their sluggish movement makes them best suited for defending positions than attacking them."
+	desc = "You are the pinnacle of combine technology. Elites have powerful AR2s and heavy armor, but their sluggish movement and lack of grenades makes them best suited for defending positions than attacking them."
 	id_name = "Elite"
 
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
@@ -379,7 +379,7 @@
 	belt = /obj/item/storage/belt/civilprotection/overwatch/ar2_deployment_elite
 	suit_store = /obj/item/gun/ballistic/automatic/ar2
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
-	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	r_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
@@ -410,7 +410,7 @@
 /datum/outfit/deployment_loadout/combine/tier4/shotgunner
 	name = "Deployment: OTA Shotgunner"
 	display_name = "OTA Shotgunner (Offense)"
-	desc = "You are suprisingly fast for your armor level, shotgunners use grenades to clear house before rushing in with their shotgun."
+	desc = "You are suprisingly fast for your armor level, shotgunners use their extra grenades to clear house before rushing in with their shotgun."
 	id_name = "Shotgunner"
 
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
@@ -573,7 +573,7 @@
 	mask = /obj/item/clothing/mask/gas/civilprotection/overseer
 	belt = /obj/item/storage/belt/civilprotection/full
 
-	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
+	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/lgorbifold.ogg'
@@ -583,7 +583,7 @@
 
 	backpack_contents = list(
 		/obj/item/grenade/spawnergrenade/manhacks/shielded = 3,
-		/obj/item/ammo_box/magazine/mp7 = 3,
+		/obj/item/ammo_box/magazine/mp7 = 4,
 	)
 
 ////////////////////// TIER 5 /////////////////////////////////////

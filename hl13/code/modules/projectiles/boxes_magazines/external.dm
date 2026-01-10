@@ -85,6 +85,14 @@
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	multiple_sprite_use_base = TRUE
 
+/obj/item/ammo_box/magazine/mp7/rubber
+	name = "MP7 magazine (4.6x30mm rubber)"
+	desc = "A 40-round 4.6x30mm magazine designed for the MP7. This one is designed to fill with rubber rounds."
+	ammo_type = /obj/item/ammo_casing/c46x30mm/mp7/rubber
+	icon_state = "smg9mmru"
+	base_icon_state = "smg9mmru"
+
+
 //m4a1 Rifle
 
 /obj/item/ammo_box/magazine/m4a1
