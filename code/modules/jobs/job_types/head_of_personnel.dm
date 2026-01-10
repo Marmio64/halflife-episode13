@@ -75,11 +75,13 @@
 		. += list(/datum/reagent/medicine/strange_reagent = 20)
 		break
 
-/datum/outfit/job/head_of_personnel/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+/datum/outfit/job/hop/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
 	user.faction += "combine"
 
-	user.change_stat(STATKEY_INT, 1)
+	user.change_stat(STATKEY_INT, 2)
+	user.change_stat(STATKEY_DEX, 1)
+	user.change_stat(STATKEY_STR, -1)
 
 /obj/item/paper/fluff/ids_for_dummies
 	name = "Memo: New IDs and You"

@@ -210,6 +210,7 @@
 /area/halflife/indoors/prison)
 "bF" = (
 /obj/structure/table/halflife/wood,
+/obj/machinery/keycard_auth/wall_mounted/directional/north,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
 "bG" = (
@@ -1473,6 +1474,11 @@
 "mD" = (
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/prison/gym)
+"mE" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/machinery/validation_terminal,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/prison/security)
 "mF" = (
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/metal/pipe,
@@ -1764,6 +1770,7 @@
 /area/halflife/indoors/prison/cells)
 "oT" = (
 /obj/structure/table/halflife/metal/grate,
+/obj/machinery/validation_terminal,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/prison/security)
 "oU" = (
@@ -2317,7 +2324,6 @@
 /area/halflife/indoors/prison)
 "ta" = (
 /obj/item/clothing/accessory/waistcoat,
-/obj/item/clothing/under/administrator/black,
 /obj/item/clothing/glasses/sunglasses,
 /obj/item/clothing/head/beret,
 /obj/item/clothing/shoes/sneakers/brown,
@@ -2325,8 +2331,8 @@
 /obj/item/clothing/neck/tie/black,
 /obj/item/clothing/neck/tie/red,
 /obj/structure/closet/secure_closet/personal/cabinet,
-/obj/item/clothing/under/halflife/labor_lead,
 /obj/item/clothing/under/halflife/brownsuit,
+/obj/item/clothing/under/administrator,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/prison/warden)
 "tc" = (
@@ -2472,6 +2478,10 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/prison/cells)
+"ux" = (
+/obj/machinery/keycard_auth/wall_mounted/directional/north,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/dispatch)
 "uy" = (
 /obj/machinery/hydroponics/soil,
 /turf/open/floor/plating/ground/dirt,
@@ -3177,6 +3187,11 @@
 /obj/effect/landmark/start/medical_doctor,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/prison/infirmary)
+"AC" = (
+/obj/machinery/validation_terminal,
+/obj/structure/table/halflife/metal/grate,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/dispatch)
 "AE" = (
 /obj/structure/closet/crate/halflife,
 /obj/structure/halflife/pipes/vent,
@@ -5083,8 +5098,6 @@
 /area/halflife/indoors/prison/infirmary)
 "PF" = (
 /obj/structure/table/halflife/no_smooth/metal,
-/obj/item/storage/box/lethalshot/halflife/beanbag,
-/obj/item/storage/box/lethalshot/halflife/beanbag,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/prison/armory)
 "PG" = (
@@ -5755,7 +5768,6 @@
 /obj/structure/table/halflife/no_smooth/large/wood/desk{
 	dir = 1
 	},
-/obj/item/storage/backpack/halflife/satchel,
 /obj/item/storage/halflife/keyring,
 /obj/item/hl2key/townhall{
 	name = "office key";
@@ -62061,7 +62073,7 @@ tE
 tE
 tE
 tE
-lF
+mE
 Ww
 Ml
 PF
@@ -64317,7 +64329,7 @@ cP
 Hq
 eu
 HK
-TK
+AC
 Hq
 lF
 tE
@@ -64639,7 +64651,7 @@ uc
 UX
 mQ
 Hq
-TK
+ux
 TK
 mQ
 Hq

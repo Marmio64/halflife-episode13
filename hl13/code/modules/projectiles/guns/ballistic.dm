@@ -367,6 +367,10 @@
 	vary_fire_sound = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 
+/obj/item/gun/ballistic/revolver/snubnose/warden
+	name = "\improper warden's snubnose revolver"
+	desc = "A well maintained, smooth looking revolver. It is small, compact, and only fires .38 rounds. It seems intimidating, but barely fired. Ammunition for this gun is likely very sparse."
+
 // Can technically down someone in about a second if you hit all pellets point blank in two shots, but unlikely.
 /obj/item/gun/ballistic/shotgun/spas12
 	name = "SPAS 12"
@@ -424,6 +428,12 @@
 	name = "spas12 internal magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/halflife
 	max_ammo = 6
+
+/obj/item/gun/ballistic/shotgun/spas12/beanbag
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/com/spas12
+
+/obj/item/ammo_box/magazine/internal/shot/com/spas12/beanbag
+	ammo_type = /obj/item/ammo_casing/shotgun/halflife/beanbag
 
 /obj/item/storage/box/lethalshot/halflife
 	name = "box of shotgun shells (Lethal)"
@@ -572,6 +582,9 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 	var/obj/item/gun/ballistic/revolver/grenadelauncher/underbarrel
+
+/obj/item/gun/ballistic/automatic/mp7/rubber
+	spawn_magazine_type = /obj/item/ammo_box/magazine/mp7/rubber
 
 /obj/item/gun/ballistic/automatic/mp7/no_mag
 	spawnwithmagazine = FALSE

@@ -34,6 +34,18 @@
 	embed_falloff_tile = -4
 	icon_state = "bullet_small"
 
+/obj/projectile/bullet/c46x30mm/mp7/rubber
+	name = "4.6x30mm rubber bullet"
+	damage = 5
+	stamina = 8
+	wound_bonus = 10
+	bare_wound_bonus = 5 //oof ouch
+	sharpness = NONE
+	embed_type = null
+	ricochets_max = 2
+	ricochet_chance = 80
+	icon_state = "rubber"
+
 /obj/projectile/bullet/a20mm
 	name = "20mm grenade"
 	icon_state = "bolter"

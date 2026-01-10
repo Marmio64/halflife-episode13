@@ -71,11 +71,17 @@
 	id = /obj/item/card/id/advanced/halflife/combine/four
 	id_trim = /datum/id_trim/job/captain
 	ears = /obj/item/radio/headset/heads/captain/alt
-	uniform =  /obj/item/clothing/under/administrator
+	uniform =  /obj/item/clothing/under/administrator/black
 	shoes = /obj/item/clothing/shoes/laceup
 	r_pocket = /obj/item/hl2key/master
 
-	belt = /obj/item/melee/baton/telescopic
+	back = /obj/item/storage/backpack/halflife/satchel
+
+	backpack_contents = list(
+		/obj/item/melee/baton/telescopic = 1,
+	)
+
+	belt = /obj/item/gun/ballistic/revolver/snubnose/warden
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/administrator)
 	skillchips = list(/obj/item/skillchip/disk_verifier)
@@ -98,5 +104,6 @@
 
 	ADD_TRAIT(user, TRAIT_ABOVE_LABOR, JOB_TRAIT)
 
-	user.change_stat(STATKEY_INT, 2)
-	user.change_stat(STATKEY_STR, -1)
+	user.change_stat(STATKEY_INT, 1)
+	user.change_stat(STATKEY_DEX, 1)
+	user.change_stat(STATKEY_STR, 1)

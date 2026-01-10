@@ -191,7 +191,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 
 /obj/machinery/vending/armory
 	name = "\improper Armory Vendor"
-	desc = "A machine which holds lethal equipment in an easy to sort manner. Requisitioning from here is a poor mark on the sociostability of your district, and will actively lower it."
+	desc = "A machine which holds some lethal and less-lethal equipment in an easy to sort manner. Requisitioning from here is a poor mark on the sociostability of your district, and will actively lower it."
 	product_ads = "Acquire emergency supplies.;Restock and resupply.;Help insure your family cohesion."
 	icon = 'hl13/icons/obj/machines/vending.dmi'
 	icon_state = "sec"
@@ -199,16 +199,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	panel_type = "panel6"
 	light_mask = "sec-light-mask"
 	products = list(
-		/obj/item/gun/ballistic/automatic/mp7 = 1,
-		/obj/item/ammo_box/magazine/mp7 = 2,
-		/obj/item/gun/ballistic/shotgun/spas12 = 1,
-		/obj/item/storage/box/lethalshot/halflife = 2,
+		/obj/item/gun/ballistic/automatic/mp7/rubber = 1,
+		/obj/item/ammo_box/magazine/mp7/rubber = 2,
+		/obj/item/gun/ballistic/shotgun/spas12/beanbag = 1,
 		/obj/item/storage/box/lethalshot/halflife/beanbag = 2,
-		/obj/item/grenade/syndieminibomb/bouncer = 3,
-		/obj/item/grenade/spawnergrenade/manhacks = 2,
-		/obj/item/gun/ballistic/automatic/pistol/usp = 1,
-		/obj/item/ammo_box/magazine/usp9mm = 3,
-		/obj/item/ammo_box/colta357 = 1,
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/gun/ballistic/automatic/pistol/usp/riot = 1,
+		/obj/item/ammo_box/c38 = 1,
 	)
 	refill_canister = /obj/item/vending_refill/civpro
 	default_price = PAYCHECK_ZERO
@@ -221,7 +218,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	icon_state = "refill_sec"
 
 /obj/machinery/vending/armory/on_dispense(obj/item/vended_item)
-	SSsociostability.modifystability(-20) //All the equipment in this vendor is lethal. Not having to resort to lethals is a mark of good sociostability. In total if you empty the machine, you lose 300 sociostability aka 30%
+	SSsociostability.modifystability(-20) //All the equipment in this vendor is lethal. Not having to resort to lethals is a mark of good sociostability. In total if you empty the machine, you lose 200 sociostability aka 18%
 
 /obj/machinery/vending/keyvendor
 	name = "\improper Key Vendor"
