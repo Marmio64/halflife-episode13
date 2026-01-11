@@ -305,17 +305,23 @@
 	desc = "A bulky handmade suit which provides protection from hazardous environments. Its creator likely built it in a cave with a box of scraps. Doesn't seem to have any morphine."
 	icon_state = "hazsuit"
 	worn_icon_state = "hazsuit"
-	armor_type = /datum/armor/armoredvest/hazsuit
+	armor_type = /datum/armor/hazsuit
 	inhand_icon_state = "bombsuit"
 	hoodtype = /obj/item/clothing/head/hooded/hevhood/hazsuit
 	slowdown = 0.35 //pretty slow (even slower than what IC wore) because you handmade it from scrap, also its not a powered suit.
 
 	powered = FALSE //prevents it from doing the voicelines and healing
 
-/datum/armor/armoredvest/hazsuit
+/datum/armor/hazsuit
+	melee = 20
+	bullet = 10
+	laser = 10
+	energy = 10
+	bomb = 10
 	bio = 100
-	fire = 30
-	acid = 30
+	fire = 75
+	acid = 50
+	wound = 5
 
 /obj/item/clothing/head/hooded/hevhood/hazsuit
 	name = "makeshift hazard hood"
@@ -324,7 +330,7 @@
 	worn_icon = 'hl13/icons/mob/clothing/masks.dmi'
 	icon_state = "cwuengi" //placeholder
 	worn_icon_state = "cwuengi"
-	armor_type = /datum/armor/armoredvest/hazsuit
+	armor_type = /datum/armor/hazsuit
 
 #undef MORPHINE_INJECTION_DELAY
 #undef SOUND_BEEP

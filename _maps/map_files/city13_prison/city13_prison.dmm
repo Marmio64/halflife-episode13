@@ -48,6 +48,10 @@
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/prison/security)
+"ao" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors/prison/intake)
 "ar" = (
 /obj/structure/halflife/cone,
 /turf/open/floor/plating/ground/brickroad{
@@ -81,6 +85,10 @@
 /area/halflife/indoors/prison/infirmary)
 "aD" = (
 /obj/structure/halflife/trash/wood,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
+"aF" = (
+/obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
 "aG" = (
@@ -242,6 +250,13 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/prison/cells)
+"bZ" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	keylock = 1;
+	locked = 1
+	},
+/turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors/prison/intake)
 "ca" = (
 /obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/carpet/violet,
@@ -533,6 +548,10 @@
 /obj/machinery/recharge_station,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/dispatch)
+"ev" = (
+/obj/machinery/computer/operating,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "ex" = (
 /obj/machinery/camera{
 	c_tag = "Cell L4";
@@ -557,9 +576,17 @@
 /obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/prison/security)
+"eL" = (
+/obj/machinery/vending/breenwater,
+/turf/open/floor/plating/indoor/checkered,
+/area/halflife/indoors/prison/cafeteria)
 "eO" = (
 /obj/structure/railing/halflife/solo,
 /turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/prison/security)
+"eP" = (
+/obj/structure/table/optable,
+/turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/prison/security)
 "eQ" = (
 /obj/structure/closet/halflife/engineering_personal,
@@ -579,6 +606,10 @@
 /obj/structure/halflife/storage/large/shelf,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/prison/factory)
+"eY" = (
+/obj/structure/tank_holder/anesthetic,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "eZ" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -1051,6 +1082,11 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/prison/factory)
+"iG" = (
+/obj/structure/bed/halflife/mattress/filthy,
+/obj/effect/spawner/random/halflife/loot/alcohol,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
 "iI" = (
 /obj/structure/sign/poster/halflife/combine/two{
 	pixel_y = 32
@@ -1149,6 +1185,10 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/prison/cafeteria)
+"jH" = (
+/obj/structure/lattice/catwalk/hl13,
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/sewer)
 "jI" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/concrete,
@@ -1211,6 +1251,12 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison/infirmary)
+"kp" = (
+/obj/structure/bodycontainer/morgue{
+	dir = 2
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "kr" = (
 /obj/structure/table/halflife/no_smooth/cable_reel,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -1411,6 +1457,11 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/prison/entrance)
+"mb" = (
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/structure/bed/halflife/mattress/stained,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "mc" = (
 /obj/structure/chair/office/halflife/blue{
 	dir = 4
@@ -1457,6 +1508,10 @@
 /obj/item/hl2key/kitchen,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/laborunion)
+"mx" = (
+/obj/structure/halflife/trash/glass/plate,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
 "mz" = (
 /obj/machinery/camera/motion{
 	c_tag = "Armory";
@@ -1481,6 +1536,7 @@
 /area/halflife/indoors/prison/security)
 "mF" = (
 /obj/structure/table/halflife/metal/grate,
+/obj/effect/spawner/random/halflife/loot/uncommon,
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/sewer)
 "mH" = (
@@ -1546,6 +1602,14 @@
 	},
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/prison/cafeteria)
+"nm" = (
+/obj/machinery/door/unpowered/halflife/seethrough/metal{
+	keylock = 1;
+	lockid = "townhall";
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "nn" = (
 /obj/machinery/camera{
 	c_tag = "Chemistry";
@@ -1562,6 +1626,8 @@
 	c_tag = "Southeast Exit Hallway Maintenance Room";
 	dir = 1
 	},
+/obj/item/storage/toolbox/mechanical,
+/obj/structure/rack,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison)
 "nr" = (
@@ -1573,6 +1639,10 @@
 /obj/structure/table/halflife/wood/constructed/cobbled,
 /obj/effect/spawner/random/halflife/loot/uncommon,
 /turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
+"nw" = (
+/obj/effect/spawner/random/halflife/loot/crafting_bench,
+/turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "ny" = (
 /turf/open/openspace,
@@ -1752,6 +1822,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/prison/commissary)
+"oO" = (
+/obj/structure/railing/halflife/sewer,
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/sewer)
 "oP" = (
 /obj/structure/halflife/trash/garbage/dumpster/crate,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -1781,6 +1855,10 @@
 /obj/effect/landmark/navigate_destination/halflife/distributioncenter,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/prison)
+"oX" = (
+/obj/effect/turf_decal/arrows,
+/turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors/prison/intake)
 "oZ" = (
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/concrete,
@@ -1802,6 +1880,18 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison/infirmary)
+"ph" = (
+/obj/structure/railing/halflife/sewer{
+	dir = 1
+	},
+/obj/structure/railing/halflife/sewer{
+	dir = 4
+	},
+/obj/structure/railing/halflife/sewer{
+	dir = 8
+	},
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/sewer)
 "pi" = (
 /obj/structure/halflife/pipes/horizontal/valve,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -1885,6 +1975,7 @@
 /obj/structure/closet/secure_closet/personal/cabinet,
 /obj/item/hl2key/labor,
 /obj/item/hl2key/labor,
+/obj/item/storage/halflife/hand_box/cookie,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/laborunion)
 "qa" = (
@@ -2037,8 +2128,23 @@
 /obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
+"qT" = (
+/obj/structure/railing/halflife/sewer,
+/obj/structure/railing/halflife/sewer{
+	dir = 8
+	},
+/obj/structure/railing/halflife/sewer{
+	dir = 1
+	},
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/sewer)
 "qW" = (
 /turf/open/floor/plating/indoor/metal/combine/alt2,
+/area/halflife/indoors/prison/security)
+"qX" = (
+/obj/structure/halflife/storage/large/medical,
+/obj/item/defibrillator/loaded,
+/turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/prison/security)
 "ra" = (
 /obj/machinery/computer/communications,
@@ -2075,6 +2181,10 @@
 /mob/living/basic/halflife/zombie/poison,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
+"rl" = (
+/obj/machinery/light/small/cyan/directional/east,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "rm" = (
 /obj/machinery/button/door{
 	id = "aicoredoor";
@@ -2102,6 +2212,7 @@
 /obj/effect/spawner/random/halflife/loot,
 /obj/effect/spawner/random/halflife/loot,
 /obj/effect/spawner/random/halflife/loot,
+/obj/effect/spawner/random/halflife/loot/rare,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "rr" = (
@@ -2138,6 +2249,15 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"rF" = (
+/obj/structure/railing/halflife/sewer{
+	dir = 4
+	},
+/obj/structure/railing/halflife/sewer{
+	dir = 8
+	},
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/sewer)
 "rI" = (
 /turf/open/floor/plating/ground/grass,
 /area/halflife/indoors/prison)
@@ -2185,6 +2305,10 @@
 	},
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/prison/cafeteria)
+"rY" = (
+/obj/structure/halflife/trash/food/glass,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
 "rZ" = (
 /obj/structure/bed/halflife/bedframe/wood,
 /obj/structure/bed/halflife/mattress/stale,
@@ -2345,6 +2469,12 @@
 	},
 /turf/open/floor/plating/indoor/tiled9,
 /area/halflife/indoors/prison/infirmary)
+"tk" = (
+/obj/structure/halflife/trash/wood{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "tl" = (
 /obj/machinery/camera{
 	c_tag = "Upper Hallway West";
@@ -2418,6 +2548,10 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/prison/infirmary)
+"tU" = (
+/obj/structure/halflife/trash/garbage/dumpster,
+/turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors/prison/intake)
 "tV" = (
 /turf/closed/wall/halflife/concrete/bunker,
 /area/halflife/indoors/prison/intake)
@@ -2595,6 +2729,22 @@
 "vH" = (
 /turf/open/floor/plating/indoor/metal/walkway,
 /area/halflife/indoors/prison/intake)
+"vM" = (
+/obj/structure/table/halflife/no_smooth/metal,
+/obj/item/clothing/suit/armor/civilprotection/medical,
+/obj/item/clothing/mask/gas/civilprotection/medical,
+/obj/item/clothing/glasses/hud/health,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
+"vN" = (
+/obj/structure/table/halflife/no_smooth/large/metal,
+/obj/item/scalpel,
+/obj/item/hemostat,
+/obj/item/retractor,
+/obj/item/circular_saw,
+/obj/item/surgical_drapes,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "vU" = (
 /obj/effect/landmark/start/divisional_lead,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -2959,10 +3109,22 @@
 /obj/effect/spawner/random/halflife/loot/consumables,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
+"yw" = (
+/obj/structure/table/halflife/no_smooth/metal,
+/obj/item/reagent_containers/pill/patch/medkit,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "yB" = (
 /obj/structure/halflife/sign/combine/prison,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"yD" = (
+/obj/machinery/iv_drip,
+/obj/machinery/combine_health_station/round_start{
+	pixel_y = 30
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "yE" = (
 /obj/structure/ladder/halflife/upwards,
 /turf/open/floor/plating/indoor/concrete/sewer,
@@ -2982,6 +3144,12 @@
 "yI" = (
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/prison/commissary)
+"yK" = (
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/structure/bed/halflife/mattress/stained,
+/obj/machinery/light/small/cyan/directional/north,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "yL" = (
 /obj/structure/table/halflife/metal,
 /obj/item/reagent_containers/cup/bowl,
@@ -3153,6 +3321,17 @@
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
+"Ah" = (
+/obj/machinery/camera{
+	c_tag = "Town Hall Medbay";
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
+"Aj" = (
+/obj/machinery/light/small/cyan/directional/west,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "Ak" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/indoor/tile/black,
@@ -3219,6 +3398,7 @@
 /area/halflife/indoors/prison/entrance)
 "AP" = (
 /obj/structure/table/halflife/wood,
+/obj/structure/secure_safe/caps_spare,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison/warden)
 "AQ" = (
@@ -3627,6 +3807,13 @@
 /obj/structure/halflife/storage/large/shelf,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison)
+"Eb" = (
+/obj/structure/lattice/catwalk/hl13,
+/obj/structure/railing/halflife/sewer{
+	dir = 8
+	},
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/sewer)
 "Ed" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
 	keylock = 1;
@@ -3699,6 +3886,13 @@
 /obj/machinery/jukebox/radio,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/prison/commissary)
+"Ez" = (
+/obj/machinery/door/unpowered/halflife/seethrough/metal{
+	keylock = 1;
+	lockid = "townhall"
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "EA" = (
 /obj/item/hl2key/garden,
 /obj/item/hl2key/garden,
@@ -3896,6 +4090,13 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison)
+"Gf" = (
+/obj/structure/closet/halflife,
+/obj/effect/spawner/random/halflife/loot/consumables,
+/obj/effect/spawner/random/halflife/loot/heal,
+/obj/effect/spawner/random/halflife/loot/uncommon,
+/turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors/prison/intake)
 "Gi" = (
 /obj/machinery/keycard_auth/wall_mounted/directional/north,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -4124,6 +4325,26 @@
 /obj/modular_map_root/miningcaves,
 /turf/closed/mineral/random,
 /area/halflife/indoors/sewer/cave)
+"HV" = (
+/obj/item/reagent_containers/syringe/penacid{
+	pixel_x = -13;
+	pixel_y = 0
+	},
+/obj/item/reagent_containers/pill/iron{
+	pixel_x = -15;
+	pixel_y = -6
+	},
+/obj/item/reagent_containers/pill/iron{
+	pixel_x = 2;
+	pixel_y = -5
+	},
+/obj/item/reagent_containers/hypospray/medipen/healthpen,
+/obj/item/stack/medical/gauze{
+	pixel_x = -6;
+	pixel_y = 13
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "Ia" = (
 /obj/structure/halflife/trash/papers/one{
 	dir = 1
@@ -4245,6 +4466,10 @@
 "IH" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/prison/factory)
+"II" = (
+/obj/structure/bed/medical,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "IK" = (
 /obj/structure/halflife/trash/papers/one{
 	dir = 4
@@ -4258,6 +4483,13 @@
 "IN" = (
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/prison)
+"IP" = (
+/obj/structure/railing/halflife/sewer,
+/obj/structure/railing/halflife/sewer{
+	dir = 4
+	},
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/sewer)
 "IQ" = (
 /obj/structure/railing/halflife/solo{
 	dir = 8
@@ -4391,6 +4623,12 @@
 /obj/machinery/status_display/ai/directional/west,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/dispatch)
+"Ka" = (
+/obj/item/surgicaldrill,
+/obj/item/cautery,
+/obj/item/bonesetter,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "Kb" = (
 /turf/closed/wall/halflife/concrete/bunker,
 /area/halflife/indoors/laborunion)
@@ -4419,6 +4657,13 @@
 "Ks" = (
 /turf/open/halflife/water/sludge/deep,
 /area/halflife/indoors/sewer)
+"Kv" = (
+/obj/structure/closet/secure_closet/freezer/halflife,
+/obj/machinery/camera{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "Kw" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison/warden)
@@ -4467,6 +4712,12 @@
 /obj/machinery/door/unpowered/halflife/seethrough/grate,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
+"KO" = (
+/obj/structure/railing/halflife/sewer{
+	dir = 8
+	},
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/sewer)
 "KP" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/prison/factory)
@@ -4476,6 +4727,12 @@
 	},
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/prison/cafeteria)
+"KU" = (
+/obj/structure/railing/halflife/sewer{
+	dir = 1
+	},
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/sewer)
 "KV" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/indoor/cafeteria,
@@ -4575,6 +4832,9 @@
 /obj/structure/railing/halflife/solo{
 	dir = 8
 	},
+/obj/structure/sign/poster/halflife/combine{
+	pixel_y = 32
+	},
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/prison/cafeteria)
 "LA" = (
@@ -4598,6 +4858,12 @@
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/prison/security)
+"LG" = (
+/obj/structure/closet/halflife,
+/obj/effect/spawner/random/halflife/loot/clothing,
+/obj/effect/spawner/random/halflife/loot/clothing,
+/turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors/prison/intake)
 "LH" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
 	keylock = 1;
@@ -4718,6 +4984,13 @@
 	},
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/prison/cafeteria)
+"MA" = (
+/obj/structure/closet/halflife,
+/obj/effect/spawner/random/halflife/loot/rare,
+/obj/effect/spawner/random/halflife/loot,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors/prison/intake)
 "MD" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/effect/spawner/random/halflife/loot,
@@ -4835,6 +5108,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/prison/entrance)
+"Nq" = (
+/obj/structure/railing/halflife/sewer,
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer)
 "Ns" = (
 /obj/effect/landmark/carpspawn,
 /turf/open/floor/plating/ground/dirt,
@@ -5046,6 +5323,15 @@
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer)
+"Pa" = (
+/obj/structure/railing/halflife/sewer{
+	dir = 8
+	},
+/obj/structure/railing/halflife/sewer{
+	dir = 4
+	},
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/sewer)
 "Pb" = (
 /obj/machinery/telecomms/broadcaster/preset_left/birdstation,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -5099,6 +5385,8 @@
 /area/halflife/indoors/prison/infirmary)
 "PF" = (
 /obj/structure/table/halflife/no_smooth/metal,
+/obj/item/storage/box/lethalshot/halflife/beanbag,
+/obj/item/ammo_box/magazine/mp7/rubber,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/prison/armory)
 "PG" = (
@@ -5161,6 +5449,10 @@
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/prison/rehabilitation)
+"Qe" = (
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
 "Qg" = (
 /obj/structure/sign/halflfe_clock/directional/north,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -5186,6 +5478,13 @@
 	},
 /turf/open/floor/plating/indoor/tiled9,
 /area/halflife/indoors/prison/infirmary)
+"Qt" = (
+/obj/structure/railing/halflife/sewer,
+/obj/structure/railing/halflife/sewer{
+	dir = 1
+	},
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/sewer)
 "Qw" = (
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/tiled9,
@@ -5562,6 +5861,15 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison)
+"Th" = (
+/obj/structure/halflife/storage/large/medical,
+/obj/machinery/light/small/cyan/directional/south,
+/obj/item/stack/medical/suture{
+	pixel_x = 3;
+	pixel_y = 13
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "Tj" = (
 /obj/structure/halflife/trash/wood{
 	pixel_x = 0;
@@ -5881,6 +6189,15 @@
 /obj/structure/stairs/halflife/concrete,
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer)
+"VQ" = (
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
+"VR" = (
+/obj/effect/turf_decal/arrows{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors/prison/intake)
 "VS" = (
 /obj/structure/chair/halflife/metal/blue{
 	dir = 4
@@ -5900,6 +6217,13 @@
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/prison)
+"VV" = (
+/obj/structure/lattice/catwalk/hl13,
+/obj/structure/railing/halflife/sewer{
+	dir = 4
+	},
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/sewer)
 "VY" = (
 /obj/structure/rack,
 /obj/item/storage/halflife/keyring,
@@ -6192,6 +6516,11 @@
 	dir = 1
 	},
 /area/halflife/indoors/prison/factory)
+"Yq" = (
+/obj/structure/closet/crate/freezer/halflife/blood,
+/obj/machinery/vending/combine_wallmed/directional/north,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "Ys" = (
 /obj/machinery/door/airlock/highsecurity/combine,
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
@@ -6409,6 +6738,11 @@
 	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/prison/infirmary)
+"ZN" = (
+/obj/machinery/light/small/cyan/directional/east,
+/obj/structure/bed/medical,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/prison/security)
 "ZO" = (
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/prison/infirmary)
@@ -17411,7 +17745,7 @@ YC
 YC
 yo
 Zk
-Zk
+qT
 Zk
 Zk
 Zk
@@ -17573,8 +17907,8 @@ YC
 YC
 yo
 Zk
+Qt
 Zk
-yo
 yo
 yo
 yo
@@ -17735,9 +18069,9 @@ YC
 YC
 yo
 Zk
+Qt
 Zk
 yo
-YC
 YC
 YC
 YC
@@ -17897,9 +18231,9 @@ YC
 YC
 yo
 Zk
+Qt
 Zk
 yo
-YC
 YC
 YC
 YC
@@ -18059,9 +18393,9 @@ YC
 YC
 yo
 Zk
+Qt
 Zk
 yo
-YC
 YC
 YC
 YC
@@ -18221,9 +18555,9 @@ YC
 YC
 yo
 Zk
+Qt
 Zk
 yo
-YC
 YC
 YC
 YC
@@ -18383,9 +18717,9 @@ YC
 YC
 yo
 Zk
+Qt
 Zk
 yo
-YC
 YC
 YC
 YC
@@ -18545,9 +18879,9 @@ yo
 yo
 yo
 Zk
+Qt
 Zk
 yo
-YC
 YC
 YC
 YC
@@ -18707,9 +19041,9 @@ Zk
 Zk
 Zk
 Zk
+Qt
 Zk
 yo
-YC
 YC
 YC
 YC
@@ -18860,18 +19194,18 @@ Zk
 Zk
 Zk
 Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
+Nq
+KO
+Pa
+Pa
+Pa
+Pa
+Pa
+Pa
+Pa
+IP
 Zk
 yo
-YC
 YC
 YC
 YC
@@ -19022,18 +19356,18 @@ yo
 yo
 yo
 yo
+Nq
+oO
 Zk
 Zk
+Zk
+Zk
+Zk
+Zk
+Zk
+Zk
+Zk
 yo
-yo
-yo
-yo
-yo
-yo
-yo
-yo
-yo
-YC
 YC
 YC
 YC
@@ -19184,18 +19518,18 @@ YC
 YC
 YC
 yo
-Zk
+Nq
+oO
 Zk
 yo
-YC
-YC
-YC
-YC
-YC
-YC
-YC
-YC
-YC
+yo
+yo
+yo
+yo
+yo
+yo
+yo
+yo
 YC
 YC
 YC
@@ -19347,9 +19681,9 @@ YC
 YC
 yo
 Zk
+Eb
 Zk
 yo
-YC
 YC
 YC
 YC
@@ -19493,25 +19827,25 @@ yo
 Zk
 Zk
 yo
-YC
-YC
-YC
-YC
-YC
-YC
-YC
-YC
-YC
-YC
-YC
-YC
-YC
-YC
+yo
+yo
+yo
+yo
+yo
+yo
+yo
+yo
+yo
+yo
+yo
+yo
+yo
+yo
 yo
 Zk
+VV
 Zk
 yo
-YC
 YC
 YC
 YC
@@ -19656,22 +19990,22 @@ Zk
 Zk
 yo
 yo
-yo
-yo
-yo
-yo
-yo
-yo
-yo
-yo
-yo
-yo
-yo
-yo
-yo
-yo
 Zk
 Zk
+Zk
+Zk
+Zk
+Zk
+Zk
+Zk
+Zk
+Zk
+Zk
+Zk
+Zk
+Zk
+Nq
+oO
 yo
 yo
 yo
@@ -19814,26 +20148,26 @@ Zk
 Zk
 yo
 yo
-Zk
-Zk
-yo
-yo
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
-Zk
+jH
+jH
+KU
+oO
+jH
+jH
+ph
+rF
+rF
+rF
+rF
+rF
+rF
+rF
+rF
+rF
+rF
+rF
+rF
+oO
 Td
 Jv
 In
@@ -19994,8 +20328,8 @@ Zk
 Zk
 Zk
 Zk
-Zk
-Zk
+Nq
+oO
 Td
 Jv
 In
@@ -31627,7 +31961,7 @@ Ct
 Ct
 Ct
 Sk
-Ct
+Ye
 Ct
 Ct
 Lk
@@ -31793,7 +32127,7 @@ Lk
 Ct
 Ct
 Ct
-Ct
+Ye
 Lk
 Lk
 Lk
@@ -32601,7 +32935,7 @@ Ct
 Ct
 Ct
 Lk
-Ct
+Ye
 Lk
 Ct
 Lk
@@ -33732,10 +34066,10 @@ tV
 tV
 tV
 tV
-Ct
-Ct
-Ct
-Ct
+tV
+tV
+tV
+tV
 Ct
 Ct
 Lk
@@ -33894,9 +34228,9 @@ Ss
 Ss
 Ss
 tV
-Ct
-Ct
-Ct
+tU
+Ss
+MA
 HQ
 HQ
 HQ
@@ -34055,10 +34389,10 @@ Ss
 Ss
 Ss
 Ss
-tV
-Ct
-Ct
-Ct
+bZ
+Ss
+Ss
+LG
 HQ
 HQ
 HQ
@@ -34218,9 +34552,9 @@ Ss
 Ss
 Ss
 tV
-Ct
-Ct
-Ct
+ao
+Ss
+Gf
 HQ
 HQ
 KF
@@ -34860,10 +35194,10 @@ Ss
 Ss
 Ss
 Ss
+oX
 Ss
 Ss
-Ss
-Ss
+VR
 Ss
 xh
 HQ
@@ -35187,7 +35521,7 @@ Ss
 Ss
 Ss
 Ss
-Ss
+VR
 Ss
 Ss
 HQ
@@ -35511,7 +35845,7 @@ vH
 vH
 vH
 Ss
-Ss
+VR
 Ss
 Ss
 HQ
@@ -35835,7 +36169,7 @@ vH
 vH
 vH
 Ss
-Ss
+VR
 Ss
 Ss
 HQ
@@ -36159,7 +36493,7 @@ Ss
 Ss
 Ss
 Ss
-Ss
+VR
 Ss
 Ss
 HQ
@@ -39412,8 +39746,8 @@ uV
 VT
 VT
 VT
-VT
-VT
+Ie
+eL
 ZU
 mH
 ZU
@@ -47947,11 +48281,11 @@ Ct
 Ct
 Ct
 Ct
-Ct
-Lk
-Ct
-Ct
-Ct
+cM
+cM
+cM
+cM
+cM
 Ct
 Lk
 Lk
@@ -48109,11 +48443,11 @@ Ct
 Ct
 Ct
 Ct
-Ct
-Ct
-Lk
-Ct
-Ct
+cM
+mx
+kv
+kv
+cM
 Ct
 qt
 Lk
@@ -48271,11 +48605,11 @@ Ct
 Ct
 Lk
 Lk
-Ct
-Lk
-Lk
-Lk
-Ct
+cM
+kv
+aF
+kv
+lN
 Ct
 Ct
 Lk
@@ -48433,11 +48767,11 @@ Lk
 Ct
 Lk
 Ct
-Lk
-Ct
-Lk
-Lk
-Ct
+cM
+kv
+kv
+rY
+cM
 Lk
 Ct
 Lk
@@ -48595,11 +48929,11 @@ Lk
 pN
 Ct
 Ct
-Lk
-Ct
-Ct
-Lk
-Lk
+cM
+iG
+kv
+aF
+cM
 Lk
 Ct
 Lk
@@ -48757,11 +49091,11 @@ Lk
 Ct
 Ct
 Ct
-Lk
-Ct
-Ct
-Ct
-Ct
+cM
+cM
+cM
+cM
+cM
 Ct
 Ct
 Ct
@@ -48920,8 +49254,8 @@ Ct
 Ct
 Lk
 Ct
-Ct
-Ct
+cM
+nw
 Ct
 qt
 Ct
@@ -49082,7 +49416,7 @@ Ct
 Ct
 Lk
 Ct
-Ct
+cM
 Ct
 Ct
 Ct
@@ -49411,7 +49745,7 @@ Ct
 Ct
 Ct
 Ct
-UT
+cM
 UT
 UT
 UT
@@ -49568,12 +49902,12 @@ UT
 Ct
 UT
 Ct
-Ct
-Ct
+cM
+tk
 UT
 UT
-UT
-UT
+kv
+cM
 UT
 UT
 UT
@@ -49730,12 +50064,12 @@ UT
 UT
 UT
 UT
-Ct
+cM
 UT
 UT
-UT
-UT
-UT
+kv
+Qe
+cM
 UT
 UT
 UT
@@ -49892,12 +50226,12 @@ UT
 UT
 UT
 UT
+cM
 UT
 UT
-UT
-UT
-UT
-UT
+cM
+cM
+cM
 UT
 UT
 UT
@@ -58036,7 +58370,7 @@ nD
 nD
 nD
 nD
-WH
+nD
 WH
 WH
 WH
@@ -67103,6 +67437,7 @@ kD
 kD
 kD
 kD
+nm
 kD
 kD
 kD
@@ -67110,7 +67445,6 @@ kD
 kD
 kD
 kD
-nD
 nD
 nD
 nD
@@ -67262,17 +67596,17 @@ nD
 nD
 nD
 nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
+kD
+yK
+VQ
+VQ
+mb
+kD
+eY
+Aj
+VQ
+qX
+kD
 nD
 nD
 nD
@@ -67424,17 +67758,17 @@ ou
 nD
 nD
 nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
+kD
+yD
+VQ
+VQ
+Th
+kD
+eP
+VQ
+VQ
+VQ
+kD
 nD
 nD
 nD
@@ -67586,17 +67920,17 @@ ou
 nD
 nD
 nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
+kD
+Yq
+VQ
+VQ
+HV
+kD
+ev
+VQ
+VQ
+vN
+kD
 nD
 nD
 nD
@@ -67748,17 +68082,17 @@ ou
 nD
 nD
 nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
+kD
+yw
+VQ
+VQ
+VQ
+Ez
+VQ
+VQ
+VQ
+Ka
+kD
 nD
 nD
 nD
@@ -67910,17 +68244,17 @@ ou
 nD
 nD
 nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
+kD
+kp
+Ah
+rl
+vM
+kD
+II
+ZN
+VQ
+Kv
+kD
 nD
 nD
 nD
@@ -68072,17 +68406,17 @@ ou
 nD
 nD
 nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
-nD
+kD
+kD
+kD
+kD
+kD
+kD
+kD
+kD
+kD
+kD
+kD
 nD
 nD
 nD
@@ -70550,12 +70884,12 @@ WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
+bA
+bA
+bA
+bA
+bA
+bA
 WH
 WH
 WH
@@ -70712,12 +71046,12 @@ WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
+bA
+bA
+bA
+bA
+bA
+bA
 WH
 WH
 WH
@@ -70874,12 +71208,12 @@ WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
+bA
+bA
+bA
+bA
+bA
+bA
 WH
 WH
 WH
@@ -71036,12 +71370,12 @@ WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
+bA
+bA
+bA
+bA
+bA
+bA
 WH
 WH
 WH
@@ -71198,12 +71532,12 @@ WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
+bA
+bA
+bA
+bA
+bA
+bA
 WH
 WH
 WH
@@ -71403,27 +71737,27 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
@@ -71565,27 +71899,27 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
@@ -71727,27 +72061,27 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
@@ -71889,28 +72223,28 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 YE
@@ -72051,28 +72385,28 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 YE
@@ -72213,28 +72547,28 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 YE
@@ -72248,6 +72582,11 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
@@ -72370,33 +72709,28 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 YE
@@ -72410,6 +72744,11 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
@@ -72528,37 +72867,32 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 YE
@@ -72572,6 +72906,11 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
@@ -72690,37 +73029,32 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 YE
@@ -72734,6 +73068,11 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
@@ -72852,37 +73191,32 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 YE
@@ -72896,6 +73230,11 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
@@ -73014,37 +73353,32 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 YE
@@ -73058,6 +73392,11 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
@@ -73176,37 +73515,32 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 YE
@@ -73343,32 +73677,32 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 YE
@@ -73505,32 +73839,32 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 YE
@@ -73667,32 +74001,32 @@ WH
 WH
 WH
 WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 YE
@@ -73836,13 +74170,13 @@ WH
 WH
 WH
 WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+kv
+kv
+kv
+kv
+kv
+kv
+kv
 WH
 WH
 WH

@@ -12,7 +12,7 @@
 
 /obj/item/storage/halflife/suitcase/smuggler/PopulateContents()
 	new /obj/item/storage/belt/pouch(src)
-	new /obj/effect/spawner/random/halflife/loot(src)
-	new /obj/effect/spawner/random/halflife/loot(src)
-	new /obj/effect/spawner/random/halflife/loot(src)
+	new /obj/effect/spawner/random/halflife/loot/uncommon(src)
+	new /obj/effect/spawner/random/halflife/loot/uncommon(src)
+	new /obj/effect/spawner/random/halflife/loot/uncommon(src)
 	..()

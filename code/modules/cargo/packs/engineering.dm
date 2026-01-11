@@ -57,7 +57,7 @@
 /datum/supply_pack/engineering/tape
 	name = "Roll of Tape"
 	desc = "A single roll of tape. Nowadays, it is rather hard to obtain and export, so purchasing is expensive. Finding some within the district may be a better option."
-	cost = CARGO_CRATE_VALUE * 6
+	cost = CARGO_CRATE_VALUE * 5
 	contains = list(/obj/item/stack/sticky_tape)
 	crate_name = "tape crate"
 

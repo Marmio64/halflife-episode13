@@ -89,7 +89,7 @@
 	name = "Stinger Grenade Pack"
 	desc = "Contains five \"stinger\" grenades which fire out rubber pellets, perfect for stopping \
 		riots and playing morally unthinkable pranks."
-	cost = CARGO_CRATE_VALUE * 6
+	cost = CARGO_CRATE_VALUE * 5
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/storage/box/stingbangs)
 	crate_name = "Stinger grenade pack crate"
@@ -97,7 +97,7 @@
 /datum/supply_pack/security/cs_gas
 	name = "CS Gas Grenade Pack"
 	desc = "Contains three CS Gas grenades, for dispersing crowds with no real physical harm."
-	cost = CARGO_CRATE_VALUE * 6
+	cost = CARGO_CRATE_VALUE * 4
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/grenade/halflife/cs_gas,
 					/obj/item/grenade/halflife/cs_gas,
@@ -270,7 +270,7 @@
 /datum/supply_pack/security/armory/receivers
 	name = "Modular Receiver Crate"
 	desc = "Contains three modular firearm receivers, necessary for putting firearms together. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 5
+	cost = CARGO_CRATE_VALUE * 4
 	contains = list(/obj/item/weaponcrafting/receiver,
 					/obj/item/weaponcrafting/receiver,
 					/obj/item/weaponcrafting/receiver)
@@ -287,7 +287,7 @@
 
 /datum/supply_pack/security/armory/brainwash
 	name = "Brainwashing Disk Crate"
-	desc = "A disk with loaded instruction and technologies to allow you to permanently coerce citizens into better serving the combine. Simply load into a surgical console to be able to start the surgery. Recent events have caused prices to skyrocket, are you sure this is worth it?"
+	desc = "A disk with loaded instruction and technologies to allow you to permanently coerce prisoners into better serving the combine. Simply load into a surgical console to be able to start the surgery. Recent events have caused prices to skyrocket, are you sure this is worth it?"
 	cost = CARGO_CRATE_VALUE * 25
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/disk/surgery/brainwashing)
@@ -325,12 +325,12 @@
 
 /datum/supply_pack/security/armory/gun_selection
 	name = "Prebuilt Firearms Crate"
-	desc = "Did something extremely bad happen? Do you somehow still have a lot of money to spare? No worries then, this a prebuilt firearm crate containg one MP7, SPAS-12, and a Colt Python, alongside a spare magazine for each. Costs extra for the inconvenience of assembly. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 34
-	contains = list(/obj/item/gun/ballistic/automatic/mp7,
-					/obj/item/ammo_box/magazine/mp7,
-					/obj/item/gun/ballistic/shotgun/spas12,
-					/obj/item/storage/box/lethalshot/halflife,
-					/obj/item/gun/ballistic/revolver/coltpython,
-					/obj/item/ammo_box/colta357)
-	crate_name = "spas-12 gun crate"
+	desc = "Did something extremely bad happen? Do you somehow still have a lot of money to spare? No worries then, this is a prebuilt firearm crate containing one MP7, SPAS-12, and a Colt Python, alongside a spare magazine for each. Costs extra for the convenience of assembly. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 36
+	contains = list(/obj/item/gun/ballistic/automatic/mp7, //5.5 crate value when unbuilt
+					/obj/item/ammo_box/magazine/mp7, //2.5 crate value
+					/obj/item/gun/ballistic/shotgun/spas12, //5.5 crate value when unbuilt
+					/obj/item/storage/box/lethalshot/halflife, //2.5 crate value
+					/obj/item/gun/ballistic/revolver/coltpython, //6 crate value when unbuilt
+					/obj/item/ammo_box/colta357) //2.75 crate value. Everything together is 24.75. 28.75 with modular receivers, +5 for tape, round up to 35, then add one for iron and labor costs
+	crate_name = "prebuilt firearms crate"

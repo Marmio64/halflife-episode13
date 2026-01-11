@@ -21,13 +21,12 @@
 
 /obj/projectile/bullet/c38
 	name = ".38 bullet"
-	damage = 25
+	damage = 27
 	ricochets_max = 2
 	ricochet_chance = 50
 	ricochet_auto_aim_angle = 10
 	ricochet_auto_aim_range = 3
-	wound_bonus = -20
-	bare_wound_bonus = 10
+	wound_bonus = -25
 	embed_type = /datum/embed_data/bullet_c38
 	embed_falloff_tile = -4
 

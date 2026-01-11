@@ -92,7 +92,7 @@
 			return
 		vandalized = TRUE
 		icon_state = "prisonsign_vandalized"
-		SSsociostability.modifystability(-1)
+		SSsociostability.modifystability(-5)
 		can.use_charges()
 		if(can.pre_noise)
 			playsound(src, 'sound/effects/spray.ogg', 5, TRUE, 5)
@@ -282,4 +282,4 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/halflfe_clock, 32)
 
 /obj/structure/sign/halflfe_clock/examine(mob/user)
 	. = ..()
-	. += span_info("You take a look at the time and think on it... [SSdaylight.return_time_of_day_message()].")
+	. += span_info("You take a look at the time and think on it... [SSdaylight.return_time_of_day_message()]")
