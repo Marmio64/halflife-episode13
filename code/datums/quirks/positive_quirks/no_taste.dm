@@ -1,6 +1,6 @@
 /datum/quirk/no_taste //hl13 edit, ageusia is now a minor positive quirk, since most food (rations) taste bad
 	name = "Ageusia"
-	desc = "You can't taste anything! Toxic food will still poison you."
+	desc = "You can't taste anything! Generally useful since most combine served food tends to taste horrible. Toxic food will still poison you."
 	icon = FA_ICON_MEH_BLANK
 	value = 2
 	mob_trait = TRAIT_AGEUSIA

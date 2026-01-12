@@ -238,7 +238,6 @@
 		/obj/item/stack/bulletcasings = list(PAYCHECK_CREW * 0.5, 5),
 		/obj/item/clothing/under/citizen/rebel = list(PAYCHECK_CREW * 4.5, 5),
 		/obj/item/storage/backpack/halflife/satchel = list(PAYCHECK_CREW * 8, 3),
-		/obj/item/clothing/suit/armor/rebel = list(PAYCHECK_CREW * 15, 1),
 		/obj/item/switchblade = list(PAYCHECK_CREW * 5, 2),
 		/obj/item/toy/crayon/spraycan = list(PAYCHECK_CREW, 2),
 		/obj/item/cigarette/halflife = list(PAYCHECK_CREW * 0.75, 10),
@@ -257,8 +256,8 @@
 	)
 
 	initial_wanteds = list(
-		/obj/item/factory_construction/full_container/standard = list(PAYCHECK_CREW, 15, ""),
-		/obj/item/factory_construction/full_container/advanced = list(PAYCHECK_CREW * 2, 15, ""),
+		/obj/item/factory_construction/full_container/standard = list(PAYCHECK_CREW, 5, ""),
+		/obj/item/factory_construction/full_container/advanced = list(PAYCHECK_CREW * 2, 5, ""),
 		/obj/item/halflife/nutrient_bar_wrapping/water = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/food/pierogi_ration = list(PAYCHECK_CREW * 2.5, 10, ""),

@@ -145,6 +145,9 @@
 
 	fused = TRUE
 
+/obj/item/clothing/under/combine/overwatch/slow
+	slowdown = 0.1
+
 /obj/item/clothing/under/combine/overwatch/wallhammer
 	desc = "Full-body suit which includes kevlar weaving to provide extra protection. This one looks tailored for a wallhammer, and is extra resilient."
 	armor_type = /datum/armor/combinesuit_wallhammer

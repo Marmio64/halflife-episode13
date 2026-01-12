@@ -41,9 +41,11 @@
 		if(mask.loc &&ismob(mask.loc))
 			playsound(mask.loc, "hl13/sound/voice/dispatchradio/lostsignalunitscontain.ogg", 50, FALSE)
 
+	/*
 	if(card_to_disable)
 		var/obj/item/card/id/advanced/idcard = card_to_disable
 		idcard.access = null
+	*/
 
 /obj/item/implant/biosig_ert/get_data()
 	. = {"<b>Implant Specifications:</b><BR>

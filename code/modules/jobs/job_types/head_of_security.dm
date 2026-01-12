@@ -56,7 +56,7 @@
 	id_trim = /datum/id_trim/job/head_of_security
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
-	uniform = /obj/item/clothing/under/combine/overwatch
+	uniform = /obj/item/clothing/under/combine/overwatch/slow
 	suit = /obj/item/clothing/suit/armor/overwatch
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch

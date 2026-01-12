@@ -94,7 +94,7 @@
 	icon_screen = "syndishuttle"
 	icon_keyboard = "syndie_key"
 	light_color = COLOR_SOFT_RED
-	possible_destinations = "pirate_away;pirate_home;pirate_custom"
+	possible_destinations = "pirate_away;pirate_away2;pirate_home;pirate_custom"
 
 /obj/machinery/computer/shuttle/pirate/drop_pod
 	possible_destinations = "null"

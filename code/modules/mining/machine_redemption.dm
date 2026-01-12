@@ -24,7 +24,7 @@
 	var/point_upgrade = 1
 	/// Details how many credits each smelted ore is worth
 	var/static/list/ore_values = list(
-		/datum/material/iron = 1,
+		/datum/material/iron = 0,
 		/datum/material/glass = 1,
 		/datum/material/plasma = 3,
 		/datum/material/silver = 4,

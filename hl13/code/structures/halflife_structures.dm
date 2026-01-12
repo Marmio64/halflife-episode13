@@ -717,9 +717,11 @@
 	basetype = /obj/structure/halflife/fence/wire/barb
 
 /obj/structure/halflife/fence/wire/end/east/barb
+	damage_deflection = 21
 	icon_state = "barbfence_end_east"
 
 /obj/structure/halflife/fence/wire/end/west/barb
+	damage_deflection = 21
 	icon_state = "barbfence_end_west"
 
 /obj/structure/halflife/fence/vertical/wire/barb
@@ -727,15 +729,17 @@
 	desc = "A menacing wire fence, topped with rusted and deadly barbed wire."
 	icon_state = null //purely for mapping sanity
 	max_integrity = 900
-	damage_deflection = 20
+	damage_deflection = 21
 	fencepasschance = 70
 	basetype = /obj/structure/halflife/fence/wire/barb
 	cansqueeze = FALSE
 
 /obj/structure/halflife/fence/vertical/wire/east/barb
+	damage_deflection = 21
 	icon_state = "barbfence_east"
 
 /obj/structure/halflife/fence/vertical/wire/west/barb
+	damage_deflection = 21
 	icon_state = "barbfence_west"
 
 /obj/structure/halflife/fence/junction/wire/barb
@@ -749,9 +753,11 @@
 	cansqueeze = FALSE
 
 /obj/structure/halflife/fence/junction/wire/east/barb
+	damage_deflection = 21
 	icon_state = "barbfence_east_T"
 
 /obj/structure/halflife/fence/junction/wire/west/barb
+	damage_deflection = 21
 	icon_state = "barbfence_west_T"
 
 /obj/structure/halflife/fence/corner/wire/barb
@@ -759,7 +765,7 @@
 	desc = "A menacing wire fence, topped with rusted and deadly barbed wire."
 	icon_state = "barbfence_corner"
 	max_integrity = 900
-	damage_deflection = 20
+	damage_deflection = 21
 	fencepasschance = 70
 	basetype = /obj/structure/halflife/fence/wire/barb
 
