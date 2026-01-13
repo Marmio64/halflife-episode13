@@ -245,3 +245,19 @@
 	H.set_species(/datum/species/human/crabwalker)
 	var/datum/action/new_action = new /datum/action/cooldown/mob_cooldown/talk_xen(H.mind || H)
 	new_action.Grant(H)
+
+//// TIER 6 //////////////
+
+/datum/outfit/deployment_loadout/xen/tier6/gonarch
+	name = "Deployment: Gonarch"
+	display_name = "Gonarch (Support)"
+	desc = "You are the final stage of evolution for headcrabs. As a fully grown matriach, you specialize in giving birth to hordes of headcrabs, giving supportive fire through acid blasts, and charging down enemies in the open."
+
+	mob_to_be = /mob/living/simple_animal/hostile/asteroid/elite/gonarch
+
+/datum/outfit/deployment_loadout/xen/tier6/antlion_guardian
+	name = "Deployment: Antlion Guardian"
+	display_name = "Antlion Guardian (Offense)"
+	desc = "Essentially an incredibly beefed up variant of an antlion guard, you have a massive pool of health, high damage, and can even summon antlions just like grubs can. You specialize in spearheading attacks."
+
+	mob_to_be = /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment

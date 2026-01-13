@@ -1,4 +1,5 @@
 GLOBAL_VAR_INIT(deployment_xen_cash, 0)
+GLOBAL_VAR_INIT(xen_boss_spawned, FALSE)
 
 /datum/job/deployment_xen
 	title = JOB_DEPLOYMENT_XEN
@@ -78,6 +79,11 @@ GLOBAL_VAR_INIT(deployment_xen_cash, 0)
 		else
 			if(prob(DEPLOYMENT_TIER5_HIGH_XEN_CHANCE))
 				chosen = /obj/item/hl2/loadout_picker/xen/tier5
+
+	if(DEPLOYMENT_TIER6_XEN <= GLOB.deployment_xen_cash && GLOB.xen_boss_spawned == FALSE)
+		if(prob(50)) //not an guarantee, even if its available
+			chosen = /obj/item/hl2/loadout_picker/xen/tier6
+			GLOB.xen_boss_spawned = TRUE
 
 	if(chosen)
 		var/turf/T = get_turf(H)

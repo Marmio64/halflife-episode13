@@ -109,6 +109,7 @@
 	return PROCESS_KILL
 
 /obj/machinery/deployment_comms_tower/rebel/xen_defense
+	max_integrity = 1750
 	var/rebel_time = 10 MINUTES
 	var/grace_time = 90 SECONDS
 
@@ -142,6 +143,8 @@
 
 	if(capturable)
 		GLOB.deployment_rebels_flag_time_left -= 1 SECONDS
+		if(GLOB.deployment_rebels_flag_time_left <= 2 MINUTES)
+			GLOB.deployment_xen_cash += 1
 
 	if(GLOB.deployment_rebels_flag_time_left <= 0 && GLOB.deployment_win_team != XEN_DEPLOYMENT_FACTION)
 		priority_announce("Reinforcements have arrived, long live the resistance!", "Lambda Priority Alert")
@@ -162,6 +165,8 @@
 	. += span_notice("The rebels need to defend the tower for [(GLOB.deployment_rebels_flag_time_left)/10] more seconds in order to win.")
 
 /obj/machinery/deployment_comms_tower/combine/xen_defense
+	max_integrity = 1750
+
 	var/combine_time = 9 MINUTES
 	var/grace_time = 60 SECONDS
 
@@ -195,6 +200,8 @@
 
 	if(capturable)
 		GLOB.deployment_combine_flag_time_left -= 1 SECONDS
+		if(GLOB.deployment_combine_flag_time_left <= 2 MINUTES)
+			GLOB.deployment_xen_cash += 1
 
 	if(GLOB.deployment_combine_flag_time_left <= 0 && GLOB.deployment_win_team != XEN_DEPLOYMENT_FACTION)
 		priority_announce("Additional delegates deployed. Clamp, Contain, Sterilize.", "Overwatch Priority Alert")

@@ -129,7 +129,12 @@
 		to_chat(human_user, span_notice("[new_loadout.desc]"))
 
 	do_sparks(3, source = src)
+	additional_effects()
 	qdel(src)
+
+//if you want any extra effects that occur after the beacon is used
+/obj/item/hl2/loadout_picker/proc/additional_effects(mob/living/user)
+	return
 
 /obj/item/hl2/loadout_picker/rebel
 	faction_belonging = REBEL_DEPLOYMENT_FACTION
@@ -416,3 +421,32 @@
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
+
+/obj/item/hl2/loadout_picker/xen/tier6
+	current_tier = 6
+
+/obj/item/hl2/loadout_picker/xen/tier6/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/outfit/deployment_loadout/xen/tier6/antlion_guardian,
+			/datum/outfit/deployment_loadout/xen/tier6/gonarch,
+		)
+		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.display_name)] = loadout
+	return loadouts
+
+/obj/item/hl2/loadout_picker/xen/tier6/additional_effects(mob/living/user)
+	for(var/X in GLOB.deployment_rebel_players)
+		var/mob/living/carbon/human/H = X
+		SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+		to_chat(H, "<span class='userdanger'>A terrifying presence has been spotted in the district... Three Tier 5 Loadout spawners have been made available in your team's cash deposit for anyone to upgrade from.</span>")
+	for(var/X in GLOB.deployment_combine_players)
+		var/mob/living/carbon/human/H = X
+		SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+		to_chat(H, "<span class='userdangert big'>A terrifying presence has been spotted in the district... Three Tier 5 Loadout spawners have been made available in your team's cash deposit for anyone to upgrade from.</span>")
+	for(var/X in GLOB.deployment_xen_players)
+		var/mob/living/carbon/human/H = X
+		SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+		to_chat(H, "<span class='greentext big'>A Tier 6 Xenian has blessed us with their presence!</span>")

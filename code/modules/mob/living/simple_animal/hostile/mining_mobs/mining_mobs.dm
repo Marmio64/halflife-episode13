@@ -49,6 +49,8 @@
 
 /mob/living/simple_animal/hostile/asteroid/Aggro()
 	..()
+	if(stat == DEAD)
+		return
 	if(vision_range == aggro_vision_range && icon_aggro)
 		icon_state = icon_aggro
 

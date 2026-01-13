@@ -54,7 +54,7 @@
 		return
 	var/razor_damage = 15
 	if(isanimal_or_basicmob(M)) //these guys dont get tangled up, so instead they just take bonus damage from razor wire
-		razor_damage = 25
+		razor_damage = 40
 	playsound(src, 'hl13/sound/effects/barbed_wire_movement.ogg', 25, 1)
 	var/def_zone = ran_zone()
 	M.apply_damage(razor_damage, BRUTE, def_zone, sharpness = SHARP_EDGED)

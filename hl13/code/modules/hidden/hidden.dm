@@ -227,7 +227,6 @@
 /obj/item/climbing_hook/halflife/hidden
 	name = "climbing hook"
 	desc = "A hook and rope for scaling walls with."
-	uses = 1
 	climb_time = 2 SECONDS
 	item_flags = DROPDEL
 

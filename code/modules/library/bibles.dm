@@ -232,12 +232,11 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	if(HAS_TRAIT(user, TRAIT_CLUMSY) && prob(50))
 		to_chat(user, span_danger("[src] slips out of your hand and hits your head."))
 		user.take_bodypart_damage(10)
-		user.Unconscious(40 SECONDS)
+		user.Unconscious(20 SECONDS)
 		return
 
 	if(!user.mind?.holy_role)
-		to_chat(user, span_danger("The book sizzles in your hands."))
-		user.take_bodypart_damage(burn = 10)
+		to_chat(user, span_boldnotice("You raise the book, and nothing happens."))
 		return
 
 	if(!heal_mode)
@@ -262,7 +261,7 @@ GLOBAL_LIST_INIT(bibleitemstates, list(
 	if(iscarbon(target_mob))
 		var/mob/living/carbon/carbon_target = target_mob
 		if(!istype(carbon_target.head, /obj/item/clothing/head/helmet))
-			carbon_target.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5, 60)
+			carbon_target.adjustOrganLoss(ORGAN_SLOT_BRAIN, 5, 20)
 			carbon_target.balloon_alert(carbon_target, "you feel dumber!")
 	target_mob.visible_message(span_danger("[user] beats [target_mob] over the head with [src]!"), \
 			span_userdanger("[user] beats [target_mob] over the head with [src]!"))

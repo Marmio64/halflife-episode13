@@ -51,9 +51,8 @@
 
 /obj/item/climbing_hook/halflife/makeshift
 	name = "makeshift climbing hook"
-	desc = "A cheap makeshift climbing hook formed out of scrap and cloth. It's unlikely to withstand more than a couple uses."
-	uses = 2
-	climb_time = 4 SECONDS
+	desc = "A cheap makeshift climbing hook formed out of scrap and cloth. You have to take your time when climbing with it in order to avoid breaking it."
+	climb_time = 5 SECONDS
 
 //Comparable to a tire iron as a weapon, though has 2 less weapon defense and 1 less damage in exchange for being small enough to fit in your pocket. Also, can do crowbar stuff too.
 /obj/item/crowbar/halflife_hammer

@@ -1,7 +1,7 @@
 /datum/skill/athletics
 	name = "Athletics"
 	title = "Athlete"
-	desc = "How athletic I am can help me run for longer durations, and do acrobatic tasks quicker."
+	desc = "How athletic I am can help me run for longer durations, do acrobatic tasks quicker, and also increase my strength at high levels."
 	// The skill value modifier effects the max duration that is possible for /datum/status_effect/exercised; The rands modifier determines block probability and crit probability while boxing against boxers
 	modifiers = list(
 		SKILL_VALUE_MODIFIER = list(
@@ -34,6 +34,8 @@
 	. = ..()
 	if(new_level >= SKILL_LEVEL_NOVICE && old_level < SKILL_LEVEL_NOVICE)
 		ADD_TRAIT(mind, TRAIT_EXAMINE_FITNESS, SKILL_TRAIT)
+	if(new_level == SKILL_LEVEL_MASTER)
+		mind.current.change_stat(STATKEY_STR, 1)
 	if(new_level == SKILL_LEVEL_LEGENDARY)
 		mind.current.change_stat(STATKEY_STR, 1)
 
@@ -41,5 +43,7 @@
 	. = ..()
 	if(old_level >= SKILL_LEVEL_NOVICE && new_level < SKILL_LEVEL_NOVICE)
 		REMOVE_TRAIT(mind, TRAIT_EXAMINE_FITNESS, SKILL_TRAIT)
+	if(old_level == SKILL_LEVEL_MASTER)
+		mind.current.change_stat(STATKEY_STR, -1)
 	if(old_level == SKILL_LEVEL_LEGENDARY)
 		mind.current.change_stat(STATKEY_STR, -1)

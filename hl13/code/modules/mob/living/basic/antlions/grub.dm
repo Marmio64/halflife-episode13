@@ -72,7 +72,7 @@
 	antlions = new(src)
 	antlions.Grant(src)
 
-/datum/action/cooldown/spell/conjure/antlions/deployment
+/datum/action/cooldown/spell/conjure/antlions
 	name = "Call upon Antlions"
 	desc = "Calls to Antlions deep in the ground, causing them to surface to protect you for a short while, or until they die."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
@@ -87,6 +87,9 @@
 	summon_amount = 2
 	summon_lifespan = 30 SECONDS
 	summon_radius = 2
+	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound)
+
+/datum/action/cooldown/spell/conjure/antlions/deployment
 	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/zombie_faction)
 
 /mob/living/basic/halflife/grub/deployment/upgraded/Initialize(mapload)

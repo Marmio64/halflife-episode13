@@ -47,7 +47,7 @@
 
 /mob/living/basic/halflife/headcrab/melee_attack(mob/living/carbon/human/target, list/modifiers, ignore_cooldown)
 	. = ..()
-	if (!ishuman(target) || target.stat == CONSCIOUS || target.stat == DEAD)
+	if (!ishuman(target) || target.stat == CONSCIOUS || target.stat == DEAD || !can_zombify)
 		return
 	if(target.deployment_faction == XEN_DEPLOYMENT_FACTION)
 		to_chat(src, span_warning("Their biology does not support zombification."))
@@ -167,6 +167,25 @@
 
 /mob/living/basic/halflife/headcrab/fast/upgraded
 	speed = -0.2
+
+/mob/living/basic/halflife/headcrab/baby
+	name = "Baby Headcrab"
+	desc = "A tiny parasitic headcrab."
+	density = FALSE
+	icon_state = "babycrab"
+	icon_living = "babycrab"
+	icon_dead = "babycrab_dead"
+	maxHealth = 15
+	health = 15
+	melee_damage_lower = 4
+	melee_damage_upper = 6
+	speed = 0.5
+	butcher_results = list()
+	can_zombify = FALSE
+
+/mob/living/basic/halflife/headcrab/baby/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/swarming)
 
 /////////AI STUFF/////////////////////
 

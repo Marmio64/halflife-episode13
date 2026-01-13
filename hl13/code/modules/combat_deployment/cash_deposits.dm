@@ -7,6 +7,8 @@
 	resistance_flags = INDESTRUCTIBLE
 	var/deployment_faction = NO_FACTION
 	var/starting_cash = 0
+	///how many tier 5 beacons it can give out when a xen boss is spawned
+	var/tier5_uses = 3
 
 /obj/machinery/cash_deposit/combine
 	deployment_faction = COMBINE_DEPLOYMENT_FACTION
@@ -118,6 +120,10 @@
 			else if(DEPLOYMENT_TIER2_REBELS <= GLOB.deployment_rebels_cash && H.combat_deployment_loadout_tier < 2)
 				chosen = /obj/item/hl2/loadout_picker/rebel/tier2
 
+			if(GLOB.xen_boss_spawned == TRUE && 0 < tier5_uses && H.combat_deployment_loadout_tier < 5)
+				tier5_uses--
+				chosen = /obj/item/hl2/loadout_picker/rebel/tier5
+
 		else if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
 			if(DEPLOYMENT_TIER4_COMBINE <= GLOB.deployment_combine_cash && H.combat_deployment_loadout_tier < 4)
 				chosen = /obj/item/hl2/loadout_picker/combine/tier4
@@ -125,6 +131,10 @@
 				chosen = /obj/item/hl2/loadout_picker/combine/tier3
 			else if(DEPLOYMENT_TIER2_COMBINE <= GLOB.deployment_combine_cash && H.combat_deployment_loadout_tier < 2)
 				chosen = /obj/item/hl2/loadout_picker/combine/tier2
+
+			if(GLOB.xen_boss_spawned == TRUE && 0 < tier5_uses && H.combat_deployment_loadout_tier < 5)
+				tier5_uses--
+				chosen = /obj/item/hl2/loadout_picker/combine/tier5
 
 		if(isnull(chosen))
 			to_chat(H, span_notice("No loadout upgrades available."))

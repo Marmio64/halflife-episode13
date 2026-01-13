@@ -145,6 +145,37 @@
 	melee_damage_upper = 30
 	guaranteed_butcher_results = list(/obj/item/food/meat/slab/xen = 3, /obj/item/bugbait = 1, /obj/item/lockpick/ingested = 1)
 
+/mob/living/basic/halflife/antlion_guard/guardian
+	name = "Antlion Guardian"
+	desc = "A sickly green glowing antlion guard. Its armor looks near unbreakable, and its head looks like it could crush every bone in your body in one fell swing."
+	icon_state = "guardian"
+	icon_living = "guardian"
+	icon_dead = "guardian_dead"
+	speed = 0.6
+	melee_damage_lower = 40
+	melee_damage_upper = 45
+	melee_attack_cooldown = 2 SECONDS
+	maxHealth = 1500
+	health = 1500
+
+/mob/living/basic/halflife/antlion_guard/guardian/summoner
+	var/datum/action/cooldown/spell/conjure/antlions/antlions
+
+/mob/living/basic/halflife/antlion_guard/guardian/summoner/Initialize(mapload)
+	. = ..()
+	antlions = new(src)
+	antlions.Grant(src)
+
+/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment
+	obj_damage = 40 //dont want to incentivize them just tanking all damage they take and going straight for the tower
+	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
+	var/datum/action/cooldown/spell/conjure/antlions/deployment/antlions
+
+/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/Initialize(mapload)
+	. = ..()
+	antlions = new(src)
+	antlions.Grant(src)
+
 ///Every hit throws people back
 /mob/living/basic/halflife/antlion_guard/melee_attack(atom/target, list/modifiers, ignore_cooldown = FALSE)
 	. = ..()
