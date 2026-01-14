@@ -10,8 +10,8 @@ GLOBAL_LIST_INIT(availablecells, list(
 	"R1" = 2,
 	"R2" = 2,
 	"R3" = 2,
-	"R4" = 2,
-	"R6" = 2, //R5 is vorts
+	"R5" = 2, //R4 is for vorts, not R5, whoops
+	"R6" = 2,
 	"R7" = 2,
 ))
 
