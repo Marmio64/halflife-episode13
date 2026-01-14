@@ -106,6 +106,9 @@ GLOBAL_DATUM_INIT(manifest, /datum/manifest, new)
 	// Attempt to get assignment from ID, otherwise default to mind.
 	var/obj/item/card/id/id_card = person.get_idcard(hand_first = FALSE)
 	var/assignment = id_card?.get_trim_assignment() || person.mind.assigned_role.title
+	var/assigned_name = person.real_name
+	if(id_card.registered_name != person.real_name)
+		assigned_name = id_card.registered_name
 
 	var/mutable_appearance/character_appearance = new(person.appearance)
 	var/person_gender = "Other"
@@ -124,7 +127,7 @@ GLOBAL_DATUM_INIT(manifest, /datum/manifest, new)
 		fingerprint = md5(record_dna.unique_identity),
 		gender = person_gender,
 		initial_rank = assignment,
-		name = person.real_name,
+		name = assigned_name,
 		rank = assignment,
 		species = record_dna.species.name,
 		trim = assignment,
@@ -141,7 +144,7 @@ GLOBAL_DATUM_INIT(manifest, /datum/manifest, new)
 		fingerprint = md5(record_dna.unique_identity),
 		gender = person_gender,
 		initial_rank = assignment,
-		name = person.real_name,
+		name = assigned_name,
 		rank = assignment,
 		species = record_dna.species.name,
 		trim = assignment,
