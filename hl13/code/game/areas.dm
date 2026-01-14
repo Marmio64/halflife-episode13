@@ -606,6 +606,9 @@
 
 	first_time_text = "Commissary"
 
+	ambient_buzz = 'hl13/sound/ambience/town_ambience.ogg'
+	ambient_buzz_vol = 20
+
 /area/halflife/indoors/prison/intake
 	name = "\improper Prison Intake"
 

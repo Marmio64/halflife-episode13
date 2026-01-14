@@ -38,6 +38,16 @@
 	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/pouch/makeshift
+	name = "makeshift pouch"
+	desc = "A crude looking pouch, handcrafted with cloth. Perhaps you could've made something better if you had suitable tools."
+
+/obj/item/storage/belt/pouch/makeshift/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 2
+	atom_storage.max_specific_storage = WEIGHT_CLASS_SMALL
+	atom_storage.silent = TRUE
+
 /obj/item/storage/belt/civilprotection
 	name = "civil protection belt"
 	desc = "Heavy duty belt for containing metrocop standard gear."

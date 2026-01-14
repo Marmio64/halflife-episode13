@@ -26,6 +26,7 @@
 				/obj/item/storage/backpack/satchel/flat,
 				/obj/item/storage/belt/fannypack/black,
 				/obj/item/storage/belt/pouch,
+				/obj/item/book/bible,
 				/obj/item/storage/wallet = 2,
 				/obj/item/storage/halflife/suitcase,
 				/obj/item/lockpick,
@@ -442,3 +443,13 @@
 
 /obj/effect/spawner/random/halflife/random_zombie/five
 	spawn_loot_count = 5
+
+/obj/effect/spawner/random/halflife/pet_spawner
+	name = "pet spawner"
+	spawn_loot_count = 1
+	spawn_loot_chance = 5 //5% chance to get either a chumtoad or grub
+
+	loot = list(
+				/mob/living/basic/halflife/chumtoad = 1,
+				/mob/living/basic/halflife/grub = 1,
+				)
