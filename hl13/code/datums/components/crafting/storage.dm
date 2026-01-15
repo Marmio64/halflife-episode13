@@ -6,6 +6,13 @@
 	category = CAT_CONTAINERS
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR | CRAFTING_BENCH_GENERAL
 
+/datum/crafting_recipe/pouch_makeshift
+	name = "Makeshift Pouch"
+	result = /obj/item/storage/belt/pouch/makeshift
+	time = 6 SECONDS
+	reqs = list(/obj/item/stack/sheet/cloth = 3)
+	category = CAT_CONTAINERS
+
 /datum/crafting_recipe/satchel
 	name = "Satchel"
 	result = /obj/item/storage/backpack/halflife/satchel

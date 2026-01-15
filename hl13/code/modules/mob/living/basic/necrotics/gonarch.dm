@@ -160,7 +160,7 @@
 /obj/projectile/acidspray/gonarch
 	damage = 10
 	speed = 0.5
-	object_damage = 10
+	object_damage = 5 //this adds onto the base damage, so a point blank blast of 9 projectiles can do up to 135 damage to structures
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/proc/shoot_projectile(turf/marker, set_angle, is_teleshot, is_trishot)
 	var/turf/startloc = get_turf(src)
@@ -186,11 +186,6 @@
 	shoot_projectile(target_turf, angle_to_target, FALSE, TRUE)
 	addtimer(CALLBACK(src, PROC_REF(shoot_projectile), target_turf, angle_to_target, FALSE, TRUE), 0.2 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(shoot_projectile), target_turf, angle_to_target, FALSE, TRUE), 0.4 SECONDS)
-	if(health < maxHealth * 0.5)
-		playsound(get_turf(src), 'hl13/sound/creatures/gonarch/spit.ogg', 20, FALSE)
-		addtimer(CALLBACK(src, PROC_REF(shoot_projectile), target_turf, angle_to_target, FALSE, TRUE), 1 SECONDS)
-		addtimer(CALLBACK(src, PROC_REF(shoot_projectile), target_turf, angle_to_target, FALSE, TRUE), 1.2 SECONDS)
-		addtimer(CALLBACK(src, PROC_REF(shoot_projectile), target_turf, angle_to_target, FALSE, TRUE), 1.4 SECONDS)
 
 	charging = FALSE
 	if(stat != DEAD)
