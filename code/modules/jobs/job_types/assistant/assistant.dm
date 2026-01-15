@@ -1,4 +1,19 @@
 GLOBAL_DATUM(colored_assistant, /datum/colored_assistant)
+GLOBAL_LIST_INIT(availablecells, list(
+	"L1" = 2,
+	"L2" = 2,
+	"L3" = 2,
+	"L4" = 2,
+	"L5" = 2,
+	"L6" = 2,
+	"L7" = 2,
+	"R1" = 2,
+	"R2" = 2,
+	"R3" = 2,
+	"R5" = 2, //R4 is for vorts, not R5, whoops
+	"R6" = 2,
+	"R7" = 2,
+))
 
 /*
 Assistant
@@ -54,3 +69,20 @@ Assistant
 
 /datum/outfit/job/assistant/preview
 	name = "Assistant - Preview"
+
+/datum/outfit/job/assistant/post_equip(mob/living/carbon/human/user, visuals_only = FALSE) //hl13 edit, change id to random unused cell + number
+	. = ..()
+
+	var/cell = null
+
+	if(cell == null)
+		if(GLOB.availablecells.len)
+			cell = pick(GLOB.availablecells)
+			GLOB.availablecells -= cell
+		else
+			cell = "NULL" //labor lead or warden should fix this
+
+	if(istype(user.wear_id, /obj/item/card/id))
+		var/obj/item/card/id/ID = user.wear_id
+		ID.registered_name = "CI:[cell]-[rand(111,999)]"
+		ID.update_label()

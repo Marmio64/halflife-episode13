@@ -106,6 +106,9 @@ GLOBAL_DATUM_INIT(manifest, /datum/manifest, new)
 	// Attempt to get assignment from ID, otherwise default to mind.
 	var/obj/item/card/id/id_card = person.get_idcard(hand_first = FALSE)
 	var/assignment = id_card?.get_trim_assignment() || person.mind.assigned_role.title
+	var/assigned_name = null
+	if(id_card.registered_name != person.real_name)
+		assigned_name = "Identified as [id_card.registered_name]."
 
 	var/mutable_appearance/character_appearance = new(person.appearance)
 	var/person_gender = "Other"
@@ -152,6 +155,7 @@ GLOBAL_DATUM_INIT(manifest, /datum/manifest, new)
 		minor_disabilities = person.get_quirk_string(FALSE, CAT_QUIRK_MINOR_DISABILITY, from_scan = TRUE),
 		minor_disabilities_desc = person.get_quirk_string(TRUE, CAT_QUIRK_MINOR_DISABILITY),
 		quirk_notes = person.get_quirk_string(TRUE, CAT_QUIRK_NOTES),
+		security_note = assigned_name
 	)
 
 /// Edits the rank and trim of the found record.
