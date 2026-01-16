@@ -56,6 +56,7 @@
 	new /obj/item/storage/box/emptysandbags(src)
 	new /obj/item/storage/bag/construction(src)
 	new /obj/item/clothing/glasses/welding(src)
+	new /obj/item/storage/belt/utility(src)
 
 /obj/structure/closet/crate/freezer/halflife
 	desc = "A freezer."

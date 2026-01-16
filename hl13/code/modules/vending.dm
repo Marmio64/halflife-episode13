@@ -48,6 +48,7 @@
 					/obj/item/reagent_containers/cup/glass/bottle/beer/light = 10,
 					/obj/item/storage/belt/pouch = 6,
 					/obj/item/storage/pill_bottle/mannitol/braintumor = 5,
+					/obj/item/clothing/glasses/regular = 5,
 					/obj/item/clothing/gloves/fingerless = 3)
 
 	contraband = list(/obj/item/lockpick = 1,
@@ -282,6 +283,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/keyvendor, 32)
 		/obj/item/reagent_containers/cup/soda_cans/halflife/coffee = 6,
 		/obj/item/reagent_containers/cup/soda_cans/breenwater/green = 6,
 		/obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 2,
+		/obj/item/reagent_containers/cup/glass/bottle/beer/light = 10,
 	)
 	refill_canister = /obj/item/vending_refill/food_dispensery
 	default_price = PAYCHECK_CREW
