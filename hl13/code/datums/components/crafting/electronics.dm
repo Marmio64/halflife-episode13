@@ -158,16 +158,6 @@
 	category = CAT_EQUIPMENT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
 
-/datum/crafting_recipe/alyxtool_frame
-	name = "Broken Hacking Multitool Frame"
-	result = /obj/item/machinepiece/multifunctiontool
-	reqs = list(/obj/item/stack/sheet/iron = 3,
-				/obj/item/circuitmaterial/advanced = 2,
-				/obj/item/stack/cable_coil = 10)
-	time = 10 SECONDS
-	category = CAT_EQUIPMENT
-	crafting_interface = CRAFTING_BENCH_ELECTRIC
-
 /datum/crafting_recipe/musicradio
 	name = "Music Radio"
 	result = /obj/machinery/jukebox/radio
@@ -193,6 +183,8 @@
 	category = CAT_ROBOT
 	tool_behaviors = list(TOOL_KNIFE)
 
+/////must be learned items /////////////////////////////
+
 /datum/crafting_recipe/super_destabilizer
 	name = "Super Destabilizer Beacon"
 	result = /obj/item/super_destabilizer_beacon
@@ -202,5 +194,16 @@
 				/obj/item/circuitmaterial = 3)
 	time = 10 SECONDS
 	category = CAT_ROBOT
+	crafting_interface = CRAFTING_BENCH_ELECTRIC
+	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
+
+/datum/crafting_recipe/alyxtool_frame
+	name = "Broken Hacking Multitool Frame"
+	result = /obj/item/machinepiece/multifunctiontool
+	reqs = list(/obj/item/stack/sheet/iron = 3,
+				/obj/item/circuitmaterial/advanced = 1,
+				/obj/item/stack/cable_coil = 5)
+	time = 10 SECONDS
+	category = CAT_EQUIPMENT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
 	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED

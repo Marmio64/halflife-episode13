@@ -12,7 +12,7 @@
 	max_amount = 5
 	resistance_flags = FLAMMABLE
 	grind_results = list(/datum/reagent/cellulose = 5)
-	splint_factor = 0.65
+	splint_factor = 0.6
 	merge_type = /obj/item/stack/sticky_tape
 	var/conferred_embed = /datum/embed_data/sticky_tape
 	///The tape type you get when ripping off a piece of tape.

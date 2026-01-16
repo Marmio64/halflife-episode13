@@ -5,7 +5,7 @@
 	export_types = list(/obj/item/food/meat/slab/xen)
 
 /datum/export/watercanister
-	cost = CARGO_CRATE_VALUE
+	cost = CARGO_CRATE_VALUE * 1.5
 	unit_name = "water canister"
 	export_types = list(/obj/item/water_canister)
 

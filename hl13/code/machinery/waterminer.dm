@@ -1,7 +1,7 @@
 
 /obj/machinery/water_miner
 	name = "water harvester"
-	desc = "Automatically harvests water from below, filters it, and packs it into easily carriable canisters which are often exported by combine cities."
+	desc = "Automatically harvests water from below, filters it, and packs it into easily carriable canisters which are often exported by combine cities. Works more efficiently on fresh and saltwater, rather than sludge and sewage."
 	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "harvester_off"
 	density = TRUE
@@ -9,6 +9,7 @@
 	var/full = FALSE
 	var/mining = FALSE
 	var/water_gather_progress = FALSE
+	var/mining_rate = 1
 
 /obj/machinery/water_miner/examine(mob/user)
 	. = ..()
@@ -41,6 +42,12 @@
 		to_chat(user, span_warning("The harvester needs to be anchored over water to be turned on!"))
 		return
 
+	//the water tile we are mining from
+	var/turf/open/halflife/water/water_underneath = src.loc
+
+	if(water_underneath.toxic || water_underneath.sewer)
+		mining_rate = 0.5
+
 	to_chat(user, span_warning("You start the mining cycle."))
 	playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
 	mining = TRUE
@@ -52,7 +59,7 @@
 	if(!mining)
 		return PROCESS_KILL
 	if(anchored)
-		water_gather_progress++
+		water_gather_progress += mining_rate
 		if(water_gather_progress > 599)
 			water_gather_progress = 0
 			full = TRUE

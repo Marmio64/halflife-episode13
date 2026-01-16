@@ -30,3 +30,13 @@
 	)
 	result = /obj/item/food/nutripaste/small
 	category = CAT_RATION
+
+/datum/crafting_recipe/food/chumtoadstew
+	name = "Chumtoad Stew"
+	reqs = list(
+		/obj/item/food/halflife/nutrient_bar = 1,
+		/datum/reagent/water = 15,
+		/obj/item/food/meat/cutlet/chumtoad = 2,
+	)
+	result = /obj/item/food/chumtoadstew
+	category = CAT_RATION

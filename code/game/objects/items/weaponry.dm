@@ -654,7 +654,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		return
 	RegisterSignal(user, COMSIG_LIVING_LIMBLESS_SLOWDOWN, PROC_REF(handle_slowdown))
 	user.update_usable_leg_status()
-	user.AddElementTrait(TRAIT_WADDLING, REF(src), /datum/element/waddling)
 
 /obj/item/cane/crutch/movement_support_del(mob/living/user)
 	. = ..()
@@ -662,7 +661,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		return
 	UnregisterSignal(user, list(COMSIG_LIVING_LIMBLESS_SLOWDOWN, COMSIG_CARBON_LIMPING))
 	user.update_usable_leg_status()
-	REMOVE_TRAIT(user, TRAIT_WADDLING, REF(src))
 
 /obj/item/cane/crutch/proc/handle_slowdown(mob/living/user, limbless_slowdown, list/slowdown_mods)
 	SIGNAL_HANDLER

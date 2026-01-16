@@ -2,7 +2,7 @@
 	name = "xen flesh"
 	desc = "A slab of alien flesh. May not be entirely safe to eat."
 	icon_state = "xenomeat"
-	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 3)
+	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 4)
 	tastes = list("meat" = 1, "acid" = 1)
 	foodtypes = RAW | MEAT | GROSS | XEN
 	jerky_type = /obj/item/food/sosjerky/healthy/xenian
@@ -11,7 +11,7 @@
 	AddComponent(/datum/component/grillable, /obj/item/food/meat/steak/xen, rand(40 SECONDS, 70 SECONDS), TRUE, TRUE)
 
 /obj/item/food/meat/slab/xen/make_processable()
-	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/meat/rawcutlet/xen, 3, 3 SECONDS, table_required = TRUE, screentip_verb = "Cut")
+	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/meat/rawcutlet/xen, 2, 3 SECONDS, table_required = TRUE, screentip_verb = "Cut")
 
 /obj/item/food/sosjerky/healthy/xenian
 	name = "homemade xen jerky"
@@ -24,9 +24,9 @@
 /obj/item/food/meat/steak/xen
 	name = "xen steak"
 	desc = "Cooked alien flesh. Should be safe to eat, although still unappetizing."
-	food_reagents = list(/datum/reagent/consumable/nutriment = 4)
+	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 4)
 	tastes = list("meat" = 1, "acid" = 1)
-	foodtypes = MEAT | GROSS | XEN
+	foodtypes = MEAT | XEN
 
 /obj/item/food/meat/rawcutlet/xen
 	name = "raw xen cutlet"
@@ -69,3 +69,43 @@
 
 /obj/item/food/meat/slab/halflife/zombie/make_processable()
 	return //no cutlets
+
+/obj/item/food/meat/slab/chumtoad
+	name = "chumtoad flesh"
+	desc = "A slab of chumtoad flesh. Rumors say it imparts strange feelings on consumption."
+	icon_state = "xenomeat"
+	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 4, /datum/reagent/drug/happiness = 6, /datum/reagent/medicine/regen_jelly = 10)
+	tastes = list("meat" = 1, "acid" = 1)
+	foodtypes = RAW | MEAT | GROSS | XEN
+
+/obj/item/food/meat/slab/chumtoad/make_grillable()
+	AddComponent(/datum/component/grillable, /obj/item/food/meat/steak/chumtoad, rand(40 SECONDS, 70 SECONDS), TRUE, TRUE)
+
+/obj/item/food/meat/slab/chumtoad/make_processable()
+	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/meat/rawcutlet/chumtoad, 2, 3 SECONDS, table_required = TRUE, screentip_verb = "Cut")
+
+/obj/item/food/meat/steak/chumtoad
+	name = "chumtoad steak"
+	desc = "A cooked slab of chumtoad flesh. Rumors say it imparts strange feelings on consumption."
+	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 4, /datum/reagent/drug/happiness = 6, /datum/reagent/medicine/regen_jelly = 10)
+	tastes = list("meat" = 1, "acid" = 1)
+	foodtypes = MEAT | XEN
+	crafting_complexity = FOOD_COMPLEXITY_2
+
+/obj/item/food/meat/rawcutlet/chumtoad
+	name = "raw chumtoad cutlet"
+	desc = "A raw cutlet of chumtoad flesh. Rumors say it imparts strange feelings on consumption."
+	tastes = list("meat" = 1, "acid" = 1)
+	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2, /datum/reagent/drug/happiness = 3, /datum/reagent/medicine/regen_jelly = 5)
+	foodtypes = RAW | MEAT | GROSS | XEN
+
+/obj/item/food/meat/rawcutlet/chumtoad/make_grillable()
+	AddComponent(/datum/component/grillable, /obj/item/food/meat/cutlet/chumtoad, rand(35 SECONDS, 50 SECONDS), TRUE, TRUE)
+
+/obj/item/food/meat/cutlet/chumtoad
+	name = "chumtoad cutlet"
+	desc = "A cooked cutlet of chumtoad flesh. Rumors say it imparts strange feelings on consumption."
+	tastes = list("meat" = 1, "acid" = 1)
+	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2, /datum/reagent/drug/happiness = 3, /datum/reagent/medicine/regen_jelly = 5)
+	foodtypes = MEAT | GROSS | XEN
+	crafting_complexity = FOOD_COMPLEXITY_2

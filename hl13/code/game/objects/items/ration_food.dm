@@ -350,3 +350,16 @@
 
 	preserved_food = TRUE
 	crafting_complexity = FOOD_COMPLEXITY_1
+
+/obj/item/food/chumtoadstew
+	name = "chumtoad stew can"
+	desc = "A can filled with bubbling water thickened by crushed up nutriment bar pieces, with chunks of chumtoad flesh inside. It smells... surpisingly good."
+	icon = 'hl13/icons/obj/food.dmi'
+	icon_state = "xenstew"
+	bite_consumption = 5
+	tastes = list("alien flesh" = 3, "still water" = 3)
+	foodtypes = MEAT
+	food_reagents = list(/datum/reagent/consumable/nutriment = 14, /datum/reagent/water = 6, /datum/reagent/drug/happiness = 6, /datum/reagent/medicine/regen_jelly = 10)
+
+	preserved_food = TRUE
+	crafting_complexity = FOOD_COMPLEXITY_3

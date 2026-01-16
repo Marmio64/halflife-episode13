@@ -26,7 +26,7 @@ GLOBAL_LIST_INIT_TYPED(quirk_blacklist, /list/datum/quirk, list(
 	list(/datum/quirk/spartan, /datum/quirk/all_nighter), //hl13 edit
 	list(/datum/quirk/filthborn, /datum/quirk/highborn), //hl13 edit
 	list(/datum/quirk/strong, /datum/quirk/weak), //hl13 edit
-	list(/datum/quirk/intelligent, /datum/quirk/unintelligent), //hl13 edit
+	list(/datum/quirk/intelligent, /datum/quirk/unintelligent, /datum/quirk/brainproblems, /datum/quirk/genius), //hl13 edit
 	list(/datum/quirk/dextrous, /datum/quirk/undextrous, /datum/quirk/clumsy), //hl13 edit
 	list(/datum/quirk/efficientmetabolism, /datum/quirk/inefficientmetabolism), //hl13 edit
 ))

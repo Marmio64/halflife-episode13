@@ -1258,15 +1258,6 @@
 	affected_biotype = MOB_ORGANIC | MOB_MINERAL | MOB_PLANT // no healing ghosts
 	affected_respiration_type = ALL
 
-/datum/reagent/medicine/regen_jelly/expose_mob(mob/living/exposed_mob, reac_volume)
-	. = ..()
-	if(!ishuman(exposed_mob) || (reac_volume < 0.5))
-		return
-
-	var/mob/living/carbon/human/exposed_human = exposed_mob
-	exposed_human.set_facial_haircolor(color, update = FALSE)
-	exposed_human.set_haircolor(color, update = TRUE)
-
 /datum/reagent/medicine/regen_jelly/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
 	var/need_mob_update

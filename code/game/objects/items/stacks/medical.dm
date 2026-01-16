@@ -226,7 +226,7 @@
 	custom_price = PAYCHECK_CREW * 2
 	absorption_rate = 0.125
 	absorption_capacity = 5
-	splint_factor = 0.7
+	splint_factor = 0.6
 	burn_cleanliness_bonus = 0.35
 	merge_type = /obj/item/stack/medical/gauze
 	var/obj/item/bodypart/gauzed_bodypart
@@ -318,7 +318,7 @@
 	icon_state = "gauze_imp"
 	self_delay = 6 SECONDS
 	other_delay = 3 SECONDS
-	splint_factor = 0.85
+	splint_factor = 0.8
 	burn_cleanliness_bonus = 0.7
 	absorption_rate = 0.075
 	absorption_capacity = 4
@@ -590,3 +590,34 @@
 	icon_state = "bandage_makeshift"
 	icon_state_preview = "bandage_makeshift"
 	heal_brute = 15 //HL13 edit
+
+/obj/item/stack/medical/splint
+	name = "splint"
+	desc = "Metal rods wrapped with cloth. Works great for splinting broken bones, but doesn't do anything else."
+	gender = PLURAL
+	singular_name = "splint"
+	icon_state = "splint"
+	self_delay = 8 SECONDS
+	other_delay = 5 SECONDS
+	max_amount = 1
+	amount = 1
+
+/obj/item/stack/medical/gauze
+	name = "medical gauze"
+	desc = "A roll of elastic cloth, perfect for stabilizing all kinds of wounds, from cuts and burns, to broken bones. In a pinch, the cloth can still soak up blood as well."
+	gender = PLURAL
+	singular_name = "medical gauze"
+	icon_state = "gauze"
+	self_delay = 5 SECONDS
+	other_delay = 2 SECONDS
+	max_amount = 12
+	amount = 6
+	grind_results = list(/datum/reagent/cellulose = 2)
+	custom_price = PAYCHECK_CREW * 2
+	absorption_rate = 0.025 //shit at stopping bleeding
+	absorption_capacity = 3
+	burn_cleanliness_bonus = 0.7
+
+	splint_factor = 0.25 //very good long term solution if surgery is not an option.
+	merge_type = /obj/item/stack/medical/splint
+	novariants = TRUE

@@ -55,6 +55,15 @@
 	result = /obj/item/stack/medical/bandage
 	category = CAT_MISC
 
+/datum/crafting_recipe/splint
+	name = "Splint"
+	reqs = list(
+		/obj/item/stack/sheet/cloth = 4,
+		/obj/item/stack/rods = 4,
+	)
+	result = /obj/item/stack/medical/splint
+	category = CAT_MISC
+
 /datum/crafting_recipe/makeshiftweldingtool
 	name = "Makeshift Welding Tool"
 	result = /obj/item/weldingtool/halflife/makeshift/empty

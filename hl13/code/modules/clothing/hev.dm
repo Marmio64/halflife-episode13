@@ -308,19 +308,19 @@
 	armor_type = /datum/armor/hazsuit
 	inhand_icon_state = "bombsuit"
 	hoodtype = /obj/item/clothing/head/hooded/hevhood/hazsuit
-	slowdown = 0.35 //pretty slow (even slower than what IC wore) because you handmade it from scrap, also its not a powered suit.
+	slowdown = 0.25
 
 	powered = FALSE //prevents it from doing the voicelines and healing
 
 /datum/armor/hazsuit
-	melee = 20
-	bullet = 10
-	laser = 10
-	energy = 10
-	bomb = 10
+	melee = 30
+	bullet = 15
+	laser = 15
+	energy = 15
+	bomb = 15
 	bio = 100
-	fire = 75
-	acid = 50
+	fire = 90
+	acid = 90
 	wound = 5
 
 /obj/item/clothing/head/hooded/hevhood/hazsuit

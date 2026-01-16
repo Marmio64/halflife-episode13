@@ -14,7 +14,7 @@
 	outfit = /datum/outfit/job/engineer
 	plasmaman_outfit = /datum/outfit/plasmaman/engineering
 
-	paycheck = PAYCHECK_STANDARD
+	paycheck = PAYCHECK_HIGH
 	paycheck_department = ACCOUNT_ENG
 
 	skills = list(/datum/skill/factorywork = SKILL_EXP_JOURNEYMAN) //HL13 edit, they know how machines work

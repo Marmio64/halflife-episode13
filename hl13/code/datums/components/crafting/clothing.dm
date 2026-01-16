@@ -75,19 +75,6 @@
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
 
-//for goopwalking, with maybe some basic armor.
-/datum/crafting_recipe/makeshift_hazsuit
-	name = "Makeshift Hazard Suit"
-	result = /obj/item/clothing/suit/hooded/hev/makeshift_hazsuit
-	reqs = list(/obj/item/stack/sheet/cloth = 5,
-				/obj/item/stack/sheet/scrap_metal = 14,
-				/obj/item/stack/sticky_tape = 2,
-				/obj/item/stack/sheet/halflife/plastic = 4,
-				/obj/item/stack/sheet/goldingot = 2,)
-	time = 10 SECONDS
-	category = CAT_ARMOR
-	crafting_interface = CRAFTING_BENCH_ARMTAILOR
-
 //pretty bad, but head protection can be hard to find
 /datum/crafting_recipe/handmade_helmet
 	name = "Hand-made helmet"
@@ -214,3 +201,18 @@
 	time = 10 SECONDS
 	category = CAT_CLOTHING
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
+
+///////////// must be learned stuff ////////////////////
+
+//for goopwalking and decent armor. Available only to geniuses
+/datum/crafting_recipe/makeshift_hazsuit
+	name = "Makeshift Hazard Suit"
+	result = /obj/item/clothing/suit/hooded/hev/makeshift_hazsuit
+	reqs = list(/obj/item/stack/sheet/cloth = 5,
+				/obj/item/stack/sheet/scrap_metal = 12,
+				/obj/item/stack/sticky_tape = 2,
+				/obj/item/stack/sheet/halflife/plastic = 4,
+				/obj/item/stack/sheet/goldingot = 1)
+	time = 10 SECONDS
+	category = CAT_ARMOR
+	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED

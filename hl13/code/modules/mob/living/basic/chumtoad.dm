@@ -5,6 +5,7 @@
 	icon_state = "chumtoad"
 	icon_living = "chumtoad"
 	icon_dead = "chumtoad_dead"
+	faction = list(FACTION_NEUTRAL,FACTION_ANTLION) //it seems they have befriended one another?
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST|MOB_AQUATIC
 	verb_say = "ribbits"
 	verb_ask = "ribbits inquisitively"
@@ -27,7 +28,7 @@
 	response_harm_simple = "splat"
 	density = FALSE
 	attack_sound = 'sound/items/weapons/bite.ogg'
-	butcher_results = list(/obj/item/food/meat/slab/xen = 1)
+	butcher_results = list(/obj/item/food/meat/slab/chumtoad = 1)
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	mob_size = MOB_SIZE_TINY
 	gold_core_spawnable = FRIENDLY_SPAWN

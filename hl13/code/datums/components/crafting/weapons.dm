@@ -320,3 +320,16 @@
 	time = 8 SECONDS
 	category = CAT_WEAPON_MELEE
 	crafting_interface = CRAFTING_BENCH_WEAPONS
+
+///////////// must be learned stuff ////////////////////
+
+/datum/crafting_recipe/usp_frame
+	name = "USP Match Frame"
+	result = /obj/item/weaponcrafting/frame/usp
+	reqs = list(/obj/item/stack/sheet/iron = 5,
+				/obj/item/stack/sheet/scrap_parts = 2,
+				/obj/item/stack/sticky_tape = 1)
+	time = 10 SECONDS
+	category = CAT_WEAPON_RANGED
+	crafting_interface = CRAFTING_BENCH_WEAPONS
+	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
