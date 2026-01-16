@@ -41,7 +41,7 @@
 
 /obj/item/machinepiece/multifunctiontool
 	name = "Broken Multifunction Tool"
-	desc = "A broken frame for a multifunction electrical tool. You may be able to craft it into a functioning one."
+	desc = "A broken frame for a multifunction electrical tool. You may be able to craft it into a functioning one at an electrical bench."
 	icon_state = "alyxtool"
 
 /obj/item/woodshaft

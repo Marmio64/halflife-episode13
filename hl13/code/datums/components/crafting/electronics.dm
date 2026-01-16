@@ -205,5 +205,4 @@
 				/obj/item/stack/cable_coil = 5)
 	time = 10 SECONDS
 	category = CAT_EQUIPMENT
-	crafting_interface = CRAFTING_BENCH_ELECTRIC
 	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
