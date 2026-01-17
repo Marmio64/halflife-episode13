@@ -252,7 +252,7 @@
 
 	//If we're a mob we'll try a do_after; non mobs will instead instantly construct the item
 	//hl13 edit start
-	if(ismob(crafter))
+	if(isliving(crafter))
 		var/mob/living/mob = crafter
 		var/crafting_time = ((recipe.time) / (mob.get_stat_level(STATKEY_INT) / 10)) //intelligence changes crafting speed, maxes out at halved crafting speed when at 20 intelligence
 		if(!do_after(crafter, crafting_time, target = crafter))

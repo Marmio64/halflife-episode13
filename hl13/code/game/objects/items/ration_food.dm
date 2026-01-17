@@ -73,7 +73,7 @@
 	desc = "A combine nutrient bar found in rations, consisting of solidified vitamins and nutriments in a waxy bar. This one tastes like moldy water that has been in a plastic bottle for too long."
 	icon_state = "water_bar"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 4,
+		/datum/reagent/consumable/nutriment = 5,
 	)
 	tastes = list("Water" = 2, "Cardboard" = 2, "Plastic" = 1)
 
@@ -83,7 +83,7 @@
 	desc = "A combine nutrient bar found in rations, consisting of solidified vitamins and nutriments in a waxy bar. This one tastes like pig lard."
 	icon_state = "pork_bar"
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 4,
+		/datum/reagent/consumable/nutriment = 5,
 		/datum/reagent/consumable/nutriment/vitamin = 1,
 	)
 	tastes = list("Pork" = 1, "Lard" = 1)
@@ -96,7 +96,7 @@
 	icon_state = "beef_patty"
 	foodtypes = MEAT
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 5,
+		/datum/reagent/consumable/nutriment = 6,
 		/datum/reagent/consumable/nutriment/vitamin = 2,
 	)
 	tastes = list("Beef"=1)
@@ -250,14 +250,14 @@
 	name = "Desiccated Sustenance Dust"
 	color = "#928a86ff"
 	taste_description = "Saw dust"
-	nutriment_factor = 45 // equal to 3 units of nutriment. You can dry scoop this shit, but you'll get less nutrition.
+	nutriment_factor = 60 // equal to 4 units of nutriment. You can dry scoop this shit, but you'll get less nutrition.
 
 /datum/chemical_reaction/sustenance_dust_to_soup
-	results = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/water = 16)
+	results = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/water = 16)
 	required_reagents = list(/datum/reagent/water = 20, /datum/reagent/consumable/halflife/sustenance_dust = 1)
 
 /datum/chemical_reaction/sustenance_dust_to_soup/impure
-	results = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/water/unpurified = 16)
+	results = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/water/unpurified = 16)
 	required_reagents = list(/datum/reagent/water/unpurified = 20, /datum/reagent/consumable/halflife/sustenance_dust = 1)
 
 //trash

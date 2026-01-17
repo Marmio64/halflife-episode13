@@ -158,8 +158,16 @@
 
 /obj/structure/table/halflife/no_smooth/large/metal/desk
 	name = "metal desk"
-	desc = "A solid, wide metal table. Nothing about it stands out in particular."
+	desc = "A solid, wide metal table. Nothing about it stands out in particular. It seems like you could store a few things in its drawers."
 	icon_state = "desk_metal"
+
+/obj/structure/table/halflife/no_smooth/large/metal/desk/Initialize(mapload)
+	. = ..()
+	create_storage(max_slots = 5, max_total_storage = 5, storage_type = /datum/storage/table_storage)
+
+/obj/structure/table/halflife/no_smooth/large/metal/desk/examine(mob/user)
+	. = ..()
+	. += "<span class='notice'>Drag the [src] onto yourself to open its drawers.</span>"
 
 /obj/structure/table/halflife/no_smooth/large/metal/desk/alt
 	name = "metal desk"
@@ -188,8 +196,16 @@
 
 /obj/structure/table/halflife/no_smooth/wood/stand
 	name = "bed stand"
-	desc = "A tall table that is often found beside beds. This one is wood with a basic finish on it. Minimal mold on the inside, impressive!"
+	desc = "A tall table that is often found beside beds. This one is wood with a basic finish on it. Minimal mold on the inside, impressive! Looks to have a small drawer on it for storage."
 	icon_state = "table_wood_stand"
+
+/obj/structure/table/halflife/no_smooth/wood/stand/Initialize(mapload)
+	. = ..()
+	create_storage(max_slots = 3, max_total_storage = 3, storage_type = /datum/storage/table_storage)
+
+/obj/structure/table/halflife/no_smooth/wood/stand/examine(mob/user)
+	. = ..()
+	. += "<span class='notice'>Drag the [src] onto yourself to open its drawers.</span>"
 
 /obj/structure/table/halflife/no_smooth/wood/end
 	name = "console end"
@@ -212,8 +228,16 @@
 
 /obj/structure/table/halflife/no_smooth/large/wood/desk
 	name = "wood desk"
-	desc = "A full size wood desk, used by the pre-war soul lackers of the working world that once was."
+	desc = "A full size wood desk, used by the pre-war soul lackers of the working world that once was. Looks like you could still use its drawers for storage."
 	icon_state = "desk_wood"
+
+/obj/structure/table/halflife/no_smooth/large/wood/desk/Initialize(mapload)
+	. = ..()
+	create_storage(max_slots = 5, max_total_storage = 5, storage_type = /datum/storage/table_storage)
+
+/obj/structure/table/halflife/no_smooth/large/wood/desk/examine(mob/user)
+	. = ..()
+	. += "<span class='notice'>Drag the [src] onto yourself to open its drawers.</span>"
 
 /obj/structure/table/halflife/no_smooth/large/wood/desk/alt
 	name = "wood desk"
@@ -341,3 +365,8 @@
 	desc = "A large bench with a power supply hooked up to it. There's a soldering iron and a few other tools scattered about to assist you in making electronics."
 	icon_state = "tinkerbench"
 	crafting_type = CRAFTING_BENCH_ELECTRIC
+
+/datum/storage/table_storage
+	animated = FALSE
+	insert_on_attack = FALSE
+	do_rustle = FALSE

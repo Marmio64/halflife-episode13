@@ -59,8 +59,9 @@
 				   /obj/item/storage/box/halflife/ration/ration = 5)
 
 	light_mask = "gifts-light-mask"
-	default_price = 12
-	extra_price = 30
+	payment_department = NO_FREEBIES
+	default_price = 6
+	extra_price = 20
 
 /obj/machinery/vending/miningvendor
 	name = "\improper Union Vendor"
@@ -286,8 +287,9 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/keyvendor, 32)
 		/obj/item/reagent_containers/cup/glass/bottle/beer/light = 10,
 	)
 	refill_canister = /obj/item/vending_refill/food_dispensery
-	default_price = PAYCHECK_CREW
-	extra_price = PAYCHECK_COMMAND
+	default_price = PAYCHECK_CREW/2
+	extra_price = PAYCHECK_COMMAND/2
+	payment_department = NO_FREEBIES
 	tiltable = FALSE
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/food_dispensery, 32)

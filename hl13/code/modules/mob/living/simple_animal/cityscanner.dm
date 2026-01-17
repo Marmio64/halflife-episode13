@@ -55,10 +55,10 @@
 		return
 	if(prob(idle_sound_chance))
 		var/chosen_sound = pick(idle_sounds)
-		playsound(src, chosen_sound, 20, FALSE)
+		playsound(src, chosen_sound, 20, FALSE, 5)
 		if(prob(15))
 			chosen_sound = pick(scan_sounds)
-			playsound(src, chosen_sound, 50, FALSE)
+			playsound(src, chosen_sound, 50, FALSE, 5)
 
 /mob/living/silicon/robot/cityscanner/death(gibbed)
 	..()

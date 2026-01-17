@@ -15,11 +15,3 @@
 		if(outfit.l_hand)
 			LAZYADD(outfit.backpack_contents, outfit.l_hand)
 		outfit.l_hand = item_path
-
-/datum/loadout_item/inhand/cane
-	name = "Cane"
-	item_path = /obj/item/cane
-
-/datum/loadout_item/inhand/cane_white
-	name = "White Cane"
-	item_path = /obj/item/cane/white

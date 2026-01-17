@@ -36,4 +36,4 @@
 	zoomed = FALSE
 
 /datum/movespeed_modifier/hl13/peeper
-	multiplicative_slowdown = 1.5
+	multiplicative_slowdown = 1
