@@ -73,14 +73,11 @@ Assistant
 /datum/outfit/job/assistant/post_equip(mob/living/carbon/human/user, visuals_only = FALSE) //hl13 edit, change id to random unused cell + number
 	. = ..()
 
-	var/cell = null
+	var/cell = "NULL"
 
-	if(cell == null)
-		if(GLOB.availablecells.len)
-			cell = pick(GLOB.availablecells)
-			GLOB.availablecells -= cell
-		else
-			cell = "NULL" //labor lead or warden should fix this
+	if(GLOB.availablecells.len > 0)
+		cell = pick(GLOB.availablecells)
+		GLOB.availablecells -= cell
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id
