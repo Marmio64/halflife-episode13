@@ -92,7 +92,6 @@ Assistant
 		if(user.mind)
 			cell = pick(GLOB.availablecells)
 			GLOB.availablecells -= cell
-			test = length(GLOB.availablecells)
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id
