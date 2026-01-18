@@ -1,18 +1,31 @@
 GLOBAL_DATUM(colored_assistant, /datum/colored_assistant)
 GLOBAL_LIST_INIT(availablecells, list(
-	"L1" = 2,
-	"L2" = 2,
-	"L3" = 2,
-	"L4" = 2,
-	"L5" = 2,
-	"L6" = 2,
-	"L7" = 2,
-	"R1" = 2,
-	"R2" = 2,
-	"R3" = 2,
-	"R5" = 2, //R4 is for vorts, not R5, whoops
-	"R6" = 2,
-	"R7" = 2,
+	"L1",
+	"L2",
+	"L3",
+	"L4",
+	"L5",
+	"L6",
+	"L7",
+	"R1",
+	"R2",
+	"R3",
+	"R5", //R4 is for vorts, not R5, whoops
+	"R6",
+	"R7",
+	"L1",
+	"L2",
+	"L3",
+	"L4",
+	"L5",
+	"L6",
+	"L7",
+	"R1",
+	"R2",
+	"R3",
+	"R5", //if i dont do it this way it deletes two at once
+	"R6",
+	"R7",
 ))
 
 /*
@@ -75,9 +88,11 @@ Assistant
 
 	var/cell = "NULL"
 
-	if(GLOB.availablecells.len > 0)
-		cell = pick(GLOB.availablecells)
-		GLOB.availablecells -= cell
+	if(length(GLOB.availablecells) > 0)
+		if(user.mind)
+			cell = pick(GLOB.availablecells)
+			GLOB.availablecells -= cell
+			test = length(GLOB.availablecells)
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id
