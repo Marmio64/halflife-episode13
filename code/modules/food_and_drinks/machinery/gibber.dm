@@ -237,6 +237,12 @@
 	qdel(mob_occupant)
 	addtimer(CALLBACK(src, PROC_REF(make_meat), skin, results, meat_produced, gibtype, diseases), gibtime)
 
+	for(var/mob/living/L in view(src, 5))
+		if(HAS_TRAIT(L, TRAIT_CANNIBAL))
+			L.add_mood_event("gibbing_view", /datum/mood_event/gibbing_view_good)
+		else
+			L.add_mood_event("gibbing_view", /datum/mood_event/gibbing_view_bad)
+
 /obj/machinery/gibber/proc/make_meat(obj/item/stack/sheet/animalhide/skin, list/results, meat_produced, gibtype, list/datum/disease/diseases)
 	playsound(src.loc, 'sound/effects/splat.ogg', 50, TRUE)
 	operating = FALSE

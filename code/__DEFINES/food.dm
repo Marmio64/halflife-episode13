@@ -20,6 +20,7 @@
 #define GORE (1<<19)
 #define STONE (1<<20)
 #define XEN (1<<21) //hl13 edit
+#define HUMAN (1<<22) //hl13 edit
 
 DEFINE_BITFIELD(foodtypes, list(
 	"MEAT" = MEAT,
@@ -44,6 +45,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"GORE" = GORE,
 	"STONE" = STONE,
 	"XEN" = XEN, //hl13 edit
+	"HUMAN" = HUMAN, //hl13 edit
 ))
 
 /// A list of food type names, in order of their flags
@@ -70,6 +72,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"GORE", \
 	"STONE", \
 	"XEN", \
+	"HUMAN", \
 )
 
 /// IC meaning (more or less) for food flags
@@ -96,6 +99,7 @@ DEFINE_BITFIELD(foodtypes, list(
 	"Gore", \
 	"Rocks", \
 	"Xenian food", \
+	"Human flesh", \
 )
 
 #define DRINK_REVOLTING 1

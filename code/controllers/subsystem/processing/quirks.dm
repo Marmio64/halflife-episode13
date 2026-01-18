@@ -21,6 +21,7 @@ GLOBAL_LIST_INIT_TYPED(quirk_blacklist, /list/datum/quirk, list(
 	list(/datum/quirk/poor_aim, /datum/quirk/bighands),
 	list(/datum/quirk/photophobia, /datum/quirk/nyctophobia),
 	list(/datum/quirk/numb, /datum/quirk/selfaware),
+	list(/datum/quirk/numb, /datum/quirk/masochist), //hl13 edit
 	list(/datum/quirk/overweight, /datum/quirk/underweight), //hl13 edit
 	list(/datum/quirk/item_quirk/smuggler, /datum/quirk/item_quirk/suitcase), //hl13 edit
 	list(/datum/quirk/spartan, /datum/quirk/all_nighter), //hl13 edit

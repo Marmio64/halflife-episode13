@@ -58,7 +58,7 @@
 /obj/item/food/meat/slab/human
 	name = "meat"
 	tastes = list("tender meat" = 1)
-	foodtypes = MEAT | RAW | GORE
+	foodtypes = MEAT | RAW | GORE | HUMAN
 	venue_value = FOOD_MEAT_HUMAN
 
 /obj/item/food/meat/slab/human/make_grillable()
@@ -517,7 +517,7 @@
 
 /obj/item/food/meat/steak/plain/human
 	tastes = list("tender meat" = 1)
-	foodtypes = MEAT | GORE
+	foodtypes = MEAT | GORE | HUMAN
 
 ///Make sure the steak has the correct name
 /obj/item/food/meat/steak/plain/human/on_microwave_cooked(datum/source, atom/source_item, cooking_efficiency = 1)
@@ -631,7 +631,7 @@
 
 /obj/item/food/meat/rawcutlet/plain/human
 	tastes = list("tender meat" = 1)
-	foodtypes = MEAT | RAW | GORE
+	foodtypes = MEAT | RAW | GORE | HUMAN
 
 /obj/item/food/meat/rawcutlet/plain/human/make_grillable()
 	AddComponent(/datum/component/grillable, /obj/item/food/meat/cutlet/plain/human, rand(35 SECONDS, 50 SECONDS), TRUE, TRUE)
@@ -740,7 +740,7 @@
 
 /obj/item/food/meat/cutlet/plain/human
 	tastes = list("tender meat" = 1)
-	foodtypes = MEAT | GORE
+	foodtypes = MEAT | GORE | HUMAN
 
 /obj/item/food/meat/cutlet/plain/human/on_microwave_cooked(datum/source, atom/source_item, cooking_efficiency)
 	. = ..()

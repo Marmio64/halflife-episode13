@@ -5,12 +5,12 @@
 	// The skill value modifier effects the max duration that is possible for /datum/status_effect/exercised; The rands modifier determines block probability and crit probability while boxing against boxers
 	modifiers = list(
 		SKILL_VALUE_MODIFIER = list(
-			1 MINUTES,
 			1.5 MINUTES,
 			2 MINUTES,
 			2.5 MINUTES,
 			3 MINUTES,
 			3.5 MINUTES,
+			4 MINUTES,
 			5 MINUTES
 		),
 		SKILL_RANDS_MODIFIER = list(

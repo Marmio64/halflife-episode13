@@ -298,7 +298,10 @@
 				else
 					to_chat(user, span_notice("With a lot of effort, you manage to finally get the cover off."))
 					if(prob(30))
-						to_chat(user, span_userdanger("MY ARM! THE PAIN!"))
+						if(!HAS_TRAIT(src, TRAIT_MASOCHIST))
+							to_chat(user, span_userdanger("MY ARM! THE PAIN!"))
+						else
+							to_chat(user, span_userdanger("Sweet pain rushes over me as my arm is crushed!"))
 						arm.force_wound_upwards(/datum/wound/blunt/bone/moderate)
 						arm.receive_damage(10)
 		else

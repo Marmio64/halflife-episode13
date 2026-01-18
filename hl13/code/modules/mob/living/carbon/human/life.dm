@@ -27,6 +27,8 @@
 						adjust_confusion(10 SECONDS)
 						adjust_dizzy(4 SECONDS)
 						var/list/usedp = list("F-FUCK, IT HURTS SO BAD!", "I CANT TAKE THIS PAIN MUCH LONGER!", "J-JUST KILL ME ALREADY!", "I N-NEED TO NUMB THIS PAIN!", "THE PAIN IS UNBEARABLE!")
+						if(HAS_TRAIT(src, TRAIT_MASOCHIST))
+							usedp = list("THE PAIN, I LOVE AND HATE IT!!", "PAIN IS A CRUEL MASTER!", "HOW MUCH MORE CAN I TAKE? HAHAHAHA!", "CRIMSON FLOODS MY VISION!", "THE PAIN SHALL GO ON!")
 						to_chat(src, span_userdanger("[pick(usedp)]"))
 						if(painpercent >= 130)
 							Paralyze(painpercent/3) //min amount is 130, so a third of that is a little over 4 seconds. (This goes in deciseconds)
@@ -37,7 +39,8 @@
 							flash_fullscreen("redflash2")
 							if(prob(25))
 								var/list/usedp = list("I'm in a lot of pain right now...", "I need something to dull the pain...", "The pain is incessant...", "When will the pain end?", "I can't take this pain for much longer...")
-								to_chat(src, span_warning("[pick(usedp)]"))
+								if(!HAS_TRAIT(src, TRAIT_MASOCHIST))
+									to_chat(src, span_warning("[pick(usedp)]"))
 				else
 					if(painpercent >= 60)
 						if(prob(probby/3))
@@ -46,12 +49,19 @@
 							flash_fullscreen("redflash2")
 							if(prob(25))
 								var/list/usedp = list("I'm in a lot of pain right now...", "I need something to dull the pain...", "The pain is incessant...", "When will the pain end?", "I can't take this pain for much longer...")
-								to_chat(src, span_warning("[pick(usedp)]"))
+								if(!HAS_TRAIT(src, TRAIT_MASOCHIST))
+									to_chat(src, span_warning("[pick(usedp)]"))
 
 		if(painpercent >= 100)
-			add_mood_event("pain", /datum/mood_event/maxpain)
+			if(HAS_TRAIT(src, TRAIT_MASOCHIST))
+				add_mood_event("pain", /datum/mood_event/maxpain_maso)
+			else
+				add_mood_event("pain", /datum/mood_event/maxpain)
 		else if(painpercent >= 60)
-			add_mood_event("pain", /datum/mood_event/seriouspain)
+			if(HAS_TRAIT(src, TRAIT_MASOCHIST))
+				add_mood_event("pain", /datum/mood_event/seriouspain_maso)
+			else
+				add_mood_event("pain", /datum/mood_event/seriouspain)
 		else
 			clear_mood_event("pain")
 

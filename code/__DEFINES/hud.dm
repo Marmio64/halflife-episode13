@@ -65,6 +65,7 @@
 #define ui_fixeye "EAST-6:22,SOUTH:5" //HL13 EDIT
 #define ui_crafting "EAST-5:22,SOUTH:5" //HL13 EDIT
 #define ui_jump "EAST-5:22,SOUTH+1:7" //HL13 EDIT
+#define ui_stats "EAST-2:26,SOUTH+1:7"
 #define ui_building "EAST-4:22,SOUTH:21"
 #define ui_language_menu "EAST-4:6,SOUTH:21"
 #define ui_navigate_menu "EAST-4:22,SOUTH:5"

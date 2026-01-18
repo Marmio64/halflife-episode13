@@ -14,7 +14,7 @@
 	melee_damage_lower = 18
 	melee_damage_upper = 24
 	sharpness = SHARP_EDGED
-	wound_bonus = -15
+	wound_bonus = -20
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "claw"
@@ -90,7 +90,7 @@
 		play_dead.Grant(src)
 
 /mob/living/basic/halflife/zombie/deployment
-	speed = 1.5
+	speed = 1.4
 	melee_attack_cooldown = 1.75 SECONDS
 
 /mob/living/basic/halflife/zombie/zombine
@@ -202,7 +202,7 @@
 	speed = 2.75
 	melee_damage_lower = 21
 	melee_damage_upper = 26
-	obj_damage = 18
+	obj_damage = 20
 	armour_penetration = 15
 	maxHealth = 120
 	health = 120

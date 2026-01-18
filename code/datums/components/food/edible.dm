@@ -232,6 +232,9 @@ Behavior that's still missing from this component that original food items had t
 	if(foodtypes & RAW)
 		examine_list += span_warning("This raw food may harbor pathogens.")
 
+	if(foodtypes & HUMAN)
+		examine_list += span_warning("Is this made of people...?")
+
 	var/quality = get_perceived_food_quality(user)
 	if(quality > 0)
 		var/quality_label = GLOB.food_quality_description[quality]

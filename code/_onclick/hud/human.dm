@@ -72,6 +72,10 @@
 	using.icon = ui_style
 	static_inventory += using
 
+	using = new /atom/movable/screen/statmenu(null, src) //HL13 EDIT
+	using.icon = ui_style
+	static_inventory += using
+
 	using = new /atom/movable/screen/jump(null, src) //HL13 EDIT
 	using.icon = ui_style
 	static_inventory += using

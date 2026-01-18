@@ -166,6 +166,8 @@
 	zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed/fast
 
 /mob/living/basic/halflife/headcrab/fast/upgraded
+	melee_damage_lower = 8
+	melee_damage_upper = 13
 	speed = -0.2
 
 /mob/living/basic/halflife/headcrab/baby
