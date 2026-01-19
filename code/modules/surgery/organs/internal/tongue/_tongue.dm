@@ -38,7 +38,7 @@
 	/// Foodtypes this tongue likes
 	var/liked_foodtypes = JUNKFOOD | FRIED //human tastes are default
 	/// Foodtypes this tongue dislikes
-	var/disliked_foodtypes = GROSS | RAW | CLOTH | BUGS | GORE //human tastes are default
+	var/disliked_foodtypes = GROSS | RAW | CLOTH | BUGS | GORE | HUMAN //human tastes are default
 	/// hl13 edit, foodtypes this tongue kind of dislikes
 	var/unpleasant_foodtypes = XEN
 	/// Foodtypes this tongue HATES

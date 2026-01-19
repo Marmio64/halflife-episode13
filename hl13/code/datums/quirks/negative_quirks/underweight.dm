@@ -8,7 +8,7 @@
 /datum/quirk/underweight/add()
 	if(iscarbon (quirk_holder))
 		var/mob/living/carbon/human/human = quirk_holder
-		human.set_nutrition(NUTRITION_LEVEL_DYING + 50)
+		human.set_nutrition(NUTRITION_LEVEL_STARVING)
 
 /datum/quirk/underweight/remove()
 	if(iscarbon(quirk_holder))

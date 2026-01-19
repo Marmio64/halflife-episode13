@@ -9,6 +9,12 @@
 	spawner_job_path = /datum/job/bunkeroperator
 	outfit = /datum/outfit/bunkeroperator
 
+/obj/effect/mob_spawn/ghost_role/human/bunkeroperator/Initialize(mapload)
+	. = ..()
+	if(prob(50)) //only has a 50% chance of existing, otherwise it'll just be a NPC
+		new /mob/living/basic/trooper/rebel/mp7(get_turf(src))
+		return INITIALIZE_HINT_QDEL
+
 /obj/effect/mob_spawn/ghost_role/cityscanner
 	name = "dormant city scanner"
 	desc = "A dormant city scanner bot. You'll have to wait for an available Overwatch AI subsystem to take control of it."

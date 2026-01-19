@@ -601,22 +601,8 @@
 	other_delay = 5 SECONDS
 	max_amount = 1
 	amount = 1
-
-/obj/item/stack/medical/gauze
-	name = "medical gauze"
-	desc = "A roll of elastic cloth, perfect for stabilizing all kinds of wounds, from cuts and burns, to broken bones. In a pinch, the cloth can still soak up blood as well."
-	gender = PLURAL
-	singular_name = "medical gauze"
-	icon_state = "gauze"
-	self_delay = 5 SECONDS
-	other_delay = 2 SECONDS
-	max_amount = 12
-	amount = 6
-	grind_results = list(/datum/reagent/cellulose = 2)
-	custom_price = PAYCHECK_CREW * 2
 	absorption_rate = 0.025 //shit at stopping bleeding
 	absorption_capacity = 3
-	burn_cleanliness_bonus = 0.7
 
 	splint_factor = 0.25 //very good long term solution if surgery is not an option.
 	merge_type = /obj/item/stack/medical/splint

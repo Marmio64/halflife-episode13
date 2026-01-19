@@ -158,6 +158,17 @@
 		var/mob/living/L = usr
 		L.mob_sleep()
 
+/atom/movable/screen/statmenu //HL13 EDIT
+	name = "stat menu"
+	icon = 'icons/hud/screen_midnight.dmi'
+	icon_state = "stats"
+	screen_loc = ui_stats
+
+/atom/movable/screen/statmenu/Click()
+	if(isliving(usr))
+		var/mob/living/L = usr
+		L.check_stats()
+
 #define JUMP_DELAY 30
 #define MAX_JUMP_DISTANCE 3
 

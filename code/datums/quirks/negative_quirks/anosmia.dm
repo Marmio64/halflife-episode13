@@ -1,3 +1,4 @@
+/*
 /datum/quirk/item_quirk/anosmia
 	name = "Anosmia"
 	desc = "For some reason, you can't smell anything."
@@ -7,3 +8,4 @@
 	gain_text = span_notice("You find yourself unable to smell anything!")
 	lose_text = span_danger("Suddenly, you can smell again!")
 	medical_record_text = "Patient has lost their sensation of smell."
+*/

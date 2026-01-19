@@ -13,8 +13,10 @@
 		return
 	tongue.liked_foodtypes |= GORE
 	tongue.liked_foodtypes |= RAW
+	tongue.liked_foodtypes |= HUMAN
 	tongue.disliked_foodtypes &= ~GORE
 	tongue.disliked_foodtypes &= ~RAW
+	tongue.disliked_foodtypes &= ~HUMAN
 
 /datum/quirk/cannibal/remove()
 	var/obj/item/organ/tongue/tongue = quirk_holder.get_organ_slot(ORGAN_SLOT_TONGUE)
@@ -22,5 +24,7 @@
 		return
 	tongue.disliked_foodtypes |= ~GORE
 	tongue.disliked_foodtypes |= ~RAW
+	tongue.disliked_foodtypes |= ~HUMAN
 	tongue.liked_foodtypes &= GORE
 	tongue.liked_foodtypes &= RAW
+	tongue.liked_foodtypes &= HUMAN

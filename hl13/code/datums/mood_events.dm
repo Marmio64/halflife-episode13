@@ -42,8 +42,8 @@
 	mood_change = -3
 
 /datum/mood_event/sleepy/small
-	description = "I'm a bit tired."
-	mood_change = -4
+	description = "I'm getting a bit tired."
+	mood_change = -2
 
 /datum/mood_event/energized
 	description = "I don't feel a bit tired, and have energy and focus."
@@ -60,8 +60,16 @@
 	mood_change = -6
 
 /datum/mood_event/maxpain
-	description = "AGH, FUCK! THE PAIN HURTS SO MUCH!!."
+	description = "AGH, FUCK! THE PAIN HURTS SO MUCH!!"
 	mood_change = -12
+
+/datum/mood_event/seriouspain_maso
+	description = "The pain torments me, but yet I love it..."
+	mood_change = 6
+
+/datum/mood_event/maxpain_maso
+	description = "THE PAIN IS NEAR UNBEARABLE, AND YET I NEED MORE OF IT!"
+	mood_change = 12
 
 //hygiene
 
@@ -119,5 +127,15 @@
 
 /datum/mood_event/painful_eat
 	description = "Eating food hurts my teeth so much! Drinking something instead would be much more pleasent..."
-	mood_change = -8
+	mood_change = -10
 	timeout = 2 MINUTES
+
+/datum/mood_event/gibbing_view_bad
+	description = "I just saw someone get ground up in a meat grinder. We've hit rock bottom..."
+	mood_change = -5
+	timeout = 3 MINUTES
+
+/datum/mood_event/gibbing_view_good
+	description = "I saw someone get ground up a in a meat grinder. I cannot wait to taste their flesh!"
+	mood_change = 3
+	timeout = 3 MINUTES

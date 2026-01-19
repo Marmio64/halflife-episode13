@@ -44,11 +44,11 @@
 	name = "Headcrab Venom"
 	description = "A toxic venom produced by poison headcrabs."
 	color = "#e9490f" // rgb: 207, 54, 0
-	toxpwr = 0.25
+	toxpwr = 0.5
 	metabolization_rate = REAGENTS_METABOLISM * 0.5
 	liver_damage_multiplier = 0.25
 
 /datum/reagent/toxin/headcrab_venom/deadly
 	name = "Deadly Headcrab Venom"
-	toxpwr = 1
+	toxpwr = 1.25
 	liver_damage_multiplier = 0.1

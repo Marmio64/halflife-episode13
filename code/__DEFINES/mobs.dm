@@ -319,7 +319,7 @@
 #define HYGIENE_FACTOR 0.1
 
 //Exhaustion levels for humans
-#define TIREDNESS_MAXIMUM_THRESHOLD 900 //~100 second grace period till movement slowdown sets in
+#define TIREDNESS_MAXIMUM_THRESHOLD 925 //~150 second grace period till movement slowdown sets in
 #define TIREDNESS_SLEEPY_THRESHOLD 850 //sleepy about every 28 minutes
 #define TIREDNESS_TIRED_THRESHOLD 700
 #define TIREDNESS_CLEAR_THRESHOLD 450
