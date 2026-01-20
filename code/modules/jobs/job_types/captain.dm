@@ -58,7 +58,7 @@
 	cmode_music = 'hl13/sound/music/combat/branescan.ogg'
 
 /datum/job/captain/get_captaincy_announcement(mob/living/captain)
-	return "Warden [captain.real_name] will be managing this district."
+	return "Warden [captain.real_name] will be managing this correctional facility."
 
 /datum/job/captain/get_radio_information()
 	. = ..()

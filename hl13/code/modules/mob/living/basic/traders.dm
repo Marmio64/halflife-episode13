@@ -510,15 +510,18 @@
 /datum/trader_data/halflife/blackmarket
 	shop_spot_type = /obj/structure/chair/halflife/overlaypickup/plastic
 	sign_type = /obj/structure/halflife/sign/shop
-	sociostability_loss = -1
+	sociostability_loss = -2
 
 	initial_products = list(
 		/obj/item/ammo_box/magazine/makeshift9mm = list(PAYCHECK_CREW * 2, 5),
 		/obj/item/ammo_box/magazine/usp9mm = list(PAYCHECK_CREW * 4, 5),
+		/obj/item/ammo_box/magazine/mp7 = list(PAYCHECK_CREW * 4, 5),
+		/obj/item/ammo_box/colta357 = list(PAYCHECK_CREW * 4, 5),
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = list(PAYCHECK_CREW * 4.5, 5),
 		/obj/item/gun/ballistic/automatic/pistol/usp = list(PAYCHECK_CREW * 9, 2),
 		/obj/item/gun/ballistic/rifle/boltaction/mosin_nagant = list(PAYCHECK_CREW * 11, 1),
-		/obj/item/gun/ballistic/automatic/mp7 = list(PAYCHECK_CREW * 14, 1),
+		/obj/item/gun/ballistic/automatic/mp7 = list(PAYCHECK_CREW * 13, 1),
+		/obj/item/gun/ballistic/revolver/coltpython = list(PAYCHECK_CREW * 14, 1),
 		/obj/item/gun/ballistic/rifle/rebarxbow = list(PAYCHECK_CREW * 7.5, 3),
 		/obj/item/clothing/suit/armor/civilprotection = list(PAYCHECK_CREW * 5, 3),
 		/obj/item/clothing/head/helmet/halflife/military/weak/crafted = list(PAYCHECK_CREW * 2.5, 5),
@@ -527,7 +530,7 @@
 		/obj/item/weaponcrafting/receiver = list(PAYCHECK_CREW * 2.5, 5),
 		/obj/item/stack/bulletcasings = list(PAYCHECK_CREW * 0.5, 5),
 		/obj/item/clothing/under/citizen/rebel = list(PAYCHECK_CREW * 4, 5),
-		/obj/item/clothing/suit/armor/rebel = list(PAYCHECK_CREW * 12, 1),
+		/obj/item/clothing/suit/armor/rebel = list(PAYCHECK_CREW * 10, 1),
 		/obj/item/switchblade = list(PAYCHECK_CREW * 4, 2),
 		/obj/item/clothing/mask/gas/hl2/military = list(PAYCHECK_CREW * 3, 3),
 		/obj/item/stack/kevlar = list(PAYCHECK_CREW, 5),
@@ -653,13 +656,13 @@
 		/obj/item/lighter = list(PAYCHECK_CREW * 0.75, 3),
 		/obj/item/food/canned/halflife/beans = list(PAYCHECK_CREW * 2, 3),
 		/obj/item/reagent_containers/pill/antitox = list(PAYCHECK_CREW * 1.25, 3),
-		/obj/item/machinepiece/multifunctiontool = list(PAYCHECK_CREW * 4.5, 3),
+		/obj/item/machinepiece/multifunctiontool = list(PAYCHECK_CREW * 4, 3),
 		/obj/item/halflife/antenna = list(PAYCHECK_CREW * 5, 3),
 		/obj/item/crowbar/large = list(PAYCHECK_CREW * 3.5, 1),
 		/obj/item/weldingtool/halflife = list(PAYCHECK_CREW * 1.25, 2),
 		/obj/item/wrench/halflife = list(PAYCHECK_CREW * 1.25, 2),
 		/obj/item/screwdriver/halflife = list(PAYCHECK_CREW * 1.25, 2),
-		/obj/item/fuel_cell/full = list(PAYCHECK_CREW * 4, 2),
+		//obj/item/fuel_cell/full = list(PAYCHECK_CREW * 4, 2),
 	)
 
 	initial_wanteds = list(

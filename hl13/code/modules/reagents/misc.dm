@@ -95,3 +95,16 @@
 
 /datum/movespeed_modifier/reagent/slowing_compound
 	multiplicative_slowdown = 0.35
+
+/datum/reagent/consumable/ethanol/paper_alcohol
+	name = "Paper Alcohol"
+	description = "A rather strong and equally as gross alcoholic beverage formed from enzymes breaking down and fermenting paper pulp."
+	color = "#664300"
+	boozepwr = 50
+	taste_description = "rancid paper and ethanol"
+	ph = 4
+	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
+
+/datum/reagent/consumable/ethanol/paper_alcohol/on_mob_life(mob/living/carbon/drinker, seconds_per_tick, times_fired)
+	. = ..()
+	drinker.adjust_disgust(5 * REM * seconds_per_tick)

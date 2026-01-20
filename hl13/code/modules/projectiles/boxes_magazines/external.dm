@@ -24,10 +24,10 @@
 
 /obj/item/ammo_box/magazine/makeshift9mm
 	name = "makeshift pistol magazine (9mm)"
-	desc = "A 8-round 9mm magazine made for some sort of makeshift pistol."
+	desc = "A 10-round 9mm magazine made for some sort of makeshift pistol."
 	ammo_type = /obj/item/ammo_casing/c9mm/usp/makeshift
 	caliber = CALIBER_9MM
-	max_ammo = 8
+	max_ammo = 10
 	icon_state = "45"
 	base_icon_state = "45"
 	icon = 'hl13/icons/obj/guns/ammo.dmi'

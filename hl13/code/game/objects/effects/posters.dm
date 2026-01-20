@@ -60,3 +60,15 @@
 	icon_state = ""
 	never_random = TRUE
 	random_basetype = /obj/structure/sign/poster/halflife/combine
+
+/obj/item/poster/halflife/rebel
+	name = "random rebel poster"
+	poster_type = /obj/structure/sign/poster/halflife/rebel/random
+	icon_state = "rolled_traitor"
+	socio_modify = -5 //-5 sociostability for being put up
+
+/obj/structure/sign/poster/halflife/rebel/random
+	name = "random rebel poster"
+	icon_state = ""
+	never_random = TRUE
+	random_basetype = /obj/structure/sign/poster/halflife/rebel
