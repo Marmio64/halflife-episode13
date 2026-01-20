@@ -148,7 +148,6 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/gps = 12,
 		/obj/item/flashlight/flare = 12,
 		/obj/item/ammo_box/magazine/usp9mm/rubber = 12,
-		/obj/item/ammo_box/magazine/usp9mm = 12,
 		/obj/item/ammo_box/colta357 = 2,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 12,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 12,

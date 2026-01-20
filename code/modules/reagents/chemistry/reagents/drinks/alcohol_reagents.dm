@@ -5,7 +5,7 @@
 	name = "Ethanol"
 	description = "A well-known alcohol with a variety of applications."
 	color = "#404030" // rgb: 64, 64, 48
-	nutriment_factor = 0
+	nutriment_factor = 1 //ethanol has caloric value
 	taste_description = "alcohol"
 	metabolization_rate = 0.5 * REAGENTS_METABOLISM
 	creation_purity = 1 // impure base reagents are a big no-no
@@ -122,7 +122,7 @@
 	name = "Beer"
 	description = "An alcoholic beverage brewed since ancient times on Old Earth. Still popular today."
 	color = "#D7BC31" // rgb: 215, 188, 49
-	nutriment_factor = 1
+	nutriment_factor = 2
 	boozepwr = 25
 	taste_description = "mild carbonated malt"
 	ph = 4
@@ -138,6 +138,7 @@
 	name = "Light Beer"
 	description = "An alcoholic beverage brewed since ancient times on Old Earth. This variety has reduced calorie and alcohol content."
 	boozepwr = 5 //Space Europeans hate it
+	nutriment_factor = 1
 	taste_description = "dish water"
 	ph = 5
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED

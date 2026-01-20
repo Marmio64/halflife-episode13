@@ -35,6 +35,7 @@
 	. = ..()
 	var/ration_quality = 3 //1 is terrible, 2 is lowgrade, 3 is standard, 4 is better/production grade, 5 is loyalty grade, 6 is best grade
 	var/vortigaunt = FALSE //are they a vortigaunt role?
+	var/loyalist_bonus = FALSE //were they granted a ration bonus from being a loyalist?
 
 	if(busy)
 		say("Machine is currently in use.")
@@ -99,12 +100,19 @@
 		if(R.wanted_status == WANTED_PAROLE) //Loyalists are given loyalist grade rations. Any job that already has this grade is of course already a loyalist.
 			if(ration_quality < 5)
 				ration_quality = 5
+				loyalist_bonus = TRUE
 		if(R.wanted_status == WANTED_SUSPECT) //Suspected people are given a worse grade of rations
 			ration_quality--
 	if(account?.account_job.title == "Vortigaunt Slave") //Shitty ration bonus handled in job datum, this just lets the ration vendor knows they're a vort
 		vortigaunt = TRUE
 	if(account?.account_job.title == "Refugee") //Refugees don't get rations, of course
 		say("Warning, your civil status is in question by local protection teams. Please apply.")
+		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+		flick(icon_state_deny,src)
+		busy = FALSE
+		return
+	if(account?.account_job.title == "Overwatch Soldier") //they dont need to eat or drink
+		say("External sustenance unnessecary for your position.")
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		flick(icon_state_deny,src)
 		busy = FALSE
@@ -128,16 +136,19 @@
 
 	say("Ration reward determined. Please wait for ration to be dispensed.")
 
-	addtimer(CALLBACK(src, PROC_REF(dispense), ration_quality, vortigaunt), 4 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(dispense), ration_quality, vortigaunt, loyalist_bonus), 4 SECONDS)
 
 	return
 
-/obj/machinery/ration_vendor/proc/dispense(quality, vortigaunt)
+/obj/machinery/ration_vendor/proc/dispense(quality, vortigaunt, loyalist_bonus)
 	playsound(src, 'hl13/sound/machines/combine_dispense.ogg', 50, TRUE, extrarange = -3)
 
 	busy = FALSE
 
 	SSsociostability.modifystability(1) //Compliance brings stability.
+
+	if(loyalist_bonus)
+		SSsociostability.modifystability(2) //Additional sociostability from marked loyalists.
 
 	rations_stored--
 	rations_dispensed++

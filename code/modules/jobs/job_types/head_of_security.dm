@@ -34,7 +34,7 @@
 
 	family_heirlooms = list(/obj/item/book/manual/wiki/security_space_law)
 	rpg_title = "Guard Leader"
-	job_flags = STATION_JOB_FLAGS | HEAD_OF_STAFF_JOB_FLAGS
+	job_flags = (STATION_JOB_FLAGS|HEAD_OF_STAFF_JOB_FLAGS)&~JOB_ASSIGN_QUIRKS
 
 	human_authority = JOB_AUTHORITY_HUMANS_ONLY
 
@@ -84,6 +84,8 @@
 	H.update_body()
 	ADD_TRAIT(H, TRAIT_NOHUNGER, OUTFIT_TRAIT) //OTA dont need to eat or drink
 	ADD_TRAIT(H, TRAIT_NOSLEEP, OUTFIT_TRAIT) //OTA dont need to sleep
+
+	H.mob_mood?.mood_modifier = 0.5
 
 	H.change_stat(STATKEY_DEX, 2)
 	H.change_stat(STATKEY_STR, 5)

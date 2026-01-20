@@ -75,7 +75,15 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sink, (-14))
 		return
 	var/selected_area = user.parse_zone_with_bodypart(user.zone_selected)
 	var/washing_face = 0
-	if(selected_area in list(BODY_ZONE_HEAD, BODY_ZONE_PRECISE_MOUTH, BODY_ZONE_PRECISE_EYES))
+	if(selected_area in list(BODY_ZONE_PRECISE_MOUTH))
+		if(!user.is_mouth_covered())
+			reagents.trans_to(user, 5, transferred_by = user, methods = INGEST)
+			reagents.remove_all(5)
+			playsound(user.loc,'hl13/sound/items/drink.ogg', rand(10,50), TRUE)
+			user.visible_message(span_notice("[user] takes a sip from the sink..."), \
+						span_notice("You take a sip from the sink..."))
+			return
+	if(selected_area in list(BODY_ZONE_HEAD, BODY_ZONE_PRECISE_EYES))
 		washing_face = 1
 	user.visible_message(span_notice("[user] starts washing [user.p_their()] [washing_face ? "face" : "hands"]..."), \
 						span_notice("You start washing your [washing_face ? "face" : "hands"]..."))

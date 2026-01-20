@@ -2,7 +2,7 @@
 	sender = "City Worker's Union"
 	announcement_text = "As part of a grant, you've been authorized a resupply of additional departmental goods sent on your cargo train."
 	shuttle_transit_text = "Department resupply incoming."
-	thanks_msg = "The cargo shuttle should return in five minutes."
+	thanks_msg = "The cargo train should return in five minutes."
 	bonus_points = 0
 	logging_desc = "Resupply packages"
 
@@ -31,6 +31,7 @@
 /datum/shuttle_loan_situation/halflife/necrotics/spawn_items(list/spawn_list, list/empty_shuttle_turfs, list/blocked_shutte_turfs)
 
 	spawn_list.Add(/mob/living/basic/halflife/zombie)
+	spawn_list.Add(/mob/living/basic/halflife/zombie/fast)
 	spawn_list.Add(/mob/living/basic/halflife/zombie/zombine)
 	spawn_list.Add(/mob/living/basic/halflife/headcrab)
 	spawn_list.Add(/mob/living/basic/halflife/headcrab/armored)
@@ -62,3 +63,5 @@
 	spawn_list.Add(/obj/structure/alien/weeds)
 	spawn_list.Add(/obj/structure/alien/weeds)
 	spawn_list.Add(/obj/structure/alien/weeds)
+	if(prob(35))
+		spawn_list.Add(/mob/living/basic/halflife/zombie/gonome/complete)

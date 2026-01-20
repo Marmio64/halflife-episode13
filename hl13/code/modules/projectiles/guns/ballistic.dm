@@ -50,6 +50,14 @@
 /obj/item/gun/ballistic/automatic/ar2/nopin
 	pin = null
 
+/obj/item/gun/ballistic/automatic/ar2/emag_act(mob/user, obj/item/card/emag/emag_card)
+	if (obj_flags & EMAGGED)
+		return FALSE
+	balloon_alert(user, "firing pin modified")
+	obj_flags |= EMAGGED
+	unlock()
+	return TRUE
+
 /obj/item/gun/ballistic/automatic/ar2/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.23 SECONDS)
@@ -303,8 +311,8 @@
 	spawn_magazine_type = /obj/item/ammo_box/magazine/usp9mm/rubber
 
 /obj/item/gun/ballistic/automatic/pistol/usp/riot/civ_pro_vendor
-	custom_price = 5
-	custom_premium_price = 5
+	custom_price = 4
+	custom_premium_price = 4
 
 /obj/item/gun/ballistic/automatic/pistol/usp/suppressed/Initialize(mapload)
 	. = ..()
@@ -314,7 +322,7 @@
 // about 3.33 seconds TTK
 /obj/item/gun/ballistic/automatic/pistol/makeshift
 	name = "makeshift pistol"
-	desc = "A small and light makeshift 9mm pistol. Much harder to fire and carries half the amount of ammo compared to the USP Match."
+	desc = "A scrappy looking pistol that was put together shoddily with scrap metal and basic tools. The 9mm pistol looks terrible to fire, though it should be small enough to fit in your pockets."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "makeshift"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/makeshift9mm
@@ -339,7 +347,7 @@
 // about 2.4 seconds TTK assuming you hit your first shot (so no cooldown)
 /obj/item/gun/ballistic/revolver/coltpython
 	name = "\improper colt python"
-	desc = "An old colt python revolver, accurate but has the kick of a mule. Uses .357 magnum ammo."
+	desc = "An old colt python revolver, accurate but has the kick of a mule. Uses .357 magnum ammo. Its shiny sheen reveals a giddy glint in your eyes as you imagine the havoc it can cause."
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/coltpython
 	fire_sound = "hl13/sound/weapons/revolverfire.ogg"
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
@@ -640,6 +648,14 @@
 	rack_sound = 'hl13/sound/weapons/slidelock_alyx.ogg'
 	lock_back_sound = 'hl13/sound/weapons/slidelock_alyx.ogg'
 	bolt_drop_sound = 'hl13/sound/weapons/slidelock_alyx.ogg'
+
+/obj/item/gun/ballistic/automatic/pulsesmg/emag_act(mob/user, obj/item/card/emag/emag_card)
+	if (obj_flags & EMAGGED)
+		return FALSE
+	balloon_alert(user, "firing pin modified")
+	obj_flags |= EMAGGED
+	unlock()
+	return TRUE
 
 /obj/item/gun/ballistic/automatic/pulsesmg/nopin
 	pin = null
