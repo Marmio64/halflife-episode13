@@ -49,7 +49,7 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
     color: 'red',
     trims: [
       'Detective',
-      'Overwatch Soldier',
+      'Divisional Lead',
       'Civil Protection Officer',
       'Overseer',
     ],

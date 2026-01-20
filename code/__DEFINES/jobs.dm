@@ -61,7 +61,7 @@
 //Command
 #define JOB_CAPTAIN "Warden"
 #define JOB_HEAD_OF_PERSONNEL "Labor Lead"
-#define JOB_HEAD_OF_SECURITY "Overwatch Soldier"
+#define JOB_HEAD_OF_SECURITY "Divisional Lead"
 #define JOB_RESEARCH_DIRECTOR "Research Director"
 #define JOB_CHIEF_ENGINEER "Chief Engineer"
 #define JOB_CHIEF_MEDICAL_OFFICER "Chief Medical Officer"

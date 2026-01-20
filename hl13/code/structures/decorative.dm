@@ -194,6 +194,9 @@
 			if(iscarbon(user))
 				var/mob/living/carbon/C = user
 				C.adjust_hygiene(-20) //gross, rummaging through garbage
+				if(HAS_TRAIT(C, TRAIT_ABOVE_LABOR))
+					C.add_mood_event("labor_search", /datum/mood_event/searched_garbage)
+
 
 /obj/structure/halflife/trash/garbage/dumpster
 	name = "dumpster"

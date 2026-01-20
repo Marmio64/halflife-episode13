@@ -1,12 +1,12 @@
 /datum/job/security_officer
 	title = JOB_SECURITY_OFFICER
-	description = "Follow the orders of the Warden, and ensure the prisoners do their jobs without getting rebellious thoughts."
+	description = "Follow the orders of the Warden and Divisional Lead, and ensure the prisoners do their jobs without getting rebellious thoughts."
 	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
 	department_head = list(JOB_HEAD_OF_SECURITY)
 	faction = FACTION_STATION
 	total_positions = 4 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
 	spawn_positions = 4 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
-	supervisors = "the Overwatch Soldier"
+	supervisors = "the Divisional Lead"
 	minimal_player_age = 7
 	exp_requirements = 120
 	exp_required_type = EXP_TYPE_CREW

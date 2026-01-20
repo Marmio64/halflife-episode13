@@ -209,6 +209,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/storage/box/lethalshot/halflife/beanbag = 2,
 		/obj/item/grenade/syndieminibomb/bouncer = 2,
 		/obj/item/gun/ballistic/automatic/pistol/usp/riot = 1,
+		/obj/item/ammo_box/colta357 = 1,
 		/obj/item/ammo_box/c38 = 1,
 	)
 	refill_canister = /obj/item/vending_refill/civpro

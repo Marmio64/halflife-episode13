@@ -1,6 +1,6 @@
 /datum/job/head_of_security
 	title = JOB_HEAD_OF_SECURITY
-	description = "Guard the Warden at all costs, except whereby doing so it would conflict with the orders of Overwatch. Command over local Metropolice and Conscript forces when necessary."
+	description = "Command over the prison's civil protection team to ensure everything runs smoothly. Protect the Warden when necessary, though remember you have loyalties to Overwatch over them."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
 	department_head = list(JOB_CAPTAIN)
 	head_announce = list(RADIO_CHANNEL_SECURITY)
@@ -16,7 +16,7 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "HEAD_OF_SECURITY"
 
-	outfit = /datum/outfit/job/overwatch
+	outfit = /datum/outfit/job/hos
 	plasmaman_outfit = /datum/outfit/plasmaman/head_of_security
 	departments_list = list(
 		/datum/job_department/security,
@@ -34,7 +34,7 @@
 
 	family_heirlooms = list(/obj/item/book/manual/wiki/security_space_law)
 	rpg_title = "Guard Leader"
-	job_flags = (STATION_JOB_FLAGS|HEAD_OF_STAFF_JOB_FLAGS)&~JOB_ASSIGN_QUIRKS
+	job_flags = (STATION_JOB_FLAGS|HEAD_OF_STAFF_JOB_FLAGS)
 
 	human_authority = JOB_AUTHORITY_HUMANS_ONLY
 
@@ -43,11 +43,11 @@
 	ration_bonus = 3
 	union_law_notify = TRUE
 
-	requisition_points = 6
+	requisition_points = 7
 
-	gameplay_help = "As the Overwatch Soldier, you are the very best combatant stationed in the area by combine forces, and you have been given the task of protecting the Warden and advising them on security details. Note, while your AR2 is very powerful, there is no way to get extra ammunition for it, use it sparingly!"
+	gameplay_help = "As the Divisional Lead, you command local metropolice forces to ensure all goes well in the prison, and ensure the safety of the Warden. You are partially brainwashed, and would not willingly disobey orders from Dispatch and Overwatch."
 
-	cmode_music = 'hl13/sound/music/combat/guarddown.ogg'
+	cmode_music = 'hl13/sound/music/combat/branescan.ogg'
 
 /datum/outfit/job/overwatch
 	name = "Overwatch Soldier"
@@ -71,10 +71,10 @@
 
 	back = null
 
-	var/role = "OTA.C13-"
+	var/role = "DvL.C13-"
 	var/name_source = list("Blade", "Dagger", "Hammer", "Hunter", "Razor", "Spear", "Striker", "Tracker", "Echo")
 
-/datum/outfit/job/overwatch/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/hos/pre_equip(mob/living/carbon/human/H)
 	H.faction += "combine"
 	H.skin_tone = "#e9dfd7"
 	H.set_facial_hairstyle("Shaved", update = FALSE)
@@ -82,13 +82,13 @@
 	H.eye_color_left = "#b9b9b9"
 	H.eye_color_right = "#b9b9b9"
 	H.update_body()
-	ADD_TRAIT(H, TRAIT_NOHUNGER, OUTFIT_TRAIT) //OTA dont need to eat or drink
-	ADD_TRAIT(H, TRAIT_NOSLEEP, OUTFIT_TRAIT) //OTA dont need to sleep
 
-	H.mob_mood?.mood_modifier = 0.5
+	ADD_TRAIT(H, TRAIT_ABOVE_LABOR, JOB_TRAIT)
+	H.mob_mood?.mood_modifier -= 0.2
+	H.physiology.hunger_mod *= 0.8
 
 	H.change_stat(STATKEY_DEX, 2)
-	H.change_stat(STATKEY_STR, 5)
+	H.change_stat(STATKEY_STR, 3)
 
 /datum/outfit/job/overwatch/post_equip(mob/living/carbon/human/equipped, visuals_only)
 	..()

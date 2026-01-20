@@ -32,7 +32,7 @@ export const JOB2ICON = {
   Conscript: 'shield-halved',
   Geneticist: 'dna',
   'Labor Lead': 'briefcase',
-  'Overwatch Soldier': 'user-shield',
+  'Divisional Lead': 'user-shield',
   'Big Brother': 'eye',
   'Vortigaunt Slave': 'hands-bound',
   'District Liaison': 'user-tie',
