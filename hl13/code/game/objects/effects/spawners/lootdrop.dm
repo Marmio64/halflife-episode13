@@ -9,6 +9,7 @@
 				/obj/item/storage/toolbox/mechanical,
 				/obj/item/toy/cards/deck,
 				/obj/item/binoculars,
+				/obj/item/poster/halflife/rebel,
 				/obj/item/seeds/potato,
 				/obj/item/melee/tireiron,
 				/obj/item/melee/brass_knuckles,

@@ -87,7 +87,7 @@
 	H.mob_mood?.mood_modifier -= 0.2
 	H.physiology.hunger_mod *= 0.8
 
-	H.change_stat(STATKEY_DEX, 2)
+	H.change_stat(STATKEY_DEX, 3)
 	H.change_stat(STATKEY_STR, 3)
 
 /datum/outfit/job/overwatch/post_equip(mob/living/carbon/human/equipped, visuals_only)

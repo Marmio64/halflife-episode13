@@ -132,7 +132,7 @@
 
 /datum/mood_event/painful_eat
 	description = "Eating food hurts my teeth so much! Drinking something instead would be much more pleasent..."
-	mood_change = -10
+	mood_change = -8
 	timeout = 2 MINUTES
 
 /datum/mood_event/gibbing_view_bad
