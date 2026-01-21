@@ -1,12 +1,12 @@
 /datum/job/security_officer
 	title = JOB_SECURITY_OFFICER
-	description = "Follow the orders of the Warden, and ensure the prisoners do their jobs without getting rebellious thoughts."
+	description = "Follow the orders of the Warden and Divisional Lead, and ensure the prisoners do their jobs without getting rebellious thoughts."
 	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
 	department_head = list(JOB_HEAD_OF_SECURITY)
 	faction = FACTION_STATION
 	total_positions = 4 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
 	spawn_positions = 4 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
-	supervisors = "the Overwatch Soldier"
+	supervisors = "the Divisional Lead"
 	minimal_player_age = 7
 	exp_requirements = 120
 	exp_required_type = EXP_TYPE_CREW
@@ -255,12 +255,12 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	if(department)
 		if(department == SEC_DEPT_HELIX)
 			name_source = list ("Helix")
-			user.change_stat(STATKEY_INT, 3) //Guarantee they can use an analyzer, at the cost of strength
-			user.change_stat(STATKEY_STR, -2)
+			user.change_stat(STATKEY_INT, 3) //Guarantee they can use an analyzer
+			user.change_stat(STATKEY_STR, -1)
 		if(department == SEC_DEPT_XRAY)
 			name_source = list ("Xray")
 			user.change_stat(STATKEY_INT, 3)
-			user.change_stat(STATKEY_STR, -2)
+			user.change_stat(STATKEY_STR, -1)
 		if(department == SEC_DEPT_DEFENDER)
 			name_source = list ("Defender")
 			user.change_stat(STATKEY_DEX, -1)

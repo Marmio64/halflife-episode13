@@ -209,6 +209,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/storage/box/lethalshot/halflife/beanbag = 2,
 		/obj/item/grenade/syndieminibomb/bouncer = 2,
 		/obj/item/gun/ballistic/automatic/pistol/usp/riot = 1,
+		/obj/item/ammo_box/colta357 = 1,
 		/obj/item/ammo_box/c38 = 1,
 	)
 	refill_canister = /obj/item/vending_refill/civpro
@@ -298,7 +299,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/food_dispensery, 32)
 
 /obj/machinery/vending/goods_dispensery
 	name = "\improper Goods Dispensary"
-	desc = "A wall mounted dispensary that sells general goods at high prices. The bartender tends to have access to cheaper goods, but if there is no bartender, buying from here is an option."
+	desc = "A wall mounted dispensary that sells general goods at high prices. The commissary clerk tends to have access to cheaper goods, but if there is no clerk, buying from here is an option."
 	icon_state = "fooddispenser"
 	icon_deny = "fooddispenser-deny"
 	panel_type = "wallmed-panel"
@@ -318,19 +319,16 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/food_dispensery, 32)
 					/obj/item/storage/halflife/keyring = 4,
 					/obj/item/storage/wallet = 6,
 					/obj/item/radio/off/halflife = 2,
-					/obj/item/reagent_containers/cup/bottle/welding_fuel = 2,
-					/obj/item/storage/halflife/hand_box/cookie = 3,
 					/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
 					/obj/item/stack/sticky_tape = 1,
 					/obj/item/stack/sheet/cloth = 8,
 					/obj/item/storage/halflife/suitcase = 6,
 					/obj/item/storage/fancy/cigarettes/halflife = 8,
 					/obj/item/storage/halflife/pill_bottle/antifatigue = 4,
-					/obj/item/storage/box/coffeepack = 1, //for coffee makers
 					/obj/item/clothing/gloves/fingerless = 3)
 
 	premium = list(/obj/item/storage/backpack/halflife/satchel = 3,
 				   /obj/item/storage/backpack/halflife = 3)
 
-	default_price = 15
+	default_price = 14
 	extra_price = 35

@@ -188,8 +188,8 @@
 
 //HL13 EDIT START
 	if(nutrition < NUTRITION_LEVEL_DYING) //Actively starving, body is failing
-		human.set_stat_modifier("hunger", STATKEY_DEX, -3)
-		human.set_stat_modifier("hunger", STATKEY_STR, -3)
+		human.set_stat_modifier("hunger", STATKEY_DEX, -4)
+		human.set_stat_modifier("hunger", STATKEY_STR, -4)
 
 		if(prob(3))
 			to_chat(human, span_warning("You feel your body wasting away from your hunger..."))
@@ -215,7 +215,7 @@
 		human.set_stat_modifier("hunger", STATKEY_DEX, 1)
 	else if(nutrition < NUTRITION_LEVEL_STARVING)
 		human.set_stat_modifier("hunger", STATKEY_DEX, -1)
-		human.set_stat_modifier("hunger", STATKEY_STR, -1)
+		human.set_stat_modifier("hunger", STATKEY_STR, -2)
 	else
 		human.remove_stat_modifier("hunger")
 

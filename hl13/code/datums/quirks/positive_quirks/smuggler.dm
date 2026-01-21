@@ -4,7 +4,7 @@
 	desc = "You've managed to sneak a few pieces of random items (which may include contraband) within an allowed suitcase, alongside a pouch. You'll probably want to make sure nobody finds out."
 	icon = FA_ICON_SUITCASE
 	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_HIDE_FROM_SCAN
-	value = 4
+	value = 3
 
 /datum/quirk/item_quirk/smuggler/add_unique(client/client_source)
 	var/obj/item/storage/halflife/suitcase/smuggler/case = new

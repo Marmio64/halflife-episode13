@@ -120,6 +120,11 @@
 	mood_change = 10
 	timeout = 45 SECONDS
 
+/datum/mood_event/searched_garbage
+	description = "I was just rummaging through garbage. Have I truly been reduced to such a thing?"
+	mood_change = -5
+	timeout = 4 MINUTES
+
 /datum/mood_event/had_to_work
 	description = "I had to do menial labor. This is below my paygrade, I am above this!"
 	mood_change = -5
@@ -127,7 +132,7 @@
 
 /datum/mood_event/painful_eat
 	description = "Eating food hurts my teeth so much! Drinking something instead would be much more pleasent..."
-	mood_change = -10
+	mood_change = -8
 	timeout = 2 MINUTES
 
 /datum/mood_event/gibbing_view_bad
