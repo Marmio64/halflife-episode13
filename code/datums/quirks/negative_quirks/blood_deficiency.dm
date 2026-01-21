@@ -1,6 +1,6 @@
 /datum/quirk/blooddeficiency
 	name = "Blood Deficiency"
-	desc = "Your body can't produce enough blood to sustain itself."
+	desc = "Your body can't produce enough blood to sustain itself. You'll need transfusions or a lot of iron."
 	icon = FA_ICON_TINT
 	value = -10
 	gain_text = span_danger("You feel your vigor slowly fading away.")

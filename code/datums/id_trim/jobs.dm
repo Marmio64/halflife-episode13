@@ -85,7 +85,7 @@
 /datum/id_trim/job/assistant
 	assignment = JOB_ASSISTANT
 	trim_state = "trim_assistant"
-	intern_alt_name = "Intern"
+	intern_alt_name = "Low Security Prisoner"
 	sechud_icon_state = SECHUD_ASSISTANT
 	minimal_access = list()
 	extra_access = list(

@@ -22,8 +22,8 @@ Assistant
 	title = JOB_ASSISTANT
 	description = "Try to survive in this prison. Who knows, maybe you'll get out one day."
 	faction = FACTION_STATION
-	total_positions = 25
-	spawn_positions = 25
+	total_positions = 45
+	spawn_positions = 45
 	supervisors = "absolutely everyone"
 	exp_granted_type = EXP_TYPE_CREW
 	outfit = /datum/outfit/job/assistant/consistent
@@ -50,7 +50,7 @@ Assistant
 		/obj/item/crowbar/large = 1
 	)
 
-	job_flags = STATION_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS | JOB_CAN_BE_INTERN
 	rpg_title = "Lout"
 	config_tag = "ASSISTANT"
 

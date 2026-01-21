@@ -592,6 +592,21 @@
 		if(20 to INFINITY)
 			str_text = "inhumanely strong"
 	. += list(span_notice("[p_They()] appear[p_s()] [str_text]."))
+	var/dex_text
+	switch(get_stat_level(STATKEY_DEX))
+		if(-INFINITY to 3)
+			dex_text = "very clumsy"
+		if(4 to 8)
+			dex_text = "clumsy"
+		if(9 to 11)
+			dex_text = "to be as toned as average"
+		if(12 to 15)
+			dex_text = "lithe"
+		if(16 to 19)
+			dex_text = "very lithe"
+		if(20 to INFINITY)
+			dex_text = "supernaturally lithe"
+	. += list(span_notice("[p_They()] appear[p_s()] [dex_text]."))
 
 	if(istype(w_uniform, /obj/item/clothing/under))
 		var/obj/item/clothing/under/undershirt = w_uniform

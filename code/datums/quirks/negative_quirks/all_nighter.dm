@@ -4,7 +4,7 @@
 	name = "Sleep Deprived"
 	desc = "You didn't get any sleep in a while, and people can tell! You'll constantly be in a bad mood and will have a tendency to sleep longer. Stimulants or a nap might help, though."
 	icon = FA_ICON_BED
-	value = -6
+	value = -7
 	mob_trait = TRAIT_HEAVY_SLEEPER
 	gain_text = span_danger("You feel exhausted.")
 	lose_text = span_notice("You feel well rested.")

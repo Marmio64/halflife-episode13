@@ -112,7 +112,7 @@
 		busy = FALSE
 		return
 	if(account?.account_job.title == "Overwatch Soldier") //they dont need to eat or drink
-		say("External sustenance unnessecary for your position.")
+		say("External sustenance unnecessary for your position.")
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		flick(icon_state_deny,src)
 		busy = FALSE
@@ -123,6 +123,9 @@
 		account.sanctioned = FALSE
 
 	account.ration_voucher = FALSE
+
+	if(C.is_intern)
+		ration_quality++
 
 	playsound(src, 'hl13/sound/machines/combine_button5.ogg', 50, TRUE, extrarange = -3)
 

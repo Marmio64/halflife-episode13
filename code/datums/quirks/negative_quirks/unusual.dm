@@ -2,7 +2,7 @@
 	name = "Touchy"
 	desc = "You are very touchy and have to physically be able to touch something to examine it."
 	icon = FA_ICON_HAND
-	value = -2
+	value = -3
 	gain_text = span_danger("You feel like you can't examine things from a distance.")
 	lose_text = span_notice("You feel like you can examine things from a distance.")
 	medical_record_text = "Patient is unable to tell objects apart from a distance."

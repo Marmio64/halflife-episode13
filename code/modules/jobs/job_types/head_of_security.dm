@@ -90,7 +90,7 @@
 	H.change_stat(STATKEY_DEX, 3)
 	H.change_stat(STATKEY_STR, 3)
 
-/datum/outfit/job/overwatch/post_equip(mob/living/carbon/human/equipped, visuals_only)
+/datum/outfit/job/hos/post_equip(mob/living/carbon/human/equipped, visuals_only)
 	..()
 	equipped.fully_replace_character_name(equipped.real_name,"[role][pick(name_source)] [rand(111,999)]")
 

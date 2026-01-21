@@ -2,7 +2,7 @@
 	name = "Glass Jaw"
 	desc = "You have a very fragile jaw. Any sufficiently hard blow to your head might knock you out."
 	icon = FA_ICON_HAND_FIST
-	value = -5
+	value = -6
 	gain_text = span_danger("Your jaw feels loose.")
 	lose_text = span_notice("Your jaw feels fitting again.")
 	medical_record_text = "Patient is absurdly easy to knock out. Do not allow them near a boxing ring."
