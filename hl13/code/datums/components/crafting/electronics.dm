@@ -153,7 +153,7 @@
 	result = /obj/item/card/emag/halflife
 	reqs = list(/obj/item/stack/sheet/iron = 1,
 				/obj/item/machinepiece/multifunctiontool = 1,
-				/obj/item/circuitmaterial = 2)
+				/obj/item/circuitmaterial = 1)
 	time = 10 SECONDS
 	category = CAT_EQUIPMENT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
@@ -200,7 +200,7 @@
 /datum/crafting_recipe/alyxtool_frame
 	name = "Broken Hacking Multitool Frame"
 	result = /obj/item/machinepiece/multifunctiontool
-	reqs = list(/obj/item/stack/sheet/iron = 3,
+	reqs = list(/obj/item/stack/sheet/iron = 2,
 				/obj/item/circuitmaterial/advanced = 1,
 				/obj/item/stack/cable_coil = 5)
 	time = 10 SECONDS

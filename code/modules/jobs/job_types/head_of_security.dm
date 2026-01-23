@@ -119,6 +119,9 @@
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
 
+	var/role = "DvL.C13-"
+	var/name_source = list("Blade", "Dagger", "Hammer", "Hunter", "Razor", "Spear", "Striker", "Tracker", "Echo")
+
 /datum/outfit/job/hos/mod
 	name = "Head of Security (MODsuit)"
 
