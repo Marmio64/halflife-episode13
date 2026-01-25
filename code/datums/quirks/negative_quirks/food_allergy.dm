@@ -1,6 +1,5 @@
 GLOBAL_LIST_INIT(possible_food_allergies, list(
 	"Alcohol" = ALCOHOL,
-	"Bugs" = BUGS,
 	"Dairy" = DAIRY,
 	"Fruit" = FRUIT,
 	"Grain" = GRAIN,
@@ -15,7 +14,7 @@ GLOBAL_LIST_INIT(possible_food_allergies, list(
 	name = "Food Allergy"
 	desc = "Ever since you were a kid, you've been allergic to certain foods."
 	icon = FA_ICON_SHRIMP
-	value = -2
+	value = -3
 	gain_text = span_danger("You feel your immune system shift.")
 	lose_text = span_notice("You feel your immune system phase back into perfect shape.")
 	medical_record_text = "Patient's immune system responds violently to certain food."

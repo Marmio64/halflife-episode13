@@ -1,6 +1,6 @@
 /datum/quirk/bighands
 	name = "Big Hands"
-	desc = "You have big hands, it sure does make it hard to use a lot of things."
+	desc = "You have big hands, it sure does make it hard to use a lot of things, such as gun triggers and the finer parts of stun batons."
 	icon = FA_ICON_HAND_DOTS
 	value = -4
 	mob_trait = TRAIT_CHUNKYFINGERS
