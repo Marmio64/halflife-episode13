@@ -333,3 +333,23 @@
 	category = CAT_WEAPON_RANGED
 	crafting_interface = CRAFTING_BENCH_WEAPONS
 	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
+
+/datum/crafting_recipe/halflife_spear_fine
+	name = "Spear (Finely Made)"
+	result = /obj/item/spear/halflife/deathmatch
+	reqs = list(
+		/obj/item/woodshaft = 1,
+		/obj/item/stack/sticky_tape = 1,
+		/obj/item/stack/sheet/iron = 3,
+	)
+	time = 12 SECONDS
+	category = CAT_WEAPON_MELEE
+	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
+
+/datum/crafting_recipe/bonedagger_fine
+	name = "Bone Dagger (Finely Made)"
+	result = /obj/item/knife/combat/bone/fine
+	time = 5 SECONDS
+	reqs = list(/obj/item/stack/sheet/bone = 3, /obj/item/stack/sheet/sinew = 1)
+	category = CAT_WEAPON_MELEE
+	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED

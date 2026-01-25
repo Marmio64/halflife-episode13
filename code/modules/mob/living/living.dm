@@ -622,7 +622,10 @@
 			to_chat(src, span_notice("There is nothing to rest on here..."))
 
 		if(comfiness < 1)
-			to_chat(src, span_notice("... All in all, a bad place to sleep. You'll get a poor sleep here."))
+			if(!HAS_TRAIT(src, TRAIT_SURVIVALIST))
+				to_chat(src, span_notice("... All in all, a bad place to sleep. You'll get a poor sleep here."))
+			else
+				to_chat(src, span_notice("... All in all, a bad place to sleep. However, your survivalist experience has prepped you for this, you won't be as affected."))
 		else if(comfiness < 3)
 			to_chat(src, span_notice("... All in all, a decent place to sleep. You'll get an okay sleep here."))
 		else

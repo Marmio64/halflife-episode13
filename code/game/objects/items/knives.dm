@@ -226,6 +226,13 @@
 	throwforce = 15
 	custom_materials = null
 
+/obj/item/knife/combat/bone/fine
+	name = "finely made bone dagger"
+	desc = "A sharpened bone. The bare minimum in survival. It looks surprisingly well made and sharp."
+	force = 20
+	throwforce = 20
+	armour_penetration = 10
+
 /datum/embed_data/combat_knife/weak
 	embed_chance = 35
 

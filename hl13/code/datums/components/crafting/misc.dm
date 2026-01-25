@@ -100,3 +100,12 @@
 	reqs = list(/obj/item/stack/sheet/cloth = 2, /obj/item/food/xen/xenslime = 1)
 	time = 2 SECONDS
 	category = CAT_MISC
+
+/datum/crafting_recipe/healing_poultices
+	name = "Healing Poultices"
+	result = /obj/item/stack/medical/poultice
+	time = 5 SECONDS
+	reqs = list(/obj/item/stack/sheet/cloth = 1, /obj/item/reagent_containers/pill/patch/grubnugget = 1, /obj/item/food/xen/xenbranch = 1)
+	result_amount = 10
+	category = CAT_MISC
+	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED

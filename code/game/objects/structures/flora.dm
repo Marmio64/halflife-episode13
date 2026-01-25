@@ -104,7 +104,10 @@
 	user.visible_message(span_notice("[user] starts to [harvest_verb] [src]..."),
 		span_notice("You start to [harvest_verb] [src]..."))
 	play_attack_sound()
-	if(!do_after(user, harvest_time, src))
+	var/real_harvest_time = harvest_time
+	if(HAS_TRAIT(user, TRAIT_SURVIVALIST))
+		real_harvest_time /= 2
+	if(!do_after(user, real_harvest_time, src))
 		return
 	visible_message(span_notice("[user] [harvest_verb][harvest_verb_suffix] [src]."),
 		ignored_mobs = list(user))

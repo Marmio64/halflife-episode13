@@ -96,3 +96,5 @@
 #define TRAIT_TERRIBLE_AIM	"terrible_aim"
 
 #define TRAIT_PAINFUL_EAT "painful_eat"
+
+#define TRAIT_SURVIVALIST "survivalist"

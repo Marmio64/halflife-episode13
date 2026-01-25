@@ -363,3 +363,16 @@
 
 	preserved_food = TRUE
 	crafting_complexity = FOOD_COMPLEXITY_3
+
+/obj/item/food/survivalist_stew
+	name = "survivalist stew can"
+	desc = "A can filled with warm water, and a combination of diced potatoes, onions, and xenian meat. It smells rather good, actually."
+	icon = 'hl13/icons/obj/food.dmi'
+	icon_state = "xenstew"
+	bite_consumption = 5
+	tastes = list("alien flesh" = 3, "onions" = 3, "potatoes" = 3)
+	foodtypes = MEAT
+	food_reagents = list(/datum/reagent/consumable/nutriment = 15, /datum/reagent/water = 6)
+
+	preserved_food = TRUE
+	crafting_complexity = FOOD_COMPLEXITY_3

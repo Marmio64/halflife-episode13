@@ -40,3 +40,15 @@
 	)
 	result = /obj/item/food/chumtoadstew
 	category = CAT_RATION
+
+/datum/crafting_recipe/food/survivaliststew
+	name = "Survivalist Stew"
+	reqs = list(
+		/obj/item/food/grown/onion = 1,
+		/obj/item/food/grown/potato = 1,
+		/datum/reagent/water = 15,
+		/obj/item/food/meat/cutlet/xen = 2,
+	)
+	result = /obj/item/food/survivalist_stew
+	category = CAT_MISCFOOD
+	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED

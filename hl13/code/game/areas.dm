@@ -371,8 +371,8 @@
 	min_ambience_cooldown = 20 SECONDS
 	ambient_buzz = 'hl13/sound/ambience/sewer1.ogg'
 	ambient_buzz_vol = 60
-	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_01.ogg'
-	ambient_music_vol = 20
+	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_03.ogg'
+	ambient_music_vol = 35
 	mood_bonus = -2
 	mood_message = "<span class='warning'>This place smells terrible.</span>\n"
 
@@ -428,6 +428,8 @@
 	name = "\improper Tunnels"
 	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'
 	ambient_buzz_vol = 70
+	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_01.ogg'
+	ambient_music_vol = 8
 
 	mood_message = "<span class='warning'>This place is unnerving...</span>\n"
 
@@ -585,6 +587,9 @@
 	name = "\improper Prison Factory"
 
 	first_time_text = "Factory"
+
+	ambient_buzz = 'hl13/sound/ambience/industrial4.ogg'
+	ambient_buzz_vol = 70
 
 /area/halflife/indoors/prison/gym
 	name = "\improper Prison Gym"

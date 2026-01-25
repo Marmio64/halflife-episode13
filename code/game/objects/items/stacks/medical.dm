@@ -542,9 +542,9 @@
 	amount = 1
 
 /obj/item/stack/medical/poultice
-	name = "mourning poultices"
-	singular_name = "mourning poultice"
-	desc = "A type of primitive herbal poultice.\nWhile traditionally used to prepare corpses for the mourning feast, it can also treat scrapes and burns on the living, however, it is liable to cause shortness of breath when employed in this manner.\nIt is imbued with ancient wisdom."
+	name = "healing poultices"
+	singular_name = "healing poultice"
+	desc = "A type of primitive herbal poultice, that is rather good at patching wounds."
 	icon_state = "poultice"
 	amount = 15
 	max_amount = 15
@@ -563,10 +563,6 @@
 		playsound(src, 'sound/misc/soggy.ogg', 30, TRUE)
 		return heal_carbon(patient, user, heal_brute, heal_burn)
 	return ..()
-
-/obj/item/stack/medical/poultice/post_heal_effects(amount_healed, mob/living/carbon/healed_mob, mob/user)
-	. = ..()
-	healed_mob.adjustOxyLoss(amount_healed)
 
 /obj/item/stack/medical/bandage
 	name = "cloth bandage"

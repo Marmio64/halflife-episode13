@@ -62,7 +62,10 @@
 			else if(buckled) // Sleeping on a bench or chair is nicer than sleeping on the floor, but not as nice as on a bed.
 				adjust_tiredness(-25) //-500 tiredness on a 40 second sleep.
 			else
-				adjust_tiredness(-15) //-300 tiredness on a 40 second sleep.
+				if(!HAS_TRAIT(src, TRAIT_SURVIVALIST)) //survivalists are used to sleeping in uncomfortable situations.
+					adjust_tiredness(-15) //-300 tiredness on a 40 second sleep.
+				else
+					adjust_tiredness(-25) //-500 tiredness on a 40 second sleep.
 		else
 			if(!HAS_TRAIT(src, TRAIT_NOSLEEP))
 				adjust_tiredness(1)

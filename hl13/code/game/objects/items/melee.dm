@@ -103,6 +103,7 @@
 	name = "finely crafted improvised spear"
 	desc = "A haphazardly-constructed yet still deadly weapon of ancient design that is adept at spearing through flesh and thin armor alike. This one looks well cared after, with an espescially sharp point for driving through armor."
 	armour_penetration = 35
+	force_wielded = 23
 
 /obj/item/spear/halflife/deathmatch/deployment
 	w_class = WEIGHT_CLASS_NORMAL

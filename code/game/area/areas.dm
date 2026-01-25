@@ -100,7 +100,7 @@
 	var/max_ambience_cooldown = 60 SECONDS
 
 	var/ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_01.ogg'
-	var/ambient_music_vol = 10
+	var/ambient_music_vol = 8
 
 	flags_1 = CAN_BE_DIRTY_1
 
