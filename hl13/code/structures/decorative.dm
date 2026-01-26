@@ -171,7 +171,9 @@
 		return
 	user.visible_message(span_notice("[user] begins to sift through the [src] for anything useful."), \
 		span_notice("You begin to dig through the [src] for something interesting."))
-	if(do_after(user, 7 SECONDS, src))
+
+	var/delay_time = 7 SECONDS - (user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER))
+	if(do_after(user, delay_time, src))
 		if(prob(loot_chance + (user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER))))
 			user.visible_message(span_notice("[user] finds something inside the [src]."), \
 				span_notice("You find something interesting inside the [src]."))

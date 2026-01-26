@@ -27,3 +27,17 @@
 	new_vampire.skin_tone = "albino"
 	new_vampire.update_body(0)
 	new_vampire.faction = list(FACTION_HEADCRAB)
+
+/datum/species/human/crabwalker/cultist
+	species_language_holder = /datum/language_holder/crab_cultist
+	damage_modifier = 10
+
+/datum/language_holder/crab_cultist
+	understood_languages = list(
+		/datum/language/common = list(LANGUAGE_ATOM),
+		/datum/language/zombie = list(LANGUAGE_ATOM),
+	)
+	spoken_languages = list(
+		/datum/language/common = list(LANGUAGE_ATOM),
+		/datum/language/zombie = list(LANGUAGE_ATOM),
+	)

@@ -107,6 +107,11 @@
 	mood_change = 4
 	hidden = TRUE
 
+/datum/mood_event/crab_cultist
+	description = "Greater forces are at play here than my mere psyche. I must free my mind."
+	mood_change = 10
+	hidden = TRUE
+
 /datum/mood_event/badass_antag
 	description = "I'm a fucking badass and everyone around me knows it. Just look at them; they're all fucking shaking at the mere thought of having me around."
 	mood_change = 7

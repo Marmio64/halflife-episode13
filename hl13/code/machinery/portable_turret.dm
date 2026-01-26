@@ -127,7 +127,7 @@ DEFINE_BITFIELD(turret_flags, list(
 	icon_state = "cmbpaint1_lethal"
 	base_icon_state = "cmbpaint1"
 	desc = "A hacked combine turret with a fresh coat of paint. Fires at bio signal authorised targets with a high power pulse gun."
-	faction = list("Syndicate")
+	faction = list("Syndicate", FACTION_REFUGEE)
 	locked = FALSE
 	req_access = null
 

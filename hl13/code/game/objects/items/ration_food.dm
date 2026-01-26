@@ -9,7 +9,7 @@
 	var/bar_type = /obj/item/food/halflife/nutrient_bar //used to put the bar objects in hand genarated when unwrapped
 	var/bar_waste = /obj/item/trash/halflife/nutrient_bar_waste //used to put the trash objects in hand genarated when unwrapped
 
-	custom_price = 10
+	custom_price = 8
 
 /obj/item/halflife/nutrient_bar_wrapping/attack_self(mob/user)
 	to_chat(user, span_notice("You start to unwrap the nutrient bar wraping..."))
@@ -168,6 +168,7 @@
 	name = "flour paste"
 	desc = "A solid mass of paste which jiggles like jello. It is supposed to somewhat emulate a grain food such as bread, but just tastes like wet, raw flour."
 	icon_state = "egg_paste"
+	foodtypes = GRAIN
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 4,
 	)
@@ -189,6 +190,7 @@
 	name = "chicken paste"
 	desc = "A solid mass of paste which jiggles like jello. It is flavored to taste like chicken, but the consistency leaves an unpleasant mouth feel."
 	icon_state = "chicken_paste"
+	foodtypes = MEAT
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,
 		/datum/reagent/consumable/nutriment/vitamin = 1,
@@ -200,7 +202,7 @@
 	name = "cookie"
 	icon_state = "cookie"
 	icon = 'hl13/icons/obj/food.dmi'
-	food_reagents = list(/datum/reagent/consumable/nutriment = 2)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/sugar = 1)
 	tastes = list("cookie" = 1)
 	foodtypes = GRAIN | SUGAR
 	food_flags = FOOD_FINGER_FOOD

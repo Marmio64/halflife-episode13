@@ -43,7 +43,7 @@
 	ration_bonus = 3
 	union_law_notify = TRUE
 
-	requisition_points = 7
+	requisition_points = 8
 
 	gameplay_help = "As the Divisional Lead, you command local metropolice forces to ensure all goes well in the prison, and ensure the safety of the Warden. You are partially brainwashed, and would not willingly disobey orders from Dispatch and Overwatch."
 

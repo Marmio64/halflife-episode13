@@ -395,6 +395,17 @@
 	build_stack_amount = 2
 	hl13hit_sounds = SFX_CARDBOARDIMPACT
 
+/obj/structure/bed/halflife/mattress/attackby(obj/item/W, mob/user, params)
+	if(W.get_sharpness())
+		playsound(loc, 'sound/items/weapons/slice.ogg', 50, TRUE, -1)
+		user.visible_message(span_notice("[user] starts cutting apart \the [src]."), span_notice("You start cutting apart \the [src]..."), span_hear("You hear the sound of fabric being cut."))
+		if(do_after(user, 5 SECONDS, target = src))
+			to_chat(user, span_notice("You cut apart \the [src.name]."))
+			new /obj/item/stack/sheet/cloth(user.drop_location(), 3)
+			qdel(src)
+	else
+		return ..()
+
 /obj/structure/bed/halflife/mattress/dirty
 	name = "mattress"
 	desc = "Less of a mattress and more of a lump."

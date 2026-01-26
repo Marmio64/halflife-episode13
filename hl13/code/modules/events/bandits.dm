@@ -78,6 +78,10 @@
 	shoes = /obj/item/clothing/shoes/boots
 	l_pocket = /obj/item/flashlight
 
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+	)
+
 /datum/map_template/shuttle/pirate/bandit
 	suffix = "bandit"
 	name = "bandit ship"

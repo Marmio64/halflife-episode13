@@ -39,7 +39,7 @@
 	to_chat(owner, span_userdanger("You are a Uprising Ringleader!"))
 	to_chat(owner, span_boldnotice("The time has come for this district to be freed from the tyranny of the combine."))
 	to_chat(owner, span_notice("You have to lower the sociostability of the district low enough to allow you to set up a Super Destabilizer within the Nexus, and cut off the city from combine reinforcements."))
-	to_chat(owner, span_notice("You can craft a Super Destabilizer beacon at an Electronics bench, located in the factory and other places in the city, sewers, and outlands."))
+	to_chat(owner, span_boldbig("You can craft a Super Destabilizer beacon in the crafting menu."))
 	to_chat(owner, span_boldnotice("Prepare for the final showdown by getting well equipped by looting, scavenging, and more. In addition, you are not alone! You'll recognise other ringleaders by the Lambda symbol near their head, and can communicate with them through a hidden channel at any time with the button in the top left of your screen."))
 	to_chat(owner, span_notice("To better prepare, you should find a secure and secret location to laydown your uplink relay, and then break into secure locations to hack Combine Data Pod Terminals with a multifunction electrical tool. These datapods can be fed to your uplink relay to be able to purchase useful gear."))
 	to_chat(owner, span_notice("For more information, visit the wiki page for this antagonist: https://halflifeepisode13.miraheze.org/wiki/Uprising_Ringleader"))

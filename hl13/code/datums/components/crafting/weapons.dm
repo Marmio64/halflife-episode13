@@ -353,3 +353,12 @@
 	reqs = list(/obj/item/stack/sheet/bone = 3, /obj/item/stack/sheet/sinew = 1)
 	category = CAT_WEAPON_MELEE
 	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
+
+/datum/crafting_recipe/beartrap
+	name = "Homemade Beartrap"
+	result = /obj/item/restraints/legcuffs/beartrap
+	time = 5 SECONDS
+	reqs = list(/obj/item/stack/sheet/scrap_metal = 4)
+	tool_behaviors = list(TOOL_WELDER)
+	category = CAT_WEAPON_MELEE
+	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED

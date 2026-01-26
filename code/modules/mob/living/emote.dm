@@ -131,45 +131,6 @@
 		var/mob/living/living = user
 		living.SetSleeping(20 SECONDS)
 
-/datum/emote/living/flap
-	key = "flap"
-	key_third_person = "flaps"
-	message = "flaps their wings."
-	hands_use_check = TRUE
-	var/wing_time = 0.35 SECONDS
-
-/datum/emote/living/flap/run_emote(mob/user, params, type_override, intentional)
-	. = ..()
-	if(!ishuman(user))
-		return
-	var/mob/living/carbon/human/human_user = user
-	var/obj/item/organ/wings/wings = human_user.get_organ_slot(ORGAN_SLOT_EXTERNAL_WINGS)
-
-	// play a flapping noise if the wing has this implemented
-	if(!istype(wings))
-		return
-	wings.make_flap_sound(human_user)
-
-	// open/close functional wings
-	var/obj/item/organ/wings/functional/wings_functional = wings
-	if(!istype(wings_functional))
-		return
-	var/open = FALSE
-	if(wings_functional.wings_open)
-		open = TRUE
-		wings_functional.close_wings()
-	else
-		wings_functional.open_wings()
-	addtimer(CALLBACK(wings_functional, open ? TYPE_PROC_REF(/obj/item/organ/wings/functional, open_wings) : TYPE_PROC_REF(/obj/item/organ/wings/functional, close_wings)), wing_time)
-
-/datum/emote/living/flap/aflap
-	key = "aflap"
-	key_third_person = "aflaps"
-	name = "flap (Angry)"
-	message = "flaps their wings ANGRILY!"
-	hands_use_check = TRUE
-	wing_time = 10
-
 /datum/emote/living/frown
 	key = "frown"
 	key_third_person = "frowns"

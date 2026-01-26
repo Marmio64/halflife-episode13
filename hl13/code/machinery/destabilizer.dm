@@ -118,6 +118,10 @@ GLOBAL_VAR_INIT(super_destabilizer_deployed, FALSE)
 	SSsecurity_level.set_level(SEC_LEVEL_DELTA)
 	SSshuttle.registerHostileEnvironment("SuperDestabilizer")
 
+	say("Local combine data frequencies harvested and condensed into pods.")
+	playsound(src, 'hl13/sound/machines/combine_dispense.ogg', 50, TRUE, extrarange = -3)
+	new /obj/item/combine_datapod(loc, 3)
+
 /obj/machinery/destabilizer/super/deconstruct(disassembled = TRUE)
 	SSshuttle.clearHostileEnvironment("SuperDestabilizer")
 	priority_announce("Priority sociocide-class disruptor signs halted. Attention ground units, your family cohesion is preserved.", "Overwatch Priority Alert")

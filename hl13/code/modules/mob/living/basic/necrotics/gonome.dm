@@ -125,6 +125,11 @@
 	speed = 1.4
 	headcrab_delay = 2 SECONDS
 
+/mob/living/basic/halflife/zombie/gonome/complete/cultist
+	speed = 1.3
+	headcrab_delay = 2 SECONDS
+	melee_attack_cooldown = 1.75 SECONDS
+
 /mob/living/basic/halflife/zombie/gonome/Login()
 	..()
 	to_chat(src, playstyle_string)

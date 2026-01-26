@@ -21,7 +21,7 @@
 	name = "reinforced window"
 	desc = "A window reinforced with metal bars, making it rather difficult to break."
 	max_integrity = 350
-	damage_deflection = 20
+	damage_deflection = 18
 
 /obj/structure/window/fulltile/halflife/nosmooth/reinforced/indestructible
 	name = "highly reinforced window"

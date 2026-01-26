@@ -195,7 +195,6 @@
 				/obj/item/circuitmaterial = 3)
 	time = 10 SECONDS
 	category = CAT_ROBOT
-	crafting_interface = CRAFTING_BENCH_ELECTRIC
 	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
 
 /datum/crafting_recipe/alyxtool_frame

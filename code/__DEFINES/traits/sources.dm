@@ -317,3 +317,6 @@
 
 /// From the aquarium component
 #define AQUARIUM_TRAIT "aquarium"
+
+/// From the crab cult rune
+#define CRABCULT_TRAIT "crabcult_trait"
