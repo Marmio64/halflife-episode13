@@ -72,6 +72,7 @@
 	return AI_BEHAVIOR_DELAY | AI_BEHAVIOR_SUCCEEDED
 
 /datum/idle_behavior/idle_random_walk/not_while_on_target/trader
+	walk_chance = 0
 	target_key = BB_SHOP_SPOT
 
 ///Version of setup show where the trader will run at you to assault you with incredible deals

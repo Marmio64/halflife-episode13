@@ -218,7 +218,7 @@
 	icon = 'hl13/icons/obj/storage/crates.dmi'
 	unsanitary = FALSE
 	loot_type = /obj/effect/spawner/random/halflife/loot/scrap/three
-	good_loot_type = /obj/effect/spawner/random/halflife/loot/two
+	good_loot_type = /obj/effect/spawner/random/halflife/loot/scrap/five
 	hl13hit_sounds = SFX_WOODIMPACT
 
 /obj/structure/halflife/trash/garbage/dumpster/crate/deconstruct(disassembled = TRUE)

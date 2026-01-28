@@ -22,7 +22,7 @@
 /obj/item/stack/spacecash/update_desc()
 	. = ..()
 	var/total_worth = get_item_credit_value()
-	desc = "Old world currency bills repurposed for usage in the Combine's economy. It's worth [total_worth] credit[(total_worth > 1) ? "s" : null] in total." //hl13 edit
+	desc = "Old world zloty bills repurposed for usage in the Combine's economy. It's worth [total_worth] credit[(total_worth > 1) ? "s" : null] in total." //hl13 edit
 
 /obj/item/stack/spacecash/get_item_credit_value()
 	return (amount*value)

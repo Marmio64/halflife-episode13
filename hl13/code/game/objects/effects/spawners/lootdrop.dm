@@ -99,6 +99,9 @@
 /obj/effect/spawner/random/halflife/loot/scrap/three
 	spawn_loot_count = 3
 
+/obj/effect/spawner/random/halflife/loot/scrap/five
+	spawn_loot_count = 5
+
 //actual garbage, low level loot, and scraps
 /obj/effect/spawner/random/halflife/loot/trash
 	name = "trash loot"

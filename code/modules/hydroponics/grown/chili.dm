@@ -22,7 +22,7 @@
 /obj/item/food/grown/chili
 	seed = /obj/item/seeds/chili
 	name = "chili"
-	desc = "It's spicy! Wait... IT'S BURNING ME!!"
+	desc = "A spicy red pepper. You can't tell if it was farmed in combine mass biogenerator plants or in a local garden."
 	icon_state = "chilipepper"
 	bite_consumption_mod = 2
 	foodtypes = FRUIT

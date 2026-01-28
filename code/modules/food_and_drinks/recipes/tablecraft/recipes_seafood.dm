@@ -1,13 +1,3 @@
-/datum/crafting_recipe/food/cubancarp
-	name = "Cuban carp"
-	reqs = list(
-		/datum/reagent/consumable/flour = 5,
-		/obj/item/food/grown/chili = 1,
-		/obj/item/food/fishmeat/carp = 1
-	)
-	result = /obj/item/food/cubancarp
-	category = CAT_SEAFOOD
-
 /datum/crafting_recipe/food/fishandchips
 	name = "Fish and chips"
 	reqs = list(

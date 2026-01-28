@@ -64,7 +64,7 @@
 /datum/crafting_recipe/advancedcircuitchips
 	name = "Advanced Circuit Chips"
 	result = /obj/item/circuitmaterial/advanced
-	reqs = list(/obj/item/stack/sheet/mineral/diamond = 2,
+	reqs = list(/obj/item/stack/sheet/mineral/diamond = 1,
 				/obj/item/stack/sheet/scrap_copper = 1,
 				/obj/item/stack/sheet/mineral/gold = 1,
 				/obj/item/circuitmaterial = 2)

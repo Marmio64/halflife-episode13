@@ -399,7 +399,7 @@
 			/datum/outfit/deployment_loadout/xen/tier4/fast_zombie,
 			/datum/outfit/deployment_loadout/xen/tier4/light_crab_walker,
 			/datum/outfit/deployment_loadout/xen/tier4/gonome,
-			/datum/outfit/deployment_loadout/xen/tier4/antlion_worker,
+			/datum/outfit/deployment_loadout/xen/tier4/bullsquid,
 			/datum/outfit/deployment_loadout/xen/tier4/antlion_grub,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)

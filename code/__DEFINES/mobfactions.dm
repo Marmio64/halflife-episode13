@@ -99,5 +99,8 @@
 #define FACTION_COMBINE "combine"
 #define FACTION_REFUGEE "refugee"
 
+/// Misc. hostile xen creatures
+#define FACTION_XEN_FAUNA "xen_fauna"
+
 /// Generates a mob faction for the passed owner, used by stabilized pink extracts
 #define FACTION_PINK_EXTRACT(owner) "pink_[owner]"

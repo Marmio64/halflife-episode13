@@ -12,6 +12,12 @@
 	if(malfunctioning)
 		. += span_notice("The machine is off. It'll need to be opened and cleaned by using a screwdriver on it.")
 
+/obj/machinery/sealer/update_icon_state()
+	. = ..()
+	if(malfunctioning)
+		icon_state = "sealer_bloody"
+	else
+		icon_state = "sealer"
 
 
 /obj/machinery/sealer/attackby(obj/item/I, mob/living/user, params)
@@ -29,22 +35,22 @@
 				to_chat(usr, span_notice("Container successfully sealed. Reward dispensed."))
 				C.seal(user, 1) //Using the sealer gets you bonus money
 				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 50, FALSE, extrarange = -1)
-				if(user.job == "Union Worker")
-					if(prob(2))
+				if(prob(user.mind?.get_skill_modifier(/datum/skill/factorywork, SKILL_VALUE_MODIFIER)))
+					if(HAS_TRAIT(user, TRAIT_CURSED))
+						to_chat(user, span_userdanger("You lose focus, and the machine slices off a large strip of flesh from your arm, holy fuck!"))
+						arm.force_wound_upwards(/datum/wound/slash/flesh/severe)
+						arm.receive_damage(25)
+						user.emote("scream")
+					else
 						to_chat(user, span_userdanger("You lose focus, and the machine seals one of your fingers inside the container!"))
 						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
 						arm.receive_damage(15)
 						user.emote("scream")
-						malfunctioning = TRUE
-						to_chat(user, span_userdanger("The machine shudders as it gets gummed up from blood, before shutting off."))
+					malfunctioning = TRUE
+					update_appearance(UPDATE_ICON)
+					to_chat(user, span_userdanger("The machine shudders as it gets gummed up from blood, before shutting off."))
 				else
-					if(prob(5))
-						to_chat(user, span_userdanger("Due to your inexperience, the machine seals one of your fingers inside the container!"))
-						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
-						arm.receive_damage(15)
-						user.emote("scream")
-						malfunctioning = TRUE
-						to_chat(user, span_userdanger("The machine shudders as it gets gummed up from blood, before shutting off."))
+					user.mind?.adjust_experience(/datum/skill/factorywork, 25)
 		else if(C.completed)
 			to_chat(usr, span_notice("This ration container is already sealed."))
 		else
@@ -69,6 +75,7 @@
 						arm.receive_damage(15)
 						user.emote("scream")
 					malfunctioning = TRUE
+					update_appearance(UPDATE_ICON)
 					to_chat(user, span_userdanger("The machine shudders as it gets gummed up from blood, before shutting off."))
 				else
 					user.mind?.adjust_experience(/datum/skill/factorywork, 25)
@@ -103,6 +110,7 @@
 
 	playsound(loc, 'sound/items/tools/screwdriver_operating.ogg', 25, 1)
 	malfunctioning = FALSE
+	update_appearance(UPDATE_ICON)
 
 	if(atom_integrity < max_integrity) //Also fixes it up
 		atom_integrity = max_integrity

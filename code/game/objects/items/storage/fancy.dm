@@ -145,8 +145,8 @@
 	base_icon_state = "eggbox"
 	lefthand_file = 'icons/mob/inhands/items/food_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/food_righthand.dmi'
-	name = "egg box"
-	desc = "A carton for containing eggs."
+	name = "imitation egg box"
+	desc = "A carton for containing so called eggs."
 	spawn_type = /obj/item/food/egg
 	spawn_count = 12
 	contents_tag = "egg"

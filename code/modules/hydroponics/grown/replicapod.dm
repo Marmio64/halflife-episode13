@@ -24,7 +24,7 @@
 /obj/item/food/grown/cabbage
 	seed = /obj/item/seeds/cabbage
 	name = "cabbage"
-	desc = "Ewwwwwwwwww. Cabbage."
+	desc = "You may have snubbed such a boring produce before the war, but despite it's sickly appearence, it reminds you of better times and manages to taste better than most ration food."
 	icon_state = "cabbage"
 	foodtypes = VEGETABLES
 	wine_power = 20

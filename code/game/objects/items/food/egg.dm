@@ -17,8 +17,8 @@
 GLOBAL_VAR_INIT(chicks_from_eggs, 0)
 
 /obj/item/food/egg
-	name = "egg"
-	desc = "An egg!"
+	name = "imitation egg"
+	desc = "A combine manufactured egg, formed from grinding up miscellaneous eggs of all kinds into slurries and solidifying them in molds. You suppose the ingredients are still eggs, right?"
 	icon = 'icons/obj/food/egg.dmi'
 	icon_state = "egg"
 	inhand_icon_state = "egg"

@@ -116,6 +116,8 @@ SUBSYSTEM_DEF(ambience)
 	if(!client || isobserver(client.mob)) // If a tree falls in the woods. sadboysuss: Don't refresh for ghosts, it sounds bad
 		return
 
+	refresh_looping_music()
+
 	var/area/my_area = get_area(src)
 	var/sound_to_use = my_area.ambient_buzz
 	var/volume_modifier = client.prefs.read_preference(/datum/preference/numeric/sound_ship_ambience_volume)
@@ -136,7 +138,14 @@ SUBSYSTEM_DEF(ambience)
 	client.current_ambient_sound = sound_to_use
 	SEND_SOUND(src, sound(my_area.ambient_buzz, repeat = 1, wait = 0, volume = my_area.ambient_buzz_vol, channel = CHANNEL_BUZZ))
 
-	sound_to_use = my_area.ambient_music
+/mob/proc/refresh_looping_music()
+
+	if(!client || isobserver(client.mob)) // If a tree falls in the woods. sadboysuss: Don't refresh for ghosts, it sounds bad
+		return
+
+	var/area/my_area = get_area(src)
+	var/sound_to_use = my_area.ambient_music
+	var/volume_modifier = client.prefs.read_preference(/datum/preference/numeric/sound_ship_ambience_volume)
 
 	if(!sound_to_use || !(client.prefs.read_preference(/datum/preference/numeric/sound_ship_ambience_volume)))
 		SEND_SOUND(src, sound(null, repeat = 0, volume = volume_modifier, wait = 0, channel = CHANNEL_BGM_MUSIC))

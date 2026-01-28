@@ -1,14 +1,13 @@
 /datum/crafting_recipe/receiver
 	name = "Modular Rifle Receiver"
-	tool_behaviors = list(TOOL_WRENCH, TOOL_WELDER, TOOL_SAW)
+	tool_behaviors = list(TOOL_WRENCH, TOOL_WELDER)
 	result = /obj/item/weaponcrafting/receiver
 	reqs = list(
 		/obj/item/stack/sheet/iron = 5,
 		/obj/item/stack/sticky_tape = 1,
 		/obj/item/screwdriver = 1,
-		/obj/item/assembly/mousetrap = 1,
 	)
-	time = 10 SECONDS
+	time = 12 SECONDS
 	category = CAT_WEAPON_RANGED
 
 /datum/crafting_recipe/riflestock

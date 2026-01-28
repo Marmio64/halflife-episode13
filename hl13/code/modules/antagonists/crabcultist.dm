@@ -47,8 +47,24 @@
 	owner.teach_crafting_recipe(/datum/crafting_recipe/healing_poultices)
 	owner.teach_crafting_recipe(/datum/crafting_recipe/beartrap)
 
-	owner.current.change_stat(STATKEY_DEX, 4)
+	owner.current.change_stat(STATKEY_DEX, 5)
 	owner.current.change_stat(STATKEY_STR, 5)
+
+	var/obj/item/organ/eyes/oldeyes = owner.current.get_organ_slot(ORGAN_SLOT_EYES)
+	if(oldeyes)
+		oldeyes.Remove(owner.current, special = TRUE)
+		qdel(oldeyes)//eh
+	var/obj/item/organ/eyes/night_vision/mushroom/neweyes = new
+	neweyes.Insert(owner.current, special = TRUE)
+
+	var/obj/item/organ/tongue/tongue = owner.current.get_organ_slot(ORGAN_SLOT_TONGUE)
+	if(tongue)
+		tongue.liked_foodtypes |= GORE
+		tongue.liked_foodtypes |= RAW
+		tongue.liked_foodtypes |= HUMAN
+		tongue.disliked_foodtypes &= ~GORE
+		tongue.disliked_foodtypes &= ~RAW
+		tongue.disliked_foodtypes &= ~HUMAN
 
 	var/datum/action/cooldown/spell/crab_cultist/rune/scribe_rune = new(owner)
 	scribe_rune.Grant(owner.current)
@@ -140,7 +156,7 @@
 	antimagic_flags = NONE
 	cooldown_time = 150 SECONDS
 	summon_radius = 1
-	summon_type = list(/mob/living/basic/halflife/headcrab/armored/ghost_controlled)
+	summon_type = list(/mob/living/basic/halflife/headcrab/armored)
 	summon_amount = 2
 
 /datum/objective/crab_cultist/check_completion()
@@ -258,6 +274,7 @@
 	if(1 <= first_invoker_datum.sacrifices_done && first_invoker_datum.greater_strength == FALSE)
 		first_invoker_datum.greater_strength = TRUE
 		ADD_TRAIT(first_invoker, TRAIT_LESSPAIN_MINOR, CRABCULT_TRAIT)
+		ADD_TRAIT(first_invoker, TRAIT_MASOCHIST, CRABCULT_TRAIT)
 		first_invoker.AddComponent(/datum/component/unbreakable)
 		first_invoker.change_stat(STATKEY_INT, 4)
 		to_chat(first_invoker, span_cult_italic("With your first sacrifice, your master entrusts you with greater power and knowledge..."))

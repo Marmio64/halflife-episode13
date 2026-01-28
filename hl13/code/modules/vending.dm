@@ -48,12 +48,15 @@
 					/obj/item/storage/halflife/pill_bottle/antifatigue = 6,
 					/obj/item/reagent_containers/cup/glass/bottle/beer/light = 10,
 					/obj/item/storage/belt/pouch = 6,
+					/obj/item/book/bible = 5,
 					/obj/item/storage/pill_bottle/mannitol/braintumor = 5,
 					/obj/item/clothing/glasses/regular = 5,
 					/obj/item/clothing/gloves/fingerless = 3)
 
 	contraband = list(/obj/item/lockpick = 1,
-	                  /obj/item/clothing/suit/armor/browncoat = 1)
+					/obj/item/reagent_containers/cup/glass/bottle/whiskey = 1,
+					/obj/item/melee/brass_knuckles = 1,
+	                /obj/item/clothing/suit/armor/browncoat = 1)
 
 	premium = list(/obj/item/storage/backpack/halflife/satchel = 3,
 				   /obj/item/storage/backpack/halflife = 3,
@@ -224,7 +227,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	icon_state = "refill_sec"
 
 /obj/machinery/vending/armory/on_dispense(obj/item/vended_item)
-	SSsociostability.modifystability(-20) //All the equipment in this vendor is lethal. Not having to resort to lethals is a mark of good sociostability. In total if you empty the machine, you lose 200 sociostability aka 18%
+	SSsociostability.modifystability(-20) //All the equipment in this vendor is dangerous. Not having to resort to such measures is a mark of good sociostability. In total if you empty the machine, you lose 200 sociostability aka 18%
 
 /obj/machinery/vending/keyvendor
 	name = "\improper Key Vendor"
@@ -276,6 +279,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/keyvendor, 32)
 		/obj/item/food/grown/corn = 3,
 		/obj/item/food/grown/garlic = 3,
 		/obj/item/food/grown/cabbage = 3,
+		/obj/item/food/grown/chili = 3,
+		/obj/item/storage/fancy/egg_box = 1,
 		/obj/item/halflife/nutrient_bar_wrapping/water = 4,
 		/obj/item/halflife/nutrient_bar_wrapping/pork = 2,
 		/obj/item/halflife/nutrient_bar_wrapping/beef = 1,
@@ -283,7 +288,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/keyvendor, 32)
 		/obj/item/storage/halflife/hand_box/egg = 3,
 		/obj/item/storage/halflife/hand_box/chicken = 2,
 		/obj/item/storage/halflife/hand_box/cookie = 3,
-		/obj/item/reagent_containers/cup/soda_cans/halflife/coffee = 6,
+		/obj/item/reagent_containers/cup/soda_cans/halflife/coffee = 8,
 		/obj/item/reagent_containers/cup/soda_cans/breenwater/green = 6,
 		/obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 2,
 		/obj/item/reagent_containers/cup/glass/bottle/beer/light = 10,
