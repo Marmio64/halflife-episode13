@@ -2,7 +2,7 @@
 	name = "Nearsighted"
 	desc = "You are nearsighted (and receive lower Perception stat) without prescription glasses, but spawn with a pair."
 	icon = FA_ICON_GLASSES
-	value = -5
+	value = -4
 	gain_text = span_danger("Things far away from you start looking blurry.")
 	lose_text = span_notice("You start seeing faraway things normally again.")
 	medical_record_text = "Patient requires prescription glasses in order to counteract nearsightedness."
