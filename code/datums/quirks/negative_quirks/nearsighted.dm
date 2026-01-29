@@ -1,6 +1,6 @@
 /datum/quirk/item_quirk/nearsighted
 	name = "Nearsighted"
-	desc = "You are nearsighted without prescription glasses, but spawn with a pair. You also naturally have a lower Perception stat."
+	desc = "You are nearsighted (and receive lower Perception stat) without prescription glasses, but spawn with a pair."
 	icon = FA_ICON_GLASSES
 	value = -5
 	gain_text = span_danger("Things far away from you start looking blurry.")
