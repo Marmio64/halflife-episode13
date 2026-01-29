@@ -54,6 +54,8 @@
 		/obj/item/flashlight/flare/the_hidden = 1,
 	)
 
+	extra_per = 3
+
 //Use molotovs to keep the hidden at bay
 /datum/outfit/deployment_loadout/hidden/rebel/molotov_partisan
 	name = "Hidden: Refugee Molotov Partisan"
@@ -105,6 +107,7 @@
 	back = /obj/item/melee/sledgehammer
 
 	extra_str = 10
+	extra_end = 6
 
 //The attacker, conscripts move a bit faster than their comrades and have the best medium to long range weapon.
 //They excel at giving chase to the hidden, just don't get cocky.

@@ -65,7 +65,6 @@
 		"cargorequest",
 		"med_data",
 		"crewconsole",
-		"bankmachine",
 		"account_console",
 		"idcard",
 		"c-reader",

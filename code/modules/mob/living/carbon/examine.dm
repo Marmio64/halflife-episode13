@@ -607,6 +607,21 @@
 		if(20 to INFINITY)
 			dex_text = "supernaturally lithe"
 	. += list(span_notice("[p_They()] appear[p_s()] [dex_text]."))
+	var/end_text
+	switch(get_stat_level(STATKEY_END))
+		if(-INFINITY to 3)
+			end_text = "very untoned"
+		if(4 to 8)
+			end_text = "untoned"
+		if(9 to 11)
+			end_text = "to be moderately toned"
+		if(12 to 15)
+			end_text = "toned and defined"
+		if(16 to 19)
+			end_text = "very toned and defined"
+		if(20 to INFINITY)
+			end_text = "inhumanely defined and toned"
+	. += list(span_notice("[p_They()] appear[p_s()] [end_text]."))
 
 	if(istype(w_uniform, /obj/item/clothing/under))
 		var/obj/item/clothing/under/undershirt = w_uniform

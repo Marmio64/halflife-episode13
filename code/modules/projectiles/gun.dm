@@ -474,13 +474,11 @@
 			bonus_spread -= 5
 		if(HAS_TRAIT(user, TRAIT_TERRIBLE_AIM)) //HL13 EDIT, TRAIT TO MAKE SPREAD TERRIBLE
 			bonus_spread += 25
-		if(HAS_TRAIT(user, TRAIT_BAD_AIM)) //HL13 EDIT, TRAIT TO MAKE SPREAD BAD
-			bonus_spread += 10
 
 		if(user.move_intent == MOVE_INTENT_RUN) //hl13 edit, aim better when you're not running all over the place
 			bonus_spread += 5
 
-		bonus_spread -= (user.get_stat_level(STATKEY_DEX) - 10) //hl13 edit
+		bonus_spread -= ((user.get_stat_level(STATKEY_PER) - 10) * 2) //hl13 edit
 
 		var/list/bonus_spread_values = list(base_bonus_spread, bonus_spread)
 		SEND_SIGNAL(user, COMSIG_MOB_FIRED_GUN, src, target, params, zone_override, bonus_spread_values)

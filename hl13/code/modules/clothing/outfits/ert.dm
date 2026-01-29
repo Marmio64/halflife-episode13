@@ -32,6 +32,7 @@
 
 	H.change_stat(STATKEY_DEX, 2)
 	H.change_stat(STATKEY_STR, 5)
+	H.change_stat(STATKEY_END, 5)
 
 /datum/outfit/centcom/ert/overwatch/post_equip(mob/living/carbon/human/equipped, visuals_only)
 	..()

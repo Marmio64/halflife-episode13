@@ -84,7 +84,7 @@
 	id = TECHWEB_NODE_CRYOSTASIS
 	display_name = "Cryostasis"
 	description = "Advanced technology which allows citizens to be kept in stasis, alive and well despite grievous injuries."
-	prereq_ids = list(TECHWEB_NODE_MEDBAY_EQUIP_ADV, TECHWEB_NODE_FUSION)
+	prereq_ids = list(TECHWEB_NODE_MEDBAY_EQUIP_ADV)
 	design_ids = list(
 		"stasis",
 	)

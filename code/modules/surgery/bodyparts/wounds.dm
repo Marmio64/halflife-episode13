@@ -79,14 +79,16 @@
 	if(HAS_TRAIT(owner, TRAIT_EASYBLEED) && !HAS_TRAIT(owner, TRAIT_HUSK) && !HAS_TRAIT(owner, TRAIT_NOBLOOD) && ((woundtype == WOUND_PIERCE) || (woundtype == WOUND_SLASH)))
 		damage *= 1.5
 
-	if(prob(20)) //Feeling lucky?
+	if(prob(15)) //Feeling lucky?
 		damage *= 0.8
+
+	var/mob_endurance = owner.get_stat_level(STATKEY_END)
 
 	var/base_roll = round(damage ** WOUND_DAMAGE_EXPONENT)
 
 	var/injury_roll = base_roll
 
-	injury_roll = check_woundings_mods(woundtype, injury_roll, damage, wound_bonus, exposed_wound_bonus, wound_clothing)
+	injury_roll = check_woundings_mods(woundtype, injury_roll, damage, wound_bonus, exposed_wound_bonus, wound_clothing, mob_endurance)
 	var/list/series_wounding_mods = check_series_wounding_mods()
 
 	if(injury_roll > WOUND_DISMEMBER_OUTRIGHT_THRESH && prob(get_damage() / max_damage * 100) && can_dismember())
@@ -223,7 +225,7 @@
  * Arguments:
  * * It's the same ones on [/obj/item/bodypart/proc/receive_damage] except injury_roll, which is fed to this proc.
  */
-/obj/item/bodypart/proc/check_woundings_mods(wounding_type, injury_roll, damage, wound_bonus, exposed_wound_bonus, wound_clothing)
+/obj/item/bodypart/proc/check_woundings_mods(wounding_type, injury_roll, damage, wound_bonus, exposed_wound_bonus, wound_clothing, mob_endurance)
 	SHOULD_CALL_PARENT(TRUE)
 
 	var/armor_ablation = 0
@@ -243,6 +245,8 @@
 					clothes.take_damage_zone(body_zone, damage, BURN)
 
 	injury_mod += wound_bonus
+
+	injury_mod -= (mob_endurance - 10) //10 endurance, no effect. 20 endurance, -10 wound bonus. 0 Endurance means +10 wound bonus.
 
 	for(var/datum/wound/wound as anything in wounds)
 		injury_mod += wound.threshold_penalty

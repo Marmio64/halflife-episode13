@@ -2,7 +2,7 @@
 	name = "Intelligent"
 	desc = "You are an intelligent individual. You can craft faster, hack faster, more easily handle technology, and more."
 	icon = FA_ICON_BRAIN
-	value = 5
+	value = 7
 	medical_record_text = "Patient is rather intelligent"
 
 /datum/quirk/intelligent/add()

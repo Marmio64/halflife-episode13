@@ -156,7 +156,7 @@
 	id = TECHWEB_NODE_HUD
 	display_name = "Integrated HUDs"
 	description = "Advanced Heads Up Display devices contained within implants and glasses which improve civic capabilities through better information gathering abilities."
-	prereq_ids = list(TECHWEB_NODE_HOLOGRAPHICS, TECHWEB_NODE_CYBER_IMPLANTS)
+	prereq_ids = list(TECHWEB_NODE_CYBER_IMPLANTS)
 	design_ids = list(
 		"health_hud",
 		"diagnostic_hud",

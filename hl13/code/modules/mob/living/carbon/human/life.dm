@@ -10,7 +10,7 @@
 		var/painpercent = get_complex_pain()
 
 		if(world.time > last_painstun + painstuncooldown)
-			var/probby = 30
+			var/probby = 50 - (get_stat_level(STATKEY_END) * 2) //each point of endurance reduces chance for the pain stun, 30% at 10 endurance, 10% at 20 endurance.
 			if(IsKnockdown())
 				if(prob(3) && (painpercent >= 80) )
 					emote("scream")
@@ -83,7 +83,7 @@
 //		if(BPinteg > amt) //this is here to ensure that pain doesn't add up, but is rather picked from the worst limb
 		amt += (BPinteg) - (get_drunk_amount()/4) //inebriation reduces percieved pain
 
-		amt -= ((get_stat_level(STATKEY_STR) - 10) * 2) //low strength increases perceived pain, high strength decreases it
+		amt -= (get_stat_level(STATKEY_END) - 10) //low endurance increases perceived pain, high strength decreases it
 
 		if(HAS_TRAIT(src, TRAIT_LESSPAIN_MAJOR)) //about -90 pain
 			amt -= 15

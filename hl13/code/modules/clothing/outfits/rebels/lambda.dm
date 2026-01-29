@@ -26,6 +26,8 @@
 
 	H.change_stat(STATKEY_DEX, 1)
 	H.change_stat(STATKEY_STR, 1)
+	H.change_stat(STATKEY_END, 1)
+	H.change_stat(STATKEY_PER, 1)
 
 /datum/outfit/rebel/medium
 	name = "Medium Rebel"

@@ -1,6 +1,6 @@
 /datum/quirk/dextrous
 	name = "Dextrous"
-	desc = "You are deft with your hands and feet. You can dodge more easily, run for longer, aim firearms more effectively, and more."
+	desc = "You are deft with your hands and feet. You can dodge more easily, run for longer, lockpick better, and more."
 	icon = FA_ICON_HANDS
 	value = 7
 	medical_record_text = "Patient is rather dextrous"

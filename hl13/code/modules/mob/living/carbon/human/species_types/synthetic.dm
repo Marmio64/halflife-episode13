@@ -39,7 +39,9 @@
 /datum/species/human/synth/cremator/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
 	C.change_stat(STATKEY_STR, 5)
+	C.change_stat(STATKEY_END, 5)
 
 /datum/species/human/synth/cremator/on_species_loss(mob/living/carbon/C)
 	..()
-	C.change_stat(STATKEY_STR, 5)
+	C.change_stat(STATKEY_STR, -5)
+	C.change_stat(STATKEY_END, -5)

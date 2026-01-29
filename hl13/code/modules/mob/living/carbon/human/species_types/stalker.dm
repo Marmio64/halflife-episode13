@@ -62,6 +62,7 @@
 	C.change_stat(STATKEY_INT, -4)
 	C.change_stat(STATKEY_DEX, -4)
 	C.change_stat(STATKEY_STR, -4)
+	C.change_stat(STATKEY_END, -4)
 
 /datum/species/stalker/on_species_loss(mob/living/carbon/human/C)
 	..()
@@ -72,6 +73,7 @@
 	C.change_stat(STATKEY_INT, 4)
 	C.change_stat(STATKEY_DEX, 4)
 	C.change_stat(STATKEY_STR, 4)
+	C.change_stat(STATKEY_END, 4)
 
 /datum/species/stalker/proc/handle_speech(datum/source, list/speech_args)
 	playsound(source, 'hl13/sound/voice/stalker/stalker_talk.ogg', 50, 1, 1)

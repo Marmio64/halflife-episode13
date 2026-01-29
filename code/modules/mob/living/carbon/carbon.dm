@@ -168,7 +168,13 @@
 		if(start_T && end_T)
 			log_combat(src, thrown_thing, "thrown", addition="grab from tile in [AREACOORD(start_T)] towards tile at [AREACOORD(end_T)]")
 	var/power_throw = 0
-	var/extra_throw_range = HAS_TRAIT(src, TRAIT_THROWINGARM) ? 2 : 0
+	var/extra_throw_range = 0
+
+	if(13 <= (get_stat_level(STATKEY_STR)))
+		extra_throw_range += 1
+
+	if(16 <= (get_stat_level(STATKEY_STR)))
+		extra_throw_range += 1
 
 	var/obj/item/organ/cyberimp/chest/spine/potential_spine = get_organ_slot(ORGAN_SLOT_SPINE)
 	if(istype(potential_spine))

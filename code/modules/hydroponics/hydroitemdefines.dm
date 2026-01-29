@@ -659,7 +659,7 @@
 
 
 /obj/item/reagent_containers/cup/bottle/nutrient/ez
-	name = "bottle of E-Z-Nutrient"
+	name = "bottle of E-Z-Nutrient Fertilizer"
 	desc = "Contains a fertilizer that causes mild mutations and gradual plant growth with each harvest."
 	list_reagents = list(/datum/reagent/plantnutriment/eznutriment = 50)
 

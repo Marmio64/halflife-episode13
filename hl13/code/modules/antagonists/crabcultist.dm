@@ -49,6 +49,7 @@
 
 	owner.current.change_stat(STATKEY_DEX, 5)
 	owner.current.change_stat(STATKEY_STR, 5)
+	owner.current.change_stat(STATKEY_END, 5)
 
 	var/obj/item/organ/eyes/oldeyes = owner.current.get_organ_slot(ORGAN_SLOT_EYES)
 	if(oldeyes)

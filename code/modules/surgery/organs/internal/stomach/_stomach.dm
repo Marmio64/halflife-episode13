@@ -190,6 +190,7 @@
 	if(nutrition < NUTRITION_LEVEL_DYING) //Actively starving, body is failing
 		human.set_stat_modifier("hunger", STATKEY_DEX, -4)
 		human.set_stat_modifier("hunger", STATKEY_STR, -4)
+		human.set_stat_modifier("hunger", STATKEY_END, -4)
 
 		if(prob(3))
 			to_chat(human, span_warning("You feel your body wasting away from your hunger..."))
@@ -222,6 +223,7 @@
 	if(hydration < HYDRATION_LEVEL_DYING) //So damn thirsty that you are dying
 		human.set_stat_modifier("thirst", STATKEY_DEX, -3)
 		human.set_stat_modifier("thirst", STATKEY_STR, -3)
+		human.set_stat_modifier("thirst", STATKEY_END, -3)
 
 		if(prob(4))
 			to_chat(human, span_warning("So thirsty, you feel so weak..."))

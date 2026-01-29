@@ -2,7 +2,7 @@
 	name = "Scarred Eye"
 	desc = "An accident in your past has cost you one of your eyes, but you got a cool eyepatch. Yarr!"
 	icon = FA_ICON_EYE_SLASH
-	value = -3
+	value = -5
 	gain_text = span_danger("After all this time, your eye still stings a bit...")
 	lose_text = span_notice("Your peripherial vision grows by about thirty percent.")
 	medical_record_text = "Patient has severe scarring on one of their eyes, resulting in partial vision loss."
@@ -34,6 +34,7 @@
 	))
 
 /datum/quirk/item_quirk/scarred_eye/add(client/client_source)
+	quirk_holder.change_stat(STATKEY_PER, -2)
 	var/mob/living/carbon/human/human_owner = quirk_holder
 	var/obj/item/organ/eyes/eyes = human_owner.get_organ_slot(ORGAN_SLOT_EYES)
 	if (isnull(eyes))
@@ -56,6 +57,7 @@
 	eyes.apply_scar(eye_side)
 
 /datum/quirk/item_quirk/scarred_eye/remove()
+	quirk_holder.change_stat(STATKEY_PER, 2)
 	var/mob/living/carbon/human/human_owner = quirk_holder
 	var/obj/item/organ/eyes/eyes = human_owner.get_organ_slot(ORGAN_SLOT_EYES)
 	if (!isnull(eyes))

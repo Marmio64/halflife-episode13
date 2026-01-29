@@ -101,10 +101,12 @@
 	owner.overlay_fullscreen(id, /atom/movable/screen/fullscreen/blind)
 	// You are blind - at most, able to make out shapes near you
 	owner.add_client_colour(/datum/client_colour/monochrome/blind)
+	owner.change_stat(STATKEY_PER, -10)
 
 /datum/status_effect/grouped/blindness/proc/make_unblind()
 	owner.clear_fullscreen(id)
 	owner.remove_client_colour(/datum/client_colour/monochrome/blind)
+	owner.change_stat(STATKEY_PER, 10)
 
 /datum/status_effect/grouped/blindness/on_remove()
 	make_unblind()

@@ -270,7 +270,7 @@
 
 /turf/closed/mineral/random
 	/// What are the base odds that this turf spawns a mineral in the wall on initialize?
-	var/mineralChance = 6 //hl13 edit, reduce this
+	var/mineralChance = 7 //hl13 edit, reduce this
 	/// Does this mineral determine its random chance and mineral contents based on proximity to a vent? Overrides mineralChance and mineralAmt.
 	var/proximity_based = FALSE
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
@@ -283,6 +283,7 @@
 		/obj/item/stack/ore/iron = 71,
 		/obj/item/stack/ore/copper = 5,
 		/obj/item/stack/ore/silver = 9,
+		/obj/item/stack/ore/diamond = 1,
 	)
 
 /turf/closed/mineral/random/Initialize(mapload)
@@ -332,6 +333,7 @@
 		/obj/item/stack/ore/iron = 64,
 		/obj/item/stack/ore/copper = 10,
 		/obj/item/stack/ore/silver = 9,
+		/obj/item/stack/ore/diamond = 2,
 	)
 
 /turf/closed/mineral/random/high_chance/volcanic

@@ -1,23 +1,31 @@
 #define UPDATE_STRENGTH(...) STASTR = clamp(base_strength + modified_strength, 1, 20)
+#define UPDATE_PERCEPTION(...) STAPER = clamp(base_perception + modified_perception, 1, 20)
 #define UPDATE_INTELLIGENCE(...) STAINT = clamp(base_intelligence + modified_intelligence, 1, 20)
+#define UPDATE_ENDURANCE(...) STAEND = clamp(base_endurance + modified_endurance, 1, 20)
 #define UPDATE_DEXTERITY(...) STADEX = clamp(base_dexterity + modified_dexterity, 1, 20)
 
 /mob/living
 	/* Base stat values */
 	var/base_strength = 10
+	var/base_perception = 10
 	var/base_intelligence = 10
+	var/base_endurance = 10
 	var/base_dexterity = 10
 
 	/* Cached modifier values, calculated when needed */
 	VAR_PRIVATE/final/modified_strength
+	VAR_PRIVATE/final/modified_perception
 	VAR_PRIVATE/final/modified_intelligence
+	VAR_PRIVATE/final/modified_endurance
 	VAR_PRIVATE/final/modified_dexterity
 	/// Lazy-list of stat modifiers keyed with sources.
 	var/list/stat_modifiers = null
 
 	/* Calculated stat values, these are what you want to use. */
 	var/final/STASTR = 10
+	var/final/STAPER = 10
 	var/final/STAINT = 10
+	var/final/STAEND = 10
 	var/final/STADEX = 10
 
 	var/has_rolled_for_stats = FALSE
@@ -33,7 +41,9 @@
 		return FALSE
 
 	base_strength += (prob(33) && pick(-1, 1))
+	base_perception += (prob(33) && pick(-1, 1))
 	base_intelligence += (prob(33) && pick(-1, 1))
+	base_endurance += (prob(33) && pick(-1, 1))
 	base_dexterity += (prob(33) && pick(-1, 1))
 
 /*
@@ -81,9 +91,15 @@
 			if(STATKEY_STR)
 				modified_strength = new_total
 				UPDATE_STRENGTH()
+			if(STATKEY_PER)
+				modified_perception = new_total
+				UPDATE_PERCEPTION()
 			if(STATKEY_INT)
 				modified_intelligence = new_total
 				UPDATE_INTELLIGENCE()
+			if(STATKEY_END)
+				modified_endurance = new_total
+				UPDATE_ENDURANCE()
 			if(STATKEY_DEX)
 				modified_dexterity = new_total
 				UPDATE_DEXTERITY()
@@ -104,9 +120,15 @@
 		if(STATKEY_STR)
 			modified_strength = new_total
 			UPDATE_STRENGTH()
+		if(STATKEY_PER)
+			modified_perception = new_total
+			UPDATE_PERCEPTION()
 		if(STATKEY_INT)
 			modified_intelligence = new_total
 			UPDATE_INTELLIGENCE()
+		if(STATKEY_END)
+			modified_endurance = new_total
+			UPDATE_ENDURANCE()
 		if(STATKEY_DEX)
 			modified_dexterity = new_total
 			UPDATE_DEXTERITY()
@@ -125,9 +147,15 @@
 			if(STATKEY_STR)
 				modified_strength -= adjustment
 				UPDATE_STRENGTH()
+			if(STATKEY_PER)
+				modified_perception -= adjustment
+				UPDATE_PERCEPTION()
 			if(STATKEY_INT)
 				modified_intelligence -= adjustment
 				UPDATE_INTELLIGENCE()
+			if(STATKEY_END)
+				modified_endurance -= adjustment
+				UPDATE_ENDURANCE()
 			if(STATKEY_DEX)
 				modified_dexterity -= adjustment
 				UPDATE_DEXTERITY()
@@ -138,7 +166,9 @@
 
 	return list(
 		(STATKEY_STR) = STASTR,
+		(STATKEY_PER) = STAPER,
 		(STATKEY_INT) = STAINT,
+		(STATKEY_END) = STAEND,
 		(STATKEY_DEX) = STADEX,
 	)
 
@@ -150,8 +180,12 @@
 	switch(stat_key)
 		if(STATKEY_STR)
 			return STASTR - opponent.STASTR
+		if(STATKEY_PER)
+			return STAPER - opponent.STAPER
 		if(STATKEY_INT)
 			return STAINT - opponent.STAINT
+		if(STATKEY_END)
+			return STAEND - opponent.STAEND
 		if(STATKEY_DEX)
 			return STADEX - opponent.STADEX
 	return
@@ -165,15 +199,23 @@
 	switch(opp_stat_key)
 		if(STATKEY_STR)
 			opponent_stat = opponent.STASTR
+		if(STATKEY_PER)
+			opponent_stat = opponent.STAPER
 		if(STATKEY_INT)
 			opponent_stat = opponent.STAINT
+		if(STATKEY_END)
+			opponent_stat = opponent.STAEND
 		if(STATKEY_DEX)
 			opponent_stat = opponent.STADEX
 	switch(our_stat_key)
 		if(STATKEY_STR)
 			our_stat = STASTR
+		if(STATKEY_PER)
+			our_stat = STAPER
 		if(STATKEY_INT)
 			our_stat = STAINT
+		if(STATKEY_END)
+			our_stat = STAEND
 		if(STATKEY_DEX)
 			our_stat = STADEX
 	return our_stat - opponent_stat
@@ -189,8 +231,12 @@
 	switch(stat_key)
 		if(STATKEY_STR)
 			tocheck = STASTR
+		if(STATKEY_PER)
+			tocheck = STAPER
 		if(STATKEY_INT)
 			tocheck = STAINT
+		if(STATKEY_END)
+			tocheck = STAEND
 		if(STATKEY_DEX)
 			tocheck = STADEX
 	if(invert_dc)
@@ -202,8 +248,12 @@
 	switch(stat_key)
 		if(STATKEY_STR)
 			return STASTR
+		if(STATKEY_PER)
+			return STAPER
 		if(STATKEY_INT)
 			return STAINT
+		if(STATKEY_END)
+			return STAEND
 		if(STATKEY_DEX)
 			return STADEX
 
@@ -224,7 +274,9 @@
 	if(including_modifiers)
 		// we discard all of our mods and compile them again
 		modified_strength = 0
+		modified_perception = 0
 		modified_intelligence = 0
+		modified_endurance = 0
 		modified_dexterity = 0
 
 		for(var/source in stat_modifiers)
@@ -234,13 +286,19 @@
 				switch(stat_key) //I am sorry for this
 					if(STATKEY_STR)
 						modified_strength += adjustment
+					if(STATKEY_PER)
+						modified_perception += adjustment
 					if(STATKEY_INT)
 						modified_intelligence += adjustment
+					if(STATKEY_END)
+						modified_endurance += adjustment
 					if(STATKEY_DEX)
 						modified_dexterity += adjustment
 
 	UPDATE_STRENGTH()
+	UPDATE_PERCEPTION()
 	UPDATE_INTELLIGENCE()
+	UPDATE_ENDURANCE()
 	UPDATE_DEXTERITY()
 
 /mob/living/proc/stat_to_description(statinput = 10)
@@ -285,16 +343,22 @@
 	set category = "IC"
 
 	var/strength = get_stat_level(STATKEY_STR)
+	var/perception = get_stat_level(STATKEY_PER)
 	var/intelligence = get_stat_level(STATKEY_INT)
+	var/endurance = get_stat_level(STATKEY_END)
 	var/dexterity = get_stat_level(STATKEY_DEX)
 
 	to_chat(src, span_notice("*-----------------------------------------------"))
 	to_chat(src, span_notice("Your Strength is [stat_to_description(strength)]."))
+	to_chat(src, span_notice("Your Perception is [stat_to_description(perception)]."))
 	to_chat(src, span_notice("Your Intelligence is [stat_to_description(intelligence)]"))
+	to_chat(src, span_notice("Your Endurance is [stat_to_description(endurance)]"))
 	to_chat(src, span_notice("Your Dexterity is [stat_to_description(dexterity)]"))
 	to_chat(src, span_notice("-----------------------------------------------*"))
 
 
 #undef UPDATE_STRENGTH
+#undef UPDATE_PERCEPTION
 #undef UPDATE_INTELLIGENCE
+#undef UPDATE_ENDURANCE
 #undef UPDATE_DEXTERITY

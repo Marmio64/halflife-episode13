@@ -79,6 +79,7 @@
 	back = /obj/item/melee/sledgehammer
 
 	extra_str = 10
+	extra_end = 6
 
 /datum/outfit/deployment_loadout/hidden/combine/riot_cop/pre_equip(mob/living/carbon/human/H)
 	. = ..()

@@ -89,6 +89,7 @@
 
 	H.change_stat(STATKEY_DEX, 3)
 	H.change_stat(STATKEY_STR, 3)
+	H.change_stat(STATKEY_END, 3)
 
 /datum/outfit/job/hos/post_equip(mob/living/carbon/human/equipped, visuals_only)
 	..()

@@ -16,6 +16,8 @@
 	var/datum/language/picked = GLOB.language_datum_instances[pick_weight(language_weights)]
 	if(unique)
 		return picked.get_random_unique_name(gender)
+	if(picked == null)
+		return
 	return picked.get_random_name(gender)
 
 /**

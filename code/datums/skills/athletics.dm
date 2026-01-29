@@ -36,8 +36,10 @@
 		ADD_TRAIT(mind, TRAIT_EXAMINE_FITNESS, SKILL_TRAIT)
 	if(new_level == SKILL_LEVEL_MASTER)
 		mind.current.change_stat(STATKEY_STR, 1)
+		mind.current.change_stat(STATKEY_END, 1)
 	if(new_level == SKILL_LEVEL_LEGENDARY)
 		mind.current.change_stat(STATKEY_STR, 1)
+		mind.current.change_stat(STATKEY_END, 1)
 
 /datum/skill/athletics/level_lost(datum/mind/mind, new_level, old_level, silent)
 	. = ..()
@@ -45,5 +47,7 @@
 		REMOVE_TRAIT(mind, TRAIT_EXAMINE_FITNESS, SKILL_TRAIT)
 	if(old_level == SKILL_LEVEL_MASTER)
 		mind.current.change_stat(STATKEY_STR, -1)
+		mind.current.change_stat(STATKEY_END, -1)
 	if(old_level == SKILL_LEVEL_LEGENDARY)
 		mind.current.change_stat(STATKEY_STR, -1)
+		mind.current.change_stat(STATKEY_END, -1)

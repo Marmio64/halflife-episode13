@@ -27,7 +27,7 @@
 	if(!(mobility_flags & MOBILITY_MOVE))
 		return FALSE
 
-	var/prob2defend = ((get_stat_level(STATKEY_STR) * 3) - 10)
+	var/prob2defend = ((get_stat_level(STATKEY_STR) * 3.5) - 10)
 	var/mob/living/H = src
 	var/mob/living/U = user
 	if(H && U)
@@ -36,7 +36,7 @@
 	if(check_behind(user, src)) //If the attacker is on the three tiles behind the defender, there is no chance you're parrying them.
 		return FALSE
 
-	var/dodge_chance = (get_stat_level(STATKEY_DEX) * 2)
+	var/dodge_chance = ((get_stat_level(STATKEY_DEX) - 2) * 2.5) //20% at 10 dex, 45% at 20 dex
 
 	if(prob(dodge_chance) && world.time > last_dodge + dodge_cooldown) //chance to dodge. Dodging doesn't require a weapon, but there is decent cooldown on dodges
 		last_dodge = world.time

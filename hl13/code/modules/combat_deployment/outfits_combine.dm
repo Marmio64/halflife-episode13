@@ -70,6 +70,7 @@
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
 	extra_str = 3
+	extra_end = 3
 
 /// TIER 2 ////////////////////////////////////////////////////////
 
@@ -169,6 +170,7 @@
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
 	extra_str = 4 // all combine engis get extra strength over rebel engis since rebel engis get some armor
+	extra_end = 4
 
 /// TIER 3 ////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier3
@@ -243,6 +245,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 
 	extra_str = 4
+	extra_end = 4
 
 /datum/outfit/deployment_loadout/combine/tier3/divisional
 	name = "Deployment: Divisional Lead"
@@ -340,6 +343,7 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag, /datum/action/cooldown/spell/conjure_item/razor_wire/slow)
 
 	extra_str = 5
+	extra_end = 5
 
 /datum/outfit/deployment_loadout/combine/tier3/sniper
 	name = "Deployment: Sniper OTA"
@@ -359,6 +363,8 @@
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
+
+	extra_per = 5
 
 /// TIER 4 ////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier4
@@ -446,6 +452,8 @@
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
+
+	extra_per = 5
 
 /datum/outfit/deployment_loadout/combine/tier4/ordinal
 	name = "Deployment: Combine Ordinal"
@@ -540,6 +548,7 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag, /datum/action/cooldown/spell/conjure_item/razor_wire)
 
 	extra_str = 5
+	extra_end = 5
 
 /obj/item/sbeacondrop/combine_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a combine turret to your location</i>."
@@ -632,6 +641,8 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
 
+	extra_end = 2
+
 /datum/outfit/deployment_loadout/combine/tier5/assassin
 	name = "Deployment: Combine Assassin"
 	display_name = "Combine Assassin (Pick)"
@@ -655,6 +666,7 @@
 
 	extra_dex = 4
 	extra_str = 5
+	extra_per = 5
 
 /datum/outfit/deployment_loadout/combine/tier5/suppressor
 	name = "Deployment: Combine Suppressor"

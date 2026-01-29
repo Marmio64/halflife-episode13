@@ -22,8 +22,10 @@
 	var/id_name
 
 	var/extra_str
-	var/extra_dex
+	var/extra_per
 	var/extra_int
+	var/extra_end
+	var/extra_dex
 
 /datum/outfit/deployment_loadout/pre_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
@@ -64,10 +66,14 @@
 
 	if(extra_str)
 		human_to_equip.change_stat(STATKEY_STR, extra_str)
-	if(extra_dex)
-		human_to_equip.change_stat(STATKEY_DEX, extra_dex)
+	if(extra_per)
+		human_to_equip.change_stat(STATKEY_PER, extra_str)
 	if(extra_int)
 		human_to_equip.change_stat(STATKEY_INT, extra_int)
+	if(extra_end)
+		human_to_equip.change_stat(STATKEY_END, extra_dex)
+	if(extra_dex)
+		human_to_equip.change_stat(STATKEY_DEX, extra_str)
 
 	var/obj/item/card/id/W = human_to_equip.wear_id
 	if(W)

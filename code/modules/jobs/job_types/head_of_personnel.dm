@@ -85,6 +85,7 @@
 
 	user.change_stat(STATKEY_INT, 2)
 	user.change_stat(STATKEY_DEX, 1)
+	user.change_stat(STATKEY_PER, 1)
 	user.change_stat(STATKEY_STR, -1)
 
 /obj/item/paper/fluff/ids_for_dummies

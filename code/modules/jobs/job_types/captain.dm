@@ -104,6 +104,9 @@
 
 	ADD_TRAIT(user, TRAIT_ABOVE_LABOR, JOB_TRAIT)
 
-	user.change_stat(STATKEY_INT, 1)
-	user.change_stat(STATKEY_DEX, 1)
 	user.change_stat(STATKEY_STR, 1)
+	user.change_stat(STATKEY_PER, 1)
+	user.change_stat(STATKEY_INT, 1)
+	user.change_stat(STATKEY_END, 1)
+	user.change_stat(STATKEY_DEX, 1)
+

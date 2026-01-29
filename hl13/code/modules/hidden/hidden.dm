@@ -513,6 +513,7 @@
 
 	extra_dex = 0
 	extra_str = 10
+	extra_end = 6
 
 	combat_music = 'hl13/sound/music/combat/pyramidhead.ogg'
 

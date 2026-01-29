@@ -16,6 +16,7 @@
 	experience_multiplier = initial(experience_multiplier)
 	for(var/key in experience_multiplier_reasons)
 		experience_multiplier += experience_multiplier_reasons[key]
+	experience_multiplier += ((current.get_stat_level(STATKEY_INT) - 10) / 10) //extra int points over 10 increase xp gain by 10%
 	known_skills[skill][SKILL_EXP] = max(0, known_skills[skill][SKILL_EXP] + amt*experience_multiplier) //Update exp. Prevent going below 0
 	known_skills[skill][SKILL_LVL] = update_skill_level(skill)//Check what the current skill level is based on that skill's exp
 	if(known_skills[skill][SKILL_LVL] > old_level)

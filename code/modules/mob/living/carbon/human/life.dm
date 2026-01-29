@@ -106,9 +106,12 @@
 			add_mood_event("sleepy", /datum/mood_event/sleepy/exhausted)
 			set_stat_modifier("sleep", STATKEY_DEX, -3)
 			set_stat_modifier("sleep", STATKEY_STR, -2)
+			set_stat_modifier("sleep", STATKEY_END, -2)
+			set_stat_modifier("sleep", STATKEY_PER, -2)
 		else
 			add_mood_event("sleepy", /datum/mood_event/sleepy/exhausted/spartan)
 			set_stat_modifier("sleep", STATKEY_DEX, -2)
+			set_stat_modifier("sleep", STATKEY_PER, -2)
 
 	else if(tiredness > TIREDNESS_SLEEPY_THRESHOLD)
 		throw_alert("sleepy", /atom/movable/screen/alert/sleepy)

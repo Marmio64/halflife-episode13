@@ -78,6 +78,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_str = 3
+	extra_end = 3
 
 /datum/outfit/deployment_loadout/rebel/tier1/smuggler
 	name = "Deployment: Refugee Smuggler"
@@ -186,6 +187,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_str = 3
+	extra_end = 3
 
 /datum/outfit/deployment_loadout/rebel/tier2/smuggler
 	name = "Deployment: Upgraded Smuggler"
@@ -290,6 +292,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_str = 2
+	extra_end = 2
 
 /datum/outfit/deployment_loadout/rebel/tier3/vortigaunt
 	name = "Deployment: Vortigaunt"
@@ -328,6 +331,8 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+	extra_per = 5
+
 /datum/outfit/deployment_loadout/rebel/tier3/engineer
 	name = "Deployment: Upgraded Refugee Engineer+"
 	display_name = "Upgraded Refugee Engineer+ (Support)"
@@ -357,6 +362,7 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag, /datum/action/cooldown/spell/conjure_item/razor_wire/slow)
 
 	extra_str = 4
+	extra_end = 4
 
 /datum/outfit/deployment_loadout/rebel/tier3/scout
 	name = "Deployment: Rebel Scout"
@@ -500,6 +506,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_str = 4
+	extra_end = 4
 
 
 /datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel
@@ -570,6 +577,8 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+	extra_per = 5
+
 /datum/outfit/deployment_loadout/rebel/tier4/engineer
 	name = "Deployment: Heavy Refugee Engineer"
 	display_name = "Heavy Refugee Engineer (Support)"
@@ -599,6 +608,7 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag, /datum/action/cooldown/spell/conjure_item/razor_wire)
 
 	extra_str = 4
+	extra_end = 4
 
 /obj/item/sbeacondrop/rebel_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a rebel turret to your location</i>."
@@ -771,6 +781,8 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
 
+	extra_end = 2
+
 /datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt
 	name = "Deployment: Extract Empowered Vortigaunt"
 	display_name = "Extract Empowered Vortigaunt (Support)"
@@ -819,3 +831,4 @@
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
 
 	extra_dex = 2
+	extra_per = 6

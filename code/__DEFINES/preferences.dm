@@ -55,9 +55,9 @@
 #define SEC_DEPT_NONE "Random Callsign (Unspecialized)"
 #define SEC_DEPT_XRAY "Xray (+Intelligence)"
 #define SEC_DEPT_HELIX "Helix (+Intelligence)"
-#define SEC_DEPT_DEFENDER "Defender (+Strength)"
+#define SEC_DEPT_DEFENDER "Defender (+Endurance)"
 #define SEC_DEPT_JURY "Jury (+Strength)"
-#define SEC_DEPT_RANGER "Ranger (+Dexterity)"
+#define SEC_DEPT_RANGER "Ranger (+Perception)"
 #define SEC_DEPT_QUICK "Quick (+Dexterity)"
 
 #define REBEL_LOADOUT_SCOUT "Scout (Pistol, Light)"
