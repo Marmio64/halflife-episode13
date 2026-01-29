@@ -109,6 +109,8 @@
 
 /obj/effect/spawner/random/halflife/random_bullsquid
 	name = "random bullsquid"
+	icon = 'hl13/icons/effects/random_spawners.dmi'
+	icon_state = "random_bullsquid"
 	spawn_loot_count = 1
 
 	loot = list(

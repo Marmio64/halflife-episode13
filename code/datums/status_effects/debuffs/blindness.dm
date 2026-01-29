@@ -23,11 +23,13 @@
 /datum/status_effect/grouped/nearsighted/on_apply()
 	RegisterSignals(owner, update_signals, PROC_REF(update_nearsightedness))
 	update_nearsighted_overlay()
+	owner.change_stat(STATKEY_PER, -2)
 	return ..()
 
 /datum/status_effect/grouped/nearsighted/on_remove()
 	UnregisterSignal(owner, update_signals)
 	owner.clear_fullscreen(id)
+	owner.change_stat(STATKEY_PER, 2)
 	return ..()
 
 /// Signal proc for when we gain or lose [TRAIT_NEARSIGHTED_CORRECTED] - (temporarily) disable the overlay if we're correcting it

@@ -450,6 +450,8 @@
 
 /obj/effect/spawner/random/halflife/pet_spawner
 	name = "pet spawner"
+	icon = 'hl13/icons/effects/random_spawners.dmi'
+	icon_state = "random_pet"
 	spawn_loot_count = 1
 	spawn_loot_chance = 5 //5% chance to get either a chumtoad or grub
 
