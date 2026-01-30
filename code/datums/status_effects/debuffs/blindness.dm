@@ -28,6 +28,8 @@
 /datum/status_effect/grouped/nearsighted/on_remove()
 	UnregisterSignal(owner, update_signals)
 	owner.clear_fullscreen(id)
+	if(!HAS_TRAIT(owner, TRAIT_NEARSIGHTED_CORRECTED))
+		owner.change_stat(STATKEY_PER, 2)
 	return ..()
 
 /// Signal proc for when we gain or lose [TRAIT_NEARSIGHTED_CORRECTED] - (temporarily) disable the overlay if we're correcting it
@@ -52,8 +54,10 @@
 /datum/status_effect/grouped/nearsighted/proc/update_nearsighted_overlay()
 	if(should_be_nearsighted())
 		owner.overlay_fullscreen(id, /atom/movable/screen/fullscreen/impaired, overlay_severity)
+		owner.change_stat(STATKEY_PER, -2)
 	else
 		owner.clear_fullscreen(id)
+		owner.change_stat(STATKEY_PER, 2)
 
 /// Sets the severity of our nearsighted overlay
 /datum/status_effect/grouped/nearsighted/proc/set_nearsighted_severity(to_value)
