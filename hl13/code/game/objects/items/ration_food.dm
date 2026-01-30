@@ -361,7 +361,7 @@
 	bite_consumption = 5
 	tastes = list("alien flesh" = 3, "still water" = 3)
 	foodtypes = MEAT
-	food_reagents = list(/datum/reagent/consumable/nutriment = 14, /datum/reagent/water = 6, /datum/reagent/drug/happiness = 6, /datum/reagent/medicine/regen_jelly = 10)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 14, /datum/reagent/water = 6, /datum/reagent/drug/happiness = 6, /datum/reagent/drug/chumtoad = 10)
 
 	preserved_food = TRUE
 	crafting_complexity = FOOD_COMPLEXITY_3

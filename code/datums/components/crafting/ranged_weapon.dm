@@ -1,5 +1,5 @@
 /datum/crafting_recipe/receiver
-	name = "Modular Rifle Receiver"
+	name = "Modular Firearm Receiver"
 	tool_behaviors = list(TOOL_WRENCH, TOOL_WELDER)
 	result = /obj/item/weaponcrafting/receiver
 	reqs = list(

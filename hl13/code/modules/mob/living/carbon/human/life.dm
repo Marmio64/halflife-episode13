@@ -83,7 +83,8 @@
 //		if(BPinteg > amt) //this is here to ensure that pain doesn't add up, but is rather picked from the worst limb
 		amt += (BPinteg) - (get_drunk_amount()/4) //inebriation reduces percieved pain
 
-		amt -= (get_stat_level(STATKEY_END) - 10) //low endurance increases perceived pain, high strength decreases it
+		if(1 <= amt) //only check endurance if there is a noticeable level of pain, since otherwise low endurance can result in you having severe pain even without anything being wrong with you
+			amt -= (get_stat_level(STATKEY_END) - 10) //low endurance increases perceived pain, high strength decreases it
 
 		if(HAS_TRAIT(src, TRAIT_LESSPAIN_MAJOR)) //about -90 pain
 			amt -= 15

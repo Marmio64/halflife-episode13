@@ -31,6 +31,69 @@
 	lighting_cutoff_green = 15
 	lighting_cutoff = 35
 
+	var/datum/action/cooldown/spell/aoe/repulse/bullsquid/whip
+
+/datum/action/cooldown/spell/aoe/repulse/bullsquid
+	name = "Tail Sweep"
+	desc = "Throw back attackers with a sweep of your tail."
+	background_icon_state = "bg_alien"
+	overlay_icon_state = "bg_alien_border"
+	button_icon = 'icons/mob/actions/actions_xeno.dmi'
+	button_icon_state = "tailsweep"
+	panel = "Alien"
+	sound = 'sound/effects/magic/tail_swing.ogg'
+
+	cooldown_time = 15 SECONDS
+	spell_requirements = NONE
+
+	max_throw = 3
+
+	check_flags = AB_CHECK_CONSCIOUS | AB_CHECK_INCAPACITATED
+	invocation_type = INVOCATION_NONE
+	antimagic_flags = NONE
+	aoe_radius = 1
+
+	sparkle_path = null
+
+/datum/action/cooldown/spell/aoe/repulse/bullsquid/cast_on_thing_in_aoe(atom/movable/victim, atom/caster)
+	var/turf/throwtarget = get_edge_target_turf(caster, get_dir(caster, get_step_away(victim, caster)))
+	var/dist_from_caster = get_dist(victim, caster)
+
+
+	if(dist_from_caster == 0)
+		if(isliving(victim))
+			var/mob/living/victim_living = victim
+			victim_living.Paralyze(3 SECONDS)
+			victim_living.adjustBruteLoss(30)
+			to_chat(victim, span_userdanger("You're slammed into the floor by [caster]!"))
+			playsound(get_turf(caster), 'hl13/sound/effects/injury/trauma1.ogg', 80, TRUE, TRUE)
+	else
+
+		if(isliving(victim))
+			var/mob/living/victim_living = victim
+			victim_living.Immobilize(1 SECONDS)
+			to_chat(victim, span_userdanger("You're slammed back by [caster]!"))
+			victim_living.adjustBruteLoss(30)
+			playsound(get_turf(caster), 'hl13/sound/effects/injury/trauma1.ogg', 80, TRUE, TRUE)
+
+		// So stuff gets tossed around at the same time.
+		victim.safe_throw_at(
+			target = throwtarget,
+			range = clamp((max_throw - (clamp(dist_from_caster - 2, 0, dist_from_caster))), 3, max_throw),
+			speed = 1,
+			thrower = ismob(caster) ? caster : null,
+			force = repulse_force,
+		)
+
+/datum/action/cooldown/spell/aoe/repulse/bullsquid/cast(atom/cast_on)
+	if(isliving(cast_on))
+		var/mob/living/living_caster = cast_on
+		playsound(get_turf(living_caster), 'hl13/sound/creatures/bullsquid/attackgrowl3.ogg', 80, TRUE, TRUE)
+		living_caster.spin(6, 1)
+
+	return ..()
+
+
 /mob/living/basic/halflife/bullsquid/chicken
 	name = "Chicken Bullsquid"
 	desc = "A large alien creature that somewhat resembles a malformed squid with legs. It has a massive mouth filled with razor sharp teeth that have acid dripping on them. This one has a sickly, pale look about it."
@@ -81,6 +144,9 @@
 
 	AddElement(/datum/element/footstep, FOOTSTEP_MOB_CLAW)
 	RegisterSignal(src, COMSIG_HOSTILE_PRE_ATTACKINGTARGET, PROC_REF(pre_attack))
+
+	whip = new(src)
+	whip.Grant(src)
 
 /// Before we attack something, check if we want to do something else instead
 /mob/living/basic/halflife/bullsquid/proc/pre_attack(mob/living/source, atom/target)

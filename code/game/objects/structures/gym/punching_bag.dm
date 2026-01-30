@@ -66,8 +66,8 @@
 		stamina_exhaustion *= 0.5
 
 	user.adjustStaminaLoss(stamina_exhaustion)
-	user.mind?.adjust_experience(/datum/skill/athletics, is_heavy_gravity ? 0.6 : 0.3)
-	user.apply_status_effect(/datum/status_effect/exercised)
+	user.mind?.adjust_experience(/datum/skill/athletics, is_heavy_gravity ? 1.2 : 0.6)
+	user.apply_status_effect(/datum/status_effect/exercised, 2 SECONDS)
 
 /obj/structure/punching_bag/wrench_act_secondary(mob/living/user, obj/item/tool)
 	tool.play_tool_sound(src)

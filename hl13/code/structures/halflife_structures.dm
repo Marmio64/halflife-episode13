@@ -174,7 +174,7 @@
 	icon = 'hl13/icons/obj/ladders.dmi'
 	icon_state = "ladder01"
 	resistance_flags = INDESTRUCTIBLE
-	travel_time = 2 SECONDS
+	travel_time = 2.5 SECONDS
 
 /obj/structure/ladder/halflife/upwards
 	icon_state = "ladder10"

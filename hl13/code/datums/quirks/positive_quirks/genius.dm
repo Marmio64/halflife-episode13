@@ -1,6 +1,6 @@
 /datum/quirk/genius
 	name = "Genius"
-	desc = "You are an incredibly intelligent individual. You can craft faster, hack faster, more easily handle technology, and more. In addition, you know some rather advanced crafting recipes, available only to geniuses like you."
+	desc = "You are an incredibly intelligent individual. You can craft faster, hack faster, learn skills faster, more easily handle technology, and more. In addition, you know some rather advanced crafting recipes, available only to geniuses like you."
 	icon = FA_ICON_BRAIN
 	value = 16
 	medical_record_text = "Patient is highly intelligent"

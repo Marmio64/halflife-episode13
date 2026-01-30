@@ -74,7 +74,7 @@
 	name = "chumtoad flesh"
 	desc = "A slab of chumtoad flesh. Rumors say it imparts strange feelings on consumption."
 	icon_state = "xenomeat"
-	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 4, /datum/reagent/drug/happiness = 6, /datum/reagent/medicine/regen_jelly = 10)
+	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 4, /datum/reagent/drug/happiness = 6, /datum/reagent/drug/chumtoad = 10)
 	tastes = list("meat" = 1, "acid" = 1)
 	foodtypes = RAW | MEAT | GROSS | XEN
 
@@ -87,7 +87,7 @@
 /obj/item/food/meat/steak/chumtoad
 	name = "chumtoad steak"
 	desc = "A cooked slab of chumtoad flesh. Rumors say it imparts strange feelings on consumption."
-	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 4, /datum/reagent/drug/happiness = 6, /datum/reagent/medicine/regen_jelly = 10)
+	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 4, /datum/reagent/drug/happiness = 6, /datum/reagent/drug/chumtoad = 10)
 	tastes = list("meat" = 1, "acid" = 1)
 	foodtypes = MEAT | XEN
 	crafting_complexity = FOOD_COMPLEXITY_2
@@ -96,7 +96,7 @@
 	name = "raw chumtoad cutlet"
 	desc = "A raw cutlet of chumtoad flesh. Rumors say it imparts strange feelings on consumption."
 	tastes = list("meat" = 1, "acid" = 1)
-	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2, /datum/reagent/drug/happiness = 3, /datum/reagent/medicine/regen_jelly = 5)
+	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2, /datum/reagent/drug/happiness = 3, /datum/reagent/drug/chumtoad = 5)
 	foodtypes = RAW | MEAT | GROSS | XEN
 
 /obj/item/food/meat/rawcutlet/chumtoad/make_grillable()
@@ -106,6 +106,6 @@
 	name = "chumtoad cutlet"
 	desc = "A cooked cutlet of chumtoad flesh. Rumors say it imparts strange feelings on consumption."
 	tastes = list("meat" = 1, "acid" = 1)
-	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2, /datum/reagent/drug/happiness = 3, /datum/reagent/medicine/regen_jelly = 5)
+	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 2, /datum/reagent/drug/happiness = 3, /datum/reagent/drug/chumtoad = 5)
 	foodtypes = MEAT | GROSS | XEN
 	crafting_complexity = FOOD_COMPLEXITY_2

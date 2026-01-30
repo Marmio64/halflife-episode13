@@ -23,7 +23,8 @@
 			if(satiety > 80)
 				nutrition_ratio *= 1.25
 			adjust_nutrition(-nutrition_ratio * HUNGER_FACTOR * seconds_per_tick)
-			blood_volume = min(blood_volume + (BLOOD_REGEN_FACTOR * nutrition_ratio * seconds_per_tick), BLOOD_VOLUME_NORMAL)
+			var/blood_regen = (BLOOD_REGEN_FACTOR + (get_stat_level(STATKEY_END)/50)) //0.02 regen per endurance point, up to 0.5 at 20 end. 10 End gives the old value of 0.3
+			blood_volume = min(blood_volume + (blood_regen * nutrition_ratio * seconds_per_tick), BLOOD_VOLUME_NORMAL)
 
 	//Bloodloss from wounds
 	var/temp_bleed = 0

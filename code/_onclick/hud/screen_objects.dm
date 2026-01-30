@@ -225,7 +225,9 @@
 	if(!do_after(src, (adjusted_jump_range/2) SECONDS, src))
 		return
 
-	adjustStaminaLoss(25)
+	var/stamina_cost = 45 - (get_stat_level(STATKEY_DEX)*2) //25 at 10 dex, only 5 stamina at 20 dex
+
+	adjustStaminaLoss(stamina_cost)
 
 	var/distance = get_dist(loc, target)
 	var/turf/adjusted_target = target

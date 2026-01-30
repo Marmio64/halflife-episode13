@@ -3,7 +3,7 @@
 /// The sleep healing multiplier for organ passive healing (since organs heal slowly)
 #define HEALING_SLEEP_ORGAN_MULTIPLIER 5
 /// The sleep multiplier for fitness xp conversion
-#define SLEEP_QUALITY_WORKOUT_MULTIPLER 10
+#define SLEEP_QUALITY_WORKOUT_MULTIPLER 5
 
 //Largely negative status effects go here, even if they have small beneficial effects
 //STUN EFFECTS

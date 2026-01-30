@@ -10,7 +10,7 @@
 	var/obj/structure/ladder/up     //the ladder above this one
 	var/crafted = FALSE
 	/// travel time for ladder in deciseconds
-	var/travel_time = 1 SECONDS
+	var/travel_time = 2.5 SECONDS
 	var/obstructed = FALSE
 
 /obj/structure/ladder/Initialize(mapload, obj/structure/ladder/up, obj/structure/ladder/down)
@@ -107,8 +107,12 @@
 /obj/structure/ladder/proc/start_travelling(mob/user, going_up)
 	show_initial_fluff_message(user, going_up)
 
-	// Our climbers athletics ability
-	var/fitness_level = user.mind?.get_skill_level(/datum/skill/athletics)
+	// Our climbers athletics ability and dexterity
+	var/fitness_level = user.mind?.get_skill_level(/datum/skill/athletics) //up to 0.6 seconds off from max athletics
+
+	if(isliving(user))
+		var/mob/living/L = user
+		fitness_level += (L.get_stat_level(STATKEY_DEX)/2) //and 1 second from 20 DEX
 
 	// Misc bonuses to the climb speed.
 	var/misc_multiplier = 1

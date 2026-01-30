@@ -108,3 +108,28 @@
 /datum/reagent/consumable/ethanol/paper_alcohol/on_mob_life(mob/living/carbon/drinker, seconds_per_tick, times_fired)
 	. = ..()
 	drinker.adjust_disgust(5 * REM * seconds_per_tick)
+
+/datum/reagent/drug/chumtoad
+	name = "Chumtoad Extract"
+	description = "This strange liquid extracted from chumtoads greatly empowers humans."
+	reagent_state = LIQUID
+	metabolization_rate = 0.1 * REAGENTS_METABOLISM //long lasting POWER
+	color = "#EE35FF"
+	overdose_threshold = 20
+	taste_description = "toadskin"
+
+/datum/reagent/drug/chumtoad/on_mob_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.change_stat(STATKEY_STR, 3)
+	affected_mob.change_stat(STATKEY_PER, 3)
+	affected_mob.change_stat(STATKEY_INT, 3)
+	affected_mob.change_stat(STATKEY_END, 3)
+	affected_mob.change_stat(STATKEY_DEX, 3)
+
+/datum/reagent/drug/chumtoad/on_mob_delete(mob/living/affected_mob)
+	. = ..()
+	affected_mob.change_stat(STATKEY_STR, -3)
+	affected_mob.change_stat(STATKEY_PER, -3)
+	affected_mob.change_stat(STATKEY_INT, -3)
+	affected_mob.change_stat(STATKEY_END, -3)
+	affected_mob.change_stat(STATKEY_DEX, -3)
