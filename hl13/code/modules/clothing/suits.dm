@@ -558,7 +558,7 @@
 		)
 
 /obj/item/clothing/suit/utility/radiation/cleanup/slow
-	slowdown = 0.33
+	slowdown = 0.5
 
 /obj/item/clothing/suit/utility/radiation/cleanup/scientist
 	name = "scientist suit"
