@@ -35,7 +35,7 @@
 
 	shoes = /obj/item/clothing/shoes/halflife/cleanup
 	gloves = /obj/item/clothing/gloves/halflife/cleanup
-	suit = /obj/item/clothing/suit/utility/radiation/cleanup
+	suit = /obj/item/clothing/suit/utility/radiation/cleanup/slow
 	mask = /obj/item/clothing/mask/gas/cwuengi
 	head = /obj/item/clothing/head/utility/radiation
 

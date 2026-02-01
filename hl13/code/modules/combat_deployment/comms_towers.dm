@@ -109,14 +109,14 @@
 	return PROCESS_KILL
 
 /obj/machinery/deployment_comms_tower/rebel/xen_defense
-	max_integrity = 1750
+	max_integrity = 2000
 	var/rebel_time = 10 MINUTES
 	var/grace_time = 90 SECONDS
 
 	var/grace_period_text = TRUE
 	var/capturable = FALSE
 
-	var/human_respawn_speed = 45 SECONDS
+	var/human_respawn_speed = 40 SECONDS
 
 /obj/machinery/deployment_comms_tower/rebel/xen_defense/Initialize(mapload)
 	. = ..()
@@ -165,7 +165,7 @@
 	. += span_notice("The rebels need to defend the tower for [(GLOB.deployment_rebels_flag_time_left)/10] more seconds in order to win.")
 
 /obj/machinery/deployment_comms_tower/combine/xen_defense
-	max_integrity = 1750
+	max_integrity = 2000
 
 	var/combine_time = 9 MINUTES
 	var/grace_time = 60 SECONDS
@@ -173,7 +173,7 @@
 	var/grace_period_text = TRUE
 	var/capturable = FALSE
 
-	var/human_respawn_speed = 45 SECONDS
+	var/human_respawn_speed = 40 SECONDS
 
 /obj/machinery/deployment_comms_tower/combine/xen_defense/Initialize(mapload)
 	. = ..()

@@ -7,8 +7,8 @@
 	icon_dead = "bullsquid_dead"
 	faction = list(FACTION_XEN_FAUNA)
 	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
-	maxHealth = 150
-	health = 150
+	maxHealth = 180
+	health = 180
 	obj_damage = 16
 	melee_damage_lower = 22
 	melee_damage_upper = 25
@@ -19,7 +19,7 @@
 	attack_verb_simple = "bite"
 	attack_sound = 'hl13/sound/creatures/bullsquid/attackgrowl3.ogg'
 	combat_mode = TRUE
-	speed = 0.5
+	speed = 0.6
 	butcher_results = list(/obj/item/food/meat/slab/xen = 2)
 	death_sound = 'hl13/sound/creatures/bullsquid/die1.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/bullsquid
@@ -100,6 +100,7 @@
 	icon_state = "bullsquid_chicken"
 	icon_living = "bullsquid_chicken"
 	icon_dead = "bullsquid_chicken_dead"
+	speed = 0.5 //the chicken go a lil faster
 
 /mob/living/basic/halflife/bullsquid/fanged
 	name = "Fanged Bullsquid"
@@ -107,8 +108,8 @@
 	icon_state = "bullsquid_fanged"
 	icon_living = "bullsquid_fanged"
 	icon_dead = "bullsquid_fanged_dead"
-	melee_damage_lower = 24
-	melee_damage_upper = 28
+	melee_damage_lower = 25
+	melee_damage_upper = 29
 
 /mob/living/basic/halflife/bullsquid/blue
 	name = "Blue Bullsquid"

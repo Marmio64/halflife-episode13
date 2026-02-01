@@ -2313,6 +2313,15 @@
 	boltDown = 'hl13/sound/machines/combine_button2.ogg'
 	noPower = 'hl13/sound/machines/combine_button7.ogg'
 
+/obj/machinery/door/airlock/highsecurity/combine/emag_act(mob/living/user, obj/item/card/emag/emag_card)
+	if(prob(90 - (user.get_stat_level(STATKEY_INT) * 3)))
+		to_chat(user, span_warning("The security measures on the door managed to repel your hacking attempt. You'll have to try again."))
+		return FALSE
+	secure_open()
+	playsound(src, SFX_SPARKS, 100, TRUE, SHORT_RANGE_SOUND_EXTRARANGE)
+	balloon_alert(user, "door controls shorted")
+	return TRUE
+
 // Shuttle Airlocks
 
 /obj/machinery/door/airlock/shuttle

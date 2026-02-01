@@ -22,10 +22,7 @@
 			to_chat(crewmate, span_nicegreen("...but as the moment passes, you realise that whatever eldritch power behind the event happened to affect you \
 				has resonated within the ruins of your already shattered mind, creating a singularity of mental instability! \
 				As it collapses unto itself, you feel... at peace, finally."))
-			if(crewmate.has_quirk(/datum/quirk/insanity))
-				crewmate.remove_quirk(/datum/quirk/insanity)
-			else
-				crewmate.cure_trauma_type(/datum/brain_trauma/mild/hallucinations, TRAUMA_RESILIENCE_ABSOLUTE)
+			crewmate.cure_trauma_type(/datum/brain_trauma/mild/hallucinations, TRAUMA_RESILIENCE_ABSOLUTE)
 		else
 			//everyone else gets to relish in madness
 			//yes killing their mood will also trigger mood hallucinations

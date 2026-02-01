@@ -1,6 +1,6 @@
 /datum/quirk/item_quirk/scarred_eye
 	name = "Scarred Eye"
-	desc = "An accident in your past has cost you one of your eyes, but you got a cool eyepatch. Yarr!"
+	desc = "An accident in your past has cost you one of your eyes. You'll have partially reduced vision, alongside a lower perception stat."
 	icon = FA_ICON_EYE_SLASH
 	value = -5
 	gain_text = span_danger("After all this time, your eye still stings a bit...")

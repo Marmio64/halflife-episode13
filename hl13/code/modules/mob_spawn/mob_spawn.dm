@@ -39,3 +39,18 @@
 		new /mob/living/silicon/robot/cityscanner/dispatch_shell(src)
 		qdel(src)
 */
+
+/obj/effect/mob_spawn/ghost_role/human/refugee
+	name = "\improper Improvised sleeping bag"
+	desc = "A body bag poked with holes, currently being used as a sleeping bag. Someone seems to be sleeping inside of it."
+	density = FALSE
+	you_are_text = "You're a refugee from outside the prison, looking to survive by tending the lands and looting abandoned buildings"
+	flavour_text = "You're here to survive, and maybe help anyone you see if you so please."
+	icon = 'icons/obj/medical/bodybag.dmi'
+	spawner_job_path = /datum/job/refugee
+	outfit = /datum/outfit/job/refugee/armed
+
+/obj/effect/mob_spawn/ghost_role/human/refugee/Initialize(mapload)
+	. = ..()
+	if(prob(50)) //only has a 25% chance of existing
+		return INITIALIZE_HINT_QDEL

@@ -133,9 +133,11 @@
 		log_bomber(user, "rigged to blow", src, "(emagging)")
 	return TRUE
 
+/*
 /obj/item/card/emag/Initialize(mapload)
 	. = ..()
 	type_blacklist = list(typesof(/obj/machinery/door/airlock) + typesof(/obj/machinery/door/window/) +  typesof(/obj/machinery/door/firedoor) - typesof(/obj/machinery/door/airlock/tram)) //list of all typepaths that require a specialized emag to hack.
+*/
 
 /obj/item/card/emag/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	if(SHOULD_SKIP_INTERACTION(interacting_with, src, user))

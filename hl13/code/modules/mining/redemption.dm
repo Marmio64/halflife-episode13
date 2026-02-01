@@ -3,6 +3,7 @@
 	desc = "An automated combine machine which takes in ores and flash-fire melts them into usable sheets with dark energy. Loyal workers can then accept generated mining points onto their card from the machine, and redeem them for credits."
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	icon_state = "ore_redemption"
+	requires_silo = FALSE
 
 /obj/machinery/mining_terminal
 	name = "union mining terminal"

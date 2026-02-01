@@ -557,6 +557,9 @@
 		/obj/item/gun/syringe,
 		)
 
+/obj/item/clothing/suit/utility/radiation/cleanup/slow
+	slowdown = 0.33
+
 /obj/item/clothing/suit/utility/radiation/cleanup/scientist
 	name = "scientist suit"
 	desc = "A suit which provides protection against radiation and hostile xenian fauna attacks."

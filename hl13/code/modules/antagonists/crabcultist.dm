@@ -204,6 +204,8 @@
 	drawing_rune = FALSE
 
 /obj/effect/rune/crab_cultist
+	name = "bloody symbols"
+	desc = "A disturbing collection of symbols drawn in what seems to be blood. The center symbol appears to be a headcrab of sorts, with an eye within."
 	cultist_name = "Sacrificial Circle"
 	cultist_desc = "sacrifices human corpses to greater forces, empowering you."
 	invocation = "FEAST UPON THIS SUPPLE FLESH!!"

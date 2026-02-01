@@ -70,6 +70,10 @@
 	title = ROLE_HERMIT
 	policy_index = ROLE_HERMIT
 
+/datum/job/refugee
+	title = ROLE_HERMIT
+	policy_index = ROLE_HERMIT
+
 /datum/outfit/rebel_preview
 	name = "Rebel (Preview only)"
 

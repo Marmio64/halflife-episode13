@@ -1,3 +1,4 @@
+/*
 /datum/quirk/insanity
 	name = "Reality Dissociation Syndrome"
 	desc = "You suffer from a severe disorder that causes very vivid hallucinations and trouble expressing your ideas. \
@@ -17,7 +18,7 @@
 	if(!iscarbon(quirk_holder))
 		return
 	var/mob/living/carbon/carbon_quirk_holder = quirk_holder
-	
+
 	// Setup our special RDS mild hallucination.
 	// Not a unique subtype so not to plague subtypesof,
 	// also as we inherit the names and values from our quirk.
@@ -39,3 +40,4 @@
 
 /datum/quirk/insanity/remove()
 	QDEL_NULL(added_trama_ref)
+*/

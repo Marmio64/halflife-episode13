@@ -638,6 +638,8 @@
 				SetSleeping(450 - (comfiness * 10)) //Short nap
 				if(4 < comfiness)
 					add_mood_event("comfiness", /datum/mood_event/comfy_sleep)
+				if(SSdaylight.day_cycle_active == "Night" && get_area(src) == /area/halflife/indoors/prison/cells && HAS_TRAIT(src, TRAIT_PRISONER))
+					SSsociostability.modifystability(1) //prisoners sleeping in their cells at night increases sociostability. Enforce curfew!
 			else
 				to_chat(src, span_notice("... but are disturbed from fully falling asleep."))
 

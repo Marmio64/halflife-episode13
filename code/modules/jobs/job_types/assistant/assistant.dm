@@ -88,6 +88,8 @@ Assistant
 
 	var/cell = "NULL"
 
+	ADD_TRAIT(user, TRAIT_PRISONER, JOB_TRAIT)
+
 	if(length(GLOB.availablecells) > 0)
 		if(user.mind)
 			cell = pick(GLOB.availablecells)

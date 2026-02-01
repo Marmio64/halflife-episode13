@@ -798,12 +798,6 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	if(time_since_irradiated > RAD_MOB_VOMIT && SPT_PROB(RAD_MOB_VOMIT_PROB, seconds_per_tick))
 		source.vomit(VOMIT_CATEGORY_BLOOD, lost_nutrition = 10)
 
-	if(time_since_irradiated > RAD_MOB_MUTATE && SPT_PROB(RAD_MOB_MUTATE_PROB, seconds_per_tick))
-		to_chat(source, span_danger("You mutate!"))
-		source.easy_random_mutate(NEGATIVE + MINOR_NEGATIVE)
-		source.emote("gasp")
-		source.domutcheck()
-
 	if(time_since_irradiated > RAD_MOB_HAIRLOSS && SPT_PROB(RAD_MOB_HAIRLOSS_PROB, seconds_per_tick))
 		var/obj/item/bodypart/head/head = source.get_bodypart(BODY_ZONE_HEAD)
 		if(!(source.hairstyle == "Bald") && (head?.head_flags & HEAD_HAIR|HEAD_FACIAL_HAIR))

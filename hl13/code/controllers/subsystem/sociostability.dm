@@ -21,8 +21,7 @@ SUBSYSTEM_DEF(sociostability)
 
 	announcement_made = FALSE
 
-	if(sociostability < SOCIOSTABILITY_GREAT)
-		modifystability(SOCIOSTABILITY_PASSIVE_GAIN)
+	modifystability(SOCIOSTABILITY_PASSIVE_GAIN)
 
 
 	if(sociostability < SOCIOSTABILITY_POOR) //Poor sociostability means a poor district. Buying power will be reduced by 20%.

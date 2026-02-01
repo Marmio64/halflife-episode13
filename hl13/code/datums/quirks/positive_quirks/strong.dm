@@ -1,6 +1,6 @@
 /datum/quirk/strong
 	name = "Strong"
-	desc = "You are of an able body. You can shrug off pain more easily, parry more effectively with weapons, punch harder, and more."
+	desc = "You are of an able body. You can throw farther, parry more effectively with weapons, punch harder, and more."
 	icon = FA_ICON_DUMBBELL
 	value = 7
 	medical_record_text = "Patient is rather strong"

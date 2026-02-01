@@ -1416,3 +1416,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// They are snobby and are above doing menial labor
 #define TRAIT_ABOVE_LABOR "above_labor"
+
+/// They are a prisoner in the institution. This affects some things like sociostability
+#define TRAIT_PRISONER "prisoner"

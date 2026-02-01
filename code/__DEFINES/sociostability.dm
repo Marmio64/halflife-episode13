@@ -5,4 +5,4 @@
 #define SOCIOSTABILITY_BAD 200
 #define SOCIOSTABILITY_TERRIBLE 0
 
-#define SOCIOSTABILITY_PASSIVE_GAIN 1 //by default 1, so +0.1% sociostability every 3 minutes.
+#define SOCIOSTABILITY_PASSIVE_GAIN -2 //by default -2, so -0.2% sociostability every 3 minutes.
