@@ -582,6 +582,9 @@
 
 	first_time_text = "Engineering Area"
 
+	ambient_buzz = 'hl13/sound/ambience/industrial4.ogg'
+	ambient_buzz_vol = 70
+
 /area/halflife/indoors/prison/infirmary
 	name = "\improper Prison Infirmary"
 
