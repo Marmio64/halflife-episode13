@@ -44,7 +44,7 @@
 
 	C.change_stat(STATKEY_INT, 3) //Vorts are naturally very intelligent
 	C.change_stat(STATKEY_STR, 1) //and a little stronger
-	C.change_stat(STATKEY_END, 1)
+	C.change_stat(STATKEY_END, 2)
 	C.change_stat(STATKEY_DEX, -2) //but not very dextrous
 
 /datum/species/vortigaunt/on_species_loss(mob/living/carbon/C)
@@ -55,7 +55,7 @@
 
 	C.change_stat(STATKEY_INT, -3)
 	C.change_stat(STATKEY_STR, -1)
-	C.change_stat(STATKEY_END, -1)
+	C.change_stat(STATKEY_END, -2)
 	C.change_stat(STATKEY_DEX, 2)
 
 /datum/species/vortigaunt/get_scream_sound(mob/living/carbon/human/vortigaunt)
@@ -127,6 +127,7 @@
 	var/datum/action/cooldown/spell/aoe/repulse/wizard/vort/vortrepulse
 	var/datum/action/cooldown/spell/forcewall/vort/vortwall
 	var/datum/action/cooldown/spell/touch/vort_heal/empowered/super_vortheal
+	var/datum/action/cooldown/spell/conjure/antlion/extract_vort/vortbugbait
 
 /datum/species/vortigaunt/extract/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
@@ -145,11 +146,15 @@
 	super_vortheal = new(C) //lots of healing!
 	super_vortheal.Grant(C)
 
+	vortbugbait = new(C)
+	vortbugbait.Grant(C)
+
 /datum/species/vortigaunt/extract/on_species_loss(mob/living/carbon/C)
 	..()
 	vortrepulse.Remove(C)
 	vortwall.Remove(C)
 	super_vortheal.Remove(C)
+	vortbugbait.Remove(C)
 
 /datum/species/vortigaunt/hidden
 	name = "Hidden Vortigaunt"

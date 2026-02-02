@@ -595,6 +595,9 @@
 
 	first_time_text = "Cafeteria"
 
+	ambient_buzz = 'hl13/sound/ambience/trainstation_ambient_loop1.ogg'
+	ambient_buzz_vol = 20
+
 /area/halflife/indoors/prison/factory
 	name = "\improper Prison Factory"
 

@@ -51,7 +51,6 @@
 /mob/living/simple_animal/hostile/halflife/hunter/deployment
 	maxHealth = 300
 	health = 300
-	speed = -0.5
 
 /mob/living/simple_animal/hostile/halflife/hunter/Aggro()
 	. = ..()

@@ -164,6 +164,23 @@
 	. = ..()
 	. += span_notice("The rebels need to defend the tower for [(GLOB.deployment_rebels_flag_time_left)/10] more seconds in order to win.")
 
+/obj/machinery/deployment_comms_tower/rebel/xen_defense/ex_act(severity, target)
+	if(QDELETED(src))
+		return TRUE
+	if(target == src)
+		take_damage(rand(100, 150), BRUTE, BOMB, 0)
+		return TRUE
+	switch(severity)
+		if(EXPLODE_DEVASTATE)
+			take_damage(rand(100, 150), BRUTE, BOMB, 0)
+		if(EXPLODE_HEAVY)
+			take_damage(rand(30, 50), BRUTE, BOMB, 0)
+		if(EXPLODE_LIGHT)
+			take_damage(rand(10, 30), BRUTE, BOMB, 0)
+
+	return TRUE
+
+
 /obj/machinery/deployment_comms_tower/combine/xen_defense
 	max_integrity = 2000
 
@@ -220,3 +237,19 @@
 /obj/machinery/deployment_comms_tower/combine/xen_defense/examine(mob/user)
 	. = ..()
 	. += span_notice("The combine need to defend the tower for [(GLOB.deployment_combine_flag_time_left)/10] more seconds in order to win.")
+
+/obj/machinery/deployment_comms_tower/combine/xen_defense/ex_act(severity, target)
+	if(QDELETED(src))
+		return TRUE
+	if(target == src)
+		take_damage(rand(100, 150), BRUTE, BOMB, 0)
+		return TRUE
+	switch(severity)
+		if(EXPLODE_DEVASTATE)
+			take_damage(rand(100, 150), BRUTE, BOMB, 0)
+		if(EXPLODE_HEAVY)
+			take_damage(rand(30, 50), BRUTE, BOMB, 0)
+		if(EXPLODE_LIGHT)
+			take_damage(rand(10, 30), BRUTE, BOMB, 0)
+
+	return TRUE

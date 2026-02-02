@@ -487,7 +487,14 @@
 	. = ..()
 	reagents.add_reagent(/datum/reagent/toxin/cleanupsolution, 500)
 
-/obj/item/watertank/cleanup/weak/Initialize(mapload)
+/obj/item/watertank/cleanup_weak
+	name = "backpack cleaner tank"
+	desc = "A cleaner tank that goes on your back, equipped with a nozzle to spray down and remove xenian infestations. Mixed in with the cleaning foam is also a dangerous toxin which has high lethality against xenian lifeforms."
+	inhand_icon_state = null
+	icon_state = "cleanuptank"
+	custom_price = 15
+
+/obj/item/watertank/cleanup_weak/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(/datum/reagent/toxin/cleanupsolution/weak, 500)
 
@@ -504,3 +511,5 @@
 /obj/item/watertank/cleanup/make_noz()
 	return new /obj/item/reagent_containers/spray/mister/cleanup(src)
 
+/obj/item/watertank/cleanup_weak/make_noz()
+	return new /obj/item/reagent_containers/spray/mister/cleanup(src)

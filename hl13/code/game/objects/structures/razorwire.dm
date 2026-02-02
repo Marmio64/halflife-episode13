@@ -50,11 +50,14 @@
 		return
 	if(M.movement_type & MOVETYPES_NOT_TOUCHING_GROUND || !M.has_gravity()) //you're flying over it.
 		return
-	if(M.throwing) // throw someone or jump to bypass safely
+	if(M.throwing && !isanimal_or_basicmob(M)) // throw someone or jump to bypass safely. Basic/simple mobs are exempt.
 		return
 	var/razor_damage = 15
-	if(isanimal_or_basicmob(M)) //these guys dont get tangled up, so instead they just take bonus damage from razor wire
-		razor_damage = 40
+	if(isanimal_or_basicmob(M))
+		if(M.throwing)
+			razor_damage = 80
+		else
+			razor_damage = 40
 	playsound(src, 'hl13/sound/effects/barbed_wire_movement.ogg', 25, 1)
 	var/def_zone = ran_zone()
 	M.apply_damage(razor_damage, BRUTE, def_zone, sharpness = SHARP_EDGED)
@@ -66,6 +69,8 @@
 	entangled.visible_message(span_danger("[entangled] gets entangled in the barbed wire!"),
 	span_danger("You got entangled in the barbed wire!"), null, null, 5)
 	entangled.Immobilize(rand(30,40))
+	if(isanimal_or_basicmob(entangled))
+		entangled.Stun(rand(30,40), ignore_canstun = TRUE)
 
 /obj/structure/razorwire/attackby(obj/item/I, mob/user, params)
 	. = ..()

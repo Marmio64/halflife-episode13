@@ -6,6 +6,9 @@
 	icon_state = "cleanup"
 	clothing_traits = list(TRAIT_WEARING_GAS_MASK)
 
+/obj/item/clothing/head/utility/radiation/weak
+	armor_type = /datum/armor/utility_radiation/weak
+
 /obj/item/clothing/head/utility/radiation/scientist
 	name = "scientist hood"
 	icon_state = "scientist"

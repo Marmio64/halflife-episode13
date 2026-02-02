@@ -42,7 +42,7 @@
 /obj/projectile/bullet/pulse/lmg
 	damage = 22
 	wound_bonus = -10
-	armour_penetration = 20
+	armour_penetration = 25
 
 /obj/projectile/bullet/pulse/weak
 	damage = 12
@@ -99,7 +99,7 @@
 	name = "pulseshot pellet"
 	icon_state = "pulsepellet"
 	damage = 19 //114 total damage
-	armour_penetration = 20
+	armour_penetration = 25
 
 /obj/projectile/bullet/pellet/shotgun_buckshot/antixen
 	name = "anti-xen pellet"

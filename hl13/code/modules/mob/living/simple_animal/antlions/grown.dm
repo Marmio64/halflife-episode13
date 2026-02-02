@@ -49,7 +49,7 @@
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
 
 /mob/living/simple_animal/hostile/halflife/antlion/digsound/human_faction
-	faction = list(FACTION_NEUTRAL)
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
 
 /mob/living/simple_animal/hostile/halflife/antlion/OpenFire()
 	if(charging)

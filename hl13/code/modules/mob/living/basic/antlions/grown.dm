@@ -134,8 +134,8 @@
 
 /mob/living/basic/halflife/antlion_guard/deployment
 	melee_attack_cooldown = 2 SECONDS
-	maxHealth = 525
-	health = 525
+	maxHealth = 500
+	health = 500
 	obj_damage = 40
 	speed = 0.65
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
@@ -156,6 +156,7 @@
 	speed = 0.6
 	melee_damage_lower = 40
 	melee_damage_upper = 45
+	obj_damage = 50
 	melee_attack_cooldown = 2 SECONDS
 	maxHealth = 1500
 	health = 1500
@@ -251,6 +252,11 @@
 
 /datum/action/cooldown/spell/conjure/antlion/hidden_vort
 	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/human_faction)
+
+/datum/action/cooldown/spell/conjure/antlion/extract_vort
+	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/human_faction)
+	summon_amount = 2
+	cooldown_time = 60 SECONDS
 
 
 //---------------------- AI STUFF -------------------

@@ -559,6 +559,14 @@
 
 /obj/item/clothing/suit/utility/radiation/cleanup/slow
 	slowdown = 0.5
+	armor_type = /datum/armor/utility_radiation/weak
+
+/datum/armor/utility_radiation/weak
+	melee = 25
+	bio = 100
+	fire = 30
+	acid = 30
+	wound = 10
 
 /obj/item/clothing/suit/utility/radiation/cleanup/scientist
 	name = "scientist suit"
@@ -647,6 +655,9 @@
 
 /obj/item/clothing/suit/armor/rebel/light/speedy
 	slowdown = -0.25
+
+/obj/item/clothing/suit/armor/rebel/light/speedy/extra
+	slowdown = -0.33
 
 /datum/armor/rebellight
 	melee = 40

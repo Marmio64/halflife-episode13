@@ -8,7 +8,7 @@
 	var/damage_mult = 1
 
 /datum/reagent/toxin/cleanupsolution/weak
-	damage_mult = 0.5
+	damage_mult = 0.75
 
 /datum/reagent/toxin/cleanupsolution/expose_obj(obj/O, reac_volume)
 	..()
@@ -28,9 +28,10 @@
 /datum/reagent/toxin/cleanupsolution/expose_mob(mob/living/exposed_mob, methods = TOUCH, reac_volume)
 	. = ..()
 	var/damage = min(round(0.4 * reac_volume, 0.1), 10)
+	damage *= damage_mult
 	if(exposed_mob.mob_biotypes & MOB_XENIAN)
 		// spray bottle emits 5u so it's dealing ~15 dmg per spray
-		if(exposed_mob.adjustToxLoss((damage * 20) * damage_mult, required_biotype = affected_biotype))
+		if(exposed_mob.adjustToxLoss((damage * 20), required_biotype = affected_biotype))
 			return
 
 	if(!(methods & VAPOR) || !iscarbon(exposed_mob))

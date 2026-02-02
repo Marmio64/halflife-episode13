@@ -292,7 +292,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_str = 2
-	extra_end = 2
+	extra_end = 4
 
 /datum/outfit/deployment_loadout/rebel/tier3/vortigaunt
 	name = "Deployment: Vortigaunt"
@@ -353,6 +353,7 @@
 		/obj/item/sbeacondrop/rebel_turret = 1,
 		/obj/item/wirecutters/halflife = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 1,
+		/obj/item/wrench/halflife = 1,
 	)
 
 	suit = /obj/item/clothing/suit/armor/civilprotection
@@ -386,7 +387,7 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	extra_dex = 4
+	extra_dex = 8
 
 /datum/outfit/deployment_loadout/rebel/tier3/scout/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -506,7 +507,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_str = 4
-	extra_end = 4
+	extra_end = 6
 
 
 /datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel
@@ -582,12 +583,14 @@
 /datum/outfit/deployment_loadout/rebel/tier4/engineer
 	name = "Deployment: Heavy Refugee Engineer"
 	display_name = "Heavy Refugee Engineer (Support)"
-	desc = "Equipped with a crowbar, satchel, a pistol, a sentry beacon, and sandbags, you can do melee combat and a bit of building."
+	desc = "Equipped with a crowbar, satchel, a revolver, a sentry beacon, and sandbags, you can do melee combat and a bit of building."
 	id_name = "Engineer"
 
 	uniform = /obj/item/clothing/under/citizen/refugee
-	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
+
 	r_pocket = /obj/item/flashlight
+
+	belt = /obj/item/gun/ballistic/revolver/coltpython
 
 	back = /obj/item/storage/backpack/halflife/satchel
 	head = /obj/item/clothing/head/utility/hardhat/halflife/mining
@@ -597,8 +600,9 @@
 		/obj/item/stack/sheet/mineral/sandbags = 11,
 		/obj/item/sbeacondrop/rebel_turret = 1,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
-		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/ammo_box/colta357 = 2,
 		/obj/item/wirecutters/halflife = 1,
+		/obj/item/wrench/halflife = 1,
 	)
 
 	suit = /obj/item/clothing/suit/armor/rebel/light
@@ -677,7 +681,7 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	extra_dex = 4
+	extra_dex = 8
 
 /datum/outfit/deployment_loadout/rebel/tier4/scout/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -747,7 +751,7 @@
 
 	backpack_contents = list(
 		/obj/item/grenade/syndieminibomb/bouncer = 2,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/storage/box/lethalshot/halflife = 3,
 	)
 
@@ -781,12 +785,12 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
 
-	extra_end = 2
+	extra_end = 4
 
 /datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt
 	name = "Deployment: Extract Empowered Vortigaunt"
 	display_name = "Extract Empowered Vortigaunt (Support)"
-	desc = "You have all the powers of an elder vortigaunt, but with drastically increased damage resistance and a mending ability which is twice as powerful, making you very good at healing people."
+	desc = "You have all the powers of an elder vortigaunt, but with drastically increased damage resistance and a mending ability which is twice as powerful, making you very good at healing people. You can also summon friendly antlions on a long cooldown."
 
 	uniform = null
 	shoes = null
@@ -805,7 +809,7 @@
 	desc = "While not too well armored, you have access to one of the few surviving dragunovs around. Use it well to snipe your opponents with devestating accuracy and power."
 	id_name = "Sniper"
 
-	suit = /obj/item/clothing/suit/armor/rebel/light/speedy
+	suit = /obj/item/clothing/suit/armor/rebel/light/speedy/extra
 	mask = /obj/item/clothing/mask/gas/hl2/swat/hardened
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/svd
 	suit_store = /obj/item/gun/ballistic/automatic/svd
@@ -830,5 +834,5 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
 
-	extra_dex = 2
+	extra_dex = 4
 	extra_per = 6

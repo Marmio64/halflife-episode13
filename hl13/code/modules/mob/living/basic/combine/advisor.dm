@@ -7,8 +7,8 @@
 	icon_dead = "advisor_dead"
 	faction = list(FACTION_COMBINE)
 	movement_type = FLOATING
-	maxHealth = 250
-	health = 250
+	maxHealth = 200
+	health = 200
 	obj_damage = 14
 	melee_damage_lower = 20
 	melee_damage_upper = 25
@@ -46,6 +46,12 @@
 	sooth = new(src)
 	sooth.Grant(src)
 
+/mob/living/basic/halflife/advisor/Life(seconds_per_tick = SSMOBS_DT, times_fired)
+	..()
+	if(stat)
+		return
+	adjust_health(-maxHealth*0.05) //10 health every 2 seconds
+
 /datum/language_holder/advisor
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM))
 
@@ -62,7 +68,7 @@
 	button_icon_state = "repulse"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 	invocation = null
-	cooldown_time = 30 SECONDS
+	cooldown_time = 25 SECONDS
 	aoe_radius = 3
 	max_throw = 4
 	cooldown_reduction_per_rank = 4 SECONDS
@@ -121,14 +127,14 @@
 
 /datum/action/cooldown/spell/pointed/advisor_sooth
 	name = "Advisorial Sooth"
-	desc = "Sooth a subjects mind through the power of psionic domination. Forces their brain and body to produce various chemicals to allow them to push through pain and injury, while also restoring a small amount of health."
+	desc = "Sooth a subjects mind through the power of psionic domination. Forces their brain and body to produce various chemicals to allow them to push through pain and injury, while also restoring a moderate amount of health."
 	button_icon = 'hl13/icons/mob/actions/actions_advisor.dmi'
 	button_icon_state = "sooth"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 
 	sound = 'hl13/sound/creatures/advisor/advisor_sooth.ogg'
 	school = SCHOOL_TRANSMUTATION
-	cooldown_time = 12 SECONDS
+	cooldown_time = 10 SECONDS
 	cooldown_reduction_per_rank = 6.25 SECONDS
 
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC

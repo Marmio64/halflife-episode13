@@ -29,15 +29,16 @@
 	id_name = "ICU"
 
 	uniform = /obj/item/clothing/under/citizen
-	back = /obj/item/watertank/cleanup/weak
+	back = /obj/item/watertank/cleanup_weak
 
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
 	r_pocket = /obj/item/flashlight
 
 	shoes = /obj/item/clothing/shoes/halflife/cleanup
 	gloves = /obj/item/clothing/gloves/halflife/cleanup
 	suit = /obj/item/clothing/suit/utility/radiation/cleanup/slow
 	mask = /obj/item/clothing/mask/gas/cwuengi
-	head = /obj/item/clothing/head/utility/radiation
+	head = /obj/item/clothing/head/utility/radiation/weak
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
@@ -96,6 +97,27 @@
 	r_pocket = /obj/item/grenade/spawnergrenade/manhacks
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
+
+/datum/outfit/deployment_loadout/combine/tier2/infestation_control
+	name = "Deployment: Upgraded Infestation Control"
+	display_name = "Upgraded Infestation Control (Offense)"
+	desc = "Your spraygun is amazing at taking out zombies, but your slow speed and lack of bullet resistance can leave you helpless against rebels."
+	id_name = "ICU"
+
+	uniform = /obj/item/clothing/under/citizen
+	back = /obj/item/watertank/cleanup
+
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	r_pocket = /obj/item/flashlight
+
+	shoes = /obj/item/clothing/shoes/halflife/cleanup
+	gloves = /obj/item/clothing/gloves/halflife/cleanup
+	suit = /obj/item/clothing/suit/utility/radiation/cleanup
+	mask = /obj/item/clothing/mask/gas/cwuengi
+	head = /obj/item/clothing/head/utility/radiation
+
+	ears = /obj/item/radio/headset/civilprotection/deployment
+	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier2/pistol_cop
 	name = "Deployment: Pistol Cop"
@@ -334,6 +356,7 @@
 		/obj/item/sbeacondrop/combine_turret = 1,
 		/obj/item/wirecutters/halflife = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 1,
+		/obj/item/wrench/halflife = 1,
 	)
 
 
@@ -528,7 +551,8 @@
 	gloves = /obj/item/clothing/gloves/halflife/foreman
 
 	r_pocket = /obj/item/flashlight
-	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
+
+	belt = /obj/item/gun/ballistic/revolver/coltpython
 
 	back = /obj/item/storage/backpack/satchel
 
@@ -536,9 +560,10 @@
 		/obj/item/crowbar/large = 1,
 		/obj/item/stack/sheet/mineral/sandbags = 11,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
-		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/ammo_box/colta357 = 2,
 		/obj/item/sbeacondrop/combine_turret = 1,
 		/obj/item/wirecutters/halflife = 1,
+		/obj/item/wrench/halflife = 1,
 	)
 
 
@@ -582,6 +607,7 @@
 	mask = /obj/item/clothing/mask/gas/civilprotection/overseer
 	belt = /obj/item/storage/belt/civilprotection/full
 
+	l_pocket = /obj/item/grenade/spawnergrenade/manhacks/shielded
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
@@ -609,7 +635,7 @@
 
 /datum/outfit/deployment_loadout/combine/tier5/hunter/post_equip(mob/living/carbon/human/H)
 	var/datum/mind/player_mind = H.mind
-	var/mob/living/simple_animal/hostile/halflife/hunter/S = new (H.loc)
+	var/mob/living/simple_animal/hostile/halflife/hunter/deployment/S = new (H.loc)
 	player_mind.transfer_to(S)
 	qdel(H)
 
@@ -641,7 +667,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
 
-	extra_end = 2
+	extra_end = 3
 
 /datum/outfit/deployment_loadout/combine/tier5/assassin
 	name = "Deployment: Combine Assassin"
@@ -664,7 +690,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/infiltrate.ogg'
 
-	extra_dex = 4
+	extra_dex = 5
 	extra_str = 5
 	extra_per = 5
 
@@ -695,6 +721,8 @@
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
+
+	extra_end = 3
 
 /datum/outfit/deployment_loadout/combine/tier5/advisor
 	name = "Deployment: Advisor"
