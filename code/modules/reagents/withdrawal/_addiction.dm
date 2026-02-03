@@ -36,9 +36,10 @@
 	LAZYSET(victim_mind.active_addictions, type, 1) //Start at first cycle.
 	SEND_SIGNAL(victim_mind.current, COMSIG_CARBON_GAIN_ADDICTION, victim_mind)
 	victim_mind.current.log_message("has become addicted to [name].", LOG_GAME)
+	victim_mind.current.throw_alert_text(/atom/movable/screen/alert/text/brutal, "You've become addicted to [name].", override = FALSE) // HL13 EDIT - text alert
 
 
-///Called when you lose addiction poitns somehow. Takes a mind as argument and sees if you lost the addiction
+///Called when you lose addiction points somehow. Takes a mind as argument and sees if you lost the addiction
 /datum/addiction/proc/on_lose_addiction_points(datum/mind/victim_mind)
 	var/current_addiction_point_amount = victim_mind.addiction_points[type]
 	if(!LAZYACCESS(victim_mind.active_addictions, type)) //Not addicted
@@ -52,6 +53,7 @@
 	victim_mind.current.clear_mood_event("[type]_addiction")
 	SEND_SIGNAL(victim_mind.current, COMSIG_CARBON_LOSE_ADDICTION, victim_mind)
 	to_chat(victim_mind.current, span_notice("You feel like you've gotten over your need for drugs."))
+	victim_mind.current.throw_alert_text(/atom/movable/screen/alert/text/happy, "You beat your addiction for drugs.", override = FALSE) // HL13 EDIT - text alert
 	end_withdrawal(victim_mind.current)
 	LAZYREMOVE(victim_mind.active_addictions, type)
 

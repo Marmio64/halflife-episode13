@@ -420,9 +420,10 @@ SUBSYSTEM_DEF(job)
 
 	job_debug("DO: Player count to assign roles to: [initial_players_to_assign]")
 
-	//Scale number of open security officer slots to population
+	//Scale number of open security officer and refugee slots to population
 	if(SSmapping.current_map.minetype != "combat_deployment")
 		setup_officer_positions()
+		setup_refugee_positions()
 
 	//Jobs will have fewer access permissions if the number of players exceeds the threshold defined in game_options.txt
 	var/min_access_threshold = CONFIG_GET(number/minimal_access_threshold)
@@ -646,6 +647,29 @@ SUBSYSTEM_DEF(job)
 			GLOB.secequipment -= spawnloc
 		else //We ran out of spare locker spawns!
 			break
+
+/datum/controller/subsystem/job/proc/setup_refugee_positions()
+	var/datum/job/J = SSjob.get_job(JOB_PRISONER)
+	if(!J)
+		CRASH("setup_refugee_positions(): Refugee job is missing")
+
+	if(unassigned.len < 10) //ultra low pop, dont bother with refugees
+		job_debug("SOP: Pop is too low, setting open refugee positions to 0")
+		J.total_positions = 0
+		J.spawn_positions = 0
+		return
+
+	else
+		if(J.spawn_positions > 0)
+			if(prob(50))
+				job_debug("SOP: Setting open refugee positions to 3")
+				J.total_positions = 3
+				J.spawn_positions = 3
+			else
+				job_debug("SOP: Coin flip failed, setting open refugee positions to 0")
+				J.total_positions = 0
+				J.spawn_positions = 0
+				return
 
 /datum/controller/subsystem/job/proc/handle_feedback_gathering()
 	for(var/datum/job/job as anything in joinable_occupations)

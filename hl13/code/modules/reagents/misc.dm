@@ -125,6 +125,7 @@
 	affected_mob.change_stat(STATKEY_INT, 3)
 	affected_mob.change_stat(STATKEY_END, 3)
 	affected_mob.change_stat(STATKEY_DEX, 3)
+	affected_mob.throw_alert_text(/atom/movable/screen/alert/text/joke, "You feel funny.", override = FALSE)
 
 /datum/reagent/drug/chumtoad/on_mob_delete(mob/living/affected_mob)
 	. = ..()

@@ -43,6 +43,8 @@
 	/// or trying to point your gun at your screen.
 	var/default_click = FALSE
 
+	var/use_registersignal = TRUE
+
 /atom/movable/screen/Initialize(mapload, datum/hud/hud_owner)
 	. = ..()
 	if(isnull(hud_owner)) //some screens set their hud owners on /new, this prevents overriding them with null post atoms init
@@ -81,7 +83,8 @@
 		hud = null
 		return
 	hud = hud_owner
-	RegisterSignal(hud, COMSIG_QDELETING, PROC_REF(on_hud_delete))
+	if(use_registersignal)
+		RegisterSignal(hud, COMSIG_QDELETING, PROC_REF(on_hud_delete))
 
 /// Returns the mob this is being displayed to, if any
 /atom/movable/screen/proc/get_mob()

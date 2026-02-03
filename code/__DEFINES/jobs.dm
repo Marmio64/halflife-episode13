@@ -48,7 +48,7 @@
 
 //No department
 #define JOB_ASSISTANT "Prisoner"
-#define JOB_PRISONER "Rebel"
+#define JOB_PRISONER "Refugee"
 
 #define JOB_DEPLOYMENT_REFUGEE "Refugee Rebel"
 #define JOB_DEPLOYMENT_METROCOP "Civil Protection"

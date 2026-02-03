@@ -55,7 +55,8 @@ DEFINE_BITFIELD(turret_flags, list(
 	anchored = 0
 	raised = 1
 	alwaysmovable = TRUE
-	max_integrity = 160
+	max_integrity = 100 //80 effective health, since it breaks at 20 integrity
+	integrity_failure = 0.2
 	uses_stored = FALSE
 	armor_type = /datum/armor/combine_porta_turret
 

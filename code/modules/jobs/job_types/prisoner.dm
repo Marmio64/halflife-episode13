@@ -1,15 +1,19 @@
 /datum/job/prisoner
 	title = JOB_PRISONER
-	description = "Inhabit an abandoned, hidden bunker and stealthily work to overthrow the combine regime. Smuggle out citizens from the city and convince them to join your cause while avoiding combine assaults."
+	description = "Live out your life in the outlands near the prison. Try not to starve to death, and maybe even do some good in the world by helping any escaped convicts you come across. This role is not guaranteed, and may sometimes be absent from rounds."
 	department_head = list("Nobody")
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 3 //Handled in /datum/controller/occupations/proc/setup_refugee_positions()
+	spawn_positions = 3 //Handled in /datum/controller/occupations/proc/setup_refugee_positions()
 	supervisors = "nobody"
 	exp_granted_type = EXP_TYPE_CREW
 	paycheck = PAYCHECK_ZERO
 	config_tag = "PRISONER"
 
-	outfit = /datum/outfit/job/rebel
+	exp_requirements = 480 //8 hours, this is a difficult, uncommon, low slot role that new people shouldnt be wasting
+	exp_required_type = EXP_TYPE_CREW
+	exp_granted_type = EXP_TYPE_CREW
+
+	outfit = /datum/outfit/job/refugee/equipped
 	plasmaman_outfit = /datum/outfit/plasmaman/prisoner
 
 	display_order = JOB_DISPLAY_ORDER_PRISONER
@@ -18,12 +22,12 @@
 	family_heirlooms = list(/obj/item/pen/blue)
 	rpg_title = "Defeated Miniboss"
 
-	//job_flags = JOB_EQUIP_RANK|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS
-	//faction = FACTION_STATION
+	job_flags = JOB_EQUIP_RANK|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS
+	faction = FACTION_STATION
 
 	cmode_music = 'hl13/sound/music/combat/cpviolation.ogg' //cause they're a cp violation
 
-	gameplay_help = "Your task is of a herculean effort, and the road ahead will see you losing many of your comrades and most likely your own life as well. Take things slowly, wittle down the combine, loot to find better gear, and recruit more volunteers in your ranks to have the best chance."
+	gameplay_help = "Life in the outlands is harsh, you may have to do bad things to survive, or just die all the same."
 
 /datum/outfit/job/rebel
 	name = "Outlands Rebel"
@@ -99,6 +103,16 @@
 
 	uniform = /obj/item/clothing/under/citizen/refugee
 	belt = /obj/item/storage/belt/pouch/refugee
+
+/datum/outfit/job/refugee/equipped
+	name = "Outlands Refugee with equipment"
+	jobtype = /datum/job/prisoner
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	belt = /obj/item/storage/belt/pouch/refugee
+
+	suit = /obj/item/clothing/suit/armor/armored
+	id = /obj/item/storage/wallet/small_cash //something to get you started
 
 /datum/outfit/job/refugee/randomitems
 	name = "Outlands Refugee with a random item"

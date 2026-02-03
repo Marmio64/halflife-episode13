@@ -57,7 +57,7 @@
 	..()
 	if(stat)
 		return
-	adjust_health(-maxHealth*0.04) //10 health every 2 seconds, same as advisors
+	adjustHealth(-maxHealth*0.04) //10 health every 2 seconds, same as advisors
 
 /mob/living/simple_animal/hostile/halflife/hunter/Aggro()
 	. = ..()

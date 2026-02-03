@@ -185,7 +185,7 @@
  * * attack_direction: For bloodsplatters, if relevant
  * * wound_source: The source of the wound, such as a weapon.
  */
-datum/wound/proc/apply_wound(obj/item/bodypart/limb, silent = FALSE, datum/wound/old_wound = null, smited = FALSE, attack_direction = null, wound_source = "Unknown", replacing = FALSE)
+/datum/wound/proc/apply_wound(obj/item/bodypart/limb, silent = FALSE, datum/wound/old_wound = null, smited = FALSE, attack_direction = null, wound_source = "Unknown", replacing = FALSE)
 	if (!limb.is_woundable() || !can_be_applied_to(limb, old_wound))
 		qdel(src)
 		return FALSE
@@ -223,6 +223,10 @@ datum/wound/proc/apply_wound(obj/item/bodypart/limb, silent = FALSE, datum/wound
 			vis_dist = DEFAULT_MESSAGE_RANGE
 
 		victim.visible_message(msg, span_userdanger("Your [limb.plaintext_zone] [occur_text]!"), vision_distance = vis_dist)
+
+		if(WOUND_SEVERITY_SEVERE <= severity)
+			victim.throw_alert_text(/atom/movable/screen/alert/text/cry, "You have suffered a grievous wound!", override = FALSE) // HL13 EDIT - text alert
+
 		if(sound_effect)
 			playsound(limb.owner, sound_effect, sound_volume + (20 * severity), TRUE, falloff_exponent = SOUND_FALLOFF_EXPONENT + 2,  ignore_walls = FALSE, falloff_distance = 0)
 

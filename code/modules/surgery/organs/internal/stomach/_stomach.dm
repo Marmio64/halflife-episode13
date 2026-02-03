@@ -132,6 +132,7 @@
 	else
 		if(human.overeatduration >= (200 SECONDS))
 			to_chat(human, span_danger("You suddenly feel blubbery!"))
+			human.throw_alert_text(/atom/movable/screen/alert/text/sad, "You feel very fat...", override = FALSE) // HL13 EDIT - text alert
 			human.add_traits(list(TRAIT_FAT, TRAIT_OFF_BALANCE_TACKLER), OBESITY)
 
 	// nutrition decrease and satiety
@@ -194,6 +195,7 @@
 
 		if(prob(3))
 			to_chat(human, span_warning("You feel your body wasting away from your hunger..."))
+			human.throw_alert_text(/atom/movable/screen/alert/text/sad, "The hunger is getting to you...", override = FALSE) // HL13 EDIT - text alert
 			playsound(get_turf(human), pick('hl13/sound/effects/hungry1.ogg','hl13/sound/effects/hungry2.ogg','hl13/sound/effects/hungry3.ogg'), 100, TRUE, -1)
 			human.adjust_dizzy(6 SECONDS)
 			human.adjust_confusion(6 SECONDS)
@@ -230,6 +232,7 @@
 			human.adjust_dizzy(6 SECONDS)
 			human.adjust_confusion(6 SECONDS)
 		if(prob(4))
+			human.throw_alert_text(/atom/movable/screen/alert/text/sad, "You are incredibly parched...", override = FALSE) // HL13 EDIT - text alert
 			to_chat(human, span_warning("So thirsty... just need to lie down..."))
 			human.adjustStaminaLoss(25)
 			human.adjustOxyLoss(10)

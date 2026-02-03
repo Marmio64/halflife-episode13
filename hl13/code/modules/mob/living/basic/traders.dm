@@ -658,7 +658,7 @@
 		/obj/item/food/canned/halflife/beans = list(PAYCHECK_CREW * 2, 3),
 		/obj/item/halflife/nutrient_bar_wrapping/water = list(PAYCHECK_CREW * 1, 3),
 		/obj/item/reagent_containers/pill/antitox = list(PAYCHECK_CREW, 3),
-		/obj/item/machinepiece/multifunctiontool = list(PAYCHECK_CREW * 2.5, 3),
+		/obj/item/card/emag/halflife = list(PAYCHECK_CREW * 10, 3),
 		/obj/item/halflife/antenna = list(PAYCHECK_CREW * 4, 3),
 		/obj/item/crowbar/large = list(PAYCHECK_CREW * 3, 1),
 		/obj/item/weldingtool/halflife = list(PAYCHECK_CREW * 1.25, 2),

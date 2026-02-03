@@ -78,6 +78,13 @@
 #define ui_palette_scroll "WEST+1:8,NORTH-6:28"
 #define ui_palette_scroll_offset(north_offset) ("WEST+1:8,NORTH-[6+north_offset]:28")
 
+//Upper-middle left (alerts)
+#define ui_alerttext1 "WEST+0:4,CENTER+5:27"
+#define ui_alerttext2 "WEST+0:4,CENTER+4:25"
+#define ui_alerttext3 "WEST+0:4,CENTER+3:23"
+#define ui_alerttext4 "WEST+0:4,CENTER+2:21"
+#define ui_alerttext5 "WEST+0:4,CENTER+1:19"
+
 //Middle right (status indicators)
 #define ui_healthdoll "EAST-1:28,CENTER-2:17"
 #define ui_health "EAST-1:28,CENTER-1:19"

@@ -408,6 +408,7 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	screenmob.update_action_buttons(TRUE)
 	// Handles alerts - the things on the right side of the screen
 	reorganize_alerts(screenmob)
+	reorganize_alert_texts(screenmob) //hl13 ADD
 	screenmob.reload_fullscreen()
 
 	if(screenmob == mymob)

@@ -32,6 +32,7 @@
 						to_chat(src, span_userdanger("[pick(usedp)]"))
 						if(painpercent >= 130)
 							Paralyze(painpercent/3) //min amount is 130, so a third of that is a little over 4 seconds. (This goes in deciseconds)
+							throw_alert_text(/atom/movable/screen/alert/text/cry, "You collapse in pain!", override = FALSE) // HL13 EDIT - text alert
 					else
 						if(prob(probby/3))
 							emote("paingroan")

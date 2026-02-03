@@ -39,6 +39,10 @@
 		carbies.cure_husk(BURN)
 		carbies.visible_message(span_nicegreen("A rubbery liquid coats [carbies]'s burns. [carbies] looks a lot healthier!")) //we're avoiding using the phrases "burnt flesh" and "burnt skin" here because carbies could be a skeleton or a golem or something
 
+/datum/reagent/medicine/biogel/on_mob_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.throw_alert_text(/atom/movable/screen/alert/text/smallhappy, "You feel your wounds start to heal.", override = FALSE)
+
 /datum/reagent/medicine/concentrated_biogel
 	name = "Concentrated Biogel"
 	description = "A concentrated amount of biogel with a few other compounds inside. Doesn't heal instantly like normal biogel, but doesn't need to be applied by touch, and will heal all damage types."
@@ -76,6 +80,10 @@
 	need_mob_update += affected_mob.adjustFireLoss(1.5 * REM * seconds_per_tick, updating_health = FALSE, required_bodytype = affected_bodytype)
 	if(need_mob_update)
 		return UPDATE_MOB_HEALTH
+
+/datum/reagent/medicine/concentrated_biogel/on_mob_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.throw_alert_text(/atom/movable/screen/alert/text/smallhappy, "You feel your wounds start to heal.", override = FALSE)
 
 /datum/reagent/medicine/concentrated_biogel/slurry
 	name = "Concentrated Biogel Slurry"
