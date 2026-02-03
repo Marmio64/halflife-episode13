@@ -340,6 +340,10 @@
 "bL" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/outdoors/forest)
+"bN" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/curfew,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/prison/cells)
 "bP" = (
 /obj/structure/halflife/trash_decal,
 /turf/open/misc/beach/sand,
@@ -428,6 +432,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/prison/security/solitary)
+"cp" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/curfew,
+/turf/open/floor/plating/indoor/tile,
+/area/halflife/indoors/prison)
 "cr" = (
 /obj/machinery/telecomms/server/presets/common/birdstation,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -3668,6 +3676,12 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison/factory)
+"ul" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/curfew{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/prison/cells)
 "un" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -4546,6 +4560,12 @@
 "yI" = (
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/prison/commissary)
+"yJ" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/curfew{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/prison/cells)
 "yK" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/stained,
@@ -5276,7 +5296,9 @@
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "CP" = (
-/obj/machinery/door/airlock/highsecurity/combine,
+/obj/machinery/turnstile/brig/halflife/forcefield/curfew{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/prison/cells)
 "CR" = (
@@ -6145,7 +6167,9 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/prison/mining)
 "Hj" = (
-/obj/machinery/door/airlock/highsecurity/combine,
+/obj/machinery/turnstile/brig/halflife/forcefield/curfew{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison/cells)
 "Hk" = (
@@ -6778,6 +6802,10 @@
 "Kz" = (
 /obj/structure/table/halflife/no_smooth/large/wood/desk,
 /turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/prison/cells)
+"KB" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/curfew,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/prison/cells)
 "KD" = (
 /obj/structure/railing/halflife/sewer{
@@ -46552,7 +46580,7 @@ mJ
 mJ
 mJ
 zW
-zW
+HQ
 Zz
 wj
 yd
@@ -46739,7 +46767,7 @@ mJ
 mJ
 mJ
 mJ
-mJ
+KB
 Oq
 XX
 XX
@@ -46926,7 +46954,7 @@ mJ
 mJ
 mJ
 zW
-zW
+HQ
 Zz
 gq
 XX
@@ -47492,7 +47520,7 @@ HQ
 RE
 RE
 RE
-RE
+kz
 RE
 RE
 RE
@@ -47679,7 +47707,7 @@ gm
 IN
 IN
 IN
-IN
+cp
 IN
 IN
 IN
@@ -47866,7 +47894,7 @@ HQ
 Bo
 RE
 RE
-RE
+kz
 RE
 RE
 IL
@@ -53997,7 +54025,7 @@ Fg
 HQ
 HQ
 HQ
-CP
+ul
 HQ
 HQ
 HQ
@@ -54029,7 +54057,7 @@ HQ
 HQ
 HQ
 HQ
-Hj
+yJ
 HQ
 HQ
 HQ
@@ -54785,7 +54813,7 @@ HQ
 Fe
 RE
 RE
-RE
+kz
 RE
 RE
 BW
@@ -54972,7 +55000,7 @@ gm
 IN
 IN
 IN
-IN
+cp
 IN
 IN
 IN
@@ -55159,7 +55187,7 @@ HQ
 RE
 RE
 RE
-RE
+kz
 RE
 RE
 RE
@@ -55715,7 +55743,7 @@ mJ
 mJ
 mJ
 zW
-zW
+HQ
 HQ
 QJ
 QJ
@@ -55902,7 +55930,7 @@ mJ
 mJ
 mJ
 zW
-zW
+bN
 dT
 QJ
 QJ
@@ -56089,7 +56117,7 @@ mJ
 mJ
 mJ
 zW
-zW
+HQ
 HQ
 GE
 QJ

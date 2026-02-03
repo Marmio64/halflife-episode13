@@ -265,3 +265,8 @@
 /obj/machinery/turnstile/brig/halflife/forcefield/infestation/nodirectional
 	desc = "A forcefield which only allows those to pass who have proper access. You may be able to turn it off with the proper access."
 	directional = FALSE
+
+/obj/machinery/turnstile/brig/halflife/forcefield/curfew //these ones open and close according to curfew time
+	name = "Combine Curfew Forcefield"
+	desc = "A forcefield which only allows those to pass who have proper access. You may be able to turn it off with the proper access. This one is modified to turn on and off in accordance with curfew times. You may have to wait till morning to exit if it is currently on."
+	req_access = list(ACCESS_BRIG_ENTRANCE)

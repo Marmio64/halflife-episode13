@@ -52,6 +52,11 @@
 /datum/outfit/job/janitor/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/vortigaunt)
 
+/datum/outfit/job/janitor/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+	. = ..()
+
+	ADD_TRAIT(user, TRAIT_PRISONER, JOB_TRAIT)
+
 /*
 /datum/job/janitor/after_spawn(mob/living/carbon/human/H, mob/M)
 	. = ..()

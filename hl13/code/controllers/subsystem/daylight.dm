@@ -68,6 +68,11 @@ SUBSYSTEM_DEF(daylight)
 		if(day_cycle_active != DAY_CYCLE_NIGHT)
 			day_cycle_active = DAY_CYCLE_NIGHT
 
+			//turn on curfew fields
+			for(var/obj/machinery/turnstile/brig/halflife/forcefield/curfew/curfew_field as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/turnstile/brig/halflife/forcefield/curfew))
+				if(curfew_field.on == FALSE)
+					curfew_field.toggle_onoff()
+
 			var/message = "Attention inmates, it is now night time. Inmates are to return to their cells for the nightly lockup."
 
 			if(factory_goal_multiplier < MAX_QUOTA_MULTIPLIER) // easier first day, standard second day, max value fourth day and on
@@ -117,6 +122,12 @@ SUBSYSTEM_DEF(daylight)
 	if(current_day_time > MORNING_START && current_day_time <= AFTERNOON_START)
 		if(day_cycle_active != DAY_CYCLE_MORNING)
 			day_cycle_active = DAY_CYCLE_MORNING
+
+			//turn off curfew fields
+			for(var/obj/machinery/turnstile/brig/halflife/forcefield/curfew/curfew_field as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/turnstile/brig/halflife/forcefield/curfew))
+				if(curfew_field.on == TRUE)
+					curfew_field.toggle_onoff()
+
 			daily_tax = (get_factory_goal() * 30) //10 people would be 330 credits with standard multiplier
 			if(SSmapping.current_map.minetype != "combat_deployment")
 				priority_announce("Attention occupants, night has concluded, and Curfew is over. Your morning ration cycle will begin in thirty seconds. The daily tax is set at [daily_tax] credits.", "Curfew Notice.", sender_override = "Prison Automated Scheduler")
