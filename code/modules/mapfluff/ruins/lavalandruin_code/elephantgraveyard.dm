@@ -188,12 +188,12 @@
 /obj/structure/closet/crate/grave/filled/PopulateContents()  //GRAVEROBBING IS NOW A FEATURE
 	..()
 	new /obj/effect/decal/remains/human(src)
-	switch(rand(1,8))
+	switch(rand(1,10))
 		if(1)
 			new /obj/item/coin/gold(src)
 			new /obj/item/storage/wallet(src)
 		if(2)
-			new /obj/item/clothing/glasses/meson(src)
+			new /obj/item/clothing/under/citizen/refugee(src)
 		if(3)
 			new /obj/item/coin/silver(src)
 			new /obj/item/shovel/spade(src)
@@ -203,13 +203,17 @@
 			new /obj/item/clothing/neck/stethoscope(src)
 			new /obj/item/scalpel(src)
 			new /obj/item/hemostat(src)
-
 		if(6)
-			new /obj/item/reagent_containers/cup/beaker(src)
-			new /obj/item/clothing/glasses/science(src)
+			new /obj/item/storage/belt/pouch/refugee(src)
 		if(7)
 			new /obj/item/clothing/glasses/sunglasses/big(src)
-			new /obj/item/cigarette/rollie(src)
+			new /obj/item/cigarette/cigar(src)
+		if(8)
+			new /obj/item/weaponcrafting/frame/coltpython(src)
+		if(9)
+			new /obj/item/clothing/under/citizen/rebel(src)
+			new /obj/item/clothing/head/beanie/black(src)
+			new /obj/item/clothing/suit/armor/civilprotection(src)
 		else
 			//empty grave
 			return

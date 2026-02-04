@@ -71,7 +71,7 @@
 
 		if(isliving(victim))
 			var/mob/living/victim_living = victim
-			victim_living.Immobilize(1 SECONDS)
+			victim_living.Immobilize(2 SECONDS)
 			to_chat(victim, span_userdanger("You're slammed back by [caster]!"))
 			victim_living.adjustBruteLoss(30)
 			playsound(get_turf(caster), 'hl13/sound/effects/injury/trauma1.ogg', 80, TRUE, TRUE)
