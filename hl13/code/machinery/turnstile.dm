@@ -14,6 +14,7 @@
 	var/forcefield = FALSE
 	var/on = TRUE
 	var/directional = TRUE //whether or not it actually permits one-way access.
+	var/permit_loyalists = FALSE //should it permit loyalists through regardless of whether they have proper access
 
 /obj/machinery/turnstile/brig
 	name = "Brig turnstile"
@@ -68,6 +69,17 @@
 	if(iscarbon(mover))
 		var/mob/living/carbon/C = mover
 		is_handcuffed = C.handcuffed
+
+		var/obj/item/card/id/id_card
+		id_card = C.get_idcard(TRUE)
+		if(id_card)
+			var/username = C.get_face_name(C.get_id_name())
+			var/datum/record/crew/R = find_record(username)
+			if(R)
+				if(R.wanted_status == WANTED_PAROLE) //Loyalists can pass certain forcefields
+					if(permit_loyalists)
+						allowed = TRUE
+
 	if((get_dir(loc, mover.loc) == dir && !is_handcuffed && directional) || allowed) //Make sure looking at appropriate border, loc is first so the turnstyle faces the mover
 		flick("operate", src)
 		if(forcefield)
@@ -270,3 +282,12 @@
 	name = "Combine Curfew Forcefield"
 	desc = "A forcefield which only allows those to pass who have proper access. You may be able to turn it off with the proper access. This one is modified to turn on and off in accordance with curfew times. You may have to wait till morning to exit if it is currently on."
 	req_access = list(ACCESS_BRIG_ENTRANCE)
+
+/obj/machinery/turnstile/brig/halflife/forcefield/loyalists //these ones can permit loyalists through regardless of correct access
+	name = "Combine Loyalist Forcefield"
+	desc = "A forcefield which only allows those to pass who have proper access. You may be able to turn it off with the proper access. This one is modified to permit loyalists through regardless of correct access."
+	req_access = list(ACCESS_BRIG_ENTRANCE)
+	permit_loyalists = TRUE
+
+/obj/machinery/turnstile/brig/halflife/forcefield/loyalists/nodirectional
+	directional = FALSE

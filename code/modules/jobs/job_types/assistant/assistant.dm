@@ -6,26 +6,22 @@ GLOBAL_LIST_INIT(availablecells, list(
 	"L4",
 	"L5",
 	"L6",
-	"L7",
 	"R1",
 	"R2",
 	"R3",
 	"R5", //R4 is for vorts, not R5, whoops
 	"R6",
-	"R7",
 	"L1",
 	"L2",
 	"L3",
 	"L4",
 	"L5",
 	"L6",
-	"L7",
 	"R1",
 	"R2",
 	"R3",
 	"R5", //if i dont do it this way it deletes two at once
 	"R6",
-	"R7",
 ))
 
 /*
