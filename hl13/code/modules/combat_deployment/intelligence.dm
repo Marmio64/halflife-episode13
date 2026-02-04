@@ -8,11 +8,11 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 /obj/item/hl2/intelligence
 	name = "Neutral Intel"
 	desc = "A briefcase containing vital secrets. Turn in the enemy team's intel at your cash deposit to gain points for your team. Decent weapon."
-	icon = 'icons/obj/storage/case.dmi'
-	icon_state = "briefcase"
-	inhand_icon_state = "briefcase"
-	lefthand_file = 'icons/mob/inhands/equipment/briefcase_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/briefcase_righthand.dmi'
+	icon = 'hl13/icons/obj/storage/storage.dmi'
+	icon_state = "suitcase"
+	inhand_icon_state = "suitcase"
+	lefthand_file = 'hl13/icons/mob/inhands/cases_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/cases_righthand.dmi'
 	throw_range = 1
 	force = 18 //guns besides pistols and smgs are unusable while holding so
 	light_range = 2
@@ -40,11 +40,15 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 
 /obj/item/hl2/intelligence/rebel
 	name = "Rebel Intel"
+	icon_state = "intel_red"
+	inhand_icon_state = "intel_red"
 	faction_belonging = REBEL_DEPLOYMENT_FACTION
 	light_color = "#f85205"
 
 /obj/item/hl2/intelligence/combine
 	name = "Combine Intel"
+	icon_state = "intel_blu"
+	inhand_icon_state = "intel_blu"
 	faction_belonging = COMBINE_DEPLOYMENT_FACTION
 	light_color = "#0051ff"
 
