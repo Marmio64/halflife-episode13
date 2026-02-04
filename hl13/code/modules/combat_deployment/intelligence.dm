@@ -18,8 +18,25 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 	light_range = 2
 	light_power = 3 //really needs to be visible
 	light_color = "#ffffff"
+	max_integrity = 9999
+	armor_type = /datum/armor/hl2_intel
+	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+
+
+	w_class = WEIGHT_CLASS_BULKY
+
 	var/faction_belonging = NO_FACTION
 	var/return_to_base = 60 SECONDS
+
+/datum/armor/hl2_intel
+	bullet = 100
+	melee = 100
+	bomb = 100
+	fire = 100
+	acid = 100
+
+/obj/item/hl2/intelligence/ex_act(severity, target)
+	return FALSE
 
 /obj/item/hl2/intelligence/rebel
 	name = "Rebel Intel"
@@ -79,21 +96,21 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 			for(var/X in GLOB.deployment_combine_players)
 				var/mob/living/carbon/human/player = X
 				SEND_SOUND(player, 'hl13/sound/effects/griffin_10.ogg')
-				to_chat(player, "<span class='userdanger'>Our intel has been returned!</span>")
+				to_chat(player, "<span class='greentext big'>Our intel has been returned!</span>")
 			for(var/X in GLOB.deployment_rebel_players)
 				var/mob/living/carbon/human/player = X
 				SEND_SOUND(player, 'hl13/sound/effects/griffin_10.ogg')
-				to_chat(player, "<span class='greentext big'>The combine team's intel has been returned!</span>")
+				to_chat(player, "<span class='userdanger'>The combine team's intel has been returned!</span>")
 		if(faction_belonging == REBEL_DEPLOYMENT_FACTION)
 			GLOB.rebel_intel_exists = FALSE
 			for(var/X in GLOB.deployment_combine_players)
 				var/mob/living/carbon/human/player = X
 				SEND_SOUND(player, 'hl13/sound/effects/griffin_10.ogg')
-				to_chat(player, "<span class='userdanger'>Our intel has been returned!</span>")
+				to_chat(player, "<span class='userdanger'>The rebel team's intel has been returned!</span>")
 			for(var/X in GLOB.deployment_rebel_players)
 				var/mob/living/carbon/human/player = X
 				SEND_SOUND(player, 'hl13/sound/effects/griffin_10.ogg')
-				to_chat(player, "<span class='greentext big'>The rebel team's intel has been returned!</span>")
+				to_chat(player, "<span class='greentext big'>Our intel has been returned!</span>")
 		qdel(src)
 	else
 		return_to_base -= 1 SECONDS
@@ -131,10 +148,10 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 /// here begins the cap point /////////////////////////////////
 
 /obj/machinery/intel_deposit
-	name = "Intel Deposit"
-	desc = "Intel can be deposited here by it's respective team for points. Also generates intel that opposing forces can steal. Not to be confused with a Cash Deposit."
-	icon = 'hl13/icons/obj/port/objects.dmi'
-	icon_state = "pad_active"
+	name = "Intel Deposit and Relay"
+	desc = "A data broadcasting and storage unit. Intel can be deposited here by it's respective team for points. Also generates intel that opposing forces can steal."
+	icon = 'hl13/icons/obj/port/props/stationobjs.dmi'
+	icon_state = "broadcast_receiver_off"
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE
 	var/deployment_faction = NO_FACTION
@@ -158,13 +175,13 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 /obj/machinery/intel_deposit/process()
 	if(captures == 3)
 		if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
-			priority_announce("Overwatch recieves rebel intel. Amputate all dissenters.", "Overwatch Priority Alert")
+			priority_announce("Anticitizen intelligence received and decoded, all delegates prepare for debriding, code: Amputate all dissenters.", "Overwatch Priority Alert")
 			GLOB.deployment_win_team = COMBINE_DEPLOYMENT_FACTION
 			SSticker.force_ending = FORCE_END_ROUND
 			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All Rebel intel has been captured, the Combine win."))))
 			return PROCESS_KILL
 		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
-			priority_announce("The Combine's intel has been captured! The rebels have won!", "Lambda Priority Alert")
+			priority_announce("Combine intelligence received and decoded, clear away the rest of the combine forces and prepare for further instruction!", "Lambda Priority Alert")
 			GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
 			SSticker.force_ending = FORCE_END_ROUND
 			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All Combine intel has been captured, the Rebels win."))))
