@@ -133,20 +133,20 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 		for(var/X in GLOB.deployment_combine_players)
 			var/mob/living/carbon/human/player = X
 			SEND_SOUND(player, 'hl13/sound/effects/griffin_10.ogg')
-			to_chat(player, "<span class='userdanger'>Our intel has been dropped!</span>")
+			to_chat(player, "<span class='greentext big'>Our intel has been dropped!</span>")
 		for(var/X in GLOB.deployment_rebel_players)
 			var/mob/living/carbon/human/player = X
 			SEND_SOUND(player, 'hl13/sound/effects/griffin_10.ogg')
-			to_chat(player, "<span class='greentext big'>A teammate has dropped the combine team's intel!</span>")
+			to_chat(player, "<span class='userdanger'>A teammate has dropped the combine team's intel!</span>")
 	if(faction_belonging == REBEL_DEPLOYMENT_FACTION)
 		for(var/X in GLOB.deployment_combine_players)
 			var/mob/living/carbon/human/player = X
 			SEND_SOUND(player, 'hl13/sound/effects/griffin_10.ogg')
-			to_chat(player, "<span class='userdanger'>Our intel has been dropped!</span>")
+			to_chat(player, "<span class='userdanger'>A teammate has dropped the rebel team's intel!</span>")
 		for(var/X in GLOB.deployment_rebel_players)
 			var/mob/living/carbon/human/player = X
 			SEND_SOUND(player, 'hl13/sound/effects/griffin_10.ogg')
-			to_chat(player, "<span class='greentext big'>A teammate has dropped the rebel team's intel!</span>")
+			to_chat(player, "<span class='greentext big'>Our intel has been dropped!</span>")
 
 
 /// here begins the cap point /////////////////////////////////
