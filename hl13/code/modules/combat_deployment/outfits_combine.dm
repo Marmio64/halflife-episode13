@@ -73,6 +73,8 @@
 	extra_str = 3
 	extra_end = 3
 
+	skillchips = list(/obj/item/skillchip/engineer)
+
 /// TIER 2 ////////////////////////////////////////////////////////
 
 /datum/outfit/deployment_loadout/combine/tier2
@@ -193,6 +195,8 @@
 
 	extra_str = 4 // all combine engis get extra strength over rebel engis since rebel engis get some armor
 	extra_end = 4
+
+	skillchips = list(/obj/item/skillchip/engineer)
 
 /// TIER 3 ////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier3
@@ -367,6 +371,8 @@
 
 	extra_str = 5
 	extra_end = 5
+
+	skillchips = list(/obj/item/skillchip/engineer)
 
 /datum/outfit/deployment_loadout/combine/tier3/sniper
 	name = "Deployment: Sniper OTA"
@@ -575,6 +581,8 @@
 	extra_str = 5
 	extra_end = 5
 
+	skillchips = list(/obj/item/skillchip/engineer)
+
 /obj/item/sbeacondrop/combine_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a combine turret to your location</i>."
 	droptype = /obj/machinery/porta_turret/combine
@@ -737,3 +745,39 @@
 	var/mob/living/basic/halflife/advisor/S = new (H.loc)
 	player_mind.transfer_to(S)
 	qdel(H)
+
+/datum/outfit/deployment_loadout/combine/tier5/logistics_lead
+	name = "Deployment: Combine Logistics Lead"
+	display_name = "Combine Logistics Lead (Support)"
+	desc = "While not a very good combatant, you carry with you a supply radio just like your team captain, and can use it to call in a multitude of useful supplies!"
+	id_name = "Logistics Lead"
+
+	ears = /obj/item/radio/headset/heads/hop
+	uniform = /obj/item/clothing/under/halflife/labor_lead
+	head = /obj/item/clothing/head/halflife/blue_hardhat
+	mask = /obj/item/clothing/mask/gas/cwuengi //only really because i dont want them to be mistaken for a rebel
+	suit = /obj/item/clothing/suit/armor/civilprotection/speedy
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython
+	l_pocket = /obj/item/hl2/supply_radio/combine/basic
+	r_pocket = /obj/item/flashlight/seclite
+
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	gloves = /obj/item/clothing/gloves/color/civilprotection
+
+	back = /obj/item/storage/backpack/halflife/satchel
+
+	backpack_contents = list(
+		/obj/item/ammo_box/colta357 = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/melee/baton/telescopic = 1,
+	)
+
+	ears = /obj/item/radio/headset/civilprotection/deployment
+	combat_music = 'hl13/sound/music/combat/branescan.ogg'
+
+	extra_int = 10
+	extra_per = 3
+
+/datum/outfit/deployment_loadout/combine/tier5/logistics_lead/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	ADD_TRAIT(H, TRAIT_SUPPLYRADIO_USER, JOB_TRAIT)

@@ -68,6 +68,19 @@
 	requires_hands = TRUE
 	delete_old = TRUE
 
+/datum/action/cooldown/spell/conjure_item/rocket
+	name = "Procure RPG Rocket"
+	desc = "Procures a rocket for you to use in rocket launchers."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "rocket"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 25 SECONDS
+	item_type = /obj/item/ammo_casing/rocket/hl13
+	requires_hands = TRUE
+
 /datum/action/cooldown/spell/conjure_item/grenade
 	name = "Procure Grenade"
 	desc = "Procures a MK3A2 grenade for tossing."
@@ -123,8 +136,8 @@
 
 	victim.add_mood_event("rally", /datum/mood_event/rallied)
 	victim.adjustStaminaLoss(-60)
-	victim.adjustBruteLoss(-20)
-	victim.adjustFireLoss(-20)
+	victim.adjustBruteLoss(-25)
+	victim.adjustFireLoss(-25)
 
 	if(victim != caster)
 		to_chat(victim, span_boldnicegreen("You feel inspired to fight!"))

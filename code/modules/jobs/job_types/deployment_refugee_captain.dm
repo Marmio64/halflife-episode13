@@ -77,6 +77,7 @@
 
 	ADD_TRAIT(H, TRAIT_VIRUSIMMUNE, JOB_TRAIT)
 	ADD_TRAIT(H, TRAIT_TDMCAPTAIN, JOB_TRAIT)
+	ADD_TRAIT(H, TRAIT_SUPPLYRADIO_USER, JOB_TRAIT)
 	ADD_TRAIT(H, TRAIT_TDMPLAYER, JOB_TRAIT)
 
 	H.fire_stack_decay_rate = -2 //So their corpses don't stay perma on fire, and can be rediscovered. Max stack size is 12, and this removes 4 stacks every 2 seconds

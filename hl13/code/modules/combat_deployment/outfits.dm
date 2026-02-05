@@ -67,13 +67,13 @@
 	if(extra_str)
 		human_to_equip.change_stat(STATKEY_STR, extra_str)
 	if(extra_per)
-		human_to_equip.change_stat(STATKEY_PER, extra_str)
+		human_to_equip.change_stat(STATKEY_PER, extra_per)
 	if(extra_int)
 		human_to_equip.change_stat(STATKEY_INT, extra_int)
 	if(extra_end)
-		human_to_equip.change_stat(STATKEY_END, extra_dex)
+		human_to_equip.change_stat(STATKEY_END, extra_end)
 	if(extra_dex)
-		human_to_equip.change_stat(STATKEY_DEX, extra_str)
+		human_to_equip.change_stat(STATKEY_DEX, extra_dex)
 
 	var/obj/item/card/id/W = human_to_equip.wear_id
 	if(W)

@@ -80,6 +80,8 @@
 	extra_str = 3
 	extra_end = 3
 
+	skillchips = list(/obj/item/skillchip/engineer)
+
 /datum/outfit/deployment_loadout/rebel/tier1/smuggler
 	name = "Deployment: Refugee Smuggler"
 	display_name = "Refugee Smuggler (Offense)"
@@ -188,6 +190,8 @@
 
 	extra_str = 3
 	extra_end = 3
+
+	skillchips = list(/obj/item/skillchip/engineer)
 
 /datum/outfit/deployment_loadout/rebel/tier2/smuggler
 	name = "Deployment: Upgraded Smuggler"
@@ -364,6 +368,8 @@
 
 	extra_str = 4
 	extra_end = 4
+
+	skillchips = list(/obj/item/skillchip/engineer)
 
 /datum/outfit/deployment_loadout/rebel/tier3/scout
 	name = "Deployment: Rebel Scout"
@@ -614,6 +620,8 @@
 	extra_str = 4
 	extra_end = 4
 
+	skillchips = list(/obj/item/skillchip/engineer)
+
 /obj/item/sbeacondrop/rebel_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a rebel turret to your location</i>."
 	droptype = /obj/machinery/porta_turret/combine/rebel
@@ -758,6 +766,28 @@
 	extra_dex = 2
 	extra_str = 2
 
+/datum/outfit/deployment_loadout/rebel/tier5/rpg
+	name = "Deployment: RPG Rebel"
+	display_name = "RPG Rebel (Offense)"
+	desc = "You are armed with a rocket launcher, and can procure an infinite amount of rockets on cooldown, but are unremarkable elsewise. Use your rockets to tear through combine defences with ease!"
+	id_name = "Demolitions Expert"
+
+	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
+	mask = /obj/item/clothing/mask/gas/hl2/military
+	suit = /obj/item/clothing/suit/armor/rebel
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
+	belt = /obj/item/storage/belt/civilprotection/coltammo_meds
+	gloves = /obj/item/clothing/gloves/combat
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython
+	back = /obj/item/gun/ballistic/rocketlauncher/halflife
+	r_pocket = /obj/item/flashlight/seclite
+	shoes = /obj/item/clothing/shoes/boots
+
+	ears = /obj/item/radio/headset/rebel_deployment
+	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/rocket)
+
 /datum/outfit/deployment_loadout/rebel/tier5/veteran
 	name = "Deployment: PLF Veteran"
 	display_name = "PLF Veteran (Defense)"
@@ -802,6 +832,40 @@
 /datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/vortigaunt/extract)
 	H.cmode_music = combat_music
+
+/datum/outfit/deployment_loadout/rebel/tier5/lieutenant
+	name = "Deployment: PLF Lieutenant"
+	display_name = "PLF Lieutenant (Support)"
+	desc = "You have decent armor on and a reliable colt python, but your most powerful ability is being able to rally your fellow troops, and use a basic supply radio that is similar to your team captain's."
+	id_name = "Lieutenant"
+
+	suit = /obj/item/clothing/suit/armor/halflife/milvest
+	mask = /obj/item/clothing/mask/gas/hl2/swat/hardened
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython
+	gloves = /obj/item/clothing/gloves/fingerless
+	l_pocket = /obj/item/hl2/supply_radio/rebel/lieutenant
+	r_pocket = /obj/item/flashlight/seclite
+	head = /obj/item/clothing/head/beret/sec/poland
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
+	shoes = /obj/item/clothing/shoes/boots
+
+	back = /obj/item/storage/backpack/halflife/satchel
+
+	backpack_contents = list(
+		/obj/item/hl13_small_flag/poland/telescopic = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/ammo_box/colta357 = 1,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+
+	spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/rebel)
+
+/datum/outfit/deployment_loadout/rebel/tier5/lieutenant/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	ADD_TRAIT(H, TRAIT_SUPPLYRADIO_USER, JOB_TRAIT)
 
 /datum/outfit/deployment_loadout/rebel/tier5/sniper
 	name = "Deployment: PLF Sniper"

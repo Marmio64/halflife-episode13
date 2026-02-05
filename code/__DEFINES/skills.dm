@@ -76,6 +76,7 @@
 
 #define TRAIT_TDMCAPTAIN "tdmcaptain"
 #define TRAIT_TDMPLAYER "tdmplayer"
+#define TRAIT_SUPPLYRADIO_USER "supplyradio_user"
 
 #define TRAIT_BACKSTABBER "backstabber"
 
