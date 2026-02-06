@@ -196,8 +196,10 @@
 			if(iscarbon(user))
 				var/mob/living/carbon/C = user
 				C.adjust_hygiene(-20) //gross, rummaging through garbage
-				if(HAS_TRAIT(C, TRAIT_ABOVE_LABOR))
-					C.add_mood_event("labor_search", /datum/mood_event/searched_garbage)
+				if(HAS_TRAIT(C, TRAIT_ABOVE_LABOR) || HAS_TRAIT(C, TRAIT_HIGHBORN))
+					C.add_mood_event("labor_search", /datum/mood_event/searched_garbage_major)
+				else if(!HAS_TRAIT(C, TRAIT_PRISONER) && !HAS_TRAIT(C, TRAIT_FILTHBORN) && !HAS_TRAIT(C, TRAIT_SCAVENGER)) //unless you're a prisoner, are filthborn, or a scavenger, you dont like to look through garbage still
+					C.add_mood_event("labor_search", /datum/mood_event/searched_garbage_minor)
 
 
 /obj/structure/halflife/trash/garbage/dumpster

@@ -2,6 +2,7 @@
 	name = "Scavenger"
 	desc = "You've been scrounging around places long before the combine came and took over, and are pretty good at unearthing hidden treasures from trash."
 	icon = FA_ICON_TRASH
+	mob_trait = TRAIT_SCAVENGER
 	value = 4
 	medical_record_text = "Patient is an adept scavenger."
 

@@ -12,7 +12,8 @@
 	obj_damage = 14
 	melee_damage_lower = 20
 	melee_damage_upper = 25
-	sharpness = SHARP_EDGED
+	sharpness = SHARP_POINTY
+	armour_penetration = 15
 	wound_bonus = -15
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	attack_verb_continuous = "claws"
@@ -117,6 +118,7 @@
 	. = ..()
 
 	to_chat(cast_on, span_warning("Your mind cries out in pain as a psionic wave washes over it!"))
+	cast_on.throw_alert_text(/atom/movable/screen/alert/text/cry, "Your mind explodes in agony!", override = FALSE)
 	cast_on.emote("scream")
 	cast_on.set_eye_blur_if_lower(eye_blur_duration)
 	cast_on.adjust_temppain(temp_pain_amount)
@@ -154,6 +156,7 @@
 	. = ..()
 
 	to_chat(cast_on, span_boldnicegreen("An alien wave of psionic interference covers you, easing your pain!"))
+	cast_on.throw_alert_text(/atom/movable/screen/alert/text/smallhappy, "You feel your pain melting away.", override = FALSE)
 	if(ishuman(cast_on))
 		var/mob/living/carbon/human/H = cast_on
 		H.reagents.add_reagent(/datum/reagent/medicine/muscle_stimulant, 5)

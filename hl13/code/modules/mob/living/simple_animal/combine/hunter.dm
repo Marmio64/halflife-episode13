@@ -11,8 +11,8 @@
 	maxHealth = 325
 	health = 325
 	harm_intent_damage = 25
-	melee_damage_lower = 18
-	melee_damage_upper = 24
+	melee_damage_lower = 20
+	melee_damage_upper = 25
 	sharpness = SHARP_EDGED
 	wound_bonus = 0
 	attack_vis_effect = ATTACK_EFFECT_CLAW

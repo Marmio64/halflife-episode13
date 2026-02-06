@@ -88,6 +88,8 @@
 
 #define TRAIT_HIGHBORN "highborn"
 
+#define TRAIT_SCAVENGER "scavenger"
+
 #define TRAIT_NOSLEEP "nosleep"
 
 #define TRAIT_TERRIBLE_AIM	"terrible_aim"
