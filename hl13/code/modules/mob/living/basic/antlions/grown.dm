@@ -134,13 +134,18 @@
 	. = ..()
 	AddComponent(/datum/component/seethrough_mob)
 
-/mob/living/basic/halflife/antlion_guard/examine(mob/user)
+/mob/living/basic/halflife/antlion_guard/examine(mob/living/user)
 	. = ..()
 	if(isvortigaunt(user) && stat == DEAD)
 		if(has_bait)
 			. += span_notice("We could use our link to the vortessence to extract the pheropods from this one...")
 		else
 			. += span_notice("We have no more use for this one, it's pheropods have already been extracted...")
+	else if(user.get_stat_level(STATKEY_INT) > 19)
+		if(has_bait)
+			. += span_notice("You remember vortigaunts are capable of extracting 'bugbait' from these... maybe if you had something sharp?")
+		else
+			. += span_notice("You can tell this Guard is only good for meat at this point.")
 
 /mob/living/basic/halflife/antlion_guard/attack_hand(mob/user, list/modifiers)
 	. = ..()
@@ -159,11 +164,39 @@
 			new /obj/item/bugbait(loc)
 			new /obj/effect/decal/cleanable/insectguts(loc)
 		else
-			to_chat(user, span_warning("We were interrupted during our work and mistakenly destroyed the pheropods!"))
-			has_bait = FALSE
-			new /obj/effect/decal/cleanable/insectguts(loc)
+			if(prob(5))
+				to_chat(user, span_warning("We were interrupted during our work and mistakenly destroyed the pheropods!"))
+				has_bait = FALSE
+				new /obj/effect/decal/cleanable/insectguts(loc)
+			else
+				to_chat(user, span_warning("We were interrupted during our work and were unable to extract the pheropods..."))
+				new /obj/effect/decal/cleanable/insectguts(loc)
 		extracting = FALSE
 		playsound(src, 'hl13/sound/weapons/attack_shoot.ogg', 50, TRUE, extrarange = -3)
+
+/mob/living/basic/halflife/antlion_guard/attackby(obj/item/I, mob/living/user, params) //for geniuses
+	. = ..()
+	if(!user.combat_mode && user.get_stat_level(STATKEY_INT) > 19 && I.get_sharpness() && stat == DEAD && extracting == FALSE)
+		if(!has_bait)
+			to_chat(user, span_warning("There's nothing to extract!"))
+			return
+		extracting = TRUE
+		to_chat(user, span_notice("You begin extracting the Guard's bugbait..."))
+		playsound(src, 'sound/effects/butcher.ogg', 50, TRUE, extrarange = -3)
+		if(do_after(user, 5 SECONDS, src)) //takes longer because you don't have magic
+			has_bait = FALSE
+			new /obj/item/bugbait(loc)
+			new /obj/effect/decal/cleanable/insectguts(loc)
+		else
+			if(prob(5))
+				to_chat(user, span_warning("You were interrupted during the process and accidentally destroyed the bugbait!"))
+				has_bait = FALSE
+				new /obj/effect/decal/cleanable/insectguts(loc)
+			else
+				to_chat(user, span_warning("You were interrupted during the process and were unable to extract the bugbait..."))
+				new /obj/effect/decal/cleanable/insectguts(loc)
+		extracting = FALSE
+		playsound(src, 'sound/effects/butcher.ogg', 50, TRUE, extrarange = -3)
 
 /mob/living/basic/halflife/antlion_guard/deployment
 	melee_attack_cooldown = 2 SECONDS
