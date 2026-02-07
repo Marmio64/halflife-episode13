@@ -896,8 +896,8 @@
 
 	item_flags = SLOWS_WHILE_IN_HAND | NEEDS_PERMIT
 
-	slowdown = 1
-	drag_slowdown = 1
+	slowdown = 0.75
+	drag_slowdown = 0.75
 
 	spread = 0
 	recoil = 0

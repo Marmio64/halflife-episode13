@@ -51,7 +51,7 @@
 	..()
 	if(stat)
 		return
-	adjust_health(-maxHealth*0.05) //10 health every 2 seconds
+	adjust_health(-maxHealth*0.02) //4 hp every 2 seconds
 
 /datum/language_holder/advisor
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM))
