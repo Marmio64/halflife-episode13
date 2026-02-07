@@ -141,7 +141,7 @@
 			. += span_notice("We could use our link to the vortessence to extract the pheropods from this one...")
 		else
 			. += span_notice("We have no more use for this one, it's pheropods have already been extracted...")
-	else if(user.get_stat_level(STATKEY_INT) > 19)
+	else if(user.get_stat_level(STATKEY_INT) > 19 && stat == DEAD)
 		if(has_bait)
 			. += span_notice("You remember vortigaunts are capable of extracting 'bugbait' from these... maybe if you had something sharp?")
 		else
