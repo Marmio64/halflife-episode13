@@ -116,7 +116,7 @@
 	attack_verb_simple = "smash"
 	attack_sound = 'hl13/sound/creatures/antlion_guard/shove1.ogg'
 	combat_mode = TRUE
-	guaranteed_butcher_results = list(/obj/item/food/meat/slab/xen = 3, /obj/item/bugbait = 1)
+	guaranteed_butcher_results = list(/obj/item/food/meat/slab/xen = 3)
 	death_sound = 'hl13/sound/creatures/antlion_guard/antlion_guard_die1.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/antlion_guard
 
@@ -127,10 +127,43 @@
 
 	var/soundvary = FALSE
 	var/idle_sounds = list('hl13/sound/creatures/antlion_guard/growl_idle.ogg')
+	var/has_bait = TRUE
+	var/extracting = FALSE //I just remembered the possibility of more than one vort
 
 /mob/living/basic/halflife/antlion_guard/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/seethrough_mob)
+
+/mob/living/basic/halflife/antlion_guard/examine(mob/user)
+	. = ..()
+	if(isvortigaunt(user) && stat == DEAD)
+		if(has_bait)
+			. += span_notice("We could use our link to the vortessence to extract the pheropods from this one...")
+		else
+			. += span_notice("We have no more use for this one, it's pheropods have already been extracted...")
+
+/mob/living/basic/halflife/antlion_guard/attack_hand(mob/user, list/modifiers)
+	. = ..()
+	if(isvortigaunt(user) && stat == DEAD && extracting == FALSE)
+		if(locate(/obj/item/clothing/neck/anti_magic_collar) in user)
+			to_chat(user, span_warning("We cannot work while our connection with the vortessence is blocked..."))
+			return
+		if(!has_bait)
+			to_chat(user, span_warning("We have already extracted the Myrmidont's pheropods...")) //thankfully since they're a hivemind "we" will always be true
+			return
+		extracting = TRUE
+		to_chat(user, span_notice("We begin the extraction of the Myrmidont's pheropods..."))
+		playsound(src, 'hl13/sound/weapons/attack_charge.ogg', 50, TRUE, extrarange = -3) //i just copied this over from a random object that has playsound feel free to tweak the values
+		if(do_after(user, 2 SECONDS, src))
+			has_bait = FALSE //they dont really skin the thing so no qdel
+			new /obj/item/bugbait(loc)
+			new /obj/effect/decal/cleanable/insectguts(loc)
+		else
+			to_chat(user, span_warning("We were interrupted during our work and mistakenly destroyed the pheropods!"))
+			has_bait = FALSE
+			new /obj/effect/decal/cleanable/insectguts(loc)
+		extracting = FALSE
+		playsound(src, 'hl13/sound/weapons/attack_shoot.ogg', 50, TRUE, extrarange = -3)
 
 /mob/living/basic/halflife/antlion_guard/deployment
 	melee_attack_cooldown = 2 SECONDS
