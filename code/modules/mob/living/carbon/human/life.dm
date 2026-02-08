@@ -56,7 +56,7 @@
 	if(stat != DEAD)
 		if(IsSleeping())
 			if((locate(/obj/structure/bed/halflife/mattress) in loc)) //sleeping on a bed or something is far nicer than on the hard floor, and will FULLY rest you.
-				adjust_tiredness(-45) //sleep is 40 seconds, so 20 life ticks, so -900 tiredness, so full restore
+				adjust_tiredness(-50) //sleep is 40 seconds, so 20 life ticks, so -1000 tiredness, so full restore
 			else if((locate(/obj/structure/bed/halflife/bedframe) in loc))
 				adjust_tiredness(-30) //-600 tiredness on a 40 second sleep.
 			else if(buckled) // Sleeping on a bench or chair is nicer than sleeping on the floor, but not as nice as on a bed.

@@ -1,6 +1,6 @@
 GLOBAL_VAR_INIT(deployment_rebels_flag_time_left, 5 MINUTES)
 GLOBAL_VAR_INIT(deployment_combine_flag_time_left, 5 MINUTES)
-GLOBAL_VAR_INIT(deployment_flag_grace_period, 3 MINUTES)
+GLOBAL_VAR_INIT(deployment_flag_grace_period, 0)
 GLOBAL_VAR_INIT(deployment_respawn_rate_rebels, 35 SECONDS)
 GLOBAL_VAR_INIT(deployment_respawn_rate_combine, 35 SECONDS)
 GLOBAL_VAR_INIT(deployment_respawn_rate_xen, 20 SECONDS)
