@@ -63,9 +63,9 @@
 	base_icon_state = "blood"
 	custom_price = null
 
-	volume = 30
-	amount_per_transfer_from_this = 30
-	list_reagents = list(/datum/reagent/medicine/epinephrine = 10, /datum/reagent/medicine/coagulant = 1, /datum/reagent/iron = 9, /datum/reagent/medicine/salglu_solution = 10)
+	volume = 35
+	amount_per_transfer_from_this = 35
+	list_reagents = list(/datum/reagent/medicine/epinephrine = 10, /datum/reagent/medicine/coagulant = 1, /datum/reagent/iron = 9, /datum/reagent/medicine/salglu_solution = 15)
 
 /obj/item/storage/halflife/pill_bottle/antitox
 	name = "Anti-Sickness Pill bottle"

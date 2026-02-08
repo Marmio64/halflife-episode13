@@ -20,27 +20,27 @@
 		max_cash = (GLOB.deployment_combine_cash + 25)
 		max_cash = ROUND_UP(max_cash)
 		cash_regeneration = ROUND_UP(GLOB.deployment_combine_cash / 50)
+		if(final_allowed_cash < max_cash)
+			max_cash = final_allowed_cash
 		if(max_cash_regeneration < cash_regeneration)
 			cash_regeneration = max_cash_regeneration
 		if(current_cash < max_cash)
 			current_cash += cash_regeneration
 		if(max_cash < current_cash)
 			current_cash = max_cash
-		if(final_allowed_cash < max_cash)
-			max_cash = final_allowed_cash
 
 	else if(faction_belonging == REBEL_DEPLOYMENT_FACTION)
 		max_cash = (GLOB.deployment_rebels_cash + 25)
 		max_cash = ROUND_UP(max_cash)
 		cash_regeneration = ROUND_UP(GLOB.deployment_rebels_cash / 50)
+		if(final_allowed_cash < max_cash)
+			max_cash = final_allowed_cash
 		if(max_cash_regeneration < cash_regeneration)
 			cash_regeneration = max_cash_regeneration
 		if(current_cash < max_cash)
 			current_cash += cash_regeneration
 		if(max_cash < current_cash)
 			current_cash = max_cash
-		if(final_allowed_cash < max_cash)
-			max_cash = final_allowed_cash
 
 /obj/item/hl2/supply_radio/interact(mob/user)
 	. = ..()
@@ -126,7 +126,6 @@
 
 /obj/item/hl2/supply_radio/combine/basic
 	name = "Combine Logistics Supply Radio"
-	max_cash_regeneration = 4
 	final_allowed_cash = 450 //allows everything but more tier 5s
 
 /obj/item/hl2/supply_radio/combine/generate_display_names()
@@ -215,8 +214,8 @@
 	spawn_path = /obj/item/gun/ballistic/rocketlauncher/halflife
 
 /datum/supply_beacon_option/missile_targeter
-	option_name = "One-use Missile Targeter (400 Points)"
-	cost = 400
+	option_name = "One-use Missile Targeter (375 Points)"
+	cost = 375
 	spawn_path = /obj/item/halflife/missile_targeter/one_use
 
 /datum/supply_beacon_option/canister_targeter

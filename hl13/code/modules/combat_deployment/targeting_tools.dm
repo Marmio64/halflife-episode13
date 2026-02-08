@@ -12,6 +12,8 @@
 	name = "modified canister targeting tool"
 	desc = "A tool that feeds coordinates to an offsite location, prompting them to send a headcrab canister at the target. Each canister deals a large amount of damage on impact and carries three headcrabs of random types. Click a visible tile to send a canister after a 2 second delay. Does not recharge uses overtime"
 	recharges = FALSE
+	charges = 4
+	max_charges = 4
 
 /obj/item/halflife/cannister_targeter/modified/infestation
 	name = "infestation canister targeting tool"
@@ -84,7 +86,7 @@
 	icon = 'hl13/icons/obj/radio.dmi'
 	icon_state = "walkietalkie"
 	var/charges = 2
-	var/use_time = 3 SECONDS
+	var/use_time = 4 SECONDS
 
 /obj/item/halflife/missile_targeter/one_use
 	charges = 1
@@ -134,7 +136,7 @@
 	name = "old missile"
 	desc = "An old world missile that has been maintained just enough to still work. It has far less explosive power than it used to have, but its enough to blow open some fortifications."
 	style = /datum/pod_style/missile/syndicate
-	explosionSize = list(0,3,5,0)
+	explosionSize = list(0,3,6,0)
 	effectShrapnel = TRUE
 	specialised = TRUE
 	delays = list(POD_TRANSIT = 5 SECONDS, POD_FALLING = 0.4 SECONDS)

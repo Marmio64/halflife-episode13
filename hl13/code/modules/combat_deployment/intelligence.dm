@@ -21,6 +21,7 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 	max_integrity = 9999
 	armor_type = /datum/armor/hl2_intel
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
+	anchored = TRUE
 
 
 	w_class = WEIGHT_CLASS_BULKY
@@ -57,7 +58,7 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 	set_light_on(TRUE)
 
 /obj/item/hl2/intelligence/attack_hand(mob/user, list/modifiers)
-	if(. || !user || anchored)
+	if(. || !user)
 		return
 	if(isliving(user))
 		var/mob/living/livie = user

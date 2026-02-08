@@ -80,6 +80,7 @@
 	cooldown_time = 25 SECONDS
 	item_type = /obj/item/ammo_casing/rocket/hl13
 	requires_hands = TRUE
+	delete_old = FALSE
 
 /datum/action/cooldown/spell/conjure_item/grenade
 	name = "Procure Grenade"

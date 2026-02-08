@@ -104,6 +104,7 @@
 	watereffect = /obj/effect/overlay/halflife/water/deep
 	watertop = /obj/effect/overlay/halflife/water/top/deep
 	depth = 3
+	slowdown = 2
 
 /turf/open/halflife/water/medium
 	icon_state = "water_medium"
@@ -365,6 +366,7 @@
 	watereffect = /obj/effect/overlay/halflife/sewer/deep
 	watertop = /obj/effect/overlay/halflife/sewer/top/deep
 	depth = 3
+	slowdown = 3
 
 /turf/open/halflife/water/sewer/medium
 	icon_state = "sewer_medium"
@@ -432,6 +434,7 @@
 	watereffect = /obj/effect/overlay/halflife/sewer/deep
 	watertop = /obj/effect/overlay/halflife/sewer/top/deep
 	depth = 3
+	slowdown = 2.25
 
 /turf/open/halflife/water/sludge/medium
 	icon_state = "sludge_medium"
@@ -464,6 +467,7 @@
 	watertop = /obj/effect/overlay/halflife/water/top/deep
 	depth = 3
 	leeches = TRUE
+	slowdown = 2.25
 
 /turf/open/halflife/water/salt/medium
 	icon_state = "water_medium"

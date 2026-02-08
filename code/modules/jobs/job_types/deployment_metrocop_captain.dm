@@ -83,10 +83,10 @@
 
 	user.fire_stack_decay_rate = -2 //So their corpses don't stay perma on fire, and can be rediscovered. Max stack size is 12, and this removes 4 stacks every 2 seconds
 
-	user.change_stat(STATKEY_DEX, 4)
-	user.change_stat(STATKEY_STR, 4)
-	user.change_stat(STATKEY_END, 4)
-	user.change_stat(STATKEY_PER, 4)
+	user.change_stat(STATKEY_DEX, 5)
+	user.change_stat(STATKEY_STR, 5)
+	user.change_stat(STATKEY_END, 5)
+	user.change_stat(STATKEY_PER, 5)
 
 	var/obj/item/card/id/outfit_id = user.wear_id
 	if(outfit_id)
