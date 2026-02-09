@@ -21,7 +21,7 @@
 	attack_sound = 'hl13/sound/creatures/hunter/hunter_skewer1.ogg'
 	combat_mode = TRUE
 	status_flags = CANPUSH
-	speed = 0.25
+	speed = 0.3
 	death_sound = 'hl13/sound/creatures/advisor/advisor_scream.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles
 	initial_language_holder = /datum/language_holder/advisor

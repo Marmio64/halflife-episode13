@@ -885,7 +885,7 @@
 	name = "\improper Rocket Launcher"
 	desc = "A reusable rocket propelled grenade launcher. An arrow pointing toward the front of the launcher \
 		alongside the words \"Front Toward Enemy\" are printed on the tube. A sticker near the back of the launcher warns \
-		to \"CHECK BACKBLAST CLEAR BEFORE FIRING\", whatever that means. It's weight and heft prevent you from stowing it, and significantly slows you down."
+		to \"CHECK BACKBLAST CLEAR BEFORE FIRING\", whatever that means. It's weight and heft prevent you from stowing it, and significantly slows you down. Supposedly, the armor piercing rockets this thing fires excel at taking down Hunter synths."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	SET_BASE_PIXEL(0, 0)
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/rocketlauncher_halflife
