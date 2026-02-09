@@ -91,6 +91,11 @@
 			new /obj/effect/temp_visual/crit(get_turf(gibbed_dude))
 			gibbed_dude.gib(DROP_ALL_REMAINS)
 
+/obj/projectile/bullet/rocket/hl13/on_hit(atom/target, blocked = 0, pierce_hit)
+	if(istype(target, /mob/living/simple_animal/hostile/halflife/hunter)) //bonus direct damage vs hunters
+		damage = 100
+	. = ..()
+
 /obj/projectile/bullet/shotgun_beanbag_halflife
 	name = "beanbag slug"
 	damage = 28 //beanbags still fucking hurt

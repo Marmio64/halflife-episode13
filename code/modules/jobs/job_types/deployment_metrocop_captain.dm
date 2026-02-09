@@ -77,15 +77,16 @@
 	ADD_TRAIT(user, TRAIT_SUPPLYRADIO_USER, JOB_TRAIT)
 	ADD_TRAIT(user, TRAIT_TDMPLAYER, JOB_TRAIT)
 	ADD_TRAIT(user, TRAIT_NOHUNGER, JOB_TRAIT)
+	ADD_TRAIT(user, TRAIT_NOSOFTCRIT, JOB_TRAIT)
 
 	user.faction += "combine"
 	user.faction -= "neutral"
 
 	user.fire_stack_decay_rate = -2 //So their corpses don't stay perma on fire, and can be rediscovered. Max stack size is 12, and this removes 4 stacks every 2 seconds
 
-	user.change_stat(STATKEY_DEX, 5)
+	user.change_stat(STATKEY_DEX, 2)
 	user.change_stat(STATKEY_STR, 5)
-	user.change_stat(STATKEY_END, 5)
+	user.change_stat(STATKEY_END, 7)
 	user.change_stat(STATKEY_PER, 5)
 
 	var/obj/item/card/id/outfit_id = user.wear_id

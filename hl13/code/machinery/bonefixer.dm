@@ -7,9 +7,18 @@
 	state_open = FALSE
 	idle_power_usage = 50
 	light_color = LIGHT_COLOR_BLUE
+	max_integrity = 400
 	var/warming_up
 	var/interval = 20
 	var/harvesting = FALSE
+
+	armor_type = /datum/armor/repair_pod
+
+/datum/armor/repair_pod
+	melee = 90
+	bullet = 90
+	laser = 90
+	bomb = 25
 
 /obj/machinery/repairpod/update_icon_state()
 	. = ..()

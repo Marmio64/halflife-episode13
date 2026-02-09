@@ -10,7 +10,7 @@
 /datum/skill/factorywork/level_gained(datum/mind/mind, new_level, old_level, silent)
 	. = ..()
 	if(new_level == SKILL_LEVEL_MASTER) //Requires you to seal 60 containers. 40 if you start as an engineer or prisoner since they know some factorywork already.
-		mind.current.change_stat(STATKEY_DEX, 1)
+		mind.current.change_stat(STATKEY_DEX, 1) //using the press and mill also give experience, worth a bit less than half of sealing a container.
 
 /datum/skill/factorywork/level_lost(datum/mind/mind, new_level, old_level, silent)
 	. = ..()

@@ -765,6 +765,9 @@
 
 	limb_integrity = 250
 
+/obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/speedy
+	slowdown = -0.1
+
 /datum/armor/reinforced_brown_jacket
 	melee = 25
 	bullet = 25

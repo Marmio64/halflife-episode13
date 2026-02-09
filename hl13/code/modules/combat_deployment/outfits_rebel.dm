@@ -394,6 +394,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_dex = 8
+	extra_end = 3
 
 /datum/outfit/deployment_loadout/rebel/tier3/scout/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -690,6 +691,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_dex = 8
+	extra_end = 3
 
 /datum/outfit/deployment_loadout/rebel/tier4/scout/post_equip(mob/living/carbon/human/H)
 	. = ..()

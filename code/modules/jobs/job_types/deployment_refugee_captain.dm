@@ -26,7 +26,7 @@
 	name = "Deployment Refugee Captain"
 	jobtype = /datum/job/deployment_refugee_captain
 
-	suit = /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket
+	suit = /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/speedy
 	mask = /obj/item/cigarette/halflife
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
 	belt = /obj/item/melee/baton
@@ -39,7 +39,7 @@
 	glasses = /obj/item/clothing/glasses/eyepatch
 	id = null
 
-	back = /obj/item/storage/backpack/halflife/satchel/radio
+	back = /obj/item/storage/backpack/halflife/satchel/radio/large
 
 	backpack_contents = list(
 		/obj/item/megaphone = 1,

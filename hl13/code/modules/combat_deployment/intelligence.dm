@@ -84,11 +84,11 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 		for(var/X in GLOB.deployment_combine_players)
 			var/mob/living/carbon/human/player = X
 			SEND_SOUND(player, 'hl13/sound/effects/griffin_10.ogg')
-			to_chat(player, "<span class='userdanger'>An enemy is carrying our intel!</span>")
+			to_chat(player, "<span class='greentext big'>A teammate is carrying the combine team's intel!</span>")
 		for(var/X in GLOB.deployment_rebel_players)
 			var/mob/living/carbon/human/player = X
 			SEND_SOUND(player, 'hl13/sound/effects/griffin_10.ogg')
-			to_chat(player, "<span class='greentext big'>A teammate is carrying the rebel team's intel!</span>")
+			to_chat(player, "<span class='userdanger'>An enemy is carrying our intel!</span>")
 
 /obj/item/hl2/intelligence/click_ctrl(mob/user)
 	to_chat(user, span_warning("Intel can't be dragged!")) //fuck hunters
@@ -222,11 +222,11 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 				for(var/X in GLOB.deployment_combine_players)
 					var/mob/living/carbon/human/player = X
 					SEND_SOUND(player, 'hl13/sound/effects/griffin_10.ogg')
-					to_chat(player, "<span class='userdanger'>Our intel has been captured!</span>")
+					to_chat(player, "<span class='greentext big'>A teammate has captured the rebel team's intel!</span>")
 				for(var/X in GLOB.deployment_rebel_players)
 					var/mob/living/carbon/human/player = X
 					SEND_SOUND(player, 'hl13/sound/effects/griffin_10.ogg')
-					to_chat(player, "<span class='greentext big'>A teammate has captured the rebel team's intel!</span>")
+					to_chat(player, "<span class='userdanger'>Our intel has been captured!</span>")
 		else
 			to_chat(user, span_warning("Intel must be captured at your own deposit!"))
 			playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)

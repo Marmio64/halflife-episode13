@@ -7,8 +7,8 @@
 	icon_dead = "advisor_dead"
 	faction = list(FACTION_COMBINE)
 	movement_type = FLOATING
-	maxHealth = 200
-	health = 200
+	maxHealth = 175
+	health = 175
 	obj_damage = 14
 	melee_damage_lower = 20
 	melee_damage_upper = 25
@@ -51,7 +51,7 @@
 	..()
 	if(stat)
 		return
-	adjust_health(-maxHealth*0.02) //4 hp every 2 seconds
+	adjust_health(-maxHealth*0.02) //3.5 hp every 2 seconds
 
 /datum/language_holder/advisor
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM))
@@ -94,11 +94,11 @@
 	active_msg = "You prepare to punish a target..."
 
 	/// The amount of blurriness to apply
-	var/eye_blur_duration = 10 SECONDS
+	var/eye_blur_duration = 8 SECONDS
 	/// The amount of pain to apply
 	var/temp_pain_amount = 150
 	/// The amount of confusion to apply
-	var/confusion_duration = 10 SECONDS
+	var/confusion_duration = 8 SECONDS
 	/// The amount of stamina loss to apply
 	var/stamina_damage = 40
 	/// How long the stun duration should be
