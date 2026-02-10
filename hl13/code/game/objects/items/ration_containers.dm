@@ -22,7 +22,7 @@
 
 	new /obj/item/storage/halflife/hand_box/flour(src)
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater(src)
-	new /obj/item/stack/spacecash/c1(src, 4)
+	new /obj/item/stack/spacecash/c1(src, 6)
 
 /obj/item/storage/box/halflife/ration/betterration
 	name = "production-grade ration pack"
@@ -39,7 +39,7 @@
 
 	new /obj/item/storage/halflife/hand_box/egg(src)
 	new /obj/item/reagent_containers/cup/soda_cans/breenwater/red(src)
-	new /obj/item/stack/spacecash/c1(src, 6)
+	new /obj/item/stack/spacecash/c1(src, 8)
 
 /obj/item/storage/box/halflife/ration/loyaltyration
 	name = "loyalty-grade ration pack"

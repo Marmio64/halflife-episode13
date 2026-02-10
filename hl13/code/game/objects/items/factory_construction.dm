@@ -177,7 +177,7 @@
 			if(do_after(user, 5 SECONDS, src))
 				to_chat(usr, span_notice("You dump out the item from within."))
 				stashed_item = FALSE
-				if(prob(1))
+				if(prob(2))
 					new /obj/effect/spawner/random/halflife/loot/rare(user.loc)
 				else
 					new /obj/effect/spawner/random/halflife/loot/uncommon(user.loc)

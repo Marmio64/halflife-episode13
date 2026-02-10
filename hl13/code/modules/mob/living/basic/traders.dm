@@ -214,6 +214,46 @@
 	gloves = /obj/item/clothing/gloves/combat
 	mask = /obj/item/cigarette/halflife
 
+/// plf recruiter /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/mob/living/basic/trader/halflife/plf_recruiter
+	name = "Polish Liberation Front Recruiter"
+	desc = "A represenative of the local PLF cell. They are looking to recruit local prisoners and escaped vortigaunts who wish to fight back against the combine."
+
+	maxHealth = 200
+	health = 200
+	blood_volume = BLOOD_VOLUME_NORMAL
+
+	spawner_path = /obj/effect/mob_spawn/corpse/human/plf_recruiter
+	loot = list(/obj/effect/mob_spawn/corpse/human/plf_recruiter)
+
+	ranged_attack_casing = /obj/item/ammo_casing/a357
+	ranged_attack_sound = 'hl13/sound/weapons/revolverfire.ogg'
+	held_weapon_visual = /obj/item/gun/ballistic/revolver/coltpython
+
+	trader_data_path = /datum/trader_data/halflife/plf_recruiter
+
+	ai_controller = /datum/ai_controller/basic_controller/trader/halflife
+
+	faction = list(FACTION_REFUGEE)
+
+/obj/effect/mob_spawn/corpse/human/plf_recruiter
+	name = "Polish Liberation Front Recruiter"
+	hairstyle = "Short Hair 2"
+	haircolor = COLOR_BLACK
+	facial_hairstyle = "Beard (Full)"
+	skin_tone = "caucasian2"
+	outfit = /datum/outfit/plf_recruiter
+
+/datum/outfit/plf_recruiter
+	name = "Polish Liberation Front Recruiter"
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	suit = /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket
+	head = /obj/item/clothing/head/beret/sec/poland
+	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/combat
+	mask = /obj/item/cigarette/halflife
+
 ///////////////// AI STUFF & TRADER DATA ////////////////////////////////////
 
 /datum/trader_data/halflife/smuggler
@@ -668,8 +708,8 @@
 	)
 
 	initial_wanteds = list(
-		/obj/item/factory_construction/full_container/standard = list(PAYCHECK_CREW, 15, ""),
-		/obj/item/factory_construction/full_container/advanced = list(PAYCHECK_CREW * 2, 15, ""),
+		/obj/item/factory_construction/full_container/standard = list(PAYCHECK_CREW * 1.5, 15, ""),
+		/obj/item/factory_construction/full_container/advanced = list(PAYCHECK_CREW * 2.5, 15, ""),
 		/obj/item/halflife/nutrient_bar_wrapping/water = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/food/pierogi_ration = list(PAYCHECK_CREW * 2.5, 10, ""),
@@ -683,7 +723,7 @@
 		/obj/item/reagent_containers/pill/patch/grubnugget = list(PAYCHECK_CREW * 0.25, 15, ""),
 		/obj/item/reagent_containers/pill/patch/medkit = list(PAYCHECK_CREW, 15, ""),
 		/obj/item/circuitmaterial = list(PAYCHECK_CREW * 0.25, 10, ""),
-		/obj/item/water_canister = list(PAYCHECK_CREW * 0.25, 5, ""),
+		/obj/item/water_canister = list(PAYCHECK_CREW * 0.5, 5, ""),
 		/obj/item/halflife/antenna = list(PAYCHECK_CREW * 3, 5, ""),
 		/obj/item/ration_voucher = list(PAYCHECK_CREW * 2, 10, ""),
 		/obj/item/reagent_containers/pill/lsd = list(PAYCHECK_CREW * 0.5, 5, ""),
@@ -760,5 +800,93 @@
 		TRADER_SHOP_OPENING_PHRASE = list(
 			"Hey friend, need something?",
 			"Food, meds, clothes, and more.",
+		),
+	)
+
+/obj/item/storage/box/syndicate/plf_recruiter
+	name = "PLF Recruit Package"
+	icon_state = "syndiebox"
+	illustration = "writing_syndie"
+
+/obj/item/storage/box/syndicate/plf_recruiter/PopulateContents()
+	new /obj/item/clothing/head/helmet/halflife/military/weak/poland(src)
+	new /obj/item/clothing/suit/armor/civilprotection(src)
+	new /obj/item/clothing/under/citizen/refugee(src)
+	new /obj/item/gun/ballistic/automatic/pistol/makeshift(src)
+	new /obj/item/ammo_box/magazine/makeshift9mm(src)
+	new /obj/item/reagent_containers/pill/patch/medkit/vial(src)
+	new /obj/item/food/canned/halflife/beans(src)
+	new /obj/item/reagent_containers/cup/glass/waterbottle(src)
+
+/datum/trader_data/halflife/plf_recruiter
+	shop_spot_type = /obj/structure/chair/halflife/overlaypickup/plastic
+	sign_type = /obj/structure/halflife/sign/shop
+	sociostability_loss = -10
+	required_trait = TRAIT_PRISONER
+	delete_trait_on_buy = TRUE
+
+	initial_products = list(
+		/obj/item/storage/box/syndicate/plf_recruiter = list(PAYCHECK_CREW * 2, 5),
+	)
+
+	say_phrases = list(
+		ITEM_REJECTED_PHRASE = list(
+			"Sorry, friend, but I don't need this.",
+			"Sorry, don't really need that right now.",
+			"Ehhh, no thanks.",
+		),
+		ITEM_SELLING_CANCELED_PHRASE = list(
+			"What a shame.",
+			"Hm, that's a no then, huh?"
+		),
+		ITEM_SELLING_ACCEPTED_PHRASE = list(
+			"Thanks, friend.",
+			"My pleasure.",
+		),
+		INTERESTED_PHRASE = list(
+			"Hm, I'd buy it.",
+			"Sure, why not.",
+		),
+		BUY_PHRASE = list(
+			"Welcome to the Polish Liberation Front, friend.",
+		),
+		NO_CASH_PHRASE = list(
+			"I do need a small donation in exchange for providing you equipment.",
+		),
+		NO_STOCK_PHRASE = list(
+			"Sorry, I don't have any more equipment for new recruits.",
+		),
+		NOT_WILLING_TO_BUY_PHRASE = list(
+			"Hm, no thanks.",
+		),
+		ITEM_IS_WORTHLESS_PHRASE = list(
+			"Sorry, but, this item looks pretty worthless to me.",
+		),
+		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
+			"I've already got too much of that unfortunately.",
+		),
+		TRADER_LORE_PHRASE = list(
+			"One day, Poland will be free again.",
+			"The combine will fall one day. One day...",
+		),
+		TRADER_NOT_BUYING_ANYTHING = list(
+			"I'm all out of cash, can't buy anything more.",
+		),
+		TRADER_NOT_SELLING_ANYTHING = list(
+			"Ran out of stock, see me another time.",
+		),
+		TRADER_BATTLE_START_PHRASE = list(
+			"For the Liberation Front!",
+			"Some people just are too stupid to understand things around here!",
+			"Fuck you!",
+			"I've killed plenty of traitors like you before.",
+		),
+		TRADER_BATTLE_END_PHRASE = list(
+			"Good riddance.",
+			"Another traitor gone.",
+			"Don't let the door hit you on the way out.",
+		),
+		TRADER_SHOP_OPENING_PHRASE = list(
+			"The PLF stands strong.",
 		),
 	)

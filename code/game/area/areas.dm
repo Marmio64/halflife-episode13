@@ -134,6 +134,10 @@
 	/// Text to display upon entering an area for the first time. HL13 edit
 	var/first_time_text = null
 
+	/// If entering an area for the first time should have a special sound or something play
+	var/first_time_sound = null
+	var/first_time_sound_vol = 50
+
 	var/list/ambientrain = null //HL13 EDIT
 
 /**
@@ -603,7 +607,10 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	T.maptext_height = 209
 	T.maptext_x = 64
 	T.maptext_y = 115
-	playsound_local(src, 'hl13/sound/effects/area.ogg', 100, FALSE)
+	if(A.first_time_sound)
+		playsound_local(src, A.first_time_sound, A.first_time_sound_vol, FALSE)
+	else
+		playsound_local(src, 'hl13/sound/effects/area.ogg', 100, FALSE)
 	animate(T, alpha = 255, time = 10, easing = EASE_IN)
 	addtimer(CALLBACK(src, PROC_REF(clear_area_text), T), 35)
 

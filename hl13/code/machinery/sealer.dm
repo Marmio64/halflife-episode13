@@ -4,6 +4,7 @@
 	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "sealer"
 	var/malfunctioning = FALSE
+	var/dangerous_malfunction = FALSE
 
 /obj/machinery/sealer/examine(mob/user)
 	. = ..()
@@ -11,6 +12,8 @@
 	. += span_notice("Certain packages may also be unsealed by using this machine.")
 	if(malfunctioning)
 		. += span_notice("The machine is off. It'll need to be opened and cleaned by using a screwdriver on it.")
+		if(dangerous_malfunction)
+			. += span_notice("It is also emitting a faint odor of smoke. It may be dangerous to try to operate or fix this if you aren't experienced...")
 
 /obj/machinery/sealer/update_icon_state()
 	. = ..()
@@ -19,13 +22,28 @@
 	else
 		icon_state = "sealer"
 
+/obj/machinery/sealer/proc/breakdown()
+	if(malfunctioning)
+		return FALSE
+
+	visible_message("[src] suddenly makes a loud grinding sound before shutting down with a large pop!")
+	malfunctioning = TRUE
+	if(prob(20))
+		dangerous_malfunction = TRUE
 
 /obj/machinery/sealer/attackby(obj/item/I, mob/living/user, params)
 	var/obj/item/bodypart/arm = user.get_bodypart(user.active_hand_index % 2 ? BODY_ZONE_L_ARM : BODY_ZONE_R_ARM)
 
 	if(malfunctioning)
-		to_chat(usr, span_notice("The sealer is currently not working."))
-		return FALSE
+		if(dangerous_malfunction)
+			to_chat(usr, span_notice("The sealer is currently not working. A faint odor of smoke emanates from it."))
+			if(prob(1))
+				to_chat(user, span_userdanger("Upon trying to turn it on anyways, a spark flies out and ignites the machine into a raging inferno!"))
+				explode_in_flames()
+			return FALSE
+		else
+			to_chat(usr, span_notice("The sealer is currently not working."))
+			return FALSE
 
 	if(istype(I, /obj/item/ration_construction/container))
 		var/obj/item/ration_construction/container/C = I
@@ -47,6 +65,8 @@
 						arm.receive_damage(15)
 						user.emote("scream")
 					malfunctioning = TRUE
+					if(prob(5))
+						dangerous_malfunction = TRUE
 					update_appearance(UPDATE_ICON)
 					to_chat(user, span_userdanger("The machine shudders as it gets gummed up from blood, before shutting off."))
 				else
@@ -75,6 +95,8 @@
 						arm.receive_damage(15)
 						user.emote("scream")
 					malfunctioning = TRUE
+					if(prob(5))
+						dangerous_malfunction = TRUE
 					update_appearance(UPDATE_ICON)
 					to_chat(user, span_userdanger("The machine shudders as it gets gummed up from blood, before shutting off."))
 				else
@@ -99,8 +121,13 @@
 	if(!HAS_TRAIT(user, TRAIT_ENGINEER))
 		if(prob(80))
 			if(prob(75))
-				to_chat(user, span_notice("That might have fixed it... Wait, no. Hm, it might be better to get a trained technician to handle this..."))
-				return FALSE
+				if(dangerous_malfunction)
+					to_chat(user, span_userdanger("Shit, you fucked up bad, the machine just exploded in flames!"))
+					explode_in_flames()
+					return FALSE
+				else
+					to_chat(user, span_notice("That might have fixed it... Wait, no. Hm, it might be better to get a trained technician to handle this..."))
+					return FALSE
 			else
 				to_chat(user, span_notice("The sealer suddenly turns on, destroying the screwdriver with a vicious grinding sound, your hand nearly getting caught along the way. It might be better to get a trained technician to handle this..."))
 				qdel(O)
@@ -118,3 +145,8 @@
 	to_chat(user, span_notice("Repair reward dispensed."))
 	new /obj/item/stack/spacecash/c1(user.loc, 4)
 	return TRUE
+
+/obj/machinery/sealer/proc/explode_in_flames()
+	flame_radius(4, get_turf(src))
+	playsound(loc, 'hl13/sound/halflifeeffects/explosion_fire_grenade.ogg', 30, TRUE, 4)
+	visible_message("[src] explodes into flames!")

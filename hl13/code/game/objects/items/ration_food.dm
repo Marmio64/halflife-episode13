@@ -97,7 +97,7 @@
 	foodtypes = MEAT
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 6,
-		/datum/reagent/consumable/nutriment/vitamin = 2,
+		/datum/reagent/consumable/nutriment/vitamin = 3,
 	)
 	tastes = list("Beef"=1)
 	mood_penalty = null
@@ -192,7 +192,7 @@
 	icon_state = "chicken_paste"
 	foodtypes = MEAT
 	food_reagents = list(
-		/datum/reagent/consumable/nutriment = 3,
+		/datum/reagent/consumable/nutriment = 4,
 		/datum/reagent/consumable/nutriment/vitamin = 1,
 	)
 	tastes = list("Chicken" = 1)

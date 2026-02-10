@@ -85,11 +85,14 @@
 	min_ambience_cooldown = 10 SECONDS
 
 	first_time_text = "The Outlands"
+	first_time_sound = 'hl13/sound/ambience/hl2_song11.ogg'
+	first_time_sound_vol = 50
 
 /area/halflife/outdoors/forest/water
 	name = "\improper Outlands Waterways"
 	ambient_buzz = 'hl13/sound/ambience/lake_water.wav'
 	ambient_buzz_vol = 30
+	first_time_sound = null
 
 /area/halflife/outdoors/outlands_city
 	name = "\improper Condemned City"
@@ -389,10 +392,15 @@
 
 	ambientrain = RAIN_SEWER
 
+	first_time_sound = 'hl13/sound/ambience/hl1_song5.ogg'
+	first_time_sound_vol = 50
+
 /area/halflife/indoors/sewer/hidden
 	ambient_music_vol = 1
 	ambient_buzz_vol = 80
 	ambientrain = RAIN_IN
+
+	first_time_sound = null
 
 	mood_message = "<span class='warning'>Something is not right here...</span>\n"
 
@@ -443,6 +451,7 @@
 	mood_message = "<span class='warning'>This place is unnerving...</span>\n"
 
 	first_time_text = null
+	first_time_sound = null
 
 /area/halflife/indoors/sewer/tunnel/outlands
 	name = "\improper Outlands Tunnels"
@@ -454,6 +463,8 @@
 	ambient_buzz_vol = 55
 
 	first_time_text = "The Mines"
+	first_time_sound = 'hl13/sound/ambience/suppressionfield.ogg'
+	first_time_sound_vol = 35
 
 	mood_message = "<span class='warning'>This place is unnerving...</span>\n"
 
@@ -469,6 +480,7 @@
 	mood_message = "<span class='warning'>I can hear the bugs all around me...</span>\n"
 
 	first_time_text = "The Antlion Caves"
+	first_time_sound = null
 
 /area/halflife/indoors/sewer/antlioncave
 	name = "\improper Infested Caves"
@@ -480,6 +492,8 @@
 	ambient_buzz_vol = 7
 
 	mood_message = "<span class='warning'>I can hear the bugs all around me...</span>\n"
+
+	first_time_sound = null
 
 
 // coastal district areas
@@ -678,3 +692,4 @@
 	name = "\improper Prison Yard"
 
 	first_time_text = "Prison Yard"
+	first_time_sound = null

@@ -66,7 +66,7 @@
 
 /obj/item/reagent_containers/cup/soda_cans/halflife/coffee
 	name = "Combine Coffee"
-	desc = "A dark beverage inside an equally dark metal can. It tastes like day-old burnt coffee. It's good at delaying the onset of tiredness, but isn't very useful if you're already very tired."
+	desc = "A dark beverage inside an equally dark metal can. It tastes like day-old burnt coffee. It's good at delaying the onset of tiredness, but is often not enough if you're already exhausted."
 	icon = 'hl13/icons/obj/drinks.dmi'
 	icon_state = "coffee"
 	list_reagents = list(/datum/reagent/consumable/coffee = 30)

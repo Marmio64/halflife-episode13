@@ -166,6 +166,13 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 	if(!LAZYLEN(products))
 		return
 
+	var/mob/living/trader = parent
+
+	if(trader_data.required_trait)
+		if(!HAS_TRAIT(customer, trader_data.required_trait))
+			trader.say("Sorry, I don't have anything for you.")
+			return
+
 	var/list/display_names = list()
 	var/list/items = list()
 	var/list/product_info
@@ -189,7 +196,6 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 		return
 
 	var/obj/item/item_to_buy = display_names[pick]
-	var/mob/living/trader = parent
 	trader.face_atom(customer)
 	product_info = products[item_to_buy]
 
@@ -222,6 +228,9 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 	//hl13 edit begin
 	if(trader_data.sociostability_loss)
 		SSsociostability.modifystability(trader_data.sociostability_loss)
+	if(trader_data.required_trait && trader_data.delete_trait_on_buy)
+		REMOVE_TRAIT(customer, trader_data.required_trait, JOB_TRAIT)
+
 	//hl13 edit end
 
 ///Calculates the value of money in the hand of the buyer and spends it if it's sufficient
