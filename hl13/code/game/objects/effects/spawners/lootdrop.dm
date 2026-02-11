@@ -459,3 +459,26 @@
 				/mob/living/basic/halflife/chumtoad = 1,
 				/mob/living/basic/halflife/grub = 1,
 				)
+
+/obj/effect/spawner/random/halflife/barnacle_spawner
+	name = "barnacle spawner"
+	icon = 'hl13/icons/effects/random_spawners.dmi'
+	icon_state = "random_barnacle"
+	spawn_loot_count = 1
+	spawn_loot_chance = 50
+
+	loot = list(
+				/mob/living/basic/halflife/barnacle = 1,
+				)
+
+/obj/effect/spawner/random/halflife/barnacle_spawner/high
+	name = "high chance barnacle spawner"
+	spawn_loot_chance = 75
+
+/obj/effect/spawner/random/halflife/barnacle_spawner/low
+	name = "low chance barnacle spawner"
+	spawn_loot_chance = 25
+
+/obj/effect/spawner/random/halflife/barnacle_spawner/rare
+	name = "rare chance barnacle spawner"
+	spawn_loot_chance = 10

@@ -583,6 +583,14 @@
 	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'
 	ambient_buzz_vol = 40
 
+/area/halflife/indoors/prison/maintenance
+	name = "\improper Prison Maintenance Tunnels"
+
+	first_time_text = "Maintenance Tunnels"
+
+	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_03.ogg'
+	ambient_music_vol = 20
+
 /area/halflife/indoors/prison/cargo
 	name = "\improper Prison Cargo Bay"
 
