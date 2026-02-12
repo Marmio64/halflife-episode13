@@ -10,17 +10,17 @@
 	maxHealth = 60
 	health = 60
 	obj_damage = 16
-	melee_damage_lower = 25
-	melee_damage_upper = 30
+	melee_damage_lower = 30
+	melee_damage_upper = 35
 	sharpness = SHARP_EDGED
-	wound_bonus = -30
+	wound_bonus = -90
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
 	attack_sound = 'hl13/sound/creatures/barnacle/attack.ogg'
 	combat_mode = TRUE
 	density = FALSE
-	butcher_results = list(/obj/item/food/meat/slab/xen = 2)
+	butcher_results = list(/obj/item/food/meat/slab/xen = 1)
 	death_sound = 'hl13/sound/creatures/barnacle/die.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/barnacle
 
@@ -33,7 +33,7 @@
 
 	alpha = 75
 
-	damage_coeff = list(BRUTE = 0.5, BURN = 0.5, TOX = 0.5, STAMINA = 0.5, OXY = 0.5) //resistant to damage while hidden
+	damage_coeff = list(BRUTE = 0.5, BURN = 0.5, TOX = 0.5, STAMINA = 0.5, OXY = 0.5) //resistant to damage when not biting someone
 
 	can_buckle_to = FALSE
 
@@ -41,15 +41,20 @@
 /mob/living/basic/halflife/barnacle/examine(mob/user)
 	. = ..()
 	if(isliving(user) && hidden)
-		toggle_hide() //discovered!
+		var/mob/living/living_user = user
+		if(do_after(living_user, 3 SECONDS, target = src))
+			if(prob((living_user.get_stat_level(STATKEY_PER))*5)) //5% chance per perception point
+				to_chat(living_user, span_green("You notice the [src.name] up above!"))
+				toggle_hide() //discovered!
+			else
+				to_chat(living_user, span_notice("It looks like something is there, but you cant quite tell..."))
+		return
 
 /mob/living/basic/halflife/barnacle/proc/toggle_hide()
 	if(hidden)
 		hidden = FALSE
 		alpha = 255
-		damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 1, STAMINA = 1, OXY = 1)
 	else
-		damage_coeff = list(BRUTE = 0.5, BURN = 0.5, TOX = 0.5, STAMINA = 0.5, OXY = 0.5)
 		hidden = TRUE
 		alpha = 75
 
@@ -68,7 +73,7 @@
 
 /mob/living/basic/halflife/barnacle/proc/on_entered(datum/source, AM as mob|obj)
 	SIGNAL_HANDLER
-	if(!stat && isliving(AM))
+	if(!stat && isliving(AM) && !prey)
 		var/mob/living/L = AM
 		if(L.mob_size > MOB_SIZE_TINY)
 			start_feeding(L)
@@ -80,6 +85,12 @@
 
 ///The barnacle ensnares a target with their tongue to start eating it
 /mob/living/basic/halflife/barnacle/proc/start_feeding(mob/living/target_mob)
+	var/target_dodge_chance = (target_mob.get_stat_level(STATKEY_PER) - 10) * 2 //2% chance for every dex and perception point above 10 for you to dodge a barnacle's tongue when grabbed
+	target_dodge_chance += (target_mob.get_stat_level(STATKEY_DEX) - 10) * 2
+	if(prob(target_dodge_chance))
+		to_chat(target_mob, "<span class='warning'>You see a thin green tongue infront of you and just barely dodge it in time!</span>")
+		return FALSE
+
 	prey = target_mob
 	ai_controller.blackboard[BB_BASIC_MOB_CURRENT_TARGET] = target_mob //incase we were targeting someone else before, swap our attention to what we have in our mouth right now
 	if(hidden)
@@ -91,6 +102,7 @@
 	if(stat != DEAD)
 		icon_state = "barnacle_tongue_up"
 	playsound(src, 'hl13/sound/creatures/barnacle/latch.ogg', 50, TRUE)
+	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 1, STAMINA = 1, OXY = 1) //weak while chewing on someone, to give them a chance
 
 ///stop feeding
 /mob/living/basic/halflife/barnacle/proc/stop_feeding(silent = FALSE, mob/living/target_mob)
@@ -107,6 +119,8 @@
 	layer = initial(layer)
 	playsound(src, 'hl13/sound/creatures/barnacle/digest.ogg', 50, TRUE)
 	target_mob.SetImmobilized(1 SECONDS)
+	damage_coeff = list(BRUTE = 0.5, BURN = 0.5, TOX = 0.5, STAMINA = 0.5, OXY = 0.5)
+	prey = null
 	if(stat != DEAD)
 		if(!hidden)
 			toggle_hide()
@@ -136,9 +150,9 @@
 			var/mob/living/livvy = food
 			livvy.gib(DROP_ALL_REMAINS)
 			if(ishuman(food))
-				adjust_health(-maxHealth*0.5)
+				adjust_health(-maxHealth)
 			else
-				adjust_health(-maxHealth*0.1)
+				adjust_health(-maxHealth*0.5)
 			stop_feeding()
 
 /mob/living/basic/halflife/barnacle/death(gibbed)
@@ -155,7 +169,6 @@
 
 	planning_subtrees = list(
 		/datum/ai_planning_subtree/simple_find_target,
-		/datum/ai_planning_subtree/targeted_mob_ability/arachnid_restrain,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree/barnacle,
 	)
 

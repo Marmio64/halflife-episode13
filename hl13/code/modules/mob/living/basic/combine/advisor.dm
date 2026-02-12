@@ -24,7 +24,7 @@
 	speed = 0.3
 	death_sound = 'hl13/sound/creatures/advisor/advisor_scream.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles
-	initial_language_holder = /datum/language_holder/advisor
+	speak_emote = list("telepathically utters")
 
 	deployment_faction = COMBINE_DEPLOYMENT_FACTION
 
@@ -46,6 +46,8 @@
 	punish.Grant(src)
 	sooth = new(src)
 	sooth.Grant(src)
+
+	ADD_TRAIT(src, TRAIT_MEDICAL_HUD, INNATE_TRAIT)
 
 /mob/living/basic/halflife/advisor/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()
