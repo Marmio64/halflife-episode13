@@ -102,8 +102,11 @@
 		stashed_item = TRUE
 
 /obj/item/factory_construction/container/attackby(obj/item/I, mob/user, params)
+	var/put_in_time = 2.2 SECONDS //at journeyman level, delay is 1.5 seconds. Legendary is 0.9, no skill is 2.2 seconds
+	put_in_time -= user.mind?.get_skill_modifier(/datum/skill/factorywork, SKILL_SPEED_MODIFIER)
+
 	if(istype(I, required_item_1) && !item_1_fulfilled)
-		if(do_after(user, 1.5 SECONDS, src))
+		if(do_after(user, put_in_time, src))
 			if(istype(I, /obj/item/stack))
 				I.use(1)
 			else
@@ -117,7 +120,7 @@
 			return
 
 	if(istype(I, required_item_2) && !item_2_fulfilled)
-		if(do_after(user, 1.5 SECONDS, src))
+		if(do_after(user, put_in_time, src))
 			if(istype(I, /obj/item/stack))
 				I.use(1)
 			else
@@ -131,7 +134,7 @@
 			return
 
 	if(istype(I, required_item_3) && !item_3_fulfilled)
-		if(do_after(user, 1.5 SECONDS, src))
+		if(do_after(user, put_in_time, src))
 			if(istype(I, /obj/item/stack))
 				I.use(1)
 			else

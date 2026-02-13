@@ -5,7 +5,10 @@
 	name = "Factory Working"
 	title = "Factory Worker"
 	desc = "How good you are with operating industrial machinery, generally for factory work."
-	modifiers = list(SKILL_VALUE_MODIFIER = list(8, 5, 4, 3, 2, 1, 0)) //will be used for probability to fail
+	modifiers = list(
+		SKILL_VALUE_MODIFIER = list(8, 5, 4, 3, 2, 1, 0),//will be used for probability to fail
+		SKILL_SPEED_MODIFIER = list(0.1 SECONDS, 0.3 SECONDS, 0.5 SECONDS, 0.7 SECONDS, 0.9 SECONDS, 1.1 SECONDS, 1.3 SECONDS)//used for making things go faster
+	)
 
 /datum/skill/factorywork/level_gained(datum/mind/mind, new_level, old_level, silent)
 	. = ..()
