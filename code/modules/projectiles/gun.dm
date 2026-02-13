@@ -472,7 +472,7 @@
 	if(user)
 		if(HAS_TRAIT(user, TRAIT_GOOD_AIM))
 			bonus_spread -= 5
-		if(HAS_TRAIT(user, TRAIT_TERRIBLE_AIM) && pin != /obj/item/firing_pin/magic) //HL13 EDIT, TRAIT TO MAKE SPREAD TERRIBLE for non magical weapons
+		if(HAS_TRAIT(user, TRAIT_TERRIBLE_AIM) && !istype(pin, /obj/item/firing_pin/magic)) //HL13 EDIT, TRAIT TO MAKE SPREAD TERRIBLE for non magical weapons
 			bonus_spread += 25
 
 		if(user.move_intent == MOVE_INTENT_RUN) //hl13 edit, aim better when you're not running all over the place
