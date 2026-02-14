@@ -374,7 +374,7 @@
 /datum/outfit/deployment_loadout/rebel/tier3/scout
 	name = "Deployment: Rebel Scout"
 	display_name = "Rebel Scout (Offense)"
-	desc = "You are a speedy glass cannon that uses a shotgun for high upclose damage, but lack armor completely. You specialize best in taking out more vulnerable backliners who can't effectively fight back."
+	desc = "You are a speedy glass cannon that uses a shotgun for high upclose damage, but dont have much armor. You specialize best in taking out more vulnerable backliners who can't effectively fight back."
 	id_name = "Scout"
 
 	uniform = /obj/item/clothing/under/citizen/refugee
@@ -671,7 +671,7 @@
 /datum/outfit/deployment_loadout/rebel/tier4/scout
 	name = "Deployment: Upgraded Rebel Scout"
 	display_name = "Upgraded Rebel Scout (Offense)"
-	desc = "You are a speedy glass cannon that uses a shotgun for high upclose damage, but lack armor completely. You specialize best in taking out more vulnerable backliners who can't effectively fight back. As an upgraded variant, you move faster and get an extra healthpen."
+	desc = "You are a speedy glass cannon that uses a shotgun for high upclose damage, but dont have much armor. You specialize best in taking out more vulnerable backliners who can't effectively fight back. As an upgraded variant, you move faster and get an extra healthpen."
 	id_name = "Scout"
 
 	uniform = /obj/item/clothing/under/citizen/refugee

@@ -455,6 +455,8 @@
 /datum/armor/scout_armor
 	fire = 75
 	laser = 40
+	melee = 10
+	bullet = 10
 
 /obj/item/clothing/suit/armor/browncoat/scout/upgraded
 	slowdown = -0.6

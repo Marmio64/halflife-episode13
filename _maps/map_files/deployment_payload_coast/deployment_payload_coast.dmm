@@ -819,6 +819,12 @@
 /obj/item/storage/halflife/hand_box/cookie,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
+"pd" = (
+/obj/structure/halflife/rails,
+/obj/effect/payload_path,
+/obj/structure/trap/deployment_spawn_prot/rebel,
+/turf/open/floor/plating/indoor/metal/grate/border/warning,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "pi" = (
 /obj/item/chair/halflife/wood/padded{
 	dir = 1
@@ -1242,6 +1248,11 @@
 "zs" = (
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"zt" = (
+/obj/machinery/door/airlock/highsecurity/combine,
+/obj/structure/trap/deployment_spawn_prot/combine,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "zw" = (
 /obj/structure/halflife/barrel/double/grey,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -1435,6 +1446,10 @@
 	dir = 9
 	},
 /area/halflife/outdoors/deployment_city/forest)
+"CS" = (
+/obj/structure/trap/deployment_spawn_prot/rebel,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "CU" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/frame/machine/secured,
@@ -1809,6 +1824,7 @@
 /obj/machinery/deployable_turret/combine{
 	dir = 8
 	},
+/obj/structure/trap/deployment_spawn_prot/rebel,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "JE" = (
@@ -2236,6 +2252,7 @@
 /area/halflife/outdoors/deployment_city/forest)
 "Tb" = (
 /obj/structure/girder/displaced,
+/obj/structure/trap/deployment_spawn_prot/rebel,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Te" = (
@@ -6005,7 +6022,7 @@ Pg
 Pg
 Pg
 Pg
-rk
+zt
 sB
 sB
 sB
@@ -17199,9 +17216,9 @@ hY
 Js
 hY
 hY
-zi
-la
-zi
+CS
+pd
+CS
 hY
 hY
 Js

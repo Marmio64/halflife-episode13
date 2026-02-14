@@ -99,6 +99,11 @@
 /obj/structure/halflife/cone,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city)
+"dT" = (
+/obj/machinery/door/airlock/highsecurity/combine,
+/obj/structure/trap/deployment_spawn_prot/combine,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "dX" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -542,6 +547,7 @@
 /obj/machinery/door/unpowered/halflife/wood{
 	dir = 4
 	},
+/obj/structure/trap/deployment_spawn_prot/rebel,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "nX" = (
@@ -704,6 +710,7 @@
 /area/halflife/outdoors/deployment_city)
 "sj" = (
 /obj/structure/window/fulltile/halflife/nosmooth/reinforced,
+/obj/structure/trap/deployment_spawn_prot/rebel,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "tp" = (
@@ -748,6 +755,7 @@
 /obj/machinery/door/unpowered/halflife/wood{
 	dir = 8
 	},
+/obj/structure/trap/deployment_spawn_prot/rebel,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "ur" = (
@@ -1434,6 +1442,7 @@
 /area/halflife/outdoors/deployment_city)
 "Mj" = (
 /obj/structure/window/fulltile/halflife/nosmooth/reinforced,
+/obj/structure/trap/deployment_spawn_prot/rebel,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Mk" = (
@@ -2028,6 +2037,10 @@
 	},
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/outdoors/deployment_city)
+"YW" = (
+/obj/structure/trap/deployment_spawn_prot/combine,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/combat_deployment/combine_base)
 "Zb" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -25100,8 +25113,8 @@ fz
 fz
 fz
 fz
-qW
-qW
+YW
+YW
 fz
 fz
 fz
@@ -29088,7 +29101,7 @@ wA
 wA
 wA
 wA
-MN
+dT
 qW
 wA
 wA

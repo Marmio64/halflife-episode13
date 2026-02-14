@@ -37,6 +37,7 @@ GLOBAL_VAR_INIT(number_of_hidden, 0)
 
 /obj/machinery/the_hidden_time_counter/Initialize(mapload)
 	..()
+	GLOB.deployment_flag_grace_period = 3 MINUTES //arbitrary, there just needs to be a grace period right now. It'll get changed later on to the correct one.
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/the_hidden_time_counter/LateInitialize()

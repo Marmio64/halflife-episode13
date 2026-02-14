@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ac" = (
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city/forest)
 "ai" = (
 /obj/machinery/telecomms/bus/preset_one/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
@@ -74,6 +78,7 @@
 /area/halflife/outdoors/deployment_city/forest)
 "ff" = (
 /obj/machinery/door/airlock/highsecurity/combine,
+/obj/structure/trap/deployment_spawn_prot/combine,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
 "fM" = (
@@ -98,8 +103,8 @@
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/forest)
 "gv" = (
-/obj/structure/razorwire,
-/turf/open/floor/plating/ground/brickroad,
+/obj/structure/halflife/road_barrier/concrete,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
 "gB" = (
 /obj/machinery/telecomms/receiver/preset_left/birdstation,
@@ -120,10 +125,6 @@
 "io" = (
 /obj/machinery/combine_walllight/directional/north,
 /turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors/deployment_city/forest)
-"iB" = (
-/obj/structure/halflife/fence/vertical/wire/east,
-/turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/forest)
 "iO" = (
 /obj/structure/barricade/wooden/solid,
@@ -155,6 +156,10 @@
 /obj/structure/table/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
+"kQ" = (
+/obj/structure/halflife/fence/vertical/wire/east,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/deployment_city/forest)
 "lt" = (
 /obj/structure/table/halflife/no_smooth/large/wood,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -162,6 +167,10 @@
 "lI" = (
 /obj/structure/halflife/trash/food/dinner,
 /turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/outdoors/deployment_city/forest)
+"lX" = (
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
 "mj" = (
 /turf/open/floor/plating/ground/sidewalk,
@@ -171,6 +180,7 @@
 /area/halflife/outdoors/deployment_city/forest)
 "mr" = (
 /obj/machinery/door/unpowered/halflife/wood,
+/obj/structure/trap/deployment_spawn_prot/rebel,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "mt" = (
@@ -179,6 +189,10 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"mB" = (
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city/forest)
 "mF" = (
 /obj/machinery/combine_health_station/self_recharging{
 	pixel_y = -30
@@ -189,7 +203,7 @@
 /turf/cordon,
 /area/halflife/outdoors/deployment_city/forest)
 "ns" = (
-/obj/machinery/intel_deposit/rebel,
+/obj/machinery/deployment_comms_tower/rebel,
 /turf/open/floor/plating/ground/sidewalk/cobblestone,
 /area/halflife/outdoors/deployment_city/forest)
 "nv" = (
@@ -248,7 +262,7 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/deployment_city/forest)
 "sR" = (
-/obj/machinery/intel_deposit/combine,
+/obj/machinery/deployment_comms_tower/combine,
 /turf/open/floor/plating/ground/sidewalk/cobblestone,
 /area/halflife/outdoors/deployment_city/forest)
 "sW" = (
@@ -256,6 +270,10 @@
 /obj/effect/landmark/deployments_refugee,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"sY" = (
+/obj/machinery/deployment_points_flag/poland,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/forest)
 "tb" = (
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/deployment_city/forest)
@@ -289,8 +307,8 @@
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/forest)
 "vt" = (
-/obj/structure/razorwire,
-/turf/open/floor/plating/ground/sidewalk,
+/obj/structure/halflife/fence/vertical/wire/east,
+/turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/forest)
 "vv" = (
 /obj/machinery/door/unpowered/halflife/wood,
@@ -417,16 +435,6 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"DP" = (
-/obj/structure/halflife/road_barrier/concrete{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors/deployment_city/forest)
-"DT" = (
-/obj/structure/halflife/road_barrier/concrete,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city/forest)
 "DX" = (
 /obj/structure/table/halflife/wood,
 /obj/item/storage/halflife/hand_box/egg{
@@ -471,10 +479,6 @@
 	dir = 4
 	},
 /turf/open/halflife/water/medium,
-/area/halflife/outdoors/deployment_city/forest)
-"Ga" = (
-/obj/structure/halflife/fence/vertical/wire/east,
-/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/forest)
 "Gg" = (
 /obj/machinery/porta_turret/combine/fast{
@@ -540,8 +544,10 @@
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/outdoors/deployment_city/forest)
 "Li" = (
-/obj/structure/razorwire,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/obj/structure/halflife/road_barrier/concrete{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/forest)
 "LF" = (
 /obj/machinery/light/small/directional/west,
@@ -554,19 +560,11 @@
 /obj/machinery/telecomms/server/presets/common/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
-"Ms" = (
-/obj/structure/barricade/sandbags,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city/forest)
 "MZ" = (
 /obj/structure/chair/halflife/wood{
 	dir = 1
 	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
-/area/halflife/outdoors/deployment_city/forest)
-"NK" = (
-/obj/machinery/deployment_points_flag/combine,
-/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
 "NM" = (
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -652,10 +650,6 @@
 "QY" = (
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
-"Rd" = (
-/obj/machinery/deployment_points_flag/poland,
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/deployment_city/forest)
 "Re" = (
 /obj/structure/window/fulltile/halflife/nosmooth/brick{
 	dir = 8
@@ -681,10 +675,8 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/deployment_city/forest)
 "Su" = (
-/obj/structure/halflife/road_barrier/concrete{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/dirt,
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
 "SM" = (
 /turf/open/floor/plating/indoor/carpet,
@@ -703,6 +695,7 @@
 /obj/machinery/door/unpowered/halflife/wood{
 	dir = 4
 	},
+/obj/structure/trap/deployment_spawn_prot/rebel,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "TZ" = (
@@ -766,8 +759,10 @@
 /turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/outdoors/deployment_city/forest)
 "Xl" = (
-/obj/structure/razorwire,
-/turf/open/floor/plating/ground/sidewalk/inner,
+/obj/structure/halflife/road_barrier/concrete{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/forest)
 "XN" = (
 /turf/closed/wall/halflife/wood,
@@ -778,7 +773,7 @@
 /area/halflife/outdoors/deployment_city/forest)
 "Yp" = (
 /obj/structure/barricade/sandbags,
-/turf/open/floor/plating/ground/sidewalk,
+/turf/open/floor/plating/ground/sidewalk/cobblestone,
 /area/halflife/outdoors/deployment_city/forest)
 "YA" = (
 /obj/structure/barricade/wooden/solid,
@@ -792,6 +787,10 @@
 "ZV" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/woodc,
+/area/halflife/outdoors/deployment_city/forest)
+"ZZ" = (
+/obj/machinery/deployment_points_flag/combine,
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
 
 (1,1,1) = {"
@@ -2768,19 +2767,19 @@ no
 no
 no
 no
-tS
-QJ
-Sa
-Sa
-PG
-PG
-Sa
-QJ
-QJ
-LQ
-LQ
-LQ
-ml
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
 tS
 tS
 tS
@@ -2875,19 +2874,19 @@ no
 no
 no
 no
-tS
-QJ
-Sa
-Sa
-PG
-PG
-Sa
-QJ
-QJ
-ml
-ml
-ml
-ml
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
 tS
 ml
 ml
@@ -2982,19 +2981,19 @@ no
 no
 no
 no
-tS
-QJ
-Sa
-Sa
-PG
-PG
-Sa
-QJ
-QJ
-LQ
-LQ
-LQ
-ml
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
 tS
 LQ
 ml
@@ -3089,19 +3088,19 @@ no
 no
 no
 no
-tS
-QJ
-Sa
-Sa
-PG
-PG
-Sa
-QJ
-QJ
-LQ
-LQ
-ml
-LQ
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
 tS
 LQ
 LQ
@@ -3196,19 +3195,19 @@ no
 no
 no
 no
-tS
-QJ
-QJ
-Sa
-PG
-PG
-Sa
-Sa
-QJ
-QJ
-ml
-LQ
-LQ
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
 tS
 LQ
 LQ
@@ -3303,19 +3302,19 @@ no
 no
 no
 no
-tS
-QJ
-QJ
-Sa
-Sa
-PG
-Sa
-Sa
-QJ
-QJ
-LQ
-ml
-ml
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
 tS
 LQ
 ml
@@ -3410,19 +3409,19 @@ no
 no
 no
 no
-tS
-QJ
-QJ
-Sa
-Sa
-PG
-PG
-Sa
-QJ
-QJ
-LQ
-ml
-ml
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
 tS
 LQ
 ml
@@ -3517,19 +3516,19 @@ no
 no
 no
 no
-tS
-QJ
-QJ
-Sa
-Sa
-PG
-PG
-Sa
-QJ
-QJ
-LQ
-ml
-ml
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
 tS
 ml
 LQ
@@ -3624,19 +3623,19 @@ no
 no
 no
 no
-tS
-QJ
-QJ
-Sa
-Sa
-PG
-PG
-Sa
-QJ
-QJ
-LQ
-LQ
-LQ
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
+no
 tS
 ml
 ml
@@ -3762,10 +3761,10 @@ QY
 QY
 QY
 QY
+mj
 Yp
-Cp
-Cp
-Cp
+Yp
+Yp
 LQ
 LQ
 Cp
@@ -3869,10 +3868,10 @@ QY
 QY
 QY
 QY
+mj
 Yp
-Cp
 ns
-Cp
+Yp
 Cp
 Cp
 Cp
@@ -3976,10 +3975,10 @@ QY
 QY
 QY
 QY
+mj
 Yp
-Cp
-Cp
-Cp
+Yp
+Yp
 LQ
 LQ
 LQ
@@ -4083,10 +4082,10 @@ mj
 mj
 mj
 mj
-Yp
-Ms
-AZ
-fY
+mj
+NM
+LQ
+ml
 ml
 ml
 ml
@@ -5805,13 +5804,13 @@ cx
 cx
 tb
 tS
-Su
-DP
-DP
-Su
-Su
-DP
-Su
+Xl
+Li
+Li
+Xl
+Xl
+Li
+Xl
 no
 no
 no
@@ -5912,13 +5911,13 @@ dl
 cx
 tb
 tS
-Ga
-Ga
-iB
-Ga
-Ga
-iB
-iB
+kQ
+kQ
+vt
+kQ
+kQ
+vt
+vt
 no
 no
 no
@@ -6019,13 +6018,13 @@ dl
 cx
 tb
 tS
-Su
-Su
-DP
-Su
-DP
-DP
-Su
+Xl
+Xl
+Li
+Xl
+Li
+Li
+Xl
 no
 no
 no
@@ -6177,7 +6176,7 @@ LQ
 LQ
 ml
 ml
-DT
+gv
 NM
 NM
 NM
@@ -6193,7 +6192,7 @@ NM
 NM
 NM
 NM
-Li
+ac
 FD
 FD
 FD
@@ -6300,7 +6299,7 @@ Vw
 Vw
 Vw
 Vw
-Xl
+mB
 Vw
 Vw
 Vw
@@ -6309,7 +6308,7 @@ Vw
 Vw
 Vw
 Vw
-Xl
+mB
 Vw
 Vw
 Vw
@@ -6407,7 +6406,7 @@ mj
 yX
 mj
 mj
-vt
+Su
 mj
 mj
 mj
@@ -6416,7 +6415,7 @@ mj
 mj
 mj
 mj
-vt
+Su
 mj
 mj
 mj
@@ -6514,7 +6513,7 @@ QY
 QY
 QY
 QY
-gv
+lX
 QY
 QY
 QY
@@ -6523,7 +6522,7 @@ QY
 QY
 QY
 QY
-gv
+lX
 QY
 QY
 QY
@@ -6609,7 +6608,7 @@ vv
 NM
 mj
 QY
-NK
+ZZ
 QY
 QY
 QY
@@ -6621,7 +6620,7 @@ QY
 QY
 QY
 QY
-gv
+lX
 QY
 QY
 QY
@@ -6630,7 +6629,7 @@ QY
 QY
 QY
 QY
-gv
+lX
 QY
 QY
 QY
@@ -6642,7 +6641,7 @@ QY
 QY
 QY
 QY
-Rd
+sY
 QY
 mj
 NM
@@ -6728,7 +6727,7 @@ QY
 QY
 QY
 QY
-gv
+lX
 QY
 QY
 QY
@@ -6737,7 +6736,7 @@ QY
 QY
 QY
 QY
-gv
+lX
 QY
 QY
 QY
@@ -6835,7 +6834,7 @@ mj
 mj
 mj
 mj
-vt
+Su
 mj
 mj
 mj
@@ -6844,7 +6843,7 @@ mj
 mj
 mj
 mj
-vt
+Su
 mj
 mj
 yX
@@ -6942,7 +6941,7 @@ Vw
 Vw
 Vw
 Vw
-Xl
+mB
 Vw
 Vw
 Vw
@@ -6951,7 +6950,7 @@ Vw
 Vw
 Vw
 Vw
-Xl
+mB
 Vw
 Vw
 Vw
@@ -7058,7 +7057,7 @@ zC
 zC
 zC
 zC
-Li
+ac
 NM
 NM
 NM
@@ -7074,7 +7073,7 @@ NM
 NM
 NM
 NM
-DT
+gv
 ml
 ml
 LQ
@@ -7226,13 +7225,13 @@ no
 no
 no
 no
-DP
-DP
-Su
-DP
-DP
-DP
-DP
+Li
+Li
+Xl
+Li
+Li
+Li
+Li
 tS
 tb
 cx
@@ -7333,13 +7332,13 @@ no
 no
 no
 no
-iB
-iB
-iB
-Ga
-iB
-iB
-iB
+vt
+vt
+vt
+kQ
+vt
+vt
+vt
 tS
 tb
 cx
@@ -7440,13 +7439,13 @@ no
 no
 no
 no
-Su
-Su
-Su
-DP
-DP
-Su
-Su
+Xl
+Xl
+Xl
+Li
+Li
+Xl
+Xl
 tS
 tb
 cx
@@ -9271,10 +9270,10 @@ ml
 ml
 LQ
 LQ
-fY
-AZ
-Ms
-Yp
+ml
+LQ
+NM
+mj
 mj
 mj
 mj
@@ -9378,10 +9377,10 @@ LQ
 LQ
 LQ
 ml
-Cp
-Cp
-Cp
 Yp
+Yp
+Yp
+mj
 QY
 QY
 QY
@@ -9485,10 +9484,10 @@ ml
 ml
 LQ
 ml
-Cp
-sR
-Cp
 Yp
+sR
+Yp
+mj
 QY
 QY
 QY
@@ -9592,10 +9591,10 @@ ml
 LQ
 LQ
 LQ
-Cp
-Cp
-Cp
 Yp
+Yp
+Yp
+mj
 QY
 QY
 QY
@@ -9628,7 +9627,7 @@ Sa
 QJ
 QJ
 ml
-tS
+no
 no
 no
 no
@@ -9735,7 +9734,7 @@ QJ
 QJ
 QJ
 LQ
-tS
+no
 no
 no
 no
@@ -9842,7 +9841,7 @@ QJ
 QJ
 ml
 LQ
-tS
+no
 no
 no
 no
@@ -9949,7 +9948,7 @@ QJ
 QJ
 QJ
 LQ
-tS
+no
 no
 no
 no
@@ -10056,7 +10055,7 @@ Sa
 QJ
 QJ
 LQ
-tS
+no
 no
 no
 no
@@ -10163,7 +10162,7 @@ Sa
 QJ
 QJ
 QJ
-tS
+no
 no
 no
 no
@@ -10270,7 +10269,7 @@ Sa
 QJ
 QJ
 QJ
-tS
+no
 no
 no
 no
@@ -10377,7 +10376,7 @@ Sa
 QJ
 QJ
 QJ
-tS
+no
 no
 no
 no
@@ -10484,7 +10483,7 @@ Sa
 QJ
 QJ
 QJ
-tS
+no
 no
 no
 no
@@ -10591,7 +10590,7 @@ Sa
 QJ
 QJ
 QJ
-tS
+no
 no
 no
 no
@@ -10698,7 +10697,7 @@ Sa
 QJ
 QJ
 QJ
-tS
+no
 no
 no
 no
@@ -10805,7 +10804,7 @@ Sa
 QJ
 QJ
 QJ
-tS
+no
 no
 no
 no

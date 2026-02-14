@@ -216,7 +216,7 @@
 
 	back = /obj/item/tank/internals/oxygen/grunt
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt
-	uniform = /obj/item/clothing/under/combine/grunt/fused/deployment
+	uniform = /obj/item/clothing/under/combine/grunt/fused
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection/grunt
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
@@ -224,6 +224,8 @@
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/lgorbifold.ogg'
+
+	extra_dex = 2
 
 /datum/outfit/deployment_loadout/combine/tier3/ota
 	name = "Deployment: SMG OTA"
