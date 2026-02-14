@@ -826,7 +826,7 @@
 	delete_trait_on_buy = TRUE
 
 	initial_products = list(
-		/obj/item/storage/box/syndicate/plf_recruiter = list(PAYCHECK_CREW * 2, 5),
+		/obj/item/storage/box/syndicate/plf_recruiter = list(PAYCHECK_CREW, 5),
 	)
 
 	say_phrases = list(

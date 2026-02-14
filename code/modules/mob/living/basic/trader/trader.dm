@@ -58,6 +58,16 @@
 	setup_shop.Grant(src)
 	ai_controller.set_blackboard_key(BB_SETUP_SHOP, setup_shop)
 
+//hl13 edit
+/mob/living/basic/trader/attackby(obj/item/I, mob/user, params)
+	if(!isliving(user))
+		return
+	var/mob/living/living_user = user
+	if(!living_user.combat_mode)
+		to_chat(user, span_warning("You decide that hitting them may be a bad idea."))
+		return
+	. = ..()
+
 /mob/living/basic/trader/mrbones
 	name = "Mr. Bones"
 	desc = "A skeleton merchant, he seems very humerus."
