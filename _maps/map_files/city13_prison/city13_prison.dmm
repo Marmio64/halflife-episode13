@@ -2525,7 +2525,7 @@
 "nK" = (
 /obj/structure/table/halflife/no_smooth/dice,
 /obj/item/stack/spacecash/c1{
-	amount = 10
+	amount = 20
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands)
@@ -3718,6 +3718,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/prison/infirmary)
+"ty" = (
+/obj/structure/reagent_dispensers/wall/peppertank/directional/north,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/prison/security)
 "tA" = (
 /obj/structure/halflife/pipes/horizontal/end,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -6392,6 +6396,8 @@
 /area/halflife/indoors/prison/security/rehabilitation)
 "GV" = (
 /obj/structure/closet/secure_closet/freezer/halflife,
+/obj/effect/spawner/random/halflife/loot/consumables,
+/obj/effect/spawner/random/halflife/loot/consumables,
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/outlands)
 "GW" = (
@@ -8237,7 +8243,7 @@
 "PW" = (
 /obj/structure/halflife/storage/shelf/wood/alt,
 /obj/item/stack/spacecash/c1{
-	amount = 20
+	amount = 25
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands)
@@ -8550,6 +8556,7 @@
 /area/halflife/indoors/sewer)
 "Rw" = (
 /obj/structure/table/halflife/wood/constructed,
+/obj/item/reagent_containers/pill/patch/medkit/vial,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/forest)
 "Ry" = (
@@ -86014,7 +86021,7 @@ lF
 tE
 lF
 kD
-lF
+ty
 tE
 tE
 RJ
