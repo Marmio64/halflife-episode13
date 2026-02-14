@@ -336,6 +336,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_per = 5
+	extra_dex = 2
 
 /datum/outfit/deployment_loadout/rebel/tier3/engineer
 	name = "Deployment: Upgraded Refugee Engineer+"
@@ -586,6 +587,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_per = 5
+	extra_dex = 2
 
 /datum/outfit/deployment_loadout/rebel/tier4/engineer
 	name = "Deployment: Heavy Refugee Engineer"
