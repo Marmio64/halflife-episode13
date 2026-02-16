@@ -124,8 +124,9 @@
 	name = "Combine Supply Radio"
 	faction_belonging = COMBINE_DEPLOYMENT_FACTION
 
-/obj/item/hl2/supply_radio/combine/basic
+/obj/item/hl2/supply_radio/combine/logistics
 	name = "Combine Logistics Supply Radio"
+	max_cash_regeneration = 6
 	final_allowed_cash = 450 //allows everything but more tier 5s
 
 /obj/item/hl2/supply_radio/combine/generate_display_names()

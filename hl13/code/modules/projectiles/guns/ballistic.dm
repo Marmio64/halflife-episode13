@@ -535,7 +535,7 @@
 //Super freaking powerful shotgun, will pointblank 2 shot most people, even if they're wearing decent armor
 /obj/item/gun/ballistic/shotgun/pulse
 	name = "Pulse Shotgun"
-	desc = "A high power pulse shotgun that fires incredibly devestating rounds."
+	desc = "A high power pulse shotgun that fires incredibly devestating, but inaccurate rounds. Worst comes to worse, it is decent bludgeon as well."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "antixenshotgun"
 	slot_flags = ITEM_SLOT_SUITSTORE
@@ -543,7 +543,7 @@
 	rack_sound = "hl13/sound/weapons/antixen_pump.ogg"
 	load_sound = "hl13/sound/weapons/antixen_reload.ogg"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/pulse
-	force = 20
+	force = 15
 	recoil = 1.7
 	fire_delay = 20
 	vary_fire_sound = FALSE
@@ -751,8 +751,8 @@
 	item_flags = SLOWS_WHILE_IN_HAND | NEEDS_PERMIT
 	pin = /obj/item/firing_pin/implant/mindshield
 
-	slowdown = 0.5
-	drag_slowdown = 0.5
+	slowdown = 0.75
+	drag_slowdown = 0.75
 
 	load_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'
 	load_empty_sound = 'hl13/sound/weapons/ar2_reload_rotate.ogg'

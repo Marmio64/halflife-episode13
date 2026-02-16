@@ -95,7 +95,7 @@ SUBSYSTEM_DEF(statpanels)
 #if MIN_COMPILER_VERSION > 515
 	#warn 516 is most certainly out of beta, remove this beta notice if you haven't already
 #endif
-	var/static/list/beta_notice = list("", "The server may still be missing some 516 updates, report any issues that occur.", "If necessary, you may swap back to 515 to possibly fix issues.")
+	var/static/list/beta_notice = list("", "If you are experiencing a lot of BYOND bugs, try swapping to 516.1669")
 	if(!global_data)//statbrowser hasnt fired yet and we were called from immediate_send_stat_data()
 		return
 	target.stat_panel.send_message("update_stat", list(

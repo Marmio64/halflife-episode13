@@ -61,7 +61,7 @@
 	if(SSmapping.current_map.combat_deployment_gamemode == "koth")
 		info += "You are playing for the Rebel Side in the King of The Hill TDM game mode! Capture the central flag and keep it under your faction's control for a total of five minutes to win! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
 	if(SSmapping.current_map.combat_deployment_gamemode == "payload")
-		info += "You are playing for the Rebel Side in the Payload gamemode! Move the cart to the combine base to win! You can loot buildings for money, and sell enemy player corpses to your base's cash deposit in order to upgrade your team's starting loadouts."
+		info += "You are playing for the Rebel Side in the Payload gamemode! You may either have to defend the cart, or push it into the enemy's base to win!"
 	if(SSmapping.current_map.combat_deployment_gamemode == "the_hidden")
 		info += "You are part of a team hunting down an anomalous test subject known as The Hidden. Stick together with your squad, and try to put this invisible, merciless beast down. Alternatively, try to active all five combine distress terminals to win."
 	if(SSmapping.current_map.combat_deployment_gamemode == "ctf")

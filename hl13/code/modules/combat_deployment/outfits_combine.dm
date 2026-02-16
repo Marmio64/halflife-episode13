@@ -272,8 +272,8 @@
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 
-	extra_str = 4
-	extra_end = 4
+	extra_str = 6
+	extra_end = 6
 
 /datum/outfit/deployment_loadout/combine/tier3/divisional
 	name = "Deployment: Divisional Lead"
@@ -606,7 +606,7 @@
 /datum/outfit/deployment_loadout/combine/tier4/overseer
 	name = "Deployment: Overseer"
 	display_name = "Viscerator Overseer Cop (Offense)"
-	desc = "You are a MP7 equipped cop that specializes in supporting allies with your large amount of viscerators, but aren't too powerful by yourself. Your viscerators are quick to deploy and have a shield which can take two shots for them, but have low health otherwise, making them best used against slow firing targets."
+	desc = "You are a MP7 equipped cop that specializes in supporting allies with your large amount of viscerators, but aren't too powerful by yourself. Your viscerators are quick to deploy and have a shield which can take three shots for them, but have low health otherwise, making them best used against slow firing targets."
 	id_name = "Overseer"
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
@@ -678,6 +678,7 @@
 	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
 
 	extra_end = 3
+	extra_str = 4
 
 /datum/outfit/deployment_loadout/combine/tier5/assassin
 	name = "Deployment: Combine Assassin"
@@ -760,7 +761,7 @@
 	mask = /obj/item/clothing/mask/gas/cwuengi //only really because i dont want them to be mistaken for a rebel
 	suit = /obj/item/clothing/suit/armor/civilprotection/speedy
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
-	l_pocket = /obj/item/hl2/supply_radio/combine/basic
+	l_pocket = /obj/item/hl2/supply_radio/combine/logistics
 	r_pocket = /obj/item/flashlight/seclite
 
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
@@ -769,8 +770,8 @@
 	back = /obj/item/storage/backpack/halflife/satchel
 
 	backpack_contents = list(
-		/obj/item/ammo_box/colta357 = 2,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/ammo_box/colta357 = 3,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
 		/obj/item/melee/baton/telescopic = 1,
 	)
 

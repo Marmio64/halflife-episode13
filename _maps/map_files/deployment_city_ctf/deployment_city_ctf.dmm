@@ -124,6 +124,7 @@
 /area/halflife/outdoors/deployment_city/forest)
 "io" = (
 /obj/machinery/combine_walllight/directional/north,
+/obj/structure/barricade/sandbags,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/forest)
 "iO" = (
@@ -352,6 +353,10 @@
 /obj/structure/bed/halflife/mattress/old,
 /turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/outdoors/deployment_city/forest)
+"yl" = (
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city/forest)
 "yF" = (
 /obj/structure/halflife/storage/large/showcase,
 /turf/open/floor/plating/indoor/carpet/green,
@@ -397,6 +402,10 @@
 	dir = 4
 	},
 /turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city/forest)
+"BG" = (
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
 "BS" = (
 /obj/structure/halflife/rug/yellow,
@@ -523,6 +532,12 @@
 /area/halflife/outdoors/deployment_city/forest)
 "Jz" = (
 /turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/deployment_city/forest)
+"JR" = (
+/obj/machinery/porta_turret/combine/rebel{
+	anchored = 1
+	},
+/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/forest)
 "JS" = (
 /obj/structure/table/halflife/wood,
@@ -767,6 +782,12 @@
 "XN" = (
 /turf/closed/wall/halflife/wood,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"XV" = (
+/obj/machinery/porta_turret/combine/rebel{
+	anchored = 1
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city/forest)
 "Ya" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -2151,9 +2172,9 @@ ml
 LQ
 ml
 LQ
-ml
-LQ
-ml
+fY
+AZ
+fY
 rp
 rp
 rp
@@ -2258,7 +2279,7 @@ ml
 LQ
 ml
 oG
-ml
+fY
 LQ
 LQ
 ml
@@ -2365,7 +2386,7 @@ LQ
 LQ
 LQ
 ml
-LQ
+AZ
 LQ
 ml
 ml
@@ -2793,7 +2814,7 @@ ml
 ml
 LQ
 LQ
-LQ
+AZ
 LQ
 ml
 ml
@@ -2900,7 +2921,7 @@ ml
 LQ
 ml
 LQ
-ml
+fY
 ml
 ml
 LQ
@@ -3007,7 +3028,7 @@ ml
 LQ
 LQ
 LQ
-ml
+fY
 LQ
 ml
 LQ
@@ -3546,8 +3567,8 @@ NM
 NM
 NM
 NM
-NM
-NM
+yl
+yl
 NM
 ml
 LQ
@@ -3653,7 +3674,7 @@ mj
 mj
 mj
 mj
-mj
+BG
 mj
 NM
 LQ
@@ -4081,13 +4102,13 @@ mj
 mj
 mj
 mj
-mj
+BG
 mj
 NM
 LQ
 ml
 ml
-ml
+Fa
 ml
 LQ
 ml
@@ -4188,13 +4209,13 @@ NM
 NM
 NM
 NM
-NM
-NM
+yl
+yl
 NM
 LQ
 ml
-ml
-LQ
+Fa
+iO
 LQ
 ml
 LQ
@@ -4719,7 +4740,7 @@ QY
 QY
 mj
 NM
-LQ
+AZ
 LQ
 ml
 ml
@@ -5254,7 +5275,7 @@ QY
 QY
 mj
 NM
-ml
+fY
 LQ
 ml
 ml
@@ -5361,8 +5382,8 @@ QY
 QY
 mj
 NM
-ml
-ml
+fY
+JR
 ml
 ml
 ml
@@ -7887,8 +7908,8 @@ LQ
 LQ
 LQ
 ml
-LQ
-ml
+XV
+fY
 NM
 mj
 QY
@@ -7995,7 +8016,7 @@ LQ
 LQ
 ml
 LQ
-ml
+fY
 NM
 mj
 QY
@@ -8637,7 +8658,7 @@ LQ
 ml
 ml
 LQ
-ml
+fY
 NM
 mj
 QY
@@ -9161,13 +9182,13 @@ ml
 ml
 ml
 ml
-ml
-ml
+Fa
+Fa
 ml
 LQ
 NM
-NM
-NM
+yl
+yl
 NM
 NM
 NM
@@ -9268,13 +9289,13 @@ ml
 ml
 ml
 ml
-LQ
+iO
 LQ
 ml
 LQ
 NM
 mj
-mj
+BG
 mj
 mj
 mj
@@ -9702,7 +9723,7 @@ Cp
 LQ
 NM
 mj
-mj
+BG
 mj
 mj
 mj
@@ -9808,8 +9829,8 @@ Cp
 Cp
 LQ
 NM
-NM
-NM
+yl
+yl
 NM
 NM
 NM
@@ -10239,7 +10260,7 @@ LQ
 LQ
 ml
 LQ
-LQ
+AZ
 io
 NN
 NN
@@ -10346,7 +10367,7 @@ LQ
 ml
 ml
 LQ
-ml
+fY
 LQ
 LQ
 LQ
@@ -10774,7 +10795,7 @@ LQ
 ml
 ml
 LQ
-LQ
+AZ
 ml
 ml
 LQ

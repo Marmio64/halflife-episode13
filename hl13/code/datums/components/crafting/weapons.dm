@@ -261,8 +261,8 @@
 	name = "Tinbomb"
 	result = /obj/item/grenade/halflife/tinbomb
 	reqs = list(
-		/obj/item/stack/sheet/scrap_metal = 8,
-		/datum/reagent/fuel = 30,
+		/obj/item/stack/sheet/scrap_metal = 7,
+		/datum/reagent/fuel = 25,
 	)
 	time = 5 SECONDS
 	category = CAT_WEAPON_RANGED

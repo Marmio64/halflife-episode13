@@ -14,7 +14,7 @@
 	light_color = "#658cac"
 	var/movable
 
-	var/combine_time = 6 MINUTES // each checkpoint is plus 90 seconds, so totals to 9 minutes if both checkpoints are reached
+	var/round_timer = 6 MINUTES // each checkpoint is plus 90 seconds, so totals to 9 minutes if both checkpoints are reached
 	var/grace_time = 90 SECONDS
 
 	var/blocked = FALSE
@@ -30,7 +30,7 @@
 	var/alter_holder_respawn = TRUE
 
 	/// Alternate respawn timer if above is enabled ^
-	var/altered_respawn_speed = 40 SECONDS
+	var/altered_respawn_speed = 40 SECONDS //the respawn timer of the defenders
 	var/normal_respawn_speed = 25 SECONDS
 
 	var/grace_period_up_text = "<span class='greentext big'>The grace period is up, the cart is now movable!</span>"
@@ -39,6 +39,8 @@
 	var/time_left_match = 0
 
 	var/time_per_checkpoint = 90 SECONDS
+
+	var/cart_faction = REBEL_DEPLOYMENT_FACTION //which faction is pushing the bomb
 
 /obj/machinery/deployment_payload/CanAllowThrough(atom/movable/mover, turf/target)
 	. = ..()
@@ -57,7 +59,11 @@
 /obj/machinery/deployment_payload/Initialize(mapload)
 	.=..()
 	START_PROCESSING(SSprocessing, src)
-	GLOB.deployment_combine_flag_time_left = combine_time
+	if(cart_faction == REBEL_DEPLOYMENT_FACTION)
+		GLOB.deployment_combine_flag_time_left = round_timer
+	else
+		GLOB.deployment_rebels_flag_time_left = round_timer
+
 	GLOB.deployment_flag_grace_period = grace_time
 
 /obj/machinery/deployment_payload/process()
@@ -80,16 +86,27 @@
 		GLOB.deployment_flag_grace_period -= 1 SECONDS
 		return
 
-	time_left_match = GLOB.deployment_combine_flag_time_left
+	if(cart_faction == REBEL_DEPLOYMENT_FACTION)
+		time_left_match = GLOB.deployment_combine_flag_time_left
+	else
+		time_left_match = GLOB.deployment_rebels_flag_time_left
 
 	if(last_time_reminder < world.time)
 		to_chat(world, span_infoplain(span_big(span_bold("[time_left_match/10] seconds remain in the mission."))))
 		last_time_reminder = world.time + 120 SECONDS
 
-	GLOB.deployment_combine_flag_time_left -= 1 SECONDS
+	if(cart_faction == REBEL_DEPLOYMENT_FACTION)
+		GLOB.deployment_combine_flag_time_left -= 1 SECONDS
+	else
+		GLOB.deployment_rebels_flag_time_left -= 1 SECONDS
+
 	if(alter_holder_respawn)
-		GLOB.deployment_respawn_rate_combine = altered_respawn_speed
-		GLOB.deployment_respawn_rate_rebels = normal_respawn_speed
+		if(cart_faction == REBEL_DEPLOYMENT_FACTION)
+			GLOB.deployment_respawn_rate_combine = altered_respawn_speed
+			GLOB.deployment_respawn_rate_rebels = normal_respawn_speed
+		else
+			GLOB.deployment_respawn_rate_combine = normal_respawn_speed
+			GLOB.deployment_respawn_rate_rebels = altered_respawn_speed
 
 	if(GLOB.deployment_combine_flag_time_left <= 0 && GLOB.deployment_win_team != REBEL_DEPLOYMENT_FACTION)
 		priority_announce("Payload ceased, additional delegates inbound. Amputate all dissenters.", "Overwatch Priority Alert")
@@ -105,15 +122,38 @@
 			to_chat(H, "<span class='greentext big'>We have stopped the cart from detonating!</span>")
 		return PROCESS_KILL
 
+	if(GLOB.deployment_rebels_flag_time_left <= 0 && GLOB.deployment_win_team != COMBINE_DEPLOYMENT_FACTION)
+		priority_announce("The combine payload was stopped, Lambda prevails!", "Lambda Priority Alert")
+		GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
+		SSticker.force_ending = FORCE_END_ROUND
+		for(var/X in GLOB.deployment_rebel_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
+			to_chat(H, "<span class='greentext big'>We have stopped the cart from detonating!</span>")
+		for(var/X in GLOB.deployment_combine_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/commstower_destroyed.ogg')
+			to_chat(H, "<span class='userdanger'>The rebels have stopped the cart...</span>")
+		return PROCESS_KILL
+
 	blocked = FALSE
 	moving = FALSE
 	friendlies_present = 0
-	for(var/mob/living/hooman in orange(2, src))
-		if(hooman.deployment_faction == COMBINE_DEPLOYMENT_FACTION && hooman.stat == CONSCIOUS)
-			blocked = TRUE //STOP DAT CART
-		if(hooman.deployment_faction == REBEL_DEPLOYMENT_FACTION && hooman.stat == CONSCIOUS)
-			moving = TRUE //move dat cart
-			friendlies_present++
+
+	if(cart_faction == REBEL_DEPLOYMENT_FACTION)
+		for(var/mob/living/hooman in orange(2, src))
+			if(hooman.deployment_faction == COMBINE_DEPLOYMENT_FACTION && hooman.stat == CONSCIOUS)
+				blocked = TRUE //STOP DAT CART
+			if(hooman.deployment_faction == REBEL_DEPLOYMENT_FACTION && hooman.stat == CONSCIOUS)
+				moving = TRUE //move dat cart
+				friendlies_present++
+	else
+		for(var/mob/living/hooman in orange(2, src))
+			if(hooman.deployment_faction == REBEL_DEPLOYMENT_FACTION && hooman.stat == CONSCIOUS)
+				blocked = TRUE //STOP DAT CART
+			if(hooman.deployment_faction == COMBINE_DEPLOYMENT_FACTION && hooman.stat == CONSCIOUS)
+				moving = TRUE //move dat cart
+				friendlies_present++
 
 	if(!blocked && moving && GLOB.deployment_win_team != COMBINE_DEPLOYMENT_FACTION)
 		move_cart()
@@ -123,10 +163,16 @@
 /obj/machinery/deployment_payload/proc/move_cart()
 	for(var/obj/effect/payload_path/P in range(1, src))
 		if(last_scream < world.time)
-			for(var/X in GLOB.deployment_combine_players)
-				var/mob/living/carbon/human/H = X
-				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
-				to_chat(H, "<span class='userdanger'>The payload cart is being pushed, stop it!</span>")
+			if(cart_faction == REBEL_DEPLOYMENT_FACTION)
+				for(var/X in GLOB.deployment_combine_players)
+					var/mob/living/carbon/human/H = X
+					SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+					to_chat(H, "<span class='userdanger'>The payload cart is being pushed, stop it!</span>")
+			else
+				for(var/X in GLOB.deployment_rebel_players)
+					var/mob/living/carbon/human/H = X
+					SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+					to_chat(H, "<span class='userdanger'>The payload cart is being pushed, stop it!</span>")
 			last_scream = world.time + 30 SECONDS
 		forceMove(get_turf(P))
 		playsound(src, 'hl13/sound/effects/cartmove.ogg', 15, TRUE, extrarange = -1)
@@ -143,36 +189,69 @@
 	GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
 	SSticker.force_ending = FORCE_END_ROUND
 	explosion(src, 1, 20, 30, 5)
-	for(var/X in GLOB.deployment_combine_players)
-		var/mob/living/carbon/human/H = X
-		SEND_SOUND(H, 'hl13/sound/effects/cart_explode.ogg')
-		to_chat(H, "<span class='userdanger'>The rebels have detonated the payload...</span>")
-	for(var/X in GLOB.deployment_rebel_players)
-		var/mob/living/carbon/human/H = X
-		SEND_SOUND(H, 'hl13/sound/effects/cart_explode.ogg')
-		to_chat(H, "<span class='greentext big'>We have detonated the payload!</span>")
-		return PROCESS_KILL
+
+	if(cart_faction == REBEL_DEPLOYMENT_FACTION)
+		for(var/X in GLOB.deployment_combine_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/cart_explode.ogg')
+			to_chat(H, "<span class='userdanger'>The rebels have detonated the payload...</span>")
+		for(var/X in GLOB.deployment_rebel_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/cart_explode.ogg')
+			to_chat(H, "<span class='greentext big'>We have detonated the payload!</span>")
+	else
+		for(var/X in GLOB.deployment_combine_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/cart_explode.ogg')
+			to_chat(H, "<span class='greentext big'>We have detonated the payload!</span>")
+		for(var/X in GLOB.deployment_rebel_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/cart_explode.ogg')
+			to_chat(H, "<span class='userdanger'>The combine have detonated the payload...</span>")
+
+	return PROCESS_KILL
 
 /obj/machinery/deployment_payload/proc/checkpoint_reached()
-	GLOB.deployment_combine_flag_time_left += time_per_checkpoint
 
-	for(var/obj/machinery/deployment_points_flag/F in range(1, src)) //auto-capture any points flags on the checkpoint
-		F.current_faction_holder = REBEL_DEPLOYMENT_FACTION
+	if(cart_faction == REBEL_DEPLOYMENT_FACTION)
+		GLOB.deployment_combine_flag_time_left += time_per_checkpoint
 
-	for(var/X in GLOB.deployment_combine_players)
-		var/mob/living/carbon/human/H = X
-		SEND_SOUND(H, 'hl13/sound/effects/scored.ogg')
-		to_chat(H, "<span class='userdanger'>The payload has reached a checkpoint, granting the rebels additional time!</span>")
-	for(var/X in GLOB.deployment_rebel_players)
-		var/mob/living/carbon/human/H = X
-		SEND_SOUND(H, 'hl13/sound/effects/scored.ogg')
-		to_chat(H, "<span class='greentext big'>The payload has reached a checkpoint, granting us additional time!</span>")
-		return PROCESS_KILL
+		for(var/obj/machinery/deployment_points_flag/F in range(1, src)) //auto-capture any points flags on the checkpoint
+			F.current_faction_holder = REBEL_DEPLOYMENT_FACTION
+
+		for(var/X in GLOB.deployment_combine_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/scored.ogg')
+			to_chat(H, "<span class='userdanger'>The payload has reached a checkpoint, granting the rebels additional time!</span>")
+		for(var/X in GLOB.deployment_rebel_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/scored.ogg')
+			to_chat(H, "<span class='greentext big'>The payload has reached a checkpoint, granting us additional time!</span>")
+	else
+		GLOB.deployment_rebels_flag_time_left += time_per_checkpoint
+
+		for(var/obj/machinery/deployment_points_flag/F in range(1, src)) //auto-capture any points flags on the checkpoint
+			F.current_faction_holder = COMBINE_DEPLOYMENT_FACTION
+
+		for(var/X in GLOB.deployment_combine_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/scored.ogg')
+			to_chat(H, "<span class='greentext big'>The payload has reached a checkpoint, granting us additional time!</span>")
+		for(var/X in GLOB.deployment_rebel_players)
+			var/mob/living/carbon/human/H = X
+			SEND_SOUND(H, 'hl13/sound/effects/scored.ogg')
+			to_chat(H, "<span class='userdanger'>The payload has reached a checkpoint, granting the combine additional time!</span>")
+
+	return
 
 /obj/machinery/deployment_payload/examine(mob/user)
 	. = ..()
-	. += span_notice("Rebels can stand near the cart to push it along its path.")
-	. += span_notice("The combine need to defend the cart for [(GLOB.deployment_combine_flag_time_left)/10] more seconds in order to win.")
+	if(cart_faction == REBEL_DEPLOYMENT_FACTION)
+		. += span_notice("Rebels can stand near the cart to push it along its path.")
+		. += span_notice("The combine need to defend the cart for [(GLOB.deployment_combine_flag_time_left)/10] more seconds in order to win.")
+	else
+		. += span_notice("The Combine can stand near the cart to push it along its path.")
+		. += span_notice("The rebels need to defend the cart for [(GLOB.deployment_rebels_flag_time_left)/10] more seconds in order to win.")
 
 /obj/machinery/deployment_payload/coast
 	altered_respawn_speed = 40 SECONDS
@@ -201,3 +280,10 @@
 /obj/effect/payload_path/checkpoint
 	name = "payload checkpoint"
 	icon_state = "x2"
+
+/obj/machinery/deployment_payload/combine
+	name = "Combine Payload Cart"
+	desc = "An old world, heavy poundage bomb mounted atop a movable cart. As it has lost remote detonation, timer, and fuse capabilites, it'll be a one way trip to hand deliver it to the rebels as a little farewell gift to them. Moves faster the more people are pushing it."
+	cart_faction = COMBINE_DEPLOYMENT_FACTION
+	icon_state = "combine"
+	time_per_checkpoint = 180 SECONDS

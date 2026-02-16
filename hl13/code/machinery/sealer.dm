@@ -28,8 +28,10 @@
 
 	visible_message("[src] suddenly makes a loud grinding sound before shutting down with a large pop!")
 	malfunctioning = TRUE
-	if(prob(20))
+	if(prob(10))
 		dangerous_malfunction = TRUE
+		if(prob(1))
+			explode_in_flames()
 
 /obj/machinery/sealer/attackby(obj/item/I, mob/living/user, params)
 	var/obj/item/bodypart/arm = user.get_bodypart(user.active_hand_index % 2 ? BODY_ZONE_L_ARM : BODY_ZONE_R_ARM)
@@ -64,9 +66,7 @@
 						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
 						arm.receive_damage(15)
 						user.emote("scream")
-					malfunctioning = TRUE
-					if(prob(5))
-						dangerous_malfunction = TRUE
+					breakdown()
 					update_appearance(UPDATE_ICON)
 					to_chat(user, span_userdanger("The machine shudders as it gets gummed up from blood, before shutting off."))
 				else
@@ -94,9 +94,7 @@
 						arm.force_wound_upwards(/datum/wound/slash/flesh/moderate)
 						arm.receive_damage(15)
 						user.emote("scream")
-					malfunctioning = TRUE
-					if(prob(5))
-						dangerous_malfunction = TRUE
+					breakdown()
 					update_appearance(UPDATE_ICON)
 					to_chat(user, span_userdanger("The machine shudders as it gets gummed up from blood, before shutting off."))
 				else

@@ -271,8 +271,8 @@
 	icon_state = "wallhammer"
 
 /datum/armor/wallhammeroverwatchmask
-	melee = 30
-	bullet = 50
+	melee = 40
+	bullet = 60
 	laser = 10
 	energy = 10
 	bomb = 60

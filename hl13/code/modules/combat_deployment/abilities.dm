@@ -7,7 +7,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 25 SECONDS
+	cooldown_time = 22 SECONDS
 	item_type = /obj/item/reagent_containers/pill/patch/medkit
 	requires_hands = TRUE
 	delete_old = FALSE
@@ -46,13 +46,13 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 60 SECONDS
+	cooldown_time = 50 SECONDS
 	item_type = /obj/item/stack/razorwire/small_stack
 	requires_hands = TRUE
 	delete_old = FALSE
 
 /datum/action/cooldown/spell/conjure_item/razor_wire/slow
-	cooldown_time = 90 SECONDS
+	cooldown_time = 80 SECONDS
 
 /datum/action/cooldown/spell/conjure_item/tinbomb
 	name = "Procure Tinbomb"

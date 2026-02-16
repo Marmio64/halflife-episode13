@@ -11,7 +11,7 @@
 	var/obj/item/card/id/C //the account of the person using the vendor unit.
 
 	/// How many rations are in this specific unit? Can be refilled any time, and stops dispensing rations if it runs out.
-	var/rations_stored = 15
+	var/rations_stored = 20
 
 	/// How many rations have been dispensed so far?
 	var/rations_dispensed = 0

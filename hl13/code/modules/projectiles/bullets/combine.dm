@@ -45,7 +45,7 @@
 	. = ..()
 
 /obj/projectile/bullet/pulse/lmg
-	damage = 22
+	damage = 24
 	wound_bonus = -10
 	armour_penetration = 25
 
@@ -65,7 +65,7 @@
 	armour_penetration = 20
 
 /obj/projectile/bullet/pulse/turret/weak
-	damage = 6
+	damage = 8
 
 /obj/projectile/bullet/pulse/weak/fast
 	speed = 4
@@ -103,7 +103,7 @@
 /obj/projectile/bullet/pellet/shotgun_buckshot/pulse
 	name = "pulseshot pellet"
 	icon_state = "pulsepellet"
-	damage = 19 //114 total damage
+	damage = 20 //120 total damage
 	armour_penetration = 25
 
 /obj/projectile/bullet/pellet/shotgun_buckshot/antixen

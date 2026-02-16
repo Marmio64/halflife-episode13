@@ -314,7 +314,7 @@
 	bite_consumption = 2
 	tastes = list("rancid water" = 3, "depression" = 3)
 	foodtypes = null //Don't ask what went into them. You're better off not knowing.
-	food_reagents = list(/datum/reagent/consumable/nutriment = 10) //Very nutritious at least...
+	food_reagents = list(/datum/reagent/consumable/nutriment = 6, /datum/reagent/consumable/nutriment/vitamin = 2) //It is nutritious at least...
 
 	preserved_food = TRUE
 

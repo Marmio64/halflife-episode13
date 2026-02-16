@@ -97,7 +97,12 @@
 	user.visible_message(span_notice("[user] starts disassembling [src]."),
 	span_notice("You start disassembling [src]."))
 
-	if(!do_after(user, 2 SECONDS, src))
+	var/disassembly_time = 2 SECONDS
+
+	if(HAS_TRAIT(user, TRAIT_ENGINEER))
+		disassembly_time = 1 SECONDS
+
+	if(!do_after(user, disassembly_time, src))
 		return TRUE
 
 	user.visible_message(span_notice("[user] disassembles [src]."),

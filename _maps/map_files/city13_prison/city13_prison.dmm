@@ -1077,6 +1077,12 @@
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/prison/security/solitary)
+"fL" = (
+/obj/machinery/porta_turret/combine,
+/turf/open/floor/plating/ground/brickroad{
+	dir = 1
+	},
+/area/halflife/outdoors/forest)
 "fM" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete/sewer,
@@ -1100,12 +1106,8 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/prison)
 "fR" = (
-/obj/machinery/porta_turret/combine/old{
-	anchored = 1
-	},
-/turf/open/floor/plating/ground/brickroad{
-	dir = 1
-	},
+/obj/structure/halflife/road_barrier,
+/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "fU" = (
 /obj/structure/table/halflife/metal/heavy,
@@ -1309,6 +1311,12 @@
 /obj/structure/halflife/pipes/horizontal,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/prison/factory)
+"hg" = (
+/obj/structure/stairs/halflife/concrete{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/outdoors/forest)
 "hh" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional,
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -3330,6 +3338,7 @@
 	c_tag = "Cargo Rails Exterior";
 	dir = 1
 	},
+/obj/structure/barricade/sandbags,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "rF" = (
@@ -3718,10 +3727,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/prison/infirmary)
-"ty" = (
-/obj/structure/reagent_dispensers/wall/peppertank/directional/north,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/halflife/indoors/prison/security)
 "tA" = (
 /obj/structure/halflife/pipes/horizontal/end,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -4459,6 +4464,10 @@
 /obj/item/hl2key/prisoner_cells,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/prison/security)
+"xe" = (
+/obj/structure/table/halflife/metal/grate,
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer)
 "xf" = (
 /obj/structure/halflife/pipes/vent,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -4517,6 +4526,12 @@
 /obj/structure/halflife/trash/papers/one,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands)
+"xw" = (
+/obj/machinery/porta_turret/combine/fast{
+	anchored = 1
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "xx" = (
 /obj/structure/closet/halflife,
 /obj/effect/spawner/random/halflife/loot,
@@ -5809,15 +5824,17 @@
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/prison/cells)
 "Ei" = (
-/obj/machinery/porta_turret/combine/old{
-	anchored = 1
-	},
+/obj/machinery/porta_turret/combine,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "Ek" = (
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/dispatch)
+"El" = (
+/obj/structure/halflife/road_barrier,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "Em" = (
 /obj/machinery/status_display/evac/directional/east,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -6703,10 +6720,9 @@
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/prison/cafeteria)
 "Iq" = (
-/obj/machinery/door/airlock/highsecurity/combine,
-/obj/effect/mapping_helpers/airlock/access/all/security/brig,
-/turf/open/floor/plating/indoor/trainfloor,
-/area/halflife/indoors/prison/intake)
+/obj/structure/reagent_dispensers/wall/peppertank/directional/north,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/prison/security)
 "Ir" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/poster/halflife/rebel,
@@ -7185,6 +7201,11 @@
 	},
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/prison/cafeteria)
+"KR" = (
+/turf/open/floor/plating/indoor/concrete/stairs{
+	dir = 1
+	},
+/area/halflife/outdoors/forest)
 "KU" = (
 /obj/structure/railing/halflife/sewer{
 	dir = 1
@@ -8305,6 +8326,7 @@
 /area/halflife/indoors/outlands/shop)
 "Qj" = (
 /obj/machinery/door/airlock/highsecurity/combine,
+/obj/effect/mapping_helpers/airlock/access/all/security/brig,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/prison)
 "Qk" = (
@@ -28616,10 +28638,10 @@ Zk
 dH
 Zk
 yo
-YC
-YC
-YC
-YC
+hA
+fM
+Zk
+yo
 YC
 YC
 YC
@@ -28819,10 +28841,10 @@ Zk
 Qx
 Zk
 yo
-YC
-YC
-YC
-YC
+Zk
+Zk
+Zk
+yo
 YC
 YC
 YC
@@ -29022,10 +29044,10 @@ Zk
 Qx
 Zk
 yo
-YC
-YC
-YC
-YC
+Zk
+Zk
+Zk
+yo
 YC
 YC
 YC
@@ -29224,11 +29246,11 @@ yo
 Zk
 Qx
 Zk
+SH
+Zk
+Zk
+Zk
 yo
-YC
-YC
-YC
-YC
 YC
 YC
 YC
@@ -29428,10 +29450,10 @@ Zk
 Qx
 Zk
 yo
-YC
-YC
-YC
-YC
+Zk
+Zk
+xe
+yo
 YC
 YC
 YC
@@ -29631,10 +29653,10 @@ Zk
 Qx
 Zk
 yo
-YC
-YC
-YC
-YC
+vs
+NF
+xe
+yo
 YC
 YC
 YC
@@ -35248,9 +35270,9 @@ iw
 iw
 iw
 iw
-iw
-iw
-iw
+Cp
+Cp
+Cp
 Sh
 Sh
 Cp
@@ -35451,13 +35473,13 @@ iw
 iw
 iw
 iw
-iw
-iw
-iw
-iw
-iw
-iw
-iw
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
 Cp
 Cp
 Cp
@@ -35656,11 +35678,11 @@ YC
 YC
 YC
 YC
-iw
-iw
-iw
-iw
-iw
+Cp
+Cp
+Cp
+Cp
+Cp
 Cp
 Cp
 NS
@@ -35859,11 +35881,11 @@ YC
 YC
 YC
 YC
-iw
-iw
-iw
-iw
-iw
+Cp
+Cp
+Cp
+Cp
+Cp
 NS
 NS
 NS
@@ -36062,11 +36084,11 @@ YC
 YC
 YC
 YC
-iw
-iw
-iw
-iw
-iw
+Cp
+Cp
+Cp
+Cp
+Cp
 NS
 NS
 Cp
@@ -36265,10 +36287,10 @@ YC
 YC
 YC
 YC
-iw
-iw
-iw
-iw
+Cp
+Cp
+Cp
+Cp
 NS
 NS
 Cp
@@ -36468,10 +36490,10 @@ YC
 YC
 YC
 YC
-iw
-iw
-iw
-iw
+Cp
+Cp
+Cp
+Cp
 eS
 NS
 NS
@@ -36671,14 +36693,14 @@ YC
 YC
 YC
 YC
-iw
-iw
-iw
-iw
+Cp
+Cp
+Cp
+Cp
 NS
 NS
 uf
-iw
+Cp
 Cp
 Cp
 Cp
@@ -36874,24 +36896,24 @@ YC
 YC
 YC
 YC
-iw
-iw
-iw
-iw
-iw
-iw
-iw
-iw
-iw
-iw
-iw
-iw
-iw
-iw
-iw
-iw
-iw
-iw
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
+Cp
 iw
 iw
 iw
@@ -51315,7 +51337,7 @@ Ep
 Ep
 Ep
 tV
-Iq
+HY
 tV
 tV
 tV
@@ -52127,7 +52149,7 @@ tV
 tV
 tV
 tV
-Iq
+HY
 tV
 pF
 Ss
@@ -54242,7 +54264,7 @@ Zb
 JS
 BA
 bU
-bU
+BX
 bU
 bU
 bU
@@ -54444,7 +54466,7 @@ Rs
 Zb
 JS
 BA
-bU
+fL
 BX
 bU
 bU
@@ -54647,7 +54669,7 @@ Rs
 jA
 JS
 BA
-fR
+bU
 BX
 bU
 bU
@@ -54851,7 +54873,7 @@ fD
 JS
 BA
 bU
-BX
+bU
 bU
 bU
 bU
@@ -54928,7 +54950,7 @@ YE
 "}
 (55,1,2) = {"
 YE
-Ct
+DE
 Ct
 Ct
 Lk
@@ -55131,7 +55153,7 @@ YE
 "}
 (56,1,2) = {"
 YE
-Ct
+DE
 Ct
 Lk
 Ct
@@ -55334,7 +55356,7 @@ YE
 "}
 (57,1,2) = {"
 YE
-Ct
+DE
 Ct
 Lk
 Ct
@@ -55537,7 +55559,7 @@ YE
 "}
 (58,1,2) = {"
 YE
-Ct
+DE
 Ct
 Lk
 Ct
@@ -55740,8 +55762,8 @@ YE
 "}
 (59,1,2) = {"
 YE
-Ct
-Ct
+DE
+DE
 Lk
 Ct
 Ct
@@ -55866,7 +55888,7 @@ Zb
 JS
 BA
 bU
-BX
+bU
 bU
 bU
 bU
@@ -55943,8 +55965,8 @@ YE
 "}
 (60,1,2) = {"
 YE
-Ct
-Ct
+DE
+DE
 Lk
 Ct
 Lk
@@ -56068,7 +56090,7 @@ Rs
 jA
 JS
 BA
-fR
+bU
 BX
 bU
 bU
@@ -56146,8 +56168,8 @@ YE
 "}
 (61,1,2) = {"
 YE
-Ct
-Lk
+DE
+DE
 Lk
 Lk
 Lk
@@ -56271,7 +56293,7 @@ Rs
 Zb
 JS
 BA
-bU
+fL
 BX
 bU
 bU
@@ -56349,19 +56371,19 @@ YE
 "}
 (62,1,2) = {"
 YE
+DE
+DE
+Lk
+Lk
+Lk
+Ct
+Ct
+gR
 Ct
 Lk
 Lk
 Lk
-Lk
-Ct
-Ct
-Lk
-Ct
-Lk
-Lk
-Lk
-Lk
+gR
 Ct
 Lk
 Ct
@@ -56475,7 +56497,7 @@ Zb
 JS
 BA
 bU
-bU
+BX
 bU
 bU
 bU
@@ -56552,8 +56574,8 @@ YE
 "}
 (63,1,2) = {"
 YE
-Lk
-Ct
+DE
+DE
 Lk
 Ct
 Ct
@@ -56561,7 +56583,7 @@ Sk
 Lk
 Lk
 Lk
-Lk
+gR
 Ct
 Lk
 Lk
@@ -56755,19 +56777,19 @@ YE
 "}
 (64,1,2) = {"
 YE
+DE
+oI
+Lk
+Lk
+Lk
+Lk
+Lk
+Lk
+Lk
 Lk
 Ct
-pN
-Lk
-Lk
-Lk
-Lk
-Lk
-Lk
-Lk
-Ct
-Ct
-Ct
+Sk
+Sk
 Ct
 Ct
 Lk
@@ -56958,21 +56980,21 @@ YE
 "}
 (65,1,2) = {"
 YE
-Lk
-Lk
-Ct
-Ct
-Ct
-Ct
-Lk
-Lk
-Ct
-Ct
-Ct
+DE
+oI
+oI
+DE
+DE
 Ct
 Lk
+gR
 Ct
-pN
+Sk
+Sk
+Ct
+Lk
+Sk
+gR
 Ct
 Ct
 Lk
@@ -57161,15 +57183,15 @@ YE
 "}
 (66,1,2) = {"
 YE
-Ct
+DE
+oI
+oI
+DE
+DE
+DE
+gR
 Lk
-Ct
-Ct
-Ct
-Lk
-Lk
-Lk
-Ct
+Sk
 Ct
 Ct
 Sk
@@ -57364,13 +57386,13 @@ YE
 "}
 (67,1,2) = {"
 YE
-Ct
-Lk
-Ct
-Ct
-Ct
-Lk
-Lk
+DE
+oI
+oI
+oI
+DE
+DE
+DE
 pN
 Ct
 Ct
@@ -57567,12 +57589,12 @@ YE
 "}
 (68,1,2) = {"
 YE
-Ct
-Ct
-Lk
-Ct
-Lk
-Lk
+DE
+oI
+oI
+oI
+DE
+DE
 Lk
 Lk
 Ct
@@ -57770,12 +57792,12 @@ YE
 "}
 (69,1,2) = {"
 YE
-Ct
-Ct
-Lk
-Ct
-Lk
-Lk
+DE
+oI
+oI
+DE
+DE
+DE
 gR
 Lk
 Lk
@@ -57973,11 +57995,11 @@ YE
 "}
 (70,1,2) = {"
 YE
-Ct
-Ct
-Ct
-Lk
-Ct
+DE
+oI
+oI
+DE
+DE
 Lk
 Lk
 Lk
@@ -58176,11 +58198,11 @@ YE
 "}
 (71,1,2) = {"
 YE
-Ct
-Ct
-Ct
-Lk
-Lk
+DE
+oI
+DE
+DE
+DE
 Lk
 Lk
 Ct
@@ -58379,24 +58401,24 @@ YE
 "}
 (72,1,2) = {"
 YE
-Ct
-Ct
-Ct
-Ct
-Ct
+DE
+oI
+oI
+DE
+DE
 Ct
 Ct
 Lk
-gR
-Ct
-Ct
 Lk
 Ct
 Ct
 Lk
-Et
-Et
-XW
+Ct
+Ct
+Lk
+Lk
+Lk
+Ct
 Ct
 Ct
 cU
@@ -58582,11 +58604,11 @@ YE
 "}
 (73,1,2) = {"
 YE
-Ct
-Ct
-Ct
-Ct
-Ct
+DE
+oI
+oI
+DE
+DE
 Ct
 Ct
 Lk
@@ -58594,12 +58616,12 @@ Lk
 Lk
 Ct
 Lk
-Ct
 Ct
 Ct
 XW
-Ei
 XW
+Ct
+Ct
 Ct
 Ct
 gw
@@ -58785,22 +58807,22 @@ YE
 "}
 (74,1,2) = {"
 YE
+DE
+oI
+DE
+DE
 Ct
 Ct
-Ct
-Ct
-Ct
-Ct
-gR
 Lk
 Lk
 Lk
+Lk
 Ct
 Lk
 Lk
-Ct
 Ct
 XW
+xw
 gi
 gi
 gi
@@ -58988,12 +59010,12 @@ YE
 "}
 (75,1,2) = {"
 YE
-Ct
-Ct
-Ct
+DE
+oI
+DE
+DE
 Lk
-Lk
-Lk
+fR
 Lk
 Lk
 Ct
@@ -59002,7 +59024,7 @@ qt
 Ct
 Lk
 Lk
-Ct
+XW
 gi
 gi
 df
@@ -59191,12 +59213,12 @@ YE
 "}
 (76,1,2) = {"
 YE
-Ct
-kv
-Lk
-Lk
-Lk
-kv
+DE
+oI
+DE
+DE
+DE
+qq
 Lk
 Ct
 Ct
@@ -59394,14 +59416,14 @@ YE
 "}
 (77,1,2) = {"
 YE
+DE
+oI
+oI
+DE
+DE
+hg
 hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
+KR
 hW
 hW
 hW
@@ -59597,12 +59619,12 @@ YE
 "}
 (78,1,2) = {"
 YE
-Ct
-kv
-Lk
-Lk
-Lk
-kv
+DE
+oI
+DE
+DE
+DE
+qq
 Lk
 Ct
 Ct
@@ -59800,14 +59822,14 @@ YE
 "}
 (79,1,2) = {"
 YE
+DE
+oI
+DE
+DE
+DE
+hg
 hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
+KR
 hW
 hW
 hW
@@ -60003,12 +60025,12 @@ YE
 "}
 (80,1,2) = {"
 YE
-Ct
-kv
-Ct
-Ct
-Lk
-kv
+DE
+oI
+DE
+DE
+DE
+qq
 Ct
 Lk
 Ct
@@ -60206,12 +60228,12 @@ YE
 "}
 (81,1,2) = {"
 YE
-Ct
-Ct
-Ct
-Ct
+DE
+oI
+DE
+DE
 Lk
-Ct
+El
 Ct
 Lk
 Ct
@@ -60409,10 +60431,10 @@ YE
 "}
 (82,1,2) = {"
 YE
-Ct
-Ct
-Ct
-Ct
+DE
+oI
+DE
+DE
 Ct
 Lk
 Lk
@@ -60423,8 +60445,8 @@ qt
 Ct
 Ct
 Ct
-Ct
 XW
+xw
 gi
 gi
 gi
@@ -60612,12 +60634,11 @@ YE
 "}
 (83,1,2) = {"
 YE
+DE
+oI
+oI
+DE
 Ct
-Ct
-Ct
-Ct
-Ct
-Sk
 Ct
 Ct
 Ct
@@ -60628,8 +60649,9 @@ Ct
 Ct
 Ct
 XW
-Ei
 XW
+Ct
+Ct
 Ct
 Ct
 gw
@@ -60815,10 +60837,10 @@ YE
 "}
 (84,1,2) = {"
 YE
-Ct
-Ct
-Ct
-Ct
+DE
+DE
+oI
+DE
 Ct
 Ct
 Lk
@@ -60830,9 +60852,9 @@ Ct
 Ct
 qt
 Ct
-XW
-XW
-XW
+Ct
+Ct
+Ct
 Ct
 Ct
 gw
@@ -61018,15 +61040,15 @@ YE
 "}
 (85,1,2) = {"
 YE
-Ct
-Ct
-Ct
+DE
+DE
+oI
+DE
+DE
 Lk
 Ct
 Lk
-Ct
 Lk
-gR
 Lk
 Lk
 Ct
@@ -61221,11 +61243,11 @@ YE
 "}
 (86,1,2) = {"
 YE
-Ct
-Ct
-Ct
-Lk
-Lk
+DE
+DE
+oI
+DE
+DE
 Lk
 Ct
 Lk
@@ -61424,11 +61446,11 @@ YE
 "}
 (87,1,2) = {"
 YE
-Ct
-Ct
-Ct
-Lk
-Lk
+DE
+DE
+oI
+DE
+DE
 Lk
 Ct
 Ct
@@ -61627,15 +61649,15 @@ YE
 "}
 (88,1,2) = {"
 YE
+DE
+DE
+oI
+DE
+DE
+DE
+Sk
 Ct
-Ct
-Ct
-Ct
-Lk
-Lk
-Ct
-Ct
-Ct
+Sk
 Ct
 Ct
 Ct
@@ -61830,25 +61852,25 @@ YE
 "}
 (89,1,2) = {"
 YE
+DE
+oI
+oI
+DE
+Lk
+gR
+Ct
+Sk
+Ct
 Ct
 Ct
 Ct
 Ct
 Lk
-gR
-Ct
-Ct
+Lk
 Ct
 Ct
 Ct
 Sk
-Ct
-Lk
-Lk
-Ct
-Ct
-Ct
-Ct
 Lk
 cU
 Xi
@@ -62034,25 +62056,25 @@ YE
 (90,1,2) = {"
 YE
 DE
+oI
+oI
+oI
 Ct
+Lk
+Lk
+Ct
+Sk
+Sk
 Ct
 Ct
 Ct
 Lk
 Lk
-Ct
-Ct
-Ct
-Ct
-Ct
-Ct
-Lk
-Lk
 Lk
 Ct
+Sk
 Ct
-Ct
-Lk
+gR
 cU
 Xi
 Ct
@@ -62238,22 +62260,22 @@ YE
 YE
 DE
 oI
-Ct
-Ct
-Ct
-Ct
-Ct
-Lk
-Lk
-Ct
-Ct
-Ct
-Ct
+DE
+DE
+DE
 Ct
 Ct
 Lk
+Lk
+Ct
+Sk
+Ct
+Sk
+Ct
 Ct
 Lk
+Ct
+gR
 Ct
 Lk
 gw
@@ -62442,7 +62464,7 @@ YE
 DE
 oI
 DE
-Lk
+DE
 Ct
 Lk
 Lk
@@ -62450,7 +62472,7 @@ Lk
 Lk
 Ct
 Ct
-Ct
+Sk
 Lk
 Lk
 Lk
@@ -62647,7 +62669,7 @@ oI
 DE
 DE
 Ct
-Lk
+gR
 Lk
 qt
 Lk
@@ -63061,7 +63083,7 @@ Lk
 Lk
 Lk
 Ct
-Ct
+Sk
 Lk
 Lk
 Lk
@@ -63269,7 +63291,7 @@ Lk
 Lk
 Ct
 Ct
-Ct
+Sk
 Ct
 gw
 nG
@@ -86021,7 +86043,7 @@ lF
 tE
 lF
 kD
-ty
+Iq
 tE
 tE
 RJ
@@ -88627,7 +88649,7 @@ YE
 "}
 (55,1,3) = {"
 YE
-WH
+DE
 WH
 WH
 WH
@@ -88830,7 +88852,7 @@ YE
 "}
 (56,1,3) = {"
 YE
-WH
+DE
 WH
 WH
 WH
@@ -89033,7 +89055,7 @@ YE
 "}
 (57,1,3) = {"
 YE
-WH
+DE
 WH
 WH
 WH
@@ -89236,7 +89258,7 @@ YE
 "}
 (58,1,3) = {"
 YE
-WH
+DE
 WH
 WH
 WH
@@ -89439,8 +89461,8 @@ YE
 "}
 (59,1,3) = {"
 YE
-WH
-WH
+DE
+DE
 WH
 WH
 WH
@@ -89642,8 +89664,8 @@ YE
 "}
 (60,1,3) = {"
 YE
-WH
-WH
+DE
+DE
 WH
 WH
 WH
@@ -89845,8 +89867,8 @@ YE
 "}
 (61,1,3) = {"
 YE
-WH
-WH
+DE
+DE
 WH
 WH
 WH
@@ -90048,8 +90070,8 @@ YE
 "}
 (62,1,3) = {"
 YE
-WH
-WH
+DE
+DE
 WH
 WH
 WH
@@ -90251,8 +90273,8 @@ YE
 "}
 (63,1,3) = {"
 YE
-WH
-WH
+DE
+DE
 WH
 WH
 WH
@@ -90454,8 +90476,8 @@ YE
 "}
 (64,1,3) = {"
 YE
-WH
-WH
+DE
+DE
 WH
 WH
 WH
@@ -90657,11 +90679,11 @@ YE
 "}
 (65,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -90860,11 +90882,11 @@ YE
 "}
 (66,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -91063,12 +91085,12 @@ YE
 "}
 (67,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -91266,11 +91288,11 @@ YE
 "}
 (68,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -91469,11 +91491,11 @@ YE
 "}
 (69,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -91672,11 +91694,11 @@ YE
 "}
 (70,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -91875,10 +91897,10 @@ YE
 "}
 (71,1,3) = {"
 YE
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -92078,10 +92100,10 @@ YE
 "}
 (72,1,3) = {"
 YE
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -92281,10 +92303,10 @@ YE
 "}
 (73,1,3) = {"
 YE
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -92484,10 +92506,10 @@ YE
 "}
 (74,1,3) = {"
 YE
-WH
-WH
-WH
-WH
+oI
+oI
+DE
+DE
 WH
 WH
 WH
@@ -92687,10 +92709,10 @@ YE
 "}
 (75,1,3) = {"
 YE
-WH
-WH
-WH
-WH
+oI
+oI
+oI
+oI
 WH
 WH
 WH
@@ -92890,11 +92912,11 @@ YE
 "}
 (76,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
+qq
+qq
+qq
+qq
+qq
 WH
 WH
 WH
@@ -93093,11 +93115,11 @@ YE
 "}
 (77,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
+hW
+hW
+hW
+hW
+hW
 WH
 WH
 WH
@@ -93296,11 +93318,11 @@ YE
 "}
 (78,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
+qq
+qq
+qq
+qq
+qq
 WH
 WH
 WH
@@ -93499,11 +93521,11 @@ YE
 "}
 (79,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
+hW
+hW
+hW
+hW
+hW
 WH
 WH
 WH
@@ -93702,11 +93724,11 @@ YE
 "}
 (80,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
+qq
+qq
+qq
+qq
+qq
 WH
 WH
 WH
@@ -93905,10 +93927,10 @@ YE
 "}
 (81,1,3) = {"
 YE
-WH
-WH
-WH
-WH
+oI
+oI
+oI
+oI
 WH
 WH
 WH
@@ -94108,10 +94130,10 @@ YE
 "}
 (82,1,3) = {"
 YE
-WH
-WH
-WH
-WH
+oI
+oI
+oI
+DE
 WH
 WH
 WH
@@ -94311,10 +94333,10 @@ YE
 "}
 (83,1,3) = {"
 YE
-WH
-WH
-WH
-WH
+oI
+oI
+DE
+DE
 WH
 WH
 WH
@@ -94514,10 +94536,10 @@ YE
 "}
 (84,1,3) = {"
 YE
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -94717,11 +94739,11 @@ YE
 "}
 (85,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -94920,11 +94942,11 @@ YE
 "}
 (86,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -95123,11 +95145,11 @@ YE
 "}
 (87,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -95326,12 +95348,12 @@ YE
 "}
 (88,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -95529,10 +95551,10 @@ YE
 "}
 (89,1,3) = {"
 YE
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -95732,10 +95754,10 @@ YE
 "}
 (90,1,3) = {"
 YE
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -95935,11 +95957,11 @@ YE
 "}
 (91,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -96138,10 +96160,10 @@ YE
 "}
 (92,1,3) = {"
 YE
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -96341,10 +96363,10 @@ YE
 "}
 (93,1,3) = {"
 YE
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -96544,12 +96566,12 @@ YE
 "}
 (94,1,3) = {"
 YE
+DE
+DE
+DE
+DE
 WH
-WH
-WH
-WH
-WH
-WH
+DE
 WH
 WH
 WH
@@ -96747,12 +96769,12 @@ YE
 "}
 (95,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -96950,14 +96972,14 @@ YE
 "}
 (96,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -97153,15 +97175,15 @@ YE
 "}
 (97,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -97356,14 +97378,14 @@ YE
 "}
 (98,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -97559,13 +97581,13 @@ YE
 "}
 (99,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -97762,12 +97784,12 @@ YE
 "}
 (100,1,3) = {"
 YE
-WH
-WH
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
+DE
+DE
 WH
 WH
 kv
@@ -97965,10 +97987,10 @@ YE
 "}
 (101,1,3) = {"
 YE
-WH
-WH
-WH
-WH
+DE
+DE
+DE
+DE
 WH
 WH
 WH
@@ -98168,9 +98190,9 @@ YE
 "}
 (102,1,3) = {"
 YE
-WH
-WH
-WH
+DE
+DE
+DE
 WH
 WH
 WH

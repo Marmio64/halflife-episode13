@@ -231,11 +231,21 @@
 	name = "overwatch wallhammer chestpiece"
 	desc = "A reinforced version of the standard overwatch chestpiece with heavy pauldrons and thighpads."
 	icon_state = "wallhammer"
-	armor_type = /datum/armor/eliteoverwatcharmor
+	armor_type = /datum/armor/wallhammerarmor
 	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 	slowdown = 1.25
 	actions_types = list(/datum/action/item_action/deploy_shield)
 	var/shield_charge = TRUE
+
+/datum/armor/wallhammerarmor
+	melee = 60
+	bullet = 60
+	laser = 40
+	energy = 40
+	bomb = 60
+	fire = 50
+	acid = 50
+	wound = 20
 
 /datum/action/item_action/deploy_shield
 	name = "Deploy Shield"
@@ -292,7 +302,7 @@
 /obj/item/clothing/suit/armor/overwatch/suppressor
 	name = "overwatch suppressor chestpiece"
 	icon_state = "suppressor"
-	slowdown = 0.75
+	slowdown = 0.5
 	armor_type = /datum/armor/eliteoverwatcharmor
 	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 

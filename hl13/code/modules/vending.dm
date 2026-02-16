@@ -39,6 +39,7 @@
 					/obj/item/radio/off/halflife = 5,
 					/obj/item/radio/headset = 3,
 					/obj/item/storage/halflife/hand_box/cookie = 5,
+					/obj/item/food/nutripaste = 5,
 					/obj/item/reagent_containers/pill/patch/medkit/vial = 5,
 					/obj/item/stack/sticky_tape = 4,
 					/obj/item/tape = 5, //tape recorder stuff
@@ -332,6 +333,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/food_dispensery, 32)
 					/obj/item/storage/halflife/suitcase = 6,
 					/obj/item/storage/fancy/cigarettes/halflife = 8,
 					/obj/item/storage/halflife/pill_bottle/antifatigue = 4,
+					/obj/item/food/nutripaste = 3,
 					/obj/item/clothing/gloves/fingerless = 3)
 
 	premium = list(/obj/item/storage/backpack/halflife/satchel = 3,

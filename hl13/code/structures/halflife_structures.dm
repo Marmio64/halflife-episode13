@@ -469,6 +469,24 @@
 			I.forceMove(loc)
 	qdel(src)
 
+/obj/structure/halflife/fence/wirecutter_act(mob/living/user, obj/item/I)
+	user.visible_message(span_notice("[user] starts cutting through [src]."),
+	span_notice("You start cutting [src] apart."))
+
+	var/disassembly_time = max_integrity/2 //20 seconds on normal fence, 40 for barbed wire
+
+	if(HAS_TRAIT(user, TRAIT_ENGINEER))
+		disassembly_time *= 0.5
+
+	if(!do_after(user, disassembly_time, src))
+		return TRUE
+
+	user.visible_message(span_notice("[user] disassembles [src]."),
+	span_notice("You disassemble [src]."))
+	playsound(loc, 'sound/items/tools/wirecutter.ogg', 25, 1)
+	deconstruct(TRUE)
+	return TRUE
+
 /obj/structure/halflife/fence/vertical
 	icon_state = null
 	flags_1 = NONE

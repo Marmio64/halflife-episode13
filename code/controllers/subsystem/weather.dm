@@ -4,6 +4,7 @@ SUBSYSTEM_DEF(weather)
 	flags = SS_BACKGROUND
 	wait = 10
 	runlevels = RUNLEVEL_GAME
+	flags = SS_NO_INIT | SS_NO_FIRE //hl13 edit, disabling weather for now because i dont think anyone really cares about the rain enough, and it saves on performance
 	var/list/processing = list()
 	var/list/eligible_zlevels = list()
 	var/list/next_hit_by_zlevel = list() //Used by barometers to know when the next storm is coming

@@ -85,7 +85,6 @@
 	new /obj/item/wrench/halflife(src)
 	new /obj/item/weldingtool/halflife(src)
 	new /obj/item/crowbar(src)
-	new /obj/item/analyzer(src)
 	new /obj/item/wirecutters/halflife(src)
 
 /obj/item/storage/toolbox/mechanical/old

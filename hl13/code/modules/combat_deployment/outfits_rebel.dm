@@ -50,12 +50,12 @@
 		/obj/item/grenade/halflife/molotov,
 		/obj/item/grenade/halflife/molotov,
 		/obj/item/lighter,
-		/obj/item/grenade/halflife/tinbomb,
-		/obj/item/grenade/halflife/tinbomb,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/tinbomb)
 
 /datum/outfit/deployment_loadout/rebel/tier1/engineer
 	name = "Deployment: Refugee Engineer"

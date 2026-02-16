@@ -91,12 +91,13 @@
 	crate_type = /obj/structure/closet/crate/large
 	discountable = SUPPLY_PACK_UNCOMMON_DISCOUNTABLE
 
-/// Spare bar sign wallmount
-/datum/supply_pack/service/bar_sign
-	name = "Bar Sign Replacement Kit"
-	desc = "A replacement bar sign, perfect for drawing in customers to your bar, tavern, inn, nightclub, or even coffeehouse!"
-	cost = CARGO_CRATE_VALUE * 14
-	contains = list(/obj/item/wallframe/barsign/all_access)
-	crate_name = "bar sign crate"
-	discountable = SUPPLY_PACK_RARE_DISCOUNTABLE
-
+/datum/supply_pack/service/mining_drills
+	name = "Mining Drills Crate"
+	desc = "Contains three high-tech combine mining drills, which can drastically increase the efficiency of your laborers."
+	cost = CARGO_CRATE_VALUE * 8
+	contains = list(
+		/obj/item/pickaxe/drill,
+		/obj/item/pickaxe/drill,
+		/obj/item/pickaxe/drill,
+	)
+	crate_name = "mining drills crate"

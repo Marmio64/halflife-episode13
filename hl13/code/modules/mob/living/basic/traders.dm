@@ -320,6 +320,7 @@
 		/obj/item/food/xen/xenbranch = list(PAYCHECK_CREW * 0.25, 5, ""),
 		/obj/item/clothing/suit/armor/browncoat = list(PAYCHECK_CREW, 3, ""),
 		/obj/item/weaponcrafting/frame = list(PAYCHECK_CREW * 2.5, 3, ""),
+		/obj/item/stack/telecrystal = list(PAYCHECK_CREW, 10, ""),
 	)
 
 	say_phrases = list(
@@ -728,6 +729,7 @@
 		/obj/item/ration_voucher = list(PAYCHECK_CREW * 2, 10, ""),
 		/obj/item/reagent_containers/pill/lsd = list(PAYCHECK_CREW * 0.5, 5, ""),
 		/obj/item/food/xen/xenbranch = list(PAYCHECK_CREW * 0.25, 5, ""),
+		/obj/item/stack/telecrystal = list(PAYCHECK_CREW, 10, ""),
 	)
 
 	say_phrases = list(
