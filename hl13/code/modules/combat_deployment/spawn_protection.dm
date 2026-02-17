@@ -12,9 +12,11 @@
 	return list()
 
 /obj/structure/trap/deployment_spawn_prot/trap_effect(mob/living/living)
+	if(GLOB.deployment_win_team && GLOB.deployment_win_team != team) //disable protection so that winners can pass through to finish the job
+		return
 	if(living.deployment_faction != team)
 		to_chat(living, span_bolddanger("Stay out of the enemy spawn!"))
-		living.investigate_log("has died from entering the enemy spawn in CTF.", INVESTIGATE_DEATHS)
+		living.investigate_log("has died from entering the enemy spawn.", INVESTIGATE_DEATHS)
 		living.apply_damage(300) //Damage instead of instant death so we trigger the damage signal.
 
 /obj/structure/trap/deployment_spawn_prot/rebel
