@@ -350,6 +350,7 @@
 				/obj/structure/flora/bush/pointy/style_random = 6,
 				/obj/structure/flora/bush/lavendergrass/style_random = 6,
 				/obj/structure/flora/bush/style_random = 6,
+				/obj/structure/flora/bush/shrub = 6,
 				)
 
 //meds, grenades, ammo

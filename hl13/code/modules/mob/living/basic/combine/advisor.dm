@@ -12,6 +12,7 @@
 	obj_damage = 14
 	melee_damage_lower = 20
 	melee_damage_upper = 25
+	melee_attack_cooldown = 1.25 SECONDS
 	sharpness = SHARP_POINTY
 	armour_penetration = 15
 	wound_bonus = -15
@@ -98,13 +99,15 @@
 	/// The amount of blurriness to apply
 	var/eye_blur_duration = 8 SECONDS
 	/// The amount of pain to apply
-	var/temp_pain_amount = 150
+	var/temp_pain_amount = 100
 	/// The amount of confusion to apply
 	var/confusion_duration = 8 SECONDS
 	/// The amount of stamina loss to apply
 	var/stamina_damage = 40
 	/// How long the stun duration should be
-	var/stun_duration = 1.5 SECONDS
+	var/stun_duration = 0.75 SECONDS
+	/// How long the immobilize duration should be
+	var/immobilize_duration = 2 SECONDS
 
 /datum/action/cooldown/spell/pointed/advisorial_punish/is_valid_target(atom/cast_on)
 	. = ..()
@@ -127,6 +130,7 @@
 	cast_on.adjust_confusion(confusion_duration)
 	cast_on.adjustStaminaLoss(stamina_damage)
 	cast_on.Stun(stun_duration)
+	cast_on.Immobilize(immobilize_duration)
 	return TRUE
 
 /datum/action/cooldown/spell/pointed/advisor_sooth

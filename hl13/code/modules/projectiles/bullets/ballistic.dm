@@ -93,7 +93,7 @@
 
 /obj/projectile/bullet/rocket/hl13/on_hit(atom/target, blocked = 0, pierce_hit)
 	if(istype(target, /mob/living/simple_animal/hostile/halflife/hunter)) //bonus direct damage vs hunters
-		damage = 110
+		damage = 100 //165 total damage
 	. = ..()
 
 /obj/projectile/bullet/shotgun_beanbag_halflife

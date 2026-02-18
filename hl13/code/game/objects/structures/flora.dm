@@ -96,3 +96,8 @@
 	harvest_message_low = "You fail to dig anything useful out from the roots."
 	harvest_message_med = "You manage to unearth a wild onion."
 	harvest_message_high = "You unearth a couple wild onions."
+
+/obj/structure/flora/bush/shrub
+	name = "shrub"
+	desc = "A small shrub, with its leaves wilted."
+	icon_state = "shrub"

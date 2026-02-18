@@ -1,0 +1,32 @@
+{
+	"version": 1,
+	"map_name": "City 13 Payload Delivery Raven District",
+	"map_path": "map_files/deployment_payload_raven",
+	"map_file": "deployment_payload_raven.dmm",
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
+	"planetary": 1,
+	"shuttles": {
+		"cargo": "cargo_box",
+		"ferry": "ferry_fancy",
+		"whiteship": "whiteship_meta",
+		"emergency": "emergency_box"
+	},
+	"traits": [
+		{
+			"Baseturf": "/turf/open/floor/plating/ground/rockunder",
+			"Gravity": true,
+			"No Parallax": true,
+			"Linkage": null
+
+		},
+		{
+			"Baseturf": "/turf/open/openspace",
+			"Gravity": true,
+			"No Parallax": true,
+			"Linkage": null
+		}
+	],
+	"minetype": "combat_deployment",
+	"combat_deployment_gamemode": "payload"
+}

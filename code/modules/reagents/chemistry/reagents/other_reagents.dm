@@ -1441,6 +1441,8 @@
 	if(victim.adjustToxLoss(tox_damage * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)) //hl13 edit
 		return UPDATE_MOB_HEALTH
 
+//hl13 edit, just disabling this for right now cause they dont work for some reason and i cant be bothered to find out right now
+/*
 /datum/reagent/fuel/expose_turf(turf/exposed_turf, reac_volume)
 	. = ..()
 
@@ -1453,6 +1455,7 @@
 	var/obj/effect/decal/cleanable/fuel_pool/pool = exposed_turf.spawn_unique_cleanable(/obj/effect/decal/cleanable/fuel_pool)
 	if(pool)
 		pool.burn_amount = max(min(round(reac_volume / 5), 10), 1)
+*/
 
 /datum/reagent/space_cleaner
 	name = "Space Cleaner"

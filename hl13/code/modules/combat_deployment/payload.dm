@@ -74,14 +74,24 @@
 		if(!movable)
 			movable = TRUE
 			if(grace_period_text)
-				for(var/X in GLOB.deployment_rebel_players)
-					var/mob/living/carbon/human/H = X
-					SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
-					to_chat(H, "<span class='greentext big'>The grace period is up, the cart is now movable!</span>")
-				for(var/X in GLOB.deployment_combine_players)
-					var/mob/living/carbon/human/H = X
-					SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
-					to_chat(H, "<span class='userdanger'>The grace period is up, the cart is now movable!</span>")
+				if(cart_faction == REBEL_DEPLOYMENT_FACTION)
+					for(var/X in GLOB.deployment_rebel_players)
+						var/mob/living/carbon/human/H = X
+						SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+						to_chat(H, "<span class='greentext big'>The grace period is up, the cart is now movable!</span>")
+					for(var/X in GLOB.deployment_combine_players)
+						var/mob/living/carbon/human/H = X
+						SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+						to_chat(H, "<span class='userdanger'>The grace period is up, the cart is now movable!</span>")
+				else
+					for(var/X in GLOB.deployment_rebel_players)
+						var/mob/living/carbon/human/H = X
+						SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+						to_chat(H, "<span class='userdange'>The grace period is up, the cart is now movable!</span>")
+					for(var/X in GLOB.deployment_combine_players)
+						var/mob/living/carbon/human/H = X
+						SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+						to_chat(H, "<span class='greentext big'>The grace period is up, the cart is now movable!</span>")
 	else
 		GLOB.deployment_flag_grace_period -= 1 SECONDS
 		return
@@ -286,4 +296,6 @@
 	desc = "An old world, heavy poundage bomb mounted atop a movable cart. As it has lost remote detonation, timer, and fuse capabilites, it'll be a one way trip to hand deliver it to the rebels as a little farewell gift to them. Moves faster the more people are pushing it."
 	cart_faction = COMBINE_DEPLOYMENT_FACTION
 	icon_state = "combine"
+	altered_respawn_speed = 40 SECONDS
+	normal_respawn_speed = 20 SECONDS
 	time_per_checkpoint = 180 SECONDS
