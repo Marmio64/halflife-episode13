@@ -472,10 +472,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/prison/security/solitary)
-"co" = (
-/obj/structure/halflife/tank/pipe,
-/turf/open/floor/plating/indoor/metal/pipe,
-/area/halflife/indoors/sewer)
 "cr" = (
 /obj/machinery/telecomms/server/presets/common/birdstation,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -706,10 +702,6 @@
 /obj/structure/bed/halflife/mattress/stale,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/laborunion)
-"dK" = (
-/obj/structure/halflife/tank/chemical/container/fuel,
-/turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer)
 "dN" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	keylock = 1;
@@ -2469,13 +2461,6 @@
 /obj/effect/decal/cleanable/blood/gibs/body,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/cave)
-"ns" = (
-/obj/machinery/door/unpowered/halflife/seethrough/grate{
-	keylock = 1;
-	locked = 1
-	},
-/turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer)
 "nt" = (
 /obj/structure/table/halflife/wood/constructed/cobbled,
 /obj/effect/spawner/random/halflife/loot/uncommon,
@@ -2561,11 +2546,6 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
-"nP" = (
-/turf/open/floor/plating/indoor/metal/pipe/intersection{
-	dir = 1
-	},
-/area/halflife/indoors/sewer)
 "nR" = (
 /obj/machinery/telecomms/hub/preset,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -2774,6 +2754,10 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison/factory)
+"oS" = (
+/obj/structure/halflife/tank/chemical/container/fuel,
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer)
 "oT" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/machinery/validation_terminal,
@@ -3683,10 +3667,6 @@
 /obj/machinery/atm,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/prison)
-"th" = (
-/obj/structure/halflife/tank/dirty_water,
-/turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer)
 "ti" = (
 /obj/structure/chair/halflife/metal/blue{
 	dir = 4
@@ -3876,6 +3856,10 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"ug" = (
+/obj/structure/halflife/tank/dirty_water,
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer)
 "ui" = (
 /obj/structure/table/halflife/metal/constructed/cobbled,
 /obj/effect/spawner/random/halflife/loot/alcohol,
@@ -4671,6 +4655,13 @@
 "xY" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/prison/security/warden)
+"xZ" = (
+/obj/machinery/door/unpowered/halflife/seethrough/grate{
+	keylock = 1;
+	locked = 1
+	},
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer)
 "ya" = (
 /obj/structure/table/halflife/no_smooth/large/metal/desk{
 	dir = 1
@@ -5464,6 +5455,11 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/prison/commissary)
+"Ch" = (
+/turf/open/floor/plating/indoor/metal/pipe/intersection{
+	dir = 4
+	},
+/area/halflife/indoors/sewer)
 "Ck" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/indoor/tile/black,
@@ -5846,10 +5842,6 @@
 /obj/machinery/porta_turret/combine,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
-"Ej" = (
-/obj/structure/halflife/tank/chemical/container/fuel,
-/turf/open/floor/plating/indoor/metal/pipe,
-/area/halflife/indoors/sewer)
 "Ek" = (
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -7962,6 +7954,11 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/prison/mining)
+"Or" = (
+/turf/open/floor/plating/indoor/metal/pipe/intersection{
+	dir = 1
+	},
+/area/halflife/indoors/sewer)
 "Ot" = (
 /obj/machinery/recharger,
 /obj/machinery/status_display/evac/directional/north,
@@ -7972,6 +7969,10 @@
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands)
+"Ov" = (
+/obj/structure/halflife/tank/pipe,
+/turf/open/floor/plating/indoor/metal/pipe,
+/area/halflife/indoors/sewer)
 "Ox" = (
 /obj/structure/railing/halflife/solo{
 	dir = 4
@@ -8744,6 +8745,10 @@
 /obj/structure/flora/tree/halflife/pine/style_random,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"Sl" = (
+/obj/structure/halflife/tank/chemical/container/fuel,
+/turf/open/floor/plating/indoor/metal/pipe,
+/area/halflife/indoors/sewer)
 "Sm" = (
 /obj/structure/rack,
 /obj/item/grenade/barrier,
@@ -9032,11 +9037,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands)
-"Tz" = (
-/turf/open/floor/plating/indoor/metal/pipe/intersection{
-	dir = 4
-	},
-/area/halflife/indoors/sewer)
 "TA" = (
 /obj/structure/halflife/leaves,
 /obj/structure/halflife/trash/wood{
@@ -9439,6 +9439,12 @@
 /obj/structure/stairs/halflife/concrete,
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer)
+"VO" = (
+/obj/structure/halflife/pipes/piped,
+/turf/open/floor/plating/indoor/metal/pipe/intersection{
+	dir = 4
+	},
+/area/halflife/indoors/sewer)
 "VQ" = (
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/prison/security)
@@ -9792,12 +9798,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/prison/security)
-"Xw" = (
-/obj/structure/halflife/pipes/piped,
-/turf/open/floor/plating/indoor/metal/pipe/intersection{
-	dir = 4
-	},
-/area/halflife/indoors/sewer)
 "Xx" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/indoor/trainfloor,
@@ -23964,7 +23964,7 @@ Jv
 Jv
 Jv
 Jv
-Tz
+Ch
 Jv
 QQ
 yo
@@ -24573,7 +24573,7 @@ vs
 Zk
 Zk
 yo
-co
+Ov
 yo
 lT
 yo
@@ -24814,11 +24814,11 @@ yo
 Zk
 Zk
 yo
-th
+ug
 Zk
 vs
 fM
-th
+ug
 Zk
 vs
 Zk
@@ -25436,11 +25436,11 @@ yo
 Zk
 Qt
 Zk
-ns
+xZ
 Zk
 fM
 Zk
-dK
+oS
 yo
 Rq
 Rq
@@ -26046,10 +26046,10 @@ Zk
 Qt
 Zk
 yo
-Xw
+VO
 Jv
 Jv
-nP
+Or
 IG
 yo
 Rq
@@ -26249,10 +26249,10 @@ Zk
 Qt
 Zk
 yo
-Ej
+Sl
 Zk
 Zk
-Ej
+Sl
 yo
 yo
 Rq
@@ -65368,7 +65368,7 @@ Lk
 Lk
 Ct
 Ct
-Ct
+qt
 Ct
 Lk
 Ct
@@ -67777,7 +67777,7 @@ Ct
 Ct
 Ct
 Ct
-Ct
+Lk
 Ct
 Ct
 Ct
@@ -68199,7 +68199,7 @@ Lk
 Lk
 Ct
 Ct
-Ct
+qt
 cM
 kv
 Rw
@@ -68381,9 +68381,9 @@ YE
 (121,1,2) = {"
 YE
 DE
+qt
+Kg
 Ct
-Ct
-Lk
 Lk
 Lk
 Ct
@@ -68788,7 +68788,7 @@ YE
 YE
 DE
 Ct
-Lk
+Kg
 qt
 Ct
 Ct
@@ -69204,7 +69204,7 @@ Ct
 Ct
 Ct
 Ct
-Ct
+qt
 Ct
 Ct
 Ct

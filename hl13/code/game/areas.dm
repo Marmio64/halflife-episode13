@@ -27,7 +27,7 @@
 	ambient_buzz_vol = 25
 
 	uses_daylight = TRUE
-	daylight_multiplier = 0.2
+	daylight_multiplier = 0.65
 
 	first_time_text = "City Streets"
 
@@ -35,20 +35,20 @@
 
 /area/halflife/outdoors/roofs
 	name = "\improper Rooftops"
-	daylight_multiplier = 0.25
+	daylight_multiplier = 0.75
 
 	first_time_text = "City Upper Levels"
 
 /area/halflife/outdoors/tracks
 	name = "\improper City Train Tracks"
-	daylight_multiplier = 0.25
+	daylight_multiplier = 0.75
 
 	first_time_text = "City Train Tracks"
 
 /area/halflife/outdoors/sewage_dump
 	name = "\improper Sewage Dump"
 	ambient_buzz = 'hl13/sound/ambience/toxic_ambience.ogg'
-	daylight_multiplier = 0.3
+	daylight_multiplier = 0.85
 
 /area/halflife/outdoors/plaza
 	name = "\improper Plaza"
@@ -105,7 +105,7 @@
 
 	//ambience_index = AMBIENCE_HLSEWERS
 
-	daylight_multiplier = 0.15
+	daylight_multiplier = 0.55
 
 /area/halflife/outdoors/deployment_city
 	name = "\improper City 13"
@@ -119,6 +119,8 @@
 
 	ambient_music_vol = 20
 
+	daylight_multiplier = 0.75
+
 /area/halflife/outdoors/deployment_city/zombies
 
 	ambient_buzz = 'hl13/sound/ambience/town_abandoned.ogg'
@@ -127,13 +129,13 @@
 	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_03.ogg'
 
 	ambient_music_vol = 20
-	daylight_multiplier = 0.15
+	daylight_multiplier = 0.7
 
 /area/halflife/outdoors/deployment_city/zombies/xen_base
 	name = "\improper Infested Zone"
 
 /area/halflife/outdoors/deployment_city/forest
-	daylight_multiplier = 0.35
+	daylight_multiplier = 0.8
 
 /area/halflife/indoors/combat_deployment
 	ambient_music_vol = 20

@@ -20,8 +20,8 @@
 	icon_state = "sand"
 	base_icon_state = "sand"
 	baseturfs = /turf/open/misc/beach/sand
-	light_power = 0.20 //hl13 edit
-	light_range = 0.35 //hl13 edit
+	//light_power = 0.20 //hl13 edit
+	//light_range = 0.35 //hl13 edit
 
 /turf/open/misc/beach/sand/Initialize(mapload)
 	. = ..()
