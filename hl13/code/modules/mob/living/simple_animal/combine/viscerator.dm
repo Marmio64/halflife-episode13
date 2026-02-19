@@ -1,8 +1,9 @@
 /mob/living/simple_animal/hostile/halflife/viscerator
 	name = "viscerator"
 	desc = "A small, twin-bladed machine capable of inflicting very deadly lacerations."
-	icon_state = "viscerator_attack"
-	icon_living = "viscerator_attack"
+	icon = 'hl13/icons/mob/halflife.dmi'
+	icon_state = "manhack_light"
+	icon_living = "manhack_light"
 	pass_flags = PASSTABLE | PASSMOB
 	combat_mode = TRUE
 	mob_biotypes = MOB_ROBOTIC
@@ -40,6 +41,14 @@
 /mob/living/simple_animal/hostile/halflife/viscerator/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/swarming)
+	RegisterSignal(src, COMSIG_HOSTILE_PRE_ATTACKINGTARGET, PROC_REF(attack_icon_flash))
+
+/mob/living/simple_animal/hostile/halflife/viscerator/proc/attack_icon_flash(mob/living/source, atom/target)
+	SIGNAL_HANDLER
+	if (target == src)
+		return COMPONENT_HOSTILE_NO_ATTACK // dont attack yourself
+	flick("manhack_attack",src)
+
 
 /mob/living/simple_animal/hostile/halflife/viscerator/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()

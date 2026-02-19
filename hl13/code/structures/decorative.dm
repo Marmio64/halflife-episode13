@@ -1066,4 +1066,4 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 	icon_state = "woodenbarricade"
 	opacity = TRUE
 	max_integrity = 150
-	proj_pass_rate = 0
+	projectile_passchance = 0

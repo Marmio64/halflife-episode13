@@ -75,21 +75,27 @@
 	wound_bonus = -10
 	armour_penetration = 0
 
+//this increases in effectiveness as the bullet travels
 /obj/projectile/bullet/pulse/heavy
 	name = "heavy pulse round"
-	damage = 32
+	damage = 30
 	wound_bonus = -10
-	armour_penetration = 80 //will get you through practically anything
+	armour_penetration = 32
 	speed = 6
 	accurate_range = 150
 
-	var/max_distance_damage = 50
+	var/max_distance_damage = 50 //reached after 10 tiles of travel
 	var/damage_increase_per_tile = 2
+
+	var/max_distance_armor_piercing = 80 //will get you through practically anything. Reached after 8 tiles of travel
+	var/ap_increase_per_tile = 6
 
 /obj/projectile/bullet/pulse/heavy/reduce_range()
 	..()
 	if(damage < max_distance_damage)
 		damage += damage_increase_per_tile
+	if(armour_penetration < max_distance_armor_piercing)
+		armour_penetration += ap_increase_per_tile
 
 /obj/projectile/bullet/flechette
 	name = "flechette"

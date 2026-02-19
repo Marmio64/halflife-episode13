@@ -115,7 +115,7 @@ Slimecrossing Items
 	desc = "A huge chunk of grey slime. Bullets might get stuck in it."
 	icon = 'icons/obj/science/slimecrossing.dmi'
 	icon_state = "slimebarrier"
-	proj_pass_rate = 40
+	projectile_passchance = 40
 	max_integrity = 60
 
 //Melting Gel Wall - Chilling Metal

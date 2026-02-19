@@ -14,7 +14,7 @@
 	anchored = TRUE
 	density = TRUE
 	max_integrity = 100
-	var/proj_pass_rate = 50 //How many projectiles will pass the cover. Lower means stronger cover
+	projectile_passchance = 50
 	var/bar_material = METAL
 
 /obj/structure/barricade/atom_deconstruct(disassembled = TRUE)
@@ -37,20 +37,6 @@
 				atom_integrity = clamp(atom_integrity + 20, 0, max_integrity)
 	else
 		return ..()
-
-/obj/structure/barricade/CanAllowThrough(atom/movable/mover, border_dir)//So bullets will fly over and stuff.
-	. = ..()
-	if(locate(/obj/structure/barricade) in get_turf(mover))
-		return TRUE
-	else if(isprojectile(mover))
-		if(!anchored)
-			return TRUE
-		var/obj/projectile/proj = mover
-		if(proj.firer && Adjacent(proj.firer))
-			return TRUE
-		if(prob(proj_pass_rate))
-			return TRUE
-		return FALSE
 
 /////BARRICADE TYPES///////
 /obj/structure/barricade/wooden
@@ -103,7 +89,7 @@
 	icon_state = "plankbarricade"
 	drop_amount = 1
 	max_integrity = 100
-	proj_pass_rate = 65
+	projectile_passchance = 65
 	layer = SIGN_LAYER
 
 /obj/structure/barricade/wooden/crude/snow
@@ -121,7 +107,7 @@
 	icon_state = "sandbags-0"
 	base_icon_state = "sandbags"
 	max_integrity = 280
-	proj_pass_rate = 20
+	projectile_passchance = 20
 	pass_flags_self = LETPASSTHROW
 	bar_material = SAND
 	smoothing_flags = SMOOTH_BITMASK
@@ -141,7 +127,7 @@
 	density = FALSE
 	anchored = FALSE
 	max_integrity = 180
-	proj_pass_rate = 20
+	projectile_passchance = 20
 	armor_type = /datum/armor/barricade_security
 
 	var/deploy_time = 40

@@ -645,7 +645,7 @@
 	else
 		var/mob/living/living_target = target
 		if(direct_target)
-			accuracy_bonus = 25 //bonus accuracy for direct hits
+			accuracy_bonus += 25 //bonus accuracy for direct hits
 			return TRUE
 		if(living_target.stat == DEAD)
 			return FALSE

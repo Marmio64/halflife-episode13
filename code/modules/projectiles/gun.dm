@@ -475,6 +475,9 @@
 		if(HAS_TRAIT(user, TRAIT_TERRIBLE_AIM) && !istype(pin, /obj/item/firing_pin/magic)) //HL13 EDIT, TRAIT TO MAKE SPREAD TERRIBLE for non magical weapons
 			bonus_spread += 25
 
+		if(user.body_position == LYING_DOWN) //hl13 edit, going prone increases survivability but lowers accuracy (and for melee, stops you from parrying)
+			bonus_spread += 10
+
 		if(user.move_intent == MOVE_INTENT_RUN) //hl13 edit, aim better when you're not running all over the place
 			bonus_spread += 5
 

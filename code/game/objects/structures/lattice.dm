@@ -1,6 +1,6 @@
 /obj/structure/lattice
 	name = "lattice"
-	desc = "A lightweight support lattice. These hold our station together."
+	desc = "A lightweight support lattice. It could probably just barely support someone on top of it, though it doesn't look very sturdy."
 	icon = 'icons/obj/smooth_structures/lattice.dmi'
 	icon_state = "lattice-255"
 	base_icon_state = "lattice"
@@ -26,7 +26,7 @@
 	AddElement(/datum/element/footstep_override, footstep = FOOTSTEP_CATWALK)
 
 /datum/armor/structure_lattice
-	melee = 50
+	melee = 30
 	fire = 80
 	acid = 50
 

@@ -99,10 +99,15 @@
 	//hl13 edit start. Far enough away gunfire has a chance to graze/nearmiss you
 	var/dodge_chance = 25 + (get_stat_level(STATKEY_DEX) - 10) //25 base dodge chance if bullet is far enough away, increased up to 35 based on dex.
 	var/distance_penalty_accuracy = clamp((proj.accurate_range - (proj.accuracy_falloff * get_dist(proj.last_impact_turf, proj.starting))) + proj.accuracy_bonus, 0, 100)
+	var/miss_message = "You're narrowly missed by \a [proj]!"
+	if(body_position == LYING_DOWN)
+		dodge_chance *= 1.5 //defensive prone
+		miss_message = "You hear \a [proj] fly past right above your head!"
+		distance_penalty_accuracy -= 7 //an extra tiles worth of accuracy penalty, so you can be a little closer to be able to trigger nearmiss chances
 	if(distance_penalty_accuracy < 65)
 		if(prob(dodge_chance - distance_penalty_accuracy/5))
 			visible_message(span_danger("[src] is narrowly missed by \a [proj]!"), \
-					span_userdanger("You're narrowly missed by \a [proj]!"), null, COMBAT_MESSAGE_RANGE)
+					span_userdanger(miss_message), null, COMBAT_MESSAGE_RANGE)
 			playsound(src, 'hl13/sound/effects/miss1.ogg', 40)
 			return BULLET_ACT_FORCE_PIERCE
 	//hl13 edit end

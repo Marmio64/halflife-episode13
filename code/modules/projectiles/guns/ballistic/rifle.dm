@@ -284,7 +284,7 @@
 
 /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
 	desc = "A handcrafted crossbow. Can fire sharpened iron rods and pieces of rebar at high velocities with large amounts of armor piercing capability."
-	draw_time = 1.2 SECONDS
+	draw_time = 1 SECONDS
 
 /obj/item/gun/ballistic/rifle/rebarxbow/hidden
 	desc = "A handcrafted crossbow. Can fire sharpened iron rods and pieces of rebar at high velocities with large amounts of armor piercing capability. The scope is cracked and useless."

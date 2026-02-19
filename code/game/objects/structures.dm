@@ -91,6 +91,9 @@
 		var/obj/projectile/proj = mover
 		if(proj.firer && Adjacent(proj.firer))
 			return TRUE
-		if(prob((projectile_passchance)))
+		var/pass_chance = projectile_passchance
+		if(100 < proj.accurate_range)
+			pass_chance += ((proj.accurate_range -= 100)*0.5) //accurate projectiles have a higher chance to pass. Sniper rounds have 150 accurate range, which comes out to +25% to pass
+		if(prob((pass_chance)))
 			return TRUE
 		return FALSE

@@ -450,12 +450,16 @@
 			to_chat(user, span_warning("You need two rods to build a catwalk!"))
 		return
 
-	if(used_rods.use(1))
-		to_chat(user, span_notice("You construct a lattice."))
-		playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
-		new /obj/structure/lattice(src)
+	if(do_after(user, 1.5 SECONDS, src))
+		if(used_rods.use(1))
+			to_chat(user, span_notice("You construct a lattice."))
+			playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
+			new /obj/structure/lattice(src)
+		else
+			to_chat(user, span_warning("You need one rod to build a lattice."))
 	else
-		to_chat(user, span_warning("You need one rod to build a lattice."))
+		to_chat(user, span_notice("You stop constructing a lattice."))
+		return
 
 /// Very similar to build_with_rods, this exists to allow consistent behavior between different types in terms of how
 /// Building floors works

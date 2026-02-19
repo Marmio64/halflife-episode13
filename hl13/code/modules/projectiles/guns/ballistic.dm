@@ -231,6 +231,7 @@
 	icon_state = "combine_sniper"
 	inhand_icon_state = "combine_sniper"
 	fire_sound = 'hl13/sound/weapons/sniper.ogg'
+	dry_fire_sound = 'hl13/sound/weapons/empty_alyx.ogg'
 
 	var/charge_sound = 'hl13/sound/weapons/sniper_charge.ogg'
 
@@ -244,7 +245,7 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slowdown = 0.25
 
-	var/after_shot_delay = 1 SECONDS
+	var/after_shot_delay = 0.8 SECONDS
 
 	accepted_magazine_type = /obj/item/ammo_box/magazine/combine_sniper
 	pin = /obj/item/firing_pin/implant/mindshield
@@ -254,7 +255,7 @@
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
 /obj/item/gun/ballistic/combine_sniper/slow
-	after_shot_delay = 1.25 SECONDS
+	after_shot_delay = 1.2 SECONDS
 	fire_delay = 24
 
 /obj/item/gun/ballistic/combine_sniper/Initialize(mapload)
