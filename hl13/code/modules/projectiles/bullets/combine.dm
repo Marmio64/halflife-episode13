@@ -78,13 +78,13 @@
 //this increases in effectiveness as the bullet travels
 /obj/projectile/bullet/pulse/heavy
 	name = "heavy pulse round"
-	damage = 30
+	damage = 32
 	wound_bonus = -10
 	armour_penetration = 32
 	speed = 6
 	accurate_range = 150
 
-	var/max_distance_damage = 50 //reached after 10 tiles of travel
+	var/max_distance_damage = 50 //reached after 9 tiles of travel
 	var/damage_increase_per_tile = 2
 
 	var/max_distance_armor_piercing = 80 //will get you through practically anything. Reached after 8 tiles of travel

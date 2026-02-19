@@ -272,6 +272,10 @@
 /obj/structure/halflife/headcrab_cannister,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
+"fJ" = (
+/obj/structure/halflife/road_barrier/combine,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "fO" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -342,6 +346,10 @@
 "hj" = (
 /obj/structure/halflife/rug/yellow,
 /turf/open/floor/plating/indoor/woodc,
+/area/halflife/outdoors/deployment_city)
+"hk" = (
+/obj/machinery/door/unpowered/halflife/metal,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/deployment_city)
 "hl" = (
 /turf/open/floor/plating/indoor/concrete/stairs{
@@ -642,6 +650,7 @@
 /area/halflife/outdoors/deployment_city)
 "oC" = (
 /obj/machinery/light/directional/west,
+/obj/effect/koth_grace_field,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/deployment_city)
 "oN" = (
@@ -892,6 +901,10 @@
 	},
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city)
+"wC" = (
+/obj/structure/halflife/road_barrier/concrete/alt,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "wO" = (
 /obj/structure/halflife/leaves,
 /obj/effect/spawner/random/halflife/plant_spawner,
@@ -939,6 +952,10 @@
 /obj/machinery/combine_walllight/directional/north,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
+"yp" = (
+/obj/effect/koth_grace_field,
+/turf/open/openspace,
+/area/halflife/outdoors/deployment_city)
 "yt" = (
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/indoors/combat_deployment/rebel_base)
@@ -972,6 +989,10 @@
 /turf/open/floor/plating/indoor/concrete/stairs{
 	dir = 1
 	},
+/area/halflife/outdoors/deployment_city)
+"zT" = (
+/obj/structure/flora/tree/halflife/plain/concrete_thin,
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city)
 "zX" = (
 /obj/structure/chair/halflife/wood{
@@ -1159,6 +1180,10 @@
 /obj/machinery/combine_walllight/directional/south,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"Ew" = (
+/mob/living/basic/halflife/chumtoad,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/outdoors/deployment_city)
 "ES" = (
 /obj/effect/koth_grace_field,
 /obj/machinery/light/small/directional/west,
@@ -1221,6 +1246,10 @@
 "Gk" = (
 /obj/structure/table/halflife/no_smooth/large/crafting/tinkerbench,
 /turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/outdoors/deployment_city)
+"Gx" = (
+/obj/effect/koth_grace_field,
+/turf/closed/wall/halflife/concrete/alt,
 /area/halflife/outdoors/deployment_city)
 "GA" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
@@ -1574,6 +1603,11 @@
 /area/halflife/outdoors/deployment_city)
 "PV" = (
 /turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city)
+"Qc" = (
+/obj/machinery/light/small/directional/north,
+/mob/living/simple_animal/halflife/harry,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/deployment_city)
 "Qd" = (
 /obj/machinery/combine_walllight/directional/west,
@@ -5054,7 +5088,7 @@ YW
 YW
 YW
 YW
-ai
+Gx
 ai
 ai
 ai
@@ -5206,10 +5240,10 @@ ai
 ai
 ai
 ai
-ai
+Gx
 ez
 ez
-ez
+fJ
 Sy
 jG
 jG
@@ -6091,7 +6125,7 @@ FM
 DY
 cv
 ai
-ez
+hn
 rd
 Qy
 IF
@@ -6243,7 +6277,7 @@ cv
 cv
 cv
 ai
-ez
+hn
 PV
 Qy
 IF
@@ -6395,7 +6429,7 @@ cv
 cv
 cv
 ai
-ez
+hn
 PV
 Qy
 IF
@@ -6547,7 +6581,7 @@ FM
 Ks
 cv
 ai
-ez
+hn
 PV
 Qy
 IF
@@ -6699,7 +6733,7 @@ cv
 uv
 cv
 ai
-ez
+hn
 PV
 Qy
 IF
@@ -6726,10 +6760,10 @@ ai
 ai
 ez
 ez
-ai
+Gx
 ez
 ez
-ez
+fJ
 Sy
 ai
 ez
@@ -6851,7 +6885,7 @@ ai
 ai
 ai
 ai
-ez
+hn
 PV
 Qy
 IF
@@ -6859,7 +6893,7 @@ Qy
 PV
 rd
 ez
-ai
+Gx
 ub
 CI
 ES
@@ -6878,7 +6912,7 @@ ai
 oN
 ez
 ez
-ai
+Gx
 ai
 ai
 ai
@@ -7003,7 +7037,7 @@ Br
 Ot
 Br
 ai
-ez
+hn
 PV
 Qy
 IF
@@ -7011,7 +7045,7 @@ Qy
 PV
 rd
 ez
-ai
+Gx
 Yd
 Br
 Br
@@ -7031,10 +7065,10 @@ ai
 ez
 ez
 ai
-ai
-ai
-ai
-ai
+YW
+YW
+YW
+YW
 ai
 iX
 qJ
@@ -7163,7 +7197,7 @@ Mx
 hD
 Lk
 hn
-ai
+Gx
 uS
 Br
 Br
@@ -7183,10 +7217,10 @@ ez
 ez
 ez
 ai
-ai
-ai
-ai
-ai
+YW
+YW
+YW
+YW
 ai
 BU
 qJ
@@ -7335,10 +7369,10 @@ ez
 ez
 ez
 ai
-ai
-ai
-ai
-ai
+YW
+YW
+YW
+YW
 ai
 iX
 qJ
@@ -7487,10 +7521,10 @@ ai
 Xv
 ez
 ai
-ai
-ai
-ai
-ai
+YW
+YW
+YW
+YW
 ai
 iX
 qJ
@@ -7639,10 +7673,10 @@ ai
 ai
 ai
 ai
-ai
-ai
-ai
-ai
+YW
+YW
+YW
+YW
 ai
 BU
 qJ
@@ -7791,10 +7825,10 @@ ai
 ai
 ai
 ai
-ai
-ai
-ai
-ai
+YW
+YW
+YW
+YW
 ai
 iX
 iX
@@ -7943,10 +7977,10 @@ ai
 ai
 ai
 ai
-ai
-ai
-ai
-ai
+YW
+YW
+YW
+YW
 ai
 ai
 ai
@@ -8083,16 +8117,16 @@ Br
 Br
 Br
 Br
-Br
+CI
 oC
 La
 La
 La
-Br
-Br
-Br
-Br
-Br
+CI
+CI
+CI
+CI
+CI
 ai
 YW
 YW
@@ -8236,11 +8270,11 @@ Br
 Br
 Br
 Br
-Br
-Br
-Br
-Br
-Br
+CI
+CI
+CI
+CI
+CI
 Br
 Br
 Br
@@ -8377,7 +8411,7 @@ Qy
 IF
 Qy
 PV
-rd
+xv
 ez
 ai
 Br
@@ -8528,9 +8562,9 @@ PV
 Qy
 IF
 Qy
-PV
-rd
-ez
+Oo
+zT
+QX
 ai
 Br
 AY
@@ -8681,7 +8715,7 @@ Qy
 IF
 Qy
 PV
-rd
+xv
 ez
 ai
 yd
@@ -10462,7 +10496,7 @@ ai
 ai
 ai
 ez
-rd
+xv
 PV
 Qy
 IF
@@ -10613,9 +10647,9 @@ ai
 ai
 ai
 ai
-ez
-rd
-PV
+QX
+zT
+Oo
 Qy
 pf
 cE
@@ -10766,7 +10800,7 @@ ai
 ai
 ai
 ez
-rd
+xv
 PV
 Qy
 Qy
@@ -12481,7 +12515,7 @@ Qy
 Qy
 lT
 PV
-rd
+xv
 ez
 Ar
 cv
@@ -12577,10 +12611,10 @@ YW
 YW
 YW
 YW
-YW
-YW
-YW
-YW
+ai
+ai
+ai
+ai
 ai
 ez
 Qy
@@ -12632,9 +12666,9 @@ Qy
 Qy
 Qy
 Qy
-PV
-rd
-ez
+Oo
+zT
+QX
 ai
 cv
 Yt
@@ -12729,11 +12763,11 @@ YW
 YW
 YW
 YW
-YW
-YW
-YW
-YW
 ai
+ez
+ez
+ez
+wC
 ez
 Qy
 ez
@@ -12785,7 +12819,7 @@ PV
 PV
 PV
 PV
-rd
+xv
 ez
 ai
 ai
@@ -12877,14 +12911,14 @@ YW
 YW
 YW
 YW
-YW
-YW
-YW
-YW
-YW
-YW
-YW
-YW
+ai
+ai
+ai
+ai
+ai
+ez
+ai
+ai
 ai
 ez
 Qy
@@ -13029,14 +13063,14 @@ YW
 YW
 YW
 YW
-YW
-YW
-YW
-YW
-YW
-YW
-YW
-YW
+ai
+bK
+bK
+bK
+ai
+ez
+ur
+ai
 ai
 ez
 ez
@@ -13181,14 +13215,14 @@ YW
 YW
 YW
 YW
-YW
-YW
-YW
-YW
-YW
-YW
-YW
-YW
+ai
+Ew
+bK
+bK
+hk
+ez
+Xv
+ai
 ai
 ai
 ai
@@ -13333,15 +13367,15 @@ YW
 YW
 YW
 YW
-YW
-YW
-YW
-YW
-YW
-YW
-YW
-YW
-YW
+ai
+bK
+bK
+bK
+ai
+ai
+ai
+ai
+ai
 YW
 YW
 YW
@@ -13485,11 +13519,11 @@ YW
 YW
 YW
 YW
-YW
-YW
-YW
-YW
-YW
+ai
+ai
+ai
+ai
+ai
 YW
 YW
 YW
@@ -14903,7 +14937,7 @@ YW
 YW
 YW
 ai
-lU
+Qc
 iX
 iX
 iX
@@ -24291,46 +24325,46 @@ dP
 dP
 dP
 ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
-ai
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
+YW
 ai
 dP
 dP
@@ -26156,14 +26190,14 @@ YW
 YW
 YW
 ai
-dP
-dP
-dP
-dP
-dP
-dP
-dP
-dP
+yp
+yp
+yp
+yp
+yp
+yp
+yp
+yp
 YW
 YW
 YW

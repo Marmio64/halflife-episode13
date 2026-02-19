@@ -255,7 +255,7 @@
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
 /obj/item/gun/ballistic/combine_sniper/slow
-	after_shot_delay = 1.2 SECONDS
+	after_shot_delay = 1.15 SECONDS
 	fire_delay = 24
 
 /obj/item/gun/ballistic/combine_sniper/Initialize(mapload)
