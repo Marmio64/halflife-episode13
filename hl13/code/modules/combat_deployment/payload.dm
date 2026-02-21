@@ -195,12 +195,12 @@
 		return
 
 /obj/machinery/deployment_payload/proc/blow_up()
-	priority_announce("The payload has been delivered! Long live the resistance!", "Lambda Priority Alert")
-	GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
 	SSticker.force_ending = FORCE_END_ROUND
 	explosion(src, 1, 20, 30, 5)
 
 	if(cart_faction == REBEL_DEPLOYMENT_FACTION)
+		priority_announce("The payload has been delivered! Long live the resistance!", "Lambda Priority Alert")
+		GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
 		for(var/X in GLOB.deployment_combine_players)
 			var/mob/living/carbon/human/H = X
 			SEND_SOUND(H, 'hl13/sound/effects/cart_explode.ogg')
@@ -210,6 +210,8 @@
 			SEND_SOUND(H, 'hl13/sound/effects/cart_explode.ogg')
 			to_chat(H, "<span class='greentext big'>We have detonated the payload!</span>")
 	else
+		priority_announce("Payload delivered. Contain, isolate, cauterize.", "Overwatch Priority Alert")
+		GLOB.deployment_win_team = COMBINE_DEPLOYMENT_FACTION
 		for(var/X in GLOB.deployment_combine_players)
 			var/mob/living/carbon/human/H = X
 			SEND_SOUND(H, 'hl13/sound/effects/cart_explode.ogg')

@@ -741,7 +741,7 @@
 	vary_fire_sound = FALSE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/pulselmg
 	force = 12
-	spread = 20
+	spread = 15
 	recoil = 0.1
 	fire_delay = 2
 	burst_size = 1

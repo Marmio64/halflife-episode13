@@ -49,15 +49,15 @@
 	cmode_music = 'hl13/sound/music/combat/huntingparty.ogg' //practically a requirement
 
 /mob/living/simple_animal/hostile/halflife/hunter/deployment
-	maxHealth = 200
-	health = 200
+	maxHealth = 180
+	health = 180
 	speed = -0.66
 
 /mob/living/simple_animal/hostile/halflife/hunter/deployment/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()
 	if(stat)
 		return
-	adjustHealth(-maxHealth*0.01) //2.25 health every 2 seconds
+	adjustHealth(-maxHealth*0.01) //1.8 health every 2 seconds
 
 /mob/living/simple_animal/hostile/halflife/hunter/Aggro()
 	. = ..()
