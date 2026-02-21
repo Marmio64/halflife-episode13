@@ -450,7 +450,7 @@
 			to_chat(user, span_warning("You need two rods to build a catwalk!"))
 		return
 
-	if(do_after(user, 1.5 SECONDS, src))
+	if(do_after(user, 2 SECONDS, src))
 		if(used_rods.use(1))
 			to_chat(user, span_notice("You construct a lattice."))
 			playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)

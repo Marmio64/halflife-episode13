@@ -110,7 +110,7 @@
 	name = "pulseshot pellet"
 	icon_state = "pulsepellet"
 	damage = 20 //120 total damage
-	armour_penetration = 25
+	armour_penetration = 30
 
 /obj/projectile/bullet/pellet/shotgun_buckshot/antixen
 	name = "anti-xen pellet"
