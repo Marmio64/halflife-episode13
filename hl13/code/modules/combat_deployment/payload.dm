@@ -273,7 +273,7 @@
 /obj/machinery/deployment_payload/fortress
 	altered_respawn_speed = 50 SECONDS
 	normal_respawn_speed = 20 SECONDS
-	time_per_checkpoint = 210 SECONDS
+	time_per_checkpoint = 240 SECONDS
 
 /obj/effect/payload_path
 	name = "payload path"

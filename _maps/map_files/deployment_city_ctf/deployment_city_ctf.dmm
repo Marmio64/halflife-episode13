@@ -63,6 +63,12 @@
 /obj/structure/halflife/storage/shelf/wood/alt,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
+"dV" = (
+/obj/machinery/porta_turret/combine/rebel{
+	anchored = 1
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city/forest)
 "eP" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -118,6 +124,10 @@
 /obj/machinery/combine_walllight/directional/east,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/outdoors/deployment_city/forest)
+"hL" = (
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city/forest)
 "hY" = (
 /obj/structure/halflife/trash_decal,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -144,6 +154,12 @@
 	dir = 8
 	},
 /turf/open/floor/plating/indoor/woodc,
+/area/halflife/outdoors/deployment_city/forest)
+"jH" = (
+/obj/structure/razorwire{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/forest)
 "jY" = (
 /obj/machinery/door/airlock/highsecurity/combine,
@@ -286,6 +302,10 @@
 /obj/structure/halflife/road_barrier/concrete,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/forest)
+"tm" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city/forest)
 "tq" = (
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
@@ -299,6 +319,12 @@
 "tx" = (
 /obj/structure/chair/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/outdoors/deployment_city/forest)
+"tJ" = (
+/obj/structure/razorwire{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
 "tS" = (
 /turf/closed/wall/halflife/concrete/alt,
@@ -530,6 +556,12 @@
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/outdoors/deployment_city/forest)
+"Jq" = (
+/obj/structure/razorwire{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk/cobblestone,
+/area/halflife/outdoors/deployment_city/forest)
 "Jz" = (
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/deployment_city/forest)
@@ -553,6 +585,16 @@
 	dir = 8
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/outdoors/deployment_city/forest)
+"Kn" = (
+/obj/machinery/porta_turret/combine/rebel/fast{
+	anchored = 1
+	},
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/deployment_city/forest)
+"KQ" = (
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/sidewalk/cobblestone,
 /area/halflife/outdoors/deployment_city/forest)
 "KS" = (
 /obj/machinery/ammo_crate,
@@ -595,6 +637,12 @@
 "Oz" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/outdoors/deployment_city/forest)
+"OE" = (
+/obj/structure/razorwire{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/forest)
 "Pg" = (
 /obj/machinery/light/small/directional/north,
@@ -755,6 +803,10 @@
 "VL" = (
 /obj/structure/halflife/storage/large/clothing,
 /turf/open/floor/plating/indoor/carpet/green,
+/area/halflife/outdoors/deployment_city/forest)
+"VV" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
 "Wu" = (
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -2809,7 +2861,7 @@ ml
 LQ
 LQ
 AZ
-LQ
+dV
 ml
 ml
 ml
@@ -3557,17 +3609,17 @@ NM
 NM
 NM
 NM
-NM
+ac
 NM
 NM
 NM
 yl
 yl
-NM
-ml
-LQ
-LQ
-LQ
+tJ
+OE
+jH
+jH
+jH
 Cp
 LQ
 LQ
@@ -3664,7 +3716,7 @@ mj
 mj
 mj
 mj
-mj
+Su
 mj
 mj
 mj
@@ -3674,7 +3726,7 @@ NM
 LQ
 LQ
 LQ
-LQ
+hL
 Cp
 LQ
 LQ
@@ -3771,17 +3823,17 @@ vH
 QY
 QY
 QY
+lX
 QY
 QY
 QY
-QY
-QY
+VV
 mj
 Yp
 Yp
 Yp
 LQ
-LQ
+hL
 Cp
 LQ
 LQ
@@ -3878,17 +3930,17 @@ QY
 QY
 QY
 QY
+lX
 QY
 QY
 QY
-QY
-QY
+VV
 mj
 Yp
 ns
 Yp
 Cp
-Cp
+KQ
 Cp
 Cp
 Cp
@@ -3985,17 +4037,17 @@ QY
 QY
 QY
 QY
+lX
 QY
 QY
 QY
-QY
-QY
+VV
 mj
 Yp
 Yp
 Yp
 LQ
-LQ
+hL
 LQ
 LQ
 LQ
@@ -4092,7 +4144,7 @@ QY
 vH
 mj
 mj
-mj
+Su
 mj
 mj
 mj
@@ -4199,15 +4251,15 @@ QY
 QY
 mj
 NM
-NM
+ac
 NM
 NM
 NM
 yl
 yl
-NM
-LQ
-ml
+tm
+AZ
+fY
 Fa
 iO
 LQ
@@ -4644,9 +4696,9 @@ LQ
 ml
 LQ
 ml
-LQ
-ml
-LQ
+AZ
+Kn
+AZ
 LQ
 LQ
 ml
@@ -4751,9 +4803,9 @@ ml
 ml
 ml
 ml
-ml
-ml
-ml
+fY
+fY
+fY
 ml
 LQ
 LQ
@@ -8631,9 +8683,9 @@ ml
 ml
 ml
 LQ
-LQ
-ml
-LQ
+AZ
+fY
+AZ
 LQ
 ml
 ml
@@ -8738,9 +8790,9 @@ ml
 ml
 ml
 LQ
-ml
-ml
-ml
+fY
+Gg
+fY
 ml
 LQ
 ml
@@ -9178,16 +9230,16 @@ ml
 ml
 Fa
 Fa
-ml
-LQ
-NM
+fY
+AZ
+tm
 yl
 yl
 NM
 NM
 NM
 NM
-NM
+ac
 NM
 mj
 QY
@@ -9294,7 +9346,7 @@ mj
 mj
 mj
 mj
-mj
+Su
 mj
 mj
 QY
@@ -9390,18 +9442,18 @@ ml
 LQ
 LQ
 LQ
-LQ
+hL
 ml
 Yp
 Yp
 Yp
 mj
+VV
 QY
 QY
 QY
 QY
-QY
-QY
+lX
 QY
 QY
 QY
@@ -9497,18 +9549,18 @@ ml
 ml
 ml
 ml
-LQ
+hL
 ml
 Yp
 sR
 Yp
 mj
+VV
 QY
 QY
 QY
 QY
-QY
-QY
+lX
 QY
 QY
 QY
@@ -9604,18 +9656,18 @@ LQ
 ml
 ml
 LQ
-LQ
+hL
 LQ
 Yp
 Yp
 Yp
 mj
+VV
 QY
 QY
 QY
 QY
-QY
-QY
+lX
 QY
 QY
 QY
@@ -9711,7 +9763,7 @@ LQ
 LQ
 LQ
 LQ
-LQ
+hL
 LQ
 Cp
 LQ
@@ -9722,7 +9774,7 @@ mj
 mj
 mj
 mj
-mj
+Su
 mj
 mj
 mj
@@ -9818,18 +9870,18 @@ Cp
 Cp
 Cp
 Cp
-Cp
-Cp
-Cp
-LQ
-NM
+Jq
+Jq
+Jq
+jH
+tJ
 yl
 yl
 NM
 NM
 NM
 NM
-NM
+ac
 NM
 NM
 NM
@@ -10788,7 +10840,7 @@ LQ
 LQ
 ml
 ml
-LQ
+Pl
 AZ
 ml
 ml

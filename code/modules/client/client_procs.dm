@@ -560,8 +560,9 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	Master.UpdateTickRate()
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_CLIENT_CONNECT, src)
 	fully_created = TRUE
-	if(!fullscreen)
-		toggle_fullscreen() //hl13 edit
+	if (prefs.read_preference(/datum/preference/toggle/autofullscreen))
+		if(!fullscreen)
+			toggle_fullscreen() //hl13 edit
 
 //////////////
 //DISCONNECT//

@@ -93,6 +93,13 @@
 	victim.adjustFireLoss(healing_amount)
 	victim.visible_message(span_bold("[victim] appears to flash colors of green, before seemingly appearing healthier!"))
 	to_chat(victim, span_warning("You feel soothed."))
+
+	if(iscarbon(victim))
+		var/mob/living/carbon/carbies = victim
+
+		if(carbies.blood_volume < BLOOD_VOLUME_OKAY) //Only good for keeping you from dying, not topping off blood.
+			carbies.blood_volume += heal_rate/2 //15 units of blood restored when normal mend is used on someone else
+
 	return TRUE
 
 /datum/action/cooldown/spell/list_target/telepathy/vort
