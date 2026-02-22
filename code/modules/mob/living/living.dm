@@ -176,7 +176,8 @@
 	SEND_SIGNAL(src, COMSIG_LIVING_MOB_BUMP, M)
 	SEND_SIGNAL(M, COMSIG_LIVING_MOB_BUMPED, src)
 	//Even if we don't push/swap places, we "touched" them, so spread fire
-	spreadFire(M)
+	if(prob(50)) //hl13 edit, not guaranteed to instantly set somewhere into an eruption of fire by touching them a little bit
+		spreadFire(M)
 
 	if(now_pushing)
 		return TRUE
