@@ -64,17 +64,14 @@
 
 	if(ishuman(owner.current))
 		var/mob/living/carbon/human/H = owner.current
-		if(H.wear_id)
-			var/obj/item/card/id/id = H.wear_id
-			var/datum/bank_account/bank_account = new(H.real_name, src)
-			bank_account.payday(STARTING_PAYCHECKS, TRUE)
-			H.account_id = bank_account.account_id
-			H.account_pin = "[rand(1000,9999)]"
-			bank_account.account_pin = H.account_pin
-			bank_account.replaceable = FALSE
-			H.add_mob_memory(/datum/memory/key/account, remembered_id = bank_account.account_id)
-			if(id.registered_account)
-				blackmarket_objective.bank_account = id.registered_account
+		var/datum/bank_account/bank_account = new(H.real_name, src)
+		bank_account.payday(STARTING_PAYCHECKS, TRUE)
+		H.account_id = bank_account.account_id
+		H.account_pin = "[rand(1000,9999)]"
+		bank_account.account_pin = H.account_pin
+		bank_account.replaceable = FALSE
+		H.add_mob_memory(/datum/memory/key/account, remembered_id = bank_account.account_id)
+		blackmarket_objective.bank_account = bank_account
 
 	objectives += blackmarket_objective
 
