@@ -1,6 +1,14 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "av" = (
 /obj/structure/table/halflife/metal/grate,
+/obj/item/ammo_box/magazine/m4a1/service{
+	pixel_x = 7;
+	pixel_y = 1
+	},
+/obj/item/ammo_box/magazine/m4a1/service{
+	pixel_x = -10;
+	pixel_y = 10
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "aD" = (
@@ -61,7 +69,7 @@
 	},
 /obj/structure/alien/weeds,
 /obj/item/stack/spacecash/c1{
-	amount = 10
+	amount = 15
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
@@ -423,7 +431,7 @@
 /obj/structure/table/halflife/no_smooth/large/metal/desk/alt,
 /obj/structure/alien/weeds,
 /obj/item/stack/spacecash/c1{
-	amount = 10
+	amount = 15
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
@@ -460,7 +468,9 @@
 	dir = 4
 	},
 /obj/structure/closet/halflife/wall/firstaid,
-/obj/effect/spawner/random/halflife/loot/heal,
+/obj/item/stack/medical/suture,
+/obj/item/reagent_containers/hypospray/medipen/oxycodone,
+/obj/item/stack/medical/gauze,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "Al" = (
@@ -588,6 +598,10 @@
 /area/halflife/indoors/bunker)
 "IJ" = (
 /obj/machinery/light/small/broken/directional/east,
+/turf/open/halflife/water/sewer/shallow,
+/area/halflife/indoors/bunker)
+"IQ" = (
+/obj/item/storage/backpack/halflife/satchel/military,
 /turf/open/halflife/water/sewer/shallow,
 /area/halflife/indoors/bunker)
 "Jn" = (
@@ -958,7 +972,7 @@ Qa
 Gm
 HS
 LW
-nF
+IQ
 eV
 hl
 EA

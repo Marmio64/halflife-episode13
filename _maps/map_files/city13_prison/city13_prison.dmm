@@ -1758,6 +1758,10 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison/mining)
+"jJ" = (
+/obj/machinery/combine_walllight/directional/south,
+/turf/closed/wall/halflife/metal,
+/area/halflife/outdoors/forest)
 "jK" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -2327,6 +2331,13 @@
 "mJ" = (
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/prison/cells)
+"mK" = (
+/obj/structure/closet/halflife,
+/obj/effect/spawner/random/halflife/loot,
+/obj/effect/spawner/random/halflife/loot,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/bunker)
 "mN" = (
 /obj/structure/ladder/halflife,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -3489,6 +3500,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/prison/security)
+"sn" = (
+/obj/machinery/combine_walllight/directional/east,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "so" = (
 /obj/structure/sign/poster/halflife/combine{
 	pixel_y = 32
@@ -7110,6 +7125,10 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/prison/intake)
+"Kn" = (
+/obj/effect/mine/explosive/combine,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/forest)
 "Kp" = (
 /obj/structure/mop_bucket/janitorialcart,
 /obj/item/mop,
@@ -7378,6 +7397,10 @@
 	},
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/prison/cells)
+"LC" = (
+/obj/effect/mine/explosive/combine,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "LD" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/hl2key/factory,
@@ -9140,6 +9163,10 @@
 /obj/structure/halflife/toilet,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/outlands)
+"Ug" = (
+/obj/machinery/combine_walllight/directional/west,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "Uh" = (
 /obj/structure/halflife/fence/wire/end/east/barb{
 	pixel_y = 32
@@ -29984,7 +30011,7 @@ tP
 Wn
 QX
 Hd
-Hd
+mK
 tP
 Pw
 PY
@@ -57434,7 +57461,7 @@ Lk
 Ct
 Lk
 Ct
-Lk
+Kn
 Lk
 Ct
 Ct
@@ -57634,7 +57661,7 @@ Ct
 Ct
 Ct
 Ct
-Ct
+LC
 Lk
 Ct
 Lk
@@ -57833,7 +57860,7 @@ DE
 gR
 Lk
 Lk
-Lk
+Kn
 Ct
 Ct
 Lk
@@ -58652,7 +58679,7 @@ Ct
 Ct
 XW
 XW
-Ct
+Ug
 Ct
 Ct
 Ct
@@ -58844,7 +58871,7 @@ oI
 DE
 DE
 Ct
-Ct
+bx
 Lk
 Lk
 Lk
@@ -59046,8 +59073,8 @@ DE
 oI
 DE
 DE
-Lk
-Ga
+bL
+jJ
 Lk
 Lk
 Ct
@@ -60264,8 +60291,8 @@ DE
 oI
 DE
 DE
-Lk
-bx
+bL
+jJ
 Ct
 Lk
 Ct
@@ -60468,7 +60495,7 @@ oI
 DE
 DE
 Ct
-Lk
+Ga
 Lk
 Ct
 Ct
@@ -60682,7 +60709,7 @@ Ct
 Ct
 XW
 XW
-Ct
+sn
 Ct
 Ct
 Ct
@@ -60875,7 +60902,7 @@ oI
 DE
 Ct
 Ct
-Lk
+Kn
 Ct
 Lk
 Lk
@@ -61082,7 +61109,7 @@ Ct
 Lk
 Lk
 Lk
-Lk
+Kn
 Ct
 Ct
 Ct
@@ -61291,7 +61318,7 @@ Ct
 Ct
 Ct
 Ct
-Ct
+LC
 pN
 Ct
 Ct
@@ -61491,7 +61518,7 @@ Ct
 Ct
 Ct
 Ct
-Ct
+LC
 Ct
 Ct
 Ct
