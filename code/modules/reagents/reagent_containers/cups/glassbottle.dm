@@ -309,6 +309,7 @@
 	desc = "A very low proof, non-flammable, and very gross beer substitute, allowed to be served to all citizens."
 	icon_state = "beer_white"
 	list_reagents = list(/datum/reagent/consumable/ethanol/fake = 30)
+	custom_premium_price = PAYCHECK_CREW * 0.75
 
 /obj/item/reagent_containers/cup/glass/bottle/rootbeer
 	name = "Two-Time root beer"

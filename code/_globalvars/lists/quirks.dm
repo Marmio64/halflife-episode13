@@ -48,7 +48,6 @@ GLOBAL_LIST_INIT(possible_smoker_addictions, setup_smoker_addictions(list(
 
 ///Options for the Alcoholic quirk to choose from
 GLOBAL_LIST_INIT(possible_alcoholic_addictions, list(
-	"Gin" = list("bottlepath" = /obj/item/reagent_containers/cup/glass/bottle/gin, "reagent" = /datum/reagent/consumable/ethanol/gin),
 	"Beer" = list("bottlepath" = /obj/item/reagent_containers/cup/glass/bottle/beer, "reagent" = /datum/reagent/consumable/ethanol/beer),
 	"Vodka" = list("bottlepath" = /obj/item/reagent_containers/cup/glass/bottle/vodka, "reagent" = /datum/reagent/consumable/ethanol/vodka),
 	"Whiskey" = list("bottlepath" = /obj/item/reagent_containers/cup/glass/bottle/whiskey, "reagent" = /datum/reagent/consumable/ethanol/whiskey)

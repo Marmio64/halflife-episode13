@@ -1,9 +1,9 @@
 /datum/round_event_control/sentient_zombie
 	name = "Spawn Sentient Zombie"
 	typepath = /datum/round_event/ghost_role/sentient_zombie
-	max_occurrences = 0 //only occurs at night curfew time
+	max_occurrences = 2
 	min_players = 0
-	weight = 0
+	weight = 4
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns a Sentient Zombie."
 	min_wizard_trigger_potency = 6
@@ -28,7 +28,7 @@
 	if(!spawn_locs.len)
 		message_admins("No valid spawn locations found, aborting...")
 		return MAP_ERROR
-	if(prob(60))
+	if(prob(50))
 		var/mob/living/basic/halflife/zombie/S = new ((pick(spawn_locs)))
 		S.key = chosen_one.key
 		message_admins("[ADMIN_LOOKUPFLW(S)] has been made into a Zombie by an event.")

@@ -30,7 +30,7 @@
 	/// If true you can mine the mineral turf without tools.
 	var/weak_turf = FALSE
 	/// How long it takes to mine this turf with tools, before the tool's speed and the user's skill modifier are factored in.
-	var/tool_mine_speed = 4 SECONDS
+	var/tool_mine_speed = 4.4 SECONDS
 	/// How long it takes to mine this turf without tools, if it's weak.
 	var/hand_mine_speed = 15 SECONDS
 

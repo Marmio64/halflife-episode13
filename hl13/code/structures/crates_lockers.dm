@@ -137,6 +137,7 @@
 	new /obj/item/reagent_containers/hypospray/medipen/oxycodone(src)
 	new /obj/item/reagent_containers/hypospray/medipen/blood(src)
 	new /obj/item/reagent_containers/hypospray/medipen/blood(src)
+	new /obj/item/reagent_containers/hypospray/medipen/blood(src)
 	new /obj/item/healthanalyzer/no_req(src)
 
 /obj/structure/closet/crate/halflife/wooden/fortifications/PopulateContents()

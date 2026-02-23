@@ -362,6 +362,11 @@
 /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger
 	fire_delay = 12 //geared towards sniping, not mag dumping
 
+/obj/item/gun/ballistic/revolver/coltpython/well_crafted
+	name = "\improper well-crafted colt python"
+	desc = "A well maintained looking colt python. Just as accurate and powerful as any other colt, but the parts are better taken care of, allowing a faster firing rate."
+	fire_delay = 6
+
 // about 2.5 seconds TTK
 /obj/item/gun/ballistic/revolver/snubnose
 	name = "\improper snubnose revolver"
@@ -546,7 +551,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/pulse
 	force = 15
 	recoil = 1.7
-	fire_delay = 20
+	fire_delay = 18
 	vary_fire_sound = FALSE
 	inhand_x_dimension = 32
 	inhand_y_dimension = 32
@@ -741,7 +746,7 @@
 	vary_fire_sound = FALSE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/pulselmg
 	force = 12
-	spread = 10
+	spread = 8
 	recoil = 0.1
 	fire_delay = 2
 	burst_size = 1
@@ -818,7 +823,7 @@
 
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.55 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.6 SECONDS)
 
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()
@@ -897,8 +902,8 @@
 
 	item_flags = SLOWS_WHILE_IN_HAND | NEEDS_PERMIT
 
-	slowdown = 0.75
-	drag_slowdown = 0.75
+	slowdown = 0.5
+	drag_slowdown = 0.5
 
 	spread = 0
 	recoil = 0

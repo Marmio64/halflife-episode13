@@ -760,7 +760,7 @@
 	head = /obj/item/clothing/head/halflife/blue_hardhat
 	mask = /obj/item/clothing/mask/gas/cwuengi //only really because i dont want them to be mistaken for a rebel
 	suit = /obj/item/clothing/suit/armor/civilprotection/speedy
-	suit_store = /obj/item/gun/ballistic/revolver/coltpython
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython/well_crafted
 	l_pocket = /obj/item/hl2/supply_radio/combine/logistics
 	r_pocket = /obj/item/flashlight/seclite
 

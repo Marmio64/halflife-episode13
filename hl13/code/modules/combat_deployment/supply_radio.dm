@@ -210,8 +210,8 @@
 	spawn_path = /obj/machinery/ammo_crate/heavy
 
 /datum/supply_beacon_option/rocket_launcher
-	option_name = "Rocket Launcher (325 Points)"
-	cost = 325
+	option_name = "Rocket Launcher (350 Points)"
+	cost = 350
 	spawn_path = /obj/item/gun/ballistic/rocketlauncher/halflife
 
 /datum/supply_beacon_option/missile_targeter

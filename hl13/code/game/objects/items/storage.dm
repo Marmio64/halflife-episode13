@@ -296,6 +296,16 @@
 	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/rpg_rebel/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/ammo_box/colta357, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/colta357, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/colta357, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
+	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
+	update_appearance(UPDATE_ICON)
+
 /obj/item/storage/backpack/halflife
 	icon = 'hl13/icons/obj/clothing/backpack.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/back.dmi'

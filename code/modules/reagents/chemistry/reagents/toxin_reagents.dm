@@ -731,7 +731,7 @@
 	creation_purity = REAGENT_STANDARD_PURITY
 	purity = REAGENT_STANDARD_PURITY
 	metabolization_rate = 0.125 * REAGENTS_METABOLISM
-	toxpwr = 1.25
+	toxpwr = 1.5
 	ph = 9.3
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 

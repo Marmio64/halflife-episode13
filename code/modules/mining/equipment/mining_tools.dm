@@ -73,7 +73,7 @@
 	toolspeed = 0.6 //available from roundstart, faster than a pickaxe.
 	usesound = 'sound/items/weapons/drill.ogg'
 	hitsound = 'sound/items/weapons/drill.ogg'
-	desc = "An electric mining drill for the especially scrawny."
+	desc = "An old world mining drill that has been updated by the Combine, turning it into a rather efficient mining tool."
 
 /obj/item/pickaxe/drill/cyborg
 	name = "cyborg mining drill"

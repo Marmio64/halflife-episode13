@@ -191,6 +191,8 @@
 /area/halflife/indoors/laborunion)
 "aZ" = (
 /obj/machinery/light/small/directional/south,
+/obj/structure/alien/weeds,
+/obj/structure/flora/xen/tinyshrooms,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/sewer/cave)
 "ba" = (
@@ -445,6 +447,10 @@
 /obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
+"cg" = (
+/obj/machinery/combine_walllight/directional/south,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "ch" = (
 /obj/machinery/camera{
 	c_tag = "Cell L5";
@@ -690,7 +696,7 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/prison/security/solitary)
 "dF" = (
-/mob/living/basic/halflife/headcrab,
+/obj/effect/spawner/random/halflife/random_headcrab,
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer)
 "dH" = (
@@ -1758,10 +1764,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison/mining)
-"jJ" = (
-/obj/machinery/combine_walllight/directional/south,
-/turf/closed/wall/halflife/metal,
-/area/halflife/outdoors/forest)
 "jK" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -3379,6 +3381,10 @@
 	},
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/prison/cafeteria)
+"rL" = (
+/obj/machinery/combine_walllight/directional/east,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "rM" = (
 /obj/structure/chair/halflife/metal/blue,
 /turf/open/floor/plating/indoor/cafeteria,
@@ -3391,6 +3397,7 @@
 "rO" = (
 /obj/structure/table/halflife/wood,
 /obj/effect/spawner/random/halflife/loot/rare,
+/obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands)
 "rQ" = (
@@ -3500,10 +3507,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/prison/security)
-"sn" = (
-/obj/machinery/combine_walllight/directional/east,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "so" = (
 /obj/structure/sign/poster/halflife/combine{
 	pixel_y = 32
@@ -3981,6 +3984,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/prison/security)
+"uQ" = (
+/obj/effect/mine/explosive/combine,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/forest)
 "uS" = (
 /obj/structure/chair/halflife/metal/blue,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -4388,10 +4395,6 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/cave)
-"wE" = (
-/mob/living/basic/halflife/zombie,
-/turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer)
 "wF" = (
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/prison/security/warden)
@@ -4965,6 +4968,10 @@
 "zs" = (
 /turf/closed/wall/halflife/concrete/bunker,
 /area/halflife/indoors/prison/security)
+"zt" = (
+/obj/effect/mine/explosive/combine,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "zu" = (
 /obj/effect/spawner/random/halflife/barnacle_spawner/rare,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -5909,9 +5916,9 @@
 /turf/cordon,
 /area/halflife/outdoors/forest/water)
 "Ex" = (
-/mob/living/basic/halflife/zombie/zombine,
-/turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer)
+/obj/structure/alien/weeds,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/sewer/cave)
 "Ey" = (
 /obj/structure/table/halflife/no_smooth/large/wood/desk,
 /obj/machinery/jukebox/radio,
@@ -5964,9 +5971,9 @@
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "EM" = (
-/mob/living/basic/halflife/headcrab/armored,
-/turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer)
+/obj/effect/spawner/random/halflife/random_headcrab,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "EN" = (
 /obj/structure/halflife/trash/garbage/dumpster/crate,
 /turf/open/floor/plating/indoor/tile/black,
@@ -6896,6 +6903,7 @@
 "IX" = (
 /obj/structure/table/halflife/wood,
 /obj/effect/spawner/random/halflife/loot/ammo,
+/obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands)
 "IY" = (
@@ -7125,10 +7133,6 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/prison/intake)
-"Kn" = (
-/obj/effect/mine/explosive/combine,
-/turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors/forest)
 "Kp" = (
 /obj/structure/mop_bucket/janitorialcart,
 /obj/item/mop,
@@ -7397,10 +7401,6 @@
 	},
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/prison/cells)
-"LC" = (
-/obj/effect/mine/explosive/combine,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "LD" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/hl2key/factory,
@@ -7674,6 +7674,10 @@
 "MQ" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison/mining)
+"MR" = (
+/obj/machinery/combine_walllight/directional/south,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/forest)
 "MS" = (
 /obj/item/scalpel,
 /obj/item/hemostat,
@@ -7740,6 +7744,10 @@
 /obj/machinery/door/unpowered/halflife/metal/red,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison/maintenance)
+"Ne" = (
+/obj/machinery/combine_walllight/directional/west,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "Nf" = (
 /obj/machinery/combine_datapodterminal,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -9027,9 +9035,10 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/prison/security)
 "To" = (
-/mob/living/basic/halflife/zombie/poison,
-/turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer)
+/obj/structure/alien/weeds,
+/obj/structure/flora/xen/leafy,
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/sewer/cave)
 "Tp" = (
 /turf/open/floor/plating/indoor/metal/pipe/corner,
 /area/halflife/indoors/bunker)
@@ -9085,6 +9094,11 @@
 /obj/item/clothing/head/utility/radiation,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/prison)
+"TH" = (
+/obj/structure/alien/weeds,
+/obj/structure/flora/xen/mound,
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/outlandscave)
 "TI" = (
 /obj/structure/bed/halflife/bedframe/cot,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
@@ -9163,10 +9177,6 @@
 /obj/structure/halflife/toilet,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/outlands)
-"Ug" = (
-/obj/machinery/combine_walllight/directional/west,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "Uh" = (
 /obj/structure/halflife/fence/wire/end/east/barb{
 	pixel_y = 32
@@ -9204,9 +9214,9 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands)
 "Un" = (
-/mob/living/basic/halflife/zombie/zombie_grunt,
-/turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer)
+/obj/effect/spawner/random/halflife/loot/rare,
+/turf/closed/indestructible/rock,
+/area/halflife/indoors/sewer/cave)
 "Uo" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/tile/black,
@@ -9238,10 +9248,6 @@
 /obj/machinery/cryopod,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/prison/security)
-"Uw" = (
-/mob/living/basic/halflife/zombie/engineer,
-/turf/open/floor/plating/indoor/concrete/sewer,
-/area/halflife/indoors/sewer)
 "Ux" = (
 /obj/structure/bed/halflife/mattress/old,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -9937,7 +9943,7 @@
 /area/halflife/outdoors/forest)
 "Yg" = (
 /obj/effect/decal/cleanable/blood/splatter,
-/mob/living/basic/halflife/zombie/fast,
+/obj/effect/spawner/random/halflife/random_zombie,
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer)
 "Yh" = (
@@ -17730,7 +17736,7 @@ Zk
 Zk
 Zk
 Zk
-Zk
+OW
 Zk
 Zk
 Zk
@@ -23638,7 +23644,7 @@ YC
 yo
 Zk
 Zk
-Zk
+OW
 yo
 hA
 Zk
@@ -26852,7 +26858,7 @@ YC
 yo
 lT
 Zk
-Zk
+OW
 yo
 Zk
 Zk
@@ -29113,7 +29119,7 @@ YC
 yo
 hA
 fM
-Uw
+Dh
 Zk
 IG
 yo
@@ -30313,7 +30319,7 @@ Zk
 Zk
 Zk
 yo
-EM
+dF
 In
 In
 Zk
@@ -30539,7 +30545,7 @@ Zk
 Zk
 Zk
 YX
-wE
+Dh
 yo
 Ks
 Ks
@@ -30884,7 +30890,7 @@ NS
 NS
 NS
 NS
-uf
+NS
 Cp
 Cp
 Cp
@@ -31086,9 +31092,9 @@ Cp
 NS
 Cp
 Cp
-Cp
-Cp
-Cp
+LM
+NS
+WT
 Cp
 Cp
 Cp
@@ -31248,8 +31254,8 @@ NQ
 wa
 Wv
 Wv
-Wv
-Wv
+To
+Ex
 wa
 YC
 YC
@@ -31290,7 +31296,7 @@ NS
 Cp
 Cp
 Cp
-Cp
+uf
 Cp
 Cp
 Cp
@@ -31344,7 +31350,7 @@ Zk
 Zk
 Zk
 Zk
-To
+Dh
 yo
 yo
 Kt
@@ -31542,7 +31548,7 @@ sT
 sT
 sT
 sT
-Un
+Dh
 Zk
 Zk
 Zk
@@ -31652,7 +31658,7 @@ YC
 YC
 YC
 wa
-Wv
+Ex
 Wv
 Wv
 Wv
@@ -31749,7 +31755,7 @@ Zk
 Zk
 NF
 Zk
-Ex
+Dh
 Zk
 yo
 YC
@@ -32152,7 +32158,7 @@ sT
 sT
 sT
 YC
-YC
+Un
 YC
 YC
 YC
@@ -33940,7 +33946,7 @@ NS
 NS
 NS
 NS
-NS
+LM
 NS
 qm
 qm
@@ -34141,7 +34147,7 @@ NS
 NS
 NS
 NS
-NS
+LM
 NS
 NS
 NS
@@ -34326,7 +34332,7 @@ Cp
 Cp
 NS
 NS
-NS
+uf
 Cp
 Cp
 Cp
@@ -35333,7 +35339,7 @@ Cp
 Cp
 Cp
 Sh
-Sh
+TH
 Cp
 Cp
 Cp
@@ -36360,7 +36366,7 @@ Cp
 LM
 NS
 NS
-NS
+vS
 Cp
 Cp
 Cp
@@ -57461,7 +57467,7 @@ Lk
 Ct
 Lk
 Ct
-Kn
+uQ
 Lk
 Ct
 Ct
@@ -57661,7 +57667,7 @@ Ct
 Ct
 Ct
 Ct
-LC
+zt
 Lk
 Ct
 Lk
@@ -57860,7 +57866,7 @@ DE
 gR
 Lk
 Lk
-Kn
+uQ
 Ct
 Ct
 Lk
@@ -58679,7 +58685,7 @@ Ct
 Ct
 XW
 XW
-Ug
+Ne
 Ct
 Ct
 Ct
@@ -59074,8 +59080,8 @@ oI
 DE
 DE
 bL
-jJ
-Lk
+bL
+MR
 Lk
 Ct
 Ct
@@ -60292,8 +60298,8 @@ oI
 DE
 DE
 bL
-jJ
-Ct
+bL
+cg
 Lk
 Ct
 Ct
@@ -60709,7 +60715,7 @@ Ct
 Ct
 XW
 XW
-sn
+rL
 Ct
 Ct
 Ct
@@ -60902,7 +60908,7 @@ oI
 DE
 Ct
 Ct
-Kn
+uQ
 Ct
 Lk
 Lk
@@ -61109,7 +61115,7 @@ Ct
 Lk
 Lk
 Lk
-Kn
+uQ
 Ct
 Ct
 Ct
@@ -61318,7 +61324,7 @@ Ct
 Ct
 Ct
 Ct
-LC
+zt
 pN
 Ct
 Ct
@@ -61518,7 +61524,7 @@ Ct
 Ct
 Ct
 Ct
-LC
+zt
 Ct
 Ct
 Ct
@@ -64318,11 +64324,11 @@ Sk
 Lk
 Ct
 Sk
-Ye
+EM
 cM
 cM
 pN
-Ye
+EM
 Lk
 Lk
 cM
@@ -65132,7 +65138,7 @@ Ct
 Ct
 Ct
 yY
-Ye
+EM
 Lk
 Lk
 Zw
@@ -65959,7 +65965,7 @@ Ct
 Ct
 Zw
 rO
-he
+Um
 he
 he
 PS

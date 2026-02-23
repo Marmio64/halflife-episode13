@@ -82,6 +82,20 @@
 	requires_hands = TRUE
 	delete_old = FALSE
 
+/datum/action/cooldown/spell/conjure_item/svd_ammo
+	name = "Procure SVD Dragunov Magazine"
+	desc = "Procures a magazine for you to use in your sniper rifle."
+	button_icon = 'hl13/icons/obj/guns/ammo.dmi'
+	button_icon_state = "m308small"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 30 SECONDS
+	item_type = /obj/item/ammo_box/magazine/svd
+	requires_hands = TRUE
+	delete_old = FALSE
+
 /datum/action/cooldown/spell/conjure_item/grenade
 	name = "Procure Grenade"
 	desc = "Procures a MK3A2 grenade for tossing."

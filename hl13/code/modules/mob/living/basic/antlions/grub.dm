@@ -34,7 +34,7 @@
 	..()
 	if(stat)
 		return
-	if(prob(25))
+	if(prob(20))
 		var/chosen_sound = pick(idle_sounds)
 		playsound(src, chosen_sound, 50, FALSE)
 

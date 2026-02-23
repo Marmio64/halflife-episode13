@@ -780,7 +780,7 @@
 	mask = /obj/item/clothing/mask/gas/hl2/military
 	suit = /obj/item/clothing/suit/armor/rebel
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
-	belt = /obj/item/storage/belt/civilprotection/coltammo_meds
+	belt = /obj/item/storage/belt/civilprotection/rpg_rebel
 	gloves = /obj/item/clothing/gloves/combat
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
 	back = /obj/item/gun/ballistic/rocketlauncher/halflife
@@ -845,7 +845,7 @@
 
 	suit = /obj/item/clothing/suit/armor/halflife/milvest
 	mask = /obj/item/clothing/mask/gas/hl2/swat/hardened
-	suit_store = /obj/item/gun/ballistic/revolver/coltpython
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython/well_crafted
 	gloves = /obj/item/clothing/gloves/fingerless
 	l_pocket = /obj/item/hl2/supply_radio/rebel/lieutenant
 	r_pocket = /obj/item/flashlight/seclite
@@ -895,7 +895,6 @@
 		/obj/item/gun/ballistic/revolver/coltpython = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/ammo_box/colta357 = 1,
-		/obj/item/ammo_box/magazine/svd = 1,
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
 	)
 
@@ -904,3 +903,5 @@
 
 	extra_dex = 4
 	extra_per = 6
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/svd_ammo)

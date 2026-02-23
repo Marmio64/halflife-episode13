@@ -11,8 +11,9 @@
 	maxHealth = 100
 	health = 100
 	obj_damage = 14
-	melee_damage_lower = 18
-	melee_damage_upper = 24
+	melee_attack_cooldown = 1.75 SECONDS
+	melee_damage_lower = 17
+	melee_damage_upper = 22
 	sharpness = SHARP_EDGED
 	wound_bonus = -20
 	attack_vis_effect = ATTACK_EFFECT_CLAW
@@ -190,7 +191,7 @@
 	speed = 0.5
 	maxHealth = 125
 	health = 125
-	melee_attack_cooldown = 1.75 SECONDS
+	melee_attack_cooldown = 1.5 SECONDS
 
 ///Meant to be avoided rather than fought head on. Very slow, but dangerous in melee.
 /mob/living/basic/halflife/zombie/engineer
@@ -200,8 +201,8 @@
 	icon_living = "engineer"
 	icon_dead = "engineer_dead"
 	speed = 2.75
-	melee_damage_lower = 21
-	melee_damage_upper = 26
+	melee_damage_lower = 20
+	melee_damage_upper = 24
 	obj_damage = 20
 	armour_penetration = 15
 	maxHealth = 120
@@ -497,8 +498,8 @@
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 1)
 	maxHealth = 64
 	health = 64
-	melee_damage_lower = 20
-	melee_damage_upper = 26
+	melee_damage_lower = 18
+	melee_damage_upper = 24
 	armour_penetration = 15
 	obj_damage = 20
 	speed = 2.35

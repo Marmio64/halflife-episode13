@@ -94,7 +94,7 @@
 /datum/supply_pack/service/mining_drills
 	name = "Mining Drills Crate"
 	desc = "Contains three high-tech combine mining drills, which can drastically increase the efficiency of your laborers."
-	cost = CARGO_CRATE_VALUE * 8
+	cost = CARGO_CRATE_VALUE * 8.5
 	contains = list(
 		/obj/item/pickaxe/drill,
 		/obj/item/pickaxe/drill,

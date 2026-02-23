@@ -411,6 +411,8 @@
 
 /obj/effect/spawner/random/halflife/random_headcrab
 	name = "random headcrab"
+	icon = 'hl13/icons/effects/random_spawners.dmi'
+	icon_state = "random_crab"
 	spawn_loot_count = 1
 
 	loot = list(
@@ -431,12 +433,16 @@
 
 /obj/effect/spawner/random/halflife/random_zombie
 	name = "random zombie"
+	icon = 'hl13/icons/effects/random_spawners.dmi'
+	icon_state = "random_zombie"
 	spawn_loot_count = 1
 
 	loot = list(
 				/mob/living/basic/halflife/zombie = 1,
+				/mob/living/basic/halflife/zombie/engineer = 1,
 				/mob/living/basic/halflife/zombie/fast = 1,
 				/mob/living/basic/halflife/zombie/poison = 1,
+				/mob/living/basic/halflife/zombie/zombie_grunt = 1,
 				/mob/living/basic/halflife/zombie/zombine = 1,
 				)
 

@@ -51,9 +51,9 @@
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/fuel
 	name = "breen-fuel can"
-	desc = "A special can of Breen's private reserve energy drinks. It has a strange after taste and makes you feel queezy, but you do at least feel more awake."
+	desc = "A discontinued can of Breen-Fuel. It was designed as a cheap energy drink which gave citizens extra energy to complete work for their benefactors, but production stopped after studies showed it had adverse health effects and the short term gains were not worth the longterm costs of lost labor."
 	icon_state = "breen_can_red"
-	list_reagents = list(/datum/reagent/consumable/breenfuel = 25)
+	list_reagents = list(/datum/reagent/consumable/breenfuel = 30)
 	custom_price = PAYCHECK_CREW * 2
 
 /obj/item/reagent_containers/cup/glass/mouthwash
