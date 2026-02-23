@@ -708,7 +708,8 @@
 	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
-	jamming_chance = 5
+	jamming_chance = 8
+	projectile_damage_multiplier = 1.45 //approx 40 damage a shot
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/start_empty
 	magazine = /obj/item/ammo_box/magazine/internal/boltaction/mosin/start_empty

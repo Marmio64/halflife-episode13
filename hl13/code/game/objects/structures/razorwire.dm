@@ -135,7 +135,7 @@
 
 /obj/item/stack/razorwire
 	name = "razor wire assembly"
-	desc = "A bundle of barbed wire supported by metal rods. Used to deny access to areas under pain of entanglement and injury. A classic fortification since the 1900s."
+	desc = "A bundle of barbed wire supported by stakes. Used to deny access to areas under pain of entanglement and injury. A classic fortification since the 1900s."
 	icon = 'hl13/icons/obj/barbedwire.dmi'
 	icon_state = "barbedwire_assembly"
 	w_class = WEIGHT_CLASS_BULKY
