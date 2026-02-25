@@ -70,6 +70,8 @@
 			ammo_to_dispense = /obj/item/ammo_casing/a20mm
 		if("Rocket")
 			ammo_to_dispense = /obj/item/ammo_casing/rocket/hl13
+		if("Colt Python Armor Piercing")
+			ammo_to_dispense = /obj/item/ammo_box/colta357/armor_piercing
 
 	if(ammo_to_dispense)
 		playsound(src, 'hl13/sound/effects/ammocrate_open.ogg', 50, TRUE, extrarange = -3)
@@ -101,6 +103,10 @@
 	ammo_amount = 4
 	recharges = FALSE
 	vendoptions = list("Dark Energy Ball", "20mm Grenade", "Rocket")
+
+/obj/machinery/ammo_crate/heavy/recharge
+	desc = "A large ammo crate. Contains special ammo types that you can pull out after a short delay."
+	recharges = TRUE
 
 /obj/machinery/ammo_crate/no_recharge
 	desc = "A large ammo crate. It's somewhat slow to grab out of, and has a limited amount of ammo it can give."

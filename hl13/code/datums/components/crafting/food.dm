@@ -23,13 +23,14 @@
 	category = CAT_RATION
 
 /datum/crafting_recipe/food/nutripaste_factory_ingredients
-	name = "Cured Small Nutripaste"
+	name = "Cured Nutripaste"
 	reqs = list(
 		/obj/item/ration_construction/ingredientblock = 1,
 		/obj/item/reagent_containers/pill/antitox = 1,
 	)
-	result = /obj/item/food/nutripaste/small
+	result = /obj/item/food/nutripaste
 	category = CAT_RATION
+	crafting_flags = CRAFT_CHECK_DENSITY
 
 /datum/crafting_recipe/food/chumtoadstew
 	name = "Chumtoad Stew"

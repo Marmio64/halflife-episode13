@@ -96,6 +96,20 @@
 	requires_hands = TRUE
 	delete_old = FALSE
 
+/datum/action/cooldown/spell/conjure_item/overseer_viscerator
+	name = "Procure Shielded Viscerator"
+	desc = "Procures a deployable, shielded viscerator."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "viscerator"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 25 SECONDS
+	item_type = /obj/item/grenade/spawnergrenade/manhacks/shielded
+	requires_hands = TRUE
+	delete_old = FALSE
+
 /datum/action/cooldown/spell/conjure_item/grenade
 	name = "Procure Grenade"
 	desc = "Procures a MK3A2 grenade for tossing."

@@ -56,6 +56,8 @@ GLOBAL_VAR_INIT(beating_quota, 20)
 	radio.talk_into(src, "Attention, new civil protection quota received. Compliance is mandatory.", radio_channel)
 	GLOB.beating_quota = (get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)+2) //The goal is equal to all currently playing players, plus two as a baseline.
 	GLOB.beating_quota = ROUND_UP(GLOB.beating_quota)
+	if(GLOB.beating_quota < 5) //ensure the quota is always at least 5
+		GLOB.beating_quota = 5
 	/*
 	item_quanity_received = 0
 

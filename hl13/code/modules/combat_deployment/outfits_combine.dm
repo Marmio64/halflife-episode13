@@ -298,11 +298,13 @@
 
 	backpack_contents = list(
 		/obj/item/ammo_box/colta357 = 1,
-		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
 	)
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/branescan.ogg'
+
+	extra_per = 2
 
 /datum/outfit/deployment_loadout/combine/tier3/medic_cop
 	name = "Deployment: Upgraded Medical Cop"
@@ -617,7 +619,6 @@
 	mask = /obj/item/clothing/mask/gas/civilprotection/overseer
 	belt = /obj/item/storage/belt/civilprotection/full
 
-	l_pocket = /obj/item/grenade/spawnergrenade/manhacks/shielded
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
@@ -627,9 +628,11 @@
 	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
 
 	backpack_contents = list(
-		/obj/item/grenade/spawnergrenade/manhacks/shielded = 3,
+		/obj/item/grenade/spawnergrenade/manhacks/shielded = 2,
 		/obj/item/ammo_box/magazine/mp7 = 4,
 	)
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/overseer_viscerator)
 
 ////////////////////// TIER 5 /////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier5

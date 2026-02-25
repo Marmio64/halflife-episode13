@@ -54,7 +54,7 @@
 	mask = /obj/item/clothing/mask/gas/cwuengi
 	shoes = /obj/item/clothing/shoes/halflife/engineer
 	gloves = /obj/item/clothing/gloves/halflife/engineer
-	r_pocket = /obj/item/hl2key/factory
+	r_pocket = /obj/item/storage/halflife/keyring/engineer
 	l_pocket = /obj/item/flashlight
 	skillchips = list(/obj/item/skillchip/engineer)
 

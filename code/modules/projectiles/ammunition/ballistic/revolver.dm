@@ -10,6 +10,10 @@
 /obj/item/ammo_casing/a357/spent
 	projectile_type = null
 
+/obj/item/ammo_casing/a357/armor_piercing
+	name = ".357 armor piercing bullet casing"
+	projectile_type = /obj/projectile/bullet/a357/armor_piercing
+
 /obj/item/ammo_casing/a357/match
 	name = ".357 match bullet casing"
 	desc = "A .357 bullet casing, manufactured to exceedingly high standards."

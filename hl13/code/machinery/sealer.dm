@@ -5,6 +5,7 @@
 	icon_state = "sealer"
 	var/malfunctioning = FALSE
 	var/dangerous_malfunction = FALSE
+	var/manually_broke = FALSE
 
 /obj/machinery/sealer/examine(mob/user)
 	. = ..()
@@ -28,6 +29,7 @@
 
 	visible_message("[src] suddenly makes a loud grinding sound before shutting down with a large pop!")
 	malfunctioning = TRUE
+	update_appearance(UPDATE_ICON)
 	if(prob(10))
 		dangerous_malfunction = TRUE
 		if(prob(1))
@@ -140,9 +142,30 @@
 	if(atom_integrity < max_integrity) //Also fixes it up
 		atom_integrity = max_integrity
 
-	to_chat(user, span_notice("Repair reward dispensed."))
-	new /obj/item/stack/spacecash/c1(user.loc, 4)
+	if(!manually_broke)
+		to_chat(user, span_notice("Repair reward dispensed."))
+		new /obj/item/stack/spacecash/c1(user.loc, 4)
+
+	manually_broke = FALSE
+
 	return TRUE
+
+/obj/machinery/sealer/crowbar_act(mob/living/user, obj/item/O)
+	. = ..()
+	if(!O.tool_behaviour == TOOL_CROWBAR)
+		return FALSE
+
+	if(malfunctioning)
+		balloon_alert(user, "Already broken")
+		return FALSE
+
+	playsound(loc, 'sound/items/tools/crowbar.ogg', 25, 1)
+	balloon_alert_to_viewers("Starts breaking [src]'s internals")
+	if(!do_after(user, 8 SECONDS, src))
+		return FALSE
+
+	breakdown()
+	manually_broke = TRUE
 
 /obj/machinery/sealer/proc/explode_in_flames()
 	flame_radius(4, get_turf(src))

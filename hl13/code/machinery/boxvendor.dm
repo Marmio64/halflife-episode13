@@ -4,7 +4,7 @@
 	icon_state = "box_dispenser"
 	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	resistance_flags = FIRE_PROOF
-	max_integrity = 1500 //Because it is pretty important, and there probably will only be one of them.
+	max_integrity = 9999 //Because it is pretty important, and there probably will only be one of them.
 
 	/// How many boxes are in this specific unit?
 	var/boxes_stored = 0
@@ -97,10 +97,18 @@
 		var/obj/item/card/id/card = living.get_idcard()
 		if(card && cashprize)
 			if(ACCESS_QM in card.GetAccess())
-				to_chat(user, span_notice("Cash prize dispensed."))
-				new /obj/item/stack/spacecash/c1(user.loc, cashprize)
-				playsound(loc, 'hl13/sound/machines/atm/cardreader_insert.ogg', 30)
-				cashprize = 0
+				dispense_reward(living)
 			else
 				to_chat(user, span_notice("This card does not have access to redeeming the vendor's cash prize."))
 				return
+
+/obj/machinery/box_vendor/proc/dispense_reward(mob/user)
+	if(cashprize < 1)
+		to_chat(user, span_notice("Cash prize dispensed."))
+		new /obj/item/stack/spacecash/c1(user.loc, cashprize)
+		playsound(loc, 'hl13/sound/machines/atm/cardreader_insert.ogg', 30)
+		cashprize = 0
+
+/obj/machinery/box_vendor/emag_act(mob/user, obj/item/card/emag/emag_card)
+	dispense_reward(user)
+	return TRUE

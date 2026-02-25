@@ -8,7 +8,7 @@
 /datum/quirk/overweight/add()
 	if(iscarbon (quirk_holder))
 		var/mob/living/carbon/human/human = quirk_holder
-		human.set_nutrition(NUTRITION_LEVEL_FAT * 2)
+		human.set_nutrition(NUTRITION_LEVEL_FAT * 1.75)
 		human.overeatduration = 195 SECONDS
 
 /datum/quirk/overweight/remove()

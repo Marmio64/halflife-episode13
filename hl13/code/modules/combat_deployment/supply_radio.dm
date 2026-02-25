@@ -143,6 +143,7 @@
 			/datum/supply_beacon_option/canister_targeter,
 			/datum/supply_beacon_option/emplacement_gun,
 			/datum/supply_beacon_option/combine_tier5,
+			/datum/supply_beacon_option/heavyammocrate_rechargable,
 		)
 		for(var/datum/supply_beacon_option/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.option_name)] = loadout
@@ -163,6 +164,7 @@
 			/datum/supply_beacon_option/missile_targeter,
 			/datum/supply_beacon_option/emplacement_gun,
 			/datum/supply_beacon_option/rebel_tier5,
+			/datum/supply_beacon_option/heavyammocrate_rechargable,
 		)
 		for(var/datum/supply_beacon_option/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.option_name)] = loadout
@@ -238,3 +240,8 @@
 	option_name = "Tier 5 Loadout Beacon (500 Points)"
 	cost = 500
 	spawn_path = /obj/item/hl2/loadout_picker/combine/tier5/nonstick
+
+/datum/supply_beacon_option/heavyammocrate_rechargable
+	option_name = "Self Recharging Heavy Ammo Crate (550 Points)"
+	cost = 550
+	spawn_path = /obj/machinery/ammo_crate/heavy/recharge

@@ -824,7 +824,7 @@
 /datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt
 	name = "Deployment: Extract Empowered Vortigaunt"
 	display_name = "Extract Empowered Vortigaunt (Support)"
-	desc = "You have all the powers of an elder vortigaunt, but with drastically increased damage resistance and a mending ability which is twice as powerful, making you very good at healing people. You can also summon friendly antlions on a long cooldown."
+	desc = "You have all the powers of an elder vortigaunt, but with double the damage resistance and a mending ability which is twice as powerful, making you very good at healing people. You can also summon friendly antlions on a long cooldown."
 
 	uniform = null
 	shoes = null

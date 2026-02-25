@@ -211,7 +211,7 @@
 	health = 500
 	melee_damage_lower = 25
 	melee_damage_upper = 30
-	guaranteed_butcher_results = list(/obj/item/food/meat/slab/xen = 3, /obj/item/bugbait = 1, /obj/item/lockpick/ingested = 1)
+	guaranteed_butcher_results = list(/obj/item/food/meat/slab/xen = 3, /obj/item/lockpick/ingested = 1)
 
 /mob/living/basic/halflife/antlion_guard/guardian
 	name = "Antlion Guardian"
@@ -311,16 +311,17 @@
 	sound = 'hl13/sound/items/bugbait_squeeze.ogg'
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 90 SECONDS
+	cooldown_time = 60 SECONDS
 	summon_radius = 1
 	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound)
 	summon_amount = 3
 
 /datum/action/cooldown/spell/conjure/antlion/hidden_vort
+	cooldown_time = 90 SECONDS
 	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/human_faction)
 
 /datum/action/cooldown/spell/conjure/antlion/extract_vort
-	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/human_faction)
+	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/rebel_faction)
 	summon_amount = 2
 	cooldown_time = 60 SECONDS
 

@@ -211,8 +211,8 @@
 				human.adjust_tiredness(25)
 				human.adjust_eye_blur(10 SECONDS)
 	else if(NUTRITION_LEVEL_FAT < nutrition)
-		human.set_stat_modifier("hunger", STATKEY_STR, 1) //fat people are still often strong
-		human.set_stat_modifier("hunger", STATKEY_DEX, -3) //just not very mobile
+		human.set_stat_modifier("hunger", STATKEY_END, 1) //lots of fat gives you resistance to attacks i suppose
+		human.set_stat_modifier("hunger", STATKEY_DEX, -4) //just not very mobile
 	else if(NUTRITION_LEVEL_WELL_FED < nutrition)
 		human.set_stat_modifier("hunger", STATKEY_STR, 1)
 		human.set_stat_modifier("hunger", STATKEY_DEX, 1)

@@ -137,6 +137,11 @@
 	wound_bonus = -75 //insane how much is needed to make it not insta crit wound
 	accurate_range = 125
 
+
+/obj/projectile/bullet/a357/armor_piercing
+	name = ".357 armor piercing bullet"
+	armour_penetration = 35
+
 /obj/projectile/bullet/a357/phasic
 	name = ".357 phasic bullet"
 	icon_state = "gaussphase"

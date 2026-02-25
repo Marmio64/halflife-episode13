@@ -11,6 +11,9 @@
 /obj/structure/trap/deployment_spawn_prot/examine(mob/user)
 	return list()
 
+/obj/structure/trap/deployment_spawn_prot/flare()
+	animate(src, alpha = initial(alpha), time = time_between_triggers)
+
 /obj/structure/trap/deployment_spawn_prot/trap_effect(mob/living/living)
 	if(GLOB.deployment_win_team && GLOB.deployment_win_team != team) //disable protection so that winners can pass through to finish the job
 		return

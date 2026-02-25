@@ -51,6 +51,10 @@
 /mob/living/simple_animal/hostile/halflife/antlion/digsound/human_faction
 	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
 
+/mob/living/simple_animal/hostile/halflife/antlion/digsound/rebel_faction
+	deployment_faction = REBEL_DEPLOYMENT_FACTION
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+
 /mob/living/simple_animal/hostile/halflife/antlion/OpenFire()
 	if(charging)
 		return

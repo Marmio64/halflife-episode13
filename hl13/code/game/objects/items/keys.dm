@@ -52,6 +52,10 @@
 	icon_state = "[initial(icon_state)]_[amount]"
 	return ..()
 
+/obj/item/storage/halflife/keyring/engineer/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/hl2key/factory, src)
+	SSwardrobe.provide_type(/obj/item/hl2key/maint, src)
+	update_appearance(UPDATE_ICON)
 
 /obj/item/lockpick
 	name = "lockpick"
@@ -132,6 +136,11 @@
 	name = "store key"
 	desc = "This key will open doors in the store."
 	lockid = "store"
+
+/obj/item/hl2key/maint
+	name = "maintenance key"
+	desc = "This key will open maintenance doors."
+	lockid = "maint"
 
 /obj/item/hl2key/rebel
 	name = "bunker key"

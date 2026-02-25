@@ -9,7 +9,14 @@
 	item_flags = NO_MAT_REDEMPTION
 	ammo_band_icon = "+38_ammo_band"
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
+	ammo_band_icon = "+38_ammo_band"
 	ammo_band_color = null
+
+/obj/item/ammo_box/colta357/armor_piercing
+	name = "speed loader (.357 Armor Piercing)"
+	desc = "Designed to quickly reload revolvers. These rounds are manufactured with armor piercing materials, and additional gunpowder."
+	ammo_type = /obj/item/ammo_casing/a357/armor_piercing
+	ammo_band_color = "#8a231e"
 
 /obj/item/ammo_box/halflife
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
