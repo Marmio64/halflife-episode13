@@ -563,6 +563,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if (prefs.read_preference(/datum/preference/toggle/autofullscreen))
 		if(!fullscreen)
 			toggle_fullscreen() //hl13 edit
+			to_chat(src, span_boldnotice("Auto fullscreen is enabled by default. It may cause a white bar to appear in your chatbar on relogging, use Fix Chat in the OOC verbs in the top right to remove it, or disable this preference in your settings."))
 
 //////////////
 //DISCONNECT//

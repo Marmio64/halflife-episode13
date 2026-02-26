@@ -35,6 +35,8 @@
 	lighting_cutoff_red = 15
 	lighting_cutoff = 35
 
+	base_dexterity = 15
+
 	var/mob/living/zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed
 	var/can_zombify = TRUE
 
