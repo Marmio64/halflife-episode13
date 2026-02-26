@@ -688,11 +688,6 @@
 	result = /obj/item/clothing/head/utility/hardhat/cakehat
 	category = CAT_CAKE
 
-/datum/crafting_recipe/food/microwave/cakehat/energycake
-	reqs = list(/obj/item/food/cake/birthday/energy = 1)
-	result = /obj/item/clothing/head/utility/hardhat/cakehat/energycake
-	category = CAT_CAKE
-
 /datum/crafting_recipe/food/microwave/cheese_curds
 	reqs = list(/obj/item/food/cheese/curd_cheese = 1)
 	result = /obj/item/food/cheese/cheese_curds

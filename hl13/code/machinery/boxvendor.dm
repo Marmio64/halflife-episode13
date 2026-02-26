@@ -23,7 +23,7 @@
 	. += span_notice("The vendor has [boxes_stored] boxes left to dispense.")
 	. += span_notice("[SSdaylight.factory_containers_filled] containers out of the [SSdaylight.factory_container_goal] quota have been filled.")
 	if(cashprize)
-		. += span_notice("The vendor has a cash prize of [cashprize] credits stored inside for completing the quota. It can be redeemed by swiping a Foreman-level or higher card on it.")
+		. += span_notice("The vendor has a cash prize of [cashprize] credits stored inside for completing the quota. It can be redeemed by swiping a Labor Lead-level or higher card on it.")
 
 /obj/machinery/box_vendor/interact(mob/living/carbon/human/user)
 	. = ..()
@@ -91,19 +91,22 @@
 
 /obj/machinery/box_vendor/attackby(obj/item/item, mob/user, params)
 
+	if(istype(item, /obj/item/card/emag))
+		return
+
 	if(isliving(user))
 		var/mob/living/living = user
 
 		var/obj/item/card/id/card = living.get_idcard()
 		if(card && cashprize)
-			if(ACCESS_QM in card.GetAccess())
+			if(ACCESS_KEYCARD_AUTH in card.GetAccess())
 				dispense_reward(living)
 			else
 				to_chat(user, span_notice("This card does not have access to redeeming the vendor's cash prize."))
 				return
 
 /obj/machinery/box_vendor/proc/dispense_reward(mob/user)
-	if(cashprize < 1)
+	if(0 < cashprize)
 		to_chat(user, span_notice("Cash prize dispensed."))
 		new /obj/item/stack/spacecash/c1(user.loc, cashprize)
 		playsound(loc, 'hl13/sound/machines/atm/cardreader_insert.ogg', 30)

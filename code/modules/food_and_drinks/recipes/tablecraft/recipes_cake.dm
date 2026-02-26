@@ -121,16 +121,6 @@
 	result = /obj/item/food/cake/pound_cake
 	category = CAT_CAKE
 
-/datum/crafting_recipe/food/hardwarecake
-	name = "Hardware cake"
-	reqs = list(
-		/obj/item/food/cake/plain = 1,
-		/obj/item/circuitboard = 2,
-		/datum/reagent/toxin/acid = 5
-	)
-	result = /obj/item/food/cake/hardware_cake
-	category = CAT_CAKE
-
 /datum/crafting_recipe/food/berry_chocolate_cake
 	name = "strawberry chocolate cake"
 	reqs = list(

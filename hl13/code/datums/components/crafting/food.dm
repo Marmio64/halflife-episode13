@@ -22,6 +22,16 @@
 	result = /obj/item/food/xenstew
 	category = CAT_RATION
 
+/datum/crafting_recipe/food/leechstew
+	name = "Leech Stew"
+	reqs = list(
+		/obj/item/food/halflife/nutrient_bar = 1,
+		/datum/reagent/water = 15,
+		/obj/item/food/meat/cutlet/xen = 2,
+	)
+	result = /obj/item/food/leechstew
+	category = CAT_RATION
+
 /datum/crafting_recipe/food/nutripaste_factory_ingredients
 	name = "Cured Nutripaste"
 	reqs = list(

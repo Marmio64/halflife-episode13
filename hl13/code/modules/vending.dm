@@ -282,6 +282,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/keyvendor, 32)
 		/obj/item/food/grown/garlic = 3,
 		/obj/item/food/grown/cabbage = 3,
 		/obj/item/food/grown/chili = 3,
+		/obj/item/food/grown/mushroom/chanterelle = 3,
 		/obj/item/storage/fancy/egg_box = 1,
 		/obj/item/halflife/nutrient_bar_wrapping/water = 4,
 		/obj/item/halflife/nutrient_bar_wrapping/pork = 2,

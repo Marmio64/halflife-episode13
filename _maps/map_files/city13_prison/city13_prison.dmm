@@ -924,6 +924,15 @@
 /obj/effect/spawner/random/halflife/pet_spawner,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"eT" = (
+/obj/machinery/door/unpowered/halflife/metal/red{
+	dir = 4;
+	keylock = 1;
+	locked = 1;
+	lockid = "maint"
+	},
+/turf/open/floor/plating/indoor/tile,
+/area/halflife/indoors/prison)
 "eV" = (
 /obj/structure/closet/secure_closet/freezer/halflife/alt2,
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -4868,6 +4877,10 @@
 /obj/structure/chair/halflife/metal/blue,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/prison/infirmary)
+"yN" = (
+/obj/structure/ladder/halflife/upwards,
+/turf/open/floor/plating/indoor/tile,
+/area/halflife/indoors/prison)
 "yO" = (
 /obj/machinery/combine_datapodterminal,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -4876,10 +4889,6 @@
 /mob/living/basic/trader/halflife/plf_recruiter,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/outlands/shop)
-"yQ" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/indoor/metal/plate,
-/area/halflife/indoors/prison)
 "yR" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -5119,16 +5128,6 @@
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
-"Ad" = (
-/obj/item/hl2key/maint,
-/obj/structure/table/halflife/metal/grate,
-/obj/item/hl2key/maint,
-/obj/item/hl2key/maint,
-/obj/item/hl2key/maint,
-/obj/item/hl2key/maint,
-/obj/item/hl2key/maint,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/halflife/indoors/prison/security)
 "Ae" = (
 /turf/open/floor/plating/indoor/metal/walkway/corner{
 	dir = 4
@@ -5334,6 +5333,8 @@
 /obj/structure/closet/crate/halflife,
 /obj/item/stack/sticky_tape,
 /obj/item/stack/sticky_tape,
+/obj/item/multitool,
+/obj/item/multitool,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison/engineering)
 "Bl" = (
@@ -5515,6 +5516,10 @@
 	dir = 4
 	},
 /area/halflife/indoors/sewer)
+"Cj" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/prison/maintenance)
 "Ck" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/indoor/tile/black,
@@ -5825,15 +5830,6 @@
 /obj/item/stack/sheet/cloth/ten,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/bunker)
-"DO" = (
-/obj/machinery/door/unpowered/halflife/metal/red{
-	dir = 4;
-	keylock = 1;
-	locked = 1;
-	lockid = "maint"
-	},
-/turf/open/floor/plating/indoor/tile,
-/area/halflife/indoors/prison)
 "DP" = (
 /obj/structure/window/fulltile/halflife/nosmooth/brick{
 	dir = 1
@@ -6433,10 +6429,15 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison/engineering)
 "GA" = (
-/obj/structure/table/halflife/no_smooth/cable_reel,
-/obj/effect/spawner/random/halflife/loot,
-/turf/open/floor/plating/indoor/metal/plate,
-/area/halflife/indoors/prison/maintenance)
+/obj/item/hl2key/maint,
+/obj/structure/table/halflife/metal/grate,
+/obj/item/hl2key/maint,
+/obj/item/hl2key/maint,
+/obj/item/hl2key/maint,
+/obj/item/hl2key/maint,
+/obj/item/hl2key/maint,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/prison/security)
 "GD" = (
 /obj/machinery/camera{
 	c_tag = "Train Station East Lower";
@@ -7004,10 +7005,6 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison/gym)
-"Ji" = (
-/obj/structure/ladder/halflife/upwards,
-/turf/open/floor/plating/indoor/tile,
-/area/halflife/indoors/prison)
 "Jj" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/plating/indoor/woodc,
@@ -7765,6 +7762,13 @@
 /obj/machinery/turnstile/brig/halflife/forcefield/nodirectional,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
+"MW" = (
+/obj/machinery/camera{
+	c_tag = "Southwest Exit Hallway Maintenance Room";
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/prison)
 "MY" = (
 /obj/structure/table/halflife/no_smooth/large/metal,
 /obj/machinery/reagentgrinder{
@@ -8012,6 +8016,11 @@
 /obj/structure/table/halflife/metal/small,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/prison/cafeteria)
+"Ok" = (
+/obj/structure/table/halflife/no_smooth/cable_reel,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/prison/maintenance)
 "Ol" = (
 /obj/structure/table/halflife/metal/heavy,
 /obj/machinery/press,
@@ -8404,9 +8413,9 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/prison/security)
 "Qb" = (
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/metal/plate,
-/area/halflife/indoors/prison/maintenance)
+/area/halflife/indoors/prison)
 "Qc" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/indoor/concrete,
@@ -8625,13 +8634,6 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/outlands)
-"Rg" = (
-/obj/machinery/camera{
-	c_tag = "Southwest Exit Hallway Maintenance Room";
-	dir = 1
-	},
-/turf/open/floor/plating/indoor/metal/plate,
-/area/halflife/indoors/prison)
 "Rh" = (
 /obj/effect/spawner/random/halflife/loot/rare,
 /turf/open/floor/plating/indoor/concrete/sewer,
@@ -50323,9 +50325,9 @@ Hm
 Hm
 fj
 nD
-Ji
+yN
 RE
-Rg
+MW
 nD
 Ct
 Ct
@@ -50528,7 +50530,7 @@ kN
 nD
 IN
 RE
-yQ
+Qb
 nD
 Ct
 Ct
@@ -51135,7 +51137,7 @@ nD
 nD
 nD
 nD
-DO
+eT
 nD
 nD
 Pn
@@ -84429,7 +84431,7 @@ nD
 Xd
 av
 av
-GA
+Ok
 Xd
 Xd
 WH
@@ -84630,7 +84632,7 @@ nD
 nD
 nD
 Xd
-Qb
+Cj
 av
 Ib
 Xd
@@ -84965,7 +84967,7 @@ zs
 kD
 Tn
 tE
-Ad
+GA
 kD
 ba
 tE

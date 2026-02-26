@@ -147,17 +147,6 @@
 	result = /obj/item/food/burger/baconburger
 	category = CAT_BURGER
 
-/datum/crafting_recipe/food/catburger
-	name = "Cat burger"
-	reqs = list(
-		/obj/item/food/bun = 1,
-		/obj/item/food/patty/plain = 1,
-		/obj/item/organ/ears/cat = 1,
-		/obj/item/organ/tail/cat = 1,
-	)
-	result = /obj/item/food/burger/catburger
-	category = CAT_BURGER
-
 /datum/crafting_recipe/food/crabburger
 	name = "Crab Burger"
 	reqs = list(
@@ -196,21 +185,6 @@
 			/obj/item/food/bun = 1
 	)
 	result = /obj/item/food/burger/chicken
-	category = CAT_BURGER
-
-/datum/crafting_recipe/food/crazyhamburger
-	name = "Crazy hamburger"
-	reqs = list(
-			/obj/item/food/patty/plain = 2,
-			/obj/item/food/bun = 1,
-			/obj/item/food/cheese/wedge = 2,
-			/obj/item/food/grown/chili = 1,
-			/obj/item/food/grown/cabbage = 1,
-			/obj/item/toy/crayon/green = 1,
-			/obj/item/flashlight/flare = 1,
-			/datum/reagent/consumable/nutriment/fat/oil = 15
-	)
-	result = /obj/item/food/burger/crazy
 	category = CAT_BURGER
 
 /datum/crafting_recipe/food/sloppy_moe

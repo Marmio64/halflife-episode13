@@ -4,13 +4,13 @@
 	duds = list("ewww... nothing", "it was nothing", "it was toilet paper", "it sunk into the sewage", "the hook is empty", "where's the damn money?!")
 	overlay_state = "portal_river" // placeholder
 	fish_table = list(
-		FISHING_DUD = 32,
+		FISHING_DUD = 34,
 		/obj/item/trash/halflife/nutrient_bar_waste/water = 4,
 		/obj/item/reagent_containers/cup/soda_cans/breenwater/empty = 4,
 		/obj/item/fish/needlefish = 4,
 		/obj/item/fish/ratfish = 2,
 		/obj/item/storage/wallet/money = 2,
-		/obj/item/fish/leech = 1,
+		/obj/item/fish/leech = 2,
 	)
 	fish_counts = list(
 		/obj/item/storage/wallet/money = 1,
@@ -63,8 +63,8 @@
 	radial_state = "seaboat"
 	overlay_state = "portal_ocean"
 	fish_table = list(
-		FISHING_DUD = 12,
-		/obj/item/fish/leech = 8,
+		FISHING_DUD = 14,
+		/obj/item/fish/leech = 12,
 		/obj/item/fish/perch = 2,
 		/obj/item/fish/catfish = 1,
 	)
@@ -93,3 +93,19 @@
 		/datum/reagent/consumable/nutriment/vitamin = 2,
 	)
 	bite_consumption = 3
+
+/obj/item/food/fishmeat/leech/make_grillable() //hl13 edit
+	AddComponent(/datum/component/grillable, /obj/item/food/grilled_leech, rand(15 SECONDS, 25 SECONDS), TRUE, TRUE)
+
+/obj/item/food/grilled_leech
+	name = "grilled leech fillet"
+	desc = "A simple grilled fillet of leech."
+	icon = 'hl13/icons/obj/food.dmi'
+	icon_state = "grilledfish"
+	food_reagents = list(
+		/datum/reagent/consumable/nutriment/protein = 3,
+		/datum/reagent/consumable/nutriment/vitamin = 2,
+	)
+	tastes = list("leech" = 1)
+	foodtypes = SEAFOOD
+	w_class = WEIGHT_CLASS_SMALL
