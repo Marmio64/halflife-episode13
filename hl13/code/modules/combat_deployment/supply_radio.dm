@@ -117,7 +117,7 @@
 
 /obj/item/hl2/supply_radio/rebel/lieutenant
 	name = "PLF Lieutenant Supply Radio"
-	max_cash_regeneration = 2
+	max_cash_regeneration = 3
 	final_allowed_cash = 300
 
 /obj/item/hl2/supply_radio/combine
@@ -126,7 +126,7 @@
 
 /obj/item/hl2/supply_radio/combine/logistics
 	name = "Combine Logistics Supply Radio"
-	max_cash_regeneration = 6
+	max_cash_regeneration = 7
 	final_allowed_cash = 450 //allows everything but more tier 5s
 
 /obj/item/hl2/supply_radio/combine/generate_display_names()
