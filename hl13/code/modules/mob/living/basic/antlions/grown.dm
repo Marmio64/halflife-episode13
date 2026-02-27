@@ -74,6 +74,9 @@
 	///bonus damage done to objects
 	var/object_damage = 60
 
+/obj/projectile/acidspray/fast
+	speed = 2.75
+
 /obj/projectile/acidspray/on_hit(atom/target, blocked = 0, pierce_hit)
 	if(blocked == 100)
 		return ..()
@@ -199,7 +202,7 @@
 		playsound(src, 'sound/effects/butcher.ogg', 50, TRUE, extrarange = -3)
 
 /mob/living/basic/halflife/antlion_guard/deployment
-	melee_attack_cooldown = 2 SECONDS
+	melee_attack_cooldown = 1.75 SECONDS
 	maxHealth = 500
 	health = 500
 	obj_damage = 40
@@ -224,8 +227,8 @@
 	melee_damage_upper = 45
 	obj_damage = 50
 	melee_attack_cooldown = 2 SECONDS
-	maxHealth = 1500
-	health = 1500
+	maxHealth = 1200
+	health = 1200
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner
 	var/datum/action/cooldown/spell/conjure/antlions/antlions

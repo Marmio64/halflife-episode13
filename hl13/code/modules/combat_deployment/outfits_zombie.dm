@@ -29,14 +29,14 @@
 	display_name = "Fast Headcrab (Offense)"
 	desc = "A fast headcrab. Speedier but less durable, and deals less damage than the standard headcrab."
 
-	mob_to_be = /mob/living/basic/halflife/headcrab/fast
+	mob_to_be = /mob/living/basic/halflife/headcrab/fast/deployment
 
 /datum/outfit/deployment_loadout/xen/tier1/armored_headcrab
 	name = "Deployment: Armored Headcrab"
 	display_name = "Armored Headcrab (Defense)"
 	desc = "An armored headcrab. Deals less damage than the standard headcrab, but is more durable."
 
-	mob_to_be = /mob/living/basic/halflife/headcrab/armored
+	mob_to_be = /mob/living/basic/halflife/headcrab/armored/deployment
 
 //// TIER 2 //////////////
 
@@ -59,7 +59,7 @@
 	display_name = "Zombified Engineer (Defense)"
 	desc = "You are incredibly slow, but have powerful attacks and bit of extra health. You specialize in ambushing targets in close quarters."
 
-	mob_to_be = /mob/living/basic/halflife/zombie/engineer
+	mob_to_be = /mob/living/basic/halflife/zombie/engineer/deployment
 
 /datum/outfit/deployment_loadout/xen/tier2/fast_headcrab
 	name = "Deployment: Upgraded Fast Headcrab"
@@ -103,7 +103,7 @@
 	display_name = "Zombine (Offense)"
 	desc = "A heavyweight zombie with good health reserves, a charge ability, and a deployable grenade. You specialize in blowing up enemy fortifications."
 
-	mob_to_be = /mob/living/basic/halflife/zombie/zombine
+	mob_to_be = /mob/living/basic/halflife/zombie/zombine/deployment
 
 /datum/outfit/deployment_loadout/xen/tier3/antlion_worker
 	name = "Deployment: Antlion Worker"
@@ -127,14 +127,14 @@
 	display_name = "Elite Zombine (Offense)"
 	desc = "A heavyweight zombie with good health reserves, a charge ability, and a deployable grenade. You specialize in blowing up enemy fortifications."
 
-	mob_to_be = /mob/living/basic/halflife/zombie/zombine/elite
+	mob_to_be = /mob/living/basic/halflife/zombie/zombine/elite/deployment
 
 /datum/outfit/deployment_loadout/xen/tier4/cremator
 	name = "Deployment: Cremator Zombie"
 	display_name = "Cremator Zombie (Offense)"
 	desc = "You are slow and have low health, but are flameproof and create a large, fiery explosion when you die, in addition to being strong enough to inflict extra damage in melee. You specialize in blowing up enemy fortifications."
 
-	mob_to_be = /mob/living/basic/halflife/zombie/cremator
+	mob_to_be = /mob/living/basic/halflife/zombie/cremator/deployment
 
 /datum/outfit/deployment_loadout/xen/tier4/fast_zombie
 	name = "Deployment: Upgraded Fast Zombie"
@@ -167,9 +167,9 @@
 		/obj/item/stack/medical/bandage = 1,
 	)
 
-	extra_str = -2 //emaciated
-	extra_end = -2
-	extra_dex = -2
+	extra_str = -1 //emaciated
+	extra_end = -1
+	extra_dex = -1
 	mob_to_be = null
 
 /datum/outfit/deployment_loadout/xen/tier4/light_crab_walker/pre_equip(mob/living/carbon/human/H)
@@ -239,7 +239,7 @@
 		/obj/item/reagent_containers/pill/patch/grubnugget = 2,
 	)
 
-	extra_str = 6
+	extra_str = 7
 	extra_end = 4
 	mob_to_be = null
 
@@ -260,6 +260,6 @@
 /datum/outfit/deployment_loadout/xen/tier6/antlion_guardian
 	name = "Deployment: Antlion Guardian"
 	display_name = "Antlion Guardian (Offense)"
-	desc = "Essentially an incredibly beefed up variant of an antlion guard, you have a massive pool of health, high damage, and can even summon antlions just like grubs can. You specialize in spearheading attacks."
+	desc = "Essentially an incredibly beefed up variant of an antlion guard, you have a large pool of health, high damage, and can even summon antlions just like grubs can. You specialize in spearheading attacks."
 
 	mob_to_be = /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment

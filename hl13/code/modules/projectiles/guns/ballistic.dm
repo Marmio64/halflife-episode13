@@ -710,6 +710,8 @@
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
 	jamming_chance = 8
 	projectile_damage_multiplier = 1.45 //approx 40 damage a shot
+	can_parry = TRUE
+	wdefense = 3
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/start_empty
 	magazine = /obj/item/ammo_box/magazine/internal/boltaction/mosin/start_empty
@@ -787,7 +789,7 @@
 //(autofire_shot_delay, windup_autofire, windup_autofire_reduction_multiplier, windup_autofire_cap, windup_spindown, allow_akimbo = TRUE)
 
 //Small upgrade to the ak47. Has around the same DPS but has far better recoil and spread control and a scope, but runs through ammo pretty quickly with its 10 round mags.
-//about 2.2 seconds TTK, and good AP
+//about 2.4 seconds TTK, and good AP
 /obj/item/gun/ballistic/automatic/svd
 	name = "\improper SVD Rifle"
 	desc = "A rare beautiful thing, this semi-automatic designated marksman rifle will take the hat off an elite at two thousand yards, and they ain't cheap."
@@ -824,7 +826,7 @@
 
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.6 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.65 SECONDS)
 
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()

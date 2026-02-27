@@ -38,6 +38,8 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 		info += "You are part of a team hunting down an anomalous test subject known as The Hidden. Stick together with your squad, and try to put this invisible, merciless beast down. Alternatively, try to active all five combine distress terminals to win."
 	if(SSmapping.current_map.combat_deployment_gamemode == "xen_defense")
 		info += "You are playing for the Rebel Side in the Xen Defense gamemode! Protect your comms tower, gather cash, and keep incoming zombies and antlions at bay long enough for reinforcements to arrive."
+	if(SSmapping.current_map.combat_deployment_gamemode == "xen_chaos")
+		info += "You are playing for the Rebel Side in the Xen Chaos King of The Hill gamemode! Capture the central flag and keep it under your faction's control for a total of five minutes to win!"
 
 	return info
 

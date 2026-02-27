@@ -514,7 +514,7 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	extra_str = 4
+	extra_str = 5
 	extra_end = 6
 
 
@@ -762,8 +762,8 @@
 	back = /obj/item/storage/backpack/halflife/satchel/larger
 
 	backpack_contents = list(
-		/obj/item/grenade/syndieminibomb/bouncer = 2,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/grenade/syndieminibomb/bouncer = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
 		/obj/item/storage/box/lethalshot/halflife = 3,
 	)
 
@@ -791,6 +791,8 @@
 	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/rocket)
+
+	extra_end = 2
 
 /datum/outfit/deployment_loadout/rebel/tier5/veteran
 	name = "Deployment: PLF Veteran"

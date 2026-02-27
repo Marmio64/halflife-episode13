@@ -123,8 +123,8 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "hq" = (
-/obj/machinery/ammo_crate,
 /obj/machinery/combine_walllight/directional/south,
+/obj/machinery/ammo_crate/heavy,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "hu" = (
@@ -290,10 +290,34 @@
 /obj/machinery/combine_health_station/self_recharging{
 	pixel_y = 30
 	},
-/obj/item/reagent_containers/pill/patch/grubnugget,
-/obj/item/reagent_containers/pill/patch/grubnugget,
-/obj/item/reagent_containers/pill/patch/grubnugget,
-/obj/item/reagent_containers/pill/patch/grubnugget,
+/obj/item/reagent_containers/pill/patch/grubnugget{
+	pixel_x = -8;
+	pixel_y = 0
+	},
+/obj/item/reagent_containers/pill/patch/grubnugget{
+	pixel_x = -8;
+	pixel_y = 0
+	},
+/obj/item/reagent_containers/pill/patch/grubnugget{
+	pixel_x = -9;
+	pixel_y = 0
+	},
+/obj/item/reagent_containers/pill/patch/grubnugget{
+	pixel_x = -9;
+	pixel_y = 0
+	},
+/obj/item/reagent_containers/hypospray/medipen/healthpen{
+	pixel_x = 10;
+	pixel_y = 9
+	},
+/obj/item/reagent_containers/hypospray/medipen/healthpen{
+	pixel_x = 13;
+	pixel_y = 2
+	},
+/obj/item/reagent_containers/hypospray/medipen/healthpen{
+	pixel_x = 11;
+	pixel_y = 5
+	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "pY" = (
@@ -815,6 +839,10 @@
 "MF" = (
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/bunker)
+"Ne" = (
+/obj/structure/bed/medical,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/combat_deployment/combine_base)
 "Nf" = (
 /obj/structure/halflife/road_barrier/concrete,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -4901,7 +4929,7 @@ zK
 zK
 zK
 zK
-Fb
+Ne
 HZ
 hQ
 hQ
@@ -5046,8 +5074,8 @@ ni
 zK
 ul
 Sl
-HZ
-HZ
+Sl
+Sl
 HZ
 HZ
 hQ
@@ -5192,8 +5220,8 @@ HZ
 zK
 hq
 Sl
-HZ
-HZ
+Sl
+Sl
 HZ
 HZ
 HZ
@@ -5338,7 +5366,7 @@ HZ
 zK
 pP
 Sl
-HZ
+Ne
 HZ
 HZ
 HZ
@@ -5484,7 +5512,7 @@ hQ
 zK
 Tk
 Sl
-HZ
+Ne
 HZ
 HZ
 HZ
@@ -6796,7 +6824,7 @@ aJ
 HZ
 hQ
 ON
-ON
+NY
 HZ
 HZ
 HZ

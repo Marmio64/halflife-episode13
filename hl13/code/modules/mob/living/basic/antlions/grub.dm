@@ -59,8 +59,8 @@
 /mob/living/basic/halflife/grub/deployment
 	maxHealth = 25
 	health = 25
-	melee_damage_lower = 5
-	melee_damage_upper = 10
+	melee_damage_lower = 6
+	melee_damage_upper = 12
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
 	attack_sound = 'hl13/sound/creatures/headcrabbite.ogg'

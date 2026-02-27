@@ -98,7 +98,7 @@
 		var/mob/living/carbon/carbies = victim
 
 		if(carbies.blood_volume < BLOOD_VOLUME_OKAY) //Only good for keeping you from dying, not topping off blood.
-			carbies.blood_volume += heal_rate/2 //15 units of blood restored when normal mend is used on someone else
+			carbies.blood_volume += heal_rate*0.8 //24 units of blood restored when normal mend is used on someone else, 12 when used on yourself
 
 	return TRUE
 

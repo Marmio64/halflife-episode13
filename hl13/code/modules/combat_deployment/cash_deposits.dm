@@ -28,6 +28,11 @@
 /obj/machinery/cash_deposit/rebel/tier4
 	starting_cash = DEPLOYMENT_TIER4_REBELS
 
+/obj/machinery/cash_deposit/xen
+	name = "Corpse Deposit"
+	desc = "A vessel for dropping off corpses at. It can sell nearby corpses of enemies to gain credits for your team."
+	deployment_faction = XEN_DEPLOYMENT_FACTION
+
 /obj/machinery/cash_deposit/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/stack/spacecash))
 		var/obj/item/stack/spacecash/cash = I
@@ -37,6 +42,9 @@
 			GLOB.deployment_combine_cash += (cash.value * cash.amount)
 		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
 			GLOB.deployment_rebels_cash += (cash.value * cash.amount)
+		if(deployment_faction == XEN_DEPLOYMENT_FACTION)
+			to_chat(user, span_warning("Your faction cannot use physical cash to upgrade, you can only capture point flags and sell corpses."))
+			return
 
 		qdel(I)
 
@@ -57,6 +65,15 @@
 		. += span_notice("Unlock Tier 2 loadouts at $[DEPLOYMENT_TIER2_REBELS], Tier 3 at $[DEPLOYMENT_TIER3_REBELS], and Tier 4 at $[DEPLOYMENT_TIER4_REBELS].")
 		. += span_notice("At $[DEPLOYMENT_TIER5_REBELS], players will have a [DEPLOYMENT_TIER5_CHANCE]% chance to spawn with a Tier 5 loadout.")
 		. += span_notice("At $[DEPLOYMENT_TIER5_EXTRA_CHANCE_REBELS], players will instead have a [DEPLOYMENT_TIER5_EXTRA_CHANCE]% chance to spawn with a Tier 5 loadout.")
+
+	if(deployment_faction == XEN_DEPLOYMENT_FACTION && user.client.player_details.deployment_faction == XEN_DEPLOYMENT_FACTION)
+		. += span_notice("Your faction has [FLOOR(GLOB.deployment_xen_cash, 1)] dollars.")
+		. += span_notice("Unlock Tier 2 loadouts at $[DEPLOYMENT_TIER2_XEN], and Tier 3 at $[DEPLOYMENT_TIER3_XEN].")
+		. += span_notice("At $[DEPLOYMENT_TIER4_XEN], players will have a [DEPLOYMENT_TIER4_XEN_CHANCE]% chance to spawn with a Tier 4 loadout.")
+		. += span_notice("At $[DEPLOYMENT_TIER4_EXTRA_CHANCE_XEN], players will have a [DEPLOYMENT_TIER4_HIGH_XEN_CHANCE]% chance to spawn with a Tier 4 loadout.")
+		. += span_notice("At $[DEPLOYMENT_TIER5_XEN], players will have a [DEPLOYMENT_TIER5_XEN_CHANCE]% chance to spawn with a Tier 5 loadout.")
+		. += span_notice("At $[DEPLOYMENT_TIER5_EXTRA_CHANCE_XEN], players will have a [DEPLOYMENT_TIER5_HIGH_XEN_CHANCE]% chance to spawn with a Tier 5 loadout.")
+		. += span_notice("At $[DEPLOYMENT_TIER6_XEN], one player will be able to spawn as a Tier 6 loadout.")
 
 /obj/machinery/cash_deposit/Initialize(mapload)
 	.=..()
@@ -95,6 +112,8 @@
 					GLOB.deployment_combine_cash += (money_amount)
 				if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
 					GLOB.deployment_rebels_cash += (money_amount)
+				if(deployment_faction == XEN_DEPLOYMENT_FACTION)
+					GLOB.deployment_xen_cash += (money_amount)
 
 				return
 

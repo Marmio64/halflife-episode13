@@ -14,6 +14,9 @@
 	light_color = "#658cac"
 	armor_type = /datum/armor/deployment_comms_tower
 
+	var/overshield_health = 150
+	var/max_overshield = 150
+
 /obj/machinery/deployment_comms_tower/ex_act(severity, target)
 	if(QDELETED(src))
 		return TRUE
@@ -109,14 +112,14 @@
 	return PROCESS_KILL
 
 /obj/machinery/deployment_comms_tower/rebel/xen_defense
-	max_integrity = 2000
+	max_integrity = 2250
 	var/rebel_time = 10 MINUTES
 	var/grace_time = 90 SECONDS
 
 	var/grace_period_text = TRUE
 	var/capturable = FALSE
 
-	var/human_respawn_speed = 40 SECONDS
+	var/human_respawn_speed = 30 SECONDS
 
 /obj/machinery/deployment_comms_tower/rebel/xen_defense/Initialize(mapload)
 	. = ..()
@@ -182,7 +185,7 @@
 
 
 /obj/machinery/deployment_comms_tower/combine/xen_defense
-	max_integrity = 2000
+	max_integrity = 2250
 
 	var/combine_time = 9 MINUTES
 	var/grace_time = 60 SECONDS
@@ -190,7 +193,7 @@
 	var/grace_period_text = TRUE
 	var/capturable = FALSE
 
-	var/human_respawn_speed = 40 SECONDS
+	var/human_respawn_speed = 30 SECONDS
 
 /obj/machinery/deployment_comms_tower/combine/xen_defense/Initialize(mapload)
 	. = ..()

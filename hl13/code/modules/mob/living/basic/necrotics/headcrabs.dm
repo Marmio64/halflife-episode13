@@ -84,8 +84,7 @@
 	ai_controller.set_blackboard_key(BB_BASIC_FOODS, typecacheof(edibles))
 
 /mob/living/basic/halflife/headcrab/deployment
-	melee_damage_lower = 10
-	melee_damage_upper = 13
+	melee_attack_cooldown = 1 SECONDS
 	obj_damage = 12
 
 /mob/living/basic/halflife/headcrab/armored
@@ -97,6 +96,9 @@
 	maxHealth = 60
 	health = 60
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1, /obj/item/stack/sheet/sinew = 1, /obj/item/stack/sheet/bone = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1)
+
+/mob/living/basic/halflife/headcrab/armored/deployment
+	melee_attack_cooldown = 1.5 SECONDS
 
 /mob/living/basic/halflife/headcrab/armored/ghost_controlled/Initialize(mapload)
 	. = ..()
@@ -135,6 +137,7 @@
 
 /mob/living/basic/halflife/headcrab/poison/deadly
 	poison_type = /datum/reagent/toxin/headcrab_venom/deadly
+	melee_attack_cooldown = 1.5 SECONDS
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/headcrab/poison
 	sound_cue = 'hl13/sound/creatures/poison/ph_scream.ogg'
@@ -167,7 +170,11 @@
 	speed = 0.25
 	zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed/fast
 
+/mob/living/basic/halflife/headcrab/fast/deployment
+	melee_attack_cooldown = 1.5 SECONDS
+
 /mob/living/basic/halflife/headcrab/fast/upgraded
+	melee_attack_cooldown = 1.25 SECONDS
 	melee_damage_lower = 8
 	melee_damage_upper = 13
 	speed = -0.2

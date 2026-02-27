@@ -30,7 +30,7 @@
 	desc = "A 12 gauge buckshot shell."
 	icon_state = "gshell"
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_buckshot/halflife
-	pellets = 6 //6 pellets, 11 damage each, up to 72 damage
+	pellets = 6 //6 pellets, 11 damage each, up to 66 damage
 	variance = 25
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
 

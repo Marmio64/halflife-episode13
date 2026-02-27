@@ -16,6 +16,8 @@
 
 	var/cash_increase = 0.6 //assuming this is bunker mode, rebels have to keep the flag for 420 seconds, and so this flag would generate a total of $252
 
+	var/bypass_grace = FALSE //should it work even if grace period is on
+
 /obj/machinery/deployment_points_flag/low_cash
 	cash_increase = 0.2
 
@@ -29,7 +31,7 @@
 	for(var/turf/closed/wall/W in RANGE_TURFS(1, get_turf(src))) //no walling off the flag
 		W.dismantle_wall()
 
-	if(GLOB.deployment_flag_grace_period > 0) //dont generate cash while a grace period is active
+	if(GLOB.deployment_flag_grace_period > 0 && !bypass_grace) //dont generate cash while a grace period is active
 		return
 
 	if(current_faction_holder == COMBINE_DEPLOYMENT_FACTION)
@@ -103,4 +105,13 @@
 	cash_increase = 1
 
 /obj/machinery/deployment_points_flag/xen/low_cash
+	cash_increase = 0.2
+
+/obj/machinery/deployment_points_flag/xen/bypass_grace
+	bypass_grace = TRUE
+
+/obj/machinery/deployment_points_flag/xen/bypass_grace/high_cash
+	cash_increase = 1
+
+/obj/machinery/deployment_points_flag/xen/bypass_grace/low_cash
 	cash_increase = 0.2

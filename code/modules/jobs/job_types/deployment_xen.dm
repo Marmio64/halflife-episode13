@@ -38,6 +38,8 @@ GLOBAL_VAR_INIT(xen_boss_spawned, FALSE)
 	var/list/info = list()
 	if(SSmapping.current_map.combat_deployment_gamemode == "xen_defense")
 		info += "You are playing for the Xenian side! Destroy the enemy's comms tower before the time limit is up to win!"
+	if(SSmapping.current_map.combat_deployment_gamemode == "xen_chaos")
+		info += "You are playing for the Xenian side! Capture the central flag and hold it to win!"
 	return info
 
 /datum/outfit/job/xen_tdm/post_equip(mob/living/carbon/human/H, visualsOnly=FALSE)

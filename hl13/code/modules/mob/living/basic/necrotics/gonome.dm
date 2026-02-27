@@ -101,6 +101,7 @@
 /mob/living/basic/halflife/zombie/gonome/deployment
 	melee_damage_lower = 22
 	melee_damage_upper = 26
+	melee_attack_cooldown = 1.5 SECONDS
 	armour_penetration = 0
 	maxHealth = 200
 	health = 200
@@ -124,6 +125,7 @@
 /mob/living/basic/halflife/zombie/gonome/complete/deployment
 	speed = 1.4
 	headcrab_delay = 2 SECONDS
+	melee_attack_cooldown = 1.5 SECONDS
 
 /mob/living/basic/halflife/zombie/gonome/complete/cash_gorged
 	name = "Cash-gorged Gonome"

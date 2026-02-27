@@ -187,6 +187,11 @@ DEFINE_BITFIELD(turret_flags, list(
 	raised = 1
 	uses_stored = FALSE
 
+/obj/machinery/porta_turret/antlion_worker/powerful
+	max_integrity = 1000
+	stun_projectile = /obj/projectile/acidspray/fast
+	lethal_projectile = /obj/projectile/acidspray/fast
+
 /obj/machinery/porta_turret/antlion_worker/assess_perp(mob/living/carbon/human/perp)
 	return 10 //shoot everything not in their faction
 

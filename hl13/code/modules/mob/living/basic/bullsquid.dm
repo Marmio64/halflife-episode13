@@ -7,8 +7,8 @@
 	icon_dead = "bullsquid_dead"
 	faction = list(FACTION_XEN_FAUNA)
 	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
-	maxHealth = 180
-	health = 180
+	maxHealth = 200
+	health = 200
 	obj_damage = 16
 	melee_damage_lower = 22
 	melee_damage_upper = 25

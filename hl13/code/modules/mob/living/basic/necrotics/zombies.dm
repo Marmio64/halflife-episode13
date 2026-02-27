@@ -91,8 +91,8 @@
 		play_dead.Grant(src)
 
 /mob/living/basic/halflife/zombie/deployment
-	speed = 1.4
-	melee_attack_cooldown = 1.75 SECONDS
+	speed = 1.3
+	melee_attack_cooldown = 1.25 SECONDS
 
 /mob/living/basic/halflife/zombie/zombine
 	name = "Zombine"
@@ -109,6 +109,9 @@
 	idle_sounds = list('hl13/sound/creatures/zombinesound1.ogg', 'hl13/sound/creatures/zombinesound2.ogg', 'hl13/sound/creatures/zombinesound3.ogg', 'hl13/sound/creatures/zombinesound4.ogg')
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombine
 
+/mob/living/basic/halflife/zombie/zombine/deployment
+	melee_attack_cooldown = 1.5 SECONDS
+
 /mob/living/basic/halflife/zombie/zombine/elite
 	name = "Elite Zombine"
 	desc = "A shambling combine soldier, taken over by a parasitic head crab. Capable of running and is equipped with heavy elite combine armor."
@@ -117,6 +120,9 @@
 	icon_dead = "elite_dead"
 	maxHealth = 200
 	health = 200
+
+/mob/living/basic/halflife/zombie/zombine/elite/deployment
+	melee_attack_cooldown = 1.5 SECONDS
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/zombine/proc/get_innate_abilities()
@@ -188,10 +194,10 @@
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie_grunt
 
 /mob/living/basic/halflife/zombie/zombie_grunt/deployment
-	speed = 0.5
+	speed = 0.4
 	maxHealth = 125
 	health = 125
-	melee_attack_cooldown = 1.5 SECONDS
+	melee_attack_cooldown = 1.25 SECONDS
 
 ///Meant to be avoided rather than fought head on. Very slow, but dangerous in melee.
 /mob/living/basic/halflife/zombie/engineer
@@ -207,6 +213,9 @@
 	armour_penetration = 15
 	maxHealth = 120
 	health = 120
+
+/mob/living/basic/halflife/zombie/engineer/deployment
+	melee_attack_cooldown = 1.5 SECONDS
 
 /mob/living/basic/halflife/zombie/fungal
 	name = "Fungal Zombie"
@@ -229,6 +238,7 @@
 	maxHealth = 150
 	health = 150
 	speed = 1.85
+	melee_attack_cooldown = 1.5 SECONDS
 
 /mob/living/basic/halflife/zombie/fungal/Initialize(mapload)
 	. = ..()
@@ -261,11 +271,13 @@
 /mob/living/basic/halflife/zombie/fast/deployment
 	melee_damage_lower = 10
 	melee_damage_upper = 13
+	melee_attack_cooldown = 0.5 SECONDS
 
 /mob/living/basic/halflife/zombie/fast/deployment/upgraded
-	melee_attack_cooldown = 0.5 SECONDS
-	maxHealth = 75
-	health = 75
+	melee_attack_cooldown = 0.4 SECONDS
+	melee_damage_upper = 15
+	maxHealth = 85
+	health = 85
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/fast/proc/get_innate_abilities()
@@ -426,6 +438,7 @@
 /mob/living/basic/halflife/zombie/poison/deployment
 	maxHealth = 200
 	health = 200
+	melee_attack_cooldown = 1.5 SECONDS
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/poison/proc/get_innate_abilities()
@@ -509,6 +522,9 @@
 	crabless_possible = FALSE
 	idle_sounds = list('hl13/sound/creatures/zombinesound1.ogg', 'hl13/sound/creatures/zombinesound2.ogg', 'hl13/sound/creatures/zombinesound3.ogg', 'hl13/sound/creatures/zombinesound4.ogg')
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie_grunt
+
+/mob/living/basic/halflife/zombie/cremator/deployment
+	melee_attack_cooldown = 1.5 SECONDS
 
 /mob/living/basic/halflife/zombie/cremator/Initialize(mapload)
 	. = ..()
