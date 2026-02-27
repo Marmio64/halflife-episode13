@@ -33,6 +33,9 @@
 	desc = "A vessel for dropping off corpses at. It can sell nearby corpses of enemies to gain credits for your team."
 	deployment_faction = XEN_DEPLOYMENT_FACTION
 
+/obj/machinery/cash_deposit/xen/near_tier2
+	starting_cash = DEPLOYMENT_TIER2_XEN/2 //lessens the wait for next tier, but doesnt start them at it
+
 /obj/machinery/cash_deposit/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/stack/spacecash))
 		var/obj/item/stack/spacecash/cash = I
@@ -83,6 +86,8 @@
 			GLOB.deployment_combine_cash += starting_cash
 		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
 			GLOB.deployment_rebels_cash += starting_cash
+		if(deployment_faction == XEN_DEPLOYMENT_FACTION)
+			GLOB.deployment_xen_cash += starting_cash
 
 /obj/machinery/cash_deposit/process()
 	consume()
