@@ -128,6 +128,8 @@
 /mob/living/basic/halflife/zombie/gonome/complete/cash_gorged
 	name = "Cash-gorged Gonome"
 	armour_penetration = 25
+	maxHealth = 475
+	health = 475
 	move_intent = "run"
 	guaranteed_butcher_results = list(/obj/item/stack/spacecash/c10 = 3)
 	desc = "A massive, grotesque abomination of flesh and fungas. A horror, which should not be. This one has for some reason gorged itself on loads of cash. A butcher should be able to get out the cash."
