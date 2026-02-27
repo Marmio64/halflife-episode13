@@ -22,7 +22,7 @@
 	health = 1200
 	obj_damage = 25
 	melee_damage_lower = 20
-	melee_damage_upper = 20
+	melee_damage_upper = 25
 	armour_penetration = 30
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
 	attack_verb_continuous = "beats down on"
@@ -113,7 +113,7 @@
 			call_children()
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/proc/legionnaire_charge(target)
-	ranged_cooldown = world.time + 6.0 SECONDS
+	ranged_cooldown = world.time + 3.5 SECONDS
 	charging = TRUE
 	var/dir_to_target = get_dir(get_turf(src), get_turf(target))
 	var/turf/T = get_step(get_turf(src), dir_to_target)
@@ -176,7 +176,7 @@
 		shoot_projectile(marker, set_angle - 15, FALSE, FALSE)
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/proc/herald_trishot(target)
-	ranged_cooldown = world.time + 5 SECONDS
+	ranged_cooldown = world.time + 3 SECONDS
 	playsound(get_turf(src), 'hl13/sound/creatures/gonarch/spit.ogg', 20, FALSE)
 	icon_state = "gonarch_attack"
 	charging = TRUE
@@ -192,7 +192,7 @@
 		icon_state = "gonarch"
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/proc/spawn_children(target)
-	ranged_cooldown = world.time + 40
+	ranged_cooldown = world.time + 20
 	visible_message(span_boldwarning("[src] strains as it gives birth!"))
 	playsound(get_turf(src), 'hl13/sound/creatures/gonarch/birth.ogg', 20, TRUE)
 	for(var/i in 1 to 2)
@@ -220,7 +220,7 @@
 
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/proc/rage()
-	ranged_cooldown = world.time + 100
+	ranged_cooldown = world.time + 50
 	playsound(src,'hl13/sound/creatures/gonarch/rage.ogg', 75, FALSE)
 	visible_message(span_warning("[src] starts picking up speed!"))
 	color = COLOR_RED
@@ -234,7 +234,7 @@
 	move_to_delay = 5
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/proc/call_children()
-	ranged_cooldown = world.time + 60
+	ranged_cooldown = world.time + 40
 	visible_message(span_warning("The ground shakes near [src]!"))
 	var/list/directions = GLOB.cardinals.Copy() + GLOB.diagonals.Copy()
 	for(var/mob/child in children_list)
