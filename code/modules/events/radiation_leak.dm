@@ -3,7 +3,7 @@
 	description = "A radiation leak happens somewhere on the station, emanating radiation around a machine in the area. \
 		Engineering can stop the leak by using certain tools on it."
 	typepath = /datum/round_event/radiation_leak
-	weight = 3
+	weight = 1
 	max_occurrences = 2
 	category = EVENT_CATEGORY_ENGINEERING
 	min_wizard_trigger_potency = 3

@@ -824,6 +824,7 @@
 	new /obj/item/gun/ballistic/automatic/pistol/makeshift(src)
 	new /obj/item/ammo_box/magazine/makeshift9mm(src)
 	new /obj/item/reagent_containers/pill/patch/medkit/vial(src)
+	new /obj/item/reagent_containers/pill/patch/medkit/vial(src)
 	new /obj/item/food/canned/halflife/beans(src)
 	new /obj/item/reagent_containers/cup/glass/waterbottle(src)
 
@@ -835,7 +836,7 @@
 	delete_trait_on_buy = TRUE
 
 	initial_products = list(
-		/obj/item/storage/box/syndicate/plf_recruiter = list(PAYCHECK_CREW, 5),
+		/obj/item/storage/box/syndicate/plf_recruiter = list(PAYCHECK_CREW, 8),
 	)
 
 	say_phrases = list(

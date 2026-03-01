@@ -1,8 +1,8 @@
 /datum/round_event_control/refugee
 	name = "Spawn Armed Refugee"
 	typepath = /datum/round_event/ghost_role/refugee
-	max_occurrences = 1
-	min_players = 10
+	max_occurrences = 2
+	min_players = 8
 	weight = 8
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns a refugee."

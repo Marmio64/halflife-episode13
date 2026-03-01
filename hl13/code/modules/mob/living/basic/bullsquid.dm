@@ -96,11 +96,13 @@
 
 /mob/living/basic/halflife/bullsquid/chicken
 	name = "Chicken Bullsquid"
-	desc = "A large alien creature that somewhat resembles a malformed squid with legs. It has a massive mouth filled with razor sharp teeth that have acid dripping on them. This one has a sickly, pale look about it."
+	desc = "A large alien creature that somewhat resembles a malformed squid with legs. It has a massive mouth filled with razor sharp teeth that have acid dripping on them. This one has a sickly, pale look about it, with a slim but agile build."
 	icon_state = "bullsquid_chicken"
 	icon_living = "bullsquid_chicken"
 	icon_dead = "bullsquid_chicken_dead"
-	speed = 0.5 //the chicken go a lil faster
+	speed = 0.4
+	maxHealth = 175
+	health = 175
 
 /mob/living/basic/halflife/bullsquid/fanged
 	name = "Fanged Bullsquid"

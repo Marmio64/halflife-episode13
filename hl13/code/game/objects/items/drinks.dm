@@ -24,7 +24,7 @@
 	desc = "A can of Breen's private reserve water. Supposedly, it helps improve your memory! This one is painted yellow, and smells funny."
 	icon_state = "breen_can_yellow"
 	list_reagents = list(/datum/reagent/water/unpurified = 20)
-	custom_price = PAYCHECK_CREW * 0.65
+	custom_price = PAYCHECK_CREW * 0.5 //4 credits
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/red
 	name = "red water can"
@@ -32,7 +32,7 @@
 	icon_state = "breen_can_red"
 	list_reagents = list(/datum/reagent/water = 35)
 	volume = 35
-	custom_price = PAYCHECK_CREW * 1.3
+	custom_price = PAYCHECK_CREW * 1.15 //9 credits
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/green
 	name = "green water can"
@@ -40,7 +40,7 @@
 	icon_state = "breen_can_green"
 	list_reagents = list(/datum/reagent/water = 35, /datum/reagent/consumable/greenflavor = 15)
 	volume = 50
-	custom_price = PAYCHECK_CREW * 1.5
+	custom_price = PAYCHECK_CREW * 1.5 //12 credits
 
 /obj/item/reagent_containers/cup/soda_cans/breenwater/purple
 	name = "purple nutriment can"

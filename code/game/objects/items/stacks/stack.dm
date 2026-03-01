@@ -106,8 +106,6 @@
 			switch(category)
 				if(MAT_CATEGORY_BASE_RECIPES)
 					recipes |= SSmaterials.base_stack_recipes.Copy()
-				if(MAT_CATEGORY_RIGID)
-					recipes |= SSmaterials.rigid_stack_recipes.Copy()
 
 	update_weight()
 	update_appearance()
