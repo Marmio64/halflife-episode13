@@ -203,8 +203,8 @@
 
 /mob/living/basic/halflife/antlion_guard/deployment
 	melee_attack_cooldown = 1.75 SECONDS
-	maxHealth = 500
-	health = 500
+	maxHealth = 450
+	health = 450
 	obj_damage = 40
 	speed = 0.65
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)

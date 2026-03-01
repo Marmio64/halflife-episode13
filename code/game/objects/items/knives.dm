@@ -136,7 +136,7 @@
 	wdefense = 1 //hl13 edit
 
 /obj/item/knife/combat/weak
-	force = 20
+	force = 22
 
 /obj/item/knife/combat/backstab
 	name = "assassin's combat knife"

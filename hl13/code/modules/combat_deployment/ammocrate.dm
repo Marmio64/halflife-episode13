@@ -10,7 +10,7 @@
 	var/ammo_max = 10
 	var/recharges = TRUE
 	var/in_use = FALSE
-	var/list/vendoptions = list("USP Match", "Mosin", "MP7", "SPAS12", "Colt Python", "M4A1", "Pulse SMG", "AK-47", "AR2")
+	var/list/vendoptions = list("USP Match", "Mosin", "MP7", "SPAS12", "Colt Python", "M4A1", "Pulse SMG", "AK-47", "AR2", "Pulse Sniper")
 
 /obj/machinery/ammo_crate/low_health
 	max_integrity = 150 //no body blocking crap with ammo crates
@@ -43,6 +43,7 @@
 		in_use = FALSE
 		return
 	var/ammo_to_dispense = null
+	var/dispense_count = 1
 	switch(choice)
 		if("USP Match")
 			ammo_to_dispense = /obj/item/ammo_box/magazine/usp9mm
@@ -62,21 +63,31 @@
 			ammo_to_dispense = /obj/item/ammo_box/magazine/ak47
 		if("AR2")
 			ammo_to_dispense = /obj/item/ammo_box/magazine/ar2
+		if("Pulse Sniper")
+			ammo_to_dispense = /obj/item/ammo_box/magazine/combine_sniper
+
 		if("MK3A2 Grenade")
 			ammo_to_dispense = /obj/item/grenade/syndieminibomb/bouncer
+		if("Incendiary Grenade")
+			ammo_to_dispense = /obj/item/grenade/incendiary_grenade
+
 		if("Dark Energy Ball")
 			ammo_to_dispense = /obj/item/ammo_casing/pulse/energyball
 		if("20mm Grenade")
 			ammo_to_dispense = /obj/item/ammo_casing/a20mm
 		if("Rocket")
 			ammo_to_dispense = /obj/item/ammo_casing/rocket/hl13
-		if("Colt Python Armor Piercing")
-			ammo_to_dispense = /obj/item/ammo_box/colta357/armor_piercing
+		if("Pulse Shotgun x2")
+			ammo_to_dispense = /obj/item/storage/box/lethalshot/halflife/pulse
+			dispense_count = 1
+		if("Pulse LMG x2")
+			ammo_to_dispense = /obj/item/ammo_box/magazine/pulselmg
+			dispense_count = 1
 
 	if(ammo_to_dispense)
 		playsound(src, 'hl13/sound/effects/ammocrate_open.ogg', 50, TRUE, extrarange = -3)
-		if(do_after(user, 2.5 SECONDS, src))
-			new ammo_to_dispense(loc)
+		if(do_after(user, 2.25 SECONDS, src))
+			new ammo_to_dispense(loc, dispense_count)
 			playsound(src, 'hl13/sound/effects/ammo_pickup.ogg', 50, TRUE, extrarange = -3)
 			in_use = FALSE
 		else
@@ -93,7 +104,7 @@
 	max_integrity = 150
 	ammo_amount = 4
 	recharges = FALSE
-	vendoptions = list("MK3A2 Grenade")
+	vendoptions = list("MK3A2 Grenade", "Incendiary Grenade")
 
 /obj/machinery/ammo_crate/heavy
 	name = "Heavy Ammo Crate"
@@ -102,7 +113,7 @@
 	max_integrity = 150
 	ammo_amount = 4
 	recharges = FALSE
-	vendoptions = list("Dark Energy Ball", "20mm Grenade", "Rocket")
+	vendoptions = list("Dark Energy Ball", "20mm Grenade", "Rocket", "Pulse Shotgun x2", "Pulse LMG x2")
 
 /obj/machinery/ammo_crate/heavy/recharge
 	desc = "A large ammo crate. Contains special ammo types that you can pull out after a short delay."

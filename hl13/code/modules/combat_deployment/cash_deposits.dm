@@ -118,6 +118,7 @@
 				if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
 					GLOB.deployment_rebels_cash += (money_amount)
 				if(deployment_faction == XEN_DEPLOYMENT_FACTION)
+					money_amount /= 2
 					GLOB.deployment_xen_cash += (money_amount)
 
 				return

@@ -70,6 +70,7 @@
 /mob/living/simple_animal/hostile/halflife/viscerator/upgraded
 	health = 90
 	maxHealth = 90
+	armour_penetration = 10
 	melee_damage_lower = 15
 	melee_damage_upper = 22
 
@@ -85,6 +86,7 @@
 	desc = "A small, twin-bladed machine capable of inflicting very deadly lacerations. This one has less armor plating and uses much of its battery reserves to power a pulse shield that can deflect up to three projectiles, no matter how strong they are."
 	health = 30
 	maxHealth = 30
+	armour_penetration = 10
 	low_power_melee_damage_lower = 3
 	low_power_melee_damage_upper = 5
 	operating_power = 15 //30 seconds till low power
