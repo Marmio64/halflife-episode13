@@ -826,7 +826,7 @@
 
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.65 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.7 SECONDS)
 
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()
