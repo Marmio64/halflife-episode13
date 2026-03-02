@@ -91,11 +91,17 @@
 		healing_amount *= 0.5 //you heal yourself half as fast
 	victim.adjustBruteLoss(healing_amount)
 	victim.adjustFireLoss(healing_amount)
+	victim.set_eye_blur_if_lower(-6 SECONDS)
+	victim.adjust_confusion(-6 SECONDS)
+	victim.AdjustImmobilized(-2 SECONDS)
+	victim.AdjustStun(-1 SECONDS)
 	victim.visible_message(span_bold("[victim] appears to flash colors of green, before seemingly appearing healthier!"))
 	to_chat(victim, span_warning("You feel soothed."))
 
 	if(iscarbon(victim))
 		var/mob/living/carbon/carbies = victim
+
+		carbies.adjust_temppain(-50)
 
 		if(carbies.blood_volume < BLOOD_VOLUME_OKAY) //Only good for keeping you from dying, not topping off blood.
 			carbies.blood_volume += heal_rate*0.8 //24 units of blood restored when normal mend is used on someone else, 12 when used on yourself

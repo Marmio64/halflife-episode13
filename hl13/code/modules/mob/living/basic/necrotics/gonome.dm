@@ -123,6 +123,8 @@
 	fully_grown = TRUE
 
 /mob/living/basic/halflife/zombie/gonome/complete/deployment
+	maxHealth = 400
+	health = 400
 	speed = 1.4
 	headcrab_delay = 2 SECONDS
 	melee_attack_cooldown = 1.5 SECONDS

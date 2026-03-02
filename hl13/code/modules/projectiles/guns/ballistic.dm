@@ -910,6 +910,7 @@
 
 	spread = 0
 	recoil = 0
+	randomspread = FALSE
 
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'

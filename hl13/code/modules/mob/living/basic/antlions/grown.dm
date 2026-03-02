@@ -203,10 +203,10 @@
 
 /mob/living/basic/halflife/antlion_guard/deployment
 	melee_attack_cooldown = 1.75 SECONDS
-	maxHealth = 450
-	health = 450
+	maxHealth = 400
+	health = 400
 	obj_damage = 40
-	speed = 0.65
+	speed = 0.7
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
 
 /mob/living/basic/halflife/antlion_guard/weak
@@ -222,13 +222,13 @@
 	icon_state = "guardian"
 	icon_living = "guardian"
 	icon_dead = "guardian_dead"
-	speed = 0.6
+	speed = 0.7
 	melee_damage_lower = 40
 	melee_damage_upper = 45
 	obj_damage = 50
 	melee_attack_cooldown = 2 SECONDS
-	maxHealth = 1200
-	health = 1200
+	maxHealth = 900
+	health = 900
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner
 	var/datum/action/cooldown/spell/conjure/antlions/antlions

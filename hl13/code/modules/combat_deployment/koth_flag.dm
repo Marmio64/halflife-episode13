@@ -1,11 +1,18 @@
 GLOBAL_VAR_INIT(deployment_rebels_flag_time_left, 5 MINUTES)
 GLOBAL_VAR_INIT(deployment_combine_flag_time_left, 5 MINUTES)
-GLOBAL_VAR_INIT(deployment_xen_flag_time_left, 5 MINUTES)
+GLOBAL_VAR_INIT(deployment_xen_flag_time_left, 6 MINUTES)
 GLOBAL_VAR_INIT(deployment_flag_grace_period, 0)
 GLOBAL_VAR_INIT(deployment_respawn_rate_rebels, 35 SECONDS)
 GLOBAL_VAR_INIT(deployment_respawn_rate_combine, 35 SECONDS)
 GLOBAL_VAR_INIT(deployment_respawn_rate_xen, 20 SECONDS)
 GLOBAL_VAR_INIT(deployment_win_team, null)
+
+//tier points keep track of how many higher tier units a faction has been receiving, so it can keep the sides roughly balanced
+//In order for someone to get a high tier unit, they have to subtract from their sides tier points. If their side cant afford it, they dont get to.
+//If their side has a shit ton of tier points, they get a guaranteed high tier.
+GLOBAL_VAR_INIT(rebel_tier_points, 3)
+GLOBAL_VAR_INIT(combine_tier_points, 3)
+GLOBAL_VAR_INIT(xen_tier_points, 3)
 
 /obj/machinery/deployment_koth_flag
 	name = "Central Flag"
@@ -29,7 +36,7 @@ GLOBAL_VAR_INIT(deployment_win_team, null)
 
 	var/rebel_time = 5 MINUTES
 	var/combine_time = 5 MINUTES
-	var/xen_time = 5 MINUTES
+	var/xen_time = 6 MINUTES
 	var/grace_time = 3 MINUTES
 
 	/// Should the current holder of the flag have a different respawn speed, as perhaps say a handicap of sorts?

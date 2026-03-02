@@ -81,7 +81,7 @@
 
 /datum/action/cooldown/spell/pointed/advisorial_punish
 	name = "Advisorial Punish"
-	desc = "Subject a victim to terrible psionic attacks, breaking down their mind and making them weak and unable to fight effectively."
+	desc = "Subject a victim to terrible psionic attacks, breaking down their mind and making them weak and unable to fight effectively. Vortigaunts are able to resist this."
 	button_icon = 'hl13/icons/mob/actions/actions_advisor.dmi'
 	button_icon_state = "punish"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
@@ -97,11 +97,11 @@
 	active_msg = "You prepare to punish a target..."
 
 	/// The amount of blurriness to apply
-	var/eye_blur_duration = 8 SECONDS
+	var/eye_blur_duration = 5 SECONDS
 	/// The amount of pain to apply
-	var/temp_pain_amount = 100
+	var/temp_pain_amount = 75
 	/// The amount of confusion to apply
-	var/confusion_duration = 8 SECONDS
+	var/confusion_duration = 5 SECONDS
 	/// The amount of stamina loss to apply
 	var/stamina_damage = 40
 	/// How long the stun duration should be
@@ -122,15 +122,20 @@
 /datum/action/cooldown/spell/pointed/advisorial_punish/cast(mob/living/carbon/human/cast_on)
 	. = ..()
 
-	to_chat(cast_on, span_warning("Your mind cries out in pain as a psionic wave washes over it!"))
-	cast_on.throw_alert_text(/atom/movable/screen/alert/text/cry, "Your mind explodes in agony!", override = FALSE)
-	cast_on.emote("scream")
-	cast_on.set_eye_blur_if_lower(eye_blur_duration)
-	cast_on.adjust_temppain(temp_pain_amount)
-	cast_on.adjust_confusion(confusion_duration)
-	cast_on.adjustStaminaLoss(stamina_damage)
-	cast_on.Stun(stun_duration)
-	cast_on.Immobilize(immobilize_duration)
+	if(isvortigaunt(cast_on))
+		to_chat(cast_on, span_warning("A terrible grublike visage attempts to invade your mind. With great strain, you stop the Shu'ulathoi before it can cause too great of harm to your mind."))
+		cast_on.emote("grimace")
+	else
+		to_chat(cast_on, span_warning("Your mind cries out in pain as a psionic wave washes over it!"))
+		cast_on.throw_alert_text(/atom/movable/screen/alert/text/cry, "Your mind explodes in agony!", override = FALSE)
+		cast_on.emote("scream")
+		cast_on.set_eye_blur_if_lower(eye_blur_duration)
+		cast_on.adjust_temppain(temp_pain_amount)
+		cast_on.adjust_confusion(confusion_duration)
+		cast_on.adjustStaminaLoss(stamina_damage)
+		cast_on.Stun(stun_duration)
+		cast_on.Immobilize(immobilize_duration)
+
 	return TRUE
 
 /datum/action/cooldown/spell/pointed/advisor_sooth
