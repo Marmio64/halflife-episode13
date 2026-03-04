@@ -20,6 +20,11 @@
 	desc = "A 9mm makeshift bullet casing."
 	projectile_type = /obj/projectile/bullet/c9mm/usp/makeshift
 
+/obj/item/ammo_casing/c9mm/usp/armor_piercing
+	name = "9mm armor-piercing bullet casing"
+	desc = "A 9mm armor-piercing bullet casing."
+	projectile_type = /obj/projectile/bullet/c9mm/usp/armor_piercing
+
 /obj/item/ammo_casing/c9mm/usp/rubber
 	name = "9mm rubber bullet casing"
 	desc = "A 9mm rubber bullet casing."

@@ -7,6 +7,10 @@
 	name = "9mm makeshift bullet"
 	damage = 15
 
+/obj/projectile/bullet/c9mm/usp/armor_piercing
+	name = "9mm armor-piercing bullet"
+	armour_penetration = 20
+
 /obj/projectile/bullet/c9mm/usp/rubber
 	name = "9mm rubber bullet"
 	damage = 10
