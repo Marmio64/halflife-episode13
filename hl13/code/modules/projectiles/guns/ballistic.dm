@@ -226,7 +226,7 @@
 
 /obj/item/gun/ballistic/combine_sniper
 	name = "combine sniper rifle"
-	desc = "A pulse based marksmen rifle which fires high velocity, devestating rounds. It's unique pulse rounds gain velocity and stopping power the further they travel, use at long distance for maximum effect."
+	desc = "A pulse based marksmen rifle which fires high velocity, devestating rounds. It's unique pulse rounds gain velocity and stopping power the further they travel, use at long distance for maximum effect. It has a smart avoidance system installed which adjusts projectile trajectory to automatically attempt to avoid hitting nearby teammates."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "combine_sniper"
 	inhand_icon_state = "combine_sniper"
@@ -806,7 +806,7 @@
 	eject_empty_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/svd
 	force = 12
-	fire_delay = 5
+	fire_delay = 5 //fires faster when used through the scope, since it doesnt use the slower automatic speed
 	burst_size = 1
 	spread = 2
 	recoil = 0.5

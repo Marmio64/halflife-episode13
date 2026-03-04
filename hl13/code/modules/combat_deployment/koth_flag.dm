@@ -286,6 +286,19 @@ GLOBAL_VAR_INIT(xen_tier_points, 3)
 	alter_holder_respawn = TRUE
 	grace_period_up_text = "<span class='reallybig'>The initial setup grace period is up, and the rebel flag is now capturable by the Combine.</span>"
 
+/obj/machinery/deployment_koth_flag/combine_defend
+	combine_time = 8 MINUTES
+	rebel_time = 30 SECONDS
+	grace_time = 1 MINUTES
+	starting_faction = COMBINE_DEPLOYMENT_FACTION
+	alter_holder_respawn = TRUE
+	grace_period_up_text = "<span class='reallybig'>The initial setup grace period is up, and the combine flag is now capturable by the Rebels.</span>"
+
+/obj/machinery/deployment_koth_flag/combine_defend/short
+	combine_time = 6 MINUTES
+	rebel_time = 30 SECONDS
+	grace_time = 45 SECONDS
+
 /obj/effect/koth_grace_field
 	name = "Grace Period Field"
 	desc = "A strange field which stops anything from passing until a grace period has finished."

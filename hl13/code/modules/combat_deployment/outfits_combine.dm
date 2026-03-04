@@ -336,7 +336,7 @@
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 	)
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit, /datum/action/cooldown/spell/conjure_item/bloodloss/slow)
 
 	extra_int = 4
 
@@ -539,7 +539,7 @@
 		/obj/item/extinguisher/mini = 1,
 	)
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit, /datum/action/cooldown/spell/conjure_item/bloodloss)
 
 	extra_int = 4
 
@@ -730,7 +730,7 @@
 	backpack_contents = list(
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
 		/obj/item/ammo_box/magazine/pulselmg = 3,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
 	)
 
 	ears = /obj/item/radio/headset/civilprotection/deployment

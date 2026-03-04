@@ -18,8 +18,8 @@
 	pixel_x = -32
 	base_pixel_x = -16
 	health_doll_icon = "broodmother"
-	maxHealth = 1200
-	health = 1200
+	maxHealth = 1000
+	health = 1000
 	obj_damage = 25
 	melee_damage_lower = 20
 	melee_damage_upper = 25

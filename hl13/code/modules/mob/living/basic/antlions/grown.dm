@@ -227,8 +227,8 @@
 	melee_damage_upper = 45
 	obj_damage = 50
 	melee_attack_cooldown = 2 SECONDS
-	maxHealth = 900
-	health = 900
+	maxHealth = 800
+	health = 800
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner
 	var/datum/action/cooldown/spell/conjure/antlions/antlions

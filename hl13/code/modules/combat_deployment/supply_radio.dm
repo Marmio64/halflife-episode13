@@ -197,8 +197,8 @@
 	spawn_path = /obj/item/sbeacondrop/rebel_turret
 
 /datum/supply_beacon_option/fortifications_crate
-	option_name = "Fortifications Crate (275 Points)"
-	cost = 275
+	option_name = "Fortifications Crate (250 Points)"
+	cost = 250
 	spawn_path = /obj/structure/closet/crate/halflife/wooden/fortifications
 
 /datum/supply_beacon_option/grenade_crate

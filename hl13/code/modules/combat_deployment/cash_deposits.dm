@@ -8,7 +8,7 @@
 	var/deployment_faction = NO_FACTION
 	var/starting_cash = 0
 	///how many tier 5 beacons it can give out when a xen boss is spawned
-	var/tier5_uses = 3
+	var/tier5_uses = 2
 
 /obj/machinery/cash_deposit/combine
 	deployment_faction = COMBINE_DEPLOYMENT_FACTION

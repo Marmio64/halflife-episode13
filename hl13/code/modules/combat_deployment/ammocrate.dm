@@ -79,10 +79,9 @@
 			ammo_to_dispense = /obj/item/ammo_casing/rocket/hl13
 		if("Pulse Shotgun x2")
 			ammo_to_dispense = /obj/item/storage/box/lethalshot/halflife/pulse
-			dispense_count = 1
-		if("Pulse LMG x2")
+			dispense_count = 2
+		if("Pulse LMG")
 			ammo_to_dispense = /obj/item/ammo_box/magazine/pulselmg
-			dispense_count = 1
 
 	if(ammo_to_dispense)
 		playsound(src, 'hl13/sound/effects/ammocrate_open.ogg', 50, TRUE, extrarange = -3)
@@ -118,6 +117,8 @@
 /obj/machinery/ammo_crate/heavy/recharge
 	desc = "A large ammo crate. Contains special ammo types that you can pull out after a short delay."
 	recharges = TRUE
+	ammo_amount = 6
+	ammo_max = 6
 
 /obj/machinery/ammo_crate/no_recharge
 	desc = "A large ammo crate. It's somewhat slow to grab out of, and has a limited amount of ammo it can give."

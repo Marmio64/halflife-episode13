@@ -336,7 +336,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_per = 5
-	extra_dex = 2
+	extra_dex = 3
 
 /datum/outfit/deployment_loadout/rebel/tier3/engineer
 	name = "Deployment: Upgraded Refugee Engineer+"
@@ -429,9 +429,10 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit, /datum/action/cooldown/spell/conjure_item/bloodloss/slow)
 
 	extra_int = 4
+	extra_dex = 2
 
 /// TIER 4 ///////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/rebel/tier4
@@ -587,7 +588,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_per = 5
-	extra_dex = 2
+	extra_dex = 3
 
 /datum/outfit/deployment_loadout/rebel/tier4/engineer
 	name = "Deployment: Heavy Refugee Engineer"
@@ -729,9 +730,10 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit, /datum/action/cooldown/spell/conjure_item/bloodloss)
 
 	extra_int = 4
+	extra_dex = 2
 
 /datum/outfit/deployment_loadout/rebel/tier4/medic_rebel/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -811,8 +813,7 @@
 	r_pocket = /obj/item/flashlight/seclite
 	shoes = /obj/item/clothing/shoes/boots
 	backpack_contents = list(
-		/obj/item/grenade/syndieminibomb/bouncer = 2,
-		/obj/item/hl13_small_flag/poland/telescopic = 1,
+		/obj/item/grenade/syndieminibomb/bouncer = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
 		/obj/item/ammo_box/magazine/ak47 = 2,
@@ -856,6 +857,8 @@
 	shoes = /obj/item/clothing/shoes/boots
 
 	back = /obj/item/storage/backpack/halflife/satchel
+
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/revolver
 
 	backpack_contents = list(
 		/obj/item/hl13_small_flag/poland/telescopic = 1,

@@ -447,16 +447,16 @@
 			playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
 			new /obj/structure/lattice/catwalk(src)
 		else
-			to_chat(user, span_warning("You need two rods to build a catwalk!"))
+			to_chat(user, span_warning("You need one rod to build a catwalk!"))
 		return
 
 	if(do_after(user, 2 SECONDS, src))
-		if(used_rods.use(2))
+		if(used_rods.use(4))
 			to_chat(user, span_notice("You construct a lattice."))
 			playsound(src, 'sound/items/weapons/genhit.ogg', 50, TRUE)
 			new /obj/structure/lattice(src)
 		else
-			to_chat(user, span_warning("You need two rods to build a lattice."))
+			to_chat(user, span_warning("You need four rods to build a lattice."))
 	else
 		to_chat(user, span_notice("You stop constructing a lattice."))
 		return
