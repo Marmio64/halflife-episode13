@@ -186,6 +186,7 @@
 	actions_types = list(/datum/action/item_action/assassin_invis)
 	clothing_traits = list(TRAIT_BACKSTABBER)
 	var/invis_ready = TRUE
+	var/cloaked = FALSE
 
 /datum/armor/overwatch_assassin_armor
 	melee = 35
@@ -202,13 +203,13 @@
 
 /datum/action/item_action/assassin_invis
 	name = "Cloak Self"
-	desc = "Partially cloak yourself for a short duration."
+	desc = "Toggle on/off a partial cloak over yourself. While cloaked you cannot directly attack people."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "cloak"
 
 /obj/item/clothing/suit/armor/overwatch/assassin/verb/assassin_invis()
 	set category = "Object"
-	set name = "Cloak Self"
+	set name = "Toggle Cloak"
 	if(!iscarbon(usr))
 		return
 	if(!invis_ready)
@@ -216,16 +217,23 @@
 		return
 
 	var/mob/living/carbon/human/H = usr
-	to_chat(H, "<span class='notice'Cloak deployed.</span>")
+
+	if(!cloaked)
+		to_chat(H, "<span class='notice'Cloak deployed.</span>")
+		H.alpha = 40
+		ADD_TRAIT(H, TRAIT_PACIFISM, CLOTHING_TRAIT) //cant attack while cloaked
+		cloaked = TRUE
+	else
+		to_chat(H, "<span class='notice'Cloak removed.</span>")
+		H.alpha = 255
+		REMOVE_TRAIT(H, TRAIT_PACIFISM, CLOTHING_TRAIT)
+		cloaked = FALSE
 
 	playsound(loc, 'hl13/sound/effects/zap1.ogg', 50, TRUE, TRUE)
 	invis_ready = FALSE
-	H.alpha = 35
-	sleep(15 SECONDS)
-	H.alpha = 255
-	sleep(20 SECONDS)
+
+	sleep(1 SECONDS)
 	invis_ready = TRUE
-	to_chat(usr, span_notice("The suit hums, its cloak is ready to deploy once more."))
 
 /obj/item/clothing/suit/armor/overwatch/wallhammer
 	name = "overwatch wallhammer chestpiece"

@@ -3,7 +3,7 @@
 	desc = "A gun similar to an AR2 is mounted here, and can be used to fire."
 	icon_state = "combine_emplacement"
 	icon = 'hl13/icons/obj/barriers.dmi'
-	max_integrity = 550
+	max_integrity = 600
 	projectile_type = /obj/projectile/bullet/pulse/ar2/emplacement
 	anchored = TRUE
 	number_of_shots = 8

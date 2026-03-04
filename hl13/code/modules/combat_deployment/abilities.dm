@@ -23,6 +23,23 @@
 /datum/action/cooldown/spell/conjure_item/medkit/the_hidden/faster
 	cooldown_time = 15 SECONDS
 
+/datum/action/cooldown/spell/conjure_item/bloodloss
+	name = "Procure Bloodloss Shot"
+	desc = "Procures a anti-bloodloss shot to heal someone or yourself with. Deletes the last one summoned if it is still available."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "bloodloss"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 50 SECONDS
+	item_type = /obj/item/reagent_containers/hypospray/medipen/blood
+	requires_hands = TRUE
+	delete_old = FALSE
+
+/datum/action/cooldown/spell/conjure_item/bloodloss/slow
+	cooldown_time = 90 SECONDS
+
 /datum/action/cooldown/spell/conjure_item/sandbag
 	name = "Procure Sandbag"
 	desc = "Procures some sandbags to use for building defenses."

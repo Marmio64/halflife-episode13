@@ -97,6 +97,15 @@
 	if(armour_penetration < max_distance_armor_piercing)
 		armour_penetration += ap_increase_per_tile
 
+//Miss allies if nearby them
+/obj/projectile/bullet/pulse/heavy/on_hit(atom/target, blocked = 0, pierce_hit)
+	if(isliving(target) && 47 <= range) //if the round has travelled 4 or less tiles, it can miss allies
+		var/mob/living/victim = target
+		if(victim.deployment_faction == COMBINE_DEPLOYMENT_FACTION || HAS_TRAIT(victim, TRAIT_MINDSHIELD)) //if mindshielded or on the combine faction
+			return BULLET_ACT_FORCE_PIERCE
+
+	return ..()
+
 /obj/projectile/bullet/flechette
 	name = "flechette"
 	icon_state = "flechette"
@@ -148,7 +157,7 @@
 	name = "plasma arc"
 	icon_state = "xray"
 	damage = 24
-	armour_penetration = 25
+	armour_penetration = 20
 	wound_bonus = -20
 	damage_type = BURN
 	armor_flag = LASER
