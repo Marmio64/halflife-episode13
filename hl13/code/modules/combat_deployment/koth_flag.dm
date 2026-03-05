@@ -298,6 +298,8 @@ GLOBAL_VAR_INIT(xen_tier_points, 3)
 	combine_time = 6 MINUTES
 	rebel_time = 30 SECONDS
 	grace_time = 45 SECONDS
+	altered_respawn_speed = 35 SECONDS
+	normal_respawn_speed = 20 SECONDS
 
 /obj/effect/koth_grace_field
 	name = "Grace Period Field"

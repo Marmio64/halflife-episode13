@@ -105,7 +105,7 @@
 	icon_state = "smoke"
 	width = 500
 	height = 500
-	count = 60
+	count = 30
 	spawning = 10
 	lifespan = 15
 	fade = 10

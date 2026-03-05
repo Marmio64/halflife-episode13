@@ -142,7 +142,7 @@
 	eject_empty_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/ak47
 	force = 12
-	fire_delay = 2
+	fire_delay = 3
 	burst_size = 1
 	spread = 7
 	recoil = 0.7
@@ -155,12 +155,21 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
+	var/fire_rate = 0.37 SECONDS
+
 /obj/item/gun/ballistic/automatic/ak47/no_mag
 	spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/ak47/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.37 SECONDS)
+	AddComponent(/datum/component/automatic_fire, fire_rate)
+
+/obj/item/gun/ballistic/automatic/ak47/cheap
+	name = "\improper Cheap AK-47 Rifle"
+	icon_state = "cheapak47"
+	desc = "An old AK-47 without the stock. This thing is going to kick like a mule without that stock... but it should still hit just as hard. This one looks like it was made with less quality control, and may fire more slowly than most AK-47s."
+	fire_rate = 0.5 SECONDS
+	fire_delay = 5
 
 //cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30.
 //about 1.96 seconds TTK, also has good AP
@@ -361,6 +370,11 @@
 
 /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger
 	fire_delay = 12 //geared towards sniping, not mag dumping
+
+/obj/item/gun/ballistic/revolver/coltpython/poorly_maintained
+	name = "\improper poorly-maintained colt python"
+	desc = "A poorly maintained looking colt python. Just as accurate and powerful as any other colt, but the parts aren't as well taken care of, leading to a slower firing rate."
+	fire_delay = 10
 
 /obj/item/gun/ballistic/revolver/coltpython/well_crafted
 	name = "\improper well-crafted colt python"

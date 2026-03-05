@@ -89,7 +89,9 @@
 	armour_penetration = 10
 	low_power_melee_damage_lower = 3
 	low_power_melee_damage_upper = 5
-	operating_power = 15 //30 seconds till low power
+	melee_damage_lower = 15
+	melee_damage_upper = 22
+	operating_power = 8 //16 seconds till low power
 	loot = list()
 	var/shield_hits = 3
 

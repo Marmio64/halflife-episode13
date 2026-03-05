@@ -608,12 +608,12 @@
 /datum/outfit/deployment_loadout/combine/tier4/overseer
 	name = "Deployment: Overseer"
 	display_name = "Viscerator Overseer Cop (Offense)"
-	desc = "You are a MP7 equipped cop that specializes in supporting allies with your large amount of viscerators, but aren't too powerful by yourself. Your viscerators are quick to deploy and have a shield which can take three shots for them, but have low health otherwise, making them best used against slow firing targets."
+	desc = "You are a MP7 equipped cop that specializes in hunting down vulnerable, alone targets with your increased speed. Your viscerators have special shields that absorb a number of shots irregardless of damage, making them best against slow firing targets like enemy snipers and vortigaunts."
 	id_name = "Overseer"
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
-	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat/overseer
+	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat/overseer/fast
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 
 	mask = /obj/item/clothing/mask/gas/civilprotection/overseer

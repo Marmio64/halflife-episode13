@@ -45,7 +45,7 @@
 	human.name = human.get_visible_name()
 	human.eye_color_left = random_eye_color()
 	human.eye_color_right = human.eye_color_left
-	human.skin_tone = pick(GLOB.skin_tones)
+	human.skin_tone = pick(GLOB.skin_tones_polish) //most average people are polish here
 	// No underwear generation handled here
 	var/picked_color = random_hair_color()
 	human.set_haircolor(picked_color, update = FALSE)

@@ -336,6 +336,9 @@
 /obj/item/storage/backpack/halflife/satchel/larger
 	storage_type = /datum/storage/backpack/halflife
 
+/obj/item/storage/backpack/halflife/satchel/larger/fireproof
+	resistance_flags = FIRE_PROOF
+
 /obj/item/storage/backpack/halflife/satchel/radio
 	name = "radio pack"
 	desc = "A old world radio pack for transmitting signals with."

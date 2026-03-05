@@ -134,6 +134,9 @@
 	desc = "A variant of the modified trenchcoat vest dyed with green highlights to broadcast the authority of its wearer."
 	icon_state = "cp_trenchcoatoverseer"
 
+/obj/item/clothing/suit/armor/civilprotection/trenchcoat/overseer/fast
+	slowdown = -0.1
+
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/sectorial
 	name = "sectoral trenchcoat"
 	desc = "A variant of the modified trenchcoat vest dyed with blue highlights to broadcast the authority of its wearer."
@@ -754,8 +757,8 @@
 /datum/armor/plf_veteran
 	melee = 60 //bulky EOD suit
 	bullet = 70 //enough kevlar to kill god
-	laser = 70
-	energy = 100
+	laser = 65
+	energy = 95
 	bomb = 90 //gutted EOD suit. missing some of the original plating though.
 	fire = 70 //pretty well-insulated
 	acid = 50
@@ -798,3 +801,29 @@
 	fire = 40
 	acid = 20
 	wound = 5
+
+/obj/item/clothing/suit/utility/fire/firefighter/halflife
+	name = "reinforced firesuit"
+	desc = "An old world firesuit with a resistance modified overwatch plate carrier above it. Provides amazing protection against flames and heat, and isn't too shabby at being normal armor as well."
+	icon_state = "firesuit"
+	slowdown = 0.75
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+	armor_type = /datum/armor/halflife_firesuit
+	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED, TRAIT_NOFIRE, TRAIT_NOFIRE_SPREAD)
+	allowed = list(
+		/obj/item/crowbar,
+		/obj/item/gun,
+		/obj/item/extinguisher,
+		/obj/item/tank/internals,
+		)
+
+/datum/armor/halflife_firesuit
+	melee = 40
+	bullet = 45
+	laser = 85
+	energy = 80
+	bomb = 40
+	fire = 100
+	acid = 100
+	wound = 10

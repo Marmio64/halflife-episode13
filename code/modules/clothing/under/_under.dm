@@ -15,6 +15,8 @@
 	limb_integrity = 30
 	interaction_flags_click = ALLOW_RESTING
 
+
+	max_integrity = 250 //hl13 edit, slightly increase jumpsuit durability
 	strip_delay = 50 //hl13 edit, increased
 
 	/// Has this undersuit been freshly laundered and, as such, imparts a mood bonus for wearing

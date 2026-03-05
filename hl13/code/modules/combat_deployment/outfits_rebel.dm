@@ -712,7 +712,7 @@
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/medic_plus
 	accessory = /obj/item/clothing/accessory/armband/medblue
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython/poorly_maintained
 	r_pocket = /obj/item/flashlight/seclite
 	shoes = /obj/item/clothing/shoes/boots
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
@@ -721,7 +721,7 @@
 	glasses = /obj/item/clothing/glasses/hud/health
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/ammo_box/colta357 = 2,
 		/obj/item/storage/medkit/halflife = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/healthanalyzer = 1,
@@ -795,6 +795,37 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/rocket)
 
 	extra_end = 2
+
+/datum/outfit/deployment_loadout/rebel/tier5/firefighter
+	name = "Deployment: Rebel Fire Fighter"
+	display_name = "Rebel Fire Fighter (Defense)"
+	desc = "You are very slow, and while your armor is pretty good it still isn't remarkable against normal threats. Where you shine however, is being incredibly resistant to heat and flame based attacks, making you perfect for fighting cremators. In addition, you have incendiary grenades of your own to turn up the heat with."
+	id_name = "Firefighter"
+
+	uniform = /obj/item/clothing/under/citizen/rebel
+	suit = /obj/item/clothing/suit/utility/fire/firefighter/halflife
+	head = /obj/item/clothing/head/halflife/firesuit_hat
+	mask = /obj/item/clothing/mask/gas/hl2/swat
+	suit_store = /obj/item/gun/ballistic/automatic/ak47/cheap
+	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
+	r_pocket = /obj/item/flashlight/seclite
+
+	ears = /obj/item/radio/headset/rebel_deployment
+	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
+
+	back = /obj/item/storage/backpack/halflife/satchel/larger/fireproof
+
+	backpack_contents = list(
+		/obj/item/grenade/incendiary_grenade = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/pill/patch/medkit = 2,
+		/obj/item/ammo_box/magazine/ak47 = 4,
+		/obj/item/extinguisher/mini = 1,
+	)
+
+	extra_str = 2
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/incendiary)
 
 /datum/outfit/deployment_loadout/rebel/tier5/veteran
 	name = "Deployment: PLF Veteran"

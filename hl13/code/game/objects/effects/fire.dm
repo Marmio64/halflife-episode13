@@ -47,6 +47,20 @@
 	updateicon()
 	. = ..()
 
+/obj/halflife/fire/attack_hand(mob/user, list/modifiers)
+	. = ..()
+	if(.)
+		return
+	user.visible_message("<span class='notice'>[user] starts stomping on the flames.</span>","<span class='notice'>You start stomping on the flames.</span>")
+
+	if(!do_after(user, 1 SECONDS, target = src))
+		return
+
+	user.visible_message("<span class='notice'>[user] stomps on the flames.</span>","<span class='notice'>You stomp on the flames.</span>")
+	firelevel -= 2 //about as much as a process tick
+
+	updateicon()
+
 /obj/halflife/fire/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
@@ -117,7 +131,7 @@
 		A.flamer_fire_act(burnlevel, firelevel)
 
 	T.VapourListTurf(list(/datum/vapours/smoke = (0.75 * firelevel), /datum/vapours/carbon_air_vapour = (0.75 * firelevel)), VAPOUR_ACTIVE_EMITTER_CAP)
-	firelevel -= 2 //reduce the intensity by 2 per tick
+	firelevel -= 1.75 //reduce the intensity by 1.75 per tick
 	return
 
 /atom/proc/flamer_fire_act()

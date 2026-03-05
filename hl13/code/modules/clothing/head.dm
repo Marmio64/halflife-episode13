@@ -237,3 +237,26 @@
 
 /obj/item/clothing/head/halflife/scout_hat/weak
 	armor_type = /datum/armor/paddedjacket/weak
+
+/obj/item/clothing/head/halflife/firesuit_hat
+	name = "firesuit hood"
+	desc = "An oldworld firehood with a hardened welding visor for added protection. Pretty good against conventional arms, but shines best at protecting against heat and fire based attacks."
+
+	icon = 'hl13/icons/obj/clothing/hats.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
+	icon_state = "firehood"
+	inhand_icon_state = null
+	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL | BLOCK_GAS_SMOKE_EFFECT | STACKABLE_HELMET_EXEMPT | HEADINTERNALS
+	heat_protection = HEAD
+	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
+	cold_protection = HEAD
+	min_cold_protection_temperature = FIRE_HELM_MIN_TEMP_PROTECT
+	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
+	visor_flags_cover = NONE
+	flags_inv = HIDEEARS|HIDEHAIR|HIDEFACE|HIDEFACIALHAIR|HIDESNOUT
+	hair_mask = ""
+	armor_type = /datum/armor/halflife_firesuit
+
+/obj/item/clothing/head/halflife/firesuit_hat/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/clothing_fov_visor, FOV_180_DEGREES)

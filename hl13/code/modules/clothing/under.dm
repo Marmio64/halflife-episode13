@@ -1,7 +1,7 @@
 #define STIMULANT_INJECTION_DELAY (60 SECONDS)
 
 /obj/item/clothing/under/combine
-	max_integrity = 250
+	max_integrity = 275
 	strip_delay = 50
 	can_adjust = FALSE
 	sensor_mode = SENSOR_COORDS
@@ -264,6 +264,7 @@
 	armor_type = /datum/armor/rebelsuit
 	can_adjust = FALSE
 	limb_integrity = 50
+	max_integrity = 275
 
 /datum/armor/rebelsuit
 	melee = 10

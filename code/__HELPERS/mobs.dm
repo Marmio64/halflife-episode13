@@ -109,6 +109,20 @@ GLOBAL_LIST_INIT(skin_tones, sort_list(list(
 	"african2"
 	)))
 
+//mostly whitey polski slavs
+GLOBAL_LIST_INIT(skin_tones_polish, sort_list(list(
+	"caucasian1",
+	"caucasian1",
+	"caucasian2",
+	"caucasian2",
+	"caucasian3",
+	"caucasian3",
+	"latino",
+	"mediterranean",
+	"mixed1",
+	"mixed2",
+	)))
+
 GLOBAL_LIST_INIT(skin_tone_names, list(
 	"african1" = "Medium brown",
 	"african2" = "Dark brown",
