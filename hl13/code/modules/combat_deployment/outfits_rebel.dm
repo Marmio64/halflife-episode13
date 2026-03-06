@@ -819,11 +819,9 @@
 		/obj/item/grenade/incendiary_grenade = 2,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/reagent_containers/pill/patch/medkit = 2,
-		/obj/item/ammo_box/magazine/ak47 = 4,
+		/obj/item/ammo_box/magazine/ak47 = 3,
 		/obj/item/extinguisher/mini = 1,
 	)
-
-	extra_str = 2
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/incendiary)
 

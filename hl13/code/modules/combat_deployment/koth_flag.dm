@@ -49,6 +49,8 @@ GLOBAL_VAR_INIT(xen_tier_points, 3)
 	var/grace_period_up_text = "<span class='greentext big'>The flag grace period is up, and it is now capturable!</span>"
 	var/grace_period_text = TRUE
 
+	var/projectile_passchance = 50
+
 /obj/machinery/deployment_koth_flag/Initialize(mapload)
 	.=..()
 	START_PROCESSING(SSprocessing, src)
@@ -56,6 +58,20 @@ GLOBAL_VAR_INIT(xen_tier_points, 3)
 	GLOB.deployment_rebels_flag_time_left = rebel_time
 	GLOB.deployment_xen_flag_time_left = xen_time
 	GLOB.deployment_flag_grace_period = grace_time
+
+/obj/machinery/deployment_koth_flag/CanAllowThrough(atom/movable/mover, turf/target)
+	. = ..()
+	if(istype(mover, /obj/projectile))
+		if(!projectile_passchance)
+			return
+		if(!anchored)
+			return TRUE
+		var/obj/projectile/proj = mover
+		if(proj.firer && Adjacent(proj.firer))
+			return TRUE
+		if(prob((projectile_passchance)))
+			return TRUE
+		return FALSE
 
 /obj/machinery/deployment_koth_flag/process()
 	for(var/turf/closed/wall/W in RANGE_TURFS(2, get_turf(src))) //no walling off the flag
@@ -276,7 +292,8 @@ GLOBAL_VAR_INIT(xen_tier_points, 3)
 	. = ..()
 	. += span_notice("The rebels need to hold the flag for [(GLOB.deployment_rebels_flag_time_left)/10] seconds more in order to win.")
 	. += span_notice("The combine need to hold the flag for [(GLOB.deployment_combine_flag_time_left)/10] seconds more in order to win.")
-	. += span_notice("The xenians need to hold the flag for [(GLOB.deployment_xen_flag_time_left)/10] seconds more in order to win.")
+	if(SSmapping.current_map.combat_deployment_gamemode == "xen_chaos")
+		. += span_notice("The xenians need to hold the flag for [(GLOB.deployment_xen_flag_time_left)/10] seconds more in order to win.")
 
 /obj/machinery/deployment_koth_flag/rebel_defend
 	rebel_time = 8 MINUTES

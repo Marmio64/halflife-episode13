@@ -722,7 +722,8 @@
 	weapon_weight = WEAPON_HEAVY
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
-	jamming_chance = 8
+	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. This one looks a little better than most, it should jam less often."
+	jamming_chance = 5
 	projectile_damage_multiplier = 1.45 //approx 40 damage a shot
 	can_parry = TRUE
 	wdefense = 3

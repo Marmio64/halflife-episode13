@@ -146,7 +146,7 @@
 		var/obj/projectile/proj = mover
 		if(proj.firer && Adjacent(proj.firer))
 			return TRUE
-		if(prob(75)) // These things are pretty thin
+		if(prob(80)) // These things are pretty thin, but still a 20% chance for a projectile to hit it instead of moving on
 			return TRUE
 		return FALSE
 

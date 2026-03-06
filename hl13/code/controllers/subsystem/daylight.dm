@@ -116,8 +116,15 @@ SUBSYSTEM_DEF(daylight)
 					curfew_zombies()
 			*/
 
-		if(light_coefficient > 0.25) //leave some moonlight
-			light_coefficient -= 0.025
+		if(SSmapping.current_map.minetype != "combat_deployment")
+			if(light_coefficient > 0.25) //leave some moonlight
+				light_coefficient -= 0.025
+		else
+			if(light_coefficient > 0.5) //leave more night lighting on combat deployment
+				light_coefficient -= 0.025
+			else if(light_coefficient < 0.5)
+				light_coefficient += 0.025
+
 
 	if(current_day_time > MORNING_START && current_day_time <= AFTERNOON_START)
 		if(day_cycle_active != DAY_CYCLE_MORNING)

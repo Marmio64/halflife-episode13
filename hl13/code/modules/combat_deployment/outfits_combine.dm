@@ -339,6 +339,7 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit, /datum/action/cooldown/spell/conjure_item/bloodloss/slow)
 
 	extra_int = 4
+	extra_dex = 2
 
 /datum/outfit/deployment_loadout/combine/tier3/engineer
 	name = "Deployment: Upgraded Union Engineer+"
@@ -491,7 +492,7 @@
 /datum/outfit/deployment_loadout/combine/tier4/ordinal
 	name = "Deployment: Combine Ordinal"
 	display_name = "Combine Ordinal (Offense)"
-	desc = "You are an OTA soldier upgraded to have a pulse SMG and an improved manhack deployer."
+	desc = "You are an OTA soldier upgraded to have a pulse SMG and a powerful, improved manhack deployer."
 	id_name = "Ordinal"
 
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
@@ -542,6 +543,7 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit, /datum/action/cooldown/spell/conjure_item/bloodloss)
 
 	extra_int = 4
+	extra_dex = 2
 
 /datum/outfit/deployment_loadout/combine/tier4/medic_cop/post_equip(mob/living/carbon/human/H)
 	. = ..()

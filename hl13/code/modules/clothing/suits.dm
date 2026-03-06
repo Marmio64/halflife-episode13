@@ -277,7 +277,7 @@
 	inhand_icon_state = "wallhammer"
 	block_chance = 90
 	slot_flags = 0
-	max_integrity = 135
+	max_integrity = 125
 	shield_break_leftover = null
 	item_flags = DROPDEL
 
@@ -757,8 +757,8 @@
 /datum/armor/plf_veteran
 	melee = 60 //bulky EOD suit
 	bullet = 70 //enough kevlar to kill god
-	laser = 65
-	energy = 95
+	laser = 60
+	energy = 90
 	bomb = 90 //gutted EOD suit. missing some of the original plating though.
 	fire = 70 //pretty well-insulated
 	acid = 50

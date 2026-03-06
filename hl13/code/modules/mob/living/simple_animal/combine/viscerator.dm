@@ -68,9 +68,9 @@
 	melee_damage_upper = 30
 
 /mob/living/simple_animal/hostile/halflife/viscerator/upgraded
-	health = 90
-	maxHealth = 90
-	armour_penetration = 10
+	health = 95
+	maxHealth = 95
+	armour_penetration = 15
 	melee_damage_lower = 15
 	melee_damage_upper = 22
 
