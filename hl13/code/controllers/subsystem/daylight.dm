@@ -120,7 +120,7 @@ SUBSYSTEM_DEF(daylight)
 			if(light_coefficient > 0.25) //leave some moonlight
 				light_coefficient -= 0.025
 		else
-			if(light_coefficient > 0.5) //leave more night lighting on combat deployment
+			if(light_coefficient > 0.525) //leave more night lighting on combat deployment
 				light_coefficient -= 0.025
 			else if(light_coefficient < 0.5)
 				light_coefficient += 0.025
