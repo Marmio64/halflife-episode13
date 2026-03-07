@@ -16,7 +16,7 @@
 	/// How many rations have been dispensed so far?
 	var/rations_dispensed = 0
 	/// When does the vendor start to malfunction from excessive use?
-	var/ration_breaklimit = 26
+	var/ration_breaklimit = 30
 	/// Is the vendor malfunctioning?
 	var/malfunctioning = FALSE
 

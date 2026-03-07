@@ -560,8 +560,8 @@
 	drink_type = FRUIT | ALCOHOL
 
 /obj/item/reagent_containers/cup/glass/bottle/hcider
-	name = "Jian Hard Cider"
-	desc = "Apple juice for adults."
+	name = "Lubelski Hard Cydr"
+	desc = "A popular hard cider brand before the war. Age has dampened the taste a bit, but it's still good."
 	icon_state = "hcider"
 	volume = 50
 	list_reagents = list(/datum/reagent/consumable/ethanol/hcider = 50)
