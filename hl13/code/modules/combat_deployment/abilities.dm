@@ -63,7 +63,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 75 SECONDS
+	cooldown_time = 85 SECONDS
 	item_type = /obj/item/construction_token
 	requires_hands = TRUE
 	delete_old = FALSE
