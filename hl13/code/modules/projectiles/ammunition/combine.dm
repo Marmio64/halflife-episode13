@@ -70,6 +70,7 @@
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse
 
 	icon = 'hl13/icons/obj/guns/ammo.dmi'
+	caliber = CALIBER_ANTIXEN
 
 /obj/item/ammo_casing/shotgun/mining
 	name = "mining slug"

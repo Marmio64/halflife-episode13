@@ -18,6 +18,8 @@
 	strip_delay = 1 SECONDS
 	article = "a pair of"
 
+	max_integrity = 250
+
 	var/offset = 0
 	var/equipped_before_drop = FALSE
 	///Whether these shoes have laces that can be tied/untied

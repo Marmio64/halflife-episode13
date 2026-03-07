@@ -769,7 +769,7 @@
 		/obj/item/storage/box/lethalshot/halflife = 3,
 	)
 
-	extra_dex = 2
+	extra_dex = 4
 	extra_str = 2
 
 /datum/outfit/deployment_loadout/rebel/tier5/rpg

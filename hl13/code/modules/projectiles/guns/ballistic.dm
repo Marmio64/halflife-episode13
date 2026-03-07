@@ -577,6 +577,7 @@
 /obj/item/ammo_box/magazine/internal/shot/pulse
 	name = "pulseshotgun internal magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/pulse
+	caliber = CALIBER_ANTIXEN
 	max_ammo = 8
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/mp7launcher
