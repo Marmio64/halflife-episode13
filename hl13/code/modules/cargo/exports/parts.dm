@@ -10,7 +10,7 @@
 	export_types = list(/obj/item/water_canister)
 
 /datum/export/labor_certificate
-	cost = CARGO_CRATE_VALUE * 0.5
+	cost = CARGO_CRATE_VALUE * 0.75
 	unit_name = "labor certificate"
 	export_types = list(/obj/item/labor_certificate)
 

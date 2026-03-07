@@ -369,17 +369,20 @@
 /datum/supply_beacon_option/sandbags
 	option_name = "6x Sandbags (60 Tokens)"
 	cost = 60
-	spawn_path = /obj/item/stack/sheet/mineral/sandbags/six
+	amount = 6
+	spawn_path = /obj/item/stack/sheet/mineral/sandbags
 
 /datum/supply_beacon_option/razorwire
 	option_name = "10x Razorwire (60 Tokens)"
 	cost = 60
-	spawn_path = /obj/item/stack/razorwire/half_stack
+	amount = 10
+	spawn_path = /obj/item/stack/razorwire
 
 /datum/supply_beacon_option/woodplanks
 	option_name = "25x Wood Planks (60 Tokens)"
 	cost = 60
-	spawn_path = /obj/item/stack/sheet/mineral/wood/twentyfive
+	amount = 25
+	spawn_path = /obj/item/stack/sheet/mineral/wood
 
 /datum/supply_beacon_option/turret_combine
 	option_name = "1x Combine Turret Beacon (180 Tokens)"

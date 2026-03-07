@@ -231,6 +231,7 @@
 
 /obj/item/storage/bag/plants
 	name = "plant bag"
+	desc = "A bag for the efficient storage of produce and seeds.
 	icon = 'icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "plantbag"
 	worn_icon_state = "plantbag"
@@ -239,8 +240,8 @@
 /obj/item/storage/bag/plants/Initialize(mapload)
 	. = ..()
 	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
-	atom_storage.max_total_storage = 100
-	atom_storage.max_slots = 100
+	atom_storage.max_total_storage = 30
+	atom_storage.max_slots = 30
 	atom_storage.set_holdable(list(
 		/obj/item/food/grown,
 		/obj/item/graft,

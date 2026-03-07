@@ -57,3 +57,11 @@
 	materials = list(/datum/material/biomass = 12)
 	build_path = /obj/item/stack/sheet/cloth
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
+
+/datum/design/leather
+	name = "Sheet of Leather"
+	id = "leather"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 15)
+	build_path = /obj/item/stack/sheet/leather
+	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
