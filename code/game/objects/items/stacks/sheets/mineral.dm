@@ -74,6 +74,9 @@ GLOBAL_LIST_INIT(sandbag_recipes, list ( \
 /obj/item/stack/sheet/mineral/sandbags/three
 	amount = 3
 
+/obj/item/stack/sheet/mineral/sandbags/six
+	amount = 6
+
 /obj/item/stack/sheet/mineral/sandbags/twelve
 	amount = 12
 

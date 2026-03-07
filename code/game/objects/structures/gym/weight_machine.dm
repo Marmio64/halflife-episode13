@@ -107,6 +107,11 @@
 	user.balloon_alert_to_viewers("[pick(more_weight)]")
 	START_PROCESSING(SSobj, src)
 
+	var/workout_time = 8 SECONDS
+
+	if(HAS_TRAIT(user, TRAIT_STIMMED))
+		workout_time -= 1 SECONDS //workout slightly faster when stimmed
+
 	if(do_after(user, 8 SECONDS, src) && user.has_gravity())
 		// with enough dedication, even clowns can overcome their handicaps
 		var/clumsy_chance = 30 - (user.mind.get_skill_level(/datum/skill/athletics) * 5)
@@ -136,6 +141,8 @@
 			var/gravity_modifier = user.has_gravity() > STANDARD_GRAVITY ? 2 : 1
 			// remember the real xp gain is from sleeping after working out
 			user.mind.adjust_experience(/datum/skill/athletics, WORKOUT_XP * gravity_modifier)
+			if(HAS_TRAIT(user, TRAIT_STIMMED))
+				user.mind.adjust_experience(/datum/skill/athletics, WORKOUT_XP * 0.25)
 			user.apply_status_effect(/datum/status_effect/exercised, EXERCISE_STATUS_DURATION)
 
 	end_workout()

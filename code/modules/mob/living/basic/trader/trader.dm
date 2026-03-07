@@ -66,6 +66,10 @@
 	if(!living_user.combat_mode)
 		to_chat(user, span_warning("You decide that hitting them may be a bad idea."))
 		return
+	else if(combat_mode == FALSE && prob(80))
+		to_chat(user, span_warning("You take a moment to consider that harming them may be a bad idea. Let's exit our /Combat Mode/ if we want to heed this advice, or just keep trying to attack them."))
+		return
+
 	. = ..()
 
 /mob/living/basic/trader/mrbones

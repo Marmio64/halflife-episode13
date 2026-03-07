@@ -217,12 +217,14 @@
 		owner.reagents.add_reagent(/datum/reagent/medicine/morphine, 4)
 		owner.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 3)
 		owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 7)
+		owner.reagents.add_reagent(/datum/reagent/medicine/salglu_solution, 10)
 		SOUND_BEEP('hl13/sound/voice/hev/beep_3.ogg')
 		add_queue('hl13/sound/voice/hev/morphine.ogg',1 SECONDS)
 	else
 		owner.reagents.add_reagent(/datum/reagent/medicine/morphine, 4)
 		owner.reagents.add_reagent(/datum/reagent/medicine/c2/libital, 3)
 		owner.reagents.add_reagent(/datum/reagent/medicine/omnizine, 7)
+		owner.reagents.add_reagent(/datum/reagent/medicine/salglu_solution, 10)
 		SOUND_BEEP('hl13/sound/voice/hev/beep_3.ogg')
 		add_queue('hl13/sound/voice/hev/stimulants.ogg',1 SECONDS)
 		emag_doses_left--

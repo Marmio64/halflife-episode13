@@ -39,7 +39,7 @@ Assistant
 	plasmaman_outfit = /datum/outfit/plasmaman
 	paycheck = PAYCHECK_CITIZEN // Get a job. Job reassignment changes your paycheck now. Get over it.
 
-	skills = list(/datum/skill/factorywork = SKILL_EXP_JOURNEYMAN, /datum/skill/mining = SKILL_EXP_NOVICE) //HL13 edit, so long as they're prisoners who will do factory work a lot
+	skills = list(/datum/skill/factorywork = SKILL_EXP_JOURNEYMAN, /datum/skill/mining = SKILL_EXP_NOVICE, /datum/skill/scavenging = SKILL_EXP_NOVICE) //HL13 edit, so long as they're prisoners who will do factory work a lot
 
 	paycheck_department = ACCOUNT_CIV
 	display_order = JOB_DISPLAY_ORDER_ASSISTANT

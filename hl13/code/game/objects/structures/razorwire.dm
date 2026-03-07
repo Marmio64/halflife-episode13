@@ -7,6 +7,7 @@
 	density = FALSE
 	anchored = TRUE
 	layer = ABOVE_OBJ_LAYER
+	plane = -2
 	projectile_passchance = 95
 	pass_flags_self = LETPASSTHROW|PASSSTRUCTURE
 	max_integrity = 100
@@ -145,7 +146,7 @@
 	attack_verb_continuous = list("hits", "whacks", "slices")
 	attack_verb_simple = list("hit", "whack", "slice")
 	singular_name = "bundle"
-	max_amount = 10
+	max_amount = 20
 	merge_type = /obj/item/stack/razorwire
 
 

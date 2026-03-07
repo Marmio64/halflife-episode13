@@ -785,6 +785,7 @@ Basically, we fill the time between now and 2s from now with hands based off the
 	overdose_threshold = 25
 	ph = 12.2
 	tox_damage = 0
+	metabolized_traits = list(TRAIT_STIMMED)
 
 /datum/reagent/inverse/oxandrolone/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()

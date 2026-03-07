@@ -62,8 +62,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 8,
-		/obj/item/stack/razorwire/small_stack = 1,
+		/obj/item/hl2/engineer_radio/combine = 1,
 	)
 
 
@@ -74,6 +73,8 @@
 	extra_end = 3
 
 	skillchips = list(/obj/item/skillchip/engineer)
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher/slow)
 
 /// TIER 2 ////////////////////////////////////////////////////////
 
@@ -184,9 +185,8 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 10,
-		/obj/item/stack/razorwire/small_stack = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/hl2/engineer_radio/combine = 1,
 	)
 
 
@@ -197,6 +197,8 @@
 	extra_end = 4
 
 	skillchips = list(/obj/item/skillchip/engineer)
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher/slow)
 
 /// TIER 3 ////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier3
@@ -360,19 +362,18 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 10,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
-		/obj/item/sbeacondrop/combine_turret = 1,
 		/obj/item/wirecutters/halflife = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 1,
 		/obj/item/wrench/halflife = 1,
+		/obj/item/hl2/engineer_radio/combine/filled = 1,
 	)
 
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag, /datum/action/cooldown/spell/conjure_item/razor_wire/slow)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher)
 
 	extra_str = 5
 	extra_end = 5
@@ -570,19 +571,18 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 11,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/ammo_box/colta357 = 2,
-		/obj/item/sbeacondrop/combine_turret = 1,
 		/obj/item/wirecutters/halflife = 1,
 		/obj/item/wrench/halflife = 1,
+		/obj/item/hl2/engineer_radio/combine/filled = 1,
 	)
 
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag, /datum/action/cooldown/spell/conjure_item/razor_wire)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher)
 
 	extra_str = 5
 	extra_end = 5

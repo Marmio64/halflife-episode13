@@ -614,9 +614,17 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "dm" = (
-/obj/structure/closet/crate/halflife,
-/obj/item/melee/sledgehammer,
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small/directional/east,
+/obj/structure/rack,
+/obj/item/circuitboard/machine/oven,
+/obj/item/circuitboard/machine/coffeemaker/impressa,
+/obj/item/circuitboard/machine/microwave,
+/obj/item/circuitboard/machine/griddle,
+/obj/item/circuitboard/machine/gibber,
+/obj/item/circuitboard/machine/fat_sucker,
+/obj/item/circuitboard/machine/deep_fryer,
+/obj/item/circuitboard/machine/hydroponics,
+/obj/item/circuitboard/machine/hydroponics,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison/engineering)
 "dn" = (
@@ -1638,6 +1646,10 @@
 	dir = 4
 	},
 /area/halflife/indoors/prison/maintenance)
+"iU" = (
+/obj/machinery/vending/breenwater,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/prison/gym)
 "iV" = (
 /obj/structure/table/halflife/no_smooth/wood/stand,
 /turf/open/floor/plating/indoor/tile/navy,
@@ -4327,17 +4339,9 @@
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/outdoors/forest/water)
 "wd" = (
-/obj/machinery/light/small/directional/east,
-/obj/structure/rack,
-/obj/item/circuitboard/machine/oven,
-/obj/item/circuitboard/machine/coffeemaker/impressa,
-/obj/item/circuitboard/machine/microwave,
-/obj/item/circuitboard/machine/griddle,
-/obj/item/circuitboard/machine/gibber,
-/obj/item/circuitboard/machine/fat_sucker,
-/obj/item/circuitboard/machine/deep_fryer,
-/obj/item/circuitboard/machine/hydroponics,
-/obj/item/circuitboard/machine/hydroponics,
+/obj/structure/closet/crate/halflife,
+/obj/item/melee/sledgehammer,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison/engineering)
 "we" = (
@@ -4479,6 +4483,12 @@
 /obj/structure/bed/halflife/mattress/yellowed,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/forest/water)
+"wM" = (
+/obj/structure/closet/halflife,
+/obj/effect/spawner/random/halflife/loot,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer)
 "wN" = (
 /obj/structure/chair/halflife/metal/blue{
 	dir = 1
@@ -5331,6 +5341,19 @@
 /obj/structure/window/fulltile/halflife/nosmooth/reinforced,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison/maintenance)
+"Bc" = (
+/obj/structure/rack,
+/obj/item/circuitboard/machine/chem_master,
+/obj/item/circuitboard/machine/chem_heater,
+/obj/item/circuitboard/machine/medical_kiosk,
+/obj/item/circuitboard/machine/cell_charger,
+/obj/item/circuitboard/machine/cell_charger,
+/obj/item/circuitboard/machine/scanner_gate,
+/obj/item/circuitboard/machine/scanner_gate,
+/obj/item/circuitboard/machine/scanner_gate,
+/obj/item/circuitboard/machine/scanner_gate,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/prison/engineering)
 "Bd" = (
 /obj/effect/mob_spawn/corpse/human/refugee,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -7943,6 +7966,12 @@
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands)
+"NB" = (
+/obj/machinery/door/unpowered/halflife/metal/red{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete/sewer,
+/area/halflife/indoors/sewer)
 "NC" = (
 /obj/item/storage/toolbox/mechanical,
 /turf/open/floor/plating/ground/rockunder,
@@ -9085,19 +9114,6 @@
 /mob/living/basic/trooper/rebel/mp7/refugee,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands/shop)
-"Ta" = (
-/obj/structure/rack,
-/obj/item/circuitboard/machine/chem_master,
-/obj/item/circuitboard/machine/chem_heater,
-/obj/item/circuitboard/machine/medical_kiosk,
-/obj/item/circuitboard/machine/cell_charger,
-/obj/item/circuitboard/machine/cell_charger,
-/obj/item/circuitboard/machine/scanner_gate,
-/obj/item/circuitboard/machine/scanner_gate,
-/obj/item/circuitboard/machine/scanner_gate,
-/obj/item/circuitboard/machine/scanner_gate,
-/turf/open/floor/plating/indoor/metal/plate,
-/area/halflife/indoors/prison/engineering)
 "Tb" = (
 /obj/structure/halflife/trash/bricks,
 /turf/open/floor/plating/indoor/concrete/sewer,
@@ -22971,7 +22987,7 @@ yo
 yo
 yo
 yo
-yo
+NB
 yo
 yo
 lT
@@ -23170,12 +23186,12 @@ yo
 Zk
 Zk
 yo
-YC
-YC
-YC
-YC
-YC
-YC
+IG
+Zk
+GJ
+Zk
+Zk
+Zk
 yo
 lT
 yo
@@ -23373,12 +23389,12 @@ yo
 Zk
 Zk
 yo
-YC
-YC
-YC
-YC
-YC
-YC
+Zk
+Zk
+Zk
+Zk
+Zk
+Zk
 yo
 lT
 yo
@@ -23575,13 +23591,13 @@ YC
 yo
 Zk
 Zk
-yo
-YC
-YC
-YC
-YC
-YC
-YC
+SH
+Zk
+Zk
+Zk
+Zk
+Zk
+wM
 yo
 lT
 yo
@@ -23779,12 +23795,12 @@ yo
 Zk
 Zk
 yo
-YC
-YC
-YC
-YC
-YC
-YC
+Zk
+Zk
+yo
+NF
+Zk
+Lj
 yo
 lT
 yo
@@ -62506,7 +62522,7 @@ uJ
 Bk
 uJ
 uJ
-dm
+wd
 VK
 pg
 jl
@@ -62704,9 +62720,9 @@ IM
 uJ
 VK
 VK
-Ta
+Bc
 uJ
-wd
+dm
 uJ
 uJ
 yR
@@ -89329,7 +89345,7 @@ av
 mh
 Xd
 ZV
-qN
+iU
 Xh
 Xh
 qN

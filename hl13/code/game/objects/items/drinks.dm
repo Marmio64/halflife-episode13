@@ -49,6 +49,13 @@
 	list_reagents = list(/datum/reagent/water = 7, /datum/reagent/consumable/nutriment/fat/oil = 15, /datum/reagent/consumable/nutriment = 3)
 	custom_price = PAYCHECK_CREW * 1.75
 
+/obj/item/reagent_containers/cup/soda_cans/breenwater/purple/protein
+	name = "purple protein can"
+	desc = "A special can of Breen's private reserve... Actually, this is a special protein filled can. It's an expensive drink meant for the hard working, filled with protein and combine approved steroids for muscle growth."
+	icon_state = "breen_can_purple"
+	list_reagents = list(/datum/reagent/water = 7, /datum/reagent/consumable/nutriment/protein = 6, /datum/reagent/inverse/oxandrolone = 12)
+	custom_price = PAYCHECK_CREW * 2.25
+
 /obj/item/reagent_containers/cup/soda_cans/breenwater/fuel
 	name = "breen-fuel can"
 	desc = "A discontinued can of Breen-Fuel. It was designed as a cheap energy drink which gave citizens extra energy to complete work for their benefactors, but production stopped after studies showed it had adverse health effects and the short term gains were not worth the longterm costs of lost labor."

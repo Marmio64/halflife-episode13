@@ -171,7 +171,7 @@
 	/// Having any of these reagents in your system extends the duration
 	var/static/list/supplementary_reagents_bonus = list(
 		/datum/reagent/consumable/ethanol/protein_blend = 10 SECONDS, // protein shakes are very robust
-		/datum/reagent/inverse/oxandrolone = 8 SECONDS,
+		/datum/reagent/inverse/oxandrolone = 7 SECONDS,
 		/datum/reagent/consumable/nutriment/protein = 5 SECONDS,
 		/datum/reagent/consumable/nutriment/vitamin = 4 SECONDS,
 		/datum/reagent/consumable/milk = 4 SECONDS,

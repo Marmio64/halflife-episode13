@@ -249,7 +249,7 @@ GLOBAL_LIST_INIT(plasteel_recipes, list ( \
  */
 GLOBAL_LIST_INIT(wood_recipes, list ( \
 	new/datum/stack_recipe("clear wooden barricade", /obj/structure/barricade/wooden, 3, time = 4 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ONE_PER_TURF | CRAFT_ON_SOLID_GROUND, category = CAT_STRUCTURE), \
-	new/datum/stack_recipe("solid wooden barricade", /obj/structure/barricade/wooden/solid, 5, time = 5 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ONE_PER_TURF | CRAFT_ON_SOLID_GROUND, category = CAT_STRUCTURE), \
+	new/datum/stack_recipe("solid wooden barricade", /obj/structure/barricade/wooden/solid, 5, time = 5 SECONDS, crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_ONE_PER_TURF | CRAFT_ON_SOLID_GROUND, category = CAT_STRUCTURE, trait_booster = TRAIT_ENGINEER, trait_modifier = 0.5), \
 	new/datum/stack_recipe("wooden sandals", /obj/item/clothing/shoes/sandal, 1, crafting_flags = NONE, category = CAT_CLOTHING), \
 	new/datum/stack_recipe("wood floor tile", /obj/item/stack/tile/wood, 1, 4, 20, crafting_flags = NONE, category = CAT_TILES), \
 	new/datum/stack_recipe("wood table frame", /obj/structure/table_frame/halflife/wood, 2, time = 1 SECONDS, crafting_flags = NONE, category = CAT_FURNITURE), \

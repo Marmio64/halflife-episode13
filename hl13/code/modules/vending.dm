@@ -5,7 +5,7 @@
 	icon_state = "breen_machine"
 	panel_type = "panel2"
 	product_ads = "Stay hydrated.;A thirsty citizen is a inefficient citizen.;Drink Breen's private reserve!;The purest water around."
-	products = list(/obj/item/reagent_containers/cup/soda_cans/breenwater/yellow = 8, /obj/item/reagent_containers/cup/soda_cans/breenwater = 8, /obj/item/reagent_containers/cup/soda_cans/breenwater/red = 4, /obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 4, /obj/item/reagent_containers/cup/soda_cans/halflife/coffee = 4)
+	products = list(/obj/item/reagent_containers/cup/soda_cans/breenwater/yellow = 8, /obj/item/reagent_containers/cup/soda_cans/breenwater = 8, /obj/item/reagent_containers/cup/soda_cans/breenwater/red = 4, /obj/item/reagent_containers/cup/soda_cans/breenwater/purple = 4, /obj/item/reagent_containers/cup/soda_cans/breenwater/purple/protein = 3, /obj/item/reagent_containers/cup/soda_cans/halflife/coffee = 4)
 	contraband = list(/obj/item/reagent_containers/cup/soda_cans/breenwater/fuel = 3)
 	resistance_flags = FIRE_PROOF
 	refill_canister = /obj/item/vending_refill/breen

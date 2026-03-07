@@ -72,7 +72,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 9,
+		/obj/item/hl2/engineer_radio/rebel = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -81,6 +81,8 @@
 	extra_end = 3
 
 	skillchips = list(/obj/item/skillchip/engineer)
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher/slow)
 
 /datum/outfit/deployment_loadout/rebel/tier1/smuggler
 	name = "Deployment: Refugee Smuggler"
@@ -180,8 +182,8 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 11,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/hl2/engineer_radio/rebel = 1,
 	)
 
 	suit = /obj/item/clothing/suit/armor/civilprotection
@@ -192,6 +194,8 @@
 	extra_end = 3
 
 	skillchips = list(/obj/item/skillchip/engineer)
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher/slow)
 
 /datum/outfit/deployment_loadout/rebel/tier2/smuggler
 	name = "Deployment: Upgraded Smuggler"
@@ -353,19 +357,18 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 11,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
-		/obj/item/sbeacondrop/rebel_turret = 1,
 		/obj/item/wirecutters/halflife = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 1,
 		/obj/item/wrench/halflife = 1,
+		/obj/item/hl2/engineer_radio/rebel/filled = 1,
 	)
 
 	suit = /obj/item/clothing/suit/armor/civilprotection
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag, /datum/action/cooldown/spell/conjure_item/razor_wire/slow)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher)
 
 	extra_str = 4
 	extra_end = 4
@@ -607,19 +610,18 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/stack/sheet/mineral/sandbags = 11,
-		/obj/item/sbeacondrop/rebel_turret = 1,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 		/obj/item/ammo_box/colta357 = 2,
 		/obj/item/wirecutters/halflife = 1,
 		/obj/item/wrench/halflife = 1,
+		/obj/item/hl2/engineer_radio/rebel/filled = 1,
 	)
 
 	suit = /obj/item/clothing/suit/armor/rebel/light
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/sandbag, /datum/action/cooldown/spell/conjure_item/razor_wire)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher)
 
 	extra_str = 4
 	extra_end = 4
@@ -769,7 +771,7 @@
 		/obj/item/storage/box/lethalshot/halflife = 3,
 	)
 
-	extra_dex = 4
+	extra_dex = 6
 	extra_str = 2
 
 /datum/outfit/deployment_loadout/rebel/tier5/rpg

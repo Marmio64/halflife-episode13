@@ -25,20 +25,20 @@
 
 /datum/action/cooldown/spell/conjure_item/bloodloss
 	name = "Procure Bloodloss Shot"
-	desc = "Procures a anti-bloodloss shot to heal someone or yourself with. Deletes the last one summoned if it is still available."
+	desc = "Procures a anti-bloodloss shot to heal someone or yourself with."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "bloodloss"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 50 SECONDS
+	cooldown_time = 45 SECONDS
 	item_type = /obj/item/reagent_containers/hypospray/medipen/blood
 	requires_hands = TRUE
 	delete_old = FALSE
 
 /datum/action/cooldown/spell/conjure_item/bloodloss/slow
-	cooldown_time = 90 SECONDS
+	cooldown_time = 80 SECONDS
 
 /datum/action/cooldown/spell/conjure_item/sandbag
 	name = "Procure Sandbag"
@@ -53,6 +53,23 @@
 	item_type = /obj/item/stack/sheet/mineral/sandbags/three
 	requires_hands = TRUE
 	delete_old = FALSE
+
+/datum/action/cooldown/spell/conjure_item/construction_voucher
+	name = "Procure Construction Token Voucher"
+	desc = "Procures a voucher that can be redeemed in your engineering radio in order to purchase engineering supplies."
+	button_icon = 'hl13/icons/obj/misc_items.dmi'
+	button_icon_state = "certificate"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 75 SECONDS
+	item_type = /obj/item/construction_token
+	requires_hands = TRUE
+	delete_old = FALSE
+
+/datum/action/cooldown/spell/conjure_item/construction_voucher/slow
+	cooldown_time = 110 SECONDS
 
 /datum/action/cooldown/spell/conjure_item/razor_wire
 	name = "Procure Razor Wire"
