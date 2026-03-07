@@ -231,7 +231,7 @@
 
 /obj/item/storage/bag/plants
 	name = "plant bag"
-	desc = "A bag for the efficient storage of produce and seeds.
+	desc = "A bag for the efficient storage of produce and seeds."
 	icon = 'icons/obj/service/hydroponics/equipment.dmi'
 	icon_state = "plantbag"
 	worn_icon_state = "plantbag"
