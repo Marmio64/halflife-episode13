@@ -129,7 +129,7 @@
 	anchored = TRUE
 	density = FALSE
 	layer = ABOVE_ALL_MOB_LAYER
-	plane = -3
+	plane = ABOVE_GAME_PLANE
 	light_range = 3.25
 	light_power = 1
 	light_color = "#ddcc9b"
