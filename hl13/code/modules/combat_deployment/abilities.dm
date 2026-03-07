@@ -63,13 +63,13 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 85 SECONDS
+	cooldown_time = 95 SECONDS
 	item_type = /obj/item/construction_token
 	requires_hands = TRUE
 	delete_old = FALSE
 
 /datum/action/cooldown/spell/conjure_item/construction_voucher/slow
-	cooldown_time = 110 SECONDS
+	cooldown_time = 125 SECONDS
 
 /datum/action/cooldown/spell/conjure_item/razor_wire
 	name = "Procure Razor Wire"

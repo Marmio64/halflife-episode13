@@ -260,14 +260,14 @@
 	faction_belonging = REBEL_DEPLOYMENT_FACTION
 
 /obj/item/hl2/engineer_radio/rebel/filled
-	current_cash = 240
+	current_cash = 180
 
 /obj/item/hl2/engineer_radio/combine
 	name = "Combine Engineering Radio"
 	faction_belonging = COMBINE_DEPLOYMENT_FACTION
 
 /obj/item/hl2/engineer_radio/combine/filled
-	current_cash = 240
+	current_cash = 180
 
 /obj/item/hl2/engineer_radio/interact(mob/user)
 	. = ..()
