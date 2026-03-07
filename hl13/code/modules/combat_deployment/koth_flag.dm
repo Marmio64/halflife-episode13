@@ -12,7 +12,7 @@ GLOBAL_VAR_INIT(deployment_win_team, null)
 //If their side has a shit ton of tier points, they get a guaranteed high tier.
 GLOBAL_VAR_INIT(rebel_tier_points, 3)
 GLOBAL_VAR_INIT(combine_tier_points, 3)
-GLOBAL_VAR_INIT(xen_tier_points, 3)
+GLOBAL_VAR_INIT(xen_tier_points, 4)
 
 /obj/machinery/deployment_koth_flag
 	name = "Central Flag"
@@ -312,7 +312,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 3)
 	grace_period_up_text = "<span class='reallybig'>The initial setup grace period is up, and the combine flag is now capturable by the Rebels.</span>"
 
 /obj/machinery/deployment_koth_flag/combine_defend/short
-	combine_time = 6 MINUTES
+	combine_time = 7 MINUTES
 	rebel_time = 30 SECONDS
 	grace_time = 45 SECONDS
 	altered_respawn_speed = 35 SECONDS

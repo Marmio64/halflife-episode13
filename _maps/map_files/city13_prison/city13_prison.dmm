@@ -614,18 +614,9 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "dm" = (
-/obj/machinery/light/small/directional/east,
-/obj/structure/rack,
-/obj/item/circuitboard/machine/oven,
-/obj/item/circuitboard/machine/coffeemaker,
-/obj/item/circuitboard/machine/coffeemaker/impressa,
-/obj/item/circuitboard/machine/microwave,
-/obj/item/circuitboard/machine/griddle,
-/obj/item/circuitboard/machine/gibber,
-/obj/item/circuitboard/machine/fat_sucker,
-/obj/item/circuitboard/machine/deep_fryer,
-/obj/item/circuitboard/machine/hydroponics,
-/obj/item/circuitboard/machine/hydroponics,
+/obj/structure/closet/crate/halflife,
+/obj/item/melee/sledgehammer,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison/engineering)
 "dn" = (
@@ -2703,19 +2694,6 @@
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/outlands/shop)
-"on" = (
-/obj/structure/rack,
-/obj/item/circuitboard/machine/chem_master,
-/obj/item/circuitboard/machine/chem_heater,
-/obj/item/circuitboard/machine/medical_kiosk,
-/obj/item/circuitboard/machine/cell_charger,
-/obj/item/circuitboard/machine/cell_charger,
-/obj/item/circuitboard/machine/scanner_gate,
-/obj/item/circuitboard/machine/scanner_gate,
-/obj/item/circuitboard/machine/scanner_gate,
-/obj/item/circuitboard/machine/scanner_gate,
-/turf/open/floor/plating/indoor/metal/plate,
-/area/halflife/indoors/prison/engineering)
 "oo" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -4349,9 +4327,17 @@
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/outdoors/forest/water)
 "wd" = (
-/obj/structure/closet/crate/halflife,
-/obj/item/melee/sledgehammer,
-/obj/machinery/light/small/directional/south,
+/obj/machinery/light/small/directional/east,
+/obj/structure/rack,
+/obj/item/circuitboard/machine/oven,
+/obj/item/circuitboard/machine/coffeemaker/impressa,
+/obj/item/circuitboard/machine/microwave,
+/obj/item/circuitboard/machine/griddle,
+/obj/item/circuitboard/machine/gibber,
+/obj/item/circuitboard/machine/fat_sucker,
+/obj/item/circuitboard/machine/deep_fryer,
+/obj/item/circuitboard/machine/hydroponics,
+/obj/item/circuitboard/machine/hydroponics,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison/engineering)
 "we" = (
@@ -9099,6 +9085,19 @@
 /mob/living/basic/trooper/rebel/mp7/refugee,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands/shop)
+"Ta" = (
+/obj/structure/rack,
+/obj/item/circuitboard/machine/chem_master,
+/obj/item/circuitboard/machine/chem_heater,
+/obj/item/circuitboard/machine/medical_kiosk,
+/obj/item/circuitboard/machine/cell_charger,
+/obj/item/circuitboard/machine/cell_charger,
+/obj/item/circuitboard/machine/scanner_gate,
+/obj/item/circuitboard/machine/scanner_gate,
+/obj/item/circuitboard/machine/scanner_gate,
+/obj/item/circuitboard/machine/scanner_gate,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/prison/engineering)
 "Tb" = (
 /obj/structure/halflife/trash/bricks,
 /turf/open/floor/plating/indoor/concrete/sewer,
@@ -62507,7 +62506,7 @@ uJ
 Bk
 uJ
 uJ
-wd
+dm
 VK
 pg
 jl
@@ -62705,9 +62704,9 @@ IM
 uJ
 VK
 VK
-on
+Ta
 uJ
-dm
+wd
 uJ
 uJ
 yR

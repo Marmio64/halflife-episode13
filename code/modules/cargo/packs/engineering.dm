@@ -36,6 +36,14 @@
 	cost = CARGO_CRATE_VALUE * 5
 	crate_name = "toolbox crate"
 
+/datum/supply_pack/engineering/parts
+	name = "Premium machine parts Crate"
+	desc = "A set of three premium machine parts boxes, used for building new machines with machine boards, or for upgrading existing ones. Also comes with a high tech parts exchanger device."
+	access_view = ACCESS_ENGINE_EQUIP
+	contains = list(/obj/item/storage/box/stockparts/premium = 3, /obj/item/storage/part_replacer = 1)
+	cost = CARGO_CRATE_VALUE * 5
+	crate_name = "premium parts crate"
+
 /datum/supply_pack/engineering/cleanuptanks
 	name = "Clean-up Spray Tanks Crate"
 	desc = "Two tanks of Clean-up Solution, for dealin with xenian infestations."

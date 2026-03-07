@@ -83,6 +83,21 @@
 	)
 	generate_items_inside(items_inside,src)
 
+/obj/item/storage/box/stockparts/premium
+	name = "box of premium stock parts"
+	desc = "Contains a variety of premium stock parts."
+	icon_state = "syndiebox"
+
+/obj/item/storage/box/stockparts/premium/PopulateContents()
+	var/static/items_inside = list(
+		/obj/item/stock_parts/capacitor/adv = 3,
+		/obj/item/stock_parts/scanning_module/adv = 3,
+		/obj/item/stock_parts/servo/nano = 3,
+		/obj/item/stock_parts/micro_laser/high = 3,
+		/obj/item/stock_parts/matter_bin/adv = 3,
+		)
+	generate_items_inside(items_inside,src)
+
 /obj/item/storage/box/stockparts/deluxe
 	name = "box of deluxe stock parts"
 	desc = "Contains a variety of deluxe stock parts."

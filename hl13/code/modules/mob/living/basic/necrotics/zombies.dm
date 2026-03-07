@@ -40,7 +40,7 @@
 	var/sound_vary = FALSE
 	var/fungalheal = TRUE
 	///percentage of max health to heal while standing on a fungal node
-	var/fungalheal_amt = 0.01
+	var/fungalheal_amt = 0.02
 	var/idle_sounds = list('hl13/sound/creatures/zombiesound.ogg', 'hl13/sound/creatures/zombiesound2.ogg', 'hl13/sound/creatures/zombiesound3.ogg', 'hl13/sound/creatures/zombiesound4.ogg')
 
 	var/datum/action/cooldown/spell/play_dead/play_dead
