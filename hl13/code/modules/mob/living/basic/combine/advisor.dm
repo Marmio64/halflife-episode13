@@ -49,6 +49,7 @@
 	sooth.Grant(src)
 
 	ADD_TRAIT(src, TRAIT_MEDICAL_HUD, INNATE_TRAIT)
+	ADD_TRAIT(src, TRAIT_TDM_HUD_COM, INNATE_TRAIT)
 
 /mob/living/basic/halflife/advisor/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()

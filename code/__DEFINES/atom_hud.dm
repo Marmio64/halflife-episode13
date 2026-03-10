@@ -46,6 +46,9 @@
 #define DIAG_CAMERA_HUD "21"
 /// Steady Hacked APC effect, visible only to Malf AIs
 #define MALF_APC_HUD "22"
+/// hl13 TDM HUDs
+#define TDM_HUD_COM "23"
+#define TDM_HUD_REB "24"
 
 //by default everything in the hud_list of an atom is an image
 //a value in hud_list with one of these will change that behavior
@@ -63,6 +66,8 @@
 #define DATA_HUD_AI_DETECT 8
 #define DATA_HUD_FAN 9
 #define DATA_HUD_MALF_APC 10
+#define DATA_TDM_HUD_COM 11
+#define DATA_TDM_HUD_REB 12
 
 /// cooldown for being shown the images for any particular data hud
 #define ADD_HUD_TO_COOLDOWN 20
