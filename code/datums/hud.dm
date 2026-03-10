@@ -18,12 +18,15 @@ GLOBAL_ALIST_INIT(huds, alist(
 	DATA_HUD_AI_DETECT = new /datum/atom_hud/ai_detector(),
 	DATA_HUD_FAN = new /datum/atom_hud/data/human/fan_hud(),
 	DATA_HUD_MALF_APC = new /datum/atom_hud/data/malf_apc(),
+	DATA_TDM_HUD_COM = new /datum/atom_hud/data/human/tdm_hud_com(),
+	DATA_TDM_HUD_REB = new /datum/atom_hud/data/human/tdm_hud_reb(),
 ))
 
 GLOBAL_LIST_INIT(trait_to_hud, list(
 	TRAIT_SECURITY_HUD = DATA_HUD_SECURITY_ADVANCED,
 	TRAIT_MEDICAL_HUD = DATA_HUD_MEDICAL_ADVANCED,
 	TRAIT_DIAGNOSTIC_HUD = DATA_HUD_DIAGNOSTIC,
+	TRAIT_TDM_HUD_COM = DATA_TDM_HUD_COM,
 	TRAIT_BOT_PATH_HUD = DATA_HUD_BOT_PATH,
 ))
 

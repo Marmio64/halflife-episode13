@@ -81,6 +81,9 @@
 	sec_hud_set_security_status()
 	//...fan gear
 	fan_hud_set_fandom()
+	//hl13 tdm stuffs
+	tdm_hud_reb()
+	tdm_hud_com()
 	//...and display them.
 	add_to_all_human_data_huds()
 

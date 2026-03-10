@@ -267,6 +267,7 @@
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
 	r_hand = /obj/item/gun/ballistic/automatic/mp7
+	l_hand = /obj/item/toy/balloon/combine
 
 /obj/item/cardboard_cutout/spy_disguise
 	starting_cutout = "Overwatch Soldier"
@@ -302,6 +303,7 @@
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
 	r_hand = /obj/item/gun/ballistic/combine_sniper
+	l_hand = /obj/item/toy/balloon/combine
 
 //////////// Elite
 
@@ -326,6 +328,7 @@
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
 	r_hand = /obj/item/gun/ballistic/automatic/ar2
+	l_hand = /obj/item/toy/balloon/combine
 
 ////////// Medcop
 
@@ -350,3 +353,4 @@
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	mask = /obj/item/clothing/mask/gas/civilprotection/medical
 	r_hand = /obj/item/gun/ballistic/automatic/mp7
+	l_hand = /obj/item/toy/balloon/combine

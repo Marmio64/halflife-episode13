@@ -1,6 +1,7 @@
 /datum/outfit/deployment_loadout/combine
 	faction = COMBINE_DEPLOYMENT_FACTION
 	id = /obj/item/card/id/combine_tdm
+	accessory = /obj/item/clothing/accessory/combine_dogtags
 
 /datum/outfit/deployment_loadout/combine/tier1
 	loadout_tier = 1

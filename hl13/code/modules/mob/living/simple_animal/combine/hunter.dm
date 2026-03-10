@@ -59,6 +59,10 @@
 		return
 	adjustHealth(-maxHealth*0.01) //1.8 health every 2 seconds
 
+/mob/living/simple_animal/hostile/halflife/hunter/deployment/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_TDM_HUD_COM, INNATE_TRAIT)
+
 /mob/living/simple_animal/hostile/halflife/hunter/Aggro()
 	. = ..()
 	set_combat_mode(TRUE)

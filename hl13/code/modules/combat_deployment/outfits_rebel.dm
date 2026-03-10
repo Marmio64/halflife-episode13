@@ -8,6 +8,7 @@
 /datum/outfit/deployment_loadout/rebel
 	faction = REBEL_DEPLOYMENT_FACTION
 	id = /obj/item/card/id/rebel_tdm
+	accessory = /obj/item/clothing/accessory/rebel_dogtags
 
 /datum/outfit/deployment_loadout/rebel/tier1
 	loadout_tier = 1

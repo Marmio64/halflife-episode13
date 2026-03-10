@@ -86,3 +86,10 @@
 		else if(faction == XEN_DEPLOYMENT_FACTION)
 			W.assignment = id_name
 			W.registered_name = "[id_name]-[rand(111,999)]"
+
+	if(faction == REBEL_DEPLOYMENT_FACTION)
+		var/datum/atom_hud/team = GLOB.huds[DATA_TDM_HUD_REB]
+		team.show_to(human_to_equip)
+	else if(faction == COMBINE_DEPLOYMENT_FACTION)
+		var/datum/atom_hud/team = GLOB.huds[DATA_TDM_HUD_COM]
+		team.show_to(human_to_equip)

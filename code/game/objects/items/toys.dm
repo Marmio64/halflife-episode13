@@ -268,6 +268,13 @@
 		M.clear_mood_event("badass_antag")
 	. = ..()
 
+/obj/item/toy/balloon/combine
+	name = "combine balloon"
+	desc = "The most important part of a spy's disguise."
+	icon_state = "comballoon"
+	inhand_icon_state = "comballoon" //literally only works facing forward in your left hand, because thats the only place the spy will hold it
+	random_color = FALSE
+
 /obj/item/toy/balloon/arrest
 	name = "arreyst balloon"
 	desc = "A half inflated balloon about a boyband named Arreyst that was popular about ten years ago, famous for making fun of red jumpsuits as unfashionable."

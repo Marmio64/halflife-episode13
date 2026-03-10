@@ -38,6 +38,7 @@
 	gloves = /obj/item/clothing/gloves/fingerless
 	glasses = /obj/item/clothing/glasses/eyepatch
 	id = null
+	accessory = /obj/item/clothing/accessory/rebel_dogtags/captain
 
 	back = /obj/item/storage/backpack/halflife/satchel/radio/large
 
@@ -112,6 +113,9 @@
 	// Apply TRAIT_NODROP to everything
 	for(var/obj/item/item_to_nodrop as anything in no_drops)
 		ADD_TRAIT(item_to_nodrop, TRAIT_NODROP, CAPTURE_THE_FLAG_TRAIT)
+
+	var/datum/atom_hud/team = GLOB.huds[DATA_TDM_HUD_REB]
+		team.show_to(H)
 
 
 /datum/job/deployment_refugee_captain/get_roundstart_spawn_point()
