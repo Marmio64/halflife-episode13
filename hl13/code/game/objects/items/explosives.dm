@@ -63,7 +63,7 @@
 	name = "MK4A1 Incendiary Grenade"
 	desc = "A later modification of the MK3A2 grenade, fitted instead to cause a large amount of fire instead of an explosion."
 	icon = 'hl13/icons/obj/grenade.dmi'
-	icon_state = "bouncer"
+	icon_state = "incendiary"
 	det_time = 35
 
 /obj/item/grenade/incendiary_grenade/detonate(mob/living/lanced_by)

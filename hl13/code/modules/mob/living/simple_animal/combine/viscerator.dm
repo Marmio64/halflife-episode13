@@ -34,6 +34,11 @@
 	del_on_death = 1
 	death_message = "is smashed into pieces!"
 	death_sound = 'hl13/sound/creatures/viscerator/gib.ogg'
+
+	light_range = 2.25
+	light_power = 1
+	light_color = "#9bd9dd"
+
 	var/operating_power = 100
 	var/low_power_melee_damage_lower = 5
 	var/low_power_melee_damage_upper = 10

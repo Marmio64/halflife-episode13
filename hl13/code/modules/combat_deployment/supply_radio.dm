@@ -248,7 +248,7 @@
 
 /obj/item/hl2/engineer_radio
 	name = "Engineering Radio"
-	desc = "A specialized engineering supply radio tuned to a logistics base. It uses up stored Construction Tokens in order to purchase supplies, which can be acquired by using a Construction Token Voucher on the radio."
+	desc = "A specialized engineering supply radio tuned to a logistics base. It uses up stored Construction Tokens in order to purchase supplies, which can be acquired by using a Construction Token Voucher on the radio. In addition, you can hit this radio with other radios to absorb them for extra tokens."
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	icon_state = "perk_picker"
 	w_class = WEIGHT_CLASS_SMALL
@@ -400,6 +400,23 @@
 		current_cash += 120
 		qdel(I)
 		return
+
+	if(istype(I, /obj/item/hl2/engineer_radio))
+		var/obj/item/hl2/engineer_radio/absorbed_radio = I
+
+		if(isliving(user))
+			var/mob/living/livie = user
+			if(livie.deployment_faction != faction_belonging) //so you dont accidentally absorb your own radio into an enemy's radio.
+				to_chat(user, span_warning("Your faction cannot use this."))
+				return
+
+
+		to_chat(usr, span_notice("Voucher accepted."))
+		current_cash += 30
+		current_cash += absorbed_radio.current_cash //steal all the tokens on the radio you are absorbing
+		qdel(absorbed_radio)
+		return
+
 	..()
 
 /obj/item/construction_token

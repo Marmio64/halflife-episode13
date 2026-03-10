@@ -660,6 +660,7 @@
 		/obj/item/grenade/c4 = 2,
 		/obj/item/ammo_box/colta357 = 1,
 		/obj/item/grenade/smokebomb = 1,
+		/obj/item/climbing_hook/halflife/makeshift = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment

@@ -274,6 +274,7 @@
 
 /obj/item/storage/belt/civilprotection/overwatch/assassin/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/grenade/c4, src)
+	SSwardrobe.provide_type(/obj/item/climbing_hook/halflife, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm/extended, src)
@@ -281,6 +282,38 @@
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/combine_sniper, src)
 	SSwardrobe.provide_type(/obj/item/knife/combat/backstab, src)
 	update_appearance(UPDATE_ICON)
+
+/obj/item/storage/belt/civilprotection/overwatch/assassin/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 8
+	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
+	atom_storage.set_holdable(list(
+		/obj/item/ammo_box,
+		/obj/item/ammo_casing/shotgun,
+		/obj/item/assembly/flash/handheld,
+		/obj/item/clothing/glasses,
+		/obj/item/clothing/gloves,
+		/obj/item/flashlight/seclite,
+		/obj/item/flashlight/flare,
+		/obj/item/food/donut,
+		/obj/item/grenade,
+		/obj/item/holosign_creator/security,
+		/obj/item/knife/combat,
+		/obj/item/melee/baton,
+		/obj/item/radio,
+		/obj/item/reagent_containers/spray/pepper,
+		/obj/item/restraints/handcuffs,
+		/obj/item/restraints/legcuffs/bola,
+		/obj/item/ammo_box/magazine/usp9mm,
+		/obj/item/ammo_box/colta357,
+		/obj/item/ammo_box/magazine/ar2,
+		/obj/item/stack/medical/gauze,
+		/obj/item/storage/box/lethalshot,
+		/obj/item/halflife/combine_battery,
+		/obj/item/reagent_containers/pill/patch/medkit/vial,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen,
+		/obj/item/climbing_hook/halflife,
+	))
 
 /obj/item/storage/belt/civilprotection/riotcop_hidden/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/flashlight/flare/the_hidden, src)

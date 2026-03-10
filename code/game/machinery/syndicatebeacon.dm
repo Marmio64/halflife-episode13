@@ -215,6 +215,10 @@
 
 /obj/item/sbeacondrop/attack_self(mob/user)
 	if(user)
+		if(locate(droptype) in get_turf(user))
+			to_chat(user, span_warning("Already one here!"))
+			playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+			return
 		if(call_period)
 			if(!do_after(user, call_period, src))
 				to_chat(user, span_warning("You did not finish activating the device!"))

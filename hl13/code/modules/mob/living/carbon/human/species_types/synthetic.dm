@@ -40,8 +40,10 @@
 	. = ..()
 	C.change_stat(STATKEY_STR, 5)
 	C.change_stat(STATKEY_END, 5)
+	C.change_stat(STATKEY_DEX, -2)
 
 /datum/species/human/synth/cremator/on_species_loss(mob/living/carbon/C)
 	..()
 	C.change_stat(STATKEY_STR, -5)
 	C.change_stat(STATKEY_END, -5)
+	C.change_stat(STATKEY_DEX, 2)
