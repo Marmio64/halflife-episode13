@@ -100,12 +100,6 @@
 					return INITIALIZE_HINT_QDEL
 
 	recipes = get_main_recipes().Copy()
-	if(material_type)
-		var/datum/material/what_are_we_made_of = GET_MATERIAL_REF(material_type) //First/main material
-		for(var/category in what_are_we_made_of.categories)
-			switch(category)
-				if(MAT_CATEGORY_BASE_RECIPES)
-					recipes |= SSmaterials.base_stack_recipes.Copy()
 
 	update_weight()
 	update_appearance()

@@ -48,7 +48,7 @@
 	id = /obj/item/card/id/advanced/halflife/red
 
 	id_trim = /datum/id_trim/job/medical_doctor
-	uniform = /obj/item/clothing/under/citizen
+	uniform = /obj/item/clothing/under/citizen/full_sensors
 	suit =  /obj/item/clothing/suit/whitejacket
 	accessory = /obj/item/clothing/accessory/armband/medblue
 	ears = /obj/item/radio/headset

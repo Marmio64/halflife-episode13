@@ -149,7 +149,7 @@ SUBSYSTEM_DEF(dynamic)
 	var/waittime_h = 1800
 
 	/// A number between 0 and 100. The maximum amount of threat allowed to generate.
-	var/max_threat_level = 1 //disables dynamic for now
+	var/max_threat_level = 50
 
 	/// The extra chance multiplier that a heavy impact midround ruleset will run next time.
 	/// For example, if this is set to 50, then the next heavy roll will be about 50% more likely to happen.
@@ -443,6 +443,11 @@ SUBSYSTEM_DEF(dynamic)
 
 /// Generates the threat level using lorentz distribution and assigns peaceful_percentage.
 /datum/controller/subsystem/dynamic/proc/generate_threat()
+
+	if(SSmapping.current_map.minetype == "combat_deployment") //tdm mode shouldnt have antags spawning
+		threat_level = 0
+		return
+
 	// At lower pop levels we run a Liner Interpolation against the max threat based proportionally on the number
 	// of players ready. This creates a balanced lorentz curve within a smaller range than 0 to max_threat_level.
 	var/calculated_max_threat = (SSticker.totalPlayersReady < low_pop_player_threshold) ? LERP(low_pop_maximum_threat, max_threat_level, SSticker.totalPlayersReady / low_pop_player_threshold) : max_threat_level
@@ -458,11 +463,20 @@ SUBSYSTEM_DEF(dynamic)
 
 /// Generates the midround and roundstart budgets
 /datum/controller/subsystem/dynamic/proc/generate_budgets()
+	if(SSmapping.current_map.minetype == "combat_deployment") //tdm mode shouldnt have antags spawning
+		round_start_budget = 0
+		initial_round_start_budget = 0
+		mid_round_budget = 0
+		return
+
 	round_start_budget = lorentz_to_amount(roundstart_split_curve_centre, roundstart_split_curve_width, threat_level, 0.1)
 	initial_round_start_budget = round_start_budget
 	mid_round_budget = threat_level - round_start_budget
 
 /datum/controller/subsystem/dynamic/proc/setup_parameters()
+	if(SSmapping.current_map.minetype == "combat_deployment") //tdm mode shouldnt have antags spawning
+		max_threat_level = 1
+
 	log_dynamic("Dynamic mode parameters for the round:")
 	log_dynamic("Centre is [threat_curve_centre], Width is [threat_curve_width], Forced extended is [GLOB.dynamic_forced_extended ? "Enabled" : "Disabled"], No stacking is [GLOB.dynamic_no_stacking ? "Enabled" : "Disabled"].")
 	log_dynamic("Stacking limit is [GLOB.dynamic_stacking_limit].")

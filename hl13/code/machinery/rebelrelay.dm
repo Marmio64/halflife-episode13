@@ -21,7 +21,7 @@
 			lockable = FALSE, \
 			enabled = TRUE, \
 			uplink_flag = UPLINK_TRAITORS, \
-			starting_tc = 10, \
+			starting_tc = 5, \
 			uplink_handler_override = uplink_handler_override, \
 		)
 	else

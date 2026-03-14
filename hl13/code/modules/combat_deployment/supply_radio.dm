@@ -260,14 +260,14 @@
 	faction_belonging = REBEL_DEPLOYMENT_FACTION
 
 /obj/item/hl2/engineer_radio/rebel/filled
-	current_cash = 180
+	current_cash = 240
 
 /obj/item/hl2/engineer_radio/combine
 	name = "Combine Engineering Radio"
 	faction_belonging = COMBINE_DEPLOYMENT_FACTION
 
 /obj/item/hl2/engineer_radio/combine/filled
-	current_cash = 180
+	current_cash = 240
 
 /obj/item/hl2/engineer_radio/interact(mob/user)
 	. = ..()
@@ -385,13 +385,13 @@
 	spawn_path = /obj/item/stack/sheet/mineral/wood
 
 /datum/supply_beacon_option/turret_combine
-	option_name = "1x Combine Turret Beacon (180 Tokens)"
-	cost = 180
+	option_name = "1x Combine Turret Beacon (240 Tokens)"
+	cost = 240
 	spawn_path = /obj/item/sbeacondrop/combine_turret
 
 /datum/supply_beacon_option/turret_rebel
-	option_name = "1x Rebel Turret Beacon (180 Tokens)"
-	cost = 180
+	option_name = "1x Rebel Turret Beacon (240 Tokens)"
+	cost = 240
 	spawn_path = /obj/item/sbeacondrop/rebel_turret
 
 /obj/item/hl2/engineer_radio/attackby(obj/item/I, mob/user, params)

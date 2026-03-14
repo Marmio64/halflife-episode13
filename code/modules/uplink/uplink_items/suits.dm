@@ -13,7 +13,7 @@
 	desc = "A partially armored jumpsuit with no sensors built in."
 	item = /obj/item/clothing/under/citizen/rebel
 	cost = 3
-	progression_minimum = 5 MINUTES
+	progression_minimum = 1 MINUTES
 
 /datum/uplink_item/suits/copsuit
 	name = "Civil Protection Vest"
@@ -41,14 +41,14 @@
 	desc = "An old world EOD suit modified by the PLF. Incredibly heavy, but is the most protective suit of armor you can get your hands on."
 	item = /obj/item/clothing/suit/armor/halflife/plf_veteran
 	cost = 20
-	progression_minimum = 20 MINUTES
+	progression_minimum = 25 MINUTES
 
 /datum/uplink_item/suits/vet_helmet
 	name = "PLF Modified Bomb Suit Helmet"
 	desc = "An old world EOD suit helmet modified by the PLF. Hard to see out of, but great for keeping your brain intact."
 	item = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
 	cost = 9
-	progression_minimum = 20 MINUTES
+	progression_minimum = 25 MINUTES
 
 /datum/uplink_item/suits/militaryhelmet
 	name = "Military Helmet"
@@ -62,4 +62,4 @@
 	desc = "A heavily armored suit designed for hazardous environments. Offers very good protection against everything, and has a built in automatic medical system."
 	item = /obj/item/clothing/suit/hooded/hev
 	cost = 30
-	progression_minimum = 20 MINUTES
+	progression_minimum = 25 MINUTES

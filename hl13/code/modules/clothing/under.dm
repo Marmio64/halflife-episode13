@@ -228,7 +228,7 @@
 
 /obj/item/clothing/under/citizen
 	name = "citizen jumpsuit"
-	desc = "Full-body blue suit for the common citizen, worn down and dirtied by time and use. Uses sensors to allow the combine to track you."
+	desc = "Full-body blue suit for the common citizen, worn down and dirtied by time and use. Uses sensors to allow the combine to track your vitals."
 	icon_state = "citizenblue"
 	inhand_icon_state = "r_suit"
 	can_adjust = TRUE
@@ -238,7 +238,13 @@
 	worn_icon = 'hl13/icons/mob/clothing/uniform.dmi'
 	icon = 'hl13/icons/obj/clothing/uniforms.dmi'
 
+/obj/item/clothing/under/citizen/full_sensors
+	name = "union worker jumpsuit"
+	desc = "Full-body blue suit for unionized citizens. Uses sensors to allow the combine to track you."
+	sensor_mode = SENSOR_COORDS
+
 /obj/item/clothing/under/citizen/fireproof
+	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/under/citizen/refugee
 	name = "refugee clothes"

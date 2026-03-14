@@ -255,6 +255,11 @@
 	if(isliving(crafter))
 		var/mob/living/mob = crafter
 		var/crafting_time = ((recipe.time) / (mob.get_stat_level(STATKEY_INT) / 10)) //intelligence changes crafting speed, maxes out at halved crafting speed when at 20 intelligence
+
+		if(istype(recipe, /datum/crafting_recipe/food)) //food recipes arent affected by intelligence, but are sped up by being a chef
+			if(HAS_TRAIT(mob, TRAIT_EXPERIENCED_CHEF))
+				crafting_time = recipe.time *= 0.75
+
 		if(!do_after(crafter, crafting_time, target = crafter))
 			return "."
 	//hl13 edit end

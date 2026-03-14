@@ -49,7 +49,7 @@
 
 	id_trim = /datum/id_trim/job/station_engineer
 	ears = /obj/item/radio/headset
-	uniform = /obj/item/clothing/under/citizen
+	uniform = /obj/item/clothing/under/citizen/full_sensors
 	suit = /obj/item/clothing/suit/utility/radiation/engineer
 	mask = /obj/item/clothing/mask/gas/cwuengi
 	shoes = /obj/item/clothing/shoes/halflife/engineer

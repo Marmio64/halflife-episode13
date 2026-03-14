@@ -63,3 +63,27 @@
 	result = /obj/item/food/survivalist_stew
 	category = CAT_MISCFOOD
 	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
+
+/datum/crafting_recipe/food/nutrimentpierogi_pork
+	name = "Nutriment Pierogi (Pork)"
+	reqs = list(
+		/obj/item/food/grown/potato = 1,
+		/obj/item/food/grown/onion = 1,
+		/obj/item/food/halflife/nutrient_bar/pork = 1,
+		/obj/item/food/halflife/flour_paste = 1,
+	)
+	result = /obj/item/food/pierogi_ration
+	category = CAT_RATION
+	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
+
+/datum/crafting_recipe/food/nutrimentpierogi_beef
+	name = "Nutriment Pierogi (Beef)"
+	reqs = list(
+		/obj/item/food/grown/potato = 1,
+		/obj/item/food/grown/onion = 1,
+		/obj/item/food/halflife/nutrient_bar/beef = 1,
+		/obj/item/food/halflife/flour_paste = 1,
+	)
+	result = /obj/item/food/pierogi_ration
+	category = CAT_RATION
+	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED

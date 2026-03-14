@@ -197,7 +197,7 @@ GLOBAL_DATUM_INIT(latejoin_menu, /datum/latejoin_menu, new)
 			dept_data += job_datum.title
 
 	if(dept_data.len <= 0) //Congratufuckinglations
-		tgui_alert(owner, "There are literally no random jobs available for you on this server, ahelp for assistance.", "Oh No!")
+		tgui_alert(owner, "There are no random jobs available! If this is TDM mode, that means your team (or even all teams) have ran out of respawn tickets, otherwise ahelp!", "Oh No!")
 		return
 
 	var/random_job

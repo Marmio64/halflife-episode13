@@ -40,13 +40,15 @@
 
 /////BARRICADE TYPES///////
 /obj/structure/barricade/wooden
-	name = "wooden barricade"
-	desc = "This space is blocked off by a wooden barricade."
+	name = "wooden barricade embrasure"
+	desc = "A wooden barricade with an open space just large enough to fit a firearm through. It offers immensive coverage, but it lacks durability."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "woodenbarricade"
+	max_integrity = 125 //enough to stop two combine sniper rounds
 	resistance_flags = FLAMMABLE
 	bar_material = WOOD
 	hl13hit_sounds = SFX_WOODIMPACT
+	projectile_passchance = 10
 	var/drop_amount = 3
 
 /obj/structure/barricade/wooden/Initialize(mapload)

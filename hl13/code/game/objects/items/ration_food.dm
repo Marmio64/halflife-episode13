@@ -299,7 +299,7 @@
 	bite_consumption = 2
 	tastes = list("processed meat" = 3, "old grains" = 3)
 	foodtypes = MEAT | GRAIN
-	food_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/nutriment/vitamin = 3)
+	food_reagents = list(/datum/reagent/consumable/nutriment = 6, /datum/reagent/consumable/nutriment/vitamin = 3)
 	custom_price = 20
 
 	preserved_food = TRUE

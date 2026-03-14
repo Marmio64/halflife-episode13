@@ -1420,3 +1420,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// They are a prisoner in the institution. This affects some things like sociostability
 #define TRAIT_PRISONER "prisoner"
+
+/// They are a trained chef and can cook proper meals right.
+#define TRAIT_EXPERIENCED_CHEF "experienced_chef"

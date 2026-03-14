@@ -64,7 +64,13 @@
 /datum/component/butchering/proc/startButcher(obj/item/source, mob/living/M, mob/living/user)
 	to_chat(user, span_notice("You begin to butcher [M]..."))
 	playsound(M.loc, butcher_sound, 50, TRUE, -1)
-	if(do_after(user, speed, M) && M.Adjacent(source))
+
+	var/final_butcher_speed = speed
+
+	if(HAS_TRAIT(user, TRAIT_EXPERIENCED_CHEF)) //hl13 edit, experienced chefs can butcher faster
+		final_butcher_speed *= 0.5
+
+	if(do_after(user, final_butcher_speed, M) && M.Adjacent(source))
 		on_butchering(user, M)
 
 /datum/component/butchering/proc/startNeckSlice(obj/item/source, mob/living/carbon/human/H, mob/living/user)
@@ -105,6 +111,11 @@
 	var/list/results = list()
 	var/turf/location = target.drop_location()
 	var/final_effectiveness = effectiveness - target.butcher_difficulty
+
+	if(isliving(butcher))
+		if(HAS_TRAIT(butcher, TRAIT_EXPERIENCED_CHEF)) //hl13 edit, experienced chefs can butcher better
+			final_effectiveness *= 1.25
+
 	var/bonus_chance = max(0, (final_effectiveness - 100) + bonus_modifier) //so 125 total effectiveness = 25% extra chance
 
 	if(target.flags_1 & HOLOGRAM_1)

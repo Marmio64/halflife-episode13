@@ -30,7 +30,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	cost = 8 // Avoid raising traitor threat above this, as it is the default low cost ruleset.
 	scaling_cost = 9
 	requirements = list(8,8,8,8,8,8,8,8,8,8)
-	antag_cap = list("denominator" = 38)
+	antag_cap = list("denominator" = 24)
 	var/autotraitor_cooldown = (15 MINUTES)
 
 /datum/dynamic_ruleset/roundstart/traitor/pre_execute(population)

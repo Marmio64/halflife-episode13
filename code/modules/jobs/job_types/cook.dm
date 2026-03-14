@@ -1,10 +1,10 @@
 /datum/job/cook
 	title = JOB_COOK
-	description = "Operate the city's restaurant, listen to the labor lead, and try not to get shut down."
+	description = "Operate the prison cafeteria, ensuring inmates and staff alike are fed so neither attempt to kill you. You're still officially an inmate yourself unlike unionized prison staff, but due to a lower crime are afforded more amenities."
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
-	//faction = FACTION_STATION
-	total_positions = 0
-	spawn_positions = 0
+	faction = FACTION_STATION
+	total_positions = 1
+	spawn_positions = 1
 	exp_requirements = 30
 	exp_required_type = EXP_TYPE_CREW
 	supervisors = SUPERVISOR_HOP
@@ -51,7 +51,7 @@
 	alternate_titles = list(
 		JOB_CHEF,
 	)
-	//job_flags = STATION_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS
 
 /datum/job/cook/award_service(client/winner, award)
 	winner.give_award(award, winner.mob)
@@ -88,6 +88,14 @@
 
 /datum/outfit/job/cook/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
+	ADD_TRAIT(user, TRAIT_EXPERIENCED_CHEF, JOB_TRAIT)
+
+	user.mind?.teach_crafting_recipe(/datum/crafting_recipe/food/nutrimentpierogi_pork)
+	user.mind?.teach_crafting_recipe(/datum/crafting_recipe/food/nutrimentpierogi_beef)
+	user.change_stat(STATKEY_STR, 1) //strong from butchering
+	user.change_stat(STATKEY_DEX, 1) //fine knife control
+	user.change_stat(STATKEY_INT, -1) //kind of a loaf
+
 	// Update PDA to match possible new trim.
 	var/obj/item/card/id/worn_id = user.wear_id
 	var/obj/item/modular_computer/pda/pda = user.get_item_by_slot(pda_slot)

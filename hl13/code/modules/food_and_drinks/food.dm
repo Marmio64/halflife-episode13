@@ -13,6 +13,16 @@
 /obj/item/food/meat/slab/xen/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/meat/rawcutlet/xen, 2, 3 SECONDS, table_required = TRUE, screentip_verb = "Cut")
 
+/obj/item/food/meat/slab/xen/poison
+	name = "xen flesh"
+	desc = "A slab of alien flesh. This one looks especially offputting."
+	icon_state = "plantmeat"
+	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 4, /datum/reagent/toxin/headcrab_venom = 6)
+	bite_consumption = 6
+	tastes = list("meat" = 1, "acid" = 1)
+	foodtypes = RAW | MEAT | GROSS | XEN
+	jerky_type = /obj/item/food/sosjerky/healthy/xenian
+
 /obj/item/food/sosjerky/healthy/xenian
 	name = "homemade xen jerky"
 	desc = "Homemade xen jerky made from most likely the finest headcrabs."

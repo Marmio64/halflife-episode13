@@ -125,6 +125,8 @@
 
 	can_zombify = FALSE
 
+	butcher_results = list(/obj/item/food/meat/slab/xen/poison = 1, /obj/item/stack/sheet/sinew = 1, /obj/item/stack/sheet/bone = 1)
+
 	var/poison_type = /datum/reagent/toxin/headcrab_venom
 	var/poison_per_bite = 5
 

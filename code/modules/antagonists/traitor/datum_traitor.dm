@@ -62,7 +62,7 @@
 	uplink_flag_given = UPLINK_INFILTRATORS
 
 /datum/antagonist/traitor/infiltrator/sleeper_agent
-	name = "\improper Syndicate Sleeper Agent"
+	name = "\improper Rebel Sleeper Agent"
 
 /datum/antagonist/traitor/New(give_objectives = TRUE)
 	. = ..()
