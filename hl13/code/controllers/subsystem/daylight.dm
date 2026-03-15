@@ -118,12 +118,12 @@ SUBSYSTEM_DEF(daylight)
 
 		if(SSmapping.current_map.minetype != "combat_deployment")
 			if(light_coefficient > 0.25) //leave some moonlight
-				light_coefficient -= 0.025
+				light_coefficient -= 0.05
 		else
-			if(light_coefficient > 0.525) //leave more night lighting on combat deployment
-				light_coefficient -= 0.025
+			if(light_coefficient > 0.6) //leave more night lighting on combat deployment
+				light_coefficient -= 0.05
 			else if(light_coefficient < 0.5)
-				light_coefficient += 0.025
+				light_coefficient += 0.05
 
 
 	if(current_day_time > MORNING_START && current_day_time <= AFTERNOON_START)
@@ -139,7 +139,7 @@ SUBSYSTEM_DEF(daylight)
 			if(SSmapping.current_map.minetype != "combat_deployment")
 				priority_announce("Attention occupants, night has concluded, and Curfew is over. Your morning ration cycle will begin in thirty seconds. The daily tax is set at [daily_tax] credits.", "Curfew Notice.", sender_override = "Prison Automated Scheduler")
 		if(light_coefficient < 0.6)
-			light_coefficient += 0.025
+			light_coefficient += 0.05
 
 	if(current_day_time > AFTERNOON_START && current_day_time <= DUSK_START )
 		if(day_cycle_active != DAY_CYCLE_AFTERNOON)
@@ -155,7 +155,7 @@ SUBSYSTEM_DEF(daylight)
 				vendor.boxes_stored = factory_container_goal
 
 		if(light_coefficient < 0.9)
-			light_coefficient += 0.025
+			light_coefficient += 0.05
 
 	if(current_day_time > DUSK_START  && current_day_time <= NIGHT_START)
 		if(day_cycle_active != DAY_CYCLE_DUSK && day_cycle_active != DAY_CYCLE_NIGHT)
@@ -163,7 +163,7 @@ SUBSYSTEM_DEF(daylight)
 			if(SSmapping.current_map.minetype != "combat_deployment")
 				priority_announce("Attention occupants, night will be approaching shortly, and lockup will begin soon. Inmates are to get ready for lockup.", "Curfew Notice.", sender_override = "Prison Automated Scheduler")
 		if(light_coefficient > 0.6)
-			light_coefficient -= 0.025
+			light_coefficient -= 0.05
 
 	//							 	Converts into minutes	Converts into minutes
 	//var/light_coefficient = ((255 / (DAY_LENGTH / 600)) * (current_day_time/600))

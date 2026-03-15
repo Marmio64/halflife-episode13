@@ -81,6 +81,7 @@
 	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/antlion)
 	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/antlion)
 	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/antlion)
+	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/antlion)
 	spawn_list.Add(/mob/living/basic/halflife/antlion_worker)
 	spawn_list.Add(/mob/living/basic/halflife/antlion_worker)
 	spawn_list.Add(/mob/living/basic/halflife/antlion_worker)

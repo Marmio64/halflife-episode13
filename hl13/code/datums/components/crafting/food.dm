@@ -27,7 +27,7 @@
 	reqs = list(
 		/obj/item/food/halflife/nutrient_bar = 1,
 		/datum/reagent/water = 15,
-		/obj/item/food/meat/cutlet/xen = 2,
+		/obj/item/food/grilled_leech = 2,
 	)
 	result = /obj/item/food/leechstew
 	category = CAT_RATION
