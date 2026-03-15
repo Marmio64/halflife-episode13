@@ -63,7 +63,7 @@
 /datum/objective/loot
 	var/obj/machinery/computer/piratepad_control/cargo_hold
 	explanation_text = "Acquire valuable loot and store it in the designated area."
-	var/target_value = 2500 //hl13 edit
+	var/target_value = 1000 //hl13 edit
 
 
 /datum/objective/loot/update_explanation_text()

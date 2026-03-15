@@ -97,3 +97,66 @@
 	else
 		to_chat(owner, span_warning("They have no ID to sanction!"))
 		return FALSE
+
+/datum/action/innate/ai/ranged/rankpoints
+	name = "Officer rankpoint modification"
+	desc = "Modify an officers rank points, adding or removing up to 2 points."
+	button_icon_state = "rankpoints"
+	enable_text = span_notice("You prepare to modify an individual's rank points.")
+	disable_text = span_notice("You disable rankpoint modification protocols.")
+	cooldown_period = 15 SECONDS
+
+/datum/action/innate/ai/ranged/rankpoints/do_ability(mob/living/clicker, atom/clicked_on)
+	if (!isAI(clicker))
+		return FALSE
+
+	if(!ishuman(clicked_on))
+		to_chat(owner, span_warning("You can only use this on humans!"))
+		return FALSE
+	var/mob/living/carbon/human/rankpoints_recepient = clicked_on
+
+	if (rankpoints_recepient.get_idcard())
+		if(!rankpoints_recepient.ckey)
+			to_chat(usr, span_warning("This mob either no longer exists or no longer is being controlled by someone!"))
+			return
+
+		if(!rankpoints_recepient.client)
+			to_chat(usr, span_warning("No client to award points to!"))
+			return
+
+		if(HAS_MIND_TRAIT(rankpoints_recepient, TRAIT_MINDSHIELD))
+			to_chat(usr, span_warning("They are not eligible for rank point modifications."))
+			return
+
+		var/currentrankpoints = rankpoints_recepient.client.prefs.read_preference(/datum/preference/numeric/rankpoints)
+
+		to_chat(usr, span_notice("They currently have [currentrankpoints] rank points on their character."))
+		var/points_to_give = input(usr, "How many points should be given or taken? (-2 through 2)", "Rank Points to Give/Take") as null|num
+		if(points_to_give == 0)
+			to_chat(usr, span_notice("Cancelled."))
+			return
+		if(2 < points_to_give)
+			to_chat(usr, span_notice("Over the limit."))
+			return
+		if(points_to_give < -2)
+			to_chat(usr, span_notice("Under the limit."))
+			return
+		if((points_to_give+currentrankpoints) > 100)
+			to_chat(usr, span_warning("The limit of points is 100. Points cancelled."))
+			return
+		if((points_to_give+currentrankpoints) < 0)
+			to_chat(usr, span_warning("They cant have negative rank points. Points cancelled."))
+			return
+		rankpoints_recepient.client.prefs.write_preference(GLOB.preference_entries[/datum/preference/numeric/rankpoints], currentrankpoints += points_to_give)
+
+		if(points_to_give > 0)
+			to_chat(rankpoints_recepient, span_nicegreen("You have been awarded [points_to_give] rank points for this character. These points may not show up until next time you spawn in. Modified by Dispatch"))
+			to_chat(usr, span_notice("Rank points given. Their ID and req points will not change unless modified manually."))
+			log_admin_private("[usr] has given [points_to_give] to [rankpoints_recepient].")
+		else
+			to_chat(rankpoints_recepient, span_warning("You have been deducted [points_to_give] rank points for this character. This may not sohw up until next time you spawn in. Modified by Dispatch."))
+			to_chat(usr, span_notice("Rank points taken. Their ID and req points will not change unless modified manually."))
+			log_admin_private("[usr] has taken [points_to_give] from [rankpoints_recepient].")
+	else
+		to_chat(owner, span_warning("They have no ID to modify!"))
+		return FALSE

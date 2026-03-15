@@ -80,26 +80,18 @@
 	objective_type = OBJECTIVE_ITEM_TYPE_TRAITOR
 
 // Unique-ish low risk objectives
-/datum/objective_item/steal/traitor/fireaxe
-	name = "a fire axe"
-	targetitem = /obj/item/fireaxe
+/datum/objective_item/steal/traitor/restrictor
+	name = "a vortessence restrictor"
+	targetitem = /obj/item/clothing/neck/anti_magic_collar
 	excludefromjob = list(
-		JOB_ATMOSPHERIC_TECHNICIAN,
-		JOB_CAPTAIN,
-		JOB_CHIEF_ENGINEER,
-		JOB_CHIEF_MEDICAL_OFFICER,
-		JOB_HEAD_OF_PERSONNEL,
-		JOB_HEAD_OF_SECURITY,
-		JOB_QUARTERMASTER,
-		JOB_RESEARCH_DIRECTOR,
-		JOB_STATION_ENGINEER,
+		JOB_JANITOR,
 	)
 	exists_on_map = TRUE
-	difficulty = 3
-	steal_hint = "Only one exists in the district, in the town hall."
+	difficulty = 2
+	steal_hint = "You can try to break one off of a vortigaunt slave, or raid the nexus for one."
 
-/obj/item/fireaxe/add_stealing_item_objective()
-	return add_item_to_steal(src, /obj/item/fireaxe)
+/obj/item/clothing/neck/anti_magic_collar/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/clothing/neck/anti_magic_collar)
 
 /datum/objective_item/steal/traitor/telebaton
 	name = "a head of staff's telescopic baton"
@@ -115,7 +107,7 @@
 	)
 	exists_on_map = TRUE
 	difficulty = 3
-	steal_hint = "A self-defense weapon standard-issue for the administrator and labor lead. Rarely found off of their person."
+	steal_hint = "A self-defense weapon standard-issue for the warden and labor lead. Rarely found off of their person."
 
 /datum/objective_item/steal/traitor/telebaton/check_special_completion(obj/item/thing)
 	return thing.type == /obj/item/melee/baton/telescopic
@@ -124,25 +116,12 @@
 	if(type == /obj/item/melee/baton/telescopic)
 		return add_item_to_steal(src, /obj/item/melee/baton/telescopic)
 
-/datum/objective_item/steal/traitor/cargo_budget
-	name = "cargo's departmental budget"
-	targetitem = /obj/item/card/id/departmental_budget/car
-	excludefromjob = list(JOB_QUARTERMASTER, JOB_CARGO_TECHNICIAN)
-	item_owner = list(JOB_QUARTERMASTER)
-	exists_on_map = TRUE
-	difficulty = 2
-	steal_hint = "A card that grants access to Cargo's funds. \
-		Normally found in the Labor Lead's office, but a particularly keen one may have it on their person or in their wallet."
-
-/obj/item/card/id/departmental_budget/car/add_stealing_item_objective()
-	return add_item_to_steal(src, /obj/item/card/id/departmental_budget/car)
-
 /datum/objective_item/steal/viscerator
 	name = "a inactive viscerator drone"
 	targetitem = /obj/item/grenade/spawnergrenade/manhacks
 	exists_on_map = TRUE
 	difficulty = 2
-	steal_hint = "An inactive combat drone manufactured by the combine. Could be made in the laboratory or found in the armory."
+	steal_hint = "An inactive combat drone manufactured by the combine. Could be found in the armory or purchased from cargo."
 
 /obj/item/viscerator/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/grenade/spawnergrenade/manhacks)
@@ -154,7 +133,7 @@
 	valid_containers = list(/obj/item/folder)
 	targetitem = /obj/item/documents
 	exists_on_map = TRUE
-	difficulty = 3
+	difficulty = 4
 	steal_hint = "A set of papers belonging to a megaconglomerate. \
 		Combine documents can easily be found in the warden's office. \
 		For other factions, you may find them in strange and distant places. \
@@ -163,6 +142,7 @@
 /obj/item/documents/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/documents) //Any set of secret documents. Doesn't have to be NT's
 
+/*
 /datum/objective_item/steal/hdd_extraction
 	name = "the source code for Project Goon from the master R&D server mainframe"
 	targetitem = /obj/item/computer_disk/hdd_theft
@@ -179,14 +159,16 @@
 	special_equipment += /obj/item/paper/guides/antag/hdd_extraction
 	return ..()
 
-/datum/objective_item/steal/townhall_key
-	name = "a key to the townhall"
+*/
+
+/datum/objective_item/steal/warden_key
+	name = "the warden's office key"
 	targetitem = /obj/item/hl2key/townhall
 	exists_on_map = TRUE
-	difficulty = 3
-	steal_hint = "A key to the townhall. Often carried by command personnel or in their offices."
+	difficulty = 4
+	steal_hint = "The warden's personal office key. Found on their desk, or possibly their person."
 
-/obj/item/townhall_key/add_stealing_item_objective()
+/obj/item/hl2key/townhall/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/hl2key/townhall)
 
 // Doesn't need item_owner = (JOB_AI) because this handily functions as a murder objective if there isn't one
@@ -194,7 +176,7 @@
 	name = "a functional AI"
 	targetitem = /obj/item/aicard
 	difficulty = 5
-	steal_hint = "An intellicard (or MODsuit) containing an active, functional AI."
+	steal_hint = "An intellicard containing an active, functional AI."
 
 /datum/objective_item/steal/functionalai/New()
 	. = ..()
@@ -219,6 +201,7 @@
 
 	return FALSE
 
+/*
 /datum/objective_item/steal/blueprints
 	name = "the district blueprints"
 	targetitem = /obj/item/blueprints
@@ -240,6 +223,7 @@
 		if(P.picture.has_blueprints) //if the blueprints are in frame
 			return TRUE
 	return FALSE
+*/
 
 // A number of special early-game steal objectives intended to be used with the steal-and-destroy objective.
 // They're basically items of utility or emotional value that may be found on many players or lying around the station.
@@ -283,10 +267,19 @@
 	excludefromjob = list(JOB_CARGO_TECHNICIAN, JOB_QUARTERMASTER, JOB_SHAFT_MINER, JOB_STATION_ENGINEER, JOB_ATMOSPHERIC_TECHNICIAN)
 	exists_on_map = TRUE
 	difficulty = 1
-	steal_hint = "The factory usually has these in abundance."
+	steal_hint = "The mines usually has these in abundance."
 
 /obj/item/clothing/head/utility/hardhat/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/clothing/head/utility/hardhat)
+
+/datum/objective_item/steal/traitor/credit_voucher
+	name = "a credit reward voucher"
+	targetitem = /obj/item/stack/credit_voucher
+	difficulty = 1
+	steal_hint = "Often given out by officers for completing a deed for them."
+
+/obj/item/stack/credit_voucher/add_stealing_item_objective()
+	return add_item_to_steal(src, /obj/item/stack/credit_voucher)
 
 /datum/objective_item/steal/spy
 	objective_type = OBJECTIVE_ITEM_TYPE_SPY

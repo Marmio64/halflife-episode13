@@ -139,6 +139,7 @@
 
 /mob/living/basic/halflife/headcrab/poison/deadly
 	poison_type = /datum/reagent/toxin/headcrab_venom/deadly
+	poison_per_bite = 6
 	melee_attack_cooldown = 1.5 SECONDS
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/headcrab/poison
@@ -156,7 +157,7 @@
 		return
 	if(prob(20))
 		var/chosen_sound = pick(idle_sounds)
-		playsound(src, chosen_sound, 50, FALSE)
+		playsound(src, chosen_sound, 50, FALSE, -3)
 
 /mob/living/basic/halflife/headcrab/poison/Initialize(mapload)
 	. = ..()

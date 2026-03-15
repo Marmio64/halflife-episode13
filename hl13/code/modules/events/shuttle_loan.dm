@@ -65,3 +65,27 @@
 	spawn_list.Add(/obj/structure/alien/weeds)
 	if(prob(35))
 		spawn_list.Add(/mob/living/basic/halflife/zombie/gonome/complete)
+
+/datum/shuttle_loan_situation/halflife/exogens
+	sender = "Ministry of Infestation Control"
+	announcement_text = "Exogens have infested one of our supply depots. If you send your train to take some of them away with you, we can reward you well. Caution is advised, a greater species may possibly be encountered."
+	shuttle_transit_text = "Exogens incoming."
+	logging_desc = "Exogen Infestation"
+	bonus_points = CARGO_CRATE_VALUE * 30
+
+/datum/shuttle_loan_situation/halflife/exogens/spawn_items(list/spawn_list, list/empty_shuttle_turfs, list/blocked_shutte_turfs)
+
+	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/antlion)
+	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/antlion)
+	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/antlion)
+	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/antlion)
+	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/antlion)
+	spawn_list.Add(/mob/living/simple_animal/hostile/halflife/antlion)
+	spawn_list.Add(/mob/living/basic/halflife/antlion_worker)
+	spawn_list.Add(/mob/living/basic/halflife/antlion_worker)
+	spawn_list.Add(/mob/living/basic/halflife/antlion_worker)
+	spawn_list.Add(/mob/living/basic/halflife/grub)
+	spawn_list.Add(/mob/living/basic/halflife/grub)
+	spawn_list.Add(/mob/living/basic/halflife/grub)
+	if(prob(25))
+		spawn_list.Add(/mob/living/basic/halflife/antlion_guard)

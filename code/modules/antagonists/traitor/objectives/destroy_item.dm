@@ -19,7 +19,7 @@
 	telecrystal_reward = 1
 
 	possible_items = list(
-		/datum/objective_item/steal/traitor/fireaxe,
+		/datum/objective_item/steal/traitor/restrictor,
 	)
 
 /// Super early-game destroy objective intended to be items easily tided that the crew tends to value.

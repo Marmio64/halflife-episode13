@@ -5,7 +5,7 @@
 //Larry
 /mob/living/simple_animal/halflife/larry
 	name = "Larry"
-	desc = "A supposedly debeaked headcrab. Unknown if approved by the combine, but it has been kept in the science lab for a while now."
+	desc = "A supposedly debeaked headcrab. It's one of the Warden's secret pets."
 	icon = 'hl13/icons/mob/halflife.dmi'
 	icon_state = "headcrab"
 	icon_living = "headcrab"

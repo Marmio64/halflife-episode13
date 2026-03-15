@@ -1,5 +1,5 @@
 /datum/traitor_objective_category/demoralise
-	name = "Demoralise Crew"
+	name = "Demoralise Person"
 	objectives = list(
 		/datum/traitor_objective/target_player/assault = 1,
 		/datum/traitor_objective/destroy_item/demoralise = 1,

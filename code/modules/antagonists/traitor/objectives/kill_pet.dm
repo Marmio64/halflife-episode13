@@ -18,14 +18,8 @@
 
 	/// Possible heads mapped to their pet type. Can be a list of possible pets
 	var/list/possible_heads = list(
-		JOB_HEAD_OF_PERSONNEL = list(
-			/mob/living/basic/pet/dog/corgi/ian,
-			/mob/living/basic/pet/dog/corgi/puppy/ian
-		),
-		JOB_CAPTAIN = /mob/living/basic/pet/fox/renault,
 		JOB_CHIEF_MEDICAL_OFFICER = /mob/living/basic/pet/cat/runtime,
 		JOB_CHIEF_ENGINEER = /mob/living/basic/parrot/poly,
-		JOB_QUARTERMASTER = /mob/living/simple_animal/halflife/harry
 	)
 	/// The head that we are targeting
 	var/datum/job/target
@@ -38,7 +32,12 @@
 
 /datum/traitor_objective/kill_pet/medium_risk
 	progression_minimum = 10 MINUTES
+	possible_heads = list(
+		JOB_HEAD_OF_PERSONNEL = /mob/living/simple_animal/halflife/harry,
+		JOB_CAPTAIN = /mob/living/simple_animal/halflife/larry,
+	)
 	progression_reward = list(5 MINUTES, 8 MINUTES)
+	telecrystal_reward = list(2, 3)
 	limited_to_department_head = FALSE
 
 /datum/traitor_objective/kill_pet/high_risk

@@ -89,14 +89,14 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	abstract_type = /datum/traitor_objective/steal_item
 
 /datum/traitor_objective/steal_item/low_risk
-	progression_minimum = 10 MINUTES
-	progression_maximum = 35 MINUTES
+	progression_minimum = 0 MINUTES
+	progression_maximum = 25 MINUTES
 	progression_reward = list(5 MINUTES, 10 MINUTES)
 	telecrystal_reward = 0
 	minutes_per_telecrystal = 6
 
 	possible_items = list(
-		/datum/objective_item/steal/traitor/cargo_budget,
+		/datum/objective_item/steal/traitor/credit_voucher,
 	)
 
 /datum/traitor_objective/steal_item/somewhat_risky
@@ -107,6 +107,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 
 	possible_items = list(
 		/datum/objective_item/steal/viscerator,
+		/datum/objective_item/steal/traitor/restrictor,
 	)
 
 /datum/traitor_objective/steal_item/very_risky
@@ -115,7 +116,7 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	telecrystal_reward = 3
 
 	possible_items = list(
-		/datum/objective_item/steal/viscerator,
+		/datum/objective_item/steal/traitor/telebaton,
 	)
 
 /datum/traitor_objective/steal_item/most_risky
@@ -124,7 +125,8 @@ GLOBAL_DATUM_INIT(steal_item_handler, /datum/objective_item_handler, new())
 	telecrystal_reward = 5
 
 	possible_items = list(
-		/datum/objective_item/steal/townhall_key,
+		/datum/objective_item/steal/warden_key,
+		/datum/objective_item/steal/documents,
 	)
 
 /datum/traitor_objective/steal_item/most_risky/generate_objective(datum/mind/generating_for, list/possible_duplicates)

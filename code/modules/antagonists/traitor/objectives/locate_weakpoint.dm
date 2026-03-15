@@ -38,11 +38,8 @@
 /datum/traitor_objective/locate_weakpoint/generate_objective(datum/mind/generating_for, list/possible_duplicates)
 	scan_areas = list()
 	/// List of high-security areas that we pick required ones from
-	var/list/allowed_areas = typecacheof(list(/area/station/command,
-		/area/station/comms,
-		/area/station/engineering,
-		/area/station/science,
-		/area/station/security,
+	var/list/allowed_areas = typecacheof(list(/area/halflife/indoors/prison/security,
+		/area/halflife/indoors/townhall,
 	))
 
 	var/list/blacklisted_areas = typecacheof(list(/area/station/engineering/hallway,

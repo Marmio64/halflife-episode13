@@ -122,6 +122,7 @@
 
 /turf/open/halflife/water/Initialize()
 	. = ..()
+	AddElement(/datum/element/watery_tile)
 	//new watereffect(src)
 	//new watertop(src)
 
