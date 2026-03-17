@@ -87,6 +87,7 @@
 /obj/item/food/canned/pine_nuts
 	name = "canned pine nuts"
 	desc = "A small can of pine nuts. Can be eaten on their own, if you're into that."
+	icon = 'hl13/icons/obj/food.dmi'
 	icon_state = "pinenutscan"
 	trash_type = /obj/item/trash/can/food/pine_nuts
 	food_reagents = list(/datum/reagent/consumable/nutriment/vitamin = 3)

@@ -1003,6 +1003,11 @@
 
 	// I don't really care to keep this under a flag
 	set_nutrition(NUTRITION_LEVEL_FED + 50)
+	set_hydration(HYDRATION_LEVEL_SMALLTHIRST + 100)
+	if(iscarbon(src))
+		var/mob/living/carbon/C = src
+		C.adjust_tiredness(-1000)
+
 	overeatduration = 0
 	satiety = 0
 

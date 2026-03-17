@@ -78,3 +78,11 @@
 	icon_state = "coffee"
 	list_reagents = list(/datum/reagent/consumable/coffee = 30)
 	custom_price = PAYCHECK_CREW * 1.5
+
+/obj/item/reagent_containers/cup/headcrab_musk
+	name = "headcrab musk bottle"
+	desc = "An earthenware container which is meant to hold the foul pheromones of headcrabs. Drinking some may let you disguise as the beasts for a while, but the terrible taste may lead you to quickly vomit."
+	icon = 'hl13/icons/obj/misc_items.dmi'
+	icon_state = "musk"
+	inhand_icon_state = null
+	list_reagents = list(/datum/reagent/headcrab_musk = 15)

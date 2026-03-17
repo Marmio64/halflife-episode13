@@ -22,6 +22,7 @@
 	death_sound = 'hl13/sound/creatures/headcrabdeath.ogg'
 
 	cmode_music = 'hl13/sound/music/combat/disrupted.ogg' //spooky!
+	mob_size = MOB_SIZE_SMALL
 
 //Harry
 /mob/living/simple_animal/halflife/harry
@@ -43,3 +44,4 @@
 	death_sound = 'hl13/sound/creatures/poison/ph_death.ogg'
 
 	cmode_music = 'hl13/sound/music/combat/disrupted.ogg' //spooky!
+	mob_size = MOB_SIZE_SMALL

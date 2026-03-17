@@ -1,5 +1,5 @@
 /datum/mood_event/drunk
-	mood_change = 4
+	mood_change = 6
 	description = "Everything just feels better after a drink or two."
 	/// The blush overlay to display when the owner is drunk
 	var/datum/bodypart_overlay/simple/emote/blush_overlay
@@ -52,3 +52,7 @@
 	description = "What a tasty can of Wellcheers! The salty grape flavor is a great pick-me-up."
 	mood_change = 3
 	timeout = 7 MINUTES
+
+/datum/mood_event/hate_drunk
+	description = "I let myself get drunk, what is wrong with me...?"
+	mood_change = -8

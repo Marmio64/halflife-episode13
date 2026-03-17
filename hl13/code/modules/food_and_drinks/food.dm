@@ -14,7 +14,7 @@
 	AddElement(/datum/element/processable, TOOL_KNIFE,  /obj/item/food/meat/rawcutlet/xen, 2, 3 SECONDS, table_required = TRUE, screentip_verb = "Cut")
 
 /obj/item/food/meat/slab/xen/poison
-	name = "xen flesh"
+	name = "poisonous xen flesh"
 	desc = "A slab of alien flesh. This one looks especially offputting."
 	icon_state = "plantmeat"
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 4, /datum/reagent/toxin/headcrab_venom = 6)

@@ -1,5 +1,4 @@
 GLOBAL_LIST_INIT(possible_food_allergies, list(
-	"Alcohol" = ALCOHOL,
 	"Dairy" = DAIRY,
 	"Fruit" = FRUIT,
 	"Grain" = GRAIN,

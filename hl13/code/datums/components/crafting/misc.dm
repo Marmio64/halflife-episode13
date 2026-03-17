@@ -109,3 +109,11 @@
 	result_amount = 10
 	category = CAT_MISC
 	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
+
+/datum/crafting_recipe/headcrab_musk
+	name = "Headcrab Musk"
+	result = /obj/item/reagent_containers/cup/headcrab_musk
+	time = 8 SECONDS
+	reqs = list(/obj/item/stack/sheet/sinew = 3, /obj/item/food/meat/slab/xen = 2, /obj/item/food/meat/slab/xen/poison = 1)
+	category = CAT_MISC
+	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED

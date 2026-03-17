@@ -72,8 +72,8 @@
 	name = "Combine Approved Ethanol Substitute"
 	description = "A 100% Combine approved beverage designed to provoke feelings of drinking alcohol while being so low of a proof that citizens will stay focused on their hard work. Also designed to not be usable in molotovs."
 	color = "#f8f0c7"
-	nutriment_factor = 1
-	boozepwr = 5
+	nutriment_factor = 0.75
+	boozepwr = 10
 	taste_description = "ethanol substitute"
 	ph = 4
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
@@ -134,3 +134,25 @@
 	affected_mob.change_stat(STATKEY_INT, -3)
 	affected_mob.change_stat(STATKEY_END, -3)
 	affected_mob.change_stat(STATKEY_DEX, -3)
+
+/datum/reagent/headcrab_musk
+	name = "Headcrab Musk"
+	description = "A foul odor produced by headcrabs that lets other headcrabs know they are one of them. Using this, we could perhaps disguise ourselves temporarily as one."
+	reagent_state = LIQUID
+	color = "#8f6b3b"
+	overdose_threshold = 50
+	taste_description = "musk"
+
+/datum/reagent/headcrab_musk/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	affected_mob.adjust_disgust(2 * REM * seconds_per_tick) //gross tasting
+	affected_mob.adjust_hygiene(-4) //smelly
+
+/datum/reagent/headcrab_musk/on_mob_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.faction |= FACTION_HEADCRAB
+
+/// Called when this reagent stops being metabolized by a liver
+/datum/reagent/headcrab_musk/on_mob_end_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.faction -= FACTION_HEADCRAB

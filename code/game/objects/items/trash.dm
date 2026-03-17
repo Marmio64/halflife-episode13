@@ -158,6 +158,7 @@
 
 /obj/item/trash/can/food/pine_nuts
 	name = "canned pine nuts"
+	icon = 'hl13/icons/obj/food.dmi'
 	icon_state = "pinenutscan_empty"
 
 /obj/item/trash/can/food/jellyfish

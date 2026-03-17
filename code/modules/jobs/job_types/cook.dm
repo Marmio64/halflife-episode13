@@ -89,6 +89,7 @@
 /datum/outfit/job/cook/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
 	ADD_TRAIT(user, TRAIT_EXPERIENCED_CHEF, JOB_TRAIT)
+	ADD_TRAIT(user, TRAIT_PRISONER, JOB_TRAIT)
 
 	user.mind?.teach_crafting_recipe(/datum/crafting_recipe/food/nutrimentpierogi_pork)
 	user.mind?.teach_crafting_recipe(/datum/crafting_recipe/food/nutrimentpierogi_beef)

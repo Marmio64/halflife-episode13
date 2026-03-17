@@ -14,7 +14,7 @@
 	greyscale_config = /datum/greyscale_config/pet_carrier
 	greyscale_config_inhand_left = /datum/greyscale_config/pet_carrier_inhands_left
 	greyscale_config_inhand_right = /datum/greyscale_config/pet_carrier_inhands_right
-	greyscale_colors = COLOR_BLUE
+	greyscale_colors = COLOR_OLD_GLORY_BLUE
 	force = 5
 	attack_verb_continuous = list("bashes", "carries")
 	attack_verb_simple = list("bash", "carry")

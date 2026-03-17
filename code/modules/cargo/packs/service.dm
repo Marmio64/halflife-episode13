@@ -101,3 +101,14 @@
 		/obj/item/pickaxe/drill,
 	)
 	crate_name = "mining drills crate"
+
+/datum/supply_pack/service/pet_carriers
+	name = "Pet Carriers Crate"
+	desc = "Contains three pet carriers. The little boxes are great for carrying whatever combine authorized pets you may have left, or for carrying live parasitic specimens for research."
+	cost = CARGO_CRATE_VALUE * 6
+	contains = list(
+		/obj/item/pet_carrier,
+		/obj/item/pet_carrier,
+		/obj/item/pet_carrier,
+	)
+	crate_name = "pet carrier crate"

@@ -14,3 +14,4 @@
 	quirk_holder.mind.teach_crafting_recipe(/datum/crafting_recipe/food/survivaliststew)
 	quirk_holder.mind.teach_crafting_recipe(/datum/crafting_recipe/healing_poultices)
 	quirk_holder.mind.teach_crafting_recipe(/datum/crafting_recipe/beartrap)
+	quirk_holder.mind.teach_crafting_recipe(/datum/crafting_recipe/headcrab_musk)

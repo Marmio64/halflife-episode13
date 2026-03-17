@@ -1,6 +1,7 @@
 //armor up a citizen uniform and remove the scanners
 /datum/crafting_recipe/rebel_uniform
 	name = "Rebel Jumpsuit"
+	desc = "By tearing off some of the protective elements of a civil protection suit, you can armor up a civillian outfit to provide you with protection without the location tracking of the combine outfit. Many officers and other combine officials are closely monitored to ensure they do not have the knowledge of how to do this."
 	result = /obj/item/clothing/under/citizen/rebel
 	reqs = list(/obj/item/clothing/under/citizen = 1,
 				/obj/item/clothing/under/combine/civilprotection = 1)
@@ -9,13 +10,16 @@
 	/obj/item/clothing/under/citizen/rebel,
 	/obj/item/clothing/under/citizen/refugee,
 	)
-	time = 10 SECONDS
+	time = 6 SECONDS
 	category = CAT_ARMOR
-	crafting_interface = CRAFTING_BENCH_ARMTAILOR
+
+/datum/crafting_recipe/rebel_uniform/check_requirements(mob/user, list/collected_requirements)
+	return HAS_TRAIT(user, TRAIT_MINDSHIELD)
 
 //same as above, but use kevlar instead of a combine suit
 /datum/crafting_recipe/rebel_uniform_kevlar
 	name = "Rebel Jumpsuit (Kevlar)"
+	desc = "Full-body blue suit for the common citizen, worn down and dirtied by time and use. The scanners have been removed forcefully, and it has been moderately reinforced.  Many officers and other combine officials are closely monitored to ensure they do not have the knowledge of how to do this."
 	result = /obj/item/clothing/under/citizen/rebel
 	reqs = list(/obj/item/clothing/under/citizen = 1,
 				/obj/item/stack/kevlar = 3)
@@ -27,6 +31,22 @@
 	time = 10 SECONDS
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
+
+/datum/crafting_recipe/rebel_uniform_kevlar/check_requirements(mob/user, list/collected_requirements)
+	return HAS_TRAIT(user, TRAIT_MINDSHIELD)
+
+//modify a civil protection mask
+/datum/crafting_recipe/military_gas_mask
+	name = "Hardened Military Gas Mask"
+	desc = "With a little handiwork, you can modify a civil protection officer's mask to look more like a pre-war mask and avoid possible friendly fire incidents with fellow rebels. Combine personnel don't quite get the idea."
+	result = /obj/item/clothing/mask/gas/hl2/military/hardened
+	reqs = list(/obj/item/clothing/mask/gas/civilprotection = 1)
+
+	time = 6 SECONDS
+	category = CAT_ARMOR
+
+/datum/crafting_recipe/military_gas_mask/check_requirements(mob/user, list/collected_requirements)
+	return HAS_TRAIT(user, TRAIT_MINDSHIELD)
 
 /datum/crafting_recipe/citizen_uniform
 	name = "Citizen Jumpsuit"

@@ -106,7 +106,10 @@
 /datum/status_effect/inebriated/drunk/on_apply()
 	. = ..()
 	owner.sound_environment_override = SOUND_ENVIRONMENT_PSYCHOTIC
-	owner.add_mood_event(id, /datum/mood_event/drunk)
+	if(HAS_TRAIT(owner, TRAIT_TEETOTALER))
+		owner.add_mood_event(id, /datum/mood_event/hate_drunk)
+	else
+		owner.add_mood_event(id, /datum/mood_event/drunk)
 	RegisterSignal(owner, COMSIG_MOB_FIRED_GUN, PROC_REF(drunk_gun_fired))
 
 /datum/status_effect/inebriated/drunk/on_remove()

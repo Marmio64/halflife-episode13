@@ -168,6 +168,7 @@
 				/obj/item/storage/halflife/hand_box/flour,
 				/obj/item/halflife/nutrient_bar_wrapping/pork,
 				/obj/item/reagent_containers/cup/halflife/sustenance_dust,
+				/obj/item/food/canned/pine_nuts,
 				/obj/item/food/canned/halflife/seafood,
 				/obj/item/food/canned/halflife/seafood/expired,
 				/obj/item/storage/fancy/cigarettes/cigars,

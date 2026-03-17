@@ -163,6 +163,12 @@
 	closed_icon_state = "food_package_3"
 	box_content = /obj/item/food/halflife/cookie
 
+/obj/item/storage/halflife/hand_box/cookie/PopulateContents()
+	if(prob(80))
+		new box_content(src)
+	else
+		new /obj/item/food/halflife/cookie/oatmeal_raisin(src)
+
 //food paste items
 /obj/item/food/halflife/flour_paste
 	name = "flour paste"
@@ -208,6 +214,11 @@
 	food_flags = FOOD_FINGER_FOOD
 	w_class = WEIGHT_CLASS_SMALL
 	desc = "A small disk resembling an old world cookie...? The combine did a good job faking this one, you can hardly tell if it is real or not, though the barely sweet taste does leave you disappointed."
+
+/obj/item/food/halflife/cookie/oatmeal_raisin
+	tastes = list("cookie" = 1, "oatmeal" = 1, "raisin" = 1)
+	foodtypes = GRAIN | SUGAR | FRUIT
+	desc = "A small disk resembling an old world cookie...? The combine did a good job faking this one, you can hardly tell if it is real or not, though the barely sweet taste does leave you disappointed. Even worse, this one is actually an oatmeal raisin cookie!"
 
 /obj/item/storage/halflife/pill_bottle/antifatigue
 	name = "Anti-Fatigue Pill bottle"
