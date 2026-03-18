@@ -404,7 +404,7 @@
 /mob/living/basic/halflife/zombie/freshly_crabbed/proc/consume_corpse(mob/living/carbon/human/new_corpse)
 	new_corpse.death()
 	if(new_corpse.wear_suit)
-		maxHealth += new_corpse.get_armor_rating(MELEE)
+		maxHealth += new_corpse.wear_suit.get_armor_rating(BULLET)
 		health = maxHealth
 	new_corpse.set_facial_hairstyle("Shaved", update = FALSE)
 	new_corpse.set_hairstyle("Bald", update = TRUE)

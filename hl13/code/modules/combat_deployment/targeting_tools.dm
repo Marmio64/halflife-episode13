@@ -38,6 +38,10 @@
 /obj/item/halflife/cannister_targeter/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	. = ..()
 	if(1 <= charges)
+		if(HAS_TRAIT(user, TRAIT_PACIFISM))
+			to_chat(user, span_warning("You can't use this right now!"))
+			return
+
 		if(!istype(interacting_with, /turf/open/openspace) && !istype(interacting_with, /turf/closed))
 			to_chat(user, span_notice("Radioing coordinates..."))
 			if(do_after(user, use_time, src))
@@ -104,6 +108,10 @@
 /obj/item/halflife/missile_targeter/ranged_interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	. = ..()
 	if(1 <= charges)
+		if(HAS_TRAIT(user, TRAIT_PACIFISM))
+			to_chat(user, span_warning("You can't use this right now!"))
+			return
+
 		to_chat(user, span_notice("Radioing coordinates..."))
 		if(do_after(user, use_time, src))
 			launch_missile(get_turf(interacting_with))

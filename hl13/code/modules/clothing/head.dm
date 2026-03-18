@@ -158,11 +158,11 @@
 	armor_type = /datum/armor/gonomecrab
 
 /datum/armor/headcrab
-	melee = 25
-	bullet = 20
-	laser = 20
+	melee = 35
+	bullet = 15
+	laser = 15
 	energy = 20
-	bomb = 25
+	bomb = 20
 	fire = 50
 	acid = 50
 	wound = 10

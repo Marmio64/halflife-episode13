@@ -9,13 +9,17 @@
 	faction = list(FACTION_HEADCRAB)
 	mob_size = MOB_SIZE_SMALL
 	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
+
+	basic_mob_flags = PRECISE_ATTACK_ZONES
+	zone_selected = "head"
+
 	maxHealth = 30
 	health = 30
 	obj_damage = 5
-	melee_damage_lower = 7
-	melee_damage_upper = 11
+	melee_damage_lower = 8
+	melee_damage_upper = 13
 	wound_bonus = 0
-	bare_wound_bonus = 10
+	bare_wound_bonus = 5
 	sharpness = SHARP_EDGED
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	attack_verb_continuous = "bites"
@@ -54,6 +58,11 @@
 	if(target.deployment_faction == XEN_DEPLOYMENT_FACTION)
 		to_chat(src, span_warning("Their biology does not support zombification."))
 		return
+	if(target.head)
+		if(30 < target.head.get_armor_rating(MELEE))
+			to_chat(src, span_warning("Their helmet is too strong for us to zombify through."))
+			return
+
 	zombify(target)
 
 /// Become a zombie
@@ -82,6 +91,9 @@
 	AddElement(/datum/element/footstep, FOOTSTEP_MOB_CLAW)
 	AddElement(/datum/element/basic_eating, heal_amt = 5, food_types = edibles)
 	ai_controller.set_blackboard_key(BB_BASIC_FOODS, typecacheof(edibles))
+
+	var/atom/movable/screen/zone_sel/zone_selector = hud_used?.zone_select
+	zone_selector?.set_selected_zone(BODY_ZONE_HEAD, src, should_log = FALSE) //HEADcrab goes for the head
 
 /mob/living/basic/halflife/headcrab/deployment
 	melee_attack_cooldown = 1 SECONDS
@@ -178,8 +190,8 @@
 
 /mob/living/basic/halflife/headcrab/fast/upgraded
 	melee_attack_cooldown = 1.25 SECONDS
-	melee_damage_lower = 8
-	melee_damage_upper = 13
+	melee_damage_lower = 9
+	melee_damage_upper = 15
 	speed = -0.2
 
 /mob/living/basic/halflife/headcrab/baby
@@ -192,7 +204,7 @@
 	maxHealth = 15
 	health = 15
 	melee_damage_lower = 4
-	melee_damage_upper = 6
+	melee_damage_upper = 7
 	speed = 0.5
 	butcher_results = list()
 	can_zombify = FALSE
