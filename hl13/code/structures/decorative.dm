@@ -1067,3 +1067,21 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 	opacity = TRUE
 	max_integrity = 175
 	projectile_passchance = 0
+
+/obj/structure/halflife/typewriter
+	name = "Typewriter"
+	desc = "An old world typewriter. Doesn't look like any ink ribbon is loaded, and it probably doesn't even work anymore anyways. Might have a few useful parts still."
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "typewriter"
+	density = FALSE
+	anchored = TRUE
+	max_integrity = 175
+	projectile_passchance = 100
+
+/obj/structure/halflife/typewriter/deconstruct(disassembled = TRUE)
+	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))
+		if(disassembled)
+			new /obj/item/stack/sheet/scrap_parts(loc, 2)
+		else
+			new /obj/item/stack/sheet/scrap_parts(loc, 1)
+	qdel(src)
