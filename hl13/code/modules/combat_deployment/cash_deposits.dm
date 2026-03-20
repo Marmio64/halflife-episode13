@@ -16,8 +16,14 @@
 /obj/machinery/cash_deposit/rebel
 	deployment_faction = REBEL_DEPLOYMENT_FACTION
 
+/obj/machinery/cash_deposit/combine/tier2
+	starting_cash = DEPLOYMENT_TIER2_COMBINE
+
 /obj/machinery/cash_deposit/combine/tier3
 	starting_cash = DEPLOYMENT_TIER3_COMBINE
+
+/obj/machinery/cash_deposit/rebel/tier2
+	starting_cash = DEPLOYMENT_TIER2_REBELS
 
 /obj/machinery/cash_deposit/rebel/tier3
 	starting_cash = DEPLOYMENT_TIER3_REBELS
