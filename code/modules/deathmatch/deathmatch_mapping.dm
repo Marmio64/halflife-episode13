@@ -15,13 +15,13 @@
 /turf/open/chasm/true/no_smooth/fake_motion_sand
 	name = "air"
 	desc = "Dont jump off, unless you want to fall a really long distance."
-	icon_state = "sandmoving"
-	base_icon_state = "sandmoving"
-	icon = 'icons/turf/floors.dmi'
+	icon_state = "mud_moving"
+	base_icon_state = "mud_moving"
+	icon = 'hl13/icons/turf/floor/floors.dmi'
 
 /turf/open/chasm/true/no_smooth/fake_motion_sand/fast
-	icon_state = "sandmovingfast"
-	base_icon_state = "sandmovingfast"
+	icon_state = "mud_moving"
+	base_icon_state = "mud_moving"
 
 // fakeout
 

@@ -308,7 +308,7 @@
 	return NONE
 
 /obj/item/gun/interact_with_atom_secondary(atom/interacting_with, mob/living/user, list/modifiers)
-	if(!can_hold_up || !isliving(interacting_with))
+	if(!can_hold_up || !isliving(interacting_with || user.combat_mode)) //turn off combat mode in order to hold people up
 		return interact_with_atom(interacting_with, user, modifiers)
 
 	var/datum/component/gunpoint/gunpoint_component = user.GetComponent(/datum/component/gunpoint)
