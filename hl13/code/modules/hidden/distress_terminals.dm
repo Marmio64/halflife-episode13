@@ -17,7 +17,7 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 	/// The name that will show up to the hidden when being activated
 	var/terminal_name = "Unknown"
 
-	var/attempts_to_complete = 6 //attempts last 5 seconds, so it amounts to 30 seconds
+	var/attempts_to_complete = 6 //attempts last 6 seconds, so it amounts to 36 seconds
 	var/last_hidden_warning = 0
 
 	density = TRUE
@@ -85,7 +85,7 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 			SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
 			to_chat(H, "<span class='userdanger'>The [terminal_name] terminal is currently being activated.</span>")
 		last_hidden_warning = world.time + 45 SECONDS
-	if(do_after(user, 5 SECONDS, src))
+	if(do_after(user, 6 SECONDS, src))
 		attempts_to_complete -= 1
 		if(attempts_to_complete == 0)
 			say("All activation codes accepted. Activating terminal.")

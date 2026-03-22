@@ -34,10 +34,10 @@
 		playsound(src, 'sound/effects/smoke.ogg', 50, TRUE)
 		visible_message(span_warning("Oh, ye gods! [src] is ruined! But what if...?"))
 		name = "steamed ham"
-		desc = pick("Ahh, Head of Personnel, welcome. I hope you're prepared for an unforgettable luncheon!",
+		desc = pick("Ahh, Labor Lead, welcome. I hope you're prepared for an unforgettable luncheon!",
 			"And you call these steamed hams despite the fact that they are obviously microwaved?",
-			"Aurora Station 13? At this time of shift, in this time of year, in this sector of space, localized entirely within your freezer?",
-			"You know, these hamburgers taste quite similar to the ones they have at the Maltese Falcon.")
+			"Aurora City 13? At this time of day, in this time of year, in this sector of combine control, localized entirely within your freezer?",
+			"You know, these hamburgers taste quite similar to the ones they have at Pasibus.")
 
 /obj/item/food/burger/human
 	name = "human burger"
@@ -89,8 +89,8 @@
 	crafting_complexity = FOOD_COMPLEXITY_2
 
 /obj/item/food/burger/fish
-	name = "fillet -o- carp sandwich"
-	desc = "Almost like a carp is yelling somewhere... Give me back that fillet -o- carp, give me that carp."
+	name = "fillet -o- fish sandwich"
+	desc = "Almost like a fish is yelling somewhere... Give me back that fillet -o- fish, give me that fish."
 	icon_state = "fishburger"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,
@@ -509,7 +509,7 @@
 
 /obj/item/food/burger/baconburger
 	name = "bacon burger"
-	desc = "The perfect combination of all things American."
+	desc = "The perfect combination of all things American. Minus the portal storms."
 	icon_state = "baconburger"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,
@@ -539,7 +539,7 @@
 
 /obj/item/food/burger/catburger
 	name = "catburger"
-	desc = "Finally those cats and catpeople are worth something!"
+	desc = "Roof rabbits go great in a sandwich."
 	icon_state = "catburger"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 6,
@@ -580,7 +580,7 @@
 
 /obj/item/food/burger/rib
 	name = "mcrib"
-	desc = "An elusive rib shaped burger with limited availability across the galaxy. Not as good as you remember it."
+	desc = "An elusive rib shaped burger with limited availability across the world, especially now that McDonalds dont exist anymore. Not as good as you remember it."
 	icon_state = "mcrib"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 2,
@@ -610,7 +610,7 @@
 
 /obj/item/food/burger/chicken
 	name = "chicken sandwich" //Apparently the proud people of Americlapstan object to this thing being called a burger. Apparently McDonald's just calls it a burger in Europe as to not scare and confuse us.
-	desc = "A delicious chicken sandwich, it is said the proceeds from this treat helps criminalize disarming people on the space frontier."
+	desc = "A delicious chicken sandwich, which may even possibly be made of real chicken. Maybe."
 	icon_state = "chickenburger"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,
@@ -626,7 +626,7 @@
 
 /obj/item/food/burger/cheese
 	name = "cheese burger"
-	desc = "This noble burger stands proudly clad in golden cheese."
+	desc = "This noble burger stands proudly clad in golden cheese. An American classic, or so they say, which has travelled a long way from its home."
 	icon_state = "cheeseburger"
 	food_reagents = list(
 		/datum/reagent/consumable/nutriment = 3,

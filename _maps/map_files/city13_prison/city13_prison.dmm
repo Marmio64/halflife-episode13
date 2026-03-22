@@ -1431,6 +1431,10 @@
 /area/halflife/indoors/outlands)
 "hs" = (
 /obj/structure/table/halflife/metal/grate,
+/obj/item/reagent_containers/cup/rag{
+	pixel_x = 3;
+	pixel_y = 7
+	},
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/prison/cafeteria)
 "ht" = (
@@ -1629,6 +1633,19 @@
 	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/prison/infirmary)
+"is" = (
+/obj/structure/table/halflife/metal/heavy,
+/obj/item/light/bulb,
+/obj/item/light/bulb{
+	pixel_x = 8;
+	pixel_y = -1
+	},
+/obj/item/light/bulb{
+	pixel_x = -7;
+	pixel_y = 3
+	},
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/prison/engineering)
 "it" = (
 /mob/living/basic/halflife/headcrab,
 /turf/open/floor/plating/ground/grass,
@@ -7386,6 +7403,12 @@
 /obj/item/hl13_small_flag/combine,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/prison/security)
+"JH" = (
+/obj/structure/chair/office/halflife/blue{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/prison/entrance)
 "JI" = (
 /obj/structure/closet/halflife,
 /obj/effect/spawner/random/halflife/loot/uncommon/two,
@@ -9158,6 +9181,19 @@
 	},
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors/prison/intake)
+"RU" = (
+/obj/structure/table/halflife/metal/heavy,
+/obj/item/light/tube,
+/obj/item/light/tube{
+	pixel_x = 0;
+	pixel_y = -4
+	},
+/obj/item/light/tube{
+	pixel_x = 0;
+	pixel_y = 6
+	},
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/prison/engineering)
 "RV" = (
 /obj/machinery/camera{
 	c_tag = "Labor Union";
@@ -10467,6 +10503,10 @@
 /obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/cave)
+"Yl" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plating/indoor/tile/kitchen,
+/area/halflife/indoors/prison/cafeteria)
 "Ym" = (
 /obj/structure/halflife/breencast,
 /turf/closed/wall/halflife/concrete/bunker,
@@ -10809,12 +10849,6 @@
 	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/prison/infirmary)
-"ZM" = (
-/obj/structure/chair/office/halflife/blue{
-	dir = 1
-	},
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/prison/entrance)
 "ZN" = (
 /obj/machinery/light/small/cyan/directional/east,
 /obj/structure/bed/medical,
@@ -23168,7 +23202,7 @@ lT
 yo
 XH
 dm
-OM
+Yl
 OM
 OM
 hS
@@ -54437,7 +54471,7 @@ GG
 nD
 Rs
 sP
-ZM
+JH
 Ob
 Rs
 Ct
@@ -63745,7 +63779,7 @@ HE
 qU
 qU
 qU
-De
+RU
 VK
 LK
 LK
@@ -64153,7 +64187,7 @@ xU
 GF
 qU
 qU
-De
+is
 VK
 LK
 Uk

@@ -454,7 +454,7 @@
 /datum/trader_data/halflife/crabwalker
 	shop_spot_type = /obj/structure/chair/halflife/overlaypickup/plastic
 	sign_type = /obj/structure/halflife/sign/shop
-	sociostability_loss = -1
+	sociostability_loss = -2
 
 	initial_products = list(
 		/obj/item/clothing/head/helmet/halflife/headcrab = list(PAYCHECK_CREW * 2.25, 5),
@@ -694,6 +694,7 @@
 
 	initial_products = list(
 		/obj/item/reagent_containers/pill/patch/medkit/vial = list(PAYCHECK_CREW * 1.25, 5),
+		/obj/item/stack/medical/gauze = list(PAYCHECK_CREW, 5),
 		/obj/item/reagent_containers/pill/patch/medkit = list(PAYCHECK_CREW * 2.5, 5),
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = list(PAYCHECK_CREW * 1.25, 5),
 		/obj/item/reagent_containers/cup/glass/bottle/vodka = list(PAYCHECK_CREW * 1.5, 5),
@@ -717,6 +718,7 @@
 		/obj/item/card/emag/halflife = list(PAYCHECK_CREW * 7, 3),
 		/obj/item/circuitmaterial = list(PAYCHECK_CREW * 0.5, 3),
 		/obj/item/circuitmaterial/advanced = list(PAYCHECK_CREW * 3, 3),
+		/obj/item/defibrillator/loaded = list(PAYCHECK_CREW * 5, 1),
 		//obj/item/fuel_cell/full = list(PAYCHECK_CREW * 4, 2),
 	)
 

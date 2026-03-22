@@ -2003,7 +2003,7 @@
 	reagent_state = LIQUID
 	color = "#771100"
 	taste_description = "carpet" // Your tounge feels furry.
-	var/carpet_type = /turf/open/floor/carpet
+	var/carpet_type = /turf/open/floor/plating/indoor/carpet
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/expose_turf(turf/exposed_turf, reac_volume)
@@ -2016,7 +2016,7 @@
 	description = "The carpet also comes in... BLAPCK" //yes, the typo is intentional
 	color = "#1E1E1E"
 	taste_description = "licorice"
-	carpet_type = /turf/open/floor/carpet/black
+	carpet_type = /turf/open/floor/plating/indoor/carpet/violet
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/blue
@@ -2024,7 +2024,7 @@
 	description = "For those that really need to chill out for a while."
 	color = "#0000DC"
 	taste_description = "frozen carpet"
-	carpet_type = /turf/open/floor/carpet/blue
+	carpet_type = /turf/open/floor/plating/indoor/carpet/blue
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/cyan
@@ -2040,7 +2040,7 @@
 	description = "For those that need the perfect flourish for green eggs and ham."
 	color = COLOR_CRAYON_GREEN
 	taste_description = "Green" //the caps is intentional
-	carpet_type = /turf/open/floor/carpet/green
+	carpet_type = /turf/open/floor/plating/indoor/carpet/green
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/orange
@@ -2048,7 +2048,7 @@
 	description = "For those that prefer a healthy carpet to go along with their healthy diet."
 	color = "#E78108"
 	taste_description = "orange juice"
-	carpet_type = /turf/open/floor/carpet/orange
+	carpet_type = /turf/open/floor/plating/indoor/carpet
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/purple
@@ -2056,7 +2056,7 @@
 	description = "For those that need to waste copious amounts of healing jelly in order to look fancy."
 	color = "#91D865"
 	taste_description = "jelly"
-	carpet_type = /turf/open/floor/carpet/purple
+	carpet_type = /turf/open/floor/plating/indoor/carpet/violet
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/red
@@ -2064,7 +2064,7 @@
 	description = "For those that need an even redder carpet."
 	color = "#731008"
 	taste_description = "blood and gibs"
-	carpet_type = /turf/open/floor/carpet/red
+	carpet_type = /turf/open/floor/plating/indoor/carpet/shaggy
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/royal
@@ -2092,7 +2092,7 @@
 	description = "For those that feel the need to show off their timewasting skills."
 	color = COLOR_BLACK
 	taste_description = "royalty"
-	carpet_type = /turf/open/floor/carpet/royalblack
+	carpet_type = /turf/open/floor/plating/indoor/carpet/violet
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/royal/blue
@@ -2100,7 +2100,7 @@
 	description = "For those that feel the need to show off their timewasting skills.. in BLUE."
 	color = "#5A64C8"
 	taste_description = "blueyalty" //also intentional
-	carpet_type = /turf/open/floor/carpet/royalblue
+	carpet_type = /turf/open/floor/plating/indoor/carpet/blue
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
 
 /datum/reagent/carpet/neon
@@ -2110,7 +2110,7 @@
 	taste_description = "neon"
 	ph = 6
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon
+	carpet_type = /turf/open/floor/plating/indoor/carpet
 
 /datum/reagent/carpet/neon/simple_white
 	name = "Simple White Neon Carpet"
@@ -2118,7 +2118,7 @@
 	color = LIGHT_COLOR_HALOGEN
 	taste_description = "sodium vapor"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/white
+	carpet_type = /turf/open/floor/plating/indoor/carpet
 
 /datum/reagent/carpet/neon/simple_red
 	name = "Simple Red Neon Carpet"
@@ -2126,7 +2126,7 @@
 	color = COLOR_RED
 	taste_description = "neon hallucinations"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/red
+	carpet_type = /turf/open/floor/plating/indoor/carpet
 
 /datum/reagent/carpet/neon/simple_orange
 	name = "Simple Orange Neon Carpet"
@@ -2134,7 +2134,7 @@
 	color = COLOR_ORANGE
 	taste_description = "neon spines"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/orange
+	carpet_type = /turf/open/floor/plating/indoor/carpet
 
 /datum/reagent/carpet/neon/simple_yellow
 	name = "Simple Yellow Neon Carpet"
@@ -2142,7 +2142,7 @@
 	color = COLOR_YELLOW
 	taste_description = "stabilized neon"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/yellow
+	carpet_type = /turf/open/floor/plating/indoor/carpet
 
 /datum/reagent/carpet/neon/simple_lime
 	name = "Simple Lime Neon Carpet"
@@ -2150,7 +2150,7 @@
 	color = COLOR_LIME
 	taste_description = "neon citrus"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/lime
+	carpet_type = /turf/open/floor/plating/indoor/carpet/green
 
 /datum/reagent/carpet/neon/simple_green
 	name = "Simple Green Neon Carpet"
@@ -2158,7 +2158,7 @@
 	color = COLOR_GREEN
 	taste_description = "radium"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/green
+	carpet_type = /turf/open/floor/plating/indoor/carpet/green
 
 /datum/reagent/carpet/neon/simple_teal
 	name = "Simple Teal Neon Carpet"
@@ -2166,7 +2166,7 @@
 	color = COLOR_TEAL
 	taste_description = "neon tobacco"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/teal
+	carpet_type = /turf/open/floor/plating/indoor/carpet/blue
 
 /datum/reagent/carpet/neon/simple_cyan
 	name = "Simple Cyan Neon Carpet"
@@ -2174,7 +2174,7 @@
 	color = COLOR_DARK_CYAN
 	taste_description = "neon air"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/cyan
+	carpet_type = /turf/open/floor/plating/indoor/carpet/blue
 
 /datum/reagent/carpet/neon/simple_blue
 	name = "Simple Blue Neon Carpet"
@@ -2182,7 +2182,7 @@
 	color = COLOR_NAVY
 	taste_description = "neon blue"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/blue
+	carpet_type = /turf/open/floor/plating/indoor/carpet/blue
 
 /datum/reagent/carpet/neon/simple_purple
 	name = "Simple Purple Neon Carpet"
@@ -2190,7 +2190,7 @@
 	color = COLOR_PURPLE
 	taste_description = "neon hell"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/purple
+	carpet_type = /turf/open/floor/plating/indoor/carpet/violet
 
 /datum/reagent/carpet/neon/simple_violet
 	name = "Simple Violet Neon Carpet"
@@ -2198,7 +2198,7 @@
 	color = COLOR_VIOLET
 	taste_description = "neon hell"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/violet
+	carpet_type = /turf/open/floor/plating/indoor/carpet
 
 /datum/reagent/carpet/neon/simple_pink
 	name = "Simple Pink Neon Carpet"
@@ -2206,7 +2206,7 @@
 	color = COLOR_PINK
 	taste_description = "neon pink"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/pink
+	carpet_type = /turf/open/floor/plating/indoor/carpet
 
 /datum/reagent/carpet/neon/simple_black
 	name = "Simple Black Neon Carpet"
@@ -2214,7 +2214,7 @@
 	color = COLOR_BLACK
 	taste_description = "neon ash"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-	carpet_type = /turf/open/floor/carpet/neon/simple/black
+	carpet_type = /turf/open/floor/plating/indoor/carpet/violet
 
 /datum/reagent/bromine
 	name = "Bromine"

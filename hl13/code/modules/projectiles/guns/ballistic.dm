@@ -822,7 +822,7 @@
 	eject_empty_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/svd
 	force = 12
-	fire_delay = 5 //fires faster when used through the scope, since it doesnt use the slower automatic speed
+	fire_delay = 7 //fires faster when used through the scope, since it doesnt use the slower automatic speed
 	burst_size = 1
 	spread = 2
 	recoil = 0.5
@@ -842,7 +842,7 @@
 
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.7 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.8 SECONDS)
 
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()
