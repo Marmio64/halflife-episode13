@@ -253,6 +253,7 @@ const PageMain = (props) => {
     canMessageAssociates,
     canRecallShuttles,
     canRequestNuke,
+    canSendDistressBeacon,
     canSendToSectors,
     canSetAlertLevel,
     canToggleEmergencyAccess,
@@ -272,6 +273,7 @@ const PageMain = (props) => {
   const [messagingAssociates, setMessagingAssociates] = useState(false);
   const [messagingSector, setMessagingSector] = useState(null);
   const [requestingNukeCodes, setRequestingNukeCodes] = useState(false);
+  const [sendingDistressBeacon, setSendingDistressBeacon] = useState(false);
 
   const [
     [showAlertLevelConfirm, confirmingAlertLevelTick],
@@ -415,6 +417,15 @@ const PageMain = (props) => {
             />
           )}
 
+          {!!canSendDistressBeacon && (
+            <Button
+              icon="exclamation"
+              content="Send Distress Call"
+              disabled={!importantActionReady}
+              onClick={() => setSendingDistressBeacon(true)}
+            />
+          )}
+
           {!!emagged && !syndicate && (
             <Button
               icon="undo"
@@ -453,6 +464,22 @@ const PageMain = (props) => {
           onSubmit={(reason) => {
             setRequestingNukeCodes(false);
             act('requestNukeCodes', {
+              reason,
+            });
+          }}
+        />
+      )}
+
+      {!!canSendDistressBeacon && sendingDistressBeacon && (
+        <MessageModal
+          label="Reason for Distress Call"
+          notice="Misuse of the distress call system will not be tolerated under any circumstances. Transmission does not guarantee a response."
+          icon="exclamation"
+          buttonText="Send Distress Call"
+          onBack={() => setSendingDistressBeacon(false)}
+          onSubmit={(reason) => {
+            setSendingDistressBeacon(false);
+            act('sendDistressBeacon', {
               reason,
             });
           }}

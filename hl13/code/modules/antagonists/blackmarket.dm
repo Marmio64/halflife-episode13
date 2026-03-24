@@ -20,12 +20,11 @@
 
 	// 150 credits to get you started, incase you want to give some deals, get some stock right away, give change, or just buy stuff for self defense.
 	backpack_contents = list(
-		/obj/item/stack/spacecash/c50 = 1,
-		/obj/item/stack/spacecash/c20 = 2,
-		/obj/item/stack/spacecash/c10 = 4,
-		/obj/item/stack/spacecash/c1 = 20,
+		/obj/item/stack/spacecash/c1 = 150,
 		/obj/item/reagent_containers/pill/patch/medkit, //You're generally operating in dangerous areas
+		/obj/item/reagent_containers/hypospray/medipen/healthpen,
 		/obj/item/ammo_box/magazine/usp9mm, //ditto
+		/obj/item/ammo_box/magazine/usp9mm,
 		/obj/item/clothing/mask/gas/hl2/military, //For covertness, if you wish.
 	)
 
@@ -55,6 +54,7 @@
 	to_chat(owner, span_boldnotice("You are from outside the District, and have come here looking to earn some credits."))
 	to_chat(owner, span_notice("Survive, and earn as many credits as you can by selling items from your black market uplink."))
 	to_chat(owner, span_notice("Note, you are not officially resistance OR combine aligned. You work for yourself, or perhaps the highest bidder..."))
+	to_chat(owner, span_boldnotice("You can check your memories tab for your bank account number, and then link it to your ID."))
 	owner.announce_objectives()
 
 /datum/antagonist/blackmarket/on_gain()
@@ -87,7 +87,7 @@
 /datum/objective/blackmarket
 	var/datum/bank_account/bank_account
 
-	explanation_text = "Have 500 credits in your account."
+	explanation_text = "Have 400 credits in your account."
 
 /datum/objective/blackmarket/check_completion()
-	return ..() || bank_account.account_balance >= 500
+	return ..() || bank_account.account_balance >= 400

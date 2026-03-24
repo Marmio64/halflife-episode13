@@ -52,7 +52,7 @@
 
 /obj/item/bait_can/worm/premium
 	name = "can o' worm deluxe"
-	desc = "This can got fancy worms."
+	desc = "This can has fancy worms, supposedly..."
 	bait_type = /obj/item/food/bait/worm/premium
 
 /obj/item/bait_can/super_baits

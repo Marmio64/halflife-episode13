@@ -441,6 +441,21 @@
 			SSjob.safe_code_timer_id = addtimer(CALLBACK(SSjob, TYPE_PROC_REF(/datum/controller/subsystem/job, send_spare_id_safe_code), pod_location), 120 SECONDS, TIMER_UNIQUE | TIMER_STOPPABLE)
 			minor_announce("Due to staff shortages, your station has been approved for delivery of access codes to secure the warden's Spare ID. Delivery via drop pod at [get_area(pod_location)]. ETA 120 seconds.")
 
+		if("sendDistressBeacon")
+			if (SSsociostability.sociostability > SOCIOSTABILITY_BAD)
+				to_chat(user, span_warning("Sociostability is not low enough to send out a distress call."))
+				return
+			if (SSsociostability.distress_beacon_success)
+				to_chat(user, span_warning("A distress beacon has already been previously sent out succesfully."))
+				return
+			if (!COOLDOWN_FINISHED(src, important_action_cooldown))
+				return
+
+			COOLDOWN_START(src, important_action_cooldown, IMPORTANT_ACTION_COOLDOWN)
+
+			SSsociostability.send_distress_beacon()
+
+
 /obj/machinery/computer/communications/proc/emergency_access_cooldown(mob/user)
 	if(toggle_uses == toggle_max_uses) //you have used up free uses already, do it one more time and start a cooldown
 		to_chat(user, span_warning("This was your last free use without cooldown, you will not be able to use this again for [DisplayTimeText(EMERGENCY_ACCESS_COOLDOWN)]."))
@@ -517,6 +532,7 @@
 				data["canMessageAssociates"] = FALSE
 				data["canRecallShuttles"] = !HAS_SILICON_ACCESS(user)
 				data["canRequestNuke"] = FALSE
+				data["canSendDistressBeacon"] = FALSE
 				data["canSendToSectors"] = FALSE
 				data["canSetAlertLevel"] = FALSE
 				data["canToggleEmergencyAccess"] = FALSE
@@ -554,6 +570,7 @@
 
 					data["alertLevelTick"] = alert_level_tick
 					data["canMakeAnnouncement"] = TRUE
+					data["canSendDistressBeacon"] = TRUE
 					data["canSetAlertLevel"] = HAS_SILICON_ACCESS(user) ? "NO_SWIPE_NEEDED" : "SWIPE_NEEDED"
 				else if(syndicate)
 					data["canMakeAnnouncement"] = TRUE

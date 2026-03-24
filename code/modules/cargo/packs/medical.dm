@@ -140,3 +140,14 @@
 					/obj/item/reagent_containers/hypospray/medipen/healthpen,
 	)
 	crate_name = "healthpen crate"
+
+/datum/supply_pack/medical/cyberlimbs
+	name = "Cybernetic Limbs"
+	desc = "Contains a full set of cybernetic limbs, which are useful replacements which are stronger than normal flesh. They are a relatively new development made by combine scientists, and are thus pricey."
+	cost = CARGO_CRATE_VALUE * 5
+	contains = list(/obj/item/bodypart/arm/left/robot,
+					/obj/item/bodypart/arm/right/robot,
+					/obj/item/bodypart/leg/left/robot,
+					/obj/item/bodypart/leg/right/robot,
+	)
+	crate_name = "cybernetic limbs crate"

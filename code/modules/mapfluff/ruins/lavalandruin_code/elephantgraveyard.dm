@@ -188,10 +188,10 @@
 /obj/structure/closet/crate/grave/filled/PopulateContents()  //GRAVEROBBING IS NOW A FEATURE
 	..()
 	new /obj/effect/decal/remains/human(src)
-	switch(rand(1,10))
+	switch(rand(1,11))
 		if(1)
 			new /obj/item/coin/gold(src)
-			new /obj/item/storage/wallet(src)
+			new /obj/item/storage/wallet/small_cash(src)
 		if(2)
 			new /obj/item/clothing/under/citizen/refugee(src)
 		if(3)
@@ -214,6 +214,10 @@
 			new /obj/item/clothing/under/citizen/rebel(src)
 			new /obj/item/clothing/head/beanie/black(src)
 			new /obj/item/clothing/suit/armor/civilprotection(src)
+		if(10)
+			new /obj/item/food/meat/slab/halflife/zombie(src)
+			new /obj/item/food/bait/worm(src)
+			new /obj/item/food/bait/worm(src)
 		else
 			//empty grave
 			return

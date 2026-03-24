@@ -1,4 +1,4 @@
-/datum/round_event_control/nightmare
+/datum/round_event_control/vortigaunt
 	name = "Spawn Vortigaunt"
 	typepath = /datum/round_event/ghost_role/nightmare
 	max_occurrences = 1

@@ -38,6 +38,7 @@
 /datum/antagonist/crab_cultist/on_gain()
 	ADD_TRAIT(owner.current, TRAIT_ACT_AS_CULTIST, REF(src))
 	ADD_TRAIT(owner.current, TRAIT_CANNIBAL, REF(src))
+	ADD_TRAIT(owner.current, TRAIT_MORBID, REF(src))
 	ADD_TRAIT(owner.current, TRAIT_SURVIVALIST, REF(src))
 	owner.current.faction = list(FACTION_HEADCRAB)
 

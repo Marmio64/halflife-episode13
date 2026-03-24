@@ -33,9 +33,9 @@
 	availability_prob = 100
 
 /datum/market_item/halflife/clothing/overwatch_vest
-	name = "Overwatch Vest"
-	desc = "A heavily armored and bulky Combine soldier vest. This stuff is hard to come by, and not cheap."
-	item = /obj/item/clothing/suit/armor/overwatch
+	name = "Rebel Overwatch Vest"
+	desc = "A heavily armored and bulky Combine soldier vest modified by rebels. This stuff is hard to come by, and not cheap."
+	item = /obj/item/clothing/suit/armor/rebel
 
 	price_min = CARGO_CRATE_VALUE * 1.25
 	price_max = CARGO_CRATE_VALUE * 2.5

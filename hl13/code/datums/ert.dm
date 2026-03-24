@@ -3,7 +3,7 @@
 	roles = list(/datum/antagonist/ert/overwatch/ar2, /datum/antagonist/ert/overwatch/mp7, /datum/antagonist/ert/overwatch/spas12)
 	rename_team = "Standard Overwatch Strike Team"
 	code = "Delta"
-	mission = "Stabilize the city, detain city officials, kill all citizens who do not comply."
+	mission = "Stabilize the district, detain city officials, kill all citizens who do not comply."
 	polldesc = "a standard Overwatch Strike Team"
 
 /datum/ert/overwatch/light
@@ -11,7 +11,7 @@
 	leader_role = /datum/antagonist/ert/overwatch/ar2
 	rename_team = "Overwatch Light Strike Team"
 	code = "Delta"
-	mission = "Stabilize the city, detain city officials, kill all citizens who do not comply."
+	mission = "Stabilize the district, detain city officials, kill all citizens who do not comply."
 	polldesc = "a light Overwatch Strike Team"
 
 /datum/ert/overwatch/elite
@@ -19,16 +19,16 @@
 	leader_role = /datum/antagonist/ert/overwatch/ar2/elite
 	rename_team = "Overwatch Elite Strike Team"
 	code = "Delta"
-	mission = "Stabilize the city, detain city officials, kill all citizens who do not comply."
+	mission = "Stabilize the district, detain city officials, kill all citizens who do not comply."
 	polldesc = "an ultra elite Overwatch Strike Team"
 
-///with default squad size of 5, this is 2 grunts, a wallhammer, a suppressor, and an elite
+///with default squad size of 5, this is 2 grunts, a wallhammer, a suppressor, and an elite. With 6, there is a third grunt
 /datum/ert/overwatch/specialty_commandos
-	roles = list(/datum/antagonist/ert/overwatch/wallhammer, /datum/antagonist/ert/overwatch/grunt, /datum/antagonist/ert/overwatch/suppressor, /datum/antagonist/ert/overwatch/grunt)
+	roles = list(/datum/antagonist/ert/overwatch/wallhammer, /datum/antagonist/ert/overwatch/grunt, /datum/antagonist/ert/overwatch/suppressor, /datum/antagonist/ert/overwatch/grunt, /datum/antagonist/ert/overwatch/grunt)
 	leader_role = /datum/antagonist/ert/overwatch/ar2/elite
 	rename_team = "Overwatch Specialty Commando Strike Team"
 	code = "Delta"
-	mission = "Stabilize the city, detain city officials, kill all citizens who do not comply."
+	mission = "Stabilize the district, detain city officials, kill all citizens who do not comply."
 	polldesc = "an ultra elite Overwatch Commando Strike Team"
 
 /datum/ert/conscripts
@@ -36,7 +36,7 @@
 	leader_role = /datum/antagonist/ert/conscript/officer
 	rename_team = "Conscript Strike Team"
 	code = "Delta"
-	mission = "Stabilize the city, detain city officials, kill all citizens who do not comply."
+	mission = "Stabilize the district, detain city officials, kill all citizens who do not comply."
 	polldesc = "a Conscript Strike Team"
 
 /datum/ert/containment_team
@@ -52,7 +52,7 @@
 	leader_role = /datum/antagonist/ert/police/riot/pistol
 	rename_team = "Metropolice Riot Team"
 	code = "Red"
-	mission = "Stabilize the city, and detain or kill any malignant citizens."
+	mission = "Stabilize the district, and detain or kill any malignant citizens."
 	polldesc = "a metropolice riot team"
 	opendoors = FALSE
 
@@ -61,7 +61,7 @@
 	leader_role = /datum/antagonist/ert/police/mp7
 	rename_team = "Metropolice Team"
 	code = "Red"
-	mission = "Stabilize the city, and detain or kill any malignant citizens."
+	mission = "Stabilize the district, and detain or kill any malignant citizens."
 	polldesc = "an armed metropolice team"
 	opendoors = FALSE
 

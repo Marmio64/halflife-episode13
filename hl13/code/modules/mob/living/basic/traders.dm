@@ -574,6 +574,7 @@
 		/obj/item/clothing/head/helmet/halflife/military/weak/crafted = list(PAYCHECK_CREW * 2.25, 5),
 		/obj/item/clothing/head/helmet/halflife/military = list(PAYCHECK_CREW * 4, 5),
 		/obj/item/grenade/halflife/molotov = list(PAYCHECK_CREW * 2, 5),
+		/obj/item/grenade/syndieminibomb/bouncer = list(PAYCHECK_CREW * 4, 5),
 		/obj/item/weaponcrafting/receiver = list(PAYCHECK_CREW * 2, 5),
 		/obj/item/stack/bulletcasings = list(PAYCHECK_CREW * 0.5, 5),
 		/obj/item/clothing/under/citizen/rebel = list(PAYCHECK_CREW * 3, 5),
@@ -719,6 +720,10 @@
 		/obj/item/circuitmaterial = list(PAYCHECK_CREW * 0.5, 3),
 		/obj/item/circuitmaterial/advanced = list(PAYCHECK_CREW * 3, 3),
 		/obj/item/defibrillator/loaded = list(PAYCHECK_CREW * 5, 1),
+		/obj/item/fishing_rod = list(PAYCHECK_CREW * 3, 2),
+		/obj/item/fishing_hook/weighted = list(PAYCHECK_CREW * 2, 2),
+		/obj/item/fishing_line/bouncy = list(PAYCHECK_CREW * 2, 2),
+		/obj/item/bait_can/worm/premium = list(PAYCHECK_CREW * 3, 2),
 		//obj/item/fuel_cell/full = list(PAYCHECK_CREW * 4, 2),
 	)
 

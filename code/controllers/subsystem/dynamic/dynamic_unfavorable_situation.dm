@@ -60,8 +60,11 @@
 /// Filter the below list by which events can actually run on this map
 /datum/controller/subsystem/dynamic/proc/generate_unfavourable_events()
 	var/static/list/unfavorable_random_events = list(
-		/datum/round_event_control/xen,
-		/datum/round_event_control/destabilizer,
+		/datum/round_event_control/gonome,
+		/datum/round_event_control/vortigaunt,
+		/datum/round_event_control/rebel,
+		/datum/round_event_control/blackmarket,
+		/datum/round_event_control/rebel,
 	)
 	var/list/picked_events = list()
 	for(var/type in unfavorable_random_events)
