@@ -12,6 +12,7 @@
 	quirk_holder.mind.teach_crafting_recipe(/datum/crafting_recipe/halflife_spear_fine)
 	quirk_holder.mind.teach_crafting_recipe(/datum/crafting_recipe/bonedagger_fine)
 	quirk_holder.mind.teach_crafting_recipe(/datum/crafting_recipe/food/survivaliststew)
+	quirk_holder.mind.teach_crafting_recipe(/datum/crafting_recipe/bone_rod)
 	quirk_holder.mind.teach_crafting_recipe(/datum/crafting_recipe/healing_poultices)
 	quirk_holder.mind.teach_crafting_recipe(/datum/crafting_recipe/beartrap)
 	quirk_holder.mind.teach_crafting_recipe(/datum/crafting_recipe/headcrab_musk)

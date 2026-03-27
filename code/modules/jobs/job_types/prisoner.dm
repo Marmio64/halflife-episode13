@@ -13,7 +13,7 @@
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 
-	outfit = /datum/outfit/job/refugee/equipped
+	outfit = /datum/outfit/job/refugee/background
 	plasmaman_outfit = /datum/outfit/plasmaman/prisoner
 
 	display_order = JOB_DISPLAY_ORDER_PRISONER
@@ -113,6 +113,80 @@
 
 	suit = /obj/item/clothing/suit/armor/armored
 	id = /obj/item/storage/wallet/small_cash //something to get you started
+
+/datum/outfit/job/refugee/background
+	name = "Outlands Refugee with preference background"
+	jobtype = /datum/job/prisoner
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+
+/datum/outfit/job/refugee/background/pre_equip(mob/living/carbon/human/user)
+	var/client/user_client = GLOB.directory[ckey(user.mind?.key)]
+
+	var/loadout = null
+
+	if(user_client)
+		loadout = user_client.prefs.read_preference(/datum/preference/choiced/rebel_loadout)
+
+
+	if(loadout)
+		if(loadout == REFUGEE_BACKGROUND_DOCTOR)
+			user.change_stat(STATKEY_INT, 3)
+			back = /obj/item/storage/backpack/halflife/satchel
+			backpack_contents = list(
+				/obj/item/storage/medkit/halflife = 1,
+				/obj/item/healthanalyzer = 1,
+			)
+
+		if(loadout == REFUGEE_BACKGROUND_HUNTER)
+			user.change_stat(STATKEY_PER, 3)
+			back = /obj/item/gun/ballistic/rifle/rebarxbow
+			belt = /obj/item/storage/belt/pouch/refugee
+
+		if(loadout == REFUGEE_BACKGROUND_LUMBERJACK)
+			user.change_stat(STATKEY_STR, 2)
+			user.change_stat(STATKEY_END, 3)
+			r_pocket = /obj/item/hatchet/wooden
+			belt = /obj/item/storage/belt/pouch/refugee
+
+		if(loadout == REFUGEE_BACKGROUND_FARMER)
+			belt = /obj/item/storage/bag/plants
+			back = /obj/item/storage/backpack/satchel/flat
+			backpack_contents = list(
+				/obj/item/reagent_containers/cup/bottle/nutrient/ez = 2,
+				/obj/item/reagent_containers/cup/glass/waterbottle = 1,
+				/obj/item/seeds/potato = 1,
+				/obj/item/seeds/wheat = 1,
+				/obj/item/seeds/onion = 1,
+				/obj/item/plant_analyzer = 1,
+				/obj/item/shovel/spade = 1,
+				/obj/item/cultivator = 1,
+			)
+
+		if(loadout == REFUGEE_BACKGROUND_FISHERMAN)
+			back = /obj/item/storage/backpack/halflife/satchel
+			backpack_contents = list(
+				/obj/item/fishing_rod/telescopic = 1,
+				/obj/item/bait_can/worm = 1,
+			)
+
+		if(loadout == REFUGEE_BACKGROUND_NOMAD)
+			id = /obj/item/storage/wallet/small_cash
+			back = /obj/item/storage/backpack/halflife/satchel
+			backpack_contents = list(
+				/obj/item/food/canned/halflife/seafood = 1,
+				/obj/item/reagent_containers/cup/glass/waterbottle = 1,
+			)
+			belt = /obj/item/storage/belt/pouch/refugee
+
+	else //default to nomad
+		id = /obj/item/storage/wallet/small_cash
+		back = /obj/item/storage/backpack/halflife/satchel
+		backpack_contents = list(
+			/obj/item/food/canned/halflife/seafood = 1,
+			/obj/item/reagent_containers/cup/glass/waterbottle = 1,
+		)
+		belt = /obj/item/storage/belt/pouch/refugee
 
 /datum/outfit/job/refugee/randomitems
 	name = "Outlands Refugee with a random item"

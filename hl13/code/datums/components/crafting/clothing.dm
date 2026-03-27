@@ -22,7 +22,7 @@
 	desc = "Full-body blue suit for the common citizen, worn down and dirtied by time and use. The scanners have been removed forcefully, and it has been moderately reinforced.  Many officers and other combine officials are closely monitored to ensure they do not have the knowledge of how to do this."
 	result = /obj/item/clothing/under/citizen/rebel
 	reqs = list(/obj/item/clothing/under/citizen = 1,
-				/obj/item/stack/kevlar = 3)
+				/obj/item/stack/kevlar = 2)
 
 	blacklist = list(
 	/obj/item/clothing/under/citizen/rebel,
@@ -62,7 +62,7 @@
 	name = "Makeshift Armored Vest"
 	result = /obj/item/clothing/suit/armor/armored
 	reqs = list(/obj/item/stack/sheet/cloth = 5,
-				/obj/item/stack/sheet/scrap_metal = 14)
+				/obj/item/stack/sheet/scrap_metal = 12)
 	time = 8 SECONDS
 	category = CAT_ARMOR
 
@@ -80,7 +80,7 @@
 /datum/crafting_recipe/kevlar_vest
 	name = "Kevlar Vest"
 	result = /obj/item/clothing/suit/armor/halflife/kevlar
-	reqs = list(/obj/item/stack/kevlar = 5)
+	reqs = list(/obj/item/stack/kevlar = 4)
 	time = 10 SECONDS
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR

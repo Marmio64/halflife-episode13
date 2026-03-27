@@ -542,6 +542,9 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/prison/commissary)
+"cF" = (
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
 "cG" = (
 /obj/structure/weightmachine/weightlifter,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
@@ -838,6 +841,14 @@
 /area/halflife/indoors/prison/security)
 "ei" = (
 /obj/structure/table/halflife/metal/grate,
+/obj/item/light/bulb{
+	pixel_x = -5;
+	pixel_y = 8
+	},
+/obj/item/light/bulb{
+	pixel_x = 8;
+	pixel_y = 1
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
 "ej" = (
@@ -1388,6 +1399,9 @@
 "hc" = (
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/outlands/shop)
+"hd" = (
+/turf/open/halflife/water/medium,
+/area/halflife/indoors/sewer/cave)
 "he" = (
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands)
@@ -1395,6 +1409,9 @@
 /obj/structure/halflife/pipes/horizontal,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/prison/factory)
+"hg" = (
+/turf/open/halflife/water/shallow,
+/area/halflife/indoors/sewer/cave)
 "hh" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional,
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -2698,7 +2715,7 @@
 "nK" = (
 /obj/structure/table/halflife/no_smooth/dice,
 /obj/item/stack/spacecash/c1{
-	amount = 20
+	amount = 5
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands)
@@ -4178,6 +4195,11 @@
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/prison/cargo)
+"uB" = (
+/obj/machinery/hydroponics/soil,
+/obj/item/food/bait/worm,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "uC" = (
 /obj/effect/landmark/outlands_latejoin,
 /turf/open/misc/beach/sand,
@@ -5466,9 +5488,6 @@
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/dispatch)
-"AD" = (
-/turf/closed/wall/halflife/concrete/bunker,
-/area/halflife/indoors/outlands)
 "AE" = (
 /obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/tile/black,
@@ -6035,11 +6054,6 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison/gym)
-"Dp" = (
-/obj/machinery/hydroponics/soil,
-/obj/item/food/bait/worm,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/forest)
 "Dq" = (
 /obj/item/hl13_small_flag/combine,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -6816,6 +6830,7 @@
 "GO" = (
 /obj/structure/closet/crate/halflife/wooden,
 /obj/item/seeds/cabbage,
+/obj/item/reagent_containers/spray/pestspray,
 /obj/item/reagent_containers/cup/bottle/nutrient/ez,
 /obj/item/reagent_containers/cup/bottle/nutrient/ez,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -6830,9 +6845,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/prison)
-"GU" = (
-/turf/open/floor/plating/indoor/metal/industrial,
-/area/halflife/indoors/outlands)
 "GV" = (
 /obj/structure/closet/secure_closet/freezer/halflife,
 /obj/effect/spawner/random/halflife/loot/consumables,
@@ -7106,9 +7118,6 @@
 /obj/structure/halflife/trash/garbage/dumpster/crate,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison/maintenance)
-"Id" = (
-/turf/open/halflife/water/medium,
-/area/halflife/indoors/sewer/cave)
 "Ie" = (
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/indoors/prison/cafeteria)
@@ -8041,8 +8050,8 @@
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/prison/cafeteria)
 "Mz" = (
-/turf/open/halflife/water/shallow,
-/area/halflife/indoors/sewer/cave)
+/turf/closed/wall/halflife/concrete/bunker,
+/area/halflife/indoors/outlands)
 "MA" = (
 /obj/structure/closet/halflife,
 /obj/effect/spawner/random/halflife/loot/rare,
@@ -9864,6 +9873,9 @@
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"UV" = (
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/outlands)
 "UX" = (
 /mob/living/silicon/robot/cityscanner/dispatch_shell,
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -10073,11 +10085,12 @@
 /area/halflife/indoors/laborunion)
 "VZ" = (
 /obj/structure/closet/halflife/wall/firstaid,
-/obj/effect/spawner/random/halflife/loot/heal,
 /obj/item/stack/medical/bone_gel,
 /obj/item/stack/sticky_tape/surgical{
 	amount = 2
 	},
+/obj/item/stack/medical/bandage,
+/obj/item/stack/medical/gauze,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands/shop)
 "Wa" = (
@@ -10198,9 +10211,6 @@
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer)
-"Wz" = (
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/outlands)
 "WA" = (
 /obj/structure/halflife/pipes/vent,
 /obj/structure/table/halflife/metal/grate,
@@ -36637,8 +36647,8 @@ YC
 YC
 YC
 YC
-Id
-Id
+hd
+hd
 YC
 YC
 iw
@@ -36840,10 +36850,10 @@ YC
 (128,1,1) = {"
 YC
 YC
-Id
-Id
-Id
-Id
+hd
+hd
+hd
+hd
 YC
 YC
 YC
@@ -37044,10 +37054,10 @@ YC
 (129,1,1) = {"
 YC
 YC
-Id
-Id
-Id
-Id
+hd
+hd
+hd
+hd
 YC
 YC
 YC
@@ -37248,13 +37258,13 @@ YC
 (130,1,1) = {"
 YC
 YC
-Id
-Id
-Id
-Id
-Id
-Mz
-Mz
+hd
+hd
+hd
+hd
+hd
+hg
+hg
 NQ
 YC
 YC
@@ -37452,12 +37462,12 @@ YC
 (131,1,1) = {"
 YC
 YC
-Id
-Id
-Id
-Id
-Mz
-Mz
+hd
+hd
+hd
+hd
+hg
+hg
 NQ
 NQ
 NQ
@@ -37657,12 +37667,12 @@ YC
 YC
 YC
 YC
-Id
-Id
-Id
-Id
-Mz
-Mz
+hd
+hd
+hd
+hd
+hg
+hg
 NQ
 NQ
 YC
@@ -37861,12 +37871,12 @@ YC
 YC
 YC
 YC
-Id
-Id
-Id
-Id
-Mz
-Mz
+hd
+hd
+hd
+hd
+hg
+hg
 NQ
 NQ
 YC
@@ -38066,11 +38076,11 @@ YC
 YC
 YC
 YC
-Id
-Id
-Id
-Mz
-Mz
+hd
+hd
+hd
+hg
+hg
 NQ
 NQ
 NQ
@@ -38270,11 +38280,11 @@ YC
 YC
 YC
 YC
-Id
-Id
-Id
-Mz
-Mz
+hd
+hd
+hd
+hg
+hg
 NQ
 NQ
 NQ
@@ -38473,12 +38483,12 @@ YC
 YC
 YC
 YC
-Id
-Id
-Id
-Mz
-Mz
-Mz
+hd
+hd
+hd
+hg
+hg
+hg
 NQ
 NQ
 NQ
@@ -38676,12 +38686,12 @@ YC
 (137,1,1) = {"
 YC
 YC
-Id
-Id
-Id
+hd
+hd
+hd
 YC
-Mz
-Mz
+hg
+hg
 NQ
 NQ
 NQ
@@ -38880,9 +38890,9 @@ YC
 (138,1,1) = {"
 YC
 YC
-Id
-Id
-Id
+hd
+hd
+hd
 YC
 YC
 YC
@@ -39085,8 +39095,8 @@ YC
 YC
 YC
 YC
-Id
-Id
+hd
+hd
 YC
 YC
 YC
@@ -39289,9 +39299,9 @@ YC
 YC
 YC
 YC
-Id
-Id
-Id
+hd
+hd
+hd
 YC
 YC
 YC
@@ -39493,9 +39503,9 @@ YC
 YC
 YC
 YC
-Id
-Id
-Id
+hd
+hd
+hd
 YC
 YC
 YC
@@ -39697,10 +39707,10 @@ YC
 YC
 YC
 YC
-Id
-Id
-Id
-Id
+hd
+hd
+hd
+hd
 YC
 YC
 YC
@@ -39903,8 +39913,8 @@ YC
 YC
 YC
 YC
-Id
-Id
+hd
+hd
 YC
 YC
 YC
@@ -67329,12 +67339,12 @@ wK
 wK
 CO
 CO
-AD
-AD
-AD
-AD
-AD
-AD
+Mz
+Mz
+Mz
+Mz
+Mz
+Mz
 wK
 wK
 CO
@@ -67533,12 +67543,12 @@ ic
 ic
 ic
 ic
-AD
-Wz
+Mz
+cF
 vg
-Wz
-Wz
-AD
+cF
+cF
+Mz
 ic
 ic
 ic
@@ -67737,11 +67747,11 @@ Ct
 Ct
 Ct
 Sk
-AD
+Mz
 US
 vg
-Wz
-Wz
+cF
+cF
 ut
 Ct
 Ct
@@ -67941,12 +67951,12 @@ Ct
 Ct
 Ct
 Sk
-AD
-Wz
-Wz
-Wz
-Wz
-AD
+Mz
+cF
+cF
+cF
+cF
+Mz
 Ct
 Ct
 Ct
@@ -68145,12 +68155,12 @@ Ct
 Ct
 Ct
 Ct
-AD
-AD
+Mz
+Mz
 jN
 jN
-AD
-AD
+Mz
+Mz
 Ct
 Lk
 Ct
@@ -68349,12 +68359,12 @@ Ct
 Sk
 Ct
 Ct
-AD
+Mz
 ly
-GU
-GU
+UV
+UV
 es
-AD
+Mz
 Ct
 Ct
 Ct
@@ -68553,12 +68563,12 @@ Ct
 Ct
 Lk
 Lk
-AD
-GU
-GU
+Mz
+UV
+UV
 SO
 es
-AD
+Mz
 Sk
 Ct
 Lk
@@ -68757,12 +68767,12 @@ Lk
 Ct
 Ct
 Ct
-AD
-AD
-AD
-AD
-AD
-AD
+Mz
+Mz
+Mz
+Mz
+Mz
+Mz
 Ct
 Ct
 Ct
@@ -70063,7 +70073,7 @@ ge
 Lk
 Ct
 Ct
-Dp
+uB
 Zw
 Zw
 Zw
@@ -70471,7 +70481,7 @@ cb
 Ct
 Ct
 rC
-Dp
+uB
 Zw
 Vd
 NA

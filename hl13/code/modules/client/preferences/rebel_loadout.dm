@@ -12,4 +12,4 @@
 	return
 
 /datum/preference/choiced/rebel_loadout/create_default_value()
-	return REBEL_LOADOUT_SCOUT
+	return REFUGEE_BACKGROUND_NOMAD

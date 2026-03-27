@@ -473,7 +473,7 @@ const PageMain = (props) => {
       {!!canSendDistressBeacon && sendingDistressBeacon && (
         <MessageModal
           label="Reason for Distress Call"
-          notice="Misuse of the distress call system will not be tolerated under any circumstances. Transmission does not guarantee a response."
+          notice="Misuse of the distress call system will not be tolerated under any circumstances. Transmission does not guarantee a response. Distress calls are transmitted across all frequencies."
           icon="exclamation"
           buttonText="Send Distress Call"
           onBack={() => setSendingDistressBeacon(false)}

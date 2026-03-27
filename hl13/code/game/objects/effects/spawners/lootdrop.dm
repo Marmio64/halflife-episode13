@@ -7,6 +7,8 @@
 				/obj/item/crowbar/large = 2,
 				/obj/item/crowbar/halflife_hammer,
 				/obj/item/storage/toolbox/mechanical,
+				/obj/item/clothing/suit/bluejacket,
+				/obj/item/clothing/suit/bluejacket/padded,
 				/obj/item/toy/cards/deck,
 				/obj/item/binoculars,
 				/obj/item/poster/halflife/rebel,
@@ -208,6 +210,8 @@
 	loot = list(
 				/obj/item/clothing/under/citizen/refugee,
 				/obj/item/clothing/under/citizen/refugee/green,
+				/obj/item/clothing/suit/bluejacket,
+				/obj/item/clothing/suit/bluejacket/padded,
 				/obj/item/clothing/head/beanie/black = 2,
 				/obj/item/clothing/mask/balaclava,
 				/obj/item/clothing/gloves/fingerless = 2,

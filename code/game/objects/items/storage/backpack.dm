@@ -387,7 +387,7 @@
 /obj/item/storage/backpack/satchel/flat/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/undertile, TRAIT_T_RAY_VISIBLE, INVISIBILITY_OBSERVER, use_anchor = TRUE)
-	atom_storage.max_total_storage = 15
+	atom_storage.max_total_storage = 12
 	atom_storage.set_holdable(cant_hold_list = /obj/item/storage/backpack/satchel/flat) //muh recursive backpacks
 	ADD_TRAIT(src, TRAIT_CONTRABAND_BLOCKER, INNATE_TRAIT)
 

@@ -637,7 +637,9 @@
 /turf/closed/wall/halflife/wood,
 /area/halflife/outdoors/deployment_city/forest)
 "DT" = (
-/obj/machinery/porta_turret/combine/rebel/fast,
+/obj/machinery/porta_turret/combine/rebel/fast{
+	anchored = 1
+	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Ew" = (
@@ -763,7 +765,9 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker)
 "Ja" = (
-/obj/machinery/porta_turret/combine/rebel/fast,
+/obj/machinery/porta_turret/combine/rebel/fast{
+	anchored = 1
+	},
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Jc" = (
@@ -1125,6 +1129,12 @@
 /obj/structure/halflife/road_barrier/concrete,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/forest)
+"Xe" = (
+/obj/machinery/porta_turret/combine/rebel/fast{
+	anchored = 1
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
 "Xq" = (
 /obj/effect/landmark/deployments_refugee,
 /obj/structure/bed/halflife/bedframe/wire,
@@ -5425,7 +5435,7 @@ yp
 Zn
 ml
 hi
-Ey
+Xe
 hi
 ml
 ml
@@ -6885,7 +6895,7 @@ yp
 Zn
 ml
 hi
-Ey
+Xe
 hi
 ml
 ml

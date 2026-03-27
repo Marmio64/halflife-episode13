@@ -293,6 +293,8 @@
 		/obj/item/weldingtool/halflife = list(PAYCHECK_CREW * 1.5, 2),
 		/obj/item/wrench/halflife = list(PAYCHECK_CREW * 1.5, 2),
 		/obj/item/screwdriver/halflife = list(PAYCHECK_CREW * 1.5, 2),
+		/obj/item/fishing_rod = list(PAYCHECK_CREW * 4.5, 2),
+		/obj/item/bait_can/worm = list(PAYCHECK_CREW * 3.5, 2),
 	)
 
 	initial_wanteds = list(
@@ -570,6 +572,7 @@
 		/obj/item/gun/ballistic/revolver/coltpython = list(PAYCHECK_CREW * 12, 1),
 		/obj/item/gun/ballistic/automatic/servicerifle = list(PAYCHECK_CREW * 13, 1),
 		/obj/item/gun/ballistic/rifle/rebarxbow = list(PAYCHECK_CREW * 7, 3),
+		/obj/item/clothing/suit/armor/armored = list(PAYCHECK_CREW * 1.5, 3),
 		/obj/item/clothing/suit/armor/civilprotection = list(PAYCHECK_CREW * 3.5, 3),
 		/obj/item/clothing/head/helmet/halflife/military/weak/crafted = list(PAYCHECK_CREW * 2.25, 5),
 		/obj/item/clothing/head/helmet/halflife/military = list(PAYCHECK_CREW * 4, 5),
@@ -720,7 +723,7 @@
 		/obj/item/circuitmaterial = list(PAYCHECK_CREW * 0.5, 3),
 		/obj/item/circuitmaterial/advanced = list(PAYCHECK_CREW * 3, 3),
 		/obj/item/defibrillator/loaded = list(PAYCHECK_CREW * 5, 1),
-		/obj/item/fishing_rod = list(PAYCHECK_CREW * 3, 2),
+		/obj/item/fishing_rod = list(PAYCHECK_CREW * 3, 3),
 		/obj/item/fishing_hook/weighted = list(PAYCHECK_CREW * 2, 2),
 		/obj/item/fishing_line/bouncy = list(PAYCHECK_CREW * 2, 2),
 		/obj/item/bait_can/worm/premium = list(PAYCHECK_CREW * 3, 2),

@@ -679,7 +679,7 @@
 /obj/item/fishing_rod/telescopic
 	name = "telescopic fishing rod"
 	icon_state = "fishing_rod_telescopic"
-	desc = "A lightweight, ergonomic, easy to store telescopic fishing rod. "
+	desc = "A lightweight, ergonomic, easy to store telescopic fishing rod. This is a rare, prized fishing rod that was very expensive even before the war."
 	inhand_icon_state = null
 	custom_price = PAYCHECK_CREW * 9
 	force = 0

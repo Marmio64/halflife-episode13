@@ -64,6 +64,13 @@
 #define REBEL_LOADOUT_BRUISER "Bruiser (Melee, Heavy)"
 #define REBEL_LOADOUT_MEDIC "Medic (Intelligent Doctor)"
 
+#define REFUGEE_BACKGROUND_DOCTOR "Ex-Doctor (Medical Supplies, Intelligence)"
+#define REFUGEE_BACKGROUND_HUNTER "Hunter (Crossbow, Perception)"
+#define REFUGEE_BACKGROUND_LUMBERJACK "Lumberjack (Hatchet, Strength)"
+#define REFUGEE_BACKGROUND_FARMER "Farmer (Farming supplies)"
+#define REFUGEE_BACKGROUND_FISHERMAN "Fisherman (Fishing supplies)"
+#define REFUGEE_BACKGROUND_NOMAD "Nomad (Satchel, extra food/water)"
+
 // Playtime tracking system, see jobs_exp.dm
 #define EXP_TYPE_LIVING "Living"
 #define EXP_TYPE_CREW "Crew"

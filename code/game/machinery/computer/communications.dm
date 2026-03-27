@@ -453,6 +453,8 @@
 
 			COOLDOWN_START(src, important_action_cooldown, IMPORTANT_ACTION_COOLDOWN)
 
+			message_admins("[ADMIN_LOOKUPFLW(user)] has sent a distress beacon with the reason: [params["reason"]] , with [src] at [AREACOORD(user)].")
+
 			SSsociostability.send_distress_beacon()
 
 

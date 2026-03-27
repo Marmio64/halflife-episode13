@@ -37,6 +37,7 @@
 				/obj/item/stack/sheet/bone = 5)
 	category = CAT_TOOLS
 	tool_behaviors = list(TOOL_KNIFE)
+	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
 
 /datum/crafting_recipe/sinew_line
 	name = "Sinew Fishing Line Reel"
