@@ -139,8 +139,8 @@
 	name = "Black Market Dealer"
 	desc = "A gruff looking, armored fellow who is selling all sorts of illegal armaments and armor."
 
-	maxHealth = 250
-	health = 250
+	maxHealth = 225
+	health = 225
 	blood_volume = BLOOD_VOLUME_NORMAL
 
 	spawner_path = /obj/effect/mob_spawn/corpse/human/blackmarket
@@ -179,8 +179,8 @@
 	name = "Refugee Tradesmen"
 	desc = "An older looking gentlemen, who looks like they've been in the outlands for a long time. They seem to be selling useful supplies."
 
-	maxHealth = 150
-	health = 150
+	maxHealth = 125
+	health = 125
 	blood_volume = BLOOD_VOLUME_NORMAL
 
 	spawner_path = /obj/effect/mob_spawn/corpse/human/refugee_tradesmen
@@ -461,12 +461,12 @@
 	initial_products = list(
 		/obj/item/clothing/head/helmet/halflife/headcrab = list(PAYCHECK_CREW * 2.25, 5),
 		/obj/item/clothing/suit/armor/platearmor = list(PAYCHECK_CREW * 3.25, 5),
-		/obj/item/clothing/head/helmet/halflife/headcrab/gonome = list(PAYCHECK_CREW * 4.25, 1),
-		/obj/item/clothing/suit/armor/platearmor/heavy = list(PAYCHECK_CREW * 7.25, 1),
+		/obj/item/clothing/head/helmet/halflife/headcrab/gonome = list(PAYCHECK_CREW * 4, 1),
+		/obj/item/clothing/suit/armor/platearmor/heavy = list(PAYCHECK_CREW * 7, 1),
 		/obj/item/clothing/mask/bandana/sinew = list(PAYCHECK_CREW * 0.5, 2),
 		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 1.25, 1),
-		/obj/item/knife/combat = list(PAYCHECK_CREW * 6, 3),
-		/obj/item/spear/halflife/deathmatch = list(PAYCHECK_CREW * 6, 3),
+		/obj/item/knife/combat = list(PAYCHECK_CREW * 5.5, 3),
+		/obj/item/spear/halflife/deathmatch = list(PAYCHECK_CREW * 5.5, 3),
 		/obj/item/stack/medical/bandage = list(PAYCHECK_CREW * 0.75, 5),
 		/obj/item/stack/sheet/leather = list(PAYCHECK_CREW * 1.25, 5),
 	)
@@ -475,8 +475,9 @@
 		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW, 10, ""),
 		/obj/item/food/meat/slab/halflife/zombie = list(PAYCHECK_CREW * 0.25, 10, ""),
 		/obj/item/stack/sheet/animalhide/goliath_hide = list(PAYCHECK_CREW, 10, ""),
-		/obj/item/food/meat/steak/plain/human = list(PAYCHECK_CREW * 2, 15, ""),
-		/obj/item/food/meat/slab/human = list(PAYCHECK_CREW * 2, 15, ""),
+		/obj/item/food/meat/steak/plain/human = list(PAYCHECK_CREW * 1.5, 15, ""),
+		/obj/item/food/meat/slab/human = list(PAYCHECK_CREW * 1.5, 15, ""),
+		/obj/item/food/fishmeat = list(PAYCHECK_CREW, 10, ""),
 		/obj/item/organ/heart = list(PAYCHECK_CREW * 2, 5, ""),
 		/obj/item/reagent_containers/pill/patch/grubnugget = list(PAYCHECK_CREW * 0.25, 15, ""),
 		/obj/item/food/xen/xenbranch = list(PAYCHECK_CREW * 0.5, 5, ""),
@@ -504,6 +505,7 @@
 		BUY_PHRASE = list(
 			"H-Hahaha, come b-back for more.",
 			"All naturally s-sourced...",
+			"Y-you have great tastes... I wonder if you t-taste just as great...",
 		),
 		NO_CASH_PHRASE = list(
 			"N-Need fuckin' cash.",
@@ -526,6 +528,7 @@
 		TRADER_LORE_PHRASE = list(
 			"N-Not here to talk. Buy s-something, or g-give me something, or fuck off.",
 			"F-Fresh meat...",
+			"I'm o-one s-second from eating your eyes.",
 		),
 		TRADER_NOT_BUYING_ANYTHING = list(
 			"I'm done buying...",
@@ -548,7 +551,7 @@
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
 			"Y-You... flesh t-trading here...",
-			"Need to eat?",
+			"Sell... b-buy.. meat...",
 			"I w-won't bite... yet.",
 		),
 	)
@@ -735,6 +738,7 @@
 		/obj/item/factory_construction/full_container/advanced = list(PAYCHECK_CREW * 2.75, 15, ""),
 		/obj/item/halflife/nutrient_bar_wrapping/water = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 0.75, 10, ""),
+		/obj/item/food/fishmeat = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/food/pierogi_ration = list(PAYCHECK_CREW * 2.5, 10, ""),
 		/obj/item/stack/sheet/animalhide/goliath_hide = list(PAYCHECK_CREW * 0.75, 10, ""),
 		/obj/item/stack/bulletcasings = list(PAYCHECK_CREW * 0.25, 15, ""),

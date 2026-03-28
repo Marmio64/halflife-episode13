@@ -484,6 +484,11 @@
 	first_time_text = "The Antlion Caves"
 	first_time_sound = null
 
+/area/halflife/indoors/sewer/outlandscave/crabwalker
+	ambient_music = 'hl13/sound/ambience/bgm/silentheaven.ogg'
+	ambient_music_vol = 7
+	first_time_text = null
+
 /area/halflife/indoors/sewer/antlioncave
 	name = "\improper Infested Caves"
 	ambience_index = AMBIENCE_HLANTCAVES
