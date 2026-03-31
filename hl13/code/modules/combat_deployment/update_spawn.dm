@@ -36,7 +36,6 @@ GLOBAL_LIST_EMPTY(new_spawns)
 			if(combine)
 				if(S.team == COMBINE_DEPLOYMENT_FACTION)
 					GLOB.deployments_metrocop += S.loc
-			GLOB.new_spawns -= S
 			qdel(S)
 
 /obj/machinery/example_objective //for testing originally but you can use it as an example of how to use this
