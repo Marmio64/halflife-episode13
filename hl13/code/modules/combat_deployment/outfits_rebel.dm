@@ -855,7 +855,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
 
-	extra_end = 4
+	extra_end = 6
 
 /datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt
 	name = "Deployment: Extract Empowered Vortigaunt"

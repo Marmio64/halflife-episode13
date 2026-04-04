@@ -27,7 +27,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	) //hl13 edit, just moving all the protected roles into restricted cause nothing else seems to fix it
 	required_candidates = 1
 	weight = 5
-	cost = 10 // Avoid raising traitor threat above this, as it is the default low cost ruleset.
+	cost = 8 // Avoid raising traitor threat above this, as it is the default low cost ruleset.
 	scaling_cost = 9
 	requirements = list(8,8,8,8,8,8,8,8,8,8)
 	antag_cap = list("denominator" = 24)
@@ -435,7 +435,7 @@ GLOBAL_VAR_INIT(revolutionary_win, FALSE)
 	)
 	required_candidates = 3
 	weight = 5
-	cost = 25
+	cost = 20
 	requirements = list(40,40,40,30,30,30,30,20,10,10)
 	flags = HIGH_IMPACT_RULESET
 	antag_cap = list("denominator" = 34, "offset" = 1)

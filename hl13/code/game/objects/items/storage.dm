@@ -274,6 +274,8 @@
 
 /obj/item/storage/belt/civilprotection/overwatch/assassin/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/grenade/c4, src)
+	SSwardrobe.provide_type(/obj/item/grenade/smokebomb, src)
+	SSwardrobe.provide_type(/obj/item/grenade/smokebomb, src)
 	SSwardrobe.provide_type(/obj/item/climbing_hook/halflife, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
@@ -285,7 +287,7 @@
 
 /obj/item/storage/belt/civilprotection/overwatch/assassin/Initialize(mapload)
 	. = ..()
-	atom_storage.max_slots = 8
+	atom_storage.max_slots = 10
 	atom_storage.max_specific_storage = WEIGHT_CLASS_NORMAL
 	atom_storage.set_holdable(list(
 		/obj/item/ammo_box,

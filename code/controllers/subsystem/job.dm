@@ -661,15 +661,8 @@ SUBSYSTEM_DEF(job)
 
 	else
 		if(J.spawn_positions > 0)
-			if(prob(50))
-				job_debug("SOP: Setting open refugee positions to 3")
-				J.total_positions = 5
-				J.spawn_positions = 3
-			else
-				job_debug("SOP: Coin flip failed, setting open refugee positions to 0")
-				J.total_positions = 0
-				J.spawn_positions = 0
-				return
+			J.total_positions = 5
+			J.spawn_positions = 3
 
 /datum/controller/subsystem/job/proc/handle_feedback_gathering()
 	for(var/datum/job/job as anything in joinable_occupations)

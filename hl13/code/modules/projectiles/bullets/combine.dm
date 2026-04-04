@@ -42,6 +42,8 @@
 /obj/projectile/bullet/pulse/energyball/on_hit(atom/target, blocked = 0, pierce_hit)
 	if(istype(target, /mob/living/simple_animal/hostile/halflife/hunter)) //bonus direct damage vs hunters
 		damage = 90
+	if(istype(target, /mob/living/basic/halflife/advisor)) //bonus direct damage vs advisors
+		damage = 90
 	. = ..()
 
 /obj/projectile/bullet/pulse/lmg

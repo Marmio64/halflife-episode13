@@ -2,8 +2,8 @@
 	name = "Spawn Sentient Zombie"
 	typepath = /datum/round_event/ghost_role/sentient_zombie
 	max_occurrences = 3
-	min_players = 0
-	weight = 6
+	min_players = 5
+	weight = 8
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns a Sentient Zombie."
 	min_wizard_trigger_potency = 6

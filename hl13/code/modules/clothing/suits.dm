@@ -184,22 +184,11 @@
 	name = "assassin chestpiece"
 	desc = "An extremely advanced piece of chest protection that is very lightweight and protective. Often issued to elite combine assassins."
 	icon_state = "assassin"
-	armor_type = /datum/armor/overwatch_assassin_armor
 	slowdown = -0.5
 	actions_types = list(/datum/action/item_action/assassin_invis)
 	clothing_traits = list(TRAIT_BACKSTABBER)
 	var/invis_ready = TRUE
 	var/cloaked = FALSE
-
-/datum/armor/overwatch_assassin_armor
-	melee = 35
-	bullet = 35
-	laser = 30
-	energy = 30
-	bomb = 45
-	fire = 50
-	acid = 50
-	wound = 20
 
 /obj/item/clothing/suit/armor/overwatch/assassin/ui_action_click(mob/user, action)
 	assassin_invis()
