@@ -124,7 +124,7 @@
 			to_chat(usr, span_warning("No client to award points to!"))
 			return
 
-		if(HAS_MIND_TRAIT(rankpoints_recepient, TRAIT_MINDSHIELD))
+		if(!HAS_MIND_TRAIT(rankpoints_recepient, TRAIT_MINDSHIELD))
 			to_chat(usr, span_warning("They are not eligible for rank point modifications."))
 			return
 
