@@ -214,11 +214,13 @@
 		to_chat(H, "<span class='notice'Cloak deployed.</span>")
 		H.alpha = 40
 		ADD_TRAIT(H, TRAIT_PACIFISM, CLOTHING_TRAIT) //cant attack while cloaked
+		H.faction += FACTION_REFUGEE //rebel turrets wont target
 		cloaked = TRUE
 	else
 		to_chat(H, "<span class='notice'Cloak removed.</span>")
 		H.alpha = 255
 		REMOVE_TRAIT(H, TRAIT_PACIFISM, CLOTHING_TRAIT)
+		H.faction -= FACTION_REFUGEE
 		cloaked = FALSE
 
 	playsound(loc, 'hl13/sound/effects/zap1.ogg', 50, TRUE, TRUE)

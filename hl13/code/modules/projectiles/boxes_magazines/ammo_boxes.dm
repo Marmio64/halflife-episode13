@@ -24,7 +24,7 @@
 
 /obj/item/ammo_box/halflife/c9mm
 	name = "ammo box (9mm)"
-	ammo_type = /obj/projectile/bullet/c9mm/usp
+	ammo_type = /obj/item/ammo_casing/c9mm/usp
 	max_ammo = 45
 
 /obj/item/ammo_box/halflife/c46x30mm
