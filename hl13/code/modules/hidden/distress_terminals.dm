@@ -79,27 +79,45 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 		return
 
 	activating = TRUE
-	if(last_hidden_warning < world.time)
-		for(var/X in GLOB.deployment_hidden_players)
-			var/mob/living/carbon/human/H = X
-			SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
-			to_chat(H, "<span class='userdanger'>The [terminal_name] terminal is currently being activated.</span>")
-		last_hidden_warning = world.time + 45 SECONDS
-	if(do_after(user, 6 SECONDS, src))
-		attempts_to_complete -= 1
-		if(attempts_to_complete == 0)
-			say("All activation codes accepted. Activating terminal.")
+	if(user.deployment_faction == HIDDEN_DEPLOYMENT_FACTION) //two birds with one stone, hidden breaking terminals is now a feature and not a bug
+		if(do_after(user, 30 SECONDS, src))
+			attempts_to_complete = 6
+			do_sparks(1, FALSE, src)
+			say("Act#@iva^*cod&%- An error has occurred. Terminal has been reset. [attempts_to_complete] activation codes needed until terminal activation.")
 			playsound(src, 'hl13/sound/effects/radio2.ogg', 15, TRUE, extrarange = 3)
-			if(user.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
-				completed(0)
-			if(user.deployment_faction == REBEL_DEPLOYMENT_FACTION)
-				completed(1)
+			for(var/X in GLOB.deployment_combine_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+				to_chat(H, "<span class='userdanger'>The [terminal_name] terminal has been sabotaged.</span>")
+			for(var/X in GLOB.deployment_rebel_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+				to_chat(H, "<span class='userdanger'>The [terminal_name] terminal has been sabotaged.</span>")
 		else
-			say("Activation code accepted. [attempts_to_complete] activation codes needed until terminal activation.") //i dont know, sounds computery enough
+			say("Invalid activation code received. [attempts_to_complete] activation codes needed until terminal activation.")
 			playsound(src, 'hl13/sound/effects/radio2.ogg', 15, TRUE, extrarange = 3)
 	else
-		say("Invalid activation code received. [attempts_to_complete] activation codes needed until terminal activation.")
-		playsound(src, 'hl13/sound/effects/radio2.ogg', 15, TRUE, extrarange = 3)
+		if(last_hidden_warning < world.time)
+			for(var/X in GLOB.deployment_hidden_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+				to_chat(H, "<span class='userdanger'>The [terminal_name] terminal is currently being activated.</span>")
+			last_hidden_warning = world.time + 45 SECONDS
+		if(do_after(user, 6 SECONDS, src))
+			attempts_to_complete -= 1
+			if(attempts_to_complete == 0)
+				say("All activation codes accepted. Activating terminal.")
+				playsound(src, 'hl13/sound/effects/radio2.ogg', 15, TRUE, extrarange = 3)
+				if(user.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+					completed(0)
+				if(user.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+					completed(1)
+			else
+				say("Activation code accepted. [attempts_to_complete] activation codes needed until terminal activation.") //i dont know, sounds computery enough
+				playsound(src, 'hl13/sound/effects/radio2.ogg', 15, TRUE, extrarange = 3)
+		else
+			say("Invalid activation code received. [attempts_to_complete] activation codes needed until terminal activation.")
+			playsound(src, 'hl13/sound/effects/radio2.ogg', 15, TRUE, extrarange = 3)
 	activating = FALSE
 
 /obj/machinery/combine_distressterminal/lambda
