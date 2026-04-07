@@ -184,7 +184,7 @@
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 
 	school = SCHOOL_EVOCATION
-	cooldown_time = 150 SECONDS
+	cooldown_time = 125 SECONDS
 
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 

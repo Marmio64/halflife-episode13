@@ -14,6 +14,13 @@
 	VAR_PRIVATE/datum/weakref/restraining_mob
 	/// Probability of successfully blocking attacks while on throw mode
 	var/block_chance = 75
+	/// Can we evade projectiles?
+	var/evade_projectiles = FALSE
+	/// Chance of evading projectiles?
+	var/evade_projectile_chance = 95
+
+/datum/martial_art/cqc/wesker
+	evade_projectiles = TRUE
 
 /datum/martial_art/cqc/on_teach(mob/living/new_holder)
 	. = ..()
@@ -49,7 +56,14 @@
 	if(!can_use(cqc_user) || !cqc_user.throw_mode || INCAPACITATED_IGNORING(cqc_user, INCAPABLE_GRAB))
 		return NONE
 	if(attack_type == PROJECTILE_ATTACK)
-		return NONE
+		if(evade_projectiles && prob(evade_projectile_chance))
+			cqc_user.visible_message(
+				span_danger("[cqc_user] swats away [attack_text]!"),
+				span_userdanger("You effortlessly swat away [attack_text]!"),
+			)
+			return SUCCESSFUL_BLOCK
+		else
+			return NONE
 	if(!prob(block_chance))
 		return NONE
 

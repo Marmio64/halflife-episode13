@@ -72,6 +72,17 @@
 	acid = 100
 	wound = 20
 
+/datum/armor/hev/boss
+	melee = 80
+	bullet = 80
+	laser = 80
+	energy = 80
+	bomb = 80
+	bio = 100
+	fire = 100
+	acid = 100
+	wound = 25
+
 /datum/armor/hev/weak
 	melee = 40
 	bullet = 40
@@ -299,6 +310,10 @@
 /obj/item/clothing/suit/hooded/hev/deathmatch/deployment
 	slowdown = -0.5
 	armor_type = /datum/armor/hev/weak
+
+/obj/item/clothing/suit/hooded/hev/deathmatch/boss
+	slowdown = -0.75
+	armor_type = /datum/armor/hev/boss
 
 /obj/item/clothing/suit/hooded/hev/makeshift_hazsuit
 	name = "makeshift hazard suit"

@@ -219,8 +219,8 @@
 	name = "Polish Liberation Front Recruiter"
 	desc = "A represenative of the local PLF cell. They are looking to recruit local prisoners and escaped vortigaunts who wish to fight back against the combine."
 
-	maxHealth = 200
-	health = 200
+	maxHealth = 175
+	health = 175
 	blood_volume = BLOOD_VOLUME_NORMAL
 
 	spawner_path = /obj/effect/mob_spawn/corpse/human/plf_recruiter

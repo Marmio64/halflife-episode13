@@ -242,6 +242,15 @@
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/overwatch/pulsesmg_victim/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/flashlight/flare/the_hidden, src)
+	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/pulsesmg, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/pulsesmg, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/pulsesmg, src)
+	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
+	update_appearance(UPDATE_ICON)
+
 /obj/item/storage/belt/civilprotection/overwatch/pulsesmg_hidden/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/pulsesmg, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/flare/the_hidden, src)
@@ -264,6 +273,15 @@
 	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot/halflife, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
+	update_appearance(UPDATE_ICON)
+
+/obj/item/storage/belt/civilprotection/overwatch/spas12_victim/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/flashlight/flare/the_hidden, src)
+	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot/halflife, src)
+	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot/halflife, src)
+	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot/halflife, src)
+	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
 	update_appearance(UPDATE_ICON)
 
 /obj/item/storage/belt/civilprotection/overwatch/spas12_hidden/PopulateContents()
@@ -401,8 +419,8 @@
 	storage_type = /datum/storage/satchel/halflife/huge
 
 /datum/storage/satchel/halflife/huge
-	max_total_storage = 45
-	max_slots = 45
+	max_total_storage = 50
+	max_slots = 50
 	max_specific_storage = WEIGHT_CLASS_GIGANTIC
 
 /datum/storage/backpack/halflife

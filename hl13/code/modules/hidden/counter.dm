@@ -1,4 +1,5 @@
 GLOBAL_VAR_INIT(number_of_hidden, 0)
+GLOBAL_VAR_INIT(hidden_match_type, "Hidden")
 
 /obj/machinery/the_hidden_time_counter
 	name = "time counter"
@@ -23,6 +24,10 @@ GLOBAL_VAR_INIT(number_of_hidden, 0)
 
 	var/rebel_players = 0
 
+	var/target_name = "Hidden"
+
+	var/match_type = "Hidden"
+
 /obj/machinery/the_hidden_time_counter/rebels
 	combine_players = 0
 	rebel_players = 12
@@ -35,9 +40,18 @@ GLOBAL_VAR_INIT(number_of_hidden, 0)
 	number_of_hidden = 2
 	rebel_players = 24
 
+/obj/machinery/the_hidden_time_counter/boss
+	target_name = "Boss"
+	match_type = "Boss"
+
+/obj/machinery/the_hidden_time_counter/boss/double_players
+	number_of_hidden = 2
+	combine_players = 24
+
 /obj/machinery/the_hidden_time_counter/Initialize(mapload)
 	..()
 	GLOB.deployment_flag_grace_period = 3 MINUTES //arbitrary, there just needs to be a grace period right now. It'll get changed later on to the correct one.
+	GLOB.hidden_match_type = match_type
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/the_hidden_time_counter/LateInitialize()
@@ -45,7 +59,7 @@ GLOBAL_VAR_INIT(number_of_hidden, 0)
 		sleep(1 SECONDS)
 	candidates_left = number_of_hidden
 	sleep(12 SECONDS)
-	to_chat(world, span_danger(span_slightly_larger(span_bold("The Hidden will be selected in 10 Seconds."))))
+	to_chat(world, span_danger(span_slightly_larger(span_bold("The [target_name] will be selected in 10 Seconds."))))
 	sleep(10 SECONDS)
 	attempt_pick_hidden(number_of_hidden)
 
@@ -80,9 +94,12 @@ GLOBAL_VAR_INIT(number_of_hidden, 0)
 		human_user.STADEX = 10
 		for(var/datum/action/cooldown/buttons in human_user.actions)
 			qdel(buttons)
-		human_user.equipOutfit(/datum/outfit/deployment_loadout/hidden/the_hidden/blank)
+		if(GLOB.hidden_match_type == "Hidden")
+			human_user.equipOutfit(/datum/outfit/deployment_loadout/hidden/the_hidden/blank)
+		else if(GLOB.hidden_match_type == "Boss")
+			human_user.equipOutfit(/datum/outfit/deployment_loadout/boss/blank)
 		human_user.regenerate_icons()
-		to_chat(human_user, span_notice("You were chosen to be The Hidden!"))
+		to_chat(human_user, span_notice("You were chosen to be The [target_name]!"))
 		candidates_left--
 
 	if(candidates_left == 0 || 99 < pick_retries)
@@ -108,14 +125,14 @@ GLOBAL_VAR_INIT(number_of_hidden, 0)
 			priority_announce("All delegate biosignals lost. Mission failure detected.", "Overwatch Priority Alert")
 			GLOB.deployment_win_team = HIDDEN_DEPLOYMENT_FACTION
 			SSticker.force_ending = FORCE_END_ROUND
-			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All Combine are dead, the Hidden win."))))
+			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All Combine are dead, the [target_name] win."))))
 			STOP_PROCESSING(SSprocessing, src)
 
 		if(GLOB.number_of_hidden < 1 && SSticker.IsRoundInProgress())
 			priority_announce("All priority subjects amputated. Mission complete.", "Overwatch Priority Alert")
 			GLOB.deployment_win_team = COMBINE_DEPLOYMENT_FACTION
 			SSticker.force_ending = FORCE_END_ROUND
-			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All Hidden were killed, the Combine win."))))
+			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All [target_name] were killed, the Combine win."))))
 			STOP_PROCESSING(SSprocessing, src)
 
 
@@ -140,14 +157,14 @@ GLOBAL_VAR_INIT(number_of_hidden, 0)
 			priority_announce("We're no longer detecting your team's biosignals. God have mercy on your souls.", "Lambda Priority Alert")
 			GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
 			SSticker.force_ending = FORCE_END_ROUND
-			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All Rebels are dead, the Hidden win."))))
+			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All Rebels are dead, the [target_name] win."))))
 			STOP_PROCESSING(SSprocessing, src)
 
 		if(GLOB.number_of_hidden < 1 && SSticker.IsRoundInProgress())
 			priority_announce("We're no longer detecting any unidentified forces. Mission complete.", "Lambda Priority Alert")
 			GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
 			SSticker.force_ending = FORCE_END_ROUND
-			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All Hidden were killed, the Rebels win."))))
+			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All [target_name] were killed, the Rebels win."))))
 			STOP_PROCESSING(SSprocessing, src)
 
 

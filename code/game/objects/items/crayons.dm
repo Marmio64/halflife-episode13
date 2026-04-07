@@ -104,6 +104,7 @@
 		"face",
 		"guy",
 		"kurwa", //hl13 edit add
+		"lambda", //hl13 edit add
 		"matt",
 		//"prolizard", hl13 edit
 		"polska", //hl13 edit add
@@ -122,7 +123,6 @@
 		//"evac", hl13 edit
 		"food",
 		"heart",
-		"lambda", //hl13 edit add
 		"like",
 		"med",
 		"nay",
@@ -563,6 +563,9 @@
 		to_chat(user, span_notice("You finish drawing \the [temp]."))
 	else
 		to_chat(user, span_notice("You spray a [temp] on \the [target.name]"))
+
+	if(drawing in (graffiti))
+		SSsociostability.modifystability(-1)
 
 	if(length(text_buffer) > 1)
 		text_buffer = copytext(text_buffer, length(text_buffer[1]) + 1)

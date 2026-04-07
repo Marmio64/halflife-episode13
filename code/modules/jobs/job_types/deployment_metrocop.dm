@@ -95,7 +95,10 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 			GLOB.xen_tier_points += 1 // Ditto
 
 	if(SSmapping.current_map.combat_deployment_gamemode == "the_hidden")
-		chosen = /obj/item/hl2/loadout_picker/hidden/combine
+		if(GLOB.hidden_match_type == "Hidden")
+			chosen = /obj/item/hl2/loadout_picker/hidden/combine
+		else if(GLOB.hidden_match_type == "Boss")
+			chosen = /obj/item/hl2/loadout_picker/hidden/boss_victim/combine
 
 	if(chosen)
 		var/turf/T = get_turf(user)

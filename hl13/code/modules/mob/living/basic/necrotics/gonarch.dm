@@ -113,7 +113,7 @@
 			call_children()
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/proc/legionnaire_charge(target)
-	ranged_cooldown = world.time + 3.5 SECONDS
+	ranged_cooldown = world.time + 3 SECONDS
 	charging = TRUE
 	var/dir_to_target = get_dir(get_turf(src), get_turf(target))
 	var/turf/T = get_step(get_turf(src), dir_to_target)
@@ -176,7 +176,7 @@
 		shoot_projectile(marker, set_angle - 15, FALSE, FALSE)
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/proc/herald_trishot(target)
-	ranged_cooldown = world.time + 3 SECONDS
+	ranged_cooldown = world.time + 2.5 SECONDS
 	playsound(get_turf(src), 'hl13/sound/creatures/gonarch/spit.ogg', 20, FALSE)
 	icon_state = "gonarch_attack"
 	charging = TRUE
@@ -192,7 +192,7 @@
 		icon_state = "gonarch"
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/proc/spawn_children(target)
-	ranged_cooldown = world.time + 20
+	ranged_cooldown = world.time + 15
 	visible_message(span_boldwarning("[src] strains as it gives birth!"))
 	playsound(get_turf(src), 'hl13/sound/creatures/gonarch/birth.ogg', 20, TRUE)
 	for(var/i in 1 to 2)
@@ -220,7 +220,7 @@
 
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/proc/rage()
-	ranged_cooldown = world.time + 50
+	ranged_cooldown = world.time + 40
 	playsound(src,'hl13/sound/creatures/gonarch/rage.ogg', 75, FALSE)
 	visible_message(span_warning("[src] starts picking up speed!"))
 	color = COLOR_RED
@@ -234,7 +234,7 @@
 	move_to_delay = 5
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/proc/call_children()
-	ranged_cooldown = world.time + 40
+	ranged_cooldown = world.time + 20
 	visible_message(span_warning("The ground shakes near [src]!"))
 	var/list/directions = GLOB.cardinals.Copy() + GLOB.diagonals.Copy()
 	for(var/mob/child in children_list)
@@ -243,6 +243,14 @@
 		if(T)
 			child.forceMove(T)
 			playsound(src, 'sound/effects/bamf.ogg', 100, 1)
+
+/mob/living/simple_animal/hostile/asteroid/elite/gonarch/boss
+	deployment_faction = HIDDEN_DEPLOYMENT_FACTION
+	maxHealth = 1500
+	health = 1500
+	obj_damage = 45
+	melee_damage_lower = 25
+	melee_damage_upper = 30
 
 #undef CALL_CHILDREN
 #undef RAGE

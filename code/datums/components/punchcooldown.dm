@@ -7,16 +7,20 @@
 	///The warcry this generates
 	var/warcry = "AT"
 
-/datum/component/wearertargeting/punchcooldown/Initialize()
+	var/punch_speed = CLICK_CD_RAPID
+
+/datum/component/wearertargeting/punchcooldown/Initialize(warcry = "AT", punch_speed = CLICK_CD_RAPID)
 	. = ..()
 	if(. == COMPONENT_INCOMPATIBLE)
 		return
 	RegisterSignal(parent, COMSIG_ITEM_ATTACK_SELF, PROC_REF(changewarcry))
+	src.warcry = warcry
+	src.punch_speed = punch_speed
 
 ///Called on COMSIG_LIVING_UNARMED_ATTACK. Yells the warcry and and reduces punch cooldown.
 /datum/component/wearertargeting/punchcooldown/proc/reducecooldown(mob/living/carbon/M, atom/target)
 	if((M.combat_mode && isliving(target)) || istype(M.get_active_held_item(), /obj/item/hand_item/slapper))
-		M.changeNext_move(CLICK_CD_RAPID)
+		M.changeNext_move(punch_speed)
 		if(warcry)
 			M.say(warcry, ignore_spam = TRUE, forced = "north star warcry")
 

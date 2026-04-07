@@ -95,6 +95,7 @@ DEFINE_BITFIELD(status_flags, list(
 
 //click cooldowns, in tenths of a second, used for various combat actions
 #define CLICK_CD_MELEE 8
+#define CLICK_CD_FAST 5
 #define CLICK_CD_RAPID 2
 #define CLICK_CD_HYPER_RAPID 1
 #define CLICK_CD_SLOW 10

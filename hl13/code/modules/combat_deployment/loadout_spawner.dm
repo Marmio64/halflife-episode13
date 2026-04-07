@@ -74,6 +74,12 @@
 		to_chat(user, span_notice("HEALER Classes sustain teammates and prevent attrition via medical supplies."))
 		to_chat(user, span_notice("TRACKER Classes use various methods to help reveal The Hidden and/or prevent their movement."))
 
+	if(help_text_type == "hidden_victim")
+		to_chat(user, span_notice("Try to pick a loadout according to the team's needs!"))
+		to_chat(user, span_notice("DEFENSE Classes are slow moving but can hold down chokepoints either through sheer damage or survivability."))
+		to_chat(user, span_notice("ASSAULT Classes are quick and have higher-quality weapons, but have lower quality armor."))
+		to_chat(user, span_notice("HEALER Classes sustain teammates and prevent attrition via medical supplies."))
+
 	if(help_text_type == "hidden_hidden")
 		to_chat(user, span_notice("Pick a hidden type."))
 		to_chat(user, span_notice("The default hidden has high speed and is hard to detect."))
@@ -454,3 +460,22 @@
 		var/mob/living/carbon/human/H = X
 		SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
 		to_chat(H, "<span class='greentext big'>A Tier 6 Xenian has blessed us with their presence!</span>")
+
+/////////////////////// BOSS LOADOUTS /////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/obj/item/hl2/loadout_picker/boss
+	faction_belonging = HIDDEN_DEPLOYMENT_FACTION
+
+/obj/item/hl2/loadout_picker/boss/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/outfit/deployment_loadout/boss/freeman,
+			/datum/outfit/deployment_loadout/boss/wesker,
+			/datum/outfit/deployment_loadout/boss/gonarch,
+		)
+		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.display_name)] = loadout
+	return loadouts
