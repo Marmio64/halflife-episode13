@@ -86,9 +86,9 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/wesker_taunt, /datum/action/cooldown/mob_cooldown/dash/wesker)
 
-	extra_dex = 5
-	extra_str = 3
-	extra_end = 5
+	extra_dex = 8
+	extra_str = 8
+	extra_end = 8
 
 /datum/action/cooldown/mob_cooldown/dash/wesker
 	dash_range = 5
@@ -133,7 +133,7 @@
 	//all of wesker's superhuman powers
 	H.stamina_regen_time = 4 SECONDS
 
-	H.add_traits(list(TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_NOCRITDAMAGE, TRAIT_NEVER_WOUNDED, TRAIT_IGNORESLOWDOWN, TRAIT_ANALGESIA, TRAIT_NOCRITOVERLAY), OUTFIT_TRAIT)
+	H.add_traits(list(TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_NOCRITDAMAGE, TRAIT_NEVER_WOUNDED, TRAIT_IGNORESLOWDOWN, TRAIT_ANALGESIA, TRAIT_NOCRITOVERLAY, TRAIT_NODISMEMBER), OUTFIT_TRAIT)
 
 /datum/action/cooldown/spell/wesker_taunt
 	name = "Recovering Taunt"
