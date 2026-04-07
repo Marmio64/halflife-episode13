@@ -133,7 +133,7 @@
 	//all of wesker's superhuman powers
 	H.stamina_regen_time = 4 SECONDS
 
-	H.add_traits(list(TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_NOCRITDAMAGE, TRAIT_NEVER_WOUNDED, TRAIT_IGNORESLOWDOWN, TRAIT_ANALGESIA), OUTFIT_TRAIT)
+	H.add_traits(list(TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_NOCRITDAMAGE, TRAIT_NEVER_WOUNDED, TRAIT_IGNORESLOWDOWN, TRAIT_ANALGESIA, TRAIT_NOCRITOVERLAY), OUTFIT_TRAIT)
 
 /datum/action/cooldown/spell/wesker_taunt
 	name = "Recovering Taunt"
@@ -142,7 +142,7 @@
 	button_icon_state = "cloak"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 
-	cooldown_time = 12 SECONDS
+	cooldown_time = 10 SECONDS
 	spell_requirements = NONE
 	antimagic_flags = NONE
 	var/taunt_sounds = list(
