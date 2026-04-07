@@ -17,6 +17,7 @@
 
 /datum/action/cooldown/spell/conjure_item/medkit/the_hidden
 	desc = "Procures a medkit to heal someone or yourself with. Deletes the last one summoned if it is still available."
+	item_type = /obj/item/reagent_containers/pill/patch/medkit/hidden
 	cooldown_time = 20 SECONDS
 	delete_old = TRUE
 

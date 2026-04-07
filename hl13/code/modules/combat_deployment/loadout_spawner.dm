@@ -475,6 +475,7 @@
 			/datum/outfit/deployment_loadout/boss/freeman,
 			/datum/outfit/deployment_loadout/boss/wesker,
 			/datum/outfit/deployment_loadout/boss/gonarch,
+			/datum/outfit/deployment_loadout/boss/guardian,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

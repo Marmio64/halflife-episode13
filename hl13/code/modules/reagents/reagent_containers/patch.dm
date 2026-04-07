@@ -7,6 +7,32 @@
 	icon_state = "medkit"
 	apply_sound = 'hl13/sound/effects/largemedkit1.ogg'
 
+/obj/item/reagent_containers/pill/patch/medkit/hidden
+	name = "biolocked medkit"
+	desc = "A metal frame encasing a large vial of biogel. Includes useful automatic injection probes and tools for managing the application of the gel. This one has been biolocked to only work on authorised personnel."
+
+/obj/item/reagent_containers/pill/patch/medkit/hidden/canconsume(mob/eater, mob/user)
+	if(!iscarbon(eater))
+		return FALSE
+	if(!ishuman(eater))
+		return TRUE
+	if(isliving(eater))
+		var/mob/living/livie = eater
+		if(livie.deployment_faction == HIDDEN_DEPLOYMENT_FACTION)
+			to_chat(user, span_warning("The medkit's biolock denies this action!"))
+			return FALSE
+	var/mob/living/carbon/human/human_eater = eater
+	var/obj/item/bodypart/affecting = human_eater.get_bodypart(check_zone(user.zone_selected))
+	if(!affecting)
+		to_chat(user, span_warning("The limb is missing!"))
+		return FALSE
+
+	if(!IS_ORGANIC_LIMB(affecting))
+		to_chat(user, span_notice("Medicine won't work on an inorganic limb!"))
+		return FALSE
+
+	return TRUE
+
 /obj/item/reagent_containers/pill/patch/medkit/manufactured
 	name = "new medkit"
 	desc = "A metal frame encasing a large vial of biogel. Includes useful automatic injection probes and tools for managing the application of the gel. This one looks very new, and recently made. Could be sold."

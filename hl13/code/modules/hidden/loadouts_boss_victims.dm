@@ -8,6 +8,7 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/hidden/boss_victim/combine/shotgunner,
 			/datum/outfit/deployment_loadout/hidden/boss_victim/combine/engineer,
+			/datum/outfit/deployment_loadout/hidden/boss_victim/combine/riot_cop,
 			/datum/outfit/deployment_loadout/hidden/boss_victim/combine/soldier,
 			/datum/outfit/deployment_loadout/hidden/boss_victim/combine/grunt,
 			/datum/outfit/deployment_loadout/hidden/boss_victim/combine/medic,
@@ -53,10 +54,10 @@
 	shoes = /obj/item/clothing/shoes/halflife/engineer
 	gloves = /obj/item/clothing/gloves/halflife/engineer
 
-	belt = /obj/item/gun/ballistic/automatic/pistol/usp
+	belt = /obj/item/crowbar/large
 
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
-	r_pocket = /obj/item/flashlight/hand_crank
+	r_pocket = /obj/item/flashlight/seclite
 
 	back = /obj/item/storage/backpack/halflife
 	ears = /obj/item/radio/headset/civilprotection/deployment
@@ -68,8 +69,41 @@
 		/obj/item/stack/sheet/mineral/sandbags = 5,
 		/obj/item/flashlight/flare/the_hidden = 2,
 		/obj/item/sbeacondrop/combine_turret = 2,
-		/obj/item/grenade/spawnergrenade/manhacks/hidden = 2,
+		/obj/item/grenade/spawnergrenade/manhacks = 2,
+		/obj/item/gun/ballistic/automatic/pistol/usp = 1,
 	)
+
+/datum/outfit/deployment_loadout/hidden/boss_victim/combine/riot_cop
+	name = "Victim: Riot Cop"
+	display_name = "DEFENSE: Riot Cop"
+	desc = "Utilize your powerful sledgehammer and high strength to beat the crap out of enemies in close range."
+	id_name = "Riotcop"
+
+	uniform = /obj/item/clothing/under/combine/civilprotection
+	gloves = /obj/item/clothing/gloves/color/civilprotection
+	suit = /obj/item/clothing/suit/armor/riot
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	head = /obj/item/clothing/head/helmet/toggleable/riot
+
+	mask = /obj/item/clothing/mask/gas/civilprotection
+
+	l_pocket = /obj/item/knife/combat/survival
+	r_pocket = /obj/item/flashlight/seclite
+
+	belt = /obj/item/storage/belt/civilprotection/riotcop_victim
+
+	ears = /obj/item/radio/headset/civilprotection/deployment
+	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
+
+	back = /obj/item/melee/sledgehammer
+
+	extra_str = 10
+	extra_end = 10
+	extra_dex = 5
+
+/datum/outfit/deployment_loadout/hidden/boss_victim/combine/riot_cop/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	ADD_TRAIT(H, TRAIT_TERRIBLE_AIM, OUTFIT_TRAIT)
 
 /datum/outfit/deployment_loadout/hidden/boss_victim/combine/soldier
 	name = "Victim: Soldier"
@@ -85,7 +119,7 @@
 	gloves = /obj/item/clothing/gloves/combat/overwatch
 	belt = /obj/item/storage/belt/civilprotection/overwatch/mp7
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
-	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	r_pocket = /obj/item/reagent_containers/pill/patch/medkit/hidden
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
 	ears = /obj/item/radio/headset/civilprotection/deployment

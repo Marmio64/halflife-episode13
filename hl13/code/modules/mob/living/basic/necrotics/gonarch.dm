@@ -233,6 +233,20 @@
 	set_varspeed(2)
 	move_to_delay = 5
 
+/mob/living/simple_animal/hostile/asteroid/elite/gonarch/boss/rage()
+	ranged_cooldown = world.time + 40
+	playsound(src,'hl13/sound/creatures/gonarch/rage.ogg', 75, FALSE)
+	visible_message(span_warning("[src] starts picking up speed!"))
+	color = COLOR_RED
+	set_varspeed(-1)
+	move_to_delay = 1
+	addtimer(CALLBACK(src, PROC_REF(reset_rage)), 5 SECONDS)
+
+/mob/living/simple_animal/hostile/asteroid/elite/gonarch/boss/reset_rage()
+	color = COLOR_WHITE
+	set_varspeed(1)
+	move_to_delay = 3
+
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/proc/call_children()
 	ranged_cooldown = world.time + 20
 	visible_message(span_warning("The ground shakes near [src]!"))
@@ -246,8 +260,10 @@
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/boss
 	deployment_faction = HIDDEN_DEPLOYMENT_FACTION
-	maxHealth = 1500
-	health = 1500
+	maxHealth = 2000
+	health = 2000
+	move_to_delay = 3
+	speed = 1
 	obj_damage = 45
 	melee_damage_lower = 25
 	melee_damage_upper = 30

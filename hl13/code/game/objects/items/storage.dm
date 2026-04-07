@@ -340,6 +340,12 @@
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze/quik_gauze, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/riotcop_victim/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/flashlight/flare/the_hidden, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze/quik_gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
+	update_appearance(UPDATE_ICON)
+
 /obj/item/storage/belt/civilprotection/coltammo_meds/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/ammo_box/colta357, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/colta357, src)

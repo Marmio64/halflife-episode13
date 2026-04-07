@@ -12,6 +12,8 @@
 	H.faction = list(FACTION_HEADCRAB) //so friendly gonarchs dont fuck other bosses up
 	GLOB.number_of_hidden++
 
+	H.dna.species.stunmod = 0.1 //all bosses are very resilient to stuns
+
 	var/list/spawn_locs = list()
 	for(var/X in GLOB.the_hidden)
 		spawn_locs += X
@@ -43,7 +45,7 @@
 	belt = /obj/item/crowbar/large/freeman
 
 	backpack_contents = list(
-		/obj/item/grenade/syndieminibomb/bouncer = 3,
+		/obj/item/grenade/syndieminibomb/bouncer = 4,
 		/obj/item/gun/ballistic/automatic/pistol/usp,
 		/obj/item/ammo_box/magazine/usp9mm,
 		/obj/item/ammo_box/magazine/usp9mm,
@@ -57,7 +59,7 @@
 		/obj/item/gun/ballistic/automatic/ar2/standardpin,
 		/obj/item/gun/ballistic/rifle/rebarxbow/upgraded,
 		/obj/item/gun/ballistic/rocketlauncher/halflife,
-		/obj/item/ammo_casing/rocket/hl13,
+		/obj/item/ammo_casing/rocket/hl13 = 2,
 	)
 
 	extra_dex = 10
@@ -175,5 +177,19 @@
 /datum/outfit/deployment_loadout/boss/gonarch/post_equip(mob/living/carbon/human/H)
 	var/datum/mind/player_mind = H.mind
 	var/mob/living/simple_animal/hostile/asteroid/elite/gonarch/boss/S = new (H.loc)
+	player_mind.transfer_to(S)
+	qdel(H)
+
+/datum/outfit/deployment_loadout/boss/guardian
+	name = "Bossfight: Antlion Guardian"
+	display_name = "Antlion Guardian"
+	desc = "You are a tanky rushdown unit. Keep on the pressure and don't let up, you can't regenerate health and don't have any advantages for hanging back."
+	uniform = null
+	shoes = null
+	id = null
+
+/datum/outfit/deployment_loadout/boss/guardian/post_equip(mob/living/carbon/human/H)
+	var/datum/mind/player_mind = H.mind
+	var/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/S = new (H.loc)
 	player_mind.transfer_to(S)
 	qdel(H)

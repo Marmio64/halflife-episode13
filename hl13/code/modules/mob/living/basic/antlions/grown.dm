@@ -248,6 +248,12 @@
 	antlions = new(src)
 	antlions.Grant(src)
 
+/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss
+	maxHealth = 2000
+	health = 2000
+	speed = 0.4
+	melee_attack_cooldown = 1.25 SECONDS
+
 ///Every hit throws people back
 /mob/living/basic/halflife/antlion_guard/melee_attack(atom/target, list/modifiers, ignore_cooldown = FALSE)
 	. = ..()
