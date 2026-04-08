@@ -242,7 +242,7 @@
 	suit = /obj/item/clothing/suit/armor/overwatch/deathmatch
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
-	belt = /obj/item/storage/belt/civilprotection/overwatch/mp7
+	belt = /obj/item/storage/belt/civilprotection/overwatch/mp7_victim
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen

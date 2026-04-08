@@ -260,13 +260,14 @@
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/boss
 	deployment_faction = HIDDEN_DEPLOYMENT_FACTION
-	maxHealth = 2000
-	health = 2000
+	maxHealth = 2500
+	health = 2500
 	move_to_delay = 3
 	speed = 1
-	obj_damage = 45
+	obj_damage = 75
 	melee_damage_lower = 25
-	melee_damage_upper = 30
+	melee_damage_upper = 35
+	faction = list(FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
 
 #undef CALL_CHILDREN
 #undef RAGE

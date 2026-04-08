@@ -21,6 +21,7 @@
 
 /datum/martial_art/cqc/wesker
 	evade_projectiles = TRUE
+	block_chance = 50
 
 /datum/martial_art/cqc/on_teach(mob/living/new_holder)
 	. = ..()

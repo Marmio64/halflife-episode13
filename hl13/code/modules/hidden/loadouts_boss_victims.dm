@@ -103,7 +103,7 @@
 
 /datum/outfit/deployment_loadout/hidden/boss_victim/combine/riot_cop/pre_equip(mob/living/carbon/human/H)
 	. = ..()
-	ADD_TRAIT(H, TRAIT_TERRIBLE_AIM, OUTFIT_TRAIT)
+	H.add_traits(list(TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_TERRIBLE_AIM), OUTFIT_TRAIT)
 
 /datum/outfit/deployment_loadout/hidden/boss_victim/combine/soldier
 	name = "Victim: Soldier"
@@ -148,7 +148,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 
-	extra_dex = 4
+	extra_dex = 6
 
 /datum/outfit/deployment_loadout/hidden/boss_victim/combine/medic
 	name = "Victim: Medical Cop"

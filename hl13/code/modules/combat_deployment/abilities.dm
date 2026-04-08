@@ -131,6 +131,9 @@
 	requires_hands = TRUE
 	delete_old = FALSE
 
+/datum/action/cooldown/spell/conjure_item/svd_ammo/fast
+	cooldown_time = 15 SECONDS
+
 /datum/action/cooldown/spell/conjure_item/overseer_viscerator
 	name = "Procure Shielded Viscerator"
 	desc = "Procures a deployable, shielded viscerator."
@@ -269,3 +272,51 @@
  */
 /datum/action/cooldown/mob_cooldown/talk_xen/proc/format_message(mob/living/user, message)
 	return span_changeling("<b>Communication from [user]:</b> [message]")
+
+/datum/action/cooldown/spell/conjure_item/missile_targeter_general
+	name = "Procure Missile Targeter"
+	desc = "Procures a missile targeter, for sending down a missile strike on a location. Only ONE can be active at once."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "radio"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 30 SECONDS
+	item_type = /obj/item/halflife/missile_targeter/missile_targeter_general
+	requires_hands = TRUE
+
+/datum/action/cooldown/spell/conjure/boss_rebel_soldier
+	name = "Call upon MP7 Allies"
+	desc = "Calls to Rebel Soldier allies. Armed with MP7s, they will back you up with their life, but will eventually despawn after about a minute."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "mp7"
+
+	school = SCHOOL_CONJURATION
+	cooldown_time = 15 SECONDS
+
+	invocation_type = INVOCATION_SHOUT
+	invocation = "FOR THE RESISTANCE!"
+	spell_requirements = NONE
+
+	summon_amount = 2
+	summon_lifespan = 65 SECONDS
+	summon_radius = 1
+	summon_type = list(/mob/living/basic/trooper/rebel/mp7/boss)
+
+/datum/action/cooldown/spell/conjure/boss_veteran
+	name = "Call upon PLF Veteran Ally"
+	desc = "Have a PLF Veteran teleported directly to you, using experimental Lambda teleportation technology. They'll stay forever, and are very durable and powerful. However, the cooldown is very long and they move very slowly!"
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "ak47"
+
+	school = SCHOOL_CONJURATION
+	cooldown_time = 150 SECONDS
+
+	invocation_type = INVOCATION_SHOUT
+	invocation = "GLORY TO THE PLF!"
+	spell_requirements = NONE
+
+	summon_amount = 1
+	summon_radius = 1
+	summon_type = list(/mob/living/basic/trooper/rebel/mp7/veteran/boss)

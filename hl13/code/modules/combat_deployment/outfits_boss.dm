@@ -9,8 +9,10 @@
 		return
 
 	H.setdeploymentfaction(HIDDEN_DEPLOYMENT_FACTION)
-	H.faction = list(FACTION_HEADCRAB) //so friendly gonarchs dont fuck other bosses up
+	H.faction = list(FACTION_HEADCRAB, FACTION_REFUGEE) //so friendly gonarchs dont fuck other bosses up
 	GLOB.number_of_hidden++
+
+	H.remove_traits(list(TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_TERRIBLE_AIM), OUTFIT_TRAIT) //remove any riot cop traits which may be present
 
 	H.dna.species.stunmod = 0.1 //all bosses are very resilient to stuns
 
@@ -60,6 +62,7 @@
 		/obj/item/gun/ballistic/rifle/rebarxbow/upgraded,
 		/obj/item/gun/ballistic/rocketlauncher/halflife,
 		/obj/item/ammo_casing/rocket/hl13 = 2,
+		/obj/item/reagent_containers/pill/patch/medkit,
 	)
 
 	extra_dex = 10
@@ -165,6 +168,57 @@
 	cast_on.SetAllImmobility(0)
 	cast_on.setStaminaLoss(0)
 	cast_on.set_resting(FALSE, instant = TRUE)
+
+
+////////// PLF GENERAL //////////////////////////////////////////////////////////////////////////////
+
+/datum/outfit/deployment_loadout/boss/plf_general
+	name = "Bossfight: PLF General"
+	display_name = "PLF General"
+	desc = "You have the full backing of the PLF behind you, and call in missile airstrikes and have friendly soldiers teleported to your position, while you stay in the backlines sniping opponents with your Dragunov. Be wary however, you aren't very durable and are vulnerable to being rushed down."
+
+	suit = /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss
+	mask = /obj/item/cigarette/halflife
+	suit_store = /obj/item/gun/ballistic/automatic/svd
+	belt = /obj/item/melee/baton
+	l_pocket = /obj/item/knife/combat/survival
+	r_pocket = /obj/item/flashlight/seclite
+	head = /obj/item/clothing/head/beret/sec/poland
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
+	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/fingerless
+	glasses = /obj/item/clothing/glasses/thermal/eyepatch
+	id = null
+
+	back = /obj/item/storage/backpack/halflife/satchel/radio/large
+
+	backpack_contents = list(
+		/obj/item/megaphone = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/pill/patch/medkit = 2,
+		/obj/item/ammo_box/magazine/svd = 2,
+		/obj/item/storage/fancy/cigarettes/halflife = 1,
+		/obj/item/lighter = 1,
+	)
+
+	combat_music = 'hl13/sound/music/combat/darkstalker.ogg'
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/svd_ammo/fast, /datum/action/cooldown/spell/conjure/boss_rebel_soldier, /datum/action/cooldown/spell/conjure/boss_veteran, /datum/action/cooldown/spell/conjure_item/missile_targeter_general)
+
+
+	extra_dex = 8
+	extra_str = 8 //alright with a melee weapon, but using the dragunov is going to be way better
+	extra_end = 10
+	extra_per = 10
+
+
+
+
+
+
+
+
+
 
 /datum/outfit/deployment_loadout/boss/gonarch
 	name = "Bossfight: Gonarch"

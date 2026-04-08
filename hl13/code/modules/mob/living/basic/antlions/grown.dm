@@ -249,10 +249,12 @@
 	antlions.Grant(src)
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss
-	maxHealth = 2000
-	health = 2000
-	speed = 0.4
-	melee_attack_cooldown = 1.25 SECONDS
+	maxHealth = 2800
+	health = 2800
+	speed = 0.1
+	obj_damage = 100
+	melee_attack_cooldown = 1 SECONDS
+	faction = list(FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
 
 ///Every hit throws people back
 /mob/living/basic/halflife/antlion_guard/melee_attack(atom/target, list/modifiers, ignore_cooldown = FALSE)

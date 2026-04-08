@@ -126,6 +126,10 @@
 /obj/item/chair/halflife/wood/padded,
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/outdoors/deployment_city/forest)
+"dH" = (
+/obj/effect/landmark/observer_start,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city/forest)
 "dU" = (
 /obj/effect/turf_decal/halflife/covering/wallpaper/red,
 /turf/closed/wall/halflife/concrete/alt,
@@ -500,6 +504,11 @@
 /obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
+"kC" = (
+/obj/structure/table/halflife/no_smooth/wood,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/checkered,
+/area/halflife/outdoors/deployment_city/forest)
 "kJ" = (
 /obj/structure/table/halflife/no_smooth/large/metal,
 /obj/item/reagent_containers/cup/soda_cans/breenwater/red,
@@ -660,10 +669,6 @@
 "ox" = (
 /obj/structure/chair/office/halflife/blue,
 /turf/open/floor/plating/indoor/woodc,
-/area/halflife/outdoors/deployment_city/forest)
-"oJ" = (
-/obj/machinery/the_hidden_time_counter/boss/double_players,
-/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
 "oK" = (
 /obj/item/food/canned/halflife/beans{
@@ -831,7 +836,7 @@
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/sewer/hidden/spawn_room)
 "tj" = (
-/obj/structure/barricade/sandbags,
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/sewer/hidden/spawn_room)
 "tk" = (
@@ -839,7 +844,7 @@
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
 "tu" = (
-/obj/machinery/combine_distressterminal{
+/obj/machinery/combine_distressterminal/boss{
 	terminal_name = "Combine Main Base"
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -886,7 +891,7 @@
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/outdoors/deployment_city/forest)
 "ur" = (
-/obj/machinery/combine_distressterminal{
+/obj/machinery/combine_distressterminal/boss{
 	terminal_name = "Shopping Center"
 	},
 /turf/open/floor/plating/indoor/woodc,
@@ -1280,9 +1285,12 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/forest)
 "Dw" = (
-/obj/structure/barricade/sandbags,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/halflife/indoors/sewer/hidden/spawn_room)
+/obj/effect/koth_grace_field,
+/obj/structure/sign/poster/halflife/combine{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
 "Dy" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	dir = 4
@@ -1485,12 +1493,6 @@
 /obj/machinery/combine_walllight/directional/west,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/sewer/hidden/spawn_room)
-"HB" = (
-/obj/structure/window/fulltile/halflife/nosmooth/generic{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/checkered,
-/area/halflife/outdoors/deployment_city/forest)
 "HJ" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -1532,6 +1534,12 @@
 "IJ" = (
 /obj/structure/dresser,
 /turf/open/floor/plating/indoor/carpet/violet,
+/area/halflife/outdoors/deployment_city/forest)
+"IK" = (
+/obj/structure/window/fulltile/halflife/nosmooth/generic{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/checkered,
 /area/halflife/outdoors/deployment_city/forest)
 "IS" = (
 /obj/machinery/light/small/directional/east,
@@ -1868,7 +1876,7 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/forest)
 "Qm" = (
-/obj/machinery/combine_distressterminal{
+/obj/machinery/combine_distressterminal/boss{
 	terminal_name = "Combine Southwest Beach Outpost"
 	},
 /turf/open/floor/plating/ground/sidewalk,
@@ -1926,11 +1934,6 @@
 /area/halflife/outdoors/deployment_city/forest)
 "Sv" = (
 /turf/open/floor/plating/indoor/woodc/wide,
-/area/halflife/outdoors/deployment_city/forest)
-"SC" = (
-/obj/structure/table/halflife/no_smooth/wood,
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/plating/indoor/checkered,
 /area/halflife/outdoors/deployment_city/forest)
 "SG" = (
 /obj/machinery/telecomms/processor/preset_one/birdstation,
@@ -2051,7 +2054,7 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/deployment_city/forest)
 "WW" = (
-/obj/machinery/combine_distressterminal{
+/obj/machinery/combine_distressterminal/boss{
 	terminal_name = "Combine North Beach Outpost"
 	},
 /turf/open/floor/plating/ground/sidewalk,
@@ -2083,7 +2086,7 @@
 /turf/open/floor/plating/indoor/metal/grate/border,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "XJ" = (
-/obj/machinery/combine_distressterminal{
+/obj/machinery/combine_distressterminal/boss{
 	terminal_name = "Combine North Data Center"
 	},
 /turf/open/floor/plating/indoor/metal/combine,
@@ -2143,11 +2146,8 @@
 /obj/structure/halflife/trash/glass/basic,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city/forest)
-"YP" = (
-/obj/structure/sign/poster/halflife/combine{
-	pixel_y = 32
-	},
-/obj/effect/koth_grace_field,
+"YH" = (
+/obj/machinery/the_hidden_time_counter/boss/double_players,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
 "YZ" = (
@@ -2176,7 +2176,7 @@
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/outdoors/deployment_city/forest)
 "Zq" = (
-/obj/machinery/combine_distressterminal{
+/obj/machinery/combine_distressterminal/boss{
 	terminal_name = "Restaurant"
 	},
 /turf/open/floor/plating/indoor/woodc,
@@ -2829,7 +2829,7 @@ ga
 ga
 ga
 ov
-oJ
+YH
 ov
 ga
 eC
@@ -3922,7 +3922,7 @@ ls
 Rd
 ls
 bP
-oX
+tj
 sO
 sO
 sO
@@ -4692,7 +4692,7 @@ ls
 ls
 ls
 ls
-oX
+tj
 sO
 sO
 sO
@@ -5164,10 +5164,10 @@ tU
 tU
 gc
 oj
-Dw
+oj
 oj
 oX
-Sb
+Dw
 ov
 ov
 ov
@@ -5318,10 +5318,10 @@ sO
 sO
 sO
 sO
+sO
+oj
 tj
-Dw
-oX
-YP
+Sb
 ov
 ov
 ov
@@ -5457,7 +5457,7 @@ eC
 ga
 AN
 oX
-sO
+Rc
 sO
 sO
 sO
@@ -5632,7 +5632,7 @@ zt
 gK
 sB
 sB
-sB
+dH
 sB
 tv
 Ai
@@ -5765,7 +5765,7 @@ eC
 ga
 AN
 oX
-sO
+Rc
 sO
 sO
 sO
@@ -5934,9 +5934,9 @@ sO
 sO
 sO
 sO
+sO
+oj
 tj
-Dw
-oX
 Sb
 ov
 ov
@@ -6088,7 +6088,7 @@ tU
 tU
 Vi
 oj
-Dw
+oj
 oj
 oX
 Sb
@@ -6387,7 +6387,7 @@ Rd
 ls
 bP
 oX
-Rc
+uQ
 sO
 sO
 sO
@@ -6540,8 +6540,8 @@ ls
 nj
 ls
 Rd
-oX
-uQ
+tj
+sO
 sO
 sO
 sO
@@ -7310,7 +7310,7 @@ Ia
 mN
 Rd
 nj
-oX
+tj
 sO
 sO
 sO
@@ -11683,7 +11683,7 @@ qb
 qb
 qb
 qb
-SC
+kC
 ly
 Bd
 qb
@@ -11838,7 +11838,7 @@ qb
 qb
 qb
 qb
-HB
+IK
 qb
 qb
 qb

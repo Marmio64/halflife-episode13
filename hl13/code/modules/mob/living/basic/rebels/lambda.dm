@@ -47,6 +47,21 @@
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
 
+/obj/effect/mob_spawn/corpse/human/plf_veteran
+	name = "PLF Veteran"
+	hairstyle = "Business Hair 3"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/plf_veteran
+
+/datum/outfit/plf_veteran
+	name = "PLF Veteran Corpse"
+
+	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
+	uniform = /obj/item/clothing/under/citizen/rebel
+	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran
+	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/fingerless
+
 /mob/living/basic/trooper/rebel/mp7/follower
 	name = "Rebel Soldier Follower"
 	desc = "The symbol of resistance. Follows orders from his superiors."
@@ -61,9 +76,33 @@
 	. = ..()
 	AddComponent(/datum/component/obeys_commands, pet_commands)
 
+/mob/living/basic/trooper/rebel/mp7/boss
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
+	speed = 0
+
+/mob/living/basic/trooper/rebel/mp7/veteran
+	name = "PLF Veteran"
+	desc = "The armored symbol of the PLF."
+
+	loot = list(/obj/effect/mob_spawn/corpse/human/plf_veteran)
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/plf_veteran
+
+	r_hand = /obj/item/gun/ballistic/automatic/ak47
+	maxHealth = 360 //equal to 3 standard rebel soldiers
+	health = 360
+
+	casingtype = /obj/item/ammo_casing/n762
+	projectilesound = "hl13/sound/weapons/ak47fire.ogg"
+	burst_shots = 3
+
+	speed = 1.25
+
+/mob/living/basic/trooper/rebel/mp7/veteran/boss
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
+
 // AI STUFF THAT I PUT IN HERE CAUSE IM TOO LAZY TO MAKE ANOTHER FILE FOR IT --------------------------
 /datum/ai_planning_subtree/random_speech/rebelsoldier
-	speech_chance = 5
+	speech_chance = 4
 	speak = list(
 		"When this is all over, I am gonna mate.",
 		"Sometimes, I dream about cheese.",

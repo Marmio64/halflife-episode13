@@ -1,5 +1,6 @@
 GLOBAL_VAR_INIT(number_of_hidden, 0)
 GLOBAL_VAR_INIT(hidden_match_type, "Hidden")
+GLOBAL_VAR_INIT(terminal_grace_time, 0)
 
 /obj/machinery/the_hidden_time_counter
 	name = "time counter"
@@ -28,6 +29,11 @@ GLOBAL_VAR_INIT(hidden_match_type, "Hidden")
 
 	var/match_type = "Hidden"
 
+	//specific grace period until terminals can start to be activated. Not active by default.
+	var/terminal_grace_time = 0
+
+	var/terminal_grace_period_up = TRUE
+
 /obj/machinery/the_hidden_time_counter/rebels
 	combine_players = 0
 	rebel_players = 12
@@ -43,6 +49,8 @@ GLOBAL_VAR_INIT(hidden_match_type, "Hidden")
 /obj/machinery/the_hidden_time_counter/boss
 	target_name = "Boss"
 	match_type = "Boss"
+	terminal_grace_time = 2 MINUTES
+	terminal_grace_period_up = FALSE
 
 /obj/machinery/the_hidden_time_counter/boss/double_players
 	number_of_hidden = 2
@@ -52,6 +60,8 @@ GLOBAL_VAR_INIT(hidden_match_type, "Hidden")
 	..()
 	GLOB.deployment_flag_grace_period = 3 MINUTES //arbitrary, there just needs to be a grace period right now. It'll get changed later on to the correct one.
 	GLOB.hidden_match_type = match_type
+	if(terminal_grace_time)
+		GLOB.terminal_grace_time = terminal_grace_time
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/the_hidden_time_counter/LateInitialize()
@@ -140,6 +150,19 @@ GLOBAL_VAR_INIT(hidden_match_type, "Hidden")
 		GLOB.deployment_flag_grace_period -= 1 SECONDS
 		return
 
+	if(GLOB.terminal_grace_time < 1 SECONDS)
+		if(!terminal_grace_period_up)
+			terminal_grace_period_up = TRUE
+			to_chat(world, span_danger(span_slightly_larger(span_bold("The Terminal Grace Period is up, and Distress Terminals can now be activated!"))))
+			for(var/X in GLOB.deployment_hidden_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+			for(var/X in GLOB.deployment_rebel_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+	else
+		GLOB.terminal_grace_time -= 1 SECONDS
+
 /obj/machinery/the_hidden_time_counter/rebels/process()
 
 	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
@@ -171,3 +194,16 @@ GLOBAL_VAR_INIT(hidden_match_type, "Hidden")
 	else
 		GLOB.deployment_flag_grace_period -= 1 SECONDS
 		return
+
+	if(GLOB.terminal_grace_time < 1 SECONDS)
+		if(!terminal_grace_period_up)
+			terminal_grace_period_up = TRUE
+			to_chat(world, span_danger(span_slightly_larger(span_bold("The Terminal Grace Period is up, and Distress Terminals can now be activated!"))))
+			for(var/X in GLOB.deployment_hidden_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+			for(var/X in GLOB.deployment_rebel_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+	else
+		GLOB.terminal_grace_time -= 1 SECONDS

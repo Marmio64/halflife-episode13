@@ -158,3 +158,7 @@
 	explosionSize = list(0,2,3,0)
 	shrapnel_magnitude = 2
 	delays = list(POD_TRANSIT = 4 SECONDS, POD_FALLING = 0.4 SECONDS)
+
+/obj/item/halflife/missile_targeter/missile_targeter_general
+	charges = 1
+	use_time = 0.75 SECONDS

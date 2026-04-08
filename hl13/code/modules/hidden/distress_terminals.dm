@@ -18,7 +18,20 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 	var/terminal_name = "Unknown"
 
 	var/attempts_to_complete = 6 //attempts last 6 seconds, so it amounts to 36 seconds
+
+	var/max_attempts_to_complete = 6
+
+	var/max_overloaded_attempts = 6 //how many attempts we can force to be required when overloading as hidden/boss. Disabled at the moment by setting this to same value as max attempts to complete
+
+	var/sabotage_time = 8 SECONDS //time to sabotage a terminal once
+
 	var/last_hidden_warning = 0
+
+	/// Time to complete one activation code
+	var/activation_time = 6 SECONDS
+
+	/// Do we need the terminal grace period to end before we can be activated?
+	var/wait_for_grace = FALSE
 
 	density = TRUE
 
@@ -68,6 +81,11 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 /obj/machinery/combine_distressterminal/interact(mob/living/carbon/human/user)
 	. = ..()
 
+	if(wait_for_grace && 0 < GLOB.terminal_grace_time)
+		say("Terminal grace period is still active for another [GLOB.terminal_grace_time/10] seconds.")
+		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+		return
+
 	if(completed)
 		say("Terminal already activated.")
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
@@ -80,19 +98,21 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 
 	activating = TRUE
 	if(user.deployment_faction == HIDDEN_DEPLOYMENT_FACTION) //two birds with one stone, hidden breaking terminals is now a feature and not a bug
-		if(do_after(user, 30 SECONDS, src))
-			attempts_to_complete = 6
+		if(max_overloaded_attempts <= attempts_to_complete)
+			to_chat(user, span_warning("This terminal is already overloaded as far as it will go."))
+			playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+			activating = FALSE
+			return
+		else if(max_attempts_to_complete <= attempts_to_complete)
+			to_chat(user, span_warning("Overloading terminal in order to increase how many codes it will require to be activated."))
+		else
+			to_chat(user, span_warning("Sabotaging terminal to remove an activation code."))
+
+		if(do_after(user, sabotage_time, src) && attempts_to_complete < 6)
+			attempts_to_complete++
 			do_sparks(1, FALSE, src)
-			say("Act#@iva^*cod&%- An error has occurred. Terminal has been reset. [attempts_to_complete] activation codes needed until terminal activation.")
+			say("Act#@iva^*cod&%- An error has occurred. One activation code has been deleted. [attempts_to_complete] activation codes needed until terminal activation.")
 			playsound(src, 'hl13/sound/effects/radio2.ogg', 15, TRUE, extrarange = 3)
-			for(var/X in GLOB.deployment_combine_players)
-				var/mob/living/carbon/human/H = X
-				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
-				to_chat(H, "<span class='userdanger'>The [terminal_name] terminal has been sabotaged.</span>")
-			for(var/X in GLOB.deployment_rebel_players)
-				var/mob/living/carbon/human/H = X
-				SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
-				to_chat(H, "<span class='userdanger'>The [terminal_name] terminal has been sabotaged.</span>")
 		else
 			say("Invalid activation code received. [attempts_to_complete] activation codes needed until terminal activation.")
 			playsound(src, 'hl13/sound/effects/radio2.ogg', 15, TRUE, extrarange = 3)
@@ -124,3 +144,11 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 	name = "rebel distress terminal"
 	desc = "A repurposed combine server terminal which is capable of sending out a distress signal when activated. Activating all of the terminals in the location will win the game for the Rebels."
 	icon_state = "datapodterminal_hacked_l"
+
+/obj/machinery/combine_distressterminal/boss
+	activation_time = 5 SECONDS
+	attempts_to_complete = 4
+	max_attempts_to_complete = 4
+	max_overloaded_attempts = 5
+	wait_for_grace = TRUE
+	sabotage_time = 6 SECONDS

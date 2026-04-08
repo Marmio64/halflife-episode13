@@ -782,6 +782,11 @@
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/speedy
 	slowdown = -0.1
 
+/obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss
+	slowdown = -0.25
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS|HEAD
+	armor_type = /datum/armor/rebelheavy
+
 /datum/armor/reinforced_brown_jacket
 	melee = 25
 	bullet = 25
