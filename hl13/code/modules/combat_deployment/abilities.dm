@@ -292,6 +292,8 @@
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "mp7"
 
+	sound = 'hl13/sound/effects/rally.ogg'
+
 	school = SCHOOL_CONJURATION
 	cooldown_time = 15 SECONDS
 
@@ -309,6 +311,8 @@
 	desc = "Have a PLF Veteran teleported directly to you, using experimental Lambda teleportation technology. They'll stay forever, and are very durable and powerful. However, the cooldown is very long and they move very slowly!"
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "ak47"
+
+	sound = 'hl13/sound/effects/rally.ogg'
 
 	school = SCHOOL_CONJURATION
 	cooldown_time = 150 SECONDS

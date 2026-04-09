@@ -151,17 +151,18 @@
 	spell_requirements = NONE
 	antimagic_flags = NONE
 	var/taunt_sounds = list(
-	'hl13/sound/effects/wesker/wesker-isthatall.ogg',
-	'hl13/sound/effects/wesker/wesker-playtimeover.ogg',
-	'hl13/sound/effects/wesker/wesker-poorperformance.ogg',
-	'hl13/sound/effects/wesker/wesker-7minutes.ogg',
-	'hl13/sound/effects/wesker/wesker-disappoint.ogg',
+	"Heheheh... is that all you have?" = 'hl13/sound/effects/wesker/wesker-isthatall.ogg',
+	"Playtime is over." = 'hl13/sound/effects/wesker/wesker-playtimeover.ogg',
+	"Poor performance indeed!" = 'hl13/sound/effects/wesker/wesker-poorperformance.ogg',
+	"Seven minutes. Seven minutes is all I can spare to play with you." = 'hl13/sound/effects/wesker/wesker-7minutes.ogg',
+	"You disappoint me! Is that the best you've got?" = 'hl13/sound/effects/wesker/wesker-disappoint.ogg',
 )
 
 /datum/action/cooldown/spell/wesker_taunt/cast(mob/living/cast_on)
 	. = ..()
 	var/chosen_sound = pick(taunt_sounds)
-	playsound(owner.loc, chosen_sound, 50, FALSE)
+	playsound(owner.loc, taunt_sounds[chosen_sound], 50, FALSE)
+	cast_on.say(chosen_sound)
 	cast_on.adjustBruteLoss(-75)
 	cast_on.adjustFireLoss(-75)
 	cast_on.extinguish_mob()
