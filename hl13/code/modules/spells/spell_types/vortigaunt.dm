@@ -9,6 +9,12 @@
 
 	item_type = /obj/item/gun/ballistic/rifle/enchanted/vort_blast
 
+/datum/action/cooldown/spell/conjure_item/infinite_guns/vort_blast/super
+	name = "Super Vortal Blast"
+	desc = "Use the vortessence to ready a vortal bolt in your hand, which after a short channel duration will instantly hit a target. Landing a hit will deal a massive amount of damage, and melt apart flesh and bone alike."
+	cooldown_time = 5 SECONDS
+	item_type = /obj/item/gun/ballistic/rifle/enchanted/vort_blast/super
+
 /obj/item/gun/ballistic/rifle/enchanted/vort_blast
 	name = "vortal blast"
 	desc = "Galunga. Do not attempt to dual wield."
@@ -27,10 +33,18 @@
 
 	spread = 3
 
+	var/cast_delay = 0.65 SECONDS
+
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/enchanted/vort_blast
 
+/obj/item/gun/ballistic/rifle/enchanted/vort_blast/super
+	cast_delay = 0.5 SECONDS
+	delete_on_use = TRUE
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/enchanted/vort_blast/super
+	guns_left = 30
+
 /obj/item/gun/ballistic/rifle/enchanted/vort_blast/try_fire_gun(atom/target, mob/living/user, params)
-	if(do_after(user, 0.65 SECONDS, src))
+	if(do_after(user, cast_delay, src))
 		return ..()
 
 /obj/item/ammo_box/magazine/internal/boltaction/enchanted/vort_blast
@@ -39,6 +53,12 @@
 
 /obj/item/ammo_casing/magic/vort_blast
 	projectile_type = /obj/projectile/magic/vort_blast
+
+/obj/item/ammo_box/magazine/internal/boltaction/enchanted/vort_blast/super
+	ammo_type = /obj/item/ammo_casing/magic/vort_blast/super
+
+/obj/item/ammo_casing/magic/vort_blast/super
+	projectile_type = /obj/projectile/magic/vort_blast/super
 
 /obj/projectile/magic/vort_blast
 	name = "vortal bolt"
@@ -55,6 +75,10 @@
 	tracer_type = /obj/effect/projectile/tracer/xray
 	muzzle_type = /obj/effect/projectile/muzzle/xray
 	impact_type = /obj/effect/projectile/impact/xray
+
+/obj/projectile/magic/vort_blast/super
+	damage = 80 //3 shot well armored folks
+	wound_bonus = -80
 
 /datum/action/cooldown/spell/touch/vort_heal
 	name = "Mend"
@@ -124,6 +148,9 @@
 	cooldown_reduction_per_rank = 4 SECONDS
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
+/datum/action/cooldown/spell/aoe/repulse/wizard/vort/super
+	cooldown_time = 20 SECONDS
+
 /datum/action/cooldown/spell/forcewall/vort
 	name = "Vortal Wall"
 	desc = "Create a magical barrier that only you can pass through. Be warned, this barrier will not last long."
@@ -140,6 +167,9 @@
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
 	wall_type = /obj/effect/forcefield/wizard/vortal
+
+/datum/action/cooldown/spell/forcewall/vort/super
+	cooldown_time = 12 SECONDS
 
 /obj/effect/forcefield/wizard/vortal
 	name = "VORTAL BARRIER"

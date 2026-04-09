@@ -690,6 +690,14 @@
 /obj/item/bodypart/leg/right/vortigaunt/extract
 	limb_id = SPECIES_VORTIGAUNT_EXTRACT
 
+/obj/item/bodypart/leg/left/vortigaunt/extract/super
+	limb_id = SPECIES_VORTIGAUNT_EXTRACT
+	speed_modifier = 0
+
+/obj/item/bodypart/leg/right/vortigaunt/extract/super
+	limb_id = SPECIES_VORTIGAUNT_EXTRACT
+	speed_modifier = 0
+
 ///stalker
 /obj/item/bodypart/head/stalker
 	limb_id = SPECIES_STALKER

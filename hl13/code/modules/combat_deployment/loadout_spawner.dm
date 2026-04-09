@@ -475,6 +475,7 @@
 			/datum/outfit/deployment_loadout/boss/freeman,
 			/datum/outfit/deployment_loadout/boss/wesker,
 			/datum/outfit/deployment_loadout/boss/plf_general,
+			/datum/outfit/deployment_loadout/boss/extract_vortigaunt,
 			/datum/outfit/deployment_loadout/boss/gonarch,
 			/datum/outfit/deployment_loadout/boss/guardian,
 		)

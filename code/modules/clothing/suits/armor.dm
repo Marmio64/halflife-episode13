@@ -298,6 +298,9 @@
 	equip_delay_other = 60
 	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 
+/obj/item/clothing/suit/armor/riot/fast
+	slowdown = -0.4 //works out to be -0.15 when accounting for the sledgehammer
+
 /obj/item/clothing/suit/armor/riot/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/adjust_fishing_difficulty, 5)

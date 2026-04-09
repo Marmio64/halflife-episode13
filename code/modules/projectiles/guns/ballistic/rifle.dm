@@ -396,6 +396,8 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/enchanted
 	can_be_sawn_off = FALSE
 
+	var/delete_on_use = FALSE
+
 	SET_BASE_PIXEL(-8, 0)
 
 /obj/item/gun/ballistic/rifle/enchanted/dropped()
@@ -405,7 +407,10 @@
 	chambered = null
 
 /obj/item/gun/ballistic/rifle/enchanted/proc/discard_gun(mob/living/user)
-	user.throw_item(pick(oview(7,get_turf(user))))
+	if(delete_on_use)
+		qdel(src)
+	else
+		user.throw_item(pick(oview(7,get_turf(user))))
 
 /obj/item/gun/ballistic/rifle/enchanted/attack_self()
 	return

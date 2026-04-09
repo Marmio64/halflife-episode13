@@ -37,6 +37,14 @@
 "dt" = (
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/forest)
+"dM" = (
+/obj/structure/chair/halflife/wood,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/outdoors/deployment_city/forest)
+"eq" = (
+/obj/structure/halflife/leaves,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city/forest)
 "eE" = (
 /obj/machinery/combine_walllight/directional/south,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -54,6 +62,11 @@
 /obj/machinery/telecomms/receiver/preset_left/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
+"fe" = (
+/obj/structure/halflife/trash/garbage,
+/obj/effect/koth_grace_field,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city/forest)
 "fH" = (
 /obj/structure/halflife/publicphone,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -62,6 +75,10 @@
 /turf/open/floor/plating/indoor/concrete/stairs{
 	dir = 9
 	},
+/area/halflife/outdoors/deployment_city/forest)
+"gq" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/forest)
 "gV" = (
 /obj/structure/railing/halflife/solo{
@@ -180,6 +197,12 @@
 	dir = 10
 	},
 /area/halflife/outdoors/deployment_city/forest)
+"tN" = (
+/obj/machinery/combine_recharger/round_start{
+	pixel_y = 30
+	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/sewer/hidden/spawn_room)
 "ue" = (
 /obj/structure/halflife/trash/garbage/dumpster,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -188,10 +211,14 @@
 /obj/structure/barricade/wooden/solid,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/forest)
+"um" = (
+/obj/structure/halflife/leaves,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city/forest)
 "ur" = (
-/obj/machinery/door/unpowered/halflife/metal/red,
-/turf/open/floor/plating/indoor/metal/plate,
-/area/halflife/indoors/combat_deployment/rebel_base)
+/obj/structure/halflife/publicphone,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/outdoors/deployment_city/forest)
 "vv" = (
 /obj/machinery/combine_walllight/directional/north,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -237,8 +264,16 @@
 	dir = 5
 	},
 /area/halflife/outdoors/deployment_city/forest)
+"Ae" = (
+/obj/structure/halflife/pot/plant,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/outdoors/deployment_city/forest)
 "Bh" = (
 /turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/forest)
+"Bz" = (
+/obj/structure/flora/tree/halflife/plain/concrete_thin,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
 "Cv" = (
 /obj/structure/bed/halflife/bedframe/wire,
@@ -255,6 +290,12 @@
 	dir = 8
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city/forest)
+"Ey" = (
+/obj/machinery/combine_recharger/round_start{
+	pixel_y = 30
+	},
+/turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/deployment_city/forest)
 "FW" = (
 /obj/machinery/telecomms/broadcaster/preset_left/birdstation,
@@ -340,6 +381,10 @@
 /obj/structure/barricade/wooden/solid,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
+"Qr" = (
+/obj/machinery/ammo_crate/no_recharge,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/outdoors/deployment_city/forest)
 "RN" = (
 /obj/machinery/telecomms/hub/preset,
 /turf/open/floor/plating/ground/sidewalk,
@@ -419,6 +464,10 @@
 /obj/effect/landmark/deployments_metrocop,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/sewer/hidden/spawn_room)
+"Yz" = (
+/obj/structure/halflife/trash_decal,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
 "YC" = (
 /obj/structure/halflife/road_barrier/concrete,
 /turf/open/floor/plating/ground/sidewalk,
@@ -670,12 +719,12 @@ wO
 RP
 wO
 Vq
+ur
 wO
 wO
 wO
 wO
-wO
-wO
+Qr
 Vq
 HP
 HP
@@ -749,7 +798,7 @@ HP
 HP
 HP
 Vq
-wO
+Ey
 wO
 wO
 wO
@@ -762,7 +811,7 @@ wO
 wO
 wO
 wO
-Zv
+Vh
 Vq
 HP
 HP
@@ -928,7 +977,7 @@ wO
 lT
 Xn
 lT
-wO
+dM
 wl
 Vq
 wO
@@ -1358,7 +1407,7 @@ Vq
 ls
 ls
 Vq
-wO
+Ae
 wO
 wO
 wO
@@ -1384,8 +1433,8 @@ ls
 ls
 Vq
 hK
-Vq
-Vq
+ls
+ls
 Vq
 Vq
 Vq
@@ -2298,7 +2347,7 @@ Vq
 Vq
 Vq
 Vq
-ls
+eq
 Hq
 pH
 Bh
@@ -2338,7 +2387,7 @@ Bh
 Bh
 pH
 Hq
-ls
+eq
 Vq
 Vq
 Vq
@@ -2385,14 +2434,14 @@ Vq
 Vq
 Vq
 Vq
-ls
-Hq
+Bz
+um
 pH
 Bh
 Bh
 Bh
 pH
-Hq
+TH
 ls
 Vq
 Vq
@@ -2418,14 +2467,14 @@ Vq
 Vq
 Vq
 ls
-Hq
+TH
 pH
 Bh
 Bh
 Bh
 pH
-Hq
-ls
+um
+Bz
 Vq
 Vq
 Vq
@@ -2456,9 +2505,9 @@ HP
 Vq
 Vq
 Vq
-ls
-ls
-ls
+Tt
+Tt
+Tt
 Vq
 ls
 ls
@@ -2472,15 +2521,15 @@ Vq
 Vq
 Vq
 Vq
-ls
+eq
 Hq
 pH
 Bh
 Bh
 Bh
-pH
-Hq
-ls
+Yz
+gq
+Vk
 Vq
 ls
 ls
@@ -2504,15 +2553,15 @@ ls
 ls
 ls
 Vq
-ls
-Hq
-pH
+Vk
+gq
+Yz
 Bh
 Bh
 Bh
 pH
 Hq
-ls
+eq
 Vq
 Vq
 Vq
@@ -2566,7 +2615,7 @@ Bh
 Bh
 Bh
 pH
-Hq
+TH
 ls
 ls
 ls
@@ -2592,7 +2641,7 @@ ls
 ls
 ls
 ls
-Hq
+TH
 pH
 Bh
 Bh
@@ -3151,7 +3200,7 @@ pB
 pB
 iq
 wd
-Vi
+tN
 pB
 pB
 vv
@@ -3394,7 +3443,7 @@ Bh
 Bh
 Hq
 ls
-ur
+HI
 HI
 HI
 HI
@@ -3499,7 +3548,7 @@ pB
 pB
 iq
 wd
-Vi
+tN
 pB
 pB
 vv
@@ -4132,7 +4181,7 @@ Bh
 Bh
 Bh
 pH
-Hq
+TH
 ls
 ls
 ls
@@ -4196,9 +4245,9 @@ HP
 Vq
 Vq
 Vq
-ls
-ls
-Pl
+Tt
+Tt
+fe
 Vq
 ls
 ls
@@ -4212,47 +4261,47 @@ Vq
 Vq
 Vq
 Vq
-ls
+eq
 Hq
+pH
+Bh
+Bh
+Bh
+Yz
+gq
+Vk
+Vq
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+Vq
+Vq
+Vq
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+ls
+Vq
+ls
+TH
 pH
 Bh
 Bh
 Bh
 pH
 Hq
-ls
-Vq
-ls
-ls
-ls
-ls
-ls
-ls
-ls
-ls
-ls
-Vq
-Vq
-Vq
-ls
-ls
-ls
-ls
-ls
-ls
-ls
-ls
-ls
-Vq
-ls
-Hq
-pH
-Bh
-Bh
-Bh
-pH
-Hq
-ls
+eq
 Vq
 Vq
 Vq
@@ -4299,14 +4348,14 @@ Vq
 Vq
 Vq
 Vq
-ls
-Hq
+Bz
+um
 pH
 Bh
 Bh
 Bh
 pH
-Hq
+TH
 ls
 Vq
 Vq
@@ -4331,15 +4380,15 @@ ls
 Vq
 Vq
 Vq
-ls
-Hq
-pH
+Vk
+gq
+Yz
 Bh
 Bh
 Bh
 pH
-Hq
-ls
+um
+Bz
 Vq
 Vq
 Vq
@@ -4386,7 +4435,7 @@ Vq
 Vq
 Vq
 Vq
-ls
+eq
 Hq
 pH
 Bh
@@ -4419,14 +4468,14 @@ Qo
 ls
 ls
 ls
-Hq
+TH
 pH
 Bh
 Bh
 Bh
 pH
 Hq
-ls
+eq
 Vq
 Vq
 Vq
@@ -5360,7 +5409,7 @@ Vq
 ls
 ls
 Vq
-wO
+Ae
 wO
 wO
 wO
@@ -5386,8 +5435,8 @@ ls
 ls
 Vq
 oH
-Vq
-Vq
+ls
+ls
 Vq
 Vq
 Vq
@@ -5800,7 +5849,7 @@ wO
 lT
 bH
 lT
-wO
+dM
 wl
 Vq
 wO
@@ -5969,7 +6018,7 @@ HP
 HP
 HP
 Vq
-wO
+Ey
 wO
 wO
 wO
@@ -5982,7 +6031,7 @@ wO
 wO
 wO
 wO
-Zv
+Vh
 Vq
 HP
 HP
@@ -6064,12 +6113,12 @@ wO
 hj
 wO
 Vq
+ur
 wO
 wO
 wO
 wO
-wO
-wO
+Qr
 Vq
 HP
 HP

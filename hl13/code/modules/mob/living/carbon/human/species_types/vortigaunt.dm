@@ -156,6 +156,55 @@
 	super_vortheal.Remove(C)
 	vortbugbait.Remove(C)
 
+/datum/species/vortigaunt/extract_boss
+	name = "Super Extract Empowered Vortigaunt"
+	id = SPECIES_VORTIGAUNT_ELDER
+	damage_modifier = 70 //high since they dont have movement on their side at all
+
+	bodypart_overrides = list(
+		BODY_ZONE_HEAD = /obj/item/bodypart/head/vortigaunt/extract,
+		BODY_ZONE_CHEST = /obj/item/bodypart/chest/vortigaunt/extract,
+		BODY_ZONE_L_ARM = /obj/item/bodypart/arm/left/vortigaunt/extract,
+		BODY_ZONE_R_ARM = /obj/item/bodypart/arm/right/vortigaunt/extract,
+		BODY_ZONE_L_LEG = /obj/item/bodypart/leg/left/vortigaunt/extract/super,
+		BODY_ZONE_R_LEG = /obj/item/bodypart/leg/right/vortigaunt/extract/super,
+	)
+
+	var/datum/action/cooldown/spell/aoe/repulse/wizard/vort/super/vortrepulse
+	var/datum/action/cooldown/spell/forcewall/vort/super/vortwall
+	var/datum/action/cooldown/spell/touch/vort_heal/empowered/super_vortheal
+	var/datum/action/cooldown/spell/conjure/antlion/extract_vort/super/vortbugbait
+	var/datum/action/cooldown/spell/conjure_item/infinite_guns/vort_blast/super/super_galunga
+
+/datum/species/vortigaunt/extract_boss/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+	. = ..()
+
+	vortrepulse = new(C)
+	vortrepulse.Grant(C)
+
+	vortwall = new(C)
+	vortwall.Grant(C)
+
+	super_galunga = new(C) //super blast
+	super_galunga.Grant(C)
+
+	galunga.Remove(C) //remove boring blaster
+
+	vortheal.Remove(C) //you get an upgraded one
+
+	super_vortheal = new(C) //lots of healing!
+	super_vortheal.Grant(C)
+
+	vortbugbait = new(C)
+	vortbugbait.Grant(C)
+
+/datum/species/vortigaunt/extract_boss/on_species_loss(mob/living/carbon/C)
+	..()
+	vortrepulse.Remove(C)
+	vortwall.Remove(C)
+	super_vortheal.Remove(C)
+	vortbugbait.Remove(C)
+
 /datum/species/vortigaunt/hidden
 	name = "Hidden Vortigaunt"
 

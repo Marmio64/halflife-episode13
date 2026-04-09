@@ -238,6 +238,10 @@
 	slowdown = 1.25
 	actions_types = list(/datum/action/item_action/deploy_shield)
 	var/shield_charge = TRUE
+	var/shield_type = /obj/item/shield/wallhammer
+
+/obj/item/clothing/suit/armor/overwatch/wallhammer/victim
+	shield_type = /obj/item/shield/wallhammer/weak
 
 /datum/armor/wallhammerarmor
 	melee = 60
@@ -272,6 +276,10 @@
 	shield_break_leftover = null
 	item_flags = DROPDEL
 
+/obj/item/shield/wallhammer/weak
+	max_integrity = 50
+	block_chance = 75
+
 /obj/item/clothing/suit/armor/overwatch/wallhammer/verb/deploy_shield()
 	set category = "Object"
 	set name = "Deploy Shield"
@@ -282,7 +290,8 @@
 		return
 
 	var/mob/living/carbon/human/H = usr
-	var/obj/item/shield/wallhammer/N = new(H)
+	var/obj/item/shield/N = new shield_type(H)
+
 	if(H.put_in_hands(N))
 		to_chat(H, "<span class='notice'Shield deployed.</span>")
 	else

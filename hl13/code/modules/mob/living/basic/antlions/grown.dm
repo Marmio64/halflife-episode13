@@ -336,6 +336,9 @@
 	summon_amount = 2
 	cooldown_time = 60 SECONDS
 
+/datum/action/cooldown/spell/conjure/antlion/extract_vort/super
+	summon_amount = 3
+	cooldown_time = 25 SECONDS
 
 //---------------------- AI STUFF -------------------
 

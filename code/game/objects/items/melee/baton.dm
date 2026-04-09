@@ -883,3 +883,6 @@
 
 /obj/item/melee/baton/security/heavy/loaded //this one starts with a cell pre-installed.
 	preload_cell_type = /obj/item/stock_parts/power_store/cell/high
+
+/obj/item/melee/baton/security/loaded/weak
+	stamina_damage = 25

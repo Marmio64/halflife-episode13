@@ -14,7 +14,11 @@
 
 	H.remove_traits(list(TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_TERRIBLE_AIM), OUTFIT_TRAIT) //remove any riot cop traits which may be present
 
+	H.add_traits(list(TRAIT_NEVER_WOUNDED, TRAIT_NODISMEMBER), OUTFIT_TRAIT) //ehhh just take these out of the equation, since these are BOSSES
+
 	H.dna.species.stunmod = 0.1 //all bosses are very resilient to stuns
+
+	H.fire_stack_decay_rate = -2
 
 	var/list/spawn_locs = list()
 	for(var/X in GLOB.the_hidden)
@@ -28,7 +32,7 @@
 
 /datum/outfit/deployment_loadout/boss/freeman
 	name = "Bossfight: The Free Man"
-	display_name = "The Free Man"
+	display_name = "The Free Man (ALL-ROUNDER)"
 	desc = "Time to fuck up someone's face."
 
 	uniform = /obj/item/clothing/under/citizen/rebel
@@ -77,7 +81,7 @@
 
 /datum/outfit/deployment_loadout/boss/wesker
 	name = "Bossfight: The Mastermind"
-	display_name = "The Mastermind"
+	display_name = "The Mastermind (RUSHDOWN)"
 	desc = "Seven minutes. Seven minutes is all you have to play with your enemies. You have relatively low durability, but can disorient enemies with swift dashes, utilize devestating martial arts combos, self heal, and can activate throw mode to become near invulnerable to anything but explosions."
 
 	combat_music = 'hl13/sound/music/combat/farben.ogg'
@@ -87,12 +91,10 @@
 	glasses = /obj/item/clothing/glasses/sunglasses/wesker
 	gloves = /obj/item/clothing/gloves/color/black/wesker
 
-	l_pocket = /obj/item/knife/combat/survival
-
 	spells_to_add = list(/datum/action/cooldown/spell/wesker_taunt, /datum/action/cooldown/mob_cooldown/dash/wesker)
 
 	extra_dex = 8
-	extra_str = 8
+	extra_str = 5 //dont need that much strength because CQC overrides strength bonuses for punching
 	extra_end = 8
 
 /datum/action/cooldown/mob_cooldown/dash/wesker
@@ -138,7 +140,7 @@
 	//all of wesker's superhuman powers
 	H.stamina_regen_time = 4 SECONDS
 
-	H.add_traits(list(TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_NOCRITDAMAGE, TRAIT_NEVER_WOUNDED, TRAIT_IGNORESLOWDOWN, TRAIT_ANALGESIA, TRAIT_NOCRITOVERLAY, TRAIT_NODISMEMBER), OUTFIT_TRAIT)
+	H.add_traits(list(TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_NOCRITDAMAGE, TRAIT_IGNORESLOWDOWN, TRAIT_ANALGESIA, TRAIT_NOCRITOVERLAY), OUTFIT_TRAIT)
 
 /datum/action/cooldown/spell/wesker_taunt
 	name = "Recovering Taunt"
@@ -175,7 +177,7 @@
 
 /datum/outfit/deployment_loadout/boss/plf_general
 	name = "Bossfight: PLF General"
-	display_name = "PLF General"
+	display_name = "PLF General (SUPPORT, SNIPER, CROWD CONTROL)"
 	desc = "You have the full backing of the PLF behind you, and call in missile airstrikes and have friendly soldiers teleported to your position, while you stay in the backlines sniping opponents with your Dragunov. Be wary however, you aren't very durable and are vulnerable to being rushed down."
 
 	suit = /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss
@@ -212,8 +214,26 @@
 	extra_end = 10
 	extra_per = 10
 
+////////// EXTRACT VORT //////////////////////////////////////////////////////////////////////////////
 
+/datum/outfit/deployment_loadout/boss/extract_vortigaunt
+	name = "Boss: Extract Empowered Vortigaunt"
+	display_name = "Extract Empowered Vortigaunt (SUPPORT)"
+	desc = "You are durable with a wide array of low cooldown, powerful abilities. While you are a pretty good combatant yourself, perhaps your greatest strength is instead simply your ability to infinitely heal fellow bosses?"
 
+	uniform = null
+	shoes = null
+	id = null
+
+	combat_music = 'hl13/sound/music/combat/vortalcombat.ogg'
+
+	extra_dex = 8
+	extra_str = 8
+	extra_end = 10
+
+/datum/outfit/deployment_loadout/boss/extract_vortigaunt/pre_equip(mob/living/carbon/human/H)
+	H.set_species(/datum/species/vortigaunt/extract_boss)
+	H.cmode_music = combat_music
 
 
 
@@ -223,7 +243,7 @@
 
 /datum/outfit/deployment_loadout/boss/gonarch
 	name = "Bossfight: Gonarch"
-	display_name = "Gonarch"
+	display_name = "Gonarch (SUPPORT, TANK)"
 	desc = "You are exceptionally tanky, and have a wide variety of dangerous bio attacks to use against opponents."
 	uniform = null
 	shoes = null
@@ -237,7 +257,7 @@
 
 /datum/outfit/deployment_loadout/boss/guardian
 	name = "Bossfight: Antlion Guardian"
-	display_name = "Antlion Guardian"
+	display_name = "Antlion Guardian (RUSHDOWN, TANK)"
 	desc = "You are a tanky rushdown unit. Keep on the pressure and don't let up, you can't regenerate health and don't have any advantages for hanging back."
 	uniform = null
 	shoes = null

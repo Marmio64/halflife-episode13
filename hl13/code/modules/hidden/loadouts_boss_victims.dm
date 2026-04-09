@@ -1,6 +1,11 @@
 /obj/item/hl2/loadout_picker/hidden/boss_victim
 	help_text_type = "hidden_victim"
 
+/datum/outfit/deployment_loadout/hidden/boss_victim/combine
+	faction = COMBINE_DEPLOYMENT_FACTION
+	id = /obj/item/card/id/combine_tdm
+	accessory = /obj/item/clothing/accessory/combine_dogtags
+
 /obj/item/hl2/loadout_picker/hidden/boss_victim/combine/generate_display_names()
 	var/static/list/loadouts
 	if(!loadouts)
@@ -8,8 +13,8 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/hidden/boss_victim/combine/shotgunner,
 			/datum/outfit/deployment_loadout/hidden/boss_victim/combine/engineer,
-			/datum/outfit/deployment_loadout/hidden/boss_victim/combine/riot_cop,
 			/datum/outfit/deployment_loadout/hidden/boss_victim/combine/soldier,
+			/datum/outfit/deployment_loadout/hidden/boss_victim/combine/riot_cop,
 			/datum/outfit/deployment_loadout/hidden/boss_victim/combine/grunt,
 			/datum/outfit/deployment_loadout/hidden/boss_victim/combine/medic,
 		)
@@ -73,15 +78,35 @@
 		/obj/item/gun/ballistic/automatic/pistol/usp = 1,
 	)
 
+//not in at the moment
+/datum/outfit/deployment_loadout/hidden/boss_victim/combine/wallhammer
+	name = "Victim: Wallhammer"
+	display_name = "DEFENSE: Wallhammer"
+	desc = "You move very slowly, but have a lot of armor, and a redeployable shield that lets you act as a great tank for your teammates. While you don't deal a lot of damage, the enemy can't just ignore your repeated baton strikes either."
+	id_name = "Wallhammer"
+
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/wallhammer
+	uniform = /obj/item/clothing/under/combine/overwatch/wallhammer
+	suit = /obj/item/clothing/suit/armor/overwatch/wallhammer/victim
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch/wallhammer
+	gloves = /obj/item/clothing/gloves/combat/overwatch
+	belt = /obj/item/melee/baton/security/loaded/weak
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit/hidden
+	r_pocket = /obj/item/flashlight/seclite
+
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
+
+	extra_end = 10
+
 /datum/outfit/deployment_loadout/hidden/boss_victim/combine/riot_cop
 	name = "Victim: Riot Cop"
-	display_name = "DEFENSE: Riot Cop"
-	desc = "Utilize your powerful sledgehammer and high strength to beat the crap out of enemies in close range."
+	display_name = "ASSAULT: Riot Cop"
+	desc = "Utilize your powerful sledgehammer and high strength to beat the crap out of enemies in close range. Your will to fight means you have resistance to being put in critical condition, have a high pain tolerance, and stuns have lower durations against you."
 	id_name = "Riotcop"
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
-	suit = /obj/item/clothing/suit/armor/riot
+	suit = /obj/item/clothing/suit/armor/riot/fast
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	head = /obj/item/clothing/head/helmet/toggleable/riot
 
@@ -99,11 +124,11 @@
 
 	extra_str = 10
 	extra_end = 10
-	extra_dex = 5
 
 /datum/outfit/deployment_loadout/hidden/boss_victim/combine/riot_cop/pre_equip(mob/living/carbon/human/H)
 	. = ..()
-	H.add_traits(list(TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_TERRIBLE_AIM), OUTFIT_TRAIT)
+	H.add_traits(list(TRAIT_NOSOFTCRIT, TRAIT_TERRIBLE_AIM), OUTFIT_TRAIT)
+	H.dna.species.stunmod = 0.5
 
 /datum/outfit/deployment_loadout/hidden/boss_victim/combine/soldier
 	name = "Victim: Soldier"
