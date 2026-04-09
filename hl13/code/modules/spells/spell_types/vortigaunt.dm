@@ -41,7 +41,7 @@
 	cast_delay = 0.5 SECONDS
 	delete_on_use = TRUE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/enchanted/vort_blast/super
-	guns_left = 30
+	guns_left = 50
 
 /obj/item/gun/ballistic/rifle/enchanted/vort_blast/try_fire_gun(atom/target, mob/living/user, params)
 	if(do_after(user, cast_delay, src))
@@ -77,7 +77,7 @@
 	impact_type = /obj/effect/projectile/impact/xray
 
 /obj/projectile/magic/vort_blast/super
-	damage = 80 //3 shot well armored folks
+	damage = 60
 	wound_bonus = -80
 
 /datum/action/cooldown/spell/touch/vort_heal
