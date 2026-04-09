@@ -288,7 +288,7 @@
 
 /datum/action/cooldown/spell/conjure/boss_rebel_soldier
 	name = "Call upon MP7 Allies"
-	desc = "Calls to Rebel Soldier allies. Armed with MP7s, they will back you up with their life, but will eventually despawn after about a minute."
+	desc = "Call upon soldiers of the Polish Free State. Armed with MP7s, they will back you up with their life, but will eventually despawn after about a minute."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "mp7"
 
@@ -298,16 +298,16 @@
 	cooldown_time = 15 SECONDS
 
 	invocation_type = INVOCATION_SHOUT
-	invocation = "FOR THE RESISTANCE!"
+	invocation = "COMRADES, TO ME!"
 	spell_requirements = NONE
 
 	summon_amount = 2
 	summon_lifespan = 65 SECONDS
 	summon_radius = 1
-	summon_type = list(/mob/living/basic/trooper/rebel/mp7/boss)
+	summon_type = list(/mob/living/basic/trooper/rebel/mp7/plf/boss)
 
 /datum/action/cooldown/spell/conjure/boss_veteran
-	name = "Call upon PLF Veteran Ally"
+	name = "Summon PLF Veteran"
 	desc = "Have a PLF Veteran teleported directly to you, using experimental Lambda teleportation technology. They'll stay forever, and are very durable and powerful. However, the cooldown is very long and they move very slowly!"
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "ak47"
@@ -318,7 +318,7 @@
 	cooldown_time = 150 SECONDS
 
 	invocation_type = INVOCATION_SHOUT
-	invocation = "GLORY TO THE PLF!"
+	invocation = "POLAND IS NOT YET DEAD!!"
 	spell_requirements = NONE
 
 	summon_amount = 1
