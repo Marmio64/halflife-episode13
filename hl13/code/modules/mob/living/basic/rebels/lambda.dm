@@ -57,10 +57,10 @@
 	name = "PLF Veteran Corpse"
 
 	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
-	uniform = /obj/item/clothing/under/citizen/rebel
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife
 	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran
 	shoes = /obj/item/clothing/shoes/boots
-	gloves = /obj/item/clothing/gloves/fingerless
+	gloves = /obj/item/clothing/gloves/color/black
 
 /mob/living/basic/trooper/rebel/mp7/follower
 	name = "Rebel Soldier Follower"
@@ -76,17 +76,41 @@
 	. = ..()
 	AddComponent(/datum/component/obeys_commands, pet_commands)
 
-/mob/living/basic/trooper/rebel/mp7/boss
+/mob/living/basic/trooper/rebel/mp7/plf
+	name = "PLF Soldier"
+	desc = "A symbol of the Polish Resistance, proudly wielding an MP7."
+	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/plf_infantry
+	loot = list(/obj/effect/mob_spawn/corpse/human/plf_trooper)
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/plf_trooper
+
+/mob/living/basic/trooper/rebel/mp7/plf/boss
 	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
 	speed = 0
 
+/obj/effect/mob_spawn/corpse/human/plf_trooper
+	name = "PLF Trooper"
+	hairstyle = "Business Hair 3"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/plf_trooper_corpse
+
+/datum/outfit/plf_trooper_corpse
+	name = "PLF Soldier Corpse"
+
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/poland
+	mask = /obj/item/clothing/mask/gas/hl2/military
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/color/black
+	accessory = /obj/item/clothing/accessory/armband/plf
+
 /mob/living/basic/trooper/rebel/mp7/veteran
 	name = "PLF Veteran"
-	desc = "The armored symbol of the PLF."
+	desc = "A towering revenant left from a nation supposedly long-gone, wading through a sea of the dead, clad in dirty-green armour adorned with the white-red banner of the Polish Free State."
 
 	loot = list(/obj/effect/mob_spawn/corpse/human/plf_veteran)
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/plf_veteran
-
+	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/plf_veteran
 	r_hand = /obj/item/gun/ballistic/automatic/ak47
 	maxHealth = 360 //equal to 3 standard rebel soldiers
 	health = 360
@@ -131,4 +155,62 @@
 		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trooper_burst,
 		/datum/ai_planning_subtree/travel_to_point/and_clear_target/reinforce,
 		/datum/ai_planning_subtree/random_speech/rebelsoldier,
+	)
+
+/datum/ai_planning_subtree/random_speech/plfsoldier
+	speech_chance = 4
+	speak = list(
+		"When this is all over, I am gonna mate.",
+		"I need a pierogi.",
+		"The Free State stands.",
+		"Poland is not yet dead.",
+		"Any spare rations?",
+		"On and on and on.",
+		"I can't remember the last time I had, well, anything.",
+		"Shouldn't we be doing something?",
+		"Oh, that's gotta hurt.",
+		"I've got my little corner and I'm sticking to it.",
+		"The war has to end someday.",
+		"I can't remember the last time I had a shower.",
+		"Things are looking up for a change.",
+		"They're never gonna make a stalker out of me.",
+		"Finally, change is in the air!",
+		"We'll evict the imperialists someday.",
+		"I think I ate something bad.",
+		"I'm gonna stay and hold down this spot.",
+	)
+
+/datum/ai_controller/basic_controller/trooper/ranged/burst/plf_infantry
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trooper_burst,
+		/datum/ai_planning_subtree/travel_to_point/and_clear_target/reinforce,
+		/datum/ai_planning_subtree/random_speech/plfsoldier,
+	)
+
+/datum/ai_planning_subtree/random_speech/plfveteran
+	speech_chance = 4
+	speak = list(
+		"We march onwards!",
+		"Together, comrades!",
+		"The Free State stands!",
+		"Poland is not yet dead!",
+		"We shall not fail!",
+		"The momentum is ours!",
+		"No cost is too great!",
+		"What the alien force has taken from us, we retrieve!",
+		"To arms, comrades!",
+		"On to war!",
+		"The liberation will come!",
+		"No mercy for the traitors!",
+		"No mercy for the imperialists!",
+		"We shall not falter!",
+		"Check your ammunition, comrades!",
+	)
+/datum/ai_controller/basic_controller/trooper/ranged/burst/plf_veteran
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trooper_burst,
+		/datum/ai_planning_subtree/travel_to_point/and_clear_target/reinforce,
+		/datum/ai_planning_subtree/random_speech/plfveteran,
 	)
