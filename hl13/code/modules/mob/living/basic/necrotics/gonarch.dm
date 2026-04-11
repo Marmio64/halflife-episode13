@@ -220,7 +220,7 @@
 
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/proc/rage()
-	ranged_cooldown = world.time + 40
+	ranged_cooldown = world.time + 55
 	playsound(src,'hl13/sound/creatures/gonarch/rage.ogg', 75, FALSE)
 	visible_message(span_warning("[src] starts picking up speed!"))
 	color = COLOR_RED
@@ -234,7 +234,7 @@
 	move_to_delay = 5
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/boss/rage()
-	ranged_cooldown = world.time + 40
+	ranged_cooldown = world.time + 55
 	playsound(src,'hl13/sound/creatures/gonarch/rage.ogg', 75, FALSE)
 	visible_message(span_warning("[src] starts picking up speed!"))
 	color = COLOR_RED

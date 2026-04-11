@@ -253,7 +253,7 @@
 	health = 2800
 	speed = 0.1
 	obj_damage = 100
-	melee_attack_cooldown = 1 SECONDS
+	melee_attack_cooldown = 0.8 SECONDS
 	faction = list(FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
 
 ///Every hit throws people back
