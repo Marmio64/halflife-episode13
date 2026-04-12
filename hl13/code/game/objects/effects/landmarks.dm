@@ -126,6 +126,46 @@ GLOBAL_LIST_EMPTY(chosen_station_templates)
 	key = "deploymentnorth";
 	name = "deploymentnorth"
 
+/// this keeps track of if the main, important rebel bunker is spawned in yet, so we make sure only one is ever spawned
+GLOBAL_VAR_INIT(rebel_main_bunker_created, FALSE)
+
+/obj/modular_map_root/rebel_large_bunker
+	config_file = "strings/modular_maps/sewercity.toml"
+	key = "rebel_large_bunker";
+	name = "rebel_large_bunker"
+
+/obj/modular_map_root/rebel_large_bunker/load_map()
+	sleep(rand(1,10)) //so a random map is chosen as the bunker. This is probably a horrible but simple way to do it
+
+	var/turf/spawn_area = get_turf(src)
+
+	var/datum/map_template/map_module/map = new()
+
+	if(!config_file)
+		return
+
+	if(!key)
+		return
+
+	var/config = rustg_read_toml_file(config_file)
+
+	var/mapfile = config["directory"] + pick(config["rooms"][key]["modules"])
+
+	if(mapfile == "_maps/sewercity/rebel_large_bunker_main.dmm")
+		if(GLOB.rebel_main_bunker_created == TRUE) //main bunker already exists, lets pick a different ruin
+			load_map()
+			return
+		else
+			GLOB.rebel_main_bunker_created = TRUE
+	else
+		if(GLOB.rebel_main_bunker_created == FALSE) //main bunker doesn't exist, lets force a spawn
+			mapfile = "_maps/sewercity/rebel_large_bunker_main.dmm"
+			GLOB.rebel_main_bunker_created = TRUE
+
+
+	map.load(spawn_area, FALSE, mapfile)
+
+	qdel(src, force=TRUE)
 
 /////////////////////////////////
 /// NAVIGATE VERBS ///
