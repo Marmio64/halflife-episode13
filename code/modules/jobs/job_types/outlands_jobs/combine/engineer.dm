@@ -26,6 +26,8 @@
 
 	cmode_music = 'hl13/sound/music/combat/branescan.ogg'
 
+	gameplay_help = "As a engineer as part of a special operations fireteam, you are trusted by and loyal to the combine. You cannot rebel without a very good reason."
+
 /datum/outfit/job/outlands/engineer
 	name = "Union Engineer"
 	jobtype = /datum/job/station_engineer

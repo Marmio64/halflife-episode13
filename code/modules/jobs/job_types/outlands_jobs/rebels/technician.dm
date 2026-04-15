@@ -24,6 +24,8 @@
 		/datum/job_department/service,
 		)
 
+	gameplay_help = "The bunker runs on fusion generators in the engineering room accessible through the bunker warehouse. Power will quickly run out if these generators are not on, so ensure they are kept on."
+
 /datum/outfit/job/outlands/technician
 	name = "Bunker Technician"
 	jobtype = /datum/job/outlands/technician
@@ -36,6 +38,8 @@
 
 	r_pocket = /obj/item/flashlight
 	skillchips = list(/obj/item/skillchip/engineer)
+
+	l_pocket = /obj/item/hl2key/rebel_bunker/engineering
 
 	ears = /obj/item/radio/headset/rebel_deployment
 

@@ -34,6 +34,8 @@
 	gloves  = /obj/item/clothing/gloves/botanic_leather
 	suit = /obj/item/clothing/suit/apron/overalls
 
+	l_pocket = /obj/item/hl2key/rebel_bunker/hydroponics
+
 	ears = /obj/item/radio/headset/rebel_deployment
 
 /datum/job/outlands/botanist/after_latejoin_spawn(mob/living/spawning)

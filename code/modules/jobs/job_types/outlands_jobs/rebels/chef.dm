@@ -34,6 +34,8 @@
 	suit = /obj/item/clothing/suit/apron/chef
 	head = /obj/item/clothing/head/utility/chefhat
 
+	l_pocket = /obj/item/hl2key/rebel_bunker/kitchen
+
 	ears = /obj/item/radio/headset/rebel_deployment
 
 /datum/outfit/job/outlands/chef/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)

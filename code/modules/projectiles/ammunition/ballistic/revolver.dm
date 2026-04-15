@@ -27,11 +27,11 @@
 	name = ".357 heartseeker bullet casing"
 	projectile_type = /obj/projectile/bullet/a357/heartseeker
 
-// 7.62x38mmR (Nagant Revolver)
+// 7.62x54mmR (AK47 and dragunov. Technically the nagant revolver from TG uses 38mm but we dont use the nagant)
 
 /obj/item/ammo_casing/n762
-	name = "7.62x38mmR bullet casing"
-	desc = "A 7.62x38mmR bullet casing."
+	name = "7.62x54mmR bullet casing"
+	desc = "A 7.62x54mmR bullet casing."
 	caliber = CALIBER_N762
 	projectile_type = /obj/projectile/bullet/n762
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/heavy // hl13 edit

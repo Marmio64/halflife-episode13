@@ -182,6 +182,37 @@
 	desc = "This key will open doors in the Rebel train station."
 	lockid = "rebel_trainstation"
 
+
+/obj/item/hl2key/rebel_bunker/command_offices
+	name = "bunker command offices key"
+	desc = "This key will open doors in the bunker command offices."
+	lockid = "reb_bunk_cmdoffice"
+
+/obj/item/hl2key/rebel_bunker/kitchen
+	name = "bunker kitchen key"
+	desc = "This key will open doors in the bunker kitchen."
+	lockid = "reb_bunk_kitchen"
+
+/obj/item/hl2key/rebel_bunker/hydroponics
+	name = "bunker hydroponics key"
+	desc = "This key will open doors in the bunker hydroponics."
+	lockid = "reb_bunk_hydroponics"
+
+/obj/item/hl2key/rebel_bunker/engineering
+	name = "bunker engineering key"
+	desc = "This key will open doors in the bunker engineering area."
+	lockid = "reb_bunk_engineering"
+
+/obj/item/hl2key/rebel_bunker/infirmary
+	name = "bunker infirmary key"
+	desc = "This key will open doors in the bunker infirmary area."
+	lockid = "reb_bunk_infirmary"
+
+/obj/item/hl2key/rebel_bunker/armory
+	name = "bunker armory key"
+	desc = "This key will open doors in the bunker armory area."
+	lockid = "reb_bunk_armory"
+
 //custom key
 /obj/item/hl2key/custom
 	name = "custom key"

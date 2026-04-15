@@ -172,6 +172,13 @@
 	ambient_music = 'hl13/sound/ambience/bgm/losthaven.ogg'
 	ambient_music_vol = 40
 
+/area/halflife/indoors/outlands/saveroom
+	mood_bonus = 2
+	mood_message = "I finally feel a moment of peace here, no matter how small that moment is."
+
+	ambient_music = 'hl13/sound/ambience/bgm/spawnroom.ogg'
+	ambient_music_vol = 20
+
 /area/halflife/indoors/townhall
 	name = "\improper Town Hall"
 	ambient_buzz = 'hl13/sound/ambience/citadel_ambience.ogg'

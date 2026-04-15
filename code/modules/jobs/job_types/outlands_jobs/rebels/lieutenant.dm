@@ -25,6 +25,8 @@
 
 	cmode_music = 'hl13/sound/music/combat/cpviolation.ogg'
 
+	gameplay_help = "The bunker is running low on supplies. Coordinate with the Quartermaster and lead expeditions to gather needed supplies from outside the bunker."
+
 /datum/outfit/job/outlands/lieutenant
 	name = "Bunker Lieutenant"
 	jobtype = /datum/job/outlands/lieutenant
@@ -38,6 +40,7 @@
 	gloves = /obj/item/clothing/gloves/fingerless
 	back = /obj/item/storage/backpack/halflife/satchel
 
+	l_pocket = /obj/item/hl2key/rebel_bunker/command_offices
 	r_pocket = /obj/item/flashlight
 
 	backpack_contents = list(
@@ -47,6 +50,7 @@
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 		/obj/item/storage/fancy/cigarettes/halflife = 1,
 		/obj/item/lighter = 1,
+		/obj/item/hl2key/rebel_bunker/armory = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment

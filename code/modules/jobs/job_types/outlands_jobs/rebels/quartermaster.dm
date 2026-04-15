@@ -23,6 +23,8 @@
 		/datum/job_department/service,
 		)
 
+	gameplay_help = "Bunker supplies are getting low. Ensure supplies do not run out and coordinate with the Lieutenant to achieve this goal and keep everyone alive and well."
+
 /datum/outfit/job/outlands/quartermaster
 	name = "Bunker Quartermaster"
 	jobtype = /datum/job/outlands/quartermaster
@@ -33,6 +35,8 @@
 	suit = /obj/item/clothing/suit/greenjacket
 	head = /obj/item/clothing/head/halflife/blue_hardhat
 	back = /obj/item/storage/backpack/halflife/satchel
+
+	l_pocket = /obj/item/hl2key/rebel_bunker/command_offices
 
 	backpack_contents = list(
 		/obj/item/megaphone = 1,

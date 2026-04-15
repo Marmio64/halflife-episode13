@@ -27,6 +27,10 @@
 
 	cmode_music = 'hl13/sound/music/combat/guarddown.ogg'
 
+	gameplay_help = "You are a high ranking member of the Overwatch Transhuman Arm. You have had your mind altered to become completely loyal to the Combine and cannot betray them. In addition, you have very little human emotion left."
+
+	requisition_points = 6
+
 /datum/outfit/job/outlands/ordinal
 	name = "Ordinal"
 	jobtype = /datum/job/outlands/ordinal

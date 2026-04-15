@@ -35,6 +35,8 @@
 	accessory = /obj/item/clothing/accessory/armband/medblue
 	gloves = /obj/item/clothing/gloves/latex/nitrile
 
+	l_pocket = /obj/item/hl2key/rebel_bunker/infirmary
+
 	ears = /obj/item/radio/headset/rebel_deployment
 
 /datum/job/outlands/doctor/after_latejoin_spawn(mob/living/spawning)

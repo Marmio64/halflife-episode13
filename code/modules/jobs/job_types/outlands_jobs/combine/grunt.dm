@@ -28,6 +28,10 @@
 
 	cmode_music = 'hl13/sound/music/combat/lgorbifold.ogg'
 
+	gameplay_help = "You are a lower-grade transhuman that has already went through mind alteration procedures. While you retain some form of human emotion, you have been made completely loyal to the combine, and you cannot betray them."
+
+	requisition_points = 4
+
 /datum/outfit/job/outlands/grunt
 	name = "Grunt"
 	jobtype = /datum/job/outlands/grunt
