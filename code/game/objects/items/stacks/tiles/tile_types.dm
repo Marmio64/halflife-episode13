@@ -1332,3 +1332,31 @@
 	turf_type = /turf/open/floor/glass/reinforced/plasma
 	merge_type = /obj/item/stack/tile/rglass/plasma
 	mats_per_unit = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 0.125, /datum/material/alloy/plasmaglass = SHEET_MATERIAL_AMOUNT * 0.25)
+
+//hl13 stuff
+/obj/item/stack/tile/combine_rough
+	name = "combine rough metal floor"
+	singular_name = "combine rough metal tile"
+	desc = "A section of combine metal floor plating."
+	icon_state = "tile_combine_rough"
+	inhand_icon_state = "tile-combine"
+	turf_type = /turf/open/floor/plating/indoor/metal/combine/alt2
+	merge_type = /obj/item/stack/tile/combine_rough
+
+/obj/item/stack/tile/combine_smooth
+	name = "combine smooth metal floor"
+	singular_name = "combine smooth metal tile"
+	desc = "A section of combine metal floor plating."
+	icon_state = "tile_combine_smooth"
+	inhand_icon_state = "tile-combine"
+	turf_type = /turf/open/floor/plating/indoor/metal/smooth
+	merge_type = /obj/item/stack/tile/combine_smooth
+
+/obj/item/stack/tile/combine_purple
+	name = "combine purple metal floor"
+	singular_name = "combine purple metal tile"
+	desc = "A section of combine metal floor plating."
+	icon_state = "tile_combine_purple"
+	inhand_icon_state = "tile-combine"
+	turf_type = /turf/open/floor/plating/indoor/metal/combine
+	merge_type = /obj/item/stack/tile/combine_purple

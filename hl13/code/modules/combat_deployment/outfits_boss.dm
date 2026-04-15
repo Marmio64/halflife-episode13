@@ -65,14 +65,15 @@
 		/obj/item/gun/ballistic/automatic/ar2/standardpin,
 		/obj/item/gun/ballistic/rifle/rebarxbow/upgraded,
 		/obj/item/gun/ballistic/rocketlauncher/halflife,
-		/obj/item/ammo_casing/rocket/hl13 = 2,
+		/obj/item/ammo_casing/rocket/hl13 = 3,
+		/obj/item/reagent_containers/pill/patch/medkit,
 		/obj/item/reagent_containers/pill/patch/medkit,
 	)
 
 	extra_dex = 10
 	extra_str = 10
 	extra_end = 10
-	extra_per = 3
+	extra_per = 5
 
 /obj/item/clothing/glasses/regular/thin/thermals
 	vision_flags = SEE_MOBS
@@ -94,7 +95,7 @@
 	spells_to_add = list(/datum/action/cooldown/spell/wesker_taunt, /datum/action/cooldown/mob_cooldown/dash/wesker)
 
 	extra_dex = 8
-	extra_str = 5 //dont need that much strength because CQC overrides strength bonuses for punching
+	extra_str = 2 //dont need that much strength because CQC overrides strength bonuses for punching
 	extra_end = 8
 
 /datum/action/cooldown/mob_cooldown/dash/wesker
@@ -198,8 +199,8 @@
 	backpack_contents = list(
 		/obj/item/megaphone = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
-		/obj/item/reagent_containers/pill/patch/medkit = 2,
-		/obj/item/ammo_box/magazine/svd = 2,
+		/obj/item/reagent_containers/pill/patch/medkit = 3,
+		/obj/item/ammo_box/magazine/svd = 1,
 		/obj/item/storage/fancy/cigarettes/halflife = 1,
 		/obj/item/lighter = 1,
 	)
@@ -209,7 +210,7 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/svd_ammo/fast, /datum/action/cooldown/spell/conjure/boss_rebel_soldier, /datum/action/cooldown/spell/conjure/boss_veteran, /datum/action/cooldown/spell/conjure_item/missile_targeter_general)
 
 
-	extra_dex = 8
+	extra_dex = 10
 	extra_str = 8 //alright with a melee weapon, but using the dragunov is going to be way better
 	extra_end = 10
 	extra_per = 10
@@ -227,7 +228,7 @@
 
 	combat_music = 'hl13/sound/music/combat/vortalcombat.ogg'
 
-	extra_dex = 8
+	extra_dex = 10
 	extra_str = 8
 	extra_end = 10
 

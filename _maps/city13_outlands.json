@@ -1,8 +1,8 @@
 {
 	"version": 1,
-	"map_name": "City 13 Nowy Jutro Prison",
-	"map_path": "map_files/city13_prison",
-	"map_file": "city13_prison.dmm",
+	"map_name": "City 13 Forest District Remnants",
+	"map_path": "map_files/city13_outlands",
+	"map_file": "city13_outlands.dmm",
 	"space_ruin_levels": 0,
 	"space_empty_levels": 0,
 	"planetary": 1,
@@ -27,15 +27,14 @@
 			"No Parallax": true,
 			"Weather_Rainstorm": true,
 			"Linkage": null
-		},
-		{
-			"Baseturf": "/turf/open/openspace",
-			"Gravity": true,
-			"No Parallax": true,
-			"Weather_Rainstorm": true,
-			"Linkage": null
 		}
 	],
 	"minetype": "none",
-	"roleplay_type": "prison"
+	"roleplay_type": "outlands",
+	"job_changes": {
+		"Refugee": {
+			"total_positions": 50,
+			"spawn_positions": 5
+		}
+	}
 }

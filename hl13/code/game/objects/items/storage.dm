@@ -434,8 +434,8 @@
 	storage_type = /datum/storage/satchel/halflife/huge
 
 /datum/storage/satchel/halflife/huge
-	max_total_storage = 50
-	max_slots = 50
+	max_total_storage = 60
+	max_slots = 60
 	max_specific_storage = WEIGHT_CLASS_GIGANTIC
 
 /datum/storage/backpack/halflife

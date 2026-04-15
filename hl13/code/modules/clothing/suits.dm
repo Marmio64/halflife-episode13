@@ -83,6 +83,7 @@
 	var/obj/item/cardboard_cutout/D = new disguise_chosen(H)
 	if(H.put_in_hands(D))
 		to_chat(H, "<span class='notice'Disguise enabled.</span>")
+		H.faction += FACTION_COMBINE
 	else
 		to_chat(H, "<span class='notice'You need both your hands free to put on your diguise.</span>")
 		qdel(D)
@@ -792,7 +793,7 @@
 	slowdown = -0.1
 
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss
-	slowdown = -0.25
+	slowdown = -0.3
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|HEAD
 	armor_type = /datum/armor/rebelheavy
 

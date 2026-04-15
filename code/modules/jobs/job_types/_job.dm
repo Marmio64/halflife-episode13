@@ -151,9 +151,6 @@
 	/// Additional pertinent information for playing the role you picked
 	var/gameplay_help
 
-	/// Is this a TDM Combat deployment only job?
-	var/combat_deployment_job = FALSE
-
 	var/combat_deployment_faction = null
 
 	//hl13 edit end
@@ -200,7 +197,7 @@
 	if(cmode_music)
 		spawned.cmode_music = cmode_music
 
-	if(combat_deployment_job)
+	if(job_flags & JOB_COMBAT_DEPLOYMENT_JOB)
 		spawned_human.setdeploymentfaction(combat_deployment_faction)
 	//hl13 edit end
 

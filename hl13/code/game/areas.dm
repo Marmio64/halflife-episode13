@@ -374,6 +374,35 @@
 /area/halflife/indoors/bunker/unpowered
 	requires_power = TRUE
 
+/area/halflife/indoors/bunker/unpowered/rebel_large
+	name = "\improper Oldworld Bunker"
+	first_time_text = "Oldworld Bunker"
+	ambient_buzz_vol = 40
+
+/area/halflife/indoors/bunker/unpowered/rebel_large/living_quarters
+	first_time_text = "Living Quarters"
+
+/area/halflife/indoors/bunker/unpowered/rebel_large/offices
+	first_time_text = "Command Offices"
+
+/area/halflife/indoors/bunker/unpowered/rebel_large/cafeteria
+	first_time_text = "Cafeteria"
+
+/area/halflife/indoors/bunker/unpowered/rebel_large/maintenance
+	first_time_text = "Maintenance Tunnels"
+
+	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_03.ogg'
+	ambient_music_vol = 20
+
+/area/halflife/indoors/bunker/unpowered/rebel_large/hydroponics
+	first_time_text = "Hydroponics"
+
+/area/halflife/indoors/bunker/unpowered/rebel_large/infirmary
+	first_time_text = "Infirmary"
+
+/area/halflife/indoors/bunker/unpowered/rebel_large/armory
+	first_time_text = "Armory"
+
 
 /area/halflife/indoors/sewer
 	name = "\improper Sewers"

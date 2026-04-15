@@ -21,7 +21,7 @@ SUBSYSTEM_DEF(ration)
 
 
 /datum/controller/subsystem/ration/proc/distribute()
-	if(SSmapping.current_map.minetype == "combat_deployment")
+	if(SSmapping.current_map.minetype == "combat_deployment" || SSmapping.current_map.roleplay_type == "outlands") //no ration system for outlands
 		return
 	if(!cycle_active)
 		sleep(30 SECONDS)

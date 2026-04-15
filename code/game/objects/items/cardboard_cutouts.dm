@@ -280,10 +280,6 @@
 	. = ..()
 	AddComponent(/datum/component/two_handed, require_twohands=TRUE, display_wielded=FALSE)
 
-/obj/item/cardboard_cutout/spy_disguise/pickup(mob/user)
-	. = ..()
-	user.faction += FACTION_COMBINE
-
 /obj/item/cardboard_cutout/spy_disguise/dropped(mob/user)
 	. = ..()
 	user.faction -= FACTION_COMBINE

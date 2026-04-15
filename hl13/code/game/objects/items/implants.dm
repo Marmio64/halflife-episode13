@@ -79,6 +79,9 @@
 /obj/item/implant/biosig_ert/ota
 	role = "OTA Unit"
 
+/obj/item/implant/biosig_ert/engineer
+	role = "Engineering Unit"
+
 /obj/item/implant/biosig_ert/administrator
 	role = "Warden"
 

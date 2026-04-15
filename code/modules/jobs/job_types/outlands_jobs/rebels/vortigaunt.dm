@@ -1,0 +1,55 @@
+/datum/job/outlands/vortigaunt
+	title = JOB_OUTLANDS_VORTIGAUNT
+	description = "Aid your human allies with combat, medical treatment, and whatever else that must be done, using your vortal powers."
+
+	department_head = list(JOB_HEAD_OF_PERSONNEL)
+
+	faction = FACTION_STATION
+	total_positions = 2
+	spawn_positions = 2
+
+	supervisors = SUPERVISOR_REB_QM
+	exp_granted_type = EXP_TYPE_CREW
+	config_tag = "VORTIGAUNT"
+
+	outfit = /datum/outfit/job/outlands/vortigaunt
+
+	paycheck = PAYCHECK_CITIZEN
+	paycheck_department = ACCOUNT_SRV
+	display_order = JOB_DISPLAY_ORDER_COOK
+
+	job_flags = JOB_EQUIP_RANK|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS|JOB_OUTLANDS_JOB
+
+	departments_list = list(
+		/datum/job_department/service,
+		)
+
+	cmode_music = 'hl13/sound/music/combat/vortalcombat.ogg'
+
+/datum/outfit/job/outlands/vortigaunt
+	name = "Bunker Vortigaunt"
+	jobtype = /datum/job/outlands/vortigaunt
+	id = /obj/item/card/id/advanced/halflife/vort
+	id_trim = /datum/id_trim/job/outlands/vortigaunt
+
+	uniform = null
+	shoes = null
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+/datum/outfit/job/outlands/vortigaunt/pre_equip(mob/living/carbon/human/H)
+	H.set_species(/datum/species/vortigaunt)
+	H.faction += FACTION_REFUGEE
+
+/datum/job/outlands/vortigaunt/after_latejoin_spawn(mob/living/spawning)
+	. = ..()
+	if(ishuman(spawning))
+		var/list/spawn_locs = list()
+		for(var/X in GLOB.deployments_refugee)
+			spawn_locs += X
+
+		if(!spawn_locs.len)
+			message_admins("No valid spawn locations found, aborting...")
+			return MAP_ERROR
+
+		spawning.forceMove(pick(spawn_locs))

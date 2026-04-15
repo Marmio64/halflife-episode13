@@ -28,7 +28,7 @@
 
 ///Syndicate documents
 /obj/item/documents/syndicate
-	desc = "\"Top Secret\" documents detailing sensitive Syndicate operational intelligence."
+	desc = "\"Top Secret\" documents detailing sensitive rebel operational intelligence."
 
 ///Syndicate documents with a red seal
 /obj/item/documents/syndicate/red

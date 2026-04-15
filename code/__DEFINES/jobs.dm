@@ -147,6 +147,23 @@
 	JOB_ATMOSPHERIC_TECHNICIAN, \
 )
 
+//Outlands RP jobs
+
+#define JOB_OUTLANDS_ORDINAL "Ordinal"
+#define JOB_OUTLANDS_ENGINEER "Engineer"
+#define JOB_OUTLANDS_GRUNT "Grunt"
+
+#define JOB_OUTLANDS_LIEUTENANT "Rebel Lieutenant"
+#define JOB_OUTLANDS_QUARTERMASTER "Rebel Quartermaster"
+#define JOB_OUTLANDS_SOLDIER "Rebel Soldier"
+#define JOB_OUTLANDS_BOTANIST "Botanist"
+#define JOB_OUTLANDS_CHEF "Chef"
+#define JOB_OUTLANDS_DOCTOR "Doctor"
+#define JOB_OUTLANDS_TECHNICIAN "Technician"
+#define JOB_OUTLANDS_VORTIGAUNT "Vortigaunt"
+
+#define JOB_OUTLANDS_REFUGEE "Refugee"
+
 
 #define JOB_DISPLAY_ORDER_ASSISTANT 1
 #define JOB_DISPLAY_ORDER_CAPTAIN 2
@@ -252,6 +269,12 @@ DEFINE_BITFIELD(departments_bitflags, list(
 #define JOB_LATEJOIN_ONLY (1<<11)
 /// This job is a head of staff.
 #define JOB_HEAD_OF_STAFF (1<<12)
+/// This job is only active in combat deployments
+#define JOB_COMBAT_DEPLOYMENT_JOB (1<<13)
+/// This job is only active in prison RP mode
+#define JOB_PRISON_JOB (1<<14)
+/// This job is only active in outlands RP mode
+#define JOB_OUTLANDS_JOB (1<<15)
 
 DEFINE_BITFIELD(job_flags, list(
 	"JOB_ANNOUNCE_ARRIVAL" = JOB_ANNOUNCE_ARRIVAL,
@@ -270,7 +293,7 @@ DEFINE_BITFIELD(job_flags, list(
 ))
 
 /// Combination flag for jobs which are considered regular crew members of the station.
-#define STATION_JOB_FLAGS (JOB_ANNOUNCE_ARRIVAL|JOB_CREW_MANIFEST|JOB_EQUIP_RANK|JOB_CREW_MEMBER|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS)
+#define STATION_JOB_FLAGS (JOB_ANNOUNCE_ARRIVAL|JOB_CREW_MANIFEST|JOB_EQUIP_RANK|JOB_CREW_MEMBER|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS|JOB_PRISON_JOB)
 /// Combination flag for jobs which are considered heads of staff.
 #define HEAD_OF_STAFF_JOB_FLAGS (JOB_BOLD_SELECT_TEXT|JOB_CANNOT_OPEN_SLOTS|JOB_HEAD_OF_STAFF)
 /// Combination flag for jobs which are enabled by station traits.
@@ -287,6 +310,11 @@ DEFINE_BITFIELD(job_flags, list(
 #define SUPERVISOR_HOS "the OTA Soldiers"
 #define SUPERVISOR_QM "the Foreman"
 #define SUPERVISOR_RD "the Labor Lead"
+
+#define SUPERVISOR_REB_QM "the Quartermaster"
+#define SUPERVISOR_REB_LT "the Lieutenant"
+
+#define SUPERVISOR_ORDINAL "the Ordinal"
 
 /// Mind traits that should be shared by every head of staff. has to be this way cause byond lists lol
 #define HEAD_OF_STAFF_MIND_TRAITS TRAIT_FAST_TYING, TRAIT_HIGH_VALUE_RANSOM

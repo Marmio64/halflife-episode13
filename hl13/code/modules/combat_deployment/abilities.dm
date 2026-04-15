@@ -132,7 +132,7 @@
 	delete_old = FALSE
 
 /datum/action/cooldown/spell/conjure_item/svd_ammo/fast
-	cooldown_time = 15 SECONDS
+	cooldown_time = 12 SECONDS
 
 /datum/action/cooldown/spell/conjure_item/overseer_viscerator
 	name = "Procure Shielded Viscerator"
@@ -229,6 +229,7 @@
 /datum/action/cooldown/spell/aoe/rally/rebel
 	button_icon_state = "rally_rebel"
 	faction_buff = REBEL_DEPLOYMENT_FACTION
+	cooldown_time = 110 SECONDS // cell leaders and lieutenants are more charismatic than the evil bine commanders
 
 /datum/action/cooldown/mob_cooldown/talk_xen
 	name = "Xen Communication"
@@ -282,7 +283,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 30 SECONDS
+	cooldown_time = 25 SECONDS
 	item_type = /obj/item/halflife/missile_targeter/missile_targeter_general
 	requires_hands = TRUE
 

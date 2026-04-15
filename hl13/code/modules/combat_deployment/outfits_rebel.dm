@@ -773,7 +773,7 @@
 		/obj/item/storage/box/lethalshot/halflife = 3,
 	)
 
-	extra_dex = 6
+	extra_dex = 8
 	extra_str = 2
 
 /datum/outfit/deployment_loadout/rebel/tier5/rpg
@@ -798,7 +798,7 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/rocket)
 
-	extra_end = 2
+	extra_end = 4
 
 /datum/outfit/deployment_loadout/rebel/tier5/firefighter
 	name = "Deployment: Rebel Fire Fighter"
@@ -823,7 +823,7 @@
 		/obj/item/grenade/incendiary_grenade = 2,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/reagent_containers/pill/patch/medkit = 2,
-		/obj/item/ammo_box/magazine/ak47 = 3,
+		/obj/item/ammo_box/magazine/ak47 = 4,
 		/obj/item/extinguisher/mini = 1,
 	)
 
@@ -855,7 +855,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
 
-	extra_end = 6
+	extra_end = 8
 
 /datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt
 	name = "Deployment: Extract Empowered Vortigaunt"
@@ -940,6 +940,6 @@
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
 
 	extra_dex = 4
-	extra_per = 6
+	extra_per = 8
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/svd_ammo)

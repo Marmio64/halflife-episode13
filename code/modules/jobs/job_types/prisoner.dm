@@ -1,15 +1,14 @@
 /datum/job/prisoner
 	title = JOB_PRISONER
-	description = "Live out your life in the outlands near the prison. Try not to starve to death, and maybe even do some good in the world by helping any escaped convicts you come across. This role is not guaranteed, and may sometimes be absent from rounds."
+	description = "Live out your life in the outlands. Try not to starve to death, and maybe even do some good in the world by helping people you come across."
 	department_head = list("Nobody")
-	total_positions = 3 //Handled in /datum/controller/occupations/proc/setup_refugee_positions()
-	spawn_positions = 3 //Handled in /datum/controller/occupations/proc/setup_refugee_positions()
+	total_positions = 3
+	spawn_positions = 3
 	supervisors = "nobody"
 	exp_granted_type = EXP_TYPE_CREW
 	paycheck = PAYCHECK_ZERO
 	config_tag = "PRISONER"
 
-	exp_requirements = 480 //8 hours, this is a difficult, uncommon, low slot role that new people shouldnt be wasting
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 

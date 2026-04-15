@@ -14,10 +14,9 @@
 	display_order = JOB_DISPLAY_ORDER_PRISONER
 	department_for_prefs = /datum/job_department/assistant
 
-	job_flags = JOB_EQUIP_RANK|JOB_CREW_MEMBER|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS
+	job_flags = JOB_EQUIP_RANK|JOB_CREW_MEMBER|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_COMBAT_DEPLOYMENT_JOB
 	faction = FACTION_STATION
 
-	combat_deployment_job = TRUE
 	combat_deployment_faction = REBEL_DEPLOYMENT_FACTION
 
 	cmode_music = 'hl13/sound/music/combat/darkstalker.ogg'

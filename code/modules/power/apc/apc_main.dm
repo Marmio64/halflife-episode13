@@ -60,7 +60,7 @@
 	///Can the APC charge?
 	var/chargemode = TRUE
 	///Is the apc interface locked?
-	var/locked = TRUE
+	var/locked = FALSE  //hl13 edit
 	///Is the apc cover locked?
 	var/coverlocked = TRUE
 	///Is the AI locked from using the APC
@@ -193,10 +193,10 @@
 		area.apc = src
 
 	//Initialize name & access of the apc. Name requires area to be assigned first
-	if(!req_access)
-		req_access = list(ACCESS_ENGINE_EQUIP)
+	//if(!req_access)
+		//req_access = list(ACCESS_ENGINE_EQUIP)  //hl13 edit
 	if(auto_name)
-		name = "\improper [get_area_name(area, TRUE)] APC"
+		name = "\improper [get_area_name(area, TRUE)] Breaker Box"
 
 	//Initialize its electronics
 	set_wires(new /datum/wires/apc(src))

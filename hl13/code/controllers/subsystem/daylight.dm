@@ -93,7 +93,7 @@ SUBSYSTEM_DEF(daylight)
 				if(factory_containers_filled >= factory_container_goal)
 					vendor.cashprize += factory_container_goal
 
-			if(SSmapping.current_map.minetype != "combat_deployment")
+			if(SSmapping.current_map.minetype != "combat_deployment" && SSmapping.current_map.roleplay_type != "outlands") //outlands RP mode and combat deployment dont have the daily tax or announcement
 				var/datum/bank_account/bank_account = SSeconomy.get_dep_account(ACCOUNT_CAR)
 				if (bank_account.account_balance < daily_tax)
 					message += " The daily tax was failed. Sociostability has been adjusted accordingly."
@@ -136,7 +136,7 @@ SUBSYSTEM_DEF(daylight)
 					curfew_field.toggle_onoff()
 
 			daily_tax = (get_factory_goal() * 30) //10 people would be 330 credits with standard multiplier
-			if(SSmapping.current_map.minetype != "combat_deployment")
+			if(SSmapping.current_map.minetype != "combat_deployment" && SSmapping.current_map.roleplay_type != "outlands")
 				priority_announce("Attention occupants, night has concluded, and Curfew is over. Your morning ration cycle will begin in thirty seconds. The daily tax is set at [daily_tax] credits.", "Curfew Notice.", sender_override = "Prison Automated Scheduler")
 		if(light_coefficient < 0.6)
 			light_coefficient += 0.05
@@ -146,7 +146,7 @@ SUBSYSTEM_DEF(daylight)
 			factory_container_goal = get_factory_goal()
 
 			day_cycle_active = DAY_CYCLE_AFTERNOON
-			if(SSmapping.current_map.minetype != "combat_deployment")
+			if(SSmapping.current_map.minetype != "combat_deployment" && SSmapping.current_map.roleplay_type != "outlands")
 				priority_announce("Attention occupants, it is now afternoon. The previous ration cycle has ended. All inmates are to begin productive efforts, and to inquire security personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal], compliance is mandatory.", "Work Notice.", sender_override = "Prison Automated Scheduler")
 
 			factory_containers_filled = 0
@@ -160,7 +160,7 @@ SUBSYSTEM_DEF(daylight)
 	if(current_day_time > DUSK_START  && current_day_time <= NIGHT_START)
 		if(day_cycle_active != DAY_CYCLE_DUSK && day_cycle_active != DAY_CYCLE_NIGHT)
 			day_cycle_active = DAY_CYCLE_DUSK
-			if(SSmapping.current_map.minetype != "combat_deployment")
+			if(SSmapping.current_map.minetype != "combat_deployment" && SSmapping.current_map.roleplay_type != "outlands")
 				priority_announce("Attention occupants, night will be approaching shortly, and lockup will begin soon. Inmates are to get ready for lockup.", "Curfew Notice.", sender_override = "Prison Automated Scheduler")
 		if(light_coefficient > 0.6)
 			light_coefficient -= 0.05

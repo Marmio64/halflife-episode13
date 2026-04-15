@@ -253,6 +253,7 @@
 	health = 2800
 	speed = 0.1
 	obj_damage = 100
+	melee_damage_upper = 50
 	melee_attack_cooldown = 0.8 SECONDS
 	faction = list(FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
 

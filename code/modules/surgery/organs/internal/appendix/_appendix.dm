@@ -37,8 +37,8 @@
 		owner.adjustToxLoss(2 * seconds_per_tick, forced = TRUE)
 	else if(inflamation_stage)
 		inflamation(seconds_per_tick)
-	else if(SPT_PROB(APPENDICITIS_PROB, seconds_per_tick) && !HAS_TRAIT(owner, TRAIT_TEMPORARY_BODY))
-		become_inflamed()
+	//else if(SPT_PROB(APPENDICITIS_PROB, seconds_per_tick) && !HAS_TRAIT(owner, TRAIT_TEMPORARY_BODY)) hl13 edit to remove random appendicitis
+		//become_inflamed()
 
 /obj/item/organ/appendix/proc/become_inflamed()
 	inflamation_stage = 1

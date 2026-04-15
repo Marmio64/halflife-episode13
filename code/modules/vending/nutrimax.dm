@@ -17,8 +17,9 @@
 		/obj/item/storage/bag/plants = 5,
 	)
 	refill_canister = /obj/item/vending_refill/hydronutrients
-	default_price = PAYCHECK_CREW * 0.8
-	extra_price = PAYCHECK_COMMAND * 0.8
+	default_price = PAYCHECK_ZERO //hl13 edit
+	extra_price = PAYCHECK_ZERO //hl13 edit
+	all_products_free = TRUE //hl13 edit
 	payment_department = ACCOUNT_SRV
 
 /obj/item/vending_refill/hydronutrients

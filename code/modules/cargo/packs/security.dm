@@ -112,10 +112,10 @@
 	access_view = ACCESS_ARMORY
 	crate_type = /obj/structure/closet/crate/secure/halflife
 
-/datum/supply_pack/security/armory/pulsesmgammo
+/datum/supply_pack/security/armory/ar2ammo
 	name = "Pulse OSIPR Ammo Crate"
-	desc = "Contains three OSIPR magazines. These are military grade munitions reserved for Overwatch forces, and they are not cheap whatsoever."
-	cost = CARGO_CRATE_VALUE * 16
+	desc = "Contains three OSIPR magazines. These are military grade munitions reserved for Overwatch forces, and they are not cheap."
+	cost = CARGO_CRATE_VALUE * 14
 	contains = list(/obj/item/ammo_box/magazine/ar2,
 					/obj/item/ammo_box/magazine/ar2,
 					/obj/item/ammo_box/magazine/ar2)

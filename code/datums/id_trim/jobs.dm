@@ -1355,3 +1355,131 @@
 	job = /datum/job/human_ai
 	big_pointer = TRUE
 	pointer_color = COLOR_MODERATE_BLUE
+
+/datum/id_trim/job/outlands/lieutenant
+	assignment = JOB_OUTLANDS_LIEUTENANT
+	job = /datum/job/outlands/lieutenant
+
+/datum/id_trim/job/outlands/quartermaster
+	assignment = JOB_OUTLANDS_QUARTERMASTER
+	job = /datum/job/outlands/quartermaster
+
+/datum/id_trim/job/outlands/soldier
+	assignment = JOB_OUTLANDS_SOLDIER
+	job = /datum/job/outlands/soldier
+
+/datum/id_trim/job/outlands/botanist
+	assignment = JOB_OUTLANDS_BOTANIST
+	job = /datum/job/outlands/botanist
+
+/datum/id_trim/job/outlands/chef
+	assignment = JOB_OUTLANDS_CHEF
+	job = /datum/job/outlands/chef
+
+/datum/id_trim/job/outlands/doctor
+	assignment = JOB_OUTLANDS_DOCTOR
+	job = /datum/job/outlands/doctor
+
+/datum/id_trim/job/outlands/technician
+	assignment = JOB_OUTLANDS_TECHNICIAN
+	job = /datum/job/outlands/technician
+
+/datum/id_trim/job/outlands/vortigaunt
+	assignment = JOB_OUTLANDS_VORTIGAUNT
+	job = /datum/job/outlands/vortigaunt
+
+/datum/id_trim/job/outlands/ordinal
+	assignment = JOB_OUTLANDS_ORDINAL
+	trim_state = "trim_securityofficer"
+	department_color = COLOR_COMMAND_BLUE
+	subdepartment_color = COLOR_SECURITY_RED
+	department_state = "departmenthead"
+	minimal_access = list(
+		ACCESS_ALL_PERSONAL_LOCKERS,
+		ACCESS_ARMORY,
+		ACCESS_AUX_BASE,
+		ACCESS_BIT_DEN,
+		ACCESS_BRIG,
+		ACCESS_BRIG_ENTRANCE,
+		ACCESS_CARGO,
+		ACCESS_COMMAND,
+		ACCESS_CONSTRUCTION,
+		ACCESS_COURT,
+		ACCESS_DETECTIVE,
+		ACCESS_ENGINEERING,
+		ACCESS_EVA,
+		ACCESS_GATEWAY,
+		ACCESS_KEYCARD_AUTH,
+		ACCESS_MAINT_TUNNELS,
+		ACCESS_MECH_SECURITY,
+		ACCESS_MEDICAL,
+		ACCESS_MINERAL_STOREROOM,
+		ACCESS_MINING,
+		ACCESS_MORGUE,
+		ACCESS_MORGUE_SECURE,
+		ACCESS_RC_ANNOUNCE,
+		ACCESS_SCIENCE,
+		ACCESS_SECURITY,
+		ACCESS_SERVICE,
+		ACCESS_SHIPPING,
+		ACCESS_TECH_STORAGE,
+		ACCESS_WEAPONS,
+	)
+	minimal_wildcard_access = list(
+		ACCESS_HOS,
+	)
+	template_access = list(
+		ACCESS_CAPTAIN,
+		ACCESS_CHANGE_IDS,
+	)
+	job = /datum/job/head_of_security
+	big_pointer = TRUE
+	pointer_color = COLOR_SECURITY_RED
+
+/datum/id_trim/job/outlands/grunt
+	assignment = JOB_OUTLANDS_GRUNT
+	trim_state = "trim_securityofficer"
+	department_color = COLOR_COMMAND_BLUE
+	subdepartment_color = COLOR_SECURITY_RED
+	department_state = "departmenthead"
+	minimal_access = list(
+		ACCESS_ALL_PERSONAL_LOCKERS,
+		ACCESS_ARMORY,
+		ACCESS_AUX_BASE,
+		ACCESS_BIT_DEN,
+		ACCESS_BRIG,
+		ACCESS_BRIG_ENTRANCE,
+		ACCESS_CARGO,
+		ACCESS_COMMAND,
+		ACCESS_CONSTRUCTION,
+		ACCESS_COURT,
+		ACCESS_DETECTIVE,
+		ACCESS_ENGINEERING,
+		ACCESS_EVA,
+		ACCESS_GATEWAY,
+		ACCESS_KEYCARD_AUTH,
+		ACCESS_MAINT_TUNNELS,
+		ACCESS_MECH_SECURITY,
+		ACCESS_MEDICAL,
+		ACCESS_MINERAL_STOREROOM,
+		ACCESS_MINING,
+		ACCESS_MORGUE,
+		ACCESS_MORGUE_SECURE,
+		ACCESS_RC_ANNOUNCE,
+		ACCESS_SCIENCE,
+		ACCESS_SECURITY,
+		ACCESS_SERVICE,
+		ACCESS_SHIPPING,
+		ACCESS_TECH_STORAGE,
+		ACCESS_WEAPONS,
+	)
+	minimal_wildcard_access = list(
+		ACCESS_HOS,
+	)
+	template_access = list(
+		ACCESS_CAPTAIN,
+		ACCESS_CHANGE_IDS,
+	)
+	job = /datum/job/head_of_security
+	big_pointer = TRUE
+	pointer_color = COLOR_SECURITY_RED

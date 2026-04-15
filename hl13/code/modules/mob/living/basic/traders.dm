@@ -295,6 +295,7 @@
 		/obj/item/screwdriver/halflife = list(PAYCHECK_CREW * 1.5, 2),
 		/obj/item/fishing_rod = list(PAYCHECK_CREW * 4.5, 2),
 		/obj/item/bait_can/worm = list(PAYCHECK_CREW * 3.5, 2),
+		/obj/item/fuel_cell/full = list(PAYCHECK_CREW * 5, 1),
 	)
 
 	initial_wanteds = list(
@@ -326,6 +327,7 @@
 		/obj/item/weaponcrafting/frame = list(PAYCHECK_CREW * 2.5, 3, ""),
 		/obj/item/stack/telecrystal = list(PAYCHECK_CREW, 10, ""),
 		/obj/item/weaponcrafting/receiver = list(PAYCHECK_CREW, 1.5, ""),
+		/obj/item/combine_datapod = list(PAYCHECK_CREW, 5, ""),
 	)
 
 	say_phrases = list(
@@ -730,7 +732,7 @@
 		/obj/item/fishing_hook/weighted = list(PAYCHECK_CREW * 2, 2),
 		/obj/item/fishing_line/bouncy = list(PAYCHECK_CREW * 2, 2),
 		/obj/item/bait_can/worm/premium = list(PAYCHECK_CREW * 3, 2),
-		//obj/item/fuel_cell/full = list(PAYCHECK_CREW * 4, 2),
+		/obj/item/fuel_cell/full = list(PAYCHECK_CREW * 3, 1),
 	)
 
 	initial_wanteds = list(
@@ -755,7 +757,8 @@
 		/obj/item/ration_voucher = list(PAYCHECK_CREW * 2, 10, ""),
 		/obj/item/reagent_containers/pill/lsd = list(PAYCHECK_CREW * 0.5, 5, ""),
 		/obj/item/food/xen/xenbranch = list(PAYCHECK_CREW * 0.25, 5, ""),
-		/obj/item/stack/telecrystal = list(PAYCHECK_CREW, 10, ""),
+		/obj/item/stack/telecrystal = list(PAYCHECK_CREW * 1.25, 10, ""),
+		/obj/item/combine_datapod = list(PAYCHECK_CREW * 8, 3, ""),
 	)
 
 	say_phrases = list(

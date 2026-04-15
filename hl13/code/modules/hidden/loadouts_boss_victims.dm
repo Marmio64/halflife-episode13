@@ -47,6 +47,8 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 
+	extra_end = 5
+
 /datum/outfit/deployment_loadout/hidden/boss_victim/combine/engineer
 	name = "Victim: Engineer"
 	display_name = "DEFENSE: Engineer"

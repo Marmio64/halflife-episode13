@@ -145,7 +145,7 @@
 	var/datum/job/job = SSjob.get_job(rank)
 	if(!(job.job_flags & JOB_NEW_PLAYER_JOINABLE))
 		return JOB_UNAVAILABLE_GENERIC
-	if(job.combat_deployment_job)
+	if(job.job_flags & JOB_COMBAT_DEPLOYMENT_JOB)
 		if(client.player_details.deployment_faction)
 			if(client.player_details.deployment_faction != job.combat_deployment_faction)
 				return JOB_UNAVAILABLE_WRONGTEAM

@@ -198,6 +198,50 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Chaplain"
 	icon_state = "Chaplain"
 
+/obj/effect/landmark/start/outlands/ordinal
+	name = JOB_OUTLANDS_ORDINAL
+	icon_state = "Detective"
+
+/obj/effect/landmark/start/outlands/engineer
+	name = JOB_OUTLANDS_ENGINEER
+	icon_state = "Detective"
+
+/obj/effect/landmark/start/outlands/grunt
+	name = JOB_OUTLANDS_GRUNT
+	icon_state = "Detective"
+
+/obj/effect/landmark/start/outlands/lieutenant
+	name = JOB_OUTLANDS_LIEUTENANT
+	icon_state = "Detective"
+
+/obj/effect/landmark/start/outlands/quartermaster
+	name = JOB_OUTLANDS_QUARTERMASTER
+	icon_state = "Detective"
+
+/obj/effect/landmark/start/outlands/soldier
+	name = JOB_OUTLANDS_SOLDIER
+	icon_state = "Detective"
+
+/obj/effect/landmark/start/outlands/botanist
+	name = JOB_OUTLANDS_BOTANIST
+	icon_state = "Detective"
+
+/obj/effect/landmark/start/outlands/chef
+	name = JOB_OUTLANDS_CHEF
+	icon_state = "Detective"
+
+/obj/effect/landmark/start/outlands/doctor
+	name = JOB_OUTLANDS_DOCTOR
+	icon_state = "Detective"
+
+/obj/effect/landmark/start/outlands/technician
+	name = JOB_OUTLANDS_TECHNICIAN
+	icon_state = "Detective"
+
+/obj/effect/landmark/start/outlands/vortigaunt
+	name = JOB_OUTLANDS_VORTIGAUNT
+	icon_state = "Detective"
+
 /obj/effect/landmark/start/cyborg
 	name = "Cyborg"
 	icon_state = "Cyborg"

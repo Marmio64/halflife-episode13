@@ -29,6 +29,9 @@
 	///hl13 edit. If this is a combat deployment map, what gamemode is it supposed to host?
 	var/combat_deployment_gamemode = "towers"
 
+	///hl13 edit. If this is a roleplay map, what roleplay type is it? city, prison, or outlands?
+	var/roleplay_type = "city"
+
 	///If no minetype is set, this will be the blacklist file used
 	var/blacklist_file
 
@@ -184,6 +187,9 @@
 
 	if ("minetype" in json)
 		minetype = json["minetype"]
+
+	if ("roleplay_type" in json)
+		roleplay_type = json["roleplay_type"]
 
 	if ("combat_deployment_gamemode" in json)
 		combat_deployment_gamemode = json["combat_deployment_gamemode"]

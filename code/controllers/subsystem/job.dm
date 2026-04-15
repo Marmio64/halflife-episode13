@@ -158,10 +158,15 @@ SUBSYSTEM_DEF(job)
 		if(!job.map_check()) //Even though we initialize before mapping, this is fine because the config is loaded at new
 			log_job_debug("Removed [job.title] due to map config")
 			continue
-		if(!job.combat_deployment_job && SSmapping.current_map.minetype == "combat_deployment")
+		if(!(job.job_flags & JOB_COMBAT_DEPLOYMENT_JOB) && SSmapping.current_map.minetype == "combat_deployment")
 			continue
-		if(job.combat_deployment_job && SSmapping.current_map.minetype != "combat_deployment")
+		if(job.job_flags & JOB_COMBAT_DEPLOYMENT_JOB && SSmapping.current_map.minetype != "combat_deployment")
 			continue
+		if(job.job_flags & JOB_PRISON_JOB && SSmapping.current_map.roleplay_type != "prison")
+			continue
+		if(job.job_flags & JOB_OUTLANDS_JOB && SSmapping.current_map.roleplay_type != "outlands")
+			continue
+
 		new_all_occupations += job
 		name_occupations[job.title] = job
 		for(var/alt_title in job.alternate_titles)
@@ -423,7 +428,6 @@ SUBSYSTEM_DEF(job)
 	//Scale number of open security officer and refugee slots to population
 	if(SSmapping.current_map.minetype != "combat_deployment")
 		setup_officer_positions()
-		setup_refugee_positions()
 
 	//Jobs will have fewer access permissions if the number of players exceeds the threshold defined in game_options.txt
 	var/min_access_threshold = CONFIG_GET(number/minimal_access_threshold)
@@ -647,22 +651,6 @@ SUBSYSTEM_DEF(job)
 			GLOB.secequipment -= spawnloc
 		else //We ran out of spare locker spawns!
 			break
-
-/datum/controller/subsystem/job/proc/setup_refugee_positions()
-	var/datum/job/J = SSjob.get_job(JOB_PRISONER)
-	if(!J)
-		CRASH("setup_refugee_positions(): Refugee job is missing")
-
-	if(unassigned.len < 10) //ultra low pop, dont bother with refugees
-		job_debug("SOP: Pop is too low, setting open refugee positions to 0")
-		J.total_positions = 0
-		J.spawn_positions = 0
-		return
-
-	else
-		if(J.spawn_positions > 0)
-			J.total_positions = 5
-			J.spawn_positions = 3
 
 /datum/controller/subsystem/job/proc/handle_feedback_gathering()
 	for(var/datum/job/job as anything in joinable_occupations)
