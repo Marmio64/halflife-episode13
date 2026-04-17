@@ -1070,7 +1070,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 
 /obj/structure/halflife/typewriter
 	name = "Typewriter"
-	desc = "An old world typewriter. Doesn't look like any ink ribbon is loaded, and it probably doesn't even work anymore anyways. Might have a few useful parts still."
+	desc = "An old world typewriter. If only you could Save what's left of the world. Doesn't look like any ink ribbon is loaded, and it probably doesn't even work anymore anyways. Might have a few useful parts still."
 	icon = 'hl13/icons/obj/miscellaneous.dmi'
 	icon_state = "typewriter"
 	density = FALSE

@@ -451,6 +451,17 @@
 				/mob/living/basic/halflife/zombie/zombine = 1,
 				)
 
+/obj/effect/spawner/random/halflife/random_zombie_rare
+	name = "random rare zombie"
+	icon = 'hl13/icons/effects/random_spawners.dmi'
+	icon_state = "random_zombie_rare"
+	spawn_loot_count = 1
+
+	loot = list(
+				/mob/living/basic/halflife/zombie/cremator = 1,
+				/mob/living/basic/halflife/zombie/zombine/elite = 1,
+				)
+
 /obj/effect/spawner/random/halflife/random_zombie/two
 	spawn_loot_count = 2
 

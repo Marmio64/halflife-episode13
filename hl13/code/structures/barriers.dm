@@ -43,3 +43,15 @@
 	anchored = TRUE
 	max_integrity = 600
 	projectile_passchance = 25
+
+/obj/structure/halflife/road_barrier/combine/attackby(obj/item/I, mob/living/user, params)
+	if(I.tool_behaviour == TOOL_WELDER && !user.combat_mode)
+		if(atom_integrity < max_integrity)
+			if(!I.tool_start_check(user, amount=1))
+				return
+
+			to_chat(user, span_notice("You begin repairing [src]..."))
+			if(I.use_tool(src, user, 4 SECONDS, volume=40))
+				atom_integrity = clamp(atom_integrity + 30, 0, max_integrity)
+	else
+		return ..()

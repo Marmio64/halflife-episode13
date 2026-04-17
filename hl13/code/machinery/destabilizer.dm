@@ -6,7 +6,7 @@ GLOBAL_VAR_INIT(super_destabilizer_deployed, FALSE)
 
 /obj/machinery/destabilizer
 	name = "destabilizer"
-	desc = "A hacked piece of combine machinery which emits radio signals that disrupt district wide systems and machinery, reducing sociostability over time."
+	desc = "A hacked piece of combine machinery which emits radio signals and propaganda messages that disrupt district wide systems and machinery, reducing sociostability over time."
 	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "destabilizer"
 	anchored = TRUE
@@ -57,7 +57,7 @@ GLOBAL_VAR_INIT(super_destabilizer_deployed, FALSE)
 
 /obj/machinery/destabilizer/makeshift
 	name = "makeshift destabilizer"
-	desc = "A shoddily made piece of machinery made from spare combine machinery parts. Emits radio signals that disrupt district wide systems and machinery, reducing sociostability over time."
+	desc = "A shoddily made piece of machinery made from spare combine machinery parts. Emits radio signals and propaganda messages that disrupt district wide systems and machinery, reducing sociostability over time."
 	destabilization_chance = 50
 	detonation_limit = 325 //can go on for slightly longer to account for it eating less stability
 

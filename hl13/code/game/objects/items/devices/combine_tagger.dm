@@ -18,7 +18,7 @@
 	return ITEM_INTERACT_BLOCKING
 
 /obj/item/combine_tagger/proc/tag_target(atom/target, mob/user)
-	var/target_value = 10
+	var/target_value = 20
 	var/datum/bank_account/cargo_budget = SSeconomy.get_dep_account(ACCOUNT_CAR)
 
 	if(HAS_TRAIT(target, TRAIT_COMBINE_TAGGED))
@@ -27,7 +27,7 @@
 
 	if(ishuman(target))
 		var/mob/living/carbon/human/human_target = target
-		if(human_target.stat == DEAD)
+		if(human_target.stat != DEAD)
 			to_chat(user, span_notice("Humanoid data must be deceased for tagging."))
 			return
 		if(FACTION_COMBINE in human_target.faction)
@@ -51,7 +51,7 @@
 
 	var/mob/living/living_target = target
 
-	if(living_target.stat == DEAD)
+	if(living_target.stat != DEAD)
 		to_chat(user, span_notice("Target data must be deceased for tagging."))
 		return
 
@@ -59,10 +59,10 @@
 
 		if(istype(target, /mob/living/basic/halflife/zombie/gonome) || istype(target, /mob/living/basic/halflife/antlion_guard))
 			to_chat(user, span_notice("High-value Xenian data detected. Administering bonus reward."))
-			target_value = 125
+			target_value = 250
 		if(istype(target, /mob/living/basic/halflife/headcrab) || istype(target, /mob/living/simple_animal/hostile/halflife/antlion) || istype(target, /mob/living/basic/halflife/antlion_worker))
 			to_chat(user, span_notice("Low-value Xenian data detected."))
-			target_value = 5
+			target_value = 10
 		else
 			to_chat(user, span_notice("Medium-value Xenian data detected."))
 

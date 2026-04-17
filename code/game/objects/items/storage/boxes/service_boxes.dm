@@ -35,7 +35,8 @@
 
 /obj/item/storage/box/ids/PopulateContents()
 	for(var/i in 1 to 7)
-		new /obj/item/card/id/advanced(src)
+		new /obj/item/card/id/advanced/halflife(src)
+
 /obj/item/storage/box/silver_ids
 	name = "box of spare silver IDs"
 	desc = "Shiny IDs for important people."

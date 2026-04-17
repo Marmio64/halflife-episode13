@@ -41,6 +41,7 @@
 	shoes = /obj/item/clothing/shoes/halflife/engineer
 	gloves = /obj/item/clothing/gloves/halflife/engineer
 	l_pocket = /obj/item/flashlight
+	belt = /obj/item/storage/belt/utility/full
 	skillchips = list(/obj/item/skillchip/engineer)
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/engineer)
@@ -50,5 +51,5 @@
 
 	user.faction += "combine"
 
-	user.change_stat(STATKEY_INT, 1)
+	user.change_stat(STATKEY_INT, 2)
 	user.change_stat(STATKEY_STR, 1)

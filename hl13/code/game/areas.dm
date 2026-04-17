@@ -98,7 +98,7 @@
 	name = "\improper Condemned City"
 	ambient_buzz = 'hl13/sound/ambience/town_abandoned.ogg'
 
-	first_time_text = "The Outlands"
+	first_time_text = "The Condemned City"
 
 	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_03.ogg'
 	ambient_music_vol = 20

@@ -38,7 +38,7 @@
 /datum/supply_pack/goody/premium_bait
 	name = "Deluxe Fishing Bait Single-Pack"
 	desc = "When the standard variety is not good enough for you."
-	cost = PAYCHECK_CREW
+	cost = PAYCHECK_CREW * 2
 	contains = list(/obj/item/bait_can/worm/premium)
 
 /datum/supply_pack/goody/naturalbait

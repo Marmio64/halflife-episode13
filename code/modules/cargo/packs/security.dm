@@ -114,9 +114,10 @@
 
 /datum/supply_pack/security/armory/ar2ammo
 	name = "Pulse OSIPR Ammo Crate"
-	desc = "Contains three OSIPR magazines. These are military grade munitions reserved for Overwatch forces, and they are not cheap."
-	cost = CARGO_CRATE_VALUE * 14
+	desc = "Contains four OSIPR magazines. These are military grade munitions reserved for Overwatch forces, and they are not cheap."
+	cost = CARGO_CRATE_VALUE * 15
 	contains = list(/obj/item/ammo_box/magazine/ar2,
+					/obj/item/ammo_box/magazine/ar2,
 					/obj/item/ammo_box/magazine/ar2,
 					/obj/item/ammo_box/magazine/ar2)
 	crate_name = "pulse smg ammo crate"

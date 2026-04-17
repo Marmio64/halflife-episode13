@@ -249,8 +249,8 @@
 	antlions.Grant(src)
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss
-	maxHealth = 2800
-	health = 2800
+	maxHealth = 2900
+	health = 2900
 	speed = 0.1
 	obj_damage = 100
 	melee_damage_upper = 50

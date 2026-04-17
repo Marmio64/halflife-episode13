@@ -1,6 +1,6 @@
 /obj/machinery/combine_datapodterminal
 	name = "combine datapod terminal"
-	desc = "A server terminal which houses a combine datapod, storing essential information about combine operations, district layouts, security information, and more."
+	desc = "A server terminal which houses a combine datapod, storing essential information about combine operations, district layouts, security information, blueprints, and more. You may be able to hack into the terminal with the right tool and steal the pod, while causing severe sociostability damage."
 	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "datapodterminal"
 

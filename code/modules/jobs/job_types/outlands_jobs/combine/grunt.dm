@@ -46,8 +46,8 @@
 	suit_store = /obj/item/gun/ballistic/automatic/pulsesmg
 
 	back = /obj/item/tank/internals/oxygen/grunt
-	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt/fused
-	uniform = /obj/item/clothing/under/combine/grunt/fused
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/grunt
+	uniform = /obj/item/clothing/under/combine/grunt
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection/grunt
 
@@ -57,6 +57,15 @@
 	. = ..()
 
 	user.faction += "combine"
+
+	user.skin_tone = "#e9dfd7"
+	user.set_facial_hairstyle("Shaved", update = FALSE)
+	user.set_hairstyle("Bald") //this will call update_body_parts()
+	user.eye_color_left = "#b9b9b9"
+	user.eye_color_right = "#b9b9b9"
+	user.update_body()
+
+	user.mob_mood?.mood_modifier -= 0.2
 
 	user.change_stat(STATKEY_END, 2)
 	user.change_stat(STATKEY_DEX, 1)
