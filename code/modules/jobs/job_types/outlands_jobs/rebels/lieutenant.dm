@@ -40,6 +40,8 @@
 	gloves = /obj/item/clothing/gloves/fingerless
 	back = /obj/item/storage/backpack/halflife/satchel
 
+	belt = /obj/item/melee/baton
+
 	l_pocket = /obj/item/hl2key/rebel_bunker/command_offices
 	r_pocket = /obj/item/flashlight
 
@@ -61,7 +63,7 @@
 	user.change_stat(STATKEY_END, 1)
 	user.change_stat(STATKEY_DEX, 3)
 	user.change_stat(STATKEY_STR, 1)
-	user.change_stat(STATKEY_INT, 2)
+	user.change_stat(STATKEY_INT, 1)
 	user.change_stat(STATKEY_PER, 2)
 
 /datum/job/outlands/lieutenant/after_latejoin_spawn(mob/living/spawning)

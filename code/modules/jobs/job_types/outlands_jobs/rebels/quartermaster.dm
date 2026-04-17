@@ -36,6 +36,8 @@
 	head = /obj/item/clothing/head/halflife/blue_hardhat
 	back = /obj/item/storage/backpack/halflife/satchel
 
+	belt = /obj/item/melee/baton
+
 	l_pocket = /obj/item/hl2key/rebel_bunker/command_offices
 
 	backpack_contents = list(
@@ -47,7 +49,7 @@
 /datum/outfit/job/outlands/quartermaster/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
 	user.faction += FACTION_REFUGEE
-	user.change_stat(STATKEY_INT, 1)
+	user.change_stat(STATKEY_INT, 2)
 	user.change_stat(STATKEY_STR, 1)
 
 /datum/job/outlands/quartermaster/after_latejoin_spawn(mob/living/spawning)

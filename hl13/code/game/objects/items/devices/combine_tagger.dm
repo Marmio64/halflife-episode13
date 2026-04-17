@@ -1,6 +1,6 @@
 /obj/item/combine_tagger
 	name = "Combine DB Tagger"
-	desc = "A combine device that tags DBs of hostile xenian lifeforms and anticitizens, and increases the cargo budget in return. The more you clear out, the more resources you'll have at your disposal."
+	desc = "A combine device that tags DBs of hostile xenian lifeforms and anticitizens, and increases the cargo budget in return. More dangerous targets are worth more. The more you clear out, the more resources you'll have at your disposal."
 	icon = 'icons/obj/medical/syringe.dmi'
 	inhand_icon_state = "sampler"
 	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
@@ -18,7 +18,7 @@
 	return ITEM_INTERACT_BLOCKING
 
 /obj/item/combine_tagger/proc/tag_target(atom/target, mob/user)
-	var/target_value = 20
+	var/target_value = 30
 	var/datum/bank_account/cargo_budget = SSeconomy.get_dep_account(ACCOUNT_CAR)
 
 	if(HAS_TRAIT(target, TRAIT_COMBINE_TAGGED))
@@ -58,11 +58,14 @@
 	if(living_target.mob_biotypes & MOB_XENIAN)
 
 		if(istype(target, /mob/living/basic/halflife/zombie/gonome) || istype(target, /mob/living/basic/halflife/antlion_guard))
-			to_chat(user, span_notice("High-value Xenian data detected. Administering bonus reward."))
+			to_chat(user, span_notice("High-value Xenian data detected. Administering large bonus reward."))
 			target_value = 250
+		if(istype(target, /mob/living/basic/halflife/zombie/zombie_grunt) || istype(target, /mob/living/basic/halflife/zombie/zombine))
+			to_chat(user, span_notice("Parasitized delegate data detected. Administering small bonus reward."))
+			target_value = 35 //just a slight extra bonus for the flavor value of it
 		if(istype(target, /mob/living/basic/halflife/headcrab) || istype(target, /mob/living/simple_animal/hostile/halflife/antlion) || istype(target, /mob/living/basic/halflife/antlion_worker))
 			to_chat(user, span_notice("Low-value Xenian data detected."))
-			target_value = 10
+			target_value = 10 //antlions can be farmed and headcrabs are really easy to kill
 		else
 			to_chat(user, span_notice("Medium-value Xenian data detected."))
 

@@ -44,6 +44,7 @@
 
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/usp9mm = 1,
+		/obj/item/knife/combat/survival = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)
 
