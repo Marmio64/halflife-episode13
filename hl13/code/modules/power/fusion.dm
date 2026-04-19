@@ -21,11 +21,11 @@
 		if(!cell_left)
 			if(user.transferItemToLoc(I, src))
 				cell_left = I
-				START_PROCESSING(SSfastprocess, src)
+				begin_processing()
 		else if(!cell_right)
 			if(user.transferItemToLoc(I, src))
 				cell_right = I
-				START_PROCESSING(SSfastprocess, src)
+				begin_processing()
 		else
 			to_chat(user, span_notice("The recycler is full!"))
 		update_icon()
@@ -142,7 +142,7 @@
 
 #define FUSION_ENGINE_MAX_POWER_GEN 80000 //Full capacity
 #define FUSION_ENGINE_FAIL_CHECK_TICKS 1000 //Check for failure every this many ticks
-#define FUSION_ENGINE_FULL_STRENGTH_FULL_RATE 0.1
+#define FUSION_ENGINE_FULL_STRENGTH_FULL_RATE 0.15
 #define FUSION_ENGINE_NO_DAMAGE 0
 #define FUSION_ENGINE_LIGHT_DAMAGE 1
 #define FUSION_ENGINE_MEDIUM_DAMAGE 2
@@ -179,7 +179,7 @@
 	is_on = TRUE
 	power_gen_percent = 99//will get to 100 on first tick, updating fuel_rate in the process
 	update_icon()
-	START_PROCESSING(SSfastprocess, src)
+	begin_processing()
 
 /obj/machinery/power/fusion_engine/random/Initialize(mapload)
 	. = ..()
@@ -282,7 +282,7 @@
 
 	is_on = TRUE
 	update_icon()
-	START_PROCESSING(SSfastprocess, src)
+	begin_processing()
 	return TRUE
 
 /obj/machinery/power/fusion_engine/attackby(obj/item/I, mob/user, params)

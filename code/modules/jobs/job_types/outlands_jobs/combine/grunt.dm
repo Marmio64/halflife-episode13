@@ -41,7 +41,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	glasses = /obj/item/clothing/glasses/hud/security
 
-	belt = /obj/item/storage/belt/civilprotection/overwatch/mp7
+	belt = /obj/item/storage/belt/civilprotection/overwatch/mp7_no_grenade
 	suit = /obj/item/clothing/suit/halflife/invis_grunt_harness
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
 

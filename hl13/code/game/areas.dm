@@ -410,6 +410,9 @@
 /area/halflife/indoors/bunker/unpowered/rebel_large/armory
 	first_time_text = "Armory"
 
+/area/halflife/indoors/bunker/unpowered/rebel_large/spare_room
+	first_time_text = "Spare Room"
+
 
 /area/halflife/indoors/sewer
 	name = "\improper Sewers"

@@ -233,6 +233,14 @@
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/overwatch/mp7_no_grenade/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/mp7, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/mp7, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/mp7, src)
+	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
+	update_appearance(UPDATE_ICON)
+
 /obj/item/storage/belt/civilprotection/overwatch/mp7_victim/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/mp7, src)
