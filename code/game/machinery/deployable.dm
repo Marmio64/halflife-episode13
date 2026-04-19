@@ -121,6 +121,24 @@
 	AddElement(/datum/element/climbable)
 	AddElement(/datum/element/elevation, pixel_shift = 12)
 
+/obj/structure/barricade/sandbags/crowbar_act(mob/living/user, obj/item/I)
+	user.visible_message(span_notice("[user] starts disassembling [src]."),
+	span_notice("You start disassembling [src]."))
+
+	var/disassembly_time = 8 SECONDS //not much faster than just bashing it with the crowbar, but helps
+
+	if(HAS_TRAIT(user, TRAIT_ENGINEER))
+		disassembly_time = 5 SECONDS
+
+	if(!do_after(user, disassembly_time, src))
+		return TRUE
+
+	user.visible_message(span_notice("[user] disassembles [src]."),
+	span_notice("You disassemble [src]."))
+	playsound(loc, 'sound/effects/shovel_dig.ogg', 25, 1)
+	deconstruct(TRUE)
+	return TRUE
+
 /obj/structure/barricade/security
 	name = "security barrier"
 	desc = "A rapidly deployable inflatable barrier. Directional hardpoints provide great cover and bullet resistance, but melee weapons can work their way into the soft parts."

@@ -186,7 +186,7 @@
 	icon_living = "grunt"
 	icon_dead = "grunt_dead"
 	butcher_results = list(/obj/item/food/meat/slab/halflife/zombie = 1, /obj/item/stack/kevlar = 1)
-	speed = 0.8
+	speed = 0.7
 	attack_sound = 'hl13/sound/creatures/zombineattack.ogg'
 	death_sound = 'hl13/sound/creatures/zombinedeath.ogg'
 	crabless_possible = FALSE

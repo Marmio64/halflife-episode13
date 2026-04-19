@@ -68,6 +68,7 @@
 	user.update_body()
 
 	ADD_TRAIT(user, TRAIT_NOHUNGER, JOB_TRAIT)
+	ADD_TRAIT(user, TRAIT_NOSLEEP, JOB_TRAIT)
 	user.mob_mood?.mood_modifier -= 0.5
 
 	user.change_stat(STATKEY_END, 5)

@@ -1,10 +1,9 @@
 /datum/crafting_recipe/combineturret
-	name = "Combine Turret"
-	result = /obj/machinery/porta_turret/combine/off
-	time = 15 SECONDS
-	reqs = list(/obj/item/stack/sheet/iron = 10,
-		        /obj/item/stock_parts/scanning_module = 2,
-				/obj/item/gun/ballistic/automatic/ar2,
+	name = "Combine Turret Beacon"
+	result = /obj/item/sbeacondrop/combine_turret
+	time = 5 SECONDS
+	reqs = list(/obj/item/stack/sheet/iron = 5,
+				/obj/item/gun/ballistic/automatic/pulsesmg,
 				/obj/item/circuitmaterial = 2,
 		        /obj/item/stack/cable_coil = 10)
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)

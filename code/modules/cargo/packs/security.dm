@@ -6,7 +6,7 @@
 /datum/supply_pack/security/armor
 	name = "Armor Crate"
 	desc = "Three additional metropolice standard issue protective vests."
-	cost = CARGO_CRATE_VALUE * 3
+	cost = CARGO_CRATE_VALUE * 4
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/clothing/suit/armor/civilprotection,
 					/obj/item/clothing/suit/armor/civilprotection,

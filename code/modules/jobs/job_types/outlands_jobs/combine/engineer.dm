@@ -51,5 +51,5 @@
 
 	user.faction += "combine"
 
-	user.change_stat(STATKEY_INT, 2)
+	user.change_stat(STATKEY_INT, 3)
 	user.change_stat(STATKEY_STR, 1)

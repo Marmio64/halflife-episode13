@@ -14,7 +14,7 @@
 	category = CAT_ARMOR
 
 /datum/crafting_recipe/rebel_uniform/check_requirements(mob/user, list/collected_requirements)
-	return HAS_TRAIT(user, TRAIT_MINDSHIELD)
+	return !HAS_TRAIT(user, TRAIT_MINDSHIELD)
 
 //same as above, but use kevlar instead of a combine suit
 /datum/crafting_recipe/rebel_uniform_kevlar
@@ -33,7 +33,7 @@
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
 
 /datum/crafting_recipe/rebel_uniform_kevlar/check_requirements(mob/user, list/collected_requirements)
-	return HAS_TRAIT(user, TRAIT_MINDSHIELD)
+	return !HAS_TRAIT(user, TRAIT_MINDSHIELD)
 
 //modify a civil protection mask
 /datum/crafting_recipe/military_gas_mask
@@ -46,7 +46,7 @@
 	category = CAT_ARMOR
 
 /datum/crafting_recipe/military_gas_mask/check_requirements(mob/user, list/collected_requirements)
-	return HAS_TRAIT(user, TRAIT_MINDSHIELD)
+	return !HAS_TRAIT(user, TRAIT_MINDSHIELD)
 
 /datum/crafting_recipe/citizen_uniform
 	name = "Citizen Jumpsuit"
