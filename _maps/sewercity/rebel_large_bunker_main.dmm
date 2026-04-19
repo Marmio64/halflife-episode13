@@ -14,6 +14,10 @@
 /obj/effect/landmark/start/outlands/technician,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
+"as" = (
+/obj/structure/halflife/barrel/triple/grey/three,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker/unpowered/rebel_large)
 "av" = (
 /turf/closed/wall/halflife/concrete/bunker,
 /area/halflife/indoors/bunker/unpowered/rebel_large/cafeteria)
@@ -616,10 +620,22 @@
 /area/halflife/indoors/bunker/unpowered/rebel_large)
 "mJ" = (
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/usp9mm,
-/obj/item/ammo_box/magazine/usp9mm,
-/obj/item/ammo_box/magazine/usp9mm,
-/obj/item/ammo_box/magazine/usp9mm,
+/obj/item/ammo_box/magazine/usp9mm{
+	pixel_x = -4;
+	pixel_y = -2
+	},
+/obj/item/ammo_box/magazine/usp9mm{
+	pixel_x = -1;
+	pixel_y = -1
+	},
+/obj/item/ammo_box/magazine/usp9mm{
+	pixel_x = 4;
+	pixel_y = 2
+	},
+/obj/item/ammo_box/magazine/usp9mm{
+	pixel_x = 8;
+	pixel_y = 4
+	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/bunker/unpowered/rebel_large/armory)
 "nc" = (
@@ -653,6 +669,10 @@
 /obj/machinery/jukebox/radio,
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/bunker/unpowered/rebel_large/cafeteria)
+"nH" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker/unpowered/rebel_large)
 "nK" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -825,6 +845,10 @@
 /obj/structure/table/halflife/no_smooth/large/metal,
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/bunker/unpowered/rebel_large/cafeteria)
+"rJ" = (
+/obj/structure/halflife/barrel/double/grey,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker/unpowered/rebel_large)
 "rR" = (
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/bunker/unpowered/rebel_large/hydroponics)
@@ -1092,6 +1116,10 @@
 /obj/machinery/vending/hydronutrients,
 /turf/open/floor/plating/indoor/tile/green,
 /area/halflife/indoors/bunker/unpowered/rebel_large/hydroponics)
+"xl" = (
+/obj/structure/halflife/pallet/stack,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker/unpowered/rebel_large)
 "xw" = (
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/bunker/unpowered/rebel_large/living_quarters)
@@ -1316,10 +1344,22 @@
 /area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
 "Co" = (
 /obj/structure/rack,
-/obj/item/ammo_box/strilka310/a762,
-/obj/item/ammo_box/strilka310/a762,
-/obj/item/ammo_box/strilka310/a762,
-/obj/item/ammo_box/strilka310/a762,
+/obj/item/ammo_box/strilka310/a762{
+	pixel_x = 0;
+	pixel_y = 1
+	},
+/obj/item/ammo_box/strilka310/a762{
+	pixel_x = 0;
+	pixel_y = -1
+	},
+/obj/item/ammo_box/strilka310/a762{
+	pixel_x = 0;
+	pixel_y = -3
+	},
+/obj/item/ammo_box/strilka310/a762{
+	pixel_x = 0;
+	pixel_y = -5
+	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/bunker/unpowered/rebel_large/armory)
 "Cw" = (
@@ -4871,7 +4911,7 @@ fn
 fn
 Cw
 fn
-fn
+as
 ZE
 Bv
 SR
@@ -4935,7 +4975,7 @@ fn
 fn
 fn
 fn
-fn
+rJ
 ZE
 Bv
 SR
@@ -5251,7 +5291,7 @@ vY
 fn
 vY
 ZE
-fn
+xl
 fn
 fn
 fn
@@ -5315,7 +5355,7 @@ vY
 fn
 vY
 ZE
-fn
+nH
 fn
 fn
 fn
