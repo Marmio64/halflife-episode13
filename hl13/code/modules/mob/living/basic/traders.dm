@@ -733,7 +733,7 @@
 		/obj/item/fishing_hook/weighted = list(PAYCHECK_CREW * 2, 2),
 		/obj/item/fishing_line/bouncy = list(PAYCHECK_CREW * 2, 2),
 		/obj/item/bait_can/worm/premium = list(PAYCHECK_CREW * 3, 2),
-		/obj/item/fuel_cell/full = list(PAYCHECK_CREW * 3, 1),
+		/obj/item/fuel_cell/full = list(PAYCHECK_CREW * 3, 2),
 	)
 
 	initial_wanteds = list(
