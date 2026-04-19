@@ -1,7 +1,7 @@
 #define STASIS_TOGGLE_COOLDOWN 50
 /obj/machinery/stasis
 	name = "lifeform stasis unit"
-	desc = "A not so comfortable looking bed with some nozzles at the top and bottom. It will keep someone in stasis."
+	desc = "An advanced combine piece of machinery that uses stasis fields to keep a body's metabolism still while keeping parts from decaying."
 	icon = 'icons/obj/machines/stasis.dmi'
 	icon_state = "stasis"
 	base_icon_state = "stasis"

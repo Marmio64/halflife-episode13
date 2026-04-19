@@ -392,11 +392,11 @@
 
 	if(!HAS_TRAIT(user, TRAIT_ENGINEER))
 		balloon_alert_to_viewers("Fumbles with [src]'s fuel bay")
-		if(!do_after(user, 5 SECONDS, src))
+		if(!do_after(user, 7 SECONDS, src))
 			return FALSE
 	playsound(loc, 'sound/items/tools/crowbar.ogg', 25, 1)
 	balloon_alert_to_viewers("Starts prying [src]'s fuel bay open")
-	if(!do_after(user, 8 SECONDS, src) && buildstate == FUSION_ENGINE_NO_DAMAGE && !is_on && fusion_cell)
+	if(!do_after(user, 6 SECONDS, src) && buildstate == FUSION_ENGINE_NO_DAMAGE && !is_on && fusion_cell)
 		return FALSE
 	balloon_alert_to_viewers("Pries [src]'s fuel bay open and removes the cell")
 	fusion_cell.update_icon()

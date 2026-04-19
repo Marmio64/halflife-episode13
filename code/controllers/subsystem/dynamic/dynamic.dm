@@ -444,7 +444,7 @@ SUBSYSTEM_DEF(dynamic)
 /// Generates the threat level using lorentz distribution and assigns peaceful_percentage.
 /datum/controller/subsystem/dynamic/proc/generate_threat()
 
-	if(SSmapping.current_map.minetype == "combat_deployment") //tdm mode shouldnt have antags spawning
+	if(SSmapping.current_map.minetype == "combat_deployment" || SSmapping.current_map.roleplay_type == "outlands") //tdm mode shouldnt have antags spawning
 		threat_level = 0
 		return
 
@@ -463,7 +463,7 @@ SUBSYSTEM_DEF(dynamic)
 
 /// Generates the midround and roundstart budgets
 /datum/controller/subsystem/dynamic/proc/generate_budgets()
-	if(SSmapping.current_map.minetype == "combat_deployment") //tdm mode shouldnt have antags spawning
+	if(SSmapping.current_map.minetype == "combat_deployment" || SSmapping.current_map.roleplay_type == "outlands") //tdm mode shouldnt have antags spawning
 		round_start_budget = 0
 		initial_round_start_budget = 0
 		mid_round_budget = 0
@@ -474,7 +474,7 @@ SUBSYSTEM_DEF(dynamic)
 	mid_round_budget = threat_level - round_start_budget
 
 /datum/controller/subsystem/dynamic/proc/setup_parameters()
-	if(SSmapping.current_map.minetype == "combat_deployment") //tdm mode shouldnt have antags spawning
+	if(SSmapping.current_map.minetype == "combat_deployment" || SSmapping.current_map.roleplay_type == "outlands") //tdm mode shouldnt have antags spawning
 		max_threat_level = 1
 
 	log_dynamic("Dynamic mode parameters for the round:")

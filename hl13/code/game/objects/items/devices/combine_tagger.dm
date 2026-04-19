@@ -18,7 +18,7 @@
 	return ITEM_INTERACT_BLOCKING
 
 /obj/item/combine_tagger/proc/tag_target(atom/target, mob/user)
-	var/target_value = 30
+	var/target_value = 35
 	var/datum/bank_account/cargo_budget = SSeconomy.get_dep_account(ACCOUNT_CAR)
 
 	if(HAS_TRAIT(target, TRAIT_COMBINE_TAGGED))
@@ -62,7 +62,7 @@
 			target_value = 250
 		if(istype(target, /mob/living/basic/halflife/zombie/zombie_grunt) || istype(target, /mob/living/basic/halflife/zombie/zombine))
 			to_chat(user, span_notice("Parasitized delegate data detected. Administering small bonus reward."))
-			target_value = 35 //just a slight extra bonus for the flavor value of it
+			target_value = 40 //just a slight extra bonus for the flavor value of it
 		if(istype(target, /mob/living/basic/halflife/headcrab) || istype(target, /mob/living/simple_animal/hostile/halflife/antlion) || istype(target, /mob/living/basic/halflife/antlion_worker) || istype(target, /mob/living/basic/halflife/grub))
 			to_chat(user, span_notice("Low-value Xenian data detected."))
 			target_value = 10 //antlions can be farmed and headcrabs are really easy to kill

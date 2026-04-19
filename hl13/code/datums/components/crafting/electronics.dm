@@ -128,6 +128,16 @@
 	category = CAT_ROBOT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
 
+/datum/crafting_recipe/healthscanner
+	name = "Health Scanner"
+	result = /obj/item/healthanalyzer
+	reqs = list(/obj/item/stack/sheet/iron = 2,
+				/obj/item/circuitmaterial/advanced = 2,
+				/obj/item/circuitmaterial = 1)
+	time = 10 SECONDS
+	category = CAT_EQUIPMENT
+	crafting_interface = CRAFTING_BENCH_ELECTRIC
+
 /datum/crafting_recipe/alyxtool
 	name = "Hacking Multitool"
 	result = /obj/item/card/emag/halflife

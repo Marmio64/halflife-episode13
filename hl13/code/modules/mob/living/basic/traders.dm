@@ -296,6 +296,7 @@
 		/obj/item/fishing_rod = list(PAYCHECK_CREW * 4.5, 2),
 		/obj/item/bait_can/worm = list(PAYCHECK_CREW * 3.5, 2),
 		/obj/item/fuel_cell/full = list(PAYCHECK_CREW * 5, 1),
+		/obj/item/defibrillator/loaded = list(PAYCHECK_CREW * 9, 1),
 	)
 
 	initial_wanteds = list(
