@@ -222,6 +222,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = JOB_OUTLANDS_SOLDIER
 	icon_state = "Detective"
 
+/obj/effect/landmark/start/outlands/sergeant
+	name = JOB_OUTLANDS_SERGEANT
+	icon_state = "Detective"
+
 /obj/effect/landmark/start/outlands/botanist
 	name = JOB_OUTLANDS_BOTANIST
 	icon_state = "Detective"

@@ -793,9 +793,19 @@
 	slowdown = -0.1
 
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss
-	slowdown = -0.3
+	slowdown = -0.35
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|HEAD
-	armor_type = /datum/armor/rebelheavy
+	armor_type = /datum/armor/brownjacket_boss
+
+/datum/armor/brownjacket_boss
+	melee = 50
+	bullet = 60
+	laser = 35
+	energy = 30
+	bomb = 50
+	fire = 55
+	acid = 45
+	wound = 20
 
 /datum/armor/reinforced_brown_jacket
 	melee = 25

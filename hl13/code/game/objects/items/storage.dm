@@ -425,6 +425,9 @@
 /obj/item/storage/backpack/halflife/satchel/radio/large
 	storage_type = /datum/storage/satchel/halflife
 
+/obj/item/storage/backpack/halflife/satchel/radio/huge
+	storage_type = /datum/storage/satchel/halflife/huge
+
 /obj/item/storage/backpack/halflife/satchel/civilprotection
 	name = "civil protection satchel"
 	desc = "A relatively small satchel often issued to civil protection units, for carrying excess gear."

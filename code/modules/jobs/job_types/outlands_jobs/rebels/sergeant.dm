@@ -1,18 +1,20 @@
-/datum/job/outlands/soldier
-	title = JOB_OUTLANDS_SOLDIER
-	description = "You are a relatively fresh soldier under the command of the bunker's lieutenant. You have a moderate amount of combat training, but will a lot of times also be expected to preform grunt work as needed."
+/datum/job/outlands/sergeant
+	title = JOB_OUTLANDS_SERGEANT
+	description = "You are a well trained sergeant in the PLF, chosen by the bunker's lieutenant as a field squad leader."
 
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
 
 	faction = FACTION_STATION
-	total_positions = 7
-	spawn_positions = 5
+	total_positions = 1
+	spawn_positions = 1
 
+	exp_requirements = 60
+	exp_required_type = EXP_TYPE_CREW
 	supervisors = SUPERVISOR_REB_LT
 	exp_granted_type = EXP_TYPE_CREW
-	config_tag = "SOLDIER"
+	config_tag = "SERGEANT"
 
-	outfit = /datum/outfit/job/outlands/soldier
+	outfit = /datum/outfit/job/outlands/sergeant
 
 	paycheck = PAYCHECK_CITIZEN
 	paycheck_department = ACCOUNT_SRV
@@ -26,16 +28,16 @@
 
 	cmode_music = 'hl13/sound/music/combat/cpviolation.ogg'
 
-/datum/outfit/job/outlands/soldier
-	name = "Bunker Soldier"
-	jobtype = /datum/job/outlands/soldier
+/datum/outfit/job/outlands/sergeant
+	name = "Bunker Sergeant"
+	jobtype = /datum/job/outlands/sergeant
 	id = /obj/item/card/id/advanced/halflife/grey
-	id_trim = /datum/id_trim/job/outlands/soldier
+	id_trim = /datum/id_trim/job/outlands/sergeant
 
 	uniform = /obj/item/clothing/under/citizen/rebel
-	suit = /obj/item/clothing/suit/armor/civilprotection
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
-	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+	suit = /obj/item/clothing/suit/armor/rebel/light
+	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
+	head = /obj/item/clothing/head/helmet/halflife/military/poland
 	gloves = /obj/item/clothing/gloves/fingerless
 
 	back = /obj/item/storage/backpack/halflife/satchel
@@ -43,22 +45,22 @@
 	r_pocket = /obj/item/flashlight
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/usp9mm = 1,
+		/obj/item/ammo_box/magazine/m4a1/service = 1,
 		/obj/item/knife/combat/survival = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-/datum/outfit/job/outlands/soldier/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
+/datum/outfit/job/outlands/sergeant/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
 	user.faction += FACTION_REFUGEE
 	user.change_stat(STATKEY_END, 1)
 	user.change_stat(STATKEY_DEX, 3)
 	user.change_stat(STATKEY_STR, 1)
-	user.change_stat(STATKEY_PER, 1)
+	user.change_stat(STATKEY_PER, 2)
 
-/datum/job/outlands/soldier/after_latejoin_spawn(mob/living/spawning)
+/datum/job/outlands/sergeant/after_latejoin_spawn(mob/living/spawning)
 	. = ..()
 	if(ishuman(spawning))
 		var/list/spawn_locs = list()

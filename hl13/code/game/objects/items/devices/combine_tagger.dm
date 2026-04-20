@@ -7,6 +7,7 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	icon_state = "sampler"
 	item_flags = NOBLUDGEON
+	var/base_target_value = 35
 
 /obj/item/combine_tagger/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	if (!isliving(interacting_with))
@@ -18,7 +19,7 @@
 	return ITEM_INTERACT_BLOCKING
 
 /obj/item/combine_tagger/proc/tag_target(atom/target, mob/user)
-	var/target_value = 35
+	var/target_value = base_target_value
 	var/datum/bank_account/cargo_budget = SSeconomy.get_dep_account(ACCOUNT_CAR)
 
 	if(HAS_TRAIT(target, TRAIT_COMBINE_TAGGED))
@@ -74,3 +75,9 @@
 		cargo_budget.adjust_money(target_value, "DB Tagged")
 		ADD_TRAIT(living_target, TRAIT_COMBINE_TAGGED, TRAIT_GENERIC)
 		return TRUE
+
+/obj/item/combine_tagger/upgraded
+	name = "Upgraded Combine DB Tagger"
+	desc = "A combine device that tags DBs of hostile xenian lifeforms and anticitizens, and increases the cargo budget in return. More dangerous targets are worth more. The more you clear out, the more resources you'll have at your disposal. This is an upgraded variant, which will give more credits per DB."
+	icon_state = "upgraded_sampler"
+	base_target_value = 50

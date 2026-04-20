@@ -299,7 +299,7 @@
 	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 
 /obj/item/clothing/suit/armor/riot/fast
-	slowdown = -0.4 //works out to be -0.15 when accounting for the sledgehammer
+	slowdown = -0.45 //works out to be -0.2 when accounting for the sledgehammer
 
 /obj/item/clothing/suit/armor/riot/Initialize(mapload)
 	. = ..()

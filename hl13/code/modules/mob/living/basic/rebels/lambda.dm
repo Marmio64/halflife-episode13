@@ -79,6 +79,12 @@
 /mob/living/basic/trooper/rebel/mp7/plf
 	name = "PLF Soldier"
 	desc = "A symbol of the Polish Resistance, proudly wielding an MP7."
+
+	maxHealth = 150
+	health = 150
+
+	ranged_cooldown = 1.75 SECONDS
+
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/plf_infantry
 	loot = list(/obj/effect/mob_spawn/corpse/human/plf_trooper)
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/plf_trooper
@@ -112,12 +118,14 @@
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/plf_veteran
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/plf_veteran
 	r_hand = /obj/item/gun/ballistic/automatic/ak47
-	maxHealth = 360 //equal to 3 standard rebel soldiers
-	health = 360
+	maxHealth = 400
+	health = 400
 
 	casingtype = /obj/item/ammo_casing/n762
 	projectilesound = "hl13/sound/weapons/ak47fire.ogg"
 	burst_shots = 3
+
+	ranged_cooldown = 1.75 SECONDS
 
 	speed = 1.25
 

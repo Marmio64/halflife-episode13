@@ -185,7 +185,7 @@
 	mask = /obj/item/cigarette/halflife
 	suit_store = /obj/item/gun/ballistic/automatic/svd
 	belt = /obj/item/melee/baton
-	l_pocket = /obj/item/knife/combat/survival
+	l_pocket = /obj/item/knife/combat
 	r_pocket = /obj/item/flashlight/seclite
 	head = /obj/item/clothing/head/beret/sec/poland
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
@@ -194,13 +194,15 @@
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
 	id = null
 
-	back = /obj/item/storage/backpack/halflife/satchel/radio/large
+	back = /obj/item/storage/backpack/halflife/satchel/radio/huge
 
 	backpack_contents = list(
 		/obj/item/megaphone = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/reagent_containers/pill/patch/medkit = 3,
 		/obj/item/ammo_box/magazine/svd = 1,
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/grenade/smokebomb = 2,
 		/obj/item/storage/fancy/cigarettes/halflife = 1,
 		/obj/item/lighter = 1,
 	)

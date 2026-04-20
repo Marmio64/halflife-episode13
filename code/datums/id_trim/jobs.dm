@@ -1364,6 +1364,10 @@
 	assignment = JOB_OUTLANDS_QUARTERMASTER
 	job = /datum/job/outlands/quartermaster
 
+/datum/id_trim/job/outlands/sergeant
+	assignment = JOB_OUTLANDS_SERGEANT
+	job = /datum/job/outlands/sergeant
+
 /datum/id_trim/job/outlands/soldier
 	assignment = JOB_OUTLANDS_SOLDIER
 	job = /datum/job/outlands/soldier

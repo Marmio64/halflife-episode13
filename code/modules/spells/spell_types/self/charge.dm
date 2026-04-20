@@ -26,11 +26,12 @@
 		var/pulled_has_spells = FALSE
 
 		for(var/datum/action/cooldown/spell/spell in pulled_living.actions)
-			spell.reset_spell_cooldown()
-			pulled_has_spells = TRUE
+			if(!istype(spell, /datum/action/cooldown/spell/charge)) //no infinite charge chains
+				spell.reset_spell_cooldown()
+				pulled_has_spells = TRUE
 
 		if(pulled_has_spells)
-			to_chat(pulled_living, span_notice("You feel raw magic flowing through you. It feels good!"))
+			to_chat(pulled_living, span_notice("You feel raw power flowing through you. It feels good!"))
 			to_chat(cast_on, span_notice("[pulled_living] suddenly feels very warm!"))
 			return
 
@@ -39,7 +40,7 @@
 	// Then charge their main hand item, then charge their offhand item
 	var/obj/item/to_charge = cast_on.get_active_held_item() || cast_on.get_inactive_held_item()
 	if(!to_charge)
-		to_chat(cast_on, span_notice("You feel magical power surging through your hands, but the feeling rapidly fades."))
+		to_chat(cast_on, span_notice("You feel great power surging through your hands, but the feeling rapidly fades."))
 		return
 
 	var/charge_return = SEND_SIGNAL(to_charge, COMSIG_ITEM_MAGICALLY_CHARGED, src, cast_on)

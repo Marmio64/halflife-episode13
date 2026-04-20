@@ -500,6 +500,13 @@
 	/// The maximum amount of fuel the cell holds
 	var/max_fuel_amount = 100
 
+/obj/item/fuel_cell/Initialize(mapload)
+	. = ..()
+	RegisterSignal(src, COMSIG_ITEM_MAGICALLY_CHARGED, PROC_REF(on_magic_charge))
+	var/static/list/loc_connections = list(
+		COMSIG_ITEM_MAGICALLY_CHARGED = PROC_REF(on_magic_charge),
+	)
+
 /obj/item/fuel_cell/low
 	icon_state = "cell-low"
 	fuel_amount = 25
@@ -539,6 +546,8 @@
 	. = ..()
 	if(ishuman(user))
 		. += "The fuel indicator reads: [get_fuel_percent()]%"
+		if(max_fuel_amount < 25)
+			. += "The cell looks badly damaged by excessive heat. It doesn't look like it will last very long."
 
 /obj/item/fuel_cell/proc/get_fuel_percent()
 	return round(100*fuel_amount/max_fuel_amount)
@@ -555,3 +564,29 @@
 /obj/item/fuel_cell/proc/set_fuel_amount(amount)
 	if(amount < 0 || amount > max_fuel_amount)
 		return
+
+/**
+ * Signal proc for [COMSIG_ITEM_MAGICALLY_CHARGED]
+ *
+ * If we, or the item we're located in, is subject to the charge spell, gain some charge back
+ */
+/obj/item/fuel_cell/proc/on_magic_charge(datum/source, datum/action/cooldown/spell/charge/spell, mob/living/caster)
+	SIGNAL_HANDLER
+
+	// This shouldn't be running if we're not being held by a mob,
+	// or if we're not within an object being held by a mob, but just in case...
+	if(!ismovable(loc))
+		return
+
+	. = COMPONENT_ITEM_CHARGED
+
+	if(25 < max_fuel_amount)
+		max_fuel_amount -= 25
+	else
+		max_fuel_amount = 5
+
+	give(25) //about 6 minutes worth of power
+
+	update_icon()
+
+	return .

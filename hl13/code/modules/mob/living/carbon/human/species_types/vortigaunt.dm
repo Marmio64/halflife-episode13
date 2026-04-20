@@ -15,6 +15,7 @@
 	var/datum/action/cooldown/spell/conjure_item/infinite_guns/vort_blast/galunga
 	var/datum/action/cooldown/spell/touch/vort_heal/vortheal
 	var/datum/action/cooldown/spell/list_target/telepathy/vort/vorttelepathy
+	var/datum/action/cooldown/spell/charge/vortal/vortcharge
 
 	bodypart_overrides = list(
 		BODY_ZONE_HEAD = /obj/item/bodypart/head/vortigaunt,
@@ -42,6 +43,9 @@
 	vorttelepathy = new(C)
 	vorttelepathy.Grant(C)
 
+	vortcharge = new(C)
+	vortcharge.Grant(C)
+
 	C.change_stat(STATKEY_INT, 3) //Vorts are naturally very intelligent
 	C.change_stat(STATKEY_STR, 1) //and a little stronger
 	C.change_stat(STATKEY_END, 2)
@@ -52,6 +56,7 @@
 	galunga.Remove(C)
 	vortheal.Remove(C)
 	vorttelepathy.Remove(C)
+	vortcharge.Remove(C)
 
 	C.change_stat(STATKEY_INT, -3)
 	C.change_stat(STATKEY_STR, -1)

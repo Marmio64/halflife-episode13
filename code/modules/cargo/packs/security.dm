@@ -262,7 +262,7 @@
 /datum/supply_pack/security/armory/manhacks
 	name = "Viscerator Crate"
 	desc = "Contains three activatable viscerators. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 6
+	cost = CARGO_CRATE_VALUE * 5.5
 	contains = list(/obj/item/grenade/spawnergrenade/manhacks,
 					/obj/item/grenade/spawnergrenade/manhacks,
 					/obj/item/grenade/spawnergrenade/manhacks)
@@ -335,3 +335,11 @@
 					/obj/item/gun/ballistic/revolver/coltpython, //6 crate value when unbuilt
 					/obj/item/ammo_box/colta357) //2.75 crate value. Everything together is 24.75. 28.75 with modular receivers, +5 for tape, round up to 35, then add one for iron and labor costs
 	crate_name = "prebuilt firearms crate"
+
+/datum/supply_pack/security/armory/headcrab_canister_targeter
+	name = "Headcrab Canister Targeter Crate"
+	desc = "An advanced radio and targeter combination. You can use it to communicate a set of coordinates to a Southwatch headcrab silo, and have a canister hotdropped onto a target. This purchase affords you four uses of said targeter."
+	cost = CARGO_CRATE_VALUE * 20
+	access_view = ACCESS_SECURITY
+	contains = list(/obj/item/halflife/cannister_targeter/modified)
+	crate_name = "headcrab canister targeter crate"

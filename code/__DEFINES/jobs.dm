@@ -155,7 +155,8 @@
 
 #define JOB_OUTLANDS_LIEUTENANT "Rebel Lieutenant"
 #define JOB_OUTLANDS_QUARTERMASTER "Rebel Quartermaster"
-#define JOB_OUTLANDS_SOLDIER "Rebel Soldier"
+#define JOB_OUTLANDS_SERGEANT "Rebel Sergeant"
+#define JOB_OUTLANDS_SOLDIER "Rebel Private"
 #define JOB_OUTLANDS_BOTANIST "Botanist"
 #define JOB_OUTLANDS_CHEF "Chef"
 #define JOB_OUTLANDS_DOCTOR "Doctor"

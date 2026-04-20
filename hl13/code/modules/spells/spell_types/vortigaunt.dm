@@ -176,3 +176,24 @@
 	desc = "A solid wall of green, vortal energy that looks rather fleeting."
 	icon_state = "shield-green"
 	initial_duration = 10 SECONDS
+
+/datum/action/cooldown/spell/charge/vortal
+	name = "Vortal Charge"
+	desc = "This vortal power can be used to recharge a variety of things in your hands, such as charging batteries or even rejuvenating the powers of fellow vortigaunts. However, it will make the user very hungry on use and has a very long cooldown. Charges whoever you are pulling, otherwise it charges what is in your hand."
+
+	button_icon = 'hl13/icons/mob/actions/actions_vortal.dmi'
+	button_icon_state = "charge"
+	background_icon_state = "bg_nature"
+
+	sound = 'hl13/sound/weapons/attack_shoot.ogg'
+	school = SCHOOL_TRANSMUTATION
+	cooldown_time = 4 MINUTES
+	cooldown_reduction_per_rank = 5 SECONDS
+
+	invocation = "GULING CHER"
+	invocation_type = INVOCATION_WHISPER
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
+
+/datum/action/cooldown/spell/charge/cast(mob/living/cast_on)
+	cast_on.adjust_nutrition(-75)
+	. = ..()
