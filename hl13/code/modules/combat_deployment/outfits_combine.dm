@@ -470,7 +470,8 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
 
-	extra_dex = 2
+	extra_dex = 3
+	extra_end = 2
 
 /datum/outfit/deployment_loadout/combine/tier4/sniper
 	name = "Deployment: Sniper OTA"
@@ -502,7 +503,7 @@
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
 	uniform = /obj/item/clothing/under/combine/overwatch
-	suit = /obj/item/clothing/suit/armor/overwatch/deathmatch
+	suit = /obj/item/clothing/suit/armor/overwatch
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch
 	belt = /obj/item/storage/belt/civilprotection/overwatch/pulsesmg

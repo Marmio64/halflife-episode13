@@ -25,6 +25,13 @@
 /obj/item/stack/sheet/halflife/plastic,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
+"aE" = (
+/obj/structure/chair/halflife/metal/red{
+	dir = 1
+	},
+/obj/effect/landmark/start/outlands/soldier,
+/turf/open/floor/plating/indoor/carpet/shaggy,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "aS" = (
 /obj/structure/closet/halflife,
 /obj/item/stack/kevlar/two,
@@ -56,7 +63,6 @@
 /obj/structure/chair/halflife/metal/folding{
 	dir = 8
 	},
-/obj/effect/landmark/start/outlands/soldier,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/bunker/unpowered/rebel_large/living_quarters)
 "ce" = (
@@ -211,6 +217,9 @@
 /obj/structure/table/halflife/metal/heavy,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
+"fm" = (
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "fn" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
@@ -676,6 +685,10 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/bunker/unpowered/rebel_large/offices)
+"nR" = (
+/obj/structure/table/halflife/wood,
+/turf/open/floor/plating/indoor/carpet/shaggy,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "ob" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/tile/green,
@@ -735,14 +748,18 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/template_noop)
+"ph" = (
+/turf/closed/wall/halflife/concrete/bunker,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "pt" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/bunker/unpowered/rebel_large/cafeteria)
 "pv" = (
 /obj/structure/window/fulltile/halflife/nosmooth/brick,
+/obj/structure/curtain/bounty/start_closed,
 /turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/bunker/unpowered/rebel_large)
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "px" = (
 /obj/structure/chair/halflife/metal/folding{
 	dir = 4
@@ -883,7 +900,6 @@
 /obj/structure/chair/halflife/metal/folding{
 	dir = 4
 	},
-/obj/effect/landmark/start/outlands/sergeant,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/bunker/unpowered/rebel_large/living_quarters)
 "sB" = (
@@ -902,9 +918,12 @@
 /obj/structure/chair/halflife/metal/folding{
 	dir = 1
 	},
-/obj/effect/landmark/start/outlands/soldier,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/bunker/unpowered/rebel_large/living_quarters)
+"tv" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "tz" = (
 /obj/item/scalpel,
 /obj/item/hemostat,
@@ -966,6 +985,13 @@
 "uB" = (
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/bunker/unpowered/rebel_large/offices)
+"uR" = (
+/obj/structure/chair/halflife/metal/red{
+	dir = 4
+	},
+/obj/effect/landmark/start/outlands/lieutenant,
+/turf/open/floor/plating/indoor/carpet/shaggy,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "uS" = (
 /obj/structure/halflife/trash/garbage{
 	pixel_x = 5;
@@ -1204,6 +1230,10 @@
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
+"zw" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "zC" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker/unpowered/rebel_large/living_quarters)
@@ -1250,6 +1280,7 @@
 "Ap" = (
 /obj/structure/table/halflife/metal/heavy,
 /obj/machinery/light/small/directional/west,
+/obj/item/stack/sheet/scrap_metal/three,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
 "AF" = (
@@ -1371,8 +1402,8 @@
 /area/halflife/indoors/bunker/unpowered/rebel_large/armory)
 "Cw" = (
 /obj/machinery/light/small/directional/west,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/bunker/unpowered/rebel_large)
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "Cx" = (
 /obj/structure/table/halflife/no_smooth/large/wood/desk{
 	dir = 1
@@ -1402,17 +1433,18 @@
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/bunker/unpowered/rebel_large/cafeteria)
 "DH" = (
-/obj/structure/halflife/barrel/triple/grey/three,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/bunker/unpowered/rebel_large)
+/obj/structure/table/halflife/wood,
+/obj/machinery/jukebox/radio,
+/turf/open/floor/plating/indoor/carpet/shaggy,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "DO" = (
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
 "DP" = (
 /obj/structure/halflife/pipes/vent,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/bunker/unpowered/rebel_large)
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "DY" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -1551,6 +1583,13 @@
 "GD" = (
 /turf/closed/wall/halflife/concrete/bunker,
 /area/halflife/indoors/bunker/unpowered/rebel_large/living_quarters)
+"GP" = (
+/obj/structure/chair/halflife/metal/red{
+	dir = 8
+	},
+/obj/effect/landmark/start/outlands/sergeant,
+/turf/open/floor/plating/indoor/carpet/shaggy,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "GT" = (
 /obj/item/paper_bin{
 	pixel_x = -3;
@@ -1664,6 +1703,13 @@
 /obj/effect/landmark/start/outlands/technician,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
+"IH" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north{
+	areastring = /area/halflife/indoors/bunker/unpowered/rebel_large/war_room
+	},
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
 "IL" = (
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/bunker/unpowered/rebel_large/living_quarters)
@@ -1731,6 +1777,11 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/template_noop)
+"JI" = (
+/obj/structure/chair/halflife/metal/red,
+/obj/effect/landmark/start/outlands/soldier,
+/turf/open/floor/plating/indoor/carpet/shaggy,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "JO" = (
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/tile/navy,
@@ -1775,7 +1826,9 @@
 /obj/machinery/door/unpowered/halflife/metal/red{
 	keylock = 1;
 	lockid = "reb_bunk_cmdoffice";
-	dir = 8
+	dir = 8;
+	name = "lieutenant's office";
+	locked = 1
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/bunker/unpowered/rebel_large/offices)
@@ -1900,6 +1953,10 @@
 	},
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/bunker/unpowered/rebel_large/offices)
+"Nd" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "Ng" = (
 /obj/structure/halflife/tank/dirty_water,
 /turf/open/floor/plating/indoor/metal/pipe,
@@ -1982,9 +2039,9 @@
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/bunker/unpowered/rebel_large/living_quarters)
 "NZ" = (
-/obj/machinery/door/unpowered/halflife/seethrough/metal,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/bunker/unpowered/rebel_large)
+/obj/machinery/door/unpowered/halflife/metal/red,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "Oe" = (
 /obj/structure/table/halflife/no_smooth/large/crafting/tinkerbench,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -1999,7 +2056,6 @@
 /area/halflife/indoors/bunker/unpowered/rebel_large/infirmary)
 "On" = (
 /obj/structure/chair/comfy/halflife/armchair,
-/obj/effect/landmark/start/outlands/lieutenant,
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/bunker/unpowered/rebel_large/offices)
 "Oq" = (
@@ -2055,6 +2111,15 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
+"OY" = (
+/obj/structure/table/halflife/wood,
+/obj/item/paper_bin{
+	pixel_x = -2;
+	pixel_y = 5
+	},
+/obj/item/pen,
+/turf/open/floor/plating/indoor/carpet/shaggy,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "Pa" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	keylock = 1;
@@ -2229,6 +2294,7 @@
 /area/halflife/indoors/bunker/unpowered/rebel_large/offices)
 "SN" = (
 /obj/structure/table/halflife/metal/grate,
+/obj/item/stack/sheet/scrap_metal/three,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
 "SR" = (
@@ -2308,7 +2374,9 @@
 /obj/machinery/door/unpowered/halflife/metal/red{
 	keylock = 1;
 	lockid = "reb_bunk_cmdoffice";
-	dir = 4
+	dir = 4;
+	name = "quartermaster's office";
+	locked = 1
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/bunker/unpowered/rebel_large/offices)
@@ -2319,7 +2387,6 @@
 /area/halflife/indoors/bunker/unpowered/rebel_large)
 "Up" = (
 /obj/structure/chair/halflife/metal/folding,
-/obj/effect/landmark/start/outlands/soldier,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/bunker/unpowered/rebel_large/living_quarters)
 "Uq" = (
@@ -2359,9 +2426,11 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
 "UM" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/bunker/unpowered/rebel_large)
+/obj/structure/sign/poster/halflife/rebel/plf/hold{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "Vf" = (
 /obj/structure/halflife/barrel/double/red,
 /turf/open/floor/plating/indoor/concrete,
@@ -2425,9 +2494,8 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
 "WC" = (
-/obj/structure/halflife/barrel/double/grey,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/bunker/unpowered/rebel_large)
+/turf/open/floor/plating/indoor/carpet/shaggy,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "WF" = (
 /obj/structure/chair/halflife/metal/folding{
 	dir = 1
@@ -2522,9 +2590,9 @@
 /turf/open/floor/plating/indoor/metal/grate/border/warning,
 /area/halflife/indoors/bunker/unpowered/rebel_large/armory)
 "ZU" = (
-/obj/structure/halflife/pallet/stack,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/bunker/unpowered/rebel_large)
+/obj/item/hl13_small_flag/poland,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 
 (1,1,1) = {"
 So
@@ -4881,13 +4949,13 @@ JY
 vY
 fn
 vY
-ZE
-ZE
-ZE
-ZE
-ZE
-ZE
-ZE
+ph
+ph
+ph
+ph
+ph
+ph
+ph
 Bv
 SR
 SR
@@ -4945,14 +5013,14 @@ JY
 Rd
 fn
 vY
-ZE
-fn
-fn
+ph
+fm
+fm
 Cw
-fn
-DH
-ZE
-Bv
+fm
+ZU
+ph
+IH
 SR
 Fp
 Fp
@@ -5010,12 +5078,12 @@ fn
 fn
 fn
 NZ
-fn
-fn
-fn
-fn
+fm
 WC
-ZE
+uR
+WC
+fm
+ph
 Bv
 SR
 Fp
@@ -5073,13 +5141,13 @@ JY
 vY
 fn
 vY
-ZE
-fn
-fn
-fn
-fn
-fn
-ZE
+ph
+fm
+JI
+nR
+aE
+fm
+ph
 Bv
 SR
 Fp
@@ -5138,12 +5206,12 @@ vY
 fn
 vY
 pv
-fn
-fn
-fn
-fn
-fn
-ZE
+fm
+JI
+nR
+aE
+fm
+ph
 Bv
 SR
 Fp
@@ -5201,13 +5269,13 @@ JY
 Rd
 fn
 vY
-ZE
-Rb
-fn
-fn
-fn
-Cb
-ZE
+ph
+Nd
+JI
+OY
+aE
+tv
+ph
 Bv
 SR
 Fp
@@ -5265,13 +5333,13 @@ JY
 DO
 fn
 vY
-ZE
+ph
 DP
-fn
-fn
-fn
-fn
-ZE
+JI
+DH
+aE
+fm
+ph
 Bv
 SR
 Fp
@@ -5329,13 +5397,13 @@ JY
 vY
 fn
 vY
-ZE
-ZU
-fn
-fn
-fn
-fn
-ZE
+ph
+fm
+JI
+nR
+aE
+fm
+ph
 Bv
 SR
 Fp
@@ -5393,13 +5461,13 @@ JY
 vY
 fn
 vY
-ZE
+ph
 UM
-fn
-fn
-fn
-fn
-ZE
+WC
+GP
+WC
+fm
+ph
 Bv
 SR
 Fp
@@ -5457,13 +5525,13 @@ JY
 Rd
 fn
 vY
-ZE
-fn
-fn
-Ji
-fn
-fn
-ZE
+ph
+ZU
+fm
+zw
+fm
+fm
+ph
 Bv
 SR
 Fp
@@ -5521,13 +5589,13 @@ ZE
 ZE
 XW
 ZE
-ZE
-ZE
-ZE
-ZE
-ZE
-ZE
-ZE
+ph
+ph
+ph
+ph
+ph
+ph
+ph
 Bv
 SR
 Fp

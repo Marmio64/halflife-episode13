@@ -66,6 +66,24 @@
 	else
 		if (map_flags & EVENT_PLANETARY_ONLY)
 			return FALSE
+
+	//hl13 edit start
+	if(SSmapping.current_map.roleplay_type == "outlands") //the gamemode is outlands RP
+		if (map_flags & EVENT_OUTLANDS_RP_BANNED) //but wait a minute... this event is banned for outlands RP mode
+			return FALSE //well, its not valid
+	if(SSmapping.current_map.roleplay_type == "prison")
+		if (map_flags & EVENT_PRISON_RP_BANNED)
+			return FALSE
+	if(SSmapping.current_map.roleplay_type == "city")
+		if (map_flags & EVENT_CITY_RP_BANNED)
+			return FALSE
+	if(SSmapping.current_map.minetype == "combat_deployment") //we are on the TDM gamemode
+		if (map_flags & EVENT_COMBAT_DEPLOYMENT_ONLY) //this event is TDM allowed, and is only for TDM. We are good to go
+			return TRUE
+		else //this event is not TDM allowed
+			return FALSE //get it out of here
+	//hl13 edit end
+
 	return TRUE
 
 // Checks if the event can be spawned. Used by event controller and "false alarm" event.

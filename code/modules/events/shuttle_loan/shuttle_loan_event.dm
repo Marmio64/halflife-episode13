@@ -11,6 +11,8 @@
 	///A list of normally unavailable (or already run) situations datums
 	var/list/unavailable_situations = list() //HL13 EDIT
 
+	map_flags = EVENT_OUTLANDS_RP_BANNED //hl13 edit
+
 /datum/round_event_control/shuttle_loan/can_spawn_event(players_amt, allow_magic = FALSE)
 	. = ..()
 	for(var/datum/round_event/running_event in SSevents.running)

@@ -42,6 +42,10 @@
 #define EVENT_SPACE_ONLY (1 << 0)
 /// Event can only run on a map which is a planet
 #define EVENT_PLANETARY_ONLY (1 << 1)
+#define EVENT_OUTLANDS_RP_BANNED (1 << 2)
+#define EVENT_PRISON_RP_BANNED (1 << 3)
+#define EVENT_CITY_RP_BANNED (1 << 4)
+#define EVENT_COMBAT_DEPLOYMENT_ONLY (1 << 5)
 /// Event timer in seconds
 #define EVENT_SECONDS *0.5
 

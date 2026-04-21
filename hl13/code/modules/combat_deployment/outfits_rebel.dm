@@ -244,7 +244,8 @@
 
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/mp7 = 4,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
 	)
 
@@ -300,7 +301,7 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	extra_str = 2
+	extra_str = 4
 	extra_end = 4
 
 /datum/outfit/deployment_loadout/rebel/tier3/vortigaunt
@@ -341,7 +342,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_per = 5
-	extra_dex = 3
+	extra_dex = 5
 
 /datum/outfit/deployment_loadout/rebel/tier3/engineer
 	name = "Deployment: Upgraded Refugee Engineer+"
@@ -519,7 +520,7 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	extra_str = 5
+	extra_str = 6
 	extra_end = 6
 
 
@@ -592,7 +593,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_per = 5
-	extra_dex = 3
+	extra_dex = 5
 
 /datum/outfit/deployment_loadout/rebel/tier4/engineer
 	name = "Deployment: Heavy Refugee Engineer"

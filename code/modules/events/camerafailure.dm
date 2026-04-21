@@ -7,6 +7,8 @@
 	category = EVENT_CATEGORY_ENGINEERING
 	description = "Turns off a random amount of cameras."
 
+	map_flags = EVENT_OUTLANDS_RP_BANNED
+
 /datum/round_event/camera_failure
 	fakeable = FALSE
 

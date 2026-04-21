@@ -126,6 +126,15 @@
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
 
+/datum/crafting_recipe/resistance_heavy_armor
+	name = "Heavy Resistance Vest"
+	result = /obj/item/clothing/suit/armor/rebel
+	reqs = list(/obj/item/clothing/suit/armor/overwatch = 1,
+				/obj/item/clothing/suit/armor/halflife/kevlar = 2)
+	time = 10 SECONDS
+	category = CAT_ARMOR
+	crafting_interface = CRAFTING_BENCH_ARMTAILOR
+
 //my armor is a bit crabby
 /datum/crafting_recipe/headcrab_helmet
 	name = "Headcrab Helmet"

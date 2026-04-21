@@ -98,7 +98,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 20 SECONDS
+	cooldown_time = 15 SECONDS
 	item_type = /obj/item/grenade/halflife/tinbomb
 	requires_hands = TRUE
 	delete_old = TRUE

@@ -1,8 +1,8 @@
 /datum/round_event_control/grid_check
 	name = "Grid Check"
 	typepath = /datum/round_event/grid_check
-	weight = 10
-	max_occurrences = 0
+	weight = 5
+	max_occurrences = 1
 	category = EVENT_CATEGORY_ENGINEERING
 	description = "Turns off all APCs for a while, or until they are manually rebooted."
 	min_wizard_trigger_potency = 0
@@ -10,6 +10,8 @@
 	/// Cooldown for the announement associated with this event.
 	/// Necessary due to the fact that this event is player triggerable.
 	COOLDOWN_DECLARE(announcement_spam_protection)
+
+	map_flags = EVENT_PRISON_RP_BANNED | EVENT_CITY_RP_BANNED
 
 /datum/round_event/grid_check
 	announce_when = 1
@@ -22,7 +24,7 @@
 			CRASH("event started without controller!")
 		if(!COOLDOWN_FINISHED(controller, announcement_spam_protection))
 			return
-	priority_announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, the station's power will be shut off for an indeterminate duration.", "Critical Power Failure", ANNOUNCER_POWEROFF)
+	//priority_announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, the station's power will be shut off for an indeterminate duration.", "Critical Power Failure", ANNOUNCER_POWEROFF)
 	if(!fake) // Only start the CD if we're real
 		COOLDOWN_START(controller, announcement_spam_protection, 30 SECONDS)
 
