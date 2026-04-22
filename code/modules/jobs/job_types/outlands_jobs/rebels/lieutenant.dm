@@ -62,10 +62,8 @@
 /datum/outfit/job/outlands/lieutenant/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
 	user.faction += FACTION_REFUGEE
-	user.change_stat(STATKEY_END, 1)
 	user.change_stat(STATKEY_DEX, 3)
-	user.change_stat(STATKEY_STR, 1)
-	user.change_stat(STATKEY_INT, 1)
+	user.change_stat(STATKEY_INT, 2)
 	user.change_stat(STATKEY_PER, 2)
 
 /datum/job/outlands/lieutenant/after_latejoin_spawn(mob/living/spawning)

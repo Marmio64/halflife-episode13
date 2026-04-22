@@ -218,6 +218,7 @@
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
 "fm" = (
+/obj/item/hl13_small_flag/poland,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "fn" = (
@@ -474,6 +475,9 @@
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
+"jr" = (
+/turf/closed/wall/halflife/concrete/bunker,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "jw" = (
 /obj/structure/table/halflife/metal,
 /obj/item/reagent_containers/cup/soup_pot,
@@ -685,10 +689,6 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/bunker/unpowered/rebel_large/offices)
-"nR" = (
-/obj/structure/table/halflife/wood,
-/turf/open/floor/plating/indoor/carpet/shaggy,
-/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "ob" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/tile/green,
@@ -748,9 +748,6 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/template_noop)
-"ph" = (
-/turf/closed/wall/halflife/concrete/bunker,
-/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "pt" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/cafeteria,
@@ -785,6 +782,11 @@
 /obj/structure/bed/halflife/mattress/stained,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/bunker/unpowered/rebel_large/infirmary)
+"qc" = (
+/obj/structure/closet/halflife,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/metal/grate/border,
+/area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
 "qf" = (
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/bunker/unpowered/rebel_large/cafeteria)
@@ -1042,6 +1044,11 @@
 	dir = 1
 	},
 /area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
+"vA" = (
+/obj/structure/table/halflife/wood,
+/obj/machinery/jukebox/radio,
+/turf/open/floor/plating/indoor/carpet/shaggy,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "vH" = (
 /obj/structure/halflife/trash/garbage{
 	pixel_x = -10;
@@ -1434,7 +1441,6 @@
 /area/halflife/indoors/bunker/unpowered/rebel_large/cafeteria)
 "DH" = (
 /obj/structure/table/halflife/wood,
-/obj/machinery/jukebox/radio,
 /turf/open/floor/plating/indoor/carpet/shaggy,
 /area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "DO" = (
@@ -1540,6 +1546,7 @@
 /area/halflife/indoors/bunker/unpowered/rebel_large/infirmary)
 "FY" = (
 /obj/structure/closet/crate/halflife/wooden,
+/obj/item/restraints/legcuffs/beartrap,
 /obj/item/restraints/legcuffs/beartrap,
 /obj/item/restraints/legcuffs/beartrap,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -1702,13 +1709,6 @@
 /obj/machinery/light/small/directional/east,
 /obj/effect/landmark/start/outlands/technician,
 /turf/open/floor/plating/indoor/tile/black,
-/area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
-"IH" = (
-/obj/structure/cable,
-/obj/machinery/power/apc/auto_name/directional/north{
-	areastring = /area/halflife/indoors/bunker/unpowered/rebel_large/war_room
-	},
-/turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
 "IL" = (
 /turf/open/floor/plating/indoor/tile,
@@ -1957,6 +1957,13 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
+"Ne" = (
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/north{
+	areastring = /area/halflife/indoors/bunker/unpowered/rebel_large/war_room
+	},
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
 "Ng" = (
 /obj/structure/halflife/tank/dirty_water,
 /turf/open/floor/plating/indoor/metal/pipe,
@@ -2431,6 +2438,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
+"UT" = (
+/obj/structure/closet/halflife,
+/turf/open/floor/plating/indoor/metal/grate/border,
+/area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
 "Vf" = (
 /obj/structure/halflife/barrel/double/red,
 /turf/open/floor/plating/indoor/concrete,
@@ -2590,7 +2601,6 @@
 /turf/open/floor/plating/indoor/metal/grate/border/warning,
 /area/halflife/indoors/bunker/unpowered/rebel_large/armory)
 "ZU" = (
-/obj/item/hl13_small_flag/poland,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 
@@ -3561,7 +3571,7 @@ Fp
 Fp
 Fp
 Fp
-Fp
+SR
 SR
 SR
 SR
@@ -3625,8 +3635,8 @@ Fp
 Fp
 Fp
 Fp
-Fp
 SR
+UT
 IT
 IT
 SR
@@ -3689,8 +3699,8 @@ Fp
 Fp
 Fp
 Fp
-Fp
 SR
+wR
 IT
 IT
 vJ
@@ -3753,8 +3763,8 @@ Fp
 Fp
 Fp
 Fp
-Fp
 SR
+qc
 IT
 IT
 SR
@@ -4949,13 +4959,13 @@ JY
 vY
 fn
 vY
-ph
-ph
-ph
-ph
-ph
-ph
-ph
+jr
+jr
+jr
+jr
+jr
+jr
+jr
 Bv
 SR
 SR
@@ -5013,14 +5023,14 @@ JY
 Rd
 fn
 vY
-ph
-fm
-fm
-Cw
-fm
+jr
 ZU
-ph
-IH
+ZU
+Cw
+ZU
+fm
+jr
+Ne
 SR
 Fp
 Fp
@@ -5078,12 +5088,12 @@ fn
 fn
 fn
 NZ
-fm
+ZU
 WC
 uR
 WC
-fm
-ph
+ZU
+jr
 Bv
 SR
 Fp
@@ -5141,13 +5151,13 @@ JY
 vY
 fn
 vY
-ph
-fm
+jr
+ZU
 JI
-nR
+DH
 aE
-fm
-ph
+ZU
+jr
 Bv
 SR
 Fp
@@ -5206,12 +5216,12 @@ vY
 fn
 vY
 pv
-fm
+ZU
 JI
-nR
+DH
 aE
-fm
-ph
+ZU
+jr
 Bv
 SR
 Fp
@@ -5269,13 +5279,13 @@ JY
 Rd
 fn
 vY
-ph
+jr
 Nd
 JI
 OY
 aE
 tv
-ph
+jr
 Bv
 SR
 Fp
@@ -5333,13 +5343,13 @@ JY
 DO
 fn
 vY
-ph
+jr
 DP
 JI
-DH
+vA
 aE
-fm
-ph
+ZU
+jr
 Bv
 SR
 Fp
@@ -5397,13 +5407,13 @@ JY
 vY
 fn
 vY
-ph
-fm
+jr
+ZU
 JI
-nR
+DH
 aE
-fm
-ph
+ZU
+jr
 Bv
 SR
 Fp
@@ -5461,13 +5471,13 @@ JY
 vY
 fn
 vY
-ph
+jr
 UM
 WC
 GP
 WC
-fm
-ph
+ZU
+jr
 Bv
 SR
 Fp
@@ -5525,13 +5535,13 @@ JY
 Rd
 fn
 vY
-ph
+jr
+fm
 ZU
-fm
 zw
-fm
-fm
-ph
+ZU
+ZU
+jr
 Bv
 SR
 Fp
@@ -5589,13 +5599,13 @@ ZE
 ZE
 XW
 ZE
-ph
-ph
-ph
-ph
-ph
-ph
-ph
+jr
+jr
+jr
+jr
+jr
+jr
+jr
 Bv
 SR
 Fp
@@ -5785,9 +5795,9 @@ ZE
 Bv
 SR
 IT
+IT
 Tz
 SR
-Fp
 Fp
 Fp
 Fp
@@ -5850,8 +5860,8 @@ Bv
 vJ
 IT
 IT
+IT
 SR
-Fp
 Fp
 Fp
 Fp
@@ -5914,8 +5924,8 @@ Bv
 SR
 IT
 IT
+IT
 SR
-Fp
 Fp
 Fp
 Fp
@@ -5979,7 +5989,7 @@ SR
 IT
 vT
 SR
-Fp
+SR
 Fp
 Fp
 Fp

@@ -1,3 +1,9 @@
+/mob/living/basic/trader/halflife/grabbedby(mob/living/user, supress_message = FALSE)
+	if(stat == CONSCIOUS)
+		to_chat(user, span_warning("The [src] resists your grab!"))
+		return FALSE
+
+
 /mob/living/basic/trader/halflife/refugee
 	name = "Refugee Smuggler"
 	desc = "A gruff looking man, with the wares you need, though perhaps not the ones you want. His coat conceals a revolver, and a hefty amount of body armor."
@@ -104,6 +110,11 @@
 	death_sound = 'hl13/sound/voice/human/scream/malescream_8.ogg'
 
 	faction = list(FACTION_REFUGEE)
+
+/mob/living/basic/trooper/rebel/mp7/refugee/grabbedby(mob/living/user, supress_message = FALSE)
+	if(stat == CONSCIOUS)
+		to_chat(user, span_warning("The [src] resists your grab!"))
+		return FALSE
 
 /mob/living/basic/trooper/rebel/mp7/refugee/Initialize(mapload)
 	. = ..()

@@ -10,6 +10,11 @@
 /obj/structure/halflife/barrel/triple/grey/two,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
+"g" = (
+/obj/structure/closet/halflife,
+/obj/effect/spawner/random/halflife/loot/uncommon,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer)
 "h" = (
 /obj/modular_map_connector,
 /turf/template_noop,
@@ -78,6 +83,11 @@
 /area/template_noop)
 "S" = (
 /turf/closed/wall/halflife/sewer,
+/area/halflife/indoors/sewer)
+"X" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/effect/spawner/random/halflife/loot/consumables,
+/turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "Y" = (
 /obj/structure/table/halflife/metal/grate,
@@ -185,7 +195,7 @@ N
 (8,1,1) = {"
 N
 S
-t
+g
 t
 t
 F
@@ -199,7 +209,7 @@ N
 (9,1,1) = {"
 N
 S
-t
+X
 t
 t
 u

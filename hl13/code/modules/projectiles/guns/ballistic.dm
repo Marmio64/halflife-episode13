@@ -399,6 +399,10 @@
 	name = "\improper warden's snubnose revolver"
 	desc = "A well maintained, smooth looking revolver. It is small, compact, and only fires .38 rounds. It seems intimidating, but barely fired. Ammunition for this gun is likely very sparse."
 
+/obj/item/gun/ballistic/revolver/snubnose/rebel_qm
+	name = "\improper quartermaster's snubnose revolver"
+	desc = "A revolver that was likely stolen from a high ranking combine official, or kept as well-maintained relic from long ago. It seems intimidating, but barely fired. Ammunition for this gun is likely very sparse."
+
 // Can technically down someone in about a second if you hit all pellets point blank in two shots, but unlikely.
 /obj/item/gun/ballistic/shotgun/spas12
 	name = "SPAS 12"
