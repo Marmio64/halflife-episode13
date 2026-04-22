@@ -728,7 +728,7 @@
 		/obj/item/cigarette/halflife = list(PAYCHECK_CREW * 0.5, 10),
 		/obj/item/reagent_containers/cup/soup_pot = list(PAYCHECK_CREW, 3),
 		/obj/item/lighter = list(PAYCHECK_CREW * 0.5, 3),
-		/obj/item/food/canned/halflife/beans = list(PAYCHECK_CREW * 2, 3),
+		/obj/item/food/canned/halflife/beans = list(PAYCHECK_CREW * 2, 5),
 		/obj/item/halflife/nutrient_bar_wrapping/water = list(PAYCHECK_CREW, 5),
 		/obj/item/reagent_containers/pill/antitox = list(PAYCHECK_CREW, 5),
 		/obj/item/halflife/antenna = list(PAYCHECK_CREW * 4, 3),
