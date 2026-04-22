@@ -328,7 +328,7 @@
 
 	head = /obj/item/clothing/head/beanie/black
 	uniform = /obj/item/clothing/under/citizen/rebel
-	gloves = /obj/item/clothing/gloves/fingerless
+	gloves = /obj/item/clothing/gloves/color/black //burn protection
 	suit = /obj/item/clothing/suit/armor/civilprotection
 	suit_store = /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
 	belt = /obj/item/gun/ballistic/automatic/pistol/usp
@@ -574,7 +574,7 @@
 
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
 	uniform = /obj/item/clothing/under/citizen/rebel
-	gloves = /obj/item/clothing/gloves/fingerless
+	gloves = /obj/item/clothing/gloves/color/black //burn protection
 	suit = /obj/item/clothing/suit/armor/rebel/light
 	suit_store = /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
 	belt = /obj/item/gun/ballistic/revolver/coltpython
