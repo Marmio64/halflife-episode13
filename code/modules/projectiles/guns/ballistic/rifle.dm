@@ -257,6 +257,31 @@
 		return FALSE
 	return ..()
 
+/obj/item/gun/ballistic/rifle/rebarxbow/attackby(obj/item/A, mob/living/user, params) //hl13 edit, able to load a crossbow thats already drawn
+	. = ..()
+	if (!bolt_locked && chambered == null)
+		chamber_round()
+		A.update_appearance()
+		update_appearance()
+
+		var/protected = FALSE
+
+		if(ishuman(user))
+			var/mob/living/carbon/human/U = user
+			if(U.gloves)
+				var/obj/item/clothing/gloves/electrician_gloves = U.gloves
+				if(electrician_gloves.max_heat_protection_temperature && electrician_gloves.max_heat_protection_temperature > 360)
+					protected = TRUE
+			var/protection = U.get_thermal_protection()
+			if(protection > 360)
+				protected = TRUE
+
+		if(!protected && !HAS_TRAIT(user, TRAIT_RESISTHEAT) && !HAS_TRAIT(user, TRAIT_RESISTHEATHANDS))
+			user.apply_damage(15, BURN, user.get_active_hand(), wound_bonus = CANT_WOUND) //yeowch
+			to_chat(user, span_userdanger("You burn your hand loading the crossbow as the bolt instantly heats up! Wear protective gear or load the bolt first!"))
+			INVOKE_ASYNC(user, TYPE_PROC_REF(/mob, emote), "scream")
+			playsound(user, SFX_SEAR, 50, TRUE)
+
 /obj/item/gun/ballistic/rifle/rebarxbow/shoot_with_empty_chamber(mob/living/user)
 	if(chambered || !magazine || !length(magazine.contents))
 		return ..()

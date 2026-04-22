@@ -427,9 +427,9 @@
 	else if(FACTION_PIRATE in ransomee.faction) //can't ransom your fellow pirates to CentCom!
 		return 0
 	else if(HAS_TRAIT(ransomee, TRAIT_HIGH_VALUE_RANSOM))
-		return 2500 //hl13 edit
+		return 1000 //hl13 edit
 	else
-		return 500 //hl13 edit
+		return 200 //hl13 edit
 
 /datum/export/pirate/ransom/sell_object(mob/living/carbon/human/sold_item, datum/export_report/report, dry_run = TRUE, apply_elastic = TRUE)
 	. = ..()
