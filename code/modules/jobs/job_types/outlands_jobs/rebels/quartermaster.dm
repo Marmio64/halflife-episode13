@@ -17,6 +17,8 @@
 	paycheck_department = ACCOUNT_SRV
 	display_order = JOB_DISPLAY_ORDER_QUARTERMASTER
 
+	mind_traits = list(HEAD_OF_STAFF_MIND_TRAITS)
+
 	job_flags = JOB_EQUIP_RANK|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS|JOB_OUTLANDS_JOB
 
 	departments_list = list(
