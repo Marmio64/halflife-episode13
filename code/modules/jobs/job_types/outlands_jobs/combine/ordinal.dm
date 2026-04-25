@@ -39,7 +39,7 @@
 	id = /obj/item/card/id/advanced/halflife/combine/one
 
 	id_trim = /datum/id_trim/job/outlands/ordinal
-	ears = /obj/item/radio/headset/civilprotection/deployment
+	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
 
 	belt = /obj/item/storage/belt/civilprotection/overwatch/ar2
 

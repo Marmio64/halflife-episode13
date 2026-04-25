@@ -109,7 +109,7 @@
 	fire_delay = 2
 	burst_size = 1
 	spread = 4
-	recoil = 0.5
+	recoil = 0.4
 	can_suppress = FALSE
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY
@@ -171,7 +171,7 @@
 	fire_rate = 0.5 SECONDS
 	fire_delay = 5
 
-//cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30.
+//cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30, and is slightly less accurate.
 //about 1.96 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/servicerifle
 	name = "\improper Service Rifle"

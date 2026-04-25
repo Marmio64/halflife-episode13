@@ -478,7 +478,7 @@
 		/obj/item/clothing/head/helmet/halflife/headcrab/gonome = list(PAYCHECK_CREW * 4, 1),
 		/obj/item/clothing/suit/armor/platearmor/heavy = list(PAYCHECK_CREW * 7, 1),
 		/obj/item/clothing/mask/bandana/sinew = list(PAYCHECK_CREW * 0.5, 2),
-		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 1.25, 1),
+		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 1.25, 3),
 		/obj/item/knife/combat = list(PAYCHECK_CREW * 5.5, 3),
 		/obj/item/spear/halflife/deathmatch = list(PAYCHECK_CREW * 5.5, 3),
 		/obj/item/stack/medical/bandage = list(PAYCHECK_CREW * 0.75, 5),
