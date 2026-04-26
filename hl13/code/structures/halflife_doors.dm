@@ -30,6 +30,7 @@
 	halflife_flags_1 = LOCKABLE_1
 	do_sparks = FALSE
 	has_access_panel = FALSE
+	lock_difficulty = 0
 	var/door_type = null
 	var/solidity = SOLID
 	var/frametype = "metal"
@@ -45,8 +46,6 @@
 	var/lockhash = 0
 	var/lockid = null
 	var/masterkey = TRUE //if masterkey can open this regardless
-
-	var/lock_difficulty = 0 // plus for extra difficulty, minus for less. Five is incredibly difficult, two will add some noticeable difficulty.
 
 /obj/machinery/door/unpowered/halflife/Initialize()
 	. = ..()
