@@ -6,7 +6,7 @@
 
 /obj/structure/halflife/cargotruck
 	name = "Hauler"
-	desc = "Some kind of cargo truck."
+	desc = "What is this... Some kind of cargo truck?"
 	icon = 'hl13/icons/obj/port/van.dmi'
 	max_integrity = 1500
 	pixel_x = -12
@@ -15,6 +15,12 @@
 	density = TRUE
 	anchored = TRUE
 	icon_state = "van_base"
+
+/obj/structure/halflife/cargotruck/handle_deconstruct(disassembled)
+	if(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION)
+		return
+
+	new /obj/item/stack/sheet/scrap_metal(loc, 5)
 
 /obj/structure/halflife/vehicle/tau
 	name = "Destroyed Combine APC"

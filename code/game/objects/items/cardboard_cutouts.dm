@@ -338,6 +338,8 @@
 
 /obj/item/cardboard_cutout/spy_disguise/med_cop
 	starting_cutout = "Medical Cop"
+	slowdown = 0.25
+	drag_slowdown = 0.25
 
 /datum/cardboard_cutout/med_cop
 	name = "Medical Cop"
@@ -358,3 +360,31 @@
 	mask = /obj/item/clothing/mask/gas/civilprotection/medical
 	r_hand = /obj/item/gun/ballistic/automatic/mp7
 	l_hand = /obj/item/toy/balloon/combine
+
+////////// Cell Lead
+
+/obj/item/cardboard_cutout/spy_disguise/cell_leader
+	starting_cutout = "Rebel Cell Leader"
+	slowdown = 0
+	drag_slowdown = 0
+
+/datum/cardboard_cutout/cell_leader
+	name = "Rebel Cell Leader"
+	applied_name = "Rebel Cell Leader"
+	applied_desc = "A masterful disguise outfit of a Rebel Cell Leader."
+	outfit = /datum/outfit/cell_leader_cutout
+
+/datum/cardboard_cutout/cell_leader/get_name()
+	return "Rebel Cell Leader"
+
+/datum/outfit/cell_leader_cutout
+	name = "Rebel Cell Leader Cardboard cutout"
+
+	suit = /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket
+	r_hand = /obj/item/gun/ballistic/revolver/coltpython
+	head = /obj/item/clothing/head/beret/sec/poland
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
+	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/fingerless
+	glasses = /obj/item/clothing/glasses/eyepatch
+	back = /obj/item/storage/backpack/halflife/satchel/radio/large

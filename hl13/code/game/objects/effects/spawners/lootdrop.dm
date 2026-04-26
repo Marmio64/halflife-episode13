@@ -69,6 +69,7 @@
 				/obj/item/stack/kevlar,
 				/obj/item/halflife/combine_battery,
 				/obj/item/fishing_hook,
+				/obj/item/reagent_containers/cup/glass/canteen,
 				/obj/item/stack/spacecash/c10,
 				/obj/item/stack/spacecash/c20
 				)
@@ -472,6 +473,21 @@
 				/mob/living/basic/halflife/zombie/poison = 1,
 				/mob/living/basic/halflife/zombie/zombie_grunt = 1,
 				/mob/living/basic/halflife/zombie/zombine = 1,
+				)
+
+/obj/effect/spawner/random/halflife/random_zombie_strong
+	name = "random strong zombie"
+	icon = 'hl13/icons/effects/random_spawners.dmi'
+	icon_state = "random_zombie"
+	spawn_loot_count = 1
+
+	loot = list(
+				/mob/living/basic/halflife/zombie/deployment = 1,
+				/mob/living/basic/halflife/zombie/engineer/deployment = 1,
+				/mob/living/basic/halflife/zombie/fast/deployment = 1,
+				/mob/living/basic/halflife/zombie/poison/deployment = 1,
+				/mob/living/basic/halflife/zombie/zombie_grunt/deployment = 1,
+				/mob/living/basic/halflife/zombie/zombine/deployment = 1,
 				)
 
 /obj/effect/spawner/random/halflife/random_zombie_rare

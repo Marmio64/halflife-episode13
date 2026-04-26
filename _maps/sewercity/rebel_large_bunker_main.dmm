@@ -488,6 +488,10 @@
 /obj/item/clothing/mask/gas/hl2/military/hardened,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/bunker/unpowered/rebel_large/armory)
+"jD" = (
+/obj/machinery/door/unpowered/halflife/seethrough/grate,
+/turf/open/space/basic,
+/area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
 "jK" = (
 /obj/structure/table/halflife/no_smooth/large/crafting/ammobench,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -545,6 +549,7 @@
 "kA" = (
 /obj/structure/closet/crate/freezer/halflife,
 /obj/item/reagent_containers/blood/o_minus,
+/obj/item/reagent_containers/blood/random,
 /obj/item/reagent_containers/blood/random,
 /obj/item/reagent_containers/blood/random,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -987,6 +992,11 @@
 "uB" = (
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/bunker/unpowered/rebel_large/offices)
+"uO" = (
+/obj/structure/halflife/storage/shelf,
+/obj/item/storage/box/lights/mixed,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker/unpowered/rebel_large)
 "uR" = (
 /obj/structure/chair/halflife/metal/red{
 	dir = 4
@@ -1102,8 +1112,7 @@
 /area/halflife/indoors/bunker/unpowered/rebel_large)
 "wF" = (
 /obj/structure/closet/crate/halflife/wooden,
-/obj/item/storage/box/lights/mixed,
-/obj/item/storage/box/lights/bulbs,
+/obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
 "wH" = (
@@ -1338,7 +1347,7 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
 "BI" = (
-/obj/item/reagent_containers/spray/cleaner,
+/obj/structure/closet/crate/trashcart,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
 "BJ" = (
@@ -1465,6 +1474,11 @@
 /obj/machinery/gibber,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/bunker/unpowered/rebel_large/cafeteria)
+"Eu" = (
+/obj/item/reagent_containers/cup/bucket,
+/obj/item/pushbroom,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker/unpowered/rebel_large)
 "Ey" = (
 /obj/structure/halflife/pipes/piped,
 /turf/open/floor/plating/indoor/tile/black,
@@ -1893,6 +1907,11 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/bunker/unpowered/rebel_large/living_quarters)
+"Mt" = (
+/obj/structure/mop_bucket/janitorialcart,
+/obj/item/mop,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker/unpowered/rebel_large)
 "Mw" = (
 /obj/structure/closet/crate/halflife,
 /obj/item/wallframe/apc,
@@ -2234,6 +2253,10 @@
 /obj/structure/halflife/trash/food/glass,
 /turf/open/floor/plating/ground/rockunder,
 /area/template_noop)
+"QY" = (
+/obj/structure/sink/halflife/clean,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker/unpowered/rebel_large)
 "Rb" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -2333,9 +2356,13 @@
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/bunker/unpowered/rebel_large/offices)
 "Tz" = (
-/obj/structure/halflife/trash/garbage,
-/turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
+/obj/structure/table/halflife/no_smooth/large/metal{
+	dir = 8
+	},
+/obj/item/storage/bag/trash,
+/obj/item/reagent_containers/spray/cleaner,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker/unpowered/rebel_large)
 "TE" = (
 /obj/structure/closet/crate/halflife/wooden,
 /obj/effect/spawner/random/halflife/loot,
@@ -5664,12 +5691,12 @@ rj
 fn
 Ap
 ZE
-Bv
-Bv
-Bv
-Bv
-Bv
-Bv
+uO
+Fs
+Eu
+Tz
+ZE
+IT
 Bv
 SR
 Fp
@@ -5728,13 +5755,13 @@ fn
 fn
 cC
 ZE
+uO
+fn
+fn
+rj
+ZE
+IT
 Bv
-SR
-SR
-SR
-SR
-SR
-SR
 SR
 Fp
 Fp
@@ -5790,16 +5817,16 @@ fn
 fn
 fn
 fn
+fn
+mp
+fn
+fn
+fn
 rj
 ZE
+IT
 Bv
 SR
-IT
-IT
-Tz
-SR
-Fp
-Fp
 Fp
 Fp
 So
@@ -5856,14 +5883,14 @@ UH
 fn
 rj
 ZE
+rj
+fn
+fn
+rj
+ZE
+IT
 Bv
-vJ
-IT
-IT
-IT
 SR
-Fp
-Fp
 Fp
 Fp
 So
@@ -5920,14 +5947,14 @@ Ot
 Ji
 fn
 ZE
+QY
+FP
+Mt
+BI
+ZE
+IT
 Bv
 SR
-IT
-IT
-IT
-SR
-Fp
-Fp
 Fp
 Fp
 So
@@ -5983,15 +6010,15 @@ fn
 ZE
 ZE
 Tl
-ZE
-Bv
+SR
+SR
+SR
+SR
+SR
 SR
 IT
-vT
+Bv
 SR
-SR
-Fp
-Fp
 Fp
 Fp
 So
@@ -6036,7 +6063,7 @@ rj
 fn
 zs
 fn
-BI
+rj
 fn
 yh
 ZE
@@ -6047,15 +6074,15 @@ fn
 ZE
 eF
 Tl
-ZE
-Bv
+SR
+vT
+IT
+IT
+IT
 SR
 IT
-vT
+Bv
 SR
-Fp
-Fp
-Fp
 Fp
 Fp
 So
@@ -6111,15 +6138,15 @@ fn
 ZE
 BH
 Tl
-ZE
+SR
+IT
+IT
+IT
+IT
+jD
+IT
 Bv
 SR
-SR
-SR
-SR
-Fp
-Fp
-Fp
 Fp
 Fp
 So
@@ -6175,15 +6202,15 @@ rj
 ZE
 eF
 Tl
-ZE
+SR
+vT
+IT
+IT
+IT
+SR
+IT
 Bv
 SR
-Fp
-Fp
-Fp
-Fp
-Fp
-Fp
 Fp
 Fp
 So
@@ -6239,15 +6266,15 @@ ZE
 ZE
 ZE
 ZE
-ZE
+SR
+SR
+SR
+SR
+SR
+SR
+IT
 Bv
 SR
-Fp
-Fp
-Fp
-Fp
-Fp
-Fp
 Fp
 Fp
 So
@@ -6305,13 +6332,13 @@ Bv
 Bv
 Bv
 Bv
+Bv
+Bv
+Bv
+Bv
+Bv
+Bv
 SR
-Fp
-Fp
-Fp
-Fp
-Fp
-Fp
 Fp
 Fp
 So
@@ -6370,12 +6397,12 @@ SR
 SR
 SR
 SR
-Fp
-Fp
-Fp
-Fp
-Fp
-Fp
+SR
+SR
+SR
+SR
+SR
+SR
 Fp
 Fp
 So

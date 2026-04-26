@@ -40,6 +40,17 @@
 	category = CAT_EQUIPMENT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
 
+/datum/crafting_recipe/upgraded_combine_tagger
+	name = "Upgraded Combine Tagger"
+	result = /obj/item/combine_tagger/upgraded
+	reqs = list(/obj/item/circuitmaterial/advanced = 2,
+				/obj/item/fuel_cell = 1,
+				/obj/item/combine_tagger = 1,
+				/obj/item/circuitmaterial = 2)
+	time = 5 SECONDS
+	category = CAT_EQUIPMENT
+	crafting_interface = CRAFTING_BENCH_ELECTRIC
+
 /datum/crafting_recipe/combine_battery
 	name = "Charged Combine Battery"
 	result = /obj/item/halflife/combine_battery
