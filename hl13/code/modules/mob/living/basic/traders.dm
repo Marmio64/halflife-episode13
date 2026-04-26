@@ -492,7 +492,7 @@
 		/obj/item/food/meat/steak/plain/human = list(PAYCHECK_CREW * 1.5, 15, ""),
 		/obj/item/food/meat/slab/human = list(PAYCHECK_CREW * 1.5, 15, ""),
 		/obj/item/food/fishmeat = list(PAYCHECK_CREW, 10, ""),
-		/obj/item/organ/heart = list(PAYCHECK_CREW * 2, 5, ""),
+		/obj/item/organ/heart = list(PAYCHECK_CREW, 5, ""),
 		/obj/item/reagent_containers/pill/patch/grubnugget = list(PAYCHECK_CREW * 0.25, 15, ""),
 		/obj/item/food/xen/xenbranch = list(PAYCHECK_CREW * 0.5, 5, ""),
 		/obj/item/stack/sheet/animalhide/human = list(PAYCHECK_CREW * 0.5, 10, ""),

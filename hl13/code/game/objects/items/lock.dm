@@ -6,7 +6,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	item_flags = LOCKING_ITEM
 	//(1 Master, 5 Expert, 10 Standard, 17 Novice, 20+ Beginner)
-	lock_difficulty = 10
+	//lock_difficulty = 10
 	//if the lock is open and free to use
 	var/lock_open = FALSE
 	//if the lock object is locked

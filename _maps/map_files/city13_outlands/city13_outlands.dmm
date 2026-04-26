@@ -1472,6 +1472,11 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/productioncenter)
+"bXP" = (
+/obj/structure/closet/halflife,
+/obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/outlands)
 "bXS" = (
 /obj/structure/table/halflife/no_smooth/wood/square,
 /turf/open/floor/plating/indoor/checkered,
@@ -2070,12 +2075,11 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/conscript_bunker)
 "cTD" = (
-/obj/structure/halflife/trash/garbage{
-	pixel_x = 8;
-	pixel_y = 18
+/obj/machinery/door/unpowered/halflife/metal{
+	dir = 8
 	},
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/indoors/outlands)
+/turf/open/floor/plating/indoor/lino,
+/area/halflife/indoors/townhall/civilprotection)
 "cTE" = (
 /obj/machinery/photocopier,
 /obj/machinery/keycard_auth/wall_mounted/directional/north,
@@ -2624,6 +2628,11 @@
 /mob/living/basic/halflife/zombie,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
+"dOL" = (
+/obj/structure/chair/comfy/halflife/armchair,
+/obj/effect/spawner/random/halflife/random_zombie,
+/turf/open/floor/plating/indoor/carpet,
+/area/halflife/indoors/outlands)
 "dPy" = (
 /obj/structure/halflife/stationclock,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -3366,6 +3375,17 @@
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bar/apartments)
+"ePx" = (
+/obj/item/reagent_containers/cup/glass/drinkingglass/shotglass{
+	pixel_x = -2;
+	pixel_y = 5
+	},
+/obj/item/reagent_containers/cup/glass/bottle/vodka{
+	pixel_x = 6;
+	pixel_y = 16
+	},
+/turf/open/floor/plating/indoor/carpet,
+/area/halflife/indoors/outlands)
 "ePB" = (
 /obj/structure/halflife/pipes/vent,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -3668,12 +3688,6 @@
 /obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/outlands)
-"fkM" = (
-/obj/machinery/door/unpowered/halflife/metal{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/lino,
-/area/halflife/indoors/townhall/civilprotection)
 "flU" = (
 /obj/structure/railing/halflife/wood{
 	dir = 4
@@ -4985,7 +4999,8 @@
 /obj/machinery/door/unpowered/halflife/metal/red{
 	keylock = 1;
 	locked = 1;
-	dir = 1
+	dir = 1;
+	lockid = "condemned_armory"
 	},
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/outlands)
@@ -5641,6 +5656,11 @@
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/outlands)
+"iif" = (
+/obj/structure/closet/halflife,
+/obj/effect/spawner/random/halflife/loot/rare,
+/turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/outlands)
 "iiv" = (
 /obj/effect/spawner/random/halflife/random_bullsquid,
@@ -7313,6 +7333,12 @@
 /obj/structure/flora/xen/leafy,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/slums)
+"kIL" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/lino,
+/area/halflife/indoors/townhall/civilprotection)
 "kIU" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/tile/kitchen,
@@ -7830,6 +7856,13 @@
 /obj/machinery/light/small/cyan/directional/east,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/armory)
+"lzk" = (
+/obj/structure/closet/halflife,
+/obj/item/food/chocolatebar,
+/obj/item/ammo_box/c38,
+/obj/item/melee/baton,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/outlands)
 "lzu" = (
 /obj/machinery/status_display/evac/directional/south,
 /turf/open/floor/plating/indoor/tiled10,
@@ -8758,6 +8791,12 @@
 "mNk" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/outdoors)
+"mNl" = (
+/obj/structure/chair/office/halflife/red{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/carpet,
+/area/halflife/indoors/outlands)
 "mNn" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 8;
@@ -9128,6 +9167,10 @@
 /obj/structure/railing/halflife/solo,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/plaza)
+"njW" = (
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/outlands)
 "nkl" = (
 /obj/structure/alien/weeds,
 /obj/structure/halflife/trash/garbage{
@@ -10195,6 +10238,10 @@
 "oLu" = (
 /obj/machinery/combine_walllight/directional/west,
 /turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/outlands)
+"oLy" = (
+/obj/machinery/door/unpowered/halflife/wood,
+/turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/outlands)
 "oMc" = (
 /obj/machinery/light/small/directional/west,
@@ -14996,9 +15043,15 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands/shop)
 "vqm" = (
-/obj/structure/table/halflife/metal/alt,
-/obj/effect/spawner/random/halflife/loot/rare,
-/turf/open/floor/plating/indoor/tile/black,
+/obj/item/hl2key{
+	lockid = "condemned_armory";
+	name = "armory key"
+	},
+/obj/structure/table/halflife/no_smooth/large/wood/desk{
+	dir = 1
+	},
+/obj/machinery/light/small/red/directional/west,
+/turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/outlands)
 "vqw" = (
 /turf/open/floor/plating/indoor/tile/black,
@@ -16479,12 +16532,6 @@
 "xwY" = (
 /turf/closed/mineral/random,
 /area/halflife/indoors/sewer/cave)
-"xxk" = (
-/obj/machinery/door/unpowered/halflife/metal{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/lino,
-/area/halflife/indoors/townhall/civilprotection)
 "xxx" = (
 /obj/structure/halflife/tank/pipe,
 /turf/open/floor/plating/indoor/concrete,
@@ -87733,10 +87780,10 @@ sEp
 kCc
 cHK
 ttO
-eGo
-eGo
-eGo
-eGo
+upq
+upq
+upq
+upq
 upq
 upq
 upq
@@ -87991,10 +88038,10 @@ kCc
 cHK
 ttO
 upq
-upq
-upq
-upq
-upq
+dOL
+vqm
+mNl
+dYn
 upq
 upq
 upq
@@ -88248,10 +88295,10 @@ kCc
 cHK
 ttO
 upq
-upq
-upq
-upq
-upq
+ssj
+ePx
+ssj
+dYn
 upq
 upq
 hTD
@@ -88505,10 +88552,10 @@ kCc
 cHK
 ttO
 upq
-upq
-upq
-upq
-upq
+dYn
+dYn
+dYn
+dYn
 upq
 upq
 upq
@@ -88762,9 +88809,9 @@ kCc
 cHK
 ttO
 upq
-upq
-upq
-upq
+dYn
+dYn
+dYn
 upq
 upq
 upq
@@ -89019,12 +89066,12 @@ kCc
 cHK
 ttO
 upq
-upq
-upq
-upq
-upq
-rta
-alC
+lzk
+ozW
+dYn
+oLy
+tOz
+tOz
 heY
 rta
 pKx
@@ -89280,7 +89327,7 @@ upq
 upq
 upq
 upq
-kfL
+heY
 tOz
 tOz
 jbP
@@ -89549,7 +89596,7 @@ acZ
 tOz
 vhz
 tOz
-vqm
+uBv
 upq
 xMq
 uNe
@@ -89801,7 +89848,7 @@ tOz
 tOz
 heY
 upq
-pug
+iif
 tOz
 tOz
 tOz
@@ -90054,7 +90101,7 @@ upq
 uNM
 tOz
 tOz
-xcH
+rta
 xcH
 pzP
 upq
@@ -90310,12 +90357,12 @@ upq
 upq
 ghc
 alC
-heY
 tOz
-heY
+kfL
+alC
 tjq
 upq
-pug
+bXP
 tOz
 tOz
 tOz
@@ -90567,8 +90614,8 @@ tjq
 upq
 upq
 upq
-upq
 pSb
+upq
 upq
 upq
 upq
@@ -90824,8 +90871,8 @@ tjq
 upq
 rSn
 tjq
-heY
 tOz
+heY
 heY
 heY
 upq
@@ -92888,8 +92935,8 @@ red
 tOz
 otS
 tjq
-upq
-cTD
+njW
+mgc
 eZv
 mgc
 upq
@@ -110985,7 +111032,7 @@ qyE
 laL
 laL
 nxz
-fkM
+kIL
 nxz
 kep
 kep
@@ -111756,7 +111803,7 @@ laL
 laL
 laL
 nxz
-xxk
+cTD
 nxz
 kep
 kep
@@ -118600,8 +118647,8 @@ eGo
 eGo
 eGo
 eGo
-hZw
-hZw
+ttO
+ttO
 eGo
 eGo
 eGo
@@ -118857,8 +118904,8 @@ tVy
 adS
 eGo
 eGo
-hZw
-hZw
+ttO
+ttO
 eGo
 eGo
 eGo
@@ -119114,8 +119161,8 @@ tVy
 nkF
 eGo
 jXY
-hZw
-hZw
+ttO
+ttO
 eGo
 eGo
 eGo
@@ -119371,8 +119418,8 @@ tVy
 tVy
 eGo
 eGo
-hZw
-hZw
+ttO
+ttO
 eGo
 eGo
 eGo
@@ -119628,8 +119675,8 @@ eGo
 eGo
 eGo
 eGo
-hZw
-hZw
+ttO
+ttO
 eGo
 eGo
 eGo
@@ -119883,10 +119930,10 @@ tVy
 tVy
 tVy
 kqT
-hZw
-hZw
-hZw
-hZw
+ttO
+ttO
+ttO
+ttO
 eGo
 eGo
 eGo
@@ -120140,10 +120187,10 @@ jSL
 jSL
 jSL
 eGo
-hZw
-hZw
-hZw
-hZw
+ttO
+ttO
+ttO
+ttO
 eGo
 eGo
 eGo

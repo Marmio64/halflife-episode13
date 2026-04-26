@@ -46,6 +46,8 @@
 	var/lockid = null
 	var/masterkey = TRUE //if masterkey can open this regardless
 
+	var/lock_difficulty = 0 // plus for extra difficulty, minus for less. Five is incredibly difficult, two will add some noticeable difficulty.
+
 /obj/machinery/door/unpowered/halflife/Initialize()
 	. = ..()
 	if(dir == NORTH)
@@ -296,6 +298,7 @@
 		var/moveup = 20
 
 		pickchance *= P.picklvl
+		pickchance -= (lock_difficulty*5)
 		pickchance = clamp(pickchance, 1, 95)
 
 
