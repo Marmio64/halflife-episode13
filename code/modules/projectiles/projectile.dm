@@ -273,6 +273,9 @@
 	/// If true directly targeted turfs can be hit
 	var/can_hit_turfs = FALSE
 
+	///HL13 EDIT, can this hit grenades in people's hands and explode them
+	var/hits_grenades = TRUE
+
 /obj/projectile/Initialize(mapload)
 	. = ..()
 	maximum_range = range

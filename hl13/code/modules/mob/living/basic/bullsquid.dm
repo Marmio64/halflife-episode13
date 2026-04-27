@@ -124,8 +124,9 @@
 	. = ..()
 	AddElement(/datum/element/venomous, /datum/reagent/toxin/headcrab_venom, 5, injection_flags = NONE)
 
-/mob/living/basic/halflife/bullsquid/zombie_faction
+/mob/living/basic/halflife/bullsquid/deployment
 	faction = list(FACTION_HEADCRAB, FACTION_XEN_FAUNA)
+	speed = 0.4
 
 /mob/living/basic/halflife/bullsquid/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()

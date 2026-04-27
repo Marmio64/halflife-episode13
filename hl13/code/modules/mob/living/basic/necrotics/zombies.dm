@@ -123,6 +123,8 @@
 
 /mob/living/basic/halflife/zombie/zombine/elite/deployment
 	melee_attack_cooldown = 1.5 SECONDS
+	maxHealth = 225
+	health = 225
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/zombine/proc/get_innate_abilities()
@@ -276,8 +278,8 @@
 /mob/living/basic/halflife/zombie/fast/deployment/upgraded
 	melee_attack_cooldown = 0.4 SECONDS
 	melee_damage_upper = 15
-	maxHealth = 85
-	health = 85
+	maxHealth = 110
+	health = 110
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/fast/proc/get_innate_abilities()
@@ -524,7 +526,8 @@
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie_grunt
 
 /mob/living/basic/halflife/zombie/cremator/deployment
-	melee_attack_cooldown = 1.5 SECONDS
+	melee_attack_cooldown = 1.25 SECONDS
+	speed = 2.25
 
 /mob/living/basic/halflife/zombie/cremator/Initialize(mapload)
 	. = ..()
