@@ -70,6 +70,7 @@
 /obj/item/lockpick/ingested
 	name = "slimey lockpick"
 	desc = "A small, sharp piece of metal to aid opening locks in the absence of a key. This one is covered in gooey guts and small pieces of entrails from some sort of beast."
+	picklvl = 1.25
 
 /obj/item/lockpick/makeshift
 	name = "makeshift lockpick"

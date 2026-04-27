@@ -38,7 +38,7 @@
 	id = /obj/item/card/id/advanced/halflife/combine/one
 
 	id_trim = /datum/id_trim/job/outlands/grunt
-	ears = /obj/item/radio/headset/civilprotection/deployment
+	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
 	glasses = /obj/item/clothing/glasses/hud/security
 
 	belt = /obj/item/storage/belt/civilprotection/overwatch/mp7_no_grenade

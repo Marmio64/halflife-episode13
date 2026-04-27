@@ -59,6 +59,28 @@
 	ai_controller.set_blackboard_key(BB_SETUP_SHOP, setup_shop)
 
 //hl13 edit
+/mob/living/basic/trader/attackby_secondary(obj/item/weapon, mob/living/user, params)
+	if(!isliving(user))
+		return
+	var/mob/living/living_user = user
+	if(!living_user.combat_mode)
+		to_chat(user, span_warning("You decide that hitting them may be a bad idea."))
+		return
+	else if(combat_mode == FALSE && prob(80))
+		to_chat(user, span_warning("You take a moment to consider that harming them may be a bad idea. Let's exit our /Combat Mode/ if we want to heed this advice."))
+		return
+
+	. = ..()
+
+/mob/living/basic/trader/attack_hand(mob/living/carbon/human/user, list/modifiers)
+	if(!isliving(user))
+		return
+	var/mob/living/living_user = user
+	if(!living_user.combat_mode && LAZYACCESS(modifiers, RIGHT_CLICK))
+		to_chat(user, span_warning("You decide that shoving them may be a bad idea."))
+		return
+	. = ..()
+
 /mob/living/basic/trader/attackby(obj/item/I, mob/user, params)
 	if(!isliving(user))
 		return

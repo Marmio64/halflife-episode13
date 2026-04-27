@@ -189,7 +189,7 @@
 	display_name = "Bullsquid (Support)"
 	desc = "Utilize your tanky build and high power acid to skirmish with foes from close to medium range."
 
-	mob_to_be = /mob/living/basic/halflife/bullsquid/zombie_faction
+	mob_to_be = /mob/living/basic/halflife/bullsquid/deployment
 
 /datum/outfit/deployment_loadout/xen/tier4/antlion_grub
 	name = "Deployment: Upgraded Antlion Grub"

@@ -39,7 +39,7 @@
 	id = /obj/item/card/id/advanced/halflife/combine/one
 
 	id_trim = /datum/id_trim/job/outlands/ordinal
-	ears = /obj/item/radio/headset/civilprotection/deployment
+	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
 
 	belt = /obj/item/storage/belt/civilprotection/overwatch/ar2
 
@@ -47,7 +47,7 @@
 
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch
-	uniform = /obj/item/clothing/under/combine/overwatch
+	uniform = /obj/item/clothing/under/combine/overwatch/unfused
 	suit = /obj/item/clothing/suit/armor/overwatch/deathmatch
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch
 	gloves = /obj/item/clothing/gloves/combat/overwatch

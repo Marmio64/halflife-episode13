@@ -145,6 +145,9 @@
 
 	fused = TRUE
 
+/obj/item/clothing/under/combine/overwatch/unfused
+	fused = FALSE
+
 /obj/item/clothing/under/combine/overwatch/slow
 	slowdown = 0.15
 

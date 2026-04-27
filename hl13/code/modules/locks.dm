@@ -8,7 +8,7 @@
 	var/can_be_picked = TRUE
 	//check if obj has lock and can be picked
 	var/lock_locked = FALSE
-	//tells the element what difficulty the objs picking is at (1 Master, 5 Expert, 10 Standard, 17 Novice, 20+ Beginner)
+	//tells the element what difficulty the objs picking is at (0 is standard, higher is harder, lower is easier. 3 halves the pick chance for a standard door, and would be quite difficult.)
 	var/lock_difficulty
 	//allows for players to attach their own lock
 	var/can_have_lock = FALSE

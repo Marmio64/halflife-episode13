@@ -33,6 +33,7 @@
 	if(prob(80))
 		victim.emote("cough")
 		victim.adjustOrganLoss(ORGAN_SLOT_LUNGS, 3) //prolonged breathing can damage your lungs
+		victim.losebreath += 0.5
 
 ///Sulphur coming from igniting matches
 /datum/vapours/sulfur

@@ -109,7 +109,7 @@
 	fire_delay = 2
 	burst_size = 1
 	spread = 4
-	recoil = 0.5
+	recoil = 0.4
 	can_suppress = FALSE
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY
@@ -171,7 +171,7 @@
 	fire_rate = 0.5 SECONDS
 	fire_delay = 5
 
-//cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30.
+//cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30, and is slightly less accurate.
 //about 1.96 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/servicerifle
 	name = "\improper Service Rifle"
@@ -398,6 +398,10 @@
 /obj/item/gun/ballistic/revolver/snubnose/warden
 	name = "\improper warden's snubnose revolver"
 	desc = "A well maintained, smooth looking revolver. It is small, compact, and only fires .38 rounds. It seems intimidating, but barely fired. Ammunition for this gun is likely very sparse."
+
+/obj/item/gun/ballistic/revolver/snubnose/rebel_qm
+	name = "\improper quartermaster's snubnose revolver"
+	desc = "A revolver that was likely stolen from a high ranking combine official, or kept as well-maintained relic from long ago. It seems intimidating, but barely fired. Ammunition for this gun is likely very sparse."
 
 // Can technically down someone in about a second if you hit all pellets point blank in two shots, but unlikely.
 /obj/item/gun/ballistic/shotgun/spas12

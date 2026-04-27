@@ -507,7 +507,10 @@
 /area/halflife/outdoors/deployment_city)
 "lH" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/halflife/cannister_targeter/modified,
+/obj/item/halflife/cannister_targeter/modified{
+	charges = 1;
+	max_charges = 1
+	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "lP" = (

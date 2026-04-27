@@ -38,12 +38,14 @@
 	head = /obj/item/clothing/head/halflife/blue_hardhat
 	back = /obj/item/storage/backpack/halflife/satchel
 
-	belt = /obj/item/melee/baton
+	belt = /obj/item/gun/ballistic/revolver/snubnose/rebel_qm
 
 	l_pocket = /obj/item/hl2key/rebel_bunker/command_offices
 
 	backpack_contents = list(
 		/obj/item/megaphone = 1,
+		/obj/item/melee/baton = 1,
+		/obj/item/ammo_box/c38 = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment

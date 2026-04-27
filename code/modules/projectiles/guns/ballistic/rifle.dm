@@ -277,7 +277,7 @@
 				protected = TRUE
 
 		if(!protected && !HAS_TRAIT(user, TRAIT_RESISTHEAT) && !HAS_TRAIT(user, TRAIT_RESISTHEATHANDS))
-			user.apply_damage(15, BURN, user.get_active_hand(), wound_bonus = CANT_WOUND) //yeowch
+			user.apply_damage(5, BURN, user.get_active_hand(), wound_bonus = CANT_WOUND) //yeowch
 			to_chat(user, span_userdanger("You burn your hand loading the crossbow as the bolt instantly heats up! Wear protective gear or load the bolt first!"))
 			INVOKE_ASYNC(user, TYPE_PROC_REF(/mob, emote), "scream")
 			playsound(user, SFX_SEAR, 50, TRUE)

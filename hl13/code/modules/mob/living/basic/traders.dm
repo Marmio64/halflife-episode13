@@ -1,3 +1,9 @@
+/mob/living/basic/trader/halflife/grabbedby(mob/living/user, supress_message = FALSE)
+	if(stat == CONSCIOUS)
+		to_chat(user, span_warning("The [src] resists your grab!"))
+		return FALSE
+
+
 /mob/living/basic/trader/halflife/refugee
 	name = "Refugee Smuggler"
 	desc = "A gruff looking man, with the wares you need, though perhaps not the ones you want. His coat conceals a revolver, and a hefty amount of body armor."
@@ -104,6 +110,11 @@
 	death_sound = 'hl13/sound/voice/human/scream/malescream_8.ogg'
 
 	faction = list(FACTION_REFUGEE)
+
+/mob/living/basic/trooper/rebel/mp7/refugee/grabbedby(mob/living/user, supress_message = FALSE)
+	if(stat == CONSCIOUS)
+		to_chat(user, span_warning("The [src] resists your grab!"))
+		return FALSE
 
 /mob/living/basic/trooper/rebel/mp7/refugee/Initialize(mapload)
 	. = ..()
@@ -467,7 +478,7 @@
 		/obj/item/clothing/head/helmet/halflife/headcrab/gonome = list(PAYCHECK_CREW * 4, 1),
 		/obj/item/clothing/suit/armor/platearmor/heavy = list(PAYCHECK_CREW * 7, 1),
 		/obj/item/clothing/mask/bandana/sinew = list(PAYCHECK_CREW * 0.5, 2),
-		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 1.25, 1),
+		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 1.25, 3),
 		/obj/item/knife/combat = list(PAYCHECK_CREW * 5.5, 3),
 		/obj/item/spear/halflife/deathmatch = list(PAYCHECK_CREW * 5.5, 3),
 		/obj/item/stack/medical/bandage = list(PAYCHECK_CREW * 0.75, 5),
@@ -481,7 +492,7 @@
 		/obj/item/food/meat/steak/plain/human = list(PAYCHECK_CREW * 1.5, 15, ""),
 		/obj/item/food/meat/slab/human = list(PAYCHECK_CREW * 1.5, 15, ""),
 		/obj/item/food/fishmeat = list(PAYCHECK_CREW, 10, ""),
-		/obj/item/organ/heart = list(PAYCHECK_CREW * 2, 5, ""),
+		/obj/item/organ/heart = list(PAYCHECK_CREW, 5, ""),
 		/obj/item/reagent_containers/pill/patch/grubnugget = list(PAYCHECK_CREW * 0.25, 15, ""),
 		/obj/item/food/xen/xenbranch = list(PAYCHECK_CREW * 0.5, 5, ""),
 		/obj/item/stack/sheet/animalhide/human = list(PAYCHECK_CREW * 0.5, 10, ""),
@@ -717,7 +728,7 @@
 		/obj/item/cigarette/halflife = list(PAYCHECK_CREW * 0.5, 10),
 		/obj/item/reagent_containers/cup/soup_pot = list(PAYCHECK_CREW, 3),
 		/obj/item/lighter = list(PAYCHECK_CREW * 0.5, 3),
-		/obj/item/food/canned/halflife/beans = list(PAYCHECK_CREW * 2, 3),
+		/obj/item/food/canned/halflife/beans = list(PAYCHECK_CREW * 2, 5),
 		/obj/item/halflife/nutrient_bar_wrapping/water = list(PAYCHECK_CREW, 5),
 		/obj/item/reagent_containers/pill/antitox = list(PAYCHECK_CREW, 5),
 		/obj/item/halflife/antenna = list(PAYCHECK_CREW * 4, 3),

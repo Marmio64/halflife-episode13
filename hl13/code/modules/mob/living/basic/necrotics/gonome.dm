@@ -103,8 +103,8 @@
 	melee_damage_upper = 26
 	melee_attack_cooldown = 1.5 SECONDS
 	armour_penetration = 0
-	maxHealth = 200
-	health = 200
+	maxHealth = 210
+	health = 210
 	obj_damage = 18
 	speed = 2.5
 	fungalheal_amt = 0.1

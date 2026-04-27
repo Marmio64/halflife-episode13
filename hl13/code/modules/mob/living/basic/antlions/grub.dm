@@ -92,6 +92,10 @@
 /datum/action/cooldown/spell/conjure/antlions/deployment
 	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/zombie_faction)
 
+/mob/living/basic/halflife/grub/deployment/upgraded
+	maxHealth = 35
+	health = 35
+
 /mob/living/basic/halflife/grub/deployment/upgraded/Initialize(mapload)
 	. = ..()
 	antlions = new(src) //a second use of antlion summoning

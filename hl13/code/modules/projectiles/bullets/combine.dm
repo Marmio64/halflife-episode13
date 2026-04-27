@@ -65,6 +65,7 @@
 	damage = 10
 	wound_bonus = -10
 	armour_penetration = 20
+	hits_grenades = FALSE
 
 /obj/projectile/bullet/pulse/turret/weak
 	damage = 8

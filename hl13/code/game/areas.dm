@@ -416,6 +416,9 @@
 /area/halflife/indoors/bunker/unpowered/rebel_large/war_room
 	first_time_text = "War Room"
 
+/area/halflife/indoors/bunker/unpowered/rebel_large/janitor
+	first_time_text = "Janitorial Closet"
+
 /area/halflife/indoors/sewer
 	name = "\improper Sewers"
 	base_lighting_alpha = 5

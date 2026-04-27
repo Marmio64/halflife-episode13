@@ -57,7 +57,7 @@
 	user.faction += FACTION_REFUGEE
 	user.change_stat(STATKEY_END, 1)
 	user.change_stat(STATKEY_DEX, 3)
-	user.change_stat(STATKEY_STR, 1)
+	user.change_stat(STATKEY_STR, 2)
 	user.change_stat(STATKEY_PER, 2)
 
 /datum/job/outlands/sergeant/after_latejoin_spawn(mob/living/spawning)

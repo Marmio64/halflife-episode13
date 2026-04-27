@@ -49,6 +49,13 @@
 	color = COLOR_ORANGE
 	random_color = FALSE
 
+/obj/effect/spawner/random/trash/graffiti/halflife/lambdaspray
+	graffiti_icons = list(
+		"lambda",
+	)
+	color = COLOR_ORANGE
+	random_color = FALSE
+
 /obj/item/poster/halflife/combine
 	name = "random combine poster"
 	poster_type = /obj/structure/sign/poster/halflife/combine/random

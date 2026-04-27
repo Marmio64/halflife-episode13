@@ -30,6 +30,7 @@
 	halflife_flags_1 = LOCKABLE_1
 	do_sparks = FALSE
 	has_access_panel = FALSE
+	lock_difficulty = 0
 	var/door_type = null
 	var/solidity = SOLID
 	var/frametype = "metal"
@@ -296,6 +297,7 @@
 		var/moveup = 20
 
 		pickchance *= P.picklvl
+		pickchance -= (lock_difficulty*5)
 		pickchance = clamp(pickchance, 1, 95)
 
 

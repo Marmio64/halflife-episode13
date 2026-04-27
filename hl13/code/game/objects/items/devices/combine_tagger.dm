@@ -7,7 +7,7 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	icon_state = "sampler"
 	item_flags = NOBLUDGEON
-	var/base_target_value = 35
+	var/base_target_value = 30
 
 /obj/item/combine_tagger/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
 	if (!isliving(interacting_with))
@@ -60,10 +60,10 @@
 
 		if(istype(target, /mob/living/basic/halflife/zombie/gonome) || istype(target, /mob/living/basic/halflife/antlion_guard))
 			to_chat(user, span_notice("High-value Xenian data detected. Administering large bonus reward."))
-			target_value = 250
+			target_value += 225
 		if(istype(target, /mob/living/basic/halflife/zombie/zombie_grunt) || istype(target, /mob/living/basic/halflife/zombie/zombine))
 			to_chat(user, span_notice("Parasitized delegate data detected. Administering small bonus reward."))
-			target_value = 40 //just a slight extra bonus for the flavor value of it
+			target_value += 10 //just a slight extra bonus for the flavor value of it
 		if(istype(target, /mob/living/basic/halflife/headcrab) || istype(target, /mob/living/simple_animal/hostile/halflife/antlion) || istype(target, /mob/living/basic/halflife/antlion_worker) || istype(target, /mob/living/basic/halflife/grub))
 			to_chat(user, span_notice("Low-value Xenian data detected."))
 			target_value = 10 //antlions can be farmed and headcrabs are really easy to kill
@@ -80,4 +80,4 @@
 	name = "Upgraded Combine DB Tagger"
 	desc = "A combine device that tags DBs of hostile xenian lifeforms and anticitizens, and increases the cargo budget in return. More dangerous targets are worth more. The more you clear out, the more resources you'll have at your disposal. This is an upgraded variant, which will give more credits per DB."
 	icon_state = "upgraded_sampler"
-	base_target_value = 50
+	base_target_value = 45

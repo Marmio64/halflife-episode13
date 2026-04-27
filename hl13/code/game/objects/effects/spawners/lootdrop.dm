@@ -12,7 +12,7 @@
 				/obj/item/toy/cards/deck,
 				/obj/item/binoculars,
 				/obj/item/poster/halflife/rebel,
-				/obj/item/seeds/potato,
+				/obj/item/halflife/nutrient_bar_wrapping/water,
 				/obj/item/melee/tireiron,
 				/obj/item/melee/brass_knuckles,
 				/obj/item/melee/baton,
@@ -69,6 +69,7 @@
 				/obj/item/stack/kevlar,
 				/obj/item/halflife/combine_battery,
 				/obj/item/fishing_hook,
+				/obj/item/reagent_containers/cup/glass/canteen,
 				/obj/item/stack/spacecash/c10,
 				/obj/item/stack/spacecash/c20
 				)
@@ -189,6 +190,29 @@
 				/obj/item/reagent_containers/cup/glass/mouthwash,
 				/obj/item/reagent_containers/cup/bottle/welding_fuel,
 				/obj/item/reagent_containers/cup/bottle/morphine
+				)
+
+//stuff you'd reasonably find in a fridge
+/obj/effect/spawner/random/halflife/loot/fridge_goods
+	name = "fridge loot"
+
+
+	loot = list(
+				/obj/item/reagent_containers/cup/soda_cans/breenwater,
+				/obj/item/reagent_containers/cup/soda_cans/breenwater/red,
+				/obj/item/reagent_containers/cup/soda_cans/breenwater/yellow,
+				/obj/item/reagent_containers/cup/soda_cans/breenwater/purple,
+				/obj/item/reagent_containers/cup/soda_cans/halflife/coffee,
+				/obj/item/reagent_containers/condiment/milk,
+				/obj/item/food/grown/potato,
+				/obj/item/food/grown/cabbage,
+				/obj/item/food/grown/onion,
+				/obj/item/food/fishmeat/leech,
+				/obj/item/storage/halflife/hand_box/egg,
+				/obj/item/storage/halflife/hand_box/chicken,
+				/obj/item/halflife/nutrient_bar_wrapping/pork,
+				/obj/item/reagent_containers/cup/glass/bottle/beer/light,
+				/obj/item/reagent_containers/cup/glass/bottle/beer
 				)
 
 //specifically only alcohol
@@ -449,6 +473,21 @@
 				/mob/living/basic/halflife/zombie/poison = 1,
 				/mob/living/basic/halflife/zombie/zombie_grunt = 1,
 				/mob/living/basic/halflife/zombie/zombine = 1,
+				)
+
+/obj/effect/spawner/random/halflife/random_zombie_strong
+	name = "random strong zombie"
+	icon = 'hl13/icons/effects/random_spawners.dmi'
+	icon_state = "random_zombie"
+	spawn_loot_count = 1
+
+	loot = list(
+				/mob/living/basic/halflife/zombie/deployment = 1,
+				/mob/living/basic/halflife/zombie/engineer/deployment = 1,
+				/mob/living/basic/halflife/zombie/fast/deployment = 1,
+				/mob/living/basic/halflife/zombie/poison/deployment = 1,
+				/mob/living/basic/halflife/zombie/zombie_grunt/deployment = 1,
+				/mob/living/basic/halflife/zombie/zombine/deployment = 1,
 				)
 
 /obj/effect/spawner/random/halflife/random_zombie_rare
