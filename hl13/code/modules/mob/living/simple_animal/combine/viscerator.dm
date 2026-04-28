@@ -8,8 +8,8 @@
 	combat_mode = TRUE
 	mob_biotypes = MOB_ROBOTIC
 	loot = list(/obj/item/circuitmaterial)
-	health = 55
-	maxHealth = 55
+	health = 60
+	maxHealth = 60
 	rapid_melee = 2
 	melee_damage_lower = 14
 	melee_damage_upper = 18
@@ -17,7 +17,7 @@
 	wound_bonus = -10
 	bare_wound_bonus = 10
 	sharpness = SHARP_EDGED
-	obj_damage = 0
+	obj_damage = 2
 	environment_smash = ENVIRONMENT_SMASH_NONE
 	attack_verb_continuous = "cuts"
 	attack_verb_simple = "cut"
@@ -34,6 +34,8 @@
 	del_on_death = 1
 	death_message = "is smashed into pieces!"
 	death_sound = 'hl13/sound/creatures/viscerator/gib.ogg'
+
+	base_dexterity = 20
 
 	light_range = 2.25
 	light_power = 1
@@ -76,8 +78,8 @@
 	health = 95
 	maxHealth = 95
 	armour_penetration = 15
-	melee_damage_lower = 15
-	melee_damage_upper = 22
+	melee_damage_lower = 18
+	melee_damage_upper = 25
 
 /mob/living/simple_animal/hostile/halflife/viscerator/hidden
 	melee_damage_lower = 2
@@ -89,13 +91,13 @@
 /mob/living/simple_animal/hostile/halflife/viscerator/shielded
 	name = "shielded viscerator"
 	desc = "A small, twin-bladed machine capable of inflicting very deadly lacerations. This one has less armor plating and uses much of its battery reserves to power a pulse shield that can deflect up to three projectiles, no matter how strong they are."
-	health = 30
-	maxHealth = 30
-	armour_penetration = 10
+	health = 35
+	maxHealth = 35
+	armour_penetration = 15
 	low_power_melee_damage_lower = 3
 	low_power_melee_damage_upper = 5
-	melee_damage_lower = 15
-	melee_damage_upper = 22
+	melee_damage_lower = 18
+	melee_damage_upper = 25
 	operating_power = 8 //16 seconds till low power
 	loot = list()
 	var/shield_hits = 3

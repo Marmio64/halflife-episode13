@@ -138,7 +138,7 @@
 	icon_state = "cp_trenchcoatoverseer"
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/overseer/fast
-	slowdown = -0.1
+	slowdown = -0.15
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/sectorial
 	name = "sectoral trenchcoat"
