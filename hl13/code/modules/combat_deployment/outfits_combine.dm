@@ -793,3 +793,138 @@
 /datum/outfit/deployment_loadout/combine/tier5/logistics_lead/post_equip(mob/living/carbon/human/H)
 	. = ..()
 	ADD_TRAIT(H, TRAIT_SUPPLYRADIO_USER, JOB_TRAIT)
+
+///////// BLU BOSSES ///////////////////
+
+/datum/outfit/deployment_loadout/combine/boss/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+
+	H.add_traits(list(TRAIT_NEVER_WOUNDED, TRAIT_NODISMEMBER), OUTFIT_TRAIT) //ehhh just take these out of the equation, since these are BOSSES
+
+	H.dna.species.stunmod = 0.1 //all bosses are very resilient to stuns
+
+	H.fire_stack_decay_rate = -2
+
+/datum/outfit/deployment_loadout/combine/boss/freeman
+	name = "BOTH: The Free Man BLU"
+	display_name = "The Free Man (ALL-ROUNDER)"
+	desc = "Time to fuck up someone's face."
+
+	uniform = /obj/item/clothing/under/citizen/rebel
+	back = /obj/item/storage/backpack/halflife/satchel/huge
+	suit = /obj/item/clothing/suit/hooded/hev/deathmatch/boss/blu
+
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
+
+	neck = /obj/item/storage/bag/rebar_quiver/syndicate
+
+	glasses = /obj/item/clothing/glasses/regular/thin/thermals
+
+	combat_music = 'hl13/sound/music/combat/notsupposedtobehere.ogg'
+
+	belt = /obj/item/crowbar/large/freeman
+
+	backpack_contents = list(
+		/obj/item/grenade/syndieminibomb/bouncer = 4,
+		/obj/item/gun/ballistic/automatic/pistol/usp,
+		/obj/item/ammo_box/magazine/usp9mm,
+		/obj/item/ammo_box/magazine/usp9mm,
+		/obj/item/gun/ballistic/revolver/coltpython,
+		/obj/item/ammo_box/colta357,
+		/obj/item/gun/ballistic/shotgun/spas12,
+		/obj/item/storage/box/lethalshot/halflife,
+		/obj/item/gun/ballistic/automatic/mp7,
+		/obj/item/ammo_box/magazine/mp7,
+		/obj/item/ammo_box/magazine/mp7,
+		/obj/item/gun/ballistic/automatic/ar2/standardpin,
+		/obj/item/gun/ballistic/rifle/rebarxbow/upgraded,
+		/obj/item/gun/ballistic/rocketlauncher/halflife,
+		/obj/item/ammo_casing/rocket/hl13 = 3,
+		/obj/item/reagent_containers/pill/patch/medkit,
+		/obj/item/reagent_containers/pill/patch/medkit,
+	)
+
+	extra_dex = 10
+	extra_str = 10
+	extra_end = 10
+	extra_per = 5
+
+/obj/item/clothing/suit/hooded/hev/deathmatch/boss/blu
+	hoodtype = /obj/item/clothing/head/hooded/hevhood/blu
+
+/obj/item/clothing/suit/hooded/hev/deathmatch/boss/blu/Initialize()
+	.=..()
+	add_atom_colour("#0077ff", FIXED_COLOUR_PRIORITY)
+
+/obj/item/clothing/head/hooded/hevhood/blu
+
+/obj/item/clothing/head/hooded/hevhood/blu/Initialize()
+	.=..()
+	add_atom_colour("#0077ff", FIXED_COLOUR_PRIORITY)
+
+/datum/outfit/deployment_loadout/combine/boss/wesker
+	name = "BOTH: The Mastermind BLU"
+	display_name = "The Mastermind (RUSHDOWN)"
+	desc = "Seven minutes. Seven minutes is all you have to play with your enemies. You have relatively low durability, but can disorient enemies with swift dashes, utilize devestating martial arts combos, self heal, and can activate throw mode to become near invulnerable to anything but explosions."
+
+	combat_music = 'hl13/sound/music/combat/farben.ogg'
+
+	uniform = /obj/item/clothing/under/syndicate/combat
+	suit = /obj/item/clothing/suit/jacket/trenchcoat/wesker/blu
+	glasses = /obj/item/clothing/glasses/sunglasses/wesker
+	gloves = /obj/item/clothing/gloves/color/black/wesker
+
+	spells_to_add = list(/datum/action/cooldown/spell/wesker_taunt, /datum/action/cooldown/mob_cooldown/dash/wesker)
+
+	extra_dex = 8
+	extra_str = 2 //dont need that much strength because CQC overrides strength bonuses for punching
+	extra_end = 8
+
+/obj/item/clothing/suit/jacket/trenchcoat/wesker/blu
+
+/obj/item/clothing/suit/jacket/trenchcoat/wesker/blu/Initialize()
+	.=..()
+	add_atom_colour("#0077ff", FIXED_COLOUR_PRIORITY)
+
+/datum/outfit/deployment_loadout/combine/boss/wesker/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+
+	H.set_haircolor("#0077ff", update = FALSE) // blu (doesnt work for some reason)
+	H.skin_tone = "#e8c99b"
+	H.set_hairstyle("Combover", update = TRUE)
+	H.set_facial_hairstyle("Shaved", update = TRUE)
+	H.update_body(0)
+
+	//CQC
+	var/datum/martial_art/cqc/wesker/elitecqc = new
+	elitecqc.teach(H)
+
+	//all of wesker's superhuman powers
+	H.stamina_regen_time = 4 SECONDS
+
+	H.add_traits(list(TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_NOCRITDAMAGE, TRAIT_IGNORESLOWDOWN, TRAIT_ANALGESIA, TRAIT_NOCRITOVERLAY), OUTFIT_TRAIT)
+
+/datum/outfit/deployment_loadout/combine/boss/extract_vortigaunt
+	name = "BOTH: Extract Empowered Vortigaunt BLU"
+	display_name = "Extract Empowered Vortigaunt (SUPPORT)"
+	desc = "You are durable with a wide array of low cooldown, powerful abilities. While you are a pretty good combatant yourself, perhaps your greatest strength is instead simply your ability to infinitely heal fellow bosses?"
+
+	uniform = null
+	shoes = null
+	id = null
+
+	combat_music = 'hl13/sound/music/combat/vortalcombat.ogg'
+
+	extra_dex = 10
+	extra_str = 8
+	extra_end = 10
+
+/datum/outfit/deployment_loadout/combine/boss/extract_vortigaunt/pre_equip(mob/living/carbon/human/H)
+	H.set_species(/datum/species/vortigaunt/extract_boss)
+	H.cmode_music = combat_music
+	H.add_atom_colour("#0077ff", FIXED_COLOUR_PRIORITY)
