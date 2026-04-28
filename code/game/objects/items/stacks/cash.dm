@@ -53,6 +53,12 @@
 	value = 1
 	merge_type = /obj/item/stack/spacecash/c1
 
+/obj/item/stack/spacecash/c1/ten
+	amount = 10
+
+/obj/item/stack/spacecash/c1/twenty
+	amount = 20
+
 /obj/item/stack/spacecash/c10
 	icon_state = "prewar" //hl13 edit
 	singular_name = "ten credit voucher"

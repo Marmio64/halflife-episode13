@@ -325,3 +325,13 @@
 	summon_amount = 1
 	summon_radius = 1
 	summon_type = list(/mob/living/basic/trooper/rebel/mp7/veteran/boss)
+
+/datum/action/cooldown/spell/summonitem/plf_general
+	name = "Instant Summon Teleportation"
+	desc = "This spell can be used to teleport back a previously marked item to your hand from anywhere in the universe."
+	button_icon_state = "summons"
+
+	cooldown_time = 12 SECONDS
+
+	invocation = null
+	invocation_type = INVOCATION_NONE

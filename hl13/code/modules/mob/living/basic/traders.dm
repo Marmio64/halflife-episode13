@@ -617,7 +617,7 @@
 		/obj/item/gun/ballistic/automatic/ar2 = list(PAYCHECK_CREW * 12, 3, ""),
 		/obj/item/gun/ballistic/automatic/pulsesmg = list(PAYCHECK_CREW * 10, 3, ""),
 		/obj/item/gun/ballistic/combine_sniper = list(PAYCHECK_CREW * 14, 3, ""),
-		/obj/item/weaponcrafting/receiver = list(PAYCHECK_CREW, 1.75, ""),
+		/obj/item/weaponcrafting/receiver = list(PAYCHECK_CREW * 2, 5, ""),
 	)
 
 	say_phrases = list(

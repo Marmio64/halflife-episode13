@@ -43,7 +43,7 @@
 	ration_bonus = 1
 
 /datum/outfit/job/doctor
-	name = "Correctional Physician"
+	name = "Physician"
 	jobtype = /datum/job/doctor
 	id = /obj/item/card/id/advanced/halflife/red
 

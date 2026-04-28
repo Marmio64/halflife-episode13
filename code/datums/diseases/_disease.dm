@@ -165,9 +165,9 @@
 		if(affected_mob.mob_mood) // this and most other modifiers below a shameless rip from sleeping healing buffs, but feeling good helps make it go away quicker
 			switch(affected_mob.mob_mood.sanity_level)
 				if(SANITY_LEVEL_GREAT)
-					recovery_prob += 0.4
+					recovery_prob += 0.5
 				if(SANITY_LEVEL_NEUTRAL)
-					recovery_prob += 0.2
+					recovery_prob += 0.3
 				if(SANITY_LEVEL_DISTURBED)
 					recovery_prob += 0
 				if(SANITY_LEVEL_UNSTABLE)
@@ -190,7 +190,7 @@
 
 			// check for beds
 			if((locate(/obj/structure/bed) in affected_mob.loc))
-				recovery_prob += DISEASE_GOOD_SLEEPING_RECOVERY_BONUS
+				recovery_prob += DISEASE_GOOD_SLEEPING_RECOVERY_BONUS * 1.5
 			else if((locate(/obj/structure/table) in affected_mob.loc))
 				recovery_prob += (DISEASE_GOOD_SLEEPING_RECOVERY_BONUS / 2)
 

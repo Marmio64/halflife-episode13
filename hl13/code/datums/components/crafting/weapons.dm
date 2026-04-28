@@ -228,6 +228,21 @@
 	time = 10 SECONDS
 	category = CAT_WEAPON_RANGED
 
+/datum/crafting_recipe/rebarxbow_upgraded
+	name = "Upgraded Rebar Crossbow"
+	result = /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
+	reqs = list(/obj/item/stack/sheet/iron = 5,
+				/obj/item/gun/ballistic/rifle/rebarxbow/upgraded = 1,
+				/obj/item/weaponcrafting/receiver = 1,
+				/obj/item/stack/sticky_tape = 1)
+	blacklist = list(
+	/obj/item/gun/ballistic/rifle/rebarxbow/syndie,
+	/obj/item/gun/ballistic/rifle/rebarxbow/upgraded,
+	)
+	time = 10 SECONDS
+	category = CAT_WEAPON_RANGED
+	crafting_interface = CRAFTING_BENCH_WEAPONS
+
 /datum/crafting_recipe/rebarxbowforced
 	name = "Forced Rebar Crossbow"
 	desc = "A much quicker reload... for a chance of shooting yourself when you fire it."
@@ -238,6 +253,7 @@
 	blacklist = list(
 	/obj/item/gun/ballistic/rifle/rebarxbow/forced,
 	/obj/item/gun/ballistic/rifle/rebarxbow/syndie,
+	/obj/item/gun/ballistic/rifle/rebarxbow/upgraded,
 	)
 	tool_behaviors = list(TOOL_CROWBAR)
 	time = 1 SECONDS

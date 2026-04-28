@@ -209,7 +209,7 @@
 
 	combat_music = 'hl13/sound/music/combat/darkstalker.ogg'
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/svd_ammo/fast, /datum/action/cooldown/spell/conjure/boss_rebel_soldier, /datum/action/cooldown/spell/conjure/boss_veteran, /datum/action/cooldown/spell/conjure_item/missile_targeter_general)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/svd_ammo/fast, /datum/action/cooldown/spell/conjure/boss_rebel_soldier, /datum/action/cooldown/spell/conjure/boss_veteran, /datum/action/cooldown/spell/conjure_item/missile_targeter_general, /datum/action/cooldown/spell/summonitem/plf_general)
 
 
 	extra_dex = 10

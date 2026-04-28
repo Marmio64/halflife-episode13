@@ -10,7 +10,7 @@
 		affected_mob.clear_mood_event("[type]_high")
 
 /datum/reagent/drug/space_drugs
-	name = "Space Drugs"
+	name = "Generic Drugs"
 	description = "An illegal chemical compound used as drug."
 	color = "#60A584" // rgb: 96, 165, 132
 	overdose_threshold = 30

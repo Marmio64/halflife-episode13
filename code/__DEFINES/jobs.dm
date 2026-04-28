@@ -85,7 +85,7 @@
 #define JOB_ATMOSPHERIC_TECHNICIAN "Infestation Control"
 //Medical
 #define JOB_CORONER "Coroner"
-#define JOB_MEDICAL_DOCTOR "Correctional Physician"
+#define JOB_MEDICAL_DOCTOR "Physician"
 #define JOB_PARAMEDIC "Paramedic"
 #define JOB_CHEMIST "Chemist"
 //Science

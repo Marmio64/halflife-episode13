@@ -70,8 +70,8 @@
 				/obj/item/halflife/combine_battery,
 				/obj/item/fishing_hook,
 				/obj/item/reagent_containers/cup/glass/canteen,
-				/obj/item/stack/spacecash/c10,
-				/obj/item/stack/spacecash/c20
+				/obj/item/stack/spacecash/c1/ten,
+				/obj/item/stack/spacecash/c1/twenty
 				)
 
 /obj/effect/spawner/random/halflife/loot/two
@@ -280,7 +280,7 @@
 				/obj/item/melee/brass_knuckles,
 				/obj/item/binoculars,
 				/obj/item/melee/baton,
-				/obj/item/circuitmaterial = 3,
+				/obj/item/circuitmaterial = 2,
 				/obj/item/light/bulb = 2,
 				/obj/item/circuitmaterial/advanced,
 				/obj/item/toy/crayon/spraycan,
@@ -304,7 +304,7 @@
 				/obj/item/stack/cable_coil = 2,
 				/obj/item/stack/sheet/cloth/five,
 				/obj/item/stack/sheet/iron/five,
-				/obj/item/weaponcrafting/receiver = 3,
+				/obj/item/weaponcrafting/receiver = 4,
 				/obj/item/halflife/antenna,
 				/obj/item/reagent_containers/pill/patch/medkit,
 				/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
@@ -319,7 +319,7 @@
 				/obj/item/switchblade = 2,
 				/obj/item/weaponcrafting/frame/usp,
 				/obj/item/gun/ballistic/automatic/pistol/makeshift,
-				/obj/item/stack/spacecash/c20 = 2
+				/obj/item/stack/spacecash/c1/twenty = 2
 				)
 
 /obj/effect/spawner/random/halflife/loot/uncommon/two
