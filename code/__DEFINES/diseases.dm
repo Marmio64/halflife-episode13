@@ -81,10 +81,10 @@ DEFINE_BITFIELD(spread_flags, list(
 //// Adjust to make it faster or slower to cure once the virus has reached its peak.
 #define DISEASE_PEAKED_RECOVERY_MULTIPLIER 1.2
 /// Slowdown Recovery Bonus - set this to the maximum extra chance per tick you want people to get to recover from spaceacillin or other slowdown/virus resistance effects
-#define DISEASE_SLOWDOWN_RECOVERY_BONUS 3
+#define DISEASE_SLOWDOWN_RECOVERY_BONUS 5
 /// Slowdown Recovery Bonus Duration - set this to the maximum # of cycles you want things that cause slowdown/virus resistance to be able to add a bonus up to DISEASE_SLOWDOWN_RECOVERY_BONUS.
 //// Scales down linearly over time.
-#define DISEASE_SLOWDOWN_RECOVERY_BONUS_DURATION 200
+#define DISEASE_SLOWDOWN_RECOVERY_BONUS_DURATION 250
 /// Negative Malnutrition Recovery Penalty
 //// Flat penalty to recovery chance if malnourished or starving
 #define DISEASE_MALNUTRITION_RECOVERY_PENALTY 3

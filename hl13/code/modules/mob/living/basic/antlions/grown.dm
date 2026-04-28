@@ -210,10 +210,9 @@
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
 
 /mob/living/basic/halflife/antlion_guard/weak
-	maxHealth = 500
-	health = 500
 	melee_damage_lower = 25
 	melee_damage_upper = 30
+	melee_attack_cooldown = 2.5 SECONDS
 	guaranteed_butcher_results = list(/obj/item/food/meat/slab/xen = 3, /obj/item/lockpick/ingested = 1)
 
 /mob/living/basic/halflife/antlion_guard/guardian

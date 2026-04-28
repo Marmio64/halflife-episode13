@@ -408,6 +408,7 @@
 			/datum/outfit/deployment_loadout/xen/tier4/cremator,
 			/datum/outfit/deployment_loadout/xen/tier4/fast_zombie,
 			/datum/outfit/deployment_loadout/xen/tier4/light_crab_walker,
+			/datum/outfit/deployment_loadout/xen/tier4/proto_gonome,
 			/datum/outfit/deployment_loadout/xen/tier4/gonome,
 			/datum/outfit/deployment_loadout/xen/tier4/bullsquid,
 			/datum/outfit/deployment_loadout/xen/tier4/antlion_grub,

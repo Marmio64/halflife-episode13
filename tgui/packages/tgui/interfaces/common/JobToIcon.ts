@@ -36,7 +36,7 @@ export const JOB2ICON = {
   'Big Brother': 'eye',
   'Vortigaunt Slave': 'hands-bound',
   'District Liaison': 'user-tie',
-  'Correctional Physician': 'staff-snake',
+  Physician: 'staff-snake',
   Mime: 'comment-slash',
   Paramedic: 'truck-medical',
   'Personal AI': 'mobile-alt',

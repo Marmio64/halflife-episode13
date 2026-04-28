@@ -246,6 +246,37 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = JOB_OUTLANDS_VORTIGAUNT
 	icon_state = "Detective"
 
+/obj/effect/landmark/start/outlands_survivor
+	name = "outlands_survivor"
+	icon_state = "Security Officer"
+	/// What department this spawner is for
+	var/department
+
+/obj/effect/landmark/start/outlands_survivor/Initialize(mapload)
+	. = ..()
+	LAZYADDASSOCLIST(GLOB.outlands_survivor_spawns, department, src)
+
+/obj/effect/landmark/start/outlands_survivor/Destroy()
+	LAZYREMOVEASSOC(GLOB.outlands_survivor_spawns, department, src)
+	return ..()
+
+
+/obj/effect/landmark/start/outlands_survivor/survivor_doctor
+	name = JOB_OUTLANDS_SURVIVOR_DOCTOR
+	department = JOB_OUTLANDS_SURVIVOR_DOCTOR
+
+/obj/effect/landmark/start/outlands_survivor/survivor_liaison
+	name = JOB_OUTLANDS_SURVIVOR_LIAISON
+	department = JOB_OUTLANDS_SURVIVOR_LIAISON
+
+/obj/effect/landmark/start/outlands_survivor/survivor_officer
+	name = JOB_OUTLANDS_SURVIVOR_OFFICER
+	department = JOB_OUTLANDS_SURVIVOR_OFFICER
+
+/obj/effect/landmark/start/outlands_survivor/survivor_citizen
+	name = JOB_OUTLANDS_SURVIVOR_CITIZEN
+	department = JOB_OUTLANDS_SURVIVOR_CITIZEN
+
 /obj/effect/landmark/start/cyborg
 	name = "Cyborg"
 	icon_state = "Cyborg"

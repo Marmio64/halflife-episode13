@@ -37,7 +37,7 @@ export const DEPARTMENT2COLOR: Record<string, Department> = {
       'Chemist',
       'Chief Medical Officer',
       'Coroner',
-      'Correctional Physician',
+      'Physician',
       'Paramedic',
     ],
   },

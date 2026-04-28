@@ -23,7 +23,7 @@
 	vary_fire_sound = FALSE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/ar2
 	force = 12
-	recoil = 0.3
+	recoil = 0.25
 	fire_delay = 2
 	burst_size = 1
 	spread = 3
@@ -109,7 +109,7 @@
 	fire_delay = 2
 	burst_size = 1
 	spread = 4
-	recoil = 0.4
+	recoil = 0.35
 	can_suppress = FALSE
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY
@@ -721,7 +721,7 @@
 	projectile_damage_multiplier = 1.3
 	projectile_wound_bonus = -45
 	spread = 2 //it has a stock
-	recoil = 0.5 //probably the only gun in the game other than M4A1 and service rifle with a real stock
+	recoil = 0.4 //probably the only gun in the game other than M4A1 and service rifle with a real stock
 	fire_delay = 6 //its already boltaction but to make sure that someone who's really good at pressing Z doesnt just lay down suppressive fire
 	sawn_desc = "A ratty old pre-war rifle that was developed over a century ago. Someone seems to have taken this prized historical artifact and sawed it in half, creating an Obrez. Still moist, though."
 	weapon_weight = WEAPON_HEAVY

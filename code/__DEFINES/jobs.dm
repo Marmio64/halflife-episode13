@@ -85,7 +85,7 @@
 #define JOB_ATMOSPHERIC_TECHNICIAN "Infestation Control"
 //Medical
 #define JOB_CORONER "Coroner"
-#define JOB_MEDICAL_DOCTOR "Correctional Physician"
+#define JOB_MEDICAL_DOCTOR "Physician"
 #define JOB_PARAMEDIC "Paramedic"
 #define JOB_CHEMIST "Chemist"
 //Science
@@ -162,6 +162,12 @@
 #define JOB_OUTLANDS_DOCTOR "Doctor"
 #define JOB_OUTLANDS_TECHNICIAN "Technician"
 #define JOB_OUTLANDS_VORTIGAUNT "Vortigaunt"
+
+#define JOB_OUTLANDS_SURVIVOR "Forest District Survivor"
+#define JOB_OUTLANDS_SURVIVOR_DOCTOR "Doctor"
+#define JOB_OUTLANDS_SURVIVOR_LIAISON "District Liaison"
+#define JOB_OUTLANDS_SURVIVOR_OFFICER "Civil Protection Officer"
+#define JOB_OUTLANDS_SURVIVOR_CITIZEN "Citizen"
 
 #define JOB_OUTLANDS_REFUGEE "Refugee"
 
