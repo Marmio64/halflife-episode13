@@ -1392,6 +1392,10 @@
 	assignment = JOB_OUTLANDS_VORTIGAUNT
 	job = /datum/job/outlands/vortigaunt
 
+/datum/id_trim/job/outlands/survivor_citizen
+	assignment = JOB_OUTLANDS_SURVIVOR_CITIZEN
+	job = /datum/job/outlands/survivor
+
 /datum/id_trim/job/outlands/ordinal
 	assignment = JOB_OUTLANDS_ORDINAL
 	trim_state = "trim_securityofficer"

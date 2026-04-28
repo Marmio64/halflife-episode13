@@ -488,6 +488,17 @@
 				/mob/living/basic/halflife/zombie/poison/deployment = 1,
 				/mob/living/basic/halflife/zombie/zombie_grunt/deployment = 1,
 				/mob/living/basic/halflife/zombie/zombine/deployment = 1,
+				/mob/living/basic/halflife/zombie/fungal/proto_gonome = 1,
+				)
+
+/obj/effect/spawner/random/halflife/random_zombie_fungal
+	name = "random fungal zombie"
+	icon = 'hl13/icons/effects/random_spawners.dmi'
+	icon_state = "random_zombie"
+
+	loot = list(
+				/mob/living/basic/halflife/zombie/fungal/proto_gonome = 1,
+				/mob/living/basic/halflife/zombie/fungal = 3,
 				)
 
 /obj/effect/spawner/random/halflife/random_zombie_rare

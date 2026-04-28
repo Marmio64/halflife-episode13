@@ -221,7 +221,7 @@
 
 /mob/living/basic/halflife/zombie/fungal
 	name = "Fungal Zombie"
-	desc = "A shambling humanoid figure hosting a colony of fungal growths upon its flesh."
+	desc = "A shambling humanoid figure hosting a colony of fungal growths upon its flesh. The rounded plating looks like it will make it hard to shoot at them, melee might be a better approach."
 	icon_state = "fungalzombie"
 	icon_living = "fungalzombie"
 	icon_dead = "fungalzombie_dead"
@@ -235,10 +235,31 @@
 	fungalheal_amt = 0.1
 	var/datum/action/cooldown/spell/conjure/xenfloor/infest
 
+	//base likelihood of a bullet deflecting off of them
+	var/armor_value = 50
+
+/mob/living/basic/halflife/zombie/fungal/bullet_act(obj/projectile/bullet)
+	if(istype(bullet, /obj/projectile/energy) || istype(bullet, /obj/projectile/beam) || istype(bullet, /obj/projectile/magic))
+		return ..()
+
+	var/ricochet_chance = armor_value
+	ricochet_chance -= (bullet.armour_penetration*2)
+
+	if(!prob(clamp(ricochet_chance, 1, 95))) // reflect chance is 50%
+		return ..()
+
+	apply_damage(bullet.damage * 0.5, bullet.damage_type)
+	visible_message(
+		span_danger("The [bullet.name] is reflected by [src]'s fungal armor!"),
+		span_userdanger("The [bullet.name] is reflected by your fungal armor!"),
+	)
+
+	bullet.reflect(src)
+
+	return BULLET_ACT_FORCE_PIERCE // complete projectile permutation
+
 /mob/living/basic/halflife/zombie/fungal/deployment
 	fungalheal_amt = 0.2
-	maxHealth = 150
-	health = 150
 	speed = 1.85
 	melee_attack_cooldown = 1.5 SECONDS
 
@@ -246,6 +267,26 @@
 	. = ..()
 	infest = new(src)
 	infest.Grant(src)
+
+/mob/living/basic/halflife/zombie/fungal/proto_gonome
+	name = "Fungal Proto-Gonome"
+	desc = "A shambling humanoid figure hosting a colony of fungal growths upon its flesh. The rounded plating looks like it will make it hard to shoot at them, melee might be a better approach. This one has a wide maw capable of dangerous expulsions."
+	icon_state = "protogonome"
+	icon_living = "protogonome"
+	icon_dead = "protogonome_dead"
+	no_crab_state = "protogonome_nocrab"
+	armor_value = 80
+	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/proto_gonome
+	var/spray_cooldown = 3 SECONDS
+
+/mob/living/basic/halflife/zombie/fungal/proto_gonome/Initialize(mapload)
+	. = ..()
+	AddComponent(\
+		/datum/component/ranged_attacks,\
+		projectile_type = /obj/projectile/acidspray,\
+		projectile_sound = 'hl13/sound/creatures/antlion_worker/antlion_prefire.ogg',\
+		cooldown_time = spray_cooldown,\
+	)
 
 /mob/living/basic/halflife/zombie/fast
 	name = "Fast Zombie"
@@ -620,6 +661,22 @@
 		"OH G-GOD!",
 		"G-GOD HELP ME!",
 		"K-KILL ME!",
+	)
+
+/datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/proto_gonome
+	blackboard = list(
+		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic,
+	)
+
+	ai_movement = /datum/ai_movement/basic_avoidance
+	idle_behavior = /datum/idle_behavior/idle_random_walk
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/attack_obstacle_in_path,
+		/datum/ai_planning_subtree/basic_ranged_attack_subtree/antlion_worker,
+		/datum/ai_planning_subtree/basic_melee_attack_subtree,
+		/datum/ai_planning_subtree/find_food,
+		//datum/ai_planning_subtree/random_speech/halflife/zombie,
 	)
 
 /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombine

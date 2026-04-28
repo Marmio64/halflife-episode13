@@ -184,6 +184,13 @@
 
 	mob_to_be = /mob/living/basic/halflife/zombie/gonome/deployment
 
+/datum/outfit/deployment_loadout/xen/tier4/proto_gonome
+	name = "Deployment: Fungal Proto-Gonome"
+	display_name = "Fungal Proto-Gonome (Defense)"
+	desc = "You are a fungal zombie which has begun its transition to a gonome. You have heavy fungal armor which makes you very resistant to projectiles, and you can spit acid. You are however, comparitively weak in close quarters to other xenians."
+
+	mob_to_be = /mob/living/basic/halflife/zombie/fungal/proto_gonome
+
 /datum/outfit/deployment_loadout/xen/tier4/bullsquid
 	name = "Deployment: Bullsquid"
 	display_name = "Bullsquid (Support)"

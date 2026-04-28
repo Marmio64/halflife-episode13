@@ -114,6 +114,9 @@ GLOBAL_LIST_EMPTY(generic_event_spawns)
 /// essentially allowing a user to override generic job spawnpoints with a specific one
 GLOBAL_LIST_EMPTY(jobspawn_overrides)
 
+/// list of all outlands survivor spawns
+GLOBAL_LIST_EMPTY(outlands_survivor_spawns)
+
 GLOBAL_LIST_EMPTY(gorilla_start)
 GLOBAL_LIST_EMPTY(wizardstart)
 GLOBAL_LIST_EMPTY(nukeop_start)

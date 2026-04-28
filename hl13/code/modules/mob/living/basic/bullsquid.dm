@@ -31,6 +31,8 @@
 	lighting_cutoff_green = 15
 	lighting_cutoff = 35
 
+	damage_coeff = list(BRUTE = 1, BURN = 0.5, TOX = 1, STAMINA = 1, OXY = 1)
+
 	var/datum/action/cooldown/spell/aoe/repulse/bullsquid/whip
 
 /datum/action/cooldown/spell/aoe/repulse/bullsquid
