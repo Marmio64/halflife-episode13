@@ -1064,8 +1064,8 @@
 
 /datum/outfit/deployment_loadout/rebel/boss/plf_general
 	name = "BOTH: PLF General RED"
-	display_name = "PLF General (SUPPORT, SNIPER, CROWD CONTROL)"
-	desc = "You have the full backing of the PLF behind you, and call in missile airstrikes and have friendly soldiers teleported to your position, while you stay in the backlines sniping opponents with your Dragunov. Be wary however, you aren't very durable and are vulnerable to being rushed down."
+	display_name = "RED General (SUPPORT, SNIPER, CROWD CONTROL)"
+	desc = "You have the full backing of the RED team behind you, and call in missile airstrikes and have friendly soldiers teleported to your position, while you stay in the backlines sniping opponents with your Dragunov. Be wary however, you aren't very durable and are vulnerable to being rushed down."
 
 	suit = /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss/red
 	mask = /obj/item/cigarette/halflife
@@ -1095,7 +1095,7 @@
 
 	combat_music = 'hl13/sound/music/combat/darkstalker.ogg'
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/svd_ammo/fast, /datum/action/cooldown/spell/conjure/boss_rebel_soldier, /datum/action/cooldown/spell/conjure/boss_veteran, /datum/action/cooldown/spell/conjure_item/missile_targeter_general, /datum/action/cooldown/spell/summonitem/plf_general)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/svd_ammo/fast, /datum/action/cooldown/spell/conjure/boss_rebel_soldier/red, /datum/action/cooldown/spell/conjure/boss_veteran/red, /datum/action/cooldown/spell/conjure_item/missile_targeter_general, /datum/action/cooldown/spell/summonitem/plf_general)
 
 
 	extra_dex = 10
@@ -1131,7 +1131,7 @@
 	extra_end = 10
 
 /datum/outfit/deployment_loadout/rebel/boss/extract_vortigaunt/pre_equip(mob/living/carbon/human/H)
-	H.set_species(/datum/species/vortigaunt/extract_boss)
+	H.set_species(/datum/species/vortigaunt/extract_boss/red)
 	H.cmode_music = combat_music
 	H.add_atom_colour("#ff0000", FIXED_COLOUR_PRIORITY)
 

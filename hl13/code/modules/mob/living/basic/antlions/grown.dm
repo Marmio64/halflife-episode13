@@ -346,6 +346,12 @@
 	summon_amount = 3
 	cooldown_time = 25 SECONDS
 
+/datum/action/cooldown/spell/conjure/antlion/extract_vort/super/red
+	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/red_faction)
+
+/datum/action/cooldown/spell/conjure/antlion/extract_vort/super/blu
+	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/blu_faction)
+
 //---------------------- AI STUFF -------------------
 
 /datum/ai_controller/basic_controller/antlion_worker

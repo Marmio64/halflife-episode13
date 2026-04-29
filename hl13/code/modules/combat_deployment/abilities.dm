@@ -307,6 +307,14 @@
 	summon_radius = 1
 	summon_type = list(/mob/living/basic/trooper/rebel/mp7/plf/boss)
 
+/datum/action/cooldown/spell/conjure/boss_rebel_soldier/blu
+	desc = "Call upon soldiers of the Benefactor's Loyal Unionists. Armed with MP7s, they will back you up with their life, but will eventually despawn after about a minute."
+	summon_type = list(/mob/living/basic/trooper/rebel/mp7/plf/boss/blu)
+
+/datum/action/cooldown/spell/conjure/boss_rebel_soldier/red
+	desc = "Call upon soldiers of the Rebellious Expert Demolitionists. Armed with MP7s, they will back you up with their life, but will eventually despawn after about a minute."
+	summon_type = list(/mob/living/basic/trooper/rebel/mp7/plf/boss/red)
+
 /datum/action/cooldown/spell/conjure/boss_veteran
 	name = "Summon PLF Veteran"
 	desc = "Have a PLF Veteran teleported directly to you, using experimental Lambda teleportation technology. They'll stay forever, and are very durable and powerful. However, the cooldown is very long and they move very slowly!"
@@ -325,6 +333,14 @@
 	summon_amount = 1
 	summon_radius = 1
 	summon_type = list(/mob/living/basic/trooper/rebel/mp7/veteran/boss)
+
+/datum/action/cooldown/spell/conjure/boss_veteran/blu
+	desc = "Have a BLU Veteran teleported directly to you, using experimental Lambda teleportation technology. They'll stay forever, and are very durable and powerful. However, the cooldown is very long and they move very slowly!"
+	summon_type = list(/mob/living/basic/trooper/rebel/mp7/veteran/boss/blu)
+
+/datum/action/cooldown/spell/conjure/boss_veteran/red
+	desc = "Have a RED Veteran teleported directly to you, using experimental Lambda teleportation technology. They'll stay forever, and are very durable and powerful. However, the cooldown is very long and they move very slowly!"
+	summon_type = list(/mob/living/basic/trooper/rebel/mp7/veteran/boss/red)
 
 /datum/action/cooldown/spell/summonitem/plf_general
 	name = "Instant Summon Teleportation"
