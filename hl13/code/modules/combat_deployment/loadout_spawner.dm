@@ -252,10 +252,10 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/rebel/boss/freeman,
 			/datum/outfit/deployment_loadout/rebel/boss/wesker,
-			//datum/outfit/deployment_loadout/rebel/boss/plf_general,
+			/datum/outfit/deployment_loadout/rebel/boss/plf_general,
 			/datum/outfit/deployment_loadout/rebel/boss/extract_vortigaunt,
-			//datum/outfit/deployment_loadout/rebel/boss/gonarch,
-			//datum/outfit/deployment_loadout/rebel/boss/guardian,
+			/datum/outfit/deployment_loadout/rebel/boss/gonarch,
+			/datum/outfit/deployment_loadout/rebel/boss/guardian,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -369,10 +369,10 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/combine/boss/freeman,
 			/datum/outfit/deployment_loadout/combine/boss/wesker,
-			//datum/outfit/deployment_loadout/combine/boss/plf_general,
+			/datum/outfit/deployment_loadout/combine/boss/plf_general,
 			/datum/outfit/deployment_loadout/combine/boss/extract_vortigaunt,
-			//datum/outfit/deployment_loadout/combine/boss/gonarch,
-			//datum/outfit/deployment_loadout/combine/boss/guardian,
+			/datum/outfit/deployment_loadout/combine/boss/gonarch,
+			/datum/outfit/deployment_loadout/combine/boss/guardian,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

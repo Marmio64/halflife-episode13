@@ -256,6 +256,12 @@
 	melee_attack_cooldown = 0.8 SECONDS
 	faction = list(FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
 
+/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/red
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+
+/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/blu
+	faction = list(FACTION_COMBINE)
+
 ///Every hit throws people back
 /mob/living/basic/halflife/antlion_guard/melee_attack(atom/target, list/modifiers, ignore_cooldown = FALSE)
 	. = ..()

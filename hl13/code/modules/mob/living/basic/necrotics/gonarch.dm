@@ -45,6 +45,9 @@
 	COOLDOWN_DECLARE(random_tentacle)
 	var/list/mob/living/basic/halflife/headcrab/baby/children_list = list()
 	var/charging = FALSE
+	var/color_rage = COLOR_RED
+	var/color_notrage = COLOR_WHITE
+	var/thebaby = /mob/living/basic/halflife/headcrab/baby
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/Move()
 	if(charging)
@@ -198,7 +201,7 @@
 	for(var/i in 1 to 2)
 		if(children_list.len >= 8)
 			return
-		var/mob/living/basic/halflife/headcrab/baby/new_child = new /mob/living/basic/halflife/headcrab/baby(loc)
+		var/mob/living/basic/halflife/headcrab/baby/new_child = new thebaby(loc)
 		//new_child.GiveTarget(target)
 		new_child.faction = faction.Copy()
 		visible_message(span_boldwarning("[new_child] appears below [src]!"))
@@ -223,13 +226,13 @@
 	ranged_cooldown = world.time + 55
 	playsound(src,'hl13/sound/creatures/gonarch/rage.ogg', 75, FALSE)
 	visible_message(span_warning("[src] starts picking up speed!"))
-	color = COLOR_RED
+	color = color_rage
 	set_varspeed(0)
 	move_to_delay = 3
 	addtimer(CALLBACK(src, PROC_REF(reset_rage)), 5 SECONDS)
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/proc/reset_rage()
-	color = COLOR_WHITE
+	color = color_notrage
 	set_varspeed(2)
 	move_to_delay = 5
 
@@ -237,13 +240,13 @@
 	ranged_cooldown = world.time + 55
 	playsound(src,'hl13/sound/creatures/gonarch/rage.ogg', 75, FALSE)
 	visible_message(span_warning("[src] starts picking up speed!"))
-	color = COLOR_RED
+	color = color_rage
 	set_varspeed(-1)
 	move_to_delay = 1
 	addtimer(CALLBACK(src, PROC_REF(reset_rage)), 5 SECONDS)
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/boss/reset_rage()
-	color = COLOR_WHITE
+	color = color_notrage
 	set_varspeed(1)
 	move_to_delay = 3
 
@@ -268,6 +271,20 @@
 	melee_damage_lower = 25
 	melee_damage_upper = 35
 	faction = list(FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
+
+/mob/living/simple_animal/hostile/asteroid/elite/gonarch/boss/red
+	deployment_faction = REBEL_DEPLOYMENT_FACTION
+	color_rage = "#ff8800"
+	color_notrage = "#ff0000"
+	thebaby = /mob/living/basic/halflife/headcrab/baby/red
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+
+/mob/living/simple_animal/hostile/asteroid/elite/gonarch/boss/blu
+	deployment_faction = COMBINE_DEPLOYMENT_FACTION
+	color_rage = "#00eeff"
+	color_notrage = "#0077ff"
+	thebaby = /mob/living/basic/halflife/headcrab/baby/blu
+	faction = list(FACTION_COMBINE)
 
 #undef CALL_CHILDREN
 #undef RAGE

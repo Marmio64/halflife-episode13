@@ -801,6 +801,8 @@
 	if(visualsOnly)
 		return
 
+	H.setdeploymentfaction(COMBINE_DEPLOYMENT_FACTION)
+	H.faction = list(FACTION_COMBINE)
 	H.add_traits(list(TRAIT_NEVER_WOUNDED, TRAIT_NODISMEMBER), OUTFIT_TRAIT) //ehhh just take these out of the equation, since these are BOSSES
 
 	H.dna.species.stunmod = 0.1 //all bosses are very resilient to stuns
@@ -909,6 +911,59 @@
 
 	H.add_traits(list(TRAIT_NOSOFTCRIT, TRAIT_NOHARDCRIT, TRAIT_NOCRITDAMAGE, TRAIT_IGNORESLOWDOWN, TRAIT_ANALGESIA, TRAIT_NOCRITOVERLAY), OUTFIT_TRAIT)
 
+/datum/outfit/deployment_loadout/combine/boss/plf_general
+	name = "BOTH: PLF General BLU"
+	display_name = "PLF General (SUPPORT, SNIPER, CROWD CONTROL)"
+	desc = "You have the full backing of the PLF behind you, and call in missile airstrikes and have friendly soldiers teleported to your position, while you stay in the backlines sniping opponents with your Dragunov. Be wary however, you aren't very durable and are vulnerable to being rushed down."
+
+	suit = /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss/blu
+	mask = /obj/item/cigarette/halflife
+	suit_store = /obj/item/gun/ballistic/automatic/svd
+	belt = /obj/item/melee/baton
+	l_pocket = /obj/item/knife/combat
+	r_pocket = /obj/item/flashlight/seclite
+	head = /obj/item/clothing/head/beret/sec/poland/blu
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
+	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/fingerless
+	glasses = /obj/item/clothing/glasses/thermal/eyepatch
+	id = null
+
+	back = /obj/item/storage/backpack/halflife/satchel/radio/huge
+
+	backpack_contents = list(
+		/obj/item/megaphone = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/pill/patch/medkit = 3,
+		/obj/item/ammo_box/magazine/svd = 1,
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/grenade/smokebomb = 2,
+		/obj/item/storage/fancy/cigarettes/halflife = 1,
+		/obj/item/lighter = 1,
+	)
+
+	combat_music = 'hl13/sound/music/combat/darkstalker.ogg'
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/svd_ammo/fast, /datum/action/cooldown/spell/conjure/boss_rebel_soldier, /datum/action/cooldown/spell/conjure/boss_veteran, /datum/action/cooldown/spell/conjure_item/missile_targeter_general, /datum/action/cooldown/spell/summonitem/plf_general)
+
+
+	extra_dex = 10
+	extra_str = 8 //alright with a melee weapon, but using the dragunov is going to be way better
+	extra_end = 10
+	extra_per = 10
+
+/obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss/blu
+
+/obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss/blu/Initialize()
+	.=..()
+	add_atom_colour("#0077ff", FIXED_COLOUR_PRIORITY)
+
+/obj/item/clothing/head/beret/sec/poland/blu
+
+/obj/item/clothing/head/beret/sec/poland/blu/Initialize()
+	.=..()
+	add_atom_colour("#0077ff", FIXED_COLOUR_PRIORITY)
+
 /datum/outfit/deployment_loadout/combine/boss/extract_vortigaunt
 	name = "BOTH: Extract Empowered Vortigaunt BLU"
 	display_name = "Extract Empowered Vortigaunt (SUPPORT)"
@@ -928,3 +983,33 @@
 	H.set_species(/datum/species/vortigaunt/extract_boss)
 	H.cmode_music = combat_music
 	H.add_atom_colour("#0077ff", FIXED_COLOUR_PRIORITY)
+
+/datum/outfit/deployment_loadout/combine/boss/gonarch
+	name = "BOTH: Gonarch BLU"
+	display_name = "Gonarch (SUPPORT, TANK)"
+	desc = "You are exceptionally tanky, and have a wide variety of dangerous bio attacks to use against opponents."
+	uniform = null
+	shoes = null
+	id = null
+
+/datum/outfit/deployment_loadout/combine/boss/gonarch/post_equip(mob/living/carbon/human/H)
+	var/datum/mind/player_mind = H.mind
+	var/mob/living/simple_animal/hostile/asteroid/elite/gonarch/boss/blu/S = new (H.loc)
+	player_mind.transfer_to(S)
+	qdel(H)
+	S.add_atom_colour("#0077ff", FIXED_COLOUR_PRIORITY)
+
+/datum/outfit/deployment_loadout/combine/boss/guardian
+	name = "BOTH: Antlion Guardian BLU"
+	display_name = "Antlion Guardian (RUSHDOWN, TANK)"
+	desc = "You are a tanky rushdown unit. Keep on the pressure and don't let up, you can't regenerate health and don't have any advantages for hanging back."
+	uniform = null
+	shoes = null
+	id = null
+
+/datum/outfit/deployment_loadout/combine/boss/guardian/post_equip(mob/living/carbon/human/H)
+	var/datum/mind/player_mind = H.mind
+	var/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/S = new (H.loc)
+	player_mind.transfer_to(S)
+	qdel(H)
+	S.add_atom_colour("#0077ff", FIXED_COLOUR_PRIORITY)
