@@ -80,7 +80,7 @@
 	if(HAS_TRAIT(src, TRAIT_NOFIRE))
 		return
 
-	adjustFireLoss(rand(3 , burnlevel*0.75))
+	adjustFireLoss(rand(3 , burnlevel))
 	adjust_fire_stacks(burnlevel/4 + (clamp(firelevel, 1, 25))/10) //Make it possible to light them on fire later.
 	ignite_mob()
 	to_chat(src, "<span class='danger'>You are burned!</span>")
