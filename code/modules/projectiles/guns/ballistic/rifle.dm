@@ -309,7 +309,7 @@
 
 /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
 	desc = "A well crafted crossbow made with care, despite the shoddy appearence. Can fire sharpened iron rods and pieces of rebar at high velocities with large amounts of armor piercing capability."
-	draw_time = 1 SECONDS
+	draw_time = 0.8 SECONDS
 
 /obj/item/gun/ballistic/rifle/rebarxbow/hidden
 	desc = "A handcrafted crossbow. Can fire sharpened iron rods and pieces of rebar at high velocities with large amounts of armor piercing capability. The scope is cracked and useless."

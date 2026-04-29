@@ -77,6 +77,10 @@
 
 // override this proc to give different walking-over-fire effects
 /mob/living/proc/flamer_fire_crossed(burnlevel, firelevel, fire_mod = 1)
+	if(HAS_TRAIT(src, TRAIT_NOFIRE))
+		return
+
+	adjustFireLoss(rand(3 , burnlevel*0.75))
 	adjust_fire_stacks(burnlevel/4 + (clamp(firelevel, 1, 25))/10) //Make it possible to light them on fire later.
 	ignite_mob()
 	to_chat(src, "<span class='danger'>You are burned!</span>")
@@ -141,9 +145,12 @@
 /mob/living/flamer_fire_act(burnlevel, firelevel)
 	if(!burnlevel)
 		return
+	if(HAS_TRAIT(src, TRAIT_NOFIRE))
+		return
+
 	adjust_fire_stacks(burnlevel) //If i stand in the fire i deserve all of this. Also Napalm stacks quickly.
 	ignite_mob()
-	adjustFireLoss(rand(5 , burnlevel)) //Including the fire should be way stronger.
+	adjustFireLoss(rand(5 , burnlevel * 1.25)) //Including the fire should be way stronger.
 	to_chat(src, "<span class='warning'>You are burned!</span>")
 
 /proc/flame_radius(radius = 1, turf/epicenter, burn_duration = 30, burn_intensity = 25, burn_damage = 9, fire_stacks = 1, int_var = 0.5, dur_var = 0.5, colour = "red") //~Art updated fire.

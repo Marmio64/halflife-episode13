@@ -32,7 +32,7 @@
 	throw_message = "does nothing to the plated hide of the"
 	speed = 2
 	move_to_delay = 5
-	mob_biotypes = MOB_ORGANIC|MOB_BEAST
+	mob_biotypes = MOB_ORGANIC|MOB_BEAST|MOB_XENIAN
 	mouse_opacity = MOUSE_OPACITY_ICON
 	death_message = "falls over with a final cry!"
 
