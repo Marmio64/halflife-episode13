@@ -43,14 +43,14 @@
 	armor_type = /datum/armor/elitepro_vest
 
 /datum/armor/elitepro_vest
-	melee = 55
-	bullet = 25
+	melee = 40
+	bullet = 30
 	laser = 25
 	energy = 40
-	bomb = 25
-	fire = 55
-	acid = 55
-	wound = 15
+	bomb = 30
+	fire = 70
+	acid = 70
+	wound = 10
 
 /obj/item/clothing/suit/armor/civilprotection/medical/speedy
 	slowdown = -0.25
