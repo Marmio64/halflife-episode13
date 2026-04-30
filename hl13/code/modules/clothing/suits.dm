@@ -35,6 +35,23 @@
 	name = "medical officer vest"
 	icon_state = "medicalofficer"
 
+/obj/item/clothing/suit/armor/civilprotection/elite
+	name = "elite civil protection vest"
+	desc = "A reinforced variant of the standard civil protection vest, made with higher materials to reward CPOs who underwent memory replacement to ensure reliability. This model was originally for the higher ranked divisional leads, but was phased out by updated trenchcoats, resulting in surplus models being assigned to lesser CPOs."
+	icon_state = "elitecpo_vest"
+
+	armor_type = /datum/armor/elitepro_vest
+
+/datum/armor/elitepro_vest
+	melee = 55
+	bullet = 25
+	laser = 25
+	energy = 40
+	bomb = 25
+	fire = 55
+	acid = 55
+	wound = 15
+
 /obj/item/clothing/suit/armor/civilprotection/medical/speedy
 	slowdown = -0.25
 
@@ -46,11 +63,11 @@
 	actions_types = list(/datum/action/item_action/disguise_self)
 	clothing_traits = list(TRAIT_BACKSTABBER)
 	var/disguise_charge = TRUE
-	var/list/outfitoptions = list("OTA Soldier", "OTA Sniper", "OTA Elite", "Medical Cop", "Rebel Cell Leader")
+	var/list/outfitoptions = list("OTA Soldier", "OTA Sniper", "OTA Elite", "Medical Cop")
 
 /datum/action/item_action/disguise_self
 	name = "Disguise Self"
-	desc = "Disguise yourself with a rudimentary combine disguise if you have both your hands free."
+	desc = "Disguise yourself with a rudimentary combine disguise if you have both your hands free. Warning, it is unable to fool turrets, and slows you down."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "cloak"
 
@@ -78,8 +95,6 @@
 			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/elite
 		if("Medical Cop")
 			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/med_cop
-		if("Rebel Cell Leader")
-			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/cell_leader
 		else
 			return
 	var/obj/item/cardboard_cutout/D = new disguise_chosen(H)
@@ -138,18 +153,19 @@
 	icon_state = "cp_trenchcoatoverseer"
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/overseer/fast
-	slowdown = -0.15
+	slowdown = -0.1
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/sectorial
 	name = "sectoral trenchcoat"
 	desc = "A variant of the modified trenchcoat vest dyed with blue highlights to broadcast the authority of its wearer."
 	icon_state = "sectorial"
 
-/obj/item/clothing/suit/armor/civilprotection/divisional
+/obj/item/clothing/suit/armor/civilprotection/trenchcoat/divisional
 	name = "divisional lead vest"
-	desc = "A variant of the standard officer's vest dyed with red highlights to broadcast the authority of its wearer."
+	desc = "A variant of the modified trenchcoat vest dyed with red highlights to broadcast the authority of its wearer. It even came with a flag on your back to signify your undying devotion."
 	icon_state = "dv_vest"
 	inhand_icon_state = "armoralt"
+	slowdown = 0
 
 /obj/item/clothing/suit/armor/overwatch
 	name = "overwatch chestpiece"
