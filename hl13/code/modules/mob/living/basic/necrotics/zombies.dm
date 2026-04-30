@@ -275,7 +275,7 @@
 	icon_living = "protogonome"
 	icon_dead = "protogonome_dead"
 	no_crab_state = "protogonome_nocrab"
-	armor_value = 80
+	armor_value = 100
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/proto_gonome
 	var/spray_cooldown = 3 SECONDS
 

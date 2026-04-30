@@ -82,7 +82,7 @@
 
 /obj/item/food/nachos
 	name = "nachos"
-	desc = "Chips from Space Mexico."
+	desc = "Chips from Mexico, supposedly."
 	icon = 'icons/obj/food/mexican.dmi'
 	icon_state = "nachos"
 	food_reagents = list(
