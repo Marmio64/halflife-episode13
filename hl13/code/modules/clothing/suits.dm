@@ -63,11 +63,11 @@
 	actions_types = list(/datum/action/item_action/disguise_self)
 	clothing_traits = list(TRAIT_BACKSTABBER)
 	var/disguise_charge = TRUE
-	var/list/outfitoptions = list("OTA Soldier", "OTA Sniper", "OTA Elite", "Medical Cop")
+	var/list/outfitoptions = list("OTA Soldier", "OTA Sniper", "OTA Elite", "Medical Cop", "Rebel Cell Leader")
 
 /datum/action/item_action/disguise_self
 	name = "Disguise Self"
-	desc = "Disguise yourself with a rudimentary combine disguise if you have both your hands free. Warning, it is unable to fool turrets, and slows you down."
+	desc = "Disguise yourself with a rudimentary combine disguise if you have both your hands free."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "cloak"
 
@@ -95,6 +95,8 @@
 			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/elite
 		if("Medical Cop")
 			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/med_cop
+		if("Rebel Cell Leader")
+			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/cell_leader
 		else
 			return
 	var/obj/item/cardboard_cutout/D = new disguise_chosen(H)
@@ -153,7 +155,7 @@
 	icon_state = "cp_trenchcoatoverseer"
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/overseer/fast
-	slowdown = -0.1
+	slowdown = -0.15
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/sectorial
 	name = "sectoral trenchcoat"
