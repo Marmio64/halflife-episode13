@@ -278,3 +278,14 @@
 /obj/item/storage/box/sparklers/PopulateContents()
 	for(var/i in 1 to 7)
 		new/obj/item/sparkler(src)
+
+/obj/item/storage/box/elitekit
+	name = "Elite Civil Protection equipment kit"
+	desc = "A box of Elite Civil Protection gear, previously surplus models for divisional leads now assigned to high-ranking civil protection either under or next in line for the position of DvL. The majority of officers reach this position via voluntary memory replacement."
+	icon_state = "combine_box"
+	illustration = null
+
+/obj/item/storage/box/elitekit/PopulateContents()
+	new /obj/item/clothing/mask/gas/civilprotection/divisional/elitebeta(src)
+	new /obj/item/clothing/suit/armor/civilprotection/elite(src)
+	new /obj/item/clothing/under/combine/civilprotection/divisionallead/elitebeta(src)

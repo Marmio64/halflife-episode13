@@ -35,6 +35,23 @@
 	name = "medical officer vest"
 	icon_state = "medicalofficer"
 
+/obj/item/clothing/suit/armor/civilprotection/elite
+	name = "elite civil protection vest"
+	desc = "A reinforced variant of the standard civil protection vest, made with higher materials to reward CPOs who underwent memory replacement to ensure reliability. This model was originally for the higher ranked divisional leads, but was phased out by updated trenchcoats, resulting in surplus models being assigned to lesser CPOs."
+	icon_state = "elitecpo_vest"
+
+	armor_type = /datum/armor/elitepro_vest
+
+/datum/armor/elitepro_vest
+	melee = 55
+	bullet = 25
+	laser = 25
+	energy = 40
+	bomb = 25
+	fire = 55
+	acid = 55
+	wound = 15
+
 /obj/item/clothing/suit/armor/civilprotection/medical/speedy
 	slowdown = -0.25
 
@@ -145,11 +162,12 @@
 	desc = "A variant of the modified trenchcoat vest dyed with blue highlights to broadcast the authority of its wearer."
 	icon_state = "sectorial"
 
-/obj/item/clothing/suit/armor/civilprotection/divisional
+/obj/item/clothing/suit/armor/civilprotection/trenchcoat/divisional
 	name = "divisional lead vest"
-	desc = "A variant of the standard officer's vest dyed with red highlights to broadcast the authority of its wearer."
+	desc = "A variant of the modified trenchcoat vest dyed with red highlights to broadcast the authority of its wearer. It even came with a flag on your back to signify your undying devotion."
 	icon_state = "dv_vest"
 	inhand_icon_state = "armoralt"
+	slowdown = 0
 
 /obj/item/clothing/suit/armor/overwatch
 	name = "overwatch chestpiece"

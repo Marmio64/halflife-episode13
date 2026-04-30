@@ -123,6 +123,11 @@
 	icon_state = "divisionallead"
 	armor_type = /datum/armor/combinesuit_upgraded
 
+/obj/item/clothing/under/combine/civilprotection/divisionallead/elitebeta
+	name = "elite civil protection jumpsuit"
+	desc = "Full-body suit which includes kevlar weaving to provide extra protection. It seems this one came with a red armband and armored padding."
+	icon_state = "elitecivilprotection"
+
 /datum/armor/combinesuit_upgraded
 	melee = 15
 	bullet = 15
