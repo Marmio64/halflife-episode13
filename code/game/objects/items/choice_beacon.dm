@@ -100,6 +100,59 @@
 			instruments[initial(instrument.name)] = instrument
 	return instruments
 
+/obj/item/choice_beacon/cpomilestone
+	name = "CPO Milestone Reward Beacon"
+	desc = "A reward incentive for CPO, it seems the Combine mostly filled the market with a bunch of surplus gear they had no use for. This one has a universal cost of 2 Requisition points."
+	icon_state = "sb_delivery"
+	inhand_icon_state = "sb_delivery"
+	company_source = "Overwatch-Dispatch"
+	company_message = span_bold("Your choice has been selected, and we will now be deducting requisition points for the delivery cost.")
+	w_class = WEIGHT_CLASS_TINY
+	var/obj/item/card/id/C //id with req points
+	var/datum/bank_account/account
+/// Req Point Check
+/obj/item/choice_beacon/cpomilestone/can_use_beacon(mob/living/user)
+	C = user.get_idcard(TRUE)
+	if(C.registered_account)
+		account = C.registered_account
+
+	if (2 <= account.requisition_points)
+		return TRUE
+
+	playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 40, TRUE)
+	return FALSE
+
+/obj/item/choice_beacon/cpomilestone/generate_display_names()
+	var/static/list/surplus_gear
+	if(!surplus_gear)
+		surplus_gear = list()
+		var/list/possible_gear = list(
+			/obj/item/storage/box/elitekit,
+		)
+		for(var/obj/item/storage/box/box as anything in possible_gear)
+			surplus_gear[initial(box.name)] = box
+	return surplus_gear
+
+/obj/item/choice_beacon/cpomilestone/consume_use(obj/choice_path, mob/living/user)
+	user.get_idcard(TRUE)
+	account.requisition_points -= 2
+	to_chat(user, span_hear("You hear something crackle from the beacon for a moment before a voice speaks. \
+		\"Please stand by for a message from [company_source]. Message as follows: [company_message] Message ends.\""))
+
+	spawn_option(choice_path, user)
+	uses--
+	if(uses <= 0)
+		do_sparks(3, source = src)
+		qdel(src)
+		return
+
+	to_chat(user, span_notice("[uses] use[uses > 1 ? "s" : ""] remain[uses > 1 ? "" : "s"] on [src]."))
+
+/obj/item/choice_beacon/cpomilestone/dvl
+	name = "DvL Combine Surplus Beacon"
+	desc = "A link beacon with a nearby Overwatch reserve, capable of transporting specialized gear not normally stocked to officers. This was entrusted with the Division Lead solely to reward capable CPO or use in emergencies- though each use will invoke a penalty of 2 requisition points to encourage proper use."
+	uses = 5
+
 /obj/item/choice_beacon/ingredient
 	name = "ingredient delivery beacon"
 	desc = "Summon a box of ingredients to help you get started cooking."
