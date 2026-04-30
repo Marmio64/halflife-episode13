@@ -256,6 +256,12 @@
 	melee_attack_cooldown = 0.8 SECONDS
 	faction = list(FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
 
+/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/red
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+
+/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/blu
+	faction = list(FACTION_COMBINE)
+
 ///Every hit throws people back
 /mob/living/basic/halflife/antlion_guard/melee_attack(atom/target, list/modifiers, ignore_cooldown = FALSE)
 	. = ..()
@@ -339,6 +345,12 @@
 /datum/action/cooldown/spell/conjure/antlion/extract_vort/super
 	summon_amount = 3
 	cooldown_time = 25 SECONDS
+
+/datum/action/cooldown/spell/conjure/antlion/extract_vort/super/red
+	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/red_faction)
+
+/datum/action/cooldown/spell/conjure/antlion/extract_vort/super/blu
+	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/blu_faction)
 
 //---------------------- AI STUFF -------------------
 

@@ -243,6 +243,24 @@
 			loadouts[initial(loadout.display_name)] = loadout
 	return loadouts
 
+/obj/item/hl2/loadout_picker/rebel/boss
+
+/obj/item/hl2/loadout_picker/rebel/boss/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/outfit/deployment_loadout/rebel/boss/freeman,
+			/datum/outfit/deployment_loadout/rebel/boss/wesker,
+			/datum/outfit/deployment_loadout/rebel/boss/plf_general,
+			/datum/outfit/deployment_loadout/rebel/boss/extract_vortigaunt,
+			/datum/outfit/deployment_loadout/rebel/boss/gonarch,
+			/datum/outfit/deployment_loadout/rebel/boss/guardian,
+		)
+		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.display_name)] = loadout
+	return loadouts
+
 ///////////////////////////// COMBINE LOADOUT PICKERS //////////////////////////////////////////////////////
 
 /obj/item/hl2/loadout_picker/combine
@@ -337,6 +355,24 @@
 			/datum/outfit/deployment_loadout/combine/tier5/advisor,
 			/datum/outfit/deployment_loadout/combine/tier5/logistics_lead,
 			/datum/outfit/deployment_loadout/combine/tier5/assassin,
+		)
+		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.display_name)] = loadout
+	return loadouts
+
+/obj/item/hl2/loadout_picker/combine/boss
+
+/obj/item/hl2/loadout_picker/combine/boss/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/outfit/deployment_loadout/combine/boss/freeman,
+			/datum/outfit/deployment_loadout/combine/boss/wesker,
+			/datum/outfit/deployment_loadout/combine/boss/plf_general,
+			/datum/outfit/deployment_loadout/combine/boss/extract_vortigaunt,
+			/datum/outfit/deployment_loadout/combine/boss/gonarch,
+			/datum/outfit/deployment_loadout/combine/boss/guardian,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

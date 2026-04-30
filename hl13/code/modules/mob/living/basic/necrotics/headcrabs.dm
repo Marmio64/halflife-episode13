@@ -213,6 +213,16 @@
 	. = ..()
 	AddComponent(/datum/component/swarming)
 
+/mob/living/basic/halflife/headcrab/baby/red
+	deployment_faction = COMBINE_DEPLOYMENT_FACTION
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+	color = "#ff0000"
+
+/mob/living/basic/halflife/headcrab/baby/blu
+	deployment_faction = REBEL_DEPLOYMENT_FACTION
+	faction = list(FACTION_COMBINE)
+	color = "#0077ff"
+
 /////////AI STUFF/////////////////////
 
 /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/headcrab

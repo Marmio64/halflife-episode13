@@ -93,6 +93,16 @@
 	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
 	speed = 0
 
+/mob/living/basic/trooper/rebel/mp7/plf/boss/blu
+	name = "BLU Soldier"
+	faction = list(FACTION_COMBINE)
+	color = "#0077ff"
+
+/mob/living/basic/trooper/rebel/mp7/plf/boss/red
+	name = "RED Soldier"
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+	color = "#ff0000"
+
 /obj/effect/mob_spawn/corpse/human/plf_trooper
 	name = "PLF Trooper"
 	hairstyle = "Business Hair 3"
@@ -131,6 +141,16 @@
 
 /mob/living/basic/trooper/rebel/mp7/veteran/boss
 	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
+
+/mob/living/basic/trooper/rebel/mp7/veteran/boss/blu
+	name = "BLU Veteran"
+	faction = list(FACTION_COMBINE)
+	color = "#0077ff"
+
+/mob/living/basic/trooper/rebel/mp7/veteran/boss/red
+	name = "RED Veteran"
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+	color = "#ff0000"
 
 // AI STUFF THAT I PUT IN HERE CAUSE IM TOO LAZY TO MAKE ANOTHER FILE FOR IT --------------------------
 /datum/ai_planning_subtree/random_speech/rebelsoldier

@@ -39,6 +39,8 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 		info += "You are playing for the Rebel Side in the Xen Defense gamemode! Protect your comms tower, gather cash, and keep incoming zombies and antlions at bay long enough for reinforcements to arrive."
 	if(SSmapping.current_map.combat_deployment_gamemode == "xen_chaos")
 		info += "You are playing for the Rebel Side in the Xen Chaos King of The Hill gamemode! Capture the central flag and keep it under your faction's control for a total of five minutes to win!"
+	if(SSmapping.current_map.combat_deployment_gamemode == "both")
+		info += "You are playing for the Rebellious Expert Demolitionists Side in the Boss of The Hill TDM game mode! Capture the central flag using a unique selection of characters and keep it under your faction's control for a total of five minutes to win!"
 
 	return info
 
@@ -81,6 +83,9 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 
 	if(SSmapping.current_map.combat_deployment_gamemode == "the_hidden")
 		chosen = /obj/item/hl2/loadout_picker/hidden/rebel
+
+	if(SSmapping.current_map.combat_deployment_gamemode == "both")
+		chosen = /obj/item/hl2/loadout_picker/rebel/boss
 
 	if(chosen)
 		var/turf/T = get_turf(H)
