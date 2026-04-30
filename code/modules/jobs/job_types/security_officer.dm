@@ -212,6 +212,18 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 		GLOB.security_officer_distribution,
 	)
 
+/datum/outfit/job/security/pre_equip(mob/living/carbon/human/user)
+	.=..()
+	var/currentrankpoints = 0
+
+	var/client/user_client = GLOB.directory[ckey(user.mind?.key)]
+
+	if(user_client)
+		currentrankpoints = user_client.prefs.read_preference(/datum/preference/numeric/rankpoints)
+
+	if(24 < currentrankpoints)
+		l_hand = /obj/item/choice_beacon/cpomilestone
+
 /datum/outfit/job/security
 	name = "Civil Protection Officer"
 	jobtype = /datum/job/security_officer
