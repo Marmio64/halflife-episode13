@@ -122,10 +122,20 @@
 
 /datum/action/cooldown/spell/pointed/advisorial_punish/cast(mob/living/carbon/human/cast_on)
 	. = ..()
+	var/nearby_vort = FALSE
+
+	for(var/mob/living/carbon/hooman in orange(3, cast_on))
+		if(isvortigaunt(hooman) && hooman.stat == CONSCIOUS)
+			nearby_vort = TRUE
 
 	if(isvortigaunt(cast_on))
 		to_chat(cast_on, span_warning("A terrible grublike visage attempts to invade your mind. With great strain, you stop the Shu'ulathoi before it can cause too great of harm to your mind."))
 		cast_on.emote("grimace")
+		to_chat(owner, span_warning("This being is capable of dispelling our powers. Further attempts at punishment will be futile."))
+	else if(nearby_vort)
+		to_chat(cast_on, span_warning("A terrible grublike visage attempts to invade your mind. But, a strained green energy appears before you, washing away the monstrous being's gaze."))
+		cast_on.emote("grimace")
+		to_chat(owner, span_warning("A nearby vortigaunt is dispelling our power's attempts at punishing this being. Further attempts at punishment will be futile so long as the vortigaunt remains near."))
 	else
 		to_chat(cast_on, span_warning("Your mind cries out in pain as a psionic wave washes over it!"))
 		cast_on.throw_alert_text(/atom/movable/screen/alert/text/cry, "Your mind explodes in agony!", override = FALSE)

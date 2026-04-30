@@ -232,7 +232,7 @@
 	name = "Upgraded Rebar Crossbow"
 	result = /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
 	reqs = list(/obj/item/stack/sheet/iron = 5,
-				/obj/item/gun/ballistic/rifle/rebarxbow/upgraded = 1,
+				/obj/item/gun/ballistic/rifle/rebarxbow = 1,
 				/obj/item/weaponcrafting/receiver = 1,
 				/obj/item/stack/sticky_tape = 1)
 	blacklist = list(
