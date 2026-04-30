@@ -286,7 +286,7 @@
 
 	uniform = /obj/item/clothing/under/combine/civilprotection/divisionallead
 	gloves = /obj/item/clothing/gloves/color/civilprotection
-	suit = /obj/item/clothing/suit/armor/civilprotection/divisional
+	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat/divisional
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	glasses = /obj/item/clothing/glasses/hud/security
