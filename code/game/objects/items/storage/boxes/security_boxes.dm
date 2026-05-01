@@ -280,7 +280,7 @@
 		new/obj/item/sparkler(src)
 
 /obj/item/storage/box/elitekit
-	name = "Elite Civil Protection equipment kit"
+	name = "Elite Civil Protection Equipment Kit"
 	desc = "A box of Elite Civil Protection gear, previously surplus models for divisional leads now assigned to high-ranking civil protection either under or next in line for the position of DvL. The majority of officers reach this position via voluntary memory replacement."
 	icon_state = "combine_box"
 	illustration = null
@@ -289,3 +289,49 @@
 	new /obj/item/clothing/mask/gas/civilprotection/divisional/elitebeta(src)
 	new /obj/item/clothing/suit/armor/civilprotection/elite(src)
 	new /obj/item/clothing/under/combine/civilprotection/divisionallead/elitebeta(src)
+
+/obj/item/storage/box/m1911kit
+	name = "Boxed Holster and M1911 Service Pistol"
+	desc = "It appears someone has stuffed a holster into this box. The ammo for this pistol is very rare, and it has a smaller magazine- make each shot count."
+	icon_state = "combine_box"
+	illustration = null
+
+/obj/item/storage/box/m1911kit/PopulateContents()
+	new /obj/item/storage/belt/holster/detective/cpsurplus(src)
+
+/obj/item/storage/box/metropolicekit
+	name = "Metropolice Gear"
+	desc = "Prototype gear barely ever put into production except for test models, depicting what could've been of Civil Protection."
+	icon_state = "combine_box"
+	illustration = null
+
+/obj/item/storage/box/metropolicekit/PopulateContents()
+	new /obj/item/clothing/suit/armor/civilprotection/trenchcoat/metropolice(src)
+	new /obj/item/clothing/head/costume/spacepolice(src)
+	new /obj/item/melee/baton(src)
+
+/obj/item/storage/box/combatchefkit // Admin Only
+	name = "Combat Chef Cooking Starter Kit"
+	desc = "You don't renember there ever being plans for the Combine to start introducing field chefs to their ranks. Atleast you can throw some tomatoes at criminals?"
+	icon_state = "combine_box"
+	illustration = null
+
+/obj/item/storage/box/combatchefkit/PopulateContents()
+	new /obj/item/clothing/head/utility/chefhat(src)
+	new /obj/item/clothing/mask/gas/civilprotection/combatchef(src)
+	new /obj/item/clothing/suit/armor/civilprotection/combatchef(src)
+	new /obj/item/spess_knife(src)
+	new /obj/item/food/grown/tomato(src)
+	new /obj/item/grown/bananapeel(src)
+
+
+/obj/item/storage/box/paydaytaser
+	name = "Experimental Electric Weaponry Reserve"
+	desc = "While stunbatons are effective against unarmored targets, the Combine has been attempting to provide options that remain viable against armored targets- although they can be a bit larger then a normal baton."
+	icon_state = "combine_box"
+	illustration = null
+
+/obj/item/storage/box/paydaytaser/PopulateContents()
+	new /obj/item/defibrillator/compact/combat/loaded/taser(src)
+	new /obj/item/clothing/under/combine/civilprotection/paydaytaser(src)
+	new /obj/item/clothing/suit/armor/civilprotection/trenchcoat/taser(src)
