@@ -128,6 +128,9 @@
 		surplus_gear = list()
 		var/list/possible_gear = list(
 			/obj/item/storage/box/elitekit,
+			/obj/item/storage/box/m1911kit,
+			/obj/item/storage/box/metropolicekit,
+			/obj/item/storage/box/paydaytaser,
 		)
 		for(var/obj/item/storage/box/box as anything in possible_gear)
 			surplus_gear[initial(box.name)] = box
