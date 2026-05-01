@@ -297,7 +297,7 @@
 	illustration = null
 
 /obj/item/storage/box/m1911kit/PopulateContents()
-	new /obj/item/storage/belt/holster/detective/cpsurplus(src)
+	new /obj/item/storage/belt/holster/detective/full/cpsurplus(src)
 
 /obj/item/storage/box/metropolicekit
 	name = "Metropolice Gear"
