@@ -68,7 +68,7 @@
 	actions_types = list(/datum/action/item_action/disguise_self)
 	clothing_traits = list(TRAIT_BACKSTABBER)
 	var/disguise_charge = TRUE
-	var/list/outfitoptions = list("OTA Soldier", "OTA Sniper", "OTA Elite", "Medical Cop", "Rebel Cell Leader"")
+	var/list/outfitoptions = list("OTA Soldier", "OTA Sniper", "OTA Elite", "Medical Cop", "Rebel Cell Leader")
 
 /datum/action/item_action/disguise_self
 	name = "Disguise Self"
