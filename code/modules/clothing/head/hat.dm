@@ -29,7 +29,7 @@
 	worn_y_offset = 4
 
 /obj/item/clothing/head/costume/spacepolice
-	name = "space police cap"
+	name = "police cap"
 	desc = "A blue cap for patrolling the daily beat."
 	icon_state = "policecap_families"
 	inhand_icon_state = null
