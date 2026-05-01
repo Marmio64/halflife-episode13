@@ -52,22 +52,22 @@
 
 /obj/item/clothing/accessory/armband/miner
 	name = "mining team workband"
-	desc = "A bright reflective armband, meant to help mining teams see eachother in the darkness of caves."
+	desc = "A bright reflective armband, meant to help prison mining teams see eachother in the darkness of caves."
 	icon_state = "engieband"
 
 /obj/item/clothing/accessory/armband/unionaid
 	name = "union assistant workband"
-	desc = "A dual-color armband, representing the 2 unionized department's within the prison and the wearer's status as an aid for full-time employees."
+	desc = "A dual-color armband, representing the 2 unionized department's within the prison and the wearer's status as an prisoner aid for full-time employees."
 	icon_state = "unionband"
 
 /obj/item/clothing/accessory/armband/paperworkaid
 	name = "labor union accountant workband"
-	desc = "A cold white armband, simple and calculating. It designates the wearer as an aid to the Labor Union, most likely assigned either manifest or paperwork duty."
+	desc = "A cold white armband, simple and calculating. It designates the wearer as a prisoner aid to the Labor Union, most likely assigned either manifest or paperwork duty."
 	icon_state = "medband"
 
 /obj/item/clothing/accessory/armband/janitorial
 	name = "janitorial service workband"
-	desc = "A purple armband for designating the wearer as an authorized janitor. These are mostly used when the proper biotic staff is unavailable."
+	desc = "A purple armband for designating the wearer as an authorized prison janitor. These are mostly used when the proper biotic staff is unavailable."
 	icon_state = "rndband"
 
 /obj/item/clothing/accessory/armband/clerk
