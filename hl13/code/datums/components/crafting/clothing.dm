@@ -32,8 +32,16 @@
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
 
-/datum/crafting_recipe/rebel_uniform_kevlar/check_requirements(mob/user, list/collected_requirements)
-	return !HAS_TRAIT(user, TRAIT_MINDSHIELD)
+/datum/crafting_recipe/combatchef // Cosmetic
+	name = "Armored Chef Apron"
+	desc = "You can attach a civil protection vest to a chef's apron with a little bit of tape, perfect for in-fight cooking."
+	result = /obj/item/clothing/suit/armor/civilprotection/combatchef
+	reqs = list(/obj/item/clothing/suit/armor/civilprotection = 1,
+				/obj/item/clothing/suit/apron/chef = 1,
+				/obj/item/stack/sticky_tape = 2)
+
+	time = 5 SECONDS
+	category = CAT_ARMOR
 
 //modify a civil protection mask
 /datum/crafting_recipe/military_gas_mask
