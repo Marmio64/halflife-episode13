@@ -35,6 +35,11 @@
 	name = "medical officer vest"
 	icon_state = "medicalofficer"
 
+/obj/item/clothing/suit/armor/civilprotection/polishpolice
+	name = "high visibility metropolice vest"
+	desc = "A high visibility vest draped over traditional armoring, representative of old world values."
+	icon_state = "metropolice_vest"
+
 /obj/item/clothing/suit/armor/civilprotection/combatchef
 	name = "civil protection apron"
 	desc = "A cooking apron has been donned under this vest, providing absolutely zero extra protection- except against food contamination."
