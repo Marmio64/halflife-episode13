@@ -34,6 +34,12 @@
 	icon_state = "policecap_families"
 	inhand_icon_state = null
 
+/obj/item/clothing/head/costume/polishpolice
+	name = "polish police cap"
+	desc = "An old cap for patrolling the daily beat."
+	icon_state = "polishpolicecap"
+	inhand_icon_state = null
+
 /obj/item/clothing/head/costume/canada
 	name = "striped red tophat"
 	desc = "It smells like fresh donut holes. / <i>Il sent comme des trous de beignets frais.</i>"
