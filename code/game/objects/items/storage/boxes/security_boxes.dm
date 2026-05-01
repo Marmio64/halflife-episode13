@@ -306,8 +306,8 @@
 	illustration = null
 
 /obj/item/storage/box/metropolicekit/PopulateContents()
-	new /obj/item/clothing/suit/armor/civilprotection/trenchcoat/metropolice(src)
-	new /obj/item/clothing/head/costume/spacepolice(src)
+	new /obj/item/clothing/suit/armor/civilprotection/polishpolice(src)
+	new /obj/item/clothing/head/costume/polishpolice(src)
 	new /obj/item/melee/baton(src)
 
 /obj/item/storage/box/combatchefkit // Admin Only
