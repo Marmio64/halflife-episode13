@@ -35,6 +35,11 @@
 	name = "medical officer vest"
 	icon_state = "medicalofficer"
 
+/obj/item/clothing/suit/armor/civilprotection/combatchef
+	name = "civil protection apron"
+	desc = "A cooking apron has been donned under this vest, providing absolutely zero extra protection- except against food contamination."
+	icon_state = "combatchef"
+
 /obj/item/clothing/suit/armor/civilprotection/elite
 	name = "elite civil protection vest"
 	desc = "A reinforced variant of the standard civil protection vest, made with higher materials to reward CPOs who underwent memory replacement to ensure reliability. This model was originally for the higher ranked divisional leads, but was phased out by updated trenchcoats, resulting in surplus models being assigned to lesser CPOs."
@@ -43,14 +48,14 @@
 	armor_type = /datum/armor/elitepro_vest
 
 /datum/armor/elitepro_vest
-	melee = 40
-	bullet = 30
+	melee = 55
+	bullet = 25
 	laser = 25
 	energy = 40
-	bomb = 30
-	fire = 70
-	acid = 70
-	wound = 10
+	bomb = 25
+	fire = 55
+	acid = 55
+	wound = 15
 
 /obj/item/clothing/suit/armor/civilprotection/medical/speedy
 	slowdown = -0.25
@@ -63,11 +68,11 @@
 	actions_types = list(/datum/action/item_action/disguise_self)
 	clothing_traits = list(TRAIT_BACKSTABBER)
 	var/disguise_charge = TRUE
-	var/list/outfitoptions = list("OTA Soldier", "OTA Sniper", "OTA Elite", "Medical Cop", "Rebel Cell Leader")
+	var/list/outfitoptions = list("OTA Soldier", "OTA Sniper", "OTA Elite", "Medical Cop")
 
 /datum/action/item_action/disguise_self
 	name = "Disguise Self"
-	desc = "Disguise yourself with a rudimentary combine disguise if you have both your hands free."
+	desc = "Disguise yourself with a rudimentary combine disguise if you have both your hands free. Warning, it is unable to fool turrets, and slows you down."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "cloak"
 
@@ -95,8 +100,6 @@
 			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/elite
 		if("Medical Cop")
 			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/med_cop
-		if("Rebel Cell Leader")
-			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/cell_leader
 		else
 			return
 	var/obj/item/cardboard_cutout/D = new disguise_chosen(H)
@@ -121,6 +124,16 @@
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
+
+/obj/item/clothing/suit/armor/civilprotection/trenchcoat/metropolice
+	name = "metropolice ballistic vest"
+	desc = "A prototype civil protection vest, used in the early stages of the Combine takeover. Previously, CPOs would be known as 'metropolice' to mirror old-world customs, yet their name and uniform was changed to dehumanize enlisted members to average citizens."
+	icon_state = "metropolice"
+
+/obj/item/clothing/suit/armor/civilprotection/trenchcoat/taser
+	name = "experimental shock-resistant civil protection vest"
+	desc = "A prototype civil protection vest, still in early stages of development. Provided to users of the experimental defibrilator to help resist their own shocks- it covers more of the body, but the bulky frame leaves the user slowed."
+	icon_state = "pd_taser"
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/cremator
 	name = "trench coat"
@@ -155,7 +168,7 @@
 	icon_state = "cp_trenchcoatoverseer"
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/overseer/fast
-	slowdown = -0.15
+	slowdown = -0.1
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/sectorial
 	name = "sectoral trenchcoat"
