@@ -1,4 +1,7 @@
 // This file contains everything used by security, or in other combat applications.
+#define METRO_AMERICA "United States"
+#define METRO_UK "Britain"
+#define METRO_POLAND "Homeland"
 
 /obj/item/storage/box/flashbangs
 	name = "box of flashbangs (WARNING)"
@@ -304,11 +307,28 @@
 	desc = "Prototype gear barely ever put into production except for test models, depicting what could've been of Civil Protection."
 	icon_state = "combine_box"
 	illustration = null
-
 /obj/item/storage/box/metropolicekit/PopulateContents()
-	new /obj/item/clothing/suit/armor/civilprotection/polishpolice(src)
-	new /obj/item/clothing/head/costume/polishpolice(src)
-	new /obj/item/melee/baton(src)
+	switch (pick_weight(list(
+		METRO_AMERICA = 5,
+		METRO_UK = 5,
+		METRO_POLAND = 30,
+		)))
+		if(METRO_AMERICA)
+			new /obj/item/clothing/suit/armor/civilprotection/trenchcoat/metropolice(src)
+			new /obj/item/clothing/head/costume/spacepolice(src)
+			new /obj/item/melee/baton(src)
+			new /obj/item/food/burger/bigbite(src)
+
+		if(METRO_UK)
+			new /obj/item/clothing/suit/armor/civilprotection/ukpolice(src)
+			new /obj/item/clothing/head/hats/bowler(src)
+			new /obj/item/melee/baton(src)
+			new /obj/item/reagent_containers/cup/glass/mug/tea(src)
+
+		if(METRO_POLAND)
+			new /obj/item/clothing/suit/armor/civilprotection/polishpolice(src)
+			new /obj/item/clothing/head/costume/polishpolice(src)
+			new /obj/item/melee/baton(src)
 
 /obj/item/storage/box/combatchefkit // Admin Only
 	name = "Combat Chef Cooking Starter Kit"
