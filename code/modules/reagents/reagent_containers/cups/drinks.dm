@@ -163,7 +163,7 @@
 
 /obj/item/reagent_containers/cup/glass/mug/tea
 	name = "Duke Purple tea"
-	desc = "An insult to Duke Purple is an insult to the Space Queen! Any proper gentleman will fight you, if you sully this tea."
+	desc = "A tag on the attached tea bag reads: 'An insult to Duke Purple is an insult to the Queen! Any proper gentleman will fight you, if you sully this tea.'"
 	icon_state = "tea"
 	list_reagents = list(/datum/reagent/consumable/tea = 30)
 
