@@ -35,15 +35,20 @@
 	name = "medical officer vest"
 	icon_state = "medicalofficer"
 
+/obj/item/clothing/suit/armor/civilprotection/combatchef
+	name = "civil protection apron"
+	desc = "A cooking apron has been donned under this vest, providing absolutely zero extra protection- except against food contamination."
+	icon_state = "combatchef"
+
 /obj/item/clothing/suit/armor/civilprotection/polishpolice
 	name = "high visibility metropolice vest"
 	desc = "A high visibility vest draped over traditional armoring, representative of old world values."
 	icon_state = "metropolice_vest"
 
-/obj/item/clothing/suit/armor/civilprotection/combatchef
-	name = "civil protection apron"
-	desc = "A cooking apron has been donned under this vest, providing absolutely zero extra protection- except against food contamination."
-	icon_state = "combatchef"
+/obj/item/clothing/suit/armor/civilprotection/ukpolice
+	name = "checkered police jacket"
+	desc = "A jacket that looks to have come a far way from home, only still in circulation due to the armor woven into it."
+	icon_state = "metropolice_uk"
 
 /obj/item/clothing/suit/armor/civilprotection/elite
 	name = "elite civil protection vest"
