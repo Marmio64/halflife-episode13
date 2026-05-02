@@ -86,12 +86,9 @@
 	return ..()
 
 /mob/living/basic/halflife/antlion_worker/zombie_faction
+	maxHealth = 60
+	health = 60
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
-
-/mob/living/basic/halflife/antlion_worker/zombie_faction/upgraded
-	spray_cooldown = 2 SECONDS
-	maxHealth = 64
-	health = 64
 
 //antlions
 /mob/living/basic/halflife/antlion_guard

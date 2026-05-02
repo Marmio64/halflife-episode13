@@ -1030,7 +1030,7 @@
 	glasses = /obj/item/clothing/glasses/sunglasses/wesker
 	gloves = /obj/item/clothing/gloves/color/black/wesker
 
-	spells_to_add = list(/datum/action/cooldown/spell/wesker_taunt, /datum/action/cooldown/mob_cooldown/dash/wesker)
+	spells_to_add = list(/datum/action/cooldown/spell/wesker_taunt/long_cooldown, /datum/action/cooldown/mob_cooldown/dash/wesker)
 
 	extra_dex = 8
 	extra_str = 2 //dont need that much strength because CQC overrides strength bonuses for punching

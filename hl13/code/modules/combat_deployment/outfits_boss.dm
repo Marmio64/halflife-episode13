@@ -161,6 +161,9 @@
 	"You disappoint me! Is that the best you've got?" = 'hl13/sound/effects/wesker/wesker-disappoint.ogg',
 )
 
+/datum/action/cooldown/spell/wesker_taunt/long_cooldown
+	cooldown_time = 20 SECONDS
+
 /datum/action/cooldown/spell/wesker_taunt/cast(mob/living/cast_on)
 	. = ..()
 	var/chosen_sound = pick(taunt_sounds)

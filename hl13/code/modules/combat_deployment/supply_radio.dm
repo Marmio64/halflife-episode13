@@ -346,6 +346,7 @@
 			/datum/supply_beacon_option/sandbags,
 			/datum/supply_beacon_option/razorwire,
 			/datum/supply_beacon_option/woodplanks,
+			/datum/supply_beacon_option/explosive,
 			/datum/supply_beacon_option/turret_rebel,
 		)
 		for(var/datum/supply_beacon_option/loadout as anything in possible_loadouts)
@@ -360,6 +361,7 @@
 			/datum/supply_beacon_option/sandbags,
 			/datum/supply_beacon_option/razorwire,
 			/datum/supply_beacon_option/woodplanks,
+			/datum/supply_beacon_option/explosive,
 			/datum/supply_beacon_option/turret_combine,
 		)
 		for(var/datum/supply_beacon_option/loadout as anything in possible_loadouts)
@@ -383,6 +385,11 @@
 	cost = 60
 	amount = 25
 	spawn_path = /obj/item/stack/sheet/mineral/wood
+
+/datum/supply_beacon_option/explosive
+	option_name = "1x C4 Explosive (180 Tokens)"
+	cost = 180
+	spawn_path = /obj/item/grenade/c4
 
 /datum/supply_beacon_option/turret_combine
 	option_name = "1x Combine Turret Beacon (240 Tokens)"
