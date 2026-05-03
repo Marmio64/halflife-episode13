@@ -1,11 +1,11 @@
 /obj/structure/spirit_board
-	name = "spirit board"
-	desc = "A wooden board with letters etched into it, used in seances."
+	name = "weighted companion cube"
+	desc = "An extremely heavy titanium cube, you doubt you could move it from its place. You swear you can hear it whispering to you when in the darkness- maybe you should stop and try to listen?"
 	icon = 'icons/obj/structures.dmi'
-	icon_state = "spirit_board"
-	resistance_flags = FLAMMABLE
+	icon_state = "companion_cube"
+	resistance_flags = FLAMMABLE // Burns in lava, and incinerators.
 	density = TRUE
-	anchored = FALSE
+	anchored = TRUE
 	/// Whether no one has moved the planchette yet.
 	var/virgin = TRUE //applies especially to admins
 	/// How long between planchette movements.
@@ -21,20 +21,14 @@
 		"Yes","No",
 	)
 	/// Number of living, willing mobs adjacent to the board required for a seance to occur.
-	var/required_user_count = 2
-
-/obj/structure/spirit_board/Initialize(mapload)
-	. = ..()
-	if(prob(1))
-		name = "luigi board"
-	planchette = ghosty_options[1]
+	var/required_user_count = 1
 
 /obj/structure/spirit_board/examine()
 	. = ..()
 	if(planchette)
-		. += span_notice("The planchette is currently at the letter \"[planchette]\".")
+		. += span_notice("The lights are currently flashing the letter(s) \"[planchette]\".")
 	else
-		. += span_notice("The planchette is in the middle of the board on no particular letter.")
+		. += span_notice("The heart is illuminated in the center of the cube. You wish the cube wasn't so heavy, that way you could take it back with you.")
 
 /obj/structure/spirit_board/attack_hand(mob/user, list/modifiers)
 	. = ..()
@@ -57,7 +51,7 @@
 	if(virgin)
 		virgin = FALSE
 		notify_ghosts(
-			"Someone has begun playing with \a [src] in [get_area(src)]!",
+			"Someone has begun listening to \a [src] in [get_area(src)]!",
 			source = src,
 			header = "Spirit board",
 		)
@@ -77,9 +71,9 @@
 		if(viewer.stat != CONSCIOUS && viewer.stat != DEAD) // You gotta be awake or dead to pay the toll
 			continue
 		if(viewer.is_blind())
-			to_chat(viewer, span_hear("You hear a scraping sound..."))
+			to_chat(viewer, span_hear("You hear the soft clicking of lights..."))
 		else
-			to_chat(viewer, span_notice("The planchette slowly moves... and stops at the letter \"[planchette]\"."))
+			to_chat(viewer, span_notice("The lights slowly spread... and stop as they illuminate the letter(s) \"[planchette]\"."))
 
 /obj/structure/spirit_board/proc/spirit_board_checks(mob/ghost)
 	var/cd_penalty = (ghost.ckey == lastuser) ? 1 SECONDS : 0 SECONDS //Give some other people a chance, hog.
@@ -89,7 +83,7 @@
 
 	var/turf/play_turf = get_turf(src)
 	if(play_turf?.get_lumcount() > 0.2)
-		to_chat(ghost, span_warning("It's too bright here to use [src]!"))
+		to_chat(ghost, span_warning("You try to pay attention to [src], but it's impossible to see any changes in the light!"))
 		return FALSE
 
 	if(required_user_count > 0)
