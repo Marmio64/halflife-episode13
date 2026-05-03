@@ -117,6 +117,19 @@
 		/obj/item/gun/ballistic/revolver/c38/detective = 1,
 	), src)
 
+/obj/item/storage/belt/holster/detective/full/cpsurplus
+	name = "combine surplus shoulder holster"
+	desc = "A cheap and discontinued shoulder holster, meant to be used with larger firearms such as the M1911 before they were quickly phased out for the portable USP match and civil protection belt. The Combine most likely has a pile of these rotting in storage."
+	icon_state = "combine_holster"
+	inhand_icon_state = "combine_holster"
+	worn_icon_state = "combine_holster"
+
+/obj/item/storage/belt/holster/detective/cpsurplus/PopulateContents()
+	generate_items_inside(list(
+		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1,
+		/obj/item/ammo_box/magazine/m45 = 2,
+	),src)
+
 /obj/item/storage/belt/holster/detective/full/ert
 	name = "marine's holster"
 	desc = "Wearing this makes you feel badass, but you suspect it's just a repainted detective's holster from the NT surplus."
@@ -131,7 +144,7 @@
 	),src)
 
 /obj/item/storage/belt/holster/chameleon
-	name = "syndicate holster"
+	name = "rebel experimental holster"
 	desc = "A hip holster that uses chameleon technology to disguise itself, due to the added chameleon tech, it cannot be mounted onto armor."
 	icon_state = "syndicate_holster"
 	inhand_icon_state = "syndicate_holster"

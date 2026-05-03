@@ -117,6 +117,11 @@
 	inhand_icon_state = "syndicate-black"
 	has_sensor = LOCKED_SENSORS
 
+/obj/item/clothing/under/combine/civilprotection/paydaytaser
+	name = "experimental civil protection jumpsuit"
+	desc = "Full-body suit which includes light kevlar weaving to provide extra protection. This one has electicity-resistant coating to prevent user damage, alongside extra markings for ally identification."
+	icon_state = "civilprotection_exptaser"
+
 /obj/item/clothing/under/combine/civilprotection/divisionallead
 	name = "divisional lead jumpsuit"
 	desc = "A version of the standard civil protection suit with slightly more protection, and red highlights."

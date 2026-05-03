@@ -225,6 +225,11 @@
 				playsound(source, ota_voicelines[lines], 50, FALSE)
 				return // only play the first.
 
+/obj/item/clothing/mask/gas/civilprotection/combatchef
+	name = "cooking protection mask"
+	desc = "Someone appears to have attached a novelty moustache to this mask. Doesn't look like it'll come off easily."
+	icon_state = "combatchef"
+
 /obj/item/clothing/mask/gas/civilprotection/divisional
 	name = "civil protection mask"
 	desc = "Heavy duty white mask for civil protection units. Provides some protection to the face. This one is reinforced."

@@ -35,6 +35,21 @@
 	name = "medical officer vest"
 	icon_state = "medicalofficer"
 
+/obj/item/clothing/suit/armor/civilprotection/combatchef
+	name = "civil protection apron"
+	desc = "A cooking apron has been donned under this vest, providing absolutely zero extra protection- except against food contamination."
+	icon_state = "combatchef"
+
+/obj/item/clothing/suit/armor/civilprotection/polishpolice
+	name = "high visibility metropolice vest"
+	desc = "A high visibility vest draped over traditional armoring, representative of old world values."
+	icon_state = "metropolice_vest"
+
+/obj/item/clothing/suit/armor/civilprotection/ukpolice
+	name = "checkered police jacket"
+	desc = "A jacket that looks to have come a far way from home, only still in circulation due to the armor woven into it."
+	icon_state = "metropolice_uk"
+
 /obj/item/clothing/suit/armor/civilprotection/elite
 	name = "elite civil protection vest"
 	desc = "A reinforced variant of the standard civil protection vest, made with higher materials to reward CPOs who underwent memory replacement to ensure reliability. This model was originally for the higher ranked divisional leads, but was phased out by updated trenchcoats, resulting in surplus models being assigned to lesser CPOs."
@@ -121,6 +136,16 @@
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
+
+/obj/item/clothing/suit/armor/civilprotection/trenchcoat/metropolice
+	name = "metropolice ballistic vest"
+	desc = "A prototype civil protection vest, used in the early stages of the Combine takeover. Previously, CPOs would be known as 'metropolice' to mirror old-world customs, yet their name and uniform was changed to dehumanize enlisted members to average citizens."
+	icon_state = "metropolice"
+
+/obj/item/clothing/suit/armor/civilprotection/trenchcoat/taser
+	name = "experimental shock-resistant civil protection vest"
+	desc = "A prototype civil protection vest, still in early stages of development. Provided to users of the experimental defibrilator to help resist their own shocks- it covers more of the body, but the bulky frame leaves the user slowed."
+	icon_state = "pd_taser"
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/cremator
 	name = "trench coat"
