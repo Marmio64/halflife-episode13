@@ -105,6 +105,10 @@
 
 	playsound(src, 'hl13/sound/effects/short_radio.ogg', 50, TRUE, extrarange = -3)
 
+	if(current_cash < new_option.cost) //sanity check
+		to_chat(user, span_warning("Not enough supply points."))
+		return
+
 	new item_to_spawn(user.loc, item_amount)
 
 	current_cash -= new_option.cost
@@ -331,6 +335,10 @@
 	to_chat(user, span_hear("Item purchased."))
 
 	playsound(src, 'hl13/sound/effects/short_radio.ogg', 50, TRUE, extrarange = -3)
+
+	if(current_cash < new_option.cost) //sanity check
+		to_chat(user, span_warning("Not enough construction tokens."))
+		return
 
 	new item_to_spawn(user.loc, item_amount)
 

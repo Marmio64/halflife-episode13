@@ -77,6 +77,10 @@
 /obj/projectile/acidspray/fast
 	speed = 2.75
 
+/obj/projectile/acidspray/fast/powerful
+	damage = 50
+	armour_penetration = 100
+
 /obj/projectile/acidspray/on_hit(atom/target, blocked = 0, pierce_hit)
 	if(blocked == 100)
 		return ..()
