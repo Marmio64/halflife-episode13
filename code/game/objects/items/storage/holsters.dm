@@ -124,7 +124,7 @@
 	inhand_icon_state = "combine_holster"
 	worn_icon_state = "combine_holster"
 
-/obj/item/storage/belt/holster/detective/cpsurplus/PopulateContents()
+/obj/item/storage/belt/holster/detective/full/cpsurplus/PopulateContents()
 	generate_items_inside(list(
 		/obj/item/gun/ballistic/automatic/pistol/m1911 = 1,
 		/obj/item/ammo_box/magazine/m45 = 2,
