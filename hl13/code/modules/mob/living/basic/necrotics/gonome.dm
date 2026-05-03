@@ -203,7 +203,7 @@
 		slime_owner.icon_living = "gonome"
 		slime_owner.melee_damage_lower = 30
 		slime_owner.melee_damage_upper = 35
-		slime_owner.maxHealth = 475
+		slime_owner.maxHealth = 500 //slightly more HP in exchange for the evolution effort
 		slime_owner.fully_grown = TRUE
 		slime_owner.speed = 1.6
 

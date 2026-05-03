@@ -467,6 +467,12 @@
 /obj/item/ammo_box/magazine/internal/shot/com/spas12/beanbag
 	ammo_type = /obj/item/ammo_casing/shotgun/halflife/beanbag
 
+/obj/item/storage/box/lethalshot/halflife_empty
+	name = "box of shotgun shells (Lethal)"
+	desc = "A box full of lethal shotgun shells, designed for shotguns."
+	icon_state = "lethalshot_box"
+	illustration = null
+
 /obj/item/storage/box/lethalshot/halflife
 	name = "box of shotgun shells (Lethal)"
 	desc = "A box full of lethal shotgun shells, designed for shotguns."

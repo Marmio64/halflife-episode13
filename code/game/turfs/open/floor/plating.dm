@@ -37,8 +37,6 @@
 		. += span_notice("There are a few attachment holes for a new <i>tile</i> or reinforcement <i>rods</i>.")
 	else
 		. += span_notice("You might be able to build ontop of it with some <i>tiles</i>...")
-	if(upgradable)
-		. += span_notice("You could probably make this plating more resilient with some plasteel.")
 
 #define PLATE_REINFORCE_COST 2
 

@@ -378,3 +378,10 @@
 	tool_behaviors = list(TOOL_WELDER)
 	category = CAT_WEAPON_MELEE
 	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
+
+/datum/crafting_recipe/shotgunammobox
+	name = "Shotgun Ammo Box"
+	result = /obj/item/storage/box/lethalshot/halflife_empty
+	time = 3 SECONDS
+	reqs = list(/obj/item/stack/sheet/cardboard = 3)
+	category = CAT_CONTAINERS
