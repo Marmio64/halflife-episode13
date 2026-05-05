@@ -225,6 +225,11 @@
 				playsound(source, ota_voicelines[lines], 50, FALSE)
 				return // only play the first.
 
+/obj/item/clothing/mask/gas/civilprotection/combatchef
+	name = "cooking protection mask"
+	desc = "Someone appears to have attached a novelty moustache to this mask. Doesn't look like it'll come off easily."
+	icon_state = "combatchef"
+
 /obj/item/clothing/mask/gas/civilprotection/divisional
 	name = "civil protection mask"
 	desc = "Heavy duty white mask for civil protection units. Provides some protection to the face. This one is reinforced."
@@ -234,6 +239,10 @@
 
 /obj/item/clothing/mask/gas/civilprotection/divisional/sectoral
 	icon_state = "sectoral_mask"
+
+/obj/item/clothing/mask/gas/civilprotection/divisional/elitebeta
+	icon_state = "elitecpo_mask"
+	desc = "Heavy duty white mask for civil protection units. This is a retired model, decommisioned from use due to the inefficiency of the triple-respirator design and visor. These surplus masks used to have night vision installed, though it was removed due to power costs."
 
 /datum/armor/cpmask_upgraded
 	melee = 30

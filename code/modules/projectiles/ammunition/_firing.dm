@@ -20,6 +20,8 @@
 	var/next_delay = click_cooldown_override || CLICK_CD_RANGE
 	if(HAS_TRAIT(user, TRAIT_DOUBLE_TAP))
 		next_delay = round(next_delay * 0.5)
+	if(user.body_position == LYING_DOWN) //you fire slower when lying down
+		next_delay = round(next_delay * 1.5)
 	user.changeNext_move(next_delay)
 
 	if(!tk_firing(user, fired_from))

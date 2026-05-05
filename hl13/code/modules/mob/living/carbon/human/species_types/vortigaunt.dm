@@ -179,7 +179,17 @@
 	var/datum/action/cooldown/spell/forcewall/vort/super/vortwall
 	var/datum/action/cooldown/spell/touch/vort_heal/empowered/super_vortheal
 	var/datum/action/cooldown/spell/conjure/antlion/extract_vort/super/vortbugbait
+	var/datum/action/cooldown/spell/conjure/antlion/extract_vort/super/red/bugbaitred //this feels bad
+	var/datum/action/cooldown/spell/conjure/antlion/extract_vort/super/blu/bugbaitblu
 	var/datum/action/cooldown/spell/conjure_item/infinite_guns/vort_blast/super/super_galunga
+
+	var/deployment_faction = HIDDEN_DEPLOYMENT_FACTION //this feels bad and evil
+
+/datum/species/vortigaunt/extract_boss/red
+	deployment_faction = REBEL_DEPLOYMENT_FACTION
+
+/datum/species/vortigaunt/extract_boss/blu
+	deployment_faction = COMBINE_DEPLOYMENT_FACTION
 
 /datum/species/vortigaunt/extract_boss/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	. = ..()
@@ -200,8 +210,15 @@
 	super_vortheal = new(C) //lots of healing!
 	super_vortheal.Grant(C)
 
-	vortbugbait = new(C)
-	vortbugbait.Grant(C)
+	if(deployment_faction == HIDDEN_DEPLOYMENT_FACTION)
+		vortbugbait = new(C)
+		vortbugbait.Grant(C)
+	else if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
+		bugbaitred = new(C)
+		bugbaitred.Grant(C)
+	else if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+		bugbaitblu = new(C)
+		bugbaitblu.Grant(C)
 
 /datum/species/vortigaunt/extract_boss/on_species_loss(mob/living/carbon/C)
 	..()

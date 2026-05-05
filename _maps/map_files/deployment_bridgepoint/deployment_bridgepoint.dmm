@@ -1032,7 +1032,9 @@
 /turf/open/openspace,
 /area/halflife/outdoors/deployment_city/forest)
 "Ly" = (
-/obj/machinery/deployment_points_flag/combine/high_cash,
+/obj/machinery/deployment_points_flag/combine/high_cash{
+	cash_increase = 0.8
+	},
 /turf/open/floor/plating/ground/brickroad{
 	dir = 1
 	},

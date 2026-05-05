@@ -15,7 +15,7 @@
 	melee_damage_lower = 17
 	melee_damage_upper = 22
 	sharpness = SHARP_EDGED
-	wound_bonus = -20
+	wound_bonus = -25
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "claw"
@@ -275,7 +275,7 @@
 	icon_living = "protogonome"
 	icon_dead = "protogonome_dead"
 	no_crab_state = "protogonome_nocrab"
-	armor_value = 80
+	armor_value = 100
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/proto_gonome
 	var/spray_cooldown = 3 SECONDS
 

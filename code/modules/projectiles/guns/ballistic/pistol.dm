@@ -105,6 +105,7 @@
 	simulated_hit.firer = throwingdatum.get_thrower()
 	simulated_hit.on_hit(hit_atom)
 
+// about 2 seconds TTK (time to knock/crit)
 /obj/item/gun/ballistic/automatic/pistol/m1911
 	name = "\improper M1911"
 	desc = "A classic .45 handgun with a small magazine capacity."
@@ -112,10 +113,17 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	accepted_magazine_type = /obj/item/ammo_box/magazine/m45
 	can_suppress = FALSE
+	recoil = 0.3
+	spread = 5
+	fire_delay = 4
 	fire_sound = 'sound/items/weapons/gun/pistol/shot_alt.ogg'
 	rack_sound = 'sound/items/weapons/gun/pistol/rack.ogg'
 	lock_back_sound = 'sound/items/weapons/gun/pistol/slide_lock.ogg'
 	bolt_drop_sound = 'sound/items/weapons/gun/pistol/slide_drop.ogg'
+
+/obj/item/gun/ballistic/automatic/pistol/m1911/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.4 SECONDS, overtime_penalty_increase = 0.8)
 
 /**
  * Weak 1911 for syndicate chimps. It comes in a 4 TC kit.

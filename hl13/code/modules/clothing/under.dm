@@ -117,11 +117,21 @@
 	inhand_icon_state = "syndicate-black"
 	has_sensor = LOCKED_SENSORS
 
+/obj/item/clothing/under/combine/civilprotection/paydaytaser
+	name = "experimental civil protection jumpsuit"
+	desc = "Full-body suit which includes light kevlar weaving to provide extra protection. This one has electicity-resistant coating to prevent user damage, alongside extra markings for ally identification."
+	icon_state = "civilprotection_exptaser"
+
 /obj/item/clothing/under/combine/civilprotection/divisionallead
 	name = "divisional lead jumpsuit"
 	desc = "A version of the standard civil protection suit with slightly more protection, and red highlights."
 	icon_state = "divisionallead"
 	armor_type = /datum/armor/combinesuit_upgraded
+
+/obj/item/clothing/under/combine/civilprotection/divisionallead/elitebeta
+	name = "elite civil protection jumpsuit"
+	desc = "Full-body suit which includes kevlar weaving to provide extra protection. It seems this one came with a red armband and armored padding."
+	icon_state = "elitecivilprotection"
 
 /datum/armor/combinesuit_upgraded
 	melee = 15
@@ -249,6 +259,12 @@
 	desc = "Full-body blue suit for unionized citizens. Uses sensors to allow the combine to track you."
 	sensor_mode = SENSOR_COORDS
 
+/obj/item/clothing/under/citizen/full_sensors/prisoner
+	name = "Nowy Jutro prisoner uniform"
+	desc = "Full-body grey and worn suit for prison assets. Uses sensors to allow the combine to track you."
+	icon_state = "prisoner"
+	sensor_mode = SENSOR_COORDS
+
 /obj/item/clothing/under/citizen/fireproof
 	resistance_flags = FIRE_PROOF
 
@@ -287,6 +303,11 @@
 	fire = 75
 	acid = 30
 	wound = 5
+
+/obj/item/clothing/under/citizen/rebel/prisoner
+	name = "Nowy Jutro prisoner uniform"
+	desc = "Full-body grey and worn suit for prison assets. The scanners have been removed forcefully, and it has been moderately reinforced."
+	icon_state = "rebelprisoner"
 
 /obj/item/clothing/under/halflife
 	worn_icon = 'hl13/icons/mob/clothing/uniform.dmi'

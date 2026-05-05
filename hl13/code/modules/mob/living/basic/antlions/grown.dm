@@ -77,6 +77,10 @@
 /obj/projectile/acidspray/fast
 	speed = 2.75
 
+/obj/projectile/acidspray/fast/powerful
+	damage = 50
+	armour_penetration = 100
+
 /obj/projectile/acidspray/on_hit(atom/target, blocked = 0, pierce_hit)
 	if(blocked == 100)
 		return ..()
@@ -86,12 +90,9 @@
 	return ..()
 
 /mob/living/basic/halflife/antlion_worker/zombie_faction
+	maxHealth = 60
+	health = 60
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
-
-/mob/living/basic/halflife/antlion_worker/zombie_faction/upgraded
-	spray_cooldown = 2 SECONDS
-	maxHealth = 64
-	health = 64
 
 //antlions
 /mob/living/basic/halflife/antlion_guard
@@ -250,11 +251,17 @@
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss
 	maxHealth = 2900
 	health = 2900
-	speed = 0.1
+	speed = 0
 	obj_damage = 100
 	melee_damage_upper = 50
 	melee_attack_cooldown = 0.8 SECONDS
 	faction = list(FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
+
+/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/red
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+
+/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/blu
+	faction = list(FACTION_COMBINE)
 
 ///Every hit throws people back
 /mob/living/basic/halflife/antlion_guard/melee_attack(atom/target, list/modifiers, ignore_cooldown = FALSE)
@@ -339,6 +346,12 @@
 /datum/action/cooldown/spell/conjure/antlion/extract_vort/super
 	summon_amount = 3
 	cooldown_time = 25 SECONDS
+
+/datum/action/cooldown/spell/conjure/antlion/extract_vort/super/red
+	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/red_faction)
+
+/datum/action/cooldown/spell/conjure/antlion/extract_vort/super/blu
+	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/blu_faction)
 
 //---------------------- AI STUFF -------------------
 

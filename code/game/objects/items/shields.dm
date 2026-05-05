@@ -116,6 +116,10 @@
 	block_chance = 30
 	max_integrity = 55
 	w_class = WEIGHT_CLASS_NORMAL
+	armor_type = /datum/armor/item_shield/wood
+
+/datum/armor/item_shield/wood
+	bullet = 0
 
 /obj/item/shield/buckler/moonflower
 	name = "moonflower buckler"

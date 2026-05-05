@@ -108,7 +108,7 @@
 	ears = /obj/item/radio/headset/civilprotection/divisional
 	uniform = /obj/item/clothing/under/combine/civilprotection/divisionallead
 	gloves = /obj/item/clothing/gloves/color/civilprotection
-	suit = /obj/item/clothing/suit/armor/civilprotection/divisional
+	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat/divisional
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	glasses = /obj/item/clothing/glasses/hud/security
@@ -117,6 +117,7 @@
 	belt = /obj/item/storage/belt/civilprotection/divisionleadfull
 
 	r_pocket = /obj/item/hl2key/townhall
+	l_pocket = /obj/item/choice_beacon/cpomilestone/dvl
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
 

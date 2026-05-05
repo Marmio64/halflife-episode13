@@ -1,6 +1,6 @@
 /datum/quirk/light_drinker
 	name = "Teetotaler"
-	desc = "You've always hated drinking alcohol. Your abstinence will make you get drunk quickly, and you just hate the taste of alcohol in general. Most importantly, you cannot let yourself get drunk."
+	desc = "You've always hated drinking alcohol, and drugs in general including cigarettes and cannabis. Your abstinence will make you get drunk quickly, and you just hate the taste of alcohol in general. Most importantly, you cannot let yourself get drunk."
 	icon = FA_ICON_COCKTAIL
 	value = -2
 	mob_trait = TRAIT_TEETOTALER

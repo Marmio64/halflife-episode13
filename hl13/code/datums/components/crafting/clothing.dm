@@ -9,6 +9,7 @@
 	blacklist = list(
 	/obj/item/clothing/under/citizen/rebel,
 	/obj/item/clothing/under/citizen/refugee,
+	/obj/item/clothing/under/citizen/full_sensors/prisoner,
 	)
 	time = 6 SECONDS
 	category = CAT_ARMOR
@@ -27,6 +28,7 @@
 	blacklist = list(
 	/obj/item/clothing/under/citizen/rebel,
 	/obj/item/clothing/under/citizen/refugee,
+	/obj/item/clothing/under/citizen/full_sensors/prisoner,
 	)
 	time = 10 SECONDS
 	category = CAT_ARMOR
@@ -34,6 +36,44 @@
 
 /datum/crafting_recipe/rebel_uniform_kevlar/check_requirements(mob/user, list/collected_requirements)
 	return !HAS_TRAIT(user, TRAIT_MINDSHIELD)
+
+/datum/crafting_recipe/rebel_uniform_prisoner // both same as above but PRISONER
+	name = "Rebel-Prisoner Jumpsuit"
+	desc = "By tearing off some of the protective elements of a civil protection suit, you can armor up a prisoner outfit to provide you with protection without the location tracking of the combine outfit. Many officers and other combine officials are closely monitored to ensure they do not have the knowledge of how to do this."
+	result = /obj/item/clothing/under/citizen/rebel/prisoner
+	reqs = list(/obj/item/clothing/under/citizen/full_sensors/prisoner = 1,
+				/obj/item/clothing/under/combine/civilprotection = 1)
+
+	time = 6 SECONDS
+	category = CAT_ARMOR
+
+/datum/crafting_recipe/rebel_uniform_prisoner/check_requirements(mob/user, list/collected_requirements)
+	return !HAS_TRAIT(user, TRAIT_MINDSHIELD)
+
+/datum/crafting_recipe/rebel_uniform_kevlar_prisoner
+	name = "Rebel-Prisoner Jumpsuit (Kevlar)"
+	desc = "Full-body grey suit for the common prisoner, worn down and dirtied by time and use. The scanners have been removed forcefully, and it has been moderately reinforced.  Many officers and other combine officials are closely monitored to ensure they do not have the knowledge of how to do this."
+	result = /obj/item/clothing/under/citizen/rebel/prisoner
+	reqs = list(/obj/item/clothing/under/citizen/full_sensors/prisoner = 1,
+				/obj/item/stack/kevlar = 2)
+
+	time = 10 SECONDS
+	category = CAT_ARMOR
+	crafting_interface = CRAFTING_BENCH_ARMTAILOR
+
+/datum/crafting_recipe/rebel_uniform_kevlar_prisoner/check_requirements(mob/user, list/collected_requirements)
+	return !HAS_TRAIT(user, TRAIT_MINDSHIELD)
+
+/datum/crafting_recipe/combatchef // Cosmetic
+	name = "Armored Chef Apron"
+	desc = "You can attach a civil protection vest to a chef's apron with a little bit of tape, perfect for in-fight cooking."
+	result = /obj/item/clothing/suit/armor/civilprotection/combatchef
+	reqs = list(/obj/item/clothing/suit/armor/civilprotection = 1,
+				/obj/item/clothing/suit/apron/chef = 1,
+				/obj/item/stack/sticky_tape = 2)
+
+	time = 5 SECONDS
+	category = CAT_ARMOR
 
 //modify a civil protection mask
 /datum/crafting_recipe/military_gas_mask
@@ -185,6 +225,14 @@
 	result = /obj/item/clothing/suit/whitejacket/padded
 	reqs = list(/obj/item/stack/sheet/cloth = 5,
 				/obj/item/clothing/suit/whitejacket = 1)
+	time = 12 SECONDS
+	category = CAT_ARMOR
+
+/datum/crafting_recipe/padded_jacket_prisoner
+	name = "Pad Jacket (Grey)"
+	result = /obj/item/clothing/suit/prisonerjacket/padded
+	reqs = list(/obj/item/stack/sheet/cloth = 5,
+				/obj/item/clothing/suit/prisonerjacket = 1)
 	time = 12 SECONDS
 	category = CAT_ARMOR
 

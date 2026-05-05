@@ -137,6 +137,8 @@
 	base_icon_state = "puddle"
 	resistance_flags = UNACIDABLE
 
+	dispensedreagent = /datum/reagent/water/unpurified
+
 /obj/structure/water_source/puddle/Initialize(mapload)
 	. = ..()
 	register_context()

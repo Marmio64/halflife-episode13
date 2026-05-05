@@ -105,6 +105,10 @@
 
 	playsound(src, 'hl13/sound/effects/short_radio.ogg', 50, TRUE, extrarange = -3)
 
+	if(current_cash < new_option.cost) //sanity check
+		to_chat(user, span_warning("Not enough supply points."))
+		return
+
 	new item_to_spawn(user.loc, item_amount)
 
 	current_cash -= new_option.cost
@@ -332,6 +336,10 @@
 
 	playsound(src, 'hl13/sound/effects/short_radio.ogg', 50, TRUE, extrarange = -3)
 
+	if(current_cash < new_option.cost) //sanity check
+		to_chat(user, span_warning("Not enough construction tokens."))
+		return
+
 	new item_to_spawn(user.loc, item_amount)
 
 	current_cash -= new_option.cost
@@ -346,6 +354,7 @@
 			/datum/supply_beacon_option/sandbags,
 			/datum/supply_beacon_option/razorwire,
 			/datum/supply_beacon_option/woodplanks,
+			/datum/supply_beacon_option/explosive,
 			/datum/supply_beacon_option/turret_rebel,
 		)
 		for(var/datum/supply_beacon_option/loadout as anything in possible_loadouts)
@@ -360,6 +369,7 @@
 			/datum/supply_beacon_option/sandbags,
 			/datum/supply_beacon_option/razorwire,
 			/datum/supply_beacon_option/woodplanks,
+			/datum/supply_beacon_option/explosive,
 			/datum/supply_beacon_option/turret_combine,
 		)
 		for(var/datum/supply_beacon_option/loadout as anything in possible_loadouts)
@@ -383,6 +393,11 @@
 	cost = 60
 	amount = 25
 	spawn_path = /obj/item/stack/sheet/mineral/wood
+
+/datum/supply_beacon_option/explosive
+	option_name = "1x C4 Explosive (180 Tokens)"
+	cost = 180
+	spawn_path = /obj/item/grenade/c4
 
 /datum/supply_beacon_option/turret_combine
 	option_name = "1x Combine Turret Beacon (240 Tokens)"

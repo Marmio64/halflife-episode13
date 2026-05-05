@@ -386,6 +386,8 @@
 	first_time_text = "Oldworld Bunker"
 	ambient_buzz_vol = 40
 
+	ambient_music = 'hl13/sound/ambience/bgm/villagespawnroom.ogg'
+
 /area/halflife/indoors/bunker/unpowered/rebel_large/living_quarters
 	first_time_text = "Living Quarters"
 

@@ -35,6 +35,38 @@
 	name = "medical officer vest"
 	icon_state = "medicalofficer"
 
+/obj/item/clothing/suit/armor/civilprotection/combatchef
+	name = "civil protection apron"
+	desc = "A cooking apron has been donned under this vest, providing absolutely zero extra protection- except against food contamination."
+	icon_state = "combatchef"
+
+/obj/item/clothing/suit/armor/civilprotection/polishpolice
+	name = "high visibility metropolice vest"
+	desc = "A high visibility vest draped over traditional armoring, representative of old world values."
+	icon_state = "metropolice_vest"
+
+/obj/item/clothing/suit/armor/civilprotection/ukpolice
+	name = "checkered police jacket"
+	desc = "A jacket that looks to have come a far way from home, only still in circulation due to the armor woven into it."
+	icon_state = "metropolice_uk"
+
+/obj/item/clothing/suit/armor/civilprotection/elite
+	name = "elite civil protection vest"
+	desc = "A reinforced variant of the standard civil protection vest, made with higher materials to reward CPOs who underwent memory replacement to ensure reliability. This model was originally for the higher ranked divisional leads, but was phased out by updated trenchcoats, resulting in surplus models being assigned to lesser CPOs."
+	icon_state = "elitecpo_vest"
+
+	armor_type = /datum/armor/elitepro_vest
+
+/datum/armor/elitepro_vest
+	melee = 40
+	bullet = 30
+	laser = 25
+	energy = 40
+	bomb = 30
+	fire = 70
+	acid = 70
+	wound = 10
+
 /obj/item/clothing/suit/armor/civilprotection/medical/speedy
 	slowdown = -0.25
 
@@ -105,6 +137,16 @@
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 
+/obj/item/clothing/suit/armor/civilprotection/trenchcoat/metropolice
+	name = "metropolice ballistic vest"
+	desc = "A prototype civil protection vest, used in the early stages of the Combine takeover. Previously, CPOs would be known as 'metropolice' to mirror old-world customs, yet their name and uniform was changed to dehumanize enlisted members to average citizens."
+	icon_state = "metropolice"
+
+/obj/item/clothing/suit/armor/civilprotection/trenchcoat/taser
+	name = "experimental shock-resistant civil protection vest"
+	desc = "A prototype civil protection vest, still in early stages of development. Provided to users of the experimental defibrilator to help resist their own shocks- it covers more of the body, but the bulky frame leaves the user slowed."
+	icon_state = "pd_taser"
+
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/cremator
 	name = "trench coat"
 	desc = "A thick black trenchcoat which has a coating of fire retardant sprayed on top."
@@ -138,18 +180,19 @@
 	icon_state = "cp_trenchcoatoverseer"
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/overseer/fast
-	slowdown = -0.1
+	slowdown = -0.15
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/sectorial
 	name = "sectoral trenchcoat"
 	desc = "A variant of the modified trenchcoat vest dyed with blue highlights to broadcast the authority of its wearer."
 	icon_state = "sectorial"
 
-/obj/item/clothing/suit/armor/civilprotection/divisional
+/obj/item/clothing/suit/armor/civilprotection/trenchcoat/divisional
 	name = "divisional lead vest"
-	desc = "A variant of the standard officer's vest dyed with red highlights to broadcast the authority of its wearer."
+	desc = "A variant of the modified trenchcoat vest dyed with red highlights to broadcast the authority of its wearer. It even came with a flag on your back to signify your undying devotion."
 	icon_state = "dv_vest"
 	inhand_icon_state = "armoralt"
+	slowdown = 0
 
 /obj/item/clothing/suit/armor/overwatch
 	name = "overwatch chestpiece"
@@ -526,6 +569,25 @@
 /obj/item/clothing/suit/bluejacket/padded
 	desc = "A blue jacket for citizens to wear. This one is padded with extra protective fabric."
 	armor_type = /datum/armor/paddedjacket
+
+/obj/item/clothing/suit/prisonerjacket
+	name = "grey prisoner jacket"
+	desc = "A grey jacket intended to be the one piece of fashion amongst prisoners. It has had most of its fabric cut out and is sewn tighter then most jackets to prevent contraband storage, making it useless at protecting from the cold."
+	icon_state = "prisonerjacket"
+	body_parts_covered = CHEST|GROIN|ARMS
+	strip_delay = 80
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
+	limb_integrity = 80
+
+	blood_overlay_type = "coat"
+
+/obj/item/clothing/suit/prisonerjacket/padded
+	desc = "A grey jacket intended to be the one piece of fashion amongst prisoners. It has had extra cloth sewn to the inside, restoring some actual functionality."
+	armor_type = /datum/armor/paddedjacket
+	cold_protection = CHEST|GROIN|ARMS
+	heat_protection = CHEST|GROIN|ARMS
 
 /obj/item/clothing/suit/greenjacket
 	name = "green union jacket"

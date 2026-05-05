@@ -18,7 +18,7 @@
 	obj_damage = 5
 	melee_damage_lower = 8
 	melee_damage_upper = 13
-	wound_bonus = 0
+	wound_bonus = -5
 	bare_wound_bonus = 5
 	sharpness = SHARP_EDGED
 	attack_vis_effect = ATTACK_EFFECT_BITE
@@ -212,6 +212,16 @@
 /mob/living/basic/halflife/headcrab/baby/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/swarming)
+
+/mob/living/basic/halflife/headcrab/baby/red
+	deployment_faction = COMBINE_DEPLOYMENT_FACTION
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+	color = "#ff0000"
+
+/mob/living/basic/halflife/headcrab/baby/blu
+	deployment_faction = REBEL_DEPLOYMENT_FACTION
+	faction = list(FACTION_COMBINE)
+	color = "#0077ff"
 
 /////////AI STUFF/////////////////////
 

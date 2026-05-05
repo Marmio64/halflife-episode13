@@ -85,7 +85,10 @@
 	if(SPT_PROB(0.5, seconds_per_tick))
 		var/smoke_message = pick("You feel relaxed.", "You feel calmed.","You feel alert.","You feel rugged.")
 		to_chat(affected_mob, span_notice("[smoke_message]"))
-	affected_mob.add_mood_event("smoked", /datum/mood_event/smoked)
+	if(HAS_TRAIT(affected_mob, TRAIT_TEETOTALER))
+		affected_mob.add_mood_event("smoked", /datum/mood_event/smoked_teetotaler)
+	else
+		affected_mob.add_mood_event("smoked", /datum/mood_event/smoked)
 	affected_mob.remove_status_effect(/datum/status_effect/jitter)
 	affected_mob.AdjustAllImmobility(-50 * REM * seconds_per_tick)
 
@@ -497,7 +500,11 @@
 /datum/reagent/drug/mushroomhallucinogen/on_mob_metabolize(mob/living/psychonaut)
 	. = ..()
 
-	psychonaut.add_mood_event("tripping", /datum/mood_event/high)
+	if(HAS_TRAIT(psychonaut, TRAIT_TEETOTALER))
+		psychonaut.add_mood_event("tripping", /datum/mood_event/hate_drugs)
+	else
+		psychonaut.add_mood_event("tripping", /datum/mood_event/high)
+
 	if(!psychonaut.hud_used)
 		return
 
@@ -570,7 +577,10 @@
 /datum/reagent/drug/blastoff/on_mob_metabolize(mob/living/dancer)
 	. = ..()
 
-	dancer.add_mood_event("vibing", /datum/mood_event/high)
+	if(HAS_TRAIT(dancer, TRAIT_TEETOTALER))
+		dancer.add_mood_event("vibing", /datum/mood_event/hate_drugs)
+	else
+		dancer.add_mood_event("vibing", /datum/mood_event/high)
 	RegisterSignal(dancer, COMSIG_MOB_EMOTED("flip"), PROC_REF(on_flip))
 	RegisterSignal(dancer, COMSIG_MOB_EMOTED("spin"), PROC_REF(on_spin))
 

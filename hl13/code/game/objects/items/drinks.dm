@@ -94,6 +94,6 @@
 	icon_state = "canteen"
 	custom_materials = list(/datum/material/iron=SMALL_MATERIAL_AMOUNT*2.5)
 	volume = 150
-	list_reagents = list(/datum/reagent/water = 50)
+	list_reagents = list(/datum/reagent/water = 150)
 	w_class = WEIGHT_CLASS_SMALL
 	isGlass = FALSE

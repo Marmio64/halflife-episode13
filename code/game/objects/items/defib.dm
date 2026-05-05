@@ -303,19 +303,28 @@
 	worn_icon_state = "defibcombat"
 	combat = TRUE
 	safety = FALSE
-	cooldown_duration = 2.5 SECONDS
+	cooldown_duration = 10 SECONDS
 	paddle_type = /obj/item/shockpaddles/syndicate
 	paddle_state = "defibcombat-paddles"
 	powered_state = null
 	emagged_state = null
 
 /obj/item/defibrillator/compact/combat/loaded
-	cell_removable = FALSE // Don't let people just have an infinite power cell
+	cell_removable = TRUE
 
 /obj/item/defibrillator/compact/combat/loaded/Initialize(mapload)
 	. = ..()
-	cell = new /obj/item/stock_parts/power_store/cell/infinite(src)
+	cell = new /obj/item/stock_parts/power_store/cell/high(src)
 	update_power()
+
+/obj/item/defibrillator/compact/combat/loaded/taser
+	name = "experimental EX-128 handheld defibrillator"
+	desc = "An advancement in medical technology, repurposed for combat use. While traditional handheld tasers have been absorbed into stunbatons by the Combine, units like these have been kept around due to their higher shock potency- use by holding a combat stance and applying the paddles to a target's chest."
+	icon_state = "defibtaser"
+	inhand_icon_state = null
+	worn_icon_state = "defibtaser"
+	paddle_type = /obj/item/shockpaddles/syndicate/paydaytaser
+	paddle_state = "defibtaser-paddles"
 
 /obj/item/defibrillator/compact/combat/loaded/nanotrasen
 	name = "elite Nanotrasen defibrillator"
@@ -524,7 +533,7 @@
 	M.visible_message(span_danger("[user] touches [M] with [src]!"), \
 			span_userdanger("[user] touches [M] with [src]!"))
 	M.adjustStaminaLoss(60)
-	M.Knockdown(75)
+	M.Knockdown(25)
 	M.set_jitter_if_lower(100 SECONDS)
 	M.apply_status_effect(/datum/status_effect/convulsing)
 	playsound(src,  'sound/machines/defib/defib_zap.ogg', 50, TRUE, -1)
@@ -549,7 +558,7 @@
 			T.audible_message(span_warning("\The [defib] lets out an urgent beep and lets out a steadily rising hum..."))
 		else
 			user.audible_message(span_warning("[src] let out an urgent beep."))
-		if(do_after(user, 1.5 SECONDS, H, extra_checks = CALLBACK(src, PROC_REF(is_wielded)))) //Takes longer due to overcharging
+		if(do_after(user, 5 SECONDS, H, extra_checks = CALLBACK(src, PROC_REF(is_wielded)))) //Takes longer due to overcharging
 			if(!H)
 				do_cancel()
 				return
@@ -568,7 +577,7 @@
 					H.visible_message(span_warning("[H] thrashes wildly, clutching at [H.p_their()] chest!"),
 						span_userdanger("You feel a horrible agony in your chest!"))
 				H.set_heartattack(TRUE)
-			H.apply_damage(50, BURN, BODY_ZONE_CHEST)
+			H.apply_damage(20, BURN, BODY_ZONE_CHEST) // Halved, but you still have a heart attack.
 			log_combat(user, H, "overloaded the heart of", defib)
 			H.Paralyze(100)
 			H.set_jitter_if_lower(200 SECONDS)
@@ -701,12 +710,16 @@
 
 /obj/item/shockpaddles/syndicate
 	name = "syndicate defibrillator paddles"
-	desc = "A pair of paddles used to revive deceased operatives. They possess both the ability to penetrate armor and to deliver powerful or disabling shocks offensively."
+	desc = "A pair of paddles used to pierce anticizens and shock. They possess both the ability to penetrate armor and to deliver powerful or disabling shocks offensively."
 	combat = TRUE
 	icon = 'icons/obj/medical/defib.dmi'
 	icon_state = "syndiepaddles0"
 	inhand_icon_state = "syndiepaddles0"
 	base_icon_state = "syndiepaddles"
+
+/obj/item/shockpaddles/syndicate/paydaytaser
+	name = "experimental defibrillator paddles"
+	desc = "A painful pair of paddles used to pierce anticitizens and shock. They possess both the ability to penetrate armor and to deliver powerful or disabling shocks offensively. In the distance, you swear you heard someone say 'taser taser'."
 
 /obj/item/shockpaddles/syndicate/nanotrasen
 	name = "elite Nanotrasen defibrillator paddles"

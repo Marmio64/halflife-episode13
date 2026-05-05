@@ -43,6 +43,8 @@
 	var/overtime_penalty_spindown = 0.6 SECONDS
 	///Timer for tracking the spindown reset timings
 	var/timerid2
+	///Penalty to firing rate for lying down
+	var/lying_firingrate_debuff = 1.5
 
 /datum/component/automatic_fire/Initialize(autofire_shot_delay, windup_autofire, windup_autofire_reduction_multiplier, windup_autofire_cap, windup_spindown, allow_akimbo = TRUE, overtime_penalty_enabled, overtime_penalty_increase, overtime_penalty_cap, overtime_penalty_spindown)
 	. = ..()
@@ -272,6 +274,8 @@
 		target_loc = target
 	shooter.face_atom(target)
 	var/next_delay = autofire_shot_delay
+	if(shooter.body_position == LYING_DOWN) //you fire slower when lying down
+		next_delay *= lying_firingrate_debuff
 	if(windup_autofire)
 		next_delay = clamp(next_delay - current_windup_reduction, round(autofire_shot_delay * windup_autofire_cap), autofire_shot_delay)
 		current_windup_reduction = (current_windup_reduction + round(autofire_shot_delay * windup_autofire_reduction_multiplier))

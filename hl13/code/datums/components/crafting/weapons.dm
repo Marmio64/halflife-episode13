@@ -50,6 +50,17 @@
 	category = CAT_WEAPON_AMMO
 	crafting_interface = CRAFTING_BENCH_RELOADING
 
+/datum/crafting_recipe/m1911mag
+	name = "45 ACP 1911 Full Magazine"
+	result = /obj/item/ammo_box/magazine/m45
+	reqs = list(/obj/item/stack/bulletcasings = 2,
+				/obj/item/stack/sheet/halflife/bullets = 2,
+				/datum/reagent/fuel = 15)
+	tool_behaviors = list(TOOL_SCREWDRIVER)
+	time = 6 SECONDS
+	category = CAT_WEAPON_AMMO
+	crafting_interface = CRAFTING_BENCH_RELOADING
+
 /datum/crafting_recipe/mosinclip
 	name = "7.62mm full Mosin-Nagant clip"
 	result = /obj/item/ammo_box/strilka310/a762
@@ -163,6 +174,17 @@
 	category = CAT_WEAPON_RANGED
 	crafting_interface = CRAFTING_BENCH_WEAPONS
 
+/datum/crafting_recipe/ak47mag
+	name = "7.62 AK-47 Full Magazine"
+	result = /obj/item/ammo_box/magazine/ak47
+	reqs = list(/obj/item/stack/bulletcasings = 6,
+				/obj/item/stack/sheet/halflife/bullets = 6,
+				/datum/reagent/fuel = 30)
+	tool_behaviors = list(TOOL_SCREWDRIVER)
+	time = 12 SECONDS
+	category = CAT_WEAPON_AMMO
+	crafting_interface = CRAFTING_BENCH_RELOADING
+
 /datum/crafting_recipe/m4a1mag
 	name = "5.56 M4A1 Full Magazine"
 	result = /obj/item/ammo_box/magazine/m4a1
@@ -232,7 +254,7 @@
 	name = "Upgraded Rebar Crossbow"
 	result = /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
 	reqs = list(/obj/item/stack/sheet/iron = 5,
-				/obj/item/gun/ballistic/rifle/rebarxbow/upgraded = 1,
+				/obj/item/gun/ballistic/rifle/rebarxbow = 1,
 				/obj/item/weaponcrafting/receiver = 1,
 				/obj/item/stack/sticky_tape = 1)
 	blacklist = list(
@@ -378,3 +400,10 @@
 	tool_behaviors = list(TOOL_WELDER)
 	category = CAT_WEAPON_MELEE
 	crafting_flags = CRAFT_CHECK_DENSITY | CRAFT_MUST_BE_LEARNED
+
+/datum/crafting_recipe/shotgunammobox
+	name = "Shotgun Ammo Box"
+	result = /obj/item/storage/box/lethalshot/halflife_empty
+	time = 3 SECONDS
+	reqs = list(/obj/item/stack/sheet/cardboard = 3)
+	category = CAT_CONTAINERS

@@ -29,6 +29,11 @@
 	mood_change = 2
 	timeout = 6 MINUTES
 
+/datum/mood_event/smoked_teetotaler
+	description = "I really oughta not be smoking these things..."
+	mood_change = -1
+	timeout = 6 MINUTES
+
 /datum/mood_event/wrong_brand
 	description = "I hate that brand of cigarettes."
 	mood_change = -2
@@ -124,3 +129,7 @@
 	description = "I feel my soul degrading!"
 	mood_change = -8
 	timeout = 8 MINUTES
+
+/datum/mood_event/hate_drugs
+	description = "What am I doing taking these kind of drugs!?"
+	mood_change = -8

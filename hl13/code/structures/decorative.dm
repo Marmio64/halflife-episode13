@@ -92,6 +92,23 @@
 	icon_state = "cardboard"
 	hl13hit_sounds = SFX_CARDBOARDIMPACT
 
+/obj/structure/halflife/trash/cardboard/attack_hand_secondary(mob/living/user, list/modifiers)
+	. = ..()
+	if(!user.can_perform_action(src, NEED_DEXTERITY))
+		return
+	user.visible_message(span_notice("[user] begins to sift through the [src] for usable pieces."), \
+		span_notice("You begin to dig through the [src] for some cardboard."))
+	if(do_after(user, 5 SECONDS, src))
+		if(prob(40))
+			user.visible_message(span_notice("[user] gathers up the [src]."), \
+				span_notice("You gather up all the [src]."))
+			new /obj/item/stack/sheet/cardboard(loc, 1)
+			qdel(src)
+		else
+			user.visible_message(span_notice("[user] messes up gathering the [src]. It melts before their very eyes into nothingness."), \
+				span_notice("You mess up gathering the cardboard. It melts away before your very eyes..."))
+			qdel(src)
+
 /obj/structure/halflife/trash/bricks
 	name = "brick rubble"
 	desc = "A bunch of old bricks."

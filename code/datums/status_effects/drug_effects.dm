@@ -73,7 +73,11 @@
 	human_owner.add_movespeed_modifier(/datum/movespeed_modifier/reagent/cannabis) //slows you down
 	human_owner.add_eye_color(BLOODCULT_EYE, EYE_COLOR_WEED_PRIORITY) //makes cult eyes less obvious
 	human_owner.add_traits(list(TRAIT_CLUMSY, TRAIT_BLOODSHOT_EYES), type) // impairs motor coordination and dilates blood vessels in eyes
-	human_owner.add_mood_event("stoned", /datum/mood_event/stoned) //improves mood
+
+	if(HAS_TRAIT(human_owner, TRAIT_TEETOTALER))
+		human_owner.add_mood_event(id, /datum/mood_event/hate_drugs)
+	else
+		human_owner.add_mood_event("stoned", /datum/mood_event/stoned) //improves mood
 	human_owner.sound_environment_override = SOUND_ENVIRONMENT_DRUGGED //not realistic but very immersive
 	return TRUE
 
