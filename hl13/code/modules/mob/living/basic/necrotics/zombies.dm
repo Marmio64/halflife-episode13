@@ -15,7 +15,7 @@
 	melee_damage_lower = 17
 	melee_damage_upper = 22
 	sharpness = SHARP_EDGED
-	wound_bonus = -20
+	wound_bonus = -25
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	attack_verb_continuous = "claws"
 	attack_verb_simple = "claw"

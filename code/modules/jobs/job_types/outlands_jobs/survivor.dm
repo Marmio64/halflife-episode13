@@ -169,6 +169,8 @@
 		ID.registered_name = "CP:[currentrankpoints].[pick(name_source)]-[rand(111,999)]"
 		ID.update_label()
 
+		ID.registered_account.requisition_points += 6
+
 		if(24 < currentrankpoints)
 			ID.registered_account.requisition_points += 1
 

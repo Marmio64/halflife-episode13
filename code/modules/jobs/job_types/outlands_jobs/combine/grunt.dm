@@ -5,8 +5,8 @@
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
 
 	faction = FACTION_STATION
-	total_positions = 5
-	spawn_positions = 4
+	total_positions = 4
+	spawn_positions = 3
 
 	exp_requirements = 120
 	exp_required_type = EXP_TYPE_CREW

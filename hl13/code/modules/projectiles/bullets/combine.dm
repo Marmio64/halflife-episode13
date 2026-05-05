@@ -160,7 +160,6 @@
 	name = "plasma arc"
 	icon_state = "xray"
 	damage = 24
-	armour_penetration = 15
 	wound_bonus = -20
 	damage_type = BURN
 	armor_flag = LASER

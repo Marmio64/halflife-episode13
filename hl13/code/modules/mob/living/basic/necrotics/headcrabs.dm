@@ -18,7 +18,7 @@
 	obj_damage = 5
 	melee_damage_lower = 8
 	melee_damage_upper = 13
-	wound_bonus = 0
+	wound_bonus = -5
 	bare_wound_bonus = 5
 	sharpness = SHARP_EDGED
 	attack_vis_effect = ATTACK_EFFECT_BITE

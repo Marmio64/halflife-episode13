@@ -49,6 +49,9 @@
 /turf/closed/wall/halflife/concrete/try_decon() //can't weld through concrete
 	return FALSE
 
+/turf/closed/wall/halflife/concrete/deconstruction_hints(mob/user)
+	return
+
 /turf/closed/wall/halflife/concrete/alt
 	icon = 'hl13/icons/turf/walls/concretealt.dmi'
 

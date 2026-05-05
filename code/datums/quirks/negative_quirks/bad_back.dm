@@ -1,6 +1,6 @@
 /datum/quirk/badback
 	name = "Bad Back"
-	desc = "Thanks to your poor posture, backpacks and other bags never sit right on your back. More evenly weighted objects are fine, though."
+	desc = "Thanks to your poor posture, nothing seems to sit right on your back, and it hurts to keep something there. Bags and backpacks are the worst offenders, while other items are somewhat tolerable."
 	icon = FA_ICON_HIKING
 	value = -8
 	quirk_flags = QUIRK_HUMAN_ONLY|QUIRK_MOODLET_BASED
@@ -32,10 +32,14 @@
 /datum/quirk/badback/proc/on_equipped_item(mob/living/source, obj/item/equipped_item, slot)
 	SIGNAL_HANDLER
 
-	if(!(slot & ITEM_SLOT_BACK) || !istype(equipped_item, /obj/item/storage/backpack))
+	if(!(slot & ITEM_SLOT_BACK))
 		return
 
-	quirk_holder.add_mood_event("back_pain", /datum/mood_event/back_pain)
+	if(istype(equipped_item, /obj/item/storage/backpack))
+		quirk_holder.add_mood_event("back_pain", /datum/mood_event/back_pain)
+	else
+		quirk_holder.add_mood_event("back_pain", /datum/mood_event/back_pain/minor)
+
 	RegisterSignal(equipped_item, COMSIG_ITEM_POST_UNEQUIP, PROC_REF(on_unequipped_backpack))
 	UnregisterSignal(quirk_holder, COMSIG_MOB_EQUIPPED_ITEM)
 	backpack = WEAKREF(equipped_item)

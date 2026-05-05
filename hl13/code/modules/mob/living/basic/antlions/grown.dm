@@ -251,7 +251,7 @@
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss
 	maxHealth = 2900
 	health = 2900
-	speed = 0.1
+	speed = 0
 	obj_damage = 100
 	melee_damage_upper = 50
 	melee_attack_cooldown = 0.8 SECONDS

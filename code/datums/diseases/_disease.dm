@@ -177,6 +177,8 @@
 				if(SANITY_LEVEL_INSANE)
 					recovery_prob += -0.4
 
+		recovery_prob += (affected_mob.get_stat_level(STATKEY_END) / 10) - 1
+
 		if((HAS_TRAIT(affected_mob, TRAIT_NOHUNGER) || !(affected_mob.satiety < 0 || affected_mob.nutrition < NUTRITION_LEVEL_STARVING)) && HAS_TRAIT(affected_mob, TRAIT_KNOCKEDOUT)) //resting starved won't help, but resting helps
 			var/turf/rest_turf = get_turf(affected_mob)
 			var/is_sleeping_in_darkness = rest_turf.get_lumcount() <= LIGHTING_TILE_IS_DARK

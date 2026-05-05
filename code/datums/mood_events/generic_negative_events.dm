@@ -234,6 +234,10 @@
 	description = "Bags never sit right on my back, this hurts like hell!"
 	mood_change = -15
 
+/datum/mood_event/back_pain/minor
+	description = "This thing on my back ain't sitting right."
+	mood_change = -5
+
 /datum/mood_event/back_pain/New(mob/M, ...)
 	if(HAS_TRAIT(M, TRAIT_ANALGESIA))
 		qdel(src)
