@@ -78,7 +78,7 @@
 	actions_types = list(/datum/action/item_action/disguise_self)
 	clothing_traits = list(TRAIT_BACKSTABBER)
 	var/disguise_charge = TRUE
-	var/list/outfitoptions = list("OTA Soldier", "OTA Sniper", "OTA Elite", "Medical Cop", "Rebel Cell Leader")
+	var/list/outfitoptions = list("OTA Soldier", "OTA Sniper", "OTA Elite", "Medical Cop")
 
 /datum/action/item_action/disguise_self
 	name = "Disguise Self"
@@ -110,8 +110,6 @@
 			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/elite
 		if("Medical Cop")
 			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/med_cop
-		if("Rebel Cell Leader")
-			disguise_chosen = /obj/item/cardboard_cutout/spy_disguise/cell_leader
 		else
 			return
 	var/obj/item/cardboard_cutout/D = new disguise_chosen(H)
@@ -569,6 +567,25 @@
 /obj/item/clothing/suit/bluejacket/padded
 	desc = "A blue jacket for citizens to wear. This one is padded with extra protective fabric."
 	armor_type = /datum/armor/paddedjacket
+
+/obj/item/clothing/suit/prisonerjacket
+	name = "grey prisoner jacket"
+	desc = "A grey jacket intended to be the one piece of fashion amongst prisoners. It has had most of its fabric cut out and is sewn tighter then most jackets to prevent contraband storage, making it useless at protecting from the cold."
+	icon_state = "prisonerjacket"
+	body_parts_covered = CHEST|GROIN|ARMS
+	strip_delay = 80
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
+	limb_integrity = 80
+
+	blood_overlay_type = "coat"
+
+/obj/item/clothing/suit/prisonerjacket/padded
+	desc = "A grey jacket intended to be the one piece of fashion amongst prisoners. It has had extra cloth sewn to the inside, restoring some actual functionality."
+	armor_type = /datum/armor/paddedjacket
+	cold_protection = CHEST|GROIN|ARMS
+	heat_protection = CHEST|GROIN|ARMS
 
 /obj/item/clothing/suit/greenjacket
 	name = "green union jacket"
