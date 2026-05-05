@@ -28,7 +28,8 @@
 	product_slogans = "Stimulate the economy!;Sedate resistive thoughts!;Purchase neat belongings!;Buy, Buy, Buy!"
 	vend_reply = "Thank you for using Shop Vendor."
 	products = list(/obj/item/clothing/under/citizen = 3,
-					/obj/item/clothing/suit/bluejacket = 5,
+					/obj/item/clothing/suit/bluejacket = 3,
+					/obj/item/clothing/suit/prisonerjacket = 3,
 					/obj/item/camera_film = 10,
 					/obj/item/camera = 3,
 					/obj/item/flashlight = 5,
@@ -319,8 +320,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/food_dispensery, 32)
 	tiltable = FALSE
 	product_slogans = "Stimulate the economy!;Sedate resistive thoughts!;Purchase neat belongings!;Buy, Buy, Buy!"
 	vend_reply = "Thank the combine for the ability to enjoy this."
-	products = list(/obj/item/clothing/under/citizen = 3,
-					/obj/item/clothing/suit/bluejacket = 5,
+	products = list(/obj/item/clothing/under/citizen/full_sensors/prisoner = 3,
+					/obj/item/clothing/suit/prisonerjacket = 5,
 					/obj/item/camera_film = 3,
 					/obj/item/camera = 3,
 					/obj/item/flashlight = 5,
