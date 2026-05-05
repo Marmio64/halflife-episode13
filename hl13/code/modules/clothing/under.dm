@@ -259,6 +259,12 @@
 	desc = "Full-body blue suit for unionized citizens. Uses sensors to allow the combine to track you."
 	sensor_mode = SENSOR_COORDS
 
+/obj/item/clothing/under/citizen/full_sensors/prisoner
+	name = "Nowy Jutro prisoner uniform"
+	desc = "Full-body grey and worn suit for prison assets. Uses sensors to allow the combine to track you."
+	icon_state = "prisoner"
+	sensor_mode = SENSOR_COORDS
+
 /obj/item/clothing/under/citizen/fireproof
 	resistance_flags = FIRE_PROOF
 
@@ -297,6 +303,11 @@
 	fire = 75
 	acid = 30
 	wound = 5
+
+/obj/item/clothing/under/citizen/rebel/prisoner
+	name = "Nowy Jutro prisoner uniform"
+	desc = "Full-body grey and worn suit for prison assets. The scanners have been removed forcefully, and it has been moderately reinforced."
+	icon_state = "rebelprisoner"
 
 /obj/item/clothing/under/halflife
 	worn_icon = 'hl13/icons/mob/clothing/uniform.dmi'

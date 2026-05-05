@@ -72,7 +72,7 @@
 	id_trim = /datum/id_trim/job/cook/chef
 	suit = /obj/item/clothing/suit/apron/chef
 	head = /obj/item/clothing/head/utility/chefhat
-	uniform = /obj/item/clothing/under/citizen
+	uniform = /obj/item/clothing/under/citizen/full_sensors/prisoner
 	r_pocket = /obj/item/hl2key/kitchen
 
 /datum/outfit/job/cook/pre_equip(mob/living/carbon/human/H, visuals_only = FALSE)
