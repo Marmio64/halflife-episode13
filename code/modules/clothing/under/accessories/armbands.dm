@@ -46,7 +46,7 @@
 
 // Prison Work Armbands
 /obj/item/clothing/accessory/armband/prisonfactory
-	name = "factory production workkband"
+	name = "factory production workband"
 	desc = "An armband in a cold metallic colourscheme, representative of the machinery inside the prison's factory."
 	icon_state = "factoryband"
 
