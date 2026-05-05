@@ -570,6 +570,25 @@
 	desc = "A blue jacket for citizens to wear. This one is padded with extra protective fabric."
 	armor_type = /datum/armor/paddedjacket
 
+/obj/item/clothing/suit/prisonerjacket
+	name = "grey prisoner jacket"
+	desc = "A grey jacket intended to be the one piece of fashion amongst prisoners. It has had most of its fabric cut out and is sewn tighter then most jackets to prevent contraband storage, making it useless at protecting from the cold."
+	icon_state = "prisonerjacket"
+	body_parts_covered = CHEST|GROIN|ARMS
+	strip_delay = 80
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
+	limb_integrity = 80
+
+	blood_overlay_type = "coat"
+
+/obj/item/clothing/suit/prisonerjacket/padded
+	desc = "A grey jacket intended to be the one piece of fashion amongst prisoners. It has had extra cloth sewn to the inside, restoring some actual functionality."
+	armor_type = /datum/armor/paddedjacket
+	cold_protection = CHEST|GROIN|ARMS
+	heat_protection = CHEST|GROIN|ARMS
+
 /obj/item/clothing/suit/greenjacket
 	name = "green union jacket"
 	desc = "A heavily faded jacket. It was supposedly rather green, but now you can barely tell it from a grey jacket."

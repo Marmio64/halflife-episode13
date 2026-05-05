@@ -71,7 +71,8 @@ Assistant
 	id = /obj/item/card/id/advanced/halflife/grey
 	jobtype = /datum/job/assistant
 	id_trim = /datum/id_trim/job/assistant
-	uniform = /obj/item/clothing/under/citizen
+	uniform = /obj/item/clothing/under/citizen/full_sensors/prisoner
+	gloves = /obj/item/clothing/gloves/color/black
 
 /datum/outfit/job/assistant/consistent
 	name = "Citizen - Consistent"
