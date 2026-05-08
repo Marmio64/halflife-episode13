@@ -299,6 +299,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 4)
 	rebel_time = 8.5 MINUTES
 	combine_time = 30 SECONDS
 	grace_time = 1 MINUTES
+	normal_respawn_speed = 20 SECONDS
 	starting_faction = REBEL_DEPLOYMENT_FACTION
 	alter_holder_respawn = TRUE
 	grace_period_up_text = "<span class='reallybig'>The initial setup grace period is up, and the rebel flag is now capturable by the Combine.</span>"

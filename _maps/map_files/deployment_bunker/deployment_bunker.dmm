@@ -124,7 +124,9 @@
 /area/halflife/indoors/bunker)
 "hq" = (
 /obj/machinery/combine_walllight/directional/south,
-/obj/machinery/ammo_crate/heavy,
+/obj/machinery/ammo_crate/heavy/recharge{
+	ammo_amount = 1
+	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "hu" = (

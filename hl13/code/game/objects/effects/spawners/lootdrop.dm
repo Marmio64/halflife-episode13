@@ -352,6 +352,20 @@
 				/obj/item/clothing/head/helmet/halflife/military
 				)
 
+//only gun frames
+/obj/effect/spawner/random/halflife/loot/gun_frame
+	name = "rare loot"
+
+	loot = list(
+				/obj/item/weaponcrafting/frame/usp,
+				/obj/item/weaponcrafting/frame/mp7,
+				/obj/item/weaponcrafting/frame/spas12,
+				/obj/item/weaponcrafting/frame/coltpython,
+				/obj/item/weaponcrafting/frame/service,
+				/obj/item/weaponcrafting/frame/m4a1,
+				/obj/item/weaponcrafting/frame/mosin,
+				)
+
 //the very best shit, these loot spawns are very rare but have some otherwise unobtainable stuff and ready built weapons
 /obj/effect/spawner/random/halflife/loot/legendary
 	name = "legendary loot"

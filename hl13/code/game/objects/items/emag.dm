@@ -1,5 +1,5 @@
 /obj/item/card/emag/halflife
-	desc = "A handheld tool which can short out combine forcefields and machinery. Can be recharged with combine batteries."
+	desc = "A handheld tool which can short out combine forcefields, machinery, and even firearms. Can be recharged with combine batteries."
 	name = "multifunction electrical tool"
 	icon_state = "alyxtool"
 	icon = 'hl13/icons/obj/tools/tools_inventory.dmi'
@@ -16,7 +16,7 @@
 	if(!can_emag(interacting_with, user))
 		return ITEM_INTERACT_BLOCKING
 	if(charges < 1)
-		to_chat(user, span_notice("It's out of charge, try recharging it with uranium."))
+		to_chat(user, span_notice("It's out of charge, try recharging it with a combine battery."))
 		return
 	var/hack_time = (rand(13, 17) SECONDS) - (((user.get_stat_level(STATKEY_INT) - 10) SECONDS) * 1.25) //smart people hack faster, -1.25 second per INT point. Stupid people will hack slower.
 	if(!do_after(user, hack_time, interacting_with))
