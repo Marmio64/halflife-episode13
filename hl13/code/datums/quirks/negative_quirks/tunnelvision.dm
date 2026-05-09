@@ -2,6 +2,7 @@
 	name = "Tunnel Vision"
 	desc = "You have tunnel vision, and have a lower field of vision, limited to only 180 degrees infront of you."
 	icon = FA_ICON_EYE_LOW_VISION
+	mob_trait = TRAIT_TUNNELVISION //literally just for vorts
 	value = -9
 	medical_record_text = "The has a lack of peripheral vision."
 	gain_text = "You have trouble seeing in your peripheral vision."
@@ -14,6 +15,7 @@
 		return
 
 	eyes.native_fov = FOV_180_DEGREES
+	eyes.refresh()
 
 /datum/quirk/tunnelvision/remove()
 	var/mob/living/carbon/human/human_owner = quirk_holder
@@ -22,3 +24,4 @@
 		return
 
 	eyes.native_fov = FOV_90_DEGREES
+	eyes.refresh()

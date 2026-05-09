@@ -96,6 +96,8 @@
 
 #define TRAIT_PAINFUL_EAT "painful_eat"
 
+#define TRAIT_TUNNELVISION "tunnelvision"
+
 #define TRAIT_SURVIVALIST "survivalist"
 
 #define TRAIT_COMBINE_TAGGED "combine_tagged"

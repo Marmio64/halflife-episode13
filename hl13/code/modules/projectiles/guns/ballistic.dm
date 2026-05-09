@@ -94,7 +94,7 @@
 //about 1.96 seconds TTK
 /obj/item/gun/ballistic/automatic/m4a1
 	name = "\improper M4A1 Rifle"
-	desc = "A old M4A1 pattern rifle. Not as good as the combine's rifles, but still powerful."
+	desc = "A old M4A1 pattern rifle, likely purchased from America before the war, or smuggled over from its remains afterwards. Not as good as the combine's rifles, but still powerful."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "m4a1"
 	fire_sound = "sound/items/weapons/gun/rifle/shot.ogg"
@@ -175,7 +175,7 @@
 //about 1.96 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/servicerifle
 	name = "\improper Service Rifle"
-	desc = "An old surplus rifle from decades ago. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity."
+	desc = "An old surplus rifle from decades ago, designed as a relatively cheap but effective rifle. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "service"
 	fire_sound = "sound/items/weapons/gun/rifle/shot.ogg"
@@ -367,6 +367,9 @@
 	recoil = 2 //lots of recoil though
 	fire_delay = 8
 	vary_fire_sound = FALSE
+
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
 /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger
 	fire_delay = 12 //geared towards sniping, not mag dumping

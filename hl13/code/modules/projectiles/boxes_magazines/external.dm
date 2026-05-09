@@ -97,7 +97,7 @@
 //m4a1 Rifle
 
 /obj/item/ammo_box/magazine/m4a1
-	name = "rifle magazine (5.56mm)"
+	name = "m4a1 magazine (5.56mm)"
 	desc = "A standard 30-round magazine for the M4A1 Rifle. Filled with 5.56 rounds."
 	icon_state = "m308"
 	base_icon_state = "m308"
@@ -111,7 +111,7 @@
 //ak47 Rifle
 
 /obj/item/ammo_box/magazine/ak47
-	name = "rifle magazine (7.62mm)"
+	name = "ak-47 magazine (7.62mm)"
 	desc = "A standard 30-round magazine for the AK47 Rifle. Filled with 7.62 rounds."
 	icon_state = "ar762"
 	base_icon_state = "ar762"
@@ -125,7 +125,7 @@
 //service Rifle
 
 /obj/item/ammo_box/magazine/m4a1/service
-	name = "rifle magazine (5.56mm)"
+	name = "service rifle magazine (5.56mm)"
 	desc = "A standard 20-round magazine for the Service Rifle. Filled with 5.56 rounds."
 	icon_state = "m308small"
 	base_icon_state = "m308small"
@@ -134,7 +134,7 @@
 //svd Rifle
 
 /obj/item/ammo_box/magazine/svd
-	name = "rifle magazine (7.62mm)"
+	name = "dragunov magazine (7.62mm)"
 	desc = "A standard 10-round magazine for the Dragunov Rifle. Filled with 7.62 rounds."
 	icon_state = "m308small"
 	base_icon_state = "m308small"

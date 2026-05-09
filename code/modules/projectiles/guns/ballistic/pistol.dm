@@ -114,7 +114,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/m45
 	can_suppress = FALSE
 	recoil = 0.3
-	spread = 5
+	spread = 6
 	fire_delay = 4
 	fire_sound = 'hl13/sound/weapons/1911fire.ogg'
 	rack_sound = 'sound/items/weapons/gun/pistol/rack.ogg'

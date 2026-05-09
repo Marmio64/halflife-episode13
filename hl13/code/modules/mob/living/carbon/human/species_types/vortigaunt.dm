@@ -51,6 +51,15 @@
 	C.change_stat(STATKEY_END, 2)
 	C.change_stat(STATKEY_DEX, -2) //but not very dextrous
 
+	if(HAS_TRAIT(C, TRAIT_TUNNELVISION))
+		var/mob/living/carbon/human/human_owner = C
+		var/obj/item/organ/eyes/eyes = human_owner.get_organ_slot(ORGAN_SLOT_EYES)
+		if (isnull(eyes))
+			return
+
+		eyes.native_fov = FOV_180_DEGREES
+		eyes.refresh()
+
 /datum/species/vortigaunt/on_species_loss(mob/living/carbon/C)
 	..()
 	galunga.Remove(C)

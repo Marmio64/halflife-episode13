@@ -112,8 +112,8 @@
 
 /datum/outfit/centcom/ert/police/mp7
 	name = "Metropolice MP7 ERT Unit"
-	suit = /obj/item/gun/ballistic/automatic/mp7
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat
+	suit_store = /obj/item/gun/ballistic/automatic/mp7
 
 	belt = /obj/item/storage/belt/civilprotection/overwatch/mp7
 
