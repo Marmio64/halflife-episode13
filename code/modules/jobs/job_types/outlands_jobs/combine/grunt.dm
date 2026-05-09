@@ -17,7 +17,7 @@
 	outfit = /datum/outfit/job/outlands/grunt
 
 	paycheck = PAYCHECK_CITIZEN
-	paycheck_department = ACCOUNT_SRV
+	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_SECURITY_OFFICER
 
 	job_flags = JOB_EQUIP_RANK|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS|JOB_OUTLANDS_JOB

@@ -31,6 +31,7 @@
 	desc = "A .45 bullet casing."
 	caliber = CALIBER_45
 	projectile_type = /obj/projectile/bullet/c45
+	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/light
 
 /obj/item/ammo_casing/c45/spent
 	projectile_type = null

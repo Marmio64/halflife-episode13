@@ -3,11 +3,31 @@
 	result = /obj/item/sbeacondrop/combine_turret
 	time = 5 SECONDS
 	reqs = list(/obj/item/stack/sheet/iron = 5,
-				/obj/item/gun/ballistic/automatic/pulsesmg,
+				/obj/item/gun/ballistic/automatic/pulsesmg = 1,
 				/obj/item/circuitmaterial = 2,
 		        /obj/item/stack/cable_coil = 10)
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
 	category = CAT_STRUCTURE
+
+/datum/crafting_recipe/rebelturret
+	name = "Rebel Turret Beacon"
+	result = /obj/item/sbeacondrop/rebel_turret
+	time = 5 SECONDS
+	reqs = list(/obj/item/stack/sheet/iron = 5,
+				/obj/item/gun/ballistic/automatic/pulsesmg = 1,
+				/obj/item/circuitmaterial = 2,
+		        /obj/item/stack/cable_coil = 10)
+	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WRENCH, TOOL_WELDER)
+	category = CAT_STRUCTURE
+	steps = list(
+		"Emag the pulse SMG.",
+	)
+
+/datum/crafting_recipe/rebelturret/check_requirements(mob/user, list/collected_requirements)
+	var/obj/item/gun/ballistic/automatic/pulsesmg/smg = collected_requirements[/obj/item/gun/ballistic/automatic/pulsesmg][1]
+	if(smg.obj_flags & EMAGGED)
+		return TRUE
+	return FALSE
 
 /datum/crafting_recipe/forcefield
 	name = "Basic Forcefield"

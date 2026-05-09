@@ -34,7 +34,7 @@
 	desc = "Use a well placed shot from your crossbow to do some serious damage to the hidden."
 	id_name = "Sniper"
 
-	gloves = /obj/item/clothing/gloves/fingerless
+	gloves = /obj/item/clothing/gloves/color/black //burn protection
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
 	r_pocket = /obj/item/flashlight/hand_crank
 

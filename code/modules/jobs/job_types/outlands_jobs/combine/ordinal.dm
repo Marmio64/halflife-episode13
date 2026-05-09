@@ -16,7 +16,7 @@
 	outfit = /datum/outfit/job/outlands/ordinal
 
 	paycheck = PAYCHECK_CITIZEN
-	paycheck_department = ACCOUNT_SRV
+	paycheck_department = ACCOUNT_SEC
 	display_order = JOB_DISPLAY_ORDER_STATION_ENGINEER
 
 	mind_traits = list(HEAD_OF_STAFF_MIND_TRAITS)
