@@ -22,6 +22,9 @@
 		if(istype(accessory, /obj/item/clothing/accessory/rebel_dogtags))
 			holder.icon_state = "hudrebel"
 			break
+		if(istype(accessory, /obj/item/clothing/accessory/armband/medblue/reb))
+			holder.icon_state = "hudrebel"
+			break
 
 	set_hud_image_active(TDM_HUD_REB)
 	return
@@ -74,6 +77,19 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_equipper = user
 		human_equipper.tdm_hud_reb()
+
+/obj/item/clothing/accessory/armband/medblue/reb
+
+/obj/item/clothing/accessory/armband/medblue/reb/accessory_equipped(obj/item/clothing/under/clothes, mob/living/user)
+	if(ishuman(user))
+		var/mob/living/carbon/human/human_equipper = user
+		human_equipper.tdm_hud_reb()
+
+/obj/item/clothing/accessory/armband/medblue/reb/accessory_dropped(obj/item/clothing/under/clothes, mob/living/user)
+	if(ishuman(user))
+		var/mob/living/carbon/human/human_equipper = user
+		human_equipper.tdm_hud_reb()
+
 
 /obj/item/clothing/accessory/combine_dogtags
 	name = "combine dogtags"

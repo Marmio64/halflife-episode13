@@ -695,7 +695,7 @@
 	desc = "You are the premier pick class and stealth expert. You excel at assassinating high value targets whether its from afar with your sniper rifle, or going invisible to sneak up behind targets with your backstab knife."
 	id_name = "Assassin"
 
-	glasses = /obj/item/clothing/glasses/hud/security/night/combine
+	glasses = /obj/item/clothing/glasses/hud/security/night/combine/medhud
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/assassin
 	uniform = /obj/item/clothing/under/combine/overwatch/assassin
 	suit = /obj/item/clothing/suit/armor/overwatch/assassin
@@ -1009,7 +1009,7 @@
 
 /datum/outfit/deployment_loadout/combine/boss/guardian/post_equip(mob/living/carbon/human/H)
 	var/datum/mind/player_mind = H.mind
-	var/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/S = new (H.loc)
+	var/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/blu/S = new (H.loc)
 	player_mind.transfer_to(S)
 	qdel(H)
 	S.add_atom_colour("#0077ff", FIXED_COLOUR_PRIORITY)
