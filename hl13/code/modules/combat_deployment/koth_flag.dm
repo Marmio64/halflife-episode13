@@ -337,8 +337,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 4)
 	normal_respawn_speed = 20 SECONDS
 
 /obj/machinery/deployment_koth_flag/combine_defend/long
-	combine_time = 9 MINUTES
-	rebel_time = 45 SECONDS
+	combine_time = 9.5 MINUTES
 
 /obj/effect/koth_grace_field
 	name = "Grace Period Field"
