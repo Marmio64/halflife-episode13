@@ -19,11 +19,17 @@
 /obj/machinery/cash_deposit/combine/tier2
 	starting_cash = DEPLOYMENT_TIER2_COMBINE
 
+/obj/machinery/cash_deposit/combine/tier2plus
+	starting_cash = (DEPLOYMENT_TIER3_COMBINE - 25) //mostly just has the first wave be tier 2
+
 /obj/machinery/cash_deposit/combine/tier3
 	starting_cash = DEPLOYMENT_TIER3_COMBINE
 
 /obj/machinery/cash_deposit/rebel/tier2
 	starting_cash = DEPLOYMENT_TIER2_REBELS
+
+/obj/machinery/cash_deposit/rebel/tier2plus
+	starting_cash = (DEPLOYMENT_TIER3_REBELS - 25) //mostly just has the first wave be tier 2
 
 /obj/machinery/cash_deposit/rebel/tier3
 	starting_cash = DEPLOYMENT_TIER3_REBELS
@@ -89,11 +95,11 @@
 	START_PROCESSING(SSprocessing, src)
 	if(starting_cash)
 		if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
-			GLOB.deployment_combine_cash += starting_cash
+			GLOB.deployment_combine_cash = starting_cash
 		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
-			GLOB.deployment_rebels_cash += starting_cash
+			GLOB.deployment_rebels_cash = starting_cash
 		if(deployment_faction == XEN_DEPLOYMENT_FACTION)
-			GLOB.deployment_xen_cash += starting_cash
+			GLOB.deployment_xen_cash = starting_cash
 
 /obj/machinery/cash_deposit/process()
 	consume()
