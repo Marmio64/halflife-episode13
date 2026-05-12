@@ -535,7 +535,7 @@
 	M.adjustStaminaLoss(60)
 	M.Knockdown(25)
 	M.set_jitter_if_lower(100 SECONDS)
-	M.apply_status_effect(/datum/status_effect/convulsing)
+	M.apply_status_effect(/datum/status_effect/convulsing, 5 SECONDS)
 	playsound(src,  'sound/machines/defib/defib_zap.ogg', 50, TRUE, -1)
 	if(HAS_TRAIT(M,MOB_ORGANIC))
 		M.emote("gasp")

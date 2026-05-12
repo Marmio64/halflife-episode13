@@ -94,7 +94,7 @@
 	H.fully_replace_character_name(H.real_name,"Cell Leader [H.real_name]")
 
 
-	var/list/spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/rebel)
+	var/list/spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/rebel, /datum/action/cooldown/spell/revive_tdmlead)
 
 	for(var/datum/action/act as anything in spells_to_add)
 		var/datum/action/new_ability = new act(H)

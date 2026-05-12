@@ -37,6 +37,11 @@ GLOBAL_LIST_EMPTY(new_spawns)
 				if(S.team == COMBINE_DEPLOYMENT_FACTION)
 					GLOB.deployments_metrocop += S.loc
 
+	//This is so you can delete spawn protection on old spawns so they can be invaded once the frontline moves up
+	for(var/obj/structure/trap/deployment_spawn_prot/S in GLOB.new_spawns)
+		if(S.spawnid == id)
+			qdel(S)
+
 /obj/machinery/example_objective //for testing originally but you can use it as an example of how to use this
 	name = "the objective"
 	desc = "cap this"

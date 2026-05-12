@@ -11,6 +11,9 @@
 	armour_penetration = 35
 	accurate_range = 150
 
+/obj/projectile/bullet/n762/rpd
+	armour_penetration = 0
+
 // .50AE (Desert Eagle)
 
 /obj/projectile/bullet/a50ae

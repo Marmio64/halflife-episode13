@@ -18,6 +18,28 @@
 
 	var/bypass_grace = FALSE //should it work even if grace period is on
 
+	///Can this flag only be captured once before it cant have its faction changed again?
+	var/onetime_capture_only = FALSE
+
+	///Keeps track of if it has been captured before yet
+	var/onetime_captured = FALSE
+
+	///Can this flag not be captured by hand, and only through other methods like the payload cart?
+	var/hand_capturable = TRUE
+
+	///Time to capture this flag
+	var/capture_time = 5 SECONDS
+
+	///Should respawn points be changed if this flag is captured, and to what?
+	var/spawnid = null
+
+	///Minimum progression stage required before this flag is capturable
+	var/required_progression_stage = 0
+
+	///What progression stage should be set after this flag is captured?
+	var/increase_progression_stage = null
+
+
 /obj/machinery/deployment_points_flag/low_cash
 	cash_increase = 0.2
 
@@ -50,13 +72,31 @@
 	. = ..()
 	if(.)
 		return
+
+	if(!hand_capturable)
+		to_chat(H, span_warning("This flag cannot be captured by hand!"))
+		return
+
+	if(onetime_capture_only && onetime_captured)
+		to_chat(H, span_warning("This flag cannot be recaptured again!"))
+		return
+
+	if(GLOB.deployment_progression_stage < required_progression_stage)
+		to_chat(H, span_userdanger("The flag is not capturable yet as other prerequisites are not met. Try capturing other points flags first."))
+		return
+
 	add_fingerprint(H)
 
 	if(H.deployment_faction != current_faction_holder)
 		to_chat(H, span_green("Raising your team's flag!"))
-		if(do_after(H, 5 SECONDS, src))
+		if(do_after(H, capture_time, src))
 			to_chat(H, span_green("Flag raised!"))
 			current_faction_holder = H.deployment_faction
+			onetime_captured = TRUE
+			if(spawnid)
+				check_spawns(spawnid, TRUE, TRUE)
+			if(increase_progression_stage)
+				GLOB.deployment_progression_stage = increase_progression_stage
 		else
 			to_chat(H, span_notice("The flag was not succesfully raised."))
 	else
@@ -67,11 +107,29 @@
 	if(.)
 		return
 
+	if(!hand_capturable)
+		to_chat(user, span_warning("This flag cannot be captured by hand!"))
+		return
+
+	if(onetime_capture_only && onetime_captured)
+		to_chat(user, span_warning("This flag cannot be captured by hand!"))
+		return
+
+	if(GLOB.deployment_progression_stage < required_progression_stage)
+		to_chat(user, span_userdanger("The flag is not capturable yet as other prerequisites are not met. Try capturing other points flags first."))
+		return
+
+
 	if(user.deployment_faction != current_faction_holder)
 		to_chat(user, span_green("Raising your team's flag!"))
-		if(do_after(user, 5 SECONDS, src))
+		if(do_after(user, capture_time, src))
 			to_chat(user, span_green("Flag raised!"))
 			current_faction_holder = user.deployment_faction
+			onetime_captured = TRUE
+			if(spawnid)
+				check_spawns(spawnid, TRUE, TRUE)
+			if(increase_progression_stage)
+				GLOB.deployment_progression_stage = increase_progression_stage
 		else
 			to_chat(user, span_notice("The flag was not succesfully raised."))
 	else

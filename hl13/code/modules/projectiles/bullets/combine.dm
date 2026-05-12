@@ -21,7 +21,8 @@
 	wound_bonus = -40
 	damage_type = BURN
 	armor_flag = LASER
-	armour_penetration = 80
+	armour_penetration = 100
+	speed = 3.25
 	ricochets_max = 8
 	min_ricochets = 6
 	ricochet_chance = 80
@@ -35,13 +36,13 @@
 	playsound(src, 'hl13/sound/weapons/energy_bounce.ogg', clamp(vol_by_damage() + (suppressed ? 0 : 20), 0, 100), TRUE, -1)
 
 /obj/projectile/bullet/pulse/energyball/check_ricochet_flag(atom/target)
-	if((target.flags_ricochet))
-		return TRUE
-	return FALSE
+	if(isliving(target)) //ricochet off everything but living mobs, which will be pierced instead
+		return FALSE
+	return TRUE
 
 /obj/projectile/bullet/pulse/energyball/on_hit(atom/target, blocked = 0, pierce_hit)
 	if(istype(target, /mob/living/simple_animal/hostile/halflife/hunter)) //bonus direct damage vs hunters
-		damage = 90
+		damage = 100
 	if(istype(target, /mob/living/basic/halflife/advisor)) //bonus direct damage vs advisors
 		damage = 90
 	. = ..()
@@ -117,6 +118,15 @@
 	wound_bonus = -10
 	bare_wound_bonus = 5
 	hitsound = 'hl13/sound/creatures/hunter/flechette_flesh_impact1.ogg'
+	///reduced damage done to objects
+	var/object_damage = 18
+
+/obj/projectile/bullet/flechette/on_hit(atom/target, blocked = 0, pierce_hit)
+	if(blocked == 100)
+		return ..()
+	if(isobj(target))
+		damage = object_damage
+	return ..()
 
 /obj/projectile/bullet/pellet/shotgun_buckshot/pulse
 	name = "pulseshot pellet"

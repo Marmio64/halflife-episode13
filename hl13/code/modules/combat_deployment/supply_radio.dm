@@ -236,8 +236,8 @@
 	spawn_path = /obj/machinery/deployable_turret/combine
 
 /datum/supply_beacon_option/rebel_tier5
-	option_name = "Tier 5 Loadout Beacon (500 Points)"
-	cost = 500
+	option_name = "Tier 5 Loadout Beacon (475 Points)"
+	cost = 475
 	spawn_path = /obj/item/hl2/loadout_picker/rebel/tier5/nonstick
 
 /datum/supply_beacon_option/combine_tier5

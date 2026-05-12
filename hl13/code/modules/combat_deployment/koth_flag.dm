@@ -7,6 +7,9 @@ GLOBAL_VAR_INIT(deployment_respawn_rate_combine, 35 SECONDS)
 GLOBAL_VAR_INIT(deployment_respawn_rate_xen, 20 SECONDS)
 GLOBAL_VAR_INIT(deployment_win_team, null)
 
+///This is used for "multi-stage" maps. You can use this to ensure one thing can only be captured at a time, for example you have to capture a points flag first before the central flag is capturable.
+GLOBAL_VAR_INIT(deployment_progression_stage, 0)
+
 //tier points keep track of how many higher tier units a faction has been receiving, so it can keep the sides roughly balanced
 //In order for someone to get a high tier unit, they have to subtract from their sides tier points. If their side cant afford it, they dont get to.
 //If their side has a shit ton of tier points, they get a guaranteed high tier.
@@ -50,6 +53,10 @@ GLOBAL_VAR_INIT(xen_tier_points, 4)
 	var/grace_period_text = TRUE
 
 	var/projectile_passchance = 50
+	var/last_time_reminder = 0
+
+	///Minimum progression stage required before this flag is capturable
+	var/required_progression_stage = 0
 
 /obj/machinery/deployment_koth_flag/Initialize(mapload)
 	.=..()
@@ -98,6 +105,14 @@ GLOBAL_VAR_INIT(xen_tier_points, 4)
 				current_faction_holder = starting_faction
 	else
 		GLOB.deployment_flag_grace_period -= 1 SECONDS
+
+	if(last_time_reminder < world.time)
+		to_chat(world, span_infoplain(span_slightly_larger(span_bold("The combine need to hold the flag for [GLOB.deployment_combine_flag_time_left/10] seconds to win."))))
+		to_chat(world, span_infoplain(span_slightly_larger(span_bold("The rebels need to hold the flag for [GLOB.deployment_rebels_flag_time_left/10] seconds to win."))))
+		if(SSmapping.current_map.combat_deployment_gamemode == "xen_chaos")
+			to_chat(world, span_infoplain(span_slightly_larger(span_bold("The xenians need to hold the flag for [GLOB.deployment_xen_flag_time_left/10] seconds to win."))))
+		last_time_reminder = world.time + 120 SECONDS
+
 
 	if(current_faction_holder == COMBINE_DEPLOYMENT_FACTION)
 		icon_state = "combine"
@@ -154,7 +169,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 4)
 		GLOB.deployment_xen_flag_time_left -= 1 SECONDS
 
 		if(GLOB.deployment_xen_flag_time_left <= 0)
-			priority_announce("The flag is under control the Xenian hordes, time for the feast!", "Xen Priority Alert")
+			priority_announce("The flag is under the control of the Xenian hordes, time for the feast!", "Xen Priority Alert")
 			GLOB.deployment_win_team = XEN_DEPLOYMENT_FACTION
 			SSticker.force_ending = FORCE_END_ROUND
 			for(var/X in GLOB.deployment_combine_players)
@@ -176,6 +191,10 @@ GLOBAL_VAR_INIT(xen_tier_points, 4)
 	if(.)
 		return
 	add_fingerprint(H)
+
+	if(GLOB.deployment_progression_stage < required_progression_stage)
+		to_chat(H, span_userdanger("The flag is not capturable yet as other prerequisites are not met. Try capturing other points flags first."))
+		return
 
 	if(H.deployment_faction != current_faction_holder)
 		if(!capturable)
@@ -316,6 +335,10 @@ GLOBAL_VAR_INIT(xen_tier_points, 4)
 	combine_time = 7 MINUTES
 	altered_respawn_speed = 35 SECONDS
 	normal_respawn_speed = 20 SECONDS
+
+/obj/machinery/deployment_koth_flag/combine_defend/long
+	combine_time = 9 MINUTES
+	rebel_time = 45 SECONDS
 
 /obj/effect/koth_grace_field
 	name = "Grace Period Field"

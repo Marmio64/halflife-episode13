@@ -401,7 +401,7 @@ GLOBAL_LIST_EMPTY(vending_machines_to_restock)
 			step(obj_to_dump, pick(GLOB.alldirs))
 			found_anything = TRUE
 			dump_amount++
-			if (dump_amount >= 16)
+			if (dump_amount >= 10)
 				return
 
 /**

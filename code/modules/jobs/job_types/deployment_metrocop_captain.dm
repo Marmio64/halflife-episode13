@@ -95,7 +95,7 @@
 	if(outfit_id)
 		outfit_id.registered_name = "Sectoral Commander-[rand(111,999)]"
 
-	var/list/spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/combine)
+	var/list/spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/combine, /datum/action/cooldown/spell/revive_tdmlead)
 
 	for(var/datum/action/act as anything in spells_to_add)
 		var/datum/action/new_ability = new act(user)

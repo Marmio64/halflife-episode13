@@ -51,6 +51,7 @@
 /mob/living/simple_animal/hostile/halflife/hunter/deployment
 	maxHealth = 180
 	health = 180
+	harm_intent_damage = 18
 	speed = -0.5
 
 /mob/living/simple_animal/hostile/halflife/hunter/deployment/Life(seconds_per_tick = SSMOBS_DT, times_fired)

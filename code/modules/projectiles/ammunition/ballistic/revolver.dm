@@ -39,6 +39,9 @@
 /obj/item/ammo_casing/n762/high_veloc
 	projectile_type = /obj/projectile/bullet/n762/high_veloc
 
+/obj/item/ammo_casing/n762/rpd
+	projectile_type = /obj/projectile/bullet/n762/rpd
+
 // .38 (Detective's Gun)
 
 /obj/item/ammo_casing/c38

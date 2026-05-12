@@ -122,6 +122,20 @@
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	multiple_sprite_use_base = TRUE
 
+//rpd machine gun
+
+/obj/item/ammo_box/magazine/rpd
+	name = "rpd magazine (7.62mm)"
+	desc = "A standard 100-round magazine for the AK47 Rifle. Filled with 7.62 rounds."
+	icon_state = "rpd"
+	base_icon_state = "rpd"
+	ammo_type = /obj/item/ammo_casing/n762/rpd
+	caliber = CALIBER_N762
+	max_ammo = 100
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	multiple_sprite_use_base = TRUE
+
 //service Rifle
 
 /obj/item/ammo_box/magazine/m4a1/service

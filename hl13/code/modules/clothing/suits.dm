@@ -441,7 +441,7 @@
 	slowdown = 0.25
 	armor_type = /datum/armor/milvest
 
-	limb_integrity = 225
+	limb_integrity = 250
 	repairable_by = /obj/item/stack/kevlar
 
 /obj/item/clothing/suit/armor/halflife/milvest/slow
@@ -455,7 +455,7 @@
 	bomb = 40
 	fire = 50
 	acid = 50
-	wound = 15
+	wound = 20
 
 //crafted armor vest
 /obj/item/clothing/suit/armor/armored
@@ -726,7 +726,7 @@
 	bullet = 50
 	laser = 35
 	energy = 30
-	bomb = 50
+	bomb = 60
 	fire = 55
 	acid = 45
 	wound = 20
@@ -817,7 +817,7 @@
 	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_ARMOR_STEP)
 
 /obj/item/clothing/suit/armor/halflife/plf_veteran/deployment
-	slowdown = 1 //to be slightly faster than a wallhammer so long as dufflebag is zipped up
+	slowdown = 0.75
 
 /datum/armor/plf_veteran
 	melee = 60 //bulky EOD suit

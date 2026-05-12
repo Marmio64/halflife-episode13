@@ -774,7 +774,7 @@
 		/obj/item/storage/box/lethalshot/halflife = 3,
 	)
 
-	extra_dex = 8
+	extra_dex = 10
 	extra_str = 2
 
 /datum/outfit/deployment_loadout/rebel/tier5/rpg
@@ -833,24 +833,23 @@
 /datum/outfit/deployment_loadout/rebel/tier5/veteran
 	name = "Deployment: PLF Veteran"
 	display_name = "PLF Veteran (Defense)"
-	desc = "You have the heaviest armor available to the resistance, which is comparable to Combine Wallhammers, and have a dangerous AK-47. Your lack of speed and your weapon's inaccuracy leaves you vulnerable to snipers however."
+	desc = "You have the heaviest armor available to the resistance, which is comparable to Combine Wallhammers, and have a dangerous RPD machine gun. Your lack of speed and your weapon's inaccuracy leaves you vulnerable to snipers however."
 	id_name = "Veteran"
 
 	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
 	mask = /obj/item/clothing/mask/gas/hl2/military
 	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran/deployment
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
-	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/rpd
 	gloves = /obj/item/clothing/gloves/combat
-	suit_store = /obj/item/gun/ballistic/automatic/ak47
+	suit_store = /obj/item/gun/ballistic/automatic/rpd
 	back = /obj/item/storage/backpack/duffelbag/halflife
 	r_pocket = /obj/item/flashlight/seclite
 	shoes = /obj/item/clothing/shoes/boots
 	backpack_contents = list(
-		/obj/item/grenade/syndieminibomb/bouncer = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
-		/obj/item/ammo_box/magazine/ak47 = 2,
+		/obj/item/ammo_box/magazine/rpd = 2,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment

@@ -157,6 +157,14 @@
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	update_appearance(UPDATE_ICON) //you may have noticed this doesnt come with vodka. that is because the operator drank it on the way to city 13 and threw it at a passing hunter, killing it instantly
 
+/obj/item/storage/belt/civilprotection/polish_resistance/rpd/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/rpd, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/rpd, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/rpd, src)
+	SSwardrobe.provide_type(/obj/item/melee/baton, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+
 /obj/item/clothing/head/beret/sec/poland
 	name = "polish liberation front beret"
 	desc = "A red beret defiantly bearing the insignia of the Polish military against Combine rule."

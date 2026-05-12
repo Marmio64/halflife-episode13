@@ -231,6 +231,47 @@
 	faction_buff = REBEL_DEPLOYMENT_FACTION
 	cooldown_time = 110 SECONDS // cell leaders and lieutenants are more charismatic than the evil bine commanders
 
+/datum/action/cooldown/spell/revive_tdmlead
+	name = "Revive"
+	desc = "You have had advanced micromachines known as nanites surgically implanted into you, whether combine given or stolen and modified, that are capable of slowly reviving you after death if you are left alone for two minutes."
+	button_icon = 'hl13/icons/mob/actions/actions_vortal.dmi'
+	button_icon_state = "revive"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	check_flags = NONE
+	cooldown_time = 0 //no cooldown to the ability
+	var/actual_cooldown = 2 MINUTES //cooldown applied when revived
+	var/reviving = FALSE
+	var/revive_timer
+
+/datum/action/cooldown/spell/revive_tdmlead/cast(mob/living/user)
+	. = ..()
+	if(!isliving(user))
+		return
+	if(user.stat != DEAD)
+		to_chat(user, span_notice("We aren't dead enough to do that yet!"))
+		return
+	var/mob/living/L = user
+	reviving = !reviving
+	if(reviving)
+		to_chat(L, span_notice("Our nanites begin to revive us... this will take 2 minutes."))
+		deltimer(revive_timer)
+		revive_timer = addtimer(CALLBACK(src, PROC_REF(revive), L), 2 MINUTES, TIMER_UNIQUE | TIMER_STOPPABLE)
+	else
+		to_chat(L, span_notice("We stop our reanimation."))
+		deltimer(revive_timer)
+
+/datum/action/cooldown/spell/revive_tdmlead/proc/revive(mob/living/carbon/user)
+	if(user.stat != DEAD) //if they revive before it goes off
+		return
+	if(!iscarbon(user))
+		return
+	StartCooldownSelf(actual_cooldown)//start the cooldown when the revive actually happens
+	user.fully_heal(ADMIN_HEAL_ALL)
+	user.revive()
+
+	user.visible_message(span_warning("[user] jolts awake from death!"), span_notice("We get back up."))
+
 /datum/action/cooldown/mob_cooldown/talk_xen
 	name = "Xen Communication"
 	desc = "Speak with all fellow xenian creatures remotely."

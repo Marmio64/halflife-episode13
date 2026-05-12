@@ -8,6 +8,9 @@
 	anchored = TRUE
 	alpha = 0
 
+	///If a spawnid is set, this spawn protection is deleted when an applicable spawn change is done
+	var/spawnid = null
+
 /obj/structure/trap/deployment_spawn_prot/examine(mob/user)
 	return list()
 

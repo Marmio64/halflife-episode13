@@ -80,8 +80,12 @@
 		if("Pulse Shotgun x2")
 			ammo_to_dispense = /obj/item/storage/box/lethalshot/halflife/pulse
 			dispense_count = 2
-		if("Pulse LMG")
+		if("Pulse LMG x2")
 			ammo_to_dispense = /obj/item/ammo_box/magazine/pulselmg
+			dispense_count = 2
+		if("RPD Machine Gun x2")
+			ammo_to_dispense = /obj/item/ammo_box/magazine/rpd
+			dispense_count = 2
 
 	if(ammo_to_dispense)
 		playsound(src, 'hl13/sound/effects/ammocrate_open.ogg', 50, TRUE, extrarange = -3)
@@ -112,7 +116,7 @@
 	max_integrity = 150
 	ammo_amount = 4
 	recharges = FALSE
-	vendoptions = list("Dark Energy Ball", "20mm Grenade", "Rocket", "Pulse Shotgun x2", "Pulse LMG x2")
+	vendoptions = list("Dark Energy Ball", "20mm Grenade", "Rocket", "Pulse Shotgun x2", "Pulse LMG x2", "RPD Machine Gun x2")
 
 /obj/machinery/ammo_crate/heavy/recharge
 	desc = "A large ammo crate. Contains special ammo types that you can pull out after a short delay."

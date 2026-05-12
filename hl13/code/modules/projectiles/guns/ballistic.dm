@@ -171,6 +171,47 @@
 	fire_rate = 0.5 SECONDS
 	fire_delay = 5
 
+/obj/item/gun/ballistic/automatic/rpd
+	name = "\improper RPD Machine Gun"
+	desc = "A machine gun from the soviet era. This will pack a punch while being a very capable suppressive fire option."
+	icon = 'hl13/icons/obj/guns/wideguns.dmi'
+	icon_state = "rpd"
+	fire_sound = "hl13/sound/weapons/ak47fire.ogg"
+	load_sound = "sound/items/weapons/gun/rifle/rifleload.ogg"
+	load_empty_sound = "sound/items/weapons/gun/rifle/rifleload.ogg"
+	rack_sound = "sound/items/weapons/gun/rifle/bolt_in.ogg"
+	eject_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
+	eject_empty_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/rpd
+
+	projectile_damage_multiplier = 0.65 //Works out to about 18 damage per bullet. More raw DPS than ak47 but a bit less against armored targets
+
+	force = 12
+	fire_delay = 2
+	burst_size = 1
+	spread = 7
+	recoil = 0.25
+	can_suppress = FALSE
+	mag_display = TRUE
+	weapon_weight = WEAPON_HEAVY
+	w_class = WEIGHT_CLASS_BULKY
+
+	item_flags = SLOWS_WHILE_IN_HAND | NEEDS_PERMIT
+
+	slowdown = 0.5
+	drag_slowdown = 0.5
+
+	inhand_icon_state = "rpd"
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
+/obj/item/gun/ballistic/automatic/rpd/no_mag
+	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/rpd/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
+
 //cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30, and is slightly less accurate.
 //about 1.96 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/servicerifle
