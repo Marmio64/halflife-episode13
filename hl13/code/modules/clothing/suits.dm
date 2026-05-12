@@ -899,8 +899,8 @@
 		)
 
 /datum/armor/halflife_firesuit
-	melee = 40
-	bullet = 45
+	melee = 45
+	bullet = 50
 	laser = 85
 	energy = 80
 	bomb = 40

@@ -61,8 +61,8 @@
 /obj/structure/barricade/wooden/attackby(obj/item/I, mob/user)
 	if(istype(I,/obj/item/stack/sheet/mineral/wood))
 		var/obj/item/stack/sheet/mineral/wood/W = I
-		if(W.amount < 5)
-			to_chat(user, span_warning("You need at least five wooden planks to make a wall!"))
+		if(W.amount < 10)
+			to_chat(user, span_warning("You need at least ten wooden planks to make a wall!"))
 			return
 		else
 			to_chat(user, span_notice("You start adding [I] to [src]..."))
