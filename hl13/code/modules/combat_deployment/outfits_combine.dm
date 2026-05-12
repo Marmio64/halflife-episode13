@@ -695,7 +695,7 @@
 	desc = "You are the premier pick class and stealth expert. You excel at assassinating high value targets whether its from afar with your sniper rifle, or going invisible to sneak up behind targets with your backstab knife."
 	id_name = "Assassin"
 
-	glasses = /obj/item/clothing/glasses/hud/security/night/combine
+	glasses = /obj/item/clothing/glasses/hud/security/night/combine/medhud
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/assassin
 	uniform = /obj/item/clothing/under/combine/overwatch/assassin
 	suit = /obj/item/clothing/suit/armor/overwatch/assassin

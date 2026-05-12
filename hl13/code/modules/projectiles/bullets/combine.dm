@@ -48,8 +48,8 @@
 	. = ..()
 
 /obj/projectile/bullet/pulse/lmg
-	damage = 22
-	wound_bonus = -10
+	damage = 24
+	wound_bonus = -15
 	armour_penetration = 25
 
 /obj/projectile/bullet/pulse/weak

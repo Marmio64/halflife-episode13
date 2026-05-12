@@ -905,6 +905,8 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/rebel)
 
+	extra_dex = 2
+
 /datum/outfit/deployment_loadout/rebel/tier5/lieutenant/post_equip(mob/living/carbon/human/H)
 	. = ..()
 	ADD_TRAIT(H, TRAIT_SUPPLYRADIO_USER, JOB_TRAIT)
