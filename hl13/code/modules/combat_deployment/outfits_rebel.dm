@@ -10,6 +10,12 @@
 	id = /obj/item/card/id/rebel_tdm
 	accessory = /obj/item/clothing/accessory/rebel_dogtags
 
+/datum/outfit/deployment_loadout/rebel/pre_equip(mob/living/carbon/human/H)
+	..()
+	if isvortigaunt(H)
+		H.set_species(/datum/species/human)
+		H.cmode_music = combat_music
+
 /datum/outfit/deployment_loadout/rebel/tier1
 	loadout_tier = 1
 
@@ -146,7 +152,7 @@
 	uniform = /obj/item/clothing/under/citizen/refugee
 	suit = /obj/item/clothing/suit/armor/civilprotection/medical
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/medic
-	accessory = /obj/item/clothing/accessory/armband/medblue
+	accessory = /obj/item/clothing/accessory/armband/medblue/reb
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
 	r_pocket = /obj/item/flashlight/seclite
@@ -416,7 +422,7 @@
 	uniform = /obj/item/clothing/under/citizen/refugee
 	suit = /obj/item/clothing/suit/armor/civilprotection/medical/speedy
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/medic_plus
-	accessory = /obj/item/clothing/accessory/armband/medblue
+	accessory = /obj/item/clothing/accessory/armband/medblue/reb
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
 	r_pocket = /obj/item/flashlight/seclite
@@ -715,7 +721,7 @@
 	uniform = /obj/item/clothing/under/citizen/refugee
 	suit = /obj/item/clothing/suit/armor/civilprotection/medical/speedy
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/medic_plus
-	accessory = /obj/item/clothing/accessory/armband/medblue
+	accessory = /obj/item/clothing/accessory/armband/medblue/reb
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython/poorly_maintained
 	r_pocket = /obj/item/flashlight/seclite
@@ -1161,7 +1167,7 @@
 
 /datum/outfit/deployment_loadout/rebel/boss/guardian/post_equip(mob/living/carbon/human/H)
 	var/datum/mind/player_mind = H.mind
-	var/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/S = new (H.loc)
+	var/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/red/S = new (H.loc)
 	player_mind.transfer_to(S)
 	qdel(H)
 	S.add_atom_colour("#ff0000", FIXED_COLOUR_PRIORITY)

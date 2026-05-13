@@ -242,11 +242,21 @@
 	obj_damage = 40 //dont want to incentivize them just tanking all damage they take and going straight for the tower
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
 	var/datum/action/cooldown/spell/conjure/antlions/deployment/antlions
+	var/datum/action/cooldown/spell/conjure/antlions/deployment/red/antlionsred
+	var/datum/action/cooldown/spell/conjure/antlions/deployment/blu/antlionsblu
+	deployment_faction = XEN_DEPLOYMENT_FACTION
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/Initialize(mapload)
 	. = ..()
-	antlions = new(src)
-	antlions.Grant(src)
+	if(deployment_faction == HIDDEN_DEPLOYMENT_FACTION || deployment_faction == XEN_DEPLOYMENT_FACTION)
+		antlions = new(src)
+		antlions.Grant(src)
+	else if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
+		antlionsred = new(src)
+		antlionsred.Grant(src)
+	else if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+		antlionsblu = new(src)
+		antlionsblu.Grant(src)
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss
 	maxHealth = 2900
@@ -256,12 +266,15 @@
 	melee_damage_upper = 50
 	melee_attack_cooldown = 0.8 SECONDS
 	faction = list(FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
+	deployment_faction = HIDDEN_DEPLOYMENT_FACTION
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/red
 	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
+	deployment_faction = REBEL_DEPLOYMENT_FACTION
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/blu
 	faction = list(FACTION_COMBINE)
+	deployment_faction = COMBINE_DEPLOYMENT_FACTION
 
 ///Every hit throws people back
 /mob/living/basic/halflife/antlion_guard/melee_attack(atom/target, list/modifiers, ignore_cooldown = FALSE)

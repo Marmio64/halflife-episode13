@@ -1009,7 +1009,7 @@
 
 /datum/outfit/deployment_loadout/combine/boss/guardian/post_equip(mob/living/carbon/human/H)
 	var/datum/mind/player_mind = H.mind
-	var/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/S = new (H.loc)
+	var/mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/blu/S = new (H.loc)
 	player_mind.transfer_to(S)
 	qdel(H)
 	S.add_atom_colour("#0077ff", FIXED_COLOUR_PRIORITY)
