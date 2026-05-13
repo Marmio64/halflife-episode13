@@ -189,7 +189,7 @@
 	force = 12
 	fire_delay = 2
 	burst_size = 1
-	spread = 7
+	spread = 15
 	recoil = 0.25
 	can_suppress = FALSE
 	mag_display = TRUE
@@ -210,7 +210,7 @@
 
 /obj/item/gun/ballistic/automatic/rpd/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS, overtime_penalty_cap = 8)
 
 //cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30, and is slightly less accurate.
 //about 1.96 seconds TTK, also has good AP
@@ -819,7 +819,7 @@
 	vary_fire_sound = FALSE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/pulselmg
 	force = 12
-	spread = 8
+	spread = 10
 	recoil = 0.1
 	fire_delay = 2
 	burst_size = 1
@@ -854,7 +854,7 @@
 
 /obj/item/gun/ballistic/automatic/pulselmg/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS, TRUE, 0.3, 0.4, 0.7 SECONDS, overtime_penalty_cap = 5)
+	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS, TRUE, 0.3, 0.4, 0.7 SECONDS, overtime_penalty_cap = 8)
 
 //(autofire_shot_delay, windup_autofire, windup_autofire_reduction_multiplier, windup_autofire_cap, windup_spindown, allow_akimbo = TRUE)
 

@@ -492,12 +492,19 @@
 /obj/machinery/power/fusion_engine,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
+"aDG" = (
+/obj/structure/halflife/trash/bricks{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/outdoors/outlands_city)
 "aDJ" = (
 /obj/structure/rack,
 /obj/item/wrench/halflife,
 /obj/item/card/id/advanced/halflife/grey,
 /obj/item/card/id/advanced/halflife/grey,
 /obj/item/card/id/advanced/halflife/grey,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
 "aDU" = (
@@ -845,6 +852,7 @@
 /obj/structure/halflife/trash/papers/three{
 	dir = 4
 	},
+/obj/item/hl13_small_flag/poland,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
 "bek" = (
@@ -3923,6 +3931,12 @@
 	},
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors)
+"fqG" = (
+/obj/structure/halflife/trash/bricks{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/outdoors/outlands_city)
 "fqW" = (
 /obj/structure/bed/halflife/mattress/filthy,
 /obj/item/instrument/guitar,
@@ -4369,8 +4383,9 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
 "fXu" = (
-/obj/machinery/turnstile/brig/halflife/forcefield/cargo/nodirectional{
-	dir = 1
+/obj/machinery/turnstile/brig/halflife/forcefield/cargo/nodirectional/startoff{
+	dir = 1;
+	malfunctioning = 1
 	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/laborunion)
@@ -4427,6 +4442,7 @@
 /obj/item/circuitboard/machine/stasis,
 /obj/item/circuitboard/computer/operating,
 /obj/item/disk/surgery/brainwashing,
+/obj/item/supplypod_beacon,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "gaj" = (
@@ -6726,10 +6742,9 @@
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/south_checkpoint)
 "jsn" = (
-/obj/machinery/light/small/directional/north,
-/obj/item/hl13_small_flag/poland,
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/laborunion)
+/obj/structure/halflife/trash/bricks,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/outlands_city)
 "jsW" = (
 /obj/structure/closet/crate/halflife,
 /obj/item/stack/bulletcasings/three,
@@ -10082,6 +10097,12 @@
 /obj/machinery/light/small/red/directional/north,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
+"nPp" = (
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/laborunion)
 "nPv" = (
 /obj/effect/spawner/random/halflife/loot/trash,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -10707,6 +10728,13 @@
 /obj/structure/railing/halflife/solo,
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/distributioncenter)
+"oHk" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/cargo/nodirectional/startoff{
+	dir = 4;
+	malfunctioning = 1
+	},
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/laborunion)
 "oHo" = (
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/grass,
@@ -11831,6 +11859,12 @@
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/outlands)
+"qdL" = (
+/obj/structure/halflife/trash/bricks{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/outlands_city)
 "qeD" = (
 /obj/structure/closet/halflife/wall/firstaid,
 /obj/effect/spawner/random/halflife/loot/heal,
@@ -16712,6 +16746,7 @@
 	pixel_x = 7
 	},
 /obj/item/universal_scanner,
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
 "wsU" = (
@@ -96093,7 +96128,7 @@ xco
 sgI
 sgI
 sgI
-kLI
+oHk
 sgI
 sgI
 sgI
@@ -96604,7 +96639,7 @@ rJM
 rJM
 lMJ
 gMn
-dcF
+nPp
 nnk
 sYQ
 sYQ
@@ -96861,8 +96896,8 @@ rJM
 rJM
 lMJ
 gMn
-dcF
-jsn
+nPp
+sYQ
 sYQ
 uUk
 sgI
@@ -115006,7 +115041,7 @@ xfZ
 vhH
 vHb
 vhH
-vhH
+jsn
 qvA
 vHb
 ttO
@@ -116538,7 +116573,7 @@ xfZ
 vHb
 qvA
 qvA
-xfZ
+aDG
 xfZ
 xfZ
 xfZ
@@ -118588,7 +118623,7 @@ mif
 yas
 cHK
 qvA
-vhH
+qdL
 xfZ
 xfZ
 xfZ
@@ -118604,7 +118639,7 @@ xfZ
 xfZ
 xfZ
 xfZ
-xfZ
+fqG
 vhH
 ttO
 ttO
@@ -119888,9 +119923,9 @@ eGo
 eGo
 eGo
 eGo
-eGo
-eGo
-eGo
+syP
+nqZ
+tVy
 eGo
 vHb
 ttO
@@ -120145,10 +120180,10 @@ eGo
 eGo
 eGo
 eGo
-eGo
-eGo
-eGo
-eGo
+tVy
+tVy
+tVy
+kqT
 vHb
 vHb
 ttO
@@ -120402,9 +120437,9 @@ eGo
 eGo
 eGo
 eGo
-eGo
-eGo
-eGo
+tVy
+tVy
+tVy
 eGo
 eGo
 eGo
@@ -120659,9 +120694,9 @@ eGo
 eGo
 eGo
 eGo
-eGo
-eGo
-eGo
+sjQ
+tVy
+kLL
 eGo
 eGo
 eGo
@@ -120916,9 +120951,9 @@ eGo
 eGo
 eGo
 eGo
-eGo
-eGo
-eGo
+sjQ
+adh
+rfT
 eGo
 eGo
 eGo

@@ -63,8 +63,11 @@
 	//hl13 edit begin
 	if(overtime_penalty_enabled)
 		src.overtime_penalty_enabled = overtime_penalty_enabled
+	if(overtime_penalty)
 		src.overtime_penalty = overtime_penalty
+	if(overtime_penalty_cap)
 		src.overtime_penalty_cap = overtime_penalty_cap
+	if(overtime_penalty_spindown)
 		src.overtime_penalty_spindown = overtime_penalty_spindown
 	//hl13 edit end
 	if(autofire_stat == AUTOFIRE_STAT_IDLE && ismob(gun.loc))

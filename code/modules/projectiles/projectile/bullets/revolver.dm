@@ -13,6 +13,7 @@
 
 /obj/projectile/bullet/n762/rpd
 	armour_penetration = 0
+	accuracy_falloff = 9
 
 // .50AE (Desert Eagle)
 
