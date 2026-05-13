@@ -147,7 +147,6 @@
 	var/backstab_bonus = 30
 
 /obj/item/knife/combat/backstab/afterattack(atom/target, mob/living/user, click_parameters)
-	. = ..()
 	if(target == user || !isliving(target))
 		return
 	var/mob/living/living_target = target
