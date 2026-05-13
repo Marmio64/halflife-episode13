@@ -60,7 +60,7 @@
 
 /obj/item/gun/ballistic/automatic/ar2/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.23 SECONDS)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.23 SECONDS, overtime_penalty_freebies = 4, overtime_penalty_increase = 2, overtime_penalty_cap = 14)
 	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/ballslauncher(src)
 	update_appearance()
 
@@ -73,7 +73,6 @@
 
 /obj/item/gun/ballistic/automatic/ar2/standardpin/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.23 SECONDS)
 	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/ballslauncher/standardpin(src)
 	update_appearance()
 
@@ -124,7 +123,7 @@
 
 /obj/item/gun/ballistic/automatic/m4a1/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.28 SECONDS)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.28 SECONDS, overtime_penalty_freebies = 4, overtime_penalty_increase = 2, overtime_penalty_cap = 14)
 
 //sidegrade to the m4a1. Heavier duty: More spread, damage and recoil and less firing speed.
 //about 1.85 seconds TTK, and good AP
@@ -162,7 +161,7 @@
 
 /obj/item/gun/ballistic/automatic/ak47/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, fire_rate)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = fire_rate, overtime_penalty_freebies = 3, overtime_penalty_increase = 2, overtime_penalty_cap = 14)
 
 /obj/item/gun/ballistic/automatic/ak47/cheap
 	name = "\improper Cheap AK-47 Rifle"
@@ -210,7 +209,7 @@
 
 /obj/item/gun/ballistic/automatic/rpd/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS, overtime_penalty_cap = 8)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.2 SECONDS, overtime_penalty_cap = 8)
 
 //cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30, and is slightly less accurate.
 //about 1.96 seconds TTK, also has good AP
@@ -255,7 +254,7 @@
 
 /obj/item/gun/ballistic/automatic/servicerifle/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.28 SECONDS)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.28 SECONDS, overtime_penalty_freebies = 3, overtime_penalty_increase = 2, overtime_penalty_cap = 15)
 
 //the crossbow
 /*
@@ -350,7 +349,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/usp/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.35 SECONDS, overtime_penalty_increase = 0.8)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.35 SECONDS, overtime_penalty_cap = 12)
 
 /obj/item/gun/ballistic/automatic/pistol/usp/no_mag
 	spawnwithmagazine = FALSE
@@ -390,7 +389,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/makeshift/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.37 SECONDS)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.37 SECONDS)
 
 /obj/item/gun/ballistic/automatic/pistol/makeshift/no_mag
 	spawnwithmagazine = FALSE
@@ -674,7 +673,7 @@
 
 /obj/item/gun/ballistic/automatic/mp7/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.15 SECONDS, overtime_penalty_increase = 0.8, overtime_penalty_cap = 12)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.15 SECONDS, overtime_penalty_cap = 12)
 	underbarrel = new /obj/item/gun/ballistic/revolver/grenadelauncher/mp7launcher(src)
 	update_appearance()
 
@@ -740,7 +739,7 @@
 
 /obj/item/gun/ballistic/automatic/pulsesmg/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.17 SECONDS, overtime_penalty_increase = 0.9)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.17 SECONDS)
 
 /obj/item/ammo_box/strilka310/a762 //yay recycled code. recycles sprites because im too lazy to port a proper stripper clip sprite.
 	name = "stripper clip (7.62mm)"
@@ -854,7 +853,7 @@
 
 /obj/item/gun/ballistic/automatic/pulselmg/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.5 SECONDS, TRUE, 0.3, 0.4, 0.7 SECONDS, overtime_penalty_cap = 8)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.5 SECONDS, windup_autofire = TRUE, windup_autofire_reduction_multiplier = 0.3, windup_autofire_cap = 0.4, windup_spindown = 0.7 SECONDS, overtime_penalty_cap = 8)
 
 //(autofire_shot_delay, windup_autofire, windup_autofire_reduction_multiplier, windup_autofire_cap, windup_spindown, allow_akimbo = TRUE)
 
@@ -896,7 +895,7 @@
 
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.8 SECONDS)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.8 SECONDS, overtime_penalty_spindown = 1.1 SECONDS, overtime_penalty_freebies = 3, overtime_penalty_increase = 10, overtime_penalty_cap = 20) //good in two or three round bursts, accuracy diminishes faster than other guns otherwise
 
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()
@@ -942,7 +941,7 @@
 
 /obj/item/gun/energy/immolator/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.25 SECONDS, overtime_penalty_cap = 3)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.25 SECONDS, overtime_penalty_cap = 8)
 
 /obj/item/gun/energy/immolator/shoot_live_shot(mob/living/user, pointblank = 0, atom/pbtarget = null, message = 1)
 	. = ..()

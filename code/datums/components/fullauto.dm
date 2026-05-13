@@ -35,6 +35,9 @@
 	var/overtime_penalty_enabled = TRUE
 	///the current increase to spread
 	var/overtime_penalty = 0
+	///how many 'freebie' shots before the overtime penalty goes into effect.
+	var/overtime_penalty_freebies = 0
+	var/overtime_max_freebies = 0
 	///how much spread increase is added per shot
 	var/overtime_penalty_increase = 1
 	///How far can spread increase go
@@ -46,8 +49,7 @@
 	///Penalty to firing rate for lying down
 	var/lying_firingrate_debuff = 1.5
 
-/datum/component/automatic_fire/Initialize(autofire_shot_delay, windup_autofire, windup_autofire_reduction_multiplier, windup_autofire_cap, windup_spindown, allow_akimbo = TRUE, overtime_penalty_enabled, overtime_penalty_increase, overtime_penalty_cap, overtime_penalty_spindown)
-	. = ..()
+/datum/component/automatic_fire/Initialize(autofire_shot_delay, windup_autofire, windup_autofire_reduction_multiplier, windup_autofire_cap, windup_spindown, allow_akimbo = TRUE, overtime_penalty_enabled, overtime_penalty_increase, overtime_penalty_cap, overtime_penalty_spindown, overtime_penalty_freebies)
 	if(!isgun(parent))
 		return COMPONENT_INCOMPATIBLE
 	var/obj/item/gun = parent
@@ -65,10 +67,15 @@
 		src.overtime_penalty_enabled = overtime_penalty_enabled
 	if(overtime_penalty)
 		src.overtime_penalty = overtime_penalty
+	if(overtime_penalty_freebies)
+		src.overtime_penalty_freebies = overtime_penalty_freebies
+		src.overtime_max_freebies = overtime_penalty_freebies
 	if(overtime_penalty_cap)
 		src.overtime_penalty_cap = overtime_penalty_cap
 	if(overtime_penalty_spindown)
 		src.overtime_penalty_spindown = overtime_penalty_spindown
+	if(overtime_penalty_increase)
+		src.overtime_penalty_increase = overtime_penalty_increase
 	//hl13 edit end
 	if(autofire_stat == AUTOFIRE_STAT_IDLE && ismob(gun.loc))
 		var/mob/user = gun.loc
@@ -285,9 +292,13 @@
 		timerid = addtimer(CALLBACK(src, PROC_REF(windup_reset), FALSE), windup_spindown, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE)
 	if(overtime_penalty_enabled)
 		var/obj/item/gun/gun = parent
-		overtime_penalty = clamp(0, (overtime_penalty + overtime_penalty_increase), overtime_penalty_cap)
 		gun.spread = initial(gun.spread) + overtime_penalty
 		gun.recoil = initial(gun.recoil) + (overtime_penalty/25)
+		if(0 < overtime_penalty_freebies)
+			overtime_penalty_freebies--
+		else
+			overtime_penalty = clamp(0, (overtime_penalty + overtime_penalty_increase), overtime_penalty_cap)
+
 		timerid = addtimer(CALLBACK(src, PROC_REF(overtime_reset), FALSE), overtime_penalty_spindown, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE)
 	if(HAS_TRAIT(shooter, TRAIT_DOUBLE_TAP))
 		next_delay = round(next_delay * 0.5, SSprojectiles.wait)
@@ -306,6 +317,7 @@
 /// Reset for accuracy penalty build up
 /datum/component/automatic_fire/proc/overtime_reset(deltimer)
 	overtime_penalty = initial(overtime_penalty)
+	overtime_penalty_freebies = overtime_max_freebies
 	var/obj/item/gun/gun = parent
 	gun.spread = initial(gun.spread)
 	gun.recoil = initial(gun.recoil)
