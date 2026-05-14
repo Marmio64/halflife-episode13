@@ -114,7 +114,7 @@
 	desc = "A large ammo crate. Contains special ammo types that you can pull out after a short delay. It does not recharge."
 	icon_state = "hammocrate"
 	max_integrity = 150
-	ammo_amount = 4
+	ammo_amount = 5
 	recharges = FALSE
 	vendoptions = list("Dark Energy Ball", "20mm Grenade", "Rocket", "Pulse Shotgun x2", "Pulse LMG x2", "RPD Machine Gun x2")
 
@@ -122,7 +122,7 @@
 	desc = "A large ammo crate. Contains special ammo types that you can pull out after a short delay."
 	recharges = TRUE
 	ammo_amount = 6
-	ammo_max = 6
+	ammo_max = 8
 
 /obj/machinery/ammo_crate/no_recharge
 	desc = "A large ammo crate. It's somewhat slow to grab out of, and has a limited amount of ammo it can give."

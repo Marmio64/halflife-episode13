@@ -405,7 +405,7 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	extra_dex = 8
+	extra_dex = 10
 	extra_end = 3
 
 /datum/outfit/deployment_loadout/rebel/tier3/scout/post_equip(mob/living/carbon/human/H)
@@ -528,6 +528,7 @@
 
 	extra_str = 6
 	extra_end = 6
+	extra_per = 3
 
 
 /datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel
@@ -549,6 +550,7 @@
 	backpack_contents = list(
 		/obj/item/grenade/syndieminibomb/bouncer = 2,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/ammo_casing/a20mm = 1,
 		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
 
@@ -704,7 +706,7 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	extra_dex = 8
+	extra_dex = 10
 	extra_end = 3
 
 /datum/outfit/deployment_loadout/rebel/tier4/scout/post_equip(mob/living/carbon/human/H)
