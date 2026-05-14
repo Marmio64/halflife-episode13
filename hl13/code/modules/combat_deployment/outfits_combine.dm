@@ -470,7 +470,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
 
-	extra_dex = 3
+	extra_dex = 5
 	extra_end = 2
 
 /datum/outfit/deployment_loadout/combine/tier4/sniper
