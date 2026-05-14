@@ -62,7 +62,7 @@
 	if(istype(I,/obj/item/stack/sheet/mineral/wood))
 		var/obj/item/stack/sheet/mineral/wood/W = I
 		if(W.amount < 10)
-			to_chat(user, span_warning("You need at least ten wooden planks to make a wall!"))
+			to_chat(user, span_warning("You need at least ten wooden planks to reinforce this!"))
 			return
 		else
 			to_chat(user, span_notice("You start adding [I] to [src]..."))
@@ -70,7 +70,7 @@
 			if(do_after(user, 5 SECONDS, target=src))
 				W.use(10)
 				var/turf/T = get_turf(src)
-				T.place_on_top(/turf/closed/wall/mineral/wood/nonmetal)
+				T.place_on_top(/obj/structure/barricade/wooden/solid/reinforced)
 				qdel(src)
 				return
 	return ..()

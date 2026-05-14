@@ -333,6 +333,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 4)
 
 /obj/machinery/deployment_koth_flag/combine_defend/short
 	combine_time = 7 MINUTES
+	grace_time = 45 SECONDS
 	altered_respawn_speed = 35 SECONDS
 	normal_respawn_speed = 20 SECONDS
 

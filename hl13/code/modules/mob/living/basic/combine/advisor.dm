@@ -116,6 +116,8 @@
 		return FALSE
 	if(!ishuman(cast_on))
 		return FALSE
+	if(cast_on.z != owner.z)
+		return FALSE
 
 	var/mob/living/carbon/human/human_target = cast_on
 	return !human_target.is_blind()
@@ -170,6 +172,8 @@
 	if(!.)
 		return FALSE
 	if(!isliving(cast_on))
+		return FALSE
+	if(cast_on.z != owner.z)
 		return FALSE
 
 	return TRUE

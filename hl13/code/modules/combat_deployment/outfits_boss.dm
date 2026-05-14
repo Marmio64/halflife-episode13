@@ -95,7 +95,6 @@
 	spells_to_add = list(/datum/action/cooldown/spell/wesker_taunt, /datum/action/cooldown/mob_cooldown/dash/wesker)
 
 	extra_dex = 8
-	extra_str = 2 //dont need that much strength because CQC overrides strength bonuses for punching
 	extra_end = 8
 
 /datum/action/cooldown/mob_cooldown/dash/wesker
@@ -150,7 +149,7 @@
 	button_icon_state = "cloak"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 
-	cooldown_time = 10 SECONDS
+	cooldown_time = 12 SECONDS
 	spell_requirements = NONE
 	antimagic_flags = NONE
 	var/taunt_sounds = list(

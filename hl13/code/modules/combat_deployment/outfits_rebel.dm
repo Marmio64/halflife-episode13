@@ -1040,7 +1040,6 @@
 	spells_to_add = list(/datum/action/cooldown/spell/wesker_taunt/long_cooldown, /datum/action/cooldown/mob_cooldown/dash/wesker)
 
 	extra_dex = 8
-	extra_str = 2 //dont need that much strength because CQC overrides strength bonuses for punching
 	extra_end = 8
 
 /obj/item/clothing/suit/jacket/trenchcoat/wesker/red

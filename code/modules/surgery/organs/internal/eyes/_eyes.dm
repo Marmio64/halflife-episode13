@@ -118,6 +118,9 @@
 		if (!proj.armour_penetration || prob(blocked - proj.armour_penetration))
 			return
 
+	if (HAS_TRAIT(source, TRAIT_NEVER_WOUNDED) || HAS_TRAIT(source, TRAIT_GODMODE))
+		return FALSE
+
 	var/valid_sides = list()
 	if (!(scarring & RIGHT_EYE_SCAR))
 		valid_sides += RIGHT_EYE_SCAR

@@ -246,8 +246,8 @@
 	spawn_path = /obj/item/hl2/loadout_picker/combine/tier5/nonstick
 
 /datum/supply_beacon_option/heavyammocrate_rechargable
-	option_name = "Self Recharging Heavy Ammo Crate (550 Points)"
-	cost = 550
+	option_name = "Self Recharging Heavy Ammo Crate (525 Points)"
+	cost = 525
 	spawn_path = /obj/machinery/ammo_crate/heavy/recharge
 
 /obj/item/hl2/engineer_radio
