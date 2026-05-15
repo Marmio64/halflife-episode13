@@ -21,9 +21,13 @@
 
 	var/time_left_match = 5 MINUTES
 
+	var/respawn_speed = 15 SECONDS
+
 /obj/machinery/deathmatch_counter/Initialize(mapload)
 	..()
 	GLOB.deployment_flag_grace_period = grace_time
+	GLOB.deployment_respawn_rate_combine = respawn_speed
+	GLOB.deployment_respawn_rate_rebels = respawn_speed
 
 /obj/machinery/deathmatch_counter/process()
 
