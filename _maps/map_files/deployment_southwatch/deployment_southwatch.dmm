@@ -69,16 +69,6 @@
 /obj/item/scalpel,
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors)
-"by" = (
-/obj/structure/table/halflife/metal,
-/obj/item/stack/medical/bandage/makeshift,
-/obj/item/stack/medical/bandage/makeshift,
-/obj/item/stack/medical/bandage/makeshift,
-/obj/item/stack/medical/gauze/twelve,
-/obj/item/stack/medical/gauze/twelve,
-/obj/item/stack/medical/gauze/twelve,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
 "bH" = (
 /obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/grass,
@@ -219,14 +209,15 @@
 /obj/structure/trap/deployment_spawn_prot/combine{
 	spawnid = 1
 	},
+/obj/machinery/door/airlock/highsecurity/combine,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
 "et" = (
-/obj/machinery/combine_recharger/round_start{
-	pixel_y = 30
-	},
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
+/obj/structure/table/halflife/metal,
+/obj/item/grenade/syndieminibomb/bouncer,
+/obj/item/grenade/syndieminibomb/bouncer,
+/turf/open/floor/plating/indoor/metal/train,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "eu" = (
 /obj/effect/koth_grace_field,
 /obj/effect/turf_decal/arrows{
@@ -482,10 +473,13 @@
 /area/halflife/indoors)
 "kL" = (
 /obj/structure/table/halflife/metal,
-/obj/item/reagent_containers/pill/patch/grubnugget,
-/obj/item/reagent_containers/pill/patch/grubnugget,
-/obj/item/reagent_containers/pill/patch/grubnugget,
-/turf/open/floor/plating/indoor/metal/smooth,
+/obj/item/stack/medical/bandage/makeshift,
+/obj/item/stack/medical/bandage/makeshift,
+/obj/item/stack/medical/bandage/makeshift,
+/obj/item/stack/medical/gauze/twelve,
+/obj/item/stack/medical/gauze/twelve,
+/obj/item/stack/medical/gauze/twelve,
+/turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "kR" = (
 /obj/structure/window/fulltile/halflife/nosmooth/brick,
@@ -616,8 +610,8 @@
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
 "nI" = (
-/obj/structure/bed/medical,
-/turf/open/floor/plating/indoor/metal/smooth,
+/obj/effect/landmark/deployments_metrocop,
+/turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "nK" = (
 /obj/structure/table/halflife/wood,
@@ -820,8 +814,11 @@
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors)
 "qX" = (
-/obj/structure/reagent_dispensers/watertank,
-/turf/open/floor/plating/indoor/metal/smooth,
+/obj/structure/table/halflife/metal,
+/obj/item/reagent_containers/pill/patch/grubnugget,
+/obj/item/reagent_containers/pill/patch/grubnugget,
+/obj/item/reagent_containers/pill/patch/grubnugget,
+/turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "rc" = (
 /obj/structure/chair/comfy/halflife/diner,
@@ -955,11 +952,10 @@
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors)
 "uG" = (
-/obj/machinery/combine_health_station/self_recharging{
-	pixel_y = 30
-	},
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
+/obj/machinery/light/directional/west,
+/obj/machinery/ammo_crate/heavy,
+/turf/open/floor/plating/indoor/metal/train,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "uH" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 4
@@ -1226,11 +1222,6 @@
 "AU" = (
 /turf/open/floor/plating/indoor/concrete/stairs,
 /area/halflife/outdoors/deployment_city)
-"AV" = (
-/obj/structure/table/halflife/metal,
-/obj/item/grenade/syndieminibomb/bouncer,
-/turf/open/floor/plating/indoor/metal/train,
-/area/halflife/indoors/combat_deployment/rebel_base)
 "Ba" = (
 /obj/structure/rack,
 /turf/open/floor/plating/indoor/concrete,
@@ -1259,10 +1250,6 @@
 	},
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors)
-"BI" = (
-/obj/effect/landmark/deployments_metrocop,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
 "BO" = (
 /obj/structure/filingcabinet/hl2,
 /turf/open/floor/plating/indoor/woodc,
@@ -2258,10 +2245,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
-"YX" = (
-/obj/machinery/repairpod,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
 "Zf" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/plating/indoor/metal/grate/border/warning,
@@ -2772,8 +2755,8 @@ OM
 OM
 OM
 OM
-OM
-OM
+gE
+gE
 gE
 gE
 gE
@@ -2959,20 +2942,20 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
-BI
+nI
 zF
 zF
 zF
 zF
 gE
-gL
+YV
+YV
+Xl
+OC
 qX
 kL
-by
-YX
+oe
 gE
 OM
 OM
@@ -3146,20 +3129,20 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
-BI
+nI
 zF
 zF
 zF
 dT
 gE
+YV
 zF
 zF
 zF
 zF
-dT
+zF
+aB
 gE
 OM
 OM
@@ -3333,10 +3316,8 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
-BI
+nI
 zF
 zF
 zF
@@ -3347,6 +3328,8 @@ zF
 zF
 zF
 zF
+zF
+YV
 gE
 OM
 OM
@@ -3520,20 +3503,20 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
-BI
-zF
-zF
-zF
-zF
-gE
-zF
-zF
-zF
-zF
 nI
+zF
+zF
+zF
+zF
+gE
+Bd
+zF
+zF
+zF
+zF
+zF
+kk
 gE
 OM
 OM
@@ -3707,20 +3690,20 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
-BI
+nI
 zF
 zF
 zF
 zF
 gE
-uG
+CU
+zF
+zF
 zF
 nH
 zF
-nI
+kk
 gE
 OM
 OM
@@ -3894,20 +3877,20 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
-BI
-zF
-zF
-zF
-zF
-gE
-et
-zF
-zF
-zF
 nI
+zF
+zF
+zF
+zF
+gE
+tp
+zF
+zF
+zF
+zF
+zF
+kk
 gE
 OM
 OM
@@ -4081,20 +4064,20 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
-BI
+nI
 zF
 zF
 zF
 dT
 gE
+YV
 zF
 zF
 zF
 zF
-dT
+zF
+aB
 gE
 OM
 OM
@@ -4268,20 +4251,20 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
-BI
+nI
 zF
 zF
 zF
 zF
 gE
+YV
 zF
 zF
 zF
 zF
 zF
+YV
 gE
 OM
 OM
@@ -4455,8 +4438,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 OI
 OI
 OI
@@ -4464,11 +4445,13 @@ OI
 OI
 OI
 gE
+YV
+YV
+YV
 zF
 zF
 zF
-zF
-zF
+YV
 gE
 OM
 OM
@@ -4648,14 +4631,14 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
-Pg
+gE
+gE
+Bd
 zF
 zF
 zF
-zF
+YV
 gE
 OM
 OM
@@ -4838,11 +4821,11 @@ OM
 OM
 OM
 gE
+YV
 zF
 zF
 zF
-zF
-zF
+YV
 gE
 OM
 OM
@@ -5026,9 +5009,9 @@ OM
 OM
 vY
 vY
+vY
 dV
-dV
-dV
+vY
 vY
 vY
 OM
@@ -5975,7 +5958,7 @@ JH
 Vr
 Vr
 xI
-aW
+uG
 Vr
 Hk
 Az
@@ -9628,7 +9611,7 @@ YV
 zF
 zF
 zF
-NZ
+zF
 zF
 zF
 zF
@@ -18732,7 +18715,7 @@ iT
 Az
 Az
 Vr
-Az
+xI
 Az
 rc
 Az
@@ -19102,7 +19085,7 @@ Nc
 DJ
 Kr
 qE
-AV
+et
 ck
 Az
 Eh
