@@ -444,9 +444,8 @@
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
 	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
-	combat_music = 'hl13/sound/music/combat/notyouraveragecop.ogg'
-
 /datum/outfit/deployment_loadout/combine/tier4/cremator/pre_equip(mob/living/carbon/human/H)
+	H.cmode_music = 'hl13/sound/music/combat/notyouraveragecop.ogg'
 	H.set_species(/datum/species/human/synth/cremator)
 
 /datum/outfit/deployment_loadout/combine/tier4/shotgunner
@@ -468,7 +467,7 @@
 	suit = /obj/item/clothing/suit/armor/overwatch/red
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
+	combat_music = 'hl13/sound/music/combat/killbound.ogg'
 
 	extra_dex = 5
 	extra_end = 2

@@ -675,7 +675,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	glasses = /obj/item/clothing/glasses/night
 
-	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+	combat_music = 'hl13/sound/music/combat/everymove.ogg'
 
 	extra_str = 5
 
@@ -909,7 +909,7 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
-	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+	combat_music = 'hl13/sound/music/combat/everymove.ogg'
 
 	spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/rebel)
 
