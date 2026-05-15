@@ -44,6 +44,13 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
+"dn" = (
+/turf/open/floor/plating/indoor/carpet,
+/area/halflife/indoors)
+"dq" = (
+/obj/structure/halflife/barrel/triple/grey,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors)
 "ek" = (
 /obj/structure/window/fulltile/halflife/nosmooth/generic{
 	dir = 4
@@ -101,9 +108,9 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
 "hK" = (
-/obj/structure/closet/crate/bin,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/deployment_city/forest)
+/obj/structure/closet/halflife,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors)
 "hS" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/reagent_containers/pill/patch/grubnugget,
@@ -201,10 +208,6 @@
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors)
-"mM" = (
-/obj/structure/closet/halflife,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors)
 "mO" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -223,10 +226,6 @@
 "nz" = (
 /turf/open/halflife/water/medium,
 /area/halflife/outdoors/deployment_city/forest)
-"nF" = (
-/obj/structure/halflife/barrel/triple/grey,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors)
 "nH" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/halflife/water/shallow,
@@ -290,10 +289,6 @@
 "sl" = (
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
-"sA" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors)
 "sI" = (
 /obj/structure/halflife/storage/large/shelf/wood,
 /turf/open/floor/plating/indoor/carpet/blue,
@@ -355,6 +350,10 @@
 	},
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
+"vK" = (
+/obj/structure/closet/halflife,
+/turf/open/floor/plating/indoor/carpet,
+/area/halflife/indoors)
 "vT" = (
 /obj/structure/table/halflife/no_smooth/wood,
 /turf/open/floor/plating/indoor/woodc,
@@ -384,6 +383,17 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
+"xx" = (
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors)
+"yg" = (
+/obj/machinery/cash_deposit/combine/tier3,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
+"yx" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/carpet,
+/area/halflife/indoors)
 "yH" = (
 /turf/cordon,
 /area/halflife/outdoors/deployment_city/forest)
@@ -437,10 +447,6 @@
 "AO" = (
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"AX" = (
-/obj/structure/halflife/barrel/triple/grey,
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors)
 "Bh" = (
 /obj/structure/railing/halflife/solo{
 	dir = 8
@@ -466,6 +472,12 @@
 "BN" = (
 /turf/closed/wall/halflife/sewer,
 /area/halflife/outdoors/deployment_city/forest)
+"Cb" = (
+/obj/structure/halflife/rug/mat{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city/forest)
 "CC" = (
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/combat_deployment/rebel_base)
@@ -474,12 +486,6 @@
 	anchored = 1
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors/deployment_city/forest)
-"CN" = (
-/obj/structure/halflife/rug/mat{
-	dir = 4
-	},
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
 "CS" = (
 /obj/structure/railing/halflife/solo{
@@ -519,10 +525,10 @@
 /obj/effect/landmark/deployments_metrocop,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/combine_base)
-"En" = (
-/obj/structure/halflife/trash/garbage/dumpster,
-/turf/open/floor/plating/ground/sidewalk,
-/area/halflife/outdoors/deployment_city/forest)
+"ED" = (
+/obj/structure/halflife/barrel/triple/grey,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors)
 "Fe" = (
 /obj/structure/halflife/storage/shelf/wood,
 /turf/open/floor/plating/indoor/carpet/blue,
@@ -548,7 +554,9 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors)
 "GT" = (
-/obj/machinery/deployment_points_flag/poland,
+/obj/machinery/deployment_points_flag/poland{
+	cash_increase = 0.8
+	},
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Hi" = (
@@ -665,11 +673,12 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"Nz" = (
+/obj/structure/closet/crate/bin,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
 "NE" = (
 /turf/closed/wall/halflife/concrete/alt,
-/area/halflife/indoors)
-"NY" = (
-/turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors)
 "Oe" = (
 /obj/structure/halflife/barrel/double/grey,
@@ -812,17 +821,10 @@
 	},
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
-"Un" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/carpet,
-/area/halflife/indoors)
 "UG" = (
 /obj/machinery/cash_deposit/rebel/tier3,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"UQ" = (
-/turf/open/floor/plating/indoor/woodc/mosaic,
-/area/halflife/indoors)
 "UU" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/filthy,
@@ -851,10 +853,6 @@
 /obj/structure/halflife/barrel/triple/grey,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/forest)
-"VT" = (
-/obj/structure/closet/halflife,
-/turf/open/floor/plating/indoor/carpet,
-/area/halflife/indoors)
 "VZ" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/reagent_containers/cup/beaker,
@@ -872,6 +870,10 @@
 "WK" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
+"WL" = (
+/obj/structure/halflife/trash/garbage/dumpster,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
 "XK" = (
 /obj/machinery/light/small/cyan/directional/east,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -884,6 +886,10 @@
 /obj/machinery/telecomms/hub/preset,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
+"Zb" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors)
 "Zf" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/stale,
@@ -5459,7 +5465,7 @@ WK
 WK
 WK
 WK
-En
+WL
 NE
 NE
 NE
@@ -5804,9 +5810,9 @@ sl
 sl
 sl
 NE
-UQ
-UQ
-UQ
+xx
+xx
+xx
 sl
 sl
 sl
@@ -5910,15 +5916,15 @@ WK
 WK
 NE
 sl
-UQ
-UQ
-UQ
-UQ
+xx
+xx
+xx
+xx
 sl
 NE
 Hn
 Hn
-UQ
+xx
 sl
 sl
 sl
@@ -5945,14 +5951,14 @@ yH
 Sw
 nj
 Hi
-Hi
+yg
 Hi
 HU
 Sw
 ML
 tl
 hT
-mM
+hK
 hT
 Of
 tl
@@ -6025,12 +6031,12 @@ sl
 DZ
 MJ
 NE
-UQ
-AX
+xx
+ED
 NE
 Fe
 Hn
-UQ
+xx
 sl
 sl
 sl
@@ -6065,7 +6071,7 @@ ML
 tl
 hT
 hT
-sA
+Zb
 Of
 tl
 tl
@@ -6086,7 +6092,7 @@ hT
 tl
 WK
 wv
-hK
+Nz
 wv
 WK
 Jr
@@ -6129,20 +6135,20 @@ fW
 Jr
 WK
 wv
-hK
+Nz
 wv
 WK
 NE
 sl
-UQ
-UQ
+xx
+xx
 NE
-UQ
+xx
 sl
 NE
 Fe
 Hn
-UQ
+xx
 sl
 sl
 sl
@@ -6246,15 +6252,15 @@ WK
 WK
 NE
 sl
-UQ
-UQ
+xx
+xx
 bb
-UQ
+xx
 sl
 NE
 Hn
 Hn
-UQ
+xx
 sl
 sl
 sl
@@ -6365,8 +6371,8 @@ sl
 sl
 NE
 md
-UQ
-UQ
+xx
+xx
 sl
 sl
 sl
@@ -6823,7 +6829,7 @@ Jr
 Jr
 Jr
 Jr
-CN
+Cb
 Jr
 NE
 ZV
@@ -8604,9 +8610,9 @@ sl
 sl
 sl
 NE
-UQ
-UQ
-UQ
+xx
+xx
+xx
 sl
 sl
 sl
@@ -8710,15 +8716,15 @@ WK
 WK
 NE
 sl
-UQ
-UQ
+xx
+xx
 bb
-UQ
+xx
 sl
 NE
 Hn
 Hn
-UQ
+xx
 sl
 sl
 sl
@@ -8774,7 +8780,7 @@ hT
 tl
 WK
 WK
-hK
+Nz
 wv
 WK
 Jr
@@ -8817,7 +8823,7 @@ fW
 Jr
 WK
 wv
-hK
+Nz
 WK
 WK
 NE
@@ -8825,12 +8831,12 @@ sl
 DZ
 MJ
 NE
-UQ
+xx
 sl
 NE
 sI
 Hn
-UQ
+xx
 sl
 hZ
 NE
@@ -8838,8 +8844,8 @@ NE
 NE
 NE
 sl
-Un
-NY
+yx
+dn
 sl
 NE
 ZV
@@ -8877,7 +8883,7 @@ hT
 hT
 yU
 tl
-nF
+dq
 Of
 tl
 Of
@@ -8934,15 +8940,15 @@ WK
 WK
 NE
 sl
-UQ
-UQ
+xx
+xx
 NE
-UQ
+xx
 sl
 NE
 Hn
 Hn
-UQ
+xx
 sl
 sl
 NE
@@ -8950,8 +8956,8 @@ NE
 NE
 NE
 sl
-NY
-VT
+dn
+vK
 sl
 NE
 ZV
@@ -9046,15 +9052,15 @@ WK
 WK
 NE
 sl
-UQ
-UQ
-UQ
-UQ
+xx
+xx
+xx
+xx
 sl
 NE
 Hn
 Hn
-UQ
+xx
 sl
 sl
 sl
@@ -9164,9 +9170,9 @@ sl
 sl
 sl
 NE
-UQ
-UQ
-UQ
+xx
+xx
+xx
 sl
 sl
 sl
@@ -9444,7 +9450,7 @@ tl
 tl
 tl
 tl
-En
+WL
 WK
 WK
 WK
