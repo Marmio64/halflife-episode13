@@ -36,6 +36,8 @@
 		info += "You are part of a team hunting down an anomalous test subject known as The Hidden. Stick together with your squad, and try to put this invisible, merciless beast down. Alternatively, try to active all five combine distress terminals to win."
 	if(SSmapping.current_map.combat_deployment_gamemode == "xen_chaos")
 		info += "You are playing for the Combine Side in the Xen Chaos King of The Hill gamemode! Capture the central flag and keep it under your faction's control for a total of five minutes to win!"
+	if(SSmapping.current_map.combat_deployment_gamemode == "elimination")
+		info += "You are playing for the Combine Side in the Elimination gamemode! Kill enough rebels to win, or have more kills than them before the timer runs out!"
 
 	return info
 

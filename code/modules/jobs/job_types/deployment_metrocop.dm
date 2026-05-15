@@ -39,6 +39,8 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 		info += "You are playing for the Combine Side in the Xen Chaos King of The Hill gamemode! Capture the central flag and keep it under your faction's control for a total of five minutes to win!"
 	if(SSmapping.current_map.combat_deployment_gamemode == "both")
 		info += "You are playing for the Benefactor's Loyal Unionists Side in the Boss of The Hill TDM game mode! Capture the central flag using a unique selection of characters and keep it under your faction's control for a total of five minutes to win!"
+	if(SSmapping.current_map.combat_deployment_gamemode == "elimination")
+		info += "You are playing for the Combine Side in the Elimination gamemode! Kill enough rebels to win, or have more kills than them before the timer runs out!"
 
 	return info
 
