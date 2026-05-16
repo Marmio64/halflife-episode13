@@ -195,6 +195,7 @@
 	aoe_radius = 9
 
 	var/faction_buff = NO_FACTION
+	var/physical_heal = -25
 
 /datum/action/cooldown/spell/aoe/rally/get_things_to_cast_on(atom/center)
 	var/list/things = list()
@@ -210,8 +211,8 @@
 
 	victim.add_mood_event("rally", /datum/mood_event/rallied)
 	victim.adjustStaminaLoss(-60)
-	victim.adjustBruteLoss(-25)
-	victim.adjustFireLoss(-25)
+	victim.adjustBruteLoss(physical_heal)
+	victim.adjustFireLoss(physical_heal)
 
 	if(victim != caster)
 		to_chat(victim, span_boldnicegreen("You feel inspired to fight!"))
@@ -230,6 +231,7 @@
 	button_icon_state = "rally_rebel"
 	faction_buff = REBEL_DEPLOYMENT_FACTION
 	cooldown_time = 100 SECONDS // cell leaders and lieutenants are more charismatic than the evil bine commanders
+	physical_heal = -35
 
 /datum/action/cooldown/spell/revive_tdmlead
 	name = "Revive"
@@ -258,8 +260,8 @@
 		deltimer(revive_timer)
 		revive_timer = addtimer(CALLBACK(src, PROC_REF(revive), L), 2 MINUTES, TIMER_UNIQUE | TIMER_STOPPABLE)
 	else
-		to_chat(L, span_notice("We stop our reanimation."))
-		deltimer(revive_timer)
+		to_chat(L, span_notice("We are already reviving."))
+		return
 
 /datum/action/cooldown/spell/revive_tdmlead/proc/revive(mob/living/carbon/user)
 	if(user.stat != DEAD) //if they revive before it goes off
