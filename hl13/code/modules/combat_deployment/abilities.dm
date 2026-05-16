@@ -229,7 +229,7 @@
 /datum/action/cooldown/spell/aoe/rally/rebel
 	button_icon_state = "rally_rebel"
 	faction_buff = REBEL_DEPLOYMENT_FACTION
-	cooldown_time = 110 SECONDS // cell leaders and lieutenants are more charismatic than the evil bine commanders
+	cooldown_time = 100 SECONDS // cell leaders and lieutenants are more charismatic than the evil bine commanders
 
 /datum/action/cooldown/spell/revive_tdmlead
 	name = "Revive"

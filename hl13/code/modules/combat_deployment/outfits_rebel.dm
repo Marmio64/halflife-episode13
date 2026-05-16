@@ -778,11 +778,13 @@
 
 	backpack_contents = list(
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
 		/obj/item/storage/box/lethalshot/halflife = 3,
 	)
 
 	extra_dex = 10
+	extra_end = 4
 	extra_str = 2
 
 /datum/outfit/deployment_loadout/rebel/tier5/rpg
