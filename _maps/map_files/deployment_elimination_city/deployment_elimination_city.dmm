@@ -4,9 +4,12 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/forest)
 "au" = (
-/obj/structure/trap/deployment_spawn_prot/combine,
-/turf/closed/wall/halflife/concrete/alt,
-/area/halflife/outdoors/deployment_city/forest)
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/structure/bed/halflife/mattress/stained,
+/obj/effect/landmark/deployments_metrocop,
+/obj/machinery/combine_walllight/directional/west,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
+/area/halflife/indoors/combat_deployment/combine_base)
 "aA" = (
 /obj/structure/flora/tree/halflife/plain/concrete_thin,
 /turf/open/floor/plating/ground/sidewalk,
@@ -146,6 +149,12 @@
 /obj/structure/halflife/barrel/quadruple/grey,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
+"ii" = (
+/obj/machinery/porta_turret/combine/fast{
+	anchored = 1
+	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/combat_deployment/combine_base)
 "iq" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/combat_deployment/rebel_base)
@@ -281,17 +290,22 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
 "qD" = (
-/obj/structure/trap/deployment_spawn_prot/rebel,
-/turf/closed/wall/halflife/concrete/alt,
-/area/halflife/outdoors/deployment_city/forest)
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/structure/bed/halflife/mattress/dirty,
+/obj/effect/landmark/deployments_refugee,
+/obj/machinery/light/directional/west,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "ru" = (
 /obj/structure/halflife/barrel/triple/grey,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/forest)
 "rx" = (
-/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
+/obj/machinery/cash_deposit/rebel/tier3{
+	starting_cash = 150
+	},
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "rI" = (
 /obj/machinery/vending/breenwater,
 /turf/open/floor/plating/indoor/woodc,
@@ -416,6 +430,13 @@
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
+"zh" = (
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/structure/bed/halflife/mattress/dirty,
+/obj/effect/landmark/deployments_refugee,
+/obj/machinery/light/directional/east,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "zG" = (
 /turf/open/floor/plating/indoor/concrete/stairs{
 	dir = 5
@@ -474,6 +495,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
+"En" = (
+/obj/structure/trap/deployment_spawn_prot/rebel,
+/turf/closed/wall/halflife/concrete/alt,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "Eu" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/old,
@@ -753,10 +778,10 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "XN" = (
-/obj/machinery/cash_deposit/rebel/tier3{
-	starting_cash = 150
+/obj/machinery/porta_turret/combine/rebel/fast{
+	anchored = 1
 	},
-/turf/open/floor/plating/indoor/metal/plate,
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "XT" = (
 /obj/structure/halflife/trash/cardboard{
@@ -791,9 +816,12 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
 "Zi" = (
-/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/combat_deployment/rebel_base)
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/structure/bed/halflife/mattress/old,
+/obj/effect/landmark/deployments_metrocop,
+/obj/machinery/combine_walllight/directional/east,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
+/area/halflife/indoors/combat_deployment/combine_base)
 "Zj" = (
 /turf/open/floor/plating/indoor/concrete/stairs{
 	dir = 6
@@ -812,6 +840,16 @@
 /area/halflife/outdoors/deployment_city/forest)
 
 (1,1,1) = {"
+HP
+HP
+HP
+HP
+HP
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -947,6 +985,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 Vq
 Vq
 Vq
@@ -963,6 +1006,11 @@ Vq
 Vq
 Vq
 Vq
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -1000,6 +1048,11 @@ HP
 HP
 "}
 (3,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -1092,8 +1145,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (4,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -1186,8 +1249,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (5,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -1280,8 +1353,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (6,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -1374,8 +1457,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (7,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -1468,8 +1561,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (8,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -1562,8 +1665,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (9,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -1656,8 +1769,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (10,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -1750,8 +1873,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (11,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -1844,8 +1977,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (12,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -1938,6 +2081,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (13,1,1) = {"
 HP
@@ -1946,6 +2094,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 Vq
 Vq
 Vq
@@ -2024,6 +2177,11 @@ ls
 ls
 ls
 Vq
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -2034,6 +2192,11 @@ HP
 HP
 "}
 (14,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -2126,6 +2289,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (15,1,1) = {"
 HP
@@ -2134,6 +2302,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 Vq
 Vq
 Vq
@@ -2212,6 +2385,11 @@ ls
 ls
 ls
 Vq
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -2222,6 +2400,11 @@ HP
 HP
 "}
 (16,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -2314,8 +2497,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (17,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -2408,6 +2601,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (18,1,1) = {"
 HP
@@ -2416,6 +2614,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 Vq
 Vq
 Vq
@@ -2494,6 +2697,11 @@ ls
 ls
 ls
 Vq
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -2504,6 +2712,11 @@ HP
 HP
 "}
 (19,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -2596,6 +2809,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (20,1,1) = {"
 HP
@@ -2604,6 +2822,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 Vq
 Vq
 Vq
@@ -2682,6 +2905,11 @@ ls
 ls
 ls
 Vq
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -2692,6 +2920,11 @@ HP
 HP
 "}
 (21,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -2784,8 +3017,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (22,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -2878,6 +3121,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (23,1,1) = {"
 HP
@@ -2886,6 +3134,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 Vq
 Vq
 Vq
@@ -2964,6 +3217,11 @@ ls
 ls
 ls
 Vq
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -2974,6 +3232,11 @@ HP
 HP
 "}
 (24,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -3066,6 +3329,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (25,1,1) = {"
 HP
@@ -3074,7 +3342,12 @@ HP
 HP
 HP
 HP
-au
+HP
+HP
+HP
+HP
+HP
+pB
 pB
 pB
 pB
@@ -3151,7 +3424,12 @@ KH
 eE
 KH
 KH
-qD
+En
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -3168,7 +3446,12 @@ HP
 HP
 HP
 HP
-Vq
+HP
+HP
+HP
+HP
+HP
+Cv
 Cv
 Yo
 Yo
@@ -3245,7 +3528,12 @@ iq
 Xu
 iq
 Xj
-Vq
+Xj
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -3262,9 +3550,14 @@ HP
 HP
 HP
 HP
-Vq
+HP
+HP
+HP
+HP
+HP
 Cv
-ex
+ii
+Yo
 Vi
 Vi
 Vi
@@ -3338,8 +3631,13 @@ iq
 Xu
 Xu
 iq
+XN
 Xj
-Vq
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -3351,6 +3649,8 @@ HP
 "}
 (28,1,1) = {"
 HP
+HP
+HP
 Cv
 Cv
 Cv
@@ -3358,7 +3658,10 @@ Cv
 Cv
 Cv
 Cv
-Yo
+Cv
+Cv
+Cv
+ex
 Vi
 Vi
 Yo
@@ -3433,7 +3736,12 @@ Xu
 Xu
 XX
 Xj
-Vq
+Xj
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -3445,13 +3753,18 @@ HP
 "}
 (29,1,1) = {"
 HP
+HP
+HP
 Cv
 Rh
 Vi
 Rh
 Vi
-QW
-rx
+Zi
+Vi
+Vi
+Vi
+Cv
 Yo
 Vi
 Vi
@@ -3535,9 +3848,16 @@ Xj
 Xj
 Xj
 Xj
+Xj
+Xj
+Xj
+HP
+HP
 HP
 "}
 (30,1,1) = {"
+HP
+HP
 HP
 Cv
 JA
@@ -3545,7 +3865,10 @@ Vi
 VN
 Vi
 Rh
-rx
+Vi
+Vi
+Vi
+cn
 Yo
 Vi
 Vi
@@ -3620,18 +3943,25 @@ iq
 Xu
 Xu
 iq
-Zi
+Xj
 CQ
 CQ
-nL
+CQ
+CQ
+CQ
+qD
 CQ
 nL
 CQ
 xv
 Xj
 HP
+HP
+HP
 "}
 (31,1,1) = {"
+HP
+HP
 HP
 Cv
 Rh
@@ -3639,7 +3969,10 @@ Vi
 FZ
 Vi
 FZ
-rx
+Vi
+Vi
+Vi
+Cv
 Yo
 Vi
 Vi
@@ -3714,8 +4047,11 @@ iq
 Xu
 Xu
 iq
-Zi
+Ae
 CQ
+HI
+HI
+HI
 HI
 mj
 HI
@@ -3724,10 +4060,17 @@ HI
 nL
 Xj
 HP
+HP
+HP
 "}
 (32,1,1) = {"
 HP
+HP
+HP
 Cv
+Vi
+Vi
+Vi
 Vi
 Vi
 Vi
@@ -3811,6 +4154,9 @@ XX
 Xj
 vv
 HI
+HI
+HI
+HI
 jO
 HI
 fY
@@ -3818,11 +4164,18 @@ HI
 Jh
 Xj
 HP
+HP
+HP
 "}
 (33,1,1) = {"
 HP
+HP
+HP
 Cv
 Yo
+Vi
+Vi
+Vi
 Vi
 Vi
 Vi
@@ -3909,17 +4262,27 @@ HI
 HI
 HI
 HI
+HI
+HI
+HI
 CQ
 Xj
+HP
+HP
 HP
 "}
 (34,1,1) = {"
 HP
+HP
+HP
 Cv
-Yo
+ex
 Vi
 dJ
 OK
+Vi
+Vi
+Vi
 Vi
 cn
 Vi
@@ -4000,17 +4363,27 @@ Ae
 HI
 HI
 HI
-XN
+HI
+HI
+HI
+rx
 Pe
 HI
 CQ
 Xj
 HP
+HP
+HP
 "}
 (35,1,1) = {"
 HP
+HP
+HP
 Cv
 Yo
+Vi
+Vi
+Vi
 Vi
 Vi
 Vi
@@ -4097,13 +4470,23 @@ HI
 HI
 HI
 HI
+HI
+HI
+HI
 CQ
 Xj
+HP
+HP
 HP
 "}
 (36,1,1) = {"
 HP
+HP
+HP
 Cv
+Vi
+Vi
+Vi
 Vi
 Vi
 Vi
@@ -4187,6 +4570,9 @@ XX
 Xj
 vv
 HI
+HI
+HI
+HI
 jO
 HI
 jO
@@ -4194,8 +4580,12 @@ HI
 Eu
 Xj
 HP
+HP
+HP
 "}
 (37,1,1) = {"
+HP
+HP
 HP
 Cv
 Rh
@@ -4203,7 +4593,10 @@ Vi
 Rh
 Vi
 QW
-rx
+Vi
+Vi
+Vi
+Cv
 Yo
 Vi
 Vi
@@ -4278,8 +4671,11 @@ iq
 Xu
 Xu
 iq
-Zi
+Ae
 CQ
+HI
+HI
+HI
 HI
 mj
 HI
@@ -4288,8 +4684,12 @@ HI
 nL
 Xj
 HP
+HP
+HP
 "}
 (38,1,1) = {"
+HP
+HP
 HP
 Cv
 JA
@@ -4297,7 +4697,10 @@ Vi
 VN
 Vi
 Rh
-rx
+Vi
+Vi
+Vi
+cn
 Yo
 Vi
 Vi
@@ -4372,26 +4775,36 @@ iq
 Xu
 Xu
 iq
-Zi
+Xj
 CQ
 CQ
-nL
+CQ
+CQ
+CQ
+zh
 CQ
 Ty
 CQ
 Ty
 Xj
 HP
+HP
+HP
 "}
 (39,1,1) = {"
+HP
+HP
 HP
 Cv
 Rh
 Vi
 FZ
 Vi
-FZ
-rx
+au
+Vi
+Vi
+Vi
+Cv
 Yo
 Vi
 Vi
@@ -4467,6 +4880,9 @@ Xu
 Xu
 iq
 Xj
+Xj
+Xj
+Xj
 nJ
 Xj
 Xj
@@ -4476,8 +4892,12 @@ Xj
 Xj
 Xj
 HP
+HP
+HP
 "}
 (40,1,1) = {"
+HP
+HP
 HP
 Cv
 Cv
@@ -4486,7 +4906,10 @@ Cv
 Cv
 Cv
 Cv
-Yo
+Cv
+Cv
+Cv
+ex
 Vi
 Vi
 Yo
@@ -4561,7 +4984,12 @@ Xu
 Xu
 XX
 Xj
-Vq
+Xj
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -4578,9 +5006,14 @@ HP
 HP
 HP
 HP
-Vq
+HP
+HP
+HP
+HP
+HP
 Cv
-ex
+ii
+Yo
 Vi
 Vi
 Vi
@@ -4654,8 +5087,13 @@ iq
 Xu
 Xu
 iq
+XN
 Xj
-Vq
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -4672,7 +5110,12 @@ HP
 HP
 HP
 HP
-Vq
+HP
+HP
+HP
+HP
+HP
+Cv
 Cv
 Yo
 Yo
@@ -4749,7 +5192,12 @@ iq
 Xu
 iq
 Xj
-Vq
+Xj
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -4766,7 +5214,12 @@ HP
 HP
 HP
 HP
-au
+HP
+HP
+HP
+HP
+HP
+pB
 pB
 pB
 pB
@@ -4843,7 +5296,12 @@ KH
 IM
 KH
 KH
-qD
+En
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -4854,6 +5312,11 @@ HP
 HP
 "}
 (44,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -4946,8 +5409,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (45,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -5040,8 +5513,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (46,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -5134,8 +5617,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (47,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -5228,8 +5721,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (48,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -5322,8 +5825,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (49,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -5416,8 +5929,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (50,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -5510,6 +6033,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (51,1,1) = {"
 HP
@@ -5518,6 +6046,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 Vq
 Vq
 Vq
@@ -5596,6 +6129,11 @@ ls
 ls
 ls
 Vq
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -5612,6 +6150,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 Vq
 Vq
 Vq
@@ -5690,6 +6233,11 @@ ls
 ls
 ls
 Vq
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -5706,6 +6254,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 Vq
 Vq
 Vq
@@ -5784,6 +6337,11 @@ ls
 ls
 ls
 Vq
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -5794,6 +6352,11 @@ HP
 HP
 "}
 (54,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -5886,6 +6449,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (55,1,1) = {"
 HP
@@ -5894,6 +6462,11 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 Vq
 Vq
 Vq
@@ -5972,6 +6545,11 @@ ls
 ls
 ls
 Vq
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -5982,6 +6560,11 @@ HP
 HP
 "}
 (56,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -6074,8 +6657,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (57,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -6168,8 +6761,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (58,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -6262,8 +6865,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (59,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -6356,8 +6969,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (60,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -6450,8 +7073,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (61,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -6544,8 +7177,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (62,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -6638,8 +7281,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (63,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -6732,8 +7385,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (64,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -6826,8 +7489,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (65,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -6920,8 +7593,18 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (66,1,1) = {"
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
@@ -7014,8 +7697,23 @@ HP
 HP
 HP
 HP
+HP
+HP
+HP
+HP
+HP
 "}
 (67,1,1) = {"
+HP
+HP
+HP
+HP
+HP
+HP
+HP
+HP
+HP
+HP
 HP
 HP
 HP
