@@ -147,7 +147,7 @@
 		to_chat(H, span_warning("Team leadership cant upgrade their loadout."))
 		return FALSE
 
-	if(H.combat_deployment_loadout_tier != 5 && H.deployment_faction == deployment_faction && H.loadout_upgrade_available)
+	if(H.combat_deployment_loadout_tier != 5 && H.combat_deployment_loadout_tier != 0 && H.deployment_faction == deployment_faction && H.loadout_upgrade_available)
 
 		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
 			if(DEPLOYMENT_TIER4_REBELS <= GLOB.deployment_rebels_cash && H.combat_deployment_loadout_tier < 4)

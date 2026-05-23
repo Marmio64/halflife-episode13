@@ -54,6 +54,11 @@
 /obj/effect/spawner/random/halflife/loot/rare,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/outlands)
+"ach" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/circuitmaterial/advanced,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection)
 "acs" = (
 /obj/structure/chair/halflife/metal/blue{
 	dir = 4
@@ -834,10 +839,7 @@
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/forest)
 "bdg" = (
-/obj/structure/chair/halflife/wood{
-	dir = 4
-	},
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/directional/west,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/courtroom)
 "bdE" = (
@@ -2432,6 +2434,12 @@
 /obj/machinery/light/small/broken/directional/east,
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/townhall)
+"dpu" = (
+/obj/structure/window/fulltile/halflife/nosmooth/generic{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/outlands)
 "dpw" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc,
@@ -4166,6 +4174,7 @@
 "fGW" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/effect/spawner/random/halflife/loot/heal,
+/obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/outlands)
 "fHj" = (
@@ -4454,6 +4463,12 @@
 "gaq" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/tracks)
+"gaB" = (
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/laborunion)
 "gaC" = (
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/outdoors/tracks)
@@ -4814,6 +4829,11 @@
 "gxJ" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
+"gxP" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/reagent_containers/pill/patch/grubnugget,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/bunker/unpowered)
 "gzj" = (
 /obj/structure/halflife/trash/garbage{
 	pixel_x = 2;
@@ -6239,10 +6259,9 @@
 	},
 /area/halflife/indoors/productioncenter)
 "iEq" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/structure/alien/weeds,
-/turf/open/floor/plating/indoor/tile/black,
-/area/halflife/indoors/outlands)
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/alley/dropshippad)
 "iEw" = (
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/alley/dropshippad)
@@ -6549,6 +6568,10 @@
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors)
+"jbF" = (
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/hospital)
 "jbP" = (
 /obj/effect/spawner/random/halflife/loot/consumables,
 /turf/open/floor/plating/indoor/tile,
@@ -7500,6 +7523,9 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
+"kvJ" = (
+/turf/closed/wall/halflife/concrete/alt,
+/area/halflife/outdoors/forest)
 "kvQ" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/stained,
@@ -8910,6 +8936,10 @@
 /obj/structure/table/halflife/metal/alt,
 /obj/item/clothing/neck/anti_magic_collar,
 /obj/item/clothing/neck/anti_magic_collar,
+/obj/item/reagent_containers/pill/patch/medkit/vial{
+	pixel_x = -1;
+	pixel_y = 16
+	},
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection)
 "mrW" = (
@@ -9374,6 +9404,10 @@
 	dir = 1
 	},
 /area/halflife/outdoors/plaza)
+"mSP" = (
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/alley/dropshippad)
 "mTk" = (
 /obj/machinery/door/airlock/highsecurity/combine,
 /obj/effect/mapping_helpers/airlock/access/all/security/armory,
@@ -10765,6 +10799,7 @@
 "oJO" = (
 /obj/structure/closet/halflife/wall/firstaid,
 /obj/effect/spawner/random/halflife/loot/heal,
+/obj/effect/spawner/random/halflife/loot/heal,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/old)
 "oJW" = (
@@ -11554,6 +11589,12 @@
 /obj/structure/razorwire,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"pJo" = (
+/obj/machinery/camera/directional/east{
+	c_tag = "Courtroom"
+	},
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/townhall/courtroom)
 "pJs" = (
 /obj/modular_map_root/citysouth,
 /obj/structure/railing/halflife/wood{
@@ -13353,6 +13394,10 @@
 /mob/living/basic/halflife/zombie/poison,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
+"rPN" = (
+/obj/machinery/door/unpowered/halflife/metal,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/old)
 "rPS" = (
 /obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -14945,6 +14990,9 @@
 "ubE" = (
 /turf/open/floor/plating/indoor/tiled9,
 /area/halflife/indoors/hospital)
+"udf" = (
+/turf/open/floor/plating/indoor/metal/grate/border/warning,
+/area/halflife/indoors/old)
 "udS" = (
 /obj/structure/frame/computer,
 /turf/open/floor/plating/indoor/carpet/violet,
@@ -16669,14 +16717,9 @@
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "wlZ" = (
-/obj/machinery/camera/directional/east{
-	c_tag = "Courtroom"
-	},
-/obj/structure/chair/halflife/wood{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/woodc/fancy,
-/area/halflife/indoors/townhall/courtroom)
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/turf/open/floor/plating/indoor/tiled10,
+/area/halflife/indoors/townhall)
 "wmj" = (
 /obj/effect/decal/cleanable/blood/trails,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -16883,6 +16926,10 @@
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/conscript_bunker)
+"wBF" = (
+/obj/structure/barricade/wooden/solid,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection)
 "wBG" = (
 /obj/structure/halflife/fence/vertical/wire/east/barb,
 /turf/open/floor/plating/ground/dirt,
@@ -91620,7 +91667,7 @@ cHK
 ttO
 upq
 xal
-heY
+tjq
 tjq
 upq
 upq
@@ -91876,7 +91923,7 @@ kCc
 cHK
 ttO
 upq
-iEq
+uTY
 heY
 tjq
 upq
@@ -92132,7 +92179,7 @@ sEp
 kCc
 cHK
 ttO
-upq
+njW
 uTY
 tOz
 tOz
@@ -92389,7 +92436,7 @@ sEp
 kCc
 cHK
 ttO
-upq
+njW
 uTY
 xcH
 tjq
@@ -93165,7 +93212,7 @@ ovj
 tOz
 tOz
 tOz
-ecV
+xal
 upq
 heY
 gwZ
@@ -94822,7 +94869,7 @@ maT
 maT
 maT
 tVS
-afb
+iEq
 pKX
 pKX
 pKX
@@ -94831,7 +94878,7 @@ pKX
 pKX
 pKX
 pKX
-afb
+mSP
 xco
 xco
 hdS
@@ -98709,7 +98756,7 @@ kwq
 bPu
 bPu
 bPu
-sgI
+gaB
 puc
 pnk
 vYj
@@ -103031,12 +103078,12 @@ tUV
 tUV
 tUV
 tUV
-maT
-tVS
-maT
-maT
-tVS
-maT
+kvJ
+kvJ
+kvJ
+kvJ
+kvJ
+kvJ
 guh
 ugR
 lGY
@@ -103288,12 +103335,12 @@ tUV
 mvm
 bSm
 tUV
-tUV
-tUV
-tUV
-tUV
-tUV
-tUV
+muB
+pJo
+bdg
+vLs
+vLs
+vLs
 guh
 kVS
 mxd
@@ -103545,9 +103592,9 @@ tUV
 kPY
 rot
 tUV
-muB
-wlZ
-bdg
+vLs
+fAR
+fAR
 fAR
 vLs
 vLs
@@ -106123,8 +106170,8 @@ bag
 bag
 bag
 bag
-hiz
-jMW
+bag
+wlZ
 hUY
 hUY
 gVK
@@ -106380,7 +106427,7 @@ bUY
 bUY
 bag
 bag
-bag
+hiz
 jMW
 xIy
 eem
@@ -106574,8 +106621,8 @@ lQm
 lQm
 lQm
 lQm
-lQm
-lQm
+dpu
+dpu
 lQm
 lQm
 eGo
@@ -107152,7 +107199,7 @@ bag
 bag
 bag
 bag
-jMW
+wlZ
 qRl
 qRl
 mNv
@@ -111264,7 +111311,7 @@ laL
 laL
 laL
 vKR
-laL
+wBF
 laL
 laL
 lWK
@@ -113087,7 +113134,7 @@ rJM
 uXF
 lMJ
 gMn
-jEe
+jbF
 gfN
 iAm
 euj
@@ -113601,7 +113648,7 @@ qyM
 rJM
 lMJ
 gMn
-jEe
+jbF
 euj
 tzV
 euj
@@ -115117,7 +115164,7 @@ nxz
 nxz
 vRq
 mAS
-laL
+ach
 nxz
 laL
 laL
@@ -120043,8 +120090,8 @@ vGj
 uPY
 fYq
 uPY
-xpA
-mpP
+rPN
+udf
 dzi
 qXX
 fBV
@@ -126606,7 +126653,7 @@ cHK
 cHK
 cHK
 kfh
-enx
+gxP
 enx
 ahj
 ahj

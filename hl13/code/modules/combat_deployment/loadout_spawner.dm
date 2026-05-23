@@ -422,6 +422,8 @@
 		loadouts = list()
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/xen/tier3/fast_zombie,
+			/datum/outfit/deployment_loadout/xen/tier3/grunt_zombie,
+			/datum/outfit/deployment_loadout/xen/tier3/icu_zombie,
 			/datum/outfit/deployment_loadout/xen/tier3/zombine,
 			/datum/outfit/deployment_loadout/xen/tier3/fungal_zombie,
 			/datum/outfit/deployment_loadout/xen/tier3/antlion_worker,

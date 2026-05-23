@@ -811,6 +811,7 @@
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS //full-body EOD suit
 	limb_integrity = 450
 	repairable_by = /obj/item/stack/kevlar
+	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 
 /obj/item/clothing/suit/armor/halflife/plf_veteran/Initialize(mapload)
 	. = ..()

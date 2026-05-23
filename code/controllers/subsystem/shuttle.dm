@@ -181,6 +181,11 @@ SUBSYSTEM_DEF(shuttle)
 	setup_shuttles(stationary_docking_ports)
 	has_purchase_shuttle_access = init_has_purchase_shuttle_access()
 
+	//hl13 edit
+	if(SSmapping.current_map.roleplay_type == "outlands")
+		supply.callTime *= 2
+	//hl13 edit
+
 	if(!arrivals)
 		log_mapping("No /obj/docking_port/mobile/arrivals placed on the map!")
 	if(!emergency)

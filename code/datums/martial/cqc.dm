@@ -17,7 +17,7 @@
 	/// Can we evade projectiles?
 	var/evade_projectiles = FALSE
 	/// Chance of evading projectiles?
-	var/evade_projectile_chance = 95
+	var/evade_projectile_chance = 90
 
 /datum/martial_art/cqc/wesker
 	evade_projectiles = TRUE

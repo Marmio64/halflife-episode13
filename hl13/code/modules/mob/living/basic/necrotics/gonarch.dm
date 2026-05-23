@@ -273,6 +273,8 @@
 	faction = list(FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/boss/red
+	maxHealth = 1750
+	health = 1750
 	deployment_faction = REBEL_DEPLOYMENT_FACTION
 	color_rage = "#ff8800"
 	color_notrage = "#ff0000"
@@ -280,6 +282,8 @@
 	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/boss/blu
+	maxHealth = 1750
+	health = 1750
 	deployment_faction = COMBINE_DEPLOYMENT_FACTION
 	color_rage = "#00eeff"
 	color_notrage = "#0077ff"

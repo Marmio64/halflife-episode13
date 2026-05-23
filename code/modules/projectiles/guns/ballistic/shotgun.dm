@@ -30,6 +30,8 @@
 
 	pb_knockback = 2
 
+	weapon_category = WEAPON_CAT_SHOTGUN
+
 /obj/item/gun/ballistic/shotgun/blow_up(mob/user)
 	. = 0
 	if(chambered?.loaded_projectile)

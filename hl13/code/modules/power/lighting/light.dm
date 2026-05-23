@@ -1,4 +1,4 @@
-//wip
+//outdated, to be removed when im not lazy
 /obj/machinery/light/combine
 	name = "combine light"
 	icon = 'hl13/icons/obj/lighting.dmi'

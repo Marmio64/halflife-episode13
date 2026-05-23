@@ -269,10 +269,14 @@
 	deployment_faction = HIDDEN_DEPLOYMENT_FACTION
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/red
+	maxHealth = 2000
+	health = 2000
 	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
 	deployment_faction = REBEL_DEPLOYMENT_FACTION
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/blu
+	maxHealth = 2000
+	health = 2000
 	faction = list(FACTION_COMBINE)
 	deployment_faction = COMBINE_DEPLOYMENT_FACTION
 
@@ -353,7 +357,7 @@
 
 /datum/action/cooldown/spell/conjure/antlion/extract_vort
 	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/rebel_faction)
-	summon_amount = 2
+	summon_amount = 3
 	cooldown_time = 60 SECONDS
 
 /datum/action/cooldown/spell/conjure/antlion/extract_vort/super

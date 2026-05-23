@@ -9,7 +9,7 @@
 	sexes = FALSE
 	no_equip_flags = ITEM_SLOT_MASK | ITEM_SLOT_OCLOTHING | ITEM_SLOT_GLOVES | ITEM_SLOT_FEET | ITEM_SLOT_ICLOTHING | ITEM_SLOT_SUITSTORE | ITEM_SLOT_HEAD
 	inherent_traits = list(TRAIT_RESISTCOLD, TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,
-							TRAIT_NOBREATH, TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NODISMEMBER, TRAIT_GENELESS, TRAIT_NO_UNDERWEAR, TRAIT_TERRIBLE_AIM, TRAIT_STRONG_STOMACH)
+							TRAIT_NOBREATH, TRAIT_RADIMMUNE, TRAIT_VIRUSIMMUNE, TRAIT_NODISMEMBER, TRAIT_GENELESS, TRAIT_NO_UNDERWEAR, TRAIT_TERRIBLE_AIM, TRAIT_STRONG_STOMACH, TRAIT_CALTROPIMMUNE)
 	mutanteyes = /obj/item/organ/eyes/night_vision/vort
 	mutanttongue = /obj/item/organ/tongue/vort
 	var/datum/action/cooldown/spell/conjure_item/infinite_guns/vort_blast/galunga
@@ -173,7 +173,7 @@
 /datum/species/vortigaunt/extract_boss
 	name = "Super Extract Empowered Vortigaunt"
 	id = SPECIES_VORTIGAUNT_ELDER
-	damage_modifier = 70 //high since they dont have movement on their side at all
+	damage_modifier = 75 //high since they dont have movement on their side at all
 
 	bodypart_overrides = list(
 		BODY_ZONE_HEAD = /obj/item/bodypart/head/vortigaunt/extract,

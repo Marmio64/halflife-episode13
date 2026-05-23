@@ -15,6 +15,7 @@
 	flags_inv = HIDESHOES|HIDEJUMPSUIT|HIDEGLOVES
 	strip_delay = 100
 	clothing_flags = THICKMATERIAL
+	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 	armor_type = /datum/armor/hev
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
 	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'

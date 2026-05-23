@@ -75,6 +75,9 @@
 	if(HAS_TRAIT(digitigrade_fan, TRAIT_PIERCEIMMUNE))
 		return
 
+	if(HAS_TRAIT(digitigrade_fan, TRAIT_CALTROPIMMUNE))
+		return
+
 	if((flags & CALTROP_IGNORE_WALKERS) && digitigrade_fan.move_intent == MOVE_INTENT_WALK)
 		return
 

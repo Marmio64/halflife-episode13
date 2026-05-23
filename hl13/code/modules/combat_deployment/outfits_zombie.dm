@@ -84,6 +84,13 @@
 
 	mob_to_be = /mob/living/basic/halflife/zombie/zombie_grunt/deployment
 
+/datum/outfit/deployment_loadout/xen/tier3/icu_zombie
+	name = "Deployment: Infestation Control Zombie"
+	display_name = "Infestation Control Zombie (Offense)"
+	desc = "You are relatively quick, and unlike all your other zombie kin, are actually resistant to burn damage, and take halved burn damage instead of double. You excel at dealing with vortigaunts and cremators primarily."
+
+	mob_to_be = /mob/living/basic/halflife/zombie/infestation_control/deployment
+
 /datum/outfit/deployment_loadout/xen/tier3/poison_zombie
 	name = "Deployment: Poison Zombie"
 	display_name = "Poison Zombie (Support)"

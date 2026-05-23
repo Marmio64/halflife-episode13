@@ -101,3 +101,24 @@
 #define TRAIT_SURVIVALIST "survivalist"
 
 #define TRAIT_COMBINE_TAGGED "combine_tagged"
+
+
+///// weapon type definitions
+
+//pretty much everything not included below, like SMGs and pistols
+#define WEAPON_CAT_LIGHT "weapon_cat_light"
+
+//all rifles
+#define WEAPON_CAT_RIFLE "weapon_cat_rifle"
+
+//SPAS-12 and pulse shotgun pretty much
+#define WEAPON_CAT_SHOTGUN "weapon_cat_shotgun"
+
+//sniper rifles
+#define WEAPON_CAT_SNIPER "weapon_cat_sniper"
+
+//heavy guns, like LMGs
+#define WEAPON_CAT_HEAVY "weapon_cat_heavy"
+
+//unique, special weaponry
+#define WEAPON_CAT_SPECIALTY "weapon_cat_specialty"

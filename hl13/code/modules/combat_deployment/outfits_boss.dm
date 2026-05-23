@@ -161,7 +161,7 @@
 )
 
 /datum/action/cooldown/spell/wesker_taunt/long_cooldown
-	cooldown_time = 20 SECONDS
+	cooldown_time = 25 SECONDS
 
 /datum/action/cooldown/spell/wesker_taunt/cast(mob/living/cast_on)
 	. = ..()

@@ -195,7 +195,7 @@
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie_grunt
 
 /mob/living/basic/halflife/zombie/zombie_grunt/deployment
-	speed = 0.4
+	speed = 0.3
 	maxHealth = 125
 	health = 125
 	melee_attack_cooldown = 1.25 SECONDS
@@ -217,6 +217,18 @@
 
 /mob/living/basic/halflife/zombie/engineer/deployment
 	melee_attack_cooldown = 1.5 SECONDS
+
+/mob/living/basic/halflife/zombie/infestation_control
+	name = "Zombified ICU Worker"
+	desc = "A former worker of the Infestation Control Union, who succumbed to a parasitic headcrab. It's apparel looks pretty fire and burn resistant."
+	icon_state = "infestationcontrol"
+	icon_living = "infestationcontrol"
+	icon_dead = "infestationcontrol_dead"
+	damage_coeff = list(BRUTE = 1, BURN = 0.5, TOX = 1, STAMINA = 1, OXY = 1)
+
+/mob/living/basic/halflife/zombie/infestation_control/deployment
+	melee_attack_cooldown = 1.5 SECONDS
+	speed = 0.4
 
 /mob/living/basic/halflife/zombie/fungal
 	name = "Fungal Zombie"
@@ -317,7 +329,7 @@
 
 /mob/living/basic/halflife/zombie/fast/deployment/upgraded
 	melee_attack_cooldown = 0.4 SECONDS
-	melee_damage_upper = 15
+	melee_damage_upper = 17
 	maxHealth = 110
 	health = 110
 

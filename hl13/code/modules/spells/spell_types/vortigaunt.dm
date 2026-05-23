@@ -149,7 +149,7 @@
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
 /datum/action/cooldown/spell/aoe/repulse/wizard/vort/super
-	cooldown_time = 20 SECONDS
+	cooldown_time = 15 SECONDS
 
 /datum/action/cooldown/spell/forcewall/vort
 	name = "Vortal Wall"
@@ -169,7 +169,7 @@
 	wall_type = /obj/effect/forcefield/wizard/vortal
 
 /datum/action/cooldown/spell/forcewall/vort/super
-	cooldown_time = 12 SECONDS
+	cooldown_time = 10 SECONDS
 
 /obj/effect/forcefield/wizard/vortal
 	name = "VORTAL BARRIER"

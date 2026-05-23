@@ -85,8 +85,11 @@
 
 	var/pb_knockback = 0
 
-	/// Does the gun spew smoke when shooting?
+	/// Does the gun spew smoke when shooting? hl13 edit
 	var/barrel_smoke_on_shoot = FALSE
+
+	/// The weapon category for looking at skills. hl13 edit
+	var/weapon_category = WEAPON_CAT_LIGHT
 
 	/// Cooldown for the visible message sent from gun flipping.
 	COOLDOWN_DECLARE(flip_cooldown)

@@ -15,6 +15,6 @@
 	throw_range = 5
 
 	/// Current combat deployment loadout tier for this mob
-	var/combat_deployment_loadout_tier = 1
+	var/combat_deployment_loadout_tier = 0
 
 	var/loadout_upgrade_available = TRUE

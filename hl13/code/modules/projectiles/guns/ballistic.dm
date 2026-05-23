@@ -47,6 +47,8 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
+	weapon_category = WEAPON_CAT_RIFLE
+
 /obj/item/gun/ballistic/automatic/ar2/nopin
 	pin = null
 
@@ -118,6 +120,8 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
+	weapon_category = WEAPON_CAT_RIFLE
+
 /obj/item/gun/ballistic/automatic/m4a1/no_mag
 	spawnwithmagazine = FALSE
 
@@ -155,6 +159,8 @@
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
 	var/fire_rate = 0.37 SECONDS
+
+	weapon_category = WEAPON_CAT_RIFLE
 
 /obj/item/gun/ballistic/automatic/ak47/no_mag
 	spawnwithmagazine = FALSE
@@ -204,6 +210,8 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
+	weapon_category = WEAPON_CAT_HEAVY
+
 /obj/item/gun/ballistic/automatic/rpd/no_mag
 	spawnwithmagazine = FALSE
 
@@ -239,6 +247,8 @@
 	inhand_icon_state = "service"
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
+	weapon_category = WEAPON_CAT_RIFLE
 
 /obj/item/gun/ballistic/automatic/servicerifle/no_mag
 	spawnwithmagazine = FALSE
@@ -302,6 +312,8 @@
 
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
+	weapon_category = WEAPON_CAT_SNIPER
 
 /obj/item/gun/ballistic/combine_sniper/slow
 	after_shot_delay = 1.15 SECONDS
@@ -470,6 +482,8 @@
 	inhand_icon_state = "spas12"
 	lefthand_file = 'hl13/icons/mob/inhands/64x_guns_left.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/64x_guns_right.dmi'
+
+	weapon_category = WEAPON_CAT_SHOTGUN
 
 /obj/item/gun/ballistic/shotgun/spas12/try_fire_gun(atom/target, mob/living/user, params)
 	if(LAZYACCESS(params2list(params), RIGHT_CLICK))
@@ -775,6 +789,8 @@
 	sawn_desc = "A ratty old pre-war rifle that was developed over a century ago. Someone seems to have taken this prized historical artifact and sawed it in half, creating an Obrez. Still moist, though."
 	weapon_weight = WEAPON_HEAVY
 
+	weapon_category = WEAPON_CAT_RIFLE
+
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
 	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. This one looks a little better than most, it should jam less often."
 	jamming_chance = 5
@@ -845,6 +861,8 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
+	weapon_category = WEAPON_CAT_HEAVY
+
 /obj/item/gun/ballistic/automatic/pulselmg/nopin
 	pin = null
 
@@ -889,6 +907,8 @@
 
 	lefthand_file = 'hl13/icons/mob/inhands/64x_guns_left.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/64x_guns_right.dmi'
+
+	weapon_category = WEAPON_CAT_SNIPER
 
 /obj/item/gun/ballistic/automatic/svd/no_mag
 	spawnwithmagazine = FALSE
@@ -939,6 +959,8 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
+	weapon_category = WEAPON_CAT_SPECIALTY
+
 /obj/item/gun/energy/immolator/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.25 SECONDS, overtime_penalty_cap = 8)
@@ -983,6 +1005,8 @@
 
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
+	weapon_category = WEAPON_CAT_SPECIALTY
 
 /obj/item/ammo_box/magazine/internal/rocketlauncher_halflife
 	name = "rocket launcher internal magazine"

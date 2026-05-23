@@ -482,10 +482,26 @@
 	loot = list(
 				/mob/living/basic/halflife/zombie = 1,
 				/mob/living/basic/halflife/zombie/engineer = 1,
+				/mob/living/basic/halflife/zombie/infestation_control = 1,
 				/mob/living/basic/halflife/zombie/fast = 1,
 				/mob/living/basic/halflife/zombie/poison = 1,
 				/mob/living/basic/halflife/zombie/zombie_grunt = 1,
 				/mob/living/basic/halflife/zombie/zombine = 1,
+				)
+
+/obj/effect/spawner/random/halflife/random_zombie_weak
+	name = "random weaker zombie"
+	icon = 'hl13/icons/effects/random_spawners.dmi'
+	icon_state = "random_zombie"
+	spawn_loot_count = 1
+
+	loot = list(
+				/mob/living/basic/halflife/zombie = 3,
+				/mob/living/basic/halflife/zombie/engineer = 1,
+				/mob/living/basic/halflife/zombie/infestation_control = 1,
+				/mob/living/basic/halflife/zombie/fast = 1,
+				/mob/living/basic/halflife/zombie/poison = 1,
+				/mob/living/basic/halflife/zombie/zombie_grunt = 1,
 				)
 
 /obj/effect/spawner/random/halflife/random_zombie_strong

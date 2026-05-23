@@ -145,8 +145,12 @@
 /obj/machinery/combine_health_station/self_recharging
 	desc = "A wall mounted healing station. This one can recharge overtime, or be charged with grub nuggets."
 	can_malfunction = FALSE
+	var/charge_rate = 2
+
+/obj/machinery/combine_health_station/self_recharging/slow
+	charge_rate = 1
 
 /obj/machinery/combine_health_station/self_recharging/process(delta_time)
 	if(capacity < capacity_max)
-		capacity += 2
+		capacity += charge_rate
 		update_icon_state()

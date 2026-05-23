@@ -11,6 +11,8 @@
 	var/list/spells_to_add = list()
 	/// This outfit will grant these mutations if applied
 	var/list/mutations_to_add = list()
+	/// This outfit will grant these traits if applied
+	var/list/traits_to_add = list()
 	/// Slots to apply nodrop to
 	var/list/nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_EYES, ITEM_SLOT_MASK, ITEM_SLOT_ID)
 	/// Is there a unique combat music for this class?
@@ -47,6 +49,9 @@
 
 	for(var/mutation in mutations_to_add)
 		user.dna.add_mutation(mutation)
+
+	for(var/trait in traits_to_add)
+		ADD_TRAIT(user, trait, OUTFIT_TRAIT)
 
 	if(combat_music)
 		user.cmode_music = combat_music
