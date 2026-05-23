@@ -183,7 +183,7 @@ SUBSYSTEM_DEF(shuttle)
 
 	//hl13 edit
 	if(SSmapping.current_map.roleplay_type == "outlands")
-		supply.callTime *= 2
+		supply.callTime *= 3
 	//hl13 edit
 
 	if(!arrivals)

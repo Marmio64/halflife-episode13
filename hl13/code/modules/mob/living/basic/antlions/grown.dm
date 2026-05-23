@@ -361,7 +361,7 @@
 	cooldown_time = 60 SECONDS
 
 /datum/action/cooldown/spell/conjure/antlion/extract_vort/super
-	summon_amount = 3
+	summon_amount = 4
 	cooldown_time = 25 SECONDS
 
 /datum/action/cooldown/spell/conjure/antlion/extract_vort/super/red

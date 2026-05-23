@@ -318,6 +318,7 @@
 	uniform = null
 	shoes = null
 	id = null
+	accessory = null
 
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/vortalcombat.ogg'
@@ -566,6 +567,7 @@
 	uniform = null
 	shoes = null
 	id = null
+	accessory = null
 
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/vortalcombat.ogg'
@@ -875,6 +877,7 @@
 	uniform = null
 	shoes = null
 	id = null
+	accessory = null
 
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/vortalcombat.ogg'
