@@ -45,7 +45,7 @@
 	r_pocket = /obj/item/flashlight
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m4a1/service = 1,
+		/obj/item/ammo_box/magazine/m4a1/service = 2,
 		/obj/item/knife/combat/survival = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)
@@ -55,7 +55,7 @@
 /datum/outfit/job/outlands/sergeant/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
 	user.faction += FACTION_REFUGEE
-	user.change_stat(STATKEY_END, 1)
+	user.change_stat(STATKEY_END, 2)
 	user.change_stat(STATKEY_DEX, 3)
 	user.change_stat(STATKEY_STR, 2)
 	user.change_stat(STATKEY_PER, 2)

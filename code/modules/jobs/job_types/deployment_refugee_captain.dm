@@ -52,6 +52,8 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment/loud
 
+	implants = list(/obj/item/implant/weapons_auth)
+
 	var/list/nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_EYES)
 
 /datum/job/deployment_refugee_captain/get_spawn_message_information()
@@ -85,6 +87,8 @@
 	ADD_TRAIT(H, TRAIT_TDMPLAYER, JOB_TRAIT)
 
 	H.fire_stack_decay_rate = -2 //So their corpses don't stay perma on fire, and can be rediscovered. Max stack size is 12, and this removes 4 stacks every 2 seconds
+
+	H.dna.species.stunmod = 0.5
 
 	H.change_stat(STATKEY_DEX, 7)
 	H.change_stat(STATKEY_STR, 5)

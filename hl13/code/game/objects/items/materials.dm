@@ -1,6 +1,6 @@
 /obj/item/circuitmaterial
 	name = "Circuit Pieces"
-	desc = "A few circuits and chips for building electronics with."
+	desc = "A few miscellaneous capacitors, wires and chips for building basic electronics with."
 	custom_price = 5
 	inhand_icon_state = "electronic"
 	icon = 'hl13/icons/obj/materials.dmi'
@@ -11,7 +11,7 @@
 
 /obj/item/circuitmaterial/advanced
 	name = "Advanced Circuit Chips"
-	desc = "Complete circuitry boards for building advanced electronics."
+	desc = "Complete, precisely made circuitry boards suitable for building advanced electronics."
 	custom_price = 10
 	icon_state = "chips"
 

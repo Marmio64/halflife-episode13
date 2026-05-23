@@ -228,8 +228,6 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/lgorbifold.ogg'
 
-	extra_dex = 2
-
 /datum/outfit/deployment_loadout/combine/tier3/ota
 	name = "Deployment: SMG OTA"
 	display_name = "SMG OTA (Defense)"

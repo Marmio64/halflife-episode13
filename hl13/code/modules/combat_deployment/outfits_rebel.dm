@@ -854,7 +854,7 @@
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/rpd
 	gloves = /obj/item/clothing/gloves/combat
-	suit_store = /obj/item/gun/ballistic/automatic/rpd
+	suit_store = /obj/item/gun/ballistic/automatic/rpd/deployment_pin
 	back = /obj/item/storage/backpack/duffelbag/halflife
 	r_pocket = /obj/item/flashlight/seclite
 	shoes = /obj/item/clothing/shoes/boots
@@ -933,7 +933,7 @@
 	suit = /obj/item/clothing/suit/armor/rebel/light/speedy/extra
 	mask = /obj/item/clothing/mask/gas/hl2/swat/hardened
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/svd
-	suit_store = /obj/item/gun/ballistic/automatic/svd
+	suit_store = /obj/item/gun/ballistic/automatic/svd/deployment_pin
 	gloves = /obj/item/clothing/gloves/fingerless
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/grenade/smokebomb

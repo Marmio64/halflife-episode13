@@ -46,6 +46,9 @@ GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
 
 	return info
 
+/datum/outfit/job/refugee/deployment
+	implants = list(/obj/item/implant/weapons_auth)
+
 /datum/outfit/job/refugee/deployment/post_equip(mob/living/carbon/human/H, visualsOnly=FALSE)
 	if(visualsOnly)
 		return

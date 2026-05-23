@@ -111,7 +111,7 @@
 	SIGNAL_HANDLER
 
 	// Once-a-dozen-rounds level of rare
-	if (def_zone != BODY_ZONE_HEAD || !prob(proj.damage * 0.1) || !(proj.damage_type == BRUTE || proj.damage_type == BURN))
+	if (def_zone != BODY_ZONE_HEAD || !prob(proj.damage * 0.01) || !(proj.damage_type == BRUTE || proj.damage_type == BURN))
 		return
 
 	if (blocked && source.is_eyes_covered())

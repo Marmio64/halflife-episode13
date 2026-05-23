@@ -46,6 +46,7 @@
 		/obj/item/megaphone = 1,
 		/obj/item/melee/baton = 1,
 		/obj/item/ammo_box/c38 = 1,
+		/obj/item/stack/spacecash/c20 = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment

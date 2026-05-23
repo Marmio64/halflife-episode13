@@ -215,6 +215,9 @@
 /obj/item/gun/ballistic/automatic/rpd/no_mag
 	spawnwithmagazine = FALSE
 
+/obj/item/gun/ballistic/automatic/rpd/deployment_pin
+	pin = /obj/item/firing_pin/implant/pindicate
+
 /obj/item/gun/ballistic/automatic/rpd/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.2 SECONDS, overtime_penalty_cap = 8)
@@ -912,6 +915,9 @@
 
 /obj/item/gun/ballistic/automatic/svd/no_mag
 	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/svd/deployment_pin
+	pin = /obj/item/firing_pin/implant/pindicate
 
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()

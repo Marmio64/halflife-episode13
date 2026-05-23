@@ -6,7 +6,7 @@
 
 	faction = FACTION_STATION
 	total_positions = 2
-	spawn_positions = 2
+	spawn_positions = 1
 
 	supervisors = SUPERVISOR_ORDINAL
 	exp_granted_type = EXP_TYPE_CREW

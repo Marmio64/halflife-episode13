@@ -21,7 +21,7 @@
 	if(desc_override)
 		desc = "[desc_override]"
 	else
-		desc = "A [name] vandalizing the station."
+		desc = "A [name] vandalizing the place."
 	if(alt_icon)
 		icon = alt_icon
 	if(type)

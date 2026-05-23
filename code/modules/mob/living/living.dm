@@ -98,6 +98,26 @@
 	if(HAS_TRAIT(src, TRAIT_FREERUNNING)) //hl13 edit, even if falling larger distances, parkour will help a bit
 		incoming_damage *= 0.5
 
+	//are they falling on something sharp and dangerous like razorwire?
+	var/sharp_landing = FALSE
+
+	if(locate(/obj/structure/razorwire) in loc)
+		sharp_landing = TRUE
+
+	var/obj/structure/halflife/fence/wire/check_fence = locate(/obj/structure/halflife/fence/wire) in loc
+	if(check_fence)
+		if(check_fence.basetype == /obj/structure/halflife/fence/wire/barb)
+			sharp_landing = TRUE
+
+	if(sharp_landing)
+		visible_message(
+			span_danger("[src] gets cut up from landing on something sharp!"),
+			span_userdanger("You land on something sharp and get cut up!"),
+		)
+		var/def_zone = ran_zone()
+		apply_damage(25, BRUTE, def_zone, sharpness = SHARP_EDGED)
+
+
 	// Smaller mobs with catlike grace can ignore damage (EG: cats)
 	var/small_surface_area = mob_size <= MOB_SIZE_SMALL
 	var/skip_knockdown = FALSE

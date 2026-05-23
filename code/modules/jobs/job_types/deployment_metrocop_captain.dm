@@ -83,6 +83,8 @@
 	ADD_TRAIT(user, TRAIT_NOHUNGER, JOB_TRAIT)
 	ADD_TRAIT(user, TRAIT_NOSOFTCRIT, JOB_TRAIT)
 
+	user.dna.species.stunmod = 0.5
+
 	user.faction += "combine"
 	user.faction -= "neutral"
 

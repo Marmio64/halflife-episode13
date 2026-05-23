@@ -704,7 +704,7 @@
 //Resistance Raiders armor, only used in events or adminspawned
 /obj/item/clothing/suit/armor/rebel
 	name = "resistance heavy armour"
-	desc = "An Overwatch chestplate with improvised pieces strapped on for more protection. Don't forget to reload, Dr. Freeman."
+	desc = "This is a damaged looking Overwatch Transhuman Arm chestpiece that has been patched and augmented with spare bits of kevlar and metal, with a Lambda symbol spraypainted on the back. Offers great torso protection at the cost of limiting your movement noticeably."
 	icon_state = "rebelarmor_heavy"
 	inhand_icon_state = "rebelarmor_heavy"
 	icon = 'hl13/icons/obj/clothing/suits.dmi'
@@ -733,7 +733,7 @@
 
 /obj/item/clothing/suit/armor/rebel/light
 	name = "resistance light armour"
-	desc = "A Civil Protection chestplate with some basic armour pieces strapped on. I'm gonna stay and hold down this spot."
+	desc = "A Civil Protection chestplate with additional makeshift armor pieces strapped on made of metal. Offers a slight boost in protection over a standard CPO vest without compromising movement."
 	icon_state = "rebelarmor_light"
 	inhand_icon_state = "rebelarmor_light"
 	slowdown = 0
