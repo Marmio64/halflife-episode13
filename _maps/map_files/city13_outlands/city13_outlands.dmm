@@ -2038,7 +2038,7 @@
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/outlands_city)
 "cLX" = (
-/obj/machinery/light/small/directional/west,
+/obj/machinery/light/small/broken/directional/west,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/conscript_bunker)
 "cMc" = (
@@ -4996,7 +4996,7 @@
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/outlands)
 "gLG" = (
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small/broken/directional/east,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/conscript_bunker)
 "gLK" = (
@@ -7310,12 +7310,6 @@
 "kfh" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/bunker/unpowered)
-"kfB" = (
-/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/tile/black,
-/area/halflife/indoors/conscript_bunker)
 "kfL" = (
 /obj/structure/alien/weeds,
 /obj/effect/spawner/random/halflife/loot,
@@ -7873,6 +7867,12 @@
 /obj/structure/flora/xen/mound,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/outlands)
+"kUi" = (
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/conscript_bunker)
 "kVh" = (
 /mob/living/basic/halflife/zombie/fast,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -10019,6 +10019,7 @@
 	c_tag = "Conscript Bunker Armory";
 	dir = 9
 	},
+/mob/living/basic/halflife/headcrab/poison/deadly,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/conscript_bunker)
 "nDF" = (
@@ -12634,6 +12635,11 @@
 "qRy" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/light/bulb,
+/obj/item/light/bulb,
+/obj/item/light/bulb,
+/obj/item/light/bulb,
+/obj/item/light/bulb,
+/obj/item/light/bulb,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/conscript_bunker)
 "qRz" = (
@@ -14592,8 +14598,8 @@
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "twU" = (
-/obj/effect/mob_spawn/corpse/zombie,
-/turf/open/floor/plating/indoor/concrete,
+/mob/living/basic/halflife/headcrab/poison/deadly,
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/conscript_bunker)
 "txg" = (
 /obj/effect/turf_decal/box/white/corners,
@@ -15645,7 +15651,7 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/outlands)
 "uSR" = (
-/obj/machinery/light/small/directional/east,
+/obj/machinery/light/small/broken/directional/east,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/conscript_bunker)
 "uSY" = (
@@ -16927,11 +16933,11 @@
 "wBv" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/reagent_containers/cup/beaker,
-/obj/machinery/light/small/directional/east,
 /obj/item/knife/combat/survival{
 	pixel_x = -5;
 	pixel_y = 15
 	},
+/obj/machinery/light/small/broken/directional/east,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/conscript_bunker)
 "wBG" = (
@@ -17023,6 +17029,10 @@
 /mob/living/basic/halflife/chumtoad,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/cave)
+"wHm" = (
+/obj/effect/mob_spawn/corpse/zombie,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/conscript_bunker)
 "wHB" = (
 /obj/item/hl13_small_flag/combine,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -93626,7 +93636,7 @@ iEw
 afb
 heD
 heD
-kfB
+kUi
 heD
 heD
 heD
@@ -96459,7 +96469,7 @@ vIn
 vIn
 heD
 cSP
-bya
+iiv
 xLa
 heD
 vzy
@@ -96715,7 +96725,7 @@ uAD
 vIn
 vIn
 sIV
-bya
+wHm
 bya
 bya
 mTy
@@ -97230,7 +97240,7 @@ cGw
 vIn
 heD
 cSP
-iiv
+bya
 cSP
 heD
 vzy
@@ -97486,7 +97496,7 @@ hCR
 mTz
 asP
 heD
-twU
+cSP
 bya
 cSP
 heD
@@ -99034,7 +99044,7 @@ bya
 bya
 bya
 uex
-bya
+twU
 bya
 oDm
 heD
