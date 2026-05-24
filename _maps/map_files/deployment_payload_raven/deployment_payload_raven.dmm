@@ -234,6 +234,12 @@
 "ez" = (
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
+"eC" = (
+/obj/structure/razorwire{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city)
 "eI" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/ground/grass,
@@ -794,6 +800,14 @@
 	},
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"sd" = (
+/obj/structure/halflife/rails,
+/obj/effect/payload_path,
+/obj/structure/razorwire{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk/cobblestone,
+/area/halflife/outdoors/deployment_city)
 "ta" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/reagent_containers/pill/patch/grubnugget,
@@ -920,6 +934,13 @@
 /obj/structure/halflife/trash/garbage/dumpster/crate,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/deployment_city)
+"vZ" = (
+/obj/effect/koth_grace_field,
+/obj/structure/razorwire{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "wp" = (
 /obj/machinery/combine_health_station/self_recharging{
 	pixel_y = 30
@@ -989,6 +1010,12 @@
 "yR" = (
 /mob/living/basic/halflife/headcrab,
 /turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city)
+"za" = (
+/obj/structure/razorwire{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
 "zc" = (
 /obj/machinery/deployable_turret/combine{
@@ -1346,6 +1373,12 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city)
+"IC" = (
+/obj/structure/razorwire{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk/cobblestone,
+/area/halflife/outdoors/deployment_city)
 "IE" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -1674,6 +1707,12 @@
 	dir = 8
 	},
 /turf/open/floor/plating/indoor/carpet/blue,
+/area/halflife/outdoors/deployment_city)
+"RY" = (
+/obj/structure/razorwire{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
 "Sj" = (
 /obj/structure/table/halflife/wood,
@@ -7074,14 +7113,14 @@ Br
 Ot
 Br
 ai
-hn
-PV
-Qy
-IF
-Qy
-PV
-rd
-ez
+vZ
+RY
+IC
+sd
+IC
+RY
+eC
+za
 TW
 Yd
 Br

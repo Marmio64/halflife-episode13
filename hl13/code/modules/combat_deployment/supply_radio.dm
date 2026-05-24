@@ -226,8 +226,8 @@
 	spawn_path = /obj/item/halflife/missile_targeter/one_use
 
 /datum/supply_beacon_option/canister_targeter
-	option_name = "Modified Canister Targeter (300 Points)"
-	cost = 300
+	option_name = "Modified Canister Targeter (325 Points)"
+	cost = 325
 	spawn_path = /obj/item/halflife/cannister_targeter/modified
 
 /datum/supply_beacon_option/emplacement_gun

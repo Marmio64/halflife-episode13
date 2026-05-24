@@ -7310,6 +7310,12 @@
 "kfh" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/bunker/unpowered)
+"kfB" = (
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/conscript_bunker)
 "kfL" = (
 /obj/structure/alien/weeds,
 /obj/effect/spawner/random/halflife/loot,
@@ -17796,7 +17802,7 @@
 /area/halflife/outdoors)
 "xNV" = (
 /obj/machinery/iv_drip,
-/obj/machinery/combine_health_station/round_start{
+/obj/machinery/combine_health_station/self_recharging/slow{
 	pixel_y = 30
 	},
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -93620,7 +93626,7 @@ iEw
 afb
 heD
 heD
-heD
+kfB
 heD
 heD
 heD
@@ -100575,7 +100581,7 @@ maT
 maT
 maT
 maT
-pJm
+tVS
 eqX
 pgd
 pgd
@@ -100832,7 +100838,7 @@ maT
 maT
 qyT
 maT
-pJm
+tVS
 eqX
 pgd
 pgd

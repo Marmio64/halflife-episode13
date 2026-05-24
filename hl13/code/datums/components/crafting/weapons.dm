@@ -256,6 +256,7 @@
 	reqs = list(/obj/item/stack/sheet/iron = 5,
 				/obj/item/gun/ballistic/rifle/rebarxbow = 1,
 				/obj/item/weaponcrafting/receiver = 1,
+				/obj/item/stack/sheet/scrap_parts = 2,
 				/obj/item/stack/sticky_tape = 1)
 	blacklist = list(
 	/obj/item/gun/ballistic/rifle/rebarxbow/syndie,
