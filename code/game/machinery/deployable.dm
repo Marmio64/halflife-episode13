@@ -50,6 +50,7 @@
 	hl13hit_sounds = SFX_WOODIMPACT
 	projectile_passchance = 10
 	var/drop_amount = 3
+	var/deconstruct_time = 2 SECONDS
 
 /obj/structure/barricade/wooden/Initialize(mapload)
 	. = ..()
@@ -77,7 +78,7 @@
 
 /obj/structure/barricade/wooden/crowbar_act(mob/living/user, obj/item/tool)
 	balloon_alert(user, "deconstructing barricade...")
-	if(!tool.use_tool(src, user, 2 SECONDS, volume=50))
+	if(!tool.use_tool(src, user, deconstruct_time, volume=50))
 		return
 	balloon_alert(user, "barricade deconstructed")
 	tool.play_tool_sound(src)

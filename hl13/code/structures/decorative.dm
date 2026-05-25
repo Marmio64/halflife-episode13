@@ -1089,7 +1089,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 	name = "solid reinforced wooden barricade"
 	desc = "This space is blocked off by a wooden barricade, which also obstructs vision. It looks very durable."
 	icon_state = "woodenbarricade_reinforced"
-	max_integrity = 600 //very durable, more durable than making 3 barricades instead of one reinforced barricade, but very vulnerable to crowbar disassembly
+	max_integrity = 600 //very durable, more durable than making 3 barricades instead of one reinforced barricade, but vulnerable to crowbar disassembly
+	deconstruct_time = 4 SECONDS
 
 /obj/structure/halflife/typewriter
 	name = "Typewriter"
