@@ -259,6 +259,7 @@
 
 		last_jump_time = current_time
 
+		Immobilize(2 SECONDS - get_stat_level(STATKEY_DEX)) //1 second for 10 dexterity, 0 for 20 dex
 
 /atom/movable/screen/area_creator
 	name = "create new area"

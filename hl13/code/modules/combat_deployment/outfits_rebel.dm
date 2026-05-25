@@ -91,6 +91,9 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher/slow)
 
+	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
+	alternate_music_chance = 10
+
 /datum/outfit/deployment_loadout/rebel/tier1/smuggler
 	name = "Deployment: Refugee Smuggler"
 	display_name = "Refugee Smuggler (Offense)"
@@ -204,6 +207,9 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher/slow)
 
+	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
+	alternate_music_chance = 10
+
 /datum/outfit/deployment_loadout/rebel/tier2/smuggler
 	name = "Deployment: Upgraded Smuggler"
 	display_name = "Upgraded Smuggler (Offense)"
@@ -282,6 +288,8 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/tinbomb)
+
+	alternate_combat_music = 'hl13/sound/music/combat/drunkenpipebomb.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier3/mosin_soldier
 	name = "Deployment: Mosin Soldier"
@@ -384,6 +392,9 @@
 
 	skillchips = list(/obj/item/skillchip/engineer)
 
+	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
+	alternate_music_chance = 10
+
 /datum/outfit/deployment_loadout/rebel/tier3/scout
 	name = "Deployment: Rebel Scout"
 	display_name = "Rebel Scout (Offense)"
@@ -409,10 +420,8 @@
 	extra_dex = 10
 	extra_end = 3
 
-/datum/outfit/deployment_loadout/rebel/tier3/scout/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	if(prob(20))
-		H.cmode_music = 'hl13/sound/music/combat/fasterthanaspeedingbullet.ogg'
+	alternate_combat_music = 'hl13/sound/music/combat/fasterthanaspeedingbullet.ogg'
+	alternate_music_chance = 35
 
 /datum/outfit/deployment_loadout/rebel/tier3/medic_rebel
 	name = "Deployment: Upgraded Medic Rebel"
@@ -559,6 +568,8 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/tinbomb)
 
+	alternate_combat_music = 'hl13/sound/music/combat/drunkenpipebomb.ogg'
+
 /datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt
 	name = "Deployment: Elder Vortigaunt"
 	display_name = "Elder Vortigaunt (Support)"
@@ -640,6 +651,9 @@
 
 	skillchips = list(/obj/item/skillchip/engineer)
 
+	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
+	alternate_music_chance = 10
+
 /obj/item/sbeacondrop/rebel_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a rebel turret to your location</i>."
 	droptype = /obj/machinery/porta_turret/combine/rebel
@@ -679,12 +693,9 @@
 
 	combat_music = 'hl13/sound/music/combat/everymove.ogg'
 
-	extra_str = 5
+	alternate_combat_music = 'hl13/sound/music/combat/rightbehindyou.ogg'
 
-/datum/outfit/deployment_loadout/rebel/tier4/spy/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	if(prob(20))
-		H.cmode_music = 'hl13/sound/music/combat/rightbehindyou.ogg'
+	extra_str = 5
 
 /datum/outfit/deployment_loadout/rebel/tier4/scout
 	name = "Deployment: Upgraded Rebel Scout"
@@ -711,10 +722,8 @@
 	extra_dex = 10
 	extra_end = 3
 
-/datum/outfit/deployment_loadout/rebel/tier4/scout/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	if(prob(20))
-		H.cmode_music = 'hl13/sound/music/combat/fasterthanaspeedingbullet.ogg'
+	alternate_combat_music = 'hl13/sound/music/combat/fasterthanaspeedingbullet.ogg'
+	alternate_music_chance = 35
 
 /datum/outfit/deployment_loadout/rebel/tier4/medic_rebel
 	name = "Deployment: Upgraded Medic Rebel+"
@@ -750,10 +759,7 @@
 	extra_int = 4
 	extra_dex = 2
 
-/datum/outfit/deployment_loadout/rebel/tier4/medic_rebel/post_equip(mob/living/carbon/human/H)
-	. = ..()
-	if(prob(20))
-		H.cmode_music = 'hl13/sound/music/combat/medic.ogg'
+	alternate_combat_music = 'hl13/sound/music/combat/medic.ogg'
 
 ///////////// TIER 5 //////////////////////////////////////////
 /datum/outfit/deployment_loadout/rebel/tier5
@@ -812,6 +818,8 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/rocket)
 
 	extra_end = 4
+
+	alternate_combat_music = 'hl13/sound/music/combat/rocketjumpwaltz.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier5/firefighter
 	name = "Deployment: Rebel Fire Fighter"

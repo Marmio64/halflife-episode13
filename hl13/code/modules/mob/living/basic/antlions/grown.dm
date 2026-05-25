@@ -225,6 +225,7 @@
 	speed = 0.7
 	melee_damage_lower = 40
 	melee_damage_upper = 45
+	armour_penetration = 50
 	obj_damage = 50
 	melee_attack_cooldown = 2 SECONDS
 	maxHealth = 800

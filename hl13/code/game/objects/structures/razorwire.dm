@@ -41,12 +41,19 @@
 	var/mob/living/M = O
 	if(M.incorporeal_move || HAS_TRAIT(M, TRAIT_GODMODE))
 		return
-	if(!M.density)
-		return
 	if(M.movement_type & MOVETYPES_NOT_TOUCHING_GROUND || !M.has_gravity()) //you're flying over it.
 		return
 	if(M.throwing && !isanimal_or_basicmob(M)) // throw someone or jump to bypass safely. Basic/simple mobs are exempt.
 		return
+	if(!M.density)
+		if(M.resting && prob(35))
+			playsound(src, 'hl13/sound/effects/barbed_wire_movement.ogg', 15, 1)
+			M.visible_message(span_notice("[M] gets snagged in the barbed wire, but does not get cut."),
+			span_notice("You catch a snag in the barbed wire, but are thankfully not cut."), null, null, 5)
+			M.Immobilize(rand(10,30))
+			return
+		else
+			return
 	var/razor_damage = 15
 	if(isanimal_or_basicmob(M))
 		if(M.throwing)

@@ -14,7 +14,7 @@
 	..()
 	if(istype(O, /obj/structure/alien/weeds))
 		var/obj/structure/alien/weeds/alien_weeds = O
-		alien_weeds.take_damage(rand(20*damage_mult,40*damage_mult), BRUTE, 0) // Kills alien weeds pretty fast
+		alien_weeds.take_damage(rand(40*damage_mult,40*damage_mult), BRUTE, 0) // Kills alien weeds pretty fast
 	else if(istype(O, /obj/structure/flora/xen))
 		var/obj/structure/flora/xen/xenflora = O
 		xenflora.take_damage(rand(40*damage_mult,50*damage_mult), BRUTE, 0)

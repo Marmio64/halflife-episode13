@@ -76,8 +76,8 @@
 	category = CAT_ARMOR
 
 //modify a civil protection mask
-/datum/crafting_recipe/military_gas_mask
-	name = "Hardened Military Gas Mask"
+/datum/crafting_recipe/hardened_military_gas_mask_conversion
+	name = "Hardened Military Gas Mask (Conversion)"
 	desc = "With a little handiwork, you can modify a civil protection officer's mask to look more like a pre-war mask and avoid possible friendly fire incidents with fellow rebels. Combine personnel don't quite get the idea."
 	result = /obj/item/clothing/mask/gas/hl2/military/hardened
 	reqs = list(/obj/item/clothing/mask/gas/civilprotection = 1)
@@ -87,6 +87,18 @@
 
 /datum/crafting_recipe/military_gas_mask/check_requirements(mob/user, list/collected_requirements)
 	return !HAS_TRAIT(user, TRAIT_MINDSHIELD)
+
+/datum/crafting_recipe/hardened_military_gas_mask_reinforcement
+	name = "Hardened Military Gas Mask (Reinforcement)"
+	desc = "You can use a bit of kevlar in order to reinforce a gas mask, and allow it to provide a bit of armor to you.."
+	result = /obj/item/clothing/mask/gas/hl2/military/hardened
+	reqs = list(/obj/item/clothing/mask/gas/hl2 = 1, /obj/item/stack/kevlar = 2)
+
+	blacklist = list(/obj/item/clothing/mask/gas/hl2/oldmask)
+
+	time = 6 SECONDS
+	category = CAT_ARMOR
+	crafting_interface = CRAFTING_BENCH_ARMTAILOR
 
 /datum/crafting_recipe/citizen_uniform
 	name = "Citizen Jumpsuit"
@@ -272,7 +284,7 @@
 /datum/crafting_recipe/old_gasmask
 	name = "Old Gas Mask"
 	result = /obj/item/clothing/mask/gas/hl2/oldmask
-	reqs = list(/obj/item/stack/sheet/halflife/plastic = 6,
+	reqs = list(/obj/item/stack/sheet/halflife/plastic = 4,
 				/obj/item/stack/sheet/scrap_metal = 3,
 				/obj/item/stack/sheet/cloth = 4)
 	time = 10 SECONDS

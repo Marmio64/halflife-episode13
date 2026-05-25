@@ -40,6 +40,16 @@
 	category = CAT_EQUIPMENT
 	crafting_interface = CRAFTING_BENCH_ELECTRIC
 
+/datum/crafting_recipe/signaller
+	name = "Signaller Device"
+	result = /obj/item/assembly/signaler
+	reqs = list(/obj/item/stack/sheet/iron = 1,
+				/obj/item/circuitmaterial = 2,
+				/obj/item/stack/cable_coil = 2)
+	time = 4 SECONDS
+	category = CAT_EQUIPMENT
+	crafting_interface = CRAFTING_BENCH_ELECTRIC
+
 /datum/crafting_recipe/upgraded_combine_tagger
 	name = "Upgraded Combine Tagger"
 	result = /obj/item/combine_tagger/upgraded

@@ -249,6 +249,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 /obj/effect/landmark/start/outlands_survivor
 	name = "outlands_survivor"
 	icon_state = "Security Officer"
+	delete_after_roundstart = FALSE
 	/// What department this spawner is for
 	var/department
 

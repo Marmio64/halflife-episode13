@@ -17,4 +17,7 @@
 		if("combine" in living_mob.faction) //do not detonate on combine people
 			return FALSE
 
+	else
+		return FALSE //non mobs will not trigger hopper mines
+
 	return ..()

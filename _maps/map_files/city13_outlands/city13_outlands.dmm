@@ -1413,6 +1413,10 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"bRf" = (
+/mob/living/basic/halflife/headcrab/poison/deadly,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/conscript_bunker)
 "bRw" = (
 /obj/structure/halflife/road_barrier/combine{
 	dir = 4
@@ -1643,6 +1647,12 @@
 	},
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/restaurant)
+"cfz" = (
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/conscript_bunker)
 "cfA" = (
 /obj/structure/railing/halflife/sewer{
 	dir = 8
@@ -4674,6 +4684,10 @@
 "gpn" = (
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/restaurant)
+"gpT" = (
+/obj/effect/mob_spawn/corpse/zombie,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/conscript_bunker)
 "gqf" = (
 /obj/machinery/door/unpowered/halflife/seethrough/bar,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
@@ -7867,12 +7881,6 @@
 /obj/structure/flora/xen/mound,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/outlands)
-"kUi" = (
-/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/tile/black,
-/area/halflife/indoors/conscript_bunker)
 "kVh" = (
 /mob/living/basic/halflife/zombie/fast,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -13265,6 +13273,10 @@
 "rGi" = (
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors)
+"rGk" = (
+/mob/living/basic/halflife/zombie/infestation_control,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/productioncenter/infestation)
 "rGL" = (
 /obj/structure/halflife/storage/shelf/wood/alt,
 /obj/effect/spawner/random/halflife/loot,
@@ -14598,9 +14610,9 @@
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "twU" = (
-/mob/living/basic/halflife/headcrab/poison/deadly,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/conscript_bunker)
+/obj/effect/spawner/random/halflife/loot/uncommon,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/productioncenter/infestation)
 "txg" = (
 /obj/effect/turf_decal/box/white/corners,
 /turf/open/floor/plating/indoor/concrete,
@@ -15811,6 +15823,10 @@
 "vdU" = (
 /obj/structure/table/halflife/no_smooth/metal,
 /obj/item/circular_saw,
+/obj/item/reagent_containers/medigel/sterilizine{
+	pixel_x = -5;
+	pixel_y = 11
+	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/outlands)
 "vdY" = (
@@ -17029,10 +17045,6 @@
 /mob/living/basic/halflife/chumtoad,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/cave)
-"wHm" = (
-/obj/effect/mob_spawn/corpse/zombie,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/conscript_bunker)
 "wHB" = (
 /obj/item/hl13_small_flag/combine,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -17764,9 +17776,9 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/conscript_bunker)
 "xLm" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/closed/wall/halflife/sewer,
-/area/halflife/indoors/sewer)
+/obj/effect/mob_spawn/corpse/zombie,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/productioncenter/infestation)
 "xLv" = (
 /obj/effect/landmark/blobstart,
 /turf/open/halflife/water/sludge/medium,
@@ -18207,7 +18219,7 @@
 /area/halflife/indoors/townhall/civilprotection/prison)
 "yks" = (
 /obj/structure/chair/comfy/halflife/armchair,
-/obj/effect/landmark/start/outlands_survivor/survivor_officer,
+/obj/effect/landmark/start/outlands_survivor/survivor_liaison,
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/townhall)
 "ykz" = (
@@ -55145,7 +55157,7 @@ xtI
 xtI
 xtI
 xtI
-xLm
+xtI
 mRo
 mGX
 xtI
@@ -93636,7 +93648,7 @@ iEw
 afb
 heD
 heD
-kUi
+cfz
 heD
 heD
 heD
@@ -96725,7 +96737,7 @@ uAD
 vIn
 vIn
 sIV
-wHm
+gpT
 bya
 bya
 mTy
@@ -99044,7 +99056,7 @@ bya
 bya
 bya
 uex
-twU
+bRf
 bya
 oDm
 heD
@@ -115235,7 +115247,7 @@ rBe
 yhf
 qEq
 kzY
-jHn
+rGk
 jHn
 jHn
 aMz
@@ -116009,7 +116021,7 @@ tQG
 aMz
 kPG
 fAp
-fAp
+twU
 aMz
 iKV
 viH
@@ -116265,7 +116277,7 @@ vwR
 wif
 aMz
 rqi
-fAp
+xLm
 kNV
 aMz
 gzJ

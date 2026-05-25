@@ -258,6 +258,7 @@
 	base_icon_state = "weednode"
 	light_color = LIGHT_COLOR_ORANGE //HL13 EDIT
 	light_power = 0.5
+	max_integrity = 25
 	///the range of the light for the node
 	var/lon_range = 4
 	///the minimum time it takes for another weed to spread from this one

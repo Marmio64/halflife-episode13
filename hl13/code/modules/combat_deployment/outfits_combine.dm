@@ -69,6 +69,8 @@
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
+	alternate_music_chance = 10
 
 	extra_str = 3
 	extra_end = 3
@@ -193,6 +195,8 @@
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
+	alternate_music_chance = 10
 
 	extra_str = 4 // all combine engis get extra strength over rebel engis since rebel engis get some armor
 	extra_end = 4
@@ -371,6 +375,8 @@
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
+	alternate_music_chance = 10
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher)
 
@@ -442,8 +448,12 @@
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
 	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 
+	combat_music = 'hl13/sound/music/combat/notyouraveragecop.ogg'
+	alternate_combat_music = 'hl13/sound/music/combat/dreamsofcruelty.ogg'
+	alternate_music_chance = 5
+
 /datum/outfit/deployment_loadout/combine/tier4/cremator/pre_equip(mob/living/carbon/human/H)
-	H.cmode_music = 'hl13/sound/music/combat/notyouraveragecop.ogg'
+	. = ..()
 	H.set_species(/datum/species/human/synth/cremator)
 
 /datum/outfit/deployment_loadout/combine/tier4/shotgunner
@@ -582,6 +592,8 @@
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
+	alternate_music_chance = 10
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher)
 

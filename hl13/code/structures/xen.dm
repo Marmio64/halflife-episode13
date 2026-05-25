@@ -41,7 +41,7 @@
 /obj/structure/flora/xen
 	name = "xen flora base type"
 	icon = 'hl13/icons/obj/xenflora.dmi'
-	max_integrity = 200
+	max_integrity = 125
 	var/breakmats = null
 	var/hasaltstates = FALSE
 	var/altstates = 0

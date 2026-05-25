@@ -17,6 +17,9 @@
 	var/list/nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_EYES, ITEM_SLOT_MASK, ITEM_SLOT_ID)
 	/// Is there a unique combat music for this class?
 	var/combat_music = null
+	/// If listed, there is a chance for the class to get this alternate combat track
+	var/alternate_combat_music = null
+	var/alternate_music_chance = 15
 	var/loadout_tier = 1
 	var/faction = null
 
@@ -57,6 +60,8 @@
 		user.cmode_music = combat_music
 	if(combat_music == "none")
 		user.cmode_music = null
+	if(alternate_combat_music && prob(alternate_music_chance))
+		user.cmode_music = alternate_combat_music
 
 /datum/outfit/deployment_loadout/post_equip(mob/living/carbon/human/human_to_equip, visuals_only=FALSE)
 	var/list/no_drops = list()
