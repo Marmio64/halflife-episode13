@@ -80,11 +80,57 @@
 	var/disguise_charge = TRUE
 	var/list/outfitoptions = list("OTA Soldier", "OTA Sniper", "OTA Elite", "Medical Cop", "Rebel Cell Leader")
 
+/obj/item/clothing/suit/armor/civilprotection/spy/elite
+	slowdown = -0.33
+	actions_types = list(/datum/action/item_action/disguise_self, /datum/action/item_action/spy_invis)
+	var/invis_ready = TRUE
+	var/cloaked = FALSE
+
+/obj/item/clothing/suit/armor/civilprotection/spy/elite/ui_action_click(mob/user, action)
+	if(istype(action, /datum/action/item_action/disguise_self))
+		disguise_self()
+	else
+		spy_invis()
+
+/datum/action/item_action/spy_invis
+	name = "Cloak Self"
+	desc = "Toggle on/off a partial cloak over yourself. While cloaked you cannot directly attack people. This is a lesser version of combine cloaking technology, and it wont fool machines by itself, nor is it particularly great."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "cloak"
+
+/obj/item/clothing/suit/armor/civilprotection/spy/elite/verb/spy_invis()
+	set category = "Object"
+	set name = "Toggle Cloak"
+	if(!iscarbon(usr))
+		return
+	if(!invis_ready)
+		to_chat(usr, span_warning("Cloak is not ready!"))
+		return
+
+	var/mob/living/carbon/human/H = usr
+
+	if(!cloaked)
+		to_chat(H, "<span class='notice'Cloak deployed.</span>")
+		H.alpha = 100
+		ADD_TRAIT(H, TRAIT_PACIFISM, CLOTHING_TRAIT) //cant attack while cloaked
+		cloaked = TRUE
+	else
+		to_chat(H, "<span class='notice'Cloak removed.</span>")
+		H.alpha = 255
+		REMOVE_TRAIT(H, TRAIT_PACIFISM, CLOTHING_TRAIT)
+		cloaked = FALSE
+
+	playsound(loc, 'hl13/sound/effects/zap1.ogg', 50, TRUE, TRUE)
+	invis_ready = FALSE
+
+	sleep(1 SECONDS)
+	invis_ready = TRUE
+
 /datum/action/item_action/disguise_self
 	name = "Disguise Self"
 	desc = "Disguise yourself with a rudimentary combine disguise if you have both your hands free."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
-	button_icon_state = "cloak"
+	button_icon_state = "disguise"
 
 /obj/item/clothing/suit/armor/civilprotection/spy/ui_action_click(mob/user, action)
 	disguise_self()

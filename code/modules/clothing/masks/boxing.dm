@@ -1,6 +1,6 @@
 /obj/item/clothing/mask/balaclava
 	name = "balaclava"
-	desc = "LOADSAMONEY"
+	desc = "A black face covering."
 	icon_state = "balaclava"
 	inhand_icon_state = "balaclava"
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
@@ -8,6 +8,10 @@
 	alternate_worn_layer = LOW_FACEMASK_LAYER //This lets it layer below glasses and headsets; yes, that's below hair, but it already has HIDEHAIR
 	w_class = WEIGHT_CLASS_SMALL
 	actions_types = list(/datum/action/item_action/adjust)
+
+/obj/item/clothing/mask/balaclava/protective
+	clothing_flags = BLOCK_GAS_SMOKE_EFFECT | GAS_FILTERING
+	clothing_traits = list(TRAIT_WEARING_GAS_MASK)
 
 /obj/item/clothing/mask/balaclava/attack_self(mob/user)
 	adjust_visor(user)

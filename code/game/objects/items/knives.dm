@@ -153,11 +153,15 @@
 	if(!check_behind(user, living_target))
 		return
 
+	var/backstab_damage = backstab_bonus
+
 	if(HAS_TRAIT(user, TRAIT_BACKSTABBER))
-		backstab_bonus *= 2
+		backstab_damage *= 2
+		if(isanimal_or_basicmob(target))
+			backstab_damage *= 1.5 //so by default, 90 damage. Makes up for the fact that a lot of the strengths of the backstabbing is armor piercing.
 
 	// We're officially behind them, apply effects
-	living_target.apply_damage(backstab_bonus, BRUTE, wound_bonus = CANT_WOUND)
+	living_target.apply_damage(backstab_damage, BRUTE, wound_bonus = CANT_WOUND)
 	living_target.balloon_alert(user, "backstab!")
 	playsound(living_target, 'sound/items/weapons/guillotine.ogg', 100, TRUE)
 

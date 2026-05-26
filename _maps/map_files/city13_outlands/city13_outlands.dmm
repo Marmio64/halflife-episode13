@@ -1413,10 +1413,6 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
-"bRf" = (
-/mob/living/basic/halflife/headcrab/poison/deadly,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/conscript_bunker)
 "bRw" = (
 /obj/structure/halflife/road_barrier/combine{
 	dir = 4
@@ -1647,12 +1643,6 @@
 	},
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/restaurant)
-"cfz" = (
-/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/tile/black,
-/area/halflife/indoors/conscript_bunker)
 "cfA" = (
 /obj/structure/railing/halflife/sewer{
 	dir = 8
@@ -2407,6 +2397,10 @@
 /obj/machinery/press,
 /turf/open/floor/plating/indoor/metal/grate/border/warning,
 /area/halflife/indoors/productioncenter)
+"dkI" = (
+/mob/living/basic/halflife/zombie/infestation_control,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/productioncenter/infestation)
 "dlT" = (
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
@@ -4378,6 +4372,10 @@
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/plaza)
+"fUQ" = (
+/obj/effect/spawner/random/halflife/loot/uncommon,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/productioncenter/infestation)
 "fVA" = (
 /obj/machinery/vending/goods_dispensery{
 	pixel_y = 32
@@ -4684,10 +4682,6 @@
 "gpn" = (
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/restaurant)
-"gpT" = (
-/obj/effect/mob_spawn/corpse/zombie,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/conscript_bunker)
 "gqf" = (
 /obj/machinery/door/unpowered/halflife/seethrough/bar,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
@@ -7324,6 +7318,10 @@
 "kfh" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors/bunker/unpowered)
+"kfz" = (
+/obj/effect/mob_spawn/corpse/zombie,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/conscript_bunker)
 "kfL" = (
 /obj/structure/alien/weeds,
 /obj/effect/spawner/random/halflife/loot,
@@ -10988,6 +10986,10 @@
 /obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/plaza)
+"oSh" = (
+/mob/living/basic/halflife/headcrab/poison/deadly,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/conscript_bunker)
 "oSm" = (
 /obj/structure/chair/halflife/wood{
 	dir = 4
@@ -13273,10 +13275,6 @@
 "rGi" = (
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors)
-"rGk" = (
-/mob/living/basic/halflife/zombie/infestation_control,
-/turf/open/floor/plating/indoor/concrete/small,
-/area/halflife/indoors/productioncenter/infestation)
 "rGL" = (
 /obj/structure/halflife/storage/shelf/wood/alt,
 /obj/effect/spawner/random/halflife/loot,
@@ -13737,6 +13735,7 @@
 "slp" = (
 /obj/structure/closet/halflife,
 /obj/item/stack/sheet/mineral/sandbags/six,
+/obj/item/stack/razorwire/half_stack,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/outlands)
 "slv" = (
@@ -14610,7 +14609,7 @@
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
 "twU" = (
-/obj/effect/spawner/random/halflife/loot/uncommon,
+/obj/effect/mob_spawn/corpse/zombie,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/productioncenter/infestation)
 "txg" = (
@@ -14708,6 +14707,12 @@
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands/shop)
+"tFE" = (
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/conscript_bunker)
 "tFF" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	keylock = 1;
@@ -17776,9 +17781,11 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/conscript_bunker)
 "xLm" = (
-/obj/effect/mob_spawn/corpse/zombie,
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/indoors/productioncenter/infestation)
+/obj/structure/closet/halflife,
+/obj/item/stack/sheet/mineral/sandbags/six,
+/obj/item/stack/razorwire/half_stack,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/outlands)
 "xLv" = (
 /obj/effect/landmark/blobstart,
 /turf/open/halflife/water/sludge/medium,
@@ -60552,8 +60559,8 @@ xwY
 xwY
 xwY
 xwY
-xwY
-xwY
+syk
+syk
 xwY
 xwY
 xwY
@@ -60808,10 +60815,10 @@ slH
 xwY
 xwY
 xwY
-xwY
-xwY
-xwY
-xwY
+syk
+syk
+syk
+syk
 xwY
 syk
 syk
@@ -61065,7 +61072,7 @@ slH
 xwY
 xwY
 xwY
-xwY
+syk
 syk
 syk
 syk
@@ -61322,8 +61329,8 @@ xwY
 xwY
 xwY
 xwY
-xwY
-xwY
+syk
+syk
 syk
 syk
 syk
@@ -61580,9 +61587,9 @@ xwY
 xwY
 xwY
 xwY
-xwY
-xwY
-xwY
+syk
+syk
+syk
 xwY
 xwY
 xwY
@@ -93648,7 +93655,7 @@ iEw
 afb
 heD
 heD
-cfz
+tFE
 heD
 heD
 heD
@@ -96737,7 +96744,7 @@ uAD
 vIn
 vIn
 sIV
-gpT
+kfz
 bya
 bya
 mTy
@@ -99056,7 +99063,7 @@ bya
 bya
 bya
 uex
-bRf
+oSh
 bya
 oDm
 heD
@@ -100485,7 +100492,7 @@ qqC
 qqC
 vsl
 lVP
-vsl
+xLm
 nkh
 iBr
 lVP
@@ -115247,7 +115254,7 @@ rBe
 yhf
 qEq
 kzY
-rGk
+dkI
 jHn
 jHn
 aMz
@@ -116021,7 +116028,7 @@ tQG
 aMz
 kPG
 fAp
-twU
+fUQ
 aMz
 iKV
 viH
@@ -116277,7 +116284,7 @@ vwR
 wif
 aMz
 rqi
-xLm
+twU
 kNV
 aMz
 gzJ

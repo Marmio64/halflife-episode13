@@ -75,6 +75,9 @@
 	time = 5 SECONDS
 	category = CAT_ARMOR
 
+/datum/crafting_recipe/combatchef/check_requirements(mob/user, list/collected_requirements)
+	return HAS_TRAIT(user, TRAIT_EXPERIENCED_CHEF)
+
 //modify a civil protection mask
 /datum/crafting_recipe/hardened_military_gas_mask_conversion
 	name = "Hardened Military Gas Mask (Conversion)"

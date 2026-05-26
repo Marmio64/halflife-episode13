@@ -229,6 +229,18 @@
 	armor_type = /datum/armor/hats_hos
 	strip_delay = 8 SECONDS
 
+/obj/item/clothing/head/hats/halflife/black_beret
+	name = "black beret"
+	desc = "A nondescript looking black beret."
+	icon_state = "beret"
+	icon = 'hl13/icons/obj/clothing/hats.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
+
+/obj/item/clothing/head/hats/halflife/black_beret/armored
+	name = "armored black beret"
+	desc = "A heavily reinforced, nondescript looking black beret."
+	armor_type = /datum/armor/cosmetic_sec
+
 /obj/item/clothing/head/halflife/scout_hat
 	name = "headset cap"
 	desc = "A cap with a nonfunctional headset attached to it. Was once good for scouting things, now it's just a decoration."

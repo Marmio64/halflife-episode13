@@ -322,6 +322,14 @@
 	after_shot_delay = 1.15 SECONDS
 	fire_delay = 24
 
+/obj/item/gun/ballistic/combine_sniper/emag_act(mob/user, obj/item/card/emag/emag_card)
+	if (obj_flags & EMAGGED)
+		return FALSE
+	balloon_alert(user, "firing pin modified")
+	obj_flags |= EMAGGED
+	unlock()
+	return TRUE
+
 /obj/item/gun/ballistic/combine_sniper/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/scope, range_modifier = 3)

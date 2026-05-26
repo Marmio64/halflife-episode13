@@ -1,5 +1,5 @@
 /obj/item/card/emag/halflife
-	desc = "A handheld tool which can short out combine forcefields, machinery, and even firearms. Can be recharged with combine batteries."
+	desc = "A handheld tool which can short out combine forcefields, machinery, and even firearms, provided they aren't too advanced. Can be recharged with combine batteries."
 	name = "multifunction electrical tool"
 	icon_state = "alyxtool"
 	icon = 'hl13/icons/obj/tools/tools_inventory.dmi'

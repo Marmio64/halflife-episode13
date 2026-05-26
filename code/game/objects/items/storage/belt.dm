@@ -111,11 +111,11 @@
 	return to_preload
 
 /obj/item/storage/belt/utility/full/PopulateContents()
-	SSwardrobe.provide_type(/obj/item/screwdriver, src)
-	SSwardrobe.provide_type(/obj/item/wrench, src)
-	SSwardrobe.provide_type(/obj/item/weldingtool, src)
+	SSwardrobe.provide_type(/obj/item/screwdriver/halflife, src)
+	SSwardrobe.provide_type(/obj/item/wrench/halflife, src)
+	SSwardrobe.provide_type(/obj/item/weldingtool/halflife, src)
 	SSwardrobe.provide_type(/obj/item/crowbar, src)
-	SSwardrobe.provide_type(/obj/item/wirecutters, src)
+	SSwardrobe.provide_type(/obj/item/wirecutters/halflife, src)
 	SSwardrobe.provide_type(/obj/item/multitool, src)
 	SSwardrobe.provide_type(/obj/item/stack/cable_coil, src)
 

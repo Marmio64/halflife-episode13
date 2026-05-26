@@ -25,6 +25,9 @@
 	desc = "Protection for ears from loud sounds, along with a functioning radio for overwatch forces."
 	keyslot = new /obj/item/encryptionkey/headset_cent
 
+/obj/item/radio/headset/civilprotection/deployment/emp_act(severity)
+	return FALSE
+
 /obj/item/radio/headset/civilprotection/deployment/loud
 	command = TRUE
 	use_command = TRUE

@@ -1,6 +1,9 @@
 /obj/item/radio/headset/rebel_deployment
 	keyslot = /obj/item/encryptionkey/syndicate/uprising
 
+/obj/item/radio/headset/rebel_deployment/emp_act(severity)
+	return FALSE
+
 /obj/item/radio/headset/rebel_deployment/loud
 	command = TRUE
 	use_command = TRUE
@@ -591,7 +594,7 @@
 	name = "Deployment: Heavy Crossbow Rebel"
 	display_name = "Heavy Crossbow Rebel (Pick)"
 	desc = "A long ranged scoped crossbow lets you keep enemies far away from you as you pepper them with red hot bolts of rebar."
-	id_name = "Sniper"
+	id_name = "Marksmen"
 
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
 	uniform = /obj/item/clothing/under/citizen/rebel
@@ -966,6 +969,51 @@
 	extra_per = 8
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/svd_ammo)
+
+/datum/outfit/deployment_loadout/rebel/tier5/spy
+	name = "Deployment: Rebel Elite Spy"
+	display_name = "Rebel Elite Spy (Pick Class)"
+	desc = "You are a saboteur and close ranged assassin that specializes in using creative and underhanded tactics. You are similar to the tier 4 version of a spy, but are faster, have a weaker version of combine assassin cloaking, have more supplies, and you uniquely possess a hacking tool for disabling biolocks on enemy weaponry!"
+	id_name = "Spy"
+
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
+	head = /obj/item/clothing/head/hats/halflife/black_beret/armored
+	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/combat
+	neck = /obj/item/clothing/neck/blackhalf_cloak
+
+	back = /obj/item/storage/backpack/halflife
+
+	l_pocket = /obj/item/knife/combat/backstab
+	r_pocket = /obj/item/grenade/smokebomb
+
+	suit = /obj/item/clothing/suit/armor/civilprotection/spy/elite
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython
+
+	mask = /obj/item/clothing/mask/balaclava/protective
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
+		/obj/item/grenade/c4 = 3,
+		/obj/item/ammo_box/colta357 = 2,
+		/obj/item/grenade/smokebomb = 3,
+		/obj/item/climbing_hook = 1,
+		/obj/item/card/emag/halflife = 1,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+	glasses = /obj/item/clothing/glasses/night
+
+	combat_music = 'hl13/sound/music/combat/everymove.ogg'
+
+	alternate_combat_music = 'hl13/sound/music/combat/rightbehindyou.ogg'
+
+	extra_str = 5
+	extra_dex = 6
+	extra_int = 5
+	extra_per = 3
+	extra_end = 3
 
 ///////// RED BOSSES ///////////////////
 

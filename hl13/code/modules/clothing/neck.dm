@@ -103,3 +103,12 @@
 	w_class = WEIGHT_CLASS_SMALL
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	flags_inv = HIDESUITSTORAGE
+
+/obj/item/clothing/neck/blackhalf_cloak
+	name = "black halfcloak"
+	desc = "A black half cloak designed to help conceal you."
+	icon = 'hl13/icons/obj/clothing/neck.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/neck.dmi'
+	icon_state = "blackhalf"
+	inhand_icon_state = null
+	w_class = WEIGHT_CLASS_SMALL

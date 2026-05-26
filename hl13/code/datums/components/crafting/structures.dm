@@ -87,3 +87,12 @@
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 35)
 	tool_behaviors = list(TOOL_SCREWDRIVER, TOOL_WRENCH)
 	category = CAT_STRUCTURE
+
+/datum/crafting_recipe/razorwire
+	name = "Razorwire"
+	result = /obj/item/stack/razorwire
+	result_amount = 5
+	time = 6 SECONDS
+	reqs = list(/obj/item/stack/sheet/mineral/wood = 5, /obj/item/stack/sheet/iron = 3)
+	tool_behaviors = list(TOOL_WELDER)
+	category = CAT_STRUCTURE
