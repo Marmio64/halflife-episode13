@@ -207,6 +207,7 @@
 	maxHealth = 400
 	health = 400
 	obj_damage = 40
+	armour_penetration = 50
 	speed = 0.7
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
 

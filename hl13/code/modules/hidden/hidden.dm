@@ -469,7 +469,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 7 SECONDS
+	cooldown_time = 5 SECONDS
 
 	active_msg = "You prepare to spit!"
 	deactive_msg = "You stop trying to spit."

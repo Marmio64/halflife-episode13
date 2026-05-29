@@ -209,6 +209,9 @@
 /obj/item/clothing/glasses/hud/security/night/combine/medhud
 	clothing_traits = list(TRAIT_MEDICAL_HUD)
 
+/obj/item/clothing/glasses/hud/security/night/stealthy_medhud
+	clothing_traits = list(TRAIT_MEDICAL_HUD)
+
 /obj/item/clothing/glasses/hud/security/sunglasses/gars
 	name = "\improper HUD gar glasses"
 	desc = "GAR glasses with a HUD."

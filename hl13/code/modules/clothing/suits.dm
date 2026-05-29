@@ -279,6 +279,7 @@
 	slowdown = -0.5
 	actions_types = list(/datum/action/item_action/assassin_invis)
 	clothing_traits = list(TRAIT_BACKSTABBER)
+	armor_type = /datum/armor/eliteoverwatcharmor
 	var/invis_ready = TRUE
 	var/cloaked = FALSE
 
@@ -364,7 +365,7 @@
 	inhand_icon_state = "wallhammer"
 	block_chance = 90
 	slot_flags = 0
-	max_integrity = 125
+	max_integrity = 100 //gets doubled due to armor
 	shield_break_leftover = null
 	item_flags = DROPDEL
 
@@ -498,7 +499,7 @@
 	bullet = 40
 	laser = 25
 	energy = 100
-	bomb = 40
+	bomb = 45
 	fire = 50
 	acid = 50
 	wound = 20
@@ -568,8 +569,8 @@
 /datum/armor/scout_armor
 	fire = 75
 	laser = 40
-	melee = 10
-	bullet = 10
+	melee = 15
+	bullet = 15
 
 /obj/item/clothing/suit/armor/browncoat/scout/upgraded
 	slowdown = -0.6

@@ -127,7 +127,7 @@
 	health = 400
 	speed = 1.4
 	headcrab_delay = 2 SECONDS
-	melee_attack_cooldown = 1.5 SECONDS
+	melee_attack_cooldown = 1.25 SECONDS
 
 /mob/living/basic/halflife/zombie/gonome/complete/cash_gorged
 	name = "Cash-gorged Gonome"
