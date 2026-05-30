@@ -229,6 +229,7 @@
 /mob/living/basic/halflife/zombie/infestation_control/deployment
 	melee_attack_cooldown = 1.5 SECONDS
 	speed = 0.4
+	damage_coeff = list(BRUTE = 1, BURN = 0.25, TOX = 1, STAMINA = 1, OXY = 1)
 
 /mob/living/basic/halflife/zombie/fungal
 	name = "Fungal Zombie"
@@ -606,7 +607,7 @@
 	health = 125
 	speed = -0.2
 	melee_damage_lower = 10
-	melee_damage_upper = 18
+	melee_damage_upper = 20
 	sound_vary = FALSE
 	butcher_results = list(/obj/item/stack/sheet/sinew = 2, /obj/item/food/meat/slab/halflife/zombie = 1)
 	attack_sound = 'hl13/sound/creatures/fastzombie/fastzombieattack.ogg'

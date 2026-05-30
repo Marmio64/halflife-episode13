@@ -192,6 +192,8 @@
 	melee_attack_cooldown = 1.25 SECONDS
 	melee_damage_lower = 9
 	melee_damage_upper = 15
+	maxHealth = 25
+	health = 25
 	speed = -0.2
 
 /mob/living/basic/halflife/headcrab/baby

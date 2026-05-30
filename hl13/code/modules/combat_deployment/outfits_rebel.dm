@@ -994,7 +994,7 @@
 	r_pocket = /obj/item/grenade/smokebomb
 
 	suit = /obj/item/clothing/suit/armor/civilprotection/spy/elite
-	suit_store = /obj/item/gun/ballistic/revolver/coltpython
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython/well_crafted
 
 	mask = /obj/item/clothing/mask/balaclava/protective
 

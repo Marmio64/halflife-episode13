@@ -74,10 +74,10 @@
 	ADD_TRAIT(user, TRAIT_VIRUSIMMUNE, JOB_TRAIT)
 	user.mob_mood?.mood_modifier -= 0.5
 
-	user.change_stat(STATKEY_END, 5)
+	user.change_stat(STATKEY_END, 3)
 	user.change_stat(STATKEY_DEX, 2)
-	user.change_stat(STATKEY_STR, 5)
-	user.change_stat(STATKEY_PER, 4)
+	user.change_stat(STATKEY_STR, 3)
+	user.change_stat(STATKEY_PER, 3)
 
 	if(istype(user.wear_id, /obj/item/card/id))
 		var/obj/item/card/id/ID = user.wear_id
