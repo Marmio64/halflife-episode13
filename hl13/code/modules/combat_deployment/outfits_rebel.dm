@@ -235,6 +235,8 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+	extra_dex = 4
+
 /// TIER 3 //////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/rebel/tier3
 	loadout_tier = 3

@@ -317,6 +317,10 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/bunker/unpowered/rebel_large/hydroponics)
+"gV" = (
+/obj/structure/halflife/pipes/vent,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
 "gY" = (
 /obj/structure/railing/halflife/sewer{
 	dir = 8
@@ -497,6 +501,10 @@
 /obj/effect/spawner/random/halflife/loot,
 /obj/effect/spawner/random/halflife/loot,
 /obj/effect/spawner/random/halflife/loot,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
+"jq" = (
+/obj/structure/halflife/pipes/horizontal/down/single,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
 "jw" = (
@@ -847,6 +855,12 @@
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/north{
 	areastring = /area/halflife/indoors/bunker/unpowered/rebel_large/armory
+	},
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
+"qG" = (
+/obj/structure/halflife/pipes/horizontal/end{
+	dir = 1
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
@@ -1202,6 +1216,10 @@
 /obj/machinery/vending/hydronutrients,
 /turf/open/floor/plating/indoor/tile/green,
 /area/halflife/indoors/bunker/unpowered/rebel_large/hydroponics)
+"xr" = (
+/obj/structure/halflife/pipes/horizontal/valve,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
 "xw" = (
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/bunker/unpowered/rebel_large/living_quarters)
@@ -2058,6 +2076,8 @@
 "Nh" = (
 /obj/structure/closet/halflife,
 /obj/item/weaponcrafting/receiver,
+/obj/item/storage/box/lethalshot/halflife,
+/obj/item/storage/box/lethalshot/halflife,
 /obj/item/weaponcrafting/frame/spas12,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/bunker/unpowered/rebel_large/armory)
@@ -2263,6 +2283,10 @@
 	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/bunker/unpowered/rebel_large/infirmary)
+"PL" = (
+/obj/structure/halflife/pipes/horizontal,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
 "PV" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/tile/black,
@@ -2403,6 +2427,10 @@
 /obj/item/stack/sheet/scrap_metal/three,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
+"SP" = (
+/obj/structure/halflife/pipes/horizontal/down,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
 "SR" = (
 /turf/closed/wall/halflife/concrete/bunker,
 /area/halflife/indoors/bunker/unpowered/rebel_large/maintenance)
@@ -3435,7 +3463,7 @@ Fp
 Fp
 Fp
 SR
-IT
+qG
 IT
 Ng
 IT
@@ -3499,7 +3527,7 @@ Fp
 Fp
 Fp
 SR
-IT
+PL
 GD
 GD
 GD
@@ -3563,7 +3591,7 @@ Fp
 Fp
 Fp
 SR
-IT
+xr
 GD
 Sw
 Uu
@@ -3627,7 +3655,7 @@ Fp
 Fp
 Fp
 SR
-IT
+PL
 GD
 RL
 Uu
@@ -3691,7 +3719,7 @@ SR
 SR
 SR
 SR
-IT
+jq
 GD
 kw
 Uu
@@ -4304,7 +4332,7 @@ pa
 pa
 pa
 pa
-QV
+Cf
 pa
 pa
 pa
@@ -5784,7 +5812,7 @@ Fs
 Hz
 Tz
 ZE
-IT
+qG
 Bv
 SR
 Fp
@@ -5848,7 +5876,7 @@ fn
 fn
 rj
 ZE
-IT
+PL
 Bv
 SR
 Fp
@@ -5912,7 +5940,7 @@ fn
 fn
 rj
 ZE
-IT
+SP
 Bv
 SR
 Fp
@@ -5971,12 +5999,12 @@ UH
 fn
 rj
 ZE
-rj
+PE
 fn
 fn
 rj
 ZE
-IT
+PL
 Bv
 SR
 Fp
@@ -6040,7 +6068,7 @@ FP
 Ru
 BI
 ZE
-IT
+jq
 Bv
 SR
 Fp
@@ -6227,7 +6255,7 @@ ZE
 BH
 Tl
 SR
-IT
+gV
 IT
 IT
 IT

@@ -82,6 +82,9 @@
 
 /obj/item/clothing/suit/armor/civilprotection/spy/elite
 	slowdown = -0.33
+	icon_state = "rebelarmor_light"
+	inhand_icon_state = "rebelarmor_light"
+	armor_type = /datum/armor/rebellight
 	actions_types = list(/datum/action/item_action/disguise_self, /datum/action/item_action/spy_invis)
 	var/invis_ready = TRUE
 	var/cloaked = FALSE

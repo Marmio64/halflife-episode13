@@ -239,7 +239,7 @@
 /obj/item/clothing/head/hats/halflife/black_beret/armored
 	name = "armored black beret"
 	desc = "A heavily reinforced, nondescript looking black beret."
-	armor_type = /datum/armor/cosmetic_sec
+	armor_type = /datum/armor/milhelm
 
 /obj/item/clothing/head/halflife/scout_hat
 	name = "headset cap"

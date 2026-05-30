@@ -66,7 +66,7 @@
 			target_value += 10 //just a slight extra bonus for the flavor value of it
 		if(istype(target, /mob/living/basic/halflife/headcrab) || istype(target, /mob/living/simple_animal/hostile/halflife/antlion) || istype(target, /mob/living/basic/halflife/antlion_worker) || istype(target, /mob/living/basic/halflife/grub))
 			to_chat(user, span_notice("Low-value Xenian data detected."))
-			target_value = 10 //antlions can be farmed and headcrabs are really easy to kill
+			target_value = 5 //antlions can be farmed and headcrabs are really easy to kill
 		else
 			to_chat(user, span_notice("Medium-value Xenian data detected."))
 

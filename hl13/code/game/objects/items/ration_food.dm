@@ -339,6 +339,12 @@
 	name = "small nutripaste tube"
 	food_reagents = list(/datum/reagent/consumable/nutriment = 4)
 
+/obj/item/food/nutripaste/nutricube
+	name = "Nutricube"
+	desc = "A dense cube of nutripaste that you might find in poor quality rations and other horrible places. It could be eaten if you hate yourself, or it could be sold on the Cargo train."
+	icon_state = "nutricube"
+	food_reagents = list(/datum/reagent/consumable/nutriment = 15, /datum/reagent/consumable/nutriment/vitamin = 5)
+
 ///Override for checkliked callback
 /obj/item/food/nutripaste/make_edible()
 	. = ..()
