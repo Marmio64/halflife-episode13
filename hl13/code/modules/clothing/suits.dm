@@ -81,7 +81,7 @@
 	var/list/outfitoptions = list("OTA Soldier", "OTA Sniper", "OTA Elite", "Medical Cop", "Rebel Cell Leader")
 
 /obj/item/clothing/suit/armor/civilprotection/spy/elite
-	slowdown = -0.33
+	slowdown = -0.45
 	icon_state = "rebelarmor_light"
 	inhand_icon_state = "rebelarmor_light"
 	armor_type = /datum/armor/rebellight

@@ -90,7 +90,7 @@
 		play_dead.Grant(src)
 
 /mob/living/basic/halflife/zombie/deployment
-	speed = 1.3
+	speed = 1.2
 	melee_attack_cooldown = 1.25 SECONDS
 
 /mob/living/basic/halflife/zombie/zombine
@@ -217,6 +217,8 @@
 
 /mob/living/basic/halflife/zombie/engineer/deployment
 	melee_attack_cooldown = 1.5 SECONDS
+	obj_damage = 22
+	melee_damage_upper = 26
 
 /mob/living/basic/halflife/zombie/infestation_control
 	name = "Zombified ICU Worker"

@@ -500,6 +500,10 @@
 
 	weapon_category = WEAPON_CAT_SHOTGUN
 
+/obj/item/gun/ballistic/shotgun/spas12/freeman
+	desc = "A spectacularly lethal pump action shotgun, for close encounters. This one has a pristine and powerful looking appearence."
+	projectile_damage_multiplier = 1.2
+
 /obj/item/gun/ballistic/shotgun/spas12/try_fire_gun(atom/target, mob/living/user, params)
 	if(LAZYACCESS(params2list(params), RIGHT_CLICK))
 		altfire = TRUE

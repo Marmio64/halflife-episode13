@@ -781,7 +781,7 @@
 
 	uniform = /obj/item/clothing/under/citizen/rebel
 	suit = /obj/item/clothing/suit/hooded/hev/deathmatch/deployment
-	suit_store = /obj/item/gun/ballistic/shotgun/spas12
+	suit_store = /obj/item/gun/ballistic/shotgun/spas12/freeman
 	glasses = /obj/item/clothing/glasses/regular/thin
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 	r_pocket = /obj/item/flashlight/seclite

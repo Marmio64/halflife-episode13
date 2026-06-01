@@ -210,6 +210,9 @@
 	clothing_traits = list(TRAIT_MEDICAL_HUD)
 
 /obj/item/clothing/glasses/hud/security/night/stealthy_medhud
+	name = "night vision goggles"
+	desc = "You can totally see in the dark now!"
+	icon_state = "night"
 	clothing_traits = list(TRAIT_MEDICAL_HUD)
 
 /obj/item/clothing/glasses/hud/security/sunglasses/gars
