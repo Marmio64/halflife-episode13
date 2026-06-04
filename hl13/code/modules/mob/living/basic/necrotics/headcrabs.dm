@@ -155,7 +155,7 @@
 
 /mob/living/basic/halflife/headcrab/poison/deadly
 	poison_type = /datum/reagent/toxin/headcrab_venom/deadly
-	poison_per_bite = 7
+	poison_per_bite = 8
 	melee_attack_cooldown = 1.5 SECONDS
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/headcrab/poison
@@ -193,11 +193,9 @@
 	melee_attack_cooldown = 1.25 SECONDS
 
 /mob/living/basic/halflife/headcrab/fast/upgraded
-	melee_attack_cooldown = 1 SECONDS
-	melee_damage_lower = 9
-	melee_damage_upper = 15
-	maxHealth = 25
-	health = 25
+	melee_attack_cooldown = 0.7 SECONDS
+	maxHealth = 30
+	health = 30
 	speed = -0.2
 
 /mob/living/basic/halflife/headcrab/baby

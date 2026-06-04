@@ -584,6 +584,8 @@
 /mob/living/basic/halflife/zombie/cremator/deployment
 	melee_attack_cooldown = 1.25 SECONDS
 	speed = 2.25
+	maxHealth = 85
+	health = 85
 
 /mob/living/basic/halflife/zombie/cremator/Initialize(mapload)
 	. = ..()
