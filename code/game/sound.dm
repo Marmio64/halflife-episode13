@@ -216,12 +216,19 @@
 					if(SSmapping.current_map.combat_deployment_gamemode == "the_hidden")
 						SEND_SOUND(src, sound('hl13/sound/music/hidden_combine_win.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
 						return
+					else if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
+						SEND_SOUND(src, sound('hl13/sound/music/rebel_win_intruder.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+						return
 					else
 						SEND_SOUND(src, sound('hl13/sound/music/rebel_win.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
 						return
 				else if(GLOB.deployment_win_team == COMBINE_DEPLOYMENT_FACTION)
-					SEND_SOUND(src, sound('hl13/sound/music/rebel_loss.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
-					return
+					if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
+						SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_intruder.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+						return
+					else
+						SEND_SOUND(src, sound('hl13/sound/music/rebel_loss.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+						return
 				else if(GLOB.deployment_win_team == XEN_DEPLOYMENT_FACTION)
 					SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_xen.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
 					return
@@ -231,14 +238,21 @@
 			//player is combine
 			else if(player_details.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
 				if(GLOB.deployment_win_team == REBEL_DEPLOYMENT_FACTION)
-					SEND_SOUND(src, sound('hl13/sound/music/combine_loss.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
-					return
+					if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
+						SEND_SOUND(src, sound('hl13/sound/music/combine_loss_intruder.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+						return
+					else
+						SEND_SOUND(src, sound('hl13/sound/music/combine_loss.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+						return
 				else if(GLOB.deployment_win_team == XEN_DEPLOYMENT_FACTION)
 					SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_xen.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
 					return
 				else if(GLOB.deployment_win_team == COMBINE_DEPLOYMENT_FACTION)
 					if(SSmapping.current_map.combat_deployment_gamemode == "the_hidden")
 						SEND_SOUND(src, sound('hl13/sound/music/hidden_combine_win.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+						return
+					else if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
+						SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_intruder.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC)) //I want them to hear crab's loss
 						return
 					else
 						SEND_SOUND(src, sound('hl13/sound/music/combine_win.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))

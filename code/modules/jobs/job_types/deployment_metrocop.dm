@@ -106,6 +106,15 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 	if(SSmapping.current_map.combat_deployment_gamemode == "both")
 		chosen = /obj/item/hl2/loadout_picker/combine/boss
 
+	if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
+		for(var/obj/item/item in user.get_all_gear())
+			qdel(item)
+		for(var/datum/action/cooldown/buttons in user.actions)
+			qdel(buttons)
+		user.equipOutfit(/datum/outfit/deployment_loadout/intruder/guard) //only one loadout and i dont want to see any metrocops (or nude men) in my conscript bunker!!
+		user.regenerate_icons()
+		chosen = null
+
 	if(chosen)
 		var/turf/T = get_turf(user)
 		var/obj/item/I = new chosen(T)
