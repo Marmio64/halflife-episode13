@@ -10,6 +10,7 @@
 #define JOB_UNAVAILABLE_AGE 7
 #define JOB_UNAVAILABLE_WRONGTEAM 8 //hl13 edit
 #define JOB_UNAVAILABLE_TEAMFULL 9 //hl13 edit
+#define JOB_UNAVAILABLE_NOALERT 10 //hl13 edit
 
 /// Used when the `get_job_unavailable_error_message` proc can't make sense of a given code.
 #define GENERIC_JOB_UNAVAILABLE_ERROR "Error: Unknown job availability."

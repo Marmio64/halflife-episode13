@@ -461,6 +461,14 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/start/new_player)
 	GLOB.the_hidden += loc
 	return INITIALIZE_HINT_QDEL
 
+/obj/effect/landmark/guard_start
+	name = "guard start"
+
+/obj/effect/landmark/guard_start/Initialize(mapload)
+	..()
+	GLOB.intruder_guards += loc
+	return INITIALIZE_HINT_QDEL
+
 //observer start
 /obj/effect/landmark/observer_start
 	name = "Observer-Start"

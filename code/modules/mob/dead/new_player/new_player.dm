@@ -138,6 +138,8 @@
 			return "You aren't on this team! Try the other team."
 		if(JOB_UNAVAILABLE_TEAMFULL)
 			return "This team is full! Try the other team."
+		if(JOB_UNAVAILABLE_NOALERT)
+			return "The alert hasn't been raised yet! Play some deathmatch with the other dead while you wait."
 
 	return GENERIC_JOB_UNAVAILABLE_ERROR
 
@@ -149,7 +151,7 @@
 		if(client.player_details.deployment_faction)
 			if(client.player_details.deployment_faction != job.combat_deployment_faction)
 				return JOB_UNAVAILABLE_WRONGTEAM
-		if(SSmapping.current_map.combat_deployment_gamemode != "xen_defense" && SSmapping.current_map.combat_deployment_gamemode != "xen_chaos")
+		if(SSmapping.current_map.combat_deployment_gamemode != "xen_defense" && SSmapping.current_map.combat_deployment_gamemode != "xen_chaos" && SSmapping.current_map.combat_deployment_gamemode != "intruder")
 			if(job.combat_deployment_faction == COMBINE_DEPLOYMENT_FACTION  && !client.player_details.deployment_faction)
 				if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players) && SSmapping.current_map.combat_deployment_gamemode != "the_hidden")
 					return JOB_UNAVAILABLE_TEAMFULL
@@ -176,6 +178,9 @@
 			if(job.combat_deployment_faction == XEN_DEPLOYMENT_FACTION && !client.player_details.deployment_faction)
 				if(length(GLOB.deployment_combine_players) < length(GLOB.deployment_xen_players) || length(GLOB.deployment_rebel_players) < length(GLOB.deployment_xen_players))
 					return JOB_UNAVAILABLE_TEAMFULL
+		else if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
+			if(GLOB.alert_cooldown < 1 SECONDS && GLOB.deployment_flag_grace_period < 1 SECONDS)
+				return JOB_UNAVAILABLE_NOALERT
 
 	if((job.current_positions >= job.total_positions) && job.total_positions != -1)
 		if(is_assistant_job(job))
