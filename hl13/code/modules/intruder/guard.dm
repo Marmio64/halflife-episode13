@@ -36,7 +36,7 @@
 	guard_preparedness += SSticker.tdm_combine_deaths
 
 	if(4 < guard_preparedness)
-		extra_dex = 2
+		extra_dex = 3
 		extra_str = 2
 	if(9 < guard_preparedness)
 		extra_end = 3
@@ -46,8 +46,8 @@
 	if(19 < guard_preparedness)
 		suit_store = /obj/item/gun/ballistic/automatic/m4a1/intruder/buffed
 	if(24 < guard_preparedness)
-		extra_end = 5
-		extra_dex = 5
+		extra_end = 6
+		extra_dex = 6
 		extra_str = 5
 		suit = /obj/item/clothing/suit/armor/halflife/kevlar
 
