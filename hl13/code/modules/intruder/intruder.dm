@@ -18,8 +18,9 @@
 
 	combat_music = 'hl13/sound/music/combat/bigshell.ogg' //i like this alert theme more than encounter tbh
 
-	extra_end = 2
-	extra_dex = 2
+	extra_end = 5
+	extra_dex = 3
+	extra_str = 8
 
 /datum/outfit/deployment_loadout/intruder/solid/pre_equip(mob/living/carbon/human/H)
 	.=..()
@@ -93,7 +94,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/usp/suppressed/solid
 	desc = "A small and light 9mm pistol which is often used as a metropolice standard carry. Unlike most found in the city, nearly every part of this gun has been expertly crafted and customized. Where'd you get something like this...?"
-	projectile_damage_multiplier = 1.5
+	projectile_damage_multiplier = 1.75
 
 /obj/item/storage/belt/civilprotection/polish_resistance/solid
 	desc = "Heavy duty belt for containing metrocop standard gear. Can also carry rations."
