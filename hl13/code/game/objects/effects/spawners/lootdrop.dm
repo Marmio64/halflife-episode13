@@ -295,6 +295,7 @@
 				/obj/item/storage/halflife/suitcase,
 				/obj/item/lockpick,
 				/obj/item/clothing/under/citizen/refugee,
+				/obj/item/clothing/under/citizen/rebel,
 				/obj/item/radio/off/halflife,
 				/obj/item/flashlight/seclite,
 				/obj/item/lighter/greyscale = 2,
@@ -331,10 +332,8 @@
 	loot = list(
 				/obj/item/gun/ballistic/automatic/pistol/usp,
 				/obj/item/gun/ballistic/automatic/pistol/usp/no_mag,
-				/obj/item/weaponcrafting/frame/usp,
 				/obj/item/weaponcrafting/frame/mp7 = 3,
 				/obj/item/clothing/suit/armor/civilprotection = 3,
-				/obj/item/clothing/under/citizen/rebel,
 				/obj/item/weaponcrafting/frame/spas12,
 				/obj/item/weaponcrafting/frame/coltpython,
 				/obj/item/gun/ballistic/rifle/rebarxbow = 2,
@@ -345,7 +344,6 @@
 				/obj/item/fireaxe,
 				/obj/item/switchblade = 3,
 				/obj/item/melee/baton/security/loaded,
-				/obj/item/stack/telecrystal/five,
 				/obj/item/clothing/suit/armor/halflife/kevlar,
 				/obj/item/clothing/suit/armor/rebel/light,
 				/obj/item/clothing/head/helmet/halflife/military

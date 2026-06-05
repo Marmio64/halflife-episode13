@@ -8,6 +8,7 @@
 	description = "Spawns a Sentient Gonome."
 	min_wizard_trigger_potency = 6
 	max_wizard_trigger_potency = 7
+	earliest_start = 40 MINUTES
 
 /datum/round_event/ghost_role/gonome
 	minimum_required = 1

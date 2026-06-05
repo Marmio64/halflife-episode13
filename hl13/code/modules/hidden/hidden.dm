@@ -302,7 +302,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 20 SECONDS
+	cooldown_time = 15 SECONDS
 	item_type = /obj/item/restraints/legcuffs/beartrap/the_hidden
 	requires_hands = TRUE
 
@@ -469,7 +469,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 7 SECONDS
+	cooldown_time = 5 SECONDS
 
 	active_msg = "You prepare to spit!"
 	deactive_msg = "You stop trying to spit."

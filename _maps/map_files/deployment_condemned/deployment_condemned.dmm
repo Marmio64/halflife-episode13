@@ -210,6 +210,7 @@
 /area/halflife/indoors/combat_deployment/rebel_base)
 "hS" = (
 /obj/structure/halflife/fence/wire/barb,
+/obj/structure/trap/deployment_spawn_prot/xen,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
 "id" = (
@@ -294,6 +295,10 @@
 /obj/structure/flora/tree/halflife/plain/thin,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/zombies)
+"mo" = (
+/obj/structure/trap/deployment_spawn_prot/xen,
+/turf/open/halflife/water/sludge/shallow,
+/area/halflife/outdoors/deployment_city/zombies)
 "nj" = (
 /obj/structure/halflife/headcrab_cannister,
 /turf/open/floor/plating/ground/sidewalk,
@@ -342,6 +347,10 @@
 /obj/structure/halflife/leaves,
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/deployment_city/zombies)
+"pO" = (
+/obj/structure/trap/deployment_spawn_prot/xen,
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
 "pR" = (
 /obj/structure/chair/office/halflife/blue{
@@ -523,6 +532,10 @@
 "wS" = (
 /obj/machinery/deployment_points_flag/poland,
 /turf/open/floor/plating/indoor/tile/green,
+/area/halflife/outdoors/deployment_city/zombies)
+"xd" = (
+/obj/structure/trap/deployment_spawn_prot/xen,
+/turf/closed/wall/halflife/concrete/alt,
 /area/halflife/outdoors/deployment_city/zombies)
 "xp" = (
 /obj/modular_map_root/deploymentsouth,
@@ -5237,7 +5250,7 @@ HG
 HG
 mi
 mi
-WB
+xd
 WB
 TE
 GP
@@ -5982,7 +5995,7 @@ mi
 mi
 mi
 mi
-HG
+pO
 ym
 XJ
 kd
@@ -6131,7 +6144,7 @@ mi
 mi
 mi
 mi
-HG
+pO
 HG
 XJ
 kd
@@ -10154,7 +10167,7 @@ mi
 mi
 mi
 mi
-HG
+pO
 HG
 XJ
 kd
@@ -10303,7 +10316,7 @@ mi
 mi
 mi
 mi
-mi
+mo
 HG
 XJ
 QT
@@ -10452,7 +10465,7 @@ HG
 mi
 mi
 mi
-mi
+mo
 mi
 XJ
 QT
@@ -10601,7 +10614,7 @@ XJ
 mi
 mi
 mi
-mi
+mo
 XJ
 XJ
 QT
@@ -10750,7 +10763,7 @@ iw
 iw
 mi
 mi
-mi
+mo
 iw
 iw
 kd
@@ -10899,7 +10912,7 @@ iw
 iw
 iw
 mi
-mi
+mo
 mi
 iw
 kd
@@ -11048,7 +11061,7 @@ iw
 iw
 mi
 mi
-mi
+mo
 mi
 iw
 kd
@@ -11197,7 +11210,7 @@ mi
 mi
 mi
 mi
-mi
+mo
 mi
 XJ
 QT
@@ -11346,7 +11359,7 @@ mi
 mi
 mi
 mi
-mi
+mo
 HG
 XJ
 QT
@@ -11495,7 +11508,7 @@ mi
 mi
 mi
 mi
-mi
+mo
 HG
 XJ
 QT
@@ -11644,7 +11657,7 @@ HG
 mi
 mi
 mi
-mi
+mo
 mi
 XJ
 kd
@@ -15667,7 +15680,7 @@ mi
 mi
 mi
 tt
-HG
+pO
 HG
 XJ
 kd
@@ -15816,7 +15829,7 @@ mi
 mi
 mi
 mi
-HG
+pO
 ym
 XJ
 kd
@@ -16561,7 +16574,7 @@ HG
 mi
 mi
 mi
-WB
+xd
 WB
 TE
 GP

@@ -244,7 +244,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 	)
 
@@ -259,6 +259,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
-		/obj/item/ammo_box/strilka310/a762 = 2,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
+		/obj/item/knife/combat/survival = 1,
+		/obj/item/ammo_box/strilka310/a762 = 3,
 	)

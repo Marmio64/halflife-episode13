@@ -65,3 +65,11 @@
 	materials = list(/datum/material/biomass = 15)
 	build_path = /obj/item/stack/sheet/leather
 	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)
+
+/datum/design/nutricube
+	name = "Nutricube"
+	id = "nutricube"
+	build_type = BIOGENERATOR
+	materials = list(/datum/material/biomass = 30)
+	build_path = /obj/item/food/nutripaste/nutricube
+	category = list(RND_CATEGORY_INITIAL, RND_CATEGORY_BIO_MATERIALS)

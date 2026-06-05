@@ -235,6 +235,8 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+	extra_dex = 4
+
 /// TIER 3 //////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/rebel/tier3
 	loadout_tier = 3
@@ -319,7 +321,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_str = 4
-	extra_end = 4
+	extra_end = 6
 
 /datum/outfit/deployment_loadout/rebel/tier3/vortigaunt
 	name = "Deployment: Vortigaunt"
@@ -515,6 +517,8 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+	extra_end = 3
+
 /datum/outfit/deployment_loadout/rebel/tier4/mosin_soldier
 	name = "Deployment: Upgraded Mosin Soldier"
 	display_name = "Upgraded Mosin Soldier (Defense)"
@@ -540,8 +544,8 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_str = 6
-	extra_end = 6
-	extra_per = 3
+	extra_end = 8
+	extra_per = 5
 
 
 /datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel
@@ -718,6 +722,7 @@
 	backpack_contents = list(
 		/obj/item/storage/box/lethalshot/halflife = 3,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -776,7 +781,7 @@
 
 	uniform = /obj/item/clothing/under/citizen/rebel
 	suit = /obj/item/clothing/suit/hooded/hev/deathmatch/deployment
-	suit_store = /obj/item/gun/ballistic/shotgun/spas12
+	suit_store = /obj/item/gun/ballistic/shotgun/spas12/freeman
 	glasses = /obj/item/clothing/glasses/regular/thin
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 	r_pocket = /obj/item/flashlight/seclite
@@ -791,12 +796,13 @@
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 		/obj/item/storage/box/lethalshot/halflife = 3,
 	)
 
 	extra_dex = 10
 	extra_end = 4
-	extra_str = 2
+	extra_str = 6
 
 /datum/outfit/deployment_loadout/rebel/tier5/rpg
 	name = "Deployment: RPG Rebel"
@@ -811,7 +817,7 @@
 	belt = /obj/item/storage/belt/civilprotection/rpg_rebel
 	gloves = /obj/item/clothing/gloves/combat
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
-	back = /obj/item/gun/ballistic/rocketlauncher/halflife
+	back = /obj/item/gun/ballistic/rocketlauncher/halflife/deployment_pin
 	r_pocket = /obj/item/flashlight/seclite
 	shoes = /obj/item/clothing/shoes/boots
 
@@ -834,7 +840,7 @@
 	suit = /obj/item/clothing/suit/utility/fire/firefighter/halflife
 	head = /obj/item/clothing/head/halflife/firesuit_hat
 	mask = /obj/item/clothing/mask/gas/hl2/swat
-	suit_store = /obj/item/gun/ballistic/automatic/ak47/cheap
+	suit_store = /obj/item/gun/ballistic/automatic/ak47/cheap/deployment_pin
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 	r_pocket = /obj/item/flashlight/seclite
 
@@ -878,7 +884,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
 
-	extra_end = 8
+	extra_end = 6
 
 /datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt
 	name = "Deployment: Extract Empowered Vortigaunt"
@@ -941,7 +947,7 @@
 	desc = "While not too well armored, you have access to one of the few surviving dragunovs around. Use it well to snipe your opponents with devestating accuracy and power."
 	id_name = "Sniper"
 
-	suit = /obj/item/clothing/suit/armor/rebel/light/speedy/extra
+	suit = /obj/item/clothing/suit/armor/rebel/light/speedy
 	mask = /obj/item/clothing/mask/gas/hl2/swat/hardened
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/svd
 	suit_store = /obj/item/gun/ballistic/automatic/svd/deployment_pin
@@ -988,7 +994,7 @@
 	r_pocket = /obj/item/grenade/smokebomb
 
 	suit = /obj/item/clothing/suit/armor/civilprotection/spy/elite
-	suit_store = /obj/item/gun/ballistic/revolver/coltpython
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython/well_crafted
 
 	mask = /obj/item/clothing/mask/balaclava/protective
 
@@ -1003,14 +1009,14 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
-	glasses = /obj/item/clothing/glasses/night
+	glasses = /obj/item/clothing/glasses/hud/security/night/stealthy_medhud
 
 	combat_music = 'hl13/sound/music/combat/everymove.ogg'
 
 	alternate_combat_music = 'hl13/sound/music/combat/rightbehindyou.ogg'
 
 	extra_str = 5
-	extra_dex = 6
+	extra_dex = 8
 	extra_int = 5
 	extra_per = 3
 	extra_end = 3

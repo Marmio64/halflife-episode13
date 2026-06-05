@@ -90,7 +90,7 @@
 		play_dead.Grant(src)
 
 /mob/living/basic/halflife/zombie/deployment
-	speed = 1.3
+	speed = 1.2
 	melee_attack_cooldown = 1.25 SECONDS
 
 /mob/living/basic/halflife/zombie/zombine
@@ -217,6 +217,8 @@
 
 /mob/living/basic/halflife/zombie/engineer/deployment
 	melee_attack_cooldown = 1.5 SECONDS
+	obj_damage = 22
+	melee_damage_upper = 26
 
 /mob/living/basic/halflife/zombie/infestation_control
 	name = "Zombified ICU Worker"
@@ -229,6 +231,7 @@
 /mob/living/basic/halflife/zombie/infestation_control/deployment
 	melee_attack_cooldown = 1.5 SECONDS
 	speed = 0.4
+	damage_coeff = list(BRUTE = 1, BURN = 0.25, TOX = 1, STAMINA = 1, OXY = 1)
 
 /mob/living/basic/halflife/zombie/fungal
 	name = "Fungal Zombie"
@@ -329,7 +332,8 @@
 
 /mob/living/basic/halflife/zombie/fast/deployment/upgraded
 	melee_attack_cooldown = 0.4 SECONDS
-	melee_damage_upper = 17
+	melee_damage_lower = 12
+	melee_damage_upper = 18
 	maxHealth = 110
 	health = 110
 
@@ -580,6 +584,8 @@
 /mob/living/basic/halflife/zombie/cremator/deployment
 	melee_attack_cooldown = 1.25 SECONDS
 	speed = 2.25
+	maxHealth = 85
+	health = 85
 
 /mob/living/basic/halflife/zombie/cremator/Initialize(mapload)
 	. = ..()
@@ -591,6 +597,46 @@
 	flame_radius(2, get_turf(src))
 	playsound(loc, 'hl13/sound/halflifeeffects/explosion_fire_grenade.ogg', 30, TRUE, 4)
 	gib()
+
+//A combine bioweapon, perhaps related to the attempts to create The Hidden
+//Has a rather high damage output and self heals in the dark making it powerful in the shadows, but isn't too notable outside of it and is damaged by the light until a certain point
+/mob/living/basic/halflife/zombie/lurker
+	name = "Lurker Zombie"
+	desc = "An extremely pale, abnormal looking human, wearing what looks like to be part of a prisoners uniform. It is controlled by a poison headcrab, and seems to physically recoil at light..."
+	icon_state = "lurker"
+	icon_living = "lurker"
+	icon_dead = "lurker_dead"
+	icon = 'hl13/icons/mob/halflife_tall.dmi'
+	maxHealth = 125
+	health = 125
+	speed = -0.2
+	melee_damage_lower = 10
+	melee_damage_upper = 20
+	sound_vary = FALSE
+	butcher_results = list(/obj/item/stack/sheet/sinew = 2, /obj/item/food/meat/slab/halflife/zombie = 1)
+	attack_sound = 'hl13/sound/creatures/fastzombie/fastzombieattack.ogg'
+	death_sound = 'hl13/sound/creatures/fastzombie/fastzombiedeath.ogg'
+	crabless_possible = FALSE
+	idle_sound_chance = 5
+
+	var/dark_attack_speed = 0.7 SECONDS
+
+/mob/living/basic/halflife/zombie/lurker/Life(seconds_per_tick = SSMOBS_DT, times_fired)
+	..()
+	var/turf/owner_turf = src.loc
+	if(!isturf(owner_turf))
+		return
+	var/light_amount = owner_turf.get_lumcount()
+	var/area_light_amount = owner_turf.loc.base_lighting_alpha
+
+	if (light_amount < SHADOW_SPECIES_LIGHT_THRESHOLD && area_light_amount < 50)
+		melee_attack_cooldown = dark_attack_speed
+		adjust_health(-maxHealth*0.2)
+	else
+		melee_attack_cooldown = 2 SECONDS
+		if(maxHealth/2 < health)
+			adjust_health(maxHealth*0.1) //if you are above half health, the light wears you down
+			visible_message(span_warning("[src] burns in the light."))
 
 
 

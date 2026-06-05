@@ -173,6 +173,7 @@
 /obj/item/clothing/under/combine/overwatch/assassin
 	desc = "White and grey full-body suit which includes kevlar weaving to provide extra protection."
 	icon_state = "assassin"
+	armor_type = /datum/armor/combinesuit_elite
 
 /obj/item/clothing/under/combine/overwatch/suppressor
 	name = "overwatch jumpsuit"

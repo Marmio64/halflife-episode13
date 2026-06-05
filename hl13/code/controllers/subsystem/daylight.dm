@@ -48,8 +48,14 @@ SUBSYSTEM_DEF(daylight)
 	/// Multiplier applied to the goal, to allow for it to scale over time.
 	var/factory_goal_multiplier = 0.6
 
-	/// What is the day's tax the prison will face
+	/// What is the day's tax the district will face
 	var/daily_tax = 0
+
+	/// The standard populations name, for citys it would be 'citizen' and for prisons 'inmate'
+	var/population_name = "citizen"
+
+	/// What kind of place is this for announcements, city or prison
+	var/district_type = "City"
 
 /datum/controller/subsystem/daylight/proc/add_lit_area(area/new_area)
 	daylight_areas.Add(new_area)
@@ -59,6 +65,13 @@ SUBSYSTEM_DEF(daylight)
 
 /datum/controller/subsystem/daylight/fire(resumed = FALSE)
 	current_day_time += 2 SECONDS
+
+	if(SSmapping.current_map.roleplay_type == "prison")
+		population_name = "inmate"
+		district_type = "Prison"
+	else if(SSmapping.current_map.roleplay_type == "city")
+		population_name = "citizen"
+		district_type = "City"
 
 	if(current_day_time >= DAY_LENGTH)
 		current_day_time = 0
@@ -73,7 +86,12 @@ SUBSYSTEM_DEF(daylight)
 				if(curfew_field.on == FALSE)
 					curfew_field.toggle_onoff()
 
-			var/message = "Attention inmates, it is now night time. Inmates are to return to their cells for the nightly lockup."
+			var/message = "Attention [population_name]s, it is now night time."
+
+			if(SSmapping.current_map.roleplay_type == "prison")
+				message += "Inmates are to return to their cells for the nightly lockup."
+			else if(SSmapping.current_map.roleplay_type == "city")
+				message += "Citizens are to return to their housing blocks for the nightly curfew."
 
 			if(factory_goal_multiplier < MAX_QUOTA_MULTIPLIER) // easier first day, standard second day, max value fourth day and on
 				factory_goal_multiplier += 0.2
@@ -102,10 +120,9 @@ SUBSYSTEM_DEF(daylight)
 				else
 					bank_account.adjust_money(-daily_tax)
 
-				priority_announce(message, "Lockup Notice.", sender_override = "Prison Automated Scheduler")
+				priority_announce(message, "Curfew Notice.", sender_override = "[district_type] Automated Scheduler")
 
-			//curfew zombies dont really make enough sense for the prison
-			/*
+			if(SSmapping.current_map.roleplay_type == "city")
 				curfew_zombies() //spawn zombies for curfew, encourages going indoors
 
 				if(prob(75))
@@ -114,7 +131,6 @@ SUBSYSTEM_DEF(daylight)
 					curfew_zombies()
 				if(prob(25))
 					curfew_zombies()
-			*/
 
 		if(SSmapping.current_map.minetype != "combat_deployment")
 			if(light_coefficient > 0.25) //leave some moonlight
@@ -137,7 +153,7 @@ SUBSYSTEM_DEF(daylight)
 
 			daily_tax = (get_factory_goal() * 30) //10 people would be 330 credits with standard multiplier
 			if(SSmapping.current_map.minetype != "combat_deployment" && SSmapping.current_map.roleplay_type != "outlands")
-				priority_announce("Attention occupants, night has concluded, and Curfew is over. Your morning ration cycle will begin in thirty seconds. The daily tax is set at [daily_tax] credits.", "Curfew Notice.", sender_override = "Prison Automated Scheduler")
+				priority_announce("Attention occupants, night has concluded, and Curfew is over. Your morning ration cycle will begin in thirty seconds. The daily tax is set at [daily_tax] credits.", "Curfew Notice.", sender_override = "[district_type] Automated Scheduler")
 		if(light_coefficient < 0.6)
 			light_coefficient += 0.05
 
@@ -147,7 +163,7 @@ SUBSYSTEM_DEF(daylight)
 
 			day_cycle_active = DAY_CYCLE_AFTERNOON
 			if(SSmapping.current_map.minetype != "combat_deployment" && SSmapping.current_map.roleplay_type != "outlands")
-				priority_announce("Attention occupants, it is now afternoon. The previous ration cycle has ended. All inmates are to begin productive efforts, and to inquire security personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal], compliance is mandatory.", "Work Notice.", sender_override = "Prison Automated Scheduler")
+				priority_announce("Attention occupants, it is now afternoon. The previous ration cycle has ended. All [population_name]s are to begin productive efforts, and to inquire authorised personnel for work if unemployed. Today's factory container fill goal is [factory_container_goal], compliance is mandatory.", "Work Notice.", sender_override = "[district_type] Automated Scheduler")
 
 			factory_containers_filled = 0
 
@@ -161,7 +177,7 @@ SUBSYSTEM_DEF(daylight)
 		if(day_cycle_active != DAY_CYCLE_DUSK && day_cycle_active != DAY_CYCLE_NIGHT)
 			day_cycle_active = DAY_CYCLE_DUSK
 			if(SSmapping.current_map.minetype != "combat_deployment" && SSmapping.current_map.roleplay_type != "outlands")
-				priority_announce("Attention occupants, night will be approaching shortly, and lockup will begin soon. Inmates are to get ready for lockup.", "Curfew Notice.", sender_override = "Prison Automated Scheduler")
+				priority_announce("Attention occupants, night will be approaching shortly, and lockup will begin soon. [population_name]s are to get ready for curfew.", "Curfew Notice.", sender_override = "[district_type] Automated Scheduler")
 		if(light_coefficient > 0.6)
 			light_coefficient -= 0.05
 
@@ -177,9 +193,9 @@ SUBSYSTEM_DEF(daylight)
 
 /datum/controller/subsystem/daylight/proc/return_time_of_day_message()
 	if(day_cycle_active == DAY_CYCLE_MORNING)
-		return "It is morning time."
+		return "It is morning time. The ration cycle is likely active now."
 	if(day_cycle_active == DAY_CYCLE_AFTERNOON)
-		return "It is the afternoon."
+		return "It is the afternoon. Worktime it is."
 	if(day_cycle_active == DAY_CYCLE_DUSK)
 		return "It is dusk. Night and its curfew will be fast approaching."
 	if(day_cycle_active == DAY_CYCLE_NIGHT)
