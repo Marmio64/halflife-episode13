@@ -165,6 +165,7 @@
 	var/unsanitary = TRUE
 	var/loot_type = /obj/effect/spawner/random/halflife/loot
 	var/good_loot_type = /obj/effect/spawner/random/halflife/loot/uncommon
+	var/intruder_loot = FALSE
 
 /obj/structure/halflife/trash/garbage/Initialize(mapload)
 	. = ..()
@@ -191,9 +192,14 @@
 
 	var/delay_time = 7 SECONDS - (user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER))
 	if(do_after(user, delay_time, src))
+		if(intruder_loot && HAS_TRAIT(user, TRAIT_THE_INTRUDER))
+			new /obj/effect/spawner/random/halflife/loot/intruder/crab/guaranteed(loc, 1)
+				user.visible_message(span_notice("[user] finds something inside the [src]."), \
+				span_notice("Looks like one of your friends stashed something useful here..."))
+			searched = TRUE
+			return
+
 		if(prob(loot_chance + (user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER))))
-			user.visible_message(span_notice("[user] finds something inside the [src]."), \
-				span_notice("You find something interesting inside the [src]."))
 			if(prob(user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER)))
 				new good_loot_type(loc, 1)
 			else
@@ -239,6 +245,7 @@
 	loot_type = /obj/effect/spawner/random/halflife/loot/scrap/three
 	good_loot_type = /obj/effect/spawner/random/halflife/loot/scrap/five
 	hl13hit_sounds = SFX_WOODIMPACT
+	intruder_loot = TRUE
 
 /obj/structure/halflife/trash/garbage/dumpster/crate/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))

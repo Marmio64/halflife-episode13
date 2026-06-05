@@ -196,6 +196,8 @@
 	//hl13 edit start
 	if(cmode_music)
 		spawned.cmode_music = cmode_music
+	if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
+		spawned.cmode_music = 'hl13/sound/music/combat/battleinthebase.ogg'
 
 	if(job_flags & JOB_COMBAT_DEPLOYMENT_JOB)
 		spawned_human.setdeploymentfaction(combat_deployment_faction)

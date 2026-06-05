@@ -553,7 +553,9 @@
 /area/halflife/indoors/intruder //some of these areas will extend into hallways for the alert system
 	name = "Unknown Area"
 	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'
-	ambient_buzz_vol = 80
+	ambient_buzz_vol = 30
+	ambient_music = 'hl13/sound/ambience/bgm/cobras.ogg'
+	ambient_music_vol = 15
 	sound_environment = SOUND_ENVIRONMENT_CAVE
 
 /area/halflife/indoors/intruder/barracks

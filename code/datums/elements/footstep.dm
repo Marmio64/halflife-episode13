@@ -212,6 +212,9 @@
 	if(HAS_TRAIT(source, TRAIT_LIGHT_STEP))
 		volume_multiplier = 0.6
 		range_adjustment = -2
+	if(HAS_TRAIT(source, TRAIT_QUIET_STEPS))
+		volume_multiplier = 0.25
+		range_adjustment = -4
 
 	// list returned by playsound() filled by client mobs who heard the footstep. given to play_fov_effect()
 	var/list/heard_clients

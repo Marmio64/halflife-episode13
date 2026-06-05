@@ -1,11 +1,13 @@
 /obj/item/grenade/flashbang
 	name = "flashbang"
 	icon_state = "flashbang"
+	desc = "A handheld flashbang grenade. It emits a blinding flash, and a booming bang, hence the name."
 	inhand_icon_state = "flashbang"
 	icon = 'hl13/icons/obj/grenade.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
 	possible_fuse_time = list("3", "4", "5")
+	det_time = 35
 	var/flashbang_range = 7 //how many tiles away the mob will be stunned.
 
 /obj/item/grenade/flashbang/apply_grenade_fantasy_bonuses(quality)

@@ -207,6 +207,10 @@
 /obj/effect/landmark/guard_start,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/intruder/medbay)
+"fp" = (
+/obj/machinery/door/unpowered/halflife/metal,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/intruder/lab)
 "fI" = (
 /obj/structure/sign/poster/halflife/combine/four{
 	pixel_y = 32
@@ -217,10 +221,21 @@
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/intruder/medbay)
+"fN" = (
+/obj/structure/closet/halflife{
+	anchored = 1
+	},
+/obj/effect/spawner/random/halflife/loot/intruder,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/intruder/storagea)
 "gc" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/intruder/barracks)
+"gi" = (
+/obj/structure/halflife/barrel/double/grey,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/intruder/storagea)
 "gx" = (
 /obj/structure/halflife/sign/clinic{
 	pixel_y = 0;
@@ -487,10 +502,10 @@
 	},
 /area/halflife/indoors/intruder/storageb)
 "op" = (
-/obj/structure/halflife/pipes/piped,
-/obj/machinery/light/directional/north,
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/intruder/lab)
+/obj/structure/halflife/storage/large/shelf,
+/obj/item/storage/box/lights/mixed,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/intruder/storageb)
 "oq" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/intruder/entrance)
@@ -528,6 +543,10 @@
 /obj/structure/halflife/pipes/horizontal,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/lab)
+"pb" = (
+/obj/machinery/escape_vent,
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/intruder/office)
 "pi" = (
 /obj/structure/sign/poster/halflife/combine/four{
 	pixel_y = 32
@@ -611,6 +630,12 @@
 /obj/structure/halflife/pipes/horizontal,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/intruder/storageb)
+"sP" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/intruder/storagea)
 "sW" = (
 /obj/structure/closet/halflife{
 	anchored = 1
@@ -705,6 +730,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/intruder/office)
+"wu" = (
+/obj/effect/spawner/random/halflife/loot/intruder,
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/intruder/entrance)
 "wv" = (
 /obj/structure/closet/cardboard,
 /obj/machinery/light/directional/west,
@@ -1097,6 +1126,7 @@
 /obj/structure/closet/halflife{
 	anchored = 1
 	},
+/obj/effect/spawner/random/halflife/loot/intruder,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/intruder/storagec)
 "KP" = (
@@ -1109,6 +1139,10 @@
 "KV" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/intruder/lab)
+"KW" = (
+/obj/structure/halflife/pipes/piped,
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/lab)
 "Lk" = (
 /obj/structure/table/halflife/no_smooth/metal,
@@ -1124,6 +1158,14 @@
 /obj/effect/koth_grace_field,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/intruder/storagea)
+"LC" = (
+/obj/structure/closet/halflife{
+	anchored = 1
+	},
+/obj/effect/spawner/random/halflife/loot/intruder,
+/obj/effect/spawner/random/halflife/loot/intruder,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/intruder/lab)
 "LI" = (
 /turf/open/floor/plating/indoor/tile/green,
 /area/halflife/indoors/intruder/barracks)
@@ -1198,6 +1240,13 @@
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/intruder/lab)
+"NO" = (
+/obj/structure/closet/halflife{
+	anchored = 1
+	},
+/obj/item/storage/box/lights/mixed,
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/intruder/office)
 "NT" = (
 /turf/closed/wall/halflife/concrete/bunker,
 /area/halflife/indoors/intruder/lab)
@@ -1319,6 +1368,10 @@
 "Tc" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/storageb)
+"Th" = (
+/obj/structure/closet/cardboard,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/intruder/storagec)
 "Ui" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/machinery/light/directional/north,
@@ -1404,6 +1457,14 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/barracks)
+"Wa" = (
+/obj/structure/halflife/pipes/horizontal,
+/obj/structure/closet/halflife{
+	anchored = 1
+	},
+/obj/effect/spawner/random/halflife/loot/intruder,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/intruder/storagec)
 "Wc" = (
 /obj/effect/landmark/hidden_spawnpoint,
 /obj/machinery/escape_vent{
@@ -3648,7 +3709,7 @@ lY
 lY
 eL
 lY
-lY
+en
 eL
 lY
 lY
@@ -3680,7 +3741,7 @@ EM
 yk
 vS
 kW
-mY
+op
 iG
 EM
 pq
@@ -3725,7 +3786,7 @@ tu
 tu
 tu
 tu
-tu
+sP
 tu
 xR
 xR
@@ -3798,12 +3859,12 @@ Fc
 Ch
 xT
 NT
-pq
-pq
-pq
-pq
-pq
-pq
+fN
+vm
+lY
+lY
+en
+lY
 FV
 iz
 XZ
@@ -3875,12 +3936,12 @@ Fc
 Cj
 si
 NT
-pq
-pq
-pq
-pq
-pq
-pq
+lY
+en
+en
+en
+en
+lY
 FV
 No
 XZ
@@ -3951,13 +4012,13 @@ si
 si
 si
 si
-NT
-pq
-pq
-pq
-pq
-pq
-pq
+fp
+en
+en
+eL
+gi
+lY
+eh
 FV
 iz
 XZ
@@ -4029,12 +4090,12 @@ si
 si
 si
 NT
-pq
-pq
-pq
-pq
-pq
-pq
+tu
+tu
+tu
+tu
+tu
+tu
 FV
 iX
 Kn
@@ -4188,7 +4249,7 @@ NT
 NT
 pq
 xR
-BI
+NO
 YX
 FV
 Vr
@@ -4398,7 +4459,7 @@ pq
 pq
 pq
 NT
-op
+Hs
 dD
 dD
 dD
@@ -4495,7 +4556,7 @@ yd
 dD
 NT
 xR
-YX
+pb
 YX
 YX
 Yt
@@ -4568,7 +4629,7 @@ DB
 si
 si
 NT
-ob
+LC
 HV
 NT
 xR
@@ -4863,7 +4924,7 @@ pq
 pq
 pq
 NT
-kS
+KW
 nL
 dD
 dD
@@ -4912,7 +4973,7 @@ kY
 kY
 kY
 Ah
-kY
+Th
 cS
 pq
 pq
@@ -4984,7 +5045,7 @@ cS
 IS
 IS
 cS
-Rt
+Wa
 Ah
 Ah
 Ah
@@ -5744,7 +5805,7 @@ XG
 nP
 ui
 MJ
-MJ
+wu
 OV
 pq
 pq

@@ -22,12 +22,34 @@
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
-	combat_music = 'hl13/sound/music/combat/bigshell.ogg'
 
 /datum/outfit/deployment_loadout/intruder/guard/pre_equip(mob/living/carbon/human/H)
-	.=..()
+	. = ..()
 	H.setdeploymentfaction(COMBINE_DEPLOYMENT_FACTION)
 	GLOB.guards_spawned++
+
+	ADD_TRAIT(H, TRAIT_NO_FOV_EFFECT, OUTFIT_TRAIT) //so you cant see snakes steps walking up to you
+
+	var/guard_preparedness = 0 //Guards are better prepared the more alerts there are, or if you've been killing a lot of their friends. Try to be nonlethal as the intruder maybe, and you know, avoid getting caught.
+
+	guard_preparedness += (GLOB.alert_phases - GLOB.false_alerts)
+	guard_preparedness += SSticker.tdm_combine_deaths
+
+	if(4 < guard_preparedness)
+		extra_dex = 2
+		extra_str = 2
+	if(9 < guard_preparedness)
+		extra_end = 3
+		extra_per = 2
+	if(14 < guard_preparedness)
+		H.dna.species.stunmod = 0.75
+	if(19 < guard_preparedness)
+		suit_store = /obj/item/gun/ballistic/automatic/m4a1/intruder/buffed
+	if(24 < guard_preparedness)
+		extra_end = 5
+		extra_dex = 5
+		extra_str = 5
+		suit = /obj/item/clothing/suit/armor/halflife/kevlar
 
 /obj/item/clothing/suit/armor/halflife/kevlar/guard
 	slowdown = 0.25
@@ -109,6 +131,6 @@
 		playsound(loc, 'hl13/sound/effects/alert.ogg', 50, FALSE, -5)
 		to_chat(user, span_notice("Alert phase has been activated and will end in one minute."))
 	else
-		to_chat(user, span_warning("You failed to report anything out of the ordinary. You will be able to report again in 15 seconds."))
-		personal_cooldown = 15 SECONDS
+		to_chat(user, span_warning("You failed to report anything out of the ordinary. You will be able to report again in 20 seconds."))
+		personal_cooldown = 20 SECONDS
 		can_report = FALSE

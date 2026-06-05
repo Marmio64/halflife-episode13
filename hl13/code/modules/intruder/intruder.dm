@@ -18,6 +18,9 @@
 
 	combat_music = 'hl13/sound/music/combat/bigshell.ogg' //i like this alert theme more than encounter tbh
 
+	extra_end = 2
+	extra_dex = 2
+
 /datum/outfit/deployment_loadout/intruder/solid/pre_equip(mob/living/carbon/human/H)
 	.=..()
 	ADD_TRAIT(H, TRAIT_NEVER_WOUNDED, OUTFIT_TRAIT)
@@ -26,6 +29,9 @@
 	ADD_TRAIT(H, TRAIT_NOHARDCRIT, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOSOFTCRIT, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_LIGHT_STEP, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_QUIET_STEPS, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_THE_INTRUDER, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_TOTAL_FOV, OUTFIT_TRAIT)
 	H.setdeploymentfaction(REBEL_DEPLOYMENT_FACTION)
 
 /datum/outfit/deployment_loadout/intruder/solid/post_equip(mob/living/carbon/human/H)
@@ -45,6 +51,9 @@
 	var/datum/martial_art/cqc/bigboss = new
 	bigboss.teach(H)
 
+	H.dna.species.stunmod = 0.75
+	H.mind?.adjust_experience(/datum/skill/scavenging, 1200)
+
 /obj/item/clothing/head/costume/snakeeater/solid
 	name = "Sneaking Bandana"
 	desc = "A blue bandana. You look quite solid with this bandana on, but unfortunately it doesn't provide infinite ammo."
@@ -58,6 +67,7 @@
 /obj/item/clothing/glasses/thermal/eyepatch/solid/Initialize(mapload)
 	. = ..()
 	START_PROCESSING(SSprocessing, src)
+	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EYES)) //for flashbangs. Won't completely stop them, but protects hearing and reduces stun time
 
 /obj/item/clothing/glasses/thermal/eyepatch/solid/process()
 	if(GLOB.alert_cooldown >= 1 SECONDS)
@@ -74,7 +84,7 @@
 /obj/item/clothing/suit/armor/halflife/milvest/solid
 	name = "Sneaking Suit"
 	desc = "Provides decent armor without slowing you down."
-	slowdown = -0.25
+	slowdown = -0.33 //you're pretty quick when you need to be, but low dexterity doesn't let you run for very long
 
 /obj/item/clothing/shoes/jackboots/civilprotection/solid
 	name = "Sneaking Shoes"
@@ -111,6 +121,7 @@
 		/obj/item/ammo_box/magazine/ar2,
 		/obj/item/stack/medical/gauze,
 		/obj/item/storage/box/lethalshot,
+		/obj/item/reagent_containers/hypospray/medipen/oxycodone,
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
 		/obj/item/reagent_containers/pill/patch/medkit/ration, //RATION HOLDER RATION HOLDER RATION HOLDER
 	))

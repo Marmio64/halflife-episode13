@@ -82,6 +82,8 @@
 
 #define TRAIT_THE_HIDDEN "the_hidden"
 
+#define TRAIT_THE_INTRUDER "the_intruder"
+
 #define TRAIT_SPARTAN "spartan"
 
 #define TRAIT_FILTHBORN "filthborn"
