@@ -20,7 +20,7 @@
 
 	extra_end = 5
 	extra_dex = 5
-	extra_str = 8
+	extra_str = 10
 
 /datum/outfit/deployment_loadout/intruder/solid/pre_equip(mob/living/carbon/human/H)
 	.=..()
@@ -54,7 +54,7 @@
 	var/datum/martial_art/cqc/bigboss = new
 	bigboss.teach(H)
 
-	H.dna.species.stunmod = 0.5
+	H.dna.species.stunmod = 0.25
 	H.mind?.adjust_experience(/datum/skill/scavenging, 1200)
 
 /obj/item/clothing/head/costume/snakeeater/solid
