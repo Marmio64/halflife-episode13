@@ -394,3 +394,42 @@
 
 	invocation = null
 	invocation_type = INVOCATION_NONE
+
+/datum/action/cooldown/spell/squad_alert
+	name = "Squad Alert"
+	desc = "You have had advanced micromachines known as nanites surgically implanted into you, which when activated will transmit a recording of your last moments to Overwatch in order to raise an alert. It will take them a few seconds to review the footage, however."
+	button_icon = 'hl13/icons/mob/actions/actions_vortal.dmi'
+	button_icon_state = "revive"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	check_flags = NONE
+	cooldown_time = 0
+	var/can_report = TRUE
+	var/transmitting = FALSE
+	var/transmission_timer
+
+/datum/action/cooldown/spell/squad_alert/cast(mob/living/user)
+	. = ..()
+	if(!can_report || GLOB.alert_cooldown >= 1 SECONDS) //cant go into alert while already on alert
+		return
+	if(!isliving(user))
+		return
+	if(user.stat != DEAD)
+		to_chat(user, span_notice("We aren't dead enough to do that yet!"))
+		return
+	var/mob/living/L = user
+	transmitting = !transmitting
+	if(transmitting)
+		to_chat(L, span_notice("Alert will be raised in 10 seconds."))
+		deltimer(transmission_timer)
+		transmission_timer = addtimer(CALLBACK(src, PROC_REF(squadalert), L), 10 SECONDS, TIMER_UNIQUE | TIMER_STOPPABLE)
+	else
+		to_chat(L, span_notice("The alert is already being raised."))
+		return
+
+/datum/action/cooldown/spell/squad_alert/proc/squadalert(mob/living/carbon/user)
+	can_report = FALSE //cant do it again
+	GLOB.alert_phases++
+	user.do_alert_animation()
+	playsound(user.loc, 'hl13/sound/effects/alert.ogg', 50, FALSE, -5)
+	to_chat(user, span_notice("Alert phase has been activated and will end in one minute."))

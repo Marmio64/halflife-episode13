@@ -221,3 +221,35 @@ GLOBAL_VAR_INIT(rebel_main_bunker_created, FALSE)
 
 /obj/effect/landmark/navigate_destination/halflife/mines
 	location = "Mines"
+
+/// INTRUDER LANDMARKS (PRETTY IMPORTANT FOR THIS KIND OF MAP I WOULD THINK)
+
+/obj/effect/landmark/navigate_destination/halflife/intruder/barracks
+	location = "Conscript Barracks"
+
+/obj/effect/landmark/navigate_destination/halflife/intruder/storagea
+	location = "Storage Room A"
+
+/obj/effect/landmark/navigate_destination/halflife/intruder/storageb
+	location = "Storage Room B"
+
+/obj/effect/landmark/navigate_destination/halflife/intruder/storagec
+	location = "Storage Room C"
+
+/obj/effect/landmark/navigate_destination/halflife/intruder/entrance
+	location = "Entrance Room"
+
+/obj/effect/landmark/navigate_destination/halflife/intruder/lab
+	location = "R&D Laboratory"
+
+/obj/effect/landmark/navigate_destination/halflife/intruder/office
+	location = "Lieutenant's Office"
+
+/obj/effect/landmark/navigate_destination/halflife/intruder/cafeteria
+	location = "Cafeteria"
+
+/obj/effect/landmark/navigate_destination/halflife/intruder/medbay
+	location = "Medbay"
+
+/obj/effect/landmark/navigate_destination/halflife/intruder/lockerroom
+	location = "Conscript Locker Room"

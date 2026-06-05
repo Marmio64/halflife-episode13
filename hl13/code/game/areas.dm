@@ -548,6 +548,43 @@
 
 	first_time_sound = null
 
+// intruder gamemode areas
+
+/area/halflife/indoors/intruder //some of these areas will extend into hallways for the alert system
+	name = "Unknown Area"
+	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'
+	ambient_buzz_vol = 80
+	sound_environment = SOUND_ENVIRONMENT_CAVE
+
+/area/halflife/indoors/intruder/barracks
+	name = "Conscript Barracks"
+
+/area/halflife/indoors/intruder/storagea
+	name = "Storage Room A"
+
+/area/halflife/indoors/intruder/storageb
+	name = "Storage Room B"
+
+/area/halflife/indoors/intruder/storagec
+	name = "Storage Room C"
+
+/area/halflife/indoors/intruder/entrance
+	name = "Entrance Room"
+
+/area/halflife/indoors/intruder/lab
+	name = "R&D Laboratory"
+
+/area/halflife/indoors/intruder/office
+	name = "Lieutenant's Office"
+
+/area/halflife/indoors/intruder/cafeteria
+	name = "Cafeteria"
+
+/area/halflife/indoors/intruder/medbay
+	name = "Medbay"
+
+/area/halflife/indoors/intruder/lockerroom
+	name = "Conscript Locker Room"
 
 // coastal district areas
 

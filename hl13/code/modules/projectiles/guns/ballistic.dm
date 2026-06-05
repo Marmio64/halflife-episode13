@@ -129,6 +129,9 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.28 SECONDS, overtime_penalty_freebies = 4, overtime_penalty_increase = 2, overtime_penalty_cap = 14)
 
+/obj/item/gun/ballistic/automatic/m4a1/intruder
+	pin = /obj/item/firing_pin/implant/mindshield
+
 //sidegrade to the m4a1. Heavier duty: More spread, damage and recoil and less firing speed.
 //about 1.85 seconds TTK, and good AP
 /obj/item/gun/ballistic/automatic/ak47
