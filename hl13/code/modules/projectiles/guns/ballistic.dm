@@ -173,11 +173,15 @@
 	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = fire_rate, overtime_penalty_freebies = 3, overtime_penalty_increase = 2, overtime_penalty_cap = 14)
 
 /obj/item/gun/ballistic/automatic/ak47/cheap
-	name = "\improper Cheap AK-47 Rifle"
+	name = "\improper Jury-rigged AK-47 Rifle"
 	icon_state = "cheapak47"
-	desc = "An old AK-47 without the stock. This thing is going to kick like a mule without that stock... but it should still hit just as hard. This one looks like it was made with less quality control, and may fire more slowly than most AK-47s."
+	desc = "This is a jury-rigged looking AK-47 without the stock designed to be used with higher powder cartridges. Whatever madman made this certainly didn't care about accuracy or firerate, but rather raw power."
 	fire_rate = 0.5 SECONDS
 	fire_delay = 5
+	projectile_damage_multiplier = 1.18 //about 33 damage per bullet instead of 28
+
+/obj/item/gun/ballistic/automatic/ak47/cheap/deployment_pin
+	pin = /obj/item/firing_pin/implant/pindicate
 
 /obj/item/gun/ballistic/automatic/rpd
 	name = "\improper RPD Machine Gun"
@@ -499,6 +503,10 @@
 
 	weapon_category = WEAPON_CAT_SHOTGUN
 
+/obj/item/gun/ballistic/shotgun/spas12/freeman
+	desc = "A spectacularly lethal pump action shotgun, for close encounters. This one has a pristine and powerful looking appearence."
+	projectile_damage_multiplier = 1.2
+
 /obj/item/gun/ballistic/shotgun/spas12/try_fire_gun(atom/target, mob/living/user, params)
 	if(LAZYACCESS(params2list(params), RIGHT_CLICK))
 		altfire = TRUE
@@ -808,7 +816,8 @@
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
 	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. This one looks a little better than most, it should jam less often."
 	jamming_chance = 5
-	projectile_damage_multiplier = 1.45 //approx 40 damage a shot
+	projectile_damage_multiplier = 1.61 //approx 45 damage a shot
+	fire_delay = 4
 	can_parry = TRUE
 	wdefense = 3
 
@@ -1024,6 +1033,9 @@
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
 	weapon_category = WEAPON_CAT_SPECIALTY
+
+/obj/item/gun/ballistic/rocketlauncher/halflife/deployment_pin
+	pin = /obj/item/firing_pin/implant/pindicate
 
 /obj/item/ammo_box/magazine/internal/rocketlauncher_halflife
 	name = "rocket launcher internal magazine"

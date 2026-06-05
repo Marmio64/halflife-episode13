@@ -77,6 +77,9 @@
 /obj/item/crowbar/large/freeman/extreme
 	force = 32
 
+/obj/item/crowbar/large/freeman/deployment
+	force = 28
+
 /obj/item/crowbar/large/emergency
 	name = "emergency crowbar"
 	desc = "It's a bulky crowbar. It almost seems deliberately designed to not be able to fit inside of a backpack."

@@ -77,6 +77,11 @@
 /obj/machinery/deployment_points_flag/combine,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
+"dc" = (
+/obj/effect/koth_grace_field,
+/obj/structure/trap/deployment_spawn_prot/xen,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city/zombies)
 "de" = (
 /obj/machinery/combine_walllight/directional/west,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -295,6 +300,11 @@
 "sd" = (
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/zombies)
+"ss" = (
+/obj/effect/koth_grace_field,
+/obj/structure/trap/deployment_spawn_prot/xen,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/zombies)
 "sB" = (
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/ground/brickroad,
@@ -335,6 +345,10 @@
 "ud" = (
 /obj/structure/halflife/cone,
 /turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/zombies)
+"ur" = (
+/obj/structure/trap/deployment_spawn_prot/xen,
+/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/zombies)
 "uA" = (
 /obj/structure/table/halflife/no_smooth/large/metal,
@@ -381,9 +395,19 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"xj" = (
+/obj/effect/koth_grace_field,
+/obj/structure/trap/deployment_spawn_prot/xen,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city/zombies)
 "xv" = (
 /obj/effect/koth_grace_field,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city/zombies)
+"xB" = (
+/obj/effect/koth_grace_field,
+/obj/structure/trap/deployment_spawn_prot/xen,
+/turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/zombies)
 "xC" = (
 /obj/structure/halflife/road_barrier/combine{
@@ -519,6 +543,11 @@
 "Gz" = (
 /obj/machinery/combine_walllight/directional/south,
 /turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/outdoors/deployment_city/zombies)
+"GN" = (
+/obj/effect/koth_grace_field,
+/obj/structure/trap/deployment_spawn_prot/xen,
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/zombies)
 "GV" = (
 /obj/structure/barricade/sandbags,
@@ -728,6 +757,11 @@
 /obj/structure/halflife/road_barrier/combine,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/outdoors/deployment_city/zombies)
+"Vv" = (
+/obj/effect/koth_grace_field,
+/obj/structure/trap/deployment_spawn_prot/xen,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city/zombies)
 "VQ" = (
 /obj/item/halflife/nutrient_bar_wrapping/beef,
 /obj/item/halflife/nutrient_bar_wrapping/beef,
@@ -806,6 +840,10 @@
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"Zy" = (
+/obj/structure/trap/deployment_spawn_prot/xen,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city/zombies)
 "ZI" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/stack/medical/bandage/makeshift,
@@ -7484,14 +7522,14 @@ jH
 jH
 jH
 rl
-Jm
-Jm
-Jm
-Kh
-Kh
-Kh
-Kt
-Kt
+ur
+ur
+ur
+xB
+xB
+xB
+xj
+xj
 gg
 "}
 (48,1,1) = {"
@@ -7626,7 +7664,7 @@ jH
 jH
 jH
 sd
-sd
+Zy
 uJ
 uJ
 uJ
@@ -7768,7 +7806,7 @@ jH
 jH
 jH
 sd
-sd
+Zy
 uJ
 zn
 jo
@@ -7910,7 +7948,7 @@ sd
 jH
 jH
 Jm
-Jm
+ur
 uJ
 zn
 fP
@@ -8052,7 +8090,7 @@ jH
 jH
 jH
 jH
-Jm
+ur
 uJ
 zn
 fP
@@ -8194,7 +8232,7 @@ sd
 jH
 jH
 jH
-sd
+Zy
 uJ
 Qf
 fP
@@ -8336,7 +8374,7 @@ jH
 jH
 jH
 rl
-sd
+Zy
 uJ
 Qf
 fP
@@ -8478,7 +8516,7 @@ It
 jH
 jH
 It
-xv
+dc
 uJ
 uJ
 uJ
@@ -8620,7 +8658,7 @@ Ep
 jH
 jH
 Ep
-Bh
+Vv
 iG
 iG
 iG
@@ -8762,7 +8800,7 @@ gu
 jH
 jH
 jH
-DJ
+ss
 QA
 ts
 QA
@@ -8904,7 +8942,7 @@ gu
 jH
 jH
 jH
-DJ
+ss
 QA
 QA
 ts
@@ -9046,7 +9084,7 @@ jH
 jH
 jH
 GX
-Ic
+GN
 po
 po
 po
@@ -9188,7 +9226,7 @@ jH
 jH
 GX
 GX
-Ic
+GN
 po
 po
 po
@@ -9330,7 +9368,7 @@ jH
 jH
 GX
 GX
-Ic
+GN
 po
 po
 po
@@ -9472,7 +9510,7 @@ jH
 jH
 GX
 GX
-Ic
+GN
 po
 po
 po
@@ -9614,7 +9652,7 @@ jH
 jH
 jH
 GX
-Ic
+GN
 po
 sB
 sB
@@ -9756,7 +9794,7 @@ gu
 jH
 jH
 gu
-DJ
+ss
 QA
 ts
 ts
@@ -9898,7 +9936,7 @@ gu
 gu
 jH
 jH
-DJ
+ss
 QA
 QA
 ts
@@ -10040,7 +10078,7 @@ Ep
 Ep
 Ep
 jH
-Bh
+Vv
 iG
 iG
 iG
@@ -10182,7 +10220,7 @@ It
 It
 jH
 jH
-xv
+dc
 uJ
 uJ
 uJ
@@ -10324,7 +10362,7 @@ sd
 sd
 jH
 rl
-sd
+Zy
 uJ
 Qf
 jo
@@ -10466,7 +10504,7 @@ sd
 jH
 jH
 sd
-sd
+Zy
 uJ
 Qf
 jo
@@ -10608,7 +10646,7 @@ sd
 jH
 jH
 sd
-sd
+Zy
 uJ
 Qf
 fP
@@ -10750,7 +10788,7 @@ sd
 jH
 jH
 Jm
-Jm
+ur
 uJ
 zn
 jo
@@ -10892,7 +10930,7 @@ Jm
 Jm
 jH
 Jm
-sd
+Zy
 uJ
 zn
 jo
@@ -11034,7 +11072,7 @@ Jm
 jH
 jH
 Jm
-sd
+Zy
 uJ
 uJ
 uJ
@@ -11176,14 +11214,14 @@ Jm
 jH
 jH
 rl
-Jm
-Jm
-Jm
-Kh
-Kh
-Kh
-Kt
-Kt
+ur
+ur
+ur
+xB
+xB
+xB
+xj
+xj
 gg
 "}
 (74,1,1) = {"

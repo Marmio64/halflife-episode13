@@ -97,6 +97,7 @@
 
 /mob/living/basic/halflife/headcrab/deployment
 	melee_attack_cooldown = 1 SECONDS
+	melee_damage_upper = 16
 	obj_damage = 12
 
 /mob/living/basic/halflife/headcrab/armored
@@ -111,6 +112,8 @@
 
 /mob/living/basic/halflife/headcrab/armored/deployment
 	melee_attack_cooldown = 1.5 SECONDS
+	maxHealth = 75
+	health = 75
 
 /mob/living/basic/halflife/headcrab/armored/ghost_controlled/Initialize(mapload)
 	. = ..()
@@ -119,6 +122,7 @@
 		ban_type = ROLE_SENTIENCE,\
 		poll_ignore_key = POLL_IGNORE_BLOB,\
 		poll_candidates = TRUE,\
+		poll_length = 5 SECONDS,\
 	)
 
 /mob/living/basic/halflife/headcrab/poison
@@ -151,7 +155,7 @@
 
 /mob/living/basic/halflife/headcrab/poison/deadly
 	poison_type = /datum/reagent/toxin/headcrab_venom/deadly
-	poison_per_bite = 6
+	poison_per_bite = 8
 	melee_attack_cooldown = 1.5 SECONDS
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/headcrab/poison
@@ -186,12 +190,12 @@
 	zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed/fast
 
 /mob/living/basic/halflife/headcrab/fast/deployment
-	melee_attack_cooldown = 1.5 SECONDS
+	melee_attack_cooldown = 1.25 SECONDS
 
 /mob/living/basic/halflife/headcrab/fast/upgraded
-	melee_attack_cooldown = 1.25 SECONDS
-	melee_damage_lower = 9
-	melee_damage_upper = 15
+	melee_attack_cooldown = 0.7 SECONDS
+	maxHealth = 30
+	health = 30
 	speed = -0.2
 
 /mob/living/basic/halflife/headcrab/baby

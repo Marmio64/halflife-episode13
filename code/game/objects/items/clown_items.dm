@@ -12,7 +12,7 @@
 
 /obj/item/soap
 	name = "soap"
-	desc = "A cheap bar of soap. Doesn't smell."
+	desc = "A sad, sickly looking green bar of soap. Has no scent, and you can't tell whether it is combine made or just extremely old."
 	gender = PLURAL
 	icon = 'icons/obj/watercloset.dmi'
 	icon_state = "soap"

@@ -59,3 +59,8 @@
 	unit_name = "completed advanced military goods boxes"
 	export_types = list(/obj/item/factory_construction/full_container/advanced/military)
 	socio_value = 5
+
+/datum/export/nutricube
+	cost = CARGO_CRATE_VALUE
+	unit_name = "nutricubes"
+	export_types = list(/obj/item/food/nutripaste/nutricube)

@@ -207,7 +207,9 @@
 	maxHealth = 400
 	health = 400
 	obj_damage = 40
+	armour_penetration = 80
 	speed = 0.7
+	damage_coeff = list(BRUTE = 1, BURN = 0.75, TOX = 1, STAMINA = 1, OXY = 1)
 	faction = list(FACTION_ANTLION, FACTION_HEADCRAB)
 
 /mob/living/basic/halflife/antlion_guard/weak

@@ -36,16 +36,16 @@
 		/datum/reagent/toxin/bad_food = 3,
 	)
 	tastes = list("expired fish" = 1)
-	foodtypes = MEAT | TOXIC | RAW
 
 
 /obj/item/food/canned/halflife/seafood/expired/open_can(mob/user)
 	. = ..()
 	desc = "The contents of this tin look extremely off, it might not be wise to eat out of it, not to mention the absolutely disgusting stench emanating from it."
+	foodtypes = MEAT | TOXIC | RAW
 
 /obj/item/food/canned/halflife/crisps
 	name = "tin of crisps"
-	desc = "A tin tube filled with crisps. They're stale, but the salt is good as ever at least."
+	desc = "A tin tube filled with crisps. They're stale, but the salt is good as ever at least, and it is still gourmet in comparison to rations."
 	icon_state = "crisps"
 	trash_type = /obj/item/trash/can/food/halflife/crisps
 	food_reagents = list(

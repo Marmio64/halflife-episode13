@@ -32,3 +32,15 @@
 /obj/structure/trap/deployment_spawn_prot/combine
 	team = COMBINE_DEPLOYMENT_FACTION
 	icon_state = "trap-frost"
+
+/obj/structure/trap/deployment_spawn_prot/xen
+	team = XEN_DEPLOYMENT_FACTION
+	icon_state = "trap-earth"
+
+/obj/structure/trap/deployment_spawn_prot/xen/trap_effect(mob/living/living)
+	if(GLOB.deployment_win_team && GLOB.deployment_win_team != team) //disable protection so that winners can pass through to finish the job
+		return
+	if(living.deployment_faction != team && !(living.mob_biotypes & MOB_XENIAN))
+		to_chat(living, span_bolddanger("Stay out of the enemy spawn!"))
+		living.investigate_log("has died from entering the enemy spawn.", INVESTIGATE_DEATHS)
+		living.apply_damage(300) //Damage instead of instant death so we trigger the damage signal.

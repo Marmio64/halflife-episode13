@@ -125,9 +125,9 @@
 /mob/living/basic/halflife/zombie/gonome/complete/deployment
 	maxHealth = 400
 	health = 400
-	speed = 1.4
-	headcrab_delay = 2 SECONDS
-	melee_attack_cooldown = 1.5 SECONDS
+	speed = 1.3
+	headcrab_delay = 1.5 SECONDS
+	melee_attack_cooldown = 1.25 SECONDS
 
 /mob/living/basic/halflife/zombie/gonome/complete/cash_gorged
 	name = "Cash-gorged Gonome"
@@ -203,7 +203,7 @@
 		slime_owner.icon_living = "gonome"
 		slime_owner.melee_damage_lower = 30
 		slime_owner.melee_damage_upper = 35
-		slime_owner.maxHealth = 500 //slightly more HP in exchange for the evolution effort
+		slime_owner.maxHealth = 525 //slightly more HP in exchange for the evolution effort
 		slime_owner.fully_grown = TRUE
 		slime_owner.speed = 1.6
 

@@ -121,8 +121,8 @@
 
 /obj/item/hl2/supply_radio/rebel/lieutenant
 	name = "PLF Lieutenant Supply Radio"
-	max_cash_regeneration = 3
-	final_allowed_cash = 300
+	max_cash_regeneration = 4
+	final_allowed_cash = 325
 
 /obj/item/hl2/supply_radio/combine
 	name = "Combine Supply Radio"
@@ -218,7 +218,7 @@
 /datum/supply_beacon_option/rocket_launcher
 	option_name = "Rocket Launcher (350 Points)"
 	cost = 350
-	spawn_path = /obj/item/gun/ballistic/rocketlauncher/halflife
+	spawn_path = /obj/item/gun/ballistic/rocketlauncher/halflife/deployment_pin
 
 /datum/supply_beacon_option/missile_targeter
 	option_name = "One-use Missile Targeter (375 Points)"

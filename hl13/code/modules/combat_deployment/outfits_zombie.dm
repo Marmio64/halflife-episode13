@@ -255,6 +255,7 @@
 
 	extra_str = 7
 	extra_end = 4
+	extra_dex = 5
 	mob_to_be = null
 
 /datum/outfit/deployment_loadout/xen/tier5/heavy_crab_walker/pre_equip(mob/living/carbon/human/H)

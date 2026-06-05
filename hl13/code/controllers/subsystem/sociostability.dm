@@ -112,7 +112,7 @@ SUBSYSTEM_DEF(sociostability)
 	sociostability = 0
 	distress_beacon_success = TRUE
 
-	if(prob(66))
+	if(prob(75))
 		if(prob(33))
 			addtimer(CALLBACK(src, PROC_REF(trigger_Emergencyresponseteam), /datum/ert/overwatch), 45 SECONDS)
 		else if(prob(50))

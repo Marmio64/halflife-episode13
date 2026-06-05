@@ -104,6 +104,9 @@
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 
+	extra_dex = 2
+	extra_str = 2
+
 /datum/outfit/deployment_loadout/combine/tier2/infestation_control
 	name = "Deployment: Upgraded Infestation Control"
 	display_name = "Upgraded Infestation Control (Offense)"
@@ -648,6 +651,9 @@
 	)
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/overseer_viscerator)
+
+	extra_dex = 2
+	extra_str = 4
 
 ////////////////////// TIER 5 /////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier5
