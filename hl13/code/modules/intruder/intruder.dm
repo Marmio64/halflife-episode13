@@ -19,7 +19,7 @@
 	combat_music = 'hl13/sound/music/combat/bigshell.ogg' //i like this alert theme more than encounter tbh
 
 	extra_end = 5
-	extra_dex = 3
+	extra_dex = 5
 	extra_str = 8
 
 /datum/outfit/deployment_loadout/intruder/solid/pre_equip(mob/living/carbon/human/H)
@@ -33,6 +33,8 @@
 	ADD_TRAIT(H, TRAIT_QUIET_STEPS, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_THE_INTRUDER, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_TOTAL_FOV, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_SKITTISH, OUTFIT_TRAIT)
+
 	H.setdeploymentfaction(REBEL_DEPLOYMENT_FACTION)
 
 /datum/outfit/deployment_loadout/intruder/solid/post_equip(mob/living/carbon/human/H)
@@ -52,7 +54,7 @@
 	var/datum/martial_art/cqc/bigboss = new
 	bigboss.teach(H)
 
-	H.dna.species.stunmod = 0.75
+	H.dna.species.stunmod = 0.5
 	H.mind?.adjust_experience(/datum/skill/scavenging, 1200)
 
 /obj/item/clothing/head/costume/snakeeater/solid
@@ -85,7 +87,7 @@
 /obj/item/clothing/suit/armor/halflife/milvest/solid
 	name = "Sneaking Suit"
 	desc = "Provides decent armor without slowing you down."
-	slowdown = -0.33 //you're pretty quick when you need to be, but low dexterity doesn't let you run for very long
+	slowdown = -0.5 //you're pretty quick when you need to be, but low dexterity doesn't let you run for very long
 
 /obj/item/clothing/shoes/jackboots/civilprotection/solid
 	name = "Sneaking Shoes"
@@ -94,13 +96,14 @@
 
 /obj/item/gun/ballistic/automatic/pistol/usp/suppressed/solid
 	desc = "A small and light 9mm pistol which is often used as a metropolice standard carry. Unlike most found in the city, nearly every part of this gun has been expertly crafted and customized. Where'd you get something like this...?"
-	projectile_damage_multiplier = 2
+	projectile_damage_multiplier = 2.5
 
 /obj/item/storage/belt/civilprotection/polish_resistance/solid
 	desc = "Heavy duty belt for containing metrocop standard gear. Can also carry rations."
 
 /obj/item/storage/belt/civilprotection/polish_resistance/solid/Initialize(mapload)
 	. = ..()
+	atom_storage.max_slots = 9
 	atom_storage.set_holdable(list(
 		/obj/item/ammo_box,
 		/obj/item/ammo_casing/shotgun,
@@ -133,6 +136,7 @@
 	SSwardrobe.provide_type(/obj/item/knife/combat, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
+	SSwardrobe.provide_type(/obj/item/grenade/flashbang, src)
 	SSwardrobe.provide_type(/obj/item/grenade/flashbang, src)
 	update_appearance(UPDATE_ICON)
 

@@ -18,10 +18,13 @@
 	l_pocket = /obj/item/hl2/intruder_radio
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m4a1 = 3,
+		/obj/item/ammo_box/magazine/m4a1 = 2,
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
+
+	extra_dex = -2
+	extra_str = -2
 
 /datum/outfit/deployment_loadout/intruder/guard/pre_equip(mob/living/carbon/human/H)
 	. = ..()
