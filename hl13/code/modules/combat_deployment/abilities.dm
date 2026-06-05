@@ -402,6 +402,7 @@
 	button_icon_state = "revive"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 
+	spell_requirements = NONE
 	check_flags = NONE
 	cooldown_time = 0
 	var/can_report = TRUE
