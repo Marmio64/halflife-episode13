@@ -131,6 +131,7 @@
 
 /obj/item/gun/ballistic/automatic/m4a1/intruder
 	pin = /obj/item/firing_pin/implant/mindshield
+	projectile_damage_multiplier = 0.8
 
 /obj/item/gun/ballistic/automatic/m4a1/intruder/buffed
 	name = "\improper Refined M4A1 Rifle"
