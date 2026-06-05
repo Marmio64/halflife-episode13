@@ -1,6 +1,6 @@
 /datum/job/head_of_security
 	title = JOB_HEAD_OF_SECURITY
-	description = "Command over the prison's civil protection team to ensure everything runs smoothly. Protect the Warden when necessary, though remember you have loyalties to Overwatch over them."
+	description = "Command over the district's civil protection team to ensure everything runs smoothly. Protect the Warden/District Administrator when necessary, though remember you have loyalties to Overwatch over them."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
 	department_head = list(JOB_CAPTAIN)
 	head_announce = list(RADIO_CHANNEL_SECURITY)

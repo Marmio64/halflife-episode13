@@ -1,6 +1,6 @@
 /datum/job/head_of_personnel
 	title = JOB_HEAD_OF_PERSONNEL
-	description = "Organize work tasks for the prisoners, and order any necessary materials you see fit. Listen to the Warden when they boss you around."
+	description = "Organize work tasks for the prisoners/citizens, and order any necessary materials you see fit. Listen to the Warden/District Administrator when they boss you around."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
 	department_head = list(JOB_CAPTAIN)
 	head_announce = list(RADIO_CHANNEL_SERVICE)

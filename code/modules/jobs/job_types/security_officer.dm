@@ -1,6 +1,6 @@
 /datum/job/security_officer
 	title = JOB_SECURITY_OFFICER
-	description = "Follow the orders of the Warden and Divisional Lead, and ensure the prisoners do their jobs without getting rebellious thoughts."
+	description = "Follow the orders of the Warden/District Administrator and Divisional Lead, and ensure the prisoners/citizens do their jobs without getting rebellious thoughts."
 	auto_deadmin_role_flags = DEADMIN_POSITION_SECURITY
 	department_head = list(JOB_HEAD_OF_SECURITY)
 	faction = FACTION_STATION

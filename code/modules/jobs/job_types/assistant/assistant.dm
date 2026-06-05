@@ -63,7 +63,7 @@ Assistant
 	rpg_title = "Lout"
 	config_tag = "ASSISTANT"
 
-	gameplay_help = "As a Prisoner, you have no reason to suck up to the combine, unless you're looking to brown nose your way to loyalty status and get some better food. You are free to stir trouble, stage riots, work as you are told, or even snitch on comrades for a reward."
+	gameplay_help = "As a Prisoner/Citizen, you have no reason to suck up to the combine, unless you're looking to brown nose your way to loyalty status and get some better food. You are free to stir trouble, stage riots, work as you are told, or even snitch on comrades for a reward."
 
 /datum/outfit/job/assistant
 	name = JOB_ASSISTANT
@@ -80,12 +80,21 @@ Assistant
 /datum/outfit/job/assistant/preview
 	name = "Assistant - Preview"
 
+/datum/outfit/job/assistant/pre_equip(mob/living/carbon/human/H, visuals_only = FALSE)
+	..()
+	if(SSmapping.current_map.roleplay_type == "city")
+		uniform = /obj/item/clothing/under/citizen
+		gloves = null
+
 /datum/outfit/job/assistant/post_equip(mob/living/carbon/human/user, visuals_only = FALSE) //hl13 edit, change id to random unused cell + number
 	. = ..()
 
-	var/cell = "NULL"
+	ADD_TRAIT(user, TRAIT_PRISONER, JOB_TRAIT) //still useful for city stuff too
 
-	ADD_TRAIT(user, TRAIT_PRISONER, JOB_TRAIT)
+	if(SSmapping.current_map.roleplay_type == "city")
+		return FALSE
+
+	var/cell = "NULL"
 
 	if(length(GLOB.availablecells) > 0)
 		if(user.mind)

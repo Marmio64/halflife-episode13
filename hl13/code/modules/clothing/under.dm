@@ -316,7 +316,7 @@
 
 /obj/item/clothing/under/administrator
 	name = "administrator suit"
-	desc = "A well made, though aged, burgundy suit. Specially tailored for the warden."
+	desc = "A well made, though aged, burgundy suit. Specially tailored for high ranking district staff."
 	worn_icon = 'hl13/icons/mob/clothing/uniform.dmi'
 	icon = 'hl13/icons/obj/clothing/uniforms.dmi'
 	can_adjust = FALSE
@@ -328,7 +328,7 @@
 
 /obj/item/clothing/under/administrator/black
 	name = "administrator suit"
-	desc = "A well made black suit, specially tailored for the warden."
+	desc = "A well made black suit, specially tailored for high ranking district staff."
 	icon_state = "formal"
 	inhand_icon_state = "lawyer_black"
 
@@ -340,7 +340,7 @@
 
 /obj/item/clothing/under/halflife/labor_lead
 	name = "old administrative suit"
-	desc = "A pretty good, old and dusty suit. Not specially tailored for the warden, but still looks fancy."
+	desc = "A pretty good, old and dusty suit. Not specially tailored for high ranking district staff, but still looks fancy."
 	can_adjust = FALSE
 	has_sensor = LOCKED_SENSORS
 	sensor_mode = SENSOR_COORDS
@@ -349,7 +349,7 @@
 
 /obj/item/clothing/under/halflife/brownsuit
 	name = "old administrative suit"
-	desc = "A pretty good, old and dusty suit. Not specially tailored for the warden, but still looks fancy."
+	desc = "A pretty good, old and dusty suit. Not specially tailored for high ranking district staff, but still looks fancy."
 	can_adjust = FALSE
 	has_sensor = LOCKED_SENSORS
 	sensor_mode = SENSOR_COORDS

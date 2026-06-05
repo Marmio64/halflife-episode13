@@ -162,11 +162,11 @@
 */
 
 /datum/objective_item/steal/warden_key
-	name = "the warden's office key"
+	name = "the warden's/district admin's office key"
 	targetitem = /obj/item/hl2key/townhall
 	exists_on_map = TRUE
 	difficulty = 4
-	steal_hint = "The warden's personal office key. Found on their desk, or possibly their person."
+	steal_hint = "The warden's/district administrator's personal office key. Found on their desk, or possibly their person."
 
 /obj/item/hl2key/townhall/add_stealing_item_objective()
 	return add_item_to_steal(src, /obj/item/hl2key/townhall)

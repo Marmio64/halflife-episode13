@@ -1,6 +1,6 @@
 /datum/job/cook
 	title = JOB_COOK
-	description = "Operate the prison cafeteria, ensuring inmates and staff alike are fed so neither attempt to kill you. You're still officially an inmate yourself unlike unionized prison staff, but due to a lower crime are afforded more amenities."
+	description = "Operate the cafeteria, ensuring people are fed while trying to make some money in sales."
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
 	faction = FACTION_STATION
 	total_positions = 1
@@ -85,6 +85,9 @@
 			head = /obj/item/clothing/head/soft/mime
 		if(!visuals_only)
 			other_chefs.cooks++
+
+	if(SSmapping.current_map.roleplay_type == "city")
+		uniform = /obj/item/clothing/under/citizen
 
 /datum/outfit/job/cook/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()

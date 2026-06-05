@@ -1,7 +1,7 @@
 /datum/job/captain
 	title = JOB_CAPTAIN
-	description = "Be responsible for the prison, manage your underlings, \
-		keep the prison functioning, be prepared to do anything and everything or die \
+	description = "Be responsible for the district, manage your underlings, \
+		keep the place functioning, be prepared to do anything and everything or die \
 		horribly trying."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
 	department_head = list("CentCom")
@@ -65,7 +65,7 @@
 	. += "\nYou have access to all radio channels, but they are not automatically tuned. Check your radio for more information."
 
 /datum/outfit/job/captain
-	name = "Warden"
+	name = "Warden/District Administrator"
 	jobtype = /datum/job/captain
 
 	id = /obj/item/card/id/advanced/halflife/combine/four

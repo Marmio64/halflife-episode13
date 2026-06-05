@@ -1,6 +1,6 @@
 /datum/job/doctor
 	title = JOB_MEDICAL_DOCTOR
-	description = "Operate the infirmary and heal injured prisoners and others as they come in."
+	description = "Operate the infirmary and heal injured prisoners/citizens and others as they come in."
 	department_head = list(JOB_CHIEF_MEDICAL_OFFICER)
 	faction = FACTION_STATION
 	total_positions = 2
