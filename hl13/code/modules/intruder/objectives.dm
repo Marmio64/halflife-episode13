@@ -72,13 +72,15 @@ GLOBAL_LIST_EMPTY(node_terminals)
 	.=..()
 	GLOB.node_terminals += src
 
-/obj/machinery/combine_distressterminal/examine(mob/user)
+/obj/machinery/combine_node/examine(mob/user)
 	. = ..()
-	if(user.deployment_faction == REBEL_DEPLOYMENT_FACTION)
-		if(real_terminal)
-			. += span_warning("This node appears to be one of your objectives!")
-		else
-			. += span_notice("This node is not one of your objectives.")
+	if(ishuman(user))
+		var/mob/living/carbon/human/human_user = user
+		if(human_user.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			if(real_terminal)
+				. += span_warning("This node appears to be one of your objectives!")
+			else
+				. += span_notice("This node is not one of your objectives.")
 
 /obj/machinery/combine_node/interact(mob/living/carbon/human/user)
 	. = ..()

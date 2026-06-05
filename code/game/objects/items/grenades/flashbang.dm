@@ -2,6 +2,7 @@
 	name = "flashbang"
 	icon_state = "flashbang"
 	inhand_icon_state = "flashbang"
+	icon = 'hl13/icons/obj/grenade.dmi'
 	lefthand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
 	possible_fuse_time = list("3", "4", "5")
