@@ -106,7 +106,7 @@
 
 /obj/item/storage/belt/civilprotection/polish_resistance/solid/Initialize(mapload)
 	. = ..()
-	atom_storage.max_slots = 10
+	atom_storage.max_slots = 12
 	atom_storage.set_holdable(list(
 		/obj/item/ammo_casing/shotgun,
 		/obj/item/assembly/flash/handheld,

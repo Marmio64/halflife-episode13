@@ -114,6 +114,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
 			to_chat(H, span_userdanger("You are a spy among the conscripts, and are working for the PLF!"))
 			to_chat(H, span_notice("You are tasked with helping Solid Crab in his mission by any means necessary. You can take off your balaclava so he can identify you as an ally, but don't let other conscripts see you do this."))
+			H.cmode_music = 'hl13/sound/music/combat/thepain.ogg'
 			H.fully_replace_character_name(H.real_name,"Traitorous Conscript Spy")
 			H.set_facial_hairstyle("Shaved")
 			H.set_hairstyle("Bald")
