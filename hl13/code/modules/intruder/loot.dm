@@ -9,6 +9,7 @@
 		/obj/item/ammo_box/magazine/usp9mm = 3, //really wanna discourage gunsblazing for crab
 		/obj/item/grenade/flashbang = 2,
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 2,
+		/obj/item/halflife/combine_battery = 2,
 		/obj/item/grenade/smokebomb,
 		/obj/item/grenade/decoy,
 		/obj/item/grenade/syndieminibomb/bouncer,

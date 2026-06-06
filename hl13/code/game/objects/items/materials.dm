@@ -90,4 +90,12 @@
 				gun.cell.give(STANDARD_CELL_CHARGE)
 				qdel(src)
 				return ITEM_INTERACT_SUCCESS
+	if(istype(interacting_with, /obj/item/flashlight/seclite/guard))
+		var/obj/item/flashlight/seclite/guard/flash_light = interacting_with
+		if(flash_light.fuel < 60 SECONDS)
+			if(do_after(user, 1 SECONDS, baton))
+				playsound(src, 'hl13/sound/effects/suitchargeok1.ogg', 40, FALSE)
+				flash_light.fuel = 60 SECONDS //full charge
+				qdel(src)
+				return ITEM_INTERACT_SUCCESS
 	return NONE

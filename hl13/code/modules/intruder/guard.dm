@@ -192,7 +192,7 @@
 
 /obj/item/flashlight/seclite/guard
 	name = "battery-powered combine maglite"
-	desc = "A heavy and robust combine made flashlight. Needs to have it's battery replaced once in a while. Maybe a squad leader has some to spare?"
+	desc = "A heavy and robust combine made flashlight. Needs to have it's battery replaced once in a while. Maybe a squad leader has some to spare, or there might be some around the base?"
 	var/fuel = 60 SECONDS
 
 /obj/item/flashlight/seclite/guard/examine(mob/user)

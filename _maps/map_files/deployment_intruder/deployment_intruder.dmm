@@ -98,16 +98,6 @@
 /obj/structure/halflife/trash/papers/three,
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/intruder/office)
-"bW" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
-/turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/intruder/medbay)
-"bY" = (
-/obj/structure/chair/halflife/metal/blue{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/tile/green,
-/area/halflife/indoors/intruder/lockerroom)
 "ca" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 8
@@ -118,13 +108,6 @@
 /obj/machinery/combine_node,
 /turf/open/floor/plating/indoor/tile/green,
 /area/halflife/indoors/intruder/lockerroom)
-"cg" = (
-/obj/structure/closet/halflife{
-	anchored = 1
-	},
-/obj/effect/spawner/random/halflife/loot/intruder,
-/turf/open/floor/plating/indoor/tile/green,
-/area/halflife/indoors/intruder/lab)
 "ch" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/metal/grate,
@@ -200,10 +183,8 @@
 /obj/effect/spawner/random/halflife/loot/intruder,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/intruder/office)
-"dt" = (
-/obj/machinery/light/directional/east,
-/obj/structure/chair/halflife/metal/blue,
-/turf/open/floor/plating/indoor/tile/green,
+"dB" = (
+/turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/intruder/lab)
 "dD" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -294,10 +275,6 @@
 /obj/effect/landmark/guard_start,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/intruder/medbay)
-"fn" = (
-/obj/structure/closet/cardboard,
-/turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/intruder/storageb)
 "fo" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 4
@@ -320,10 +297,10 @@
 	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/intruder/lab)
-"fJ" = (
+"fK" = (
 /obj/structure/halflife/trash/garbage/dumpster/crate,
 /turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/intruder/storageb)
+/area/halflife/indoors/intruder/medbay)
 "fM" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -349,6 +326,11 @@
 /obj/item/hl13_small_flag/combine,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/intruder/office)
+"gH" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/machinery/light_switch/directional/north,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/intruder/medbay)
 "gL" = (
 /obj/structure/table/halflife/metal/alt,
 /obj/item/toy/cards/deck{
@@ -386,6 +368,13 @@
 /obj/structure/halflife/pipes/vent,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/barracks)
+"if" = (
+/obj/structure/closet/halflife{
+	anchored = 1
+	},
+/obj/effect/spawner/random/halflife/loot/intruder,
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/intruder/lab)
 "im" = (
 /obj/structure/halflife/tank/chemical/container,
 /turf/open/floor/plating/indoor/metal/grate,
@@ -433,6 +422,13 @@
 /obj/effect/spawner/random/halflife/loot/intruder,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/intruder/office)
+"jb" = (
+/obj/structure/closet/halflife{
+	anchored = 1
+	},
+/obj/effect/spawner/random/halflife/loot/intruder,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/intruder/medbay)
 "jd" = (
 /obj/structure/halflife/storage/large/shelf,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -449,12 +445,6 @@
 /obj/structure/halflife/pallet,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/storagec)
-"jM" = (
-/obj/structure/chair/halflife/metal/blue{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/tile/green,
-/area/halflife/indoors/intruder/lab)
 "jP" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 8
@@ -477,6 +467,14 @@
 	},
 /turf/closed/wall/halflife/concrete/bunker,
 /area/halflife/indoors/intruder/lab)
+"jZ" = (
+/obj/machinery/intruder_coffeemaker{
+	pixel_x = 2;
+	pixel_y = 7
+	},
+/obj/structure/table/halflife/no_smooth/wood/stand,
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/intruder/entrance)
 "kg" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/indoor/concrete,
@@ -575,6 +573,10 @@
 	},
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/intruder/cafeteria)
+"mr" = (
+/obj/structure/halflife/barrel/quadruple/grey,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/intruder/storageb)
 "mu" = (
 /obj/structure/table/halflife/no_smooth/large/metal/desk/alt,
 /obj/effect/spawner/random/halflife/loot/intruder,
@@ -612,6 +614,9 @@
 /obj/effect/spawner/random/halflife/loot/intruder,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/storagea)
+"mU" = (
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/intruder/lab)
 "mY" = (
 /obj/structure/halflife/storage/large/shelf,
 /turf/open/floor/plating/indoor/metal/grate,
@@ -661,6 +666,10 @@
 /obj/effect/spawner/random/halflife/loot/intruder,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/intruder/lab)
+"od" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/intruder/lockerroom)
 "of" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 8
@@ -670,6 +679,14 @@
 "oi" = (
 /turf/closed/wall/halflife/concrete/bunker,
 /area/halflife/indoors/intruder/barracks)
+"ok" = (
+/obj/structure/table/halflife/no_smooth/metal,
+/obj/machinery/intruder_coffeemaker{
+	pixel_x = 2;
+	pixel_y = 7
+	},
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/intruder/lab)
 "om" = (
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/intruder/storagec)
@@ -695,13 +712,17 @@
 "ox" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/intruder/office)
-"oz" = (
-/turf/open/floor/plating/indoor/tile/black,
-/area/halflife/indoors/intruder/lab)
 "oE" = (
 /obj/machinery/escape_vent,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/intruder/office)
+"oG" = (
+/obj/effect/spawner/random/halflife/loot/intruder,
+/obj/structure/closet/halflife{
+	anchored = 1
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/intruder/barracks)
 "oH" = (
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/intruder/barracks)
@@ -764,10 +785,12 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/entrance)
-"qh" = (
-/obj/structure/table/halflife/no_smooth/metal,
+"pW" = (
+/obj/structure/chair/halflife/metal/blue{
+	dir = 8
+	},
 /turf/open/floor/plating/indoor/tile/green,
-/area/halflife/indoors/intruder/lockerroom)
+/area/halflife/indoors/intruder/lab)
 "qq" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/intruder/cafeteria)
@@ -855,6 +878,12 @@
 /obj/structure/halflife/barrel/quadruple/grey,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/lockerroom)
+"sx" = (
+/obj/structure/chair/halflife/metal/blue{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/intruder/lockerroom)
 "sA" = (
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/indoor/concrete,
@@ -866,10 +895,6 @@
 /obj/structure/halflife/pipes/horizontal,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/intruder/storageb)
-"sT" = (
-/obj/structure/table/halflife/no_smooth/metal,
-/turf/open/floor/plating/indoor/tile/green,
-/area/halflife/indoors/intruder/lab)
 "sW" = (
 /obj/structure/closet/halflife{
 	anchored = 1
@@ -911,12 +936,6 @@
 	dir = 8
 	},
 /area/halflife/indoors/intruder/medbay)
-"tK" = (
-/obj/structure/chair/halflife/metal/blue{
-	dir = 1
-	},
-/turf/open/floor/plating/indoor/tile/green,
-/area/halflife/indoors/intruder/lab)
 "ud" = (
 /obj/structure/barricade/wooden/solid/reinforced,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -952,6 +971,7 @@
 /area/halflife/indoors/intruder/medbay)
 "uO" = (
 /obj/structure/closet/cardboard,
+/obj/effect/spawner/random/halflife/loot/intruder,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/barracks)
 "uP" = (
@@ -963,12 +983,6 @@
 /obj/effect/spawner/random/halflife/loot/intruder,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/storagea)
-"vf" = (
-/obj/machinery/door/unpowered/halflife/metal{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/tile/black,
-/area/halflife/indoors/intruder/lockerroom)
 "vi" = (
 /turf/open/floor/plating/indoor/metal/pipe{
 	dir = 1
@@ -1113,6 +1127,13 @@
 /obj/effect/landmark/guard_start,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/intruder/lockerroom)
+"yV" = (
+/obj/structure/closet/halflife{
+	anchored = 1
+	},
+/obj/effect/spawner/random/halflife/loot/intruder,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/intruder/barracks)
 "zk" = (
 /obj/structure/bed/halflife/bedframe/cot,
 /obj/structure/bed/halflife/mattress/old,
@@ -1123,14 +1144,6 @@
 /obj/machinery/telecomms/hub/preset,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors/intruder)
-"zz" = (
-/obj/structure/table/halflife/no_smooth/metal,
-/obj/machinery/intruder_coffeemaker{
-	pixel_x = 2;
-	pixel_y = 7
-	},
-/turf/open/floor/plating/indoor/tile/green,
-/area/halflife/indoors/intruder/lab)
 "zC" = (
 /obj/structure/halflife/pipes/horizontal/end,
 /turf/open/floor/plating/indoor/concrete,
@@ -1148,15 +1161,16 @@
 /obj/structure/halflife/tank,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/storagea)
+"zT" = (
+/obj/structure/chair/halflife/metal/blue{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/intruder/lab)
 "zZ" = (
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/entrance)
-"Ad" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/machinery/light_switch/directional/north,
-/turf/open/floor/plating/indoor/sterilesquares,
-/area/halflife/indoors/intruder/medbay)
 "Ah" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/intruder/storagec)
@@ -1182,14 +1196,6 @@
 /obj/machinery/light_switch/directional/north,
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/intruder/entrance)
-"AN" = (
-/obj/structure/table/halflife/no_smooth/metal,
-/obj/machinery/intruder_coffeemaker{
-	pixel_x = 2;
-	pixel_y = 7
-	},
-/turf/open/floor/plating/indoor/tile/green,
-/area/halflife/indoors/intruder/lockerroom)
 "Ba" = (
 /obj/structure/halflife/barrel/double/grey,
 /turf/open/floor/plating/indoor/concrete,
@@ -1254,6 +1260,7 @@
 /area/halflife/indoors/intruder/medbay)
 "Cl" = (
 /obj/structure/halflife/storage/large/shelf,
+/obj/effect/spawner/random/halflife/loot/intruder,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/office)
 "Cm" = (
@@ -1316,6 +1323,12 @@
 /obj/effect/turf_decal/halflife/covering/paint/white,
 /turf/closed/wall/halflife/concrete/bunker,
 /area/halflife/indoors/intruder/cafeteria)
+"EI" = (
+/obj/machinery/door/unpowered/halflife/metal{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/intruder/lockerroom)
 "EM" = (
 /turf/closed/wall/halflife/concrete/bunker,
 /area/halflife/indoors/intruder/storageb)
@@ -1328,6 +1341,14 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/medbay)
+"EW" = (
+/obj/structure/table/halflife/no_smooth/metal,
+/obj/machinery/intruder_coffeemaker{
+	pixel_x = 2;
+	pixel_y = 7
+	},
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/intruder/lockerroom)
 "Fc" = (
 /obj/effect/turf_decal/halflife/covering/paint/gray,
 /turf/closed/wall/halflife/concrete/bunker,
@@ -1340,6 +1361,15 @@
 /obj/item/hl13_small_flag/combine,
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/intruder/entrance)
+"Fq" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/intruder/storageb)
+"Fr" = (
+/obj/structure/table/halflife/no_smooth/metal,
+/obj/effect/spawner/random/halflife/loot/intruder,
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/intruder/lab)
 "FV" = (
 /obj/effect/turf_decal/halflife/covering/wallpaper/green,
 /turf/closed/wall/halflife/concrete/bunker,
@@ -1368,22 +1398,11 @@
 	dir = 1
 	},
 /area/halflife/indoors/intruder/storagea)
-"GA" = (
+"Gz" = (
 /obj/machinery/light/directional/east,
+/obj/structure/chair/halflife/metal/blue,
 /turf/open/floor/plating/indoor/tile/green,
-/area/halflife/indoors/intruder/lockerroom)
-"GD" = (
-/obj/machinery/intruder_coffeemaker{
-	pixel_x = 2;
-	pixel_y = 7
-	},
-/obj/structure/table/halflife/no_smooth/wood/stand,
-/turf/open/floor/plating/indoor/tile/black,
-/area/halflife/indoors/intruder/entrance)
-"GU" = (
-/obj/structure/halflife/barrel/quadruple/grey,
-/turf/open/floor/plating/indoor/metal/grate,
-/area/halflife/indoors/intruder/storageb)
+/area/halflife/indoors/intruder/lab)
 "Hi" = (
 /obj/structure/halflife/pot/plant,
 /obj/machinery/light/small/directional/east,
@@ -1529,6 +1548,10 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/cafeteria,
 /area/halflife/indoors/intruder/cafeteria)
+"Lw" = (
+/obj/structure/closet/cardboard,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/intruder/medbay)
 "LB" = (
 /obj/effect/koth_grace_field,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -1554,6 +1577,12 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/intruder/lab)
+"Mx" = (
+/obj/structure/chair/halflife/metal/blue{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/intruder/lockerroom)
 "MI" = (
 /obj/structure/bed/halflife/bedframe/cot,
 /obj/structure/bed/halflife/mattress/old,
@@ -1603,9 +1632,6 @@
 /obj/structure/halflife/pipes/piped,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/barracks)
-"NL" = (
-/turf/open/floor/plating/indoor/tile/green,
-/area/halflife/indoors/intruder/lab)
 "NN" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -1616,12 +1642,6 @@
 "NU" = (
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/medbay)
-"Ok" = (
-/obj/structure/chair/halflife/metal/blue{
-	dir = 4
-	},
-/turf/open/floor/plating/indoor/tile/green,
-/area/halflife/indoors/intruder/lab)
 "On" = (
 /obj/effect/turf_decal/halflife/covering/paint/green,
 /turf/closed/wall/halflife/concrete/bunker,
@@ -1629,6 +1649,11 @@
 "Oq" = (
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/cafeteria)
+"Or" = (
+/obj/structure/table/halflife/no_smooth/metal,
+/obj/effect/spawner/random/halflife/loot/intruder,
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/intruder/lockerroom)
 "Ow" = (
 /obj/effect/koth_grace_field,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -1944,6 +1969,12 @@
 	dir = 1
 	},
 /area/halflife/indoors/intruder/lab)
+"WK" = (
+/obj/structure/chair/halflife/metal/blue{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/intruder/lab)
 "WN" = (
 /obj/machinery/light_switch/directional/north,
 /turf/open/floor/plating/indoor/tile/green,
@@ -2042,12 +2073,6 @@
 /obj/machinery/light/broken/directional/north,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/entrance)
-"YV" = (
-/obj/structure/chair/halflife/metal/blue{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/tile/green,
-/area/halflife/indoors/intruder/lockerroom)
 "YX" = (
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/intruder/office)
@@ -2112,6 +2137,10 @@
 	},
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/intruder/entrance)
+"ZV" = (
+/obj/structure/closet/cardboard,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/intruder/storageb)
 
 (1,1,1) = {"
 pq
@@ -2762,11 +2791,11 @@ pq
 pq
 pq
 sE
-bY
+sx
 oI
 oI
 oI
-bY
+sx
 sE
 pq
 pq
@@ -2839,11 +2868,11 @@ pq
 pq
 pq
 sE
-AN
+EW
 rE
 rE
 rE
-qh
+Or
 sE
 pq
 pq
@@ -2916,11 +2945,11 @@ pq
 pq
 pq
 sE
-YV
+Mx
 rE
 rE
 rE
-YV
+Mx
 sE
 pq
 pq
@@ -2995,7 +3024,7 @@ pq
 sE
 WS
 oI
-GA
+od
 rE
 oI
 sE
@@ -3073,7 +3102,7 @@ sE
 sE
 sE
 sE
-vf
+EI
 sE
 sE
 sE
@@ -3327,7 +3356,7 @@ Vd
 sE
 pq
 oi
-wf
+yV
 JT
 KR
 KR
@@ -3949,7 +3978,7 @@ KR
 KR
 JT
 oi
-JT
+oG
 KR
 KR
 KR
@@ -4032,7 +4061,7 @@ JT
 JT
 JT
 oi
-fJ
+Fq
 UR
 EM
 pq
@@ -4186,7 +4215,7 @@ hN
 hN
 hN
 EM
-GU
+mr
 UR
 EM
 pq
@@ -4494,7 +4523,7 @@ kW
 vS
 hN
 EM
-fJ
+Fq
 UR
 EM
 pq
@@ -4571,7 +4600,7 @@ kW
 kW
 iG
 EM
-fn
+ZV
 UR
 EM
 pq
@@ -4818,11 +4847,11 @@ pq
 pq
 pq
 NT
-Ok
-NL
-NL
-NL
-NL
+WK
+mU
+mU
+mU
+mU
 NT
 ob
 dD
@@ -4895,11 +4924,11 @@ pq
 pq
 pq
 NT
-zz
-oz
-oz
-oz
-oz
+ok
+dB
+dB
+dB
+dB
 NN
 dD
 dD
@@ -4972,11 +5001,11 @@ pq
 pq
 pq
 NT
-jM
-oz
-oz
-oz
-NL
+pW
+dB
+dB
+dB
+mU
 NT
 op
 dD
@@ -5049,11 +5078,11 @@ pq
 pq
 pq
 NT
-cg
-NL
-dt
-sT
-tK
+if
+mU
+Gz
+Fr
+zT
 NT
 ob
 dD
@@ -5764,10 +5793,10 @@ NT
 NT
 NT
 NT
+jb
 cG
 cG
-cG
-cG
+Lw
 nm
 pq
 FV
@@ -6212,7 +6241,7 @@ nm
 tJ
 oT
 NU
-bW
+fK
 nm
 Cv
 yc
@@ -6220,7 +6249,7 @@ yc
 nm
 SA
 hn
-Ad
+gH
 QE
 QE
 QE
@@ -7163,7 +7192,7 @@ XG
 XG
 oq
 cT
-GD
+jZ
 MJ
 ba
 OV
