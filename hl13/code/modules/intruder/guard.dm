@@ -40,7 +40,7 @@
 	if(visuals_only) //stops the visual dummy from the admin equip menu from doing stuff like adding a guard spawned number to the total
 		return
 
-	H.tired_rate = rand(12,15) //a little over 2 minutes for tiredness slowdown to kick in, on average
+	H.tired_rate = rand(12,14) //around 3 minutes on average for slowness to kick in
 	H.setdeploymentfaction(COMBINE_DEPLOYMENT_FACTION)
 
 	GLOB.guards_spawned++
