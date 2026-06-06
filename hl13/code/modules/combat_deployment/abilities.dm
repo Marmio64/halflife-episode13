@@ -15,6 +15,15 @@
 /datum/action/cooldown/spell/conjure_item/medkit/slow
 	cooldown_time = 35 SECONDS
 
+/datum/action/cooldown/spell/conjure_item/medkit/intruder
+	name = "Procure Ration"
+	desc = "Procures a ration to feed someone or yourself with. Deletes the last one summoned if it is still available."
+	item_type = /obj/item/reagent_containers/pill/patch/medkit/ration
+	cooldown_time = 25 SECONDS
+	delete_old = TRUE
+	sound = 'hl13/sound/effects/spawnration.ogg'
+	sound_varies = FALSE
+
 /datum/action/cooldown/spell/conjure_item/medkit/the_hidden
 	desc = "Procures a medkit to heal someone or yourself with. Deletes the last one summoned if it is still available."
 	item_type = /obj/item/reagent_containers/pill/patch/medkit/hidden

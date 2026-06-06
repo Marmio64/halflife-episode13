@@ -7,7 +7,7 @@ GLOBAL_LIST_EMPTY(node_terminals)
 	desc = "A vent used to infiltrat- err... move air... to and from places."
 	icon = 'hl13/icons/obj/storage/storage.dmi'
 	icon_state = "vent"
-	flags_1 = INDESTRUCTIBLE | ACID_PROOF | FIRE_PROOF
+	resistance_flags = INDESTRUCTIBLE
 	pixel_y = 24
 	density = FALSE
 	var/static/list/completion_titles = list(

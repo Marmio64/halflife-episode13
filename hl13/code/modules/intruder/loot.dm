@@ -17,15 +17,17 @@
 /obj/effect/spawner/random/halflife/loot/intruder/guaranteed
 	spawn_loot_chance = 100
 
-/obj/effect/spawner/random/halflife/loot/crab //only stuff crab would like
-	loot = list( //thinking of stuff i'd usually find in my playthroughs + ammo for guards (they can search these lockers too), ordered from common to least common
-		/obj/item/reagent_containers/pill/patch/medkit/ration = 5,
-		/obj/item/ammo_box/magazine/usp9mm = 3, //really wanna discourage gunsblazing for crab
-		/obj/item/grenade/flashbang = 2,
+/obj/effect/spawner/random/halflife/loot/crab //only stuff crab would like. values changed so that snake is more likely to get things he wont typically find in lockers
+	loot = list(
+		/obj/item/reagent_containers/pill/patch/medkit/ration = 2, //already gonna be a lot of these
+		/obj/item/ammo_box/magazine/solid_tranq = 4, //allows him to tranq at least 10 more guards
+		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/grenade/flashbang,
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 2,
 		/obj/item/grenade/smokebomb,
 		/obj/item/grenade/decoy,
 		/obj/item/grenade/syndieminibomb/bouncer,
+		/obj/item/gun/ballistic/automatic/m4a1 = 2, //unlocked m4
 	)
 
 /obj/effect/spawner/random/halflife/loot/intruder/crab/guaranteed

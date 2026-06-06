@@ -53,6 +53,8 @@
 
 	/// The sound played on cast.
 	var/sound = null
+	/// Whether or not the sound varies. It is CRAZY that this is a hl13 edit and not normal tg
+	var/sound_varies = TRUE
 	/// The school of magic the spell belongs to.
 	/// Checked by some holy sects to punish the
 	/// caster for casting things that do not align
@@ -378,7 +380,7 @@
 
 	///even INVOCATION_NONE should go through this because the signal might change that
 	invocation(invoker)
-	playsound(invoker, sound, 50, vary = TRUE)
+	playsound(invoker, sound, 50, vary = sound_varies)
 
 /// The invocation that accompanies the spell, called from spell_feedback() before cast().
 /datum/action/cooldown/spell/proc/invocation(mob/living/invoker)

@@ -3,6 +3,27 @@
 	damage = 17
 	embed_type = /datum/embed_data/bullet_c9mm
 
+/obj/projectile/bullet/c9mm/usp/tranq
+	name = "9mm tranq bullet"
+	damage = 0 //non-lethal
+	sharpness = NONE
+	embed_type = null
+	icon_state = "rubber"
+	projectile_piercing = NONE
+
+/obj/projectile/bullet/c9mm/usp/tranq/on_hit(atom/target, blocked = null, pierce_hit)
+	. = ..()
+	var/tranq_effective = 25 SECONDS - (blocked*4) //guard armor will do 25% so 2.5 seconds * 4 = 10 seconds
+	if(iscarbon(target))
+		var/mob/living/carbon/C = target
+		if(prob(blocked))
+			C.visible_message(span_notice("The [src] fails to penetrate [target]'s armor and bounces off uselessly."))
+			return
+		if(tranq_effective <= 0 SECONDS)
+			C.visible_message(span_notice("The [src] fails to penetrate [target]'s thick armor and bounces off uselessly."))
+			return
+		C.SetSleeping(tranq_effective)
+
 /obj/projectile/bullet/c9mm/usp/makeshift
 	name = "9mm makeshift bullet"
 	damage = 15
