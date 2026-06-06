@@ -10,6 +10,7 @@
 		/obj/item/grenade/flashbang = 2,
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 2,
 		/obj/item/grenade/smokebomb,
+		/obj/item/grenade/decoy,
 		/obj/item/grenade/syndieminibomb/bouncer,
 	)
 
@@ -24,6 +25,7 @@
 		/obj/item/grenade/flashbang,
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 2,
 		/obj/item/grenade/smokebomb,
+		/obj/item/grenade/decoy,
 		/obj/item/grenade/syndieminibomb/bouncer,
 		/obj/item/gun/ballistic/automatic/m4a1 = 2, //unlocked m4
 	)

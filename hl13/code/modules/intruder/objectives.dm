@@ -26,6 +26,10 @@ GLOBAL_LIST_EMPTY(node_terminals)
 		to_chat(user, span_notice("Just a vent..."))
 		return
 
+	if(!HAS_TRAIT(user, TRAIT_THE_INTRUDER))
+		to_chat(user, span_notice("We aren't well trained enough to sneak through this."))
+		return
+
 	if(GLOB.complete_objectives < 2)
 		to_chat(user, span_warning("You haven't completed your mission yet!"))
 		return
