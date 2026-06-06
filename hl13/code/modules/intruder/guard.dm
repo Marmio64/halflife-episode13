@@ -66,13 +66,14 @@
 		extra_per = 2
 	if(9 < guard_preparedness)
 		H.dna.species.stunmod = 0.75
+		extra_end = 6
+		extra_str = 5
 	if(12 < guard_preparedness)
 		suit_store = /obj/item/gun/ballistic/automatic/m4a1/intruder/buffed
-	if(15 < guard_preparedness)
-		extra_end = 6
-		extra_dex = 6
-		extra_str = 5
 		suit = /obj/item/clothing/suit/armor/halflife/kevlar
+	if(15 < guard_preparedness)
+		extra_dex = 6
+		extra_per = 4
 		head = /obj/item/clothing/head/helmet/halflife/military
 
 /obj/item/clothing/suit/armor/halflife/kevlar/guard
