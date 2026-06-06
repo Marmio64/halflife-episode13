@@ -15,8 +15,11 @@
 	r_pocket = /obj/item/lighter
 	gloves = /obj/item/clothing/gloves/color/black
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp/suppressed/solid
+	ears = /obj/item/radio/headset
 
 	combat_music = 'hl13/sound/music/combat/bigshell.ogg' //i like this alert theme more than encounter tbh
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/intruder_decoy)
 
 	extra_end = 5
 	extra_dex = 5
@@ -55,7 +58,7 @@
 	bigboss.teach(H)
 
 	H.dna.species.stunmod = 0.25
-	H.mind?.adjust_experience(/datum/skill/scavenging, 1200)
+	H.mind?.adjust_experience(/datum/skill/scavenging, 2500)
 
 /obj/item/clothing/head/costume/snakeeater/solid
 	name = "Sneaking Bandana"
@@ -99,13 +102,12 @@
 	projectile_damage_multiplier = 2.5
 
 /obj/item/storage/belt/civilprotection/polish_resistance/solid
-	desc = "Heavy duty belt for containing metrocop standard gear. Can also carry rations."
+	desc = "Heavy duty belt for containing metrocop standard gear. Can also carry rations. Can't carry large magazines."
 
 /obj/item/storage/belt/civilprotection/polish_resistance/solid/Initialize(mapload)
 	. = ..()
-	atom_storage.max_slots = 9
+	atom_storage.max_slots = 10
 	atom_storage.set_holdable(list(
-		/obj/item/ammo_box,
 		/obj/item/ammo_casing/shotgun,
 		/obj/item/assembly/flash/handheld,
 		/obj/item/clothing/glasses,
@@ -121,10 +123,7 @@
 		/obj/item/restraints/handcuffs,
 		/obj/item/restraints/legcuffs/bola,
 		/obj/item/ammo_box/magazine/usp9mm,
-		/obj/item/ammo_box/colta357,
-		/obj/item/ammo_box/magazine/ar2,
 		/obj/item/stack/medical/gauze,
-		/obj/item/storage/box/lethalshot,
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone,
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
 		/obj/item/reagent_containers/pill/patch/medkit/ration, //RATION HOLDER RATION HOLDER RATION HOLDER
@@ -138,6 +137,8 @@
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
 	SSwardrobe.provide_type(/obj/item/grenade/flashbang, src)
 	SSwardrobe.provide_type(/obj/item/grenade/flashbang, src)
+	SSwardrobe.provide_type(/obj/item/grenade/decoy, src)
+	SSwardrobe.provide_type(/obj/item/grenade/decoy, src)
 	update_appearance(UPDATE_ICON)
 
 /obj/item/reagent_containers/pill/patch/medkit/ration
@@ -146,3 +147,76 @@
 	icon = 'hl13/icons/obj/food.dmi'
 	icon_state = "seafood"
 	apply_sound = 'hl13/sound/items/ration.ogg'
+
+/obj/item/grenade/decoy
+	name = "noise decoy grenade"
+	icon_state = "decoy"
+	desc = "A device that looks like a grenade. When it 'detonates', it'll emulate the sound of a burst of a rifle, in order to confuse people."
+	inhand_icon_state = "decoy"
+	icon = 'hl13/icons/obj/grenade.dmi'
+	det_time = 35
+
+/obj/item/grenade/decoy/detonate(mob/living/lanced_by)
+	. = ..()
+	if(!.)
+		return
+
+	update_mob()
+	var/flashbang_turf = get_turf(src)
+	if(!flashbang_turf)
+		return
+	do_sparks(rand(5, 9), FALSE, src)
+	playsound(flashbang_turf, "sound/items/weapons/gun/rifle/shot.ogg", 80, TRUE, 8, 0.9)
+	sleep(rand(0.25 SECONDS,0.8 SECONDS))
+	playsound(flashbang_turf, "sound/items/weapons/gun/rifle/shot.ogg", 80, TRUE, 8, 0.9)
+	sleep(rand(0.25 SECONDS,0.8 SECONDS))
+	playsound(flashbang_turf, "sound/items/weapons/gun/rifle/shot.ogg", 80, TRUE, 8, 0.9)
+	sleep(rand(0.4 SECONDS,1.2 SECONDS))
+	playsound(flashbang_turf, "sound/items/weapons/gun/rifle/shot.ogg", 80, TRUE, 8, 0.9)
+	sleep(rand(0.25 SECONDS,0.8 SECONDS))
+	qdel(src)
+
+/datum/action/cooldown/spell/conjure_item/intruder_decoy
+	name = "Summon Decoy Mannequin"
+	desc = "Quickly deploy a decoy that somewhat resembles you on initial inspection. Useful for simple distractions. It will automatically fall apart after about 16 seconds, and has a long cooldown."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "cloak"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 45 SECONDS
+	item_type = /obj/item/cardboard_cutout/solid_crab
+
+/obj/item/cardboard_cutout/solid_crab
+	starting_cutout = "Solid Crab"
+
+/obj/item/cardboard_cutout/solid_crab/Initialize(mapload)
+	. = ..()
+	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src), 16 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(random_speech)), rand(5 SECONDS, 10 SECONDS))
+
+/obj/item/cardboard_cutout/solid_crab/proc/random_speech()
+	if(prob(50))
+		say("You're pretty good...")
+
+/datum/cardboard_cutout/solid_crab
+	name = "Solid Crab"
+	applied_name = "Solid Crab"
+	applied_desc = "You're pretty good..."
+	outfit = /datum/outfit/solid_crab_cutout
+
+/datum/cardboard_cutout/solid_crab/get_name()
+	return "Solid Crab"
+
+/datum/outfit/solid_crab_cutout
+	name = "Solid Crab Cardboard cutout"
+
+	head = /obj/item/clothing/head/costume/snakeeater/solid
+	glasses = /obj/item/clothing/glasses/thermal/eyepatch/solid
+	mask = /obj/item/cigarette/halflife
+	belt = /obj/item/storage/belt/civilprotection
+	uniform = /obj/item/clothing/under/syndicate/combat
+	suit = /obj/item/clothing/suit/armor/halflife/milvest/solid
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
+	gloves = /obj/item/clothing/gloves/color/black

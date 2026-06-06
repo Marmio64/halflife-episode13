@@ -3,6 +3,9 @@
 	name = "Conscript Guard"
 	display_name = "Conscript Guard"
 	desc = "One of the many conscripts stationed at Zewnetrzny Raj, armed with an ID-tagged M4A1 and a cheaply made balaclava."
+	id_name = "Guard"
+	id = /obj/item/card/id/combine_tdm
+	accessory = /obj/item/clothing/accessory/combine_dogtags
 
 	uniform = /obj/item/clothing/under/syndicate/camo
 	gloves = /obj/item/clothing/gloves/fingerless
@@ -25,9 +28,13 @@
 
 	extra_dex = -2
 	extra_str = -2
+	extra_per = -3
+
+	nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_EYES, ITEM_SLOT_ID)
 
 /datum/outfit/deployment_loadout/intruder/guard/pre_equip(mob/living/carbon/human/H)
 	. = ..()
+
 	H.setdeploymentfaction(COMBINE_DEPLOYMENT_FACTION)
 	GLOB.guards_spawned++
 
@@ -38,17 +45,17 @@
 	guard_preparedness += (GLOB.alert_phases - GLOB.false_alerts)
 	guard_preparedness += SSticker.tdm_combine_deaths
 
-	if(4 < guard_preparedness)
-		extra_dex = 3
+	if(3 < guard_preparedness)
+		extra_dex = 2
 		extra_str = 2
-	if(9 < guard_preparedness)
+	if(6 < guard_preparedness)
 		extra_end = 3
 		extra_per = 2
-	if(14 < guard_preparedness)
+	if(9 < guard_preparedness)
 		H.dna.species.stunmod = 0.75
-	if(19 < guard_preparedness)
+	if(12 < guard_preparedness)
 		suit_store = /obj/item/gun/ballistic/automatic/m4a1/intruder/buffed
-	if(24 < guard_preparedness)
+	if(15 < guard_preparedness)
 		extra_end = 6
 		extra_dex = 6
 		extra_str = 5
@@ -58,9 +65,12 @@
 	slowdown = 0.25
 
 /obj/item/clothing/mask/balaclava/protective/guard
-	desc = "You don't want to get in trouble with your superiors by removing this, but it's pretty hard to see out of these things... what was that noise?"
+	desc = "You don't want to get in trouble with your superiors by removing this, but it's pretty hard to see out of these things... what was that noise? IF you see a fellow guard not wearing their balaclava, you may want to kill them on sight."
 	actions_types = null //to prevent pulling it up
 	modifies_speech = TRUE
+	voice_change = TRUE
+
+	var/fused = TRUE //is the mask fused to the user?
 
 	var/static/list/guard_voicelines = list(
 		"footprints are these" = 'hl13/sound/voice/solid/footprints.ogg', //in case people dont know grammar i'll leave out the whose
@@ -72,6 +82,8 @@
 /obj/item/clothing/mask/balaclava/protective/guard/Initialize()
 	. = ..()
 	AddComponent(/datum/component/clothing_fov_visor, FOV_270_DEGREES)
+	if(fused)
+		ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
 
 /obj/item/clothing/mask/balaclava/protective/guard/handle_speech(mob/living/carbon/source, mob/speech_args)
 	var/full_message = speech_args[SPEECH_MESSAGE]
@@ -79,6 +91,10 @@
 		if(findtext(full_message, lines))
 			playsound(source, guard_voicelines[lines], 50, FALSE)
 			return // only play the first.
+
+/obj/item/clothing/mask/balaclava/protective/guard/double_agent
+	desc = "This hard to see balaclava disguises your identity as a double agent, but is able to be removed by either yourself or others. If someone sees you without it, they'll know for sure you are a traitor."
+	fused = FALSE
 
 /obj/item/clothing/head/beret/durathread/unitednations/guard
 	name = "Squad Leader Beret"
@@ -137,3 +153,7 @@
 		to_chat(user, span_warning("You failed to report anything out of the ordinary. You will be able to report again in 20 seconds."))
 		personal_cooldown = 20 SECONDS
 		can_report = FALSE
+
+/obj/item/radio/headset/no_drop/Initialize(mapload)
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)

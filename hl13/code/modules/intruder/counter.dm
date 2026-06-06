@@ -28,7 +28,11 @@ GLOBAL_LIST_EMPTY(real_objectives)
 
 	var/new_team_leaders = 0
 
+	var/new_double_agents = 0
+
 	var/team_leaders = 0
+
+	var/double_agents = 0
 
 	var/datum/action/cooldown/spell/squad_alert/alert = /datum/action/cooldown/spell/squad_alert //for squad leaders
 
@@ -95,10 +99,31 @@ GLOBAL_LIST_EMPTY(real_objectives)
 		var/mob/living/carbon/human/H = candidate_client.mob
 		if(!istype(H.head, /obj/item/clothing/head/beret/durathread/unitednations) && prob(50) && new_team_leaders > team_leaders && H.deployment_faction != REBEL_DEPLOYMENT_FACTION)
 			to_chat(H, span_notice("You have been promoted to squad leader! Although you and the other squad leaders only have as much authority as everyone else gives you, you can (and probably should) raise an alert on death, plus you get a little bit of armor for your head."))
+			to_chat(H, span_notice("You will also want to work together with fellow squad leaders to root out possible traitors. If you suspect someone is a spy, try to take off their balaclava to reveal them as a spy!"))
 			team_leaders++
 			H.equip_to_slot_or_del(new /obj/item/clothing/head/beret/durathread/unitednations/guard, ITEM_SLOT_HEAD)
+			H.equip_to_slot_or_del(new /obj/item/radio/headset, ITEM_SLOT_EARS)
 			alert = new(H)
 			alert.Grant(H)
+
+/obj/machinery/intruder_time_counter/proc/attempt_pick_double_agents()
+	for(var/X in GLOB.deployment_combine_players)
+		var/client/candidate_client = X
+		var/mob/living/carbon/human/H = candidate_client.mob
+		if(!istype(H.head, /obj/item/clothing/head/beret/durathread/unitednations) && prob(50) && new_double_agents > double_agents && H.deployment_faction != REBEL_DEPLOYMENT_FACTION)
+			SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+			to_chat(H, span_userdanger("You are a spy among the conscripts, and are working for the PLF!"))
+			to_chat(H, span_notice("You are tasked with helping Solid Crab in his mission by any means necessary. You can take off your balaclava so he can identify you as an ally, but don't let other conscripts see you do this."))
+			H.fully_replace_character_name(H.real_name,"Traitorous Conscript Spy")
+			H.set_facial_hairstyle("Shaved")
+			H.set_hairstyle("Bald")
+			H.update_body()
+			H.deployment_faction = REBEL_DEPLOYMENT_FACTION
+			var/mask_item = H.get_item_by_slot(ITEM_SLOT_MASK)
+			if(mask_item)
+				qdel(mask_item)
+			H.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava/protective/guard/double_agent, ITEM_SLOT_MASK)
+			double_agents++
 
 /obj/machinery/intruder_time_counter/proc/attempt_pick_objectives()
 	if(length(GLOB.real_objectives) == 2)
@@ -119,8 +144,12 @@ GLOBAL_LIST_EMPTY(real_objectives)
 /obj/machinery/intruder_time_counter/process()
 	while(new_team_leaders < CEILING(GLOB.guards_spawned / 4, 1))
 		new_team_leaders++
+	while(new_double_agents < CEILING(GLOB.guards_spawned / 10, 1))
+		new_double_agents++
 	if(new_team_leaders > team_leaders && time_ticking)
 		attempt_pick_leaders()
+	if(new_double_agents > double_agents && time_ticking)
+		attempt_pick_double_agents()
 	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
 		if(!time_ticking)
 			time_ticking = TRUE

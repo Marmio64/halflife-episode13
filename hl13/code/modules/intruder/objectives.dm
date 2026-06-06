@@ -76,7 +76,7 @@ GLOBAL_LIST_EMPTY(node_terminals)
 	. = ..()
 	if(ishuman(user))
 		var/mob/living/carbon/human/human_user = user
-		if(human_user.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+		if(HAS_TRAIT(human_user, TRAIT_THE_INTRUDER))
 			if(real_terminal)
 				. += span_warning("This node appears to be one of your objectives!")
 			else
@@ -87,6 +87,11 @@ GLOBAL_LIST_EMPTY(node_terminals)
 
 	if(user.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
 		to_chat(user, span_warning("Your brainwashing forbids you from reading combine secrets!"))
+		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+		return
+
+	if(!HAS_TRAIT(user, TRAIT_THE_INTRUDER))
+		to_chat(user, span_warning("You can't blow your cover, and don't know the password or how to hack through anyways!"))
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		return
 
