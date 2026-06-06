@@ -93,7 +93,7 @@
 	if(istype(interacting_with, /obj/item/flashlight/seclite/guard))
 		var/obj/item/flashlight/seclite/guard/flash_light = interacting_with
 		if(flash_light.fuel < 60 SECONDS)
-			if(do_after(user, 1 SECONDS, baton))
+			if(do_after(user, 1 SECONDS, flash_light))
 				playsound(src, 'hl13/sound/effects/suitchargeok1.ogg', 40, FALSE)
 				flash_light.fuel = 60 SECONDS //full charge
 				qdel(src)
