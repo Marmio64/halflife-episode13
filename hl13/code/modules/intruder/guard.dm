@@ -18,7 +18,7 @@
 
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
-	belt = /obj/item/flashlight/seclite
+	belt = /obj/item/flashlight/seclite/guard
 
 	l_pocket = /obj/item/hl2/intruder_radio
 
@@ -189,6 +189,71 @@
 /obj/item/clothing/head/beret/durathread/unitednations/guard/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
+
+/obj/item/flashlight/seclite/guard
+	name = "battery-powered combine maglite"
+	desc = "A heavy and robust combine made flashlight. Needs to have it's battery replaced once in a while. Maybe a squad leader has some to spare?"
+	var/fuel = 60 SECONDS
+
+/obj/item/flashlight/seclite/guard/examine(mob/user)
+	. = ..()
+	. += span_notice("You'd say this flashlight has about [fuel/10] seconds of charge remaining.")
+
+/obj/item/flashlight/seclite/guard/process(seconds_per_tick)
+	if(fuel > 0)
+		fuel -= 1 SECONDS
+	check_fuel()
+
+/obj/item/flashlight/seclite/guard/proc/check_fuel(seconds_per_tick)
+	if(45 SECONDS < fuel)
+		set_light_range(4)
+		set_light_power(0.55)
+		update_brightness()
+	else if(30 SECONDS < fuel)
+		set_light_range(4)
+		set_light_power(0.5)
+		update_brightness()
+	else if(15 SECONDS < fuel)
+		set_light_range(3)
+		set_light_power(0.4)
+		update_brightness()
+	else if(0 < fuel)
+		set_light_range(2)
+		set_light_power(0.3)
+		update_brightness()
+
+	if(!fuel || !light_on)
+		set_light_range(0)
+		set_light_power(0)
+		set_light_on(FALSE)
+		STOP_PROCESSING(SSobj, src)
+
+/obj/item/flashlight/seclite/guard/toggle_light(mob/user)
+	playsound(src, light_on ? sound_off : sound_on, 40, TRUE)
+	if(!COOLDOWN_FINISHED(src, disabled_time))
+		if(user)
+			balloon_alert(user, "disrupted!")
+		set_light_on(FALSE)
+		update_brightness()
+		update_item_action_buttons()
+		return FALSE
+	if(fuel == 0)
+		if(user)
+			balloon_alert(user, "no charge!")
+		set_light_on(FALSE)
+		update_brightness()
+		update_item_action_buttons()
+		return FALSE
+	var/old_light_on = light_on
+	set_light_on(!light_on)
+	update_brightness()
+	update_item_action_buttons()
+	return light_on != old_light_on // If the value of light_on didn't change, return false. Otherwise true.
+
+/obj/item/flashlight/seclite/guard/attack_self(mob/user)
+	check_fuel()
+	START_PROCESSING(SSobj, src)
+	return toggle_light(user)
 
 /obj/item/hl2/intruder_radio
 	name = "Alert Radio"

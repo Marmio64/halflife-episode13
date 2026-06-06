@@ -443,3 +443,24 @@
 	user.do_alert_animation()
 	playsound(user.loc, 'hl13/sound/effects/alert.ogg', 50, FALSE, -5)
 	to_chat(user, span_notice("Alert phase has been activated and will end in one minute."))
+
+/datum/action/cooldown/spell/recharge_lights
+	name = "Recharge Flashlights"
+	desc = "Procure a few spare batteries and give them out to everyone within 2 tiles of you."
+	button_icon = 'hl13/icons/mob/actions/actions_vortal.dmi'
+	button_icon_state = "charge"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	check_flags = NONE
+	cooldown_time = 60 SECONDS //if you stay by your leader for the entire round, you shouldn't run out of battery.
+
+/datum/action/cooldown/spell/recharge_lights/cast(mob/living/user)
+	. = ..()
+	for(var/mob/living/carbon/human/H in range(2, user))
+		if(HAS_TRAIT(H, TRAIT_THE_INTRUDER))
+			continue //no recharges for snake if he steals a flashlight for some reason
+		for(var/obj/item/flashlight/seclite/guard/L in H.get_all_gear())
+			L.fuel = 60 SECONDS
+	user.visible_message(span_notice("[user] begins to pass out batteries for all carried flashlights in a 2 tile radius."))
+

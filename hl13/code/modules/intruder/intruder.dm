@@ -131,6 +131,7 @@
 		/obj/item/restraints/handcuffs,
 		/obj/item/restraints/legcuffs/bola,
 		/obj/item/ammo_box/magazine/usp9mm,
+		/obj/item/ammo_box/magazine/solid_tranq,
 		/obj/item/stack/medical/gauze,
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone,
 		/obj/item/reagent_containers/pill/patch/medkit/vial,

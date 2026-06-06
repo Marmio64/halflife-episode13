@@ -17,7 +17,7 @@
 /obj/effect/spawner/random/halflife/loot/intruder/guaranteed
 	spawn_loot_chance = 100
 
-/obj/effect/spawner/random/halflife/loot/crab //only stuff crab would like. values changed so that snake is more likely to get things he wont typically find in lockers
+/obj/effect/spawner/random/halflife/loot/intruder/crab //only stuff crab would like. values changed so that snake is more likely to get things he wont typically find in lockers
 	loot = list(
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 2, //already gonna be a lot of these
 		/obj/item/ammo_box/magazine/solid_tranq = 4, //allows him to tranq at least 10 more guards
