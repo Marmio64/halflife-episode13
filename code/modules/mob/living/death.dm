@@ -179,7 +179,11 @@
 			SSticker.tdm_combine_deaths++
 			SSticker.tdm_total_deaths++
 		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
-			SSticker.tdm_rebel_deaths++
+			if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
+				if(HAS_TRAIT(src, TRAIT_THE_INTRUDER))
+					SSticker.tdm_rebel_deaths++
+			else
+				SSticker.tdm_rebel_deaths++
 			SSticker.tdm_total_deaths++
 
 	if(deployment_faction == HIDDEN_DEPLOYMENT_FACTION)

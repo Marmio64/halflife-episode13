@@ -30,10 +30,14 @@
 		var/list/sabotage_texts = list(
 		"What the hell!? Someone messed up the color coding on the sugar packets and turned off the warming plate! We're going to need to fix this...",
 		"Someone spilled creamer all over the whole pot! This is going to take forever to clean...",
-		"This coffee tastes like shit! Damnit, we're going to need to brew a new mug...",
-		"Someone drank all the coffee without making a new mug! Damnit, we're going to need to brew a new mug...",
+		"This coffee tastes like shit! Damnit, we're going to need to brew a new pot...",
+		"Someone drank all the coffee without making a new pot! Damnit, we're going to need to brew a new pot...",
 		"Damnit, who turned off the machine? Where the hell is the power switch...",
-		"Someone watered down this coffee to high hell! Damnit, we're going to need to brew a new mug...")
+		"That smell... Fucking hell, this is decaf! I'm going to need to start all over with a fresh batch...",
+		"Someone turned the boiler plate to max and left it on! Whole damn pot is ruined and I'll need to make a new one...",
+		"Someone wrote on this pot that the coffee is reserved for the captain... Don't wanna get in trouble, guess I'll just make some more in a different pot.",
+		"Someone wrote on this pot that the coffee is reserved for the captain... Don't wanna get in trouble, guess I'll just make some more in a different pot.",
+		"Someone watered down this coffee to high hell! Damnit, we're going to need to brew a new pot...")
 
 		to_chat(user, span_notice("[pick(sabotage_texts)]"))
 
