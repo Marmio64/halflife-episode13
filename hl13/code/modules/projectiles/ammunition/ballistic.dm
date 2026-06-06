@@ -15,6 +15,11 @@
 	newtonian_force = 0.75
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/light
 
+/obj/item/ammo_casing/c9mm/usp/tranq
+	name = "9mm tranquilizer bullet casing"
+	desc = "A 9mm bullet casing filled with a tranquilizing drug."
+	projectile_type = /obj/projectile/bullet/c9mm/usp/tranq
+
 /obj/item/ammo_casing/c9mm/usp/makeshift
 	name = "9mm makeshift bullet casing"
 	desc = "A 9mm makeshift bullet casing."

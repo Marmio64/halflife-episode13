@@ -552,6 +552,7 @@
 
 /area/halflife/indoors/intruder //some of these areas will extend into hallways for the alert system
 	name = "Unknown Area"
+	base_lighting_alpha = 5 //didnt realize area was what was affecting darkness
 	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'
 	ambient_buzz_vol = 30
 	ambient_music = 'hl13/sound/ambience/bgm/cobras.ogg'

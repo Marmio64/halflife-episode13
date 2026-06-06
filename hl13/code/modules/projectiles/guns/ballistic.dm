@@ -430,6 +430,31 @@
 /obj/item/gun/ballistic/automatic/pistol/makeshift/no_mag
 	spawnwithmagazine = FALSE
 
+/obj/item/gun/ballistic/automatic/pistol/solid_tranq
+	name = "tranquilizer pistol"
+	desc = "An integrally suppressed bolt action pistol that fires non-lethal darts. It's slow to fire, but will put someone to sleep for a little under half a minute."
+	desc_controls = "Less effective against armor."
+	icon = 'hl13/icons/obj/guns/projectile.dmi'
+	icon_state = "tranq"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/solid_tranq
+	suppressed_sound = "hl13/sound/weapons/tranqfire.ogg"
+	rack_sound = "hl13/sound/weapons/tranqrack.ogg"
+	suppressed = TRUE
+	can_suppress = FALSE
+	can_unsuppress = FALSE
+	spread = 2
+	recoil = 0.1
+
+	rack_delay = 7
+	fire_delay = 8
+	semi_auto = FALSE //all this should slow it down enough
+
+	vary_fire_sound = FALSE
+
+	inhand_icon_state = "zipgun"
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
 // about 2.4 seconds TTK assuming you hit your first shot (so no cooldown)
 /obj/item/gun/ballistic/revolver/coltpython
 	name = "\improper colt python"

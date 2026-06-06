@@ -16,6 +16,11 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp/suppressed/solid
 	ears = /obj/item/radio/headset
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection/solid
+
+	backpack_contents = list(
+		/obj/item/gun/ballistic/automatic/pistol/solid_tranq
+	)
 
 	combat_music = 'hl13/sound/music/combat/bigshell.ogg' //i like this alert theme more than encounter tbh
 
@@ -43,6 +48,7 @@
 /datum/outfit/deployment_loadout/intruder/solid/post_equip(mob/living/carbon/human/H)
 	. = ..()
 	H.fully_replace_character_name(H.real_name,"Solid Crab")
+	H.death_sound = 'hl13/sound/effects/snakedeath.ogg'
 
 	var/list/spawn_locs = list()
 	for(var/X in GLOB.the_hidden)
@@ -141,12 +147,38 @@
 	SSwardrobe.provide_type(/obj/item/grenade/decoy, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/backpack/halflife/satchel/civilprotection/solid
+	name = "Weapons Bag"
+	desc = "A relatively small bag designed to carry firearms."
+
+/obj/item/storage/backpack/halflife/satchel/civilprotection/solid/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 3 //enough room for all of snakes weapons
+	atom_storage.set_holdable(list(
+		/obj/item/gun/ballistic/automatic/pistol, //should include the tranq and the usp
+		/obj/item/gun/ballistic/automatic/m4a1, //he can carry the locked guns but why would he, other than to deny the enemy?
+	))
+	atom_storage.exception_hold(list(
+		/obj/item/gun/ballistic/automatic/m4a1, //fuck off let him have his m4
+	))
+
 /obj/item/reagent_containers/pill/patch/medkit/ration
 	name = "Ration"
 	desc = "A ration. If this were some kind of stealth game, this would probably heal you up..."
 	icon = 'hl13/icons/obj/food.dmi'
 	icon_state = "seafood"
 	apply_sound = 'hl13/sound/items/ration.ogg'
+
+/obj/item/reagent_containers/pill/patch/medkit/ration/interact_with_atom(atom/target, mob/living/user, list/modifiers)
+	self_delay = 3.5 SECONDS
+
+	if(ishuman(target))
+		var/mob/living/carbon/human/target_human = target
+		if(HAS_TRAIT(target_human, TRAIT_THE_INTRUDER))
+			self_delay = 1 SECONDS //crab is trained in the arts of eating
+
+	..()
+
 
 /obj/item/grenade/decoy
 	name = "noise decoy grenade"

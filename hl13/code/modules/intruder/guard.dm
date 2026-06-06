@@ -1,3 +1,5 @@
+#define PHRASE_COOLDOWN (5 SECONDS)
+
 /datum/outfit/deployment_loadout/intruder/guard
 	faction = COMBINE_DEPLOYMENT_FACTION
 	name = "Conscript Guard"
@@ -69,6 +71,9 @@
 	actions_types = null //to prevent pulling it up
 	modifies_speech = TRUE
 	voice_change = TRUE
+	actions_types = list(/datum/action/item_action/footprints, /datum/action/item_action/box, /datum/action/item_action/who, /datum/action/item_action/noise)
+
+	COOLDOWN_DECLARE(balaclava_cooldown)
 
 	var/fused = TRUE //is the mask fused to the user?
 
@@ -91,6 +96,72 @@
 		if(findtext(full_message, lines))
 			playsound(source, guard_voicelines[lines], 50, FALSE)
 			return // only play the first.
+
+/obj/item/clothing/mask/balaclava/protective/guard/ui_action_click(mob/user, action)
+	if(istype(action, /datum/action/item_action/footprints))
+		footprints()
+	if(istype(action, /datum/action/item_action/box))
+		box()
+	if(istype(action, /datum/action/item_action/who))
+		who()
+	if(istype(action, /datum/action/item_action/noise))
+		noise()
+
+/datum/action/item_action/footprints
+	name = "Whose footprints are these?"
+
+/obj/item/clothing/mask/balaclava/protective/guard/verb/footprints()
+	set category = "Object"
+	set name = "Whose footprints are these?"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, balaclava_cooldown))
+		return
+
+	COOLDOWN_START(src, balaclava_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Whose footprints are these?", forced = src.name)
+
+/datum/action/item_action/box
+	name = "Just a box..."
+
+/obj/item/clothing/mask/balaclava/protective/guard/verb/box()
+	set category = "Object"
+	set name = "Just a box..."
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, balaclava_cooldown))
+		return
+
+	COOLDOWN_START(src, balaclava_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Just a box...", forced = src.name)
+
+/datum/action/item_action/who
+	name = "Whos that?!"
+
+/obj/item/clothing/mask/balaclava/protective/guard/verb/who()
+	set category = "Object"
+	set name = "Whos that?!"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, balaclava_cooldown))
+		return
+
+	COOLDOWN_START(src, balaclava_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Whos that?!", forced = src.name)
+
+/datum/action/item_action/noise
+	name = "What was that noise?"
+
+/obj/item/clothing/mask/balaclava/protective/guard/verb/noise()
+	set category = "Object"
+	set name = "What was that noise?"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, balaclava_cooldown))
+		return
+
+	COOLDOWN_START(src, balaclava_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("What was that noise?", forced = src.name)
 
 /obj/item/clothing/mask/balaclava/protective/guard/double_agent
 	desc = "This hard to see balaclava disguises your identity as a double agent, but is able to be removed by either yourself or others. If someone sees you without it, they'll know for sure you are a traitor."
@@ -157,3 +228,5 @@
 /obj/item/radio/headset/no_drop/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
+
+#undef PHRASE_COOLDOWN

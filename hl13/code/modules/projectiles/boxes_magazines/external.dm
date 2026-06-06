@@ -35,6 +35,18 @@
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	multiple_sprite_use_base = TRUE
 
+/obj/item/ammo_box/magazine/solid_tranq
+	name = "tranquilizer pistol magazine (9mm tranq)"
+	desc = "A 10-round magazine designed for the tranquilizer pistol. Designed to fill with rounds containing a tranquilizing drug."
+	ammo_type = /obj/item/ammo_casing/c9mm/usp/tranq
+	caliber = CALIBER_9MM
+	max_ammo = 10
+	icon_state = "45"
+	base_icon_state = "45"
+	icon = 'hl13/icons/obj/guns/ammo.dmi'
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+	multiple_sprite_use_base = TRUE
+
 /obj/item/ammo_box/magazine/ar2
 	name = "OSIPR magazine (pulse)"
 	desc = "A 30-round magazine for the OSIPR that contains pulse rounds."

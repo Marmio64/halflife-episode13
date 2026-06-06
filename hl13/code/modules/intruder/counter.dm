@@ -35,6 +35,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 	var/double_agents = 0
 
 	var/datum/action/cooldown/spell/squad_alert/alert = /datum/action/cooldown/spell/squad_alert //for squad leaders
+	var/datum/action/cooldown/spell/conjure_item/medkit/intruder/tasty = /datum/action/cooldown/spell/conjure_item/medkit/intruder
 
 /obj/machinery/intruder_time_counter/Initialize(mapload)
 	..()
@@ -52,7 +53,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 	attempt_pick_intruder()
 
 /obj/machinery/intruder_time_counter/proc/start_countdown()
-	to_chat(world, span_danger(span_slightly_larger(span_bold("Conscripts will be randomly placed and Operation Head Crabber will begin in 15 Seconds."))))
+	to_chat(world, span_danger(span_slightly_larger(span_bold("Conscripts will be randomly placed/assigned roles and Operation Head Crabber will begin in 15 Seconds."))))
 	GLOB.deployment_flag_grace_period = grace_time
 	START_PROCESSING(SSprocessing, src)
 
@@ -79,12 +80,18 @@ GLOBAL_LIST_EMPTY(real_objectives)
 		human_user.STADEX = 10
 		for(var/datum/action/cooldown/buttons in human_user.actions)
 			qdel(buttons)
+		for(var/obj/item/implant/I in human_user.implants)
+			if(I.type == /obj/item/implant/mindshield)
+				I.removed(human_user)
 		human_user.equipOutfit(/datum/outfit/deployment_loadout/intruder/solid)
 		human_user.regenerate_icons()
-		to_chat(human_user, span_notice("Come in, Crab. This is PLF Colonel Czesław. Your objective is to infiltrate the Zewnetrzny Raj Base and acquire two pieces of data from specific nodes. You will know if a node is a required objective upon examining it. You can activate other terminals to distract the guards, but they will not count towards completion."))
+		to_chat(human_user, span_bold(span_notice("Come in, Crab. This is PLF Colonel Czesław. Your objective is to infiltrate the Zewnetrzny Raj Base and acquire two pieces of data from specific nodes. You can activate other terminals to distract the guards, but they will not count towards completion. The node locations are as follows:")))
+		for(var/obj/machinery/combine_node/N in GLOB.real_objectives)
+			to_chat(human_user, span_danger("[get_area_name(N, TRUE)]"))
 		to_chat(human_user, span_notice("I see you used the ventilation system to enter the building. Once your objectives are complete, you can use the vent you came in from- or any other similarly shaped vents- to exfiltrate. Be warned, Crab, you cannot exfiltrate while an alert is active. We can't risk you being followed back to HQ."))
-		to_chat(human_user, span_notice("While you have already been provided a silenced pistol, a knife, and a radar system provided to us by Lambda scientists, you can procure more equipment on-site primarily found in- but not limited to- lockers, wooden crates, and storage rooms."))
-		to_chat(human_user, span_notice("Crab, this is a stealth mission, taking out guards is not a priority. They outnumber you 30 to 1 and are armed with ID-tagged M4 rifles, and will arrive better prepared the more of them you kill or alert. Especially avoid killing the squad leaders wearing blue berets. They can call in alerts even after death, allowing reinforcements to arrive, broadcasting your general location, and jamming your radar. Any guard is also capable of calling an alert on their radio if they have a direct line of sight with you. Good luck, Crab."))
+		to_chat(human_user, span_notice("While you have already been provided a silenced pistol, a tranquilizer, a knife, and a radar system provided to us by Lambda scientists, you can procure more equipment on-site primarily found in- but not limited to- lockers, wooden crates, and storage rooms."))
+		to_chat(human_user, span_notice("When a guard has a direct line of sight with you, they can activate their radio to call in an alert. During the alert phase, your radar will be jammed, your location will be revealed, and security will get tighter. Crab, I'm receiving word that there may be one or more PLF assets besides you disguised as guards. Try to get into contact with them, or let them go about their business.")
+		to_chat(human_user, span_bold(span_danger("Crab, this is a stealth mission, taking out guards is not a priority. They outnumber you 30 to 1 and are armed with ID-tagged M4 rifles, and will arrive better prepared the more of them you kill or alert. Especially avoid killing the squad leaders wearing blue berets. They can call in alerts even after death. Good luck, Crab.")))
 		candidates_left--
 
 	if(candidates_left == 0 || 99 < pick_retries)
@@ -93,25 +100,36 @@ GLOBAL_LIST_EMPTY(real_objectives)
 	else
 		attempt_pick_intruder()
 
+/obj/machinery/intruder_time_counter/proc/has_role(var/mob/living/carbon/human/target) //returns FALSE if the conscript does not have a role, otherwise returns TRUE
+	if(istype(target.head, /obj/item/clothing/head/beret/durathread/unitednations))
+		return TRUE
+	if(istype(target.wear_mask, /obj/item/clothing/mask/balaclava/protective/guard/double_agent))
+		return TRUE
+	return FALSE
+
 /obj/machinery/intruder_time_counter/proc/attempt_pick_leaders()
 	for(var/X in GLOB.deployment_combine_players)
 		var/client/candidate_client = X
 		var/mob/living/carbon/human/H = candidate_client.mob
-		if(!istype(H.head, /obj/item/clothing/head/beret/durathread/unitednations) && prob(50) && new_team_leaders > team_leaders && H.deployment_faction != REBEL_DEPLOYMENT_FACTION)
-			to_chat(H, span_notice("You have been promoted to squad leader! Although you and the other squad leaders only have as much authority as everyone else gives you, you can (and probably should) raise an alert on death, plus you get a little bit of armor for your head."))
-			to_chat(H, span_notice("You will also want to work together with fellow squad leaders to root out possible traitors. If you suspect someone is a spy, try to take off their balaclava to reveal them as a spy!"))
+		if(!has_role(H) && prob(50) && new_team_leaders > team_leaders && H.deployment_faction != REBEL_DEPLOYMENT_FACTION)
+			SEND_SOUND(H, 'hl13/sound/effects/intruderspecial.ogg')
+			to_chat(H, span_userdanger("You have been promoted to squad leader, and have received special equipment!")
+			to_chat(H, span_notice("Although you and the other squad leaders only have as much authority as everyone else gives you, you can (and probably should) raise an alert on death, supply your teammates with rations, and you get a little bit of armor for your head."))
+			to_chat(H, span_notice("You will also want to work together with fellow squad leaders to root out possible traitors. You can coordinate with them using your headset, but your channel is likely not secure. If you suspect someone is a spy, try to take off their balaclava to reveal them as a spy!"))
 			team_leaders++
 			H.equip_to_slot_or_del(new /obj/item/clothing/head/beret/durathread/unitednations/guard, ITEM_SLOT_HEAD)
 			H.equip_to_slot_or_del(new /obj/item/radio/headset, ITEM_SLOT_EARS)
 			alert = new(H)
 			alert.Grant(H)
+			tasty = new(H)
+			tasty.Grant(H)
 
 /obj/machinery/intruder_time_counter/proc/attempt_pick_double_agents()
 	for(var/X in GLOB.deployment_combine_players)
 		var/client/candidate_client = X
 		var/mob/living/carbon/human/H = candidate_client.mob
-		if(!istype(H.head, /obj/item/clothing/head/beret/durathread/unitednations) && prob(50) && new_double_agents > double_agents && H.deployment_faction != REBEL_DEPLOYMENT_FACTION)
-			SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+		if(!has_role(H) && prob(50) && new_double_agents > double_agents && H.deployment_faction != REBEL_DEPLOYMENT_FACTION)
+			SEND_SOUND(H, 'hl13/sound/effects/intruderspecial.ogg')
 			to_chat(H, span_userdanger("You are a spy among the conscripts, and are working for the PLF!"))
 			to_chat(H, span_notice("You are tasked with helping Solid Crab in his mission by any means necessary. You can take off your balaclava so he can identify you as an ally, but don't let other conscripts see you do this."))
 			H.fully_replace_character_name(H.real_name,"Traitorous Conscript Spy")
@@ -200,7 +218,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 		GLOB.alert_cooldown = 30 SECONDS
 		for(var/X in GLOB.deployment_combine_players)
 			var/mob/living/carbon/human/H = X
-			SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+			SEND_SOUND(H, 'hl13/sound/effects/alert_begin.ogg')
 			to_chat(H, "<span class='userdanger'>The intruder has been spotted near [intruderlocation], sending reinforcements.</span>")
 	else
 		GLOB.alert_cooldown -= 1 SECONDS
@@ -209,5 +227,5 @@ GLOBAL_LIST_EMPTY(real_objectives)
 		alert_active = FALSE
 		for(var/X in GLOB.deployment_combine_players)
 			var/mob/living/carbon/human/H = X
-			SEND_SOUND(H, 'hl13/sound/effects/griffin_10.ogg')
+			SEND_SOUND(H, 'hl13/sound/effects/alert_end.ogg')
 			to_chat(H, "<span class='greentext big'>All units, return to your positions and increase security.</span>")
