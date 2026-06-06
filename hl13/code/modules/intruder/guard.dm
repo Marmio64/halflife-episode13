@@ -34,11 +34,22 @@
 
 	nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_EYES, ITEM_SLOT_ID)
 
-/datum/outfit/deployment_loadout/intruder/guard/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/deployment_loadout/intruder/guard/pre_equip(mob/living/carbon/human/H, visuals_only = FALSE)
 	. = ..()
 
+	if(visuals_only) //stops the visual dummy from the admin equip menu from doing stuff like adding a guard spawned number to the total
+		return
+
+	H.tired_rate = rand(13,15) //a little over 2 minutes for tiredness slowdown to kick in, on average
 	H.setdeploymentfaction(COMBINE_DEPLOYMENT_FACTION)
+
 	GLOB.guards_spawned++
+
+	H.add_quirk(/datum/quirk/claustrophobia)
+
+	to_chat(H, span_notice("You are a guard! Listen to orders from people in blue berets and find and kill the intruder known as Solid Crab!"))
+	to_chat(H, span_notice("While on patrol, look for useful items to keep, and head to a break room for some coffee whenever you get tired."))
+	to_chat(H, span_notice("Lastly, keep an eye out for double agents! They're dressed in the same uniform as you, but if you're able to remove their balaclava you'll be able to tell they're a traitorous spy and must be killed!"))
 
 	ADD_TRAIT(H, TRAIT_NO_FOV_EFFECT, OUTFIT_TRAIT) //so you cant see snakes steps walking up to you
 
@@ -62,12 +73,13 @@
 		extra_dex = 6
 		extra_str = 5
 		suit = /obj/item/clothing/suit/armor/halflife/kevlar
+		head = /obj/item/clothing/head/helmet/halflife/military
 
 /obj/item/clothing/suit/armor/halflife/kevlar/guard
 	slowdown = 0.25
 
 /obj/item/clothing/mask/balaclava/protective/guard
-	desc = "You don't want to get in trouble with your superiors by removing this, but it's pretty hard to see out of these things... what was that noise? IF you see a fellow guard not wearing their balaclava, you may want to kill them on sight."
+	desc = "You don't want to get in trouble with your superiors by removing this, but it's pretty hard to see out of these things... what was that noise? If you see a fellow guard not wearing their balaclava, you may want to kill them on sight."
 	actions_types = null //to prevent pulling it up
 	modifies_speech = TRUE
 	voice_change = TRUE
@@ -82,6 +94,8 @@
 		"What was that noise" = 'hl13/sound/voice/solid/noise.ogg',
 		"Whos that" = 'hl13/sound/voice/solid/whosthat.ogg',
 		"Just a box" = 'hl13/sound/voice/solid/justabox.ogg',
+		"I heard something" = 'hl13/sound/voice/solid/heardsomething.ogg',
+		"hahaha" = 'hl13/sound/voice/solid/hahaha.ogg',
 	)
 
 /obj/item/clothing/mask/balaclava/protective/guard/Initialize()
@@ -200,11 +214,15 @@
 /obj/item/hl2/intruder_radio/interact(mob/user)
 	. = ..()
 
-	if(isliving(user))
-		var/mob/living/livie = user
-		if(livie.deployment_faction != COMBINE_DEPLOYMENT_FACTION)
-			to_chat(user, span_warning("It would be incredibly stupid for you to raise an alert in a stealth mission.")) //only person besides guards would be snake so funny line
-			return
+	if(!iscarbon(user))
+		to_chat(user, span_warning("You don't know how this thing works...")) //non carbon
+		return
+
+	var/mob/living/carbon/carbie = user
+
+	if(carbie.deployment_faction != COMBINE_DEPLOYMENT_FACTION)
+		to_chat(user, span_warning("It would be incredibly stupid for you to raise an alert in a stealth mission.")) //only person besides guards would be snake so funny line
+		return
 
 	if(!can_report)
 		to_chat(user, span_warning("You cannot report again yet!"))
@@ -215,7 +233,13 @@
 		if(hooman.deployment_faction == REBEL_DEPLOYMENT_FACTION)
 			intruder_detected = TRUE
 
-	if(do_after(user, 1 SECONDS, src) && intruder_detected)
+	var/alert_time = 1 SECONDS
+
+	if(TIREDNESS_SLEEPY_THRESHOLD < carbie.tiredness)
+		to_chat(user, span_notice("You're so tired, it is hard to use this radio..."))
+		alert_time = 3 SECONDS
+
+	if(do_after(user, alert_time, src) && intruder_detected)
 		GLOB.alert_phases++
 		user.do_alert_animation()
 		playsound(loc, 'hl13/sound/effects/alert.ogg', 50, FALSE, -5)

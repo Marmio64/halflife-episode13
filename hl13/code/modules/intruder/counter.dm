@@ -90,7 +90,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			to_chat(human_user, span_danger("[get_area_name(N, TRUE)]"))
 		to_chat(human_user, span_notice("I see you used the ventilation system to enter the building. Once your objectives are complete, you can use the vent you came in from- or any other similarly shaped vents- to exfiltrate. Be warned, Crab, you cannot exfiltrate while an alert is active. We can't risk you being followed back to HQ."))
 		to_chat(human_user, span_notice("While you have already been provided a silenced pistol, a tranquilizer, a knife, and a radar system provided to us by Lambda scientists, you can procure more equipment on-site primarily found in- but not limited to- lockers, wooden crates, and storage rooms."))
-		to_chat(human_user, span_notice("When a guard has a direct line of sight with you, they can activate their radio to call in an alert. During the alert phase, your radar will be jammed, your location will be revealed, and security will get tighter. Crab, I'm receiving word that there may be one or more PLF assets besides you disguised as guards. Try to get into contact with them, or let them go about their business.")
+		to_chat(human_user, span_notice("When a guard has a direct line of sight with you, they can activate their radio to call in an alert. During the alert phase, your radar will be jammed, your location will be revealed, and security will get tighter. Crab, I'm receiving word that there may be one or more PLF assets besides you disguised as guards. Try to get into contact with them, or let them go about their business."))
 		to_chat(human_user, span_bold(span_danger("Crab, this is a stealth mission, taking out guards is not a priority. They outnumber you 30 to 1 and are armed with ID-tagged M4 rifles, and will arrive better prepared the more of them you kill or alert. Especially avoid killing the squad leaders wearing blue berets. They can call in alerts even after death. Good luck, Crab.")))
 		candidates_left--
 
@@ -113,9 +113,12 @@ GLOBAL_LIST_EMPTY(real_objectives)
 		var/mob/living/carbon/human/H = candidate_client.mob
 		if(!has_role(H) && prob(50) && new_team_leaders > team_leaders && H.deployment_faction != REBEL_DEPLOYMENT_FACTION)
 			SEND_SOUND(H, 'hl13/sound/effects/intruderspecial.ogg')
-			to_chat(H, span_userdanger("You have been promoted to squad leader, and have received special equipment!")
+			to_chat(H, span_userdanger("You have been promoted to squad leader, and have received special equipment!"))
 			to_chat(H, span_notice("Although you and the other squad leaders only have as much authority as everyone else gives you, you can (and probably should) raise an alert on death, supply your teammates with rations, and you get a little bit of armor for your head."))
 			to_chat(H, span_notice("You will also want to work together with fellow squad leaders to root out possible traitors. You can coordinate with them using your headset, but your channel is likely not secure. If you suspect someone is a spy, try to take off their balaclava to reveal them as a spy!"))
+			var/head_item = H.get_item_by_slot(ITEM_SLOT_HEAD)
+			if(head_item) //incase they're wearing a helmet from high alert status, it needs to be rid of
+				qdel(head_item)
 			team_leaders++
 			H.equip_to_slot_or_del(new /obj/item/clothing/head/beret/durathread/unitednations/guard, ITEM_SLOT_HEAD)
 			H.equip_to_slot_or_del(new /obj/item/radio/headset, ITEM_SLOT_EARS)

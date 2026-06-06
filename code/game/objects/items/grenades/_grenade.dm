@@ -20,6 +20,9 @@
 	pickup_sound = 'sound/items/handling/grenade/grenade_pick_up.ogg'
 	drop_sound = 'sound/items/handling/grenade/grenade_drop.ogg'
 	sound_vary = TRUE
+
+	/// Should it play a sound when armed?
+	var/do_arm_sound = TRUE
 	/// Bitfields which prevent the grenade from detonating if set. Includes ([GRENADE_DUD]|[GRENADE_USED])
 	var/dud_flags = NONE
 	///Is this grenade currently armed?
@@ -157,7 +160,8 @@
 	if(shrapnel_type && shrapnel_radius)
 		shrapnel_initialized = TRUE
 		AddComponent(/datum/component/pellet_cloud, projectile_type = shrapnel_type, magnitude = shrapnel_radius)
-	playsound(src, 'sound/items/weapons/armbomb.ogg', volume, FALSE)
+	if(do_arm_sound)
+		playsound(src, 'sound/items/weapons/armbomb.ogg', volume, FALSE)
 	if(istype(user))
 		user.add_mob_memory(/datum/memory/bomb_planted, antagonist = src)
 	active = TRUE

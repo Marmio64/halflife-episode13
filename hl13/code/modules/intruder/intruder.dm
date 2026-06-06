@@ -49,6 +49,8 @@
 	. = ..()
 	H.fully_replace_character_name(H.real_name,"Solid Crab")
 	H.death_sound = 'hl13/sound/effects/snakedeath.ogg'
+	H.tired_rate = 0
+	H.remove_quirk(/datum/quirk/claustrophobia)
 
 	var/list/spawn_locs = list()
 	for(var/X in GLOB.the_hidden)
@@ -158,9 +160,7 @@
 		/obj/item/gun/ballistic/automatic/pistol, //should include the tranq and the usp
 		/obj/item/gun/ballistic/automatic/m4a1, //he can carry the locked guns but why would he, other than to deny the enemy?
 	))
-	atom_storage.exception_hold(list(
-		/obj/item/gun/ballistic/automatic/m4a1, //fuck off let him have his m4
-	))
+	atom_storage.exception_hold = typecacheof(list(/obj/item/gun/ballistic/automatic/m4a1))
 
 /obj/item/reagent_containers/pill/patch/medkit/ration
 	name = "Ration"
@@ -187,6 +187,7 @@
 	inhand_icon_state = "decoy"
 	icon = 'hl13/icons/obj/grenade.dmi'
 	det_time = 35
+	do_arm_sound = FALSE
 
 /obj/item/grenade/decoy/detonate(mob/living/lanced_by)
 	. = ..()
@@ -237,6 +238,7 @@
 	applied_name = "Solid Crab"
 	applied_desc = "You're pretty good..."
 	outfit = /datum/outfit/solid_crab_cutout
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/solid_crab_look
 
 /datum/cardboard_cutout/solid_crab/get_name()
 	return "Solid Crab"
@@ -252,3 +254,11 @@
 	suit = /obj/item/clothing/suit/armor/halflife/milvest/solid
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
 	gloves = /obj/item/clothing/gloves/color/black
+
+/obj/effect/mob_spawn/corpse/human/solid_crab_look
+	name = "Solid Crab's Appearence"
+	hairstyle = "Undercut"
+	haircolor = COLOR_BLACK
+	facial_hairstyle = "Jensen"
+	skin_tone = "caucasian2"
+	outfit = /datum/outfit/solid_crab_cutout

@@ -125,5 +125,8 @@
 	/// A bitfield of "bodyshapes", updated by /obj/item/bodypart/proc/synchronize_bodyshapes()
 	var/bodyshape = BODYSHAPE_HUMANOID
 
+	/// How fast you get tired
+	var/tired_rate = 1
+
 	COOLDOWN_DECLARE(bleeding_message_cd)
 

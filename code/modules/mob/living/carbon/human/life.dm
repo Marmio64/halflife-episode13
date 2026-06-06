@@ -68,7 +68,7 @@
 					adjust_tiredness(-25) //-500 tiredness on a 40 second sleep.
 		else
 			if(!HAS_TRAIT(src, TRAIT_NOSLEEP))
-				adjust_tiredness(1)
+				adjust_tiredness(tired_rate)
 				if(nutrition < NUTRITION_LEVEL_STARVING) //starvation and dehydration both make you feel extra tired and weak.
 					adjust_tiredness(1)
 				if(hydration < HYDRATION_LEVEL_DEHYDRATED)
@@ -107,7 +107,7 @@
 			set_stat_modifier("sleep", STATKEY_DEX, -3)
 			set_stat_modifier("sleep", STATKEY_STR, -2)
 			set_stat_modifier("sleep", STATKEY_END, -2)
-			set_stat_modifier("sleep", STATKEY_PER, -2)
+			set_stat_modifier("sleep", STATKEY_PER, -3)
 		else
 			add_mood_event("sleepy", /datum/mood_event/sleepy/exhausted/spartan)
 			set_stat_modifier("sleep", STATKEY_DEX, -2)

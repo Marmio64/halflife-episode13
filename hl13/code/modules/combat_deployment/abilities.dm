@@ -19,7 +19,7 @@
 	name = "Procure Ration"
 	desc = "Procures a ration to feed someone or yourself with. Deletes the last one summoned if it is still available."
 	item_type = /obj/item/reagent_containers/pill/patch/medkit/ration
-	cooldown_time = 25 SECONDS
+	cooldown_time = 30 SECONDS
 	delete_old = TRUE
 	sound = 'hl13/sound/effects/spawnration.ogg'
 	sound_varies = FALSE
