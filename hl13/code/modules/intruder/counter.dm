@@ -36,6 +36,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 
 	var/datum/action/cooldown/spell/squad_alert/alert = /datum/action/cooldown/spell/squad_alert //for squad leaders
 	var/datum/action/cooldown/spell/conjure_item/medkit/intruder/tasty = /datum/action/cooldown/spell/conjure_item/medkit/intruder
+	var/datum/action/cooldown/spell/recharge_lights/recharge = /datum/action/cooldown/spell/recharge_lights
 
 /obj/machinery/intruder_time_counter/Initialize(mapload)
 	..()
@@ -114,7 +115,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 		if(!has_role(H) && prob(50) && new_team_leaders > team_leaders && H.deployment_faction != REBEL_DEPLOYMENT_FACTION)
 			SEND_SOUND(H, 'hl13/sound/effects/intruderspecial.ogg')
 			to_chat(H, span_userdanger("You have been promoted to squad leader, and have received special equipment!"))
-			to_chat(H, span_notice("Although you and the other squad leaders only have as much authority as everyone else gives you, you can (and probably should) raise an alert on death, supply your teammates with rations, and you get a little bit of armor for your head."))
+			to_chat(H, span_notice("Although you and the other squad leaders only have as much authority as everyone else gives you, you can (and probably should) raise an alert on death, supply your teammates with rations and batteries, and you get a little bit of armor for your head."))
 			to_chat(H, span_notice("You will also want to work together with fellow squad leaders to root out possible traitors. You can coordinate with them using your headset, but your channel is likely not secure. If you suspect someone is a spy, try to take off their balaclava to reveal them as a spy!"))
 			var/head_item = H.get_item_by_slot(ITEM_SLOT_HEAD)
 			if(head_item) //incase they're wearing a helmet from high alert status, it needs to be rid of
@@ -126,6 +127,8 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			alert.Grant(H)
 			tasty = new(H)
 			tasty.Grant(H)
+			recharge = new(H)
+			recharge.Grant(H)
 
 /obj/machinery/intruder_time_counter/proc/attempt_pick_double_agents()
 	for(var/X in GLOB.deployment_combine_players)
