@@ -92,6 +92,11 @@ Assistant
 	ADD_TRAIT(user, TRAIT_PRISONER, JOB_TRAIT) //still useful for city stuff too
 
 	if(SSmapping.current_map.roleplay_type == "city")
+		if(istype(user.wear_id, /obj/item/card/id))
+			var/obj/item/card/id/ID = user.wear_id
+			ID.assignment = "Citizen"
+			ID.update_label()
+
 		return FALSE
 
 	var/cell = "NULL"

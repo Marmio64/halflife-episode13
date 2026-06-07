@@ -110,3 +110,8 @@
 	user.change_stat(STATKEY_END, 1)
 	user.change_stat(STATKEY_DEX, 1)
 
+	if(SSmapping.current_map.roleplay_type == "city")
+		if(istype(user.wear_id, /obj/item/card/id))
+			var/obj/item/card/id/ID = user.wear_id
+			ID.assignment = "District Administrator"
+			ID.update_label()

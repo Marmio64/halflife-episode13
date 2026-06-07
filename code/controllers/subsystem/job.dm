@@ -153,6 +153,8 @@ SUBSYSTEM_DEF(job)
 
 	for(var/job_type in all_jobs)
 		var/datum/job/job = new job_type()
+		var/banned_from_round = FALSE
+		var/bypass_ban = FALSE
 		if(!job.config_check())
 			continue
 		if(!job.map_check()) //Even though we initialize before mapping, this is fine because the config is loaded at new
@@ -163,8 +165,19 @@ SUBSYSTEM_DEF(job)
 		if(job.job_flags & JOB_COMBAT_DEPLOYMENT_JOB && SSmapping.current_map.minetype != "combat_deployment")
 			continue
 		if(job.job_flags & JOB_PRISON_JOB && SSmapping.current_map.roleplay_type != "prison")
-			continue
+			banned_from_round = TRUE
+		else if(job.job_flags & JOB_PRISON_JOB && SSmapping.current_map.roleplay_type == "prison")
+			bypass_ban = TRUE
 		if(job.job_flags & JOB_OUTLANDS_JOB && SSmapping.current_map.roleplay_type != "outlands")
+			banned_from_round = TRUE
+		else if(job.job_flags & JOB_OUTLANDS_JOB && SSmapping.current_map.roleplay_type == "outlands")
+			bypass_ban = TRUE
+		if(job.job_flags & JOB_CITY_JOB && SSmapping.current_map.roleplay_type != "city")
+			banned_from_round = TRUE
+		else if(job.job_flags & JOB_CITY_JOB && SSmapping.current_map.roleplay_type == "city")
+			bypass_ban = TRUE
+
+		if(banned_from_round && !bypass_ban)
 			continue
 
 		new_all_occupations += job

@@ -2,9 +2,9 @@
 	title = JOB_BARTENDER
 	description = "Operate the city's bar, sell 'luxury' goods, listen to the labor lead, try not to get shut down. You are also landlord to the attached apartment block and carry keys for it and it's amenities."
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
-	//faction = FACTION_STATION
-	total_positions = 0
-	spawn_positions = 0
+	faction = FACTION_STATION
+	total_positions = 1
+	spawn_positions = 1
 	exp_requirements = 30
 	exp_required_type = EXP_TYPE_CREW
 	supervisors = SUPERVISOR_HOP
@@ -31,7 +31,8 @@
 		/obj/item/stack/sheet/mineral/uranium = 10,
 	)
 
-	//job_flags = STATION_JOB_FLAGS
+	job_flags = JOB_EQUIP_RANK|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS|JOB_CITY_JOB
+
 	rpg_title = "Tavernkeeper"
 
 /datum/job/bartender/award_service(client/winner, award)

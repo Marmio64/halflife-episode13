@@ -3,8 +3,8 @@
 	description = "Preform work in the factory, mine if necessary, and carry out any tasks that the foreman needs you to do."
 	department_head = list(JOB_QUARTERMASTER)
 	//faction = FACTION_STATION
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 3
+	spawn_positions = 3
 	supervisors = SUPERVISOR_QM
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "CARGO_TECHNICIAN"
@@ -23,7 +23,8 @@
 	family_heirlooms = list(/obj/item/clipboard)
 
 	rpg_title = "Merchantman"
-	//job_flags = STATION_JOB_FLAGS
+	job_flags = STATION_JOB_FLAGS
+	job_flags = JOB_EQUIP_RANK|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS|JOB_CITY_JOB
 
 	ration_bonus = 1
 
