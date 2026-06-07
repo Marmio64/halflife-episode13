@@ -432,7 +432,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/solid_tranq
 	name = "tranquilizer pistol"
-	desc = "An integrally suppressed bolt action pistol that fires non-lethal darts. It's slow to fire, but will put someone to sleep for a little under half a minute."
+	desc = "An integrally suppressed bolt action pistol that fires non-lethal darts. It's slow to fire, but will put someone to sleep for a long time. Wide awake people may take an extra shot to sleep."
 	desc_controls = "Less effective against armor."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "tranq"

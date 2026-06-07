@@ -556,7 +556,7 @@
 	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'
 	ambient_buzz_vol = 30
 	ambient_music = 'hl13/sound/ambience/bgm/cobras.ogg'
-	ambient_music_vol = 15
+	ambient_music_vol = 17
 	sound_environment = SOUND_ENVIRONMENT_CAVE
 
 /area/halflife/indoors/intruder/barracks

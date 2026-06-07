@@ -1,4 +1,5 @@
 GLOBAL_VAR_INIT(complete_objectives, 0)
+GLOBAL_VAR_INIT(bonus_guard_preparedness, 0) //any actual bonus guard preparedness from misc sources
 GLOBAL_VAR_INIT(false_alerts, 0) //so that the node alerts dont count towards your final score
 GLOBAL_LIST_EMPTY(node_terminals)
 
@@ -66,7 +67,7 @@ GLOBAL_LIST_EMPTY(node_terminals)
 	var/attempts_to_complete = 0 //swapped it around purely to make the ingame messages easier for me
 
 	/// Time to complete one activation code
-	var/activation_time = 4 SECONDS
+	var/activation_time = 5 SECONDS
 
 	var/real_terminal = FALSE //can still be activated as a distraction, but won't count towards the objective.
 
@@ -126,7 +127,8 @@ GLOBAL_LIST_EMPTY(node_terminals)
 			if(real_terminal)
 				GLOB.complete_objectives++
 			else
-				to_chat(user, span_warning("This data is useless!"))
+				to_chat(user, span_warning("This data isn't good enough to complete your objective, but netted you a nice reward!"))
+				new /obj/effect/spawner/random/halflife/loot/intruder/crab/rare/guaranteed/three(loc)
 			GLOB.alert_phases++
 			GLOB.false_alerts++
 		else

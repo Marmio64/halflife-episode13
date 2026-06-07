@@ -13,16 +13,18 @@
 
 /obj/projectile/bullet/c9mm/usp/tranq/on_hit(atom/target, blocked = null, pierce_hit)
 	. = ..()
-	var/tranq_effective = 25 SECONDS - (blocked*4) //guard armor will do 25% so 2.5 seconds * 4 = 10 seconds
+	var/tranq_tiredness = 750 - (blocked*10) //guard armor will do 25%, so reduced tiredness gain by 250
 	if(iscarbon(target))
 		var/mob/living/carbon/C = target
-		if(prob(blocked))
-			C.visible_message(span_notice("The [src] fails to penetrate [target]'s armor and bounces off uselessly."))
-			return
-		if(tranq_effective <= 0 SECONDS)
+
+		if(tranq_tiredness <= 50)
 			C.visible_message(span_notice("The [src] fails to penetrate [target]'s thick armor and bounces off uselessly."))
 			return
-		C.SetSleeping(tranq_effective)
+
+		C.adjust_tiredness(tranq_tiredness)
+
+		if(TIREDNESS_SLEEPY_THRESHOLD <= C.tiredness) //if after the tranq shot they are sleepy, they go sleep sleep
+			C.SetSleeping(25 SECONDS)
 
 /obj/projectile/bullet/c9mm/usp/makeshift
 	name = "9mm makeshift bullet"

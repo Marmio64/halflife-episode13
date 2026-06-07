@@ -57,6 +57,8 @@
 
 	guard_preparedness += (GLOB.alert_phases - GLOB.false_alerts)
 	guard_preparedness += SSticker.tdm_combine_deaths
+	guard_preparedness += (GLOB.complete_objectives * 3)
+	guard_preparedness += GLOB.bonus_guard_preparedness
 
 	if(3 < guard_preparedness)
 		extra_dex = 2
@@ -68,6 +70,7 @@
 		H.dna.species.stunmod = 0.75
 		extra_end = 6
 		extra_str = 5
+		r_pocket = /obj/item/halflife/combine_battery
 	if(12 < guard_preparedness)
 		suit_store = /obj/item/gun/ballistic/automatic/m4a1/intruder/buffed
 		suit = /obj/item/clothing/suit/armor/halflife/kevlar
@@ -75,6 +78,16 @@
 		extra_dex = 6
 		extra_per = 4
 		head = /obj/item/clothing/head/helmet/halflife/military
+	if(18 < guard_preparedness)
+		suit = /obj/item/clothing/suit/armor/halflife/kevlar/fast
+		extra_dex = 10
+		extra_end = 10
+		extra_str = 10
+		extra_per = 10
+	if(21 < guard_preparedness)
+		glasses = /obj/item/clothing/glasses/night
+		r_pocket = /obj/item/grenade/syndieminibomb/bouncer
+		H.tired_rate = 10
 
 /obj/item/clothing/suit/armor/halflife/kevlar/guard
 	slowdown = 0.25
@@ -302,7 +315,9 @@
 		if(carbie.deployment_faction == REBEL_DEPLOYMENT_FACTION)
 			to_chat(user, span_userdanger("[carbie] is a filthy traitor! Kill them!"))
 			to_chat(user, span_userdanger("You stand unmoving in shock at the sight of such a traitor!"))
-			personal_cooldown = 5 MINUTES
+			user.emote("gasp")
+			user.do_alert_animation()
+			personal_cooldown = 3 MINUTES
 			user.Stun(2 SECONDS)
 		else
 			to_chat(user, span_green("Looks like they aren't a traitor! But... your radio is quickly overheating...!"))

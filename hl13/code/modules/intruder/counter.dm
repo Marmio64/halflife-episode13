@@ -34,6 +34,8 @@ GLOBAL_LIST_EMPTY(real_objectives)
 
 	var/double_agents = 0
 
+	var/round_length = 0
+
 	var/datum/action/cooldown/spell/squad_alert/alert = /datum/action/cooldown/spell/squad_alert //for squad leaders
 	var/datum/action/cooldown/spell/conjure_item/medkit/intruder/tasty = /datum/action/cooldown/spell/conjure_item/medkit/intruder
 	var/datum/action/cooldown/spell/recharge_lights/recharge = /datum/action/cooldown/spell/recharge_lights
@@ -112,7 +114,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 	for(var/X in GLOB.deployment_combine_players)
 		var/client/candidate_client = X
 		var/mob/living/carbon/human/H = candidate_client.mob
-		if(!has_role(H) && prob(50) && new_team_leaders > team_leaders && H.deployment_faction != REBEL_DEPLOYMENT_FACTION)
+		if(!has_role(H) && prob(50) && new_team_leaders > team_leaders && H.deployment_faction != REBEL_DEPLOYMENT_FACTION && ishuman(H))
 			SEND_SOUND(H, 'hl13/sound/effects/intruderspecial.ogg')
 			to_chat(H, span_userdanger("You have been promoted to squad leader, and have received special equipment!"))
 			to_chat(H, span_notice("Although you and the other squad leaders only have as much authority as everyone else gives you, you can (and probably should) raise an alert on death, supply your teammates with rations and batteries, and you get a little bit of armor for your head."))
@@ -121,6 +123,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			if(head_item) //incase they're wearing a helmet from high alert status, it needs to be rid of
 				qdel(head_item)
 			team_leaders++
+			ADD_TRAIT(H, TRAIT_INTRUDER_SQUAD_LEADER, OUTFIT_TRAIT)
 			H.equip_to_slot_or_del(new /obj/item/clothing/head/beret/durathread/unitednations/guard, ITEM_SLOT_HEAD)
 			H.equip_to_slot_or_del(new /obj/item/radio/headset, ITEM_SLOT_EARS)
 			alert = new(H)
@@ -134,12 +137,11 @@ GLOBAL_LIST_EMPTY(real_objectives)
 	for(var/X in GLOB.deployment_combine_players)
 		var/client/candidate_client = X
 		var/mob/living/carbon/human/H = candidate_client.mob
-		if(!has_role(H) && prob(50) && new_double_agents > double_agents && H.deployment_faction != REBEL_DEPLOYMENT_FACTION)
+		if(!has_role(H) && prob(50) && new_double_agents > double_agents && H.deployment_faction != REBEL_DEPLOYMENT_FACTION && ishuman(H))
 			SEND_SOUND(H, 'hl13/sound/effects/intruderspecial.ogg')
 			to_chat(H, span_userdanger("You are a spy among the conscripts, and are working for the PLF!"))
 			to_chat(H, span_notice("You are tasked with helping Solid Crab in his mission by any means necessary. You can take off your balaclava so he can identify you as an ally, but don't let other conscripts see you do this."))
 			H.cmode_music = 'hl13/sound/music/combat/thepain.ogg'
-			H.fully_replace_character_name(H.real_name,"Traitorous Conscript Spy")
 			H.set_facial_hairstyle("Shaved")
 			H.set_hairstyle("Bald")
 			H.update_body()
@@ -169,13 +171,18 @@ GLOBAL_LIST_EMPTY(real_objectives)
 /obj/machinery/intruder_time_counter/process()
 	while(new_team_leaders < CEILING(GLOB.guards_spawned / 4, 1))
 		new_team_leaders++
-	while(new_double_agents < CEILING(GLOB.guards_spawned / 12, 1))
+	while(new_double_agents < round(GLOB.guards_spawned / 12)) //one spy per 12 guards spawned
 		new_double_agents++
 	if(new_team_leaders > team_leaders && time_ticking)
 		attempt_pick_leaders()
 	if(new_double_agents > double_agents && time_ticking)
 		attempt_pick_double_agents()
 	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
+		round_length += 2 SECONDS //it goes by process ticks, which are one per second
+
+		if(15 MINUTES < round_length)
+			GLOB.bonus_guard_preparedness += 1 //continuous increase
+
 		if(!time_ticking)
 			time_ticking = TRUE
 			to_chat(world, span_danger(span_slightly_larger(span_bold("Grace period up, let the operation commence."))))

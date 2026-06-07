@@ -178,6 +178,10 @@
 		if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
 			SSticker.tdm_combine_deaths++
 			SSticker.tdm_total_deaths++
+
+			if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
+				if(HAS_TRAIT(src, TRAIT_INTRUDER_SQUAD_LEADER))
+					GLOB.bonus_guard_preparedness++
 		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
 			if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
 				if(HAS_TRAIT(src, TRAIT_THE_INTRUDER))

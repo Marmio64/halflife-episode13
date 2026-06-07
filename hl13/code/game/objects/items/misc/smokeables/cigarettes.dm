@@ -4,7 +4,7 @@
 	icon = 'hl13/icons/obj/smokeables/smokeables.dmi'
 	//worn_icon = 'hl13/icons/obj/smokeables/smokeables_mob.dmi'
 	type_butt = /obj/item/cigbutt/halflife
-	list_reagents = list(/datum/reagent/drug/nicotine = 15, /datum/reagent/medicine/omnizine = 3)
+	list_reagents = list(/datum/reagent/drug/nicotine = 15, /datum/reagent/medicine/omnizine = 15)
 	lung_harm = 0.75
 
 /obj/item/cigbutt/halflife

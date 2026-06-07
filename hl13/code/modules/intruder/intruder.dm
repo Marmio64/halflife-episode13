@@ -98,7 +98,7 @@
 /obj/item/clothing/suit/armor/halflife/milvest/solid
 	name = "Sneaking Suit"
 	desc = "Provides decent armor without slowing you down."
-	slowdown = -0.5 //you're pretty quick when you need to be, but low dexterity doesn't let you run for very long
+	slowdown = -0.4 //you're pretty quick when you need to be, but low dexterity doesn't let you run for very long
 
 /obj/item/clothing/shoes/jackboots/civilprotection/solid
 	name = "Sneaking Shoes"
@@ -114,7 +114,8 @@
 
 /obj/item/storage/belt/civilprotection/polish_resistance/solid/Initialize(mapload)
 	. = ..()
-	atom_storage.max_slots = 12
+	atom_storage.max_slots = 14
+	atom_storage.max_total_storage = 24
 	atom_storage.set_holdable(list(
 		/obj/item/ammo_casing/shotgun,
 		/obj/item/assembly/flash/handheld,
@@ -238,7 +239,6 @@
 	name = "Solid Crab"
 	applied_name = "Solid Crab"
 	applied_desc = "You're pretty good..."
-	outfit = /datum/outfit/solid_crab_cutout
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/solid_crab_look
 
 /datum/cardboard_cutout/solid_crab/get_name()

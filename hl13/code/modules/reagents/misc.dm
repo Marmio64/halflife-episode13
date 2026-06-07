@@ -59,6 +59,26 @@
 	affected_mob.adjust_tiredness(-16 * REM * seconds_per_tick) //makes you feel awake
 	affected_mob.adjust_hydration(-4 * REM * seconds_per_tick) //diuretic
 
+/datum/reagent/antifatigue_rations_high_grade
+	name = "High Grade Anti-Fatigue Rations"
+	description = "A powerful, quick acting stimulant for staving off sleep. These are top quality, and dont even act as a diuretic."
+	color = "#5c5149"
+	overdose_threshold = 50
+	taste_description = "bitter chemicals"
+	metabolized_traits = list(TRAIT_STIMULATED)
+	metabolization_rate = REAGENTS_METABOLISM * 2 //quick acting
+
+/datum/reagent/antifatigue_rations_high_grade/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	affected_mob.set_jitter_if_lower(10 SECONDS * REM * seconds_per_tick)
+
+/datum/reagent/antifatigue_rations_high_grade/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	affected_mob.adjust_dizzy(-10 SECONDS * REM * seconds_per_tick)
+	affected_mob.adjust_drowsiness(-6 SECONDS * REM * seconds_per_tick)
+	affected_mob.AdjustSleeping(-4 SECONDS * REM * seconds_per_tick)
+	affected_mob.adjust_tiredness(-35 * REM * seconds_per_tick)
+
 /datum/reagent/consumable/greenflavor
 	name = "Green Flavoring"
 	description = "A specially formulated flavoring designed to evoke true tastes of green."
