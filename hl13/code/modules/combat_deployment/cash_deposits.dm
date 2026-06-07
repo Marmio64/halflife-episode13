@@ -32,13 +32,13 @@
 	starting_cash = (DEPLOYMENT_TIER3_REBELS - 25) //mostly just has the first wave be tier 2
 
 /obj/machinery/cash_deposit/rebel/tier3
-	starting_cash = (DEPLOYMENT_TIER3_REBELS + 25) //equalizes the cash, so both sides start with 150 dollars with tier 3 spawns
+	starting_cash = (DEPLOYMENT_TIER3_REBELS + 10) //slightly equalizes the cash difference
 
 /obj/machinery/cash_deposit/combine/tier4
 	starting_cash = DEPLOYMENT_TIER4_COMBINE
 
 /obj/machinery/cash_deposit/rebel/tier4
-	starting_cash = (DEPLOYMENT_TIER4_REBELS + 25) //ditto ^
+	starting_cash = (DEPLOYMENT_TIER4_REBELS + 10) //ditto ^
 
 /obj/machinery/cash_deposit/xen
 	name = "Corpse Deposit"
