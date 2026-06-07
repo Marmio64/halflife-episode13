@@ -214,15 +214,21 @@
 /area/halflife/indoors/combat_deployment/combine_base)
 "et" = (
 /obj/structure/table/halflife/metal,
-/obj/item/grenade/syndieminibomb/bouncer,
-/obj/item/grenade/syndieminibomb/bouncer,
-/obj/item/grenade/c4{
-	pixel_x = -13;
-	pixel_y = 7
+/obj/item/grenade/syndieminibomb/bouncer{
+	pixel_x = -1;
+	pixel_y = 6
+	},
+/obj/item/grenade/syndieminibomb/bouncer{
+	pixel_x = 12;
+	pixel_y = 6
 	},
 /obj/item/grenade/incendiary_grenade{
 	pixel_x = -11;
 	pixel_y = -1
+	},
+/obj/item/grenade/syndieminibomb/bouncer{
+	pixel_x = 5;
+	pixel_y = 4
 	},
 /turf/open/floor/plating/indoor/metal/train,
 /area/halflife/indoors/combat_deployment/rebel_base)
@@ -875,6 +881,12 @@
 "sq" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors)
+"su" = (
+/obj/machinery/cash_deposit/combine/tier2plus{
+	starting_cash = 90
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "sw" = (
 /obj/structure/sink/halflife,
 /obj/structure/mirror/halflife{
@@ -2158,10 +2170,6 @@
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors)
-"VY" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick,
-/turf/open/floor/plating/indoor/checkered,
-/area/halflife/indoors)
 "Ws" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/metal/train,
@@ -2287,6 +2295,10 @@
 "ZK" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors)
+"ZT" = (
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors)
 "ZY" = (
 /obj/machinery/telecomms/server/presets/common/birdstation,
@@ -3713,7 +3725,7 @@ CU
 zF
 zF
 zF
-nH
+su
 zF
 kk
 gE
@@ -8402,10 +8414,10 @@ EM
 EM
 EM
 EM
-fS
-fS
-fS
-fS
+CO
+CO
+CO
+CO
 EM
 OM
 OM
@@ -8589,10 +8601,10 @@ EM
 EM
 EM
 EM
-CO
-CO
-CO
-CO
+fS
+fS
+fS
+fS
 EM
 OM
 OM
@@ -11379,9 +11391,9 @@ OM
 EM
 WE
 WE
+tn
 WE
-WE
-VY
+ZT
 WE
 WE
 WE
@@ -11753,7 +11765,7 @@ OM
 EM
 WE
 WE
-Vh
+WE
 WE
 Pz
 WE
@@ -11938,19 +11950,19 @@ OM
 OM
 OM
 EM
-EM
-EM
-EM
-EM
+WE
+WE
+Vh
+WE
 EM
 ue
 WE
 WE
 WE
 EM
-EM
-EM
-EM
+WE
+tn
+WE
 EM
 EM
 EM
@@ -12136,7 +12148,7 @@ xq
 WE
 WE
 WE
-tn
+WE
 WE
 EM
 CO
@@ -12696,9 +12708,9 @@ EM
 EM
 EM
 EM
-EM
-EM
-EM
+WE
+Vh
+WE
 EM
 CO
 CO
@@ -12882,10 +12894,10 @@ OM
 OM
 OM
 OM
-OM
-OM
-OM
-OM
+EM
+EM
+EM
+EM
 EM
 CO
 CO
