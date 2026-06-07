@@ -116,7 +116,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			SEND_SOUND(H, 'hl13/sound/effects/intruderspecial.ogg')
 			to_chat(H, span_userdanger("You have been promoted to squad leader, and have received special equipment!"))
 			to_chat(H, span_notice("Although you and the other squad leaders only have as much authority as everyone else gives you, you can (and probably should) raise an alert on death, supply your teammates with rations and batteries, and you get a little bit of armor for your head."))
-			to_chat(H, span_notice("You will also want to work together with fellow squad leaders to root out possible traitors. You can coordinate with them using your headset, but your channel is likely not secure. If you suspect someone is a spy, try to take off their balaclava to reveal them as a spy!"))
+			to_chat(H, span_notice("You will also want to work together with fellow squad leaders to root out possible traitors. You can coordinate with them using your headset, but your channel is likely not secure. If you suspect someone is a spy, you can use your alert radio on them to check, though guessing wrong will make it blow up, and guessing right renders the radio useless."))
 			var/head_item = H.get_item_by_slot(ITEM_SLOT_HEAD)
 			if(head_item) //incase they're wearing a helmet from high alert status, it needs to be rid of
 				qdel(head_item)
@@ -169,7 +169,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 /obj/machinery/intruder_time_counter/process()
 	while(new_team_leaders < CEILING(GLOB.guards_spawned / 4, 1))
 		new_team_leaders++
-	while(new_double_agents < CEILING(GLOB.guards_spawned / 10, 1))
+	while(new_double_agents < CEILING(GLOB.guards_spawned / 12, 1))
 		new_double_agents++
 	if(new_team_leaders > team_leaders && time_ticking)
 		attempt_pick_leaders()

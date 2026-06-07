@@ -49,7 +49,7 @@
 
 	to_chat(H, span_notice("You are a guard! Listen to orders from people in blue berets and find and kill the intruder known as Solid Crab!"))
 	to_chat(H, span_notice("While on patrol, look for useful items to keep, and head to a break room for some coffee whenever you get tired."))
-	to_chat(H, span_notice("Lastly, keep an eye out for double agents! They're dressed in the same uniform as you, but if you're able to remove their balaclava you'll be able to tell they're a traitorous spy and must be killed!"))
+	to_chat(H, span_notice("Lastly, keep an eye out for double agents! They're dressed in the same uniform as you, but using your alert radio on them can tell you if they're a traitor or not! Be wary, guessing wrong will make your radio blow up, and even if you guess right your radio will effectively become useless due to a long cooldown."))
 
 	ADD_TRAIT(H, TRAIT_NO_FOV_EFFECT, OUTFIT_TRAIT) //so you cant see snakes steps walking up to you
 
@@ -179,8 +179,8 @@
 	usr.say("What was that noise?", forced = src.name)
 
 /obj/item/clothing/mask/balaclava/protective/guard/double_agent
-	desc = "This hard to see balaclava disguises your identity as a double agent, but is able to be removed by either yourself or others. If someone sees you without it, they'll know for sure you are a traitor."
-	fused = FALSE
+	desc = "This hard to see balaclava disguises your identity as a double agent, but is able to be adjusted to reveal your face. If someone sees your face, they'll know for sure you are a traitor."
+	actions_types = list(/datum/action/item_action/footprints, /datum/action/item_action/box, /datum/action/item_action/who, /datum/action/item_action/noise, /datum/action/item_action/adjust)
 
 /obj/item/clothing/head/beret/durathread/unitednations/guard
 	name = "Squad Leader Beret"
@@ -276,6 +276,28 @@
 		can_report = FALSE
 	if(personal_cooldown >= 1 SECONDS)
 		personal_cooldown -= 1 SECONDS
+
+/obj/item/hl2/intruder_radio/interact_with_atom(atom/interacting_with, mob/living/user, list/modifiers)
+	if (!iscarbon(interacting_with) || !can_report)
+		to_chat(user, span_userdanger("They're not reportable, or an alert is currently active and is blocking the radio."))
+		return ITEM_INTERACT_BLOCKING
+
+	var/mob/living/carbon/carbie = interacting_with
+	to_chat(user, span_notice("You point the alert radio at [carbie] and use it's secondary function to try to find out if they're a spy. If they aren't the device will overload and blow up! Make sure you guess right. Guessing right also will still put the radio on a very long cooldown."))
+
+	if(do_after(user, 5 SECONDS, src))
+		if(carbie.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			to_chat(user, span_userdanger("[carbie] is a filthy traitor! Kill them!"))
+			personal_cooldown = 3 MINUTES
+		else
+			to_chat(user, span_green("Looks like they aren't a traitor! But... your radio is quickly overheating...!"))
+			to_chat(user, span_userdanger("[src] explodes!"))
+			playsound(src,'sound/effects/explosion/explosion1.ogg',40,TRUE)
+			user.flash_act(1, 1)
+			user.adjustBruteLoss(50)
+			user.adjustFireLoss(50)
+			qdel(src)
+
 
 /obj/item/hl2/intruder_radio/interact(mob/user)
 	. = ..()
