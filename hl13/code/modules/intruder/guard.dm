@@ -121,6 +121,8 @@
 		who()
 	if(istype(action, /datum/action/item_action/noise))
 		noise()
+	if(istype(action, /datum/action/item_action/adjust_mask))
+		adjust_mask()
 
 /datum/action/item_action/footprints
 	name = "Whose footprints are these?"
@@ -178,9 +180,20 @@
 
 	usr.say("What was that noise?", forced = src.name)
 
+/datum/action/item_action/adjust_mask
+	name = "Adjust Mask"
+
+/obj/item/clothing/mask/balaclava/protective/guard/verb/adjust_mask()
+	set category = "Object"
+	set name = "Adjust Mask"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr))
+		return
+
+	adjust_visor()
+
 /obj/item/clothing/mask/balaclava/protective/guard/double_agent
-	desc = "This hard to see balaclava disguises your identity as a double agent, but is able to be adjusted to reveal your face. If someone sees your face, they'll know for sure you are a traitor."
-	actions_types = list(/datum/action/item_action/footprints, /datum/action/item_action/box, /datum/action/item_action/who, /datum/action/item_action/noise, /datum/action/item_action/adjust)
+	desc = "This hard to see balaclava disguises your identity as a double agent."
 
 /obj/item/clothing/head/beret/durathread/unitednations/guard
 	name = "Squad Leader Beret"
@@ -318,7 +331,7 @@
 
 	intruder_detected = FALSE
 	for(var/mob/living/hooman in view(7, user))
-		if(hooman.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+		if(HAS_TRAIT(hooman, TRAIT_THE_INTRUDER))
 			intruder_detected = TRUE
 
 	var/alert_time = 1 SECONDS
