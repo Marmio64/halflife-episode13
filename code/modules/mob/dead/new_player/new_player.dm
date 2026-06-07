@@ -179,7 +179,7 @@
 				if(length(GLOB.deployment_combine_players) < length(GLOB.deployment_xen_players) || length(GLOB.deployment_rebel_players) < length(GLOB.deployment_xen_players))
 					return JOB_UNAVAILABLE_TEAMFULL
 		else if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
-			if(GLOB.alert_cooldown < 1 SECONDS && GLOB.deployment_flag_grace_period < 1 SECONDS)
+			if(GLOB.caution_cooldown < 1 SECONDS && GLOB.alert_cooldown < 1 SECONDS && GLOB.deployment_flag_grace_period < 1 SECONDS)
 				return JOB_UNAVAILABLE_NOALERT
 
 	if((job.current_positions >= job.total_positions) && job.total_positions != -1)
