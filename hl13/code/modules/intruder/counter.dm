@@ -1,5 +1,7 @@
 GLOBAL_VAR_INIT(alert_phases, 0)
 GLOBAL_VAR_INIT(alert_cooldown, 0 SECONDS)
+GLOBAL_VAR_INIT(caution_phases, 0)
+GLOBAL_VAR_INIT(caution_cooldown, 0 SECONDS)
 GLOBAL_VAR_INIT(guards_spawned, 0)
 GLOBAL_LIST_EMPTY(real_objectives)
 
@@ -21,6 +23,12 @@ GLOBAL_LIST_EMPTY(real_objectives)
 	var/alerts = 0
 
 	var/alert_active = FALSE
+
+	var/cautions = 0
+
+	var/caution_active = FALSE
+
+	var/objectives = 0
 
 	var/candidates_left = 0
 
@@ -205,7 +213,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
 			SSticker.force_ending = FORCE_END_ROUND
 			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All conscripts are dead, the intruder wins by default."))))
-			var/final_score = GLOB.alert_phases - GLOB.false_alerts
+			var/final_score = GLOB.alert_phases
 			to_chat(world, span_infoplain(span_bold("Alerts: [final_score]")))
 			to_chat(world, span_infoplain(span_bold("Codename: Belligerent Bullsquid")))
 			STOP_PROCESSING(SSprocessing, src)
@@ -229,17 +237,51 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			intruderlocation = get_area_name(H, TRUE)
 		alerts++
 		alert_active = TRUE
+		caution_active = FALSE
+		GLOB.caution_cooldown = 0 SECONDS
 		GLOB.alert_cooldown = 30 SECONDS
 		for(var/X in GLOB.deployment_combine_players)
 			var/mob/living/carbon/human/H = X
 			SEND_SOUND(H, 'hl13/sound/effects/alert_begin.ogg')
 			to_chat(H, "<span class='userdanger'>The intruder has been spotted near [intruderlocation], sending reinforcements.</span>")
+			to_chat(H, span_infoplain(span_bold("STATUS: ALERT")))
 	else
 		GLOB.alert_cooldown -= 1 SECONDS
 
 	if(alert_active && GLOB.alert_cooldown < 1 SECONDS)
 		alert_active = FALSE
+		GLOB.caution_phases++
+
+	if(caution_active && GLOB.caution_cooldown < 1 SECONDS)
+		caution_active = FALSE
 		for(var/X in GLOB.deployment_combine_players)
 			var/mob/living/carbon/human/H = X
 			SEND_SOUND(H, 'hl13/sound/effects/alert_end.ogg')
 			to_chat(H, "<span class='greentext big'>All units, return to your positions and increase security.</span>")
+			to_chat(H, span_infoplain(span_bold("STATUS: ALL CLEAR")))
+
+	if(GLOB.caution_phases > cautions)
+		cautions++
+		caution_active = TRUE
+		GLOB.caution_cooldown = 15 SECONDS
+		if(GLOB.complete_objectives_total > objectives)
+			objectives++
+			var/intruderlocation = "Unknown Area"
+			for(var/X in GLOB.deployment_rebel_players)
+				var/client/intruder_client = X
+				var/mob/living/carbon/human/H = intruder_client.mob
+				intruderlocation = get_area_name(H, TRUE)
+			for(var/X in GLOB.deployment_combine_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/caution_begin.ogg')
+				to_chat(H, "<span class='userdanger'>Something has been picked up near [intruderlocation], sending reinforcements to investigate.</span>")
+				to_chat(H, span_infoplain(span_bold("STATUS: CAUTION")))
+		else
+			for(var/X in GLOB.deployment_combine_players)
+				var/mob/living/carbon/human/H = X
+				to_chat(H, "<span class='userdanger'>We've lost the intruder, sending reinforcements to investigate.</span>")
+				to_chat(H, span_infoplain(span_bold("STATUS: CAUTION")))
+
+	else
+		GLOB.caution_cooldown -= 1 SECONDS
+

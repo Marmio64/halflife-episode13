@@ -1,6 +1,6 @@
 GLOBAL_VAR_INIT(complete_objectives, 0)
+GLOBAL_VAR_INIT(complete_objectives_total, 0) //includes fake ones, for caution phase
 GLOBAL_VAR_INIT(bonus_guard_preparedness, 0) //any actual bonus guard preparedness from misc sources
-GLOBAL_VAR_INIT(false_alerts, 0) //so that the node alerts dont count towards your final score
 GLOBAL_LIST_EMPTY(node_terminals)
 
 /obj/machinery/escape_vent
@@ -44,7 +44,7 @@ GLOBAL_LIST_EMPTY(node_terminals)
 		GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
 		SSticker.force_ending = FORCE_END_ROUND
 		to_chat(world, span_infoplain(span_slightly_larger(span_bold("All objectives complete, the intruder wins."))))
-		var/final_score = GLOB.alert_phases - GLOB.false_alerts
+		var/final_score = GLOB.alert_phases
 		var/title = completion_titles[min(final_score + 1, 6)]
 		to_chat(world, span_infoplain(span_bold("Alerts: [final_score]")))
 		to_chat(world, span_infoplain(span_bold("Codename: [title]")))
@@ -129,8 +129,8 @@ GLOBAL_LIST_EMPTY(node_terminals)
 			else
 				to_chat(user, span_warning("This data isn't good enough to complete your objective, but netted you a nice reward!"))
 				new /obj/effect/spawner/random/halflife/loot/intruder/crab/rare/guaranteed/three(loc)
-			GLOB.alert_phases++
-			GLOB.false_alerts++
+			GLOB.complete_objectives_total++
+			GLOB.caution_phases++
 		else
 			say("File transferred successfully. [attempts_to_complete]/3 files transferred.")
 			playsound(src, 'hl13/sound/effects/radio2.ogg', 15, TRUE, extrarange = 3)

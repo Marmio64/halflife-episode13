@@ -55,7 +55,7 @@
 
 	var/guard_preparedness = 0 //Guards are better prepared the more alerts there are, or if you've been killing a lot of their friends. Try to be nonlethal as the intruder maybe, and you know, avoid getting caught.
 
-	guard_preparedness += (GLOB.alert_phases - GLOB.false_alerts)
+	guard_preparedness += (GLOB.alert_phases)
 	guard_preparedness += SSticker.tdm_combine_deaths
 	guard_preparedness += (GLOB.complete_objectives * 3)
 	guard_preparedness += GLOB.bonus_guard_preparedness

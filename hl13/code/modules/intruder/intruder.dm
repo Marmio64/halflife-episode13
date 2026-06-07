@@ -64,6 +64,8 @@
 
 	var/datum/martial_art/cqc/bigboss = new
 	bigboss.teach(H)
+	var/datum/action/cooldown/spell/touch/holdup/loot = new
+	loot.Grant(H)
 
 	H.dna.species.stunmod = 0.25
 	H.mind?.adjust_experience(/datum/skill/scavenging, 2500)
