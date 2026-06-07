@@ -237,6 +237,8 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			intruderlocation = get_area_name(H, TRUE)
 		alerts++
 		alert_active = TRUE
+		caution_active = FALSE
+		GLOB.caution_cooldown = 0 SECONDS
 		GLOB.alert_cooldown = 30 SECONDS
 		for(var/X in GLOB.deployment_combine_players)
 			var/mob/living/carbon/human/H = X
