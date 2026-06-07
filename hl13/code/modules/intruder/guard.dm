@@ -301,14 +301,17 @@
 	if(do_after(user, 5 SECONDS, src))
 		if(carbie.deployment_faction == REBEL_DEPLOYMENT_FACTION)
 			to_chat(user, span_userdanger("[carbie] is a filthy traitor! Kill them!"))
-			personal_cooldown = 3 MINUTES
+			to_chat(user, span_userdanger("You stand unmoving in shock at the sight of such a traitor!"))
+			personal_cooldown = 5 MINUTES
+			user.Stun(2 SECONDS)
 		else
 			to_chat(user, span_green("Looks like they aren't a traitor! But... your radio is quickly overheating...!"))
 			to_chat(user, span_userdanger("[src] explodes!"))
 			playsound(src,'sound/effects/explosion/explosion1.ogg',40,TRUE)
 			user.flash_act(1, 1)
-			user.adjustBruteLoss(50)
-			user.adjustFireLoss(50)
+			user.adjustBruteLoss(80)
+			user.adjustFireLoss(80)
+			user.Paralyze(10 SECONDS)
 			qdel(src)
 
 

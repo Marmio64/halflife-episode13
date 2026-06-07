@@ -430,9 +430,9 @@
 	var/mob/living/L = user
 	transmitting = !transmitting
 	if(transmitting)
-		to_chat(L, span_notice("Alert will be raised in 10 seconds."))
+		to_chat(L, span_notice("Alert will be raised in 5 seconds."))
 		deltimer(transmission_timer)
-		transmission_timer = addtimer(CALLBACK(src, PROC_REF(squadalert), L), 10 SECONDS, TIMER_UNIQUE | TIMER_STOPPABLE)
+		transmission_timer = addtimer(CALLBACK(src, PROC_REF(squadalert), L), 5 SECONDS, TIMER_UNIQUE | TIMER_STOPPABLE)
 	else
 		to_chat(L, span_notice("The alert is already being raised."))
 		return

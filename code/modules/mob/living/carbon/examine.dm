@@ -271,6 +271,9 @@
 			if(12 to INFINITY)
 				. += span_notice("<b><i>[t_He] [t_is] just absolutely fucked up, you can look again to take a closer look...</i></b>")
 
+	if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
+		if(HAS_TRAIT(user, TRAIT_THE_INTRUDER) && deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			. += span_green("You recognize them as a spy that is on your side.")
 	if(HAS_TRAIT(src, TRAIT_HUSK))
 		. += span_warning("This body has been reduced to a grotesque husk.")
 	if(HAS_MIND_TRAIT(user, TRAIT_MORBID))
