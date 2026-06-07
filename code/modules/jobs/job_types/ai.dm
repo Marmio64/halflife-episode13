@@ -19,7 +19,7 @@
 		/datum/job_department/silicon,
 		)
 	random_spawns_possible = FALSE
-	job_flags = JOB_NEW_PLAYER_JOINABLE | JOB_EQUIP_RANK | JOB_BOLD_SELECT_TEXT | JOB_CANNOT_OPEN_SLOTS | JOB_PRISON_JOB
+	job_flags = JOB_NEW_PLAYER_JOINABLE | JOB_EQUIP_RANK | JOB_BOLD_SELECT_TEXT | JOB_CANNOT_OPEN_SLOTS | JOB_PRISON_JOB | JOB_CITY_JOB
 	config_tag = "AI"
 
 
