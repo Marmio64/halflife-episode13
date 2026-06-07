@@ -146,6 +146,11 @@
 	attack_speed = CLICK_CD_SLOW //Will two shot people if you have the backstabber trait from being a spy/assassin, so this balances it out more
 	var/backstab_bonus = 30
 
+
+/obj/item/knife/combat/backstab/better
+	backstab_bonus = 40
+	armour_penetration = 40
+
 /obj/item/knife/combat/backstab/afterattack(atom/target, mob/living/user, click_parameters)
 	if(target == user || !isliving(target))
 		return

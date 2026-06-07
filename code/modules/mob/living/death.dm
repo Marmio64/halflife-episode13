@@ -180,8 +180,11 @@
 			SSticker.tdm_total_deaths++
 
 			if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
-				if(HAS_TRAIT(src, TRAIT_INTRUDER_SQUAD_LEADER))
+				if(HAS_TRAIT(src, TRAIT_INTRUDER_SQUAD_LEADER) && !HAS_TRAIT(src, TRAIT_SUICIDED))
 					GLOB.bonus_guard_preparedness++
+				if(HAS_TRAIT(src, TRAIT_SUICIDED))
+					GLOB.bonus_guard_preparedness-- //subtract the point of guard preparedness guards get from a death if it was a suicide
+
 		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
 			if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
 				if(HAS_TRAIT(src, TRAIT_THE_INTRUDER))

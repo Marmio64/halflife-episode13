@@ -990,7 +990,7 @@
 
 	back = /obj/item/storage/backpack/halflife
 
-	l_pocket = /obj/item/knife/combat/backstab
+	l_pocket = /obj/item/knife/combat/backstab/better
 	r_pocket = /obj/item/grenade/smokebomb
 
 	suit = /obj/item/clothing/suit/armor/civilprotection/spy/elite
@@ -1018,8 +1018,8 @@
 	extra_str = 5
 	extra_dex = 8
 	extra_int = 5
-	extra_per = 3
-	extra_end = 3
+	extra_per = 5
+	extra_end = 5
 
 ///////// RED BOSSES ///////////////////
 
