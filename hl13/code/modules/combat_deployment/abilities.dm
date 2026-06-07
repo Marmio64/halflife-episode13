@@ -464,3 +464,72 @@
 			L.fuel = 60 SECONDS
 	user.visible_message(span_notice("[user] begins to pass out batteries for all carried flashlights in a 2 tile radius."))
 
+/datum/action/cooldown/spell/touch/holdup
+	name = "Ready Hold-up"
+	desc = "Ready a hand to perform a hold-up. While behind an enemy and holding any kind of weapon in your offhand, perform a hold-up that freezes them for a short time and can provide you with extra loot after two seconds. Doesn't work in alert."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "knife"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	hand_path = /obj/item/melee/touch_attack/holdup
+
+	spell_requirements = NONE
+	invocation_type = INVOCATION_NONE
+	check_flags = NONE
+	cooldown_time = 17 SECONDS
+
+	var/armed = FALSE
+
+/obj/item/melee/touch_attack/holdup
+	name = "Free Hand"
+	desc = "Your hand. It's ready for a hold-up."
+	icon_state = "greyscale"
+	inhand_icon_state = null
+	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+
+/datum/action/cooldown/spell/touch/holdup/cast_on_hand_hit(obj/item/melee/touch_attack/hand, mob/living/victim, mob/living/carbon/human/caster)
+
+	if(!ishuman(victim))
+		return FALSE
+	var/mob/living/carbon/human/human_victim = victim
+
+	if(human_victim.stat == DEAD)
+		caster.balloon_alert(caster, "can't hold-up the dead!")
+		return FALSE
+
+	if(human_victim.deployment_faction != COMBINE_DEPLOYMENT_FACTION)
+		caster.balloon_alert(caster, "can't hold-up allies!")
+		return FALSE
+
+	if(GLOB.alert_cooldown > 0 SECONDS)
+		caster.balloon_alert(caster, "can't hold-up during an alert!")
+		return FALSE
+
+	if(!istype(caster.get_inactive_held_item(), /obj/item/gun) && !istype(caster.get_inactive_held_item(), /obj/item/knife))
+		caster.balloon_alert(caster, "no weapon equipped!")
+		return FALSE
+
+	if(!check_behind(caster, human_victim))
+		caster.balloon_alert(caster, "not behind enemy!")
+		return FALSE
+
+	//finally after all that we can actually perform a hold up.
+	caster.say("#Freeze!")
+	SEND_SOUND(caster, sound('hl13/sound/voice/solid/snakefreeze.ogg'))
+	SEND_SOUND(human_victim, sound('hl13/sound/voice/solid/snakefreeze.ogg'))
+	human_victim.Immobilize(7 SECONDS)
+	human_victim.Stun(7 SECONDS)
+	human_victim.set_silence_if_lower(7 SECONDS)
+	to_chat(human_victim, span_danger("You suddenly feel a weapon behind you and you freeze up in fear! Someone begins to search your pockets!"))
+	to_chat(caster, span_notice("You begin to search [human_victim]'s pockets."))
+	if(do_after(caster, 2 SECONDS, human_victim))
+		new /obj/effect/spawner/random/halflife/loot/intruder/crab/rare/guaranteed(human_victim.loc)
+		to_chat(caster, span_notice("Something falls out of one of [human_victim]'s pockets!"))
+		to_chat(human_victim, span_warning("Something falls out of one of your pockets!"))
+		SEND_SOUND(caster, sound('hl13/sound/effects/spawnration.ogg'))
+		SEND_SOUND(human_victim, sound('hl13/sound/effects/spawnration.ogg'))
+	else
+		to_chat(caster, span_warning("You fail to find anything useful. Maybe look a little harder next time?"))
+	return TRUE
+
