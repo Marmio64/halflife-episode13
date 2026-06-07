@@ -135,6 +135,7 @@
 		/obj/item/restraints/legcuffs/bola,
 		/obj/item/ammo_box/magazine/usp9mm,
 		/obj/item/ammo_box/magazine/solid_tranq,
+		/obj/item/hl2/deployable_box,
 		/obj/item/stack/medical/gauze,
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone,
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
@@ -265,3 +266,35 @@
 	facial_hairstyle = "Jensen"
 	skin_tone = "caucasian2"
 	outfit = /datum/outfit/solid_crab_cutout
+
+
+/obj/item/hl2/deployable_box
+	name = "deployable cardboard box"
+	desc = "A large piece of folded cardboard. It can be used to make a box just large enough to fit someone in."
+	icon_state = "sheet-card"
+	inhand_icon_state = "sheet-card"
+	icon = 'icons/obj/stack_objects.dmi'
+	resistance_flags = FLAMMABLE
+	force = 0
+	throwforce = 0
+	pickup_sound = 'sound/items/handling/materials/cardboard_pick_up.ogg'
+	drop_sound = 'sound/items/handling/materials/cardboard_drop.ogg'
+	var/boxtype = /obj/structure/closet/cardboard
+
+/obj/item/hl2/deployable_box/interact(mob/user)
+	. = ..()
+	if(!iscarbon(user))
+		return
+	if(istype(user.loc, /obj/structure/closet/cardboard))
+		var/obj/structure/closet/cardboard/box = user.loc
+		if(box.open())
+			user.playsound_local(box, 'sound/misc/box_deploy.ogg', 50, TRUE)
+		return
+	//Box closing from here on out.
+	if(!isturf(user.loc)) //Don't let the player use this to escape mechs/welded closets.
+		to_chat(user, span_warning("You need more space to activate this implant!"))
+		return
+	var/box = new boxtype(user.drop_location())
+	user.forceMove(box)
+	user.playsound_local(box, 'sound/misc/box_deploy.ogg', 50, TRUE)
+	qdel(src)
