@@ -19,7 +19,7 @@
 			return
 		else
 			to_chat(user, span_notice("Sabotaging the machine..."))
-			if(do_after(user, 3 SECONDS, src))
+			if(do_after(user, 2 SECONDS, src))
 				to_chat(user, span_notice("Sabotaged!"))
 				sabotaged = TRUE
 				return

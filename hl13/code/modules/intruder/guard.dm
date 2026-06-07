@@ -311,22 +311,25 @@
 	var/mob/living/carbon/carbie = interacting_with
 	to_chat(user, span_notice("You point the alert radio at [carbie] and use it's secondary function to try to find out if they're a spy. If they aren't the device will overload and blow up! Make sure you guess right. Guessing right also will still put the radio on a very long cooldown."))
 
-	if(do_after(user, 5 SECONDS, src))
+	if(do_after(user, 8 SECONDS, src))
 		if(carbie.deployment_faction == REBEL_DEPLOYMENT_FACTION)
 			to_chat(user, span_userdanger("[carbie] is a filthy traitor! Kill them!"))
 			to_chat(user, span_userdanger("You stand unmoving in shock at the sight of such a traitor!"))
 			user.emote("gasp")
 			user.do_alert_animation()
 			personal_cooldown = 3 MINUTES
-			user.Stun(2 SECONDS)
+			user.Stun(3 SECONDS)
 		else
 			to_chat(user, span_green("Looks like they aren't a traitor! But... your radio is quickly overheating...!"))
 			to_chat(user, span_userdanger("[src] explodes!"))
 			playsound(src,'sound/effects/explosion/explosion1.ogg',40,TRUE)
 			user.flash_act(1, 1)
-			user.adjustBruteLoss(80)
-			user.adjustFireLoss(80)
-			user.Paralyze(10 SECONDS)
+			user.adjustBruteLoss(90)
+			user.adjustFireLoss(90)
+			user.Paralyze(12 SECONDS)
+			if(prob(25))
+				to_chat(user, span_userdanger("The feedback was too strong! Oh Fu-"))
+				user.gib(DROP_ALL_REMAINS)
 			qdel(src)
 
 

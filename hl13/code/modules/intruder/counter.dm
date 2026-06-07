@@ -179,7 +179,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 /obj/machinery/intruder_time_counter/process()
 	while(new_team_leaders < CEILING(GLOB.guards_spawned / 4, 1))
 		new_team_leaders++
-	while(new_double_agents < round(GLOB.guards_spawned / 12)) //one spy per 12 guards spawned
+	while(new_double_agents < round(GLOB.guards_spawned / 10)) //one spy per 10 guards spawned
 		new_double_agents++
 	if(new_team_leaders > team_leaders && time_ticking)
 		attempt_pick_leaders()
