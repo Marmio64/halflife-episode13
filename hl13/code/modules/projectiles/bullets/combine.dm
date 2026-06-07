@@ -50,7 +50,7 @@
 /obj/projectile/bullet/pulse/lmg
 	damage = 24
 	wound_bonus = -15
-	armour_penetration = 25
+	armour_penetration = 20
 
 /obj/projectile/bullet/pulse/weak
 	damage = 12

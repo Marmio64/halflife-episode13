@@ -309,7 +309,7 @@
 	armor_type = /datum/armor/hev/weak //Slightly less damage resistance, use speed to dodge!
 
 /obj/item/clothing/suit/hooded/hev/deathmatch/deployment
-	slowdown = -0.66
+	slowdown = -0.7
 	armor_type = /datum/armor/hev/weak
 
 /obj/item/clothing/suit/hooded/hev/deathmatch/boss

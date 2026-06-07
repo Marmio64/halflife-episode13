@@ -185,7 +185,7 @@
 	name = "Procure Incendiary Grenade"
 	desc = "Procures a incendiary grenade for tossing. Deletes the old one if it is not used."
 	item_type = /obj/item/grenade/incendiary_grenade
-	cooldown_time = 35 SECONDS
+	cooldown_time = 30 SECONDS
 
 
 /datum/action/cooldown/spell/aoe/rally

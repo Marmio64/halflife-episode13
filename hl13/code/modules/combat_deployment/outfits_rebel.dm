@@ -826,7 +826,7 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/rocket)
 
-	extra_end = 4
+	extra_end = 5
 
 	alternate_combat_music = 'hl13/sound/music/combat/rocketjumpwaltz.ogg'
 
@@ -935,7 +935,7 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/rebel)
 
-	extra_dex = 2
+	extra_dex = 3
 
 /datum/outfit/deployment_loadout/rebel/tier5/lieutenant/post_equip(mob/living/carbon/human/H)
 	. = ..()
