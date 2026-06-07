@@ -101,7 +101,7 @@
 /mob/living/basic/halflife/grub/deployment/upgraded
 	maxHealth = 35
 	health = 35
-	melee_damage_upper = 18 //fiesty grub
+	melee_damage_upper = 20 //fiesty grub
 
 /mob/living/basic/halflife/grub/deployment/upgraded/Initialize(mapload)
 	. = ..()
