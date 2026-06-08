@@ -518,6 +518,7 @@
 	caster.say("#Freeze!")
 	SEND_SOUND(caster, sound('hl13/sound/voice/solid/snakefreeze.ogg'))
 	SEND_SOUND(human_victim, sound('hl13/sound/voice/solid/snakefreeze.ogg'))
+	human_victim.drop_all_held_items() //no alerting
 	human_victim.Immobilize(7 SECONDS)
 	human_victim.Stun(7 SECONDS)
 	human_victim.set_silence_if_lower(7 SECONDS)

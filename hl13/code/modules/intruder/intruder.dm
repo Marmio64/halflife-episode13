@@ -1,3 +1,5 @@
+#define PHRASE_COOLDOWN (3 SECONDS)
+
 /datum/outfit/deployment_loadout/intruder/solid
 	faction = REBEL_DEPLOYMENT_FACTION
 	name = "Solid Crab"
@@ -47,10 +49,16 @@
 
 /datum/outfit/deployment_loadout/intruder/solid/post_equip(mob/living/carbon/human/H)
 	. = ..()
+	H.set_haircolor(COLOR_BLACK, update = FALSE)
+	H.skin_tone = "caucasian2"
+	H.set_hairstyle("Business Hair", update = TRUE)
+	H.set_facial_hairstyle("Shaved", update = TRUE)
+	H.update_body(0)
 	H.fully_replace_character_name(H.real_name,"Solid Crab")
 	H.death_sound = 'hl13/sound/effects/snakedeath.ogg'
 	H.tired_rate = 0
 	H.remove_quirk(/datum/quirk/claustrophobia)
+
 
 	var/list/spawn_locs = list()
 	for(var/X in GLOB.the_hidden)
@@ -66,6 +74,8 @@
 	bigboss.teach(H)
 	var/datum/action/cooldown/spell/touch/holdup/loot = new
 	loot.Grant(H)
+	var/obj/item/organ/tongue/solid/new_tongue = new()
+	new_tongue.Insert(H)
 
 	H.dna.species.stunmod = 0.25
 	H.mind?.adjust_experience(/datum/skill/scavenging, 2500)
@@ -236,7 +246,12 @@
 
 /obj/item/cardboard_cutout/solid_crab/proc/random_speech()
 	if(prob(50))
-		say("You're pretty good...")
+		if(prob(50))
+			say("You're pretty good...")
+			playsound(src, 'hl13/sound/voice/solid/snakegood.ogg', 50, FALSE)
+		else
+			say("Kept you waiting, huh?")
+			playsound(src, 'hl13/sound/voice/solid/snakewaiting.ogg', 50, FALSE)
 
 /datum/cardboard_cutout/solid_crab
 	name = "Solid Crab"
@@ -261,9 +276,9 @@
 
 /obj/effect/mob_spawn/corpse/human/solid_crab_look
 	name = "Solid Crab's Appearence"
-	hairstyle = "Undercut"
+	hairstyle = "Business Hair" //that other haircut looks ugly marmio
 	haircolor = COLOR_BLACK
-	facial_hairstyle = "Jensen"
+	facial_hairstyle = "Shaved"
 	skin_tone = "caucasian2"
 	outfit = /datum/outfit/solid_crab_cutout
 
@@ -298,3 +313,92 @@
 	user.forceMove(box)
 	user.playsound_local(box, 'sound/misc/box_deploy.ogg', 50, TRUE)
 	qdel(src)
+
+/obj/item/organ/tongue/solid
+	actions_types = list(/datum/action/item_action/waiting, /datum/action/item_action/liquid, /datum/action/item_action/moron, /datum/action/item_action/prettygood)
+	COOLDOWN_DECLARE(snake_cooldown)
+	modifies_speech = TRUE
+	var/static/list/snake_voicelines = list(
+		"Kept you waiting, huh" = 'hl13/sound/voice/solid/snakewaiting.ogg',
+		"Liquid" = 'hl13/sound/voice/solid/snakeliquid.ogg',
+		"Moron" = 'hl13/sound/voice/solid/snakemoron.ogg',
+		"pretty good" = 'hl13/sound/voice/solid/snakegood.ogg', //as far as i know i can't use ' in these so we'll just leave it at pretty good
+	)
+
+/obj/item/organ/tongue/solid/proc/can_use(mob/user)
+	return istype(user) && !user.incapacitated
+
+/obj/item/organ/tongue/solid/ui_action_click(mob/user, action)
+	if(istype(action, /datum/action/item_action/waiting))
+		waiting()
+	if(istype(action, /datum/action/item_action/liquid))
+		liquid()
+	if(istype(action, /datum/action/item_action/moron))
+		moron()
+	if(istype(action, /datum/action/item_action/prettygood))
+		prettygood()
+
+/obj/item/organ/tongue/solid/modify_speech(datum/source, list/speech_args)
+	var/full_message = speech_args[SPEECH_MESSAGE]
+	for(var/lines in snake_voicelines)
+		if(findtext(full_message, lines))
+			playsound(source, snake_voicelines[lines], 50, FALSE)
+			return // only play the first.
+
+/datum/action/item_action/waiting
+	name = "Kept you waiting, huh?"
+
+/obj/item/organ/tongue/solid/verb/waiting()
+	set category = "Object"
+	set name = "Kept you waiting, huh?"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Kept you waiting, huh?", forced = src.name)
+
+/datum/action/item_action/liquid
+	name = "LIQUID!!"
+
+/obj/item/organ/tongue/solid/verb/liquid()
+	set category = "Object"
+	set name = "LIQUID!!"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("LIQUID!!", forced = src.name)
+
+/datum/action/item_action/moron
+	name = "Moron!"
+
+/obj/item/organ/tongue/solid/verb/moron()
+	set category = "Object"
+	set name = "Moron!"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Moron!", forced = src.name)
+
+/datum/action/item_action/prettygood
+	name = "You're pretty good..."
+
+/obj/item/organ/tongue/solid/verb/prettygood()
+	set category = "Object"
+	set name = "You're pretty good..."
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("You're pretty good...", forced = src.name)
+
+#undef PHRASE_COOLDOWN
