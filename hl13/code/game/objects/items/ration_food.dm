@@ -246,7 +246,7 @@
 /obj/item/reagent_containers/pill/antifatigue/high_grade
 	name = "high grade anti-fatigue pill"
 	desc = "A strong stimulant which shakes you awake. These ones are high grade and very effective."
-	list_reagents = list(/datum/reagent/antifatigue_rations_high_grade = 10)
+	list_reagents = list(/datum/reagent/antifatigue_rations_high_grade = 12)
 
 //Soup dust
 /obj/item/reagent_containers/cup/halflife/sustenance_dust

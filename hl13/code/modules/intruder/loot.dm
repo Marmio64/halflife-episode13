@@ -49,5 +49,5 @@
 /obj/effect/spawner/random/halflife/loot/intruder/crab/rare/guaranteed
 	spawn_loot_chance = 100
 
-/obj/effect/spawner/random/halflife/loot/intruder/crab/rare/guaranteed/three
-	spawn_loot_count = 3
+/obj/effect/spawner/random/halflife/loot/intruder/crab/rare/guaranteed/four
+	spawn_loot_count = 4

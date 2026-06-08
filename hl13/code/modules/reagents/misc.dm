@@ -77,7 +77,7 @@
 	affected_mob.adjust_dizzy(-10 SECONDS * REM * seconds_per_tick)
 	affected_mob.adjust_drowsiness(-6 SECONDS * REM * seconds_per_tick)
 	affected_mob.AdjustSleeping(-4 SECONDS * REM * seconds_per_tick)
-	affected_mob.adjust_tiredness(-35 * REM * seconds_per_tick)
+	affected_mob.adjust_tiredness(-40 * REM * seconds_per_tick)
 
 /datum/reagent/consumable/greenflavor
 	name = "Green Flavoring"

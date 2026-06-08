@@ -188,7 +188,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
 		round_length += 2 SECONDS //it goes by process ticks, which are one per second
 
-		if(15 MINUTES < round_length)
+		if(14 MINUTES < round_length)
 			GLOB.bonus_guard_preparedness += 1 //continuous increase
 
 		if(!time_ticking)

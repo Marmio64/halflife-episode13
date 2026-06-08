@@ -30,7 +30,7 @@
 		return
 
 	quirk_holder.add_mood_event("claustrophobia", /datum/mood_event/claustrophobia)
-	quirk_holder.losebreath += 0.25 // miss a breath one in four times
+	quirk_holder.losebreath += 0.5 // miss a breath one in 2 times
 	if(SPT_PROB(25, seconds_per_tick))
 		if(nick_spotted)
 			to_chat(quirk_holder, span_warning("Santa Claus is here! I gotta get out of here!"))
