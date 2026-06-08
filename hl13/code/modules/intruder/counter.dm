@@ -154,6 +154,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			H.set_hairstyle("Bald")
 			H.update_body()
 			H.deployment_faction = REBEL_DEPLOYMENT_FACTION
+			ADD_TRAIT(H, TRAIT_NOSOFTCRIT, OUTFIT_TRAIT) //slight buff to their capabilities
 			var/mask_item = H.get_item_by_slot(ITEM_SLOT_MASK)
 			if(mask_item)
 				qdel(mask_item)
@@ -188,7 +189,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
 		round_length += 2 SECONDS //it goes by process ticks, which are one per second
 
-		if(14 MINUTES < round_length)
+		if(13 MINUTES < round_length)
 			GLOB.bonus_guard_preparedness += 1 //continuous increase
 
 		if(!time_ticking)

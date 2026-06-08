@@ -176,3 +176,30 @@
 /datum/reagent/headcrab_musk/on_mob_end_metabolize(mob/living/affected_mob)
 	. = ..()
 	affected_mob.faction -= FACTION_HEADCRAB
+
+/datum/reagent/adrenal_inhalant
+	name = "Adrenal Inhalant"
+	description = "An inhalant that rapidly improves the lung's ability to absorb oxygen and dispel carbon dioxide, with very little energy cost in return."
+	color = "#ada49e"
+	overdose_threshold = 40
+	taste_description = "bitter chemicals"
+	metabolized_traits = list(TRAIT_STIMULATED)
+
+/datum/reagent/adrenal_inhalant/overdose_process(mob/living/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	affected_mob.set_jitter_if_lower(10 SECONDS * REM * seconds_per_tick)
+
+/datum/reagent/adrenal_inhalant/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+	. = ..()
+	if(HAS_TRAIT(affected_mob, TRAIT_THE_INTRUDER))
+		affected_mob.adjustStaminaLoss(-8 * REM * seconds_per_tick, updating_stamina = FALSE, required_biotype = affected_biotype) //smokers lung, inhalant offers a lot more relief in comparison
+	else
+		affected_mob.adjustStaminaLoss(-4 * REM * seconds_per_tick, updating_stamina = FALSE, required_biotype = affected_biotype)
+	affected_mob.add_movespeed_modifier(/datum/movespeed_modifier/reagent/adrenal_inhalant)
+
+/datum/reagent/adrenal_inhalant/on_mob_end_metabolize(mob/living/affected_mob)
+	. = ..()
+	affected_mob.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/adrenal_inhalant)
+
+/datum/movespeed_modifier/reagent/adrenal_inhalant
+	multiplicative_slowdown = -0.15

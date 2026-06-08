@@ -79,7 +79,7 @@
 		extra_per = 4
 		head = /obj/item/clothing/head/helmet/halflife/military
 	if(18 < guard_preparedness)
-		suit = /obj/item/clothing/suit/armor/halflife/kevlar/fast
+		suit = /obj/item/clothing/suit/armor/halflife/kevlar/guard/fast
 		extra_dex = 10
 		extra_end = 10
 		extra_str = 10
@@ -91,6 +91,9 @@
 
 /obj/item/clothing/suit/armor/halflife/kevlar/guard
 	slowdown = 0.25
+
+/obj/item/clothing/suit/armor/halflife/kevlar/guard/fast
+	slowdown = -0.25
 
 /obj/item/clothing/mask/balaclava/protective/guard
 	desc = "You don't want to get in trouble with your superiors by removing this, but it's pretty hard to see out of these things... what was that noise? If you see a fellow guard not wearing their balaclava, you may want to kill them on sight."
@@ -327,7 +330,7 @@
 			user.adjustBruteLoss(90)
 			user.adjustFireLoss(90)
 			user.Paralyze(12 SECONDS)
-			if(prob(25))
+			if(prob(35))
 				to_chat(user, span_userdanger("The feedback was too strong! Oh Fu-"))
 				user.gib(DROP_ALL_REMAINS)
 			qdel(src)

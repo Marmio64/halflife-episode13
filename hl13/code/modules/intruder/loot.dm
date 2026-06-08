@@ -11,6 +11,7 @@
 		/obj/item/grenade/flashbang = 2,
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 2,
 		/obj/item/reagent_containers/pill/antifatigue/high_grade = 2,
+		/obj/item/reagent_containers/hypospray/medipen/adrenaline_inhaler,
 		/obj/item/hl2/deployable_box,
 		/obj/item/grenade/smokebomb,
 		/obj/item/grenade/decoy,
@@ -27,6 +28,7 @@
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 		/obj/item/grenade/flashbang,
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 2,
+		/obj/item/reagent_containers/hypospray/medipen/adrenaline_inhaler = 2,
 		/obj/item/hl2/deployable_box = 2,
 		/obj/item/grenade/smokebomb,
 		/obj/item/grenade/decoy,
@@ -42,6 +44,7 @@
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 2, //already gonna be a lot of these
 		/obj/item/ammo_box/magazine/solid_tranq = 4, //allows him to tranq at least 10 more guards
 		/obj/item/ammo_box/magazine/usp9mm = 2,
+		/obj/item/reagent_containers/hypospray/medipen/adrenaline_inhaler,
 		/obj/item/grenade/flashbang,
 		/obj/item/grenade/smokebomb,
 		/obj/item/grenade/syndieminibomb/bouncer = 2,
