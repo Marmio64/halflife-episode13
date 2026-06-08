@@ -90,7 +90,7 @@
 
 	sound = 'hl13/sound/creatures/advisor/advisor_punish.ogg'
 	school = SCHOOL_TRANSMUTATION
-	cooldown_time = 12 SECONDS
+	cooldown_time = 14 SECONDS
 	cooldown_reduction_per_rank = 6.25 SECONDS
 
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
