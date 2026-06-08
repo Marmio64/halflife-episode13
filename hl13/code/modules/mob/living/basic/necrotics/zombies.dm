@@ -90,7 +90,7 @@
 		play_dead.Grant(src)
 
 /mob/living/basic/halflife/zombie/deployment
-	speed = 1.2
+	speed = 1.1
 	melee_attack_cooldown = 1.25 SECONDS
 
 /mob/living/basic/halflife/zombie/zombine
@@ -217,8 +217,8 @@
 
 /mob/living/basic/halflife/zombie/engineer/deployment
 	melee_attack_cooldown = 1.5 SECONDS
-	obj_damage = 22
-	melee_damage_upper = 26
+	obj_damage = 25
+	melee_damage_upper = 28
 
 /mob/living/basic/halflife/zombie/infestation_control
 	name = "Zombified ICU Worker"
@@ -230,8 +230,8 @@
 
 /mob/living/basic/halflife/zombie/infestation_control/deployment
 	melee_attack_cooldown = 1.5 SECONDS
-	speed = 0.4
-	damage_coeff = list(BRUTE = 1, BURN = 0.25, TOX = 1, STAMINA = 1, OXY = 1)
+	speed = 0.3
+	damage_coeff = list(BRUTE = 1, BURN = 0.2, TOX = 1, STAMINA = 1, OXY = 1)
 
 /mob/living/basic/halflife/zombie/fungal
 	name = "Fungal Zombie"

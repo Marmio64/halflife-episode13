@@ -98,7 +98,7 @@
 /mob/living/basic/halflife/headcrab/deployment
 	melee_attack_cooldown = 1 SECONDS
 	melee_damage_upper = 16
-	obj_damage = 12
+	obj_damage = 15
 
 /mob/living/basic/halflife/headcrab/armored
 	name = "Armored Headcrab"
@@ -111,7 +111,7 @@
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1, /obj/item/stack/sheet/sinew = 1, /obj/item/stack/sheet/bone = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1)
 
 /mob/living/basic/halflife/headcrab/armored/deployment
-	melee_attack_cooldown = 1.5 SECONDS
+	melee_attack_cooldown = 1.25 SECONDS
 	maxHealth = 75
 	health = 75
 
@@ -158,6 +158,9 @@
 	poison_per_bite = 8
 	melee_attack_cooldown = 1.5 SECONDS
 
+/mob/living/basic/halflife/headcrab/poison/deadly/deployment
+	poison_per_bite = 10
+
 /datum/action/cooldown/mob_cooldown/halflife/jump/headcrab/poison
 	sound_cue = 'hl13/sound/creatures/poison/ph_scream.ogg'
 
@@ -190,13 +193,13 @@
 	zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed/fast
 
 /mob/living/basic/halflife/headcrab/fast/deployment
-	melee_attack_cooldown = 1.25 SECONDS
+	melee_attack_cooldown = 1 SECONDS
 
 /mob/living/basic/halflife/headcrab/fast/upgraded
 	melee_attack_cooldown = 0.7 SECONDS
-	maxHealth = 30
-	health = 30
-	speed = -0.2
+	maxHealth = 35
+	health = 35
+	speed = -0.3
 
 /mob/living/basic/halflife/headcrab/baby
 	name = "Baby Headcrab"

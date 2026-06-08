@@ -100,7 +100,7 @@
 
 /mob/living/basic/halflife/zombie/gonome/deployment
 	melee_damage_lower = 22
-	melee_damage_upper = 26
+	melee_damage_upper = 30
 	melee_attack_cooldown = 1.5 SECONDS
 	armour_penetration = 0
 	maxHealth = 250

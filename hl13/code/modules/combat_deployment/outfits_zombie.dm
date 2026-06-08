@@ -45,7 +45,7 @@
 	display_name = "Deadly Poison Headcrab (Support)"
 	desc = "An extra venomous headcrab that plays the long game with large amounts of venom it injects each bite."
 
-	mob_to_be = /mob/living/basic/halflife/headcrab/poison/deadly
+	mob_to_be = /mob/living/basic/halflife/headcrab/poison/deadly/deployment
 
 /datum/outfit/deployment_loadout/xen/tier2/zombie
 	name = "Deployment: Zombie"

@@ -129,6 +129,8 @@
 /mob/living/basic/halflife/bullsquid/deployment
 	faction = list(FACTION_HEADCRAB, FACTION_XEN_FAUNA)
 	speed = 0.4
+	melee_damage_lower = 24
+	melee_damage_upper = 28
 
 /mob/living/basic/halflife/bullsquid/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()
