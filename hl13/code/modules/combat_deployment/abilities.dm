@@ -79,7 +79,7 @@
 	delete_old = FALSE
 
 /datum/action/cooldown/spell/conjure_item/construction_voucher/slow
-	cooldown_time = 125 SECONDS
+	cooldown_time = 140 SECONDS
 
 /datum/action/cooldown/spell/conjure_item/razor_wire
 	name = "Procure Razor Wire"
