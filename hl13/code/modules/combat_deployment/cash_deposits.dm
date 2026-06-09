@@ -103,15 +103,18 @@
 
 /obj/machinery/cash_deposit/process()
 	consume()
-	if(deployment_faction == COMBINE_DEPLOYMENT_FACTION) //This is roll protection. If the enemy team has a cash advantage greater than 100, your team gets cashflow equal to that of a points flag.
+	if(deployment_faction == COMBINE_DEPLOYMENT_FACTION) //This is roll protection. If the enemy team has a cash advantage greater than 100, your team gets extra cashflow
 		if(GLOB.deployment_combine_cash < (GLOB.deployment_rebels_cash - 100))
-			GLOB.deployment_combine_cash += 0.6
+			GLOB.deployment_combine_cash += 1
 	if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
 		if(GLOB.deployment_rebels_cash < (GLOB.deployment_combine_cash - 100))
-			GLOB.deployment_rebels_cash += 0.6
+			GLOB.deployment_rebels_cash += 1
 
 /obj/machinery/cash_deposit/proc/consume()
 	var/money_amount = 10
+
+	if(get_active_player_count(alive_check = FALSE, afk_check = TRUE, human_check = FALSE) < 12) //during low pop, corpse selling is more risky. Having 1 person gone from a 5 person team selling corpses is terrible compared to 1 person gone from a 10 person team.
+		money_amount = 12
 
 	for(var/mob/living/carbon/human/offeredmob in view(src, 1)) //Only for corpse right next to/on same tile
 		if(offeredmob.stat)
@@ -123,9 +126,11 @@
 				playsound(get_turf(src),'sound/effects/cashregister.ogg', 75, TRUE)
 
 				if(HAS_TRAIT(offeredmob, TRAIT_TDMCAPTAIN))
-					money_amount = 25
+					money_amount += 15 //25 dollars
 
 				if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+					money_amount -= 2 //combine make 2 dollars less off corpses, so $8 from rebel bodies.
+
 					GLOB.deployment_combine_cash += (money_amount)
 				if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
 					GLOB.deployment_rebels_cash += (money_amount)

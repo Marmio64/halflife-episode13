@@ -56,7 +56,9 @@
 	icon = 'hl13/icons/turf/walls/concretealt.dmi'
 
 /turf/closed/wall/halflife/concrete/bunker
+	desc = "A heavy, reinforced looking concrete wall. These kinds of walls are usually used in bunkers, given how tough it looks."
 	icon = 'hl13/icons/turf/walls/bunker.dmi'
+	explosive_resistance = 3
 
 /turf/closed/wall/halflife/sewer
 	name = "concrete wall"
