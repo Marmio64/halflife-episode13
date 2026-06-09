@@ -322,7 +322,7 @@
 	cart_faction = COMBINE_DEPLOYMENT_FACTION
 	icon_state = "combine"
 	altered_respawn_speed = 40 SECONDS
-	normal_respawn_speed = 20 SECONDS
+	normal_respawn_speed = 25 SECONDS
 	time_per_checkpoint = 180 SECONDS
 
 /obj/machinery/deployment_payload/race

@@ -392,6 +392,12 @@
 /obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
+"iC" = (
+/obj/machinery/cash_deposit/combine/tier2plus{
+	starting_cash = 80
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "iK" = (
 /obj/structure/chair/sofa/hl13bench{
 	dir = 1
@@ -617,6 +623,10 @@
 /obj/structure/railing/halflife/solo,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city)
+"nF" = (
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/turf/open/floor/plating/indoor/checkered,
+/area/halflife/indoors)
 "nH" = (
 /obj/machinery/cash_deposit/combine/tier2plus{
 	starting_cash = 100
@@ -881,12 +891,6 @@
 "sq" = (
 /turf/closed/wall/halflife/concrete,
 /area/halflife/indoors)
-"su" = (
-/obj/machinery/cash_deposit/combine/tier2plus{
-	starting_cash = 90
-	},
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
 "sw" = (
 /obj/structure/sink/halflife,
 /obj/structure/mirror/halflife{
@@ -2295,10 +2299,6 @@
 "ZK" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors)
-"ZT" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick,
-/turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors)
 "ZY" = (
 /obj/machinery/telecomms/server/presets/common/birdstation,
@@ -3725,7 +3725,7 @@ CU
 zF
 zF
 zF
-su
+iC
 zF
 kk
 gE
@@ -11393,7 +11393,7 @@ WE
 WE
 tn
 WE
-ZT
+nF
 WE
 WE
 WE

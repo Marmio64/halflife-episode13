@@ -123,7 +123,7 @@
 			NT.contents_explosion(severity, target)
 			return TRUE
 		if(EXPLODE_HEAVY)
-			dismantle_wall(prob(50), TRUE)
+			dismantle_wall(prob(60-(explosive_resistance*10)), TRUE)
 
 	if(!density)
 		return ..()

@@ -166,6 +166,7 @@
 	var/loot_type = /obj/effect/spawner/random/halflife/loot
 	var/good_loot_type = /obj/effect/spawner/random/halflife/loot/uncommon
 	var/intruder_loot = FALSE
+	var/intruder_searched = FALSE
 
 /obj/structure/halflife/trash/garbage/Initialize(mapload)
 	. = ..()
@@ -183,10 +184,22 @@
 	. = ..()
 	if(!user.can_perform_action(src, NEED_DEXTERITY))
 		return
-	if(searched)
-		user.visible_message(span_notice("[user] examines [src], before turning away."), \
-			span_notice("The [src] have already been searched."))
-		return
+	var/intruder_user = FALSE
+	if(HAS_TRAIT(user, TRAIT_THE_INTRUDER))
+		intruder_user = TRUE
+
+
+	if(!intruder_user)
+		if(searched)
+			user.visible_message(span_notice("[user] examines [src], before turning away."), \
+				span_notice("The [src] have already been searched."))
+			return
+	else
+		if(intruder_searched)
+			user.visible_message(span_notice("[user] examines [src], before turning away."), \
+				span_notice("The [src] have already been searched."))
+			return
+
 	user.visible_message(span_notice("[user] begins to sift through the [src] for anything useful."), \
 		span_notice("You begin to dig through the [src] for something interesting."))
 
@@ -196,7 +209,7 @@
 			new /obj/effect/spawner/random/halflife/loot/intruder/crab/guaranteed(loc, 1)
 				user.visible_message(span_notice("[user] finds something inside the [src]."), \
 				span_notice("Looks like one of your friends stashed something useful here..."))
-			searched = TRUE
+			intruder_searched = TRUE
 			return
 
 		if(prob(loot_chance + (user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER))))
@@ -246,6 +259,13 @@
 	good_loot_type = /obj/effect/spawner/random/halflife/loot/scrap/five
 	hl13hit_sounds = SFX_WOODIMPACT
 	intruder_loot = TRUE
+
+/obj/structure/halflife/trash/garbage/dumpster/crate/Initialize(mapload)
+	. = ..()
+	if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
+		if(prob(25))
+			loot_type = /obj/effect/spawner/random/halflife/loot/intruder/guaranteed
+			good_loot_type = /obj/effect/spawner/random/halflife/loot/intruder/guaranteed
 
 /obj/structure/halflife/trash/garbage/dumpster/crate/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))

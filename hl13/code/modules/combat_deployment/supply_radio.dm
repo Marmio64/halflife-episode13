@@ -117,6 +117,7 @@
 
 /obj/item/hl2/supply_radio/rebel
 	name = "Rebel Supply Radio"
+	max_cash_regeneration = 6
 	faction_belonging = REBEL_DEPLOYMENT_FACTION
 
 /obj/item/hl2/supply_radio/rebel/lieutenant

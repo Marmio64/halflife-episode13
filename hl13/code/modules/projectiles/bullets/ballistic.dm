@@ -21,6 +21,10 @@
 			C.visible_message(span_notice("The [src] fails to penetrate [target]'s thick armor and bounces off uselessly."))
 			return
 
+		if(HAS_TRAIT(C, TRAIT_THE_INTRUDER) && prob(80))
+			C.say("You're pretty good!", forced = C.name)
+			return
+
 		C.adjust_tiredness(tranq_tiredness)
 
 		if(TIREDNESS_SLEEPY_THRESHOLD <= C.tiredness) //if after the tranq shot they are sleepy, they go sleep sleep
@@ -32,7 +36,7 @@
 
 /obj/projectile/bullet/c9mm/usp/armor_piercing
 	name = "9mm armor-piercing bullet"
-	armour_penetration = 20
+	armour_penetration = 25
 
 /obj/projectile/bullet/c9mm/usp/rubber
 	name = "9mm rubber bullet"

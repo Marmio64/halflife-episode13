@@ -10,6 +10,11 @@
 	var/brew_time = 10 SECONDS
 	var/sabotaged = FALSE
 
+	///Did someone put anti-fatigue rations in the coffee maker?
+	var/supercharges = 0
+	///Did someone put tranqs in the coffee maker?
+	var/tranqs = 0
+
 /obj/machinery/intruder_coffeemaker/interact(mob/living/carbon/human/user)
 	.=..()
 
@@ -18,8 +23,8 @@
 			to_chat(user, span_notice("This machine is already sabotaged."))
 			return
 		else
-			to_chat(user, span_notice("Sabotaging the machine..."))
-			if(do_after(user, 2 SECONDS, src))
+			to_chat(user, span_notice("Sabotaging the machine... Be wary, this will undo any tranquilizers or anti-fatigue rations that have been put inside."))
+			if(do_after(user, 2.5 SECONDS, src))
 				to_chat(user, span_notice("Sabotaged!"))
 				sabotaged = TRUE
 				return
@@ -44,6 +49,8 @@
 		if(do_after(user, 15 SECONDS, src))
 			to_chat(user, span_notice("There! All fixed."))
 			sabotaged = FALSE
+			supercharges = 0
+			tranqs = 0
 			return
 		else
 			return
@@ -58,6 +65,45 @@
 	playsound(user.loc, SFX_LIQUID_POUR, 30, TRUE)
 	if(do_after(user, brew_time, src))
 		playsound(user.loc,'hl13/sound/items/drink.ogg', rand(20,50), TRUE)
-		to_chat(user, span_notice("You drink the freshly poured cup of coffee, and feel energized!"))
-		user.adjust_tiredness(-1000)
-		user.reagents.add_reagent(/datum/reagent/consumable/coffee,20)
+
+		if(!supercharges && !tranqs)
+			to_chat(user, span_notice("You drink the freshly poured cup of coffee, and feel energized!"))
+			user.adjust_tiredness(-1000)
+			user.reagents.add_reagent(/datum/reagent/consumable/coffee,20)
+		else if(0 < supercharges)
+			supercharges--
+			to_chat(user, span_notice("You drink the freshly poured cup of coffee, and feel very energized!"))
+			user.adjust_tiredness(-1000)
+			user.reagents.add_reagent(/datum/reagent/consumable/coffee,20)
+			user.reagents.add_reagent(/datum/reagent/antifatigue_rations_high_grade,12)
+		else if(0 < tranqs)
+			tranqs--
+			to_chat(user, span_notice("You drink the freshly poured cup of coffee... but instead feel very tired! Did someone put something in here...?"))
+			user.adjust_tiredness(300)
+			if(prob(50))
+				user.SetSleeping(25 SECONDS)
+
+/obj/machinery/intruder_coffeemaker/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/reagent_containers/pill/antifatigue))
+		playsound(src, 'hl13/sound/machines/combine_button1.ogg', 50, TRUE, extrarange = -3)
+
+		to_chat(user, span_notice("You drop the pills inside the coffee."))
+
+		tranqs = 0
+		supercharges += 2
+
+		qdel(I)
+
+	if(istype(I, /obj/item/ammo_casing/c9mm/usp/tranq))
+		playsound(src, 'hl13/sound/machines/combine_button1.ogg', 50, TRUE, extrarange = -3)
+
+		to_chat(user, span_notice("You crack open the bullet and drop in the liquid tranquilizer."))
+
+		tranqs++
+		supercharges = 0
+
+		qdel(I)
+
+	else
+		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
+		return

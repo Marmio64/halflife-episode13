@@ -694,6 +694,14 @@
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 	pin = /obj/item/firing_pin/implant/mindshield
 
+/obj/item/gun/ballistic/shotgun/pulse/emag_act(mob/user, obj/item/card/emag/emag_card)
+	if (obj_flags & EMAGGED)
+		return FALSE
+	balloon_alert(user, "firing pin modified")
+	obj_flags |= EMAGGED
+	unlock()
+	return TRUE
+
 /obj/item/ammo_box/magazine/internal/shot/pulse
 	name = "pulseshotgun internal magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/pulse
@@ -917,6 +925,14 @@
 
 	weapon_category = WEAPON_CAT_HEAVY
 
+/obj/item/gun/ballistic/automatic/pulselmg/emag_act(mob/user, obj/item/card/emag/emag_card)
+	if (obj_flags & EMAGGED)
+		return FALSE
+	balloon_alert(user, "firing pin modified")
+	obj_flags |= EMAGGED
+	unlock()
+	return TRUE
+
 /obj/item/gun/ballistic/automatic/pulselmg/nopin
 	pin = null
 
@@ -1010,13 +1026,21 @@
 
 	item_flags = SLOWS_WHILE_IN_HAND | NEEDS_PERMIT
 
-	slowdown = 0.66
-	drag_slowdown = 0.66
+	slowdown = 0.75
+	drag_slowdown = 0.75
 
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
 	weapon_category = WEAPON_CAT_SPECIALTY
+
+/obj/item/gun/energy/immolator/emag_act(mob/user, obj/item/card/emag/emag_card)
+	if (obj_flags & EMAGGED)
+		return FALSE
+	balloon_alert(user, "firing pin modified")
+	obj_flags |= EMAGGED
+	unlock()
+	return TRUE
 
 /obj/item/gun/energy/immolator/Initialize(mapload)
 	. = ..()

@@ -128,7 +128,7 @@ GLOBAL_LIST_EMPTY(node_terminals)
 				GLOB.complete_objectives++
 			else
 				to_chat(user, span_warning("This data isn't good enough to complete your objective, but netted you a nice reward!"))
-				new /obj/effect/spawner/random/halflife/loot/intruder/crab/rare/guaranteed/three(loc)
+				new /obj/effect/spawner/random/halflife/loot/intruder/crab/rare/guaranteed/four(loc)
 			GLOB.complete_objectives_total++
 			GLOB.caution_phases++
 		else

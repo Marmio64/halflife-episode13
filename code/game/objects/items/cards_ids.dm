@@ -845,7 +845,7 @@
 	var/name_string = registered_name ? "[registered_name]'s ID Card" : initial(name)
 	var/assignment_string
 
-	if(is_intern)
+	if(is_intern && SSmapping.current_map.roleplay_type == "prison")
 		if(assignment)
 			assignment_string = trim?.intern_alt_name || "Intern [assignment]"
 		else

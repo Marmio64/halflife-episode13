@@ -97,7 +97,7 @@
 	low_power_melee_damage_lower = 3
 	low_power_melee_damage_upper = 5
 	melee_damage_lower = 15
-	melee_damage_upper = 20
+	melee_damage_upper = 18
 	operating_power = 8 //16 seconds till low power
 	loot = list()
 	var/shield_hits = 2

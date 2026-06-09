@@ -59,6 +59,7 @@
 	H.death_sound = 'hl13/sound/effects/snakedeath.ogg'
 	H.tired_rate = 0
 	H.remove_quirk(/datum/quirk/claustrophobia)
+	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 
 
 	var/list/spawn_locs = list()
@@ -113,7 +114,7 @@
 /obj/item/clothing/suit/armor/halflife/milvest/solid
 	name = "Sneaking Suit"
 	desc = "Provides decent armor without slowing you down."
-	slowdown = -0.4 //you're pretty quick when you need to be, but low dexterity doesn't let you run for very long
+	slowdown = -0.33 //you're pretty quick when you need to be, but low dexterity doesn't let you run for very long
 
 /obj/item/clothing/shoes/jackboots/civilprotection/solid
 	name = "Sneaking Shoes"
@@ -150,6 +151,7 @@
 		/obj/item/ammo_box/magazine/solid_tranq,
 		/obj/item/hl2/deployable_box,
 		/obj/item/stack/medical/gauze,
+		/obj/item/reagent_containers/hypospray/medipen/adrenaline_inhaler,
 		/obj/item/reagent_containers/hypospray/medipen/oxycodone,
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
 		/obj/item/reagent_containers/pill/patch/medkit/ration, //RATION HOLDER RATION HOLDER RATION HOLDER

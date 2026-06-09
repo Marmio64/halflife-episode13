@@ -93,6 +93,19 @@
 	amount_per_transfer_from_this = 35
 	list_reagents = list(/datum/reagent/medicine/epinephrine = 10, /datum/reagent/medicine/coagulant = 1, /datum/reagent/iron = 9, /datum/reagent/medicine/salglu_solution = 15)
 
+/obj/item/reagent_containers/hypospray/medipen/adrenaline_inhaler
+	name = "Adrenal Inhaler"
+	desc = "A rapid use inhaler that rapidly improves your lungs ability to breathe, while injecting small amounts of adrenaline. It aids with stamina recovery primarily, most useful for running, while also slightly increasing how far you can push your body to increase your speed."
+	icon = 'hl13/icons/obj/medkits.dmi'
+	icon_state = "inhaler"
+	base_icon_state = "inhaler"
+	custom_price = null
+	sound_played = 'hl13/sound/effects/huff.ogg'
+
+	volume = 20
+	amount_per_transfer_from_this = 20
+	list_reagents = list(/datum/reagent/medicine/epinephrine = 10, /datum/reagent/adrenal_inhalant = 10)
+
 /obj/item/storage/halflife/pill_bottle/antitox
 	name = "Anti-Sickness Pill bottle"
 	desc = "A pill bottle with antibiotics and activated charcoal pills, which cleanse diseases, venoms, and poisons from the body."
