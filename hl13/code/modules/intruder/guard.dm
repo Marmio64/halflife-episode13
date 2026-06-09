@@ -1,4 +1,5 @@
 #define PHRASE_COOLDOWN (5 SECONDS)
+GLOBAL_VAR_INIT(bullsquid_spawned, FALSE)
 
 /datum/outfit/deployment_loadout/intruder/guard
 	faction = COMBINE_DEPLOYMENT_FACTION
@@ -88,6 +89,18 @@
 		glasses = /obj/item/clothing/glasses/night
 		r_pocket = /obj/item/grenade/syndieminibomb/bouncer
 		H.tired_rate = 10
+	if(30 < guard_preparedness && GLOB.bullsquid_spawned == FALSE)
+		GLOB.bullsquid_spawned = TRUE
+		for(var/datum/action/cooldown/buttons in H.actions)
+			qdel(buttons)
+		H.equipOutfit(/datum/outfit/deployment_loadout/intruder/bullsquid)
+		H.regenerate_icons()
+		for(var/X in GLOB.deployment_combine_players)
+			var/mob/living/carbon/human/H_player = X
+			SEND_SOUND(H_player, 'hl13/sound/voice/solid/ocelotgood.ogg')
+			to_chat(H_player, "<span class='greentext big'>An elite unit has arrived to take down the intruder!</span>")
+			if(HAS_TRAIT(H, TRAIT_THE_INTRUDER))
+				H_player.cmode_music = 'hl13/sound/music/combat/duel.ogg' //boss fight music
 
 /obj/item/clothing/suit/armor/halflife/kevlar/guard
 	slowdown = 0.25

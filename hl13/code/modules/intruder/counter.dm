@@ -112,9 +112,11 @@ GLOBAL_LIST_EMPTY(real_objectives)
 		attempt_pick_intruder()
 
 /obj/machinery/intruder_time_counter/proc/has_role(var/mob/living/carbon/human/target) //returns FALSE if the conscript does not have a role, otherwise returns TRUE
-	if(istype(target.head, /obj/item/clothing/head/beret/durathread/unitednations))
+	if(istype(target.head, /obj/item/clothing/head/beret/durathread/unitednations)) //squad leader
 		return TRUE
-	if(istype(target.wear_mask, /obj/item/clothing/mask/balaclava/protective/guard/double_agent))
+	if(istype(target.wear_mask, /obj/item/clothing/mask/balaclava/protective/guard/double_agent)) //double agent
+		return TRUE
+	if(istype(target.wear_suit, /obj/item/clothing/suit/jacket/det_suit/bullsquid)) //revolver bullsquid
 		return TRUE
 	return FALSE
 
@@ -215,11 +217,19 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All conscripts are dead, the intruder wins by default."))))
 			var/final_score = GLOB.alert_phases
 			to_chat(world, span_infoplain(span_bold("Alerts: [final_score]")))
-			to_chat(world, span_infoplain(span_bold("Codename: Belligerent Bullsquid")))
+			to_chat(world, span_infoplain(span_bold("Codename: Belligerent Bullsquid"))) //codename makes even more sense now since you have to kill the man himself to get his codename
 			STOP_PROCESSING(SSprocessing, src)
 
 		if(SSticker.tdm_rebel_deaths == 1 && SSticker.IsRoundInProgress())
-			priority_announce("Crab, what happened?! Crab?! CRAAAAAAB!!", "PLF Priority Alert")
+			var/list/death_texts = list(
+				"Crab, what happened?! Crab?! CRAAAAAAB!!"
+				"Crab, answer me! Crab?! CRAAAAAAB!!"
+				"What's wrong?! Crab?! CRAAAAAAB!!"
+				"Crab, are you okay?! Crab?! CRAAAAAAB!!"
+				"Stop kidding around... Crab?! CRAAAAAAB!!"
+				"CRAAAAAAB!!"
+			)
+			priority_announce("[pick(death_texts)]", "PLF Priority Alert")
 			GLOB.deployment_win_team = COMBINE_DEPLOYMENT_FACTION
 			SSticker.force_ending = FORCE_END_ROUND
 			to_chat(world, span_infoplain(span_slightly_larger(span_bold("The intruder was killed, the conscripts win."))))

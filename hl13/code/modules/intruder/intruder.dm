@@ -44,6 +44,7 @@
 	ADD_TRAIT(H, TRAIT_THE_INTRUDER, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_TOTAL_FOV, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_SKITTISH, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_NOCRITOVERLAY, OUTFIT_TRAIT)
 
 	H.setdeploymentfaction(REBEL_DEPLOYMENT_FACTION)
 
@@ -74,8 +75,10 @@
 	bigboss.teach(H)
 	var/datum/action/cooldown/spell/touch/holdup/loot = new
 	loot.Grant(H)
+	var/obj/item/organ/old_organ = H.get_organ_slot(ORGAN_SLOT_TONGUE)
 	var/obj/item/organ/tongue/solid/new_tongue = new()
 	new_tongue.Insert(H)
+	qdel(old_organ)
 
 	H.dna.species.stunmod = 0.25
 	H.mind?.adjust_experience(/datum/skill/scavenging, 2500)
@@ -322,7 +325,7 @@
 		"Kept you waiting, huh" = 'hl13/sound/voice/solid/snakewaiting.ogg',
 		"Liquid" = 'hl13/sound/voice/solid/snakeliquid.ogg',
 		"Moron" = 'hl13/sound/voice/solid/snakemoron.ogg',
-		"pretty good" = 'hl13/sound/voice/solid/snakegood.ogg', //as far as i know i can't use ' in these so we'll just leave it at pretty good
+		"re pretty good" = 'hl13/sound/voice/solid/snakegood.ogg', //as far as i know i can't use ' in these so we'll just leave it at pretty good
 	)
 
 /obj/item/organ/tongue/solid/proc/can_use(mob/user)
