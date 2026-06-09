@@ -374,7 +374,8 @@
 /area/halflife/indoors/outlands)
 "cl" = (
 /obj/machinery/door/unpowered/halflife/metal{
-	dir = 1
+	dir = 1;
+	lockid = "un_outpost"
 	},
 /turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/outdoors/outlands_city)
@@ -863,10 +864,10 @@
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/outlands)
 "eY" = (
-/obj/machinery/door/unpowered/halflife/metal{
-	dir = 1
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 4
 	},
-/turf/open/floor/plating/indoor/carpet/shaggy/blue,
+/turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/outdoors/outlands_city)
 "eZ" = (
 /obj/structure/rack,
@@ -2024,8 +2025,10 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/outlands_city)
 "lA" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick,
-/turf/open/floor/plating/indoor/carpet/blue,
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/outlands_city)
 "lB" = (
 /obj/structure/table/halflife/metal/constructed/cobbled,
@@ -2593,8 +2596,10 @@
 /turf/cordon,
 /area/halflife/outdoors/forest)
 "oW" = (
-/obj/machinery/door/unpowered/halflife/metal,
-/turf/open/floor/plating/indoor/carpet/blue,
+/obj/machinery/door/unpowered/halflife/metal{
+	lockid = "un_bunker"
+	},
+/turf/open/floor/plating/indoor/carpet/shaggy/blue,
 /area/halflife/outdoors/outlands_city)
 "oX" = (
 /mob/living/simple_animal/hostile/halflife/antlion{
@@ -3750,7 +3755,9 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/outlands)
 "wx" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 8
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/outlands_city)
 "wy" = (
@@ -4788,7 +4795,10 @@
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/outlands)
 "CI" = (
-/obj/item/hl2key,
+/obj/item/hl2key{
+	lockid = "un_outpost";
+	name = "abandoned office building key"
+	},
 /obj/effect/decal/cleanable/blood/trails,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/outlands_city)
@@ -6414,10 +6424,6 @@
 	},
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
-"Mw" = (
-/obj/machinery/door/unpowered/halflife/metal,
-/turf/open/floor/plating/indoor/carpet/shaggy/blue,
-/area/halflife/outdoors/outlands_city)
 "Mx" = (
 /obj/structure/chair/halflife/metal{
 	dir = 4
@@ -63451,7 +63457,7 @@ dB
 dB
 Ca
 Up
-Mw
+oW
 Gg
 qZ
 Gg
@@ -63601,7 +63607,7 @@ dB
 dB
 Ca
 Up
-eY
+cl
 WP
 zg
 Gg
@@ -63615,7 +63621,7 @@ nQ
 WP
 Ht
 jr
-lA
+eY
 qZ
 Dq
 GS
@@ -64363,7 +64369,7 @@ WP
 WP
 gL
 WP
-wx
+lA
 WP
 Gg
 aF
@@ -64663,7 +64669,7 @@ jr
 jr
 WP
 WP
-wx
+lA
 WP
 aF
 Az
@@ -64963,7 +64969,7 @@ HP
 WP
 oM
 vu
-wx
+lA
 Dq
 VA
 Vp
@@ -65113,7 +65119,7 @@ Qf
 WP
 cA
 WP
-wx
+lA
 WP
 Gg
 kd
@@ -65263,7 +65269,7 @@ WP
 WP
 WP
 ir
-wx
+lA
 Hm
 WP
 HJ
