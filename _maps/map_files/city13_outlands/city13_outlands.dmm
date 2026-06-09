@@ -2576,7 +2576,9 @@
 /turf/open/floor/plating/indoor/metal/pipe/corner,
 /area/halflife/indoors/old)
 "duA" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 8
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/outlands_city)
 "duX" = (
@@ -3852,8 +3854,10 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/outlands_city)
 "fbY" = (
-/obj/machinery/door/unpowered/halflife/metal,
-/turf/open/floor/plating/indoor/carpet/blue,
+/obj/machinery/door/unpowered/halflife/metal{
+	lockid = "un_bunker"
+	},
+/turf/open/floor/plating/indoor/carpet/shaggy/blue,
 /area/halflife/outdoors/outlands_city)
 "fcc" = (
 /obj/structure/closet/halflife,
@@ -5049,8 +5053,10 @@
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/tracks)
 "gDZ" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick,
-/turf/open/floor/plating/indoor/carpet/blue,
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/outlands_city)
 "gEa" = (
 /obj/structure/halflife/trash/garbage/dumpster/crate,
@@ -9103,8 +9109,10 @@
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/outlands)
 "mgC" = (
-/obj/machinery/door/unpowered/halflife/metal,
-/turf/open/floor/plating/indoor/carpet/shaggy/blue,
+/obj/structure/window/fulltile/halflife/nosmooth/brick{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/outdoors/outlands_city)
 "mgK" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/nodirectional,
@@ -13188,7 +13196,10 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/old)
 "qYW" = (
-/obj/item/hl2key,
+/obj/item/hl2key{
+	lockid = "un_outpost";
+	name = "abandoned office building key"
+	},
 /obj/effect/decal/cleanable/blood/trails,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/outlands_city)
@@ -13922,12 +13933,6 @@
 /obj/structure/halflife/road_barrier,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/forest)
-"rTd" = (
-/obj/machinery/door/unpowered/halflife/metal{
-	dir = 1
-	},
-/turf/open/floor/plating/indoor/carpet/blue,
-/area/halflife/outdoors/outlands_city)
 "rTj" = (
 /obj/structure/halflife/trash/papers/two{
 	dir = 8
@@ -17981,9 +17986,10 @@
 /area/halflife/indoors/outlands)
 "xeN" = (
 /obj/machinery/door/unpowered/halflife/metal{
-	dir = 1
+	dir = 1;
+	lockid = "un_outpost"
 	},
-/turf/open/floor/plating/indoor/carpet/shaggy/blue,
+/turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/outdoors/outlands_city)
 "xeZ" = (
 /obj/structure/halflife/road_barrier{
@@ -116273,7 +116279,7 @@ mif
 mif
 yas
 cHK
-mgC
+fbY
 nmU
 xob
 nmU
@@ -116536,7 +116542,7 @@ mdv
 nmU
 xob
 nmU
-rTd
+xeN
 qYW
 jpy
 qPd
@@ -116544,7 +116550,7 @@ ivd
 xfZ
 nxo
 qvA
-gDZ
+mgC
 xob
 vHb
 xaq
@@ -117827,7 +117833,7 @@ xfZ
 xfZ
 snd
 xfZ
-duA
+gDZ
 xfZ
 nmU
 uio
@@ -118341,7 +118347,7 @@ qvA
 qvA
 xfZ
 xfZ
-duA
+gDZ
 xfZ
 uio
 xti
@@ -118855,7 +118861,7 @@ vHr
 xfZ
 hFK
 gpR
-duA
+gDZ
 vHb
 tUD
 tSZ
@@ -119112,7 +119118,7 @@ ppt
 xfZ
 bEa
 xfZ
-duA
+gDZ
 xfZ
 nmU
 sAt
@@ -119369,7 +119375,7 @@ xfZ
 xfZ
 xfZ
 ugJ
-duA
+gDZ
 cGP
 xfZ
 ezt
