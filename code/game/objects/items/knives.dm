@@ -148,7 +148,7 @@
 
 
 /obj/item/knife/combat/backstab/better
-	backstab_bonus = 40
+	backstab_bonus = 50
 	armour_penetration = 40
 
 /obj/item/knife/combat/backstab/afterattack(atom/target, mob/living/user, click_parameters)
