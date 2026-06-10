@@ -9,20 +9,15 @@
 	head = /obj/item/clothing/head/costume/snakeeater/solid
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch/solid
 	mask = /obj/item/cigarette/halflife
-	belt = /obj/item/storage/belt/civilprotection/polish_resistance/solid
 	uniform = /obj/item/clothing/under/syndicate/combat
 	suit = /obj/item/clothing/suit/armor/halflife/milvest/solid
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
 	l_pocket = /obj/item/storage/fancy/cigarettes/halflife
 	r_pocket = /obj/item/lighter
 	gloves = /obj/item/clothing/gloves/color/black
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp/suppressed/solid
 	ears = /obj/item/radio/headset
-	back = /obj/item/storage/backpack/halflife/satchel/civilprotection/solid
 
-	backpack_contents = list(
-		/obj/item/gun/ballistic/automatic/pistol/solid_tranq
-	)
+	l_hand = /obj/item/choice_beacon/intruder_snake_loadout
 
 	combat_music = 'hl13/sound/music/combat/bigshell.ogg' //i like this alert theme more than encounter tbh
 
@@ -44,6 +39,8 @@
 	ADD_TRAIT(H, TRAIT_THE_INTRUDER, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_TOTAL_FOV, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_SKITTISH, OUTFIT_TRAIT)
+
+	REMOVE_TRAIT(H, TRAIT_INTRUDER_GUARD, OUTFIT_TRAIT)
 
 	H.setdeploymentfaction(REBEL_DEPLOYMENT_FACTION)
 
@@ -166,6 +163,72 @@
 	SSwardrobe.provide_type(/obj/item/grenade/decoy, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/polish_resistance/solid/belligerent/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 15
+	atom_storage.max_total_storage = 26
+	atom_storage.set_holdable(list(
+		/obj/item/ammo_casing/shotgun,
+		/obj/item/assembly/flash/handheld,
+		/obj/item/clothing/glasses,
+		/obj/item/clothing/gloves,
+		/obj/item/flashlight/seclite,
+		/obj/item/food/donut,
+		/obj/item/grenade,
+		/obj/item/holosign_creator/security,
+		/obj/item/knife/combat,
+		/obj/item/melee/baton,
+		/obj/item/radio,
+		/obj/item/reagent_containers/spray/pepper,
+		/obj/item/restraints/handcuffs,
+		/obj/item/restraints/legcuffs/bola,
+		/obj/item/ammo_box/magazine/usp9mm,
+		/obj/item/ammo_box/magazine/solid_tranq,
+		/obj/item/ammo_box/magazine/m4a1,
+		/obj/item/hl2/deployable_box,
+		/obj/item/stack/medical/gauze,
+		/obj/item/reagent_containers/hypospray/medipen/adrenaline_inhaler,
+		/obj/item/reagent_containers/hypospray/medipen/oxycodone,
+		/obj/item/reagent_containers/pill/patch/medkit/vial,
+		/obj/item/reagent_containers/pill/patch/medkit/ration, //RATION HOLDER RATION HOLDER RATION HOLDER
+	))
+
+/obj/item/storage/belt/civilprotection/polish_resistance/solid/belligerent/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1, src)
+	SSwardrobe.provide_type(/obj/item/knife/combat, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/oxycodone, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/oxycodone, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/oxycodone, src)
+	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
+	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
+	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
+	update_appearance(UPDATE_ICON)
+
+/obj/item/storage/belt/civilprotection/polish_resistance/solid/phantom/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 16
+	atom_storage.max_total_storage = 28
+
+/obj/item/storage/belt/civilprotection/polish_resistance/solid/phantom/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/solid_tranq, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/solid_tranq, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/solid_tranq, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
+	SSwardrobe.provide_type(/obj/item/hl2/deployable_box, src)
+	SSwardrobe.provide_type(/obj/item/hl2/deployable_box, src)
+	SSwardrobe.provide_type(/obj/item/hl2/deployable_box, src)
+	SSwardrobe.provide_type(/obj/item/hl2/deployable_box, src)
+	SSwardrobe.provide_type(/obj/item/hl2/deployable_box, src)
+	SSwardrobe.provide_type(/obj/item/grenade/decoy, src)
+	SSwardrobe.provide_type(/obj/item/grenade/decoy, src)
+	update_appearance(UPDATE_ICON)
+
 /obj/item/storage/backpack/halflife/satchel/civilprotection/solid
 	name = "Weapons Bag"
 	desc = "A relatively small bag designed to carry firearms."
@@ -178,6 +241,17 @@
 		/obj/item/gun/ballistic/automatic/m4a1, //he can carry the locked guns but why would he, other than to deny the enemy?
 	))
 	atom_storage.exception_hold = typecacheof(list(/obj/item/gun/ballistic/automatic/m4a1))
+
+/obj/item/storage/backpack/halflife/satchel/civilprotection/solid/tranq/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/pistol/solid_tranq, src)
+	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/pistol/usp/suppressed/solid, src)
+
+/obj/item/storage/backpack/halflife/satchel/civilprotection/solid/tranq_only/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/pistol/solid_tranq, src)
+
+/obj/item/storage/backpack/halflife/satchel/civilprotection/solid/m4a1/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/m4a1, src)
+	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/pistol/usp/suppressed/solid, src)
 
 /obj/item/reagent_containers/pill/patch/medkit/ration
 	name = "Ration"
@@ -404,3 +478,49 @@
 	usr.say("You're pretty good...", forced = src.name)
 
 #undef PHRASE_COOLDOWN
+
+/obj/item/choice_beacon/intruder_snake_loadout
+	name = "equipment delivery beacon"
+	desc = "Your full gear was too heavy to bring in through the vents, so you'll be able to use this beacon to have your choice of gear teleported in. Only small items and a small amount of them are able to be teleported in without causing enough disturbances to alarm the Combine, thus making this one use."
+	company_source = "Polish Liberation Front"
+	company_message = span_bold("Request received and package is being teleported now, Crab!")
+	w_class = WEIGHT_CLASS_TINY
+
+/obj/item/choice_beacon/intruder_snake_loadout/generate_display_names()
+	var/static/list/options
+	if(!options)
+		options = list()
+		var/list/possible_options = list(
+			/obj/item/storage/box/intruder_snake/classic,
+			/obj/item/storage/box/intruder_snake/belligerent,
+			/obj/item/storage/box/intruder_snake/phantom,
+		)
+		for(var/obj/item/option as anything in possible_options)
+			options[initial(option.name)] = option
+	return options
+
+/obj/item/choice_beacon/intruder_snake_loadout/spawn_option(obj/item/storage/box/choice_path, mob/living/user)
+	var/obj/item/storage/just_a_box = new choice_path(user.loc)
+	just_a_box.emptyStorage() //the box is just a vessel for easy transport and itemization, it serves no purpose afterwards
+	qdel(just_a_box)
+
+/obj/item/storage/box/intruder_snake/classic
+	name = "Solid Crab - (ALL-ROUNDER, CLASSIC)"
+
+/obj/item/storage/box/intruder_snake/classic/PopulateContents()
+	new /obj/item/storage/belt/civilprotection/polish_resistance/solid(src)
+	new /obj/item/storage/backpack/halflife/satchel/civilprotection/solid/tranq(src)
+
+/obj/item/storage/box/intruder_snake/belligerent
+	name = "Belligerent Crab - (LETHAL, LOUD)"
+
+/obj/item/storage/box/intruder_snake/belligerent/PopulateContents()
+	new /obj/item/storage/belt/civilprotection/polish_resistance/solid/belligerent(src)
+	new /obj/item/storage/backpack/halflife/satchel/civilprotection/solid/m4a1(src)
+
+/obj/item/storage/box/intruder_snake/phantom
+	name = "Phantom Crab - (PURE STEALTH, NON-LETHAL)"
+
+/obj/item/storage/box/intruder_snake/phantom/PopulateContents()
+	new /obj/item/storage/belt/civilprotection/polish_resistance/solid/phantom(src)
+	new /obj/item/storage/backpack/halflife/satchel/civilprotection/solid/tranq_only(src)

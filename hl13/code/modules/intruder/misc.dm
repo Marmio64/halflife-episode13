@@ -15,6 +15,16 @@
 	///Did someone put tranqs in the coffee maker?
 	var/tranqs = 0
 
+/obj/machinery/intruder_coffeemaker/examine(mob/user)
+	. = ..()
+	if(ishuman(user))
+		var/mob/living/carbon/human/human_user = user
+		if(human_user.deployment_faction == REBEL_DEPLOYMENT_FACTION) //both spies and crab can examine coffee machines for info
+			if(supercharges)
+				. += span_warning("There are [supercharges] cups worth of anti-fatigue pills in the pot.")
+			if(tranqs)
+				. += span_warning("There are [tranqs] cups worth of tranquilizer in the pot.")
+
 /obj/machinery/intruder_coffeemaker/interact(mob/living/carbon/human/user)
 	.=..()
 

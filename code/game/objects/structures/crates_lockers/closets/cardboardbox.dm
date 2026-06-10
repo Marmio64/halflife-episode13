@@ -58,6 +58,11 @@
 	if(!.)
 		return FALSE
 
+	if(HAS_TRAIT(user, TRAIT_INTRUDER_GUARD))
+		if(GLOB.caution_cooldown < 1 SECONDS && GLOB.alert_cooldown < 1 SECONDS) //in the intruder game mode, guards take a couple seconds to open boxes when not on alert
+			if(!do_after(user, 3 SECONDS, src))
+				return FALSE
+
 	LAZYINITLIST(alerted)
 	var/do_alert = (COOLDOWN_FINISHED(src, alert_cooldown) && (locate(/mob/living) in contents))
 	if(!do_alert)
