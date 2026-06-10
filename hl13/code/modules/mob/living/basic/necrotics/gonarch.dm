@@ -18,8 +18,8 @@
 	pixel_x = -32
 	base_pixel_x = -16
 	health_doll_icon = "broodmother"
-	maxHealth = 1000
-	health = 1000
+	maxHealth = 1100
+	health = 1100
 	obj_damage = 25
 	melee_damage_lower = 20
 	melee_damage_upper = 25
@@ -32,6 +32,7 @@
 	throw_message = "does nothing to the plated hide of the"
 	speed = 2
 	move_to_delay = 5
+	move_resist = MOVE_FORCE_STRONG
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST|MOB_XENIAN
 	mouse_opacity = MOUSE_OPACITY_ICON
 	death_message = "falls over with a final cry!"

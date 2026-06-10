@@ -53,6 +53,7 @@ GLOBAL_VAR_INIT(bullsquid_spawned, FALSE)
 	to_chat(H, span_notice("Lastly, keep an eye out for double agents! They're dressed in the same uniform as you, but using your alert radio on them can tell you if they're a traitor or not! Be wary, guessing wrong will make your radio blow up, and even if you guess right your radio will effectively become useless due to a long cooldown."))
 
 	ADD_TRAIT(H, TRAIT_NO_FOV_EFFECT, OUTFIT_TRAIT) //so you cant see snakes steps walking up to you
+	ADD_TRAIT(H, TRAIT_INTRUDER_GUARD, OUTFIT_TRAIT) //so you cant see snakes steps walking up to you
 
 	var/guard_preparedness = 0 //Guards are better prepared the more alerts there are, or if you've been killing a lot of their friends. Try to be nonlethal as the intruder maybe, and you know, avoid getting caught.
 

@@ -534,9 +534,16 @@
 
 	weapon_category = WEAPON_CAT_SHOTGUN
 
-/obj/item/gun/ballistic/shotgun/spas12/freeman
+/obj/item/gun/ballistic/shotgun/spas12/improved
 	desc = "A spectacularly lethal pump action shotgun, for close encounters. This one has a pristine and powerful looking appearence."
-	projectile_damage_multiplier = 1.2
+	projectile_damage_multiplier = 1.15
+
+/obj/item/gun/ballistic/shotgun/spas12/freeman
+	name = "Legendary SPAS 12"
+	desc = "A spectacularly lethal pump action shotgun, for close encounters. This one has a legendary aura of freedom about it."
+	projectile_damage_multiplier = 1.25
+	spread = 5
+	pin = /obj/item/firing_pin/implant/pindicate
 
 /obj/item/gun/ballistic/shotgun/spas12/try_fire_gun(atom/target, mob/living/user, params)
 	if(LAZYACCESS(params2list(params), RIGHT_CLICK))

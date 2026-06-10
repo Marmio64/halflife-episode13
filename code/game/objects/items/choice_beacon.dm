@@ -1,9 +1,8 @@
 /obj/item/choice_beacon
 	name = "choice beacon"
 	desc = "Hey, why are you viewing this?!! Please let CentCom know about this odd occurrence."
-	icon = 'icons/obj/devices/remote.dmi'
-	icon_state = "generic_delivery"
-	inhand_icon_state = "generic_delivery"
+	icon = 'hl13/icons/obj/misc_items.dmi'
+	icon_state = "loadout_picker"
 	lefthand_file = 'icons/mob/inhands/items/devices_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items/devices_righthand.dmi'
 	/// How many uses this item has before being deleted
@@ -103,8 +102,6 @@
 /obj/item/choice_beacon/cpomilestone
 	name = "CPO Milestone Reward Beacon"
 	desc = "A reward incentive for CPO, it seems the Combine mostly filled the market with a bunch of surplus gear they had no use for. This one has a universal cost of 2 Requisition points."
-	icon_state = "sb_delivery"
-	inhand_icon_state = "sb_delivery"
 	company_source = "Overwatch-Dispatch"
 	company_message = span_bold("Your choice has been selected, and we will now be deducting requisition points for the delivery cost.")
 	w_class = WEIGHT_CLASS_TINY
