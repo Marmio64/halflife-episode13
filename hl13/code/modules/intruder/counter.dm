@@ -42,6 +42,8 @@ GLOBAL_LIST_EMPTY(real_objectives)
 
 	var/double_agents = 0
 
+	var/revolver_bullsquid = FALSE
+
 	var/round_length = 0
 
 	var/datum/action/cooldown/spell/squad_alert/alert = /datum/action/cooldown/spell/squad_alert //for squad leaders
@@ -112,17 +114,21 @@ GLOBAL_LIST_EMPTY(real_objectives)
 		attempt_pick_intruder()
 
 /obj/machinery/intruder_time_counter/proc/has_role(var/mob/living/carbon/human/target) //returns FALSE if the conscript does not have a role, otherwise returns TRUE
-	if(istype(target.head, /obj/item/clothing/head/beret/durathread/unitednations))
+	if(istype(target.head, /obj/item/clothing/head/beret/durathread/unitednations)) //squad leader
 		return TRUE
-	if(istype(target.wear_mask, /obj/item/clothing/mask/balaclava/protective/guard/double_agent))
+	if(istype(target.wear_mask, /obj/item/clothing/mask/balaclava/protective/guard/double_agent)) //double agent
+		return TRUE
+	if(istype(target.wear_suit, /obj/item/clothing/suit/jacket/det_suit/bullsquid)) //revolver bullsquid
 		return TRUE
 	return FALSE
 
 /obj/machinery/intruder_time_counter/proc/attempt_pick_leaders()
-	for(var/X in GLOB.deployment_combine_players)
-		var/client/candidate_client = X
+	var/chosen_candidate = null
+	chosen_candidate = pick(GLOB.deployment_combine_players)
+	var/client/candidate_client = chosen_candidate
+	if(ishuman(candidate_client.mob))
 		var/mob/living/carbon/human/H = candidate_client.mob
-		if(!has_role(H) && prob(50) && new_team_leaders > team_leaders && H.deployment_faction != REBEL_DEPLOYMENT_FACTION && ishuman(H))
+		if(!has_role(H) && new_team_leaders > team_leaders && H.deployment_faction != REBEL_DEPLOYMENT_FACTION)
 			SEND_SOUND(H, 'hl13/sound/effects/intruderspecial.ogg')
 			to_chat(H, span_userdanger("You have been promoted to squad leader, and have received special equipment!"))
 			to_chat(H, span_notice("Although you and the other squad leaders only have as much authority as everyone else gives you, you can (and probably should) raise an alert on death, supply your teammates with rations and batteries, and you get a little bit of armor for your head."))
@@ -142,10 +148,12 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			recharge.Grant(H)
 
 /obj/machinery/intruder_time_counter/proc/attempt_pick_double_agents()
-	for(var/X in GLOB.deployment_combine_players)
-		var/client/candidate_client = X
+	var/chosen_candidate = null
+	chosen_candidate = pick(GLOB.deployment_combine_players)
+	var/client/candidate_client = chosen_candidate
+	if(ishuman(candidate_client.mob))
 		var/mob/living/carbon/human/H = candidate_client.mob
-		if(!has_role(H) && prob(50) && new_double_agents > double_agents && H.deployment_faction != REBEL_DEPLOYMENT_FACTION && ishuman(H))
+		if(!has_role(H) && new_double_agents > double_agents && H.deployment_faction != REBEL_DEPLOYMENT_FACTION)
 			SEND_SOUND(H, 'hl13/sound/effects/intruderspecial.ogg')
 			to_chat(H, span_userdanger("You are a spy among the conscripts, and are working for the PLF!"))
 			to_chat(H, span_notice("You are tasked with helping Solid Crab in his mission by any means necessary. You can take off your balaclava so he can identify you as an ally, but don't let other conscripts see you do this."))
@@ -160,6 +168,27 @@ GLOBAL_LIST_EMPTY(real_objectives)
 				qdel(mask_item)
 			H.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava/protective/guard/double_agent, ITEM_SLOT_MASK)
 			double_agents++
+
+/obj/machinery/intruder_time_counter/proc/attempt_pick_bullsquid()
+	var/chosen_candidate = null
+	chosen_candidate = pick(GLOB.deployment_combine_players)
+	var/client/candidate_client = chosen_candidate
+	if(ishuman(candidate_client.mob))
+		var/mob/living/carbon/human/H = candidate_client.mob
+		if(!has_role(H) && !revolver_bullsquid && H.deployment_faction != REBEL_DEPLOYMENT_FACTION)
+			for(var/obj/item/item in H.get_all_gear())
+				qdel(item)
+			for(var/datum/action/cooldown/buttons in H.actions)
+				qdel(buttons)
+			H.equipOutfit(/datum/outfit/deployment_loadout/intruder/bullsquid)
+			H.regenerate_icons()
+			for(var/X in GLOB.deployment_combine_players)
+				var/mob/living/carbon/human/H_player = X
+				SEND_SOUND(H_player, 'hl13/sound/voice/solid/ocelotgood.ogg')
+				to_chat(H_player, "<span class='greentext big'>An elite unit has arrived to take down the intruder!</span>")
+				if(HAS_TRAIT(H_player, TRAIT_THE_INTRUDER))
+					H_player.cmode_music = 'hl13/sound/music/combat/duel.ogg' //boss fight music (i dont think it works and i dont care enough to make it work if it doesnt)
+			revolver_bullsquid = TRUE
 
 /obj/machinery/intruder_time_counter/proc/attempt_pick_objectives()
 	if(length(GLOB.real_objectives) == 2)
@@ -178,14 +207,23 @@ GLOBAL_LIST_EMPTY(real_objectives)
 		attempt_pick_objectives()
 
 /obj/machinery/intruder_time_counter/process()
+	var/bullsquid_readiness = 0
+
+	bullsquid_readiness += (GLOB.alert_phases)
+	bullsquid_readiness += SSticker.tdm_combine_deaths
+	bullsquid_readiness += (GLOB.complete_objectives * 3)
+	bullsquid_readiness += GLOB.bonus_guard_preparedness
+
+	if(!revolver_bullsquid && bullsquid_readiness > 30)
+		attempt_pick_bullsquid() //bullsquid gets picked first mostly because of debugging and not actual gameplay reasons
 	while(new_team_leaders < CEILING(GLOB.guards_spawned / 4, 1))
 		new_team_leaders++
 	while(new_double_agents < round(GLOB.guards_spawned / 10)) //one spy per 10 guards spawned
 		new_double_agents++
 	if(new_team_leaders > team_leaders && time_ticking)
-		attempt_pick_leaders()
+		attempt_pick_leaders() //then leaders
 	if(new_double_agents > double_agents && time_ticking)
-		attempt_pick_double_agents()
+		attempt_pick_double_agents() //finally agents
 	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
 		round_length += 2 SECONDS //it goes by process ticks, which are one per second
 
@@ -216,11 +254,19 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All conscripts are dead, the intruder wins by default."))))
 			var/final_score = GLOB.alert_phases
 			to_chat(world, span_infoplain(span_bold("Alerts: [final_score]")))
-			to_chat(world, span_infoplain(span_bold("Codename: Belligerent Bullsquid")))
+			to_chat(world, span_infoplain(span_bold("Codename: Belligerent Bullsquid"))) //codename makes even more sense now since you have to kill the man himself to get his codename
 			STOP_PROCESSING(SSprocessing, src)
 
 		if(SSticker.tdm_rebel_deaths == 1 && SSticker.IsRoundInProgress())
-			priority_announce("Crab, what happened?! Crab?! CRAAAAAAB!!", "PLF Priority Alert")
+			var/list/death_texts = list(
+				"Crab, what happened?! Crab?! CRAAAAAAB!!",
+				"Crab, answer me! Crab?! CRAAAAAAB!!",
+				"What's wrong?! Crab?! CRAAAAAAB!!",
+				"Crab, are you okay?! Crab?! CRAAAAAAB!!",
+				"Stop kidding around... Crab?! CRAAAAAAB!!",
+				"CRAAAAAAB!!",
+			)
+			priority_announce("[pick(death_texts)]", "PLF Priority Alert")
 			GLOB.deployment_win_team = COMBINE_DEPLOYMENT_FACTION
 			SSticker.force_ending = FORCE_END_ROUND
 			to_chat(world, span_infoplain(span_slightly_larger(span_bold("The intruder was killed, the conscripts win."))))
