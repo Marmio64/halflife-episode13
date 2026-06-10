@@ -18,7 +18,10 @@
 
 	combat_music = 'hl13/sound/music/combat/duel.ogg'
 
+	nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_EYES, ITEM_SLOT_ID)
+
 /datum/outfit/deployment_loadout/intruder/bullsquid/pre_equip(mob/living/carbon/human/H)
+	. = ..()
 	ADD_TRAIT(H, TRAIT_NEVER_WOUNDED, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NODISMEMBER, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOHUNGER, OUTFIT_TRAIT)
@@ -46,6 +49,7 @@
 	projectile.ricochet_shoots_firer = FALSE
 
 /datum/outfit/deployment_loadout/intruder/bullsquid/post_equip(mob/living/carbon/human/H)
+	. = ..()
 	H.set_haircolor("#DDDDDD", update = FALSE)
 	H.set_facial_haircolor("#DDDDDD", update = FALSE)
 	H.skin_tone = "caucasian1"
@@ -55,6 +59,8 @@
 	H.fully_replace_character_name(H.real_name,"Revolver Bullsquid")
 	H.death_sound = 'hl13/sound/voice/solid/ocelotdeath.ogg'
 
+	var/datum/action/cooldown/spell/bullsquid_taunt/taunt = new
+	taunt.Grant(H)
 	var/obj/item/organ/old_organ = H.get_organ_slot(ORGAN_SLOT_TONGUE)
 	var/obj/item/organ/tongue/bullsquid/new_tongue = new()
 	new_tongue.Insert(H)
@@ -62,6 +68,39 @@
 	for(var/obj/item/item in H.get_all_gear()) //this probably isnt the best way to do it but its the one i found that actually worked
 		if(istype(item, /obj/item/clothing/head/) || istype(item, /obj/item/clothing/mask) || istype(item, /obj/item/storage/backpack/) || istype(item, /obj/item/gun/ballistic/automatic/m4a1/))
 			qdel(item)
+
+/datum/action/cooldown/spell/bullsquid_taunt
+	name = "Revolvering Taunt"
+	desc = "Taunt your enemy with a longer voiceline that is sure to instill terror, while filling your pockets with more ammunition, as well as restoring a portion of health. NOTE: WILL DELETE ANYTHING CURRENTLY IN YOUR POCKETS."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "python"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	cooldown_time = 15 SECONDS
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	var/taunt_sounds = list(
+	"I love to reload during a battle! There's nothing like the feeling of slamming a long silver bullet into a well-greased chamber..." = 'hl13/sound/voice/solid/ocelotreload1.ogg',
+	"I understand the bullets, you see... I make them go where I want!" = 'hl13/sound/voice/solid/ocelotreload2.ogg',
+	"I love the smell of cordite! You know, that sulfury smell... but to you, it'll be the smell of your own death!" = 'hl13/sound/voice/solid/ocelotreload3.ogg',
+	"Don't even think about using auto-fire, or I'll know!" = 'hl13/sound/voice/solid/ocelotreload4.ogg',
+)
+
+/datum/action/cooldown/spell/bullsquid_taunt/cast(mob/living/cast_on)
+	. = ..()
+	var/chosen_sound = pick(taunt_sounds)
+	playsound(owner.loc, taunt_sounds[chosen_sound], 50, FALSE)
+	cast_on.say(chosen_sound)
+	var/item_l = cast_on.get_item_by_slot(ITEM_SLOT_LPOCKET)
+	if(item_l)
+		qdel(item_l)
+	cast_on.equip_to_slot_or_del(new /obj/item/ammo_box/colta357, ITEM_SLOT_LPOCKET)
+	var/item_r = cast_on.get_item_by_slot(ITEM_SLOT_RPOCKET)
+	if(item_r)
+		qdel(item_r)
+	cast_on.equip_to_slot_or_del(new /obj/item/ammo_box/colta357, ITEM_SLOT_RPOCKET)
+	cast_on.adjustBruteLoss(-30)
+	cast_on.adjustFireLoss(-30)
 
 /obj/item/clothing/under/halflife/labor_lead/bullsquid
 	name = "gunslinger's outfit"
