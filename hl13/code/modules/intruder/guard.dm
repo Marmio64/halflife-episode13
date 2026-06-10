@@ -1,5 +1,4 @@
 #define PHRASE_COOLDOWN (5 SECONDS)
-GLOBAL_VAR_INIT(bullsquid_spawned, FALSE)
 
 /datum/outfit/deployment_loadout/intruder/guard
 	faction = COMBINE_DEPLOYMENT_FACTION
