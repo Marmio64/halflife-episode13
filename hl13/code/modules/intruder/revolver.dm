@@ -12,6 +12,7 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	belt = /obj/item/storage/belt/holster/bullsquid
 	gloves = /obj/item/clothing/gloves/color/brown
+	ears = /obj/item/radio/headset //for taunting crab, if you use it to call for help i will laugh at you
 
 	l_pocket = /obj/item/ammo_box/colta357 //12 shots... (he'll get a conjure as well i suppose though). no radio either, see comment above
 	r_pocket = /obj/item/ammo_box/colta357
