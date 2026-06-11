@@ -350,6 +350,10 @@
 		to_chat(user, span_warning("It would be incredibly stupid for you to raise an alert in a stealth mission.")) //only person besides guards would be snake so funny line
 		return
 
+	if(HAS_TRAIT(carbie, TRAIT_INTRUDER_OCELOT))
+		to_chat(user, span_warning("You're too prideful to call for help!"))
+		return
+
 	if(!can_report)
 		to_chat(user, span_warning("You cannot report again yet!"))
 		return

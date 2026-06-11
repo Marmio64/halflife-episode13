@@ -88,6 +88,8 @@
 
 #define TRAIT_INTRUDER_SQUAD_LEADER "intruder_squad_leader"
 
+#define TRAIT_INTRUDER_OCELOT "intruder_ocelot"
+
 #define TRAIT_SPARTAN "spartan"
 
 #define TRAIT_FILTHBORN "filthborn"

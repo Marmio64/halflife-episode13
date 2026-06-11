@@ -12,6 +12,7 @@
 	shoes = /obj/item/clothing/shoes/laceup
 	belt = /obj/item/storage/belt/holster/bullsquid
 	gloves = /obj/item/clothing/gloves/color/brown
+	ears = /obj/item/radio/headset //for taunting crab, if you use it to call for help i will laugh at you
 
 	l_pocket = /obj/item/ammo_box/colta357 //12 shots... (he'll get a conjure as well i suppose though). no radio either, see comment above
 	r_pocket = /obj/item/ammo_box/colta357
@@ -30,6 +31,8 @@
 	ADD_TRAIT(H, TRAIT_TOTAL_FOV, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NICE_SHOT, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOCRITOVERLAY, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_INTRUDER_OCELOT, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_NIGHT_VISION, OUTFIT_TRAIT) //he's got the eyes of a bullsquid. wait, do bullsquids have eyes
 	RegisterSignal(H, COMSIG_MOB_FIRED_GUN, PROC_REF(reduce_spread))
 	RegisterSignal(H, COMSIG_PROJECTILE_FIRER_BEFORE_FIRE, PROC_REF(apply_ricochet))
 
@@ -56,9 +59,13 @@
 	H.set_hairstyle("Feather", update = TRUE)
 	H.set_facial_hairstyle("Moustache (Selleck)", update = TRUE)
 	H.update_body(0)
+	H.tired_rate = 0
 	H.fully_replace_character_name(H.real_name,"Revolver Bullsquid")
 	H.death_sound = 'hl13/sound/voice/solid/ocelotdeath.ogg'
+	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 
+	var/datum/martial_art/cqc/bigboss = new
+	bigboss.teach(H)
 	var/datum/action/cooldown/spell/bullsquid_taunt/taunt = new
 	taunt.Grant(H)
 	var/obj/item/organ/old_organ = H.get_organ_slot(ORGAN_SLOT_TONGUE)
