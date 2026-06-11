@@ -34,11 +34,6 @@
 	dir = 1
 	},
 /area/halflife/indoors/bunker)
-"dj" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/stack/sheet/mineral/sandbags/six,
-/turf/open/floor/plating/indoor/concrete/small,
-/area/halflife/indoors/bunker)
 "dQ" = (
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/ground/grass,
@@ -262,6 +257,12 @@
 "nj" = (
 /obj/machinery/telecomms/hub/preset,
 /turf/open/floor/plating/ground/sidewalk,
+/area/halflife/indoors/bunker)
+"nl" = (
+/obj/structure/halflife/road_barrier/concrete{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/bunker)
 "nD" = (
 /obj/structure/chair/halflife/metal/folding{
@@ -643,6 +644,11 @@
 "Do" = (
 /turf/closed/wall/halflife/wood,
 /area/halflife/outdoors/deployment_city/forest)
+"Dy" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/stack/sheet/mineral/sandbags/six,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "DT" = (
 /obj/machinery/porta_turret/combine/rebel/fast{
 	anchored = 1
@@ -861,6 +867,11 @@
 "Nf" = (
 /obj/structure/halflife/road_barrier/concrete,
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/bunker)
+"NH" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/stack/sheet/mineral/wood/twentyfive,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "NI" = (
 /obj/structure/halflife/fence/wire,
@@ -1129,11 +1140,6 @@
 /obj/structure/bed/halflife/mattress/dirty,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"WI" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/stack/sheet/mineral/wood/twentyfive,
-/turf/open/floor/plating/indoor/concrete/small,
-/area/halflife/indoors/bunker)
 "WV" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal,
 /obj/structure/trap/deployment_spawn_prot/rebel,
@@ -4009,9 +4015,9 @@ CO
 CO
 CO
 CO
-PM
-PM
-PM
+nl
+nl
+nl
 PM
 PM
 PM
@@ -4738,7 +4744,7 @@ Zn
 jv
 Zn
 Zn
-dj
+Dy
 Zn
 Zn
 Ig
@@ -7658,7 +7664,7 @@ Zn
 SE
 Zn
 Zn
-WI
+NH
 Zn
 Zn
 Ig
@@ -8389,9 +8395,9 @@ CO
 CO
 CO
 CO
-PM
-PM
-PM
+nl
+nl
+nl
 PM
 PM
 PM

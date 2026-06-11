@@ -278,8 +278,8 @@
 /datum/reagent/consumable/coffee/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
 	affected_mob.adjust_dizzy(-10 SECONDS * REM * seconds_per_tick)
-	affected_mob.adjust_drowsiness(-6 SECONDS * REM * seconds_per_tick)
-	affected_mob.AdjustSleeping(-4 SECONDS * REM * seconds_per_tick)
+	affected_mob.adjust_drowsiness(-5 SECONDS * REM * seconds_per_tick)
+	affected_mob.AdjustSleeping(-3 SECONDS * REM * seconds_per_tick)
 	affected_mob.adjust_tiredness(-3 * REM * seconds_per_tick) //coffee makes you feel awake
 	//310.15 is the normal bodytemp.
 	affected_mob.adjust_bodytemperature(25 * REM * TEMPERATURE_DAMAGE_COEFFICIENT * seconds_per_tick, 0, affected_mob.get_body_temp_normal())
