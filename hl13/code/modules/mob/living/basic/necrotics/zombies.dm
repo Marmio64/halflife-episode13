@@ -252,6 +252,9 @@
 	//base likelihood of a bullet deflecting off of them
 	var/armor_value = 50
 
+	///percentage of damage taken from a reflection
+	var/reflect_damage = 0.5
+
 /mob/living/basic/halflife/zombie/fungal/bullet_act(obj/projectile/bullet)
 	if(istype(bullet, /obj/projectile/energy) || istype(bullet, /obj/projectile/beam) || istype(bullet, /obj/projectile/magic))
 		return ..()
@@ -262,7 +265,7 @@
 	if(!prob(clamp(ricochet_chance, 1, 95))) // reflect chance is 50%
 		return ..()
 
-	apply_damage(bullet.damage * 0.5, bullet.damage_type)
+	apply_damage(bullet.damage * reflect_damage, bullet.damage_type)
 	visible_message(
 		span_danger("The [bullet.name] is reflected by [src]'s fungal armor!"),
 		span_userdanger("The [bullet.name] is reflected by your fungal armor!"),
@@ -273,7 +276,7 @@
 	return BULLET_ACT_FORCE_PIERCE // complete projectile permutation
 
 /mob/living/basic/halflife/zombie/fungal/deployment
-	fungalheal_amt = 0.2
+	fungalheal_amt = 0.15
 	speed = 1.85
 	melee_attack_cooldown = 1.5 SECONDS
 
@@ -326,13 +329,13 @@
 	headcrabspawn = /mob/living/basic/halflife/headcrab/fast
 
 /mob/living/basic/halflife/zombie/fast/deployment
-	melee_damage_lower = 10
-	melee_damage_upper = 13
-	melee_attack_cooldown = 0.5 SECONDS
+	melee_damage_lower = 12
+	melee_damage_upper = 15
+	melee_attack_cooldown = 0.4 SECONDS
 
 /mob/living/basic/halflife/zombie/fast/deployment/upgraded
-	melee_attack_cooldown = 0.4 SECONDS
-	melee_damage_lower = 12
+	melee_attack_cooldown = 0.25 SECONDS
+	melee_damage_lower = 14
 	melee_damage_upper = 18
 	maxHealth = 110
 	health = 110

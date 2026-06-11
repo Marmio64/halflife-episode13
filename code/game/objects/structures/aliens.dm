@@ -155,6 +155,9 @@
 		/turf/open/openspace,
 	)
 
+/obj/structure/alien/weeds/flamer_fire_act(burnlevel, firelevel)
+	take_damage(5, BURN, 0, 0)
+
 /obj/structure/alien/weeds/Initialize(mapload)
 	//so the sprites line up right in the map editor
 	pixel_x = -4

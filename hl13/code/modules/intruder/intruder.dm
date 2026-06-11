@@ -200,6 +200,7 @@
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1, src)
 	SSwardrobe.provide_type(/obj/item/knife/combat, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
@@ -253,7 +254,7 @@
 	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/pistol/solid_tranq, src)
 
 /obj/item/storage/backpack/halflife/satchel/civilprotection/solid/m4a1/PopulateContents()
-	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/m4a1, src)
+	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/m4a1/crab, src)
 	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/pistol/usp/suppressed/solid, src)
 
 /obj/item/reagent_containers/pill/patch/medkit/ration

@@ -126,7 +126,7 @@
 	maxHealth = 400
 	health = 400
 	speed = 1.3
-	headcrab_delay = 1.5 SECONDS
+	headcrab_delay = 1.75 SECONDS
 	melee_attack_cooldown = 1.25 SECONDS
 
 /mob/living/basic/halflife/zombie/gonome/complete/cash_gorged

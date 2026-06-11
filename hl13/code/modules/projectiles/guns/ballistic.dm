@@ -138,6 +138,11 @@
 	desc = "A old M4A1 pattern rifle, likely purchased from America before the war, or smuggled over from its remains afterwards. Not as good as the combine's rifles, but still powerful. This one looks in pretty good shape, and somehow more powerful."
 	projectile_damage_multiplier = 1.2
 
+/obj/item/gun/ballistic/automatic/m4a1/crab
+	name = "\improper Refined M4A1 Rifle"
+	desc = "A old M4A1 pattern rifle, likely purchased from America before the war, or smuggled over from its remains afterwards. Not as good as the combine's rifles, but still powerful. This one looks in pretty good shape, and somehow more powerful."
+	projectile_damage_multiplier = 1.25
+
 //sidegrade to the m4a1. Heavier duty: More spread, damage and recoil and less firing speed.
 //about 1.85 seconds TTK, and good AP
 /obj/item/gun/ballistic/automatic/ak47
