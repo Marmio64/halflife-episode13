@@ -25,10 +25,12 @@
 	for(var/X in GLOB.blobstart)
 		spawn_locs += X
 
+	var/socio_penalty = (SSsociostability.getloss() / 20)
+
 	if(!spawn_locs.len)
 		message_admins("No valid spawn locations found, aborting...")
 		return MAP_ERROR
-	if(prob(50))
+	if(prob(50 - socio_penalty)) //lower sociostability means less standard zombies and more special ones
 		var/mob/living/basic/halflife/zombie/S = new ((pick(spawn_locs)))
 		S.key = chosen_one.key
 		message_admins("[ADMIN_LOOKUPFLW(S)] has been made into a Zombie by an event.")
@@ -36,6 +38,12 @@
 		spawned_mobs += S
 	else if(prob(50))
 		var/mob/living/basic/halflife/zombie/poison/S = new ((pick(spawn_locs)))
+		S.key = chosen_one.key
+		message_admins("[ADMIN_LOOKUPFLW(S)] has been made into a Zombie by an event.")
+		S.log_message("was spawned as a Zombie by an event.", LOG_GAME)
+		spawned_mobs += S
+	else if(prob(25))
+		var/mob/living/basic/halflife/zombie/zombine/S = new ((pick(spawn_locs)))
 		S.key = chosen_one.key
 		message_admins("[ADMIN_LOOKUPFLW(S)] has been made into a Zombie by an event.")
 		S.log_message("was spawned as a Zombie by an event.", LOG_GAME)

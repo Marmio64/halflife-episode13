@@ -31,6 +31,7 @@ GLOBAL_VAR_INIT(super_destabilizer_deployed, FALSE)
 	if(detonation_limit <= cumulative_destabilization)
 		addtimer(CALLBACK(src, PROC_REF(blow_up)), 10 SECONDS)
 		blowing_up = TRUE
+		say("WARNING: Critical Heat Overload. Step Back.")
 
 /obj/machinery/destabilizer/examine(mob/user)
 	. = ..()

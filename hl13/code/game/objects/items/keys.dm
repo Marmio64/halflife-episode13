@@ -57,6 +57,11 @@
 	SSwardrobe.provide_type(/obj/item/hl2key/maint, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/halflife/keyring/laborlead_city/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/hl2key/townhall, src)
+	SSwardrobe.provide_type(/obj/item/hl2key/labor, src)
+	update_appearance(UPDATE_ICON)
+
 /obj/item/lockpick
 	name = "lockpick"
 	desc = "A small, sharp piece of metal to aid opening locks in the absence of a key."

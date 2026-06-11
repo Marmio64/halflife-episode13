@@ -14,7 +14,7 @@
 
 /obj/item/weaponcrafting/frame/mp7
 	name = "broken mp7"
-	desc = "A frame for a MP7 smg. At a proper weapons crafting bench, you may be able to craft this into a working one if you have the materials to do soe."
+	desc = "A frame for a MP7 smg. At a proper weapons crafting bench, you may be able to craft this into a working one if you have the materials to do so."
 	icon_state = "mp7"
 
 /obj/item/weaponcrafting/frame/m4a1

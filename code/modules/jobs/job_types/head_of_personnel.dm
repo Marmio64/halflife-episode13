@@ -77,6 +77,11 @@
 		. += list(/datum/reagent/medicine/strange_reagent = 20)
 		break
 
+/datum/outfit/job/hop/pre_equip(mob/living/carbon/human/H, visuals_only = FALSE)
+	..()
+	if(SSmapping.current_map.roleplay_type == "city")
+		r_pocket = /obj/item/storage/halflife/keyring/laborlead_city
+
 /datum/outfit/job/hop/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
 	user.faction += "combine"

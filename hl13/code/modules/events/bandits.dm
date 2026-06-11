@@ -3,7 +3,7 @@
 	typepath = /datum/round_event/bandits
 	weight = 5
 	max_occurrences = 1
-	min_players = 20
+	min_players = 18
 	dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_INVASION
 	description = "A band of bandits show up by boat to rob the district."
@@ -81,6 +81,21 @@
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)
+
+/datum/outfit/pirate/bandit/post_equip(mob/living/carbon/human/H, visualsOnly=FALSE)
+	if(visualsOnly)
+		return
+
+	if (SSsociostability.sociostability <= SOCIOSTABILITY_BAD)
+		H.change_stat(STATKEY_STR, 2)
+		H.change_stat(STATKEY_END, 2)
+		H.change_stat(STATKEY_PER, 2)
+		H.change_stat(STATKEY_DEX, 2)
+	else if (SSsociostability.sociostability <= SOCIOSTABILITY_OKAY)
+		H.change_stat(STATKEY_STR, 1)
+		H.change_stat(STATKEY_END, 1)
+		H.change_stat(STATKEY_PER, 1)
+		H.change_stat(STATKEY_DEX, 1)
 
 /datum/map_template/shuttle/pirate/bandit
 	suffix = "bandit"

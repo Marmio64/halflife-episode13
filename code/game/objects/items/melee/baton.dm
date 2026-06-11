@@ -205,6 +205,8 @@
 				var/quota_to_give = 1
 				if(user.combat_mode)
 					quota_to_give = 5
+				if(H.stat == DEAD)
+					return FALSE
 				GLOB.beating_quota -= quota_to_give
 
 

@@ -2,9 +2,10 @@
 	title = JOB_BOTANIST
 	description = "Grow combine approved produce substitutes for citizen consumptions and combine biofuel use."
 	department_head = list(JOB_HEAD_OF_PERSONNEL)
-	//faction = FACTION_STATION
-	total_positions = 0
-	spawn_positions = 0
+	faction = FACTION_STATION
+	job_flags = JOB_EQUIP_RANK|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS|JOB_CITY_JOB
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = SUPERVISOR_HOP
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "BOTANIST"

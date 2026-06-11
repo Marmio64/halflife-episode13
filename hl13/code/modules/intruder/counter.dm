@@ -185,9 +185,14 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			for(var/X in GLOB.deployment_combine_players)
 				var/mob/living/carbon/human/H_player = X
 				SEND_SOUND(H_player, 'hl13/sound/voice/solid/ocelotgood.ogg')
-				to_chat(H_player, "<span class='greentext big'>An elite unit has arrived to take down the intruder!</span>")
 				if(HAS_TRAIT(H_player, TRAIT_THE_INTRUDER))
 					H_player.cmode_music = 'hl13/sound/music/combat/duel.ogg' //boss fight music (i dont think it works and i dont care enough to make it work if it doesnt)
+					to_chat(H_player, "<span class='redtext big'>An elite unit who you've encountered in the past has come back to settle the score!</span>")
+					to_chat(H_player, span_notice("You've been granted the ability to procure rations to help you fight."))
+					tasty = new(H_player)
+					tasty.Grant(H_player)
+				else
+					to_chat(H_player, "<span class='greentext big'>An elite unit has arrived to take down the intruder!</span>")
 			revolver_bullsquid = TRUE
 
 /obj/machinery/intruder_time_counter/proc/attempt_pick_objectives()

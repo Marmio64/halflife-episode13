@@ -8,6 +8,7 @@
 	drag_slowdown = 1
 	slowdown = 1
 	var/loud = FALSE
+	var/tc_amount = 5
 
 /obj/item/rebel_relay/loud
 	loud = TRUE
@@ -21,7 +22,7 @@
 			lockable = FALSE, \
 			enabled = TRUE, \
 			uplink_flag = UPLINK_TRAITORS, \
-			starting_tc = 5, \
+			starting_tc = tc_amount, \
 			uplink_handler_override = uplink_handler_override, \
 		)
 	else
