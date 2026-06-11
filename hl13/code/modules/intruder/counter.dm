@@ -182,8 +182,8 @@ GLOBAL_LIST_EMPTY(real_objectives)
 				qdel(buttons)
 			H.equipOutfit(/datum/outfit/deployment_loadout/intruder/bullsquid)
 			H.regenerate_icons()
-			for(var/X in GLOB.deployment_combine_players)
-				var/mob/living/carbon/human/H_player = X
+			for(var/client/X in GLOB.deployment_combine_players)
+				var/mob/living/carbon/human/H_player = X.mob
 				SEND_SOUND(H_player, 'hl13/sound/voice/solid/ocelotgood.ogg')
 				if(HAS_TRAIT(H_player, TRAIT_THE_INTRUDER))
 					H_player.cmode_music = 'hl13/sound/music/combat/duel.ogg' //boss fight music (i dont think it works and i dont care enough to make it work if it doesnt)
