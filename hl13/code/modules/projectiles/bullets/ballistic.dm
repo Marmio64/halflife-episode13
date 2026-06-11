@@ -25,6 +25,10 @@
 			C.say("You're pretty good!", forced = C.name)
 			return
 
+		if(HAS_TRAIT(C, TRAIT_INTRUDER_OCELOT) && prob(80))
+			C.say("I'm disappointed!", forced = C.name)
+			return
+
 		C.adjust_tiredness(tranq_tiredness)
 
 		if(TIREDNESS_SLEEPY_THRESHOLD <= C.tiredness) //if after the tranq shot they are sleepy, they go sleep sleep
