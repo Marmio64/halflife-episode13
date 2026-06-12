@@ -57,6 +57,12 @@
 "eB" = (
 /turf/cordon,
 /area/halflife/indoors)
+"eH" = (
+/obj/structure/railing/halflife/solo{
+	dir = 1
+	},
+/turf/open/openspace,
+/area/halflife/outdoors/deployment_city/forest)
 "eM" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/bed/medical,
@@ -252,6 +258,10 @@
 "ol" = (
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/forest)
+"ox" = (
+/obj/structure/railing/halflife/solo,
+/turf/open/openspace,
+/area/halflife/outdoors/deployment_city/forest)
 "oM" = (
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/indoors/combat_deployment/rebel_base)
@@ -349,6 +359,10 @@
 "uk" = (
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"uL" = (
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/forest)
 "uO" = (
 /obj/structure/trap/deployment_spawn_prot/rebel,
 /turf/open/floor/plating/ground/sidewalk,
@@ -434,6 +448,12 @@
 /obj/structure/halflife/pot/plant,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"zZ" = (
+/obj/machinery/porta_turret/combine/rebel/fast{
+	anchored = 1
+	},
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/forest)
 "Aq" = (
 /obj/structure/chair/office/halflife/blue,
 /obj/effect/landmark/deployments_refugee,
@@ -847,6 +867,14 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city/forest)
+"Vw" = (
+/obj/structure/halflife/rails{
+	dir = 1
+	},
+/obj/effect/payload_path,
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/forest)
 "VH" = (
 /obj/machinery/door/airlock/highsecurity/combine,
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -865,6 +893,12 @@
 /obj/item/reagent_containers/cup/beaker,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"Wu" = (
+/obj/machinery/porta_turret/combine/fast{
+	anchored = 1
+	},
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/forest)
 "Wy" = (
 /obj/machinery/combine_walllight/directional/south,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -873,6 +907,10 @@
 /obj/structure/halflife/storage/large/shelf,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors)
+"WI" = (
+/obj/structure/lattice/catwalk/hl13,
+/turf/open/openspace,
+/area/halflife/outdoors/deployment_city/forest)
 "WK" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
@@ -6982,11 +7020,11 @@ WK
 WK
 WK
 WK
+Zv
+Zv
+WK
 WK
 kA
-WK
-WK
-WK
 WK
 WK
 aJ
@@ -7094,8 +7132,8 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
+Wu
+uL
 aJ
 aJ
 aJ
@@ -7207,7 +7245,7 @@ jt
 jt
 jt
 jt
-jt
+Vw
 jt
 jt
 jt
@@ -7231,8 +7269,8 @@ bc
 bc
 bc
 bc
-bc
-bc
+Jr
+Jr
 bc
 bc
 bc
@@ -7319,7 +7357,7 @@ aJ
 aJ
 aJ
 aJ
-aJ
+uL
 aJ
 aJ
 aJ
@@ -7342,10 +7380,10 @@ AL
 AL
 AL
 AL
-AL
-AL
-AL
-AL
+ox
+WI
+WI
+eH
 AL
 AL
 AL
@@ -7430,8 +7468,8 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
+uL
+uL
 aJ
 aJ
 aJ
@@ -7454,10 +7492,10 @@ AL
 AL
 AL
 AL
-AL
-AL
-AL
-AL
+ox
+WI
+WI
+eH
 AL
 AL
 AL
@@ -7480,8 +7518,8 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
+uL
+uL
 aJ
 aJ
 aJ
@@ -7566,10 +7604,10 @@ AL
 AL
 AL
 AL
-AL
-AL
-AL
-AL
+ox
+WI
+WI
+eH
 AL
 AL
 AL
@@ -7592,7 +7630,7 @@ aJ
 aJ
 aJ
 aJ
-aJ
+uL
 aJ
 aJ
 aJ
@@ -7679,8 +7717,8 @@ CS
 CS
 CS
 CS
-CS
-CS
+Jr
+Jr
 CS
 CS
 CS
@@ -7704,7 +7742,7 @@ jt
 jt
 jt
 jt
-jt
+Vw
 jt
 jt
 jt
@@ -7816,8 +7854,8 @@ aJ
 aJ
 aJ
 aJ
-aJ
-aJ
+uL
+zZ
 aJ
 aJ
 aJ
@@ -7879,10 +7917,10 @@ WK
 WK
 WK
 WK
+WK
+WK
+WK
 kA
-WK
-WK
-WK
 WK
 WK
 aJ
@@ -7928,8 +7966,8 @@ WK
 WK
 kA
 WK
-WK
-WK
+Zv
+Zv
 WK
 kA
 WK
