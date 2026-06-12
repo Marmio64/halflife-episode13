@@ -124,6 +124,7 @@
 	melee_attack_cooldown = 1.5 SECONDS
 	maxHealth = 240
 	health = 240
+	speed = 1.6
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/zombine/proc/get_innate_abilities()
@@ -337,8 +338,8 @@
 	melee_attack_cooldown = 0.25 SECONDS
 	melee_damage_lower = 14
 	melee_damage_upper = 18
-	maxHealth = 110
-	health = 110
+	maxHealth = 120
+	health = 120
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/fast/proc/get_innate_abilities()

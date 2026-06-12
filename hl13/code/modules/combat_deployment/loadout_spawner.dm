@@ -168,6 +168,7 @@
 		loadouts = list()
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/rebel/tier2/pistol_rebel,
+			/datum/outfit/deployment_loadout/rebel/tier2/molotov_partisan,
 			/datum/outfit/deployment_loadout/rebel/tier2/smuggler,
 			/datum/outfit/deployment_loadout/rebel/tier2/medic_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier2/engineer,

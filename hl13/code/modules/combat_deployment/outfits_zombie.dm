@@ -132,7 +132,7 @@
 /datum/outfit/deployment_loadout/xen/tier4/elite_zombine
 	name = "Deployment: Elite Zombine"
 	display_name = "Elite Zombine (Offense)"
-	desc = "A heavyweight zombie with good health reserves, a charge ability, and a deployable grenade. You specialize in blowing up enemy fortifications."
+	desc = "You have very heavy armor and above average speed, allowing you to near guarantee where you're going to blow up, preferbally after dealing a bit of damage, of course."
 
 	mob_to_be = /mob/living/basic/halflife/zombie/zombine/elite/deployment
 

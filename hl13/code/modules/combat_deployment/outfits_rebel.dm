@@ -149,6 +149,35 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+/datum/outfit/deployment_loadout/rebel/tier2/molotov_partisan
+	name = "Deployment: Upgraded Refugee Molotov Partisan"
+	display_name = "Upgraded Refugee Molotov Partisan (Offense)"
+	desc = "Armed with molotovs and tinbombs, they provide useful support to allies."
+	id_name = "Partisan"
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/makeshift
+	l_pocket = /obj/item/stack/sheet/halflife/brick
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	mask = /obj/item/clothing/mask/gas/hl2/military
+
+	backpack_contents = list(
+		/obj/item/grenade/halflife/molotov,
+		/obj/item/grenade/halflife/molotov,
+		/obj/item/grenade/halflife/molotov,
+		/obj/item/lighter,
+		/obj/item/reagent_containers/pill/patch/medkit/vial,
+		/obj/item/ammo_box/magazine/makeshift9mm,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/tinbomb)
+
 /datum/outfit/deployment_loadout/rebel/tier2/medic_rebel
 	name = "Deployment: Medic Rebel"
 	display_name = "Medic Rebel (Support)"
