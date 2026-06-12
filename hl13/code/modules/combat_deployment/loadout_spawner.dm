@@ -208,6 +208,7 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/rebel/tier4/ar2_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel,
+			/datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel/incendiary,
 			/datum/outfit/deployment_loadout/rebel/tier4/scout,
 			/datum/outfit/deployment_loadout/rebel/tier4/corporal,
 			/datum/outfit/deployment_loadout/rebel/tier4/mosin_soldier,

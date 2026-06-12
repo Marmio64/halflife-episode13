@@ -606,6 +606,17 @@
 
 	alternate_combat_music = 'hl13/sound/music/combat/drunkenpipebomb.ogg'
 
+/datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel/incendiary
+	name = "Deployment: Heavy Rebel Incendiary Bomber"
+	display_name = "Heavy Rebel Incendiary Bomber (Offense)"
+
+	backpack_contents = list(
+		/obj/item/grenade/incendiary_grenade = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/ammo_casing/a20mm = 1,
+		/obj/item/ammo_box/magazine/mp7 = 2,
+	)
+
 /datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt
 	name = "Deployment: Elder Vortigaunt"
 	display_name = "Elder Vortigaunt (Support)"
