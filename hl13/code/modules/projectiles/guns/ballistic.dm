@@ -129,18 +129,33 @@
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.28 SECONDS, overtime_penalty_freebies = 4, overtime_penalty_increase = 2, overtime_penalty_cap = 14)
 
-/obj/item/gun/ballistic/automatic/m4a1/intruder
+/obj/item/gun/ballistic/automatic/m4a1/famas
+	name = "\improper FAMAS G2 Rifle"
+	desc = "A french made bullpup rifle from the nineties, made as an upgrade to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does."
+	icon = 'hl13/icons/obj/guns/wideguns.dmi'
+	icon_state = "famas"
+	inhand_icon_state = "famas"
+	fire_sound = "hl13/sound/weapons/famas.ogg"
+	fire_sound_volume = 40
+	spawn_magazine_type = /obj/item/ammo_box/magazine/m4a1/famas
+	spread = 5
+
+/obj/item/gun/ballistic/automatic/m4a1/famas/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.24 SECONDS, overtime_penalty_freebies = 3, overtime_penalty_increase = 2, overtime_penalty_cap = 15)
+
+/obj/item/gun/ballistic/automatic/m4a1/famas/intruder
 	pin = /obj/item/firing_pin/implant/mindshield
 	projectile_damage_multiplier = 0.8
 
-/obj/item/gun/ballistic/automatic/m4a1/intruder/buffed
-	name = "\improper Refined M4A1 Rifle"
-	desc = "A old M4A1 pattern rifle, likely purchased from America before the war, or smuggled over from its remains afterwards. Not as good as the combine's rifles, but still powerful. This one looks in pretty good shape, and somehow more powerful."
+/obj/item/gun/ballistic/automatic/m4a1/famas/intruder/buffed
+	name = "\improper Refined FAMAS G2 Rifle"
+	desc = "A french made bullpup rifle from the nineties, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. This one looks in pretty good shape, and somehow more powerful."
 	projectile_damage_multiplier = 1.2
 
-/obj/item/gun/ballistic/automatic/m4a1/crab
-	name = "\improper Refined M4A1 Rifle"
-	desc = "A old M4A1 pattern rifle, likely purchased from America before the war, or smuggled over from its remains afterwards. Not as good as the combine's rifles, but still powerful. This one looks in pretty good shape, and somehow more powerful."
+/obj/item/gun/ballistic/automatic/m4a1/famas/crab
+	name = "\improper Refined FAMAS G2 Rifle"
+	desc = "A french made bullpup rifle from the nineties, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. This one looks in pretty good shape, and somehow more powerful."
 	projectile_damage_multiplier = 1.25
 
 //sidegrade to the m4a1. Heavier duty: More spread, damage and recoil and less firing speed.

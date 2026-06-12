@@ -97,7 +97,8 @@
 
 /mob/living/basic/halflife/headcrab/deployment
 	melee_attack_cooldown = 1 SECONDS
-	melee_damage_upper = 16
+	melee_damage_lower = 10
+	melee_damage_upper = 18
 	obj_damage = 15
 
 /mob/living/basic/halflife/headcrab/armored
@@ -106,14 +107,40 @@
 	icon_state = "armoredheadcrab"
 	icon_living = "armoredheadcrab"
 	icon_dead = "armoredheadcrab_dead"
-	maxHealth = 60
-	health = 60
+	maxHealth = 50
+	health = 50
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1, /obj/item/stack/sheet/sinew = 1, /obj/item/stack/sheet/bone = 1, /obj/item/stack/sheet/animalhide/goliath_hide = 1)
+
+	//base likelihood of a bullet deflecting off of them
+	var/armor_value = 50
+
+	///percentage of damage taken from a reflection
+	var/reflect_damage = 0.5
+
+/mob/living/basic/halflife/headcrab/armored/bullet_act(obj/projectile/bullet)
+	if(istype(bullet, /obj/projectile/energy) || istype(bullet, /obj/projectile/beam) || istype(bullet, /obj/projectile/magic))
+		return ..()
+
+	var/ricochet_chance = armor_value
+	ricochet_chance -= (bullet.armour_penetration*2)
+
+	if(!prob(clamp(ricochet_chance, 1, 95))) // reflect chance is 50%
+		return ..()
+
+	apply_damage(bullet.damage * reflect_damage, bullet.damage_type)
+	visible_message(
+		span_danger("The [bullet.name] is reflected by [src]'s fungal armor!"),
+		span_userdanger("The [bullet.name] is reflected by your fungal armor!"),
+	)
+
+	bullet.reflect(src)
+
+	return BULLET_ACT_FORCE_PIERCE // complete projectile permutation
 
 /mob/living/basic/halflife/headcrab/armored/deployment
 	melee_attack_cooldown = 1.25 SECONDS
-	maxHealth = 75
-	health = 75
+	obj_damage = 12
+	armor_value = 100 //fully covered in plating. Still, their health means they'll die in 3 revolver/mosin shots even if they are reflected
 
 /mob/living/basic/halflife/headcrab/armored/ghost_controlled/Initialize(mapload)
 	. = ..()
@@ -159,7 +186,7 @@
 	melee_attack_cooldown = 1.5 SECONDS
 
 /mob/living/basic/halflife/headcrab/poison/deadly/deployment
-	poison_per_bite = 10
+	poison_per_bite = 12
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/headcrab/poison
 	sound_cue = 'hl13/sound/creatures/poison/ph_scream.ogg'
@@ -193,10 +220,13 @@
 	zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed/fast
 
 /mob/living/basic/halflife/headcrab/fast/deployment
-	melee_attack_cooldown = 1 SECONDS
+	melee_attack_cooldown = 0.8 SECONDS
+	melee_damage_lower = 9
+	melee_damage_upper = 14
 
 /mob/living/basic/halflife/headcrab/fast/upgraded
-	melee_attack_cooldown = 0.7 SECONDS
+	melee_damage_lower = 12
+	melee_damage_upper = 18
 	maxHealth = 35
 	health = 35
 	speed = -0.3

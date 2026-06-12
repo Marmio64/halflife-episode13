@@ -120,6 +120,10 @@
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	multiple_sprite_use_base = TRUE
 
+/obj/item/ammo_box/magazine/m4a1/famas
+	name = "FAMAS magazine (5.56mm)"
+	desc = "A standard 30-round magazine for the FAMAS G2 Rifle. Filled with 5.56 rounds."
+
 //ak47 Rifle
 
 /obj/item/ammo_box/magazine/ak47

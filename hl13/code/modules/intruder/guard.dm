@@ -4,7 +4,7 @@
 	faction = COMBINE_DEPLOYMENT_FACTION
 	name = "Conscript Guard"
 	display_name = "Conscript Guard"
-	desc = "One of the many conscripts stationed at Zewnetrzny Raj, armed with an ID-tagged M4A1 and a cheaply made balaclava."
+	desc = "One of the many conscripts stationed at Zewnetrzny Raj, armed with an ID-tagged FAMAS G2 and a cheaply made balaclava."
 	id_name = "Guard"
 	id = /obj/item/card/id/combine_tdm
 	accessory = /obj/item/clothing/accessory/combine_dogtags
@@ -12,7 +12,7 @@
 	uniform = /obj/item/clothing/under/syndicate/camo
 	gloves = /obj/item/clothing/gloves/fingerless
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar/guard
-	suit_store = /obj/item/gun/ballistic/automatic/m4a1/intruder //War has changed... ID tagged soldiers carry ID tagged weapons.
+	suit_store = /obj/item/gun/ballistic/automatic/m4a1/famas/intruder //War has changed... ID tagged soldiers carry ID tagged weapons.
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	mask = /obj/item/clothing/mask/balaclava/protective/guard
 
@@ -23,7 +23,7 @@
 	l_pocket = /obj/item/hl2/intruder_radio
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m4a1 = 2,
+		/obj/item/ammo_box/magazine/m4a1/famas = 2,
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
@@ -73,7 +73,7 @@
 		extra_str = 5
 		r_pocket = /obj/item/halflife/combine_battery
 	if(12 < guard_preparedness)
-		suit_store = /obj/item/gun/ballistic/automatic/m4a1/intruder/buffed
+		suit_store = /obj/item/gun/ballistic/automatic/m4a1/famas/intruder/buffed
 		suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	if(15 < guard_preparedness)
 		extra_dex = 6
@@ -334,6 +334,7 @@
 			if(prob(35))
 				to_chat(user, span_userdanger("The feedback was too strong! Oh Fu-"))
 				user.gib(DROP_ALL_REMAINS)
+				GLOB.bonus_guard_preparedness--
 			qdel(src)
 
 

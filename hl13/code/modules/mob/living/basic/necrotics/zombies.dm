@@ -122,8 +122,8 @@
 
 /mob/living/basic/halflife/zombie/zombine/elite/deployment
 	melee_attack_cooldown = 1.5 SECONDS
-	maxHealth = 225
-	health = 225
+	maxHealth = 240
+	health = 240
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/zombine/proc/get_innate_abilities()

@@ -203,7 +203,7 @@
 	user.visible_message(span_notice("[user] begins to sift through the [src] for anything useful."), \
 		span_notice("You begin to dig through the [src] for something interesting."))
 
-	var/delay_time = 7 SECONDS - (user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER))
+	var/delay_time = 7 SECONDS - (user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER) * 1.5)
 	if(do_after(user, delay_time, src))
 		if(intruder_loot && HAS_TRAIT(user, TRAIT_THE_INTRUDER))
 			new /obj/effect/spawner/random/halflife/loot/intruder/crab/guaranteed(loc, 1)

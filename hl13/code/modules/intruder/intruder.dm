@@ -23,7 +23,7 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/intruder_decoy)
 
-	extra_end = 5
+	extra_end = 10
 	extra_dex = 5
 	extra_str = 10
 
@@ -84,6 +84,7 @@
 /obj/item/clothing/head/costume/snakeeater/solid
 	name = "Sneaking Bandana"
 	desc = "A blue bandana. You look quite solid with this bandana on, but unfortunately it doesn't provide infinite ammo."
+	armor_type = /datum/armor/kevlararmor
 
 /obj/item/clothing/glasses/thermal/eyepatch/solid
 	name = "Sneaking Eyepatch"
@@ -198,9 +199,9 @@
 
 /obj/item/storage/belt/civilprotection/polish_resistance/solid/belligerent/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm, src)
-	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1, src)
-	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1, src)
-	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1/famas, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1/famas, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/m4a1/famas, src)
 	SSwardrobe.provide_type(/obj/item/knife/combat, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
@@ -254,7 +255,7 @@
 	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/pistol/solid_tranq, src)
 
 /obj/item/storage/backpack/halflife/satchel/civilprotection/solid/m4a1/PopulateContents()
-	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/m4a1/crab, src)
+	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/m4a1/famas/crab, src)
 	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/pistol/usp/suppressed/solid, src)
 
 /obj/item/reagent_containers/pill/patch/medkit/ration

@@ -5,7 +5,7 @@
 
 	loot = list( //thinking of stuff i'd usually find in my playthroughs + ammo for guards (they can search these lockers too), ordered from common to least common
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 5,
-		/obj/item/ammo_box/magazine/m4a1 = 4,
+		/obj/item/ammo_box/magazine/m4a1/famas = 4,
 		/obj/item/ammo_box/magazine/usp9mm = 3, //really wanna discourage gunsblazing for crab
 		/obj/item/halflife/combine_battery = 3,
 		/obj/item/grenade/flashbang = 2,
@@ -33,7 +33,7 @@
 		/obj/item/grenade/smokebomb,
 		/obj/item/grenade/decoy,
 		/obj/item/grenade/syndieminibomb/bouncer,
-		/obj/item/gun/ballistic/automatic/m4a1 = 2, //unlocked m4
+		/obj/item/gun/ballistic/automatic/m4a1/famas = 2, //unlocked m4
 	)
 
 /obj/effect/spawner/random/halflife/loot/intruder/crab/guaranteed

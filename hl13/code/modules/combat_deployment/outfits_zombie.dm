@@ -20,21 +20,21 @@
 /datum/outfit/deployment_loadout/xen/tier1/headcrab
 	name = "Deployment: Headcrab"
 	display_name = "Headcrab (Offense)"
-	desc = "A basic headcrab. Plain and simple, with higher damage than other crabs."
+	desc = "A basic headcrab. Plain and simple, you deal good damage, can take a melee hit or a stray pistol round, and move at a moderate pace."
 
 	mob_to_be = /mob/living/basic/halflife/headcrab/deployment
 
 /datum/outfit/deployment_loadout/xen/tier1/fast_headcrab
 	name = "Deployment: Fast Headcrab"
 	display_name = "Fast Headcrab (Offense)"
-	desc = "A fast headcrab. Speedier but less durable, and deals less damage than the standard headcrab."
+	desc = "A fast headcrab. You are fast, as the name suggests, but are fragile and ineffective against fortifications."
 
 	mob_to_be = /mob/living/basic/halflife/headcrab/fast/deployment
 
 /datum/outfit/deployment_loadout/xen/tier1/armored_headcrab
 	name = "Deployment: Armored Headcrab"
 	display_name = "Armored Headcrab (Defense)"
-	desc = "An armored headcrab. Deals less damage than the standard headcrab, but is more durable."
+	desc = "An armored headcrab. You have tough armor that can reflect bullets and lower their damage, allowing you take nearly triple the punishment from firearms as other crabs. However, your damage output is low."
 
 	mob_to_be = /mob/living/basic/halflife/headcrab/armored/deployment
 
@@ -43,7 +43,7 @@
 /datum/outfit/deployment_loadout/xen/tier2/poison_headcrab
 	name = "Deployment: Deadly Poison Headcrab"
 	display_name = "Deadly Poison Headcrab (Support)"
-	desc = "An extra venomous headcrab that plays the long game with large amounts of venom it injects each bite."
+	desc = "An extra venomous headcrab that plays the long game with large amounts of venom it injects each bite. You're pretty terrible at breaking things, but your venom goes straight through armored humans!"
 
 	mob_to_be = /mob/living/basic/halflife/headcrab/poison/deadly/deployment
 
@@ -64,7 +64,7 @@
 /datum/outfit/deployment_loadout/xen/tier2/fast_headcrab
 	name = "Deployment: Upgraded Fast Headcrab"
 	display_name = "Upgraded Fast Headcrab (Offense)"
-	desc = "A fast headcrab. You're good at moving quick, but not much else."
+	desc = "A fast headcrab. You're good at moving quick, and can bite quick for decent damage, but are very fragile."
 
 	mob_to_be = /mob/living/basic/halflife/headcrab/fast/upgraded
 
