@@ -197,7 +197,7 @@
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 
 	school = SCHOOL_EVOCATION
-	cooldown_time = 125 SECONDS
+	cooldown_time = 110 SECONDS
 
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
@@ -239,7 +239,7 @@
 /datum/action/cooldown/spell/aoe/rally/rebel
 	button_icon_state = "rally_rebel"
 	faction_buff = REBEL_DEPLOYMENT_FACTION
-	cooldown_time = 100 SECONDS // cell leaders and lieutenants are more charismatic than the evil bine commanders
+	cooldown_time = 80 SECONDS // cell leaders and lieutenants are more charismatic than the evil bine commanders
 	physical_heal = -50
 
 /datum/action/cooldown/spell/revive_tdmlead
