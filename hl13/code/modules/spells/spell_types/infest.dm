@@ -17,4 +17,4 @@
 
 /datum/action/cooldown/spell/conjure/xenfloor/gonome
 	name = "Improved Infest Floor"
-	cooldown_time = 30 SECONDS
+	cooldown_time = 25 SECONDS

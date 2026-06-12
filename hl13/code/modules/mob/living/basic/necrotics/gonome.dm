@@ -117,7 +117,7 @@
 	icon_living = "gonome"
 	melee_damage_lower = 30
 	melee_damage_upper = 35
-	speed = 1.6
+	speed = 1.5
 	maxHealth = 425
 	health = 425
 	fully_grown = TRUE
@@ -125,7 +125,7 @@
 /mob/living/basic/halflife/zombie/gonome/complete/deployment
 	maxHealth = 400
 	health = 400
-	speed = 1.3
+	speed = 1.2
 	headcrab_delay = 2.5 SECONDS
 	melee_attack_cooldown = 1.25 SECONDS
 
@@ -204,7 +204,7 @@
 		slime_owner.melee_damage_upper = 35
 		slime_owner.maxHealth = 525 //slightly more HP in exchange for the evolution effort
 		slime_owner.fully_grown = TRUE
-		slime_owner.speed = 1.6
+		slime_owner.speed = 1.5
 
 /datum/action/innate/gonome/headcrab
 	name = "Create Headcrab"

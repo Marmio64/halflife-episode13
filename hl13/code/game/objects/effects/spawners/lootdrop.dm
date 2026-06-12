@@ -369,6 +369,7 @@
 
 	loot = list(
 				/obj/item/gun/ballistic/automatic/m4a1,
+				/obj/item/gun/ballistic/automatic/m4a1/famas,
 				/obj/item/gun/ballistic/automatic/ak47,
 				/obj/item/clothing/suit/armor/rebel,
 				/obj/item/clothing/suit/armor/halflife/milvest,

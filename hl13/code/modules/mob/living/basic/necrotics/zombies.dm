@@ -69,7 +69,7 @@
 		var/chosen_sound = pick(idle_sounds)
 		playsound(src, chosen_sound, 50, sound_vary, -3)
 	//If there is fungal infestation on the ground, and the zombie can heal off of it, do so
-	if(fungalheal)
+	if(fungalheal && !on_fire)
 		if(locate(/obj/structure/alien/weeds) in src.loc)
 			adjust_health(-maxHealth*fungalheal_amt)
 
