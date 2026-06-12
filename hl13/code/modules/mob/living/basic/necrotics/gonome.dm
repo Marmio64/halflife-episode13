@@ -7,7 +7,7 @@
 	icon_dead = "gonome_dead"
 	melee_damage_lower = 25
 	melee_damage_upper = 35
-	armour_penetration = 20
+	armour_penetration = 25
 	maxHealth = 350
 	health = 350
 	obj_damage = 25
@@ -35,7 +35,7 @@
 	var/fungal_nutrition = 50
 
 	///How long does it take to create a headcrab?
-	var/headcrab_delay = 4 SECONDS
+	var/headcrab_delay = 3.5 SECONDS
 
 	var/fully_grown = FALSE
 
@@ -102,11 +102,11 @@
 	melee_damage_lower = 22
 	melee_damage_upper = 30
 	melee_attack_cooldown = 1.5 SECONDS
-	armour_penetration = 0
+	armour_penetration = 15
 	maxHealth = 250
 	health = 250
 	obj_damage = 18
-	speed = 2.5
+	speed = 2.25
 	fungalheal_amt = 0.1
 	fully_grown = TRUE //cannot grow fully
 
@@ -131,7 +131,6 @@
 
 /mob/living/basic/halflife/zombie/gonome/complete/cash_gorged
 	name = "Cash-gorged Gonome"
-	armour_penetration = 25
 	maxHealth = 475
 	health = 475
 	move_intent = "run"
