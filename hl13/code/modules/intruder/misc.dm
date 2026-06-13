@@ -68,7 +68,7 @@ GLOBAL_VAR_INIT(packages_delivered, 0)
 			return
 
 
-	if(user.tiredness < 250)
+	if(user.tiredness < 250 && user.deployment_faction != REBEL_DEPLOYMENT_FACTION)
 		to_chat(user, span_notice("You're full of energy right now, no need for more coffee.")) //mostly so you cant stack a crap ton of the coffee reagent
 		return
 

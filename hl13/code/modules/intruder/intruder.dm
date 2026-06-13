@@ -113,7 +113,7 @@
 /obj/item/clothing/suit/armor/halflife/milvest/solid
 	name = "Sneaking Suit"
 	desc = "Provides decent armor without slowing you down."
-	slowdown = -0.33 //you're pretty quick when you need to be, but low dexterity doesn't let you run for very long
+	slowdown = -0.35 //you're pretty quick when you need to be, but low dexterity doesn't let you run for very long
 
 /obj/item/clothing/shoes/jackboots/civilprotection/solid
 	name = "Sneaking Shoes"

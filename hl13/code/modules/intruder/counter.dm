@@ -162,6 +162,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			H.cmode_music = 'hl13/sound/music/combat/thepain.ogg'
 			H.set_facial_hairstyle("Shaved")
 			H.set_hairstyle("Bald")
+			H.tired_rate = 5
 			H.update_body()
 			H.deployment_faction = REBEL_DEPLOYMENT_FACTION
 			ADD_TRAIT(H, TRAIT_NOSOFTCRIT, OUTFIT_TRAIT) //slight buff to their capabilities
