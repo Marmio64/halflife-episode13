@@ -156,7 +156,7 @@
 /obj/item/gun/ballistic/automatic/m4a1/famas/crab
 	name = "\improper Refined FAMAS G2 Rifle"
 	desc = "A french made bullpup rifle from the nineties, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one looks in pretty good shape, and somehow more powerful."
-	projectile_damage_multiplier = 1.35
+	projectile_damage_multiplier = 1.4
 
 //sidegrade to the m4a1. Heavier duty: More spread, damage and recoil and less firing speed.
 //about 1.85 seconds TTK, and good AP

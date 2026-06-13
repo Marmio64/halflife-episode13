@@ -192,6 +192,8 @@ GLOBAL_VAR_INIT(packages_delivered, 0)
 		to_chat(user, span_warning("You didn't finish using the zone!"))
 
 /obj/structure/closet/cardboard/solid
+	drag_slowdown = 0.5 // so its bearable to drag around
+
 	var/boxcontains = "nothing"
 
 	var/startempty = FALSE
@@ -233,8 +235,11 @@ GLOBAL_VAR_INIT(packages_delivered, 0)
 		to_chat(user, span_warning("You destroyed the contents of the box!"))
 		contents_destroyed = TRUE
 	if(contents_destroyed && !intruder_inside)
-		to_chat(user, span_warning("There was no intruder inside! You have incurred a penalty for your team!"))
-		GLOB.packages_delivered--
+		if(user.deployment_faction != REBEL_DEPLOYMENT_FACTION)
+			to_chat(user, span_warning("There was no intruder inside! You have incurred a penalty for your team!"))
+			GLOB.packages_delivered--
+		else
+			to_chat(user, span_warning("There was no intruder inside!")) //so spies cant just open all the boxes and make it impossible to get anything done
 	return ..()
 
 /obj/structure/closet/cardboard/solid/empty

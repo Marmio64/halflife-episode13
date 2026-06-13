@@ -12097,8 +12097,18 @@
 /area/halflife/indoors/townhall/courtroom)
 "tsm" = (
 /obj/structure/table/halflife/no_smooth/metal,
-/obj/item/ammo_box/magazine/usp9mm/rubber,
-/obj/item/ammo_box/magazine/usp9mm/rubber,
+/obj/item/ammo_box/magazine/usp9mm/rubber{
+	pixel_x = -3;
+	pixel_y = -1
+	},
+/obj/item/ammo_box/magazine/usp9mm/rubber{
+	pixel_x = -8;
+	pixel_y = -3
+	},
+/obj/item/ammo_box/magazine/usp9mm{
+	pixel_x = 6;
+	pixel_y = 4
+	},
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/armory)
 "tso" = (
