@@ -376,14 +376,14 @@
 	throwforce = 0
 	pickup_sound = 'sound/items/handling/materials/cardboard_pick_up.ogg'
 	drop_sound = 'sound/items/handling/materials/cardboard_drop.ogg'
-	var/boxtype = /obj/structure/closet/cardboard
+	var/boxtype = /obj/structure/closet/cardboard/solid/empty
 
 /obj/item/hl2/deployable_box/interact(mob/user)
 	. = ..()
 	if(!iscarbon(user))
 		return
-	if(istype(user.loc, /obj/structure/closet/cardboard))
-		var/obj/structure/closet/cardboard/box = user.loc
+	if(istype(user.loc, /obj/structure/closet/cardboard/solid/empty))
+		var/obj/structure/closet/cardboard/solid/empty/box = user.loc
 		if(box.open())
 			user.playsound_local(box, 'sound/misc/box_deploy.ogg', 50, TRUE)
 		return
