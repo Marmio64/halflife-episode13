@@ -455,7 +455,7 @@
 	extra_end = 3
 
 	alternate_combat_music = 'hl13/sound/music/combat/fasterthanaspeedingbullet.ogg'
-	alternate_music_chance = 35
+	alternate_music_chance = 50
 
 /datum/outfit/deployment_loadout/rebel/tier3/medic_rebel
 	name = "Deployment: Upgraded Medic Rebel"
@@ -609,6 +609,8 @@
 /datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel/incendiary
 	name = "Deployment: Heavy Rebel Incendiary Bomber"
 	display_name = "Heavy Rebel Incendiary Bomber (Offense)"
+
+	mask = /obj/item/clothing/mask/gas/hl2/military
 
 	backpack_contents = list(
 		/obj/item/grenade/incendiary_grenade = 2,

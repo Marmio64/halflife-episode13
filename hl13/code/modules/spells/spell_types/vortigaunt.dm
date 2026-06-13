@@ -38,7 +38,7 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/enchanted/vort_blast
 
 /obj/item/gun/ballistic/rifle/enchanted/vort_blast/super
-	cast_delay = 0.5 SECONDS
+	cast_delay = 0.3 SECONDS
 	delete_on_use = TRUE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/boltaction/enchanted/vort_blast/super
 	guns_left = 50
