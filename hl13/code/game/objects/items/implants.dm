@@ -9,6 +9,8 @@
 
 	var/card_to_disable = null
 
+	var/lookingforresponse = TRUE
+
 /obj/item/implant/biosig_ert/Initialize(mapload)
 	. = ..()
 	radio = new(src)
@@ -41,11 +43,39 @@
 		if(mask.loc &&ismob(mask.loc))
 			playsound(mask.loc, "hl13/sound/voice/dispatchradio/lostsignalunitscontain.ogg", 50, FALSE)
 
+	//intruder stuffs
+	if(HAS_TRAIT(imp_in, TRAIT_INTRUDER_SQUAD_LEADER) && GLOB.alert_cooldown < 1 SECONDS && GLOB.caution_cooldown < 1 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(callin)), 2 SECONDS, TIMER_UNIQUE | TIMER_NO_HASH_WAIT | TIMER_OVERRIDE)
+
 	/*
 	if(card_to_disable)
 		var/obj/item/card/id/advanced/idcard = card_to_disable
 		idcard.access = null
 	*/
+
+/obj/item/implant/biosig_ert/proc/callin()
+	// Location.
+	var/area/turf = get_area(imp_in)
+	// Name of implant user.
+	var/mobname = imp_in.name
+	if(lookingforresponse)
+		var/list/deathlist = list(
+			"[mobname], what's going on? Respond!",
+			"Why are you late with your status report, [mobname]?",
+			"[mobname], report your status!",
+			"[mobname], come in. Is something wrong?",
+		)
+		name = "Conscript HQ"
+		say("[pick(deathlist)]")
+		lookingforresponse = FALSE
+		addtimer(CALLBACK(src, PROC_REF(callin)), 3 SECONDS, TIMER_UNIQUE | TIMER_NO_HASH_WAIT | TIMER_OVERRIDE)
+	else
+		lookingforresponse = TRUE
+		radio.talk_into(src, "Communications with [mobname] have ceased in [turf.name], conduct an investigation immediately.", null)
+		GLOB.caution_phases++
+		GLOB.squad_death = TRUE
+		imp_in.do_alert_animation()
+		playsound(imp_in.loc, 'hl13/sound/effects/alert.ogg', 50, FALSE, -5)
 
 /obj/item/implant/biosig_ert/get_data()
 	. = {"<b>Implant Specifications:</b><BR>

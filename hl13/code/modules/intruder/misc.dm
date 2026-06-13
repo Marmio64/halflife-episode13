@@ -1,3 +1,5 @@
+GLOBAL_VAR_INIT(packages_delivered, 0)
+
 /obj/machinery/intruder_coffeemaker
 	name = "coffeemaker"
 	desc = "A machine that makes the essence of life: Coffee. Patrolling is hard work and will make you tired, coffee is a god send for fixing you right up."
@@ -117,3 +119,123 @@
 	else
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		return
+
+/obj/machinery/intruder_deliveryzone
+	name = "delivery and loading zone"
+	desc = "A designated zone for delivering and loading boxes. Should keep guards equipped for any threats as long as they complete enough deliveries."
+	icon = 'icons/turf/floors.dmi'
+	icon_state = "light_on-8"
+	resistance_flags = INDESTRUCTIBLE
+	anchored = TRUE
+
+	var/lookingfor = "Placeholder"
+
+	var/list/things_lookingfor = list(
+		"Armor",
+		"Rations",
+		"Firearms",
+		"Gears", //of the metal variety, probably
+		"Coffee",
+		"Medicine",
+		"Ammunition",
+	)
+
+/obj/machinery/intruder_deliveryzone/Initialize(mapload)
+	.=..()
+	lookingfor = pick(things_lookingfor)
+
+/obj/machinery/intruder_deliveryzone/examine(mob/user)
+	. = ..()
+	. += span_notice("There's a request for a delivery of [lookingfor] to this area.")
+	if(GLOB.packages_delivered < 0)
+		GLOB.packages_delivered = 0
+	. += span_notice("[5 - GLOB.packages_delivered] boxes to next bonus preparedness.")
+
+/obj/machinery/intruder_deliveryzone/interact(mob/living/carbon/human/user)
+	. = ..()
+	if(HAS_TRAIT(user, TRAIT_THE_INTRUDER))
+		to_chat(user, span_notice("You aren't particularly interested in helping the enemy.")) //have a spy fill it with something if necessary
+		return
+
+	if(do_after(user, 1 SECONDS, src))
+		var/has_box = FALSE
+		for(var/obj/thing as anything in get_turf(src))
+			if(istype(thing, /obj/structure/closet/cardboard/solid))
+				var/obj/structure/closet/cardboard/solid/box = thing
+				has_box = TRUE
+				var/intruder_inside = (locate(/mob/living) in box.contents) //technically its possible for a guard to be inside a filled box if the intruder opens one and then leaves it for them to hide in but thats very rare so i dont give a damn
+				if(box.boxcontains == lookingfor)
+					if(GLOB.packages_delivered < 0)
+						GLOB.packages_delivered = 0
+					if(!intruder_inside)
+						GLOB.packages_delivered++
+						lookingfor = pick(things_lookingfor)
+						box.boxcontains = pick(things_lookingfor)
+						while(box.boxcontains == lookingfor) //make sure new contents don't match what the delivery zone is now looking for
+							box.boxcontains = pick(things_lookingfor)
+						to_chat(user, span_notice("The contents of the box are delivered to the area and a shipment of [box.boxcontains] is loaded into the box."))
+					else
+						box.boxcontains = "nothing"
+						to_chat(user, span_warning("Huh...? That's strange, the contents of this box failed to be delivered properly... what's going on?"))
+				else if(box.boxcontains == "nothing")
+					box.boxcontains = pick(things_lookingfor)
+					while(box.boxcontains == lookingfor) //they wouldnt supply a box with stuff they are needing more of
+						box.boxcontains = pick(things_lookingfor)
+					to_chat(user, span_notice("A shipment of [box.boxcontains] is loaded into the box."))
+					if(prob(5) && intruder_inside)
+						to_chat(user, span_warning("Huh...? Did you see something move inside while the box was being loaded?"))
+				else
+					to_chat(user, span_warning("This is the wrong type of box!"))
+		if(!has_box)
+			to_chat(user, span_warning("You didn't put anything deliverable in the zone!"))
+	else
+		to_chat(user, span_warning("You didn't finish using the zone!"))
+
+/obj/structure/closet/cardboard/solid
+	var/boxcontains = "nothing"
+
+	var/startempty = FALSE
+
+	var/list/things_boxcontains = list(
+		"Armor",
+		"Rations",
+		"Firearms",
+		"Gears", //of the metal variety, probably
+		"Coffee",
+		"Medicine",
+		"Ammunition",
+	)
+
+/obj/structure/closet/cardboard/solid/Initialize(mapload)
+	. = ..()
+	if(!startempty)
+		boxcontains = pick(things_boxcontains)
+
+/obj/structure/closet/cardboard/solid/examine(mob/user)
+	. = ..()
+	. += span_notice("There's a label on the side of the box informing you that this is a box full of [boxcontains].")
+	if(boxcontains != "nothing")
+		if(!HAS_TRAIT(user, TRAIT_THE_INTRUDER))
+			. += span_warning("You feel if you were to open this box you might accidentally destroy the contents and even incur a penalty for your team if there is nobody inside.")
+		else
+			. += span_notice("You could hide in this and wait for it to be delivered to one of the delivery zones to travel without being caught.")
+
+/obj/structure/closet/cardboard/solid/before_open(mob/living/user, force)
+	if(boxcontains != "nothing" && !HAS_TRAIT(user, TRAIT_THE_INTRUDER))
+		to_chat(user, span_warning("If you finish opening this box, you might accidentally damage the contents and incur a penalty!"))
+	return ..()
+
+/obj/structure/closet/cardboard/solid/after_open(mob/living/user, force)
+	var/intruder_inside = (locate(/mob/living) in contents)
+	var/contents_destroyed = FALSE
+	if(boxcontains != "nothing" && !HAS_TRAIT(user, TRAIT_THE_INTRUDER) && prob(90))
+		boxcontains = "nothing"
+		to_chat(user, span_warning("You destroyed the contents of the box!"))
+		contents_destroyed = TRUE
+	if(contents_destroyed && !intruder_inside)
+		to_chat(user, span_warning("There was no intruder inside! You have incurred a penalty for your team!"))
+		GLOB.packages_delivered--
+	return ..()
+
+/obj/structure/closet/cardboard/solid/empty
+	startempty = TRUE
