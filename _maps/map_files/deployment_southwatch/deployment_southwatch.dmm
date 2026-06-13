@@ -392,12 +392,6 @@
 /obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
-"iC" = (
-/obj/machinery/cash_deposit/combine/tier2plus{
-	starting_cash = 80
-	},
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
 "iK" = (
 /obj/structure/chair/sofa/hl13bench{
 	dir = 1
@@ -623,10 +617,6 @@
 /obj/structure/railing/halflife/solo,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city)
-"nF" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick,
-/turf/open/floor/plating/indoor/checkered,
-/area/halflife/indoors)
 "nH" = (
 /obj/machinery/cash_deposit/combine/tier2plus{
 	starting_cash = 100
@@ -1266,6 +1256,11 @@
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors)
+"Bs" = (
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/obj/structure/barricade/wooden/crude,
+/turf/open/floor/plating/indoor/checkered,
+/area/halflife/indoors)
 "BF" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
 	dir = 8;
@@ -1273,6 +1268,10 @@
 	keylock = 1
 	},
 /turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors)
+"BI" = (
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors)
 "BO" = (
 /obj/structure/filingcabinet/hl2,
@@ -1720,6 +1719,12 @@
 /obj/structure/halflife/pole/directional/north,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
+"Mc" = (
+/obj/machinery/cash_deposit/combine/tier2plus{
+	starting_cash = 70
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "MC" = (
 /obj/structure/filingcabinet/hl2,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -3725,7 +3730,7 @@ CU
 zF
 zF
 zF
-iC
+Mc
 zF
 kk
 gE
@@ -11199,8 +11204,8 @@ mQ
 mQ
 mQ
 OJ
-OM
-OM
+EM
+EM
 EM
 EM
 hg
@@ -11386,14 +11391,14 @@ mQ
 mQ
 OJ
 NF
-OM
-OM
 EM
+WE
+WE
 WE
 WE
 tn
 WE
-nF
+BI
 WE
 WE
 WE
@@ -11570,12 +11575,12 @@ zQ
 zQ
 zQ
 mQ
-OM
-OM
-OM
-OM
-OM
-EM
+mQ
+mQ
+OJ
+Bs
+WE
+WE
 xq
 WE
 WE
@@ -11760,10 +11765,10 @@ mQ
 OM
 OM
 OM
-OM
-OM
 EM
 WE
+WE
+xq
 WE
 WE
 WE
@@ -11947,9 +11952,9 @@ OM
 OM
 OM
 OM
-OM
-OM
 EM
+WE
+WE
 WE
 WE
 Vh
@@ -12134,8 +12139,8 @@ OM
 OM
 OM
 OM
-OM
-OM
+EM
+EM
 EM
 EM
 EM

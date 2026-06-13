@@ -253,3 +253,12 @@ GLOBAL_VAR_INIT(rebel_main_bunker_created, FALSE)
 
 /obj/effect/landmark/navigate_destination/halflife/intruder/lockerroom
 	location = "Conscript Locker Room"
+
+/obj/effect/landmark/navigate_destination/halflife/intruder/library
+	location = "Library"
+
+/obj/effect/landmark/navigate_destination/halflife/intruder/storagesilo
+	location = "R&D Storage Silo"
+
+/obj/effect/landmark/navigate_destination/halflife/intruder/guardtower
+	location = "Guard Tower"

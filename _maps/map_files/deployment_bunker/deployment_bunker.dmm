@@ -103,6 +103,12 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker)
+"gt" = (
+/obj/structure/razorwire{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/deployment_city/forest)
 "gN" = (
 /obj/structure/razorwire,
 /turf/open/floor/plating/ground/dirt,
@@ -185,6 +191,12 @@
 /obj/structure/halflife/headcrab_cannister,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/forest)
+"jq" = (
+/obj/structure/razorwire{
+	dir = 4
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city/forest)
 "ju" = (
 /turf/open/floor/plating/indoor/metal/pipe,
 /area/halflife/indoors/bunker)
@@ -213,6 +225,10 @@
 "kz" = (
 /obj/structure/table/halflife/wood/constructed/cobbled,
 /obj/item/hatchet/wooden,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/deployment_city/forest)
+"lc" = (
+/obj/structure/barricade/wooden/solid/reinforced,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/forest)
 "ls" = (
@@ -257,12 +273,6 @@
 "nj" = (
 /obj/machinery/telecomms/hub/preset,
 /turf/open/floor/plating/ground/sidewalk,
-/area/halflife/indoors/bunker)
-"nl" = (
-/obj/structure/halflife/road_barrier/concrete{
-	dir = 8
-	},
-/turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/bunker)
 "nD" = (
 /obj/structure/chair/halflife/metal/folding{
@@ -467,6 +477,10 @@
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"xg" = (
+/obj/structure/barricade/wooden/solid/reinforced,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city/forest)
 "xt" = (
 /obj/machinery/light/directional/south,
 /obj/structure/table/halflife/metal/grate,
@@ -644,17 +658,17 @@
 "Do" = (
 /turf/closed/wall/halflife/wood,
 /area/halflife/outdoors/deployment_city/forest)
-"Dy" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/stack/sheet/mineral/sandbags/six,
-/turf/open/floor/plating/indoor/concrete/small,
-/area/halflife/indoors/bunker)
 "DT" = (
 /obj/machinery/porta_turret/combine/rebel/fast{
 	anchored = 1
 	},
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"Ea" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/stack/sheet/mineral/wood/fifty,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "Ew" = (
 /obj/structure/table/halflife/metal/grate,
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -740,6 +754,11 @@
 /obj/structure/table/halflife/no_smooth/large/crafting/armorbench,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"HO" = (
+/turf/closed/wall/halflife/concrete/bunker{
+	explosive_resistance = 4
+	},
+/area/halflife/indoors/bunker)
 "HR" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -810,6 +829,12 @@
 /obj/effect/koth_grace_field,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/forest)
+"KK" = (
+/obj/machinery/light/directional/south,
+/obj/structure/table/halflife/metal/grate,
+/obj/item/stack/razorwire/full,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "KU" = (
 /obj/structure/fans/tiny/invisible,
 /obj/machinery/door/airlock/highsecurity/combine,
@@ -819,6 +844,11 @@
 /obj/structure/halflife/fence/wire/barb,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/forest)
+"LL" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/item/stack/sheet/mineral/sandbags/twelve,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "LN" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/stained,
@@ -849,6 +879,12 @@
 /obj/item/reagent_containers/pill/patch/grubnugget,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"Ml" = (
+/obj/structure/halflife/road_barrier/concrete{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/indoors/bunker)
 "Mp" = (
 /obj/item/trash/can/food/halflife/beans,
 /obj/item/trash/can/food/halflife/beans,
@@ -867,11 +903,6 @@
 "Nf" = (
 /obj/structure/halflife/road_barrier/concrete,
 /turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/indoors/bunker)
-"NH" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/item/stack/sheet/mineral/wood/twentyfive,
-/turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/bunker)
 "NI" = (
 /obj/structure/halflife/fence/wire,
@@ -1191,6 +1222,12 @@
 /obj/machinery/combine_walllight/directional/north,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
+"ZN" = (
+/obj/structure/razorwire{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/bunker)
 "ZZ" = (
 /obj/machinery/light/directional/east,
 /obj/structure/table/halflife/metal/grate,
@@ -2282,13 +2319,13 @@ CO
 CO
 CO
 CO
-gN
-Fl
-Fl
-gN
-gN
-gN
-gN
+jq
+gt
+gt
+jq
+jq
+jq
+jq
 HZ
 hQ
 hQ
@@ -2574,8 +2611,8 @@ CO
 CO
 CO
 CO
-AO
-AO
+xg
+xg
 Km
 AO
 AO
@@ -2852,7 +2889,7 @@ MF
 MF
 MF
 MF
-CO
+HO
 Ew
 OM
 pY
@@ -2998,7 +3035,7 @@ MF
 MF
 MF
 Bq
-CO
+HO
 Ew
 pY
 pY
@@ -3144,7 +3181,7 @@ MF
 MF
 MF
 MF
-CO
+HO
 Ew
 Ew
 pY
@@ -3576,7 +3613,7 @@ Yk
 CO
 CO
 CO
-CO
+HO
 Fy
 pY
 pY
@@ -3722,7 +3759,7 @@ ju
 CO
 CO
 CO
-CO
+HO
 PM
 pY
 pY
@@ -3748,7 +3785,7 @@ HZ
 hQ
 HZ
 HZ
-hQ
+Fl
 HZ
 HZ
 HZ
@@ -3868,7 +3905,7 @@ ju
 CO
 CO
 CO
-CO
+HO
 Ry
 pY
 pY
@@ -3894,7 +3931,7 @@ HZ
 hQ
 HZ
 hQ
-hQ
+Fl
 gk
 HZ
 hQ
@@ -4014,10 +4051,10 @@ ju
 CO
 CO
 CO
-CO
-nl
-nl
-nl
+HO
+Ml
+Ml
+Ml
 PM
 PM
 PM
@@ -4040,7 +4077,7 @@ hQ
 um
 hQ
 HZ
-hQ
+Fl
 hQ
 hQ
 HZ
@@ -4152,27 +4189,27 @@ CO
 CO
 ju
 MF
-MF
-MF
-MF
+ZN
+ZN
+ZN
 MF
 ju
 CO
 CO
 CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
+HO
+HO
+HO
+HO
+HO
+HO
+HO
+HO
+HO
+HO
+HO
+HO
+HO
 CO
 HZ
 hQ
@@ -4744,7 +4781,7 @@ Zn
 jv
 Zn
 Zn
-Dy
+LL
 Zn
 Zn
 Ig
@@ -4893,7 +4930,7 @@ ml
 ml
 ml
 ml
-xt
+KK
 CO
 CO
 CO
@@ -5364,7 +5401,7 @@ HZ
 HZ
 HZ
 HZ
-hQ
+Fl
 hQ
 HZ
 hQ
@@ -5802,7 +5839,7 @@ HZ
 Jd
 aJ
 hQ
-HZ
+gN
 hQ
 HZ
 HZ
@@ -5948,7 +5985,7 @@ HZ
 HZ
 yT
 hQ
-HZ
+gN
 HZ
 HZ
 HZ
@@ -6086,7 +6123,7 @@ HZ
 aJ
 uj
 HZ
-AO
+xg
 NY
 HZ
 HZ
@@ -6094,7 +6131,7 @@ HZ
 HZ
 yT
 hQ
-HZ
+gN
 HZ
 HZ
 HZ
@@ -6232,7 +6269,7 @@ HZ
 bb
 aJ
 HZ
-AO
+xg
 CT
 HZ
 HZ
@@ -6240,7 +6277,7 @@ iw
 HZ
 Xa
 HZ
-HZ
+gN
 HZ
 HZ
 HZ
@@ -6378,7 +6415,7 @@ HZ
 aJ
 uj
 HZ
-AO
+xg
 NY
 HZ
 HZ
@@ -6386,7 +6423,7 @@ HZ
 HZ
 Xa
 HZ
-HZ
+gN
 HZ
 HZ
 HZ
@@ -6532,7 +6569,7 @@ hQ
 HZ
 yT
 HZ
-HZ
+gN
 HZ
 HZ
 HZ
@@ -6678,7 +6715,7 @@ HZ
 Jd
 aJ
 HZ
-HZ
+gN
 HZ
 HZ
 HZ
@@ -7116,7 +7153,7 @@ HZ
 HZ
 HZ
 HZ
-HZ
+gN
 HZ
 HZ
 hQ
@@ -7664,7 +7701,7 @@ Zn
 SE
 Zn
 Zn
-NH
+Ea
 Zn
 Zn
 Ig
@@ -8240,21 +8277,21 @@ CO
 CO
 ju
 MF
-MF
-MF
-MF
+ZN
+ZN
+ZN
 MF
 ju
 CO
 CO
 CO
-CO
-CO
-CO
-CO
-CO
-CO
-CO
+HO
+HO
+HO
+HO
+HO
+HO
+HO
 CO
 CO
 CO
@@ -8394,10 +8431,10 @@ ju
 CO
 CO
 CO
-CO
-nl
-nl
-nl
+HO
+Ml
+Ml
+Ml
 PM
 PM
 PM
@@ -8420,7 +8457,7 @@ hQ
 HZ
 hQ
 HZ
-HZ
+gN
 hQ
 hQ
 hQ
@@ -8540,7 +8577,7 @@ ju
 CO
 CO
 CO
-CO
+HO
 Ry
 pY
 pY
@@ -8566,7 +8603,7 @@ hQ
 hQ
 hQ
 HZ
-hQ
+Fl
 hQ
 HZ
 hQ
@@ -8686,7 +8723,7 @@ ju
 CO
 CO
 CO
-CO
+HO
 Fy
 pY
 pY
@@ -8712,7 +8749,7 @@ HZ
 hQ
 HZ
 hQ
-HZ
+gN
 HZ
 vI
 HZ
@@ -8832,7 +8869,7 @@ Yk
 CO
 CO
 CO
-CO
+HO
 PM
 pY
 pY
@@ -9276,7 +9313,7 @@ MF
 MF
 MF
 MF
-CO
+HO
 Ew
 Ew
 pY
@@ -9422,7 +9459,7 @@ MF
 MF
 MF
 Bq
-CO
+HO
 Ew
 pY
 pY
@@ -9568,7 +9605,7 @@ MF
 MF
 MF
 MF
-CO
+HO
 Ew
 ZZ
 pY
@@ -9874,8 +9911,8 @@ CO
 CO
 CO
 CO
-AO
-Km
+xg
+lc
 Km
 AO
 AO
@@ -10166,13 +10203,13 @@ CO
 CO
 CO
 CO
-Fl
-gN
-gN
-gN
-gN
-Fl
-Fl
+gt
+jq
+jq
+jq
+jq
+gt
+gt
 HZ
 HZ
 um

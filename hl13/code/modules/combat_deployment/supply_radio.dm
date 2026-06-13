@@ -122,7 +122,7 @@
 
 /obj/item/hl2/supply_radio/rebel/lieutenant
 	name = "PLF Lieutenant Supply Radio"
-	max_cash_regeneration = 4
+	max_cash_regeneration = 5
 	final_allowed_cash = 325
 
 /obj/item/hl2/supply_radio/combine

@@ -263,7 +263,7 @@
 /obj/structure/halflife/trash/garbage/dumpster/crate/Initialize(mapload)
 	. = ..()
 	if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
-		if(prob(25))
+		if(prob(35))
 			loot_type = /obj/effect/spawner/random/halflife/loot/intruder/guaranteed
 			good_loot_type = /obj/effect/spawner/random/halflife/loot/intruder/guaranteed
 

@@ -11,6 +11,7 @@
 	desc = "A old wooden wall, somehow still standing after all this time."
 	icon_state = "woodwall-0"
 	base_icon_state = "woodwall"
+	sheet_type = /obj/item/stack/sheet/mineral/wood
 
 /turf/closed/wall/halflife/wood/add_debris_element()
 	AddElement(/datum/element/debris, DEBRIS_WOOD, -15, 8, 1)

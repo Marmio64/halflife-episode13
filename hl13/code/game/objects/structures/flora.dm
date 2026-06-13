@@ -78,6 +78,13 @@
 	. = ..()
 	icon_state = "wild_root[rand(1, 12)]"
 
+/obj/structure/flora/root/after_harvest(mob/user)
+	if(HAS_TRAIT(user, TRAIT_THE_INTRUDER))
+		new /obj/effect/spawner/random/halflife/loot/intruder/crab/guaranteed(loc, 1)
+			user.visible_message(span_notice("[user] finds something inside the [src]."), \
+		span_notice("Looks like one of your friends stashed something useful here..."))
+	if(delete_on_harvest)
+		qdel(src)
 
 // Potato
 /obj/structure/flora/root/wild_potato

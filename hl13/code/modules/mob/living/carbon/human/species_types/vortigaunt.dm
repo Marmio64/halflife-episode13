@@ -173,7 +173,7 @@
 /datum/species/vortigaunt/extract_boss
 	name = "Super Extract Empowered Vortigaunt"
 	id = SPECIES_VORTIGAUNT_ELDER
-	damage_modifier = 75 //high since they dont have movement on their side at all
+	damage_modifier = 85 //high since they dont have movement on their side at all
 
 	bodypart_overrides = list(
 		BODY_ZONE_HEAD = /obj/item/bodypart/head/vortigaunt/extract,

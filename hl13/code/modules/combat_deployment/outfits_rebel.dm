@@ -149,6 +149,35 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+/datum/outfit/deployment_loadout/rebel/tier2/molotov_partisan
+	name = "Deployment: Upgraded Refugee Molotov Partisan"
+	display_name = "Upgraded Refugee Molotov Partisan (Offense)"
+	desc = "Armed with molotovs and tinbombs, they provide useful support to allies."
+	id_name = "Partisan"
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/makeshift
+	l_pocket = /obj/item/stack/sheet/halflife/brick
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	mask = /obj/item/clothing/mask/gas/hl2/military
+
+	backpack_contents = list(
+		/obj/item/grenade/halflife/molotov,
+		/obj/item/grenade/halflife/molotov,
+		/obj/item/grenade/halflife/molotov,
+		/obj/item/lighter,
+		/obj/item/reagent_containers/pill/patch/medkit/vial,
+		/obj/item/ammo_box/magazine/makeshift9mm,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/tinbomb)
+
 /datum/outfit/deployment_loadout/rebel/tier2/medic_rebel
 	name = "Deployment: Medic Rebel"
 	display_name = "Medic Rebel (Support)"
@@ -362,7 +391,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_per = 5
-	extra_dex = 5
+	extra_dex = 6
 
 /datum/outfit/deployment_loadout/rebel/tier3/engineer
 	name = "Deployment: Upgraded Refugee Engineer+"
@@ -426,7 +455,7 @@
 	extra_end = 3
 
 	alternate_combat_music = 'hl13/sound/music/combat/fasterthanaspeedingbullet.ogg'
-	alternate_music_chance = 35
+	alternate_music_chance = 50
 
 /datum/outfit/deployment_loadout/rebel/tier3/medic_rebel
 	name = "Deployment: Upgraded Medic Rebel"
@@ -577,6 +606,19 @@
 
 	alternate_combat_music = 'hl13/sound/music/combat/drunkenpipebomb.ogg'
 
+/datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel/incendiary
+	name = "Deployment: Heavy Rebel Incendiary Bomber"
+	display_name = "Heavy Rebel Incendiary Bomber (Offense)"
+
+	mask = /obj/item/clothing/mask/gas/hl2/military
+
+	backpack_contents = list(
+		/obj/item/grenade/incendiary_grenade = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/ammo_casing/a20mm = 1,
+		/obj/item/ammo_box/magazine/mp7 = 2,
+	)
+
 /datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt
 	name = "Deployment: Elder Vortigaunt"
 	display_name = "Elder Vortigaunt (Support)"
@@ -621,7 +663,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_per = 5
-	extra_dex = 7
+	extra_dex = 8
 
 /datum/outfit/deployment_loadout/rebel/tier4/engineer
 	name = "Deployment: Heavy Refugee Engineer"
@@ -933,7 +975,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/everymove.ogg'
 
-	spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/rebel)
+	spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/rebel/short)
 
 	extra_dex = 3
 

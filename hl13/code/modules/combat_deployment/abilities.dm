@@ -197,7 +197,7 @@
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 
 	school = SCHOOL_EVOCATION
-	cooldown_time = 125 SECONDS
+	cooldown_time = 110 SECONDS
 
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
 
@@ -215,13 +215,17 @@
 
 /datum/action/cooldown/spell/aoe/rally/cast_on_thing_in_aoe(mob/living/victim, mob/living/caster)
 
-	if(victim.deployment_faction != faction_buff)
+	if(victim.deployment_faction != faction_buff || victim.stat == DEAD)
 		return
 
 	victim.add_mood_event("rally", /datum/mood_event/rallied)
 	victim.adjustStaminaLoss(-60)
 	victim.adjustBruteLoss(physical_heal)
 	victim.adjustFireLoss(physical_heal)
+	victim.set_eye_blur_if_lower(-6 SECONDS)
+	victim.adjust_confusion(-6 SECONDS)
+	victim.AdjustImmobilized(-3 SECONDS)
+	victim.AdjustStun(-3 SECONDS)
 
 	if(victim != caster)
 		to_chat(victim, span_boldnicegreen("You feel inspired to fight!"))
@@ -239,8 +243,11 @@
 /datum/action/cooldown/spell/aoe/rally/rebel
 	button_icon_state = "rally_rebel"
 	faction_buff = REBEL_DEPLOYMENT_FACTION
-	cooldown_time = 100 SECONDS // cell leaders and lieutenants are more charismatic than the evil bine commanders
+	cooldown_time = 75 SECONDS // cell leaders and lieutenants are more charismatic than the evil bine commanders
 	physical_heal = -50
+
+/datum/action/cooldown/spell/aoe/rally/rebel/short
+	cooldown_time = 45 SECONDS
 
 /datum/action/cooldown/spell/revive_tdmlead
 	name = "Revive"

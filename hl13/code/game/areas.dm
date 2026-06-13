@@ -589,6 +589,28 @@
 /area/halflife/indoors/intruder/lockerroom
 	name = "Conscript Locker Room"
 
+/area/halflife/indoors/intruder/library
+	name = "Library"
+
+/area/halflife/indoors/intruder/storagesilo
+	name = "R&D Storage Silo"
+
+/area/halflife/indoors/intruder/guardtower
+	name = "Guard Tower"
+
+//random rooms that you really cant include in anything and its not worth giving them their own area
+/area/halflife/indoors/intruder/miscellaneous_room
+	name = "Miscellaneous Room"
+
+/area/halflife/indoors/intruder/outside
+	name = "Outside Area"
+	ambient_buzz = 'hl13/sound/ambience/forest/wind_light02_loop.ogg'
+	ambient_buzz_vol = 8
+	ambience_index = AMBIENCE_HLFOREST
+	sound_environment = SOUND_ENVIRONMENT_FOREST
+	max_ambience_cooldown = 30 SECONDS
+	min_ambience_cooldown = 10 SECONDS
+
 // coastal district areas
 
 /area/halflife/indoors/old_harbor
