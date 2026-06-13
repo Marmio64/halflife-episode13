@@ -33,6 +33,7 @@
 	desc = "Holder of knowledge, master of all."
 	icon_state = "bookshelf"
 	materialtype = /obj/item/stack/sheet/mineral/scrap_wood
+	hl13hit_sounds = SFX_WOODIMPACT
 
 /obj/structure/halflife/storage/shelf
 	name = "metal shelf"
@@ -46,6 +47,7 @@
 	desc = "Used for storing just about anything you could think of."
 	icon_state = "wood_shelf"
 	materialtype = /obj/item/stack/sheet/mineral/scrap_wood
+	hl13hit_sounds = SFX_WOODIMPACT
 
 /obj/structure/halflife/storage/shelf/wood/alt
 	icon_state = "wood_shelf-alt"
@@ -80,6 +82,7 @@
 	desc = "An extra large, wood shelf, used for storing just about anything you could think of while upkeeping your rustic tones."
 	icon_state = "wood_shelf"
 	materialtype = /obj/item/stack/sheet/mineral/scrap_wood
+	hl13hit_sounds = SFX_WOODIMPACT
 
 /obj/structure/halflife/storage/large/shelf/wood/alt
 	icon_state = "wood_shelf-alt"

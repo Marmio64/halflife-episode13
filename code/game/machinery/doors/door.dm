@@ -29,6 +29,8 @@
 	var/visible = TRUE
 	var/operating = FALSE
 	var/glass = FALSE
+	/// Should default door hit sounds be replaced with the hl13hit_sounds variable
+	var/custom_hit_sound = FALSE
 	/// Do we need to keep track of a filler panel with the airlock
 	var/multi_tile
 	/// A filler object used to fill the space of multi-tile airlocks
@@ -412,7 +414,10 @@
 			if(glass)
 				playsound(loc, 'sound/effects/glass/glasshit.ogg', 90, TRUE)
 			else if(damage_amount)
-				playsound(loc, 'sound/items/weapons/smash.ogg', 50, TRUE)
+				if(custom_hit_sound)
+					playsound(src, pick(hl13hit_sounds), 50, FALSE)
+				else
+					playsound(loc, 'sound/items/weapons/smash.ogg', 50, TRUE)
 			else
 				playsound(src, 'sound/items/weapons/tap.ogg', 50, TRUE)
 		if(BURN)

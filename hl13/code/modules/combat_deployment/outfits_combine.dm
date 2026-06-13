@@ -898,6 +898,7 @@
 
 	extra_dex = 8
 	extra_end = 8
+	extra_str = 4
 
 /obj/item/clothing/suit/jacket/trenchcoat/wesker/blu
 

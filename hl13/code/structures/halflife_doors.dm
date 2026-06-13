@@ -391,6 +391,7 @@
 	opensound = 'hl13/sound/machines/wooddoor_open.ogg'
 	closesound = 'hl13/sound/machines/wooddoor_close.ogg'
 	hl13hit_sounds = SFX_WOODIMPACT
+	custom_hit_sound = TRUE
 
 /obj/machinery/door/unpowered/halflife/wood/deconstruct(disassembled = TRUE)
 	if(!(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION))

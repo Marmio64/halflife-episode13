@@ -209,7 +209,7 @@
 	///for cigarette overlay
 	var/candy = FALSE
 	/// Does this cigarette packet come with a coupon attached?
-	var/spawn_coupon = TRUE
+	var/spawn_coupon = FALSE
 	/// For VV'ing, set this to true if you want to force the coupon to give an omen
 	var/rigged_omen = FALSE
 	///Do we not have our own handling for cig overlays?

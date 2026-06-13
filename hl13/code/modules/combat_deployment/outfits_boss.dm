@@ -96,6 +96,7 @@
 
 	extra_dex = 8
 	extra_end = 8
+	extra_str = 4
 
 /datum/action/cooldown/mob_cooldown/dash/wesker
 	dash_range = 5

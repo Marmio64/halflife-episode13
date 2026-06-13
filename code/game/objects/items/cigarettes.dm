@@ -195,9 +195,9 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	AddComponent(/datum/component/edible,\
 		initial_reagents = list_reagents,\
 		food_flags = FOOD_NO_EXAMINE,\
-		foodtypes = GROSS,\
+		foodtypes = TOXIC,\
 		volume = chem_volume,\
-		eat_time = 1 SECONDS,\
+		eat_time = 3 SECONDS,\
 		tastes = list("a never before experienced flavour", "finally sitting down after standing your entire life"),\
 		eatverbs = list("taste"),\
 		bite_consumption = chem_volume,\

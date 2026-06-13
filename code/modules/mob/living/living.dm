@@ -1276,6 +1276,19 @@
 	//The amount of damage inflicted on a failed resist attempt.
 	var/damage_on_resist_fail = rand(7, 13)
 
+	// see defines/combat.dm, this should be baseline 60%
+	// Resist chance divided by the value imparted by your grab state. It isn't until you reach neckgrab that you gain a penalty to escaping a grab.
+	// this only comes into effect on aggressive and higher grabs
+	var/resist_chance = clamp(BASE_GRAB_RESIST_CHANCE / effective_grab_state, 0, 100)
+
+	if(pulledby && isliving(pulledby))
+		var/mob/living/living_puller = pulledby
+		damage_on_resist_fail += (living_puller.get_stat_level(STATKEY_STR) / 2) //hl13 edit. Stronger grabbers inflict more stamina damage.
+		resist_chance -= (living_puller.get_stat_level(STATKEY_STR) * 2) //hl13 edit. Stronger grabbers are harder to break free from
+
+	damage_on_resist_fail -= (get_stat_level(STATKEY_END) / 2) //hl13 edit. Having high endurance counteracts the stamina damage.
+	resist_chance += (get_stat_level(STATKEY_STR) * 2) //hl13 edit. The stronger the person being grabbed is, the easier they can break out.
+
 	if(body_position == LYING_DOWN) //If prone, treat the grab state as one higher
 		effective_grab_state++
 
@@ -1303,9 +1316,6 @@
 
 	//We only resist our grab state if we are currently in a grab equal to or greater than GRAB_AGGRESSIVE (1). Otherwise, break out immediately!
 	if(effective_grab_state >= GRAB_AGGRESSIVE)
-		// see defines/combat.dm, this should be baseline 60%
-		// Resist chance divided by the value imparted by your grab state. It isn't until you reach neckgrab that you gain a penalty to escaping a grab.
-		var/resist_chance = clamp(BASE_GRAB_RESIST_CHANCE / effective_grab_state, 0, 100)
 		if(prob(resist_chance))
 			visible_message(span_danger("[src] breaks free of [pulledby]'s grip!"), \
 							span_danger("You break free of [pulledby]'s grip!"), null, null, pulledby)

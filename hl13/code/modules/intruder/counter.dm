@@ -105,8 +105,9 @@ GLOBAL_LIST_EMPTY(real_objectives)
 		to_chat(human_user, span_notice("I see you used the ventilation system to enter the building. Once your objectives are complete, you can use the vent you came in from- or any other similarly shaped vents- to exfiltrate. Be warned, Crab, you cannot exfiltrate while an alert is active. We can't risk you being followed back to HQ."))
 		to_chat(human_user, span_notice("While you have already been provided a silenced pistol, a tranquilizer, a knife, and a radar system provided to us by Lambda scientists, you can procure more equipment on-site primarily found in- but not limited to- lockers, wooden crates, and storage rooms."))
 		to_chat(human_user, span_notice("When a guard has a direct line of sight with you, they can activate their radio to call in an alert. During the alert phase, your radar will be jammed, your location will be revealed, and security will get tighter. Crab, I'm receiving word that there may be one or more PLF assets besides you disguised as guards. Try to get into contact with them, or let them go about their business."))
-		to_chat(human_user, span_bold(span_danger("Crab, this is a stealth mission, taking out guards is not a priority. They outnumber you 30 to 1 and are armed with ID-tagged M4 rifles, and will arrive better prepared the more of them you kill or alert. Especially avoid killing the squad leaders wearing blue berets. If one of them dies, the base will go into caution phase. Good luck, Crab.")))
+		to_chat(human_user, span_bold(span_danger("Crab, this is a stealth mission, taking out guards is not a priority. They outnumber you 30 to 1 and are armed with ID-tagged rifles, and will arrive better prepared the more of them you kill or alert. Especially avoid killing the squad leaders wearing blue berets. If one of them dies, the base will go into caution phase. Good luck, Crab.")))
 		candidates_left--
+		combine_players--
 
 	if(candidates_left == 0 || 99 < pick_retries)
 		start_countdown()
@@ -169,6 +170,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 				qdel(mask_item)
 			H.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava/protective/guard/double_agent, ITEM_SLOT_MASK)
 			double_agents++
+			combine_players--
 
 /obj/machinery/intruder_time_counter/proc/attempt_pick_bullsquid()
 	var/chosen_candidate = null
@@ -257,10 +259,10 @@ GLOBAL_LIST_EMPTY(real_objectives)
 					H.forceMove(pick(spawn_locs))
 
 		if(combine_players <= SSticker.tdm_combine_deaths && SSticker.IsRoundInProgress())
-			priority_announce("Crab, you are aware that this was a stealth mission, right? Oh well, mission complete.", "PLF Priority Alert")
+			priority_announce("Crab, you are aware that this was a stealth mission, right? Oh well, mission complete. We'll send in the ground troops to cleanup the rest.", "PLF Priority Alert")
 			GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
 			SSticker.force_ending = FORCE_END_ROUND
-			to_chat(world, span_infoplain(span_slightly_larger(span_bold("All conscripts are dead, the intruder wins by default."))))
+			to_chat(world, span_infoplain(span_slightly_larger(span_bold("Enough conscripts were killed, that the Intruder wins."))))
 			var/final_score = GLOB.alert_phases
 			to_chat(world, span_infoplain(span_bold("Alerts: [final_score]")))
 			to_chat(world, span_infoplain(span_bold("Codename: Belligerent Bullsquid"))) //codename makes even more sense now since you have to kill the man himself to get his codename

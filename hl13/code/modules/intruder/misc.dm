@@ -130,19 +130,28 @@ GLOBAL_VAR_INIT(packages_delivered, 0)
 
 	var/lookingfor = "Placeholder"
 
-	var/list/things_lookingfor = list(
-		"Armor",
-		"Rations",
-		"Firearms",
-		"Gears", //of the metal variety, probably
-		"Coffee",
-		"Medicine",
-		"Ammunition",
-	)
+	var/things_boxcontains = 0
 
-/obj/machinery/intruder_deliveryzone/Initialize(mapload)
-	.=..()
-	lookingfor = pick(things_lookingfor)
+/obj/machinery/intruder_deliveryzone/misc_supplies
+	lookingfor = "Misc. Supplies"
+
+/obj/machinery/intruder_deliveryzone/misc_supplies/low_capacity
+	deliveries_accepted = 5
+
+/obj/machinery/intruder_deliveryzone/weapons_and_ammo
+	lookingfor = "Weapons and Ammunition"
+
+/obj/machinery/intruder_deliveryzone/coffee_and_rations
+	lookingfor = "Coffee and Rations"
+
+/obj/machinery/intruder_deliveryzone/coffee_and_rations/low_capacity
+	deliveries_accepted = 5
+
+/obj/machinery/intruder_deliveryzone/medicine
+	lookingfor = "Medicine"
+
+/obj/machinery/intruder_deliveryzone/research_equipment
+	lookingfor = "Research Equipment"
 
 /obj/machinery/intruder_deliveryzone/examine(mob/user)
 	. = ..()
@@ -169,18 +178,19 @@ GLOBAL_VAR_INIT(packages_delivered, 0)
 						GLOB.packages_delivered = 0
 					if(!intruder_inside)
 						GLOB.packages_delivered++
-						lookingfor = pick(things_lookingfor)
-						box.boxcontains = pick(things_lookingfor)
-						while(box.boxcontains == lookingfor) //make sure new contents don't match what the delivery zone is now looking for
-							box.boxcontains = pick(things_lookingfor)
+						qdel(box)
 						to_chat(user, span_notice("The contents of the box are delivered to the area and a shipment of [box.boxcontains] is loaded into the box."))
+						deliveries_accepted++
+						if(10 < deliveries_accepted)
+							to_chat(user, span_notice("The delivery point is now full, and can no longer be delivered to."))
+							qdel(src) //deletes itself once it reaches 10 deliveries
 					else
 						box.boxcontains = "nothing"
 						to_chat(user, span_warning("Huh...? That's strange, the contents of this box failed to be delivered properly... what's going on?"))
 				else if(box.boxcontains == "nothing")
-					box.boxcontains = pick(things_lookingfor)
+					box.boxcontains = pick(box.things_boxcontains)
 					while(box.boxcontains == lookingfor) //they wouldnt supply a box with stuff they are needing more of
-						box.boxcontains = pick(things_lookingfor)
+						box.boxcontains = pick(box.things_boxcontains)
 					to_chat(user, span_notice("A shipment of [box.boxcontains] is loaded into the box."))
 					if(prob(5) && intruder_inside)
 						to_chat(user, span_warning("Huh...? Did you see something move inside while the box was being loaded?"))
@@ -199,13 +209,11 @@ GLOBAL_VAR_INIT(packages_delivered, 0)
 	var/startempty = FALSE
 
 	var/list/things_boxcontains = list(
-		"Armor",
-		"Rations",
-		"Firearms",
-		"Gears", //of the metal variety, probably
-		"Coffee",
+		"Misc. Supplies",
+		"Weapons and Ammunition",
+		"Coffee and Rations",
 		"Medicine",
-		"Ammunition",
+		"Research Equipment",
 	)
 
 /obj/structure/closet/cardboard/solid/Initialize(mapload)
@@ -244,3 +252,30 @@ GLOBAL_VAR_INIT(packages_delivered, 0)
 
 /obj/structure/closet/cardboard/solid/empty
 	startempty = TRUE
+
+/obj/structure/halflife/cargotruck/intruder_delivery
+	name = "Delivery Truck"
+	desc = "A truck that has been parked and filled with boxes of materials meant to be delivered to points around the base."
+
+	var/boxes_left = 6
+
+/obj/structure/halflife/cargotruck/intruder_delivery/examine(mob/user)
+	. = ..()
+	. += span_notice("It has [boxes_left] boxes left.")
+
+/obj/structure/halflife/cargotruck/intruder_delivery/high_capacity
+	boxes_left = 24
+
+/obj/structure/halflife/cargotruck/intruder_delivery/interact(mob/living/carbon/human/user)
+	. = ..()
+
+	if(boxes_left <= 0)
+		to_chat(user, span_warning("This truck has no more boxes of supplies left."))
+		return
+
+	to_chat(user, span_notice("You start pulling out a box of supplies..."))
+	if(do_after(user, 5 SECONDS, src))
+		if(0 < boxes_left)
+			new /obj/structure/closet/cardboard/solid(loc)
+			to_chat(user, span_notice("You take out a box of supplies. You can examine it to see what it contains."))
+			boxes_left--

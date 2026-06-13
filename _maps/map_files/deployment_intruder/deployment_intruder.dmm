@@ -78,7 +78,7 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/intruder/office)
 "bl" = (
-/obj/structure/closet/cardboard,
+/obj/structure/closet/cardboard/solid,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/storagec)
 "bx" = (
@@ -215,7 +215,7 @@
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/intruder/entrance)
 "eh" = (
-/obj/structure/closet/cardboard,
+/obj/structure/closet/cardboard/solid,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/storagea)
 "ej" = (
@@ -353,7 +353,7 @@
 /turf/closed/wall/halflife/concrete/bunker,
 /area/halflife/indoors/intruder/medbay)
 "ho" = (
-/obj/structure/closet/cardboard,
+/obj/structure/closet/cardboard/solid,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/medbay)
 "hq" = (
@@ -496,6 +496,10 @@
 "kW" = (
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/storageb)
+"kX" = (
+/obj/machinery/intruder_deliveryzone/medicine,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/intruder/medbay)
 "kY" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/intruder/storagec)
@@ -765,6 +769,10 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/entrance)
+"pY" = (
+/obj/machinery/intruder_deliveryzone/research_equipment,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/intruder/lab)
 "qq" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/intruder/cafeteria)
@@ -865,7 +873,7 @@
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/entrance)
 "rW" = (
-/obj/structure/closet/cardboard,
+/obj/structure/closet/cardboard/solid,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/intruder/storagec)
 "si" = (
@@ -984,7 +992,7 @@
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/intruder/medbay)
 "uO" = (
-/obj/structure/closet/cardboard,
+/obj/structure/closet/cardboard/solid,
 /obj/effect/spawner/random/halflife/loot/intruder,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/barracks)
@@ -1033,7 +1041,7 @@
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/intruder/office)
 "wv" = (
-/obj/structure/closet/cardboard,
+/obj/structure/closet/cardboard/solid,
 /obj/machinery/light/directional/west,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/storagea)
@@ -1091,7 +1099,7 @@
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/intruder/office)
 "xD" = (
-/obj/structure/closet/cardboard,
+/obj/structure/closet/cardboard/solid,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/storageb)
 "xH" = (
@@ -1163,6 +1171,10 @@
 /obj/machinery/telecomms/hub/preset,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors/intruder)
+"zt" = (
+/obj/machinery/intruder_deliveryzone/misc_supplies,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/intruder/storagea)
 "zC" = (
 /obj/structure/halflife/pipes/horizontal/end,
 /turf/open/floor/plating/indoor/concrete,
@@ -1226,7 +1238,7 @@
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/intruder/lab)
 "Bl" = (
-/obj/structure/closet/cardboard,
+/obj/structure/closet/cardboard/solid,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/office)
 "Bq" = (
@@ -1303,6 +1315,10 @@
 /obj/effect/landmark/navigate_destination/halflife/intruder/storagec,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/intruder/storagec)
+"Df" = (
+/obj/machinery/intruder_deliveryzone/misc_supplies,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/intruder/storageb)
 "Dk" = (
 /obj/structure/closet/halflife{
 	anchored = 1
@@ -1503,6 +1519,14 @@
 /obj/machinery/light/broken/directional/south,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/barracks)
+"Jt" = (
+/obj/structure/halflife/cargotruck/intruder_delivery/high_capacity{
+	dir = 4;
+	pixel_y = -17;
+	pixel_x = -4
+	},
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/intruder/entrance)
 "Jy" = (
 /obj/effect/landmark/navigate_destination/halflife/intruder/storageb,
 /turf/open/floor/plating/indoor/metal/grate,
@@ -1526,7 +1550,7 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/barracks)
 "JZ" = (
-/obj/structure/closet/cardboard,
+/obj/structure/closet/cardboard/solid,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/storagea)
 "Ka" = (
@@ -1605,6 +1629,10 @@
 /obj/structure/halflife/pipes/horizontal/random,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/cafeteria)
+"Mo" = (
+/obj/machinery/intruder_deliveryzone/coffee_and_rations/low_capacity,
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/intruder/lab)
 "Mq" = (
 /obj/structure/table/halflife/no_smooth/large/metal/desk/alt,
 /obj/machinery/light/directional/north,
@@ -1696,6 +1724,14 @@
 "OV" = (
 /turf/closed/wall/halflife/concrete/bunker,
 /area/halflife/indoors/intruder/entrance)
+"Pc" = (
+/obj/machinery/intruder_deliveryzone/coffee_and_rations,
+/turf/open/floor/plating/indoor/checkered,
+/area/halflife/indoors/intruder/cafeteria)
+"Pd" = (
+/obj/machinery/intruder_deliveryzone/weapons_and_ammo,
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/intruder/lockerroom)
 "Pf" = (
 /obj/machinery/light_switch/directional/north{
 	max_integrity = 999
@@ -2035,7 +2071,7 @@
 	},
 /area/halflife/indoors/intruder/office)
 "Xe" = (
-/obj/structure/closet/cardboard,
+/obj/structure/closet/cardboard/solid,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/intruder/office)
 "Xn" = (
@@ -3228,7 +3264,7 @@ rE
 Zt
 bQ
 yG
-oI
+Pd
 sE
 xb
 Xn
@@ -3436,7 +3472,7 @@ pq
 pq
 EB
 mo
-BK
+Pc
 BK
 ZB
 PA
@@ -4230,7 +4266,7 @@ tu
 aV
 en
 en
-en
+zt
 en
 en
 en
@@ -4479,7 +4515,7 @@ EM
 LQ
 Jy
 kW
-kW
+Df
 hN
 EM
 kW
@@ -4886,7 +4922,7 @@ NT
 ol
 qW
 qW
-qW
+Mo
 qW
 NT
 ob
@@ -5440,7 +5476,7 @@ kS
 UI
 Bi
 si
-si
+pY
 si
 si
 NT
@@ -6441,7 +6477,7 @@ SA
 hn
 Ui
 QE
-QE
+kX
 QE
 BQ
 nm
@@ -6684,9 +6720,9 @@ qJ
 pU
 XE
 zZ
-aT
-aT
-aT
+XG
+XG
+XG
 zZ
 XE
 pU
@@ -6761,8 +6797,8 @@ nm
 OV
 OV
 OV
-MP
-MP
+XG
+Jt
 MP
 OV
 OV

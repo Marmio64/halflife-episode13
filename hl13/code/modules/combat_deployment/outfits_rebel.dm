@@ -144,7 +144,8 @@
 
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/usp9mm = 4,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -260,6 +261,7 @@
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = 1,
 		/obj/item/ammo_box/magazine/makeshift9mm = 4,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -1152,6 +1154,7 @@
 
 	extra_dex = 8
 	extra_end = 8
+	extra_str = 4
 
 /obj/item/clothing/suit/jacket/trenchcoat/wesker/red
 
