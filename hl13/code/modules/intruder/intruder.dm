@@ -296,13 +296,13 @@
 	if(!flashbang_turf)
 		return
 	do_sparks(rand(5, 9), FALSE, src)
-	playsound(flashbang_turf, "sound/items/weapons/gun/rifle/shot.ogg", 80, TRUE, 8, 0.9)
+	playsound(flashbang_turf, "hl13/sound/weapons/famas.ogg", 80, TRUE, 8, 0.9)
 	sleep(rand(0.25 SECONDS,0.8 SECONDS))
-	playsound(flashbang_turf, "sound/items/weapons/gun/rifle/shot.ogg", 80, TRUE, 8, 0.9)
+	playsound(flashbang_turf, "hl13/sound/weapons/famas.ogg", 80, TRUE, 8, 0.9)
 	sleep(rand(0.25 SECONDS,0.8 SECONDS))
-	playsound(flashbang_turf, "sound/items/weapons/gun/rifle/shot.ogg", 80, TRUE, 8, 0.9)
+	playsound(flashbang_turf, "hl13/sound/weapons/famas.ogg", 80, TRUE, 8, 0.9)
 	sleep(rand(0.4 SECONDS,1.2 SECONDS))
-	playsound(flashbang_turf, "sound/items/weapons/gun/rifle/shot.ogg", 80, TRUE, 8, 0.9)
+	playsound(flashbang_turf, "hl13/sound/weapons/famas.ogg", 80, TRUE, 8, 0.9)
 	sleep(rand(0.25 SECONDS,0.8 SECONDS))
 	qdel(src)
 
