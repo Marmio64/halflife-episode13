@@ -182,6 +182,9 @@
 /obj/structure/ladder/halflife/travel(going_up, mob/user, is_ghost, obj/structure/ladder/ladder)
 	if(!is_ghost)
 		ladder.add_fingerprint(user)
+
+		if(HAS_TRAIT(user, TRAIT_THE_INTRUDER))
+			playsound(user, 'hl13/sound/effects/whatathrill.ogg', 25, FALSE)
 		if(!do_after(user, travel_time, target = src))
 			return
 		playsound(user, pick('hl13/sound/halflifeeffects/ladder1.ogg',

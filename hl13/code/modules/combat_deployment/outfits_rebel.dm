@@ -391,7 +391,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_per = 5
-	extra_dex = 5
+	extra_dex = 6
 
 /datum/outfit/deployment_loadout/rebel/tier3/engineer
 	name = "Deployment: Upgraded Refugee Engineer+"
@@ -663,7 +663,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_per = 5
-	extra_dex = 7
+	extra_dex = 8
 
 /datum/outfit/deployment_loadout/rebel/tier4/engineer
 	name = "Deployment: Heavy Refugee Engineer"
@@ -975,7 +975,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/everymove.ogg'
 
-	spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/rebel)
+	spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/rebel/short)
 
 	extra_dex = 3
 

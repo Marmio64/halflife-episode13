@@ -224,13 +224,27 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	extra_price = PAYCHECK_ZERO
 	all_products_free = TRUE
 	scan_id = FALSE
+	var/sociostability_cost = -20
+
+/obj/machinery/vending/armory/lethal
+	products = list(
+		/obj/item/gun/ballistic/automatic/mp7 = 1,
+		/obj/item/ammo_box/magazine/mp7 = 2,
+		/obj/item/gun/ballistic/shotgun/spas12 = 1,
+		/obj/item/storage/box/lethalshot/halflife = 2,
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/gun/ballistic/automatic/pistol/usp = 1,
+		/obj/item/ammo_box/colta357 = 1,
+		/obj/item/ammo_box/c38 = 1,
+	)
+	sociostability_cost = -24
 
 /obj/item/vending_refill/armory
 	machine_name = "Armory Vendor"
 	icon_state = "refill_sec"
 
 /obj/machinery/vending/armory/on_dispense(obj/item/vended_item)
-	SSsociostability.modifystability(-20) //All the equipment in this vendor is dangerous. Not having to resort to such measures is a mark of good sociostability. In total if you empty the machine, you lose 200 sociostability aka 18%
+	SSsociostability.modifystability(sociostability_cost) //All the equipment in this vendor is dangerous. Not having to resort to such measures is a mark of good sociostability. In total if you empty the machine, you lose 200 sociostability aka 18%
 
 /obj/machinery/vending/keyvendor
 	name = "\improper Key Vendor"

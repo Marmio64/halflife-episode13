@@ -1,0 +1,44 @@
+{
+	"version": 1,
+	"map_name": "Operation Head Crabber, Okropna Twierdza (15-25 Players)",
+	"map_path": "map_files/deployment_intruder_outside",
+	"map_file": "deployment_intruder_outside.dmm",
+	"space_ruin_levels": 0,
+	"space_empty_levels": 0,
+	"planetary": 1,
+	"shuttles": {
+		"cargo": "cargo_box",
+		"ferry": "ferry_fancy",
+		"whiteship": "whiteship_meta",
+		"emergency": "emergency_box"
+	},
+	"traits": [
+		{
+			"Baseturf": "/turf/open/floor/plating/ground/rockunder",
+			"Gravity": true,
+			"No Parallax": true,
+			"Linkage": null
+
+		}
+	],
+	"minetype": "combat_deployment",
+	"combat_deployment_gamemode": "intruder",
+	"job_changes": {
+		"Combine Sectoral Commander": {
+			"total_positions": 0,
+			"spawn_positions": 0
+		},
+		"Rebel Cell Leader": {
+			"total_positions": 0,
+			"spawn_positions": 0
+		},
+		"Refugee Rebel": {
+			"total_positions": 0,
+			"spawn_positions": 0
+		},
+		"Civil Protection": {
+			"total_positions": 30,
+			"spawn_positions": 30
+		}
+	}
+}
