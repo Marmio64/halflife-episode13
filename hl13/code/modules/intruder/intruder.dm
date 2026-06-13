@@ -233,6 +233,7 @@
 	SSwardrobe.provide_type(/obj/item/hl2/deployable_box, src)
 	SSwardrobe.provide_type(/obj/item/grenade/decoy, src)
 	SSwardrobe.provide_type(/obj/item/grenade/decoy, src)
+	SSwardrobe.provide_type(/obj/item/grenade/decoy, src)
 	update_appearance(UPDATE_ICON)
 
 /obj/item/storage/backpack/halflife/satchel/civilprotection/solid
@@ -280,7 +281,7 @@
 /obj/item/grenade/decoy
 	name = "noise decoy grenade"
 	icon_state = "decoy"
-	desc = "A device that looks like a grenade. When it 'detonates', it'll emulate the sound of a burst of a rifle, in order to confuse people."
+	desc = "A device that looks like a grenade. When it 'detonates', it'll emit either loud bangs or use a recorder to play convincing combat sounds"
 	inhand_icon_state = "decoy"
 	icon = 'hl13/icons/obj/grenade.dmi'
 	det_time = 35
@@ -295,16 +296,29 @@
 	var/flashbang_turf = get_turf(src)
 	if(!flashbang_turf)
 		return
-	do_sparks(rand(5, 9), FALSE, src)
-	playsound(flashbang_turf, "hl13/sound/weapons/famas.ogg", 80, TRUE, 8, 0.9)
-	sleep(rand(0.25 SECONDS,0.8 SECONDS))
-	playsound(flashbang_turf, "hl13/sound/weapons/famas.ogg", 80, TRUE, 8, 0.9)
-	sleep(rand(0.25 SECONDS,0.8 SECONDS))
-	playsound(flashbang_turf, "hl13/sound/weapons/famas.ogg", 80, TRUE, 8, 0.9)
-	sleep(rand(0.4 SECONDS,1.2 SECONDS))
-	playsound(flashbang_turf, "hl13/sound/weapons/famas.ogg", 80, TRUE, 8, 0.9)
-	sleep(rand(0.25 SECONDS,0.8 SECONDS))
-	qdel(src)
+
+	if(prob(50))
+		do_sparks(rand(5, 9), FALSE, src)
+		playsound(flashbang_turf, "hl13/sound/weapons/famas.ogg", 80, TRUE, 8, 0.9)
+		sleep(rand(0.25 SECONDS,0.8 SECONDS))
+		playsound(flashbang_turf, "hl13/sound/weapons/famas.ogg", 80, TRUE, 8, 0.9)
+		sleep(rand(0.25 SECONDS,0.8 SECONDS))
+		playsound(flashbang_turf, "hl13/sound/weapons/famas.ogg", 80, TRUE, 8, 0.9)
+		sleep(rand(0.4 SECONDS,1.2 SECONDS))
+		playsound(flashbang_turf, "hl13/sound/weapons/famas.ogg", 80, TRUE, 8, 0.9)
+		sleep(rand(0.25 SECONDS,0.8 SECONDS))
+		if(prob(50))
+			playsound(flashbang_turf, "hl13/sound/weapons/famas.ogg", 80, TRUE, 8, 0.9)
+			sleep(rand(0.25 SECONDS,0.8 SECONDS))
+		qdel(src)
+	else
+		playsound(flashbang_turf, 'sound/items/weapons/cqchit1.ogg', 80, TRUE, 8, 0.9)
+		sleep(rand(0.4 SECONDS,1 SECONDS))
+		playsound(flashbang_turf, 'sound/items/weapons/cqchit1.ogg', 80, TRUE, 8, 0.9)
+		sleep(rand(0.4 SECONDS,1 SECONDS))
+		playsound(flashbang_turf, 'sound/items/weapons/slam.ogg', 80, TRUE, 8, 0.9)
+		sleep(rand(0.25 SECONDS,0.8 SECONDS))
+		qdel(src)
 
 /datum/action/cooldown/spell/conjure_item/intruder_decoy
 	name = "Summon Decoy Mannequin"
