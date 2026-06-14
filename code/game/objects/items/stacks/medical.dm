@@ -18,6 +18,8 @@
 	merge_type = /obj/item/stack/medical
 	/// How long it takes to apply it to yourself
 	var/self_delay = 5 SECONDS
+	/// Multiplier of how intelligence translates into a lower delay when using this. 2 measn each point of intelligence is -0.2 seconds of delay.
+	var/intelligence_multiplier = 2
 	/// How long it takes to apply it to someone else
 	var/other_delay = 0
 	/// If we've still got more and the patient is still hurt, should we keep going automatically?
@@ -82,9 +84,17 @@
 		return
 	var/new_self_delay = self_delay
 	var/new_other_delay = other_delay
+
 	if(iscarbon(patient))
 		new_self_delay = looping ? clamp((self_delay - assessing_injury_delay), 0, self_delay) : self_delay
 		new_other_delay = looping ? clamp((other_delay - assessing_injury_delay), 0, other_delay) : other_delay
+	if(isliving(user))
+		var/mob/living/living_user = user
+		if(intelligence_multiplier)
+			new_self_delay -= ((living_user.get_stat_level(STATKEY_INT) - 10) * intelligence_multiplier)
+			new_other_delay -= ((living_user.get_stat_level(STATKEY_INT) - 10) * intelligence_multiplier)
+
+
 	if(patient == user)
 		if(!silent)
 			user.visible_message(

@@ -54,7 +54,7 @@
 
 /obj/item/halflife/combine_battery
 	name = "Combine Battery"
-	desc = "A combine battery that can charge their technologies, such as powered suits, certainand stunsticks, or be used as a power cell for certain recipes."
+	desc = "A combine battery that can charge their technologies, such as powered suits, stunsticks, or be used as a power cell for certain recipes."
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	icon_state = "battery"
 

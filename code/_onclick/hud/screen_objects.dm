@@ -208,6 +208,9 @@
 		return
 	if(pulledby && H.pulledby.grab_state >= GRAB_PASSIVE)
 		return
+	if(has_status_effect(/datum/status_effect/limp))
+		to_chat(src, "<span class='notice'>My legs are too damaged to jump with!")
+		return
 	if(istype(loc, /turf/open/halflife/water))
 		to_chat(src, "<span class='notice'>I can't jump while in water!")
 		return

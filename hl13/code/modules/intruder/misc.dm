@@ -130,7 +130,7 @@ GLOBAL_VAR_INIT(packages_delivered, 0)
 
 	var/lookingfor = "Placeholder"
 
-	var/things_boxcontains = 0
+	var/deliveries_accepted = 0
 
 /obj/machinery/intruder_deliveryzone/misc_supplies
 	lookingfor = "Misc. Supplies"

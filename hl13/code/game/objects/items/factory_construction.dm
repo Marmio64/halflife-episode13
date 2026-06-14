@@ -105,6 +105,10 @@
 	var/put_in_time = 2.2 SECONDS //at journeyman level, delay is 1.5 seconds. Legendary is 0.9, no skill is 2.2 seconds
 	put_in_time -= user.mind?.get_skill_modifier(/datum/skill/factorywork, SKILL_SPEED_MODIFIER)
 
+	if(HAS_TRAIT(user, TRAIT_ABOVE_LABOR))
+		put_in_time += 1.5 SECONDS
+
+
 	if(istype(I, required_item_1) && !item_1_fulfilled)
 		if(do_after(user, put_in_time, src))
 			if(istype(I, /obj/item/stack))

@@ -16,7 +16,7 @@
 	/// Additional reward that the foreman can take out of the machine for 100% completing quota. To be distributed, or kept entirely for him...
 	var/cashprize = 0
 
-	var/list/vendoptions = list("Dispense standard Container", "Dispense difficult advanced electronics Container")
+	var/list/vendoptions = list("Dispense standard Container", "Dispense difficult advanced electronics Container", "Dispense difficult advanced military Container")
 
 /obj/machinery/box_vendor/examine(mob/user)
 	. = ..()
@@ -50,7 +50,7 @@
 			boxes_stored--
 
 			new /obj/item/factory_construction/container(loc)
-		else if("Dispense advanced electronics Container")
+		if("Dispense advanced electronics Container")
 			playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
 
 			if(!do_after(user, 3 SECONDS, src))
@@ -65,7 +65,7 @@
 			boxes_stored--
 
 			new /obj/item/factory_construction/container/advanced/electronics(loc)
-		else if("Dispense difficult advanced military Container")
+		if("Dispense difficult advanced military Container")
 			playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
 
 			if(!do_after(user, 3 SECONDS, src))
@@ -91,19 +91,26 @@
 
 /obj/machinery/box_vendor/attackby(obj/item/item, mob/user, params)
 
-	if(istype(item, /obj/item/card/emag))
-		return
 
 	if(isliving(user))
 		var/mob/living/living = user
 
-		var/obj/item/card/id/card = living.get_idcard()
-		if(card && cashprize)
-			if(ACCESS_KEYCARD_AUTH in card.GetAccess())
-				dispense_reward(living)
-			else
-				to_chat(user, span_notice("This card does not have access to redeeming the vendor's cash prize."))
+		if(istype(item, /obj/item/card/id))
+			var/obj/item/card/id/card = living.get_idcard()
+			if(card && cashprize)
+				if(ACCESS_KEYCARD_AUTH in card.GetAccess())
+					dispense_reward(living)
+				else
+					to_chat(user, span_notice("This card does not have access to redeeming the vendor's cash prize."))
+					return
+
+		if(istype(item, /obj/item/factory_construction/container))
+			to_chat(user, span_notice("Refunding container to the vendor."))
+			if(!do_after(user, 6 SECONDS, src))
+				playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 				return
+			boxes_stored++
+			qdel(item)
 
 /obj/machinery/box_vendor/proc/dispense_reward(mob/user)
 	if(0 < cashprize)

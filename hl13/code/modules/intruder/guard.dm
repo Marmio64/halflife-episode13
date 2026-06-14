@@ -49,6 +49,7 @@
 
 	to_chat(H, span_notice("You are a guard! Listen to orders from people in blue berets and find and kill the intruder known as Solid Crab!"))
 	to_chat(H, span_notice("While on patrol, look for useful items to keep, and head to a break room for some coffee whenever you get tired."))
+	to_chat(H, span_notice("When possible, try to complete some deliveries in order to have future lives better equipped. Head to the entrance zone by using the NAV button in your lower right HUD, click on a delivery truck to take out a box, and bring it to a drop off point dependent on whats in the box, such as the medbay for medicine."))
 	to_chat(H, span_notice("Lastly, keep an eye out for double agents! They're dressed in the same uniform as you, but using your alert radio on them can tell you if they're a traitor or not! Be wary, guessing wrong will make your radio blow up, and even if you guess right your radio will effectively become useless due to a long cooldown."))
 
 	ADD_TRAIT(H, TRAIT_NO_FOV_EFFECT, OUTFIT_TRAIT) //so you cant see snakes steps walking up to you

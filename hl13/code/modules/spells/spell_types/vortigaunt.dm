@@ -45,6 +45,7 @@
 
 /obj/item/gun/ballistic/rifle/enchanted/vort_blast/try_fire_gun(atom/target, mob/living/user, params)
 	if(do_after(user, cast_delay, src))
+		user.adjust_nutrition(-5)
 		return ..()
 
 /obj/item/ammo_box/magazine/internal/boltaction/enchanted/vort_blast
@@ -121,6 +122,8 @@
 	victim.AdjustStun(-1 SECONDS)
 	victim.visible_message(span_bold("[victim] appears to flash colors of green, before seemingly appearing healthier!"))
 	to_chat(victim, span_warning("You feel soothed."))
+
+	caster.adjust_nutrition(-10)
 
 	if(iscarbon(victim))
 		var/mob/living/carbon/carbies = victim
