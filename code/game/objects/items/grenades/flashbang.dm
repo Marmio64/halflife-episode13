@@ -39,9 +39,10 @@
 	var/distance = max(0, get_dist(get_turf(src), turf))
 
 //Flash
-	if(living_mob.flash_act(affect_silicon = 1))
-		living_mob.Paralyze(max(20/max(1, distance), 5))
-		living_mob.Knockdown(max(200/max(1, distance), 60))
+	if(!istype(living_mob.loc, /obj/structure/closet/cardboard)) //hl13 edit
+		if(living_mob.flash_act(affect_silicon = 1))
+			living_mob.Paralyze(max(20/max(1, distance), 5))
+			living_mob.Knockdown(max(200/max(1, distance), 60))
 
 //Bang
 	if(!distance || loc == living_mob || loc == living_mob.loc)
