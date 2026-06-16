@@ -127,6 +127,13 @@
 	dir = 1
 	},
 /area/halflife/outdoors/deployment_city)
+"cL" = (
+/obj/machinery/light/directional/east,
+/obj/machinery/ammo_crate/grenade_crate{
+	ammo_amount = 2
+	},
+/turf/open/floor/plating/indoor/metal/train,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "cP" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/stack/bulletcasings{
@@ -297,6 +304,11 @@
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors)
+"gg" = (
+/turf/closed/wall/halflife/concrete/alt{
+	explosive_resistance = 20
+	},
 /area/halflife/indoors)
 "gs" = (
 /obj/structure/barricade/wooden/solid,
@@ -1044,11 +1056,6 @@
 	},
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors)
-"wH" = (
-/turf/closed/wall/halflife/concrete/alt{
-	explosive_resistance = 20
-	},
-/area/halflife/indoors)
 "wO" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/filthy,
@@ -1099,11 +1106,6 @@
 /obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/metal/train,
 /area/halflife/indoors)
-"xD" = (
-/turf/closed/wall/halflife/concrete/alt{
-	explosive_resistance = 20
-	},
-/area/halflife/outdoors/deployment_city)
 "xG" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/old,
@@ -1733,6 +1735,11 @@
 /obj/machinery/cash_deposit/combine/tier2,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
+"Mw" = (
+/turf/closed/wall/halflife/concrete/alt{
+	explosive_resistance = 20
+	},
+/area/halflife/outdoors/deployment_city)
 "MC" = (
 /obj/structure/filingcabinet/hl2,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -1816,7 +1823,7 @@
 "Oa" = (
 /obj/machinery/deployment_koth_flag/combine_defend/long{
 	required_progression_stage = 1;
-	grace_time = 400;
+	grace_time = 300;
 	altered_respawn_speed = 400;
 	normal_respawn_speed = 200;
 	rebel_time = 400
@@ -2051,9 +2058,6 @@
 /obj/structure/rack,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
-"SS" = (
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/indoors)
 "SU" = (
 /obj/structure/chair/office/halflife/red{
 	dir = 4
@@ -2192,6 +2196,9 @@
 "VN" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors)
+"Wa" = (
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors)
 "Ws" = (
 /obj/machinery/door/unpowered/halflife/metal,
@@ -5807,7 +5814,7 @@ gE
 gE
 OM
 OM
-xD
+Mw
 Pn
 Pn
 JH
@@ -5994,7 +6001,7 @@ CO
 CO
 EM
 OM
-xD
+Mw
 Pn
 Pn
 JH
@@ -6181,7 +6188,7 @@ CO
 xl
 EM
 OM
-xD
+Mw
 Pn
 Pn
 JH
@@ -6368,7 +6375,7 @@ CO
 lp
 EM
 OM
-xD
+Mw
 qJ
 Pn
 JH
@@ -6555,7 +6562,7 @@ CO
 lp
 EM
 OM
-xD
+Mw
 Pn
 Pn
 JH
@@ -6742,7 +6749,7 @@ CO
 xl
 EM
 EM
-xD
+Mw
 Pn
 Pn
 JH
@@ -6929,7 +6936,7 @@ CO
 CO
 EM
 EM
-xD
+Mw
 Pn
 Pn
 JH
@@ -7116,14 +7123,14 @@ EM
 EM
 EM
 EM
-wH
+gg
 Pn
 Pn
 JH
 Vr
 Vr
 jY
-eG
+cL
 Vr
 Az
 Az
@@ -7303,7 +7310,7 @@ CO
 CO
 CO
 CO
-wH
+gg
 Pn
 Pn
 JH
@@ -7490,7 +7497,7 @@ CO
 CO
 CO
 CO
-wH
+gg
 qJ
 Pn
 Gq
@@ -7677,7 +7684,7 @@ CO
 CO
 CO
 CO
-wH
+gg
 kb
 Pn
 Pn
@@ -8425,40 +8432,40 @@ CO
 CO
 CO
 vZ
-wH
-wH
-wH
-wH
-wH
-wH
-wH
-wH
+gg
+gg
+gg
+gg
+gg
+gg
+gg
+gg
 fS
 fS
 fS
 fS
-wH
-xD
-xD
-xD
-xD
-xD
-xD
-xD
-xD
-xD
-xD
-xD
-xD
-xD
-xD
-xD
-xD
-xD
-xD
-xD
-xD
-xD
+gg
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
+Mw
 OM
 OM
 OM
@@ -8619,12 +8626,12 @@ TX
 TX
 Zu
 TX
-wH
+gg
 CO
 CO
 CO
 CO
-wH
+gg
 OM
 OM
 OM
@@ -8801,10 +8808,10 @@ CO
 CO
 Br
 TX
-SS
-SS
-SS
-SS
+Wa
+Wa
+Wa
+Wa
 TX
 EM
 CO
