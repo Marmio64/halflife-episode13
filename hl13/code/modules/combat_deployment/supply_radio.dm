@@ -123,7 +123,7 @@
 /obj/item/hl2/supply_radio/rebel/lieutenant
 	name = "PLF Lieutenant Supply Radio"
 	max_cash_regeneration = 5
-	final_allowed_cash = 325
+	final_allowed_cash = 500
 
 /obj/item/hl2/supply_radio/combine
 	name = "Combine Supply Radio"
@@ -170,6 +170,23 @@
 			/datum/supply_beacon_option/emplacement_gun,
 			/datum/supply_beacon_option/rebel_tier5,
 			/datum/supply_beacon_option/heavyammocrate_rechargable,
+		)
+		for(var/datum/supply_beacon_option/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.option_name)] = loadout
+	return loadouts
+
+/obj/item/hl2/supply_radio/rebel/lieutenant/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/supply_beacon_option/ammocrate,
+			/datum/supply_beacon_option/medcrate,
+			/datum/supply_beacon_option/rebel_turret,
+			/datum/supply_beacon_option/fortifications_crate,
+			/datum/supply_beacon_option/grenade_crate,
+			/datum/supply_beacon_option/heavyammocrate,
+			/datum/supply_beacon_option/missile_targeter/lieutenant,
 		)
 		for(var/datum/supply_beacon_option/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.option_name)] = loadout
@@ -225,6 +242,10 @@
 	option_name = "One-use Missile Targeter (375 Points)"
 	cost = 375
 	spawn_path = /obj/item/halflife/missile_targeter/one_use
+
+/datum/supply_beacon_option/missile_targeter/lieutenant
+	option_name = "One-use Missile Targeter (500 Points)"
+	cost = 500
 
 /datum/supply_beacon_option/canister_targeter
 	option_name = "Modified Canister Targeter (325 Points)"
