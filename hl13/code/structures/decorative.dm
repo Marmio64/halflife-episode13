@@ -207,7 +207,9 @@
 	if(do_after(user, delay_time, src))
 		if(intruder_loot && HAS_TRAIT(user, TRAIT_THE_INTRUDER))
 			new /obj/effect/spawner/random/halflife/loot/intruder/crab/guaranteed(loc, 1)
-				user.visible_message(span_notice("[user] finds something inside the [src]."), \
+			if(GLOB.osp_mode)
+				new /obj/effect/spawner/random/halflife/loot/intruder/crab/guaranteed(loc, 1) //token double loot for picking hard mode
+			user.visible_message(span_notice("[user] finds something inside the [src]."), \
 				span_notice("Looks like one of your friends stashed something useful here..."))
 			intruder_searched = TRUE
 			return
