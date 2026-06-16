@@ -155,8 +155,18 @@
 
 /obj/item/gun/ballistic/automatic/m4a1/famas/crab
 	name = "\improper Masterwork FAMAS G2 Rifle"
-	desc = "A french made bullpup rifle from the nineties, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one looks in pretty good shape, and somehow more powerful."
+	desc = "A french made bullpup rifle from the nineties, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one looks in pretty good shape, and somehow more powerful. It's also capable of taking a suppressor."
 	projectile_damage_multiplier = 1.5
+	can_suppress = TRUE
+	spawnwithmagazine = FALSE //OSP
+
+/obj/item/gun/ballistic/automatic/m4a1/famas/crab/suppressed
+	spawnwithmagazine = TRUE //belligerent
+
+/obj/item/gun/ballistic/automatic/m4a1/famas/crab/suppressed/Initialize(mapload)
+	. = ..()
+	var/obj/item/suppressor/S = new(src)
+	install_suppressor(S)
 
 //sidegrade to the m4a1. Heavier duty: More spread, damage and recoil and less firing speed.
 //about 1.85 seconds TTK, and good AP
@@ -474,6 +484,9 @@
 	inhand_icon_state = "zipgun"
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
+/obj/item/gun/ballistic/automatic/pistol/solid_tranq/osp
+	spawnwithmagazine = FALSE //OSP
 
 // about 2.4 seconds TTK assuming you hit your first shot (so no cooldown)
 /obj/item/gun/ballistic/revolver/coltpython

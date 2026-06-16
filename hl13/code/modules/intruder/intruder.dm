@@ -105,7 +105,7 @@
 		if(hooman.glasses == src)
 			hooman.update_sight()
 	else
-		vision_flags = SEE_MOBS
+		vision_flags = SEE_MOBS|SEE_TURFS|SEE_OBJS
 		var/mob/living/carbon/human/hooman = loc
 		if(hooman.glasses == src)
 			hooman.update_sight()
@@ -123,6 +123,11 @@
 /obj/item/gun/ballistic/automatic/pistol/usp/suppressed/solid
 	desc = "A small and light 9mm pistol which is often used as a metropolice standard carry. Unlike most found in the city, nearly every part of this gun has been expertly crafted and customized. Where'd you get something like this...?"
 	projectile_damage_multiplier = 2.5
+
+/obj/item/gun/ballistic/automatic/pistol/usp/solid
+	desc = "A small and light 9mm pistol which is often used as a metropolice standard carry. Unlike most found in the city, nearly every part of this gun has been expertly crafted and customized. Where'd you get something like this...?"
+	projectile_damage_multiplier = 2.5
+	spawnwithmagazine = FALSE //OSP
 
 /obj/item/storage/belt/civilprotection/polish_resistance/solid
 	desc = "Heavy duty belt for containing metrocop standard gear. Can also carry rations. Can't carry large magazines."
@@ -215,6 +220,10 @@
 	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/polish_resistance/solid/belligerent/empty/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/knife/combat, src) //im not a complete asshole
+	update_appearance(UPDATE_ICON)
+
 /obj/item/storage/belt/civilprotection/polish_resistance/solid/phantom/Initialize(mapload)
 	. = ..()
 	atom_storage.max_slots = 16
@@ -257,7 +266,7 @@
 	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/pistol/solid_tranq, src)
 
 /obj/item/storage/backpack/halflife/satchel/civilprotection/solid/m4a1/PopulateContents()
-	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/m4a1/famas/crab, src)
+	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/m4a1/famas/crab/suppressed, src)
 	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/pistol/usp/suppressed/solid, src)
 
 /obj/item/reagent_containers/pill/patch/medkit/ration
@@ -522,12 +531,15 @@
 			/obj/item/storage/box/intruder_snake/classic,
 			/obj/item/storage/box/intruder_snake/belligerent,
 			/obj/item/storage/box/intruder_snake/phantom,
+			/obj/item/storage/box/intruder_snake/osp,
 		)
 		for(var/obj/item/option as anything in possible_options)
 			options[initial(option.name)] = option
 	return options
 
 /obj/item/choice_beacon/intruder_snake_loadout/spawn_option(obj/item/storage/box/choice_path, mob/living/user)
+	if(choice_path == /obj/item/storage/box/intruder_snake/osp)
+		GLOB.osp_mode = TRUE
 	var/obj/item/storage/just_a_box = new choice_path(user.loc)
 	just_a_box.emptyStorage() //the box is just a vessel for easy transport and itemization, it serves no purpose afterwards
 	qdel(just_a_box)
@@ -552,3 +564,10 @@
 /obj/item/storage/box/intruder_snake/phantom/PopulateContents()
 	new /obj/item/storage/belt/civilprotection/polish_resistance/solid/phantom(src)
 	new /obj/item/storage/backpack/halflife/satchel/civilprotection/solid/tranq_only(src)
+
+/obj/item/storage/box/intruder_snake/osp
+	name = "Naked Crab - (!!HARDMODE!!, ON-SITE PROCUREMENT)"
+
+/obj/item/storage/box/intruder_snake/osp/PopulateContents()
+	new /obj/item/storage/belt/civilprotection/polish_resistance/solid/belligerent/empty(src) //upside to this loadout is that you get to carry famas mags for the low low cost of everything
+	new /obj/item/storage/backpack/halflife/satchel/civilprotection/solid(src)

@@ -1,4 +1,5 @@
 GLOBAL_VAR_INIT(packages_delivered, 0)
+GLOBAL_LIST_EMPTY(intruder_osp)
 
 /obj/machinery/intruder_coffeemaker
 	name = "coffeemaker"
@@ -279,3 +280,50 @@ GLOBAL_VAR_INIT(packages_delivered, 0)
 			new /obj/structure/closet/cardboard/solid(loc)
 			to_chat(user, span_notice("You take out a box of supplies. You can examine it to see what it contains."))
 			boxes_left--
+
+/obj/effect/landmark/intruder_guncase
+	name = "guncase spawn point"
+
+/obj/effect/landmark/intruder_guncase/Initialize(mapload)
+	..()
+	GLOB.intruder_osp += loc
+	return INITIALIZE_HINT_QDEL
+
+/obj/machinery/intruder_guncase
+	name = "gun case"
+	desc = "A weapon's case. You're not sure what the 'S' stands for... Solid? Shoot? Synd-...? Eh, it's probably best not to think too hard about it."
+	icon = 'icons/obj/storage/case.dmi'
+	icon_state = "infiltrator_case"
+	resistance_flags = INDESTRUCTIBLE
+	anchored = TRUE
+	var/case_contains = /obj/item
+
+/obj/machinery/intruder_guncase/examine(mob/user)
+	. = ..()
+	if(!HAS_TRAIT(user, TRAIT_THE_INTRUDER))
+		. += span_notice("You don't really need a new gun right now. Besides, it isn't yours to take.")
+	else
+		if(case_contains == /obj/item/suppressor)
+			. += span_notice("It contains a suppressor... shouldn't it be a 'suppressor case'?")
+		if(case_contains == /obj/item/gun/ballistic/automatic/pistol/solid_tranq/osp)
+			. += span_notice("It contains an empty tranquilizer pistol.")
+		if(case_contains == /obj/item/gun/ballistic/automatic/pistol/usp/solid)
+			. += span_notice("It contains an empty, unsuppressed USP.")
+		if(case_contains == /obj/item/gun/ballistic/automatic/m4a1/famas/crab)
+			. += span_notice("It contains an empty, unsuppressed FAMAS.")
+
+/obj/machinery/intruder_guncase/Initialize(mapload)
+	. = ..()
+	var/turf/picked_loc = pick(GLOB.intruder_osp)
+	GLOB.intruder_osp -= picked_loc //no two weapons in the same location
+	forceMove(picked_loc)
+
+/obj/machinery/intruder_guncase/interact(mob/living/carbon/human/user)
+	. = ..()
+	if(HAS_TRAIT(user, TRAIT_THE_INTRUDER))
+		if(do_after(user, 1 SECONDS, src))
+			new case_contains(loc)
+			SEND_SOUND(user, sound('hl13/sound/effects/spawnration.ogg'))
+			qdel(src)
+	else
+		to_chat(user, span_notice("You don't really need a new gun right now. Besides, it isn't yours to take."))
