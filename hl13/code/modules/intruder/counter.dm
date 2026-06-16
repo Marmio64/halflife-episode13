@@ -5,6 +5,7 @@ GLOBAL_VAR_INIT(caution_cooldown, 0 SECONDS)
 GLOBAL_VAR_INIT(guards_spawned, 0)
 GLOBAL_VAR_INIT(squad_death, FALSE)
 GLOBAL_LIST_EMPTY(real_objectives)
+GLOBAL_VAR_INIT(osp_mode, FALSE)
 
 /obj/machinery/intruder_time_counter
 	name = "intruder counter"
@@ -46,6 +47,8 @@ GLOBAL_LIST_EMPTY(real_objectives)
 	var/revolver_bullsquid = FALSE
 
 	var/round_length = 0
+
+	var/osp_picked = FALSE
 
 	var/datum/action/cooldown/spell/squad_alert/alert = /datum/action/cooldown/spell/squad_alert //for squad leaders
 	var/datum/action/cooldown/spell/conjure_item/medkit/intruder/tasty = /datum/action/cooldown/spell/conjure_item/medkit/intruder
@@ -199,6 +202,22 @@ GLOBAL_LIST_EMPTY(real_objectives)
 					to_chat(H_player, "<span class='greentext big'>An elite unit has arrived to take down the intruder!</span>")
 			revolver_bullsquid = TRUE
 
+/obj/machinery/intruder_time_counter/proc/attempt_pick_osp()
+	var/list/osp_equipment = list(
+		/obj/item/suppressor,
+		/obj/item/suppressor,
+		/obj/item/gun/ballistic/automatic/pistol/solid_tranq/osp,
+		/obj/item/gun/ballistic/automatic/pistol/usp/solid,
+		/obj/item/gun/ballistic/automatic/m4a1/famas/crab,
+	)
+	for(var/X in osp_equipment)
+		var/obj/machinery/intruder_guncase/guncase = new
+		var/picked_weapon = pick(osp_equipment)
+		guncase.case_contains = picked_weapon
+		var/index = osp_equipment.Find(picked_weapon)
+		if(index)
+			osp_equipment.Cut(index, index + 1)
+
 /obj/machinery/intruder_time_counter/proc/attempt_pick_objectives()
 	if(length(GLOB.real_objectives) == 2)
 		return
@@ -223,6 +242,9 @@ GLOBAL_LIST_EMPTY(real_objectives)
 	bullsquid_readiness += (GLOB.complete_objectives * 3)
 	bullsquid_readiness += GLOB.bonus_guard_preparedness
 
+	if(GLOB.osp_mode && !osp_picked)
+		osp_picked = TRUE
+		attempt_pick_osp()
 	if(!revolver_bullsquid && bullsquid_readiness > 30)
 		attempt_pick_bullsquid() //bullsquid gets picked first mostly because of debugging and not actual gameplay reasons
 	while(new_team_leaders < CEILING(GLOB.guards_spawned / 4, 1))
@@ -267,6 +289,8 @@ GLOBAL_LIST_EMPTY(real_objectives)
 			var/final_score = GLOB.alert_phases
 			to_chat(world, span_infoplain(span_bold("Alerts: [final_score]")))
 			to_chat(world, span_infoplain(span_bold("Codename: Belligerent Bullsquid"))) //codename makes even more sense now since you have to kill the man himself to get his codename
+			if(GLOB.osp_mode)
+				to_chat(world, span_infoplain(span_bold("OSP Run Confirmed")))
 			STOP_PROCESSING(SSprocessing, src)
 
 		if(SSticker.tdm_rebel_deaths == 1 && SSticker.IsRoundInProgress())

@@ -100,7 +100,7 @@
 "kS" = (/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/intruder/outside)
 "lg" = (/obj/structure/closet/halflife{anchored = 1},/obj/effect/spawner/random/halflife/loot/intruder,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/miscellaneous_room)
 "lh" = (/obj/machinery/door/unpowered/halflife/metal,/turf/open/floor/plating/indoor/metal/plate,/area/halflife/indoors/intruder/medbay)
-"lj" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/storagec)
+"lj" = (/obj/machinery/light/small/directional/west,/obj/effect/landmark/intruder_guncase,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/storagec)
 "lk" = (/obj/structure/railing/halflife/solo{dir = 1},/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/miscellaneous_room)
 "ll" = (/obj/effect/landmark/navigate_destination/halflife/intruder/entrance,/turf/open/floor/plating/ground/sidewalk,/area/halflife/indoors/intruder/outside)
 "lq" = (/obj/machinery/light_switch/directional/north{max_integrity = 999},/turf/open/floor/plating/indoor/tile/kitchen,/area/halflife/indoors/intruder/lab)
@@ -117,7 +117,7 @@
 "mo" = (/turf/cordon,/area/halflife/indoors/intruder/miscellaneous_room)
 "mt" = (/obj/machinery/door/unpowered/halflife/metal{dir = 1},/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/barracks)
 "mv" = (/obj/structure/railing/halflife/full{dir = 1},/turf/open/halflife/water/shallow,/area/halflife/indoors/intruder/outside)
-"mB" = (/obj/machinery/light_switch/directional/south,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/entrance)
+"mB" = (/obj/machinery/light_switch/directional/south,/obj/effect/landmark/intruder_guncase,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/entrance)
 "mC" = (/turf/open/floor/plating/indoor/carpet,/area/halflife/indoors/intruder/library)
 "mF" = (/obj/structure/closet/halflife{anchored = 1},/obj/effect/spawner/random/halflife/loot/intruder,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/indoors/intruder/office)
 "mG" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/ground/dirt,/area/halflife/indoors/intruder/outside)
@@ -175,7 +175,7 @@
 "rw" = (/turf/open/floor/plating/indoor/tile/kitchen,/area/halflife/indoors/intruder/lab)
 "rE" = (/obj/structure/window/fulltile/halflife/nosmooth/generic{dir = 8},/turf/open/floor/plating/indoor/woodc/mosaic,/area/halflife/indoors/intruder/storageb)
 "rJ" = (/obj/structure/closet/halflife{anchored = 1},/obj/effect/spawner/random/halflife/loot/intruder,/obj/machinery/light/small/directional/west,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/indoors/intruder/office)
-"rL" = (/obj/machinery/combine_walllight/directional/west,/turf/open/floor/plating/indoor/metal/smooth,/area/halflife/indoors/intruder/storagesilo)
+"rL" = (/obj/machinery/combine_walllight/directional/west,/obj/effect/landmark/intruder_guncase,/turf/open/floor/plating/indoor/metal/smooth,/area/halflife/indoors/intruder/storagesilo)
 "rM" = (/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/storagec)
 "rS" = (/obj/effect/landmark/navigate_destination/halflife/intruder/storagea,/turf/open/floor/plating/ground/sidewalk,/area/halflife/indoors/intruder/outside)
 "rY" = (/obj/machinery/light/directional/north,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/miscellaneous_room)
@@ -196,7 +196,9 @@
 "tm" = (/obj/structure/halflife/barrel/double/red/two,/turf/open/floor/plating/indoor/metal/smooth,/area/halflife/indoors/intruder/storagesilo)
 "ts" = (/obj/structure/halflife/barrel/triple/grey/three,/turf/open/floor/plating/indoor/metal/smooth,/area/halflife/indoors/intruder/storagesilo)
 "tv" = (/obj/structure/halflife/trash/garbage,/turf/open/floor/plating/ground/sidewalk/cobblestone,/area/halflife/indoors/intruder/outside)
+"tB" = (/obj/effect/landmark/intruder_guncase,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/miscellaneous_room)
 "tE" = (/obj/structure/halflife/fence,/turf/open/floor/plating/ground/grass,/area/halflife/indoors/intruder/outside)
+"tL" = (/obj/effect/landmark/intruder_guncase,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/intruder/lockerroom)
 "tN" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/storagea)
 "tO" = (/obj/machinery/combine_walllight/directional/west,/turf/open/floor/plating/indoor/metal/combine,/area/halflife/indoors/intruder/storagesilo)
 "tQ" = (/obj/machinery/light/directional/north,/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/intruder/miscellaneous_room)
@@ -454,8 +456,10 @@
 "Qh" = (/obj/machinery/light_switch/directional/north{max_integrity = 999},/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/indoors/intruder/medbay)
 "Qn" = (/obj/structure/flora/tree/halflife/pine/style_random,/turf/open/floor/plating/ground/grass,/area/halflife/indoors/intruder/outside)
 "QC" = (/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/indoors/intruder/medbay)
+"QN" = (/obj/effect/landmark/intruder_guncase,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/guardtower)
 "Rf" = (/obj/machinery/telecomms/server/presets/common/birdstation,/turf/open/floor/plating/ground/sidewalk,/area/halflife/indoors/intruder/outside)
 "Rg" = (/obj/machinery/door/poddoor/shutters/indestructible,/turf/open/floor/plating/indoor/metal/smooth,/area/halflife/indoors/intruder/storagesilo)
+"Rh" = (/obj/effect/landmark/intruder_guncase,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/storagea)
 "Ri" = (/obj/structure/window/fulltile/halflife/nosmooth/generic{dir = 4},/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/storageb)
 "Rq" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/library)
 "RB" = (/obj/structure/railing/halflife/solo{dir = 8},/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/miscellaneous_room)
@@ -499,6 +503,7 @@
 "VK" = (/turf/closed/wall/halflife/brick,/area/halflife/indoors/intruder/library)
 "VP" = (/obj/machinery/light/directional/east,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/library)
 "Wg" = (/obj/structure/halflife/leaves,/turf/open/floor/plating/ground/dirt,/area/halflife/indoors/intruder/outside)
+"Wh" = (/obj/effect/landmark/intruder_guncase,/turf/open/floor/plating/indoor/woodc/mosaic,/area/halflife/indoors/intruder/storageb)
 "Wp" = (/obj/item/toy/cards/deck{pixel_x = -3; pixel_y = 11},/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/barracks)
 "Wu" = (/obj/structure/closet/crate/bin,/obj/effect/spawner/random/halflife/loot/intruder,/turf/open/floor/plating/ground/grass,/area/halflife/indoors/intruder/outside)
 "WL" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 8},/turf/open/openspace,/area/halflife/indoors/intruder/guardtower)
@@ -600,7 +605,7 @@ crcrcrcrcrcrgDgDeFKiREAHAHAHAHREAHAHAHAHAHAHAHAHAHAHAHAHREJRJRJRJRJRJRJRJRwlCkwl
 crcrcrcrcrcrCkCkCkCkLcCkCkCkCkxiCkCkCkCkCkCkCkCkCkCkCkCkwlJRbzzDrbxNKnvTJRwlCkwlqNqNqNqNqNqNqNCwCkwlgDgDgDgDQngDgDgDgDEVEVEVgDEVEVEVEVEVEVEVEVEVEVEVkSkSkSkSEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrCkCkCkCkLcCkCkCkCkxiCkCkCkCkCkpqCkCkCkCkCkCkpbJRbOCLihihihVjJRwlCknmqNJcFWJcJcxyqNwlCkwlgDgDgDgDgDvXgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSkSkSkSEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrCkCkCkCkLcCkCkCkCkxiCkCkCkCkCkCkgvCkCkpqgvCkwlJRtNUkihihihhwJRwlCkqwIZJcJcJcJcFWqNwlCkwlgDXPgDeFgDgDgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSEVkSkSEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-crcrcrcrcrcreFgDgDKiDsDspcpcDsDsCMCkCkCkCkCkCkCkCkCkCkCkwldvihihihihihVjJRwlCkwlqNJcuCJcJcmSqNCwCkwlgDeFeFxBvXgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSEVkSkSkSEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+crcrcrcrcrcreFgDgDKiDsDspcpcDsDsCMCkCkCkCkCkCkCkCkCkCkCkwldvihihihihihRhJRwlCkwlqNJcuCJcJcmSqNCwCkwlgDeFeFxBvXgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSEVkSkSkSEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcreFgDgDgDDsylLALhvpDsCkCkCkCkCkCkCkCkCkCkCkCkwldvihihihihUkVjJRwlCkwlqNqNqNqNJcJcqNwlCkwlgDeFeFeFgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSEVEVkSkSEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcreFvXgDQnDsBvjufoBvDstvCkCkCkCkCkCkCkCkCkCkCkwlJRAiihihCLihJVJRCwCkwlqNwTwTqNJcJcqNwlCkwlgDgDxBgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSEVEVkSkSEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrgDgDgDgDDsRDjujusbDswrCkCkCkCkpqCkCkCkCkCkCkpbJRtNihUkihihihdIwlCkwlqNJcJcqNJcJcqNCwCkwlgDgDgDgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSEVkSkSkSEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
@@ -616,12 +621,12 @@ EVEVEVEVEVEVEVEVEVEVEVEVgDgDQngDgDgDwlCkwlgDQngDgDgDgDgDQngDgDgDQngDgDgDgDwlCkwl
 EVEVEVEVEVEVEVEVEVEVEVEVgDgDgDgDvXgDwlCkwlgDeFgDQngDQngDgDgDvXgDgDgDgDgDgDwlCkwlgDgDgDgDgDgDgDwlCkwlgDGHuQuQuQuQuQuQuQuQGHgDeFEVEVkSkSEVEVEVkSkSkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVgDgDgDgDeFwlCkwlgDeFvXgDgDgDgDeFuquququququqgDeFwlCkwlgDQneFgDQngDgDwlCkwlKiGHjMguguDKguOiguLOGHmGeFeFkSkSkSkSEVEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVgDgDQneFzEwlCkwlgDgDeFgDgDgDeFeFuqddmhNXyGuqsEeFwlCkwlgDgDeFgDgDgDQnwlCkwlgDGHQdXoXoBXXoXoXoXozVgDeFkSkSkSkSkSEVEVkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVgDeFeFgDgDwlCkwlgDgDgDvXgDQnuququqyGyGyGUCuqgDgDwlCkwlgDeFvXgDgDgDQnwlCkwlgDGHLOLOLOXoLOLOLOLOGHgDgDEVEVkSkSEVEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVgDeFeFgDgDwlCkwlgDgDgDvXgDQnuququqtByGyGUCuqgDgDwlCkwlgDeFvXgDgDgDQnwlCkwlgDGHLOLOLOXoLOLOLOLOGHgDgDEVEVkSkSEVEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVeFeFvXQngDwlCkwlQngDeFeFeFgDuqxnuqBhaZPkYpuqQngDwlCkwleFeFgDgDQngDgDwlCkwleFGHLOguguXoguguguPPGHgDgDEVEVkSkSEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVgDgDgDgDgDwlCkwlgDxBgDgDQngDuqfxuqlgyGyGlguqgDvXwlCkwlgDQngDgDgDxBgDwlCkwlgDGHCOXoBXXoXoBXXoLOGHgDgDgDEVkSkSkSEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVeFgDgDvXwlCkwlgDgDzEgDgDvXuqEBuququqPIuquqgDgDwlCkwlzEvXgDQngDeFzEwlCkwlwZGHLOLOLOXoLOLOLOKHGHgDQngDEVEVkSkSEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVREeFgDgDgDwlCkwlwlwlwlwlwlwlwlwlwlnTwlwlwlnTwlwlwlCkwlwlwlwlwlwlwlwlwlCkwleFGHTxLOLOXoPPGHGHGHGHgDvXgDEVEVEVkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVkSkSkSgHeFgDQngDwlCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkwlJrLwXoXoXoXoLOGHgDgDgDgDgDEVEVEVEVEVEVkSkSEVuququququququququququququqEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVkSkSkSgHeFgDQngDwlCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkwlJrLwXoXoXoXotLGHgDgDgDgDgDEVEVEVEVEVEVkSkSEVuququququququququququququqEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSkSkSkSeFgDzEwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlCkCkwlwlwlwlwlwlwlwlwlwlwlwlwlwlLwXoXoXoXoXLGHgDQngDgDgDEVEVEVEVEVEVkSiXkSsZsZtQsZsZtQsZyGrYyGyGuquqEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSkSEVkSeFeFvXgDgDgDgDgDgDeFgDgDgDeFeFvXeFgDbtwlCkCkwlzEgDeFgDgDgDvXgDzEeFgDvXgDGHTxZQoGLOKHGHgDgDvXgDEVEVEVEVEVkSEVkSiXkSsZsZsZsZsZsZsZyGyGyGyGjCuqEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVeFgDgDgDKWzxzxQneFKWvXgDgDgDgDgDeFgDwlCkCkwlgDxBgDgDQngDgDgDvXeFgDgDwZGHGHGHGHHXGHGHgDgDgDEVEVEVEVEVkSkSEVkSiXkSsZsZsZsZsZsZsZyGyGyGyGuquqEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
@@ -693,7 +698,7 @@ EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZd
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdIyIyIyIyIyHOlxlxlxlxlxlxYQGYGYDPvkZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdrtKRtdtdtdtdluZdZdZdZdZdZdZdZdIyIyIyIyIyvkKKlxlxrqlxlxJeGYNYNMvkZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdWLwzgPgPgPwzTuZdZdZdZdZdZdZdZdIyIyIyIyIyvkvkXAXAvkvkvkvkvkvkvkvkZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdWLufiEOpyHHHTuZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdWLufiEOpQNHHTuZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdWLufyHmHyHCWTuZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVZdZdEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdWLXMyHyHAyjbTuZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVZdEVZdEVZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdWLwzwzhMwzwzTuZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
@@ -710,7 +715,7 @@ crcrcrcrcrcrZdZdZdZdIyIyIyIyIyIyZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZd
 crcrcrcrcrcrZdZdZdZdIyIyIyIyIyIyZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZdrEwDhhgMgMgMqNZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZdrEgMgMgMgMgMqNZdZdZdZdyvyvyvyvyvyvZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdqNgMffgMffdKqNZdZdZdZdyvyvyvyvyvyvZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-crcrcrcrcrcrZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdqNpQORgMItuGqNZdZdZdZdyvyvyvyvyvyvZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+crcrcrcrcrcrZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdqNpQORWhItuGqNZdZdZdZdyvyvyvyvyvyvZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdqNqNqNqNqNqNqNZdZdZdZdyvyvyvyvyvyvZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdyvyvyvyvyvyvZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdyvyvyvyvyvyvZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV

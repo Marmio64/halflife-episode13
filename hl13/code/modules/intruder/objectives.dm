@@ -48,6 +48,8 @@ GLOBAL_LIST_EMPTY(node_terminals)
 		var/title = completion_titles[min(final_score + 1, 6)]
 		to_chat(world, span_infoplain(span_bold("Alerts: [final_score]")))
 		to_chat(world, span_infoplain(span_bold("Codename: [title]")))
+		if(GLOB.osp_mode)
+			to_chat(world, span_infoplain(span_bold("OSP Run Confirmed")))
 		qdel(user)
 
 /obj/machinery/combine_node
