@@ -362,8 +362,8 @@
 	weapon_category = WEAPON_CAT_SNIPER
 
 /obj/item/gun/ballistic/combine_sniper/slow
-	after_shot_delay = 1.15 SECONDS
-	fire_delay = 24
+	after_shot_delay = 1.3 SECONDS
+	fire_delay = 25
 
 /obj/item/gun/ballistic/combine_sniper/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if (obj_flags & EMAGGED)
