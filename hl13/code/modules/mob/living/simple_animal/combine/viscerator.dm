@@ -68,6 +68,19 @@
 	else
 		operating_power--
 
+/mob/living/simple_animal/hostile/halflife/viscerator/emp_act(severity)
+	. = ..()
+	if(. & EMP_PROTECT_SELF)
+		return
+	to_chat(src, span_danger("<b>ER@%R: MME^RY CO#RU9T!</b> R&$b@0tin)..."))
+	if(severity == EMP_HEAVY)
+		operating_power = 0 //incase it manages to survive, being an upgraded viscerator or something
+		to_chat(src, span_userdanger("HeAV% DA%^MMA+G TO I/O CIR!%UUT!"))
+		adjustBruteLoss(80)
+	else
+		operating_power -= 50
+		adjustBruteLoss(30) //not enough to kill any full HP viscerator with a light EMP
+
 /mob/living/simple_animal/hostile/halflife/viscerator/deathmatch
 	health = 150
 	maxHealth = 150

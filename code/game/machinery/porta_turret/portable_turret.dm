@@ -391,16 +391,17 @@ DEFINE_BITFIELD(turret_flags, list(
 	if (. & EMP_PROTECT_SELF)
 		return
 	if(on)
-		//if the turret is on, the EMP no matter how severe disables the turret for a while
-		//and scrambles its settings, with a slight chance of having an emag effect
-		if(prob(50))
-			turret_flags |= TURRET_FLAG_SHOOT_CRIMINALS
-		if(prob(50))
-			turret_flags |= TURRET_FLAG_AUTH_WEAPONS
-		if(prob(20))
-			turret_flags |= TURRET_FLAG_SHOOT_ALL // Shooting everyone is a pretty big deal, so it's least likely to get turned on
+		if(severity == EMP_HEAVY)
+			set_disabled(rand(6 SECONDS, 20 SECONDS))
+			if(prob(50))
+				turret_flags |= TURRET_FLAG_SHOOT_CRIMINALS
+			if(prob(50))
+				turret_flags |= TURRET_FLAG_AUTH_WEAPONS
+			if(prob(20))
+				turret_flags |= TURRET_FLAG_SHOOT_ALL // Shooting everyone is a pretty big deal, so it's least likely to get turned on
+		else
+			set_disabled(rand(6 SECONDS, 12 SECONDS), TRUE) //auto restarts if it is a light EMP effect
 
-		set_disabled(rand(6 SECONDS, 20 SECONDS))
 		remove_control()
 
 /obj/machinery/porta_turret/take_damage(damage_amount, damage_type = BRUTE, damage_flag = "", sound_effect = TRUE, attack_dir, armour_penetration = 0)

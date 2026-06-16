@@ -1032,7 +1032,7 @@
 	gloves = /obj/item/clothing/gloves/combat
 	neck = /obj/item/clothing/neck/blackhalf_cloak
 
-	back = /obj/item/storage/backpack/halflife
+	back = /obj/item/storage/backpack/halflife/large
 
 	l_pocket = /obj/item/knife/combat/backstab/better
 	r_pocket = /obj/item/grenade/smokebomb
@@ -1050,6 +1050,8 @@
 		/obj/item/grenade/smokebomb = 3,
 		/obj/item/climbing_hook = 1,
 		/obj/item/card/emag/halflife = 1,
+		/obj/item/hl2/deployable_box = 2,
+		/obj/item/grenade/empgrenade = 2,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment

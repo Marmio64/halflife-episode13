@@ -396,6 +396,9 @@
 	inhand_icon_state = "leather_backpack"
 	storage_type = /datum/storage/backpack/halflife
 
+/obj/item/storage/backpack/halflife/large
+	storage_type = /datum/storage/backpack/halflife/large
+
 /obj/item/storage/backpack/duffelbag/halflife
 	name = "duffel bag"
 	desc = "A large, rugged duffel-bag that looks like it may have once belonged to the armed forces."
@@ -451,6 +454,10 @@
 	max_total_storage = 60
 	max_slots = 60
 	max_specific_storage = WEIGHT_CLASS_GIGANTIC
+
+/datum/storage/backpack/halflife/large
+	max_total_storage = 35
+	max_slots = 28
 
 /datum/storage/backpack/halflife
 	max_total_storage = 21

@@ -84,7 +84,7 @@
 
 /turf/closed/wall/halflife/metal/strong
 	max_integrity = 1500
-	explosive_resistance = 4
+	explosive_resistance = 6
 	slicing_duration = 200
 
 /turf/closed/wall/halflife/metal/strong/train

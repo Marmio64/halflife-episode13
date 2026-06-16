@@ -1044,6 +1044,11 @@
 	},
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors)
+"wH" = (
+/turf/closed/wall/halflife/concrete/alt{
+	explosive_resistance = 20
+	},
+/area/halflife/indoors)
 "wO" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/filthy,
@@ -1094,6 +1099,11 @@
 /obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/metal/train,
 /area/halflife/indoors)
+"xD" = (
+/turf/closed/wall/halflife/concrete/alt{
+	explosive_resistance = 20
+	},
+/area/halflife/outdoors/deployment_city)
 "xG" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/old,
@@ -1720,9 +1730,7 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
 "Mc" = (
-/obj/machinery/cash_deposit/combine/tier2plus{
-	starting_cash = 70
-	},
+/obj/machinery/cash_deposit/combine/tier2,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
 "MC" = (
@@ -1753,6 +1761,8 @@
 /area/halflife/indoors)
 "MQ" = (
 /obj/structure/table/halflife/metal,
+/obj/item/reagent_containers/pill/patch/medkit,
+/obj/item/reagent_containers/pill/patch/medkit,
 /turf/open/floor/plating/indoor/metal/train,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "MU" = (
@@ -1806,9 +1816,10 @@
 "Oa" = (
 /obj/machinery/deployment_koth_flag/combine_defend/long{
 	required_progression_stage = 1;
-	grace_time = 450;
+	grace_time = 400;
 	altered_respawn_speed = 400;
-	normal_respawn_speed = 200
+	normal_respawn_speed = 200;
+	rebel_time = 400
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
@@ -2039,6 +2050,9 @@
 "SQ" = (
 /obj/structure/rack,
 /turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors)
+"SS" = (
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors)
 "SU" = (
 /obj/structure/chair/office/halflife/red{
@@ -5793,7 +5807,7 @@ gE
 gE
 OM
 OM
-OM
+xD
 Pn
 Pn
 JH
@@ -5980,7 +5994,7 @@ CO
 CO
 EM
 OM
-OM
+xD
 Pn
 Pn
 JH
@@ -6167,7 +6181,7 @@ CO
 xl
 EM
 OM
-OM
+xD
 Pn
 Pn
 JH
@@ -6354,7 +6368,7 @@ CO
 lp
 EM
 OM
-OM
+xD
 qJ
 Pn
 JH
@@ -6541,7 +6555,7 @@ CO
 lp
 EM
 OM
-OM
+xD
 Pn
 Pn
 JH
@@ -6728,7 +6742,7 @@ CO
 xl
 EM
 EM
-OM
+xD
 Pn
 Pn
 JH
@@ -6915,7 +6929,7 @@ CO
 CO
 EM
 EM
-OM
+xD
 Pn
 Pn
 JH
@@ -7102,7 +7116,7 @@ EM
 EM
 EM
 EM
-OM
+wH
 Pn
 Pn
 JH
@@ -7288,8 +7302,8 @@ CO
 CO
 CO
 CO
-EM
-OM
+CO
+wH
 Pn
 Pn
 JH
@@ -7475,8 +7489,8 @@ CO
 CO
 CO
 CO
-EM
-OM
+CO
+wH
 qJ
 Pn
 Gq
@@ -7662,8 +7676,8 @@ CO
 CO
 CO
 CO
-EM
-EM
+CO
+wH
 kb
 Pn
 Pn
@@ -8411,40 +8425,40 @@ CO
 CO
 CO
 vZ
-EM
-EM
-EM
-EM
-EM
-EM
-EM
-EM
-CO
-CO
-CO
-CO
-EM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
-OM
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+fS
+fS
+fS
+fS
+wH
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
+xD
 OM
 OM
 OM
@@ -8599,18 +8613,18 @@ CO
 CO
 CO
 EM
-EM
-EM
-EM
-EM
-EM
-EM
-EM
-fS
-fS
-fS
-fS
-EM
+TX
+Zu
+TX
+TX
+Zu
+TX
+wH
+CO
+CO
+CO
+CO
+wH
 OM
 OM
 OM
@@ -8785,12 +8799,12 @@ XU
 CO
 CO
 CO
-EM
+Br
 TX
-TX
-Zu
-TX
-TX
+SS
+SS
+SS
+SS
 TX
 EM
 CO
@@ -8972,7 +8986,7 @@ CO
 CO
 CO
 CO
-Br
+EM
 TX
 TX
 TX

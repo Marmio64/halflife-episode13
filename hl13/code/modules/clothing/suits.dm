@@ -372,6 +372,17 @@
 	shield_break_leftover = null
 	item_flags = DROPDEL
 
+/obj/item/shield/wallhammer/emp_act(severity)
+	. = ..()
+	if(. & EMP_PROTECT_SELF)
+		return
+
+	if(severity == EMP_HEAVY)
+		playsound(source = src, soundin = 'sound/effects/sparks/sparks3.ogg', vol = 75, vary = TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
+		visible_message(span_warning("The [src] fizzles out from electromagnetic interference!"), blind_message = span_warning("The [src] fizzles out!"), vision_distance = COMBAT_MESSAGE_RANGE)
+		qdel(src)
+
+
 /obj/item/shield/wallhammer/weak
 	max_integrity = 50
 	block_chance = 75
