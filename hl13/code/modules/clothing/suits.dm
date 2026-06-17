@@ -505,7 +505,7 @@
 	slowdown = 0.25
 	armor_type = /datum/armor/milvest
 
-	limb_integrity = 250
+	limb_integrity = 275
 	repairable_by = /obj/item/stack/kevlar
 
 /obj/item/clothing/suit/armor/halflife/milvest/slow
@@ -513,7 +513,7 @@
 
 /datum/armor/milvest
 	melee = 35
-	bullet = 40
+	bullet = 45
 	laser = 25
 	energy = 100
 	bomb = 45
