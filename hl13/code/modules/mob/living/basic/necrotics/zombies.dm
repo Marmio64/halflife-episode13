@@ -231,7 +231,7 @@
 
 /mob/living/basic/halflife/zombie/infestation_control/deployment
 	melee_attack_cooldown = 1.5 SECONDS
-	speed = 0.3
+	speed = 0.25
 	damage_coeff = list(BRUTE = 1, BURN = 0.2, TOX = 1, STAMINA = 1, OXY = 1)
 
 /mob/living/basic/halflife/zombie/fungal

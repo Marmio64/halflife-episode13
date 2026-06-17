@@ -557,7 +557,7 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit, /datum/action/cooldown/spell/conjure_item/bloodloss)
 
-	extra_int = 4
+	extra_int = 5
 	extra_dex = 2
 
 /datum/outfit/deployment_loadout/combine/tier4/medic_cop/post_equip(mob/living/carbon/human/H)

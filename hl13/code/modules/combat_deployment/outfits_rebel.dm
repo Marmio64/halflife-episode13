@@ -395,6 +395,8 @@
 	extra_per = 5
 	extra_dex = 6
 
+	combat_music = 'hl13/sound/music/combat/darkinterval_combat3.ogg'
+
 /datum/outfit/deployment_loadout/rebel/tier3/engineer
 	name = "Deployment: Upgraded Refugee Engineer+"
 	display_name = "Upgraded Refugee Engineer+ (Support)"
@@ -521,6 +523,8 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+	extra_dex = 1
+
 /datum/outfit/deployment_loadout/rebel/tier4/corporal
 	name = "Deployment: PLF Corporal"
 	display_name = "PLF Corporal (Defense)"
@@ -549,6 +553,8 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_end = 3
+
+	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier4/mosin_soldier
 	name = "Deployment: Upgraded Mosin Soldier"
@@ -608,6 +614,8 @@
 
 	alternate_combat_music = 'hl13/sound/music/combat/drunkenpipebomb.ogg'
 
+	extra_end = 1
+
 /datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel/incendiary
 	name = "Deployment: Heavy Rebel Incendiary Bomber"
 	display_name = "Heavy Rebel Incendiary Bomber (Offense)"
@@ -663,6 +671,8 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
+
+	combat_music = 'hl13/sound/music/combat/darkinterval_combat3.ogg'
 
 	extra_per = 5
 	extra_dex = 8
@@ -747,6 +757,7 @@
 	alternate_combat_music = 'hl13/sound/music/combat/rightbehindyou.ogg'
 
 	extra_str = 5
+	extra_dex = 2
 
 /datum/outfit/deployment_loadout/rebel/tier4/scout
 	name = "Deployment: Upgraded Rebel Scout"
@@ -808,8 +819,8 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit, /datum/action/cooldown/spell/conjure_item/bloodloss)
 
-	extra_int = 4
-	extra_dex = 2
+	extra_int = 5
+	extra_dex = 3
 
 	alternate_combat_music = 'hl13/sound/music/combat/medic.ogg'
 
@@ -1014,7 +1025,7 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
-	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+	combat_music = 'hl13/sound/music/combat/transmissionshift.ogg'
 
 	extra_dex = 4
 	extra_per = 8

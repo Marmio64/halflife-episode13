@@ -589,8 +589,13 @@
 	melee = 15
 	bullet = 15
 
+/datum/armor/scout_armor/upgraded
+	melee = 20
+	bullet = 20
+
 /obj/item/clothing/suit/armor/browncoat/scout/upgraded
 	slowdown = -0.6
+	armor_type = /datum/armor/scout_armor/upgraded
 
 /obj/item/clothing/suit/armor/browncoat/deployment
 	slowdown = -0.5

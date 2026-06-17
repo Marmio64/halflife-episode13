@@ -244,8 +244,8 @@
 	spawn_path = /obj/item/halflife/missile_targeter/one_use
 
 /datum/supply_beacon_option/missile_targeter/lieutenant
-	option_name = "One-use Missile Targeter (500 Points)"
-	cost = 500
+	option_name = "One-use Missile Targeter (450 Points)"
+	cost = 450
 
 /datum/supply_beacon_option/canister_targeter
 	option_name = "Modified Canister Targeter (325 Points)"

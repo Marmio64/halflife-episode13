@@ -32,7 +32,10 @@
 	ADD_TRAIT(H, TRAIT_NICE_SHOT, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOCRITOVERLAY, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_INTRUDER_OCELOT, OUTFIT_TRAIT)
-	ADD_TRAIT(H, TRAIT_NIGHT_VISION, OUTFIT_TRAIT) //he's got the eyes of a bullsquid. wait, do bullsquids have eyes
+	ADD_TRAIT(H, TRAIT_NIGHT_VISION, OUTFIT_TRAIT) //he's got the eyes of a bullsquid. wait, do bullsquids have eyes. Yes they do have eyes, it is visible on their model.
+	var/obj/item/organ/eyes/empowered_eyes = H.get_organ_by_type(/obj/item/organ/eyes)
+	if(empowered_eyes)
+		empowered_eyes?.refresh() //needed for the night vision to actually apply
 	RegisterSignal(H, COMSIG_MOB_FIRED_GUN, PROC_REF(reduce_spread))
 	RegisterSignal(H, COMSIG_PROJECTILE_FIRER_BEFORE_FIRE, PROC_REF(apply_ricochet))
 
