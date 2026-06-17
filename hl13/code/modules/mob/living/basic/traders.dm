@@ -602,6 +602,7 @@
 		/obj/item/stack/bulletcasings = list(PAYCHECK_CREW * 0.5, 5),
 		/obj/item/clothing/under/citizen/rebel = list(PAYCHECK_CREW * 3, 5),
 		/obj/item/clothing/suit/armor/rebel = list(PAYCHECK_CREW * 8.5, 1),
+		/obj/item/clothing/suit/armor/halflife/milvest = list(PAYCHECK_CREW * 8.5, 1),
 		/obj/item/switchblade = list(PAYCHECK_CREW * 3, 2),
 		/obj/item/clothing/mask/gas/hl2/military = list(PAYCHECK_CREW * 2, 3),
 		/obj/item/stack/kevlar = list(PAYCHECK_CREW, 5),

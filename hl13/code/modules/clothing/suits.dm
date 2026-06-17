@@ -472,7 +472,7 @@
 	melee = 20
 	bullet = 25
 	laser = 10
-	energy = 100
+	energy = 80
 	bomb = 20
 	fire = 50
 	acid = 50
@@ -491,12 +491,13 @@
 	melee = 25
 	bullet = 40
 	laser = 25
-	energy = 100
+	energy = 80
 	bomb = 40
 	fire = 50
 	acid = 50
 	wound = 15
 
+//same tier as heavy rebel vests. A bit faster, a bit less protection and durability
 /obj/item/clothing/suit/armor/halflife/milvest
 	name = "military vest"
 	desc = "A heavily armored old military vest. The layers of kevlar have weakened over the years, but it remains a potent defensive piece of equipment."
@@ -515,7 +516,7 @@
 	melee = 35
 	bullet = 45
 	laser = 25
-	energy = 100
+	energy = 80
 	bomb = 45
 	fire = 50
 	acid = 50
@@ -796,8 +797,8 @@
 	laser = 35
 	energy = 30
 	bomb = 60
-	fire = 55
-	acid = 45
+	fire = 60
+	acid = 50
 	wound = 20
 
 /obj/item/clothing/suit/armor/rebel/light
