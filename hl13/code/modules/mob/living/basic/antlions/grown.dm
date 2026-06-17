@@ -360,7 +360,7 @@
 	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/human_faction)
 
 /datum/action/cooldown/spell/conjure/antlion/extract_vort
-	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/rebel_faction)
+	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/rebel_faction/strong)
 	summon_amount = 3
 	cooldown_time = 30 SECONDS
 

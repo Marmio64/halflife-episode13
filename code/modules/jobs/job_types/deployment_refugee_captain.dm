@@ -96,6 +96,7 @@
 	H.change_stat(STATKEY_STR, 5)
 	H.change_stat(STATKEY_END, 5)
 	H.change_stat(STATKEY_PER, 5)
+	H.change_stat(STATKEY_INT, 2)
 
 	H.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 3) //Gives you a few seconds of invincibility to prevent spawn camping
 

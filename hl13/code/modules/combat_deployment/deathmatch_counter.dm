@@ -19,7 +19,7 @@
 
 	var/last_time_reminder = 0
 
-	var/time_left_match = 5.5 MINUTES
+	var/time_left_match = 6.5 MINUTES
 
 	var/respawn_speed = 15 SECONDS
 

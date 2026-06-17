@@ -70,7 +70,7 @@
 
 /obj/projectile/bullet/pellet
 	icon_state = "pellet"
-	damage_falloff_tile = -0.45
+	damage_falloff_tile = -0.3
 
 /obj/projectile/bullet/pellet/shotgun_buckshot
 	name = "buckshot pellet"

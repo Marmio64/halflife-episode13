@@ -94,6 +94,7 @@
 	user.change_stat(STATKEY_STR, 5)
 	user.change_stat(STATKEY_END, 7)
 	user.change_stat(STATKEY_PER, 5)
+	user.change_stat(STATKEY_INT, 2)
 
 	var/obj/item/card/id/outfit_id = user.wear_id
 	if(outfit_id)

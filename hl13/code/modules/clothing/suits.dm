@@ -73,6 +73,9 @@
 /obj/item/clothing/suit/armor/civilprotection/speedy
 	slowdown = -0.35
 
+/obj/item/clothing/suit/armor/civilprotection/speedy/lite
+	slowdown = -0.15
+
 /obj/item/clothing/suit/armor/civilprotection/spy
 	slowdown = -0.25
 	actions_types = list(/datum/action/item_action/disguise_self)
@@ -961,7 +964,7 @@
 		)
 
 /datum/armor/halflife_firesuit
-	melee = 45
+	melee = 50
 	bullet = 50
 	laser = 85
 	energy = 80

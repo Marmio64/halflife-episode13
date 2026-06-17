@@ -51,6 +51,7 @@
 	damage = 24
 	wound_bonus = -15
 	armour_penetration = 20
+	accuracy_falloff = 9 //accuracy drops off faster
 
 /obj/projectile/bullet/pulse/weak
 	damage = 12
@@ -133,6 +134,9 @@
 	icon_state = "pulsepellet"
 	damage = 20 //120 total damage
 	armour_penetration = 30
+	accuracy_falloff = 10 //accuracy falls off much faster than most projectiles
+	damage_falloff_tile = -0.75
+	wound_falloff_tile = -3
 
 /obj/projectile/bullet/pellet/shotgun_buckshot/antixen
 	name = "anti-xen pellet"

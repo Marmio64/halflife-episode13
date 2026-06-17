@@ -55,15 +55,33 @@
 	deployment_faction = REBEL_DEPLOYMENT_FACTION
 	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
 
+/mob/living/simple_animal/hostile/halflife/antlion/digsound/rebel_faction/strong
+	melee_damage_lower = 16
+	melee_damage_upper = 20
+	maxHealth = 60
+	health = 60
+
 /mob/living/simple_animal/hostile/halflife/antlion/digsound/red_faction
 	deployment_faction = REBEL_DEPLOYMENT_FACTION
 	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
 	color = "#ff0000"
 
+/mob/living/simple_animal/hostile/halflife/antlion/digsound/red_faction/strong
+	melee_damage_lower = 16
+	melee_damage_upper = 20
+	maxHealth = 60
+	health = 60
+
 /mob/living/simple_animal/hostile/halflife/antlion/digsound/blu_faction
 	deployment_faction = COMBINE_DEPLOYMENT_FACTION
 	faction = list(FACTION_COMBINE)
 	color = "#0077ff"
+
+/mob/living/simple_animal/hostile/halflife/antlion/digsound/blu_faction/strong
+	melee_damage_lower = 16
+	melee_damage_upper = 20
+	maxHealth = 60
+	health = 60
 
 /mob/living/simple_animal/hostile/halflife/antlion/OpenFire()
 	if(charging)

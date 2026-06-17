@@ -380,7 +380,7 @@
 	head = /obj/item/clothing/head/beanie/black
 	uniform = /obj/item/clothing/under/citizen/rebel
 	gloves = /obj/item/clothing/gloves/color/black //burn protection
-	suit = /obj/item/clothing/suit/armor/civilprotection
+	suit = /obj/item/clothing/suit/armor/civilprotection/speedy/lite
 	suit_store = /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
 	belt = /obj/item/gun/ballistic/automatic/pistol/usp
 	l_pocket = /obj/item/ammo_box/magazine/usp9mm
@@ -647,7 +647,7 @@
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
 	uniform = /obj/item/clothing/under/citizen/rebel
 	gloves = /obj/item/clothing/gloves/color/black //burn protection
-	suit = /obj/item/clothing/suit/armor/rebel/light
+	suit = /obj/item/clothing/suit/armor/civilprotection/speedy/lite
 	suit_store = /obj/item/gun/ballistic/rifle/rebarxbow/upgraded
 	belt = /obj/item/gun/ballistic/revolver/coltpython
 	l_pocket = /obj/item/ammo_box/colta357
@@ -980,6 +980,7 @@
 	spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/rebel/short)
 
 	extra_dex = 3
+	extra_int = 5
 
 /datum/outfit/deployment_loadout/rebel/tier5/lieutenant/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -1051,7 +1052,7 @@
 		/obj/item/climbing_hook = 1,
 		/obj/item/card/emag/halflife = 1,
 		/obj/item/hl2/deployable_box = 2,
-		/obj/item/grenade/empgrenade = 2,
+		/obj/item/grenade/empgrenade = 3,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
