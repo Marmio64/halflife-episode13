@@ -213,13 +213,8 @@
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
 "et" = (
-/obj/structure/table/halflife/metal,
-/obj/item/grenade/syndieminibomb/bouncer{
-	pixel_x = -1;
-	pixel_y = 6
-	},
-/turf/open/floor/plating/indoor/metal/train,
-/area/halflife/indoors/combat_deployment/rebel_base)
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/indoors)
 "eu" = (
 /obj/effect/koth_grace_field,
 /obj/effect/turf_decal/arrows{
@@ -273,13 +268,6 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors)
-"fN" = (
-/obj/machinery/light/directional/east,
-/obj/machinery/ammo_crate/grenade_crate{
-	ammo_amount = 2
-	},
-/turf/open/floor/plating/indoor/metal/train,
-/area/halflife/indoors/combat_deployment/rebel_base)
 "fS" = (
 /obj/machinery/door/poddoor/shutters/indestructible{
 	dir = 4;
@@ -411,9 +399,6 @@
 /obj/item/paper_bin,
 /obj/item/pen,
 /turf/open/floor/plating/indoor/woodc/fancy,
-/area/halflife/indoors)
-"jH" = (
-/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/indoors)
 "jJ" = (
 /obj/effect/turf_decal/arrows{
@@ -684,6 +669,10 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
+"ol" = (
+/obj/machinery/ammo_crate/grenade_crate,
+/turf/open/floor/plating/indoor/metal/train,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "on" = (
 /obj/structure/halflife/road/verticalcrossing{
 	pixel_y = -15
@@ -837,6 +826,11 @@
 /obj/structure/chair/comfy/halflife/diner,
 /turf/open/floor/plating/indoor/metal/train,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"rh" = (
+/turf/closed/wall/halflife/concrete/alt{
+	explosive_resistance = 20
+	},
+/area/halflife/outdoors/deployment_city)
 "ri" = (
 /obj/structure/table/halflife/metal/heavy,
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -897,10 +891,6 @@
 	},
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
-"ti" = (
-/obj/machinery/ammo_crate/grenade_crate,
-/turf/open/floor/plating/indoor/metal/train,
-/area/halflife/indoors/combat_deployment/rebel_base)
 "tn" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/checkered,
@@ -1377,6 +1367,13 @@
 /obj/structure/chair/comfy/halflife/armchair,
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors)
+"Eg" = (
+/obj/machinery/light/directional/east,
+/obj/machinery/ammo_crate/grenade_crate{
+	ammo_amount = 2
+	},
+/turf/open/floor/plating/indoor/metal/train,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "Eh" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/metal/train,
@@ -1638,11 +1635,6 @@
 "JR" = (
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors)
-"Kd" = (
-/turf/closed/wall/halflife/concrete/alt{
-	explosive_resistance = 20
-	},
-/area/halflife/indoors)
 "Kh" = (
 /obj/structure/trap/deployment_spawn_prot/rebel,
 /obj/structure/trap/deployment_spawn_prot/rebel,
@@ -1759,8 +1751,6 @@
 /area/halflife/indoors)
 "MQ" = (
 /obj/structure/table/halflife/metal,
-/obj/item/reagent_containers/pill/patch/medkit,
-/obj/item/reagent_containers/pill/patch/medkit,
 /turf/open/floor/plating/indoor/metal/train,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "MU" = (
@@ -1817,7 +1807,7 @@
 	grace_time = 250;
 	altered_respawn_speed = 400;
 	normal_respawn_speed = 200;
-	rebel_time = 400
+	rebel_time = 450
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
@@ -2035,6 +2025,12 @@
 /obj/structure/flora/tree/halflife/plain,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city)
+"Sm" = (
+/obj/structure/table/halflife/metal,
+/obj/item/reagent_containers/pill/patch/medkit,
+/obj/item/reagent_containers/pill/patch/medkit,
+/turf/open/floor/plating/indoor/metal/train,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "Sn" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal,
 /turf/open/floor/plating/indoor/trainfloor,
@@ -2120,6 +2116,11 @@
 "TX" = (
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/indoors)
+"TZ" = (
+/turf/closed/wall/halflife/concrete/alt{
+	explosive_resistance = 20
+	},
+/area/halflife/indoors)
 "Uc" = (
 /turf/open/floor/plating/indoor/concrete/stairs{
 	dir = 4
@@ -2181,11 +2182,6 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/indoor/metal/train/inner,
 /area/halflife/indoors)
-"VF" = (
-/turf/closed/wall/halflife/concrete/alt{
-	explosive_resistance = 20
-	},
-/area/halflife/outdoors/deployment_city)
 "VK" = (
 /obj/structure/table/halflife/metal/heavy,
 /obj/machinery/mill,
@@ -5809,7 +5805,7 @@ gE
 gE
 OM
 OM
-VF
+rh
 Pn
 Pn
 JH
@@ -5996,7 +5992,7 @@ CO
 CO
 EM
 OM
-VF
+rh
 Pn
 Pn
 JH
@@ -6183,7 +6179,7 @@ CO
 xl
 EM
 OM
-VF
+rh
 Pn
 Pn
 JH
@@ -6370,7 +6366,7 @@ CO
 lp
 EM
 OM
-VF
+rh
 qJ
 Pn
 JH
@@ -6557,12 +6553,12 @@ CO
 lp
 EM
 OM
-VF
+rh
 Pn
 Pn
 JH
 qE
-MQ
+Sm
 ck
 Az
 Eh
@@ -6744,7 +6740,7 @@ CO
 xl
 EM
 EM
-VF
+rh
 Pn
 Pn
 JH
@@ -6931,7 +6927,7 @@ CO
 CO
 EM
 EM
-VF
+rh
 Pn
 Pn
 JH
@@ -7118,14 +7114,14 @@ EM
 EM
 EM
 EM
-Kd
+TZ
 Pn
 Pn
 JH
 Vr
 Vr
 jY
-fN
+Eg
 Vr
 Az
 Az
@@ -7305,7 +7301,7 @@ CO
 CO
 CO
 CO
-Kd
+TZ
 Pn
 Pn
 JH
@@ -7492,7 +7488,7 @@ CO
 CO
 CO
 CO
-Kd
+TZ
 qJ
 Pn
 Gq
@@ -7679,7 +7675,7 @@ CO
 CO
 CO
 CO
-Kd
+TZ
 kb
 Pn
 Pn
@@ -8427,40 +8423,40 @@ CO
 CO
 CO
 vZ
-Kd
-Kd
-Kd
-Kd
-Kd
-Kd
-Kd
-Kd
+TZ
+TZ
+TZ
+TZ
+TZ
+TZ
+TZ
+TZ
 fS
 fS
 fS
 fS
-Kd
-VF
-VF
-VF
-VF
-VF
-VF
-VF
-VF
-VF
-VF
-VF
-VF
-VF
-VF
-VF
-VF
-VF
-VF
-VF
-VF
-VF
+TZ
+rh
+rh
+rh
+rh
+rh
+rh
+rh
+rh
+rh
+rh
+rh
+rh
+rh
+rh
+rh
+rh
+rh
+rh
+rh
+rh
+rh
 OM
 OM
 OM
@@ -8621,12 +8617,12 @@ TX
 TX
 Zu
 TX
-Kd
+TZ
 CO
 CO
 CO
 CO
-Kd
+TZ
 OM
 OM
 OM
@@ -8803,10 +8799,10 @@ CO
 CO
 Br
 TX
-jH
-jH
-jH
-jH
+et
+et
+et
+et
 TX
 kR
 CO
@@ -18947,7 +18943,7 @@ ou
 Az
 Az
 Vr
-ti
+ol
 Az
 rc
 Az
@@ -19130,7 +19126,7 @@ Nc
 DJ
 Kr
 qE
-et
+MQ
 ck
 Az
 Eh
