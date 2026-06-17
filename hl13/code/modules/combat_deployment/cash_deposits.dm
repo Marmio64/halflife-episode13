@@ -129,8 +129,6 @@
 					money_amount += 15 //25 dollars
 
 				if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
-					money_amount -= 2 //combine make 2 dollars less off corpses, so $8 from rebel bodies.
-
 					GLOB.deployment_combine_cash += (money_amount)
 				if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
 					GLOB.deployment_rebels_cash += (money_amount)
