@@ -886,7 +886,7 @@
 	projectile_wound_bonus = -45
 	spread = 2 //it has a stock
 	recoil = 0.4 //probably the only gun in the game other than M4A1 and service rifle with a real stock
-	fire_delay = 6 //its already boltaction but to make sure that someone who's really good at pressing Z doesnt just lay down suppressive fire
+	fire_delay = 7 //its already boltaction but to make sure that someone who's really good at pressing Z doesnt just lay down suppressive fire
 	sawn_desc = "A ratty old pre-war rifle that was developed over a century ago. Someone seems to have taken this prized historical artifact and sawed it in half, creating an Obrez. Still moist, though."
 	weapon_weight = WEAPON_HEAVY
 
@@ -896,7 +896,7 @@
 	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. This one looks a little better than most, it should jam less often."
 	jamming_chance = 3
 	projectile_damage_multiplier = 1.61 //approx 45 damage a shot
-	fire_delay = 5
+	fire_delay = 6
 	can_parry = TRUE
 	wdefense = 3
 
