@@ -574,7 +574,7 @@
 /obj/item/gun/ballistic/shotgun/spas12/freeman
 	name = "Legendary SPAS 12"
 	desc = "A spectacularly lethal pump action shotgun, for close encounters. This one has a legendary aura of freedom about it."
-	projectile_damage_multiplier = 1.25
+	projectile_damage_multiplier = 1.2
 	spread = 5
 	pin = /obj/item/firing_pin/implant/pindicate
 
@@ -896,7 +896,7 @@
 	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. This one looks a little better than most, it should jam less often."
 	jamming_chance = 3
 	projectile_damage_multiplier = 1.61 //approx 45 damage a shot
-	fire_delay = 3
+	fire_delay = 5
 	can_parry = TRUE
 	wdefense = 3
 
