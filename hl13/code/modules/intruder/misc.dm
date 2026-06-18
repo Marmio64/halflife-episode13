@@ -159,7 +159,7 @@ GLOBAL_LIST_EMPTY(intruder_osp)
 	. += span_notice("There's a request for a delivery of [lookingfor] to this area.")
 	if(GLOB.packages_delivered < 0)
 		GLOB.packages_delivered = 0
-	. += span_notice("[5 - GLOB.packages_delivered] boxes to next bonus preparedness.")
+	. += span_notice("[6 - GLOB.packages_delivered] boxes to next bonus preparedness.")
 
 /obj/machinery/intruder_deliveryzone/interact(mob/living/carbon/human/user)
 	. = ..()

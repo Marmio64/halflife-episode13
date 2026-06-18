@@ -222,6 +222,7 @@
 	victim.adjustStaminaLoss(-60)
 	victim.adjustBruteLoss(physical_heal)
 	victim.adjustFireLoss(physical_heal)
+	victim.adjustOxyLoss(physical_heal)
 	victim.set_eye_blur_if_lower(-6 SECONDS)
 	victim.adjust_confusion(-6 SECONDS)
 	victim.AdjustImmobilized(-3 SECONDS)

@@ -951,7 +951,7 @@
 	bio = 20
 	fire = 40
 	acid = 20
-	wound = 5
+	wound = 10
 
 /obj/item/clothing/suit/utility/fire/firefighter/halflife
 	name = "reinforced firesuit"

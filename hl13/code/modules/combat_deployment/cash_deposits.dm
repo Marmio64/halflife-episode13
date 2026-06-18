@@ -10,6 +10,9 @@
 	///how many tier 5 beacons it can give out when a xen boss is spawned
 	var/tier5_uses = 2
 
+	///the main deposit is the one that handles some important things which should only be handled once. Most TDM maps only have one anyways, but some will have 2 or more per factions. Change additional oens to false.
+	var/main_deposit = TRUE
+
 /obj/machinery/cash_deposit/combine
 	deployment_faction = COMBINE_DEPLOYMENT_FACTION
 
@@ -44,6 +47,7 @@
 	name = "Corpse Deposit"
 	desc = "A vessel for dropping off corpses at. It can sell nearby corpses of enemies to gain credits for your team."
 	deployment_faction = XEN_DEPLOYMENT_FACTION
+	tier5_uses = 0
 
 /obj/machinery/cash_deposit/xen/near_tier2
 	starting_cash = DEPLOYMENT_TIER2_XEN/2 //lessens the wait for next tier, but doesnt start them at it
@@ -103,12 +107,18 @@
 
 /obj/machinery/cash_deposit/process()
 	consume()
-	if(deployment_faction == COMBINE_DEPLOYMENT_FACTION) //This is roll protection. If the enemy team has a cash advantage greater than 100, your team gets extra cashflow
-		if(GLOB.deployment_combine_cash < (GLOB.deployment_rebels_cash - 100))
-			GLOB.deployment_combine_cash += 1
-	if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
-		if(GLOB.deployment_rebels_cash < (GLOB.deployment_combine_cash - 100))
-			GLOB.deployment_rebels_cash += 1
+
+	if(main_deposit)
+		if(deployment_faction == COMBINE_DEPLOYMENT_FACTION) //This is roll protection. If the enemy team has a cash advantage greater than 100, your team gets extra cashflow
+			if(GLOB.deployment_combine_cash < (GLOB.deployment_rebels_cash - 100))
+				GLOB.deployment_combine_cash += 1
+				if(GLOB.deployment_combine_cash < (GLOB.deployment_rebels_cash - 150)) //greather than 150 difference triples the regen
+					GLOB.deployment_combine_cash += 2
+		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			if(GLOB.deployment_rebels_cash < (GLOB.deployment_combine_cash - 100))
+				GLOB.deployment_rebels_cash += 1
+				if(GLOB.deployment_rebels_cash < (GLOB.deployment_combine_cash - 150))
+					GLOB.deployment_rebels_cash += 2
 
 /obj/machinery/cash_deposit/proc/consume()
 	var/money_amount = 10

@@ -255,9 +255,9 @@ GLOBAL_VAR_INIT(osp_mode, FALSE)
 		attempt_pick_leaders() //then leaders
 	if(new_double_agents > double_agents && time_ticking)
 		attempt_pick_double_agents() //finally agents
-	if(GLOB.packages_delivered >= 5)
+	if(GLOB.packages_delivered >= 6)
 		GLOB.packages_delivered = 0
-		GLOB.bonus_guard_preparedness++
+		GLOB.bonus_guard_preparedness += 2
 	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
 		round_length += 2 SECONDS //it goes by process ticks, which are one per second
 

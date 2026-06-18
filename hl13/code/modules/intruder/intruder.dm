@@ -329,7 +329,7 @@
 		sleep(rand(0.25 SECONDS,0.8 SECONDS))
 		qdel(src)
 	else
-		playsound(flashbang_turf, 'hl13/sound/voice/solid/snakewaiting.ogg', 50, TRUE, 8, 0.9)
+		playsound(flashbang_turf, 'hl13/sound/voice/solid/snakewaiting.ogg', 50, FALSE, 8, 0.9)
 		sleep(rand(0.4 SECONDS,0.7 SECONDS))
 		playsound(flashbang_turf, "hl13/sound/weapons/tranqfire.ogg", 60, TRUE, 8, 0.9)
 		sleep(rand(0.2 SECONDS,0.4 SECONDS))
