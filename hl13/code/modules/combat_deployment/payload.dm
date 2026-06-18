@@ -31,7 +31,7 @@
 
 	/// Alternate respawn timer if above is enabled ^
 	var/altered_respawn_speed = 40 SECONDS //the respawn timer of the defenders
-	var/normal_respawn_speed = 25 SECONDS
+	var/normal_respawn_speed = 30 SECONDS
 
 	var/grace_period_up_text = "<span class='greentext big'>The grace period is up, the cart is now movable!</span>"
 	var/grace_period_text = TRUE
@@ -43,6 +43,9 @@
 	var/cart_faction = REBEL_DEPLOYMENT_FACTION //which faction is pushing the bomb
 
 	var/payload_race = FALSE //cant win on time in payload race
+
+	/// Inertia accumulates from it not being moved, and reduces from it being moved. High inertia reduces attacking team respawn rates.
+	var/inertia = 0 //reduces respawn rates by 0.1 seconds per point of inertia. Goes up to 100 inertia, aka 10 seconds.
 
 /obj/machinery/deployment_payload/CanAllowThrough(atom/movable/mover, turf/target)
 	. = ..()
@@ -128,9 +131,9 @@
 	if(alter_holder_respawn)
 		if(cart_faction == REBEL_DEPLOYMENT_FACTION)
 			GLOB.deployment_respawn_rate_combine = altered_respawn_speed
-			GLOB.deployment_respawn_rate_rebels = normal_respawn_speed
+			GLOB.deployment_respawn_rate_rebels = (normal_respawn_speed - inertia)
 		else
-			GLOB.deployment_respawn_rate_combine = normal_respawn_speed
+			GLOB.deployment_respawn_rate_combine = (normal_respawn_speed - inertia)
 			GLOB.deployment_respawn_rate_rebels = altered_respawn_speed
 
 	if(!payload_race) //time doesnt move so this shouldnt matter but im just playing it safe
@@ -181,6 +184,9 @@
 				moving = TRUE //move dat cart
 				friendlies_present++
 
+	if(!moving && inertia < 100)
+		inertia++
+
 	if(!blocked && moving && GLOB.deployment_win_team != COMBINE_DEPLOYMENT_FACTION)
 		move_cart()
 		if(3 <= friendlies_present)
@@ -201,6 +207,9 @@
 					to_chat(H, "<span class='userdanger'>The combine are pushing their payload cart, stop it!</span>")
 			last_scream = world.time + 30 SECONDS
 		forceMove(get_turf(P))
+		inertia -= 20
+		if(inertia < 0)
+			inertia = 0
 		playsound(src, 'hl13/sound/effects/cartmove.ogg', 15, TRUE, extrarange = -1)
 		if(istype(P, /obj/effect/payload_path/final_point))
 			blow_up()
@@ -290,12 +299,12 @@
 
 /obj/machinery/deployment_payload/coast
 	altered_respawn_speed = 40 SECONDS
-	normal_respawn_speed = 20 SECONDS
+	normal_respawn_speed = 25 SECONDS
 	time_per_checkpoint = 180 SECONDS
 
 /obj/machinery/deployment_payload/fortress
 	altered_respawn_speed = 50 SECONDS
-	normal_respawn_speed = 20 SECONDS
+	normal_respawn_speed = 25 SECONDS
 	time_per_checkpoint = 240 SECONDS
 
 /obj/effect/payload_path
@@ -321,8 +330,6 @@
 	desc = "An old world, heavy poundage bomb mounted atop a movable cart. As it has lost remote detonation, timer, and fuse capabilites, it'll be a one way trip to hand deliver it to the rebels as a little farewell gift to them. Moves faster the more people are pushing it."
 	cart_faction = COMBINE_DEPLOYMENT_FACTION
 	icon_state = "combine"
-	altered_respawn_speed = 40 SECONDS
-	normal_respawn_speed = 25 SECONDS
 	time_per_checkpoint = 180 SECONDS
 
 /obj/machinery/deployment_payload/race

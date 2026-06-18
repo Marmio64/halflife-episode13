@@ -124,7 +124,7 @@
 	melee_attack_cooldown = 1.5 SECONDS
 	maxHealth = 240
 	health = 240
-	speed = 1.6
+	speed = 1.5
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/zombine/proc/get_innate_abilities()
@@ -330,16 +330,17 @@
 	headcrabspawn = /mob/living/basic/halflife/headcrab/fast
 
 /mob/living/basic/halflife/zombie/fast/deployment
-	melee_damage_lower = 12
-	melee_damage_upper = 15
+	melee_damage_lower = 13
+	melee_damage_upper = 16
 	melee_attack_cooldown = 0.4 SECONDS
 
 /mob/living/basic/halflife/zombie/fast/deployment/upgraded
 	melee_attack_cooldown = 0.25 SECONDS
 	melee_damage_lower = 14
 	melee_damage_upper = 18
-	maxHealth = 120
-	health = 120
+	armour_penetration = 10
+	maxHealth = 125
+	health = 125
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/fast/proc/get_innate_abilities()
@@ -587,6 +588,7 @@
 
 /mob/living/basic/halflife/zombie/cremator/deployment
 	melee_attack_cooldown = 1.25 SECONDS
+	armour_penetration = 20
 	speed = 2.25
 	maxHealth = 85
 	health = 85

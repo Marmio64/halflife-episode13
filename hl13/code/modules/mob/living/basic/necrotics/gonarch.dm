@@ -18,8 +18,8 @@
 	pixel_x = -32
 	base_pixel_x = -16
 	health_doll_icon = "broodmother"
-	maxHealth = 1100
-	health = 1100
+	maxHealth = 1250
+	health = 1250
 	obj_damage = 25
 	melee_damage_lower = 20
 	melee_damage_upper = 25
@@ -264,8 +264,8 @@
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/boss
 	deployment_faction = HIDDEN_DEPLOYMENT_FACTION
-	maxHealth = 2500
-	health = 2500
+	maxHealth = 2400
+	health = 2400
 	move_to_delay = 3
 	speed = 1
 	obj_damage = 75
