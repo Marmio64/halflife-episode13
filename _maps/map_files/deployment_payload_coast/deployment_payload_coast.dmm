@@ -335,7 +335,9 @@
 /area/halflife/outdoors/deployment_city/forest)
 "gK" = (
 /obj/structure/halflife/rails,
-/obj/machinery/deployment_points_flag/combine/low_cash,
+/obj/machinery/deployment_points_flag/combine/low_cash{
+	hand_capturable = 0
+	},
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
 "gO" = (
@@ -473,6 +475,10 @@
 /obj/structure/halflife/headcrab_cannister,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/outdoors/deployment_city/forest)
+"im" = (
+/obj/structure/trap/deployment_spawn_prot/combine,
+/turf/closed/wall/halflife/metal,
+/area/halflife/indoors/combat_deployment/combine_base)
 "iw" = (
 /obj/structure/flora/tree/halflife/pine/style_random,
 /turf/open/floor/plating/ground/grass,
@@ -1732,6 +1738,10 @@
 /obj/structure/halflife/headcrab_cannister,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
+"HE" = (
+/obj/structure/trap/deployment_spawn_prot/rebel,
+/turf/closed/wall/halflife/metal/weak/old,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "HJ" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -2604,7 +2614,9 @@
 /obj/structure/halflife/rails{
 	dir = 1
 	},
-/obj/machinery/deployment_points_flag/combine/low_cash,
+/obj/machinery/deployment_points_flag/combine/low_cash{
+	hand_capturable = 0
+	},
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
 "ZZ" = (
@@ -5560,7 +5572,7 @@ gc
 eN
 Dw
 NK
-oX
+im
 ov
 ov
 ov
@@ -5714,7 +5726,7 @@ Pg
 Pg
 tj
 Dw
-oX
+im
 YP
 ov
 ov
@@ -5868,7 +5880,7 @@ Pg
 Pg
 Pg
 eN
-oX
+im
 ov
 ov
 ov
@@ -6176,7 +6188,7 @@ Pg
 Pg
 Pg
 eN
-oX
+im
 ov
 ov
 ov
@@ -6330,7 +6342,7 @@ Pg
 Pg
 tj
 Dw
-oX
+im
 ov
 ov
 ov
@@ -6484,7 +6496,7 @@ Vi
 eN
 Dw
 NK
-oX
+im
 ov
 ov
 ov
@@ -17212,17 +17224,17 @@ Lh
 Lh
 hz
 Mo
-hY
+HE
 Js
-hY
-hY
+HE
+HE
 CS
 pd
 CS
-hY
-hY
+HE
+HE
 Js
-hY
+HE
 Mo
 Lh
 Lh

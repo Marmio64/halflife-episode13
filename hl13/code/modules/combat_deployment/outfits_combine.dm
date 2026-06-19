@@ -42,7 +42,7 @@
 	head = /obj/item/clothing/head/utility/radiation/weak
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+	combat_music = 'hl13/sound/music/combat/combineoperations.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier1/engineer
 	name = "Deployment: Union Engineer"
@@ -68,7 +68,7 @@
 
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+	combat_music = 'hl13/sound/music/combat/combineoperations.ogg'
 	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
 	alternate_music_chance = 10
 
@@ -126,7 +126,7 @@
 	head = /obj/item/clothing/head/utility/radiation
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+	combat_music = 'hl13/sound/music/combat/combineoperations.ogg'
 
 /datum/outfit/deployment_loadout/combine/tier2/pistol_cop
 	name = "Deployment: Pistol Cop"
@@ -197,7 +197,7 @@
 
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+	combat_music = 'hl13/sound/music/combat/combineoperations.ogg'
 	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
 	alternate_music_chance = 10
 
@@ -377,7 +377,7 @@
 
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+	combat_music = 'hl13/sound/music/combat/combineoperations.ogg'
 	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
 	alternate_music_chance = 10
 
@@ -594,7 +594,7 @@
 
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = 'hl13/sound/music/combat/crawlyard.ogg'
+	combat_music = 'hl13/sound/music/combat/combineoperations.ogg'
 	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
 	alternate_music_chance = 10
 
@@ -701,8 +701,8 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
 
-	extra_end = 3
-	extra_str = 4
+	extra_end = 5
+	extra_str = 5
 
 /datum/outfit/deployment_loadout/combine/tier5/assassin
 	name = "Deployment: Combine Assassin"
@@ -725,7 +725,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/infiltrate.ogg'
 
-	extra_dex = 8
+	extra_dex = 10
 	extra_str = 5
 	extra_per = 5
 
@@ -757,7 +757,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
 
-	extra_end = 3
+	extra_end = 4
 
 /datum/outfit/deployment_loadout/combine/tier5/advisor
 	name = "Deployment: Advisor"
@@ -803,7 +803,7 @@
 	combat_music = 'hl13/sound/music/combat/branescan.ogg'
 
 	extra_int = 10
-	extra_per = 3
+	extra_per = 5
 
 /datum/outfit/deployment_loadout/combine/tier5/logistics_lead/post_equip(mob/living/carbon/human/H)
 	. = ..()

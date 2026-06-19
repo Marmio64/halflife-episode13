@@ -1,12 +1,14 @@
 /obj/structure/trap/deployment_spawn_prot
 	name = "Spawn protection"
 	desc = "Stay outta the enemy spawn!"
-	icon_state = "trap"
+	icon_state = "spawnprot"
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/team = NO_FACTION
 	time_between_triggers = 1
 	anchored = TRUE
-	alpha = 0
+	alpha = 20 //just a really tiny visual indicator
+
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
 
 	///If a spawnid is set, this spawn protection is deleted when an applicable spawn change is done
 	var/spawnid = null
@@ -27,15 +29,15 @@
 
 /obj/structure/trap/deployment_spawn_prot/rebel
 	team = REBEL_DEPLOYMENT_FACTION
-	icon_state = "trap-fire"
+	icon_state = "spawnprot_rebel"
 
 /obj/structure/trap/deployment_spawn_prot/combine
 	team = COMBINE_DEPLOYMENT_FACTION
-	icon_state = "trap-frost"
+	icon_state = "spawnprot_combine"
 
 /obj/structure/trap/deployment_spawn_prot/xen
 	team = XEN_DEPLOYMENT_FACTION
-	icon_state = "trap-earth"
+	icon_state = "spawnprot_xen"
 
 /obj/structure/trap/deployment_spawn_prot/xen/trap_effect(mob/living/living)
 	if(GLOB.deployment_win_team && GLOB.deployment_win_team != team) //disable protection so that winners can pass through to finish the job

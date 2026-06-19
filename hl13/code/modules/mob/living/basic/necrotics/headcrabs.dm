@@ -240,8 +240,8 @@
 	icon_dead = "babycrab_dead"
 	maxHealth = 15
 	health = 15
-	melee_damage_lower = 5
-	melee_damage_upper = 9
+	melee_damage_lower = 6
+	melee_damage_upper = 10
 	speed = 0.5
 	butcher_results = list()
 	can_zombify = FALSE

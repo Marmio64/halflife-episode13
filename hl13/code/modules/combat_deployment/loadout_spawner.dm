@@ -493,15 +493,18 @@
 	for(var/X in GLOB.deployment_rebel_players)
 		var/mob/living/carbon/human/H = X
 		SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
-		to_chat(H, "<span class='userdanger'>A terrifying presence has been spotted in the district... Two Tier 5 Loadout spawners have been made available in your team's cash deposit for anyone to upgrade from.</span>")
+		to_chat(H, "<span class='userdanger big'>A terrifying presence has been spotted in the district... Two Tier 5 Loadout spawners have been made available in your team's cash deposit for anyone to upgrade from.</span>")
 	for(var/X in GLOB.deployment_combine_players)
 		var/mob/living/carbon/human/H = X
 		SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
-		to_chat(H, "<span class='userdangert big'>A terrifying presence has been spotted in the district... Two Tier 5 Loadout spawners have been made available in your team's cash deposit for anyone to upgrade from.</span>")
+		to_chat(H, "<span class='userdanger big'>A terrifying presence has been spotted in the district... Two Tier 5 Loadout spawners have been made available in your team's cash deposit for anyone to upgrade from.</span>")
 	for(var/X in GLOB.deployment_xen_players)
 		var/mob/living/carbon/human/H = X
 		SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
 		to_chat(H, "<span class='greentext big'>A Tier 6 Xenian has blessed us with their presence!</span>")
+
+		GLOB.deployment_rebels_free_tier5s += 2
+		GLOB.deployment_combine_free_tier5s += 2
 
 /////////////////////// BOSS LOADOUTS /////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

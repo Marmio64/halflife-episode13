@@ -257,12 +257,18 @@
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city)
+"eJ" = (
+/obj/structure/trap/deployment_spawn_prot/rebel,
+/turf/closed/wall/halflife/concrete/alt,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "eK" = (
 /obj/structure/halflife/rails{
 	dir = 1
 	},
 /obj/effect/payload_path/checkpoint,
-/obj/machinery/deployment_points_flag/poland,
+/obj/machinery/deployment_points_flag/poland{
+	hand_capturable = 0
+	},
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city)
 "eY" = (
@@ -8150,7 +8156,7 @@ yt
 yt
 yt
 yt
-yt
+eJ
 PV
 PV
 PV
@@ -8302,7 +8308,7 @@ Wo
 TU
 zX
 qK
-yt
+eJ
 rd
 rd
 rd
@@ -8454,7 +8460,7 @@ Wo
 Wo
 Wo
 Wo
-yt
+eJ
 ez
 ez
 ez
@@ -8758,7 +8764,7 @@ Av
 Wo
 Wo
 Wo
-yt
+eJ
 Al
 BT
 PV
@@ -9062,7 +9068,7 @@ Av
 Wo
 Wo
 JW
-yt
+eJ
 hl
 Qw
 PV
@@ -9366,7 +9372,7 @@ Wo
 Wo
 Wo
 Wo
-yt
+eJ
 ez
 ez
 ez
@@ -9518,7 +9524,7 @@ Wo
 ry
 rF
 iv
-yt
+eJ
 rd
 rd
 rd
@@ -9670,7 +9676,7 @@ yt
 yt
 yt
 yt
-yt
+eJ
 PV
 PV
 PV

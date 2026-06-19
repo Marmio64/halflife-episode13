@@ -7,8 +7,6 @@
 	resistance_flags = INDESTRUCTIBLE
 	var/deployment_faction = NO_FACTION
 	var/starting_cash = 0
-	///how many tier 5 beacons it can give out when a xen boss is spawned
-	var/tier5_uses = 2
 
 	///the main deposit is the one that handles some important things which should only be handled once. Most TDM maps only have one anyways, but some will have 2 or more per factions. Change additional oens to false.
 	var/main_deposit = TRUE
@@ -47,7 +45,6 @@
 	name = "Corpse Deposit"
 	desc = "A vessel for dropping off corpses at. It can sell nearby corpses of enemies to gain credits for your team."
 	deployment_faction = XEN_DEPLOYMENT_FACTION
-	tier5_uses = 0
 
 /obj/machinery/cash_deposit/xen/near_tier2
 	starting_cash = DEPLOYMENT_TIER2_XEN/2 //lessens the wait for next tier, but doesnt start them at it
@@ -187,8 +184,8 @@
 			else if(DEPLOYMENT_TIER2_REBELS <= GLOB.deployment_rebels_cash && H.combat_deployment_loadout_tier < 2)
 				chosen = /obj/item/hl2/loadout_picker/rebel/tier2
 
-			if(GLOB.xen_boss_spawned == TRUE && 0 < tier5_uses && H.combat_deployment_loadout_tier < 5)
-				tier5_uses--
+			if(0 < GLOB.deployment_rebels_free_tier5s && H.combat_deployment_loadout_tier < 5)
+				GLOB.deployment_rebels_free_tier5s--
 				chosen = /obj/item/hl2/loadout_picker/rebel/tier5
 
 		else if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
@@ -199,8 +196,8 @@
 			else if(DEPLOYMENT_TIER2_COMBINE <= GLOB.deployment_combine_cash && H.combat_deployment_loadout_tier < 2)
 				chosen = /obj/item/hl2/loadout_picker/combine/tier2
 
-			if(GLOB.xen_boss_spawned == TRUE && 0 < tier5_uses && H.combat_deployment_loadout_tier < 5)
-				tier5_uses--
+			if(0 < GLOB.deployment_combine_free_tier5s && H.combat_deployment_loadout_tier < 5)
+				GLOB.deployment_combine_free_tier5s--
 				chosen = /obj/item/hl2/loadout_picker/combine/tier5
 
 		if(isnull(chosen))

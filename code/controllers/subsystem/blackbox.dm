@@ -327,7 +327,10 @@ Versioning
 	if(!did_they_suicide && !first_death.len)
 		first_death["name"] = "[(L.real_name == L.name) ? L.real_name : "[L.real_name] as [L.name]"]"
 		first_death["role"] = null
-		first_death["role"] = L.mind.assigned_role.title
+		if(L.mind.assigned_role)
+			first_death["role"] = L.mind.assigned_role.title
+		else
+			first_death["role"] = "Unknown"
 		first_death["area"] = "[AREACOORD(L)]"
 		first_death["damage"] = "<font color='#FF5555'>[L.getBruteLoss()]</font>/<font color='orange'>[L.getFireLoss()]</font>/<font color='lightgreen'>[L.getToxLoss()]</font>/<font color='lightblue'>[L.getOxyLoss()]</font>"
 		first_death["last_words"] = L.last_words

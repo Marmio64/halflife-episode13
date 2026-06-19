@@ -592,6 +592,8 @@
 	idle_sounds = list('hl13/sound/creatures/zombinesound1.ogg', 'hl13/sound/creatures/zombinesound2.ogg', 'hl13/sound/creatures/zombinesound3.ogg', 'hl13/sound/creatures/zombinesound4.ogg')
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/zombie_grunt
 
+	cmode_music = 'hl13/sound/music/combat/notyouraveragecop.ogg'
+
 /mob/living/basic/halflife/zombie/cremator/deployment
 	melee_attack_cooldown = 1.25 SECONDS
 	armour_penetration = 20

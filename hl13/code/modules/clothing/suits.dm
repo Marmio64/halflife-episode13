@@ -372,6 +372,7 @@
 	block_chance = 90
 	slot_flags = 0
 	max_integrity = 100 //gets doubled due to armor
+	force = 0 //an energy shield doesnt work too well for attacking with
 	shield_break_leftover = null
 	item_flags = DROPDEL
 

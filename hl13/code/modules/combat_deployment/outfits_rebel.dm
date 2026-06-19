@@ -95,7 +95,7 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher/slow)
 
 	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
-	alternate_music_chance = 10
+	alternate_music_chance = 25
 
 /datum/outfit/deployment_loadout/rebel/tier1/smuggler
 	name = "Deployment: Refugee Smuggler"
@@ -241,7 +241,7 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher/slow)
 
 	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
-	alternate_music_chance = 10
+	alternate_music_chance = 25
 
 /datum/outfit/deployment_loadout/rebel/tier2/smuggler
 	name = "Deployment: Upgraded Smuggler"
@@ -351,6 +351,8 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+	alternate_combat_music = 'hl13/sound/music/combat/legionera.ogg'
+
 	extra_str = 4
 	extra_end = 6
 
@@ -431,7 +433,7 @@
 	skillchips = list(/obj/item/skillchip/engineer)
 
 	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
-	alternate_music_chance = 10
+	alternate_music_chance = 25
 
 /datum/outfit/deployment_loadout/rebel/tier3/scout
 	name = "Deployment: Rebel Scout"
@@ -580,6 +582,8 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+	alternate_combat_music = 'hl13/sound/music/combat/legionera.ogg'
+
 	extra_str = 6
 	extra_end = 8
 	extra_per = 5
@@ -713,7 +717,7 @@
 	skillchips = list(/obj/item/skillchip/engineer)
 
 	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
-	alternate_music_chance = 10
+	alternate_music_chance = 25
 
 /obj/item/sbeacondrop/rebel_turret
 	desc = "A label on it reads: <i>Warning: Activating this device will send a rebel turret to your location</i>."
@@ -857,7 +861,7 @@
 
 	extra_dex = 10
 	extra_end = 4
-	extra_str = 6
+	extra_str = 8
 
 /datum/outfit/deployment_loadout/rebel/tier5/rpg
 	name = "Deployment: RPG Rebel"
@@ -991,7 +995,7 @@
 	spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/rebel/short)
 
 	extra_dex = 3
-	extra_int = 5
+	extra_int = 6
 
 /datum/outfit/deployment_loadout/rebel/tier5/lieutenant/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -1073,9 +1077,9 @@
 
 	alternate_combat_music = 'hl13/sound/music/combat/rightbehindyou.ogg'
 
-	extra_str = 5
+	extra_str = 6
 	extra_dex = 8
-	extra_int = 5
+	extra_int = 6
 	extra_per = 5
 	extra_end = 5
 

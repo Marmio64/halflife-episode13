@@ -3,8 +3,8 @@
 	shoes = null
 	var/mob_to_be = /mob/living/basic/halflife/headcrab
 
-/datum/outfit/deployment_loadout/xen/post_equip(mob/living/carbon/human/H)
-	if(mob_to_be)
+/datum/outfit/deployment_loadout/xen/post_equip(mob/living/carbon/human/H, visuals_only = FALSE)
+	if(mob_to_be && !visuals_only)
 		var/datum/mind/player_mind = H.mind
 		var/mob/living/basic/halflife/S = new mob_to_be(H.loc)
 		if(player_mind)

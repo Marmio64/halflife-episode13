@@ -30,7 +30,7 @@
 	var/alter_holder_respawn = TRUE
 
 	/// Alternate respawn timer if above is enabled ^
-	var/altered_respawn_speed = 40 SECONDS //the respawn timer of the defenders
+	var/altered_respawn_speed = 35 SECONDS //the respawn timer of the defenders
 	var/normal_respawn_speed = 30 SECONDS
 
 	var/grace_period_up_text = "<span class='greentext big'>The grace period is up, the cart is now movable!</span>"
@@ -44,7 +44,7 @@
 
 	var/payload_race = FALSE //cant win on time in payload race
 
-	/// Inertia accumulates from it not being moved, and reduces from it being moved. High inertia reduces attacking team respawn rates.
+	/// Inertia accumulates from it not being moved, and reduces from it being moved. High inertia reduces attacking team respawn rates and increases defending team respawn rates.
 	var/inertia = 0 //reduces respawn rates by 0.1 seconds per point of inertia. Goes up to 100 inertia, aka 10 seconds.
 
 /obj/machinery/deployment_payload/CanAllowThrough(atom/movable/mover, turf/target)
@@ -130,11 +130,11 @@
 
 	if(alter_holder_respawn)
 		if(cart_faction == REBEL_DEPLOYMENT_FACTION)
-			GLOB.deployment_respawn_rate_combine = altered_respawn_speed
+			GLOB.deployment_respawn_rate_combine = (altered_respawn_speed + inertia)
 			GLOB.deployment_respawn_rate_rebels = (normal_respawn_speed - inertia)
 		else
 			GLOB.deployment_respawn_rate_combine = (normal_respawn_speed - inertia)
-			GLOB.deployment_respawn_rate_rebels = altered_respawn_speed
+			GLOB.deployment_respawn_rate_rebels = (altered_respawn_speed + inertia)
 
 	if(!payload_race) //time doesnt move so this shouldnt matter but im just playing it safe
 		if(GLOB.deployment_combine_flag_time_left <= 0 && GLOB.deployment_win_team != REBEL_DEPLOYMENT_FACTION)
@@ -249,6 +249,7 @@
 	return PROCESS_KILL
 
 /obj/machinery/deployment_payload/proc/checkpoint_reached()
+	inertia = 0
 
 	if(cart_faction == REBEL_DEPLOYMENT_FACTION)
 		GLOB.deployment_combine_flag_time_left += time_per_checkpoint
@@ -298,12 +299,10 @@
 
 
 /obj/machinery/deployment_payload/coast
-	altered_respawn_speed = 40 SECONDS
 	normal_respawn_speed = 25 SECONDS
 	time_per_checkpoint = 180 SECONDS
 
 /obj/machinery/deployment_payload/fortress
-	altered_respawn_speed = 50 SECONDS
 	normal_respawn_speed = 25 SECONDS
 	time_per_checkpoint = 240 SECONDS
 

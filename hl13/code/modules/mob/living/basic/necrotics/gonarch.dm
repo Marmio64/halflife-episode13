@@ -37,6 +37,8 @@
 	mouse_opacity = MOUSE_OPACITY_ICON
 	death_message = "falls over with a final cry!"
 
+	cmode_music = 'hl13/sound/music/combat/bigguy.ogg'
+
 	attack_action_types = list(/datum/action/innate/elite_attack/gonarch_charge,
 								/datum/action/innate/elite_attack/spawn_children_gonarch,
 								/datum/action/innate/elite_attack/rage_gonarch,

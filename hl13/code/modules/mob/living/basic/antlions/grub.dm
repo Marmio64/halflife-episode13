@@ -25,6 +25,8 @@
 	//var/squish_chance = 50
 	var/idle_sounds = list('hl13/sound/creatures/grub/idle1.ogg','hl13/sound/creatures/grub/idle2.ogg', ,'hl13/sound/creatures/grub/idle3.ogg', ,'hl13/sound/creatures/grub/idle4.ogg')
 
+	cmode_music = 'hl13/sound/music/combat/darkinterval_combat3.ogg'
+
 	lighting_cutoff_green = 15
 	lighting_cutoff = 35
 

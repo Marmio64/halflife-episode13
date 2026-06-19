@@ -29,6 +29,8 @@
 	//aggro_sound = 'hl13/sound/creatures/gonome/react_minor_scream_01.ogg'
 	idle_sounds = list('hl13/sound/creatures/gonome/wander_breath_in_01.ogg', 'hl13/sound/creatures/gonome/wander_breath_in_02.ogg', 'hl13/sound/creatures/gonome/wander_breath_in_03.ogg', 'hl13/sound/creatures/gonome/wander_breath_out_01.ogg', 'hl13/sound/creatures/gonome/wander_breath_out_02.ogg', 'hl13/sound/creatures/gonome/wander_breath_out_03.ogg')
 
+	cmode_music = 'hl13/sound/music/combat/penultimatum.ogg'
+
 	var/playstyle_string = span_notice("You are a Fungal Gonome, an abomination of flesh and fungus. Consume the corpses of creatures to gain nutrition, so you may complete your gestation, and to be able to create headcrabs for taking over the district.")
 
 	hud_type = /datum/hud/ooze

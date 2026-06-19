@@ -1,4 +1,5 @@
 GLOBAL_VAR_INIT(deployment_combine_cash, 0)
+GLOBAL_VAR_INIT(deployment_combine_free_tier5s, 0)
 
 /datum/job/deployment_metrocop
 	title = JOB_DEPLOYMENT_METROCOP

@@ -1,4 +1,5 @@
 GLOBAL_VAR_INIT(deployment_rebels_cash, 0)
+GLOBAL_VAR_INIT(deployment_rebels_free_tier5s, 0)
 
 /datum/job/deployment_refugee
 	title = JOB_DEPLOYMENT_REFUGEE

@@ -892,6 +892,7 @@
 
 	weapon_category = WEAPON_CAT_RIFLE
 
+//can achieve almost the same DPS as an AR2 if you're good with using it
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
 	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. This one looks a little better than most, it should jam less often."
 	jamming_chance = 3

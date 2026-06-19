@@ -121,7 +121,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 25 SECONDS
+	cooldown_time = 24 SECONDS
 	item_type = /obj/item/ammo_casing/rocket/hl13
 	requires_hands = TRUE
 	delete_old = FALSE
@@ -185,7 +185,7 @@
 	name = "Procure Incendiary Grenade"
 	desc = "Procures a incendiary grenade for tossing. Deletes the old one if it is not used."
 	item_type = /obj/item/grenade/incendiary_grenade
-	cooldown_time = 30 SECONDS
+	cooldown_time = 25 SECONDS
 
 
 /datum/action/cooldown/spell/aoe/rally

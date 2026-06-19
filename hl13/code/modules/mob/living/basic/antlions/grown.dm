@@ -32,6 +32,8 @@
 	var/idle_sounds = list('hl13/sound/creatures/antlion/idle1.ogg','hl13/sound/creatures/antlion/idle2.ogg', ,'hl13/sound/creatures/antlion/idle3.ogg', ,'hl13/sound/creatures/antlion/idle4.ogg', ,'hl13/sound/creatures/antlion/idle5.ogg' )
 	var/spray_cooldown = 3 SECONDS
 
+	cmode_music = 'hl13/sound/music/combat/darkinterval_combat3.ogg'
+
 	initial_language_holder = /datum/language_holder/zombie
 	lighting_cutoff_green = 15
 	lighting_cutoff = 35
@@ -128,6 +130,8 @@
 	lighting_cutoff = 35
 
 	initial_language_holder = /datum/language_holder/zombie
+
+	cmode_music = 'hl13/sound/music/combat/darkinterval_combat2.ogg'
 
 	var/soundvary = FALSE
 	var/idle_sounds = list('hl13/sound/creatures/antlion_guard/growl_idle.ogg')
