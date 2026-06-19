@@ -10,7 +10,7 @@
 	mob_size = MOB_SIZE_SMALL
 	mob_biotypes = MOB_ORGANIC|MOB_XENIAN
 
-	basic_mob_flags = PRECISE_ATTACK_ZONES
+	basic_mob_flags = PRECISE_ATTACK_ZONES|FLAMMABLE_MOB
 	zone_selected = "head"
 
 	maxHealth = 30

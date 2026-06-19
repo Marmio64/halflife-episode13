@@ -78,17 +78,15 @@ GLOBAL_VAR_INIT(xen_boss_spawned, FALSE)
 		if(DEPLOYMENT_TIER5_XEN <= GLOB.deployment_xen_cash) //Does your faction have enough cash for the bonus chance at tier 5?
 			tier5_chance = DEPLOYMENT_TIER5_EXTRA_CHANCE_XEN //If so, you get this higher chance
 
-		if(GLOB.xen_tier_points < 2.25) //We are unable to afford our increased tier 5 cost of 2 points
+		if(GLOB.xen_tier_points < 0.25) //We are unable to afford a tier 5
 			tier5_chance = 0
-		else if(6 <= GLOB.xen_tier_points) //We have a high surplus of tier points, lets guarantee this guy gets a tier 5
+		else if(5 <= GLOB.xen_tier_points) //We have a high surplus of tier points, lets guarantee this guy gets a tier 5
 			tier5_chance = 100
 
 
 		if(prob(tier5_chance))
 			chosen = /obj/item/hl2/loadout_picker/xen/tier5
-			GLOB.xen_tier_points -= 2 // We got a tier 5 at the cost of two tier points
-			GLOB.rebel_tier_points += 1 // Rebels get a tier point to keep it fair
-			GLOB.combine_tier_points += 1 // Ditto
+			GLOB.xen_tier_points -= 1 // We got a tier 5 at the cost of one tier point
 
 
 	if(DEPLOYMENT_TIER6_XEN <= GLOB.deployment_xen_cash && GLOB.xen_boss_spawned == FALSE)

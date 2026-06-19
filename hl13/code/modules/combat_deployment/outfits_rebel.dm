@@ -756,8 +756,8 @@
 
 	alternate_combat_music = 'hl13/sound/music/combat/rightbehindyou.ogg'
 
-	extra_str = 5
-	extra_dex = 2
+	extra_str = 6
+	extra_dex = 3
 
 /datum/outfit/deployment_loadout/rebel/tier4/scout
 	name = "Deployment: Upgraded Rebel Scout"
@@ -1088,7 +1088,7 @@
 
 	H.setdeploymentfaction(REBEL_DEPLOYMENT_FACTION)
 	H.faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
-	H.add_traits(list(TRAIT_NEVER_WOUNDED, TRAIT_NODISMEMBER), OUTFIT_TRAIT) //ehhh just take these out of the equation, since these are BOSSES
+	H.add_traits(list(TRAIT_NEVER_WOUNDED, TRAIT_NODISMEMBER, TRAIT_NOSLEEP), OUTFIT_TRAIT) //ehhh just take these out of the equation, since these are BOSSES
 
 	H.dna.species.stunmod = 0.1 //all bosses are very resilient to stuns
 

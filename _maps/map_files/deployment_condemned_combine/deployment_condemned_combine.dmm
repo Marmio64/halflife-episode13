@@ -74,7 +74,9 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/combat_deployment/combine_base)
 "cW" = (
-/obj/machinery/deployment_points_flag/combine,
+/obj/machinery/deployment_points_flag/combine{
+	cash_increase = 0.7
+	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
 "dc" = (
@@ -840,6 +842,10 @@
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"Zt" = (
+/obj/machinery/cash_deposit/xen,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/zombies/xen_base)
 "Zy" = (
 /obj/structure/trap/deployment_spawn_prot/xen,
 /turf/open/floor/plating/ground/dirt,
@@ -9370,7 +9376,7 @@ GX
 GX
 GN
 po
-po
+Zt
 po
 po
 po

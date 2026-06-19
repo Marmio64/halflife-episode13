@@ -174,9 +174,6 @@
 		/obj/item/stack/medical/bandage = 1,
 	)
 
-	extra_str = -1 //emaciated
-	extra_end = -1
-	extra_dex = -1
 	mob_to_be = null
 
 /datum/outfit/deployment_loadout/xen/tier4/light_crab_walker/pre_equip(mob/living/carbon/human/H)
@@ -250,12 +247,12 @@
 		/obj/item/spear/halflife/deathmatch/deployment = 1,
 		/obj/item/restraints/legcuffs/beartrap = 3,
 		/obj/item/stack/medical/bandage = 3,
-		/obj/item/reagent_containers/pill/patch/grubnugget = 2,
+		/obj/item/reagent_containers/pill/patch/grubnugget = 3,
 	)
 
-	extra_str = 7
-	extra_end = 4
-	extra_dex = 5
+	extra_str = 10
+	extra_end = 6
+	extra_dex = 6
 	mob_to_be = null
 
 /datum/outfit/deployment_loadout/xen/tier5/heavy_crab_walker/pre_equip(mob/living/carbon/human/H)

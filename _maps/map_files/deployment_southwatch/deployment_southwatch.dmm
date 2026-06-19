@@ -1720,7 +1720,9 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
 "Mc" = (
-/obj/machinery/cash_deposit/combine/tier2,
+/obj/machinery/cash_deposit/combine/tier2{
+	main_deposit = 0
+	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
 "MC" = (
@@ -2222,6 +2224,12 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors)
+"WX" = (
+/obj/machinery/cash_deposit/rebel/tier2plus{
+	main_deposit = 0
+	},
+/turf/open/floor/plating/indoor/metal/train/inner,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "Xl" = (
 /obj/machinery/ammo_crate,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -6570,7 +6578,7 @@ kU
 kU
 kU
 kU
-KF
+WX
 kU
 kU
 kU

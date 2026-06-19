@@ -15,7 +15,7 @@ GLOBAL_VAR_INIT(deployment_progression_stage, 0)
 //If their side has a shit ton of tier points, they get a guaranteed high tier.
 GLOBAL_VAR_INIT(rebel_tier_points, 4)
 GLOBAL_VAR_INIT(combine_tier_points, 2)
-GLOBAL_VAR_INIT(xen_tier_points, 4)
+GLOBAL_VAR_INIT(xen_tier_points, 3)
 
 /obj/machinery/deployment_koth_flag
 	name = "Central Flag"
@@ -43,10 +43,10 @@ GLOBAL_VAR_INIT(xen_tier_points, 4)
 	var/grace_time = 3 MINUTES
 
 	/// Should the current holder of the flag have a different respawn speed, as perhaps say a handicap of sorts?
-	var/alter_holder_respawn = FALSE
+	var/alter_holder_respawn = TRUE
 
 	/// Alternate respawn timer if above is enabled ^
-	var/altered_respawn_speed = 45 SECONDS
+	var/altered_respawn_speed = 40 SECONDS
 	var/normal_respawn_speed = 25 SECONDS
 
 	var/grace_period_up_text = "<span class='greentext big'>The flag grace period is up, and it is now capturable!</span>"
@@ -120,6 +120,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 4)
 		if(alter_holder_respawn)
 			GLOB.deployment_respawn_rate_combine = altered_respawn_speed
 			GLOB.deployment_respawn_rate_rebels = normal_respawn_speed
+			GLOB.deployment_respawn_rate_xen = 20 SECONDS
 
 		if(GLOB.deployment_combine_flag_time_left <= 0)
 			priority_announce("Central flag under Overwatch Control. Amputate all dissenters.", "Overwatch Priority Alert")
@@ -167,6 +168,11 @@ GLOBAL_VAR_INIT(xen_tier_points, 4)
 	if(current_faction_holder == XEN_DEPLOYMENT_FACTION)
 		icon_state = "xen"
 		GLOB.deployment_xen_flag_time_left -= 1 SECONDS
+
+		if(alter_holder_respawn)
+			GLOB.deployment_respawn_rate_combine = normal_respawn_speed
+			GLOB.deployment_respawn_rate_rebels = normal_respawn_speed
+			GLOB.deployment_respawn_rate_xen = 30 SECONDS
 
 		if(GLOB.deployment_xen_flag_time_left <= 0)
 			priority_announce("The flag is under the control of the Xenian hordes, time for the feast!", "Xen Priority Alert")
@@ -319,6 +325,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 4)
 	combine_time = 30 SECONDS
 	grace_time = 1 MINUTES
 	normal_respawn_speed = 20 SECONDS
+	altered_respawn_speed = 45 SECONDS
 	starting_faction = REBEL_DEPLOYMENT_FACTION
 	alter_holder_respawn = TRUE
 	grace_period_up_text = "<span class='reallybig'>The initial setup grace period is up, and the rebel flag is now capturable by the Combine.</span>"
@@ -327,6 +334,8 @@ GLOBAL_VAR_INIT(xen_tier_points, 4)
 	combine_time = 8 MINUTES
 	rebel_time = 30 SECONDS
 	grace_time = 1 MINUTES
+	normal_respawn_speed = 25 SECONDS
+	altered_respawn_speed = 45 SECONDS
 	starting_faction = COMBINE_DEPLOYMENT_FACTION
 	alter_holder_respawn = TRUE
 	grace_period_up_text = "<span class='reallybig'>The initial setup grace period is up, and the combine flag is now capturable by the Rebels.</span>"

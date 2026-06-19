@@ -114,11 +114,28 @@
 				GLOB.deployment_combine_cash += 1
 				if(GLOB.deployment_combine_cash < (GLOB.deployment_rebels_cash - 150)) //greather than 150 difference triples the regen
 					GLOB.deployment_combine_cash += 2
+
+			if(DEPLOYMENT_TIER5_COMBINE < GLOB.deployment_combine_cash)
+				GLOB.combine_tier_points += 0.05 //one tier 5 every 40 seconds because this ticks once every 2 seconds
+				if(DEPLOYMENT_TIER5_EXTRA_CHANCE_COMBINE < GLOB.deployment_combine_cash)
+					GLOB.combine_tier_points += 0.05 //one tier 5 every 20 seconds now
+
 		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
 			if(GLOB.deployment_rebels_cash < (GLOB.deployment_combine_cash - 100))
 				GLOB.deployment_rebels_cash += 1
 				if(GLOB.deployment_rebels_cash < (GLOB.deployment_combine_cash - 150))
 					GLOB.deployment_rebels_cash += 2
+
+			if(DEPLOYMENT_TIER5_REBELS < GLOB.deployment_rebels_cash)
+				GLOB.rebel_tier_points += 0.05 //one tier 5 every 40 seconds because this ticks once every 2 seconds
+				if(DEPLOYMENT_TIER5_EXTRA_CHANCE_REBELS < GLOB.deployment_rebels_cash)
+					GLOB.rebel_tier_points += 0.025 //one tier 5 every 30 seconds now
+
+		if(deployment_faction == XEN_DEPLOYMENT_FACTION)
+			if(DEPLOYMENT_TIER5_XEN < GLOB.deployment_xen_cash)
+				GLOB.xen_tier_points += 0.05 //one tier 5 every 40 seconds because this ticks once every 2 seconds
+				if(DEPLOYMENT_TIER5_EXTRA_CHANCE_XEN < GLOB.deployment_xen_cash)
+					GLOB.xen_tier_points += 0.025 //one tier 5 every 30 seconds now
 
 /obj/machinery/cash_deposit/proc/consume()
 	var/money_amount = 10

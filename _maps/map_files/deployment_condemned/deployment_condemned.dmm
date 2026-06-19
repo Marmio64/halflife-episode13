@@ -578,6 +578,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"zn" = (
+/obj/machinery/cash_deposit/xen,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/zombies)
 "zA" = (
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/zombies)
@@ -1097,6 +1101,12 @@
 /obj/structure/halflife/trash_decal,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
+"Vb" = (
+/obj/machinery/deployment_points_flag/poland/low_cash{
+	cash_increase = 0.1
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "Vf" = (
 /obj/structure/halflife/publicphone,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -10202,7 +10212,7 @@ VJ
 VJ
 HV
 HV
-HV
+Vb
 HV
 HV
 tk
@@ -10918,7 +10928,7 @@ iw
 kd
 kd
 kd
-kd
+zn
 kd
 dD
 wi

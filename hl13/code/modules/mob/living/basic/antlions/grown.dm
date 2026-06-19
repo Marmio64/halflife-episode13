@@ -204,8 +204,8 @@
 
 /mob/living/basic/halflife/antlion_guard/deployment
 	melee_attack_cooldown = 1.75 SECONDS
-	maxHealth = 425
-	health = 425
+	maxHealth = 475
+	health = 475
 	obj_damage = 40
 	armour_penetration = 80
 	speed = 0.7

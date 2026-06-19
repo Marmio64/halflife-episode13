@@ -99,14 +99,13 @@
 		hud_used.alien_plasma_display.maptext = MAPTEXT("<div align='center' valign='middle' style='position:relative; top:0px; left:6px'><font color='green'>[round(fungal_nutrition)]</font></div>")
 
 /mob/living/basic/halflife/zombie/gonome/deployment
-	melee_damage_lower = 22
-	melee_damage_upper = 30
+	melee_damage_upper = 32
 	melee_attack_cooldown = 1.5 SECONDS
 	armour_penetration = 15
 	maxHealth = 250
 	health = 250
 	obj_damage = 18
-	speed = 2.25
+	speed = 2.1
 	fungalheal_amt = 0.1
 	fully_grown = TRUE //cannot grow fully
 
@@ -126,8 +125,8 @@
 	maxHealth = 400
 	health = 400
 	speed = 1.2
-	headcrab_delay = 2.5 SECONDS
-	melee_attack_cooldown = 1.25 SECONDS
+	headcrab_delay = 2.25 SECONDS
+	melee_attack_cooldown = 1 SECONDS
 
 /mob/living/basic/halflife/zombie/gonome/complete/cash_gorged
 	name = "Cash-gorged Gonome"

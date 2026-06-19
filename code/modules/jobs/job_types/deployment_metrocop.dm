@@ -95,8 +95,6 @@ GLOBAL_VAR_INIT(deployment_combine_cash, 0)
 		if(prob(tier5_chance))
 			chosen = /obj/item/hl2/loadout_picker/combine/tier5
 			GLOB.combine_tier_points -= 1 // We got a tier 5 at the cost of a tier point
-			GLOB.rebel_tier_points += 1 // Rebels get a tier point to keep it fair
-			GLOB.xen_tier_points += 1 // Ditto
 
 	if(SSmapping.current_map.combat_deployment_gamemode == "the_hidden")
 		if(GLOB.hidden_match_type == "Hidden")

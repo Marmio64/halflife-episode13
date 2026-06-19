@@ -818,7 +818,7 @@
 
 	H.setdeploymentfaction(COMBINE_DEPLOYMENT_FACTION)
 	H.faction = list(FACTION_COMBINE)
-	H.add_traits(list(TRAIT_NEVER_WOUNDED, TRAIT_NODISMEMBER), OUTFIT_TRAIT) //ehhh just take these out of the equation, since these are BOSSES
+	H.add_traits(list(TRAIT_NEVER_WOUNDED, TRAIT_NODISMEMBER, TRAIT_NOSLEEP), OUTFIT_TRAIT) //ehhh just take these out of the equation, since these are BOSSES
 
 	H.dna.species.stunmod = 0.1 //all bosses are very resilient to stuns
 

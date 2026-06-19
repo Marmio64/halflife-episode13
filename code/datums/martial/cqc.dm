@@ -337,7 +337,10 @@
 			attacker,
 		)
 		to_chat(attacker, span_danger("You put [defender] into a chokehold!"))
-		defender.SetSleeping(40 SECONDS)
+		var/sleep_time = (60 SECONDS - (defender.get_stat_level(STATKEY_END) * 2))
+		if(HAS_TRAIT(defender, TRAIT_NOSLEEP))
+			sleep_time -= 15 SECONDS
+		defender.SetSleeping(sleep_time)
 		restraining_mob = null
 		if(attacker.grab_state < GRAB_NECK && !HAS_TRAIT(attacker, TRAIT_PACIFISM))
 			attacker.setGrabState(GRAB_NECK)

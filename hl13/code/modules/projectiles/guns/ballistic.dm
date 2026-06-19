@@ -1065,8 +1065,8 @@
 
 	item_flags = SLOWS_WHILE_IN_HAND | NEEDS_PERMIT
 
-	slowdown = 0.75
-	drag_slowdown = 0.75
+	slowdown = 0.66
+	drag_slowdown = 0.66
 
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'

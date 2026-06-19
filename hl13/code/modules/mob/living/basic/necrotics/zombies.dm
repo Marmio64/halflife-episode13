@@ -31,6 +31,8 @@
 
 	death_message = "lets out a pained scream as it falls limp..."
 
+	fire_stack_decay_rate = -3.5
+
 	var/no_crab_state = "zombie_dead_nocrab"
 	var/crabless_possible = TRUE
 	var/headcrabspawn = /mob/living/basic/halflife/headcrab
@@ -261,6 +263,10 @@
 		return ..()
 
 	var/ricochet_chance = armor_value
+
+	if(on_fire)
+		ricochet_chance /= 2
+
 	ricochet_chance -= (bullet.armour_penetration*2)
 
 	if(!prob(clamp(ricochet_chance, 1, 95))) // reflect chance is 50%
@@ -590,8 +596,8 @@
 	melee_attack_cooldown = 1.25 SECONDS
 	armour_penetration = 20
 	speed = 2.25
-	maxHealth = 85
-	health = 85
+	maxHealth = 90
+	health = 90
 
 /mob/living/basic/halflife/zombie/cremator/Initialize(mapload)
 	. = ..()

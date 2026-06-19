@@ -99,8 +99,8 @@
 	summon_type = list(/mob/living/simple_animal/hostile/halflife/antlion/digsound/blu_faction)
 
 /mob/living/basic/halflife/grub/deployment/upgraded
-	maxHealth = 35
-	health = 35
+	maxHealth = 40
+	health = 40
 	melee_damage_upper = 20 //fiesty grub
 
 /mob/living/basic/halflife/grub/deployment/upgraded/Initialize(mapload)
