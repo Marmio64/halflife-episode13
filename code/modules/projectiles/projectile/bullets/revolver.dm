@@ -8,8 +8,16 @@
 
 /obj/projectile/bullet/n762/high_veloc
 	speed = 5
-	armour_penetration = 35
+	armour_penetration = 0
 	accurate_range = 150
+
+	var/max_distance_armor_piercing = 35
+	var/ap_increase_per_tile = 5
+
+/obj/projectile/bullet/n762/high_veloc/reduce_range()
+	..()
+	if(armour_penetration < max_distance_armor_piercing)
+		armour_penetration += ap_increase_per_tile
 
 /obj/projectile/bullet/n762/rpd
 	armour_penetration = 0
