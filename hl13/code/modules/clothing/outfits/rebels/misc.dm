@@ -258,7 +258,7 @@
 /datum/outfit/resistance_faction/polish/strong
 	name = "Polish Liberation Front Corporal"
 	suit = /obj/item/clothing/suit/armor/halflife/milvest //NOW we're talking.
-	belt = /obj/item/storage/belt/civilprotection/polish_resistance/m4a1
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/m4a1_nonade
 	suit_store = /obj/item/gun/ballistic/automatic/m4a1 //now you're an actual, trusted soldier, so we can give you good weapons
 	l_pocket = /obj/item/knife/combat/survival
 	head = /obj/item/clothing/head/helmet/halflife/military/poland
