@@ -195,6 +195,7 @@
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
+	neck = /obj/item/clothing/mask/trench_whistle
 	id = null
 
 	back = /obj/item/storage/backpack/halflife/satchel/radio/huge
