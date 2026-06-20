@@ -501,7 +501,7 @@
 /obj/item/storage/box/coffeepack
 	icon_state = "arabica_beans"
 	name = "arabica beans"
-	desc = "A bag containing fresh, dry coffee arabica beans. Ethically sourced and packaged by Waffle Corp."
+	desc = "A bag containing dry coffee 'arabica' beans. Given this is produced by the combine, there is no telling what these actually are."
 	illustration = null
 	icon = 'icons/obj/food/containers.dmi'
 	var/beantype = /obj/item/food/grown/coffee
@@ -520,5 +520,5 @@
 /obj/item/storage/box/coffeepack/robusta
 	icon_state = "robusta_beans"
 	name = "robusta beans"
-	desc = "A bag containing fresh, dry coffee robusta beans. Ethically sourced and packaged by Waffle Corp."
+	desc = "A bag containing dry coffee robusta beans. Given this is produced by the combine, there is no telling what these actually are."
 	beantype = /obj/item/food/grown/coffee/robusta

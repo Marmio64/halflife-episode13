@@ -170,14 +170,14 @@
 
 /obj/item/reagent_containers/cup/soda_cans/cola
 	name = "Cola"
-	desc = "Cola. on earth. Post-apocalyptic combine ruled earth."
+	desc = "Cola. on earth. Post-apocalyptic combine ruled earth. Incredible!"
 	icon_state = "cola"
 	list_reagents = list(/datum/reagent/consumable/space_cola = 30)
 	drink_type = SUGAR
 
 /obj/item/reagent_containers/cup/soda_cans/tonic
 	name = "T-Borg's tonic water"
-	desc = "Quinine tastes funny, but at least it'll keep that Space Malaria away."
+	desc = "Quinine tastes funny, but at least it'll keep Malaria away. Though, Malaria doesn't really spread around here..."
 	icon_state = "tonic"
 	volume = 50
 	list_reagents = list(/datum/reagent/consumable/tonic = 50)

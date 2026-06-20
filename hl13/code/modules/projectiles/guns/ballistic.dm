@@ -153,6 +153,9 @@
 	desc = "A french made bullpup rifle from the nineties, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one looks in pretty good shape, and somehow more powerful."
 	projectile_damage_multiplier = 1.2
 
+/obj/item/gun/ballistic/automatic/m4a1/famas/intruder/buffed/more
+	projectile_damage_multiplier = 1.75
+
 /obj/item/gun/ballistic/automatic/m4a1/famas/crab
 	name = "\improper Masterwork FAMAS G2 Rifle"
 	desc = "A french made bullpup rifle from the nineties, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one looks in pretty good shape, and somehow more powerful. It's also capable of taking a suppressor."

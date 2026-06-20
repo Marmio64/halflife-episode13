@@ -15,7 +15,7 @@ GLOBAL_LIST_INIT_TYPED(quirk_blacklist, /list/datum/quirk, list(
 	list(/datum/quirk/prosthetic_limb, /datum/quirk/body_purist),
 	list(/datum/quirk/transhumanist, /datum/quirk/body_purist),
 	list(/datum/quirk/prosthetic_organ, /datum/quirk/tin_man, /datum/quirk/body_purist),
-	list(/datum/quirk/paraplegic, /datum/quirk/hemiplegic),
+	list(/datum/quirk/paraplegic, /datum/quirk/hemiplegic, /datum/quirk/item_quirk/limper),
 	list(/datum/quirk/social_anxiety, /datum/quirk/mute),
 	list(/datum/quirk/russian_foreigner, /datum/quirk/foreigner, /datum/quirk/italian_foreigner), //hl13 edit
 	list(/datum/quirk/foreigner, /datum/quirk/bilingual, /datum/quirk/russian_foreigner, /datum/quirk/italian_foreigner, /datum/quirk/mute), //hl13 edit

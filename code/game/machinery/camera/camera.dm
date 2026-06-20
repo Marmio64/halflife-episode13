@@ -16,7 +16,7 @@
 
 /obj/machinery/camera
 	name = "security camera"
-	desc = "It's used to monitor rooms."
+	desc = "An early model of a combine camera. It uses mostly repurposed pre-war camera parts and systems with a bit of modification."
 	icon = 'icons/obj/machines/camera.dmi'
 	icon_state = "camera"
 	base_icon_state = "camera"

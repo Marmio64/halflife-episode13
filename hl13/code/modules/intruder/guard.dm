@@ -90,12 +90,22 @@
 		glasses = /obj/item/clothing/glasses/night
 		r_pocket = /obj/item/grenade/syndieminibomb/bouncer
 		H.tired_rate = 10
+	if(99 < guard_preparedness)
+		suit_store = /obj/item/gun/ballistic/automatic/m4a1/famas/intruder/buffed/more
+		suit = /obj/item/clothing/suit/armor/halflife/kevlar/guard/very_fast
+		H.tired_rate = 1
+		H.dna.species.stunmod = 0.1
+		var/datum/martial_art/cqc/bigboss = new
+		bigboss.teach(H)
 
 /obj/item/clothing/suit/armor/halflife/kevlar/guard
 	slowdown = 0.25
 
 /obj/item/clothing/suit/armor/halflife/kevlar/guard/fast
 	slowdown = -0.25
+
+/obj/item/clothing/suit/armor/halflife/kevlar/guard/very_fast
+	slowdown = -0.75
 
 /obj/item/clothing/mask/balaclava/protective/guard
 	desc = "You don't want to get in trouble with your superiors by removing this, but it's pretty hard to see out of these things... what was that noise? If you see a fellow guard not wearing their balaclava, you may want to kill them on sight."

@@ -223,12 +223,11 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/store)
 "auS" = (
-/obj/structure/window/fulltile/halflife/combine,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "aicoredoor";
 	name = "AI Chamber entrance shutters"
 	},
-/obj/structure/fans/tiny,
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/dispatch)
 "avk" = (
@@ -900,7 +899,7 @@
 /area/halflife/indoors/townhall/secondfloor)
 "bxW" = (
 /obj/machinery/light/small/directional/east,
-/obj/machinery/rnd/production/protolathe/department/cargo,
+/obj/structure/table/halflife/metal/heavy,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "bxY" = (
@@ -5980,6 +5979,7 @@
 "jvR" = (
 /obj/machinery/door/airlock/highsecurity/combine,
 /obj/effect/mapping_helpers/airlock/access/all/science/general,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/dispatch)
 "jvS" = (
@@ -12208,6 +12208,7 @@
 /obj/item/stack/spacecash/c10,
 /obj/item/storage/box/coffeepack,
 /obj/item/storage/box/coffeepack,
+/obj/item/reagent_containers/cup/glass/canteen,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/bar)
 "tDq" = (
@@ -14069,7 +14070,6 @@
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/sewer)
 "wkj" = (
-/obj/structure/fans/tiny,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "aicoredoor";
 	name = "AI Chamber entrance shutters"

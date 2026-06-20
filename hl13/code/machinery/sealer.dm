@@ -30,7 +30,7 @@
 	visible_message("[src] suddenly makes a loud grinding sound before shutting down with a large pop!")
 	malfunctioning = TRUE
 	update_appearance(UPDATE_ICON)
-	if(prob(10))
+	if(prob(15))
 		dangerous_malfunction = TRUE
 		if(prob(1))
 			explode_in_flames()
@@ -41,7 +41,7 @@
 	if(malfunctioning)
 		if(dangerous_malfunction)
 			to_chat(usr, span_notice("The sealer is currently not working. A faint odor of smoke emanates from it."))
-			if(prob(1))
+			if(prob(3) && user.get_stat_level(STATKEY_INT) < 12) //below 12 intelligence you're a dingus that may try to turn it on anyways.
 				to_chat(user, span_userdanger("Upon trying to turn it on anyways, a spark flies out and ignites the machine into a raging inferno!"))
 				explode_in_flames()
 			return FALSE
