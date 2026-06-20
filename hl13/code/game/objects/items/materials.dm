@@ -95,7 +95,7 @@
 		if(flash_light.fuel < 60 SECONDS)
 			if(do_after(user, 1 SECONDS, flash_light))
 				playsound(src, 'hl13/sound/effects/suitchargeok1.ogg', 40, FALSE)
-				flash_light.fuel = 60 SECONDS //full charge
+				flash_light.fuel = 90 SECONDS //full charge and a half, since these arent common
 				qdel(src)
 				return ITEM_INTERACT_SUCCESS
 	return NONE

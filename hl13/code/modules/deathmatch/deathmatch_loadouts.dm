@@ -20,7 +20,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m4a1 = 2,
+		/obj/item/ammo_box/magazine/m4a1 = 3,
 	)
 
 //Slow and vulnerable to rush downs, but can blow people out of cover with grenades. Compared to the marine, worse primary and less ammo in exchange for 4 grenades. Extreme version of the conscript.
@@ -40,6 +40,7 @@
 
 	backpack_contents = list(
 		/obj/item/grenade/syndieminibomb/bouncer = 4,
+		/obj/item/ammo_box/magazine/mp7 = 1,
 	)
 
 //high damage, but low armor and slow firing weapons makes very vulnerable to rush downs
@@ -58,17 +59,9 @@
 
 	glasses = /obj/item/clothing/glasses/night
 
-	back = /obj/item/storage/bag/rebar_quiver
-	backpack_contents = list(
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-		/obj/item/ammo_casing/rebar,
-	)
+	neck = /obj/item/storage/bag/rebar_quiver/syndicate
+
+	extra_dex = 3
 
 /datum/outfit/deathmatch_loadout/combine/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/guarddown.ogg'
@@ -89,6 +82,8 @@
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
+	extra_end = 2
+
 //sturdy close range powerhouse, though not very quick
 /datum/outfit/deathmatch_loadout/combine/overwatch/shotgunner
 	name = "Deathmatch: OTA Shotgunner"
@@ -100,6 +95,8 @@
 	uniform = /obj/item/clothing/under/combine/overwatch/red
 	suit = /obj/item/clothing/suit/armor/overwatch/red/deathmatch
 	r_pocket = null
+
+	extra_end = 2
 
 // Like the standard soldier, but even more durable and has the most high power gun in exchange for no grenades and being the slowest class
 /datum/outfit/deathmatch_loadout/combine/elite
@@ -116,6 +113,8 @@
 	belt = /obj/item/storage/belt/civilprotection/overwatch/ar2_nogrenade
 	suit_store = /obj/item/gun/ballistic/automatic/ar2/standardpin
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
+
+	extra_end = 2
 
 // Speedy firepower makes this class good against melee classes, but the lack of bullet resistance means a quick end against guns.
 /datum/outfit/deathmatch_loadout/combine/grunt
@@ -134,6 +133,8 @@
 	gloves = /obj/item/clothing/gloves/color/civilprotection/grunt
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit/vial
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
+
+	extra_dex = 2
 
 /datum/outfit/deathmatch_loadout/civilprotection/pre_equip(mob/living/carbon/human/H)
 	H.faction += "combine"
@@ -158,6 +159,8 @@
 	l_pocket = /obj/item/grenade/spawnergrenade/manhacks/deathmatch
 	r_pocket = /obj/item/grenade/spawnergrenade/manhacks/deathmatch
 
+	extra_per = 2
+
 /datum/outfit/deathmatch_loadout/crowbar/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/notsupposedtobehere.ogg'
 
@@ -170,6 +173,8 @@
 	uniform = /obj/item/clothing/under/citizen/rebel
 	suit = /obj/item/clothing/suit/hooded/hev/deathmatch
 	glasses = /obj/item/clothing/glasses/regular/thin
+
+	extra_str = 3
 
 //the alpha: All the weapons, best equipment.
 /datum/outfit/deathmatch_loadout/crowbar/freeman
@@ -227,7 +232,7 @@
 	belt = /obj/item/flashlight/seclite
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m4a1/service = 3,
+		/obj/item/ammo_box/magazine/m4a1/service = 4,
 		/obj/item/grenade/syndieminibomb/bouncer = 2,
 	)
 
@@ -263,6 +268,8 @@
 		/obj/item/grenade/halflife/tinbomb,
 	)
 
+	extra_dex = 4
+
 /datum/outfit/deathmatch_loadout/rioter/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/cpviolation.ogg'
 
@@ -290,6 +297,8 @@
 		/obj/item/stack/medical/bandage,
 		/obj/item/stack/medical/bandage,
 	)
+
+	extra_str = 3
 
 /datum/outfit/deathmatch_loadout/feral_refugee/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/disrupted.ogg'

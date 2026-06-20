@@ -1,5 +1,8 @@
 
 /mob/living/AltClickSecondaryOn(var/atom/A)
+	if(istype(A, /obj/item/clothing/under)) //so you can remove clothing accessories
+		return
+
 	var/user_perception = src.get_stat_level(STATKEY_PER)
 
 	if(zoomed)

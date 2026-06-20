@@ -50,7 +50,7 @@
 			boxes_stored--
 
 			new /obj/item/factory_construction/container(loc)
-		if("Dispense advanced electronics Container")
+		if("Dispense difficult advanced electronics Container")
 			playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
 
 			if(!do_after(user, 3 SECONDS, src))
