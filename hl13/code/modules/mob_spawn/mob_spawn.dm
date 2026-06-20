@@ -12,7 +12,7 @@
 /obj/effect/mob_spawn/ghost_role/human/bunkeroperator/Initialize(mapload)
 	. = ..()
 	if(prob(50)) //only has a 50% chance of existing, otherwise it'll just be a NPC
-		new /mob/living/basic/trooper/rebel/mp7(get_turf(src))
+		new /mob/living/basic/trooper/rebel/mp7/plf/service_rifle(get_turf(src))
 		return INITIALIZE_HINT_QDEL
 
 /obj/effect/mob_spawn/ghost_role/cityscanner
