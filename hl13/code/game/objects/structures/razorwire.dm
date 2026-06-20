@@ -10,9 +10,16 @@
 	plane = -2
 	projectile_passchance = 95
 	pass_flags_self = LETPASSTHROW|PASSSTRUCTURE
-	max_integrity = 100
+	max_integrity = 80
 	///drop item type
 	var/sheet_type = /obj/item/stack/sheet/scrap_metal
+
+	armor_type = /datum/armor/razor_wire
+
+/datum/armor/razor_wire
+	bullet = 25
+	laser = 25
+	bomb = 20
 
 /obj/structure/razorwire/deconstruct(disassembled = TRUE, mob/living/blame_mob)
 	if(disassembled)
@@ -102,7 +109,7 @@
 	var/disassembly_time = 2 SECONDS
 
 	if(HAS_TRAIT(user, TRAIT_ENGINEER))
-		disassembly_time = 1 SECONDS
+		disassembly_time = 0.8 SECONDS
 
 	if(!do_after(user, disassembly_time, src))
 		return TRUE
