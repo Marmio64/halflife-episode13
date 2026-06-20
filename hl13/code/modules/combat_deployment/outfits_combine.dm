@@ -933,7 +933,7 @@
 
 	suit = /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss/blu
 	mask = /obj/item/cigarette/halflife
-	suit_store = /obj/item/gun/ballistic/automatic/svd
+	suit_store = /obj/item/gun/ballistic/automatic/svd/boss
 	belt = /obj/item/melee/baton
 	l_pocket = /obj/item/knife/combat
 	r_pocket = /obj/item/flashlight/seclite

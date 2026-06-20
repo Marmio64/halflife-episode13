@@ -1007,7 +1007,6 @@
 	burst_size = 1
 	spread = 2
 	recoil = 0.5
-	projectile_damage_multiplier = 1.5
 	can_suppress = FALSE
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY
@@ -1020,6 +1019,12 @@
 
 	weapon_category = WEAPON_CAT_SNIPER
 
+	var/firing_speed = 0.8 SECONDS
+
+/obj/item/gun/ballistic/automatic/svd/boss
+	firing_speed = 0.6
+	fire_delay = 5
+
 /obj/item/gun/ballistic/automatic/svd/no_mag
 	spawnwithmagazine = FALSE
 
@@ -1028,7 +1033,7 @@
 
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.8 SECONDS, overtime_penalty_spindown = 1.1 SECONDS, overtime_penalty_freebies = 3, overtime_penalty_increase = 10, overtime_penalty_cap = 20) //good in two or three round bursts, accuracy diminishes faster than other guns otherwise
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = firing_speed, overtime_penalty_spindown = 1.1 SECONDS, overtime_penalty_freebies = 3, overtime_penalty_increase = 10, overtime_penalty_cap = 20) //good in two or three round bursts, accuracy diminishes faster than other guns otherwise
 
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()
