@@ -311,22 +311,22 @@
 /datum/outfit/deathmatch_loadout/polish_veteran
 	name = "Deathmatch: PLF Veteran"
 	display_name = "Polish Liberation Front Veteran"
-	desc = "A heavily-armed, heavily-armoured soldier of the Polish army. Armed with an AK-47, a grenade, and immense explosive resistance, at the cost of lower vision and very low speed."
+	desc = "You are the brick wall of the Polish resistance, armed with a mighty RPD and equipped with medicine and explosives. While slow, you can mince any opponent that isn't careful."
 	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
 	mask = /obj/item/clothing/mask/gas/hl2/military
-	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran //again: walking fucking tank. dont fuck with him.
+	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran
 	uniform = /obj/item/clothing/under/syndicate/camo
-	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
-	gloves = /obj/item/clothing/gloves/combat //DISPATCH, SHOCKING THAT HATCH ISNT GONNA FUCKING STOP THE POOTIS YOU DINGUS
-	suit_store = /obj/item/gun/ballistic/automatic/ak47
-	back = /obj/item/storage/backpack/duffelbag/halflife //you are going to fucking die against these guys. trust me.
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/rpd
+	gloves = /obj/item/clothing/gloves/combat
+	suit_store = /obj/item/gun/ballistic/automatic/rpd
+	back = /obj/item/storage/backpack/duffelbag/halflife
 	r_pocket = /obj/item/flashlight/seclite
-	shoes = /obj/item/clothing/shoes/boots
+	shoes = /obj/item/clothing/shoes/combat
 	backpack_contents = list(
 		/obj/item/grenade/c4 = 1,
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
-		/obj/item/hl13_small_flag/poland/telescopic = 1, //POLAND POLAND POLAND
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2, //I refuse death by the power of DRUGS!!!
+		/obj/item/hl13_small_flag/poland/telescopic = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 	)
 
 /datum/outfit/deathmatch_loadout/polish_corporal
@@ -336,12 +336,12 @@
 	suit = /obj/item/clothing/suit/armor/halflife/milvest //NOW we're talking.
 	mask = /obj/item/clothing/mask/gas/hl2/military
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
-	suit_store = /obj/item/gun/ballistic/automatic/servicerifle //now you're an actual, trusted soldier, so we can give you good weapons
+	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
 	l_pocket = /obj/item/knife/combat/survival
-	head = /obj/item/clothing/head/helmet/halflife/military/poland //again: actual military shit. the PRF only send these guys when they WANT to fuck some shit up.
+	head = /obj/item/clothing/head/helmet/halflife/military/poland
 	r_pocket = /obj/item/grenade/c4
 	uniform = /obj/item/clothing/under/syndicate/camo
-	shoes = /obj/item/clothing/shoes/boots
+	shoes = /obj/item/clothing/shoes/combat
 
 /datum/outfit/deathmatch_loadout/polish_medic
 	name = "Deathmatch: PLF Medic"

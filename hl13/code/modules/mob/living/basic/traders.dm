@@ -426,7 +426,7 @@
 		TRADER_SHOP_OPENING_PHRASE = list(
 			"Heh, open for business!",
 			"I've got what you need, stranga'.",
-			"Come over here, pal, i've got the goods.",
+			"Come over here, pal, I've got the goods.",
 		),
 	)
 

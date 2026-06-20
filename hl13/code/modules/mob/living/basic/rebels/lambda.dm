@@ -59,7 +59,7 @@
 	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife
 	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran
-	shoes = /obj/item/clothing/shoes/boots
+	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 
 /mob/living/basic/trooper/rebel/mp7/follower
@@ -77,7 +77,7 @@
 	AddComponent(/datum/component/obeys_commands, pet_commands)
 
 /mob/living/basic/trooper/rebel/mp7/plf
-	name = "PLF Soldier"
+	name = "Polish Liberation Front Soldier"
 	desc = "A symbol of the Polish Resistance, proudly wielding an MP7."
 
 	maxHealth = 150
@@ -88,6 +88,14 @@
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/plf_infantry
 	loot = list(/obj/effect/mob_spawn/corpse/human/plf_trooper)
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/plf_trooper
+
+/mob/living/basic/trooper/rebel/mp7/plf/service_rifle
+	desc = "A soldier of the Polish Resistance, calmly wielding an imposing, pre-War rifle."
+	r_hand = /obj/item/gun/ballistic/automatic/servicerifle
+	casingtype = /obj/item/ammo_casing/a556
+	ranged_cooldown = 1 SECONDS
+	burst_shots = 3
+	projectilesound = 'sound/items/weapons/gun/rifle/shot.ogg'
 
 /mob/living/basic/trooper/rebel/mp7/plf/boss
 	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE, FACTION_ANTLION, FACTION_HEADCRAB)
@@ -122,12 +130,12 @@
 
 /mob/living/basic/trooper/rebel/mp7/veteran
 	name = "PLF Veteran"
-	desc = "A towering revenant left from a nation supposedly long-gone, wading through a sea of the dead, clad in dirty-green armour adorned with the white-red banner of the Polish Free State."
+	desc = "A towering revenant left from a nation supposedly long-gone, wading through a sea of the dead, clad in dirty-green armour adorned with the white-red banner of the Polish Free State. They level an imposing machine-gun in your direction, humming an old Polish tune almost apathetically under their breath."
 
 	loot = list(/obj/effect/mob_spawn/corpse/human/plf_veteran)
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/plf_veteran
 	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/plf_veteran
-	r_hand = /obj/item/gun/ballistic/automatic/ak47
+	r_hand = /obj/item/gun/ballistic/automatic/rpd //lol, lmao even
 	maxHealth = 400
 	health = 400
 
@@ -217,7 +225,7 @@
 	)
 
 /datum/ai_planning_subtree/random_speech/plfveteran
-	speech_chance = 4
+	speech_chance = 10 // RAAAAAAAAAAGHHHHH
 	speak = list(
 		"We march onwards!",
 		"Together, comrades!",
