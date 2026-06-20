@@ -275,6 +275,7 @@
 	ears = /obj/item/radio/headset/syndicate/alt/leader //LEADER. BIG MAN. IMPORTANT.
 	accessory = /obj/item/clothing/accessory/medal/gold/plf_captain //high-ranking officer
 	head = /obj/item/clothing/head/beret/sec/poland
+	neck = /obj/item/clothing/mask/trench_whistle
 	l_pocket = /obj/item/binoculars
 	uniform = /obj/item/clothing/under/syndicate/camo
 	shoes = /obj/item/clothing/shoes/combat
@@ -294,6 +295,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military //you are going to fucking die against these guys. trust me.
 	ears = /obj/item/radio/headset/syndicate/alt/leader //senior PLF officer responsible for field command and killing people
 	shoes = /obj/item/clothing/shoes/combat
+	neck = /obj/item/clothing/mask/trench_whistle
 	backpack_contents = list(
 		/obj/item/grenade/c4 = 1,
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
