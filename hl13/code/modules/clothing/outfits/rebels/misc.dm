@@ -173,7 +173,7 @@
 	name = "Polish Liberation Front Private"
 
 	uniform = /obj/item/clothing/under/citizen/refugee/green
-	suit = /obj/item/clothing/suit/armor/rebel/light //stolen and improv gear pretty much. if you arent competent we dont give you the good shit.
+	suit = /obj/item/clothing/suit/armor/rebel/light //stolen and improv gear pretty much
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance
 	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/poland //you get one (1) bargain bin helmet
@@ -242,84 +242,88 @@
 /datum/outfit/resistance_faction/polish/competent
 	name = "Polish Liberation Front Private First Class"
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar //now we're talking. actual pre-war armour.
-	suit_store = /obj/item/gun/ballistic/automatic/servicerifle //now you're an actual, trusted soldier, so we can give you good weapons
+	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
 	l_pocket = /obj/item/knife/combat/survival
 	head = /obj/item/clothing/head/helmet/halflife/military/poland //REAL helmet for REAL men.
 	uniform = /obj/item/clothing/under/syndicate/camo
+	shoes = /obj/item/clothing/shoes/combat
 
 /datum/outfit/resistance_faction/polish/competent/mosin
 	name = "Polish Liberation Front Private Second Class"
 	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/mosin
-	l_pocket = /obj/item/knife/combat //FIX BAYONETS YOU SONS OF BITCHES, ITS TIME TO BECOME A MARTYR
+	l_pocket = /obj/item/knife/combat
 
 /datum/outfit/resistance_faction/polish/strong
 	name = "Polish Liberation Front Corporal"
 	suit = /obj/item/clothing/suit/armor/halflife/milvest //NOW we're talking.
-	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
-	suit_store = /obj/item/gun/ballistic/automatic/servicerifle/wood //now you're an actual, trusted soldier, so we can give you good weapons
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/m4a1
+	suit_store = /obj/item/gun/ballistic/automatic/m4a1 //now you're an actual, trusted soldier, so we can give you good weapons
 	l_pocket = /obj/item/knife/combat/survival
-	head = /obj/item/clothing/head/helmet/halflife/military/poland //again: actual military shit. the PRF only send these guys when they WANT to fuck some shit up.
+	head = /obj/item/clothing/head/helmet/halflife/military/poland
 	r_pocket = /obj/item/grenade/c4
 	uniform = /obj/item/clothing/under/syndicate/camo
+	shoes = /obj/item/clothing/shoes/combat
 
 /datum/outfit/resistance_faction/polish/commander
 	name = "Polish Liberation Front Platoon Leader"
-	suit = /obj/item/clothing/suit/armor/halflife/milvest //stay in the backline. no improvised mask though
+	suit = /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket
 	mask = /obj/item/clothing/mask/gas/hl2/military/hardened //also important
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/revolver
-	suit_store = /obj/item/gun/ballistic/revolver/coltpython
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython/well_crafted
 	ears = /obj/item/radio/headset/syndicate/alt/leader //LEADER. BIG MAN. IMPORTANT.
 	accessory = /obj/item/clothing/accessory/medal/gold/plf_captain //high-ranking officer
 	head = /obj/item/clothing/head/beret/sec/poland
 	l_pocket = /obj/item/binoculars
 	uniform = /obj/item/clothing/under/syndicate/camo
+	shoes = /obj/item/clothing/shoes/combat
 
 /datum/outfit/resistance_faction/polish/commander/flagbearer
 	name = "Polish Liberation Front Platoon Leader (Flagbearer)"
 	r_hand = /obj/item/hl13_small_flag/poland //FOR POLAND!!!!!!
 
-/datum/outfit/resistance_faction/polish/fuck_your_shit
-	name = "Polish Liberation Front Veteran" //these guys are the most most experienced of the polish liberation front. if they are in city 13, you duck and cover. they are walking fucking dreadnoughts. do not call on them in vain.
+/datum/outfit/resistance_faction/polish/commando
+	name = "Polish Liberation Front Commando" //elite commandos of the plf
 	mask = /obj/item/clothing/mask/gas/hl2/military
 	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
-	suit = /obj/item/clothing/suit/armor/halflife/milvest //again: walking fucking tank. dont fuck with him.
+	suit = /obj/item/clothing/suit/armor/halflife/milvest
 	uniform = /obj/item/clothing/under/syndicate/camo
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
 	suit_store = /obj/item/gun/ballistic/automatic/ak47
 	back = /obj/item/storage/backpack/halflife/satchel/military //you are going to fucking die against these guys. trust me.
-	ears = /obj/item/radio/headset/syndicate/alt/leader //I AM JOHN POLAND, AND THIS IS MY MESSAGE; THE COMBINE WILL BURN, AND THE BANNER OF POLAND WILL BE RAISED
-	accessory = /obj/item/clothing/accessory/medal/silver/plf_veteran
+	ears = /obj/item/radio/headset/syndicate/alt/leader //senior PLF officer responsible for field command and killing people
+	shoes = /obj/item/clothing/shoes/combat
 	backpack_contents = list(
 		/obj/item/grenade/c4 = 1,
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
 		/obj/item/megaphone = 1,
 		/obj/item/food/canned/halflife/beans = 1, //stay behind enemy lines for as long as possible
-		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
+		/obj/item/reagent_containers/cup/glass/canteen = 1,
 		/obj/item/crowbar/large = 1, //sometimes C4 is too much
 		/obj/item/hl13_small_flag/poland/telescopic = 1, //POLAND POLAND POLAND
 	)
 
-/datum/outfit/resistance_faction/polish/fuck_your_shit/dreadnought
-	name = "Polish Liberation Front Veteran Heavy" //JESUS FUCKING CHRIST THESE GUYS HOLY SHIT BAHAHAHAHHAHAHAHAHAHHAHAA. YOU'RE FUCKED LMAO.
+/datum/outfit/resistance_faction/polish/commando/veteran
+	name = "Polish Liberation Front Veteran" //JESUS FUCKING CHRIST THESE GUYS HOLY SHIT BAHAHAHAHHAHAHAHAHAHHAHAA. YOU'RE FUCKED LMAO.
 	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
-	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran //again: walking fucking tank. dont fuck with him.
+	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran
 	uniform = /obj/item/clothing/under/syndicate/camo
-	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
-	gloves = /obj/item/clothing/gloves/combat //DISPATCH, SHOCKING THAT HATCH ISNT GONNA FUCKING STOP THE POOTIS YOU DINGUS
-	suit_store = /obj/item/gun/ballistic/automatic/ak47
-	back = /obj/item/storage/backpack/duffelbag/halflife //you are going to fucking die against these guys. trust me.
-	ears = /obj/item/radio/headset/syndicate/alt/leader //I AM JOHN POLAND, AND THIS IS MY MESSAGE; THE COMBINE WILL BURN, AND THE BANNER OF POLAND WILL BE RAISED
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/rpd
+	gloves = /obj/item/clothing/gloves/combat
+	suit_store = /obj/item/gun/ballistic/automatic/rpd
+	back = /obj/item/storage/backpack/duffelbag/halflife
+	ears = /obj/item/radio/headset/syndicate/alt/leader
+	accessory = null
 	backpack_contents = list(
 		/obj/item/grenade/c4 = 1,
 		/obj/item/grenade/syndieminibomb/bouncer = 2,
 		/obj/item/megaphone = 1,
-		/obj/item/food/canned/halflife/beans = 2, //stay behind enemy lines for as long as possible
-		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
-		/obj/item/crowbar/large = 1, //sometimes C4 is too much
-		/obj/item/hl13_small_flag/poland/telescopic = 1, //POLAND POLAND POLAND
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2, //I refuse death by the power of DRUGS!!!
+		/obj/item/food/canned/halflife/beans = 2,
+		/obj/item/reagent_containers/cup/glass/canteen = 1,
+		/obj/item/crowbar/large = 1,
+		/obj/item/hl13_small_flag/poland/telescopic = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
 	)
 

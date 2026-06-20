@@ -142,7 +142,7 @@
 
 /obj/item/ammo_box/magazine/rpd
 	name = "rpd magazine (7.62mm)"
-	desc = "A standard 100-round magazine for the AK47 Rifle. Filled with 7.62 rounds."
+	desc = "A 100-round magazine fitted for the RPD machine-gun. Filled with 7.62 rounds."
 	icon_state = "rpd"
 	base_icon_state = "rpd"
 	ammo_type = /obj/item/ammo_casing/n762/rpd

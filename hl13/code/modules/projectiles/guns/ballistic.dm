@@ -224,7 +224,7 @@
 
 /obj/item/gun/ballistic/automatic/rpd
 	name = "\improper RPD Machine Gun"
-	desc = "A machine gun from the soviet era. This will pack a punch while being a very capable suppressive fire option."
+	desc = "A hefty machine-gun dating back to the Soviet days, frequently found in the hands of the Polish Liberation Front's elite troops and dedicated machine-gun specialists. Capable of putting out a horrifying amount of suppressive fire with mighty 100-round magazines."
 	icon = 'hl13/icons/obj/guns/wideguns.dmi'
 	icon_state = "rpd"
 	fire_sound = "hl13/sound/weapons/ak47fire.ogg"
@@ -441,7 +441,7 @@
 // about 3.33 seconds TTK
 /obj/item/gun/ballistic/automatic/pistol/makeshift
 	name = "makeshift pistol"
-	desc = "A scrappy looking pistol that was put together shoddily with scrap metal and basic tools. The 9mm pistol looks terrible to fire, though it should be small enough to fit in your pockets."
+	desc = "A cheap, improvised 9mm pistol made out of scrap metal and basic tools. While honestly rather professional in its design, most of that is thanks to PLF information campaigns. It looks small enough to fit in your pocket."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "makeshift"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/makeshift9mm
@@ -874,7 +874,7 @@
 /// Aprox 36 damage a shot, 4 shots to crit, can crit in as fast as ~1.8 seconds assuming it doesn't jam (though it is statistically likely to do so)
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
 	name = "mosin-nagant rifle"
-	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. Slightly moist."
+	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. Slightly moist, chambered in 7.62."
 	icon = 'hl13/icons/obj/guns/wideguns.dmi'
 	icon_state = "mosin_nagant"
 	inhand_icon_state = "mosin_nagant"
@@ -897,11 +897,12 @@
 
 //can achieve almost the same DPS as an AR2 if you're good with using it
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
-	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. This one looks a little better than most, it should jam less often."
+	desc = "A surprisingly well-maintained pre-war rifle likely manufactured in time for the First World War, maintained to an incredibly high standard over the years. Incredibly rare, and just the right amount of moist."
 	jamming_chance = 3
 	projectile_damage_multiplier = 1.61 //approx 45 damage a shot
 	can_parry = TRUE
 	wdefense = 3
+	sawn_desc = "A heretical mistake. Someone psychopath has sawn off a pristine-condition Mosin-Nagant, that has survived undamaged and perfectly clean since the time of the Tsars. If not for the dire situation, no doubt the universe itself would have laid a curse on you. Its mechanism remains mostly intact, but the moisture is gone. It is bone dry."
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/start_empty
 	magazine = /obj/item/ammo_box/magazine/internal/boltaction/mosin/start_empty
@@ -992,7 +993,7 @@
 //about 2.4 seconds TTK, and good AP
 /obj/item/gun/ballistic/automatic/svd
 	name = "\improper SVD Rifle"
-	desc = "A rare beautiful thing, this semi-automatic designated marksman rifle will take the hat off an elite at two thousand yards, and they ain't cheap."
+	desc = "A rare, imposing sniper rifle chambered in 7.62, built to the highest standard by a pre-War fabrication plant. Rated to take the helmet off an Elite at two thousand yards."
 	icon = 'hl13/icons/obj/guns/wideguns.dmi'
 	icon_state = "svd"
 	inhand_icon_state = "svd"
@@ -1025,6 +1026,7 @@
 	var/firing_speed = 0.8 SECONDS
 
 /obj/item/gun/ballistic/automatic/svd/boss
+	desc = "A rare, imposing sniper rifle chambered in 7.62, built to the highest standard by a pre-War fabrication plant. The insignia of the PLF has been engraved into its stock, and its mechanisms have been thoroughly re-engineered. This is undoubtedly the personal rifle of a high-ranking officer of the PLF."
 	firing_speed = 0.6
 	fire_delay = 5
 
