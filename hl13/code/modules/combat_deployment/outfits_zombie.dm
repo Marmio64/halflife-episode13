@@ -267,7 +267,7 @@
 	display_name = "Gonarch (Support)"
 	desc = "You are the final stage of evolution for headcrabs. As a fully grown matriach, you specialize in giving birth to hordes of headcrabs, giving supportive fire through acid blasts, and charging down enemies in the open."
 
-	mob_to_be = /mob/living/simple_animal/hostile/asteroid/elite/gonarch
+	mob_to_be = /mob/living/simple_animal/hostile/asteroid/elite/gonarch/deployment
 
 /datum/outfit/deployment_loadout/xen/tier6/antlion_guardian
 	name = "Deployment: Antlion Guardian"

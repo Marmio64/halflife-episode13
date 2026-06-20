@@ -63,7 +63,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/hl2/engineer_radio/combine = 1,
+		/obj/item/hl2/engineer_radio/combine/turretless = 1,
 	)
 
 

@@ -132,7 +132,7 @@
 			if(DEPLOYMENT_TIER5_XEN < GLOB.deployment_xen_cash && GLOB.xen_tier_points < 8)
 				GLOB.xen_tier_points += 0.04 //one tier 5 every 50 seconds because this ticks once every 2 seconds
 				if(DEPLOYMENT_TIER5_EXTRA_CHANCE_XEN < GLOB.deployment_xen_cash)
-					GLOB.xen_tier_points += 0.025 //one tier 5 every 30 seconds now
+					GLOB.xen_tier_points += 0.04 //one tier 5 every 25 seconds now
 
 /obj/machinery/cash_deposit/proc/consume()
 	var/money_amount = 10

@@ -285,12 +285,18 @@
 	name = "Rebel Engineering Radio"
 	faction_belonging = REBEL_DEPLOYMENT_FACTION
 
+/obj/item/hl2/engineer_radio/rebel/turretless
+	name = "Rebel Low-Grade Engineering Radio"
+
 /obj/item/hl2/engineer_radio/rebel/filled
 	current_cash = 240
 
 /obj/item/hl2/engineer_radio/combine
 	name = "Combine Engineering Radio"
 	faction_belonging = COMBINE_DEPLOYMENT_FACTION
+
+/obj/item/hl2/engineer_radio/combine/turretless
+	name = "Combine Low-Grade Engineering Radio"
 
 /obj/item/hl2/engineer_radio/combine/filled
 	current_cash = 240
@@ -383,6 +389,20 @@
 			loadouts[initial(loadout.option_name)] = loadout
 	return loadouts
 
+/obj/item/hl2/engineer_radio/rebel/turretless/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/supply_beacon_option/sandbags,
+			/datum/supply_beacon_option/razorwire,
+			/datum/supply_beacon_option/woodplanks,
+			/datum/supply_beacon_option/explosive,
+		)
+		for(var/datum/supply_beacon_option/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.option_name)] = loadout
+	return loadouts
+
 /obj/item/hl2/engineer_radio/combine/generate_display_names()
 	var/static/list/loadouts
 	if(!loadouts)
@@ -393,6 +413,20 @@
 			/datum/supply_beacon_option/woodplanks,
 			/datum/supply_beacon_option/explosive,
 			/datum/supply_beacon_option/turret_combine,
+		)
+		for(var/datum/supply_beacon_option/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.option_name)] = loadout
+	return loadouts
+
+/obj/item/hl2/engineer_radio/combine/turretless/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/supply_beacon_option/sandbags,
+			/datum/supply_beacon_option/razorwire,
+			/datum/supply_beacon_option/woodplanks,
+			/datum/supply_beacon_option/explosive,
 		)
 		for(var/datum/supply_beacon_option/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.option_name)] = loadout

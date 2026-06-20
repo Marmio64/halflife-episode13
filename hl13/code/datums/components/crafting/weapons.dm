@@ -179,9 +179,9 @@
 	result = /obj/item/ammo_box/magazine/ak47
 	reqs = list(/obj/item/stack/bulletcasings = 6,
 				/obj/item/stack/sheet/halflife/bullets = 6,
-				/datum/reagent/fuel = 30)
+				/datum/reagent/fuel = 40)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
-	time = 12 SECONDS
+	time = 15 SECONDS
 	category = CAT_WEAPON_AMMO
 	crafting_interface = CRAFTING_BENCH_RELOADING
 

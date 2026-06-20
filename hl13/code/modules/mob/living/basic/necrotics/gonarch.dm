@@ -18,8 +18,8 @@
 	pixel_x = -32
 	base_pixel_x = -16
 	health_doll_icon = "broodmother"
-	maxHealth = 1250
-	health = 1250
+	maxHealth = 1200
+	health = 1200
 	obj_damage = 25
 	melee_damage_lower = 20
 	melee_damage_upper = 25
@@ -51,6 +51,10 @@
 	var/color_rage = COLOR_RED
 	var/color_notrage = COLOR_WHITE
 	var/thebaby = /mob/living/basic/halflife/headcrab/baby
+
+/mob/living/simple_animal/hostile/asteroid/elite/gonarch/deployment
+	maxHealth = 1400
+	health = 1400
 
 /mob/living/simple_animal/hostile/asteroid/elite/gonarch/Move()
 	if(charging)

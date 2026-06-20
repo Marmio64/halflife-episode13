@@ -82,7 +82,7 @@
 
 	backpack_contents = list(
 		/obj/item/crowbar/large = 1,
-		/obj/item/hl2/engineer_radio/rebel = 1,
+		/obj/item/hl2/engineer_radio/rebel/turretless = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment

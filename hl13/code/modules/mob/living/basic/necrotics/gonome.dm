@@ -37,7 +37,7 @@
 	var/fungal_nutrition = 50
 
 	///How long does it take to create a headcrab?
-	var/headcrab_delay = 3.5 SECONDS
+	var/headcrab_delay = 3.25 SECONDS
 
 	var/fully_grown = FALSE
 
@@ -127,7 +127,7 @@
 	maxHealth = 400
 	health = 400
 	speed = 1.2
-	headcrab_delay = 2.25 SECONDS
+	headcrab_delay = 2 SECONDS
 	melee_attack_cooldown = 1 SECONDS
 
 /mob/living/basic/halflife/zombie/gonome/complete/cash_gorged

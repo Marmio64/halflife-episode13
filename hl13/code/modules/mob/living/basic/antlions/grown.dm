@@ -253,6 +253,8 @@
 	var/datum/action/cooldown/spell/conjure/antlions/deployment/red/antlionsred
 	var/datum/action/cooldown/spell/conjure/antlions/deployment/blu/antlionsblu
 	deployment_faction = XEN_DEPLOYMENT_FACTION
+	maxHealth = 1100
+	health = 1100
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/Initialize(mapload)
 	. = ..()
