@@ -583,7 +583,7 @@
 		/obj/item/ammo_box/colta357 = list(PAYCHECK_CREW * 3, 5),
 		/obj/item/ammo_box/magazine/m4a1/service = list(PAYCHECK_CREW * 4, 5),
 		/obj/item/ammo_box/magazine/m4a1 = list(PAYCHECK_CREW * 6, 5),
-		/obj/item/ammo_box/magazine/ak47 = list(PAYCHECK_CREW * 6, 5),
+		/obj/item/ammo_box/magazine/ak47 = list(PAYCHECK_CREW * 6, 2),
 		/obj/item/ammo_box/strilka310/a762 = list(PAYCHECK_CREW * 2, 5),
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = list(PAYCHECK_CREW * 4, 5),
 		/obj/item/gun/ballistic/automatic/pistol/usp = list(PAYCHECK_CREW * 7, 2),

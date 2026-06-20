@@ -14,7 +14,7 @@ GLOBAL_VAR_INIT(deployment_progression_stage, 0)
 //In order for someone to get a high tier unit, they have to subtract from their sides tier points. If their side cant afford it, they dont get to.
 //If their side has a shit ton of tier points, they get a guaranteed high tier.
 GLOBAL_VAR_INIT(rebel_tier_points, 4)
-GLOBAL_VAR_INIT(combine_tier_points, 2)
+GLOBAL_VAR_INIT(combine_tier_points, 3)
 GLOBAL_VAR_INIT(xen_tier_points, 3)
 
 /obj/machinery/deployment_koth_flag
