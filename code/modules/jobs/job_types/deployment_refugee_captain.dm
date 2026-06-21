@@ -36,6 +36,7 @@
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
 	glasses = /obj/item/clothing/glasses/eyepatch
+	neck = /obj/item/clothing/mask/trench_whistle
 	id = null
 	accessory = /obj/item/clothing/accessory/rebel_dogtags/captain
 
