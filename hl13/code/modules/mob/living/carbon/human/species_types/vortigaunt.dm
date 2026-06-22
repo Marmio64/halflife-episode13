@@ -191,6 +191,7 @@
 	var/datum/action/cooldown/spell/conjure/antlion/extract_vort/super/red/bugbaitred //this feels bad
 	var/datum/action/cooldown/spell/conjure/antlion/extract_vort/super/blu/bugbaitblu
 	var/datum/action/cooldown/spell/conjure_item/infinite_guns/vort_blast/super/super_galunga
+	var/datum/action/cooldown/spell/teleport/radius_turf/blink/lesser/vortal/vortblink
 
 	var/deployment_faction = HIDDEN_DEPLOYMENT_FACTION //this feels bad and evil
 
@@ -229,12 +230,16 @@
 		bugbaitblu = new(C)
 		bugbaitblu.Grant(C)
 
+	vortblink = new(C)
+	vortblink.Grant(C)
+
 /datum/species/vortigaunt/extract_boss/on_species_loss(mob/living/carbon/C)
 	..()
 	vortrepulse.Remove(C)
 	vortwall.Remove(C)
 	super_vortheal.Remove(C)
 	vortbugbait.Remove(C)
+	vortblink.Remove(C)
 
 /datum/species/vortigaunt/hidden
 	name = "Hidden Vortigaunt"

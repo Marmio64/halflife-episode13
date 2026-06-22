@@ -521,6 +521,13 @@
 	desc = "A well maintained looking colt python. Just as accurate and powerful as any other colt, but the parts are better taken care of, allowing a faster firing rate."
 	fire_delay = 6
 
+/obj/item/gun/ballistic/revolver/coltpython/blued
+	name = "\improper blued python"
+	desc = "A member of the Python line of revolvers by Colt. This is a majestic looking firearm which looks like it has been maintained with the utmost care. The smooth frame is so free of damage, it almost makes you not even want to use it."
+	icon_state = "blued_python"
+	fire_delay = 6
+	projectile_damage_multiplier = 1.2
+
 // about 2.5 seconds TTK
 /obj/item/gun/ballistic/revolver/snubnose
 	name = "\improper snubnose revolver"

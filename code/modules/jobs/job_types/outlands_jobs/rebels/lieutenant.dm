@@ -41,7 +41,7 @@
 	head = /obj/item/clothing/head/beret/sec/poland
 	gloves = /obj/item/clothing/gloves/fingerless
 	back = /obj/item/storage/backpack/halflife/satchel
-	neck = /obj/item/clothing/mask/trench_whistle
+	neck = /obj/item/clothing/mask/whistle/trench_whistle
 
 	belt = /obj/item/melee/baton
 

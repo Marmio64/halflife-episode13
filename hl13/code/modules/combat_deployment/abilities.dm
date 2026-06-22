@@ -204,7 +204,7 @@
 	aoe_radius = 9
 
 	var/faction_buff = NO_FACTION
-	var/physical_heal = -25
+	var/physical_heal = -30
 
 /datum/action/cooldown/spell/aoe/rally/get_things_to_cast_on(atom/center)
 	var/list/things = list()

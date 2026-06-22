@@ -1,3 +1,4 @@
+GLOBAL_VAR_INIT(deployment_combine_lead_spawned, FALSE)
 
 /datum/job/deployment_metrocop_captain
 	title = JOB_DEPLOYMENT_METROCOP_CAPTAIN
@@ -71,7 +72,7 @@
 
 	implants = list(/obj/item/implant/mindshield, /obj/item/implant/biosig_ert/cp)
 
-	var/list/nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_MASK)
+	var/list/nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_MASK, ITEM_SLOT_BACK)
 
 /datum/outfit/job/deployment_metrocop_captain/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
@@ -128,3 +129,7 @@
 
 /datum/job/deployment_metrocop_captain/get_latejoin_spawn_point()
 	return pick(GLOB.deployments_metrocop)
+
+/datum/job/deployment_refugee_captain/after_spawn(mob/living/spawned, client/player_client)
+	. = ..()
+	GLOB.deployment_combine_lead_spawned = TRUE

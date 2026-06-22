@@ -1,3 +1,5 @@
+GLOBAL_VAR_INIT(deployment_rebels_lead_spawned, FALSE)
+
 /datum/job/deployment_refugee_captain
 	title = JOB_DEPLOYMENT_REFUGEE_CAPTAIN
 	description = "You are the leader of this resistance cell. Lead your men to victory, and tear down the combine's regime! Use your supply radio to call in unique stratagems."
@@ -31,12 +33,12 @@
 	belt = /obj/item/melee/baton
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/flashlight/seclite
-	head = /obj/item/clothing/head/beret/sec/poland
+	head = /obj/item/clothing/head/beret/sec/poland/cell_lead
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
 	glasses = /obj/item/clothing/glasses/eyepatch
-	neck = /obj/item/clothing/mask/trench_whistle
+	/obj/item/clothing/mask/whistle/trench_whistle
 	id = null
 	accessory = /obj/item/clothing/accessory/rebel_dogtags/captain
 
@@ -55,7 +57,7 @@
 
 	implants = list(/obj/item/implant/weapons_auth)
 
-	var/list/nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_EYES)
+	var/list/nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_EYES, ITEM_SLOT_BACK)
 
 /datum/job/deployment_refugee_captain/get_spawn_message_information()
 	var/list/info = list()
@@ -132,3 +134,7 @@
 
 /datum/job/deployment_refugee_captain/get_latejoin_spawn_point()
 	return pick(GLOB.deployments_refugee)
+
+/datum/job/deployment_refugee_captain/after_spawn(mob/living/spawned, client/player_client)
+	. = ..()
+	GLOB.deployment_rebels_lead_spawned = TRUE

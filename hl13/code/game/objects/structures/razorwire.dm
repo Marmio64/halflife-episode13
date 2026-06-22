@@ -16,6 +16,7 @@
 
 	armor_type = /datum/armor/razor_wire
 
+//razorwire is most weak to melee
 /datum/armor/razor_wire
 	bullet = 25
 	laser = 25
@@ -79,7 +80,10 @@
 	span_danger("You got entangled in the barbed wire!"), null, null, 5)
 	entangled.Immobilize(rand(30,40))
 	if(isanimal_or_basicmob(entangled))
-		entangled.Stun(rand(30,40), ignore_canstun = TRUE)
+		if(entangled.mob_size > MOB_SIZE_HUMAN)
+			entangled.Immobilize(rand(30,40), ignore_canstun = TRUE) //large mobs get immobilized only instead of full stunned
+		else
+			entangled.Stun(rand(30,40), ignore_canstun = TRUE)
 
 /obj/structure/razorwire/attackby(obj/item/I, mob/user, params)
 	. = ..()

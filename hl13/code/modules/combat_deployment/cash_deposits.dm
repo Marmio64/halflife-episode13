@@ -117,6 +117,9 @@
 				if(DEPLOYMENT_TIER5_EXTRA_CHANCE_COMBINE < GLOB.deployment_combine_cash)
 					GLOB.combine_tier_points += 0.04 //one tier 5 every 25 seconds now
 
+				if(GLOB.deployment_combine_lead_spawned == FALSE)
+					GLOB.combine_tier_points += 0.04 //an extra tier 5 every 50 seconds as pity for not having a TDM lead this whole time
+
 		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
 			if(GLOB.deployment_rebels_cash < (GLOB.deployment_combine_cash - 100))
 				GLOB.deployment_rebels_cash += 1
@@ -127,6 +130,9 @@
 				GLOB.rebel_tier_points += 0.04 //one tier 5 every 50 seconds because this ticks once every 2 seconds
 				if(DEPLOYMENT_TIER5_EXTRA_CHANCE_REBELS < GLOB.deployment_rebels_cash)
 					GLOB.rebel_tier_points += 0.025 //one tier 5 every 30 seconds now
+
+				if(GLOB.deployment_rebels_lead_spawned == FALSE)
+					GLOB.combine_tier_points += 0.04 //an extra tier 5 every 50 seconds as pity for not having a TDM lead this whole time
 
 		if(deployment_faction == XEN_DEPLOYMENT_FACTION)
 			if(DEPLOYMENT_TIER5_XEN < GLOB.deployment_xen_cash && GLOB.xen_tier_points < 8)
@@ -171,7 +177,24 @@
 	var/chosen = null
 
 	if(HAS_TRAIT(H, TRAIT_TDMCAPTAIN))
-		to_chat(H, span_warning("Team leadership cant upgrade their loadout."))
+		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			if(H.loadout_upgrade_available && DEPLOYMENT_TIER5_REBELS <= GLOB.deployment_rebels_cash)
+				to_chat(H, span_notice("Your upgraded revolver has been retrieved."))
+				var/turf/T = get_turf(H)
+				var/obj/item/I = new /obj/item/gun/ballistic/revolver/coltpython/blued(T)
+				H.put_in_hands(I)
+				H.loadout_upgrade_available = FALSE
+				return
+		if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+			if(H.loadout_upgrade_available != 5 && DEPLOYMENT_TIER5_COMBINE <= GLOB.deployment_combine_cash)
+				to_chat(H, span_notice("Your upgraded revolver has been retrieved."))
+				var/turf/T = get_turf(H)
+				var/obj/item/I = new /obj/item/gun/ballistic/revolver/coltpython/blued(T)
+				H.put_in_hands(I)
+				H.loadout_upgrade_available = FALSE
+				return
+
+		to_chat(H, span_warning("Team leadership cant upgrade their loadout. In addition, your upgraded revolver isn't available until Tier 5 or you've already collected it."))
 		return FALSE
 
 	if(H.combat_deployment_loadout_tier != 5 && H.combat_deployment_loadout_tier != 0 && H.deployment_faction == deployment_faction && H.loadout_upgrade_available)

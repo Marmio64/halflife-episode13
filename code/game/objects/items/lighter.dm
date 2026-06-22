@@ -1,6 +1,6 @@
 /obj/item/lighter
 	name = "\improper Lighter"
-	desc = "The zippo."
+	desc = "A respectable looking flip lighter that is easy to use."
 	icon = 'icons/obj/cigarettes.dmi'
 	icon_state = "zippo"
 	inhand_icon_state = "zippo"
@@ -33,9 +33,6 @@
 	/// A list of possible engraving overlays.
 	var/list/overlay_list = list(
 		"plain",
-		"dame",
-		"thirteen",
-		"snake",
 	)
 
 /obj/item/lighter/Initialize(mapload)

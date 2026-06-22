@@ -279,14 +279,16 @@
 	deployment_faction = HIDDEN_DEPLOYMENT_FACTION
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/red
-	maxHealth = 2000
-	health = 2000
+	maxHealth = 1800
+	health = 1800
+	melee_damage_upper = 60
 	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
 	deployment_faction = REBEL_DEPLOYMENT_FACTION
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/blu
-	maxHealth = 2000
-	health = 2000
+	maxHealth = 1800
+	health = 1800
+	melee_damage_upper = 60
 	faction = list(FACTION_COMBINE)
 	deployment_faction = COMBINE_DEPLOYMENT_FACTION
 

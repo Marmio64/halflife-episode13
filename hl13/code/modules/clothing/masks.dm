@@ -466,17 +466,11 @@
 
 #undef PHRASE_COOLDOWN
 
-/obj/item/clothing/mask/trench_whistle
+/obj/item/clothing/mask/whistle/trench_whistle
 	name = "trench whistle"
 	desc = "A piece of historical hardware that has recently come back into common use, frequently found around the necks of PLF commanders. Charge!"
-	icon_state = "whistle"
-	inhand_icon_state = null
-	slot_flags = ITEM_SLOT_MASK|ITEM_SLOT_NECK
-	w_class = WEIGHT_CLASS_TINY
-	actions_types = list(/datum/action/item_action/charge)
-	COOLDOWN_DECLARE(whistle_cooldown)
 
-/obj/item/clothing/mask/whistle/ui_action_click(mob/user, action)
+/obj/item/clothing/mask/whistle/trench_whistle/ui_action_click(mob/user, action)
 	if(!COOLDOWN_FINISHED(src, whistle_cooldown))
 		return
 	COOLDOWN_START(src, whistle_cooldown, 10 SECONDS)

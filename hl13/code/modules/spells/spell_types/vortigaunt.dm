@@ -202,3 +202,8 @@
 /datum/action/cooldown/spell/charge/cast(mob/living/cast_on)
 	cast_on.adjust_nutrition(-75)
 	. = ..()
+
+/datum/action/cooldown/spell/teleport/radius_turf/blink/lesser/vortal
+	name = "Vortal Blink"
+	desc = "Use an erratic quick burst of vortal energy to displace your position to that of a nearby one, effectively teleporting you to random nearby tile. Be careful to not teleport yourself somewhere dangerous..."
+	cooldown_time = 10 SECONDS

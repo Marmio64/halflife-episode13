@@ -93,7 +93,7 @@
 
 /mob/living/basic/halflife/zombie/deployment
 	speed = 1.1
-	melee_attack_cooldown = 1.25 SECONDS
+	melee_attack_cooldown = 1.2 SECONDS
 
 /mob/living/basic/halflife/zombie/zombine
 	name = "Zombine"
@@ -220,7 +220,7 @@
 
 /mob/living/basic/halflife/zombie/engineer/deployment
 	melee_attack_cooldown = 1.5 SECONDS
-	obj_damage = 25
+	obj_damage = 30
 	melee_damage_upper = 28
 
 /mob/living/basic/halflife/zombie/infestation_control
@@ -347,6 +347,7 @@
 	armour_penetration = 10
 	maxHealth = 125
 	health = 125
+	fungalheal_amt = 0.05
 
 /// Returns a list of actions and blackboard keys to pass into `grant_actions_by_list`.
 /mob/living/basic/halflife/zombie/fast/proc/get_innate_abilities()
