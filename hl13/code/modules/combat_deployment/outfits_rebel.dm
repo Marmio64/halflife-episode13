@@ -977,7 +977,7 @@
 	head = /obj/item/clothing/head/beret/sec/poland
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	shoes = /obj/item/clothing/shoes/boots
-	neck = /obj/item/clothing/mask/whistle/trench_whistle/trench_whistle
+	neck = /obj/item/clothing/mask/whistle/trench_whistle
 
 	back = /obj/item/storage/backpack/halflife/satchel
 
