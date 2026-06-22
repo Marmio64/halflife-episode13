@@ -38,7 +38,7 @@ GLOBAL_VAR_INIT(deployment_rebels_lead_spawned, FALSE)
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
 	glasses = /obj/item/clothing/glasses/eyepatch
-	/obj/item/clothing/mask/whistle/trench_whistle
+	neck = /obj/item/clothing/mask/whistle/trench_whistle
 	id = null
 	accessory = /obj/item/clothing/accessory/rebel_dogtags/captain
 
