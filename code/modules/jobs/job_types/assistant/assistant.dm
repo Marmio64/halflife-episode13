@@ -105,8 +105,6 @@ Assistant
 			ID.assignment = "Prisoner"
 			ID.update_label()
 
-		return FALSE
-
 	var/cell = "NULL"
 
 	if(length(GLOB.availablecells) > 0)
