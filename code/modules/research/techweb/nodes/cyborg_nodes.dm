@@ -27,21 +27,14 @@
 /datum/techweb_node/cybernetics
 	id = TECHWEB_NODE_CYBERNETICS
 	display_name = "Cybernetics"
-	description = "Sapient robots with preloaded tool modules and programmable laws."
+	description = "Pave the way for advanced cybernetic limb replacements."
 	prereq_ids = list(TECHWEB_NODE_AUGMENTATION)
 	design_ids = list(
-		"robocontrol",
-		"borgupload",
 		"cyborgrecharger",
-		"mmi_posi",
-		"mmi",
-		"mmi_m",
 		"advanced_l_arm",
 		"advanced_r_arm",
 		"advanced_l_leg",
 		"advanced_r_leg",
-		"borg_upgrade_rename",
-		"borg_upgrade_restart",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SCIENCE)
@@ -54,16 +47,11 @@
 	prereq_ids = list(TECHWEB_NODE_AUGMENTATION)
 	design_ids = list(
 		"skill_station",
-		"implant_trombone",
 		"implant_chem",
 		"implant_tracking",
-		"implant_exile",
-		"implant_beacon",
-		"implant_bluespace",
 		"implantcase",
 		"implanter",
 		"locator",
-		"c38_trac",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SECURITY, RADIO_CHANNEL_MEDICAL)

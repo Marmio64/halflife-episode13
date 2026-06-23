@@ -101,7 +101,7 @@
 
 /obj/item/choice_beacon/cpomilestone
 	name = "CPO Milestone Reward Beacon"
-	desc = "A reward incentive for CPO, it seems the Combine mostly filled the market with a bunch of surplus gear they had no use for. This one has a universal cost of 2 Requisition points."
+	desc = "A reward incentive for CPO, it seems the Combine mostly filled the market with a bunch of surplus gear they had no use for. This one has a universal cost of 3 Requisition points."
 	company_source = "Overwatch-Dispatch"
 	company_message = span_bold("Your choice has been selected, and we will now be deducting requisition points for the delivery cost.")
 	w_class = WEIGHT_CLASS_TINY
@@ -113,7 +113,7 @@
 	if(C.registered_account)
 		account = C.registered_account
 
-	if (2 <= account.requisition_points)
+	if (3 <= account.requisition_points)
 		return TRUE
 
 	playsound(src, 'sound/machines/buzz/buzz-sigh.ogg', 40, TRUE)
@@ -135,7 +135,7 @@
 
 /obj/item/choice_beacon/cpomilestone/consume_use(obj/choice_path, mob/living/user)
 	user.get_idcard(TRUE)
-	account.requisition_points -= 2
+	account.requisition_points -= 3
 	to_chat(user, span_hear("You hear something crackle from the beacon for a moment before a voice speaks. \
 		\"Please stand by for a message from [company_source]. Message as follows: [company_message] Message ends.\""))
 
@@ -150,7 +150,7 @@
 
 /obj/item/choice_beacon/cpomilestone/dvl
 	name = "DvL Combine Surplus Beacon"
-	desc = "A link beacon with a nearby Overwatch reserve, capable of transporting specialized gear not normally stocked to officers. This was entrusted with the Division Lead solely to reward capable CPO or use in emergencies- though each use will invoke a penalty of 2 requisition points to encourage proper use."
+	desc = "A link beacon with a nearby Overwatch reserve, capable of transporting specialized gear not normally stocked to officers. This was entrusted with the Division Lead solely to reward capable CPO or use in emergencies- though each use will invoke a penalty of 3 requisition points to encourage proper use."
 	uses = 5
 
 /obj/item/choice_beacon/ingredient

@@ -324,11 +324,13 @@
 			new /obj/item/clothing/head/hats/bowler(src)
 			new /obj/item/melee/baton(src)
 			new /obj/item/reagent_containers/cup/glass/mug/tea(src)
+			new /obj/item/reagent_containers/cup/glass/mug/tea(src)
 
 		if(METRO_POLAND)
 			new /obj/item/clothing/suit/armor/civilprotection/polishpolice(src)
 			new /obj/item/clothing/head/costume/polishpolice(src)
 			new /obj/item/melee/baton(src)
+			new /obj/item/food/pierogi_ration(src)
 
 /obj/item/storage/box/combatchefkit // Admin Only
 	name = "Combat Chef Cooking Starter Kit"

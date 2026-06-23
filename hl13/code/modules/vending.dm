@@ -359,3 +359,24 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/food_dispensery, 32)
 
 	default_price = 14
 	extra_price = 35
+
+/obj/machinery/vending/goods_dispensery/city
+	products = list(/obj/item/clothing/under/citizen = 3,
+					/obj/item/clothing/suit/bluejacket = 5,
+					/obj/item/camera_film = 3,
+					/obj/item/camera = 3,
+					/obj/item/flashlight = 5,
+					/obj/item/clothing/head/beanie/black = 3,
+					/obj/item/clothing/head/flatcap = 2,
+					/obj/item/lighter/greyscale = 4,
+					/obj/item/storage/halflife/keyring = 4,
+					/obj/item/storage/wallet = 6,
+					/obj/item/radio/off/halflife = 2,
+					/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
+					/obj/item/stack/sticky_tape = 1,
+					/obj/item/stack/sheet/cloth = 8,
+					/obj/item/storage/halflife/suitcase = 6,
+					/obj/item/storage/fancy/cigarettes/halflife = 8,
+					/obj/item/storage/halflife/pill_bottle/antifatigue = 4,
+					/obj/item/food/nutripaste = 3,
+					/obj/item/clothing/gloves/fingerless = 3)

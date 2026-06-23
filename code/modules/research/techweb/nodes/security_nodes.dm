@@ -4,11 +4,7 @@
 	display_name = "Basic Arms"
 	description = "Ballistics can be unpredictable here."
 	design_ids = list(
-		"foam_dart",
 		"sec_beanbag_slug",
-		"sec_dart",
-		"sec_Islug",
-		"sec_rshot",
 	)
 
 /datum/techweb_node/sec_equip

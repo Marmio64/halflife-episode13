@@ -70,17 +70,3 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	discount_experiments = list(/datum/experiment/autopsy/nonhuman = TECHWEB_TIER_3_POINTS)
 	announce_channels = list(RADIO_CHANNEL_MEDICAL)
-
-/datum/techweb_node/surgery_tools
-	id = TECHWEB_NODE_SURGERY_TOOLS
-	display_name = "Advanced Surgery Tools"
-	description = "Surgical instruments of dual purpose for quick operations."
-	prereq_ids = list(TECHWEB_NODE_SURGERY_EXP)
-	design_ids = list(
-		"laserscalpel",
-		"searingtool",
-		"mechanicalpinches",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
-	discount_experiments = list(/datum/experiment/autopsy/xenomorph = TECHWEB_TIER_4_POINTS)
-	announce_channels = list(RADIO_CHANNEL_MEDICAL)

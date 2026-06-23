@@ -830,7 +830,7 @@
 "btm" = (
 /obj/structure/railing/halflife/solo,
 /turf/open/floor/plating/indoor/tile,
-/area/halflife/outdoors/roofs)
+/area/halflife/indoors/scienceunion)
 "btA" = (
 /obj/structure/table/halflife/no_smooth/large/wood/desk,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -3168,7 +3168,9 @@
 /area/halflife/outdoors/tracks)
 "feL" = (
 /obj/structure/table/halflife/no_smooth/metal,
-/mob/living/simple_animal/halflife/larry,
+/mob/living/simple_animal/halflife/larry{
+	desc = "A supposedly debeaked headcrab."
+	},
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/scienceunion)
 "feR" = (
@@ -6881,8 +6883,9 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/distributioncenter)
 "kYt" = (
+/obj/machinery/rnd/destructive_analyzer,
 /turf/open/floor/plating/indoor/tile,
-/area/halflife/outdoors/roofs)
+/area/halflife/indoors/scienceunion)
 "kYA" = (
 /turf/open/floor/plating/indoor/metal/walkway{
 	dir = 1
@@ -8167,6 +8170,9 @@
 /area/halflife/outdoors/alley)
 "mWP" = (
 /obj/structure/closet/halflife,
+/obj/item/clothing/under/citizen/full_sensors/prisoner{
+	name = "prisoner uniform"
+	},
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/halflife/indoors/townhall/civilprotection/prison)
 "mXf" = (
@@ -9839,7 +9845,7 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/alley)
 "pNv" = (
-/obj/structure/frame/machine,
+/obj/machinery/rnd/production/circuit_imprinter/department/science,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
 "pNG" = (
@@ -9932,6 +9938,15 @@
 /area/halflife/indoors)
 "pTM" = (
 /obj/structure/closet/secure_closet/halflife/security,
+/obj/item/clothing/under/citizen/full_sensors/prisoner{
+	name = "prisoner uniform"
+	},
+/obj/item/clothing/under/citizen/full_sensors/prisoner{
+	name = "prisoner uniform"
+	},
+/obj/item/clothing/under/citizen/full_sensors/prisoner{
+	name = "prisoner uniform"
+	},
 /obj/item/stack/credit_voucher,
 /obj/item/stack/credit_voucher,
 /obj/item/stack/credit_voucher,
@@ -10133,6 +10148,10 @@
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/restaurant)
+"qhC" = (
+/obj/machinery/rnd/production/protolathe/department/science,
+/turf/open/floor/plating/indoor/tile,
+/area/halflife/indoors/scienceunion)
 "qhE" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	dir = 8
@@ -11174,7 +11193,7 @@
 /area/halflife/indoors/apartments/primary)
 "rQY" = (
 /obj/machinery/light/small/directional/north,
-/obj/structure/frame/machine,
+/obj/machinery/computer/rdconsole,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
 "rRD" = (
@@ -12334,7 +12353,7 @@
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "tKt" = (
-/obj/structure/window/fulltile/halflife/combine,
+/obj/structure/window/fulltile/halflife/nosmooth/generic,
 /turf/open/floor/plating/indoor/tile/navy,
 /area/halflife/indoors/scienceunion)
 "tKD" = (
@@ -12391,7 +12410,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/indoor/tile,
-/area/halflife/outdoors/roofs)
+/area/halflife/indoors/scienceunion)
 "tMD" = (
 /obj/machinery/vending/keyvendor/directional/north,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -13720,7 +13739,7 @@
 	id = "misclab";
 	name = "test chamber blast door"
 	},
-/obj/structure/window/fulltile/halflife/combine,
+/obj/structure/window/fulltile/halflife/nosmooth/generic,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/scienceunion)
 "vLf" = (
@@ -45103,7 +45122,7 @@ aZN
 aZN
 aZN
 tfs
-pNv
+kYt
 alO
 alO
 bob
@@ -45391,7 +45410,7 @@ bDA
 bDA
 bDA
 tfs
-pNv
+qhC
 alO
 eMA
 alO
@@ -62824,7 +62843,7 @@ ovF
 ovF
 ovF
 tMx
-kYt
+alO
 btm
 ovF
 ovF
@@ -62968,7 +62987,7 @@ ovF
 ovF
 ftI
 tMx
-kYt
+alO
 btm
 ftI
 ovF

@@ -46,7 +46,7 @@
 			playsound(loc, 'hl13/sound/machines/atm/cardreader_read.ogg', 50)
 			visible_message("<span class='warning'>Incorrect Password.</span>", null, null, 5, null, null, null, null, TRUE)
 			return
-		var/nextquestion = input(user, "Please select a function:", "Function Selection") as null|anything in list("withdraw", "change password", "direct deposit", "transfer into long term account", "withdraw from longterm account")
+		var/nextquestion = input(user, "Please select a function:", "Function Selection") as null|anything in list("withdraw", "change password", "direct deposit", "transfer into long term account", "withdraw from longterm account", "use longterm account for rankpoints")
 		switch(nextquestion)
 			if("withdraw")
 				var/withdrawfund = input(user, "Please select the amount to withdraw:", "Withdraw Money") as null|num
@@ -142,6 +142,31 @@
 				successful_transaction()
 				HC.amount = withdrawfund
 				HC.update_icon_state()
+				user.client.prefs.save_preferences()
+				return
+			if("use longterm account for rankpoints")
+				if(!HAS_MIND_TRAIT(user, TRAIT_MINDSHIELD))
+					to_chat(user, span_warning("You are not eligible for rank point modifications."))
+					return
+				var/currentrankpoints = user.client.prefs.read_preference(/datum/preference/numeric/rankpoints)
+				var/longtermbalance = user.client.prefs.read_preference(/datum/preference/numeric/longtermaccount)
+				to_chat(user, span_notice("You currently have [currentrankpoints] rank points and [longtermbalance] credits in your longterm account."))
+				to_chat(user, span_notice("You can purchase rankpoints for 30 credits per point, so long as you have 25 or less rank points."))
+				var/points_to_buy = input(user, "How many points would you like to try to buy?", "Rank Points to Buy") as null|num
+				if(points_to_buy < 1)
+					to_chat(user, span_notice("Cancelled."))
+					return
+				if((points_to_buy+currentrankpoints) > 25)
+					to_chat(user, span_warning("You may only purchase rank points up to the amount of 25."))
+					return
+				if(user.client.prefs.read_preference(/datum/preference/numeric/longtermaccount) < (points_to_buy*30))
+					to_chat(user, span_notice("Your long term account doesn't have enough credits to cover this."))
+					return
+
+
+				user.client.prefs.write_preference(GLOB.preference_entries[/datum/preference/numeric/longtermaccount], longtermbalance -= points_to_buy*30)
+				user.client.prefs.write_preference(GLOB.preference_entries[/datum/preference/numeric/rankpoints], currentrankpoints += points_to_buy)
+				successful_transaction()
 				user.client.prefs.save_preferences()
 				return
 	if(istype(W, /obj/item/holochip))

@@ -3,8 +3,8 @@
 	description = "Operate your miniature science station under the supervision of the labor lead, requesting assistants if necessary."
 	department_head = list(JOB_RESEARCH_DIRECTOR)
 	faction = FACTION_STATION
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 1
+	spawn_positions = 1
 	supervisors = SUPERVISOR_RD
 	exp_requirements = 60
 	exp_required_type = EXP_TYPE_CREW
@@ -25,16 +25,14 @@
 		/datum/job_department/science,
 		)
 
-	family_heirlooms = list(/obj/item/toy/plush/slimeplushie)
+	family_heirlooms = list(/obj/item/halflife/dna_probe)
 
 	mail_goodies = list(
 		/obj/item/raw_anomaly_core/random = 10,
 		/obj/item/disk/design_disk/bepis = 2,
 	)
 	rpg_title = "Thaumaturgist"
-	//job_flags = STATION_JOB_FLAGS
-
-	job_tone = "boom"
+	job_flags = JOB_EQUIP_RANK|JOB_NEW_PLAYER_JOINABLE|JOB_REOPEN_ON_ROUNDSTART_LOSS|JOB_ASSIGN_QUIRKS|JOB_CITY_JOB
 
 	ration_bonus = 1
 

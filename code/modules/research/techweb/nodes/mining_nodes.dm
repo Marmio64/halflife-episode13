@@ -8,18 +8,11 @@
 		"shovel",
 		"conveyor_switch",
 		"conveyor_belt",
-		"mass_driver",
 		"recycler",
 		"stack_machine",
 		"stack_console",
 		"autolathe",
 		"rglass",
-		"plasmaglass",
-		"plasmareinforcedglass",
-		"plasteel",
-		"titaniumglass",
-		"plastitanium",
-		"plastitaniumglass",
 	)
 
 /datum/techweb_node/mining
@@ -29,9 +22,6 @@
 	prereq_ids = list(TECHWEB_NODE_MATERIAL_PROC)
 	design_ids = list(
 		"cargoexpress",
-		"brm",
-		"b_smelter",
-		"b_refinery",
 		"ore_redemption",
 		"mining_scanner",
 		"mech_mscanner",
@@ -40,7 +30,6 @@
 		"drill",
 		"beacon",
 		"telesci_gps",
-		"mesons",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(RADIO_CHANNEL_SUPPLY)

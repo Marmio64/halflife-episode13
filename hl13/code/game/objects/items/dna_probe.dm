@@ -17,6 +17,7 @@
 	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
 	icon_state = "sampler"
 	item_flags = NOBLUDGEON
+	w_class = WEIGHT_CLASS_SMALL
 	///What sources of DNA this sampler can extract from.
 	var/allowed_scans = DNA_PROBE_SCAN_PLANTS | DNA_PROBE_SCAN_ANIMALS | DNA_PROBE_SCAN_HUMANS
 	///List of all Animal DNA scanned with this sampler.
