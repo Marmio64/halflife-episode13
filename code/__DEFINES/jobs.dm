@@ -48,7 +48,7 @@
  */
 
 //No department
-#define JOB_ASSISTANT "Prisoner"
+#define JOB_ASSISTANT "Citizen"
 #define JOB_PRISONER "Refugee"
 
 #define JOB_DEPLOYMENT_REFUGEE "Refugee Rebel"

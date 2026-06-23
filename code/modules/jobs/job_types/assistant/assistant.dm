@@ -99,6 +99,14 @@ Assistant
 
 		return FALSE
 
+	else
+		if(istype(user.wear_id, /obj/item/card/id))
+			var/obj/item/card/id/ID = user.wear_id
+			ID.assignment = "Prisoner"
+			ID.update_label()
+
+		return FALSE
+
 	var/cell = "NULL"
 
 	if(length(GLOB.availablecells) > 0)
