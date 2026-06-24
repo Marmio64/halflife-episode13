@@ -134,7 +134,7 @@
 
 /obj/item/storage/belt/holster/bullsquid/PopulateContents()
 	generate_items_inside(list(
-		/obj/item/gun/ballistic/revolver/coltpython/well_crafted = 2,
+		/obj/item/gun/ballistic/revolver/coltpython/blued = 2,
 	), src)
 
 /obj/item/organ/tongue/bullsquid
