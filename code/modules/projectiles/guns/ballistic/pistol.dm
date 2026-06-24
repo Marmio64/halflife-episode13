@@ -105,10 +105,10 @@
 	simulated_hit.firer = throwingdatum.get_thrower()
 	simulated_hit.on_hit(hit_atom)
 
-// about 2 seconds TTK (time to knock/crit)
+// about 2.25 seconds TTK, 5 shots (time to knock/crit)
 /obj/item/gun/ballistic/automatic/pistol/m1911
 	name = "\improper M1911"
-	desc = "A classic .45 handgun with a small magazine capacity."
+	desc = "An American classic .45 handgun with a small magazine capacity that managed to make its way here in Poland. It packs a surprisingly large punch for its size, but given its foreign status has ammo that is hard to come by."
 	icon_state = "m1911"
 	w_class = WEIGHT_CLASS_NORMAL
 	accepted_magazine_type = /obj/item/ammo_box/magazine/m45
@@ -123,7 +123,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/m1911/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.4 SECONDS, overtime_penalty_increase = 0.8)
+	AddComponent(/datum/component/automatic_fire, 0.45 SECONDS, overtime_penalty_increase = 0.8)
 
 /**
  * Weak 1911 for syndicate chimps. It comes in a 4 TC kit.

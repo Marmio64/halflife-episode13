@@ -2,7 +2,7 @@
 
 /obj/projectile/bullet/c45
 	name = ".45 bullet"
-	damage = 30
+	damage = 28
 	wound_bonus = -35
 	wound_falloff_tile = -10
 

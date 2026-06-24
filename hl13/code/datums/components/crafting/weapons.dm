@@ -55,7 +55,7 @@
 	result = /obj/item/ammo_box/magazine/m45
 	reqs = list(/obj/item/stack/bulletcasings = 2,
 				/obj/item/stack/sheet/halflife/bullets = 2,
-				/datum/reagent/fuel = 15)
+				/datum/reagent/fuel = 20)
 	tool_behaviors = list(TOOL_SCREWDRIVER)
 	time = 6 SECONDS
 	category = CAT_WEAPON_AMMO
