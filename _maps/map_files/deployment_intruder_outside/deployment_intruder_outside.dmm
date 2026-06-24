@@ -12,6 +12,7 @@
 "bO" = (/obj/machinery/intruder_deliveryzone/misc_supplies/low_capacity,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/storagea)
 "bU" = (/obj/item/stack/sheet/scrap_metal,/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/intruder/outside)
 "cb" = (/obj/machinery/escape_vent{pixel_y = -32},/obj/effect/landmark/hidden_spawnpoint,/turf/open/floor/plating/indoor/lino,/area/halflife/indoors/intruder/library)
+"ck" = (/obj/item/radio/intercom/directional/north,/turf/open/floor/plating/indoor/metal/industrial,/area/halflife/indoors/intruder/library)
 "cl" = (/obj/machinery/intruder_deliveryzone/weapons_and_ammo,/turf/open/floor/plating/indoor/metal/smooth,/area/halflife/indoors/intruder/storagesilo)
 "cq" = (/obj/structure/closet/halflife{anchored = 1},/obj/effect/spawner/random/halflife/loot/intruder,/obj/effect/spawner/random/halflife/loot/intruder,/obj/effect/spawner/random/halflife/loot/intruder,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/outside)
 "cr" = (/turf/cordon,/area/halflife/indoors/intruder/outside)
@@ -58,6 +59,7 @@
 "gP" = (/obj/structure/window/fulltile/halflife/nosmooth/generic,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/guardtower)
 "gU" = (/obj/machinery/light/small/directional/south,/turf/open/floor/plating/indoor/lino,/area/halflife/indoors/intruder/library)
 "hb" = (/obj/machinery/telecomms/hub/preset,/turf/open/floor/plating/ground/sidewalk,/area/halflife/indoors/intruder/outside)
+"hc" = (/obj/item/radio/intercom/directional/east,/turf/open/floor/plating/indoor/metal/combine/alt2,/area/halflife/indoors/intruder/storagesilo)
 "hh" = (/obj/machinery/light/small/directional/north,/turf/open/floor/plating/indoor/woodc/mosaic,/area/halflife/indoors/intruder/storageb)
 "hm" = (/obj/structure/closet/halflife{anchored = 1},/obj/effect/spawner/random/halflife/loot/intruder,/turf/open/floor/plating/indoor/tiled10,/area/halflife/indoors/intruder/medbay)
 "ho" = (/obj/machinery/intruder_deliveryzone/coffee_and_rations/low_capacity,/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/miscellaneous_room)
@@ -86,6 +88,7 @@
 "iX" = (/obj/effect/koth_grace_field,/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/intruder/outside)
 "jb" = (/obj/structure/window/fulltile/halflife/nosmooth/generic{dir = 4},/obj/machinery/light/small/directional/south,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/guardtower)
 "ju" = (/turf/open/floor/plating/indoor/tile,/area/halflife/indoors/intruder/entrance)
+"jA" = (/obj/item/radio/intercom/directional/south,/obj/structure/railing/halflife/solo{dir = 8},/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/storageb)
 "jC" = (/obj/structure/ladder/halflife/upwards,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/miscellaneous_room)
 "jI" = (/obj/structure/closet/halflife{anchored = 1},/obj/effect/spawner/random/halflife/loot/intruder,/turf/open/floor/plating/indoor/metal/smooth,/area/halflife/indoors/intruder/storagesilo)
 "jK" = (/obj/structure/closet/cardboard/solid,/turf/open/floor/plating/ground/sidewalk/cobblestone,/area/halflife/indoors/intruder/outside)
@@ -169,6 +172,7 @@
 "qV" = (/obj/structure/railing/halflife/solo{dir = 8},/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/library)
 "ra" = (/obj/machinery/light/small/directional/north,/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/library)
 "rb" = (/obj/structure/halflife/pipes/vent,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/storagea)
+"rc" = (/obj/item/radio/intercom/directional/north,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/intruder/barracks)
 "ri" = (/obj/structure/closet/halflife{anchored = 1},/obj/effect/spawner/random/halflife/loot/intruder,/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/library)
 "rq" = (/obj/machinery/light/directional/south,/turf/open/floor/plating/indoor/tiled10,/area/halflife/indoors/intruder/medbay)
 "rt" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 9},/obj/structure/railing/halflife/full{dir = 8},/turf/open/openspace,/area/halflife/indoors/intruder/guardtower)
@@ -261,7 +265,7 @@
 "xV" = (/obj/machinery/combine_walllight/directional/east,/turf/open/openspace,/area/halflife/indoors/intruder/storagesilo)
 "xW" = (/obj/machinery/door/unpowered/halflife/wood,/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/library)
 "ye" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/storageb)
-"yl" = (/obj/item/hl13_small_flag/combine,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/entrance)
+"yl" = (/obj/item/hl13_small_flag/combine,/obj/item/radio/intercom/directional/north,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/entrance)
 "yv" = (/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/outside)
 "yy" = (/obj/structure/halflife/breencast,/turf/closed/wall/halflife/concrete,/area/halflife/indoors/intruder/outside)
 "yD" = (/obj/machinery/light/small/directional/east,/turf/open/floor/plating/indoor/carpet/blue,/area/halflife/indoors/intruder/office)
@@ -269,6 +273,7 @@
 "yF" = (/turf/open/openspace,/area/halflife/indoors/intruder/medbay)
 "yG" = (/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/miscellaneous_room)
 "yH" = (/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/guardtower)
+"yK" = (/obj/item/radio/intercom/directional/north,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/indoors/intruder/office)
 "yN" = (/obj/structure/table/halflife/metal/heavy,/obj/machinery/button/door{id = "rebel_bunker_entrance_east"; name = "storage shutters"; desc = "A door remote control switch. The controls have been deactivated ever since an intruder was reported."},/turf/open/floor/plating/indoor/metal/combine/alt2,/area/halflife/indoors/intruder/storagesilo)
 "yU" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 9},/obj/structure/railing/halflife/full{dir = 8},/turf/open/openspace,/area/halflife/indoors/intruder/storagesilo)
 "zk" = (/obj/structure/halflife/barrel/double/grey/two,/turf/open/floor/plating/indoor/metal/industrial,/area/halflife/indoors/intruder/library)
@@ -384,7 +389,7 @@
 "Je" = (/obj/machinery/door/unpowered/halflife/metal{dir = 4},/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/indoors/intruder/medbay)
 "Jh" = (/obj/machinery/door/unpowered/halflife/wood{dir = 4},/turf/open/floor/plating/indoor/carpet/green,/area/halflife/indoors/intruder/office)
 "Ji" = (/obj/structure/halflife/pot/plant,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/indoors/intruder/medbay)
-"Jk" = (/obj/structure/desk_bell,/turf/open/floor/plating/indoor/tiled9,/area/halflife/indoors/intruder/medbay)
+"Jk" = (/obj/structure/desk_bell,/obj/item/radio/intercom/directional/north,/turf/open/floor/plating/indoor/tiled9,/area/halflife/indoors/intruder/medbay)
 "Jm" = (/obj/machinery/intruder_deliveryzone/research_equipment,/turf/open/floor/plating/indoor/metal/smooth,/area/halflife/indoors/intruder/storagesilo)
 "Jr" = (/obj/effect/landmark/navigate_destination/halflife/intruder/lockerroom,/turf/open/floor/plating/ground/sidewalk,/area/halflife/indoors/intruder/outside)
 "Jw" = (/obj/effect/turf_decal/halflife/covering/wallpaper/green,/turf/closed/wall/halflife/brick,/area/halflife/indoors/intruder/office)
@@ -421,7 +426,7 @@
 "MK" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 8},/turf/open/openspace,/area/halflife/indoors/intruder/storagesilo)
 "MM" = (/obj/machinery/door/unpowered/halflife/wood{dir = 4},/turf/open/floor/plating/indoor/carpet,/area/halflife/indoors/intruder/library)
 "MN" = (/obj/structure/halflife/fence,/obj/structure/halflife/fence,/turf/open/floor/plating/ground/grass,/area/halflife/indoors/intruder/outside)
-"MS" = (/obj/structure/table/halflife/no_smooth/large/metal/desk/alt,/obj/effect/spawner/random/halflife/loot/intruder,/turf/open/floor/plating/indoor/tile/kitchen,/area/halflife/indoors/intruder/lab)
+"MS" = (/obj/structure/table/halflife/no_smooth/large/metal/desk/alt,/obj/effect/spawner/random/halflife/loot/intruder,/obj/item/radio/intercom/directional/north,/turf/open/floor/plating/indoor/tile/kitchen,/area/halflife/indoors/intruder/lab)
 "Nj" = (/obj/item/paper/paperslip{default_raw_text = "The 'Metal Synth' Project has been put on hold for the time being. The Combine thanks you for your cooperation."},/turf/open/floor/plating/indoor/metal/combine,/area/halflife/indoors/intruder/storagesilo)
 "Nr" = (/obj/machinery/door/unpowered/halflife/metal{dir = 4},/turf/open/floor/plating/indoor/metal/industrial,/area/halflife/indoors/intruder/office)
 "Nw" = (/obj/structure/table/halflife/no_smooth/wood,/obj/structure/halflife/trash/books/pile,/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/library)
@@ -457,6 +462,7 @@
 "Qn" = (/obj/structure/flora/tree/halflife/plain/thin,/turf/open/floor/plating/ground/grass,/area/halflife/indoors/intruder/outside)
 "QC" = (/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/indoors/intruder/medbay)
 "QN" = (/obj/effect/landmark/intruder_guncase,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/guardtower)
+"Rc" = (/obj/structure/railing/halflife/solo{dir = 8},/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/storageb)
 "Rf" = (/obj/machinery/telecomms/server/presets/common/birdstation,/turf/open/floor/plating/ground/sidewalk,/area/halflife/indoors/intruder/outside)
 "Rg" = (/obj/machinery/door/poddoor/shutters/indestructible,/turf/open/floor/plating/indoor/metal/smooth,/area/halflife/indoors/intruder/storagesilo)
 "Rh" = (/obj/effect/landmark/intruder_guncase,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/storagea)
@@ -475,6 +481,7 @@
 "SW" = (/turf/closed/wall/halflife/brick,/area/halflife/indoors/intruder/barracks)
 "Tk" = (/obj/effect/spawner/random/halflife/loot/intruder,/turf/open/floor/plating/indoor/carpet,/area/halflife/indoors/intruder/office)
 "Tp" = (/obj/machinery/light/small/cyan/directional/east,/turf/open/floor/plating/ground/sidewalk,/area/halflife/indoors/intruder/outside)
+"Tq" = (/obj/item/hl13_small_flag/combine,/obj/item/radio/intercom/directional/west,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/intruder/lockerroom)
 "Tu" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 4},/turf/open/openspace,/area/halflife/indoors/intruder/guardtower)
 "Tv" = (/obj/machinery/light/small/directional/east,/turf/open/floor/plating/indoor/metal/industrial,/area/halflife/indoors/intruder/library)
 "Tx" = (/obj/item/hl13_small_flag/combine,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/intruder/lockerroom)
@@ -514,9 +521,11 @@
 "Xb" = (/obj/effect/landmark/navigate_destination/halflife/intruder/medbay,/turf/open/floor/plating/ground/sidewalk,/area/halflife/indoors/intruder/outside)
 "Xf" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 6},/turf/open/openspace,/area/halflife/indoors/intruder/guardtower)
 "Xi" = (/obj/structure/halflife/trash/papers{dir = 1},/turf/open/floor/plating/indoor/tile/kitchen,/area/halflife/indoors/intruder/lab)
+"Xj" = (/obj/item/radio/intercom/directional/east,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/storagea)
 "Xo" = (/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/lockerroom)
 "Xw" = (/obj/structure/halflife/trash/garbage/dumpster/crate,/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/intruder/outside)
 "XA" = (/obj/structure/window/fulltile/halflife/nosmooth/brick,/turf/open/floor/plating/indoor/tiled10,/area/halflife/indoors/intruder/medbay)
+"XG" = (/obj/item/radio/intercom/directional/south,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/guardtower)
 "XK" = (/turf/open/floor/plating/indoor/metal/plate,/area/halflife/indoors/intruder/medbay)
 "XL" = (/obj/structure/closet/cardboard/solid,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/intruder/lockerroom)
 "XM" = (/obj/structure/window/fulltile/halflife/nosmooth/generic{dir = 8},/obj/machinery/light/small/directional/south,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/guardtower)
@@ -607,7 +616,7 @@ crcrcrcrcrcrCkCkCkCkLcCkCkCkCkxiCkCkCkCkCkCkCkCkCkCkCkCkwlJRbzzDrbxNKnvTJRwlCkwl
 crcrcrcrcrcrCkCkCkCkLcCkCkCkCkxiCkCkCkCkCkpqCkCkCkCkCkCkpbJRbOCLihihihVjJRwlCknmqNJcFWJcJcxyqNwlCkwlgDgDgDgDgDvXgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSkSkSkSEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrCkCkCkCkLcCkCkCkCkxiCkCkCkCkCkCkgvCkCkpqgvCkwlJRtNUkihihihhwJRwlCkqwIZJcJcJcJcFWqNwlCkwlgDXPgDeFgDgDgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSEVkSkSEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcreFgDgDKiDsDspcpcDsDsCMCkCkCkCkCkCkCkCkCkCkCkwldvihihihihihRhJRwlCkwlqNJcuCJcJcmSqNCwCkwlgDeFeFxBvXgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSEVkSkSkSEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-crcrcrcrcrcreFgDgDgDDsylLALhvpDsCkCkCkCkCkCkCkCkCkCkCkCkwldvihihihihUkVjJRwlCkwlqNqNqNqNJcJcqNwlCkwlgDeFeFeFgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSEVEVkSkSEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+crcrcrcrcrcreFgDgDgDDsylLALhvpDsCkCkCkCkCkCkCkCkCkCkCkCkwldvihihihihUkXjJRwlCkwlqNqNqNqNJcJcqNwlCkwlgDeFeFeFgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSEVEVkSkSEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcreFvXgDQnDsBvjufoBvDstvCkCkCkCkCkCkCkCkCkCkCkwlJRAiihihCLihJVJRCwCkwlqNwTwTqNJcJcqNwlCkwlgDgDxBgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSEVEVkSkSEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrgDgDgDgDDsRDjujusbDswrCkCkCkCkpqCkCkCkCkCkCkpbJRtNihUkihihihdIwlCkwlqNJcJcqNJcJcqNCwCkwlgDgDgDgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSEVkSkSkSEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrgDeFvXgDDsmBBvBvqjDsCMCkCkCkCkCkCkCkpqCkCkCkwlJRVjCLihihihihdIrSCkwlqNyeJcqNJcmSqNwlCkwlgDgDgDQngDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSEVkSkSkSEVkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
@@ -626,7 +635,7 @@ EVEVEVEVEVEVEVEVEVEVEVEVEVgDeFeFgDgDwlCkwlgDgDgDvXgDQnuququqtByGyGUCuqgDgDwlCkwl
 EVEVEVEVEVEVEVEVEVEVEVEVEVeFeFvXQngDwlCkwlQngDeFeFeFgDuqxnuqBhaZPkYpuqQngDwlCkwleFeFgDgDQngDgDwlCkwleFGHLOguguXoguguguPPGHgDgDEVEVkSkSEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVgDgDgDgDgDwlCkwlgDxBgDgDQngDuqfxuqlgyGyGlguqgDvXwlCkwlgDQngDgDgDxBgDwlCkwlgDGHCOXoBXXoXoBXXoLOGHgDgDgDEVkSkSkSEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVeFgDgDvXwlCkwlgDgDzEgDgDvXuqEBuququqPIuquqgDgDwlCkwlzEvXgDQngDeFzEwlCkwlwZGHLOLOLOXoLOLOLOKHGHgDQngDEVEVkSkSEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVREeFgDgDgDwlCkwlwlwlwlwlwlwlwlwlwlnTwlwlwlnTwlwlwlCkwlwlwlwlwlwlwlwlwlCkwleFGHTxLOLOXoPPGHGHGHGHgDvXgDEVEVEVkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVREeFgDgDgDwlCkwlwlwlwlwlwlwlwlwlwlnTwlwlwlnTwlwlwlCkwlwlwlwlwlwlwlwlwlCkwleFGHTqLOLOXoPPGHGHGHGHgDvXgDEVEVEVkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSkSgHeFgDQngDwlCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkwlJrLwXoXoXoXotLGHgDgDgDgDgDEVEVEVEVEVEVkSkSEVuququququququququququququqEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSkSkSkSeFgDzEwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlCkCkwlwlwlwlwlwlwlwlwlwlwlwlwlwlLwXoXoXoXoXLGHgDQngDgDgDEVEVEVEVEVEVkSiXkSsZsZtQsZsZtQsZyGrYyGyGuquqEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSkSEVkSeFeFvXgDgDgDgDgDgDeFgDgDgDeFeFvXeFgDbtwlCkCkwlzEgDeFgDgDgDvXgDzEeFgDvXgDGHTxZQoGLOKHGHgDgDvXgDEVEVEVEVEVkSEVkSiXkSsZsZsZsZsZsZsZyGyGyGyGjCuqEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
@@ -637,7 +646,7 @@ EVEVEVEVEVEVEVEVEVkSkSkSEVEVEVEVgDgDfFTyuogDeFeFTyfFgDgDgDgDvXgDwGgDwlCkCkwlgDwG
 EVEVEVEVEVEVEVEVEVkSkSkSEVEVEVgDgDzxgDeFgDgDeFgDTyfFQnvXgDeFgDgDeFbtwlCkCkwlzEgDgDgDgDgDgDgDgDgDvXgDgDgDEVEVEVEVEVEVkSkSkSkSEVkSkSkSkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVFdEVkSkSkSEVEVgDxBgDzxeFgDeFeFgDeFTyfFgDgDeFeFxBgDgDgDwlsRiSwleFgDgDgDvXgDgDgDvXgDgDvXgDEVEVEVEVkSkSkSkSkSkSkSEVkSkSkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVkSkSEVEVkSkSkSEVgDgDeFzxeFgDTyeFgDTyTyeFzxgDeFSWCpCpCpCpCpvAmtCpCpCpCpCpSWtEhrtEtEvuMNtEEVEVEVEVkSkSkSkSkSkSEVEVEVEVkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVkSkSEVEVkSkSkSEVgDeFvXgDfFTyTygDeFTygDeFzxgDvXSWAFwxAFegGtPJPJGtegAFnyAFSWeFgDgDeFeFvXgDEVEVEVEVkSkSkSkSEVEVEVEVEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVkSkSEVEVkSkSkSEVgDeFvXgDfFTyTygDeFTygDeFzxgDvXSWAFwxAFegGtPJPJGtegAFrcAFSWeFgDgDeFeFvXgDEVEVEVEVkSkSkSkSEVEVEVEVEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVkSkSEVEVkSkSEVEVgDgDgDgDfFTygDgDcqzKgDgDzxgDeFSWnyPJPJTITIPJPJTITIPJPJnySWeFgDgDeFeFgDgDEVEVEVkSkSkSkSkSkSEVEVEVkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVkSkSEVEVkSkSEVEVEVgDgDDreFgDeFeFfFfFfFQnzxgDeFSWPuPJPJnjvyPJPJmfWpPJPJGOSWeFvXQneFeFgDEVEVEVkSkSkSkSEVkSkSkSkSkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVkSkSkSkSkSEVEVEVEVvXeFzxDrDrDrgDvXgDzxgDgDgDSWnyPJPJJUJUPJPJJUJUPJPJnySWeFgDeFREEVEVEVEVkSkSkSkSEVEVEVEVkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
@@ -670,16 +679,16 @@ EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdATYbMKNRsLIDIDIDIDIDsLsLFvYbATATAT
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdATxVvhsLwwYbYbYbYbYbvhsLwwdpATFfIGnhIiATEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdATYbYbTSYbYbYbYbYbYbYbIVYbYbATafwBwBNzATEVEVEVVKVKVKVKVKKpKpKpKpKpKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdATYbYbTSYbYbYbYbYbYbYbIVYbYbqQyNwBwBwBATEVEVEVVKLyLyLyLyKpYHfBivmFKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdATYbYbTSYbYbYbYbYbYbYbIVYbYbqQnQDhwBwBATEVEVEVVKLyLyLyLyKphOaWaWhOKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdATYbYbTSYbYbYbYbYbYbYbIVYbYbqQnQDhwBhcATEVEVEVVKLyLyLyLyKphOaWaWhOKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdATYbYbVrYbYbYbYbYbYbYbAnYbYbqQqvwBwBwBATEVEVEVVKLyLyLyLyKphOvFaWlwKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdATYbYbTSYbYbYbYbYbYbYbIVYbYbATafwBwBNzATVKVKVKVKRqYugbgbZDZDZDKrZDKpzlzlzlzlzlKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdATxVyUsLZrYbYbYbYbYbyUsLZrdpATBIBIwBwBATYuYuYuYuYuYuYuYuZfOjBfBfBfKpIcIcSvIcIcKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdATYbMKsLsLIDIDIDIDIDsLNRFvYbATATATPWATATYuYuUdYuYuYuUdcAZfBfBfBfyDKpIXaWaWaWhOKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdATYbvhsLwwYbYbYbYbYbvhsLwwYbATrauDuDYuraYuYuVKVKVKVKVKVKKphOBfBfhOzlhLaWfGTkPgKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdATYbYbTSYbYbYbYbYbYbYbIVYbYbATYuYuuDYuYuYuYuVKzkLlJOLlLlKphLBfBfBfTPaWaWaWiOhOKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdATYbYbTSYbYbYbYbYbYbYbIVYbYbATYuYuuDYuYuYuYuVKzkckJOLlLlKphLBfBfBfTPaWaWaWiOhOKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdATATATPWATATATATATATATPWATATATYuYuVKVKsFVKVKVKLlLlLlLlEUKphOBfBfhOKpbshOhOhODLKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdVKYuuDuDuDYuYuYuYuYuuDuDuDYuYuYuYuVKxtLldxsVdxExExTvVKVKKpmFBfBfefKpJwJwJwJwJwKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdVKYuYuZRYuYuUdYuYuUduDuDYuUdYuYuwLVKLlLlLlLlLlLlLlLlAeVKKprJBfBfmFKpIcIchOIcIcKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdVKYuYuZRYuYuUdYuYuUduDuDYuUdYuYuwLVKLlLlLlLlLlLlLlLlAeVKKprJBfBfmFKpIcIcyKIcIcKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdSGVKVKVKVKsFVKVKbbVKVKsFVKVKVKVKVKVKVKdxLlxtLldxExExLlAeVKKpmFBfBfmFKphOBUBUiihOKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdqVXUExExExLlExXULlExExLlExExsVExExExExExLlExLlExExExLlAeVKKphOBfBfPgJwhLBUVdXZPgKpEVEVZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdqVExExnFExLlnFExLlnFExLlFoExLlnFExExExExLlExLlExExExLlVKVKZDhLBfBfBfJhBUBUBUmYhOKpEVZdZdZdZdZdZdEVEVEVZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
@@ -701,7 +710,7 @@ EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZd
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdWLwzgPgPgPwzTuZdZdZdZdZdZdZdZdIyIyIyIyIyvkvkXAXAvkvkvkvkvkvkvkvkZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdWLufiEOpQNHHTuZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdWLufyHmHyHCWTuZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVZdZdEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdWLXMyHyHAyjbTuZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVZdEVZdEVZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVZdZdEVEVEVZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdWLXMXGyHAyjbTuZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVZdEVZdEVZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdWLwzwzhMwzwzTuZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdqmvVvVvVvVvVXfZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
@@ -710,8 +719,8 @@ crcrcrcrcrcrZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZd
 crcrcrcrcrcrZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZdqNJcJcJcJcJcqNZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrZdZdZdZdIyIyIyIyIyIyZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZdqNJcJcJcJcJcRiZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrZdZdZdZdIyIyIyIyIyIyZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZdqNyeJcJcJcJcRiZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-crcrcrcrcrcrZdZdZdZdIyIyIyIyIyIyZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZdqNZuZuJcJcFVqNZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-crcrcrcrcrcrZdZdZdZdIyIyIyIyIyIyZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZdqNZuZuJcJcFWqNZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+crcrcrcrcrcrZdZdZdZdIyIyIyIyIyIyZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZdqNZuZuRcJcFVqNZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+crcrcrcrcrcrZdZdZdZdIyIyIyIyIyIyZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZdqNZuZujAJcFWqNZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrZdZdZdZdIyIyIyIyIyIyZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZdqNqNqNqNKSqNqNZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrZdZdZdZdIyIyIyIyIyIyZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZdrEwDhhgMgMgMqNZdZdZdZdZdZdZdZdZdZdZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 crcrcrcrcrcrZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdZdTyTyTyTyTyTyTyTyZdZdZdrEgMgMgMgMgMqNZdZdZdZdyvyvyvyvyvyvZdZdZdZdEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV

@@ -6,6 +6,7 @@ GLOBAL_VAR_INIT(guards_spawned, 0)
 GLOBAL_VAR_INIT(squad_death, FALSE)
 GLOBAL_LIST_EMPTY(real_objectives)
 GLOBAL_VAR_INIT(osp_mode, FALSE)
+GLOBAL_VAR_INIT(crab_loadout, "classic") //classic by default
 
 /obj/machinery/intruder_time_counter
 	name = "intruder counter"
@@ -121,7 +122,7 @@ GLOBAL_VAR_INIT(osp_mode, FALSE)
 /obj/machinery/intruder_time_counter/proc/has_role(var/mob/living/carbon/human/target) //returns FALSE if the conscript does not have a role, otherwise returns TRUE
 	if(istype(target.head, /obj/item/clothing/head/beret/durathread/unitednations)) //squad leader
 		return TRUE
-	if(istype(target.wear_mask, /obj/item/clothing/mask/balaclava/protective/guard/double_agent)) //double agent
+	if(istype(target.wear_mask, /obj/item/clothing/mask/balaclava/protective/guard/double_agent) || !target.wear_mask) //double agent (or bullsquid but the next part is in case he stole a cig from snake or something)
 		return TRUE
 	if(istype(target.wear_suit, /obj/item/clothing/suit/jacket/det_suit/bullsquid)) //revolver bullsquid
 		return TRUE
@@ -161,10 +162,12 @@ GLOBAL_VAR_INIT(osp_mode, FALSE)
 		if(!has_role(H) && new_double_agents > double_agents && H.deployment_faction != REBEL_DEPLOYMENT_FACTION)
 			SEND_SOUND(H, 'hl13/sound/effects/intruderspecial.ogg')
 			to_chat(H, span_userdanger("You are a spy among the conscripts, and are working for the PLF!"))
-			to_chat(H, span_notice("You are tasked with helping Solid Crab in his mission by any means necessary. You can take off your balaclava so he can identify you as an ally, but don't let other conscripts see you do this."))
+			to_chat(H, span_notice("You are tasked with helping Solid Crab in his mission by any means necessary. Crab can identify you by examining you, and he is capable of seeing you through walls. At some point, you can try to get yourself (without raising suspicion) into a dark and secluded area where you can wait for him and strategize freely."))
+			to_chat(H, span_notice("Crab is also capable of removing your mask, blowing your cover but allowing you to assist him more actively with additional equipment."))
 			H.cmode_music = 'hl13/sound/music/combat/thepain.ogg'
 			H.set_facial_hairstyle("Shaved")
 			H.set_hairstyle("Bald")
+			H.death_sound = 'hl13/sound/voice/solid/spydeath.ogg'
 			H.tired_rate = 5
 			H.update_body()
 			H.deployment_faction = REBEL_DEPLOYMENT_FACTION

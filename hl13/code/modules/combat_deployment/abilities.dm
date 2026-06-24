@@ -489,7 +489,7 @@
 	var/armed = FALSE
 
 /obj/item/melee/touch_attack/holdup
-	name = "Free Hand"
+	name = "Free Hand (Hold-up)"
 	desc = "Your hand. It's ready for a hold-up."
 	icon_state = "greyscale"
 	inhand_icon_state = null
@@ -542,3 +542,85 @@
 		to_chat(caster, span_warning("You fail to find anything useful. Maybe look a little harder next time?"))
 	return TRUE
 
+/datum/action/cooldown/spell/touch/remove_mask
+	name = "Unmask Spy"
+	desc = "Ready a hand to unmask a spy. While this will completely blow their cover and make it impossible to blend in anymore, it will also increase their field of view and grant them supplies for aiding you, tailored specifically to your loadout choice."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "disguise"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	hand_path = /obj/item/melee/touch_attack/remove_mask
+
+	spell_requirements = NONE
+	invocation_type = INVOCATION_NONE
+	check_flags = NONE
+	cooldown_time = 5 SECONDS
+
+/obj/item/melee/touch_attack/remove_mask
+	name = "Free Hand (Mask)"
+	desc = "Your hand. It's ready to unmask a spy."
+	icon_state = "greyscale"
+	inhand_icon_state = null
+	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
+
+/datum/action/cooldown/spell/touch/remove_mask/cast_on_hand_hit(obj/item/melee/touch_attack/hand, mob/living/victim, mob/living/carbon/human/caster)
+
+	if(!ishuman(victim))
+		return FALSE
+	var/mob/living/carbon/human/human_victim = victim
+
+	if(human_victim.stat == DEAD)
+		caster.balloon_alert(caster, "can't help you anymore!")
+		return FALSE
+
+	if(human_victim.deployment_faction != REBEL_DEPLOYMENT_FACTION)
+		caster.balloon_alert(caster, "not a spy!")
+		return FALSE
+
+	if(HAS_TRAIT(human_victim, TRAIT_THE_INTRUDER))
+		caster.balloon_alert(caster, "you're not a spy!") //he's an intruder, entirely different
+		return FALSE
+
+	var/mask = human_victim.get_item_by_slot(ITEM_SLOT_MASK)
+	if(mask)
+		caster.say("Kept you waiting, huh?")
+		to_chat(human_victim, span_notice("Your awful, uncomfortable mask is finally shed, and you find you have received additional equipment of the [GLOB.crab_loadout] variety."))
+		to_chat(human_victim, span_warning("It is obvious to anyone now that you are a spy!"))
+		qdel(mask)
+		var/helm = human_victim.get_item_by_slot(ITEM_SLOT_HEAD)
+		if(!helm)
+			human_victim.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/halflife/military/weak/poland, ITEM_SLOT_HEAD) //not much stronger than the beret, if at all
+			to_chat(human_victim, span_notice("You also receive a weak helmet with the Polish flag's colors."))
+		else
+			qdel(helm)
+			human_victim.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/halflife/military/poland, ITEM_SLOT_HEAD) //for high preparedness
+			to_chat(human_victim, span_notice("Your helmet now has the Polish flag's colors."))
+		if(GLOB.crab_loadout == "classic") //osp will just count as classic
+			new /obj/item/storage/box/intruder_spy/classic(human_victim.loc)
+		if(GLOB.crab_loadout == "belligerent")
+			new /obj/item/storage/box/intruder_spy/belligerent(human_victim.loc)
+		if(GLOB.crab_loadout == "phantom")
+			new /obj/item/storage/box/intruder_spy/phantom(human_victim.loc)
+		return TRUE
+	else
+		caster.balloon_alert(caster, "spy already unmasked!")
+		return FALSE
+
+/obj/item/storage/box/intruder_spy/classic/PopulateContents()
+	new /obj/item/ammo_box/magazine/m4a1/famas(src)
+	new /obj/item/ammo_box/magazine/m4a1/famas(src)
+	new /obj/item/grenade/flashbang(src)
+	new /obj/item/reagent_containers/pill/patch/medkit/ration(src)
+
+/obj/item/storage/box/intruder_spy/belligerent/PopulateContents()
+	new /obj/item/ammo_box/magazine/m4a1/famas(src)
+	new /obj/item/ammo_box/magazine/m4a1/famas(src)
+	new /obj/item/grenade/syndieminibomb/bouncer(src)
+	new /obj/item/reagent_containers/pill/patch/medkit/ration(src)
+
+/obj/item/storage/box/intruder_spy/phantom/PopulateContents() //i dont really know for this one, why the hell would you want to unmask your spy as a phantom
+	new /obj/item/ammo_box/magazine/m4a1/famas(src)
+	new /obj/item/grenade/flashbang(src)
+	new /obj/item/grenade/flashbang(src)
+	new /obj/item/reagent_containers/pill/patch/medkit/ration(src)
