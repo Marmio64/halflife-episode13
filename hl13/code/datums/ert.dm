@@ -40,12 +40,13 @@
 	polldesc = "a Conscript Strike Team"
 
 /datum/ert/containment_team
+	roles = list(/datum/antagonist/ert/cremator)
 	leader_role = /datum/antagonist/ert/overwatch/grunt
-	roles = list(/datum/antagonist/ert/overwatch/grunt)
 	rename_team = "Overwatch Xen Containment Team"
 	code = "Delta"
-	mission = "Take care of biological threats located inside the city district."
+	mission = "Cremate loose assets, prevent the spread of Xen threats and ensure contact with citizens is negated."
 	polldesc = "an Overwatch Xen Containment Team"
+	teamsize = 4
 
 /datum/ert/riotpolice
 	roles = list(/datum/antagonist/ert/police/riot)
@@ -63,6 +64,25 @@
 	code = "Red"
 	mission = "Stabilize the district, and detain or kill any malignant citizens."
 	polldesc = "an armed metropolice team"
+	opendoors = FALSE
+
+/datum/ert/infestation_response
+	roles = list(/datum/antagonist/ert/icu/armored)
+	leader_role = /datum/antagonist/ert/icu/foreman
+	rename_team = "Infestation Control Response Team"
+	code = "Red"
+	mission = "Ensure Xen spread is negated or contained, handle martial-law based security incase of security shortage, listen to the District Administrator."
+	polldesc = "an armored Infestation Control Response team"
+	opendoors = FALSE
+
+/datum/ert/infestation_control
+	roles = list(/datum/antagonist/ert/icu)
+	leader_role = /datum/antagonist/ert/icu
+	rename_team = "Infestation Control Union Team"
+	code = "Blue"
+	mission = "Ensure Xen spread is negated or contained, keep your back tank full, and follow orders from residing District Foremen and Administrators."
+	polldesc = "a loyal Infestation Control Union team"
+	teamsize = 3
 	opendoors = FALSE
 
 /datum/ert/administrative

@@ -6,6 +6,11 @@
 	icon_state = "cleanup"
 	clothing_traits = list(TRAIT_WEARING_GAS_MASK)
 
+/obj/item/clothing/head/utility/radiation/foreman
+	name = "foreman's cleanup hood"
+	desc = "A hood made with style in mind more then caution."
+	icon_state = "cleanupforeman"
+
 /obj/item/clothing/head/utility/radiation/weak
 	armor_type = /datum/armor/utility_radiation/weak
 

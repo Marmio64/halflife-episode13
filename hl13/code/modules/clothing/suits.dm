@@ -710,6 +710,11 @@
 		/obj/item/gun/ballistic/shotgun/antixen,
 		/obj/item/gun/syringe,
 		)
+/obj/item/clothing/suit/utility/radiation/cleanup/foreman
+	name = "foreman's cleanup suit"
+	desc = "A suit tailored to hiding in the backlines while you throw your allies into the gaze of the Xen."
+	icon_state = "cleanupforeman"
+	slowdown = -0.1
 
 /obj/item/clothing/suit/utility/radiation/cleanup/slow
 	slowdown = 0.5
