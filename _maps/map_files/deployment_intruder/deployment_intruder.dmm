@@ -101,6 +101,10 @@
 /obj/effect/spawner/random/halflife/loot/intruder,
 /turf/open/floor/plating/indoor/tile/green,
 /area/halflife/indoors/intruder/lockerroom)
+"bT" = (
+/obj/item/radio/intercom/directional/south,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/intruder/storagec)
 "bV" = (
 /obj/structure/halflife/trash/papers/three,
 /turf/open/floor/plating/indoor/carpet/green,
@@ -277,6 +281,7 @@
 /obj/structure/bed/halflife/bedframe/wood,
 /obj/structure/bed/halflife/mattress/stained,
 /obj/effect/landmark/guard_start,
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/intruder/medbay)
 "fo" = (
@@ -347,6 +352,10 @@
 	},
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/intruder/barracks)
+"hd" = (
+/obj/item/radio/intercom/directional/south,
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/intruder/entrance)
 "hk" = (
 /turf/open/floor/plating/indoor/metal/pipe/intersection{
 	dir = 1
@@ -552,6 +561,7 @@
 /obj/machinery/light_switch/directional/north{
 	max_integrity = 999
 	},
+/obj/item/radio/intercom/directional/north,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/intruder/office)
 "lY" = (
@@ -581,6 +591,10 @@
 	},
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/intruder/cafeteria)
+"mt" = (
+/obj/item/radio/intercom/directional/north,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/intruder/storagea)
 "mu" = (
 /obj/structure/table/halflife/no_smooth/large/metal/desk/alt,
 /obj/effect/spawner/random/halflife/loot/intruder,
@@ -858,6 +872,10 @@
 /obj/effect/spawner/random/halflife/loot/intruder,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/intruder/medbay)
+"rp" = (
+/obj/item/radio/intercom/directional/south,
+/turf/open/floor/plating/indoor/sterilesquares,
+/area/halflife/indoors/intruder/lab)
 "rz" = (
 /obj/structure/halflife/pallet,
 /obj/effect/spawner/random/halflife/loot/intruder,
@@ -1035,6 +1053,10 @@
 /obj/structure/halflife/tank,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/intruder/storageb)
+"vI" = (
+/obj/effect/koth_grace_field,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/intruder/storagea)
 "vS" = (
 /obj/structure/halflife/storage/large/shelf,
 /obj/effect/spawner/random/halflife/loot/intruder,
@@ -1179,6 +1201,10 @@
 /obj/effect/landmark/guard_start,
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/intruder/lockerroom)
+"zc" = (
+/obj/item/radio/intercom/directional/east,
+/turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/intruder/lockerroom)
 "zk" = (
 /obj/structure/bed/halflife/bedframe/cot,
 /obj/structure/bed/halflife/mattress/old,
@@ -1247,6 +1273,10 @@
 	},
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/intruder/entrance)
+"AZ" = (
+/obj/item/radio/intercom/directional/north,
+/turf/open/floor/plating/indoor/cafeteria,
+/area/halflife/indoors/intruder/cafeteria)
 "Ba" = (
 /obj/structure/halflife/barrel/double/grey,
 /turf/open/floor/plating/indoor/concrete,
@@ -1514,6 +1544,10 @@
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/intruder/lab)
+"IO" = (
+/obj/item/radio/intercom/directional/north,
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/indoors/intruder/barracks)
 "IP" = (
 /obj/structure/halflife/trash/cardboard{
 	dir = 10;
@@ -2064,6 +2098,10 @@
 	dir = 1
 	},
 /area/halflife/indoors/intruder/lab)
+"WL" = (
+/obj/item/radio/intercom/directional/south,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/intruder/storageb)
 "WN" = (
 /obj/machinery/light_switch/directional/north{
 	max_integrity = 999
@@ -3148,7 +3186,7 @@ KR
 KR
 JT
 aH
-LI
+IO
 oH
 cY
 oH
@@ -3590,7 +3628,7 @@ sW
 rE
 Zt
 sW
-rE
+zc
 oI
 sW
 Zw
@@ -3728,7 +3766,7 @@ mb
 EB
 XL
 QW
-PA
+AZ
 JL
 PA
 Ve
@@ -3829,7 +3867,7 @@ Ns
 JC
 JC
 JC
-JC
+vI
 JC
 JC
 tu
@@ -4131,7 +4169,7 @@ tu
 en
 lY
 tu
-lY
+mt
 jd
 nB
 jd
@@ -4522,7 +4560,7 @@ di
 bd
 JC
 JC
-JC
+vI
 tu
 lY
 en
@@ -4538,7 +4576,7 @@ LQ
 Jy
 kW
 Df
-hN
+WL
 EM
 kW
 UR
@@ -5038,7 +5076,7 @@ si
 si
 Bi
 si
-si
+rp
 NT
 dD
 km
@@ -5846,7 +5884,7 @@ kY
 Ah
 Ah
 Ah
-kY
+bT
 cS
 pq
 pq
@@ -7057,7 +7095,7 @@ oq
 lm
 ai
 wI
-MJ
+hd
 OV
 SE
 SE

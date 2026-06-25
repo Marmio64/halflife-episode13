@@ -75,6 +75,8 @@
 	bigboss.teach(H)
 	var/datum/action/cooldown/spell/touch/holdup/loot = new
 	loot.Grant(H)
+	var/datum/action/cooldown/spell/touch/remove_mask/unmask = new
+	unmask.Grant(H)
 	var/obj/item/organ/old_organ = H.get_organ_slot(ORGAN_SLOT_TONGUE)
 	var/obj/item/organ/tongue/solid/new_tongue = new()
 	new_tongue.Insert(H)
@@ -541,6 +543,10 @@
 /obj/item/choice_beacon/intruder_snake_loadout/spawn_option(obj/item/storage/box/choice_path, mob/living/user)
 	if(choice_path == /obj/item/storage/box/intruder_snake/osp)
 		GLOB.osp_mode = TRUE
+	if(choice_path == /obj/item/storage/box/intruder_snake/phantom)
+		GLOB.crab_loadout = "phantom"
+	if(choice_path == /obj/item/storage/box/intruder_snake/belligerent)
+		GLOB.crab_loadout = "belligerent"
 	var/obj/item/storage/just_a_box = new choice_path(user.loc)
 	just_a_box.emptyStorage() //the box is just a vessel for easy transport and itemization, it serves no purpose afterwards
 	qdel(just_a_box)

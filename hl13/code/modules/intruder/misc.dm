@@ -283,6 +283,8 @@ GLOBAL_LIST_EMPTY(intruder_osp)
 
 /obj/effect/landmark/intruder_guncase
 	name = "guncase spawn point"
+	icon = 'icons/obj/storage/case.dmi'
+	icon_state = "infiltrator_case"
 
 /obj/effect/landmark/intruder_guncase/Initialize(mapload)
 	..()
