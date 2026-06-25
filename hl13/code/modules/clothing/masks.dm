@@ -108,6 +108,18 @@
 		"Go sharp" = 'hl13/sound/voice/otavoicelines/gosharpgosharp.ogg',
 		"Shit" = 'hl13/sound/voice/cpvoicelines/shit.ogg',
 		"Take cover" = 'hl13/sound/voice/cpvoicelines/takecover.ogg',
+		"Sightline is clear" = 'hl13/sound/voice/otavoicelines/sightlineisclear.ogg',
+		"Sector is secure" = 'hl13/sound/voice/otavoicelines/sectorissecurenovison.ogg',
+		"Sector is not secure" = 'hl13/sound/voice/otavoicelines/sectorisnotsecure.ogg',
+		"Necrotics inbound" = 'hl13/sound/voice/otavoicelines/necroticsinbound.ogg',
+		"No viscon" = 'hl13/sound/voice/otavoicelines/noviscon.ogg',
+		"Possible hostiles inbound" = 'hl13/sound/voice/otavoicelines/overwatchreportspossiblehostiles.ogg',
+		"Request reserve activation" = 'hl13/sound/voice/otavoicelines/overwatchrequestreserveactivation.ogg',
+		"Ready extractor" = 'hl13/sound/voice/otavoicelines/readyextractors.ogg',
+		"Ready weapon" = 'hl13/sound/voice/otavoicelines/readyweapons.ogg',
+		"Wrap it up" = 'hl13/sound/voice/otavoicelines/thatsitwrapitup.ogg',
+		"Unit is moving in" = 'hl13/sound/voice/otavoicelines/unitismovingin.ogg',
+
 	)
 
 	armor_type = /datum/armor/cpmask
@@ -273,7 +285,15 @@
 
 	limb_integrity = 400
 
-	unique_death = 'hl13/sound/voice/otavoicelines/die1.ogg'
+	var/list/death_sounds = list(
+		'hl13/sound/voice/otavoicelines/die1.ogg',
+		'hl13/sound/voice/otavoicelines/die2.ogg',
+		'hl13/sound/voice/otavoicelines/die3.ogg'
+		)
+
+/obj/item/clothing/mask/gas/civilprotection/overwatch/Initialize(mapload)
+	. = ..()
+	unique_death = pick(death_sounds)
 
 /obj/item/clothing/mask/gas/civilprotection/overwatch/wallhammer
 	armor_type = /datum/armor/wallhammeroverwatchmask
@@ -449,3 +469,17 @@
 	flags_1 = NONE
 
 #undef PHRASE_COOLDOWN
+
+/obj/item/clothing/mask/whistle/trench_whistle
+	name = "trench whistle"
+	desc = "A piece of historical hardware that has recently come back into common use, frequently found around the necks of PLF commanders. Charge!"
+
+/obj/item/clothing/mask/whistle/trench_whistle/ui_action_click(mob/user, action)
+	if(!COOLDOWN_FINISHED(src, whistle_cooldown))
+		return
+	COOLDOWN_START(src, whistle_cooldown, 10 SECONDS)
+	user.audible_message("<font color='red' size='5'><b>CHARGE!!</b></font>")
+	playsound(src, 'sound/items/whistle/trenchwhistle.ogg', 75, FALSE, 4)
+
+/datum/action/item_action/charge
+	name = "CHARGE!"
