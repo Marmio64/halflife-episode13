@@ -61,3 +61,22 @@
 
 /datum/antagonist/ert/administrative/nogun
 	outfit = /datum/outfit/centcom/ert/administrative/nogun
+
+/datum/antagonist/ert/cremator
+	outfit = /datum/outfit/centcom/ert/cremator
+	role = "CREMATOR-"
+
+/datum/antagonist/ert/cremator/New()
+	. = ..()
+	name_source = "[rand(111,999)]"
+
+/datum/antagonist/ert/icu
+	outfit = /datum/outfit/centcom/ert/icu
+	role = "Infestation Control Unit"
+
+/datum/antagonist/ert/icu/armored
+	outfit = /datum/outfit/centcom/ert/icu/armored
+
+/datum/antagonist/ert/icu/foreman
+	outfit = /datum/outfit/centcom/ert/icu/foreman
+	role = "Infestation Response Foreman"
