@@ -129,6 +129,8 @@
 	lighting_cutoff_green = 15
 	lighting_cutoff = 35
 
+	mob_size = MOB_SIZE_LARGE
+
 	initial_language_holder = /datum/language_holder/zombie
 
 	cmode_music = 'hl13/sound/music/combat/darkinterval_combat2.ogg'
