@@ -113,12 +113,17 @@ SUBSYSTEM_DEF(sociostability)
 	distress_beacon_success = TRUE
 
 	if(prob(75))
-		if(prob(33))
+		if(prob(25))
 			addtimer(CALLBACK(src, PROC_REF(trigger_Emergencyresponseteam), /datum/ert/overwatch), 45 SECONDS)
-		else if(prob(50))
+		else if(prob(5)) // Rare Cremator Team from Overwatch, might be more or less useful
+			addtimer(CALLBACK(src, PROC_REF(trigger_Emergencyresponseteam), /datum/ert/containment_team), 45 SECONDS)
+		else if(prob(30))
 			addtimer(CALLBACK(src, PROC_REF(trigger_Emergencyresponseteam), /datum/ert/riotpolice), 45 SECONDS)
-		else
+		else if(prob(40))
 			addtimer(CALLBACK(src, PROC_REF(trigger_Emergencyresponseteam), /datum/ert/police), 45 SECONDS)
+		else // Overwatch could only send you these unarmed civilians from the Union, good for Xen but bad for everything else- atleast you can still arm them.
+			addtimer(CALLBACK(src, PROC_REF(trigger_Emergencyresponseteam), /datum/ert/infestation_response), 45 SECONDS)
+
 	else
 		SSdynamic.unfavorable_situation()
 
