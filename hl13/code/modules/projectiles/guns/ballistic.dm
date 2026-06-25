@@ -516,6 +516,11 @@
 	desc = "A poorly maintained looking colt python. Just as accurate and powerful as any other colt, but the parts aren't as well taken care of, leading to a slower firing rate."
 	fire_delay = 10
 
+/obj/item/gun/ballistic/revolver/coltpython/worn
+	name = "\improper well-worn colt python"
+	desc = "An old colt python revolver which has seen heavy use, accurate but has the kick of a mule. Uses .357 magnum ammo. Its shiny sheen reveals a giddy glint in your eyes as you imagine the havoc it can cause."
+	fire_delay = 9
+
 /obj/item/gun/ballistic/revolver/coltpython/well_crafted
 	name = "\improper well-crafted colt python"
 	desc = "A well maintained looking colt python. Just as accurate and powerful as any other colt, but the parts are better taken care of, allowing a faster firing rate."
@@ -905,11 +910,11 @@
 //can achieve almost the same DPS as an AR2 if you're good with using it
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
 	desc = "A surprisingly well-maintained pre-war rifle likely manufactured in time for the First World War, maintained to an incredibly high standard over the years. Incredibly rare, and just the right amount of moist."
-	jamming_chance = 3
+	jamming_chance = 4
 	projectile_damage_multiplier = 1.61 //approx 45 damage a shot
 	can_parry = TRUE
 	wdefense = 3
-	sawn_desc = "A heretical mistake. Someone psychopath has sawn off a pristine-condition Mosin-Nagant, that has survived undamaged and perfectly clean since the time of the Tsars. If not for the dire situation, no doubt the universe itself would have laid a curse on you. Its mechanism remains mostly intact, but the moisture is gone. It is bone dry."
+	sawn_desc = "A heretical mistake. Some psychopath has sawn off a pristine-condition Mosin-Nagant, that has survived undamaged and perfectly clean since the time of the Tsars. If not for the dire situation, no doubt the universe itself would have laid a curse on you. Its mechanism remains mostly intact, but the moisture is gone. It is bone dry."
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/start_empty
 	magazine = /obj/item/ammo_box/magazine/internal/boltaction/mosin/start_empty
