@@ -335,3 +335,71 @@
 
 	role = "APF.C13-"
 	name_source = list("Blade", "Dagger", "Hammer", "Hunter", "Razor", "Spear", "Striker", "Tracker", "Echo")
+
+/datum/outfit/centcom/ert/icu
+	name = "Infestation Control Response Unit"
+
+	id = /obj/item/card/id/advanced/four/ert
+	ears = /obj/item/radio/headset/civilprotection
+	uniform = /obj/item/clothing/under/citizen
+	l_pocket = /obj/item/storage/belt/pouch/large
+	r_pocket = /obj/item/hl2key/factory
+	belt = /obj/item/storage/belt/pouch/large/cleanup
+
+	shoes = /obj/item/clothing/shoes/halflife/cleanup
+	gloves = /obj/item/clothing/gloves/halflife/cleanup
+	suit = /obj/item/clothing/suit/utility/radiation/cleanup
+	mask = /obj/item/clothing/mask/gas/cwuengi
+	head = /obj/item/clothing/head/utility/radiation
+	back = /obj/item/watertank/cleanup
+
+/datum/outfit/centcom/ert/icu/armored
+	name = "Infestation Control Armored Unit"
+
+	uniform = /obj/item/clothing/under/combine/civilprotection
+	gloves = /obj/item/clothing/gloves/combat
+	mask = /obj/item/clothing/mask/gas/cwuengi/armored
+	back = /obj/item/watertank/cleanup
+
+/datum/outfit/centcom/ert/icu/foreman
+	name = "Infestation Control Foreman"
+
+	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+	uniform = /obj/item/clothing/under/combine/civilprotection
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol/usp
+	r_pocket = /obj/item/hl2key/master
+	l_hand = /obj/item/gun/ballistic/shotgun/antixen
+	gloves = /obj/item/clothing/gloves/combat
+	suit = /obj/item/clothing/suit/utility/radiation/cleanup/foreman
+	mask = /obj/item/clothing/mask/gas/cwuengi/armored
+	head = /obj/item/clothing/head/utility/radiation/foreman
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+
+	backpack_contents = list(
+		/obj/item/storage/box/lethalshot/halflife/antixen = 3,
+		/obj/item/reagent_containers/pill/patch/medkit = 2,
+	)
+/datum/outfit/centcom/ert/icu/foreman/pre_equip(mob/living/carbon/human/H)
+	H.change_stat(STATKEY_DEX, 3)
+
+/datum/outfit/centcom/ert/cremator
+	name = "Cremator ERT"
+
+	uniform = /obj/item/clothing/under/combine/civilprotection
+	id = /obj/item/card/id/advanced/four/ert
+	glasses = /obj/item/clothing/glasses/hud/security/night/combine
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/cremator
+	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat/cremator
+	suit_store = /obj/item/gun/energy/immolator
+
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch/cremator
+	gloves = /obj/item/clothing/gloves/color/civilprotection
+	ears = /obj/item/radio/headset/civilprotection/divisional/overwatch
+
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	r_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
+
+/datum/outfit/centcom/ert/cremator/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.set_species(/datum/species/human/synth/cremator)
