@@ -73,9 +73,6 @@
 /obj/item/clothing/suit/armor/civilprotection/speedy
 	slowdown = -0.35
 
-/obj/item/clothing/suit/armor/civilprotection/speedy/lite
-	slowdown = -0.15
-
 /obj/item/clothing/suit/armor/civilprotection/spy
 	slowdown = -0.25
 	actions_types = list(/datum/action/item_action/disguise_self)
@@ -372,20 +369,8 @@
 	block_chance = 90
 	slot_flags = 0
 	max_integrity = 100 //gets doubled due to armor
-	force = 0 //an energy shield doesnt work too well for attacking with
 	shield_break_leftover = null
 	item_flags = DROPDEL
-
-/obj/item/shield/wallhammer/emp_act(severity)
-	. = ..()
-	if(. & EMP_PROTECT_SELF)
-		return
-
-	if(severity == EMP_HEAVY)
-		playsound(source = src, soundin = 'sound/effects/sparks/sparks3.ogg', vol = 75, vary = TRUE, extrarange = SHORT_RANGE_SOUND_EXTRARANGE, ignore_walls = FALSE)
-		visible_message(span_warning("The [src] fizzles out from electromagnetic interference!"), blind_message = span_warning("The [src] fizzles out!"), vision_distance = COMBAT_MESSAGE_RANGE)
-		qdel(src)
-
 
 /obj/item/shield/wallhammer/weak
 	max_integrity = 50
@@ -473,7 +458,7 @@
 	melee = 20
 	bullet = 25
 	laser = 10
-	energy = 80
+	energy = 100
 	bomb = 20
 	fire = 50
 	acid = 50
@@ -492,13 +477,12 @@
 	melee = 25
 	bullet = 40
 	laser = 25
-	energy = 80
+	energy = 100
 	bomb = 40
 	fire = 50
 	acid = 50
 	wound = 15
 
-//same tier as heavy rebel vests. A bit faster, a bit less protection and durability
 /obj/item/clothing/suit/armor/halflife/milvest
 	name = "military vest"
 	desc = "A heavily armored old military vest. The layers of kevlar have weakened over the years, but it remains a potent defensive piece of equipment."
@@ -507,7 +491,7 @@
 	slowdown = 0.25
 	armor_type = /datum/armor/milvest
 
-	limb_integrity = 275
+	limb_integrity = 250
 	repairable_by = /obj/item/stack/kevlar
 
 /obj/item/clothing/suit/armor/halflife/milvest/slow
@@ -515,9 +499,9 @@
 
 /datum/armor/milvest
 	melee = 35
-	bullet = 45
+	bullet = 40
 	laser = 25
-	energy = 80
+	energy = 100
 	bomb = 45
 	fire = 50
 	acid = 50
@@ -710,6 +694,11 @@
 		/obj/item/gun/ballistic/shotgun/antixen,
 		/obj/item/gun/syringe,
 		)
+/obj/item/clothing/suit/utility/radiation/cleanup/foreman
+	name = "foreman's cleanup suit"
+	desc = "A suit tailored to hiding in the backlines while you throw your allies into the gaze of the Xen."
+	icon_state = "cleanupforeman"
+	slowdown = -0.1
 
 /obj/item/clothing/suit/utility/radiation/cleanup/slow
 	slowdown = 0.5
@@ -793,8 +782,8 @@
 	laser = 35
 	energy = 30
 	bomb = 60
-	fire = 60
-	acid = 50
+	fire = 55
+	acid = 45
 	wound = 20
 
 /obj/item/clothing/suit/armor/rebel/light
@@ -921,7 +910,7 @@
 	limb_integrity = 250
 
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/speedy
-	slowdown = -0.25
+	slowdown = -0.2
 
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss
 	slowdown = -0.35
@@ -947,7 +936,7 @@
 	bio = 20
 	fire = 40
 	acid = 20
-	wound = 10
+	wound = 5
 
 /obj/item/clothing/suit/utility/fire/firefighter/halflife
 	name = "reinforced firesuit"
@@ -966,7 +955,7 @@
 		)
 
 /datum/armor/halflife_firesuit
-	melee = 50
+	melee = 45
 	bullet = 50
 	laser = 85
 	energy = 80
