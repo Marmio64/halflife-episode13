@@ -926,7 +926,7 @@
 	limb_integrity = 250
 
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/speedy
-	slowdown = -0.2
+	slowdown = -0.25
 
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss
 	slowdown = -0.35
