@@ -123,6 +123,7 @@ GLOBAL_LIST_INIT(turfs_pass_meteor, typecacheof(list(
 
 #define isvortigaunt(A) (is_species(A, /datum/species/vortigaunt))
 #define isstalker(A) (is_species(A, /datum/species/stalker))
+#define iscrabwalker(A) (is_species(A, /datum/species/human/crabwalker))
 
 //More carbon mobs
 #define isalien(A) (istype(A, /mob/living/carbon/alien))

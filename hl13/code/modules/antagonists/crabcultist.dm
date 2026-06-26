@@ -26,7 +26,7 @@
 	gloves = /obj/item/clothing/gloves/combat
 
 /datum/antagonist/crab_cultist/greet()
-	owner.current.playsound_local(get_turf(owner.current), 'hl13/sound/ambience/cultawakening.ogg',75,0)
+	owner.current.playsound_local(get_turf(owner.current), 'hl13/sound/ambience/probablynotaproblem.ogg',75,0)
 	to_chat(owner, "<B>Suddenly, your mind flashes as you realize your true mission...</B>")
 	to_chat(owner, span_userdanger("You are a Headcrab Cultist!"))
 	to_chat(owner, span_boldnotice("You seek to free the minds of humanity through ascension, done so with the coupling between headcrabs and human heads."))
@@ -81,7 +81,7 @@
 	objectives += crab_cultist_objective
 
 
-	owner.current.cmode_music = 'hl13/sound/music/combat/disrupted.ogg'
+	owner.current.cmode_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 
 	return ..()
 

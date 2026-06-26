@@ -61,6 +61,7 @@
 /datum/controller/subsystem/dynamic/proc/generate_unfavourable_events()
 	var/static/list/unfavorable_random_events = list(
 		/datum/round_event_control/gonome,
+		/datum/round_event_control/crabwalker,
 		/datum/round_event_control/vortigaunt,
 		/datum/round_event_control/rebel,
 		/datum/round_event_control/blackmarket,

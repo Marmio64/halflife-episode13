@@ -179,7 +179,8 @@
 			if(ishuman(food))
 				adjust_health(-maxHealth*0.5)
 			else
-				adjust_health(-maxHealth*0.1)
+				var/mob_size_multiplier = (mob_size*0.1) //small is 10% hp, normal size is 20%, large 30%
+				adjust_health(-maxHealth*mob_size_multiplier)
 
 /obj/effect/spawner/random/halflife/random_bullsquid
 	name = "random bullsquid"

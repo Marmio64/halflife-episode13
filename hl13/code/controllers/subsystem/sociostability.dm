@@ -119,7 +119,7 @@ SUBSYSTEM_DEF(sociostability)
 			addtimer(CALLBACK(src, PROC_REF(trigger_Emergencyresponseteam), /datum/ert/containment_team), 45 SECONDS)
 		else if(prob(30))
 			addtimer(CALLBACK(src, PROC_REF(trigger_Emergencyresponseteam), /datum/ert/riotpolice), 45 SECONDS)
-		else if(prob(40))
+		else if(prob(50))
 			addtimer(CALLBACK(src, PROC_REF(trigger_Emergencyresponseteam), /datum/ert/police), 45 SECONDS)
 		else // Overwatch could only send you these unarmed civilians from the Union, good for Xen but bad for everything else- atleast you can still arm them.
 			addtimer(CALLBACK(src, PROC_REF(trigger_Emergencyresponseteam), /datum/ert/infestation_response), 45 SECONDS)

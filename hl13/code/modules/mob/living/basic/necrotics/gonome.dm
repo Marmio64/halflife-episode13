@@ -87,8 +87,10 @@
 			livvy.gib(DROP_ALL_REMAINS)
 			if(ishuman(food))
 				adjust_fungal_nutrition(100)
+				adjust_health(-maxHealth*0.02)
 			else
 				adjust_fungal_nutrition(10)
+				adjust_health(-maxHealth*0.01)
 
 ///Does fungal_nutrition + supplied amount and clamps it within 0 and 500
 /mob/living/basic/halflife/zombie/gonome/proc/adjust_fungal_nutrition(amount)
@@ -111,6 +113,22 @@
 	fungalheal_amt = 0.1
 	fully_grown = TRUE //cannot grow fully
 
+/mob/living/basic/halflife/zombie/gonome/deployment/try_eat(atom/movable/food)
+	balloon_alert(src, "devouring...")
+	if (do_after(src, 3 SECONDS, target = food))
+		if(isliving(food))
+			var/mob/living/livvy = food
+			livvy.gib(DROP_ALL_REMAINS)
+			if(ishuman(food))
+				if(livvy.deployment_faction != XEN_DEPLOYMENT_FACTION || iscrabwalker(livvy)) //deployment gonomes can only eat non-xen faction humans, or crabwalkers. This ends up meaning it just excludes classless xen players.
+					adjust_fungal_nutrition(100)
+					adjust_health(-maxHealth*0.02)
+				else
+					balloon_alert(src, "inedible...")
+			else
+				adjust_fungal_nutrition(10)
+				adjust_health(-maxHealth*0.01)
+
 /mob/living/basic/halflife/zombie/gonome/complete
 	name = "Fungal Gonome"
 	desc = "A massive, grotesque abomination of flesh and fungas. A horror, which should not be."
@@ -129,6 +147,22 @@
 	speed = 1.2
 	headcrab_delay = 2 SECONDS
 	melee_attack_cooldown = 1 SECONDS
+
+/mob/living/basic/halflife/zombie/gonome/complete/deployment/try_eat(atom/movable/food)
+	balloon_alert(src, "devouring...")
+	if (do_after(src, 3 SECONDS, target = food))
+		if(isliving(food))
+			var/mob/living/livvy = food
+			livvy.gib(DROP_ALL_REMAINS)
+			if(ishuman(food))
+				if(livvy.deployment_faction != XEN_DEPLOYMENT_FACTION || iscrabwalker(livvy)) //deployment gonomes can only eat non-xen faction humans, or crabwalkers. This ends up meaning it just excludes classless xen players.
+					adjust_fungal_nutrition(100)
+					adjust_health(-maxHealth*0.02)
+				else
+					balloon_alert(src, "inedible...")
+			else
+				adjust_fungal_nutrition(10)
+				adjust_health(-maxHealth*0.01)
 
 /mob/living/basic/halflife/zombie/gonome/complete/cash_gorged
 	name = "Cash-gorged Gonome"
