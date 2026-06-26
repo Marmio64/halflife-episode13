@@ -1,4 +1,5 @@
 GLOBAL_LIST_EMPTY(new_spawns)
+GLOBAL_LIST_EMPTY(spawn_protections)
 
 /obj/effect/new_spawn
 	name = "new spawn"

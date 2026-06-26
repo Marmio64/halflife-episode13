@@ -16,6 +16,10 @@
 /obj/structure/trap/deployment_spawn_prot/examine(mob/user)
 	return list()
 
+/obj/structure/trap/deployment_spawn_prot/Initialize(mapload)
+	.=..()
+	GLOB.spawn_protections += src
+
 /obj/structure/trap/deployment_spawn_prot/flare()
 	animate(src, alpha = initial(alpha), time = time_between_triggers)
 
