@@ -172,7 +172,7 @@
 	install_suppressor(S)
 
 //sidegrade to the m4a1. Heavier duty: More spread, damage and recoil and less firing speed.
-//about 1.85 seconds TTK, and good AP
+//about 1.9 seconds TTK, and good AP
 /obj/item/gun/ballistic/automatic/ak47
 	name = "\improper AK-47 Rifle"
 	desc = "The old reliable workhouse rifle known around the world: The AK-47. This classic fires large, heavy, and powerful 7.62 cartridges, but it has a nasty kick to it with low accuracy and firing rate to boot. In addition, its heavy frame makes manuevering with it a bit awkward."
@@ -205,7 +205,7 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
-	var/fire_rate = 0.37 SECONDS
+	var/fire_rate = 0.38 SECONDS
 
 	weapon_category = WEAPON_CAT_RIFLE
 
