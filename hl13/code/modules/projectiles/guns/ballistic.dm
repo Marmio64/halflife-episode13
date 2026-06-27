@@ -175,7 +175,7 @@
 //about 1.85 seconds TTK, and good AP
 /obj/item/gun/ballistic/automatic/ak47
 	name = "\improper AK-47 Rifle"
-	desc = "An old AK-47 without the stock. This thing is going to kick like a mule without that stock... but it should still hit just as hard."
+	desc = "The old reliable workhouse rifle known around the world: The AK-47. This classic fires large, heavy, and powerful 7.62 cartridges, but it has a nasty kick to it with low accuracy and firing rate to boot. In addition, its heavy frame makes manuevering with it a bit awkward."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "ak47"
 	fire_sound = "hl13/sound/weapons/ak47fire.ogg"
@@ -190,11 +190,16 @@
 	fire_delay = 3
 	burst_size = 1
 	spread = 7
-	recoil = 0.7
+	recoil = 0.65
 	can_suppress = FALSE
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY
 	w_class = WEIGHT_CLASS_BULKY
+
+	item_flags = SLOWS_WHILE_IN_HAND | NEEDS_PERMIT
+
+	slowdown = 0.2
+	drag_slowdown = 0.2
 
 	inhand_icon_state = "ak47"
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
@@ -207,9 +212,12 @@
 /obj/item/gun/ballistic/automatic/ak47/no_mag
 	spawnwithmagazine = FALSE
 
+/obj/item/gun/ballistic/automatic/ak47/deployment_pin
+	pin = /obj/item/firing_pin/implant/pindicate
+
 /obj/item/gun/ballistic/automatic/ak47/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = fire_rate, overtime_penalty_freebies = 3, overtime_penalty_increase = 2, overtime_penalty_cap = 14)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = fire_rate, overtime_penalty_freebies = 1, overtime_penalty_increase = 3, overtime_penalty_cap = 15)
 
 /obj/item/gun/ballistic/automatic/ak47/cheap
 	name = "\improper Jury-rigged AK-47 Rifle"
@@ -534,6 +542,7 @@
 	projectile_damage_multiplier = 1.2
 
 // about 2.5 seconds TTK
+// Similar DPS to the colt python but waaay less accurate, and less damage per bullet means more reloading.
 /obj/item/gun/ballistic/revolver/snubnose
 	name = "\improper snubnose revolver"
 	desc = "A well maintained old world .38 snub nosed revolver, good for fitting in your pocket. Often carried as a weapon of last resort by high ranking combine represenatives entering dangerous areas."

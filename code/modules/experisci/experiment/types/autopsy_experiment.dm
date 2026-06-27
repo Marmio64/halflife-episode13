@@ -19,7 +19,7 @@
 
 /datum/experiment/autopsy/human
 	name = "Human Autopsy Experiment"
-	description = "We don't want to invest in a station that doesn't know their coccyx from their cochlea. Send us back data dissecting a human to receive more funding."
+	description = "We don't want to invest in a district that doesn't know their coccyx from their cochlea. Send us back data dissecting a human to receive more funding."
 
 /datum/experiment/autopsy/human/is_valid_autopsy(mob/target)
 	return ishumanbasic(target)
@@ -30,10 +30,3 @@
 
 /datum/experiment/autopsy/nonhuman/is_valid_autopsy(mob/target)
 	return ishuman(target) && !ishumanbasic(target)
-
-/datum/experiment/autopsy/xenomorph
-	name = "Xenomorph Autopsy Experiment"
-	description = "Our understanding of the xenomorph only scratches the surface. Send us research from dissecting a xenomorph."
-
-/datum/experiment/autopsy/xenomorph/is_valid_autopsy(mob/target)
-	return isalien(target)

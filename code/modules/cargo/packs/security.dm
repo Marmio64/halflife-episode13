@@ -259,6 +259,16 @@
 					/obj/item/ammo_box/magazine/usp9mm/rubber)
 	crate_name = "usp match rubber ammo crate"
 
+/datum/supply_pack/security/armory/snub38special
+	name = "38 Special Ammo Crate"
+	desc = "Contains four .38 special revolver speedloaders, used for the snubnosed revolvers high ranking combine officials take a liking to. Due to being associated with high ranking officials, this is classified as a luxury good and priced as such. Requires Armory access to open."
+	cost = CARGO_CRATE_VALUE * 12
+	contains = list(/obj/item/ammo_box/c38,
+					/obj/item/ammo_box/c38,
+					/obj/item/ammo_box/c38,
+					/obj/item/ammo_box/c38)
+	crate_name = "38 Special ammo crate"
+
 /datum/supply_pack/security/armory/manhacks
 	name = "Viscerator Crate"
 	desc = "Contains three activatable viscerators. Requires Armory access to open."

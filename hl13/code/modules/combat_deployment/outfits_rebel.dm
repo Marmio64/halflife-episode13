@@ -70,7 +70,7 @@
 /datum/outfit/deployment_loadout/rebel/tier1/engineer
 	name = "Deployment: Refugee Engineer"
 	display_name = "Refugee Engineer (Support)"
-	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building."
+	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building. You can summon Construction Vouchers in the top left on a cooldown, which can be inserted into your engineering radio to purchase construction supplies."
 	id_name = "Engineer"
 
 	uniform = /obj/item/clothing/under/citizen/refugee
@@ -213,7 +213,7 @@
 /datum/outfit/deployment_loadout/rebel/tier2/engineer
 	name = "Deployment: Upgraded Refugee Engineer"
 	display_name = "Upgraded Refugee Engineer (Support)"
-	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building."
+	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building. You can summon Construction Vouchers in the top left on a cooldown, which can be inserted into your engineering radio to purchase construction supplies."
 	id_name = "Engineer"
 
 	uniform = /obj/item/clothing/under/citizen/refugee
@@ -402,7 +402,7 @@
 /datum/outfit/deployment_loadout/rebel/tier3/engineer
 	name = "Deployment: Upgraded Refugee Engineer+"
 	display_name = "Upgraded Refugee Engineer+ (Support)"
-	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building."
+	desc = "Equipped with a crowbar, satchel, and sandbags, you can do melee combat and a bit of building. You can summon Construction Vouchers in the top left on a cooldown, which can be inserted into your engineering radio to purchase construction supplies."
 	id_name = "Engineer"
 
 	uniform = /obj/item/clothing/under/citizen/refugee
@@ -684,7 +684,7 @@
 /datum/outfit/deployment_loadout/rebel/tier4/engineer
 	name = "Deployment: Heavy Refugee Engineer"
 	display_name = "Heavy Refugee Engineer (Support)"
-	desc = "Equipped with a crowbar, satchel, a revolver, a sentry beacon, and sandbags, you can do melee combat and a bit of building."
+	desc = "Equipped with a crowbar, satchel, a revolver, a sentry beacon, and sandbags, you can do melee combat and a bit of building. You can summon Construction Vouchers in the top left on a cooldown, which can be inserted into your engineering radio to purchase construction supplies."
 	id_name = "Engineer"
 
 	uniform = /obj/item/clothing/under/citizen/refugee
@@ -899,7 +899,7 @@
 	suit = /obj/item/clothing/suit/utility/fire/firefighter/halflife
 	head = /obj/item/clothing/head/halflife/firesuit_hat
 	mask = /obj/item/clothing/mask/gas/hl2/swat
-	suit_store = /obj/item/gun/ballistic/automatic/ak47/cheap/deployment_pin
+	suit_store = /obj/item/gun/ballistic/automatic/ak47/deployment_pin
 	l_pocket = /obj/item/reagent_containers/hypospray/medipen/healthpen
 	r_pocket = /obj/item/flashlight/seclite
 

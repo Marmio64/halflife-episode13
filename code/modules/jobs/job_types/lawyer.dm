@@ -30,7 +30,7 @@
 
 	//job_flags = STATION_JOB_FLAGS
 
-	ration_bonus = 2
+	ration_bonus = 3
 
 /datum/outfit/job/lawyer/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()

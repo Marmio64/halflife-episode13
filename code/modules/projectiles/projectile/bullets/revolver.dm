@@ -3,7 +3,7 @@
 /obj/projectile/bullet/n762
 	name = "7.62x38mmR bullet"
 	damage = 28 //HL13 EDIT
-	wound_bonus = -50 //hl13 edit
+	wound_bonus = -55 //hl13 edit
 	armour_penetration = 20 //HL13 EDIT
 
 /obj/projectile/bullet/n762/high_veloc

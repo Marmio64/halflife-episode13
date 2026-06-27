@@ -67,7 +67,7 @@
 		if(M.throwing)
 			razor_damage = 80
 		else
-			razor_damage = 40
+			razor_damage = 25
 	playsound(src, 'hl13/sound/effects/barbed_wire_movement.ogg', 25, 1)
 	var/def_zone = ran_zone()
 	M.apply_damage(razor_damage, BRUTE, def_zone, sharpness = SHARP_EDGED)

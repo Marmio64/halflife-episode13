@@ -47,7 +47,7 @@
 /datum/outfit/deployment_loadout/combine/tier1/engineer
 	name = "Deployment: Union Engineer"
 	display_name = "Union Engineer (Support)"
-	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however."
+	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however. You can summon Construction Vouchers in the top left on a cooldown, which can be inserted into your engineering radio to purchase construction supplies."
 	id_name = "Engineer"
 
 	uniform = /obj/item/clothing/under/citizen
@@ -175,7 +175,7 @@
 /datum/outfit/deployment_loadout/combine/tier2/engineer
 	name = "Deployment: Upgraded Union Engineer"
 	display_name = "Upgraded Union Engineer (Support)"
-	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however."
+	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however. You can summon Construction Vouchers in the top left on a cooldown, which can be inserted into your engineering radio to purchase construction supplies."
 	id_name = "Engineer"
 
 	uniform = /obj/item/clothing/under/citizen
@@ -352,7 +352,7 @@
 /datum/outfit/deployment_loadout/combine/tier3/engineer
 	name = "Deployment: Upgraded Union Engineer+"
 	display_name = "Upgraded Union Engineer+ (Support)"
-	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however."
+	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however. You can summon Construction Vouchers in the top left on a cooldown, which can be inserted into your engineering radio to purchase construction supplies."
 	id_name = "Engineer"
 
 	uniform = /obj/item/clothing/under/citizen
@@ -568,7 +568,7 @@
 /datum/outfit/deployment_loadout/combine/tier4/engineer
 	name = "Deployment: Senior Union Engineer"
 	display_name = "Senior Union Engineer (Support)"
-	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however."
+	desc = "You come equipped with a satchel, which by itself is useful when looting, but you also have a hefty crowbar and sandbags for building. Be aware about your lack of armor, however. You can summon Construction Vouchers in the top left on a cooldown, which can be inserted into your engineering radio to purchase construction supplies."
 	id_name = "Engineer"
 
 	uniform = /obj/item/clothing/under/citizen

@@ -46,7 +46,7 @@
 /datum/techweb_node/parts_adv
 	id = TECHWEB_NODE_PARTS_ADV
 	display_name = "Advanced Parts"
-	description = "The most finely tuned and accurate stock parts."
+	description = "The most finely tuned and accurate stock parts, designed by the finest minds our generation has to offer. In addition, provides schematics for the Rapid Part Exchange Device for easy upgrading."
 	prereq_ids = list(TECHWEB_NODE_PARTS_UPG)
 	design_ids = list(
 		"ultra_micro_laser",
@@ -56,8 +56,9 @@
 		"phasic_scanning",
 		"hyper_battery",
 		"hyper_cell",
+		"rped",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	required_experiments = list(/datum/experiment/scanning/points/machinery_tiered_scan/tier2_any)
 	announce_channels = list(RADIO_CHANNEL_ENGINEERING)
 

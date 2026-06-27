@@ -69,7 +69,7 @@ GLOBAL_LIST_EMPTY(node_terminals)
 	var/attempts_to_complete = 0 //swapped it around purely to make the ingame messages easier for me
 
 	/// Time to complete one activation code
-	var/activation_time = 5 SECONDS
+	var/activation_time = 6 SECONDS
 
 	var/real_terminal = FALSE //can still be activated as a distraction, but won't count towards the objective.
 

@@ -31,7 +31,7 @@
 
 /obj/item/stock_parts/power_store/cell/crap
 	name = "\improper Rechargeable AA cell"
-	desc = "You can't top the plasma top." //TOTALLY TRADEMARK INFRINGEMENT
+	desc = "You can't top the bronze top. Or something like that." //TOTALLY TRADEMARK INFRINGEMENT
 	icon_state = "aa_cell"
 	maxcharge = STANDARD_CELL_CHARGE * 0.5
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT*0.4)

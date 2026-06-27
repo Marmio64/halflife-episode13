@@ -107,6 +107,9 @@
 
 	if(main_deposit)
 		if(deployment_faction == COMBINE_DEPLOYMENT_FACTION) //This is roll protection. If the enemy team has a cash advantage greater than 100, your team gets extra cashflow
+			if(length(GLOB.deployment_combine_players) < length(GLOB.deployment_rebel_players)) //if there are more rebel players than combine, by any amount (like 6 combine and 7 rebels)
+				GLOB.deployment_combine_cash += 0.2 //give bonus cash as a handicap
+
 			if(GLOB.deployment_combine_cash < (GLOB.deployment_rebels_cash - 100))
 				GLOB.deployment_combine_cash += 1
 				if(GLOB.deployment_combine_cash < (GLOB.deployment_rebels_cash - 150)) //greather than 150 difference triples the regen
@@ -121,6 +124,9 @@
 					GLOB.combine_tier_points += 0.04 //an extra tier 5 every 50 seconds as pity for not having a TDM lead this whole time
 
 		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players)) //if there are more combine players than rebels, by any amount (like 6 rebels and 7 combine)
+				GLOB.deployment_rebels_cash += 0.2 //give bonus cash as a handicap
+
 			if(GLOB.deployment_rebels_cash < (GLOB.deployment_combine_cash - 100))
 				GLOB.deployment_rebels_cash += 1
 				if(GLOB.deployment_rebels_cash < (GLOB.deployment_combine_cash - 150))

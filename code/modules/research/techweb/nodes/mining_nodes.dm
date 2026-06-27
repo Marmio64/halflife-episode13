@@ -37,7 +37,7 @@
 /datum/techweb_node/mining_adv
 	id = TECHWEB_NODE_MINING_ADV
 	display_name = "Advanced Mining Technology"
-	description = "Printable pulse slug ammunition for the Combine Mining Device."
+	description = "Printable pulse slug ammunition for the Combine Mining Device that excels at boring through tough rock."
 	prereq_ids = list(TECHWEB_NODE_MINING)
 	design_ids = list(
 		"miningslug",

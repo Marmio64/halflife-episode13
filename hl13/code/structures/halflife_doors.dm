@@ -244,6 +244,8 @@
 		else
 			playsound(src, 'hl13/sound/halflifeeffects/metal_door_hit.ogg', 50, FALSE)
 			var/open_time = 8 SECONDS
+			if(M.mob_size >= MOB_SIZE_LARGE) //large creatures like gonomes and antlion guards are strong and can bash in doors more easily
+				open_time = 5 SECONDS
 			if(locked)
 				open_time *= 3
 			if(do_after(M, open_time, interaction_key = DOAFTER_SOURCE_DOORS))

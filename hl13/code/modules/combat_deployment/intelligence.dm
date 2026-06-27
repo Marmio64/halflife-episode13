@@ -23,6 +23,10 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | ACID_PROOF
 	anchored = TRUE
 
+	item_flags = SLOWS_WHILE_IN_HAND
+
+	slowdown = 0.33
+	drag_slowdown = 0.33
 
 	w_class = WEIGHT_CLASS_BULKY
 

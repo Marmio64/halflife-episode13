@@ -899,7 +899,7 @@
 /area/halflife/indoors/townhall/secondfloor)
 "bxW" = (
 /obj/machinery/light/small/directional/east,
-/obj/structure/table/halflife/metal/heavy,
+/obj/machinery/rnd/production/protolathe/department/cargo,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "bxY" = (
@@ -4200,6 +4200,14 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/townhall/courtroom)
+"gFu" = (
+/obj/machinery/door/unpowered/halflife/seethrough/metal{
+	keylock = 1;
+	lockid = "townhall";
+	dir = 8
+	},
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors)
 "gFD" = (
 /obj/machinery/door/unpowered/halflife/wood{
 	dir = 4
@@ -7460,6 +7468,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/scienceunion)
+"lJy" = (
+/obj/structure/table/halflife/wood,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/bar/apartments)
 "lJM" = (
 /obj/structure/table/halflife/metal/heavy,
 /obj/machinery/press,
@@ -44425,7 +44437,7 @@ cGd
 cGd
 cGd
 cGd
-cGd
+gFu
 xxB
 xxB
 xxB
@@ -53819,8 +53831,8 @@ sUO
 sUO
 sUO
 sUO
-lrZ
-lrZ
+lJy
+app
 ovF
 ovF
 ovF
@@ -53963,8 +53975,8 @@ afl
 sUO
 dfD
 nDc
-lrZ
-lrZ
+lJy
+app
 ovF
 ovF
 ovF

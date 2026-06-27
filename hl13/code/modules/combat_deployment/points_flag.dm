@@ -39,6 +39,9 @@
 	///What progression stage should be set after this flag is captured?
 	var/increase_progression_stage = null
 
+	///Up to how much cash in a factions wallet can this flag provide
+	var/cash_cap = 600
+
 
 /obj/machinery/deployment_points_flag/low_cash
 	cash_increase = 0.2
@@ -58,15 +61,18 @@
 
 	if(current_faction_holder == COMBINE_DEPLOYMENT_FACTION)
 		icon_state = "flagpole_combine"
-		GLOB.deployment_combine_cash += cash_increase
+		if(GLOB.deployment_combine_cash < cash_cap)
+			GLOB.deployment_combine_cash += cash_increase
 
 	if(current_faction_holder == REBEL_DEPLOYMENT_FACTION)
 		icon_state = "flagpole_poland"
-		GLOB.deployment_rebels_cash += cash_increase
+		if(GLOB.deployment_rebels_cash < cash_cap)
+			GLOB.deployment_rebels_cash += cash_increase
 
 	if(current_faction_holder == XEN_DEPLOYMENT_FACTION)
 		icon_state = "flagpole_xen"
-		GLOB.deployment_xen_cash += cash_increase
+		if(GLOB.deployment_xen_cash < cash_cap)
+			GLOB.deployment_xen_cash += cash_increase
 
 /obj/machinery/deployment_points_flag/attack_hand(mob/living/carbon/human/H, modifiers)
 	. = ..()

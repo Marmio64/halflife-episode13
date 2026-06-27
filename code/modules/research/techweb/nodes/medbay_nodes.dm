@@ -33,7 +33,6 @@
 	experiments_to_unlock = list(
 		/datum/experiment/autopsy/human,
 		/datum/experiment/autopsy/nonhuman,
-		/datum/experiment/autopsy/xenomorph,
 		/datum/experiment/scanning/reagent/haloperidol,
 		/datum/experiment/scanning/reagent/cryostylane,
 	)
