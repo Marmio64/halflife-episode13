@@ -95,7 +95,7 @@
 //about 1.96 seconds TTK
 /obj/item/gun/ballistic/automatic/m4a1
 	name = "\improper M4A1 Rifle"
-	desc = "A old M4A1 pattern rifle, likely purchased from America before the war, or smuggled over from its remains afterwards. Not as good as the combine's rifles, but still powerful."
+	desc = "A old M4A1 pattern rifle, likely purchased from America before the war, or smuggled over from its remains afterwards. Not as good as the combine's rifles, but still powerful. It is well known for being a versatile and accurate rifle, and saw use in Polish special forces units in the 90s."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "m4a1"
 	fire_sound = "sound/items/weapons/gun/rifle/shot.ogg"
@@ -280,7 +280,7 @@
 //about 1.96 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/servicerifle
 	name = "\improper Service Rifle"
-	desc = "An old surplus rifle from decades ago, designed as a relatively cheap but effective rifle. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity."
+	desc = "An old foreign, surplus rifle from decades ago, designed as a relatively cheap but effective rifle. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "service"
 	fire_sound = "sound/items/weapons/gun/rifle/shot.ogg"
@@ -410,7 +410,7 @@
 // about 2.8 seconds TTK (time to knock/crit)
 /obj/item/gun/ballistic/automatic/pistol/usp
 	name = "USP Match"
-	desc = "A small and light 9mm pistol which is often used as a metropolice standard carry."
+	desc = "A small and light 9mm pistol which is often used as a metropolice standard carry. Despite never seeing real use in Poland before, it was adopted in large quantities by the Combine post-war for easy standardization."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "uspmatch"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/usp9mm
@@ -567,7 +567,7 @@
 // Can technically down someone in about a second if you hit all pellets point blank in two shots, but unlikely.
 /obj/item/gun/ballistic/shotgun/spas12
 	name = "SPAS 12"
-	desc = "A spectacularly lethal pump action shotgun, for close encounters."
+	desc = "A spectacularly lethal pump action shotgun, for close encounters. While used in certain settings such as within special forces units and tactical police teams in pre-war Poland it never saw widespread use until the Combine's interest in it drastically increased available supply of the firearm after the war."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "spas12"
 	slot_flags = ITEM_SLOT_SUITSTORE
@@ -739,7 +739,7 @@
 //Super freaking powerful shotgun, will pointblank 2 shot most people, even if they're wearing decent armor
 /obj/item/gun/ballistic/shotgun/pulse
 	name = "Pulse Shotgun"
-	desc = "A high power pulse shotgun that fires incredibly devestating, but inaccurate rounds. Worst comes to worse, it is decent bludgeon as well."
+	desc = "A high power pulse shotgun that fires incredibly devestating, but inaccurate rounds. Worst comes to worse, it is a decent bludgeon as well."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "antixenshotgun"
 	slot_flags = ITEM_SLOT_SUITSTORE
@@ -782,7 +782,7 @@
 // About 2.1 seconds TTK
 /obj/item/gun/ballistic/automatic/mp7
 	name = "\improper MP7 SMG"
-	desc = "Despite its small size, this submachine gun packs a punch and has an extended mag to keep opponents suppressed."
+	desc = "Despite its small size, this submachine gun packs a punch and has an extended mag to keep opponents suppressed. While the MP5 was a more common SMG in pre-war Poland, the combine's interest in the MP7 caused it to become a more available firearm afterwards."
 	desc_controls = "Right-click to activate the alternative fire."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "mp7"
