@@ -7,8 +7,8 @@
 	icon_dead = "advisor_dead"
 	faction = list(FACTION_COMBINE)
 	movement_type = FLOATING
-	maxHealth = 175
-	health = 175
+	maxHealth = 150
+	health = 150
 	obj_damage = 14
 	melee_damage_lower = 20
 	melee_damage_upper = 25
@@ -69,7 +69,7 @@
 	..()
 	if(stat)
 		return
-	adjust_health(-maxHealth*0.02) //3.5 hp every 2 seconds
+	adjust_health(-maxHealth*0.02) //3 hp every 2 seconds
 
 /datum/language_holder/advisor
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM))

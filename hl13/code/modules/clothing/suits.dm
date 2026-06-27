@@ -812,6 +812,20 @@
 
 	limb_integrity = 250
 
+/obj/item/clothing/suit/armor/rebel/light/jacket
+	name = "resistance light armour jacket"
+	desc = "A Civil Protection chestplate with additional makeshift armor pieces strapped on made of high-grade metal, all atop a padded citizen jacket for absorbing trauma. Offers good protection without compromising mobility."
+	icon_state = "armoredjacket"
+	inhand_icon_state = "armoredjacket"
+	slowdown = 0
+	armor_type = /datum/armor/rebellight_Jacket
+	body_parts_covered = CHEST|GROIN|ARMS
+
+	limb_integrity = 275
+
+/obj/item/clothing/suit/armor/rebel/light/jacket/speedy
+	slowdown = -0.25
+
 /obj/item/clothing/suit/armor/rebel/light/speedy
 	slowdown = -0.25
 
@@ -826,6 +840,16 @@
 	bomb = 35
 	fire = 25
 	acid = 25
+	wound = 15
+
+/datum/armor/rebellight_Jacket
+	melee = 45
+	bullet = 35
+	laser = 30
+	energy = 35
+	bomb = 40
+	fire = 30
+	acid = 30
 	wound = 15
 
 //Fungal plate armor. Provides the same protection as a civil protection officer vest, but slows you down quite a lot.

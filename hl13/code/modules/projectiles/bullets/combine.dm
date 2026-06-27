@@ -44,7 +44,7 @@
 	if(istype(target, /mob/living/simple_animal/hostile/halflife/hunter)) //bonus direct damage vs hunters
 		damage = 100
 	if(istype(target, /mob/living/basic/halflife/advisor)) //bonus direct damage vs advisors
-		damage = 90
+		damage = 80
 	. = ..()
 
 /obj/projectile/bullet/pulse/lmg
@@ -175,6 +175,7 @@
 	icon_state = "xray"
 	damage = 24
 	wound_bonus = -20
+	armour_penetration = 5
 	damage_type = BURN
 	armor_flag = LASER
 	range = 5 //close range
