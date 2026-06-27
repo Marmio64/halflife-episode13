@@ -112,6 +112,9 @@
 		new /obj/item/stack/sheet/iron(src)
 
 /turf/closed/wall/ex_act(severity, target)
+	if(9 < explosive_resistance) //10 or more resistance makes the wall immune to explosions
+		return FALSE
+
 	if(target == src)
 		dismantle_wall(1,1)
 		return TRUE
@@ -123,7 +126,11 @@
 			NT.contents_explosion(severity, target)
 			return TRUE
 		if(EXPLODE_HEAVY)
-			dismantle_wall(prob(60-(explosive_resistance*10)), TRUE)
+			if(prob(explosive_resistance * 5) && 1 < explosive_resistance) //if explosion resistance is greater than 1, it has a chance to resist heavy explosions breaking it
+				add_dent(WALL_DENT_HIT)
+				return FALSE
+			else
+				dismantle_wall(prob(60-(explosive_resistance*10)), TRUE)
 
 	if(!density)
 		return ..()

@@ -139,6 +139,7 @@
 /obj/item/reagent_containers/pill/patch/medkit,
 /obj/item/reagent_containers/hypospray/medipen/healthpen,
 /obj/item/reagent_containers/hypospray/medipen/healthpen,
+/obj/item/reagent_containers/hypospray/medipen/healthpen,
 /turf/open/floor/plating/indoor/metal/train,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "cS" = (
@@ -817,6 +818,7 @@
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors)
 "qR" = (
+/obj/structure/trap/deployment_spawn_prot/combine,
 /obj/machinery/combine_walllight/directional/east,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
@@ -978,7 +980,9 @@
 /area/halflife/indoors)
 "uG" = (
 /obj/machinery/light/directional/west,
-/obj/machinery/ammo_crate/heavy,
+/obj/machinery/ammo_crate/heavy{
+	ammo_amount = 6
+	},
 /turf/open/floor/plating/indoor/metal/train,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "uH" = (
@@ -1402,7 +1406,7 @@
 "Eg" = (
 /obj/machinery/light/directional/east,
 /obj/machinery/ammo_crate/grenade_crate{
-	ammo_amount = 2
+	ammo_amount = 3
 	},
 /turf/open/floor/plating/indoor/metal/train,
 /area/halflife/indoors/combat_deployment/rebel_base)
@@ -6610,7 +6614,7 @@ Gw
 Az
 Az
 Vr
-Az
+Gw
 Az
 rc
 Az
@@ -7425,8 +7429,8 @@ OM
 OM
 OM
 OM
-OM
-OM
+gE
+gE
 gE
 gE
 gE
@@ -7437,8 +7441,8 @@ gE
 gE
 zF
 zF
-Fx
 qR
+zF
 zF
 XI
 zF
@@ -7612,8 +7616,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 eU
 kj
@@ -7621,6 +7623,8 @@ Xl
 YV
 OC
 cP
+gE
+gE
 gE
 zF
 zF
@@ -7799,8 +7803,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 CU
 zF
@@ -7808,6 +7810,8 @@ zF
 zF
 zF
 Os
+gE
+gE
 gE
 zF
 zF
@@ -7986,8 +7990,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 kk
 zF
@@ -7995,6 +7997,8 @@ zF
 zF
 zF
 oe
+gE
+gE
 gE
 zF
 zF
@@ -8173,8 +8177,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 Jc
 zF
@@ -8183,6 +8185,8 @@ zF
 zF
 aB
 gE
+zF
+zF
 zF
 zF
 gE
@@ -8360,8 +8364,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 tp
 zF
@@ -8371,7 +8373,9 @@ zF
 zF
 XI
 zF
-CR
+zF
+zF
+dT
 gE
 gE
 gE
@@ -8547,8 +8551,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 tp
 zF
@@ -8556,6 +8558,8 @@ zF
 zF
 zF
 LX
+gE
+gE
 gE
 gE
 gE
@@ -8734,8 +8738,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 YV
 zF
@@ -8743,6 +8745,8 @@ zF
 YV
 hv
 vm
+gE
+gE
 gE
 gE
 gE
@@ -8921,8 +8925,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 YV
 zF
@@ -8933,6 +8935,8 @@ gE
 gE
 gE
 Oq
+YV
+YV
 aj
 YV
 YV
@@ -9108,8 +9112,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 YV
 zF
@@ -9118,6 +9120,8 @@ YV
 YV
 aj
 gE
+YV
+YV
 YV
 YV
 YV
@@ -9295,8 +9299,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 YV
 nH
@@ -9305,6 +9307,8 @@ zF
 zF
 zF
 XI
+zF
+zF
 zF
 zF
 zF
@@ -9482,8 +9486,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 Bd
 zF
@@ -9492,6 +9494,8 @@ zF
 zF
 zF
 XI
+zF
+zF
 zF
 zF
 zF
@@ -9669,8 +9673,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 YV
 zF
@@ -9679,6 +9681,8 @@ YV
 YV
 YV
 gE
+YV
+YV
 YV
 YV
 YV
@@ -9856,8 +9860,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 YV
 zF
@@ -9868,6 +9870,8 @@ gE
 gE
 gE
 Oq
+YV
+YV
 YV
 YV
 YV
@@ -10043,13 +10047,13 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 YV
 zF
 zF
 YV
+gE
+gE
 gE
 gE
 gE
@@ -10230,13 +10234,13 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 YV
 zF
 zF
 YV
+gE
+gE
 gE
 gE
 gE
@@ -10417,8 +10421,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 YV
 zF
@@ -10429,6 +10431,8 @@ hn
 ll
 hn
 xG
+gE
+gE
 gE
 gE
 gE
@@ -10604,8 +10608,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 YV
 zF
@@ -10616,6 +10618,8 @@ hn
 PL
 hn
 ll
+gE
+gE
 gE
 gE
 gE
@@ -10791,8 +10795,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 YV
 zF
@@ -10803,6 +10805,8 @@ hn
 AE
 hn
 AE
+gE
+gE
 gE
 gE
 gE
@@ -10978,8 +10982,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 Bd
 zF
@@ -10990,6 +10992,8 @@ zF
 zF
 zF
 zF
+gE
+gE
 gE
 gE
 gE
@@ -11165,8 +11169,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 YV
 zF
@@ -11177,6 +11179,8 @@ zF
 zF
 zF
 dT
+gE
+gE
 gE
 gE
 gE
@@ -11352,8 +11356,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 YV
 zF
@@ -11364,6 +11366,8 @@ wO
 gG
 ll
 PL
+gE
+gE
 gE
 gE
 gE
@@ -11539,8 +11543,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 tq
 zF
@@ -11551,6 +11553,8 @@ hn
 hn
 hn
 hn
+gE
+gE
 gE
 gE
 gE
@@ -11726,8 +11730,6 @@ OM
 OM
 OM
 OM
-OM
-OM
 gE
 YV
 YV
@@ -11738,6 +11740,8 @@ wO
 gG
 ll
 PL
+gE
+gE
 gE
 gE
 gE
@@ -11913,8 +11917,8 @@ OM
 OM
 OM
 OM
-OM
-OM
+gE
+gE
 gE
 gE
 gE
