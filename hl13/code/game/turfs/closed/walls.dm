@@ -54,6 +54,7 @@
 	return
 
 /turf/closed/wall/halflife/concrete/alt
+	desc = "An old concrete wall with a bit of decorative flair and wallpaper. You try not to notice how peely and dirty it looks."
 	icon = 'hl13/icons/turf/walls/concretealt.dmi'
 
 /turf/closed/wall/halflife/concrete/bunker
