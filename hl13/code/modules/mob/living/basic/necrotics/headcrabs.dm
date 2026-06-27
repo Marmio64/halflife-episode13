@@ -182,11 +182,11 @@
 
 /mob/living/basic/halflife/headcrab/poison/deadly
 	poison_type = /datum/reagent/toxin/headcrab_venom/deadly
-	poison_per_bite = 8
+	poison_per_bite = 7
 	melee_attack_cooldown = 1.5 SECONDS
 
 /mob/living/basic/halflife/headcrab/poison/deadly/deployment
-	poison_per_bite = 12
+	poison_per_bite = 11
 
 /datum/action/cooldown/mob_cooldown/halflife/jump/headcrab/poison
 	sound_cue = 'hl13/sound/creatures/poison/ph_scream.ogg'

@@ -88,7 +88,7 @@
 
 /obj/structure/barricade/wooden/crude
 	name = "crude plank barricade"
-	desc = "This space is blocked off by a crude assortment of planks."
+	desc = "This space is blocked off by a couple wood planks. Not very durable, but acts as a quick and cheap reinforcement."
 	icon_state = "plankbarricade"
 	drop_amount = 1
 	max_integrity = 100

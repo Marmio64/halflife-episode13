@@ -22,7 +22,7 @@
 	health = 1200
 	obj_damage = 25
 	melee_damage_lower = 20
-	melee_damage_upper = 25
+	melee_damage_upper = 30
 	armour_penetration = 30
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
 	attack_verb_continuous = "beats down on"

@@ -365,6 +365,11 @@
 "pY" = (
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"qo" = (
+/turf/closed/wall/halflife/concrete/alt{
+	explosive_resistance = 3
+	},
+/area/halflife/outdoors/deployment_city/zombies)
 "qx" = (
 /obj/structure/railing/halflife/solo,
 /turf/open/floor/plating/indoor/tiled10,
@@ -904,6 +909,10 @@
 "NP" = (
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/outdoors/deployment_city/zombies)
+"NX" = (
+/mob/living/basic/halflife/zombie,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/zombies)
 "OK" = (
 /obj/structure/table/halflife/wood,
 /obj/item/reagent_containers/pill/patch/medkit,
@@ -940,6 +949,10 @@
 	pixel_y = 30
 	},
 /turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/outdoors/deployment_city/zombies)
+"Qa" = (
+/mob/living/basic/halflife/zombie,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/zombies)
 "Qe" = (
 /obj/structure/closet/crate/bin,
@@ -1102,9 +1115,7 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
 "Vb" = (
-/obj/machinery/deployment_points_flag/poland/low_cash{
-	cash_increase = 0.1
-	},
+/obj/machinery/deployment_points_flag/poland/low_cash,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Vf" = (
@@ -9884,7 +9895,7 @@ HG
 XJ
 kd
 kd
-kd
+NX
 XJ
 HG
 SX
@@ -10443,8 +10454,8 @@ NP
 WB
 YG
 bR
-WB
-WG
+qo
+UB
 JX
 zA
 dh
@@ -10592,8 +10603,8 @@ NP
 WB
 ge
 MQ
-WB
-WG
+qo
+UB
 zA
 pb
 JX
@@ -10741,8 +10752,8 @@ NP
 WB
 MQ
 MQ
-WB
-WG
+qo
+UB
 pb
 Me
 pb
@@ -10890,8 +10901,8 @@ NP
 CV
 MQ
 MQ
-WB
-WG
+qo
+UB
 JX
 pu
 zA
@@ -11039,8 +11050,8 @@ rj
 WB
 MQ
 MQ
-WB
-WG
+qo
+UB
 JX
 JX
 dh
@@ -11188,8 +11199,8 @@ NP
 WB
 PZ
 MQ
-WB
-WG
+qo
+UB
 QG
 JX
 zA
@@ -11337,8 +11348,8 @@ NP
 WB
 wx
 bR
-WB
-WG
+qo
+UB
 zA
 JX
 zA
@@ -11818,7 +11829,7 @@ mi
 mi
 hS
 HG
-XJ
+Qa
 kd
 kd
 kd

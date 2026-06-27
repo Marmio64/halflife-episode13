@@ -10,17 +10,16 @@
 	plane = -2
 	projectile_passchance = 95
 	pass_flags_self = LETPASSTHROW|PASSSTRUCTURE
-	max_integrity = 80
+	max_integrity = 70
 	///drop item type
 	var/sheet_type = /obj/item/stack/sheet/scrap_metal
 
 	armor_type = /datum/armor/razor_wire
 
-//razorwire is most weak to melee
+//razorwire is most weak to melee and explosions
 /datum/armor/razor_wire
-	bullet = 25
-	laser = 25
-	bomb = 20
+	bullet = 30
+	laser = 30
 
 /obj/structure/razorwire/deconstruct(disassembled = TRUE, mob/living/blame_mob)
 	if(disassembled)
@@ -54,7 +53,7 @@
 	if(M.throwing && !isanimal_or_basicmob(M)) // throw someone or jump to bypass safely. Basic/simple mobs are exempt.
 		return
 	if(!M.density)
-		if(M.resting && prob(35))
+		if(M.resting && prob(40))
 			playsound(src, 'hl13/sound/effects/barbed_wire_movement.ogg', 15, 1)
 			M.visible_message(span_notice("[M] gets snagged in the barbed wire, but does not get cut."),
 			span_notice("You catch a snag in the barbed wire, but are thankfully not cut."), null, null, 5)
@@ -101,7 +100,7 @@
 		if(!metal_sheets.use(1))
 			return
 
-		repair_damage(max_integrity * 0.30, user)
+		repair_damage(max_integrity * 0.50, user)
 		visible_message(span_notice("[user] repairs \the [src]."))
 		update_icon()
 		return
