@@ -48,11 +48,6 @@
 "bZ" = (
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/deployment_city/zombies/xen_base)
-"cr" = (
-/mob/living/basic/halflife/zombie,
-/obj/structure/alien/weeds,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/deployment_city/zombies)
 "cG" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/filthy,
@@ -80,7 +75,7 @@
 /area/halflife/indoors/combat_deployment/combine_base)
 "cW" = (
 /obj/machinery/deployment_points_flag/combine{
-	cash_increase = 0.7
+	cash_increase = 0.75
 	},
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
@@ -102,10 +97,6 @@
 /area/halflife/outdoors/deployment_city/zombies)
 "eo" = (
 /obj/structure/flora/tree/halflife/pine/style_random,
-/turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/deployment_city/zombies)
-"fh" = (
-/obj/structure/alien/weeds,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/zombies)
 "fs" = (
@@ -452,6 +443,11 @@
 /obj/effect/landmark/deployments_xen,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city/zombies/xen_base)
+"zN" = (
+/mob/living/basic/halflife/zombie,
+/obj/structure/alien/weeds,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city/zombies)
 "zZ" = (
 /obj/machinery/combine_recharger/round_start{
 	pixel_y = 30
@@ -527,6 +523,10 @@
 "Ep" = (
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
+"ED" = (
+/obj/structure/alien/weeds,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/zombies)
 "EF" = (
 /obj/structure/table/halflife/no_smooth/large/crafting/weaponbench,
 /turf/open/floor/plating/indoor/metal/combine/alt2,
@@ -546,9 +546,13 @@
 /obj/machinery/combine_walllight/directional/north,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"Gi" = (
+/obj/structure/alien/weeds,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city/zombies)
 "Gy" = (
 /obj/structure/table/halflife/metal/grate,
-/obj/item/stack/razorwire/full,
+/obj/item/stack/sheet/mineral/wood/fifty,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/outdoors/deployment_city/zombies)
 "Gz" = (
@@ -666,10 +670,6 @@
 "MS" = (
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors/deployment_city/zombies)
-"Nk" = (
-/obj/structure/alien/weeds,
-/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/zombies)
 "NC" = (
 /obj/item/reagent_containers/cup/soda_cans/breenwater/green,
@@ -3672,7 +3672,7 @@ sd
 sd
 sd
 sd
-fh
+Gi
 sd
 sd
 sd
@@ -3958,8 +3958,8 @@ JV
 sd
 sd
 sd
-fh
-fh
+Gi
+Gi
 sd
 Jm
 sd
@@ -4099,7 +4099,7 @@ sd
 sd
 sd
 JV
-fh
+Gi
 sd
 sd
 sd
@@ -4240,8 +4240,8 @@ sd
 eo
 sd
 sd
-fh
-fh
+Gi
+Gi
 sd
 Jm
 Jm
@@ -4383,7 +4383,7 @@ sd
 sd
 sd
 sd
-fh
+Gi
 sd
 Jm
 sd
@@ -5975,9 +5975,9 @@ sd
 sd
 sd
 sd
-fh
+Gi
 sd
-fh
+Gi
 sd
 sd
 Jm
@@ -6116,9 +6116,9 @@ sd
 eo
 Jm
 Jm
-fh
-fh
-fh
+Gi
+Gi
+Gi
 Jm
 sd
 Jm
@@ -6262,7 +6262,7 @@ sd
 Jm
 sd
 Jm
-fh
+Gi
 sd
 sd
 sd
@@ -6684,7 +6684,7 @@ sd
 sd
 Jm
 Jm
-fh
+Gi
 sd
 Jm
 sd
@@ -12357,7 +12357,7 @@ sd
 sd
 sd
 Jm
-fh
+Gi
 sd
 sd
 Yv
@@ -12495,13 +12495,13 @@ sd
 sd
 sd
 Kt
-fh
-fh
-fh
+Gi
+Gi
+Gi
 sd
 sd
-fh
-fh
+Gi
+Gi
 sd
 sd
 sd
@@ -12638,7 +12638,7 @@ sd
 sd
 Kt
 sd
-fh
+Gi
 Jm
 sd
 Yv
@@ -13212,8 +13212,8 @@ sd
 Jm
 Jm
 Jm
-fh
-fh
+Gi
+Gi
 Jm
 sd
 sd
@@ -13352,10 +13352,10 @@ Jm
 Jm
 eo
 Jm
-fh
-fh
-cr
-fh
+Gi
+Gi
+zN
+Gi
 Jm
 sd
 Jm
@@ -13613,8 +13613,8 @@ gu
 gu
 gu
 gu
-Nk
-Nk
+ED
+ED
 gu
 Jm
 sd
@@ -13754,10 +13754,10 @@ JV
 sd
 sd
 sd
-fh
-fh
+Gi
+Gi
 Jm
-fh
+Gi
 Jm
 Jm
 sd
@@ -13901,7 +13901,7 @@ sd
 Jm
 sd
 sd
-fh
+Gi
 Jm
 Jm
 sd
@@ -14042,7 +14042,7 @@ sd
 eo
 Jm
 sd
-fh
+Gi
 sd
 sd
 Jm
@@ -14186,7 +14186,7 @@ Jm
 sd
 sd
 sd
-fh
+Gi
 sd
 Jm
 sd

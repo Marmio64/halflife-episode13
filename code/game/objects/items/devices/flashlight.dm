@@ -413,6 +413,9 @@
 	var/can_be_extinguished = FALSE
 	custom_materials = list(/datum/material/plastic= SMALL_MATERIAL_AMOUNT * 0.5)
 
+/obj/item/flashlight/flare/civ_pro_vendor
+	custom_price = 0.5
+
 /obj/item/flashlight/flare/Initialize(mapload)
 	. = ..()
 	if(randomize_fuel)

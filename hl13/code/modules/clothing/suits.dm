@@ -117,7 +117,7 @@
 
 	if(!cloaked)
 		to_chat(H, "<span class='notice'Cloak deployed.</span>")
-		H.alpha = 60
+		H.alpha = 40
 		ADD_TRAIT(H, TRAIT_PACIFISM, CLOTHING_TRAIT) //cant attack while cloaked
 		cloaked = TRUE
 	else

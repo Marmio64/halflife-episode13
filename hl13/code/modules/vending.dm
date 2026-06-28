@@ -150,21 +150,20 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 	displayed_currency_name = " requisition points"
 	tiltable = FALSE
 	products = list(
-		/obj/item/restraints/handcuffs = 12,
+		/obj/item/restraints/handcuffs/civ_pro_vendor = 12,
 		/obj/item/lockpick/combine = 12,
 		/obj/item/gps = 12,
-		/obj/item/flashlight/flare = 12,
+		/obj/item/flashlight/flare/civ_pro_vendor = 12,
 		/obj/item/ammo_box/magazine/usp9mm/rubber = 12,
-		/obj/item/ammo_box/colta357 = 2,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 12,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 12,
 		/obj/item/reagent_containers/spray/pepper = 12,
-		/obj/item/radio/civpro = 12,
+		/obj/item/radio/civpro/civ_pro_vendor = 12,
 		/obj/item/halflife/combine_battery = 12,
 		/obj/item/storage/halflife/pill_bottle/antifatigue = 12,
 		/obj/item/food/nutripaste/small = 12,
 		/obj/item/grenade/stingbang/halflife = 12,
-		/obj/item/stack/kevlar = 12,
+		/obj/item/stack/kevlar/civ_pro_vendor = 12,
 	)
 	contraband = list(
 		/obj/item/clothing/glasses/sunglasses = 2,
@@ -173,6 +172,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/storage/backpack/halflife/satchel/civilprotection = 12,
 		/obj/item/gun/ballistic/automatic/pistol/usp/riot/civ_pro_vendor = 12,
 		/obj/item/melee/baton/security/heavy/loaded = 12,
+		/obj/item/ammo_box/colta357/civ_pro_vendor = 2,
 	)
 	refill_canister = /obj/item/vending_refill/civpro
 	default_price = 1

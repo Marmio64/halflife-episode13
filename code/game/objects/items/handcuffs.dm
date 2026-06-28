@@ -64,6 +64,9 @@
 	/// How strong the cuffs are. Weak cuffs can be broken with wirecutters or boxcutters.
 	var/restraint_strength = HANDCUFFS_TYPE_STRONG
 
+/obj/item/restraints/handcuffs/civ_pro_vendor
+	custom_price = 0.5
+
 /obj/item/restraints/handcuffs/apply_fantasy_bonuses(bonus)
 	. = ..()
 	handcuff_time = modify_fantasy_variable("handcuff_time", handcuff_time, -bonus * 2, minimum = 0.3 SECONDS)

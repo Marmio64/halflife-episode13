@@ -12,6 +12,10 @@
 	ammo_band_icon = "+38_ammo_band"
 	ammo_band_color = null
 
+/obj/item/ammo_box/colta357/civ_pro_vendor
+	custom_price = 2
+	custom_premium_price = 2
+
 /obj/item/ammo_box/colta357/armor_piercing
 	name = "speed loader (.357 Armor Piercing)"
 	desc = "Designed to quickly reload revolvers. These rounds are manufactured with armor piercing materials, and additional gunpowder."

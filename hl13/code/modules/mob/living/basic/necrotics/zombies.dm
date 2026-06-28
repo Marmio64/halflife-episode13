@@ -336,14 +336,13 @@
 	headcrabspawn = /mob/living/basic/halflife/headcrab/fast
 
 /mob/living/basic/halflife/zombie/fast/deployment
-	melee_damage_lower = 13
-	melee_damage_upper = 16
-	melee_attack_cooldown = 0.4 SECONDS
+	melee_damage_lower = 15
+	melee_damage_upper = 19
+	melee_attack_cooldown = 0.5 SECONDS
 
 /mob/living/basic/halflife/zombie/fast/deployment/upgraded
-	melee_attack_cooldown = 0.25 SECONDS
-	melee_damage_lower = 14
-	melee_damage_upper = 18
+	melee_damage_lower = 18
+	melee_damage_upper = 24
 	armour_penetration = 10
 	maxHealth = 125
 	health = 125

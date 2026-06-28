@@ -221,6 +221,9 @@
 	icon_state = "kevlar"
 	w_class = WEIGHT_CLASS_SMALL
 
+/obj/item/stack/kevlar/civ_pro_vendor
+	custom_price = 0.5
+
 /obj/item/stack/kevlar/two
 	amount = 2
 

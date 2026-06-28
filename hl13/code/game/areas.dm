@@ -126,9 +126,9 @@
 	ambient_buzz = 'hl13/sound/ambience/town_abandoned.ogg'
 	ambient_buzz_vol = 25
 
-	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_03.ogg'
+	ambient_music = 'hl13/sound/ambience/bgm/heartofevil.ogg'
 
-	ambient_music_vol = 20
+	ambient_music_vol = 15
 	daylight_multiplier = 0.7
 
 /area/halflife/outdoors/deployment_city/zombies/xen_base
