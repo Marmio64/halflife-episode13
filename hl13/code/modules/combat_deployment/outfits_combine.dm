@@ -606,6 +606,7 @@
 	skillchips = list(/obj/item/skillchip/engineer)
 
 /obj/item/sbeacondrop/combine_turret
+	name = "combine turret beacon"
 	desc = "A label on it reads: <i>Warning: Activating this device will send a combine turret to your location</i>."
 	droptype = /obj/machinery/porta_turret/combine
 	call_period = 5 SECONDS

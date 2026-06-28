@@ -721,6 +721,7 @@
 	alternate_music_chance = 25
 
 /obj/item/sbeacondrop/rebel_turret
+	name = "rebel turret beacon"
 	desc = "A label on it reads: <i>Warning: Activating this device will send a rebel turret to your location</i>."
 	droptype = /obj/machinery/porta_turret/combine/rebel
 	call_period = 5 SECONDS
