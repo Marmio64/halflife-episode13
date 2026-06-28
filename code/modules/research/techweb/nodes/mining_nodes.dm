@@ -11,7 +11,6 @@
 		"recycler",
 		"stack_machine",
 		"stack_console",
-		"autolathe",
 		"rglass",
 	)
 

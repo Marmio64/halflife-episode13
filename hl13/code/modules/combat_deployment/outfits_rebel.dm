@@ -460,6 +460,7 @@
 	extra_dex = 10
 	extra_end = 3
 
+	combat_music = 'hl13/sound/music/combat/notsupposedtobehere.ogg'
 	alternate_combat_music = 'hl13/sound/music/combat/fasterthanaspeedingbullet.ogg'
 	alternate_music_chance = 50
 
@@ -756,7 +757,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	glasses = /obj/item/clothing/glasses/night
 
-	combat_music = 'hl13/sound/music/combat/everymove.ogg'
+	combat_music = 'hl13/sound/music/combat/legacy2.ogg'
 
 	alternate_combat_music = 'hl13/sound/music/combat/rightbehindyou.ogg'
 
@@ -789,6 +790,7 @@
 	extra_dex = 10
 	extra_end = 3
 
+	combat_music = 'hl13/sound/music/combat/notsupposedtobehere.ogg'
 	alternate_combat_music = 'hl13/sound/music/combat/fasterthanaspeedingbullet.ogg'
 	alternate_music_chance = 50
 
@@ -846,7 +848,7 @@
 	r_pocket = /obj/item/flashlight/seclite
 
 	ears = /obj/item/radio/headset/rebel_deployment
-	combat_music = 'hl13/sound/music/combat/notsupposedtobehere.ogg'
+	combat_music = 'hl13/sound/music/combat/everymove.ogg'
 
 	belt = /obj/item/crowbar/large/freeman/extreme
 	back = /obj/item/storage/backpack/halflife/satchel/larger
@@ -881,7 +883,7 @@
 	shoes = /obj/item/clothing/shoes/boots
 
 	ears = /obj/item/radio/headset/rebel_deployment
-	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
+	combat_music = 'hl13/sound/music/combat/escalation1.ogg'
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/rocket)
 
@@ -904,7 +906,7 @@
 	r_pocket = /obj/item/flashlight/seclite
 
 	ears = /obj/item/radio/headset/rebel_deployment
-	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
+	combat_music = 'hl13/sound/music/combat/escalation1.ogg'
 
 	back = /obj/item/storage/backpack/halflife/satchel/larger/fireproof
 
@@ -941,7 +943,7 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
-	combat_music = 'hl13/sound/music/combat/secretsteersus.ogg'
+	combat_music = 'hl13/sound/music/combat/escalation1.ogg'
 
 	extra_end = 6
 
@@ -991,7 +993,7 @@
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
-	combat_music = 'hl13/sound/music/combat/everymove.ogg'
+	combat_music = 'hl13/sound/music/combat/legacy2.ogg'
 
 	spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/rebel/short)
 
@@ -1074,7 +1076,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	glasses = /obj/item/clothing/glasses/hud/security/night/stealthy_medhud
 
-	combat_music = 'hl13/sound/music/combat/everymove.ogg'
+	combat_music = 'hl13/sound/music/combat/legacy2.ogg'
 
 	alternate_combat_music = 'hl13/sound/music/combat/rightbehindyou.ogg'
 

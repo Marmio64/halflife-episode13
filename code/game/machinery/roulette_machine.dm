@@ -15,7 +15,7 @@
 #define ROULETTE_BET_BLACK "black"
 #define ROULETTE_BET_RED "red"
 
-#define ROULETTE_JACKPOT_AMOUNT 1000
+#define ROULETTE_JACKPOT_AMOUNT 250
 
 ///Machine that lets you play roulette. Odds are pre-defined to be the same as European Roulette without the "En Prison" rule
 /obj/machinery/roulette
@@ -32,7 +32,7 @@
 	"2" = "black", "4" = "black", "6" = "black", "8" = "black", "10" = "black", "11" = "black", "13" = "black", "15" = "black", "17" = "black", "20" = "black",\
 	"22" = "black", "24" = "black", "26" = "black", "28" = "black", "29" = "black", "31" = "black", "33" = "black", "35" = "black")
 
-	var/chosen_bet_amount = 10
+	var/chosen_bet_amount = 5
 	var/chosen_bet_type = "0"
 	var/last_anti_spam = 0
 	var/anti_spam_cooldown = 20
@@ -40,7 +40,7 @@
 	var/playing = FALSE
 	var/locked = FALSE
 	var/drop_dir = SOUTH
-	var/static/list/coin_values = list(/obj/item/coin/diamond = 100, /obj/item/coin/gold = 25, /obj/item/coin/silver = 10, /obj/item/coin/iron = 1) //Make sure this is ordered from left to right.
+	var/static/list/coin_values = list(/obj/item/coin/diamond = 7, /obj/item/coin/gold = 5, /obj/item/coin/silver = 2, /obj/item/coin/iron = 1) //Make sure this is ordered from left to right.
 	var/list/coins_to_dispense = list()
 	var/datum/looping_sound/jackpot/jackpot_loop
 	var/on = TRUE

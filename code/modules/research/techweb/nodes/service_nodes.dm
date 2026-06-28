@@ -23,7 +23,6 @@
 		"toy_balloon",
 		"pet_carrier",
 		"chisel",
-		"spraycan",
 		"camera_film",
 		"camera",
 		"razor",

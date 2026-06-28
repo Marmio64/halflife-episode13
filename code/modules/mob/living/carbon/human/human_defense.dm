@@ -325,8 +325,8 @@
 		var/probability = 0
 		switch(severity)
 			if(EXPLODE_NONE)
-				max_limb_loss = 1
-				probability = 20
+				max_limb_loss = 0
+				probability = 0
 			if(EXPLODE_LIGHT)
 				max_limb_loss = 0 //hl13 edit
 				probability = 0 //hl13 edit

@@ -109,7 +109,6 @@
 	prereq_ids = list(TECHWEB_NODE_CYBERNETICS)
 	design_ids = list(
 		"cybernetic_eyes_improved",
-		"cybernetic_eyes_improved_moth",
 		"cybernetic_ears_u",
 		"cybernetic_lungs_tier2",
 		"cybernetic_stomach_tier2",

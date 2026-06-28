@@ -76,11 +76,21 @@ export function RouletteBetTable(props) {
               fluid
               onClick={() =>
                 act('ChangeBetAmount', {
-                  amount: 10,
+                  amount: 5,
                 })
               }
             >
-              Bet 10 cr
+              Bet 5 cr
+            </Button>
+            <Button
+              fluid
+              onClick={() =>
+                act('ChangeBetAmount', {
+                  amount: 25,
+                })
+              }
+            >
+              Bet 25 cr
             </Button>
             <Button
               fluid
@@ -102,16 +112,6 @@ export function RouletteBetTable(props) {
             >
               Bet 100 cr
             </Button>
-            <Button
-              fluid
-              onClick={() =>
-                act('ChangeBetAmount', {
-                  amount: 500,
-                })
-              }
-            >
-              Bet 500 cr
-            </Button>
             <Stack>
               <Stack.Item grow>
                 <Button
@@ -129,7 +129,7 @@ export function RouletteBetTable(props) {
                 <NumberInput
                   value={customBet}
                   minValue={0}
-                  maxValue={1000}
+                  maxValue={250}
                   step={10}
                   stepPixelSize={4}
                   width="40px"

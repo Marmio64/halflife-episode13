@@ -755,7 +755,7 @@
 	)
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
+	combat_music = 'hl13/sound/music/combat/escalation3.ogg'
 
 	extra_end = 4
 
@@ -800,7 +800,7 @@
 	)
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = 'hl13/sound/music/combat/branescan.ogg'
+	combat_music = 'hl13/sound/music/combat/remuneration.ogg'
 
 	extra_int = 10
 	extra_per = 5

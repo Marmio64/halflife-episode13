@@ -98,11 +98,7 @@
 	design_ids = list(
 		"circuit_imprinter_offstation",
 		"circuit_imprinter",
-		"solarcontrol",
-		"solar_panel",
-		"solar_tracker",
 		"power_control",
-		"airalarm_electronics",
 		"airlock_board",
 		"firealarm_electronics",
 		"firelock_board",

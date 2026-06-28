@@ -181,6 +181,18 @@
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
 
+/datum/crafting_recipe/resistance_light_armor
+	name = "Armored Rebel Jacket Vest"
+	result = /obj/item/clothing/suit/armor/rebel/light
+	reqs = list(/obj/item/clothing/suit/armor/civilprotection = 1,
+				/obj/item/stack/sheet/cloth = 2,
+				/obj/item/stack/sheet/iron = 2)
+	time = 10 SECONDS
+	category = CAT_ARMOR
+	crafting_interface = CRAFTING_BENCH_ARMTAILOR
+
+/obj/item/clothing/suit/armor/rebel/light/jacket
+
 /datum/crafting_recipe/resistance_heavy_armor
 	name = "Heavy Resistance Vest"
 	result = /obj/item/clothing/suit/armor/rebel

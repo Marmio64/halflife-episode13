@@ -9,7 +9,7 @@
 #define TECHWEB_TIER_2_POINTS 300
 #define TECHWEB_TIER_3_POINTS 400
 #define TECHWEB_TIER_4_POINTS 500
-#define TECHWEB_TIER_5_POINTS 600
+#define TECHWEB_TIER_5_POINTS 650
 
 //! Amount of points gained per second by a single R&D server, see: [research][code/controllers/subsystem/research.dm]
 #define TECHWEB_SINGLE_SERVER_INCOME 1

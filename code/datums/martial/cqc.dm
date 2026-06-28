@@ -74,7 +74,7 @@
 			span_danger("[cqc_user] blocks [attack_text] and twists [attacker]'s arm behind [attacker.p_their()] back!"),
 			span_userdanger("You block [attack_text]!"),
 		)
-		attacker.Stun(4 SECONDS)
+		attacker.Stun(2.5 SECONDS)
 	else
 		cqc_user.visible_message(
 			span_danger("[cqc_user] blocks [attack_text]!"),

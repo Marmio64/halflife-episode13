@@ -44,7 +44,7 @@
 		return
 
 	// Some effects are halved mid-combat.
-	var/determined_mod = has_status_effect(/datum/status_effect/determined) ? 0.5 : 0
+	var/determined_mod = has_status_effect(/datum/status_effect/determined) ? 0.5 : 1
 
 	var/word = pick("dizzy","woozy","faint")
 	switch(blood_volume)
