@@ -80,9 +80,9 @@
 	entangled.Immobilize(rand(30,40))
 	if(isanimal_or_basicmob(entangled))
 		if(entangled.mob_size > MOB_SIZE_HUMAN)
-			entangled.Immobilize(rand(30,40), ignore_canstun = TRUE) //large mobs get immobilized only instead of full stunned
+			entangled.Immobilize(rand(20,30), ignore_canstun = TRUE) //large mobs get immobilized for less time
 		else
-			entangled.Stun(rand(30,40), ignore_canstun = TRUE)
+			entangled.Immobilize(rand(30,40), ignore_canstun = TRUE)
 
 /obj/structure/razorwire/attackby(obj/item/I, mob/user, params)
 	. = ..()

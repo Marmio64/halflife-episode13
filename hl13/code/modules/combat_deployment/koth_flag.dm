@@ -15,7 +15,7 @@ GLOBAL_VAR_INIT(deployment_progression_stage, 0)
 //If their side has a shit ton of tier points, they get a guaranteed high tier.
 GLOBAL_VAR_INIT(rebel_tier_points, 4)
 GLOBAL_VAR_INIT(combine_tier_points, 3)
-GLOBAL_VAR_INIT(xen_tier_points, 3)
+GLOBAL_VAR_INIT(xen_tier_points, 1)
 
 /obj/machinery/deployment_koth_flag
 	name = "Central Flag"
