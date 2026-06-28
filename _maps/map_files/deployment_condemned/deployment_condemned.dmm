@@ -271,6 +271,10 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/outdoors/deployment_city/zombies)
+"kX" = (
+/mob/living/basic/halflife/zombie,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/zombies)
 "ls" = (
 /obj/machinery/repairpod,
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -282,10 +286,6 @@
 /area/halflife/indoors/combat_deployment/rebel_base)
 "lS" = (
 /turf/cordon,
-/area/halflife/outdoors/deployment_city/zombies)
-"lW" = (
-/obj/item/stack/sheet/mineral/wood/twentyfive,
-/turf/open/floor/plating/indoor/tile/green,
 /area/halflife/outdoors/deployment_city/zombies)
 "me" = (
 /obj/structure/halflife/leaves,
@@ -450,6 +450,10 @@
 /obj/item/stack/sheet/scrap_metal,
 /turf/open/halflife/water/sludge/shallow,
 /area/halflife/outdoors/deployment_city/zombies)
+"tF" = (
+/mob/living/basic/halflife/zombie,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/zombies)
 "tM" = (
 /obj/structure/flora/tree/halflife/plain,
 /turf/open/floor/plating/ground/dirt,
@@ -600,11 +604,6 @@
 "Ab" = (
 /obj/structure/halflife/rug/red,
 /turf/open/floor/plating/indoor/woodc,
-/area/halflife/outdoors/deployment_city/zombies)
-"Ag" = (
-/turf/closed/wall/halflife/concrete/alt{
-	explosive_resistance = 5
-	},
 /area/halflife/outdoors/deployment_city/zombies)
 "Ak" = (
 /obj/machinery/light/small/directional/south,
@@ -790,10 +789,6 @@
 /obj/machinery/deployment_points_flag/xen/high_cash,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/zombies)
-"GB" = (
-/mob/living/basic/halflife/zombie,
-/turf/open/floor/plating/ground/brickroad,
-/area/halflife/outdoors/deployment_city/zombies)
 "GP" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional{
 	dir = 4
@@ -857,6 +852,10 @@
 /obj/machinery/ammo_crate,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"JB" = (
+/obj/item/stack/sheet/mineral/wood/twentyfive,
+/turf/open/floor/plating/indoor/tile/green,
+/area/halflife/outdoors/deployment_city/zombies)
 "JN" = (
 /obj/structure/razorwire{
 	dir = 4
@@ -874,10 +873,6 @@
 /area/halflife/indoors/combat_deployment/rebel_base)
 "JX" = (
 /turf/open/floor/plating/ground/dirt,
-/area/halflife/outdoors/deployment_city/zombies)
-"KA" = (
-/mob/living/basic/halflife/zombie,
-/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/zombies)
 "LW" = (
 /obj/structure/barricade/sandbags,
@@ -944,6 +939,11 @@
 "Pz" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"PE" = (
+/turf/closed/wall/halflife/concrete/alt{
+	explosive_resistance = 5
+	},
+/area/halflife/outdoors/deployment_city/zombies)
 "PM" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -1119,7 +1119,9 @@
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city/zombies)
 "Vb" = (
-/obj/machinery/deployment_points_flag/poland/low_cash,
+/obj/machinery/deployment_points_flag/poland/low_cash{
+	cash_increase = 0.4
+	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Vf" = (
@@ -9899,7 +9901,7 @@ HG
 XJ
 kd
 kd
-GB
+kX
 XJ
 HG
 SX
@@ -10458,7 +10460,7 @@ NP
 WB
 YG
 bR
-Ag
+PE
 UB
 JX
 zA
@@ -10607,7 +10609,7 @@ NP
 WB
 ge
 MQ
-Ag
+PE
 UB
 zA
 pb
@@ -10756,7 +10758,7 @@ NP
 WB
 MQ
 MQ
-Ag
+PE
 UB
 pb
 Me
@@ -10898,14 +10900,14 @@ NP
 NP
 eT
 wS
-lW
+JB
 NP
 NP
 NP
 CV
 MQ
 MQ
-Ag
+PE
 UB
 JX
 pu
@@ -11054,7 +11056,7 @@ rj
 WB
 MQ
 MQ
-Ag
+PE
 UB
 JX
 JX
@@ -11203,7 +11205,7 @@ NP
 WB
 PZ
 MQ
-Ag
+PE
 UB
 QG
 JX
@@ -11352,7 +11354,7 @@ NP
 WB
 wx
 bR
-Ag
+PE
 UB
 zA
 JX
@@ -11833,7 +11835,7 @@ mi
 mi
 hS
 HG
-KA
+tF
 kd
 kd
 kd
