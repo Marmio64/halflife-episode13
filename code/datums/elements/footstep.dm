@@ -231,7 +231,7 @@
 		falloff_distance = 1,
 	)
 
-	if(heard_clients)
+	if(heard_clients && !HAS_TRAIT(source, TRAIT_QUIET_STEPS))
 		play_fov_effect(source, 5, "footstep", direction, ignore_self = TRUE, override_list = heard_clients)
 
 

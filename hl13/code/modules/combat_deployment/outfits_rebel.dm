@@ -762,6 +762,8 @@
 
 	alternate_combat_music = 'hl13/sound/music/combat/rightbehindyou.ogg'
 
+	traits_to_add = list(TRAIT_QUIET_STEPS)
+
 	extra_str = 6
 	extra_dex = 3
 
@@ -1080,6 +1082,8 @@
 	combat_music = 'hl13/sound/music/combat/legacy2.ogg'
 
 	alternate_combat_music = 'hl13/sound/music/combat/rightbehindyou.ogg'
+
+	traits_to_add = list(TRAIT_QUIET_STEPS)
 
 	extra_str = 6
 	extra_dex = 8

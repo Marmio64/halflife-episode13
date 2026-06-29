@@ -1390,15 +1390,15 @@
 	tesla_zap(source = get_turf(src), zap_range = fish_zap_range, power = fish_zap_power, cutoff = 1 MEGA JOULES, zap_flags = fish_zap_flags)
 
 ///The multiplier of the factor of size and weight of the fish, used to determinate the raw price before exponentation
-#define FISH_PRICE_MULTIPLIER 0.01
+#define FISH_PRICE_MULTIPLIER 0.005
 ///This makes each additional unit of fish weight and size yields diminishing marginal returns.
-#define FISH_PRICE_CURVE_EXPONENT 0.85
+#define FISH_PRICE_CURVE_EXPONENT 0.75
 /**
  * past this threshold, the price of fish will plateu even faster.
  * This stops particularly huge fish from being an overly efficient way to make money
  * that bypasses price elasticity by selling fewer units.
  */
-#define FISH_PRICE_SOFT_CAP_THRESHOLD 6000
+#define FISH_PRICE_SOFT_CAP_THRESHOLD 1000
 ///The second exponent used for soft-capping the fish price.
 #define FISH_PRICE_SOFT_CAP_EXPONENT 0.86
 

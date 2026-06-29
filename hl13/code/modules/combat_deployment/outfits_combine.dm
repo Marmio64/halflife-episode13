@@ -726,6 +726,8 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/infiltrate.ogg'
 
+	traits_to_add = list(TRAIT_QUIET_STEPS)
+
 	extra_dex = 10
 	extra_str = 5
 	extra_per = 5
