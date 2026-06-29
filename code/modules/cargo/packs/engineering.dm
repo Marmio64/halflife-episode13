@@ -69,6 +69,14 @@
 	contains = list(/obj/item/stack/sticky_tape)
 	crate_name = "tape crate"
 
+/datum/supply_pack/engineering/intellicard
+	name = "Dispatch Networking and Storage Card"
+	desc = "A valuable and well-formatted card full of storage devices to hold Dispatch personality cores and upload them to and from a stationary core. These can be utilized in a modular computer to fix any damage upon internal systems, and comes with a provided easy-use computer board."
+	cost = CARGO_CRATE_VALUE * 20
+	contains = list(/obj/item/aicard,
+					/obj/item/circuitboard/computer/aifixer,
+				)
+	crate_name = "dispatch networking crate"
 
 
 
