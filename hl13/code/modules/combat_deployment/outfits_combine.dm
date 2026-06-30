@@ -753,14 +753,15 @@
 
 	backpack_contents = list(
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
-		/obj/item/ammo_box/magazine/pulselmg = 3,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 3,
 	)
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/pulselmg_ammo)
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/escalation3.ogg'
 
-	extra_end = 4
+	extra_end = 5
 
 /datum/outfit/deployment_loadout/combine/tier5/advisor
 	name = "Deployment: Advisor"

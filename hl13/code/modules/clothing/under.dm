@@ -182,7 +182,7 @@
 	name = "overwatch jumpsuit"
 	desc = "Full-body reinforced suit which includes kevlar weaving to provide extra protection."
 	icon_state = "suppressor"
-	armor_type = /datum/armor/combinesuit_elite
+	armor_type = /datum/armor/combinesuit_suppressor
 
 /obj/item/clothing/under/combine/overwatch/elite
 	name = "overwatch jumpsuit"
@@ -195,7 +195,17 @@
 	bullet = 20
 	laser = 30
 	energy = 30
-	bomb = 30
+	bomb = 35
+	fire = 90
+	acid = 50
+	wound = 10
+
+/datum/armor/combinesuit_suppressor
+	melee = 20
+	bullet = 20
+	laser = 30
+	energy = 30
+	bomb = 60
 	fire = 90
 	acid = 50
 	wound = 10
@@ -205,7 +215,7 @@
 	bullet = 25
 	laser = 30
 	energy = 30
-	bomb = 90
+	bomb = 100
 	fire = 90
 	acid = 50
 	wound = 10

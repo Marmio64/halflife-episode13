@@ -143,6 +143,20 @@
 /datum/action/cooldown/spell/conjure_item/svd_ammo/fast
 	cooldown_time = 12 SECONDS
 
+/datum/action/cooldown/spell/conjure_item/pulselmg_ammo
+	name = "Procure Suppressor Magazine"
+	desc = "Procures a magazine for you to use in your Pulse LMG."
+	button_icon = 'hl13/icons/obj/guns/ammo.dmi'
+	button_icon_state = "ar2"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 75 SECONDS
+	item_type = /obj/item/ammo_box/magazine/pulselmg
+	requires_hands = TRUE
+	delete_old = FALSE
+
 /datum/action/cooldown/spell/conjure_item/overseer_viscerator
 	name = "Procure Shielded Viscerator"
 	desc = "Procures a deployable, shielded viscerator."

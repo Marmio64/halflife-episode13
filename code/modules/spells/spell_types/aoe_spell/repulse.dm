@@ -57,7 +57,10 @@
 
 		if(isliving(victim))
 			var/mob/living/victim_living = victim
-			victim_living.Knockdown(3 SECONDS)
+			if(HAS_TRAIT(victim_living, TRAIT_BRAWLING_KNOCKDOWN_BLOCKED))
+				victim_living.Immobilize(3 SECONDS)
+			else
+				victim_living.Knockdown(3 SECONDS)
 			to_chat(victim, span_userdanger("You're thrown back by [caster]!"))
 
 		// So stuff gets tossed around at the same time.
