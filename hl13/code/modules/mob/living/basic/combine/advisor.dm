@@ -29,7 +29,7 @@
 
 	deployment_faction = COMBINE_DEPLOYMENT_FACTION
 
-	cmode_music = 'hl13/sound/music/combat/disrupted.ogg' //spooky!
+	cmode_music = 'hl13/sound/music/combat/remuneration.ogg'
 	lighting_cutoff_blue = 25
 	lighting_cutoff = 8
 	var/datum/action/cooldown/spell/list_target/telepathy/advisor/telepathy
