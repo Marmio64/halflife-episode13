@@ -10,6 +10,8 @@
  * If you are facing some odd bug with specifically space, check if it's something that was
  * intentionally ommitted from this implementation.
  */
+
+/* hl13 edit!!!!!! stop freezing our trains out you space nerds!!!
 /turf/open/space/Initialize(mapload)
 	SHOULD_CALL_PARENT(FALSE)
 	air = space_gas
@@ -43,3 +45,4 @@
 				T.multiz_turf_new(src, UP)
 
 	return INITIALIZE_HINT_NORMAL
+*/

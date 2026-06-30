@@ -50,7 +50,7 @@ GLOBAL_LIST_EMPTY(starlight)
 	underfloor_accessibility = UNDERFLOOR_INTERACTABLE
 	rust_resistance = RUST_RESISTANCE_ABSOLUTE
 
-	temperature = TCMB
+	//temperature = TCMB (hl13 edit)
 	thermal_conductivity = OPEN_HEAT_TRANSFER_COEFFICIENT
 	heat_capacity = 700000
 	var/starlight_source_count = 0
@@ -59,7 +59,8 @@ GLOBAL_LIST_EMPTY(starlight)
 	var/destination_x
 	var/destination_y
 
-	var/static/datum/gas_mixture/immutable/space/space_gas = new
+	// var/static/datum/gas_mixture/immutable/space/space_gas = new (hl13 edit, uncomment space_EXPENSIVE.dm's contents too if youre gonna reverse this (which you really shouldnt))
+	initial_gas_mix = OPENTURF_DEFAULT_ATMOS //hl13 edit
 	// We do NOT want atmos adjacent turfs
 	init_air = FALSE
 	run_later = TRUE
@@ -74,7 +75,7 @@ GLOBAL_LIST_EMPTY(starlight)
 	bullet_bounce_sound = null
 	vis_flags = VIS_INHERIT_ID //when this be added to vis_contents of something it be associated with something on clicking, important for visualisation of turf in openspace and interraction with openspace that show you turf.
 
-	force_no_gravity = TRUE
+	force_no_gravity = FALSE //hl13 edit
 
 /turf/open/space/basic/New() //Do not convert to Initialize
 	SHOULD_CALL_PARENT(FALSE)
