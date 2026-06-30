@@ -2,12 +2,34 @@
 "b" = (
 /turf/closed/wall/halflife/metal,
 /area/shuttle/supply)
+"d" = (
+/obj/machinery/door/poddoor/shutters{
+	id = "cargo_train";
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/walkway{
+	dir = 1
+	},
+/area/shuttle/supply)
 "e" = (
-/turf/open/floor/plating/indoor/metal/smooth,
+/obj/machinery/combine_walllight/directional/east,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/shuttle/supply)
 "i" = (
-/obj/machinery/light/small/cyan/directional/north,
-/turf/open/floor/plating/indoor/metal/smooth,
+/obj/structure/railing/halflife/full{
+	dir = 1
+	},
+/obj/machinery/door/poddoor/shutters{
+	id = "cargo_train";
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/walkway{
+	dir = 1
+	},
+/area/shuttle/supply)
+"l" = (
+/obj/machinery/combine_walllight/directional/west,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/shuttle/supply)
 "s" = (
 /turf/template_noop,
@@ -19,105 +41,122 @@
 /turf/closed/wall/halflife/metal,
 /area/shuttle/supply)
 "u" = (
-/obj/structure/fans/tiny/invisible,
-/obj/machinery/door/airlock/highsecurity/combine,
-/turf/open/floor/plating/indoor/metal/smooth,
+/obj/machinery/door/poddoor/shutters{
+	id = "cargo_train"
+	},
+/turf/open/floor/plating/indoor/metal/walkway{
+	dir = 1
+	},
+/area/shuttle/supply)
+"y" = (
+/obj/machinery/button/door{
+	id = "cargo_train"
+	},
+/turf/closed/wall/halflife/metal,
+/area/shuttle/supply)
+"B" = (
+/obj/structure/railing/halflife/full,
+/obj/machinery/door/poddoor/shutters{
+	id = "cargo_train"
+	},
+/turf/open/floor/plating/indoor/metal/walkway{
+	dir = 1
+	},
 /area/shuttle/supply)
 "O" = (
-/obj/machinery/light/small/cyan/directional/south,
-/turf/open/floor/plating/indoor/metal/smooth,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/shuttle/supply)
 
 (1,1,1) = {"
+s
 b
 b
 b
-b
-b
+s
 "}
 (2,1,1) = {"
+y
 b
-e
-e
-e
 b
+b
+y
 "}
 (3,1,1) = {"
-u
+i
+O
 e
-e
-e
-u
+O
+B
 "}
 (4,1,1) = {"
-b
-i
-e
+d
 O
-b
+O
+O
+u
 "}
 (5,1,1) = {"
-b
-e
-e
-e
-b
+i
+O
+O
+O
+B
 "}
 (6,1,1) = {"
-b
-e
-e
-e
-b
+i
+O
+O
+O
+B
 "}
 (7,1,1) = {"
-b
-e
-e
-e
-b
+i
+O
+O
+O
+B
 "}
 (8,1,1) = {"
-b
-e
-e
-e
-b
+i
+O
+O
+O
+B
 "}
 (9,1,1) = {"
-b
-e
-e
-e
-b
+i
+O
+O
+O
+B
 "}
 (10,1,1) = {"
-b
 i
-e
 O
-b
+O
+O
+B
 "}
 (11,1,1) = {"
-u
-e
-e
-e
+d
+O
+O
+O
 u
 "}
 (12,1,1) = {"
-b
-e
-e
-e
-b
+i
+O
+l
+O
+B
 "}
 (13,1,1) = {"
+y
 b
 b
-e
 b
-b
+y
 "}
 (14,1,1) = {"
 s
