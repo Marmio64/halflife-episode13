@@ -13,6 +13,7 @@
 "bX" = (
 /obj/structure/halflife/trash_decal,
 /obj/structure/fans/tiny/invisible,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal,
 /area/shuttle/escape)
 "dO" = (
@@ -47,9 +48,15 @@
 "fO" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/shuttle/escape)
+"fQ" = (
+/obj/structure/fans/tiny/invisible,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/shuttle/escape)
 "gl" = (
 /obj/structure/halflife/storage/shelf,
 /obj/item/ammo_box/magazine/ak47,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/metal,
 /area/shuttle/escape)
 "gN" = (
@@ -72,6 +79,7 @@
 /obj/structure/chair/sofa/hl13bench{
 	dir = 8
 	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "hD" = (
@@ -96,10 +104,7 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "le" = (
-/obj/docking_port/mobile/emergency/backup{
-	name = "Secondary Transfer Train";
-	dir = 2
-	},
+/obj/docking_port/mobile/emergency,
 /turf/closed/wall/halflife/metal/weak/old,
 /area/shuttle/escape)
 "lK" = (
@@ -112,6 +117,7 @@
 "lZ" = (
 /obj/structure/closet/crate/freezer/halflife,
 /obj/item/gun/ballistic/automatic/servicerifle/wood/no_mag,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "mv" = (
@@ -123,6 +129,11 @@
 /obj/structure/broken_flooring/plating/directional/north,
 /turf/template_noop,
 /area/template_noop)
+"nE" = (
+/obj/structure/fans/tiny/invisible,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/indoor/metal,
+/area/shuttle/escape)
 "nN" = (
 /obj/item/food/badrecipe/moldy,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -147,6 +158,7 @@
 /area/shuttle/escape)
 "pZ" = (
 /obj/structure/halflife/trash/bricks,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/shuttle/escape)
 "qs" = (
@@ -201,10 +213,12 @@
 /obj/structure/railing/halflife/solo{
 	dir = 8
 	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "xD" = (
 /obj/structure/chair/halflife/metal/stool,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/shuttle/escape)
 "xF" = (
@@ -224,6 +238,7 @@
 /obj/structure/rack,
 /obj/item/clothing/under/syndicate/camo/halflife/armored,
 /obj/item/clothing/suit/armor/halflife/milvest,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/shuttle/escape)
 "zJ" = (
@@ -257,6 +272,11 @@
 /obj/effect/mob_spawn/corpse/human/skeleton,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
+"Ce" = (
+/obj/structure/fans/tiny/invisible,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal,
+/area/shuttle/escape)
 "Cg" = (
 /obj/effect/mob_spawn/corpse/human/skeleton,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -264,6 +284,7 @@
 "CZ" = (
 /obj/structure/halflife/storage/shelf,
 /obj/item/ammo_box/magazine/m4a1/service,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal,
 /area/shuttle/escape)
 "Dp" = (
@@ -307,6 +328,7 @@
 "Jz" = (
 /obj/structure/rack,
 /obj/item/gun/ballistic/automatic/pistol/m1911,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/concrete,
 /area/shuttle/escape)
 "JJ" = (
@@ -337,8 +359,14 @@
 	},
 /turf/open/floor/plating/indoor/concrete,
 /area/shuttle/escape)
+"Mu" = (
+/obj/effect/decal/cleanable/wrapping,
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal,
+/area/shuttle/escape)
 "Nc" = (
 /obj/item/hl13_small_flag/poland,
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/concrete,
 /area/shuttle/escape)
 "Ol" = (
@@ -364,6 +392,7 @@
 /area/shuttle/escape)
 "PV" = (
 /obj/item/target/clown,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "Qh" = (
@@ -412,6 +441,7 @@
 "Wr" = (
 /obj/structure/lattice/catwalk/hl13,
 /obj/effect/mob_spawn/corpse/human/skeleton,
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "WP" = (
@@ -431,6 +461,7 @@
 /obj/structure/chair/sofa/hl13bench{
 	dir = 4
 	},
+/obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "Ze" = (
@@ -493,7 +524,7 @@ Gs
 CZ
 Be
 un
-Be
+nE
 Mc
 QL
 bX
@@ -510,7 +541,7 @@ XE
 bj
 bj
 bj
-Am
+fQ
 Gs
 lZ
 Gs
@@ -621,10 +652,10 @@ Gs
 gl
 Kx
 bU
-Mc
+Mu
 QL
 Sj
-Be
+Ce
 gN
 bj
 VQ
