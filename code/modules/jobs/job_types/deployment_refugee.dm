@@ -79,7 +79,7 @@ GLOBAL_VAR_INIT(deployment_rebels_free_tier5s, 0)
 
 		if(GLOB.rebel_tier_points < 0.25) //We are at 0 tier points and cant afford another tier 5 unit
 			tier5_chance = 0
-		else if(5 <= GLOB.rebel_tier_points) //We have a high surplus of tier points, lets guarantee this guy gets a tier 5
+		else if(3 <= GLOB.rebel_tier_points) //We have a high surplus of tier points, lets guarantee this guy gets a tier 5
 			tier5_chance = 100
 
 

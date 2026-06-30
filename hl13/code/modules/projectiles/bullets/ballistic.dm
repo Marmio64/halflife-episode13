@@ -40,6 +40,7 @@
 
 /obj/projectile/bullet/c9mm/usp/armor_piercing
 	name = "9mm armor-piercing bullet"
+	damage = 18
 	armour_penetration = 25
 
 /obj/projectile/bullet/c9mm/usp/rubber

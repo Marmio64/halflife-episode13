@@ -80,7 +80,7 @@ GLOBAL_VAR_INIT(xen_boss_spawned, FALSE)
 
 		if(GLOB.xen_tier_points < 0.25) //We are unable to afford a tier 5
 			tier5_chance = 0
-		else if(5 <= GLOB.xen_tier_points) //We have a high surplus of tier points, lets guarantee this guy gets a tier 5
+		else if(3 <= GLOB.xen_tier_points) //We have a high surplus of tier points, lets guarantee this guy gets a tier 5
 			tier5_chance = 100
 
 

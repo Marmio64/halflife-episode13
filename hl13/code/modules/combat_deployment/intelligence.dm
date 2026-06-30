@@ -25,8 +25,8 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 
 	item_flags = SLOWS_WHILE_IN_HAND
 
-	slowdown = 0.33
-	drag_slowdown = 0.33
+	slowdown = 0.75
+	drag_slowdown = 0.75
 
 	w_class = WEIGHT_CLASS_BULKY
 

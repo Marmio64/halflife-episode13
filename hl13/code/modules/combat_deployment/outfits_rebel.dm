@@ -355,6 +355,7 @@
 
 	extra_str = 4
 	extra_end = 6
+	extra_per = 2
 
 /datum/outfit/deployment_loadout/rebel/tier3/vortigaunt
 	name = "Deployment: Vortigaunt"

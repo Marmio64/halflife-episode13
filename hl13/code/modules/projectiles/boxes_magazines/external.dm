@@ -12,9 +12,9 @@
 
 /obj/item/ammo_box/magazine/usp9mm/extended
 	name = "extended armor-piercing pistol magazine (9mm)"
-	desc = "A 25-round 9mm magazine designed for the USP Match pistol, carrying armor piercing rounds."
+	desc = "A 30-round 9mm magazine designed for the USP Match pistol, carrying armor piercing rounds."
 	ammo_type = /obj/item/ammo_casing/c9mm/usp/armor_piercing
-	max_ammo = 25
+	max_ammo = 30
 
 /obj/item/ammo_box/magazine/usp9mm/rubber
 	name = "pistol magazine (9mm rubber)"
