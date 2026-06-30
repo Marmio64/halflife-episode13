@@ -1,6 +1,6 @@
 /obj/item/aicard
-	name = "intelliCard"
-	desc = "A storage device for AIs. Patent pending."
+	name = "Dispatch Personality Networker"
+	desc = "A storage device for Dispatch cores. Contains connnected personality drives and keeps it isolated from outside networks until it is uploaded, commonly used to repair system integrity when damaged."
 	icon = 'icons/obj/aicards.dmi'
 	icon_state = "aicard" // aicard-full
 	base_icon_state = "aicard"
@@ -29,13 +29,13 @@
 
 /obj/item/aicard/aitater
 	name = "intelliTater"
-	desc = "A stylish upgrade (?) to the intelliCard."
+	desc = "A stylish upgrade (?) to the Personality Networker."
 	icon_state = "aitater"
 	base_icon_state = "aitater"
 
 /obj/item/aicard/aispook
 	name = "intelliLantern"
-	desc = "A spoOoOoky upgrade to the intelliCard."
+	desc = "A spoOoOoky upgrade to the Personality Networker."
 	icon_state = "aispook"
 	base_icon_state = "aispook"
 
