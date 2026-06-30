@@ -99,6 +99,9 @@
 /datum/map_template/shuttle/emergency/scrapped/prerequisites_met()
 	return SSshuttle.shuttle_purchase_requirements_met[SHUTTLE_UNLOCK_SCRAPHEAP]
 
+/datum/map_template/shuttle/emergency/surplus/prerequisites_met()
+	return SSshuttle.shuttle_purchase_requirements_met[SHUTTLE_UNLOCK_SCRAPHEAP]
+
 /datum/map_template/shuttle/emergency/poland
 	suffix = "poland"
 	name = "Polish Revolutionary Front Armoured Train"
