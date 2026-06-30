@@ -118,6 +118,9 @@
 	desc = "An old polish green military camouflage uniform, that has been moderately reinforced."
 	armor_type = /datum/armor/rebelsuit
 
+/obj/item/clothing/under/syndicate/camo/halflife/armored/bomb_resistant
+	armor_type = /datum/armor/bombresistant_under
+
 /obj/item/clothing/under/syndicate/floortilecamo
 	name = "floortile camouflage fatigues"
 	desc = "The newest floortile camouflage fatigues used for hallway warfare. \

@@ -1279,7 +1279,11 @@
 	// see defines/combat.dm, this should be baseline 60%
 	// Resist chance divided by the value imparted by your grab state. It isn't until you reach neckgrab that you gain a penalty to escaping a grab.
 	// this only comes into effect on aggressive and higher grabs
-	var/resist_chance = clamp(BASE_GRAB_RESIST_CHANCE / effective_grab_state, 0, 100)
+
+
+	var/resist_chance = BASE_GRAB_RESIST_CHANCE
+	if(0 < effective_grab_state) //to protect against division by zero
+		resist_chance = clamp(BASE_GRAB_RESIST_CHANCE / effective_grab_state, 0, 100)
 
 	if(pulledby && isliving(pulledby))
 		var/mob/living/living_puller = pulledby

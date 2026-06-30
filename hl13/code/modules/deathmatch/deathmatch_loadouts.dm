@@ -23,6 +23,8 @@
 		/obj/item/ammo_box/magazine/m4a1 = 3,
 	)
 
+	extra_dex = 1
+
 //Slow and vulnerable to rush downs, but can blow people out of cover with grenades. Compared to the marine, worse primary and less ammo in exchange for 4 grenades. Extreme version of the conscript.
 /datum/outfit/deathmatch_loadout/rebel/bomber
 	name = "Deathmatch: Rebel Bomber"
@@ -40,7 +42,7 @@
 
 	backpack_contents = list(
 		/obj/item/grenade/syndieminibomb/bouncer = 4,
-		/obj/item/ammo_box/magazine/mp7 = 1,
+		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
 
 //high damage, but low armor and slow firing weapons makes very vulnerable to rush downs
@@ -174,7 +176,7 @@
 	suit = /obj/item/clothing/suit/hooded/hev/deathmatch
 	glasses = /obj/item/clothing/glasses/regular/thin
 
-	extra_str = 3
+	extra_str = 4
 
 //the alpha: All the weapons, best equipment.
 /datum/outfit/deathmatch_loadout/crowbar/freeman
@@ -268,7 +270,7 @@
 		/obj/item/grenade/halflife/tinbomb,
 	)
 
-	extra_dex = 4
+	extra_dex = 5
 
 /datum/outfit/deathmatch_loadout/rioter/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/cpviolation.ogg'
@@ -298,7 +300,8 @@
 		/obj/item/stack/medical/bandage,
 	)
 
-	extra_str = 3
+	extra_str = 4
+	extra_end = 2
 
 /datum/outfit/deathmatch_loadout/feral_refugee/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/disrupted.ogg'
@@ -327,7 +330,7 @@
 	uniform = /obj/item/clothing/under/syndicate/camo
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/rpd
 	gloves = /obj/item/clothing/gloves/combat
-	suit_store = /obj/item/gun/ballistic/automatic/rpd
+	suit_store = /obj/item/gun/ballistic/automatic/rpd/deathmatch
 	back = /obj/item/storage/backpack/duffelbag/halflife
 	r_pocket = /obj/item/flashlight/seclite
 	shoes = /obj/item/clothing/shoes/combat

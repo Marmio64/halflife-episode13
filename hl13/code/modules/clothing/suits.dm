@@ -920,7 +920,7 @@
 	bullet = 70 //enough kevlar to kill god
 	laser = 60
 	energy = 90
-	bomb = 90 //gutted EOD suit. missing some of the original plating though.
+	bomb = 100 //gutted EOD suit. missing some of the original plating though.
 	fire = 70 //pretty well-insulated
 	acid = 50
 	wound = 40

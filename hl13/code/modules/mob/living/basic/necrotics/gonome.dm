@@ -22,6 +22,8 @@
 
 	mob_size = MOB_SIZE_LARGE
 
+	move_resist = MOVE_FORCE_STRONG
+
 	can_play_dead = FALSE
 
 	attack_sound = 'hl13/sound/creatures/gonome/attack_player.ogg'
@@ -60,6 +62,8 @@
 
 	headcrab_action = new (src)
 	headcrab_action.Grant(src)
+
+	ADD_TRAIT(src, TRAIT_GRABRESISTANCE, INNATE_TRAIT)
 
 	RegisterSignal(src, COMSIG_HOSTILE_PRE_ATTACKINGTARGET, PROC_REF(pre_attack))
 

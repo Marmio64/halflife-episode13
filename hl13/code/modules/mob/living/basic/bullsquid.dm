@@ -152,6 +152,7 @@
 
 	AddElement(/datum/element/footstep, FOOTSTEP_MOB_CLAW)
 	RegisterSignal(src, COMSIG_HOSTILE_PRE_ATTACKINGTARGET, PROC_REF(pre_attack))
+	ADD_TRAIT(src, TRAIT_GRABRESISTANCE, INNATE_TRAIT)
 
 	whip = new(src)
 	whip.Grant(src)

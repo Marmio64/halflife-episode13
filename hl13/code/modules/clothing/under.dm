@@ -117,6 +117,9 @@
 	inhand_icon_state = "syndicate-black"
 	has_sensor = LOCKED_SENSORS
 
+/obj/item/clothing/under/combine/civilprotection/bomb_resistant
+	armor_type = /datum/armor/bombresistant_under
+
 /obj/item/clothing/under/combine/civilprotection/paydaytaser
 	name = "experimental civil protection jumpsuit"
 	desc = "Full-body suit which includes light kevlar weaving to provide extra protection. This one has electicity-resistant coating to prevent user damage, alongside extra markings for ally identification."
@@ -202,7 +205,7 @@
 	bullet = 25
 	laser = 30
 	energy = 30
-	bomb = 70
+	bomb = 90
 	fire = 90
 	acid = 50
 	wound = 10
@@ -301,6 +304,16 @@
 	laser = 10
 	energy = 10
 	bomb = 10
+	fire = 75
+	acid = 30
+	wound = 5
+
+/datum/armor/bombresistant_under
+	melee = 10
+	bullet = 10
+	laser = 10
+	energy = 10
+	bomb = 90
 	fire = 75
 	acid = 30
 	wound = 5

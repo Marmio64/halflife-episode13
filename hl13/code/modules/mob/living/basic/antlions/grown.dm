@@ -64,6 +64,8 @@
 
 	AddElement(/datum/element/footstep, FOOTSTEP_MOB_ANTLION)
 
+	ADD_TRAIT(src, TRAIT_GRABRESISTANCE, INNATE_TRAIT)
+
 /obj/projectile/acidspray
 	name = "acid spray"
 	icon_state = "acidspray"
@@ -143,6 +145,7 @@
 /mob/living/basic/halflife/antlion_guard/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/seethrough_mob)
+	ADD_TRAIT(src, TRAIT_GRABRESISTANCE, INNATE_TRAIT)
 
 /mob/living/basic/halflife/antlion_guard/examine(mob/living/user)
 	. = ..()
@@ -281,15 +284,15 @@
 	deployment_faction = HIDDEN_DEPLOYMENT_FACTION
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/red
-	maxHealth = 1800
-	health = 1800
+	maxHealth = 1650
+	health = 1650
 	melee_damage_upper = 60
 	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
 	deployment_faction = REBEL_DEPLOYMENT_FACTION
 
 /mob/living/basic/halflife/antlion_guard/guardian/summoner_deployment/boss/blu
-	maxHealth = 1800
-	health = 1800
+	maxHealth = 1650
+	health = 1650
 	melee_damage_upper = 60
 	faction = list(FACTION_COMBINE)
 	deployment_faction = COMBINE_DEPLOYMENT_FACTION

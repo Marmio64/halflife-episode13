@@ -87,6 +87,7 @@
 	AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE)
 	AddElement(/datum/element/basic_eating, heal_amt = 5, food_types = edibles)
 	ai_controller.set_blackboard_key(BB_BASIC_FOODS, typecacheof(edibles))
+	ADD_TRAIT(src, TRAIT_GRABRESISTANCE, INNATE_TRAIT)
 	if(can_play_dead)
 		play_dead = new(src)
 		play_dead.Grant(src)

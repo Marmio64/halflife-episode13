@@ -97,6 +97,7 @@
 
 /mob/living/simple_animal/hostile/halflife/antlion/Initialize(mapload, wizard_summoned)
 	. = ..()
+	ADD_TRAIT(src, TRAIT_GRABRESISTANCE, INNATE_TRAIT)
 	if(spawn_sound)
 		playsound(src, spawn_sound, 30, soundvary)
 

@@ -63,6 +63,7 @@
 /mob/living/simple_animal/hostile/halflife/hunter/deployment/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_TDM_HUD_COM, INNATE_TRAIT)
+	ADD_TRAIT(src, TRAIT_GRABRESISTANCE, INNATE_TRAIT)
 
 /mob/living/simple_animal/hostile/halflife/hunter/Aggro()
 	. = ..()

@@ -34,7 +34,7 @@ GLOBAL_VAR_INIT(deployment_rebels_lead_spawned, FALSE)
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/flashlight/seclite
 	head = /obj/item/clothing/head/beret/sec/poland/cell_lead
-	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored/bomb_resistant
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
 	glasses = /obj/item/clothing/glasses/eyepatch

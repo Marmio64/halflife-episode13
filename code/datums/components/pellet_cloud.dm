@@ -180,7 +180,7 @@
 	var/magnitude_absorbed
 	var/list/martyrs = list()
 
-	var/self_harm_radius_mult = 3
+	var/self_harm_radius_mult = 1.5
 
 	if(punishable_triggerer && prob(60))
 		to_chat(punishable_triggerer, span_userdanger("Your plan to whack someone with a grenade on a stick backfires on you, literally!"))

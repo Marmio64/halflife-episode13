@@ -47,7 +47,7 @@ GLOBAL_VAR_INIT(deployment_combine_lead_spawned, FALSE)
 	jobtype = /datum/job/deployment_metrocop_captain
 
 	ears = /obj/item/radio/headset/civilprotection/deployment/loud
-	uniform = /obj/item/clothing/under/combine/civilprotection
+	uniform = /obj/item/clothing/under/combine/civilprotection/bomb_resistant
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	suit = /obj/item/clothing/suit/armor/civilprotection/trenchcoat
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
