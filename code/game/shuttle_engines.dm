@@ -155,9 +155,9 @@
 	engine_power = 0 // todo make these into 2x1 parts
 
 /obj/machinery/power/shuttle_engine/propulsion
-	name = "propulsion engine"
+	name = "train engine"
 	icon_state = "propulsion"
-	desc = "A standard reliable bluespace engine used by many forms of shuttles."
+	desc = "An advanced combine propulsion engine that allows trains to move very quickly and efficiently."
 	circuit = /obj/item/circuitboard/machine/engine/propulsion
 	opacity = TRUE
 

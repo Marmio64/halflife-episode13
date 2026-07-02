@@ -85,7 +85,7 @@
 
 	var/parallax_movedir = 0
 
-	var/ambience_index = AMBIENCE_GENERIC
+	var/ambience_index = "none"
 	///A list of sounds to pick from every so often to play to clients.
 	var/list/ambientsounds
 	///Does this area immediately play an ambience track upon enter?
