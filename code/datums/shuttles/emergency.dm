@@ -88,7 +88,18 @@
 	occupancy_limit = "25"
 	prerequisites = "This train is only offered for purchase when the district is low on funds."
 
+/datum/map_template/shuttle/emergency/surplus
+	suffix = "surplus"
+	name = "Pre-War Millitary Train (Poor Condition)"
+	credit_cost = CARGO_CRATE_VALUE * -15
+	description = "Overwatch located this train on the train tracks, and needs it moved to continue efficient travel for relocation. A 'smart' union worker had the idea of having a district hold onto it on their transfer train rails- beware, this does mean that any real transfer train will not be able to get in because of that... and nobody bothered to clean up the corpses or weaponry."
+	occupancy_limit = "8"
+	prerequisites = "This train is only offered for purchase when the district is low on funds (and lower on dignity)."
+
 /datum/map_template/shuttle/emergency/scrapped/prerequisites_met()
+	return SSshuttle.shuttle_purchase_requirements_met[SHUTTLE_UNLOCK_SCRAPHEAP]
+
+/datum/map_template/shuttle/emergency/surplus/prerequisites_met()
 	return SSshuttle.shuttle_purchase_requirements_met[SHUTTLE_UNLOCK_SCRAPHEAP]
 
 /datum/map_template/shuttle/emergency/poland
