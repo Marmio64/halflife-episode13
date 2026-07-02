@@ -49,7 +49,7 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "eH" = (
-/obj/machinery/door/airlock/highsecurity/combine,
+/obj/machinery/door/unpowered/halflife/metal/red,
 /turf/open/floor/plating/indoor/metal/grate/border/warning{
 	dir = 1
 	},
@@ -108,7 +108,9 @@
 	},
 /area/shuttle/escape)
 "gt" = (
-/obj/machinery/door/airlock/highsecurity/combine,
+/obj/machinery/door/unpowered/halflife/metal/red{
+	dir = 8
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "je" = (
@@ -150,13 +152,11 @@
 	preferred_direction = 2;
 	port_direction = 2
 	},
-/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/walkway{
 	dir = 1
 	},
 /area/shuttle/escape)
 "mk" = (
-/obj/structure/fans/tiny/invisible,
 /obj/structure/barricade/sandbags,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
@@ -175,7 +175,7 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "oH" = (
-/turf/closed/wall/halflife/metal/strong,
+/turf/closed/wall/halflife/metal/weak/old,
 /area/shuttle/escape)
 "pQ" = (
 /obj/structure/chair/halflife/metal/red,
@@ -188,7 +188,9 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "qq" = (
-/obj/machinery/door/airlock/highsecurity/combine,
+/obj/machinery/door/unpowered/halflife/metal/red{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "qv" = (
@@ -206,7 +208,6 @@
 	},
 /area/shuttle/escape)
 "rj" = (
-/obj/structure/fans/tiny/invisible,
 /obj/structure/halflife/large_pipe/pump,
 /turf/open/floor/plating/indoor/metal/grate/border/warning,
 /area/shuttle/escape)
@@ -282,7 +283,7 @@
 	},
 /area/shuttle/escape)
 "zi" = (
-/obj/machinery/door/airlock/highsecurity/combine,
+/obj/machinery/door/unpowered/halflife/metal/red,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/escape)
 "AT" = (
@@ -301,7 +302,7 @@
 	pixel_y = -32;
 	dir = 1
 	},
-/turf/closed/wall/halflife/metal/strong,
+/turf/closed/wall/halflife/metal/weak/old,
 /area/shuttle/escape)
 "BZ" = (
 /obj/structure/halflife/large_pipe/pump,
@@ -320,7 +321,6 @@
 "Ck" = (
 /obj/structure/barricade/wooden/crude,
 /obj/structure/girder,
-/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/grate/border/warning{
 	dir = 1
 	},
@@ -361,7 +361,6 @@
 	},
 /area/shuttle/escape)
 "Hn" = (
-/obj/structure/fans/tiny/invisible,
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating/indoor/metal/walkway/end,
 /area/shuttle/escape)
@@ -384,8 +383,9 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/escape)
 "Ig" = (
-/obj/structure/fans/tiny/invisible,
-/obj/machinery/door/airlock/highsecurity/combine,
+/obj/machinery/door/unpowered/halflife/metal/red{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "Im" = (
@@ -393,7 +393,7 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "Io" = (
-/obj/structure/window/fulltile,
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "poland_shuttle_windows"
 	},
@@ -437,7 +437,6 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "Kv" = (
-/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/walkway/corner,
 /area/shuttle/escape)
 "Lv" = (
@@ -472,18 +471,9 @@
 	},
 /area/shuttle/escape)
 "Ny" = (
-/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/walkway/corner{
 	dir = 1
 	},
-/area/shuttle/escape)
-"NT" = (
-/obj/structure/window/fulltile,
-/obj/machinery/door/poddoor/preopen{
-	id = "poland_shuttle_windows"
-	},
-/obj/structure/fans/tiny/invisible,
-/turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "Or" = (
 /obj/structure/table/halflife/no_smooth/large/crafting/weaponbench,
@@ -521,7 +511,6 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/escape)
 "Qh" = (
-/obj/structure/fans/tiny/invisible,
 /obj/machinery/light/blacklight/directional/south{
 	bulb_colour = "#ff0000";
 	nightshift_light_color = "#ff0000"
@@ -555,7 +544,6 @@
 	id = "poland_shuttle_windows"
 	},
 /obj/structure/barricade/sandbags,
-/obj/structure/fans/tiny/invisible,
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
@@ -574,17 +562,18 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/escape)
 "WL" = (
-/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/walkway{
 	dir = 1
 	},
 /area/shuttle/escape)
 "WY" = (
-/obj/machinery/door/airlock/highsecurity/combine,
+/obj/machinery/door/unpowered/halflife/metal{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/shuttle/escape)
 "Zi" = (
-/obj/structure/window/fulltile,
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "Zq" = (
@@ -601,18 +590,18 @@
 Kv
 Qh
 oH
-NT
+Io
 oH
 oH
 TN
 oH
 Ig
 oH
-NT
+Io
 oH
 Ig
 oH
-NT
+Io
 oH
 oH
 oH
@@ -624,7 +613,7 @@ TN
 oH
 oH
 oH
-NT
+Io
 oH
 Bv
 jC
@@ -793,14 +782,14 @@ mk
 Ny
 Hn
 oH
-NT
+Io
 oH
 oH
 TN
 oH
 oH
 oH
-NT
+Io
 oH
 oH
 oH
@@ -808,11 +797,11 @@ TN
 oH
 oH
 oH
-NT
+Io
 oH
 oH
 oH
-NT
+Io
 oH
 oH
 oH

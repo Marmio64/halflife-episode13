@@ -2,6 +2,7 @@
 
 /area/space
 	icon_state = "space"
+	first_time_text = "You Shouldn't Be Here (Space (Please Adminhelp))" //hl13 edit
 	requires_power = TRUE
 	always_unpowered = TRUE
 	static_lighting = FALSE
