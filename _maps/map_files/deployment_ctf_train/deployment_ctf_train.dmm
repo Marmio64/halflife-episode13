@@ -16,10 +16,6 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"bg" = (
-/obj/structure/barricade/wooden,
-/turf/open/floor/plating/indoor/metal/industrial,
-/area/halflife/indoors/combat_deployment/rebel_base)
 "bh" = (
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/indoor/metal/grate,
@@ -42,6 +38,7 @@
 /area/halflife/indoors/combat_deployment/combine_base)
 "cK" = (
 /obj/structure/halflife/cone,
+/obj/effect/koth_grace_field,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "cQ" = (
@@ -63,6 +60,10 @@
 /obj/machinery/door/unpowered/halflife/metal/red,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"ev" = (
+/obj/effect/koth_grace_field,
+/turf/closed/wall/halflife/metal/weak,
+/area/halflife/indoors/combat_deployment/combine_base)
 "fc" = (
 /obj/machinery/ammo_crate,
 /turf/open/floor/plating/indoor/metal/industrial,
@@ -220,11 +221,16 @@
 /obj/item/reagent_containers/pill/patch/grubnugget,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"sf" = (
+/obj/effect/koth_grace_field,
+/turf/closed/wall/halflife/metal/weak/old,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "sv" = (
 /turf/open/openspace,
 /area/halflife/outdoors/deployment_city)
 "tM" = (
 /obj/structure/halflife/cone,
+/obj/effect/koth_grace_field,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "ua" = (
@@ -284,10 +290,6 @@
 "xb" = (
 /obj/structure/trap/deployment_spawn_prot/combine,
 /turf/closed/wall/halflife/metal/weak,
-/area/halflife/indoors/combat_deployment/combine_base)
-"xe" = (
-/obj/structure/barricade/wooden,
-/turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "xn" = (
 /obj/structure/chair/comfy/halflife/diner,
@@ -450,10 +452,6 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/combat_deployment/rebel_base)
-"II" = (
-/obj/structure/barricade/wooden/solid,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/halflife/indoors/combat_deployment/combine_base)
 "Jd" = (
 /obj/machinery/combine_walllight/directional/south,
 /turf/open/floor/plating/indoor/metal/grate,
@@ -464,6 +462,7 @@
 /area/halflife/indoors/combat_deployment/combine_base)
 "Ku" = (
 /obj/structure/halflife/cone,
+/obj/effect/koth_grace_field,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "KS" = (
@@ -527,6 +526,7 @@
 /area/halflife/indoors/combat_deployment/rebel_base)
 "NT" = (
 /obj/structure/halflife/cone,
+/obj/effect/koth_grace_field,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
 "Oi" = (
@@ -621,10 +621,6 @@
 /obj/structure/lattice/catwalk/hl13,
 /turf/open/chasm/true/no_smooth/fake_motion_sand,
 /area/halflife/outdoors/deployment_city)
-"Xp" = (
-/obj/structure/barricade/wooden/solid,
-/turf/open/floor/plating/indoor/metal/industrial,
-/area/halflife/indoors/combat_deployment/rebel_base)
 "XC" = (
 /obj/structure/ladder/halflife/upwards,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -644,6 +640,10 @@
 /obj/machinery/deployment_points_flag/combine/high_cash,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
+"Yw" = (
+/obj/machinery/intelligence_grace_timer,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city)
 "ZF" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/stack/medical/gauze/twelve,
@@ -1219,7 +1219,7 @@ xb
 xb
 xb
 xb
-oT
+ev
 oT
 oT
 oT
@@ -2143,7 +2143,7 @@ xb
 xb
 xb
 xb
-oT
+ev
 oT
 oT
 oT
@@ -2158,11 +2158,11 @@ oT
 oT
 oT
 oT
-II
-xe
-xe
-xe
-II
+xC
+xC
+xC
+xC
+xC
 oT
 oT
 oT
@@ -3375,7 +3375,7 @@ aQ
 aQ
 aQ
 aQ
-zl
+sf
 zl
 zl
 zl
@@ -3390,11 +3390,11 @@ zl
 zl
 zl
 zl
-Xp
-bg
-bg
-bg
-Xp
+dE
+dE
+dE
+dE
+dE
 zl
 zl
 zl
@@ -4299,7 +4299,7 @@ aQ
 aQ
 aQ
 aQ
-zl
+sf
 zl
 zl
 zl
@@ -4587,7 +4587,7 @@ wh
 (52,1,1) = {"
 wh
 vP
-vP
+Yw
 vP
 wh
 gh

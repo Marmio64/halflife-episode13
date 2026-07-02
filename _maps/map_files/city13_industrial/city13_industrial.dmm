@@ -200,6 +200,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/bar/apartments)
+"aqp" = (
+/obj/structure/table/halflife/no_smooth/wood/low,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/townhall/secondfloor)
 "aqL" = (
 /obj/structure/chair/halflife/wood/padded,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -841,6 +845,12 @@
 /obj/structure/table/halflife/no_smooth/large/wood/desk,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/apartments/primary)
+"btO" = (
+/obj/structure/sign/poster/halflife/combine{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/townhall/secondfloor)
 "buv" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/woodc,
@@ -1605,6 +1615,7 @@
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors)
 "cGh" = (
+/obj/structure/railing/halflife/solo,
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/roofs)
@@ -14679,8 +14690,8 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/plaza)
 "wZo" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick,
-/turf/open/floor/plating/indoor/woodc/fancy,
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/townhall/secondfloor)
 "xaV" = (
 /obj/structure/table/halflife/metal/grate,
@@ -14917,10 +14928,14 @@
 /area/halflife/indoors/sewer)
 "xsB" = (
 /obj/structure/table/halflife/wood,
-/obj/item/card/id,
-/obj/item/card/id,
-/obj/item/card/id,
-/obj/item/storage/halflife/hand_box/cookie,
+/obj/item/card/id/advanced/halflife/grey,
+/obj/item/card/id/advanced/halflife/grey,
+/obj/item/card/id/advanced/halflife/grey,
+/obj/item/card/id/advanced/halflife/grey,
+/obj/item/storage/halflife/hand_box/cookie{
+	pixel_x = 6;
+	pixel_y = 14
+	},
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/secondfloor)
 "xsO" = (
@@ -15123,8 +15138,10 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/hospital/storage)
 "xJo" = (
-/turf/open/floor/plating/indoor/concrete/bricks,
-/area/halflife/outdoors/roofs)
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/obj/structure/curtain/bounty,
+/turf/open/floor/plating/indoor/woodc/fancy,
+/area/halflife/indoors/townhall/secondfloor)
 "xJs" = (
 /obj/structure/table/halflife/wood,
 /obj/item/storage/belt/utility,
@@ -55716,6 +55733,7 @@ pSy
 hkK
 gFh
 gFh
+gFh
 hkK
 lrm
 nPY
@@ -55723,7 +55741,6 @@ nIq
 hBT
 knm
 hkK
-vtk
 vtk
 qxh
 oVh
@@ -55851,7 +55868,7 @@ hkK
 hkK
 ovF
 ovF
-wZo
+xJo
 nPY
 nPY
 nPY
@@ -55859,6 +55876,7 @@ nPY
 nPY
 gsa
 gFh
+hEF
 gFh
 efH
 nPY
@@ -55867,7 +55885,6 @@ nPY
 nPY
 nPY
 hkK
-vtk
 vtk
 qxh
 oVh
@@ -56003,6 +56020,7 @@ byE
 nPY
 hkK
 frv
+hEF
 gFh
 hkK
 sUq
@@ -56010,7 +56028,6 @@ jHW
 xVh
 jHW
 nPY
-wZo
 xJo
 waE
 ovF
@@ -56136,7 +56153,7 @@ lBI
 lBI
 jHW
 nPY
-wZo
+xJo
 ovF
 ovF
 hkK
@@ -56146,7 +56163,8 @@ iYd
 qYY
 mhj
 hkK
-gFh
+aqp
+hEF
 gFh
 hkK
 wuo
@@ -56155,7 +56173,6 @@ ghD
 icl
 pQa
 hkK
-xJo
 waE
 ovF
 ovF
@@ -56291,7 +56308,8 @@ hkK
 hkK
 hkK
 ixW
-gFh
+hEF
+wZo
 hkK
 hkK
 hkK
@@ -56299,7 +56317,6 @@ hkK
 hkK
 hkK
 hkK
-cGh
 waE
 ovF
 ovF
@@ -56435,6 +56452,7 @@ heB
 yfe
 hkK
 gFh
+hEF
 gFh
 hkK
 aEu
@@ -56443,7 +56461,6 @@ akU
 tFJ
 nPY
 hkK
-xJo
 waE
 ovF
 ovF
@@ -56571,7 +56588,7 @@ nPY
 hkK
 ovF
 ovF
-wZo
+xJo
 nPY
 nPY
 nPY
@@ -56579,6 +56596,7 @@ nPY
 nPY
 vVQ
 gFh
+hEF
 gFh
 qsd
 nPY
@@ -56586,7 +56604,6 @@ nPY
 nPY
 nPY
 nPY
-wZo
 xJo
 waE
 ovF
@@ -56712,7 +56729,7 @@ doZ
 doZ
 jHW
 nPY
-wZo
+xJo
 ovF
 ovF
 hkK
@@ -56723,6 +56740,7 @@ hFX
 nPY
 hkK
 frv
+hEF
 gFh
 hkK
 nPY
@@ -56731,7 +56749,6 @@ vgN
 kvt
 nPY
 hkK
-xJo
 waE
 ovF
 ovF
@@ -56867,6 +56884,7 @@ lwc
 msk
 hkK
 gFh
+hEF
 fHN
 hkK
 bae
@@ -56875,7 +56893,6 @@ xXe
 hPA
 pQa
 hkK
-cGh
 waE
 ovF
 ovF
@@ -57011,6 +57028,7 @@ hkK
 hkK
 hkK
 cHW
+hEF
 gFh
 hkK
 hkK
@@ -57019,7 +57037,6 @@ hkK
 hkK
 hkK
 hkK
-xJo
 waE
 ovF
 ovF
@@ -57155,7 +57172,8 @@ hEF
 jVZ
 hkK
 gFh
-gFh
+hEF
+wZo
 hkK
 iww
 jLQ
@@ -57163,7 +57181,6 @@ niD
 niD
 niD
 hkK
-xJo
 waE
 ovF
 ovF
@@ -57299,6 +57316,7 @@ hEF
 hEF
 hkn
 gFh
+hEF
 gFh
 ixO
 oLZ
@@ -57307,7 +57325,6 @@ oLZ
 oLZ
 oLZ
 wQE
-xJo
 waE
 ovF
 ovF
@@ -57443,6 +57460,7 @@ hEF
 hEF
 hkK
 frv
+hEF
 gFh
 hkK
 ivd
@@ -57451,7 +57469,6 @@ hGj
 hoC
 oLZ
 hkK
-cGh
 waE
 ovF
 ovF
@@ -57586,8 +57603,9 @@ hEF
 hEF
 qKb
 hkK
+btO
+hEF
 gFh
-gFh
 hkK
 hkK
 hkK
@@ -57595,7 +57613,6 @@ hkK
 hkK
 hkK
 hkK
-xJo
 waE
 ovF
 ovF
@@ -57731,7 +57748,8 @@ vtk
 vtk
 hkK
 gFh
-gFh
+hEF
+wZo
 hkK
 vtk
 vtk
@@ -57739,7 +57757,6 @@ vtk
 vtk
 vtk
 vtk
-xJo
 waE
 ovF
 ovF
@@ -57876,6 +57893,7 @@ vtk
 hkK
 frv
 gFh
+gFh
 hkK
 vtk
 vtk
@@ -57883,8 +57901,7 @@ vtk
 vtk
 vtk
 vtk
-xJo
-waE
+cGh
 ovF
 ovF
 ovF
@@ -58018,7 +58035,7 @@ vtk
 vtk
 vtk
 hkK
-eCK
+hkK
 eCK
 hkK
 vtk
@@ -58027,7 +58044,7 @@ vtk
 vtk
 vtk
 vtk
-cGh
+vtk
 waE
 ovF
 ovF

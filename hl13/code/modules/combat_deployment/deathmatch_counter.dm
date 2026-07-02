@@ -12,10 +12,10 @@
 	var/time_ticking = FALSE
 
 	/// How many rebel deaths needed for combine to win
-	var/combine_points_win = 32 //rebels have less survivability overall, so combine need two extra kills to make it a tiny bit more fair
+	var/combine_points_win = 27 //rebels have less survivability overall, so combine need two extra kills to make it a tiny bit more fair
 
 	/// How many combine deaths needed for rebels to win
-	var/rebel_points_win = 30
+	var/rebel_points_win = 25
 
 	var/last_time_reminder = 0
 

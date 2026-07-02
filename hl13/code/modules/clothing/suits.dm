@@ -336,7 +336,7 @@
 	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 	slowdown = 1.25
 	actions_types = list(/datum/action/item_action/deploy_shield)
-	var/shield_charge = TRUE
+	var/shield_ready = TRUE
 	var/shield_type = /obj/item/shield/wallhammer
 
 /obj/item/clothing/suit/armor/overwatch/wallhammer/victim
@@ -396,7 +396,7 @@
 	set name = "Deploy Shield"
 	if(!iscarbon(usr))
 		return
-	if(!shield_charge)
+	if(!shield_ready)
 		to_chat(usr, span_warning("Your shield is not recharged!"))
 		return
 
@@ -410,9 +410,10 @@
 		qdel(N)
 
 	playsound(loc, 'hl13/sound/effects/zap1.ogg', 50, TRUE, TRUE)
-	shield_charge = FALSE
+	shield_ready = FALSE
 	sleep(15 SECONDS)
-	shield_charge = TRUE
+	shield_ready = TRUE
+	playsound(loc, 'hl13/sound/effects/suitchargeok1.ogg', 20, TRUE, TRUE)
 	to_chat(usr, span_notice("The suit hums, its shield is ready to deploy once more."))
 
 /obj/item/clothing/suit/armor/overwatch/red

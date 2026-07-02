@@ -238,3 +238,35 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 	else
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)
 		return
+
+/obj/machinery/intelligence_grace_timer
+	name = "intelligence grace counter"
+	desc = "this is only for keeping track of the grace period fuuuuuuuuuuck"
+	icon = 'hl13/icons/obj/miscellaneous.dmi'
+	icon_state = "stationclock"
+	resistance_flags = INDESTRUCTIBLE
+	anchored = TRUE
+	density = TRUE
+
+	var/grace_time = 15 SECONDS
+	var/time_ticking = FALSE
+
+/obj/machinery/intelligence_grace_timer/Initialize(mapload)
+	..()
+	GLOB.deployment_flag_grace_period = grace_time
+
+/obj/machinery/intelligence_grace_timer/process()
+	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
+		if(!time_ticking)
+			time_ticking = TRUE
+			to_chat(world, span_danger(span_slightly_larger(span_bold("Grace period up! Each side needs to capture the other's intelligence 3 times to win!"))))
+			for(var/X in GLOB.deployment_rebel_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+			for(var/X in GLOB.deployment_combine_players)
+				var/mob/living/carbon/human/H = X
+				SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+
+	else
+		GLOB.deployment_flag_grace_period -= 1 SECONDS
+		return
