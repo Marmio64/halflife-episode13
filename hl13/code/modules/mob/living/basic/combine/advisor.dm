@@ -36,6 +36,7 @@
 	var/datum/action/cooldown/spell/aoe/repulse/wizard/advisor/repulse
 	var/datum/action/cooldown/spell/pointed/advisorial_punish/punish
 	var/datum/action/cooldown/spell/pointed/advisor_sooth/sooth
+	var/datum/action/cooldown/spell/pointed/advisor_eat/eat
 
 //lore accurate admin spawned version
 /mob/living/basic/halflife/advisor/overpowered
@@ -61,6 +62,8 @@
 	punish.Grant(src)
 	sooth = new(src)
 	sooth.Grant(src)
+	eat = new(src)
+	eat.Grant(src)
 
 	ADD_TRAIT(src, TRAIT_GRABRESISTANCE, INNATE_TRAIT)
 
@@ -71,7 +74,7 @@
 	..()
 	if(stat)
 		return
-	adjust_health(-maxHealth*0.02) //3 hp every 2 seconds
+	adjust_health(-maxHealth*0.01) //1.5 hp every 2 seconds
 
 /datum/language_holder/advisor
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM))
@@ -212,4 +215,65 @@
 		H.reagents.add_reagent(/datum/reagent/medicine/muscle_stimulant, 5)
 	cast_on.adjustBruteLoss(-35)
 	cast_on.adjustFireLoss(-35)
+	return TRUE
+
+/datum/action/cooldown/spell/pointed/advisor_eat
+	name = "Devour Brain"
+	desc = "Utilize your prehensile tongue to devour the brain of a nearby victim after a delay. Restores health on use. Nonhumans do not have a developed enough brain to provide useful nutrients."
+	button_icon = 'hl13/icons/mob/actions/actions_advisor.dmi'
+	button_icon_state = "tongue"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+	ranged_mousepointer = 'icons/effects/mouse_pointers/blind_target.dmi'
+
+	sound = 'hl13/sound/creatures/advisor/advisor_devour.ogg'
+	school = SCHOOL_TRANSMUTATION
+	cooldown_time = 12 SECONDS
+	cooldown_reduction_per_rank = 6.25 SECONDS
+
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
+
+	active_msg = "You prepare to devour a target's brain..."
+	cast_range = 1
+
+/datum/action/cooldown/spell/pointed/advisor_eat/is_valid_target(atom/cast_on)
+	. = ..()
+	if(!.)
+		return FALSE
+	if(!ishuman(cast_on))
+		return FALSE
+	if(cast_on.z != owner.z)
+		return FALSE
+
+	var/mob/living/carbon/human/human_target = cast_on
+	var/obj/item/bodypart/head = human_target.get_bodypart(BODY_ZONE_HEAD)
+	return !head.get_wound_type(/datum/wound/cranial_fissure)
+
+/datum/action/cooldown/spell/pointed/advisor_eat/cast(mob/living/carbon/human/cast_on)
+	. = ..()
+	var/obj/item/bodypart/head = cast_on.get_bodypart(BODY_ZONE_HEAD)
+	if(head.get_wound_type(/datum/wound/cranial_fissure)) //sanity check i guess
+		to_chat(owner, span_warning("Their brain is too damaged already..."))
+		return
+
+	if(!istype(owner, /mob/living/basic))
+		return
+
+	var/mob/living/basic/living_owner = owner
+
+
+
+	to_chat(cast_on, span_userdanger("A tongue begins to attempt to force its way into your head!"))
+	living_owner.icon_state = "advisor_tongue"
+	living_owner.Immobilize(rand(1 SECONDS), ignore_canstun = TRUE)
+	if(do_after(living_owner, 5 SECONDS, cast_on))
+		head.force_wound_upwards(/datum/wound/cranial_fissure)
+		head.receive_damage(250)
+		cast_on.adjustOrganLoss(ORGAN_SLOT_BRAIN, 200, BRAIN_DAMAGE_DEATH)
+		to_chat(cast_on, span_userdanger("The tongue hears a hole through your skull, and scoops out a mass of brain matter before returning."))
+		to_chat(living_owner, span_green("A most delicious meal this was..."))
+		living_owner.adjust_health(-living_owner.maxHealth*0.25) //heal 25 hp
+
+	if(living_owner.stat != DEAD)
+		living_owner.icon_state = "advisor"
+
 	return TRUE

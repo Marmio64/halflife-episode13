@@ -200,10 +200,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/bar/apartments)
-"aqp" = (
-/obj/structure/table/halflife/no_smooth/wood/low,
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/townhall/secondfloor)
 "aqL" = (
 /obj/structure/chair/halflife/wood/padded,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -845,12 +841,6 @@
 /obj/structure/table/halflife/no_smooth/large/wood/desk,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/apartments/primary)
-"btO" = (
-/obj/structure/sign/poster/halflife/combine{
-	pixel_y = 32
-	},
-/turf/open/floor/plating/indoor/woodc,
-/area/halflife/indoors/townhall/secondfloor)
 "buv" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/woodc,
@@ -1429,10 +1419,8 @@
 /turf/open/openspace,
 /area/halflife/outdoors/roofs)
 "cpC" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/machinery/light/small/cyan/directional/west,
-/turf/open/floor/plating/indoor/metal/combine/alt2,
-/area/halflife/indoors/townhall/civilprotection)
+/turf/closed/wall/halflife/metal/strong,
+/area/halflife/indoors/dispatch)
 "cpE" = (
 /obj/structure/sink/halflife,
 /obj/structure/mirror/halflife{
@@ -2613,6 +2601,12 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/alley/dropshippad)
+"eiU" = (
+/obj/structure/sign/poster/halflife/combine{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/townhall/secondfloor)
 "ejv" = (
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/dirt/alt,
@@ -6120,6 +6114,10 @@
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors)
+"jIH" = (
+/obj/structure/table/halflife/no_smooth/wood/low,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/townhall/secondfloor)
 "jJc" = (
 /obj/structure/window/fulltile/halflife/nosmooth/brick,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -7105,6 +7103,12 @@
 /obj/machinery/vending/breenwater,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/laborunion)
+"lgW" = (
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/structure/bed/halflife/mattress/stained,
+/obj/machinery/light/small/cyan/directional/east,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
+/area/halflife/indoors/townhall/civilprotection)
 "lhh" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/tiled10,
@@ -7459,6 +7463,12 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/bar)
+"lDv" = (
+/obj/structure/bed/halflife/bedframe/wire,
+/obj/structure/bed/halflife/mattress/stained,
+/obj/machinery/light/small/cyan/directional/west,
+/turf/open/floor/plating/indoor/metal/combine/alt2,
+/area/halflife/indoors/townhall/civilprotection)
 "lDz" = (
 /obj/item/storage/medkit/regular,
 /obj/structure/halflife/storage/large/medical,
@@ -10517,7 +10527,7 @@
 /area/halflife/indoors/laborunion)
 "qFm" = (
 /obj/structure/alien/weeds/node,
-/mob/living/basic/halflife/zombie/fungal,
+/obj/effect/spawner/random/halflife/random_zombie_fungal,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
 "qFn" = (
@@ -14348,10 +14358,9 @@
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/townhall)
 "wxf" = (
-/obj/structure/table/halflife/metal/grate,
-/obj/machinery/light/small/cyan/directional/east,
-/turf/open/floor/plating/indoor/metal/combine/alt2,
-/area/halflife/indoors/townhall/civilprotection)
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/townhall/secondfloor)
 "wyw" = (
 /obj/structure/railing/halflife/sewer,
 /turf/open/floor/plating/indoor/concrete/sewer,
@@ -14690,8 +14699,9 @@
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/plaza)
 "wZo" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/indoor/woodc,
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/obj/structure/curtain/bounty,
+/turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/secondfloor)
 "xaV" = (
 /obj/structure/table/halflife/metal/grate,
@@ -15138,10 +15148,13 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/hospital/storage)
 "xJo" = (
-/obj/structure/window/fulltile/halflife/nosmooth/brick,
-/obj/structure/curtain/bounty,
-/turf/open/floor/plating/indoor/woodc/fancy,
-/area/halflife/indoors/townhall/secondfloor)
+/obj/machinery/door/unpowered/halflife/metal{
+	keylock = 1;
+	lockid = "townhall";
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/townhall/civilprotection)
 "xJs" = (
 /obj/structure/table/halflife/wood,
 /obj/item/storage/belt/utility,
@@ -42488,7 +42501,7 @@ hTr
 sou
 sou
 sou
-sou
+xJo
 sou
 sou
 sou
@@ -42632,8 +42645,8 @@ sou
 sou
 iLN
 bjK
-cpC
-bjK
+vnG
+lDv
 sou
 nLp
 vnG
@@ -43207,8 +43220,8 @@ jVO
 aZN
 sou
 iLN
-bjK
-wxf
+lgW
+iLN
 bjK
 hvH
 hvH
@@ -44059,12 +44072,12 @@ oVh
 oVh
 gPj
 oVR
-aZN
-aZN
-aZN
-aZN
-aZN
-aZN
+cpC
+cpC
+cpC
+cpC
+cpC
+cpC
 erV
 gyX
 gyX
@@ -44203,12 +44216,12 @@ oVh
 oVh
 bDA
 bDA
-aZN
-aZN
+cpC
+cpC
 lmh
 aZN
 myL
-aZN
+cpC
 ecq
 gyX
 gyX
@@ -44347,12 +44360,12 @@ oVh
 oVh
 bDA
 bDA
-aZN
+cpC
 jVO
 jVO
 xHH
 qMg
-aZN
+cpC
 ewO
 gyX
 gyX
@@ -44491,7 +44504,7 @@ oVh
 oVh
 bDA
 bDA
-aZN
+cpC
 sKI
 jVO
 kWd
@@ -44635,12 +44648,12 @@ oVh
 oVh
 bDA
 bDA
-aZN
+cpC
 jVO
 jVO
 aCI
 jVO
-aZN
+cpC
 gXT
 gyX
 gyX
@@ -44779,12 +44792,12 @@ oVh
 oVh
 bDA
 bDA
-aZN
-aZN
+cpC
+cpC
 anv
 aZN
 wEz
-aZN
+cpC
 syk
 gyX
 gyX
@@ -44924,11 +44937,11 @@ oVh
 eOd
 bDA
 aZN
-aZN
-aZN
-aZN
-aZN
-aZN
+cpC
+cpC
+cpC
+cpC
+cpC
 xaV
 gyX
 gyX
@@ -55868,7 +55881,7 @@ hkK
 hkK
 ovF
 ovF
-xJo
+wZo
 nPY
 nPY
 nPY
@@ -56028,7 +56041,7 @@ jHW
 xVh
 jHW
 nPY
-xJo
+wZo
 waE
 ovF
 ovF
@@ -56153,7 +56166,7 @@ lBI
 lBI
 jHW
 nPY
-xJo
+wZo
 ovF
 ovF
 hkK
@@ -56163,7 +56176,7 @@ iYd
 qYY
 mhj
 hkK
-aqp
+jIH
 hEF
 gFh
 hkK
@@ -56309,7 +56322,7 @@ hkK
 hkK
 ixW
 hEF
-wZo
+wxf
 hkK
 hkK
 hkK
@@ -56317,7 +56330,7 @@ hkK
 hkK
 hkK
 hkK
-waE
+cGh
 ovF
 ovF
 ovF
@@ -56588,7 +56601,7 @@ nPY
 hkK
 ovF
 ovF
-xJo
+wZo
 nPY
 nPY
 nPY
@@ -56604,7 +56617,7 @@ nPY
 nPY
 nPY
 nPY
-xJo
+wZo
 waE
 ovF
 ovF
@@ -56729,7 +56742,7 @@ doZ
 doZ
 jHW
 nPY
-xJo
+wZo
 ovF
 ovF
 hkK
@@ -57037,7 +57050,7 @@ hkK
 hkK
 hkK
 hkK
-waE
+cGh
 ovF
 ovF
 ovF
@@ -57173,7 +57186,7 @@ jVZ
 hkK
 gFh
 hEF
-wZo
+wxf
 hkK
 iww
 jLQ
@@ -57603,7 +57616,7 @@ hEF
 hEF
 qKb
 hkK
-btO
+eiU
 hEF
 gFh
 hkK
@@ -57749,7 +57762,7 @@ vtk
 hkK
 gFh
 hEF
-wZo
+wxf
 hkK
 vtk
 vtk
@@ -62503,7 +62516,7 @@ ovF
 ovF
 ovF
 ovF
-ovF
+qxh
 cMs
 ouk
 neu
@@ -62647,7 +62660,7 @@ ovF
 ovF
 ovF
 ovF
-ovF
+qxh
 cMs
 aAa
 iNe
