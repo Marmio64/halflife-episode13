@@ -259,7 +259,7 @@ GLOBAL_VAR_INIT(combine_captures, 0)
 	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
 		if(!time_ticking)
 			time_ticking = TRUE
-			to_chat(world, span_danger(span_slightly_larger(span_bold("Grace period up! Each side needs to capture the other's intelligence 3 times to win!"))))
+			to_chat(world, span_danger(span_slightly_larger(span_bold("Grace period up! Let the match begin!"))))
 			for(var/X in GLOB.deployment_rebel_players)
 				var/mob/living/carbon/human/H = X
 				SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')

@@ -193,6 +193,14 @@
 /obj/machinery/power/halflife/streetlamphalt,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city/forest)
+"lt" = (
+/obj/machinery/intelligence_grace_timer,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
+"lG" = (
+/obj/effect/koth_grace_field,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
 "lR" = (
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/combat_deployment/rebel_base)
@@ -240,6 +248,10 @@
 "nz" = (
 /turf/open/halflife/water/medium,
 /area/halflife/outdoors/deployment_city/forest)
+"nB" = (
+/obj/effect/koth_grace_field,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city/forest)
 "nD" = (
 /obj/structure/closet/halflife,
 /turf/open/floor/plating/indoor/carpet,
@@ -276,6 +288,14 @@
 "py" = (
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors)
+"pC" = (
+/obj/structure/halflife/cone,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/forest)
+"pF" = (
+/obj/structure/halflife/cone,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city/forest)
 "pH" = (
 /obj/structure/halflife/barrel/triple/grey,
 /turf/open/floor/plating/indoor/woodc,
@@ -407,6 +427,10 @@
 /obj/effect/landmark/deployments_refugee,
 /turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"wL" = (
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/forest)
 "wT" = (
 /obj/structure/stairs/halflife/concrete{
 	dir = 1
@@ -436,6 +460,10 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"zM" = (
+/obj/structure/halflife/cone,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
 "zO" = (
 /obj/structure/closet/crate/bin,
 /turf/open/floor/plating/ground/sidewalk,
@@ -648,6 +676,14 @@
 	},
 /turf/open/openspace,
 /area/halflife/outdoors/deployment_city/forest)
+"KM" = (
+/obj/structure/halflife/rails{
+	dir = 1
+	},
+/obj/effect/payload_path,
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/brickroad,
+/area/halflife/outdoors/deployment_city/forest)
 "KN" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
 	dir = 8
@@ -666,6 +702,10 @@
 /obj/machinery/repairpod,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"LA" = (
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
 "Mu" = (
 /obj/machinery/porta_turret/combine/rebel/fast{
 	anchored = 1
@@ -714,6 +754,10 @@
 "On" = (
 /obj/structure/trap/deployment_spawn_prot/combine,
 /turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city/forest)
+"Oy" = (
+/obj/effect/koth_grace_field,
+/turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/deployment_city/forest)
 "OK" = (
 /obj/structure/table/halflife/metal/grate,
@@ -5081,7 +5125,7 @@ ty
 ty
 ty
 WK
-WK
+lt
 WK
 yH
 "}
@@ -6886,9 +6930,9 @@ ol
 ol
 ol
 ol
-ol
+nB
 Lk
-ol
+pF
 ol
 ol
 ol
@@ -6979,9 +7023,9 @@ ol
 ol
 ol
 ol
-ol
+pF
 Td
-ol
+nB
 ol
 ol
 ol
@@ -6998,9 +7042,9 @@ WK
 WK
 WK
 kA
-WK
+lG
 On
-WK
+zM
 WK
 WK
 WK
@@ -7022,7 +7066,7 @@ WK
 WK
 Zv
 Zv
-WK
+LA
 WK
 kA
 WK
@@ -7093,7 +7137,7 @@ WK
 WK
 kA
 uO
-WK
+lG
 WK
 WK
 WK
@@ -7110,9 +7154,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
+Oy
 tz
-aJ
+pC
 aJ
 aJ
 aJ
@@ -7134,7 +7178,7 @@ aJ
 aJ
 Wu
 uL
-aJ
+wL
 aJ
 aJ
 aJ
@@ -7203,9 +7247,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
+pC
 IB
-aJ
+Oy
 aJ
 aJ
 aJ
@@ -7222,9 +7266,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
+Oy
 tz
-aJ
+pC
 aJ
 aJ
 aJ
@@ -7246,7 +7290,7 @@ jt
 jt
 jt
 Vw
-jt
+KM
 jt
 jt
 jt
@@ -7315,9 +7359,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
+pC
 IB
-aJ
+Oy
 aJ
 aJ
 aJ
@@ -7334,9 +7378,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
+Oy
 tz
-aJ
+pC
 aJ
 aJ
 aJ
@@ -7358,7 +7402,7 @@ aJ
 aJ
 aJ
 uL
-aJ
+wL
 aJ
 aJ
 aJ
@@ -7427,9 +7471,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
+pC
 IB
-aJ
+Oy
 aJ
 aJ
 aJ
@@ -7446,9 +7490,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
+Oy
 tz
-aJ
+pC
 aJ
 aJ
 aJ
@@ -7470,7 +7514,7 @@ aJ
 aJ
 uL
 uL
-aJ
+wL
 aJ
 aJ
 aJ
@@ -7517,7 +7561,7 @@ aJ
 aJ
 aJ
 aJ
-aJ
+wL
 uL
 uL
 aJ
@@ -7539,9 +7583,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
+pC
 IB
-aJ
+Oy
 aJ
 aJ
 aJ
@@ -7558,9 +7602,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
+Oy
 tz
-aJ
+pC
 aJ
 aJ
 aJ
@@ -7629,7 +7673,7 @@ aJ
 aJ
 aJ
 aJ
-aJ
+wL
 uL
 aJ
 aJ
@@ -7651,9 +7695,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
+pC
 IB
-aJ
+Oy
 aJ
 aJ
 aJ
@@ -7670,9 +7714,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
+Oy
 tz
-aJ
+pC
 aJ
 aJ
 aJ
@@ -7741,7 +7785,7 @@ jt
 jt
 jt
 jt
-jt
+KM
 Vw
 jt
 jt
@@ -7763,9 +7807,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
+pC
 IB
-aJ
+Oy
 aJ
 aJ
 aJ
@@ -7782,9 +7826,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
+Oy
 tz
-aJ
+pC
 aJ
 aJ
 aJ
@@ -7853,7 +7897,7 @@ aJ
 aJ
 aJ
 aJ
-aJ
+wL
 uL
 zZ
 aJ
@@ -7875,9 +7919,9 @@ aJ
 aJ
 aJ
 aJ
-aJ
+pC
 IB
-aJ
+Oy
 aJ
 aJ
 aJ
@@ -7894,9 +7938,9 @@ WK
 WK
 WK
 kA
-WK
+lG
 On
-WK
+zM
 WK
 WK
 WK
@@ -7965,7 +8009,7 @@ WK
 WK
 WK
 kA
-WK
+LA
 Zv
 Zv
 WK
@@ -7989,7 +8033,7 @@ WK
 WK
 kA
 uO
-WK
+lG
 WK
 WK
 WK
@@ -8006,9 +8050,9 @@ ol
 ol
 ol
 ol
-ol
+nB
 Lk
-ol
+pF
 ol
 ol
 ol
@@ -8099,9 +8143,9 @@ ol
 ol
 ol
 ol
-ol
+pF
 Td
-ol
+nB
 ol
 ol
 ol
