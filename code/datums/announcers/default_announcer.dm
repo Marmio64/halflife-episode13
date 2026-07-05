@@ -1,5 +1,5 @@
 /datum/centcom_announcer/default
-	welcome_sounds = list('sound/announcer/default/welcome.ogg')
+	welcome_sounds = list('sound/announcer/default/welcome1.ogg', 'sound/announcer/default/welcome2.ogg')
 	alert_sounds = list('sound/announcer/default/attention.ogg')
 	command_report_sounds = list('sound/announcer/default/attention.ogg')
 	event_sounds = list(ANNOUNCER_AIMALF = 'sound/announcer/default/attention.ogg',
