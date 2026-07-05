@@ -65,6 +65,10 @@
 	icon_state = "armor_press"
 	armor_type = /datum/armor/kevlararmor
 
+/obj/item/clothing/suit/armor/vest/press/unitednations
+	name = "United Nations armor vest"
+	desc = "An old world blue kevlar vest used by United Nations peacekeepers. The faded aramid fibers don't work as well as they used to, but it'll hold up about as well as any other kevlar vest still around."
+
 /obj/item/clothing/suit/armor/vest/press/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
 	. = ..()
 	if(!isinhands)
