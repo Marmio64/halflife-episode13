@@ -207,6 +207,9 @@
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
 	)
 
+/datum/outfit/deathmatch_loadout/crowbar/freeman/pre_equip(mob/living/carbon/human/H)
+	H.cmode_music = 'hl13/sound/music/combat/everymove.ogg'
+
 /datum/outfit/deathmatch_loadout/citizen
 	name = "Deathmatch: Citizen"
 	display_name = "Citizen"
@@ -241,7 +244,7 @@
 /datum/outfit/deathmatch_loadout/conscript/pre_equip(mob/living/carbon/human/H)
 	H.cmode_music = 'hl13/sound/music/combat/forgetaboutfreeman.ogg'
 
-// Fastest class, and has molotovs to wear people down. Great against melee classes since they can burn and run, but can be vulnerable to ranged classes shooting them down while rushing
+// Fastest class, and has molotovs to wear people down. Great against melee and slow classes since they can burn and run, but can be vulnerable to ranged classes shooting them down while rushing
 /datum/outfit/deathmatch_loadout/rioter
 	name = "Deathmatch: Rioter"
 	display_name = "Rioter"
@@ -340,6 +343,9 @@
 		/obj/item/hl13_small_flag/poland/telescopic = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 	)
+
+/datum/outfit/deathmatch_loadout/polish_veteran/pre_equip(mob/living/carbon/human/H)
+	H.cmode_music = 'hl13/sound/music/combat/escalation1.ogg'
 
 /datum/outfit/deathmatch_loadout/polish_corporal
 	name = "Deathmatch: PLF Corporal"

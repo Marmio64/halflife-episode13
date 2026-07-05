@@ -208,6 +208,10 @@
 	name = "mouse meat"
 	desc = "A slab of mouse meat. Best not eat it raw."
 	foodtypes = RAW | MEAT | GORE
+	food_reagents = list(
+		/datum/reagent/consumable/nutriment/protein = 4,
+		/datum/reagent/consumable/nutriment/fat = 1,
+	)
 
 /obj/item/food/meat/slab/mouse/Initialize(mapload)
 	. = ..()

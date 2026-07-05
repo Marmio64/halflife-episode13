@@ -63,6 +63,7 @@
 	name = "press armor vest"
 	desc = "A blue armor vest used to distinguish <i>non-combatant</i> \"PRESS\" members, like if anyone cares."
 	icon_state = "armor_press"
+	armor_type = /datum/armor/kevlararmor
 
 /obj/item/clothing/suit/armor/vest/press/worn_overlays(mutable_appearance/standing, isinhands, icon_file)
 	. = ..()

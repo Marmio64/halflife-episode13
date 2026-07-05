@@ -1,6 +1,6 @@
 /mob/living/basic/mouse
 	name = "mouse"
-	desc = "This cute little guy just loves the taste of insulated electrical cables. Isn't he adorable?"
+	desc = "One of the few normal animals left in the postwar earth. It has likely survived on a diet of garbage considering how scrawny it is, but might serve as a small respite from the pangs of hunger for you..."
 	icon_state = "mouse_gray"
 	icon_living = "mouse_gray"
 	icon_dead = "mouse_gray_dead"
@@ -318,13 +318,13 @@
 /// Mice turn into food when they die
 /obj/item/food/deadmouse
 	name = "dead mouse"
-	desc = "They look like somebody dropped the bass on it. A lizard's favorite meal."
+	desc = "A dead mouse. It looks extremely unappetizing, but times are tough nowadays..."
 	icon = 'icons/mob/simple/animal.dmi'
 	icon_state = "mouse_gray_dead"
 	bite_consumption = 3
 	eatverbs = list("devour")
-	food_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/vitamin = 2)
-	foodtypes = GORE | MEAT | RAW
+	food_reagents = list(/datum/reagent/consumable/nutriment = 5)
+	foodtypes = GORE | MEAT | RAW | GROSS
 	grind_results = list(/datum/reagent/blood = 20, /datum/reagent/consumable/liquidgibs = 5)
 	decomp_req_handle = TRUE
 	ant_attracting = FALSE
@@ -394,10 +394,10 @@
 
 /obj/item/food/deadmouse/moldy
 	name = "moldy dead mouse"
-	desc = "A dead rodent, consumed by mold and rot. There is a slim chance that a lizard might still eat it."
+	desc = "A dead rodent, consumed by mold and rot. Hopefully you don't plan on trying to eat this."
 	icon_state = "mouse_gray_dead"
-	food_reagents = list(/datum/reagent/consumable/nutriment = 3, /datum/reagent/consumable/nutriment/vitamin = 2, /datum/reagent/consumable/mold = 10)
-	foodtypes = GORE | MEAT | RAW | GROSS
+	food_reagents = list(/datum/reagent/consumable/nutriment = 5, /datum/reagent/consumable/mold = 10)
+	foodtypes = GORE | MEAT | RAW | TOXIC
 	grind_results = list(/datum/reagent/blood = 20, /datum/reagent/consumable/liquidgibs = 5, /datum/reagent/consumable/mold = 10)
 	preserved_food = TRUE
 

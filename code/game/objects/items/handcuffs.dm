@@ -390,6 +390,7 @@
 	throw_range = 1
 	icon_state = "beartrap"
 	desc = "A trap used to catch bears and other legged creatures."
+	breakouttime = 15 SECONDS
 	///If true, the trap is "open" and can trigger.
 	var/armed = FALSE
 	///How much damage the trap deals when triggered.

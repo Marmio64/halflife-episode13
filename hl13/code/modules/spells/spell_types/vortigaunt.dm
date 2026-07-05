@@ -1,7 +1,7 @@
 /datum/action/cooldown/spell/conjure_item/infinite_guns/vort_blast
 	name = "Vortal Blast"
 	cooldown_time = 3 SECONDS
-	desc = "Use the vortessence to ready a vortal bolt in your hand, which after a short channel duration will instantly hit a target."
+	desc = "Use the vortessence to ready a vortal bolt in your hand, which after a short channel duration will instantly hit a target. Consumes some of your nutritional energy to use."
 	button_icon = 'hl13/icons/mob/actions/actions_vortal.dmi'
 	button_icon_state = "blast"
 	background_icon_state = "bg_nature"
@@ -83,7 +83,7 @@
 
 /datum/action/cooldown/spell/touch/vort_heal
 	name = "Mend"
-	desc = "Use the vortessence and ready your hand to be able to heal someone else, or yourself at a lower rate."
+	desc = "Use the vortessence and ready your hand to be able to heal someone else, or yourself at a lower rate. Consumes some of your nutritional energy to use."
 	background_icon_state = "bg_nature"
 	button_icon = 'hl13/icons/mob/actions/actions_vortal.dmi'
 	button_icon_state = "mend"

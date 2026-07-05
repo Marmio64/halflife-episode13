@@ -50,6 +50,7 @@
 		switch(nextquestion)
 			if("withdraw")
 				var/withdrawfund = input(user, "Please select the amount to withdraw:", "Withdraw Money") as null|num
+				withdrawfund = round(withdrawfund, 1) //rounds to nearest whole number
 				if(!withdrawfund)
 					invalid_number()
 					return
@@ -125,6 +126,7 @@
 				to_chat(user, "<span class='warning'>You are withdrawing from your cross-round persistant account.</span>")
 				to_chat(user, "<span class='notice'>Your current long term account balance is: [user.client.prefs.read_preference(/datum/preference/numeric/longtermaccount)].</span>")
 				var/withdrawfund = input(user, "Please select the amount to withdraw:", "Withdraw Money") as null|num
+				withdrawfund = round(withdrawfund, 1) //rounds to nearest whole number
 				if(!withdrawfund)
 					invalid_number()
 					return

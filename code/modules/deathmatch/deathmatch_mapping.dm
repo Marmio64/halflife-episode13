@@ -3,6 +3,7 @@
 	requires_power = FALSE
 	has_gravity = STANDARD_GRAVITY
 	area_flags = UNIQUE_AREA | NOTELEPORT | EVENT_PROTECTED | QUIET_LOGS | NO_DEATH_MESSAGE | BINARY_JAMMING
+	base_lighting_alpha = 25
 
 /area/deathmatch/fullbright
 	static_lighting = FALSE

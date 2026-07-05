@@ -267,7 +267,7 @@
 	weapon_category = WEAPON_CAT_HEAVY
 
 /obj/item/gun/ballistic/automatic/rpd/deathmatch
-	projectile_damage_multiplier = 0.50
+	projectile_damage_multiplier = 0.4
 
 /obj/item/gun/ballistic/automatic/rpd/no_mag
 	spawnwithmagazine = FALSE

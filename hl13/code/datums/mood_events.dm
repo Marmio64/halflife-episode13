@@ -142,7 +142,7 @@
 
 /datum/mood_event/gibbing_view_bad
 	description = "I just saw someone get ground up in a meat grinder. We've hit rock bottom..."
-	mood_change = -5
+	mood_change = -8
 	timeout = 3 MINUTES
 
 /datum/mood_event/gibbing_view_good
