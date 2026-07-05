@@ -62,7 +62,7 @@
 	bullet = 30
 	laser = 25
 	energy = 40
-	bomb = 30
+	bomb = 35
 	fire = 70
 	acid = 70
 	wound = 10
@@ -444,7 +444,7 @@
 	bullet = 50
 	laser = 40
 	energy = 40
-	bomb = 50
+	bomb = 60
 	fire = 50
 	acid = 50
 	wound = 20
@@ -499,16 +499,16 @@
 	acid = 50
 	wound = 15
 
-//same tier as heavy rebel vests. A bit faster, a bit less protection and durability
+//same tier as heavy rebel vests. Noticeably faster, but doesn't cover the arms, has a bit less durability, and a bit less armor.
 /obj/item/clothing/suit/armor/halflife/milvest
 	name = "military vest"
 	desc = "A heavily armored old military vest. The layers of kevlar have weakened over the years, but it remains a potent defensive piece of equipment."
 	icon_state = "milvest"
 	blood_overlay_type = "armor"
-	slowdown = 0.25
+	slowdown = 0.2
 	armor_type = /datum/armor/milvest
 
-	limb_integrity = 275
+	limb_integrity = 300
 	repairable_by = /obj/item/stack/kevlar
 
 /obj/item/clothing/suit/armor/halflife/milvest/slow
@@ -517,9 +517,9 @@
 /datum/armor/milvest
 	melee = 35
 	bullet = 45
-	laser = 25
+	laser = 30
 	energy = 80
-	bomb = 45
+	bomb = 50
 	fire = 50
 	acid = 50
 	wound = 20
@@ -808,6 +808,7 @@
 	desc = "A Civil Protection chestplate with additional makeshift armor pieces strapped on made of metal. Offers a slight boost in protection over a standard CPO vest without compromising movement."
 	icon_state = "rebelarmor_light"
 	inhand_icon_state = "rebelarmor_light"
+	body_parts_covered = CHEST|GROIN
 	slowdown = 0
 	armor_type = /datum/armor/rebellight
 

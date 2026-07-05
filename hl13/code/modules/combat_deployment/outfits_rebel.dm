@@ -299,6 +299,8 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+	extra_dex = 2
+
 /datum/outfit/deployment_loadout/rebel/tier3/bomber_rebel
 	name = "Deployment: Rebel Bomber"
 	display_name = "Rebel Bomber (Offense)"
@@ -527,7 +529,7 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	extra_dex = 1
+	extra_dex = 2
 
 /datum/outfit/deployment_loadout/rebel/tier4/corporal
 	name = "Deployment: PLF Corporal"

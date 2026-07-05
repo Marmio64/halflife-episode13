@@ -57,6 +57,11 @@
 	REMOVE_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT(type))
 
 /obj/item/clothing/neck/anti_magic_collar/attackby(obj/item/W, mob/user, params)
+	var/badluck_modifier = 0
+
+	if(HAS_TRAIT(user, TRAIT_CURSED))
+		badluck_modifier = 25
+
 	if(!lockactive)
 		to_chat(user, span_notice("The collar isn't locked. No point in cutting it."))
 		return
@@ -78,7 +83,7 @@
 					H.emote("scream")
 					head.force_wound_upwards(/datum/wound/slash/flesh/critical)
 					H.apply_damage(75, BRUTE, head)
-				else if(prob(50))
+				else if(prob(50 + badluck_modifier))
 					to_chat(H, span_userdanger("The saw digs deep into the collar, but slips and nicks your neck. You quickly pull away for now, but you can retry."))
 					H.apply_damage(25, BRUTE, head)
 				else

@@ -188,6 +188,11 @@
 	if(HAS_TRAIT(user, TRAIT_THE_INTRUDER))
 		intruder_user = TRUE
 
+	var/real_loot_chance = loot_chance
+
+	if(HAS_TRAIT(user, TRAIT_CURSED))
+		real_loot_chance -= 20
+
 
 	if(!intruder_user)
 		if(searched)
@@ -214,7 +219,7 @@
 			intruder_searched = TRUE
 			return
 
-		if(prob(loot_chance + (user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER))))
+		if(prob(real_loot_chance + (user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER))))
 			if(prob(user.mind?.get_skill_modifier(/datum/skill/scavenging, SKILL_VALUE_MODIFIER)))
 				new good_loot_type(loc, 1)
 			else

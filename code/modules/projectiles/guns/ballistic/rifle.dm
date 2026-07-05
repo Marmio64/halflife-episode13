@@ -83,7 +83,10 @@
 				jammed = FALSE
 				unjam_chance = 10
 			else
-				unjam_chance += 10
+				if(HAS_TRAIT(user, TRAIT_CURSED))
+					unjam_chance += 1
+				else
+					unjam_chance += 10
 				balloon_alert(user, "jammed!")
 				playsound(user,'sound/items/weapons/jammed.ogg', 75, TRUE)
 				return FALSE

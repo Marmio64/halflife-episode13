@@ -122,7 +122,7 @@
 		if(darth_airlock.locked || !darth_airlock.hasPower())
 			continue
 
-		to_chat(living_guy, span_warning("A malevolent force launches your body to the floor..."))
+		to_chat(living_guy, span_warning("You suddenly trip and fall to the floor, what bad luck... Wait... What the!?"))
 		living_guy.Paralyze(1 SECONDS, ignore_canstun = TRUE)
 		INVOKE_ASYNC(src, PROC_REF(slam_airlock), darth_airlock)
 		return
@@ -239,7 +239,7 @@
 /datum/component/omen/proc/check_death(mob/living/our_guy)
 	SIGNAL_HANDLER
 
-	if(incidents_left == INFINITY)
+	if(incidents_left >= 1000)
 		return
 
 	qdel(src)
@@ -264,7 +264,7 @@
 /datum/component/omen/smite
 
 /datum/component/omen/smite/check_death(mob/living/our_guy)
-	if(incidents_left == INFINITY)
+	if(incidents_left >= 1000)
 		return ..()
 
 	death_explode(our_guy)
@@ -272,11 +272,11 @@
 
 /**
  * The quirk omen. Permanent.
- * Has only a 50% chance of bad things happening, and takes only 25% of normal damage.
+ * Very rare chance for the stuff to happen. Instead, it is based more around bad luck from the cursed trait.
  */
 /datum/component/omen/quirk
 	incidents_left = INFINITY
-	luck_mod = 0.3 // 30% chance of bad things happening
+	luck_mod = 0.1// very low chance of things happening
 	damage_mod = 0.25 // 25% of normal damage
 
 /datum/component/omen/quirk/RegisterWithParent()
@@ -287,22 +287,7 @@
 /datum/component/omen/quirk/UnregisterFromParent()
 	UnregisterSignal(parent, list(COMSIG_ON_CARBON_SLIP, COMSIG_MOVABLE_MOVED, COMSIG_LIVING_DEATH))
 
-/datum/component/omen/quirk/check_death(mob/living/our_guy)
-	if(!iscarbon(our_guy))
-		our_guy.gib(DROP_ALL_REMAINS)
-		return
-
-	// Don't explode if buckled to a stasis bed
-	if(our_guy.buckled)
-		var/obj/machinery/stasis/stasis_bed = our_guy.buckled
-		if(istype(stasis_bed))
-			return
-
-	death_explode(our_guy)
-	var/mob/living/carbon/player = our_guy
-	player.spread_bodyparts()
-	player.spawn_gibs()
-
+/datum/component/omen/quirk/check_death(mob/living/our_guy) //no death explosions...
 	return
 
 /**

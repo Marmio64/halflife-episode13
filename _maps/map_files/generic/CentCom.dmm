@@ -207,7 +207,6 @@
 "cD" = (
 /obj/structure/table/wood,
 /obj/item/folder/red,
-/obj/item/book/manual/wiki/security_space_law,
 /obj/item/restraints/handcuffs,
 /obj/item/assembly/flash/handheld,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -523,10 +522,10 @@
 /turf/open/floor/iron,
 /area/centcom/tdome/arena)
 "fh" = (
-/obj/item/kirbyplants/organic/plant22,
-/obj/effect/turf_decal/tile/green/half/contrasted,
-/turf/open/floor/iron,
-/area/centcom/tdome/observation)
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/light/directional/north,
+/turf/open/floor/iron/dark,
+/area/centcom/tdome/administration)
 "fk" = (
 /obj/machinery/vending/cigarette,
 /obj/machinery/status_display/evac/directional/north,
@@ -1205,12 +1204,7 @@
 /turf/open/floor/iron,
 /area/centcom/tdome/observation)
 "pO" = (
-/obj/structure/flora/bush/lavendergrass/style_random,
-/obj/structure/flora/bush/sparsegrass/style_random,
-/obj/structure/flora/bush/flowers_yw/style_random,
-/obj/structure/flora/bush/grassy/style_random,
-/obj/structure/flora/bush/pale/style_random,
-/turf/open/misc/asteroid,
+/turf/open/floor/iron,
 /area/centcom/tdome/observation)
 "pQ" = (
 /obj/machinery/light/small/directional/west,
@@ -1322,9 +1316,11 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/centcom/halflife/ota)
 "qK" = (
-/obj/item/kirbyplants/organic/plant22,
-/obj/effect/turf_decal/tile/red/half/contrasted,
-/turf/open/floor/iron,
+/obj/structure/flora/bush/lavendergrass/style_random,
+/obj/structure/flora/bush/sparsegrass/style_random,
+/obj/structure/flora/bush/fullgrass/style_random,
+/obj/structure/flora/bush/flowers_br/style_random,
+/turf/open/floor/grass,
 /area/centcom/tdome/observation)
 "qO" = (
 /obj/effect/turf_decal/tile/red{
@@ -1629,7 +1625,6 @@
 /obj/structure/flora/bush/lavendergrass/style_random,
 /obj/structure/flora/bush/sparsegrass/style_random,
 /obj/structure/flora/bush/fullgrass/style_random,
-/obj/structure/flora/bush/grassy/style_random,
 /obj/structure/flora/bush/flowers_pp/style_random,
 /obj/structure/flora/bush/pointy/style_random,
 /obj/machinery/light/directional/east,
@@ -2026,7 +2021,6 @@
 /turf/open/floor/iron,
 /area/centcom/tdome/arena)
 "zR" = (
-/obj/structure/closet/secure_closet/personal,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/light/directional/east,
 /turf/open/floor/iron/dark,
@@ -2120,8 +2114,8 @@
 /turf/open/floor/plating/indoor/trainfloor,
 /area/centcom/halflife)
 "AQ" = (
-/obj/structure/window/fulltile,
 /obj/structure/barricade/wooden/crude,
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
 /turf/open/floor/plating/indoor/tile,
 /area/centcom/halflife/relocation_city)
 "AT" = (
@@ -2281,8 +2275,7 @@
 /turf/open/floor/plating/indoor/concrete,
 /area/centcom/halflife)
 "CP" = (
-/obj/structure/window/fulltile,
-/obj/structure/barricade/wooden,
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
 /turf/open/floor/plating/indoor/tile,
 /area/centcom/halflife/relocation_city)
 "CW" = (
@@ -2581,14 +2574,10 @@
 /turf/open/floor/iron,
 /area/centcom/tdome/observation)
 "Hm" = (
-/obj/structure/flora/bush/sparsegrass/style_random,
-/obj/structure/flora/bush/lavendergrass/style_random,
-/obj/structure/flora/bush/ferny/style_random,
-/turf/open/floor/iron{
-	icon_state = "asteroid5";
-	name = "plating"
-	},
-/area/centcom/tdome/observation)
+/obj/structure/window/fulltile/halflife/nosmooth/brick,
+/obj/structure/barricade/wooden/crude,
+/turf/open/floor/plating/indoor/tile,
+/area/centcom/halflife/relocation_city)
 "Hu" = (
 /obj/structure/railing/halflife/full{
 	dir = 4
@@ -2599,14 +2588,6 @@
 "Hv" = (
 /turf/open/floor/plating/indoor/metal/combine,
 /area/centcom/halflife/ota)
-"HE" = (
-/obj/structure/flora/bush/lavendergrass/style_random,
-/obj/structure/flora/bush/fullgrass/style_random,
-/obj/structure/flora/bush/flowers_yw/style_random,
-/obj/structure/flora/bush/grassy/style_random,
-/obj/structure/flora/bush/pale/style_random,
-/turf/open/misc/asteroid,
-/area/centcom/tdome/observation)
 "HF" = (
 /obj/machinery/igniter/on,
 /obj/effect/turf_decal/delivery,
@@ -3781,7 +3762,6 @@
 /turf/open/floor/iron,
 /area/centcom/tdome/arena)
 "UC" = (
-/obj/structure/closet/secure_closet/personal,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/machinery/light/directional/west,
 /turf/open/floor/iron/dark,
@@ -43284,8 +43264,8 @@ uf
 Sz
 Sz
 uf
-uf
-uf
+aa
+aa
 aa
 aa
 aa
@@ -43514,8 +43494,8 @@ aa
 aa
 aa
 aa
-QC
-QC
+aa
+aa
 QC
 PT
 Rh
@@ -43540,9 +43520,9 @@ Zk
 uf
 Sz
 Sz
-Wn
-zA
 uf
+aa
+aa
 aa
 aa
 aa
@@ -43771,9 +43751,9 @@ aa
 aa
 aa
 aa
+aa
+aa
 QC
-Hm
-Sl
 Qi
 oi
 QC
@@ -43795,11 +43775,11 @@ pb
 Ic
 Zk
 uf
+fh
 Sz
-Sz
-Wn
-ga
 uf
+aa
+aa
 aa
 aa
 aa
@@ -44028,9 +44008,9 @@ aa
 aa
 aa
 aa
+aa
+aa
 QC
-OE
-Sl
 PT
 Rh
 QC
@@ -44054,9 +44034,9 @@ Zk
 uf
 Sz
 Sz
-Wn
-zA
 uf
+aa
+aa
 aa
 aa
 aa
@@ -44286,7 +44266,7 @@ aa
 aa
 QC
 QC
-Sl
+QC
 QC
 Qi
 GI
@@ -44312,8 +44292,8 @@ uf
 Sz
 Sz
 uf
-uf
-uf
+aa
+aa
 aa
 aa
 aa
@@ -45574,7 +45554,7 @@ BB
 YP
 bd
 Rh
-qK
+PT
 QC
 Sl
 Sl
@@ -46598,7 +46578,7 @@ aa
 aa
 aa
 QC
-Mw
+pO
 Mu
 bx
 Mu
@@ -47630,7 +47610,7 @@ BB
 QR
 bd
 Rh
-fh
+Ad
 QC
 Sl
 Sl
@@ -47891,7 +47871,7 @@ Jl
 QC
 XJ
 uF
-XJ
+qK
 QC
 Wv
 Kd
@@ -48912,7 +48892,7 @@ aa
 aa
 QC
 QC
-Sl
+QC
 QC
 Qi
 wb
@@ -48938,8 +48918,8 @@ uf
 Sz
 Sz
 uf
-uf
-uf
+aa
+aa
 aa
 aa
 aa
@@ -49168,9 +49148,9 @@ aa
 aa
 aa
 aa
+aa
+aa
 QC
-pO
-Sl
 Ad
 Rh
 QC
@@ -49194,9 +49174,9 @@ ff
 uf
 Sz
 Sz
-Wn
-zA
 uf
+aa
+aa
 aa
 aa
 aa
@@ -49425,9 +49405,9 @@ aa
 aa
 aa
 aa
+aa
+aa
 QC
-HE
-Sl
 Qi
 cZ
 QC
@@ -49449,11 +49429,11 @@ Zi
 Ic
 ff
 uf
+fh
 Sz
-Sz
-Wn
-ga
 uf
+aa
+aa
 aa
 aa
 aa
@@ -49682,8 +49662,8 @@ aa
 aa
 aa
 aa
-QC
-QC
+aa
+aa
 QC
 Ad
 Rh
@@ -49708,9 +49688,9 @@ ff
 uf
 Sz
 Sz
-Wn
-zA
 uf
+aa
+aa
 aa
 aa
 aa
@@ -49914,7 +49894,7 @@ oE
 oE
 xH
 mV
-CP
+Hm
 Qr
 Zp
 Lv
@@ -49966,8 +49946,8 @@ uf
 Sz
 Sz
 uf
-uf
-uf
+aa
+aa
 aa
 aa
 aa

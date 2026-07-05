@@ -183,7 +183,7 @@ GLOBAL_VAR_INIT(emergency_access, FALSE)
 					airlock.emergency = FALSE
 					airlock.update_icon(ALL, 0)
 
-	minor_announce("Access restrictions in maintenance areas have been restored.", "Attention! Station-wide emergency rescinded:")
+	minor_announce("Access restrictions in maintenance related forcefields have been restored.", "Attention! District-wide emergency rescinded:")
 	GLOB.emergency_access = FALSE
 	SSblackbox.record_feedback("nested tally", "keycard_auths", 1, list("emergency maintenance access", "disabled"))
 

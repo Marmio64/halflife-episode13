@@ -23,9 +23,9 @@
 	progression_minimum = 5 MINUTES
 
 /datum/uplink_item/suits/light_rebel_vest
-	name = "Light Rebel Vest"
-	desc = "A slightly modified civil protection vest which offers a tad bit more protection at no cost to speed."
-	item = /obj/item/clothing/suit/armor/rebel/light
+	name = "Light Rebel Vest Jacket"
+	desc = "A slightly modified civil protection vest which offers a tad bit more protection at no cost to speed, atop a padded jacket for extra trauma absorbtion."
+	item = /obj/item/clothing/suit/armor/rebel/light/jacket
 	cost = 4
 	progression_minimum = 10 MINUTES
 

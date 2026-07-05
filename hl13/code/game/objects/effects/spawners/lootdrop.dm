@@ -347,6 +347,7 @@
 				/obj/item/melee/baton/security/loaded,
 				/obj/item/clothing/suit/armor/halflife/kevlar,
 				/obj/item/clothing/suit/armor/rebel/light,
+				/obj/item/clothing/suit/armor/rebel/light/jacket,
 				/obj/item/clothing/head/helmet/halflife/military
 				)
 

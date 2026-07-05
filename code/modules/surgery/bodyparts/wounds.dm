@@ -80,7 +80,10 @@
 		damage *= 1.5
 
 	if(prob(15)) //Feeling lucky?
-		damage *= 0.8
+		if(HAS_TRAIT(owner, TRAIT_CURSED)) //Feeling... unlucky?
+			damage *= 1.2
+		else
+			damage *= 0.8
 
 	var/mob_endurance = owner.get_stat_level(STATKEY_END)
 
