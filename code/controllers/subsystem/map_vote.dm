@@ -133,6 +133,12 @@ SUBSYSTEM_DEF(map_vote)
 		else if(possible_config.config_max_users > 0 && filter_threshold > possible_config.config_max_users)
 			valid_maps -= map
 
+		if(possible_config.minetype == "combat_deployment" && SSmapping.current_map.minetype != "combat_deployment") //FOR AUTOVOTES ONLY. If the current map is TDM, autovote map options will also be TDM.
+			valid_maps -= map
+
+		if(possible_config.minetype != "combat_deployment" && SSmapping.current_map.minetype == "combat_deployment") //FOR AUTOVOTES ONLY. If the current map is RP, autovote map options will also be RP.
+			valid_maps -= map
+
 	return valid_maps
 
 /datum/controller/subsystem/map_vote/proc/filter_cache_to_valid_maps()
