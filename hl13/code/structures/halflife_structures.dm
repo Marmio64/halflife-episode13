@@ -306,7 +306,10 @@
 						else
 							to_chat(user, span_userdanger("Sweet pain rushes over me as my arm is crushed!"))
 						arm.force_wound_upwards(/datum/wound/blunt/bone/moderate)
-						arm.receive_damage(10)
+						if(HAS_TRAIT(user, TRAIT_CURSED))
+							arm.receive_damage(30)
+						else
+							arm.receive_damage(10)
 		else
 			if(do_after(user, 10 SECONDS, target = src, interaction_key = DOAFTER_SOURCE_LADDERBLOCKERS))
 				obstructed = TRUE
@@ -900,6 +903,14 @@
 		to_chat(usr, span_warning("You turn the TV off mid-program. You felt like you wasted your time."))
 		busy = FALSE
 		return
+
+	if(HAS_TRAIT(user, TRAIT_CURSED))
+		if(prob(15))
+			say("Bzzzzz...")
+			user.add_mood_event("tv", /datum/mood_event/tvcursed)
+			to_chat(user, span_warning("A mysterious man flashes on the screen in an uncomfortable pattern, before harsh static suddenly cuts off his appearence. You don't feel very well anymore..."))
+			busy = FALSE
+			return
 
 	say("[pick(tv_end)]")
 

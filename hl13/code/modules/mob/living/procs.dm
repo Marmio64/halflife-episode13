@@ -7,7 +7,12 @@
 		return FALSE
 	if(incapacitated)
 		return FALSE
-	if(prob(3)) //small chance to just straight up miss
+
+	var/miss_chance = 3
+
+	if(HAS_TRAIT(user, TRAIT_CURSED)) //Bad luck! Critical miss!
+		miss_chance = 6
+	if(prob(miss_chance)) //small chance to just straight up miss
 		var/list/usedp = list("Critical miss!", "You come up short in your swing! Critical Miss!", "It can't be! Critical miss!", "Bad luck! Critical miss!", "What?! Critical miss!")
 		to_chat(user, "<span class='boldwarning'>[pick(usedp)]</span>")
 		flash_fullscreen("blackflash2")

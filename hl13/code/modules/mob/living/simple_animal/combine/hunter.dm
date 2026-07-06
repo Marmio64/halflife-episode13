@@ -13,6 +13,7 @@
 	harm_intent_damage = 25
 	melee_damage_lower = 20
 	melee_damage_upper = 25
+	obj_damage = 30
 	sharpness = SHARP_EDGED
 	wound_bonus = 0
 	attack_vis_effect = ATTACK_EFFECT_CLAW
@@ -52,6 +53,7 @@
 	maxHealth = 180
 	health = 180
 	harm_intent_damage = 18
+	obj_damage = 24
 	speed = -0.5
 
 /mob/living/simple_animal/hostile/halflife/hunter/deployment/Life(seconds_per_tick = SSMOBS_DT, times_fired)

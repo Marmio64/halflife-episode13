@@ -87,9 +87,10 @@
 /mob/living/basic/halflife/barnacle/proc/start_feeding(mob/living/target_mob)
 	var/target_dodge_chance = (target_mob.get_stat_level(STATKEY_PER) - 10) * 2 //2% chance for every dex and perception point above 10 for you to dodge a barnacle's tongue when grabbed
 	target_dodge_chance += (target_mob.get_stat_level(STATKEY_DEX) - 10) * 2
-	if(prob(target_dodge_chance))
-		to_chat(target_mob, "<span class='warning'>You see a thin green tongue infront of you and just barely dodge it in time!</span>")
-		return FALSE
+	if(!HAS_TRAIT(target_mob, TRAIT_CURSED)) //bad luck? you aint ever dodging
+		if(prob(target_dodge_chance))
+			to_chat(target_mob, "<span class='warning'>You see a thin green tongue infront of you and just barely dodge it in time!</span>")
+			return FALSE
 
 	prey = target_mob
 	ai_controller.blackboard[BB_BASIC_MOB_CURRENT_TARGET] = target_mob //incase we were targeting someone else before, swap our attention to what we have in our mouth right now

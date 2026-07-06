@@ -411,10 +411,10 @@
 
 		if(BODY_ZONE_CHEST)
 			if(.)
-				if(wear_suit)
+				if(wear_suit && prob(50))
 					wear_suit.add_mob_blood(src)
 					update_worn_oversuit()
-				if(w_uniform)
+				if(w_uniform && prob(50))
 					w_uniform.add_mob_blood(src)
 					update_worn_undersuit()
 

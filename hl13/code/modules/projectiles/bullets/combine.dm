@@ -120,7 +120,7 @@
 	bare_wound_bonus = 5
 	hitsound = 'hl13/sound/creatures/hunter/flechette_flesh_impact1.ogg'
 	///reduced damage done to objects
-	var/object_damage = 18
+	var/object_damage = 17
 
 /obj/projectile/bullet/flechette/on_hit(atom/target, blocked = 0, pierce_hit)
 	if(blocked == 100)

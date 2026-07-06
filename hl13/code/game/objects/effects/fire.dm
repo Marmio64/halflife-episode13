@@ -15,6 +15,7 @@
 	light_color = LIGHT_COLOR_LAVA
 	var/firelevel //Tracks how much "fire" there is. Basically the timer of how long the fire burns
 	var/burnlevel = 10 //Tracks how HOT the fire is. This is basically the heat level of the fire and determines the temperature.
+	var/max_burnlevel = 20 //upper limit of burns
 	var/flame_color = "red"
 
 /obj/halflife/fire/Initialize(mapload, fire_lvl, burn_lvl, f_color, fire_stacks = 0, fire_damage = 0)
@@ -122,6 +123,9 @@
 	if(!firelevel)
 		qdel(src)
 		return
+
+	if(max_burnlevel < burnlevel)
+		burnlevel = max_burnlevel
 
 	T.flamer_fire_act(burnlevel, firelevel)
 

@@ -95,6 +95,11 @@
 
 //tv
 
+/datum/mood_event/tvcursed
+	description = "Whatever was on that TV was unsettling... I don't feel very well anymore..."
+	mood_change = -6
+	timeout = 5 MINUTES
+
 /datum/mood_event/tvbad
 	description = "Watching that program was demoralizing, it made me feel worse."
 	mood_change = -3
@@ -108,12 +113,12 @@
 /datum/mood_event/tvok
 	description = "Watching that program was somewhat interesting, it made me feel okay."
 	mood_change = 1
-	timeout = 4 MINUTES
+	timeout = 5 MINUTES
 
 /datum/mood_event/tvgood
 	description = "Watching that program was moralizing, it made me feel better."
-	mood_change = 3
-	timeout = 4 MINUTES
+	mood_change = 4
+	timeout = 5 MINUTES
 
 /datum/mood_event/rallied
 	description = "I feel rallied towards a cause!"

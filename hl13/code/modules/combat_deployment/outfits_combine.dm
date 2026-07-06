@@ -806,6 +806,8 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/remuneration.ogg'
 
+	skillchips = list(/obj/item/skillchip/engineer)
+
 	extra_int = 10
 	extra_per = 5
 

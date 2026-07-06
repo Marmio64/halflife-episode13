@@ -134,7 +134,7 @@
 	var/malfunction_prob = 40
 
 	if(HAS_TRAIT(user, TRAIT_CURSED))
-		malfunction_prob = 80 //fuck you
+		malfunction_prob = 95 //fuck you
 
 	if(malfunctioning && prob(malfunction_prob)) //if vendor is malfunctioning, it may cancel the ration request and waste your time
 		say("Vendor malfunction detected. Resubmit coupon to try again, and request a repair team.")

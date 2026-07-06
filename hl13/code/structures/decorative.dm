@@ -439,7 +439,7 @@
 		if(prob(35))
 			user.visible_message(span_notice("[user] finds an intact bottle from [src]."), \
 				span_notice("You find an intact bottle from [src]."))
-			if(prob(90))
+			if(prob(90) || HAS_TRAIT(user, TRAIT_CURSED)) //bad luck people will NEVER get the full vodka bottle...
 				new /obj/item/reagent_containers/cup/glass/bottle/vodka/empty(loc, 1)
 			else
 				new /obj/item/reagent_containers/cup/glass/bottle/vodka(loc, 1) //a small chance to get a full bottle!

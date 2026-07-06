@@ -246,7 +246,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror/broken, 28)
 	. = ..()
 	if(broken) // breaking a mirror truly gets you bad luck!
 		to_chat(user, span_warning("A chill runs down your spine as [src] shatters..."))
-		user.AddComponent(/datum/component/omen, incidents_left = 7)
+		user.AddComponent(/datum/component/omen, incidents_left = 3)
 
 /obj/structure/mirror/bullet_act(obj/projectile/proj)
 	if(broken || !isliving(proj.firer) || !proj.damage)
@@ -256,7 +256,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/mirror/broken, 28)
 	if(broken) // breaking a mirror truly gets you bad luck!
 		var/mob/living/unlucky_dude = proj.firer
 		to_chat(unlucky_dude, span_warning("A chill runs down your spine as [src] shatters..."))
-		unlucky_dude.AddComponent(/datum/component/omen, incidents_left = 7)
+		unlucky_dude.AddComponent(/datum/component/omen, incidents_left = 3)
 
 /obj/structure/mirror/atom_break(damage_flag, mapload)
 	. = ..()

@@ -91,14 +91,6 @@
 
 	var/mob/living/living_guy = our_guy
 
-	if(prob(0.001) && (living_guy.stat != DEAD)) // You hit the lottery! Kinda.
-		living_guy.visible_message(span_danger("[living_guy] suddenly bursts into flames!"), span_danger("You suddenly burst into flames!"))
-		INVOKE_ASYNC(living_guy, TYPE_PROC_REF(/mob, emote), "scream")
-		living_guy.adjust_fire_stacks(20)
-		living_guy.ignite_mob(silent = TRUE)
-		consume_omen()
-		return
-
 	var/effective_luck = luck_mod
 
 	// If there's nobody to witness the misfortune, make it less likely.
@@ -276,7 +268,7 @@
  */
 /datum/component/omen/quirk
 	incidents_left = INFINITY
-	luck_mod = 0.1// very low chance of things happening
+	luck_mod = 0.05// very low chance of things happening, relies more on the passive bad luck
 	damage_mod = 0.25 // 25% of normal damage
 
 /datum/component/omen/quirk/RegisterWithParent()

@@ -1003,6 +1003,8 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/aoe/rally/rebel/short)
 
+	skillchips = list(/obj/item/skillchip/engineer)
+
 	extra_dex = 3
 	extra_int = 6
 
