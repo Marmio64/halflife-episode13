@@ -13,6 +13,12 @@
 /obj/machinery/combine_walllight/directional/east,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"ap" = (
+/obj/machinery/porta_turret/combine{
+	anchored = 1
+	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/combat_deployment/combine_base)
 "aw" = (
 /obj/structure/chair/halflife/wood,
 /turf/open/floor/plating/indoor/carpet,
@@ -303,6 +309,12 @@
 	},
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors)
+"gs" = (
+/obj/effect/turf_decal/arrows{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "gE" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/combat_deployment/combine_base)
@@ -431,6 +443,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors)
+"jN" = (
+/obj/structure/halflife/road_barrier/concrete,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city)
 "jO" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /obj/structure/trap/deployment_spawn_prot/rebel,
@@ -582,11 +598,10 @@
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
 "mB" = (
-/obj/machinery/deployment_points_flag/combine{
-	cash_increase = 0.5
-	},
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
+/obj/effect/spawner/random/halflife/plant_spawner,
+/obj/structure/halflife/leaves,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/deployment_city)
 "mH" = (
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/checkered,
@@ -815,6 +830,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors)
+"qd" = (
+/obj/structure/flora/tree/halflife/plain/thin,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/deployment_city)
 "qf" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/tile/black,
@@ -1181,6 +1200,13 @@
 /obj/structure/halflife/storage/shelf,
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors)
+"xz" = (
+/obj/machinery/deployment_points_flag/combine{
+	cash_increase = 0.5;
+	cash_cap = 500
+	},
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "xC" = (
 /obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/metal/train,
@@ -1969,6 +1995,10 @@
 "NJ" = (
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors)
+"NS" = (
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/combat_deployment/combine_base)
 "NW" = (
 /obj/structure/halflife/fence/wire/end/east,
 /turf/open/floor/plating/indoor/trainfloor,
@@ -2058,9 +2088,7 @@
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors)
 "OT" = (
-/obj/effect/turf_decal/arrows{
-	dir = 1
-	},
+/obj/structure/halflife/road_barrier/concrete,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
 "OX" = (
@@ -2221,9 +2249,8 @@
 /turf/open/floor/plating/indoor/metal/train,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Sn" = (
-/obj/machinery/porta_turret/combine{
-	anchored = 1
-	},
+/obj/machinery/combine_walllight/directional/west,
+/obj/structure/halflife/road_barrier/combine,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "SE" = (
@@ -2359,6 +2386,10 @@
 /obj/structure/barricade/wooden/solid,
 /turf/open/floor/plating/indoor/metal/train,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"UZ" = (
+/obj/structure/halflife/road_barrier/combine,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/combat_deployment/combine_base)
 "Vc" = (
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors)
@@ -2516,6 +2547,10 @@
 /obj/effect/spawner/random/halflife/loot/scrap,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors)
+"ZB" = (
+/obj/structure/halflife/road_barrier/concrete,
+/turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city)
 "ZC" = (
 /obj/structure/halflife/road/verticalcrossing{
 	pixel_y = 15
@@ -6318,7 +6353,7 @@ zF
 zF
 zF
 YV
-gE
+NS
 mQ
 mQ
 mQ
@@ -7076,7 +7111,7 @@ gE
 mQ
 Pn
 Jv
-DJ
+Lt
 XP
 DJ
 Pn
@@ -7252,7 +7287,7 @@ zF
 YV
 YV
 aj
-Sn
+ap
 gE
 YV
 YV
@@ -7262,9 +7297,9 @@ YV
 gE
 mQ
 Pn
-pp
-pp
-pp
+bH
+qd
+bH
 XP
 Pn
 mQ
@@ -7450,7 +7485,7 @@ gE
 qg
 Pn
 XP
-pp
+bH
 pp
 pp
 Pn
@@ -7587,9 +7622,9 @@ yq
 (28,1,1) = {"
 yq
 OM
-OM
-OM
-OM
+gE
+gE
+gE
 gE
 gE
 gE
@@ -7774,9 +7809,6 @@ yq
 (29,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 eU
 kj
@@ -7784,6 +7816,9 @@ Xl
 YV
 OC
 cP
+gE
+gE
+gE
 gE
 gE
 gE
@@ -7961,9 +7996,6 @@ yq
 (30,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 CU
 zF
@@ -7971,6 +8003,9 @@ zF
 zF
 zF
 Os
+gE
+gE
+gE
 gE
 gE
 gE
@@ -8148,9 +8183,6 @@ yq
 (31,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 kk
 zF
@@ -8158,6 +8190,9 @@ zF
 zF
 zF
 oe
+gE
+gE
+gE
 gE
 gE
 gE
@@ -8335,17 +8370,17 @@ yq
 (32,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 Jc
 zF
-mB
+xz
 zF
 zF
 aB
 gE
+Pg
+zF
+zF
 zF
 zF
 zF
@@ -8522,9 +8557,6 @@ yq
 (33,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 tp
 zF
@@ -8533,6 +8565,9 @@ zF
 zF
 zF
 XI
+zF
+zF
+zF
 zF
 zF
 zF
@@ -8709,9 +8744,6 @@ yq
 (34,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 tp
 zF
@@ -8719,6 +8751,9 @@ zF
 zF
 zF
 LX
+gE
+gE
+gE
 gE
 gE
 gE
@@ -8778,7 +8813,7 @@ mQ
 iw
 mQ
 mQ
-mQ
+OT
 mQ
 mQ
 mQ
@@ -8896,9 +8931,6 @@ yq
 (35,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 YV
 zF
@@ -8906,6 +8938,9 @@ zF
 YV
 hv
 vm
+gE
+gE
+gE
 gE
 gE
 gE
@@ -8965,7 +9000,7 @@ SJ
 IS
 SJ
 TU
-zQ
+jN
 zQ
 zQ
 zQ
@@ -9083,9 +9118,6 @@ yq
 (36,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 YV
 zF
@@ -9095,7 +9127,10 @@ gE
 gE
 gE
 gE
+YV
 Oq
+UZ
+YV
 YV
 YV
 aj
@@ -9152,7 +9187,7 @@ Pn
 ZH
 Pn
 Pn
-Pn
+ZB
 Pn
 Gh
 Pn
@@ -9270,9 +9305,6 @@ yq
 (37,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 YV
 zF
@@ -9281,6 +9313,9 @@ YV
 YV
 aj
 gE
+YV
+YV
+YV
 YV
 YV
 YV
@@ -9457,9 +9492,6 @@ yq
 (38,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 YV
 nH
@@ -9468,6 +9500,9 @@ zF
 zF
 zF
 XI
+zF
+zF
+zF
 zF
 zF
 zF
@@ -9644,9 +9679,6 @@ yq
 (39,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 Bd
 zF
@@ -9655,6 +9687,9 @@ zF
 zF
 zF
 XI
+zF
+zF
+zF
 zF
 zF
 zF
@@ -9744,7 +9779,7 @@ Pn
 AU
 mQ
 mQ
-OT
+gs
 mQ
 cW
 xi
@@ -9831,9 +9866,6 @@ yq
 (40,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 YV
 zF
@@ -9842,6 +9874,9 @@ YV
 YV
 YV
 gE
+YV
+YV
+YV
 YV
 YV
 YV
@@ -10018,9 +10053,6 @@ yq
 (41,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 YV
 zF
@@ -10030,7 +10062,10 @@ gE
 gE
 gE
 gE
+YV
 Oq
+Sn
+YV
 YV
 YV
 YV
@@ -10205,14 +10240,14 @@ yq
 (42,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 YV
 zF
 zF
 YV
+gE
+gE
+gE
 gE
 gE
 gE
@@ -10274,7 +10309,7 @@ zQ
 SJ
 zQ
 TU
-zQ
+jN
 zQ
 zQ
 zQ
@@ -10392,14 +10427,14 @@ yq
 (43,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 YV
 zF
 zF
 YV
+gE
+gE
+gE
 gE
 gE
 gE
@@ -10461,7 +10496,7 @@ iw
 Kv
 iw
 mQ
-mQ
+OT
 mQ
 mQ
 mQ
@@ -10579,9 +10614,6 @@ yq
 (44,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 YV
 zF
@@ -10592,6 +10624,9 @@ hn
 ll
 hn
 xG
+gE
+gE
+gE
 gE
 gE
 gE
@@ -10648,7 +10683,7 @@ mQ
 iw
 mQ
 mQ
-mQ
+OT
 mQ
 mQ
 mQ
@@ -10766,9 +10801,6 @@ yq
 (45,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 YV
 zF
@@ -10779,6 +10811,9 @@ hn
 PL
 hn
 ll
+gE
+gE
+gE
 gE
 gE
 gE
@@ -10953,9 +10988,6 @@ yq
 (46,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 YV
 zF
@@ -10966,6 +10998,9 @@ hn
 AE
 hn
 AE
+gE
+gE
+gE
 gE
 gE
 gE
@@ -11140,9 +11175,6 @@ yq
 (47,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 Bd
 zF
@@ -11153,6 +11185,9 @@ zF
 zF
 zF
 zF
+gE
+gE
+gE
 gE
 gE
 gE
@@ -11327,9 +11362,6 @@ yq
 (48,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 YV
 zF
@@ -11340,6 +11372,9 @@ zF
 zF
 zF
 dT
+gE
+gE
+gE
 gE
 gE
 gE
@@ -11514,9 +11549,6 @@ yq
 (49,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 YV
 zF
@@ -11527,6 +11559,9 @@ wO
 gG
 ll
 PL
+gE
+gE
+gE
 gE
 gE
 gE
@@ -11701,9 +11736,6 @@ yq
 (50,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 tq
 zF
@@ -11714,6 +11746,9 @@ hn
 hn
 hn
 hn
+gE
+gE
+gE
 gE
 gE
 gE
@@ -11751,7 +11786,7 @@ gE
 qg
 Pn
 pp
-pp
+bH
 pp
 XP
 Pn
@@ -11888,9 +11923,6 @@ yq
 (51,1,1) = {"
 yq
 OM
-OM
-OM
-OM
 gE
 YV
 YV
@@ -11907,6 +11939,9 @@ gE
 gE
 gE
 gE
+gE
+gE
+gE
 YV
 YV
 YV
@@ -11927,7 +11962,7 @@ YV
 YV
 YV
 Bi
-Sn
+ap
 gE
 YV
 YV
@@ -11937,9 +11972,9 @@ YV
 gE
 mQ
 Pn
-XP
-pp
-pp
+mB
+qd
+bH
 pp
 Pn
 mQ
@@ -12075,9 +12110,9 @@ yq
 (52,1,1) = {"
 yq
 OM
-OM
-OM
-OM
+gE
+gE
+gE
 gE
 gE
 gE
@@ -12125,7 +12160,7 @@ gE
 mQ
 Pn
 Pn
-Pn
+ZH
 Pn
 Pn
 Pn
