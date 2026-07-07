@@ -299,7 +299,7 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	extra_dex = 2
+	extra_dex = 3
 
 /datum/outfit/deployment_loadout/rebel/tier3/bomber_rebel
 	name = "Deployment: Rebel Bomber"
@@ -355,7 +355,7 @@
 
 	alternate_combat_music = 'hl13/sound/music/combat/legionera.ogg'
 
-	extra_str = 4
+	extra_str = 5
 	extra_end = 6
 	extra_per = 2
 
@@ -529,7 +529,7 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	extra_dex = 2
+	extra_dex = 1
 
 /datum/outfit/deployment_loadout/rebel/tier4/corporal
 	name = "Deployment: PLF Corporal"

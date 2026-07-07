@@ -2057,6 +2057,12 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors)
+"OT" = (
+/obj/effect/turf_decal/arrows{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "OX" = (
 /obj/machinery/telecomms/processor/preset_one/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
@@ -2215,11 +2221,11 @@
 /turf/open/floor/plating/indoor/metal/train,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Sn" = (
-/obj/effect/turf_decal/arrows{
-	dir = 1
+/obj/machinery/porta_turret/combine{
+	anchored = 1
 	},
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/deployment_city)
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/combat_deployment/combine_base)
 "SE" = (
 /obj/machinery/telecomms/hub/preset,
 /turf/open/floor/plating/ground/sidewalk,
@@ -7246,7 +7252,7 @@ zF
 YV
 YV
 aj
-YV
+Sn
 gE
 YV
 YV
@@ -9738,7 +9744,7 @@ Pn
 AU
 mQ
 mQ
-Sn
+OT
 mQ
 cW
 xi
@@ -11921,7 +11927,7 @@ YV
 YV
 YV
 Bi
-YV
+Sn
 gE
 YV
 YV

@@ -25,7 +25,7 @@
 	minbodytemp = 0
 	speed = -1
 	butcher_results = list(/obj/item/food/meat/slab/xen = 1, /obj/item/stack/sheet/sinew = 1)
-	butcher_difficulty = 40
+	butcher_difficulty = 60
 	footstep_type = FOOTSTEP_MOB_ANTLION
 	death_sound = 'hl13/sound/creatures/antlion/pain2.ogg'
 
