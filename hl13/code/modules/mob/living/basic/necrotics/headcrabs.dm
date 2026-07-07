@@ -124,6 +124,9 @@
 	var/ricochet_chance = armor_value
 	ricochet_chance -= (bullet.armour_penetration*2)
 
+	if(bullet.damage_type == BURN)
+		ricochet_chance = 0
+
 	if(!prob(clamp(ricochet_chance, 1, 95))) // reflect chance is 50%
 		return ..()
 

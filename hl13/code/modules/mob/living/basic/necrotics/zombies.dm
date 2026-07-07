@@ -270,6 +270,9 @@
 
 	ricochet_chance -= (bullet.armour_penetration*2)
 
+	if(bullet.damage_type == BURN)
+		ricochet_chance = 0
+
 	if(!prob(clamp(ricochet_chance, 1, 95))) // reflect chance is 50%
 		return ..()
 
@@ -285,6 +288,8 @@
 
 /mob/living/basic/halflife/zombie/fungal/deployment
 	fungalheal_amt = 0.15
+	maxHealth = 125 //15 less HP
+	health = 125
 	speed = 1.85
 	melee_attack_cooldown = 1.5 SECONDS
 
@@ -303,6 +308,10 @@
 	armor_value = 100
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/proto_gonome
 	var/spray_cooldown = 3 SECONDS
+
+/mob/living/basic/halflife/zombie/fungal/proto_gonome/deployment
+	maxHealth = 125 //15 less HP
+	health = 125
 
 /mob/living/basic/halflife/zombie/fungal/proto_gonome/Initialize(mapload)
 	. = ..()

@@ -303,10 +303,6 @@
 	},
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors)
-"gs" = (
-/obj/structure/barricade/wooden/solid,
-/turf/open/floor/plating/indoor/trainfloor,
-/area/halflife/indoors)
 "gE" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/combat_deployment/combine_base)
@@ -587,8 +583,6 @@
 /area/halflife/outdoors/deployment_city)
 "mB" = (
 /obj/machinery/deployment_points_flag/combine{
-	spawnid = 1;
-	onetime_capture_only = 1;
 	cash_increase = 0.5
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -1399,7 +1393,8 @@
 	spawnid = 1;
 	onetime_capture_only = 1;
 	increase_progression_stage = 1;
-	capture_time = 70
+	capture_time = 70;
+	cash_cap = 300
 	},
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors)
@@ -2062,10 +2057,6 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors)
-"OT" = (
-/obj/machinery/door/unpowered/halflife/seethrough/mirrored/metal,
-/turf/open/floor/plating/indoor/trainfloor,
-/area/halflife/indoors)
 "OX" = (
 /obj/machinery/telecomms/processor/preset_one/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
@@ -2224,9 +2215,11 @@
 /turf/open/floor/plating/indoor/metal/train,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Sn" = (
-/obj/machinery/door/unpowered/halflife/seethrough/metal,
-/turf/open/floor/plating/indoor/trainfloor,
-/area/halflife/indoors)
+/obj/effect/turf_decal/arrows{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "SE" = (
 /obj/machinery/telecomms/hub/preset,
 /turf/open/floor/plating/ground/sidewalk,
@@ -7633,7 +7626,7 @@ YV
 zF
 zF
 zF
-wz
+zF
 lB
 mQ
 Pn
@@ -9560,8 +9553,8 @@ mQ
 mQ
 mQ
 mQ
-Sn
-gs
+cW
+CO
 ot
 CO
 CO
@@ -9745,10 +9738,10 @@ Pn
 AU
 mQ
 mQ
+Sn
 mQ
-mQ
-OT
-gs
+cW
+xi
 CO
 CO
 xi
@@ -11560,7 +11553,7 @@ YV
 zF
 zF
 zF
-wz
+zF
 lB
 mQ
 Pn
@@ -14613,7 +14606,7 @@ OM
 OM
 sq
 NJ
-NJ
+Lr
 NJ
 sq
 OM
