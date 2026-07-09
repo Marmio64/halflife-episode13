@@ -6,6 +6,14 @@ ADMIN_VERB(toggle_random_events, R_SERVER, "Toggle Random Events", "Toggles rand
 	message_admins("[key_name_admin(user)] has [new_are ? "enabled" : "disabled"] random events.")
 	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle Random Events", "[new_are ? "Enabled" : "Disabled"]")) // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
 
+//hl13 edit start
+ADMIN_VERB(toggle_random_tdm_teams, R_SERVER, "Toggle Random TDM Teams", "Toggles random teams on or off for TDM mode.", ADMIN_CATEGORY_SERVER)
+	var/random_teams = !CONFIG_GET(flag/random_tdm_teams)
+	CONFIG_SET(flag/random_tdm_teams, random_teams)
+	message_admins("[key_name_admin(user)] has [random_teams ? "enabled" : "disabled"] random teams in TDM mode.")
+	SSblackbox.record_feedback("nested tally", "admin_toggle", 1, list("Toggle Random Events", "[random_teams ? "Enabled" : "Disabled"]")) // If you are copy-pasting this, ensure the 4th parameter is unique to the new proc!
+//hl13 edit end
+
 ADMIN_VERB(toggle_hub, R_SERVER, "Toggle Hub", "Toggles the server's visilibility on the BYOND Hub.", ADMIN_CATEGORY_SERVER)
 	world.update_hub_visibility(!GLOB.hub_visibility)
 

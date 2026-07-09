@@ -40,6 +40,29 @@
 
 	client.playtitlemusic()
 
+	//hl13 edit start
+	if(CONFIG_GET(flag/random_tdm_teams)) //should teams be randomly assigned?
+		if(!client.player_details.deployment_faction) //do they not have a team already?
+			if(SSmapping.current_map.combat_deployment_gamemode != "xen_defense" && SSmapping.current_map.combat_deployment_gamemode != "xen_chaos" && SSmapping.current_map.combat_deployment_gamemode != "intruder")
+				if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players) && SSmapping.current_map.combat_deployment_gamemode != "the_hidden") //if combine outnumber rebels, you're being a rebel
+					client.player_details.deployment_faction = REBEL_DEPLOYMENT_FACTION
+				else
+					client.player_details.deployment_faction = COMBINE_DEPLOYMENT_FACTION //otherwise, you're a biner
+
+			else if(SSmapping.current_map.combat_deployment_gamemode == "xen_defense")
+				if(length(GLOB.deployment_xen_players) < (length(GLOB.deployment_rebel_players + GLOB.deployment_combine_players)*1.5)) //if xen are outnumbered, you're xen, otherwise no force pick cause some maps the humans are combine, sometimes they are rebel
+					client.player_details.deployment_faction = XEN_DEPLOYMENT_FACTION
+
+			else if(SSmapping.current_map.combat_deployment_gamemode == "xen_chaos")
+				if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players) && length(GLOB.deployment_xen_players) < length(GLOB.deployment_combine_players)) //if combine is full...
+					if(length(GLOB.deployment_xen_players) < length(GLOB.deployment_rebel_players)) //rebels are full? you're xen
+						client.player_details.deployment_faction = XEN_DEPLOYMENT_FACTION
+					else
+						client.player_details.deployment_faction = REBEL_DEPLOYMENT_FACTION //rebels aren't full? you're xen
+				else
+					client.player_details.deployment_faction = COMBINE_DEPLOYMENT_FACTION //otherwise, bine is open? you're bine
+	//hl13 edit end
+
 	var/datum/asset/asset_datum = get_asset_datum(/datum/asset/simple/lobby)
 	asset_datum.send(client)
 	if(!client) // client disconnected during asset transit

@@ -1,6 +1,8 @@
 /mob/living/carbon/human/proc/handle_pain()//BP/WOUND BASED PAIN
 	if(HAS_TRAIT(src, TRAIT_ANALGESIA))
 		return
+	if(IsUnconscious())
+		return
 	if(!stat)
 		if(temporary_pain > 100)
 			adjust_temppain(-3) //higher levels of temp pain go away faster than lower levels
@@ -30,7 +32,10 @@
 						if(HAS_TRAIT(src, TRAIT_MASOCHIST))
 							usedp = list("THE PAIN, I LOVE AND HATE IT!!", "PAIN IS A CRUEL MASTER!", "HOW MUCH MORE CAN I TAKE? HAHAHAHA!", "CRIMSON FLOODS MY VISION!", "THE PAIN SHALL GO ON!")
 						to_chat(src, span_userdanger("[pick(usedp)]"))
-						if(painpercent >= 130)
+						if(painpercent >= 300 && prob(25))
+							Unconscious(8 SECONDS)
+							throw_alert_text(/atom/movable/screen/alert/text/cry, "You go unconcious from extreme pain!", override = FALSE)
+						else if(painpercent >= 130)
 							Paralyze(painpercent/3) //min amount is 130, so a third of that is a little over 4 seconds. (This goes in deciseconds)
 							throw_alert_text(/atom/movable/screen/alert/text/cry, "You collapse in pain!", override = FALSE) // HL13 EDIT - text alert
 					else
