@@ -108,7 +108,7 @@
 	if(main_deposit)
 		if(deployment_faction == COMBINE_DEPLOYMENT_FACTION) //This is roll protection. If the enemy team has a cash advantage greater than 100, your team gets extra cashflow
 			if(length(GLOB.deployment_combine_players) < length(GLOB.deployment_rebel_players)) //if there are more rebel players than combine, by any amount (like 6 combine and 7 rebels)
-				GLOB.deployment_combine_cash += 0.2 //give bonus cash as a handicap
+				GLOB.deployment_combine_cash += 0.4 //give bonus cash as a handicap
 
 			if(GLOB.deployment_combine_cash < (GLOB.deployment_rebels_cash - 100))
 				GLOB.deployment_combine_cash += 1
