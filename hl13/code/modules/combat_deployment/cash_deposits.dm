@@ -125,7 +125,7 @@
 
 		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
 			if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players)) //if there are more combine players than rebels, by any amount (like 6 rebels and 7 combine)
-				GLOB.deployment_rebels_cash += 0.2 //give bonus cash as a handicap
+				GLOB.deployment_rebels_cash += 0.4 //give bonus cash as a handicap
 
 			if(GLOB.deployment_rebels_cash < (GLOB.deployment_combine_cash - 100))
 				GLOB.deployment_rebels_cash += 1
