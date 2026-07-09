@@ -137,8 +137,8 @@
 	can_adjust = FALSE
 
 /obj/item/clothing/under/misc/syndicate_souvenir
-	name = "syndicate souvenir tee"
-	desc = "I got kidnapped by a Syndicate operative and all I got was this lousy t-shirt!"
+	name = "aperture science souvenir tee"
+	desc = "A repurposed test subject uniform, cut up and painted over to commemorate a staff member's participation (and survival) within a portal testing experiment. Unfortunately, it seems many of the test subject uniforms were butchered for little reason, as very few of these shirts were issued."
 	icon = 'icons/obj/clothing/under/syndicate_souvenir.dmi'
 	worn_icon = 'icons/mob/clothing/under/syndicate_souvenir.dmi'
 	icon_state = "syndicate_souvenir"
