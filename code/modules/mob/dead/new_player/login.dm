@@ -41,6 +41,10 @@
 	client.playtitlemusic()
 
 	//hl13 edit start
+	list_clear_nulls(GLOB.deployment_combine_players)
+	list_clear_nulls(GLOB.deployment_rebel_players)
+	list_clear_nulls(GLOB.deployment_xen_players)
+
 	if(CONFIG_GET(flag/random_tdm_teams)) //should teams be randomly assigned?
 		if(!client.player_details.deployment_faction) //do they not have a team already?
 			if(SSmapping.current_map.combat_deployment_gamemode != "xen_defense" && SSmapping.current_map.combat_deployment_gamemode != "xen_chaos" && SSmapping.current_map.combat_deployment_gamemode != "intruder")
@@ -57,7 +61,7 @@
 					GLOB.deployment_xen_players |= client
 
 			else if(SSmapping.current_map.combat_deployment_gamemode == "xen_chaos")
-				if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players) && length(GLOB.deployment_xen_players) < length(GLOB.deployment_combine_players)) //if combine is full...
+				if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players) || length(GLOB.deployment_xen_players) < length(GLOB.deployment_combine_players)) //if combine is full...
 					if(length(GLOB.deployment_xen_players) < length(GLOB.deployment_rebel_players)) //rebels are full? you're xen
 						client.player_details.deployment_faction = XEN_DEPLOYMENT_FACTION
 						GLOB.deployment_xen_players |= client
