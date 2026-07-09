@@ -46,21 +46,27 @@
 			if(SSmapping.current_map.combat_deployment_gamemode != "xen_defense" && SSmapping.current_map.combat_deployment_gamemode != "xen_chaos" && SSmapping.current_map.combat_deployment_gamemode != "intruder")
 				if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players) && SSmapping.current_map.combat_deployment_gamemode != "the_hidden") //if combine outnumber rebels, you're being a rebel
 					client.player_details.deployment_faction = REBEL_DEPLOYMENT_FACTION
+					GLOB.deployment_rebel_players |= client
 				else
 					client.player_details.deployment_faction = COMBINE_DEPLOYMENT_FACTION //otherwise, you're a biner
+					GLOB.deployment_combine_players |= client
 
 			else if(SSmapping.current_map.combat_deployment_gamemode == "xen_defense")
 				if(length(GLOB.deployment_xen_players) < (length(GLOB.deployment_rebel_players + GLOB.deployment_combine_players)*1.5)) //if xen are outnumbered, you're xen, otherwise no force pick cause some maps the humans are combine, sometimes they are rebel
 					client.player_details.deployment_faction = XEN_DEPLOYMENT_FACTION
+					GLOB.deployment_xen_players |= client
 
 			else if(SSmapping.current_map.combat_deployment_gamemode == "xen_chaos")
 				if(length(GLOB.deployment_rebel_players) < length(GLOB.deployment_combine_players) && length(GLOB.deployment_xen_players) < length(GLOB.deployment_combine_players)) //if combine is full...
 					if(length(GLOB.deployment_xen_players) < length(GLOB.deployment_rebel_players)) //rebels are full? you're xen
 						client.player_details.deployment_faction = XEN_DEPLOYMENT_FACTION
+						GLOB.deployment_xen_players |= client
 					else
 						client.player_details.deployment_faction = REBEL_DEPLOYMENT_FACTION //rebels aren't full? you're xen
+						GLOB.deployment_rebel_players |= client
 				else
 					client.player_details.deployment_faction = COMBINE_DEPLOYMENT_FACTION //otherwise, bine is open? you're bine
+					GLOB.deployment_combine_players |= client
 	//hl13 edit end
 
 	var/datum/asset/asset_datum = get_asset_datum(/datum/asset/simple/lobby)
