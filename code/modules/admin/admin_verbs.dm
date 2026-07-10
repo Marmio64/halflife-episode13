@@ -13,6 +13,24 @@ ADMIN_VERB(hide_verbs, R_NONE, "Adminverbs - Hide All", "Hide most of your admin
 	to_chat(user, span_interface("Almost all of your adminverbs have been hidden."), confidential = TRUE)
 	BLACKBOX_LOG_ADMIN_VERB("Hide All Adminverbs")
 
+//hl13 edit
+ADMIN_VERB(remove_tdm_teams, R_ADMIN, "AGhost", "Remove all TDM team allegiances.", ADMIN_CATEGORY_GAME)
+	. = TRUE
+	GLOB.deployment_combine_players = list()
+	GLOB.deployment_rebel_players = list()
+	GLOB.deployment_xen_players = list()
+
+	for(var/client/player_client in GLOB.clients)
+		player_client.player_details.deployment_faction = null
+
+
+ADMIN_VERB(clear_tdm_null, R_ADMIN, "Clear TDM team nulls", "Clear TDM team nulls.", ADMIN_CATEGORY_GAME)
+	. = TRUE
+	list_clear_nulls(GLOB.deployment_combine_players)
+	list_clear_nulls(GLOB.deployment_rebel_players)
+	list_clear_nulls(GLOB.deployment_xen_players)
+//hl13 edit
+
 ADMIN_VERB(admin_ghost, R_ADMIN, "AGhost", "Become a ghost without DNR.", ADMIN_CATEGORY_GAME)
 	. = TRUE
 	if(isobserver(user.mob))

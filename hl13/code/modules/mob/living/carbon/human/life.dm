@@ -35,6 +35,7 @@
 						if(painpercent >= 300 && prob(25))
 							Unconscious(8 SECONDS)
 							throw_alert_text(/atom/movable/screen/alert/text/cry, "You go unconcious from extreme pain!", override = FALSE)
+							to_chat(src, span_userdanger("You pass out from your pain!"))
 						else if(painpercent >= 130)
 							Paralyze(painpercent/3) //min amount is 130, so a third of that is a little over 4 seconds. (This goes in deciseconds)
 							throw_alert_text(/atom/movable/screen/alert/text/cry, "You collapse in pain!", override = FALSE) // HL13 EDIT - text alert
