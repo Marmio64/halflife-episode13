@@ -52,7 +52,7 @@
 /mob/living/simple_animal/hostile/halflife/hunter/deployment
 	maxHealth = 180
 	health = 180
-	harm_intent_damage = 18
+	harm_intent_damage = 19
 	obj_damage = 24
 	speed = -0.5
 
