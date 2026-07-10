@@ -312,7 +312,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/branescan.ogg'
 
-	extra_per = 2
+	extra_per = 1
 
 /datum/outfit/deployment_loadout/combine/tier3/medic_cop
 	name = "Deployment: Upgraded Medical Cop"
