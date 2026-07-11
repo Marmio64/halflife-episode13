@@ -893,7 +893,7 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/rocket)
 
-	extra_end = 5
+	extra_end = 6
 
 	alternate_combat_music = 'hl13/sound/music/combat/rocketjumpwaltz.ogg'
 
@@ -951,7 +951,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/escalation1.ogg'
 
-	extra_end = 6
+	extra_end = 8
 
 /datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt
 	name = "Deployment: Extract Empowered Vortigaunt"

@@ -135,7 +135,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 30 SECONDS
+	cooldown_time = 28 SECONDS
 	item_type = /obj/item/ammo_box/magazine/svd
 	requires_hands = TRUE
 	delete_old = FALSE
@@ -199,7 +199,7 @@
 	name = "Procure Incendiary Grenade"
 	desc = "Procures a incendiary grenade for tossing. Deletes the old one if it is not used."
 	item_type = /obj/item/grenade/incendiary_grenade
-	cooldown_time = 25 SECONDS
+	cooldown_time = 24 SECONDS
 
 
 /datum/action/cooldown/spell/aoe/rally
@@ -262,7 +262,7 @@
 	physical_heal = -50
 
 /datum/action/cooldown/spell/aoe/rally/rebel/short
-	cooldown_time = 45 SECONDS
+	cooldown_time = 40 SECONDS
 
 /datum/action/cooldown/spell/revive_tdmlead
 	name = "Revive"

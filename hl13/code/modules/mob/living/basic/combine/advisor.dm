@@ -127,13 +127,14 @@
 	/// How long the stun duration should be
 	var/stun_duration = 0.75 SECONDS
 	/// How long the immobilize duration should be
-	var/immobilize_duration = 2 SECONDS
+	var/immobilize_duration = 3 SECONDS
 	/// How much brain damage to cause
 	var/brain_damage = 0
 
 /datum/action/cooldown/spell/pointed/advisorial_punish/overpowered
 	cooldown_time = 6 SECONDS
 	brain_damage = 50
+	stun_duration = 1.5 SECONDS
 
 /datum/action/cooldown/spell/pointed/advisorial_punish/is_valid_target(atom/cast_on)
 	. = ..()
@@ -172,7 +173,7 @@
 		cast_on.adjust_confusion(confusion_duration)
 		cast_on.adjustStaminaLoss(stamina_damage)
 		cast_on.Stun(stun_duration)
-		cast_on.Immobilize(immobilize_duration)
+		cast_on.Immobilize(immobilize_duration - cast_on.get_stat_level(STATKEY_END)) //each point of endurance is -0.1 seconds of immobilization. Default 10 end = 1.75 seconds
 		if(brain_damage)
 			cast_on.adjustOrganLoss(ORGAN_SLOT_BRAIN, brain_damage, BRAIN_DAMAGE_DEATH - 1)
 
