@@ -10,7 +10,7 @@
 	name = "Poison Kit"
 	desc = "An assortment of deadly chemicals packed into a compact box. Comes with a syringe for more precise application."
 	item = /obj/item/storage/box/syndie_kit/chemical
-	cost = 8
+	cost = 7
 	surplus = 50
 	progression_minimum = 2 MINUTES
 

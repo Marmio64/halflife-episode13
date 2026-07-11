@@ -62,6 +62,7 @@
 
 /mob/living/silicon/robot/cityscanner/death(gibbed)
 	..()
+	SSsociostability.modifystability(-3)
 	new /obj/item/halflife/combine_battery(src.loc)
 	explosion(src, light_impact_range = 2, adminlog = FALSE)
 	gib()

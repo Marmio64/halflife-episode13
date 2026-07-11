@@ -16,25 +16,29 @@
 		KIT_SABOTAGE = 3,
 		)))
 		if(KIT_REBEL)
-			new /obj/item/gun/ballistic/automatic/mp7(src) // 13 tc?
-			new /obj/item/ammo_box/magazine/mp7(src) //~4 tc?
+			new /obj/item/gun/ballistic/automatic/mp7(src) // 10 tc
+			new /obj/item/ammo_box/magazine/mp7(src) //4 tc
+			new /obj/item/ammo_box/magazine/mp7(src) //4 tc
 			new /obj/item/clothing/under/citizen/rebel(src) // 3 tc
 			new /obj/item/clothing/suit/armor/civilprotection(src) //3 tc
-			new /obj/item/reagent_containers/pill/patch/medkit/vial(src) // 1 tc
+			new /obj/item/reagent_containers/pill/patch/medkit(src) // 1 tc
 			new /obj/item/reagent_containers/pill/patch/medkit/vial(src) // 1 tc
 			new /obj/item/storage/belt/civilprotection(src) //3 tc
-			new /obj/item/clothing/head/beanie(src) //no tc
+			new /obj/item/clothing/head/helmet/halflife/military/weak/crafted(src) //1 tc~
 
 		if(KIT_STEALTHY)
 			new /obj/item/storage/box/syndie_kit/smoke(src) // 2 tc
 			new /obj/item/clothing/glasses/thermal/syndi(src) // 4 tc
-			new /obj/item/flashlight/emp(src) // 2 tc?
+			new /obj/item/grenade/empgrenade(src) // 1 tc?
 			new /obj/item/switchblade(src) //3 tc?
 			new /obj/item/jammer(src) // 5 tc
-			new /obj/item/storage/box/syndie_kit/chemical //8 tc
+			new /obj/item/storage/box/syndie_kit/chemical //7 tc
 			new /obj/item/reagent_containers/syringe/mulligan //4 tc
 			new /obj/item/binoculars(src) // 2 tc?
 			new /obj/item/card/id/advanced/chameleon(src) //4 tc
+			new /obj/item/clothing/suit/bluejacket/padded(src) //1 tc~
+			new /obj/item/hl2/deployable_box(src) //1 tc~
+			new /obj/item/reagent_containers/pill/patch/medkit/vial(src) // 1 tc
 
 		if(KIT_SABOTAGE)
 			new /obj/item/grenade/c4(src) // 3 tc
@@ -44,7 +48,10 @@
 			new /obj/item/grenade/syndieminibomb/bouncer(src) // 5 tc
 			new /obj/item/storage/belt/civilprotection(src) //3 tc
 			new /obj/item/card/emag/halflife(src) // 4 tc
+			new /obj/item/halflife/combine_battery(src) // 1 tc~
 			new /obj/item/storage/toolbox/syndicate(src) // 1 tc
+			new /obj/item/climbing_hook/halflife/makeshift(src) // 1 tc
+			new /obj/item/reagent_containers/pill/patch/medkit/vial(src) // 1 tc
 
 /obj/item/storage/box/syndicate/bundle_b/PopulateContents()
 	switch (pick_weight(list(
@@ -220,10 +227,9 @@
 
 /obj/item/storage/box/syndie_kit/chemical/Initialize(mapload)
 	. = ..()
-	atom_storage.max_slots = 14
+	atom_storage.max_slots = 13
 
 /obj/item/storage/box/syndie_kit/chemical/PopulateContents()
-	new /obj/item/reagent_containers/cup/bottle/polonium(src)
 	new /obj/item/reagent_containers/cup/bottle/venom(src)
 	new /obj/item/reagent_containers/cup/bottle/fentanyl(src)
 	new /obj/item/reagent_containers/cup/bottle/formaldehyde(src)

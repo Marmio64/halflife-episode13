@@ -182,7 +182,7 @@
 
 /obj/item/reagent_containers/cup/bottle/pancuronium
 	name = "pancuronium bottle"
-	desc = "A small bottle. Contains pancuronium."
+	desc = "A small bottle. Contains pancuronium. Extremely difficult to detect, and takes a while to kick in."
 	list_reagents = list(/datum/reagent/toxin/pancuronium = 30)
 
 /obj/item/reagent_containers/cup/bottle/sodium_thiopental
@@ -192,7 +192,7 @@
 
 /obj/item/reagent_containers/cup/bottle/coniine
 	name = "coniine bottle"
-	desc = "A small bottle. Contains coniine."
+	desc = "A small bottle. Contains coniine. Very slow to metabolize, but has a powerful overall effect on the body."
 	list_reagents = list(/datum/reagent/toxin/coniine = 30)
 
 /obj/item/reagent_containers/cup/bottle/curare
