@@ -22,6 +22,8 @@
 
 	use_radio_beeps_tts = TRUE
 
+	clothing_traits = list(TRAIT_NOHEADWEAR_MASK)
+
 	unique_death = 'hl13/sound/voice/cpdeath/die1.ogg'
 
 	actions_types = list(/datum/action/item_action/halt, /datum/action/item_action/help_request, /datum/action/item_action/suspect_spotted)
@@ -136,6 +138,8 @@
 	. = ..()
 	GLOB.cpmasks += src
 	AddComponent(/datum/component/speechmod, replacements = strings("combine_replacement.json", "combine"), slots = ITEM_SLOT_MASK)
+	AddComponent(/datum/component/hat_stabilizer) //for putting cosmetic hats on top
+	ADD_TRAIT(src, TRAIT_NOHEADWEAR_MASK, CLOTHING_TRAIT)
 	if(fused)
 		ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
 	if(mask_color)
@@ -300,7 +304,7 @@
 	icon_state = "wallhammer"
 
 /datum/armor/wallhammeroverwatchmask
-	melee = 40
+	melee = 45
 	bullet = 60
 	laser = 10
 	energy = 10
@@ -330,7 +334,7 @@
 	armor_type = /datum/armor/eliteoverwatchmask
 
 /datum/armor/eliteoverwatchmask
-	melee = 30
+	melee = 35
 	bullet = 45
 	laser = 10
 	energy = 10

@@ -348,6 +348,8 @@
 		var/obj/item/bodypart/head/head = human_mob.get_bodypart(BODY_ZONE_HEAD)
 		if(isnull(head))
 			blocked_slots |= ITEM_SLOT_HEAD|ITEM_SLOT_EARS|ITEM_SLOT_EYES|ITEM_SLOT_MASK
+		if(HAS_TRAIT(human_mob, TRAIT_NOHEADWEAR_MASK))
+			blocked_slots |= ITEM_SLOT_HEAD
 		var/obj/item/organ/eyes/eyes = human_mob.get_organ_slot(ORGAN_SLOT_EYES)
 		if(eyes?.no_glasses)
 			blocked_slots |= ITEM_SLOT_EYES

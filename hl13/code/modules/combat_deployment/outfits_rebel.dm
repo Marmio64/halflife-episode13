@@ -920,6 +920,7 @@
 		/obj/item/grenade/incendiary_grenade = 2,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/reagent_containers/pill/patch/medkit = 2,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 		/obj/item/ammo_box/magazine/ak47 = 4,
 		/obj/item/extinguisher/mini = 1,
 	)

@@ -64,6 +64,12 @@
 	icon_state = "military_poland"
 	base_icon_state = "military_poland"
 
+/obj/item/clothing/head/helmet/halflife/military/combine
+	name = "combine helmet"
+	desc = "A professional combine helmet. It was never put into full use as the cost of producing these helmets was never deemed worthwhile."
+	icon_state = "combine_helmet"
+	base_icon_state = "combine_helmet"
+
 /datum/armor/military_helmet
 	melee = 25
 	bullet = 25
@@ -90,6 +96,12 @@
 	desc = "A hand made helmet formed from scraps and kevlar. It's not very good at protecting you in a meaningful way, but every bit counts."
 	icon_state = "steel_helmet"
 	base_icon_state = "steel_helmet"
+
+/obj/item/clothing/head/helmet/halflife/military/weak/combine
+	name = "cracked combine helmet"
+	desc = "A professional combine helmet. It was never put into full use as the cost of producing these helmets was never deemed worthwhile. This one seems to have been well used, and no longer protects as well."
+	icon_state = "combine_helmet"
+	base_icon_state = "combine_helmet"
 
 /obj/item/clothing/head/helmet/halflife/military/weak/crafted/poland
 	name = "improvised polish military helmet"

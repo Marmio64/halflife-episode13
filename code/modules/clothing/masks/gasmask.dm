@@ -125,6 +125,7 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	has_filter = TRUE
 	return TRUE
 
+/*
 /obj/item/clothing/mask/gas/attack_hand_secondary(mob/user, list/modifiers)
 	if(cig)
 		user.put_in_hands(cig)
@@ -144,6 +145,7 @@ GLOBAL_LIST_INIT(clown_mask_options, list(
 	if(LAZYLEN(gas_filters) <= 0)
 		has_filter = FALSE
 	return SECONDARY_ATTACK_CANCEL_ATTACK_CHAIN
+	*/
 
 ///Check _masks.dm for this one
 /obj/item/clothing/mask/gas/consume_filter(datum/gas_mixture/breath)

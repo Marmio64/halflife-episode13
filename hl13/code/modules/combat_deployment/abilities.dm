@@ -135,7 +135,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 28 SECONDS
+	cooldown_time = 26 SECONDS
 	item_type = /obj/item/ammo_box/magazine/svd
 	requires_hands = TRUE
 	delete_old = FALSE

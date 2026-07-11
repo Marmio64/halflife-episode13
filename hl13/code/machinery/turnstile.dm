@@ -175,7 +175,7 @@
 	if(atom_integrity < max_integrity) //Also fixes it up
 		atom_integrity = max_integrity
 
-	SSsociostability.modifystability(2) //Refunds lost sociostability from the malfunction
+	SSsociostability.modifystability(3) //Refunds lost sociostability from the malfunction
 	to_chat(user, span_notice("Repair reward dispensed."))
 	new /obj/item/stack/spacecash/c1(user.loc, 5)
 	return TRUE
@@ -186,7 +186,7 @@
 	toggle_onoff()
 	if(!malfunctioning)
 		malfunctioning = TRUE
-		SSsociostability.modifystability(-2) //Sociostability damage until fixed.
+		SSsociostability.modifystability(-3) //Sociostability damage until fixed.
 
 	// Dispatch gets alerted about broken fields.
 	var/alertstr = span_userdanger("Network Alert: Malfunctioning access field detected[get_area(src)?" in [get_area_name(src, TRUE)]":". Unable to pinpoint location"].")

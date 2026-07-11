@@ -1425,3 +1425,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// They are a trained chef and can cook proper meals right.
 #define TRAIT_EXPERIENCED_CHEF "experienced_chef"
+
+/// This mask prevents the use of headwear
+#define TRAIT_NOHEADWEAR_MASK "noheadwear_mask"

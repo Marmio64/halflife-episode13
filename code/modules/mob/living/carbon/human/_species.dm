@@ -622,6 +622,9 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		if(ITEM_SLOT_MASK)
 			if(!H.get_bodypart(BODY_ZONE_HEAD))
 				return FALSE
+			if(HAS_TRAIT(I, TRAIT_NOHEADWEAR_MASK) && H.head)
+				to_chat(H, span_warning("Your headwear is in the way of this mask!"))
+				return FALSE
 			return equip_delay_self_check(I, H, bypass_equip_delay_self)
 		if(ITEM_SLOT_NECK)
 			return TRUE
@@ -663,6 +666,9 @@ GLOBAL_LIST_EMPTY(features_by_species)
 			return equip_delay_self_check(I, H, bypass_equip_delay_self)
 		if(ITEM_SLOT_HEAD)
 			if(!H.get_bodypart(BODY_ZONE_HEAD))
+				return FALSE
+			if(HAS_TRAIT(H, TRAIT_NOHEADWEAR_MASK))
+				to_chat(H, span_warning("Your mask can't properly fit this headwear!"))
 				return FALSE
 			return equip_delay_self_check(I, H, bypass_equip_delay_self)
 		if(ITEM_SLOT_EARS)

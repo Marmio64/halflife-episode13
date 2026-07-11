@@ -245,7 +245,7 @@
 	SSwardrobe.provide_type(/obj/item/hl2/deployable_box, src)
 	SSwardrobe.provide_type(/obj/item/grenade/decoy, src)
 	SSwardrobe.provide_type(/obj/item/grenade/decoy, src)
-	SSwardrobe.provide_type(/obj/item/grenade/decoy, src)
+	SSwardrobe.provide_type(/obj/item/grenade/smokebomb, src)
 	update_appearance(UPDATE_ICON)
 
 /obj/item/storage/backpack/halflife/satchel/civilprotection/solid
