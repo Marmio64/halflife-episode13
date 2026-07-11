@@ -149,6 +149,8 @@
 			return
 		rankpoints_recepient.client.prefs.write_preference(GLOB.preference_entries[/datum/preference/numeric/rankpoints], currentrankpoints += points_to_give)
 
+		rankpoints_recepient.client.prefs.save_preferences()
+
 		if(points_to_give > 0)
 			to_chat(rankpoints_recepient, span_nicegreen("You have been awarded [points_to_give] rank points for this character. These points may not show up until next time you spawn in. Modified by Dispatch"))
 			to_chat(usr, span_notice("Rank points given. Their ID and req points will not change unless modified manually."))
