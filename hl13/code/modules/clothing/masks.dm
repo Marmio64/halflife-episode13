@@ -32,6 +32,7 @@
 
 	var/overwatch = FALSE
 	var/fused = FALSE
+	var/no_headwear = TRUE
 
 	repairable_by = /obj/item/stack/kevlar
 
@@ -139,7 +140,8 @@
 	GLOB.cpmasks += src
 	AddComponent(/datum/component/speechmod, replacements = strings("combine_replacement.json", "combine"), slots = ITEM_SLOT_MASK)
 	AddComponent(/datum/component/hat_stabilizer) //for putting cosmetic hats on top
-	ADD_TRAIT(src, TRAIT_NOHEADWEAR_MASK, CLOTHING_TRAIT)
+	if(no_headwear)
+		ADD_TRAIT(src, TRAIT_NOHEADWEAR_MASK, CLOTHING_TRAIT)
 	if(fused)
 		ADD_TRAIT(src, TRAIT_NODROP, CLOTHING_TRAIT)
 	if(mask_color)
@@ -255,6 +257,8 @@
 
 /obj/item/clothing/mask/gas/civilprotection/divisional/sectoral
 	icon_state = "sectoral_mask"
+	clothing_traits = null
+	no_headwear = FALSE
 
 /obj/item/clothing/mask/gas/civilprotection/divisional/elitebeta
 	icon_state = "elitecpo_mask"
