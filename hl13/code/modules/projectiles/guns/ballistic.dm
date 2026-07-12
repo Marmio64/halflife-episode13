@@ -243,7 +243,7 @@
 	eject_empty_sound = "sound/items/weapons/gun/rifle/rifleunload.ogg"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/rpd
 
-	projectile_damage_multiplier = 0.65 //Works out to about 18 damage per bullet. More raw DPS than ak47 but a bit less against armored targets
+	projectile_damage_multiplier = 0.6 //Works out to about 17 damage per bullet. More raw DPS than ak47 but a bit less against armored targets
 
 	force = 12
 	fire_delay = 2
@@ -277,7 +277,7 @@
 
 /obj/item/gun/ballistic/automatic/rpd/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.2 SECONDS, overtime_penalty_cap = 8)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.17 SECONDS, overtime_penalty_cap = 8)
 
 //cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30, and is slightly less accurate.
 //about 1.96 seconds TTK, also has good AP

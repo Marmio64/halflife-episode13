@@ -144,7 +144,7 @@
 	force = 20
 	armour_penetration = 30
 	attack_speed = CLICK_CD_SLOW //Will two shot people if you have the backstabber trait from being a spy/assassin, so this balances it out more
-	var/backstab_bonus = 30
+	var/backstab_bonus = 35
 
 
 /obj/item/knife/combat/backstab/better

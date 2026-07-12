@@ -673,11 +673,6 @@
 
 	glasses = /obj/item/clothing/glasses/night
 
-	back = /obj/item/storage/bag/rebar_quiver
-	backpack_contents = list(
-		/obj/item/ammo_casing/rebar = 10,
-	)
-
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	combat_music = 'hl13/sound/music/combat/darkinterval_combat3.ogg'

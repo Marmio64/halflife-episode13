@@ -125,6 +125,7 @@
 	suit = /obj/item/clothing/suit/armor/riot
 	suit_store = /obj/item/melee/baton/security/heavy/loaded
 	head = /obj/item/clothing/head/helmet/toggleable/riot
+	mask = /obj/item/clothing/mask/gas/civilprotection/helm_allowed
 
 	belt = /obj/item/storage/belt/civilprotection/riotfull
 

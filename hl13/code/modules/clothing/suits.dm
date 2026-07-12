@@ -74,7 +74,7 @@
 	slowdown = -0.35
 
 /obj/item/clothing/suit/armor/civilprotection/speedy/lite
-	slowdown = -0.15
+	slowdown = -0.2
 
 /obj/item/clothing/suit/armor/civilprotection/spy
 	slowdown = -0.25

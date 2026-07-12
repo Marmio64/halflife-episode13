@@ -206,6 +206,8 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 			SSeconomy.track_purchase(paying_for_this, price, spawning_order.pack.name)
 			var/datum/bank_account/department/cargo = SSeconomy.get_dep_account(ACCOUNT_CAR)
 			cargo.adjust_money(price - pack_cost) //Cargo gets the handling fee
+			if(spawning_order.pack.socio_cost) //hl13 edit
+				SSsociostability.modifystability(spawning_order.pack.socio_cost) //hl13 edit
 		value += pack_cost
 
 		if(!spawning_order.pack.goody) //we handle goody crates below

@@ -41,6 +41,8 @@
 	var/goody = FALSE
 	/// Can coupons target this pack? If so, how rarely?
 	var/discountable = SUPPLY_PACK_NOT_DISCOUNTABLE
+	/// Is there a sociostability cost for ordering this item?
+	var/socio_cost = 0
 
 /datum/supply_pack/New()
 	id = type

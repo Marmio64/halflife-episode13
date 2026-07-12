@@ -129,6 +129,10 @@
 
 	var/mask_color = /datum/client_colour/civilprotection
 
+/obj/item/clothing/mask/gas/civilprotection/helm_allowed
+	clothing_traits = null
+	no_headwear = FALSE
+
 /datum/client_colour/civilprotection
 	colour = list(/*R*/ 1,0,0,0, /*G*/ 0,1,0,0, /*B*/ 0,0,1,0, /*A*/ 0,0,0,1, /*C*/-0.01,-0.01,0,0) // veeery slightly blue
 

@@ -1,6 +1,6 @@
 /obj/item/rebel_relay
 	name = "rebel uplink relay"
-	desc = "A clunky and huge signal dish hooked up to a remote teleportation relay that is capable of sending over small items. It seems to have an intake port capable of taking combine datapods and xenian telecrystals."
+	desc = "A clunky and huge signal dish hooked up to a remote teleportation relay that is capable of sending over small items. It seems to have an intake port capable of taking combine datapods and red xenian telecrystals."
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	icon_state = "rebelrelay"
 	w_class = WEIGHT_CLASS_HUGE
@@ -48,7 +48,7 @@
 	name = "Calldown Rebel Relay"
 	desc = "After a short calling period, teleport a rebel uplink relay to your position. \
 		You can only summon a relay once, and moving relays is very difficult and conspicuous, so make sure you have this relay in a good spot. \
-		This relay is a gateway for using Combine Datapods and Xenian Telecrystals to purchase gear that you require. It only comes with a few telecrystals, so you'll need to get more."
+		This relay is a gateway for using Combine Datapods and Red Xenian Telecrystals to purchase gear that you require. It only comes with a few telecrystals, so you'll need to get more."
 	button_icon_state = "callrelay"
 
 	cooldown_time = 1 SECONDS

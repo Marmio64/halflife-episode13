@@ -112,7 +112,7 @@
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	head = /obj/item/clothing/head/helmet/toggleable/riot
 
-	mask = /obj/item/clothing/mask/gas/civilprotection
+	mask = /obj/item/clothing/mask/gas/civilprotection/helm_allowed
 
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/flashlight/seclite

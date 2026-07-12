@@ -280,10 +280,11 @@
 /turf/closed/mineral/random/proc/mineral_chances()
 	return list(
 		/obj/item/stack/ore/gold = 6,
-		/obj/item/stack/ore/iron = 71,
+		/obj/item/stack/ore/iron = 70,
 		/obj/item/stack/ore/copper = 5,
 		/obj/item/stack/ore/silver = 9,
 		/obj/item/stack/ore/diamond = 1,
+		/obj/item/stack/ore/bluespace_crystal = 1,
 	)
 
 /turf/closed/mineral/random/Initialize(mapload)
@@ -330,10 +331,11 @@
 /turf/closed/mineral/random/high_chance/mineral_chances()
 	return list(
 		/obj/item/stack/ore/gold = 12,
-		/obj/item/stack/ore/iron = 64,
+		/obj/item/stack/ore/iron = 62,
 		/obj/item/stack/ore/copper = 10,
 		/obj/item/stack/ore/silver = 9,
 		/obj/item/stack/ore/diamond = 2,
+		/obj/item/stack/ore/bluespace_crystal = 2,
 	)
 
 /turf/closed/mineral/random/high_chance/volcanic

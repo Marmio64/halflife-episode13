@@ -266,7 +266,7 @@
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	glasses = /obj/item/clothing/glasses/hud/security
 
-	mask = /obj/item/clothing/mask/gas/civilprotection
+	mask = /obj/item/clothing/mask/gas/civilprotection/helm_allowed
 	belt = /obj/item/storage/belt/civilprotection/riotfullpistol
 
 	l_pocket = /obj/item/grenade/spawnergrenade/manhacks

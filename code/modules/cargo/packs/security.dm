@@ -15,8 +15,8 @@
 
 /datum/supply_pack/security/militarygear
 	name = "Old Military Gear Crate"
-	desc = "Two sets of kevlar, helmets, camo fatigues, fingerless gloves, ruck sacks, gas masks, and one beret. Most of this gear is no longer in circulation, and now runs a premium."
-	cost = CARGO_CRATE_VALUE * 12
+	desc = "Two sets of kevlar, helmets, camo fatigues, fingerless gloves, ruck sacks, gas masks, and one beret."
+	cost = CARGO_CRATE_VALUE * 10
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/clothing/suit/armor/halflife/kevlar,
 					/obj/item/clothing/suit/armor/halflife/kevlar,
@@ -121,28 +121,31 @@
 					/obj/item/ammo_box/magazine/ar2,
 					/obj/item/ammo_box/magazine/ar2)
 	crate_name = "pulse smg ammo crate"
+	socio_cost = -5
 
 /datum/supply_pack/security/armory/pulsesmg
 	name = "Pulse SMG Crate"
-	desc = "Contains two Pulse SMGs that are ready built and biolocked. Requires Armory access to open."
-	cost = CARGO_CRATE_VALUE * 23
+	desc = "Contains two Pulse SMGs that are ready built and biolocked."
+	cost = CARGO_CRATE_VALUE * 21
 	contains = list(/obj/item/gun/ballistic/automatic/pulsesmg,
 					/obj/item/gun/ballistic/automatic/pulsesmg)
 	crate_name = "pulse smg crate"
+	socio_cost = -20
 
 /datum/supply_pack/security/armory/pulsesmgammo
 	name = "Pulse SMG Ammo Crate"
-	desc = "Contains four pulse SMG magazines. Requires Armory access to open."
+	desc = "Contains four pulse SMG magazines."
 	cost = CARGO_CRATE_VALUE * 11
 	contains = list(/obj/item/ammo_box/magazine/pulsesmg,
 					/obj/item/ammo_box/magazine/pulsesmg,
 					/obj/item/ammo_box/magazine/pulsesmg,
 					/obj/item/ammo_box/magazine/pulsesmg)
 	crate_name = "pulse smg ammo crate"
+	socio_cost = -5
 
 /datum/supply_pack/security/armory/servicerifle
 	name = "Service Rifle Crate"
-	desc = "Contains two service rifle gun frames that must be assembled. Requires Armory access to open."
+	desc = "Contains two service rifle gun frames that must be assembled."
 	cost = CARGO_CRATE_VALUE * 19
 	contains = list(/obj/item/weaponcrafting/frame/service,
 					/obj/item/weaponcrafting/frame/service)
@@ -150,7 +153,7 @@
 
 /datum/supply_pack/security/armory/servicerifleammo
 	name = "Service Rifle Ammo Crate"
-	desc = "Contains four service rifle magazines. Requires Armory access to open."
+	desc = "Contains four service rifle magazines."
 	cost = CARGO_CRATE_VALUE * 11
 	contains = list(/obj/item/ammo_box/magazine/m4a1/service,
 					/obj/item/ammo_box/magazine/m4a1/service,
@@ -160,7 +163,7 @@
 
 /datum/supply_pack/security/armory/mosin //if you spent everything else on pierogis to keep the citizens from butchering you like a fish but still want conscripts
 	name = "Mosin-Nagant Frames"
-	desc = "Contains two severely outdated bolt-action rifle frames that must be assembled. Requires Armory access to open. "
+	desc = "Contains two severely outdated bolt-action rifle frames that must be assembled."
 	cost = CARGO_CRATE_VALUE * 12
 	contains = list(/obj/item/weaponcrafting/frame/mosin,
 					/obj/item/weaponcrafting/frame/mosin)
@@ -168,7 +171,7 @@
 
 /datum/supply_pack/security/armory/mosinammo
 	name = "Mosin-Nagant Ammo Crate"
-	desc = "Contains four Mosin-Nagant clips. Requires Armory access to open."
+	desc = "Contains four Mosin-Nagant clips."
 	cost = CARGO_CRATE_VALUE * 7
 	contains = list(/obj/item/ammo_box/strilka310/a762,
 					/obj/item/ammo_box/strilka310/a762,
@@ -179,7 +182,7 @@
 
 /datum/supply_pack/security/armory/mp7
 	name = "MP7 Frame Crate"
-	desc = "Contains two MP7 submachine gun frames that must be assembled. Requires Armory access to open."
+	desc = "Contains two MP7 submachine gun frames that must be assembled."
 	cost = CARGO_CRATE_VALUE * 11
 	contains = list(/obj/item/weaponcrafting/frame/mp7,
 					/obj/item/weaponcrafting/frame/mp7)
@@ -187,7 +190,7 @@
 
 /datum/supply_pack/security/armory/mp7ammo
 	name = "MP7 Ammo Crate"
-	desc = "Contains four MP7 magazines. Requires Armory access to open."
+	desc = "Contains four MP7 magazines."
 	cost = CARGO_CRATE_VALUE * 10
 	contains = list(/obj/item/ammo_box/magazine/mp7,
 					/obj/item/ammo_box/magazine/mp7,
@@ -197,7 +200,7 @@
 
 /datum/supply_pack/security/armory/spas12
 	name = "SPAS-12 Frame Crate"
-	desc = "Contains two SPAS-12 shotgun frames that must be assembled. Requires Armory access to open."
+	desc = "Contains two SPAS-12 shotgun frames that must be assembled."
 	cost = CARGO_CRATE_VALUE * 11
 	contains = list(/obj/item/weaponcrafting/frame/spas12,
 					/obj/item/weaponcrafting/frame/spas12)
@@ -205,7 +208,7 @@
 
 /datum/supply_pack/security/armory/shotgunammo
 	name = "Shotgun Buckshot Ammo Crate"
-	desc = "Contains four boxes of buckshot. Requires Armory access to open."
+	desc = "Contains four boxes of buckshot."
 	cost = CARGO_CRATE_VALUE * 10
 	contains = list(/obj/item/storage/box/lethalshot/halflife,
 					/obj/item/storage/box/lethalshot/halflife,
@@ -215,7 +218,7 @@
 
 /datum/supply_pack/security/armory/coltpython
 	name = "Colt Python Frame Crate"
-	desc = "Contains two Colt Python revolver frames that must be assembled. Requires Armory access to open."
+	desc = "Contains two Colt Python revolver frames that must be assembled."
 	cost = CARGO_CRATE_VALUE * 12
 	contains = list(/obj/item/weaponcrafting/frame/coltpython,
 					/obj/item/weaponcrafting/frame/coltpython)
@@ -223,7 +226,7 @@
 
 /datum/supply_pack/security/armory/revolverammo
 	name = "Colt Python Ammo Crate"
-	desc = "Contains four Colt Python speed loaders. Requires Armory access to open."
+	desc = "Contains four Colt Python speed loaders."
 	cost = CARGO_CRATE_VALUE * 11
 	contains = list(/obj/item/ammo_box/colta357,
 					/obj/item/ammo_box/colta357,
@@ -233,7 +236,7 @@
 
 /datum/supply_pack/security/armory/usp
 	name = "USP Match Crate"
-	desc = "Contains two USP Match pistol frames that must be assembled. Requires Armory access to open."
+	desc = "Contains two USP Match pistol frames that must be assembled."
 	cost = CARGO_CRATE_VALUE * 7
 	contains = list(/obj/item/weaponcrafting/frame/usp,
 					/obj/item/weaponcrafting/frame/usp)
@@ -241,7 +244,7 @@
 
 /datum/supply_pack/security/armory/uspammo
 	name = "USP Match Ammo Crate"
-	desc = "Contains four lethal USP Match magazines. Requires Armory access to open."
+	desc = "Contains four lethal USP Match magazines."
 	cost = CARGO_CRATE_VALUE * 6
 	contains = list(/obj/item/ammo_box/magazine/usp9mm,
 					/obj/item/ammo_box/magazine/usp9mm,
@@ -251,7 +254,7 @@
 
 /datum/supply_pack/security/armory/uspammorubber
 	name = "USP Match Rubber Ammo Crate"
-	desc = "Contains four USP Match rubber bullet magazines. These are less-lethal alternatives to standard rounds. Requires Armory access to open."
+	desc = "Contains four USP Match rubber bullet magazines. These are less-lethal alternatives to standard rounds."
 	cost = CARGO_CRATE_VALUE * 5
 	contains = list(/obj/item/ammo_box/magazine/usp9mm/rubber,
 					/obj/item/ammo_box/magazine/usp9mm/rubber,
@@ -261,7 +264,7 @@
 
 /datum/supply_pack/security/armory/snub38special
 	name = "38 Special Ammo Crate"
-	desc = "Contains four .38 special revolver speedloaders, used for the snubnosed revolvers high ranking combine officials take a liking to. Due to being associated with high ranking officials, this is classified as a luxury good and priced as such. Requires Armory access to open."
+	desc = "Contains four .38 special revolver speedloaders, used for the snubnosed revolvers high ranking combine officials take a liking to. Due to being associated with high ranking officials, this is classified as a luxury good and priced as such."
 	cost = CARGO_CRATE_VALUE * 12
 	contains = list(/obj/item/ammo_box/c38,
 					/obj/item/ammo_box/c38,
@@ -271,7 +274,7 @@
 
 /datum/supply_pack/security/armory/manhacks
 	name = "Viscerator Crate"
-	desc = "Contains three activatable viscerators. Requires Armory access to open."
+	desc = "Contains three activatable viscerators."
 	cost = CARGO_CRATE_VALUE * 5.5
 	contains = list(/obj/item/grenade/spawnergrenade/manhacks,
 					/obj/item/grenade/spawnergrenade/manhacks,
@@ -280,7 +283,7 @@
 
 /datum/supply_pack/security/armory/receivers
 	name = "Modular Receiver Crate"
-	desc = "Contains three modular firearm receivers, necessary for putting firearms together. Requires Armory access to open."
+	desc = "Contains three modular firearm receivers, necessary for putting firearms together."
 	cost = CARGO_CRATE_VALUE * 4
 	contains = list(/obj/item/weaponcrafting/receiver,
 					/obj/item/weaponcrafting/receiver,
@@ -306,7 +309,7 @@
 
 /datum/supply_pack/security/armory/mk3a2
 	name = "MK3A2 Grenade Crate"
-	desc = "Contains three standard combine extractor grenades. Requires Armory access to open."
+	desc = "Contains three standard combine extractor grenades."
 	cost = CARGO_CRATE_VALUE * 8
 	contains = list(/obj/item/grenade/syndieminibomb/bouncer,
 					/obj/item/grenade/syndieminibomb/bouncer,
@@ -315,7 +318,7 @@
 
 /datum/supply_pack/security/armory/grunt
 	name = "Grunt Armor Crate"
-	desc = "Contains one set of overwatch grunt equipment. Perfect for creating your own proto-transhuman force, conscripted arm, or xen fighting team. Requires Armory access to open."
+	desc = "Contains one set of overwatch grunt equipment. Perfect for creating your own proto-transhuman force, conscripted arm, or xen fighting team."
 	cost = CARGO_CRATE_VALUE * 8
 	contains = list(/obj/item/clothing/mask/gas/civilprotection/overwatch/grunt,
 					/obj/item/clothing/shoes/jackboots/civilprotection,
@@ -336,7 +339,7 @@
 
 /datum/supply_pack/security/armory/gun_selection
 	name = "Prebuilt Firearms Crate"
-	desc = "Did something extremely bad happen? Do you somehow still have a lot of money to spare? No worries then, this is a prebuilt firearm crate containing one MP7, SPAS-12, and a Colt Python, alongside a spare magazine for each. Costs extra for the convenience of assembly. Requires Armory access to open."
+	desc = "Did something extremely bad happen? Do you somehow still have a lot of money to spare? No worries then, this is a prebuilt firearm crate containing one MP7, SPAS-12, and a Colt Python, alongside a spare magazine for each. Costs extra for the convenience of assembly."
 	cost = CARGO_CRATE_VALUE * 36
 	contains = list(/obj/item/gun/ballistic/automatic/mp7, //5.5 crate value when unbuilt
 					/obj/item/ammo_box/magazine/mp7, //2.5 crate value

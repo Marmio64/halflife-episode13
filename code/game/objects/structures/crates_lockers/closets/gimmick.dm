@@ -142,6 +142,9 @@
 
 /obj/structure/closet/mini_fridge/grimy/PopulateContents()
 	. = ..()
+	if(prob(50))
+		new /obj/item/reagent_containers/cup/glass/bottle/beer/light(src)
+
 	if(prob(40))
 		if(prob(50))
 			new /obj/item/food/pizzaslice/moldy/bacteria(src)
@@ -149,6 +152,6 @@
 			new /obj/item/food/breadslice/moldy/bacteria(src)
 	else if(prob(40))
 		if(prob(50))
-			new /obj/item/food/syndicake(src)
+			new /obj/item/food/canned/halflife/seafood(src)
 		else
-			new /mob/living/basic/cockroach(src)
+			new /obj/item/food/canned/halflife/seafood/expired(src)

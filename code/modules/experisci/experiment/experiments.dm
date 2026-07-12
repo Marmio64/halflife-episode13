@@ -441,7 +441,7 @@
 /// Scan an android
 /datum/experiment/scanning/people/android
 	name = "Human Field Research: Full Augmentation"
-	description = "Perform a full cybernetic augmentation on a crewmate then scan them to test their newfound capabilities and new sensory and cognitive functions."
+	description = "Perform a full cybernetic augmentation on a human then scan them to test their newfound capabilities and new sensory and cognitive functions."
 	performance_hint = "Achieve full augmentation by performing a set of surgery operations."
 	required_traits_desc = "fully augmented android"
 	required_count = 1
@@ -488,19 +488,21 @@
 	min_purity = 0.98
 
 /datum/experiment/scanning/points/bluespace_crystal
-	name = "Bluespace Crystal Sampling"
-	description = "Investigate the properties of bluespace crystals by scanning either an artificial or naturally occurring variant. This will help us deepen our understanding of bluespace phenomena."
+	name = "Xen Crystal Sampling"
+	description = "Investigate the properties of xen crystals by scanning either an artificial or naturally occurring variant. This will help us deepen our understanding of xen phenomena."
 	required_points = 1
 	required_atoms = list(
 		/obj/item/stack/ore/bluespace_crystal = 1,
 		/obj/item/stack/sheet/bluespace_crystal = 1
 	)
 
+/*
 /datum/experiment/scanning/points/anomalies
 	name = "Neutralized Anomaly Analysis"
 	description = "We have the power to deal with the anomalies now. Neutralize them with an anomaly neutralizer or refine the raw cores in the refinery and scan the results."
 	required_points = 4
 	required_atoms = list(/obj/item/assembly/signaler/anomaly = 1)
+*/
 
 /datum/experiment/scanning/points/machinery_tiered_scan/tier2_any
 	name = "Upgraded Stock Parts Benchmark"

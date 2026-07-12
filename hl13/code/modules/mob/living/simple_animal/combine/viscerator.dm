@@ -13,6 +13,7 @@
 	rapid_melee = 2
 	melee_damage_lower = 14
 	melee_damage_upper = 18
+	harm_intent_damage = 5
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	wound_bonus = -10
 	bare_wound_bonus = 10
@@ -111,6 +112,7 @@
 	low_power_melee_damage_upper = 5
 	melee_damage_lower = 15
 	melee_damage_upper = 18
+	harm_intent_damage = 8 //5 hits
 	operating_power = 8 //16 seconds till low power
 	loot = list()
 	var/shield_hits = 2

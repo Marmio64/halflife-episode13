@@ -21,8 +21,8 @@
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/curator/treasure_hunter
-	name = "treasure hunter uniform"
-	desc = "A rugged uniform suitable for treasure hunting."
+	name = "archaeologist uniform"
+	desc = "An old world archaeologists uniform in surprisngly good condition."
 	icon = 'icons/obj/clothing/under/civilian.dmi'
 	icon_state = "curator"
 	inhand_icon_state = null

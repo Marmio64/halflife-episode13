@@ -59,7 +59,7 @@
 		KIT_SNIPER = 1,
 		KIT_MEDIC = 1,
 		)))
-		if(KIT_ASSAULT) //50 tc
+		if(KIT_ASSAULT) //51 tc
 			new /obj/item/gun/ballistic/automatic/m4a1(src) // 15 tc
 			new /obj/item/ammo_box/magazine/m4a1(src) // ~5 tc
 			new /obj/item/ammo_box/magazine/m4a1(src) // ~5 tc
@@ -69,8 +69,9 @@
 			new /obj/item/grenade/syndieminibomb/bouncer(src) // 5 tc
 			new /obj/item/grenade/syndieminibomb/bouncer(src) // 5 tc
 			new /obj/item/reagent_containers/hypospray/medipen/healthpen(src) //like 1 TC
+			new /obj/item/reagent_containers/hypospray/medipen/healthpen(src) //like 1 TC
 
-		if(KIT_SNIPER) //45 tc
+		if(KIT_SNIPER) //46 tc
 			new /obj/item/gun/ballistic/rifle/rebarxbow(src) // like 8 TC probably
 			new /obj/item/storage/bag/rebar_quiver/syndicate(src) // like 5 TC cause its a lot of rebar and good storage for it
 			new /obj/item/clothing/glasses/night(src) // probably like 4 tc
@@ -82,13 +83,15 @@
 			new /obj/item/grenade/smokebomb(src) //like 1 TC
 			new /obj/item/grenade/smokebomb(src) //like 1 TC
 			new /obj/item/reagent_containers/hypospray/medipen/healthpen(src) //like 1 TC
+			new /obj/item/reagent_containers/hypospray/medipen/healthpen(src) //like 1 TC
 
-		if(KIT_MEDIC) //45 TC
+		if(KIT_MEDIC) //46 TC
 			new /obj/item/clothing/suit/armor/civilprotection/medical(src) // 3 tc. Even if you already start with a vest most likely, we'll count it
 			new /obj/item/clothing/head/helmet/halflife/military/weak/crafted(src) //like 1 TC
 			new /obj/item/storage/medkit/halflife(src) // 4 tc
 			new /obj/item/reagent_containers/pill/patch/medkit(src) // 1 tc
 			new /obj/item/reagent_containers/pill/patch/medkit(src) // 1 tc
+			new /obj/item/reagent_containers/hypospray/medipen/healthpen(src) //like 1 TC
 			new /obj/item/reagent_containers/hypospray/medipen/healthpen(src) //like 1 TC
 			new /obj/item/gun/ballistic/automatic/mp7(src) //10 tc
 			new /obj/item/ammo_box/magazine/mp7(src) // 4 tc
@@ -98,6 +101,36 @@
 			new /obj/item/healthanalyzer/no_req(src) // like 2 TC
 			new /obj/item/clothing/glasses/hud/health(src) // like 1 TC
 			new /obj/item/grenade/syndieminibomb/bouncer(src) // 5 tc
+
+//pretty shitty gear for about 4 people
+/obj/item/storage/box/syndicate/bundle_uprising/PopulateContents() //~40 TC value total
+	new /obj/item/gun/ballistic/automatic/pistol/makeshift(src) // 3 tc
+	new /obj/item/gun/ballistic/automatic/pistol/makeshift(src) // 3 tc
+	new /obj/item/gun/ballistic/automatic/pistol/makeshift(src) // 3 tc
+	new /obj/item/ammo_box/magazine/makeshift9mm(src) // ~1 tc
+	new /obj/item/ammo_box/magazine/makeshift9mm(src) // ~1 tc
+	new /obj/item/ammo_box/magazine/makeshift9mm(src) // ~1 tc
+	new /obj/item/grenade/halflife/tinbomb(src) // ~1 tc
+	new /obj/item/grenade/halflife/molotov(src) // ~1 tc
+	new /obj/item/grenade/halflife/molotov(src) // ~1 tc
+	new /obj/item/lighter/greyscale(src) // ~1 tc
+	new /obj/item/crowbar/large(src) // ~4 tc
+	new /obj/item/clothing/suit/armor/halflife/kevlar(src) // ~2 tc
+	new /obj/item/clothing/suit/armor/halflife/kevlar(src) // ~2 tc
+	new /obj/item/clothing/suit/armor/halflife/kevlar(src) // ~2 tc
+	new /obj/item/clothing/suit/armor/halflife/kevlar(src) // ~2 tc
+	new /obj/item/clothing/head/helmet/halflife/military/weak/crafted(src) // ~1 tc
+	new /obj/item/clothing/head/helmet/halflife/military/weak/crafted(src) // ~1 tc
+	new /obj/item/clothing/head/helmet/halflife/military/weak/crafted(src) // ~1 tc
+	new /obj/item/clothing/head/helmet/halflife/military/weak/crafted(src) // ~1 tc
+	new /obj/item/clothing/under/citizen/refugee(src) // 1 tc
+	new /obj/item/clothing/under/citizen/refugee(src) // 1 tc
+	new /obj/item/clothing/under/citizen/refugee(src) // 1 tc
+	new /obj/item/clothing/under/citizen/refugee(src) // 1 tc
+	new /obj/item/reagent_containers/pill/patch/medkit/vial(src) // 1 tc
+	new /obj/item/reagent_containers/pill/patch/medkit/vial(src) // 1 tc
+	new /obj/item/reagent_containers/pill/patch/medkit/vial(src) // 1 tc
+	new /obj/item/reagent_containers/pill/patch/medkit/vial(src) // 1 tc
 
 /obj/item/storage/box/syndie_kit
 	name = "box"

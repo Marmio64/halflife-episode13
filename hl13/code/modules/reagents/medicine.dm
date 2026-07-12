@@ -91,6 +91,10 @@
 	metabolization_rate = 2 * REAGENTS_METABOLISM
 	healing = 1.6
 
+/datum/reagent/medicine/concentrated_biogel/slurry/suit_slurry //made to be equal to omnizine
+	metabolization_rate = 0.25 * REAGENTS_METABOLISM
+	healing = 0.5
+
 /datum/reagent/medicine/paracetamol
 	name = "Paracetamol"
 	description = "A light painkiller that can help with mild pains and fevers."

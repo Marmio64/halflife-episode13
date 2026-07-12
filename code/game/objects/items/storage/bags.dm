@@ -614,12 +614,12 @@
 
 /obj/item/storage/bag/rebar_quiver/syndicate/Initialize(mapload)
 	. = ..()
-	atom_storage.max_slots = 20
-	atom_storage.max_total_storage = 20
+	atom_storage.max_slots = 25
+	atom_storage.max_total_storage = 25
 	update_appearance(UPDATE_OVERLAYS)
 
 /obj/item/storage/bag/rebar_quiver/syndicate/PopulateContents()
-	for(var/to_fill in 1 to 20)
+	for(var/to_fill in 1 to 25)
 		new /obj/item/ammo_casing/rebar(src)
 
 /obj/item/storage/bag/rebar_quiver/syndicate/update_icon_state()
@@ -631,7 +631,7 @@
 			icon_state = "syndie_quiver_1"
 		if(8 to 13)
 			icon_state = "syndie_quiver_2"
-		if(14 to 20)
+		if(14 to 25)
 			icon_state = "syndie_quiver_3"
 
 /obj/item/storage/bag/rebar_quiver/syndicate/ui_action_click(mob/user, actiontype)
@@ -650,7 +650,7 @@
 	if(held_crossbow.magazine.contents.len >= held_crossbow.magazine.max_ammo)
 		user.balloon_alert(user, "no more room!")
 		return
-	if(!do_after(user, 1.35 SECONDS, user))
+	if(!do_after(user, 1.15 SECONDS, user))
 		return
 
 	var/obj/item/ammo_casing/rebar/ammo_to_load = contents[1]

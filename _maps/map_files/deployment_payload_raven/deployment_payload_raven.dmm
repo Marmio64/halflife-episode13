@@ -138,6 +138,14 @@
 "cv" = (
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city)
+"cw" = (
+/obj/structure/halflife/rails{
+	dir = 1
+	},
+/obj/effect/payload_path,
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city)
 "cy" = (
 /obj/effect/spawner/random/halflife/plant_spawner,
 /obj/structure/halflife/leaves,
@@ -156,6 +164,14 @@
 "cK" = (
 /obj/machinery/power/halflife/streetlamphalt,
 /turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city)
+"cS" = (
+/obj/structure/halflife/rails{
+	dir = 1
+	},
+/obj/effect/payload_path,
+/obj/structure/barricade/sandbags,
+/turf/open/floor/plating/ground/sidewalk/cobblestone,
 /area/halflife/outdoors/deployment_city)
 "dd" = (
 /obj/machinery/light/small/directional/south,
@@ -359,6 +375,10 @@
 	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city)
+"ha" = (
+/mob/living/basic/halflife/headcrab/deployment,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city)
 "hb" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
 	dir = 8
@@ -433,6 +453,10 @@
 "ix" = (
 /obj/structure/halflife/road_barrier,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
+"iz" = (
+/mob/living/basic/halflife/headcrab/poison,
+/turf/open/floor/plating/ground/sidewalk/cobblestone,
 /area/halflife/outdoors/deployment_city)
 "iO" = (
 /obj/structure/halflife/trash/garbage/dumpster/crate,
@@ -573,7 +597,7 @@
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "mk" = (
-/mob/living/basic/halflife/headcrab,
+/mob/living/basic/halflife/headcrab/deployment,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
 "ml" = (
@@ -602,7 +626,7 @@
 	},
 /area/halflife/outdoors/deployment_city)
 "mW" = (
-/mob/living/basic/halflife/headcrab/fast,
+/mob/living/basic/halflife/headcrab/fast/upgraded,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
 "mY" = (
@@ -654,6 +678,10 @@
 	dir = 8
 	},
 /turf/open/floor/plating/ground/sidewalk,
+/area/halflife/outdoors/deployment_city)
+"nD" = (
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city)
 "nH" = (
 /turf/closed/wall/halflife/wood,
@@ -938,6 +966,14 @@
 /obj/structure/halflife/headcrab_cannister,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors/deployment_city)
+"vg" = (
+/obj/structure/halflife/rails{
+	dir = 1
+	},
+/obj/effect/payload_path,
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/sidewalk/cobblestone,
+/area/halflife/outdoors/deployment_city)
 "vi" = (
 /obj/machinery/combine_recharger/round_start{
 	pixel_y = 30
@@ -988,6 +1024,10 @@
 	pixel_y = 30
 	},
 /turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/deployment_city)
+"wz" = (
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
 "wC" = (
 /obj/machinery/ammo_crate/heavy{
@@ -1056,7 +1096,7 @@
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "yR" = (
-/mob/living/basic/halflife/headcrab,
+/mob/living/basic/halflife/headcrab/deployment,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
 "za" = (
@@ -1293,6 +1333,12 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/outdoors/deployment_city)
+"Fx" = (
+/obj/machinery/porta_turret/combine/rebel{
+	anchored = 1
+	},
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/deployment_city)
 "Fy" = (
 /obj/structure/halflife/trash/bricks{
 	dir = 1
@@ -1342,7 +1388,7 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/outdoors/deployment_city)
 "Gs" = (
-/mob/living/basic/halflife/zombie,
+/mob/living/basic/halflife/zombie/deployment,
 /turf/open/floor/plating/ground/sidewalk/cobblestone,
 /area/halflife/outdoors/deployment_city)
 "GA" = (
@@ -1581,6 +1627,10 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city)
+"Ms" = (
+/mob/living/basic/halflife/zombie/deployment,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/deployment_city)
 "Mw" = (
 /obj/machinery/telecomms/broadcaster/preset_left/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
@@ -1633,6 +1683,14 @@
 "Nz" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/outdoors/deployment_city)
+"NJ" = (
+/obj/structure/halflife/rails{
+	dir = 1
+	},
+/obj/effect/payload_path,
+/obj/machinery/porta_turret/combine/rebel,
+/turf/open/floor/plating/ground/sidewalk/cobblestone,
 /area/halflife/outdoors/deployment_city)
 "NV" = (
 /obj/machinery/power/halflife/streetlamphalt,
@@ -1738,6 +1796,15 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/outdoors/deployment_city)
+"Qp" = (
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/deployment_city)
+"Qq" = (
+/obj/effect/spawner/random/halflife/plant_spawner,
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/deployment_city)
 "Qw" = (
 /turf/open/floor/plating/indoor/concrete/stairs{
 	dir = 6
@@ -1754,6 +1821,10 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"RC" = (
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/deployment_city)
 "RN" = (
 /obj/structure/chair/office/halflife/green{
 	dir = 8
@@ -1782,7 +1853,7 @@
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Sv" = (
-/mob/living/basic/halflife/zombie/fast,
+/mob/living/basic/halflife/zombie/fast/deployment,
 /turf/open/floor/plating/ground/sidewalk/cobblestone,
 /area/halflife/outdoors/deployment_city)
 "Sy" = (
@@ -1911,6 +1982,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
+"VU" = (
+/obj/structure/razorwire,
+/turf/open/floor/plating/ground/sidewalk/cobblestone,
+/area/halflife/outdoors/deployment_city)
 "Wb" = (
 /obj/machinery/repairpod,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -2038,12 +2113,6 @@
 "Zv" = (
 /obj/structure/halflife/road_barrier/concrete,
 /turf/open/floor/plating/ground/sidewalk/cobblestone,
-/area/halflife/outdoors/deployment_city)
-"ZI" = (
-/obj/machinery/porta_turret/combine/rebel{
-	anchored = 1
-	},
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
 "ZJ" = (
 /obj/structure/halflife/pot/plant,
@@ -5971,7 +6040,7 @@ Qy
 Qy
 Qy
 Qy
-Qy
+iz
 Qy
 Qy
 Qy
@@ -6576,13 +6645,13 @@ cK
 rd
 vb
 rd
-Az
+ha
 rd
 rd
 pT
 ei
 rd
-fx
+Ms
 rd
 rd
 rd
@@ -8643,7 +8712,7 @@ PV
 PV
 du
 PV
-PV
+wz
 PV
 PV
 PV
@@ -8793,9 +8862,9 @@ PV
 Qy
 Qy
 Qy
+lu
 Qy
-Qy
-Qy
+VU
 Qy
 Qy
 Qy
@@ -8944,10 +9013,10 @@ Ow
 Ow
 cE
 cE
+NJ
+cS
 cE
-cE
-cE
-cE
+vg
 cE
 cE
 cE
@@ -9097,9 +9166,9 @@ PV
 Qy
 Qy
 Qy
+lu
 Qy
-Qy
-Qy
+VU
 Qy
 Qy
 Qy
@@ -9251,7 +9320,7 @@ PV
 PV
 du
 PV
-PV
+wz
 PV
 PV
 PV
@@ -9290,7 +9359,7 @@ PV
 PV
 PV
 PV
-PV
+fH
 PV
 PV
 PV
@@ -9439,8 +9508,8 @@ rd
 rd
 rd
 cK
-rd
-vb
+eC
+nD
 rd
 rd
 rd
@@ -9565,7 +9634,7 @@ od
 ez
 ez
 ez
-ZI
+Fx
 Yj
 PV
 Qy
@@ -9592,7 +9661,7 @@ pD
 pD
 IW
 IW
-pD
+Qp
 pD
 pD
 pD
@@ -9744,7 +9813,7 @@ eI
 eI
 pD
 pD
-IW
+RC
 IW
 pD
 IW
@@ -9896,7 +9965,7 @@ mv
 YR
 pD
 IW
-xs
+Qq
 IW
 IW
 pD
@@ -10048,7 +10117,7 @@ eI
 YR
 IW
 IW
-IW
+RC
 IW
 IW
 IW
@@ -10200,7 +10269,7 @@ jm
 IW
 IW
 IW
-pD
+Qp
 pD
 IW
 IW
@@ -10352,7 +10421,7 @@ Yy
 IW
 pD
 pD
-pD
+Qp
 pD
 pD
 pD
@@ -10504,7 +10573,7 @@ Yy
 pD
 ye
 IW
-pD
+Qp
 IW
 IW
 IW
@@ -10656,7 +10725,7 @@ IW
 IW
 IW
 IW
-IW
+RC
 IW
 pD
 IW
@@ -10808,7 +10877,7 @@ pr
 pr
 pr
 pr
-Ta
+cw
 Ta
 Ta
 pr
@@ -10960,7 +11029,7 @@ IW
 IW
 IW
 pD
-pD
+Qp
 pD
 pD
 IW
@@ -11112,7 +11181,7 @@ Yy
 IW
 pD
 IW
-IW
+RC
 pD
 pD
 pD
@@ -11264,7 +11333,7 @@ Yy
 IW
 pD
 pD
-pD
+Qp
 IW
 xs
 xs
@@ -11416,7 +11485,7 @@ eI
 IW
 IW
 IW
-IW
+RC
 IW
 IW
 pD
@@ -11568,7 +11637,7 @@ eI
 eI
 pD
 IW
-IW
+RC
 IW
 IW
 pD
@@ -11720,7 +11789,7 @@ pK
 eI
 pD
 IW
-xs
+Qq
 IW
 IW
 IW
@@ -11872,7 +11941,7 @@ eI
 YR
 pD
 IW
-pD
+Qp
 pD
 pD
 IW
@@ -12024,7 +12093,7 @@ IW
 IW
 IW
 pD
-pD
+Qp
 pD
 pD
 IW
@@ -12175,8 +12244,8 @@ rd
 rd
 rd
 cK
-rd
-rd
+eC
+nD
 rd
 rd
 rd

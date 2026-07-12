@@ -57,6 +57,12 @@
 	///Possible timers that can be assigned for detonation. Values are strings in SECONDS
 	var/list/possible_fuse_time = list("Instant", "3", "4", "5")
 
+	///How likely the grenade is to be shot and blown up. By default, it can't, but after a bit it can be.
+	var/shotchance = 0
+
+	///How likely the grenade is to be shot and blownup after a short while when its armed
+	var/bonus_shotchance = 8
+
 /obj/item/grenade/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_ODD_CUSTOMIZABLE_FOOD_INGREDIENT, type)
@@ -167,7 +173,12 @@
 	active = TRUE
 	icon_state = initial(icon_state) + "_active"
 	SEND_SIGNAL(src, COMSIG_GRENADE_ARMED, det_time, delayoverride)
+	addtimer(CALLBACK(src, PROC_REF(increase_shotchance)), isnull(delayoverride)? det_time/3 : delayoverride/3)
 	addtimer(CALLBACK(src, PROC_REF(detonate)), isnull(delayoverride)? det_time : delayoverride)
+
+
+/obj/item/grenade/proc/increase_shotchance() //this increases the chance of a bullet striking the grenade and prematurely blowing it up after a short while
+	shotchance += bonus_shotchance
 
 /**
  * detonate (formerly prime) refers to when the grenade actually delivers its payload (whether or not a boom/bang/detonation is involved)
@@ -278,7 +289,7 @@
 	return attack_hand(user, modifiers)
 
 /obj/item/grenade/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK, damage_type = BRUTE)
-	if(damage && attack_type == PROJECTILE_ATTACK && damage_type != STAMINA && prob(2)) //hl13 edit, lower chance of blowing up
+	if(damage && attack_type == PROJECTILE_ATTACK && damage_type != STAMINA && prob(shotchance)) //hl13 edit, unique shotchance stuff
 		if(istype(hitby, /obj/projectile))
 			var/obj/projectile/proj = hitby
 			if(proj.hits_grenades == FALSE)

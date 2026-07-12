@@ -64,6 +64,16 @@
 	stock_key = UPLINK_SHARED_STOCK_KITS
 	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
 
+/datum/uplink_item/bundles_tc/bundle_uprising
+	name = "Rebel Uprising Supply Bundle"
+	desc = "This supply bundle is custom tailored for quantity over quality. \
+			You will receive a large amount of cheap equipment for arming approximately 4 people with low level gear. \
+			The overall value will be over 20 TC."
+	item = /obj/item/storage/box/syndicate/bundle_uprising
+	cost = 20
+	stock_key = UPLINK_SHARED_STOCK_KITS
+	purchasable_from = ~(UPLINK_ALL_SYNDIE_OPS | UPLINK_SPY)
+
 /*
 /datum/uplink_item/bundles_tc/surplus
 	name = "Lambda Surplus Crate"
