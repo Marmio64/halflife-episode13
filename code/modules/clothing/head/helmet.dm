@@ -227,7 +227,7 @@
 
 /obj/item/clothing/head/helmet/toggleable/riot
 	name = "riot helmet"
-	desc = "It's a helmet specifically designed to protect against close range attacks."
+	desc = "It's a helmet specifically designed to protect against close range attacks. It seems to be built to be able to accomodate bulky masks underneath, such as civil protection masks."
 	icon_state = "riot"
 	inhand_icon_state = "riot_helmet"
 	toggle_message = "You pull the visor down on"
@@ -251,6 +251,7 @@
 	. = ..()
 	AddComponent(/datum/component/adjust_fishing_difficulty, 2)
 	AddComponent(/datum/component/clothing_fov_visor, FOV_180_DEGREES) //hl13 edit
+	ADD_TRAIT(src, TRAIT_NOHEADWEAR_MASK_EXEMPT, CLOTHING_TRAIT)
 
 /datum/armor/toggleable_riot
 	melee = 35

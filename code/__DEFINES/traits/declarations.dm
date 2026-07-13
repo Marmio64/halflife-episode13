@@ -1428,3 +1428,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 
 /// This mask prevents the use of headwear
 #define TRAIT_NOHEADWEAR_MASK "noheadwear_mask"
+
+/// This helmet is exempt from being blocked by the above trait
+#define TRAIT_NOHEADWEAR_MASK_EXEMPT "noheadwear_mask_EXEMPT"
