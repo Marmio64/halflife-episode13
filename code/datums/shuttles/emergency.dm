@@ -110,4 +110,12 @@
 	emag_only = TRUE
 	occupancy_limit = "25"
 
+/datum/map_template/shuttle/emergency/lambda
+	suffix = "lambda"
+	name = "Lambda Resistance Research Train"
+	credit_cost = CARGO_CRATE_VALUE * 30
+	description = "Hearing of the PLF's offer, we at Lambda would like to show one of our own vessels as an option instead. What you lose in loud value and armaments you gain back in the comfort and utility of our research vessel, complete with a single repaired HEV suit for your using pleasure. This train made an easy arrival with our experiments into Xen Crystals, but it is still a one-way trip; be prepared, as this train will come back without you."
+	emag_only = TRUE
+	occupancy_limit = "15"
+
 #undef EMAG_LOCKED_SHUTTLE_COST
