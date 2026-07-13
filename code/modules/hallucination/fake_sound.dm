@@ -34,7 +34,7 @@
 
 /datum/hallucination/fake_sound/normal/airlock
 	volume = 30
-	sound_type = 'sound/machines/airlock/airlock.ogg'
+	sound_type = 'hl13/sound/machines/combinedoor_open.ogg'
 
 /datum/hallucination/fake_sound/normal/airlock_pry
 	volume = 100
@@ -60,50 +60,6 @@
 /datum/hallucination/fake_sound/normal/alarm
 	volume = 70
 	sound_type = 'sound/announcer/alarm/nuke_alarm.ogg'
-
-/datum/hallucination/fake_sound/normal/beepsky
-	volume = 35
-	sound_type = 'sound/mobs/non-humanoids/beepsky/freeze.ogg'
-
-/datum/hallucination/fake_sound/normal/mech
-	volume = 40
-	sound_type = 'sound/vehicles/mecha/mechstep.ogg'
-	/// The turf the mech started walking from.
-	var/turf/mech_source
-	/// What dir is the mech walking?
-	var/mech_dir = NORTH
-	/// How many steps are left in the walk?
-	var/steps_left = 0
-
-/datum/hallucination/fake_sound/normal/mech/Destroy()
-	mech_source = null
-	return ..()
-
-/datum/hallucination/fake_sound/normal/mech/start()
-	mech_dir = pick(GLOB.cardinals)
-	steps_left = rand(4, 9)
-	mech_source = random_far_turf()
-
-	mech_walk()
-	return TRUE
-
-/datum/hallucination/fake_sound/normal/mech/proc/mech_walk()
-	if(QDELETED(src))
-		return
-
-	if(prob(75))
-		play_fake_sound(mech_source)
-		mech_source = get_step(mech_source, mech_dir)
-	else
-		play_fake_sound(mech_source)
-		mech_dir = pick(GLOB.cardinals)
-
-	steps_left--
-	if(steps_left <= 0)
-		qdel(src)
-
-	else
-		addtimer(CALLBACK(src, PROC_REF(mech_walk)), 1 SECONDS)
 
 /datum/hallucination/fake_sound/normal/wall_deconstruction
 	sound_type = 'sound/items/tools/welder.ogg'
@@ -150,7 +106,7 @@
 
 /datum/hallucination/fake_sound/weird
 	abstract_hallucination_parent = /datum/hallucination/fake_sound/weird
-	random_hallucination_weight = 1
+	random_hallucination_weight = 0
 
 	/// if FALSE, we will pass "null" in as the turf source, meaning the sound will just play without direction / etc.
 	var/no_source = FALSE

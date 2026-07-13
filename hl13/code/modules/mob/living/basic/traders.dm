@@ -3,6 +3,9 @@
 		to_chat(user, span_warning("The [src] resists your grab!"))
 		return FALSE
 
+///any extra special stuff to happen after a succesful trade, whether buy or sell
+/mob/living/basic/trader/proc/after_trade_effect(mob/customer)
+	return
 
 /mob/living/basic/trader/halflife/refugee
 	name = "Refugee Smuggler"
@@ -66,6 +69,11 @@
 	ai_controller = /datum/ai_controller/basic_controller/trader/halflife
 
 	faction = list(FACTION_REFUGEE, FACTION_HEADCRAB)
+
+/mob/living/basic/trader/halflife/crabwalker/after_trade_effect(mob/customer)
+	if(ishuman(customer) && !HAS_TRAIT(customer, TRAIT_CANNIBAL) && !HAS_TRAIT(customer, TRAIT_MORBID))
+		var/mob/living/living_customer = customer
+		living_customer.add_mood_event("crabwalk_trade", /datum/mood_event/crabwalker_badtrade)
 
 /obj/effect/mob_spawn/corpse/human/crabwalker
 	name = "Crabwalker"

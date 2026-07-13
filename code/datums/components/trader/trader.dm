@@ -226,6 +226,9 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 	product_info[TRADER_PRODUCT_INFO_QUANTITY] -= 1
 	trader.say(trader_data.return_trader_phrase(BUY_PHRASE))
 	//hl13 edit begin
+	if(istype(trader, /mob/living/basic/trader))
+		var/mob/living/basic/trader/trader_dude = trader
+		trader_dude.after_trade_effect(customer)
 	if(trader_data.sociostability_loss)
 		SSsociostability.modifystability(trader_data.sociostability_loss)
 	if(trader_data.required_trait && trader_data.delete_trait_on_buy)
@@ -326,6 +329,9 @@ Can accept both a type path, and an instance of a datum. Type path has priority.
 	exchange_sold_items(selling, cost, typepath_for_product_info)
 	generate_cash(cost, customer)
 	//hl13 edit begin
+	if(istype(trader, /mob/living/basic/trader))
+		var/mob/living/basic/trader/trader_dude = trader
+		trader_dude.after_trade_effect(customer)
 	if(trader_data.sociostability_loss)
 		SSsociostability.modifystability(trader_data.sociostability_loss)
 	//hl13 edit end

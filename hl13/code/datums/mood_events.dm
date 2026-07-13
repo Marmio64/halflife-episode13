@@ -154,3 +154,8 @@
 	description = "I saw someone get ground up a in a meat grinder. I cannot wait to taste their flesh!"
 	mood_change = 3
 	timeout = 3 MINUTES
+
+/datum/mood_event/crabwalker_badtrade
+	description = "That guy was a real freak, I don't feel right having interacted with him..."
+	mood_change = -6
+	timeout = 7 MINUTES

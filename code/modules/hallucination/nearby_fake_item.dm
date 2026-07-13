@@ -61,31 +61,6 @@
 	generated_image = null
 	qdel(src)
 
-/datum/hallucination/nearby_fake_item/e_sword
-	left_hand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
-	right_hand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
-	image_icon_state = "e_sword_on_red"
-
-/datum/hallucination/nearby_fake_item/e_sword/generate_fake_image(mob/living/carbon/human/holder, file)
-	hallucinator.playsound_local(get_turf(holder), 'sound/items/weapons/saberon.ogg', 35, TRUE)
-	return ..()
-
-/datum/hallucination/nearby_fake_item/e_sword/remove_image(mob/living/carbon/human/holder)
-	if(!QDELETED(holder))
-		hallucinator.playsound_local(get_turf(holder), 'sound/items/weapons/saberoff.ogg', 35, TRUE)
-	return ..()
-
-/datum/hallucination/nearby_fake_item/e_sword/double_bladed
-	image_icon_state = "dualsaberred1"
-
-/datum/hallucination/nearby_fake_item/taser
-	left_hand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
-	right_hand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
-	image_icon_state = "advtaserstun4"
-
-/datum/hallucination/nearby_fake_item/taser/ebow // OOP be like.
-	image_icon_state = "crossbow"
-
 /datum/hallucination/nearby_fake_item/baton
 	left_hand_file = 'icons/mob/inhands/equipment/security_lefthand.dmi'
 	right_hand_file = 'icons/mob/inhands/equipment/security_righthand.dmi'
@@ -123,7 +98,7 @@
 		hallucinator.playsound_local(get_turf(holder), 'sound/effects/blob/blobattack.ogg', 35, TRUE)
 	return ..()
 
-/datum/hallucination/nearby_fake_item/ttv
-	left_hand_file = 'icons/mob/inhands/weapons/bombs_lefthand.dmi'
-	right_hand_file = 'icons/mob/inhands/weapons/bombs_righthand.dmi'
-	image_icon_state = "ttv"
+/datum/hallucination/nearby_fake_item/colt
+	left_hand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	right_hand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+	image_icon_state = "colt_python"

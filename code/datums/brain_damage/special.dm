@@ -444,10 +444,8 @@
 		/datum/hallucination/fake_sound/normal/boom,
 		/datum/hallucination/fake_sound/normal/distant_boom,
 		/datum/hallucination/stray_bullet,
-		/datum/hallucination/battle/gun/disabler,
-		/datum/hallucination/battle/gun/laser,
-		/datum/hallucination/battle/bomb,
-		/datum/hallucination/battle/e_sword,
+		/datum/hallucination/battle/gun/usp,
+		/datum/hallucination/battle/gun/mp7,
 		/datum/hallucination/battle/harm_baton,
 		/datum/hallucination/battle/stun_prod,
 	)
@@ -588,18 +586,18 @@
 		to_chat(owner, span_warning("You start having a bad feeling..."))
 		owner.add_mood_event("fireaxe", /datum/mood_event/axe_missing)
 		return
-		
+
 	if(!isarea(axe_location))
 		owner.add_mood_event("fireaxe", /datum/mood_event/axe_gone)
 		return
-		
+
 	if(istype(axe_location, /area/station/command))
 		to_chat(owner, span_notice("You feel a sense of relief..."))
 		if(istype(GLOB.bridge_axe.loc, /obj/structure/fireaxecabinet))
 			return
 		owner.add_mood_event("fireaxe", /datum/mood_event/axe_neutral)
 		return
-		
+
 	to_chat(owner, span_warning("You start having a bad feeling..."))
 	owner.add_mood_event("fireaxe", /datum/mood_event/axe_missing)
 

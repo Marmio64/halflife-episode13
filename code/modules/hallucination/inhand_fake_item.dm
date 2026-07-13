@@ -56,25 +56,12 @@
 	return ..()
 
 /datum/hallucination/fake_item/revolver
-	template_item_type = /obj/item/gun/ballistic/revolver
+	template_item_type = /obj/item/gun/ballistic/revolver/coltpython
 	valid_slots = ITEM_SLOT_HANDS|ITEM_SLOT_BELT
 
-/datum/hallucination/fake_item/esword
-	template_item_type = /obj/item/melee/energy/sword/saber
+/datum/hallucination/fake_item/knife
+	template_item_type = /obj/item/knife/combat
 	valid_slots = ITEM_SLOT_HANDS|ITEM_SLOT_LPOCKET|ITEM_SLOT_RPOCKET
-
-/datum/hallucination/fake_item/esword/make_fake_item(where_to_put_it, equip_flags)
-	// Make the item via parent call
-	var/obj/item/hallucinated/hallucinated_item = ..()
-
-	// If we were placed in our mob's hands there's a 40% chance to make it appear active
-	if((equip_flags & ITEM_SLOT_HANDS) && prob(40))
-		var/obj/item/melee/energy/sword/saber/sabre_color = pick(subtypesof(/obj/item/melee/energy/sword/saber))
-		// Yes this can break if someone changes esword icon stuff
-		hallucinated_item.icon_state = "[hallucinated_item.icon_state]_on_[initial(sabre_color.sword_color_icon)]"
-		hallucinator.playsound_local(get_turf(hallucinator), 'sound/items/weapons/saberon.ogg', 35, TRUE)
-
-	return hallucinated_item
 
 /datum/hallucination/fake_item/baton
 	template_item_type = /obj/item/melee/baton/security/loaded
@@ -92,13 +79,8 @@
 	return hallucinated_item
 
 /datum/hallucination/fake_item/emag
-	template_item_type = /obj/item/card/emag
+	template_item_type = /obj/item/card/emag/halflife
 	valid_slots = ITEM_SLOT_HANDS|ITEM_SLOT_LPOCKET|ITEM_SLOT_RPOCKET
-
-/datum/hallucination/fake_item/emag/make_fake_item(where_to_put_it, equip_flags)
-	if(prob(50))
-		template_item_type  = /obj/item/card/emag/doorjack
-	return ..()
 
 /datum/hallucination/fake_item/flashbang
 	template_item_type  = /obj/item/grenade/flashbang

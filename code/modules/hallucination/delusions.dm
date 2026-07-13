@@ -144,66 +144,40 @@
 	delusion_icon_state = "nothing"
 	delusion_name = "..."
 
-/datum/hallucination/delusion/preset/curse
-	delusion_icon_file = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
-	delusion_icon_state = "curseblob"
-	delusion_name = "???"
-
-/datum/hallucination/delusion/preset/monkey
-	delusion_icon_file = 'icons/mob/human/human.dmi'
-	delusion_icon_state = "monkey"
-	delusion_name = "monkey"
-
-/datum/hallucination/delusion/preset/monkey/start()
-	delusion_name += " ([rand(1, 999)])"
-	return ..()
-
-/datum/hallucination/delusion/preset/corgi
-	delusion_icon_file = 'icons/mob/simple/pets.dmi'
-	delusion_icon_state = "corgi"
-	delusion_name = "corgi"
-
-/datum/hallucination/delusion/preset/carp
-	delusion_icon_file = 'icons/mob/simple/carp.dmi'
-	delusion_icon_state = "carp"
-	delusion_name = "carp"
-
-/datum/hallucination/delusion/preset/skeleton
-	delusion_icon_file = 'icons/mob/human/human.dmi'
-	delusion_icon_state = "skeleton"
-	delusion_name = "skeleton"
-
 /datum/hallucination/delusion/preset/zombie
-	delusion_icon_file = 'icons/mob/human/human.dmi'
+	delusion_icon_file = 'hl13/icons/mob/halflife.dmi'
 	delusion_icon_state = "zombie"
 	delusion_name = "zombie"
 
-/datum/hallucination/delusion/preset/demon
-	delusion_icon_file = 'icons/mob/simple/demon.dmi'
-	delusion_icon_state = "slaughter_demon"
-	delusion_name = "demon"
+/datum/hallucination/delusion/preset/chumtoad
+	delusion_icon_file = 'hl13/icons/mob/halflife.dmi'
+	delusion_icon_state = "chumtoad"
+	delusion_name = "chumtoad"
 
-/datum/hallucination/delusion/preset/cyborg
-	delusion_icon_file = 'icons/mob/silicon/robots.dmi'
-	delusion_icon_state = "robot"
-	delusion_name = "cyborg"
-	play_wabbajack = TRUE
+/datum/hallucination/delusion/preset/houndeye
+	delusion_icon_file = 'hl13/icons/mob/halflife.dmi'
+	delusion_icon_state = "houndeye"
+	delusion_name = "houndeye"
 
-/datum/hallucination/delusion/preset/cyborg/make_delusion_image(mob/over_who)
-	. = ..()
-	hallucinator.playsound_local(get_turf(over_who), 'sound/mobs/non-humanoids/cyborg/liveagain.ogg', 75, TRUE)
+/datum/hallucination/delusion/preset/headcrab
+	delusion_icon_file = 'hl13/icons/mob/halflife.dmi'
+	delusion_icon_state = "headcrab"
+	delusion_name = "headcrab"
 
-/datum/hallucination/delusion/preset/ghost
-	delusion_icon_file = 'icons/mob/simple/mob.dmi'
-	delusion_icon_state = "ghost"
-	delusion_name = "ghost"
-	affects_others = TRUE
+/datum/hallucination/delusion/preset/poisonheadcrab
+	delusion_icon_file = 'hl13/icons/mob/halflife.dmi'
+	delusion_icon_state = "poisonheadcrab"
+	delusion_name = "poisonheadcrab"
 
-/datum/hallucination/delusion/preset/ghost/make_delusion_image(mob/over_who)
-	var/image/funny_image = ..()
-	funny_image.name = over_who.name
-	DO_FLOATING_ANIM(funny_image)
-	return funny_image
+/datum/hallucination/delusion/preset/gonome
+	delusion_icon_file = 'hl13/icons/mob/halflife_tall.dmi'
+	delusion_icon_state = "gonome"
+	delusion_name = "gonome"
+
+/datum/hallucination/delusion/preset/lurker
+	delusion_icon_file = 'hl13/icons/mob/halflife_tall.dmi'
+	delusion_icon_state = "lurker"
+	delusion_name = "lurker"
 
 /datum/hallucination/delusion/preset/syndies
 	dynamic_delusion = TRUE
@@ -215,16 +189,16 @@
 /datum/hallucination/delusion/preset/syndies/make_delusion_image(mob/over_who)
 	delusion_appearance = get_dynamic_human_appearance(
 		mob_spawn_path = pick(
-			/obj/effect/mob_spawn/corpse/human/syndicatesoldier,
-			/obj/effect/mob_spawn/corpse/human/syndicatecommando,
-			/obj/effect/mob_spawn/corpse/human/syndicatestormtrooper,
+			/obj/effect/mob_spawn/corpse/human/rebelsoldier,
+			/obj/effect/mob_spawn/corpse/human/plf_trooper,
+			/obj/effect/mob_spawn/corpse/human/refugeeguard,
 		),
 		r_hand = pick(
 			/obj/item/knife/combat/survival,
-			/obj/item/melee/energy/sword/saber,
-			/obj/item/gun/ballistic/automatic/pistol,
-			/obj/item/gun/ballistic/automatic/c20r,
-			/obj/item/gun/ballistic/shotgun/bulldog,
+			/obj/item/gun/ballistic/automatic/mp7,
+			/obj/item/gun/ballistic/automatic/pistol/usp,
+			/obj/item/gun/ballistic/revolver/coltpython,
+			/obj/item/gun/ballistic/automatic/ak47,
 		),
 	)
 

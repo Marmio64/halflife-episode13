@@ -8,7 +8,7 @@
 	spawn_positions = 0
 	supervisors = SUPERVISOR_HOS
 	minimal_player_age = 7
-	exp_requirements = 180
+	exp_requirements = 160
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "WARDEN"

@@ -1,6 +1,6 @@
 /datum/hallucination/station_message
 	abstract_hallucination_parent = /datum/hallucination/station_message
-	random_hallucination_weight = 1
+	random_hallucination_weight = 0
 
 /datum/hallucination/station_message/start()
 	qdel(src) // To be implemented by subtypes, call parent for easy cleanup

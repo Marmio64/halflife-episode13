@@ -415,7 +415,7 @@
 	to_chat(owner, "<span class='reallybig redtext'>RIP AND TEAR</span>")
 	SEND_SOUND(owner, sound('sound/effects/hallucinations/veryfar_noise.ogg'))
 	owner.cause_hallucination( \
-		/datum/hallucination/delusion/preset/demon, \
+		/datum/hallucination/delusion/preset/zombie, \
 		"[id] status effect", \
 		duration = duration, \
 		affects_us = FALSE, \

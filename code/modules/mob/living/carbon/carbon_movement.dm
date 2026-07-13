@@ -30,9 +30,11 @@
 		// having high spirits helps us run longer, poor mood hurts instead
 		if(mob_mood)
 			switch(mob_mood.sanity_level)
-				if(SANITY_LEVEL_GREAT || SANITY_MAXIMUM)
+				if(SANITY_LEVEL_GREAT)
 					staminatolose -= 0.2
-				if(SANITY_LEVEL_UNSTABLE || SANITY_LEVEL_CRAZY)
+				if(SANITY_LEVEL_UNSTABLE)
+					staminatolose += 0.05
+				if(SANITY_LEVEL_CRAZY)
 					staminatolose += 0.1
 				if(SANITY_LEVEL_INSANE)
 					staminatolose += -0.2

@@ -9,7 +9,7 @@
 	var/full = FALSE
 	var/mining = FALSE
 	var/water_gather_progress = FALSE
-	var/mining_rate = 1
+	var/mining_rate = 1.5 //happens per 2 seconds
 
 /obj/machinery/water_miner/examine(mob/user)
 	. = ..()
@@ -23,7 +23,7 @@
 		return
 	if(full)
 		new	/obj/item/water_canister(src.loc)
-		new /obj/item/stack/spacecash/c1(user.loc, 2)
+		new /obj/item/stack/spacecash/c1(user.loc, 1)
 		to_chat(user, span_notice("You remove the full water canister, along with the dispensed reward."))
 
 		playsound(src, 'hl13/sound/machines/combine_dispense.ogg', 50, TRUE, extrarange = -3)
@@ -47,20 +47,22 @@
 
 	if(water_underneath.toxic || water_underneath.sewer)
 		mining_rate = 0.5
+	if(water_underneath.saltwater)
+		mining_rate = 1
 
 	to_chat(user, span_warning("You start the mining cycle."))
 	playsound(src, 'hl13/sound/machines/combine_button3.ogg', 50, TRUE, extrarange = -3)
 	mining = TRUE
 	update_appearance(UPDATE_ICON)
 
-	START_PROCESSING(SSfastprocess, src)
+	START_PROCESSING(SSprocessing, src)
 
-/obj/machinery/water_miner/process(delta_time)
+/obj/machinery/water_miner/process()
 	if(!mining)
 		return PROCESS_KILL
 	if(anchored)
 		water_gather_progress += mining_rate
-		if(water_gather_progress > 599)
+		if(water_gather_progress > 224) //225, so about 7.5 minutes with salt water or around 5 minutes with fresh water. about 15 minutes for sewer water.
 			water_gather_progress = 0
 			full = TRUE
 			mining = FALSE

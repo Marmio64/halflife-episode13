@@ -4,7 +4,7 @@
 
 /// Plasma starts flooding from the nearby vent
 /datum/hallucination/fake_flood
-	random_hallucination_weight = 7
+	random_hallucination_weight = 0
 
 	var/list/image/flood_images = list()
 	var/list/obj/effect/plasma_image_holder/flood_image_holders = list()
