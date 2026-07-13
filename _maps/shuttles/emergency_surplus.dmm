@@ -101,7 +101,12 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "le" = (
-/obj/docking_port/mobile/emergency,
+/obj/docking_port/mobile/emergency{
+	dir = 2;
+	name = "Transfer Train";
+	preferred_direction = 2;
+	port_direction = 2
+	},
 /turf/closed/wall/halflife/metal/weak/old,
 /area/shuttle/escape)
 "lK" = (
@@ -248,10 +253,10 @@
 /turf/open/floor/plating/indoor/metal,
 /area/shuttle/escape)
 "Bn" = (
-/obj/structure/table/halflife/metal/small,
 /obj/item/food/badrecipe/moldy,
 /obj/item/food/badrecipe/moldy,
 /obj/item/food/badrecipe/moldy,
+/obj/structure/rack,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "Cd" = (
