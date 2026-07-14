@@ -676,7 +676,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
-		/obj/item/grenade/flashbang = 2,
+		/obj/item/grenade/flashbang = 3,
 	)
 
 	ears = /obj/item/radio/headset/syndicate/alt
