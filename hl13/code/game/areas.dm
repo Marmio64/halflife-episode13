@@ -421,6 +421,9 @@
 /area/halflife/indoors/bunker/unpowered/rebel_large/janitor
 	first_time_text = "Janitorial Closet"
 
+/area/halflife/indoors/bunker/unpowered/rebel_large/police
+	first_time_text = "Civil Police Office"
+
 /area/halflife/indoors/sewer
 	name = "\improper Sewers"
 	base_lighting_alpha = 5

@@ -136,6 +136,7 @@
 	wdefense = 1 //hl13 edit
 
 /obj/item/knife/combat/weak
+	desc = "A military combat utility survival knife. It's a bit dull, but still quite capable of doing some nasty damage."
 	force = 22
 
 /obj/item/knife/combat/backstab
@@ -201,7 +202,7 @@
 	icon_state = "survivalknife"
 	worn_icon_state = "survivalknife"
 	embed_type = /datum/embed_data/combat_knife/weak
-	desc = "A hunting grade survival knife. It has good penetrating power against xenian carapaces and flesh, and is standard issue for infestation workers."
+	desc = "A hunting grade survival knife. It has good penetrating power against xenian carapaces and flesh, and the Combine have taken to issuing these to infestation control workers for self-defence."
 	force = 20
 	throwforce = 15
 	wound_bonus = -10 //not for use against players

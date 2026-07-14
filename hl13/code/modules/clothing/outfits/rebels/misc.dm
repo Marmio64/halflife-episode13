@@ -71,6 +71,15 @@
 	SSwardrobe.provide_type(/obj/item/reagent_containers/cup/glass/bottle/vodka, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/polish_resistance/usp_stunbaton/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm, src)
+	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	SSwardrobe.provide_type(/obj/item/melee/baton/security/loaded, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	update_appearance(UPDATE_ICON)
+
 /obj/item/storage/belt/civilprotection/polish_resistance/medic/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/usp9mm, src)
 	SSwardrobe.provide_type(/obj/item/melee/baton, src)
@@ -128,6 +137,15 @@
 	SSwardrobe.provide_type(/obj/item/reagent_containers/cup/glass/bottle/vodka, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/polish_resistance/shotgun/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot/halflife, src)
+	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot/halflife, src)
+	SSwardrobe.provide_type(/obj/item/storage/box/lethalshot/halflife, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/cup/glass/bottle/vodka, src)
+	update_appearance(UPDATE_ICON)
+
 /obj/item/storage/belt/civilprotection/polish_resistance/mosin/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/ammo_box/strilka310/a762, src)
 	SSwardrobe.provide_type(/obj/item/ammo_box/strilka310/a762, src)
@@ -146,6 +164,25 @@
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/cup/glass/bottle/vodka, src)
+	update_appearance(UPDATE_ICON)
+
+/obj/item/storage/belt/civilprotection/polish_resistance/revolver_flashbangs/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/ammo_box/colta357, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/colta357, src)
+	SSwardrobe.provide_type(/obj/item/melee/baton/security/loaded, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/grenade/flashbang, src)
+	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	update_appearance(UPDATE_ICON)
+
+/obj/item/storage/belt/civilprotection/polish_resistance/all_flashbangs/PopulateContents() //evil thing for later probably
+	SSwardrobe.provide_type(/obj/item/grenade/flashbang, src)
+	SSwardrobe.provide_type(/obj/item/grenade/flashbang, src)
+	SSwardrobe.provide_type(/obj/item/grenade/flashbang, src)
+	SSwardrobe.provide_type(/obj/item/grenade/flashbang, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	update_appearance(UPDATE_ICON)
 
 /obj/item/storage/belt/civilprotection/polish_resistance/ak/PopulateContents()
@@ -259,7 +296,7 @@
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
 	l_pocket = /obj/item/knife/combat/survival
 	head = /obj/item/clothing/head/helmet/halflife/military/poland //REAL helmet for REAL men.
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife
 	shoes = /obj/item/clothing/shoes/combat
 
 /datum/outfit/resistance_faction/polish/competent/mosin
@@ -267,6 +304,16 @@
 	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/mosin
 	l_pocket = /obj/item/knife/combat
+
+/datum/outfit/resistance_faction/polish/competent/shotgunner
+	name = "Polish Liberation Front Trench Raider"
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar //now we're talking. actual pre-war armour.
+	suit_store = /obj/item/gun/ballistic/shotgun/trench
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/shotgun
+	l_pocket = /obj/item/knife/combat //fix bayonet
+	head = /obj/item/clothing/head/helmet/halflife/military/poland
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife
+	shoes = /obj/item/clothing/shoes/combat
 
 /datum/outfit/resistance_faction/polish/strong
 	name = "Polish Liberation Front Corporal"
@@ -276,7 +323,7 @@
 	l_pocket = /obj/item/knife/combat/survival
 	head = /obj/item/clothing/head/helmet/halflife/military/poland
 	r_pocket = /obj/item/grenade/c4
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife
 	shoes = /obj/item/clothing/shoes/combat
 
 /datum/outfit/resistance_faction/polish/commander
@@ -290,7 +337,7 @@
 	head = /obj/item/clothing/head/beret/sec/poland
 	neck = /obj/item/clothing/mask/whistle/trench_whistle
 	l_pocket = /obj/item/binoculars
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife
 	shoes = /obj/item/clothing/shoes/combat
 
 /datum/outfit/resistance_faction/polish/commander/flagbearer
@@ -302,7 +349,7 @@
 	mask = /obj/item/clothing/mask/gas/hl2/military
 	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
 	suit = /obj/item/clothing/suit/armor/halflife/milvest
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/ak
 	suit_store = /obj/item/gun/ballistic/automatic/ak47
 	back = /obj/item/storage/backpack/halflife/satchel/military //you are going to fucking die against these guys. trust me.
@@ -323,7 +370,7 @@
 	name = "Polish Liberation Front Veteran" //JESUS FUCKING CHRIST THESE GUYS HOLY SHIT BAHAHAHAHHAHAHAHAHAHHAHAA. YOU'RE FUCKED LMAO.
 	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
 	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/rpd
 	gloves = /obj/item/clothing/gloves/combat
 	suit_store = /obj/item/gun/ballistic/automatic/rpd

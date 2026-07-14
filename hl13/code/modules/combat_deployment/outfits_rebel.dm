@@ -26,7 +26,7 @@
 	name = "Deployment: Refugee Mosin Partisan"
 	display_name = "Refugee Mosin Partisan (Offense)"
 	desc = "Armed with a mosin nagant partisans have decent damage capabilities but have very poor armor."
-	id_name = "Partisan"
+	id_name = "Partisan Rifleman"
 
 	uniform = /obj/item/clothing/under/citizen/refugee
 	suit = /obj/item/clothing/suit/armor/armored
@@ -335,7 +335,7 @@
 	desc = "You are armed with a Mosin-nagant for long range attacks while defending bunkers, and a knife bayonet to attach to your rifle when things get close quarters."
 	id_name = "Private"
 
-	uniform = /obj/item/clothing/under/citizen/refugee
+	uniform = /obj/item/clothing/under/citizen/refugee/green
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
 	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
 	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
@@ -499,6 +499,38 @@
 	extra_int = 4
 	extra_dex = 2
 
+/datum/outfit/deployment_loadout/rebel/tier3/police
+	name = "Deployment: PFS Civil Police"
+	display_name = "PFS Civil Police (Pick)"
+	desc = "Part of the civilian arm of the Polish Free State's law enforcement, your ranged options may be limited only to the humble USP, but your access to a flashbang and a stunstick gives you an edge when serving alongside your comrades in the Free State's militias."
+	id_name = "Civil Officer"
+
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar
+	glasses = /obj/item/clothing/glasses/sunglasses
+	mask = /obj/item/clothing/mask/gas/hl2/military
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/usp_stunbaton
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	l_pocket = /obj/item/knife/combat/survival
+	r_pocket = /obj/item/flashlight/seclite
+	head = /obj/item/clothing/head/costume/polishpolice
+	uniform = /obj/item/clothing/under/rank/security/officer/spacepol/halflife
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/color/black
+
+	back = /obj/item/storage/backpack/halflife/satchel/military
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/grenade/flashbang = 1,
+	)
+
+	ears = /obj/item/radio/headset/syndicate/alt
+
+	extra_str = 3 //melee/ranged hybrid
+	extra_dex = 2
+
+	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+
 /// TIER 4 ///////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/rebel/tier4
 	loadout_tier = 4
@@ -562,11 +594,41 @@
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
 
+/datum/outfit/deployment_loadout/rebel/tier4/trench
+	name = "Deployment: PLF Trencher"
+	display_name = "PLF Trencher (Offense)"
+	desc = "You are a trench-clearer of the PLF, equipped with a specialised shotgun. While slower than the smugglers who normally provide close-quarters capability, your increased durability should much compensate for that while clearing tight spaces."
+	id_name = "Trencher"
+
+	suit = /obj/item/clothing/suit/armor/halflife/milvest //not corporal slow but still slower
+	mask = /obj/item/clothing/mask/gas/hl2/military/hardened //has only a weak helmet
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/shotgun
+	suit_store = /obj/item/gun/ballistic/shotgun/trench
+	l_pocket = /obj/item/knife/combat //fix bayonets
+	r_pocket = /obj/item/flashlight/seclite
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/poland
+	uniform = /obj/item/clothing/under/syndicate/combat //stylish
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/color/black
+
+	back = /obj/item/storage/backpack/halflife/satchel/military
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/storage/box/lethalshot = 2,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+	extra_end = 3
+
+	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+
 /datum/outfit/deployment_loadout/rebel/tier4/mosin_soldier
 	name = "Deployment: Upgraded Mosin Soldier"
 	display_name = "Upgraded Mosin Soldier (Defense)"
 	desc = "You are armed with a Mosin-nagant for long range attacks while defending bunkers, and a knife bayonet to attach to your rifle when things get close quarters."
-	id_name = "Private"
+	id_name = "Conscript" //differentiate from the t3 soldier
 
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
@@ -592,6 +654,37 @@
 	extra_end = 8
 	extra_per = 5
 
+/datum/outfit/deployment_loadout/rebel/tier4/milpolice
+	name = "Deployment: PLF Military Police"
+	display_name = "PLF Military Police (Pick)"
+	desc = "Part of the PLF's internal law enforcement, you serve to harass Combine troops through the humble stun-baton and flash-bangs, making you skilled at both neutralising lone enemies and crowd control. Operating without the support of your team-mates is ill advised."
+	id_name = "Officer"
+
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar //im Literally just a cop
+	glasses = /obj/item/clothing/glasses/sunglasses
+	mask = /obj/item/clothing/mask/gas/hl2/military/hardened //has only a ceremonial cap
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/revolver_flashbangs
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython/well_crafted
+	l_pocket = /obj/item/knife/combat/survival
+	r_pocket = /obj/item/flashlight/seclite
+	head = /obj/item/clothing/head/costume/polishpolice
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/color/black
+
+	back = /obj/item/storage/backpack/halflife/satchel/military
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/grenade/flashbang = 3,
+	)
+
+	ears = /obj/item/radio/headset/syndicate/alt
+
+	extra_str = 6 //BONK
+	extra_dex = 2
+
+	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel
 	name = "Deployment: Heavy Rebel Bomber"
@@ -834,6 +927,32 @@
 ///////////// TIER 5 //////////////////////////////////////////
 /datum/outfit/deployment_loadout/rebel/tier5
 	loadout_tier = 5
+
+/datum/outfit/deployment_loadout/rebel/tier5/riotpolice
+	name = "Deployment: PFS Riot Police"
+	display_name = "PFS Riot Police (Pick)"
+	desc = "Once, you kept the bread lines of the refugee camps from turning into warzones. Now, you serve to charge into enemy lines, countering their finest units with nought but a ballistic glass shield and a heavy stun-baton. However, you lack healing supplies and survivability, and operate best in conjunction with the rest of your team."
+	id_name = "Riot Officer"
+
+	suit = /obj/item/clothing/suit/armor/riot/ballistic
+	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
+	suit_store = /obj/item/melee/baton/security/heavy/loaded
+	l_pocket = /obj/item/knife/combat/survival
+	r_pocket = /obj/item/flashlight/seclite
+	head = /obj/item/clothing/head/helmet/toggleable/riot
+	uniform = /obj/item/clothing/under/rank/security/officer/spacepol/halflife
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/color/black
+	accessory = /obj/item/clothing/accessory/armband/plf
+
+	back = /obj/item/shield/riot/ballistic
+
+	ears = /obj/item/radio/headset/syndicate/alt
+
+	extra_str = 8 //BONK
+	extra_end = 8
+	extra_dex = -5 //no guns
+	combat_music = 'hl13/sound/music/combat/notyouraveragecop.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier5/freeman
 	name = "Deployment: A Free Man"
@@ -1225,6 +1344,7 @@
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch
+	neck = /obj/item/clothing/mask/whistle/trench_whistle //i dont regret this
 	id = null
 
 	back = /obj/item/storage/backpack/halflife/satchel/radio/huge

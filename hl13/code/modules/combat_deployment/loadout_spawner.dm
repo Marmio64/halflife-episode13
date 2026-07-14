@@ -193,6 +193,7 @@
 			/datum/outfit/deployment_loadout/rebel/tier3/engineer,
 			/datum/outfit/deployment_loadout/rebel/tier3/medic_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier3/crossbow,
+			/datum/outfit/deployment_loadout/rebel/tier3/police,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -211,7 +212,9 @@
 			/datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel/incendiary,
 			/datum/outfit/deployment_loadout/rebel/tier4/scout,
 			/datum/outfit/deployment_loadout/rebel/tier4/corporal,
+			/datum/outfit/deployment_loadout/rebel/tier4/trench,
 			/datum/outfit/deployment_loadout/rebel/tier4/mosin_soldier,
+			/datum/outfit/deployment_loadout/rebel/tier4/milpolice,
 			/datum/outfit/deployment_loadout/rebel/tier4/medic_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt,
 			/datum/outfit/deployment_loadout/rebel/tier4/engineer,
@@ -233,6 +236,7 @@
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
+			/datum/outfit/deployment_loadout/rebel/tier5/riotpolice,
 			/datum/outfit/deployment_loadout/rebel/tier5/freeman,
 			/datum/outfit/deployment_loadout/rebel/tier5/rpg,
 			/datum/outfit/deployment_loadout/rebel/tier5/firefighter,

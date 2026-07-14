@@ -323,6 +323,20 @@
 	acid = 80
 	wound = 20
 
+/datum/armor/armor_ballistic_riot
+	melee = 65
+	bullet = 45
+	laser = 45
+	energy = 45
+	fire = 60
+	acid = 80
+	wound = 20
+
+/obj/item/clothing/suit/armor/riot/ballistic
+	desc = "A set of heavily padded, kevlar-weave riot armour. Excellent at deflecting melee attacks, and pretty good for bullets too."
+	armor = /datum/armor/armor_ballistic_riot
+
+
 /obj/item/clothing/suit/armor/balloon_vest
 	name = "balloon vest"
 	desc = "A vest made entirely from balloons, resistant to any evil forces a mime could throw at you, including electricity and fire. Just a strike with something sharp, though..."

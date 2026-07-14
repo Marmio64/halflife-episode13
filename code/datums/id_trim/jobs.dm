@@ -1372,6 +1372,10 @@
 	assignment = JOB_OUTLANDS_SOLDIER
 	job = /datum/job/outlands/soldier
 
+/datum/id_trim/job/outlands/police
+	assignment = JOB_OUTLANDS_POLICE
+	job = /datum/job/outlands/police
+
 /datum/id_trim/job/outlands/botanist
 	assignment = JOB_OUTLANDS_BOTANIST
 	job = /datum/job/outlands/botanist

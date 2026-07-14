@@ -1,3 +1,34 @@
+// 7.62x58mmR (AK-47 and Mosin)
+
+/obj/projectile/bullet/n762
+	name = "7.62x58mmR bullet"
+	damage = 28 //HL13 EDIT
+	wound_bonus = -55 //hl13 edit
+	armour_penetration = 20 //HL13 EDIT
+
+/obj/projectile/bullet/n762/high_veloc
+	speed = 5
+	armour_penetration = 10
+	accurate_range = 150
+	damage = 32 //old damage value was 42 at a constant value
+
+	var/max_distance_damage = 42 //reached after 5 tiles of travel
+	var/damage_increase_per_tile = 2
+
+	var/max_distance_armor_piercing = 35 //reached after 5 tiles of travel
+	var/ap_increase_per_tile = 5
+
+/obj/projectile/bullet/n762/high_veloc/reduce_range()
+	..()
+	if(damage < max_distance_damage)
+		damage += damage_increase_per_tile
+	if(armour_penetration < max_distance_armor_piercing)
+		armour_penetration += ap_increase_per_tile
+
+/obj/projectile/bullet/n762/rpd
+	armour_penetration = 0
+	accuracy_falloff = 9
+
 // .223 (M-90gl Carbine)
 
 /obj/projectile/bullet/a223

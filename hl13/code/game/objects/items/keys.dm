@@ -219,6 +219,11 @@
 	desc = "This key will open doors in the bunker armory area."
 	lockid = "reb_bunk_armory"
 
+/obj/item/hl2key/rebel_bunker/police
+	name = "bunker police office key"
+	desc = "This key will open the door to the bunker's civil police office."
+	lockid = "reb_bunk_police"
+
 //custom key
 /obj/item/hl2key/custom
 	name = "custom key"
