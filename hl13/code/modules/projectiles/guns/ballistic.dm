@@ -95,7 +95,7 @@
 //about 1.96 seconds TTK
 /obj/item/gun/ballistic/automatic/m4a1
 	name = "\improper M4A1 Rifle"
-	desc = "A old M4A1 pattern rifle, likely purchased from America before the war, or smuggled over from its remains afterwards. Not as good as the combine's rifles, but still powerful. It is well known for being a versatile and accurate rifle, and saw use in Polish special forces units in the 90s."
+	desc = "A old M4A1 pattern rifle, likely purchased from America before the war, or smuggled over from its remains afterwards. Not as good as the combine's rifles, but still powerful. Well-known for its versatility and accuracy, and having found use by Polish special forces prior to the Seven-Hour War, the PLF now makes use of limited numbers of these rifles for specialist or high-ranking troops; with the Combine's own conscripts occasionally seizing them for their own ends."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "m4a1"
 	fire_sound = "sound/items/weapons/gun/rifle/shot.ogg"
@@ -131,7 +131,7 @@
 
 /obj/item/gun/ballistic/automatic/m4a1/famas
 	name = "\improper FAMAS G2 Rifle"
-	desc = "A french made bullpup rifle from the nineties, made as an upgrade to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy."
+	desc = "A French-made bullpup rifle from the 1990s, made as an upgrade to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. These traits made it desirable to issue to the guard regiments of the Overwatch Conscripted Arm, where it has since become standard-issue among clandestine bases; occasionally, captured rifles find their way outside these old bunkers, and into the hands of freedom fighters across Poland."
 	icon = 'hl13/icons/obj/guns/wideguns.dmi'
 	icon_state = "famas"
 	inhand_icon_state = "famas"
@@ -150,15 +150,17 @@
 
 /obj/item/gun/ballistic/automatic/m4a1/famas/intruder/buffed
 	name = "\improper Refined FAMAS G2 Rifle"
-	desc = "A french made bullpup rifle from the nineties, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one looks in pretty good shape, and somehow more powerful."
+	desc = "A French-made bullpup rifle from the 1990s, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one looks in pretty good shape, and somehow more powerful."
 	projectile_damage_multiplier = 1.2
 
 /obj/item/gun/ballistic/automatic/m4a1/famas/intruder/buffed/more
+	name = "\improper High-Grade FAMAS G2 Rifle"
+	desc = "A French-made bullpup rifle from the 1990s, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one has been heavily upgraded, and bears the distinct blue-grey sheen of Combine alloy - belying its vastly-improved firepower."
 	projectile_damage_multiplier = 1.75
 
 /obj/item/gun/ballistic/automatic/m4a1/famas/crab
 	name = "\improper Masterwork FAMAS G2 Rifle"
-	desc = "A french made bullpup rifle from the nineties, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one looks in pretty good shape, and somehow more powerful. It's also capable of taking a suppressor."
+	desc = "A French-made bullpup rifle from the 1990s, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one looks in pretty good shape, and somehow more powerful. It's also capable of taking a suppressor."
 	projectile_damage_multiplier = 1.5
 	can_suppress = TRUE
 	spawnwithmagazine = FALSE //OSP
@@ -283,7 +285,7 @@
 //about 1.96 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/servicerifle
 	name = "\improper Service Rifle"
-	desc = "An old foreign, surplus rifle from decades ago, designed as a relatively cheap but effective rifle. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity."
+	desc = "An old foreign, surplus rifle from decades ago, designed as a relatively cheap but effective weapon. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity. Many of these were imported by Poland following the collapse of the Warsaw Pact to arm their rapidly-reorganising military, leaving them now easily-accessible to both the Polish Liberation Front's troops and the Overwatch Conscripted Arm."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "service"
 	fire_sound = "sound/items/weapons/gun/rifle/shot.ogg"
@@ -315,7 +317,7 @@
 
 //wooden variation cause it looks cool
 /obj/item/gun/ballistic/automatic/servicerifle/wood
-	desc = "An old wood-furnished surplus rifle from decades ago. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity."
+	desc = "An old foreign, wood-furnished surplus rifle from decades ago. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity. Many of these were imported by Poland following the collapse of the Warsaw Pact to arm their rapidly-reorganising military, leaving them now easily-accessible to both the Polish Liberation Front's troops and the Overwatch Conscripted Arm."
 	icon_state = "service_wood"
 	inhand_icon_state = "service_wood"
 
@@ -413,7 +415,7 @@
 // about 2.8 seconds TTK (time to knock/crit)
 /obj/item/gun/ballistic/automatic/pistol/usp
 	name = "USP Match"
-	desc = "A small and light 9mm pistol which is often used as a metropolice standard carry. Despite never seeing real use in Poland before, it was adopted in large quantities by the Combine post-war for easy standardization."
+	desc = "A small and light 9mm pistol which is often used as a metropolice standard carry. Despite never seeing real use in Poland before, it was adopted in large quantities by the Combine post-war for ease of standardization across the different cities; and where the Combine's armouries lead, resistance groups are sure to follow; making this a common sidearm in the hands of both sides, if only due to how many Civil Protection manage to lose."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "uspmatch"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/usp9mm
@@ -476,7 +478,7 @@
 
 /obj/item/gun/ballistic/automatic/pistol/solid_tranq
 	name = "tranquilizer pistol"
-	desc = "An integrally suppressed bolt action pistol that fires non-lethal darts. It's slow to fire, but will put someone to sleep for a long time. Wide awake people may take an extra shot to sleep."
+	desc = "An integrally suppressed bolt action pistol that fires non-lethal darts. It's slow to fire, but will put someone to sleep for a long time. Wide awake people may take an extra shot to sleep. Usually issued to Polish Liberation Front infiltrators and commandos; this one has an engraving of a snake, coiled to resemble the 'anchor' found on the PLF's flag, on its grip."
 	desc_controls = "Less effective against armor."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "tranq"
@@ -505,7 +507,7 @@
 // about 2.4 seconds TTK assuming you hit your first shot (so no cooldown)
 /obj/item/gun/ballistic/revolver/coltpython
 	name = "\improper colt python"
-	desc = "An old colt python revolver, accurate but has the kick of a mule. Uses .357 magnum ammo. Its shiny sheen reveals a giddy glint in your eyes as you imagine the havoc it can cause."
+	desc = "An old colt python revolver, accurate but has the kick of a mule. Uses .357 magnum ammo. Its shiny sheen reveals a giddy glint in your eyes as you imagine the havoc it can cause. While this American model of high-calibre revolver was rare among standardised forces, many were privately owned by the pre-War clique of officers that would come to form the PLF, and the Combine also took great appreciation to the sidearm, seeing fit to issue it to their own high-ranking officers; making it a commanding presence, no matter the alleigance of its wielder."
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/cylinder/coltpython
 	fire_sound = "hl13/sound/weapons/revolverfire.ogg"
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
@@ -560,12 +562,30 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 /obj/item/gun/ballistic/revolver/snubnose/warden
-	name = "\improper warden's snubnose revolver"
+	name = "\improper commanding snubnose revolver" //used by DAs too
 	desc = "A well maintained, smooth looking revolver. It is small, compact, and only fires .38 rounds. It seems intimidating, but barely fired. Ammunition for this gun is likely very sparse."
 
 /obj/item/gun/ballistic/revolver/snubnose/rebel_qm
 	name = "\improper quartermaster's snubnose revolver"
 	desc = "A revolver that was likely stolen from a high ranking combine official, or kept as well-maintained relic from long ago. It seems intimidating, but barely fired. Ammunition for this gun is likely very sparse."
+
+
+/obj/item/ammo_box/magazine/internal/shot/trench //hl13 edit
+	name = "riot shotgun internal magazine"
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/halflife
+	max_ammo = 6
+
+/obj/item/gun/ballistic/shotgun/trench
+	name = "trench shotgun"
+	desc = "A sturdy wooden shotgun with a long magazine tube and bayonet lug, favoured by the Polish Liberation Front's trench-clearing troops. The use of this pattern of shotgun mostly faded out following the World Wars, though they remained popular in sporting markets - the PLF were all too happy to weld the bayonet lugs back on to these antiquated weapons when the call to arms echoed out, and they now find frequent use in high-stakes environments where the more modern SPAS-12 proves potentially unreliable."
+	icon_state = "riotshotgun"
+	inhand_icon_state = "shotgun"
+	fire_delay = 4 //BLAMBLAMBLAMBLAMBLAM
+	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/trench
+	can_be_sawn_off = FALSE //bayonet
+
+/obj/item/gun/ballistic/shotgun/trench/add_bayonet_point()
+	AddComponent(/datum/component/bayonet_attachable, offset_x = 32, offset_y = 12)
 
 // Can technically down someone in about a second if you hit all pellets point blank in two shots, but unlikely.
 /obj/item/gun/ballistic/shotgun/spas12
@@ -898,7 +918,7 @@
 /// Aprox 36 damage a shot, 4 shots to crit, can crit in as fast as ~1.8 seconds assuming it doesn't jam (though it is statistically likely to do so)
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
 	name = "mosin-nagant rifle"
-	desc = "A ratty old pre-war rifle that was developed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. Slightly moist, chambered in 7.62."
+	desc = "A ratty old pre-war rifle that was designed over a century ago. While it kicks like a mule and is rather cheap, it's slow to fire and may jam on occasion. Slightly moist, chambered in 7.62. While rare in pre-War Poland, it still found common use as a ceremonial and hunting rifle until the PLF laid out the call to arms; its simplistic design making it incredibly easy to mass-manufacture from within their clandestine workshops with minimal tooling. Whether this one is a post-War reproduction or a pre-War original, however, is irrelevant; for its sights still guide your round true into the heart of the Imperialist foe. Or the heart of a rebel, if you're a conscript on a budget."
 	icon = 'hl13/icons/obj/guns/wideguns.dmi'
 	icon_state = "mosin_nagant"
 	inhand_icon_state = "mosin_nagant"
@@ -1128,7 +1148,7 @@
 			user.adjustFireLoss(15)
 
 /obj/item/gun/energy/immolator/hidden
-	desc = "An alien looking plasma thrower which burns it's victims alive. It has short range, but can output a lot of damage. It can be toggled between flamer and plasma settings. This variant cannot self recharge, and must be recharged with combine batteries."
+	desc = "An alien looking plasma thrower which burns it's victims alive. It has short range, but can output a lot of damage. It can be toggled between flamer and plasma settings. This instance's internal generator has broken down over time, and it must be recharged with Combine batteries."
 	cell_type = /obj/item/stock_parts/power_store/cell/hidden_immolator
 	selfcharge = 0
 

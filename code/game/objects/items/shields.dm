@@ -195,6 +195,21 @@
 		return
 	return ..()
 
+//hl13 edit
+/datum/armor/item_shield/riot/ballistic
+	melee = 80
+	bullet = 60
+	laser = 60
+
+/obj/item/shield/riot/ballistic
+	name = "ballistic-reinforced riot shield"
+	desc = "A shield adept at blocking blunt objects from connecting with the torso of the shield wielder, still protective against bullets and lasers."
+	max_integrity = 250 //Hi
+	shield_break_sound = 'sound/effects/glass/glassbr3.ogg'
+	shield_break_leftover = /obj/item/shard
+	armor_type = /datum/armor/item_shield/riot/ballistic
+//hl13 edit end
+
 /obj/item/shield/riot/flash
 	name = "strobe shield"
 	desc = "A shield with a built in, high intensity light capable of blinding and disorienting suspects. Takes regular handheld flashes as bulbs."

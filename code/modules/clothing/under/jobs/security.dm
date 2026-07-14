@@ -227,6 +227,12 @@
 	melee = 10
 	wound = 10
 
+/obj/item/clothing/under/rank/security/officer/spacepol/halflife //hl13 edit in case youre blind
+	name = "pre-war police uniform"
+	desc = "A well-worn police uniform from before the War, frequently found covering the Polish Free State's law enforcement."
+	has_sensor = NO_SENSORS
+	sensor_mode = SENSOR_OFF
+
 /obj/item/clothing/under/rank/prisoner
 	name = "prison jumpsuit"
 	desc = "Standardised Nanotrasen prisoner-wear. Its suit sensors are stuck in the \"Fully On\" position."
