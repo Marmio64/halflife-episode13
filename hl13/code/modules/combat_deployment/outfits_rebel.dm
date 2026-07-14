@@ -596,7 +596,7 @@
 
 /datum/outfit/deployment_loadout/rebel/tier4/trench
 	name = "Deployment: PLF Trencher"
-	display_name = "PLF Trencher (Defense)"
+	display_name = "PLF Trencher (Offense)"
 	desc = "You are a trench-clearer of the PLF, equipped with a specialised shotgun. While slower than the smugglers who normally provide close-quarters capability, your increased durability should much compensate for that while clearing tight spaces."
 	id_name = "Trencher"
 
