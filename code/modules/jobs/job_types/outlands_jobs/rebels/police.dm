@@ -32,7 +32,7 @@
 	id = /obj/item/card/id/advanced/halflife/grey
 	id_trim = /datum/id_trim/job/outlands/police
 
-	uniform = /obj/item/clothing/under/rank/security/officer/spacepol/halflife
+	uniform = /obj/item/clothing/under/halflife/police
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	belt = /obj/item/melee/baton
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp

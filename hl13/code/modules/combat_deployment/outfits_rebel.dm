@@ -607,7 +607,7 @@
 	l_pocket = /obj/item/knife/combat/weak //fix bayonets
 	r_pocket = /obj/item/flashlight/seclite
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/poland
-	uniform = /obj/item/clothing/under/halflife/police
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 
