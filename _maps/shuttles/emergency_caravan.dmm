@@ -15,6 +15,13 @@
 /obj/structure/shipping_container/vitezstvi/flags,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
+"ba" = (
+/obj/item/hl13_small_flag/poland,
+/obj/machinery/door/poddoor/shutters/window/preopen{
+	id = "recruiter"
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/shuttle/escape)
 "bA" = (
 /obj/structure/chair/sofa/hl13bench{
 	dir = 4
@@ -56,6 +63,7 @@
 /area/shuttle/escape)
 "dJ" = (
 /obj/structure/halflife/trash/wood,
+/obj/machinery/atm,
 /turf/open/floor/plating/indoor/metal/walkway,
 /area/shuttle/escape)
 "eL" = (
@@ -149,6 +157,7 @@
 /obj/machinery/door/poddoor/shutters/window/preopen{
 	id = "recruiter"
 	},
+/obj/machinery/atm,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "rx" = (
@@ -302,10 +311,6 @@
 	},
 /turf/open/floor/plating/indoor/grooved2,
 /area/shuttle/escape)
-"HS" = (
-/obj/structure/chair/office/halflife/red,
-/turf/open/floor/plating/indoor/carpet/green,
-/area/shuttle/escape)
 "Jf" = (
 /obj/machinery/computer/emergency_shuttle{
 	dir = 4
@@ -322,6 +327,10 @@
 	},
 /obj/structure/halflife/trash/wood,
 /turf/open/floor/plating/indoor/metal/industrial,
+/area/shuttle/escape)
+"KD" = (
+/obj/structure/chair/office/halflife/red,
+/turf/open/floor/plating/indoor/carpet/green,
 /area/shuttle/escape)
 "LE" = (
 /obj/structure/table/halflife/wood,
@@ -549,7 +558,7 @@ jE
 rD
 Pz
 Ae
-qQ
+ba
 FU
 qQ
 Xk
@@ -563,7 +572,7 @@ FU
 (5,1,1) = {"
 FU
 Cy
-HS
+KD
 Ak
 TI
 PO
