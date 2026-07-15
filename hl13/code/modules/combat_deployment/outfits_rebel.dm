@@ -965,6 +965,8 @@
 	extra_per = -8 //no guns
 	combat_music = 'hl13/sound/music/combat/notyouraveragecop.ogg'
 
+	traits_to_add = list(TRAIT_NOSOFTCRIT)
+
 /datum/outfit/deployment_loadout/rebel/tier5/freeman
 	name = "Deployment: A Free Man"
 	display_name = "A Free Man (Offense)"
