@@ -325,8 +325,8 @@
 
 /datum/armor/armor_ballistic_riot
 	melee = 65
-	bullet = 45
-	laser = 45
+	bullet = 50
+	laser = 50
 	energy = 45
 	fire = 60
 	acid = 80

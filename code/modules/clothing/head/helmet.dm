@@ -267,7 +267,7 @@
 
 /datum/armor/toggleable_riot/heavy
 	melee = 60
-	bullet = 35
+	bullet = 40
 	laser = 5
 	energy = 5
 	fire = 80

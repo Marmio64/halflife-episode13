@@ -121,7 +121,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 25 SECONDS
+	cooldown_time = 30 SECONDS
 	item_type = /obj/item/grenade/flashbang/deployment
 	requires_hands = TRUE
 	delete_old = TRUE

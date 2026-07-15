@@ -65,8 +65,8 @@
 //Flash
 	if(!istype(living_mob.loc, /obj/structure/closet/cardboard) && !HAS_TRAIT(src, TRAIT_NOFLASH)) //hl13 edit
 		living_mob.flash_act(intensity = 2, affect_silicon = 1)
-		living_mob.Immobilize(max(20/max(1, distance), 5))
-		living_mob.adjust_confusion(max(40/max(1, distance), 20))
+		living_mob.Immobilize(max(25/max(1, distance), 10))
+		living_mob.adjust_confusion(max(50/max(1, distance), 25))
 
 /// hl13 edit end
 
