@@ -118,4 +118,12 @@
 	emag_only = TRUE
 	occupancy_limit = "15"
 
+/datum/map_template/shuttle/emergency/caravan
+	suffix = "caravan"
+	name = "Black Market Caravan Hauler"
+	credit_cost = CARGO_CRATE_VALUE * 12
+	description = "Hello, dear reader. We have received the signal from your hacked communications console and have an active proposition. We anonymous smugglers at the Black Market can offer you a visit from our trade caravan, should you be willing to put down an investment to ensure your city is trustworthy. Just know that no items aboard are free, yes? There will be consequences if harm is done to our tradesmen."
+	emag_only = TRUE
+	occupancy_limit = "15"
+
 #undef EMAG_LOCKED_SHUTTLE_COST
