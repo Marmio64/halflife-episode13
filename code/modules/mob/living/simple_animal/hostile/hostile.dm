@@ -29,6 +29,8 @@
 	var/projectilesound
 	///set ONLY it and NULLIFY projectiletype, if we have projectile IN CASING
 	var/casingtype
+	///spread for the casing
+	var/casing_spread = 0
 	///delay for the automated movement.
 	var/move_to_delay = 3
 	///List of mobs this mob is friendly towards
@@ -482,7 +484,7 @@
 			targeted_zone = targeted_mob.get_random_valid_zone()
 		else
 			targeted_zone = ran_zone()
-		casing.fire_casing(targeted_atom, src, null, null, null, targeted_zone, 0,  src)
+		casing.fire_casing(targeted_atom, src, null, null, null, targeted_zone, casing_spread,  src)
 		return
 	if(projectiletype)
 		fire_projectile(projectiletype, targeted_atom, projectilesound)
