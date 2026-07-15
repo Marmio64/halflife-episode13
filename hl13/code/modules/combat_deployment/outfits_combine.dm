@@ -875,6 +875,8 @@
 	extra_end = 10
 	extra_per = 5
 
+	traits_to_add = list(TRAIT_NOSOFTCRIT)
+
 /obj/item/clothing/suit/hooded/hev/deathmatch/boss/blu
 	hoodtype = /obj/item/clothing/head/hooded/hevhood/blu
 
@@ -974,6 +976,8 @@
 	extra_end = 10
 	extra_per = 10
 
+	traits_to_add = list(TRAIT_NOSOFTCRIT)
+
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss/blu
 
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss/blu/Initialize()
@@ -1000,6 +1004,8 @@
 	extra_dex = 10
 	extra_str = 8
 	extra_end = 10
+
+	traits_to_add = list(TRAIT_NOSOFTCRIT)
 
 /datum/outfit/deployment_loadout/combine/boss/extract_vortigaunt/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/vortigaunt/extract_boss/blu)

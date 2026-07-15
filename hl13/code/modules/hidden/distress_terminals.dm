@@ -147,8 +147,8 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 
 /obj/machinery/combine_distressterminal/boss
 	activation_time = 5 SECONDS
-	attempts_to_complete = 4
-	max_attempts_to_complete = 4
-	max_overloaded_attempts = 5
+	attempts_to_complete = 6
+	max_attempts_to_complete = 6
+	max_overloaded_attempts = 7
 	wait_for_grace = TRUE
-	sabotage_time = 6 SECONDS
+	sabotage_time = 4 SECONDS

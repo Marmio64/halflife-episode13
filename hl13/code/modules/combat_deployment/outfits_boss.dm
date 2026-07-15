@@ -75,6 +75,8 @@
 	extra_end = 10
 	extra_per = 5
 
+	traits_to_add = list(TRAIT_NOSOFTCRIT)
+
 /obj/item/clothing/glasses/regular/thin/thermals
 	vision_flags = SEE_MOBS
 	color_cutoffs = list(40, 40, 40)
@@ -221,6 +223,8 @@
 	extra_end = 10
 	extra_per = 10
 
+	traits_to_add = list(TRAIT_NOSOFTCRIT)
+
 ////////// EXTRACT VORT //////////////////////////////////////////////////////////////////////////////
 
 /datum/outfit/deployment_loadout/boss/extract_vortigaunt
@@ -238,11 +242,11 @@
 	extra_str = 8
 	extra_end = 10
 
+	traits_to_add = list(TRAIT_NOSOFTCRIT)
+
 /datum/outfit/deployment_loadout/boss/extract_vortigaunt/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/vortigaunt/extract_boss)
 	H.cmode_music = combat_music
-
-
 
 
 

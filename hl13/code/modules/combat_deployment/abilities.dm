@@ -112,6 +112,20 @@
 	requires_hands = TRUE
 	delete_old = TRUE
 
+/datum/action/cooldown/spell/conjure_item/flashbang
+	name = "Procure Flashbang"
+	desc = "Procures a flashbang for tossing, in order to confuse and disorient enemies. Removes the prior flashbang you summon if it is unused!"
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "flashbang"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 25 SECONDS
+	item_type = /obj/item/grenade/flashbang/deployment
+	requires_hands = TRUE
+	delete_old = TRUE
+
 /datum/action/cooldown/spell/conjure_item/rocket
 	name = "Procure RPG Rocket"
 	desc = "Procures a rocket for you to use in rocket launchers."

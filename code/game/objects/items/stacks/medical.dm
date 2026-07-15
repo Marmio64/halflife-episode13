@@ -142,7 +142,7 @@
 	else if(isanimal_or_basicmob(patient))
 		if(!try_heal_checks(patient, user, heal_brute, heal_burn))
 			return FALSE
-		if(patient.heal_bodypart_damage((heal_brute * patient.maxHealth/100)))
+		if(patient.heal_bodypart_damage(heal_brute))
 			user.visible_message(span_infoplain(span_green("[user] applies [src] on [patient].")), span_infoplain(span_green("You apply [src] on [patient].")))
 			return TRUE
 	patient.balloon_alert(user, "can't heal [patient]!")

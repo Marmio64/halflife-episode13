@@ -275,7 +275,7 @@
 /datum/outfit/deployment_loadout/rebel/tier3/mp7_rebel
 	name = "Deployment: MP7 Rebel"
 	display_name = "MP7 Rebel (Offense)"
-	desc = "Moderately armored and equipped with a MP7 alongside two healthpens and a grenade, these rebels have decent combat capabilities overall."
+	desc = "Moderately armored and equipped with a MP7 alongside a healthpen, medkit, and a grenade, these rebels have decent combat capabilities overall."
 	id_name = "Rebel"
 
 	uniform = /obj/item/clothing/under/citizen/rebel
@@ -293,7 +293,7 @@
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/mp7 = 4,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
-		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
 	)
 
@@ -332,7 +332,7 @@
 /datum/outfit/deployment_loadout/rebel/tier3/mosin_soldier
 	name = "Deployment: Mosin Soldier"
 	display_name = "Mosin Soldier (Defense)"
-	desc = "You are armed with a Mosin-nagant for long range attacks while defending bunkers, and a knife bayonet to attach to your rifle when things get close quarters."
+	desc = "You are armed with a Mosin-nagant for long range attacks while defending bunkers, and a knife bayonet to attach to your rifle when things get close quarters. You are also able to use alt right click to look ahead!"
 	id_name = "Private"
 
 	uniform = /obj/item/clothing/under/citizen/refugee/green
@@ -356,8 +356,8 @@
 	alternate_combat_music = 'hl13/sound/music/combat/legionera.ogg'
 
 	extra_str = 5
-	extra_end = 6
-	extra_per = 2
+	extra_end = 5
+	extra_per = 3
 
 /datum/outfit/deployment_loadout/rebel/tier3/vortigaunt
 	name = "Deployment: Vortigaunt"
@@ -521,7 +521,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
-		/obj/item/grenade/flashbang = 1,
+		/obj/item/grenade/flashbang/deployment = 1,
 	)
 
 	ears = /obj/item/radio/headset/syndicate/alt
@@ -530,6 +530,10 @@
 	extra_dex = 2
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/flashbang)
+
+	traits_to_add = list(TRAIT_NOFLASH)
 
 /// TIER 4 ///////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/rebel/tier4
@@ -676,7 +680,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
-		/obj/item/grenade/flashbang = 3,
+		/obj/item/grenade/flashbang/deployment = 3,
 	)
 
 	ears = /obj/item/radio/headset/syndicate/alt
@@ -685,6 +689,11 @@
 	extra_dex = 2
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+
+
+	traits_to_add = list(TRAIT_NOFLASH)
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/flashbang)
 
 /datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel
 	name = "Deployment: Heavy Rebel Bomber"
@@ -1273,6 +1282,8 @@
 	extra_end = 10
 	extra_per = 5
 
+	traits_to_add = list(TRAIT_NOSOFTCRIT)
+
 /obj/item/clothing/suit/hooded/hev/deathmatch/boss/red
 	hoodtype = /obj/item/clothing/head/hooded/hevhood/red
 
@@ -1372,6 +1383,8 @@
 	extra_end = 10
 	extra_per = 10
 
+	traits_to_add = list(TRAIT_NOSOFTCRIT)
+
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss/red
 
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss/red/Initialize()
@@ -1398,6 +1411,8 @@
 	extra_dex = 10
 	extra_str = 8
 	extra_end = 10
+
+	traits_to_add = list(TRAIT_NOSOFTCRIT)
 
 /datum/outfit/deployment_loadout/rebel/boss/extract_vortigaunt/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/vortigaunt/extract_boss/red)

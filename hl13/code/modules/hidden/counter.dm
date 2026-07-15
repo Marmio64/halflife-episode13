@@ -49,7 +49,7 @@ GLOBAL_VAR_INIT(terminal_grace_time, 0)
 /obj/machinery/the_hidden_time_counter/boss
 	target_name = "Boss"
 	match_type = "Boss"
-	terminal_grace_time = 1.5 MINUTES
+	terminal_grace_time = 45 SECONDS
 	terminal_grace_period_up = FALSE
 
 /obj/machinery/the_hidden_time_counter/boss/double_players

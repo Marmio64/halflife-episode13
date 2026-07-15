@@ -55,6 +55,21 @@
 			living_mob.Knockdown(30)
 		living_mob.soundbang_act(1, max(150 / max(1, distance), 60), rand(0, 4))
 
+///hl13 tdm one for rebels
+/obj/item/grenade/flashbang/deployment/bang(turf/turf, mob/living/living_mob)
+	if(living_mob.stat == DEAD) //They're dead!
+		return
+	living_mob.show_message(span_warning("BANG"), MSG_AUDIBLE)
+	var/distance = max(0, get_dist(get_turf(src), turf))
+
+//Flash
+	if(!istype(living_mob.loc, /obj/structure/closet/cardboard) && !HAS_TRAIT(src, TRAIT_NOFLASH)) //hl13 edit
+		living_mob.flash_act(intensity = 2, affect_silicon = 1)
+		living_mob.Immobilize(max(20/max(1, distance), 5))
+		living_mob.adjust_confusion(max(40/max(1, distance), 20))
+
+/// hl13 edit end
+
 /obj/item/grenade/stingbang
 	name = "stingbang"
 	desc = "A hand grenade with an adjustable timer. When detonated, shoots out a cloud of less-lethal rubber pellets to disperse crowds."

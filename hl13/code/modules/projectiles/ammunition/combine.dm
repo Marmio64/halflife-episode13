@@ -42,6 +42,7 @@
 	caliber = CALIBER_PULSROUND
 	projectile_type = /obj/projectile/bullet/flechette
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse
+	variance = 4
 
 /obj/item/ammo_casing/caseless/Initialize(mapload)
 	. = ..()

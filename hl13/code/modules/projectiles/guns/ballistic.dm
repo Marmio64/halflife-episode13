@@ -592,6 +592,9 @@
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/trench
 	can_be_sawn_off = FALSE //bayonet
 
+	inhand_x_dimension = 32
+	inhand_y_dimension = 32
+
 	item_flags = SLOWS_WHILE_IN_HAND | NEEDS_PERMIT
 
 	slowdown = 0.2
