@@ -253,9 +253,21 @@
 	AddComponent(/datum/component/clothing_fov_visor, FOV_180_DEGREES) //hl13 edit
 	ADD_TRAIT(src, TRAIT_NOHEADWEAR_MASK_EXEMPT, CLOTHING_TRAIT)
 
+/obj/item/clothing/head/helmet/toggleable/riot/heavy
+	armor_type = /datum/armor/toggleable_riot/heavy
+
 /datum/armor/toggleable_riot
 	melee = 35
 	bullet = 5
+	laser = 5
+	energy = 5
+	fire = 80
+	acid = 80
+	wound = 15
+
+/datum/armor/toggleable_riot/heavy
+	melee = 60
+	bullet = 35
 	laser = 5
 	energy = 5
 	fire = 80

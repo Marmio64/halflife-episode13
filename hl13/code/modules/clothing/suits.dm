@@ -347,7 +347,7 @@
 	shield_type = /obj/item/shield/wallhammer/weak
 
 /datum/armor/wallhammerarmor
-	melee = 60
+	melee = 70
 	bullet = 60
 	laser = 40
 	energy = 40
@@ -922,7 +922,7 @@
 	slowdown = 0.75
 
 /datum/armor/plf_veteran
-	melee = 60 //bulky EOD suit
+	melee = 70 //bulky EOD suit
 	bullet = 70 //enough kevlar to kill god
 	laser = 60
 	energy = 90

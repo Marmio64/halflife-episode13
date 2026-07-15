@@ -507,17 +507,17 @@
 
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	glasses = /obj/item/clothing/glasses/sunglasses
-	mask = /obj/item/clothing/mask/gas/hl2/military
+
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/usp_stunbaton
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/flashlight/seclite
 	head = /obj/item/clothing/head/costume/polishpolice
-	uniform = /obj/item/clothing/under/rank/security/officer/spacepol/halflife
+	uniform = /obj/item/clothing/under/halflife/police
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 
-	back = /obj/item/storage/backpack/halflife/satchel/military
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
@@ -595,8 +595,8 @@
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier4/trench
-	name = "Deployment: PLF Trencher"
-	display_name = "PLF Trencher (Offense)"
+	name = "Deployment: PLF Trench Gunner"
+	display_name = "PLF Trench Gunner (Offense)"
 	desc = "You are a trench-clearer of the PLF, equipped with a specialised shotgun. While slower than the smugglers who normally provide close-quarters capability, your increased durability should much compensate for that while clearing tight spaces."
 	id_name = "Trencher"
 
@@ -604,10 +604,10 @@
 	mask = /obj/item/clothing/mask/gas/hl2/military/hardened //has only a weak helmet
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/shotgun
 	suit_store = /obj/item/gun/ballistic/shotgun/trench
-	l_pocket = /obj/item/knife/combat //fix bayonets
+	l_pocket = /obj/item/knife/combat/weak //fix bayonets
 	r_pocket = /obj/item/flashlight/seclite
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/poland
-	uniform = /obj/item/clothing/under/syndicate/combat //stylish
+	uniform = /obj/item/clothing/under/halflife/police
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 
@@ -615,12 +615,13 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
-		/obj/item/storage/box/lethalshot = 2,
+		/obj/item/storage/box/lethalshot = 3,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
 	extra_end = 3
+	extra_str = 2
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
 
@@ -628,7 +629,7 @@
 	name = "Deployment: Upgraded Mosin Soldier"
 	display_name = "Upgraded Mosin Soldier (Defense)"
 	desc = "You are armed with a Mosin-nagant for long range attacks while defending bunkers, and a knife bayonet to attach to your rifle when things get close quarters."
-	id_name = "Conscript" //differentiate from the t3 soldier
+	id_name = "Pfc." //differentiate from the t3 soldier
 
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
@@ -662,12 +663,11 @@
 
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar //im Literally just a cop
 	glasses = /obj/item/clothing/glasses/sunglasses
-	mask = /obj/item/clothing/mask/gas/hl2/military/hardened //has only a ceremonial cap
+	head = /obj/item/clothing/head/beret/sec/poland
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/revolver_flashbangs
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython/well_crafted
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/flashlight/seclite
-	head = /obj/item/clothing/head/costume/polishpolice
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
@@ -935,15 +935,16 @@
 	id_name = "Riot Officer"
 
 	suit = /obj/item/clothing/suit/armor/riot/ballistic
-	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
+	mask = /obj/item/clothing/mask/gas/hl2/swat
 	suit_store = /obj/item/melee/baton/security/heavy/loaded
 	l_pocket = /obj/item/knife/combat/survival
-	r_pocket = /obj/item/flashlight/seclite
-	head = /obj/item/clothing/head/helmet/toggleable/riot
-	uniform = /obj/item/clothing/under/rank/security/officer/spacepol/halflife
-	shoes = /obj/item/clothing/shoes/combat
+	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
+
+	belt = /obj/item/flashlight/seclite
+
+	head = /obj/item/clothing/head/helmet/toggleable/riot/heavy
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	gloves = /obj/item/clothing/gloves/color/black
-	accessory = /obj/item/clothing/accessory/armband/plf
 
 	back = /obj/item/shield/riot/ballistic
 
@@ -951,7 +952,8 @@
 
 	extra_str = 8 //BONK
 	extra_end = 8
-	extra_dex = -5 //no guns
+	extra_dex = 3
+	extra_per = -8 //no guns
 	combat_music = 'hl13/sound/music/combat/notyouraveragecop.ogg'
 
 /datum/outfit/deployment_loadout/rebel/tier5/freeman

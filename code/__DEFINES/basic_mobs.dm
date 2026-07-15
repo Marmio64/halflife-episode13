@@ -1,4 +1,4 @@
-#define BASIC_MOB_MAX_STAMINALOSS 200
+#define BASIC_MOB_MAX_STAMINALOSS 150
 
 ///Basic mob flags
 

@@ -603,7 +603,7 @@
 
 /obj/item/reagent_containers/cup/glass/bottle/fernet
 	name = "Fernet Bronca"
-	desc = "A bottle of pure Fernet Bronca, produced in Cordoba Space Station"
+	desc = "A bottle of pure Fernet Bronca, produced in Cordoba. Maybe."
 	icon_state = "fernetbottle"
 	list_reagents = list(/datum/reagent/consumable/ethanol/fernet = 80)
 

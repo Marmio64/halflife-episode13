@@ -64,6 +64,12 @@
 	/// The RMB context to show when the baton is inactive and targeting a living thing
 	var/context_living_rmb_inactive = "Attack"
 
+	/// How much armor does our baton ignore? This operates as armour penetration, but only applies to the stun attack.
+	var/stun_armour_penetration = 25 // pens low to mid grade armor decently
+
+	/// What armor does our stun attack check before delivering the attack?
+	var/armour_type_against_stun = MELEE
+
 /obj/item/melee/baton/Initialize(mapload)
 	. = ..()
 	// Adding an extra break for the sake of presentation
@@ -224,7 +230,8 @@
 			if(prob(force_say_chance))
 				human_target.force_say()
 			human_target.adjust_temppain(30) //hl13 edit, batons HURT
-		target.apply_damage(stamina_damage, STAMINA)
+		var/armour_block = target.run_armor_check(BODY_ZONE_CHEST, armour_type_against_stun, null, null, stun_armour_penetration)
+		target.apply_damage(stamina_damage, STAMINA, blocked = armour_block)
 		target.flash_fullscreen("redflash1") //hl13 edit, batons HURT
 		if(!trait_check)
 			target.Knockdown((isnull(stun_override) ? knockdown_time : stun_override))
@@ -474,6 +481,8 @@
 	drop_sound = 'sound/items/baton/stun_baton_inactive_drop.ogg'
 	pickup_sound = 'sound/items/baton/stun_baton_inactive_pickup.ogg'
 	sound_vary = TRUE
+
+	stun_armour_penetration = 35
 
 	var/throw_stun_chance = 35
 	var/obj/item/stock_parts/power_store/cell
@@ -879,6 +888,7 @@
 	throwforce = 10
 	w_class = WEIGHT_CLASS_BULKY
 	stamina_damage = 55
+	stun_armour_penetration = 50
 	cooldown = 1.5 SECONDS
 
 	wdefense = 4

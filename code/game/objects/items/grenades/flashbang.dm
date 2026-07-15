@@ -46,14 +46,14 @@
 
 //Bang
 	if(!distance || loc == living_mob || loc == living_mob.loc)
-		living_mob.Paralyze(20)
-		living_mob.Knockdown(200)
-		living_mob.soundbang_act(1, 200, 10, 15)
+		living_mob.Paralyze(2 SECONDS)
+		living_mob.Knockdown(6 SECONDS)
+		living_mob.soundbang_act(1, 150, 10, 15)
 	else
 		if(distance <= 1) // Adds more stun as to not prime n' pull (#45381)
 			living_mob.Paralyze(5)
 			living_mob.Knockdown(30)
-		living_mob.soundbang_act(1, max(200 / max(1, distance), 60), rand(0, 5))
+		living_mob.soundbang_act(1, max(150 / max(1, distance), 60), rand(0, 4))
 
 /obj/item/grenade/stingbang
 	name = "stingbang"

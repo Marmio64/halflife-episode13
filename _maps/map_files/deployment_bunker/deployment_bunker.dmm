@@ -130,8 +130,14 @@
 /area/halflife/indoors/bunker)
 "hq" = (
 /obj/machinery/combine_walllight/directional/south,
-/obj/machinery/ammo_crate/heavy/recharge{
-	ammo_amount = 1
+/obj/structure/table/halflife/metal/grate,
+/obj/item/ammo_casing/pulse/energyball{
+	pixel_x = -8;
+	pixel_y = 0
+	},
+/obj/item/ammo_casing/pulse/energyball{
+	pixel_x = 8;
+	pixel_y = 0
 	},
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)

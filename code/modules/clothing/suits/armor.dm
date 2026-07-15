@@ -333,8 +333,14 @@
 	wound = 20
 
 /obj/item/clothing/suit/armor/riot/ballistic
-	desc = "A set of heavily padded, kevlar-weave riot armour. Excellent at deflecting melee attacks, and pretty good for bullets too."
+	desc = "A very old collection of riot suit pieces stitched together under a heavily padded trenchcoat. Despite the shoddy appearence, it is very protective against both melee and projectiles."
 	armor = /datum/armor/armor_ballistic_riot
+	icon_state = "oldriotsuit"
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
+/obj/item/clothing/suit/armor/riot/ballistic/init_rustle_component()
+	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_ARMOR_STEP)
 
 
 /obj/item/clothing/suit/armor/balloon_vest

@@ -577,12 +577,25 @@
 
 /obj/item/gun/ballistic/shotgun/trench
 	name = "trench shotgun"
-	desc = "A sturdy wooden shotgun with a long magazine tube and bayonet lug, favoured by the Polish Liberation Front's trench-clearing troops. The use of this pattern of shotgun mostly faded out following the World Wars, though they remained popular in sporting markets - the PLF were all too happy to weld the bayonet lugs back on to these antiquated weapons when the call to arms echoed out, and they now find frequent use in high-stakes environments where the more modern SPAS-12 proves potentially unreliable."
-	icon_state = "riotshotgun"
-	inhand_icon_state = "shotgun"
-	fire_delay = 4 //BLAMBLAMBLAMBLAMBLAM
+	desc = "A sturdy though heavy wooden shotgun with a long magazine tube and bayonet lug, favoured by the Polish Liberation Front's trench-clearing troops. The use of this pattern of shotgun mostly faded out following the World Wars, though they remained popular in sporting markets - the PLF were all too happy to weld the bayonet lugs back on to these antiquated weapons when the call to arms echoed out, and they now find frequent use in high-stakes environments where the more modern SPAS-12 proves potentially unreliable."
+	icon = 'hl13/icons/obj/guns/wideguns.dmi'
+	icon_state = "trenchgun"
+	inhand_icon_state = "trenchgun"
+	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
+	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
+
+	hitsound = 'hl13/sound/halflifeweapons/riot_shotgun.ogg'
+	rack_sound = "hl13/sound/weapons/shotgunpump.ogg"
+	load_sound = "hl13/sound/weapons/shotgunreload.ogg"
+
+	fire_delay = 6 //BLAMBLAMBLAMBLAMBLAM
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/trench
 	can_be_sawn_off = FALSE //bayonet
+
+	item_flags = SLOWS_WHILE_IN_HAND | NEEDS_PERMIT
+
+	slowdown = 0.2
+	drag_slowdown = 0.2
 
 /obj/item/gun/ballistic/shotgun/trench/add_bayonet_point()
 	AddComponent(/datum/component/bayonet_attachable, offset_x = 32, offset_y = 12)

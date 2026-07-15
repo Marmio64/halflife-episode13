@@ -52,7 +52,7 @@
 	var/response_harm_simple = "hit"
 	var/harm_intent_damage = 3
 	///Maximum amount of stamina damage the mob can be inflicted with total
-	var/max_staminaloss = 200
+	var/max_staminaloss = 150
 	///How much stamina the mob recovers per second
 	var/stamina_recovery = 5
 

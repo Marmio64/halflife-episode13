@@ -22,7 +22,7 @@
 
 	use_radio_beeps_tts = TRUE
 
-	clothing_traits = list(TRAIT_NOHEADWEAR_MASK)
+	clothing_traits = list(TRAIT_NOHEADWEAR_MASK, TRAIT_WEARING_GAS_MASK)
 
 	unique_death = 'hl13/sound/voice/cpdeath/die1.ogg'
 
@@ -130,7 +130,7 @@
 	var/mask_color = /datum/client_colour/civilprotection
 
 /obj/item/clothing/mask/gas/civilprotection/helm_allowed
-	clothing_traits = null
+	clothing_traits = list(TRAIT_WEARING_GAS_MASK)
 	no_headwear = FALSE
 
 /datum/client_colour/civilprotection
@@ -261,7 +261,7 @@
 
 /obj/item/clothing/mask/gas/civilprotection/divisional/sectoral
 	icon_state = "sectoral_mask"
-	clothing_traits = null
+	clothing_traits = list(TRAIT_WEARING_GAS_MASK)
 	no_headwear = FALSE
 
 /obj/item/clothing/mask/gas/civilprotection/divisional/elitebeta

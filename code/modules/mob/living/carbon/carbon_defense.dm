@@ -473,7 +473,7 @@
 		to_chat(src, span_notice("Something bright flashes in the corner of your vision!"))
 
 
-/mob/living/carbon/soundbang_act(intensity = 1, stun_pwr = 20, damage_pwr = 5, deafen_pwr = 15)
+/mob/living/carbon/soundbang_act(intensity = 1, stun_pwr = 20, damage_pwr = 5, deafen_pwr = 12)
 	var/list/reflist = list(intensity) // Need to wrap this in a list so we can pass a reference
 	SEND_SIGNAL(src, COMSIG_CARBON_SOUNDBANG, reflist)
 	intensity = reflist[1]

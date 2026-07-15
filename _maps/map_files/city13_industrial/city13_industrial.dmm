@@ -3052,6 +3052,10 @@
 "ePz" = (
 /turf/cordon,
 /area/halflife/outdoors/alley/restrictedblock)
+"ePC" = (
+/obj/structure/flora/tree/halflife/plain/concrete_thin,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/alley)
 "eQu" = (
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/townhall/civilprotection/equipmentroom)
@@ -4295,6 +4299,9 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/alley/slums)
+"gLu" = (
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/store)
 "gLL" = (
 /obj/modular_map_root/citysouth,
 /turf/closed/wall/halflife/metal,
@@ -4802,7 +4809,6 @@
 	c_tag = "Liaison's Office";
 	dir = 4
 	},
-/obj/item/storage/halflife/hand_box/cookie,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/townhall/secondfloor)
 "hCw" = (
@@ -6693,10 +6699,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/slums)
-"kFK" = (
-/obj/structure/halflife/leaves,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors/alley)
 "kGj" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/table/halflife/metal/alt,
@@ -6719,6 +6721,10 @@
 	},
 /turf/open/openspace,
 /area/halflife/indoors/productioncenter/upper)
+"kHd" = (
+/obj/structure/window/fulltile/halflife/nosmooth/generic,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "kHJ" = (
 /obj/structure/alien/weeds,
 /obj/effect/spawner/random/halflife/loot,
@@ -7532,8 +7538,9 @@
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/productioncenter)
 "lEI" = (
-/turf/open/floor/plating/indoor/concrete,
-/area/halflife/indoors/store)
+/obj/structure/halflife/leaves,
+/turf/open/floor/plating/ground/sidewalk/inner/slums,
+/area/halflife/outdoors/alley)
 "lEJ" = (
 /obj/effect/landmark/navigate_destination/halflife/dispatch,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -11043,10 +11050,6 @@
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
-"rrd" = (
-/obj/structure/flora/tree/halflife/plain/concrete_thin,
-/turf/open/floor/plating/ground/sidewalk/inner,
-/area/halflife/outdoors/alley)
 "rrj" = (
 /obj/machinery/vending/civpro,
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -11460,10 +11463,6 @@
 	dir = 1
 	},
 /area/halflife/indoors/sewer)
-"scf" = (
-/obj/structure/halflife/leaves,
-/turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/alley)
 "scx" = (
 /obj/machinery/vending/breenwater,
 /turf/open/floor/plating/indoor/woodc,
@@ -12104,6 +12103,10 @@
 /obj/item/healthanalyzer,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/hospital)
+"sYT" = (
+/obj/effect/landmark/xeno_spawn,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer)
 "sZN" = (
 /mob/living/basic/halflife/zombie,
 /turf/open/floor/plating/indoor/woodc,
@@ -12663,10 +12666,6 @@
 /obj/structure/halflife/trash/garbage,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/alley)
-"tTA" = (
-/obj/structure/window/fulltile/halflife/nosmooth/generic,
-/turf/open/floor/plating/indoor/metal/combine,
-/area/halflife/indoors/townhall/civilprotection/equipmentroom)
 "tTH" = (
 /obj/machinery/turnstile/brig/halflife/forcefield/cargo/nodirectional{
 	dir = 1
@@ -12700,6 +12699,10 @@
 	},
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/townhall)
+"tYx" = (
+/obj/structure/halflife/leaves,
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/alley)
 "tZe" = (
 /obj/machinery/camera{
 	c_tag = "Nexus Helipad South";
@@ -12917,10 +12920,6 @@
 	},
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/restaurant)
-"ulE" = (
-/obj/effect/landmark/xeno_spawn,
-/turf/open/floor/plating/indoor/metal/plate,
-/area/halflife/indoors/sewer)
 "ulX" = (
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/woodc/mosaic,
@@ -13331,6 +13330,10 @@
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/townhall/secondfloor)
+"uNG" = (
+/mob/living/basic/trooper/rebel/mp7/veteran/boss,
+/turf/closed/wall/halflife/brick,
+/area/halflife/indoors)
 "uNU" = (
 /obj/effect/turf_decal/arrows{
 	dir = 1
@@ -23940,7 +23943,7 @@ xjc
 xjc
 xjc
 siU
-ulE
+sYT
 ldR
 siU
 seY
@@ -24804,7 +24807,7 @@ xjc
 xjc
 siU
 siU
-ulE
+sYT
 ldR
 siU
 mtT
@@ -33959,7 +33962,7 @@ oVh
 oVh
 oVh
 oVh
-oVh
+uNG
 oVh
 oVh
 oVh
@@ -38290,7 +38293,7 @@ vSK
 wnQ
 vSK
 vSK
-lEI
+gLu
 kUs
 sYf
 hgD
@@ -38573,12 +38576,12 @@ kJj
 kJj
 kJj
 kUs
-lEI
-lEI
-lEI
+gLu
+gLu
+gLu
 vSK
 vSK
-lEI
+gLu
 kUs
 xuY
 uYu
@@ -38865,8 +38868,8 @@ lrf
 uPl
 svd
 nSL
-lEI
-lEI
+gLu
+gLu
 kUs
 rEc
 nsS
@@ -45754,7 +45757,7 @@ bDA
 bDA
 bDA
 bDA
-kFK
+tYx
 bDA
 bDA
 tfs
@@ -45898,8 +45901,8 @@ oVh
 oVh
 oVh
 oVh
-rrd
-scf
+ePC
+lEI
 bDA
 tfs
 tfs
@@ -55699,7 +55702,7 @@ hkK
 hkK
 hkK
 hkK
-qxh
+hkK
 qxh
 qxh
 oVh
@@ -58884,7 +58887,7 @@ qyg
 eQu
 eQu
 gBX
-tTA
+kHd
 ovF
 ovF
 ovF
@@ -59028,7 +59031,7 @@ qyg
 eQu
 eQu
 gBX
-tTA
+kHd
 ovF
 ovF
 ovF
@@ -59172,7 +59175,7 @@ eQu
 eQu
 eQu
 gBX
-tTA
+kHd
 ovF
 ovF
 ovF
@@ -59460,7 +59463,7 @@ eQu
 eQu
 eQu
 gBX
-tTA
+kHd
 ovF
 ovF
 ovF
@@ -59604,7 +59607,7 @@ uMw
 eQu
 eQu
 gBX
-tTA
+kHd
 ovF
 ovF
 ovF
@@ -59748,7 +59751,7 @@ mft
 eQu
 eQu
 gBX
-tTA
+kHd
 ovF
 ovF
 ovF

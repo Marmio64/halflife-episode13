@@ -328,6 +328,16 @@
 	acid = 30
 	wound = 5
 
+/obj/item/clothing/under/halflife/police
+	name = "pre-war police uniform"
+	desc = "A well-worn police uniform from before the War, frequently found covering the Polish Free State's law enforcement."
+	has_sensor = NO_SENSORS
+	sensor_mode = SENSOR_OFF
+
+	icon_state = "police"
+	worn_icon = 'hl13/icons/mob/clothing/uniform.dmi'
+	icon = 'hl13/icons/obj/clothing/uniforms.dmi'
+
 /obj/item/clothing/under/citizen/rebel/prisoner
 	name = "Nowy Jutro prisoner uniform"
 	desc = "Full-body grey and worn suit for prison assets. The scanners have been removed forcefully, and it has been moderately reinforced."
