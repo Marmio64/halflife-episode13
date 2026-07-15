@@ -28,6 +28,31 @@
 		/obj/item/clothing/mask/gas/hl2/military, //For covertness, if you wish.
 	)
 
+/datum/outfit/caravan_manager // Black Market Agent exclusive to the shuttle
+	name = "Caravan Manager"
+
+	uniform = /obj/item/clothing/under/halflife/blacksuit
+	suit = /obj/item/clothing/suit/jacket/trenchcoat
+	mask = /obj/item/clothing/mask/gas/hl2/oldmask
+	shoes = /obj/item/clothing/shoes/laceup
+	gloves = /obj/item/clothing/gloves/combat
+
+	back = /obj/item/storage/backpack/halflife/satchel
+
+	l_pocket = /obj/item/switchblade
+	r_pocket = /obj/item/market_uplink/halflife/blackmarket
+
+	id = /obj/item/card/id/advanced
+	id_trim = /datum/id_trim/chameleon/blackmarket
+
+	backpack_contents = list(
+		/obj/item/reagent_containers/pill/patch/medkit,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen,
+		/obj/item/ammo_box/magazine/usp9mm,
+		/obj/item/ammo_box/magazine/usp9mm,
+		/obj/item/gun/ballistic/automatic/pistol/usp,
+	)
+
 /datum/outfit/blackmarket_preview
 	name = "Blackmarket dealer (Preview only)"
 
