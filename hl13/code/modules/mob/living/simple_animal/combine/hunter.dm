@@ -38,7 +38,6 @@
 	minimum_distance = 4
 	projectilesound = 'hl13/sound/creatures/hunter/hunter_fire1.ogg'
 	casingtype = /obj/item/ammo_casing/caseless/flechette
-	casing_spread = 3
 	lighting_cutoff_blue = 25
 	lighting_cutoff = 25
 	deployment_faction = COMBINE_DEPLOYMENT_FACTION
