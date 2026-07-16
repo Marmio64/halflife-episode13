@@ -112,6 +112,20 @@
 	requires_hands = TRUE
 	delete_old = TRUE
 
+/datum/action/cooldown/spell/conjure_item/flashbang
+	name = "Procure Flashbang"
+	desc = "Procures a flashbang for tossing, in order to confuse and disorient enemies. Removes the prior flashbang you summon if it is unused!"
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "flashbang"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 30 SECONDS
+	item_type = /obj/item/grenade/flashbang/deployment
+	requires_hands = TRUE
+	delete_old = TRUE
+
 /datum/action/cooldown/spell/conjure_item/molotov
 	name = "Brew Molotov"
 	desc = "Procures a cheap, homebrewed alcohol accelerant for tossing. Removes the prior molotov you summon if it is unused!"
