@@ -755,6 +755,7 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/molotov)
 
 	alternate_combat_music = 'hl13/sound/music/combat/dreamsofcruelty.ogg' // Pyro
+	alternate_music_chance = 50
 
 	extra_dex = 1
 
