@@ -521,7 +521,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
-		/obj/item/grenade/flashbang = 1,
+		/obj/item/grenade/flashbang/deployment = 1,
 	)
 
 	ears = /obj/item/radio/headset/syndicate/alt
@@ -530,6 +530,14 @@
 	extra_dex = 2
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+
+
+
+	traits_to_add = list(TRAIT_NOFLASH)
+
+
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/flashbang)
 
 /// TIER 4 ///////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/rebel/tier4
@@ -597,25 +605,26 @@
 /datum/outfit/deployment_loadout/rebel/tier4/trench
 	name = "Deployment: PLF Trench Gunner"
 	display_name = "PLF Trench Gunner (Offense)"
-	desc = "You are a trench-clearer of the PLF, equipped with a specialised shotgun. While slower than the smugglers who normally provide close-quarters capability, your increased durability should much compensate for that while clearing tight spaces."
+	desc = "You are a trench-clearer of the PLF, equipped with a specialised shotgun. While slower than the scouts who normally provide close-quarters capability, your increased durability should much compensate for that while clearing tight spaces."
 	id_name = "Trencher"
 
-	suit = /obj/item/clothing/suit/armor/halflife/milvest //not corporal slow but still slower
+	suit = /obj/item/clothing/suit/armor/halflife/milvest //faster than corporal when not holding shotgun, otherwise about the same
 	mask = /obj/item/clothing/mask/gas/hl2/military/hardened //has only a weak helmet
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/shotgun
 	suit_store = /obj/item/gun/ballistic/shotgun/trench
 	l_pocket = /obj/item/knife/combat/weak //fix bayonets
 	r_pocket = /obj/item/flashlight/seclite
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/poland
-	uniform = /obj/item/clothing/under/halflife/police
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
-		/obj/item/storage/box/lethalshot = 3,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
+		/obj/item/storage/box/lethalshot = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -676,7 +685,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
-		/obj/item/grenade/flashbang = 3,
+		/obj/item/grenade/flashbang/deployment = 3,
 	)
 
 	ears = /obj/item/radio/headset/syndicate/alt
@@ -685,6 +694,10 @@
 	extra_dex = 2
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+
+	traits_to_add = list(TRAIT_NOFLASH)
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/flashbang)
 
 /datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel
 	name = "Deployment: Heavy Rebel Bomber"
@@ -955,14 +968,14 @@
 	id_name = "Riot Officer"
 
 	suit = /obj/item/clothing/suit/armor/riot/ballistic
-	mask = /obj/item/clothing/mask/gas/hl2/swat
+	mask = /obj/item/clothing/mask/gas/hl2/swat/hardened
 	suit_store = /obj/item/melee/baton/security/heavy/loaded
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	belt = /obj/item/flashlight/seclite
 
-	head = /obj/item/clothing/head/helmet/toggleable/riot/heavy
+	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland/heavy
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	gloves = /obj/item/clothing/gloves/color/black
 
@@ -975,6 +988,8 @@
 	extra_dex = 3
 	extra_per = -8 //no guns
 	combat_music = 'hl13/sound/music/combat/notyouraveragecop.ogg'
+
+	traits_to_add = list(TRAIT_NOSOFTCRIT)
 
 /datum/outfit/deployment_loadout/rebel/tier5/freeman
 	name = "Deployment: A Free Man"
@@ -1293,6 +1308,8 @@
 	extra_end = 10
 	extra_per = 5
 
+	traits_to_add = list(TRAIT_NOSOFTCRIT)
+
 /obj/item/clothing/suit/hooded/hev/deathmatch/boss/red
 	hoodtype = /obj/item/clothing/head/hooded/hevhood/red
 
@@ -1392,6 +1409,8 @@
 	extra_end = 10
 	extra_per = 10
 
+	traits_to_add = list(TRAIT_NOSOFTCRIT)
+
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss/red
 
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss/red/Initialize()
@@ -1418,6 +1437,8 @@
 	extra_dex = 10
 	extra_str = 8
 	extra_end = 10
+
+	traits_to_add = list(TRAIT_NOSOFTCRIT)
 
 /datum/outfit/deployment_loadout/rebel/boss/extract_vortigaunt/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/vortigaunt/extract_boss/red)
