@@ -23,7 +23,7 @@
 	vary_fire_sound = FALSE
 	accepted_magazine_type = /obj/item/ammo_box/magazine/ar2
 	force = 12
-	recoil = 0.25
+	recoil = 0.2
 	fire_delay = 2
 	burst_size = 1
 	spread = 3
@@ -110,7 +110,7 @@
 	fire_delay = 2
 	burst_size = 1
 	spread = 4
-	recoil = 0.35
+	recoil = 0.3
 	can_suppress = FALSE
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY
@@ -139,6 +139,7 @@
 	fire_sound_volume = 40
 	spawn_magazine_type = /obj/item/ammo_box/magazine/m4a1/famas
 	spread = 5
+	recoil = 0.35
 
 /obj/item/gun/ballistic/automatic/m4a1/famas/Initialize(mapload)
 	. = ..()
@@ -282,7 +283,7 @@
 	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.17 SECONDS, overtime_penalty_cap = 8)
 
 //cargo pack service rifle intended for 'conscripts'. Pretty much the m4a1, but uses smaller magazines with a 20 round capacity rather than 30, and is slightly less accurate.
-//about 1.96 seconds TTK, also has good AP
+//about 2 seconds TTK, also has good AP
 /obj/item/gun/ballistic/automatic/servicerifle
 	name = "\improper Service Rifle"
 	desc = "An old foreign, surplus rifle from decades ago, designed as a relatively cheap but effective weapon. Uses 5.56mm rounds, and remains an effective weapon even though it has a low magazine capacity. Many of these were imported by Poland following the collapse of the Warsaw Pact to arm their rapidly-reorganising military, leaving them now easily-accessible to both the Polish Liberation Front's troops and the Overwatch Conscripted Arm."
@@ -300,7 +301,7 @@
 	fire_delay = 2
 	burst_size = 1
 	spread = 5
-	recoil = 0.5
+	recoil = 0.35
 	can_suppress = FALSE
 	mag_display = TRUE
 	weapon_weight = WEAPON_HEAVY
@@ -326,7 +327,7 @@
 
 /obj/item/gun/ballistic/automatic/servicerifle/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.28 SECONDS, overtime_penalty_freebies = 3, overtime_penalty_increase = 2, overtime_penalty_cap = 15)
+	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = 0.3 SECONDS, overtime_penalty_freebies = 3, overtime_penalty_increase = 2, overtime_penalty_cap = 15)
 
 //the crossbow
 /*
@@ -600,8 +601,8 @@
 
 	item_flags = SLOWS_WHILE_IN_HAND | NEEDS_PERMIT
 
-	slowdown = 0.2
-	drag_slowdown = 0.2
+	slowdown = 0.25
+	drag_slowdown = 0.25
 
 /obj/item/gun/ballistic/shotgun/trench/add_bayonet_point()
 	AddComponent(/datum/component/bayonet_attachable, offset_x = 32, offset_y = 12)

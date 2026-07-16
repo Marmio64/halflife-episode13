@@ -601,10 +601,10 @@
 /datum/outfit/deployment_loadout/rebel/tier4/trench
 	name = "Deployment: PLF Trench Gunner"
 	display_name = "PLF Trench Gunner (Offense)"
-	desc = "You are a trench-clearer of the PLF, equipped with a specialised shotgun. While slower than the smugglers who normally provide close-quarters capability, your increased durability should much compensate for that while clearing tight spaces."
+	desc = "You are a trench-clearer of the PLF, equipped with a specialised shotgun. While slower than the scouts who normally provide close-quarters capability, your increased durability should much compensate for that while clearing tight spaces."
 	id_name = "Trencher"
 
-	suit = /obj/item/clothing/suit/armor/halflife/milvest //not corporal slow but still slower
+	suit = /obj/item/clothing/suit/armor/halflife/milvest //faster than corporal when not holding shotgun, otherwise about the same
 	mask = /obj/item/clothing/mask/gas/hl2/military/hardened //has only a weak helmet
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/shotgun
 	suit_store = /obj/item/gun/ballistic/shotgun/trench
@@ -618,8 +618,9 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
-		/obj/item/storage/box/lethalshot = 3,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
+		/obj/item/storage/box/lethalshot = 1,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
