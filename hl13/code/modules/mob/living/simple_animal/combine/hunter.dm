@@ -24,7 +24,7 @@
 	minbodytemp = 0
 	status_flags = CANPUSH
 	footstep_type = FOOTSTEP_MOB_HUNTER
-	speed = -0.75
+	speed = -0.7
 	death_sound = 'hl13/sound/creatures/hunter/hunter_die3.ogg'
 	var/aggro_sound = list('hl13/sound/creatures/hunter/hunter_foundenemy1.ogg', 'hl13/sound/creatures/hunter/hunter_foundenemy2.ogg', 'hl13/sound/creatures/hunter/hunter_foundenemy3.ogg', 'hl13/sound/creatures/hunter/hunter_pain.ogg')
 	var/idle_sounds = list('hl13/sound/creatures/hunter/hunter_idle1.ogg', 'hl13/sound/creatures/hunter/hunter_idle2.ogg', 'hl13/sound/creatures/hunter/hunter_idle3.ogg', 'hl13/sound/creatures/hunter/hunter_scan.ogg')
@@ -50,17 +50,17 @@
 	cmode_music = 'hl13/sound/music/combat/huntingparty.ogg' //practically a requirement
 
 /mob/living/simple_animal/hostile/halflife/hunter/deployment
-	maxHealth = 180
-	health = 180
+	maxHealth = 160
+	health = 160
 	harm_intent_damage = 19
 	obj_damage = 24
-	speed = -0.45
+	speed = -0.33
 
 /mob/living/simple_animal/hostile/halflife/hunter/deployment/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()
 	if(stat)
 		return
-	adjustHealth(-maxHealth*0.01) //1.8 health every 2 seconds
+	adjustHealth(-maxHealth*0.01) //1.6 health every 2 seconds
 
 /mob/living/simple_animal/hostile/halflife/hunter/deployment/Initialize(mapload)
 	. = ..()
