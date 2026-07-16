@@ -275,7 +275,7 @@
 /datum/outfit/deployment_loadout/rebel/tier3/mp7_rebel
 	name = "Deployment: MP7 Rebel"
 	display_name = "MP7 Rebel (Offense)"
-	desc = "Moderately armored and equipped with a MP7 alongside two healthpens and a grenade, these rebels have decent combat capabilities overall."
+	desc = "Moderately armored and equipped with a MP7 alongside a healthpen, medkit, and a grenade, these rebels have decent combat capabilities overall."
 	id_name = "Rebel"
 
 	uniform = /obj/item/clothing/under/citizen/rebel
@@ -293,7 +293,7 @@
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/mp7 = 4,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
-		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/reagent_containers/pill/patch/medkit = 1,
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
 	)
 
@@ -332,7 +332,7 @@
 /datum/outfit/deployment_loadout/rebel/tier3/mosin_soldier
 	name = "Deployment: Mosin Soldier"
 	display_name = "Mosin Soldier (Defense)"
-	desc = "You are armed with a Mosin-nagant for long range attacks while defending bunkers, and a knife bayonet to attach to your rifle when things get close quarters."
+	desc = "You are armed with a Mosin-nagant for long range attacks while defending bunkers, and a knife bayonet to attach to your rifle when things get close quarters. You are also able to use alt right click to look ahead!"
 	id_name = "Private"
 
 	uniform = /obj/item/clothing/under/citizen/refugee/green
@@ -356,8 +356,8 @@
 	alternate_combat_music = 'hl13/sound/music/combat/legionera.ogg'
 
 	extra_str = 5
-	extra_end = 6
-	extra_per = 2
+	extra_end = 5
+	extra_per = 3
 
 /datum/outfit/deployment_loadout/rebel/tier3/vortigaunt
 	name = "Deployment: Vortigaunt"
@@ -533,11 +533,12 @@
 
 
 
-	traits_to_add = list(TRAIT_NOFLASH)
-
-
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/flashbang)
+
+
+
+	traits_to_add = list(TRAIT_NOFLASH)
 
 /// TIER 4 ///////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/rebel/tier4
@@ -737,7 +738,7 @@
 	id_name = "Pyromaniac"
 
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted/insulated
-	mask = /obj/item/clothing/mask/gas/hl2/swat/hardened
+	mask = /obj/item/clothing/mask/gas/hl2/swat
 	uniform = /obj/item/clothing/under/citizen/rebel
 	gloves = /obj/item/clothing/gloves/color/civilprotection
 	suit = /obj/item/clothing/suit/armor/rebel/light/jacket/insulated
@@ -761,7 +762,6 @@
 	alternate_combat_music = 'hl13/sound/music/combat/dreamsofcruelty.ogg' // Pyro
 
 	extra_dex = 1
-
 
 /datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt
 	name = "Deployment: Elder Vortigaunt"
