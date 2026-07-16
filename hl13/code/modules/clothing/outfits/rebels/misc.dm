@@ -58,6 +58,7 @@
 		/obj/item/ammo_box/magazine/ar2,
 		/obj/item/stack/medical/gauze,
 		/obj/item/storage/box/lethalshot,
+		/obj/item/halflife/combine_battery,
 		/obj/item/reagent_containers/pill/patch/medkit/vial,
 		/obj/item/reagent_containers/cup/glass/bottle, //VODKA HOLDER VODKA HOLDER VODKA HOLDER
 	))
@@ -98,6 +99,13 @@
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/polish_resistance/rebel_riot/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/halflife/combine_battery, src)
+	SSwardrobe.provide_type(/obj/item/halflife/combine_battery, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
+	update_appearance(UPDATE_ICON)
 
 /obj/item/storage/belt/civilprotection/polish_resistance/svd/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/ammo_box/magazine/svd, src)

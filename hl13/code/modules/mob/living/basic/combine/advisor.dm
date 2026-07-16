@@ -41,8 +41,8 @@
 //lore accurate admin spawned version
 /mob/living/basic/halflife/advisor/overpowered
 	speed = 0.4
-	maxHealth = 300
-	health = 300
+	maxHealth = 400
+	health = 400
 	melee_attack_cooldown = 0.8 SECONDS
 	var/datum/action/cooldown/spell/pointed/advisorial_punish/overpowered/overpowered_punish
 
@@ -69,12 +69,6 @@
 
 	ADD_TRAIT(src, TRAIT_MEDICAL_HUD, INNATE_TRAIT)
 	ADD_TRAIT(src, TRAIT_TDM_HUD_COM, INNATE_TRAIT)
-
-/mob/living/basic/halflife/advisor/Life(seconds_per_tick = SSMOBS_DT, times_fired)
-	..()
-	if(stat)
-		return
-	adjust_health(-maxHealth*0.01) //1.5 hp every 2 seconds
 
 /datum/language_holder/advisor
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM))

@@ -766,7 +766,7 @@
 /datum/outfit/deployment_loadout/combine/tier5/advisor
 	name = "Deployment: Advisor"
 	display_name = "Advisor (Support)"
-	desc = "You are a mysterious Combine Advisor. You have various psionic abilities at your disposal for supporting your team and punishing the enemies, but are not good at killing nor are you particularly durable and quick. You have slow passive healing, but can supplement it by devouring the brain matter of people for more restoration."
+	desc = "You are a mysterious Combine Advisor. You have various psionic abilities at your disposal for supporting your team and punishing the enemies, but are not good at killing nor are you particularly durable and quick. You can heal by devouring the brain matter of people for more restoration."
 	uniform = null
 	shoes = null
 	id = null
