@@ -96,6 +96,10 @@
 	desc = "A hand made helmet formed from scraps and kevlar. It's not very good at protecting you in a meaningful way, but every bit counts."
 	icon_state = "steel_helmet"
 	base_icon_state = "steel_helmet"
+/obj/item/clothing/head/helmet/halflife/military/weak/crafted/insulated
+	name = "insulated metal helmet"
+	desc = "A hand made helmet formed from heavy metals resistant to flame. It's not very good at protecting you even against fire, but every bit counts."
+	armor_type = /datum/armor/military_helmet/weak_flame
 
 /obj/item/clothing/head/helmet/halflife/military/weak/combine
 	name = "cracked combine helmet"
@@ -117,6 +121,16 @@
 	bomb = 15
 	fire = 50
 	acid = 50
+	wound = 5
+
+/datum/armor/military_helmet/weak_flame
+	melee = 15
+	bullet = 15
+	laser = 25
+	energy = 25
+	bomb = 15
+	fire = 70
+	acid = 55
 	wound = 5
 
 /obj/item/clothing/head/helmet/halflife/milhelm
@@ -143,27 +157,11 @@
 	acid = 50
 	wound = 10
 
-/datum/armor/milhelm/heavy
-	melee = 50
-	bullet = 50
-	laser = 50
-	energy = 50
-	bomb = 50
-	fire = 50
-	acid = 50
-	wound = 15
-
-/obj/item/clothing/head/helmet/halflife/milhelm/heavy
-	armor_type = /datum/armor/milhelm/heavy
-
 /obj/item/clothing/head/helmet/halflife/milhelm/poland
 	name = "polish military helmet"
 	desc = "A black old world military helmet for protecting your noggin. This one has a band in the colours of the Polish flag wrapped around it."
 	icon_state = "milhelm_poland"
 	base_icon_state = "milhelm_poland"
-
-/obj/item/clothing/head/helmet/halflife/milhelm/poland/heavy
-	armor_type = /datum/armor/milhelm/heavy
 
 /obj/item/clothing/head/helmet/halflife/headcrab
 	name = "headcrab helmet"
