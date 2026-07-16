@@ -591,7 +591,7 @@
 	slot_flags = ITEM_SLOT_SUITSTORE
 	worn_icon_state = null
 
-	fire_delay = 6 //BLAMBLAMBLAMBLAMBLAM
+	fire_delay = 7.5 //bit faster than spas12
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/trench
 	can_be_sawn_off = FALSE //bayonet
 

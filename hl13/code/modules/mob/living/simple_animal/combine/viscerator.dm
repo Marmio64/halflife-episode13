@@ -108,12 +108,12 @@
 	health = 40
 	maxHealth = 40
 	armour_penetration = 15
-	low_power_melee_damage_lower = 3
-	low_power_melee_damage_upper = 5
+	low_power_melee_damage_lower = 1
+	low_power_melee_damage_upper = 1
 	melee_damage_lower = 15
 	melee_damage_upper = 18
 	harm_intent_damage = 8 //5 hits
-	operating_power = 8 //16 seconds till low power
+	operating_power = 7 //14 seconds till low power
 	loot = list()
 	var/shield_hits = 2
 

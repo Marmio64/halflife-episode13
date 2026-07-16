@@ -57,6 +57,7 @@
 	det_time = 1 SECONDS
 	deliveryamt = 1
 	spawner_type = /mob/living/simple_animal/hostile/halflife/viscerator/shielded
+	w_class = WEIGHT_CLASS_NORMAL
 
 /obj/item/grenade/spawnergrenade/spesscarp
 	name = "carp delivery grenade"

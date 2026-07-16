@@ -944,14 +944,14 @@
 	id_name = "Riot Officer"
 
 	suit = /obj/item/clothing/suit/armor/riot/ballistic
-	mask = /obj/item/clothing/mask/gas/hl2/swat
+	mask = /obj/item/clothing/mask/gas/hl2/swat/hardened
 	suit_store = /obj/item/melee/baton/security/heavy/loaded
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	belt = /obj/item/flashlight/seclite
 
-	head = /obj/item/clothing/head/helmet/toggleable/riot/heavy
+	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland/heavy
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	gloves = /obj/item/clothing/gloves/color/black
 
