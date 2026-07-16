@@ -969,7 +969,7 @@
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
-	belt = /obj/item/flashlight/seclite
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/rebel_riot
 
 	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland/heavy
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored

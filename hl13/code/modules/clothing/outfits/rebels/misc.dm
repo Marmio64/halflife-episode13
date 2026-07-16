@@ -102,6 +102,7 @@
 /obj/item/storage/belt/civilprotection/polish_resistance/rebel_riot/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/halflife/combine_battery, src)
 	SSwardrobe.provide_type(/obj/item/halflife/combine_battery, src)
+	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
 	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
 	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/vial, src)
