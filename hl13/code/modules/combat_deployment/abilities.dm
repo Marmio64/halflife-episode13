@@ -126,6 +126,20 @@
 	requires_hands = TRUE
 	delete_old = TRUE
 
+/datum/action/cooldown/spell/conjure_item/molotov
+	name = "Brew Molotov"
+	desc = "Procures a cheap, homebrewed alcohol accelerant for tossing. Removes the prior molotov you summon if it is unused!"
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "molotov"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 20 SECONDS
+	item_type = /obj/item/grenade/halflife/molotov
+	requires_hands = TRUE
+	delete_old = TRUE
+
 /datum/action/cooldown/spell/conjure_item/rocket
 	name = "Procure RPG Rocket"
 	desc = "Procures a rocket for you to use in rocket launchers."

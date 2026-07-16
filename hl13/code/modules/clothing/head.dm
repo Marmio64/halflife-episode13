@@ -97,6 +97,11 @@
 	icon_state = "steel_helmet"
 	base_icon_state = "steel_helmet"
 
+/obj/item/clothing/head/helmet/halflife/military/weak/crafted/insulated
+	name = "insulated metal helmet"
+	desc = "A hand made helmet formed from heavy metals resistant to flame. It's not very good at protecting you even against fire, but every bit counts."
+	armor_type = /datum/armor/military_helmet/weak_flame
+
 /obj/item/clothing/head/helmet/halflife/military/weak/combine
 	name = "cracked combine helmet"
 	desc = "A professional combine helmet. It was never put into full use as the cost of producing these helmets was never deemed worthwhile. This one seems to have been well used, and no longer protects as well."
@@ -117,6 +122,16 @@
 	bomb = 15
 	fire = 50
 	acid = 50
+	wound = 5
+
+/datum/armor/military_helmet/weak_flame
+	melee = 15
+	bullet = 15
+	laser = 25
+	energy = 25
+	bomb = 15
+	fire = 70
+	acid = 55
 	wound = 5
 
 /obj/item/clothing/head/helmet/halflife/milhelm

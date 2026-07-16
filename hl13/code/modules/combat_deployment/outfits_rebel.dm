@@ -691,7 +691,6 @@
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
 
-
 	traits_to_add = list(TRAIT_NOFLASH)
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/flashbang)
@@ -727,18 +726,38 @@
 
 	extra_end = 1
 
-/datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel/incendiary
-	name = "Deployment: Heavy Rebel Incendiary Bomber"
-	display_name = "Heavy Rebel Incendiary Bomber (Offense)"
+/datum/outfit/deployment_loadout/rebel/tier4/pyromaniac // Bomber Sidegrade, more mobility but no tinbombs, instead gets molotovs  and incendiary grenades. Less armor. Somewhat of an equivilant to the combine's T4 Overseer where they do aerial denial with their flames instead of viscerators and have similar weaponry and mobility- succeeded by the firefighter at T5.
+	name = "Deployment: Pyromaniac"
+	display_name = "Pyromaniac (Offense)"
+	desc = "Sacrifice heavy armor and knockback for area denial and speed. Throw molotovs at chokepoints to lock them down temporarily and pester those who walk around with your MP7. You still take damage from your own fire!"
+	id_name = "Pyromaniac"
 
-	mask = /obj/item/clothing/mask/gas/hl2/military
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted/insulated
+	mask = /obj/item/clothing/mask/gas/hl2/swat
+	uniform = /obj/item/clothing/under/citizen/rebel
+	gloves = /obj/item/clothing/gloves/color/civilprotection
+	suit = /obj/item/clothing/suit/armor/rebel/light/jacket/insulated
+	suit_store = /obj/item/gun/ballistic/automatic/mp7
+
+	back = /obj/item/storage/backpack/halflife/satchel/military
+
+	r_pocket = /obj/item/flashlight/seclite
 
 	backpack_contents = list(
 		/obj/item/grenade/incendiary_grenade = 2,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
-		/obj/item/ammo_casing/a20mm = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2, //burned often.
+		/obj/item/lighter = 1,
 		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/molotov)
+
+	alternate_combat_music = 'hl13/sound/music/combat/dreamsofcruelty.ogg' // Pyro
+	alternate_music_chance = 50
+
+	extra_dex = 1
 
 /datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt
 	name = "Deployment: Elder Vortigaunt"

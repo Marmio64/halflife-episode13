@@ -829,6 +829,14 @@
 
 	limb_integrity = 275
 
+/obj/item/clothing/suit/armor/rebel/light/jacket/insulated
+	name = "insulated resistance light armour jacket"
+	desc = "A Civil Protection chestplate with additional makeshift armor pieces strapped on made of high-grade metal further enhanced by the presence of a cut-up cremator jacket which also provides the user minor insulation from flames, all at the cost of minor mobility loss from the heavy coat."
+	icon_state = "insulatedjacket"
+	inhand_icon_state = "insulatedjacket"
+	slowdown = 0.1
+	armor_type = /datum/armor/rebellight_Jacket_Insulated
+
 /obj/item/clothing/suit/armor/rebel/light/jacket/speedy
 	slowdown = -0.25
 
@@ -856,6 +864,16 @@
 	bomb = 40
 	fire = 30
 	acid = 30
+	wound = 15
+
+/datum/armor/rebellight_Jacket_Insulated
+	melee = 45
+	bullet = 35
+	laser = 55
+	energy = 35
+	bomb = 40
+	fire = 85
+	acid = 40
 	wound = 15
 
 //Fungal plate armor. Provides the same protection as a civil protection officer vest, but slows you down quite a lot.
