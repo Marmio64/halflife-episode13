@@ -275,7 +275,7 @@
 /datum/outfit/deployment_loadout/rebel/tier3/mp7_rebel
 	name = "Deployment: MP7 Rebel"
 	display_name = "MP7 Rebel (Offense)"
-	desc = "Moderately armored and equipped with a MP7 alongside a healthpen, medkit, and a grenade, these rebels have decent combat capabilities overall."
+	desc = "Moderately armored and equipped with a MP7 alongside two healthpens and a grenade, these rebels have decent combat capabilities overall."
 	id_name = "Rebel"
 
 	uniform = /obj/item/clothing/under/citizen/rebel
@@ -293,7 +293,7 @@
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/mp7 = 4,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
-		/obj/item/reagent_containers/pill/patch/medkit = 1,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 		/obj/item/grenade/syndieminibomb/bouncer = 1,
 	)
 
@@ -332,7 +332,7 @@
 /datum/outfit/deployment_loadout/rebel/tier3/mosin_soldier
 	name = "Deployment: Mosin Soldier"
 	display_name = "Mosin Soldier (Defense)"
-	desc = "You are armed with a Mosin-nagant for long range attacks while defending bunkers, and a knife bayonet to attach to your rifle when things get close quarters. You are also able to use alt right click to look ahead!"
+	desc = "You are armed with a Mosin-nagant for long range attacks while defending bunkers, and a knife bayonet to attach to your rifle when things get close quarters."
 	id_name = "Private"
 
 	uniform = /obj/item/clothing/under/citizen/refugee/green
@@ -356,8 +356,8 @@
 	alternate_combat_music = 'hl13/sound/music/combat/legionera.ogg'
 
 	extra_str = 5
-	extra_end = 5
-	extra_per = 3
+	extra_end = 6
+	extra_per = 2
 
 /datum/outfit/deployment_loadout/rebel/tier3/vortigaunt
 	name = "Deployment: Vortigaunt"
@@ -521,7 +521,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
-		/obj/item/grenade/flashbang/deployment = 1,
+		/obj/item/grenade/flashbang = 1,
 	)
 
 	ears = /obj/item/radio/headset/syndicate/alt
@@ -530,10 +530,6 @@
 	extra_dex = 2
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
-
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/flashbang)
-
-	traits_to_add = list(TRAIT_NOFLASH)
 
 /// TIER 4 ///////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/rebel/tier4
@@ -601,26 +597,25 @@
 /datum/outfit/deployment_loadout/rebel/tier4/trench
 	name = "Deployment: PLF Trench Gunner"
 	display_name = "PLF Trench Gunner (Offense)"
-	desc = "You are a trench-clearer of the PLF, equipped with a specialised shotgun. While slower than the scouts who normally provide close-quarters capability, your increased durability should much compensate for that while clearing tight spaces."
+	desc = "You are a trench-clearer of the PLF, equipped with a specialised shotgun. While slower than the smugglers who normally provide close-quarters capability, your increased durability should much compensate for that while clearing tight spaces."
 	id_name = "Trencher"
 
-	suit = /obj/item/clothing/suit/armor/halflife/milvest //faster than corporal when not holding shotgun, otherwise about the same
+	suit = /obj/item/clothing/suit/armor/halflife/milvest //not corporal slow but still slower
 	mask = /obj/item/clothing/mask/gas/hl2/military/hardened //has only a weak helmet
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/shotgun
 	suit_store = /obj/item/gun/ballistic/shotgun/trench
 	l_pocket = /obj/item/knife/combat/weak //fix bayonets
 	r_pocket = /obj/item/flashlight/seclite
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/poland
-	uniform = /obj/item/clothing/under/syndicate/camo/halflife
+	uniform = /obj/item/clothing/under/halflife/police
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
 
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
-		/obj/item/reagent_containers/pill/patch/medkit = 1,
-		/obj/item/storage/box/lethalshot = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/storage/box/lethalshot = 3,
 	)
 
 	ears = /obj/item/radio/headset/rebel_deployment
@@ -681,7 +676,7 @@
 
 	backpack_contents = list(
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
-		/obj/item/grenade/flashbang/deployment = 3,
+		/obj/item/grenade/flashbang = 3,
 	)
 
 	ears = /obj/item/radio/headset/syndicate/alt
@@ -690,11 +685,6 @@
 	extra_dex = 2
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
-
-
-	traits_to_add = list(TRAIT_NOFLASH)
-
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/flashbang)
 
 /datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel
 	name = "Deployment: Heavy Rebel Bomber"
@@ -727,18 +717,38 @@
 
 	extra_end = 1
 
-/datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel/incendiary
-	name = "Deployment: Heavy Rebel Incendiary Bomber"
-	display_name = "Heavy Rebel Incendiary Bomber (Offense)"
+/datum/outfit/deployment_loadout/rebel/tier4/pyromaniac // Bomber Sidegrade, more mobility but no tinbombs, instead gets molotovs  and incendiary grenades. Less armor. Somewhat of an equivilant to the combine's T4 Overseer where they do aerial denial with their flames instead of viscerators and have similar weaponry and mobility- succeeded by the firefighter at T5.
+	name = "Deployment: Pyromaniac"
+	display_name = "Pyromaniac (Offense)"
+	desc = "Sacrifice heavy armor and knockback for area denial and speed. Throw molotovs at chokepoints to lock them down temporarily and pester those who walk around with your MP7. You still take damage from your own fire!"
+	id_name = "Pyromaniac"
 
-	mask = /obj/item/clothing/mask/gas/hl2/military
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted/insulated
+	mask = /obj/item/clothing/mask/gas/hl2/swat/hardened
+	uniform = /obj/item/clothing/under/citizen/rebel
+	gloves = /obj/item/clothing/gloves/color/civilprotection
+	suit = /obj/item/clothing/suit/armor/rebel/light/jacket/insulated
+	suit_store = /obj/item/gun/ballistic/automatic/mp7
+
+	back = /obj/item/storage/backpack/halflife/satchel/military
+
+	r_pocket = /obj/item/flashlight/seclite
 
 	backpack_contents = list(
 		/obj/item/grenade/incendiary_grenade = 2,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
-		/obj/item/ammo_casing/a20mm = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2, //burned often.
+		/obj/item/lighter = 1,
 		/obj/item/ammo_box/magazine/mp7 = 2,
 	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/molotov)
+
+	alternate_combat_music = 'hl13/sound/music/combat/dreamsofcruelty.ogg' // Pyro
+
+	extra_dex = 1
+
 
 /datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt
 	name = "Deployment: Elder Vortigaunt"
@@ -945,14 +955,14 @@
 	id_name = "Riot Officer"
 
 	suit = /obj/item/clothing/suit/armor/riot/ballistic
-	mask = /obj/item/clothing/mask/gas/hl2/swat/hardened
+	mask = /obj/item/clothing/mask/gas/hl2/swat
 	suit_store = /obj/item/melee/baton/security/heavy/loaded
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
 
 	belt = /obj/item/flashlight/seclite
 
-	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland/heavy
+	head = /obj/item/clothing/head/helmet/toggleable/riot/heavy
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	gloves = /obj/item/clothing/gloves/color/black
 
@@ -965,8 +975,6 @@
 	extra_dex = 3
 	extra_per = -8 //no guns
 	combat_music = 'hl13/sound/music/combat/notyouraveragecop.ogg'
-
-	traits_to_add = list(TRAIT_NOSOFTCRIT)
 
 /datum/outfit/deployment_loadout/rebel/tier5/freeman
 	name = "Deployment: A Free Man"
@@ -1285,8 +1293,6 @@
 	extra_end = 10
 	extra_per = 5
 
-	traits_to_add = list(TRAIT_NOSOFTCRIT)
-
 /obj/item/clothing/suit/hooded/hev/deathmatch/boss/red
 	hoodtype = /obj/item/clothing/head/hooded/hevhood/red
 
@@ -1386,8 +1392,6 @@
 	extra_end = 10
 	extra_per = 10
 
-	traits_to_add = list(TRAIT_NOSOFTCRIT)
-
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss/red
 
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss/red/Initialize()
@@ -1414,8 +1418,6 @@
 	extra_dex = 10
 	extra_str = 8
 	extra_end = 10
-
-	traits_to_add = list(TRAIT_NOSOFTCRIT)
 
 /datum/outfit/deployment_loadout/rebel/boss/extract_vortigaunt/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/vortigaunt/extract_boss/red)
