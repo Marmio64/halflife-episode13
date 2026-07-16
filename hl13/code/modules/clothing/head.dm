@@ -96,6 +96,7 @@
 	desc = "A hand made helmet formed from scraps and kevlar. It's not very good at protecting you in a meaningful way, but every bit counts."
 	icon_state = "steel_helmet"
 	base_icon_state = "steel_helmet"
+
 /obj/item/clothing/head/helmet/halflife/military/weak/crafted/insulated
 	name = "insulated metal helmet"
 	desc = "A hand made helmet formed from heavy metals resistant to flame. It's not very good at protecting you even against fire, but every bit counts."
