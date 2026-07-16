@@ -157,11 +157,27 @@
 	acid = 50
 	wound = 10
 
+/datum/armor/milhelm/heavy
+	melee = 50
+	bullet = 50
+	laser = 50
+	energy = 50
+	bomb = 50
+	fire = 50
+	acid = 50
+	wound = 15
+
+/obj/item/clothing/head/helmet/halflife/milhelm/heavy
+	armor_type = /datum/armor/milhelm/heavy
+
 /obj/item/clothing/head/helmet/halflife/milhelm/poland
 	name = "polish military helmet"
 	desc = "A black old world military helmet for protecting your noggin. This one has a band in the colours of the Polish flag wrapped around it."
 	icon_state = "milhelm_poland"
 	base_icon_state = "milhelm_poland"
+
+/obj/item/clothing/head/helmet/halflife/milhelm/poland/heavy
+	armor_type = /datum/armor/milhelm/heavy
 
 /obj/item/clothing/head/helmet/halflife/headcrab
 	name = "headcrab helmet"
