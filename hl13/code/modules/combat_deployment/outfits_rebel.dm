@@ -531,11 +531,7 @@
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
 
-
-
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/flashbang)
-
-
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/flashbang)\
 
 	traits_to_add = list(TRAIT_NOFLASH)
 
