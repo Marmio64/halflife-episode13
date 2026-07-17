@@ -585,12 +585,11 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
-	hitsound = 'hl13/sound/halflifeweapons/riot_shotgun.ogg'
+	fire_sound = 'hl13/sound/halflifeweapons/riot_shotgun.ogg'
 	rack_sound = "hl13/sound/weapons/shotgunpump.ogg"
 	load_sound = "hl13/sound/weapons/shotgunreload.ogg"
 
 	slot_flags = ITEM_SLOT_SUITSTORE
-	worn_icon_state = null
 
 	fire_delay = 7.5 //bit faster than spas12
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/trench
@@ -614,7 +613,6 @@
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "spas12"
 	slot_flags = ITEM_SLOT_SUITSTORE
-	inhand_icon_state = "shotgun_combat"
 	fire_sound = "hl13/sound/weapons/shotgunfire.ogg"
 	rack_sound = "hl13/sound/weapons/shotgunpump.ogg"
 	load_sound = "hl13/sound/weapons/shotgunreload.ogg"
