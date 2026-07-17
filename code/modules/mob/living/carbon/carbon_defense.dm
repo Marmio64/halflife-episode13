@@ -450,7 +450,7 @@
 
 			if(3 to INFINITY)
 				to_chat(src, span_warning("Your eyes itch and burn severely!"))
-				eyes.apply_organ_damage(rand(12, 16))
+				eyes.apply_organ_damage(rand(8, 12))
 
 		if(eyes.damage > 10)
 			adjust_temp_blindness(damage * 2 SECONDS)
