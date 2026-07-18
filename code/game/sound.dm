@@ -217,8 +217,18 @@
 						SEND_SOUND(src, sound('hl13/sound/music/hidden_combine_win.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
 						return
 					else if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
-						SEND_SOUND(src, sound('hl13/sound/music/rebel_win_intruder.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
-						return
+						if(GLOB.crab_character == "solid")
+							SEND_SOUND(src, sound('hl13/sound/music/rebel_win_intruder.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+							return
+						else if(GLOB.crab_character == "old")
+							SEND_SOUND(src, sound('hl13/sound/music/rebel_win_intruder2.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+							return
+						else if(GLOB.crab_character == "bigboss")
+							SEND_SOUND(src, sound('hl13/sound/music/rebel_win_intruder3.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+							return
+						else if(GLOB.crab_character == "raiden")
+							SEND_SOUND(src, sound('hl13/sound/music/rebel_win_intruder4.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+							return
 					else
 						if(prob(50))
 							SEND_SOUND(src, sound('hl13/sound/music/rebel_win1.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
@@ -228,8 +238,18 @@
 							return
 				else if(GLOB.deployment_win_team == COMBINE_DEPLOYMENT_FACTION)
 					if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
-						SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_intruder.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
-						return
+						if(GLOB.crab_character == "solid")
+							SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_intruder.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+							return
+						else if(GLOB.crab_character == "old")
+							SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_intruder2.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+							return
+						else if(GLOB.crab_character == "bigboss")
+							SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_intruder3.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+							return
+						else if(GLOB.crab_character == "raiden")
+							SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_intruder4.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+							return
 					else
 						SEND_SOUND(src, sound('hl13/sound/music/rebel_loss.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
 						return
@@ -256,8 +276,18 @@
 						SEND_SOUND(src, sound('hl13/sound/music/hidden_combine_win.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
 						return
 					else if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
-						SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_intruder.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC)) //I want them to hear crab's loss
-						return
+						if(GLOB.crab_character == "solid")
+							SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_intruder.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+							return
+						else if(GLOB.crab_character == "old")
+							SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_intruder2.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+							return
+						else if(GLOB.crab_character == "bigboss")
+							SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_intruder3.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+							return
+						else if(GLOB.crab_character == "raiden")
+							SEND_SOUND(src, sound('hl13/sound/music/rebel_loss_intruder4.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
+							return
 					else
 						SEND_SOUND(src, sound('hl13/sound/music/combine_win.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
 						return

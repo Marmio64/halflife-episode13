@@ -1,13 +1,50 @@
 #define PHRASE_COOLDOWN (3 SECONDS)
 
-/datum/outfit/deployment_loadout/intruder/solid
+/obj/item/hl2/loadout_picker/intruder/the_intruder/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/outfit/deployment_loadout/intruder/solid/crab,
+			/datum/outfit/deployment_loadout/intruder/solid/raiden,
+			/datum/outfit/deployment_loadout/intruder/solid/old,
+			/datum/outfit/deployment_loadout/intruder/solid/bigboss,
+		)
+		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.display_name)] = loadout
+	return loadouts
+
+/obj/item/hl2/loadout_picker/intruder/the_intruder/consume_use(datum/outfit/deployment_loadout/outfit_choice, mob/living/user)
+	if(outfit_choice == /datum/outfit/deployment_loadout/intruder/solid/crab)
+		GLOB.crab_character = "solid"
+	if(outfit_choice == /datum/outfit/deployment_loadout/intruder/solid/old)
+		GLOB.crab_character = "old"
+	if(outfit_choice == /datum/outfit/deployment_loadout/intruder/solid/bigboss)
+		GLOB.crab_character = "bigboss"
+	if(outfit_choice == /datum/outfit/deployment_loadout/intruder/solid/raiden)
+		GLOB.crab_character = "raiden"
+	..()
+
+/datum/outfit/deployment_loadout/intruder/solid/blank
+	faction = REBEL_DEPLOYMENT_FACTION
+	name = "BLANK OPERATIVE"
+
+	mask = /obj/item/clothing/mask/balaclava/protective
+	uniform = /obj/item/clothing/under/syndicate/combat
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
+	gloves = /obj/item/clothing/gloves/color/black
+	ears = /obj/item/radio/headset
+
+	l_hand = /obj/item/hl2/loadout_picker/intruder/the_intruder
+
+/datum/outfit/deployment_loadout/intruder/solid/crab
 	faction = REBEL_DEPLOYMENT_FACTION
 	name = "Solid Crab"
 	display_name = "Solid Crab"
 	desc = "One of the PLF's greatest assets. A master of CQC and stealth. Smoking is hazardous to your health."
 
 	head = /obj/item/clothing/head/costume/snakeeater/solid
-	glasses = /obj/item/clothing/glasses/thermal/eyepatch/solid
+	glasses = /obj/item/clothing/glasses/thermal/solid
 	mask = /obj/item/cigarette/halflife
 	uniform = /obj/item/clothing/under/syndicate/combat
 	suit = /obj/item/clothing/suit/armor/halflife/milvest/solid
@@ -17,15 +54,148 @@
 	gloves = /obj/item/clothing/gloves/color/black
 	ears = /obj/item/radio/headset
 
-	l_hand = /obj/item/choice_beacon/intruder_snake_loadout
+	r_hand = /obj/item/choice_beacon/intruder_snake_loadout
 
-	combat_music = 'hl13/sound/music/combat/bigshell.ogg' //i like this alert theme more than encounter tbh
+	combat_music = 'hl13/sound/music/combat/tanker.ogg'
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/intruder_decoy)
 
 	extra_end = 10
 	extra_dex = 5
 	extra_str = 10
+
+/datum/outfit/deployment_loadout/intruder/solid/crab/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.set_haircolor(COLOR_BLACK, update = FALSE)
+	H.skin_tone = "caucasian2"
+	H.set_hairstyle("Business Hair", update = TRUE)
+	H.set_facial_hairstyle("Shaved", update = TRUE)
+	H.update_body(1)
+	H.fully_replace_character_name(H.real_name,"Solid Crab")
+	H.death_sound = 'hl13/sound/effects/snakedeath.ogg'
+	var/obj/item/organ/old_organ = H.get_organ_slot(ORGAN_SLOT_TONGUE)
+	var/obj/item/organ/tongue/solid/new_tongue = new()
+	new_tongue.Insert(H)
+	qdel(old_organ)
+
+/datum/outfit/deployment_loadout/intruder/solid/raiden
+	faction = REBEL_DEPLOYMENT_FACTION
+	name = "Gor-den"
+	display_name = "Gor-den"
+	desc = "A non-existant operative of a non-existant organization, originally sharing a codename with Crab before undergoing this mission. Better than Solid Crab with blades, and far more agile. Might even become a cool cyborg ninja in the future."
+
+	glasses = /obj/item/clothing/glasses/thermal/solid
+	uniform = /obj/item/clothing/under/citizen/rebel/raiden
+	suit = /obj/item/clothing/suit/halflife/invis_grunt_harness
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
+	gloves = /obj/item/clothing/gloves/color/black
+	ears = /obj/item/radio/headset
+	back = /obj/item/katana/raiden
+
+	r_hand = /obj/item/choice_beacon/intruder_snake_loadout
+
+	combat_music = 'hl13/sound/music/combat/bigshell.ogg' //i like this alert theme more than encounter tbh
+
+	spells_to_add = list(/datum/action/cooldown/mob_cooldown/halflife/cartwheel)
+
+	extra_end = 10
+	extra_dex = 5
+	extra_str = 10
+
+/datum/outfit/deployment_loadout/intruder/solid/raiden/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.set_haircolor("#dab57f", update = FALSE)
+	H.skin_tone = "caucasian2"
+	H.set_hairstyle("Curls", update = TRUE)
+	H.set_facial_hairstyle("Shaved", update = TRUE)
+	H.update_body(1)
+	H.fully_replace_character_name(H.real_name,"Gor-den")
+	H.death_sound = 'hl13/sound/voice/solid/spydeath.ogg'
+	var/obj/item/organ/old_organ = H.get_organ_slot(ORGAN_SLOT_TONGUE)
+	var/obj/item/organ/tongue/solid/raiden/new_tongue = new()
+	new_tongue.Insert(H)
+	qdel(old_organ)
+
+/datum/outfit/deployment_loadout/intruder/solid/old
+	faction = REBEL_DEPLOYMENT_FACTION
+	name = "Old Crab"
+	display_name = "Old Crab"
+	desc = "Formerly one of the PLF's greatest assets. You have access to a special suit with camouflage capabilities, but age seems to have slowed you down quite a bit."
+
+	head = /obj/item/clothing/head/costume/snakeeater/solid
+	glasses = /obj/item/clothing/glasses/thermal/eyepatch/solid
+	mask = /obj/item/cigarette/halflife
+	uniform = /obj/item/clothing/under/syndicate/combat
+	suit = /obj/item/clothing/suit/armor/halflife/milvest/solid/old
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
+	l_pocket = /obj/item/storage/fancy/cigarettes/halflife
+	r_pocket = /obj/item/lighter
+	gloves = /obj/item/clothing/gloves/color/black
+	ears = /obj/item/radio/headset
+
+	r_hand = /obj/item/choice_beacon/intruder_snake_loadout
+
+	combat_music = 'hl13/sound/music/combat/middleeastalert.ogg'
+
+	extra_end = 10
+	extra_dex = 5
+	extra_str = 10
+
+/datum/outfit/deployment_loadout/intruder/solid/old/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.set_haircolor("#ddddddbb", update = FALSE)
+	H.set_facial_haircolor("#ddddddbb", update = FALSE)
+	H.skin_tone = "caucasian2"
+	H.set_hairstyle("Business Hair", update = TRUE)
+	H.set_facial_hairstyle("Moustache (Selleck)", update = TRUE)
+	H.update_body(1)
+	H.fully_replace_character_name(H.real_name,"Old Crab")
+	H.death_sound = 'hl13/sound/voice/solid/oldsnakedeath.ogg'
+	var/obj/item/organ/old_organ = H.get_organ_slot(ORGAN_SLOT_TONGUE)
+	var/obj/item/organ/tongue/solid/old/new_tongue = new()
+	new_tongue.Insert(H)
+	qdel(old_organ)
+	H.dna.add_mutation(/datum/mutation/human/chameleon/changeling)
+
+/datum/outfit/deployment_loadout/intruder/solid/bigboss
+	faction = REBEL_DEPLOYMENT_FACTION
+	name = "Naked Crab"
+	display_name = "Naked Crab"
+	desc = "Why is Crab's dead mentor available as an option? Don't think too hard about it. Not much difference between you and your successor, besides being kinda evil compared to him."
+
+	head = /obj/item/clothing/head/costume/snakeeater/solid
+	glasses = /obj/item/clothing/glasses/thermal/eyepatch/solid
+	mask = /obj/item/cigarette/cigar
+	uniform = /obj/item/clothing/under/syndicate/camo
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/bigboss
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
+	l_pocket = /obj/item/storage/fancy/cigarettes/cigars
+	r_pocket = /obj/item/lighter
+	gloves = /obj/item/clothing/gloves/fingerless
+	ears = /obj/item/radio/headset
+
+	r_hand = /obj/item/choice_beacon/intruder_snake_loadout
+
+	combat_music = 'hl13/sound/music/combat/battleinthebase.ogg'
+
+	extra_end = 10
+	extra_dex = 5
+	extra_str = 10
+
+/datum/outfit/deployment_loadout/intruder/solid/bigboss/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.set_haircolor("#663300", update = FALSE)
+	H.set_facial_haircolor("#663300", update = FALSE)
+	H.skin_tone = "caucasian2"
+	H.set_hairstyle("Combover", update = TRUE)
+	H.set_facial_hairstyle("Beard (Cropped Fullbeard)", update = TRUE)
+	H.update_body(1)
+	H.fully_replace_character_name(H.real_name,"Naked Crab")
+	H.death_sound = 'hl13/sound/effects/snakedeath.ogg' //couldnt find an isolated version of the mgs3 death scream
+	var/obj/item/organ/old_organ = H.get_organ_slot(ORGAN_SLOT_TONGUE)
+	var/obj/item/organ/tongue/solid/bigboss/new_tongue = new()
+	new_tongue.Insert(H)
+	qdel(old_organ)
 
 /datum/outfit/deployment_loadout/intruder/solid/pre_equip(mob/living/carbon/human/H)
 	.=..()
@@ -49,13 +219,7 @@
 
 /datum/outfit/deployment_loadout/intruder/solid/post_equip(mob/living/carbon/human/H)
 	. = ..()
-	H.set_haircolor(COLOR_BLACK, update = FALSE)
-	H.skin_tone = "caucasian2"
-	H.set_hairstyle("Business Hair", update = TRUE)
-	H.set_facial_hairstyle("Shaved", update = TRUE)
-	H.update_body(0)
-	H.fully_replace_character_name(H.real_name,"Solid Crab")
-	H.death_sound = 'hl13/sound/effects/snakedeath.ogg'
+	H.fully_replace_character_name(H.real_name,"Unknown Operative")
 	H.tired_rate = 0
 	H.remove_quirk(/datum/quirk/claustrophobia)
 	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
@@ -77,13 +241,11 @@
 	loot.Grant(H)
 	var/datum/action/cooldown/spell/touch/remove_mask/unmask = new
 	unmask.Grant(H)
-	var/obj/item/organ/old_organ = H.get_organ_slot(ORGAN_SLOT_TONGUE)
-	var/obj/item/organ/tongue/solid/new_tongue = new()
-	new_tongue.Insert(H)
-	qdel(old_organ)
 
 	H.dna.species.stunmod = 0.25
 	H.mind?.adjust_experience(/datum/skill/scavenging, 2500)
+
+//////// clothing/gear for the operators
 
 /obj/item/clothing/head/costume/snakeeater/solid
 	name = "Sneaking Bandana"
@@ -113,10 +275,54 @@
 		if(hooman.glasses == src)
 			hooman.update_sight()
 
+/obj/item/clothing/glasses/thermal/solid
+	name = "Implanted Radar"
+	desc = "A radar system developed by Lambda implanted directly into your eye, allowing the user to track enemy movements. Can be jammed by the enemy easily when on alert."
+	color_cutoffs = list(40, 40, 40)
+	resistance_flags = INDESTRUCTIBLE
+	icon_state = "invis_grunt_harness" //this will look weird but i just dont care enough and its an invisible (reference) icon when worn so
+	worn_icon_state = "invis_grunt_harness"
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
+/obj/item/clothing/glasses/thermal/solid/Initialize(mapload)
+	. = ..()
+	START_PROCESSING(SSprocessing, src)
+	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EYES)) //for flashbangs. Won't completely stop them, but protects hearing and reduces stun time
+
+/obj/item/clothing/glasses/thermal/solid/process()
+	if(GLOB.alert_cooldown >= 1 SECONDS)
+		vision_flags = 0
+		var/mob/living/carbon/human/hooman = loc
+		if(hooman.glasses == src)
+			hooman.update_sight()
+	else
+		vision_flags = SEE_MOBS|SEE_TURFS|SEE_OBJS
+		var/mob/living/carbon/human/hooman = loc
+		if(hooman.glasses == src)
+			hooman.update_sight()
+
 /obj/item/clothing/suit/armor/halflife/milvest/solid
 	name = "Sneaking Suit"
 	desc = "Provides decent armor without slowing you down."
 	slowdown = -0.35 //you're pretty quick when you need to be, but low dexterity doesn't let you run for very long
+
+/obj/item/clothing/suit/armor/halflife/milvest/solid/old
+	name = "CrabCamo Suit"
+	desc = "Does well at hiding your deteriorating body. Looming mortality aside, allows you to blend in with your environment, like a headcrab! ...okay, this one doesn't make much sense. Is it really necessary to name everything here after a xenian creature?"
+	slowdown = -0.25
+
+/obj/item/clothing/suit/armor/halflife/kevlar/bigboss
+	desc = "A much better kevlar vest than what your opponents are equipped with. Provides decent armor without slowing you down."
+	slowdown = -0.35
+	armor_type = /datum/armor/milvest
+
+/obj/item/clothing/under/citizen/rebel/raiden
+	name = "Skull Suit"
+	desc = "Not as armored as Crab's suit, but allows for more agility and movement. Resembles the human skeleton."
+	slowdown = -0.5
+	icon_state = "raiden"
+	armor_type = /datum/armor/kevlararmor
 
 /obj/item/clothing/shoes/jackboots/civilprotection/solid
 	name = "Sneaking Shoes"
@@ -289,6 +495,10 @@
 
 	..()
 
+/obj/item/katana/raiden
+	name = "HF Blade"
+	desc = "A blade similar to the katana, which also allows you to more easily deflect bullets."
+	block_chance = 80
 
 /obj/item/grenade/decoy
 	name = "noise decoy grenade"
@@ -339,6 +549,54 @@
 		playsound(flashbang_turf, "hl13/sound/weapons/tranqrack.ogg", 60, TRUE, 8, 0.9)
 		sleep(rand(0.25 SECONDS,0.5 SECONDS))
 		qdel(src)
+
+/datum/action/cooldown/mob_cooldown/halflife/cartwheel
+	name = "Cartwheel"
+	desc = "A cartwheel which not only provides extra mobility, but allows you to go through enemies, knocking them down. Does a small (almost negligible) amount of damage to them as well."
+	cooldown_time = 1.5 SECONDS
+
+/datum/action/cooldown/mob_cooldown/halflife/cartwheel/proc/do_cartwheel(move_dir, times_ran)
+	if(times_ran >= 5)
+		return
+	var/turf/T = get_step(get_turf(owner), move_dir)
+	if(T.density)
+		return
+	for(var/obj/structure/window/W in T.contents)
+		return
+	for(var/obj/machinery/door/D in T.contents)
+		return
+	for(var/obj/structure/halflife/fence/F in T.contents)
+		return
+	for(var/obj/machinery/turnstile/S in T.contents)
+		return
+	for(var/obj/effect/koth_grace_field/K in T.contents)
+		return
+	owner.forceMove(T)
+	var/list/hit_things = list()
+	var/throwtarget = get_edge_target_turf(owner, move_dir)
+	for(var/mob/living/L in T.contents - hit_things - owner)
+		hit_things += L
+		if(!L.body_position == LYING_DOWN)
+			owner.visible_message(span_boldwarning("[owner] cartwheels through [L]!"))
+			to_chat(L, span_userdanger("[owner] cartwheels through you, sending you to the ground!"))
+			L.safe_throw_at(throwtarget, 1, 1, src)
+			L.Paralyze(20)
+			L.adjustBruteLoss(5) //barely any damage
+			playsound(owner,SFX_SWING_HIT,50,TRUE)
+	addtimer(CALLBACK(src, PROC_REF(do_cartwheel), move_dir, (times_ran + 1)), 1)
+
+/datum/action/cooldown/mob_cooldown/halflife/cartwheel/proc/begin_cartwheel(target)
+	var/dir_to_target = get_dir(get_turf(owner), get_turf(target))
+	owner.setDir(dir_to_target)
+	playsound(owner,'hl13/sound/effects/raidencartwheel.ogg', 50, FALSE)
+	owner.visible_message(span_boldwarning("[owner] does a cartwheel!"))
+	owner.emote("flip")
+	addtimer(CALLBACK(src, PROC_REF(do_cartwheel), dir_to_target, 0), 1)
+
+/datum/action/cooldown/mob_cooldown/halflife/cartwheel/Activate(atom/target)
+	begin_cartwheel(target)
+	StartCooldown()
+	return TRUE
 
 /datum/action/cooldown/spell/conjure_item/intruder_decoy
 	name = "Summon Decoy Mannequin"
@@ -440,6 +698,32 @@
 		"Moron" = 'hl13/sound/voice/solid/snakemoron.ogg',
 		"re pretty good" = 'hl13/sound/voice/solid/snakegood.ogg', //as far as i know i can't use ' in these so we'll just leave it at pretty good
 	)
+	var/static/list/old_voicelines = list(
+		"Just like old times" = 'hl13/sound/voice/solid/oldtimes.ogg',
+		"Liquid" = 'hl13/sound/voice/solid/oldliquid.ogg',
+		"Sunlight" = 'hl13/sound/voice/solid/oldsunlight.ogg',
+		"Metal Gear" = 'hl13/sound/voice/solid/oldmetalgear.ogg',
+	)
+	var/static/list/raiden_voicelines = list(
+		"Get real" = 'hl13/sound/voice/solid/raidenreal.ogg',
+		"Not a chance" = 'hl13/sound/voice/solid/raidenchance.ogg',
+		"I want you" = 'hl13/sound/voice/solid/raidenwantsyou.ogg',
+		"Whatever" = 'hl13/sound/voice/solid/raidenwhatever.ogg',
+	)
+
+	var/operativetype = "Solid"
+
+/obj/item/organ/tongue/solid/old
+	actions_types = list(/datum/action/item_action/oldtimes, /datum/action/item_action/liquid, /datum/action/item_action/sunlight, /datum/action/item_action/metalgear)
+	operativetype = "Old"
+
+/obj/item/organ/tongue/solid/bigboss
+	actions_types = list(/datum/action/item_action/waiting, /datum/action/item_action/moron, /datum/action/item_action/prettygood)
+	operativetype = "Big Boss"
+
+/obj/item/organ/tongue/solid/raiden
+	actions_types = list(/datum/action/item_action/getreal, /datum/action/item_action/nochance, /datum/action/item_action/iwantyou, /datum/action/item_action/whatever)
+	operativetype = "Raiden"
 
 /obj/item/organ/tongue/solid/proc/can_use(mob/user)
 	return istype(user) && !user.incapacitated
@@ -453,13 +737,40 @@
 		moron()
 	if(istype(action, /datum/action/item_action/prettygood))
 		prettygood()
+	if(istype(action, /datum/action/item_action/oldtimes))
+		oldtimes()
+	if(istype(action, /datum/action/item_action/sunlight))
+		sunlight()
+	if(istype(action, /datum/action/item_action/metalgear))
+		metalgear()
+	if(istype(action, /datum/action/item_action/getreal))
+		getreal()
+	if(istype(action, /datum/action/item_action/nochance))
+		nochance()
+	if(istype(action, /datum/action/item_action/iwantyou))
+		iwantyou()
+	if(istype(action, /datum/action/item_action/whatever))
+		whatever()
 
 /obj/item/organ/tongue/solid/modify_speech(datum/source, list/speech_args)
 	var/full_message = speech_args[SPEECH_MESSAGE]
-	for(var/lines in snake_voicelines)
-		if(findtext(full_message, lines))
-			playsound(source, snake_voicelines[lines], 50, FALSE)
-			return // only play the first.
+	if(operativetype == "Old")
+		for(var/lines in old_voicelines)
+			if(findtext(full_message, lines))
+				playsound(source, old_voicelines[lines], 50, FALSE)
+				return // only play the first.
+	else if(operativetype == "Raiden")
+		for(var/lines in raiden_voicelines)
+			if(findtext(full_message, lines))
+				playsound(source, raiden_voicelines[lines], 50, FALSE)
+				return // only play the first.
+	else
+		for(var/lines in snake_voicelines)
+			if(lines == "Liquid" && operativetype == "Big Boss")
+				continue //big boss doesnt know liquid
+			if(findtext(full_message, lines))
+				playsound(source, snake_voicelines[lines], 50, FALSE)
+				return // only play the first.
 
 /datum/action/item_action/waiting
 	name = "Kept you waiting, huh?"
@@ -517,6 +828,104 @@
 
 	usr.say("You're pretty good...", forced = src.name)
 
+/datum/action/item_action/oldtimes
+	name = "Just like old times..."
+
+/obj/item/organ/tongue/solid/verb/oldtimes()
+	set category = "Object"
+	set name = "Just like old times..."
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Just like old times...", forced = src.name)
+
+/datum/action/item_action/sunlight
+	name = "SUNLIGHT!!"
+
+/obj/item/organ/tongue/solid/verb/sunlight()
+	set category = "Object"
+	set name = "SUNLIGHT!!"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("SUNLIGHT!!", forced = src.name)
+
+/datum/action/item_action/metalgear
+	name = "Metal Gear?!"
+
+/obj/item/organ/tongue/solid/verb/metalgear()
+	set category = "Object"
+	set name = "Metal Gear?!"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Metal Gear?!", forced = src.name)
+
+/datum/action/item_action/getreal
+	name = "Get real!"
+
+/obj/item/organ/tongue/solid/verb/getreal()
+	set category = "Object"
+	set name = "Get real!"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Get real!", forced = src.name)
+
+/datum/action/item_action/nochance
+	name = "Not a chance!"
+
+/obj/item/organ/tongue/solid/verb/nochance()
+	set category = "Object"
+	set name = "Not a chance!"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Not a chance!", forced = src.name)
+
+/datum/action/item_action/iwantyou
+	name = "I want you..."
+
+/obj/item/organ/tongue/solid/verb/iwantyou()
+	set category = "Object"
+	set name = "I want you..."
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("I want you...", forced = src.name)
+
+/datum/action/item_action/whatever
+	name = "Whatever!"
+
+/obj/item/organ/tongue/solid/verb/whatever()
+	set category = "Object"
+	set name = "Whatever!"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Whatever!", forced = src.name)
+
 #undef PHRASE_COOLDOWN
 
 /obj/item/choice_beacon/intruder_snake_loadout
@@ -552,28 +961,28 @@
 	qdel(just_a_box)
 
 /obj/item/storage/box/intruder_snake/classic
-	name = "Solid Crab - (ALL-ROUNDER, CLASSIC)"
+	name = "Solid Operator - (ALL-ROUNDER, CLASSIC)"
 
 /obj/item/storage/box/intruder_snake/classic/PopulateContents()
 	new /obj/item/storage/belt/civilprotection/polish_resistance/solid(src)
 	new /obj/item/storage/backpack/halflife/satchel/civilprotection/solid/tranq(src)
 
 /obj/item/storage/box/intruder_snake/belligerent
-	name = "Belligerent Crab - (LETHAL, LOUD)"
+	name = "Belligerent Operator - (LETHAL, LOUD)"
 
 /obj/item/storage/box/intruder_snake/belligerent/PopulateContents()
 	new /obj/item/storage/belt/civilprotection/polish_resistance/solid/belligerent(src)
 	new /obj/item/storage/backpack/halflife/satchel/civilprotection/solid/m4a1(src)
 
 /obj/item/storage/box/intruder_snake/phantom
-	name = "Phantom Crab - (PURE STEALTH, NON-LETHAL)"
+	name = "Phantom Operator - (PURE STEALTH, NON-LETHAL)"
 
 /obj/item/storage/box/intruder_snake/phantom/PopulateContents()
 	new /obj/item/storage/belt/civilprotection/polish_resistance/solid/phantom(src)
 	new /obj/item/storage/backpack/halflife/satchel/civilprotection/solid/tranq_only(src)
 
 /obj/item/storage/box/intruder_snake/osp
-	name = "Naked Crab - (!!HARDMODE!!, ON-SITE PROCUREMENT)"
+	name = "Naked Operator - (!!HARDMODE!!, ON-SITE PROCUREMENT)"
 
 /obj/item/storage/box/intruder_snake/osp/PopulateContents()
 	new /obj/item/storage/belt/civilprotection/polish_resistance/solid/belligerent/empty(src) //upside to this loadout is that you get to carry famas mags for the low low cost of everything
