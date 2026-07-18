@@ -538,8 +538,20 @@
 
 	//finally after all that we can actually perform a hold up.
 	caster.say("#Freeze!")
-	SEND_SOUND(caster, sound('hl13/sound/voice/solid/snakefreeze.ogg'))
-	SEND_SOUND(human_victim, sound('hl13/sound/voice/solid/snakefreeze.ogg'))
+	var/obj/item/organ/tongue/solid/Stongue = caster.get_organ_slot(ORGAN_SLOT_TONGUE)
+	if(Stongue)
+		if(Stongue.operativetype == "Solid" || Stongue.operativetype == "Big Boss")
+			SEND_SOUND(caster, sound('hl13/sound/voice/solid/snakefreeze.ogg'))
+			SEND_SOUND(human_victim, sound('hl13/sound/voice/solid/snakefreeze.ogg'))
+		if(Stongue.operativetype == "Old")
+			SEND_SOUND(caster, sound('hl13/sound/voice/solid/oldfreeze.ogg'))
+			SEND_SOUND(human_victim, sound('hl13/sound/voice/solid/oldfreeze.ogg'))
+		if(Stongue.operativetype == "Raiden")
+			SEND_SOUND(caster, sound('hl13/sound/voice/solid/raidenfreeze.ogg'))
+			SEND_SOUND(human_victim, sound('hl13/sound/voice/solid/raidenfreeze.ogg'))
+	else
+		SEND_SOUND(caster, sound('hl13/sound/voice/solid/snakefreeze.ogg'))
+		SEND_SOUND(human_victim, sound('hl13/sound/voice/solid/snakefreeze.ogg'))
 	human_victim.drop_all_held_items() //no alerting
 	human_victim.Immobilize(7 SECONDS)
 	human_victim.Stun(7 SECONDS)
@@ -598,7 +610,17 @@
 
 	var/mask = human_victim.get_item_by_slot(ITEM_SLOT_MASK)
 	if(mask)
-		caster.say("Kept you waiting, huh?")
+		var/obj/item/organ/tongue/solid/Stongue = caster.get_organ_slot(ORGAN_SLOT_TONGUE)
+		if(Stongue)
+			if(Stongue.operativetype == "Solid" || Stongue.operativetype == "Big Boss")
+				caster.say("Kept you waiting, huh?")
+			if(Stongue.operativetype == "Raiden")
+				caster.say("You must be Ames...")
+				playsound(caster, 'hl13/sound/voice/solid/raidenunmask.ogg', 50, FALSE)
+			if(Stongue.operativetype == "Old")
+				caster.say("Just like old times...")
+		else
+			caster.say("Kept you waiting, huh?")
 		to_chat(human_victim, span_notice("Your awful, uncomfortable mask is finally shed, and you find you have received additional equipment of the [GLOB.crab_loadout] variety."))
 		to_chat(human_victim, span_warning("It is obvious to anyone now that you are a spy!"))
 		qdel(mask)

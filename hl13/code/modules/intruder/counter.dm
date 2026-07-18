@@ -7,6 +7,7 @@ GLOBAL_VAR_INIT(squad_death, FALSE)
 GLOBAL_LIST_EMPTY(real_objectives)
 GLOBAL_VAR_INIT(osp_mode, FALSE)
 GLOBAL_VAR_INIT(crab_loadout, "classic") //classic by default
+GLOBAL_VAR_INIT(crab_character, "solid") //solid by default, right now only used by the end music
 
 /obj/machinery/intruder_time_counter
 	name = "intruder counter"
@@ -101,13 +102,13 @@ GLOBAL_VAR_INIT(crab_loadout, "classic") //classic by default
 		for(var/obj/item/implant/I in human_user.implants)
 			if(I.type == /obj/item/implant/mindshield)
 				I.removed(human_user)
-		human_user.equipOutfit(/datum/outfit/deployment_loadout/intruder/solid)
+		human_user.equipOutfit(/datum/outfit/deployment_loadout/intruder/solid/blank)
 		human_user.regenerate_icons()
-		to_chat(human_user, span_bold(span_notice("Come in, Crab. This is PLF Colonel Czesław. Your objective is to infiltrate the Zewnetrzny Raj Base and acquire two pieces of data from specific nodes. You can activate other terminals to distract the guards, but they will not count towards completion. The node locations are as follows:")))
+		to_chat(human_user, span_bold(span_notice("Come in, Crab. This is PLF Colonel Czesław. Your objective is to infiltrate the conscript base and acquire two pieces of data from specific nodes. You can activate other terminals to distract the guards, but they will not count towards completion. The node locations are as follows:")))
 		for(var/obj/machinery/combine_node/N in GLOB.real_objectives)
 			to_chat(human_user, span_danger("[get_area_name(N, TRUE)]"))
 		to_chat(human_user, span_notice("I see you used the ventilation system to enter the building. Once your objectives are complete, you can use the vent you came in from- or any other similarly shaped vents- to exfiltrate. Be warned, Crab, you cannot exfiltrate while an alert is active. We can't risk you being followed back to HQ."))
-		to_chat(human_user, span_notice("While you have already been provided a silenced pistol, a tranquilizer, a knife, and a radar system provided to us by Lambda scientists, you can procure more equipment on-site primarily found in- but not limited to- lockers, wooden crates, and storage rooms."))
+		to_chat(human_user, span_notice("While you have already been provided a few smuggled loadouts and a radar system provided to us by Lambda scientists, you can procure more equipment on-site primarily found in- but not limited to- lockers, wooden crates, and storage rooms."))
 		to_chat(human_user, span_notice("When a guard has a direct line of sight with you, they can activate their radio to call in an alert. During the alert phase, your radar will be jammed, your location will be revealed, and security will get tighter. Crab, I'm receiving word that there may be one or more PLF assets besides you disguised as guards. Try to get into contact with them, or let them go about their business."))
 		to_chat(human_user, span_bold(span_danger("Crab, this is a stealth mission, taking out guards is not a priority. They outnumber you 30 to 1 and are armed with ID-tagged rifles, and will arrive better prepared the more of them you kill or alert. Especially avoid killing the squad leaders wearing blue berets. If one of them dies, the base will go into caution phase. Good luck, Crab.")))
 		candidates_left--
