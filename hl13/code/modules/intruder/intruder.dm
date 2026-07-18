@@ -44,7 +44,7 @@
 	desc = "One of the PLF's greatest assets. A master of CQC and stealth. Smoking is hazardous to your health."
 
 	head = /obj/item/clothing/head/costume/snakeeater/solid
-	glasses = /obj/item/clothing/glasses/thermal/eyepatch/solid
+	glasses = /obj/item/clothing/glasses/thermal/solid
 	mask = /obj/item/cigarette/halflife
 	uniform = /obj/item/clothing/under/syndicate/combat
 	suit = /obj/item/clothing/suit/armor/halflife/milvest/solid
@@ -84,6 +84,7 @@
 	display_name = "Gor-den"
 	desc = "A non-existant operative of a non-existant organization, originally sharing a codename with Crab before undergoing this mission. Better than Solid Crab with blades, and far more agile. Might even become a cool cyborg ninja in the future."
 
+	glasses = /obj/item/clothing/glasses/thermal/solid
 	uniform = /obj/item/clothing/under/citizen/rebel/raiden
 	suit = /obj/item/clothing/suit/halflife/invis_grunt_harness
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
@@ -263,6 +264,33 @@
 	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EYES)) //for flashbangs. Won't completely stop them, but protects hearing and reduces stun time
 
 /obj/item/clothing/glasses/thermal/eyepatch/solid/process()
+	if(GLOB.alert_cooldown >= 1 SECONDS)
+		vision_flags = 0
+		var/mob/living/carbon/human/hooman = loc
+		if(hooman.glasses == src)
+			hooman.update_sight()
+	else
+		vision_flags = SEE_MOBS|SEE_TURFS|SEE_OBJS
+		var/mob/living/carbon/human/hooman = loc
+		if(hooman.glasses == src)
+			hooman.update_sight()
+
+/obj/item/clothing/glasses/thermal/solid
+	name = "Implanted Radar"
+	desc = "A radar system developed by Lambda implanted directly into your eye, allowing the user to track enemy movements. Can be jammed by the enemy easily when on alert."
+	color_cutoffs = list(40, 40, 40)
+	resistance_flags = INDESTRUCTIBLE
+	icon_state = "invis_grunt_harness" //this will look weird but i just dont care enough and its an invisible (reference) icon when worn so
+	worn_icon_state = "invis_grunt_harness"
+	icon = 'hl13/icons/obj/clothing/suits.dmi'
+	worn_icon = 'hl13/icons/mob/clothing/suit.dmi'
+
+/obj/item/clothing/glasses/thermal/solid/Initialize(mapload)
+	. = ..()
+	START_PROCESSING(SSprocessing, src)
+	AddComponent(/datum/component/wearertargeting/earprotection, list(ITEM_SLOT_EYES)) //for flashbangs. Won't completely stop them, but protects hearing and reduces stun time
+
+/obj/item/clothing/glasses/thermal/solid/process()
 	if(GLOB.alert_cooldown >= 1 SECONDS)
 		vision_flags = 0
 		var/mob/living/carbon/human/hooman = loc
