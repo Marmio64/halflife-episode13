@@ -7,7 +7,7 @@
 	icon_state = "smoke5"
 	width = 500
 	height = 500
-	count = 5
+	count = 4
 	spawning = 15
 	lifespan = 0.5 SECONDS
 	fade = 2.4 SECONDS

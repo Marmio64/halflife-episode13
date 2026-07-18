@@ -1424,6 +1424,8 @@
 		return
 	if(!(mob_biotypes & (MOB_ORGANIC|MOB_UNDEAD)))
 		return
+	if(SSmapping.current_map.minetype == "combat_deployment") //hl13 edit, rot is not needed on the TDM gamemode, and removing it saves on performance
+		return
 	AddComponent(/datum/component/rot, 6 MINUTES, 10 MINUTES, 1)
 
 /**

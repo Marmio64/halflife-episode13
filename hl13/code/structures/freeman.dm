@@ -8,7 +8,7 @@
 	name = "Hauler"
 	desc = "What is this... Some kind of cargo truck?"
 	icon = 'hl13/icons/obj/port/van.dmi'
-	max_integrity = 1500
+	max_integrity = 2000
 	pixel_x = -12
 	bound_width = 64
 	bound_height = 96
@@ -20,7 +20,8 @@
 	if(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION)
 		return
 
-	new /obj/item/stack/sheet/scrap_metal(loc, 5)
+	new /obj/item/stack/sheet/scrap_metal(loc, 8)
+	new /obj/item/stack/sheet/scrap_parts(loc, 2)
 
 /obj/structure/halflife/vehicle/tau
 	name = "Destroyed Combine APC"

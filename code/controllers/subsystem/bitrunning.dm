@@ -2,13 +2,15 @@
 
 SUBSYSTEM_DEF(bitrunning)
 	name = "Bitrunning"
-	flags = SS_NO_FIRE
+	flags = SS_NO_FIRE | SS_NO_INIT //hl13 edit, no init ,we dont use bitrunning
 
 	var/list/all_domains = list()
 
+/*
 /datum/controller/subsystem/bitrunning/Initialize()
 	InitializeDomains()
 	return SS_INIT_SUCCESS
+*/
 
 /datum/controller/subsystem/bitrunning/proc/InitializeDomains()
 	for(var/path in subtypesof(/datum/lazy_template/virtual_domain))

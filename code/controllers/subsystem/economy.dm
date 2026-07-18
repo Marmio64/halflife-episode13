@@ -92,6 +92,9 @@ SUBSYSTEM_DEF(economy)
 #define ECON_PRICE_UPDATE_STEP "econ_prc_stp"
 
 /datum/controller/subsystem/economy/fire(resumed = 0)
+	if(SSmapping.current_map.minetype == "combat_deployment") //hl13 edit, dont need the economy in tdm mode
+		return
+
 	var/seconds_per_tick = wait / (5 MINUTES)
 
 	if(!resumed)

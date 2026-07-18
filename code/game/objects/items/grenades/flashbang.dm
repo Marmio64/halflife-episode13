@@ -65,7 +65,7 @@
 //Flash
 	if(!istype(living_mob.loc, /obj/structure/closet/cardboard) && !HAS_TRAIT(living_mob, TRAIT_NOFLASH)) //hl13 edit
 		if(living_mob.deployment_faction == REBEL_DEPLOYMENT_FACTION)
-			living_mob.flash_act(intensity = 1, affect_silicon = 1)
+			living_mob.flash_act(intensity = 1, affect_silicon = 1, length = 1.25 SECONDS) //rebels are less effected, to reduce friendly fire
 		else
 			living_mob.flash_act(intensity = 2, affect_silicon = 1)
 		living_mob.Immobilize(max(25/max(1, distance), 10))

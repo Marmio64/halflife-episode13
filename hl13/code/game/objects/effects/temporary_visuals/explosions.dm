@@ -3,7 +3,7 @@
 	icon_state = "smoke3"
 	width = 1000
 	height = 1000
-	count = 50
+	count = 40
 	spawning = 50
 	gradient = list("#FA9632", "#C3630C", "#333333", "#808080", "#FFFFFF")
 	lifespan = 20
@@ -23,13 +23,13 @@
 	velocity = generator(GEN_CIRCLE, 23, 23)
 
 /particles/explosion_smoke/small
-	count = 25
+	count = 20
 	spawning = 25
 	scale = 0.25
 	velocity = generator(GEN_CIRCLE, 10, 10)
 
 /particles/explosion_smoke/tiny
-	count = 25
+	count = 20
 	spawning = 25
 	scale = 0.1
 	fade = 100
@@ -41,7 +41,7 @@
 	icon_state = list("smoke4" = 1, "smoke5" = 1)
 	width = 1000
 	height = 1000
-	count = 50
+	count = 40
 	spawning = 50
 	lifespan = 20
 	fade = 80
@@ -54,7 +54,7 @@
 	grow = 0.02
 
 /particles/explosion_water/tiny
-	count = 25
+	count = 20
 	spawning = 25
 	scale = 0.1
 	fade = 100
@@ -66,7 +66,7 @@
 	icon_state = "smoke3"
 	width = 750
 	height = 750
-	count = 50
+	count = 40
 	spawning = 50
 	lifespan = 15
 	fade = 70
@@ -80,7 +80,7 @@
 	friction = 0.05
 
 /particles/smoke_wave/small
-	count = 45
+	count = 35
 	spawning = 45
 	scale = 0.1
 
@@ -89,7 +89,7 @@
 	icon_state = "smoke5"
 	width = 750
 	height = 750
-	count = 50
+	count = 40
 	spawning = 50
 	lifespan = 15
 	fade = 25
@@ -105,7 +105,7 @@
 	icon_state = "smoke"
 	width = 500
 	height = 500
-	count = 30
+	count = 25
 	spawning = 10
 	lifespan = 15
 	fade = 10
@@ -122,7 +122,7 @@
 	icon_state = "smoke2"
 	width = 500
 	height = 500
-	count = 60
+	count = 50
 	spawning = 10
 	lifespan = 15
 	fade = 10
@@ -180,7 +180,7 @@
 	icon_state = "rock"
 	width = 750
 	height = 750
-	count = 50
+	count = 40
 	spawning = 50
 	lifespan = 20
 	fade = 5
@@ -193,7 +193,7 @@
 	drift = generator(GEN_CIRCLE, 0, 1.5)
 
 /particles/falling_debris/small
-	count = 40
+	count = 30
 	spawning = 40
 
 /particles/water_falling

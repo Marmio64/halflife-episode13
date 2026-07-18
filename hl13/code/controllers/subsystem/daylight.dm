@@ -159,7 +159,8 @@ SUBSYSTEM_DEF(daylight)
 
 	if(current_day_time > AFTERNOON_START && current_day_time <= DUSK_START )
 		if(day_cycle_active != DAY_CYCLE_AFTERNOON)
-			factory_container_goal = get_factory_goal()
+			if(SSmapping.current_map.minetype != "combat_deployment" && SSmapping.current_map.roleplay_type != "outlands")
+				factory_container_goal = get_factory_goal()
 
 			day_cycle_active = DAY_CYCLE_AFTERNOON
 			if(SSmapping.current_map.minetype != "combat_deployment" && SSmapping.current_map.roleplay_type != "outlands")
@@ -167,8 +168,9 @@ SUBSYSTEM_DEF(daylight)
 
 			factory_containers_filled = 0
 
-			for(var/obj/machinery/box_vendor/vendor as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/box_vendor))
-				vendor.boxes_stored = factory_container_goal
+			if(SSmapping.current_map.minetype != "combat_deployment" && SSmapping.current_map.roleplay_type != "outlands")
+				for(var/obj/machinery/box_vendor/vendor as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/box_vendor))
+					vendor.boxes_stored = factory_container_goal
 
 		if(light_coefficient < 0.9)
 			light_coefficient += 0.05

@@ -315,9 +315,9 @@
 	var/mob/living/L = user
 	reviving = !reviving
 	if(reviving)
-		to_chat(L, span_notice("Our nanites begin to revive us... this will take 2 minutes."))
+		to_chat(L, span_notice("Our nanites begin to revive us... this will take 90 seconds."))
 		deltimer(revive_timer)
-		revive_timer = addtimer(CALLBACK(src, PROC_REF(revive), L), 2 MINUTES, TIMER_UNIQUE | TIMER_STOPPABLE)
+		revive_timer = addtimer(CALLBACK(src, PROC_REF(revive), L), 1.5 MINUTES, TIMER_UNIQUE | TIMER_STOPPABLE)
 	else
 		to_chat(L, span_notice("We are already reviving."))
 		return

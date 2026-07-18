@@ -73,7 +73,7 @@ SUBSYSTEM_DEF(events)
  */
 /datum/controller/subsystem/events/proc/spawnEvent(datum/round_event_control/excluded_event)
 	set waitfor = FALSE //for the admin prompt
-	if(!CONFIG_GET(flag/allow_random_events))
+	if(!CONFIG_GET(flag/allow_random_events) || SSmapping.current_map.minetype == "combat_deployment") //hl13 edit no random events in TDM
 		return
 
 	var/players_amt = get_active_player_count(alive_check = TRUE, afk_check = TRUE, human_check = TRUE)
