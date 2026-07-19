@@ -12,6 +12,7 @@
 /obj/machinery/power/shuttle_engine/propulsion{
 	dir = 8
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/airless,
 /area/shuttle/transport)
 "g" = (
@@ -45,6 +46,7 @@
 	train = TRUE
 	},
 /obj/structure/window/fulltile,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/transport)
 "o" = (
@@ -58,61 +60,66 @@
 /area/shuttle/transport)
 "H" = (
 /obj/machinery/door/airlock/highsecurity/combine,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/transport)
 "L" = (
 /obj/machinery/computer/security,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/shuttle/transport)
+"Y" = (
+/obj/structure/fans/tiny/invisible,
+/turf/closed/wall/halflife/metal,
+/area/shuttle/transport)
 
 (1,1,1) = {"
-r
+Y
 e
-r
+Y
 e
-r
+Y
 "}
 (2,1,1) = {"
+Y
 r
 r
 r
-r
-r
+Y
 "}
 (3,1,1) = {"
-r
+Y
 g
 k
 b
-r
+Y
 "}
 (4,1,1) = {"
-r
+Y
 g
 l
 b
-r
+Y
 "}
 (5,1,1) = {"
-r
+Y
 g
 l
 b
-r
+Y
 "}
 (6,1,1) = {"
-r
+Y
 g
 l
 b
-r
+Y
 "}
 (7,1,1) = {"
-r
+Y
 g
 l
 b
-r
+Y
 "}
 (8,1,1) = {"
 H
@@ -122,37 +129,37 @@ l
 H
 "}
 (9,1,1) = {"
-r
+Y
 r
 o
 r
-r
+Y
 "}
 (10,1,1) = {"
-r
+Y
 L
 l
 i
-r
+Y
 "}
 (11,1,1) = {"
-r
+Y
 g
 l
 b
-r
+Y
 "}
 (12,1,1) = {"
-r
-r
+Y
+Y
 m
-r
-r
+Y
+Y
 "}
 (13,1,1) = {"
 a
-r
+Y
 n
-r
+Y
 a
 "}

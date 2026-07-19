@@ -102,6 +102,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape/backup)
 "u" = (
@@ -130,6 +131,7 @@
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
 	dir = 8
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/grooved,
 /area/shuttle/escape/backup)
 "A" = (
@@ -164,12 +166,14 @@
 	name = "Secondary Transfer Train";
 	dir = 2
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/closed/wall/halflife/metal/strong/train,
 /area/shuttle/escape/backup)
 "I" = (
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape/backup)
 "K" = (
@@ -207,6 +211,10 @@
 	},
 /turf/open/floor/plating/indoor/grooved,
 /area/shuttle/escape/backup)
+"T" = (
+/obj/structure/fans/tiny/invisible,
+/turf/closed/wall/halflife/metal/strong/train,
+/area/shuttle/escape/backup)
 "U" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -240,39 +248,39 @@
 
 (1,1,1) = {"
 m
-P
-P
-P
-P
-P
-P
+T
+T
+T
+T
+T
+T
 z
-P
-P
-P
-P
-P
+T
+T
+T
+T
+T
 z
-P
+T
 m
 m
 m
-P
-P
-P
-P
-P
-P
-P
-P
-P
-P
-P
+T
+T
+T
+T
+T
+T
+T
+T
+T
+T
+T
 m
 "}
 (2,1,1) = {"
-P
-P
+T
+T
 q
 r
 P
@@ -285,11 +293,11 @@ j
 Z
 j
 L
-P
-P
+T
+T
 m
-P
-P
+T
+T
 A
 j
 Z
@@ -299,11 +307,11 @@ N
 P
 x
 n
-P
-P
+T
+T
 "}
 (3,1,1) = {"
-P
+T
 X
 L
 S
@@ -318,9 +326,9 @@ a
 a
 a
 a
-P
+T
 I
-P
+T
 a
 a
 B
@@ -332,7 +340,7 @@ P
 d
 a
 a
-P
+T
 "}
 (4,1,1) = {"
 H
@@ -364,10 +372,10 @@ O
 a
 a
 a
-P
+T
 "}
 (5,1,1) = {"
-P
+T
 e
 L
 K
@@ -382,9 +390,9 @@ a
 a
 a
 a
-P
+T
 t
-P
+T
 a
 a
 a
@@ -396,11 +404,11 @@ P
 p
 a
 v
-P
+T
 "}
 (6,1,1) = {"
-P
-P
+T
+T
 k
 V
 P
@@ -413,11 +421,11 @@ Y
 k
 Y
 L
-P
-P
+T
+T
 m
-P
-P
+T
+T
 A
 Y
 k
@@ -427,38 +435,38 @@ u
 P
 p
 U
-P
-P
+T
+T
 "}
 (7,1,1) = {"
 m
-P
-P
-P
-P
-P
-P
+T
+T
+T
+T
+T
+T
 z
-P
-P
-P
-P
-P
+T
+T
+T
+T
+T
 z
-P
+T
 m
 m
 m
-P
-P
-P
-P
-P
-P
-P
-P
-P
-P
-P
+T
+T
+T
+T
+T
+T
+T
+T
+T
+T
+T
 m
 "}

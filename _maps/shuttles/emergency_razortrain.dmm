@@ -43,6 +43,7 @@
 /obj/structure/railing/halflife/sewer{
 	dir = 4
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/grate/border{
 	dir = 1
 	},
@@ -60,6 +61,10 @@
 "iU" = (
 /turf/open/floor/plating/indoor/metal,
 /area/shuttle/escape)
+"jR" = (
+/obj/structure/fans/tiny/invisible,
+/turf/closed/wall/halflife/metal/strong,
+/area/shuttle/escape)
 "kq" = (
 /obj/machinery/light/small/red/directional/south,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -71,12 +76,14 @@
 	preferred_direction = 2;
 	port_direction = 2
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/closed/wall/halflife/metal/strong,
 /area/shuttle/escape)
 "lJ" = (
 /turf/closed/wall/halflife/metal/strong,
 /area/shuttle/escape)
 "mb" = (
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/grate/border/warning{
 	dir = 1
 	},
@@ -86,6 +93,7 @@
 /obj/structure/railing/halflife/sewer{
 	dir = 4
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/grate/border{
 	dir = 1
 	},
@@ -115,6 +123,7 @@
 /area/shuttle/escape)
 "sG" = (
 /obj/structure/window/fulltile,
+/obj/structure/fans/tiny/invisible,
 /turf/open/indestructible/plating,
 /area/shuttle/escape)
 "tA" = (
@@ -133,6 +142,7 @@
 /obj/structure/railing/halflife/sewer{
 	dir = 8
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/grate/border{
 	dir = 1
 	},
@@ -246,6 +256,7 @@
 /obj/structure/railing/halflife/sewer{
 	dir = 8
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/grate/border{
 	dir = 1
 	},
@@ -298,9 +309,9 @@ Ue
 Ue
 us
 Ue
-lJ
-lJ
-lJ
+jR
+jR
+jR
 aa
 aa
 "}
@@ -308,7 +319,7 @@ aa
 aa
 HP
 HP
-lJ
+jR
 lJ
 lJ
 lJ
@@ -336,9 +347,9 @@ lJ
 aH
 rw
 mW
-lJ
-lJ
-lJ
+jR
+jR
+jR
 "}
 (3,1,1) = {"
 HP
@@ -374,7 +385,7 @@ Mv
 Kv
 sh
 lJ
-lJ
+jR
 "}
 (4,1,1) = {"
 HP
@@ -410,7 +421,7 @@ aH
 aH
 kq
 lJ
-lJ
+jR
 "}
 (5,1,1) = {"
 HP
@@ -446,13 +457,13 @@ bu
 sh
 sh
 lJ
-lJ
+jR
 "}
 (6,1,1) = {"
 aa
 HP
 HP
-lJ
+jR
 lJ
 lJ
 lJ
@@ -480,9 +491,9 @@ lJ
 aH
 ar
 hC
-lJ
-lJ
-lJ
+jR
+jR
+jR
 "}
 (7,1,1) = {"
 aa
@@ -514,9 +525,9 @@ gi
 gi
 mF
 gi
-lJ
-lJ
-lJ
+jR
+jR
+jR
 aa
 aa
 "}
