@@ -54,3 +54,15 @@
 	. = ..()
 	if(prob(50)) //only has a 25% chance of existing
 		return INITIALIZE_HINT_QDEL
+
+/obj/effect/mob_spawn/ghost_role/human/caravan
+	name = "sensory deprivation pod"
+	desc = "A luxury sensory deprivation pod. Someone appears to be sleeping in it to de-stress from all the chaos of smuggler life... forcing them out seems bound for nothing but chaos, guess you can only hope they get out soon."
+	density = FALSE
+	you_are_text = "You are an agent of the Black Market, managing a caravan and its traders."
+	flavour_text = "You were called using a hacked combine communications console, and offered a sum of credits to bring over a group of traders. You have no care to who boards your train, as long as they're a paying customer- just try to keep any combine away from the PLF recruiter in the back of the train. Earn money via selling items with your uplink and ensure nothing is stolen from your traders, or worse, any are killed."
+	important_text = "You are not openly friendly nor hostile to any rebel group or even the combine, save for fellow Black Market agents. Additionally, do not abandon the train (and if the train has not launched maybe you shouldn't have picked this role, just try and wait)."
+	icon = 'icons/obj/mining_zones/spawners.dmi'
+	icon_state = "terrarium"
+	spawner_job_path = /datum/antagonist/blackmarket
+	outfit = /datum/outfit/caravan_manager
