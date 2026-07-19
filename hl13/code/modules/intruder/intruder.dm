@@ -25,6 +25,9 @@
 		GLOB.crab_character = "raiden"
 	..()
 
+/datum/outfit/deployment_loadout/intruder/solid/
+	var/sus_venter = FALSE
+
 /datum/outfit/deployment_loadout/intruder/solid/blank
 	faction = REBEL_DEPLOYMENT_FACTION
 	name = "BLANK OPERATIVE"
@@ -37,11 +40,13 @@
 
 	l_hand = /obj/item/hl2/loadout_picker/intruder/the_intruder
 
+	sus_venter = TRUE
+
 /datum/outfit/deployment_loadout/intruder/solid/crab
 	faction = REBEL_DEPLOYMENT_FACTION
 	name = "Solid Crab"
 	display_name = "Solid Crab"
-	desc = "One of the PLF's greatest assets. A master of CQC and stealth. Smoking is hazardous to your health."
+	desc = "One of the PLF's greatest assets. A master of CQC and stealth, known for his incredible willpower. Smoking is hazardous to your health."
 
 	head = /obj/item/clothing/head/costume/snakeeater/solid
 	glasses = /obj/item/clothing/glasses/thermal/solid
@@ -58,7 +63,7 @@
 
 	combat_music = 'hl13/sound/music/combat/tanker.ogg'
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/intruder_decoy)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/intruder_decoy, /datum/action/cooldown/spell/intruder_heal)
 
 	extra_end = 10
 	extra_dex = 5
@@ -96,7 +101,7 @@
 
 	combat_music = 'hl13/sound/music/combat/bigshell.ogg' //i like this alert theme more than encounter tbh
 
-	spells_to_add = list(/datum/action/cooldown/mob_cooldown/halflife/cartwheel)
+	spells_to_add = list(/datum/action/cooldown/mob_cooldown/halflife/cartwheel, /datum/action/cooldown/spell/conjure_item/intruder_decoy/raiden)
 
 	extra_end = 10
 	extra_dex = 5
@@ -137,6 +142,8 @@
 
 	combat_music = 'hl13/sound/music/combat/middleeastalert.ogg'
 
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/intruder_decoy/old)
+
 	extra_end = 10
 	extra_dex = 5
 	extra_str = 10
@@ -155,7 +162,7 @@
 	var/obj/item/organ/tongue/solid/old/new_tongue = new()
 	new_tongue.Insert(H)
 	qdel(old_organ)
-	H.dna.add_mutation(/datum/mutation/human/chameleon/changeling)
+	//H.dna.add_mutation(/datum/mutation/human/chameleon/changeling)
 
 /datum/outfit/deployment_loadout/intruder/solid/bigboss
 	faction = REBEL_DEPLOYMENT_FACTION
@@ -177,6 +184,8 @@
 	r_hand = /obj/item/choice_beacon/intruder_snake_loadout
 
 	combat_music = 'hl13/sound/music/combat/battleinthebase.ogg'
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/intruder_decoy/bigboss, /datum/action/cooldown/spell/conjure_item/random_intruder)
 
 	extra_end = 10
 	extra_dex = 5
@@ -225,15 +234,16 @@
 	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 
 
-	var/list/spawn_locs = list()
-	for(var/X in GLOB.the_hidden)
-		spawn_locs += X
+	if(sus_venter)
+		var/list/spawn_locs = list()
+		for(var/X in GLOB.the_hidden)
+			spawn_locs += X
 
-	if(!spawn_locs.len)
-		message_admins("No valid spawn locations found, aborting...")
-		return MAP_ERROR
+		if(!spawn_locs.len)
+			message_admins("No valid spawn locations found, aborting...")
+			return MAP_ERROR
 
-	H.forceMove(pick(spawn_locs))
+		H.forceMove(pick(spawn_locs))
 
 	var/datum/martial_art/cqc/bigboss = new
 	bigboss.teach(H)
@@ -312,6 +322,32 @@
 	desc = "Does well at hiding your deteriorating body. Looming mortality aside, allows you to blend in with your environment, like a headcrab! ...okay, this one doesn't make much sense. Is it really necessary to name everything here after a xenian creature?"
 	slowdown = -0.25
 
+	var/min_alpha = 0 //how invisible we are capable of being. this will be raised during an alert
+
+	//these two mostly just exist so that i can test values ingame, increase should be more than decrease so that he reveals quicker
+	var/alpha_decrease = 30
+	var/alpha_increase = 45
+
+/obj/item/clothing/suit/armor/halflife/milvest/solid/old/Initialize(mapload)
+	. = ..()
+	START_PROCESSING(SSprocessing, src)
+
+/obj/item/clothing/suit/armor/halflife/milvest/solid/old/process()
+	if(GLOB.alert_cooldown >= 1 SECONDS)
+		min_alpha = 60 //should still be pretty hard to spot
+	else if (GLOB.caution_cooldown >= 1 SECONDS)
+		min_alpha = 30
+	else
+		min_alpha = 0
+	var/mob/living/carbon/human/hooman = loc
+	for(var/mob/living/carbon/human/noticer in range(0, hooman))
+		if(noticer != hooman)
+			min_alpha = 120 //a lot more noticeable if you're standing right on top of him
+	if(HAS_TRAIT(hooman, TRAIT_UNDENSE) && hooman.stat == CONSCIOUS) //leaning against walls or crawling on the floor, only works if you're awake
+		hooman.alpha = max(hooman.alpha - alpha_decrease, min_alpha)
+	else
+		hooman.alpha = min(hooman.alpha + alpha_increase, 255)
+
 /obj/item/clothing/suit/armor/halflife/kevlar/bigboss
 	desc = "A much better kevlar vest than what your opponents are equipped with. Provides decent armor without slowing you down."
 	slowdown = -0.35
@@ -319,10 +355,10 @@
 
 /obj/item/clothing/under/citizen/rebel/raiden
 	name = "Skull Suit"
-	desc = "Not as armored as Crab's suit, but allows for more agility and movement. Resembles the human skeleton."
+	desc = "Considerably less armored than Crab's suit, but allows for more agility and movement. Resembles the human skeleton."
 	slowdown = -0.5
 	icon_state = "raiden"
-	armor_type = /datum/armor/kevlararmor
+	armor_type = /datum/armor/armoredvest_upgraded
 
 /obj/item/clothing/shoes/jackboots/civilprotection/solid
 	name = "Sneaking Shoes"
@@ -498,7 +534,7 @@
 /obj/item/katana/raiden
 	name = "HF Blade"
 	desc = "A blade similar to the katana, which also allows you to more easily deflect bullets."
-	block_chance = 80
+	block_chance = 50
 
 /obj/item/grenade/decoy
 	name = "noise decoy grenade"
@@ -553,7 +589,7 @@
 /datum/action/cooldown/mob_cooldown/halflife/cartwheel
 	name = "Cartwheel"
 	desc = "A cartwheel which not only provides extra mobility, but allows you to go through enemies, knocking them down. Does a small (almost negligible) amount of damage to them as well."
-	cooldown_time = 1.5 SECONDS
+	cooldown_time = 4 SECONDS
 
 /datum/action/cooldown/mob_cooldown/halflife/cartwheel/proc/do_cartwheel(move_dir, times_ran)
 	if(times_ran >= 5)
@@ -598,6 +634,48 @@
 	StartCooldown()
 	return TRUE
 
+/datum/action/cooldown/spell/intruder_heal
+	name = "Persevere"
+	desc = "Muster the willpower to keep going, restoring your stamina and health. Makes an audible sound."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "medkit"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	cooldown_time = 120 SECONDS
+	spell_requirements = NONE
+	antimagic_flags = NONE
+
+/datum/action/cooldown/spell/intruder_heal/cast(mob/living/cast_on)
+	. = ..()
+	cast_on.adjustStaminaLoss(-125)
+	cast_on.adjustBruteLoss(-80)
+	playsound(owner.loc, 'hl13/sound/effects/intruder_regen.ogg', 50, FALSE)
+
+/datum/action/cooldown/spell/intruder_heal/New(Target) //starts on cooldown
+	. = ..()
+	StartCooldown()
+
+/datum/action/cooldown/spell/conjure_item/random_intruder
+	name = "Scrounge"
+	desc = "Search your immediate environment for a free, random item."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "medkit"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 90 SECONDS
+	item_type = /obj/effect/spawner/random/halflife/loot/intruder/crab/rare/guaranteed
+	requires_hands = TRUE
+	delete_old = FALSE
+
+	sound = 'hl13/sound/effects/spawnration.ogg'
+	sound_varies = FALSE
+
+/datum/action/cooldown/spell/conjure_item/random_intruder/New(Target) //starts on cooldown
+	. = ..()
+	StartCooldown()
+
 /datum/action/cooldown/spell/conjure_item/intruder_decoy
 	name = "Summon Decoy Mannequin"
 	desc = "Quickly deploy a decoy that somewhat resembles you on initial inspection. Useful for simple distractions. It will automatically fall apart after about 16 seconds, and has a long cooldown."
@@ -610,8 +688,18 @@
 	cooldown_time = 45 SECONDS
 	item_type = /obj/item/cardboard_cutout/solid_crab
 
+/datum/action/cooldown/spell/conjure_item/intruder_decoy/bigboss
+	item_type = /obj/item/cardboard_cutout/solid_crab/bigboss
+
+/datum/action/cooldown/spell/conjure_item/intruder_decoy/old
+	item_type = /obj/item/cardboard_cutout/solid_crab/old
+
+/datum/action/cooldown/spell/conjure_item/intruder_decoy/raiden
+	item_type = /obj/item/cardboard_cutout/solid_crab/raiden
+
 /obj/item/cardboard_cutout/solid_crab
 	starting_cutout = "Solid Crab"
+	var/crab_type = "Solid"
 
 /obj/item/cardboard_cutout/solid_crab/Initialize(mapload)
 	. = ..()
@@ -619,13 +707,41 @@
 	addtimer(CALLBACK(src, PROC_REF(random_speech)), rand(5 SECONDS, 10 SECONDS))
 
 /obj/item/cardboard_cutout/solid_crab/proc/random_speech()
-	if(prob(50))
+	if(crab_type == "Solid")
 		if(prob(50))
-			say("You're pretty good...")
-			playsound(src, 'hl13/sound/voice/solid/snakegood.ogg', 50, FALSE)
-		else
-			say("Kept you waiting, huh?")
-			playsound(src, 'hl13/sound/voice/solid/snakewaiting.ogg', 50, FALSE)
+			if(prob(50))
+				say("You're pretty good...")
+				playsound(src, 'hl13/sound/voice/solid/snakegood.ogg', 50, FALSE)
+			else
+				say("Kept you waiting, huh?")
+				playsound(src, 'hl13/sound/voice/solid/snakewaiting.ogg', 50, FALSE)
+	if(crab_type == "Old")
+		if(prob(50))
+			if(prob(50))
+				say("Metal Gear?!")
+				playsound(src, 'hl13/sound/voice/solid/oldmetalgear.ogg', 50, FALSE)
+			else
+				say("Just like old times...")
+				playsound(src, 'hl13/sound/voice/solid/oldtimes.ogg', 50, FALSE)
+	if(crab_type == "Raiden")
+		if(prob(50))
+			if(prob(50))
+				say("I want you...")
+				playsound(src, 'hl13/sound/voice/solid/raidenwantsyou.ogg', 50, FALSE)
+			else
+				say("Get real!")
+				playsound(src, 'hl13/sound/voice/solid/raidenreal.ogg', 50, FALSE)
+
+/obj/item/cardboard_cutout/solid_crab/bigboss
+	starting_cutout = "Naked Crab"
+
+/obj/item/cardboard_cutout/solid_crab/old
+	starting_cutout = "Old Crab"
+	crab_type = "Old"
+
+/obj/item/cardboard_cutout/solid_crab/raiden
+	starting_cutout = "Gor-den"
+	crab_type = "Raiden"
 
 /datum/cardboard_cutout/solid_crab
 	name = "Solid Crab"
@@ -636,11 +752,37 @@
 /datum/cardboard_cutout/solid_crab/get_name()
 	return "Solid Crab"
 
+/datum/cardboard_cutout/old_crab
+	name = "Old Crab"
+	applied_name = "Old Crab"
+	applied_desc = "Just like old times..."
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/old_crab_look
+
+/datum/cardboard_cutout/old_crab/get_name()
+	return "Old Crab"
+
+/datum/cardboard_cutout/naked_crab
+	name = "Naked Crab"
+	applied_name = "Naked Crab"
+	applied_desc = "You're pretty good..."
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/naked_crab_look
+
+/datum/cardboard_cutout/naked_crab/get_name()
+	return "Naked Crab"
+
+/datum/cardboard_cutout/gorden
+	name = "Gor-den"
+	applied_name = "Gor-den"
+	applied_desc = "I want you..."
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/gorden_look
+
+/datum/cardboard_cutout/gorden_crab/get_name()
+	return "Gor-den"
+
 /datum/outfit/solid_crab_cutout
 	name = "Solid Crab Cardboard cutout"
 
 	head = /obj/item/clothing/head/costume/snakeeater/solid
-	glasses = /obj/item/clothing/glasses/thermal/eyepatch/solid
 	mask = /obj/item/cigarette/halflife
 	belt = /obj/item/storage/belt/civilprotection
 	uniform = /obj/item/clothing/under/syndicate/combat
@@ -656,6 +798,64 @@
 	skin_tone = "caucasian2"
 	outfit = /datum/outfit/solid_crab_cutout
 
+/datum/outfit/old_crab_cutout
+	name = "Old Crab Cardboard cutout"
+
+	head = /obj/item/clothing/head/costume/snakeeater/solid
+	glasses = /obj/item/clothing/glasses/thermal/eyepatch/solid
+	mask = /obj/item/cigarette/halflife
+	belt = /obj/item/storage/belt/civilprotection
+	uniform = /obj/item/clothing/under/syndicate/combat
+	suit = /obj/item/clothing/suit/armor/halflife/milvest/solid
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
+	gloves = /obj/item/clothing/gloves/color/black
+
+/obj/effect/mob_spawn/corpse/human/old_crab_look
+	name = "Old Crab's Appearence"
+	hairstyle = "Business Hair"
+	haircolor = "#ddddddbb"
+	facial_haircolor = "#ddddddbb"
+	facial_hairstyle = "Moustache (Selleck)"
+	skin_tone = "caucasian2"
+	outfit = /datum/outfit/old_crab_cutout
+
+/datum/outfit/naked_crab_cutout
+	name = "Naked Crab Cardboard cutout"
+
+	head = /obj/item/clothing/head/costume/snakeeater/solid
+	glasses = /obj/item/clothing/glasses/thermal/eyepatch/solid
+	mask = /obj/item/cigarette/cigar
+	belt = /obj/item/storage/belt/civilprotection
+	uniform = /obj/item/clothing/under/syndicate/camo
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/bigboss
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
+	gloves = /obj/item/clothing/gloves/fingerless
+
+/obj/effect/mob_spawn/corpse/human/naked_crab_look
+	name = "Naked Crab's Appearence"
+	hairstyle = "Combover"
+	haircolor = "#663300"
+	facial_haircolor = "#663300"
+	facial_hairstyle = "Beard (Cropped Fullbeard)"
+	skin_tone = "caucasian2"
+	outfit = /datum/outfit/naked_crab_cutout
+
+/datum/outfit/gorden_cutout
+	name = "Gor-den Cardboard cutout"
+
+	uniform = /obj/item/clothing/under/citizen/rebel/raiden
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
+	belt = /obj/item/storage/belt/civilprotection
+	gloves = /obj/item/clothing/gloves/color/black
+	back = /obj/item/katana/raiden
+
+/obj/effect/mob_spawn/corpse/human/gorden_look
+	name = "Solid Crab's Appearence"
+	hairstyle = "Curls"
+	haircolor = "#dab57f"
+	facial_hairstyle = "Shaved"
+	skin_tone = "caucasian2"
+	outfit = /datum/outfit/gorden_cutout
 
 /obj/item/hl2/deployable_box
 	name = "deployable cardboard box"
