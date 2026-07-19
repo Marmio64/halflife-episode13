@@ -214,6 +214,10 @@
 		if(sleep_quality > 0)
 			if(iscarbon(owner))
 				var/mob/living/carbon/carbon_owner = owner
+
+				if(carbon_owner.blood_volume < BLOOD_VOLUME_NORMAL && !HAS_TRAIT(carbon_owner, TRAIT_NOBLOOD))
+					carbon_owner.blood_volume += 1 * seconds_between_ticks * sleep_quality
+
 				for(var/obj/item/organ/target_organ as anything in carbon_owner.organs)
 					// no healing boost for robotic or dying organs
 					if(IS_ROBOTIC_ORGAN(target_organ) || !target_organ.damage || target_organ.organ_flags & ORGAN_FAILING)

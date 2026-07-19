@@ -8,3 +8,9 @@
 	lose_text = span_danger("You feel clumsy again.")
 	medical_record_text = "Patient scored highly on cardio tests."
 	mail_goodies = list(/obj/item/melee/skateboard, /obj/item/clothing/shoes/wheelys/rollerskates)
+
+/datum/quirk/freerunning/add()
+	quirk_holder.change_stat(STATKEY_DEX, 1)
+
+/datum/quirk/freerunning/remove()
+	quirk_holder.change_stat(STATKEY_DEX, -1)

@@ -5,6 +5,8 @@
 	var/climb_time
 	///Stun duration for when you get onto the object
 	var/climb_stun
+	///Minimum dexterity amount to climb the object
+	var/required_dex = 0
 	///Assoc list of object being climbed on - climbers.  This allows us to check who needs to be shoved off a climbable object when its clicked on.
 	var/list/current_climbers
 
@@ -12,6 +14,7 @@
 	datum/target,
 	climb_time = 2 SECONDS,
 	climb_stun = 2 SECONDS,
+	required_dex = 0,
 )
 	. = ..()
 
@@ -19,6 +22,7 @@
 		return ELEMENT_INCOMPATIBLE
 	src.climb_time = climb_time
 	src.climb_stun = climb_stun
+	src.required_dex = required_dex
 
 	RegisterSignal(target, COMSIG_ATOM_ATTACK_HAND, PROC_REF(attack_hand))
 	RegisterSignal(target, COMSIG_ATOM_EXAMINE, PROC_REF(on_examine))
@@ -37,6 +41,11 @@
 /datum/element/climbable/proc/can_climb(atom/source, mob/user)
 	if (!user.CanReach(source))
 		return FALSE
+	if(isliving(user))
+		var/mob/living/living_user = user
+		if(living_user.get_stat_level(STATKEY_DEX) < required_dex)
+			to_chat(living_user, span_warning("You are not dextrous enough to climb onto [source]."))
+			return FALSE
 	var/dir_step = get_dir(user, source.loc)
 	//To jump over a railing you have to be standing next to it, not far behind it.
 	if(source.flags_1 & ON_BORDER_1 && user.loc != source.loc && (dir_step & source.dir) == source.dir)
