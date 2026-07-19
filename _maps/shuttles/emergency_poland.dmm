@@ -152,12 +152,14 @@
 	preferred_direction = 2;
 	port_direction = 2
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/walkway{
 	dir = 1
 	},
 /area/shuttle/escape)
 "mk" = (
 /obj/structure/barricade/sandbags,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "nm" = (
@@ -209,6 +211,7 @@
 /area/shuttle/escape)
 "rj" = (
 /obj/structure/halflife/large_pipe/pump,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/grate/border/warning,
 /area/shuttle/escape)
 "st" = (
@@ -273,6 +276,14 @@
 	dir = 1
 	},
 /area/shuttle/escape)
+"xP" = (
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "poland_shuttle_windows"
+	},
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/shuttle/escape)
 "yI" = (
 /obj/machinery/iv_drip,
 /turf/open/floor/plating/indoor/sterilesquares,
@@ -302,6 +313,7 @@
 	pixel_y = -32;
 	dir = 1
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/closed/wall/halflife/metal/weak/old,
 /area/shuttle/escape)
 "BZ" = (
@@ -362,6 +374,7 @@
 /area/shuttle/escape)
 "Hn" = (
 /obj/machinery/light/directional/south,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/walkway/end,
 /area/shuttle/escape)
 "Hv" = (
@@ -386,6 +399,7 @@
 /obj/machinery/door/unpowered/halflife/metal/red{
 	dir = 4
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "Im" = (
@@ -437,6 +451,7 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "Kv" = (
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/walkway/corner,
 /area/shuttle/escape)
 "Lv" = (
@@ -453,6 +468,10 @@
 	pixel_y = 11
 	},
 /turf/open/floor/plating/indoor/metal/industrial,
+/area/shuttle/escape)
+"Nb" = (
+/obj/structure/fans/tiny/invisible,
+/turf/closed/wall/halflife/metal/weak/old,
 /area/shuttle/escape)
 "Nk" = (
 /obj/structure/closet/halflife,
@@ -471,6 +490,7 @@
 	},
 /area/shuttle/escape)
 "Ny" = (
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/walkway/corner{
 	dir = 1
 	},
@@ -515,6 +535,7 @@
 	bulb_colour = "#ff0000";
 	nightshift_light_color = "#ff0000"
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/walkway/end,
 /area/shuttle/escape)
 "RA" = (
@@ -545,6 +566,7 @@
 	},
 /obj/structure/barricade/sandbags,
 /obj/effect/decal/cleanable/glass,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "VW" = (
@@ -562,6 +584,7 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/escape)
 "WL" = (
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/walkway{
 	dir = 1
 	},
@@ -589,32 +612,32 @@
 (1,1,1) = {"
 Kv
 Qh
-oH
-Io
-oH
-oH
+Nb
+xP
+Nb
+Nb
 TN
-oH
+Nb
 Ig
-oH
-Io
-oH
+Nb
+xP
+Nb
 Ig
-oH
-Io
-oH
-oH
-oH
+Nb
+xP
+Nb
+Nb
+Nb
 TN
-oH
-oH
-oH
+Nb
+Nb
+Nb
 TN
-oH
-oH
-oH
-Io
-oH
+Nb
+Nb
+Nb
+xP
+Nb
 Bv
 jC
 "}
@@ -680,7 +703,7 @@ EC
 lB
 oH
 lj
-oH
+Nb
 "}
 (4,1,1) = {"
 lY
@@ -744,7 +767,7 @@ EC
 nR
 oH
 Tw
-oH
+Nb
 "}
 (6,1,1) = {"
 WL
@@ -781,32 +804,32 @@ mk
 (7,1,1) = {"
 Ny
 Hn
-oH
-Io
-oH
-oH
+Nb
+xP
+Nb
+Nb
 TN
-oH
-oH
-oH
-Io
-oH
-oH
-oH
+Nb
+Nb
+Nb
+xP
+Nb
+Nb
+Nb
 TN
-oH
-oH
-oH
-Io
-oH
-oH
-oH
-Io
-oH
-oH
-oH
+Nb
+Nb
+Nb
+xP
+Nb
+Nb
+Nb
+xP
+Nb
+Nb
+Nb
 TN
-oH
+Nb
 Bv
 jC
 "}

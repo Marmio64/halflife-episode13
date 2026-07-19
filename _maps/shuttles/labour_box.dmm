@@ -14,6 +14,7 @@
 "d" = (
 /obj/machinery/door/airlock/highsecurity/combine,
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/shuttle/labor)
 "e" = (
@@ -27,6 +28,7 @@
 /area/shuttle/labor)
 "g" = (
 /obj/structure/window/fulltile,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal,
 /area/shuttle/labor)
 "h" = (
@@ -38,10 +40,12 @@
 	preferred_direction = 2
 	},
 /obj/structure/window/fulltile,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal,
 /area/shuttle/labor)
 "i" = (
 /obj/machinery/door/airlock/highsecurity/combine,
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/shuttle/labor)
 "j" = (
@@ -80,6 +84,10 @@
 /obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/shuttle/labor)
+"u" = (
+/obj/structure/fans/tiny/invisible,
+/turf/closed/wall/halflife/metal/weak,
+/area/shuttle/labor)
 "W" = (
 /turf/template_noop,
 /area/template_noop)
@@ -89,10 +97,10 @@ W
 g
 g
 d
-k
-k
+u
+u
 i
-k
+u
 W
 W
 W
@@ -107,10 +115,10 @@ f
 q
 c
 f
-k
-k
-k
-k
+u
+u
+u
+u
 W
 W
 "}
@@ -125,9 +133,9 @@ f
 a
 k
 k
-k
-k
-k
+u
+u
+u
 "}
 (4,1,1) = {"
 g
@@ -137,10 +145,10 @@ f
 p
 e
 f
-k
-k
-k
-k
+u
+u
+u
+u
 W
 W
 "}
@@ -149,10 +157,10 @@ W
 g
 g
 d
-k
-k
+u
+u
 i
-k
+u
 W
 W
 W
