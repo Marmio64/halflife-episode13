@@ -41,6 +41,7 @@
 
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
+	l_pocket = /obj/item/hl2key/rebel_bunker/police
 	r_pocket = /obj/item/flashlight/seclite
 
 	backpack_contents = list(
