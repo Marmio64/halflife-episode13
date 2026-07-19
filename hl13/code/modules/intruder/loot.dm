@@ -33,7 +33,7 @@
 		/obj/item/grenade/smokebomb,
 		/obj/item/grenade/decoy,
 		/obj/item/grenade/syndieminibomb/bouncer,
-		/obj/item/gun/ballistic/automatic/m4a1/famas = 2, //unlocked m4
+		//obj/item/gun/ballistic/automatic/m4a1/famas = 2, //outdated
 	)
 
 /obj/effect/spawner/random/halflife/loot/intruder/crab/guaranteed
