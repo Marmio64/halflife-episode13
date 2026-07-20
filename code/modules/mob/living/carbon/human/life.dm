@@ -40,7 +40,8 @@
 			//HL13 EDIT Handles any pain effects
 			handle_pain()
 
-			handle_hygiene() //HL13 EDIT
+			if(SSmapping.current_map.minetype != "combat_deployment")
+				handle_hygiene() //HL13 EDIT
 
 			handle_tiredness() //HL13 EDIT
 

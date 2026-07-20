@@ -8,7 +8,7 @@
 	total_positions = 3
 	spawn_positions = 3
 
-	exp_requirements = 120
+	exp_requirements = 90
 	exp_required_type = EXP_TYPE_CREW
 	supervisors = SUPERVISOR_ORDINAL
 	exp_granted_type = EXP_TYPE_CREW
