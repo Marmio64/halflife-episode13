@@ -54,7 +54,7 @@
 	health = 160
 	harm_intent_damage = 19
 	obj_damage = 24
-	speed = -0.33
+	speed = -0.35
 
 /mob/living/simple_animal/hostile/halflife/hunter/deployment/Life(seconds_per_tick = SSMOBS_DT, times_fired)
 	..()
