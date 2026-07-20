@@ -130,7 +130,7 @@
 
 /obj/projectile/bullet/rocket/hl13/on_hit(atom/target, blocked = 0, pierce_hit)
 	if(istype(target, /mob/living/simple_animal/hostile/halflife/hunter)) //bonus direct damage vs hunters
-		damage = 100 //165 total damage. Just below the requirement to oneshot a fully healthy hunter, but a gust of wind afterwards can kill them
+		damage = 110 //175 total damage, one shots hunters
 	. = ..()
 
 /obj/projectile/bullet/shotgun_beanbag_halflife
