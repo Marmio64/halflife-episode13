@@ -322,7 +322,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 1)
 
 /obj/machinery/deployment_koth_flag/rebel_defend
 	rebel_time = 8.5 MINUTES
-	combine_time = 35 SECONDS
+	combine_time = 40 SECONDS
 	grace_time = 1 MINUTES
 	normal_respawn_speed = 20 SECONDS
 	starting_faction = REBEL_DEPLOYMENT_FACTION

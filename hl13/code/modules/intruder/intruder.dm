@@ -104,7 +104,7 @@
 	spells_to_add = list(/datum/action/cooldown/mob_cooldown/halflife/cartwheel, /datum/action/cooldown/spell/conjure_item/intruder_decoy/raiden)
 
 	extra_end = 10
-	extra_dex = 5
+	extra_dex = 8
 	extra_str = 10
 
 /datum/outfit/deployment_loadout/intruder/solid/raiden/post_equip(mob/living/carbon/human/H)

@@ -540,7 +540,8 @@
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors)
 "lg" = (
-/obj/structure/closet/crate/halflife/wooden/fortifications,
+/obj/structure/table/halflife/metal,
+/obj/item/stack/sheet/mineral/wood/twentyfive,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "li" = (
@@ -637,11 +638,6 @@
 /obj/structure/halflife/trash_decal,
 /turf/open/floor/plating/indoor/trainfloor,
 /area/halflife/indoors)
-"nm" = (
-/obj/structure/halflife/storage/shelf,
-/obj/item/stack/sheet/mineral/sandbags/six,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
 "nn" = (
 /obj/structure/window/fulltile/halflife/nosmooth/brick{
 	dir = 4
@@ -894,11 +890,6 @@
 /obj/machinery/jukebox/radio,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors)
-"qW" = (
-/obj/structure/halflife/storage/shelf,
-/obj/item/stack/sheet/mineral/wood/twentyfive,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
 "qX" = (
 /obj/structure/table/halflife/metal,
 /obj/item/reagent_containers/pill/patch/grubnugget,
@@ -981,6 +972,11 @@
 /obj/effect/turf_decal/halflife/covering/wallpaper/blue,
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/indoors)
+"ta" = (
+/obj/structure/table/halflife/metal,
+/obj/item/stack/sheet/mineral/sandbags/three,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/combat_deployment/combine_base)
 "th" = (
 /obj/effect/turf_decal/arrows{
 	dir = 1
@@ -1424,6 +1420,11 @@
 	dir = 1
 	},
 /area/halflife/indoors)
+"Ci" = (
+/obj/structure/halflife/storage/shelf,
+/obj/item/stack/razorwire/half_stack,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "Cn" = (
 /obj/machinery/deployment_points_flag/combine{
 	spawnid = 1;
@@ -1693,11 +1694,6 @@
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors)
-"HA" = (
-/obj/structure/halflife/storage/shelf,
-/obj/item/stack/razorwire/half_stack,
-/turf/open/floor/plating/indoor/metal/smooth,
-/area/halflife/indoors/combat_deployment/combine_base)
 "HB" = (
 /obj/machinery/photocopier,
 /obj/item/hl13_small_flag/poland{
@@ -1952,6 +1948,11 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal/train/inner,
 /area/halflife/indoors)
+"ML" = (
+/obj/structure/halflife/storage/shelf,
+/obj/item/stack/sheet/mineral/wood/twentyfive,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "MP" = (
 /obj/structure/sign/poster/halflife/combine/three{
 	pixel_y = 32
@@ -2396,6 +2397,11 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal/train/inner,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"UX" = (
+/obj/structure/halflife/storage/shelf,
+/obj/item/stack/sheet/mineral/sandbags/six,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "UY" = (
 /obj/machinery/light/directional/west,
 /obj/structure/barricade/wooden/solid,
@@ -4552,9 +4558,9 @@ zF
 gE
 YV
 YV
-YV
+ta
 lg
-YV
+kk
 kk
 kk
 vY
@@ -6549,7 +6555,7 @@ YV
 gE
 YV
 zF
-qW
+ML
 zF
 zF
 dq
@@ -6736,10 +6742,10 @@ YV
 gE
 YV
 zF
-nm
+UX
 zF
 zF
-HA
+Ci
 zF
 YV
 gE

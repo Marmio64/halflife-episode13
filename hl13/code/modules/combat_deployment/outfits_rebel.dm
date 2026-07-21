@@ -625,7 +625,6 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	extra_end = 3
 	extra_str = 2
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
