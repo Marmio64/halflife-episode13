@@ -551,6 +551,7 @@
 	name = "HF Blade"
 	desc = "A blade similar to the katana, which also allows you to more easily deflect bullets."
 	block_chance = 50
+	attack_speed = CLICK_CD_FAST //their USP still does more damage both per shot and DPS wise
 
 /obj/item/grenade/decoy
 	name = "noise decoy grenade"
