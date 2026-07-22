@@ -172,11 +172,10 @@
 
 	head = /obj/item/clothing/head/costume/snakeeater/solid
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch/solid
-	mask = /obj/item/cigarette/cigar
 	uniform = /obj/item/clothing/under/syndicate/camo
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar/bigboss
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
-	l_pocket = /obj/item/storage/fancy/cigarettes/cigars
+	l_pocket = /obj/item/cigarette/cigar
 	r_pocket = /obj/item/lighter
 	gloves = /obj/item/clothing/gloves/fingerless
 	ears = /obj/item/radio/headset
@@ -328,9 +327,16 @@
 	var/alpha_decrease = 30
 	var/alpha_increase = 45
 
+	var/turf/turfcamo
+
 /obj/item/clothing/suit/armor/halflife/milvest/solid/old/Initialize(mapload)
 	. = ..()
 	START_PROCESSING(SSprocessing, src)
+
+/obj/item/clothing/suit/armor/halflife/milvest/solid/old/examine(mob/user)
+	. = ..()
+	if(turfcamo)
+		. += span_notice("CrabCamo is currently set to: [turfcamo.icon_state].")
 
 /obj/item/clothing/suit/armor/halflife/milvest/solid/old/process()
 	if(GLOB.alert_cooldown >= 1 SECONDS)
@@ -344,7 +350,16 @@
 		if(noticer != hooman)
 			min_alpha = 120 //a lot more noticeable if you're standing right on top of him
 	if(HAS_TRAIT(hooman, TRAIT_UNDENSE) && hooman.stat == CONSCIOUS) //leaning against walls or crawling on the floor, only works if you're awake
-		hooman.alpha = max(hooman.alpha - alpha_decrease, min_alpha)
+		var/turf/currentturf = get_turf(hooman)
+		if(!turfcamo) //will only happen once, at the start of the game
+			turfcamo = get_turf(hooman)
+			to_chat(hooman, span_notice("Your CrabCamo begins to change to resemble the texture of [turfcamo.icon_state]."))
+		if(currentturf.icon_state == turfcamo.icon_state)
+			hooman.alpha = max(hooman.alpha - alpha_decrease, min_alpha)
+		else
+			hooman.alpha = max(hooman.alpha, 120)
+			turfcamo = get_turf(hooman)
+			to_chat(hooman, span_notice("Your CrabCamo begins to change to resemble the texture of [turfcamo.icon_state]."))
 	else
 		hooman.alpha = min(hooman.alpha + alpha_increase, 255)
 
@@ -359,6 +374,7 @@
 	slowdown = -0.5
 	icon_state = "raiden"
 	armor_type = /datum/armor/armoredvest_upgraded
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS|HEAD //since his armor sucks bad he can have it everywhere
 
 /obj/item/clothing/shoes/jackboots/civilprotection/solid
 	name = "Sneaking Shoes"
@@ -614,10 +630,14 @@
 		hit_things += L
 		if(!L.body_position == LYING_DOWN)
 			owner.visible_message(span_boldwarning("[owner] cartwheels through [L]!"))
-			to_chat(L, span_userdanger("[owner] cartwheels through you, sending you to the ground!"))
-			L.safe_throw_at(throwtarget, 1, 1, src)
-			L.Paralyze(20)
-			L.adjustBruteLoss(5) //barely any damage
+			if(!HAS_TRAIT(L, TRAIT_INTRUDER_OCELOT))
+				to_chat(L, span_userdanger("[owner] cartwheels through you, sending you to the ground!"))
+				L.safe_throw_at(throwtarget, 1, 1, src)
+				L.Paralyze(20)
+				L.adjustBruteLoss(5) //barely any damage
+			else
+				to_chat(L, span_userdanger("[owner] cartwheels through you hard, but you manage to stay upright!"))
+				L.adjustBruteLoss(15) //extra damage so it is still useful against the boss
 			playsound(owner,SFX_SWING_HIT,50,TRUE)
 	addtimer(CALLBACK(src, PROC_REF(do_cartwheel), move_dir, (times_ran + 1)), 1)
 

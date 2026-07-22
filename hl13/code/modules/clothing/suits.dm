@@ -928,6 +928,7 @@
 	slowdown = 1.5
 	armor_type = /datum/armor/plf_veteran
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS //full-body EOD suit
+	flags_inv = HIDEFACIALHAIR
 	limb_integrity = 450
 	repairable_by = /obj/item/stack/kevlar
 	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)

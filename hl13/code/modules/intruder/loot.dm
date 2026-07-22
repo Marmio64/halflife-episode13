@@ -42,7 +42,7 @@
 /obj/effect/spawner/random/halflife/loot/intruder/crab/rare
 	loot = list(
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 2, //already gonna be a lot of these
-		/obj/item/ammo_box/magazine/solid_tranq = 4, //allows him to tranq at least 10 more guards
+		/obj/item/ammo_box/magazine/solid_tranq = 2, //allows him to tranq at least 10 more guards, chance of this decreased at macks request
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 		/obj/item/reagent_containers/hypospray/medipen/adrenaline_inhaler,
 		/obj/item/grenade/flashbang,
