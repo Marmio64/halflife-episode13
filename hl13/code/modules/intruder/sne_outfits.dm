@@ -37,7 +37,7 @@
 	name = "SNE: Black Market Rifleman"
 	display_name = "Black Market Rifleman (Offense)"
 	desc = "Armed with an M4, details here."
-	id_name = "Rifleman Operative"
+	id_name = "Trooper"
 
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
 	uniform = /obj/item/clothing/under/syndicate/combat
@@ -58,7 +58,7 @@
 	name = "SNE: Black Market Shotgunner"
 	display_name = "Black Market Shotgunner (Offense)"
 	desc = "Armed with an SPAS12, details here."
-	id_name = "Shotgunner Operative"
+	id_name = "Doorkicker"
 
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
 	uniform = /obj/item/clothing/under/syndicate/combat
@@ -79,7 +79,7 @@
 	name = "SNE: Black Market Engineer"
 	display_name = "Black Market Engineer (Support)"
 	desc = "Armed with a Colt Python, details here."
-	id_name = "Engineer Operative"
+	id_name = "Sapper"
 
 	head = /obj/item/clothing/head/utility/hardhat/halflife/mining
 	uniform = /obj/item/clothing/under/syndicate/camo
@@ -102,7 +102,7 @@
 	name = "SNE: Black Market Medic"
 	display_name = "Black Market Medic (Support)"
 	desc = "Armed with a USP, details here."
-	id_name = "Medic Operative"
+	id_name = "Sawbones"
 
 	head = /obj/item/clothing/head/beret/sec/poland
 	uniform = /obj/item/clothing/under/syndicate/combat
@@ -124,7 +124,7 @@
 	name = "SNE: Black Market Slugger"
 	display_name = "Black Market Slugger (Defense)"
 	desc = "Armed with a stunbaton, details here."
-	id_name = "Slugger Operative"
+	id_name = "Slugger"
 
 	head = /obj/item/clothing/head/beret/sec/poland
 	uniform = /obj/item/clothing/under/syndicate/combat
@@ -143,7 +143,7 @@
 	name = "SNE: Black Market Sniper"
 	display_name = "Black Market Sniper (Pick)"
 	desc = "Armed with a Mosin, details here."
-	id_name = "Sniper Operative"
+	id_name = "Marksman"
 
 	head = /obj/item/clothing/head/halflife/scout_hat
 	uniform = /obj/item/clothing/under/syndicate/combat
@@ -220,7 +220,7 @@
 	name = "SNE: Conscript Shotgunner"
 	display_name = "Conscript Shotgunner (Offense)"
 	desc = "Armed with an SPAS12, details here."
-	id_name = "Shotgunner"
+	id_name = "Breacher"
 
 	head = /obj/item/clothing/head/helmet/halflife/military
 	uniform = /obj/item/clothing/under/syndicate/camo
@@ -242,7 +242,7 @@
 	name = "SNE: Conscript Engineer"
 	display_name = "Conscript Engineer (Support)"
 	desc = "Armed with a Colt Python, details here."
-	id_name = "Engineer"
+	id_name = "Technician"
 
 	head = /obj/item/clothing/head/halflife/blue_hardhat
 	uniform = /obj/item/clothing/under/syndicate/camo
@@ -266,7 +266,7 @@
 	name = "SNE: Conscript Medic"
 	display_name = "Conscript Medic (Support)"
 	desc = "Armed with a USP, details here."
-	id_name = "Medic"
+	id_name = "Responder"
 
 	head = /obj/item/clothing/head/beret/durathread/unitednations
 	uniform = /obj/item/clothing/under/syndicate/camo
@@ -287,7 +287,7 @@
 	name = "SNE: Conscript Slugger"
 	display_name = "Conscript Slugger (Defense)"
 	desc = "Armed with a stunbaton, details here."
-	id_name = "Slugger"
+	id_name = "Breacher"
 
 	head = /obj/item/clothing/head/beret/durathread/unitednations
 	uniform = /obj/item/clothing/under/syndicate/camo
