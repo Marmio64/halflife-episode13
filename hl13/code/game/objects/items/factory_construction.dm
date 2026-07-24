@@ -72,6 +72,20 @@
 							/obj/item/weaponcrafting/receiver,
 							/obj/item/stack/bulletcasings)
 
+/obj/item/factory_construction/container/advanced/xen
+	name = "advanced xen goods container"
+	desc = "An advanced factory goods container. It is worth three times as much money and quota amount as a regular container, but the ingredients are harder and more dangerous to procure, and are all xenian in origin."
+
+	completed_container = /obj/item/factory_construction/full_container/advanced/xen
+
+	possible_items = list(/obj/item/food/xen/xenbranch,
+							/obj/item/food/xen/xenslime,
+							/obj/item/food/xen/xenspore,
+							/obj/item/food/meat/slab/xen,
+							/obj/item/food/meat/slab/xen/poison,
+							/obj/item/stack/sheet/animalhide/goliath_hide)
+
+
 /obj/item/factory_construction/container/examine(mob/user)
 	. = ..()
 
@@ -219,3 +233,6 @@
 	name = "sealed military factory container"
 	desc = "A full advanced factory goods container which has been sealed correctly. You can send it on the cargo shuttle for exporting to gain some credits for the district's cargo budget. This one has military grade materials which will increase sociostability when sold."
 	icon_state = "advanced_container"
+
+/obj/item/factory_construction/full_container/advanced/xen
+	name = "sealed xen factory container"
