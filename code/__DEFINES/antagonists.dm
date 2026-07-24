@@ -166,6 +166,8 @@ GLOBAL_LIST_INIT(syndicate_employers, list(
 	"Lambda",
 	"Black Market Agent",
 	"Refugee Spy",
+	"United Nations Remnant",
+	"Radicalized",
 ))
 ///employers that are from Nanotrasen
 GLOBAL_LIST_INIT(nanotrasen_employers, list(
@@ -175,6 +177,7 @@ GLOBAL_LIST_INIT(nanotrasen_employers, list(
 ///employers who hire agents to do the hijack
 GLOBAL_LIST_INIT(hijack_employers, list(
 	"Lambda",
+	"United Nations Remnant",
 ))
 
 ///employers who hire agents to do a task and escape... or martyrdom. whatever
@@ -182,6 +185,7 @@ GLOBAL_LIST_INIT(normal_employers, list(
 	"Black Market Agent",
 	"Refugee Spy",
 	"Internal Affairs Agent",
+	"Radicalized",
 ))
 
 ///employers for malfunctioning ais. they do not have sides, unlike traitors.
@@ -316,7 +320,7 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 /// The normal cost of an uplink implant; used for calcuating how many
 /// TC to charge someone if they get a free implant through choice or
 /// because they have nothing else that supports an implant.
-#define UPLINK_IMPLANT_TELECRYSTAL_COST 0
+#define UPLINK_IMPLANT_TELECRYSTAL_COST 4
 
 /// Items with this stock key do not share stock with other items
 #define UPLINK_SHARED_STOCK_UNIQUE "uplink_shared_stock_unique"
