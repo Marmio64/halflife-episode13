@@ -320,7 +320,7 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 /// The normal cost of an uplink implant; used for calcuating how many
 /// TC to charge someone if they get a free implant through choice or
 /// because they have nothing else that supports an implant.
-#define UPLINK_IMPLANT_TELECRYSTAL_COST 4
+#define UPLINK_IMPLANT_TELECRYSTAL_COST 0
 
 /// Items with this stock key do not share stock with other items
 #define UPLINK_SHARED_STOCK_UNIQUE "uplink_shared_stock_unique"
