@@ -530,6 +530,8 @@
 
 	var/armed = FALSE
 
+	var/sne = FALSE //sneaking mission variant
+
 /obj/item/melee/touch_attack/holdup
 	name = "Free Hand (Hold-up)"
 	desc = "Your hand. It's ready for a hold-up."
@@ -545,15 +547,33 @@
 	var/mob/living/carbon/human/human_victim = victim
 
 	if(human_victim.stat == DEAD)
-		caster.balloon_alert(caster, "can't hold-up the dead!")
+		caster.balloon_alert(caster, "can't use on the dead!")
 		return FALSE
 
-	if(human_victim.deployment_faction != COMBINE_DEPLOYMENT_FACTION)
-		caster.balloon_alert(caster, "can't hold-up allies!")
+	if(human_victim == caster)
+		caster.balloon_alert(caster, "can't use it on yourself!")
+		return FALSE
+
+	if(sne)
+		if(human_victim.stat == UNCONSCIOUS)
+			to_chat(caster, span_notice("You begin to search [human_victim] for dogtags."))
+			if(do_after(caster, 5 SECONDS, human_victim)) //give someone a chance to interfere
+				if(human_victim in GLOB.dogtag_holders)
+					GLOB.dogtag_holders -= human_victim
+					new /obj/item/sne/dogtags(human_victim.loc)
+					playsound(caster, 'hl13/sound/effects/spawnration.ogg', 50, FALSE) //audible
+					to_chat(caster, span_notice("Dogtags fall out of one of [human_victim]'s pockets!"))
+				else
+					to_chat(caster, span_warning("You fail to find any dogtags... did you already search this person?"))
+			else
+				to_chat(caster, span_warning("You fail to find any dogtags... maybe look a little harder next time?"))
+
+	if(human_victim.deployment_faction != COMBINE_DEPLOYMENT_FACTION) //no allies on a sneaking mission (otacon i guess but im not bothering with that right now)
+		caster.balloon_alert(caster, "can't use on allies!")
 		return FALSE
 
 	if(GLOB.alert_cooldown > 0 SECONDS)
-		caster.balloon_alert(caster, "can't hold-up during an alert!")
+		caster.balloon_alert(caster, "can't use during an alert!")
 		return FALSE
 
 	if(!istype(caster.get_inactive_held_item(), /obj/item/gun) && !istype(caster.get_inactive_held_item(), /obj/item/knife))

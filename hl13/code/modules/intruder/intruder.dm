@@ -350,17 +350,24 @@
 	for(var/mob/living/carbon/human/noticer in range(0, hooman))
 		if(noticer != hooman)
 			min_alpha = 120 //a lot more noticeable if you're standing right on top of him
+	var/turf/currentturf = get_turf(hooman)
 	if(HAS_TRAIT(hooman, TRAIT_UNDENSE) && hooman.stat == CONSCIOUS) //leaning against walls or crawling on the floor, only works if you're awake
-		var/turf/currentturf = get_turf(hooman)
 		if(!turfcamo) //will only happen once, at the start of the game
 			turfcamo = get_turf(hooman)
+			playsound(hooman, 'hl13/sound/effects/camochange.ogg', 20, FALSE, -10) //quiet but not impossible to detect hopefully ill tweak it later
 			to_chat(hooman, span_notice("Your CrabCamo begins to change to resemble the texture of [turfcamo.icon_state]."))
 		if(currentturf.icon_state == turfcamo.icon_state)
 			hooman.alpha = max(hooman.alpha - alpha_decrease, min_alpha)
 		else
 			hooman.alpha = max(hooman.alpha, 120)
 			turfcamo = get_turf(hooman)
+			playsound(hooman, 'hl13/sound/effects/camochange.ogg', 20, FALSE, -10)
 			to_chat(hooman, span_notice("Your CrabCamo begins to change to resemble the texture of [turfcamo.icon_state]."))
+	else if(turfcamo)
+		if(currentturf.icon_state == turfcamo.icon_state)
+			hooman.alpha = max(hooman.alpha - alpha_decrease, 120) //still somewhat effective if you already have the camo of the turf you're on
+		else
+			hooman.alpha = min(hooman.alpha + alpha_increase, 255)
 	else
 		hooman.alpha = min(hooman.alpha + alpha_increase, 255)
 
@@ -613,17 +620,44 @@
 	if(times_ran >= 5)
 		return
 	var/turf/T = get_step(get_turf(owner), move_dir)
+	var/mob/living/livingowner = owner
 	if(T.density)
+		owner.safe_throw_at(get_turf(owner), 1, 1, src)
+		livingowner.Paralyze(20)
+		livingowner.adjustBruteLoss(5)
+		playsound(owner,SFX_SWING_HIT,50,TRUE)
 		return
 	for(var/obj/structure/window/W in T.contents)
+		owner.safe_throw_at(get_turf(owner), 1, 1, src)
+		livingowner.Paralyze(20)
+		livingowner.adjustBruteLoss(5)
+		playsound(owner,SFX_SWING_HIT,50,TRUE)
 		return
 	for(var/obj/machinery/door/D in T.contents)
-		return
+		if(D.density)
+			owner.safe_throw_at(get_turf(owner), 1, 1, src)
+			livingowner.Paralyze(20)
+			livingowner.adjustBruteLoss(5)
+			playsound(owner,SFX_SWING_HIT,50,TRUE)
+			return
 	for(var/obj/structure/halflife/fence/F in T.contents)
+		owner.safe_throw_at(get_turf(owner), 1, 1, src)
+		livingowner.Paralyze(20)
+		livingowner.adjustBruteLoss(5)
+		playsound(owner,SFX_SWING_HIT,50,TRUE)
 		return
 	for(var/obj/machinery/turnstile/S in T.contents)
-		return
+		if(S.on)
+			owner.safe_throw_at(get_turf(owner), 1, 1, src)
+			livingowner.Paralyze(20)
+			livingowner.adjustBruteLoss(5)
+			playsound(owner,SFX_SWING_HIT,50,TRUE)
+			return
 	for(var/obj/effect/koth_grace_field/K in T.contents)
+		owner.safe_throw_at(get_turf(owner), 1, 1, src)
+		livingowner.Paralyze(20)
+		livingowner.adjustBruteLoss(5)
+		playsound(owner,SFX_SWING_HIT,50,TRUE)
 		return
 	owner.forceMove(T)
 	var/list/hit_things = list()
