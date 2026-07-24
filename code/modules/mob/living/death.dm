@@ -193,6 +193,11 @@
 				SSticker.tdm_rebel_deaths++
 			SSticker.tdm_total_deaths++
 
+		if(deployment_faction == XEN_DEPLOYMENT_FACTION)
+			if(HAS_TRAIT(src, TRAIT_THE_INTRUDER))
+				GLOB.dogtags_left = 3 //reset amount on death
+			SSticker.tdm_xen_deaths++
+
 	if(deployment_faction == HIDDEN_DEPLOYMENT_FACTION)
 		GLOB.number_of_hidden--
 
@@ -223,5 +228,8 @@
 
 	SEND_SIGNAL(src, COMSIG_LIVING_DEATH, gibbed)
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOB_DEATH, src, gibbed)
+
+	if(HAS_TRAIT(src, TRAIT_THE_INTRUDER) && SSmapping.current_map.combat_deployment_gamemode == "sne")
+		qdel(src) //so his stuff doesnt get stolen
 
 	return TRUE

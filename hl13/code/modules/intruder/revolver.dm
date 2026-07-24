@@ -332,6 +332,8 @@
 	check_flags = NONE
 	cooldown_time = 30 SECONDS
 
+	var/casting = FALSE //i think its sleeps fault i need this
+
 	var/static/list/possible_emotions = list(
 		"rage",
 		"sadness",
@@ -341,21 +343,24 @@
 
 /datum/action/cooldown/spell/liquid_special/cast(mob/living/cast_on)
 	. = ..()
-	cast_on.visible_message(span_warning("[cast_on] fires an imaginary finger gun!"))
-	cast_on.say("Bang!")
-	playsound(cast_on,'hl13/sound/voice/solid/liquidbang.ogg', 50, FALSE)
-	sleep(0.5 SECONDS)
-	for(var/mob/living/carbon/human/victim in orange(cast_on, 7))
-		SEND_SOUND(victim, sound('hl13/sound/effects/liquidemotions.ogg'))
-		if(!HAS_TRAIT(victim, TRAIT_THE_INTRUDER))
-			var/chosen_emotion = pick(possible_emotions)
-			to_chat(victim, span_warning("You're suddenly overcome with [chosen_emotion]!"))
-			addtimer(CALLBACK(src, PROC_REF(feel_emotion), victim, chosen_emotion, 0), rand(0.4 SECONDS, 1 SECONDS))
-		else
-			to_chat(victim, span_warning("Your body begins to fail you!"))
-			cast_on.say("Hahahaha!!")
-			playsound(cast_on,'hl13/sound/voice/solid/liquidlaugh.ogg', 50, FALSE)
-			addtimer(CALLBACK(src, PROC_REF(old_snake), victim, 0), rand(0.4 SECONDS, 1 SECONDS))
+	if(!casting)
+		casting = TRUE
+		cast_on.visible_message(span_warning("[cast_on] fires an imaginary finger gun!"))
+		cast_on.say("Bang!")
+		playsound(cast_on,'hl13/sound/voice/solid/liquidbang.ogg', 50, FALSE)
+		sleep(0.5 SECONDS)
+		for(var/mob/living/carbon/human/victim in orange(cast_on, 7))
+			SEND_SOUND(victim, sound('hl13/sound/effects/liquidemotions.ogg'))
+			if(!HAS_TRAIT(victim, TRAIT_THE_INTRUDER))
+				var/chosen_emotion = pick(possible_emotions)
+				to_chat(victim, span_warning("You're suddenly overcome with [chosen_emotion]!"))
+				addtimer(CALLBACK(src, PROC_REF(feel_emotion), victim, chosen_emotion, 0), rand(0.4 SECONDS, 1 SECONDS))
+			else
+				to_chat(victim, span_warning("Your body begins to fail you!"))
+				cast_on.say("Hahahaha!!")
+				playsound(cast_on,'hl13/sound/voice/solid/liquidlaugh.ogg', 50, FALSE)
+				addtimer(CALLBACK(src, PROC_REF(old_snake), victim, 0), rand(0.4 SECONDS, 1 SECONDS))
+		casting = FALSE
 
 /datum/action/cooldown/spell/liquid_special/proc/feel_emotion(mob/living/carbon/human/victim, emotion, times_emoted)
 	if(times_emoted >= 5)
@@ -491,17 +496,24 @@
 			return
 	var/turf/T = get_step(get_turf(owner), move_dir)
 	if(T.density)
-		return
+		if(times_charged >= extracharge_amount)
+			return
+		else
+			addtimer(CALLBACK(src, PROC_REF(do_charge), move_dir, (times_ran + 1), times_charged), 1)
+			return
 	for(var/obj/structure/window/W in T.contents)
-		return
+		W.atom_deconstruct(FALSE) //breaks windows
+		qdel(W)
 	for(var/obj/machinery/door/D in T.contents)
-		return
+		if(D.density)
+			D.try_to_activate_door()
+			playsound(D, 'hl13/sound/halflifeeffects/metal_door_break.ogg', 50, FALSE)
 	for(var/obj/structure/halflife/fence/F in T.contents)
-		return
-	for(var/obj/machinery/turnstile/S in T.contents)
-		return
-	for(var/obj/effect/koth_grace_field/K in T.contents)
-		return
+		playsound(F, 'hl13/sound/halflifeeffects/metal_door_break.ogg', 50, FALSE)
+		qdel(F)
+	for(var/obj/machinery/turnstile/brig/halflife/forcefield/S in T.contents) //when are there ever any other kind (besides this is the only type that has malfunction)
+		if(S.on)
+			S.malfunction()
 	if(times_ran == 0)
 		playsound(owner,'hl13/sound/effects/soliduscharge.ogg', 50, FALSE)
 	var/turf/flameturf = get_turf(owner)
