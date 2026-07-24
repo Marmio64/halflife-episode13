@@ -82,7 +82,7 @@
 	id_name = "Sapper"
 
 	head = /obj/item/clothing/head/utility/hardhat/halflife/mining
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/syndicate/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython/poorly_maintained
@@ -282,6 +282,8 @@
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 2,
 		/obj/item/stack/medical/gauze = 1,
 	)
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit/intruder, /datum/action/cooldown/spell/conjure_item/bloodloss)
 
 /datum/outfit/deployment_loadout/combine/sne/melee
 	name = "SNE: Conscript Slugger"
