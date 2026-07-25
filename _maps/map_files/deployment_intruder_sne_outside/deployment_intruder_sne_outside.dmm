@@ -9,6 +9,7 @@
 "bs" = (/obj/structure/halflife/pot/plant,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
 "bt" = (/obj/machinery/power/halflife/streetlamphalt,/turf/open/floor/plating/ground/dirt,/area/halflife/outdoors/deployment_city)
 "bz" = (/obj/structure/halflife/barrel/triple/grey/three,/turf/open/floor/plating/indoor/concrete,/area/halflife/outdoors/deployment_city)
+"bF" = (/obj/structure/halflife/cone,/turf/open/floor/plating/ground/sidewalk/cobblestone,/area/halflife/outdoors/deployment_city)
 "bO" = (/turf/open/floor/plating/indoor/concrete,/area/halflife/outdoors/deployment_city)
 "bU" = (/obj/item/stack/sheet/scrap_metal,/turf/open/floor/plating/ground/rockunder,/area/halflife/outdoors/deployment_city)
 "cb" = (/obj/machinery/escape_vent{pixel_y = -32},/obj/effect/landmark/deployments_xen,/turf/open/floor/plating/indoor/lino,/area/halflife/outdoors/deployment_city)
@@ -32,6 +33,7 @@
 "eg" = (/obj/machinery/light/small/directional/north,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/combat_deployment/combine_base)
 "ek" = (/obj/structure/chair/office/halflife/blue{dir = 1},/obj/structure/halflife/rug/rubber,/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/outdoors/deployment_city)
 "et" = (/obj/structure/chair/halflife/wood,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
+"eU" = (/obj/structure/trap/deployment_spawn_prot/combine,/obj/machinery/door/unpowered/halflife/seethrough/metal,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/combat_deployment/combine_base)
 "eX" = (/obj/structure/halflife/barrel/double/grey,/obj/machinery/light/small/directional/east,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/outdoors/deployment_city)
 "fd" = (/obj/machinery/light/small/directional/east,/turf/open/floor/plating/indoor/lino,/area/halflife/outdoors/deployment_city)
 "ff" = (/obj/structure/chair/office/halflife/blue,/turf/open/floor/plating/indoor/woodc/mosaic,/area/halflife/outdoors/deployment_city)
@@ -74,7 +76,7 @@
 "iD" = (/obj/structure/railing/halflife/solo,/obj/structure/railing/halflife/solo{dir = 4},/turf/open/floor/plating/indoor/concrete,/area/halflife/outdoors/deployment_city)
 "iE" = (/obj/structure/chair/halflife/metal/blue{dir = 1},/turf/open/floor/plating/indoor/concrete,/area/halflife/outdoors/deployment_city)
 "iO" = (/obj/structure/chair/office/halflife/green{dir = 1},/turf/open/floor/plating/indoor/carpet,/area/halflife/outdoors/deployment_city)
-"iS" = (/obj/effect/koth_grace_field,/obj/effect/landmark/navigate_destination/halflife/intruder/barracks,/turf/open/floor/plating/ground/sidewalk/cobblestone,/area/halflife/outdoors/deployment_city)
+"iS" = (/obj/effect/koth_grace_field,/obj/effect/landmark/navigate_destination/halflife/intruder/barracks,/obj/structure/trap/deployment_spawn_prot/combine,/turf/open/floor/plating/ground/sidewalk/cobblestone,/area/halflife/outdoors/deployment_city)
 "iU" = (/obj/structure/chair/halflife/wood/padded{dir = 8},/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
 "iV" = (/obj/structure/closet/cardboard/solid,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
 "iX" = (/obj/effect/koth_grace_field,/turf/open/floor/plating/ground/rockunder,/area/halflife/outdoors/deployment_city)
@@ -84,7 +86,8 @@
 "jI" = (/obj/structure/closet/halflife{anchored = 1},/turf/open/floor/plating/indoor/metal/smooth,/area/halflife/outdoors/deployment_city)
 "jK" = (/obj/structure/closet/cardboard/solid,/turf/open/floor/plating/ground/sidewalk/cobblestone,/area/halflife/outdoors/deployment_city)
 "kk" = (/obj/structure/window/fulltile/halflife/nosmooth/generic,/turf/open/floor/plating/indoor/woodc,/area/halflife/outdoors/deployment_city)
-"ku" = (/obj/machinery/light/directional/east,/turf/open/floor/plating/ground/grass,/area/halflife/indoors/combat_deployment/rebel_base)
+"ku" = (/obj/machinery/light/directional/north,/turf/open/floor/plating/ground/grass,/area/halflife/indoors/combat_deployment/rebel_base)
+"kB" = (/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/combat_deployment/rebel_base)
 "kF" = (/obj/structure/lattice,/obj/structure/ladder/halflife,/obj/structure/railing/halflife/full{dir = 9},/obj/structure/railing/halflife/full{dir = 8},/turf/open/openspace,/area/halflife/outdoors/deployment_city)
 "kJ" = (/obj/structure/halflife/processor/int,/turf/open/floor/plating/indoor/tile/kitchen,/area/halflife/outdoors/deployment_city)
 "kM" = (/obj/machinery/light/directional/north,/turf/open/floor/plating/indoor/tiled9,/area/halflife/outdoors/deployment_city)
@@ -103,9 +106,9 @@
 "lZ" = (/obj/structure/railing/halflife/full,/turf/open/halflife/water/shallow,/area/halflife/outdoors/deployment_city)
 "mj" = (/obj/structure/halflife/cargotruck,/turf/open/floor/plating/ground/sidewalk/cobblestone,/area/halflife/outdoors/deployment_city)
 "mo" = (/turf/cordon,/area/halflife/outdoors/deployment_city/zombies/xen_base)
-"mt" = (/obj/machinery/door/unpowered/halflife/metal{dir = 1},/obj/structure/trap/deployment_spawn_prot/combine,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/combat_deployment/combine_base)
+"mt" = (/obj/machinery/door/unpowered/halflife/metal{dir = 1},/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/combat_deployment/combine_base)
 "mv" = (/obj/structure/railing/halflife/full{dir = 1},/turf/open/halflife/water/shallow,/area/halflife/outdoors/deployment_city)
-"mB" = (/obj/structure/trap/deployment_spawn_prot/rebel,/turf/open/floor/plating/ground/dirt,/area/halflife/indoors/combat_deployment/rebel_base)
+"mB" = (/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/combat_deployment/rebel_base)
 "mF" = (/obj/structure/closet/halflife{anchored = 1},/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
 "mG" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/ground/dirt,/area/halflife/outdoors/deployment_city)
 "mH" = (/obj/structure/ladder/halflife,/turf/open/floor/plating/indoor/concrete,/area/halflife/outdoors/deployment_city)
@@ -127,6 +130,7 @@
 "nZ" = (/obj/machinery/door/unpowered/halflife/seethrough/fence/wire/barb{lockid = "conscript"; keylock = 1},/turf/open/floor/plating/ground/sidewalk,/area/halflife/outdoors/deployment_city)
 "or" = (/obj/structure/halflife/pot/plant,/turf/open/floor/plating/indoor/tiled9,/area/halflife/outdoors/deployment_city)
 "oG" = (/obj/structure/closet/crate/bin,/turf/open/floor/plating/indoor/tile/green,/area/halflife/outdoors/deployment_city)
+"oY" = (/turf/closed/wall/halflife/concrete,/area/halflife/indoors/combat_deployment/rebel_base)
 "pb" = (/obj/machinery/light/directional/east,/turf/open/floor/plating/ground/sidewalk,/area/halflife/outdoors/deployment_city)
 "pc" = (/obj/structure/window/fulltile/halflife/nosmooth/reinforced/indestructible,/turf/open/floor/plating/indoor/tile/black,/area/halflife/outdoors/deployment_city)
 "pf" = (/obj/structure/halflife/rug/red,/turf/open/floor/plating/indoor/woodc,/area/halflife/outdoors/deployment_city)
@@ -159,11 +163,12 @@
 "rV" = (/obj/structure/window/fulltile/halflife/nosmooth/brick{dir = 8},/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/outdoors/deployment_city)
 "rY" = (/obj/machinery/light/directional/north,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/outdoors/deployment_city/zombies/xen_base)
 "sb" = (/obj/machinery/light/small/directional/east,/turf/open/floor/plating/indoor/tile/black,/area/halflife/outdoors/deployment_city)
+"sn" = (/obj/structure/bed/halflife/bedframe/cot,/obj/structure/bed/halflife/mattress/old,/obj/effect/landmark/deployments_metrocop,/obj/machinery/light/small/directional/south,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/combat_deployment/combine_base)
 "sD" = (/obj/structure/table/halflife/no_smooth/wood,/obj/structure/halflife/trash/books,/turf/open/floor/plating/indoor/woodc,/area/halflife/outdoors/deployment_city)
 "sE" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/ground/grass,/area/halflife/outdoors/deployment_city)
 "sF" = (/obj/structure/window/fulltile/halflife/nosmooth/generic,/turf/open/floor/plating/indoor/metal/industrial,/area/halflife/outdoors/deployment_city)
 "sP" = (/obj/structure/flora/tree/halflife/plain,/turf/open/floor/plating/ground/grass,/area/halflife/outdoors/deployment_city)
-"sR" = (/obj/effect/koth_grace_field,/turf/open/floor/plating/ground/sidewalk/cobblestone,/area/halflife/outdoors/deployment_city)
+"sR" = (/obj/effect/koth_grace_field,/obj/structure/trap/deployment_spawn_prot/combine,/turf/open/floor/plating/ground/sidewalk/cobblestone,/area/halflife/outdoors/deployment_city)
 "sV" = (/obj/machinery/light/directional/north,/turf/open/floor/plating/indoor/metal/industrial,/area/halflife/outdoors/deployment_city)
 "sZ" = (/turf/closed/indestructible/rock,/area/halflife/indoors/combat_deployment/rebel_base)
 "td" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 1},/turf/open/openspace,/area/halflife/outdoors/deployment_city)
@@ -184,6 +189,7 @@
 "uN" = (/obj/structure/table/halflife/no_smooth/large/metal/desk/alt{dir = 1},/obj/structure/halflife/trash/papers{dir = 10},/obj/structure/halflife/rug/rubber,/turf/open/floor/plating/indoor/tile/kitchen,/area/halflife/outdoors/deployment_city)
 "uQ" = (/obj/effect/turf_decal/halflife/covering/paint/green,/turf/closed/wall/halflife/brick,/area/halflife/outdoors/deployment_city)
 "uW" = (/obj/structure/halflife/trash/papers{dir = 6},/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/outdoors/deployment_city)
+"uX" = (/obj/structure/bed/halflife/bedframe/cot,/obj/structure/bed/halflife/mattress/old,/obj/effect/landmark/deployments_metrocop,/obj/machinery/light/small/directional/north,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/combat_deployment/combine_base)
 "vn" = (/obj/structure/bodycontainer/morgue/beeper_off{dir = 1},/turf/open/floor/plating/indoor/metal/plate,/area/halflife/outdoors/deployment_city)
 "vo" = (/turf/open/floor/plating/indoor/lino,/area/halflife/outdoors/deployment_city)
 "vp" = (/obj/item/hl13_small_flag/combine,/obj/structure/halflife/pipes/vent,/turf/open/floor/plating/indoor/tile/black,/area/halflife/outdoors/deployment_city)
@@ -191,8 +197,9 @@
 "vu" = (/obj/structure/halflife/fence,/turf/open/floor/plating/ground/dirt,/area/halflife/outdoors/deployment_city)
 "vv" = (/obj/structure/railing/halflife/full{dir = 8},/turf/open/halflife/water/shallow,/area/halflife/outdoors/deployment_city)
 "vy" = (/obj/machinery/intruder_coffeemaker{pixel_x = 2; pixel_y = 10},/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/combat_deployment/combine_base)
-"vA" = (/obj/machinery/door/unpowered/halflife/metal,/obj/structure/trap/deployment_spawn_prot/combine,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/combat_deployment/combine_base)
+"vA" = (/obj/machinery/door/unpowered/halflife/metal,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/combat_deployment/combine_base)
 "vB" = (/obj/structure/ladder/halflife/upwards,/turf/open/floor/plating/indoor/concrete,/area/halflife/outdoors/deployment_city)
+"vE" = (/obj/machinery/light/small/directional/east,/turf/open/floor/plating/ground/rockunder,/area/halflife/outdoors/deployment_city)
 "vF" = (/obj/machinery/light/small/directional/south,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
 "vN" = (/obj/structure/closet/crate/bin,/turf/open/floor/plating/ground/dirt,/area/halflife/outdoors/deployment_city)
 "vO" = (/obj/structure/lattice,/obj/structure/ladder/halflife,/obj/structure/railing/halflife/full{dir = 5},/obj/structure/railing/halflife/full{dir = 4},/turf/open/openspace,/area/halflife/outdoors/deployment_city)
@@ -215,6 +222,7 @@
 "xf" = (/obj/effect/spawner/random/halflife/plant_spawner,/obj/machinery/light/directional/south,/turf/open/floor/plating/ground/grass,/area/halflife/outdoors/deployment_city)
 "xi" = (/obj/machinery/door/poddoor/shutters/indestructible{dir = 4},/turf/open/floor/plating/ground/sidewalk/cobblestone,/area/halflife/outdoors/deployment_city)
 "xn" = (/obj/machinery/shower/halflife{dir = 4},/turf/open/floor/plating/indoor/lino,/area/halflife/outdoors/deployment_city)
+"xo" = (/obj/effect/koth_grace_field,/obj/structure/halflife/cone,/turf/open/floor/plating/ground/dirt,/area/halflife/outdoors/deployment_city)
 "xt" = (/obj/structure/halflife/combine/powergen,/turf/open/floor/plating/indoor/concrete,/area/halflife/outdoors/deployment_city)
 "xu" = (/obj/structure/table/halflife/no_smooth/large/metal/desk{dir = 8},/turf/open/floor/plating/indoor/tiled9,/area/halflife/outdoors/deployment_city)
 "xy" = (/obj/structure/halflife/trash/garbage/dumpster/crate,/turf/open/floor/plating/indoor/woodc,/area/halflife/outdoors/deployment_city)
@@ -230,6 +238,7 @@
 "yG" = (/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/outdoors/deployment_city/zombies/xen_base)
 "yN" = (/obj/structure/table/halflife/metal/heavy,/obj/machinery/button/door{id = "rebel_bunker_entrance_east"; name = "storage shutters"; desc = "A door remote control switch. The controls have been deactivated ever since an intruder was reported."},/turf/open/floor/plating/indoor/metal/combine/alt2,/area/halflife/outdoors/deployment_city)
 "yU" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 9},/obj/structure/railing/halflife/full{dir = 8},/turf/open/openspace,/area/halflife/outdoors/deployment_city)
+"zb" = (/obj/structure/halflife/road_barrier/concrete,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/combat_deployment/combine_base)
 "zk" = (/obj/structure/halflife/barrel/double/grey/two,/turf/open/floor/plating/indoor/metal/industrial,/area/halflife/outdoors/deployment_city)
 "zl" = (/obj/effect/turf_decal/halflife/covering/wallpaper/red,/turf/closed/wall/halflife/brick,/area/halflife/outdoors/deployment_city)
 "zs" = (/obj/machinery/light/small/directional/south,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/combat_deployment/combine_base)
@@ -261,6 +270,7 @@
 "BY" = (/obj/structure/closet/halflife{anchored = 1},/turf/open/floor/plating/indoor/metal/combine,/area/halflife/outdoors/deployment_city)
 "Cd" = (/obj/structure/table/halflife/no_smooth/large/wood,/turf/open/floor/plating/indoor/woodc,/area/halflife/outdoors/deployment_city)
 "Cf" = (/obj/structure/table/halflife/no_smooth/metal,/turf/open/floor/plating/indoor/tiled9,/area/halflife/outdoors/deployment_city)
+"Cg" = (/obj/structure/trap/deployment_spawn_prot/combine,/turf/open/floor/plating/ground/sidewalk,/area/halflife/outdoors/deployment_city)
 "Ch" = (/obj/structure/closet/cardboard/solid,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/outdoors/deployment_city/zombies/xen_base)
 "Ck" = (/turf/open/floor/plating/ground/sidewalk/cobblestone,/area/halflife/outdoors/deployment_city)
 "Cn" = (/obj/machinery/telecomms/broadcaster/preset_left/birdstation,/turf/open/floor/plating/ground/sidewalk,/area/halflife/outdoors/deployment_city)
@@ -273,13 +283,14 @@
 "CS" = (/obj/structure/chair/halflife/metal/blue,/turf/open/floor/plating/indoor/tile/green,/area/halflife/outdoors/deployment_city)
 "Dd" = (/obj/structure/table/halflife/metal/grate,/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/outdoors/deployment_city)
 "Dh" = (/obj/structure/chair/halflife/metal/folding{dir = 4},/obj/effect/landmark/deployments_refugee,/turf/open/floor/plating/ground/grass,/area/halflife/indoors/combat_deployment/rebel_base)
-"Dr" = (/obj/structure/window/fulltile/halflife/nosmooth/generic,/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/outdoors/deployment_city)
+"Dr" = (/obj/structure/halflife/cone,/turf/open/floor/plating/ground/rockunder,/area/halflife/outdoors/deployment_city)
 "Ds" = (/turf/open/floor/plating/ground/grass,/area/halflife/indoors/combat_deployment/rebel_base)
 "Dw" = (/obj/effect/landmark/navigate_destination/halflife/intruder/lab,/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/outdoors/deployment_city)
 "DK" = (/obj/structure/halflife/pipes/vent,/turf/open/floor/plating/indoor/tile/green,/area/halflife/outdoors/deployment_city)
 "DL" = (/obj/item/hl13_small_flag/combine,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
 "DP" = (/obj/effect/decal/cleanable/dirt/dust,/obj/structure/trap/deployment_spawn_prot/rebel,/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/combat_deployment/rebel_base)
 "DR" = (/obj/structure/table/halflife/no_smooth/large/metal/desk/alt{dir = 8},/turf/open/floor/plating/indoor/tile/kitchen,/area/halflife/outdoors/deployment_city)
+"DS" = (/obj/machinery/light/directional/east,/turf/open/floor/plating/ground/grass,/area/halflife/indoors/combat_deployment/rebel_base)
 "Eo" = (/obj/machinery/light/directional/south,/turf/open/floor/plating/indoor/woodc,/area/halflife/outdoors/deployment_city)
 "Ep" = (/obj/structure/halflife/trash/garbage/dumpster/crate,/turf/open/floor/plating/indoor/metal/smooth,/area/halflife/outdoors/deployment_city)
 "Er" = (/obj/structure/table/halflife/no_smooth/large/wood/desk/alt,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
@@ -316,11 +327,10 @@
 "IE" = (/obj/machinery/door/unpowered/halflife/metal{dir = 8},/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/outdoors/deployment_city)
 "IM" = (/obj/structure/halflife/fence/wire/end/west/barb,/obj/structure/halflife/fence/vertical/wire/west/barb,/turf/open/floor/plating/ground/grass,/area/halflife/outdoors/deployment_city)
 "IN" = (/obj/structure/halflife/storage/large/shelf,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/outdoors/deployment_city)
-"IU" = (/obj/machinery/light/directional/south,/turf/open/floor/plating/ground/dirt,/area/halflife/outdoors/deployment_city)
+"IU" = (/obj/structure/halflife/cone,/turf/open/floor/plating/ground/dirt,/area/halflife/outdoors/deployment_city)
 "IV" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 4},/obj/structure/railing/halflife/full{dir = 8},/turf/open/openspace,/area/halflife/outdoors/deployment_city)
 "IX" = (/obj/structure/halflife/trash/papers/three,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
-"IY" = (/turf/closed/wall/halflife/concrete,/area/halflife/indoors/combat_deployment/rebel_base)
-"IZ" = (/obj/effect/decal/cleanable/rubble,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/plating/ground/dirt,/area/halflife/outdoors/deployment_city)
+"IZ" = (/obj/effect/decal/cleanable/rubble,/obj/effect/decal/cleanable/dirt/dust,/obj/structure/trap/deployment_spawn_prot/rebel,/turf/open/floor/plating/ground/dirt,/area/halflife/indoors/combat_deployment/rebel_base)
 "Jc" = (/turf/open/floor/plating/indoor/woodc,/area/halflife/outdoors/deployment_city)
 "Je" = (/obj/machinery/door/unpowered/halflife/metal{dir = 4},/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/outdoors/deployment_city)
 "Jh" = (/obj/machinery/door/unpowered/halflife/wood{dir = 4},/turf/open/floor/plating/indoor/carpet/green,/area/halflife/outdoors/deployment_city)
@@ -356,6 +366,7 @@
 "MM" = (/obj/machinery/door/unpowered/halflife/wood{dir = 4},/turf/open/floor/plating/indoor/carpet,/area/halflife/outdoors/deployment_city)
 "MN" = (/obj/structure/halflife/fence,/obj/structure/halflife/fence,/turf/open/floor/plating/ground/grass,/area/halflife/outdoors/deployment_city)
 "MS" = (/obj/structure/table/halflife/no_smooth/large/metal/desk/alt,/turf/open/floor/plating/indoor/tile/kitchen,/area/halflife/outdoors/deployment_city)
+"MZ" = (/obj/structure/halflife/cone,/turf/open/floor/plating/ground/sidewalk,/area/halflife/outdoors/deployment_city)
 "Nh" = (/obj/effect/spawner/random/halflife/plant_spawner,/obj/machinery/light/directional/south,/turf/open/floor/plating/ground/dirt,/area/halflife/outdoors/deployment_city)
 "Nj" = (/obj/item/paper/paperslip{default_raw_text = "The 'Metal Synth' Project has been put on hold for the time being. The Combine thanks you for your cooperation."},/turf/open/floor/plating/indoor/metal/combine,/area/halflife/outdoors/deployment_city)
 "Nr" = (/obj/machinery/door/unpowered/halflife/metal{dir = 4},/turf/open/floor/plating/indoor/metal/industrial,/area/halflife/outdoors/deployment_city)
@@ -370,6 +381,7 @@
 "Oj" = (/obj/machinery/light/small/directional/north,/turf/open/floor/plating/indoor/carpet/blue,/area/halflife/outdoors/deployment_city)
 "Om" = (/obj/structure/railing/halflife/full{dir = 4},/turf/open/halflife/water/shallow,/area/halflife/outdoors/deployment_city)
 "Op" = (/obj/structure/table/halflife/metal/grate,/turf/open/floor/plating/indoor/concrete,/area/halflife/outdoors/deployment_city)
+"OB" = (/obj/effect/decal/cleanable/rubble,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/combat_deployment/rebel_base)
 "OR" = (/obj/machinery/light/small/directional/south,/turf/open/floor/plating/indoor/woodc/mosaic,/area/halflife/outdoors/deployment_city)
 "Pe" = (/obj/structure/railing/halflife/solo{dir = 8},/obj/structure/ladder/halflife{travel_time = 35},/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/outdoors/deployment_city/zombies/xen_base)
 "Pg" = (/obj/machinery/light/small/directional/east,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
@@ -385,11 +397,11 @@
 "PY" = (/obj/structure/halflife/fence/wire/barb,/turf/open/floor/plating/ground/rockunder,/area/halflife/outdoors/deployment_city)
 "Qd" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/indoor/tile/green,/area/halflife/outdoors/deployment_city)
 "Qn" = (/obj/structure/flora/tree/halflife/plain/thin,/turf/open/floor/plating/ground/grass,/area/halflife/outdoors/deployment_city)
-"QC" = (/obj/machinery/light/directional/north,/turf/open/floor/plating/ground/grass,/area/halflife/indoors/combat_deployment/rebel_base)
 "Rc" = (/obj/structure/railing/halflife/solo{dir = 8},/turf/open/floor/plating/indoor/woodc,/area/halflife/outdoors/deployment_city)
 "Rf" = (/obj/machinery/telecomms/server/presets/common/birdstation,/turf/open/floor/plating/ground/sidewalk,/area/halflife/outdoors/deployment_city)
 "Rg" = (/obj/machinery/door/poddoor/shutters/indestructible,/turf/open/floor/plating/indoor/metal/smooth,/area/halflife/outdoors/deployment_city)
 "Ri" = (/obj/structure/window/fulltile/halflife/nosmooth/generic{dir = 4},/turf/open/floor/plating/indoor/woodc,/area/halflife/outdoors/deployment_city)
+"Rl" = (/obj/structure/trap/deployment_spawn_prot/rebel,/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/combat_deployment/rebel_base)
 "Rq" = (/obj/machinery/light/directional/north,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/outdoors/deployment_city)
 "RB" = (/obj/structure/railing/halflife/solo{dir = 8},/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/outdoors/deployment_city/zombies/xen_base)
 "RD" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/indoor/tile/black,/area/halflife/outdoors/deployment_city)
@@ -413,6 +425,7 @@
 "Ui" = (/obj/structure/halflife/fence/vertical/wire/west/barb,/turf/open/floor/plating/ground/rockunder,/area/halflife/outdoors/deployment_city)
 "UA" = (/obj/machinery/light/directional/west,/turf/open/openspace,/area/halflife/outdoors/deployment_city/zombies/xen_base)
 "UC" = (/obj/structure/halflife/barrel/double/grey,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/outdoors/deployment_city)
+"UF" = (/obj/structure/window/fulltile/halflife/nosmooth/generic,/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/outdoors/deployment_city)
 "UJ" = (/obj/machinery/door/unpowered/halflife/metal{dir = 4},/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/outdoors/deployment_city/zombies/xen_base)
 "UQ" = (/turf/closed/wall/halflife/brick/grey,/area/halflife/outdoors/deployment_city)
 "UR" = (/obj/machinery/door/unpowered/halflife/metal,/turf/open/floor/plating/indoor/lino,/area/halflife/outdoors/deployment_city)
@@ -443,6 +456,8 @@
 "XM" = (/obj/structure/window/fulltile/halflife/nosmooth/generic{dir = 8},/obj/machinery/light/small/directional/south,/turf/open/floor/plating/indoor/concrete,/area/halflife/outdoors/deployment_city)
 "XP" = (/obj/structure/flora/tree/halflife/plain/thin,/turf/open/floor/plating/ground/dirt,/area/halflife/outdoors/deployment_city)
 "XU" = (/obj/machinery/light/directional/north,/turf/open/floor/plating/indoor/concrete,/area/halflife/outdoors/deployment_city)
+"Yd" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/combat_deployment/combine_base)
+"Ye" = (/obj/structure/halflife/cone,/turf/open/floor/plating/ground/grass,/area/halflife/outdoors/deployment_city)
 "Yk" = (/obj/structure/stairs/halflife/concrete,/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/outdoors/deployment_city)
 "Yp" = (/obj/structure/closet/halflife{anchored = 1},/obj/machinery/light/small/directional/east,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/outdoors/deployment_city)
 "Yv" = (/obj/structure/table/halflife/no_smooth/wood/stand,/obj/machinery/intruder_coffeemaker{pixel_x = 2; pixel_y = 7},/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
@@ -452,6 +467,7 @@
 "YO" = (/obj/structure/window/fulltile/halflife/nosmooth/generic,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
 "YQ" = (/obj/effect/turf_decal/halflife/covering/tiles/white,/turf/closed/wall/halflife/brick/grey,/area/halflife/outdoors/deployment_city)
 "YT" = (/obj/machinery/light/small/directional/south,/turf/open/floor/plating/indoor/concrete,/area/halflife/outdoors/deployment_city)
+"YV" = (/obj/machinery/light/small/directional/east,/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/combat_deployment/rebel_base)
 "YX" = (/obj/machinery/light/directional/east,/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/outdoors/deployment_city)
 "Zd" = (/turf/open/openspace,/area/halflife/outdoors/deployment_city)
 "Zf" = (/obj/machinery/door/unpowered/halflife/wood{dir = 4},/turf/open/floor/plating/indoor/carpet/blue,/area/halflife/outdoors/deployment_city)
@@ -460,7 +476,8 @@
 "ZC" = (/obj/structure/table/optable,/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/outdoors/deployment_city)
 "ZD" = (/obj/effect/turf_decal/halflife/covering/wallpaper/blue,/turf/closed/wall/halflife/brick,/area/halflife/outdoors/deployment_city)
 "ZG" = (/obj/structure/halflife/cargotruck{dir = 8},/turf/open/floor/plating/ground/dirt,/area/halflife/indoors/combat_deployment/rebel_base)
-"ZJ" = (/obj/effect/decal/cleanable/rubble,/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/plating/ground/rockunder,/area/halflife/outdoors/deployment_city)
+"ZJ" = (/obj/effect/decal/cleanable/rubble,/obj/effect/decal/cleanable/dirt/dust,/obj/machinery/light/small/directional/north,/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/combat_deployment/rebel_base)
+"ZO" = (/obj/structure/window/fulltile/halflife/nosmooth/reinforced/indestructible,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/combat_deployment/combine_base)
 "ZQ" = (/obj/machinery/light/small/directional/south,/turf/open/floor/plating/indoor/tile/green,/area/halflife/outdoors/deployment_city)
 "ZR" = (/obj/machinery/light/small/directional/south,/turf/open/floor/plating/indoor/metal/combine/alt2,/area/halflife/outdoors/deployment_city)
 "ZU" = (/turf/open/floor/plating/indoor/metal/grate/border{dir = 1},/area/halflife/outdoors/deployment_city)
@@ -489,20 +506,20 @@ EVEVEVEVEVEVEVEVEVkSkSEVEVkSkSEVkSkSkSEVEVEVzxATjIclclHDhchcNjhchcHDclcljIATEVEV
 EVEVEVEVEVEVEVEVEVkSkSkSEVkSkSEVkSkSEVEVEVEVEVATjIclclHDhchcHDhchcHDclcljIATEVEVEVEVEVEVEVEVKpdfdfRcJcKpEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZDsDsDsDsDsDsDsDssZsZEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSkSkSkSEVkSkSEVEVEVEVEVATclclclHDxMhcHDhchcHDclclclATKpKpKpKpKpKpKpKpKpKpKpJcJcUQUQUQUQUQUQUQUQUQUQUQUQEVEVEVEVsZsZsZDsDsDsDsDsDsDsDsDsDsDsDssZDsDsDsDsDsDsDsDsaWDsDssZEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSkSkSEVEVkSkSEVEVEVEVEVATxHclclHDhchcHDhchcHDEpclrLATKpZXKpZXKpMAMAMAKpijJcJcJcUQlqgjANkJVoVolVANgjlqUQEVEVEVEVsZsZsZDsaWDsDsDsgMDsDsDsDsCLaWaWDsDsDsaWaWaWaWaWaWaWDsuoEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVkSkSkSkSkSEVEVEVEVEVEVATclclATATUThcHDhcNzATATcltsATKpURKpURKpvovovoKpriJcJcwLUQqPAJgjgjgjgjgjgjGoDRUQEVEVEVEVsZsZIYDsDsZGDsaWCLaWJmaWaWCLaWaWaWaWaWaWaWaWDsaWDsaWaWuoEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVEVEVEVATBRclATAThchcHDhchcATATclclATKpvovovovovovofdKpriJcJcJcgjgjgjgjUQUQUQUQgjgjUQUQEVEVEVEVsZDsQCDsDsaWaWaWaWmSaWDsaWDsDsDsDsaWaWaWDsDsaWaWaWDsDsuoEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVkSkSkSkSkSEVEVEVEVEVEVATclclATATUThcHDhcNzATATcltsATKpURKpURKpvovovoKpriJcJcwLUQqPAJgjgjgjgjgjgjGoDRUQEVEVEVEVsZsZoYDsDsZGDsaWCLaWJmaWaWCLaWaWaWaWaWaWaWaWDsaWDsaWaWuoEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVEVEVEVATBRclATAThchcHDhchcATATclclATKpvovovovovovofdKpriJcJcJcgjgjgjgjUQUQUQUQgjgjUQUQEVEVEVEVsZDskuDsDsaWaWaWaWmSaWDsaWDsDsDsDsaWaWaWDsDsaWaWaWDsDsuoEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVEVEVEVEVATtmclclHDhchcHDhchcHDclclclATKpFgcbgUvovovovoKpriJcJcJcgjgjgjgjWYlqMSXigjgjlqUQEVEVEVEVsZmSDsaWDsaWDsDsDsgMDsDsDsDsDsDsaWaWDsaWDsDsDsDsaWaWaWuoEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVkSkSkSkSEVEVEVEVEVEVATATATATATPWPWATPWPWATATATATATKpKpKpKpKpKpKpURKpyEJcJcJcUQUQpOgjekgjekgjgjGoDRUQEVEVEVEVsZDsDsaWDsDsbqDsaWDsDsDskuIYsZDsDsDsDsDsDsDsDsDsDsDsDsuoEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVkSkSkSkSEVEVEVEVEVEVATATATATATPWPWATPWPWATATATATATKpKpKpKpKpKpKpURKpyEJcJcJcUQUQpOgjekgjekgjgjGoDRUQEVEVEVEVsZDsDsaWDsDsbqDsaWDsDsDsDSoYsZDsDsDsDsDsDsDsDsDsDsDsDsuoEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVEVEVEVKpKpKpKpCBhcWUCBhchcCBJcJcJcraJcJcraJcJcraJcJcJcJcJcJcJcUQUQpOgjgjgjgjgjgjgjUQUQEVEVEVEVDsDsDsgMaWaWTuDsDsDsDsaWDssZsZsZsZsZsZsZDssZsZsZDsDsDssZEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVEVEVEVEVEVKpKpKpKpJchchchcJchcJcJcJcJcJcJcJcJcJcJcJcJcJcJcJcJcuCJcUQUQpOgjgjgjgjgjgjYXUQUQEVEVEVEVDsDsDsDsaWDsBXmSDsDswXDsmSDssZsZsZsZsZsZsZsZsZsZsZsZsZsZEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVEVEVEVEVKpzlzlzlzlzlzlzlzlzlzlzlhOhOzlfQzlzlzlzlzlzlzlzlxWzlzlzlzlUQUQpOgjgjpogjpogjuWlqUQEVEVEVEVaWaWDsaWmSDsDsDsDhKZTuaWaWDssZsZsZsZsZsZsZsZsZsZsZsZsZsZEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVkSkSEVEVEVEVEVEVEVEVKpJcJcPRPRPRPRSVPRPRPRPRJcJchOTknPTkTkTkTknPTkTkTkTknPTkhODwgjgjgjuNlqBKlqgjGoDRUQEVEVEVEVDPmBDsDsDsDsDsDsDsBXDsDsaWsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVkSkSEVEVEVEVEVEVEVEVKpYJGaTkTkTkTkTkTkTkUSTkTkJchOTkTkTkTkTkTkTkTkTkTkTkTkTkhOgjgjgjgjUQUQUQUQgjgjUQUQEVEVEVZJVjrMmBsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVgDvXzxEVEVKpYJTkPRPRPRPRTkPRPRPRPRqBMDKpzlErhOKpwaTkTkTkiUKpErhOzlKpUQlqgjgjgjgjgjgjgjgjlqUQEVEVrwrwZJrwEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSgDzxzxzxzxEVKpYJTkTkTkTkUSTkTkTkTkTkTkMDKphOpwhOzlwaTkTkTkiUzlpwhOhOKpUQabAJpNkJlVVokJpNGoDRUQEVEVrwIZrwEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVkSkSkSkSgDgDvXzxEVKpJcEocxsDBSJcJccxNwBSJcEoJcKphOhOhOTATkTkTkTkTkMMhOhOhOKpUQUQDrUQUQUQUQUQUQDrUQUQEVzxgDzxgDzxEVUQYQYQYQYQYQYQYQYQYQYQUQEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVkSkSEVkSgDzxzxzxzxKpKpKpKpKpKpkkkkKpKpKpKpKpKpKpKpKpKpKpKpKpifKpKpKpKpKpKpKpzxzxzxzxzxzxvXzxzxzxzxzxzxzxzxzxzxzxEVUQgjANgjgjgjhPDdhPDdgjUQEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVkSEVEVEVEVzxzxvXzxvXzxXPgDzxzxzxzxzxzxzxzxzxzxzxkOzxzxzxkOwlKawlkOzxzxzxkOzxzxzxzxvXzxzxzxzxzxzxQnzxzxQngDzxzxzxzxrVgjgjgjgjgjgjgjgjgjgjUQEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVEVEVEVEVEVKpKpKpKpJchchchcJchcJcJcJcJcJcJcJcJcJcJcJcJcJcJcJcJcuCJcUQUQpOgjgjgjgjgjgjYXUQUQEVEVEVEVDsDsDsDsaWDsBXmSDsDswXDsmSDsmBsZsZsZsZsZsZsZsZsZsZsZsZsZEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVEVEVEVEVKpzlzlzlzlzlzlzlzlzlzlzlhOhOzlfQzlzlzlzlzlzlzlzlxWzlzlzlzlUQUQpOgjgjpogjpogjuWlqUQEVEVEVEVaWaWDsaWmSDsDsDsDhKZTuaWaWDsmBmBmBsZsZsZsZsZsZsZsZsZsZsZEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVkSkSEVEVEVEVEVEVEVEVKpJcJcPRPRPRPRSVPRPRPRPRJcJchOTknPTkTkTkTknPTkTkTkTknPTkhODwgjgjgjuNlqBKlqgjGoDRUQEVsZsZsZkBaWDsDsDsDsDsDsDsBXDsDsaWsZmBmBYVsZsZsZsZsZsZsZsZsZsZsZEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVkSkSEVEVEVEVEVEVEVEVKpYJGaTkTkTkTkTkTkTkUSTkTkJchOTkTkTkTkTkTkTkTkTkTkTkTkTkhOgjgjgjgjUQUQUQUQgjgjUQUQEVsZsZZJVjrMaWsZsZsZsZsZsZsZsZsZsZsZsZmBmBsZsZsZsZsZsZsZsZsZsZsZEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVgDvXzxEVEVKpYJTkPRPRPRPRTkPRPRPRPRqBMDKpzlErhOKpwaTkTkTkiUKpErhOzlKpUQlqgjgjgjgjgjgjgjgjlqUQEVsZkBkBOBkBsZEVEVEVEVEVEVEVEVEVEVEVsZRlRlsZEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSgDzxzxzxzxEVKpYJTkTkTkTkUSTkTkTkTkTkTkMDKphOpwhOzlwaTkTkTkiUzlpwhOhOKpUQabAJpNkJlVVokJpNGoDRUQEVsZDPIZDPsZsZEVEVEVEVEVEVEVEVEVEVEVEViXiXEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVkSkSkSkSgDgDvXzxEVKpJcEocxsDBSJcJccxNwBSJcEoJcKphOhOhOTATkTkTkTkTkMMhOhOhOKpUQUQUFUQUQUQUQUQUQUFUQUQEVzxIUYeIUzxEVUQYQYQYQYQYQYQYQYQYQYQUQkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVkSkSEVkSgDzxzxzxzxKpKpKpKpKpKpkkkkKpKpKpKpKpKpKpKpKpKpKpKpKpifKpKpKpKpKpKpKpzxzxzxzxzxzxvXzxzxzxzxzxzxzxzxzxzxzxEVUQgjANgjgjgjhPDdhPDdgjUQrwvEEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVkSEVEVEVEVzxzxvXzxvXzxXPgDzxzxzxzxzxzxzxzxzxzxzxkOzxzxzxkOwlKawlkOzxzxzxkOzxzxzxzxvXzxzxzxzxzxzxQnzxzxQngDzxzxzxzxrVgjgjgjgjgjgjgjgjgjgjrwDrEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVkSkSEVEVEVEVzxzxzxzxzxzxgDzxvXzxzxzxzxzxvXzxzxQnzxzxvXzxzxwlCkwlzxvXzxzxzxQnzxzxzxzxfFfFfFfFfFfFzxzxgDgDzxgDXPgDzxUQgjgjUQgjgjgjgjgjgjYXUQEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVkSkSEVEVEVEVREsEvXzxvXzxgDgDgDgDzxQnzxzxzxzxzxzxzxzxwlwlwlwlCkwlwlwlwlzxvXgDgDgDgDzxfFINLYvRLYfFzxzxgDgDgDxBzxzxKiUQgjgjUQgjgjDdhPDdhPgjUQEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVkSkSkSkSEVzxzxAKzxzxzxgDgDQnzxgDgDzxzxzxzxzxzxzxzxzxvXwlCkCkCkCkCkCkCkwlzxzxzxgDXPgDzxfFljLYLYeXfFzxzxgDgDzxzxzxzxzxUQYkYkUQgjgjYQYQYQYQgjUQEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
@@ -513,7 +530,7 @@ EVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVzxGDzxzxzxvXzxzxzxzxzxzxzxgDzxzxzxgDgDzxzxwl
 EVEVEVEVEVEVEVEVEVEVEVkSkSkSkSEVEVEVzxGDzxzxzxzxzxQnzxzxzxzxzxgDzxzxQngDgDwlwlwlCkwlwlwlwlwlCkwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlSmcFcFcFcFYQpOpOpOgjgjUQXKzAXKXKUQEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSkSEVkSEVEVEVzxIMzxzxzxzxzxzxzxzxzxzxQnzxvXzxzxgDgDwlCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkXbdmcFcFcFcFdmgjgjgjgjgjUQXKXKXKXKUQEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVkSkSkSkSEVkSEVEVzxzxREiozPzPioioioiozPREsEzxzxzxzxzxgDbtwlCkwlwlwlwlwlwlwlwlwlCkwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlUQorBxCfBxUQgjgjpNgjgjUQXKvnvnvnUQEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVkSkSEVEVEVEVEVEVvXzxzxzxxBzxzxvXzxzxgDGDzxzxzxzxzxzxzxzxwlCkwlzxzxzxzEzxzxgDwlCkwlKifFUVqMqMfFsEvXzxzEzxzxzxzxnmUQUQUQUQUQUQUQDrUQDrUQUQlhUQUQUQUQEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVkSkSEVEVEVEVEVEVvXzxzxzxxBzxzxvXzxzxgDGDzxzxzxzxzxzxzxzxwlCkwlzxzxzxzEzxzxgDwlCkwlKifFUVqMqMfFsEvXzxzEzxzxzxzxnmUQUQUQUQUQUQUQUFUQUFUQUQlhUQUQUQUQEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVkSkSEVEVEVEVEVEVzEzxzxQnzEgDQnzxzEzxzxzxAKzxQnzxvXzxQnzxzxwlCkwlzxzxzxzxzxQngDwlCkwlzxZUgDgDzxZUzxzxzxgDgDXPzxzxwlwlwlwlwlwlwlwlwlwlwlwlwlwlkOzxEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVkSkSEVEVEVEVEVEVzxgDgDzxzxzxzxQnzxzxQnzxGDzxzxzxzxzxzxvXzxwlCkwlvXzxzxzxxBzxzxwlCkwlzxZUJDvBzxZUzxzxQnzxgDzxzxzxzxzxzxzxzxzxvXzxzxzxzxzxzxbUzxEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVkSgDEVEVEVEVzxzxzxxBgDzxQnzxzxzxQnzxzxQnAKzxvXzxzxzxzxzxzxwlCkwlzxzxXPgDgDzxvXwlCkwlzxZUzxgDgDZUzxzxzxzxgDxBzxzxzxQnzxvXzxzxzxzxEVvXEVREPYkSREEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
@@ -551,21 +568,21 @@ EVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVgDzxzxzxKWzxzxQngDKWvXzxzxzxzxzxgDzxwlCkCkwlzxxB
 EVEVEVEVEVEVEVEVEVEVkSkSEVEVEVgDgDzxfFfFfFLYLYfFfFfFzxzxzxvXzxvXnUzxwlCkCkwlzxWgzxzxzxvXgDzxzxzxgDzxzxzxzxzxgDzxzxgDxBgDEVEVEVEVEVEVkSkSkSkSkSEVfFfFfFfFfFfFfFfFfFfFfFfFfFEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSEVEVEVzxvXzxfFLYhALYzxLYpufFgDzxxBgDgDWgsPnUwlCkCkwlnUsPnUzxzxgDgDzxzxvXzxzxgDzxzxEVgDvXEVEVgDkSEVEVkSkSEVEVEVEVkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVkSkSkSEVEVEVEVzxzxfFLYaZzxgDgDLYfFzxzxzxzxvXzxwGzxwlCkCkwlzxwGzxvXzxgDvXzxzxzxzxzxvXzxEVEVEVEVEVEVkSkSkSkSkSkSEVEVEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVkSkSkSEVEVEVzxzxzxzxgDzxzxgDzxLYfFQnvXzxgDzxzxgDbtwlCkCkwlzEzxzxzxzxzxzxzxzxzxvXzxzxzxEVEVEVEVEVEVkSkSkSkSEVkSkSkSkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVkSEVkSkSkSEVEVzxxBzxzxgDzxgDgDzxgDLYfFzxzxgDIUNhzxzxzxwlsRiSwlgDzxzxzxxfzxzxzxvXzxzxvXzxEVEVEVEVkSkSkSkSkSkSkSEVkSkSkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVkSkSEVEVkSkSkSEVzxzxgDzxgDzxLYgDzxLYLYgDzxzxgDSWCpCpCpCpCpvAmtCpCpCpCpCpSWtEhrtEtEvuMNtEEVEVEVEVkSkSkSkSkSkSEVEVEVEVkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVkSkSEVEVkSkSkSEVzxgDvXzxfFLYLYzxgDLYzxgDzxzxvXSWAFwxAFegGtPJPJGtegAFnyAFSWgDzxzxgDgDvXzxEVEVEVEVkSkSkSkSEVEVEVEVEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVkSkSEVEVkSkSEVEVzxzxzxzxfFLYzxzxcqzKzxzxzxzxgDSWnyPJPJTITIPJPJTITIPJPJnySWgDzxzxgDgDzxzxEVEVEVkSkSkSkSkSkSEVEVEVkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVkSkSEVEVkSkSEVEVEVzxzxgDgDzxgDgDfFfFfFQnzxzxgDSWPuPJPJnjvyPJPJnjWpPJPJGOSWgDvXQngDgDzxEVEVEVkSkSkSkSEVkSkSkSkSkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVkSkSkSkSkSEVEVEVEVvXgDzxgDgDgDzxvXzxzxzxzxzxSWnyPJPJJUJUPJPJJUJUPJPJnySWgDzxgDREEVEVEVEVkSkSkSkSEVEVEVEVkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVkSkSkSkSEVEVEVEVzxgDgDgDkSEVzxzxzxzxvXzxzxSWAFnyAFzsnynynynyzsAFnyAFSWzxzxgDgHkSkSkSkSkSkSkSkSEVEVEVEVEVXwEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVkSkSkSkSkSkSEVEVzxEVkSkSkSEVEVEVzxvXzxzxzxSWSWSWSWSWSWPXPXSWSWSWSWSWSWQngDkSkSkSkSkSkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVkSkSkSkSkSkSEVEVEVEVREKskSEVEVEVEVEVzxgDxBzxzxzxxBzxzxgDzxzxzxzxzxzxxBzxgDEVEVEVkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVkSEVEVkSkSkSEVEVEVkSkSkSEVEVEVEVEVEVgDgDgDgDgDzxzxgDzxzxQngDgDzxgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVkSkSEVEVkSkSkSkSkSkSkSkSEVEVEVEVEVEVEVEVEVEVvXzxEVEVEVEVzxvXzxEVEVvXzxEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVkSkSEVEVEVEVkSkSkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVkSkSkSEVEVEVzxzxzxzxgDzxzxgDzxLYfFQnvXzxgDzxzxgDbtMZbFbFMZzEzxzxzxzxzxzxzxzxzxvXzxzxzxEVEVEVEVEVEVkSkSkSkSEVkSkSkSkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVkSEVkSkSkSEVEVzxxBzxzxgDzxgDgDzxgDLYfFzxzxgDgDNhzxzxYeCgsRiSCgIUzxzxzxxfzxzxzxvXzxzxvXzxEVEVEVEVkSkSkSkSkSkSkSEVkSkSkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVkSkSEVEVkSkSkSEVzxzxgDzxgDzxLYgDzxLYLYgDzxzxSWCpCpCpCpCpCpvAmtCpCpCpCpCpCpSWhrtEtEvuMNtEEVEVEVEVkSkSkSkSkSkSEVEVEVEVkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVkSkSEVEVkSkSkSEVzxgDvXzxfFLYLYzxgDLYzxgDzxzxSWAFwxuXnyGtegPJPJegGtnyuXnyAFSWzxzxgDgDvXzxEVEVEVEVkSkSkSkSEVEVEVEVEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVkSkSEVEVkSkSEVEVzxzxzxzxfFLYzxzxcqzKzxzxzxzxSWnyPJPJTITIPJPJPJPJTITIPJPJnySWzxzxXPgDzxzxEVEVEVkSkSkSkSkSkSEVEVEVkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVkSkSEVEVkSkSEVEVEVzxzxgDgDzxgDgDfFfFfFQnzxzxSWPuPJPJnjvyPJzbzbPJnjWpPJPJGOSWvXzxgDgDzxEVEVEVkSkSkSkSEVkSkSkSkSkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVkSkSkSkSkSEVEVEVEVvXgDzxgDgDgDzxvXzxzxzxzxSWnyPJPJJUJUPJPJPJPJJUJUPJPJnySWzxgDREEVEVEVEVkSkSkSkSEVEVEVEVkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVkSkSkSkSEVEVEVEVzxgDgDgDkSEVzxzxzxzxvXzxSWAFPJsnnynyzsnynyzsnynysnnyAFSWzxgDgHkSkSkSkSkSkSkSkSEVEVEVEVEVXwEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVkSkSkSkSkSkSEVEVzxEVkSkSkSEVEVEVzxvXzxzxSWZOvAZOSWSWSWPXPXSWSWSWSWSWSWSWgDkSkSkSkSkSkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVkSkSkSkSkSkSEVEVEVEVREKskSEVEVEVEVEVzxgDSWnyPJnySWzxzxgDzxzxzxzxzxzxxBzxgDkSEVEVkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVkSEVEVkSkSkSEVEVEVkSkSkSEVEVEVEVEVxBgDSWYdPJnySWzxgDzxzxQngDgDzxgDgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVkSkSEVEVkSkSkSkSkSkSkSkSEVEVEVEVEVEVEVgDSWSWeUSWSWgDEVEVzxvXzxEVEVvXzxEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVkSkSEVEVEVEVkSkSkSkSkSkSEVEVEVEVEVEVEVgDgDgDxogDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVzxgDgDgDgDEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVvXzxEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 "}
