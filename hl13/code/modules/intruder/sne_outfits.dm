@@ -1,3 +1,58 @@
+//// MERCS BOSS
+
+/datum/outfit/deployment_loadout/intruder/boss/bullsquid/rebel
+	faction = REBEL_DEPLOYMENT_FACTION
+	name = "SNE: Black Market Bullsquid"
+	display_name = "Revolver Bullsquid"
+	implants = list(/obj/item/implant/mindshield)
+	ears = /obj/item/radio/headset/rebel_deployment
+
+
+/datum/outfit/deployment_loadout/intruder/boss/solidus/rebel
+	faction = REBEL_DEPLOYMENT_FACTION
+	name = "SNE: Black Market Solidus"
+	display_name = "Solidus Crab"
+	implants = list(/obj/item/implant/mindshield)
+	ears = /obj/item/radio/headset/rebel_deployment
+
+/datum/outfit/deployment_loadout/intruder/boss/liquid/rebel
+	faction = REBEL_DEPLOYMENT_FACTION
+	name = "SNE: Black Market Liquid"
+	display_name = "Liquid Bullsquid"
+	implants = list(/obj/item/implant/mindshield)
+	ears = /obj/item/radio/headset/rebel_deployment
+
+/datum/outfit/deployment_loadout/intruder/boss/end/rebel
+	faction = REBEL_DEPLOYMENT_FACTION
+	name = "SNE: Black Market Bine"
+	display_name = "The Bine"
+	implants = list(/obj/item/implant/mindshield)
+	ears = /obj/item/radio/headset/rebel_deployment
+
+
+//// CONSCRIPTS BOSS
+
+/datum/outfit/deployment_loadout/intruder/boss/bullsquid/combine
+	name = "SNE: Black Market Bullsquid"
+	display_name = "Revolver Bullsquid"
+	ears = /obj/item/radio/headset/civilprotection/deployment
+
+/datum/outfit/deployment_loadout/intruder/boss/solidus/combine
+	name = "SNE: Black Market Solidus"
+	display_name = "Solidus Crab"
+	ears = /obj/item/radio/headset/civilprotection/deployment
+
+/datum/outfit/deployment_loadout/intruder/boss/liquid/combine
+	name = "SNE: Black Market Liquid"
+	display_name = "Liquid Bullsquid"
+	ears = /obj/item/radio/headset/civilprotection/deployment
+
+/datum/outfit/deployment_loadout/intruder/boss/end/combine
+	name = "SNE: Black Market Bine"
+	display_name = "The Bine"
+	ears = /obj/item/radio/headset/civilprotection/deployment
+
+
 //// MERCS
 
 /obj/item/hl2/loadout_picker/rebel/sne
@@ -13,6 +68,22 @@
 			/datum/outfit/deployment_loadout/rebel/sne/medic,
 			/datum/outfit/deployment_loadout/rebel/sne/melee,
 			/datum/outfit/deployment_loadout/rebel/sne/sniper,
+		)
+		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.display_name)] = loadout
+	return loadouts
+
+/obj/item/hl2/loadout_picker/rebel/sne/boss
+
+/obj/item/hl2/loadout_picker/rebel/sne/boss/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/outfit/deployment_loadout/intruder/boss/bullsquid/rebel,
+			/datum/outfit/deployment_loadout/intruder/boss/solidus/rebel,
+			/datum/outfit/deployment_loadout/intruder/boss/liquid/rebel,
+			/datum/outfit/deployment_loadout/intruder/boss/end/rebel,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -189,6 +260,22 @@
 			/datum/outfit/deployment_loadout/combine/sne/medic,
 			/datum/outfit/deployment_loadout/combine/sne/melee,
 			/datum/outfit/deployment_loadout/combine/sne/sniper,
+		)
+		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
+			loadouts[initial(loadout.display_name)] = loadout
+	return loadouts
+
+/obj/item/hl2/loadout_picker/combine/sne/boss
+
+/obj/item/hl2/loadout_picker/combine/sne/boss/generate_display_names()
+	var/static/list/loadouts
+	if(!loadouts)
+		loadouts = list()
+		var/list/possible_loadouts = list(
+			/datum/outfit/deployment_loadout/intruder/boss/bullsquid/combine,
+			/datum/outfit/deployment_loadout/intruder/boss/solidus/combine,
+			/datum/outfit/deployment_loadout/intruder/boss/liquid/combine,
+			/datum/outfit/deployment_loadout/intruder/boss/end/combine,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout

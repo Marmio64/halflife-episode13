@@ -356,7 +356,7 @@
 			turfcamo = get_turf(hooman)
 			playsound(hooman, 'hl13/sound/effects/camochange.ogg', 20, FALSE, -10) //quiet but not impossible to detect hopefully ill tweak it later
 			to_chat(hooman, span_notice("Your CrabCamo begins to change to resemble the texture of [turfcamo.icon_state]."))
-		if(currentturf.icon_state == turfcamo.icon_state)
+		if(istype(currentturf, turfcamo))
 			hooman.alpha = max(hooman.alpha - alpha_decrease, min_alpha)
 		else
 			hooman.alpha = max(hooman.alpha, 120)
@@ -364,7 +364,7 @@
 			playsound(hooman, 'hl13/sound/effects/camochange.ogg', 20, FALSE, -10)
 			to_chat(hooman, span_notice("Your CrabCamo begins to change to resemble the texture of [turfcamo.icon_state]."))
 	else if(turfcamo)
-		if(currentturf.icon_state == turfcamo.icon_state)
+		if(istype(currentturf, turfcamo))
 			hooman.alpha = max(hooman.alpha - alpha_decrease, 120) //still somewhat effective if you already have the camo of the turf you're on
 		else
 			hooman.alpha = min(hooman.alpha + alpha_increase, 255)
