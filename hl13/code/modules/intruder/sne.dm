@@ -1,6 +1,8 @@
 GLOBAL_LIST_EMPTY(dogtag_holders)
 GLOBAL_VAR_INIT(selected_crab, /client/)
 GLOBAL_VAR_INIT(dogtags_left, 3)
+GLOBAL_VAR_INIT(boss_time_mercs, FALSE)
+GLOBAL_VAR_INIT(boss_time_cons, FALSE)
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/sne
 	can_jam = FALSE
@@ -22,6 +24,8 @@ GLOBAL_VAR_INIT(dogtags_left, 3)
 	if(user.deployment_faction == XEN_DEPLOYMENT_FACTION)
 		GLOB.dogtags_left--
 		to_chat(user, span_notice("Dogtags successfully collected!"))
+		if(GLOB.dogtags_left > 0)
+			to_chat(world, "<span class='userdanger'>Crab has successfully collected a dogtag. He only needs [GLOB.dogtags_left] more to win!</span>")
 	else
 		to_chat(user, span_notice("Crab has been denied the dogtags!"))
 	qdel(src)
@@ -44,6 +48,10 @@ GLOBAL_VAR_INIT(dogtags_left, 3)
 	var/round_length = 0
 
 	var/crab_dead = FALSE
+
+	var/boss_merc = FALSE
+
+	var/boss_con = FALSE
 
 /obj/machinery/sne_time_counter/Initialize(mapload)
 	..()
@@ -94,6 +102,11 @@ GLOBAL_VAR_INIT(dogtags_left, 3)
 		human_user.equipOutfit(/datum/outfit/deployment_loadout/intruder/solid/old/sne)
 		human_user.regenerate_icons()
 		human_user.deployment_faction = XEN_DEPLOYMENT_FACTION
+		if(candidate_client in GLOB.deployment_combine_players)
+			GLOB.deployment_combine_players -= candidate_client
+		if(candidate_client in GLOB.deployment_rebel_players)
+			GLOB.deployment_rebel_players -= candidate_client
+		GLOB.deployment_xen_players |= candidate_client
 		to_chat(human_user, span_bold(span_notice("It's Polacon, Crab. What's up? ...jeez, Crab, don't tell me you forgot your objective already? Alright, I'll go over it with you one more time.")))
 		to_chat(human_user, span_notice("You've been deployed to this warzone in order to collect three dogtags from any member of any team."))
 		to_chat(human_user, span_notice("In order to collect dogtags, I've modified one of your abilities. If you use your HOLD-UP on an UNCONSCIOUS soldier, you will begin to search them for dogtags. Crab, don't forget that you will be vulnerable to attacks for 5 seconds during this!"))
@@ -108,30 +121,37 @@ GLOBAL_VAR_INIT(dogtags_left, 3)
 		attempt_pick_intruder()
 
 /obj/machinery/sne_time_counter/process()
-	var/list/total_players = GLOB.deployment_combine_players + GLOB.deployment_rebel_players
+	var/list/total_players = GLOB.deployment_combine_players + GLOB.deployment_rebel_players + GLOB.deployment_xen_players
 
-	for(var/client/X in total_players)
-		if(X == GLOB.selected_crab)
-			if(isliving(X.mob))
-				var/mob/living/carbon/human/H = X.mob
-				if(H.deployment_faction != XEN_DEPLOYMENT_FACTION)
-					if(SSticker.tdm_xen_deaths < 3)
-						for(var/obj/item/item in H.get_all_gear())
-							qdel(item)
-						H.STASTR = 10
-						H.STAINT = 10
-						H.STADEX = 10
-						for(var/datum/action/cooldown/buttons in H.actions)
-							qdel(buttons)
-						for(var/obj/item/implant/I in H.implants)
-							if(I.type == /obj/item/implant/mindshield)
-								I.removed(H)
-						H.equipOutfit(/datum/outfit/deployment_loadout/intruder/solid/old/sne)
-						H.regenerate_icons()
-						H.deployment_faction = XEN_DEPLOYMENT_FACTION
-					else
-						to_chat(H, span_warning("You've already used all of your slots! Wait for the game to end!"))
-						qdel(H)
+	for(var/client/X in GLOB.deployment_xen_players)
+		if(isliving(X.mob))
+			var/mob/living/carbon/human/H = X.mob
+			if(H.deployment_faction != XEN_DEPLOYMENT_FACTION)
+				if(SSticker.tdm_xen_deaths < 3)
+					for(var/obj/item/item in H.get_all_gear())
+						qdel(item)
+					H.STASTR = 10
+					H.STAINT = 10
+					H.STADEX = 10
+					for(var/datum/action/cooldown/buttons in H.actions)
+						qdel(buttons)
+					for(var/obj/item/implant/I in H.implants)
+						if(I.type == /obj/item/implant/mindshield)
+							I.removed(H)
+					H.equipOutfit(/datum/outfit/deployment_loadout/intruder/solid/old/sne)
+					H.regenerate_icons()
+					H.deployment_faction = XEN_DEPLOYMENT_FACTION
+				else
+					to_chat(H, span_warning("You've already used all of your slots! Wait for the game to end!"))
+					qdel(H)
+
+	if(SSticker.tdm_combine_deaths >= 15 && !boss_con)
+		boss_con = TRUE
+		GLOB.boss_time_cons = TRUE
+
+	if(SSticker.tdm_rebel_deaths >= 15 && !boss_merc)
+		boss_merc = TRUE
+		GLOB.boss_time_mercs = TRUE
 
 	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
 		round_length += 2 SECONDS //it goes by process ticks, which are one per second
