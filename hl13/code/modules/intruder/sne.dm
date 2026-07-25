@@ -102,6 +102,7 @@ GLOBAL_VAR_INIT(boss_time_cons, FALSE)
 		human_user.equipOutfit(/datum/outfit/deployment_loadout/intruder/solid/old/sne)
 		human_user.regenerate_icons()
 		human_user.deployment_faction = XEN_DEPLOYMENT_FACTION
+		human_user.faction = list(FACTION_XEN_FAUNA)
 		if(candidate_client in GLOB.deployment_combine_players)
 			GLOB.deployment_combine_players -= candidate_client
 		if(candidate_client in GLOB.deployment_rebel_players)
@@ -141,6 +142,7 @@ GLOBAL_VAR_INIT(boss_time_cons, FALSE)
 					H.equipOutfit(/datum/outfit/deployment_loadout/intruder/solid/old/sne)
 					H.regenerate_icons()
 					H.deployment_faction = XEN_DEPLOYMENT_FACTION
+					H.faction = list(FACTION_XEN_FAUNA)
 				else
 					to_chat(H, span_warning("You've already used all of your slots! Wait for the game to end!"))
 					qdel(H)
