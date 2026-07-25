@@ -158,8 +158,8 @@ DEFINE_BITFIELD(turret_flags, list(
 	stun_projectile = /obj/projectile/bullet/pulse/weak/fast
 	lethal_projectile = /obj/projectile/bullet/pulse/weak/fast
 
-/obj/machinery/porta_turret/combine/rebel/assess_perp(mob/living/carbon/human/perp) //shoot mindshielded people
-	if (HAS_TRAIT(perp, TRAIT_MINDSHIELD))
+/obj/machinery/porta_turret/combine/rebel/assess_perp(mob/living/carbon/human/perp) //shoot mindshielded people (and the intruder for SNE)
+	if (HAS_TRAIT(perp, TRAIT_MINDSHIELD) || HAS_TRAIT(perp, TRAIT_THE_INTRUDER))
 		return 10
 	else
 		return 0

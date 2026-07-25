@@ -568,7 +568,7 @@
 			else
 				to_chat(caster, span_warning("You fail to find any dogtags... maybe look a little harder next time?"))
 
-	if(human_victim.deployment_faction != COMBINE_DEPLOYMENT_FACTION) //no allies on a sneaking mission (otacon i guess but im not bothering with that right now)
+	if(human_victim.deployment_faction != COMBINE_DEPLOYMENT_FACTION && !sne) //no allies on a sneaking mission (otacon i guess but im not bothering with that right now)
 		caster.balloon_alert(caster, "can't use on allies!")
 		return FALSE
 

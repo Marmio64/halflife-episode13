@@ -103,8 +103,9 @@
 "lZ" = (/obj/structure/railing/halflife/full,/turf/open/halflife/water/shallow,/area/halflife/outdoors/deployment_city)
 "mj" = (/obj/structure/halflife/cargotruck,/turf/open/floor/plating/ground/sidewalk/cobblestone,/area/halflife/outdoors/deployment_city)
 "mo" = (/turf/cordon,/area/halflife/outdoors/deployment_city/zombies/xen_base)
-"mt" = (/obj/machinery/door/unpowered/halflife/metal{dir = 1},/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/combat_deployment/combine_base)
+"mt" = (/obj/machinery/door/unpowered/halflife/metal{dir = 1},/obj/structure/trap/deployment_spawn_prot/combine,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/combat_deployment/combine_base)
 "mv" = (/obj/structure/railing/halflife/full{dir = 1},/turf/open/halflife/water/shallow,/area/halflife/outdoors/deployment_city)
+"mB" = (/obj/structure/trap/deployment_spawn_prot/rebel,/turf/open/floor/plating/ground/dirt,/area/halflife/indoors/combat_deployment/rebel_base)
 "mF" = (/obj/structure/closet/halflife{anchored = 1},/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
 "mG" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/ground/dirt,/area/halflife/outdoors/deployment_city)
 "mH" = (/obj/structure/ladder/halflife,/turf/open/floor/plating/indoor/concrete,/area/halflife/outdoors/deployment_city)
@@ -190,7 +191,7 @@
 "vu" = (/obj/structure/halflife/fence,/turf/open/floor/plating/ground/dirt,/area/halflife/outdoors/deployment_city)
 "vv" = (/obj/structure/railing/halflife/full{dir = 8},/turf/open/halflife/water/shallow,/area/halflife/outdoors/deployment_city)
 "vy" = (/obj/machinery/intruder_coffeemaker{pixel_x = 2; pixel_y = 10},/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/combat_deployment/combine_base)
-"vA" = (/obj/machinery/door/unpowered/halflife/metal,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/combat_deployment/combine_base)
+"vA" = (/obj/machinery/door/unpowered/halflife/metal,/obj/structure/trap/deployment_spawn_prot/combine,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/combat_deployment/combine_base)
 "vB" = (/obj/structure/ladder/halflife/upwards,/turf/open/floor/plating/indoor/concrete,/area/halflife/outdoors/deployment_city)
 "vF" = (/obj/machinery/light/small/directional/south,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
 "vN" = (/obj/structure/closet/crate/bin,/turf/open/floor/plating/ground/dirt,/area/halflife/outdoors/deployment_city)
@@ -277,7 +278,7 @@
 "Dw" = (/obj/effect/landmark/navigate_destination/halflife/intruder/lab,/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/outdoors/deployment_city)
 "DK" = (/obj/structure/halflife/pipes/vent,/turf/open/floor/plating/indoor/tile/green,/area/halflife/outdoors/deployment_city)
 "DL" = (/obj/item/hl13_small_flag/combine,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/outdoors/deployment_city)
-"DP" = (/obj/effect/decal/cleanable/dirt/dust,/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/combat_deployment/rebel_base)
+"DP" = (/obj/effect/decal/cleanable/dirt/dust,/obj/structure/trap/deployment_spawn_prot/rebel,/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/combat_deployment/rebel_base)
 "DR" = (/obj/structure/table/halflife/no_smooth/large/metal/desk/alt{dir = 8},/turf/open/floor/plating/indoor/tile/kitchen,/area/halflife/outdoors/deployment_city)
 "Eo" = (/obj/machinery/light/directional/south,/turf/open/floor/plating/indoor/woodc,/area/halflife/outdoors/deployment_city)
 "Ep" = (/obj/structure/halflife/trash/garbage/dumpster/crate,/turf/open/floor/plating/indoor/metal/smooth,/area/halflife/outdoors/deployment_city)
@@ -293,6 +294,7 @@
 "Fu" = (/obj/machinery/light/directional/north,/turf/open/floor/plating/ground/grass,/area/halflife/outdoors/deployment_city)
 "Fv" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 4},/turf/open/openspace,/area/halflife/outdoors/deployment_city)
 "FW" = (/obj/structure/closet/cardboard/solid,/turf/open/floor/plating/indoor/woodc,/area/halflife/outdoors/deployment_city)
+"FX" = (/obj/structure/trap/deployment_spawn_prot/xen,/turf/open/floor/plating/ground/rockunder,/area/halflife/outdoors/deployment_city)
 "Ga" = (/obj/structure/halflife/trash/books/pile,/turf/open/floor/plating/indoor/carpet,/area/halflife/outdoors/deployment_city)
 "Gk" = (/obj/machinery/door/unpowered/halflife/wood{dir = 4},/turf/open/floor/plating/indoor/woodc,/area/halflife/outdoors/deployment_city)
 "Go" = (/obj/structure/chair/office/halflife/blue{dir = 4},/obj/structure/halflife/rug/rubber{dir = 4},/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/outdoors/deployment_city)
@@ -492,8 +494,8 @@ EVEVEVEVEVEVEVEVEVEVEVEVEVkSkSkSkSEVEVEVEVEVEVATATATATATPWPWATPWPWATATATATATKpKp
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVEVEVEVKpKpKpKpCBhcWUCBhchcCBJcJcJcraJcJcraJcJcraJcJcJcJcJcJcJcUQUQpOgjgjgjgjgjgjgjUQUQEVEVEVEVDsDsDsgMaWaWTuDsDsDsDsaWDssZsZsZsZsZsZsZDssZsZsZDsDsDssZEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVEVEVEVEVEVKpKpKpKpJchchchcJchcJcJcJcJcJcJcJcJcJcJcJcJcJcJcJcJcuCJcUQUQpOgjgjgjgjgjgjYXUQUQEVEVEVEVDsDsDsDsaWDsBXmSDsDswXDsmSDssZsZsZsZsZsZsZsZsZsZsZsZsZsZEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVEVEVEVEVKpzlzlzlzlzlzlzlzlzlzlzlhOhOzlfQzlzlzlzlzlzlzlzlxWzlzlzlzlUQUQpOgjgjpogjpogjuWlqUQEVEVEVEVaWaWDsaWmSDsDsDsDhKZTuaWaWDssZsZsZsZsZsZsZsZsZsZsZsZsZsZEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVkSkSEVEVEVEVEVEVEVEVKpJcJcPRPRPRPRSVPRPRPRPRJcJchOTknPTkTkTkTknPTkTkTkTknPTkhODwgjgjgjuNlqBKlqgjGoDRUQEVEVEVEVDPaWDsDsDsDsDsDsDsBXDsDsaWsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVkSkSEVEVEVEVEVEVEVEVKpYJGaTkTkTkTkTkTkTkUSTkTkJchOTkTkTkTkTkTkTkTkTkTkTkTkTkhOgjgjgjgjUQUQUQUQgjgjUQUQEVEVEVZJVjrMaWsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVkSkSEVEVEVEVEVEVEVEVKpJcJcPRPRPRPRSVPRPRPRPRJcJchOTknPTkTkTkTknPTkTkTkTknPTkhODwgjgjgjuNlqBKlqgjGoDRUQEVEVEVEVDPmBDsDsDsDsDsDsDsBXDsDsaWsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVkSkSEVEVEVEVEVEVEVEVKpYJGaTkTkTkTkTkTkTkUSTkTkJchOTkTkTkTkTkTkTkTkTkTkTkTkTkhOgjgjgjgjUQUQUQUQgjgjUQUQEVEVEVZJVjrMmBsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZsZEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVkSkSkSEVEVgDvXzxEVEVKpYJTkPRPRPRPRTkPRPRPRPRqBMDKpzlErhOKpwaTkTkTkiUKpErhOzlKpUQlqgjgjgjgjgjgjgjgjlqUQEVEVrwrwZJrwEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVkSkSgDzxzxzxzxEVKpYJTkTkTkTkUSTkTkTkTkTkTkMDKphOpwhOzlwaTkTkTkiUzlpwhOhOKpUQabAJpNkJlVVokJpNGoDRUQEVEVrwIZrwEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVkSkSkSkSgDgDvXzxEVKpJcEocxsDBSJcJccxNwBSJcEoJcKphOhOhOTATkTkTkTkTkMMhOhOhOKpUQUQUQUQUQUQUQUQUQUQUQUQEVzxgDzxgDzxEVUQYQYQYQYQYQYQYQYQYQYQUQEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
@@ -541,9 +543,9 @@ EVEVEVEVEVEVEVEVEVEVEVEVEVEVzxzxzxzxwlCkwlzxxBzxzxQnzxfFfxfFcqLYLYcqfFzxvXwlCkwl
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVgDzxzxvXwlCkwlzxzxzEzxzxvXfFURfFfFfFnLfFfFzxzxwlCkwlzEvXzxQnzxgDzEwlCkwlwZKpLOLOLOXoLOLOLOKHKpzxQnzxEVEVkSkSEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVREgDzxzxzxwlCkwlwlwlwlwlwlwlwlwlwlnTwlwlwlnTwlwlwlCkwlwlwlwlwlwlwlwlwlCkwlgDKpTqLOLOXoPPKpKpKpKpzxvXzxEVEVEVkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSkSgHgDzxQnzxwlCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkwlJrLwXoXoXoXoLOKpzxzxzxzxzxEVEVEVEVEVEVkSkSEVfFfFfFfFfFfFfFfFfFfFfFfFfFEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVkSkSkSkSkSgDzxzEwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlCkCkwlwlwlwlwlwlwlwlwlwlwlwlwlwlLwXoXoXoXoXLKpzxQnzxzxzxEVEVEVEVEVEVkSiXkSkSkStQkSkStQkSLYRqLYLYfFfFEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVkSkSkSEVkSgDgDvXzxzxzxzxzxzxgDzxzxzxgDgDvXgDzxbtwlCkCkwlzEzxgDzxzxzxvXzxzEgDzxvXzxKpTqZQoGLOKHKpzxzxvXzxEVEVEVEVEVkSEVkSiXkSkSkSkSkSkSkSkSLYLYLYLYjCfFEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVgDzxzxzxKWzxzxQngDKWvXzxzxzxzxzxgDzxwlCkCkwlzxxBzxzxzxzxzxzxvXgDzxzxwZKpKpKpKpHXKpKpzxzxzxEVEVEVEVEVkSkSEVkSiXkSkSkSkSkSkSkSkSLYLYLYLYfFfFEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVkSkSkSkSkSgDzxzEwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlCkCkwlwlwlwlwlwlwlwlwlwlwlwlwlwlLwXoXoXoXoXLKpzxQnzxzxzxEVEVEVEVEVEVkSiXkSkSkStQkSkStQFXLYRqLYLYfFfFEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVkSkSkSEVkSgDgDvXzxzxzxzxzxzxgDzxzxzxgDgDvXgDzxbtwlCkCkwlzEzxgDzxzxzxvXzxzEgDzxvXzxKpTqZQoGLOKHKpzxzxvXzxEVEVEVEVEVkSEVkSiXkSkSkSkSkSkSkSFXLYLYLYLYjCfFEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVkSkSkSEVEVEVgDzxzxzxKWzxzxQngDKWvXzxzxzxzxzxgDzxwlCkCkwlzxxBzxzxzxzxzxzxvXgDzxzxwZKpKpKpKpHXKpKpzxzxzxEVEVEVEVEVkSkSEVkSiXkSkSkSkSkSkSkSFXLYLYLYLYfFfFEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSEVEVEVgDgDzxfFfFfFLYLYfFfFfFzxzxzxvXzxvXnUzxwlCkCkwlzxWgzxzxzxvXgDzxzxzxgDzxzxzxzxzxgDzxzxgDxBgDEVEVEVEVEVEVkSkSkSkSkSEVfFfFfFfFfFfFfFfFfFfFfFfFfFEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSEVEVEVzxvXzxfFLYhALYzxLYpufFgDzxxBgDgDWgsPnUwlCkCkwlnUsPnUzxzxgDgDzxzxvXzxzxgDzxzxEVgDvXEVEVgDkSEVEVkSkSEVEVEVEVkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVkSkSkSEVEVEVEVzxzxfFLYaZzxgDgDLYfFzxzxzxzxvXzxwGzxwlCkCkwlzxwGzxvXzxgDvXzxzxzxzxzxvXzxEVEVEVEVEVEVkSkSkSkSkSkSEVEVEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
