@@ -49,7 +49,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m4a1 = 3,
+		/obj/item/ammo_box/magazine/m4a1 = 4,
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
@@ -70,10 +70,12 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/storage/box/lethalshot/halflife = 2,
+		/obj/item/storage/box/lethalshot/halflife = 3,
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
+
+	extra_end = 3
 
 /datum/outfit/deployment_loadout/rebel/sne/engineer
 	name = "SNE: Black Market Engineer"
@@ -87,7 +89,7 @@
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython/poorly_maintained
 
-	back = /obj/item/storage/backpack/halflife/satchel/military
+	back = /obj/item/storage/backpack/halflife/satchel/military/large
 
 	backpack_contents = list(
 		/obj/item/ammo_box/colta357 = 2,
@@ -96,29 +98,32 @@
 		/obj/item/stack/razorwire = 10,
 		/obj/item/sbeacondrop/rebel_turret,
 		/obj/item/stack/medical/gauze = 1,
+		/obj/item/crowbar/large = 1,
 	)
 
 /datum/outfit/deployment_loadout/rebel/sne/medic
 	name = "SNE: Black Market Medic"
 	display_name = "Black Market Medic (Support)"
-	desc = "Armed with a USP, details here."
+	desc = "Armed with a MP7, details here."
 	id_name = "Sawbones"
 
 	head = /obj/item/clothing/head/beret/sec/poland
 	uniform = /obj/item/clothing/under/syndicate/combat
 	gloves = /obj/item/clothing/gloves/color/black
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	suit_store = /obj/item/gun/ballistic/automatic/mp7
 
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/usp9mm = 1,
+		/obj/item/ammo_box/magazine/mp7 = 1,
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 2,
 		/obj/item/stack/medical/gauze = 1,
 	)
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit/intruder, /datum/action/cooldown/spell/conjure_item/bloodloss)
+
+	extra_per = -1
 
 /datum/outfit/deployment_loadout/rebel/sne/melee
 	name = "SNE: Black Market Slugger"
@@ -141,6 +146,10 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/battery/intruder)
 
+	extra_end = 3
+	extra_str = 4
+	extra_per = -5
+
 
 /datum/outfit/deployment_loadout/rebel/sne/sniper
 	name = "SNE: Black Market Sniper"
@@ -162,6 +171,8 @@
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
+
+	extra_per = 5
 
 //// CONSCRIPTS
 
@@ -214,7 +225,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m4a1 = 3,
+		/obj/item/ammo_box/magazine/m4a1 = 4,
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
@@ -236,10 +247,12 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/storage/box/lethalshot/halflife = 2,
+		/obj/item/storage/box/lethalshot/halflife = 3,
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
+
+	extra_end = 3
 
 /datum/outfit/deployment_loadout/combine/sne/engineer
 	name = "SNE: Conscript Engineer"
@@ -254,7 +267,7 @@
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython/poorly_maintained
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 
-	back = /obj/item/storage/backpack/halflife/satchel/military
+	back = /obj/item/storage/backpack/halflife/satchel/military/large
 
 	backpack_contents = list(
 		/obj/item/ammo_box/colta357 = 2,
@@ -263,30 +276,33 @@
 		/obj/item/stack/razorwire = 10,
 		/obj/item/sbeacondrop/combine_turret,
 		/obj/item/stack/medical/gauze = 1,
+		/obj/item/crowbar/large = 1,
 	)
 
 /datum/outfit/deployment_loadout/combine/sne/medic
 	name = "SNE: Conscript Medic"
 	display_name = "Conscript Medic (Support)"
-	desc = "Armed with a USP, details here."
+	desc = "Armed with a MP7, details here."
 	id_name = "Responder"
 
 	head = /obj/item/clothing/head/beret/durathread/unitednations
 	uniform = /obj/item/clothing/under/syndicate/camo
 	gloves = /obj/item/clothing/gloves/color/black
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	suit_store = /obj/item/gun/ballistic/automatic/mp7
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/usp9mm = 1,
+		/obj/item/ammo_box/magazine/mp7 = 1,
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 2,
 		/obj/item/stack/medical/gauze = 1,
 	)
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit/intruder, /datum/action/cooldown/spell/conjure_item/bloodloss)
+
+	extra_per = -1
 
 /datum/outfit/deployment_loadout/combine/sne/melee
 	name = "SNE: Conscript Slugger"
@@ -310,6 +326,10 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/battery/intruder)
 
+	extra_end = 3
+	extra_str = 4
+	extra_per = -5
+
 /datum/outfit/deployment_loadout/combine/sne/sniper
 	name = "SNE: Conscript Sniper"
 	display_name = "Conscript Sniper (Pick)"
@@ -331,6 +351,8 @@
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
+
+	extra_per = 5
 
 //// SNAKE
 
@@ -358,6 +380,7 @@
 		/obj/item/ammo_box/strilka310/a762/tranq,
 		/obj/item/ammo_box/strilka310/a762/tranq,
 		/obj/item/ammo_box/strilka310/a762/tranq,
+		/obj/item/reagent_containers/pill/patch/medkit/ration,
 	)
 
 /datum/outfit/deployment_loadout/intruder/solid/old/sne/post_equip(mob/living/carbon/human/H)
