@@ -220,6 +220,7 @@
 	ADD_TRAIT(H, TRAIT_TOTAL_FOV, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_SKITTISH, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOCRITOVERLAY, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_GRABRESISTANCE, OUTFIT_TRAIT) //prevents instant aggro grab cqc chicanery, have a real fight between boss and intruder
 
 	REMOVE_TRAIT(H, TRAIT_INTRUDER_GUARD, OUTFIT_TRAIT)
 
@@ -558,6 +559,7 @@
 	name = "HF Blade"
 	desc = "A blade similar to the katana, which also allows you to more easily deflect bullets."
 	block_chance = 50
+	attack_speed = CLICK_CD_FAST //their USP still does more damage both per shot and DPS wise
 
 /obj/item/grenade/decoy
 	name = "noise decoy grenade"

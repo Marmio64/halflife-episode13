@@ -34,6 +34,7 @@
 	ADD_TRAIT(H, TRAIT_NOCRITOVERLAY, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_INTRUDER_OCELOT, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NIGHT_VISION, OUTFIT_TRAIT) //he's got the eyes of a bullsquid. wait, do bullsquids have eyes. Yes they do have eyes, it is visible on their model.
+	ADD_TRAIT(H, TRAIT_GRABRESISTANCE, OUTFIT_TRAIT) //prevents instant aggro grab cqc chicanery, have a real fight between boss and intruder
 	var/obj/item/organ/eyes/empowered_eyes = H.get_organ_by_type(/obj/item/organ/eyes)
 	if(empowered_eyes)
 		empowered_eyes?.refresh() //needed for the night vision to actually apply
@@ -112,6 +113,7 @@
 	ADD_TRAIT(H, TRAIT_NOCRITOVERLAY, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_INTRUDER_OCELOT, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NIGHT_VISION, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_GRABRESISTANCE, OUTFIT_TRAIT) //prevents instant aggro grab cqc chicanery, have a real fight between boss and intruder
 	var/obj/item/organ/eyes/empowered_eyes = H.get_organ_by_type(/obj/item/organ/eyes)
 	if(empowered_eyes)
 		empowered_eyes?.refresh() //needed for the night vision to actually apply
@@ -176,6 +178,7 @@
 	ADD_TRAIT(H, TRAIT_NOCRITOVERLAY, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_INTRUDER_OCELOT, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NIGHT_VISION, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_GRABRESISTANCE, OUTFIT_TRAIT) //prevents instant aggro grab cqc chicanery, have a real fight between boss and intruder
 	var/obj/item/organ/eyes/empowered_eyes = H.get_organ_by_type(/obj/item/organ/eyes)
 	if(empowered_eyes)
 		empowered_eyes?.refresh() //needed for the night vision to actually apply
@@ -234,6 +237,7 @@
 	ADD_TRAIT(H, TRAIT_NOCRITOVERLAY, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_INTRUDER_OCELOT, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NIGHT_VISION, OUTFIT_TRAIT) //he's got the eyes of a bullsquid. wait, do bullsquids have eyes. Yes they do have eyes, it is visible on their model.
+	ADD_TRAIT(H, TRAIT_GRABRESISTANCE, OUTFIT_TRAIT) //prevents instant aggro grab cqc chicanery, have a real fight between boss and intruder
 	var/obj/item/organ/eyes/empowered_eyes = H.get_organ_by_type(/obj/item/organ/eyes)
 	if(empowered_eyes)
 		empowered_eyes?.refresh() //needed for the night vision to actually apply

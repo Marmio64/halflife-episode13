@@ -578,7 +578,7 @@
 
 /obj/item/gun/ballistic/shotgun/trench
 	name = "trench shotgun"
-	desc = "A sturdy though heavy wooden shotgun with a long magazine tube and bayonet lug, favoured by the Polish Liberation Front's trench-clearing troops. The use of this pattern of shotgun mostly faded out following the World Wars, though they remained popular in sporting markets - the PLF were all too happy to weld the bayonet lugs back on to these antiquated weapons when the call to arms echoed out, and they now find frequent use in high-stakes environments where the more modern SPAS-12 proves potentially unreliable."
+	desc = "A sturdy though heavy wooden shotgun with a long magazine tube and bayonet lug, favoured by the Polish Liberation Front's trench-clearing troops. The use of this pattern of shotgun mostly faded out following the World Wars, though they remained popular in sporting markets - the PLF were all too happy to weld the bayonet lugs back on to these antiquated weapons when the call to arms echoed out. While being more unwieldy to lug about and lacking the advanced double shot capability of the SPAS-12, its sturdy frame absorbs recoil and can handle faster racks, while also allowing it to be used as a great bayonet mount."
 	icon = 'hl13/icons/obj/guns/wideguns.dmi'
 	icon_state = "trenchgun"
 	inhand_icon_state = "trenchgun"
@@ -590,6 +590,9 @@
 	load_sound = "hl13/sound/weapons/shotgunreload.ogg"
 
 	slot_flags = ITEM_SLOT_SUITSTORE
+
+	force = 14
+	recoil = 1.25 // bit heavier than spas12, can absorb the recoil
 
 	fire_delay = 7 //bit faster than spas12
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/trench
