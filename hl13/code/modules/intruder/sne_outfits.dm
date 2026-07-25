@@ -125,6 +125,8 @@
 		/obj/item/stack/medical/gauze = 1,
 	)
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE
+
 /datum/outfit/deployment_loadout/rebel/sne/shotgun
 	name = "SNE: Black Market Shotgunner"
 	display_name = "Black Market Shotgunner (Offense)"
@@ -147,6 +149,8 @@
 	)
 
 	extra_end = 3
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
 
 /datum/outfit/deployment_loadout/rebel/sne/engineer
 	name = "SNE: Black Market Engineer"
@@ -172,6 +176,8 @@
 		/obj/item/crowbar/large = 1,
 	)
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
+
 /datum/outfit/deployment_loadout/rebel/sne/medic
 	name = "SNE: Black Market Medic"
 	display_name = "Black Market Medic (Support)"
@@ -195,6 +201,8 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit/intruder, /datum/action/cooldown/spell/conjure_item/bloodloss)
 
 	extra_per = -1
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
 
 /datum/outfit/deployment_loadout/rebel/sne/melee
 	name = "SNE: Black Market Slugger"
@@ -244,6 +252,8 @@
 	)
 
 	extra_per = 6
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_MARKSMEN
 
 //// CONSCRIPTS
 
@@ -317,6 +327,8 @@
 		/obj/item/stack/medical/gauze = 1,
 	)
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE
+
 /datum/outfit/deployment_loadout/combine/sne/shotgun
 	name = "SNE: Conscript Shotgunner"
 	display_name = "Conscript Shotgunner (Offense)"
@@ -340,6 +352,8 @@
 	)
 
 	extra_end = 3
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
 
 /datum/outfit/deployment_loadout/combine/sne/engineer
 	name = "SNE: Conscript Engineer"
@@ -366,6 +380,8 @@
 		/obj/item/crowbar/large = 1,
 	)
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
+
 /datum/outfit/deployment_loadout/combine/sne/medic
 	name = "SNE: Conscript Medic"
 	display_name = "Conscript Medic (Support)"
@@ -390,6 +406,8 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit/intruder, /datum/action/cooldown/spell/conjure_item/bloodloss)
 
 	extra_per = -1
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
 
 /datum/outfit/deployment_loadout/combine/sne/melee
 	name = "SNE: Conscript Slugger"
@@ -440,6 +458,8 @@
 	)
 
 	extra_per = 6
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_MARKSMEN
 
 //// SNAKE
 

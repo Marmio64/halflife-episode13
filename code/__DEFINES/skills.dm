@@ -113,20 +113,29 @@
 
 ///// weapon type definitions
 
-//pretty much everything not included below, like SMGs and pistols
-#define WEAPON_CAT_LIGHT "weapon_cat_light"
+//pretty much everything not included below, mostly pistols
+#define WEAPON_CAT_LIGHT (1<<0)
 
-//all rifles
-#define WEAPON_CAT_RIFLE "weapon_cat_rifle"
+//all SMGs
+#define WEAPON_CAT_SMG (1<<1)
+
+//assault rifles
+#define WEAPON_CAT_RIFLE (1<<2)
 
 //SPAS-12 and pulse shotgun pretty much
-#define WEAPON_CAT_SHOTGUN "weapon_cat_shotgun"
+#define WEAPON_CAT_SHOTGUN (1<<3)
 
-//sniper rifles
-#define WEAPON_CAT_SNIPER "weapon_cat_sniper"
+//sniper rifles and precision rifles like the mosin
+#define WEAPON_CAT_MARKSMEN (1<<4)
 
 //heavy guns, like LMGs
-#define WEAPON_CAT_HEAVY "weapon_cat_heavy"
+#define WEAPON_CAT_HEAVY (1<<5)
 
 //unique, special weaponry
-#define WEAPON_CAT_SPECIALTY "weapon_cat_specialty"
+#define WEAPON_CAT_SPECIALTY (1<<6)
+
+//revolvers
+#define WEAPON_CAT_REVOLVER (1<<7)
+
+//You have all specialties.
+#define WEAPON_CAT_ALL (1<<8)

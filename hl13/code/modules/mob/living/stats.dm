@@ -35,6 +35,9 @@
 	/// Current combat deployment faction of this very mob
 	var/deployment_faction = NO_FACTION
 
+	/// What weapons they have specialties for and can use properly. By default its just everything right now
+	var/weapon_specialties = WEAPON_CAT_ALL
+
 ///Rolls random stats base 10, +-1
 /mob/living/proc/roll_mob_stats()
 	if(has_rolled_for_stats)

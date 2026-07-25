@@ -25,7 +25,8 @@
 		GLOB.crab_character = "raiden"
 	..()
 
-/datum/outfit/deployment_loadout/intruder/solid/
+/datum/outfit/deployment_loadout/intruder/solid
+	weapon_specialties = WEAPON_CAT_ALL
 	var/sus_venter = FALSE
 
 /datum/outfit/deployment_loadout/intruder/solid/blank

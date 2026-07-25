@@ -235,6 +235,8 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/lgorbifold.ogg'
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
+
 /datum/outfit/deployment_loadout/combine/tier3/ota
 	name = "Deployment: SMG OTA"
 	display_name = "SMG OTA (Defense)"
@@ -254,6 +256,8 @@
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
 
 /datum/outfit/deployment_loadout/combine/tier3/riotcop
 	name = "Deployment: Riot Viscerator Cop"
@@ -313,6 +317,8 @@
 	combat_music = 'hl13/sound/music/combat/branescan.ogg'
 
 	extra_per = 1
+
+	weapon_specialties = WEAPON_CAT_REVOLVER
 
 /datum/outfit/deployment_loadout/combine/tier3/medic_cop
 	name = "Deployment: Upgraded Medical Cop"
@@ -409,6 +415,8 @@
 
 	extra_per = 5
 
+	weapon_specialties = WEAPON_CAT_MARKSMEN
+
 /// TIER 4 ////////////////////////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier4
 	loadout_tier = 4
@@ -433,6 +441,8 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE
+
 /datum/outfit/deployment_loadout/combine/tier4/cremator
 	name = "Deployment: Cremator"
 	display_name = "Cremator (Defense)"
@@ -454,6 +464,8 @@
 	combat_music = 'hl13/sound/music/combat/notyouraveragecop.ogg'
 	alternate_combat_music = 'hl13/sound/music/combat/dreamsofcruelty.ogg'
 	alternate_music_chance = 5
+
+	weapon_specialties = WEAPON_CAT_SPECIALTY
 
 /datum/outfit/deployment_loadout/combine/tier4/cremator/pre_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -483,6 +495,8 @@
 	extra_dex = 5
 	extra_end = 2
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
+
 /datum/outfit/deployment_loadout/combine/tier4/sniper
 	name = "Deployment: Sniper OTA"
 	display_name = "Sniper OTA (Pick)"
@@ -504,6 +518,8 @@
 
 	extra_per = 5
 
+	weapon_specialties = WEAPON_CAT_MARKSMEN
+
 /datum/outfit/deployment_loadout/combine/tier4/ordinal
 	name = "Deployment: Combine Ordinal"
 	display_name = "Combine Ordinal (Offense)"
@@ -523,6 +539,8 @@
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/guarddown.ogg'
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
 
 /datum/outfit/deployment_loadout/combine/tier4/medic_cop
 	name = "Deployment: Heavy Medical Cop"
@@ -559,6 +577,8 @@
 
 	extra_int = 5
 	extra_dex = 2
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
 
 /datum/outfit/deployment_loadout/combine/tier4/medic_cop/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -656,6 +676,8 @@
 	extra_dex = 2
 	extra_str = 4
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
+
 ////////////////////// TIER 5 /////////////////////////////////////
 /datum/outfit/deployment_loadout/combine/tier5
 	loadout_tier = 5
@@ -705,6 +727,8 @@
 	extra_end = 5
 	extra_str = 5
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
+
 /datum/outfit/deployment_loadout/combine/tier5/assassin
 	name = "Deployment: Combine Assassin"
 	display_name = "Combine Assassin (Pick)"
@@ -731,6 +755,8 @@
 	extra_dex = 10
 	extra_str = 5
 	extra_per = 5
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_MARKSMEN
 
 /datum/outfit/deployment_loadout/combine/tier5/suppressor
 	name = "Deployment: Combine Suppressor"
@@ -762,6 +788,8 @@
 	combat_music = 'hl13/sound/music/combat/escalation3.ogg'
 
 	extra_end = 5
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_HEAVY | WEAPON_CAT_RIFLE
 
 /datum/outfit/deployment_loadout/combine/tier5/advisor
 	name = "Deployment: Advisor"
@@ -811,6 +839,8 @@
 	extra_int = 10
 	extra_per = 5
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
+
 /datum/outfit/deployment_loadout/combine/tier5/logistics_lead/post_equip(mob/living/carbon/human/H)
 	. = ..()
 	ADD_TRAIT(H, TRAIT_SUPPLYRADIO_USER, JOB_TRAIT)
@@ -829,6 +859,9 @@
 	H.dna.species.stunmod = 0.1 //all bosses are very resilient to stuns
 
 	H.fire_stack_decay_rate = -2
+
+/datum/outfit/deployment_loadout/combine/boss
+	weapon_specialties = WEAPON_CAT_ALL
 
 /datum/outfit/deployment_loadout/combine/boss/freeman
 	name = "BOTH: The Free Man BLU"

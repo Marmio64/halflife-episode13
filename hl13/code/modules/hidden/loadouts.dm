@@ -52,6 +52,8 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
+
 //The second defender, riot cop. They're pretty good at holding positions since they have a good chance to parry the Hidden
 //They can't aim for shit though and if they do get hit they're still weak to damage.
 /datum/outfit/deployment_loadout/hidden/combine/riot_cop
@@ -109,6 +111,8 @@
 
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 
+	weapon_specialties = WEAPON_CAT_SPECIALTY
+
 /datum/outfit/deployment_loadout/hidden/combine/cremator/pre_equip(mob/living/carbon/human/H)
 	H.set_species(/datum/species/human/synth/cremator)
 
@@ -144,6 +148,8 @@
 
 	extra_dex = 3
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE
+
 //The other attacker. Mostly an aesthetic difference.
 //They have slightly higher close range DPS compared to the conscript, but less long range accuracy and don't have a backup knife.
 /datum/outfit/deployment_loadout/hidden/combine/grunt
@@ -170,6 +176,8 @@
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 
 	extra_dex = 3
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
 
 //The healer, excels at recovering allies from nonfatal injuries.
 //The Hidden tends to finish off prey they have started to hunt, but in the case they don't, you are extremely useful at getting them back to tip top shape!
@@ -207,6 +215,8 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit/the_hidden)
 	extra_int = 4
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
 
 //The second healer, excels at recovering allies from nonfatal injuries.
 //You have no business fighting, but were brought in to help with healing any survivors. Good luck.

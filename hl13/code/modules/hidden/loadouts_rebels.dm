@@ -56,6 +56,8 @@
 
 	extra_per = 3
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_MARKSMEN
+
 //Use molotovs to keep the hidden at bay
 /datum/outfit/deployment_loadout/hidden/rebel/molotov_partisan
 	name = "Hidden: Refugee Molotov Partisan"
@@ -84,6 +86,8 @@
 	)
 
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
 
 /datum/outfit/deployment_loadout/hidden/rebel/slugger
 	name = "Hidden: Rebel Slugger"
@@ -140,6 +144,8 @@
 
 	extra_dex = 3
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE
+
 //The other attacker. Combine's Shotgunner except they run fast and die a virgin.
 //Can give chase to the Hidden, but no armor means they probably won't even need a backstab to bring you down.
 /datum/outfit/deployment_loadout/hidden/rebel/scout
@@ -168,6 +174,8 @@
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 
 	extra_dex = 2
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
 
 //The healer, excels at recovering allies from nonfatal injuries.
 //The Hidden tends to finish off prey they have started to hunt, but in the case they don't, you are extremely useful at getting them back to tip top shape!
@@ -203,6 +211,8 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit/the_hidden)
 	extra_int = 4
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
 
 //The second healer, excels at recovering allies from nonfatal injuries.
 //You have no business fighting, but were brought in to help with healing any survivors. Good luck.

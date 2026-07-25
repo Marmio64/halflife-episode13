@@ -376,7 +376,7 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
-	weapon_category = WEAPON_CAT_SNIPER
+	weapon_category = WEAPON_CAT_MARKSMEN
 
 /obj/item/gun/ballistic/combine_sniper/slow
 	after_shot_delay = 1.3 SECONDS
@@ -522,6 +522,8 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
+	weapon_category = WEAPON_CAT_REVOLVER
+
 /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger
 	fire_delay = 12 //geared towards sniping, not mag dumping
 
@@ -561,6 +563,8 @@
 	fire_delay = 5
 	vary_fire_sound = FALSE
 	w_class = WEIGHT_CLASS_SMALL
+
+	weapon_category = WEAPON_CAT_REVOLVER
 
 /obj/item/gun/ballistic/revolver/snubnose/warden
 	name = "\improper commanding snubnose revolver" //used by DAs too
@@ -605,6 +609,8 @@
 
 	slowdown = 0.25
 	drag_slowdown = 0.25
+
+	weapon_category = WEAPON_CAT_SHOTGUN
 
 /obj/item/gun/ballistic/shotgun/trench/add_bayonet_point()
 	AddComponent(/datum/component/bayonet_attachable, offset_x = 32, offset_y = 12)
@@ -802,6 +808,8 @@
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 	pin = /obj/item/firing_pin/implant/mindshield
 
+	weapon_category = WEAPON_CAT_SHOTGUN
+
 /obj/item/gun/ballistic/shotgun/pulse/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if (obj_flags & EMAGGED)
 		return FALSE
@@ -847,6 +855,8 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 	var/obj/item/gun/ballistic/revolver/grenadelauncher/underbarrel
+
+	weapon_category = WEAPON_CAT_SMG
 
 /obj/item/gun/ballistic/automatic/mp7/rubber
 	spawn_magazine_type = /obj/item/ammo_box/magazine/mp7/rubber
@@ -906,6 +916,8 @@
 	lock_back_sound = 'hl13/sound/weapons/slidelock_alyx.ogg'
 	bolt_drop_sound = 'hl13/sound/weapons/slidelock_alyx.ogg'
 
+	weapon_category = WEAPON_CAT_SMG
+
 /obj/item/gun/ballistic/automatic/pulsesmg/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if (obj_flags & EMAGGED)
 		return FALSE
@@ -958,7 +970,7 @@
 	sawn_desc = "A ratty old pre-war rifle that was developed over a century ago. Someone seems to have taken this prized historical artifact and sawed it in half, creating an Obrez. Still moist, though."
 	weapon_weight = WEAPON_HEAVY
 
-	weapon_category = WEAPON_CAT_RIFLE
+	weapon_category = WEAPON_CAT_MARKSMEN
 
 //can achieve almost the same DPS as an AR2 if you're good with using it
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
@@ -1086,7 +1098,7 @@
 	lefthand_file = 'hl13/icons/mob/inhands/64x_guns_left.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/64x_guns_right.dmi'
 
-	weapon_category = WEAPON_CAT_SNIPER
+	weapon_category = WEAPON_CAT_MARKSMEN
 
 	var/firing_speed = 0.8 SECONDS
 

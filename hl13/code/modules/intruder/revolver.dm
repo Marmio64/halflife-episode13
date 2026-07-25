@@ -2,6 +2,9 @@
 
 //Bullsquids are proud creatures... they prefer to hunt alone
 
+/datum/outfit/deployment_loadout/intruder/boss
+	weapon_specialties = WEAPON_CAT_ALL
+
 /datum/outfit/deployment_loadout/intruder/boss/bullsquid
 	faction = COMBINE_DEPLOYMENT_FACTION
 	name = "Revolver Bullsquid"

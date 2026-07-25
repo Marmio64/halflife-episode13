@@ -481,6 +481,9 @@
 		if(user.body_position == LYING_DOWN) //hl13 edit, going prone increases survivability but lowers accuracy (and for melee, stops you from parrying)
 			bonus_spread += 10
 
+		if(!(weapon_category & user.weapon_specialties || user.weapon_specialties & WEAPON_CAT_ALL)) //hl13 edit
+			bonus_spread += 15
+
 		if(user.move_intent == MOVE_INTENT_RUN) //hl13 edit, aim better when you're not running all over the place
 			bonus_spread += 5
 

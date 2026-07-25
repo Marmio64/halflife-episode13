@@ -34,6 +34,8 @@
 
 	nodrop_slots = list(ITEM_SLOT_OCLOTHING, ITEM_SLOT_GLOVES, ITEM_SLOT_FEET, ITEM_SLOT_ICLOTHING, ITEM_SLOT_EARS, ITEM_SLOT_HEAD, ITEM_SLOT_EYES, ITEM_SLOT_ID)
 
+	weapon_specialties = WEAPON_CAT_ALL
+
 /datum/outfit/deployment_loadout/intruder/guard/pre_equip(mob/living/carbon/human/H, visuals_only = FALSE)
 	. = ..()
 
