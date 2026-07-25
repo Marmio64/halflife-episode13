@@ -50,6 +50,15 @@
 /datum/action/cooldown/spell/conjure_item/bloodloss/slow
 	cooldown_time = 80 SECONDS
 
+/datum/action/cooldown/spell/conjure_item/battery/intruder
+	name = "Procure Battery"
+	desc = "Procures a battery to feed someone's baton or your own with. Deletes the last one summoned if it is still available."
+	item_type = /obj/item/halflife/combine_battery
+	cooldown_time = 30 SECONDS
+	delete_old = TRUE
+	sound = 'hl13/sound/effects/spawnration.ogg'
+	sound_varies = FALSE
+
 /datum/action/cooldown/spell/conjure_item/sandbag
 	name = "Procure Sandbag"
 	desc = "Procures some sandbags to use for building defenses."
@@ -568,7 +577,7 @@
 			else
 				to_chat(caster, span_warning("You fail to find any dogtags... maybe look a little harder next time?"))
 
-	if(human_victim.deployment_faction != COMBINE_DEPLOYMENT_FACTION) //no allies on a sneaking mission (otacon i guess but im not bothering with that right now)
+	if(human_victim.deployment_faction != COMBINE_DEPLOYMENT_FACTION && !sne) //no allies on a sneaking mission (otacon i guess but im not bothering with that right now)
 		caster.balloon_alert(caster, "can't use on allies!")
 		return FALSE
 

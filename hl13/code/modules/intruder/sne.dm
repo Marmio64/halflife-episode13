@@ -96,8 +96,8 @@ GLOBAL_VAR_INIT(dogtags_left, 3)
 		human_user.deployment_faction = XEN_DEPLOYMENT_FACTION
 		to_chat(human_user, span_bold(span_notice("It's Polacon, Crab. What's up? ...jeez, Crab, don't tell me you forgot your objective already? Alright, I'll go over it with you one more time.")))
 		to_chat(human_user, span_notice("You've been deployed to this warzone in order to collect three dogtags from any member of any team."))
-		to_chat(human_user, span_notice("In order to collect dogtags, I've modified one of your abilities. If you use your hold-up on an unconscious soldier, you will begin to search them for dogtags. Crab, don't forget that you will be vulnerable to attacks for 5 seconds during this!"))
-		to_chat(human_user, span_notice("If you run out of time, or are killed three times, it's game over for you. So... try to come back in one piece, Crab? Please?"))
+		to_chat(human_user, span_notice("In order to collect dogtags, I've modified one of your abilities. If you use your HOLD-UP on an UNCONSCIOUS soldier, you will begin to search them for dogtags. Crab, don't forget that you will be vulnerable to attacks for 5 seconds during this!"))
+		to_chat(human_user, span_notice("If you run out of time, or are killed three times, it's game over for you. If you have a life remaining, you can respawn as the team you joined originally to become Crab again. So... try to come back in one piece, Crab? Please?"))
 		to_chat(human_user, span_bold(span_danger("Crab, in this war, neither side is truly your enemy. Avoid killing them, except in self defense, as you will not be able to collect the dogtags of the dead.")))
 		candidates_left--
 
@@ -163,7 +163,7 @@ GLOBAL_VAR_INIT(dogtags_left, 3)
 			to_chat(world, span_infoplain(span_slightly_larger(span_bold("Old Crab has lost, but it's not over yet. Defeat the enemy team!"))))
 			crab_dead = TRUE
 
-		if(7 MINUTES < round_length && SSticker.IsRoundInProgress())
+		if(10 MINUTES < round_length && SSticker.IsRoundInProgress())
 			if(SSticker.tdm_rebel_deaths < SSticker.tdm_combine_deaths)
 				priority_announce("The conscript forces are in shambles, good work! We'll pay you all handsomely for this.", "Lambda Priority Alert")
 				GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
