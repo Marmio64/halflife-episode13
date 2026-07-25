@@ -165,7 +165,7 @@ GLOBAL_VAR_INIT(dogtags_left, 3)
 
 		if(10 MINUTES < round_length && SSticker.IsRoundInProgress())
 			if(SSticker.tdm_rebel_deaths < SSticker.tdm_combine_deaths)
-				priority_announce("The conscript forces are in shambles, good work! We'll pay you all handsomely for this.", "Lambda Priority Alert")
+				priority_announce("The conscript forces are in shambles, good work! We'll pay you all handsomely for this.", "Blackmarket Priority Alert")
 				GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
 				SSticker.force_ending = FORCE_END_ROUND
 				to_chat(world, span_infoplain(span_slightly_larger(span_bold("The timer ran out, and more conscripts died than mercs. Mercs win, Crab and Conscripts lose!"))))

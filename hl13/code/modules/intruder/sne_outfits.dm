@@ -172,7 +172,7 @@
 		/obj/item/stack/medical/gauze = 1,
 	)
 
-	extra_per = 5
+	extra_per = 6
 
 //// CONSCRIPTS
 
@@ -214,7 +214,7 @@
 	desc = "Armed with an M4, details here."
 	id_name = "Rifleman"
 
-	head = /obj/item/clothing/head/helmet/halflife/military
+	head = /obj/item/clothing/head/helmet/halflife/military/weak
 	uniform = /obj/item/clothing/under/syndicate/camo
 	gloves = /obj/item/clothing/gloves/fingerless
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
@@ -236,7 +236,7 @@
 	desc = "Armed with an SPAS12, details here."
 	id_name = "Breacher"
 
-	head = /obj/item/clothing/head/helmet/halflife/military
+	head = /obj/item/clothing/head/helmet/halflife/military/weak
 	uniform = /obj/item/clothing/under/syndicate/camo
 	gloves = /obj/item/clothing/gloves/fingerless
 	suit = /obj/item/clothing/suit/armor/halflife/milvest
@@ -352,7 +352,7 @@
 		/obj/item/stack/medical/gauze = 1,
 	)
 
-	extra_per = 5
+	extra_per = 6
 
 //// SNAKE
 
