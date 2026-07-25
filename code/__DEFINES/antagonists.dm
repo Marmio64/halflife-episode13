@@ -166,6 +166,8 @@ GLOBAL_LIST_INIT(syndicate_employers, list(
 	"Lambda",
 	"Black Market Agent",
 	"Refugee Spy",
+	"United Nations Remnant",
+	"Radicalized",
 ))
 ///employers that are from Nanotrasen
 GLOBAL_LIST_INIT(nanotrasen_employers, list(
@@ -175,6 +177,7 @@ GLOBAL_LIST_INIT(nanotrasen_employers, list(
 ///employers who hire agents to do the hijack
 GLOBAL_LIST_INIT(hijack_employers, list(
 	"Lambda",
+	"United Nations Remnant",
 ))
 
 ///employers who hire agents to do a task and escape... or martyrdom. whatever
@@ -182,6 +185,7 @@ GLOBAL_LIST_INIT(normal_employers, list(
 	"Black Market Agent",
 	"Refugee Spy",
 	"Internal Affairs Agent",
+	"Radicalized",
 ))
 
 ///employers for malfunctioning ais. they do not have sides, unlike traitors.
