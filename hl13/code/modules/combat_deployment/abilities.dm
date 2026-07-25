@@ -50,6 +50,15 @@
 /datum/action/cooldown/spell/conjure_item/bloodloss/slow
 	cooldown_time = 80 SECONDS
 
+/datum/action/cooldown/spell/conjure_item/battery/intruder
+	name = "Procure Battery"
+	desc = "Procures a battery to feed someone's baton or your own with. Deletes the last one summoned if it is still available."
+	item_type = /obj/item/halflife/combine_battery
+	cooldown_time = 30 SECONDS
+	delete_old = TRUE
+	sound = 'hl13/sound/effects/spawnration.ogg'
+	sound_varies = FALSE
+
 /datum/action/cooldown/spell/conjure_item/sandbag
 	name = "Procure Sandbag"
 	desc = "Procures some sandbags to use for building defenses."

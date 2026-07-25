@@ -132,11 +132,14 @@
 	suit = /obj/item/clothing/suit/armor/riot
 	suit_store = /obj/item/melee/baton/security/loaded
 	mask = /obj/item/clothing/mask/gas/hl2/russia/hardened
+	belt = /obj/item/halflife/combine_battery
 
 	back = /obj/item/shield/riot/ballistic
 
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit/ration
 	r_pocket = /obj/item/stack/medical/gauze
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/battery/intruder)
 
 
 /datum/outfit/deployment_loadout/rebel/sne/sniper
@@ -298,11 +301,14 @@
 	suit_store = /obj/item/melee/baton/security/loaded
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
 	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
+	belt = /obj/item/halflife/combine_battery
 
 	back = /obj/item/shield/riot/ballistic
 
 	l_pocket = /obj/item/reagent_containers/pill/patch/medkit/ration
 	r_pocket = /obj/item/stack/medical/gauze
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/battery/intruder)
 
 /datum/outfit/deployment_loadout/combine/sne/sniper
 	name = "SNE: Conscript Sniper"
