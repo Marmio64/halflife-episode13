@@ -288,26 +288,12 @@
 	)
 
 /datum/ai_planning_subtree/random_speech/bmd
-	speech_chance = 4
+	speech_chance = 1
 	speak = list(
-		"When this is all over, I am gonna mate.",
-		"I need a pierogi.",
-		"The Free State stands.",
-		"Poland is not yet dead.",
-		"Any spare rations?",
-		"On and on and on.",
-		"I can't remember the last time I had, well, anything.",
-		"Shouldn't we be doing something?",
-		"Oh, that's gotta hurt.",
-		"I've got my little corner and I'm sticking to it.",
-		"The war has to end someday.",
-		"I can't remember the last time I had a shower.",
-		"Things are looking up for a change.",
-		"They're never gonna make a stalker out of me.",
-		"Finally, change is in the air!",
-		"We'll evict the imperialists someday.",
-		"I think I ate something bad.",
-		"I'm gonna stay and hold down this spot.",
+		"If you die, i'm taking your credits.",
+		"I need a drink...",
+		"Heheheh...",
+		"We'll take whats ours.",
 	)
 
 /datum/ai_controller/basic_controller/trooper/ranged/burst/bmd
