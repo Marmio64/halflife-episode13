@@ -77,7 +77,7 @@
 				if(mob_mood)
 					switch(mob_mood.sanity_level)
 						if(SANITY_LEVEL_GREAT)
-							adjust_tiredness(-0.1) //get tired slightly slower
+							adjust_tiredness(-0.15) //get tired slightly slower
 						if(SANITY_LEVEL_UNSTABLE)
 							adjust_tiredness(0.25)
 						if(SANITY_LEVEL_CRAZY)

@@ -6,10 +6,11 @@ GLOBAL_VAR_INIT(boss_time_cons, FALSE)
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/sne
 	can_jam = FALSE
+	projectile_damage_multiplier = 1.61 //approx 45 damage a shot
 
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/sne/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/scope, range_modifier = 3)
+	AddComponent(/datum/component/scope, range_modifier = 2)
 
 /obj/item/sne/dogtags
 	name = "dogtags"

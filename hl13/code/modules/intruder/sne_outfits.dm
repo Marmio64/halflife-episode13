@@ -6,6 +6,7 @@
 	display_name = "Revolver Bullsquid"
 	implants = list(/obj/item/implant/mindshield)
 	ears = /obj/item/radio/headset/rebel_deployment
+	accessory = /obj/item/clothing/accessory/rebel_dogtags
 
 
 /datum/outfit/deployment_loadout/intruder/boss/solidus/rebel
@@ -14,6 +15,7 @@
 	display_name = "Solidus Crab"
 	implants = list(/obj/item/implant/mindshield)
 	ears = /obj/item/radio/headset/rebel_deployment
+	accessory = /obj/item/clothing/accessory/rebel_dogtags
 
 /datum/outfit/deployment_loadout/intruder/boss/liquid/rebel
 	faction = REBEL_DEPLOYMENT_FACTION
@@ -21,6 +23,7 @@
 	display_name = "Liquid Bullsquid"
 	implants = list(/obj/item/implant/mindshield)
 	ears = /obj/item/radio/headset/rebel_deployment
+	accessory = /obj/item/clothing/accessory/rebel_dogtags
 
 /datum/outfit/deployment_loadout/intruder/boss/end/rebel
 	faction = REBEL_DEPLOYMENT_FACTION
@@ -28,6 +31,7 @@
 	display_name = "The Bine"
 	implants = list(/obj/item/implant/mindshield)
 	ears = /obj/item/radio/headset/rebel_deployment
+	accessory = /obj/item/clothing/accessory/rebel_dogtags
 
 
 //// CONSCRIPTS BOSS
@@ -36,21 +40,25 @@
 	name = "SNE: Conscript Bullsquid"
 	display_name = "Revolver Bullsquid"
 	ears = /obj/item/radio/headset/civilprotection/deployment
+	accessory = /obj/item/clothing/accessory/combine_dogtags
 
 /datum/outfit/deployment_loadout/intruder/boss/solidus/combine
 	name = "SNE: Conscript Solidus"
 	display_name = "Solidus Crab"
 	ears = /obj/item/radio/headset/civilprotection/deployment
+	accessory = /obj/item/clothing/accessory/combine_dogtags
 
 /datum/outfit/deployment_loadout/intruder/boss/liquid/combine
 	name = "SNE: Conscript Liquid"
 	display_name = "Liquid Bullsquid"
 	ears = /obj/item/radio/headset/civilprotection/deployment
+	accessory = /obj/item/clothing/accessory/combine_dogtags
 
 /datum/outfit/deployment_loadout/intruder/boss/end/combine
 	name = "SNE: Conscript Bine"
 	display_name = "The Bine"
 	ears = /obj/item/radio/headset/civilprotection/deployment
+	accessory = /obj/item/clothing/accessory/combine_dogtags
 
 
 //// MERCS
@@ -151,6 +159,7 @@
 	)
 
 	extra_end = 3
+	extra_dex = -2
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
 
@@ -227,8 +236,8 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/battery/intruder)
 
-	extra_end = 3
-	extra_str = 4
+	extra_end = 5
+	extra_str = 5
 	extra_per = -5
 
 
@@ -248,12 +257,13 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/ammo_box/strilka310/a762 = 4,
+		/obj/item/ammo_box/strilka310/a762 = 5,
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
 
-	extra_per = 6
+	extra_per = 8
+	extra_dex = 2
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_MARKSMEN
 
@@ -356,6 +366,7 @@
 	)
 
 	extra_end = 3
+	extra_dex = -2
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
 
@@ -435,8 +446,8 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/battery/intruder)
 
-	extra_end = 3
-	extra_str = 4
+	extra_end = 5
+	extra_str = 5
 	extra_per = -5
 
 /datum/outfit/deployment_loadout/combine/sne/sniper
@@ -456,12 +467,13 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/ammo_box/strilka310/a762 = 4,
+		/obj/item/ammo_box/strilka310/a762 = 5,
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
 
-	extra_per = 6
+	extra_per = 8
+	extra_dex = 2
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_MARKSMEN
 
@@ -479,7 +491,7 @@
 
 	backpack_contents = list(
 		/obj/item/gun/ballistic/automatic/pistol/usp/suppressed/solid,
-		/obj/item/gun/ballistic/automatic/m4a1/famas/crab/suppressed,
+		/obj/item/gun/ballistic/automatic/m4a1/famas/buffed/suppressed,
 		/obj/item/ammo_box/magazine/m4a1/famas,
 		/obj/item/ammo_box/magazine/m4a1/famas,
 		/obj/item/ammo_box/magazine/m4a1/famas,

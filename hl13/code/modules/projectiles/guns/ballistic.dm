@@ -154,6 +154,11 @@
 	desc = "A French-made bullpup rifle from the 1990s, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one looks in pretty good shape, and somehow more powerful."
 	projectile_damage_multiplier = 1.2
 
+/obj/item/gun/ballistic/automatic/m4a1/famas/buffed/suppressed/Initialize(mapload)
+	. = ..()
+	var/obj/item/suppressor/S = new(src)
+	install_suppressor(S)
+
 /obj/item/gun/ballistic/automatic/m4a1/famas/intruder/buffed/more
 	name = "\improper High-Grade FAMAS G2 Rifle"
 	desc = "A French-made bullpup rifle from the 1990s, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one has been heavily upgraded, and bears the distinct blue-grey sheen of Combine alloy - belying its vastly-improved firepower."
