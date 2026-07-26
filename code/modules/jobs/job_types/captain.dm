@@ -57,6 +57,8 @@
 
 	cmode_music = 'hl13/sound/music/combat/branescan.ogg'
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
+
 /datum/job/captain/get_captaincy_announcement(mob/living/captain)
 	return "Warden [captain.real_name] will be managing this correctional facility."
 

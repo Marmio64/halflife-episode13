@@ -26,7 +26,7 @@
 
 	ai_controller = /datum/ai_controller/basic_controller/trader/halflife
 
-	faction = list(FACTION_REFUGEE)
+	faction = list(FACTION_REFUGEE, FACTION_BLACKMARKET)
 
 /obj/effect/mob_spawn/corpse/human/refugee_smuggler
 	name = "Refugee Smuggler"
@@ -173,7 +173,7 @@
 
 	ai_controller = /datum/ai_controller/basic_controller/trader/halflife
 
-	faction = list(FACTION_REFUGEE)
+	faction = list(FACTION_REFUGEE, FACTION_BLACKMARKET)
 
 /obj/effect/mob_spawn/corpse/human/blackmarket
 	name = "Refugee Smuggler"

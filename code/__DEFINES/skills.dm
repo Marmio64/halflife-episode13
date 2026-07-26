@@ -139,3 +139,6 @@
 
 //You have all specialties.
 #define WEAPON_CAT_ALL (1<<8)
+
+//This weapon has no category, you can only be trained on using it if you have all specialties.
+#define WEAPON_CAT_NONE (1<<9)

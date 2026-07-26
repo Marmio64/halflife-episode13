@@ -33,22 +33,22 @@
 //// CONSCRIPTS BOSS
 
 /datum/outfit/deployment_loadout/intruder/boss/bullsquid/combine
-	name = "SNE: Black Market Bullsquid"
+	name = "SNE: Conscript Bullsquid"
 	display_name = "Revolver Bullsquid"
 	ears = /obj/item/radio/headset/civilprotection/deployment
 
 /datum/outfit/deployment_loadout/intruder/boss/solidus/combine
-	name = "SNE: Black Market Solidus"
+	name = "SNE: Conscript Solidus"
 	display_name = "Solidus Crab"
 	ears = /obj/item/radio/headset/civilprotection/deployment
 
 /datum/outfit/deployment_loadout/intruder/boss/liquid/combine
-	name = "SNE: Black Market Liquid"
+	name = "SNE: Conscript Liquid"
 	display_name = "Liquid Bullsquid"
 	ears = /obj/item/radio/headset/civilprotection/deployment
 
 /datum/outfit/deployment_loadout/intruder/boss/end/combine
-	name = "SNE: Black Market Bine"
+	name = "SNE: Conscript Bine"
 	display_name = "The Bine"
 	ears = /obj/item/radio/headset/civilprotection/deployment
 
@@ -120,12 +120,14 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m4a1 = 4,
+		/obj/item/ammo_box/magazine/m4a1 = 3,
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE
+
+	extra_dex = 1
 
 /datum/outfit/deployment_loadout/rebel/sne/shotgun
 	name = "SNE: Black Market Shotgunner"
@@ -143,7 +145,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/storage/box/lethalshot/halflife = 3,
+		/obj/item/storage/box/lethalshot/halflife = 2,
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
@@ -322,12 +324,14 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/m4a1 = 4,
+		/obj/item/ammo_box/magazine/m4a1 = 3,
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE
+
+	extra_dex = 1
 
 /datum/outfit/deployment_loadout/combine/sne/shotgun
 	name = "SNE: Conscript Shotgunner"
@@ -346,7 +350,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel/military
 
 	backpack_contents = list(
-		/obj/item/storage/box/lethalshot/halflife = 3,
+		/obj/item/storage/box/lethalshot/halflife = 2,
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 1,
 		/obj/item/stack/medical/gauze = 1,
 	)

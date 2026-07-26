@@ -160,6 +160,42 @@
 	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE)
 	color = "#ff0000"
 
+
+
+/mob/living/basic/trooper/rebel/mp7/bmd
+	name = "Shady Soldier"
+	desc = "A masked, suspicious looking person who looks eager to use their weapon."
+
+	maxHealth = 150
+	health = 150
+
+	ranged_cooldown = 1.5 SECONDS
+
+	faction = list(FACTION_NEUTRAL, FACTION_REFUGEE, FACTION_BLACKMARKET)
+
+	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/bmd
+	loot = list(/obj/effect/mob_spawn/corpse/human/bmd)
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/bmd
+
+/mob/living/basic/trooper/rebel/mp7/bmd/hostile
+	faction = list(FACTION_BLACKMARKET)
+
+/obj/effect/mob_spawn/corpse/human/bmd
+	name = "BMD Soldier"
+	hairstyle = "Business Hair 3"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/bmd_corpse
+
+/datum/outfit/bmd_corpse
+	name = "BMD Soldier Corpse"
+
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+	mask = /obj/item/clothing/mask/gas/hl2/military
+	uniform = /obj/item/clothing/under/citizen/refugee
+	suit = /obj/item/clothing/suit/armor/browncoat
+	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/color/black
+
 // AI STUFF THAT I PUT IN HERE CAUSE IM TOO LAZY TO MAKE ANOTHER FILE FOR IT --------------------------
 /datum/ai_planning_subtree/random_speech/rebelsoldier
 	speech_chance = 4
@@ -249,4 +285,35 @@
 		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trooper_burst,
 		/datum/ai_planning_subtree/travel_to_point/and_clear_target/reinforce,
 		/datum/ai_planning_subtree/random_speech/plfveteran,
+	)
+
+/datum/ai_planning_subtree/random_speech/bmd
+	speech_chance = 4
+	speak = list(
+		"When this is all over, I am gonna mate.",
+		"I need a pierogi.",
+		"The Free State stands.",
+		"Poland is not yet dead.",
+		"Any spare rations?",
+		"On and on and on.",
+		"I can't remember the last time I had, well, anything.",
+		"Shouldn't we be doing something?",
+		"Oh, that's gotta hurt.",
+		"I've got my little corner and I'm sticking to it.",
+		"The war has to end someday.",
+		"I can't remember the last time I had a shower.",
+		"Things are looking up for a change.",
+		"They're never gonna make a stalker out of me.",
+		"Finally, change is in the air!",
+		"We'll evict the imperialists someday.",
+		"I think I ate something bad.",
+		"I'm gonna stay and hold down this spot.",
+	)
+
+/datum/ai_controller/basic_controller/trooper/ranged/burst/bmd
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trooper_burst,
+		/datum/ai_planning_subtree/travel_to_point/and_clear_target/reinforce,
+		/datum/ai_planning_subtree/random_speech/bmd,
 	)

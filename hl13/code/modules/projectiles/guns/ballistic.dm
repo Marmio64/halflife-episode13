@@ -549,6 +549,9 @@
 	fire_delay = 6
 	projectile_damage_multiplier = 1.2
 
+/obj/item/gun/ballistic/revolver/coltpython/blued/team_lead
+	weapon_category = WEAPON_CAT_NONE //only people trained on all weapons can use it right, which in TDM is just the TDM leads
+
 // about 2.5 seconds TTK
 // Similar DPS to the colt python but waaay less accurate, and less damage per bullet means more reloading.
 /obj/item/gun/ballistic/revolver/snubnose

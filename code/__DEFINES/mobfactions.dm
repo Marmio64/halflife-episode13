@@ -98,6 +98,7 @@
 #define FACTION_ANTLION "antlion"
 #define FACTION_COMBINE "combine"
 #define FACTION_REFUGEE "refugee"
+#define FACTION_BLACKMARKET "blackmarket"
 
 /// Misc. hostile xen creatures
 #define FACTION_XEN_FAUNA "xen_fauna"
