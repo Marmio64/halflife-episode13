@@ -1079,7 +1079,7 @@
 
 	alternate_combat_music = 'hl13/sound/music/combat/rocketjumpwaltz.ogg'
 
-	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER | WEAPON_CAT_SPECIALTY
 
 /datum/outfit/deployment_loadout/rebel/tier5/firefighter
 	name = "Deployment: Rebel Fire Fighter"
