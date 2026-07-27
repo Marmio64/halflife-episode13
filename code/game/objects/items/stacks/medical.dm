@@ -140,7 +140,7 @@
 	if(iscarbon(patient))
 		return heal_carbon(patient, user, heal_brute, heal_burn)
 	else if(isanimal_or_basicmob(patient))
-		if(!try_heal_checks(patient, user, heal_brute, heal_burn))
+		if(!try_heal_checks(patient, user, heal_brute * 0.8, heal_burn * 0.8))
 			return FALSE
 		if(patient.heal_bodypart_damage(heal_brute))
 			user.visible_message(span_infoplain(span_green("[user] applies [src] on [patient].")), span_infoplain(span_green("You apply [src] on [patient].")))
@@ -608,7 +608,7 @@
 	max_amount = 1
 	amount = 1
 	absorption_rate = 0.025 //shit at stopping bleeding
-	absorption_capacity = 3
+	absorption_capacity = 4
 
 	splint_factor = 0.25 //very good long term solution if surgery is not an option.
 	merge_type = /obj/item/stack/medical/splint

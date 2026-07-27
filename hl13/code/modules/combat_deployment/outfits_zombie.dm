@@ -1,6 +1,7 @@
 /datum/outfit/deployment_loadout/xen
 	uniform = null
 	shoes = null
+	weapon_specialties = WEAPON_CAT_ALL
 	var/mob_to_be = /mob/living/basic/halflife/headcrab
 
 /datum/outfit/deployment_loadout/xen/post_equip(mob/living/carbon/human/H, visuals_only = FALSE)

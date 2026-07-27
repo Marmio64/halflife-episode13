@@ -50,6 +50,15 @@
 /datum/action/cooldown/spell/conjure_item/bloodloss/slow
 	cooldown_time = 80 SECONDS
 
+/datum/action/cooldown/spell/conjure_item/battery/intruder
+	name = "Procure Battery"
+	desc = "Procures a battery to feed someone's baton or your own with. Deletes the last one summoned if it is still available."
+	item_type = /obj/item/halflife/combine_battery
+	cooldown_time = 30 SECONDS
+	delete_old = TRUE
+	sound = 'hl13/sound/effects/spawnration.ogg'
+	sound_varies = FALSE
+
 /datum/action/cooldown/spell/conjure_item/sandbag
 	name = "Procure Sandbag"
 	desc = "Procures some sandbags to use for building defenses."
@@ -530,6 +539,8 @@
 
 	var/armed = FALSE
 
+	var/sne = FALSE //sneaking mission variant
+
 /obj/item/melee/touch_attack/holdup
 	name = "Free Hand (Hold-up)"
 	desc = "Your hand. It's ready for a hold-up."
@@ -545,15 +556,33 @@
 	var/mob/living/carbon/human/human_victim = victim
 
 	if(human_victim.stat == DEAD)
-		caster.balloon_alert(caster, "can't hold-up the dead!")
+		caster.balloon_alert(caster, "can't use on the dead!")
 		return FALSE
 
-	if(human_victim.deployment_faction != COMBINE_DEPLOYMENT_FACTION)
-		caster.balloon_alert(caster, "can't hold-up allies!")
+	if(human_victim == caster)
+		caster.balloon_alert(caster, "can't use it on yourself!")
+		return FALSE
+
+	if(sne)
+		if(human_victim.stat == UNCONSCIOUS)
+			to_chat(caster, span_notice("You begin to search [human_victim] for dogtags."))
+			if(do_after(caster, 5 SECONDS, human_victim)) //give someone a chance to interfere
+				if(human_victim in GLOB.dogtag_holders)
+					GLOB.dogtag_holders -= human_victim
+					new /obj/item/sne/dogtags(human_victim.loc)
+					playsound(caster, 'hl13/sound/effects/spawnration.ogg', 50, FALSE) //audible
+					to_chat(caster, span_notice("Dogtags fall out of one of [human_victim]'s pockets!"))
+				else
+					to_chat(caster, span_warning("You fail to find any dogtags... did you already search this person?"))
+			else
+				to_chat(caster, span_warning("You fail to find any dogtags... maybe look a little harder next time?"))
+
+	if(human_victim.deployment_faction != COMBINE_DEPLOYMENT_FACTION && !sne) //no allies on a sneaking mission (otacon i guess but im not bothering with that right now)
+		caster.balloon_alert(caster, "can't use on allies!")
 		return FALSE
 
 	if(GLOB.alert_cooldown > 0 SECONDS)
-		caster.balloon_alert(caster, "can't hold-up during an alert!")
+		caster.balloon_alert(caster, "can't use during an alert!")
 		return FALSE
 
 	if(!istype(caster.get_inactive_held_item(), /obj/item/gun) && !istype(caster.get_inactive_held_item(), /obj/item/knife))

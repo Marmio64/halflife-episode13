@@ -150,7 +150,7 @@
 
 /datum/mood_event/nyctophobia
 	description = "It sure is dark around here..."
-	mood_change = -5
+	mood_change = -6
 
 /datum/mood_event/claustrophobia
 	description = "Why do I feel trapped?!  Let me out!!!"
@@ -337,12 +337,12 @@
 
 /datum/mood_event/bad_touch
 	description = "I don't like when people touch me."
-	mood_change = -3
+	mood_change = -4
 	timeout = 4 MINUTES
 
 /datum/mood_event/very_bad_touch
 	description = "I really don't like when people touch me."
-	mood_change = -5
+	mood_change = -8
 	timeout = 4 MINUTES
 
 /datum/mood_event/noogie

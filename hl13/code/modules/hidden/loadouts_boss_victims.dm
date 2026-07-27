@@ -49,6 +49,8 @@
 
 	extra_end = 5
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
+
 /datum/outfit/deployment_loadout/hidden/boss_victim/combine/engineer
 	name = "Victim: Engineer"
 	display_name = "DEFENSE: Engineer"
@@ -152,6 +154,8 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
+
 /datum/outfit/deployment_loadout/hidden/boss_victim/combine/grunt
 	name = "Victim: Grunt"
 	display_name = "ASSAULT: Grunt"
@@ -176,6 +180,8 @@
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 
 	extra_dex = 6
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
 
 /datum/outfit/deployment_loadout/hidden/boss_victim/combine/medic
 	name = "Victim: Medical Cop"
@@ -211,3 +217,5 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/medkit/the_hidden/faster)
 	extra_int = 4
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG

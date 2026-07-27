@@ -213,12 +213,13 @@
 	foodtypes = GRAIN | SUGAR
 	food_flags = FOOD_FINGER_FOOD
 	w_class = WEIGHT_CLASS_SMALL
-	desc = "A small disk resembling an old world cookie...? The combine did a good job faking this one, you can hardly tell if it is real or not, though the barely sweet taste does leave you disappointed."
+	crafting_complexity = FOOD_COMPLEXITY_1
+	desc = "A small disk resembling an old world cookie...? The combine did a good job faking this one, you can hardly tell if it is real or not, though the barely sweet taste does leave you a little disappointed."
 
 /obj/item/food/halflife/cookie/oatmeal_raisin
 	tastes = list("cookie" = 1, "oatmeal" = 1, "raisin" = 1)
 	foodtypes = GRAIN | SUGAR | FRUIT
-	desc = "A small disk resembling an old world cookie...? The combine did a good job faking this one, you can hardly tell if it is real or not, though the barely sweet taste does leave you disappointed. Even worse, this one is actually an oatmeal raisin cookie!"
+	desc = "A small disk resembling an old world cookie...? The combine did a good job faking this one, you can hardly tell if it is real or not, though the barely sweet taste does leave you a little disappointed. Even worse, this one is actually an oatmeal raisin cookie!"
 
 /obj/item/storage/halflife/pill_bottle/antifatigue
 	name = "Anti-Fatigue Pill bottle"

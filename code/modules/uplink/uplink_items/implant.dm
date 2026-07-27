@@ -20,7 +20,7 @@
 	desc = "An implant injected into the body, and later activated at the user's will. Has no telecrystals and must be charged by the use of physical telecrystals. \
 			Undetectable (except via surgery), and excellent for escaping confinement."
 	item = /obj/item/storage/box/syndie_kit // the actual uplink implant is generated later on in spawn_item
-	cost = UPLINK_IMPLANT_TELECRYSTAL_COST
+	cost = 4
 	// An empty uplink is kinda useless.
 	surplus = 0
 	restricted = TRUE

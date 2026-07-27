@@ -48,6 +48,8 @@
 	var/timerid2
 	///Penalty to firing rate for lying down
 	var/lying_firingrate_debuff = 1.5
+	///Penalty to firing rate for untrained users
+	var/untrained_firingrate_debuff = 1.25
 
 /datum/component/automatic_fire/Initialize(autofire_shot_delay, windup_autofire, windup_autofire_reduction_multiplier, windup_autofire_cap, windup_spindown, allow_akimbo = TRUE, overtime_penalty_enabled, overtime_penalty_increase, overtime_penalty_cap, overtime_penalty_spindown, overtime_penalty_freebies)
 	if(!isgun(parent))
@@ -284,14 +286,16 @@
 		target_loc = target
 	shooter.face_atom(target)
 	var/next_delay = autofire_shot_delay
-	if(shooter.body_position == LYING_DOWN) //you fire slower when lying down
-		next_delay *= lying_firingrate_debuff
 	if(windup_autofire)
 		next_delay = clamp(next_delay - current_windup_reduction, round(autofire_shot_delay * windup_autofire_cap), autofire_shot_delay)
 		current_windup_reduction = (current_windup_reduction + round(autofire_shot_delay * windup_autofire_reduction_multiplier))
 		timerid = addtimer(CALLBACK(src, PROC_REF(windup_reset), FALSE), windup_spindown, TIMER_UNIQUE|TIMER_OVERRIDE|TIMER_STOPPABLE)
+	if(shooter.body_position == LYING_DOWN) //you fire slower when lying down
+		next_delay *= lying_firingrate_debuff
+	var/obj/item/gun/gun = parent
+	if(!(gun.weapon_category & shooter.weapon_specialties || shooter.weapon_specialties & WEAPON_CAT_ALL)) //hl13 edit, fire slower on weapons you arent trained to use
+		next_delay *= untrained_firingrate_debuff
 	if(overtime_penalty_enabled)
-		var/obj/item/gun/gun = parent
 		gun.spread = initial(gun.spread) + overtime_penalty
 		gun.recoil = initial(gun.recoil) + (overtime_penalty/25)
 		if(0 < overtime_penalty_freebies)

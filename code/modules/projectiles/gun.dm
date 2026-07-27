@@ -174,6 +174,12 @@
 				. += span_info("[pin] looks like [pin.p_theyre()] firmly locked in, [pin.p_they()] looks impossible to remove.")
 		else
 			. += "It doesn't have a <b>firing pin</b> installed, and won't fire."
+	if(isliving(user))
+		var/mob/living/living_user = user
+		if(weapon_category & living_user.weapon_specialties || living_user.weapon_specialties & WEAPON_CAT_ALL)
+			. += "You have a decent grasp on how to use this."
+		else
+			. += "You aren't trained on using this, and will use it less effectively."
 
 	var/healthpercent = (atom_integrity/max_integrity) * 100
 	switch(healthpercent)
@@ -212,7 +218,11 @@
 
 /obj/item/gun/proc/shoot_live_shot(mob/living/user, pointblank = FALSE, atom/pbtarget = null, message = TRUE)
 	if(recoil && !tk_firing(user))
-		shake_camera(user, recoil + 1, recoil)
+		var/real_recoil = recoil
+		if(!(weapon_category & user.weapon_specialties || user.weapon_specialties & WEAPON_CAT_ALL))
+			real_recoil *= 1.25 //greater recoil if you arent trained to use it
+
+		shake_camera(user, real_recoil + 1, real_recoil)
 	fire_sounds()
 	if(suppressed || !message)
 		return
@@ -480,6 +490,9 @@
 
 		if(user.body_position == LYING_DOWN) //hl13 edit, going prone increases survivability but lowers accuracy (and for melee, stops you from parrying)
 			bonus_spread += 10
+
+		if(!(weapon_category & user.weapon_specialties || user.weapon_specialties & WEAPON_CAT_ALL)) //hl13 edit
+			bonus_spread += 15
 
 		if(user.move_intent == MOVE_INTENT_RUN) //hl13 edit, aim better when you're not running all over the place
 			bonus_spread += 5

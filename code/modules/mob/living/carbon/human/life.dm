@@ -40,6 +40,7 @@
 			//HL13 EDIT Handles any pain effects
 			handle_pain()
 
+		if(SSmapping.current_map.minetype != "combat_deployment") //handle hygiene, unless its TDM, then its not necessary
 			handle_hygiene() //HL13 EDIT
 
 			handle_tiredness() //HL13 EDIT
@@ -73,6 +74,16 @@
 					adjust_tiredness(1)
 				if(hydration < HYDRATION_LEVEL_DEHYDRATED)
 					adjust_tiredness(1)
+				if(mob_mood)
+					switch(mob_mood.sanity_level)
+						if(SANITY_LEVEL_GREAT)
+							adjust_tiredness(-0.15) //get tired slightly slower
+						if(SANITY_LEVEL_UNSTABLE)
+							adjust_tiredness(0.25)
+						if(SANITY_LEVEL_CRAZY)
+							adjust_tiredness(0.5)
+						if(SANITY_LEVEL_INSANE)
+							adjust_tiredness(1)
 		return TRUE
 
 //HL13 EDIT START
@@ -80,8 +91,8 @@
 /mob/living/carbon/proc/adjust_tiredness(amount)
 	tiredness += amount
 
-	if(tiredness > TIREDNESS_MAXIMUM_THRESHOLD)
-		tiredness = TIREDNESS_MAXIMUM_THRESHOLD
+	if(tiredness > TIREDNESS_MAXIMUM_THRESHOLD + 1) //the plus one is just for the edge case of high sanity, so it doesn't constantly remove and put back sleep slowdown
+		tiredness = TIREDNESS_MAXIMUM_THRESHOLD + 1
 
 	else if(tiredness < 0)
 		tiredness = 0

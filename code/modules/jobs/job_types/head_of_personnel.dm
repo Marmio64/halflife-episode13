@@ -51,6 +51,8 @@
 
 	ration_bonus = 3
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
+
 /datum/job/head_of_personnel/get_captaincy_announcement(mob/living/captain)
 	return "Due to staffing shortages, newly promoted Acting Warden [captain.real_name] assuming command."
 

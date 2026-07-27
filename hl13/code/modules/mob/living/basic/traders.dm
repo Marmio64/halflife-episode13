@@ -26,7 +26,7 @@
 
 	ai_controller = /datum/ai_controller/basic_controller/trader/halflife
 
-	faction = list(FACTION_REFUGEE)
+	faction = list(FACTION_REFUGEE, FACTION_BLACKMARKET)
 
 /obj/effect/mob_spawn/corpse/human/refugee_smuggler
 	name = "Refugee Smuggler"
@@ -173,7 +173,7 @@
 
 	ai_controller = /datum/ai_controller/basic_controller/trader/halflife
 
-	faction = list(FACTION_REFUGEE)
+	faction = list(FACTION_REFUGEE, FACTION_BLACKMARKET)
 
 /obj/effect/mob_spawn/corpse/human/blackmarket
 	name = "Refugee Smuggler"
@@ -593,7 +593,7 @@
 		/obj/item/ammo_box/magazine/m4a1 = list(PAYCHECK_CREW * 6, 5),
 		/obj/item/ammo_box/magazine/ak47 = list(PAYCHECK_CREW * 6, 2),
 		/obj/item/ammo_box/strilka310/a762 = list(PAYCHECK_CREW * 2, 5),
-		/obj/item/gun/ballistic/automatic/pistol/makeshift = list(PAYCHECK_CREW * 4, 5),
+		/obj/item/gun/ballistic/automatic/pistol/makeshift = list(PAYCHECK_CREW * 3.5, 5),
 		/obj/item/gun/ballistic/automatic/pistol/usp = list(PAYCHECK_CREW * 7, 2),
 		/obj/item/gun/ballistic/rifle/boltaction/mosin_nagant = list(PAYCHECK_CREW * 9, 1),
 		/obj/item/gun/ballistic/automatic/mp7 = list(PAYCHECK_CREW * 11, 1),
@@ -785,6 +785,7 @@
 		/obj/item/food/xen/xenbranch = list(PAYCHECK_CREW * 0.25, 5, ""),
 		/obj/item/stack/telecrystal = list(PAYCHECK_CREW * 1.25, 10, ""),
 		/obj/item/combine_datapod = list(PAYCHECK_CREW * 8, 3, ""),
+		/obj/item/halflife/combine_battery = list(PAYCHECK_CREW, 5, ""),
 	)
 
 	say_phrases = list(

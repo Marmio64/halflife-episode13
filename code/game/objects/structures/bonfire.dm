@@ -26,6 +26,15 @@
 	/// the looping sound effect that is played while burning
 	var/datum/looping_sound/burning/burning_loop
 
+/obj/structure/bonfire/examine(mob/user)
+	. = ..()
+	if(grill)
+		. += span_notice("You could probably cook things on top of it using the grill it has...")
+	else if(can_buckle)
+		. += span_notice("It has a stake you could tie people to, for ritualistic burning.")
+	else
+		. += span_notice("You could probably use some metal rods on it to make a grill, and cook things on top of it...")
+
 /obj/structure/bonfire/Initialize(mapload)
 	. = ..()
 	var/static/list/loc_connections = list(

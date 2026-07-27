@@ -331,6 +331,7 @@
 /obj/item/clothing/under/halflife/police
 	name = "pre-war police uniform"
 	desc = "A well-worn police uniform from before the War, frequently found covering the Polish Free State's law enforcement."
+	can_adjust = FALSE
 	has_sensor = NO_SENSORS
 	sensor_mode = SENSOR_OFF
 

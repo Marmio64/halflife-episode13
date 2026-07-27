@@ -93,6 +93,12 @@ GLOBAL_VAR_INIT(deployment_rebels_free_tier5s, 0)
 	if(SSmapping.current_map.combat_deployment_gamemode == "both")
 		chosen = /obj/item/hl2/loadout_picker/rebel/boss
 
+	if(SSmapping.current_map.combat_deployment_gamemode == "sne")
+		chosen = /obj/item/hl2/loadout_picker/rebel/sne
+		if(prob(50) && GLOB.boss_time_mercs)
+			GLOB.boss_time_mercs = FALSE
+			chosen = /obj/item/hl2/loadout_picker/rebel/sne/boss
+
 	if(chosen)
 		var/turf/T = get_turf(H)
 		var/obj/item/I = new chosen(T)

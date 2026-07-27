@@ -219,11 +219,11 @@
 	armor_type = /datum/armor/cell_lead_beret
 
 /datum/armor/cell_lead_beret
-	melee = 30
-	bullet = 25
-	laser = 25
+	melee = 35
+	bullet = 35
+	laser = 30
 	energy = 35
-	bomb = 25
+	bomb = 35
 	fire = 20
 	acid = 50
 	wound = 10
