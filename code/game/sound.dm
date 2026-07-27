@@ -212,7 +212,7 @@
 		if(SSmapping.current_map.minetype == "combat_deployment")
 			if(SSmapping.current_map.combat_deployment_gamemode == "sne") //team doesnt matter for sne
 				SEND_SOUND(src, sound('hl13/sound/music/sne_end.ogg', repeat = 0, wait = 0, volume = 30*(volume_modifier/100), channel = CHANNEL_LOBBYMUSIC))
-			return
+				return
 			//player is rebel
 
 			if(player_details.deployment_faction == REBEL_DEPLOYMENT_FACTION)

@@ -63,6 +63,7 @@ GLOBAL_VAR_INIT(boss_time_cons, FALSE)
 		sleep(1 SECONDS)
 	candidates_left = 1
 	sleep(12 SECONDS)
+	to_chat(world, span_slightly_larger(span_bold("This mode is a three-way battle between the Conscripts, the Mercs, and Old Crab. For some quick information on how the gamemode works, see <a href=\"https://halflifeepisode13.miraheze.org/wiki/Intruder#Sneaking_Mission_(SNE)\">the wiki</a>.")))
 	to_chat(world, span_danger(span_slightly_larger(span_bold("The intruder will be selected and the game will begin in 35 Seconds."))))
 	sleep(30 SECONDS)
 	attempt_pick_intruder()
