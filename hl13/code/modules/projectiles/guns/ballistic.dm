@@ -154,6 +154,11 @@
 	desc = "A French-made bullpup rifle from the 1990s, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one looks in pretty good shape, and somehow more powerful."
 	projectile_damage_multiplier = 1.2
 
+/obj/item/gun/ballistic/automatic/m4a1/famas/buffed/suppressed/Initialize(mapload)
+	. = ..()
+	var/obj/item/suppressor/S = new(src)
+	install_suppressor(S)
+
 /obj/item/gun/ballistic/automatic/m4a1/famas/intruder/buffed/more
 	name = "\improper High-Grade FAMAS G2 Rifle"
 	desc = "A French-made bullpup rifle from the 1990s, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one has been heavily upgraded, and bears the distinct blue-grey sheen of Combine alloy - belying its vastly-improved firepower."
@@ -376,7 +381,7 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
-	weapon_category = WEAPON_CAT_SNIPER
+	weapon_category = WEAPON_CAT_MARKSMEN
 
 /obj/item/gun/ballistic/combine_sniper/slow
 	after_shot_delay = 1.3 SECONDS
@@ -522,6 +527,8 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 
+	weapon_category = WEAPON_CAT_REVOLVER
+
 /obj/item/gun/ballistic/revolver/coltpython/deathmatch_ranger
 	fire_delay = 12 //geared towards sniping, not mag dumping
 
@@ -547,6 +554,9 @@
 	fire_delay = 6
 	projectile_damage_multiplier = 1.2
 
+/obj/item/gun/ballistic/revolver/coltpython/blued/team_lead
+	weapon_category = WEAPON_CAT_NONE //only people trained on all weapons can use it right, which in TDM is just the TDM leads
+
 // about 2.5 seconds TTK
 // Similar DPS to the colt python but waaay less accurate, and less damage per bullet means more reloading.
 /obj/item/gun/ballistic/revolver/snubnose
@@ -561,9 +571,12 @@
 	fire_delay = 5
 	vary_fire_sound = FALSE
 	w_class = WEIGHT_CLASS_SMALL
+  weapon_category = WEAPON_CAT_REVOLVER
+
 
 /obj/item/gun/ballistic/revolver/snubnose/police
 	desc = "An old-world .38 snubnose revolver, originally carried by the police forces of pre-War Poland. This one has been issued to an officer of the Polish Free State's internal police forces, and has the anchor of the PLF engraved into the grip. Chambered in .38."
+
 
 /obj/item/gun/ballistic/revolver/snubnose/warden
 	name = "\improper commanding snubnose revolver" //used by DAs too
@@ -581,7 +594,7 @@
 
 /obj/item/gun/ballistic/shotgun/trench
 	name = "trench shotgun"
-	desc = "A sturdy though heavy wooden shotgun with a long magazine tube and bayonet lug, favoured by the Polish Liberation Front's trench-clearing troops. The use of this pattern of shotgun mostly faded out following the World Wars, though they remained popular in sporting markets - the PLF were all too happy to weld the bayonet lugs back on to these antiquated weapons when the call to arms echoed out, and they now find frequent use in high-stakes environments where the more modern SPAS-12 proves potentially unreliable."
+	desc = "A sturdy though heavy wooden shotgun with a long magazine tube and bayonet lug, favoured by the Polish Liberation Front's trench-clearing troops. The use of this pattern of shotgun mostly faded out following the World Wars, though they remained popular in sporting markets - the PLF were all too happy to weld the bayonet lugs back on to these antiquated weapons when the call to arms echoed out. While being more unwieldy to lug about and lacking the advanced double shot capability of the SPAS-12, its sturdy frame absorbs recoil and can handle faster racks, while also allowing it to be used as a great bayonet mount."
 	icon = 'hl13/icons/obj/guns/wideguns.dmi'
 	icon_state = "trenchgun"
 	inhand_icon_state = "trenchgun"
@@ -594,6 +607,9 @@
 
 	slot_flags = ITEM_SLOT_SUITSTORE
 
+	force = 14
+	recoil = 1.25 // bit heavier than spas12, can absorb the recoil
+
 	fire_delay = 7 //bit faster than spas12
 	accepted_magazine_type = /obj/item/ammo_box/magazine/internal/shot/trench
 	can_be_sawn_off = FALSE //bayonet
@@ -605,6 +621,8 @@
 
 	slowdown = 0.25
 	drag_slowdown = 0.25
+
+	weapon_category = WEAPON_CAT_SHOTGUN
 
 /obj/item/gun/ballistic/shotgun/trench/add_bayonet_point()
 	AddComponent(/datum/component/bayonet_attachable, offset_x = 32, offset_y = 12)
@@ -802,6 +820,8 @@
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 	pin = /obj/item/firing_pin/implant/mindshield
 
+	weapon_category = WEAPON_CAT_SHOTGUN
+
 /obj/item/gun/ballistic/shotgun/pulse/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if (obj_flags & EMAGGED)
 		return FALSE
@@ -847,6 +867,8 @@
 	lefthand_file = 'hl13/icons/mob/inhands/guns_lefthand.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/guns_righthand.dmi'
 	var/obj/item/gun/ballistic/revolver/grenadelauncher/underbarrel
+
+	weapon_category = WEAPON_CAT_SMG
 
 /obj/item/gun/ballistic/automatic/mp7/rubber
 	spawn_magazine_type = /obj/item/ammo_box/magazine/mp7/rubber
@@ -906,6 +928,8 @@
 	lock_back_sound = 'hl13/sound/weapons/slidelock_alyx.ogg'
 	bolt_drop_sound = 'hl13/sound/weapons/slidelock_alyx.ogg'
 
+	weapon_category = WEAPON_CAT_SMG
+
 /obj/item/gun/ballistic/automatic/pulsesmg/emag_act(mob/user, obj/item/card/emag/emag_card)
 	if (obj_flags & EMAGGED)
 		return FALSE
@@ -958,7 +982,7 @@
 	sawn_desc = "A ratty old pre-war rifle that was developed over a century ago. Someone seems to have taken this prized historical artifact and sawed it in half, creating an Obrez. Still moist, though."
 	weapon_weight = WEAPON_HEAVY
 
-	weapon_category = WEAPON_CAT_RIFLE
+	weapon_category = WEAPON_CAT_MARKSMEN
 
 //can achieve almost the same DPS as an AR2 if you're good with using it
 /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/well_maintained
@@ -1086,7 +1110,7 @@
 	lefthand_file = 'hl13/icons/mob/inhands/64x_guns_left.dmi'
 	righthand_file = 'hl13/icons/mob/inhands/64x_guns_right.dmi'
 
-	weapon_category = WEAPON_CAT_SNIPER
+	weapon_category = WEAPON_CAT_MARKSMEN
 
 	var/firing_speed = 0.8 SECONDS
 

@@ -1939,6 +1939,11 @@
 /obj/structure/table/halflife/wood/bar,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/restaurant)
+"djK" = (
+/obj/structure/table/halflife/metal,
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/tile/kitchen,
+/area/halflife/indoors/restaurant)
 "dka" = (
 /obj/structure/flora/bush/fullgrass,
 /turf/open/floor/plating/ground/grass,
@@ -7648,7 +7653,6 @@
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/slums)
 "lRS" = (
-/obj/structure/halflife/rug/rubber,
 /obj/effect/landmark/start/cook,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/restaurant)
@@ -13330,10 +13334,6 @@
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/townhall/secondfloor)
-"uNG" = (
-/mob/living/basic/trooper/rebel/mp7/veteran/boss,
-/turf/closed/wall/halflife/brick,
-/area/halflife/indoors)
 "uNU" = (
 /obj/effect/turf_decal/arrows{
 	dir = 1
@@ -13341,6 +13341,12 @@
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/distributioncenter)
+"uOd" = (
+/obj/structure/railing/halflife/solo{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/tile/kitchen,
+/area/halflife/indoors/restaurant)
 "uOn" = (
 /obj/effect/spawner/random/halflife/loot/consumables,
 /turf/open/floor/plating/indoor/woodc,
@@ -25969,7 +25975,7 @@ mCT
 siU
 siU
 siU
-siU
+mCT
 siU
 siU
 siU
@@ -26112,10 +26118,10 @@ tJb
 pjS
 eDY
 siU
-sOW
-sOW
-sOW
-sOW
+eDY
+pjS
+eDY
+siU
 sOW
 jYV
 jYV
@@ -26256,10 +26262,10 @@ pjS
 pjS
 eDY
 siU
-sOW
-sOW
-sOW
-sOW
+eDY
+pjS
+eDY
+siU
 sOW
 jYV
 jYV
@@ -26400,10 +26406,10 @@ rwL
 pjS
 eDY
 siU
-sOW
-sOW
-sOW
-sOW
+eDY
+pjS
+eDY
+siU
 sOW
 jYV
 jYV
@@ -26544,10 +26550,10 @@ pjS
 nUf
 eDY
 siU
-sOW
-sOW
-sOW
-sOW
+eDY
+pjS
+eDY
+siU
 sOW
 jYV
 jYV
@@ -26688,10 +26694,10 @@ siU
 siU
 siU
 siU
-sOW
-sOW
-sOW
-sOW
+eDY
+pjS
+eDY
+siU
 sOW
 jYV
 jYV
@@ -26831,11 +26837,11 @@ siU
 sOW
 sOW
 sOW
-sOW
-sOW
-sOW
-sOW
-sOW
+siU
+eDY
+pjS
+eDY
+siU
 sOW
 jYV
 jYV
@@ -26975,11 +26981,11 @@ siU
 sOW
 sOW
 sOW
-sOW
-sOW
-sOW
-sOW
-sOW
+siU
+eDY
+pjS
+eDY
+siU
 sOW
 jYV
 jYV
@@ -27119,11 +27125,11 @@ siU
 sOW
 sOW
 sOW
-sOW
-sOW
-sOW
-sOW
-sOW
+siU
+eDY
+pjS
+eDY
+siU
 sOW
 jYV
 jYV
@@ -27263,11 +27269,11 @@ siU
 sOW
 sOW
 sOW
-sOW
-sOW
-sOW
-sOW
-sOW
+siU
+eDY
+pjS
+eDY
+siU
 sOW
 jYV
 jYV
@@ -27407,11 +27413,11 @@ siU
 sOW
 sOW
 sOW
-sOW
-sOW
-sOW
-sOW
-sOW
+siU
+eDY
+pjS
+eDY
+siU
 sOW
 sOW
 sOW
@@ -27551,11 +27557,11 @@ siU
 sOW
 sOW
 sOW
-sOW
-sOW
-sOW
-sOW
-sOW
+siU
+eDY
+pjS
+eDY
+siU
 sOW
 sOW
 sOW
@@ -27695,11 +27701,11 @@ siU
 sOW
 sOW
 sOW
-sOW
-sOW
-sOW
-sOW
-sOW
+siU
+eDY
+pjS
+eDY
+siU
 sOW
 sOW
 sOW
@@ -27841,7 +27847,7 @@ siU
 siU
 siU
 siU
-siU
+mCT
 siU
 siU
 siU
@@ -33962,7 +33968,7 @@ oVh
 oVh
 oVh
 oVh
-uNG
+oVh
 oVh
 oVh
 oVh
@@ -42766,10 +42772,10 @@ tty
 tty
 uYu
 gNt
-foY
+uOd
 bxl
 bxl
-cvt
+djK
 gNt
 oQW
 gDg
@@ -42910,10 +42916,10 @@ xxB
 xxB
 ipK
 gNt
-aBf
+foY
 bxl
-xVO
-igI
+bxl
+cvt
 gNt
 gDg
 gDg
@@ -43054,10 +43060,10 @@ xxB
 xxB
 ipK
 gNt
-nQL
-uif
-atp
-nXC
+aBf
+bxl
+xVO
+igI
 gNt
 vrQ
 bPO
@@ -43198,10 +43204,10 @@ xxB
 xxB
 ipK
 gNt
-gNt
-gNt
-gNt
-gNt
+nQL
+uif
+atp
+nXC
 gNt
 gNt
 gNt

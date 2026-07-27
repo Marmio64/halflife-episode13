@@ -28,6 +28,8 @@
 
 	gameplay_help = "As a engineer as part of a special operations fireteam, you are trusted by and loyal to the combine. You cannot rebel without a very good reason."
 
+	weapon_specialties = WEAPON_CAT_LIGHT
+
 /datum/outfit/job/outlands/engineer
 	name = "Union Engineer"
 	jobtype = /datum/job/station_engineer

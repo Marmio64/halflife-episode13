@@ -115,6 +115,12 @@ GLOBAL_VAR_INIT(deployment_combine_free_tier5s, 0)
 		user.regenerate_icons()
 		chosen = null
 
+	if(SSmapping.current_map.combat_deployment_gamemode == "sne")
+		chosen = /obj/item/hl2/loadout_picker/combine/sne
+		if(prob(50) && GLOB.boss_time_cons)
+			GLOB.boss_time_cons = FALSE
+			chosen = /obj/item/hl2/loadout_picker/combine/sne/boss
+
 	if(chosen)
 		var/turf/T = get_turf(user)
 		var/obj/item/I = new chosen(T)

@@ -153,6 +153,9 @@
 
 	var/combat_deployment_faction = null
 
+	/// what guns they are trained to use properly
+	var/weapon_specialties = WEAPON_CAT_ALL
+
 	//hl13 edit end
 
 /datum/job/New()
@@ -198,6 +201,9 @@
 		spawned.cmode_music = cmode_music
 	if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
 		spawned.cmode_music = 'hl13/sound/music/combat/battleinthebase.ogg'
+
+	if(weapon_specialties)
+		spawned.weapon_specialties = weapon_specialties
 
 	if(job_flags & JOB_COMBAT_DEPLOYMENT_JOB)
 		spawned_human.setdeploymentfaction(combat_deployment_faction)

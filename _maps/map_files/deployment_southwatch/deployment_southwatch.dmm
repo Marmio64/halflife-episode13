@@ -540,7 +540,8 @@
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors)
 "lg" = (
-/obj/structure/closet/crate/halflife/wooden/fortifications,
+/obj/structure/table/halflife/metal,
+/obj/item/stack/sheet/mineral/wood/twentyfive,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
 "li" = (
@@ -971,6 +972,11 @@
 /obj/effect/turf_decal/halflife/covering/wallpaper/blue,
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/indoors)
+"ta" = (
+/obj/structure/table/halflife/metal,
+/obj/item/stack/sheet/mineral/sandbags/three,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/combat_deployment/combine_base)
 "th" = (
 /obj/effect/turf_decal/arrows{
 	dir = 1
@@ -1414,6 +1420,11 @@
 	dir = 1
 	},
 /area/halflife/indoors)
+"Ci" = (
+/obj/structure/halflife/storage/shelf,
+/obj/item/stack/razorwire/half_stack,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "Cn" = (
 /obj/machinery/deployment_points_flag/combine{
 	spawnid = 1;
@@ -1937,6 +1948,11 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal/train/inner,
 /area/halflife/indoors)
+"ML" = (
+/obj/structure/halflife/storage/shelf,
+/obj/item/stack/sheet/mineral/wood/twentyfive,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "MP" = (
 /obj/structure/sign/poster/halflife/combine/three{
 	pixel_y = 32
@@ -2016,10 +2032,10 @@
 "Oa" = (
 /obj/machinery/deployment_koth_flag/combine_defend/long{
 	required_progression_stage = 1;
-	grace_time = 250;
 	altered_respawn_speed = 350;
 	normal_respawn_speed = 200;
-	rebel_time = 450
+	rebel_time = 450;
+	grace_time = 350
 	},
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
@@ -2381,6 +2397,11 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/indoor/metal/train/inner,
 /area/halflife/indoors/combat_deployment/rebel_base)
+"UX" = (
+/obj/structure/halflife/storage/shelf,
+/obj/item/stack/sheet/mineral/sandbags/six,
+/turf/open/floor/plating/indoor/metal/smooth,
+/area/halflife/indoors/combat_deployment/combine_base)
 "UY" = (
 /obj/machinery/light/directional/west,
 /obj/structure/barricade/wooden/solid,
@@ -4537,9 +4558,9 @@ zF
 gE
 YV
 YV
-YV
+ta
 lg
-YV
+kk
 kk
 kk
 vY
@@ -6534,7 +6555,7 @@ YV
 gE
 YV
 zF
-dq
+ML
 zF
 zF
 dq
@@ -6721,10 +6742,10 @@ YV
 gE
 YV
 zF
-dq
+UX
 zF
 zF
-dq
+Ci
 zF
 YV
 gE

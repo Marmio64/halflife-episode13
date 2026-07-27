@@ -24,6 +24,3 @@
 	frequency = 1359
 	freqlock = TRUE
 	keyslot = /obj/item/encryptionkey/headset_sec
-
-/obj/item/radio/civpro/civ_pro_vendor
-	custom_price = 0.5

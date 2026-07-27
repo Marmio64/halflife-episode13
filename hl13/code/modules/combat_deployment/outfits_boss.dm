@@ -30,6 +30,9 @@
 
 	H.forceMove(pick(spawn_locs))
 
+/datum/outfit/deployment_loadout/boss
+	weapon_specialties = WEAPON_CAT_ALL
+
 /datum/outfit/deployment_loadout/boss/freeman
 	name = "Bossfight: The Free Man"
 	display_name = "The Free Man (ALL-ROUNDER)"

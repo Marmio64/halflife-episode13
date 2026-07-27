@@ -48,10 +48,16 @@
 	unit_name = "completed factory goods boxes"
 	export_types = list(/obj/item/factory_construction/full_container/standard)
 
-/datum/export/factory_box/advanced
+/datum/export/factory_box/electronics
 	cost = CARGO_CRATE_VALUE * 5
-	unit_name = "completed advanced factory goods boxes"
-	export_types = list(/obj/item/factory_construction/full_container/advanced)
+	unit_name = "completed advanced electronics factory goods boxes"
+	export_types = list(/obj/item/factory_construction/full_container/advanced/electronics)
+	socio_value = 2
+
+/datum/export/factory_box/xen
+	cost = CARGO_CRATE_VALUE * 5
+	unit_name = "completed advanced xen factory goods boxes"
+	export_types = list(/obj/item/factory_construction/full_container/advanced/xen)
 	socio_value = 2
 
 /datum/export/factory_box/advanced/military

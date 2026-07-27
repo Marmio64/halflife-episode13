@@ -69,6 +69,7 @@ SUBSYSTEM_DEF(ticker)
 
 	var/tdm_combine_deaths = 0
 	var/tdm_rebel_deaths = 0
+	var/tdm_xen_deaths = 0
 	var/tdm_total_deaths = 0
 
 /datum/controller/subsystem/ticker/Initialize()

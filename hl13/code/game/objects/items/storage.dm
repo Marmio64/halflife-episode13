@@ -448,6 +448,9 @@
 	icon_state = "military"
 	inhand_icon_state = "military"
 
+/obj/item/storage/backpack/halflife/satchel/military/large
+	storage_type = /datum/storage/backpack/halflife
+
 /obj/item/storage/backpack/halflife/satchel/huge
 	storage_type = /datum/storage/satchel/halflife/huge
 

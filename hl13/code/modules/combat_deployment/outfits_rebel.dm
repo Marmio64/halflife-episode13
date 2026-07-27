@@ -42,6 +42,8 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_MARKSMEN
+
 /datum/outfit/deployment_loadout/rebel/tier1/molotov_partisan
 	name = "Deployment: Refugee Molotov Partisan"
 	display_name = "Refugee Molotov Partisan (Offense)"
@@ -301,6 +303,8 @@
 
 	extra_dex = 3
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
+
 /datum/outfit/deployment_loadout/rebel/tier3/bomber_rebel
 	name = "Deployment: Rebel Bomber"
 	display_name = "Rebel Bomber (Offense)"
@@ -359,6 +363,8 @@
 	extra_end = 5
 	extra_per = 3
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_MARKSMEN
+
 /datum/outfit/deployment_loadout/rebel/tier3/vortigaunt
 	name = "Deployment: Vortigaunt"
 	display_name = "Vortigaunt (Support)"
@@ -401,6 +407,8 @@
 	extra_dex = 6
 
 	combat_music = 'hl13/sound/music/combat/darkinterval_combat3.ogg'
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_MARKSMEN
 
 /datum/outfit/deployment_loadout/rebel/tier3/engineer
 	name = "Deployment: Upgraded Refugee Engineer+"
@@ -466,6 +474,8 @@
 	combat_music = 'hl13/sound/music/combat/notsupposedtobehere.ogg'
 	alternate_combat_music = 'hl13/sound/music/combat/fasterthanaspeedingbullet.ogg'
 	alternate_music_chance = 50
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
 
 /datum/outfit/deployment_loadout/rebel/tier3/medic_rebel
 	name = "Deployment: Upgraded Medic Rebel"
@@ -567,6 +577,8 @@
 
 	extra_dex = 1
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE
+
 /datum/outfit/deployment_loadout/rebel/tier4/corporal
 	name = "Deployment: PLF Corporal"
 	display_name = "PLF Corporal (Defense)"
@@ -598,6 +610,8 @@
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE
+
 /datum/outfit/deployment_loadout/rebel/tier4/trench
 	name = "Deployment: PLF Trench Gunner"
 	display_name = "PLF Trench Gunner (Offense)"
@@ -625,10 +639,11 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
-	extra_end = 3
 	extra_str = 2
 
 	combat_music = 'hl13/sound/music/combat/whatkindofhospital.ogg'
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
 
 /datum/outfit/deployment_loadout/rebel/tier4/mosin_soldier
 	name = "Deployment: Upgraded Mosin Soldier"
@@ -659,6 +674,8 @@
 	extra_str = 6
 	extra_end = 8
 	extra_per = 5
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_MARKSMEN
 
 /datum/outfit/deployment_loadout/rebel/tier4/milpolice
 	name = "Deployment: PLF Military Police"
@@ -695,6 +712,8 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/flashbang)
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
+
 /datum/outfit/deployment_loadout/rebel/tier4/bomber_rebel
 	name = "Deployment: Heavy Rebel Bomber"
 	display_name = "Heavy Rebel Bomber (Offense)"
@@ -725,6 +744,8 @@
 	alternate_combat_music = 'hl13/sound/music/combat/drunkenpipebomb.ogg'
 
 	extra_end = 1
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
 
 /datum/outfit/deployment_loadout/rebel/tier4/pyromaniac // Bomber Sidegrade, more mobility but no tinbombs, instead gets molotovs  and incendiary grenades. Less armor. Somewhat of an equivilant to the combine's T4 Overseer where they do aerial denial with their flames instead of viscerators and have similar weaponry and mobility- succeeded by the firefighter at T5.
 	name = "Deployment: Pyromaniac"
@@ -758,6 +779,8 @@
 	alternate_music_chance = 50
 
 	extra_dex = 1
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
 
 /datum/outfit/deployment_loadout/rebel/tier4/eldervortigaunt
 	name = "Deployment: Elder Vortigaunt"
@@ -802,6 +825,8 @@
 	extra_per = 5
 	extra_dex = 8
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_MARKSMEN | WEAPON_CAT_REVOLVER
+
 /datum/outfit/deployment_loadout/rebel/tier4/engineer
 	name = "Deployment: Heavy Refugee Engineer"
 	display_name = "Heavy Refugee Engineer (Support)"
@@ -839,6 +864,8 @@
 
 	alternate_combat_music = 'hl13/sound/music/combat/moregun.ogg'
 	alternate_music_chance = 25
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
 
 /obj/item/sbeacondrop/rebel_turret
 	name = "rebel turret beacon"
@@ -887,6 +914,8 @@
 	extra_str = 6
 	extra_dex = 3
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
+
 /datum/outfit/deployment_loadout/rebel/tier4/scout
 	name = "Deployment: Upgraded Rebel Scout"
 	display_name = "Upgraded Rebel Scout (Offense)"
@@ -916,6 +945,8 @@
 	combat_music = 'hl13/sound/music/combat/notsupposedtobehere.ogg'
 	alternate_combat_music = 'hl13/sound/music/combat/fasterthanaspeedingbullet.ogg'
 	alternate_music_chance = 50
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
 
 /datum/outfit/deployment_loadout/rebel/tier4/medic_rebel
 	name = "Deployment: Upgraded Medic Rebel+"
@@ -952,6 +983,8 @@
 	extra_dex = 3
 
 	alternate_combat_music = 'hl13/sound/music/combat/medic.ogg'
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
 
 ///////////// TIER 5 //////////////////////////////////////////
 /datum/outfit/deployment_loadout/rebel/tier5
@@ -1018,6 +1051,8 @@
 	extra_end = 4
 	extra_str = 8
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
+
 /datum/outfit/deployment_loadout/rebel/tier5/rpg
 	name = "Deployment: RPG Rebel"
 	display_name = "RPG Rebel (Offense)"
@@ -1043,6 +1078,8 @@
 	extra_end = 6
 
 	alternate_combat_music = 'hl13/sound/music/combat/rocketjumpwaltz.ogg'
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER | WEAPON_CAT_SPECIALTY
 
 /datum/outfit/deployment_loadout/rebel/tier5/firefighter
 	name = "Deployment: Rebel Fire Fighter"
@@ -1074,6 +1111,8 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/incendiary)
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE
+
 /datum/outfit/deployment_loadout/rebel/tier5/veteran
 	name = "Deployment: PLF Veteran"
 	display_name = "PLF Veteran (Defense)"
@@ -1100,6 +1139,8 @@
 	combat_music = 'hl13/sound/music/combat/escalation1.ogg'
 
 	extra_end = 8
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_HEAVY | WEAPON_CAT_RIFLE
 
 /datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt
 	name = "Deployment: Extract Empowered Vortigaunt"
@@ -1156,6 +1197,8 @@
 	extra_dex = 3
 	extra_int = 6
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
+
 /datum/outfit/deployment_loadout/rebel/tier5/lieutenant/post_equip(mob/living/carbon/human/H)
 	. = ..()
 	ADD_TRAIT(H, TRAIT_SUPPLYRADIO_USER, JOB_TRAIT)
@@ -1194,6 +1237,8 @@
 	extra_per = 8
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/svd_ammo)
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_MARKSMEN
 
 /datum/outfit/deployment_loadout/rebel/tier5/spy
 	name = "Deployment: Rebel Elite Spy"
@@ -1244,6 +1289,8 @@
 	extra_per = 5
 	extra_end = 5
 
+	weapon_specialties = WEAPON_CAT_ALL //so they can use stolen weapons
+
 ///////// RED BOSSES ///////////////////
 
 /datum/outfit/deployment_loadout/rebel/boss/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -1258,6 +1305,9 @@
 	H.dna.species.stunmod = 0.1 //all bosses are very resilient to stuns
 
 	H.fire_stack_decay_rate = -2
+
+/datum/outfit/deployment_loadout/rebel/boss
+	weapon_specialties = WEAPON_CAT_ALL
 
 /datum/outfit/deployment_loadout/rebel/boss/freeman
 	name = "BOTH: The Free Man RED"

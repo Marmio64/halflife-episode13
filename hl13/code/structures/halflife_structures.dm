@@ -518,9 +518,6 @@
 		COMSIG_ATOM_EXIT = PROC_REF(on_exit),
 	)
 
-	if(basetype != /obj/structure/halflife/fence/wire/barb)
-		AddElement(/datum/element/climbable, climb_time = 8 SECONDS, climb_stun = 3 SECONDS, required_dex = 15) //you can climb non barbed wire fences, though it requires a lot of dexterity
-
 	if (flags_1 & ON_BORDER_1)
 		AddElement(/datum/element/connect_loc, loc_connections)
 	switch(dir)

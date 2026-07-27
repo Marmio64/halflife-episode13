@@ -187,7 +187,7 @@
 			if(H.loadout_upgrade_available && DEPLOYMENT_TIER5_REBELS <= GLOB.deployment_rebels_cash)
 				to_chat(H, span_notice("Your upgraded revolver has been retrieved."))
 				var/turf/T = get_turf(H)
-				var/obj/item/I = new /obj/item/gun/ballistic/revolver/coltpython/blued(T)
+				var/obj/item/I = new /obj/item/gun/ballistic/revolver/coltpython/blued/team_lead(T)
 				H.put_in_hands(I)
 				H.loadout_upgrade_available = FALSE
 				return
@@ -195,7 +195,7 @@
 			if(H.loadout_upgrade_available != 5 && DEPLOYMENT_TIER5_COMBINE <= GLOB.deployment_combine_cash)
 				to_chat(H, span_notice("Your upgraded revolver has been retrieved."))
 				var/turf/T = get_turf(H)
-				var/obj/item/I = new /obj/item/gun/ballistic/revolver/coltpython/blued(T)
+				var/obj/item/I = new /obj/item/gun/ballistic/revolver/coltpython/blued/team_lead(T)
 				H.put_in_hands(I)
 				H.loadout_upgrade_available = FALSE
 				return

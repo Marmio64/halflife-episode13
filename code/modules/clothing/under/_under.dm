@@ -311,6 +311,7 @@
 	// Remove it from the list before detaching
 	LAZYREMOVE(attached_accessories, removed)
 	removed.detach(src)
+	update_appearance()
 
 	if(isnull(accessory_overlay) && LAZYLEN(attached_accessories))
 		create_accessory_overlay()

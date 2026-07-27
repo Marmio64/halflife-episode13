@@ -17,6 +17,10 @@
 	var/burnlevel = 10 //Tracks how HOT the fire is. This is basically the heat level of the fire and determines the temperature.
 	var/max_burnlevel = 20 //upper limit of burns
 	var/flame_color = "red"
+	var/magical = FALSE //right now just for solidus, makes it not do anything to the air
+
+/obj/halflife/fire/magical
+	magical = TRUE
 
 /obj/halflife/fire/Initialize(mapload, fire_lvl, burn_lvl, f_color, fire_stacks = 0, fire_damage = 0)
 
@@ -138,7 +142,8 @@
 			continue
 		A.flamer_fire_act(burnlevel, firelevel)
 
-	T.VapourListTurf(list(/datum/vapours/smoke = (0.75 * firelevel), /datum/vapours/carbon_air_vapour = (0.75 * firelevel)), VAPOUR_ACTIVE_EMITTER_CAP)
+	if(!magical)
+		T.VapourListTurf(list(/datum/vapours/smoke = (0.75 * firelevel), /datum/vapours/carbon_air_vapour = (0.75 * firelevel)), VAPOUR_ACTIVE_EMITTER_CAP)
 	firelevel -= 1.75 //reduce the intensity by 1.75 per tick
 	return
 
@@ -176,6 +181,14 @@
 		return
 	else
 		new /obj/halflife/fire(src, fire_lvl, burn_lvl, f_color, fire_stacks, fire_damage)
+
+/turf/proc/flame_magical(fire_lvl, burn_lvl, f_color, fire_stacks = 0, fire_damage = 0)
+	//extinguish any flame present
+	var/obj/halflife/fire/A = locate(/turf/open/openspace) in src
+	if(A)
+		return
+	else
+		new /obj/halflife/fire/magical(src, fire_lvl, burn_lvl, f_color, fire_stacks, fire_damage)
 
 //Circle Calculation (currently only used for fire radius)
 

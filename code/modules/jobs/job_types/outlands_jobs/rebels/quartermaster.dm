@@ -27,6 +27,8 @@
 
 	gameplay_help = "Bunker supplies are getting low. Ensure supplies do not run out and coordinate with the Lieutenant to achieve this goal and keep everyone alive and well."
 
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
+
 /datum/outfit/job/outlands/quartermaster
 	name = "Bunker Quartermaster"
 	jobtype = /datum/job/outlands/quartermaster

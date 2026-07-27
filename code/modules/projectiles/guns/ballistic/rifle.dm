@@ -223,6 +223,7 @@
 	can_be_sawn_off = FALSE
 	tac_reloads = FALSE
 	spread = 1 //sniper weapon
+	weapon_category = WEAPON_CAT_MARKSMEN
 	var/draw_time = 2.3 SECONDS
 	var/scoped = TRUE
 	SET_BASE_PIXEL(0, 0)

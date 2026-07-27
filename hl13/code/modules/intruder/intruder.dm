@@ -25,7 +25,8 @@
 		GLOB.crab_character = "raiden"
 	..()
 
-/datum/outfit/deployment_loadout/intruder/solid/
+/datum/outfit/deployment_loadout/intruder/solid
+	weapon_specialties = WEAPON_CAT_ALL
 	var/sus_venter = FALSE
 
 /datum/outfit/deployment_loadout/intruder/solid/blank
@@ -104,7 +105,7 @@
 	spells_to_add = list(/datum/action/cooldown/mob_cooldown/halflife/cartwheel, /datum/action/cooldown/spell/conjure_item/intruder_decoy/raiden)
 
 	extra_end = 10
-	extra_dex = 5
+	extra_dex = 8
 	extra_str = 10
 
 /datum/outfit/deployment_loadout/intruder/solid/raiden/post_equip(mob/living/carbon/human/H)
@@ -172,11 +173,10 @@
 
 	head = /obj/item/clothing/head/costume/snakeeater/solid
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch/solid
-	mask = /obj/item/cigarette/cigar
 	uniform = /obj/item/clothing/under/syndicate/camo
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar/bigboss
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
-	l_pocket = /obj/item/storage/fancy/cigarettes/cigars
+	l_pocket = /obj/item/cigarette/cigar
 	r_pocket = /obj/item/lighter
 	gloves = /obj/item/clothing/gloves/fingerless
 	ears = /obj/item/radio/headset
@@ -221,6 +221,7 @@
 	ADD_TRAIT(H, TRAIT_TOTAL_FOV, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_SKITTISH, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_NOCRITOVERLAY, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_GRABRESISTANCE, OUTFIT_TRAIT) //prevents instant aggro grab cqc chicanery, have a real fight between boss and intruder
 
 	REMOVE_TRAIT(H, TRAIT_INTRUDER_GUARD, OUTFIT_TRAIT)
 
@@ -328,9 +329,16 @@
 	var/alpha_decrease = 30
 	var/alpha_increase = 45
 
+	var/turf/turfcamo
+
 /obj/item/clothing/suit/armor/halflife/milvest/solid/old/Initialize(mapload)
 	. = ..()
 	START_PROCESSING(SSprocessing, src)
+
+/obj/item/clothing/suit/armor/halflife/milvest/solid/old/examine(mob/user)
+	. = ..()
+	if(turfcamo)
+		. += span_notice("CrabCamo is currently set to: [turfcamo.icon_state].")
 
 /obj/item/clothing/suit/armor/halflife/milvest/solid/old/process()
 	if(GLOB.alert_cooldown >= 1 SECONDS)
@@ -343,8 +351,24 @@
 	for(var/mob/living/carbon/human/noticer in range(0, hooman))
 		if(noticer != hooman)
 			min_alpha = 120 //a lot more noticeable if you're standing right on top of him
+	var/turf/currentturf = get_turf(hooman)
 	if(HAS_TRAIT(hooman, TRAIT_UNDENSE) && hooman.stat == CONSCIOUS) //leaning against walls or crawling on the floor, only works if you're awake
-		hooman.alpha = max(hooman.alpha - alpha_decrease, min_alpha)
+		if(!turfcamo) //will only happen once, at the start of the game
+			turfcamo = get_turf(hooman)
+			playsound(hooman, 'hl13/sound/effects/camochange.ogg', 20, FALSE, -10) //quiet but not impossible to detect hopefully ill tweak it later
+			to_chat(hooman, span_notice("Your CrabCamo begins to change to resemble the texture of [turfcamo.icon_state]."))
+		if(istype(currentturf, turfcamo))
+			hooman.alpha = max(hooman.alpha - alpha_decrease, min_alpha)
+		else
+			hooman.alpha = max(hooman.alpha, 120)
+			turfcamo = get_turf(hooman)
+			playsound(hooman, 'hl13/sound/effects/camochange.ogg', 20, FALSE, -10)
+			to_chat(hooman, span_notice("Your CrabCamo begins to change to resemble the texture of [turfcamo.icon_state]."))
+	else if(turfcamo)
+		if(istype(currentturf, turfcamo))
+			hooman.alpha = max(hooman.alpha - alpha_decrease, 120) //still somewhat effective if you already have the camo of the turf you're on
+		else
+			hooman.alpha = min(hooman.alpha + alpha_increase, 255)
 	else
 		hooman.alpha = min(hooman.alpha + alpha_increase, 255)
 
@@ -359,6 +383,7 @@
 	slowdown = -0.5
 	icon_state = "raiden"
 	armor_type = /datum/armor/armoredvest_upgraded
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS|HEAD //since his armor sucks bad he can have it everywhere
 
 /obj/item/clothing/shoes/jackboots/civilprotection/solid
 	name = "Sneaking Shoes"
@@ -535,6 +560,7 @@
 	name = "HF Blade"
 	desc = "A blade similar to the katana, which also allows you to more easily deflect bullets."
 	block_chance = 50
+	attack_speed = CLICK_CD_FAST //their USP still does more damage both per shot and DPS wise
 
 /obj/item/grenade/decoy
 	name = "noise decoy grenade"
@@ -595,17 +621,44 @@
 	if(times_ran >= 5)
 		return
 	var/turf/T = get_step(get_turf(owner), move_dir)
+	var/mob/living/livingowner = owner
 	if(T.density)
+		owner.safe_throw_at(get_turf(owner), 1, 1, src)
+		livingowner.Paralyze(20)
+		livingowner.adjustBruteLoss(5)
+		playsound(owner,SFX_SWING_HIT,50,TRUE)
 		return
 	for(var/obj/structure/window/W in T.contents)
+		owner.safe_throw_at(get_turf(owner), 1, 1, src)
+		livingowner.Paralyze(20)
+		livingowner.adjustBruteLoss(5)
+		playsound(owner,SFX_SWING_HIT,50,TRUE)
 		return
 	for(var/obj/machinery/door/D in T.contents)
-		return
+		if(D.density)
+			owner.safe_throw_at(get_turf(owner), 1, 1, src)
+			livingowner.Paralyze(20)
+			livingowner.adjustBruteLoss(5)
+			playsound(owner,SFX_SWING_HIT,50,TRUE)
+			return
 	for(var/obj/structure/halflife/fence/F in T.contents)
+		owner.safe_throw_at(get_turf(owner), 1, 1, src)
+		livingowner.Paralyze(20)
+		livingowner.adjustBruteLoss(5)
+		playsound(owner,SFX_SWING_HIT,50,TRUE)
 		return
 	for(var/obj/machinery/turnstile/S in T.contents)
-		return
+		if(S.on)
+			owner.safe_throw_at(get_turf(owner), 1, 1, src)
+			livingowner.Paralyze(20)
+			livingowner.adjustBruteLoss(5)
+			playsound(owner,SFX_SWING_HIT,50,TRUE)
+			return
 	for(var/obj/effect/koth_grace_field/K in T.contents)
+		owner.safe_throw_at(get_turf(owner), 1, 1, src)
+		livingowner.Paralyze(20)
+		livingowner.adjustBruteLoss(5)
+		playsound(owner,SFX_SWING_HIT,50,TRUE)
 		return
 	owner.forceMove(T)
 	var/list/hit_things = list()
@@ -614,10 +667,14 @@
 		hit_things += L
 		if(!L.body_position == LYING_DOWN)
 			owner.visible_message(span_boldwarning("[owner] cartwheels through [L]!"))
-			to_chat(L, span_userdanger("[owner] cartwheels through you, sending you to the ground!"))
-			L.safe_throw_at(throwtarget, 1, 1, src)
-			L.Paralyze(20)
-			L.adjustBruteLoss(5) //barely any damage
+			if(!HAS_TRAIT(L, TRAIT_INTRUDER_OCELOT))
+				to_chat(L, span_userdanger("[owner] cartwheels through you, sending you to the ground!"))
+				L.safe_throw_at(throwtarget, 1, 1, src)
+				L.Paralyze(20)
+				L.adjustBruteLoss(5) //barely any damage
+			else
+				to_chat(L, span_userdanger("[owner] cartwheels through you hard, but you manage to stay upright!"))
+				L.adjustBruteLoss(15) //extra damage so it is still useful against the boss
 			playsound(owner,SFX_SWING_HIT,50,TRUE)
 	addtimer(CALLBACK(src, PROC_REF(do_cartwheel), move_dir, (times_ran + 1)), 1)
 

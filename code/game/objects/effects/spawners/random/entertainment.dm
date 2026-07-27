@@ -81,22 +81,20 @@
 	spawn_loot_count = 1
 	spawn_loot_split = TRUE
 	loot = list(
-		/obj/item/stack/spacecash/c1 = 10,
-		/obj/item/stack/spacecash/c10 = 5,
-		/obj/item/stack/spacecash/c20 = 3,
-		/obj/item/stack/spacecash/c50 = 2,
-		/obj/item/stack/spacecash/c100 = 1,
+		/obj/item/stack/spacecash/c1 = 5,
+		/obj/item/stack/spacecash/c10 = 2,
+		/obj/item/stack/spacecash/c20 = 1,
+		/obj/item/stack/spacecash/c50 = 1,
 	)
 
 /obj/effect/spawner/random/entertainment/money_medium
 	name = "money spawner"
 	icon_state = "cash"
 	loot = list(
-		/obj/item/stack/spacecash/c100 = 25,
-		/obj/item/stack/spacecash/c200 = 15,
-		/obj/item/stack/spacecash/c50 = 10,
-		/obj/item/stack/spacecash/c500 = 5,
-		/obj/item/stack/spacecash/c1000 = 1,
+		/obj/item/stack/spacecash/c1 = 5,
+		/obj/item/stack/spacecash/c10 = 2,
+		/obj/item/stack/spacecash/c20 = 1,
+		/obj/item/stack/spacecash/c50 = 1,
 	)
 
 /obj/effect/spawner/random/entertainment/money_large
@@ -105,15 +103,9 @@
 	spawn_loot_count = 1
 	spawn_loot_split = TRUE
 	loot = list(
-		/obj/item/stack/spacecash/c1 = 100,
-		/obj/item/stack/spacecash/c10 = 80,
-		/obj/item/stack/spacecash/c20 = 60,
-		/obj/item/stack/spacecash/c50 = 40,
-		/obj/item/stack/spacecash/c100 = 30,
-		/obj/item/stack/spacecash/c200 = 20,
-		/obj/item/stack/spacecash/c500 = 10,
-		/obj/item/stack/spacecash/c1000 = 5,
-		/obj/item/stack/spacecash/c10000 = 1,
+		/obj/item/stack/spacecash/c10 = 3,
+		/obj/item/stack/spacecash/c20 = 2,
+		/obj/item/stack/spacecash/c50 = 2,
 	)
 
 /obj/effect/spawner/random/entertainment/drugs

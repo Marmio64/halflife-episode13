@@ -32,6 +32,9 @@
 	var/extra_end
 	var/extra_dex
 
+	/// what gun specialties should they have, so they can properly use those guns and not others
+	var/weapon_specialties = WEAPON_CAT_LIGHT
+
 /datum/outfit/deployment_loadout/pre_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
 	if(isdummy(user))
@@ -42,6 +45,9 @@
 
 	else if (!isnull(user.dna.species.outfit_important_for_life)) //plasmamen get lit on fire and die
 		user.set_species(/datum/species/human)
+
+	if(weapon_specialties)
+		user.weapon_specialties = weapon_specialties
 
 	for(var/datum/action/act as anything in spells_to_add)
 		var/datum/action/new_ability = new act(user)

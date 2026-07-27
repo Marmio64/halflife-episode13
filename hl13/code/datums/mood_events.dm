@@ -157,5 +157,5 @@
 
 /datum/mood_event/crabwalker_badtrade
 	description = "That guy was a real freak, I don't feel right having interacted with him..."
-	mood_change = -6
+	mood_change = -8
 	timeout = 7 MINUTES
