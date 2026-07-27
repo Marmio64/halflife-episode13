@@ -562,6 +562,9 @@
 	vary_fire_sound = FALSE
 	w_class = WEIGHT_CLASS_SMALL
 
+/obj/item/gun/ballistic/revolver/snubnose/police
+	desc = "An old-world .38 snubnose revolver, originally carried by the police forces of pre-War Poland. This one has been issued to an officer of the Polish Free State's internal police forces, and has the anchor of the PLF engraved into the grip. Chambered in .38."
+
 /obj/item/gun/ballistic/revolver/snubnose/warden
 	name = "\improper commanding snubnose revolver" //used by DAs too
 	desc = "A well maintained, smooth looking revolver. It is small, compact, and only fires .38 rounds. It seems intimidating, but barely fired. Ammunition for this gun is likely very sparse."
