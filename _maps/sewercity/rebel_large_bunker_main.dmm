@@ -58,6 +58,15 @@
 /obj/structure/table/halflife/no_smooth/metal,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/bunker/unpowered/rebel_large/living_quarters)
+"bh" = (
+/obj/structure/table/halflife/wood,
+/obj/structure/halflife/trash/papers/three{
+	dir = 1;
+	pixel_x = 6;
+	pixel_y = 5
+	},
+/turf/open/floor/plating/indoor/carpet/shaggy,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "bl" = (
 /obj/structure/halflife/storage/shelf,
 /obj/item/gun/ballistic/shotgun/antixen/mining{
@@ -305,10 +314,7 @@
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/bunker/unpowered/rebel_large/cafeteria)
 "fZ" = (
-/mob/living/basic/trader/halflife/refugee{
-	name = "Blackmarket Liaison";
-	desc = "A gruff looking man, with the wares you need, though perhaps not the ones you want. His coat conceals a revolver, and a hefty amount of body armor. You recognise him as being a local liaison to the blackmarket, that has gained enough trust to be allowed inside the bunker, despite his dubious moral reputation."
-	},
+/mob/living/basic/trader/halflife/refugee/plf_liaison,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
 "gb" = (
@@ -325,6 +331,13 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/bunker/unpowered/rebel_large/infirmary)
+"gh" = (
+/obj/structure/halflife/trash/papers/three{
+	dir = 8;
+	pixel_y = 8
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/bunker/unpowered/rebel_large)
 "gu" = (
 /obj/structure/chair/halflife/metal/folding,
 /obj/effect/landmark/start/outlands/vortigaunt,
@@ -1291,6 +1304,9 @@
 	pixel_x = 0;
 	pixel_y = 4
 	},
+/obj/structure/chair/halflife/metal/folding{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/bunker/unpowered/rebel_large)
 "wF" = (
@@ -1752,6 +1768,15 @@
 	dir = 1
 	},
 /area/halflife/indoors/bunker/unpowered/rebel_large)
+"Fj" = (
+/obj/structure/table/halflife/wood,
+/obj/structure/halflife/trash/papers/one{
+	dir = 4;
+	pixel_x = -6;
+	pixel_y = 2
+	},
+/turf/open/floor/plating/indoor/carpet/shaggy,
+/area/halflife/indoors/bunker/unpowered/rebel_large/war_room)
 "Fl" = (
 /obj/machinery/light/small/directional/north,
 /obj/structure/cable,
@@ -3418,7 +3443,7 @@ GD
 GD
 GD
 GD
-Yu
+Fp
 ie
 IZ
 IA
@@ -4847,7 +4872,7 @@ pa
 pa
 pa
 pa
-vY
+gh
 vY
 fn
 vY
@@ -5558,7 +5583,7 @@ vY
 rH
 fm
 JI
-DH
+bh
 aE
 fm
 XT
@@ -5814,7 +5839,7 @@ vY
 rH
 fm
 JI
-DH
+Fj
 aE
 fm
 XT

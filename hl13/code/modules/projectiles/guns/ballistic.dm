@@ -571,7 +571,7 @@
 	fire_delay = 5
 	vary_fire_sound = FALSE
 	w_class = WEIGHT_CLASS_SMALL
-  weapon_category = WEAPON_CAT_REVOLVER
+	weapon_category = WEAPON_CAT_REVOLVER
 
 
 /obj/item/gun/ballistic/revolver/snubnose/police

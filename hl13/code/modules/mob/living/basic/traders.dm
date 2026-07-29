@@ -28,6 +28,11 @@
 
 	faction = list(FACTION_REFUGEE, FACTION_BLACKMARKET)
 
+/mob/living/basic/trader/halflife/refugee/plf_liaison
+	name = "Blackmarket Liaison"
+	desc = "A gruff looking man, with the wares you need, though perhaps not the ones you want. His coat conceals a revolver, and a hefty amount of body armor."
+	trader_data_path = /datum/trader_data/halflife/smuggler/plf_liaison
+
 /obj/effect/mob_spawn/corpse/human/refugee_smuggler
 	name = "Refugee Smuggler"
 	hairstyle = "Short Hair"
@@ -434,6 +439,92 @@
 		TRADER_SHOP_OPENING_PHRASE = list(
 			"Heh, open for business!",
 			"I've got what you need, stranga'.",
+			"Come over here, pal, I've got the goods.",
+		),
+	)
+
+/datum/trader_data/halflife/smuggler/plf_liaison
+	say_phrases = list(
+		ITEM_REJECTED_PHRASE = list(
+			"Sorry pal, this ain't it. Show me somethin' else.",
+			"Not what i'm lookin' for.",
+			"I'm sure someone would want that, just not me.",
+			"I don't think I could flip that right now, lemme see a different item.",
+		),
+		ITEM_SELLING_CANCELED_PHRASE = list(
+			"What a shame, tell me if you changed your mind.",
+			"No? Eh, see me if you change your mind."
+		),
+		ITEM_SELLING_ACCEPTED_PHRASE = list(
+			"Heh, thanks, stranga'.",
+			"Pleasure doin' buisness, stranga'.",
+		),
+		INTERESTED_PHRASE = list(
+			"I like the look of that item. I'll give ya some creddies for it, deal?",
+			"Looks like a fine piece, i'll buy it off ya.",
+			"Looks fine enough, i'll buy it.",
+		),
+		BUY_PHRASE = list(
+			"Enjoy it, stranga'.",
+			"Heh, hope you like it, stranga'.",
+			"Knew you'd find somethin' ya like.",
+			"They always leave a happy customer, heheh.",
+		),
+		NO_CASH_PHRASE = list(
+			"This ain't a charity, pal, come back with some cash.",
+			"I need cold hard cash for this to work, pal.",
+			"No creds, no meds. Or whatever the fuck you want.",
+			"I ain't a bleeding heart rebel gift giver, you've gotta pay for this shit.",
+			"Sorry, I don't give credit.",
+			"I'll need to see the cash in your hand.",
+		),
+		NO_STOCK_PHRASE = list(
+			"Ain't got no more of that right now.",
+			"Fresh outta that shit, pal.",
+			"Wait till I restock, alright pal?",
+		),
+		NOT_WILLING_TO_BUY_PHRASE = list(
+			"Not interested in that right now, pal.",
+			"Don't want that, pal.",
+			"No thanks, don't want it.",
+		),
+		ITEM_IS_WORTHLESS_PHRASE = list(
+			"This shit's worthless, I don't want it.",
+		),
+		TRADER_HAS_ENOUGH_ITEM_PHRASE = list(
+			"I've got enough of this, ain't buyin' it.",
+		),
+		TRADER_LORE_PHRASE = list(
+			"Nice bunker, pal. Keep me safe, and i'll keep safe the line betweens yous and the other dealers.",
+			"Believe it or not, lotta dealers hate workin' with the PLF. Me? Ehhh, could be worse.",
+			"Don't ask where I get this stuff from.",
+			"Last bunker I was at got raided, no survivors except me! Hahaha! Haha...hah...",
+		),
+		TRADER_NOT_BUYING_ANYTHING = list(
+			"I'm out of creddies right now, cant buy anything.",
+		),
+		TRADER_NOT_SELLING_ANYTHING = list(
+			"Ran out of stock, see me another time.",
+		),
+		TRADER_BATTLE_START_PHRASE = list(
+			"You think you can fuck with me!?",
+			"Big fucking mistake.",
+			"You just signed your fuckin' death warrant, pal!",
+			"Another idiot looking to die.",
+			"Get ready to fuckin' taste lead.",
+			"Go fuck yourself!",
+			"Taste the pain!",
+		),
+		TRADER_BATTLE_END_PHRASE = list(
+			"Take that, you fuckin' punk!",
+			"Just like the last one who started shit!",
+			"Back to where you crawled from.",
+			"Rot in hell, bastard.",
+			"Dumbass fuckin' bitch!",
+		),
+		TRADER_SHOP_OPENING_PHRASE = list(
+			"Heh, open for business!",
+			"Weeeeeellcome...",
 			"Come over here, pal, I've got the goods.",
 		),
 	)

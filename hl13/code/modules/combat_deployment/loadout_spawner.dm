@@ -236,8 +236,8 @@
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/outfit/deployment_loadout/rebel/tier5/riotpolice,
 			/datum/outfit/deployment_loadout/rebel/tier5/freeman,
+			/datum/outfit/deployment_loadout/rebel/tier5/riotpolice,
 			/datum/outfit/deployment_loadout/rebel/tier5/rpg,
 			/datum/outfit/deployment_loadout/rebel/tier5/firefighter,
 			/datum/outfit/deployment_loadout/rebel/tier5/veteran,
@@ -332,8 +332,8 @@
 	if(!loadouts)
 		loadouts = list()
 		var/list/possible_loadouts = list(
-			/datum/outfit/deployment_loadout/combine/tier4/shotgunner,
 			/datum/outfit/deployment_loadout/combine/tier4/ordinal,
+			/datum/outfit/deployment_loadout/combine/tier4/shotgunner,
 			/datum/outfit/deployment_loadout/combine/tier4/overseer,
 			/datum/outfit/deployment_loadout/combine/tier4/elite,
 			/datum/outfit/deployment_loadout/combine/tier4/cremator,

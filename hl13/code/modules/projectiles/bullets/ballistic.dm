@@ -86,7 +86,7 @@
 	name = "20mm grenade"
 	icon_state = "bolter"
 	damage = 35
-	speed = 1.5
+	speed = 1.75
 	armor_flag = BOMB
 	wound_bonus = -100
 	embed_type = null

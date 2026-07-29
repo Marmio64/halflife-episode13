@@ -318,7 +318,7 @@
 
 	extra_per = 1
 
-	weapon_specialties = WEAPON_CAT_REVOLVER
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
 
 /datum/outfit/deployment_loadout/combine/tier3/medic_cop
 	name = "Deployment: Upgraded Medical Cop"

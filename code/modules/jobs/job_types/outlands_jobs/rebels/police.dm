@@ -55,9 +55,9 @@
 /datum/outfit/job/outlands/police/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
 	user.faction += FACTION_REFUGEE
-	user.change_stat(STATKEY_END, 1)
-	user.change_stat(STATKEY_DEX, 3)
-	user.change_stat(STATKEY_STR, 1)
+	user.change_stat(STATKEY_END, 2)
+	user.change_stat(STATKEY_DEX, 1)
+	user.change_stat(STATKEY_STR, 2)
 	user.change_stat(STATKEY_PER, 1)
 
 /datum/job/outlands/police/after_latejoin_spawn(mob/living/spawning)

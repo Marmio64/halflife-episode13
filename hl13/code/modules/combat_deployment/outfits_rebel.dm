@@ -1062,7 +1062,7 @@
 	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
 	mask = /obj/item/clothing/mask/gas/hl2/military
 	suit = /obj/item/clothing/suit/armor/rebel
-	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored/bomb_resistant
 	belt = /obj/item/storage/belt/civilprotection/rpg_rebel
 	gloves = /obj/item/clothing/gloves/combat
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython
