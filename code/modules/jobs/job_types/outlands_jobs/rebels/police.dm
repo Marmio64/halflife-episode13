@@ -35,7 +35,7 @@
 	uniform = /obj/item/clothing/under/halflife/police
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	belt = /obj/item/melee/baton
-	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	suit_store = /obj/item/gun/ballistic/revolver/snubnose/police
 	head = /obj/item/clothing/head/costume/polishpolice
 	gloves = /obj/item/clothing/gloves/fingerless
 
@@ -45,7 +45,7 @@
 	r_pocket = /obj/item/flashlight/seclite
 
 	backpack_contents = list(
-		/obj/item/ammo_box/magazine/usp9mm = 1,
+		/obj/item/ammo_box/c38 = 2,
 		/obj/item/knife/combat/survival = 1,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
 	)

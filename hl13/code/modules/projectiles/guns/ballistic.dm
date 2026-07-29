@@ -571,8 +571,12 @@
 	fire_delay = 5
 	vary_fire_sound = FALSE
 	w_class = WEIGHT_CLASS_SMALL
+  weapon_category = WEAPON_CAT_REVOLVER
 
-	weapon_category = WEAPON_CAT_REVOLVER
+
+/obj/item/gun/ballistic/revolver/snubnose/police
+	desc = "An old-world .38 snubnose revolver, originally carried by the police forces of pre-War Poland. This one has been issued to an officer of the Polish Free State's internal police forces, and has the anchor of the PLF engraved into the grip. Chambered in .38."
+
 
 /obj/item/gun/ballistic/revolver/snubnose/warden
 	name = "\improper commanding snubnose revolver" //used by DAs too
