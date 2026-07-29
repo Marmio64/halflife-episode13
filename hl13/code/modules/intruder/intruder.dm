@@ -960,6 +960,7 @@
 		"Liquid" = 'hl13/sound/voice/solid/oldliquid.ogg',
 		"Sunlight" = 'hl13/sound/voice/solid/oldsunlight.ogg',
 		"Metal Gear" = 'hl13/sound/voice/solid/oldmetalgear.ogg',
+		"War has changed" = 'hl13/sound/voice/solid/oldwar.ogg',
 	)
 	var/static/list/raiden_voicelines = list(
 		"Get real" = 'hl13/sound/voice/solid/raidenreal.ogg',
@@ -971,7 +972,7 @@
 	var/operativetype = "Solid"
 
 /obj/item/organ/tongue/solid/old
-	actions_types = list(/datum/action/item_action/oldtimes, /datum/action/item_action/liquid, /datum/action/item_action/sunlight, /datum/action/item_action/metalgear)
+	actions_types = list(/datum/action/item_action/oldtimes, /datum/action/item_action/liquid, /datum/action/item_action/sunlight, /datum/action/item_action/metalgear, /datum/action/item_action/war)
 	operativetype = "Old"
 
 /obj/item/organ/tongue/solid/bigboss
@@ -1000,6 +1001,8 @@
 		sunlight()
 	if(istype(action, /datum/action/item_action/metalgear))
 		metalgear()
+	if(istype(action, /datum/action/item_action/war))
+		war()
 	if(istype(action, /datum/action/item_action/getreal))
 		getreal()
 	if(istype(action, /datum/action/item_action/nochance))
@@ -1126,6 +1129,20 @@
 	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
 
 	usr.say("Metal Gear?!", forced = src.name)
+
+/datum/action/item_action/war
+	name = "War has changed..."
+
+/obj/item/organ/tongue/solid/verb/war()
+	set category = "Object"
+	set name = "War has changed..."
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("War has changed...", forced = src.name)
 
 /datum/action/item_action/getreal
 	name = "Get real!"
