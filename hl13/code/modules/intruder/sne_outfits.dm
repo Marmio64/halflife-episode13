@@ -3,7 +3,7 @@
 /datum/outfit/deployment_loadout/intruder/boss/bullsquid/rebel
 	faction = REBEL_DEPLOYMENT_FACTION
 	name = "SNE: Black Market Bullsquid"
-	display_name = "Revolver Bullsquid"
+	display_name = "Revolver Bullsquid (RICOCHET, INF. AMMO)"
 	implants = list(/obj/item/implant/mindshield)
 	ears = /obj/item/radio/headset/rebel_deployment
 	accessory = /obj/item/clothing/accessory/rebel_dogtags
@@ -12,7 +12,7 @@
 /datum/outfit/deployment_loadout/intruder/boss/solidus/rebel
 	faction = REBEL_DEPLOYMENT_FACTION
 	name = "SNE: Black Market Solidus"
-	display_name = "Solidus Crab"
+	display_name = "Solidus Crab (BLADES, CHARGE)"
 	implants = list(/obj/item/implant/mindshield)
 	ears = /obj/item/radio/headset/rebel_deployment
 	accessory = /obj/item/clothing/accessory/rebel_dogtags
@@ -20,15 +20,15 @@
 /datum/outfit/deployment_loadout/intruder/boss/liquid/rebel
 	faction = REBEL_DEPLOYMENT_FACTION
 	name = "SNE: Black Market Liquid"
-	display_name = "Liquid Bullsquid"
+	display_name = "Liquid Bullsquid (EMOTIONS, CQC)"
 	implants = list(/obj/item/implant/mindshield)
 	ears = /obj/item/radio/headset/rebel_deployment
 	accessory = /obj/item/clothing/accessory/rebel_dogtags
 
 /datum/outfit/deployment_loadout/intruder/boss/end/rebel
 	faction = REBEL_DEPLOYMENT_FACTION
-	name = "SNE: Black Market Bine"
-	display_name = "The Bine"
+	name = "SNE: Black Market Xend"
+	display_name = "The Xend (TRANQ, CAMO)"
 	implants = list(/obj/item/implant/mindshield)
 	ears = /obj/item/radio/headset/rebel_deployment
 	accessory = /obj/item/clothing/accessory/rebel_dogtags
@@ -38,25 +38,25 @@
 
 /datum/outfit/deployment_loadout/intruder/boss/bullsquid/combine
 	name = "SNE: Conscript Bullsquid"
-	display_name = "Revolver Bullsquid"
+	display_name = "Revolver Bullsquid (RICOCHET, INF. AMMO)"
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	accessory = /obj/item/clothing/accessory/combine_dogtags
 
 /datum/outfit/deployment_loadout/intruder/boss/solidus/combine
 	name = "SNE: Conscript Solidus"
-	display_name = "Solidus Crab"
+	display_name = "Solidus Crab (BLADES, CHARGE)"
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	accessory = /obj/item/clothing/accessory/combine_dogtags
 
 /datum/outfit/deployment_loadout/intruder/boss/liquid/combine
 	name = "SNE: Conscript Liquid"
-	display_name = "Liquid Bullsquid"
+	display_name = "Liquid Bullsquid (EMOTIONS, CQC)"
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	accessory = /obj/item/clothing/accessory/combine_dogtags
 
 /datum/outfit/deployment_loadout/intruder/boss/end/combine
-	name = "SNE: Conscript Bine"
-	display_name = "The Bine"
+	name = "SNE: Conscript Xend"
+	display_name = "The Xend (TRANQ, CAMO)"
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	accessory = /obj/item/clothing/accessory/combine_dogtags
 
