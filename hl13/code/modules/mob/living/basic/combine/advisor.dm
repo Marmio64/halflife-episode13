@@ -103,7 +103,7 @@
 
 	sound = 'hl13/sound/creatures/advisor/advisor_punish.ogg'
 	school = SCHOOL_TRANSMUTATION
-	cooldown_time = 14 SECONDS
+	cooldown_time = 16 SECONDS
 	cooldown_reduction_per_rank = 6.25 SECONDS
 
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
@@ -182,7 +182,7 @@
 
 	sound = 'hl13/sound/creatures/advisor/advisor_sooth.ogg'
 	school = SCHOOL_TRANSMUTATION
-	cooldown_time = 10 SECONDS
+	cooldown_time = 8 SECONDS
 	cooldown_reduction_per_rank = 6.25 SECONDS
 
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
@@ -266,7 +266,7 @@
 		cast_on.adjustOrganLoss(ORGAN_SLOT_BRAIN, 200, BRAIN_DAMAGE_DEATH)
 		to_chat(cast_on, span_userdanger("The tongue hears a hole through your skull, and scoops out a mass of brain matter before returning."))
 		to_chat(living_owner, span_green("A most delicious meal this was..."))
-		living_owner.adjust_health(-living_owner.maxHealth*0.35) //heal 35% hp
+		living_owner.adjust_health(-living_owner.maxHealth*0.4) //heal 40% hp
 
 	if(living_owner.stat != DEAD)
 		living_owner.icon_state = "advisor"

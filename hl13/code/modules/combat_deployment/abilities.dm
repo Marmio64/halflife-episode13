@@ -299,7 +299,7 @@
 	physical_heal = -50
 
 /datum/action/cooldown/spell/aoe/rally/rebel/short
-	cooldown_time = 40 SECONDS
+	cooldown_time = 35 SECONDS
 
 /datum/action/cooldown/spell/revive_tdmlead
 	name = "Revive"

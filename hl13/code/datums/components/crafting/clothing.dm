@@ -89,7 +89,7 @@
 	category = CAT_ARMOR
 
 /datum/crafting_recipe/military_gas_mask/check_requirements(mob/user, list/collected_requirements)
-	return !HAS_TRAIT(user, TRAIT_MINDSHIELD)
+	return (!HAS_TRAIT(user, TRAIT_MINDSHIELD) && SSmapping.current_map.minetype != "combat_deployment")
 
 /datum/crafting_recipe/hardened_military_gas_mask_reinforcement
 	name = "Hardened Military Gas Mask (Reinforcement)"

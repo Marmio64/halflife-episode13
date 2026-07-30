@@ -201,3 +201,23 @@
 		/obj/item/healthanalyzer/no_req = 1,
 	)
 	generate_items_inside(items_inside,src)
+
+/obj/item/storage/medkit/halflife_advanced
+	icon_state = "advanced first aid kit"
+	icon = 'hl13/icons/obj/medkits.dmi'
+	icon_state = "medicalkit"
+	desc = "A first aid kit equipped with very high-grade, advanced medical supplies."
+
+/obj/item/storage/medkit/halflife_advanced/PopulateContents()
+	if(empty)
+		return
+	var/static/items_inside = list(
+		/obj/item/stack/medical/gauze = 1,
+		/obj/item/stack/medical/suture/medicated = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen/high_capacity = 2,
+		/obj/item/reagent_containers/hypospray/medipen/blood = 1,
+		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 3,
+		/obj/item/storage/halflife/pill_bottle/antitox = 1,
+		/obj/item/healthanalyzer/advanced = 1,
+	)
+	generate_items_inside(items_inside,src)

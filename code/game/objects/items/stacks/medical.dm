@@ -18,7 +18,7 @@
 	merge_type = /obj/item/stack/medical
 	/// How long it takes to apply it to yourself
 	var/self_delay = 5 SECONDS
-	/// Multiplier of how intelligence translates into a lower delay when using this. 2 measn each point of intelligence is -0.2 seconds of delay.
+	/// Multiplier of how intelligence translates into a lower delay when using this. 2 means each point of intelligence is -0.2 seconds of delay.
 	var/intelligence_multiplier = 2
 	/// How long it takes to apply it to someone else
 	var/other_delay = 0
@@ -92,7 +92,7 @@
 		var/mob/living/living_user = user
 		if(intelligence_multiplier)
 			new_self_delay -= ((living_user.get_stat_level(STATKEY_INT) - 10) * intelligence_multiplier)
-			new_other_delay -= ((living_user.get_stat_level(STATKEY_INT) - 10) * intelligence_multiplier)
+			new_other_delay -= ((living_user.get_stat_level(STATKEY_INT) - 10) * intelligence_multiplier/2) //healing others is already very fast, so intelligence bonus must be lower
 
 
 	if(patient == user)
@@ -349,7 +349,7 @@
 	singular_name = "suture"
 	icon_state = "suture"
 	self_delay = 4 SECONDS
-	other_delay = 1.5 SECONDS
+	other_delay = 1.75 SECONDS
 	amount = 10
 	max_amount = 10
 	repeating = TRUE
@@ -376,9 +376,8 @@
 
 /obj/item/stack/medical/suture/medicated
 	name = "medicated suture"
-	icon_state = "suture_purp"
 	desc = "A suture infused with drugs that speed up wound healing of the treated laceration."
-	heal_brute = 15
+	heal_brute = 18
 	stop_bleeding = 0.75
 	grind_results = list(/datum/reagent/medicine/polypyr = 1)
 	merge_type = /obj/item/stack/medical/suture/medicated
