@@ -320,6 +320,12 @@
 	},
 /turf/open/floor/plating/indoor/lino,
 /area/halflife/indoors/outlands)
+"bR" = (
+/obj/machinery/door/unpowered/halflife/metal/red{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/metal/pipe,
+/area/halflife/indoors/bunker)
 "bV" = (
 /obj/structure/halflife/barrel/single/grey,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -508,6 +514,10 @@
 /obj/machinery/jukebox/radio,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
+"db" = (
+/obj/structure/halflife/pipes/vent,
+/turf/open/floor/plating/indoor/metal/pipe,
+/area/halflife/indoors/bunker)
 "dc" = (
 /obj/structure/railing/halflife/sewer{
 	dir = 1
@@ -2579,6 +2589,10 @@
 "oJ" = (
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/outlands)
+"oL" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/indoor/metal,
+/area/halflife/indoors/bunker)
 "oM" = (
 /obj/structure/table/halflife/no_smooth/large/metal/desk,
 /obj/effect/spawner/random/halflife/loot,
@@ -2806,6 +2820,9 @@
 /obj/structure/filingcabinet/hl2,
 /turf/open/floor/plating/indoor/carpet/blue,
 /area/halflife/outdoors/outlands_city)
+"qr" = (
+/turf/open/floor/plating/indoor/metal,
+/area/halflife/indoors/bunker)
 "qt" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/item/food/meat/rawcutlet/plain/human,
@@ -3455,6 +3472,34 @@
 /obj/item/halflife/nutrient_bar_wrapping/water,
 /turf/open/floor/plating/indoor/concrete/small,
 /area/halflife/indoors/outlands)
+"uG" = (
+/obj/structure/table/halflife/metal,
+/obj/item/multitool{
+	pixel_x = -11;
+	pixel_y = 9
+	},
+/obj/item/circuitboard/machine/telecomms/relay{
+	pixel_x = 6;
+	pixel_y = 14
+	},
+/obj/item/stock_parts/servo{
+	pixel_x = 10;
+	pixel_y = -4
+	},
+/obj/item/stock_parts/servo{
+	pixel_x = -6;
+	pixel_y = -1
+	},
+/obj/item/stock_parts/subspace/filter{
+	pixel_x = -3;
+	pixel_y = 5
+	},
+/obj/item/stock_parts/subspace/filter{
+	pixel_x = 9;
+	pixel_y = 2
+	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/outlands)
 "uH" = (
 /obj/machinery/button/door{
 	id = "outlands_sewer_north";
@@ -3845,6 +3890,14 @@
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/outlands_city)
+"wR" = (
+/obj/item/multitool{
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/obj/structure/table/halflife/metal/grate,
+/turf/open/floor/plating/indoor/metal,
+/area/halflife/indoors/bunker)
 "wS" = (
 /obj/structure/fluff/traveltile{
 	aportalgoesto = "transfer_train_line_interior";
@@ -4663,6 +4716,15 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
+"BJ" = (
+/obj/structure/table/halflife/metal,
+/obj/item/storage/toolbox/electrical{
+	pixel_x = 0;
+	pixel_y = 9
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/outlands)
 "BL" = (
 /obj/structure/barricade/wooden/solid,
 /turf/open/floor/plating/ground/sidewalk/inner,
@@ -4864,6 +4926,11 @@
 /obj/item/wallframe/extinguisher_cabinet,
 /obj/item/extinguisher,
 /obj/item/stack/sheet/cloth/ten,
+/obj/item/poster/halflife/rebel,
+/obj/item/poster/halflife/rebel,
+/obj/item/poster/halflife/rebel,
+/obj/item/poster/halflife/rebel,
+/obj/item/poster/halflife/rebel,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/bunker)
 "CX" = (
@@ -5271,6 +5338,12 @@
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/outlands)
+"Fs" = (
+/obj/machinery/door/airlock/highsecurity/combine,
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/outlands)
 "Ft" = (
 /obj/structure/chair/office/halflife/blue{
@@ -6094,6 +6167,11 @@
 /obj/item/wallframe/button,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/outdoors/outlands_city)
+"Kp" = (
+/obj/machinery/telecomms/relay/preset/mining,
+/obj/machinery/light/blacklight/directional/north,
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/outlands)
 "Kr" = (
 /obj/machinery/door/unpowered/halflife/metal/red,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -6539,6 +6617,14 @@
 "Nd" = (
 /obj/structure/halflife/rug/yellow,
 /turf/open/floor/plating/indoor/woodc,
+/area/halflife/indoors/outlands)
+"Ne" = (
+/obj/machinery/door/airlock/highsecurity/combine,
+/obj/effect/mapping_helpers/airlock/access/all/security/general,
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/outlands)
 "Nf" = (
 /turf/open/floor/plating/indoor/metal/walkway/corner{
@@ -7502,6 +7588,10 @@
 /obj/structure/halflife/barrel/double/grey/one,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
+"SR" = (
+/obj/machinery/door/unpowered/halflife/metal/red,
+/turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors/bunker)
 "SU" = (
 /obj/structure/halflife/pipes/horizontal/end,
 /obj/structure/halflife/trash/garbage,
@@ -7769,6 +7859,11 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"UH" = (
+/obj/structure/table/halflife/metal/grate,
+/obj/effect/spawner/random/halflife/loot/scrap,
+/turf/open/floor/plating/indoor/metal,
+/area/halflife/indoors/bunker)
 "UJ" = (
 /turf/open/floor/plating/indoor/concrete/stairs,
 /area/halflife/outdoors/outlands_city)
@@ -8014,6 +8109,13 @@
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
+"WD" = (
+/obj/machinery/telecomms/relay/preset/ruskie{
+	on = 0
+	},
+/obj/structure/halflife/pipes/vent,
+/turf/open/floor/plating/indoor/metal,
+/area/halflife/indoors/bunker)
 "WF" = (
 /obj/structure/alien/weeds,
 /obj/effect/spawner/random/halflife/loot/heal,
@@ -8353,6 +8455,10 @@
 /obj/machinery/combine_walllight/directional/east,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/outlands)
+"YA" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/indoor/concrete,
+/area/halflife/indoors/bunker)
 "YB" = (
 /obj/machinery/door/unpowered/halflife/metal,
 /turf/open/floor/plating/indoor/lino,
@@ -8598,6 +8704,12 @@
 /obj/structure/water_source/puddle,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"ZJ" = (
+/obj/machinery/camera{
+	c_tag = "Outlands Communications Amplifier"
+	},
+/turf/open/floor/plating/indoor/metal/combine,
+/area/halflife/indoors/outlands)
 "ZK" = (
 /mob/living/basic/halflife/zombie,
 /turf/open/floor/plating/indoor/woodc,
@@ -32121,12 +32233,12 @@ OD
 JT
 JT
 EE
-RS
-RS
-RS
-RS
-RS
-RS
+TQ
+TQ
+TQ
+TQ
+TQ
+TQ
 Tg
 Tg
 Tg
@@ -32271,12 +32383,12 @@ OD
 JT
 JT
 EE
-RS
-RS
-RS
-RS
-RS
-RS
+TQ
+UH
+wR
+TQ
+db
+QR
 Tg
 Tg
 Tg
@@ -32421,12 +32533,12 @@ OD
 JT
 JT
 EE
-RS
-RS
-RS
-RS
-RS
-RS
+TQ
+oL
+qr
+SR
+we
+YA
 Tg
 Tg
 Tg
@@ -32571,12 +32683,12 @@ OD
 JT
 JT
 EE
-RS
-RS
-RS
-RS
-RS
-RS
+TQ
+WD
+qr
+TQ
+we
+QR
 Tg
 Tg
 Tg
@@ -32721,11 +32833,11 @@ OD
 JT
 JT
 EE
-RS
-RS
+TQ
+TQ
 TQ
 gK
-TQ
+bR
 TQ
 Tg
 Tg
@@ -48256,13 +48368,13 @@ gm
 Zi
 gm
 EE
-EE
-EE
-EE
-EE
-EE
-EE
-EE
+cY
+cY
+cY
+cY
+cY
+cY
+cY
 Up
 Ca
 Ca
@@ -48406,13 +48518,13 @@ jS
 Zi
 gm
 EE
-EE
-EE
-EE
-EE
-EE
-EE
-EE
+cY
+SN
+SN
+SN
+cY
+uG
+cY
 Up
 Ca
 dB
@@ -48556,13 +48668,13 @@ jS
 Zi
 gm
 EE
-EE
-EE
-EE
-EE
-EE
-EE
-EE
+cY
+Kp
+SN
+SN
+Fs
+SN
+Ne
 Up
 Ca
 dB
@@ -48706,13 +48818,13 @@ gm
 Zi
 jS
 EE
-EE
-EE
-EE
-EE
-EE
-EE
-EE
+cY
+ZJ
+SN
+SN
+cY
+BJ
+cY
 Up
 Ca
 dB
@@ -48856,13 +48968,13 @@ jS
 Zi
 FV
 EE
-EE
-EE
-EE
-EE
-EE
-EE
-EE
+cY
+cY
+cY
+cY
+cY
+cY
+cY
 wc
 Ca
 dB

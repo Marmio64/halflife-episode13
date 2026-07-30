@@ -3224,6 +3224,12 @@
 	},
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/prison/cargo)
+"oD" = (
+/obj/structure/sign/poster/halflife/rebel/plf{
+	pixel_y = -32
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/outlands/shop)
 "oG" = (
 /obj/machinery/camera{
 	c_tag = "Prison Entrance Northwest"
@@ -4306,6 +4312,12 @@
 "sQ" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/prison/security/solitary)
+"sR" = (
+/obj/structure/sign/poster/halflife/rebel/plf/hold{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "sS" = (
 /obj/machinery/combine_datapodterminal,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -5667,6 +5679,15 @@
 /obj/structure/ladder/halflife/upwards,
 /turf/open/floor/plating/indoor/concrete/sewer,
 /area/halflife/indoors/sewer)
+"yF" = (
+/obj/structure/chair/halflife/metal/blue{
+	dir = 1
+	},
+/obj/structure/sign/poster/halflife/rebel/plf/future{
+	pixel_y = -32
+	},
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/outlands)
 "yG" = (
 /obj/structure/chair/halflife/metal/blue{
 	dir = 1
@@ -6839,6 +6860,11 @@
 /obj/item/wallframe/extinguisher_cabinet,
 /obj/item/extinguisher,
 /obj/item/stack/sheet/cloth/ten,
+/obj/item/poster/halflife/rebel,
+/obj/item/poster/halflife/rebel,
+/obj/item/poster/halflife/rebel,
+/obj/item/poster/halflife/rebel,
+/obj/item/poster/halflife/rebel,
 /turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/bunker)
 "DP" = (
@@ -7451,6 +7477,12 @@
 	},
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest/prison_yard)
+"Go" = (
+/obj/structure/sign/poster/halflife/rebel/plf/soldier{
+	pixel_y = -32
+	},
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/outlands/shop)
 "Gq" = (
 /obj/structure/closet/halflife,
 /obj/effect/spawner/random/halflife/loot,
@@ -10029,6 +10061,12 @@
 /obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest/prison_yard)
+"Rb" = (
+/obj/structure/sign/poster/halflife/rebel/plf/tyrant{
+	pixel_y = 32
+	},
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/outlands/shop)
 "Rc" = (
 /obj/structure/reagent_dispensers/servingdish,
 /obj/structure/table/halflife/metal,
@@ -71860,7 +71898,7 @@ WY
 he
 he
 Zw
-Ct
+sR
 Ct
 Ct
 Lk
@@ -73076,7 +73114,7 @@ he
 he
 uS
 nK
-Ty
+yF
 Zw
 Zw
 Zw
@@ -107352,7 +107390,7 @@ aj
 xn
 FA
 Au
-xn
+Rb
 xn
 xn
 Qi
@@ -108375,7 +108413,7 @@ gJ
 hc
 hc
 xn
-hc
+Go
 Au
 WH
 WH
@@ -108987,7 +109025,7 @@ hc
 xn
 xn
 xn
-hc
+oD
 Au
 WH
 WH
