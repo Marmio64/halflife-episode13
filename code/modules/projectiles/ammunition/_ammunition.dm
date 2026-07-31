@@ -162,3 +162,12 @@
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), src, 'sound/items/tools/welder.ogg', 20, 1), bounce_delay) //If the turf is made of water and the shell casing is still hot, make a sizzling sound when it's ejected.
 	else if(T?.bullet_bounce_sound)
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(playsound), src, T.bullet_bounce_sound, 20, 1), bounce_delay) //Soft / non-solid turfs that shouldn't make a sound when a shell casing is ejected over them.
+
+/obj/item/ammo_casing/proc/tdm_delete()
+	if(src.alpha != 0)
+		src.alpha = max(src.alpha - 45, 0)
+		addtimer(CALLBACK(src, PROC_REF(tdm_delete)), 1)
+		return
+	else
+		qdel(src)
+		return

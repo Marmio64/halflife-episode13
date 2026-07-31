@@ -306,6 +306,8 @@
 				casing.SpinAnimation(speed = 1 SECONDS, loops = 1)
 				var/angle_of_movement = !isnull(shooter) ? (rand(-3000, 3000) / 100) + dir2angle(turn(shooter.dir, 180)) : rand(-3000, 3000) / 100
 				casing.AddComponent(/datum/component/movable_physics, _horizontal_velocity = rand(450, 550) / 100, _vertical_velocity = rand(400, 450) / 100, _horizontal_friction = rand(20, 24) / 100, _z_gravity = 9.80665, _z_floor = 0, _angle_of_movement = angle_of_movement)
+				if(SSmapping.current_map.minetype == "combat_deployment" && !casing.loaded_projectile)
+					addtimer(CALLBACK(casing, TYPE_PROC_REF(/obj/item/ammo_casing, tdm_delete)), 5 SECONDS)
 			SEND_SIGNAL(casing, COMSIG_CASING_EJECTED)
 			chambered = null
 		else if(empty_chamber)

@@ -329,6 +329,8 @@
 	var/alpha_decrease = 30
 	var/alpha_increase = 45
 
+	var/register_it = FALSE
+
 	var/turf/turfcamo
 
 /obj/item/clothing/suit/armor/halflife/milvest/solid/old/Initialize(mapload)
@@ -347,30 +349,40 @@
 		min_alpha = 30
 	else
 		min_alpha = 0
-	var/mob/living/carbon/human/hooman = loc
-	for(var/mob/living/carbon/human/noticer in range(0, hooman))
-		if(noticer != hooman)
-			min_alpha = 120 //a lot more noticeable if you're standing right on top of him
-	var/turf/currentturf = get_turf(hooman)
-	if(HAS_TRAIT(hooman, TRAIT_UNDENSE) && hooman.stat == CONSCIOUS) //leaning against walls or crawling on the floor, only works if you're awake
-		if(!turfcamo) //will only happen once, at the start of the game
-			turfcamo = get_turf(hooman)
-			playsound(hooman, 'hl13/sound/effects/camochange.ogg', 20, FALSE, -10) //quiet but not impossible to detect hopefully ill tweak it later
-			to_chat(hooman, span_notice("Your CrabCamo begins to change to resemble the texture of [turfcamo.icon_state]."))
-		if(istype(currentturf, turfcamo))
-			hooman.alpha = max(hooman.alpha - alpha_decrease, min_alpha)
-		else
-			hooman.alpha = max(hooman.alpha, 120)
-			turfcamo = get_turf(hooman)
-			playsound(hooman, 'hl13/sound/effects/camochange.ogg', 20, FALSE, -10)
-			to_chat(hooman, span_notice("Your CrabCamo begins to change to resemble the texture of [turfcamo.icon_state]."))
-	else if(turfcamo)
-		if(istype(currentturf, turfcamo))
-			hooman.alpha = max(hooman.alpha - alpha_decrease, 120) //still somewhat effective if you already have the camo of the turf you're on
+	if(ishuman(loc))
+		var/mob/living/carbon/human/hooman = loc
+		if(!register_it)
+			RegisterSignal(hooman, COMSIG_MOB_FIRED_GUN, PROC_REF(firing_gun_camo))
+		for(var/mob/living/carbon/human/noticer in range(0, hooman))
+			if(noticer != hooman)
+				min_alpha = 120 //a lot more noticeable if you're standing right on top of him
+		var/turf/currentturf = get_turf(hooman)
+		if(HAS_TRAIT(hooman, TRAIT_UNDENSE) && hooman.stat == CONSCIOUS) //leaning against walls or crawling on the floor, only works if you're awake
+			if(!turfcamo) //will only happen once, at the start of the game
+				turfcamo = get_turf(hooman)
+				playsound(hooman, 'hl13/sound/effects/camochange.ogg', 20, FALSE, -10) //quiet but not impossible to detect hopefully ill tweak it later
+				to_chat(hooman, span_notice("Your CrabCamo begins to change to resemble the texture of [turfcamo.icon_state]."))
+			if(istype(currentturf, turfcamo))
+				hooman.alpha = max(hooman.alpha - alpha_decrease, min_alpha)
+			else
+				hooman.alpha = max(hooman.alpha, 120)
+				turfcamo = get_turf(hooman)
+				playsound(hooman, 'hl13/sound/effects/camochange.ogg', 20, FALSE, -10)
+				to_chat(hooman, span_notice("Your CrabCamo begins to change to resemble the texture of [turfcamo.icon_state]."))
+		else if(turfcamo)
+			if(istype(currentturf, turfcamo))
+				hooman.alpha = max(hooman.alpha - alpha_decrease, 120) //still somewhat effective if you already have the camo of the turf you're on
+			else
+				hooman.alpha = min(hooman.alpha + alpha_increase, 255)
 		else
 			hooman.alpha = min(hooman.alpha + alpha_increase, 255)
-	else
-		hooman.alpha = min(hooman.alpha + alpha_increase, 255)
+
+/obj/item/clothing/suit/armor/halflife/milvest/solid/old/proc/firing_gun_camo(datum/source, obj/item/gun/gun, atom/firing_at, params, zone, bonus_spread_values)
+	SIGNAL_HANDLER
+
+	var/mob/living/carbon/human/owner = loc
+	owner.alpha = max(owner.alpha, owner.alpha + alpha_increase) //the more you shoot, the more camo you lose
+
 
 /obj/item/clothing/suit/armor/halflife/kevlar/bigboss
 	desc = "A much better kevlar vest than what your opponents are equipped with. Provides decent armor without slowing you down."

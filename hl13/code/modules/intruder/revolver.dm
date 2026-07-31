@@ -211,11 +211,11 @@
 
 /datum/outfit/deployment_loadout/intruder/boss/end
 	faction = COMBINE_DEPLOYMENT_FACTION
-	name = "The Bine"
+	name = "The Xend"
 	desc = "Legendary sniper who is aged over 100 years old. His weapon of choice is a mosin which has been converted to fire tranquilizer rounds similar to the ones in Crab's pistol."
 
 	uniform = /obj/item/clothing/under/syndicate/camo
-	suit = /obj/item/clothing/suit/armor/halflife/kevlar/bigboss
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/bigboss/the_end
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
 	back = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/the_end
 	belt = /obj/item/storage/belt/civilprotection/end
@@ -254,7 +254,7 @@
 	H.set_facial_hairstyle("Beard (Full)", update = TRUE)
 	H.update_body(1)
 	H.tired_rate = 0
-	H.fully_replace_character_name(H.real_name,"The Bine")
+	H.fully_replace_character_name(H.real_name,"The Xend")
 	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 
 	//the only one who doesnt know cqc, stay away from crab
@@ -588,6 +588,63 @@
 /datum/armor/plf_veteran/solidusdowngraded
 	melee = 17
 	bullet = 50
+
+/obj/item/clothing/suit/armor/halflife/kevlar/bigboss/the_end
+	var/min_alpha = 0 //how invisible we are capable of being. this will be raised during an alert
+
+	//these two mostly just exist so that i can test values ingame, increase should be more than decrease so that he reveals quicker
+	var/alpha_decrease = 15
+	var/alpha_increase = 60
+
+	var/register_it = FALSE
+
+	var/turf/turfcamo
+
+/obj/item/clothing/suit/armor/halflife/kevlar/bigboss/the_end/examine(mob/user)
+	. = ..()
+	if(turfcamo)
+		. += span_notice("CrabCamo is currently set to: [turfcamo.icon_state].")
+
+/obj/item/clothing/suit/armor/halflife/kevlar/bigboss/the_end/process()
+	if(GLOB.alert_cooldown >= 1 SECONDS)
+		min_alpha = 60 //should still be pretty hard to spot
+	else if (GLOB.caution_cooldown >= 1 SECONDS)
+		min_alpha = 30
+	else
+		min_alpha = 0
+	if(ishuman(loc))
+		var/mob/living/carbon/human/hooman = loc
+		if(!register_it)
+			RegisterSignal(hooman, COMSIG_MOB_FIRED_GUN, PROC_REF(firing_gun_camo))
+		for(var/mob/living/carbon/human/noticer in range(0, hooman))
+			if(noticer != hooman)
+				min_alpha = 120 //a lot more noticeable if you're standing right on top of him
+		var/turf/currentturf = get_turf(hooman)
+		if(HAS_TRAIT(hooman, TRAIT_UNDENSE) && hooman.stat == CONSCIOUS) //leaning against walls or crawling on the floor, only works if you're awake
+			if(!turfcamo) //will only happen once, at the start of the game
+				turfcamo = get_turf(hooman)
+				playsound(hooman, 'hl13/sound/effects/camochange.ogg', 20, FALSE, -10) //quiet but not impossible to detect hopefully ill tweak it later
+				to_chat(hooman, span_notice("Your CrabCamo begins to change to resemble the texture of [turfcamo.icon_state]."))
+			if(istype(currentturf, turfcamo))
+				hooman.alpha = max(hooman.alpha - alpha_decrease, min_alpha)
+			else
+				hooman.alpha = max(hooman.alpha, 120)
+				turfcamo = get_turf(hooman)
+				playsound(hooman, 'hl13/sound/effects/camochange.ogg', 20, FALSE, -10)
+				to_chat(hooman, span_notice("Your CrabCamo begins to change to resemble the texture of [turfcamo.icon_state]."))
+		else if(turfcamo)
+			if(istype(currentturf, turfcamo))
+				hooman.alpha = max(hooman.alpha - alpha_decrease, 120) //still somewhat effective if you already have the camo of the turf you're on
+			else
+				hooman.alpha = min(hooman.alpha + alpha_increase, 255)
+		else
+			hooman.alpha = min(hooman.alpha + alpha_increase, 255)
+
+/obj/item/clothing/suit/armor/halflife/kevlar/bigboss/the_end/proc/firing_gun_camo(datum/source, obj/item/gun/gun, atom/firing_at, params, zone, bonus_spread_values)
+	SIGNAL_HANDLER
+
+	var/mob/living/carbon/human/owner = loc
+	owner.alpha = max(owner.alpha, owner.alpha + alpha_increase) //the more you shoot, the more camo you lose
 
 /obj/item/storage/belt/holster/bullsquid
 	name = "gunslinger's shoulder holsters"
