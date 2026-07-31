@@ -11,6 +11,9 @@
 /datum/targeting_strategy/basic/can_attack(mob/living/living_mob, atom/the_target, vision_range)
 	var/datum/ai_controller/basic_controller/our_controller = living_mob.ai_controller
 
+	if(isnull(vision_range))
+		vision_range = 9
+
 	if(isnull(our_controller))
 		return FALSE
 

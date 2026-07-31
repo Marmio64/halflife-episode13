@@ -406,7 +406,7 @@
 
 /datum/ai_behavior/basic_ranged_attack/antlion_worker
 	action_cooldown = 3 SECONDS
-	required_distance = 3
+	required_distance = 5
 	avoid_friendly_fire = TRUE
 
 /datum/ai_controller/basic_controller/simple_hostile_obstacles/halflife/antlion_guard
