@@ -270,7 +270,7 @@
 
 /turf/closed/mineral/random
 	/// What are the base odds that this turf spawns a mineral in the wall on initialize?
-	var/mineralChance = 8 //hl13 edit, reduce this
+	var/mineralChance = 9 //hl13 edit, reduce this
 	/// Does this mineral determine its random chance and mineral contents based on proximity to a vent? Overrides mineralChance and mineralAmt.
 	var/proximity_based = FALSE
 	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
@@ -280,9 +280,10 @@
 /turf/closed/mineral/random/proc/mineral_chances()
 	return list(
 		/obj/item/stack/ore/gold = 6,
-		/obj/item/stack/ore/iron = 70,
+		/obj/item/stack/ore/iron = 69,
 		/obj/item/stack/ore/copper = 5,
-		/obj/item/stack/ore/silver = 9,
+		/obj/item/stack/ore/silver = 8,
+		/obj/item/stack/ore/uranium = 2,
 		/obj/item/stack/ore/diamond = 1,
 		/obj/item/stack/ore/bluespace_crystal = 1,
 	)
@@ -331,9 +332,10 @@
 /turf/closed/mineral/random/high_chance/mineral_chances()
 	return list(
 		/obj/item/stack/ore/gold = 12,
-		/obj/item/stack/ore/iron = 62,
+		/obj/item/stack/ore/iron = 59,
 		/obj/item/stack/ore/copper = 10,
 		/obj/item/stack/ore/silver = 9,
+		/obj/item/stack/ore/uranium = 3,
 		/obj/item/stack/ore/diamond = 2,
 		/obj/item/stack/ore/bluespace_crystal = 2,
 	)

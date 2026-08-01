@@ -1027,9 +1027,15 @@
 /obj/structure/flora/rock/style_4
 	icon_state = "basalt4"
 
+/obj/structure/flora/rock/style_5
+	icon_state = "basalt5"
+
+/obj/structure/flora/rock/style_6
+	icon_state = "basalt6"
+
 /obj/structure/flora/rock/style_random/Initialize(mapload)
 	. = ..()
-	icon_state = "basalt[rand(1, 4)]"
+	icon_state = "basalt[rand(1, 6)]"
 	update_appearance()
 
 /obj/structure/flora/rock/pile

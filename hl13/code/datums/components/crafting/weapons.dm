@@ -244,6 +244,7 @@
 	reqs = list(
 		/obj/item/stack/rods = 6,
 		/obj/item/stack/cable_coil = 12,
+		/obj/item/circuitmaterial = 1,
 		/obj/item/lighter =  1,
 	)
 	tool_behaviors = list(TOOL_WELDER, TOOL_WRENCH)

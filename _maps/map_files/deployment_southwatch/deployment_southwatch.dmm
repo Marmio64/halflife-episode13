@@ -653,7 +653,9 @@
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/deployment_city)
 "nG" = (
-/obj/machinery/ammo_crate/grenade_crate,
+/obj/machinery/ammo_crate/grenade_crate{
+	ammo_amount = 2
+	},
 /turf/open/floor/plating/indoor/metal/train,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "nH" = (
@@ -1300,6 +1302,11 @@
 "zB" = (
 /obj/structure/halflife/barrel/quadruple/grey,
 /turf/open/floor/plating/indoor/concrete/small,
+/area/halflife/indoors)
+"zE" = (
+/obj/structure/halflife/storage/shelf,
+/obj/item/stack/sheet/mineral/wood/twentyfive,
+/turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors)
 "zF" = (
 /turf/open/floor/plating/indoor/metal/smooth,
@@ -2269,11 +2276,6 @@
 /obj/structure/halflife/road_barrier/combine,
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/combat_deployment/combine_base)
-"Sp" = (
-/obj/structure/halflife/storage/shelf,
-/obj/item/stack/sheet/mineral/wood/twentyfive,
-/turf/open/floor/plating/indoor/checkered,
-/area/halflife/indoors)
 "SE" = (
 /obj/machinery/telecomms/hub/preset,
 /turf/open/floor/plating/ground/sidewalk,
@@ -11874,7 +11876,7 @@ WE
 EM
 ux
 WE
-Sp
+zE
 Lu
 EM
 EM
