@@ -4,17 +4,20 @@
 /area/halflife/indoors/sewer)
 "c" = (
 /obj/structure/bed/halflife/mattress/old,
-/turf/open/floor/plating/indoor/metal,
+/turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "h" = (
 /obj/structure/bed/halflife/mattress/stale,
-/turf/open/floor/plating/indoor/metal,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer)
+"k" = (
+/turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "o" = (
 /obj/structure/closet/halflife/wall/firstaid,
 /obj/effect/spawner/random/halflife/loot/heal,
 /obj/effect/spawner/random/halflife/loot/heal,
-/turf/open/floor/plating/indoor/metal,
+/turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "q" = (
 /obj/machinery/light/small{
@@ -23,23 +26,27 @@
 /obj/structure/rack,
 /obj/effect/spawner/random/halflife/loot/rare,
 /obj/effect/spawner/random/halflife/loot/rare,
-/turf/open/floor/plating/indoor/metal,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
+"r" = (
+/obj/machinery/door/unpowered/halflife/metal,
+/turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "s" = (
 /obj/structure/halflife/road_barrier/concrete/alt,
-/turf/open/floor/plating/indoor/metal,
+/turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "u" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/entertainment/money_large,
-/turf/open/floor/plating/indoor/metal,
+/turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "v" = (
 /obj/structure/chair/halflife/metal/folding{
 	dir = 8
 	},
 /mob/living/basic/trooper/rebel/mp7/bmd/hostile,
-/turf/open/floor/plating/indoor/metal,
+/turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "w" = (
 /obj/structure/chair/halflife/metal/folding{
@@ -71,7 +78,7 @@
 /area/template_noop)
 "F" = (
 /obj/machinery/light/small,
-/turf/open/floor/plating/indoor/metal,
+/turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "G" = (
 /obj/machinery/light/small{
@@ -79,16 +86,19 @@
 	},
 /turf/open/floor/plating/indoor/metal,
 /area/halflife/indoors/sewer)
+"J" = (
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "L" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/item/toy/cards/deck,
-/turf/open/floor/plating/indoor/metal,
+/turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "O" = (
 /obj/structure/chair/halflife/metal/folding{
 	dir = 4
 	},
-/turf/open/floor/plating/indoor/metal,
+/turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "R" = (
 /obj/structure/chair/halflife/metal/folding{
@@ -100,21 +110,27 @@
 "S" = (
 /obj/structure/table/halflife/metal/grate,
 /obj/effect/spawner/random/halflife/loot/alcohol,
-/turf/open/floor/plating/indoor/metal,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer)
+"T" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "U" = (
 /obj/structure/rack,
 /obj/effect/spawner/random/halflife/loot/ammo,
 /obj/effect/spawner/random/halflife/loot/ammo,
-/turf/open/floor/plating/indoor/metal,
+/turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
 "X" = (
 /obj/effect/spawner/random/halflife/loot/consumables,
-/turf/open/floor/plating/indoor/metal,
+/turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "Y" = (
 /obj/machinery/door/unpowered/halflife/metal,
-/turf/open/floor/plating/indoor/metal,
+/turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer)
 "Z" = (
 /obj/machinery/door/unpowered/halflife/metal{
@@ -156,13 +172,13 @@ E
 E
 C
 O
-a
-a
-a
+k
+k
+k
 C
+k
 a
-a
-a
+k
 C
 E
 "}
@@ -176,7 +192,7 @@ a
 C
 s
 a
-a
+k
 C
 E
 "}
@@ -198,13 +214,13 @@ E
 E
 C
 v
-G
-a
+T
+k
 a
 C
-a
-a
-a
+k
+k
+k
 C
 E
 "}
@@ -226,12 +242,12 @@ E
 E
 C
 q
-a
-Y
+J
+r
 a
 C
 o
-a
+k
 c
 C
 E
@@ -240,12 +256,12 @@ E
 E
 C
 U
-a
+J
 C
 a
 Y
-a
-a
+k
+k
 X
 C
 E
@@ -254,12 +270,12 @@ E
 E
 C
 u
-a
+J
 C
 G
 C
-a
-G
+k
+T
 h
 C
 E

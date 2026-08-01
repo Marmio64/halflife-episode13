@@ -134,6 +134,7 @@
 			back = /obj/item/storage/backpack/halflife/satchel
 			backpack_contents = list(
 				/obj/item/storage/medkit/halflife = 1,
+				/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
 				/obj/item/healthanalyzer = 1,
 			)
 
@@ -149,6 +150,7 @@
 			belt = /obj/item/storage/belt/pouch/refugee
 
 		if(loadout == REFUGEE_BACKGROUND_FARMER)
+			user.change_stat(STATKEY_END, 1)
 			belt = /obj/item/storage/bag/plants
 			back = /obj/item/storage/backpack/satchel/flat
 			backpack_contents = list(
@@ -163,6 +165,7 @@
 			)
 
 		if(loadout == REFUGEE_BACKGROUND_FISHERMAN)
+			user.change_stat(STATKEY_PER, 1)
 			back = /obj/item/storage/backpack/halflife/satchel
 			backpack_contents = list(
 				/obj/item/fishing_rod/telescopic = 1,
