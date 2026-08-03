@@ -370,7 +370,6 @@
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 18
 	w_class = WEIGHT_CLASS_BULKY
-	slowdown = 0.25
 
 	var/after_shot_delay = 0.8 SECONDS
 
