@@ -1005,7 +1005,7 @@
 /obj/structure/flora/rock
 	name = "large rock"
 	icon_state = "basalt1"
-	desc = "A volcanic rock. Pioneers used to ride these babies for miles."
+	desc = "A stalagmite emerging from the ground. It looks rich in silicon, maybe it could be processed into glass?"
 	icon = 'icons/obj/fluff/flora/rocks.dmi'
 	density = TRUE
 	resistance_flags = FIRE_PROOF

@@ -739,6 +739,9 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	chem_volume = 60
 	list_reagents = list(/datum/reagent/drug/nicotine = 45, /datum/reagent/medicine/omnizine = 10)
 
+/obj/item/cigarette/cigar/havana/safe
+	lung_harm = 0
+
 /obj/item/cigbutt
 	name = "cigarette butt"
 	desc = "A manky old cigarette butt."

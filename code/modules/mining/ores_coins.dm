@@ -142,9 +142,9 @@ GLOBAL_LIST_INIT(sand_recipes, list(\
 	return FALSE
 
 /obj/item/stack/ore/glass/basalt
-	name = "ashy dirt"
+	name = "silicon-rich powder"
 	icon_state = "volcanic_sand"
-	singular_name = "ashy dirt pile"
+	singular_name = "silicon-rich powder"
 	mine_experience = 0
 	merge_type = /obj/item/stack/ore/glass/basalt
 

@@ -31,7 +31,7 @@
 
 /datum/mood_event/smoked_teetotaler
 	description = "I really oughta not be smoking these things..."
-	mood_change = -1
+	mood_change = -2
 	timeout = 6 MINUTES
 
 /datum/mood_event/wrong_brand
