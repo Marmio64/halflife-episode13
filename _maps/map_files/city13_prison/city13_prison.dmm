@@ -1070,6 +1070,7 @@
 /area/halflife/indoors/prison/security)
 "eP" = (
 /obj/structure/table/optable,
+/obj/item/clothing/mask/breath/medical,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/prison/security)
 "eQ" = (
@@ -1112,8 +1113,8 @@
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/prison/security/warden)
 "fa" = (
-/obj/structure/stairs/halflife/concrete,
-/turf/open/floor/plating/indoor/tile,
+/obj/structure/stairs/halflife/combine,
+/turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/prison)
 "fb" = (
 /obj/structure/table/halflife/wood/constructed,
@@ -1313,6 +1314,13 @@
 /obj/machinery/door/unpowered/halflife/seethrough/fence/wire,
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/prison/cells)
+"fT" = (
+/obj/structure/railing/halflife/solo{
+	dir = 1
+	},
+/obj/effect/spawner/random/halflife/plant_spawner,
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/indoors/prison)
 "fU" = (
 /obj/structure/table/halflife/metal/heavy,
 /turf/open/floor/plating/indoor/concrete/small,
@@ -2173,7 +2181,7 @@
 /area/halflife/indoors/prison/security/armory)
 "ki" = (
 /obj/effect/spawner/random/halflife/plant_spawner,
-/turf/open/floor/plating/ground/grass,
+/turf/open/floor/plating/ground/dirt/alt,
 /area/halflife/indoors/prison)
 "kj" = (
 /obj/structure/sign/poster/halflife/combine/three{
@@ -2254,19 +2262,14 @@
 /turf/open/floor/plating/indoor/tile/black,
 /area/halflife/indoors/prison)
 "kA" = (
-/obj/docking_port/stationary{
-	dwidth = 9;
-	height = 30;
-	name = "District Trainstation Rails";
-	shuttle_id = "emergency_home";
-	width = 7;
-	override_can_dock_checks = 1
-	},
-/turf/open/floor/plating/indoor/trainfloor,
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison/intake)
 "kD" = (
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/prison/security)
+"kF" = (
+/turf/open/floor/plating/indoor/metal/walkway/end,
+/area/halflife/indoors/prison/intake)
 "kG" = (
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest/prison_yard)
@@ -3228,6 +3231,10 @@
 /obj/structure/sign/poster/halflife/rebel/plf{
 	pixel_y = -32
 	},
+/obj/item/hl13_small_flag/poland{
+	pixel_x = -13;
+	pixel_y = 0
+	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/outlands/shop)
 "oG" = (
@@ -3962,6 +3969,10 @@
 	},
 /turf/open/floor/plating/indoor/tile,
 /area/halflife/indoors/prison/cargo)
+"rw" = (
+/obj/structure/railing/halflife/solo,
+/turf/open/floor/plating/ground/dirt/alt,
+/area/halflife/indoors/prison)
 "rx" = (
 /obj/effect/turf_decal/trimline/blue/line{
 	dir = 4
@@ -4594,7 +4605,7 @@
 	shuttle_id = "ferry_home";
 	width = 5
 	},
-/turf/open/floor/plating/indoor/trainfloor,
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison)
 "ue" = (
 /obj/effect/decal/cleanable/blood/trails{
@@ -4806,6 +4817,9 @@
 /obj/structure/closet/halflife,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/prison/entrance)
+"vf" = (
+/turf/open/floor/plating/ground/dirt/alt,
+/area/halflife/indoors/prison)
 "vg" = (
 /turf/open/openspace,
 /area/halflife/indoors/outlands)
@@ -5730,7 +5744,10 @@
 /turf/open/floor/plating/indoor/metal/combine,
 /area/halflife/indoors/prison/security)
 "yP" = (
-/mob/living/basic/trader/halflife/plf_recruiter,
+/obj/machinery/light/small/directional/south,
+/mob/living/basic/trader/halflife/plf_recruiter{
+	dir = 1
+	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/outlands/shop)
 "yR" = (
@@ -5908,7 +5925,7 @@
 /obj/machinery/turnstile/brig/halflife/forcefield/civilprotection/nodirectional{
 	dir = 1
 	},
-/turf/open/floor/plating/indoor/trainfloor,
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison/intake)
 "zH" = (
 /obj/machinery/ration_vendor,
@@ -6690,6 +6707,18 @@
 "CZ" = (
 /turf/closed/wall/halflife/concrete/alt,
 /area/halflife/indoors/prison)
+"Da" = (
+/obj/docking_port/stationary{
+	dwidth = 9;
+	height = 30;
+	name = "District Trainstation Rails";
+	shuttle_id = "emergency_home";
+	width = 7;
+	override_can_dock_checks = 1;
+	dir = 2
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/outdoors/forest)
 "Db" = (
 /obj/machinery/door/unpowered/halflife/wood{
 	dir = 4
@@ -7166,6 +7195,9 @@
 	},
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest/prison_yard)
+"Fd" = (
+/turf/open/floor/plating/indoor/metal/walkway/end,
+/area/halflife/indoors/prison/cargo)
 "Fe" = (
 /obj/machinery/camera{
 	c_tag = "Southeast Exit Hallway North"
@@ -7291,6 +7323,7 @@
 /obj/structure/chair/halflife/metal/blue{
 	dir = 4
 	},
+/mob/living/basic/trooper/rebel/mp7/refugee/plf,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/outlands/shop)
 "FC" = (
@@ -7614,6 +7647,10 @@
 "GR" = (
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/tile/black,
+/area/halflife/indoors/prison)
+"GT" = (
+/obj/structure/railing/halflife/solo,
+/turf/open/floor/plating/ground/dirt,
 /area/halflife/indoors/prison)
 "GV" = (
 /obj/structure/closet/secure_closet/freezer/halflife,
@@ -7992,6 +8029,9 @@
 /obj/machinery/status_display/evac/directional/west,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/prison/security)
+"Iw" = (
+/turf/open/floor/plating/indoor/trainfloor,
+/area/halflife/indoors/prison/infirmary)
 "Ix" = (
 /obj/structure/railing/halflife/solo{
 	dir = 1
@@ -8252,6 +8292,9 @@
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison/cells)
+"JB" = (
+/turf/open/floor/plating/indoor/metal/walkway/end,
+/area/halflife/indoors/prison)
 "JC" = (
 /obj/effect/landmark/start/civil_protection_officer,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -8570,6 +8613,9 @@
 "Lb" = (
 /obj/structure/halflife/trash/glass/basic,
 /turf/open/misc/beach/sand,
+/area/halflife/outdoors/forest)
+"Lc" = (
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/forest)
 "Ld" = (
 /obj/structure/closet/halflife/wall/firstaid,
@@ -9256,6 +9302,9 @@
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest/prison_yard)
+"NH" = (
+/turf/open/floor/plating/indoor/metal/walkway,
+/area/halflife/indoors/prison/cargo)
 "NI" = (
 /obj/structure/closet/crate/halflife/wooden,
 /obj/machinery/camera{
@@ -10392,7 +10441,7 @@
 	dwidth = 3;
 	roundstart_template = /datum/map_template/shuttle/arrival/box
 	},
-/turf/open/floor/plating/indoor/trainfloor,
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/indoors/prison/intake)
 "Sv" = (
 /obj/machinery/door/unpowered/halflife/seethrough/bar{
@@ -11614,6 +11663,12 @@
 	},
 /turf/closed/wall/halflife/metal,
 /area/halflife/indoors/prison/security)
+"XJ" = (
+/obj/structure/railing/halflife/solo{
+	dir = 1
+	},
+/turf/open/floor/plating/ground/dirt,
+/area/halflife/indoors/prison)
 "XK" = (
 /obj/structure/halflife/fence/vertical/wire/east/barb,
 /turf/open/floor/plating/ground/dirt,
@@ -11641,6 +11696,10 @@
 /obj/effect/mob_spawn/ghost_role/cityscanner,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/dispatch)
+"XS" = (
+/obj/machinery/turnstile/brig/halflife/forcefield/armory/nodirectional,
+/turf/open/floor/plating/indoor/metal/walkway,
+/area/halflife/indoors/prison/cargo)
 "XT" = (
 /obj/item/book/bible{
 	pixel_x = 6;
@@ -51940,13 +51999,13 @@ Lk
 Ct
 Ct
 Ct
-tc
-tc
-tc
-tc
-tc
-tc
-tc
+bL
+bL
+bL
+bL
+bL
+bL
+bL
 tV
 tV
 tV
@@ -52144,7 +52203,7 @@ Ct
 Ct
 Ct
 Ct
-tc
+bL
 Ct
 Ct
 Lk
@@ -52356,29 +52415,29 @@ Ct
 kv
 Ct
 zG
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
 Ss
 bZ
 Ss
@@ -52581,8 +52640,8 @@ vH
 vH
 vH
 vH
-Ss
-Ss
+vH
+kF
 Ss
 tV
 ao
@@ -52764,29 +52823,29 @@ Ct
 kv
 Ct
 zG
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
 Su
-Ss
+kA
 Ss
 tV
 tV
@@ -52989,8 +53048,8 @@ vH
 vH
 vH
 vH
-Ss
-Ss
+vH
+kF
 Ss
 hj
 hj
@@ -53172,29 +53231,29 @@ Ct
 kv
 Ct
 zG
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
 Ss
 Ss
 Ss
@@ -53368,7 +53427,7 @@ Ct
 Ct
 qt
 Lk
-tc
+bL
 Ct
 Lk
 pN
@@ -53572,7 +53631,7 @@ Ct
 Ct
 Lk
 gn
-tc
+bL
 Ct
 Ct
 Ct
@@ -53776,7 +53835,7 @@ Ct
 Ct
 Ct
 Ct
-tc
+bL
 Ct
 Ct
 Lk
@@ -53988,29 +54047,29 @@ Ct
 kv
 Ct
 zG
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
 Ss
 Ss
 Ss
@@ -54213,8 +54272,8 @@ vH
 vH
 vH
 vH
-Ss
-Ss
+vH
+kF
 VR
 Ss
 Ss
@@ -54390,35 +54449,35 @@ Ct
 Ct
 FH
 kv
-Ct
+Da
 Fv
 Ct
 kv
 Ct
 zG
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
 kA
-Ss
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
 Ss
 Ss
 Ss
@@ -54621,8 +54680,8 @@ vH
 vH
 vH
 vH
-Ss
-Ss
+vH
+kF
 VR
 Ss
 Ss
@@ -54804,29 +54863,29 @@ Ct
 kv
 Ct
 zG
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
-Ss
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
+kA
 Ss
 Ss
 Ss
@@ -55000,7 +55059,7 @@ Ct
 Lk
 Lk
 Ct
-tc
+bL
 Ct
 Ct
 Ct
@@ -55204,13 +55263,13 @@ Ct
 Lk
 qt
 Ct
-tc
-tc
-tc
-tc
-tc
-tc
-tc
+bL
+bL
+bL
+bL
+bL
+bL
+bL
 tV
 Ss
 Ss
@@ -55408,13 +55467,13 @@ Ct
 Ct
 Ct
 Ct
-tc
-tc
-tc
-tc
-tc
-tc
-nD
+bL
+bL
+bL
+bL
+bD
+bD
+bD
 tV
 tV
 tV
@@ -55607,17 +55666,17 @@ Ct
 Ct
 Ct
 Ct
-tc
-tc
-tc
-tc
-tc
-tc
+bL
+bL
+bL
+bL
+bL
+bL
 Ct
 Ct
 Ct
-Ct
-Ct
+UZ
+UZ
 UZ
 UZ
 UZ
@@ -55817,17 +55876,17 @@ Ct
 Ct
 Ct
 kv
-Ct
-Ct
-Ct
-kv
-Ct
-UZ
-UZ
-UZ
-UZ
-UZ
-UZ
+Lc
+Lc
+Lc
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
 UZ
 UZ
 Kb
@@ -56024,14 +56083,14 @@ hW
 hW
 hW
 hW
-hW
-hW
 db
 db
 db
 db
-UZ
-UZ
+db
+db
+db
+JB
 UZ
 UZ
 Kb
@@ -56225,17 +56284,17 @@ Ct
 Ct
 Ct
 kv
-Ct
-Fv
-Ct
-kv
-Ct
-UZ
-UZ
-UZ
-UZ
+Lc
+Lc
+Lc
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
 ud
-UZ
+Fg
 UZ
 UZ
 Kb
@@ -56432,14 +56491,14 @@ hW
 hW
 hW
 hW
-hW
-hW
 db
 db
 db
 db
-UZ
-UZ
+db
+db
+db
+JB
 UZ
 UZ
 Kb
@@ -56633,17 +56692,17 @@ Ct
 Ct
 Ct
 kv
-Ct
-Ct
-Ct
-kv
-Ct
-UZ
-UZ
-UZ
-UZ
-UZ
-UZ
+Lc
+Lc
+Lc
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
 UZ
 Zf
 Kb
@@ -56831,17 +56890,17 @@ Ct
 Ct
 Ct
 Wi
-tc
-tc
-tc
-tc
-tc
-tc
+bL
+bL
+bL
+bL
+bL
+bL
 Ct
 Ct
 Ct
-Ct
-Ct
+UZ
+UZ
 UZ
 UZ
 UZ
@@ -57040,12 +57099,12 @@ Ei
 XW
 Ct
 Ct
-tc
+bL
 Ct
 Ct
 Ct
-Ct
-Ct
+nD
+nD
 UZ
 UZ
 UZ
@@ -57244,12 +57303,12 @@ Et
 XW
 Ct
 Ct
-tc
-tc
-tc
-tc
-tc
-Ct
+bL
+bL
+bL
+bL
+nD
+nD
 UZ
 UZ
 UZ
@@ -57452,8 +57511,8 @@ Ct
 Ct
 Ct
 Ct
-tc
-tc
+nD
+nD
 UZ
 UZ
 UZ
@@ -57656,15 +57715,15 @@ qt
 Lk
 Lk
 Lk
-tc
-tc
-tc
-tc
-tc
-tc
-tc
-tc
-tc
+nD
+nD
+nD
+nD
+nD
+nD
+nD
+nD
+nD
 nD
 nD
 RE
@@ -59097,16 +59156,16 @@ nD
 RE
 RE
 IN
+Fo
+Fo
+bD
+bD
+RE
+RE
 IN
 RE
-RE
-nD
-RE
-RE
-IN
-RE
-Ix
-rI
+XJ
+wM
 OI
 RE
 IN
@@ -59301,17 +59360,17 @@ nD
 ex
 RE
 IN
-IN
-IN
+Fo
+Fo
 fa
-nD
+bD
 bh
 RE
 IN
 RE
-Mi
-rI
-tS
+fT
+vf
+GT
 RE
 IN
 So
@@ -59505,17 +59564,17 @@ nD
 Ak
 RE
 IN
-IN
-IN
+Fo
+Fo
 fa
-nD
+bD
 RE
 RE
 IN
 RE
 Ix
 ki
-tS
+rw
 RE
 IN
 SJ
@@ -59709,16 +59768,16 @@ nD
 RE
 RE
 IN
-IN
-RE
-RE
-nD
+Fo
+Fo
+bD
+bD
 gg
 RE
 IN
 RE
 Ix
-rI
+wM
 tS
 RE
 IN
@@ -61965,7 +62024,7 @@ IN
 IN
 IN
 IN
-IN
+Fg
 IN
 IN
 IN
@@ -63567,23 +63626,23 @@ hW
 hW
 hW
 hW
-AR
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
+XS
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+Fd
 cI
 uo
 Ck
@@ -63975,23 +64034,23 @@ hW
 hW
 hW
 hW
-AR
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
-lM
+XS
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+NH
+Fd
 cI
 uo
 Sw
@@ -65835,7 +65894,7 @@ LK
 Uk
 qJ
 UG
-UG
+Iw
 UG
 UG
 UG
@@ -87641,14 +87700,14 @@ WH
 WH
 WH
 WH
-tc
-tc
-tc
-tc
-tc
-tc
-tc
-nD
+bL
+bL
+bL
+bL
+bL
+bL
+bL
+bD
 nD
 nD
 nD
@@ -87845,7 +87904,7 @@ WH
 WH
 WH
 WH
-tc
+bL
 WH
 WH
 WH
@@ -89069,7 +89128,7 @@ WH
 WH
 WH
 WH
-tc
+bL
 WH
 WH
 WH
@@ -89273,7 +89332,7 @@ WH
 WH
 WH
 WH
-tc
+bL
 WH
 WH
 WH
@@ -89477,7 +89536,7 @@ WH
 WH
 WH
 WH
-tc
+bL
 WH
 WH
 WH
@@ -90701,7 +90760,7 @@ WH
 WH
 WH
 WH
-tc
+bL
 WH
 WH
 WH
@@ -90905,13 +90964,13 @@ WH
 WH
 WH
 WH
-tc
-zs
-zs
-zs
-zs
-zs
-zs
+bL
+kD
+kD
+kD
+kD
+kD
+kD
 zs
 zs
 zs
@@ -108617,7 +108676,7 @@ hc
 xn
 vg
 xn
-yP
+hc
 Au
 WH
 WH
@@ -108821,7 +108880,7 @@ yq
 xn
 vg
 xn
-Qi
+yP
 Au
 WH
 WH

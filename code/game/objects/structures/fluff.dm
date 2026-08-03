@@ -328,3 +328,13 @@
 	icon_state = "wallsign"
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/fluff/wallsign, 32)
+
+//hl13 edit
+/obj/structure/fluff/payload
+	name = "large bomb"
+	desc = "An incredibly high-poundage bomb sitting idle on a cart, seemingly bolted to the ground. Likely either in transit or storage for later use by a resistance group. You really, REALLY shouldn't mess with this."
+	max_integrity = 9000 //can be broken but hard to do
+	deconstructible = FALSE
+	density = TRUE
+	icon = 'hl13/icons/obj/nuke.dmi'
+	icon_state = "idle"
