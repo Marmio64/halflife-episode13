@@ -12,9 +12,9 @@
 	obj_damage = 14
 	melee_damage_lower = 20
 	melee_damage_upper = 25
-	melee_attack_cooldown = 1.25 SECONDS
+	melee_attack_cooldown = 1.35 SECONDS
 	sharpness = SHARP_POINTY
-	armour_penetration = 15
+	armour_penetration = 25
 	wound_bonus = -15
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	attack_verb_continuous = "claws"
@@ -222,7 +222,7 @@
 
 	sound = 'hl13/sound/creatures/advisor/advisor_devour.ogg'
 	school = SCHOOL_TRANSMUTATION
-	cooldown_time = 12 SECONDS
+	cooldown_time = 14 SECONDS
 	cooldown_reduction_per_rank = 6.25 SECONDS
 
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
@@ -266,7 +266,7 @@
 		cast_on.adjustOrganLoss(ORGAN_SLOT_BRAIN, 200, BRAIN_DAMAGE_DEATH)
 		to_chat(cast_on, span_userdanger("The tongue hears a hole through your skull, and scoops out a mass of brain matter before returning."))
 		to_chat(living_owner, span_green("A most delicious meal this was..."))
-		living_owner.adjust_health(-living_owner.maxHealth*0.4) //heal 40% hp
+		living_owner.adjust_health(-living_owner.maxHealth*0.5) //heal 50% hp
 
 	if(living_owner.stat != DEAD)
 		living_owner.icon_state = "advisor"

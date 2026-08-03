@@ -671,6 +671,7 @@
 	else if(LAZYACCESS(params2list(params), LEFT_CLICK))
 		altfire = FALSE
 		burst_size = 1
+		fire_delay = initial(fire_delay)
 	onefreebullet = FALSE
 	return ..()
 
@@ -681,15 +682,15 @@
 		rack_delay = 8
 		recent_rack = world.time + rack_delay
 		rack(user)
-		projectile_damage_multiplier = 0.5
+		projectile_damage_multiplier = (initial(projectile_damage_multiplier)*0.5)
 	else if(onefreebullet)
 		onefreebullet = FALSE
-		projectile_damage_multiplier = 1
+		projectile_damage_multiplier = initial(projectile_damage_multiplier)
 
 /obj/item/gun/ballistic/shotgun/spas12/rack()
 	..()
 	if(!onefreebullet)
-		rack_delay = 5
+		rack_delay = initial(rack_delay)
 
 /obj/item/ammo_box/magazine/internal/shot/com/spas12
 	name = "spas12 internal magazine"
