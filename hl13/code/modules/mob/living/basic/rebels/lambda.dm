@@ -78,7 +78,7 @@
 
 /mob/living/basic/trooper/rebel/mp7/plf
 	name = "Polish Liberation Front Soldier"
-	desc = "A symbol of the Polish Resistance, proudly wielding an MP7."
+	desc = "A soldier of the Polish Liberation Front clad in patched-together pre-War uniform and armour, proudly wielding a seized MP7; a stacatto bark of 4.6x30mm ammunition already in its throat."
 
 	maxHealth = 150
 	health = 150
@@ -90,7 +90,7 @@
 	mob_spawner = /obj/effect/mob_spawn/corpse/human/plf_trooper
 
 /mob/living/basic/trooper/rebel/mp7/plf/service_rifle
-	desc = "A soldier of the Polish Resistance, calmly wielding an imposing, pre-War rifle."
+	desc = "A soldier of the Polish Resistance in well-maintained pre-War uniform, calmly wielding an imposing, pre-War rifle."
 	r_hand = /obj/item/gun/ballistic/automatic/servicerifle
 	casingtype = /obj/item/ammo_casing/a556
 	ranged_cooldown = 1 SECONDS
@@ -290,10 +290,10 @@
 /datum/ai_planning_subtree/random_speech/bmd
 	speech_chance = 1
 	speak = list(
-		"If you die, i'm taking your credits.",
+		"If you die, I'm taking your credits.",
 		"I need a drink...",
 		"Heheheh...",
-		"We'll take whats ours.",
+		"We'll take what's ours.",
 	)
 
 /datum/ai_controller/basic_controller/trooper/ranged/burst/bmd

@@ -114,8 +114,11 @@
 	can_adjust = FALSE
 	supports_variations_flags = NONE
 
+/obj/item/clothing/under/syndicate/camo/halflife
+	desc = "An old, pre-War camouflage uniform once issued to the Polish army."
+
 /obj/item/clothing/under/syndicate/camo/halflife/armored
-	desc = "An old polish green military camouflage uniform, that has been moderately reinforced."
+	desc = "An old, pre-War camouflage uniform once issued to the Polish army. It seems to be moderately reinforced."
 	armor_type = /datum/armor/rebelsuit
 
 /obj/item/clothing/under/syndicate/camo/halflife/armored/bomb_resistant
