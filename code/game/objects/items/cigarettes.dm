@@ -173,7 +173,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	/// If, when glorf'd, we will choke on this cig forever
 	var/choke_forever = FALSE
 	/// When choking, what is the maximum amount of time we COULD choke for
-	var/choke_time_max = 30 SECONDS // I am mean
+	var/choke_time_max = 15 SECONDS
 	/// The particle effect of the smoke rising out of the cigarette when lit
 	VAR_PRIVATE/obj/effect/abstract/particle_holder/cig_smoke
 	/// The particle effect of the smoke rising out of the mob when...smoked
@@ -739,8 +739,9 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	chem_volume = 60
 	list_reagents = list(/datum/reagent/drug/nicotine = 45, /datum/reagent/medicine/omnizine = 10)
 
-/obj/item/cigarette/cigar/havana/safe
+/obj/item/cigarette/cigar/havana/venomcrab
 	lung_harm = 0
+	list_reagents = list(/datum/reagent/drug/nicotine = 45, /datum/reagent/medicine/omnizine = 20)
 
 /obj/item/cigbutt
 	name = "cigarette butt"

@@ -9,7 +9,7 @@
 			/datum/outfit/deployment_loadout/intruder/solid/raiden,
 			/datum/outfit/deployment_loadout/intruder/solid/old,
 			/datum/outfit/deployment_loadout/intruder/solid/bigboss,
-			//datum/outfit/deployment_loadout/intruder/solid/venom,
+			/datum/outfit/deployment_loadout/intruder/solid/venom,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -269,7 +269,7 @@
 
 	head = /obj/item/clothing/head/costume/snakeeater/solid/venom
 	glasses = /obj/item/clothing/glasses/thermal/eyepatch/solid
-	mask = /obj/item/cigarette/cigar/havana/safe
+	mask = /obj/item/cigarette/cigar/havana/venomcrab
 	uniform = /obj/item/clothing/under/syndicate/combat
 	suit = /obj/item/clothing/suit/armor/halflife/milvest/solid/venom
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
@@ -296,7 +296,7 @@
 	H.set_facial_hairstyle("Beard (Cropped Fullbeard)", update = TRUE)
 	H.update_body(1)
 	H.fully_replace_character_name(H.real_name,"Venom Crab")
-	H.death_sound = 'hl13/sound/effects/snakedeath.ogg'
+	H.death_sound = 'hl13/sound/effects/venomsnakedeath.ogg'
 
 	ADD_TRAIT(H, TRAIT_LESSPAIN_MINOR, OUTFIT_TRAIT) //venom snake is slightly used to the pain. the... phantom pain.
 	H.physiology.damage_resistance += 15 //15% physical damage resistance across the board
@@ -305,7 +305,7 @@
 	H.return_and_replace_bodypart(replacement, special = TRUE)
 
 	var/obj/item/organ/old_organ = H.get_organ_slot(ORGAN_SLOT_TONGUE)
-	var/obj/item/organ/tongue/solid/new_tongue = new()
+	var/obj/item/organ/tongue/solid/venom/new_tongue = new()
 	new_tongue.Insert(H)
 	qdel(old_organ)
 
@@ -766,7 +766,7 @@
 
 /datum/action/cooldown/spell/intruder_heal
 	name = "Persevere"
-	desc = "Muster the willpower to keep going, restoring your stamina and health. Makes an audible sound."
+	desc = "Muster the willpower to keep going, restoring your stamina and health. Makes an audible sound, and has a short windup."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "medkit"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
@@ -774,6 +774,18 @@
 	cooldown_time = 120 SECONDS
 	spell_requirements = NONE
 	antimagic_flags = NONE
+
+/datum/action/cooldown/spell/intruder_heal/before_cast(atom/cast_on)
+	. = ..()
+	if(. & SPELL_CANCEL_CAST)
+		return
+	if(!isliving(cast_on))
+		return SPELL_CANCEL_CAST
+
+	var/mob/living/user = cast_on
+
+	if(!do_after(user, 2 SECONDS, cast_on))
+		return SPELL_CANCEL_CAST
 
 /datum/action/cooldown/spell/intruder_heal/cast(mob/living/cast_on)
 	. = ..()
@@ -1099,6 +1111,10 @@
 		"I want you" = 'hl13/sound/voice/solid/raidenwantsyou.ogg',
 		"Whatever" = 'hl13/sound/voice/solid/raidenwhatever.ogg',
 	)
+	var/static/list/venom_voicelines = list(
+		"Kept you waiting, huh" = 'hl13/sound/voice/solid/venomkeptyouwaiting.ogg',
+		"Rest in peace" = 'hl13/sound/voice/solid/venomrestinpeace.ogg',
+	)
 
 	var/operativetype = "Solid"
 
@@ -1113,6 +1129,10 @@
 /obj/item/organ/tongue/solid/raiden
 	actions_types = list(/datum/action/item_action/getreal, /datum/action/item_action/nochance, /datum/action/item_action/iwantyou, /datum/action/item_action/whatever)
 	operativetype = "Raiden"
+
+/obj/item/organ/tongue/solid/venom
+	actions_types = list(/datum/action/item_action/waiting, /datum/action/item_action/restinpeace)
+	operativetype = "Venom"
 
 /obj/item/organ/tongue/solid/proc/can_use(mob/user)
 	return istype(user) && !user.incapacitated
@@ -1142,6 +1162,10 @@
 		iwantyou()
 	if(istype(action, /datum/action/item_action/whatever))
 		whatever()
+	if(istype(action, /datum/action/item_action/venomwaiting))
+		venomwaiting()
+	if(istype(action, /datum/action/item_action/restinpeace))
+		restinpeace()
 
 /obj/item/organ/tongue/solid/modify_speech(datum/source, list/speech_args)
 	var/full_message = speech_args[SPEECH_MESSAGE]
@@ -1154,6 +1178,11 @@
 		for(var/lines in raiden_voicelines)
 			if(findtext(full_message, lines))
 				playsound(source, raiden_voicelines[lines], 50, FALSE)
+				return // only play the first.
+	else if(operativetype == "Venom")
+		for(var/lines in venom_voicelines)
+			if(findtext(full_message, lines))
+				playsound(source, venom_voicelines[lines], 50, FALSE)
 				return // only play the first.
 	else
 		for(var/lines in snake_voicelines)
@@ -1330,6 +1359,34 @@
 	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
 
 	usr.say("Whatever!", forced = src.name)
+
+/datum/action/item_action/venomwaiting
+	name = "Kept you waiting, huh?"
+
+/obj/item/organ/tongue/solid/verb/venomwaiting()
+	set category = "Object"
+	set name = "Kept you waiting, huh?"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Kept you waiting, huh?", forced = src.name)
+
+/datum/action/item_action/restinpeace
+	name = "Rest in peace..."
+
+/obj/item/organ/tongue/solid/verb/restinpeace()
+	set category = "Object"
+	set name = "Rest in peace..."
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Rest in peace...", forced = src.name)
 
 #undef PHRASE_COOLDOWN
 

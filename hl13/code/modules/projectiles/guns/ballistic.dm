@@ -167,7 +167,7 @@
 /obj/item/gun/ballistic/automatic/m4a1/famas/crab
 	name = "\improper Masterwork FAMAS G2 Rifle"
 	desc = "A French-made bullpup rifle from the 1990s, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one looks in pretty good shape, and somehow more powerful. It's also capable of taking a suppressor."
-	projectile_damage_multiplier = 1.5
+	projectile_damage_multiplier = 1.4
 	can_suppress = TRUE
 	spawnwithmagazine = FALSE //OSP
 
