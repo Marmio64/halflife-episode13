@@ -227,7 +227,17 @@
 /datum/martial_art/cqc/grab_act(mob/living/attacker, mob/living/defender)
 	if(attacker == defender)
 		return MARTIAL_ATTACK_INVALID
-	if(defender.check_block(attacker, 0, attacker.name, UNARMED_ATTACK))
+	if(defender.check_block(attacker, 0, attacker.name, UNARMED_ATTACK)) //if you have a shield its technically better to fail the block
+		return MARTIAL_ATTACK_FAIL
+	var/obj/item/I_active = defender.get_active_held_item()
+	var/obj/item/I_inactive = defender.get_inactive_held_item()
+	if(I_active && istype(I_active, /obj/item/shield/riot/ballistic) && !check_behind(attacker, defender) || I_inactive && istype(I_inactive, /obj/item/shield/riot/ballistic) && !check_behind(attacker, defender))
+		attacker.visible_message(span_boldwarning("[attacker]'s grab is blocked by [defender]!"))
+		to_chat(defender, span_userdanger("You shove [attacker] to the ground with your shield as they attempt to grab you!"))
+		attacker.safe_throw_at(get_turf(attacker), 1, 1, src)
+		attacker.Paralyze(20)
+		attacker.adjustBruteLoss(5)
+		playsound(attacker,SFX_SWING_HIT,50,TRUE)
 		return MARTIAL_ATTACK_FAIL
 
 	add_to_streak("G", defender)

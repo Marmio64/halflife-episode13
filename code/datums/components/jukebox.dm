@@ -224,6 +224,13 @@
 	if(HAS_TRAIT(new_listener, TRAIT_DEAF) || IS_PREF_MUTED(new_listener))
 		listeners[new_listener] |= SOUND_MUTE
 
+	//intruder edit start
+	if(HAS_TRAIT(new_listener, TRAIT_INTRUDER_GUARD))
+		for(var/datum/guard_objective/O in GLOB.guard_objectives)
+			if(O.owner == new_listener.mind && O.objective_type == "radio")
+				O.music_timer = addtimer(CALLBACK(O, TYPE_PROC_REF(/datum/guard_objective, get_new_objective)), 10 SECONDS, TIMER_STOPPABLE)
+	//intruder edit stop
+
 	if(isnull(active_song_sound))
 		var/area/juke_area = get_area(parent)
 		active_song_sound = sound(selection.song_path)
@@ -265,6 +272,12 @@
 
 	if(HAS_TRAIT(source, TRAIT_DEAF))
 		listeners[source] |= SOUND_MUTE
+		//intruder edit start
+		if(HAS_TRAIT(source, TRAIT_INTRUDER_GUARD))
+			for(var/datum/guard_objective/O in GLOB.guard_objectives)
+				if(O.owner == source.mind && O.objective_type == "radio")
+					deltimer(O.music_timer)
+		//intruder edit stop
 	else if(!unmute_listener(source, MUTE_DEAF))
 		return
 	update_listener(source)
@@ -300,11 +313,22 @@
 			return FALSE
 
 	listeners[listener] &= ~SOUND_MUTE
+	if(HAS_TRAIT(listener, TRAIT_INTRUDER_GUARD))
+		for(var/datum/guard_objective/O in GLOB.guard_objectives)
+			if(O.owner == listener.mind && O.objective_type == "radio")
+				O.music_timer = addtimer(CALLBACK(O, TYPE_PROC_REF(/datum/guard_objective, get_new_objective)), 10 SECONDS, TIMER_STOPPABLE)
 	return TRUE
 
 /// Deregisters the passed mob as a listener to the jukebox, stopping the music.
 /datum/jukebox/proc/deregister_listener(mob/no_longer_listening)
 	PROTECTED_PROC(TRUE)
+
+	//intruder edit start
+	if(HAS_TRAIT(no_longer_listening, TRAIT_INTRUDER_GUARD))
+		for(var/datum/guard_objective/O in GLOB.guard_objectives)
+			if(O.owner == no_longer_listening.mind && O.objective_type == "radio")
+				deltimer(O.music_timer)
+	//intruder edit stop
 
 	listeners -= no_longer_listening
 	no_longer_listening.stop_sound_channel(CHANNEL_JUKEBOX)
@@ -330,6 +354,12 @@
 
 	else if(sound_turf.z != listener_turf.z) // Could MAYBE model multi-z jukeboxes but that's too complex for now
 		listeners[listener] |= SOUND_MUTE
+		//intruder edit start
+		if(HAS_TRAIT(listener, TRAIT_INTRUDER_GUARD))
+			for(var/datum/guard_objective/O in GLOB.guard_objectives)
+				if(O.owner == listener.mind && O.objective_type == "radio")
+					deltimer(O.music_timer)
+		//intruder edit stop
 
 	else
 		// keep in mind sound XYZ is different to world XYZ. sound +-z = world +-y
@@ -338,7 +368,12 @@
 
 		if((abs(new_x) > x_cutoff || abs(new_z) > z_cutoff))
 			listeners[listener] |= SOUND_MUTE
-
+			//intruder edit start
+			if(HAS_TRAIT(listener, TRAIT_INTRUDER_GUARD))
+				for(var/datum/guard_objective/O in GLOB.guard_objectives)
+					if(O.owner == listener.mind && O.objective_type == "radio")
+						deltimer(O.music_timer)
+			//intruder edit stop
 		else if(listeners[listener] & SOUND_MUTE)
 			unmute_listener(listener, MUTE_RANGE)
 

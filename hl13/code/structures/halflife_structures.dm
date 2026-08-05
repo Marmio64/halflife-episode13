@@ -849,6 +849,7 @@
 	anchored = TRUE
 
 	var/busy = FALSE
+	var/intruder = FALSE
 
 	var/list/tv_start = list(
 	"Thank you for writing, Concerned. Of course, your question touches on one of the most basic biological impulses, with all its associated hopes and fears for the future of the species.",
@@ -871,25 +872,26 @@
 /obj/structure/halflife/tv/Initialize()
 	. = ..()
 	register_context()
+	if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
+		intruder = TRUE
 
 /obj/structure/halflife/tv/interact(mob/living/carbon/human/user)
 	. = ..()
-
-	if(user.mob_mood.has_mood_of_category("tv"))
+	if(user.mob_mood.has_mood_of_category("tv") && !intruder)
 		to_chat(usr, span_notice("There isn't anything else on that interests you."))
 		return
 
 	if(busy)
 		to_chat(usr, span_notice("The TV is already in use by someone else."))
 		return
+	if(!intruder)
+		if(SSdaylight.day_cycle_active == DAY_CYCLE_AFTERNOON || SSdaylight.day_cycle_active == DAY_CYCLE_DUSK)
+			to_chat(usr, span_notice("There's nothing on TV during working hours."))
+			return
 
-	if(SSdaylight.day_cycle_active == DAY_CYCLE_AFTERNOON || SSdaylight.day_cycle_active == DAY_CYCLE_DUSK)
-		to_chat(usr, span_notice("There's nothing on TV during working hours."))
-		return
-
-	if(SSdaylight.day_cycle_active == DAY_CYCLE_NIGHT)
-		to_chat(usr, span_notice("There's nothing on TV during curfew."))
-		return
+		if(SSdaylight.day_cycle_active == DAY_CYCLE_NIGHT)
+			to_chat(usr, span_notice("There's nothing on TV during curfew."))
+			return
 
 	busy = TRUE
 	to_chat(usr, span_notice("You flip through static before finding a remaining Combine-approved broadcast. It's mostly propaganda, but something in there might make you feel better."))
@@ -897,11 +899,17 @@
 	say("[pick(tv_start)]")
 
 	playsound(src, 'hl13/sound/effects/short_radio.ogg', 50, TRUE, extrarange = -3)
-
-	if(!do_after(user, rand(20 SECONDS, 30 SECONDS), src))
+	var/additional_intruder = 0
+	if(intruder)
+		user.set_temp_blindness(15 MINUTES) //not important, it'll be removed automatically anyways
+		to_chat(usr, span_notice("You're too engrossed in the show to notice your surroundings."))
+		additional_intruder = 10 SECONDS
+	if(!do_after(user, rand(((20 SECONDS) - additional_intruder), ((30 SECONDS) - additional_intruder)), src))
 		user.add_mood_event("tv", /datum/mood_event/tvboring)
 		to_chat(usr, span_warning("You turn the TV off mid-program. You felt like you wasted your time."))
 		busy = FALSE
+		if(intruder)
+			user.remove_status_effect(/datum/status_effect/temporary_blindness)
 		return
 
 	if(HAS_TRAIT(user, TRAIT_CURSED))
@@ -914,19 +922,28 @@
 
 	say("[pick(tv_end)]")
 
-	if(prob(15))
-		user.add_mood_event("tv", /datum/mood_event/tvbad)
-		to_chat(usr, span_warning("You felt worse after watching that."))
-	else if(prob(25))
-		user.add_mood_event("tv", /datum/mood_event/tvboring)
-		to_chat(usr, span_warning("You felt like you wasted your time watching that."))
-	else if(prob(50))
-		user.add_mood_event("tv", /datum/mood_event/tvok)
-		to_chat(usr, span_notice("You felt okay after watching that."))
-	else
-		user.add_mood_event("tv", /datum/mood_event/tvgood)
+	if(HAS_TRAIT(user, TRAIT_INTRUDER_GUARD))
+		user.add_mood_event("tv", /datum/mood_event/tvgood) //they're brainwashed so they love combine TV
 		to_chat(usr, span_notice("You felt better after watching that."))
+		for(var/datum/guard_objective/O in GLOB.guard_objectives)
+			if(O.owner == user.mind && O.objective_type == "tv")
+				O.get_new_objective()
+	else
+		if(prob(15))
+			user.add_mood_event("tv", /datum/mood_event/tvbad)
+			to_chat(usr, span_warning("You felt worse after watching that."))
+		else if(prob(25))
+			user.add_mood_event("tv", /datum/mood_event/tvboring)
+			to_chat(usr, span_warning("You felt like you wasted your time watching that."))
+		else if(prob(50))
+			user.add_mood_event("tv", /datum/mood_event/tvok)
+			to_chat(usr, span_notice("You felt okay after watching that."))
+		else
+			user.add_mood_event("tv", /datum/mood_event/tvgood)
+			to_chat(usr, span_notice("You felt better after watching that."))
 	busy = FALSE
+	if(intruder)
+		user.remove_status_effect(/datum/status_effect/temporary_blindness)
 
 	return
 

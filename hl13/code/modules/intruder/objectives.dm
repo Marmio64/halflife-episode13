@@ -1,6 +1,7 @@
 GLOBAL_VAR_INIT(complete_objectives, 0)
 GLOBAL_VAR_INIT(complete_objectives_total, 0) //includes fake ones, for caution phase
 GLOBAL_VAR_INIT(bonus_guard_preparedness, 0) //any actual bonus guard preparedness from misc sources
+GLOBAL_LIST_EMPTY(guard_objectives)
 GLOBAL_LIST_EMPTY(node_terminals)
 
 /obj/machinery/escape_vent
@@ -139,3 +140,114 @@ GLOBAL_LIST_EMPTY(node_terminals)
 	else
 		say("File transfer interrupted. [attempts_to_complete]/3 files transferred.")
 	activating = FALSE
+
+//////// OBJECTIVES: GUARD MODE /////////
+
+/datum/guard_objective
+	var/datum/mind/owner
+	var/objective_type
+	var/objective_stage = 0
+	var/static/list/possible_objectives = list( //mostly stuff thats kind of slacking off to give the intruder a chance to do things
+		"shower", //checklist done
+		"nap", //done
+		"workout", //done
+		"radio", //done
+		"tv", //done
+		"coffee", //done
+	)
+	var/music_timer //timer for the music specifically, if you dont listen for the full ten seconds it doesnt count towards your objective
+	var/gave_hud = FALSE
+
+/datum/guard_objective/New()
+	GLOB.guard_objectives += src
+
+/datum/guard_objective/Destroy()
+	to_chat(owner, span_notice("You no longer feel a need to complete your guard objectives..."))
+	GLOB.guard_objectives -= src
+
+/datum/guard_objective/proc/get_new_objective()
+	if(!gave_hud)
+		var/datum/action/guard_info/info_button
+		info_button = new(src)
+		info_button.Grant(owner.current)
+		gave_hud = TRUE
+	if(objective_stage == 4)
+		to_chat(owner, span_green("You received a requisition point for taking good care of your mental and physical health.")) //the combine are such nice people
+		objective_stage = 1
+		var/list/owner_memories = owner.memories
+		var/datum/memory/key/account/owner_key = owner_memories[/datum/memory/key/account]
+		var/new_bank_id = (istype(owner_key) && owner_key.remembered_id) || 11111
+		var/datum/bank_account/account = SSeconomy.bank_accounts_by_id["[new_bank_id]"]
+		account.requisition_points++
+	else
+		objective_stage++
+	var/message
+	if(objective_type)
+		switch(objective_type)
+			if("shower")
+				message = "That shower was refreshing. "
+			if("nap")
+				message = "This is a comfortable enough nap. "
+			if("workout")
+				message = "That was a great workout. "
+			if("radio")
+				message = "That was a good song. "
+			if("tv")
+				message = "That was a good show. "
+			if("coffee")
+				message = "That cup of coffee hit the spot. "
+	message += "[5 - objective_stage] until your next requisition point."
+	to_chat(owner, span_notice(message))
+	var/previous_objective_type = objective_type
+	var/objective_acceptable = FALSE
+	var/mob/living/carbon/human/human_owner = owner.current
+	while(objective_type == previous_objective_type || !objective_acceptable)
+		objective_type = pick(possible_objectives)
+		switch(objective_type)
+			if("shower")
+				if(human_owner.hygiene <= HYGIENE_LEVEL_DIRTY)
+					objective_acceptable = TRUE
+			if("nap", "coffee")
+				if(human_owner.tiredness >= TIREDNESS_TIRED_THRESHOLD)
+					objective_acceptable = TRUE
+			if("workout", "radio", "tv")
+				objective_acceptable = TRUE
+	switch(objective_type)
+		if("shower")
+			to_chat(owner, span_notice("You could probably use a shower..."))
+		if("nap")
+			to_chat(owner, span_notice("Taking a nap on a nice comfortable bed sounds good right about now..."))
+		if("workout")
+			to_chat(owner, span_notice("Why not lift some weights sometime soon?"))
+		if("radio")
+			to_chat(owner, span_notice("Some music would probably improve your mood."))
+		if("tv")
+			to_chat(owner, span_notice("Some TV would probably improve your mood."))
+		if("coffee")
+			to_chat(owner, span_notice("You could go for a cup of joe."))
+
+/datum/action/guard_info
+	name = "Get current objective"
+	button_icon_state = "round_end"
+	show_to_observers = FALSE
+
+/datum/action/guard_info/Trigger(trigger_flags)
+	. = ..()
+	if(!.)
+		return
+
+	for(var/datum/guard_objective/O in GLOB.guard_objectives)
+		if(O.owner == owner.mind)
+			switch(O.objective_type)
+				if("shower")
+					to_chat(owner, span_notice("You could probably use a shower..."))
+				if("nap")
+					to_chat(owner, span_notice("Taking a nap on a nice comfortable bed sounds good right about now..."))
+				if("workout")
+					to_chat(owner, span_notice("Why not lift some weights sometime soon?"))
+				if("radio")
+					to_chat(owner, span_notice("Some music would probably improve your mood."))
+				if("tv")
+					to_chat(owner, span_notice("Some TV would probably improve your mood."))
+				if("coffee")
+					to_chat(owner, span_notice("You could go for a cup of joe."))

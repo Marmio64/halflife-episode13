@@ -348,6 +348,13 @@ GLOBAL_VAR_INIT(crab_character, "solid") //solid by default, right now only used
 		GLOB.deployment_flag_grace_period -= 1 SECONDS
 		return
 	if(GLOB.alert_phases > alerts)
+		if(!(GLOB.alert_phases %% 2)) //if its an even number, basically every 2 alerts nets everyone alive a point
+			for(var/X in GLOB.deployment_combine_players)
+				var/client/guard_client = X
+				var/mob/living/carbon/human/H = guard_client.mob
+				var/obj/item/card/id/user_id = locate(/obj/item/card/id) in H.get_all_gear()
+				if(user_id)
+					user_id.registered_account.requisition_points++
 		var/intruderlocation = "Unknown Area"
 		for(var/X in GLOB.deployment_rebel_players)
 			var/client/intruder_client = X

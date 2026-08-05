@@ -144,6 +144,10 @@
 			if(HAS_TRAIT(user, TRAIT_STIMMED))
 				user.mind.adjust_experience(/datum/skill/athletics, WORKOUT_XP * 0.25)
 			user.apply_status_effect(/datum/status_effect/exercised, EXERCISE_STATUS_DURATION)
+			if(HAS_TRAIT(user, TRAIT_INTRUDER_GUARD))
+				for(var/datum/guard_objective/O in GLOB.guard_objectives)
+					if(O.owner == user.mind && O.objective_type == "workout")
+						O.get_new_objective()
 
 	end_workout()
 
