@@ -105,7 +105,7 @@
 
 //Miss allies if nearby them
 /obj/projectile/bullet/pulse/heavy/on_hit(atom/target, blocked = 0, pierce_hit)
-	if(isliving(target) && 47 <= range) //if the round has travelled 4 or less tiles, it can miss allies
+	if(isliving(target) && 47 <= range) //if the round has travelled 4 or less tiles, it can bypass allies
 		var/mob/living/victim = target
 		if(victim.deployment_faction == COMBINE_DEPLOYMENT_FACTION || HAS_TRAIT(victim, TRAIT_MINDSHIELD)) //if mindshielded or on the combine faction
 			return BULLET_ACT_FORCE_PIERCE
@@ -115,7 +115,7 @@
 /obj/projectile/bullet/flechette
 	name = "flechette"
 	icon_state = "flechette"
-	damage = 24
+	damage = 25
 	armour_penetration = 20
 	wound_bonus = -10
 	bare_wound_bonus = 5

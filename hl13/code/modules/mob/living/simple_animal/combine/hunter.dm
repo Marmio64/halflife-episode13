@@ -50,8 +50,8 @@
 	cmode_music = 'hl13/sound/music/combat/huntingparty.ogg' //practically a requirement
 
 /mob/living/simple_animal/hostile/halflife/hunter/deployment
-	maxHealth = 175
-	health = 175
+	maxHealth = 180
+	health = 180
 	harm_intent_damage = 19
 	obj_damage = 24
 	speed = -0.35
@@ -60,7 +60,7 @@
 	..()
 	if(stat)
 		return
-	adjustHealth(-maxHealth*0.01) //1.75 health every 2 seconds
+	adjustHealth(-maxHealth*0.01) //1.8 health every 2 seconds
 
 /mob/living/simple_animal/hostile/halflife/hunter/deployment/Initialize(mapload)
 	. = ..()

@@ -199,6 +199,8 @@ GLOBAL_VAR_INIT(crab_character, "solid") //solid by default, right now only used
 				H.equipOutfit(/datum/outfit/deployment_loadout/intruder/boss/liquid)
 			if(GLOB.crab_character == "bigboss")
 				H.equipOutfit(/datum/outfit/deployment_loadout/intruder/boss/end)
+			if(GLOB.crab_character == "venom")
+				H.equipOutfit(/datum/outfit/deployment_loadout/intruder/boss/bullsquid) //placeholder
 			H.regenerate_icons()
 			for(var/client/X in GLOB.deployment_combine_players)
 				var/mob/living/carbon/human/H_player = X.mob
@@ -209,6 +211,8 @@ GLOBAL_VAR_INIT(crab_character, "solid") //solid by default, right now only used
 				if(GLOB.crab_character == "old")
 					SEND_SOUND(H_player, 'hl13/sound/voice/solid/liquidnotover.ogg')
 				if(GLOB.crab_character == "bigboss")
+					SEND_SOUND(H_player, 'hl13/sound/effects/intruderspecial.ogg') //placeholder
+				if(GLOB.crab_character == "venom")
 					SEND_SOUND(H_player, 'hl13/sound/effects/intruderspecial.ogg') //placeholder
 				if(HAS_TRAIT(H_player, TRAIT_THE_INTRUDER))
 					to_chat(H_player, "<span class='redtext big'>An elite unit who you've encountered in the past has come back to settle the score!</span>")
@@ -223,6 +227,9 @@ GLOBAL_VAR_INIT(crab_character, "solid") //solid by default, right now only used
 						to_chat(H_player, span_notice("Watch out for his punishing move!"))
 					if(GLOB.crab_character == "bigboss")
 						to_chat(H_player, span_notice("Don't get shot by his tranq rifle!"))
+					if(GLOB.crab_character == "venom") //placeholder stuff
+						H_player.cmode_music = 'hl13/sound/music/combat/sinsofthefather.ogg'
+						to_chat(H_player, span_notice("Watch out for his ricochet!"))
 					to_chat(H_player, span_notice("You've been granted the ability to procure rations to help you fight."))
 					tasty = new(H_player)
 					tasty.Grant(H_player)

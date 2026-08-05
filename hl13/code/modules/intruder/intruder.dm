@@ -9,6 +9,7 @@
 			/datum/outfit/deployment_loadout/intruder/solid/raiden,
 			/datum/outfit/deployment_loadout/intruder/solid/old,
 			/datum/outfit/deployment_loadout/intruder/solid/bigboss,
+			/datum/outfit/deployment_loadout/intruder/solid/venom,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -23,6 +24,8 @@
 		GLOB.crab_character = "bigboss"
 	if(outfit_choice == /datum/outfit/deployment_loadout/intruder/solid/raiden)
 		GLOB.crab_character = "raiden"
+	if(outfit_choice == /datum/outfit/deployment_loadout/intruder/solid/venom)
+		GLOB.crab_character = "venom"
 	..()
 
 /datum/outfit/deployment_loadout/intruder/solid
@@ -256,12 +259,67 @@
 	H.dna.species.stunmod = 0.25
 	H.mind?.adjust_experience(/datum/skill/scavenging, 2500)
 
+///The tragic phantom themself. Despite their best efforts, they're arguably the most evil and violent one here.
+///Has an instant stamcrit shock useful for direct combat and slightly more damage+pain resistance. Moves a tiny bit slower than Solid Crab and has no decoy ability.
+/datum/outfit/deployment_loadout/intruder/solid/venom
+	faction = REBEL_DEPLOYMENT_FACTION
+	name = "Venom Crab"
+	display_name = "Venom Crab"
+	desc = "The body double of the legendary Colossal Cell Leader, formerly known as 'Naked Crab'. Despite their split from the PLF, they're doing one last mission with them as a favor."
+
+	head = /obj/item/clothing/head/costume/snakeeater/solid/venom
+	glasses = /obj/item/clothing/glasses/thermal/eyepatch/solid
+	mask = /obj/item/cigarette/cigar/havana/venomcrab
+	uniform = /obj/item/clothing/under/syndicate/combat
+	suit = /obj/item/clothing/suit/armor/halflife/milvest/solid/venom
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
+	r_pocket = /obj/item/lighter
+	gloves = /obj/item/clothing/gloves/color/black
+	ears = /obj/item/radio/headset
+
+	r_hand = /obj/item/choice_beacon/intruder_snake_loadout
+
+	combat_music = 'hl13/sound/music/combat/extractingpaz.ogg'
+
+	spells_to_add = list(/datum/action/cooldown/spell/touch/venom_shock)
+
+	extra_end = 10
+	extra_dex = 5
+	extra_str = 10
+
+/datum/outfit/deployment_loadout/intruder/solid/venom/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.set_haircolor("#805602", update = FALSE)
+	H.set_facial_haircolor("#805602", update = FALSE)
+	H.skin_tone = "caucasian2"
+	H.set_hairstyle("Combover", update = TRUE)
+	H.set_facial_hairstyle("Beard (Cropped Fullbeard)", update = TRUE)
+	H.update_body(1)
+	H.fully_replace_character_name(H.real_name,"Venom Crab")
+	H.death_sound = 'hl13/sound/effects/venomsnakedeath.ogg'
+
+	ADD_TRAIT(H, TRAIT_LESSPAIN_MINOR, OUTFIT_TRAIT) //venom snake is slightly used to the pain. the... phantom pain.
+	H.physiology.damage_resistance += 15 //15% physical damage resistance across the board
+
+	var/obj/item/bodypart/replacement = new /obj/item/bodypart/arm/left/robot/advanced()
+	H.return_and_replace_bodypart(replacement, special = TRUE)
+
+	var/obj/item/organ/old_organ = H.get_organ_slot(ORGAN_SLOT_TONGUE)
+	var/obj/item/organ/tongue/solid/venom/new_tongue = new()
+	new_tongue.Insert(H)
+	qdel(old_organ)
+
 //////// clothing/gear for the operators
 
 /obj/item/clothing/head/costume/snakeeater/solid
 	name = "Sneaking Bandana"
 	desc = "A blue bandana. You look quite solid with this bandana on, but unfortunately it doesn't provide infinite ammo."
 	armor_type = /datum/armor/kevlararmor
+
+/obj/item/clothing/head/costume/snakeeater/solid/venom
+	name = "Shrapnel Horn"
+	desc = "A gruesome piece of shrapnel stuck in your head, getting in the way of wearing things on top of your head."
+	icon_state = "snake_horn"
 
 /obj/item/clothing/glasses/thermal/eyepatch/solid
 	name = "Sneaking Eyepatch"
@@ -317,6 +375,9 @@
 	name = "Sneaking Suit"
 	desc = "Provides decent armor without slowing you down."
 	slowdown = -0.35 //you're pretty quick when you need to be, but low dexterity doesn't let you run for very long
+
+/obj/item/clothing/suit/armor/halflife/milvest/solid/venom
+	slowdown = -0.3 //tiny bit slower
 
 /obj/item/clothing/suit/armor/halflife/milvest/solid/old
 	name = "CrabCamo Suit"
@@ -705,7 +766,7 @@
 
 /datum/action/cooldown/spell/intruder_heal
 	name = "Persevere"
-	desc = "Muster the willpower to keep going, restoring your stamina and health. Makes an audible sound."
+	desc = "Muster the willpower to keep going, restoring your stamina and health. Makes an audible sound, and has a short windup."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "medkit"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
@@ -713,6 +774,18 @@
 	cooldown_time = 120 SECONDS
 	spell_requirements = NONE
 	antimagic_flags = NONE
+
+/datum/action/cooldown/spell/intruder_heal/before_cast(atom/cast_on)
+	. = ..()
+	if(. & SPELL_CANCEL_CAST)
+		return
+	if(!isliving(cast_on))
+		return SPELL_CANCEL_CAST
+
+	var/mob/living/user = cast_on
+
+	if(!do_after(user, 2 SECONDS, cast_on))
+		return SPELL_CANCEL_CAST
 
 /datum/action/cooldown/spell/intruder_heal/cast(mob/living/cast_on)
 	. = ..()
@@ -744,6 +817,64 @@
 /datum/action/cooldown/spell/conjure_item/random_intruder/New(Target) //starts on cooldown
 	. = ..()
 	StartCooldown()
+
+/datum/action/cooldown/spell/touch/venom_shock
+	name = "Shock Touch"
+	desc = "Channel electricity through your bionic arm to instantly incapacitate guards. Has a lesser effect on bosses."
+	button_icon_state = "zap"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+	sound = 'sound/items/weapons/zapbang.ogg'
+	cooldown_time = 15 SECONDS
+	invocation_type = INVOCATION_NONE
+	spell_requirements = NONE
+	antimagic_flags = NONE
+
+	hand_path = /obj/item/melee/touch_attack/venom_shock
+	draw_message = span_notice("You channel electricity into your hand.")
+	drop_message = span_notice("You let the electricity from your hand dissipate.")
+
+/datum/action/cooldown/spell/touch/venom_shock/cast_on_hand_hit(obj/item/melee/touch_attack/hand, atom/victim, mob/living/carbon/caster)
+	if(iscarbon(victim))
+		var/mob/living/carbon/carbon_victim = victim
+		if(carbon_victim.electrocute_act(10, caster, 1, SHOCK_NOGLOVES | SHOCK_NOSTUN))//doesn't stun. never let this stun
+
+			var/obj/item/bodypart/affecting = carbon_victim.get_bodypart(carbon_victim.get_random_valid_zone(caster.zone_selected))
+			var/armor_block = carbon_victim.run_armor_check(affecting, ENERGY)
+
+			if(HAS_TRAIT(carbon_victim, TRAIT_INTRUDER_OCELOT))
+				carbon_victim.apply_damage(50, STAMINA, def_zone = affecting, blocked = armor_block)
+			else
+				carbon_victim.apply_damage(200, STAMINA, def_zone = affecting, blocked = armor_block)
+				carbon_victim.adjust_staggered_up_to(STAGGERED_SLOWDOWN_LENGTH * 2, 10 SECONDS)
+
+			carbon_victim.dropItemToGround(carbon_victim.get_active_held_item())
+			carbon_victim.dropItemToGround(carbon_victim.get_inactive_held_item())
+			carbon_victim.adjust_confusion(10 SECONDS)
+			carbon_victim.visible_message(
+				span_danger("[caster] electrocutes [victim]!"),
+				span_userdanger("[caster] electrocutes you!"),
+			)
+			return TRUE
+
+	else if(isliving(victim))
+		var/mob/living/living_victim = victim
+		if(living_victim.electrocute_act(15, caster, 1, SHOCK_NOSTUN)) //We do damage here because non-carbon mobs typically ignore stamina damage.
+			living_victim.visible_message(
+				span_danger("[caster] electrocutes [victim]!"),
+				span_userdanger("[caster] electrocutes you!"),
+			)
+			living_victim.adjust_staggered_up_to(STAGGERED_SLOWDOWN_LENGTH * 2, 10 SECONDS)
+			return TRUE
+
+	to_chat(caster, span_warning("The electricity doesn't seem to affect [victim]..."))
+	return TRUE
+
+/obj/item/melee/touch_attack/venom_shock
+	name = "\improper shock touch"
+	desc = "Whoever you touch is going to be in a world of pain."
+	icon = 'icons/obj/weapons/hand.dmi'
+	icon_state = "zapper"
+	inhand_icon_state = "zapper"
 
 /datum/action/cooldown/spell/conjure_item/intruder_decoy
 	name = "Summon Decoy Mannequin"
@@ -980,6 +1111,10 @@
 		"I want you" = 'hl13/sound/voice/solid/raidenwantsyou.ogg',
 		"Whatever" = 'hl13/sound/voice/solid/raidenwhatever.ogg',
 	)
+	var/static/list/venom_voicelines = list(
+		"Kept you waiting, huh" = 'hl13/sound/voice/solid/venomkeptyouwaiting.ogg',
+		"Rest in peace" = 'hl13/sound/voice/solid/venomrestinpeace.ogg',
+	)
 
 	var/operativetype = "Solid"
 
@@ -994,6 +1129,10 @@
 /obj/item/organ/tongue/solid/raiden
 	actions_types = list(/datum/action/item_action/getreal, /datum/action/item_action/nochance, /datum/action/item_action/iwantyou, /datum/action/item_action/whatever)
 	operativetype = "Raiden"
+
+/obj/item/organ/tongue/solid/venom
+	actions_types = list(/datum/action/item_action/waiting, /datum/action/item_action/restinpeace)
+	operativetype = "Venom"
 
 /obj/item/organ/tongue/solid/proc/can_use(mob/user)
 	return istype(user) && !user.incapacitated
@@ -1023,6 +1162,10 @@
 		iwantyou()
 	if(istype(action, /datum/action/item_action/whatever))
 		whatever()
+	if(istype(action, /datum/action/item_action/venomwaiting))
+		venomwaiting()
+	if(istype(action, /datum/action/item_action/restinpeace))
+		restinpeace()
 
 /obj/item/organ/tongue/solid/modify_speech(datum/source, list/speech_args)
 	var/full_message = speech_args[SPEECH_MESSAGE]
@@ -1035,6 +1178,11 @@
 		for(var/lines in raiden_voicelines)
 			if(findtext(full_message, lines))
 				playsound(source, raiden_voicelines[lines], 50, FALSE)
+				return // only play the first.
+	else if(operativetype == "Venom")
+		for(var/lines in venom_voicelines)
+			if(findtext(full_message, lines))
+				playsound(source, venom_voicelines[lines], 50, FALSE)
 				return // only play the first.
 	else
 		for(var/lines in snake_voicelines)
@@ -1211,6 +1359,34 @@
 	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
 
 	usr.say("Whatever!", forced = src.name)
+
+/datum/action/item_action/venomwaiting
+	name = "Kept you waiting, huh?"
+
+/obj/item/organ/tongue/solid/verb/venomwaiting()
+	set category = "Object"
+	set name = "Kept you waiting, huh?"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Kept you waiting, huh?", forced = src.name)
+
+/datum/action/item_action/restinpeace
+	name = "Rest in peace..."
+
+/obj/item/organ/tongue/solid/verb/restinpeace()
+	set category = "Object"
+	set name = "Rest in peace..."
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Rest in peace...", forced = src.name)
 
 #undef PHRASE_COOLDOWN
 

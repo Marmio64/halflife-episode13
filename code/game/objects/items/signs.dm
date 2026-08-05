@@ -4,7 +4,7 @@
 	inhand_icon_state = "picket"
 	name = "blank picket sign"
 	desc = "It's blank."
-	force = 5
+	force = 8
 	w_class = WEIGHT_CLASS_BULKY
 	attack_verb_continuous = list("bashes", "smacks")
 	attack_verb_simple = list("bash", "smack")

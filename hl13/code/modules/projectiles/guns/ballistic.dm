@@ -167,7 +167,7 @@
 /obj/item/gun/ballistic/automatic/m4a1/famas/crab
 	name = "\improper Masterwork FAMAS G2 Rifle"
 	desc = "A French-made bullpup rifle from the 1990s, made as an upgraded to the FAMAS F1 model. It shares many similarities to the M4A1, and is able to use the same magazines as it does. Boasts an impressive rate of fire, but relatively low accuracy. This one looks in pretty good shape, and somehow more powerful. It's also capable of taking a suppressor."
-	projectile_damage_multiplier = 1.5
+	projectile_damage_multiplier = 1.4
 	can_suppress = TRUE
 	spawnwithmagazine = FALSE //OSP
 
@@ -370,7 +370,6 @@
 	weapon_weight = WEAPON_HEAVY
 	fire_delay = 18
 	w_class = WEIGHT_CLASS_BULKY
-	slowdown = 0.25
 
 	var/after_shot_delay = 0.8 SECONDS
 
@@ -672,6 +671,7 @@
 	else if(LAZYACCESS(params2list(params), LEFT_CLICK))
 		altfire = FALSE
 		burst_size = 1
+		fire_delay = initial(fire_delay)
 	onefreebullet = FALSE
 	return ..()
 
@@ -682,15 +682,15 @@
 		rack_delay = 8
 		recent_rack = world.time + rack_delay
 		rack(user)
-		projectile_damage_multiplier = 0.5
+		projectile_damage_multiplier = (initial(projectile_damage_multiplier)*0.5)
 	else if(onefreebullet)
 		onefreebullet = FALSE
-		projectile_damage_multiplier = 1
+		projectile_damage_multiplier = initial(projectile_damage_multiplier)
 
 /obj/item/gun/ballistic/shotgun/spas12/rack()
 	..()
 	if(!onefreebullet)
-		rack_delay = 5
+		rack_delay = initial(rack_delay)
 
 /obj/item/ammo_box/magazine/internal/shot/com/spas12
 	name = "spas12 internal magazine"

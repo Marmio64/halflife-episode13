@@ -158,6 +158,20 @@
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
 
+/// plf equivalent to the above refugee guard
+
+/mob/living/basic/trooper/rebel/mp7/refugee/plf
+	name = "Polish Liberation Front Guardsman"
+	desc = "A masked trooper of the PLF, standing vigil. An imposing pre-war rifle is cradled in their gloved hands, ready to turn towards you."
+	ai_controller = /datum/ai_controller/basic_controller/trooper/ranged/burst/plftraderguard
+	loot = list(/obj/effect/mob_spawn/corpse/human/plf_trooper)
+	mob_spawner = /obj/effect/mob_spawn/corpse/human/plf_trooper
+	r_hand = /obj/item/gun/ballistic/automatic/servicerifle/wood
+	casingtype = /obj/item/ammo_casing/a556
+	ranged_cooldown = 1 SECONDS
+	burst_shots = 3
+	projectilesound = 'sound/items/weapons/gun/rifle/shot.ogg'
+
 /// blackmarket dealer /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /mob/living/basic/trader/halflife/blackmarket
 	name = "Black Market Dealer"
@@ -271,7 +285,7 @@
 /datum/outfit/plf_recruiter
 	name = "Polish Liberation Front Recruiter"
 
-	uniform = /obj/item/clothing/under/citizen/refugee
+	uniform = /obj/item/clothing/under/syndicate/camo/halflife //officer, even though lower-ranking, so they get pre-war fatigues
 	suit = /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket
 	head = /obj/item/clothing/head/beret/sec/poland
 	shoes = /obj/item/clothing/shoes/boots
@@ -555,6 +569,25 @@
 		"Just don't try anything.",
 		"Hurry up, then.",
 		"I'll see her again one day...",
+	)
+
+/datum/ai_planning_subtree/random_speech/plftraderguard
+	speech_chance = 4
+	emote_see = list("checks the seal on their mask.", "yawns.", "inspects their rifle.", "looks around.")
+	speak = list(
+		"Don't do anything stupid",
+		"Mmmmmm.",
+		"Can't wait to ship back home.",
+		"Poland is not yet dead.",
+		"I've got my eye on you.",
+	)
+
+/datum/ai_controller/basic_controller/trooper/ranged/burst/plftraderguard
+	planning_subtrees = list(
+		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trooper_burst,
+		/datum/ai_planning_subtree/travel_to_point/and_clear_target/reinforce,
+		/datum/ai_planning_subtree/random_speech/plftraderguard,
 	)
 
 /datum/ai_controller/basic_controller/trooper/ranged/burst/rebel/refugeeguard

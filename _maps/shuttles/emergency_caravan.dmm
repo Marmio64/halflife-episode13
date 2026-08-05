@@ -12,8 +12,13 @@
 /turf/open/floor/plating/indoor/carpet/green,
 /area/shuttle/escape)
 "aS" = (
-/obj/structure/shipping_container/vitezstvi/flags,
-/turf/open/floor/plating/indoor/metal/plate,
+/obj/machinery/atm,
+/obj/structure/table/halflife/no_smooth/large/crafting/tinkerbench,
+/turf/open/floor/plating/indoor/metal/walkway,
+/area/shuttle/escape)
+"aW" = (
+/obj/structure/sign/poster/halflife/rebel/plf/tyrant,
+/turf/closed/wall/halflife/metal/weak/old,
 /area/shuttle/escape)
 "ba" = (
 /obj/item/hl13_small_flag/poland,
@@ -39,6 +44,10 @@
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/metal/plate,
+/area/shuttle/escape)
+"cr" = (
+/obj/structure/halflife/trash/garbage/dumpster/crate,
+/turf/open/floor/plating/indoor/metal/walkway,
 /area/shuttle/escape)
 "cI" = (
 /obj/structure/chair/halflife/metal/stool,
@@ -90,10 +99,10 @@
 /turf/closed/wall/halflife/metal/weak/old,
 /area/shuttle/escape)
 "kV" = (
-/mob/living/basic/trooper/rebel/mp7/refugee,
 /obj/structure/chair/halflife/metal/folding{
 	dir = 4
 	},
+/mob/living/basic/trooper/rebel/mp7/refugee/plf,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "lL" = (
@@ -118,8 +127,8 @@
 /turf/open/floor/plating/indoor/carpet/green,
 /area/shuttle/escape)
 "na" = (
-/obj/structure/table/halflife/no_smooth/large/crafting/tinkerbench,
-/turf/open/floor/plating/indoor/metal/plate,
+/obj/structure/halflife/trash/wood,
+/turf/open/floor/plating/indoor/metal/walkway,
 /area/shuttle/escape)
 "oW" = (
 /obj/structure/guncase,
@@ -156,6 +165,10 @@
 	},
 /turf/open/floor/plating/indoor/metal/grate,
 /area/shuttle/escape)
+"qo" = (
+/obj/structure/sign/poster/halflife/rebel/plf/future,
+/turf/closed/wall/halflife/metal/weak/old,
+/area/shuttle/escape)
 "qQ" = (
 /obj/item/hl13_small_flag/poland,
 /obj/machinery/door/poddoor/shutters/window/preopen{
@@ -175,6 +188,20 @@
 "rD" = (
 /obj/structure/table/halflife/no_smooth/wood,
 /obj/item/poster/halflife/rebel,
+/obj/item/poster/halflife/rebel,
+/obj/item/poster/halflife/rebel,
+/obj/item/poster/halflife/rebel,
+/turf/open/floor/plating/indoor/metal/plate,
+/area/shuttle/escape)
+"rZ" = (
+/obj/item/radio/off/halflife,
+/obj/item/clothing/mask/gas/hl2/military/hardened,
+/obj/item/clothing/under/syndicate/camo/halflife,
+/obj/item/stack/kevlar/five,
+/obj/structure/closet/crate/halflife{
+	name = "trader footlocker";
+	desc = "A crate containing the trader's belongings that they do not keep on person. A certain caravan manager would probably be mad if you stole from this, but..."
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "sd" = (
@@ -207,10 +234,6 @@
 "uL" = (
 /obj/structure/dresser,
 /turf/open/floor/plating/indoor/grooved2,
-/area/shuttle/escape)
-"uY" = (
-/obj/structure/shipping_container/great_northern,
-/turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "wE" = (
 /obj/structure/closet/crate/halflife{
@@ -275,16 +298,16 @@
 /area/shuttle/escape)
 "Cy" = (
 /obj/structure/closet/cabinet,
-/obj/item/stack/spacecash/c10,
-/obj/item/stack/spacecash/c10,
+/obj/item/stack/spacecash/c1/twenty,
+/obj/item/stack/spacecash/c1/twenty,
 /obj/item/clothing/head/fedora,
 /obj/item/clothing/under/suit/black_really,
-/obj/item/stack/spacecash/c10,
-/obj/item/stack/spacecash/c10,
-/obj/item/stack/spacecash/c10,
-/obj/item/trash/can/food/halflife/beans,
-/obj/item/trash/can/food/halflife/beans,
-/obj/item/trash/can/food/halflife/beans,
+/obj/item/stack/spacecash/c1/twenty,
+/obj/item/stack/spacecash/c1/twenty,
+/obj/item/stack/spacecash/c1/twenty,
+/obj/item/food/canned/halflife/beans,
+/obj/item/food/canned/halflife/beans,
+/obj/item/food/canned/halflife/beans,
 /obj/item/reagent_containers/cup/soda_cans/breenwater/green,
 /obj/item/reagent_containers/cup/soda_cans/breenwater/green,
 /turf/open/floor/plating/indoor/carpet/green,
@@ -346,16 +369,12 @@
 /turf/open/floor/plating/indoor/carpet/green,
 /area/shuttle/escape)
 "Ma" = (
-/obj/structure/closet/crate/halflife{
-	name = "trader footlocker";
-	desc = "A crate containing the trader's belongings that they do not keep on person. A certain caravan manager would probably be mad if you stole from this, but..."
-	},
 /obj/machinery/light/directional/west,
-/obj/item/stack/kevlar/five,
-/obj/item/clothing/under/syndicate/camo/halflife,
-/obj/item/clothing/mask/gas/hl2/military/hardened,
-/obj/item/radio/off/halflife,
 /turf/open/floor/plating/indoor/metal/plate,
+/area/shuttle/escape)
+"MX" = (
+/obj/structure/sign/poster/halflife/rebel/plf/soldier,
+/turf/closed/wall/halflife/metal/weak/old,
 /area/shuttle/escape)
 "No" = (
 /obj/machinery/door/unpowered/halflife/seethrough/mirrored/grate{
@@ -397,7 +416,6 @@
 /turf/open/floor/plating/indoor/metal/walkway,
 /area/shuttle/escape)
 "Qh" = (
-/obj/structure/halflife/trash/garbage/dumpster/crate,
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
@@ -426,6 +444,10 @@
 	lockid = "caravan"
 	},
 /turf/open/floor/plating/indoor/metal/grate,
+/area/shuttle/escape)
+"WY" = (
+/obj/structure/sign/poster/halflife/rebel/plf/hold,
+/turf/closed/wall/halflife/metal/weak/old,
 /area/shuttle/escape)
 "Xb" = (
 /obj/structure/chair/sofa/hl13bench{
@@ -497,11 +519,11 @@ xi
 Gc
 da
 NO
-aS
-Gc
+rZ
+jE
 Ma
-pO
-FU
+jE
+MX
 FU
 FU
 kV
@@ -529,7 +551,7 @@ Fw
 uf
 Fw
 te
-Fw
+cr
 RZ
 Fw
 Av
@@ -541,7 +563,7 @@ Xk
 tK
 sC
 gm
-FU
+aW
 jZ
 "}
 (4,1,1) = {"
@@ -553,17 +575,17 @@ BW
 TI
 VR
 jE
-na
-uY
+jE
+FU
 pO
 fj
 jE
 jE
 jE
 pO
-jE
-rD
 Pz
+rD
+jE
 Ae
 ba
 FU
@@ -571,7 +593,7 @@ qQ
 Xk
 Xk
 oX
-sC
+Gx
 uL
 FU
 jZ
@@ -584,9 +606,9 @@ Ak
 TI
 PO
 FU
-dJ
-Fw
-Fw
+aS
+na
+FU
 Ga
 PU
 Fw
@@ -603,9 +625,9 @@ sd
 pn
 wZ
 Xk
-Gx
+sC
 yE
-FU
+WY
 jZ
 "}
 (6,1,1) = {"
@@ -617,8 +639,8 @@ lL
 Ca
 FU
 Qh
-jE
-jE
+Gc
+FU
 wE
 jE
 Xb
@@ -629,7 +651,7 @@ Xb
 jE
 mf
 Gc
-FU
+qo
 FU
 dm
 Fm

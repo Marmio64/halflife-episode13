@@ -37,7 +37,8 @@
 /turf/open/floor/iron,
 /area/centcom/tdome/observation)
 "au" = (
-/turf/open/floor/plating/ground/sidewalk,
+/obj/machinery/light/cold/directional/north,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife)
 "av" = (
 /obj/machinery/light/directional/east,
@@ -440,10 +441,8 @@
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/centcom/halflife)
 "eA" = (
-/obj/machinery/computer/cargo{
-	dir = 8
-	},
-/turf/open/floor/plating/ground/sidewalk,
+/obj/machinery/light/cold/directional/south,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife)
 "eG" = (
 /obj/structure/chair/halflife/metal/stool,
@@ -777,7 +776,7 @@
 /turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife)
 "iK" = (
-/turf/closed/wall/halflife/metal,
+/turf/closed/wall/halflife/metal/strong,
 /area/centcom/halflife/ota)
 "iQ" = (
 /obj/structure/table/halflife/metal,
@@ -796,7 +795,7 @@
 /turf/open/floor/plating/indoor/metal/combine/alt2,
 /area/centcom/halflife/ota)
 "js" = (
-/turf/open/floor/plating/ground/brickroad,
+/turf/closed/wall/halflife/concrete/bunker,
 /area/centcom/halflife)
 "ju" = (
 /obj/machinery/light/small/directional/west,
@@ -850,6 +849,12 @@
 	},
 /turf/open/floor/plating/indoor/trainfloor,
 /area/centcom/halflife)
+"jT" = (
+/obj/machinery/computer/cargo{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife)
 "kd" = (
 /obj/structure/table/reinforced,
 /obj/machinery/button/showtime{
@@ -889,7 +894,6 @@
 /turf/open/floor/iron,
 /area/centcom/tdome/observation)
 "kB" = (
-/obj/structure/closet/crate/freezer,
 /obj/item/storage/box/halflife/ration/bestration,
 /obj/item/storage/box/halflife/ration/betterration,
 /obj/item/storage/box/halflife/ration/loyaltyration,
@@ -898,6 +902,7 @@
 /obj/item/storage/box/halflife/ration/ration,
 /obj/item/storage/box/halflife/ration/ration,
 /obj/item/storage/box/halflife/ration/ration,
+/obj/structure/closet/crate/freezer/halflife,
 /turf/open/floor/plating/indoor/metal/pipe{
 	dir = 1
 	},
@@ -937,7 +942,7 @@
 /turf/open/floor/plating/ground/dirt/alt,
 /area/centcom/halflife/relocation_city)
 "lr" = (
-/turf/closed/wall/halflife/metal,
+/turf/closed/wall/halflife/metal/strong,
 /area/centcom/halflife)
 "lt" = (
 /turf/open/floor/plating/indoor/metal/combine/alt2,
@@ -1107,7 +1112,7 @@
 /turf/open/halflife/water/deep,
 /area/centcom/halflife/deepwaters)
 "nS" = (
-/turf/closed/wall/halflife/metal,
+/turf/closed/wall/halflife/metal/strong,
 /area/centcom/central_command_areas/prison)
 "nW" = (
 /turf/closed/indestructible/fakeglass,
@@ -1374,7 +1379,8 @@
 /turf/cordon,
 /area/misc/start)
 "rI" = (
-/obj/structure/halflife/fence/wire/barb,
+/obj/structure/halflife/fence/vertical/wire/west/barb,
+/obj/structure/halflife/fence/wire/end/west/barb,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/centcom/halflife)
 "rJ" = (
@@ -1717,6 +1723,18 @@
 /obj/machinery/turnstile/brig/halflife/forcefield/nodirectional,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/centcom/halflife/ota)
+"vy" = (
+/obj/docking_port/stationary{
+	dir = 8;
+	height = 25;
+	json_key = "cargo";
+	name = "Overwatch Logistics Base";
+	shuttle_id = "cargo_away";
+	width = 20;
+	override_can_dock_checks = 1
+	},
+/turf/open/floor/plating/indoor/concrete,
+/area/centcom/halflife)
 "vU" = (
 /obj/structure/table/halflife/wood/bar,
 /obj/item/reagent_containers/cup/glass/bottle/beer/light,
@@ -1776,12 +1794,8 @@
 /turf/open/floor/iron,
 /area/centcom/tdome/arena)
 "wB" = (
-/obj/structure/no_effect_signpost{
-	name = "extremely accusative signpost";
-	desc = "What the fuck are you doing here? You should ahelp immediately and tell the admins how you smuggled yourself onboard the cargo train."
-	},
-/obj/machinery/light/cold/directional/east,
-/turf/open/floor/plating/ground/sidewalk,
+/obj/machinery/light/cold/directional/west,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife)
 "wE" = (
 /obj/effect/turf_decal/bot,
@@ -2171,16 +2185,8 @@
 /turf/open/floor/plating/indoor/trainfloor,
 /area/centcom/halflife/ota)
 "Bu" = (
-/obj/docking_port/stationary{
-	dir = 8;
-	height = 25;
-	json_key = "cargo";
-	name = "Overwatch Logistics Base";
-	shuttle_id = "cargo_away";
-	width = 20;
-	override_can_dock_checks = 1
-	},
-/turf/open/floor/plating/ground/brickroad,
+/obj/machinery/light/cold/directional/east,
+/turf/open/floor/plating/indoor/concrete/small,
 /area/centcom/halflife)
 "BB" = (
 /obj/structure/table/reinforced,
@@ -2251,6 +2257,13 @@
 	},
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/supplypod/loading/four)
+"Cr" = (
+/obj/structure/no_effect_signpost{
+	name = "extremely accusative signpost";
+	desc = "What the fuck are you doing here? You should ahelp immediately and tell the admins how you smuggled yourself onboard the cargo train."
+	},
+/turf/open/floor/plating/indoor/concrete/small,
+/area/centcom/halflife)
 "Cz" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Thunderdome"
@@ -2918,7 +2931,6 @@
 /turf/closed/indestructible/syndicate,
 /area/centcom/halflife/relocation_city)
 "Lx" = (
-/obj/structure/closet/crate/freezer,
 /obj/item/storage/box/halflife/ration/worstration,
 /obj/item/storage/box/halflife/ration/worstration,
 /obj/item/storage/box/halflife/ration/worstration,
@@ -2926,6 +2938,7 @@
 /obj/item/storage/box/halflife/ration/betterration,
 /obj/item/storage/box/halflife/ration/bestration,
 /obj/item/storage/box/halflife/ration/badration,
+/obj/structure/closet/crate/freezer/halflife,
 /turf/open/floor/plating/indoor/metal/pipe{
 	dir = 1
 	},
@@ -3108,8 +3121,8 @@
 "Ni" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal{
 	dir = 8;
-	keylock = 1;
-	lockid = "overwatch_exchange"
+	lockid = "overwatch_exchange";
+	keylock = 1
 	},
 /turf/open/floor/plating/indoor/trainfloor,
 /area/centcom/halflife/ota)
@@ -53421,8 +53434,8 @@ gA
 gA
 gA
 gA
-gA
-gA
+aa
+aa
 aa
 aa
 aa
@@ -53664,22 +53677,22 @@ aa
 aa
 aa
 gA
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
+js
+js
+js
+js
+iz
+iz
+iz
+iz
+iz
+js
+js
+js
+js
 gA
+aa
+aa
 aa
 aa
 aa
@@ -53921,22 +53934,22 @@ aa
 aa
 aa
 gA
-kj
-au
-au
-au
-au
-au
-au
-au
-au
-au
-au
-au
-au
-au
-kj
+js
+uy
+uy
+wB
+RI
+lv
+RI
+lv
+RI
+wB
+uy
+uy
+js
 gA
+aa
+aa
 aa
 aa
 aa
@@ -54178,22 +54191,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -54435,22 +54448,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -54692,22 +54705,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -54949,22 +54962,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -55206,22 +55219,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -55463,22 +55476,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -55720,22 +55733,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -55977,22 +55990,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+eA
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -56234,22 +56247,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -56491,22 +56504,22 @@ aa
 aa
 aa
 gA
-kj
-au
-js
-js
-js
-js
-js
-js
-js
-js
-js
-js
 js
 au
-kj
+jT
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
+js
 gA
+aa
+aa
 aa
 aa
 aa
@@ -56748,22 +56761,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+Cr
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -57005,22 +57018,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -57262,22 +57275,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -57519,22 +57532,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -57776,22 +57789,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -58033,22 +58046,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+RI
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-Bu
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -58290,22 +58303,22 @@ aa
 aa
 aa
 gA
-kj
-au
 js
+uy
+uy
+uy
+RI
+lv
+vy
+lv
+RI
+uy
+uy
+uy
 js
-js
-js
-js
-js
-js
-js
-js
-js
-js
-au
-kj
 gA
+aa
+aa
 aa
 aa
 aa
@@ -58547,22 +58560,22 @@ aa
 aa
 aa
 gA
-kj
-au
-au
-au
-au
-eA
-wB
-au
-au
-au
-au
-au
-au
-au
-kj
+js
+uy
+uy
+Bu
+RI
+lv
+RI
+lv
+RI
+Bu
+uy
+uy
+js
 gA
+aa
+aa
 aa
 aa
 aa
@@ -58804,22 +58817,22 @@ aa
 aa
 aa
 gA
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
-kj
+js
+js
+js
+js
+iz
+iz
+iz
+iz
+iz
+js
+js
+js
+js
 gA
+aa
+aa
 aa
 aa
 aa
@@ -59075,8 +59088,8 @@ gA
 gA
 gA
 gA
-gA
-gA
+aa
+aa
 aa
 aa
 aa

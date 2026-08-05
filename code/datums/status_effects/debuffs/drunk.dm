@@ -4,7 +4,7 @@
 #define BALLMER_PEAK_WINDOWS_ME 26
 
 /// The threshld which determine if someone is tipsy vs drunk
-#define TIPSY_THRESHOLD 10
+#define TIPSY_THRESHOLD 15
 
 /**
  * The drunk status effect.
@@ -38,9 +38,9 @@
 
 	// .01s are used in case the drunk value ends up to be a small decimal.
 	switch(drunk_value)
-		if(11 to 21)
+		if(16 to 25)
 			return span_warning("[owner.p_They()] [owner.p_are()] slightly flushed.")
-		if(21.01 to 41)
+		if(25.01 to 41)
 			return span_warning("[owner.p_They()] [owner.p_are()] flushed.")
 		if(41.01 to 51)
 			return span_warning("[owner.p_They()] [owner.p_are()] quite flushed and [owner.p_their()] breath smells of alcohol.")
@@ -162,13 +162,17 @@
 		if(drunk_value > BALLMER_PEAK_WINDOWS_ME) // by this point you're into windows ME territory
 			owner.say(pick_list_replacements(VISTA_FILE, "ballmer_windows_me_msg"), forced = "ballmer")
 
-	// Drunk slurring scales in intensity based on how drunk we are -at 16 you will likely not even notice it,
+	// Drunk slurring scales in intensity based on how drunk we are -at 18 you will likely not even notice it,
 	// but when we start to scale up you definitely will
-	if(drunk_value >= 16)
+	if(drunk_value >= 18)
 		owner.adjust_timed_status_effect(4 SECONDS, /datum/status_effect/speech/slurring/drunk, max_duration = 20 SECONDS)
 
 	// And drunk people will always lose jitteriness
 	owner.adjust_jitter(-6 SECONDS)
+
+	if(drunk_value >= 25 && drunk_value < 60) // hl13 edit. inbetween 25 and 60 drunkenness, bonus stamina recovery and stun resistance.
+		owner.adjustStaminaLoss(-3)
+		owner.AdjustAllImmobility(-5)
 
 	// Over 41, we have a 30% chance to gain confusion, and we will always have 20 seconds of dizziness.
 	if(drunk_value >= 41)
@@ -218,7 +222,7 @@
 		drunk_value -= 70 //So that the drunk personality can spice things up without being killed by liver failure
 		return
 	if(SSshuttle.emergency.mode == SHUTTLE_DOCKED && is_station_level(owner.z))// Don't put us in a deep sleep if the shuttle's here. QoL, mainly.
-		to_chat(owner, span_warning("You're so tired... but you can't miss that shuttle..."))
+		to_chat(owner, span_warning("You're so tired... but you can't miss that train..."))
 	else
 		owner.Sleeping(90 SECONDS)
 
