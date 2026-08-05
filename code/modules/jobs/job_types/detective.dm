@@ -50,7 +50,7 @@
 	id = /obj/item/card/id/advanced/halflife/combine/one
 	id_trim = /datum/id_trim/job/detective
 	ears = /obj/item/radio/headset/civilprotection
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/halflife/conscript
 	gloves = /obj/item/clothing/gloves/fingerless
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection

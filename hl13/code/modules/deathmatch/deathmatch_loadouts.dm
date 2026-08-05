@@ -223,7 +223,7 @@
 	display_name = "Conscript Soldier"
 	desc = "Similarly armed to a rebel marine, you have slightly weaker armor and a slightly weaker weapon, but have an additional grenade."
 
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/halflife/conscript
 	gloves = /obj/item/clothing/gloves/fingerless
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
