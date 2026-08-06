@@ -1128,6 +1128,7 @@
 	var/static/list/venom_voicelines = list(
 		"Kept you waiting, huh" = 'hl13/sound/voice/solid/venomkeptyouwaiting.ogg',
 		"Rest in peace" = 'hl13/sound/voice/solid/venomrestinpeace.ogg',
+		"Dont move" = 'hl13/sound/voice/solid/venomdontmove.ogg',
 	)
 
 	var/operativetype = "Solid"
@@ -1145,7 +1146,7 @@
 	operativetype = "Raiden"
 
 /obj/item/organ/tongue/solid/venom
-	actions_types = list(/datum/action/item_action/waiting, /datum/action/item_action/restinpeace)
+	actions_types = list(/datum/action/item_action/waiting, /datum/action/item_action/restinpeace, /datum/action/item_action/dontmove)
 	operativetype = "Venom"
 
 /obj/item/organ/tongue/solid/proc/can_use(mob/user)
@@ -1180,6 +1181,8 @@
 		venomwaiting()
 	if(istype(action, /datum/action/item_action/restinpeace))
 		restinpeace()
+	if(istype(action, /datum/action/item_action/dontmove))
+		dontmove()
 
 /obj/item/organ/tongue/solid/modify_speech(datum/source, list/speech_args)
 	var/full_message = speech_args[SPEECH_MESSAGE]
@@ -1402,7 +1405,19 @@
 
 	usr.say("Rest in peace...", forced = src.name)
 
-#undef PHRASE_COOLDOWN
+/datum/action/item_action/dontmove
+	name = "Don't move."
+
+/obj/item/organ/tongue/solid/verb/dontmove()
+	set category = "Object"
+	set name = "Don't move."
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Don't. Move.", forced = src.name)
 
 /obj/item/choice_beacon/intruder_snake_loadout
 	name = "equipment delivery beacon"

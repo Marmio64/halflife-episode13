@@ -46,7 +46,8 @@
 	ADD_TRAIT(H, TRAIT_GRABRESISTANCE, OUTFIT_TRAIT) //prevents instant aggro grab cqc chicanery, have a real fight between boss and intruder
 	var/obj/item/organ/eyes/empowered_eyes = H.get_organ_by_type(/obj/item/organ/eyes)
 	if(empowered_eyes)
-		empowered_eyes?.refresh() //needed for the night vision to actually apply
+		empowered_eyes.color_cutoffs = list(40, 40, 40)
+		empowered_eyes.refresh() //needed for the night vision to actually apply
 	RegisterSignal(H, COMSIG_MOB_FIRED_GUN, PROC_REF(reduce_spread))
 	RegisterSignal(H, COMSIG_PROJECTILE_FIRER_BEFORE_FIRE, PROC_REF(apply_ricochet))
 
@@ -125,7 +126,8 @@
 	ADD_TRAIT(H, TRAIT_GRABRESISTANCE, OUTFIT_TRAIT) //prevents instant aggro grab cqc chicanery, have a real fight between boss and intruder
 	var/obj/item/organ/eyes/empowered_eyes = H.get_organ_by_type(/obj/item/organ/eyes)
 	if(empowered_eyes)
-		empowered_eyes?.refresh() //needed for the night vision to actually apply
+		empowered_eyes.color_cutoffs = list(40, 40, 40)
+		empowered_eyes.refresh() //needed for the night vision to actually apply
 
 /datum/outfit/deployment_loadout/intruder/boss/solidus/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -190,7 +192,8 @@
 	ADD_TRAIT(H, TRAIT_GRABRESISTANCE, OUTFIT_TRAIT) //prevents instant aggro grab cqc chicanery, have a real fight between boss and intruder
 	var/obj/item/organ/eyes/empowered_eyes = H.get_organ_by_type(/obj/item/organ/eyes)
 	if(empowered_eyes)
-		empowered_eyes?.refresh() //needed for the night vision to actually apply
+		empowered_eyes.color_cutoffs = list(40, 40, 40)
+		empowered_eyes.refresh() //needed for the night vision to actually apply
 
 /datum/outfit/deployment_loadout/intruder/boss/liquid/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -249,7 +252,8 @@
 	ADD_TRAIT(H, TRAIT_GRABRESISTANCE, OUTFIT_TRAIT) //prevents instant aggro grab cqc chicanery, have a real fight between boss and intruder
 	var/obj/item/organ/eyes/empowered_eyes = H.get_organ_by_type(/obj/item/organ/eyes)
 	if(empowered_eyes)
-		empowered_eyes?.refresh() //needed for the night vision to actually apply
+		empowered_eyes.color_cutoffs = list(40, 40, 40)
+		empowered_eyes.refresh() //needed for the night vision to actually apply
 
 /datum/outfit/deployment_loadout/intruder/boss/end/post_equip(mob/living/carbon/human/H)
 	. = ..()

@@ -606,6 +606,9 @@
 		if(Stongue.operativetype == "Raiden")
 			SEND_SOUND(caster, sound('hl13/sound/voice/solid/raidenfreeze.ogg'))
 			SEND_SOUND(human_victim, sound('hl13/sound/voice/solid/raidenfreeze.ogg'))
+		if(Stongue.operativetype == "Venom")
+			SEND_SOUND(caster, sound('hl13/sound/voice/solid/venomdontmove.ogg'))
+			SEND_SOUND(human_victim, sound('hl13/sound/voice/solid/venomdontmove.ogg'))
 	else
 		SEND_SOUND(caster, sound('hl13/sound/voice/solid/snakefreeze.ogg'))
 		SEND_SOUND(human_victim, sound('hl13/sound/voice/solid/snakefreeze.ogg'))
