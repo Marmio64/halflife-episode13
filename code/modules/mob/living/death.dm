@@ -180,6 +180,10 @@
 			SSticker.tdm_total_deaths++
 
 			if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
+				if(mind)
+					for(var/datum/guard_objective/O in GLOB.guard_objectives)
+						if(O.owner == mind)
+							qdel(O)
 				if(HAS_TRAIT(src, TRAIT_INTRUDER_SQUAD_LEADER) && !HAS_TRAIT(src, TRAIT_SUICIDED))
 					GLOB.bonus_guard_preparedness++
 				if(HAS_TRAIT(src, TRAIT_SUICIDED))

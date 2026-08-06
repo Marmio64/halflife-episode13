@@ -290,6 +290,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 	if(iscarbon(target))
 		var/mob/living/carbon/C = target
 		C.adjust_hygiene(10) //Nice and clean
+		if(HAS_TRAIT(C, TRAIT_INTRUDER_GUARD))
+			for(var/datum/guard_objective/O in GLOB.guard_objectives)
+				if(O.owner == C.mind && O.objective_type == "shower" && C.hygiene >= HYGIENE_LEVEL_NORMAL)
+					O.get_new_objective()
+
 	//HL13 EDIT END
 
 /**

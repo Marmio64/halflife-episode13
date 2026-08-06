@@ -237,6 +237,10 @@
 	H.remove_quirk(/datum/quirk/claustrophobia)
 	H.add_movespeed_mod_immunities(type, /datum/movespeed_modifier/damage_slowdown)
 
+	for(var/datum/guard_objective/O in GLOB.guard_objectives)
+		if(O.owner == H.mind)
+			qdel(O)
+
 
 	if(sus_venter)
 		var/list/spawn_locs = list()
@@ -739,13 +743,23 @@
 	for(var/mob/living/L in T.contents - hit_things - owner)
 		hit_things += L
 		if(!L.body_position == LYING_DOWN)
-			owner.visible_message(span_boldwarning("[owner] cartwheels through [L]!"))
-			if(!HAS_TRAIT(L, TRAIT_INTRUDER_OCELOT))
+			var/obj/item/I_active = L.get_active_held_item()
+			var/obj/item/I_inactive = L.get_inactive_held_item()
+			if(I_active && istype(I_active, /obj/item/shield/riot/ballistic) || I_inactive && istype(I_inactive, /obj/item/shield/riot/ballistic)) //there would be some check behind code here but with how its currently set up (you're always on the same tile) its not possible so for now you just cant cartwheel through shields at all (which is fine)
+				owner.visible_message(span_boldwarning("[owner] fails to cartwheel through [L]!"))
+				to_chat(L, span_userdanger("[owner] tries to cartwheel through you, but you easily shove them to the ground with your shield!"))
+				owner.safe_throw_at(get_turf(owner), 1, 1, src)
+				livingowner.Paralyze(20)
+				livingowner.adjustBruteLoss(5)
+				return
+			else if(!HAS_TRAIT(L, TRAIT_INTRUDER_OCELOT))
+				owner.visible_message(span_boldwarning("[owner] cartwheels through [L]!"))
 				to_chat(L, span_userdanger("[owner] cartwheels through you, sending you to the ground!"))
 				L.safe_throw_at(throwtarget, 1, 1, src)
 				L.Paralyze(20)
 				L.adjustBruteLoss(5) //barely any damage
 			else
+				owner.visible_message(span_boldwarning("[owner] cartwheels through [L]!"))
 				to_chat(L, span_userdanger("[owner] cartwheels through you hard, but you manage to stay upright!"))
 				L.adjustBruteLoss(15) //extra damage so it is still useful against the boss
 			playsound(owner,SFX_SWING_HIT,50,TRUE)

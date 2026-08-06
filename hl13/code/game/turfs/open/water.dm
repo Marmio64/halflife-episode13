@@ -483,3 +483,11 @@
 	watereffect = /obj/effect/overlay/halflife/water/shallow
 	watertop = /obj/effect/overlay/halflife/water/top/shallow
 	depth = 1
+
+//for the big shell map
+/turf/open/chasm/true/no_smooth/fake_water
+	name = "deepest water"
+	desc = "Possibly the deepest water you'll find. Definitely infested with leeches."
+	icon_state = "water_deep"
+	base_icon_state = "water_deep"
+	icon = 'hl13/icons/turf/floor/water.dmi'

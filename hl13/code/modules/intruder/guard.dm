@@ -54,6 +54,10 @@
 	to_chat(H, span_notice("When possible, try to complete some deliveries in order to have future lives better equipped. Head to the entrance zone by using the NAV button in your lower right HUD, click on a delivery truck to take out a box, and bring it to a drop off point dependent on whats in the box, such as the medbay for medicine."))
 	to_chat(H, span_notice("Lastly, keep an eye out for double agents! They're dressed in the same uniform as you, but using your alert radio on them can tell you if they're a traitor or not! Be wary, guessing wrong will make your radio blow up, and even if you guess right your radio will effectively become useless due to a long cooldown."))
 
+	var/datum/guard_objective/objective = new //also dont get rid of these for spies, i think they deserve the right to buy more equipment
+	objective.owner = H.mind
+	objective.get_new_objective()
+
 	ADD_TRAIT(H, TRAIT_NO_FOV_EFFECT, OUTFIT_TRAIT) //so you cant see snakes steps walking up to you
 	ADD_TRAIT(H, TRAIT_INTRUDER_GUARD, OUTFIT_TRAIT) //so you cant see snakes steps walking up to you
 
@@ -99,6 +103,30 @@
 		H.dna.species.stunmod = 0.1
 		var/datum/martial_art/cqc/bigboss = new
 		bigboss.teach(H)
+
+/datum/outfit/deployment_loadout/intruder/guard/post_equip(mob/living/carbon/human/H, visuals_only = FALSE)
+	. = ..()
+
+	var/obj/item/card/id/hid = locate(/obj/item/card/id) in H.get_all_gear()
+
+	var/list/human_memories = H.mind.memories
+	var/datum/memory/key/account/human_key = human_memories[/datum/memory/key/account]
+	var/new_bank_id = (istype(human_key) && human_key.remembered_id) || 11111
+	var/datum/bank_account/account = SSeconomy.bank_accounts_by_id["[new_bank_id]"]
+	account.bank_cards += hid
+	hid.registered_account = account
+
+	var/guard_preparedness = 0 //Guards are better prepared the more alerts there are, or if you've been killing a lot of their friends. Try to be nonlethal as the intruder maybe, and you know, avoid getting caught.
+
+	guard_preparedness += (GLOB.alert_phases)
+	guard_preparedness += SSticker.tdm_combine_deaths
+	guard_preparedness += (GLOB.complete_objectives * 3)
+	guard_preparedness += GLOB.bonus_guard_preparedness
+
+	if(guard_preparedness == 9)
+		account.requisition_points++
+	if(guard_preparedness == 18)
+		account.requisition_points++ //up to two are free for everyone
 
 /obj/item/clothing/suit/armor/halflife/kevlar/guard
 	slowdown = 0.25
@@ -384,6 +412,11 @@
 		alert_time = 3 SECONDS
 
 	if(do_after(user, alert_time, src) && intruder_detected)
+		var/obj/item/card/id/user_id = locate(/obj/item/card/id) in carbie.get_all_gear()
+		if(!(GLOB.alert_phases %% 2)) //they'll automatically get one so only receive one for a total of 2
+			user_id.registered_account.requisition_points++
+		else
+			user_id.registered_account.requisition_points += 2
 		GLOB.alert_phases++
 		user.do_alert_animation()
 		playsound(loc, 'hl13/sound/effects/alert.ogg', 50, FALSE, -5)

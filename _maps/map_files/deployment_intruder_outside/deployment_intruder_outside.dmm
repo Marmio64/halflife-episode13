@@ -9,6 +9,7 @@
 "bs" = (/obj/structure/halflife/pot/plant,/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/indoors/intruder/office)
 "bt" = (/obj/machinery/power/halflife/streetlamphalt,/turf/open/floor/plating/ground/dirt,/area/halflife/indoors/intruder/outside)
 "bz" = (/obj/structure/halflife/barrel/triple/grey/three,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/storagea)
+"bJ" = (/obj/structure/weightmachine,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/intruder/lockerroom)
 "bO" = (/obj/machinery/intruder_deliveryzone/misc_supplies/low_capacity,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/storagea)
 "bU" = (/obj/item/stack/sheet/scrap_metal,/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/intruder/outside)
 "cb" = (/obj/machinery/escape_vent{pixel_y = -32},/obj/effect/landmark/hidden_spawnpoint,/turf/open/floor/plating/indoor/lino,/area/halflife/indoors/intruder/library)
@@ -45,7 +46,7 @@
 "fx" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/indoor/lino,/area/halflife/indoors/intruder/miscellaneous_room)
 "fB" = (/obj/structure/table/halflife/no_smooth/large/wood,/obj/machinery/light/small/directional/north,/turf/open/floor/plating/indoor/carpet,/area/halflife/indoors/intruder/office)
 "fF" = (/turf/closed/wall/halflife/concrete,/area/halflife/indoors/intruder/outside)
-"fG" = (/obj/structure/table/halflife/no_smooth/large/wood/desk,/turf/open/floor/plating/indoor/carpet,/area/halflife/indoors/intruder/office)
+"fG" = (/obj/structure/table/halflife/no_smooth/large/wood/desk,/obj/structure/halflife/tv/tube/tiny{pixel_y = 13},/turf/open/floor/plating/indoor/carpet,/area/halflife/indoors/intruder/office)
 "fL" = (/obj/structure/chair/halflife/metal/blue{dir = 4},/turf/open/floor/plating/indoor/tiled9,/area/halflife/indoors/intruder/medbay)
 "fQ" = (/obj/effect/turf_decal/halflife/covering/wallpaper/red,/obj/effect/turf_decal/halflife/covering/wallpaper/red,/turf/closed/wall/halflife/brick,/area/halflife/indoors/intruder/library)
 "gb" = (/obj/structure/railing/halflife/solo{dir = 1},/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/library)
@@ -114,7 +115,7 @@
 "lV" = (/obj/structure/halflife/processor/substrate,/turf/open/floor/plating/indoor/tile/kitchen,/area/halflife/indoors/intruder/lab)
 "lZ" = (/obj/structure/railing/halflife/full,/turf/open/halflife/water/shallow,/area/halflife/indoors/intruder/outside)
 "ma" = (/obj/machinery/light/directional/east,/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/indoors/intruder/medbay)
-"mf" = (/obj/structure/table/halflife/no_smooth/large/metal,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/barracks)
+"mf" = (/obj/structure/table/halflife/no_smooth/large/metal,/obj/structure/halflife/tv/tube/tiny{pixel_y = 13},/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/barracks)
 "mh" = (/obj/effect/spawner/random/halflife/loot/intruder,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/miscellaneous_room)
 "mj" = (/obj/structure/halflife/cargotruck/intruder_delivery,/turf/open/floor/plating/ground/sidewalk/cobblestone,/area/halflife/indoors/intruder/outside)
 "mo" = (/turf/cordon,/area/halflife/indoors/intruder/miscellaneous_room)
@@ -185,6 +186,7 @@
 "rV" = (/obj/structure/window/fulltile/halflife/nosmooth/brick{dir = 8},/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/indoors/intruder/medbay)
 "rY" = (/obj/machinery/light/directional/north,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/miscellaneous_room)
 "sb" = (/obj/machinery/light/small/directional/east,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/entrance)
+"sc" = (/obj/structure/weightmachine/weightlifter,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/intruder/lockerroom)
 "sv" = (/obj/machinery/light/small/directional/east,/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/miscellaneous_room)
 "sD" = (/obj/structure/table/halflife/no_smooth/wood,/obj/structure/halflife/trash/books,/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/library)
 "sE" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/ground/grass,/area/halflife/indoors/intruder/outside)
@@ -222,7 +224,7 @@
 "vk" = (/turf/closed/wall/halflife/brick/grey,/area/halflife/indoors/intruder/medbay)
 "vn" = (/obj/structure/bodycontainer/morgue/beeper_off{dir = 1},/turf/open/floor/plating/indoor/metal/plate,/area/halflife/indoors/intruder/medbay)
 "vo" = (/turf/open/floor/plating/indoor/lino,/area/halflife/indoors/intruder/library)
-"vp" = (/obj/item/hl13_small_flag/combine,/obj/structure/halflife/pipes/vent,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/entrance)
+"vp" = (/obj/structure/halflife/pipes/vent,/obj/machinery/vending/civpro/intruder,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/entrance)
 "vq" = (/obj/structure/halflife/pallet,/obj/effect/spawner/random/halflife/loot/intruder,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/storagec)
 "vu" = (/obj/structure/halflife/fence,/turf/open/floor/plating/ground/dirt,/area/halflife/indoors/intruder/outside)
 "vv" = (/obj/structure/railing/halflife/full{dir = 8},/turf/open/halflife/water/shallow,/area/halflife/indoors/intruder/outside)
@@ -421,7 +423,7 @@
 "Lo" = (/obj/machinery/intruder_time_counter,/turf/open/floor/plating/ground/sidewalk,/area/halflife/indoors/intruder/outside)
 "Lw" = (/obj/machinery/door/unpowered/halflife/metal{dir = 4},/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/lockerroom)
 "Ly" = (/turf/open/openspace,/area/halflife/indoors/intruder/library)
-"LA" = (/obj/structure/table/halflife/no_smooth/large/metal/desk,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/entrance)
+"LA" = (/obj/structure/table/halflife/no_smooth/large/metal/desk,/obj/structure/halflife/tv/tube/tiny{pixel_y = 13},/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/entrance)
 "LO" = (/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/intruder/lockerroom)
 "LY" = (/obj/effect/spawner/random/halflife/loot/intruder,/turf/open/floor/plating/indoor/concrete/bricks,/area/halflife/indoors/intruder/storagec)
 "MA" = (/obj/structure/sink/halflife/clean,/obj/structure/mirror/halflife{pixel_y = 32},/turf/open/floor/plating/indoor/lino,/area/halflife/indoors/intruder/library)
@@ -463,6 +465,7 @@
 "PY" = (/obj/structure/halflife/fence/wire/barb,/turf/open/floor/plating/ground/rockunder,/area/halflife/indoors/intruder/outside)
 "Qd" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/intruder/lockerroom)
 "Qh" = (/obj/machinery/light_switch/directional/north{max_integrity = 999},/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/indoors/intruder/medbay)
+"Qi" = (/obj/machinery/vending/civpro/intruder,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/intruder/lockerroom)
 "Qn" = (/obj/structure/flora/tree/halflife/plain/thin,/turf/open/floor/plating/ground/grass,/area/halflife/indoors/intruder/outside)
 "QC" = (/turf/open/floor/plating/indoor/woodc/fancy,/area/halflife/indoors/intruder/medbay)
 "QN" = (/obj/effect/landmark/intruder_guncase,/turf/open/floor/plating/indoor/concrete,/area/halflife/indoors/intruder/guardtower)
@@ -637,9 +640,9 @@ EVEVEVEVEVEVEVEVEVEVEVEVEVgDgDgDgDeFwlCkwlgDeFvXgDgDgDgDeFuquququququqgDeFwlCkwl
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVgDQneFzEwlCkwlgDgDeFgDgDgDeFeFuqddmhNXyGuqsEeFwlCkwlgDgDeFgDgDgDQnwlCkwlgDGHQdXoXoBXXoXoXoXozVgDeFkSkSkSkSkSEVEVkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVeFeFgDgDwlCkwlgDgDgDvXgDQnuququqtByGyGUCuqgDgDwlCkwlgDeFvXgDgDgDQnwlCkwlgDGHLOLOLOXoLOLOLOLOGHgDgDEVEVkSkSEVEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVeFvXQngDwlCkwlQngDeFeFeFgDuqxnuqBhaZPkYpuqQngDwlCkwleFeFgDgDQngDgDwlCkwleFGHLOguguXoguguguPPGHgDgDEVEVkSkSEVEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVEVgDgDgDgDwlCkwlgDxBgDgDQngDuqfxuqlgyGyGlguqgDvXwlCkwlgDQngDgDgDxBgDwlCkwlgDGHCOXoBXXoXoBXXoLOGHgDgDgDEVkSkSkSEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVEVgDgDgDgDwlCkwlgDxBgDgDQngDuqfxuqlgyGyGlguqgDvXwlCkwlgDQngDgDgDxBgDwlCkwlgDGHCOXoBXXoXoBXXoQiGHgDgDgDEVkSkSkSEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVEVEVEVEVeFgDgDvXwlCkwlgDgDzEgDgDvXuqEBuququqPIuquqgDgDwlCkwlzEvXgDQngDeFzEwlCkwlwZGHLOLOLOXoLOLOLOKHGHgDQngDEVEVkSkSEVkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
-EVEVEVEVEVEVEVEVEVEVEVEVEVREeFgDgDgDwlCkwlwlwlwlwlwlwlwlwlwlnTwlwlwlnTwlwlwlCkwlwlwlwlwlwlwlwlwlCkwleFGHTqLOLOXoPPGHGHGHGHgDvXgDEVEVEVkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
+EVEVEVEVEVEVEVEVEVEVEVEVEVREeFgDgDgDwlCkwlwlwlwlwlwlwlwlwlwlnTwlwlwlnTwlwlwlCkwlwlwlwlwlwlwlwlwlCkwleFGHTqbJscXoPPGHGHGHGHgDvXgDEVEVEVkSkSkSkSEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSkSgHeFgDQngDwlCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkCkwlJrLwXoXoXoXotLGHgDgDgDgDgDEVEVEVEVEVEVkSkSEVuququququququququququququqEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSkSkSkSeFgDzEwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlwlCkCkwlwlwlwlwlwlwlwlwlwlwlwlwlwlLwXoXoXoXoXLGHgDQngDgDgDEVEVEVEVEVEVkSiXkSsZsZtQsZsZtQsZyGrYyGyGuquqEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV
 EVEVEVEVEVEVEVEVEVEVkSkSkSEVkSeFeFvXgDgDgDgDgDgDeFgDgDgDeFeFvXeFgDbtwlCkCkwlzEgDeFgDgDgDvXgDzEeFgDvXgDGHTxZQoGLOKHGHgDgDvXgDEVEVEVEVEVkSEVkSiXkSsZsZsZsZsZsZsZyGyGyGyGjCuqEVEVEVEVEVEVEVEVEVEVEVEVEVEVEV

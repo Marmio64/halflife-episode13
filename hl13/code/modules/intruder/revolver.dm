@@ -5,6 +5,12 @@
 /datum/outfit/deployment_loadout/intruder/boss
 	weapon_specialties = WEAPON_CAT_ALL
 
+/datum/outfit/deployment_loadout/intruder/boss/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	for(var/datum/guard_objective/O in GLOB.guard_objectives) //they dont need it, they dont have IDs to carry req points
+		if(O.owner == H.mind)
+			qdel(O)
+
 /datum/outfit/deployment_loadout/intruder/boss/bullsquid
 	faction = COMBINE_DEPLOYMENT_FACTION
 	name = "Revolver Bullsquid"
@@ -361,6 +367,7 @@
 			if(!HAS_TRAIT(victim, TRAIT_THE_INTRUDER))
 				var/chosen_emotion = pick(possible_emotions)
 				to_chat(victim, span_warning("You're suddenly overcome with [chosen_emotion]!"))
+				victim.Paralyze(2 SECONDS)
 				addtimer(CALLBACK(src, PROC_REF(feel_emotion), victim, chosen_emotion, 0), rand(0.4 SECONDS, 1 SECONDS))
 			else
 				to_chat(victim, span_warning("Your body begins to fail you!"))

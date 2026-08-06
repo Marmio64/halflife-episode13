@@ -30,7 +30,6 @@ GLOBAL_LIST_EMPTY(intruder_osp)
 
 /obj/machinery/intruder_coffeemaker/interact(mob/living/carbon/human/user)
 	.=..()
-
 	if(HAS_TRAIT(user, TRAIT_THE_INTRUDER))
 		if(sabotaged)
 			to_chat(user, span_notice("This machine is already sabotaged."))
@@ -58,14 +57,17 @@ GLOBAL_LIST_EMPTY(intruder_osp)
 		"Someone watered down this coffee to high hell! Damnit, we're going to need to brew a new pot...")
 
 		to_chat(user, span_notice("[pick(sabotage_texts)]"))
-
+		user.apply_status_effect(/datum/status_effect/temporary_blindness)
+		to_chat(user, span_notice("You're too focused on fixing the problem to notice your surroundings."))
 		if(do_after(user, 15 SECONDS, src))
 			to_chat(user, span_notice("There! All fixed."))
 			sabotaged = FALSE
 			supercharges = 0
 			tranqs = 0
 			return
+			user.remove_status_effect(/datum/status_effect/temporary_blindness)
 		else
+			user.remove_status_effect(/datum/status_effect/temporary_blindness)
 			return
 
 
@@ -76,6 +78,8 @@ GLOBAL_LIST_EMPTY(intruder_osp)
 	to_chat(user, span_notice("You start pouring a cup of joe for yourself..."))
 
 	playsound(user.loc, SFX_LIQUID_POUR, 30, TRUE)
+	user.apply_status_effect(/datum/status_effect/temporary_blindness)
+	to_chat(user, span_notice("The cup obscures your vision as you down your coffee, making it difficult to notice your surroundings.")) //maybe a bit of a stretch but who cares its for gameplay
 	if(do_after(user, brew_time, src))
 		playsound(user.loc,'hl13/sound/items/drink.ogg', rand(20,50), TRUE)
 
@@ -83,18 +87,25 @@ GLOBAL_LIST_EMPTY(intruder_osp)
 			to_chat(user, span_notice("You drink the freshly poured cup of coffee, and feel energized!"))
 			user.adjust_tiredness(-1000)
 			user.reagents.add_reagent(/datum/reagent/consumable/coffee,20)
+			for(var/datum/guard_objective/O in GLOB.guard_objectives)
+				if(O.owner == user.mind && O.objective_type == "coffee")
+					O.get_new_objective()
 		else if(0 < supercharges)
 			supercharges--
 			to_chat(user, span_notice("You drink the freshly poured cup of coffee, and feel very energized!"))
 			user.adjust_tiredness(-1000)
 			user.reagents.add_reagent(/datum/reagent/consumable/coffee,20)
 			user.reagents.add_reagent(/datum/reagent/antifatigue_rations_high_grade,12)
+			for(var/datum/guard_objective/O in GLOB.guard_objectives)
+				if(O.owner == user.mind && O.objective_type == "coffee")
+					O.get_new_objective()
 		else if(0 < tranqs)
 			tranqs--
 			to_chat(user, span_notice("You drink the freshly poured cup of coffee... but instead feel very tired! Did someone put something in here...?"))
 			user.adjust_tiredness(300)
 			if(prob(50))
 				user.SetSleeping(25 SECONDS)
+	user.remove_status_effect(/datum/status_effect/temporary_blindness)
 
 /obj/machinery/intruder_coffeemaker/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/reagent_containers/pill/antifatigue))
@@ -329,3 +340,34 @@ GLOBAL_LIST_EMPTY(intruder_osp)
 			qdel(src)
 	else
 		to_chat(user, span_notice("You don't really need a new gun right now. Besides, it isn't yours to take."))
+
+/obj/machinery/vending/civpro/intruder
+	name = "\improper Conscript Supply Vendor"
+	desc = "An equipment vendor that takes requisition points, which are given after a successful alert or completing a few objectives."
+	resistance_flags = INDESTRUCTIBLE
+	products = list(
+		/obj/item/reagent_containers/pill/patch/medkit/ration = 12,
+		/obj/item/ammo_box/magazine/usp9mm = 12,
+		/obj/item/ammo_box/magazine/m4a1/famas = 10,
+		/obj/item/storage/box/lethalshot/halflife = 10,
+		/obj/item/halflife/combine_battery = 8,
+		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 8,
+		/obj/item/reagent_containers/pill/antifatigue/high_grade = 8,
+		/obj/item/reagent_containers/hypospray/medipen/adrenaline_inhaler = 8,
+	)
+	contraband = list( //this shouldnt ever happen
+		/obj/item/clothing/head/costume/snakeeater/solid = 2,
+	)
+	premium = list(
+		/obj/item/storage/box/intruder_riotshield = 8,
+		/obj/item/gun/ballistic/shotgun/spas12 = 8,
+		/obj/item/grenade/syndieminibomb/bouncer = 6,
+		/obj/item/storage/box/lights = 4,
+	)
+
+/obj/item/storage/box/intruder_riotshield
+	name = "Shield + USP"
+
+/obj/item/storage/box/intruder_riotshield/PopulateContents()
+	new /obj/item/shield/riot/ballistic(src)
+	new /obj/item/gun/ballistic/automatic/pistol/usp(src)

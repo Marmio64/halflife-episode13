@@ -656,11 +656,25 @@
 			to_chat(src, span_notice("You start to shut your eyes..."))
 			if(do_after(src, 9 SECONDS - (comfiness * 10), src))
 				to_chat(src, span_notice("... and drift into rest."))
-				SetSleeping(450 - (comfiness * 10)) //Short nap
+				var/intruder_extra = 0
+				if(HAS_TRAIT(src, TRAIT_INTRUDER_GUARD))
+					intruder_extra = 200 //even shorter nap
+				SetSleeping(450 - (comfiness * 10) - intruder_extra) //Short nap
 				if(4 < comfiness)
 					add_mood_event("comfiness", /datum/mood_event/comfy_sleep)
 				if(SSdaylight.day_cycle_active == "Night" && get_area(src) == /area/halflife/indoors/prison/cells && HAS_TRAIT(src, TRAIT_PRISONER))
 					SSsociostability.modifystability(1) //prisoners sleeping in their cells at night increases sociostability. Enforce curfew!
+				if(HAS_TRAIT(src, TRAIT_INTRUDER_GUARD))
+					for(var/datum/guard_objective/O in GLOB.guard_objectives)
+						if(O.owner == src.mind && O.objective_type == "nap")
+							if(4 < comfiness)
+								O.get_new_objective()
+							else if(3 < comfiness)
+								to_chat(src, span_notice("This nap isn't quite comfortable enough for me, but I'll take what I can get."))
+								O.objective_stage-- //doesnt raise it but will give you a new objective in case you cant find a bed with a mattress
+								O.get_new_objective()
+							else
+								to_chat(src, span_warning("This nap isn't comfortable enough at all!")) //you should still be able to craft a bedframe if they all get broken afaik, if not, suffer
 			else
 				to_chat(src, span_notice("... but are disturbed from fully falling asleep."))
 
