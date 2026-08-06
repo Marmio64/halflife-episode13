@@ -413,10 +413,7 @@
 
 	if(do_after(user, alert_time, src) && intruder_detected)
 		var/obj/item/card/id/user_id = locate(/obj/item/card/id) in carbie.get_all_gear()
-		if(!(GLOB.alert_phases %% 2)) //they'll automatically get one so only receive one for a total of 2
-			user_id.registered_account.requisition_points++
-		else
-			user_id.registered_account.requisition_points += 2
+		user_id.registered_account.requisition_points += 2
 		GLOB.alert_phases++
 		user.do_alert_animation()
 		playsound(loc, 'hl13/sound/effects/alert.ogg', 50, FALSE, -5)

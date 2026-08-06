@@ -347,27 +347,48 @@ GLOBAL_LIST_EMPTY(intruder_osp)
 	resistance_flags = INDESTRUCTIBLE
 	products = list(
 		/obj/item/reagent_containers/pill/patch/medkit/ration = 12,
-		/obj/item/ammo_box/magazine/usp9mm = 12,
+		/obj/item/reagent_containers/hypospray/medipen/blood = 12,
+		/obj/item/ammo_box/magazine/usp9mm/intvendor = 12,
 		/obj/item/ammo_box/magazine/m4a1/famas = 10,
 		/obj/item/storage/box/lethalshot/halflife = 10,
 		/obj/item/halflife/combine_battery = 8,
-		/obj/item/reagent_containers/hypospray/medipen/oxycodone = 8,
+		/obj/item/reagent_containers/hypospray/medipen/oxycodone/intvendor = 8,
 		/obj/item/reagent_containers/pill/antifatigue/high_grade = 8,
 		/obj/item/reagent_containers/hypospray/medipen/adrenaline_inhaler = 8,
+		/obj/item/binoculars = 6,
+		/obj/item/radio/headset/intvendor = 10,
 	)
 	contraband = list( //this shouldnt ever happen
 		/obj/item/clothing/head/costume/snakeeater/solid = 2,
 	)
 	premium = list(
-		/obj/item/storage/box/intruder_riotshield = 8,
+		/obj/item/shield/riot/ballistic/intvendor = 8,
+		/obj/item/gun/ballistic/automatic/pistol/usp/intvendor = 12,
 		/obj/item/gun/ballistic/shotgun/spas12 = 8,
-		/obj/item/grenade/syndieminibomb/bouncer = 6,
-		/obj/item/storage/box/lights = 4,
+		/obj/item/katana/raiden = 8,
+		/obj/item/grenade/syndieminibomb/bouncer/intvendor = 6,
+		/obj/item/storage/box/lights/intvendor = 4,
 	)
+	default_price = 2
+	extra_price = 5
 
-/obj/item/storage/box/intruder_riotshield
-	name = "Shield + USP"
+/obj/item/ammo_box/magazine/usp9mm/intvendor
+	custom_price = 1
 
-/obj/item/storage/box/intruder_riotshield/PopulateContents()
-	new /obj/item/shield/riot/ballistic(src)
-	new /obj/item/gun/ballistic/automatic/pistol/usp(src)
+/obj/item/storage/box/lights/intvendor
+	custom_premium_price = 3
+
+/obj/item/reagent_containers/hypospray/medipen/oxycodone/intvendor
+	custom_price = 1
+
+/obj/item/shield/riot/ballistic/intvendor
+	custom_premium_price = 3
+
+/obj/item/gun/ballistic/automatic/pistol/usp/intvendor
+	custom_premium_price = 2
+
+/obj/item/grenade/syndieminibomb/bouncer/intvendor
+	custom_premium_price = 4
+
+/obj/item/radio/headset/intvendor
+	custom_price = 3
