@@ -324,7 +324,7 @@
 	id_name = "Rifleman"
 
 	head = /obj/item/clothing/head/helmet/halflife/military/weak
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/halflife/conscript
 	gloves = /obj/item/clothing/gloves/fingerless
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	suit_store = /obj/item/gun/ballistic/automatic/m4a1
@@ -350,7 +350,7 @@
 	id_name = "Breacher"
 
 	head = /obj/item/clothing/head/helmet/halflife/military/weak
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/halflife/conscript
 	gloves = /obj/item/clothing/gloves/fingerless
 	suit = /obj/item/clothing/suit/armor/halflife/milvest
 	suit_store = /obj/item/gun/ballistic/shotgun/spas12
@@ -377,7 +377,7 @@
 	id_name = "Technician"
 
 	head = /obj/item/clothing/head/halflife/blue_hardhat
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/halflife/conscript
 	gloves = /obj/item/clothing/gloves/color/black
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	suit_store = /obj/item/gun/ballistic/revolver/coltpython/poorly_maintained
@@ -404,7 +404,7 @@
 	id_name = "Responder"
 
 	head = /obj/item/clothing/head/beret/durathread/unitednations
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/halflife/conscript
 	gloves = /obj/item/clothing/gloves/color/black
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	suit_store = /obj/item/gun/ballistic/automatic/mp7
@@ -431,7 +431,7 @@
 	id_name = "Breacher"
 
 	head = /obj/item/clothing/head/beret/durathread/unitednations
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/halflife/conscript
 	gloves = /obj/item/clothing/gloves/color/black
 	suit = /obj/item/clothing/suit/armor/riot
 	suit_store = /obj/item/melee/baton/security/loaded
@@ -457,7 +457,7 @@
 	id_name = "Sniper"
 
 	head = /obj/item/clothing/head/halflife/scout_hat
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/halflife/conscript
 	gloves = /obj/item/clothing/gloves/fingerless
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant/sne

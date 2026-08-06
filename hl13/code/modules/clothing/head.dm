@@ -56,6 +56,12 @@
 
 	limb_integrity = 300
 
+/obj/item/clothing/head/helmet/halflife/military/camo
+	name = "camouflaged helmet"
+	desc = "A green old world military helmet for protecting your noggin. It has a \"Pantera\" camouflage pattern."
+	icon_state = "military_pantera"
+	base_icon_state = "military_pantera"
+
 /obj/item/clothing/head/helmet/halflife/military/poland
 	name = "polish military helmet"
 	desc = "A green old world military helmet for protecting your noggin. A band in the colours of the Polish flag has been wrapped around it."
@@ -63,6 +69,12 @@
 	worn_icon = 'hl13/icons/mob/clothing/head.dmi'
 	icon_state = "military_poland"
 	base_icon_state = "military_poland"
+
+/obj/item/clothing/head/helmet/halflife/military/polandcamo
+	name = "polish camouflaged helmet"
+	desc = "A green old world military helmet for protecting your noggin. It has a \"Pantera\" camouflage pattern, and a band in the colours of the Polish flag has been wrapped around it."
+	icon_state = "military_pantera"
+	base_icon_state = "military_pantera"
 
 /obj/item/clothing/head/helmet/halflife/military/combine
 	name = "combine helmet"

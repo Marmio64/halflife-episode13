@@ -9,7 +9,7 @@
 	id = /obj/item/card/id/combine_tdm
 	accessory = /obj/item/clothing/accessory/combine_dogtags
 
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/halflife/conscript
 	gloves = /obj/item/clothing/gloves/fingerless
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar/guard
 	suit_store = /obj/item/gun/ballistic/automatic/m4a1/famas/intruder //War has changed... ID tagged soldiers carry ID tagged weapons.

@@ -158,7 +158,7 @@
 
 	id = /obj/item/card/id/advanced/four/ert
 	ears = /obj/item/radio/headset/civilprotection
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/halflife/conscript
 	gloves = /obj/item/clothing/gloves/fingerless
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle

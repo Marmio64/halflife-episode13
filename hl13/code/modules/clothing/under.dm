@@ -412,4 +412,15 @@
 	armor_type = /datum/armor/space_beret
 	strip_delay = 130
 
+/obj/item/clothing/under/halflife/conscript
+	name = "conscript uniform"
+	desc = "An olive drab old war uniform, typically issued to conscripts. It's been moderately reinforced."
+	can_adjust = FALSE
+	has_sensor = LOCKED_SENSORS
+	sensor_mode = SENSOR_COORDS
+	random_sensor = FALSE
+	icon_state = "olivedrab"
+
+	armor_type = /datum/armor/rebelsuit
+
 #undef STIMULANT_INJECTION_DELAY
