@@ -1129,6 +1129,7 @@
 		"Kept you waiting, huh" = 'hl13/sound/voice/solid/venomkeptyouwaiting.ogg',
 		"Rest in peace" = 'hl13/sound/voice/solid/venomrestinpeace.ogg',
 		"Dont move" = 'hl13/sound/voice/solid/venomdontmove.ogg',
+		"Don't. Move" = 'hl13/sound/voice/solid/venomdontmove.ogg',
 	)
 
 	var/operativetype = "Solid"
