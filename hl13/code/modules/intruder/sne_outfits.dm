@@ -483,6 +483,7 @@
 	faction = XEN_DEPLOYMENT_FACTION //sort of the team three i guess
 	name = "SNE: Old Crab"
 	sus_venter = TRUE
+	sne_outfit = TRUE //no more unmasking black markets
 
 	back = /obj/item/storage/backpack/halflife/satchel/huge/solid
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/solid

@@ -513,7 +513,7 @@
 			owner.clear_fullscreen("solidus", 0)
 			return
 	var/turf/T = get_step(get_turf(owner), move_dir)
-	if(T.density)
+	if(T.density && !(istype(T, /turf/open/chasm)))
 		if(times_charged >= extracharge_amount)
 			return
 		else

@@ -614,6 +614,45 @@
 	max_ambience_cooldown = 30 SECONDS
 	min_ambience_cooldown = 10 SECONDS
 
+// intruder mgs2 variant
+/area/halflife/indoors/intruder/water
+	ambient_music = 'hl13/sound/ambience/bgm/powerroom.ogg'
+
+/area/halflife/indoors/intruder/water/strut_a
+	name = "Strut A - Warehouse Storage"
+
+/area/halflife/indoors/intruder/water/strut_b
+	name = "Strut B - Transformer Room"
+
+/area/halflife/indoors/intruder/water/strut_c
+	name = "Strut C - Residential Area"
+
+/area/halflife/indoors/intruder/water/strut_d
+	name = "Strut D - Medical Treatment"
+
+/area/halflife/indoors/intruder/water/shell_core
+	name = "Large Carapace Core"
+
+/area/halflife/indoors/intruder/outside/water
+	base_lighting_alpha = 100
+	ambient_buzz_vol = 15
+	ambient_music = 'hl13/sound/ambience/bgm/powerroom.ogg'
+	ambience_index = AMBIENCE_MGSBIGSHELL //seagull noises (i cant get it to play in testing and nothing i tried fixed this except for one time and i dont even know what happened to fix this so fuck you whoever coded ambience)
+	max_ambience_cooldown = 5 SECONDS
+	min_ambience_cooldown = 2 SECONDS
+
+/area/halflife/indoors/intruder/outside/water/connecting_ab
+	name = "A/B Connecting Bridge"
+
+/area/halflife/indoors/intruder/outside/water/connecting_bc
+	name = "B/C Connecting Bridge"
+
+/area/halflife/indoors/intruder/outside/water/connecting_cd
+	name = "C/D Connecting Bridge"
+
+/area/halflife/indoors/intruder/outside/water/connecting_da
+	name = "D/A Connecting Bridge"
+
 // coastal district areas
 
 /area/halflife/indoors/old_harbor

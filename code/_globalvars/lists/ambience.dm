@@ -273,6 +273,16 @@ GLOBAL_LIST_INIT(hlantcaves_ambience,list(
 	'hl13/sound/ambience/antcaves/rumble3.ogg',
 	'hl13/sound/ambience/antcaves/dist_growl4.ogg',))
 
+GLOBAL_LIST_INIT(mgsbigshell_ambience,list(
+	'hl13/sound/ambience/bigshell/seagull1.ogg',
+	'hl13/sound/ambience/bigshell/seagull2.ogg',
+	'hl13/sound/ambience/bigshell/seagull3.ogg',
+	'hl13/sound/ambience/bigshell/seagull4.ogg',
+	'hl13/sound/ambience/bigshell/seagull5.ogg',
+	'hl13/sound/ambience/bigshell/seagull6.ogg',
+	'hl13/sound/ambience/bigshell/seagull_fly1.ogg',
+	'hl13/sound/ambience/bigshell/seagull_fly2.ogg',))
+
 GLOBAL_LIST_INIT(halflife_ambient_music,list(
 	'hl13/sound/ambience/trainstation.ogg',
 	'hl13/sound/ambience/vaguevoices.ogg',
@@ -303,4 +313,5 @@ GLOBAL_LIST_INIT(ambience_assoc,list(
 	AMBIENCE_HLANTCAVES = GLOB.hlantcaves_ambience,
 	AMBIENCE_HLFOREST = GLOB.hlforest_ambience,
 	AMBIENCE_HLDEATHMATCH = GLOB.hldeathmatch_ambience,
+	AMBIENCE_MGSBIGSHELL = GLOB.mgsbigshell_ambience,
 ))
