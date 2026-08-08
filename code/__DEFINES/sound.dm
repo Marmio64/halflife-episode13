@@ -64,6 +64,7 @@
 #define AMBIENCE_HLFOREST "hlforest"
 #define AMBIENCE_HLDEATHMATCH "hldeathmatch"
 #define AMBIENCE_HLMUSIC "hlmusic"
+#define AMBIENCE_MGSBIGSHELL "mgsbigshell"
 
 //default byond sound environments
 #define SOUND_ENVIRONMENT_NONE -1

@@ -31,6 +31,7 @@
 /datum/outfit/deployment_loadout/intruder/solid
 	weapon_specialties = WEAPON_CAT_ALL
 	var/sus_venter = FALSE
+	var/sne_outfit = FALSE
 
 /datum/outfit/deployment_loadout/intruder/solid/blank
 	faction = REBEL_DEPLOYMENT_FACTION
@@ -257,8 +258,9 @@
 	bigboss.teach(H)
 	var/datum/action/cooldown/spell/touch/holdup/loot = new
 	loot.Grant(H)
-	var/datum/action/cooldown/spell/touch/remove_mask/unmask = new
-	unmask.Grant(H)
+	if(!sne_outfit)
+		var/datum/action/cooldown/spell/touch/remove_mask/unmask = new
+		unmask.Grant(H)
 
 	H.dna.species.stunmod = 0.25
 	H.mind?.adjust_experience(/datum/skill/scavenging, 2500)
@@ -696,20 +698,23 @@
 
 /datum/action/cooldown/mob_cooldown/halflife/cartwheel/proc/do_cartwheel(move_dir, times_ran)
 	if(times_ran >= 5)
+		REMOVE_TRAIT(owner, TRAIT_MOVE_FLYING, ACTION_TRAIT)
 		return
 	var/turf/T = get_step(get_turf(owner), move_dir)
 	var/mob/living/livingowner = owner
-	if(T.density)
+	if(T.density && !(istype(T, /turf/open/chasm))) //chasms are dense, i guess
 		owner.safe_throw_at(get_turf(owner), 1, 1, src)
 		livingowner.Paralyze(20)
 		livingowner.adjustBruteLoss(5)
 		playsound(owner,SFX_SWING_HIT,50,TRUE)
+		REMOVE_TRAIT(owner, TRAIT_MOVE_FLYING, ACTION_TRAIT)
 		return
 	for(var/obj/structure/window/W in T.contents)
 		owner.safe_throw_at(get_turf(owner), 1, 1, src)
 		livingowner.Paralyze(20)
 		livingowner.adjustBruteLoss(5)
 		playsound(owner,SFX_SWING_HIT,50,TRUE)
+		REMOVE_TRAIT(owner, TRAIT_MOVE_FLYING, ACTION_TRAIT)
 		return
 	for(var/obj/machinery/door/D in T.contents)
 		if(D.density)
@@ -717,12 +722,14 @@
 			livingowner.Paralyze(20)
 			livingowner.adjustBruteLoss(5)
 			playsound(owner,SFX_SWING_HIT,50,TRUE)
+			REMOVE_TRAIT(owner, TRAIT_MOVE_FLYING, ACTION_TRAIT)
 			return
 	for(var/obj/structure/halflife/fence/F in T.contents)
 		owner.safe_throw_at(get_turf(owner), 1, 1, src)
 		livingowner.Paralyze(20)
 		livingowner.adjustBruteLoss(5)
 		playsound(owner,SFX_SWING_HIT,50,TRUE)
+		REMOVE_TRAIT(owner, TRAIT_MOVE_FLYING, ACTION_TRAIT)
 		return
 	for(var/obj/machinery/turnstile/S in T.contents)
 		if(S.on)
@@ -730,12 +737,14 @@
 			livingowner.Paralyze(20)
 			livingowner.adjustBruteLoss(5)
 			playsound(owner,SFX_SWING_HIT,50,TRUE)
+			REMOVE_TRAIT(owner, TRAIT_MOVE_FLYING, ACTION_TRAIT)
 			return
 	for(var/obj/effect/koth_grace_field/K in T.contents)
 		owner.safe_throw_at(get_turf(owner), 1, 1, src)
 		livingowner.Paralyze(20)
 		livingowner.adjustBruteLoss(5)
 		playsound(owner,SFX_SWING_HIT,50,TRUE)
+		REMOVE_TRAIT(owner, TRAIT_MOVE_FLYING, ACTION_TRAIT)
 		return
 	owner.forceMove(T)
 	var/list/hit_things = list()
@@ -751,6 +760,7 @@
 				owner.safe_throw_at(get_turf(owner), 1, 1, src)
 				livingowner.Paralyze(20)
 				livingowner.adjustBruteLoss(5)
+				REMOVE_TRAIT(owner, TRAIT_MOVE_FLYING, ACTION_TRAIT)
 				return
 			else if(!HAS_TRAIT(L, TRAIT_INTRUDER_OCELOT))
 				owner.visible_message(span_boldwarning("[owner] cartwheels through [L]!"))
@@ -770,6 +780,7 @@
 	owner.setDir(dir_to_target)
 	playsound(owner,'hl13/sound/effects/raidencartwheel.ogg', 50, FALSE)
 	owner.visible_message(span_boldwarning("[owner] does a cartwheel!"))
+	ADD_TRAIT(owner, TRAIT_MOVE_FLYING, ACTION_TRAIT)
 	owner.emote("flip")
 	addtimer(CALLBACK(src, PROC_REF(do_cartwheel), dir_to_target, 0), 1)
 

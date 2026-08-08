@@ -71,7 +71,8 @@
 	alerted.Cut() // just in case we runtimed and the list didn't get cleared in after_open
 	// Cache the list before we open the box.
 	for(var/mob/living/alerted_mob in viewers(7, src))
-		alerted += alerted_mob
+		if(!(alerted_mob in contents)) //hl13 edit, why is this not accounted for in base tg
+			alerted += alerted_mob
 
 	return TRUE
 
@@ -90,7 +91,10 @@
 		alerted_mob.do_alert_animation()
 
 	alerted.Cut()
-	playsound(loc, 'sound/machines/chime.ogg', 50, FALSE, -5)
+	if(SSmapping.current_map.combat_deployment_gamemode == "intruder" || SSmapping.current_map.combat_deployment_gamemode == "sne")
+		playsound(loc, 'hl13/sound/effects/alert.ogg', 50, FALSE, -5)
+	else
+		playsound(loc, 'sound/machines/chime.ogg', 50, FALSE, -5)
 
 /// Does the MGS ! animation
 /atom/proc/do_alert_animation()
