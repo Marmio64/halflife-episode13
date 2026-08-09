@@ -2411,7 +2411,11 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 				if(istransparentturf(checkhole))
 					ceiling = checkhole
 					break
-		if(!istransparentturf(ceiling))
+		var/intruder_thingy = TRUE
+		if(HAS_TRAIT(src, TRAIT_THE_INTRUDER))
+			if(GLOB.alert_cooldown <= 0)
+				intruder_thingy = FALSE
+		if(!istransparentturf(ceiling) && intruder_thingy) //intruder edit, they can see everything unless they're in alert
 			to_chat(src, span_warning("You can't see through the floor above you."))
 			return
 
@@ -2475,7 +2479,11 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 					floor = checkhole
 					lower_level = get_step_multiz(checkhole, DOWN)
 					break
-		if(!istransparentturf(floor))
+		var/intruder_thingy = TRUE
+		if(HAS_TRAIT(src, TRAIT_THE_INTRUDER))
+			if(GLOB.alert_cooldown <= 0)
+				intruder_thingy = FALSE
+		if(!istransparentturf(floor) && intruder_thingy) //intruder edit, they can see everything unless they're in alert
 			to_chat(src, span_warning("You can't see through the floor below you."))
 			return
 
