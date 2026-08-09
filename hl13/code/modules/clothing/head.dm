@@ -56,6 +56,12 @@
 
 	limb_integrity = 300
 
+/obj/item/clothing/head/helmet/halflife/military/bdu
+	name = "\improper BDU helmet"
+	desc = "A black old world military helmet of Russian origin for protecting your noggin."
+	icon_state = "bdu"
+	base_icon_state = "bdu"
+
 /obj/item/clothing/head/helmet/halflife/military/camo
 	name = "camouflaged helmet"
 	desc = "A green old world military helmet for protecting your noggin. It has a \"Pantera\" camouflage pattern."
@@ -96,6 +102,11 @@
 	name = "cracked military helmet"
 	desc = "An old world military helmet. Age and use has left the helmet in a less than ideal condition."
 	armor_type = /datum/armor/military_helmet/weak
+
+/obj/item/clothing/head/helmet/halflife/military/weak/bdu
+	name = "cracked BDU helmet"
+	icon_state = "bdu"
+	base_icon_state = "bdu"
 
 /obj/item/clothing/head/helmet/halflife/military/weak/poland
 	name = "cracked polish military helmet"

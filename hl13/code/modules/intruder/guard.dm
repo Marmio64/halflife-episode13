@@ -36,6 +36,20 @@
 
 	weapon_specialties = WEAPON_CAT_ALL
 
+	var/shell = FALSE
+
+/datum/outfit/deployment_loadout/intruder/guard/gurlukovich
+	name = "Conscript Guard (Big Shell)"
+	uniform = /obj/item/clothing/under/halflife/conscript/bdu
+	gloves = /obj/item/clothing/gloves/color/black
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/bdu/guard
+	//technically they would have an aks-74
+	mask = /obj/item/clothing/mask/balaclava/protective/guard/bdu
+
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection
+
+	shell = TRUE
+
 /datum/outfit/deployment_loadout/intruder/guard/pre_equip(mob/living/carbon/human/H, visuals_only = FALSE)
 	. = ..()
 
@@ -81,13 +95,22 @@
 		r_pocket = /obj/item/halflife/combine_battery
 	if(12 < guard_preparedness)
 		suit_store = /obj/item/gun/ballistic/automatic/m4a1/famas/intruder/buffed
-		suit = /obj/item/clothing/suit/armor/halflife/kevlar
+		if(!shell)
+			suit = /obj/item/clothing/suit/armor/halflife/kevlar
+		else
+			suit = /obj/item/clothing/suit/armor/halflife/kevlar/bdu
 	if(15 < guard_preparedness)
 		extra_dex = 6
 		extra_per = 4
-		head = /obj/item/clothing/head/helmet/halflife/military
+		if(!shell)
+			head = /obj/item/clothing/head/helmet/halflife/military
+		else
+			head = /obj/item/clothing/head/helmet/halflife/military/bdu
 	if(18 < guard_preparedness)
-		suit = /obj/item/clothing/suit/armor/halflife/kevlar/guard/fast
+		if(!shell)
+			suit = /obj/item/clothing/suit/armor/halflife/kevlar/guard/fast
+		else
+			suit = /obj/item/clothing/suit/armor/halflife/kevlar/bdu/guard/fast
 		extra_dex = 10
 		extra_end = 10
 		extra_str = 10
@@ -98,7 +121,10 @@
 		H.tired_rate = 10
 	if(99 < guard_preparedness)
 		suit_store = /obj/item/gun/ballistic/automatic/m4a1/famas/intruder/buffed/more
-		suit = /obj/item/clothing/suit/armor/halflife/kevlar/guard/very_fast
+		if(!shell)
+			suit = /obj/item/clothing/suit/armor/halflife/kevlar/guard/very_fast
+		else
+			suit = /obj/item/clothing/suit/armor/halflife/kevlar/bdu/guard/very_fast
 		H.tired_rate = 1
 		H.dna.species.stunmod = 0.1
 		var/datum/martial_art/cqc/bigboss = new
@@ -131,10 +157,19 @@
 /obj/item/clothing/suit/armor/halflife/kevlar/guard
 	slowdown = 0.25
 
+/obj/item/clothing/suit/armor/halflife/kevlar/bdu/guard
+	slowdown = 0.25
+
 /obj/item/clothing/suit/armor/halflife/kevlar/guard/fast
 	slowdown = -0.25
 
+/obj/item/clothing/suit/armor/halflife/kevlar/bdu/guard/fast
+	slowdown = -0.25
+
 /obj/item/clothing/suit/armor/halflife/kevlar/guard/very_fast
+	slowdown = -0.75
+
+/obj/item/clothing/suit/armor/halflife/kevlar/bdu/guard/very_fast
 	slowdown = -0.75
 
 /obj/item/clothing/mask/balaclava/protective/guard
@@ -148,13 +183,23 @@
 
 	var/fused = TRUE //is the mask fused to the user?
 
-	var/static/list/guard_voicelines = list(
+	var/list/guard_voicelines = list(
 		"footprints are these" = 'hl13/sound/voice/solid/footprints.ogg', //in case people dont know grammar i'll leave out the whose
 		"What was that noise" = 'hl13/sound/voice/solid/noise.ogg',
 		"Whos that" = 'hl13/sound/voice/solid/whosthat.ogg',
 		"Just a box" = 'hl13/sound/voice/solid/justabox.ogg',
 		"I heard something" = 'hl13/sound/voice/solid/heardsomething.ogg',
 		"hahaha" = 'hl13/sound/voice/solid/hahaha.ogg',
+	)
+
+/obj/item/clothing/mask/balaclava/protective/guard/bdu
+	actions_types = list(/datum/action/item_action/clear, /datum/action/item_action/g_box, /datum/action/item_action/g_who, /datum/action/item_action/g_noise)
+	guard_voicelines = list(
+		"Who is that" = 'hl13/sound/voice/solid/g_whosthat.ogg',
+		"Clear" = 'hl13/sound/voice/solid/g_clear.ogg',
+		"What was that just now" = 'hl13/sound/voice/solid/g_whatwasthat.ogg',
+		"What is with that box" = 'hl13/sound/voice/solid/g_box.ogg',
+		"Nothing here" = 'hl13/sound/voice/solid/g_nothinghere.ogg',
 	)
 
 /obj/item/clothing/mask/balaclava/protective/guard/Initialize()
@@ -181,6 +226,14 @@
 		noise()
 	if(istype(action, /datum/action/item_action/adjust_mask))
 		adjust_mask()
+	if(istype(action, /datum/action/item_action/clear))
+		clear()
+	if(istype(action, /datum/action/item_action/g_box))
+		g_box()
+	if(istype(action, /datum/action/item_action/g_who))
+		g_who()
+	if(istype(action, /datum/action/item_action/g_noise))
+		g_noise()
 
 /datum/action/item_action/footprints
 	name = "Whose footprints are these?"
@@ -237,6 +290,62 @@
 	COOLDOWN_START(src, balaclava_cooldown, PHRASE_COOLDOWN)
 
 	usr.say("What was that noise?", forced = src.name)
+
+/datum/action/item_action/clear
+	name = "Clear!"
+
+/obj/item/clothing/mask/balaclava/protective/guard/verb/clear()
+	set category = "Object"
+	set name = "Clear!"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, balaclava_cooldown))
+		return
+
+	COOLDOWN_START(src, balaclava_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Clear!", forced = src.name)
+
+/datum/action/item_action/g_box
+	name = "What is with that box?"
+
+/obj/item/clothing/mask/balaclava/protective/guard/verb/g_box()
+	set category = "Object"
+	set name = "What is with that box?"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, balaclava_cooldown))
+		return
+
+	COOLDOWN_START(src, balaclava_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("What is with that box?", forced = src.name)
+
+/datum/action/item_action/g_who
+	name = "Who is that?"
+
+/obj/item/clothing/mask/balaclava/protective/guard/verb/g_who()
+	set category = "Object"
+	set name = "Who is that?"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, balaclava_cooldown))
+		return
+
+	COOLDOWN_START(src, balaclava_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Who is that?", forced = src.name)
+
+/datum/action/item_action/g_noise
+	name = "What was that just now?"
+
+/obj/item/clothing/mask/balaclava/protective/guard/verb/g_noise()
+	set category = "Object"
+	set name = "What was that just now?"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, balaclava_cooldown))
+		return
+
+	COOLDOWN_START(src, balaclava_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("What was that just now?", forced = src.name)
 
 /datum/action/item_action/adjust_mask
 	name = "Adjust Mask"

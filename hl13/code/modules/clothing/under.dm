@@ -423,4 +423,12 @@
 
 	armor_type = /datum/armor/rebelsuit
 
+/obj/item/clothing/under/halflife/conscript/bdu
+	name = "\improper BDU"
+	desc = "A Battle Dress Uniform used by Gurlukovich Mercenaries. I'm Metal Gearing it."
+	icon = 'icons/obj/clothing/under/syndicate.dmi'
+	worn_icon = 'icons/mob/clothing/under/syndicate.dmi'
+	icon_state = "camobdu"
+	inhand_icon_state = "g_suit"
+
 #undef STIMULANT_INJECTION_DELAY

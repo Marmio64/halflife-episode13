@@ -200,7 +200,10 @@
 	if(cmode_music)
 		spawned.cmode_music = cmode_music
 	if(SSmapping.current_map.combat_deployment_gamemode == "intruder")
-		spawned.cmode_music = 'hl13/sound/music/combat/battleinthebase.ogg'
+		if(GLOB.special_guards)
+			spawned.cmode_music = 'hl13/sound/music/combat/tanker.ogg'
+		else
+			spawned.cmode_music = 'hl13/sound/music/combat/battleinthebase.ogg'
 
 	if(weapon_specialties)
 		spawned.weapon_specialties = weapon_specialties
