@@ -278,11 +278,20 @@ GLOBAL_LIST_EMPTY(intruder_osp)
 /obj/structure/halflife/cargotruck/intruder_delivery/high_capacity
 	boxes_left = 24
 
+/obj/structure/halflife/cargotruck/intruder_delivery/extractor
+	name = "Resource Extractor"
+	desc = "Combine technology that extracts resources from deep within the ocean and packages it into boxes meant to be delivered to points around the base."
+	boxes_left = 24
+	icon = 'hl13/icons/obj/port/fusion_core.dmi'
+	icon_state = "core1"
+	bound_height = 32
+	pixel_x = 16
+
 /obj/structure/halflife/cargotruck/intruder_delivery/interact(mob/living/carbon/human/user)
 	. = ..()
 
 	if(boxes_left <= 0)
-		to_chat(user, span_warning("This truck has no more boxes of supplies left."))
+		to_chat(user, span_warning("There are no more boxes of supplies left here."))
 		return
 
 	to_chat(user, span_notice("You start pulling out a box of supplies..."))
@@ -291,6 +300,9 @@ GLOBAL_LIST_EMPTY(intruder_osp)
 			new /obj/structure/closet/cardboard/solid(loc)
 			to_chat(user, span_notice("You take out a box of supplies. You can examine it to see what it contains."))
 			boxes_left--
+			if(boxes_left == 0 && icon_state == "core1")
+				icon_state = "core0"
+				visible_message(src, span_notice("The extractor shuts off. Seems like it's job is done for today."))
 
 /obj/effect/landmark/intruder_guncase
 	name = "guncase spawn point"
