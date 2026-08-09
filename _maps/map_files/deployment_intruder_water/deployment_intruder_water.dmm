@@ -5,6 +5,7 @@
 "av" = (/obj/machinery/light/directional/south,/obj/structure/halflife/storage/large/shelf,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/water/strut_a)
 "aB" = (/obj/structure/table/halflife/no_smooth/metal,/turf/open/floor/plating/indoor/cafeteria,/area/halflife/indoors/intruder/water/strut_c)
 "aH" = (/obj/effect/landmark/intruder_guncase,/obj/machinery/light_switch/directional/north,/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/water/strut_a)
+"aR" = (/obj/structure/closet/cardboard/solid,/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/water/strut_c)
 "bi" = (/obj/machinery/light/directional/north,/turf/open/floor/plating/indoor/tiled9,/area/halflife/indoors/intruder/water/strut_d)
 "bq" = (/turf/open/floor/plating/indoor/metal/pipe/corner,/area/halflife/indoors/intruder/water/strut_b)
 "bw" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 4},/obj/structure/railing/halflife/full{dir = 1},/turf/open/floor/plating/indoor/metal,/area/halflife/indoors/intruder/outside/water/connecting_ab)
@@ -47,7 +48,7 @@
 "hO" = (/turf/open/openspace,/area/halflife/indoors/intruder/water/shell_core)
 "hT" = (/obj/effect/decal/cleanable/blood/splatter,/turf/open/floor/plating/indoor/metal/combine,/area/halflife/indoors/intruder/water/shell_core)
 "hX" = (/obj/structure/halflife/processor/int,/turf/open/floor/plating/indoor/metal/industrial,/area/halflife/indoors/intruder/water/strut_b)
-"ia" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 4},/obj/structure/railing/halflife/full{dir = 1},/turf/open/floor/plating/indoor/metal/grate,/area/halflife/indoors/intruder/outside/water)
+"ia" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 4},/obj/structure/railing/halflife/full{dir = 1},/turf/open/floor/plating/indoor/metal/grate,/area/halflife/indoors/intruder/outside/water/connecting_ab)
 "ic" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 8},/turf/open/floor/plating/indoor/metal/grate,/area/halflife/indoors/intruder/outside/water/connecting_cd)
 "ik" = (/obj/structure/lattice/catwalk/hl13,/turf/open/openspace,/area/halflife/indoors/intruder/outside/water/connecting_bc)
 "is" = (/turf/open/chasm/true/no_smooth/fake_water,/area/halflife/indoors/intruder/outside/water/connecting_cd)
@@ -255,7 +256,7 @@
 "EL" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/ladder/halflife/upwards,/obj/structure/railing/halflife/full{dir = 4},/turf/open/floor/plating/indoor/metal/grate,/area/halflife/indoors/intruder/outside/water/connecting_cd)
 "Fc" = (/obj/machinery/light/directional/west,/turf/open/floor/plating/indoor/checkered,/area/halflife/indoors/intruder/water/strut_c)
 "Fe" = (/obj/structure/halflife/cargotruck/intruder_delivery/extractor,/turf/open/halflife/water/shallow,/area/halflife/indoors/intruder/water/strut_a)
-"Fm" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 4},/obj/structure/railing/halflife/full,/turf/open/floor/plating/indoor/metal/grate,/area/halflife/indoors/intruder/outside/water)
+"Fm" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 4},/obj/structure/railing/halflife/full,/turf/open/floor/plating/indoor/metal/grate,/area/halflife/indoors/intruder/outside/water/connecting_ab)
 "Fu" = (/obj/structure/halflife/processor/toggle,/turf/open/floor/plating/indoor/metal/combine,/area/halflife/indoors/intruder/water/shell_core)
 "Fv" = (/obj/structure/stairs/halflife/combine{dir = 4},/turf/open/floor/plating/indoor/metal/smooth,/area/halflife/indoors/intruder/water/shell_core)
 "FB" = (/turf/open/chasm/true/no_smooth/fake_water,/area/halflife/indoors/intruder/outside/water)
@@ -266,6 +267,7 @@
 "Gi" = (/obj/structure/ladder/halflife,/obj/structure/lattice,/turf/open/openspace,/area/halflife/indoors/intruder/outside/water/connecting_ab)
 "Gk" = (/obj/structure/table/halflife/no_smooth/large/metal,/obj/item/reagent_containers/cup/bowl{pixel_y = 7},/obj/item/reagent_containers/cup/bowl,/obj/item/kitchen/rollingpin{pixel_x = 14; pixel_y = 0},/obj/machinery/light/small/directional/north,/turf/open/floor/plating/indoor/checkered,/area/halflife/indoors/intruder/water/strut_c)
 "Gn" = (/obj/machinery/light/directional/south,/turf/open/floor/plating/indoor/checkered,/area/halflife/indoors/intruder/water/strut_c)
+"Gt" = (/obj/machinery/intruder_deliveryzone/research_equipment,/turf/open/floor/plating/indoor/metal/combine,/area/halflife/indoors/intruder/water/shell_core)
 "Gx" = (/obj/machinery/door/unpowered/halflife/metal{dir = 4},/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/indoors/intruder/water/strut_d)
 "Gy" = (/turf/open/floor/plating/indoor/metal/pipe/intersection{dir = 1},/area/halflife/indoors/intruder/water/strut_b)
 "Gz" = (/obj/structure/lattice/catwalk/hl13,/obj/machinery/light/directional/north,/turf/open/halflife/water/shallow,/area/halflife/indoors/intruder/water/strut_a)
@@ -275,7 +277,6 @@
 "GP" = (/obj/machinery/light/small/directional/west,/turf/open/floor/plating/indoor/sterilesquares,/area/halflife/indoors/intruder/water/strut_d)
 "GU" = (/obj/machinery/door/unpowered/halflife/metal,/turf/open/floor/plating/indoor/lino,/area/halflife/indoors/intruder/water/strut_c)
 "Hc" = (/turf/open/openspace,/area/halflife/indoors/intruder/outside/water/connecting_da)
-"Hh" = (/obj/structure/closet/cardboard/solid,/turf/open/floor/plating/indoor/woodc,/area/halflife/indoors/intruder/water/strut_c)
 "Ho" = (/obj/structure/halflife/storage/large/shelf{dir = 4},/turf/open/floor/plating/indoor/tile/black,/area/halflife/indoors/intruder/water/strut_a)
 "Ht" = (/obj/structure/bodycontainer/morgue/beeper_off,/turf/open/floor/plating/indoor/metal/plate,/area/halflife/indoors/intruder/water/strut_d)
 "Hw" = (/obj/machinery/telecomms/bus/preset_one/birdstation,/turf/open/floor/plating/ground/sidewalk,/area/halflife/indoors/intruder/outside/water)
@@ -347,7 +348,6 @@
 "QI" = (/obj/effect/turf_decal/halflife/covering/paint/gray,/turf/closed/wall/halflife/metal/strong/train,/area/halflife/indoors/intruder/water/strut_a)
 "QO" = (/obj/structure/chair/halflife/metal/stool,/turf/open/floor/plating/indoor/cafeteria,/area/halflife/indoors/intruder/water/strut_c)
 "QP" = (/obj/structure/halflife/processor/cpu,/turf/open/floor/plating/indoor/metal/combine,/area/halflife/indoors/intruder/water/shell_core)
-"QY" = (/obj/structure/table/halflife/wood,/obj/item/storage/dice,/turf/open/floor/plating/indoor/carpet,/area/halflife/indoors/intruder/water/strut_c)
 "Rc" = (/obj/structure/table/halflife/wood/bar,/obj/structure/halflife/tv/tube/small{pixel_y = 6},/turf/open/floor/plating/indoor/checkered,/area/halflife/indoors/intruder/water/strut_c)
 "Rk" = (/obj/structure/stairs/halflife/concrete{dir = 1},/turf/open/floor/plating/indoor/metal/industrial,/area/halflife/indoors/intruder/water/strut_b)
 "Ro" = (/obj/machinery/light/directional/north,/turf/open/floor/plating/indoor/tile/green,/area/halflife/indoors/intruder/water/strut_a)
@@ -366,7 +366,6 @@
 "SH" = (/obj/structure/table/halflife/no_smooth/large/metal{dir = 4},/turf/open/floor/plating/indoor/cafeteria,/area/halflife/indoors/intruder/water/strut_c)
 "SS" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/solo{dir = 1},/turf/open/chasm/true/no_smooth/fake_water,/area/halflife/indoors/intruder/outside/water/connecting_bc)
 "SU" = (/turf/open/openspace,/area/halflife/indoors/intruder/outside/water)
-"Ta" = (/obj/machinery/intruder_deliveryzone/research_equipment,/turf/open/floor/plating/indoor/metal/combine,/area/halflife/indoors/intruder/water/shell_core)
 "TG" = (/obj/machinery/door/unpowered/halflife/metal,/turf/open/floor/plating/indoor/metal/plate,/area/halflife/indoors/intruder/water/strut_d)
 "TS" = (/turf/open/floor/plating/indoor/metal/pipe,/area/halflife/indoors/intruder/water/strut_b)
 "TU" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/solo{dir = 8},/turf/open/chasm/true/no_smooth/fake_water,/area/halflife/indoors/intruder/outside/water/connecting_ab)
@@ -408,7 +407,7 @@
 "Zb" = (/obj/machinery/light/small/directional/south,/turf/open/floor/plating/indoor/metal/industrial,/area/halflife/indoors/intruder/water/strut_b)
 "Zf" = (/turf/open/chasm/true/no_smooth/fake_water,/area/halflife/indoors/intruder/outside/water/connecting_bc)
 "Zp" = (/turf/closed/wall/halflife/metal/strong/train,/area/halflife/indoors/intruder/water/strut_c)
-"Zr" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full{dir = 4},/turf/open/floor/plating/indoor/metal/grate,/area/halflife/indoors/intruder/outside/water)
+"Zr" = (/obj/structure/table/halflife/wood,/obj/item/storage/dice,/turf/open/floor/plating/indoor/carpet,/area/halflife/indoors/intruder/water/strut_c)
 "Zu" = (/obj/machinery/light/small/cyan/directional/west,/turf/open/floor/plating/indoor/lino,/area/halflife/indoors/intruder/water/strut_c)
 "Zz" = (/obj/machinery/door/unpowered/halflife/metal{dir = 8},/turf/open/floor/plating/indoor/metal/train,/area/halflife/indoors/intruder/water/shell_core)
 "ZD" = (/obj/structure/lattice/catwalk/hl13,/obj/structure/railing/halflife/full,/turf/open/openspace,/area/halflife/indoors/intruder/outside/water/connecting_da)
@@ -439,10 +438,10 @@ FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBtWYswlBLMYYsjdMYvfMYeAtWFBFBFBFBFBFBFBFBFBFB
 FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBtWbNwlhXMYptwlqetWMYMYtWZfZfyoyoyoZfZfyoyoyoZfZfyoyoyoZfZfrqPvwKZfZfZpAKAKZpAKAKAKDiAKAKAKZpFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
 FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBtWAEwlYsMYbNwlletWMYMYxUFNFNODODODFNFNODODQHZfZfWsODODFNFNODODODFNGaDoAKAKAZAZVvJYZpZpZpGUZpFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
 FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBtWbNwlptMYhXwlletWMYMYxUUvUvODODODUvUvODODQHZfZfWsODODUvUvODODODUvXxDoAKAKvFAKAKAKZpZuvBmXZpFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBtWMYJjlggqlgjDMYtWMYMYtWZfZfRUPScRZfZfyoyoyoZfZfyoyoyoZfZfyoyoyoZfZfZpAKbTQYarLiAKZpmXmXmXZpFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBtWMYJjlggqlgjDMYtWMYMYtWZfZfRUPScRZfZfyoyoyoZfZfyoyoyoZfZfyoyoyoZfZfZpAKbTZrarLiAKZpmXmXmXZpFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
 FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBtWtWvfvftWtWtWtWtWMYeAtWFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBZpjCAIAIAIAIOkZpGUZpZpZpFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
 FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBtWleMYMYBHMYMYMYMYMYMYtWFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBZpAKbTardHLiAKZpmXRuCQZpFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBtWleMYMYMYMYMYZbMYMYMYtWFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBZpHhAKAKDiAKAKZpmXmXEEZpFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBtWleMYMYMYMYMYZbMYMYMYtWFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBZpaRAKAKDiAKAKZpmXmXEEZpFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
 FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBtWtWtWtWtWxUxUtWtWtWtWtWFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBZpZpZpZpZpDoDoZpZpZpZpZpFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
 FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBKtPPAwKtFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBisQbOSisFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
 FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBKtPPAwKtFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBisicMOisFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
@@ -451,19 +450,19 @@ FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBxLdAdAItFBFBFBFBFBFBFBfbfbfbfbfbfbfb
 FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBxLdAdAjjFBFBFBFBFBFBTUfbnmnmnmLGnmnmnmnmnmnmnmnmnmnmfbuUFBFBFBFBFBFBVnjajaQuFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
 FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBKtPPAwKtFBFBFBFBFBFBNhZznmSBSBSBSBSBSBSBSBSBAjSBSBnmfbuUFBFBFBFBFBFBisicMOisFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
 FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBKtPPdAzxiaFBFBFBFBFBTUfbnmSBQPNGOwQPczuJDYIRsSpYSBnmfbuUFBFBFBFBFBFBisicMOisFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBxLdAdAxLZrFBFBFBFBFBTUfbnmSBsSsSsSsSsSsSsSsSsSpYSBnmfbuUFBFBFBFBFBFBVnjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBxLdAdAxLZrFBFBFBFBFBTUfbnmSBsSsSpYpYsSsSsSsSsSTaSBnmfbuUFBFBFBFBFBFBVnjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBxLdAdAxLZrFBFBFBFBFBTUfbnmSBcGvvSBpYFuvyvGsSsSnYSBnmfbuUFBFBFBFBFBFBVnjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBKtPPdAdAZrFBFBFBFBFBTUfbnmSBvvFvSBpYsSsSsSsSsSDYSBnmfbuUFBybybFBFBFBisicMOisFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBKtPPdAdAZrFBFBFBFBFBTUfbnmSBvvFvSBpYsSsSsSsSsSDYSBnmfbuUFBybybFBFBFBisicMOisFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBxLdAdAxLZrFBFBFBFBFBTUfbnmSBcGvvSBpYvGFuvGsSsSnYSBnmfbuUFBFBFBFBFBFBVnjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBxLdAdAxLZrFBFBFBFBFBTUfbnmSBsSsSpYpYsSsSsSsSsSpYSBnmfbuUFBFBFBFBFBFBVnjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBxLdAdAxLZrFBFBFBFBFBTUfbnmSBsSsSsSsSsSsSsSsSsSUYSBnmfbuUFBFBFBFBFBFBVnjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBKtPPdAdAZrFBFBFBFBFBTUfbnmSBsSsSuoDYNGQPNGuQuJczSBnmfbuUFBFBFBFBFBFBisicMOisFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBKtPPdAdAZrFBFBFBFBFBTUfbnmSBSBAjSBSBSBSBSBSBSBSBSBnmUlhfFBFBFBFBFBFBisicMOisFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBshdAdAxLZrFBFBFBFBFBTUfbnmnmnmnmnmnmnmnmnmnmnmnmnmnmfbuUFBFBFBFBFBFBDqjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBgldAdAxLZrFBFBFBFBFBFBfbfbGMfbfbfbfbfbfbfbfbfbfbfbfbfbFBFBFBFBFBFBFBEajajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
-FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBWhdAdAxLZrFBFBFBFBFBFBFBqFmnqFqFqFqFqFqFqFqFqFqFqFqFFBFBFBFBFBFBFBFBsEjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBxLdAdAxLAwFBFBFBFBFBTUfbnmSBsSsSsSsSsSsSsSsSsSpYSBnmfbuUFBFBFBFBFBFBVnjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBxLdAdAxLAwFBFBFBFBFBTUfbnmSBsSsSpYpYsSsSsSsSsSGtSBnmfbuUFBFBFBFBFBFBVnjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBxLdAdAxLAwFBFBFBFBFBTUfbnmSBcGvvSBpYFuvyvGsSsSnYSBnmfbuUFBFBFBFBFBFBVnjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBKtPPdAdAAwFBFBFBFBFBTUfbnmSBvvFvSBpYsSsSsSsSsSDYSBnmfbuUFBybybFBFBFBisicMOisFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBKtPPdAdAAwFBFBFBFBFBTUfbnmSBvvFvSBpYsSsSsSsSsSDYSBnmfbuUFBybybFBFBFBisicMOisFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBxLdAdAxLAwFBFBFBFBFBTUfbnmSBcGvvSBpYvGFuvGsSsSnYSBnmfbuUFBFBFBFBFBFBVnjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBxLdAdAxLAwFBFBFBFBFBTUfbnmSBsSsSpYpYsSsSsSsSsSpYSBnmfbuUFBFBFBFBFBFBVnjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBxLdAdAxLAwFBFBFBFBFBTUfbnmSBsSsSsSsSsSsSsSsSsSUYSBnmfbuUFBFBFBFBFBFBVnjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBKtPPdAdAAwFBFBFBFBFBTUfbnmSBsSsSuoDYNGQPNGuQuJczSBnmfbuUFBFBFBFBFBFBisicMOisFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBKtPPdAdAAwFBFBFBFBFBTUfbnmSBSBAjSBSBSBSBSBSBSBSBSBnmUlhfFBFBFBFBFBFBisicMOisFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBshdAdAxLAwFBFBFBFBFBTUfbnmnmnmnmnmnmnmnmnmnmnmnmnmnmfbuUFBFBFBFBFBFBDqjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBgldAdAxLAwFBFBFBFBFBFBfbfbGMfbfbfbfbfbfbfbfbfbfbfbfbfbFBFBFBFBFBFBFBEajajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
+FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBWhdAdAxLAwFBFBFBFBFBFBFBqFmnqFqFqFqFqFqFqFqFqFqFqFqFFBFBFBFBFBFBFBFBsEjajaVnFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
 FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBKtPPdAJgFmFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBisicMOisFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
 FBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBKtPPAwKtFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBisicMOisFBFBFBFBFBybFBybFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
 FBFBFBFBFBFBFBFBFBFBFBFByeyeyeyeyeyeyeQIQIQIyevnvnyeQIQIQIyeFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBqhafafafqhqdqdqhafafafqhFBybDGybFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFB
