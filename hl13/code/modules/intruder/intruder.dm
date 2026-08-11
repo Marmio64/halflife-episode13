@@ -452,9 +452,8 @@
 
 
 /obj/item/clothing/suit/armor/halflife/kevlar/bigboss
-	desc = "A much better kevlar vest than what your opponents are equipped with. Provides decent armor without slowing you down."
+	desc = "An advanced, super light weight kevlar vest that allows you to move quickly without any compromise to protection."
 	slowdown = -0.35
-	armor_type = /datum/armor/milvest
 
 /obj/item/clothing/under/citizen/rebel/raiden
 	name = "Skull Suit"
@@ -831,7 +830,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 90 SECONDS
+	cooldown_time = 70 SECONDS
 	item_type = /obj/effect/spawner/random/halflife/loot/intruder/crab/rare/guaranteed
 	requires_hands = TRUE
 	delete_old = FALSE
@@ -1140,7 +1139,6 @@
 		"Kept you waiting, huh" = 'hl13/sound/voice/solid/venomkeptyouwaiting.ogg',
 		"Rest in peace" = 'hl13/sound/voice/solid/venomrestinpeace.ogg',
 		"Dont move" = 'hl13/sound/voice/solid/venomdontmove.ogg',
-		"Don't. Move" = 'hl13/sound/voice/solid/venomdontmove.ogg',
 	)
 
 	var/operativetype = "Solid"
@@ -1429,7 +1427,7 @@
 
 	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
 
-	usr.say("Don't. Move.", forced = src.name)
+	usr.say("Dont move.", forced = src.name)
 
 /obj/item/choice_beacon/intruder_snake_loadout
 	name = "equipment delivery beacon"

@@ -2,6 +2,7 @@
 	name = "catwalk"
 	desc = "A durable catwalk used mainly in industrial areas"
 	icon = 'hl13/icons/obj/catwalk.dmi'
+	max_integrity = 60
 
 /obj/structure/pitgrate/hl13_bridge
 	name = "bridge grate"

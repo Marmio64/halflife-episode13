@@ -13,8 +13,8 @@
 	ammo_band_color = null
 
 /obj/item/ammo_box/colta357/civ_pro_vendor
-	custom_price = 2
-	custom_premium_price = 2
+	custom_price = 4
+	custom_premium_price = 4
 
 /obj/item/ammo_box/colta357/armor_piercing
 	name = "speed loader (.357 Armor Piercing)"

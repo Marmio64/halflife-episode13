@@ -101,7 +101,7 @@
 
 /obj/item/choice_beacon/cpomilestone
 	name = "CPO Milestone Reward Beacon"
-	desc = "A reward incentive for CPO, it seems the Combine mostly filled the market with a bunch of surplus gear they had no use for. This one has a universal cost of 3 Requisition points."
+	desc = "A reward incentive for CPO, it seems the Combine mostly filled the market with a bunch of surplus gear they had no use for. This one has a universal cost of 6 Requisition points."
 	company_source = "Overwatch-Dispatch"
 	company_message = span_bold("Your choice has been selected, and we will now be deducting requisition points for the delivery cost.")
 	w_class = WEIGHT_CLASS_TINY
@@ -135,7 +135,7 @@
 
 /obj/item/choice_beacon/cpomilestone/consume_use(obj/choice_path, mob/living/user)
 	user.get_idcard(TRUE)
-	account.requisition_points -= 3
+	account.requisition_points -= 6
 	to_chat(user, span_hear("You hear something crackle from the beacon for a moment before a voice speaks. \
 		\"Please stand by for a message from [company_source]. Message as follows: [company_message] Message ends.\""))
 

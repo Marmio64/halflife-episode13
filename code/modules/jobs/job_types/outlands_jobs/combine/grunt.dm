@@ -30,7 +30,7 @@
 
 	gameplay_help = "You are a lower-grade transhuman that has already went through mind alteration procedures. While you retain some form of human emotion, you have been made completely loyal to the combine, and you cannot betray them."
 
-	requisition_points = 4
+	requisition_points = 8
 
 /datum/outfit/job/outlands/grunt
 	name = "Grunt"

@@ -153,18 +153,18 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/storage/box/handcuffs = 6,
 		/obj/item/lockpick/combine = 12,
 		/obj/item/gps = 12,
-		/obj/item/flashlight/flare = 12,
+		/obj/item/flashlight/flare/civ_pro_vendor = 12,
 		/obj/item/flashlight/seclite = 12,
 		/obj/item/ammo_box/magazine/usp9mm/rubber = 12,
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 12,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 12,
 		/obj/item/reagent_containers/spray/pepper = 12,
-		/obj/item/radio/civpro = 12,
+		/obj/item/radio/civpro/civ_pro_vendor = 12,
 		/obj/item/halflife/combine_battery = 12,
 		/obj/item/storage/halflife/pill_bottle/antifatigue = 12,
 		/obj/item/food/nutripaste/small = 12,
 		/obj/item/grenade/stingbang/halflife = 12,
-		/obj/item/stack/kevlar/two = 12,
+		/obj/item/stack/kevlar/civ_pro_vendor = 12,
 	)
 	contraband = list(
 		/obj/item/clothing/glasses/sunglasses = 2,
@@ -177,8 +177,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/vending/combine_wallmed, 32)
 		/obj/item/storage/halflife/hand_box/cookie = 3,
 	)
 	refill_canister = /obj/item/vending_refill/civpro
-	default_price = 1
-	extra_price = 3
+	default_price = 2
+	extra_price = 6
 	payment_department = NO_FREEBIES
 
 /obj/machinery/vending/civpro/proceed_payment(obj/item/card/id/paying_id_card, mob/living/mob_paying, datum/data/vending_product/product_to_vend, price_to_use)

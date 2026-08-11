@@ -100,7 +100,7 @@ GLOBAL_VAR_INIT(beating_quota, 20)
 		for(var/i in accounts_to_give)
 			var/datum/bank_account/B = i
 			if(B.account_job.requisition_points)
-				B.requisition_points += 2
+				B.requisition_points += 4
 	if(next_quota < world.time)
 		give_quota()
 		next_quota = world.time + time_between_quotas
@@ -118,7 +118,7 @@ GLOBAL_VAR_INIT(beating_quota, 20)
 			for(var/i in accounts_to_give)
 				var/datum/bank_account/B = i
 				if(B.account_job.requisition_points)
-					B.requisition_points += 2
+					B.requisition_points += 4
 		qdel(I)
 	else
 		playsound(src, 'hl13/sound/machines/combine_button_locked.ogg', 50, TRUE, extrarange = -3)

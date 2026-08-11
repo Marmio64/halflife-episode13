@@ -8,7 +8,7 @@
 	spawn_positions = 5 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
 	supervisors = "the Divisional Lead"
 	minimal_player_age = 7
-	exp_requirements = 100
+	exp_requirements = 90
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "SECURITY_OFFICER"
@@ -47,7 +47,7 @@
 	ration_bonus = 2
 	union_law_notify = TRUE
 
-	requisition_points = 6
+	requisition_points = 12
 
 	gameplay_help = "As a civil protection officer, you are bound by fear and/or loyalty to the combine. You cannot directly rebel or go rogue without a very good reason. Also, make sure to visit a Metropolice Supply Vendor in the trainstation or nexus to gear up at."
 
@@ -298,13 +298,13 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 		ID.update_label()
 
 		if(24 < currentrankpoints)
-			ID.registered_account.requisition_points += 1
+			ID.registered_account.requisition_points += 2
 
 		if(49 < currentrankpoints)
-			ID.registered_account.requisition_points += 1
+			ID.registered_account.requisition_points += 2
 
 		if(74 < currentrankpoints)
-			ID.registered_account.requisition_points += 1
+			ID.registered_account.requisition_points += 2
 
 /datum/outfit/job/security/mod
 	name = "Security Officer (MODsuit)"

@@ -10,7 +10,7 @@
 	supervisors = SUPERVISOR_CAPTAIN
 	req_admin_notify = 1
 	minimal_player_age = 14
-	exp_requirements = 720 //12 hours of gameplay, about 5 rounds. Ensures they're pretty good.
+	exp_requirements = 480 //8 hours of playtime, about 4 rounds.
 	exp_required_type = EXP_TYPE_CREW
 	exp_required_type_department = EXP_TYPE_SECURITY
 	exp_granted_type = EXP_TYPE_CREW
@@ -43,7 +43,7 @@
 	ration_bonus = 3
 	union_law_notify = TRUE
 
-	requisition_points = 8
+	requisition_points = 16
 
 	gameplay_help = "As the Divisional Lead, you command local metropolice forces to ensure all goes well in the prison, and ensure the safety of the Warden. You are partially brainwashed, and would not willingly disobey orders from Dispatch and Overwatch."
 

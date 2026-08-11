@@ -9,7 +9,7 @@
 	spawn_type = /mob/living/silicon/ai
 	req_admin_notify = TRUE
 	minimal_player_age = 30
-	exp_requirements = 320
+	exp_requirements = 300 // 5 hours, about 2 and a half rounds
 	exp_required_type = EXP_TYPE_CREW
 	exp_required_type_department = EXP_TYPE_SILICON
 	exp_granted_type = EXP_TYPE_CREW

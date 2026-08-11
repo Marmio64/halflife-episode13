@@ -169,16 +169,16 @@
 		ID.registered_name = "CP:[currentrankpoints].[pick(name_source)]-[rand(111,999)]"
 		ID.update_label()
 
-		ID.registered_account.requisition_points += 6
+		ID.registered_account.requisition_points += 12
 
 		if(24 < currentrankpoints)
-			ID.registered_account.requisition_points += 1
+			ID.registered_account.requisition_points += 2
 
 		if(49 < currentrankpoints)
-			ID.registered_account.requisition_points += 1
+			ID.registered_account.requisition_points += 2
 
 		if(74 < currentrankpoints)
-			ID.registered_account.requisition_points += 1
+			ID.registered_account.requisition_points += 2
 
 /datum/job/outlands/survivor/get_roundstart_spawn_point()
 	return pick(LAZYACCESS(GLOB.outlands_survivor_spawns, JOB_OUTLANDS_SURVIVOR_CITIZEN))
