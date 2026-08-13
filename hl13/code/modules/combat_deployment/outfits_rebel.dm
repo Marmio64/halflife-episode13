@@ -1047,7 +1047,7 @@
 		/obj/item/storage/box/lethalshot/halflife = 3,
 	)
 
-	extra_dex = 9
+	extra_dex = 10
 	extra_end = 4
 	extra_str = 8
 
