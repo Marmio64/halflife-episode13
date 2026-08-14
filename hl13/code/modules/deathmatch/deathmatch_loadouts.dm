@@ -356,7 +356,7 @@
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
 	l_pocket = /obj/item/knife/combat/survival
-	head = /obj/item/clothing/head/helmet/halflife/military/poland
+	head = /obj/item/clothing/head/helmet/halflife/military/polandcamo
 	r_pocket = /obj/item/grenade/c4
 	uniform = /obj/item/clothing/under/syndicate/camo
 	shoes = /obj/item/clothing/shoes/combat

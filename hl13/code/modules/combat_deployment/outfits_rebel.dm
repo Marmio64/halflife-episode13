@@ -624,7 +624,7 @@
 	suit_store = /obj/item/gun/ballistic/shotgun/trench
 	l_pocket = /obj/item/knife/combat/weak //fix bayonets
 	r_pocket = /obj/item/flashlight/seclite
-	head = /obj/item/clothing/head/helmet/halflife/military/weak/poland
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/polandcamo
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife
 	shoes = /obj/item/clothing/shoes/combat
 	gloves = /obj/item/clothing/gloves/color/black
@@ -1216,7 +1216,7 @@
 	gloves = /obj/item/clothing/gloves/fingerless
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/grenade/smokebomb
-	head = /obj/item/clothing/head/helmet/halflife/military/poland
+	head = /obj/item/clothing/head/helmet/halflife/military/polandcamo
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored
 	shoes = /obj/item/clothing/shoes/boots
 	glasses = /obj/item/clothing/glasses/night

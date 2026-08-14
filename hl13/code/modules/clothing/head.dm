@@ -79,8 +79,8 @@
 /obj/item/clothing/head/helmet/halflife/military/polandcamo
 	name = "polish camouflaged helmet"
 	desc = "A green old world military helmet for protecting your noggin. It has a \"Pantera\" camouflage pattern, and a band in the colours of the Polish flag has been wrapped around it."
-	icon_state = "military_pantera"
-	base_icon_state = "military_pantera"
+	icon_state = "military_pantera_poland"
+	base_icon_state = "military_pantera_poland"
 
 /obj/item/clothing/head/helmet/halflife/military/combine
 	name = "combine helmet"
@@ -108,11 +108,23 @@
 	icon_state = "bdu"
 	base_icon_state = "bdu"
 
+/obj/item/clothing/head/helmet/halflife/military/weak/camo
+	name = "cracked camouflaged helmet"
+	desc = "An old world military helmet. Age and use has left the helmet in a less than ideal condition. It has a \"Pantera\" camouflage pattern."
+	icon_state = "military_pantera"
+	base_icon_state = "military_pantera"
+
 /obj/item/clothing/head/helmet/halflife/military/weak/poland
 	name = "cracked polish military helmet"
 	desc = "An old world military helmet. Age and use has left the helmet in a less than ideal condition. A band in the colours of the Polish flag has been wrapped around it."
 	icon_state = "military_poland"
 	base_icon_state = "military_poland"
+
+/obj/item/clothing/head/helmet/halflife/military/weak/polandcamo
+	name = "cracked polish camouflaged helmet"
+	desc = "An old world military helmet. It has a \"Pantera\" camouflage pattern, and a band in the colours of the Polish flag has been wrapped around it."
+	icon_state = "military_pantera_poland"
+	base_icon_state = "military_pantera_poland"
 
 /obj/item/clothing/head/helmet/halflife/military/weak/crafted
 	name = "hand-made metal helmet"
