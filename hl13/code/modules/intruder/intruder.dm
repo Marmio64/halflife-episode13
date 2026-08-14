@@ -322,7 +322,7 @@
 	display_name = "Smash Crab"
 	desc = "Colossal Cell Lead? Solid Crab? The fourth genetic clone? Who knows, but he's skipping out on some tournament he was invited to to instead kick a bunch of guard ass. And he brought a LOT of explosives."
 
-	head = /obj/item/clothing/head/costume/snakeeater/solid
+	head = /obj/item/clothing/head/costume/snakeeater/solid/smash
 	glasses = /obj/item/clothing/glasses/thermal/solid
 	uniform = /obj/item/clothing/under/syndicate/combat
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/solid/smash
