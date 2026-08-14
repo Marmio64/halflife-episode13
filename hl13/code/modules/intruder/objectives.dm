@@ -187,7 +187,7 @@ GLOBAL_LIST_EMPTY(node_terminals)
 			if("shower")
 				message = "That shower was refreshing. "
 			if("nap")
-				message = "This is a comfortable enough nap. "
+				message = "This was a comfortable enough nap. "
 			if("workout")
 				message = "That was a great workout. "
 			if("radio")

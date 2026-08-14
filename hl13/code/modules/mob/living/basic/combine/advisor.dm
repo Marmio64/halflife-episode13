@@ -182,7 +182,7 @@
 
 	sound = 'hl13/sound/creatures/advisor/advisor_sooth.ogg'
 	school = SCHOOL_TRANSMUTATION
-	cooldown_time = 8 SECONDS
+	cooldown_time = 7 SECONDS
 	cooldown_reduction_per_rank = 6.25 SECONDS
 
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC

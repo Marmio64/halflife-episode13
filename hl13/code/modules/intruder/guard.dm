@@ -149,9 +149,9 @@
 	guard_preparedness += (GLOB.complete_objectives * 3)
 	guard_preparedness += GLOB.bonus_guard_preparedness
 
-	if(guard_preparedness == 9)
+	if(guard_preparedness >= 9)
 		account.requisition_points++
-	if(guard_preparedness == 18)
+	if(guard_preparedness >= 18)
 		account.requisition_points++ //up to two are free for everyone
 
 /obj/item/clothing/suit/armor/halflife/kevlar/guard

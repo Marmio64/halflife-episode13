@@ -448,8 +448,8 @@
 	spawn_magazine_type = /obj/item/ammo_box/magazine/usp9mm/rubber
 
 /obj/item/gun/ballistic/automatic/pistol/usp/riot/civ_pro_vendor
-	custom_price = 4
-	custom_premium_price = 4
+	custom_price = 8
+	custom_premium_price = 8
 
 /obj/item/gun/ballistic/automatic/pistol/usp/suppressed/Initialize(mapload)
 	. = ..()

@@ -183,7 +183,7 @@
 	if(!is_ghost)
 		ladder.add_fingerprint(user)
 
-		if(HAS_TRAIT(user, TRAIT_THE_INTRUDER))
+		if(HAS_TRAIT(user, TRAIT_THE_INTRUDER) && prob(50))
 			playsound(user, 'hl13/sound/effects/whatathrill.ogg', 25, FALSE)
 		if(!do_after(user, travel_time, target = src))
 			return
