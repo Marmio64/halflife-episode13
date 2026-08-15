@@ -114,7 +114,7 @@
 /// refugee guard /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /mob/living/basic/trooper/rebel/mp7/refugee
 	name = "Refugee Guard"
-	desc = "An armed fellow, looking to protect his employer."
+	desc = "A tired-looking refugee clad in imposing, if improvised, armour. An MP7 rests at their hip, ready to turn against those who would threaten their employer."
 	maxHealth = 150
 	health = 150
 	loot = list(/obj/effect/mob_spawn/corpse/human/refugeeguard)
@@ -215,7 +215,7 @@
 /// blackmarket dealer /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /mob/living/basic/trader/halflife/refugee_tradesmen
 	name = "Refugee Tradesmen"
-	desc = "An older looking gentlemen, who looks like they've been in the outlands for a long time. They seem to be selling useful supplies."
+	desc = "An older looking gentleman, who looks like they've been in the outlands for a long time. They seem to be selling useful supplies."
 
 	maxHealth = 125
 	health = 125
@@ -255,7 +255,7 @@
 /// plf recruiter /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /mob/living/basic/trader/halflife/plf_recruiter
 	name = "Polish Liberation Front Recruiter"
-	desc = "A represenative of the local PLF cell. They are looking to recruit local prisoners and escaped vortigaunts who wish to fight back against the combine."
+	desc = "A middle-ranking officer of the PLF, clad in a reinforced jacket and pre-War uniform; a hefty revolver at their hip. They are looking to recruit local prisoners and Vortigaunts to fight against the Combine."
 
 	maxHealth = 175
 	health = 175
@@ -509,7 +509,7 @@
 			"I've got enough of this, ain't buyin' it.",
 		),
 		TRADER_LORE_PHRASE = list(
-			"Nice bunker, pal. Keep me safe, and i'll keep safe the line betweens yous and the other dealers.",
+			"Nice bunker, pal. Keep me safe, and I'll keep safe the line betweens yous and the other dealers.",
 			"Believe it or not, lotta dealers hate workin' with the PLF. Me? Ehhh, could be worse.",
 			"Don't ask where I get this stuff from.",
 			"Last bunker I was at got raided, no survivors except me! Hahaha! Haha...hah...",
@@ -575,16 +575,16 @@
 	speech_chance = 4
 	emote_see = list("checks the seal on their mask.", "yawns.", "inspects their rifle.", "looks around.")
 	speak = list(
-		"Don't do anything stupid",
+		"Don't do anything stupid.",
 		"Mmmmmm.",
-		"Can't wait to ship back home.",
+		"Can't wait to ship back to camp.",
 		"Poland is not yet dead.",
 		"I've got my eye on you.",
 	)
 
 /datum/ai_controller/basic_controller/trooper/ranged/burst/plftraderguard
 	planning_subtrees = list(
-		/datum/ai_planning_subtree/simple_find_target,
+		/datum/ai_planning_subtree/target_retaliate/check_faction,
 		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trooper_burst,
 		/datum/ai_planning_subtree/travel_to_point/and_clear_target/reinforce,
 		/datum/ai_planning_subtree/random_speech/plftraderguard,
@@ -1034,10 +1034,13 @@
 			"Welcome to the Polish Liberation Front, friend.",
 		),
 		NO_CASH_PHRASE = list(
-			"I do need a small donation in exchange for providing you equipment.",
+			"The uhh, equipment does come at a cost, you know. Wish it didn't, but, logistics is logistics...",
+			"Sorry, we uhh, do need to pay the people making the guns, y'know.",
+			"...yeah, sorry, we ain't got enough to just issue to new recruits for free."
 		),
 		NO_STOCK_PHRASE = list(
 			"Sorry, I don't have any more equipment for new recruits.",
+			"We're out of supplies for the week, sorry. You'll have to make do."
 		),
 		NOT_WILLING_TO_BUY_PHRASE = list(
 			"Hm, no thanks.",
@@ -1056,17 +1059,20 @@
 			"I'm all out of cash, can't buy anything more.",
 		),
 		TRADER_NOT_SELLING_ANYTHING = list(
-			"Ran out of stock, see me another time.",
+			"Sorry, we're out of supplies for the week. Wish I could help 'ya more.",
 		),
 		TRADER_BATTLE_START_PHRASE = list(
 			"For the Liberation Front!",
 			"Some people just are too stupid to understand things around here!",
 			"Fuck you!",
 			"I've killed plenty of traitors like you before.",
+			"Another fucking traitor to die!",
+			"Fucking imperialist!",
 		),
 		TRADER_BATTLE_END_PHRASE = list(
 			"Good riddance.",
 			"Another traitor gone.",
+			"That's enough outta you.",
 			"Don't let the door hit you on the way out.",
 		),
 		TRADER_SHOP_OPENING_PHRASE = list(
