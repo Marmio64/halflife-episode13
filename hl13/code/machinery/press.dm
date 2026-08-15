@@ -3,6 +3,8 @@
 	desc = "An industrial piece of machinery which can emit enough pressure to compress and form plates out of metal, or pulverize metals."
 	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "press"
+	var/upgraded = FALSE
+	var/action_time = 3.25 SECONDS
 
 /obj/machinery/press/examine(mob/user)
 	. = ..()
@@ -10,15 +12,25 @@
 	. += span_notice("You can hit it with metal sheets to work them into empty cans.") // Turning this to empty cans for now to integrate with ration construction.
 	. += span_notice("You can hit it with metal scrap to work them into plate sheets.")
 	. += span_notice("You can hit it with plastic sheets to work them into ration casings.")
+	if(!upgraded)
+		. += span_notice("You can hit it with a advanced circuit chip to upgrade its operating speed.")
 
 /obj/machinery/press/attackby(obj/item/I, mob/living/user, params)
 	var/obj/item/bodypart/arm = user.get_bodypart(user.active_hand_index % 2 ? BODY_ZONE_L_ARM : BODY_ZONE_R_ARM)
+
+	if(istype(I, /obj/item/circuitmaterial/advanced) && !upgraded)
+		var/obj/item/circuitmaterial/advanced/C = I
+		qdel(C)
+		to_chat(usr, span_notice("Machine upgraded..."))
+		playsound(loc, 'sound/items/tools/screwdriver_operating.ogg', 25, 1)
+		upgraded = TRUE
+		action_time = 2.75 SECONDS
 
 	if(istype(I, /obj/item/stack/sheet/ironingot))
 		var/obj/item/stack/sheet/ironingot/C = I
 		to_chat(usr, span_notice("Pressing metal..."))
 		playsound(src, 'hl13/sound/halflifeeffects/furniture/washer_close.ogg', 50, FALSE, extrarange = -1)
-		if(do_after(user, 2 SECONDS, src))
+		if(do_after(user, action_time * 0.65, src))
 			C.use(1)
 			new /obj/item/stack/sheet/iron(src.loc, 1)
 			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)
@@ -32,7 +44,7 @@
 		var/obj/item/stack/sheet/iron/C = I
 		to_chat(usr, span_notice("Forming metal..."))
 		playsound(src, 'hl13/sound/halflifeeffects/furniture/washer_close.ogg', 50, FALSE, extrarange = -1)
-		if(do_after(user, 3 SECONDS, src))
+		if(do_after(user, action_time, src))
 			C.use(1)
 			new /obj/item/ration_construction/empty_cans(src.loc, 1)
 			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)
@@ -49,7 +61,7 @@
 			return
 		to_chat(usr, span_notice("Pressing metal..."))
 		playsound(src, 'hl13/sound/halflifeeffects/furniture/washer_close.ogg', 50, FALSE, extrarange = -1)
-		if(do_after(user, 3 SECONDS, src))
+		if(do_after(user, action_time, src))
 			C.use(3)
 			new /obj/item/stack/sheet/iron(src.loc, 1)
 			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)
@@ -63,7 +75,7 @@
 		var/obj/item/stack/sheet/halflife/plastic/C = I
 		to_chat(usr, span_notice("Pressing plastic..."))
 		playsound(src, 'hl13/sound/halflifeeffects/furniture/washer_close.ogg', 50, FALSE, extrarange = -1)
-		if(do_after(user, 2 SECONDS, src))
+		if(do_after(user, action_time * 0.65, src))
 			C.use(1)
 			new /obj/item/ration_construction/bags(src.loc, 1)
 			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)

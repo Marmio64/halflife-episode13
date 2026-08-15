@@ -96,3 +96,15 @@
 	reqs = list(/obj/item/stack/sheet/mineral/wood = 5, /obj/item/stack/sheet/iron = 3)
 	tool_behaviors = list(TOOL_WELDER)
 	category = CAT_STRUCTURE
+
+/datum/crafting_recipe/crude_chemset
+	name = "Crude Chemistry Set"
+	result = /obj/structure/table/halflife/no_smooth/large/crafting/chemset
+	time = 12 SECONDS
+	reqs = list(/obj/item/stack/sheet/glass = 5,
+		        /obj/item/lighter = 1,
+				/obj/item/stack/rods = 2,
+				/obj/item/stack/sheet/mineral/wood = 3,
+		        /obj/item/stack/cable_coil = 5)
+	tool_behaviors = list(TOOL_SCREWDRIVER)
+	category = CAT_STRUCTURE

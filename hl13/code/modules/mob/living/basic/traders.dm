@@ -368,6 +368,8 @@
 		/obj/item/stack/telecrystal = list(PAYCHECK_CREW, 10, ""),
 		/obj/item/weaponcrafting/receiver = list(PAYCHECK_CREW, 1.5, ""),
 		/obj/item/combine_datapod = list(PAYCHECK_CREW, 5, ""),
+		/obj/item/reagent_containers/pill/patch/substance = list(PAYCHECK_CREW * 1.5, 5, ""),
+		/obj/item/reagent_containers/pill/patch/chope = list(PAYCHECK_CREW * 4, 5, ""),
 	)
 
 	say_phrases = list(
@@ -910,6 +912,8 @@
 		/obj/item/stack/telecrystal = list(PAYCHECK_CREW * 1.25, 10, ""),
 		/obj/item/combine_datapod = list(PAYCHECK_CREW * 8, 3, ""),
 		/obj/item/halflife/combine_battery = list(PAYCHECK_CREW, 5, ""),
+		/obj/item/reagent_containers/pill/patch/substance = list(PAYCHECK_CREW * 2, 5, ""),
+		/obj/item/reagent_containers/pill/patch/chope = list(PAYCHECK_CREW * 5, 5, ""),
 	)
 
 	say_phrases = list(

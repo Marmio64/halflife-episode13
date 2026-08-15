@@ -3,6 +3,8 @@
 	desc = "An industrial piece of machinery which mills metal to shape it into other forms."
 	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "mill"
+	var/upgraded = FALSE
+	var/action_time = 3.25 SECONDS
 
 /obj/machinery/mill/examine(mob/user)
 	. = ..()
@@ -10,9 +12,19 @@
 	. += span_notice("You can hit it with metal ingots to mill them into scrap parts.")
 	. += span_notice("You can hit it with scrap parts to mill them into scrap metal pieces.")
 	. += span_notice("You can hit it with a used ration refill to shape them it into an empty container.")
+	if(!upgraded)
+		. += span_notice("You can hit it with a advanced circuit chip to upgrade its operating speed.")
 
 /obj/machinery/mill/attackby(obj/item/I, mob/living/user, params)
 	var/obj/item/bodypart/arm = user.get_bodypart(user.active_hand_index % 2 ? BODY_ZONE_L_ARM : BODY_ZONE_R_ARM)
+
+	if(istype(I, /obj/item/circuitmaterial/advanced) && !upgraded)
+		var/obj/item/circuitmaterial/advanced/C = I
+		qdel(C)
+		to_chat(usr, span_notice("Machine upgraded..."))
+		playsound(loc, 'sound/items/tools/screwdriver_operating.ogg', 25, 1)
+		upgraded = TRUE
+		action_time = 2.75 SECONDS
 
 	if(istype(I, /obj/item/stack/sheet/iron))
 		var/obj/item/stack/sheet/iron/C = I
@@ -21,7 +33,7 @@
 			return
 		to_chat(usr, span_notice("Milling metal..."))
 		playsound(src, 'hl13/sound/halflifemachines/turret_close.ogg', 50, FALSE, extrarange = -1)
-		if(do_after(user, 3 SECONDS, src))
+		if(do_after(user, action_time, src))
 			C.use(2)
 			new /obj/item/stack/sheet/ironingot(src.loc, 1)
 			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)
@@ -39,7 +51,7 @@
 			return
 		to_chat(usr, span_notice("Milling metal..."))
 		playsound(src, 'hl13/sound/halflifemachines/turret_close.ogg', 50, FALSE, extrarange = -1)
-		if(do_after(user, 3 SECONDS, src))
+		if(do_after(user, action_time, src))
 			C.use(2)
 			new /obj/item/stack/sheet/scrap_parts(src.loc, 1)
 			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)
@@ -54,7 +66,7 @@
 		var/obj/item/stack/sheet/scrap_parts/C = I
 		to_chat(usr, span_notice("Milling metal..."))
 		playsound(src, 'hl13/sound/halflifemachines/turret_close.ogg', 50, FALSE, extrarange = -1)
-		if(do_after(user, 3 SECONDS, src))
+		if(do_after(user, action_time, src))
 			C.use(1)
 			new /obj/item/stack/sheet/scrap_metal(src.loc, 6)
 			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)
@@ -72,7 +84,7 @@
 			return
 		to_chat(usr, span_notice("Milling metal..."))
 		playsound(src, 'hl13/sound/halflifemachines/turret_close.ogg', 50, FALSE, extrarange = -1)
-		if(do_after(user, 3 SECONDS, src))
+		if(do_after(user, action_time, src))
 			C.use(2)
 			new /obj/item/stack/sheet/silveringot(src.loc, 1)
 			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)
@@ -90,7 +102,7 @@
 			return
 		to_chat(usr, span_notice("Milling metal..."))
 		playsound(src, 'hl13/sound/halflifemachines/turret_close.ogg', 50, FALSE, extrarange = -1)
-		if(do_after(user, 3 SECONDS, src))
+		if(do_after(user, action_time, src))
 			C.use(2)
 			new /obj/item/stack/sheet/goldingot(src.loc, 1)
 			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)
@@ -105,7 +117,7 @@
 		var/obj/item/ration_construction/used_container/C = I
 		to_chat(usr, span_notice("Shaping Box..."))
 		playsound(src, 'hl13/sound/halflifemachines/turret_close.ogg', 50, FALSE, extrarange = -1)
-		if(do_after(user, 3 SECONDS, src))
+		if(do_after(user, action_time, src))
 			new /obj/item/ration_construction/container(src.loc)
 			playsound(src, 'hl13/sound/halflifeeffects/impact/metal/metal_sheet_3.wav', 50, FALSE, extrarange = -1)
 			user.mind?.adjust_experience(/datum/skill/factorywork, 10)

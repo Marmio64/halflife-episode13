@@ -6,6 +6,9 @@
 	var/malfunctioning = FALSE
 	var/dangerous_malfunction = FALSE
 	var/manually_broke = FALSE
+	var/times_used = 0
+	var/upgraded = FALSE
+	var/action_time = 1 SECONDS
 
 /obj/machinery/sealer/examine(mob/user)
 	. = ..()
@@ -15,6 +18,12 @@
 		. += span_notice("The machine is off. It'll need to be opened and cleaned by using a screwdriver on it.")
 		if(dangerous_malfunction)
 			. += span_notice("It is also emitting a faint odor of smoke. It may be dangerous to try to operate or fix this if you aren't experienced...")
+
+	if(HAS_TRAIT(user, TRAIT_ENGINEER))
+		. += span_notice("Looks like it has been used about [times_used] times since its last maintenance work.")
+
+	if(!upgraded)
+		. += span_notice("You can hit it with a advanced circuit chip to upgrade its operating speed.")
 
 /obj/machinery/sealer/update_icon_state()
 	. = ..()
@@ -32,11 +41,23 @@
 	update_appearance(UPDATE_ICON)
 	if(prob(15))
 		dangerous_malfunction = TRUE
-		if(prob(1))
+		if(prob(2) && !upgraded)
 			explode_in_flames()
 
 /obj/machinery/sealer/attackby(obj/item/I, mob/living/user, params)
 	var/obj/item/bodypart/arm = user.get_bodypart(user.active_hand_index % 2 ? BODY_ZONE_L_ARM : BODY_ZONE_R_ARM)
+
+	var/accident_chance = clamp((times_used * 0.1), 0, 4) //up to +4% accident chance after 40 uses
+
+	accident_chance = user.mind?.get_skill_modifier(/datum/skill/factorywork, SKILL_VALUE_MODIFIER)
+
+	if(istype(I, /obj/item/circuitmaterial/advanced) && !upgraded)
+		var/obj/item/circuitmaterial/advanced/C = I
+		qdel(C)
+		to_chat(usr, span_notice("Machine upgraded..."))
+		playsound(loc, 'sound/items/tools/screwdriver_operating.ogg', 25, 1)
+		upgraded = TRUE
+		action_time = 2.75 SECONDS
 
 	if(malfunctioning)
 		if(dangerous_malfunction)
@@ -53,12 +74,13 @@
 		var/obj/item/ration_construction/container/C = I
 		if(C.filled == TRUE && C.completed == FALSE)
 			to_chat(usr, span_notice("Sealing box..."))
-			if(do_after(user, 1 SECONDS, src))
+			if(do_after(user, action_time, src))
 				to_chat(usr, span_notice("Container successfully sealed. Reward dispensed."))
+				times_used++
 				C.seal(user, 1) //Using the sealer gets you bonus money
 				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 50, FALSE, extrarange = -1)
-				if(prob(user.mind?.get_skill_modifier(/datum/skill/factorywork, SKILL_VALUE_MODIFIER)))
-					if(HAS_TRAIT(user, TRAIT_CURSED))
+				if(prob(accident_chance))
+					if(HAS_TRAIT(user, TRAIT_CURSED) || 8 < accident_chance)
 						to_chat(user, span_userdanger("You lose focus, and the machine slices off a large strip of flesh from your arm, holy fuck!"))
 						arm.force_wound_upwards(/datum/wound/slash/flesh/severe)
 						arm.receive_damage(25)
@@ -81,12 +103,13 @@
 		var/obj/item/factory_construction/container/C = I
 		if(C.filled == TRUE)
 			to_chat(usr, span_notice("Sealing box..."))
-			if(do_after(user, 1 SECONDS, src))
+			if(do_after(user, action_time, src))
 				to_chat(usr, span_notice("Container successfully sealed. Reward dispensed."))
+				times_used++
 				C.seal(user, 2) //Using the sealer gets you bonus money
 				playsound(src, 'hl13/sound/effects/pneumaticpress.ogg', 50, FALSE, extrarange = -1)
-				if(prob(user.mind?.get_skill_modifier(/datum/skill/factorywork, SKILL_VALUE_MODIFIER)))
-					if(HAS_TRAIT(user, TRAIT_CURSED))
+				if(prob(accident_chance))
+					if(HAS_TRAIT(user, TRAIT_CURSED) || 8 < accident_chance)
 						to_chat(user, span_userdanger("You lose focus, and the machine slices off a large strip of flesh from your arm, holy fuck!"))
 						arm.force_wound_upwards(/datum/wound/slash/flesh/severe)
 						arm.receive_damage(25)
@@ -110,8 +133,18 @@
 		return FALSE
 
 	if(!malfunctioning)
-		balloon_alert(user, "Doesn't need fixing")
-		return FALSE
+		if(0 < times_used && HAS_TRAIT(user, TRAIT_ENGINEER))
+			playsound(loc, 'sound/items/tools/screwdriver_operating.ogg', 25, 1)
+			balloon_alert_to_viewers("Starts maintaining [src]'s internals")
+			if(do_after(user, 4 SECONDS, src))
+				times_used = 0
+				balloon_alert_to_viewers("Maintenance complete")
+				playsound(loc, 'sound/items/tools/screwdriver_operating.ogg', 25, 1)
+				return TRUE
+		else
+			balloon_alert(user, "Doesn't need fixing/maintenance")
+			return FALSE
+
 
 	playsound(loc, 'sound/items/tools/screwdriver_operating.ogg', 25, 1)
 	balloon_alert_to_viewers("Starts repairing [src]'s internals")

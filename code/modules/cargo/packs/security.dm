@@ -20,8 +20,8 @@
 	access_view = ACCESS_SECURITY
 	contains = list(/obj/item/clothing/suit/armor/halflife/kevlar,
 					/obj/item/clothing/suit/armor/halflife/kevlar,
-					/obj/item/clothing/under/syndicate/camo,
-					/obj/item/clothing/under/syndicate/camo,
+					/obj/item/clothing/under/halflife/conscript,
+					/obj/item/clothing/under/halflife/conscript,
 					/obj/item/clothing/mask/gas/hl2/military/hardened,
 					/obj/item/clothing/mask/gas/hl2/military/hardened,
 					/obj/item/storage/backpack/halflife/satchel/military,

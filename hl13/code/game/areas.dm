@@ -206,6 +206,9 @@
 	first_time_text = "The Nexus"
 	ambient_buzz = 'hl13/sound/ambience/citadel_hub_ambience1.ogg'
 
+	ambient_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_13.ogg'
+	ambient_music_vol = 17
+
 /area/halflife/indoors/townhall/civilprotection/preproom
 	name = "\improper Nexus Prep Room"
 
@@ -328,7 +331,11 @@
 /area/halflife/indoors/productioncenter
 	name = "\improper Production Center"
 	ambient_buzz = 'hl13/sound/ambience/industrial3.ogg'
-	ambient_buzz_vol = 100
+	ambient_buzz_vol = 85
+
+	ambient_music = 'hl13/sound/ambience/bgm/industrialdistrict.ogg'
+
+	ambient_music_vol = 18
 
 	first_time_text = "The Factory"
 
@@ -784,6 +791,10 @@
 
 	ambient_buzz = 'hl13/sound/ambience/industrial4.ogg'
 	ambient_buzz_vol = 70
+
+	ambient_music = 'hl13/sound/ambience/bgm/industrialdistrict.ogg'
+
+	ambient_music_vol = 18
 
 /area/halflife/indoors/prison/gym
 	name = "\improper Prison Gym"

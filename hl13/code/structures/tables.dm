@@ -366,6 +366,18 @@
 	icon_state = "tinkerbench"
 	crafting_type = CRAFTING_BENCH_ELECTRIC
 
+/obj/structure/table/halflife/no_smooth/large/crafting/chemset
+	name = "crude chemistry set"
+	desc = "A crude set of beakers and chemical equipment thrown together, suitable for making some crude drugs."
+	icon_state = "chemicalset"
+	crafting_type = CRAFTING_BENCH_CHEM
+	resistance_flags = LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF //these ones are crafted, so they need to be destroyable
+
+/obj/structure/table/halflife/no_smooth/large/crafting/chemset/Initialize(mapload)
+	. = ..()
+	bound_width = 32
+	bound_height = 32
+
 /datum/storage/table_storage
 	animated = FALSE
 	insert_on_attack = FALSE
