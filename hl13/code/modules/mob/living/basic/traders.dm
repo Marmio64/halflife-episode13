@@ -575,7 +575,7 @@
 	speech_chance = 4
 	emote_see = list("checks the seal on their mask.", "yawns.", "inspects their rifle.", "looks around.")
 	speak = list(
-		"Don't do anything stupid",
+		"Don't do anything stupid.",
 		"Mmmmmm.",
 		"Can't wait to ship back home.",
 		"Poland is not yet dead.",

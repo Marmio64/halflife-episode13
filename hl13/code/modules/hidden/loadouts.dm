@@ -131,7 +131,7 @@
 	r_pocket = /obj/item/flashlight/hand_crank
 	belt = /obj/item/gun/ballistic/automatic/pistol/usp
 	head = /obj/item/clothing/head/helmet/halflife/military/weak
-	uniform = /obj/item/clothing/under/syndicate/camo
+	uniform = /obj/item/clothing/under/halflife/conscript
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
 

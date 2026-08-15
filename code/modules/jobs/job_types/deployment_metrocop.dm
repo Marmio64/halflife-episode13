@@ -111,7 +111,10 @@ GLOBAL_VAR_INIT(deployment_combine_free_tier5s, 0)
 			qdel(item)
 		for(var/datum/action/cooldown/buttons in user.actions)
 			qdel(buttons)
-		user.equipOutfit(/datum/outfit/deployment_loadout/intruder/guard) //only one loadout and i dont want to see any metrocops (or nude men) in my conscript bunker!!
+		if(GLOB.special_guards)
+			user.equipOutfit(/datum/outfit/deployment_loadout/intruder/guard/gurlukovich)
+		else
+			user.equipOutfit(/datum/outfit/deployment_loadout/intruder/guard) //only one loadout and i dont want to see any metrocops (or nude men) in my conscript bunker!!
 		user.regenerate_icons()
 		chosen = null
 

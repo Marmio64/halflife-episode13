@@ -315,12 +315,59 @@
 	new_tongue.Insert(H)
 	qdel(old_organ)
 
+///do not put this loadout on the roster, admin spawn only
+/datum/outfit/deployment_loadout/intruder/solid/smash
+	faction = REBEL_DEPLOYMENT_FACTION
+	name = "Smash Crab"
+	display_name = "Smash Crab"
+	desc = "Colossal Cell Lead? Solid Crab? The fourth genetic clone? Who knows, but he's skipping out on some tournament he was invited to to instead kick a bunch of guard ass. And he brought a LOT of explosives."
+
+	head = /obj/item/clothing/head/costume/snakeeater/solid/smash
+	glasses = /obj/item/clothing/glasses/thermal/solid
+	uniform = /obj/item/clothing/under/syndicate/combat
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/solid/smash
+	suit = /obj/item/clothing/suit/armor/halflife/milvest/solid
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/solid
+	gloves = /obj/item/clothing/gloves/color/black
+	ears = /obj/item/radio/headset
+
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection/solid/smash
+
+	//no loadout beacon, has only one available loadout. also he doesnt get smokes in smash
+
+	combat_music = 'hl13/sound/music/combat/encounter.ogg' //specifically the smash variant
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/rocket, /datum/action/cooldown/spell/conjure_item/grenade/smash, /datum/action/cooldown/spell/conjure_item/c4)
+
+	extra_end = 10
+	extra_dex = 5
+	extra_str = 10
+
+
+/datum/outfit/deployment_loadout/intruder/solid/smash/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.set_haircolor("#663300", update = FALSE)
+	H.set_facial_haircolor("#663300", update = FALSE)
+	H.skin_tone = "caucasian2"
+	H.set_hairstyle("Business Hair", update = TRUE) //looks like solid
+	H.set_facial_hairstyle("Beard (Cropped Fullbeard)", update = TRUE) //but also colossal cell lead
+	H.update_body(1)
+	H.fully_replace_character_name(H.real_name,"Smash Crab")
+	H.death_sound = 'hl13/sound/effects/smashdeath.ogg'
+	var/obj/item/organ/old_organ = H.get_organ_slot(ORGAN_SLOT_TONGUE)
+	var/obj/item/organ/tongue/solid/smash/new_tongue = new()
+	new_tongue.Insert(H)
+	qdel(old_organ)
+
 //////// clothing/gear for the operators
 
 /obj/item/clothing/head/costume/snakeeater/solid
 	name = "Sneaking Bandana"
 	desc = "A blue bandana. You look quite solid with this bandana on, but unfortunately it doesn't provide infinite ammo."
 	armor_type = /datum/armor/kevlararmor
+
+/obj/item/clothing/head/costume/snakeeater/solid/smash
+	desc = "A blue bandana. Provides infinite ammo (of the explosive variety)."
 
 /obj/item/clothing/head/costume/snakeeater/solid/venom
 	name = "Shrapnel Horn"
@@ -593,6 +640,50 @@
 	SSwardrobe.provide_type(/obj/item/grenade/smokebomb, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/polish_resistance/solid/smash/Initialize(mapload)
+	. = ..()
+	atom_storage.max_slots = 15
+	atom_storage.max_total_storage = 26
+	atom_storage.set_holdable(list(
+		/obj/item/assembly/flash/handheld,
+		/obj/item/clothing/glasses,
+		/obj/item/clothing/gloves,
+		/obj/item/flashlight/seclite,
+		/obj/item/food/donut,
+		/obj/item/grenade,
+		/obj/item/holosign_creator/security,
+		/obj/item/knife/combat,
+		/obj/item/melee/baton,
+		/obj/item/radio,
+		/obj/item/reagent_containers/spray/pepper,
+		/obj/item/restraints/handcuffs,
+		/obj/item/restraints/legcuffs/bola,
+		/obj/item/ammo_casing/rocket/hl13, //no room for any type of ammo except explosives
+		/obj/item/hl2/deployable_box,
+		/obj/item/stack/medical/gauze,
+		/obj/item/reagent_containers/hypospray/medipen/adrenaline_inhaler,
+		/obj/item/reagent_containers/hypospray/medipen/oxycodone,
+		/obj/item/reagent_containers/pill/patch/medkit/vial,
+		/obj/item/reagent_containers/pill/patch/medkit/ration, //RATION HOLDER RATION HOLDER RATION HOLDER
+	))
+
+/obj/item/storage/belt/civilprotection/polish_resistance/solid/smash/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/knife/combat, src)
+	SSwardrobe.provide_type(/obj/item/ammo_casing/rocket/hl13, src)
+	SSwardrobe.provide_type(/obj/item/ammo_casing/rocket/hl13, src)
+	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
+	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
+	SSwardrobe.provide_type(/obj/item/grenade/syndieminibomb/bouncer, src)
+	SSwardrobe.provide_type(/obj/item/grenade/c4, src)
+	SSwardrobe.provide_type(/obj/item/hl2/deployable_box, src)
+	SSwardrobe.provide_type(/obj/item/hl2/deployable_box, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/pill/patch/medkit/ration, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/oxycodone, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/oxycodone, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/oxycodone, src)
+
 /obj/item/storage/backpack/halflife/satchel/civilprotection/solid
 	name = "Weapons Bag"
 	desc = "A relatively small bag designed to carry firearms."
@@ -603,8 +694,12 @@
 	atom_storage.set_holdable(list(
 		/obj/item/gun/ballistic/automatic/pistol, //should include the tranq and the usp
 		/obj/item/gun/ballistic/automatic/m4a1, //he can carry the locked guns but why would he, other than to deny the enemy?
+		/obj/item/gun/ballistic/rocketlauncher/halflife, //only useful for smash crab
 	))
-	atom_storage.exception_hold = typecacheof(list(/obj/item/gun/ballistic/automatic/m4a1))
+	atom_storage.exception_hold = typecacheof(list(
+		/obj/item/gun/ballistic/automatic/m4a1,
+		/obj/item/gun/ballistic/rocketlauncher/halflife,
+	))
 
 /obj/item/storage/backpack/halflife/satchel/civilprotection/solid/tranq/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/pistol/solid_tranq, src)
@@ -616,6 +711,9 @@
 /obj/item/storage/backpack/halflife/satchel/civilprotection/solid/m4a1/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/m4a1/famas/crab/suppressed, src)
 	SSwardrobe.provide_type(/obj/item/gun/ballistic/automatic/pistol/usp/suppressed/solid, src)
+
+/obj/item/storage/backpack/halflife/satchel/civilprotection/solid/smash/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/gun/ballistic/rocketlauncher/halflife, src)
 
 /obj/item/reagent_containers/pill/patch/medkit/ration
 	name = "Ration"
@@ -1140,6 +1238,12 @@
 		"Rest in peace" = 'hl13/sound/voice/solid/venomrestinpeace.ogg',
 		"Dont move" = 'hl13/sound/voice/solid/venomdontmove.ogg',
 	)
+	var/static/list/smash_voicelines = list(
+		"There" = 'hl13/sound/voice/solid/smashthere.ogg',
+		"Kept you waiting, huh" = 'hl13/sound/voice/solid/smashwaiting.ogg',
+		"Not even close" = 'hl13/sound/voice/solid/smashclose.ogg',
+		"showtime" = 'hl13/sound/voice/solid/smashshowtime.ogg',
+	)
 
 	var/operativetype = "Solid"
 
@@ -1158,6 +1262,10 @@
 /obj/item/organ/tongue/solid/venom
 	actions_types = list(/datum/action/item_action/waiting, /datum/action/item_action/restinpeace, /datum/action/item_action/dontmove)
 	operativetype = "Venom"
+
+/obj/item/organ/tongue/solid/smash
+	actions_types = list(/datum/action/item_action/waiting, /datum/action/item_action/there, /datum/action/item_action/showtime, /datum/action/item_action/close)
+	operativetype = "Smash"
 
 /obj/item/organ/tongue/solid/proc/can_use(mob/user)
 	return istype(user) && !user.incapacitated
@@ -1193,6 +1301,12 @@
 		restinpeace()
 	if(istype(action, /datum/action/item_action/dontmove))
 		dontmove()
+	if(istype(action, /datum/action/item_action/there))
+		there()
+	if(istype(action, /datum/action/item_action/close))
+		close()
+	if(istype(action, /datum/action/item_action/showtime))
+		showtime()
 
 /obj/item/organ/tongue/solid/modify_speech(datum/source, list/speech_args)
 	var/full_message = speech_args[SPEECH_MESSAGE]
@@ -1210,6 +1324,11 @@
 		for(var/lines in venom_voicelines)
 			if(findtext(full_message, lines))
 				playsound(source, venom_voicelines[lines], 50, FALSE)
+				return // only play the first.
+	else if(operativetype == "Smash")
+		for(var/lines in smash_voicelines)
+			if(findtext(full_message, lines))
+				playsound(source, smash_voicelines[lines], 50, FALSE)
 				return // only play the first.
 	else
 		for(var/lines in snake_voicelines)
@@ -1428,6 +1547,48 @@
 	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
 
 	usr.say("Dont move.", forced = src.name)
+
+/datum/action/item_action/there
+	name = "There!"
+
+/obj/item/organ/tongue/solid/verb/there()
+	set category = "Object"
+	set name = "There!"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("There!", forced = src.name)
+
+/datum/action/item_action/close
+	name = "Not even close!"
+
+/obj/item/organ/tongue/solid/verb/close()
+	set category = "Object"
+	set name = "Not even close!"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("Not even close!", forced = src.name)
+
+/datum/action/item_action/showtime
+	name = "It's showtime!"
+
+/obj/item/organ/tongue/solid/verb/showtime()
+	set category = "Object"
+	set name = "It's showtime!"
+	set src in usr
+	if(!isliving(usr) || !can_use(usr) || !COOLDOWN_FINISHED(src, snake_cooldown))
+		return
+
+	COOLDOWN_START(src, snake_cooldown, PHRASE_COOLDOWN)
+
+	usr.say("It's showtime!", forced = src.name)
 
 /obj/item/choice_beacon/intruder_snake_loadout
 	name = "equipment delivery beacon"

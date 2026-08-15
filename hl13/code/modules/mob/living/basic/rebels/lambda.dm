@@ -120,7 +120,7 @@
 /datum/outfit/plf_trooper_corpse
 	name = "PLF Soldier Corpse"
 
-	head = /obj/item/clothing/head/helmet/halflife/military/weak/poland
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/polandcamo
 	mask = /obj/item/clothing/mask/gas/hl2/military
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar

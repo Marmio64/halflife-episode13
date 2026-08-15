@@ -8,6 +8,7 @@ GLOBAL_LIST_EMPTY(real_objectives)
 GLOBAL_VAR_INIT(osp_mode, FALSE)
 GLOBAL_VAR_INIT(crab_loadout, "classic") //classic by default
 GLOBAL_VAR_INIT(crab_character, "solid") //solid by default, right now only used by the end music
+GLOBAL_VAR_INIT(special_guards, FALSE)
 
 /obj/machinery/intruder_time_counter
 	name = "intruder counter"
@@ -52,12 +53,19 @@ GLOBAL_VAR_INIT(crab_character, "solid") //solid by default, right now only used
 
 	var/osp_picked = FALSE
 
+	var/enable_special = FALSE
+
 	var/datum/action/cooldown/spell/squad_alert/alert = /datum/action/cooldown/spell/squad_alert //for squad leaders
 	var/datum/action/cooldown/spell/conjure_item/medkit/intruder/tasty = /datum/action/cooldown/spell/conjure_item/medkit/intruder
 	var/datum/action/cooldown/spell/recharge_lights/recharge = /datum/action/cooldown/spell/recharge_lights
 
+/obj/machinery/intruder_time_counter/special
+	enable_special = TRUE
+
 /obj/machinery/intruder_time_counter/Initialize(mapload)
 	..()
+	if(enable_special)
+		GLOB.special_guards = TRUE
 	GLOB.deployment_flag_grace_period = 3 MINUTES
 	return INITIALIZE_HINT_LATELOAD
 
@@ -276,7 +284,8 @@ GLOBAL_VAR_INIT(crab_character, "solid") //solid by default, right now only used
 	bullsquid_readiness += SSticker.tdm_combine_deaths
 	bullsquid_readiness += (GLOB.complete_objectives * 3)
 	bullsquid_readiness += GLOB.bonus_guard_preparedness
-
+	if(!GLOB.special_guards && enable_special) //in case someone wants to enable gurlukovich guards on a map where they dont exist
+		GLOB.special_guards = TRUE
 	if(GLOB.osp_mode && !osp_picked)
 		osp_picked = TRUE
 		attempt_pick_osp()
@@ -366,7 +375,10 @@ GLOBAL_VAR_INIT(crab_character, "solid") //solid by default, right now only used
 		GLOB.alert_cooldown = 30 SECONDS
 		for(var/X in GLOB.deployment_combine_players)
 			var/mob/living/carbon/human/H = X
-			SEND_SOUND(H, 'hl13/sound/effects/alert_begin.ogg')
+			if(GLOB.special_guards)
+				SEND_SOUND(H, 'hl13/sound/effects/alert_begin_special.ogg')
+			else
+				SEND_SOUND(H, 'hl13/sound/effects/alert_begin.ogg')
 			to_chat(H, "<span class='userdanger'>The intruder has been spotted near [intruderlocation], sending reinforcements.</span>")
 			to_chat(H, span_infoplain(span_bold("STATUS: ALERT")))
 	else
@@ -380,7 +392,10 @@ GLOBAL_VAR_INIT(crab_character, "solid") //solid by default, right now only used
 		caution_active = FALSE
 		for(var/X in GLOB.deployment_combine_players)
 			var/mob/living/carbon/human/H = X
-			SEND_SOUND(H, 'hl13/sound/effects/alert_end.ogg')
+			if(GLOB.special_guards)
+				SEND_SOUND(H, 'hl13/sound/effects/alert_end_special.ogg')
+			else
+				SEND_SOUND(H, 'hl13/sound/effects/alert_end.ogg')
 			to_chat(H, "<span class='greentext big'>All units, return to your positions and increase security.</span>")
 			to_chat(H, span_infoplain(span_bold("STATUS: ALL CLEAR")))
 
@@ -397,7 +412,10 @@ GLOBAL_VAR_INIT(crab_character, "solid") //solid by default, right now only used
 				intruderlocation = get_area_name(H, TRUE)
 			for(var/X in GLOB.deployment_combine_players)
 				var/mob/living/carbon/human/H = X
-				SEND_SOUND(H, 'hl13/sound/effects/caution_begin.ogg')
+				if(GLOB.special_guards)
+					SEND_SOUND(H, 'hl13/sound/effects/caution_begin_special.ogg')
+				else
+					SEND_SOUND(H, 'hl13/sound/effects/caution_begin.ogg')
 				to_chat(H, "<span class='userdanger'>Something has been picked up near [intruderlocation], sending reinforcements to investigate.</span>")
 				to_chat(H, span_infoplain(span_bold("STATUS: CAUTION")))
 		else if(GLOB.squad_death)

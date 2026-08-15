@@ -222,6 +222,9 @@
 	requires_hands = TRUE
 	delete_old = TRUE
 
+/datum/action/cooldown/spell/conjure_item/grenade/smash
+	cooldown_time = 15 SECONDS
+
 /datum/action/cooldown/spell/conjure_item/grenade/random_timer
 	name = "Procure Grenade"
 	desc = "Procures a MK3A2 grenade for tossing. The timer is randomized, throw it right away!"
@@ -238,6 +241,19 @@
 	item_type = /obj/item/grenade/incendiary_grenade
 	cooldown_time = 24 SECONDS
 
+/datum/action/cooldown/spell/conjure_item/c4
+	name = "Procure C4"
+	desc = "Procures a C4 for planting."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "grenade" //too lazy to make a new icon
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	spell_requirements = NONE
+	antimagic_flags = NONE
+	cooldown_time = 24 SECONDS
+	item_type = /obj/item/grenade/c4
+	requires_hands = TRUE
+	delete_old = TRUE
 
 /datum/action/cooldown/spell/aoe/rally
 	name = "Rally the Troops"

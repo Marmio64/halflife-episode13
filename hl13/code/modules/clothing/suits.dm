@@ -474,6 +474,11 @@
 /obj/item/clothing/suit/armor/halflife/kevlar/fast
 	slowdown = -0.35
 
+/obj/item/clothing/suit/armor/halflife/kevlar/bdu
+	name = "\improper BDU pouches"
+	desc = "Pouches for storage. Somehow also provides protection. It's best not to question things when you know what your bosses are capable of."
+	icon_state = "bduwebbing"
+
 /datum/armor/kevlararmor
 	melee = 20
 	bullet = 25

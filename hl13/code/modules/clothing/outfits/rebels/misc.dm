@@ -304,7 +304,7 @@
 	suit_store = /obj/item/gun/ballistic/automatic/servicerifle
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/servicerifle
 	l_pocket = /obj/item/knife/combat/survival
-	head = /obj/item/clothing/head/helmet/halflife/military/poland //REAL helmet for REAL men.
+	head = /obj/item/clothing/head/helmet/halflife/military/polandcamo //REAL helmet for REAL men.
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife
 	shoes = /obj/item/clothing/shoes/combat
 
@@ -320,7 +320,7 @@
 	suit_store = /obj/item/gun/ballistic/shotgun/trench
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/shotgun
 	l_pocket = /obj/item/knife/combat //fix bayonet
-	head = /obj/item/clothing/head/helmet/halflife/military/poland
+	head = /obj/item/clothing/head/helmet/halflife/military/polandcamo
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife
 	shoes = /obj/item/clothing/shoes/combat
 
@@ -330,7 +330,7 @@
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/m4a1_nonade
 	suit_store = /obj/item/gun/ballistic/automatic/m4a1 //now you're an actual, trusted soldier, so we can give you good weapons
 	l_pocket = /obj/item/knife/combat/survival
-	head = /obj/item/clothing/head/helmet/halflife/military/poland
+	head = /obj/item/clothing/head/helmet/halflife/military/polandcamo
 	r_pocket = /obj/item/grenade/c4
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife
 	shoes = /obj/item/clothing/shoes/combat
