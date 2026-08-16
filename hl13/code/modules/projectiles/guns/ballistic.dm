@@ -659,7 +659,7 @@
 /obj/item/gun/ballistic/shotgun/spas12/freeman
 	name = "Legendary SPAS 12"
 	desc = "A spectacularly lethal pump action shotgun, for close encounters. This one has a legendary aura of freedom about it."
-	projectile_damage_multiplier = 1.2
+	projectile_damage_multiplier = 1.15
 	spread = 5
 	pin = /obj/item/firing_pin/implant/pindicate
 

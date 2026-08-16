@@ -201,8 +201,8 @@
 	wound = 10
 
 /datum/armor/combinesuit_suppressor
-	melee = 20
-	bullet = 20
+	melee = 25
+	bullet = 25
 	laser = 30
 	energy = 30
 	bomb = 80
@@ -218,7 +218,7 @@
 	bomb = 100
 	fire = 90
 	acid = 50
-	wound = 10
+	wound = 15
 
 /datum/armor/gruntsuit
 	melee = 30

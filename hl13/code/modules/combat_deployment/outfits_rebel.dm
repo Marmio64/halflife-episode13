@@ -1036,7 +1036,7 @@
 	ears = /obj/item/radio/headset/rebel_deployment
 	combat_music = 'hl13/sound/music/combat/everymove.ogg'
 
-	belt = /obj/item/crowbar/large/freeman/extreme
+	belt = /obj/item/crowbar/large/freeman/deployment
 	back = /obj/item/storage/backpack/halflife/satchel/larger
 
 	backpack_contents = list(

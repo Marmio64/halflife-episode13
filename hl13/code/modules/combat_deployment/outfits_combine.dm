@@ -724,7 +724,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
 
-	extra_end = 5
+	extra_end = 7
 	extra_str = 5
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
@@ -754,7 +754,7 @@
 
 	extra_dex = 10
 	extra_str = 5
-	extra_per = 5
+	extra_per = 6
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_MARKSMEN
 
@@ -787,7 +787,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/music/combat/escalation3.ogg'
 
-	extra_end = 5
+	extra_end = 6
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_HEAVY | WEAPON_CAT_RIFLE
 
@@ -838,6 +838,7 @@
 
 	extra_int = 10
 	extra_per = 5
+	extra_dex = 2
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
 

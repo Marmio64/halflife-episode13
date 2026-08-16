@@ -78,7 +78,8 @@
 	force = 32
 
 /obj/item/crowbar/large/freeman/deployment
-	force = 28
+	force = 32
+	wound_bonus = -10
 
 /obj/item/crowbar/large/emergency
 	name = "emergency crowbar"

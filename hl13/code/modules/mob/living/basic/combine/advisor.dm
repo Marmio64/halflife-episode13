@@ -14,7 +14,7 @@
 	melee_damage_upper = 25
 	melee_attack_cooldown = 1.35 SECONDS
 	sharpness = SHARP_POINTY
-	armour_penetration = 25
+	armour_penetration = 30
 	wound_bonus = -15
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	attack_verb_continuous = "claws"
@@ -22,7 +22,7 @@
 	attack_sound = 'hl13/sound/creatures/hunter/hunter_skewer1.ogg'
 	combat_mode = TRUE
 	status_flags = CANPUSH
-	speed = 0.65
+	speed = 0.6
 	death_sound = 'hl13/sound/creatures/advisor/advisor_scream.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles
 	speak_emote = list("telepathically utters")
