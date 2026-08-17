@@ -442,6 +442,9 @@
 	inhand_icon_state = "military"
 	storage_type = /datum/storage/satchel/halflife/small
 
+/obj/item/storage/backpack/halflife/satchel/civilprotection/cauterizer
+	icon_state = "cauterizerbag"
+
 /obj/item/storage/backpack/halflife/satchel/military
 	name = "military satchel"
 	desc = "A satchel that looks like it once belonged to the army."

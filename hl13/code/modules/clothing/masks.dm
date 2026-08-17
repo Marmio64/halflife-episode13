@@ -341,6 +341,11 @@
 	icon_state = "suppressor"
 	armor_type = /datum/armor/eliteoverwatchmask
 
+/obj/item/clothing/mask/gas/civilprotection/overwatch/cauterizer
+	name = "overwatch cauterizer soldier mask"
+	icon_state = "cauterizer"
+	armor_type = /datum/armor/eliteoverwatchmask
+
 /datum/armor/eliteoverwatchmask
 	melee = 35
 	bullet = 45

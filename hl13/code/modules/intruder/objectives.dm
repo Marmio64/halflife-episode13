@@ -171,7 +171,7 @@ GLOBAL_LIST_EMPTY(node_terminals)
 		info_button = new(src)
 		info_button.Grant(owner.current)
 		gave_hud = TRUE
-	if(objective_stage == 4)
+	if(objective_stage == 3)
 		to_chat(owner, span_green("You received a requisition point for taking good care of your mental and physical health.")) //the combine are such nice people
 		objective_stage = 1
 		var/list/owner_memories = owner.memories
@@ -196,7 +196,7 @@ GLOBAL_LIST_EMPTY(node_terminals)
 				message = "That was a good show. "
 			if("coffee")
 				message = "That cup of coffee hit the spot. "
-	message += "[5 - objective_stage] until your next requisition point."
+	message += "[4 - objective_stage] until your next requisition point."
 	to_chat(owner, span_notice(message))
 	var/previous_objective_type = objective_type
 	var/objective_acceptable = FALSE

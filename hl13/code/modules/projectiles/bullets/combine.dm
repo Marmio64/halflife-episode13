@@ -49,7 +49,7 @@
 	. = ..()
 
 /obj/projectile/bullet/pulse/lmg
-	damage = 24
+	damage = 25
 	wound_bonus = -20
 	armour_penetration = 20
 	accuracy_falloff = 9 //accuracy drops off faster
