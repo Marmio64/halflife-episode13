@@ -723,7 +723,7 @@
 	)
 
 	ears = /obj/item/radio/headset/civilprotection/deployment
-	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
+	combat_music = 'hl13/sound/music/combat/killbound.ogg'
 
 	extra_end = 4
 	extra_dex = 2
