@@ -1086,6 +1086,15 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 	layer = ABOVE_OPEN_TURF_LAYER
 	plane = FLOOR_PLANE
 
+/obj/structure/halflife/rails/attackby(obj/item/weapon, mob/user, params)
+	if(SEND_SIGNAL(weapon, COMSIG_ITEM_ATTACK_EFFECT, src, user, params) & COMPONENT_NO_AFTERATTACK)
+		return TRUE
+
+	if(istype(weapon, /obj/item/mop) || istype(weapon, /obj/item/soap))
+		return
+
+	return ..()
+
 /obj/structure/halflife/trash_decal
 	name = "trash"
 	desc = "The various rubbish of City 13."

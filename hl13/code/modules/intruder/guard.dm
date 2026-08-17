@@ -362,6 +362,16 @@
 /obj/item/clothing/mask/balaclava/protective/guard/double_agent
 	desc = "This hard to see balaclava disguises your identity as a double agent."
 
+/obj/item/clothing/mask/balaclava/protective/guard/double_agent/bdu
+	actions_types = list(/datum/action/item_action/clear, /datum/action/item_action/g_box, /datum/action/item_action/g_who, /datum/action/item_action/g_noise)
+	guard_voicelines = list(
+		"Who is that" = 'hl13/sound/voice/solid/g_whosthat.ogg',
+		"Clear" = 'hl13/sound/voice/solid/g_clear.ogg',
+		"What was that just now" = 'hl13/sound/voice/solid/g_whatwasthat.ogg',
+		"What is with that box" = 'hl13/sound/voice/solid/g_box.ogg',
+		"Nothing here" = 'hl13/sound/voice/solid/g_nothinghere.ogg',
+	)
+
 /obj/item/clothing/head/beret/durathread/unitednations/guard
 	name = "Squad Leader Beret"
 	desc = "An old blue beret, given to squad leaders at Zewnetrzny Raj. It is made with kevlar, and thus provides a small amount of protection to the head. You're too proud to take it off."

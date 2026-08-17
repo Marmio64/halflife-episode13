@@ -184,7 +184,12 @@ GLOBAL_VAR_INIT(special_guards, FALSE)
 			var/mask_item = H.get_item_by_slot(ITEM_SLOT_MASK)
 			if(mask_item)
 				qdel(mask_item)
-			H.equip_to_slot_or_del(new /obj/item/clothing/mask/balaclava/protective/guard/double_agent, ITEM_SLOT_MASK)
+			var/new_mask
+			if(GLOB.special_guards)
+				new_mask = /obj/item/clothing/mask/balaclava/protective/guard/double_agent/bdu
+			else
+				new_mask = /obj/item/clothing/mask/balaclava/protective/guard/double_agent
+			H.equip_to_slot_or_del(new new_mask, ITEM_SLOT_MASK)
 			double_agents++
 			combine_players--
 
