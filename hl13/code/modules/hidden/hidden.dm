@@ -452,9 +452,9 @@
 		new /mob/living/basic/halflife/zombie/poison(get_turf(target))
 	else
 		new /mob/living/basic/halflife/zombie(get_turf(target))
-	user.adjustStaminaLoss(-25)
-	user.adjustBruteLoss(-25)
-	user.adjustFireLoss(-25)
+	user.adjustStaminaLoss(-15) //10 less healing
+	user.adjustBruteLoss(-15)
+	user.adjustFireLoss(-15)
 	target.gib()
 
 /datum/action/cooldown/spell/pointed/projectile/hidden_spit
