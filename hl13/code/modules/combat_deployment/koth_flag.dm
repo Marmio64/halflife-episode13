@@ -321,7 +321,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 0)
 		. += span_notice("The xenians need to hold the flag for [(GLOB.deployment_xen_flag_time_left)/10] seconds more in order to win.")
 
 /obj/machinery/deployment_koth_flag/rebel_defend
-	rebel_time = 8.5 MINUTES
+	rebel_time = 8 MINUTES
 	combine_time = 40 SECONDS
 	grace_time = 1 MINUTES
 	normal_respawn_speed = 20 SECONDS

@@ -57,10 +57,17 @@
 		hurt = !throwingdatum.gentle
 	if(hurt && hit_atom.density)
 		if(isturf(hit_atom))
-			Paralyze(2 SECONDS)
+			if(HAS_TRAIT(src, TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)) //hl13 edit
+				Paralyze(0.35 SECONDS)
+				Knockdown(1.5 SECONDS)
+			else
+				Paralyze(2 SECONDS)
 			take_bodypart_damage(10 + 5 * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
 		else if(isstructure(hit_atom) && extra_speed)
-			Paralyze(1 SECONDS)
+			if(HAS_TRAIT(src, TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)) //hl13 edit
+				Knockdown(1 SECONDS)
+			else
+				Paralyze(1 SECONDS)
 			take_bodypart_damage(5 + 5 * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
 		else if(!iscarbon(hit_atom) && extra_speed)
 			take_bodypart_damage(5 * extra_speed, check_armor = TRUE, wound_bonus = extra_speed * 5)
