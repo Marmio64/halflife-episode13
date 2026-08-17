@@ -357,6 +357,7 @@
 		loadouts = list()
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/combine/tier5/hunter,
+			/datum/outfit/deployment_loadout/combine/tier5/cauterizer,
 			/datum/outfit/deployment_loadout/combine/tier5/wallhammer,
 			/datum/outfit/deployment_loadout/combine/tier5/suppressor,
 			/datum/outfit/deployment_loadout/combine/tier5/advisor,

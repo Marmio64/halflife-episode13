@@ -578,7 +578,12 @@
 		return
 	if (recent_rack > world.time)
 		return
-	recent_rack = world.time + rack_delay
+	var/real_rack_delay = rack_delay
+	if(!(weapon_category & user.weapon_specialties || user.weapon_specialties & WEAPON_CAT_ALL))
+		real_rack_delay *= 1.25 //25% greater rack delay for the untrained
+
+	recent_rack = world.time + real_rack_delay
+
 	rack(user)
 	return
 

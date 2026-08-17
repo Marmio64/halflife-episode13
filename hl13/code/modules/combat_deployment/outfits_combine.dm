@@ -696,6 +696,42 @@
 	player_mind.transfer_to(S)
 	qdel(H)
 
+/datum/outfit/deployment_loadout/combine/tier5/cauterizer
+	name = "Deployment: Combine Cauterizer"
+	display_name = "Combine Cauterizer (Offense)"
+	desc = "You are a crowd controller, medium to heavy specialty combine soldier, that takes a liking towards burning enemies both with fire and dark energy balls from your rifle. Be wary however, you do not have immunity to your fire or dark energy balls!"
+	id_name = "Cauterizer"
+
+	glasses = /obj/item/clothing/glasses/hud/security/night/combine
+	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/cauterizer
+	uniform = /obj/item/clothing/under/combine/overwatch/cauterizer
+	suit = /obj/item/clothing/suit/armor/overwatch/red
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection/overwatch/cremator
+	gloves = /obj/item/clothing/gloves/combat/overwatch
+	belt = /obj/item/storage/belt/civilprotection/overwatch/ar2
+	suit_store = /obj/item/gun/ballistic/automatic/ar2
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	r_pocket = /obj/item/reagent_containers/pill/patch/medkit
+
+	back = /obj/item/storage/backpack/halflife/satchel/civilprotection/cauterizer
+
+	backpack_contents = list(
+		/obj/item/ammo_casing/pulse/energyball = 2,
+		/obj/item/grenade/incendiary_grenade = 3,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,
+		/obj/item/extinguisher/mini = 1,
+	)
+
+	ears = /obj/item/radio/headset/civilprotection/deployment
+	combat_music = 'hl13/sound/music/combat/penultimatum.ogg'
+
+	extra_end = 4
+	extra_dex = 2
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/energyball)
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE
+
 /datum/outfit/deployment_loadout/combine/tier5/wallhammer
 	name = "Deployment: Combine Wallhammer"
 	display_name = "Combine Wallhammer (Defense)"

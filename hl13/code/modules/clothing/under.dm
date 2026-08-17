@@ -169,6 +169,11 @@
 	armor_type = /datum/armor/combinesuit_wallhammer
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 
+/obj/item/clothing/under/combine/overwatch/cauterizer
+	desc = "Full-body suit which includes kevlar weaving to provide extra protection. This one looks tailored for a cauterizer, and is extra resilient."
+	armor_type = /datum/armor/combinesuit_cauterizer
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+
 /obj/item/clothing/under/combine/overwatch/red
 	desc = "Red full-body suit which includes kevlar weaving to provide extra protection."
 	icon_state = "overwatch_red"
@@ -207,6 +212,16 @@
 	energy = 30
 	bomb = 80
 	fire = 90
+	acid = 50
+	wound = 10
+
+/datum/armor/combinesuit_cauterizer
+	melee = 30
+	bullet = 30
+	laser = 50
+	energy = 50
+	bomb = 80
+	fire = 100
 	acid = 50
 	wound = 10
 
