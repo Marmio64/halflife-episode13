@@ -1081,6 +1081,46 @@
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER | WEAPON_CAT_SPECIALTY
 
+/datum/outfit/deployment_loadout/rebel/tier5/rebel_commando
+	name = "Deployment: Rebel Commando"
+	display_name = "Rebel Commando (Offense)"
+	desc = "You are a well equipped and trained rebel that has seen at least a dozen battles through with your trusty AR2. You are a true jack of all trades that is a great infantry addition to any battle."
+	id_name = "Commando"
+
+	uniform = /obj/item/clothing/under/citizen/rebel
+	head = /obj/item/clothing/head/helmet/halflife/military/camo
+	mask = /obj/item/clothing/mask/gas/hl2/modern
+	shoes = /obj/item/clothing/shoes/boots
+	gloves = /obj/item/clothing/gloves/fingerless
+
+	back = /obj/item/storage/backpack/halflife/satchel/radio/large
+
+	belt = /obj/item/gun/ballistic/automatic/pistol/usp
+
+	l_pocket = /obj/item/reagent_containers/pill/patch/medkit
+	r_pocket = /obj/item/flashlight/seclite
+
+	suit = /obj/item/clothing/suit/armor/rebel/light/jacket/commando
+	suit_store = /obj/item/gun/ballistic/automatic/ar2/standardpin
+
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/ar2 = 5,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
+		/obj/item/grenade/syndieminibomb/bouncer = 2,
+		/obj/item/ammo_casing/pulse/energyball = 1,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+	extra_dex = 2
+	extra_end = 2
+	extra_str = 2
+	extra_per = 1
+	extra_int = 1
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE | WEAPON_CAT_SMG | WEAPON_CAT_SHOTGUN
+
 /datum/outfit/deployment_loadout/rebel/tier5/firefighter
 	name = "Deployment: Rebel Fire Fighter"
 	display_name = "Rebel Fire Fighter (Defense)"

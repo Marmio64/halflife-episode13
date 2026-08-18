@@ -239,6 +239,7 @@
 			/datum/outfit/deployment_loadout/rebel/tier5/freeman,
 			/datum/outfit/deployment_loadout/rebel/tier5/riotpolice,
 			/datum/outfit/deployment_loadout/rebel/tier5/rpg,
+			/datum/outfit/deployment_loadout/rebel/tier5/rebel_commando,
 			/datum/outfit/deployment_loadout/rebel/tier5/firefighter,
 			/datum/outfit/deployment_loadout/rebel/tier5/veteran,
 			/datum/outfit/deployment_loadout/rebel/tier5/extract_vortigaunt,

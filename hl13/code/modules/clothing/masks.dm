@@ -344,7 +344,7 @@
 /obj/item/clothing/mask/gas/civilprotection/overwatch/cauterizer
 	name = "overwatch cauterizer soldier mask"
 	icon_state = "cauterizer"
-	armor_type = /datum/armor/eliteoverwatchmask
+	armor_type = /datum/armor/cauterizeroverwatchmask
 
 /datum/armor/eliteoverwatchmask
 	melee = 35
@@ -353,6 +353,16 @@
 	energy = 10
 	bomb = 40
 	fire = 80
+	acid = 80
+	wound = 10
+
+/datum/armor/cauterizeroverwatchmask
+	melee = 40
+	bullet = 45
+	laser = 10
+	energy = 10
+	bomb = 40
+	fire = 100
 	acid = 80
 	wound = 10
 

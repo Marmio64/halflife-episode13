@@ -842,8 +842,8 @@
 	slowdown = 0.1
 	armor_type = /datum/armor/rebellight_Jacket_Insulated
 
-/obj/item/clothing/suit/armor/rebel/light/jacket/speedy
-	slowdown = -0.25
+/obj/item/clothing/suit/armor/rebel/light/jacket/commando
+	slowdown = -0.15
 
 /obj/item/clothing/suit/armor/rebel/light/speedy
 	slowdown = -0.25

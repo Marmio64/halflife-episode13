@@ -716,6 +716,7 @@
 	back = /obj/item/storage/backpack/halflife/satchel/civilprotection/cauterizer
 
 	backpack_contents = list(
+		/obj/item/ammo_box/magazine/ar2 = 1,
 		/obj/item/ammo_casing/pulse/energyball = 2,
 		/obj/item/grenade/incendiary_grenade = 3,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 1,

@@ -22,7 +22,7 @@
 	attack_sound = 'hl13/sound/creatures/hunter/hunter_skewer1.ogg'
 	combat_mode = TRUE
 	status_flags = CANPUSH
-	speed = 0.6
+	speed = 0.55
 	death_sound = 'hl13/sound/creatures/advisor/advisor_scream.ogg'
 	ai_controller = /datum/ai_controller/basic_controller/simple_hostile_obstacles
 	speak_emote = list("telepathically utters")
@@ -86,7 +86,7 @@
 	button_icon_state = "repulse"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 	invocation = null
-	cooldown_time = 25 SECONDS
+	cooldown_time = 24 SECONDS
 	aoe_radius = 3
 	max_throw = 4
 	cooldown_reduction_per_rank = 4 SECONDS
@@ -208,8 +208,8 @@
 	if(ishuman(cast_on))
 		var/mob/living/carbon/human/H = cast_on
 		H.reagents.add_reagent(/datum/reagent/medicine/muscle_stimulant, 5)
-	cast_on.adjustBruteLoss(-35)
-	cast_on.adjustFireLoss(-35)
+	cast_on.adjustBruteLoss(-40)
+	cast_on.adjustFireLoss(-40)
 	return TRUE
 
 /datum/action/cooldown/spell/pointed/advisor_eat
@@ -222,7 +222,7 @@
 
 	sound = 'hl13/sound/creatures/advisor/advisor_devour.ogg'
 	school = SCHOOL_TRANSMUTATION
-	cooldown_time = 14 SECONDS
+	cooldown_time = 12 SECONDS
 	cooldown_reduction_per_rank = 6.25 SECONDS
 
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC

@@ -264,7 +264,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 20 SECONDS
+	cooldown_time = 18 SECONDS
 	item_type = /obj/item/ammo_casing/pulse/energyball
 	requires_hands = TRUE
 	delete_old = FALSE

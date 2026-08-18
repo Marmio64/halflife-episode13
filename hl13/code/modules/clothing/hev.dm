@@ -95,6 +95,17 @@
 	acid = 100
 	wound = 20
 
+/datum/armor/hev/deployment
+	melee = 35
+	bullet = 35
+	laser = 35
+	energy = 35
+	bomb = 60
+	bio = 100
+	fire = 100
+	acid = 100
+	wound = 20
+
 
 /obj/item/clothing/suit/hooded/hev/Initialize(mapload)
 	. = ..()
@@ -310,7 +321,7 @@
 
 /obj/item/clothing/suit/hooded/hev/deathmatch/deployment
 	slowdown = -0.55
-	armor_type = /datum/armor/hev/weak
+	armor_type = /datum/armor/hev/deployment
 
 /obj/item/clothing/suit/hooded/hev/deathmatch/boss
 	slowdown = -0.75

@@ -444,6 +444,7 @@
 
 /obj/item/storage/backpack/halflife/satchel/civilprotection/cauterizer
 	icon_state = "cauterizerbag"
+	storage_type = /datum/storage/backpack/halflife
 
 /obj/item/storage/backpack/halflife/satchel/military
 	name = "military satchel"
