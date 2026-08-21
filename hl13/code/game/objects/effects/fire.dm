@@ -142,7 +142,7 @@
 			continue
 		A.flamer_fire_act(burnlevel, firelevel)
 
-	if(!magical)
+	if(!magical && SSmapping.current_map.minetype != "combat_deployment")
 		T.VapourListTurf(list(/datum/vapours/smoke = (0.75 * firelevel), /datum/vapours/carbon_air_vapour = (0.75 * firelevel)), VAPOUR_ACTIVE_EMITTER_CAP)
 	firelevel -= 1.75 //reduce the intensity by 1.75 per tick
 	return

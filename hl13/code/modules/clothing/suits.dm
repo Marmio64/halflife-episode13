@@ -240,6 +240,7 @@
 	name = "sectoral trenchcoat"
 	desc = "A variant of the modified trenchcoat vest dyed with blue highlights to broadcast the authority of its wearer."
 	icon_state = "sectorial"
+	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/divisional
 	name = "divisional lead vest"
@@ -981,6 +982,7 @@
 
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/speedy
 	slowdown = -0.25
+	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss
 	slowdown = -0.35
