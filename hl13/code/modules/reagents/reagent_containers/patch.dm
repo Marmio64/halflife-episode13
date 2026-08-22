@@ -72,6 +72,13 @@
 	name = "large healthpen"
 	list_reagents = list(/datum/reagent/medicine/concentrated_biogel/slurry = 25) //heals 50 hp total instead of 30
 
+/obj/item/reagent_containers/hypospray/medipen/healthpen/chopchop
+	name = "chop-chop pen"
+	desc = "A Combine-made autoinjector seized and modified by one of many resistance groups, painted with a pink band indicating it is loaded with Chop-Chop; a mix of Chope, leftover gel-slurry, and amphetamines, originally developed elsewhere in Europe. While it has some side-effects, its substantial boon to someone's strength and dexterity alongside its amphetamine content make it incredibly effective in the field. Well-known for their use by PLF special forces, despite official statements from the group to the contrary."
+	icon_state = "screechpen"
+	base_icon_state = "screechpen"
+	list_reagents = list(/datum/reagent/medicine/concentrated_biogel/slurry = 5, /datum/reagent/drug/chope = 10, /datum/reagent/drug/methamphetamine = 10) //very limited healing but in exchange you are fast as fuck
+
 /obj/item/reagent_containers/hypospray/medipen/oxycodone
 	name = "oxycodone syringe"
 	desc = "A syringe designed to be easy and quick to use, filled with pain relievers."

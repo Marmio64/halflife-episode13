@@ -740,6 +740,7 @@
 		/obj/item/switchblade = list(PAYCHECK_CREW * 3, 2),
 		/obj/item/clothing/mask/gas/hl2/military = list(PAYCHECK_CREW * 2, 3),
 		/obj/item/stack/kevlar = list(PAYCHECK_CREW, 5),
+		/obj/item/reagent_containers/hypospray/medipen/healthpen/chopchop = list(PAYCHECK_CREW * 1, 5),
 	)
 
 	initial_wanteds = list(
