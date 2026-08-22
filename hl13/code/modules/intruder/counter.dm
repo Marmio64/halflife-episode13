@@ -316,6 +316,8 @@ GLOBAL_VAR_INIT(special_guards, FALSE)
 		if(!time_ticking)
 			time_ticking = TRUE
 			to_chat(world, span_danger(span_slightly_larger(span_bold("Grace period up, let the operation commence."))))
+			if(GLOB.special_guards)
+				to_chat(world, span_danger(span_slightly_larger(span_bold("Remember that you are very high up, and jumping into the water will kill you. Do not jump into the water."))))
 			for(var/X in GLOB.deployment_combine_players)
 				var/client/guard_client = X
 				var/mob/living/carbon/human/H = guard_client.mob

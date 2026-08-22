@@ -256,6 +256,8 @@
 	. = ..()
 	if(istype(I, /obj/item/hl2key))
 		trykeylock(I, M)
+	if(istype(I, /obj/item/storage/halflife/keyring))
+		tryringlock(I, M)
 	if(istype(I, /obj/item/lockpick))
 		trypicklock(I, M)
 	if(locked && !(M.combat_mode))
@@ -281,6 +283,47 @@
 		lock_toggle(user)
 		return
 	return
+
+/obj/machinery/door/unpowered/halflife/proc/tryringlock(obj/item/I, mob/user)
+	if(!keylock)
+		return
+	user.changeNext_move(CLICK_CD_MELEE)
+	var/list/failure_message = list(
+		"Damn it, not that one..."
+		"Nope, not this one..."
+		"Shit, that's not it..."
+		"Come on already..."
+		"This isn't the right key..."
+	)
+	var/obj/item/storage/halflife/keyring/R = i
+	var/list/keys
+	var/correct_key //just whether or not you have the right key in the first place
+	for(var/obj/item/hl2key/K in R.contents)
+		keys += K
+		if(K.lockhash == lockhash || masterkey && K.masterkey)
+			correct_key = TRUE
+	to_chat(user, span_notice("You begin trying keys on the door."))
+	while(keys.len != 0)
+		if(do_after(user, rand(5, 20), interaction_key = DOAFTER_SOURCE_DOORS))
+			if(prob(66) && correct_key) //decent chance you choose the correct key first try
+				to_chat(user, span_notice("Looks like that was it."))
+				lock_toggle(user)
+				return
+			else
+				var/obj/item/hl2key/chosen_key = pick(keys)
+				if(chosen_key.lockhash == lockhash || masterkey && chosen_key.masterkey)
+					to_chat(user, span_notice("Looks like that was it."))
+					lock_toggle(user)
+					return
+				else
+					keys -= chosen_key //you wont try the same one twice
+					to_chat(user, span_warning([pick(failure_message)]))
+		else
+			to_chat(user, span_notice("You stop trying to unlock the door."))
+			return
+	to_chat(user, span_notice("No more keys left to try... it seems you didn't have the keys to that door in the first place."))
+
+
 
 /obj/machinery/door/unpowered/halflife/proc/trypicklock(obj/item/I, mob/living/user)
 	if(open)
