@@ -226,7 +226,7 @@
 
 	var/need_mob_update
 	need_mob_update = affected_mob.adjustStaminaLoss(-4 * REM * seconds_per_tick, updating_stamina = FALSE, required_biotype = affected_biotype)
-	need_mob_update = affected_mob.adjustToxLoss(0.25 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
+	need_mob_update = affected_mob.adjustToxLoss(0.5 * REM * seconds_per_tick, updating_health = FALSE, required_biotype = affected_biotype)
 	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_LIVER, rand(0.5, 1) * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
 	need_mob_update += affected_mob.adjustOrganLoss(ORGAN_SLOT_LUNGS, rand(0.5, 1) * REM * seconds_per_tick, required_organ_flag = affected_organ_flags)
 	if(need_mob_update)

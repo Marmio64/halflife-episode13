@@ -58,6 +58,8 @@ GLOBAL_VAR_INIT(xen_tier_points, 0)
 	///Minimum progression stage required before this flag is capturable
 	var/required_progression_stage = 0
 
+	var/capture_time = 5 SECONDS
+
 /obj/machinery/deployment_koth_flag/Initialize(mapload)
 	.=..()
 	START_PROCESSING(SSprocessing, src)
@@ -207,7 +209,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 0)
 			to_chat(H, span_userdanger("The flag grace period is still on for another [(GLOB.deployment_flag_grace_period)/10] seconds, and cant be captured!"))
 			return
 		to_chat(H, span_green("Raising your team's flag!"))
-		if(do_after(H, 5 SECONDS, src))
+		if(do_after(H, capture_time, src))
 			to_chat(H, span_green("Flag raised!"))
 			current_faction_holder = H.deployment_faction
 
@@ -265,7 +267,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 0)
 			to_chat(user, span_userdanger("The flag grace period is still on for another [(GLOB.deployment_flag_grace_period)/10] seconds, and cant be captured!"))
 			return
 		to_chat(user, span_green("Raising your team's flag!"))
-		if(do_after(user, 5 SECONDS, src))
+		if(do_after(user, capture_time, src))
 			to_chat(user, span_green("Flag raised!"))
 			current_faction_holder = user.deployment_faction
 
@@ -347,6 +349,12 @@ GLOBAL_VAR_INIT(xen_tier_points, 0)
 
 /obj/machinery/deployment_koth_flag/combine_defend/long
 	combine_time = 8.5 MINUTES
+
+/obj/machinery/deployment_koth_flag/xen_chaos
+	xen_time = 4.5 MINUTES
+	combine_time = 4 MINUTES
+	rebel_time = 4 MINUTES
+	capture_time = 3 SECONDS
 
 /obj/effect/koth_grace_field
 	name = "Grace Period Field"

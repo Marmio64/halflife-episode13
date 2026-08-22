@@ -77,6 +77,8 @@
 	desc = "A Combine-made autoinjector seized and modified by one of many resistance groups, painted with a pink band indicating it is loaded with Chop-Chop; a mix of Chope, leftover gel-slurry, and amphetamines, originally developed elsewhere in Europe. While it has some side-effects, its substantial boon to someone's strength and dexterity alongside its amphetamine content make it incredibly effective in the field. Well-known for their use by PLF special forces, despite official statements from the group to the contrary."
 	icon_state = "screechpen"
 	base_icon_state = "screechpen"
+	volume = 25
+	amount_per_transfer_from_this = 25
 	list_reagents = list(/datum/reagent/medicine/concentrated_biogel/slurry = 5, /datum/reagent/drug/chope = 10, /datum/reagent/drug/methamphetamine = 10) //very limited healing but in exchange you are fast as fuck
 
 /obj/item/reagent_containers/hypospray/medipen/oxycodone
@@ -89,7 +91,7 @@
 	custom_price = null
 
 /obj/item/reagent_containers/hypospray/medipen/blood
-	name = "bloodloss shot"
+	name = "anti-bloodloss shot"
 	desc = "A rapid injection syringe for quickly stabilizing and recovering loss of blood."
 	icon = 'hl13/icons/obj/medkits.dmi'
 	icon_state = "blood"
