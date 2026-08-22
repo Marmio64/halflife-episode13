@@ -289,11 +289,11 @@
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
 	var/list/failure_message = list(
-		"Damn it, not that one..."
-		"Nope, not this one..."
-		"Shit, that's not it..."
-		"Come on already..."
-		"This isn't the right key..."
+		"Damn it, not that one...",
+		"Nope, not this one...",
+		"Shit, that's not it...",
+		"Come on already...",
+		"This isn't the right key...",
 	)
 	var/obj/item/storage/halflife/keyring/R = i
 	var/list/keys
