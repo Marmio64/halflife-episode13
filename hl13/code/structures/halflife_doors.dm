@@ -295,7 +295,7 @@
 		"Come on already...",
 		"This isn't the right key...",
 	)
-	var/obj/item/storage/halflife/keyring/R = i
+	var/obj/item/storage/halflife/keyring/R = I
 	var/list/keys
 	var/correct_key //just whether or not you have the right key in the first place
 	for(var/obj/item/hl2key/K in R.contents)
@@ -317,7 +317,7 @@
 					return
 				else
 					keys -= chosen_key //you wont try the same one twice
-					to_chat(user, span_warning([pick(failure_message)]))
+					to_chat(user, span_warning(pick(failure_message)))
 		else
 			to_chat(user, span_notice("You stop trying to unlock the door."))
 			return
