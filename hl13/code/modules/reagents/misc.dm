@@ -251,7 +251,7 @@
 	affected_mob.change_stat(STATKEY_DEX, -4)
 	affected_mob.remove_movespeed_modifier(/datum/movespeed_modifier/reagent/chope)
 
-/datum/reagent/drug/substance
+/datum/reagent/drug/sporetamine
 	name = "Substance"
 	description = "This crude drug gives people a quick high and subtle increases in strength, but is highly addictive."
 	reagent_state = SOLID
@@ -261,7 +261,7 @@
 	taste_description = "toadskin"
 	addiction_types = list(/datum/addiction/opioids = 12)
 
-/datum/reagent/drug/substance/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
+/datum/reagent/drug/sporetamine/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
 	. = ..()
 	affected_mob.add_mood_event("tweaking", /datum/mood_event/narcotic_medium)
 	if(SPT_PROB(2.5, seconds_per_tick))
@@ -274,14 +274,14 @@
 	if(need_mob_update)
 		. = UPDATE_MOB_HEALTH
 
-/datum/reagent/drug/substance/on_mob_metabolize(mob/living/affected_mob)
+/datum/reagent/drug/sporetamine/on_mob_metabolize(mob/living/affected_mob)
 	. = ..()
 	affected_mob.change_stat(STATKEY_STR, 1)
 	affected_mob.change_stat(STATKEY_END, 1)
 	affected_mob.change_stat(STATKEY_DEX, 1)
 	affected_mob.throw_alert_text(/atom/movable/screen/alert/text/joke, "You feel funny.", override = FALSE)
 
-/datum/reagent/drug/substance/on_mob_end_metabolize(mob/living/affected_mob)
+/datum/reagent/drug/sporetamine/on_mob_end_metabolize(mob/living/affected_mob)
 	. = ..()
 	affected_mob.change_stat(STATKEY_STR, -1)
 	affected_mob.change_stat(STATKEY_END, -1)

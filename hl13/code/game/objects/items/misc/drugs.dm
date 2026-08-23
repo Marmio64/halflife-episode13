@@ -1,7 +1,7 @@
-/obj/item/reagent_containers/pill/patch/substance
-	name = "Substance"
-	desc = "A new kind of opioid drug invented post-war. The finely ground powder is inhaled for an extreme high, though it is addictive and has harmful side effects."
-	list_reagents = list(/datum/reagent/drug/substance = 12)
+/obj/item/reagent_containers/pill/patch/sporetamine
+	name = "Sporetamine"
+	desc = "A new kind of opioid drug invented post-war that is made using xenian spores. The finely ground powder is inhaled for an extreme high, though it is addictive and has harmful side effects."
+	list_reagents = list(/datum/reagent/drug/sporetamine = 12)
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	self_delay = 4 SECONDS
 	icon_state = "substance"

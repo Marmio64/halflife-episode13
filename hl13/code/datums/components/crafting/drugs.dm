@@ -1,6 +1,6 @@
 /datum/crafting_recipe/substance
 	name = "Substance"
-	result = /obj/item/reagent_containers/pill/patch/substance
+	result = /obj/item/reagent_containers/pill/patch/sporetamine
 	reqs = list(/obj/item/food/xen/xenspore = 1, /obj/item/cigarette/halflife = 2, /datum/reagent/fuel = 10)
 	time = 5 SECONDS
 	category = CAT_MISC

@@ -39,7 +39,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 0)
 
 	var/rebel_time = 5 MINUTES
 	var/combine_time = 5 MINUTES
-	var/xen_time = 6 MINUTES
+	var/xen_time = 5.5 MINUTES
 	var/grace_time = 3 MINUTES
 
 	/// Should the current holder of the flag have a different respawn speed, as perhaps say a handicap of sorts?
