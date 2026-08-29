@@ -69,6 +69,8 @@
 				/obj/item/halflife/combine_battery,
 				/obj/item/fishing_hook,
 				/obj/item/reagent_containers/cup/glass/canteen,
+				/obj/item/reagent_containers/hypospray/medipen/oxycodone,
+				/obj/item/reagent_containers/pill/patch/sporetamine,
 				/obj/item/stack/spacecash/c1/ten,
 				/obj/item/stack/spacecash/c1/twenty
 				)
@@ -186,10 +188,10 @@
 				/obj/item/reagent_containers/cup/glass/bottle/whiskey,
 				/obj/item/reagent_containers/cup/glass/bottle/vodka = 2, // Na Zdrowie!
 				/obj/item/storage/halflife/pill_bottle/antifatigue,
-				/obj/item/reagent_containers/pill/lsd = 2,
+				/obj/item/reagent_containers/pill/patch/sporetamine = 2,
+				/obj/item/reagent_containers/hypospray/medipen/oxycodone,
 				/obj/item/reagent_containers/cup/glass/mouthwash,
-				/obj/item/reagent_containers/cup/bottle/welding_fuel,
-				/obj/item/reagent_containers/cup/bottle/morphine
+				/obj/item/reagent_containers/cup/bottle/welding_fuel
 				)
 
 //stuff you'd reasonably find in a fridge
@@ -317,6 +319,7 @@
 				/obj/item/halflife/combine_battery,
 				/obj/item/clothing/head/helmet/halflife/military/weak/crafted,
 				/obj/item/clothing/head/utility/welding,
+				/obj/item/reagent_containers/pill/patch/chope,
 				/obj/item/switchblade = 2,
 				/obj/item/weaponcrafting/frame/usp,
 				/obj/item/gun/ballistic/automatic/pistol/makeshift,

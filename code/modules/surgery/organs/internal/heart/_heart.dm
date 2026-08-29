@@ -302,3 +302,10 @@
 		owner.heal_overall_damage(brute = 15, burn = 15, required_bodytype = BODYTYPE_ORGANIC)
 		if(owner.reagents.get_reagent_amount(/datum/reagent/medicine/ephedrine) < 20)
 			owner.reagents.add_reagent(/datum/reagent/medicine/ephedrine, 10)
+
+//hl13 edit start
+/obj/item/organ/heart/headcrab
+	name = "headcrab heart"
+	desc = "A small, strange looking heart belonging to a headcrab. Looks difficult to cook with and probably wont work well in a human, but science always prevails."
+	maxHealth = STANDARD_ORGAN_THRESHOLD * 0.25
+//hl13 edit end

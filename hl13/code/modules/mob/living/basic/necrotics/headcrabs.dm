@@ -44,6 +44,9 @@
 	var/mob/living/zombie_type = /mob/living/basic/halflife/zombie/freshly_crabbed
 	var/can_zombify = TRUE
 
+	//chance it will have a harvestable heart
+	var/heart_chance = 10
+
 	/// List of stuff that the headcrab would eat
 	var/static/list/edibles = list(
 		/obj/item/food/meat,
@@ -94,6 +97,9 @@
 
 	var/atom/movable/screen/zone_sel/zone_selector = hud_used?.zone_select
 	zone_selector?.set_selected_zone(BODY_ZONE_HEAD, src, should_log = FALSE) //HEADcrab goes for the head
+
+	if(prob(heart_chance))
+		butcher_results |= list(/obj/item/organ/heart/headcrab)
 
 /mob/living/basic/halflife/headcrab/deployment
 	melee_attack_cooldown = 1 SECONDS
@@ -248,6 +254,7 @@
 	speed = 0.5
 	butcher_results = list()
 	can_zombify = FALSE
+	heart_chance = 0
 
 /mob/living/basic/halflife/headcrab/baby/Initialize(mapload)
 	. = ..()

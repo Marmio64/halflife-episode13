@@ -133,6 +133,13 @@
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	list_reagents = list(/datum/reagent/medicine/c2/musiver = 10, /datum/reagent/medicine/spaceacillin = 10)
 
+/obj/item/reagent_containers/pill/antitox/makeshift
+	name = "homebrewed anti-sickness tablets"
+	desc = "A couple of makeshift tablets which help purge toxins while making you crazy at the same time!"
+	icon_state = "antitoxtab"
+	icon = 'hl13/icons/obj/misc_items.dmi'
+	list_reagents = list(/datum/reagent/medicine/c2/musiver = 10, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/consumable/ethanol = 10, /datum/reagent/toxin/mindbreaker = 10)
+
 /obj/item/storage/halflife/pill_bottle/paracetamol
 	name = "Paracetamol Pill bottle"
 	desc = "A pill bottle with paracetamol tablets, for relieving minor pains."
@@ -150,6 +157,13 @@
 	icon_state = "paracetamol"
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	list_reagents = list(/datum/reagent/medicine/paracetamol = 15)
+
+/obj/item/reagent_containers/pill/painbreaker
+	name = "painbreaker tablets"
+	desc = "A couple of painbreaker tablets, illicit and makeshift drugs that mimic oxycodone. Contains traces of paralytic poison."
+	icon_state = "paracetamol"
+	icon = 'hl13/icons/obj/misc_items.dmi'
+	list_reagents = list(/datum/reagent/medicine/oxycodone = 15, /datum/reagent/toxin/headcrab_venom = 10)
 
 /obj/item/storage/medkit/halflife
 	icon_state = "first aid kit"

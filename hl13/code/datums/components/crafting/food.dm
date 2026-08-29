@@ -22,6 +22,16 @@
 	result = /obj/item/food/xenstew
 	category = CAT_RATION
 
+/datum/crafting_recipe/food/xenstew_heart
+	name = "Xen Stew (Heart)"
+	reqs = list(
+		/obj/item/food/halflife/nutrient_bar = 1,
+		/datum/reagent/water = 15,
+		/obj/item/organ/heart/headcrab = 1,
+	)
+	result = /obj/item/food/xenstew
+	category = CAT_RATION
+
 /datum/crafting_recipe/food/leechstew
 	name = "Leech Stew"
 	reqs = list(

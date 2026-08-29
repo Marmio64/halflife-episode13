@@ -13,3 +13,19 @@
 	time = 5 SECONDS
 	category = CAT_MISC
 	crafting_interface = CRAFTING_BENCH_CHEM
+
+/datum/crafting_recipe/antisicknesspills
+	name = "Homebrewed Anti-Sickness Pills"
+	result = /obj/item/reagent_containers/pill/antitox/makeshift
+	reqs = list(/obj/item/food/xen/xenbranch = 1, /datum/reagent/consumable/ethanol = 10, /obj/item/food/xen/xenslime = 1, /obj/item/reagent_containers/pill/patch/grubnugget = 1, /datum/reagent/fuel = 10)
+	time = 5 SECONDS
+	category = CAT_MISC
+	crafting_interface = CRAFTING_BENCH_CHEM
+
+/datum/crafting_recipe/painbreaker
+	name = "Painbreaker tablets"
+	result = /obj/item/reagent_containers/pill/painbreaker
+	reqs = list(/datum/reagent/consumable/ethanol = 25, /obj/item/food/meat/slab/xen/poison = 1, /datum/reagent/fuel = 10)
+	time = 5 SECONDS
+	category = CAT_MISC
+	crafting_interface = CRAFTING_BENCH_CHEM

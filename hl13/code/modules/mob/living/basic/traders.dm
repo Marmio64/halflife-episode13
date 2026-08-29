@@ -311,6 +311,7 @@
 		/obj/item/reagent_containers/cup/glass/bottle/vodka = list(PAYCHECK_CREW * 2, 3),
 		/obj/item/reagent_containers/cup/glass/bottle/whiskey = list(PAYCHECK_CREW * 2, 3),
 		/obj/item/reagent_containers/cup/glass/bottle/beer = list(PAYCHECK_CREW, 3),
+		/obj/item/reagent_containers/pill/patch/sporetamine = list(PAYCHECK_CREW * 1.5, 3),
 		/obj/item/stack/sticky_tape = list(PAYCHECK_CREW * 4, 2),
 		/obj/item/weaponcrafting/receiver = list(PAYCHECK_CREW * 3, 3),
 		/obj/item/stack/bulletcasings = list(PAYCHECK_CREW * 0.5, 5),
@@ -614,6 +615,7 @@
 		/obj/item/clothing/suit/armor/platearmor/heavy = list(PAYCHECK_CREW * 7, 1),
 		/obj/item/clothing/mask/bandana/sinew = list(PAYCHECK_CREW * 0.5, 2),
 		/obj/item/food/meat/steak/xen = list(PAYCHECK_CREW * 1.25, 3),
+		/obj/item/food/meat/slab/chumtoad = list(PAYCHECK_CREW * 3, 3),
 		/obj/item/knife/combat = list(PAYCHECK_CREW * 5.5, 3),
 		/obj/item/spear/halflife/deathmatch = list(PAYCHECK_CREW * 5.5, 3),
 		/obj/item/stack/medical/bandage = list(PAYCHECK_CREW * 0.75, 5),
@@ -860,6 +862,8 @@
 		/obj/item/reagent_containers/cup/glass/bottle/vodka = list(PAYCHECK_CREW * 1.5, 5),
 		/obj/item/reagent_containers/cup/glass/bottle/whiskey = list(PAYCHECK_CREW * 1.5, 5),
 		/obj/item/reagent_containers/cup/glass/bottle/beer = list(PAYCHECK_CREW * 0.75, 10),
+		/obj/item/reagent_containers/pill/patch/sporetamine = list(PAYCHECK_CREW * 1.5, 5),
+		/obj/item/reagent_containers/pill/patch/chope = list(PAYCHECK_CREW * 6, 2),
 		/obj/item/stack/sticky_tape = list(PAYCHECK_CREW * 3, 5),
 		/obj/item/clothing/under/citizen/refugee = list(PAYCHECK_CREW * 0.5, 5),
 		/obj/item/storage/backpack/halflife/satchel = list(PAYCHECK_CREW * 3, 3),
@@ -913,8 +917,8 @@
 		/obj/item/stack/telecrystal = list(PAYCHECK_CREW * 1.25, 10, ""),
 		/obj/item/combine_datapod = list(PAYCHECK_CREW * 9, 3, ""),
 		/obj/item/halflife/combine_battery = list(PAYCHECK_CREW, 5, ""),
-		/obj/item/reagent_containers/pill/patch/sporetamine = list(PAYCHECK_CREW * 2, 5, ""),
-		/obj/item/reagent_containers/pill/patch/chope = list(PAYCHECK_CREW * 5, 5, ""),
+		/obj/item/reagent_containers/pill/patch/sporetamine = list(PAYCHECK_CREW * 1.5, 10, ""),
+		/obj/item/reagent_containers/pill/patch/chope = list(PAYCHECK_CREW * 5, 10, ""),
 	)
 
 	say_phrases = list(
