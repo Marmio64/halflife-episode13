@@ -199,6 +199,7 @@
 
 	breakdown()
 	manually_broke = TRUE
+	SSsociostability.modifystability(-5)
 
 /obj/machinery/sealer/proc/explode_in_flames()
 	flame_radius(4, get_turf(src))

@@ -175,30 +175,30 @@
 	name = "Armored Rebel Vest"
 	result = /obj/item/clothing/suit/armor/rebel/light
 	reqs = list(/obj/item/clothing/suit/armor/civilprotection = 1,
-				/obj/item/stack/sheet/cloth = 2,
+				/obj/item/stack/sheet/cloth = 3,
 				/obj/item/stack/sheet/iron = 2)
 	time = 10 SECONDS
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
 
-/datum/crafting_recipe/resistance_light_armor
+//expensive, but is a straight +5% armor alongside arm coverage with no downsides
+/datum/crafting_recipe/resistance_light_armor_jacket
 	name = "Armored Rebel Jacket Vest"
-	result = /obj/item/clothing/suit/armor/rebel/light
+	result = /obj/item/clothing/suit/armor/rebel/light/jacket
 	reqs = list(/obj/item/clothing/suit/armor/civilprotection = 1,
-				/obj/item/stack/sheet/cloth = 2,
+				/obj/item/stack/sheet/cloth = 4,
+				/obj/item/clothing/suit/armor/halflife/kevlar = 2,
 				/obj/item/stack/sheet/iron = 2)
 	time = 10 SECONDS
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
-
-/obj/item/clothing/suit/armor/rebel/light/jacket
 
 /datum/crafting_recipe/resistance_heavy_armor
 	name = "Heavy Resistance Vest"
 	result = /obj/item/clothing/suit/armor/rebel
 	reqs = list(/obj/item/clothing/suit/armor/overwatch = 1,
 				/obj/item/clothing/suit/armor/halflife/kevlar = 2)
-	time = 10 SECONDS
+	time = 8 SECONDS
 	category = CAT_ARMOR
 	crafting_interface = CRAFTING_BENCH_ARMTAILOR
 

@@ -515,14 +515,14 @@
 	desc = "A heavily armored old military vest. The layers of kevlar have weakened over the years, but it remains a potent defensive piece of equipment."
 	icon_state = "milvest"
 	blood_overlay_type = "armor"
-	slowdown = 0.2
+	slowdown = 0.15
 	armor_type = /datum/armor/milvest
 
 	limb_integrity = 300
 	repairable_by = /obj/item/stack/kevlar
 
 /obj/item/clothing/suit/armor/halflife/milvest/slow
-	slowdown = 0.5
+	slowdown = 0.45
 
 /datum/armor/milvest
 	melee = 35
@@ -804,7 +804,7 @@
 	slowdown = 0.25
 
 /datum/armor/rebelheavy
-	melee = 40
+	melee = 50
 	bullet = 50
 	laser = 35
 	energy = 30
