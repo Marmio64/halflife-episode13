@@ -114,6 +114,7 @@
 		/obj/item/reagent_containers/medigel/sterilizine = 2,
 		/obj/item/healthanalyzer/simple = 2,
 		/obj/item/stack/medical/bone_gel = 2,
+		/obj/item/stack/medical/ointment = 6,
 		/obj/item/reagent_containers/hypospray/medipen = 3,
 		/obj/item/storage/halflife/pill_bottle/paracetamol = 3,
 		/obj/item/reagent_containers/hypospray/medipen/blood = 3,
