@@ -703,6 +703,7 @@
 /obj/structure/chair/halflife/metal/broken{
 	dir = 1
 	},
+/obj/effect/spawner/random/halflife/pet_spawner,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
 "eg" = (
@@ -867,6 +868,7 @@
 /area/halflife/indoors/outlands)
 "eS" = (
 /obj/structure/chair/halflife/overlaypickup/plastic,
+/obj/effect/spawner/random/halflife/pet_spawner,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
 "eU" = (
@@ -1610,6 +1612,7 @@
 /obj/structure/chair/halflife/overlaypickup/plastic{
 	dir = 4
 	},
+/obj/effect/spawner/random/halflife/pet_spawner,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
 "iU" = (
@@ -2929,6 +2932,10 @@
 /mob/living/simple_animal/hostile/halflife/antlion,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
+"re" = (
+/obj/structure/flora/xen/tinyshrooms,
+/turf/open/floor/plating/indoor/tile,
+/area/halflife/indoors/outlands)
 "rf" = (
 /obj/machinery/door/unpowered/halflife/seethrough/metal,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -4266,6 +4273,10 @@
 /obj/structure/halflife/fence/wire/barb,
 /turf/open/floor/plating/ground/sidewalk/cobblestone,
 /area/halflife/outdoors/outlands_city)
+"yW" = (
+/obj/structure/alien/weeds,
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/cave)
 "yX" = (
 /obj/structure/halflife/trash/cardboard{
 	dir = 4;
@@ -4572,6 +4583,11 @@
 /obj/structure/halflife/trash/cardboard,
 /turf/open/floor/plating/indoor/carpet/green,
 /area/halflife/indoors/outlands)
+"AL" = (
+/obj/structure/alien/weeds,
+/obj/structure/flora/rock/style_random,
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/cave)
 "AO" = (
 /obj/effect/spawner/random/halflife/loot,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -5269,6 +5285,11 @@
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
+"EQ" = (
+/obj/structure/alien/weeds,
+/obj/structure/flora/xen/tinyshrooms,
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/cave)
 "EU" = (
 /obj/machinery/door/unpowered/halflife/wood{
 	dir = 8
@@ -6234,6 +6255,11 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"KH" = (
+/obj/structure/alien/weeds,
+/mob/living/basic/halflife/chumtoad,
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/cave)
 "KL" = (
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/outlands)
@@ -6481,6 +6507,7 @@
 "Mh" = (
 /obj/machinery/light/small/red/directional/west,
 /obj/structure/alien/weeds,
+/obj/structure/flora/xen/tinyshrooms,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer)
 "Mk" = (
@@ -7249,6 +7276,7 @@
 /obj/structure/chair/halflife/metal/folding{
 	dir = 8
 	},
+/obj/effect/spawner/random/halflife/pet_spawner,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
 "QQ" = (
@@ -7927,6 +7955,11 @@
 /obj/structure/halflife/rug/fancy,
 /turf/open/floor/plating/indoor/woodc/fancy,
 /area/halflife/indoors/outlands)
+"Vl" = (
+/obj/structure/halflife/pallet,
+/mob/living/basic/halflife/chumtoad,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "Vm" = (
 /mob/living/basic/halflife/headcrab/armored,
 /turf/open/floor/plating/indoor/concrete/bricks,
@@ -21591,7 +21624,7 @@ Yp
 Yp
 Yp
 fW
-Yp
+fW
 fW
 Yp
 Yp
@@ -21736,11 +21769,11 @@ EE
 Yp
 Yp
 Yp
+yW
+EQ
 Yp
-Yp
-Yp
-Yp
-Yp
+fW
+fW
 Yp
 fW
 fW
@@ -21885,11 +21918,11 @@ JT
 EE
 Yp
 Yp
-Yp
-Yp
-Yp
-Yp
-Yp
+AL
+fW
+yW
+yW
+fW
 Yp
 Yp
 Yp
@@ -22035,10 +22068,10 @@ JT
 EE
 Yp
 Yp
-Yp
-Yp
-Yp
-Yp
+yW
+fW
+fW
+fW
 Yp
 Yp
 Yp
@@ -22119,7 +22152,7 @@ SL
 op
 Jj
 Jj
-QN
+Vl
 SL
 Yp
 Yp
@@ -22185,9 +22218,9 @@ JT
 EE
 Yp
 Yp
-Yp
-Yp
-Yp
+KH
+yW
+fW
 Yp
 Yp
 Yp
@@ -22336,8 +22369,8 @@ EE
 Yp
 Yp
 Yp
-Yp
-Yp
+EQ
+jB
 Yp
 Yp
 xG
@@ -48898,7 +48931,7 @@ zm
 JC
 PU
 uU
-xu
+NS
 JC
 os
 JC
@@ -49639,7 +49672,7 @@ Ig
 uU
 SZ
 PU
-PU
+hn
 uU
 uU
 uU
@@ -49651,7 +49684,7 @@ uU
 xu
 JC
 RO
-JC
+re
 JC
 Bs
 uU

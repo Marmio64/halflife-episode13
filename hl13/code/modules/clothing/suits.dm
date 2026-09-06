@@ -240,6 +240,7 @@
 	name = "sectoral trenchcoat"
 	desc = "A variant of the modified trenchcoat vest dyed with blue highlights to broadcast the authority of its wearer."
 	icon_state = "sectorial"
+	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 
 /obj/item/clothing/suit/armor/civilprotection/trenchcoat/divisional
 	name = "divisional lead vest"
@@ -514,14 +515,14 @@
 	desc = "A heavily armored old military vest. The layers of kevlar have weakened over the years, but it remains a potent defensive piece of equipment."
 	icon_state = "milvest"
 	blood_overlay_type = "armor"
-	slowdown = 0.2
+	slowdown = 0.15
 	armor_type = /datum/armor/milvest
 
 	limb_integrity = 300
 	repairable_by = /obj/item/stack/kevlar
 
 /obj/item/clothing/suit/armor/halflife/milvest/slow
-	slowdown = 0.5
+	slowdown = 0.45
 
 /datum/armor/milvest
 	melee = 35
@@ -602,10 +603,10 @@
 	bullet = 15
 
 /obj/item/clothing/suit/armor/browncoat/scout/upgraded
-	slowdown = -0.6
+	slowdown = -0.55
 
 /obj/item/clothing/suit/armor/browncoat/deployment
-	slowdown = -0.5
+	slowdown = -0.45
 	armor_type = /datum/armor/paddedjacket/weak
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|HEAD
 
@@ -803,7 +804,7 @@
 	slowdown = 0.25
 
 /datum/armor/rebelheavy
-	melee = 40
+	melee = 50
 	bullet = 50
 	laser = 35
 	energy = 30
@@ -981,6 +982,7 @@
 
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/speedy
 	slowdown = -0.25
+	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 
 /obj/item/clothing/suit/armor/halflife/reinforced_brown_jacket/boss
 	slowdown = -0.35

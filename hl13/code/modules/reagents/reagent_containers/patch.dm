@@ -72,6 +72,15 @@
 	name = "large healthpen"
 	list_reagents = list(/datum/reagent/medicine/concentrated_biogel/slurry = 25) //heals 50 hp total instead of 30
 
+/obj/item/reagent_containers/hypospray/medipen/healthpen/chopchop
+	name = "chop-chop pen"
+	desc = "A Combine-made autoinjector seized and modified by one of many resistance groups, painted with a pink band indicating it is loaded with Chop-Chop; a mix of Chope, leftover gel-slurry, and amphetamines, originally developed elsewhere in Europe. While it has some side-effects, its substantial boon to someone's strength and dexterity alongside its amphetamine content make it incredibly effective in the field. Well-known for their use by PLF special forces, despite official statements from the group to the contrary."
+	icon_state = "screechpen"
+	base_icon_state = "screechpen"
+	volume = 25
+	amount_per_transfer_from_this = 25
+	list_reagents = list(/datum/reagent/medicine/concentrated_biogel/slurry = 5, /datum/reagent/drug/chope = 10, /datum/reagent/drug/methamphetamine = 10) //very limited healing but in exchange you are fast as fuck
+
 /obj/item/reagent_containers/hypospray/medipen/oxycodone
 	name = "oxycodone syringe"
 	desc = "A syringe designed to be easy and quick to use, filled with pain relievers."
@@ -82,7 +91,7 @@
 	custom_price = null
 
 /obj/item/reagent_containers/hypospray/medipen/blood
-	name = "bloodloss shot"
+	name = "anti-bloodloss shot"
 	desc = "A rapid injection syringe for quickly stabilizing and recovering loss of blood."
 	icon = 'hl13/icons/obj/medkits.dmi'
 	icon_state = "blood"
@@ -124,6 +133,13 @@
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	list_reagents = list(/datum/reagent/medicine/c2/musiver = 10, /datum/reagent/medicine/spaceacillin = 10)
 
+/obj/item/reagent_containers/pill/antitox/makeshift
+	name = "homebrewed anti-sickness tablets"
+	desc = "A couple of makeshift tablets which help purge toxins while making you crazy at the same time!"
+	icon_state = "antitoxtab"
+	icon = 'hl13/icons/obj/misc_items.dmi'
+	list_reagents = list(/datum/reagent/medicine/c2/musiver = 10, /datum/reagent/medicine/spaceacillin = 10, /datum/reagent/consumable/ethanol = 10, /datum/reagent/toxin/mindbreaker = 10)
+
 /obj/item/storage/halflife/pill_bottle/paracetamol
 	name = "Paracetamol Pill bottle"
 	desc = "A pill bottle with paracetamol tablets, for relieving minor pains."
@@ -141,6 +157,13 @@
 	icon_state = "paracetamol"
 	icon = 'hl13/icons/obj/misc_items.dmi'
 	list_reagents = list(/datum/reagent/medicine/paracetamol = 15)
+
+/obj/item/reagent_containers/pill/painbreaker
+	name = "painbreaker tablets"
+	desc = "A couple of painbreaker tablets, illicit and makeshift drugs that mimic oxycodone. Contains traces of paralytic poison."
+	icon_state = "paracetamol"
+	icon = 'hl13/icons/obj/misc_items.dmi'
+	list_reagents = list(/datum/reagent/medicine/oxycodone = 15, /datum/reagent/toxin/headcrab_venom = 10)
 
 /obj/item/storage/medkit/halflife
 	icon_state = "first aid kit"

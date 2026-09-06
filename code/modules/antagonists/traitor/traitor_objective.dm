@@ -228,6 +228,10 @@
 /datum/traitor_objective/proc/completion_payout()
 	handler.progression_points += progression_reward
 	handler.add_telecrystals(telecrystal_reward)
+	SSsociostability.modifystability(-telecrystal_reward) //hl13 edit
+
+	if (SSsociostability.sociostability <= SOCIOSTABILITY_BAD)
+		handler.add_telecrystals(1) //hl13 edit, free TC for low sociostability!
 
 /// Used for sending data to the uplink UI
 /datum/traitor_objective/proc/uplink_ui_data(mob/user)

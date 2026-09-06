@@ -153,6 +153,8 @@
 			if(SPT_PROB(round(-human.satiety/77), seconds_per_tick))
 				human.set_jitter_if_lower(10 SECONDS)
 			hunger_rate = 3 * HUNGER_FACTOR
+		if(human.IsSleeping()) //hl13 edit, reward sleeping more
+			hunger_rate *= 0.5
 		hunger_rate *= hunger_modifier
 		hunger_rate *= human.physiology.hunger_mod
 		human.adjust_nutrition(-hunger_rate * seconds_per_tick)

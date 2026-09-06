@@ -36,8 +36,8 @@ GLOBAL_LIST_INIT(side_choice_hemiplegic, list(
 
 ///Options for the Junkie quirk to choose from
 GLOBAL_LIST_INIT(possible_junkie_addictions, setup_junkie_addictions(list(
-	/datum/reagent/medicine/morphine,
-	/datum/reagent/drug/happiness,
+	/datum/reagent/drug/sporetamine,
+	/datum/reagent/medicine/oxycodone,
 )))
 
 ///Options for the Smoker quirk to choose from

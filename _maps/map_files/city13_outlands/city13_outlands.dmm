@@ -612,6 +612,7 @@
 /area/halflife/indoors/outlands)
 "aIh" = (
 /obj/structure/chair/halflife/overlaypickup/plastic,
+/obj/effect/spawner/random/halflife/pet_spawner,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
 "aIE" = (
@@ -5423,6 +5424,11 @@
 /obj/effect/landmark/blobstart,
 /turf/open/floor/plating/ground/grass,
 /area/halflife/outdoors/forest)
+"gSM" = (
+/obj/structure/halflife/pallet,
+/mob/living/basic/halflife/chumtoad,
+/turf/open/floor/plating/indoor/metal/grate,
+/area/halflife/indoors/sewer)
 "gSP" = (
 /obj/machinery/door/unpowered/halflife/metal{
 	dir = 4
@@ -6099,6 +6105,11 @@
 	},
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/outlands)
+"hLm" = (
+/obj/structure/alien/weeds,
+/obj/structure/flora/xen/tinyshrooms,
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/cave)
 "hLD" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -6756,6 +6767,7 @@
 /obj/structure/chair/halflife/overlaypickup/plastic{
 	dir = 4
 	},
+/obj/effect/spawner/random/halflife/pet_spawner,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
 "iKD" = (
@@ -7722,6 +7734,10 @@
 	},
 /turf/open/floor/plating/indoor/tiled10,
 /area/halflife/indoors/bar/apartments)
+"jZK" = (
+/obj/structure/alien/weeds,
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/cave)
 "jZL" = (
 /obj/structure/table/halflife/wood,
 /obj/machinery/camera{
@@ -10584,6 +10600,10 @@
 /obj/structure/halflife/rug/rubber,
 /turf/open/floor/plating/indoor/tile/kitchen,
 /area/halflife/indoors/restaurant)
+"nzR" = (
+/obj/structure/flora/xen/tinyshrooms,
+/turf/open/floor/plating/indoor/tile,
+/area/halflife/indoors/outlands)
 "nzS" = (
 /obj/machinery/button/door/directional/south{
 	id = "abandoned_harbor_cargo_truck_door"
@@ -12572,6 +12592,11 @@
 /obj/structure/bed/halflife/mattress/filthy,
 /turf/open/floor/plating/indoor/carpet/shaggy/blue,
 /area/halflife/indoors/apartments/primary)
+"qbZ" = (
+/obj/structure/alien/weeds,
+/obj/structure/flora/rock/style_random,
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/cave)
 "qcS" = (
 /obj/effect/decal/cleanable/blood/trails{
 	dir = 4
@@ -13823,6 +13848,11 @@
 /obj/structure/halflife/rug/rubber,
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/conscript_bunker)
+"rtM" = (
+/obj/structure/alien/weeds,
+/mob/living/basic/halflife/chumtoad,
+/turf/open/floor/plating/ground/rockunder,
+/area/halflife/indoors/sewer/cave)
 "rtW" = (
 /obj/machinery/door/airlock/highsecurity/combine,
 /obj/effect/mapping_helpers/airlock/access/all/security/brig,
@@ -15601,6 +15631,7 @@
 /obj/structure/chair/halflife/metal/broken{
 	dir = 1
 	},
+/obj/effect/spawner/random/halflife/pet_spawner,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
 "tIV" = (
@@ -17829,6 +17860,7 @@
 /obj/structure/chair/halflife/metal/folding{
 	dir = 8
 	},
+/obj/effect/spawner/random/halflife/pet_spawner,
 /turf/open/floor/plating/ground/rockunder,
 /area/halflife/indoors/sewer/outlandscave)
 "wxZ" = (
@@ -41574,8 +41606,8 @@ xwY
 xwY
 xwY
 xwY
-xwY
-xwY
+syk
+syk
 syk
 syk
 syk
@@ -41827,11 +41859,11 @@ eGo
 xwY
 xwY
 xwY
+jZK
+hLm
 xwY
-xwY
-xwY
-xwY
-xwY
+syk
+syk
 xwY
 xwY
 xwY
@@ -42083,11 +42115,11 @@ osR
 eGo
 xwY
 xwY
-xwY
-xwY
-xwY
-xwY
-xwY
+qbZ
+syk
+jZK
+jZK
+syk
 xwY
 xwY
 xwY
@@ -42274,7 +42306,7 @@ xtI
 lff
 mTm
 mTm
-vQj
+gSM
 xtI
 xwY
 xwY
@@ -42340,10 +42372,10 @@ osR
 eGo
 xwY
 xwY
-xwY
-xwY
-xwY
-xwY
+jZK
+syk
+syk
+syk
 xwY
 xwY
 xwY
@@ -42597,9 +42629,9 @@ osR
 eGo
 xwY
 xwY
-xwY
-xwY
-xwY
+rtM
+jZK
+syk
 xwY
 xwY
 uqc
@@ -42855,8 +42887,8 @@ eGo
 xwY
 xwY
 xwY
-xwY
-xwY
+hLm
+gLK
 xwY
 xwY
 uqc
@@ -91440,7 +91472,7 @@ jbP
 tOz
 tjq
 upq
-heY
+gwZ
 tOz
 vuE
 tOz
@@ -92716,7 +92748,7 @@ ttO
 upq
 xal
 tjq
-tjq
+eTZ
 upq
 upq
 upq
@@ -92728,7 +92760,7 @@ upq
 heY
 tOz
 vhz
-tOz
+nzR
 tOz
 vCM
 upq

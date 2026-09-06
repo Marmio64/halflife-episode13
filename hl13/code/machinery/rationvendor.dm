@@ -23,6 +23,9 @@
 	/// Is someone else using the vendor right now?
 	var/busy = FALSE
 
+	/// Is the vendor hacked right now?
+	var/hacked = FALSE
+
 /obj/machinery/ration_vendor/examine(mob/user)
 	. = ..()
 	. += span_notice("The vendor has [rations_stored] rations left to dispense.")
@@ -174,23 +177,42 @@
 		say("Low district sociostability detected. Five ration quality units deducted.")
 		quality--
 
-	switch(quality)
-		if(-INFINITY to 0)
-			new /obj/item/reagent_containers/cup/soda_cans/breenwater/purple(loc) //very sad... Only way to get rn is to be a vort, on suspect status, with low district sociostability, or two of those following with a meal sanction
-		if(1)
-			new /obj/item/storage/box/halflife/ration/worstration(loc)
-		if(2)
-			new /obj/item/storage/box/halflife/ration/badration(loc)
-		if(3)
-			new /obj/item/storage/box/halflife/ration/ration(loc)
-		if(4)
-			new /obj/item/storage/box/halflife/ration/betterration(loc)
-		if(5)
-			new /obj/item/storage/box/halflife/ration/loyaltyration(loc)
-		if(6 to 10)
-			new /obj/item/storage/box/halflife/ration/bestration(loc)
-			if(rations_stored > 0)
-				rations_stored-- ///The excess of the upper class is more draining. However, even if it should go into the negatives, we'll let them have their correct ration grade.
+	if(!hacked)
+		switch(quality)
+			if(-INFINITY to 0)
+				new /obj/item/reagent_containers/cup/soda_cans/breenwater/purple(loc) //very sad... Only way to get rn is to be a vort, on suspect status, with low district sociostability, or two of those following with a meal sanction
+			if(1)
+				new /obj/item/storage/box/halflife/ration/worstration(loc)
+			if(2)
+				new /obj/item/storage/box/halflife/ration/badration(loc)
+			if(3)
+				new /obj/item/storage/box/halflife/ration/ration(loc)
+			if(4)
+				new /obj/item/storage/box/halflife/ration/betterration(loc)
+			if(5)
+				new /obj/item/storage/box/halflife/ration/loyaltyration(loc)
+			if(6 to 10)
+				new /obj/item/storage/box/halflife/ration/bestration(loc)
+				if(rations_stored > 0)
+					rations_stored-- ///The excess of the upper class is more draining. However, even if it should go into the negatives, we'll let them have their correct ration grade.
+	else
+		switch(quality) //hacked stuff has inverse quality
+			if(6 to 10)
+				new /obj/item/reagent_containers/cup/soda_cans/breenwater/purple(loc)
+			if(5)
+				new /obj/item/storage/box/halflife/ration/worstration(loc)
+			if(4)
+				new /obj/item/storage/box/halflife/ration/badration(loc)
+			if(3)
+				new /obj/item/storage/box/halflife/ration/ration(loc)
+			if(2)
+				new /obj/item/storage/box/halflife/ration/betterration(loc)
+			if(1)
+				new /obj/item/storage/box/halflife/ration/loyaltyration(loc)
+			if(-INFINITY to 0)
+				new /obj/item/storage/box/halflife/ration/bestration(loc)
+				if(rations_stored > 0)
+					rations_stored--
 
 /obj/machinery/ration_vendor/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/ration_construction/container))
@@ -208,7 +230,7 @@
 	if(!O.tool_behaviour == TOOL_WRENCH)
 		return FALSE
 
-	if(!malfunctioning && !(rations_dispensed > (ration_breaklimit/2)))
+	if(!malfunctioning && !(rations_dispensed > (ration_breaklimit/2)) && !hacked)
 		balloon_alert(user, "Doesn't need fixing")
 		return FALSE
 
@@ -226,8 +248,25 @@
 			to_chat(user, span_notice("Wow, that actually worked?"))
 
 	playsound(loc, 'sound/items/tools/ratchet.ogg', 25, 1)
-	malfunctioning = FALSE
 	rations_dispensed = 0
 	to_chat(user, span_notice("Repair reward dispensed."))
-	new /obj/item/stack/spacecash/c1(user.loc, 5)
+	if(malfunctioning || (rations_dispensed > (ration_breaklimit/2))) //no farming cash with a hacking tool
+		new /obj/item/stack/spacecash/c1(user.loc, 5)
+	if(hacked)
+		SSsociostability.modifystability(30) //refund
+
+	malfunctioning = FALSE
+	hacked = FALSE
 	return TRUE
+
+/obj/machinery/ration_vendor/emag_act(mob/user, obj/item/card/emag/emag_card)
+	hacked()
+	return TRUE
+
+/obj/machinery/ration_vendor/proc/hacked()
+	if(hacked)
+		return
+
+	do_sparks(1, FALSE, src)
+	hacked = TRUE
+	SSsociostability.modifystability(-30)

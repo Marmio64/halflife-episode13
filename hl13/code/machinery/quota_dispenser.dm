@@ -94,7 +94,7 @@ GLOBAL_VAR_INIT(beating_quota, 20)
 /obj/machinery/quota_terminal/process(seconds_per_tick)
 	if(GLOB.beating_quota <= 0 && quota_complete == FALSE)
 		quota_complete = TRUE
-		radio.talk_into(src, "Quota has been completed. All officers have been rewarded two requisition points.", radio_channel)
+		radio.talk_into(src, "Quota has been completed. All officers have been rewarded four requisition points.", radio_channel)
 		SSsociostability.modifystability(5) //yipee
 		var/accounts_to_give = flatten_list(SSeconomy.bank_accounts_by_id)
 		for(var/i in accounts_to_give)

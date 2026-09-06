@@ -92,7 +92,7 @@
 			return
 		vandalized = TRUE
 		icon_state = "prisonsign_vandalized"
-		SSsociostability.modifystability(-5)
+		SSsociostability.modifystability(-10)
 		can.use_charges()
 		if(can.pre_noise)
 			playsound(src, 'sound/effects/spray.ogg', 5, TRUE, 5)

@@ -12,16 +12,16 @@
 	multiplicative_slowdown = 0.25
 
 /datum/movespeed_modifier/reagent/monkey_energy
-	multiplicative_slowdown = -0.35
+	multiplicative_slowdown = -0.15
 
 /datum/movespeed_modifier/reagent/changelinghaste
 	multiplicative_slowdown = -0.8
 
 /datum/movespeed_modifier/reagent/methamphetamine
-	multiplicative_slowdown = -0.65
+	multiplicative_slowdown = -0.3
 
 /datum/movespeed_modifier/reagent/nitrium
-	multiplicative_slowdown = -0.65
+	multiplicative_slowdown = -0.3
 
 /datum/movespeed_modifier/reagent/cannabis
 	multiplicative_slowdown = 0.4
