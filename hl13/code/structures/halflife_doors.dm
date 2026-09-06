@@ -296,7 +296,7 @@
 		"This isn't the right key...",
 	)
 	var/obj/item/storage/halflife/keyring/R = I
-	var/list/keys
+	var/list/keys = list()
 	var/correct_key //just whether or not you have the right key in the first place
 	for(var/obj/item/hl2key/K in R.contents)
 		keys += K
@@ -322,7 +322,7 @@
 			to_chat(user, span_notice("You stop trying to unlock the door."))
 			return
 	to_chat(user, span_notice("No more keys left to try... it seems you didn't have the keys to that door in the first place."))
-
+	return
 
 
 /obj/machinery/door/unpowered/halflife/proc/trypicklock(obj/item/I, mob/living/user)

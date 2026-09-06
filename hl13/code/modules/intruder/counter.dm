@@ -320,17 +320,18 @@ GLOBAL_VAR_INIT(special_guards, FALSE)
 				to_chat(world, span_danger(span_slightly_larger(span_bold("Remember that you are very high up, and jumping into the water will kill you. Do not jump into the water."))))
 			for(var/X in GLOB.deployment_combine_players)
 				var/client/guard_client = X
-				var/mob/living/carbon/human/H = guard_client.mob
-				var/list/spawn_locs = list()
-				for(var/Y in GLOB.intruder_guards)
-					spawn_locs += Y
+				if(ishuman(guard_client.mob))
+					var/mob/living/carbon/human/H = guard_client.mob
+					var/list/spawn_locs = list()
+					for(var/Y in GLOB.intruder_guards)
+						spawn_locs += Y
 
-				if(!spawn_locs.len)
-					message_admins("No valid spawn locations found, aborting...")
-					return MAP_ERROR
+					if(!spawn_locs.len)
+						message_admins("No valid spawn locations found, aborting...")
+						return MAP_ERROR
 
-				if(H.deployment_faction == COMBINE_DEPLOYMENT_FACTION) //players are not removed from the global list if their deployment faction changes, just also added to the other faction list. fix this shit marmio (im lazy)
-					H.forceMove(pick(spawn_locs))
+					if(H.deployment_faction == COMBINE_DEPLOYMENT_FACTION) //players are not removed from the global list if their deployment faction changes, just also added to the other faction list. fix this shit marmio (im lazy)
+						H.forceMove(pick(spawn_locs))
 
 		if(combine_players <= SSticker.tdm_combine_deaths && SSticker.IsRoundInProgress())
 			priority_announce("Crab, you are aware that this was a stealth mission, right? Oh well, mission complete. We'll send in the ground troops to cleanup the rest.", "PLF Priority Alert")
@@ -366,15 +367,17 @@ GLOBAL_VAR_INIT(special_guards, FALSE)
 	if(GLOB.alert_phases > alerts)
 		for(var/X in GLOB.deployment_combine_players)
 			var/client/guard_client = X
-			var/mob/living/carbon/human/H = guard_client.mob
-			var/obj/item/card/id/user_id = locate(/obj/item/card/id) in H.get_all_gear()
-			if(user_id)
-				user_id.registered_account.requisition_points++
+			if(ishuman(guard_client.mob)) //might fix this
+				var/mob/living/carbon/human/H = guard_client.mob
+				var/obj/item/card/id/user_id = locate(/obj/item/card/id) in H.get_all_gear()
+				if(user_id)
+					user_id.registered_account.requisition_points++
 		var/intruderlocation = "Unknown Area"
 		for(var/X in GLOB.deployment_rebel_players)
 			var/client/intruder_client = X
-			var/mob/living/carbon/human/H = intruder_client.mob
-			intruderlocation = get_area_name(H, TRUE)
+			if(ishuman(intruder_client.mob))
+				var/mob/living/carbon/human/H = intruder_client.mob
+				intruderlocation = get_area_name(H, TRUE)
 		alerts++
 		alert_active = TRUE
 		caution_active = FALSE
