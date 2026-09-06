@@ -256,8 +256,8 @@
 	. = ..()
 	if(istype(I, /obj/item/hl2key))
 		trykeylock(I, M)
-	if(istype(I, /obj/item/storage/halflife/keyring))
-		tryringlock(I, M)
+	/*if(istype(I, /obj/item/storage/halflife/keyring)) if you want this uncomment it but i just was too lazy to switch for the intruder bugfix so you can have this now
+		tryringlock(I, M)*/
 	if(istype(I, /obj/item/lockpick))
 		trypicklock(I, M)
 	if(locked && !(M.combat_mode))
