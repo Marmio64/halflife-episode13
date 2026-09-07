@@ -92,7 +92,7 @@
 
 	var/area/my_area = get_area(src)
 	if(!istype(my_area, /area/shuttle/escape))
-		say("Error - Network connectivity: Console has lost connection to the shuttle.")
+		say("Error - Network connectivity: Console has lost connection to the train.")
 		return
 
 	var/mob/living/user = usr
