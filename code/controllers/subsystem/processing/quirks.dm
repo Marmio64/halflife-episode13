@@ -21,6 +21,7 @@ GLOBAL_LIST_INIT_TYPED(quirk_blacklist, /list/datum/quirk, list(
 	list(/datum/quirk/foreigner, /datum/quirk/bilingual, /datum/quirk/russian_foreigner, /datum/quirk/italian_foreigner, /datum/quirk/mute), //hl13 edit
 	list(/datum/quirk/mute, /datum/quirk/softspoken),
 	list(/datum/quirk/poor_aim, /datum/quirk/bighands),
+	list(/datum/quirk/poor_aim, /datum/quirk/nonviolent),
 	list(/datum/quirk/photophobia, /datum/quirk/nyctophobia),
 	list(/datum/quirk/numb, /datum/quirk/selfaware),
 	list(/datum/quirk/numb, /datum/quirk/masochist, /datum/quirk/badback, /datum/quirk/frail), //hl13 edit

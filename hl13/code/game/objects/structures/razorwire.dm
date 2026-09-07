@@ -84,6 +84,8 @@
 		else
 			entangled.Immobilize(rand(30,40), ignore_canstun = TRUE)
 
+	take_damage(rand(5, 10), BRUTE, MELEE) //the razorwire gets tugged around when it traps shit
+
 /obj/structure/razorwire/attackby(obj/item/I, mob/user, params)
 	. = ..()
 	if(.)

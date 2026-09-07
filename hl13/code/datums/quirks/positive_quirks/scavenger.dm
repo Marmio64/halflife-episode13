@@ -9,9 +9,9 @@
 /datum/quirk/scavenger/add()
 	if(ishuman(quirk_holder))
 		var/mob/living/carbon/human/subject = quirk_holder
-		subject.mind?.adjust_experience(/datum/skill/scavenging, 1200)
+		subject.mind?.adjust_experience(/datum/skill/scavenging, 1250)
 
 /datum/quirk/scavenger/remove()
 	if(ishuman(quirk_holder))
 		var/mob/living/carbon/human/subject = quirk_holder
-		subject.mind?.adjust_experience(/datum/skill/scavenging, 1200)
+		subject.mind?.adjust_experience(/datum/skill/scavenging, 1250)
