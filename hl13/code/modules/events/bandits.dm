@@ -48,6 +48,7 @@
 
 /obj/machinery/computer/shuttle/bandits
 	name = "bandit boat console"
+	desc = "A repurposed Combine terminal used to control the boat."
 	shuttleId = "bandit"
 	possible_destinations = "pirate_away;pirate_home"
 
