@@ -113,8 +113,8 @@
 
 /obj/machinery/deployment_comms_tower/rebel/xen_defense
 	max_integrity = 2250
-	var/rebel_time = 10 MINUTES
-	var/grace_time = 90 SECONDS
+	var/rebel_time = 20 MINUTES
+	var/grace_time = 3 MINUTES
 
 	var/grace_period_text = TRUE
 	var/capturable = FALSE
@@ -142,10 +142,10 @@
 					SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
 					to_chat(H, "<span class='greentext big'>The grace period is up, kill the humans and destroy their Communications Tower!</span>")
 	else
-		GLOB.deployment_flag_grace_period -= 1 SECONDS
+		GLOB.deployment_flag_grace_period -= 2 SECONDS
 
 	if(capturable)
-		GLOB.deployment_rebels_flag_time_left -= 1 SECONDS
+		GLOB.deployment_rebels_flag_time_left -= 2 SECONDS
 		if(GLOB.deployment_rebels_flag_time_left <= 2 MINUTES)
 			GLOB.deployment_xen_cash += 1
 
@@ -187,8 +187,8 @@
 /obj/machinery/deployment_comms_tower/combine/xen_defense
 	max_integrity = 2250
 
-	var/combine_time = 9 MINUTES
-	var/grace_time = 60 SECONDS
+	var/combine_time = 18 MINUTES
+	var/grace_time = 2 MINUTES
 
 	var/grace_period_text = TRUE
 	var/capturable = FALSE
@@ -216,10 +216,10 @@
 					SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
 					to_chat(H, "<span class='greentext big'>The grace period is up, kill the humans and destroy their Communications Tower!</span>")
 	else
-		GLOB.deployment_flag_grace_period -= 1 SECONDS
+		GLOB.deployment_flag_grace_period -= 2 SECONDS
 
 	if(capturable)
-		GLOB.deployment_combine_flag_time_left -= 1 SECONDS
+		GLOB.deployment_combine_flag_time_left -= 2 SECONDS
 		if(GLOB.deployment_combine_flag_time_left <= 2 MINUTES)
 			GLOB.deployment_xen_cash += 1
 

@@ -52,6 +52,9 @@
 	var/drop_amount = 3
 	var/deconstruct_time = 2 SECONDS
 
+/obj/structure/barricade/wooden/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_WOOD, -15, 8, 1)
+
 /obj/structure/barricade/wooden/Initialize(mapload)
 	. = ..()
 

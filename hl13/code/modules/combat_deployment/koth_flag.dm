@@ -37,10 +37,10 @@ GLOBAL_VAR_INIT(xen_tier_points, 0)
 
 	var/starting_faction = null
 
-	var/rebel_time = 5 MINUTES
-	var/combine_time = 5 MINUTES
-	var/xen_time = 5.5 MINUTES
-	var/grace_time = 3 MINUTES
+	var/rebel_time = 10 MINUTES
+	var/combine_time = 10 MINUTES
+	var/xen_time = 10.5 MINUTES
+	var/grace_time = 6 MINUTES
 
 	/// Should the current holder of the flag have a different respawn speed, as perhaps say a handicap of sorts?
 	var/alter_holder_respawn = TRUE
@@ -106,7 +106,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 0)
 			if(starting_faction)
 				current_faction_holder = starting_faction
 	else
-		GLOB.deployment_flag_grace_period -= 1 SECONDS
+		GLOB.deployment_flag_grace_period -= 2 SECONDS
 
 	if(last_time_reminder < world.time)
 		to_chat(world, span_infoplain(span_slightly_larger(span_bold("The combine need to hold the flag for [GLOB.deployment_combine_flag_time_left/10] seconds to win."))))
@@ -118,7 +118,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 0)
 
 	if(current_faction_holder == COMBINE_DEPLOYMENT_FACTION)
 		icon_state = "combine"
-		GLOB.deployment_combine_flag_time_left -= 1 SECONDS
+		GLOB.deployment_combine_flag_time_left -= 2 SECONDS
 		if(alter_holder_respawn)
 			GLOB.deployment_respawn_rate_combine = altered_respawn_speed
 			GLOB.deployment_respawn_rate_rebels = normal_respawn_speed
@@ -144,7 +144,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 0)
 
 	if(current_faction_holder == REBEL_DEPLOYMENT_FACTION)
 		icon_state = "rebel"
-		GLOB.deployment_rebels_flag_time_left -= 1 SECONDS
+		GLOB.deployment_rebels_flag_time_left -= 2 SECONDS
 		if(alter_holder_respawn)
 			GLOB.deployment_respawn_rate_combine = normal_respawn_speed
 			GLOB.deployment_respawn_rate_rebels = altered_respawn_speed
@@ -169,7 +169,7 @@ GLOBAL_VAR_INIT(xen_tier_points, 0)
 
 	if(current_faction_holder == XEN_DEPLOYMENT_FACTION)
 		icon_state = "xen"
-		GLOB.deployment_xen_flag_time_left -= 1 SECONDS
+		GLOB.deployment_xen_flag_time_left -= 2 SECONDS
 
 		if(alter_holder_respawn)
 			GLOB.deployment_respawn_rate_combine = normal_respawn_speed
@@ -323,18 +323,18 @@ GLOBAL_VAR_INIT(xen_tier_points, 0)
 		. += span_notice("The xenians need to hold the flag for [(GLOB.deployment_xen_flag_time_left)/10] seconds more in order to win.")
 
 /obj/machinery/deployment_koth_flag/rebel_defend
-	rebel_time = 8 MINUTES
-	combine_time = 40 SECONDS
-	grace_time = 1 MINUTES
+	rebel_time = 16 MINUTES
+	combine_time = 80 SECONDS
+	grace_time = 2 MINUTES
 	normal_respawn_speed = 20 SECONDS
 	starting_faction = REBEL_DEPLOYMENT_FACTION
 	alter_holder_respawn = TRUE
 	grace_period_up_text = "<span class='reallybig'>The initial setup grace period is up, and the rebel flag is now capturable by the Combine.</span>"
 
 /obj/machinery/deployment_koth_flag/combine_defend
-	combine_time = 8 MINUTES
-	rebel_time = 30 SECONDS
-	grace_time = 1 MINUTES
+	combine_time = 16 MINUTES
+	rebel_time = 1 MINUTES
+	grace_time = 2 MINUTES
 	normal_respawn_speed = 25 SECONDS
 	altered_respawn_speed = 45 SECONDS
 	starting_faction = COMBINE_DEPLOYMENT_FACTION
@@ -342,18 +342,18 @@ GLOBAL_VAR_INIT(xen_tier_points, 0)
 	grace_period_up_text = "<span class='reallybig'>The initial setup grace period is up, and the combine flag is now capturable by the Rebels.</span>"
 
 /obj/machinery/deployment_koth_flag/combine_defend/short
-	combine_time = 7 MINUTES
-	grace_time = 45 SECONDS
+	combine_time = 15 MINUTES
+	grace_time = 90 SECONDS
 	altered_respawn_speed = 35 SECONDS
 	normal_respawn_speed = 20 SECONDS
 
 /obj/machinery/deployment_koth_flag/combine_defend/long
-	combine_time = 8.5 MINUTES
+	combine_time = 17 MINUTES
 
 /obj/machinery/deployment_koth_flag/xen_chaos
-	xen_time = 4.5 MINUTES
-	combine_time = 4 MINUTES
-	rebel_time = 4 MINUTES
+	xen_time = 9 MINUTES
+	combine_time = 8 MINUTES
+	rebel_time = 8 MINUTES
 	capture_time = 3 SECONDS
 
 /obj/effect/koth_grace_field

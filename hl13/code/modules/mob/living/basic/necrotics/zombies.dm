@@ -614,6 +614,7 @@
 /mob/living/basic/halflife/zombie/cremator/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/footstep, FOOTSTEP_MOB_CREMATOR)
+	ADD_TRAIT(src, TRAIT_NOFIRE, INNATE_TRAIT)
 
 /mob/living/basic/halflife/zombie/cremator/death(gibbed)
 	..()

@@ -30,6 +30,9 @@
 	projectile_passchance = 30
 	hl13hit_sounds = SFX_CONCRETEIMPACT
 
+/obj/structure/halflife/road_barrier/concrete/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_ROCK, -15, 8, 1)
+
 /obj/structure/halflife/road_barrier/concrete/alt
 	desc = "A heavy duty concrete road barrier featuring a pattern that to this day is still somewhat vibrant. Used to direct traffic and prevent going off the lane."
 	icon_state = "concrete_barrier_alt"
@@ -43,6 +46,9 @@
 	anchored = TRUE
 	max_integrity = 600
 	projectile_passchance = 25
+
+/obj/structure/halflife/road_barrier/combine/add_debris_element()
+	AddElement(/datum/element/debris, DEBRIS_SPARKS, -15, 8, 1)
 
 /obj/structure/halflife/road_barrier/combine/attackby(obj/item/I, mob/living/user, params)
 	if(I.tool_behaviour == TOOL_WELDER && !user.combat_mode)

@@ -19,7 +19,7 @@
 
 	var/last_time_reminder = 0
 
-	var/time_left_match = 6.5 MINUTES
+	var/time_left_match = 13 MINUTES
 
 	var/respawn_speed = 15 SECONDS
 
@@ -42,7 +42,7 @@
 				var/mob/living/carbon/human/H = X
 				SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
 
-		time_left_match -= 1 SECONDS
+		time_left_match -= 2 SECONDS
 
 		if(rebel_points_win <= SSticker.tdm_combine_deaths && SSticker.IsRoundInProgress())
 			priority_announce("The combine forces are in shambles, long live the resistance!", "Lambda Priority Alert")
