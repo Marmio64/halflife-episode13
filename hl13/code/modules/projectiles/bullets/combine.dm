@@ -47,6 +47,13 @@
 	if(istype(target, /mob/living/basic/halflife/advisor)) //bonus direct damage vs advisors
 		damage = 80
 	. = ..()
+	/* doesnt work perfectly so maybe dont uncomment it yet
+	if(. == BULLET_ACT_HIT && isliving(target))
+		var/mob/living/victim = target
+		var/endhealth = victim.health - damage
+		if(endhealth <= victim.crit_threshold)
+			victim.dust()
+	*/
 
 /obj/projectile/bullet/pulse/lmg
 	damage = 25
