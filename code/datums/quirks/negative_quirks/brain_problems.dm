@@ -3,7 +3,7 @@
 	name = "Brain Damage"
 	desc = "You have longterm brain damage that has brought on a random form of trauma onto you, alongside making you less intelligent. There is no cure for your brain damage."
 	icon = FA_ICON_BRAIN
-	value = -14
+	value = -15
 	gain_text = span_danger("You feel smooth.")
 	lose_text = span_notice("You feel wrinkled again.")
 	medical_record_text = "Patient has severe past brain trauma."

@@ -83,7 +83,7 @@
 	name = "Junkie"
 	desc = "You can't get enough of hard drugs."
 	icon = FA_ICON_PILLS
-	value = -12 //hl13 edit
+	value = -13 //hl13 edit
 	gain_text = span_danger("You suddenly feel the craving for drugs.")
 	medical_record_text = "Patient has a history of hard drugs."
 	hardcore_value = 4
@@ -110,7 +110,7 @@
 	name = "Smoker"
 	desc = "Sometimes you just really want a smoke. Probably not great for your lungs."
 	icon = FA_ICON_SMOKING
-	value = -8 //hl13 edit
+	value = -9 //hl13 edit
 	gain_text = span_danger("You could really go for a smoke right about now.")
 	lose_text = span_notice("You don't feel nearly as hooked to nicotine anymore.")
 	medical_record_text = "Patient is a current smoker."

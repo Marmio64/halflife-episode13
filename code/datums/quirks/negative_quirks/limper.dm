@@ -5,7 +5,7 @@
 	gain_text = span_danger("Your leg feels a bit weak.")
 	lose_text = span_notice("Your legs feel normal again.")
 	medical_record_text = "Patient appears to suffer from a weakness in the leg."
-	value = -8
+	value = -10
 	hardcore_value = 3
 	quirk_flags = QUIRK_HUMAN_ONLY
 
