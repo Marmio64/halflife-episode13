@@ -23,7 +23,7 @@
 	name = "train control console"
 	desc = "Tells the train's engines where to guide it."
 	shuttleId = "admintrain"
-	possible_destinations = "admintrain_siding;arrival_stationary;ferry_home;cargo_home"
+	possible_destinations = "admintrain_siding;arrival_stationary;ferry_home;cargo_home;admintrain_outlands"
 
 /area/shuttle/admin_train
 	name = "Train"
