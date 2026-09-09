@@ -39,11 +39,11 @@
 /obj/item/ammo_casing/n762/high_veloc
 	projectile_type = /obj/projectile/bullet/n762/high_veloc
 	name = "match 7.62x54mmR bullet casing"
-	desc = "A high-cost pattern of 7.62x54mmR bullet casing, designed for use with the SVD rifle."
+	desc = "A high-cost pattern of 7.62x54mmR bullet casing, designed for use with the SVD rifle. It'll still fit into an AK or RPD, though."
 
 /obj/item/ammo_casing/n762/rpd
 	name = "cheap 7.62x54mmR bullet casing"
-	desc = "A cheaper pattern of 7.62x54mmR casing, designed for use with the RPD machine-gun."
+	desc = "A cheaper pattern of 7.62x54mmR casing, designed for use with the RPD machine-gun. You could still put it into an AK or SVD if you're desperate."
 	projectile_type = /obj/projectile/bullet/n762/rpd
 
 // .38 (Detective's Gun)

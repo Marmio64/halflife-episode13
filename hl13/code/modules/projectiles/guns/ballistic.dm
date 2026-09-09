@@ -593,7 +593,7 @@
 
 /obj/item/gun/ballistic/shotgun/trench
 	name = "trench shotgun"
-	desc = "A sturdy though heavy wooden shotgun with a long magazine tube and bayonet lug, favoured by the Polish Liberation Front's trench-clearing troops. The use of this pattern of shotgun mostly faded out following the World Wars, though they remained popular in sporting markets - the PLF were all too happy to weld the bayonet lugs back on to these antiquated weapons when the call to arms echoed out. While being more unwieldy to lug about and lacking the advanced double shot capability of the SPAS-12, its sturdy frame absorbs recoil and can handle faster racks, while also allowing it to be used as a great bayonet mount."
+	desc = "A sturdy though heavy wooden shotgun with a long magazine tube and bayonet lug, favoured by the Polish Liberation Front's trench-clearing troops. The use of this pattern of shotgun mostly faded out following the World Wars, though they remained popular in sporting markets - the PLF were all too happy to weld the bayonet lugs back on to these antiquated weapons when the call to arms echoed out. While being more unwieldy to lug about and lacking the advanced double shot capability of the SPAS-12, its sturdy frame absorbs recoil and can handle faster racks, while also pairing well with its bayonet lug."
 	icon = 'hl13/icons/obj/guns/wideguns.dmi'
 	icon_state = "trenchgun"
 	inhand_icon_state = "trenchgun"
@@ -658,7 +658,7 @@
 
 /obj/item/gun/ballistic/shotgun/spas12/freeman
 	name = "Legendary SPAS 12"
-	desc = "A spectacularly lethal pump action shotgun, for close encounters. This one has a legendary aura of freedom about it."
+	desc = "A spectacularly lethal pump action shotgun, for close encounters. This one has been custom-upgraded by the Lambda Resistance's expert gunsmiths, and likely contains parts salvaged from the stockpiles of the legendary Black Mesa research facility. No doubt, this is the weapon of a free man."
 	projectile_damage_multiplier = 1.15
 	spread = 5
 	pin = /obj/item/firing_pin/implant/pindicate
@@ -846,7 +846,7 @@
 // About 2.1 seconds TTK
 /obj/item/gun/ballistic/automatic/mp7
 	name = "\improper MP7 SMG"
-	desc = "Despite its small size, this submachine gun packs a punch and has an extended mag to keep opponents suppressed. While the MP5 was a more common SMG in pre-war Poland, the combine's interest in the MP7 caused it to become a more available firearm afterwards."
+	desc = "Despite its small size, this submachine gun packs a punch and has an extended mag to keep opponents suppressed. While the MP5 was a more common SMG in pre-war Poland, the combine's interest in the MP7 caused it to become a more available firearm afterwards. These models are also frequently retrofitted with a 20mm grenade launcher by both Civil Protection and resistance groups, though where it fits on this example is beyond you."
 	desc_controls = "Right-click to activate the alternative fire."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "mp7"
@@ -902,7 +902,7 @@
 //about 1.87 seconds TTK with AP. While it has a bit higher DPS than the m4a1/service rifle, it is slightly less accurate at range and has to reload more often
 /obj/item/gun/ballistic/automatic/pulsesmg
 	name = "\improper pulse SMG"
-	desc = "A hybrid between the MP7 and AR2, the pulse smg has biolocking features and higher power rounds than the standard MP7, but is not yet as powerful as the AR2."
+	desc = "A hybrid between the MP7 and AR2, the pulse smg has biolocking features and higher power rounds than the standard MP7, but is not yet as powerful as the AR2. Primarily produced by the Combine to equip their lower-ranking transhuman grunts, these weapons also find rare use in the hands of Civil Protection units in well-funded districts."
 	icon = 'hl13/icons/obj/guns/projectile.dmi'
 	icon_state = "pulsesmg"
 	fire_sound = 'hl13/sound/weapons/pulsesmgfire.ogg'
