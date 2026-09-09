@@ -21,6 +21,8 @@
 
 	H.change_stat(STATKEY_DEX, 1)
 	H.change_stat(STATKEY_STR, 1)
+	H.change_stat(STATKEY_END, 1)
+	H.change_stat(STATKEY_PER, 1)
 
 // POLISH RESISTANCE - Polish Liberation Front
 // Lower ranks get stolen metrocop gear pretty much, higher up the chain means access to actual military surplus
@@ -375,6 +377,14 @@
 		/obj/item/hl13_small_flag/poland/telescopic = 1, //POLAND POLAND POLAND
 	)
 
+/datum/outfit/resistance_faction/polish/commando/pre_equip(mob/living/carbon/human/H)
+	H.cmode_music ='hl13/sound/music/combat/escalation1.ogg'
+
+	H.change_stat(STATKEY_DEX, 1)
+	H.change_stat(STATKEY_STR, 2)
+	H.change_stat(STATKEY_END, 2)
+	H.change_stat(STATKEY_PER, 1)
+
 /datum/outfit/resistance_faction/polish/commando/veteran
 	name = "Polish Liberation Front Veteran" //JESUS FUCKING CHRIST THESE GUYS HOLY SHIT BAHAHAHAHHAHAHAHAHAHHAHAA. YOU'RE FUCKED LMAO.
 	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
@@ -397,6 +407,14 @@
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
 	)
+
+/datum/outfit/resistance_faction/polish/commando/veteran/pre_equip(mob/living/carbon/human/H)
+	H.cmode_music ='hl13/sound/music/combat/escalation1.ogg'
+
+	H.change_stat(STATKEY_DEX, 1)
+	H.change_stat(STATKEY_STR, 2)
+	H.change_stat(STATKEY_END, 5)
+	H.change_stat(STATKEY_PER, 1)
 
 //POST-SOVIET FACTIONS: PEOPLE'S LIBERATION FRONT + EASTERN REVOLUTIONARY FRONT
 

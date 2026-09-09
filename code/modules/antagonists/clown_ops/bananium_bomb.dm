@@ -57,4 +57,3 @@
 		clowned_on.equip_to_slot_or_del(clown_mask, ITEM_SLOT_MASK)
 
 	clowned_on.dna.add_mutation(/datum/mutation/human/clumsy)
-	clowned_on.gain_trauma(/datum/brain_trauma/mild/phobia/clowns, TRAUMA_RESILIENCE_LOBOTOMY) //MWA HA HA

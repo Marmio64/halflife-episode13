@@ -2,7 +2,7 @@
 	name = "Tin Man"
 	desc = "By some terrible accident, and some amazing luck that the combine didn't stalkerize you instead, you had to have all your internal organs replaced with cheap, barely working surplus cybernetics."
 	icon = FA_ICON_USER_GEAR
-	value = -6
+	value = -7
 	medical_record_text = "During physical examination, patient was found to have numerous low-budget prosthetic internal organs. \
 		<b>Removal of these organs is known to be dangerous to the patient as well as the practitioner.</b>"
 	hardcore_value = 6

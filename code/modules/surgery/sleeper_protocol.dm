@@ -88,4 +88,4 @@
 	. = ..()
 	if(!.)
 		return
-	target.gain_trauma(new /datum/brain_trauma/mild/phobia/conspiracies(), TRAUMA_RESILIENCE_LOBOTOMY)
+	target.gain_trauma(new /datum/brain_trauma/mild/phobia/supernatural(), TRAUMA_RESILIENCE_LOBOTOMY)

@@ -3,7 +3,7 @@
 	desc = "You have tunnel vision, and have a lower field of vision, limited to only 180 degrees infront of you."
 	icon = FA_ICON_EYE_LOW_VISION
 	mob_trait = TRAIT_TUNNELVISION //literally just for vorts
-	value = -9
+	value = -11
 	medical_record_text = "The has a lack of peripheral vision."
 	gain_text = "You have trouble seeing in your peripheral vision."
 	lose_text = "You regain your peripheral vision."

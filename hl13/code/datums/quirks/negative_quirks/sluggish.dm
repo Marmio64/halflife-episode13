@@ -2,7 +2,7 @@
 	name = "Sluggish"
 	desc = "You have trouble recovering your stamina, making you have to wait longer until it begins to regenerate after running or being hit by certain things like stun batons."
 	icon = FA_ICON_LUNGS
-	value = -6
+	value = -8
 	medical_record_text = "Patient has a sluggish demeanor, and low energy."
 
 /datum/quirk/sluggish/add()

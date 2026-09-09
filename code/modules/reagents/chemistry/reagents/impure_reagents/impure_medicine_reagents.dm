@@ -896,11 +896,3 @@ Basically, we fill the time between now and 2s from now with hands based off the
 	ph = 13.9
 	metabolization_rate = 0.05 * REM
 	tox_damage = 0
-
-/datum/reagent/inverse/rezadone/on_mob_metabolize(mob/living/carbon/affected_mob)
-	. = ..()
-	affected_mob.gain_trauma(/datum/brain_trauma/mild/phobia/carps, TRAUMA_RESILIENCE_ABSOLUTE)
-
-/datum/reagent/inverse/rezadone/on_mob_end_metabolize(mob/living/carbon/affected_mob)
-	. = ..()
-	affected_mob.cure_trauma_type(/datum/brain_trauma/mild/phobia/carps, resilience = TRAUMA_RESILIENCE_ABSOLUTE)

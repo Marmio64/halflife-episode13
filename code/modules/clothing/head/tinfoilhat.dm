@@ -6,7 +6,7 @@
 	armor_type = /datum/armor/costume_foilhat
 	equip_delay_other = 140
 	clothing_flags = ANTI_TINFOIL_MANEUVER
-	var/datum/brain_trauma/mild/phobia/conspiracies/paranoia
+	var/datum/brain_trauma/mild/phobia/supernatural/paranoia
 	var/warped = FALSE
 	interaction_flags_mouse_drop = NEED_HANDS
 

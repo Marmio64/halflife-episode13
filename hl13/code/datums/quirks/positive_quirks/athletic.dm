@@ -8,9 +8,9 @@
 /datum/quirk/athletic/add()
 	if(ishuman(quirk_holder))
 		var/mob/living/carbon/human/subject = quirk_holder
-		subject.mind?.adjust_experience(/datum/skill/athletics, 750)
+		subject.mind?.adjust_experience(/datum/skill/athletics, 800)
 
 /datum/quirk/athletic/remove()
 	if(ishuman(quirk_holder))
 		var/mob/living/carbon/human/subject = quirk_holder
-		subject.mind?.adjust_experience(/datum/skill/athletics, 750)
+		subject.mind?.adjust_experience(/datum/skill/athletics, 800)
