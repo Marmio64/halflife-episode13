@@ -667,7 +667,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/halflife/indoors/slums)
 "aNy" = (
@@ -1420,11 +1420,6 @@
 /obj/structure/chair/halflife/wood/padded,
 /turf/open/floor/plating/indoor/carpet,
 /area/halflife/indoors/outlands)
-"bJO" = (
-/turf/open/floor/plating/indoor/metal/walkway/end{
-	dir = 8
-	},
-/area/halflife/outdoors/outlands_city)
 "bJT" = (
 /obj/machinery/microwave{
 	pixel_y = 4
@@ -1483,6 +1478,18 @@
 /obj/structure/chair/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/townhall/courtroom)
+"bNu" = (
+/obj/docking_port/stationary{
+	dir = 4;
+	dwidth = 9;
+	height = 30;
+	name = "Outlands Rail Stop";
+	shuttle_id = "admintrain_outlands";
+	width = 7;
+	override_can_dock_checks = 1
+	},
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/outlands_city)
 "bNy" = (
 /obj/effect/decal/cleanable/blood/gibs/old,
 /obj/structure/kitchenspike,
@@ -1877,6 +1884,11 @@
 /obj/structure/halflife/road_barrier/combine,
 /turf/open/floor/plating/ground/sidewalk/inner,
 /area/halflife/outdoors)
+"coo" = (
+/turf/open/floor/plating/indoor/metal/walkway{
+	dir = 4
+	},
+/area/halflife/outdoors/outlands_city)
 "coz" = (
 /obj/structure/table/halflife/wood,
 /obj/item/reagent_containers/condiment/peppermill,
@@ -6448,9 +6460,6 @@
 	dir = 1
 	},
 /area/halflife/indoors/sewer)
-"inQ" = (
-/turf/open/floor/plating/indoor/woodc/wide,
-/area/halflife/outdoors/outlands_city)
 "inY" = (
 /obj/machinery/door/unpowered/halflife/metal/red{
 	dir = 4
@@ -7820,7 +7829,7 @@
 /area/halflife/indoors/outlands)
 "kdr" = (
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/halflife/indoors/slums)
 "kdY" = (
@@ -9868,7 +9877,7 @@
 /area/halflife/outdoors/outlands_city)
 "mMK" = (
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/halflife/outdoors/forest)
 "mMM" = (
@@ -9938,6 +9947,11 @@
 	},
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/townhall/courtroom)
+"mOt" = (
+/turf/open/floor/plating/indoor/metal/walkway/end{
+	dir = 8
+	},
+/area/halflife/outdoors/outlands_city)
 "mOv" = (
 /obj/structure/table/optable,
 /obj/effect/mob_spawn/corpse/zombie,
@@ -10406,7 +10420,7 @@
 /area/halflife/indoors/apartments/primary)
 "npB" = (
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/halflife/indoors/old)
 "npX" = (
@@ -11457,7 +11471,7 @@
 "oHv" = (
 /obj/structure/railing/halflife/sewer,
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/halflife/indoors/outlands)
 "oHw" = (
@@ -11633,7 +11647,7 @@
 	dir = 8
 	},
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/halflife/indoors/slums)
 "oRb" = (
@@ -13156,7 +13170,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/halflife/indoors/outlands)
 "qHx" = (
@@ -16830,18 +16844,6 @@
 /obj/effect/landmark/carepackage,
 /turf/open/floor/plating/indoor/metal/grate,
 /area/halflife/indoors/sewer)
-"vhr" = (
-/obj/docking_port/stationary{
-	dir = 4;
-	dwidth = 9;
-	height = 30;
-	name = "Outlands Rail Stop";
-	shuttle_id = "admintrain_outlands";
-	width = 7;
-	override_can_dock_checks = 1
-	},
-/turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors/outlands_city)
 "vhz" = (
 /obj/effect/spawner/random/halflife/random_zombie_fungal,
 /turf/open/floor/plating/indoor/tile,
@@ -18954,9 +18956,7 @@
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "xSZ" = (
-/turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
-	},
+/turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/outlands_city)
 "xTt" = (
 /mob/living/basic/halflife/zombie/fast,
@@ -112006,9 +112006,9 @@ hdo
 eGo
 vhH
 mMR
-bJO
+mOt
 vHb
-bJO
+mOt
 oHo
 vHb
 vHb
@@ -112262,11 +112262,11 @@ ycs
 hdo
 eGo
 vhH
-inQ
 xSZ
-inQ
+coo
 xSZ
-inQ
+coo
+xSZ
 vHb
 vHb
 vhH
@@ -112520,9 +112520,9 @@ eGo
 eGo
 vhH
 vhH
-xSZ
-vhr
-xSZ
+coo
+bNu
+coo
 vHb
 vHb
 vHb
@@ -112777,9 +112777,9 @@ uBw
 uBw
 oHo
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 vHb
 vHb
@@ -113034,9 +113034,9 @@ uBw
 uBw
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vHb
 vHb
 vhH
@@ -113291,9 +113291,9 @@ uBw
 uBw
 vhH
 vhH
-xSZ
+coo
 oHo
-xSZ
+coo
 vHb
 vHb
 vHb
@@ -113547,11 +113547,11 @@ uBw
 uBw
 uBw
 oHo
-inQ
 xSZ
-inQ
+coo
 xSZ
-inQ
+coo
+xSZ
 vHb
 vHb
 vhH
@@ -113805,9 +113805,9 @@ uBw
 uBw
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 oHo
 vHb
 vHb
@@ -114062,9 +114062,9 @@ uBw
 uBw
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 vHb
 vHb
@@ -114319,9 +114319,9 @@ uBw
 uBw
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 vHb
 vHb
@@ -114576,9 +114576,9 @@ uBw
 uBw
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 vHb
 vHb
@@ -114832,11 +114832,11 @@ uBw
 uBw
 uBw
 vhH
-inQ
 xSZ
-inQ
+coo
 xSZ
-inQ
+coo
+xSZ
 vhH
 vHb
 vHb
@@ -115090,9 +115090,9 @@ uBw
 uBw
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 vhH
 vhH
@@ -115347,9 +115347,9 @@ uBw
 uBw
 lJh
 lJh
-xSZ
+coo
 lJh
-xSZ
+coo
 vhH
 vhH
 pUe
@@ -115604,9 +115604,9 @@ uBw
 uBw
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 oHo
 vHb
@@ -115861,9 +115861,9 @@ uBw
 uBw
 vhH
 mMR
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 vhH
 vhH
@@ -116117,11 +116117,11 @@ uBw
 uBw
 uBw
 vhH
-inQ
 xSZ
-inQ
+coo
 xSZ
-inQ
+coo
+xSZ
 vhH
 vhH
 vhH
@@ -116375,9 +116375,9 @@ uBw
 uBw
 vhH
 vhH
-xSZ
+coo
 oHo
-xSZ
+coo
 vhH
 vhH
 mMR
@@ -116632,9 +116632,9 @@ uBw
 uBw
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 oHo
 vhH
@@ -116889,9 +116889,9 @@ uBw
 uBw
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 vhH
 vhH
@@ -117146,9 +117146,9 @@ uBw
 uBw
 vhH
 vhH
-xSZ
+coo
 oHo
-xSZ
+coo
 vhH
 oHo
 vhH
@@ -117402,11 +117402,11 @@ uBw
 uBw
 uBw
 vhH
-inQ
 xSZ
-inQ
+coo
 xSZ
-inQ
+coo
+xSZ
 vhH
 vhH
 vhH
@@ -117660,9 +117660,9 @@ uBw
 uBw
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 vhH
 mMR
@@ -117917,9 +117917,9 @@ eGo
 eGo
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 oHo
 fbe
 vhH
@@ -118174,9 +118174,9 @@ hdo
 eGo
 vhH
 xPx
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 cLA
 vhH
@@ -118431,9 +118431,9 @@ hdo
 eGo
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 vhH
 oHo
@@ -118687,11 +118687,11 @@ ycs
 hdo
 eGo
 vhH
-inQ
 xSZ
-inQ
+coo
 xSZ
-inQ
+coo
+xSZ
 vHb
 vhH
 vhH
@@ -118945,9 +118945,9 @@ hdo
 eGo
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vHb
 vhH
 vhH
@@ -119202,9 +119202,9 @@ hdo
 eGo
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 vhH
 oHo
@@ -119459,9 +119459,9 @@ eGo
 eGo
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 vhH
 vhH
@@ -119716,9 +119716,9 @@ eGo
 eGo
 vhH
 vhH
-xSZ
+coo
 vhH
-xSZ
+coo
 vhH
 vhH
 mMR
@@ -119972,11 +119972,11 @@ vhH
 vhH
 vhH
 vhH
-inQ
 xSZ
-inQ
+coo
 xSZ
-inQ
+coo
+xSZ
 vhH
 vhH
 vhH

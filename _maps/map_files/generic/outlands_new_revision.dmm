@@ -1413,7 +1413,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/halflife/outdoors/forest)
 "hN" = (
@@ -1974,7 +1974,7 @@
 "lf" = (
 /obj/structure/railing/halflife/sewer,
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/halflife/indoors/outlands)
 "lh" = (
@@ -2166,18 +2166,6 @@
 	dir = 4
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
-/area/halflife/outdoors/outlands_city)
-"mk" = (
-/obj/docking_port/stationary{
-	dir = 2;
-	dwidth = 9;
-	height = 30;
-	name = "Outlands Rail Stop";
-	shuttle_id = "admintrain_outlands";
-	width = 7;
-	override_can_dock_checks = 1
-	},
-/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/outlands_city)
 "ml" = (
 /obj/structure/window/fulltile/halflife/nosmooth/generic,
@@ -2939,9 +2927,6 @@
 /area/halflife/indoors/outlands)
 "qZ" = (
 /turf/open/floor/plating/indoor/carpet/blue,
-/area/halflife/outdoors/outlands_city)
-"rc" = (
-/turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/outdoors/outlands_city)
 "rd" = (
 /mob/living/simple_animal/hostile/halflife/antlion,
@@ -3828,6 +3813,9 @@
 /obj/structure/halflife/road_barrier,
 /turf/open/floor/plating/ground/brickroad,
 /area/halflife/outdoors/forest)
+"wu" = (
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/outlands_city)
 "ww" = (
 /obj/structure/halflife/trash/glass/cans,
 /turf/open/floor/plating/indoor/woodc/wide,
@@ -4226,9 +4214,6 @@
 "yB" = (
 /obj/machinery/door/unpowered/halflife/seethrough/fence/wire,
 /turf/open/floor/plating/ground/grass,
-/area/halflife/outdoors/outlands_city)
-"yD" = (
-/turf/open/floor/plating/indoor/metal/walkway,
 /area/halflife/outdoors/outlands_city)
 "yH" = (
 /obj/effect/spawner/random/halflife/loot/crafting_bench,
@@ -7113,7 +7098,7 @@
 /area/halflife/outdoors/outlands_city)
 "PN" = (
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/halflife/outdoors/forest)
 "PO" = (
@@ -7582,7 +7567,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/halflife/indoors/outlands)
 "SF" = (
@@ -7806,6 +7791,9 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/checkered,
 /area/halflife/indoors/outlands)
+"TY" = (
+/turf/open/floor/plating/indoor/metal/walkway,
+/area/halflife/outdoors/outlands_city)
 "TZ" = (
 /obj/structure/halflife/trash/glass/plate,
 /turf/open/floor/plating/ground/dirt,
@@ -8059,6 +8047,18 @@
 "VN" = (
 /obj/structure/halflife/leaves,
 /turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/outlands_city)
+"VO" = (
+/obj/docking_port/stationary{
+	dir = 2;
+	dwidth = 9;
+	height = 30;
+	name = "Outlands Rail Stop";
+	shuttle_id = "admintrain_outlands";
+	width = 7;
+	override_can_dock_checks = 1
+	},
+/turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/outlands_city)
 "VS" = (
 /obj/structure/halflife/pot/plant,
@@ -71922,32 +71922,32 @@ Ca
 Ca
 Ax
 Ax
-rc
+wu
 Dq
 Dq
 Dq
 Ax
-rc
+wu
 Dq
 Dq
 Dq
 Ax
-rc
+wu
 Dq
 Dq
 Dq
 Ax
-rc
+wu
 Dq
 Dq
 Dq
 Ax
-rc
+wu
 Dq
 Dq
 Dq
 Ax
-rc
+wu
 Ax
 Ax
 Dq
@@ -72069,38 +72069,38 @@ uU
 uU
 uU
 Ca
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
 GG
 "}
 (201,1,2) = {"
@@ -72219,35 +72219,35 @@ uU
 uU
 uU
 Ca
-mk
+VO
 Ax
 Ax
-rc
-Dq
-Dq
-Ax
-Dq
-rc
+wu
 Dq
 Dq
 Ax
 Dq
-rc
+wu
 Dq
 Dq
 Ax
 Dq
-rc
+wu
 Dq
 Dq
 Ax
 Dq
-rc
+wu
 Dq
 Dq
 Ax
 Dq
-rc
+wu
+Dq
+Dq
+Ax
+Dq
+wu
 Dq
 Dq
 Dq
@@ -72369,38 +72369,38 @@ uU
 uU
 uU
 Ca
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
-yD
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
+TY
 GG
 "}
 (203,1,2) = {"
@@ -72522,32 +72522,32 @@ Ca
 Ca
 Dq
 Dq
-rc
+wu
 Dq
 Dq
 Ax
 Ax
-rc
+wu
 Dq
 Dq
 Ax
 Ax
-rc
+wu
 Dq
 Dq
 Ax
 Ax
-rc
+wu
 Dq
 Dq
 Ax
 Ax
-rc
+wu
 Dq
 Dq
 Ax
 Ax
-rc
+wu
 Ax
 Dq
 Dq

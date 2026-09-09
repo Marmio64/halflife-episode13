@@ -1445,6 +1445,10 @@
 /obj/structure/halflife/fence/wire/barb,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
+"gx" = (
+/obj/structure/halflife/street_sign/railroad,
+/turf/open/floor/plating/ground/grass,
+/area/halflife/outdoors/forest)
 "gz" = (
 /obj/effect/landmark/event_spawn,
 /obj/structure/reagent_dispensers/fueltank,
@@ -2014,6 +2018,14 @@
 "jl" = (
 /turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/prison/infirmary)
+"jm" = (
+/obj/structure/stairs/halflife/concrete{
+	icon = 'hl13/icons/turf/floor/floors.dmi';
+	icon_state = "steel_walkway";
+	dir = 1
+	},
+/turf/open/floor/plating/indoor/metal/industrial,
+/area/halflife/outdoors/forest)
 "jn" = (
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/plating/indoor/metal/plate,
@@ -2187,6 +2199,17 @@
 	},
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/halflife/indoors/prison/infirmary)
+"kg" = (
+/obj/docking_port/stationary{
+	dwidth = 9;
+	height = 30;
+	name = "Outlands Rail Stop";
+	shuttle_id = "admintrain_outlands";
+	width = 7;
+	override_can_dock_checks = 1
+	},
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/outdoors/forest)
 "kh" = (
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/prison/security/armory)
@@ -2970,7 +2993,7 @@
 "nz" = (
 /obj/structure/railing,
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/halflife/outdoors/forest)
 "nA" = (
@@ -4487,7 +4510,7 @@
 	dir = 1
 	},
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/halflife/outdoors/forest)
 "tt" = (
@@ -5627,6 +5650,11 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plating/indoor/woodc,
 /area/halflife/indoors/prison/entrance)
+"yk" = (
+/turf/open/floor/plating/indoor/metal/walkway/end{
+	dir = 1
+	},
+/area/halflife/outdoors/forest)
 "ym" = (
 /obj/structure/table/halflife/metal/heavy,
 /obj/machinery/press,
@@ -5803,12 +5831,8 @@
 /turf/open/floor/plating/indoor/grooved2,
 /area/halflife/indoors/prison/cells)
 "yU" = (
-/obj/structure/stairs/halflife/concrete{
-	icon = 'hl13/icons/turf/floor/floors.dmi';
-	icon_state = "steel_walkway";
-	dir = 1
-	},
-/turf/open/floor/plating/indoor/metal/industrial,
+/obj/structure/halflife/street_sign/railroad,
+/turf/open/floor/plating/ground/dirt,
 /area/halflife/outdoors/forest)
 "yX" = (
 /obj/structure/halflife/road/horizontalcrossing{
@@ -8983,6 +9007,12 @@
 /obj/structure/broken_flooring/plating/always_floorplane/directional/east,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/indoors/prison)
+"Mh" = (
+/obj/machinery/power/halflife/streetlamp{
+	dir = 8
+	},
+/turf/open/floor/plating/ground/sidewalk/inner,
+/area/halflife/outdoors/forest)
 "Mi" = (
 /obj/structure/railing/halflife/solo{
 	dir = 1
@@ -11390,7 +11420,7 @@
 /obj/structure/railing,
 /obj/structure/alien/weeds,
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/halflife/outdoors/forest)
 "Wf" = (
@@ -55951,7 +55981,7 @@ Lk
 pN
 Lk
 Lk
-Lk
+gx
 Lk
 Lk
 Ct
@@ -56336,14 +56366,14 @@ Ct
 qt
 Ct
 Lk
+kv
 Ct
-Lk
-Lk
-Lk
 Ct
-Lk
-Lk
-Lk
+Ct
+kv
+Ct
+Ct
+Ct
 kv
 Ct
 Ct
@@ -56539,15 +56569,15 @@ Sk
 Ct
 Ct
 Ct
-Lk
-Ct
-Ct
-Ct
-Lk
-Lk
-Lk
-Ct
-Lk
+yk
+hW
+hW
+hW
+hW
+hW
+hW
+hW
+hW
 hW
 hW
 hW
@@ -56743,14 +56773,6 @@ Ct
 Ct
 Ct
 Ct
-Lk
-Lk
-pN
-Lk
-Ct
-Lk
-Ct
-qt
 Ct
 kv
 Ct
@@ -56773,6 +56795,14 @@ Ct
 Ct
 Ct
 kv
+Ct
+Ct
+Ct
+kv
+Ct
+Ct
+Ct
+kg
 Ct
 Ct
 Ct
@@ -56947,15 +56977,15 @@ Ct
 Ct
 Ct
 Lk
-gR
-Ct
-Ct
-Lk
-Ct
-Ct
-Ct
-Lk
-Lk
+yk
+hW
+hW
+hW
+hW
+hW
+hW
+hW
+hW
 hW
 hW
 hW
@@ -57152,14 +57182,14 @@ Ct
 Lk
 Lk
 Ct
-Lk
-Lk
-Lk
+kv
 Ct
-Lk
-Lk
-Lk
-Lk
+Ct
+Ct
+kv
+Ct
+Ct
+Ct
 kv
 Ct
 Ct
@@ -57366,26 +57396,26 @@ Lk
 Lk
 Lk
 Lk
-pN
+Lk
+Lk
 Lk
 Lk
 Lk
 Lk
 Lk
 Ct
-Ct
+Lk
+Lk
 Lk
 Ct
 Ct
+Ct
 Lk
-Ct
-Ct
+Lk
+Lk
 Lk
 gR
 Lk
-Ct
-Ct
-Ct
 Ct
 Ct
 YE
@@ -57560,35 +57590,35 @@ Lk
 Ct
 Ct
 qt
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+pN
+Ct
+yU
+Lk
+Lk
+Lk
 Lk
 Ct
-Ct
-qt
-Ct
-Lk
-Lk
-Lk
-kv
-Ct
-Ct
-Ct
-kv
-Ct
-Ct
-Ct
-kv
-Ct
-Ct
-Ct
-kv
-Ct
-Ct
-Ct
-kv
-Ct
-Ct
-Ct
-kv
 Ct
 Ct
 Ct
@@ -57764,38 +57794,38 @@ Ct
 Ct
 Lk
 Ct
-Ct
-Ct
-Ct
-Ct
-Ct
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+Lk
+Lk
+Lk
 gR
+Ct
+Lk
+Ct
+Ct
+Ct
 Lk
 Lk
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
 YE
 "}
 (49,1,2) = {"
@@ -57968,36 +57998,36 @@ Lk
 Lk
 Lk
 Lk
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
+JS
 Lk
 Lk
-Ct
-Ct
+Lk
+Lk
 Lk
 Ct
 Lk
-Ct
-kv
-Ct
-Ct
-Ct
-kv
-Ct
-Ct
-Ct
-kv
-Ct
-Ct
-Ct
-kv
-Ct
-Ct
-Ct
-kv
-Ct
-Ct
-Ct
-kv
-Ct
+Lk
+qt
 Ct
 Ct
 YE
@@ -58173,37 +58203,37 @@ Ct
 Ct
 Lk
 Lk
+JS
+JS
+Mh
+Ct
+Ct
+Ct
+Ct
+Ct
+Lk
+Lk
 Lk
 Ct
 Ct
 Lk
+Lk
+Lk
+Mh
+JS
+JS
+Lk
+Lk
+pN
+Lk
+Lk
+qt
 Ct
 Lk
 Lk
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
-hW
+Lk
+Lk
+Lk
 YE
 "}
 (51,1,2) = {"
@@ -58377,36 +58407,36 @@ Ct
 Ct
 Ct
 Ct
+JS
+JS
 Ct
 Ct
+qt
+qt
+Ct
+qt
+gR
 Lk
 Ct
 qt
-qt
-Ct
-kv
 Ct
 Ct
-Ct
-kv
-Ct
-Ct
-Ct
-kv
-Ct
-Ct
-Ct
-kv
+Lk
+pN
+Lk
+JS
+JS
+Lk
+Lk
+Lk
 Ct
 Ct
 Ct
-kv
-Ct
-Ct
-Ct
-kv
-Ct
-Ct
+Lk
+Lk
+Lk
+Lk
+Lk
 Ct
 YE
 "}
@@ -58580,23 +58610,9 @@ Xf
 yB
 Ct
 Lk
-Lk
 qt
-Ct
-Ct
-Ct
-Ct
-Ct
-Ct
-Ct
-Ct
-Ct
-Ct
-Ct
-Ct
-Ct
-Ct
-Ct
+JS
+JS
 Ct
 Ct
 Ct
@@ -58606,10 +58622,24 @@ Ct
 Ct
 Lk
 Lk
+Lk
+Lk
+Lk
+Lk
+Lk
+Lk
+JS
+JS
 Ct
 Ct
 Ct
+pN
+Lk
+Lk
 Ct
+Ct
+Lk
+Lk
 Lk
 Ct
 YE
@@ -58785,8 +58815,8 @@ Ct
 Ct
 Ct
 Lk
-Lk
-Lk
+JS
+JS
 Ct
 Ct
 Ct
@@ -58802,8 +58832,8 @@ Ct
 Ct
 Ct
 Ct
-Lk
-Ct
+JS
+JS
 Ct
 Ct
 Ct
@@ -63721,7 +63751,7 @@ oI
 oI
 DE
 DE
-yU
+jm
 hW
 hW
 hW
@@ -64129,7 +64159,7 @@ oI
 DE
 DE
 DE
-yU
+jm
 hW
 hW
 hW
