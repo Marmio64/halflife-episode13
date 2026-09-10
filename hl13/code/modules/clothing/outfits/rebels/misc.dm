@@ -489,7 +489,7 @@
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 		/obj/item/food/canned/halflife/beans = 1, //long-range footsoldier, meant to go out and scout things for radiohim
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
-		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
+		/obj/item/reagent_containers/cup/glass/canteen = 1,
 	)
 
 /datum/outfit/resistance_faction/radiohim/commando
@@ -499,7 +499,7 @@
 		/obj/item/ammo_box/magazine/m4a1 = 2,
 		/obj/item/food/canned/halflife/beans = 1,
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
-		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
+		/obj/item/reagent_containers/cup/glass/canteen = 1,
 	)
 	suit = /obj/item/clothing/suit/armor/halflife/milvest
 	suit_store = /obj/item/gun/ballistic/automatic/m4a1
@@ -507,10 +507,34 @@
 /datum/outfit/job/security/traitor_cop
 	name = "Civil Protection Traitor"
 	implants = list(/obj/item/implant/mindshield) //biosig removed
+	suit = /obj/item/clothing/suit/armor/rebel/light
+	accessory = /obj/item/clothing/accessory/armband/plf //no lambda armband so
 	back = /obj/item/storage/backpack/halflife/satchel/military
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/usp9mm = 2,
-		/obj/item/food/canned/halflife/beans = 1, //indie gaming
-		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
-		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
+		/obj/item/food/canned/halflife/beans = 1,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
+		/obj/item/reagent_containers/cup/glass/canteen = 1,
+	)
+
+/datum/outfit/job/security/traitor_cop/heavy
+	name = "Heavy Civil Protection Traitor"
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/mp7 = 4,
+		/obj/item/food/canned/halflife/beans = 1,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
+		/obj/item/reagent_containers/cup/glass/canteen = 1,
+	)
+	suit_store = /obj/item/gun/ballistic/automatic/mp7
+
+/datum/outfit/job/security/traitor_cop/elite
+	name = "Elite Civil Protection Traitor"
+	uniform = /obj/item/clothing/under/combine/civilprotection/divisionallead/elitebeta
+	mask = /obj/item/clothing/mask/gas/civilprotection/divisional/elitebeta
+	suit_store = /obj/item/gun/ballistic/automatic/pulsesmg
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/pulsesmg = 4,
+		/obj/item/food/canned/halflife/beans = 1,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
+		/obj/item/reagent_containers/cup/glass/canteen = 1,
 	)
