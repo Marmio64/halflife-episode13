@@ -193,3 +193,7 @@
 	if(trailer && .)
 		var/dir_to_move = get_dir(trailer.loc, old_loc)
 		step(trailer, dir_to_move)
+	RETURN_TYPE(/list/mob)
+	. = list()
+	for(var/i in occupants)
+		i.dir = dir

@@ -161,6 +161,16 @@
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
+"na" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "poland_shuttle_windows"
+	},
+/obj/structure/fans/tiny/invisible,
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/metal/plate,
+/area/shuttle/escape)
 "nm" = (
 /obj/structure/table/halflife/no_smooth/metal,
 /obj/machinery/light/small/directional/east,
@@ -277,11 +287,13 @@
 	},
 /area/shuttle/escape)
 "xP" = (
-/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "poland_shuttle_windows"
 	},
 /obj/structure/fans/tiny/invisible,
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 8
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "yI" = (
@@ -404,9 +416,11 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "Io" = (
-/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "poland_shuttle_windows"
+	},
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 1
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
@@ -809,14 +823,14 @@ mk
 Ny
 Hn
 Nb
-xP
+na
 Nb
 Nb
 TN
 Nb
 Nb
 Nb
-xP
+na
 Nb
 Nb
 Nb
@@ -824,11 +838,11 @@ TN
 Nb
 Nb
 Nb
-xP
+na
 Nb
 Nb
 Nb
-xP
+na
 Nb
 Nb
 Nb

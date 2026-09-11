@@ -72,11 +72,13 @@
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/admin_train)
 "gn" = (
-/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "poland_admintrain_windows"
 	},
 /obj/structure/fans/tiny/invisible,
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 4
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/admin_train)
 "gE" = (
@@ -207,6 +209,16 @@
 /obj/structure/chair/halflife/metal/folding,
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/admin_train)
+"sg" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "poland_admintrain_windows"
+	},
+/obj/structure/fans/tiny/invisible,
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 8
+	},
+/turf/open/floor/plating/indoor/metal/plate,
+/area/shuttle/admin_train)
 "sG" = (
 /obj/item/chair/halflife/metal/red,
 /obj/item/chair/halflife/metal/red{
@@ -255,9 +267,11 @@
 	},
 /area/shuttle/admin_train)
 "wy" = (
-/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "poland_admintrain_windows"
+	},
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 1
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/admin_train)
@@ -623,18 +637,18 @@
 WW
 xD
 lq
-gn
+sg
 lq
 lq
 bu
 lq
 qn
 lq
-gn
+sg
 lq
 qn
 lq
-gn
+sg
 lq
 lq
 lq
@@ -646,7 +660,7 @@ bu
 lq
 lq
 lq
-gn
+sg
 lq
 Yu
 gE

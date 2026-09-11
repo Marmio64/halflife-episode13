@@ -3,7 +3,7 @@
 	name = "pre-war military truck"
 	desc = "An old, pre-war military truck. Commonly used by the Polish Liberation Front and the Overwatch Conscripted Arm for logistical purposes or as an affordable troop transport. This one still seems functional, too!"
 	icon = 'hl13/icons/obj/port/van.dmi'
-	icon_state = "vancrateopen"
+	icon_state = "van_base"
 	max_integrity = 200
 	layer = LYING_MOB_LAYER
 	max_occupants = 8
