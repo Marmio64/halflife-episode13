@@ -193,3 +193,6 @@
 	if(trailer && .)
 		var/dir_to_move = get_dir(trailer.loc, old_loc)
 		step(trailer, dir_to_move)
+	for(var/mob/living/living_mob in occupants) //hl13 edit so turning in a sealed vehicle doesnt leave fov behind
+		var/direction = dir
+		living_mob.setDir(direction)
