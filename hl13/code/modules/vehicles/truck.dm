@@ -13,7 +13,6 @@
 	escape_time = 3 SECONDS
 	vehicle_move_delay = 2 //slower version for less powerful bus
 	///Determines whether we throw all things away when ramming them or just mobs, varedit only
-	var/crash_all = FALSE
 
 /obj/vehicle/sealed/car/truck/Initialize(mapload)
 	. = ..()
@@ -23,26 +22,21 @@
 	. = ..()
 	if(!bumped.density || occupant_amount() == 0)
 		return
-
-	if(iswallturf)
-		src.take_damage(15) //do not
-		playsound(src, 'sound/effects/bang.ogg', 15, TRUE)
-		return
 	if(!ismovable(bumped))
 		return
 	var/atom/movable/flying_debris = bumped
 	if(!flying_debris.anchored)
 		flying_debris.throw_at(get_edge_target_turf(bumped, dir), 4, 3)
+		flying_debris.take_damage(65, BRUTE)
 	visible_message(span_danger("[src] crashes into [bumped]!"))
 	playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
-	if(!ishuman(bumped))
-		var/atom/movable/drivinginmycar = bumped
-		drivinginmycar.take_damage(45, BRUTE)
+	if(!isliving(bumped))
 		return
-	var/mob/living/carbon/human/rammed = bumped
-	rammed.Paralyze(100)
-	rammed.adjustStaminaLoss(30)
+	var/mob/living/rammed = bumped
 	rammed.apply_damage(rand(20,35), BRUTE)
+	if(ishuman(rammed))
+		rammed.Paralyze(100)
+		rammed.adjustStaminaLoss(30)
 
 /obj/vehicle/sealed/car/truck/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change = TRUE)
 	. = ..()
@@ -67,6 +61,3 @@
 	vehicle_move_delay = 0
 	enter_delay = 0 SECONDS
 	escape_time = 0 SECONDS
-
-/obj/vehicle/sealed/car/truck/fast/admeme/crashall
-	crash_all = TRUE //AHAHAHAHAHHAHAHAHAHAAAA
