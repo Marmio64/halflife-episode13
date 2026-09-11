@@ -24,28 +24,31 @@
 	if(!bumped.density || occupant_amount() == 0)
 		return
 
-	if(crash_all)
-		if(ismovable(bumped))
-			var/atom/movable/flying_debris = bumped
-			flying_debris.throw_at(get_edge_target_turf(bumped, dir), 4, 3)
-		visible_message(span_danger("[src] crashes into [bumped]!"))
-		playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
+	if(iswallturf)
+		src.take_damage(15) //do not
+		playsound(src, 'sound/effects/bang.ogg', 15, TRUE)
+		return
+	if(!ismovable(bumped))
+		return
+	var/atom/movable/flying_debris = bumped
+	if(!flying_debris.anchored)
+		flying_debris.throw_at(get_edge_target_turf(bumped, dir), 4, 3)
+	visible_message(span_danger("[src] crashes into [bumped]!"))
+	playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
 	if(!ishuman(bumped))
+		var/atom/movable/drivinginmycar = bumped
+		drivinginmycar.take_damage(45, BRUTE)
 		return
 	var/mob/living/carbon/human/rammed = bumped
 	rammed.Paralyze(100)
 	rammed.adjustStaminaLoss(30)
 	rammed.apply_damage(rand(20,35), BRUTE)
-	if(!crash_all)
-		rammed.throw_at(get_edge_target_turf(bumped, dir), 4, 3)
-		visible_message(span_danger("[src] crashes into [rammed]!"))
-		playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
 
 /obj/vehicle/sealed/car/truck/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change = TRUE)
 	. = ..()
 	if(occupant_amount() == 0)
 		return
-	for(var/atom/future_statistic in range(2, src))
+	for(var/atom/future_statistic in range(1, src))
 		if(future_statistic == src)
 			continue
 		if(!LAZYACCESS(occupants, future_statistic))
