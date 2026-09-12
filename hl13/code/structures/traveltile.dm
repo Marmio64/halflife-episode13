@@ -139,7 +139,7 @@
 
 */
 
-/obj/structure/fluff/traveltile/Crossed(atom/movable/AM)
+/obj/structure/fluff/traveltile/proc/drive_through(atom/movable/AM)
 	. = ..()
 	var/fou
 	if(!aportalgoesto)

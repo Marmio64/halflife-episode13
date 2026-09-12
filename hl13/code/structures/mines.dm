@@ -16,7 +16,8 @@
 
 		if("combine" in living_mob.faction) //do not detonate on combine people
 			return FALSE
-
+	if(isvehicle(on_who)) //will go off for trucks
+		return TRUE
 	else
 		return FALSE //non mobs will not trigger hopper mines
 

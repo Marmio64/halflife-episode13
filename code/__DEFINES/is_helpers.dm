@@ -330,3 +330,6 @@ GLOBAL_LIST_INIT(book_types, typecacheof(list(
 
 #define isprojectilespell(thing) (istype(thing, /datum/action/cooldown/spell/pointed/projectile))
 #define is_multi_tile_object(atom) (atom.bound_width > ICON_SIZE_X || atom.bound_height > ICON_SIZE_Y)
+
+//is travel tile yes or no
+#define istraveltile(A) (istype(A, /obj/structure/fluff/traveltile)) //hl13 edit

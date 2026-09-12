@@ -19,6 +19,10 @@
 
 /obj/vehicle/sealed/car/truck/Bump(atom/bumped)
 	. = ..()
+	if(istraveltile(bumped))
+		var/obj/structure/fluff/traveltile/drivethru = bumped
+		drivethru.drive_through()
+		return
 	if(!bumped.density || occupant_amount() == 0)
 		return
 	if(!ismovable(bumped))
