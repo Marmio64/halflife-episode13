@@ -12,7 +12,6 @@
 	enter_delay = 3 SECONDS
 	escape_time = 3 SECONDS
 	vehicle_move_delay = 2 //slower version for less powerful bus
-	///Determines whether we throw all things away when ramming them or just mobs, varedit only
 
 /obj/vehicle/sealed/car/truck/Initialize(mapload)
 	. = ..()
