@@ -33,6 +33,7 @@
 	var/stalled = FALSE
 	var/stalltime = 0
 	var/waterproof = TRUE //checked by water before stalling you, set to TRUE so that base ss13 vehicles (if spawned (please no)) can ignore water
+	var/couldmove = FALSE //precautionary measure (if a vehicle gets broken by going in deep water, this makes sure you cant restart it by ramming it)
 	//hl3 edit end
 	var/list/autogrant_actions_passenger //plain list of typepaths
 	var/list/autogrant_actions_controller //assoc list "[bitflag]" = list(typepaths)
@@ -207,7 +208,11 @@
 	if(canmove && !stalled)
 		stalltime = amount
 		stalled = TRUE
-		canmove = FALSE
+		if(canmove)
+			couldmove = TRUE
+			canmove = FALSE
+		else
+			couldmove = FALSE
 		START_PROCESSING(SSobj, src)
 	return
 
@@ -218,6 +223,9 @@
 	stalltime -= seconds_per_tick
 	if(stalltime <= 0)
 		stalled = FALSE
-		canmove = TRUE
-		visible_message(span_notice("[src] recovers from the stall!"))
+		if(couldmove)
+			canmove = TRUE
+			visible_message(span_notice("[src] recovers from the stall!"))
+		else
+			visible_message(span_notice("[src] recovers from the stall... but it wasn't functional, so nothing really changes."))
 		STOP_PROCESSING(SSobj, src)

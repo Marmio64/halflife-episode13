@@ -51,23 +51,24 @@
 		return
 	if(isvehicle(bumped))
 		var/obj/vehicle/victim = bumped
-		if(victim.!stalled)
-			victim.stall(1)
+		if(victim.stalled)
+			visible_message(span_danger("[src] rams into [bumped]!"))
+			victim.take_damage(5, BRUTE) //go at them while they're still mobile or youre BOOORING
+			if(src.crashdamage)
+				src.stall(2)
+				src.take_damage(10, BRUTE) //"more forgiving", i say, as the truck you just rammed comes back to life
+			return
+		else
+			victim.stall(2)
 			victim.take_damage(75, BRUTE)
 			if(src.crashdamage)
 				visible_message(span_danger("[src] rams into [bumped] and both come to a screeching halt!"))
-				src.stall(1)
+				src.stall(2)
 				src.take_damage(25, BRUTE) //you can bumper cars with a truck but it probably isnt a good idea
 				return
 			else
 				visible_message(span_danger("[src] rams into [bumped], which comes to a screeching halt!"))
 				return
-		else
-			visible_message(span_danger("[src] rams into [bumped]!"))
-			victim.take_damage(5, BRUTE) //go at them while they're still mobile or youre BOOORING
-			if(src.crashdamage)
-				src.stall(1)
-				src.take_damage(10, BRUTE) //"more forgiving", i say, as the truck you just rammed comes back to life
 			return
 	if(israzorwire(bumped))
 		visible_message(span_danger("[src] rolls over [bumped]!"))
