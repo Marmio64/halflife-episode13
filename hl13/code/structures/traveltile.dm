@@ -138,3 +138,25 @@
 		to_chat(AM, "<b>It is a dead end.</b>")
 
 */
+
+/obj/structure/fluff/traveltile/Crossed(atom/movable/AM)
+	. = ..()
+	var/fou
+	if(!aportalgoesto)
+		return
+	if(isliving(AM))
+		return
+	if(!isvehicle(AM))
+		return
+	for(var/obj/structure/fluff/traveltile/T in shuffle(GLOB.traveltiles))
+		if(T.aportalid == aportalgoesto)
+			if(T == src)
+				continue
+			if(!can_go(AM))
+				return
+			AM.recent_travel = world.time
+			AM.forceMove(T.loc)
+			fou = TRUE
+			break
+	if(!fou)
+		return
