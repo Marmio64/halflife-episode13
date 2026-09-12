@@ -51,7 +51,7 @@
 		return
 	if(isvehicle(bumped))
 		var/obj/vehicle/victim = bumped
-		if(victim.canmove)
+		if(victim.!stalled)
 			victim.stall(1)
 			victim.take_damage(75, BRUTE)
 			if(src.crashdamage)
