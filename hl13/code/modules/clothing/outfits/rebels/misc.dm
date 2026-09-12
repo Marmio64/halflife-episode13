@@ -316,6 +316,29 @@
 	belt = /obj/item/storage/belt/civilprotection/polish_resistance/mosin
 	l_pocket = /obj/item/knife/combat
 
+/datum/outfit/resistance_faction/polish/competent/sniper
+	name = "Polish Liberation Front Marksman"
+	suit_store = /obj/item/gun/ballistic/automatic/svd
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/svd
+	head = /obj/item/clothing/head/beret/sec/poland
+	neck = /obj/item/binoculars
+	mask = /obj/item/clothing/mask/gas/hl2/military/hardened
+	back = /obj/item/storage/backpack/halflife/satchel/military
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/svd = 2, //bonus ammo
+		/obj/item/reagent_containers/cup/glass/canteen = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen/chopchop = 1, //emergency relocation
+		/obj/item/food/canned/halflife/beans = 1,
+	)
+
+/datum/outfit/resistance_faction/polish/competent/sniper/pre_equip(mob/living/carbon/human/H)
+	H.cmode_music ='hl13/sound/music/combat/escalation1.ogg'
+
+	H.change_stat(STATKEY_DEX, 3) //RUN AWAY RUN AWAY (relocate after taking a shot)
+	H.change_stat(STATKEY_STR, 1)
+	H.change_stat(STATKEY_END, 2) //mostly taken from survivalists and wartime veterans that didnt want to be in stupid fat eod armour
+	H.change_stat(STATKEY_PER, 6) // 👀
+
 /datum/outfit/resistance_faction/polish/competent/shotgunner
 	name = "Polish Liberation Front Trench Raider"
 	suit = /obj/item/clothing/suit/armor/halflife/kevlar //now we're talking. actual pre-war armour.
@@ -356,7 +379,7 @@
 	r_hand = /obj/item/hl13_small_flag/poland //FOR POLAND!!!!!!
 
 /datum/outfit/resistance_faction/polish/commando
-	name = "Polish Liberation Front Commando" //elite commandos of the plf
+	name = "Polish Liberation Front Commando" //elite commandos of the plf w/ AKs, meant to operate behind enemy lines for a time and perform sabotage
 	mask = /obj/item/clothing/mask/gas/hl2/military
 	head = /obj/item/clothing/head/helmet/halflife/milhelm/poland
 	suit = /obj/item/clothing/suit/armor/halflife/milvest
@@ -373,6 +396,7 @@
 		/obj/item/megaphone = 1,
 		/obj/item/food/canned/halflife/beans = 1, //stay behind enemy lines for as long as possible
 		/obj/item/reagent_containers/cup/glass/canteen = 1,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen/chopchop = 2, //i implied in chopchop's flavour text that the PLF did use it so. commandos are basically just baby veterans
 		/obj/item/crowbar/large = 1, //sometimes C4 is too much
 		/obj/item/hl13_small_flag/poland/telescopic = 1, //POLAND POLAND POLAND
 	)
@@ -386,7 +410,7 @@
 	H.change_stat(STATKEY_PER, 1)
 
 /datum/outfit/resistance_faction/polish/commando/veteran
-	name = "Polish Liberation Front Veteran" //JESUS FUCKING CHRIST THESE GUYS HOLY SHIT BAHAHAHAHHAHAHAHAHAHHAHAA. YOU'RE FUCKED LMAO.
+	name = "Polish Liberation Front Veteran" //prewar soldiers w/ super-heavy armour and an LMG. as much of a psychological weapon as a practical one
 	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
 	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife
@@ -404,7 +428,7 @@
 		/obj/item/reagent_containers/cup/glass/canteen = 1,
 		/obj/item/crowbar/large = 1,
 		/obj/item/hl13_small_flag/poland/telescopic = 1,
-		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen/chopchop = 2,
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
 	)
 
@@ -465,7 +489,7 @@
 		/obj/item/ammo_box/magazine/usp9mm = 2,
 		/obj/item/food/canned/halflife/beans = 1, //long-range footsoldier, meant to go out and scout things for radiohim
 		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
-		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
+		/obj/item/reagent_containers/cup/glass/canteen = 1,
 	)
 
 /datum/outfit/resistance_faction/radiohim/commando
@@ -475,7 +499,7 @@
 		/obj/item/ammo_box/magazine/m4a1 = 2,
 		/obj/item/food/canned/halflife/beans = 1,
 		/obj/item/reagent_containers/pill/patch/medkit = 1,
-		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
+		/obj/item/reagent_containers/cup/glass/canteen = 1,
 	)
 	suit = /obj/item/clothing/suit/armor/halflife/milvest
 	suit_store = /obj/item/gun/ballistic/automatic/m4a1
@@ -483,10 +507,34 @@
 /datum/outfit/job/security/traitor_cop
 	name = "Civil Protection Traitor"
 	implants = list(/obj/item/implant/mindshield) //biosig removed
+	suit = /obj/item/clothing/suit/armor/rebel/light
+	accessory = /obj/item/clothing/accessory/armband/plf //no lambda armband so
 	back = /obj/item/storage/backpack/halflife/satchel/military
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/usp9mm = 2,
-		/obj/item/food/canned/halflife/beans = 1, //indie gaming
-		/obj/item/reagent_containers/pill/patch/medkit/vial = 1,
-		/obj/item/reagent_containers/cup/glass/waterbottle = 1,
+		/obj/item/food/canned/halflife/beans = 1,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
+		/obj/item/reagent_containers/cup/glass/canteen = 1,
+	)
+
+/datum/outfit/job/security/traitor_cop/heavy
+	name = "Heavy Civil Protection Traitor"
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/mp7 = 4,
+		/obj/item/food/canned/halflife/beans = 1,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
+		/obj/item/reagent_containers/cup/glass/canteen = 1,
+	)
+	suit_store = /obj/item/gun/ballistic/automatic/mp7
+
+/datum/outfit/job/security/traitor_cop/elite
+	name = "Elite Civil Protection Traitor"
+	uniform = /obj/item/clothing/under/combine/civilprotection/divisionallead/elitebeta
+	mask = /obj/item/clothing/mask/gas/civilprotection/divisional/elitebeta
+	suit_store = /obj/item/gun/ballistic/automatic/pulsesmg
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/pulsesmg = 4,
+		/obj/item/food/canned/halflife/beans = 1,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
+		/obj/item/reagent_containers/cup/glass/canteen = 1,
 	)

@@ -7,6 +7,7 @@
 	armor_type = /datum/armor/ridden_atv
 	key_type = /obj/item/key/atv
 	integrity_failure = 0.5
+	waterproof = FALSE //hl13 edit in case an admin spawns one
 	var/static/mutable_appearance/atvcover
 
 /datum/armor/ridden_atv

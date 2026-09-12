@@ -3,13 +3,11 @@
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "bn" = (
-/obj/structure/table/halflife/no_smooth/large/wood/desk{
-	dir = 8
-	},
 /obj/item/weaponcrafting/frame/coltpython{
 	pixel_x = 4;
 	pixel_y = 3
 	},
+/obj/structure/table/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/escape)
 "bJ" = (
@@ -96,6 +94,7 @@
 	pixel_x = 2;
 	pixel_y = 8
 	},
+/obj/structure/table/halflife/wood,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/escape)
 "fB" = (
@@ -154,13 +153,23 @@
 	},
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/shuttle/escape)
 "mk" = (
 /obj/structure/barricade/sandbags,
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/industrial,
+/area/shuttle/escape)
+"na" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "poland_shuttle_windows"
+	},
+/obj/structure/fans/tiny/invisible,
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 4
+	},
+/turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "nm" = (
 /obj/structure/table/halflife/no_smooth/metal,
@@ -257,6 +266,7 @@
 	pixel_x = 8;
 	pixel_y = 9
 	},
+/obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/shuttle/escape)
 "vJ" = (
@@ -277,11 +287,13 @@
 	},
 /area/shuttle/escape)
 "xP" = (
-/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "poland_shuttle_windows"
 	},
 /obj/structure/fans/tiny/invisible,
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 8
+	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
 "yI" = (
@@ -389,10 +401,7 @@
 	},
 /obj/structure/table/halflife/no_smooth/wood,
 /obj/structure/extinguisher_cabinet/directional/west,
-/obj/item/clothing/head/helmet/halflife/military/poland{
-	pixel_x = -6;
-	pixel_y = 5
-	},
+/obj/item/clothing/head/helmet/halflife/military/polandcamo,
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/escape)
 "Ig" = (
@@ -407,9 +416,11 @@
 /turf/open/floor/plating/indoor/metal/industrial,
 /area/shuttle/escape)
 "Io" = (
-/obj/structure/window/fulltile/halflife/nosmooth/reinforced,
 /obj/machinery/door/poddoor/preopen{
 	id = "poland_shuttle_windows"
+	},
+/obj/structure/window/fulltile/halflife/nosmooth/reinforced{
+	dir = 1
 	},
 /turf/open/floor/plating/indoor/metal/plate,
 /area/shuttle/escape)
@@ -425,7 +436,6 @@
 /area/shuttle/escape)
 "Jw" = (
 /obj/machinery/light/small/directional/west,
-/obj/structure/table/halflife/no_smooth/large/metal,
 /obj/item/clothing/glasses/hud/health{
 	pixel_x = -5;
 	pixel_y = 14
@@ -442,6 +452,7 @@
 	pixel_x = 15;
 	pixel_y = 10
 	},
+/obj/structure/table/halflife/metal,
 /turf/open/floor/plating/indoor/sterilesquares,
 /area/shuttle/escape)
 "Km" = (
@@ -481,7 +492,7 @@
 /obj/item/clothing/under/syndicate/camo,
 /obj/item/clothing/shoes/combat,
 /obj/machinery/light/small/directional/south,
-/obj/item/clothing/head/helmet/halflife/military/poland,
+/obj/item/clothing/head/helmet/halflife/military/polandcamo,
 /obj/item/clothing/accessory/armband/plf,
 /obj/item/gun/ballistic/automatic/ak47,
 /obj/item/storage/belt/civilprotection/polish_resistance/ak,
@@ -583,14 +594,17 @@
 /obj/machinery/computer/emergency_shuttle{
 	dir = 4;
 	name = "old train console";
-	desc = "A console capable of controlling both human and Combine rolling stock and any track switches in the way."
+	desc = "A console capable of controlling both human and Combine rolling stock and any track switches in the way. Lack of maintenance and thorough reprogramming by the PLF means that pretty much anyone with their authorisation codes should be able to send it straight for Polish territory.";
+	hijack_stage_cooldown = 5;
+	hijack_stage_time = 5;
+	auth_need = 2
 	},
 /turf/open/floor/plating/indoor/woodc/wide,
 /area/shuttle/escape)
 "WL" = (
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/indoor/metal/walkway{
-	dir = 1
+	dir = 4
 	},
 /area/shuttle/escape)
 "WY" = (
@@ -809,14 +823,14 @@ mk
 Ny
 Hn
 Nb
-xP
+na
 Nb
 Nb
 TN
 Nb
 Nb
 Nb
-xP
+na
 Nb
 Nb
 Nb
@@ -824,11 +838,11 @@ TN
 Nb
 Nb
 Nb
-xP
+na
 Nb
 Nb
 Nb
-xP
+na
 Nb
 Nb
 Nb

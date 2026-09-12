@@ -23,7 +23,7 @@
 	name = "train control console"
 	desc = "Tells the train's engines where to guide it."
 	shuttleId = "admintrain"
-	possible_destinations = "admintrain_siding;arrival_stationary;ferry_home;cargo_home"
+	possible_destinations = "admintrain_siding;arrival_stationary;ferry_home;cargo_home;admintrain_outlands"
 
 /area/shuttle/admin_train
 	name = "Train"
@@ -58,7 +58,85 @@
 	icon_state = "bodybag"
 	outfit = /datum/outfit/unequipped_rebel
 
-/* AWAITING MAPPING
+
+/obj/effect/mob_spawn/ghost_role/human/plf_rebel
+	name = "\improper private's sleeping bag"
+	desc = "A body bag poked with holes, currently being used as a sleeping bag. Someone seems to be sleeping inside of it."
+	density = FALSE
+	you_are_text = "You are a soldier of the Polish Liberation Front, the armed wing of the Polish Free State!"
+	flavour_text = "Your commanding officer will likely have instructions for you soon."
+	icon = 'icons/obj/medical/bodybag.dmi'
+	icon_state = "bodybag"
+	outfit = /datum/outfit/resistance_faction/polish
+
+
+/obj/effect/mob_spawn/ghost_role/human/plf_rebel/sapper
+	name = "\improper sapper's sleeping bag"
+	outfit = /datum/outfit/resistance_faction/polish/sapper
+
+/obj/effect/mob_spawn/ghost_role/human/plf_rebel/medic
+	name = "\improper medic's sleeping bag"
+	outfit = /datum/outfit/resistance_faction/polish/medic
+
+/obj/effect/mob_spawn/ghost_role/human/plf_rebel/servicerifle
+	name = "\improper private first class' sleeping bag"
+	outfit = /datum/outfit/resistance_faction/polish/competent
+
+/obj/effect/mob_spawn/ghost_role/human/plf_rebel/mosin
+	name = "\improper private second class' sleeping bag"
+	outfit = /datum/outfit/resistance_faction/polish/competent/mosin
+
+/obj/effect/mob_spawn/ghost_role/human/plf_rebel/m4a1
+	name = "\improper corporal's sleeping bag"
+	outfit = /datum/outfit/resistance_faction/polish/strong
+
+/obj/effect/mob_spawn/ghost_role/human/plf_rebel/trench
+	name = "\improper pointman's sleeping bag"
+	outfit = /datum/outfit/resistance_faction/polish/competent/shotgunner
+
+/obj/effect/mob_spawn/ghost_role/human/plf_rebel/sniper
+	name = "\improper marksman's sleeping bag"
+	outfit = /datum/outfit/resistance_faction/polish/competent/sniper
+
+/obj/effect/mob_spawn/ghost_role/human/plf_rebel/commander
+	name = "\improper platoon commander's sleeping bag"
+	you_are_text = "You are a platoon commander of the PLF, in charge of a small force operating in or near City 13."
+	flavour_text = "Await instructions from Warsaw Command."
+	outfit = /datum/outfit/resistance_faction/polish/commander
+
+/obj/effect/mob_spawn/ghost_role/human/plf_rebel/ak47
+	name = "\improper commando's sleeping bag"
+	outfit = /datum/outfit/resistance_faction/polish/commando
+
+/obj/effect/mob_spawn/ghost_role/human/plf_rebel/veteran
+	name = "\improper veteran's sleeping bag"
+	desc = "A body bag poked with holes. The hushed casket of a veteran of the Polish Liberation Front. You make a point to stay quiet near it."
+	you_are_text = "You are a veteran of the Polish Army, now serving under the PLF. You have seen the horrors of Soviet occupation and the Seven Hour War, and your day has come again."
+	flavour_text = "Await guidance from your comrades or superiors."
+	outfit = /datum/outfit/resistance_faction/polish/commando/veteran
+
+/obj/effect/mob_spawn/ghost_role/human/lambda_rebel
+	name = "\improper recruit's sleeping bag"
+	desc = "A body bag poked with holes, currently being used as a sleeping bag. Someone seems to be sleeping inside of it."
+	density = FALSE
+	you_are_text = "You are a rebel under the Lambda Resistance!"
+	flavour_text = "Assuming you have a commanding officer, they'll have instructions for you."
+	icon = 'icons/obj/medical/bodybag.dmi'
+	icon_state = "bodybag"
+	outfit = /datum/outfit/rebel
+
+/obj/effect/mob_spawn/ghost_role/human/lambda_rebel/medium
+	name = "\improper rebel's sleeping bag"
+	outfit = /datum/outfit/rebel/medium
+
+/obj/effect/mob_spawn/ghost_role/human/lambda_rebel/heavy
+	name = "\improper rifleman's sleeping bag"
+	outfit = /datum/outfit/rebel/heavy
+
+/obj/effect/mob_spawn/ghost_role/human/lambda_rebel/heavy/ak
+	outfit = /datum/outfit/rebel/heavy/ak47
+
+
 /datum/map_template/shuttle/ert/plf_combat_train
 	suffix = "plf_combat"
 	name = "PLF infantry transport train"
@@ -67,8 +145,8 @@
 /datum/map_template/shuttle/ert/plf_med_train
 	suffix = "plf_med"
 	name = "PLF humanitarian supply train"
-	description = "A train used by the Polish Free State to supply large amounts of food, water, and medicine to newly-liberated territories. Its combatant crew, however, is very small."
-*/
+	description = "A train used by the Polish Free State to supply large amounts of food, water, and medicine to newly-liberated territories. Its combatant crew, however, is lightly-armed."
+
 /datum/map_template/shuttle/ert/plf_submarine
 	suffix = "plf_submarine"
 	name = "PLF raid submarine"

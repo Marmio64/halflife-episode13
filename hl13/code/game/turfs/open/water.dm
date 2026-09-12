@@ -245,6 +245,22 @@
 	..()
 	for(var/obj/structure/lattice/catwalk/C in get_turf(A))
 		return
+	if(isvehicle(A)) //stay out of the water
+		var/obj/vehicle/V = A
+		if(!V.waterproof)
+			switch(depth)
+				if(3)
+					visible_message(span_danger("[V]'s engine is destroyed by the [src]!"))
+					V.canmove = FALSE //im sorry. youve fucked up. its joever. you're cripled forever
+				if(2)
+					V.take_damage(5, BRUTE)
+					visible_message(span_danger("[V]'s engine struggles and stalls through the [src] and is damaged as a result!"))
+					V.stall(3)
+				else
+					if(prob(25))
+						visible_message(span_danger("[V]'s engine chokes and stalls as it struggles through the [src]!"))
+						V.stall(3)
+
 
 	if(isliving(A))
 		var/mob/living/M = A
