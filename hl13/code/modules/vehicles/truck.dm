@@ -50,7 +50,7 @@
 		drivethru.drive_through(src)
 		return
 	if(israzorwire(bumped))
-		visible_message(span_danger("[src] rolls through [bumped]!"))
+		visible_message(span_danger("[src] rolls over [bumped]!"))
 		bumped.take_damage(35, BRUTE) //two rollthroughs to clear it...
 		if(src.crashdamage)
 			src.take_damage(10, BRUTE) //but it'll fuck your tires up
