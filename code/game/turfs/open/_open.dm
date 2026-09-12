@@ -3,9 +3,6 @@
 	plane = FLOOR_PLANE
 	///negative for faster, positive for slower
 	var/slowdown = 0
-	//hl13 edit
-	var/vehicle_slowdown = 0
-	//hl13 edit end
 
 	var/footstep = null
 	var/barefootstep = null
