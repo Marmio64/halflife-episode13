@@ -38,9 +38,10 @@
 /obj/vehicle/sealed/car/truck/Bump(atom/bumped)
 	. = ..()
 	if(iswallturf(bumped))
-		visible_message(span_danger("[src] crashes into [bumped]!"))
 		if(src.crashdamage)
-			src.take_damage(25, BRUTE) //you really shouldn't
+			src.take_damage(75, BRUTE) //you really shouldn't
+			visible_message(span_danger("[src] crashes into [bumped]!"))
+			stall()
 		return
 	if(!ismovable(bumped))
 		return
