@@ -331,5 +331,11 @@ GLOBAL_LIST_INIT(book_types, typecacheof(list(
 #define isprojectilespell(thing) (istype(thing, /datum/action/cooldown/spell/pointed/projectile))
 #define is_multi_tile_object(atom) (atom.bound_width > ICON_SIZE_X || atom.bound_height > ICON_SIZE_Y)
 
+//hl13 additions
 //is travel tile yes or no
-#define istraveltile(A) (istype(A, /obj/structure/fluff/traveltile)) //hl13 edit
+#define istraveltile(A) (istype(A, /obj/structure/fluff/traveltile))
+#define iswoodrailing(A) (istype(A, /obj/structure/railing/halflife/wood))
+#define iswoodbarricade(A) (istype(A, /obj/structure/barricade/wooden))
+#define istree(A) (istype(A, /obj/structure/flora/tree))
+#define isbarricade(A) (istype(A, /obj/structure/barricade))
+#define isfixedroadbarrier(A) (istype(A, /obj/structure/halflife/road_barrier/concrete || /obj/structure/halflife/road_barrier/concrete))
