@@ -63,7 +63,7 @@
 	if(iswoodrailing(bumped) || iswoodbarricade(bumped) || istree(bumped))
 		playsound(src, 'hl13/sound/halflifeeffects/wood_door_break.ogg', 50, TRUE)
 		visible_message(span_danger("[src] crashes through [bumped]!"))
-		bumped.take_damage(950, BRUTE) //shitty flimsy wooden structures dont usually do well against
+		bumped.take_damage(950, BRUTE) //shitty flimsy wooden structures dont usually do well against high-velocity truck
 		return
 	if(israiling(bumped) || istable(bumped))
 		visible_message(span_danger("[src] crashes into [bumped]!"))
