@@ -26,7 +26,7 @@
 		return
 	var/atom/movable/flying_debris = bumped
 	if(!flying_debris.anchored)
-		flying_debris.throw_at(get_edge_target_turf(bumped, dir), 4, 3)
+		flying_debris.throw_at(get_edge_target_turf(bumped, dir), 2, 3)
 		flying_debris.take_damage(65, BRUTE)
 		visible_message(span_danger("[src] crashes into [bumped]!"))
 		playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
