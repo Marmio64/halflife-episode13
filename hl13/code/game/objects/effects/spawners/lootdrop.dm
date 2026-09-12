@@ -346,11 +346,12 @@
 				/obj/item/machinepiece/multifunctiontool = 2,
 				/obj/item/grenade/syndieminibomb/bouncer,
 				/obj/item/fireaxe,
-				/obj/item/switchblade = 3,
+				/obj/item/switchblade,
 				/obj/item/melee/baton/security/loaded,
 				/obj/item/clothing/suit/armor/halflife/kevlar,
 				/obj/item/clothing/suit/armor/rebel/light,
 				/obj/item/clothing/suit/armor/rebel/light/jacket,
+				/obj/item/clothing/head/beret/sec/lambda,
 				/obj/item/clothing/head/helmet/halflife/military
 				)
 

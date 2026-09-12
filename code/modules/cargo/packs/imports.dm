@@ -51,6 +51,7 @@
 		/obj/item/gun/ballistic/automatic/pistol/makeshift = 2,
 		/obj/item/ammo_box/magazine/makeshift9mm = 2,
 		/obj/item/clothing/head/beret/sec/poland = 1,
+		/obj/item/clothing/head/beret/sec/lambda = 1,
 		/obj/item/megaphone = 1,
 	)
 	socio_cost = -20

@@ -880,7 +880,7 @@
 	id_name = "Spy"
 
 	uniform = /obj/item/clothing/under/citizen/rebel
-	head = /obj/item/clothing/head/beret/sec/poland
+	head = /obj/item/clothing/head/beret/sec/lambda
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless
 

@@ -2,7 +2,7 @@ GLOBAL_VAR_INIT(deployment_rebels_lead_spawned, FALSE)
 
 /datum/job/deployment_refugee_captain
 	title = JOB_DEPLOYMENT_REFUGEE_CAPTAIN
-	description = "You are the leader of this resistance cell. Lead your men to victory, and tear down the combine's regime! Use your supply radio to call in unique stratagems."
+	description = "You are the leader of this resistance batallion, and have been given control of a combined Lambda and PLF force. Lead your men to victory, and tear down the combine's regime! Use your supply radio to call in unique stratagems."
 	department_head = list("Nobody")
 	total_positions = 1
 	spawn_positions = 1
@@ -33,7 +33,7 @@ GLOBAL_VAR_INIT(deployment_rebels_lead_spawned, FALSE)
 	belt = /obj/item/melee/baton
 	l_pocket = /obj/item/knife/combat/survival
 	r_pocket = /obj/item/flashlight/seclite
-	head = /obj/item/clothing/head/beret/sec/poland/cell_lead
+	head = /obj/item/clothing/head/beret/sec/lambda/cell_lead
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored/bomb_resistant
 	shoes = /obj/item/clothing/shoes/boots
 	gloves = /obj/item/clothing/gloves/fingerless

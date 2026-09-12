@@ -72,6 +72,7 @@
 	ADD_TRAIT(H, TRAIT_THE_HIDDEN, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_FREERUNNING, OUTFIT_TRAIT)
 	ADD_TRAIT(H, TRAIT_PIERCEIMMUNE, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_BRAWLING_KNOCKDOWN_BLOCKED, OUTFIT_TRAIT)
 
 	H.maxHealth = 50
 	H.crit_threshold = -123
@@ -302,7 +303,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 15 SECONDS
+	cooldown_time = 12 SECONDS
 	item_type = /obj/item/restraints/legcuffs/beartrap/the_hidden
 	requires_hands = TRUE
 
@@ -360,9 +361,10 @@
 
 	if(ishuman(victim))
 		var/mob/living/carbon/human/human_victim = victim
-		human_victim.adjust_temppain(100)
+		human_victim.adjust_temppain(125)
+		human_victim.emote("scream")
 		human_victim.Immobilize(6 SECONDS)
-		human_victim.Stun(2 SECONDS)
+		human_victim.Stun(2.5 SECONDS)
 
 	victim.apply_damage(trap_damage, BRUTE, def_zone)
 	qdel(src)
@@ -482,7 +484,7 @@
 	hitsound = 'hl13/sound/creatures/antlion_worker/antlion_shoot.ogg'
 	damage = 50
 	armour_penetration = 50
-	wound_bonus = -70
+	wound_bonus = -60
 	speed = 1.25
 	range = 10
 	damage_type = BURN

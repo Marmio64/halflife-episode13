@@ -217,7 +217,15 @@
 	name = "polish liberation front beret"
 	desc = "A red beret defiantly bearing the insignia of the Polish military against Combine rule."
 
+/obj/item/clothing/head/beret/sec/lambda
+	name = "lambda beret"
+	desc = "An armored orange beret, likely a prewar beret that was dyed orange to carry the colors of the Lambda resistance group."
+	greyscale_colors = "#e29f3a#F2F2F2"
+
 /obj/item/clothing/head/beret/sec/poland/cell_lead
+	armor_type = /datum/armor/cell_lead_beret
+
+/obj/item/clothing/head/beret/sec/lambda/cell_lead
 	armor_type = /datum/armor/cell_lead_beret
 
 /datum/armor/cell_lead_beret
