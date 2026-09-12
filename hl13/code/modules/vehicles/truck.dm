@@ -39,9 +39,9 @@
 	. = ..()
 	if(iswallturf(bumped))
 		if(src.crashdamage)
-			src.take_damage(75, BRUTE) //you really shouldn't
-			visible_message(span_danger("[src] crashes into [bumped]!"))
-			stall()
+			src.take_damage(65, BRUTE) //you really shouldn't
+			visible_message(span_danger("[src] crashes into [bumped] and comes to a grinding halt!"))
+			stall(3)
 		return
 	if(!ismovable(bumped))
 		return
