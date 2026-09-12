@@ -335,7 +335,12 @@ GLOBAL_LIST_INIT(book_types, typecacheof(list(
 //is travel tile yes or no
 #define istraveltile(A) (istype(A, /obj/structure/fluff/traveltile))
 #define iswoodrailing(A) (istype(A, /obj/structure/railing/halflife/wood))
+#define israiling(A) (istype(A, /obj/structure/railing))
 #define iswoodbarricade(A) (istype(A, /obj/structure/barricade/wooden))
 #define istree(A) (istype(A, /obj/structure/flora/tree))
 #define isbarricade(A) (istype(A, /obj/structure/barricade))
-#define isfixedroadbarrier(A) (istype(A, /obj/structure/halflife/road_barrier/concrete || /obj/structure/halflife/road_barrier/concrete))
+#define isconcreteroadbarrier(A) (istype(A, /obj/structure/halflife/road_barrier/concrete))
+#define iscombineroadbarrier(A) (istype(A, /obj/structure/halflife/road_barrier/combine))
+#define israzorwire(A) (istype(A, /obj/structure/razorwire))
+#define iswindow(A) (istype(A, /obj/structure/window))
+#define istable(A) (istype(A, /obj/structure/table))

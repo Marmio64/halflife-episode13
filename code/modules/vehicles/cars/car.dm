@@ -12,6 +12,8 @@
 	var/escape_time = 6 SECONDS
 	/// How long it takes to move, cars don't use the riding component similar to mechs so we handle it ourselves
 	var/vehicle_move_delay = 1
+	/// HL13 edit: do we explode (y/n)
+	var/explodes_on_death = TRUE
 	/// How long it takes to rev (vrrm vrrm!)
 	COOLDOWN_DECLARE(enginesound_cooldown)
 
@@ -79,8 +81,9 @@
 	add_occupant(kidnapped, VEHICLE_CONTROL_KIDNAPPED)
 
 /obj/vehicle/sealed/car/atom_destruction(damage_flag)
-	explosion(src, heavy_impact_range = 1, light_impact_range = 2, flash_range = 3, adminlog = FALSE)
-	log_message("[src] exploded due to destruction", LOG_ATTACK)
+	if(explodes_on_death) //hl13 edit
+		explosion(src, heavy_impact_range = 1, light_impact_range = 2, flash_range = 3, adminlog = FALSE)
+		log_message("[src] exploded due to destruction", LOG_ATTACK)
 	return ..()
 
 /obj/vehicle/sealed/car/relaymove(mob/living/user, direction)

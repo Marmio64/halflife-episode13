@@ -5,8 +5,8 @@
 	icon_state = "resin_final"
 
 /obj/structure/halflife/cargotruck
-	name = "Hauler"
-	desc = "What is this... Some kind of cargo truck?"
+	name = "broken-down truck"
+	desc = "A broken-down supply truck of some sort. You're not sure how long this has been here."
 	icon = 'hl13/icons/obj/port/van.dmi'
 	max_integrity = 2000
 	pixel_x = -12
@@ -15,6 +15,19 @@
 	density = TRUE
 	anchored = TRUE
 	icon_state = "van_base"
+
+/obj/structure/halflife/cargotruck/formerly_drivable_wreckage
+	name = "wrecked supply truck"
+	desc = "A broken-down supply truck. It's absolutely wrecked, you could probably break apart its remains with a few good hits."
+	max_integrity = 100
+	pixel_y = -32
+	pixel_x = -32
+	bound_width = 32 //dont occupy more tiles than you need to
+	bound_height = 32
+
+/obj/structure/halflife/cargotruck/formerly_drivable_wreckage/Initialize(mapload)
+	. = ..()
+	add_overlay(image(icon, "damaged_frame", ABOVE_MOB_LAYER))
 
 /obj/structure/halflife/cargotruck/handle_deconstruct(disassembled)
 	if(obj_flags & NO_DEBRIS_AFTER_DECONSTRUCTION)

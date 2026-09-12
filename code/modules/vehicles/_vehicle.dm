@@ -29,6 +29,11 @@
 	var/obj/item/key/inserted_key
 	/// Whether the vehicle is currently able to move
 	var/canmove = TRUE
+	//hl13 edit (is the vehicle stalled?)
+	var/stalled = FALSE
+	var/stalltime = 0
+	var/waterproof = TRUE //checked by water before stalling you, set to TRUE so that base ss13 vehicles (if spawned (please no)) can ignore water
+	//hl3 edit end
 	var/list/autogrant_actions_passenger //plain list of typepaths
 	var/list/autogrant_actions_controller //assoc list "[bitflag]" = list(typepaths)
 	var/list/list/datum/action/occupant_actions //assoc list mob = list(type = action datum assigned to mob)
@@ -196,3 +201,23 @@
 	for(var/mob/living/living_mob in occupants) //hl13 edit so turning in a sealed vehicle doesnt leave fov behind
 		var/direction = dir
 		living_mob.setDir(direction)
+
+//hl13 edit
+/obj/vehicle/proc/stall(amount)
+	if(canmove && !stalled)
+		stalltime = amount
+		stalled = TRUE
+		canmove = FALSE
+		START_PROCESSING(SSobj, src)
+	return
+
+/obj/vehicle/process(seconds_per_tick)
+	if(!stalled)
+		return
+		STOP_PROCESSING(SSobj, src)
+	stalltime -= seconds_per_tick
+	if(stalltime <= 0)
+		stalled = FALSE
+		canmove = TRUE
+		visible_message(span_notice("[src] recovers from the stall!"))
+		STOP_PROCESSING(SSobj, src)
