@@ -586,6 +586,8 @@
 	)
 
 /datum/ai_controller/basic_controller/trooper/ranged/burst/plftraderguard
+	idle_behavior = null
+
 	planning_subtrees = list(
 		/datum/ai_planning_subtree/target_retaliate/check_faction,
 		/datum/ai_planning_subtree/basic_ranged_attack_subtree/trooper_burst,
