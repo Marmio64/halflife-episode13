@@ -69,7 +69,6 @@
 			else
 				visible_message(span_danger("[src] rams into [bumped], which comes to a screeching halt!"))
 				return
-			return
 	if(israzorwire(bumped))
 		visible_message(span_danger("[src] rolls over [bumped]!"))
 		bumped.take_damage(35, BRUTE) //two rollthroughs to clear it...
@@ -122,7 +121,7 @@
 	if(occupant_amount() == 0)
 		return
 	for(var/atom/future_statistic in range(0, src))
-		if(future_statistic == src)
+		if(future_statistic == src || future_statistic in occupants || future_statistic in contents)
 			continue
 		if(!LAZYACCESS(occupants, future_statistic))
 			Bump(future_statistic)
