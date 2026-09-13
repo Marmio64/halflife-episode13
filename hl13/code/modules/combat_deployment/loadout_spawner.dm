@@ -169,6 +169,7 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/rebel/tier2/pistol_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier2/molotov_partisan,
+			/datum/outfit/deployment_loadout/rebel/tier2/mosin_partisan,
 			/datum/outfit/deployment_loadout/rebel/tier2/smuggler,
 			/datum/outfit/deployment_loadout/rebel/tier2/medic_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier2/engineer,
@@ -187,6 +188,7 @@
 		var/list/possible_loadouts = list(
 			/datum/outfit/deployment_loadout/rebel/tier3/mp7_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier3/bomber_rebel,
+			/datum/outfit/deployment_loadout/rebel/tier3/molotov_rebel,
 			/datum/outfit/deployment_loadout/rebel/tier3/scout,
 			/datum/outfit/deployment_loadout/rebel/tier3/mosin_soldier,
 			/datum/outfit/deployment_loadout/rebel/tier3/vortigaunt,

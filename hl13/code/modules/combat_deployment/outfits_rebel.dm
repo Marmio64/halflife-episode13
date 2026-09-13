@@ -152,6 +152,35 @@
 
 	ears = /obj/item/radio/headset/rebel_deployment
 
+/datum/outfit/deployment_loadout/rebel/tier2/mosin_partisan
+	name = "Deployment: Upgraded Refugee Mosin Partisan"
+	display_name = "Upgraded Refugee Mosin Partisan (Defense)"
+	desc = "Armed with a mosin nagant, these partisans are somewhat slow but have moderate armor, and some melee and long ranged capabilities."
+	id_name = "Partisan Rifleman"
+
+	uniform = /obj/item/clothing/under/citizen/refugee
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+	suit = /obj/item/clothing/suit/armor/halflife/kevlar/heavy
+	suit_store = /obj/item/gun/ballistic/rifle/boltaction/mosin_nagant
+	l_pocket = /obj/item/knife/combat/survival
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/halflife/satchel
+
+	backpack_contents = list(
+		/obj/item/ammo_box/strilka310/a762 = 4,
+		/obj/item/reagent_containers/pill/patch/medkit/vial = 2,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_MARKSMEN
+
+	extra_str = 1
+	extra_end = 1
+	extra_per = 1
+	extra_dex = -3
+
 /datum/outfit/deployment_loadout/rebel/tier2/molotov_partisan
 	name = "Deployment: Upgraded Refugee Molotov Partisan"
 	display_name = "Upgraded Refugee Molotov Partisan (Offense)"
@@ -332,6 +361,33 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/tinbomb)
 
 	alternate_combat_music = 'hl13/sound/music/combat/drunkenpipebomb.ogg'
+
+/datum/outfit/deployment_loadout/rebel/tier3/molotov_rebel
+	name = "Deployment: Molotov Rebel"
+	display_name = "Molotov Rebel (Offense)"
+	desc = "Use molotovs to burn your enemies and provide support to allies with area denial!"
+	id_name = "Molotover"
+
+	uniform = /obj/item/clothing/under/citizen/rebel
+	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
+	suit = /obj/item/clothing/suit/armor/rebel/light
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	r_pocket = /obj/item/flashlight
+
+	back = /obj/item/storage/backpack/halflife/satchel
+	mask = /obj/item/clothing/mask/gas/hl2/military
+
+	backpack_contents = list(
+		/obj/item/grenade/halflife/molotov,
+		/obj/item/grenade/halflife/molotov,
+		/obj/item/lighter,
+		/obj/item/reagent_containers/pill/patch/medkit/vial,
+		/obj/item/ammo_box/magazine/usp9mm = 2,
+	)
+
+	ears = /obj/item/radio/headset/rebel_deployment
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/molotov)
 
 /datum/outfit/deployment_loadout/rebel/tier3/mosin_soldier
 	name = "Deployment: Mosin Soldier"
