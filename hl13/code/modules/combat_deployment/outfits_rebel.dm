@@ -372,6 +372,7 @@
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
 	suit = /obj/item/clothing/suit/armor/rebel/light
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp
+	l_pocket = /obj/item/ammo_box/magazine/usp9mm
 	r_pocket = /obj/item/flashlight
 
 	back = /obj/item/storage/backpack/halflife/satchel
