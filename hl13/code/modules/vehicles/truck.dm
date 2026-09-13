@@ -124,9 +124,9 @@
 		if(future_statistic == src)
 			continue
 		if(future_statistic in contents)
-			return
+			continue
 		if(future_statistic in occupants)
-			return
+			continue
 		if(!LAZYACCESS(occupants, future_statistic))
 			Bump(future_statistic)
 
