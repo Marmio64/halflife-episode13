@@ -121,8 +121,12 @@
 	if(occupant_amount() == 0)
 		return
 	for(var/atom/future_statistic in range(0, src))
-		if(future_statistic == src || future_statistic in occupants || future_statistic in contents)
+		if(future_statistic == src)
 			continue
+		if(future_statistic in contents)
+			return
+		if(future_statistic in occupants)
+			return
 		if(!LAZYACCESS(occupants, future_statistic))
 			Bump(future_statistic)
 
