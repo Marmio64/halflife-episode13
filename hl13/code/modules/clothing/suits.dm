@@ -956,6 +956,13 @@
 	acid = 50
 	wound = 40
 
+
+/obj/item/clothing/suit/armor/halflife/plf_veteran/deployment/light //basically just rebel heavy armour PLF edition
+	name = "well-worn modified altyn suit"
+	desc = "A heavily-modified explosive ordnance disposal suit used by the remnants of the Polish military. The years haven't been kind to it, though you should be able to move a bit lighter with the amount of explosive padding that's worn off this thing."
+	slowdown = 0.5
+	armor_type = /datum/armor/rebelheavy
+
 /obj/item/clothing/suit/halflife/invis_grunt_harness
 	name = "Grunt Harness"
 	desc = "A tiny, practically invisible harness for securing a weapon to."

@@ -343,6 +343,12 @@
 	acid = 30
 	wound = 5
 
+/obj/item/clothing/under/citizen/rebel/bomb_resistant
+	armor_type = /datum/armor/bombresistant_under
+
+/obj/item/clothing/under/citizen/rebel/prisoner/bomb_resistant
+	armor_type = /datum/armor/bombresistant_under
+
 /obj/item/clothing/under/halflife/police
 	name = "pre-war police uniform"
 	desc = "A well-worn police uniform from before the War, frequently found covering the Polish Free State's law enforcement."

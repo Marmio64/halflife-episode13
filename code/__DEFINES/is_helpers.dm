@@ -339,6 +339,7 @@ GLOBAL_LIST_INIT(book_types, typecacheof(list(
 #define iswoodbarricade(A) (istype(A, /obj/structure/barricade/wooden))
 #define istree(A) (istype(A, /obj/structure/flora/tree))
 #define isbarricade(A) (istype(A, /obj/structure/barricade))
+#define isroadbarrier(A) (istype(A, /obj/structure/halflife/road_barrier))
 #define isconcreteroadbarrier(A) (istype(A, /obj/structure/halflife/road_barrier/concrete))
 #define iscombineroadbarrier(A) (istype(A, /obj/structure/halflife/road_barrier/combine))
 #define israzorwire(A) (istype(A, /obj/structure/razorwire))

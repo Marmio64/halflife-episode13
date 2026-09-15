@@ -1111,14 +1111,14 @@
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SHOTGUN
 
 /datum/outfit/deployment_loadout/rebel/tier5/rpg
-	name = "Deployment: RPG Rebel"
-	display_name = "RPG Rebel (Offense)"
-	desc = "You are armed with a rocket launcher, and can procure an infinite amount of rockets on cooldown, but are unremarkable elsewise. Use your rockets to tear through combine defences with ease!"
-	id_name = "Demolitions Expert"
+	name = "Deployment: PLF Tankbuster"
+	display_name = "PLF Tankbuster (Offense)"
+	desc = "You are an elite, pre-war soldier of the PLF, trained in the destruction of mobile armoured targets; or, in layman's terms, you blow things up with a rocket launcher. You're suited to taking out high-value targets, such as Hunters, though your rockets aren't the best at breaching fortifications."
+	id_name = "Tankbuster"
 
-	head = /obj/item/clothing/head/helmet/halflife/military/plf_veteran
+	head = /obj/item/clothing/head/helmet/halflife/military/polandcamo
 	mask = /obj/item/clothing/mask/gas/hl2/military
-	suit = /obj/item/clothing/suit/armor/rebel
+	suit = /obj/item/clothing/suit/armor/halflife/plf_veteran/deployment/light
 	uniform = /obj/item/clothing/under/syndicate/camo/halflife/armored/bomb_resistant
 	belt = /obj/item/storage/belt/civilprotection/rpg_rebel
 	gloves = /obj/item/clothing/gloves/combat
@@ -1131,6 +1131,32 @@
 	combat_music = 'hl13/sound/music/combat/escalation1.ogg'
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/rocket)
+
+	extra_end = 6
+
+	alternate_combat_music = 'hl13/sound/music/combat/rocketjumpwaltz.ogg'
+
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER | WEAPON_CAT_SPECIALTY
+
+/datum/outfit/deployment_loadout/rebel/tier5/strider
+	name = "Deployment: Rebel Strider-Gunner"
+	display_name = "Strider-Gunner (Support)"
+	desc = "You are one of the resistance's finest; having felled a Strider during operations elsewhere in Poland, the scientists of the Lambda Resistance elected to graft its cannon to a power-pack; now you wield the horrifying might of those tripods in your hands! It takes time to fire, and moving while it charges will disrupt the process, but your ability to decimate enemy fortifications is unrivaled by even the PLF's Tankbusters!"
+	id_name = "Strider-Gunner"
+
+	head = /obj/item/clothing/head/beret/sec/lambda
+	mask = /obj/item/clothing/mask/gas/hl2/military
+	suit = /obj/item/clothing/suit/armor/rebel
+	uniform = /obj/item/clothing/under/citizen/rebel/prisoner/bomb_resistant
+	belt = /obj/item/storage/belt/civilprotection/polish_resistance/revolver
+	gloves = /obj/item/clothing/gloves/combat
+	suit_store = /obj/item/gun/ballistic/revolver/coltpython
+	back = /obj/item/striderpack
+	r_pocket = /obj/item/flashlight/seclite
+	shoes = /obj/item/clothing/shoes/boots
+
+	ears = /obj/item/radio/headset/rebel_deployment
+	combat_music = 'hl13/sound/music/combat/escalation1.ogg'
 
 	extra_end = 6
 
