@@ -99,3 +99,10 @@
 	select_name = "flame"
 	fire_sound = "hl13/sound/weapons/flamethrower1.ogg"
 	delay = 1.25 SECONDS
+
+/obj/item/ammo_casing/energy/strider
+	projectile_type = /obj/projectile/bullet/strider
+	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse
+	e_cost = LASER_SHOTS(1, STANDARD_CELL_CHARGE)
+	select_name = "plasma"
+	fire_sound = "hl13/sound/weapons/striderfire.ogg"

@@ -193,3 +193,33 @@
 	tracer_type = /obj/effect/projectile/tracer/xray
 	muzzle_type = /obj/effect/projectile/muzzle/xray
 	impact_type = /obj/effect/projectile/impact/xray
+
+/obj/projectile/bullet/strider
+	name = "pulse energy"
+	icon_state = "xray"
+	damage = 25
+	wound_bonus = -20
+	armour_penetration = 5
+	damage_type = BURN
+	armor_flag = LASER
+	range = 25 //HAHAHAHAHHAHAHAAAA
+	hitscan = TRUE
+	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
+	light_color = LIGHT_COLOR_GREEN
+	tracer_type = /obj/effect/projectile/tracer/xray
+	muzzle_type = /obj/effect/projectile/muzzle/xray
+	impact_type = /obj/effect/projectile/impact/xray
+
+/obj/projectile/bullet/strider/on_hit(atom/target, blocked = 0, pierce_hit)
+	..()
+
+	do_boom(target)
+	return BULLET_ACT_HIT
+
+/obj/projectile/bullet/strider/proc/do_boom(atom/target)
+	if(!isliving(target))
+		explosion(target, devastation_range = 1, heavy_impact_range = 2, light_impact_range = 4, flame_range = 4, flash_range = 0, explosion_cause = src) //big devastation
+		if(target) //if it somehow survives that
+				target.take_damage(150, BRUTE)
+	else
+		explosion(target, light_impact_range = 3, flame_range = 0, flash_range = 0,  explosion_cause = src)
