@@ -214,7 +214,7 @@
 	..()
 	if(isbarricade(target) || isroadbarrier(target))
 		var/obj/structure/barrier = target
-		var/targetDmg = barrier.integrity - 1
+		var/targetDmg = barrier.atom_integrity - 1
 		barrier.take_damage(targetDmg, BRUTE)
 	do_boom(target)
 	return BULLET_ACT_HIT
