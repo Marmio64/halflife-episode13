@@ -443,6 +443,35 @@
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE
 
+/datum/outfit/deployment_loadout/combine/tier4/eliteriotcop
+	name = "Deployment: Elite Riot Cop"
+	display_name = "Elite Riot Cop (Offense)"
+	desc = "You are equipped with a dangerous heavy stun baton and a ballistic riot shield, while also getting access to a surplus .38 revolver for backup use and a viscerator!"
+	id_name = "Riotcop"
+
+	uniform = /obj/item/clothing/under/combine/civilprotection/divisionallead/elitebeta
+	gloves = /obj/item/clothing/gloves/color/civilprotection
+	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
+	glasses = /obj/item/clothing/glasses/hud/security
+
+	mask = /obj/item/clothing/mask/gas/civilprotection/divisional/elitebeta/allowheadwear
+	belt = /obj/item/storage/belt/civilprotection/riotfullsnubnose
+
+	l_pocket = /obj/item/grenade/spawnergrenade/manhacks
+	r_pocket = /obj/item/gun/ballistic/revolver/snubnose //if you want to commit to melee you're going to forfeit ranged power
+
+	suit = /obj/item/clothing/suit/armor/riot
+	suit_store = /obj/item/melee/baton/security/heavy/loaded
+	head = /obj/item/clothing/head/helmet/toggleable/riot
+
+	back = /obj/item/shield/riot/ballistic //you're probably facing down a lot of stronger rebels now
+
+	ears = /obj/item/radio/headset/civilprotection/deployment
+
+	extra_str = 8 //punching you
+	extra_end = 7
+	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_REVOLVER
+
 /datum/outfit/deployment_loadout/combine/tier4/cremator
 	name = "Deployment: Cremator"
 	display_name = "Cremator (Defense)"
