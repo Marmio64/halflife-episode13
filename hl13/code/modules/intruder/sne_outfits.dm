@@ -115,7 +115,7 @@
 /datum/outfit/deployment_loadout/rebel/sne/assault
 	name = "SNE: Black Market Rifleman"
 	display_name = "Black Market Rifleman (Offense)"
-	desc = "Armed with an M4, details here."
+	desc = "You're a black market ring mercenary armed with an M4A1, making you an effective damage-dealer, though your armour leaves a tad to be desired."
 	id_name = "Trooper"
 
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
@@ -140,7 +140,7 @@
 /datum/outfit/deployment_loadout/rebel/sne/shotgun
 	name = "SNE: Black Market Shotgunner"
 	display_name = "Black Market Shotgunner (Offense)"
-	desc = "Armed with an SPAS12, details here."
+	desc = "Kick doors with a shotgun. You're a bit slower than a normal trooper, but have more endurance!"
 	id_name = "Doorkicker"
 
 	head = /obj/item/clothing/head/helmet/halflife/military/weak/crafted
@@ -166,7 +166,7 @@
 /datum/outfit/deployment_loadout/rebel/sne/engineer
 	name = "SNE: Black Market Engineer"
 	display_name = "Black Market Engineer (Support)"
-	desc = "Armed with a Colt Python, details here."
+	desc = "You get a shitty rusty Colt Python, which isn't ideal, but you also get a large amount of supplies for fortifying a position!"
 	id_name = "Sapper"
 
 	head = /obj/item/clothing/head/utility/hardhat/halflife/mining
@@ -192,7 +192,7 @@
 /datum/outfit/deployment_loadout/rebel/sne/medic
 	name = "SNE: Black Market Medic"
 	display_name = "Black Market Medic (Support)"
-	desc = "Armed with a MP7, details here."
+	desc = "Not only do you get a stylish beret from the PLF, you also get an MP7 and medical supplies to deal out both aid and hurt!"
 	id_name = "Sawbones"
 
 	head = /obj/item/clothing/head/beret/sec/poland
@@ -218,7 +218,7 @@
 /datum/outfit/deployment_loadout/rebel/sne/melee
 	name = "SNE: Black Market Slugger"
 	display_name = "Black Market Slugger (Defense)"
-	desc = "Armed with a stunbaton, details here."
+	desc = "You have a stun-baton and a ballistic riot shield. Go beat someone's head in!"
 	id_name = "Slugger"
 
 	head = /obj/item/clothing/head/beret/sec/poland
@@ -244,7 +244,7 @@
 /datum/outfit/deployment_loadout/rebel/sne/sniper
 	name = "SNE: Black Market Sniper"
 	display_name = "Black Market Sniper (Pick)"
-	desc = "Armed with a Mosin, details here."
+	desc = "The PLF's sniper corps weren't hiring, but the Ring was! Your trusty Mosin-Nagant is effective at long ranges, though it seems your paymaster couldn't be bothered to get you a bayonet."
 	id_name = "Marksman"
 
 	head = /obj/item/clothing/head/halflife/scout_hat
