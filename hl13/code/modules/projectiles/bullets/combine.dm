@@ -202,7 +202,7 @@
 	armour_penetration = 5
 	damage_type = BURN
 	armor_flag = LASER
-	range = 25 //HAHAHAHAHHAHAHAAAA
+	range = 65 //HAHAHAHAHHAHAHAAAA
 	hitscan = TRUE
 	impact_effect_type = /obj/effect/temp_visual/impact_effect/green_laser
 	light_color = LIGHT_COLOR_GREEN
