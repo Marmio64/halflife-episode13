@@ -212,9 +212,9 @@
 
 /obj/projectile/bullet/strider/on_hit(atom/target, blocked = 0, pierce_hit)
 	..()
-	if(isbarricade(target) || isroadbarrier(target))
+	if(isbarricade(target) || isroadbarrier(target)) //should this be 1-shot by the gun (can't just instantly break it or the explosion will bug out)
 		var/obj/structure/barrier = target
-		var/targetDmg = barrier.atom_integrity - 1
+		var/targetDmg = barrier.get_integrity() - 1
 		barrier.take_damage(targetDmg, BRUTE)
 	do_boom(target)
 	return BULLET_ACT_HIT
