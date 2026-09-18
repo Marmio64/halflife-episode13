@@ -337,16 +337,17 @@
 	role = "APF.C13-"
 	name_source = list("Blade", "Dagger", "Hammer", "Hunter", "Razor", "Spear", "Striker", "Tracker", "Echo")
 
-/datum/outfit/centcom/ert/over/watch/ordinal
+/datum/outfit/centcom/ert/overwatch/ordinal
 	name = "Ordinal OTA Unit"
 	belt = /obj/item/storage/belt/civilprotection/overwatch/pulsesmg
-	l_hand = /obj/item/gun/ballistic/automatic/pulsesmg
+	suit_store = /obj/item/gun/ballistic/automatic/pulsesmg
 
 	back = /obj/item/storage/backpack/halflife/satchel/radio
 	backpack_contents = list(
 		/obj/item/ammo_box/magazine/pulsesmg = 3,
 		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
 		/obj/item/grenade/spawnergrenade/manhacks/upgraded = 2,
+		/obj/item/grenade/syndieminibomb/bouncer = 1,
 	)
 
 	name_source = list("Ordinal")

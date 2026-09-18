@@ -22,14 +22,19 @@
 	mission = "Stabilize the district, detain city officials, kill all citizens who do not comply."
 	polldesc = "an ultra elite Overwatch Strike Team"
 
-///with default squad size of 5, this is 2 grunts, a wallhammer, a suppressor, and an elite. With 6, there is a third grunt
+///with default squad size of 5, this is 2 grunts, a wallhammer, a suppressor, and an ordinal. With 6, there is a third grunt
 /datum/ert/overwatch/specialty_commandos
 	roles = list(/datum/antagonist/ert/overwatch/wallhammer, /datum/antagonist/ert/overwatch/grunt, /datum/antagonist/ert/overwatch/suppressor, /datum/antagonist/ert/overwatch/grunt, /datum/antagonist/ert/overwatch/grunt)
-	leader_role = /datum/antagonist/ert/overwatch/ar2/elite
+	leader_role = /datum/antagonist/ert/overwatch/ordinal //this is the HL:A reference team
 	rename_team = "Overwatch Specialty Commando Strike Team"
 	code = "Delta"
 	mission = "Stabilize the district, detain city officials, kill all citizens who do not comply."
+	polldesc = "a specialist Overwatch Commando Strike Team"
+
+/datum/ert/overwatch/specialty_commandos/elite_leader //elite instead of ordinal
+	rename_team = "Overwatch Elite Specialty Commando Strike Team"
 	polldesc = "an ultra elite Overwatch Commando Strike Team"
+	leader_role = /datum/antagonist/ert/overwatch/ar2/elite
 
 /datum/ert/conscripts
 	roles = list(/datum/antagonist/ert/conscript)
