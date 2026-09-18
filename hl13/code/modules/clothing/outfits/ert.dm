@@ -337,6 +337,20 @@
 	role = "APF.C13-"
 	name_source = list("Blade", "Dagger", "Hammer", "Hunter", "Razor", "Spear", "Striker", "Tracker", "Echo")
 
+/datum/outfit/centcom/ert/over/watch/ordinal
+	name = "Ordinal OTA Unit"
+	belt = /obj/item/storage/belt/civilprotection/overwatch/pulsesmg
+	l_hand = /obj/item/gun/ballistic/automatic/pulsesmg
+
+	back = /obj/item/storage/backpack/halflife/satchel/radio
+	backpack_contents = list(
+		/obj/item/ammo_box/magazine/pulsesmg = 3,
+		/obj/item/reagent_containers/hypospray/medipen/healthpen = 2,
+		/obj/item/grenade/spawnergrenade/manhacks/upgraded = 2,
+	)
+
+	name_source = list("Ordinal")
+
 /datum/outfit/centcom/ert/icu
 	name = "Infestation Control Response Unit"
 
