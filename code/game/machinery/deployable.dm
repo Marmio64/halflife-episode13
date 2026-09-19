@@ -49,7 +49,7 @@
 	bar_material = WOOD
 	hl13hit_sounds = SFX_WOODIMPACT
 	projectile_passchance = 10
-	var/drop_amount = 3
+	var/drop_amount = 2
 	var/deconstruct_time = 2 SECONDS
 
 /obj/structure/barricade/wooden/add_debris_element()

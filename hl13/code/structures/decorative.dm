@@ -1121,20 +1121,22 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/halflife/pole, 16)
 
 /obj/structure/barricade/wooden/solid
 	name = "solid wooden barricade"
-	desc = "This space is blocked off by a wooden barricade, which also obstructs vision."
+	desc = "A barricade constructed of several wooden planks affixed to one another. Solid enough to obstruct vision and take a few hits, but not espescially sturdy enough to handle much else."
 	icon = 'hl13/icons/obj/miscellaneous.dmi'
 	icon_state = "woodenbarricade"
 	opacity = TRUE
 	max_integrity = 175
 	projectile_passchance = 0
 	deconstruct_time = 3 SECONDS
+	drop_amount = 3
 
 /obj/structure/barricade/wooden/solid/reinforced
 	name = "solid reinforced wooden barricade"
-	desc = "This space is blocked off by a wooden barricade, which also obstructs vision. It looks very durable."
+	desc = "A solid and durable looking blockade of wooden planks nailed to one another. It looks sturdy enough to withstand a barrage of attacks for some time."
 	icon_state = "woodenbarricade_reinforced"
 	max_integrity = 600 //very durable, more durable than making 3 barricades instead of one reinforced barricade, but vulnerable to crowbar disassembly
 	deconstruct_time = 6 SECONDS
+	drop_amount = 6
 
 /obj/structure/halflife/typewriter
 	name = "Typewriter"
