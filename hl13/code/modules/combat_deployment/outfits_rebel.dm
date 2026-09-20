@@ -1069,7 +1069,7 @@
 
 	ears = /obj/item/radio/headset/syndicate/alt
 
-	extra_str = 8 //BONK
+	extra_str = 10 //BONK (now even stronger than riot cops!)
 	extra_end = 8
 	extra_dex = 3
 	extra_per = -8 //no guns
@@ -1339,7 +1339,7 @@
 
 /datum/outfit/deployment_loadout/rebel/tier5/spy
 	name = "Deployment: Rebel Elite Spy"
-	display_name = "Rebel Elite Spy (Pick Class)"
+	display_name = "Rebel Elite Spy (Pick)"
 	desc = "You are a saboteur and close ranged assassin that specializes in using creative and underhanded tactics. You are similar to the tier 4 version of a spy, but are faster, have a weaker version of combine assassin cloaking, have more supplies, and you uniquely possess a hacking tool for disabling biolocks on enemy weaponry!"
 	id_name = "Spy"
 
