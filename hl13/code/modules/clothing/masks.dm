@@ -268,6 +268,9 @@
 	icon_state = "elitecpo_mask"
 	desc = "Heavy duty white mask for civil protection units. This is a retired model, decommisioned from use due to the inefficiency of the triple-respirator design and visor. These surplus masks used to have night vision installed, though it was removed due to power costs."
 
+/obj/item/clothing/mask/gas/civilprotection/divisional/elitebeta/allowheadwear
+	no_headwear = FALSE
+
 /datum/armor/cpmask_upgraded
 	melee = 30
 	bullet = 35

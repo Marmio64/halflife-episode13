@@ -148,6 +148,16 @@
 	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
 	update_appearance(UPDATE_ICON)
 
+/obj/item/storage/belt/civilprotection/riotfullsnubnose/PopulateContents()
+	SSwardrobe.provide_type(/obj/item/ammo_box/c38, src)
+	SSwardrobe.provide_type(/obj/item/ammo_box/c38, src)
+	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
+	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
+	SSwardrobe.provide_type(/obj/item/stack/medical/gauze, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/hypospray/medipen/healthpen, src)
+	SSwardrobe.provide_type(/obj/item/reagent_containers/spray/pepper, src)
+	update_appearance(UPDATE_ICON)
+
 /obj/item/storage/belt/civilprotection/riotfull/PopulateContents()
 	SSwardrobe.provide_type(/obj/item/restraints/handcuffs, src)
 	SSwardrobe.provide_type(/obj/item/flashlight/seclite, src)
