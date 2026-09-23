@@ -448,10 +448,12 @@
 	desc = "An obscenely sharp and dangerous knife. Backstabs will instantly down. Stab a dead body to reanimate them into a headcrab zombie."
 
 /obj/item/knife/combat/the_hidden/necrotic/dead_effect(mob/living/target, mob/living/user)
-	if(prob(25))
+	if(prob(20))
 		new /mob/living/basic/halflife/zombie/zombine(get_turf(target))
-	else if(prob(25))
+	else if(prob(20))
 		new /mob/living/basic/halflife/zombie/poison(get_turf(target))
+	else if(prob(20))
+		new /mob/living/basic/halflife/zombie/fast(get_turf(target))
 	else
 		new /mob/living/basic/halflife/zombie(get_turf(target))
 	user.adjustStaminaLoss(-15) //10 less healing
@@ -540,7 +542,7 @@
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/necrotic/pre_equip(mob/living/carbon/human/H)
 	. = ..()
-	H.physiology.damage_resistance -= 20
+	H.physiology.damage_resistance -= 25
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/spitter
 	name = "Hidden: The Hidden (Spitter)"
