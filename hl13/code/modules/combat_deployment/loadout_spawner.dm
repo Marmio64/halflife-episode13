@@ -25,7 +25,7 @@
 			return
 
 	if(HAS_TRAIT(user, TRAIT_TDMCAPTAIN))
-		to_chat(user, span_warning("Team leadership cant use loadout beacons."))
+		to_chat(user, span_warning("Team leadership can't use loadout beacons."))
 		return FALSE
 
 	var/area/place = get_area(src)
