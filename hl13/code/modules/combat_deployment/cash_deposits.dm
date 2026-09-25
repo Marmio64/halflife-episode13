@@ -185,19 +185,21 @@
 	if(HAS_TRAIT(H, TRAIT_TDMCAPTAIN))
 		if(deployment_faction == REBEL_DEPLOYMENT_FACTION)
 			if(H.loadout_upgrade_available && DEPLOYMENT_TIER5_REBELS <= GLOB.deployment_rebels_cash)
-				to_chat(H, span_notice("Your upgraded revolver has been retrieved."))
+				to_chat(H, span_notice("Your upgraded revolver has been retrieved, and you have stronger armor now!"))
 				var/turf/T = get_turf(H)
 				var/obj/item/I = new /obj/item/gun/ballistic/revolver/coltpython/blued/team_lead(T)
 				H.put_in_hands(I)
 				H.loadout_upgrade_available = FALSE
+				H.physiology.damage_resistance += 15
 				return
 		if(deployment_faction == COMBINE_DEPLOYMENT_FACTION)
 			if(H.loadout_upgrade_available != 5 && DEPLOYMENT_TIER5_COMBINE <= GLOB.deployment_combine_cash)
-				to_chat(H, span_notice("Your upgraded revolver has been retrieved."))
+				to_chat(H, span_notice("Your upgraded revolver has been retrieved, and you have stronger armor now!"))
 				var/turf/T = get_turf(H)
 				var/obj/item/I = new /obj/item/gun/ballistic/revolver/coltpython/blued/team_lead(T)
 				H.put_in_hands(I)
 				H.loadout_upgrade_available = FALSE
+				H.physiology.damage_resistance += 15
 				return
 
 		to_chat(H, span_warning("Team leadership cant upgrade their loadout. In addition, your upgraded revolver isn't available until Tier 5 or you've already collected it."))

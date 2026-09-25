@@ -86,6 +86,8 @@
 /datum/outfit/deployment_loadout/hidden/combine/riot_cop/pre_equip(mob/living/carbon/human/H)
 	. = ..()
 	ADD_TRAIT(H, TRAIT_TERRIBLE_AIM, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_LESSPAIN_MINOR, OUTFIT_TRAIT)
+	ADD_TRAIT(H, TRAIT_HARDLY_WOUNDED, OUTFIT_TRAIT)
 
 //The third defender, cremator. They're very good at holding locations thanks to high damage output and the ability to lay down flame trails.
 //However, they're slow, their gun runs out of juice quick, and you need to be careful not to set team mates on fire either...
