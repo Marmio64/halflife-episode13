@@ -334,6 +334,8 @@
 	for(var/obj/item/gun/G in H.get_all_gear())
 		var/obj/item/firing_pin/implant/mindshield/M = new
 		G.pin = M
+	var/datum/action/cooldown/spell/intruder_alert/A = new
+	A.Grant(H)
 
 /datum/outfit/deployment_loadout/combine/sne/assault
 	name = "SNE: Conscript Rifleman"
