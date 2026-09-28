@@ -200,6 +200,7 @@
 		if(deployment_faction == XEN_DEPLOYMENT_FACTION)
 			if(HAS_TRAIT(src, TRAIT_THE_INTRUDER))
 				GLOB.dogtags_left = 3 //reset amount on death
+				new /obj/item/sne/dogtags/crabtags(loc)
 			SSticker.tdm_xen_deaths++
 
 	if(deployment_faction == HIDDEN_DEPLOYMENT_FACTION)

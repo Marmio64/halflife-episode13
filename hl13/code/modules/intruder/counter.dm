@@ -37,7 +37,7 @@ GLOBAL_VAR_INIT(special_guards, FALSE)
 
 	var/candidates_left = 0
 
-	var/combine_players = 30
+	var/combine_players = 45
 
 	var/new_team_leaders = 0
 

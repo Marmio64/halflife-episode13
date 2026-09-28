@@ -111,6 +111,24 @@
 	for(var/obj/item/gun/G in H.get_all_gear())
 		var/obj/item/firing_pin/implant/mindshield/M = new
 		G.pin = M
+	var/datum/action/cooldown/spell/intruder_alert/A = new
+	A.Grant(H)
+
+/datum/action/cooldown/spell/intruder_alert/
+	name = "Alert"
+	desc = "Since there is no alert system, doesn't do much besides give everyone around you a quick heads-up that you've seen... something (hopefully Old Crab)."
+	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
+	button_icon_state = "alert"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	cooldown_time = 10 SECONDS
+	spell_requirements = NONE
+	antimagic_flags = NONE
+
+/datum/action/cooldown/spell/intruder_alert/cast(mob/living/cast_on)
+	.=..()
+	cast_on.do_alert_animation()
+	playsound(cast_on.loc, 'hl13/sound/effects/alert.ogg', 50, FALSE)
 
 /datum/outfit/deployment_loadout/rebel/sne/assault
 	name = "SNE: Black Market Rifleman"
