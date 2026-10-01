@@ -19,16 +19,32 @@ GLOBAL_VAR_INIT(boss_time_cons, FALSE)
 	icon_state = "allergy"
 	w_class = WEIGHT_CLASS_TINY
 	item_flags = NOBLUDGEON
+	var/crabtags = FALSE
+
+/obj/item/sne/dogtags/crabtags
+	name = "Old Crab's dogtags"
+	desc = "Dogtags worth three kills for whichever team collects them."
+	crabtags = TRUE
 
 /obj/item/sne/dogtags/equipped(mob/living/user, slot)
 	..()
-	if(user.deployment_faction == XEN_DEPLOYMENT_FACTION)
-		GLOB.dogtags_left--
-		to_chat(user, span_notice("Dogtags successfully collected!"))
-		if(GLOB.dogtags_left > 0)
-			to_chat(world, "<span class='userdanger'>Crab has successfully collected a dogtag. He only needs [GLOB.dogtags_left] more to win!</span>")
+	if(!crabtags)
+		if(user.deployment_faction == XEN_DEPLOYMENT_FACTION)
+			GLOB.dogtags_left--
+			to_chat(user, span_notice("Dogtags successfully collected!"))
+			if(GLOB.dogtags_left > 0)
+				to_chat(world, "<span class='userdanger'>Crab has successfully collected a dogtag. He only needs [GLOB.dogtags_left] more to win!</span>")
+		else
+			to_chat(user, span_notice("Crab has been denied the dogtags!"))
 	else
-		to_chat(user, span_notice("Crab has been denied the dogtags!"))
+		if(user.deployment_faction == REBEL_DEPLOYMENT_FACTION)
+			SSticker.tdm_combine_deaths += 3
+		if(user.deployment_faction == COMBINE_DEPLOYMENT_FACTION)
+			SSticker.tdm_rebel_deaths += 3
+		if(user.deployment_faction == XEN_DEPLOYMENT_FACTION)
+			to_chat(user, span_notice("You deny either team additional points!"))
+		else //they'll either be the rebel faction or combine faction from earlier
+			to_chat(user, span_notice("Crab's dogtags successfully collected!"))
 	qdel(src)
 
 /obj/machinery/sne_time_counter
@@ -41,6 +57,8 @@ GLOBAL_VAR_INIT(boss_time_cons, FALSE)
 	density = TRUE
 
 	var/candidates_left = 0
+
+	var/points_to_win = 20
 
 	var/time_ticking = FALSE
 
@@ -166,6 +184,16 @@ GLOBAL_VAR_INIT(boss_time_cons, FALSE)
 			for(var/X in total_players)
 				var/mob/living/carbon/human/H = X
 				SEND_SOUND(H, 'hl13/sound/effects/sne_start.ogg')
+		if(SSticker.tdm_rebel_deaths >= points_to_win && SSticker.IsRoundInProgress())
+			priority_announce("Malignants amputated, code: Sweep, Contain, Excise.", "Overwatch Priority Alert")
+			GLOB.deployment_win_team = COMBINE_DEPLOYMENT_FACTION
+			SSticker.force_ending = FORCE_END_ROUND
+			to_chat(world, span_infoplain(span_slightly_larger(span_bold("The conscripts have killed enough mercs. Conscripts win, Crab and Mercs lose!"))))
+		if(SSticker.tdm_combine_deaths >= points_to_win && SSticker.IsRoundInProgress())
+			priority_announce("The conscript forces are in shambles, good work! We'll pay you all handsomely for this.", "Blackmarket Priority Alert")
+			GLOB.deployment_win_team = REBEL_DEPLOYMENT_FACTION
+			SSticker.force_ending = FORCE_END_ROUND
+			to_chat(world, span_infoplain(span_slightly_larger(span_bold("The mercs have killed enough conscripts. Mercs win, Crab and Conscripts lose!"))))
 
 		if(GLOB.dogtags_left == 0 && SSticker.IsRoundInProgress())
 			priority_announce("Nice work, Crab! We did it!", "#!?@SDz..(% Priority Alert") //in my metal synth solid canon old crab no longer works for the plf (although he is still on good terms) and instead be gay and do crimes with his boyfriend
