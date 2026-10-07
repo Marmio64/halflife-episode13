@@ -13,7 +13,7 @@
 /obj/item/ammo_box/magazine/internal/grenadelauncher/ballslauncher
 	name = "energy ball launcher internal magazine"
 	ammo_type = /obj/item/ammo_casing/pulse/energyball
-	caliber = CALIBER_PULSROUND
+	caliber = CALIBER_DARK_EN_BALL
 	max_ammo = 1
 	start_empty = TRUE
 

@@ -9,7 +9,7 @@
 	name = "dark energy ball"
 	desc = "A strange container built to house a small ball of dark energy. Can be loaded into an AR2 and fired as it's alternate function. The projectile is especially effective against Combine synth creatures, and will melt through them with ease."
 	icon_state = "darkenergy"
-	caliber = CALIBER_PULSROUND
+	caliber = CALIBER_DARK_EN_BALL
 	projectile_type = /obj/projectile/bullet/pulse/energyball
 	firing_effect_type = /obj/effect/temp_visual/dir_setting/firing_effect/pulse
 

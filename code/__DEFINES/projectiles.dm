@@ -68,6 +68,8 @@
 #define CALIBER_556NATO "556nato"
 /// OSIPR pulse rounds
 #define CALIBER_PULSROUND "pulse"
+/// dark energy balls
+#define CALIBER_DARK_EN_BALL "dark_en_ball"
 /// xenshotgun rounds
 #define CALIBER_ANTIXEN "antixen"
 /// immolator rounds
