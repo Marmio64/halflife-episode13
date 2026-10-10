@@ -761,9 +761,23 @@
 	name = "foreman suit"
 	icon_state = "foreman"
 
+/obj/item/clothing/suit/utility/radiation/engineer/foreman/armored
+	armor_type = /datum/armor/engineersuit_armor
+
 /datum/armor/engineersuit
 	melee = 0
 	bullet = 0
+	laser = 0
+	energy = 0
+	bomb = 5
+	bio = 60
+	fire = 50
+	acid = 50
+	wound = 0
+
+/datum/armor/engineersuit_armor
+	melee = 15
+	bullet = 10
 	laser = 0
 	energy = 0
 	bomb = 5

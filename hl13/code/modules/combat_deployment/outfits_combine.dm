@@ -621,8 +621,8 @@
 	id_name = "Engineer"
 
 	uniform = /obj/item/clothing/under/citizen
-	suit = /obj/item/clothing/suit/utility/radiation/engineer/foreman
-	mask = /obj/item/clothing/mask/gas/cwuengi
+	suit = /obj/item/clothing/suit/utility/radiation/engineer/foreman/armored
+	mask = /obj/item/clothing/mask/gas/cwuengi/armored
 	shoes = /obj/item/clothing/shoes/halflife/engineer
 	gloves = /obj/item/clothing/gloves/halflife/foreman
 
@@ -649,8 +649,8 @@
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/construction_voucher)
 
-	extra_str = 5
-	extra_end = 5
+	extra_str = 4
+	extra_end = 4
 
 	skillchips = list(/obj/item/skillchip/engineer)
 
