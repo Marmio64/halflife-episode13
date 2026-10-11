@@ -158,7 +158,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 24 SECONDS
+	cooldown_time = 22 SECONDS
 	item_type = /obj/item/ammo_casing/rocket/hl13
 	requires_hands = TRUE
 	delete_old = FALSE

@@ -1128,9 +1128,6 @@
 /obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, autofire_shot_delay = firing_speed, overtime_penalty_spindown = 1.1 SECONDS, overtime_penalty_freebies = 3, overtime_penalty_increase = 10, overtime_penalty_cap = 20) //good in two or three round bursts, accuracy diminishes faster than other guns otherwise
-
-/obj/item/gun/ballistic/automatic/svd/Initialize(mapload)
-	. = ..()
 	AddComponent(/datum/component/scope, range_modifier = 3)
 
 /obj/item/gun/ballistic/rocketlauncher/halflife

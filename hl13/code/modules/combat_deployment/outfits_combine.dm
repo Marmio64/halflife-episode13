@@ -728,7 +728,7 @@
 /datum/outfit/deployment_loadout/combine/tier5/cauterizer
 	name = "Deployment: Combine Cauterizer"
 	display_name = "Combine Cauterizer (Offense)"
-	desc = "You are a crowd controller, medium to heavy specialty combine soldier, that takes a liking towards burning enemies both with fire and dark energy balls from your rifle. Be wary however, you do not have immunity to your fire or dark energy balls!"
+	desc = "You are a crowd controller, medium to heavy specialty combine soldier, that takes a liking towards burning enemies both with fire and dark energy balls from your rifle. Be wary however, you do not have immunity to your fire or dark energy balls, though you are more resistant to heat than most!"
 	id_name = "Cauterizer"
 
 	glasses = /obj/item/clothing/glasses/hud/security/night/combine
@@ -761,6 +761,11 @@
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/energyball)
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE
+
+/datum/outfit/deployment_loadout/combine/tier5/cauterizer/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.fire_stack_decay_rate = -1
+	H.physiology.burn_mod -= 0.2
 
 /datum/outfit/deployment_loadout/combine/tier5/wallhammer
 	name = "Deployment: Combine Wallhammer"
