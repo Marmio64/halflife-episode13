@@ -23,6 +23,8 @@
 
 	var/respawn_speed = 15 SECONDS
 
+	var/announce_timeleft = TRUE
+
 /obj/machinery/deathmatch_counter/Initialize(mapload)
 	..()
 	GLOB.deployment_flag_grace_period = grace_time
@@ -58,7 +60,7 @@
 			to_chat(world, span_infoplain(span_slightly_larger(span_bold("Enough rebels were killed, the Combine win."))))
 			STOP_PROCESSING(SSprocessing, src)
 
-		if(last_time_reminder < world.time)
+		if(last_time_reminder < world.time && announce_timeleft)
 			to_chat(world, span_infoplain(span_big(span_bold("[time_left_match/10] seconds remain in the mission."))))
 			last_time_reminder = world.time + 120 SECONDS
 
