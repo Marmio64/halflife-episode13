@@ -149,7 +149,7 @@
 /obj/projectile/bullet/pellet/shotgun_buckshot/antixen
 	name = "anti-xen pellet"
 	icon_state = "pulsepellet"
-	damage = 5
+	damage = 6
 	wound_bonus = 0
 	bare_wound_bonus = 0
 	wound_falloff_tile = -2.5 // low damage + additional dropoff will already curb wounding potential anything past point blank
@@ -158,16 +158,16 @@
 	if(isliving(target))
 		var/mob/living/victim = target
 		if(victim.mob_biotypes & MOB_XENIAN)
-			damage *= 4
+			damage *= 3.4
 
 	return ..()
 
 /obj/projectile/bullet/mining_slug
 	name = "mining slug"
 	icon_state = "pulse"
-	damage = 25
+	damage = 30
 	armour_penetration = 20
-	wound_bonus = -25
+	wound_bonus = -35
 	range = 14
 
 /obj/projectile/bullet/mining_slug/on_hit(atom/target, blocked = 0, pierce_hit)

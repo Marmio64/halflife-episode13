@@ -36,13 +36,14 @@
 	if(GLOB.deployment_flag_grace_period < 1 SECONDS)
 		if(!time_ticking)
 			time_ticking = TRUE
-			to_chat(world, span_danger(span_slightly_larger(span_bold("Grace period up! The rebels need [rebel_points_win] kills to win, and the combine need [combine_points_win]"))))
-			for(var/X in GLOB.deployment_rebel_players)
-				var/mob/living/carbon/human/H = X
-				SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
-			for(var/X in GLOB.deployment_combine_players)
-				var/mob/living/carbon/human/H = X
-				SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+			if(announce_timeleft)
+				to_chat(world, span_danger(span_slightly_larger(span_bold("Grace period up! The rebels need [rebel_points_win] kills to win, and the combine need [combine_points_win]"))))
+				for(var/X in GLOB.deployment_rebel_players)
+					var/mob/living/carbon/human/H = X
+					SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
+				for(var/X in GLOB.deployment_combine_players)
+					var/mob/living/carbon/human/H = X
+					SEND_SOUND(H, 'hl13/sound/effects/siren.ogg')
 
 		time_left_match -= 2 SECONDS
 
