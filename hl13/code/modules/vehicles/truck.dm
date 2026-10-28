@@ -71,7 +71,7 @@
 				return
 	if(israzorwire(bumped))
 		visible_message(span_danger("[src] rolls over [bumped]!"))
-		bumped.take_damage(35, BRUTE) //two rollthroughs to clear it...
+		bumped.take_damage(rand(25,45), BRUTE) //about two rollthroughs to clear it...
 		if(src.crashdamage)
 			src.take_damage(10, BRUTE) //but it'll fuck your tires up
 		return
@@ -96,7 +96,7 @@
 		bumped.take_damage(55, BRUTE) //slam into the barrier at the cost of slight self-damage
 		playsound(src, 'sound/effects/bang.ogg', 50, TRUE)
 		if(src.crashdamage)
-			src.take_damage(2, BRUTE) //this will take about 20 damage to ram through one concrete cade
+			src.take_damage(3, BRUTE) //this will take about 30 damage to ram through one concrete cade
 		return
 	var/atom/movable/flying_debris = bumped
 	if(!flying_debris.anchored)
@@ -110,8 +110,14 @@
 	var/mob/living/rammed = bumped
 	rammed.apply_damage(rand(20,35), BRUTE)
 	if(ishuman(rammed))
-		rammed.Paralyze(50)
-		rammed.adjustStaminaLoss(80)
+		if(HAS_TRAIT(rammed, TRAIT_BRAWLING_KNOCKDOWN_BLOCKED))
+			rammed.Paralyze(1.5 SECONDS)
+			rammed.Knockdown(3 SECONDS)
+			rammed.adjustStaminaLoss(60)
+		else
+			rammed.Paralyze(3 SECONDS)
+			rammed.Knockdown(5 SECONDS)
+			rammed.adjustStaminaLoss(80)
 		if(bus_kidnap)
 			rammed.visible_message(span_warning("[src] rams into [rammed] and sucks [rammed.p_them()] up!")) //i don't know why i'm adding this but i can
 			mob_forced_enter(rammed)

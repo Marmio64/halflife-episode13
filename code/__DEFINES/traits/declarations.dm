@@ -222,7 +222,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_DEPRESSION "depression"
 #define TRAIT_JOLLY "jolly"
 #define TRAIT_NOCRITDAMAGE "no_crit"
-/// Prevents shovies and some strong blows such as unarmed punches and (unreliably) tackles the owner down
+/// Prevents shovies and some strong blows such as unarmed punches and (unreliably) tackles the owner down. Also mitigates some knockback based things like stuns from being thrown into walls.
 #define TRAIT_BRAWLING_KNOCKDOWN_BLOCKED "brawling_knockdown_blocked"
 /// Applies tackling defense bonus to any mob that has it
 #define TRAIT_OFF_BALANCE_TACKLER "off_balance_tackler"
