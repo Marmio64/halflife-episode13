@@ -156,7 +156,7 @@
 			to_chat(usr, span_notice("Rank points given. Their ID and req points will not change unless modified manually."))
 			log_admin_private("[usr] has given [points_to_give] to [rankpoints_recepient].")
 		else
-			to_chat(rankpoints_recepient, span_warning("You have been deducted [points_to_give] rank points for this character. This may not sohw up until next time you spawn in. Modified by Dispatch."))
+			to_chat(rankpoints_recepient, span_warning("You have been deducted [points_to_give] rank points for this character. This may not show up until next time you spawn in. Modified by Dispatch."))
 			to_chat(usr, span_notice("Rank points taken. Their ID and req points will not change unless modified manually."))
 			log_admin_private("[usr] has taken [points_to_give] from [rankpoints_recepient].")
 	else
