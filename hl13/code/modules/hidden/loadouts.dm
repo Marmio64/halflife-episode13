@@ -95,7 +95,7 @@
 /datum/outfit/deployment_loadout/hidden/combine/cremator
 	name = "Hidden: Cremator"
 	display_name = "DEFENSE: Cremator"
-	desc = "Keep the Hidden at bay both with flame trails and high power plasma blasts from your immolator. Take care not to ignite your team mates."
+	desc = "Keep the Hidden at bay both with flame trails and high power plasma blasts from your immolator. In addition, ignite corpses to make them heal the Hidden less!"
 	id_name = "Cremator"
 
 	mask = /obj/item/clothing/mask/gas/civilprotection/overwatch/cremator

@@ -92,6 +92,9 @@
 	select_name = "plasma"
 	fire_sound = "hl13/sound/weapons/immolator_fire.ogg"
 
+/obj/item/ammo_casing/energy/immolator/hidden
+	projectile_type = /obj/projectile/bullet/immolator_plasma/hidden
+
 /obj/item/ammo_casing/energy/immolator_flame
 	projectile_type = /obj/projectile/bullet/incendiary/fire
 	firing_effect_type = null

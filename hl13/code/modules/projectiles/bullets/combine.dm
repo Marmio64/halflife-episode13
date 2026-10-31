@@ -194,6 +194,9 @@
 	muzzle_type = /obj/effect/projectile/muzzle/xray
 	impact_type = /obj/effect/projectile/impact/xray
 
+/obj/projectile/bullet/immolator_plasma/hidden
+	damage = 20
+
 /obj/projectile/bullet/strider
 	name = "pulse energy"
 	icon_state = "xray"

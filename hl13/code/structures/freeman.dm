@@ -5,8 +5,8 @@
 	icon_state = "resin_final"
 
 /obj/structure/halflife/cargotruck
-	name = "broken-down truck"
-	desc = "A broken-down supply truck of some sort. You're not sure how long this has been here."
+	name = "inert supply truck"
+	desc = "An unusable supply truck of some sort. It seemingly doesn't work anymore, maybe it broke or the keys are gone? You're not sure how long this has been here."
 	icon = 'hl13/icons/obj/port/van.dmi'
 	max_integrity = 2000
 	pixel_x = -12

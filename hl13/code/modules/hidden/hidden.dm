@@ -192,9 +192,14 @@
 	playsound(living_target, 'sound/items/weapons/guillotine.ogg', 100, TRUE)
 
 /obj/item/knife/combat/the_hidden/proc/dead_effect(mob/living/target, mob/living/user)
-	user.adjustStaminaLoss(-25)
-	user.adjustBruteLoss(-25)
-	user.adjustFireLoss(-25)
+	var/heal_amount = 25
+
+	if(target.on_fire)
+		heal_amount -= 5 //heal 20% less from victims on fire
+
+	user.adjustStaminaLoss(-heal_amount)
+	user.adjustBruteLoss(-heal_amount)
+	user.adjustFireLoss(-heal_amount)
 	target.gib()
 
 /datum/action/cooldown/spell/conjure_item/hidden_knife
@@ -303,7 +308,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 12 SECONDS
+	cooldown_time = 11 SECONDS
 	item_type = /obj/item/restraints/legcuffs/beartrap/the_hidden
 	requires_hands = TRUE
 
@@ -456,9 +461,15 @@
 		new /mob/living/basic/halflife/zombie/fast(get_turf(target))
 	else
 		new /mob/living/basic/halflife/zombie(get_turf(target))
-	user.adjustStaminaLoss(-15) //10 less healing
-	user.adjustBruteLoss(-15)
-	user.adjustFireLoss(-15)
+
+	var/heal_amount = 15 //10 less healing
+
+	if(target.on_fire)
+		heal_amount -= 5 //heal 33% less from victims on fire
+
+	user.adjustStaminaLoss(-heal_amount)
+	user.adjustBruteLoss(-heal_amount)
+	user.adjustFireLoss(-heal_amount)
 	target.gib()
 
 /datum/action/cooldown/spell/pointed/projectile/hidden_spit
@@ -487,7 +498,7 @@
 	damage = 50
 	armour_penetration = 50
 	wound_bonus = -60
-	speed = 1.25
+	speed = 1.35
 	range = 10
 	damage_type = BURN
 
