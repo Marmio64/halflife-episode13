@@ -2,7 +2,7 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 
 /obj/machinery/combine_distressterminal
 	name = "combine distress terminal"
-	desc = "A server terminal which is capable of sending out a distress signal when activated. Activating all of the terminals in the location will win the game for the Combine."
+	desc = "A server terminal which is capable of sending out a distress signal when activated. Activating all of the terminals in the location will send a request for a combine strike team that will clear the area."
 	icon = 'hl13/icons/obj/machines/machinery.dmi'
 	icon_state = "datapodterminal_hacked"
 
@@ -76,6 +76,7 @@ GLOBAL_VAR_INIT(distress_terminals, 0)
 	.=..()
 	START_PROCESSING(SSprocessing, src)
 	GLOB.distress_terminals += 1
+	GLOB.navigate_destinations[loc] = terminal_name
 
 //a mix of the old and new, progress is saved but hidden has a chance to interrupt. also, no chance someone (who will remain anonymous) makes a mistake and a dead/dying person is able to activate the terminal
 /obj/machinery/combine_distressterminal/interact(mob/living/carbon/human/user)

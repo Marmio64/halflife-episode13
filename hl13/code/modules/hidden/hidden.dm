@@ -302,6 +302,69 @@
 	var/chosen_sound = pick(taunt_sounds)
 	playsound(owner.loc, chosen_sound, 50, FALSE)
 
+/datum/action/cooldown/spell/pointed/hidden_trapper_devour
+	name = "Devour Live Brain"
+	desc = "Bite into a stunned, live creature after a brief delay to tear open their head and devour their juicy brain for additional healing. Requires the target to be stunned and alive."
+	button_icon = 'icons/mob/actions/actions_changeling.dmi'
+	button_icon_state = "biodegrade"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+	ranged_mousepointer = 'icons/effects/mouse_pointers/blind_target.dmi'
+
+	sound = 'hl13/sound/creatures/advisor/advisor_devour.ogg'
+	school = SCHOOL_TRANSMUTATION
+	cooldown_time = 25 SECONDS
+	cooldown_reduction_per_rank = 6.25 SECONDS
+
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
+
+	active_msg = "You prepare to devour a stunned target's brain..."
+	cast_range = 1
+
+/datum/action/cooldown/spell/pointed/hidden_trapper_devour/is_valid_target(atom/cast_on)
+	. = ..()
+	if(!.)
+		return FALSE
+	if(!ishuman(cast_on))
+		return FALSE
+	if(cast_on.z != owner.z)
+		return FALSE
+
+	var/mob/living/carbon/human/human_target = cast_on
+	var/obj/item/bodypart/head = human_target.get_bodypart(BODY_ZONE_HEAD)
+
+	if(!human_target.IsImmobilized()) //only attack people who are immobilized
+		return FALSE
+
+	if(human_target.stat == DEAD)
+		return FALSE
+
+	return !head.get_wound_type(/datum/wound/cranial_fissure)
+
+/datum/action/cooldown/spell/pointed/hidden_trapper_devour/cast(mob/living/carbon/human/cast_on)
+	. = ..()
+	var/obj/item/bodypart/head = cast_on.get_bodypart(BODY_ZONE_HEAD)
+	if(head.get_wound_type(/datum/wound/cranial_fissure)) //sanity check i guess
+		to_chat(owner, span_warning("Their brain is too damaged already..."))
+		return
+
+	var/mob/living/living_owner = owner
+
+
+
+	to_chat(cast_on, span_userdanger("A maw begins to enclose your head!"))
+	living_owner.Immobilize(0.85 SECONDS, ignore_canstun = TRUE)
+	if(do_after(living_owner, 0.85 SECONDS, cast_on))
+		head.force_wound_upwards(/datum/wound/cranial_fissure)
+		head.receive_damage(250)
+		cast_on.adjustOrganLoss(ORGAN_SLOT_BRAIN, 200, BRAIN_DAMAGE_DEATH)
+		to_chat(cast_on, span_userdanger("The maw takes a chunk straight from your head, blood gushing everywhere."))
+		to_chat(living_owner, span_green("A most delicious meal this was..."))
+		cast_on.adjustStaminaLoss(-50)
+		cast_on.adjustBruteLoss(-25)
+		cast_on.adjustFireLoss(-25)
+
+	return TRUE
+
 /datum/action/cooldown/spell/conjure_item/hidden_beartrap
 	name = "Summon Mantrap"
 	desc = "Summons a mantrap that you can arm and place down. You won't trigger it if you step over it, but humans will."
@@ -514,13 +577,13 @@
 /datum/outfit/deployment_loadout/hidden/the_hidden/trapper
 	name = "Hidden: The Hidden (Hunter)"
 	display_name = "TRAPPER: The Hunter"
-	desc = "You exchange some of your speed for the ability to lay down near-invisible mantraps to immobilize your prey while you swoop in for the kill."
+	desc = "You exchange some of your speed for the ability to lay down near-invisible mantraps to immobilize your prey while you swoop in for the kill. Utilize your 'Devour Live Brain' ability on people after they step on a mantrap in order to swiftly kill them and get bonus healing!"
 
 	uniform = /obj/item/clothing/under/pants/the_hidden/trapper
 
 	extra_dex = 10
 
-	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure_item/hidden_beartrap, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure_item/hidden_beartrap, /datum/action/cooldown/spell/pointed/hidden_trapper_devour, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
 
 /// Monstrously strong, but slow. They excel at demolishing humans who refuse to backdown, but their slow speed can allow them to be kited by assault classes, and scientist syringes are extra hazardous.
 /datum/outfit/deployment_loadout/hidden/the_hidden/brute
@@ -632,9 +695,14 @@
 	var/list/stolen_overlays
 
 /obj/item/knife/combat/the_hidden/fleshstealer/dead_effect(mob/living/target, mob/living/user)
-	user.adjustStaminaLoss(-25)
-	user.adjustBruteLoss(-25)
-	user.adjustFireLoss(-25)
+	var/heal_amount = 25
+
+	if(target.on_fire)
+		heal_amount -= 5 //heal 20% less from victims on fire
+
+	user.adjustStaminaLoss(-heal_amount)
+	user.adjustBruteLoss(-heal_amount)
+	user.adjustFireLoss(-heal_amount)
 
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
