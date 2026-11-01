@@ -244,7 +244,8 @@
 /obj/item/stack/medical/gauze/quik_gauze
 	name = "medical Quik-Gauze"
 	desc = "A roll of elastic cloth, perfect for stabilizing all kinds of wounds, from cuts and burns, to broken bones. This is a specialized, easy to apply gauze that is often given as part of IFAKS."
-	self_delay = 2 SECONDS
+	self_delay = 1.5 SECONDS
+	other_delay = 1 SECONDS
 
 /obj/item/stack/medical/gauze/Destroy(force)
 	. = ..()

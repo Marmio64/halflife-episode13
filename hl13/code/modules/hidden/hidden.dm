@@ -244,7 +244,7 @@
 
 /datum/action/cooldown/spell/hidden_taunt
 	name = "Taunt"
-	desc = "Taunt your enemy with a voiceline that is sure to instill terror."
+	desc = "Taunt your enemy with a voiceline that is sure to instill terror. Has a chance to restore some stamina on use."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "cloak"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
@@ -272,6 +272,9 @@
 	. = ..()
 	var/chosen_sound = pick(taunt_sounds)
 	playsound(owner.loc, chosen_sound, 50, FALSE)
+
+	if(prob(50))
+		cast_on.adjustStaminaLoss(-25)
 
 /datum/action/cooldown/spell/hidden_heal
 	name = "Adrenal Burst"
@@ -369,14 +372,17 @@
 		human_victim.adjust_temppain(125)
 		human_victim.emote("scream")
 		human_victim.Immobilize(6 SECONDS)
-		human_victim.Stun(2.5 SECONDS)
+		if(prob(35))
+			human_victim.Paralyze(2.5 SECONDS)
+		else
+			human_victim.Stun(2.5 SECONDS)
 
 	victim.apply_damage(trap_damage, BRUTE, def_zone)
 	qdel(src)
 
 /datum/action/cooldown/spell/aoe/repulse/hidden_brute
 	name = "Punch Away"
-	desc = "Forcefully punch and fling away anyone adjacent to you."
+	desc = "Forcefully punch and fling away anyone adjacent to you. Using this on someone already underneath you will slam them down for far more damage."
 	button_icon = 'hl13/icons/mob/actions/actions_misc.dmi'
 	button_icon_state = "arm"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
@@ -397,16 +403,16 @@
 	if(dist_from_caster == 0)
 		if(isliving(victim))
 			var/mob/living/victim_living = victim
-			victim_living.Paralyze(3 SECONDS)
-			victim_living.adjustBruteLoss(50)
-			to_chat(victim, span_userdanger("You're slammed into the floor by [caster]!"))
-			playsound(get_turf(caster), 'hl13/sound/effects/injury/trauma1.ogg', 80, TRUE, TRUE)
+			victim_living.Paralyze(4 SECONDS)
+			victim_living.adjustBruteLoss(100)
+			to_chat(victim, span_userdanger("You're slammed into the floor by [caster] with a sickening crunch!"))
+			playsound(get_turf(caster), 'hl13/sound/effects/injury/head_explodie_01.ogg', 80, TRUE, TRUE)
 	else
 
 		if(isliving(victim))
 			var/mob/living/victim_living = victim
 			victim_living.Immobilize(1 SECONDS)
-			to_chat(victim, span_userdanger("You're punched back by [caster]!"))
+			to_chat(victim, span_userdanger("You're punched with monstrous strength by [caster], and are sent flying!"))
 			victim_living.adjustBruteLoss(50)
 			playsound(get_turf(caster), 'hl13/sound/effects/injury/trauma1.ogg', 80, TRUE, TRUE)
 
