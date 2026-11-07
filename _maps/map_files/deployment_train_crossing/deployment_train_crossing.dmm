@@ -9,12 +9,15 @@
 /area/halflife/outdoors/deployment_city)
 "au" = (
 /obj/structure/table/halflife/no_smooth/large/pool,
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "aD" = (
 /obj/structure/halflife/trash/glass/plate,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
+"bb" = (
+/turf/open/floor/plating/indoor/woodc/wide,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "bp" = (
 /obj/structure/lattice/catwalk/hl13,
 /turf/open/floor/plating/ground/grass,
@@ -170,6 +173,10 @@
 /obj/machinery/telecomms/server/presets/common/birdstation,
 /turf/open/floor/plating/ground/sidewalk,
 /area/halflife/outdoors/deployment_city)
+"iW" = (
+/obj/effect/koth_grace_field,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/outdoors/deployment_city)
 "jq" = (
 /obj/structure/trap/deployment_spawn_prot/combine,
 /turf/closed/wall/halflife/metal,
@@ -193,7 +200,7 @@
 "jZ" = (
 /obj/effect/koth_grace_field,
 /obj/structure/table/halflife/no_smooth/large/wood/stand,
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city)
 "kg" = (
 /obj/machinery/deployment_points_flag/low_cash,
@@ -209,7 +216,7 @@
 /area/halflife/outdoors/deployment_city)
 "lB" = (
 /obj/machinery/repairpod,
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "lT" = (
 /obj/structure/halflife/storage/large/clothing,
@@ -266,7 +273,7 @@
 /area/halflife/outdoors/deployment_city)
 "pv" = (
 /obj/machinery/light/directional/north,
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/wide,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "qf" = (
 /obj/structure/table/halflife/no_smooth/large/wood/square,
@@ -296,12 +303,12 @@
 /area/halflife/indoors/combat_deployment/combine_base)
 "ri" = (
 /obj/structure/halflife/pallet,
-/turf/open/floor/plating/indoor/concrete/bricks,
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/deployment_city)
 "ro" = (
 /obj/machinery/deployment_koth_flag{
 	grace_time = 300;
-	combine_time = 3000;
+	combine_time = 3300;
 	rebel_time = 3000
 	},
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
@@ -318,6 +325,7 @@
 /area/halflife/outdoors/deployment_city)
 "rx" = (
 /obj/structure/closet/secure_closet/freezer/halflife,
+/obj/item/reagent_containers/cup/glass/bottle/beer/light,
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city)
 "rI" = (
@@ -429,7 +437,7 @@
 /obj/effect/koth_grace_field,
 /obj/machinery/light/directional/north,
 /obj/structure/table/halflife/wood,
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city)
 "yj" = (
 /obj/structure/bed/medical,
@@ -560,6 +568,10 @@
 /area/halflife/outdoors/deployment_city)
 "Fc" = (
 /obj/structure/table/halflife/wood,
+/obj/structure/halflife/trash/food/dinner{
+	pixel_x = 1;
+	pixel_y = 5
+	},
 /turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city)
 "Fd" = (
@@ -578,7 +590,7 @@
 /obj/item/reagent_containers/pill/patch/grubnugget,
 /obj/item/reagent_containers/pill/patch/grubnugget,
 /obj/item/reagent_containers/pill/patch/grubnugget,
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Ft" = (
 /obj/structure/halflife/road_barrier/concrete,
@@ -623,7 +635,7 @@
 "Ht" = (
 /obj/effect/koth_grace_field,
 /obj/structure/table/halflife/wood,
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/outdoors/deployment_city)
 "Id" = (
 /obj/machinery/vending/breenwater,
@@ -650,7 +662,7 @@
 /area/halflife/outdoors/deployment_city)
 "Jm" = (
 /obj/machinery/ammo_crate,
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "JO" = (
 /obj/machinery/door/unpowered/halflife/seethrough/fence/wire,
@@ -706,6 +718,10 @@
 /obj/structure/halflife/fence,
 /turf/open/floor/plating/ground/sidewalk/inner/slums,
 /area/halflife/outdoors/deployment_city)
+"Nt" = (
+/obj/machinery/light/directional/north,
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "Ny" = (
 /obj/structure/halflife/road_barrier/combine,
 /turf/open/floor/plating/indoor/metal/combine,
@@ -860,7 +876,7 @@
 /obj/item/stack/medical/gauze/twelve,
 /obj/item/stack/medical/gauze/twelve,
 /obj/machinery/light/directional/north,
-/turf/open/floor/plating/indoor/woodc,
+/turf/open/floor/plating/indoor/woodc/mosaic,
 /area/halflife/indoors/combat_deployment/rebel_base)
 "Sm" = (
 /turf/open/floor/plating/indoor/woodc,
@@ -902,6 +918,9 @@
 "Uj" = (
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/outdoors/deployment_city)
+"Uo" = (
+/turf/open/floor/plating/indoor/concrete,
 /area/halflife/outdoors/deployment_city)
 "Ut" = (
 /obj/structure/trap/deployment_spawn_prot/rebel,
@@ -954,6 +973,9 @@
 /obj/machinery/combine_walllight/directional/east,
 /turf/open/floor/plating/indoor/metal/smooth,
 /area/halflife/indoors/combat_deployment/combine_base)
+"XL" = (
+/turf/open/floor/plating/indoor/woodc/mosaic,
+/area/halflife/indoors/combat_deployment/rebel_base)
 "XW" = (
 /turf/closed/wall/halflife/metal/strong/train,
 /area/halflife/outdoors/deployment_city)
@@ -1237,7 +1259,7 @@ cq
 Jg
 LJ
 xz
-MQ
+XL
 MQ
 MQ
 MQ
@@ -1316,7 +1338,7 @@ cq
 cq
 Oh
 xz
-MQ
+XL
 MQ
 MQ
 MQ
@@ -1395,14 +1417,14 @@ cq
 cq
 SS
 xz
-pv
+Nt
 MQ
 MQ
 MQ
 TQ
-MQ
-MQ
-MQ
+bb
+bb
+bb
 MQ
 ef
 MQ
@@ -1474,14 +1496,14 @@ cq
 cq
 SS
 xz
-MQ
+XL
 MQ
 MQ
 MQ
 TQ
-MQ
+bb
 au
-MQ
+bb
 MQ
 MQ
 MQ
@@ -1558,9 +1580,9 @@ MQ
 sD
 MQ
 TQ
-MQ
-MQ
-MQ
+bb
+bb
+bb
 MQ
 Je
 MQ
@@ -1632,14 +1654,14 @@ cq
 cq
 SS
 xz
-MQ
+XL
 MQ
 MQ
 MQ
 TQ
 pv
-MQ
-MQ
+bb
+bb
 MQ
 mt
 MQ
@@ -1711,14 +1733,14 @@ cq
 cq
 SS
 xz
-MQ
+XL
 MQ
 MQ
 MQ
 TQ
-MQ
-MQ
-MQ
+bb
+bb
+bb
 MQ
 ef
 MQ
@@ -1795,9 +1817,9 @@ MQ
 MQ
 MQ
 TQ
-MQ
-MQ
-MQ
+bb
+bb
+bb
 MQ
 MQ
 MQ
@@ -1874,9 +1896,9 @@ MQ
 MQ
 MQ
 TQ
-MQ
+bb
 au
-MQ
+bb
 MQ
 Je
 MQ
@@ -1953,9 +1975,9 @@ MQ
 MQ
 MQ
 TQ
-MQ
-MQ
-MQ
+bb
+bb
+bb
 MQ
 mt
 MQ
@@ -2032,9 +2054,9 @@ MQ
 MQ
 MQ
 TQ
-MQ
-MQ
-MQ
+bb
+bb
+bb
 MQ
 ef
 MQ
@@ -2494,8 +2516,8 @@ hh
 Dl
 RH
 RH
-BT
-Sm
+iW
+QI
 Sm
 Sm
 Sm
@@ -2651,7 +2673,7 @@ ki
 Dl
 Dl
 RH
-BT
+iW
 Sm
 Sm
 Sm
@@ -2730,7 +2752,7 @@ ki
 Dl
 Dl
 RH
-BT
+iW
 Sm
 Sm
 Sm
@@ -2967,7 +2989,7 @@ XW
 Dl
 Dl
 RH
-BT
+iW
 Sm
 Sm
 Sm
@@ -5022,8 +5044,8 @@ Dl
 Dl
 FI
 RH
-YQ
-YQ
+Uo
+Uo
 ri
 RH
 RH
@@ -5103,7 +5125,7 @@ YQ
 Ka
 YQ
 YQ
-FI
+at
 RH
 RH
 RH
@@ -5182,7 +5204,7 @@ YQ
 RH
 YQ
 YQ
-YQ
+Uo
 RH
 RH
 RH
@@ -5261,7 +5283,7 @@ RH
 RH
 Ri
 YQ
-YQ
+Uo
 RH
 Vy
 Aw

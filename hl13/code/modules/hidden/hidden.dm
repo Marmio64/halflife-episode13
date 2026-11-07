@@ -144,6 +144,15 @@
 	var/backstab_bonus = 125
 	var/gib_time = 1 SECONDS
 
+/obj/item/knife/combat/the_hidden/psycher
+	name = "crude knife"
+	desc = "A crudely formed piece of scrap metal that looks it was formed without concern for the human grip, as if melded by mind rather than body. Backstabs deal extra damage. Stab dead bodies to gib them and heal."
+	backstab_bonus = 75
+	force = 35
+	gib_time = 0.8 SECONDS //psychers are better versus groups
+	icon_state = "scrapknife"
+	icon = 'hl13/icons/obj/melee.dmi'
+
 /obj/item/knife/combat/the_hidden/brute
 	name = "brutish machete"
 	desc = "A monstrous looking machete. Deals more frontal damage than the standard hidden knife, but cannot instantly down someone through backstabs, alongside weighing you down. Is capable of quickly hacking apart dead bodies to gib and heal from them."
@@ -240,6 +249,9 @@
 	name = "Summon Machete"
 	desc = "Summons your favorite and deadliest friend. Gets rid of the previous one if it exists."
 	item_type = /obj/item/knife/combat/the_hidden/brute
+
+/datum/action/cooldown/spell/conjure_item/hidden_knife/psycher
+	item_type = /obj/item/knife/combat/the_hidden/psycher
 
 
 /datum/action/cooldown/spell/hidden_taunt
@@ -727,3 +739,66 @@
 
 
 	target.gib()
+
+///for now, admin only
+/datum/outfit/deployment_loadout/hidden/the_hidden/psycher
+	name = "Hidden: The Hidden (Psycher)"
+	display_name = "SUPPORT: The Psycher"
+	desc = "You have a far weaker knife and have less speed. Instead rely mostly on potent psychic abilities to rip apart enemies from afar. You are much more adept at dealing with groups compared to other Hidden."
+
+	uniform = /obj/item/clothing/under/pants/the_hidden/trapper
+
+	extra_dex = 10
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife/psycher, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/psycher_shout, /datum/action/cooldown/spell/aoe/repulse/wizard/psycher, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
+
+/datum/action/cooldown/spell/psycher_shout
+	name = "Psychic Shout"
+	desc = "Let loose a terrible, psychically empowered shout which rends the minds of nearby humans. Ranges in effect from preventing movement to causing brain damage and paralysis."
+
+	button_icon = 'icons/mob/actions/actions_changeling.dmi'
+	button_icon_state = "biodegrade"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+
+	check_flags = NONE
+	cooldown_time = 40 SECONDS
+
+/datum/action/cooldown/spell/psycher_shout/cast(mob/living/cast_on)
+	. = ..()
+	cast_on.visible_message(span_warning("[cast_on] shakes violently as a horrible force emantes from them!"))
+	playsound(cast_on,'hl13/sound/voice/stalker/stalker_scream.ogg', 50, FALSE)
+	for(var/mob/living/carbon/human/victim in orange(cast_on, 7))
+		SEND_SOUND(victim, sound('hl13/sound/effects/liquidemotions.ogg'))
+		if(!HAS_TRAIT(victim, TRAIT_THE_HIDDEN))
+			to_chat(victim, span_warning("A horrible ache appears in your head as shadows close in around you!"))
+			victim.adjust_hallucinations(20 SECONDS)
+
+			if(prob(35))
+				to_chat(victim, span_warning("What was that sound!? Why can't I move!?"))
+				victim.Immobilize(2.5 SECONDS)
+			else if(prob(35))
+				to_chat(victim, span_warning("Your head pounds in agony! Make it stop, please god make it stop!!!"))
+				victim.adjustOrganLoss(ORGAN_SLOT_BRAIN, 50, BRAIN_DAMAGE_DEATH)
+				victim.Stun(1.5 SECONDS)
+				victim.adjust_eye_blur(8 SECONDS)
+				if(prob(25))
+					victim.vomit(vomit_flags = (VOMIT_CATEGORY_DEFAULT | MOB_VOMIT_FORCE), lost_nutrition = 0)
+			else
+				to_chat(victim, span_warning("FEAR IS CONSUMING YOU! THE END COMES FOR US ALL!!!"))
+				victim.Paralyze(3 SECONDS)
+				victim.emote("scream")
+				victim.adjust_eye_blur(4 SECONDS)
+
+/datum/action/cooldown/spell/aoe/repulse/wizard/psycher
+	name = "Psychic Repulse"
+	desc = "Forcefully toss away nearby enemies through telepathic power."
+	button_icon = 'hl13/icons/mob/actions/actions_advisor.dmi'
+	button_icon_state = "repulse"
+	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
+	invocation = null
+	cooldown_time = 24 SECONDS
+	aoe_radius = 3
+	max_throw = 4
+	cooldown_reduction_per_rank = 4 SECONDS
+	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
+	sound = 'hl13/sound/creatures/advisor/advisor_blast1.ogg'
