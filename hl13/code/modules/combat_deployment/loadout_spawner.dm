@@ -85,9 +85,11 @@
 		to_chat(user, span_notice("The Default Hidden has high speed and is hard to detect. They lack special gimmicks and are a great first time pick as their speed makes running away more forgiving."))
 		to_chat(user, span_notice("The Hunter is slower but can deploy hidden mantraps to ensnare victims and then devour their brain for extra healing."))
 		to_chat(user, span_notice("The Brute is slower, lacks heat vision, and is more visible, but has high damage resistance and can punch away nearby people."))
+		to_chat(user, span_notice("The Maniac has guaranteed stamina regeneration from taunting and can do so more often. They also gib faster and heal more from gibbing, but they passively and constantly lose health!"))
 		to_chat(user, span_notice("The Necrotic is slower, less damage resistant, and heals less from corpses, but can reanimate them into headcrab zombies and summon armored headcrabs to distract and attack people."))
 		to_chat(user, span_notice("The Spitter is slower and less damage resistant in exchange for the ability to spit slow moving acidic bile to wear opponents down from afar."))
 		to_chat(user, span_notice("The Flesh Stealer is slower and upon gibbing an enemy will lose their invisibility to instead shapeshift into their exact appearence."))
+		to_chat(user, span_notice("The Psycher moves slower and has a weaker knife. In exchange they have two area of effect psychic abilities for debilitating groups of humans with."))
 
 	var/choice = tgui_input_list(user, "CURRENT LOADOUT TIER: [current_tier]", "Select a Loadout", display_names)
 	if(isnull(choice) || isnull(display_names[choice]))

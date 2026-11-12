@@ -10,9 +10,11 @@
 			/datum/outfit/deployment_loadout/hidden/the_hidden,
 			/datum/outfit/deployment_loadout/hidden/the_hidden/trapper,
 			/datum/outfit/deployment_loadout/hidden/the_hidden/brute,
+			/datum/outfit/deployment_loadout/hidden/the_hidden/maniac,
 			/datum/outfit/deployment_loadout/hidden/the_hidden/necrotic,
 			/datum/outfit/deployment_loadout/hidden/the_hidden/spitter,
 			/datum/outfit/deployment_loadout/hidden/the_hidden/fleshstealer,
+			/datum/outfit/deployment_loadout/hidden/the_hidden/psycher,
 		)
 		for(var/datum/outfit/deployment_loadout/loadout as anything in possible_loadouts)
 			loadouts[initial(loadout.display_name)] = loadout
@@ -147,11 +149,25 @@
 /obj/item/knife/combat/the_hidden/psycher
 	name = "crude knife"
 	desc = "A crudely formed piece of scrap metal that looks it was formed without concern for the human grip, as if melded by mind rather than body. Backstabs deal extra damage. Stab dead bodies to gib them and heal."
-	backstab_bonus = 75
+	backstab_bonus = 65
 	force = 35
 	gib_time = 0.8 SECONDS //psychers are better versus groups
 	icon_state = "scrapknife"
 	icon = 'hl13/icons/obj/melee.dmi'
+
+/obj/item/knife/combat/the_hidden/maniac
+	gib_time = 0.65 SECONDS
+
+/obj/item/knife/combat/the_hidden/maniac/dead_effect(mob/living/target, mob/living/user)
+	var/heal_amount = 35
+
+	if(target.on_fire)
+		heal_amount -= 7 //heal 20% less from victims on fire
+
+	user.adjustStaminaLoss(-heal_amount)
+	user.adjustBruteLoss(-heal_amount)
+	user.adjustFireLoss(-heal_amount)
+	target.gib()
 
 /obj/item/knife/combat/the_hidden/brute
 	name = "brutish machete"
@@ -253,6 +269,8 @@
 /datum/action/cooldown/spell/conjure_item/hidden_knife/psycher
 	item_type = /obj/item/knife/combat/the_hidden/psycher
 
+/datum/action/cooldown/spell/conjure_item/hidden_knife/maniac
+	item_type = /obj/item/knife/combat/the_hidden/maniac
 
 /datum/action/cooldown/spell/hidden_taunt
 	name = "Taunt"
@@ -264,6 +282,7 @@
 	cooldown_time = 10 SECONDS
 	spell_requirements = NONE
 	antimagic_flags = NONE
+	var/stam_heal_chance = 50
 	var/taunt_sounds = list(
 	'sound/effects/hallucinations/behind_you1.ogg',
 	'sound/effects/hallucinations/behind_you2.ogg',
@@ -285,8 +304,14 @@
 	var/chosen_sound = pick(taunt_sounds)
 	playsound(owner.loc, chosen_sound, 50, FALSE)
 
-	if(prob(50))
+	if(prob(stam_heal_chance))
 		cast_on.adjustStaminaLoss(-25)
+
+/datum/action/cooldown/spell/hidden_taunt/maniac
+	name = "Maniac Taunt"
+	desc = "Taunt your enemy with a voiceline that is sure to instill terror. Restores stamina on use."
+	cooldown_time = 8 SECONDS
+	stam_heal_chance = 100
 
 /datum/action/cooldown/spell/hidden_heal
 	name = "Adrenal Burst"
@@ -484,6 +509,12 @@
 			playsound(get_turf(caster), 'hl13/sound/effects/injury/head_explodie_01.ogg', 80, TRUE, TRUE)
 	else
 
+		if(istype(victim, /obj/machinery/door/unpowered/halflife) && victim.density)
+			var/obj/machinery/door/unpowered/halflife/door = victim
+			door.try_to_activate_door()
+			playsound(door, 'hl13/sound/halflifeeffects/metal_door_break.ogg', 50, FALSE)
+			return
+
 		if(isliving(victim))
 			var/mob/living/victim_living = victim
 			victim_living.Immobilize(1 SECONDS)
@@ -593,8 +624,6 @@
 
 	uniform = /obj/item/clothing/under/pants/the_hidden/trapper
 
-	extra_dex = 10
-
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure_item/hidden_beartrap, /datum/action/cooldown/spell/pointed/hidden_trapper_devour, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
 
 /// Monstrously strong, but slow. They excel at demolishing humans who refuse to backdown, but their slow speed can allow them to be kited by assault classes, and scientist syringes are extra hazardous.
@@ -628,8 +657,6 @@
 	head = /obj/item/clothing/head/halflife/cosmetic_headcrab
 	uniform = /obj/item/clothing/under/pants/the_hidden/trapper
 
-	extra_dex = 10
-
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_necro_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure/hidden_headcrab, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/necrotic/pre_equip(mob/living/carbon/human/H)
@@ -643,8 +670,6 @@
 
 	uniform = /obj/item/clothing/under/pants/the_hidden/trapper
 
-	extra_dex = 10
-
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/pointed/projectile/hidden_spit, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/spitter/pre_equip(mob/living/carbon/human/H)
@@ -657,8 +682,6 @@
 	desc = "Upon gibbing enemies, you'll lose your near-invisiblity and instead steal their appearence as a disguise. You can change your speed from human-like to true speed as well. Beware, you can still set off trip alarms, and humans can examine you to find out your true nature."
 
 	uniform = /obj/item/clothing/under/pants/the_hidden/fleshstealer
-
-	extra_dex = 10
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife/fleshstealer, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
 
@@ -740,15 +763,12 @@
 
 	target.gib()
 
-///for now, admin only
 /datum/outfit/deployment_loadout/hidden/the_hidden/psycher
 	name = "Hidden: The Hidden (Psycher)"
 	display_name = "SUPPORT: The Psycher"
 	desc = "You have a far weaker knife and have less speed. Instead rely mostly on potent psychic abilities to rip apart enemies from afar. You are much more adept at dealing with groups compared to other Hidden."
 
 	uniform = /obj/item/clothing/under/pants/the_hidden/trapper
-
-	extra_dex = 10
 
 	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife/psycher, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/psycher_shout, /datum/action/cooldown/spell/aoe/repulse/wizard/psycher, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt)
 
@@ -796,9 +816,41 @@
 	button_icon_state = "repulse"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 	invocation = null
-	cooldown_time = 24 SECONDS
+	cooldown_time = 30 SECONDS
 	aoe_radius = 3
 	max_throw = 4
 	cooldown_reduction_per_rank = 4 SECONDS
 	spell_requirements = SPELL_REQUIRES_NO_ANTIMAGIC
-	sound = 'hl13/sound/creatures/advisor/advisor_blast1.ogg'
+	sound = 'hl13/sound/effects/psycher_blast.ogg'
+
+/datum/outfit/deployment_loadout/hidden/the_hidden/maniac
+	name = "Hidden: The Hidden (Maniac)"
+	display_name = "ASSAULT: The Maniac"
+	desc = "You are an ultra fast paced maniac that thrives on chaos, speed, and bloodshed. Your taunt is guaranteed to provide stamina healing and has a shorter cooldown, and gibbing enemies is done quicker while providing more healing. However, you will take constant passive damage."
+
+	spells_to_add = list(/datum/action/cooldown/spell/conjure_item/grenade/random_timer, /datum/action/cooldown/spell/conjure_item/hidden_knife/maniac, /datum/action/cooldown/spell/hidden_heal, /datum/action/cooldown/spell/conjure_item/hidden_climbing_hook, /datum/action/cooldown/spell/hidden_taunt/maniac)
+	combat_music = 'hl13/sound/music/combat/hidden_combat.ogg'
+
+/datum/outfit/deployment_loadout/hidden/the_hidden/maniac/pre_equip(mob/living/carbon/human/H)
+	. = ..()
+	H.apply_status_effect(/datum/status_effect/hidden_maniac_damage)
+
+/datum/status_effect/hidden_maniac_damage
+	id = "maniac_damage"
+	status_type = STATUS_EFFECT_UNIQUE
+	alert_type = null
+	duration = STATUS_EFFECT_PERMANENT
+
+
+/datum/status_effect/hidden_maniac_damage/tick(seconds_between_ticks)
+	. = ..()
+	if(!ishuman(owner))
+		return FALSE
+
+	var/mob/living/carbon/human/human_owner = owner
+
+	var/brute_loss = human_owner.getBruteLoss()
+	var/fire_loss = human_owner.getFireLoss()
+
+	if((brute_loss + fire_loss) < 100 && GLOB.terminal_grace_time < 1 SECONDS) //if you have less than 100 damage and grace period isnt on, take damage
+		human_owner.adjustBruteLoss(1)

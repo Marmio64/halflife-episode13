@@ -494,7 +494,7 @@
 	ambient_buzz = 'hl13/sound/ambience/bunker3.ogg'
 	ambient_buzz_vol = 20
 
-	ambient_music = 'hl13/sound/ambience/bgm/spawnroom.ogg'
+	ambient_music = 'hl13/sound/ambience/bgm/Aram_17_-_Mentally_Ill_Ghost.ogg'
 	ambient_music_vol = 20
 
 	sound_environment = SOUND_ENVIRONMENT_CAVE

@@ -154,6 +154,10 @@
 /area/halflife/indoors/sewer/hidden/outside_forest)
 "hH" = (
 /obj/structure/table/halflife/no_smooth/large/metal/desk,
+/obj/item/reagent_containers/cup/soda_cans/breenwater/empty{
+	pixel_x = -4;
+	pixel_y = 14
+	},
 /turf/open/floor/plating/indoor/metal/grate/border{
 	dir = 1
 	},
@@ -234,6 +238,9 @@
 /obj/effect/spawner/random/halflife/plant_spawner,
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/indoors/sewer/hidden/spawn_room)
+"nX" = (
+/turf/open/floor/plating/indoor/metal/plate,
+/area/halflife/indoors/sewer/hidden/bunker)
 "oa" = (
 /obj/effect/decal/cleanable/blood/trails{
 	dir = 6
@@ -293,7 +300,7 @@
 "qT" = (
 /obj/structure/bed/halflife/bedframe/wire,
 /obj/structure/bed/halflife/mattress/stained,
-/turf/open/floor/plating/indoor/sterilesquares,
+/turf/open/floor/plating/indoor/tiled9,
 /area/halflife/indoors/sewer/hidden/bunker)
 "qV" = (
 /obj/machinery/combine_distressterminal{
@@ -340,7 +347,7 @@
 /obj/structure/closet/halflife{
 	anchored = 1
 	},
-/turf/open/floor/plating/indoor/metal/grate,
+/turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer/hidden/bunker)
 "ss" = (
 /obj/structure/halflife/trash/books/pile,
@@ -431,7 +438,7 @@
 /area/halflife/indoors/sewer/hidden/spawn_room)
 "BJ" = (
 /obj/structure/curtain,
-/turf/open/floor/plating/indoor/sterilesquares,
+/turf/open/floor/plating/indoor/tiled9,
 /area/halflife/indoors/sewer/hidden/bunker)
 "BR" = (
 /obj/machinery/door/unpowered/halflife/wood,
@@ -572,6 +579,10 @@
 	},
 /turf/open/floor/plating/ground/grass,
 /area/halflife/indoors/sewer/hidden/spawn_room)
+"JC" = (
+/obj/structure/halflife/barrel/double/grey,
+/turf/open/floor/plating/indoor/concrete/bricks,
+/area/halflife/indoors/sewer/hidden/bunker)
 "JL" = (
 /obj/structure/bed/halflife/bedframe/cot,
 /obj/structure/bed/halflife/mattress/stale,
@@ -605,7 +616,7 @@
 /area/halflife/indoors/sewer/hidden/bunker)
 "Le" = (
 /obj/structure/halflife/storage/store/metal,
-/turf/open/floor/plating/indoor/metal/grate,
+/turf/open/floor/plating/indoor/metal/industrial,
 /area/halflife/indoors/sewer/hidden/bunker)
 "LL" = (
 /turf/open/floor/plating/indoor/woodc/fancy,
@@ -645,10 +656,14 @@
 /obj/structure/filingcabinet/hl2,
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer/hidden/outside_forest)
+"NI" = (
+/turf/open/floor/plating/indoor/tiled9,
+/area/halflife/indoors/sewer/hidden/bunker)
 "Oa" = (
 /turf/open/floor/plating/indoor/concrete/bricks,
 /area/halflife/indoors/sewer/hidden/bunker)
 "Oj" = (
+/obj/item/weaponcrafting/frame/usp,
 /turf/open/floor/plating/indoor/metal/grate/border{
 	dir = 1
 	},
@@ -708,6 +723,13 @@
 	},
 /turf/open/floor/plating/ground/dirt,
 /area/halflife/indoors/sewer/hidden/spawn_room)
+"RB" = (
+/obj/item/trash/halflife/nutrient_bar_waste/pork{
+	pixel_x = -19;
+	pixel_y = 5
+	},
+/turf/open/floor/plating/indoor/metal/grate/border,
+/area/halflife/indoors/sewer/hidden/bunker)
 "RP" = (
 /obj/machinery/light/floor,
 /turf/open/floor/plating/ground/dirt,
@@ -825,7 +847,7 @@
 /area/halflife/indoors/sewer/hidden/bunker)
 "YR" = (
 /obj/structure/table/halflife/metal/grate,
-/turf/open/floor/plating/indoor/metal/grate,
+/turf/open/floor/plating/indoor/metal/plate,
 /area/halflife/indoors/sewer/hidden/bunker)
 "YV" = (
 /obj/structure/barricade/sandbags,
@@ -2034,7 +2056,7 @@ cE
 cE
 cE
 cE
-cE
+cw
 Vk
 dJ
 gi
@@ -2182,7 +2204,7 @@ Vk
 Qr
 Oa
 Oa
-Oa
+JC
 Oa
 ot
 Vk
@@ -2344,9 +2366,9 @@ Oa
 Oa
 cE
 Vk
+nX
 UA
-UA
-UA
+nX
 Vk
 dJ
 dJ
@@ -3497,7 +3519,7 @@ gp
 Oa
 yy
 Vk
-KX
+RB
 rL
 rL
 Vk
@@ -5114,7 +5136,7 @@ Vp
 Vp
 Vk
 qT
-Vp
+NI
 Vk
 dJ
 dJ
@@ -5190,8 +5212,8 @@ Vp
 Vp
 Vp
 BJ
-Vp
-Vp
+NI
+NI
 ez
 dJ
 QN
@@ -5267,8 +5289,8 @@ Vp
 Vp
 Vp
 BJ
-Vp
-Vp
+NI
+NI
 ez
 dJ
 gi
@@ -5344,8 +5366,8 @@ sG
 Vp
 Vp
 BJ
-Vp
-Vp
+NI
+NI
 ez
 gi
 dJ
