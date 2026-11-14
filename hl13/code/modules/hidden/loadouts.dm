@@ -148,7 +148,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 
-	extra_dex = 3
+	extra_dex = 4
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_RIFLE
 
@@ -177,7 +177,7 @@
 	ears = /obj/item/radio/headset/civilprotection/deployment
 	combat_music = 'hl13/sound/ambience/bgm/dark_interval_bgm_10.ogg'
 
-	extra_dex = 3
+	extra_dex = 4
 
 	weapon_specialties = WEAPON_CAT_LIGHT | WEAPON_CAT_SMG
 
