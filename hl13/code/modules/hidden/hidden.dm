@@ -137,7 +137,7 @@
 
 	force = 50
 	demolition_mod = 2
-	armour_penetration = 70
+	armour_penetration = 80
 	wdefense = 0
 	slot_flags = 0
 	item_flags = DROPDEL //so the combine cant steal the absurdly powerful knife. The hidden can just summon a new one too.
@@ -145,6 +145,8 @@
 	attack_speed = CLICK_CD_SLOW
 	var/backstab_bonus = 125
 	var/gib_time = 1 SECONDS
+	var/heal_amount = 25
+	var/fire_heal_debuff = 0.8 //multiplier that heal_amount is reduced by
 
 /obj/item/knife/combat/the_hidden/psycher
 	name = "crude knife"
@@ -157,17 +159,7 @@
 
 /obj/item/knife/combat/the_hidden/maniac
 	gib_time = 0.65 SECONDS
-
-/obj/item/knife/combat/the_hidden/maniac/dead_effect(mob/living/target, mob/living/user)
-	var/heal_amount = 35
-
-	if(target.on_fire)
-		heal_amount -= 7 //heal 20% less from victims on fire
-
-	user.adjustStaminaLoss(-heal_amount)
-	user.adjustBruteLoss(-heal_amount)
-	user.adjustFireLoss(-heal_amount)
-	target.gib()
+	heal_amount = 35
 
 /obj/item/knife/combat/the_hidden/brute
 	name = "brutish machete"
@@ -217,14 +209,14 @@
 	playsound(living_target, 'sound/items/weapons/guillotine.ogg', 100, TRUE)
 
 /obj/item/knife/combat/the_hidden/proc/dead_effect(mob/living/target, mob/living/user)
-	var/heal_amount = 25
+	var/real_heal_amount = heal_amount
 
 	if(target.on_fire)
-		heal_amount -= 5 //heal 20% less from victims on fire
+		real_heal_amount *= fire_heal_debuff
 
-	user.adjustStaminaLoss(-heal_amount)
-	user.adjustBruteLoss(-heal_amount)
-	user.adjustFireLoss(-heal_amount)
+	user.adjustStaminaLoss(-real_heal_amount)
+	user.adjustBruteLoss(-real_heal_amount)
+	user.adjustFireLoss(-real_heal_amount)
 	target.gib()
 
 /datum/action/cooldown/spell/conjure_item/hidden_knife
@@ -542,7 +534,7 @@
 
 	spell_requirements = NONE
 	antimagic_flags = NONE
-	cooldown_time = 90 SECONDS
+	cooldown_time = 85 SECONDS
 	summon_radius = 1
 	summon_type = list(/mob/living/basic/halflife/headcrab/armored)
 	summon_amount = 3
@@ -563,6 +555,7 @@
 
 /obj/item/knife/combat/the_hidden/necrotic
 	desc = "An obscenely sharp and dangerous knife. Backstabs will instantly down. Stab a dead body to reanimate them into a headcrab zombie."
+	heal_amount = 15
 
 /obj/item/knife/combat/the_hidden/necrotic/dead_effect(mob/living/target, mob/living/user)
 	if(prob(20))
@@ -574,14 +567,14 @@
 	else
 		new /mob/living/basic/halflife/zombie(get_turf(target))
 
-	var/heal_amount = 15 //10 less healing
+	var/real_heal_amount = heal_amount
 
 	if(target.on_fire)
-		heal_amount -= 5 //heal 33% less from victims on fire
+		real_heal_amount *= fire_heal_debuff
 
-	user.adjustStaminaLoss(-heal_amount)
-	user.adjustBruteLoss(-heal_amount)
-	user.adjustFireLoss(-heal_amount)
+	user.adjustStaminaLoss(-real_heal_amount)
+	user.adjustBruteLoss(-real_heal_amount)
+	user.adjustFireLoss(-real_heal_amount)
 	target.gib()
 
 /datum/action/cooldown/spell/pointed/projectile/hidden_spit
@@ -652,7 +645,7 @@
 /datum/outfit/deployment_loadout/hidden/the_hidden/necrotic
 	name = "Hidden: The Hidden (Necrotic)"
 	display_name = "SUPPORT: The Necrotic"
-	desc = "You take more damage and move slower, but gain the ability to summon armored headcrabs and convert bodies to headcrab zombies"
+	desc = "You take more damage, heal less from gibbing, and move slower, but gain the ability to summon armored headcrabs and convert bodies to headcrab zombies."
 
 	head = /obj/item/clothing/head/halflife/cosmetic_headcrab
 	uniform = /obj/item/clothing/under/pants/the_hidden/trapper
@@ -674,7 +667,7 @@
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/spitter/pre_equip(mob/living/carbon/human/H)
 	. = ..()
-	H.physiology.damage_resistance -= 20
+	H.physiology.damage_resistance -= 15
 
 /datum/outfit/deployment_loadout/hidden/the_hidden/fleshstealer
 	name = "Hidden: The Hidden (Flesh Stealer)"
@@ -730,14 +723,14 @@
 	var/list/stolen_overlays
 
 /obj/item/knife/combat/the_hidden/fleshstealer/dead_effect(mob/living/target, mob/living/user)
-	var/heal_amount = 25
+	var/real_heal_amount = heal_amount
 
 	if(target.on_fire)
-		heal_amount -= 5 //heal 20% less from victims on fire
+		real_heal_amount *= fire_heal_debuff
 
-	user.adjustStaminaLoss(-heal_amount)
-	user.adjustBruteLoss(-heal_amount)
-	user.adjustFireLoss(-heal_amount)
+	user.adjustStaminaLoss(-real_heal_amount)
+	user.adjustBruteLoss(-real_heal_amount)
+	user.adjustFireLoss(-real_heal_amount)
 
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
@@ -816,7 +809,7 @@
 	button_icon_state = "repulse"
 	background_icon_state = ACTION_BUTTON_DEFAULT_BACKGROUND
 	invocation = null
-	cooldown_time = 30 SECONDS
+	cooldown_time = 35 SECONDS
 	aoe_radius = 3
 	max_throw = 4
 	cooldown_reduction_per_rank = 4 SECONDS

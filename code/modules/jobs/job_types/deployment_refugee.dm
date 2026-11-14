@@ -54,6 +54,18 @@ GLOBAL_VAR_INIT(deployment_rebels_free_tier5s, 0)
 	if(visualsOnly)
 		return
 
+	if(SSmapping.current_map.combat_deployment_gamemode != "intruder")
+		var/atom/movable/screen/area_text/T = new()
+		H.client.screen += T
+		T.maptext = {"<span style='vertical-align:top; text-align:center;
+					color: #477394; font-size: 250%;
+					text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+					font-family: "Courier New", "Courier New";'>"Use the loadout selector in your hand to pick a class."</span>"}
+		T.maptext_width = 205
+		T.maptext_height = 209
+		T.maptext_x = 64
+		T.maptext_y = 115
+
 	ADD_TRAIT(H, TRAIT_VIRUSIMMUNE, JOB_TRAIT)
 	ADD_TRAIT(H, TRAIT_TDMPLAYER, JOB_TRAIT)
 	ADD_TRAIT(H, TRAIT_ALWAYS_ID_NAME, JOB_TRAIT)

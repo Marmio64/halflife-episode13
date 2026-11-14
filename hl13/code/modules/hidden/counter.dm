@@ -106,6 +106,16 @@ GLOBAL_VAR_INIT(terminal_grace_time, 0)
 			qdel(buttons)
 		if(GLOB.hidden_match_type == "Hidden")
 			human_user.equipOutfit(/datum/outfit/deployment_loadout/hidden/the_hidden/blank)
+			if(20 < (combine_players+rebel_players)) //2 Hidden map
+				if(length(GLOB.deployment_rebel_players + GLOB.deployment_combine_players) < 12) // less than 12 combine players, Hidden take +15% damage
+					human_user.physiology.damage_resistance -= 15
+				else if(length(GLOB.deployment_rebel_players + GLOB.deployment_combine_players) < 16)
+					human_user.physiology.damage_resistance -= 10
+			else
+				if(length(GLOB.deployment_rebel_players + GLOB.deployment_combine_players) < 5)
+					human_user.physiology.damage_resistance -= 15
+				else if(length(GLOB.deployment_rebel_players + GLOB.deployment_combine_players) < 8)
+					human_user.physiology.damage_resistance -= 10
 		else if(GLOB.hidden_match_type == "Boss")
 			human_user.equipOutfit(/datum/outfit/deployment_loadout/boss/blank)
 		human_user.regenerate_icons()

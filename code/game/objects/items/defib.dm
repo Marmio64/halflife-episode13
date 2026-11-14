@@ -660,6 +660,12 @@
 						H.grab_ghost()
 					H.revive()
 					SSsociostability.modifystability(20) //hl13 edit, returns the sociostability that was lost from death
+					if(H.deployment_faction == REBEL_DEPLOYMENT_FACTION && H.mind && H.mind.name && H.mind.active)
+						SSticker.tdm_rebel_deaths--
+						SSticker.tdm_total_deaths--
+					if(H.deployment_faction == COMBINE_DEPLOYMENT_FACTION && H.mind && H.mind.name && H.mind.active)
+						SSticker.tdm_combine_deaths--
+						SSticker.tdm_total_deaths--
 					H.emote("gasp")
 					H.set_jitter_if_lower(200 SECONDS)
 					SEND_SIGNAL(H, COMSIG_LIVING_MINOR_SHOCK)

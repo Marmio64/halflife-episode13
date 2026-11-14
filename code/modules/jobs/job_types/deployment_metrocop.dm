@@ -64,6 +64,19 @@ GLOBAL_VAR_INIT(deployment_combine_free_tier5s, 0)
 
 /datum/outfit/job/deployment_metrocop/post_equip(mob/living/carbon/human/user, visuals_only = FALSE)
 	. = ..()
+
+	if(SSmapping.current_map.combat_deployment_gamemode != "intruder")
+		var/atom/movable/screen/area_text/T = new()
+		user.client.screen += T
+		T.maptext = {"<span style='vertical-align:top; text-align:center;
+					color: #477394; font-size: 250%;
+					text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+					font-family: "Courier New", "Courier New";'>"Use the loadout selector in your hand to pick a class".</span>"}
+		T.maptext_width = 205
+		T.maptext_height = 209
+		T.maptext_x = 64
+		T.maptext_y = 115
+
 	user.reagents.add_reagent(/datum/reagent/medicine/adminordrazine, 3) //Gives you a few seconds of invincibility to prevent spawn camping
 	ADD_TRAIT(user, TRAIT_VIRUSIMMUNE, JOB_TRAIT)
 	ADD_TRAIT(user, TRAIT_TDMPLAYER, JOB_TRAIT)

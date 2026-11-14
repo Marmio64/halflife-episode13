@@ -256,6 +256,9 @@
 /obj/item/clothing/head/helmet/toggleable/riot/heavy
 	armor_type = /datum/armor/toggleable_riot/heavy
 
+/obj/item/clothing/head/helmet/toggleable/riot/hidden
+	armor_type = /datum/armor/toggleable_riot/hidden
+
 /datum/armor/toggleable_riot
 	melee = 35
 	bullet = 5
@@ -264,6 +267,9 @@
 	fire = 80
 	acid = 80
 	wound = 15
+
+/datum/armor/toggleable_riot/hidden
+	melee = 75
 
 /datum/armor/toggleable_riot/heavy
 	melee = 60

@@ -64,9 +64,9 @@
 
 	uniform = /obj/item/clothing/under/combine/civilprotection
 	gloves = /obj/item/clothing/gloves/color/civilprotection
-	suit = /obj/item/clothing/suit/armor/riot
+	suit = /obj/item/clothing/suit/armor/riot/hidden
 	shoes = /obj/item/clothing/shoes/jackboots/civilprotection
-	head = /obj/item/clothing/head/helmet/toggleable/riot
+	head = /obj/item/clothing/head/helmet/toggleable/riot/hidden
 
 	mask = /obj/item/clothing/mask/gas/civilprotection/helm_allowed
 

@@ -303,6 +303,9 @@
 	equip_delay_other = 60
 	clothing_traits = list(TRAIT_BRAWLING_KNOCKDOWN_BLOCKED)
 
+/obj/item/clothing/suit/armor/riot/hidden
+	armor_type = /datum/armor/armor_riot/hidden
+
 /obj/item/clothing/suit/armor/riot/fast
 	slowdown = -0.45 //works out to be -0.2 when accounting for the sledgehammer
 
@@ -322,6 +325,9 @@
 	fire = 80
 	acid = 80
 	wound = 20
+
+/datum/armor/armor_riot/hidden
+	melee = 75
 
 /datum/armor/armor_ballistic_riot
 	melee = 65
